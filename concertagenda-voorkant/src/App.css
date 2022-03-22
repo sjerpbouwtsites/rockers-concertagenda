@@ -1,0 +1,159 @@
+@media screen and (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+.navigation-block {
+  display: none;
+}
+
+.event-block__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+.event-block {
+  min-height: 300px;
+  min-width: 450px;
+  padding: 1.5em;
+  max-width: 50%;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+.event-block--enlarged {
+  width: 100vw;
+  height: calc(100vh - 3em);
+  max-height: initial;
+  max-width: 100%;
+  font-size: 1.5rem;
+  overflow: hidden;
+}
+
+.contrast-with-dark {
+  color: #f5f5f5;
+  mix-blend-mode: lighten;
+}
+
+.provide-dark-contrast {
+  position: relative;
+}
+.provide-dark-contrast::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: linear-gradient(
+    245deg,
+    rgba(38, 1, 1, 0.33) 5%,
+    rgba(60, 10, 10, 0.5) 15%,
+    rgba(68, 15, 58, 0.85) 80%,
+    rgba(16, 4, 13, 0.85) 100%
+  );
+  mix-blend-mode: multiply;
+}
+.event-block__header {
+  margin-bottom: 0.5em;
+}
+.event-block__title {
+  max-width: 55ch;
+  mix-blend-mode: lighten;
+}
+.event-block__startDate {
+  font-size: 0.75em;
+  display: block;
+}
+.event-block__load-more {
+  border: 0;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  padding: 0.5em 0.75em;
+  margin-top: 1.5em;
+  display: block;
+  font-size: 1.5em;
+}
+.event-block__load-more:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+.hidden {
+  display: none !important;
+}
+.event-block__main {
+  max-height: 100%;
+  overflow-y: scroll;
+  padding-right: 60px;
+  margin-right: -60px;
+}
+
+.event-block__main > p:first-child {
+  margin-top: 0;
+}
+.event-block__main > p:last-child {
+  margin-bottom: 0;
+}
+.event-block__main p,
+.event-block__main ul,
+.event-block__main h1,
+.event-block__main h2,
+.event-block__main h3,
+.event-block__main h4,
+.event-block__main h5 {
+  max-width: 55ch;
+}
+
+.event-block__price {
+  font-size: 1.33rem;
+  padding: 0.5em 0.75em;
+  background-color: rgb(170, 22, 22);
+  border: 0.33em solid rgb(5, 5, 1);
+  font-weight: bold;
+  mix-blend-mode: luminosity;
+  display: inline-block;
+  position: absolute;
+  top: -0.25em;
+  right: -0.75em;
+}
+.event-block--enlarged .event-block__price {
+  font-size: 3rem;
+  top: 1em;
+  right: 1em;
+}
+.event-block__paragraph {
+  font-size: 0.8em;
+  line-height: 0.95;
+  max-width: 55ch;
+}
+.event-block__footer {
+  text-align: right;
+}
+.event-block__venue-link {
+  font-size: 1.5rem;
+  margin-right: -1.5em;
+  margin-bottom: -1.5em;
+  padding: 1em 1.66em;
+  font-weight: 900;
+  color: white;
+  background-color: rgb(2, 2, 2);
+  text-decoration: none;
+  font-feature-settings: "smcp";
+  font-variant: small-caps;
+  display: inline-block;
+  mix-blend-mode: difference;
+  line-height: 0.66;
+}
+
+.event-block--enlarged .event-block__venue-link {
+  position: absolute;
+  top: 50%;
+  font-size: 2.5rem;
+  right: 2em;
+  transform: translate(0, -50%);
+}
