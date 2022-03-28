@@ -9,6 +9,7 @@ const fsDirections = {
   baroegJson: path.resolve("./event-lists/baroeg.json"),
   eventsListJson: path.resolve("./event-lists/events-list.json"),
   boerderijJson: path.resolve("./event-lists/boerderij.json"),
+  patronaatJson: path.resolve("./event-lists/patronaat.json"),
   dynamoJson: path.resolve("./event-lists/dynamo.json"),
   metalfanJson: path.resolve("./event-lists/metalfan.json"),
   occiiJson: path.resolve("./event-lists/occii.json"),

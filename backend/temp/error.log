@@ -1,4 +1,162 @@
 
+  Baroeg Error - Error - 11:43:05 AM
+  Error: Evaluation failed: ReferenceError: handleError is not defined
+    at __puppeteer_evaluation_script__:35:11
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-patronaat.js:140:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-patronaat.js:92:22)
+    at async scrapePatronaat (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-patronaat.js:33:5) 
+  Evaluation failed: ReferenceError: handleError is not defined
+    at __puppeteer_evaluation_script__:35:11
+  
+  
+  Baroeg Error - Error - 11:25:52 AM
+  Error: Evaluation failed: ReferenceError: fsDirections is not defined
+    at __puppeteer_evaluation_script__:78:32
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-patronaat.js:134:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-patronaat.js:95:22)
+    at async scrapePatronaat (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-patronaat.js:33:5) 
+  Evaluation failed: ReferenceError: fsDirections is not defined
+    at __puppeteer_evaluation_script__:78:32
+  
+  
+  Baroeg Error - Error - 11:25:45 AM
+  Error: Evaluation failed: ReferenceError: fsDirections is not defined
+    at __puppeteer_evaluation_script__:78:32
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-patronaat.js:134:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-patronaat.js:95:22)
+    at async scrapePatronaat (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-patronaat.js:33:5) 
+  Evaluation failed: ReferenceError: fsDirections is not defined
+    at __puppeteer_evaluation_script__:78:32
+  
+  
+  Baroeg Error - Error - 11:25:38 AM
+  Error: Evaluation failed: ReferenceError: fsDirections is not defined
+    at __puppeteer_evaluation_script__:78:32
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-patronaat.js:134:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-patronaat.js:95:22)
+    at async scrapePatronaat (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-patronaat.js:33:5) 
+  Evaluation failed: ReferenceError: fsDirections is not defined
+    at __puppeteer_evaluation_script__:78:32
+  
+  
+  Baroeg Error - Error - 11:25:34 AM
+  Error: Evaluation failed: ReferenceError: fsDirections is not defined
+    at __puppeteer_evaluation_script__:78:32
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-patronaat.js:134:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-patronaat.js:95:22)
+    at async scrapePatronaat (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-patronaat.js:33:5) 
+  Evaluation failed: ReferenceError: fsDirections is not defined
+    at __puppeteer_evaluation_script__:78:32
+  
+  
+  Baroeg Error - Error - 11:19:09 AM
+  Error: Evaluation failed: ReferenceError: handleError is not defined
+    at __puppeteer_evaluation_script__:42:11
+    at Array.filter (<anonymous>)
+    at __puppeteer_evaluation_script__:39:8
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-patronaat.js:239:21)
+    at async scrapePatronaat (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-patronaat.js:29:29) 
+  Evaluation failed: ReferenceError: handleError is not defined
+    at __puppeteer_evaluation_script__:42:11
+    at Array.filter (<anonymous>)
+    at __puppeteer_evaluation_script__:39:8
+  
+  
+  Baroeg Error - Error - 11:17:30 AM
+  Error: Evaluation failed: TypeError: handleError is not a function
+    at __puppeteer_evaluation_script__:33:11
+    at Array.filter (<anonymous>)
+    at __puppeteer_evaluation_script__:30:8
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-patronaat.js:239:21)
+    at async scrapePatronaat (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-patronaat.js:29:29) 
+  Evaluation failed: TypeError: handleError is not a function
+    at __puppeteer_evaluation_script__:33:11
+    at Array.filter (<anonymous>)
+    at __puppeteer_evaluation_script__:30:8
+  
+  
+  Baroeg Error - Error - 11:15:55 AM
+  Error: Evaluation failed: ReferenceError: handleError is not defined
+    at __puppeteer_evaluation_script__:33:11
+    at Array.filter (<anonymous>)
+    at __puppeteer_evaluation_script__:30:8
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-patronaat.js:239:10)
+    at async scrapePatronaat (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-patronaat.js:29:29) 
+  Evaluation failed: ReferenceError: handleError is not defined
+    at __puppeteer_evaluation_script__:33:11
+    at Array.filter (<anonymous>)
+    at __puppeteer_evaluation_script__:30:8
+  
+  
+  Baroeg Error - Error - 11:14:20 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'title')
+    at __puppeteer_evaluation_script__:30:44
+    at Array.filter (<anonymous>)
+    at __puppeteer_evaluation_script__:29:8
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-patronaat.js:239:10)
+    at async scrapePatronaat (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-patronaat.js:29:29) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'title')
+    at __puppeteer_evaluation_script__:30:44
+    at Array.filter (<anonymous>)
+    at __puppeteer_evaluation_script__:29:8
+  
+  
+  Baroeg Error - Error - 11:12:29 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'title')
+    at __puppeteer_evaluation_script__:30:44
+    at Array.filter (<anonymous>)
+    at __puppeteer_evaluation_script__:29:8
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-patronaat.js:239:10)
+    at async scrapePatronaat (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-patronaat.js:29:29) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'title')
+    at __puppeteer_evaluation_script__:30:44
+    at Array.filter (<anonymous>)
+    at __puppeteer_evaluation_script__:29:8
+  
+  
+  Baroeg Error - TypeError - 11:11:06 AM
+  TypeError: browser.newPage is not a function
+    at makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-patronaat.js:232:30)
+    at scrapePatronaat (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-patronaat.js:30:7)
+    at MessagePort.<anonymous> (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-patronaat.js:14:7)
+    at MessagePort.[nodejs.internal.kHybridDispatch] (node:internal/event_target:559:20)
+    at MessagePort.exports.emitMessage (node:internal/per_context/messageport:23:28) 
+  browser.newPage is not a function
+  
+  
   Baroeg Error - TypeError - 9:59:17 AM
   TypeError: Cannot set properties of undefined (setting 'cancelReason')
     at getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:148:25)

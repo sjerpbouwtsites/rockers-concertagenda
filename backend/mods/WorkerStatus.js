@@ -60,7 +60,9 @@ export default class WorkerStatus {
       console.log("All workers done");
       WorkerStatus.programEnd();
     } else {
-      console.log("Waiting for: " + notDone.map((not) => not.name).join(";"));
+      console.log(
+        "Currently active: " + notDone.map((not) => not.name).join(";")
+      );
     }
   }
 

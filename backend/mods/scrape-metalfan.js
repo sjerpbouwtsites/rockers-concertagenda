@@ -84,7 +84,7 @@ async function getBaseMusicEvents(browser) {
 
         eventNameEl.parentNode.removeChild(eventNameEl);
         eventHTML = metalfanEvent.querySelector(".calevent").innerHTML;
-        eventCommaSplice = metalfanEvent
+        let eventCommaSplice = metalfanEvent
           .querySelector(".calevent")
           .textContent.split(",");
         eventLocationName = (eventCommaSplice[0] || "").trim();

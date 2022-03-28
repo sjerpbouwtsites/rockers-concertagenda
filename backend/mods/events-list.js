@@ -8,7 +8,7 @@ export default class EventsList {
     try {
       EventsList.checkTimestampsExist();
       const pathToEventList = fsDirections.eventLists;
-      const inbetweenFix = !!workerIndex ? `-${workerIndex}` : ``;
+      const inbetweenFix = workerIndex !== null ? `-${workerIndex}` : ``;
       const pathToEventListFile = `${pathToEventList}/${name}${inbetweenFix}.json`;
       fs.writeFileSync(
         pathToEventListFile,

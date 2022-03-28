@@ -26,6 +26,13 @@ function init() {
       handleError(error);
     }
   }
+
+  if (EventsList.isOld("patronaat")) {
+    startWorker(fsDirections.scrapePatronaat, "patronaat", 0);
+    startWorker(fsDirections.scrapePatronaat, "patronaat", 1);
+    startWorker(fsDirections.scrapePatronaat, "patronaat", 2);
+  }
+
   if (EventsList.isOld("boerderij")) {
     startWorker(fsDirections.scrapeBoerderij, "boerderij", 0);
   }
