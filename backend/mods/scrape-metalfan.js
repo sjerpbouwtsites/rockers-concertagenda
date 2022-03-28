@@ -112,7 +112,11 @@ async function getBaseMusicEvents(browser) {
         eventDatum.eventLocationName
       );
 
-      if (["baroeg", "occii", "boerderij", "dynamo"].includes(locationName)) {
+      if (
+        ["baroeg", "occii", "boerderij", "dynamo", "patronaat"].includes(
+          locationName
+        )
+      ) {
         return;
       }
 
