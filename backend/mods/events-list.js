@@ -42,6 +42,7 @@ export default class EventsList {
     const eventListTimestamps = JSON.parse(
       fs.readFileSync(fsDirections.timestampsJson)
     );
+
     const d = new Date();
     const currentMilliseconds = d.getTime();
     const stored = eventListTimestamps.hasOwnProperty(name)

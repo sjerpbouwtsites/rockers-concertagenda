@@ -113,9 +113,15 @@ async function getBaseMusicEvents(browser) {
       );
 
       if (
-        ["baroeg", "occii", "boerderij", "dynamo", "patronaat"].includes(
-          locationName
-        )
+        [
+          "baroeg",
+          "occii",
+          "boerderij",
+          "dynamo",
+          "patronaat",
+          "nul13",
+          "013",
+        ].includes(locationName)
       ) {
         return;
       }

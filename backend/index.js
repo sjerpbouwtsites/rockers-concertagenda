@@ -33,11 +33,18 @@ function init() {
     startWorker(fsDirections.scrapePatronaat, "patronaat", 2);
   }
 
-  if (EventsList.isOld("nuldertien") || true) {
+  if (EventsList.isOld("nuldertien")) {
     startWorker(fsDirections.scrapeNuldertien, "nuldertien", 0);
     startWorker(fsDirections.scrapeNuldertien, "nuldertien", 1);
     startWorker(fsDirections.scrapeNuldertien, "nuldertien", 2);
     startWorker(fsDirections.scrapeNuldertien, "nuldertien", 3);
+  }
+
+  if (EventsList.isOld("effenaar") || true) {
+    startWorker(fsDirections.scrapeEffenaar, "effenaar", 0);
+    startWorker(fsDirections.scrapeEffenaar, "effenaar", 1);
+    startWorker(fsDirections.scrapeEffenaar, "effenaar", 2);
+    startWorker(fsDirections.scrapeEffenaar, "effenaar", 3);
   }
 
   if (EventsList.isOld("boerderij")) {

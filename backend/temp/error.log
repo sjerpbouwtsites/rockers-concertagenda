@@ -1,4 +1,68 @@
 
+  Baroeg Error - TypeError - 3:30:12 PM
+  TypeError: openDoorDateTime.split is not a function
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-effenaar.js:118:50)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async scrapeEffenaar (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-effenaar.js:41:5) 
+  openDoorDateTime.split is not a function
+  
+  
+  Baroeg Error - TypeError - 3:29:24 PM
+  TypeError: openDoorDateTime.split is not a function
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-effenaar.js:114:50)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async scrapeEffenaar (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-effenaar.js:41:5) 
+  openDoorDateTime.split is not a function
+  
+  
+  Baroeg Error - TypeError - 3:29:23 PM
+  TypeError: openDoorDateTime.split is not a function
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-effenaar.js:114:50)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async scrapeEffenaar (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-effenaar.js:41:5) 
+  openDoorDateTime.split is not a function
+  
+  
+  Baroeg Error - TypeError - 3:29:22 PM
+  TypeError: openDoorDateTime.split is not a function
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-effenaar.js:114:50)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async scrapeEffenaar (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-effenaar.js:41:5) 
+  openDoorDateTime.split is not a function
+  
+  
+  Baroeg Error - TypeError - 3:24:34 PM
+  TypeError: openDoorDateTime.split is not a function
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-effenaar.js:114:50)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async scrapeEffenaar (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-effenaar.js:41:5) 
+  openDoorDateTime.split is not a function
+  
+  
+  Baroeg Error - TypeError - 3:24:32 PM
+  TypeError: openDoorDateTime.split is not a function
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-effenaar.js:114:50)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async scrapeEffenaar (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-effenaar.js:41:5) 
+  openDoorDateTime.split is not a function
+  
+  
+  Baroeg Error - TypeError - 3:24:31 PM
+  TypeError: openDoorDateTime.split is not a function
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-effenaar.js:114:50)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async scrapeEffenaar (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-effenaar.js:41:5) 
+  openDoorDateTime.split is not a function
+  
+  
+  Baroeg Error - TypeError - 3:24:30 PM
+  TypeError: openDoorDateTime.split is not a function
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-effenaar.js:114:50)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async scrapeEffenaar (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-effenaar.js:41:5) 
+  openDoorDateTime.split is not a function
+  
+  
   Baroeg Error - Error - 2:29:13 PM
   Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'getAttribute')
     at __puppeteer_evaluation_script__:26:30
