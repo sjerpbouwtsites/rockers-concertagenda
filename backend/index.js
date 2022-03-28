@@ -40,7 +40,7 @@ function init() {
     startWorker(fsDirections.scrapeNuldertien, "nuldertien", 3);
   }
 
-  if (EventsList.isOld("effenaar") || true) {
+  if (EventsList.isOld("effenaar")) {
     startWorker(fsDirections.scrapeEffenaar, "effenaar", 0);
     startWorker(fsDirections.scrapeEffenaar, "effenaar", 1);
     startWorker(fsDirections.scrapeEffenaar, "effenaar", 2);
