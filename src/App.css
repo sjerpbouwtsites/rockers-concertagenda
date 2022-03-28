@@ -120,6 +120,7 @@
   position: absolute;
   top: -0.25em;
   right: -0.75em;
+  filter: blur(5px);
 }
 .event-block--enlarged .event-block__price {
   font-size: 3rem;

@@ -1,0 +1,16 @@
+{
+  "name": "concertagenda",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "axios": "^0.26.1",
+    "puppeteer": "^13.5.1"
+  }
+}
