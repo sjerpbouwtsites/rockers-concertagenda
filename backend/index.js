@@ -33,6 +33,13 @@ function init() {
     startWorker(fsDirections.scrapePatronaat, "patronaat", 2);
   }
 
+  if (EventsList.isOld("nuldertien") || true) {
+    startWorker(fsDirections.scrapeNuldertien, "nuldertien", 0);
+    startWorker(fsDirections.scrapeNuldertien, "nuldertien", 1);
+    startWorker(fsDirections.scrapeNuldertien, "nuldertien", 2);
+    startWorker(fsDirections.scrapeNuldertien, "nuldertien", 3);
+  }
+
   if (EventsList.isOld("boerderij")) {
     startWorker(fsDirections.scrapeBoerderij, "boerderij", 0);
   }

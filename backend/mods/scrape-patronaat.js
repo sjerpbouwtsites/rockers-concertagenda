@@ -239,11 +239,7 @@ async function getPageInfo(page, months) {
     return pageInfo;
   } catch (error) {
     handleError(error);
-    if (pageInfo.errors.length) {
-      pageInfo.errors.forEach((error) => {
-        handleError(error);
-      });
-    }
+
     return pageInfo;
   }
 }

@@ -6,7 +6,7 @@ export class Location {
     this.name = name;
   }
   static makeLocationSlug(rawName) {
-    if (rawName === "013") {
+    if (rawName === "nul13") {
       return "nul13";
     }
     return rawName.replace(/\s/g, "-").replace(/\W/g, "").toLowerCase();
@@ -76,7 +76,7 @@ const locations = {
   mezz: new Location("Mezz"),
   neushoorn: new Location("Neushoorn"),
   noorderkerk: new Location("Noorderkerk"),
-  nul13: new Location("013"),
+  nul13: new Location("nul13"),
   occii: new Location("Occii"),
   oldehoofsterkerkhof: new Location("Oldehoofsterkerkhof"),
   orangerie: new Location("Orangerie"),
