@@ -1,37 +1,52 @@
 import { Worker } from "worker_threads";
 import WorkerStatus from "./mods/WorkerStatus.js";
 import EventsList from "./mods/events-list.js";
+import fsDirections from "./mods/fs-directions.js";
+import { handleError, errorAfterSeconds } from "./mods/tools.js";
 
 function init() {
   if (EventsList.isOld("metalfan")) {
-    startWorker("./mods/scrape-metalfan.js", "metalfan", 0);
+    startWorker(fsDirections.scrapeMetalfan, "metalfan", 0);
   }
   if (EventsList.isOld("baroeg")) {
-    startWorker("./mods/scrape-baroeg.js", "baroeg", 0, baroegDoneCallback);
-    startWorker("./mods/scrape-baroeg.js", "baroeg", 1, baroegDoneCallback);
-    startWorker("./mods/scrape-baroeg.js", "baroeg", 2, baroegDoneCallback);
+    try {
+      Promise.race([
+        startWorker(fsDirections.scrapeBaroeg, "baroeg", 0, baroegDoneCallback),
+        errorAfterSeconds(240000),
+      ]);
+      Promise.race([
+        startWorker(fsDirections.scrapeBaroeg, "baroeg", 1, baroegDoneCallback),
+        errorAfterSeconds(240000),
+      ]);
+      Promise.race([
+        startWorker(fsDirections.scrapeBaroeg, "baroeg", 2, baroegDoneCallback),
+        errorAfterSeconds(240000),
+      ]);
+    } catch (error) {
+      handleError(error);
+    }
+  }
+  if (EventsList.isOld("boerderij")) {
+    startWorker(fsDirections.scrapeBoerderij, "boerderij", 0);
   }
 
   if (EventsList.isOld("occii")) {
-    startWorker("./mods/scrape-occii.js", "occii", 0);
-    startWorker("./mods/scrape-occii.js", "occii", 1);
-  }
-  if (EventsList.isOld("boerderij")) {
-    startWorker("./mods/scrape-boerderij.js", "boerderij", 0);
+    startWorker(fsDirections.scrapeOccii, "occii", 0);
+    startWorker(fsDirections.scrapeOccii, "occii", 1);
   }
   if (EventsList.isOld("dynamo")) {
-    startWorker("./mods/scrape-dynamo.js", "dynamo", 0);
-    startWorker("./mods/scrape-dynamo.js", "dynamo", 1);
+    startWorker(fsDirections.scrapeDynamo, "dynamo", 0);
+    startWorker(fsDirections.scrapeDynamo, "dynamo", 1);
   }
 }
 
 init();
 
 function baroegDoneCallback(workerIndex) {
-  if (workerIndex < 8) {
+  if (workerIndex + 3 < 8) {
     const newWorkerIndex = workerIndex + 3;
     startWorker(
-      "./mods/scrape-baroeg.js",
+      fsDirections.scrapeBaroeg,
       "baroeg",
       newWorkerIndex,
       baroegDoneCallback

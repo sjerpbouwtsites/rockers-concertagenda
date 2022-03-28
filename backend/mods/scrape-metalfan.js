@@ -26,6 +26,7 @@ async function scrapeMetalfan() {
     message: "metalfan worker done.",
   });
   EventsList.save("metalfan");
+  puppeteer.browser.close();
 }
 
 async function getBaseMusicEvents(browser) {

@@ -1,46 +1,46 @@
 import fs from "fs";
-import path from "path";
+import fsDirections from "./fs-directions.js";
+import { handleError, errorAfterSeconds } from "./tools.js";
 export default class EventsList {
   static _events = [];
 
-  static save(name, destroy = true) {
-    EventsList.checkTimestampsExist();
-    const pathToEventList = path.resolve("./event-lists");
-    const pathToEventListFile = `${pathToEventList}/${name}.json`;
-    fs.writeFileSync(
-      pathToEventListFile,
-      JSON.stringify(EventsList._events, "\t")
-    );
-    const eventListTimestamps = JSON.parse(
-      fs.readFileSync(`${pathToEventList}/timestamps.json`)
-    );
-    const d = new Date();
-    eventListTimestamps[name] = d.getTime();
+  static save(name, workerIndex = null) {
+    try {
+      EventsList.checkTimestampsExist();
+      const pathToEventList = fsDirections.eventLists;
+      const inbetweenFix = !!workerIndex ? `-${workerIndex}` : ``;
+      const pathToEventListFile = `${pathToEventList}/${name}${inbetweenFix}.json`;
+      fs.writeFileSync(
+        pathToEventListFile,
+        JSON.stringify(EventsList._events, "\t")
+      );
+      const eventListTimestamps = JSON.parse(
+        fs.readFileSync(fsDirections.timestampsJson)
+      );
+      const d = new Date();
+      eventListTimestamps[name] = d.getTime();
 
-    fs.writeFileSync(
-      `${pathToEventList}/timestamps.json`,
-      JSON.stringify(eventListTimestamps)
-    );
-    if (destroy) {
-      delete EventsList._events;
+      fs.writeFileSync(
+        fsDirections.timestampsJson,
+        JSON.stringify(eventListTimestamps)
+      );
+    } catch (error) {
+      handleError(error);
+      return false;
     }
+    return true;
   }
 
   static checkTimestampsExist() {
-    const pathToEventList = path.resolve("./event-lists");
-    if (!fs.existsSync(`${pathToEventList}/timestamps.json`)) {
-      fs.writeFileSync(
-        `${pathToEventList}/timestamps.json`,
-        JSON.stringify({})
-      );
+    if (!fs.existsSync(fsDirections.timestampsJson)) {
+      fs.writeFileSync(fsDirections.timestampsJson, JSON.stringify({}));
     }
   }
 
   static isOld(name) {
     EventsList.checkTimestampsExist();
-    const pathToEventList = path.resolve("./event-lists");
     const eventListTimestamps = JSON.parse(
-      fs.readFileSync(`${pathToEventList}/timestamps.json`)
+      fs.readFileSync(fsDirections.timestampsJson)
     );
     const d = new Date();
     const currentMilliseconds = d.getTime();
@@ -61,25 +61,39 @@ export default class EventsList {
   }
 
   static addEvent(event) {
-    EventsList._events.push(event);
+    try {
+      EventsList._events.push(event);
+    } catch (error) {
+      handleError(error);
+    }
   }
 
-  static async printAllToJSON(writeFolder) {
+  static async printAllToJSON() {
     await waitABit();
 
-    const pathToEventList = path.resolve("./event-lists");
-    const eventListTimestamps = JSON.parse(
-      fs.readFileSync(`${pathToEventList}/timestamps.json`)
+    const pathToEventList = fsDirections.eventLists;
+    const eventListTimestamps = Object.keys(
+      JSON.parse(fs.readFileSync(fsDirections.timestampsJson))
     );
 
     EventsList._events = [];
-    const allEventLists = Object.keys(eventListTimestamps).map(
-      (eventListKey) => {
+    const allEventLists = fs
+      .readdirSync(fsDirections.eventLists)
+      .filter((fileInEventsListDir) => {
+        const correspondingTimestampName = fileInEventsListDir
+          .replace(/-\d/, "")
+          .replace(".json", "");
+        if (eventListTimestamps.includes(correspondingTimestampName)) {
+          return fileInEventsListDir;
+        }
+        return false;
+      })
+      .map((fileInEventsListDir) => {
         return JSON.parse(
-          fs.readFileSync(`${pathToEventList}/${eventListKey}.json`)
+          fs.readFileSync(`${pathToEventList}/${fileInEventsListDir}`)
         );
-      }
-    );
+      });
+
     EventsList._events = allEventLists.flat();
 
     EventsList._events.sort((eventA, eventB) => {
@@ -99,17 +113,17 @@ export default class EventsList {
       }
     });
     fs.writeFileSync(
-      `${writeFolder}/events-list.json`,
+      fsDirections.eventsListJson,
       JSON.stringify(EventsList._events, null, "\t"),
       "utf-8"
     );
     fs.copyFileSync(
-      `${writeFolder}/events-list.json`,
-      `./concertagenda-voorkant/public/events-list.json`
+      fsDirections.eventsListJson,
+      fsDirections.eventsListPublicJson
     );
     fs.copyFileSync(
-      `./event-lists/timestamps.json`,
-      `./concertagenda-voorkant/public/timestamps.json`
+      fsDirections.timestampsJson,
+      fsDirections.timestampsPublicJson
     );
     console.log("events written to events-list.json");
   }

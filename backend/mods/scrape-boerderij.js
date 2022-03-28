@@ -2,10 +2,10 @@ import MusicEvent from "./music-event.js";
 import fs from "fs";
 import path from "path";
 import crypto from "crypto";
-import puppeteer from "puppeteer";
 import { parentPort } from "worker_threads";
 import EventsList from "./events-list.js";
 import axios from "axios";
+import fsDirections from "./fs-directions.js";
 
 parentPort.on("message", (messageData) => {
   if (messageData.command && messageData.command === "start") {
@@ -15,7 +15,7 @@ parentPort.on("message", (messageData) => {
 });
 
 async function scrapeBoerderij(workerIndex) {
-  const baseMusicEvents = await getBaseMusicEvents(workerIndex);
+  await getBaseMusicEvents(workerIndex);
 
   parentPort.postMessage({
     status: "done",
@@ -67,7 +67,7 @@ async function recursiveSingleGet(baseMusicEvents, workerIndex) {
     });
 
   let uuid = crypto.randomUUID();
-  const longTextPath = path.resolve(`./texts/${uuid}.html`);
+  const longTextPath = `${fsDirections.publicTexts}/${uuid}.html`;
 
   const youtubeVideoIDMatch =
     ajaxRes?.video ?? ajaxRes.video.match(/embed\/(\w+)?/);

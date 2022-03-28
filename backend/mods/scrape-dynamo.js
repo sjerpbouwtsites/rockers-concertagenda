@@ -3,6 +3,7 @@ import MusicEvent from "./music-event.js";
 import puppeteer from "puppeteer";
 import { parentPort } from "worker_threads";
 import EventsList from "./events-list.js";
+import fsDirections from "./fs-directions.js";
 import fs from "fs";
 import crypto from "crypto";
 import path from "path";
@@ -52,6 +53,7 @@ async function scrapeDynamo(workerIndex) {
     message: `Dynamo worker-${workerIndex} done.`,
   });
   EventsList.save("dynamo");
+  browser.close();
 }
 
 async function fillMusicEvents(browser, baseMusicEvents, months, workerIndex) {
@@ -213,7 +215,7 @@ async function getPageInfo(page, months) {
   );
 
   let uuid = crypto.randomUUID();
-  const longTextPath = path.resolve(`./texts/${uuid}.html`);
+  const longTextPath = `${fsDirections.publicTexts}/${uuid}.html`;
   pageInfo.longText = longTextPath;
 
   fs.writeFileSync(longTextPath, pageInfo.longTextHTML, "utf-8");

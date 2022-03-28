@@ -1,11 +1,10 @@
 import MusicEvent from "./music-event.js";
-import locations from "./locations.js";
 import fs from "fs";
-import path from "path";
 import crypto from "crypto";
 import puppeteer from "puppeteer";
 import { parentPort } from "worker_threads";
 import EventsList from "./events-list.js";
+import fsDirections from "./fs-directions.js";
 
 parentPort.on("message", (messageData) => {
   if (messageData.command && messageData.command === "start") {
@@ -33,17 +32,13 @@ async function scrapeOCCII(workerIndex) {
   const browser = await puppeteer.launch();
 
   const baseMusicEvents = await getBaseMusicEvents(browser, workerIndex);
-  const filledMusicEvents = await fillMusicEvents(
-    browser,
-    baseMusicEvents,
-    months,
-    workerIndex
-  );
+  await fillMusicEvents(browser, baseMusicEvents, months, workerIndex);
   parentPort.postMessage({
     status: "done",
     message: `Occii worker-${workerIndex} done.`,
   });
   EventsList.save("occii");
+  browser.close();
 }
 
 async function fillMusicEvents(browser, baseMusicEvents, months, workerIndex) {
@@ -159,7 +154,7 @@ async function processSingleMusicEvent(
   );
 
   let uuid = crypto.randomUUID();
-  const longTextPath = path.resolve(`./texts/${uuid}.html`);
+  const longTextPath = `${fsDirections.publicTexts}/${uuid}.html`;
   fs.writeFile(longTextPath, pageInfo.longTextHTML, "utf-8", () => {});
   firstMusicEvent.longText = longTextPath;
   firstMusicEvent.dataIntegrity = 10;

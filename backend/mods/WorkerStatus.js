@@ -5,7 +5,7 @@ export default class WorkerStatus {
 
   static registerWorker(name) {
     WorkerStatus._workers[name] = {
-      status: null,
+      status: "working",
       message: null,
     };
   }
@@ -14,22 +14,33 @@ export default class WorkerStatus {
     WorkerStatus._workers[name].status = status;
     WorkerStatus._workers[name].message = message;
 
-    if (status === "done") {
-      console.log(`- ${name} done. Message: ${message}`.padStart(80, "✔️ "));
+    const statusses = status.split(" ");
+
+    if (statusses.includes("done")) {
+      console.log("");
+      console.log(`${name} done.`.padStart(20, " ").padStart(30, "✔️"));
+      if (statusses.includes("dirty")) {
+        console.log(
+          `${name} dirty dirty.`.padStart(20, " ").padStart(30, "🚮🌁")
+        );
+      }
       WorkerStatus.checkIfAllDone();
     }
 
-    if (status === "error") {
-      console.error(`${name} ERROR.`.padStart(80, "💣 "));
+    if (statusses.includes("error")) {
+      console.log("");
+      console.error(`${name} ERROR.`.padStart(20, " ").padStart(30, "💣"));
       console.error(message);
     }
 
-    if (status === "working") {
+    if (statusses.includes("working")) {
+      console.log("");
       console.log(`${name}: ${message}`);
     }
 
-    if (status === "console") {
-      console.log(`${name}`);
+    if (statusses.includes("console")) {
+      console.log("");
+      console.log(`${name}`.padStart(20, " ").padStart(30, "💬"));
       console.log(message);
     }
   }
@@ -41,8 +52,9 @@ export default class WorkerStatus {
         return workerData;
       })
       .filter((workerData) => {
-        return workerData.status !== "done";
+        return !workerData.status.includes("done");
       });
+
     if (!notDone.length) {
       console.log(" ");
       console.log("All workers done");
@@ -53,7 +65,7 @@ export default class WorkerStatus {
   }
 
   static programEnd() {
-    EventsList.printAllToJSON(path.normalize("./"));
+    EventsList.printAllToJSON();
     console.log(" ");
     console.log("😎😎😎😎😎");
     console.log(" ");
