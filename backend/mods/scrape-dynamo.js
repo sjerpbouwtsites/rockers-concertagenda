@@ -7,6 +7,7 @@ import fsDirections from "./fs-directions.js";
 import fs from "fs";
 import crypto from "crypto";
 import path from "path";
+import { getPriceFromHTML } from "./tools.js";
 
 parentPort.on("message", (messageData) => {
   if (messageData.command && messageData.command === "start") {
@@ -53,14 +54,16 @@ async function scrapeDynamo(workerIndex) {
     message: `Dynamo worker-${workerIndex} done.`,
   });
   EventsList.save("dynamo");
-  browser.close();
+  setTimeout(() => {
+    browser.close();
+  }, 5000);
 }
 
 async function fillMusicEvents(browser, baseMusicEvents, months, workerIndex) {
   const baseMusicEventsCopy = [...baseMusicEvents];
   parentPort.postMessage({
     status: "working",
-    message: `dynamo worker-${workerIndex} will scrape ${baseMusicEvents.length} events.`,
+    message: `will scrape ${baseMusicEvents.length} events.`,
   });
 
   return processSingleMusicEvent(
@@ -96,6 +99,10 @@ async function processSingleMusicEvent(
   const page = await browser.newPage();
   await page.goto(firstMusicEvent.venueEventUrl);
   const pageInfo = await getPageInfo(page, months);
+
+  if (pageInfo && pageInfo.priceTextContent) {
+    firstMusicEvent.price = getPriceFromHTML(pageInfo.priceTextContent);
+  }
 
   firstMusicEvent.merge(pageInfo);
 
@@ -145,7 +152,7 @@ async function getPageInfo(page, months) {
       let doorOpen;
       let startTime;
       let endTime;
-      let price;
+      let priceTextContent;
       if (agendaDatesEls && agendaDatesEls.length > 1) {
         const leftHandSideTableTRs = agendaDatesEls[0].querySelectorAll("tr");
         const rightHandSideTableTRs = agendaDatesEls[1].querySelectorAll("tr");
@@ -171,17 +178,7 @@ async function getPageInfo(page, months) {
           });
         }
 
-        if (rightHandSideTableTRs.length) {
-          const rowWithPrijs = Array.from(rightHandSideTableTRs).filter((row) =>
-            row.textContent.includes("prijs")
-          );
-          if (rowWithPrijs.length > 0) {
-            let price100String = rowWithPrijs[0].textContent.replace(/\D/g, "");
-            price = isNaN(Number(price100String))
-              ? null
-              : Number(price100String) / 100;
-          }
-        }
+        priceTextContent = agendaDatesEls[1].textContent;
       }
       const longTextHTMLEl = document.querySelector(
         "section.article .article-block"
@@ -205,7 +202,7 @@ async function getPageInfo(page, months) {
         doorOpen,
         startTime,
         endTime,
-        price,
+        priceTextContent,
         longTextHTML,
         image,
         dataIntegrity,

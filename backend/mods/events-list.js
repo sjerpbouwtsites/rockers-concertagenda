@@ -12,7 +12,7 @@ export default class EventsList {
       const pathToEventListFile = `${pathToEventList}/${name}${inbetweenFix}.json`;
       fs.writeFileSync(
         pathToEventListFile,
-        JSON.stringify(EventsList._events, "\t")
+        JSON.stringify(EventsList._events, null, "  ")
       );
       const eventListTimestamps = JSON.parse(
         fs.readFileSync(fsDirections.timestampsJson)
@@ -22,7 +22,7 @@ export default class EventsList {
 
       fs.writeFileSync(
         fsDirections.timestampsJson,
-        JSON.stringify(eventListTimestamps)
+        JSON.stringify(eventListTimestamps, null, "  ")
       );
     } catch (error) {
       handleError(error);
@@ -115,7 +115,7 @@ export default class EventsList {
     });
     fs.writeFileSync(
       fsDirections.eventsListJson,
-      JSON.stringify(EventsList._events, null, "\t"),
+      JSON.stringify(EventsList._events, null, "  "),
       "utf-8"
     );
     fs.copyFileSync(

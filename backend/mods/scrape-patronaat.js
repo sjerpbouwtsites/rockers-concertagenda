@@ -6,7 +6,7 @@ import EventsList from "./events-list.js";
 import fs from "fs";
 import crypto from "crypto";
 import fsDirections from "./fs-directions.js";
-import { handleError, errorAfterSeconds } from "./tools.js";
+import { getPriceFromHTML, handleError, errorAfterSeconds } from "./tools.js";
 
 parentPort.on("message", (messageData) => {
   if (messageData.command && messageData.command === "start") {
@@ -94,6 +94,11 @@ async function processSingleMusicEvent(browser, baseMusicEvents, workerIndex) {
       errorAfterSeconds(15000),
     ]);
 
+    if (pageInfo && pageInfo.price) {
+      firstMusicEvent.price = getPriceFromHTML(pageInfo.price);
+      delete pageInfo.price;
+    }
+
     if (pageInfo && pageInfo.longTextHTML) {
       let uuid = crypto.randomUUID();
       const longTextPath = `${fsDirections.publicTexts}/${uuid}.html`;
@@ -143,10 +148,7 @@ async function getPageInfo(page, months) {
         let priceEl = document.querySelector(".event__info-bar--ticket-price");
         let errors = [];
         if (!!priceEl) {
-          const match = priceEl.textContent.trim().match(/(\d\d)[\,\.]+(\d\d)/);
-          if (match && match.length) {
-            price = match[0].replace(",", ".");
-          }
+          price = priceEl.textContent;
         }
         let startDatum = "";
         let startDatumMatch = document.location.href.match(

@@ -6,7 +6,7 @@ import EventsList from "./events-list.js";
 import fs from "fs";
 import crypto from "crypto";
 import fsDirections from "./fs-directions.js";
-import { handleError, errorAfterSeconds } from "./tools.js";
+import { handleError, errorAfterSeconds, getPriceFromHTML } from "./tools.js";
 
 parentPort.on("message", (messageData) => {
   if (messageData.command && messageData.command === "start") {
@@ -109,6 +109,15 @@ async function processSingleMusicEvent(
       getPageInfo(page, months),
       errorAfterSeconds(15000),
     ]);
+
+    if (pageInfo && (pageInfo.priceElText || pageInfo.contextText)) {
+      firstMusicEvent.price = getPriceFromHTML(
+        pageInfo.priceText,
+        pageInfo.contextText
+      );
+      delete pageInfo.price;
+    }
+
     // no date no registration.
     if (pageInfo && !pageInfo.cancelReason) {
       delete pageInfo.cancelReason;
@@ -184,17 +193,16 @@ async function getPageInfo(page, months) {
           }
         }
 
-        let price = null;
-        let priceEl = document.querySelector(".wp_theatre_event_tickets_url");
-        if (!!priceEl) {
-          const match = priceEl.textContent.trim().match(/(\d\d[\,\.]+\d\d)/);
-          if (match && match.length) {
-            price = match[0];
-          }
-        }
+        const priceElText =
+          document.querySelector(".wp_theatre_event_tickets_url")
+            ?.textContent ?? null;
+        const contextText =
+          document.getElementById("content")?.textContent ?? null;
+
         return {
-          price,
+          priceElText,
           startDateTime,
+          contextText,
         };
       },
       { months }

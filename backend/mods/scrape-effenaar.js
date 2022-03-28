@@ -6,7 +6,7 @@ import EventsList from "./events-list.js";
 import fs from "fs";
 import crypto from "crypto";
 import fsDirections from "./fs-directions.js";
-import { handleError, errorAfterSeconds } from "./tools.js";
+import { getPriceFromHTML, handleError, errorAfterSeconds } from "./tools.js";
 
 parentPort.on("message", (messageData) => {
   if (messageData.command && messageData.command === "start") {
@@ -91,15 +91,17 @@ async function processSingleMusicEvent(browser, baseMusicEvents, workerIndex) {
   }
 
   const page = await browser.newPage();
-  await page.goto(firstMusicEvent.venueEventUrl, {
-    waitUntil: "load",
-  });
+  await page.goto(firstMusicEvent.venueEventUrl);
 
   try {
     const pageInfo = await Promise.race([
       getPageInfo(page),
       errorAfterSeconds(15000),
     ]);
+
+    if (pageInfo && pageInfo.priceTextcontent) {
+      pageInfo.price = getPriceFromHTML(pageInfo.priceTextcontent);
+    }
 
     if (pageInfo && pageInfo.longTextHTML) {
       let uuid = crypto.randomUUID();
@@ -157,50 +159,20 @@ async function getPageInfo(page, months) {
   let pageInfo = {};
   pageInfo.cancelReason = "";
   try {
+    await page.waitForSelector(".js-event-detail-organizer-sidebar");
     pageInfo = await page.evaluate(
       ({ months }) => {
         const imageEl = document.querySelector(".spotlight-image");
         let image = "";
-        let price = null;
         let doorOpenTime = null;
         let longTextHTML = null;
         if (!!imageEl) {
           image = imageEl.src;
         }
-        try {
-          // @TODO PRICES DONT COME THROUGH
-          let priceElPotentials = Array.from(
-            document.querySelectorAll(".js-event-detail-organizer-sidebar dd")
-          ).filter((dd) => {
-            const m = dd.textContent.trim().match(/(\d\d)[\,\.]+(\d\d)/);
-            return !!m && m.length > 2;
-          });
 
-          parentPort.postMessage({
-            status: "console",
-            message: priceElPotentials,
-          });
-          let priceEl = null;
-          if (priceElPotentials && priceElPotentials.length) {
-            priceEl = priceElPotentials;
-            parentPort.postMessage({
-              status: "console",
-              message: priceEl.textContent,
-            });
-          }
-          if (!!priceEl) {
-            const match = priceEl.textContent
-              .trim()
-              .match(/(\d\d)[\,\.]+(\d\d)/);
-            parentPort.postMessage({
-              status: "console",
-              message: match,
-            });
-            if (match && match.length) {
-              price = match[0].replace(",", ".");
-            }
-          }
-        } catch (error) {}
+        let priceTextcontent =
+          document.querySelector(".js-event-detail-organizer-sidebar")
+            ?.textContent ?? null;
 
         try {
           let doorOpenEl;
@@ -237,7 +209,7 @@ async function getPageInfo(page, months) {
         }
 
         return {
-          price,
+          priceTextcontent,
           image,
           doorOpenTime,
           longTextHTML,

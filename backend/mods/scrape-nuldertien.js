@@ -5,7 +5,7 @@ import EventsList from "./events-list.js";
 import fs from "fs";
 import crypto from "crypto";
 import fsDirections from "./fs-directions.js";
-import { handleError, errorAfterSeconds } from "./tools.js";
+import { handleError, errorAfterSeconds, getPriceFromHTML } from "./tools.js";
 
 parentPort.on("message", (messageData) => {
   if (messageData.command && messageData.command === "start") {
@@ -93,6 +93,13 @@ async function processSingleMusicEvent(browser, baseMusicEvents, workerIndex) {
       errorAfterSeconds(15000),
     ]);
 
+    if (pageInfo && (pageInfo.priceTextcontent || pageInfo.priceContextText)) {
+      pageInfo.price = getPriceFromHTML(
+        pageInfo.priceTextcontent,
+        pageInfo.priceContextText
+      );
+    }
+
     if (pageInfo && pageInfo.longTextHTML) {
       let uuid = crypto.randomUUID();
       const longTextPath = `${fsDirections.publicTexts}/${uuid}.html`;
@@ -144,17 +151,11 @@ async function getPageInfo(page, months) {
           image = imageEl.src;
         }
 
-        let price = null;
-        let priceEl = document.querySelector(
-          ".practical-information tr:first-child dd"
-        );
-        let errors = [];
-        if (!!priceEl) {
-          const match = priceEl.textContent.trim().match(/(\d\d)[\,\.]+(\d\d)/);
-          if (match && match.length) {
-            price = match[0].replace(",", ".");
-          }
-        }
+        let priceTextcontent =
+          document.querySelector(".practical-information tr:first-child dd")
+            ?.textContent ?? null;
+        let priceContextText =
+          document.querySelector(".practical-information")?.textContent ?? null;
 
         const doorOpenEl = document.querySelector(
           ".timetable__times dl:first-child time"
@@ -176,8 +177,8 @@ async function getPageInfo(page, months) {
 
         return {
           image,
-          price,
-          errors,
+          priceTextcontent,
+          priceContextText,
           doorOpenDateTime,
           longTextHTML,
         };
