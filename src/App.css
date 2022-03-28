@@ -15,15 +15,28 @@
   overflow-x: hidden;
 }
 .event-block {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+  flex-basis: calc(50% - 3em);
   min-height: 300px;
   min-width: 450px;
   padding: 1.5em;
-  max-width: 50%;
-  display: flex;
-  flex-grow: 1;
-  flex-direction: column;
-  justify-content: space-between;
   position: relative;
+  flex-shrink: 1;
+  background-position: center center;
+}
+@media (max-width: 600px) {
+  .event-block__wrapper {
+    display: block;
+  }
+  .event-block {
+    min-width: initial;
+    width: 100%;
+    display: block;
+    max-width: calc(100% - 3em);
+  }
 }
 .event-block--enlarged {
   width: 100vw;
