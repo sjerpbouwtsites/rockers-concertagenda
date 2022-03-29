@@ -1,4 +1,3 @@
-import axios from "axios";
 import MusicEvent from "./music-event.js";
 import puppeteer from "puppeteer";
 import { parentPort } from "worker_threads";
@@ -7,21 +6,9 @@ import fs from "fs";
 import crypto from "crypto";
 import fsDirections from "./fs-directions.js";
 import { getPriceFromHTML, handleError, errorAfterSeconds } from "./tools.js";
+import { letScraperListenToMasterMessageAndInit } from "./generic-scraper.js";
 
-parentPort.on("message", (messageData) => {
-  if (messageData.command && messageData.command === "start") {
-    try {
-      scrapeEffenaar(messageData.data.page);
-    } catch (error) {
-      parentPort.postMessage({
-        status: "error",
-        message: "Algemene gevangen error patronaatcrape",
-        data: error,
-      });
-    }
-  }
-});
-
+letScraperListenToMasterMessageAndInit(scrapeEffenaar);
 async function scrapeEffenaar(workerIndex) {
   const browser = await puppeteer.launch();
 
@@ -77,12 +64,7 @@ async function processSingleMusicEvent(browser, baseMusicEvents, workerIndex) {
   const newMusicEvents = [...baseMusicEvents];
   const firstMusicEvent = newMusicEvents.shift();
 
-  if (
-    !firstMusicEvent ||
-    baseMusicEvents.length === 0 ||
-    !firstMusicEvent ||
-    typeof firstMusicEvent === "undefined"
-  ) {
+  if (!firstMusicEvent || baseMusicEvents.length === 0) {
     return true;
   }
 

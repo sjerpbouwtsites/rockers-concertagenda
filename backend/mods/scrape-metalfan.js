@@ -1,24 +1,15 @@
 import MusicEvent from "./music-event.js";
-import locations from "./locations.js";
 import { Location } from "./locations.js";
 import puppeteer from "puppeteer";
 import { parentPort } from "worker_threads";
 import EventsList from "./events-list.js";
+import { log } from "./tools.js";
+import { letScraperListenToMasterMessageAndInit } from "./generic-scraper.js";
 
-parentPort.on("message", (messageData) => {
-  if (messageData.command && messageData.command === "start") {
-    try {
-      scrapeMetalfan();
-    } catch (errorInstance) {
-      parentPort.postMessage({
-        status: "error",
-        message: errorInstance,
-      });
-    }
-  }
-});
+letScraperListenToMasterMessageAndInit(scrapeMetalfan);
 
 async function scrapeMetalfan() {
+  log("begin scrape metalfan");
   const browser = await puppeteer.launch();
   await getBaseMusicEvents(browser);
   parentPort.postMessage({
@@ -26,7 +17,9 @@ async function scrapeMetalfan() {
     message: "metalfan worker done.",
   });
   EventsList.save("metalfan");
-  puppeteer.browser.close();
+  try {
+    browser.close();
+  } catch (error) {}
 }
 
 async function getBaseMusicEvents(browser) {
@@ -121,6 +114,8 @@ async function getBaseMusicEvents(browser) {
           "patronaat",
           "nul13",
           "013",
+          "effenaar",
+          "tivolivredenburg",
         ].includes(locationName)
       ) {
         return;

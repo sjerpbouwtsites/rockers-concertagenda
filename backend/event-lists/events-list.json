@@ -14,34 +14,6 @@
     "dataIntegrity": 10
   },
   {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-03-29T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Ingested, Vulvodynia, Vctms en Bound In Fear",
-    "location": "patronaat",
-    "price": null,
-    "genre": null,
-    "shortText": "Patronaat, Haarlem",
-    "longText": null,
-    "image": null,
-    "dataIntegrity": 1
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-03-30T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "As I Lay Dying, Dying Fetus en Emmure",
-    "location": "nul13",
-    "price": null,
-    "genre": null,
-    "shortText": "013, Tilburg",
-    "longText": null,
-    "image": null,
-    "dataIntegrity": 1
-  },
-  {
     "doorOpenDateTime": "2022-03-30T16:00:00.000Z",
     "startDateTime": "2022-03-30T17:00:00.000Z",
     "endDateTime": null,
@@ -121,8 +93,8 @@
     "price": 15,
     "genre": null,
     "shortText": "Grootse rapbelofte uit België",
-    "longText": "../public/texts/b9edb60e-74fe-4a1b-8897-b21f27f33c77.html",
-    "image": null,
+    "longText": "../public/texts/8b1f4ee2-44c0-4533-904c-9433567b81d0.html",
+    "image": "https://patronaat.nl/app/uploads/2021/11/RareAkuma2021_copy-Indi-Mouart-760x400.jpg",
     "dataIntegrity": 10
   },
   {
@@ -205,7 +177,7 @@
     "price": 11.5,
     "genre": null,
     "shortText": "Een speciale vertoning van de Foo Fighters horrorfilm",
-    "longText": "../public/texts/543712dd-2c67-4504-a753-14e4c0c71976.html",
+    "longText": "../public/texts/131f9ddb-1398-4479-ba2f-0fbe4ee83c84.html",
     "image": "https://patronaat.nl/app/uploads/2022/03/studio666-760x400.jpg",
     "dataIntegrity": 10
   },
@@ -275,7 +247,7 @@
     "price": 19,
     "genre": null,
     "shortText": "Nederlands meest fascinerende rockband van het moment!",
-    "longText": "../public/texts/d8c4e89a-b53d-4b3b-8554-a0199505b284.html",
+    "longText": "../public/texts/793fbf40-5a12-43c1-8070-15c5ae7022fc.html",
     "image": null,
     "dataIntegrity": 10
   },
@@ -336,6 +308,20 @@
     "dataIntegrity": 10
   },
   {
+    "doorOpenDateTime": "2022-04-05T16:30:00.000Z",
+    "startDateTime": "2022-04-05T17:15:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/amenra-jo-quail-05-04-2022/",
+    "title": "Amenra + GGGOLDDD + Jo Quail",
+    "location": "tivolivredenburg",
+    "price": 26,
+    "genre": null,
+    "shortText": "Vlaamse post-metalband",
+    "longText": "../public/texts/1156aa1b-0422-43ae-a4e8-fb057e42fd66.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2020/11/Amenra-2020-21-Stefaan-Temmerman-credit-kopie-700x470.jpg",
+    "dataIntegrity": 10
+  },
+  {
     "doorOpenDateTime": null,
     "startDateTime": "2022-04-06T00:00:00.000Z",
     "endDateTime": null,
@@ -348,6 +334,20 @@
     "longText": null,
     "image": null,
     "dataIntegrity": 1
+  },
+  {
+    "doorOpenDateTime": "2022-04-06T17:30:00.000Z",
+    "startDateTime": "2022-04-06T18:15:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/fontaines-d-c-06-04-2022/",
+    "title": "Fontaines D.C.",
+    "location": "tivolivredenburg",
+    "price": 21.85,
+    "genre": null,
+    "shortText": "Postpunksensatie",
+    "longText": "../public/texts/03453607-d0be-4584-a9e4-e433ceb432bb.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2020/06/Deze-gebruiken-2.0-700x470.jpg",
+    "dataIntegrity": 10
   },
   {
     "doorOpenDateTime": null,
@@ -387,7 +387,7 @@
     "price": 18,
     "genre": null,
     "shortText": "Death metal decay",
-    "longText": "../public/texts/1872e8a9-6087-4931-b129-02e175bc3377.html",
+    "longText": "../public/texts/0e4418bc-ffa5-4783-b5ff-b92d312a607c.html",
     "image": null,
     "dataIntegrity": 10
   },
@@ -452,20 +452,6 @@
     "startDateTime": "2022-04-09T00:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": null,
-    "title": "Evil Invaders, Cryptosis en Schizophrenia",
-    "location": "patronaat",
-    "price": null,
-    "genre": null,
-    "shortText": "Patronaat, Haarlem",
-    "longText": null,
-    "image": null,
-    "dataIntegrity": 1
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-04-09T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
     "title": "PitFest Indoor",
     "location": "melody",
     "price": null,
@@ -513,8 +499,22 @@
     "price": 19,
     "genre": null,
     "shortText": "Moshen alsof het weer '84 is",
-    "longText": "../public/texts/d877832d-d686-4508-8f46-9dc67e562253.html",
+    "longText": "../public/texts/63fe2b9c-9425-4f0f-be29-a198971dd99a.html",
     "image": null,
+    "dataIntegrity": 10
+  },
+  {
+    "doorOpenDateTime": "2022-04-09T17:30:00.000Z",
+    "startDateTime": "2022-04-09T18:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/feuerengel-a-tribute-to-rammstein-09-04-2022/",
+    "title": "FEUERENGEL - A Tribute To Rammstein",
+    "location": "tivolivredenburg",
+    "price": 30.25,
+    "genre": null,
+    "shortText": "A Tribute To Rammstein",
+    "longText": "../public/texts/7c56d28e-28d7-4193-ae82-dd2c5f61bbb2.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2019/11/FEUERENGEL-Pressefoto-Feuer-2019-deze-gebruiken-Copy-700x470.jpg",
     "dataIntegrity": 10
   },
   {
@@ -547,20 +547,6 @@
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-04-10T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Serenity, Sascha Paeth's Masters Of Ceremony en Victorius",
-    "location": "patronaat",
-    "price": null,
-    "genre": null,
-    "shortText": "Patronaat, Haarlem",
-    "longText": null,
-    "image": null,
-    "dataIntegrity": 1
-  },
-  {
-    "doorOpenDateTime": null,
     "startDateTime": "2022-04-10T12:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://baroeg.nl/productie/baroeg-nl-productie-i-am-morbid/",
@@ -583,23 +569,9 @@
     "price": 20,
     "genre": null,
     "shortText": "Bombastische power metal show",
-    "longText": "../public/texts/e3aae182-7881-47da-89ce-421b6a50e49e.html",
+    "longText": "../public/texts/19d090d7-47c8-4242-88b3-66dfd65c83f4.html",
     "image": null,
     "dataIntegrity": 10
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-04-11T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Dark Tranquillity en Ensiferum",
-    "location": "patronaat",
-    "price": null,
-    "genre": null,
-    "shortText": "Patronaat, Haarlem",
-    "longText": null,
-    "image": null,
-    "dataIntegrity": 1
   },
   {
     "doorOpenDateTime": null,
@@ -625,7 +597,7 @@
     "price": 28.5,
     "genre": null,
     "shortText": "Scandinavische melodische death metal van ongekende hoogte",
-    "longText": "../public/texts/12ca98b7-dd6d-4e0b-9edf-cf1453b23ce7.html",
+    "longText": "../public/texts/1adb1841-6073-4d8a-bdec-052bd3d2f309.html",
     "image": null,
     "dataIntegrity": 10
   },
@@ -681,7 +653,7 @@
     "price": 19.5,
     "genre": null,
     "shortText": "Schoonheid in een rottende wereld",
-    "longText": "../public/texts/029a25fb-2320-4f56-9a0c-9790c67c82a1.html",
+    "longText": "../public/texts/5c86cc06-29ec-4783-a166-8c16b47cb75b.html",
     "image": null,
     "dataIntegrity": 10
   },
@@ -765,7 +737,7 @@
     "price": 16,
     "genre": null,
     "shortText": "Het space rock monster van de Lage Landen",
-    "longText": "../public/texts/035f46df-3f9a-4b36-b241-30b1bc4db632.html",
+    "longText": "../public/texts/f6acea45-297c-4cb1-a3da-37112a46ab07.html",
     "image": null,
     "dataIntegrity": 10
   },
@@ -933,7 +905,7 @@
     "price": "23.50",
     "genre": null,
     "shortText": "<p>Physical Graffiti is al ruim 20 jaar &#39;The Ultimate Led Zeppelin Experience&#39;. Vanavond staat hun show in het teken van 50 jaar &#39;Stairway to Heaven&#39;! Een show van Physical Graffiti betekent een ruim 2 uur durende set, met spectaculaire lichtshow en visuals, gespeeld op vergelijkbare instrumenten uit die tijd voor het ultieme Zeppelin-geluid.</p>\r\n",
-    "longText": "/home/sjerp/dev/apache/concertagenda/public/texts/ef004e3a-2438-4931-a4d0-fc5f406161f4.html",
+    "longText": "../public/texts/b4b969fa-e365-4689-aa79-e9892efaf0a6.html",
     "image": "https://lift3cdn.nl/image/115/784x476/physical-graffiti-2022-02.jpg",
     "dataIntegrity": 10
   },
@@ -989,7 +961,7 @@
     "price": 19,
     "genre": null,
     "shortText": "Uitgesponnen en gitzwart",
-    "longText": "../public/texts/c77a8dfe-7ce0-48ee-8247-5c2ae340c59e.html",
+    "longText": "../public/texts/f2807be7-446c-4cfe-8e29-ba359f9049e4.html",
     "image": null,
     "dataIntegrity": 10
   },
@@ -1185,7 +1157,7 @@
     "price": 22,
     "genre": null,
     "shortText": "Duistere trashy beats en raps uit Estland",
-    "longText": "../public/texts/ae4df9ba-d2d2-489d-9ad3-07aed97ef23b.html",
+    "longText": "../public/texts/0d9fdcd8-b9bb-4821-b77f-b86575fe82f9.html",
     "image": null,
     "dataIntegrity": 10
   },
@@ -1269,7 +1241,7 @@
     "price": null,
     "genre": null,
     "shortText": "Bloed onder je nagels vandaag bij deze reünieshow!",
-    "longText": "../public/texts/8db2e276-a1e3-476f-afd5-8516991c8c2b.html",
+    "longText": "../public/texts/e722ec24-d3ca-469d-a550-65e981deb187.html",
     "image": null,
     "dataIntegrity": 10
   },
@@ -1285,6 +1257,20 @@
     "shortText": "Your Favo Emo Party is Back",
     "longText": "../public/texts/c8cd1ce1-7d12-4071-99eb-9d0954073a65.html",
     "image": "https://www.dynamo-eindhoven.nl/wp-content/uploads/2020/03/Emo-Night-foto-1200x1200.jpg",
+    "dataIntegrity": 10
+  },
+  {
+    "doorOpenDateTime": "2022-04-23T17:15:00.000Z",
+    "startDateTime": "2022-04-23T18:15:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/dead-can-dance-23-04-2022/",
+    "title": "Dead Can Dance",
+    "location": "tivolivredenburg",
+    "price": 57,
+    "genre": null,
+    "shortText": "Een mix van middeleeuwse folk, wereldmuziek, klassiek en ambient",
+    "longText": "../public/texts/e2436dbd-3dbf-4686-abfa-8a7913fc0b21.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2021/09/IMG_3548-700x470.jpg",
     "dataIntegrity": 10
   },
   {
@@ -1326,6 +1312,20 @@
     "genre": null,
     "shortText": "<p>Reünie 40 jaar Spot The Loony</p>\n",
     "longText": "../public/texts/09f44c84-5b10-4e56-b587-32d5983a8c50.html",
+    "dataIntegrity": 10
+  },
+  {
+    "doorOpenDateTime": "2022-04-24T17:15:00.000Z",
+    "startDateTime": "2022-04-24T18:15:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/dead-can-dance-24-04-2022/",
+    "title": "Dead Can Dance",
+    "location": "tivolivredenburg",
+    "price": 57,
+    "genre": null,
+    "shortText": "Een mix van middeleeuwse folk, wereldmuziek, klassiek en ambient",
+    "longText": "../public/texts/1b825891-eb1a-4c4c-a16b-678a10f868b5.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2021/09/IMG_3548-700x470.jpg",
     "dataIntegrity": 10
   },
   {
@@ -1380,7 +1380,7 @@
     "price": 15,
     "genre": null,
     "shortText": "Epische en aangrijpende black metal",
-    "longText": "../public/texts/998a7f96-88aa-4e42-8b01-b2e952928573.html",
+    "longText": "../public/texts/3cafae01-6b75-4044-8572-ceb229c1d738.html",
     "image": null,
     "dataIntegrity": 10
   },
@@ -1425,20 +1425,6 @@
     "longText": "/home/sjerp/dev/apache/concertagenda/public/texts/94e81bef-cb4a-4a35-9877-ee58f2d1d583.html",
     "image": "https://occii.org/wp-content/uploads/2022/03/1646751178-pierre-bastien-684x1024.jpg",
     "dataIntegrity": 10
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-04-30T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Karnivool",
-    "location": "nul13",
-    "price": null,
-    "genre": null,
-    "shortText": "013, Tilburg",
-    "longText": null,
-    "image": null,
-    "dataIntegrity": 1
   },
   {
     "doorOpenDateTime": null,
@@ -1492,7 +1478,7 @@
     "price": "22.50",
     "genre": null,
     "shortText": "<p>Gitarist Leif de Leeuw en zijn band behoren tot de top van de Nederlandse blues-sc&egrave;ne. Leif is be&iuml;nvloed door grootheden als Jeff Beck, David Gilmour &eacute;n The Allman Brothers. Wie in de afgelopen jaren een show van de Leif de Leeuw Band heeft gezien weet dat het geen standaard blues-band is. Tijdens dit concert brengt Leif met een uitgebreide bezetting - twee drummers, een hammond orgel en een extra zanger - een eerbetoon aan The Allman Brothers band.</p>\r\n",
-    "longText": "/home/sjerp/dev/apache/concertagenda/public/texts/c8ad619e-f612-4dcf-a266-21401aba0d13.html",
+    "longText": "../public/texts/349d2235-0e6d-46ae-8b62-500d9ebd0faf.html",
     "image": "https://lift3cdn.nl/image/115/784x476/leif-de-leeuw-band.jpg",
     "dataIntegrity": 10
   },
@@ -1508,6 +1494,20 @@
     "shortText": "",
     "longText": "../public/texts/9a1a0b2a-50ec-4cdd-9ed1-da1e3e08b500.html",
     "image": "https://www.effenaar.nl/uploads/event_spotlight_image/5ff85fedea472.jpg",
+    "dataIntegrity": 10
+  },
+  {
+    "doorOpenDateTime": "2022-05-01T17:00:00.000Z",
+    "startDateTime": "2022-05-01T17:45:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/frank-turner-and-the-sleeping-souls-01-05-2022/",
+    "title": "Frank Turner & The Sleeping Souls",
+    "location": "tivolivredenburg",
+    "price": 27.35,
+    "genre": null,
+    "shortText": "Rauwe Britse folkpunk",
+    "longText": "../public/texts/bdd360c8-75a6-4e1e-a481-7f092393e57b.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2021/12/Band-shot-3-credit-Clair-McAllister_Easy-Resize.com_-700x470.jpg",
     "dataIntegrity": 10
   },
   {
@@ -1534,7 +1534,7 @@
     "price": "44.75",
     "genre": null,
     "shortText": "<p>Michael Schenker komt met de huidige MSG bezetting, Robin McAuley, Steve Mann, Bodo Schopf en de Nederlandse bassist Barend Courbois, terug voor zijn &#39;50th Anniversary&#39;! Intussen is er ook een nieuw album, <em>Immortal </em>dus deze exclusieve Nederlandse show mag je niet missen.</p>\r\n",
-    "longText": "/home/sjerp/dev/apache/concertagenda/public/texts/d3a6e522-737f-43e6-86cb-351eff10f25f.html",
+    "longText": "../public/texts/5f41050c-a402-4774-bc2e-fa8445317875.html",
     "image": "https://lift3cdn.nl/image/115/784x476/schenker-mei-2022.jpg",
     "dataIntegrity": 10
   },
@@ -1567,20 +1567,6 @@
     "dataIntegrity": 1
   },
   {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-05-04T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "William DuVall",
-    "location": "nul13",
-    "price": null,
-    "genre": null,
-    "shortText": "013, Tilburg",
-    "longText": null,
-    "image": null,
-    "dataIntegrity": 1
-  },
-  {
     "doorOpenDateTime": "2022-05-04T17:00:00.000Z",
     "startDateTime": "2022-05-04T18:00:00.000Z",
     "endDateTime": null,
@@ -1604,7 +1590,7 @@
     "price": 19,
     "genre": null,
     "shortText": "Amerikaanse all-star hardcore band",
-    "longText": "../public/texts/b784afba-2933-4e34-9dbf-fc80c957fa13.html",
+    "longText": "../public/texts/dc72d47c-e4a2-4c0e-8f33-5bf0d9eb938e.html",
     "image": "https://patronaat.nl/app/uploads/2022/01/end__band_promo-01-2020_official_press-760x400.jpg",
     "dataIntegrity": 10
   },
@@ -1618,20 +1604,6 @@
     "price": null,
     "genre": null,
     "shortText": "Melkweg, Amsterdam",
-    "longText": null,
-    "image": null,
-    "dataIntegrity": 1
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-05-06T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Changing Tides, Reformist, Fists Of Time en Frontstreet",
-    "location": "nul13",
-    "price": null,
-    "genre": null,
-    "shortText": "013, Tilburg",
     "longText": null,
     "image": null,
     "dataIntegrity": 1
@@ -1676,6 +1648,20 @@
     "shortText": "Album release show",
     "longText": "../public/texts/8ebaba10-3aa0-4d79-a746-3998ba73bb85.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/61d8220f33762.png?version=1641554663",
+    "dataIntegrity": 10
+  },
+  {
+    "doorOpenDateTime": "2022-05-06T17:00:00.000Z",
+    "startDateTime": "2022-05-06T17:45:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/metz-06-05-2022/",
+    "title": "Metz",
+    "location": "tivolivredenburg",
+    "price": null,
+    "genre": null,
+    "shortText": "Afgelast",
+    "longText": "../public/texts/86c05473-9ec4-436d-bc96-d45af7d2b3aa.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2020/10/Deze-gebruiken-700x470.jpg",
     "dataIntegrity": 10
   },
   {
@@ -1758,7 +1744,7 @@
     "price": "30.00",
     "genre": null,
     "shortText": "<p>De hardrockformatie Gotthard is afkomstig uit Zwitserland. De rockers uit Lugano stonden de afgelopen decennia meer dan 2000 keer op het podium en toerden samen met grootheden als Deep Purple, Bryan Adams, AC/DC en Bon Jovi. Gotthard heeft inmiddels 12 studioalbums op zijn naam staan en verkocht wereldwijd 3 miljoen albums.</p>\r\n",
-    "longText": "/home/sjerp/dev/apache/concertagenda/public/texts/b285600c-11b6-4e46-b208-40949f5d5e1b.html",
+    "longText": "../public/texts/fee80cf0-f7b9-447b-b046-43465d7ef236.html",
     "image": "https://lift3cdn.nl/image/115/784x476/gotthard.jpg",
     "dataIntegrity": 10
   },
@@ -1800,7 +1786,7 @@
     "price": 15.5,
     "genre": null,
     "shortText": "Onderdeel van de 90's alt rock revival",
-    "longText": "../public/texts/2af7e8ad-31bd-40c1-905a-4d96f87543a5.html",
+    "longText": "../public/texts/86bef6c2-37f1-4398-aaff-2f2c60db9866.html",
     "image": null,
     "dataIntegrity": 10
   },
@@ -1841,7 +1827,7 @@
     "price": 10,
     "genre": null,
     "shortText": "Haarlemse metalband presenteert nieuwe plaat Of Kings & Gods",
-    "longText": "../public/texts/a3848211-597c-4b24-b05f-98066464ecbf.html",
+    "longText": "../public/texts/1bbcb282-1977-4fcb-94b6-3e95c19cbb95.html",
     "image": null,
     "dataIntegrity": 10
   },
@@ -1897,7 +1883,7 @@
     "price": null,
     "genre": null,
     "shortText": "Alsof de Shangri-La's zelf door de straten scheuren op Lambretta scooters",
-    "longText": "../public/texts/2e21e02b-0c43-4aba-8113-51e21f7dd6de.html",
+    "longText": "../public/texts/ae0ae3d8-f467-4088-b6f1-eaa30a4511fe.html",
     "image": null,
     "dataIntegrity": 10
   },
@@ -1911,7 +1897,7 @@
     "price": 18,
     "genre": null,
     "shortText": "Het best bewaarde geheim van Zweden",
-    "longText": "../public/texts/8a371de0-4872-4586-b708-8087fe1ccc7b.html",
+    "longText": "../public/texts/30e88000-92c8-4659-93c6-1b4a8e03a107.html",
     "image": null,
     "dataIntegrity": 10
   },
@@ -1980,7 +1966,7 @@
     "price": "28.50",
     "genre": null,
     "shortText": "<p>Queen Must Go On is de overtuigende winnaar van het SBS-programma &lsquo;The Tribute, Battle of the Bands&rsquo;! Jury en publiek werden omvergeblazen door de performance en energie en het enorme bereik van zanger Ward Palmen.</p>\r\n",
-    "longText": "/home/sjerp/dev/apache/concertagenda/public/texts/2f772adc-75ed-41b9-868a-d51cd255213a.html",
+    "longText": "../public/texts/a35a18ec-a5d8-44ee-bba1-dacad295d1ab.html",
     "image": "https://lift3cdn.nl/image/115/784x476/queen-must-go-on.jpg",
     "dataIntegrity": 10
   },
@@ -2022,7 +2008,7 @@
     "price": 15,
     "genre": null,
     "shortText": "De bruutste band van België met leden van Aborted, Fleddy Melculy & Leng Tch'e",
-    "longText": "../public/texts/e48e1d9d-7433-4e85-9a12-05ff0130bf14.html",
+    "longText": "../public/texts/94e0abe4-74b0-4e77-93b2-d284774c3c24.html",
     "image": null,
     "dataIntegrity": 10
   },
@@ -2070,20 +2056,6 @@
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-05-18T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Meshuggah en Zeal & Ardor",
-    "location": "nul13",
-    "price": null,
-    "genre": null,
-    "shortText": "013, Tilburg",
-    "longText": null,
-    "image": null,
-    "dataIntegrity": 1
-  },
-  {
-    "doorOpenDateTime": null,
     "startDateTime": "2022-05-18T16:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://baroeg.nl/productie/suffering-hour-bedsore-haunter-cryptic-shift/",
@@ -2108,6 +2080,20 @@
     "shortText": null,
     "longText": "../public/texts/9874a0ab-ab91-4b73-8491-74cfcb374d3a.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/617ba594b7c1d.jpg?version=1635493481",
+    "dataIntegrity": 10
+  },
+  {
+    "doorOpenDateTime": "2022-05-18T17:00:00.000Z",
+    "startDateTime": "2022-05-18T17:45:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/brian-fallon-the-howling-weather-18-05-2022/",
+    "title": "Brian Fallon & The Howling Weather",
+    "location": "tivolivredenburg",
+    "price": 31.75,
+    "genre": null,
+    "shortText": "Frontman van The Gaslight Anthem",
+    "longText": "../public/texts/572d0e05-4650-47e0-a837-ffac61e0d7e6.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2019/09/Afbeelding_brian-700x470.jpg",
     "dataIntegrity": 10
   },
   {
@@ -2162,7 +2148,7 @@
     "price": 15,
     "genre": null,
     "shortText": "Hoogwaardige black metal uit Utrecht",
-    "longText": "../public/texts/644044fa-add4-4048-a556-c4ef706095b7.html",
+    "longText": "../public/texts/128f11d5-1ec5-4ce0-8207-5d56faa6b814.html",
     "image": null,
     "dataIntegrity": 10
   },
@@ -2330,7 +2316,7 @@
     "price": 15,
     "genre": null,
     "shortText": "Van rauwe steak naar premium dry-aged beef.",
-    "longText": "../public/texts/1ad489fd-9e75-4aef-81ca-255bb86db000.html",
+    "longText": "../public/texts/6a4684f6-cd8b-4a0e-947d-b0f18e32f377.html",
     "image": null,
     "dataIntegrity": 10
   },
@@ -2377,20 +2363,6 @@
     "dataIntegrity": 1
   },
   {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-05-25T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "The Night Flight Orchestra",
-    "location": "nul13",
-    "price": null,
-    "genre": null,
-    "shortText": "013, Tilburg",
-    "longText": null,
-    "image": null,
-    "dataIntegrity": 1
-  },
-  {
     "doorOpenDateTime": "2022-05-25T17:00:00.000Z",
     "startDateTime": "2022-05-25T17:30:00.000Z",
     "endDateTime": null,
@@ -2405,6 +2377,20 @@
     "dataIntegrity": 10
   },
   {
+    "doorOpenDateTime": "2022-05-25T17:15:00.000Z",
+    "startDateTime": "2022-05-25T18:15:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/mogwai-25-05-2022/",
+    "title": "MOGWAI",
+    "location": "tivolivredenburg",
+    "price": 36.25,
+    "genre": null,
+    "shortText": "Breed uitgesponnen, Instrumentale post-rock",
+    "longText": "../public/texts/497ee508-a2fb-403d-a9c3-d0dce745321f.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2021/09/Mogwai-4-by-Antony-Crook-700x470.jpg",
+    "dataIntegrity": 10
+  },
+  {
     "doorOpenDateTime": null,
     "startDateTime": "2022-05-26T00:00:00.000Z",
     "endDateTime": null,
@@ -2414,20 +2400,6 @@
     "price": null,
     "genre": null,
     "shortText": "De Pul, Uden",
-    "longText": null,
-    "image": null,
-    "dataIntegrity": 1
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-05-26T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Mayhem en Mortiis",
-    "location": "nul13",
-    "price": null,
-    "genre": null,
-    "shortText": "013, Tilburg",
     "longText": null,
     "image": null,
     "dataIntegrity": 1
@@ -2484,7 +2456,7 @@
     "price": 15.5,
     "genre": null,
     "shortText": "Minor Operation Bookings presenteert deze monster line-up!",
-    "longText": "../public/texts/559c84af-d307-4084-a8c3-1b7ad29ff875.html",
+    "longText": "../public/texts/d142d585-e3b3-4e21-9320-e9facc885175.html",
     "image": null,
     "dataIntegrity": 10
   },
@@ -2540,7 +2512,7 @@
     "price": "28.50",
     "genre": null,
     "shortText": "<p>The Eagles Legacy is d&eacute; Nederlandse tribute die de unieke sound van de Eagles perfect authentiek brengt. De band behaalde de finale van het populaire SBS programma The Tribute &ndash; Battle Of The Bands.</p>\r\n",
-    "longText": "/home/sjerp/dev/apache/concertagenda/public/texts/cadfffcf-0f2a-46e3-bfb3-6ba33a8574ad.html",
+    "longText": "../public/texts/c559e226-8b37-4426-ad47-74857cae53ab.html",
     "image": "https://lift3cdn.nl/image/115/784x476/the-eagles-legacy.jpg",
     "dataIntegrity": 10
   },
@@ -2588,6 +2560,20 @@
   },
   {
     "doorOpenDateTime": null,
+    "startDateTime": "2022-06-01T00:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": null,
+    "title": "Therapy? en Sparrow Falls",
+    "location": "luxorlive",
+    "price": null,
+    "genre": null,
+    "shortText": "Luxor Live, Arnhem",
+    "longText": null,
+    "image": null,
+    "dataIntegrity": 1
+  },
+  {
+    "doorOpenDateTime": null,
     "startDateTime": "2022-06-01T18:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://www.effenaar.nl/agenda/11588/haevn-jun2022",
@@ -2610,7 +2596,7 @@
     "price": 13,
     "genre": null,
     "shortText": "Post-punkers dat klinkt als Parquet Courts en Charles Bukowski.",
-    "longText": "../public/texts/585bfcb4-793f-4288-a180-7ff89415ba4d.html",
+    "longText": "../public/texts/abde3433-a1f0-4937-847b-ba47811634a6.html",
     "image": "https://patronaat.nl/app/uploads/2021/12/BikeThiefs1-760x400.jpg",
     "dataIntegrity": 10
   },
@@ -2633,11 +2619,11 @@
     "startDateTime": "2022-06-02T00:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": null,
-    "title": "The Neal Morse Band",
-    "location": "nul13",
+    "title": "Therapy? en Sparrow Falls",
+    "location": "gebouwt",
     "price": null,
     "genre": null,
-    "shortText": "013, Tilburg",
+    "shortText": "Gebouw-T, Bergen Op Zoom",
     "longText": null,
     "image": null,
     "dataIntegrity": 1
@@ -2736,8 +2722,36 @@
     "price": null,
     "genre": null,
     "shortText": "None Shall Fall 12,5 Year Anniversary Fest",
-    "longText": "../public/texts/43427475-7b64-4150-9a67-9562bff1ab83.html",
+    "longText": "../public/texts/989f61b9-5902-4955-b176-e19256aafb1a.html",
     "image": null,
+    "dataIntegrity": 10
+  },
+  {
+    "doorOpenDateTime": "2022-06-03T17:00:00.000Z",
+    "startDateTime": "2022-06-03T17:45:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/therapy-03-06-2022/",
+    "title": "Therapy?",
+    "location": "tivolivredenburg",
+    "price": 28.35,
+    "genre": null,
+    "shortText": "So much for the 32 year plan",
+    "longText": "../public/texts/434f5c8b-2422-4443-bc9c-d6c1aa68e7a2.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2020/03/deze-gebruiken-Therapy_-Shoot-2018-083-C-Copy-700x470-1-700x470.jpg",
+    "dataIntegrity": 10
+  },
+  {
+    "doorOpenDateTime": "2022-06-03T17:30:00.000Z",
+    "startDateTime": "2022-06-03T18:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/nada-surf-03-06-2022/",
+    "title": "Nada Surf",
+    "location": "tivolivredenburg",
+    "price": 24.35,
+    "genre": null,
+    "shortText": "Echte Amerikaanse powerpop",
+    "longText": "../public/texts/596a2001-dc91-484d-af6c-9cf9aa2e56cc.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2021/10/7-700x470.jpg",
     "dataIntegrity": 10
   },
   {
@@ -2750,6 +2764,20 @@
     "price": null,
     "genre": null,
     "shortText": "Poppodium Duycker, Hoofddorp",
+    "longText": null,
+    "image": null,
+    "dataIntegrity": 1
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-06-04T00:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": null,
+    "title": "Therapy? en Sparrow Falls",
+    "location": "willemtwee",
+    "price": null,
+    "genre": null,
+    "shortText": "Willemtwee, Den Bosch",
     "longText": null,
     "image": null,
     "dataIntegrity": 1
@@ -2784,6 +2812,34 @@
   },
   {
     "doorOpenDateTime": null,
+    "startDateTime": "2022-06-06T00:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": null,
+    "title": "Therapy? en Sparrow Falls",
+    "location": "oosterpoort",
+    "price": null,
+    "genre": null,
+    "shortText": "Oosterpoort, Groningen",
+    "longText": null,
+    "image": null,
+    "dataIntegrity": 1
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-06-07T00:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": null,
+    "title": "Therapy? en Sparrow Falls",
+    "location": "hedon",
+    "price": null,
+    "genre": null,
+    "shortText": "Hedon, Zwolle",
+    "longText": null,
+    "image": null,
+    "dataIntegrity": 1
+  },
+  {
+    "doorOpenDateTime": null,
     "startDateTime": "2022-06-08T00:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": null,
@@ -2812,14 +2868,14 @@
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-06-09T00:00:00.000Z",
+    "startDateTime": "2022-06-08T00:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": null,
-    "title": "Ice Nine Kills",
-    "location": "nul13",
+    "title": "Therapy? en Sparrow Falls",
+    "location": "paard",
     "price": null,
     "genre": null,
-    "shortText": "013, Tilburg",
+    "shortText": "Paard, Den Haag",
     "longText": null,
     "image": null,
     "dataIntegrity": 1
@@ -2910,6 +2966,20 @@
   },
   {
     "doorOpenDateTime": "2022-06-10T17:30:00.000Z",
+    "startDateTime": "2022-06-10T18:15:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/om-10-06-2022/",
+    "title": "OM",
+    "location": "tivolivredenburg",
+    "price": null,
+    "genre": null,
+    "shortText": "Afgelast",
+    "longText": "../public/texts/037fcd54-63d5-4e6d-9eba-f643588843b1.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2021/05/90162824_3073934575984003_1650344104065761280_n-700x470.jpg",
+    "dataIntegrity": 10
+  },
+  {
+    "doorOpenDateTime": "2022-06-10T17:30:00.000Z",
     "startDateTime": "2022-06-10T18:30:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://poppodiumboerderij.nl/",
@@ -2918,7 +2988,7 @@
     "price": "26.00",
     "genre": null,
     "shortText": "<p>The Gathering brengt na 10 jaar een nieuw album uit. Van doom en gothic metal in hun beginjaren tot triprock met elektronische elementen en soundscapes: het geluid van The Gathering was altijd al moeilijk in een hokje te plaatsen. En ook nu klinkt het geluid weer uniek!</p>\r\n",
-    "longText": "/home/sjerp/dev/apache/concertagenda/public/texts/5003c516-bfd4-4ddf-be2c-8de5e74578e3.html",
+    "longText": "../public/texts/5becd051-85a4-40a9-be43-42aed5a8e52f.html",
     "image": "https://lift3cdn.nl/image/115/784x476/the-gathering-2022.jpg",
     "dataIntegrity": 10
   },
@@ -2937,6 +3007,20 @@
     "dataIntegrity": 10
   },
   {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-06-12T00:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": null,
+    "title": "Therapy? en Sparrow Falls",
+    "location": "metropool",
+    "price": null,
+    "genre": null,
+    "shortText": "Metropool, Enschede",
+    "longText": null,
+    "image": null,
+    "dataIntegrity": 1
+  },
+  {
     "doorOpenDateTime": "2022-06-12T17:30:00.000Z",
     "startDateTime": "2022-06-12T18:00:00.000Z",
     "endDateTime": null,
@@ -2946,7 +3030,7 @@
     "price": 26,
     "genre": null,
     "shortText": "Legendarische band is na 10 jaar terug met een nieuwe plaat",
-    "longText": "../public/texts/cd781e64-94fd-487c-b4bd-a74f4cd73b94.html",
+    "longText": "../public/texts/b4437b43-eeb1-4827-9077-0ab56d40f38b.html",
     "image": null,
     "dataIntegrity": 10
   },
@@ -3049,6 +3133,20 @@
     "dataIntegrity": 1
   },
   {
+    "doorOpenDateTime": "2022-06-16T16:30:00.000Z",
+    "startDateTime": "2022-06-16T17:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/shinedown-16-06-2022/",
+    "title": "Shinedown",
+    "location": "tivolivredenburg",
+    "price": 38.25,
+    "genre": null,
+    "shortText": "Amerikaanse rockband brengt catchy refreinen",
+    "longText": "../public/texts/c8a8454b-4519-489f-ace3-5cf582b5f001.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2021/11/Shinedown-klein-700x470.png",
+    "dataIntegrity": 10
+  },
+  {
     "doorOpenDateTime": "2022-06-16T17:30:00.000Z",
     "startDateTime": "2022-06-16T18:30:00.000Z",
     "endDateTime": null,
@@ -3061,20 +3159,6 @@
     "longText": "../public/texts/8994eb31-ce02-4dcc-a649-2e83c500d10a.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/623dc7146ea96.jpg?version=1648215845",
     "dataIntegrity": 10
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-06-17T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Myles Kennedy",
-    "location": "nul13",
-    "price": null,
-    "genre": null,
-    "shortText": "013, Tilburg",
-    "longText": null,
-    "image": null,
-    "dataIntegrity": 1
   },
   {
     "doorOpenDateTime": null,
@@ -3147,6 +3231,20 @@
     "dataIntegrity": 1
   },
   {
+    "doorOpenDateTime": "2022-06-20T17:00:00.000Z",
+    "startDateTime": "2022-06-20T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/spiritbox-20-06-2022/",
+    "title": "Spiritbox",
+    "location": "tivolivredenburg",
+    "price": 23.35,
+    "genre": null,
+    "shortText": "Canadese metalformatie met stevig debuut",
+    "longText": "../public/texts/6aa1ce9f-9fbb-4e6b-b203-0c6389dcf83d.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2022/03/275309775_540913417390745_947493037696685030_n-700x470.jpg",
+    "dataIntegrity": 10
+  },
+  {
     "doorOpenDateTime": null,
     "startDateTime": "2022-06-21T00:00:00.000Z",
     "endDateTime": null,
@@ -3187,6 +3285,20 @@
     "longText": null,
     "image": null,
     "dataIntegrity": 1
+  },
+  {
+    "doorOpenDateTime": "2022-06-22T17:00:00.000Z",
+    "startDateTime": "2022-06-22T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/iggy-pop-22-06-2022/",
+    "title": "Iggy Pop",
+    "location": "tivolivredenburg",
+    "price": 76,
+    "genre": null,
+    "shortText": "The Godfather of Punk",
+    "longText": "../public/texts/9613af34-0170-4e88-b9e5-35f0145ac617.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2021/06/Webversie-9-700x470.png",
+    "dataIntegrity": 10
   },
   {
     "doorOpenDateTime": null,
@@ -3240,7 +3352,7 @@
     "price": 23.5,
     "genre": null,
     "shortText": "Voorlopers in de straight edge hardcore punk scene",
-    "longText": "../public/texts/1d477085-a77b-40a9-8197-12937e79c638.html",
+    "longText": "../public/texts/ecc7483c-42b7-4417-ae43-9e33f03ff0cb.html",
     "image": null,
     "dataIntegrity": 10
   },
@@ -3254,8 +3366,22 @@
     "price": 15,
     "genre": null,
     "shortText": "Afscheidsshow van een van de meest heavy bands van Haarlem",
-    "longText": "../public/texts/9965dd1a-15da-4fbe-aeee-7e44f3b39355.html",
+    "longText": "../public/texts/d4bdbdba-647b-4347-8f7e-753f41aef279.html",
     "image": null,
+    "dataIntegrity": 10
+  },
+  {
+    "doorOpenDateTime": "2022-06-24T17:30:00.000Z",
+    "startDateTime": "2022-06-24T18:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/einsturzende-neubauten-24-06-2022/",
+    "title": "Einstürzende Neubauten",
+    "location": "tivolivredenburg",
+    "price": 39.25,
+    "genre": null,
+    "shortText": "Legendarisch eighties avant-gardegezelschap",
+    "longText": "../public/texts/de4215e3-1d0d-47a1-8efb-375263e6d9c4.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2019/11/webversie-3-700x470.png",
     "dataIntegrity": 10
   },
   {
@@ -3282,7 +3408,7 @@
     "price": "22.50",
     "genre": null,
     "shortText": "<p>De Amerikaanse band The Perfect Tool is &rsquo;s werelds beste Tool tribute band. Dit vinden niet alleen heel veel fans maar ook Tool bandleden Maynard James Keenan en Adam Jones. Compleet met videoprojecties veroveren ze de Verenigde Staten &eacute;n Europa al een aantal jaar.</p>\r\n",
-    "longText": "/home/sjerp/dev/apache/concertagenda/public/texts/2b86a1e3-50e0-4067-9551-c00c008487b4.html",
+    "longText": "../public/texts/f73cb7f9-b892-491e-a3f8-9f1bf1c80645.html",
     "image": "https://lift3cdn.nl/image/115/784x476/the-perfect-tool.jpg",
     "dataIntegrity": 10
   },
@@ -3310,7 +3436,7 @@
     "price": 19,
     "genre": null,
     "shortText": "Vervaarlijk zwartgeblakerde punk uit het hoge Noorden",
-    "longText": "../public/texts/dd4c2684-a6b5-45f1-818b-f30e22f3a650.html",
+    "longText": "../public/texts/8a1c7736-eb3e-45fd-913f-dd22de2cb3fc.html",
     "image": null,
     "dataIntegrity": 10
   },
@@ -3327,6 +3453,20 @@
     "longText": null,
     "image": null,
     "dataIntegrity": 1
+  },
+  {
+    "doorOpenDateTime": "2022-06-29T17:15:00.000Z",
+    "startDateTime": "2022-06-29T18:15:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/the-specials-29-06-2022/",
+    "title": "The Specials",
+    "location": "tivolivredenburg",
+    "price": 47,
+    "genre": null,
+    "shortText": "Grondleggers van de Britse ska",
+    "longText": "../public/texts/a6d49b06-6911-4cc3-9586-c9079ad07c34.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2022/01/Band-Lead-photo-_Easy-Resize.com_-700x470.jpg",
+    "dataIntegrity": 10
   },
   {
     "doorOpenDateTime": null,
@@ -3352,7 +3492,7 @@
     "price": 40.5,
     "genre": null,
     "shortText": "Exclusieve Benelux show van uniek project door legendarische hardcore band",
-    "longText": "../public/texts/a1dfa489-185d-46d9-a5f9-557c91582791.html",
+    "longText": "../public/texts/2c09bab1-1f9e-4a7f-a6dd-6c61b8d14cf1.html",
     "image": null,
     "dataIntegrity": 10
   },
@@ -3380,7 +3520,7 @@
     "price": "31.50",
     "genre": null,
     "shortText": "<p>Tremonti is een Amerikaanse heavy metal band opgericht en geleid door zanger en gitarist Mark Tremonti (ook bekend van de toonaangevende bands Creed en Alter Bridge). Wat oorspronkelijk begon als een soloproject van Mark evolueerde naar een volwaardige band en vorig jaar brachten zij hun vijfde studioalbum uit.</p>\r\n",
-    "longText": "/home/sjerp/dev/apache/concertagenda/public/texts/38b1330e-e0b9-4a5f-a25e-6f5d93460093.html",
+    "longText": "../public/texts/6d9c9fc4-dcf1-4f09-b2b0-dcfe2dfb0fbc.html",
     "image": "https://lift3cdn.nl/image/115/784x476/tremonti-.jpg",
     "dataIntegrity": 10
   },
@@ -3422,7 +3562,7 @@
     "price": 22,
     "genre": null,
     "shortText": "presented by Minor Operation Bookings",
-    "longText": "../public/texts/644ac981-a8e5-4db7-a990-fe4a3caef124.html",
+    "longText": "../public/texts/e8d16883-36d5-4387-ba9e-dcde44a7ab37.html",
     "image": "https://patronaat.nl/app/uploads/2022/03/Cro-Mags-760x400.jpg",
     "dataIntegrity": 10
   },
@@ -3464,8 +3604,22 @@
     "price": 25.5,
     "genre": null,
     "shortText": "Een van de meest vernieuwende bands in hardcore punk",
-    "longText": "../public/texts/8d1c1a6f-d1d8-4ada-8f56-6cc054d4d48d.html",
+    "longText": "../public/texts/c353ec25-0e3d-4272-aed5-279941d35379.html",
     "image": null,
+    "dataIntegrity": 10
+  },
+  {
+    "doorOpenDateTime": "2022-07-06T17:30:00.000Z",
+    "startDateTime": "2022-07-06T18:15:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/jason-ringenberg-06-07-2022/",
+    "title": "Jason Ringenberg",
+    "location": "tivolivredenburg",
+    "price": 17.55,
+    "genre": null,
+    "shortText": "Countrypunk held klinkt als Hank Williams & The Pogues",
+    "longText": "../public/texts/a55be4bb-398b-4e9f-9f77-ac6e1ff96dc2.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2021/11/Webfoto-1-700x470.png",
     "dataIntegrity": 10
   },
   {
@@ -3512,20 +3666,6 @@
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-07-09T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Mastodon en Planet Of Zeus",
-    "location": "nul13",
-    "price": null,
-    "genre": null,
-    "shortText": "013, Tilburg",
-    "longText": null,
-    "image": null,
-    "dataIntegrity": 1
-  },
-  {
-    "doorOpenDateTime": null,
     "startDateTime": "2022-07-09T17:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://baroeg.nl/productie/nieuwe-datum-semblant-as-i-may-secret-rule-structural/",
@@ -3566,18 +3706,18 @@
     "dataIntegrity": 1
   },
   {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-07-13T00:00:00.000Z",
+    "doorOpenDateTime": "2022-07-10T17:00:00.000Z",
+    "startDateTime": "2022-07-10T18:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Gojira, Alien Weaponry en Employed To Serve",
-    "location": "nul13",
-    "price": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/steel-panther-10-07-2022/",
+    "title": "Steel Panther",
+    "location": "tivolivredenburg",
+    "price": 50,
     "genre": null,
-    "shortText": "013, Tilburg",
-    "longText": null,
-    "image": null,
-    "dataIntegrity": 1
+    "shortText": "Amerikaanse glammetal vol spektakel",
+    "longText": "../public/texts/2dba4ef0-62ef-491c-9d46-7edeed9f29ab.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2022/02/Steel-Panther-2021-photo-by-Dave-Jackson-1-673x470.jpg",
+    "dataIntegrity": 10
   },
   {
     "doorOpenDateTime": "2022-07-13T17:00:00.000Z",
@@ -3592,20 +3732,6 @@
     "longText": "../public/texts/99bfdd62-b7bf-4bbe-b30b-29407e4be517.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/611f7dd70a5bf.jpg?version=1629453866",
     "dataIntegrity": 10
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-07-14T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Gojira, Alien Weaponry en Employed To Serve",
-    "location": "nul13",
-    "price": null,
-    "genre": null,
-    "shortText": "013, Tilburg",
-    "longText": null,
-    "image": null,
-    "dataIntegrity": 1
   },
   {
     "doorOpenDateTime": "2022-07-14T17:00:00.000Z",
@@ -3631,8 +3757,22 @@
     "price": 23.25,
     "genre": null,
     "shortText": "Meezingen op Smells Like Teen Spirit!",
-    "longText": "../public/texts/9e7dc6e4-0686-4bca-8dd6-c69a3c03cd83.html",
+    "longText": "../public/texts/85f883e8-a64e-4d22-aa4d-69254b0955e5.html",
     "image": null,
+    "dataIntegrity": 10
+  },
+  {
+    "doorOpenDateTime": "2022-07-15T17:00:00.000Z",
+    "startDateTime": "2022-07-15T18:15:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/highly-suspect-15-07-2022/",
+    "title": "Highly Suspect",
+    "location": "tivolivredenburg",
+    "price": 27.35,
+    "genre": null,
+    "shortText": "Stevige rock voor fans van Royal Blood en Queens Of The Stone Age",
+    "longText": "../public/texts/5058fc95-52a5-4620-bfac-d09aa6176359.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2022/03/Highly-2021_1_Easy-Resize.com_-700x470.jpg",
     "dataIntegrity": 10
   },
   {
@@ -3662,20 +3802,6 @@
     "longText": "/home/sjerp/dev/apache/concertagenda/public/texts/19fbf6dc-e0e3-4f58-8e71-4b70faaccc97.html",
     "image": "https://occii.org/wp-content/uploads/2022/03/lowlife-occii-724x1024.jpg",
     "dataIntegrity": 10
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-07-20T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Yngwie Malmsteen",
-    "location": "nul13",
-    "price": null,
-    "genre": null,
-    "shortText": "013, Tilburg",
-    "longText": null,
-    "image": null,
-    "dataIntegrity": 1
   },
   {
     "doorOpenDateTime": "2022-07-20T17:00:00.000Z",
@@ -3720,20 +3846,6 @@
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-07-25T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Transatlantic",
-    "location": "nul13",
-    "price": null,
-    "genre": null,
-    "shortText": "013, Tilburg",
-    "longText": null,
-    "image": null,
-    "dataIntegrity": 1
-  },
-  {
-    "doorOpenDateTime": null,
     "startDateTime": "2022-07-26T00:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": null,
@@ -3759,20 +3871,6 @@
     "longText": "../public/texts/3f44093e-7781-428b-864b-ac1781c63de4.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/5db2cdd66fa20.jpg?version=1571999224",
     "dataIntegrity": 10
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-07-28T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Judas Priest",
-    "location": "nul13",
-    "price": null,
-    "genre": null,
-    "shortText": "013, Tilburg",
-    "longText": null,
-    "image": null,
-    "dataIntegrity": 1
   },
   {
     "doorOpenDateTime": "2022-07-28T17:00:00.000Z",
@@ -3801,20 +3899,6 @@
     "longText": "../public/texts/6417e6d5-64ca-4252-b0ae-49fb2bed3062.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/61f3abaccbbbd.png?version=1643359208",
     "dataIntegrity": 10
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-07-30T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Limp Bizkit",
-    "location": "nul13",
-    "price": null,
-    "genre": null,
-    "shortText": "013, Tilburg",
-    "longText": null,
-    "image": null,
-    "dataIntegrity": 1
   },
   {
     "doorOpenDateTime": "2022-07-30T17:00:00.000Z",
@@ -3854,7 +3938,7 @@
     "price": "28.50",
     "genre": null,
     "shortText": "<p>Sinds 2001 zijn The Iron Maidens niet alleen &#39;s werelds enige vrouwelijke eerbetoon aan Iron Maiden, maar ook nog eens een van de meest populaire tribute bands ooit. Deze all-female heavy metal band beschikt over zowel schoonheid als muzikaal vakmanschap. Uiteraard zullen klassiekers als The Number of the Beast, Run to the Hills, Wasted Years, Can I Play with Madness, The Trooper en Fear of the Dark niet ontbreken.</p>\r\n",
-    "longText": "/home/sjerp/dev/apache/concertagenda/public/texts/cbc6a7d9-18a8-44aa-b7d2-5640e99eca67.html",
+    "longText": "../public/texts/cd4da534-c377-413d-a20a-83b4e7c719b6.html",
     "image": "https://lift3cdn.nl/image/115/784x476/the-iron-maidens.jpg",
     "dataIntegrity": 10
   },
@@ -3966,7 +4050,7 @@
     "price": 20,
     "genre": null,
     "shortText": "Doommetal-kwartet vertolkt succesdebuut 'Sorrow & Extinction' integraal",
-    "longText": "../public/texts/5a52fb73-659e-4cc1-ae9f-78b4d3300cd5.html",
+    "longText": "../public/texts/dbadb814-5cc8-4f06-b506-fd64d63694dd.html",
     "image": "https://patronaat.nl/app/uploads/2022/02/Pallbearer-760x400.jpg",
     "dataIntegrity": 10
   },
@@ -3999,6 +4083,34 @@
     "dataIntegrity": 1
   },
   {
+    "doorOpenDateTime": "2022-08-13T16:30:00.000Z",
+    "startDateTime": "2022-08-13T17:15:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/igorrr-13-08-2022/",
+    "title": "IGORRR",
+    "location": "tivolivredenburg",
+    "price": 23.35,
+    "genre": null,
+    "shortText": "Een mix van blackmetal, jazz, klassiek, breakcore en meer!",
+    "longText": "../public/texts/98af527b-1bdc-4dec-bed5-6b90da118a45.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2021/09/Nieuwe-persfoto-Igorrr-promo-pic-2021-kopie-700x470.png",
+    "dataIntegrity": 10
+  },
+  {
+    "doorOpenDateTime": "2022-08-13T17:00:00.000Z",
+    "startDateTime": "2022-08-13T17:45:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/ppc-13-08-2022/",
+    "title": "Psychedelic Porn Crumpets",
+    "location": "tivolivredenburg",
+    "price": 19.35,
+    "genre": null,
+    "shortText": "Psychedelische rock voor fans van Tame Impala en King Gizzard and the Lizard Wizard",
+    "longText": "../public/texts/4ca91a84-dae9-4aa0-842a-8d4450c0854e.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2021/10/Psychedelic-Porn-Crumpets-klein-700x470.png",
+    "dataIntegrity": 10
+  },
+  {
     "doorOpenDateTime": "2022-08-17T15:00:00.000Z",
     "startDateTime": "2022-08-17T17:30:00.000Z",
     "endDateTime": null,
@@ -4008,7 +4120,7 @@
     "price": 31,
     "genre": null,
     "shortText": "Ty Segall presenteert zijn nieuwe album Harmonizer tijdens exclusieve zomershow op het strand!",
-    "longText": "../public/texts/2f00e58c-5fa5-490c-94f6-1e0e4dd87943.html",
+    "longText": "../public/texts/7a5e701e-4539-4b2f-b7ec-75516aae15c7.html",
     "image": null,
     "dataIntegrity": 10
   },
@@ -4097,20 +4209,6 @@
     "dataIntegrity": 10
   },
   {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-09-03T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Epica en Sahara Dust",
-    "location": "nul13",
-    "price": null,
-    "genre": null,
-    "shortText": "20th Anniversary show",
-    "longText": null,
-    "image": null,
-    "dataIntegrity": 1
-  },
-  {
     "doorOpenDateTime": "2022-09-03T17:00:00.000Z",
     "startDateTime": "2022-09-03T18:00:00.000Z",
     "endDateTime": null,
@@ -4136,6 +4234,20 @@
     "shortText": "",
     "longText": "../public/texts/f906c407-3f1a-4dce-961a-af3830237a98.html",
     "image": "https://www.effenaar.nl/uploads/event_spotlight_image/61a8cce86c267.jpg",
+    "dataIntegrity": 10
+  },
+  {
+    "doorOpenDateTime": "2022-09-09T17:00:00.000Z",
+    "startDateTime": "2022-09-09T17:45:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/the-blue-stones-09-09-2022/",
+    "title": "The Blue Stones",
+    "location": "tivolivredenburg",
+    "price": 20.35,
+    "genre": null,
+    "shortText": "Catchy bluesrock in de lijn van The Black Keys",
+    "longText": "../public/texts/35e46210-d573-4e7b-b7e7-6374c18150d7.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2022/03/3f3102ec_000053110031--700x470.png",
     "dataIntegrity": 10
   },
   {
@@ -4181,20 +4293,6 @@
     "dataIntegrity": 1
   },
   {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-09-13T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Helloween en Hammerfall",
-    "location": "nul13",
-    "price": null,
-    "genre": null,
-    "shortText": "013, Tilburg",
-    "longText": null,
-    "image": null,
-    "dataIntegrity": 1
-  },
-  {
     "doorOpenDateTime": "2022-09-13T16:30:00.000Z",
     "startDateTime": "2022-09-13T17:30:00.000Z",
     "endDateTime": null,
@@ -4206,6 +4304,20 @@
     "shortText": "United Forces 2022",
     "longText": "../public/texts/8bb2d281-8bd0-4573-9332-c5c5f6de065e.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/605388a27c174.jpg?version=1616087241",
+    "dataIntegrity": 10
+  },
+  {
+    "doorOpenDateTime": "2022-09-13T17:00:00.000Z",
+    "startDateTime": "2022-09-13T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/black-stone-cherry-13-09-2022/",
+    "title": "Black Stone Cherry",
+    "location": "tivolivredenburg",
+    "price": 34.61,
+    "genre": null,
+    "shortText": "Amerikaanse hardrockgigant",
+    "longText": "../public/texts/2083068f-754d-4b48-b423-515b7549009f.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2021/08/BSC-THC-JR-1-SMR-c-Mike-Rodway2-700x470.jpg",
     "dataIntegrity": 10
   },
   {
@@ -4246,7 +4358,7 @@
     "price": "23.50",
     "genre": null,
     "shortText": "<p>In ABBA Rocks worden de wereldhits van het Zweedse viertal uitgevoerd tijdens een dampende en dynamische rockshow. Reken op veel muzikale vrijheid en virtuositeit, stoere zang, opzwepende gitaarsolo&#39;s en een bedwelmend lekkere Hammond sound. En t&oacute;ch blijft de herkenbaarheid van het repertoire onaangetast, met dank aan de genialiteit van de nummers van ABBA.</p>\r\n",
-    "longText": "/home/sjerp/dev/apache/concertagenda/public/texts/3e7effa3-7e16-4204-a74a-035ba1475deb.html",
+    "longText": "../public/texts/f930bff7-7171-4e9e-aa7c-f6f5f03043ee.html",
     "image": "https://lift3cdn.nl/image/115/784x476/abba-rocks.jpg",
     "dataIntegrity": 10
   },
@@ -4260,20 +4372,6 @@
     "price": null,
     "genre": null,
     "shortText": "Biebob, Vosselaar (België)",
-    "longText": null,
-    "image": null,
-    "dataIntegrity": 1
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-09-20T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Blind Channel",
-    "location": "nul13",
-    "price": null,
-    "genre": null,
-    "shortText": "013, Tilburg",
     "longText": null,
     "image": null,
     "dataIntegrity": 1
@@ -4349,20 +4447,6 @@
     "dataIntegrity": 1
   },
   {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-09-27T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Polaris, Alpha Wolf, Gravemind en Stepson",
-    "location": "nul13",
-    "price": null,
-    "genre": null,
-    "shortText": "013, Tilburg",
-    "longText": null,
-    "image": null,
-    "dataIntegrity": 1
-  },
-  {
     "doorOpenDateTime": "2022-09-27T17:00:00.000Z",
     "startDateTime": "2022-09-27T17:30:00.000Z",
     "endDateTime": null,
@@ -4386,23 +4470,9 @@
     "price": 16,
     "genre": null,
     "shortText": "Een echte moderne rockband",
-    "longText": "../public/texts/462310ae-9b8d-4009-b4e4-994ed94a6d9f.html",
+    "longText": "../public/texts/2aa0b839-d4e8-4ec2-bf3d-9fcc618db7d3.html",
     "image": "https://patronaat.nl/app/uploads/2021/09/02_Moon_Shot_PROMO-760x400.jpg",
     "dataIntegrity": 10
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-09-29T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Watain, Abbath, Tribulation en Bølzer",
-    "location": "nul13",
-    "price": null,
-    "genre": null,
-    "shortText": "013, Tilburg",
-    "longText": null,
-    "image": null,
-    "dataIntegrity": 1
   },
   {
     "doorOpenDateTime": null,
@@ -4448,20 +4518,6 @@
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-09-30T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Vola",
-    "location": "nul13",
-    "price": null,
-    "genre": null,
-    "shortText": "013, Tilburg",
-    "longText": null,
-    "image": null,
-    "dataIntegrity": 1
-  },
-  {
-    "doorOpenDateTime": null,
     "startDateTime": "2022-09-30T13:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://baroeg.nl/productie/kingfisher-sky-ann-my-guard/",
@@ -4498,7 +4554,7 @@
     "price": 24.5,
     "genre": null,
     "shortText": "Het nieuwste vehikel van een black metal-icoon",
-    "longText": "../public/texts/147c2818-4445-4162-a1f3-3b2b52bbb31f.html",
+    "longText": "../public/texts/70f76727-59fe-4469-a456-84ae95005cf4.html",
     "image": null,
     "dataIntegrity": 10
   },
@@ -4512,7 +4568,7 @@
     "price": "25.50",
     "genre": null,
     "shortText": "<p>Soen voegt een bijzondere show toe; de enige acoustische show in Europa. Zij sluiten hun Europese tour nu dus af met een speciaal Soen weekend in de Boerderij!</p>\r\n",
-    "longText": "/home/sjerp/dev/apache/concertagenda/public/texts/eb54176d-d77f-4fee-8e9e-f51ac15da6dc.html",
+    "longText": "../public/texts/3e34222c-8630-4635-b4be-8932dd165062.html",
     "image": "https://lift3cdn.nl/image/115/784x476/soen-acoustic-web.jpg",
     "dataIntegrity": 10
   },
@@ -4582,7 +4638,7 @@
     "price": "25.50",
     "genre": null,
     "shortText": "<p>Soen is een prog-metal supergroep met voormalige leden van Death, Opeth en Willowtree. Drummer Martin Lopez (ex-Opeth) omschrijft hun muziek als melodisch, heavy en complex. De band wordt vergeleken met de stijl van Tool en Pink Floyd maar Soen heeft bovenal een eigen spannend geluid.</p>\r\n",
-    "longText": "/home/sjerp/dev/apache/concertagenda/public/texts/3ca44887-4bba-4762-a311-4b510b9b9fe6.html",
+    "longText": "../public/texts/744c4f75-92f1-4360-b569-c1a2e61f3d61.html",
     "image": "https://lift3cdn.nl/image/115/784x476/soen-1.jpg",
     "dataIntegrity": 10
   },
@@ -4643,20 +4699,6 @@
     "dataIntegrity": 1
   },
   {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-10-03T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Saxon en Diamond Head",
-    "location": "nul13",
-    "price": null,
-    "genre": null,
-    "shortText": "013, Tilburg",
-    "longText": null,
-    "image": null,
-    "dataIntegrity": 1
-  },
-  {
     "doorOpenDateTime": "2022-10-03T17:00:00.000Z",
     "startDateTime": "2022-10-03T18:00:00.000Z",
     "endDateTime": null,
@@ -4697,6 +4739,20 @@
     "longText": null,
     "image": null,
     "dataIntegrity": 1
+  },
+  {
+    "doorOpenDateTime": "2022-10-06T17:30:00.000Z",
+    "startDateTime": "2022-10-06T18:15:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/death-bells-06-10-2022/",
+    "title": "Death Bells",
+    "location": "tivolivredenburg",
+    "price": 14.55,
+    "genre": null,
+    "shortText": "Dromerige new wave en vurige gitaar-gedreven rock",
+    "longText": "../public/texts/7ead1ed8-4413-43e7-a5ea-7263ea00829d.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2022/01/000017910009-700x470.jpg",
+    "dataIntegrity": 10
   },
   {
     "doorOpenDateTime": null,
@@ -4755,6 +4811,20 @@
     "dataIntegrity": 10
   },
   {
+    "doorOpenDateTime": "2022-10-08T17:15:00.000Z",
+    "startDateTime": "2022-10-08T18:15:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/heideroosjes-08-10-2022/",
+    "title": "Heideroosjes",
+    "location": "tivolivredenburg",
+    "price": 28.35,
+    "genre": null,
+    "shortText": "Nederlandse punkhelden",
+    "longText": "../public/texts/baf0a3bc-716c-4371-a0e8-1a54fdd9d6a5.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2021/09/PRESS-PIC-Heideroosjes-sitting_Easy-Resize.com_-700x470.jpg",
+    "dataIntegrity": 10
+  },
+  {
     "doorOpenDateTime": "2022-10-09T16:00:00.000Z",
     "startDateTime": "2022-10-09T00:00:00.000Z",
     "endDateTime": null,
@@ -4806,20 +4876,6 @@
     "price": null,
     "genre": null,
     "shortText": "Ziggo Dome, Amsterdam",
-    "longText": null,
-    "image": null,
-    "dataIntegrity": 1
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-10-11T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Anthrax en Municipal Waste",
-    "location": "nul13",
-    "price": null,
-    "genre": null,
-    "shortText": "013, Tilburg",
     "longText": null,
     "image": null,
     "dataIntegrity": 1
@@ -4885,20 +4941,6 @@
     "startDateTime": "2022-10-13T00:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": null,
-    "title": "Saxon en Diamond Head",
-    "location": "patronaat",
-    "price": null,
-    "genre": null,
-    "shortText": "Patronaat, Haarlem",
-    "longText": null,
-    "image": null,
-    "dataIntegrity": 1
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-10-13T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
     "title": "Uriah Heep",
     "location": "tivolivredenburg",
     "price": null,
@@ -4918,8 +4960,22 @@
     "price": 43.5,
     "genre": null,
     "shortText": "New Wave of British Heavy Metal legendes komen naar Haarlem!",
-    "longText": "../public/texts/079f1439-f483-4842-a782-9ffbd3f49e09.html",
+    "longText": "../public/texts/af47aeec-d072-4b43-bd6c-cd850c724969.html",
     "image": null,
+    "dataIntegrity": 10
+  },
+  {
+    "doorOpenDateTime": "2022-10-13T17:15:00.000Z",
+    "startDateTime": "2022-10-13T18:15:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/uriah-heep-13-10-2022/",
+    "title": "Uriah Heep",
+    "location": "tivolivredenburg",
+    "price": 46,
+    "genre": null,
+    "shortText": "50TH ANNIVERSARY show",
+    "longText": "../public/texts/7788e93f-a607-490a-b525-4b3b4716d923.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2021/09/Uriah-Heep-700x470.jpg",
     "dataIntegrity": 10
   },
   {
@@ -4935,6 +4991,20 @@
     "longText": null,
     "image": null,
     "dataIntegrity": 1
+  },
+  {
+    "doorOpenDateTime": "2022-10-14T16:00:00.000Z",
+    "startDateTime": "2022-10-14T17:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/wolves-in-the-throne-room-14-10-2022/",
+    "title": "Wolves in the Throne Room",
+    "location": "tivolivredenburg",
+    "price": 24.35,
+    "genre": null,
+    "shortText": "Spiritueel en hard blackmetaltrio | Support: Stygian Bough (Bell Witch & Aerial Ruin samenwerking)",
+    "longText": "../public/texts/aa71a17e-f580-4924-8865-928d1e1202b2.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2020/12/WITTR-2019-kopie-700x470.jpg",
+    "dataIntegrity": 10
   },
   {
     "doorOpenDateTime": "2022-10-15T17:00:00.000Z",
@@ -4955,20 +5025,6 @@
     "startDateTime": "2022-10-16T00:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": null,
-    "title": "Elder, Pallbearer en Irist",
-    "location": "nul13",
-    "price": null,
-    "genre": null,
-    "shortText": "013, Tilburg",
-    "longText": null,
-    "image": null,
-    "dataIntegrity": 1
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-10-16T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
     "title": "Moonspell, My Dying Bride, Borknagar, Wolfheart en Hinayana",
     "location": "tivolivredenburg",
     "price": null,
@@ -4979,18 +5035,18 @@
     "dataIntegrity": 1
   },
   {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-10-16T00:00:00.000Z",
+    "doorOpenDateTime": "2022-10-16T14:30:00.000Z",
+    "startDateTime": "2022-10-16T15:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "UFO",
-    "location": "nul13",
-    "price": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/ultima-ratio-fest-16-10-2022/",
+    "title": "Ultima Ratio Fest",
+    "location": "tivolivredenburg",
+    "price": 36.75,
     "genre": null,
-    "shortText": "013, Tilburg",
-    "longText": null,
-    "image": null,
-    "dataIntegrity": 1
+    "shortText": "Moonspell, My Dying Bride, Borknagar, Wolfheart & Hinayana",
+    "longText": "../public/texts/4d98a614-1fe2-4eaa-a970-e5814a688c1d.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2021/09/Moonspell-Main-Horizontal-by-Rui-Vasco-Kopie-700x470.jpg",
+    "dataIntegrity": 10
   },
   {
     "doorOpenDateTime": "2022-10-16T17:00:00.000Z",
@@ -5018,6 +5074,20 @@
     "shortText": "Last Orders tour",
     "longText": "../public/texts/6fbf9a04-24cb-42a3-891a-5565fa7e6144.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/5df0c7ecb1eea.png?version=1576060997",
+    "dataIntegrity": 10
+  },
+  {
+    "doorOpenDateTime": "2022-10-20T16:30:00.000Z",
+    "startDateTime": "2022-10-20T17:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/faun-20-10-2022/",
+    "title": "FAUN",
+    "location": "tivolivredenburg",
+    "price": 27.35,
+    "genre": null,
+    "shortText": "Paganfolk die varieert van melancholieke ballades tot opzwepende dansnummers",
+    "longText": "../public/texts/a73bb080-4b75-4429-a2ee-f87c2309fb9c.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2019/10/Faun-Ma%CC%88rchen-Foto-by-Iseris-Art-Copy-700x470.jpg",
     "dataIntegrity": 10
   },
   {
@@ -5142,8 +5212,22 @@
     "price": 15,
     "genre": null,
     "shortText": "Gloednieuwe metalcore band uit Eindhoven",
-    "longText": "../public/texts/4e9591ba-968c-4649-9d9b-ae0368eef087.html",
+    "longText": "../public/texts/dc51450d-47ae-49b5-926b-c7022010c8a4.html",
     "image": null,
+    "dataIntegrity": 10
+  },
+  {
+    "doorOpenDateTime": "2022-10-23T17:00:00.000Z",
+    "startDateTime": "2022-10-23T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/charlotte-wessels-23-10-2022/",
+    "title": "Charlotte Wessels",
+    "location": "tivolivredenburg",
+    "price": 24.35,
+    "genre": null,
+    "shortText": "Ex-Delain zangeres presenteert Tales From Six Feet Under",
+    "longText": "../public/texts/a5622a4e-7ac2-49bb-a496-ed4ca862022f.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2022/01/FotoTivoliVredenburg-700x470.jpg",
     "dataIntegrity": 10
   },
   {
@@ -5170,20 +5254,6 @@
     "price": null,
     "genre": null,
     "shortText": "Melkweg, Amsterdam",
-    "longText": null,
-    "image": null,
-    "dataIntegrity": 1
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-10-27T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Sonata Arctica en Eleine",
-    "location": "nul13",
-    "price": null,
-    "genre": null,
-    "shortText": "013, Tilburg",
     "longText": null,
     "image": null,
     "dataIntegrity": 1
@@ -5226,7 +5296,7 @@
     "price": 28.5,
     "genre": null,
     "shortText": "Finse rockgoden van formaat",
-    "longText": "../public/texts/6d9fa214-e3fe-4268-9cb0-d24b1a95d6c5.html",
+    "longText": "../public/texts/aa1cf61d-6311-4f60-8dd7-78dfec98cf0c.html",
     "image": null,
     "dataIntegrity": 10
   },
@@ -5270,6 +5340,34 @@
     "shortText": "<p>Toprock van Poolse bodem</p>\n",
     "longText": "../public/texts/a8150afe-d44d-487a-8018-d0360874ba73.html",
     "image": "Karol-Kacperski-zespól-ORGANEK-768x512.jpg",
+    "dataIntegrity": 10
+  },
+  {
+    "doorOpenDateTime": "2022-10-29T17:00:00.000Z",
+    "startDateTime": "2022-10-29T17:45:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/sonata-arctica-29-10-2022/",
+    "title": "Sonata Arctica",
+    "location": "tivolivredenburg",
+    "price": 32.75,
+    "genre": null,
+    "shortText": "Acoustic Adventures | Special guest: Eleine",
+    "longText": "../public/texts/d6775927-1da4-4ad2-9a50-ff078ef6ec03.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2021/03/deze-gebruiken-SonataArctica394A2518_pic_by_KristianHeatReuter-kopie-700x470.jpg",
+    "dataIntegrity": 10
+  },
+  {
+    "doorOpenDateTime": "2022-10-29T17:30:00.000Z",
+    "startDateTime": "2022-10-29T18:15:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/jazz-sabbath-29-10-2022/",
+    "title": "Jazz Sabbath",
+    "location": "tivolivredenburg",
+    "price": 21.85,
+    "genre": null,
+    "shortText": "Instrumentale interpretaties van het werk van de legendarische hardrockband Black Sabbath",
+    "longText": "../public/texts/378ab5da-8925-4d1c-8a45-205015e7154e.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2021/11/Jazz-Sabbath-band-Orange-1-700x470.jpg",
     "dataIntegrity": 10
   },
   {
@@ -5385,6 +5483,20 @@
     "dataIntegrity": 10
   },
   {
+    "doorOpenDateTime": "2022-11-06T18:00:00.000Z",
+    "startDateTime": "2022-11-06T18:45:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/perturbator-06-11-2022/",
+    "title": "Perturbator",
+    "location": "tivolivredenburg",
+    "price": 23.35,
+    "genre": null,
+    "shortText": "Donkere synthwave | Supports: Health + Author & Punisher",
+    "longText": "../public/texts/033060b6-0413-408f-807b-319e11a5dfa5.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2020/12/Pic-James-_-Pert-credit-Valeriya-Serpent-700x470.jpeg",
+    "dataIntegrity": 10
+  },
+  {
     "doorOpenDateTime": null,
     "startDateTime": "2022-11-07T00:00:00.000Z",
     "endDateTime": null,
@@ -5425,6 +5537,34 @@
     "longText": null,
     "image": null,
     "dataIntegrity": 1
+  },
+  {
+    "doorOpenDateTime": "2022-11-09T18:00:00.000Z",
+    "startDateTime": "2022-11-09T18:45:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/frank-carter-the-rattlesnakes-09-11-2022/",
+    "title": "Frank Carter & The Rattlesnakes",
+    "location": "tivolivredenburg",
+    "price": 25.35,
+    "genre": null,
+    "shortText": "In your face punk en catchy meezingers | KINK presents",
+    "longText": "../public/texts/c51057f0-5355-4f03-bc06-2606fa48511c.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2021/07/210225_FRANKCARTER_RATTLESNAKES_FILM_01_R2-kopie-700x470.jpg",
+    "dataIntegrity": 10
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-11-10T15:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/le-guess-who-2022-10-11-2022/",
+    "title": "Le Guess Who? 2022",
+    "location": "tivolivredenburg",
+    "price": null,
+    "genre": null,
+    "shortText": "Vierdaags festival voor avontuurlijke en grensverleggende muziek",
+    "longText": "../public/texts/17190c23-7113-4d4b-b456-196e9f34d2b9.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2021/12/Le-Guess-Who-2022-foto-door-Ben-Houdijk-700x470.jpg",
+    "dataIntegrity": 10
   },
   {
     "doorOpenDateTime": null,
@@ -5511,6 +5651,20 @@
     "dataIntegrity": 1
   },
   {
+    "doorOpenDateTime": "2022-11-19T18:00:00.000Z",
+    "startDateTime": "2022-11-19T18:45:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/opeth-19-11-2022/",
+    "title": "Opeth",
+    "location": "tivolivredenburg",
+    "price": 42.25,
+    "genre": null,
+    "shortText": "Evolution XXX 'By Request' Tour | 30th anniversary | Grote Zaal show",
+    "longText": "../public/texts/df27b09d-1d5c-4e7b-aadf-51c9acd24c61.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2020/09/Online-3-deze-gebruiken-website-700x470.jpg",
+    "dataIntegrity": 10
+  },
+  {
     "doorOpenDateTime": null,
     "startDateTime": "2022-11-20T00:00:00.000Z",
     "endDateTime": null,
@@ -5525,20 +5679,6 @@
     "dataIntegrity": 1
   },
   {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-11-20T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Sepultura, Sacred Reich en Crowbar",
-    "location": "patronaat",
-    "price": null,
-    "genre": null,
-    "shortText": "Patronaat, Haarlem",
-    "longText": null,
-    "image": null,
-    "dataIntegrity": 1
-  },
-  {
     "doorOpenDateTime": "2022-11-20T17:30:00.000Z",
     "startDateTime": "2022-11-20T18:10:00.000Z",
     "endDateTime": null,
@@ -5548,8 +5688,36 @@
     "price": 34.5,
     "genre": null,
     "shortText": "Braziliaanse metallegendes",
-    "longText": "../public/texts/7f514f3d-ae67-44ea-a6ab-58b6eba3c1cc.html",
+    "longText": "../public/texts/a578e0b0-cc71-4c5f-b7ea-c47b6d2b183c.html",
     "image": "https://patronaat.nl/app/uploads/2021/09/Sepultura-2020-760x400.jpg",
+    "dataIntegrity": 10
+  },
+  {
+    "doorOpenDateTime": "2022-11-20T18:00:00.000Z",
+    "startDateTime": "2022-11-20T18:45:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/set-it-off-20-11-2022/",
+    "title": "Set It Off",
+    "location": "tivolivredenburg",
+    "price": 20.35,
+    "genre": null,
+    "shortText": "Poppunk met elektronica invloeden",
+    "longText": "../public/texts/433c6b27-d524-4d44-8218-c9a68c470204.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2019/04/deze-gebruiken-1.-Set-It-Off-2019-promo-700x470.jpg",
+    "dataIntegrity": 10
+  },
+  {
+    "doorOpenDateTime": "2022-11-20T18:00:00.000Z",
+    "startDateTime": "2022-11-20T18:45:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/opeth-20-11-2022/",
+    "title": "Opeth",
+    "location": "tivolivredenburg",
+    "price": 42.25,
+    "genre": null,
+    "shortText": "Evolution XXX 'By Request' Tour | 30th anniversary | Ronda show",
+    "longText": "../public/texts/9b1458dd-b3b7-4d80-8101-fb2292fea357.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2020/09/Online-3-deze-gebruiken-website-700x470.jpg",
     "dataIntegrity": 10
   },
   {
@@ -5604,7 +5772,7 @@
     "price": "27.00",
     "genre": null,
     "shortText": "<p>In de loop der jaren is Popa Chubby uitgegroeid tot &eacute;&eacute;n van de meest populaire karakters in de blues scene van New York. Blues rock icoon Popa Chubby, geboren als Ted Horowitz, is een imposante verschijning met zijn kaal geschoren hoofd en getatoe&euml;erde armen. Maar hij imponeert net zo hard met zijn performance!</p>\r\n",
-    "longText": "/home/sjerp/dev/apache/concertagenda/public/texts/e8a34141-463d-4c7d-a921-794011503e46.html",
+    "longText": "../public/texts/ec69c005-d16e-4c86-a460-97b2bed5a3ab.html",
     "image": "https://lift3cdn.nl/image/115/784x476/popa-chubby.jpg",
     "dataIntegrity": 10
   },
@@ -5646,7 +5814,7 @@
     "price": 22,
     "genre": null,
     "shortText": "Amerikaanse rockband bekend van de hit 'Gay Bar'",
-    "longText": "../public/texts/dd674ce4-41c4-44c3-8719-4daa42347fd8.html",
+    "longText": "../public/texts/c6f77e3e-9bd4-4eaa-a1a5-b9676710b444.html",
     "image": null,
     "dataIntegrity": 10
   },
@@ -5660,7 +5828,7 @@
     "price": "24.50",
     "genre": null,
     "shortText": "<p>Antimatter is een melancholische, progressieve rockformatie uit Liverpool. De band onder leiding van Mick Moss draait al even mee en is niet meer weg te denken uit het Britse proglandschap. Antimatter komt voor &#39;an expansive and enhanced electric tour&#39; naar de Boerderij!</p>\r\n",
-    "longText": "/home/sjerp/dev/apache/concertagenda/public/texts/d059929e-5468-44ff-b547-b725bc50e94c.html",
+    "longText": "../public/texts/e4cccb35-859e-42f5-b122-0fe2c60aad9c.html",
     "image": "https://lift3cdn.nl/image/115/784x476/antimatter-mick-moss.jpg",
     "dataIntegrity": 10
   },
@@ -5716,7 +5884,7 @@
     "price": 16.5,
     "genre": null,
     "shortText": "Emorap goes poppunk",
-    "longText": "../public/texts/95f86380-84ec-4321-8e12-2fd0b9da0aa5.html",
+    "longText": "../public/texts/4d772f56-1f74-4606-8cd5-cdf66867b786.html",
     "image": null,
     "dataIntegrity": 10
   },
@@ -5730,20 +5898,6 @@
     "price": null,
     "genre": null,
     "shortText": "Ziggo Dome, Amsterdam",
-    "longText": null,
-    "image": null,
-    "dataIntegrity": 1
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-11-29T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Lamb Of God, Kreator, Thy Art Is Murder en Gatecreeper",
-    "location": "nul13",
-    "price": null,
-    "genre": null,
-    "shortText": "013, Tilburg",
     "longText": null,
     "image": null,
     "dataIntegrity": 1
@@ -5789,6 +5943,20 @@
     "longText": null,
     "image": null,
     "dataIntegrity": 1
+  },
+  {
+    "doorOpenDateTime": "2022-11-30T18:00:00.000Z",
+    "startDateTime": "2022-11-30T19:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/arstidir-30-11-2022/",
+    "title": "Árstíðir",
+    "location": "tivolivredenburg",
+    "price": 22,
+    "genre": null,
+    "shortText": "Vetraról - a special holiday event with Árstíðir",
+    "longText": "../public/texts/fde21ac1-5554-40cb-8bcd-2a1443b67897.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2021/04/Arstidir_Reharsal-Space-I-foto-by-Hordur-Sveinsson-kopie-700x470.jpg",
+    "dataIntegrity": 10
   },
   {
     "doorOpenDateTime": null,
@@ -5875,20 +6043,6 @@
     "dataIntegrity": 1
   },
   {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-12-10T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Finntroll en Skálmöld",
-    "location": "nul13",
-    "price": null,
-    "genre": null,
-    "shortText": "013, Tilburg",
-    "longText": null,
-    "image": null,
-    "dataIntegrity": 1
-  },
-  {
     "doorOpenDateTime": "2022-12-10T18:00:00.000Z",
     "startDateTime": "2022-12-10T18:30:00.000Z",
     "endDateTime": null,
@@ -5945,6 +6099,20 @@
     "dataIntegrity": 10
   },
   {
+    "doorOpenDateTime": "2022-12-19T18:00:00.000Z",
+    "startDateTime": "2022-12-19T19:15:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/heino-19-12-2022/",
+    "title": "Heino",
+    "location": "tivolivredenburg",
+    "price": 36.75,
+    "genre": null,
+    "shortText": "De populairste schlagerartiest ter wereld | Weihnachtsfest",
+    "longText": "../public/texts/3419cf93-c5c9-436b-ad2f-c5eaf9d70ab7.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2021/12/Heino-website-1.png",
+    "dataIntegrity": 10
+  },
+  {
     "doorOpenDateTime": null,
     "startDateTime": "2022-12-20T00:00:00.000Z",
     "endDateTime": null,
@@ -5957,6 +6125,20 @@
     "longText": null,
     "image": null,
     "dataIntegrity": 1
+  },
+  {
+    "doorOpenDateTime": "2022-12-20T18:00:00.000Z",
+    "startDateTime": "2022-12-20T19:15:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/anneke-van-giersbergen-20-12-2022/",
+    "title": "Anneke van Giersbergen",
+    "location": "tivolivredenburg",
+    "price": 33.75,
+    "genre": null,
+    "shortText": "Fairytale of TivoliVredenburg - Een alternatieve kerst met Anneke van Giersbergen",
+    "longText": "../public/texts/72fc2145-3fc4-4314-8a81-c4c653679798.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2020/09/Anneke-van-Giersbergen-0017-deze-gebruiken-Copy-700x470.jpg",
+    "dataIntegrity": 10
   },
   {
     "doorOpenDateTime": "2023-01-08T17:30:00.000Z",
@@ -6001,6 +6183,20 @@
     "dataIntegrity": 10
   },
   {
+    "doorOpenDateTime": "2023-01-18T18:30:00.000Z",
+    "startDateTime": "2023-01-18T19:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/anneke-van-giersbergen-zingt-kate-bush-18-01-2023/",
+    "title": "Anneke van Giersbergen zingt Kate Bush",
+    "location": "tivolivredenburg",
+    "price": 22,
+    "genre": null,
+    "shortText": "Een prachtige ode aan Kate Bush",
+    "longText": "../public/texts/ab418866-da74-4056-911c-2c761997475f.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2020/07/Kik-Anneke-van-Giersbergen-%C2%A9-Mark-Uyl-liggend-kopie-700x470.jpg",
+    "dataIntegrity": 10
+  },
+  {
     "doorOpenDateTime": null,
     "startDateTime": "2023-01-22T18:30:00.000Z",
     "endDateTime": null,
@@ -6024,7 +6220,7 @@
     "price": 32.5,
     "genre": null,
     "shortText": "Twee gerespecteerde grootmeesters van melancholie",
-    "longText": "../public/texts/6f20d2e7-2b64-40f5-897a-5a379e5af2c1.html",
+    "longText": "../public/texts/5b78bb47-37a8-43d2-a8f7-5dc878708950.html",
     "image": "https://patronaat.nl/app/uploads/2021/09/KATATONIA-scaled-e1626372244229-760x400.jpeg",
     "dataIntegrity": 10
   },
@@ -6040,6 +6236,34 @@
     "shortText": "Support: Unity TX + Rising Insane ",
     "longText": "../public/texts/0cb74ff6-fcc7-4736-8e1f-5b6ca681204d.html",
     "image": "https://www.dynamo-eindhoven.nl/wp-content/uploads/2021/09/deez-nuts-promofoto-1200x1200.jpg",
+    "dataIntegrity": 10
+  },
+  {
+    "doorOpenDateTime": "2023-02-25T18:00:00.000Z",
+    "startDateTime": "2023-02-25T19:15:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/wardruna-25-02-2023/",
+    "title": "Wardruna",
+    "location": "tivolivredenburg",
+    "price": 40.25,
+    "genre": null,
+    "shortText": "Hypnotiserende, donkere folk op traditionele instrumenten met teksten in het oud-Noors.",
+    "longText": "../public/texts/0d64ce81-e5c1-44da-8699-a87fc2e4ecc2.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2020/08/Wardruna-persfoto-kleiner-700x470.jpg",
+    "dataIntegrity": 10
+  },
+  {
+    "doorOpenDateTime": "2023-02-26T18:00:00.000Z",
+    "startDateTime": "2023-02-26T19:15:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/wardruna-26-02-2023/",
+    "title": "Wardruna",
+    "location": "tivolivredenburg",
+    "price": 40.25,
+    "genre": null,
+    "shortText": "Hypnotiserende, donkere folk op traditionele instrumenten met teksten in het oud-Noors.",
+    "longText": "../public/texts/a9685b48-e8e9-4330-89ec-b7bfda2e5e8e.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2020/08/Wardruna-persfoto-kleiner-700x470.jpg",
     "dataIntegrity": 10
   },
   {
@@ -6080,7 +6304,7 @@
     "price": 34.5,
     "genre": null,
     "shortText": "Finse sopraan goes metal",
-    "longText": "../public/texts/e288b0ce-8002-451b-92fb-a0739d524098.html",
+    "longText": "../public/texts/a5d130cf-ba5d-42ee-bb22-a1d9b7688421.html",
     "image": "https://patronaat.nl/app/uploads/2021/09/Tarja-Turunen-760x400.jpg",
     "dataIntegrity": 10
   },
@@ -6096,6 +6320,20 @@
     "shortText": null,
     "longText": "../public/texts/ea8811d6-1419-4c11-8823-439bc5dacde5.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/605de467c2e9d.jpg?version=1616766067",
+    "dataIntegrity": 10
+  },
+  {
+    "doorOpenDateTime": "2023-03-22T18:00:00.000Z",
+    "startDateTime": "2023-03-22T18:45:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/blackberry-smoke-22-03-2023/",
+    "title": "Blackberry Smoke",
+    "location": "tivolivredenburg",
+    "price": 33.35,
+    "genre": null,
+    "shortText": "Onversneden en pure southern rock à la ZZ Top en Lynyrd Skynyrd",
+    "longText": "../public/texts/65422e3b-5b5a-4e24-af4c-8cafb928bdb9.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2021/05/Webversie-BBS-1-700x470.png",
     "dataIntegrity": 10
   },
   {
@@ -6122,7 +6360,7 @@
     "price": 28.2,
     "genre": null,
     "shortText": "Een van de grootste rockbands uit het Land van de Rijzende Zon",
-    "longText": "../public/texts/8d410543-c09b-4136-96dc-3cb5a83c844a.html",
+    "longText": "../public/texts/4e818d6f-e1b3-47e7-ba4a-48dccb04d8d4.html",
     "image": "https://patronaat.nl/app/uploads/2021/09/Loudness-760x400.jpg",
     "dataIntegrity": 10
   },
@@ -6429,7 +6667,7 @@
     "price": 23.5,
     "genre": null,
     "shortText": "Stoner rock-instituut",
-    "longText": "../public/texts/fe568ce0-a893-44e2-aee6-0b974d32d92f.html",
+    "longText": "../public/texts/1c113d0c-a53c-414b-8929-eab94a6fc812.html",
     "image": null,
     "dataIntegrity": 10
   },
@@ -6443,7 +6681,7 @@
     "price": 33.5,
     "genre": null,
     "shortText": "Patronaat’s festival voor garage, punk, rock ’n roll, trash, blues, surf, noise, beat en meer",
-    "longText": "../public/texts/a2f7b124-cb9f-47a0-a7a5-1f20221c8365.html",
+    "longText": "../public/texts/26240ecd-353c-4ae3-bd71-655d78dbd74b.html",
     "image": null,
     "dataIntegrity": 10
   },
@@ -6457,7 +6695,7 @@
     "price": 28.2,
     "genre": null,
     "shortText": "Dit evenement is verplaatst naar dinsdag 7 april 2023. Kaartkopers ontvangen persoonlijk bericht.",
-    "longText": "../public/texts/b804e427-a28f-4cbc-9222-4c06d789d0c7.html",
+    "longText": "../public/texts/1c721e98-8bfd-45a2-ad7f-81f9f884a4b1.html",
     "image": null,
     "dataIntegrity": 10
   },
@@ -6471,8 +6709,22 @@
     "price": 18,
     "genre": null,
     "shortText": "Alsof The Sonics of The Rolling Stones zijn opgegroeid met ska en reggae",
-    "longText": "../public/texts/3003e580-306e-4db9-8fa7-e25ae91dfc95.html",
+    "longText": "../public/texts/63136805-3af9-45a0-834b-03b640853181.html",
     "image": "https://patronaat.nl/app/uploads/2021/09/17948-760x400.jpg",
+    "dataIntegrity": 10
+  },
+  {
+    "doorOpenDateTime": "2022-05-20T21:30:00.000Z",
+    "startDateTime": null,
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/emo-night-mainland-20-05-2022/",
+    "title": "Emo Night mainland",
+    "location": "tivolivredenburg",
+    "price": 12.5,
+    "genre": null,
+    "shortText": "Emo revival met de beste poppunk en meer!",
+    "longText": "../public/texts/49ae74be-c298-4b3d-8a54-80d7e0518677.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2022/03/20220520-Tivolivredenburg-Banner-700x470.jpg",
     "dataIntegrity": 10
   }
 ]

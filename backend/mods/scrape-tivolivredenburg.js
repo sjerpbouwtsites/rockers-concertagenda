@@ -5,12 +5,17 @@ import EventsList from "./events-list.js";
 import fs from "fs";
 import crypto from "crypto";
 import fsDirections from "./fs-directions.js";
-import { handleError, errorAfterSeconds, getPriceFromHTML } from "./tools.js";
+import {
+  getPriceFromHTML,
+  handleError,
+  errorAfterSeconds,
+  log,
+} from "./tools.js";
 import { letScraperListenToMasterMessageAndInit } from "./generic-scraper.js";
 
-letScraperListenToMasterMessageAndInit(scrapeNul13);
+letScraperListenToMasterMessageAndInit(scrapeTivolivredenburg);
 
-async function scrapeNul13(workerIndex) {
+async function scrapeTivolivredenburg(workerIndex) {
   const browser = await puppeteer.launch();
 
   try {
@@ -38,11 +43,11 @@ async function fillMusicEvents(browser, baseMusicEvents, workerIndex) {
   ).finally(() => {
     setTimeout(() => {
       browser.close();
-    }, 500);
+    }, 5000);
     parentPort.postMessage({
       status: "done",
     });
-    EventsList.save("nuldertien", workerIndex);
+    EventsList.save("tivolivredenburg", workerIndex);
   });
 }
 
@@ -61,19 +66,14 @@ async function processSingleMusicEvent(browser, baseMusicEvents, workerIndex) {
     !firstMusicEvent ||
     baseMusicEvents.length === 0 ||
     !firstMusicEvent ||
-    typeof firstMusicEvent === "undefined"
+    !firstMusicEvent.venueEventUrl
   ) {
-    return true;
-  }
-
-  if (!firstMusicEvent.venueEventUrl) {
     return true;
   }
 
   const page = await browser.newPage();
   await page.goto(firstMusicEvent.venueEventUrl, {
     waitUntil: "load",
-    timeout: 0,
   });
 
   try {
@@ -82,10 +82,10 @@ async function processSingleMusicEvent(browser, baseMusicEvents, workerIndex) {
       errorAfterSeconds(15000),
     ]);
 
-    if (pageInfo && (pageInfo.priceTextcontent || pageInfo.priceContextText)) {
-      pageInfo.price = getPriceFromHTML(
-        pageInfo.priceTextcontent,
-        pageInfo.priceContextText
+    if (pageInfo && (pageInfo.priceTextContent || pageInfo.priceContexttext)) {
+      firstMusicEvent.price = getPriceFromHTML(
+        pageInfo.price,
+        pageInfo.priceContexttext
       );
     }
 
@@ -98,7 +98,7 @@ async function processSingleMusicEvent(browser, baseMusicEvents, workerIndex) {
     }
 
     // no date no registration.
-    if (pageInfo && !pageInfo.cancelReason) {
+    if (pageInfo) {
       delete pageInfo.cancelReason;
       firstMusicEvent.merge(pageInfo);
     } else if (pageInfo.cancelReason !== "") {
@@ -128,101 +128,94 @@ async function processSingleMusicEvent(browser, baseMusicEvents, workerIndex) {
   }
 }
 
-async function getPageInfo(page, months) {
-  let pageInfo = {};
-  pageInfo.cancelReason = "";
+async function getPageInfo(page) {
+  let pageInfo;
   try {
-    pageInfo = await page.evaluate(
-      ({ months }) => {
-        let image = "";
-        const imageEl = document.querySelector(".event-spotlight__image");
-        if (!!imageEl) {
-          image = imageEl.src;
-        }
+    pageInfo = await page.evaluate(() => {
+      const res = {};
+      res.cancelReason = "";
+      res.priceTextcontent =
+        document.querySelector(".price .amount")?.textContent.trim() ?? null;
+      res.priceContexttext =
+        document.querySelector(".event-content")?.textContent.trim() ?? null;
+      res.longTextHTML =
+        document.querySelector(".the_content")?.innerHTML ?? null;
 
-        let priceTextcontent =
-          document.querySelector(".practical-information tr:first-child dd")
-            ?.textContent ?? null;
-        let priceContextText =
-          document.querySelector(".practical-information")?.textContent ?? null;
+      const startDateMatch = document.location.href.match(/\d\d-\d\d-\d\d\d\d/); //
 
-        const doorOpenEl = document.querySelector(
-          ".timetable__times dl:first-child time"
+      if (startDateMatch && startDateMatch.length) {
+        res.startDate = startDateMatch[0].split("-").reverse().join("-");
+      }
+
+      if (!!res.startDate) {
+        const infoInner = Array.from(
+          document.querySelectorAll(".info-block--times .info-inner")
         );
-        let doorOpenDateTime;
-        if (!!doorOpenEl) {
-          doorOpenDateTime = new Date(
-            doorOpenEl.getAttribute("datetime")
-          ).toISOString();
-        }
+        res.startTime =
+          infoInner
+            .find((row) => row.innerHTML.includes("aanvang"))
+            ?.querySelector(".label")
+            ?.textContent.trim() ?? null;
+        res.openDoorTime =
+          infoInner
+            .find((row) => row.innerHTML.includes("open"))
+            ?.querySelector(".label")
+            ?.textContent.trim() ?? null;
+        res.endTime =
+          infoInner
+            .find((row) => row.innerHTML.includes("eind"))
+            ?.querySelector(".label")
+            ?.textContent.trim() ?? null;
 
-        const longTextHTMLEl = document.querySelector(
-          ".event-detail header + div"
-        );
-        let longTextHTML = null;
-        if (longTextHTMLEl) {
-          longTextHTML = longTextHTMLEl.innerHTML;
-        }
+        res.doorOpenDateTime = res.openDoorTime
+          ? new Date(`${res.startDate}T${res.openDoorTime}`).toISOString()
+          : null;
+        res.startDateTime = res.startTime
+          ? new Date(`${res.startDate}T${res.startTime}`).toISOString()
+          : null;
+        res.endDateTime = res.endTime
+          ? new Date(`${res.startDate}T${res.endTime}`).toISOString()
+          : null;
+      }
 
-        return {
-          image,
-          priceTextcontent,
-          priceContextText,
-          doorOpenDateTime,
-          longTextHTML,
-        };
-      },
-      { months }
-    );
+      return res;
+    }, null);
     return pageInfo;
   } catch (error) {
     handleError(error);
+    handleError(pageInfo);
     return pageInfo;
   }
 }
 
 async function makeBaseEventList(browser, workerIndex) {
   const page = await browser.newPage();
-  await page.goto("https://www.013.nl/programma/heavy", {
-    waitUntil: "load",
-  });
+  await page.goto(
+    "https://www.tivolivredenburg.nl/agenda/?event_category=metal-punk-heavy",
+    {
+      waitUntil: "load",
+    }
+  );
   const rawEvents = await page.evaluate((workerIndex) => {
-    return Array.from(document.querySelectorAll(".event-list-item"))
+    return Array.from(document.querySelectorAll(".item--agenda"))
       .filter((eventEl, index) => {
         return index % 4 === workerIndex;
       })
       .map((eventEl) => {
         const res = {};
-        res.title = "";
-
-        const linkEl = eventEl.querySelector(".event-list-item__link");
+        res.title = eventEl.querySelector("h3")?.textContent.trim() ?? null;
+        res.shortText = eventEl.querySelector("h4")?.textContent.trim() ?? null;
+        res.image = eventEl.querySelector("img")?.src ?? null;
+        res.venueEventUrl = eventEl.href;
         res.dataIntegrity = 10;
-
-        if (!!linkEl) {
-          res.venueEventUrl = linkEl.href;
-        }
-        const titleEl = eventEl.querySelector(".event-list-item__title");
-        if (!!titleEl) {
-          res.title = titleEl.textContent.trim();
-        }
-        const datumEl = eventEl.querySelector(".event-list-item__date");
-        if (!!datumEl) {
-          res.startDateTime = new Date(
-            datumEl.getAttribute("datetime")
-          ).toISOString();
-        }
-        res.location = "nul13";
-        const subtitleEl = eventEl.querySelector(".event-list-item__subtitle");
-        if (!!subtitleEl) {
-          res.shortText = subtitleEl.textContent.trim();
-        }
+        res.location = "tivolivredenburg";
         return res;
       })
-      .filter((musicEvent) => {
-        if (!musicEvent || !musicEvent.title) {
+      .filter((musicEvents) => {
+        if (!musicEvents || !musicEvents.title) {
           return false;
         }
-        const lowercaseTitle = musicEvent.title.toLowerCase();
+        const lowercaseTitle = musicEvents.title.toLowerCase();
         return (
           !lowercaseTitle.includes("uitgesteld") &&
           !lowercaseTitle.includes("sold out") &&

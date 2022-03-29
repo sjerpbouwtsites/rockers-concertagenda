@@ -1,19 +1,13 @@
 import MusicEvent from "./music-event.js";
 import fs from "fs";
-import path from "path";
 import crypto from "crypto";
 import { parentPort } from "worker_threads";
 import EventsList from "./events-list.js";
 import axios from "axios";
 import fsDirections from "./fs-directions.js";
-import { getPriceFromHTML } from "./tools.js";
+import { letScraperListenToMasterMessageAndInit } from "./generic-scraper.js";
 
-parentPort.on("message", (messageData) => {
-  if (messageData.command && messageData.command === "start") {
-    const workerIndex = messageData?.data?.workerIndex ?? 0;
-    scrapeBoerderij(workerIndex);
-  }
-});
+letScraperListenToMasterMessageAndInit(scrapeBoerderij);
 
 async function scrapeBoerderij(workerIndex) {
   await getBaseMusicEvents(workerIndex);

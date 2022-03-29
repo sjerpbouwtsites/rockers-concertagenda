@@ -5,13 +5,9 @@ import puppeteer from "puppeteer";
 import { parentPort } from "worker_threads";
 import EventsList from "./events-list.js";
 import fsDirections from "./fs-directions.js";
+import { letScraperListenToMasterMessageAndInit } from "./generic-scraper.js";
 
-parentPort.on("message", (messageData) => {
-  if (messageData.command && messageData.command === "start") {
-    const workerIndex = messageData?.workerIndex ?? 0;
-    scrapeOCCII(workerIndex);
-  }
-});
+letScraperListenToMasterMessageAndInit(scrapeOCCII);
 
 async function scrapeOCCII(workerIndex) {
   const months = {

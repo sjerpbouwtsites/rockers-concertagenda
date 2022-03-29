@@ -1,4 +1,3 @@
-import axios from "axios";
 import MusicEvent from "./music-event.js";
 import puppeteer from "puppeteer";
 import { parentPort } from "worker_threads";
@@ -6,22 +5,10 @@ import EventsList from "./events-list.js";
 import fsDirections from "./fs-directions.js";
 import fs from "fs";
 import crypto from "crypto";
-import path from "path";
 import { getPriceFromHTML } from "./tools.js";
+import { letScraperListenToMasterMessageAndInit } from "./generic-scraper.js";
 
-parentPort.on("message", (messageData) => {
-  if (messageData.command && messageData.command === "start") {
-    try {
-      scrapeDynamo(messageData.data.page);
-    } catch (error) {
-      parentPort.postMessage({
-        status: "error",
-        message: "Algemene gevangen error dynamoScrape",
-        data: error,
-      });
-    }
-  }
-});
+letScraperListenToMasterMessageAndInit(scrapeDynamo);
 
 async function scrapeDynamo(workerIndex) {
   const months = {
@@ -89,11 +76,7 @@ async function processSingleMusicEvent(
 
   const newMusicEvents = [...baseMusicEvents];
   const firstMusicEvent = newMusicEvents.shift();
-  if (
-    baseMusicEvents.length === 0 ||
-    !firstMusicEvent ||
-    typeof firstMusicEvent === "undefined"
-  ) {
+  if (baseMusicEvents.length === 0 || !firstMusicEvent) {
     return true;
   }
   const page = await browser.newPage();

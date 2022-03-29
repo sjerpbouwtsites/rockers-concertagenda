@@ -1,0 +1,583 @@
+
+  Baroeg Error - Error - 5:20:54 AM
+  Error: REJECTED AFTER 15000
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:25:14)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7) 
+  REJECTED AFTER 15000
+  
+  
+  Baroeg Error - TypeError - 5:18:37 AM
+  TypeError: Cannot read properties of undefined (reading 'name')
+    at handleError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:13:26)
+    at getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:178:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:75:22)
+    at async scrapeTivolivredenburg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:21:5) 
+  Cannot read properties of undefined (reading 'name')
+  
+  
+  Baroeg Error - Error - 5:18:37 AM
+  Error: Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:37:56
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:129:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:75:22)
+    at async scrapeTivolivredenburg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:21:5) 
+  Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:37:56
+  
+  
+  Baroeg Error - TypeError - 5:18:37 AM
+  TypeError: Cannot read properties of undefined (reading 'name')
+    at handleError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:13:26)
+    at getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:178:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:75:22)
+    at async scrapeTivolivredenburg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:21:5) 
+  Cannot read properties of undefined (reading 'name')
+  
+  
+  Baroeg Error - Error - 5:18:37 AM
+  Error: Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:37:56
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:129:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:75:22)
+    at async scrapeTivolivredenburg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:21:5) 
+  Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:37:56
+  
+  
+  Baroeg Error - undefined - 5:16:07 AM
+  undefined 
+  undefined
+  
+  
+  Baroeg Error - Error - 5:16:07 AM
+  Error: Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:36:56
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:130:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:75:22)
+    at async scrapeTivolivredenburg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:21:5) 
+  Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:36:56
+  
+  
+  Baroeg Error - undefined - 5:16:07 AM
+  undefined 
+  undefined
+  
+  
+  Baroeg Error - Error - 5:16:07 AM
+  Error: Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:36:56
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:130:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:75:22)
+    at async scrapeTivolivredenburg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:21:5) 
+  Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:36:56
+  
+  
+  Baroeg Error - undefined - 5:16:06 AM
+  undefined 
+  undefined
+  
+  
+  Baroeg Error - Error - 5:16:06 AM
+  Error: Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:36:56
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:130:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:75:22)
+    at async scrapeTivolivredenburg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:21:5) 
+  Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:36:56
+  
+  
+  Baroeg Error - undefined - 5:16:06 AM
+  undefined 
+  undefined
+  
+  
+  Baroeg Error - Error - 5:16:06 AM
+  Error: Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:36:56
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:130:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:75:22)
+    at async scrapeTivolivredenburg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:21:5) 
+  Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:36:56
+  
+  
+  Baroeg Error - undefined - 5:16:06 AM
+  undefined 
+  undefined
+  
+  
+  Baroeg Error - Error - 5:16:06 AM
+  Error: Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:36:56
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:130:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:75:22)
+    at async scrapeTivolivredenburg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:21:5) 
+  Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:36:56
+  
+  
+  Baroeg Error - undefined - 5:16:06 AM
+  undefined 
+  undefined
+  
+  
+  Baroeg Error - Error - 5:16:06 AM
+  Error: Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:36:56
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:130:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:75:22)
+    at async scrapeTivolivredenburg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:21:5) 
+  Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:36:56
+  
+  
+  Baroeg Error - undefined - 5:16:05 AM
+  undefined 
+  undefined
+  
+  
+  Baroeg Error - Error - 5:16:05 AM
+  Error: Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:36:56
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:130:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:75:22)
+    at async scrapeTivolivredenburg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:21:5) 
+  Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:36:56
+  
+  
+  Baroeg Error - undefined - 5:16:05 AM
+  undefined 
+  undefined
+  
+  
+  Baroeg Error - Error - 5:16:05 AM
+  Error: Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:36:56
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:130:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:75:22)
+    at async scrapeTivolivredenburg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:21:5) 
+  Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:36:56
+  
+  
+  Baroeg Error - undefined - 5:16:05 AM
+  undefined 
+  undefined
+  
+  
+  Baroeg Error - Error - 5:16:05 AM
+  Error: Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:36:56
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:130:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:75:22)
+    at async scrapeTivolivredenburg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:21:5) 
+  Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:36:56
+  
+  
+  Baroeg Error - undefined - 5:16:04 AM
+  undefined 
+  undefined
+  
+  
+  Baroeg Error - Error - 5:16:04 AM
+  Error: Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:36:56
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:130:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:75:22)
+    at async scrapeTivolivredenburg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:21:5) 
+  Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:36:56
+  
+  
+  Baroeg Error - Error - 5:13:46 AM
+  Error: Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:36:52
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:130:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:75:22)
+    at async scrapeTivolivredenburg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:21:5) 
+  Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:36:52
+  
+  
+  Baroeg Error - Error - 5:13:46 AM
+  Error: Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:36:52
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:130:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:75:22)
+    at async scrapeTivolivredenburg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:21:5) 
+  Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:36:52
+  
+  
+  Baroeg Error - Error - 5:13:46 AM
+  Error: Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:36:52
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:130:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:75:22)
+    at async scrapeTivolivredenburg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:21:5) 
+  Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:36:52
+  
+  
+  Baroeg Error - Error - 5:13:46 AM
+  Error: Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:36:52
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:130:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:75:22)
+    at async scrapeTivolivredenburg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:21:5) 
+  Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:36:52
+  
+  
+  Baroeg Error - Error - 5:13:45 AM
+  Error: Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:36:52
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:130:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:75:22)
+    at async scrapeTivolivredenburg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:21:5) 
+  Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:36:52
+  
+  
+  Baroeg Error - Error - 5:13:45 AM
+  Error: Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:36:52
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:130:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:75:22)
+    at async scrapeTivolivredenburg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:21:5) 
+  Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:36:52
+  
+  
+  Baroeg Error - Error - 5:13:45 AM
+  Error: Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:36:52
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:130:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:75:22)
+    at async scrapeTivolivredenburg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:21:5) 
+  Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:36:52
+  
+  
+  Baroeg Error - Error - 5:13:44 AM
+  Error: Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:36:52
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:130:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:75:22)
+    at async scrapeTivolivredenburg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:21:5) 
+  Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:36:52
+  
+  
+  Baroeg Error - Error - 5:11:27 AM
+  Error: Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:33:9
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:130:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:75:22)
+    at async scrapeTivolivredenburg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:21:5) 
+  Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:33:9
+  
+  
+  Baroeg Error - Error - 5:11:26 AM
+  Error: Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:33:9
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:130:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:75:22)
+    at async scrapeTivolivredenburg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:21:5) 
+  Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:33:9
+  
+  
+  Baroeg Error - Error - 5:11:26 AM
+  Error: Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:33:9
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:130:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:75:22)
+    at async scrapeTivolivredenburg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:21:5) 
+  Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:33:9
+  
+  
+  Baroeg Error - Error - 5:11:26 AM
+  Error: Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:33:9
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:130:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:75:22)
+    at async scrapeTivolivredenburg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:21:5) 
+  Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:33:9
+  
+  
+  Baroeg Error - Error - 5:11:25 AM
+  Error: Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:33:9
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:130:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:75:22)
+    at async scrapeTivolivredenburg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:21:5) 
+  Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:33:9
+  
+  
+  Baroeg Error - Error - 5:11:25 AM
+  Error: Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:33:9
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:130:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:75:22)
+    at async scrapeTivolivredenburg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:21:5) 
+  Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:33:9
+  
+  
+  Baroeg Error - Error - 5:11:25 AM
+  Error: Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:33:9
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:130:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:75:22)
+    at async scrapeTivolivredenburg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:21:5) 
+  Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:33:9
+  
+  
+  Baroeg Error - Error - 5:11:25 AM
+  Error: Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:33:9
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:130:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:75:22)
+    at async scrapeTivolivredenburg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:21:5) 
+  Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:33:9
+  
+  
+  Baroeg Error - Error - 2:02:59 AM
+  Error: REJECTED AFTER 10000
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:25:14)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7) 
+  REJECTED AFTER 10000
+  
+  
+  Baroeg Error - Error - 1:56:58 AM
+  Error: net::ERR_NAME_NOT_RESOLVED at https://www.013.nl/programma/heavy
+    at navigate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:156:23)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async FrameManager.navigateFrame (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:131:21)
+    at async Frame.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:512:16)
+    at async Page.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1167:16)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-nuldertien.js:200:3)
+    at async scrapeNul13 (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-nuldertien.js:31:29) 
+  net::ERR_NAME_NOT_RESOLVED at https://www.013.nl/programma/heavy
+  
+  
+  Baroeg Error - Error - 1:56:58 AM
+  Error: net::ERR_NAME_NOT_RESOLVED at https://www.effenaar.nl/agenda
+    at navigate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:156:23)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async FrameManager.navigateFrame (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:131:21)
+    at async Frame.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:512:16)
+    at async Page.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1167:16)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-effenaar.js:231:3)
+    at async scrapeEffenaar (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-effenaar.js:30:29) 
+  net::ERR_NAME_NOT_RESOLVED at https://www.effenaar.nl/agenda
+  
+  
+  Baroeg Error - Error - 1:56:58 AM
+  Error: net::ERR_NAME_NOT_RESOLVED at https://www.013.nl/programma/heavy
+    at navigate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:156:23)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async FrameManager.navigateFrame (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:131:21)
+    at async Frame.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:512:16)
+    at async Page.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1167:16)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-nuldertien.js:200:3)
+    at async scrapeNul13 (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-nuldertien.js:31:29) 
+  net::ERR_NAME_NOT_RESOLVED at https://www.013.nl/programma/heavy
+  
+  
+  Baroeg Error - Error - 1:56:58 AM
+  Error: net::ERR_NAME_NOT_RESOLVED at https://www.effenaar.nl/agenda
+    at navigate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:156:23)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async FrameManager.navigateFrame (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:131:21)
+    at async Frame.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:512:16)
+    at async Page.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1167:16)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-effenaar.js:231:3)
+    at async scrapeEffenaar (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-effenaar.js:30:29) 
+  net::ERR_NAME_NOT_RESOLVED at https://www.effenaar.nl/agenda
+  
+  
+  Baroeg Error - Error - 1:56:58 AM
+  Error: net::ERR_NAME_NOT_RESOLVED at https://www.013.nl/programma/heavy
+    at navigate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:156:23)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async FrameManager.navigateFrame (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:131:21)
+    at async Frame.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:512:16)
+    at async Page.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1167:16)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-nuldertien.js:200:3)
+    at async scrapeNul13 (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-nuldertien.js:31:29) 
+  net::ERR_NAME_NOT_RESOLVED at https://www.013.nl/programma/heavy
+  
+  
+  Baroeg Error - Error - 1:56:56 AM
+  Error: REJECTED AFTER 10000
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:25:14)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7) 
+  REJECTED AFTER 10000
+  
+  
+  Baroeg Error - Error - 1:56:56 AM
+  Error: REJECTED AFTER 10000
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:25:14)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7) 
+  REJECTED AFTER 10000
+  
+  

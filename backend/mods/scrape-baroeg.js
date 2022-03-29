@@ -7,20 +7,9 @@ import fs from "fs";
 import crypto from "crypto";
 import fsDirections from "./fs-directions.js";
 import { handleError, errorAfterSeconds, getPriceFromHTML } from "./tools.js";
+import { letScraperListenToMasterMessageAndInit } from "./generic-scraper.js";
 
-parentPort.on("message", (messageData) => {
-  if (messageData.command && messageData.command === "start") {
-    try {
-      scrapeBaroeg(messageData.data.page);
-    } catch (error) {
-      parentPort.postMessage({
-        status: "error",
-        message: "Algemene gevangen error baroegscrape",
-        data: error,
-      });
-    }
-  }
-});
+letScraperListenToMasterMessageAndInit(scrapeBaroeg);
 
 async function scrapeBaroeg(workerIndex) {
   const months = {
@@ -41,7 +30,7 @@ async function scrapeBaroeg(workerIndex) {
   try {
     const baseMusicEvents = await Promise.race([
       makeBaseEventList(workerIndex),
-      errorAfterSeconds(10000),
+      errorAfterSeconds(20000),
     ]);
     await fillMusicEvents(baseMusicEvents, months, workerIndex);
   } catch (error) {

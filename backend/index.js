@@ -40,12 +40,26 @@ function init() {
     startWorker(fsDirections.scrapeNuldertien, "nuldertien", 3);
   }
 
-  if (EventsList.isOld("effenaar") || true) {
+  if (EventsList.isOld("effenaar")) {
     startWorker(fsDirections.scrapeEffenaar, "effenaar", 0);
     startWorker(fsDirections.scrapeEffenaar, "effenaar", 1);
     startWorker(fsDirections.scrapeEffenaar, "effenaar", 2);
     startWorker(fsDirections.scrapeEffenaar, "effenaar", 3);
   }
+
+  if (EventsList.isOld("tivolivredenburg")) {
+    startWorker(fsDirections.scrapeTivolivredenburg, "tivolivredenburg", 0);
+    startWorker(fsDirections.scrapeTivolivredenburg, "tivolivredenburg", 1);
+    startWorker(fsDirections.scrapeTivolivredenburg, "tivolivredenburg", 2);
+    startWorker(fsDirections.scrapeTivolivredenburg, "tivolivredenburg", 3);
+  }
+
+  // if (EventsList.isOld("doornroosje")) {
+  //   startWorker(fsDirections.scrapeDoornroosje, "doornroosje", 0);
+  //   startWorker(fsDirections.scrapeDoornroosje, "doornroosje", 1);
+  //   startWorker(fsDirections.scrapeDoornroosje, "doornroosje", 2);
+  //   startWorker(fsDirections.scrapeDoornroosje, "doornroosje", 3);
+  // }
 
   if (EventsList.isOld("boerderij")) {
     startWorker(fsDirections.scrapeBoerderij, "boerderij", 0);

@@ -7,20 +7,9 @@ import fs from "fs";
 import crypto from "crypto";
 import fsDirections from "./fs-directions.js";
 import { getPriceFromHTML, handleError, errorAfterSeconds } from "./tools.js";
+import { letScraperListenToMasterMessageAndInit } from "./generic-scraper.js";
 
-parentPort.on("message", (messageData) => {
-  if (messageData.command && messageData.command === "start") {
-    try {
-      scrapePatronaat(messageData.data.page);
-    } catch (error) {
-      parentPort.postMessage({
-        status: "error",
-        message: "Algemene gevangen error patronaatcrape",
-        data: error,
-      });
-    }
-  }
-});
+letScraperListenToMasterMessageAndInit(scrapePatronaat);
 
 async function scrapePatronaat(workerIndex) {
   const browser = await puppeteer.launch();
