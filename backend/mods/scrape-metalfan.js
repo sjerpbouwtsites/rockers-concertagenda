@@ -132,10 +132,6 @@ async function getBaseMusicEvents(browser) {
   musicEvents.forEach((musicEvent) => {
     musicEvent.register();
   });
-  parentPort.postMessage({
-    status: "working",
-    message: `Metalfan worker has found ${musicEvents.length} events.`,
-  });
 
   page.close();
   return true;

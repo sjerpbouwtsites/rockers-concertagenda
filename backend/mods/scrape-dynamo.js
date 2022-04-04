@@ -48,10 +48,6 @@ async function scrapeDynamo(workerIndex) {
 
 async function fillMusicEvents(browser, baseMusicEvents, months, workerIndex) {
   const baseMusicEventsCopy = [...baseMusicEvents];
-  parentPort.postMessage({
-    status: "working",
-    message: `will scrape ${baseMusicEvents.length} events.`,
-  });
 
   return processSingleMusicEvent(
     browser,
@@ -67,13 +63,10 @@ async function processSingleMusicEvent(
   months,
   workerIndex
 ) {
-  if (baseMusicEvents.length % 3 === 0) {
-    // @TODO TODO MESSAGING
-    // parentPort.postMessage({
-    //   status: "console",
-    //   message: `🦾 Dynamo worker-${workerIndex} has still ${baseMusicEvents.length} todo.`,
-    // });
-  }
+  parentPort.postMessage({
+    status: "todo",
+    message: baseMusicEvents.length,
+  });
 
   const newMusicEvents = [...baseMusicEvents];
   const firstMusicEvent = newMusicEvents.shift();

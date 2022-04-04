@@ -33,10 +33,6 @@ async function scrapeEffenaar(workerIndex) {
 
 async function fillMusicEvents(browser, baseMusicEvents, workerIndex) {
   const baseMusicEventsCopy = [...baseMusicEvents];
-  parentPort.postMessage({
-    status: "working",
-    message: `Will scrape ${baseMusicEvents.length} events.`,
-  });
 
   return processSingleMusicEvent(
     browser,
@@ -54,13 +50,10 @@ async function fillMusicEvents(browser, baseMusicEvents, workerIndex) {
 }
 
 async function processSingleMusicEvent(browser, baseMusicEvents, workerIndex) {
-  if (baseMusicEvents.length % 5 === 0) {
-    // @TODO TODO MESSAGING
-    // parentPort.postMessage({
-    //   status: "console",
-    //   message: `🦾 still ${baseMusicEvents.length} todo.`,
-    // });
-  }
+  parentPort.postMessage({
+    status: "todo",
+    message: baseMusicEvents.length,
+  });
 
   const newMusicEvents = [...baseMusicEvents];
   const firstMusicEvent = newMusicEvents.shift();

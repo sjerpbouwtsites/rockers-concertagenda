@@ -78,10 +78,6 @@ async function getBaseMusicEvents(browser, workerIndex) {
       // here divide events over workers.
       return index % 2 === workerIndex;
     });
-  parentPort.postMessage({
-    status: "working",
-    message: `Occii worker-${workerIndex} will scrape ${baseMusicEvents.length} events.`,
-  });
 
   page.close();
   return baseMusicEvents;
@@ -93,6 +89,10 @@ async function processSingleMusicEvent(
   months,
   workerIndex
 ) {
+  parentPort.postMessage({
+    status: "todo",
+    message: baseMusicEvents.length,
+  });
   const newMusicEvents = [...baseMusicEvents];
   const firstMusicEvent = newMusicEvents.shift();
   const page = await browser.newPage();

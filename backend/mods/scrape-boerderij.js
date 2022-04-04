@@ -30,8 +30,8 @@ async function getBaseMusicEvents(workerIndex) {
     });
 
   parentPort.postMessage({
-    status: "working",
-    message: `Boerderij worker-${workerIndex} will scrape ${allRockBatch.length} events.`,
+    status: "todo",
+    message: allRockBatch.length,
   });
 
   if (!allRockBatch.length) return true;
