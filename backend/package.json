@@ -11,6 +11,7 @@
   "license": "ISC",
   "devDependencies": {
     "axios": "^0.26.1",
+    "os-utils": "^0.0.14",
     "puppeteer": "^13.5.1"
   }
 }

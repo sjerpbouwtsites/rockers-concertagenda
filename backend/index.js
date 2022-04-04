@@ -5,23 +5,16 @@ import fsDirections from "./mods/fs-directions.js";
 import { handleError, errorAfterSeconds } from "./mods/tools.js";
 
 function init() {
+  WorkerStatus.monitorCPUS();
+
   if (EventsList.isOld("metalfan")) {
     startWorker(fsDirections.scrapeMetalfan, "metalfan", 0);
   }
   if (EventsList.isOld("baroeg")) {
     try {
-      Promise.race([
-        startWorker(fsDirections.scrapeBaroeg, "baroeg", 0, baroegDoneCallback),
-        errorAfterSeconds(240000),
-      ]);
-      Promise.race([
-        startWorker(fsDirections.scrapeBaroeg, "baroeg", 1, baroegDoneCallback),
-        errorAfterSeconds(240000),
-      ]);
-      Promise.race([
-        startWorker(fsDirections.scrapeBaroeg, "baroeg", 2, baroegDoneCallback),
-        errorAfterSeconds(240000),
-      ]);
+      startWorker(fsDirections.scrapeBaroeg, "baroeg", 0, baroegDoneCallback);
+      startWorker(fsDirections.scrapeBaroeg, "baroeg", 1, baroegDoneCallback);
+      startWorker(fsDirections.scrapeBaroeg, "baroeg", 2, baroegDoneCallback);
     } catch (error) {
       handleError(error);
     }
@@ -95,6 +88,13 @@ function startWorker(
   workerIndex = null,
   doneCallback = null
 ) {
+  if (!WorkerStatus.OSHasSpace) {
+    setTimeout(() => {
+      startWorker(workerPath, workerName, workerIndex, doneCallback);
+    }, 250);
+    return;
+  }
+
   const thisWorker = new Worker(workerPath);
   thisWorker.workerName = `${workerName}-${workerIndex}`;
   thisWorker.postMessage({

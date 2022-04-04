@@ -1,13 +1,32 @@
+import os from "os-utils";
 import EventsList from "./events-list.js";
-import path from "path";
+
 export default class WorkerStatus {
   static _workers = {};
-
+  static CPUFree = 100;
   static registerWorker(name) {
     WorkerStatus._workers[name] = {
       status: "working",
       message: null,
     };
+  }
+
+  static monitorCPUS() {
+    os.cpuFree(function (v) {
+      WorkerStatus.CPUFree = v * 100;
+    });
+    if (
+      Object.keys(WorkerStatus._workers).length === 0 ||
+      WorkerStatus.currentNotDone > 0
+    ) {
+      setTimeout(() => {
+        WorkerStatus.monitorCPUS();
+      }, 50);
+    }
+  }
+
+  static get OSHasSpace() {
+    return WorkerStatus.currentNotDone < 7 && WorkerStatus.CPUFree > 25;
   }
 
   static change(name, status, message, worker) {
@@ -45,7 +64,7 @@ export default class WorkerStatus {
     }
   }
 
-  static checkIfAllDone() {
+  static get currentNotDone() {
     const notDone = Object.entries(WorkerStatus._workers)
       .map(([workerName, workerData]) => {
         workerData.name = workerName;
@@ -54,6 +73,11 @@ export default class WorkerStatus {
       .filter((workerData) => {
         return !workerData.status.includes("done");
       });
+    return notDone.length;
+  }
+
+  static checkIfAllDone() {
+    const notDone = WorkerStatus.currentNotDone;
 
     if (!notDone.length) {
       console.log(" ");

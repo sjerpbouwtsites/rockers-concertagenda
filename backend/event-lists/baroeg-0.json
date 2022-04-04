@@ -1,16 +1,30 @@
 [
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-12-08T18:00:00.000Z",
+    "startDateTime": "2022-12-08T17:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://baroeg.nl/productie/nile/",
-    "title": "Nile",
+    "title": "Nile + Krisiun + In Element + Wrath Of The Nebula",
     "location": "baroeg",
     "price": 19,
     "genre": null,
     "shortText": "<p>Nile komt terug naar Baroeg!</p>\n",
-    "longText": "../public/texts/01f483ff-9a22-42f5-b030-353d5c502b84.html",
-    "image": "cover-photo-768x337.png",
+    "longText": "../public/texts/acd02f6a-84b8-4c82-b31f-404bdc7a9188.html",
+    "image": "baner-WWW-768x432.png",
+    "dataIntegrity": 10
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-10-30T14:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://baroeg.nl/productie/wavefest-ix-actors-bootblacks-buzz-kull-ultra-sunn/",
+    "title": "Wavefest IX: Actors + Bootblacks + Buzz Kull + Ultra Sunn",
+    "location": "baroeg",
+    "price": 20,
+    "genre": null,
+    "shortText": "<p>De negende editie van Wavefest.</p>\n",
+    "longText": "../public/texts/cebd2d18-678c-43b9-aace-d56a1b0924b5.html",
+    "image": "ACTORS_LUMPromo_2-scaled-e1648934858558-768x269.jpg",
     "dataIntegrity": 10
   },
   {
@@ -23,7 +37,7 @@
     "price": null,
     "genre": null,
     "shortText": "<p>Toprock van Poolse bodem</p>\n",
-    "longText": "../public/texts/a8150afe-d44d-487a-8018-d0360874ba73.html",
+    "longText": "../public/texts/8b55f092-b924-462f-ac7f-2aeaea5d1d44.html",
     "image": "Karol-Kacperski-zespól-ORGANEK-768x512.jpg",
     "dataIntegrity": 10
   },
@@ -37,7 +51,7 @@
     "price": null,
     "genre": null,
     "shortText": "<p>Hoe deze formatie het werk van de band uit Oost-Londen vertolkt is gewoon magistraal te noemen.</p>\n",
-    "longText": "../public/texts/8c791f59-5806-4b56-8f40-5bd8189dd010.html",
+    "longText": "../public/texts/80de1bba-c956-4285-b0fd-b4f25ed0c329.html",
     "image": "UTI-Band-silver-e1629464012188-768x368.jpg",
     "dataIntegrity": 10
   },
@@ -51,7 +65,7 @@
     "price": 21.5,
     "genre": null,
     "shortText": "<p>Met o.a. Haat.</p>\n",
-    "longText": "../public/texts/e42e6318-6bbe-47a0-aa35-928f9a9527bb.html",
+    "longText": "../public/texts/d34754d2-4c23-4145-aa3b-7e4ede29c38d.html",
     "image": "vene20-kopie-768x342.jpg",
     "dataIntegrity": 10
   },
@@ -65,7 +79,7 @@
     "price": 16.5,
     "genre": null,
     "shortText": "<p>Met o.a. Countess en Coldburn</p>\n",
-    "longText": "../public/texts/56f9b821-bbed-4b1c-af26-db463d055d5b.html",
+    "longText": "../public/texts/591fca8f-9b60-40da-a28a-ebae7ed24281.html",
     "image": "vene20-kopie-768x342.jpg",
     "dataIntegrity": 10
   },
@@ -79,7 +93,7 @@
     "price": 9,
     "genre": null,
     "shortText": "<p>Een hardcore punkkabaalbacchanaal. &#8216;100 jaar Jeroen &#038; Klaas&#8217; </p>\n",
-    "longText": "../public/texts/2edd8026-d12c-4ca8-b8ca-98233d67b35e.html",
+    "longText": "../public/texts/9cccead7-960a-4f72-b22b-fc846bf32fad.html",
     "image": "Die-Nakse-Bananen-768x512.jpg",
     "dataIntegrity": 10
   },
@@ -93,7 +107,7 @@
     "price": 12,
     "genre": null,
     "shortText": "<p>Een portie fantastische progressieve, symfonische rock waarin je diverse invloeden terug hoort.</p>\n",
-    "longText": "../public/texts/ace6bfe3-3f55-49ae-a277-761f1925880d.html",
+    "longText": "../public/texts/7b2415a6-5ff7-4a9f-b975-a2b5c2d05ada.html",
     "image": "Kingfisher-sky-e1643201632511-768x318.jpeg",
     "dataIntegrity": 10
   },
@@ -107,7 +121,7 @@
     "price": 19,
     "genre": null,
     "shortText": "<p>Sathanas In Gloriam presents: Djevel + Helleruin.</p>\n",
-    "longText": "../public/texts/ced6103a-dd12-424e-b986-727f0dd8e9e5.html",
+    "longText": "../public/texts/6de2bbcb-e39d-4bb6-9169-3c1c408c1b65.html",
     "image": "Djevel-foto-door-Maarten-768x353.jpeg",
     "dataIntegrity": 10
   },
@@ -121,22 +135,8 @@
     "price": 9.99,
     "genre": null,
     "shortText": "<p>Napalm Death, Atart Teenage Riot + Freedom Call + Thanatos + Suicide Commando + Distant + Het Gezelschap + The Sweet Release Of Dead</p>\n",
-    "longText": "../public/texts/79d1541b-7e1b-4dff-bbc4-a7897a686667.html",
+    "longText": "../public/texts/f13d426c-aa59-4f30-9eb6-9ddf444ac409.html",
     "image": "Profielfoto-kopie-768x238.jpg",
-    "dataIntegrity": 10
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-08-21T13:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://baroeg.nl/productie/rotterdam-rocks-presents-angel-white-heat/",
-    "title": "Rotterdam Rocks presents: Angel + White Heat",
-    "location": "baroeg",
-    "price": 15,
-    "genre": null,
-    "shortText": "<p>Rotterdam Rocks presents: Angel + White Heat</p>\n",
-    "longText": "../public/texts/515d51e8-43c0-4417-a21e-2c8ea9b1bae3.html",
-    "image": "band-pic-e1646396398193-768x201.jpg",
     "dataIntegrity": 10
   }
 ]

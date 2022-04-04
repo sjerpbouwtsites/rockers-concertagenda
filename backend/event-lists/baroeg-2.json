@@ -1,6 +1,34 @@
 [
   {
     "doorOpenDateTime": null,
+    "startDateTime": "2022-06-05T13:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://baroeg.nl/productie/bizkit-park-be-limp-bizkit-linkin-park-tribute/",
+    "title": "Bizkit Park + Black Dog Forge + DJ’s Neverm?nd &#038; Ser!ous",
+    "location": "baroeg",
+    "price": 14,
+    "genre": null,
+    "shortText": "<p>Een feest der herkenning vol nu-metalhits.</p>\n",
+    "longText": "../public/texts/dee130a1-a8d4-449f-b309-234051440fe8.html",
+    "image": "BP-2-e1637065718747-768x323.jpg",
+    "dataIntegrity": 10
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-06-03T17:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://baroeg.nl/productie/wavefest-presents-twin-tribes-stockhaussen-isotropia/",
+    "title": "Wavefest Presents: Twin Tribes + Stockhaussen + Isotropia",
+    "location": "baroeg",
+    "price": 13,
+    "genre": null,
+    "shortText": "<p>Naast de reguliere edities van het Wavefest festival presenteert Baroeg onder de noemer &#8216;Wavefest presents&#8217; ook regelmatig clubavonden met bands uit het wave-genre.</p>\n",
+    "longText": "../public/texts/ba8a5426-3d7e-4117-adc4-13441beda309.html",
+    "image": "2021.09-11-Twin-Tribes-European-Tour-Blank-Instagram-1x1-1-e1636626629908-768x357.jpg",
+    "dataIntegrity": 10
+  },
+  {
+    "doorOpenDateTime": null,
     "startDateTime": "2022-05-28T13:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://baroeg.nl/productie/nieuwe-datum-submit-fest-2021/",
@@ -9,7 +37,7 @@
     "price": 19,
     "genre": null,
     "shortText": "<p>Submit Fest 2022 met: InVisions + Cold Night For Alligators + Exist Immortal + Another Now + Changing Tides + Reformist + Mountain Eye.</p>\n",
-    "longText": "../public/texts/012fb6ac-489b-40be-b8c2-1c6aec53a2b8.html",
+    "longText": "../public/texts/be84b92f-be5a-4695-b69f-a868ec872d1c.html",
     "image": "Submit-Fest-2022-banner-line-up-768x449.jpg",
     "dataIntegrity": 10
   },
@@ -23,7 +51,7 @@
     "price": 17,
     "genre": null,
     "shortText": "<p>Tribute To The 90’s ft. Rudeboy &#038; Green Lizard + Fire Horse + King Hiss + Splinter + Kid Harlequin.</p>\n",
-    "longText": "../public/texts/0aeaa2df-642e-433b-a4b4-e8fbb445480f.html",
+    "longText": "../public/texts/96b9172b-155e-4195-9caf-390065e46929.html",
     "image": "GreenlizardftRudeboy-Robert-WesteraFotografie-974x520-1-768x410.jpg",
     "dataIntegrity": 10
   },
@@ -37,7 +65,7 @@
     "price": 14,
     "genre": null,
     "shortText": "<p>Met Hangman’s Chair gaan ze de kant van de sludgy stonerdoom op.</p>\n",
-    "longText": "../public/texts/4b50e60d-ef3f-4dd9-addf-763fb32ca108.html",
+    "longText": "../public/texts/d69e5344-3d78-468f-8d1d-ecd4ee13716c.html",
     "image": "Hangmans-Chair-768x349.jpg",
     "dataIntegrity": 10
   },
@@ -51,22 +79,8 @@
     "price": 16.5,
     "genre": null,
     "shortText": "<p>Weer zo’n fijne underground package doet Baroeg aan.</p>\n",
-    "longText": "../public/texts/13df3651-2677-49e1-a9b9-9061e8f13313.html",
+    "longText": "../public/texts/48c8953a-987a-4e60-9d00-e1feb2b997d8.html",
     "image": "Promo-Pic-2-Credit_-Alvino-Salcedo--768x514.jpg",
-    "dataIntegrity": 10
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-05-15T13:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://baroeg.nl/productie/ross-the-boss-burning-witches/",
-    "title": "Ross The Boss + Ram + Trauma",
-    "location": "baroeg",
-    "price": 20,
-    "genre": null,
-    "shortText": "<p>Voor de liefhebbers van heavy en power metal </p>\n",
-    "longText": "../public/texts/7e65ef44-3526-424c-8fff-245b42426cd9.html",
-    "image": "ross-2-768x405.jpg",
     "dataIntegrity": 10
   },
   {
@@ -79,7 +93,7 @@
     "price": 21,
     "genre": null,
     "shortText": "<p>Sleazy come, sleazy go – Rotterdam becomes Rotterglam!</p>\n",
-    "longText": "../public/texts/e6a1d3f7-a692-4ca8-84d6-1f2106a89883.html",
+    "longText": "../public/texts/0955fb09-57a6-4ea0-b896-184aa78971f7.html",
     "dataIntegrity": 10
   },
   {
@@ -92,7 +106,7 @@
     "price": 21,
     "genre": null,
     "shortText": "<p>Sleazy come, sleazy go – Rotterdam becomes Rotterglam!</p>\n",
-    "longText": "../public/texts/40e11839-5f25-469f-a8e7-20087d51ad5e.html",
+    "longText": "../public/texts/23c753ab-4fe1-477b-83ce-4f488ccedfaa.html",
     "image": "123224885_10158730985164288_1897397656309318340_o-768x513.jpg",
     "dataIntegrity": 10
   },
@@ -106,35 +120,7 @@
     "price": 23.5,
     "genre": null,
     "shortText": "<p>Japanse all-female steampunkmetal</p>\n",
-    "longText": "../public/texts/ab4b079d-5f7b-4970-b4aa-73d6be36945c.html",
-    "dataIntegrity": 10
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-05-11T17:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://baroeg.nl/productie/riffsniffer-presents-kal-el-arteaga-bogwife/",
-    "title": "Riffsniffer presents: Kal-El + Arteaga + Bogwife",
-    "location": "baroeg",
-    "price": 14,
-    "genre": null,
-    "shortText": "<p>Een allegaartje aan zompige klanken.</p>\n",
-    "longText": "../public/texts/9af342bf-ff51-435d-b1ba-12f214dc24ab.html",
-    "image": "KAL-EL-2021-e1645620795818-768x224.jpg",
-    "dataIntegrity": 10
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-05-08T16:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://baroeg.nl/productie/prspctbaroegworm-present-maassilo-igorrr-otto-von-schirach-drumcorps/",
-    "title": "PRSPCT + Baroeg + WORM present @Maassilo: Igorrr + Otto Von Schirach",
-    "location": "baroeg",
-    "price": 23,
-    "genre": null,
-    "shortText": "<p>Destroying all the limits of music</p>\n",
-    "longText": "../public/texts/d661432c-e165-47f8-a26d-49bcfa8e24a9.html",
-    "image": "Igorrr-promo-pic-2021-768x478.png",
+    "longText": "../public/texts/e31ae2d5-f550-4363-9fd0-574ae03b25ba.html",
     "dataIntegrity": 10
   }
 ]
