@@ -8,7 +8,6 @@ export default class MusicEvent {
   title = null;
   location = null;
   price = null;
-  genre = null;
   shortText = null;
   longText = null;
   image = null;

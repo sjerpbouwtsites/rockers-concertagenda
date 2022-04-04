@@ -4,10 +4,20 @@ import EventsList from "./events-list.js";
 export default class WorkerStatus {
   static _workers = {};
   static CPUFree = 100;
-  static registerWorker(name) {
-    WorkerStatus._workers[name] = {
+  static waitingWorkers = [];
+  static registerWorker(newWorkerName) {
+    if (WorkerStatus.waitingWorkers.indexOf(newWorkerName) !== -1) {
+      WorkerStatus.waitingWorkers = WorkerStatus.waitingWorkers.filter(
+        (workerName) => {
+          return newWorkerName !== workerName;
+        }
+      );
+    }
+
+    WorkerStatus._workers[newWorkerName] = {
       status: "working",
       message: null,
+      todo: null,
     };
   }
 
@@ -26,7 +36,7 @@ export default class WorkerStatus {
   }
 
   static get OSHasSpace() {
-    return WorkerStatus.currentNotDone < 7 && WorkerStatus.CPUFree > 25;
+    return WorkerStatus.currentNotDone.length < 7 && WorkerStatus.CPUFree > 25;
   }
 
   static change(name, status, message, worker) {
@@ -62,6 +72,10 @@ export default class WorkerStatus {
       console.log(`${name}`.padStart(20, " ").padStart(30, "💬"));
       console.log(message);
     }
+
+    if (statusses.includes("todo")) {
+      WorkerStatus._workers[name].todo = message;
+    }
   }
 
   static get currentNotDone() {
@@ -73,23 +87,39 @@ export default class WorkerStatus {
       .filter((workerData) => {
         return !workerData.status.includes("done");
       });
+    return notDone;
+  }
+
+  static get currentDone() {
+    const notDone = Object.entries(WorkerStatus._workers)
+      .map(([workerName, workerData]) => {
+        workerData.name = workerName;
+        return workerData;
+      })
+      .filter((workerData) => {
+        return workerData.status.includes("done");
+      });
     return notDone.length;
   }
 
   static checkIfAllDone() {
     const notDone = WorkerStatus.currentNotDone;
-
-    if (!notDone.length) {
+    if (notDone.length === 0 && WorkerStatus.waitingWorkers.length === 0) {
       console.log(" ");
       console.log("All workers done");
       WorkerStatus.programEnd();
     } else {
-      console.log(
-        "Currently active: " + notDone.map((not) => not.name).join(";")
-      );
+      WorkerStatus.reportOnActiveWorkers();
     }
   }
 
+  static reportOnActiveWorkers() {
+    const notDone = WorkerStatus.currentNotDone;
+    console.log("Currently active:");
+    notDone.forEach((notDoneWorker) => {
+      console.log(`${notDoneWorker.name} todo: ${notDoneWorker.todo}`);
+    });
+  }
   static programEnd() {
     EventsList.printAllToJSON();
     console.log(" ");

@@ -41,10 +41,6 @@ async function scrapeBaroeg(workerIndex) {
 async function fillMusicEvents(baseMusicEvents, months, workerIndex) {
   const browser = await puppeteer.launch();
   const baseMusicEventsCopy = [...baseMusicEvents];
-  parentPort.postMessage({
-    status: "working",
-    message: `Baroeg worker-${workerIndex} will scrape ${baseMusicEvents.length} events.`,
-  });
 
   return processSingleMusicEvent(
     browser,
@@ -67,12 +63,10 @@ async function processSingleMusicEvent(
   months,
   workerIndex
 ) {
-  if (baseMusicEvents.length % 5 === 0) {
-    parentPort.postMessage({
-      status: "console",
-      message: `🦾 still ${baseMusicEvents.length} todo.`,
-    });
-  }
+  parentPort.postMessage({
+    status: "todo",
+    message: baseMusicEvents.length,
+  });
 
   const newMusicEvents = [...baseMusicEvents];
   const firstMusicEvent = newMusicEvents.shift();
@@ -112,10 +106,10 @@ async function processSingleMusicEvent(
       delete pageInfo.cancelReason;
       firstMusicEvent.merge(pageInfo);
     } else if (pageInfo.cancelReason !== "") {
-      parentPort.postMessage({
-        status: "console",
-        message: `Incomplete info for ${firstMusicEvent.title}`,
-      });
+      // parentPort.postMessage({
+      //   status: "console",
+      //   message: `Incomplete info for ${firstMusicEvent.title}`,
+      // });
     } else {
       const pageInfoError = new Error(`unclear why failure at: ${
         firstMusicEvent.title
@@ -124,7 +118,9 @@ async function processSingleMusicEvent(
        ${JSON.stringify(firstMusicEvent)}`);
       handleError(pageInfoError);
     }
-    firstMusicEvent.register();
+    if (firstMusicEvent.startDateTime) {
+      firstMusicEvent.register();
+    }
   } catch (error) {
     handleError(error);
   }
@@ -239,7 +235,9 @@ async function makeBaseEventList(page) {
         event._embedded["wp:featuredmedia"].length
       ) {
         const fm0 = event._embedded["wp:featuredmedia"][0];
-        musicEventConf.image = fm0?.media_details?.sizes?.medium_large?.file;
+        musicEventConf.image =
+          fm0?.media_details?.sizes?.medium_large?.source_url ??
+          fm0?.media_details?.sizes?.thumbnail?.source_url;
         musicEventConf.venueEventUrl = event.link;
         musicEventConf.location = "baroeg";
         let uuid = crypto.randomUUID();

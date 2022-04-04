@@ -68,10 +68,11 @@ async function processSingleMusicEvent(
   workerIndex
 ) {
   if (baseMusicEvents.length % 3 === 0) {
-    parentPort.postMessage({
-      status: "console",
-      message: `🦾 Dynamo worker-${workerIndex} has still ${baseMusicEvents.length} todo.`,
-    });
+    // @TODO TODO MESSAGING
+    // parentPort.postMessage({
+    //   status: "console",
+    //   message: `🦾 Dynamo worker-${workerIndex} has still ${baseMusicEvents.length} todo.`,
+    // });
   }
 
   const newMusicEvents = [...baseMusicEvents];

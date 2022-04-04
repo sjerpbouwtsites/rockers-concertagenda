@@ -10,11 +10,17 @@ function init() {
   if (EventsList.isOld("metalfan")) {
     startWorker(fsDirections.scrapeMetalfan, "metalfan", 0);
   }
-  if (EventsList.isOld("baroeg")) {
+  if (EventsList.isOld("baroeg") || true) {
     try {
-      startWorker(fsDirections.scrapeBaroeg, "baroeg", 0, baroegDoneCallback);
-      startWorker(fsDirections.scrapeBaroeg, "baroeg", 1, baroegDoneCallback);
-      startWorker(fsDirections.scrapeBaroeg, "baroeg", 2, baroegDoneCallback);
+      startWorker(fsDirections.scrapeBaroeg, "baroeg", 0);
+      startWorker(fsDirections.scrapeBaroeg, "baroeg", 1);
+      startWorker(fsDirections.scrapeBaroeg, "baroeg", 2);
+      startWorker(fsDirections.scrapeBaroeg, "baroeg", 3);
+      startWorker(fsDirections.scrapeBaroeg, "baroeg", 4);
+      startWorker(fsDirections.scrapeBaroeg, "baroeg", 5);
+      startWorker(fsDirections.scrapeBaroeg, "baroeg", 6);
+      startWorker(fsDirections.scrapeBaroeg, "baroeg", 7);
+      startWorker(fsDirections.scrapeBaroeg, "baroeg", 8);
     } catch (error) {
       handleError(error);
     }
@@ -66,21 +72,11 @@ function init() {
     startWorker(fsDirections.scrapeDynamo, "dynamo", 0);
     startWorker(fsDirections.scrapeDynamo, "dynamo", 1);
   }
+
+  WorkerStatus.reportOnActiveWorkers();
 }
 
 init();
-
-function baroegDoneCallback(workerIndex) {
-  if (workerIndex + 3 < 8) {
-    const newWorkerIndex = workerIndex + 3;
-    startWorker(
-      fsDirections.scrapeBaroeg,
-      "baroeg",
-      newWorkerIndex,
-      baroegDoneCallback
-    );
-  }
-}
 
 function startWorker(
   workerPath,
@@ -88,7 +84,9 @@ function startWorker(
   workerIndex = null,
   doneCallback = null
 ) {
+  const workerNameWithIndex = `${workerName}-${workerIndex}`;
   if (!WorkerStatus.OSHasSpace) {
+    WorkerStatus.waitingWorkers.push(workerNameWithIndex);
     setTimeout(() => {
       startWorker(workerPath, workerName, workerIndex, doneCallback);
     }, 250);
@@ -96,7 +94,7 @@ function startWorker(
   }
 
   const thisWorker = new Worker(workerPath);
-  thisWorker.workerName = `${workerName}-${workerIndex}`;
+  thisWorker.workerName = workerNameWithIndex;
   thisWorker.postMessage({
     command: "start",
     data: {

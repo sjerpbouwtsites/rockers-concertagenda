@@ -49,10 +49,11 @@ async function fillMusicEvents(browser, baseMusicEvents, workerIndex) {
 
 async function processSingleMusicEvent(browser, baseMusicEvents, workerIndex) {
   if (baseMusicEvents.length % 5 === 0) {
-    parentPort.postMessage({
-      status: "console",
-      message: `🦾 still ${baseMusicEvents.length} todo.`,
-    });
+    // @TODO TODO MESSAGING
+    // parentPort.postMessage({
+    //   status: "console",
+    //   message: `🦾 still ${baseMusicEvents.length} todo.`,
+    // });
   }
 
   const newMusicEvents = [...baseMusicEvents];
