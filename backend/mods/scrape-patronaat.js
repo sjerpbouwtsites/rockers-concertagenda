@@ -245,7 +245,7 @@ async function makeBaseEventList(browser, workerIndex) {
       .map((eventEl) => {
         const res = {};
         res.title = "";
-        const imageEl = eventEl.querySelector(".event__image img");
+        const imageEl = eventEl.querySelector("[class^='event__image'] img");
         if (!!imageEl) {
           res.image = imageEl.src;
         }

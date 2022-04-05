@@ -108,8 +108,6 @@ export default class WorkerStatus {
       console.log(" ");
       console.log("All workers done");
       WorkerStatus.programEnd();
-    } else {
-      WorkerStatus.reportOnActiveWorkers();
     }
   }
 
@@ -117,8 +115,14 @@ export default class WorkerStatus {
     const notDone = WorkerStatus.currentNotDone;
     console.log("Currently active:");
     notDone.forEach((notDoneWorker) => {
-      console.log(`${notDoneWorker.name} todo: ${notDoneWorker.todo}`);
+      const todoMSG = notDoneWorker.todo ? ` todo: ${notDoneWorker.todo}` : "";
+      console.log(`${notDoneWorker.name}${todoMSG}`);
     });
+    if (notDone.length > 0 || WorkerStatus.waitingWorkers.length !== 0) {
+      setTimeout(() => {
+        WorkerStatus.reportOnActiveWorkers();
+      }, 2500);
+    }
   }
   static programEnd() {
     EventsList.printAllToJSON();

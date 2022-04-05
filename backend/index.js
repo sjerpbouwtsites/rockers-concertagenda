@@ -10,7 +10,7 @@ function init() {
   if (EventsList.isOld("metalfan")) {
     startWorker(fsDirections.scrapeMetalfan, "metalfan", 0);
   }
-  if (EventsList.isOld("baroeg") || true) {
+  if (EventsList.isOld("baroeg")) {
     try {
       startWorker(fsDirections.scrapeBaroeg, "baroeg", 0);
       startWorker(fsDirections.scrapeBaroeg, "baroeg", 1);
@@ -26,7 +26,7 @@ function init() {
     }
   }
 
-  if (EventsList.isOld("patronaat")) {
+  if (EventsList.isOld("patronaat") || true) {
     startWorker(fsDirections.scrapePatronaat, "patronaat", 0);
     startWorker(fsDirections.scrapePatronaat, "patronaat", 1);
     startWorker(fsDirections.scrapePatronaat, "patronaat", 2);
