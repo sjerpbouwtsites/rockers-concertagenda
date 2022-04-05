@@ -45,6 +45,64 @@ class EventBlock extends React.Component {
       });
   }
 
+  priceElement(musicEvent) {
+    const price = `€${Number(musicEvent.price).toFixed(2)}`;
+    return musicEvent.price !== null ? (
+      <span className="event-block__price contrast-with-dark">{price}</span>
+    ) : (
+      ""
+    );
+  }
+
+  createStartMoment(musicEvent) {
+    return new Date(musicEvent.startDateTime).toLocaleDateString("nl", {
+      weekday: "long",
+      month: "long",
+      day: "numeric",
+      year: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+  }
+
+  createLinkToVenue(musicEvent) {
+    const url = musicEvent.venueEventUrl;
+    return !!musicEvent.venueEventUrl ? (
+      <a className="event-block__venue-link" href={url} target="_blank">
+        get your tickets<br></br>
+        at the venue
+      </a>
+    ) : (
+      ""
+    );
+  }
+
+  createImageHTML(musicEvent) {
+    return !!musicEvent.image ? (
+      <img
+        className="event-block--image"
+        src={musicEvent.image}
+        alt={musicEvent.title}
+        loading="lazy"
+      />
+    ) : (
+      ""
+    );
+  }
+
+  createMoreButtonHTML(musicEvent, musicEventKey) {
+    return !!musicEvent.longText ? (
+      <button
+        className="event-block__load-more"
+        onClick={this.loadLongerText.bind(this, musicEventKey)}
+      >
+        more
+      </button>
+    ) : (
+      ""
+    );
+  }
+
   render() {
     const musicEvents = this.state.musicEvents;
 
@@ -52,46 +110,14 @@ class EventBlock extends React.Component {
       <div className="event-block__wrapper">
         {musicEvents.map((musicEvent, musicEventKey) => {
           const titlePlus = musicEvent.title + " in " + musicEvent.location;
-          const price = `€${Number(musicEvent.price).toFixed(2)}`;
-          const priceElement =
-            musicEvent.price !== null ? (
-              <span className="event-block__price contrast-with-dark">
-                {price}
-              </span>
-            ) : (
-              ""
-            );
-          const startMoment = new Date(musicEvent.startDateTime);
-          const startMomentLang = startMoment.toLocaleDateString();
-          const url = musicEvent.venueEventUrl;
-          const linkToVenue = !!musicEvent.venueEventUrl ? (
-            <a className="event-block__venue-link" href={url} target="_blank">
-              get your tickets<br></br>
-              at the venue
-            </a>
-          ) : (
-            ""
-          );
-          const imageHTML = !!musicEvent.image ? (
-            <img
-              className="event-block--image"
-              src={musicEvent.image}
-              alt={titlePlus}
-              loading="lazy"
-            />
-          ) : (
-            ""
-          );
+          const priceElement = this.priceElement(musicEvent);
+          const startMomentLang = this.createStartMoment(musicEvent);
+          const linkToVenueHTML = this.createLinkToVenue(musicEvent);
+          const imageHTML = this.createImageHTML(musicEvent);
           const articleID = `event-id-${musicEventKey}`;
-          const moreButton = !!musicEvent.longText ? (
-            <button
-              className="event-block__load-more"
-              onClick={this.loadLongerText.bind(this, musicEventKey)}
-            >
-              more
-            </button>
-          ) : (
-            ""
+          const moreButtonHTML = this.createMoreButtonHTML(
+            musicEvent,
+            musicEventKey
           );
           return (
             <article
@@ -120,12 +146,12 @@ class EventBlock extends React.Component {
                   {musicEvent.shortText}
                 </p>
 
-                {moreButton}
+                {moreButtonHTML}
                 <div
                   dangerouslySetInnerHTML={{ __html: musicEvent.longTextHTML }}
                 ></div>
                 <footer className="event-block__footer contrast-with-dark">
-                  {linkToVenue}
+                  {linkToVenueHTML}
                 </footer>
               </section>
             </article>
