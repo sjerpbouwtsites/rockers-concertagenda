@@ -118,6 +118,7 @@ async function getBaseMusicEvents(browser) {
           "tivolivredenburg",
           "doornroosje",
           "metropool",
+          "melkweg",
         ].includes(locationName)
       ) {
         return;

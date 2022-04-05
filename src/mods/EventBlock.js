@@ -24,8 +24,8 @@ class EventBlock extends React.Component {
     if (!thisEvent.longText) {
       return;
     }
-    const uri = thisEvent.longText.split("/concertagenda/")[1];
-    const longerText = await fetch(uri, {})
+
+    await fetch(thisEvent.longText.replace("../public/", "/"), {})
       .then((response) => {
         const rrr = response.text();
         return rrr;
@@ -35,8 +35,11 @@ class EventBlock extends React.Component {
         oldEvents[musicEventKey].shortText = null;
         oldEvents[musicEventKey].enlarged = true;
         oldEvents[musicEventKey].longTextHTML = text;
-
         this.setState({ musicEvents: [...oldEvents] });
+        setTimeout(() => {
+          const blockEl = document.getElementById(`event-id-${musicEventKey}`);
+          window.scrollTo(0, blockEl.offsetTop);
+        }, 360);
       });
   }
 
@@ -60,30 +63,43 @@ class EventBlock extends React.Component {
           const startMomentLang = startMoment.toLocaleDateString();
           const url = musicEvent.venueEventUrl;
           const linkToVenue = !!musicEvent.venueEventUrl ? (
-            <a
-              className="event-block__venue-link"
-              href="{{url}}"
-              target="_blank"
-            >
-              get your tickers<br></br>
+            <a className="event-block__venue-link" href={url} target="_blank">
+              get your tickets<br></br>
               at the venue
             </a>
           ) : (
             ""
           );
+          const imageHTML = !!musicEvent.image ? (
+            <img
+              className="event-block--image"
+              src={musicEvent.image}
+              alt={titlePlus}
+              loading="lazy"
+            />
+          ) : (
+            ""
+          );
+          const articleID = `event-id-${musicEventKey}`;
+          const moreButton = !!musicEvent.longText ? (
+            <button
+              className="event-block__load-more"
+              onClick={this.loadLongerText.bind(this, musicEventKey)}
+            >
+              more
+            </button>
+          ) : (
+            ""
+          );
           return (
             <article
+              id={articleID}
               key={musicEventKey}
               className={`event-block provide-dark-contrast ${
                 musicEvent.enlarged ? "event-block--enlarged" : ""
               }`}
-              style={{
-                backgroundImage: `url(${musicEvent.image})`,
-                backgroundCover: "center center",
-                backgroundSize: "cover",
-                backgroundRepeat: "no-repeat",
-              }}
             >
+              {imageHTML}
               <header className="event-block__header contrast-with-dark">
                 <h1 className="event-block__title contrast-with-dark">
                   {titlePlus}
@@ -102,13 +118,7 @@ class EventBlock extends React.Component {
                   {musicEvent.shortText}
                 </p>
 
-                <button
-                  disabled={!!musicEvent.longerTextHTML}
-                  className="event-block__load-more"
-                  onClick={this.loadLongerText.bind(this, musicEventKey)}
-                >
-                  more
-                </button>
+                {moreButton}
                 <div
                   dangerouslySetInnerHTML={{ __html: musicEvent.longTextHTML }}
                 ></div>

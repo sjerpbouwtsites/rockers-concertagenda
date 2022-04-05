@@ -25,7 +25,17 @@
   padding: 1.5em;
   position: relative;
   flex-shrink: 1;
-  background-position: center center;
+  position: relative;
+}
+.event-block--image {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  object-position: center center;
+  width: 100%;
+height: 100%;
 }
 @media (max-width: 600px) {
   .event-block__wrapper {
@@ -45,6 +55,7 @@
   max-width: 100%;
   font-size: 1.5rem;
   overflow: hidden;
+  flex-basis:100%;
 }
 
 .contrast-with-dark {
@@ -68,7 +79,7 @@
     rgba(60, 10, 10, 0.5) 15%,
     rgba(68, 15, 58, 0.85) 80%,
     rgba(16, 4, 13, 0.85) 100%
-  );
+  ), linear-gradient( 181deg, rgba(16, 4, 13, 0.85) 0%, rgba(68, 15, 58, 0.45) 4%, rgba(68, 15, 58, 0) 6%, transparent 100% );
   mix-blend-mode: multiply;
 }
 .event-block__header {
@@ -126,14 +137,13 @@
   font-size: 1.33rem;
   padding: 0.5em 0.75em;
   background-color: rgb(170, 22, 22);
-  border: 0.33em solid rgb(5, 5, 1);
   font-weight: bold;
   mix-blend-mode: luminosity;
   display: inline-block;
   position: absolute;
-  top: -0.25em;
-  right: -0.75em;
-  filter: blur(0.5px);
+  top: 0.5em;
+  right: 0.25em;
+  filter: blur(0.25px);
 }
 .event-block--enlarged .event-block__price {
   font-size: 3rem;
