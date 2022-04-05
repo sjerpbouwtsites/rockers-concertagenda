@@ -1,6 +1,7 @@
 import { parentPort } from "worker_threads";
 import fs from "fs";
 import fsDirections from "./fs-directions.js";
+import crypto from "crypto";
 
 export function handleError(error) {
   parentPort.postMessage({
@@ -92,6 +93,50 @@ export function log(message) {
     status: "console",
     message: message,
   });
+}
+
+export function basicMusicEventsFilter(musicEvent, index) {
+  const t = musicEvent?.title ?? "";
+  const st = musicEvent?.shortText ?? "";
+  const searchShowNotOnDate = `${t.toLowerCase()} ${st.toLowerCase()}`;
+
+  const mayNotContainTrue = [
+    "uitgesteld",
+    "sold out",
+    "gecanceld",
+    "uitverkocht",
+    "afgelast",
+    "geannuleerd",
+    "verplaatst",
+  ].map((forbiddenTerm) => {
+    return searchShowNotOnDate.includes(forbiddenTerm);
+  });
+
+  return !mayNotContainTrue.includes(true);
+}
+
+export function postPageInfoProcessing(pageInfo = null) {
+  const pageInfoCopy = { ...pageInfo };
+  if (!pageInfo) return {};
+
+  if (pageInfo.priceTextcontent || pageInfo.priceContexttext) {
+    const context = pageInfo?.priceContexttext ?? null;
+    pageInfoCopy.price = getPriceFromHTML(pageInfo.priceTextcontent, context);
+  }
+
+  pageInfoCopy.longText = saveLongTextHTML(pageInfo);
+  return pageInfoCopy;
+}
+
+export function saveLongTextHTML(pageInfo) {
+  if (!pageInfo.hasOwnProperty("longTextHTML") || !pageInfo.longTextHTML) {
+    return null;
+  }
+  let uuid = crypto.randomUUID();
+  const longTextPath = `${fsDirections.publicTexts}/${uuid}.html`;
+
+  fs.writeFile(longTextPath, pageInfo.longTextHTML, "utf-8", () => {});
+  return longTextPath;
 }
 
 const def = {

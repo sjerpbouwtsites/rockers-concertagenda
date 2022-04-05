@@ -6,7 +6,12 @@ import EventsList from "./events-list.js";
 import fs from "fs";
 import crypto from "crypto";
 import fsDirections from "./fs-directions.js";
-import { handleError, errorAfterSeconds, getPriceFromHTML } from "./tools.js";
+import {
+  handleError,
+  basicMusicEventsFilter,
+  errorAfterSeconds,
+  getPriceFromHTML,
+} from "./tools.js";
 import { letScraperListenToMasterMessageAndInit } from "./generic-scraper.js";
 
 letScraperListenToMasterMessageAndInit(scrapeBaroeg);
@@ -249,15 +254,6 @@ async function makeBaseEventList(page) {
       }
       return new MusicEvent(musicEventConf);
     })
-    .filter((musicEvents) => {
-      const lowercaseTitle = musicEvents.title.toLowerCase();
-      return (
-        !lowercaseTitle.includes("uitgesteld") &&
-        !lowercaseTitle.includes("sold out") &&
-        !lowercaseTitle.includes("gecanceld") &&
-        !lowercaseTitle.includes("afgelast") &&
-        !lowercaseTitle.includes("geannuleerd")
-      );
-    });
+    .filter(basicMusicEventsFilter);
   return musicEvents;
 }

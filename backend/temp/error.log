@@ -1,4 +1,308 @@
 
+  Baroeg Error - TypeError - 4:08:54 PM
+  TypeError: Cannot read properties of undefined (reading 'substring')
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:80:36)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:24:5) 
+  Cannot read properties of undefined (reading 'substring')
+  
+  
+  Baroeg Error - TypeError - 4:08:52 PM
+  TypeError: Cannot read properties of undefined (reading 'substring')
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:80:36)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:24:5) 
+  Cannot read properties of undefined (reading 'substring')
+  
+  
+  Baroeg Error - TypeError - 4:08:51 PM
+  TypeError: Cannot read properties of undefined (reading 'substring')
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:80:36)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:24:5) 
+  Cannot read properties of undefined (reading 'substring')
+  
+  
+  Baroeg Error - TypeError - 4:08:51 PM
+  TypeError: Cannot read properties of undefined (reading 'substring')
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:80:36)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:24:5) 
+  Cannot read properties of undefined (reading 'substring')
+  
+  
+  Baroeg Error - TypeError - 2:52:42 PM
+  TypeError: pageInfo.hasOwnPropertu is not a function
+    at saveLongTextHTML (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:130:17)
+    at postPageInfoProcessing (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:126:27)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-metropool.js:74:14)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async scrapeMetropool (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-metropool.js:26:5) 
+  pageInfo.hasOwnPropertu is not a function
+  
+  
+  Baroeg Error - TypeError - 2:52:42 PM
+  TypeError: pageInfo.hasOwnPropertu is not a function
+    at saveLongTextHTML (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:130:17)
+    at postPageInfoProcessing (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:126:27)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-metropool.js:74:14)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async scrapeMetropool (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-metropool.js:26:5) 
+  pageInfo.hasOwnPropertu is not a function
+  
+  
+  Baroeg Error - TypeError - 2:52:42 PM
+  TypeError: pageInfo.hasOwnPropertu is not a function
+    at saveLongTextHTML (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:130:17)
+    at postPageInfoProcessing (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:126:27)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-metropool.js:74:14)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async scrapeMetropool (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-metropool.js:26:5) 
+  pageInfo.hasOwnPropertu is not a function
+  
+  
+  Baroeg Error - TypeError - 2:52:42 PM
+  TypeError: pageInfo.hasOwnPropertu is not a function
+    at saveLongTextHTML (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:130:17)
+    at postPageInfoProcessing (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:126:27)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-metropool.js:74:14)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async scrapeMetropool (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-metropool.js:26:5) 
+  pageInfo.hasOwnPropertu is not a function
+  
+  
+  Baroeg Error - TypeError - 12:29:43 PM
+  TypeError: requiredKeys.map is not a function or its return value is not iterable
+    at basicMusicEventsFilter (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:100:21)
+    at Array.filter (<anonymous>)
+    at makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:257:6)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:36:29) 
+  requiredKeys.map is not a function or its return value is not iterable
+  
+  
+  Baroeg Error - TypeError - 12:29:43 PM
+  TypeError: requiredKeys.map is not a function or its return value is not iterable
+    at basicMusicEventsFilter (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:100:21)
+    at Array.filter (<anonymous>)
+    at makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:257:6)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:36:29) 
+  requiredKeys.map is not a function or its return value is not iterable
+  
+  
+  Baroeg Error - TypeError - 12:29:43 PM
+  TypeError: requiredKeys.map is not a function or its return value is not iterable
+    at basicMusicEventsFilter (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:100:21)
+    at Array.filter (<anonymous>)
+    at makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:257:6)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:36:29) 
+  requiredKeys.map is not a function or its return value is not iterable
+  
+  
+  Baroeg Error - TypeError - 12:29:43 PM
+  TypeError: requiredKeys.map is not a function or its return value is not iterable
+    at basicMusicEventsFilter (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:100:21)
+    at Array.filter (<anonymous>)
+    at makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:257:6)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:36:29) 
+  requiredKeys.map is not a function or its return value is not iterable
+  
+  
+  Baroeg Error - TypeError - 12:29:43 PM
+  TypeError: requiredKeys.map is not a function or its return value is not iterable
+    at basicMusicEventsFilter (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:100:21)
+    at Array.filter (<anonymous>)
+    at makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:257:6)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:36:29) 
+  requiredKeys.map is not a function or its return value is not iterable
+  
+  
+  Baroeg Error - TypeError - 12:29:43 PM
+  TypeError: requiredKeys.map is not a function or its return value is not iterable
+    at basicMusicEventsFilter (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:100:21)
+    at Array.filter (<anonymous>)
+    at makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:257:6)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:36:29) 
+  requiredKeys.map is not a function or its return value is not iterable
+  
+  
+  Baroeg Error - TypeError - 12:29:43 PM
+  TypeError: requiredKeys.map is not a function or its return value is not iterable
+    at basicMusicEventsFilter (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:100:21)
+    at Array.filter (<anonymous>)
+    at makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:257:6)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:36:29) 
+  requiredKeys.map is not a function or its return value is not iterable
+  
+  
+  Baroeg Error - TypeError - 12:25:27 PM
+  TypeError: Cannot read properties of null (reading 'toLowerCase')
+    at basicMusicEventsFilter (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:109:26)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:250:14
+    at Array.filter (<anonymous>)
+    at makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:249:6)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async scrapeDoornroosje (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:36:29) 
+  Cannot read properties of null (reading 'toLowerCase')
+  
+  
+  Baroeg Error - TypeError - 12:25:27 PM
+  TypeError: Cannot read properties of null (reading 'toLowerCase')
+    at basicMusicEventsFilter (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:109:26)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:250:14
+    at Array.filter (<anonymous>)
+    at makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:249:6)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async scrapeDoornroosje (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:36:29) 
+  Cannot read properties of null (reading 'toLowerCase')
+  
+  
+  Baroeg Error - TypeError - 12:25:27 PM
+  TypeError: Cannot read properties of null (reading 'toLowerCase')
+    at basicMusicEventsFilter (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:109:26)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:250:14
+    at Array.filter (<anonymous>)
+    at makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:249:6)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async scrapeDoornroosje (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:36:29) 
+  Cannot read properties of null (reading 'toLowerCase')
+  
+  
+  Baroeg Error - TypeError - 12:25:27 PM
+  TypeError: Cannot read properties of null (reading 'toLowerCase')
+    at basicMusicEventsFilter (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:109:26)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:250:14
+    at Array.filter (<anonymous>)
+    at makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:249:6)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async scrapeDoornroosje (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:36:29) 
+  Cannot read properties of null (reading 'toLowerCase')
+  
+  
+  Baroeg Error - TypeError - 12:25:26 PM
+  TypeError: Cannot read properties of null (reading 'toLowerCase')
+    at basicMusicEventsFilter (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:109:26)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:250:14
+    at Array.filter (<anonymous>)
+    at makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:249:6)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async scrapeDoornroosje (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:36:29) 
+  Cannot read properties of null (reading 'toLowerCase')
+  
+  
+  Baroeg Error - TypeError - 12:25:26 PM
+  TypeError: Cannot read properties of null (reading 'toLowerCase')
+    at basicMusicEventsFilter (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:109:26)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:250:14
+    at Array.filter (<anonymous>)
+    at makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:249:6)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async scrapeDoornroosje (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:36:29) 
+  Cannot read properties of null (reading 'toLowerCase')
+  
+  
+  Baroeg Error - Error - 12:24:40 PM
+  Error: Evaluation failed: ReferenceError: basicMusicEventsFilter is not defined
+    at __puppeteer_evaluation_script__:19:9
+    at Array.filter (<anonymous>)
+    at __puppeteer_evaluation_script__:18:8
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:230:21)
+    at async scrapeDoornroosje (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:36:29) 
+  Evaluation failed: ReferenceError: basicMusicEventsFilter is not defined
+    at __puppeteer_evaluation_script__:19:9
+    at Array.filter (<anonymous>)
+    at __puppeteer_evaluation_script__:18:8
+  
+  
+  Baroeg Error - Error - 12:24:40 PM
+  Error: Evaluation failed: ReferenceError: basicMusicEventsFilter is not defined
+    at __puppeteer_evaluation_script__:19:9
+    at Array.filter (<anonymous>)
+    at __puppeteer_evaluation_script__:18:8
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:230:21)
+    at async scrapeDoornroosje (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:36:29) 
+  Evaluation failed: ReferenceError: basicMusicEventsFilter is not defined
+    at __puppeteer_evaluation_script__:19:9
+    at Array.filter (<anonymous>)
+    at __puppeteer_evaluation_script__:18:8
+  
+  
+  Baroeg Error - Error - 12:24:40 PM
+  Error: Evaluation failed: ReferenceError: basicMusicEventsFilter is not defined
+    at __puppeteer_evaluation_script__:19:9
+    at Array.filter (<anonymous>)
+    at __puppeteer_evaluation_script__:18:8
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:230:21)
+    at async scrapeDoornroosje (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:36:29) 
+  Evaluation failed: ReferenceError: basicMusicEventsFilter is not defined
+    at __puppeteer_evaluation_script__:19:9
+    at Array.filter (<anonymous>)
+    at __puppeteer_evaluation_script__:18:8
+  
+  
+  Baroeg Error - Error - 12:24:40 PM
+  Error: Evaluation failed: ReferenceError: basicMusicEventsFilter is not defined
+    at __puppeteer_evaluation_script__:19:9
+    at Array.filter (<anonymous>)
+    at __puppeteer_evaluation_script__:18:8
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:230:21)
+    at async scrapeDoornroosje (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:36:29) 
+  Evaluation failed: ReferenceError: basicMusicEventsFilter is not defined
+    at __puppeteer_evaluation_script__:19:9
+    at Array.filter (<anonymous>)
+    at __puppeteer_evaluation_script__:18:8
+  
+  
+  Baroeg Error - Error - 12:24:40 PM
+  Error: Evaluation failed: ReferenceError: basicMusicEventsFilter is not defined
+    at __puppeteer_evaluation_script__:19:9
+    at Array.filter (<anonymous>)
+    at __puppeteer_evaluation_script__:18:8
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:230:21)
+    at async scrapeDoornroosje (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:36:29) 
+  Evaluation failed: ReferenceError: basicMusicEventsFilter is not defined
+    at __puppeteer_evaluation_script__:19:9
+    at Array.filter (<anonymous>)
+    at __puppeteer_evaluation_script__:18:8
+  
+  
+  Baroeg Error - Error - 12:24:40 PM
+  Error: Evaluation failed: ReferenceError: basicMusicEventsFilter is not defined
+    at __puppeteer_evaluation_script__:19:9
+    at Array.filter (<anonymous>)
+    at __puppeteer_evaluation_script__:18:8
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:230:21)
+    at async scrapeDoornroosje (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:36:29) 
+  Evaluation failed: ReferenceError: basicMusicEventsFilter is not defined
+    at __puppeteer_evaluation_script__:19:9
+    at Array.filter (<anonymous>)
+    at __puppeteer_evaluation_script__:18:8
+  
+  
   Baroeg Error - Error - 5:09:05 AM
   Error: Node is either not clickable or not an HTMLElement
     at ElementHandle.clickablePoint (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/JSHandle.js:408:19)

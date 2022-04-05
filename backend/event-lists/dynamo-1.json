@@ -1,0 +1,80 @@
+[
+  {
+    "doorOpenDateTime": "2022-04-23T12:00:00.000Z",
+    "startDateTime": "2022-04-23T00:00:00.000Z",
+    "endDateTime": "2022-04-23T15:30:00.000Z",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/programma/emo-rommelmarkt-dynamo-2022/",
+    "title": "Emo Rommelmarkt",
+    "location": "dynamo",
+    "price": 0,
+    "shortText": "Emo, Pop-punk, Punkrock, Punk en Metalcore rommelmarkt!",
+    "longText": "../public/texts/2507ea4c-8f94-4622-a626-7fbb96d8f035.html",
+    "image": null,
+    "dataIntegrity": 10
+  },
+  {
+    "doorOpenDateTime": "2022-05-08T17:00:00.000Z",
+    "startDateTime": "2022-05-08T00:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/programma/deicide-2022-dynamo/#spotify-embed",
+    "title": "DEICIDE",
+    "location": "dynamo",
+    "price": 25,
+    "shortText": "Support: KRISIUN + CRYPTA",
+    "longText": "../public/texts/9c5d4014-a09c-498a-8b9a-0a0f19fcd81d.html",
+    "image": "https://www.dynamo-eindhoven.nl/wp-content/uploads/2021/04/Deicide-Dynamo-500x500.jpg",
+    "dataIntegrity": 10
+  },
+  {
+    "doorOpenDateTime": "2022-05-14T17:00:00.000Z",
+    "startDateTime": "2022-05-14T00:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/programma/normandie-2022-dynamo/#spotify-embed",
+    "title": "Normandie",
+    "location": "dynamo",
+    "price": 16.5,
+    "shortText": "Support: Our Hollow, Our Home + Led By Lanterns",
+    "longText": "../public/texts/b1b04532-c34a-4015-b014-a24e875dc9db.html",
+    "image": null,
+    "dataIntegrity": 10
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-08-20T00:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.dynamo-metalfest.nl/",
+    "title": "Dynamo Metalfest 2022 (day 1)",
+    "location": "dynamo",
+    "price": null,
+    "shortText": "w/ Kreator + Testament + Jinjer en meer",
+    "longText": null,
+    "image": null,
+    "dataIntegrity": 10
+  },
+  {
+    "doorOpenDateTime": "2022-09-16T17:00:00.000Z",
+    "startDateTime": "2022-09-16T00:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/programma/evergrey-2022/#spotify-embed",
+    "title": "Evergrey",
+    "location": "dynamo",
+    "price": 23.5,
+    "shortText": "Support: Fractal Universe + Virtual Symmetry",
+    "longText": "../public/texts/82d6a67f-1fa1-4011-9fb1-ad13e19a44bb.html",
+    "image": "https://www.dynamo-eindhoven.nl/wp-content/uploads/2021/09/Announcement_PromoPic-1200x1200.jpg",
+    "dataIntegrity": 10
+  },
+  {
+    "doorOpenDateTime": "2022-10-09T16:00:00.000Z",
+    "startDateTime": "2022-10-09T00:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/programma/lionheart-2022/#spotify-embed",
+    "title": "Lionheart ",
+    "location": "dynamo",
+    "price": 26.5,
+    "shortText": "Support: Terror + Get The Shot + Dying Wish",
+    "longText": "../public/texts/bf30b5d4-5ebf-4fc7-a5fc-4648d3c8f648.html",
+    "image": "https://www.dynamo-eindhoven.nl/wp-content/uploads/2020/12/Lionheart-digi-1200x1200.jpg",
+    "dataIntegrity": 10
+  }
+]

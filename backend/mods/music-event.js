@@ -25,4 +25,10 @@ export default class MusicEvent {
   register() {
     EventsList.addEvent(this);
   }
+  get isValid() {
+    return (
+      this.startDateTime &&
+      /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}.\d{3}Z/.test(this.startDateTime)
+    );
+  }
 }

@@ -5,7 +5,12 @@ import EventsList from "./events-list.js";
 import fs from "fs";
 import crypto from "crypto";
 import fsDirections from "./fs-directions.js";
-import { getPriceFromHTML, handleError, errorAfterSeconds } from "./tools.js";
+import {
+  getPriceFromHTML,
+  handleError,
+  basicMusicEventsFilter,
+  errorAfterSeconds,
+} from "./tools.js";
 import { letScraperListenToMasterMessageAndInit } from "./generic-scraper.js";
 
 letScraperListenToMasterMessageAndInit(scrapeEffenaar);
@@ -240,22 +245,11 @@ async function makeBaseEventList(browser, workerIndex) {
         }
         res.location = "effenaar";
         return res;
-      })
-      .filter((musicEvents) => {
-        if (!musicEvents || !musicEvents.title) {
-          return false;
-        }
-        const lowercaseTitle = musicEvents.title.toLowerCase();
-        return (
-          !lowercaseTitle.includes("uitgesteld") &&
-          !lowercaseTitle.includes("sold out") &&
-          !lowercaseTitle.includes("gecanceld") &&
-          !lowercaseTitle.includes("afgelast") &&
-          !lowercaseTitle.includes("geannuleerd")
-        );
       });
   }, workerIndex);
-  return rawEvents.map((event) => new MusicEvent(event));
+  return rawEvents
+    .filter(basicMusicEventsFilter)
+    .map((event) => new MusicEvent(event));
 }
 
 async function filterForRock(

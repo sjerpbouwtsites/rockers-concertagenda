@@ -7,103 +7,151 @@ import { handleError, errorAfterSeconds } from "./mods/tools.js";
 function init() {
   WorkerStatus.monitorCPUS();
 
+  const workerList = [];
+
   if (EventsList.isOld("metalfan")) {
-    startWorker(fsDirections.scrapeMetalfan, "metalfan", 0);
+    workerList.push([fsDirections.scrapeMetalfan, "metalfan", 0]);
   }
-  if (EventsList.isOld("baroeg")) {
+  if (EventsList.isOld("baroeg") || true) {
     try {
-      startWorker(fsDirections.scrapeBaroeg, "baroeg", 0);
-      startWorker(fsDirections.scrapeBaroeg, "baroeg", 1);
-      startWorker(fsDirections.scrapeBaroeg, "baroeg", 2);
-      startWorker(fsDirections.scrapeBaroeg, "baroeg", 3);
-      startWorker(fsDirections.scrapeBaroeg, "baroeg", 4);
-      startWorker(fsDirections.scrapeBaroeg, "baroeg", 5);
-      startWorker(fsDirections.scrapeBaroeg, "baroeg", 6);
-      startWorker(fsDirections.scrapeBaroeg, "baroeg", 7);
-      startWorker(fsDirections.scrapeBaroeg, "baroeg", 8);
+      workerList.push([fsDirections.scrapeBaroeg, "baroeg", 0]);
+      workerList.push([fsDirections.scrapeBaroeg, "baroeg", 1]);
+      workerList.push([fsDirections.scrapeBaroeg, "baroeg", 2]);
+      workerList.push([fsDirections.scrapeBaroeg, "baroeg", 3]);
+      workerList.push([fsDirections.scrapeBaroeg, "baroeg", 4]);
+      workerList.push([fsDirections.scrapeBaroeg, "baroeg", 5]);
+      workerList.push([fsDirections.scrapeBaroeg, "baroeg", 6]);
+      workerList.push([fsDirections.scrapeBaroeg, "baroeg", 7]);
+      workerList.push([fsDirections.scrapeBaroeg, "baroeg", 8]);
     } catch (error) {
       handleError(error);
     }
   }
 
   if (EventsList.isOld("patronaat")) {
-    startWorker(fsDirections.scrapePatronaat, "patronaat", 0);
-    startWorker(fsDirections.scrapePatronaat, "patronaat", 1);
-    startWorker(fsDirections.scrapePatronaat, "patronaat", 2);
+    workerList.push([fsDirections.scrapePatronaat, "patronaat", 0]);
+    workerList.push([fsDirections.scrapePatronaat, "patronaat", 1]);
+    workerList.push([fsDirections.scrapePatronaat, "patronaat", 2]);
   }
 
   if (EventsList.isOld("nuldertien")) {
-    startWorker(fsDirections.scrapeNuldertien, "nuldertien", 0);
-    startWorker(fsDirections.scrapeNuldertien, "nuldertien", 1);
-    startWorker(fsDirections.scrapeNuldertien, "nuldertien", 2);
-    startWorker(fsDirections.scrapeNuldertien, "nuldertien", 3);
+    workerList.push([fsDirections.scrapeNuldertien, "nuldertien", 0]);
+    workerList.push([fsDirections.scrapeNuldertien, "nuldertien", 1]);
+    workerList.push([fsDirections.scrapeNuldertien, "nuldertien", 2]);
+    workerList.push([fsDirections.scrapeNuldertien, "nuldertien", 3]);
   }
 
   if (EventsList.isOld("effenaar")) {
-    startWorker(fsDirections.scrapeEffenaar, "effenaar", 0);
-    startWorker(fsDirections.scrapeEffenaar, "effenaar", 1);
-    startWorker(fsDirections.scrapeEffenaar, "effenaar", 2);
-    startWorker(fsDirections.scrapeEffenaar, "effenaar", 3);
+    workerList.push([fsDirections.scrapeEffenaar, "effenaar", 0]);
+    workerList.push([fsDirections.scrapeEffenaar, "effenaar", 1]);
+    workerList.push([fsDirections.scrapeEffenaar, "effenaar", 2]);
+    workerList.push([fsDirections.scrapeEffenaar, "effenaar", 3]);
   }
 
   if (EventsList.isOld("tivolivredenburg")) {
-    startWorker(fsDirections.scrapeTivolivredenburg, "tivolivredenburg", 0);
-    startWorker(fsDirections.scrapeTivolivredenburg, "tivolivredenburg", 1);
-    startWorker(fsDirections.scrapeTivolivredenburg, "tivolivredenburg", 2);
-    startWorker(fsDirections.scrapeTivolivredenburg, "tivolivredenburg", 3);
+    workerList.push([
+      fsDirections.scrapeTivolivredenburg,
+      "tivolivredenburg",
+      0,
+    ]);
+    workerList.push([
+      fsDirections.scrapeTivolivredenburg,
+      "tivolivredenburg",
+      1,
+    ]);
+    workerList.push([
+      fsDirections.scrapeTivolivredenburg,
+      "tivolivredenburg",
+      2,
+    ]);
+    workerList.push([
+      fsDirections.scrapeTivolivredenburg,
+      "tivolivredenburg",
+      3,
+    ]);
   }
 
   if (EventsList.isOld("doornroosje")) {
-    startWorker(fsDirections.scrapeDoornroosje, "doornroosje", 0);
-    startWorker(fsDirections.scrapeDoornroosje, "doornroosje", 1);
-    startWorker(fsDirections.scrapeDoornroosje, "doornroosje", 2);
-    startWorker(fsDirections.scrapeDoornroosje, "doornroosje", 3);
-    startWorker(fsDirections.scrapeDoornroosje, "doornroosje", 4);
-    startWorker(fsDirections.scrapeDoornroosje, "doornroosje", 5);
+    workerList.push([fsDirections.scrapeDoornroosje, "doornroosje", 0]);
+    workerList.push([fsDirections.scrapeDoornroosje, "doornroosje", 1]);
+    workerList.push([fsDirections.scrapeDoornroosje, "doornroosje", 2]);
+    workerList.push([fsDirections.scrapeDoornroosje, "doornroosje", 3]);
+    workerList.push([fsDirections.scrapeDoornroosje, "doornroosje", 4]);
+    workerList.push([fsDirections.scrapeDoornroosje, "doornroosje", 5]);
   }
 
   if (EventsList.isOld("metropool")) {
-    startWorker(fsDirections.scrapeMetropool, "metropool", 0);
-    startWorker(fsDirections.scrapeMetropool, "metropool", 1);
-    startWorker(fsDirections.scrapeMetropool, "metropool", 2);
-    startWorker(fsDirections.scrapeMetropool, "metropool", 3);
+    workerList.push([fsDirections.scrapeMetropool, "metropool", 0]);
+    workerList.push([fsDirections.scrapeMetropool, "metropool", 1]);
+    workerList.push([fsDirections.scrapeMetropool, "metropool", 2]);
+    workerList.push([fsDirections.scrapeMetropool, "metropool", 3]);
   }
 
   if (EventsList.isOld("boerderij")) {
-    startWorker(fsDirections.scrapeBoerderij, "boerderij", 0);
+    workerList.push([fsDirections.scrapeBoerderij, "boerderij", 0]);
   }
 
   if (EventsList.isOld("occii")) {
-    startWorker(fsDirections.scrapeOccii, "occii", 0);
-    startWorker(fsDirections.scrapeOccii, "occii", 1);
+    workerList.push([fsDirections.scrapeOccii, "occii", 0]);
+    workerList.push([fsDirections.scrapeOccii, "occii", 1]);
   }
   if (EventsList.isOld("dynamo")) {
-    startWorker(fsDirections.scrapeDynamo, "dynamo", 0);
-    startWorker(fsDirections.scrapeDynamo, "dynamo", 1);
+    workerList.push([fsDirections.scrapeDynamo, "dynamo", 0]);
+    workerList.push([fsDirections.scrapeDynamo, "dynamo", 1]);
   }
 
   if (EventsList.isOld("melkweg")) {
-    startWorker(fsDirections.scrapeMelkweg, "melkweg", 0);
+    workerList.push([fsDirections.scrapeMelkweg, "melkweg", 0, null, true]);
   }
+
+  walkThroughWorkerList(workerList);
 
   WorkerStatus.reportOnActiveWorkers();
 }
 
-init();
+function walkThroughWorkerList(workerList) {
+  if (!workerList.length) return true;
+  const workerListCopy = [...workerList];
+  const singleWorkerConfig = workerListCopy.shift();
+  return Promise.race([wait55ms(), startWorker(...singleWorkerConfig)]).then(
+    () => {
+      return walkThroughWorkerList(workerListCopy);
+    }
+  );
+}
 
-function startWorker(
+function wait55ms() {
+  return new Promise((res, rej) => {
+    setTimeout(() => {
+      res();
+    }, 55);
+  });
+}
+
+async function startWorker(
   workerPath,
   workerName,
   workerIndex = null,
-  doneCallback = null
+  doneCallback = null,
+  highCapacity = false
 ) {
   const workerNameWithIndex = `${workerName}-${workerIndex}`;
-  if (!WorkerStatus.OSHasSpace) {
-    WorkerStatus.waitingWorkers.push(workerNameWithIndex);
-    setTimeout(() => {
-      startWorker(workerPath, workerName, workerIndex, doneCallback);
-    }, 250);
-    return;
+  if (highCapacity) {
+    if (!WorkerStatus.OSHasSpace) {
+      WorkerStatus.waitingWorkers.push(workerNameWithIndex);
+      setTimeout(() => {
+        startWorker(workerPath, workerName, workerIndex, doneCallback);
+      }, 250);
+      return true;
+    }
+  } else {
+    if (!WorkerStatus.OSHasALotOfSpace) {
+      WorkerStatus.waitingWorkers.push(workerNameWithIndex);
+      setTimeout(() => {
+        startWorker(workerPath, workerName, workerIndex, doneCallback);
+      }, 250);
+      return true;
+    }
   }
 
   const thisWorker = new Worker(workerPath);
@@ -135,4 +183,7 @@ function startWorker(
       thisWorker.unref();
     }
   });
+  return true;
 }
+
+init();

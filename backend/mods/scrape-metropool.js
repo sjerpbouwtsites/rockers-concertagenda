@@ -2,13 +2,13 @@ import MusicEvent from "./music-event.js";
 import puppeteer from "puppeteer";
 import { parentPort } from "worker_threads";
 import EventsList from "./events-list.js";
-import fs from "fs";
-import crypto from "crypto";
-import fsDirections from "./fs-directions.js";
 import {
-  getPriceFromHTML,
   handleError,
   errorAfterSeconds,
+  basicMusicEventsFilter,
+  log,
+  saveLongTextHTML,
+  postPageInfoProcessing,
   autoScroll,
 } from "./tools.js";
 import { letScraperListenToMasterMessageAndInit } from "./generic-scraper.js";
@@ -70,53 +70,21 @@ async function processSingleMusicEvent(browser, baseMusicEvents, workerIndex) {
     waitUntil: "load",
   });
 
-  try {
-    const pageInfo = await Promise.race([
-      getPageInfo(page),
-      errorAfterSeconds(15000),
-    ]);
-
-    if (pageInfo && pageInfo.priceTextcontent) {
-      firstMusicEvent.price = getPriceFromHTML(pageInfo.priceTextcontent);
-    }
-
-    if (pageInfo && pageInfo.longTextHTML) {
-      let uuid = crypto.randomUUID();
-      const longTextPath = `${fsDirections.publicTexts}/${uuid}.html`;
-
-      fs.writeFile(longTextPath, pageInfo.longTextHTML, "utf-8", () => {});
-      pageInfo.longText = longTextPath;
-    }
-
-    // no date no registration.
-    if (pageInfo) {
-      delete pageInfo.cancelReason;
-      firstMusicEvent.merge(pageInfo);
-    } else if (pageInfo.cancelReason !== "") {
-      parentPort.postMessage({
-        status: "console",
-        message: `Incomplete info for ${firstMusicEvent.title}`,
-      });
-    } else {
-      const pageInfoError = new Error(`unclear why failure at: ${
-        firstMusicEvent.title
-      }
-      ${JSON.stringify(pageInfo)}
-       ${JSON.stringify(firstMusicEvent)}`);
-      handleError(pageInfoError);
-    }
+  let pageInfo = await getPageInfo(page);
+  pageInfo = postPageInfoProcessing(pageInfo);
+  firstMusicEvent.merge(pageInfo);
+  const cheatForBasicEventsFilter = [firstMusicEvent].filter(
+    basicMusicEventsFilter
+  );
+  if (firstMusicEvent.isValid && cheatForBasicEventsFilter.length) {
     firstMusicEvent.register();
-
-    page.close();
-  } catch (error) {
-    handleError(error);
   }
 
-  if (newMusicEvents.length) {
-    return processSingleMusicEvent(browser, newMusicEvents, workerIndex);
-  } else {
-    return true;
-  }
+  page.close();
+
+  return newMusicEvents.length
+    ? processSingleMusicEvent(browser, newMusicEvents, workerIndex)
+    : true;
 }
 
 async function getPageInfo(page) {

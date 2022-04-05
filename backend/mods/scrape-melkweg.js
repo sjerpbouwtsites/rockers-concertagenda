@@ -8,8 +8,9 @@ import fsDirections from "./fs-directions.js";
 import {
   getPriceFromHTML,
   handleError,
-  errorAfterSeconds,
+  basicMusicEventsFilter,
   autoScroll,
+  postPageInfoProcessing,
   log,
 } from "./tools.js";
 import { letScraperListenToMasterMessageAndInit } from "./generic-scraper.js";
@@ -71,80 +72,31 @@ async function processSingleMusicEvent(browser, baseMusicEvents, workerIndex) {
     waitUntil: "load",
   });
 
-  try {
-    const pageInfo = await Promise.race([
-      getPageInfo(page),
-      errorAfterSeconds(15000),
-    ]);
-
-    if (pageInfo && pageInfo.priceTextcontent) {
-      firstMusicEvent.price = getPriceFromHTML(pageInfo.priceTextcontent);
-    }
-
-    if (pageInfo && pageInfo.longTextHTML) {
-      let uuid = crypto.randomUUID();
-      const longTextPath = `${fsDirections.publicTexts}/${uuid}.html`;
-
-      fs.writeFile(longTextPath, pageInfo.longTextHTML, "utf-8", () => {});
-      pageInfo.longText = longTextPath;
-    }
-
-    // no date no registration.
-    if (pageInfo) {
-      delete pageInfo.cancelReason;
-      firstMusicEvent.merge(pageInfo);
-    } else if (pageInfo.cancelReason !== "") {
-      parentPort.postMessage({
-        status: "console",
-        message: `Incomplete info for ${firstMusicEvent.title}`,
-      });
-    } else {
-      const pageInfoError = new Error(`unclear why failure at: ${
-        firstMusicEvent.title
-      }
-      ${JSON.stringify(pageInfo)}
-       ${JSON.stringify(firstMusicEvent)}`);
-      handleError(pageInfoError);
-    }
+  let pageInfo = await getPageInfo(page);
+  pageInfo = postPageInfoProcessing(pageInfo);
+  firstMusicEvent.merge(pageInfo);
+  if (firstMusicEvent.isValid) {
     firstMusicEvent.register();
-
-    page.close();
-  } catch (error) {
-    handleError(error);
   }
 
-  if (newMusicEvents.length) {
-    return processSingleMusicEvent(browser, newMusicEvents, workerIndex);
-  } else {
-    return true;
-  }
+  page.close();
+
+  return newMusicEvents.length
+    ? processSingleMusicEvent(browser, newMusicEvents, workerIndex)
+    : true;
 }
 
 async function getPageInfo(page) {
-  let pageInfo;
-
-  try {
-    pageInfo = await page.evaluate(() => {
-      const res = {};
-      res.cancelReason = "";
-      res.priceTextcontent =
-        document
-          .querySelector(".event-meta__total-price")
-          ?.textContent.trim() ?? null;
-
-      res.longTextHTML =
-        document.querySelector(".body-copy")?.innerHTML ?? null;
-
-      res.image = document.querySelector("figure img")?.src ?? null;
-
-      return res;
-    });
-    return pageInfo;
-  } catch (error) {
-    handleError(error);
-    handleError(pageInfo);
-    return pageInfo;
-  }
+  return await page.evaluate(() => {
+    const res = {};
+    res.cancelReason = "";
+    res.priceTextcontent =
+      document.querySelector(".event-meta__total-price")?.textContent.trim() ??
+      null;
+    res.longTextHTML = document.querySelector(".body-copy")?.innerHTML ?? null;
+    res.image = document.querySelector("figure img")?.src ?? null;
+    return res;
+  });
 }
 
 async function makeBaseEventList(browser, workerIndex) {
@@ -190,5 +142,7 @@ async function makeBaseEventList(browser, workerIndex) {
         };
       });
   }, workerIndex);
-  return rawEvents.map((event) => new MusicEvent(event));
+  return rawEvents
+    .filter(basicMusicEventsFilter)
+    .map((event) => new MusicEvent(event));
 }

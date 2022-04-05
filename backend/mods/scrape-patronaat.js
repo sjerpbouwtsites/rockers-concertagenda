@@ -6,7 +6,12 @@ import EventsList from "./events-list.js";
 import fs from "fs";
 import crypto from "crypto";
 import fsDirections from "./fs-directions.js";
-import { getPriceFromHTML, handleError, errorAfterSeconds } from "./tools.js";
+import {
+  getPriceFromHTML,
+  handleError,
+  basicMusicEventsFilter,
+  errorAfterSeconds,
+} from "./tools.js";
 import { letScraperListenToMasterMessageAndInit } from "./generic-scraper.js";
 
 letScraperListenToMasterMessageAndInit(scrapePatronaat);
@@ -15,10 +20,7 @@ async function scrapePatronaat(workerIndex) {
   const browser = await puppeteer.launch();
 
   try {
-    const baseMusicEvents = await Promise.race([
-      makeBaseEventList(browser, workerIndex),
-      errorAfterSeconds(15000),
-    ]);
+    const baseMusicEvents = await makeBaseEventList(browser, workerIndex);
     await fillMusicEvents(browser, baseMusicEvents, workerIndex);
   } catch (error) {
     handleError(error);
@@ -127,11 +129,11 @@ async function getPageInfo(page, months) {
   try {
     pageInfo = await page.evaluate(
       ({ months }) => {
-        let price = null;
         let priceEl = document.querySelector(".event__info-bar--ticket-price");
         let errors = [];
+        let priceTextcontent;
         if (!!priceEl) {
-          price = priceEl.textContent;
+          priceTextcontent = priceEl.textContent;
         }
         let startDatum = "";
         let startDatumMatch = document.location.href.match(
@@ -210,7 +212,7 @@ async function getPageInfo(page, months) {
         }
 
         return {
-          price,
+          priceTextcontent,
           startDateTime,
           startDatumMatch,
           doorOpenDateTime,
@@ -265,20 +267,9 @@ async function makeBaseEventList(browser, workerIndex) {
           res.shortText = subtitleEl.textContent.trim();
         }
         return res;
-      })
-      .filter((musicEvents) => {
-        if (!musicEvents || !musicEvents.title) {
-          return false;
-        }
-        const lowercaseTitle = musicEvents.title.toLowerCase();
-        return (
-          !lowercaseTitle.includes("uitgesteld") &&
-          !lowercaseTitle.includes("sold out") &&
-          !lowercaseTitle.includes("gecanceld") &&
-          !lowercaseTitle.includes("afgelast") &&
-          !lowercaseTitle.includes("geannuleerd")
-        );
       });
   }, workerIndex);
-  return rawEvents.map((event) => new MusicEvent(event));
+  return rawEvents
+    .filter(basicMusicEventsFilter)
+    .map((event) => new MusicEvent(event));
 }

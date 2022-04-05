@@ -3,13 +3,12 @@ import { Location } from "./locations.js";
 import puppeteer from "puppeteer";
 import { parentPort } from "worker_threads";
 import EventsList from "./events-list.js";
-import { log } from "./tools.js";
+import { metalfanMonths } from "./months.js";
 import { letScraperListenToMasterMessageAndInit } from "./generic-scraper.js";
 
 letScraperListenToMasterMessageAndInit(scrapeMetalfan);
 
 async function scrapeMetalfan() {
-  log("begin scrape metalfan");
   const browser = await puppeteer.launch();
   await getBaseMusicEvents(browser);
   parentPort.postMessage({
@@ -26,20 +25,6 @@ async function getBaseMusicEvents(browser) {
   const page = await browser.newPage();
   await page.goto(`https://www.metalfan.nl/agenda.php`);
 
-  const months = {
-    jan: "01",
-    feb: "02",
-    mrt: "03",
-    apr: "04",
-    mei: "05",
-    jun: "06",
-    jul: "07",
-    aug: "08",
-    sep: "09",
-    okt: "10",
-    nov: "11",
-    dec: "12",
-  };
   const eventData = await page.evaluate((months) => {
     return Array.from(document.querySelectorAll(".calentry")).map(
       (metalfanEvent) => {
@@ -96,7 +81,7 @@ async function getBaseMusicEvents(browser) {
         };
       }
     );
-  }, months);
+  }, metalfanMonths);
 
   const musicEvents = eventData
     .map((eventDatum) => {

@@ -39,6 +39,10 @@ export default class WorkerStatus {
     return WorkerStatus.currentNotDone.length < 7 && WorkerStatus.CPUFree > 25;
   }
 
+  static get OSHasALotOfSpace() {
+    return WorkerStatus.currentNotDone.length < 3 && WorkerStatus.CPUFree > 50;
+  }
+
   static change(name, status, message, worker) {
     WorkerStatus._workers[name].status = status;
     WorkerStatus._workers[name].message = message;

@@ -9,6 +9,7 @@ import {
   getPriceFromHTML,
   handleError,
   errorAfterSeconds,
+  basicMusicEventsFilter,
   log,
 } from "./tools.js";
 import { letScraperListenToMasterMessageAndInit } from "./generic-scraper.js";
@@ -204,20 +205,9 @@ async function makeBaseEventList(browser, workerIndex) {
         res.dataIntegrity = 10;
         res.location = "tivolivredenburg";
         return res;
-      })
-      .filter((musicEvents) => {
-        if (!musicEvents || !musicEvents.title) {
-          return false;
-        }
-        const lowercaseTitle = musicEvents.title.toLowerCase();
-        return (
-          !lowercaseTitle.includes("uitgesteld") &&
-          !lowercaseTitle.includes("sold out") &&
-          !lowercaseTitle.includes("gecanceld") &&
-          !lowercaseTitle.includes("afgelast") &&
-          !lowercaseTitle.includes("geannuleerd")
-        );
       });
   }, workerIndex);
-  return rawEvents.map((event) => new MusicEvent(event));
+  return rawEvents
+    .filter(basicMusicEventsFilter)
+    .map((event) => new MusicEvent(event));
 }

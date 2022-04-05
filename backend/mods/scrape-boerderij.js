@@ -92,11 +92,11 @@ async function recursiveSingleGet(baseMusicEvents, workerIndex) {
     venueEventUrl: "https://poppodiumboerderij.nl/",
   });
 
-  musicEvent.register();
-
-  if (newMusicEvents.length) {
-    return recursiveSingleGet(newMusicEvents, workerIndex);
-  } else {
-    return true;
+  if (musicEvent.isValid) {
+    musicEvent.register();
   }
+
+  return newMusicEvents.length
+    ? recursiveSingleGet(newMusicEvents, workerIndex)
+    : true;
 }

@@ -5,34 +5,23 @@ import EventsList from "./events-list.js";
 import fsDirections from "./fs-directions.js";
 import fs from "fs";
 import crypto from "crypto";
-import { getPriceFromHTML } from "./tools.js";
+import {
+  getPriceFromHTML,
+  basicMusicEventsFilter,
+  postPageInfoProcessing,
+} from "./tools.js";
 import { letScraperListenToMasterMessageAndInit } from "./generic-scraper.js";
+import { dynamoMonths } from "./months.js";
 
 letScraperListenToMasterMessageAndInit(scrapeDynamo);
 
 async function scrapeDynamo(workerIndex) {
-  const months = {
-    jan: "01",
-    feb: "02",
-    mrt: "03",
-    apr: "04",
-    mei: "05",
-    jun: "06",
-    jul: "07",
-    aug: "08",
-    sep: "09",
-    okt: "10",
-    nov: "11",
-    dec: "12",
-  };
-
   const browser = await puppeteer.launch();
 
-  const baseMusicEvents = await makeBaseEventList(browser, workerIndex, months);
+  const baseMusicEvents = await makeBaseEventList(browser, workerIndex);
   const filledMusicEvents = await fillMusicEvents(
     browser,
     baseMusicEvents,
-    months,
     workerIndex
   );
 
@@ -40,29 +29,19 @@ async function scrapeDynamo(workerIndex) {
     status: "done",
     message: `Dynamo worker-${workerIndex} done.`,
   });
-  EventsList.save("dynamo");
+  EventsList.save("dynamo", workerIndex);
   setTimeout(() => {
     browser.close();
   }, 5000);
 }
 
-async function fillMusicEvents(browser, baseMusicEvents, months, workerIndex) {
+async function fillMusicEvents(browser, baseMusicEvents, workerIndex) {
   const baseMusicEventsCopy = [...baseMusicEvents];
 
-  return processSingleMusicEvent(
-    browser,
-    baseMusicEventsCopy,
-    months,
-    workerIndex
-  );
+  return processSingleMusicEvent(browser, baseMusicEventsCopy, workerIndex);
 }
 
-async function processSingleMusicEvent(
-  browser,
-  baseMusicEvents,
-  months,
-  workerIndex
-) {
+async function processSingleMusicEvent(browser, baseMusicEvents, workerIndex) {
   parentPort.postMessage({
     status: "todo",
     message: baseMusicEvents.length,
@@ -75,14 +54,8 @@ async function processSingleMusicEvent(
   }
   const page = await browser.newPage();
   await page.goto(firstMusicEvent.venueEventUrl);
-  const pageInfo = await getPageInfo(page, months);
-
-  if (pageInfo && pageInfo.priceTextContent) {
-    firstMusicEvent.price = getPriceFromHTML(pageInfo.priceTextContent);
-  }
-
-  firstMusicEvent.merge(pageInfo);
-
+  let pageInfo = await getPageInfo(page);
+  pageInfo = postPageInfoProcessing(pageInfo);
   if (pageInfo.startTime) {
     const tempDate = new Date(firstMusicEvent.startDateTime);
     const startTimeSplit = pageInfo.startTime.split(":");
@@ -104,101 +77,87 @@ async function processSingleMusicEvent(
     tempDate.setMinutes(endTimeSplit[1]);
     firstMusicEvent.endDateTime = tempDate;
   }
-
-  firstMusicEvent.register();
+  firstMusicEvent.merge(pageInfo);
+  if (firstMusicEvent.isValid) {
+    firstMusicEvent.register();
+  }
 
   page.close();
 
-  if (newMusicEvents.length) {
-    return processSingleMusicEvent(
-      browser,
-      newMusicEvents,
-      months,
-      workerIndex
-    );
-  } else {
-    return true;
-  }
+  return newMusicEvents.length
+    ? processSingleMusicEvent(browser, newMusicEvents, workerIndex)
+    : true;
 }
 
-async function getPageInfo(page, months) {
-  const pageInfo = await page.evaluate(
-    ({ months }) => {
-      // two fucking tables
-      const agendaDatesEls = document.querySelectorAll(".agenda-date");
-      let doorOpen;
-      let startTime;
-      let endTime;
-      let priceTextContent;
-      if (agendaDatesEls && agendaDatesEls.length > 1) {
-        const leftHandSideTableTRs = agendaDatesEls[0].querySelectorAll("tr");
-        const rightHandSideTableTRs = agendaDatesEls[1].querySelectorAll("tr");
+async function getPageInfo(page) {
+  const pageInfo = await page.evaluate(() => {
+    // two fucking tables
+    const agendaDatesEls = document.querySelectorAll(".agenda-date");
+    let doorOpen;
+    let startTime;
+    let endTime;
+    let priceTextcontent;
+    if (agendaDatesEls && agendaDatesEls.length > 1) {
+      const leftHandSideTableTRs = agendaDatesEls[0].querySelectorAll("tr");
+      const rightHandSideTableTRs = agendaDatesEls[1].querySelectorAll("tr");
 
-        if (leftHandSideTableTRs.length) {
-          leftHandSideTableTRs.forEach((row) => {
-            const timeInRow = row.textContent.replace(/\D/g, "");
-            if (row.textContent.includes("Doors")) {
-              doorOpen = `${timeInRow[0]}${timeInRow[1]}:${timeInRow[2]}${timeInRow[3]}`;
-            }
-            if (
-              row.textContent.includes("Einde") ||
-              row.textContent.includes("End")
-            ) {
-              endTime = `${timeInRow[0]}${timeInRow[1]}:${timeInRow[2]}${timeInRow[3]}`;
-            }
-            if (
-              row.textContent.includes("Start") ||
-              row.textContent.includes("Aanvang")
-            ) {
-              startTime = `${timeInRow[0]}${timeInRow[1]}:${timeInRow[2]}${timeInRow[3]}`;
-            }
-          });
-        }
-
-        priceTextContent = agendaDatesEls[1].textContent;
+      if (leftHandSideTableTRs.length) {
+        leftHandSideTableTRs.forEach((row) => {
+          const timeInRow = row.textContent.replace(/\D/g, "");
+          if (row.textContent.includes("Doors")) {
+            doorOpen = `${timeInRow[0]}${timeInRow[1]}:${timeInRow[2]}${timeInRow[3]}`;
+          }
+          if (
+            row.textContent.includes("Einde") ||
+            row.textContent.includes("End")
+          ) {
+            endTime = `${timeInRow[0]}${timeInRow[1]}:${timeInRow[2]}${timeInRow[3]}`;
+          }
+          if (
+            row.textContent.includes("Start") ||
+            row.textContent.includes("Aanvang")
+          ) {
+            startTime = `${timeInRow[0]}${timeInRow[1]}:${timeInRow[2]}${timeInRow[3]}`;
+          }
+        });
       }
-      const longTextHTMLEl = document.querySelector(
-        "section.article .article-block"
-      );
-      const longTextHTML = !!longTextHTMLEl ? longTextHTMLEl.innerHTML : "";
 
-      const backgroundImage = document.querySelector(
-        ".dynamic-background-color#intro .color-pick"
-      );
-      let image;
-      if (backgroundImage) {
-        const bgImgMatch =
-          backgroundImage.style.backgroundImage.match(/(https.*\.jpg)/);
-        if (bgImgMatch && bgImgMatch.length) {
-          image = bgImgMatch[0].replace("-500x500x", "");
-        }
+      priceTextcontent = agendaDatesEls[1].textContent;
+    }
+    const longTextHTMLEl = document.querySelector(
+      "section.article .article-block"
+    );
+    const longTextHTML = !!longTextHTMLEl ? longTextHTMLEl.innerHTML : "";
+
+    const backgroundImage = document.querySelector(
+      ".dynamic-background-color#intro .color-pick"
+    );
+    let image;
+    if (backgroundImage) {
+      const bgImgMatch =
+        backgroundImage.style.backgroundImage.match(/(https.*\.jpg)/);
+      if (bgImgMatch && bgImgMatch.length) {
+        image = bgImgMatch[0].replace("-500x500x", "");
       }
-      const dataIntegrity = 10;
+    }
+    const dataIntegrity = 10;
 
-      return {
-        doorOpen,
-        startTime,
-        endTime,
-        priceTextContent,
-        longTextHTML,
-        image,
-        dataIntegrity,
-      };
-    },
-    { months }
-  );
-
-  let uuid = crypto.randomUUID();
-  const longTextPath = `${fsDirections.publicTexts}/${uuid}.html`;
-  pageInfo.longText = longTextPath;
-
-  fs.writeFileSync(longTextPath, pageInfo.longTextHTML, "utf-8");
+    return {
+      doorOpen,
+      startTime,
+      endTime,
+      priceTextcontent,
+      longTextHTML,
+      image,
+      dataIntegrity,
+    };
+  }, null);
 
   page.close();
   return pageInfo;
 }
 
-async function makeBaseEventList(browser, workerIndex, months) {
+async function makeBaseEventList(browser, workerIndex) {
   const page = await browser.newPage();
   await page.goto(
     "https://www.dynamo-eindhoven.nl/programma/?_sfm_fw%3Aopt%3Astyle=15"
@@ -243,14 +202,16 @@ async function makeBaseEventList(browser, workerIndex, months) {
           };
         });
     },
-    { months, workerIndex }
+    { months: dynamoMonths, workerIndex }
   );
 
-  const basicEvents = dynamoRock.map((event) => {
-    const baseDate = `${event.dateYear}-${event.dateMonth}-${event.dateDay}`;
-    event.startDateTime = new Date(baseDate).toISOString();
-    return new MusicEvent(event);
-  });
+  const basicEvents = dynamoRock
+    .map((event) => {
+      const baseDate = `${event.dateYear}-${event.dateMonth}-${event.dateDay}`;
+      event.startDateTime = new Date(baseDate).toISOString();
+      return new MusicEvent(event);
+    })
+    .filter(basicMusicEventsFilter);
   page.close();
 
   return basicEvents;
