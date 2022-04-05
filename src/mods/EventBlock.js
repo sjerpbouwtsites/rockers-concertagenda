@@ -103,13 +103,17 @@ class EventBlock extends React.Component {
     );
   }
 
+  stripHTML(text) {
+    if (!text) return "";
+    return text.replace(/\<\/?\w+\>/g, "");
+  }
+
   render() {
     const musicEvents = this.state.musicEvents;
 
     return (
       <div className="event-block__wrapper">
         {musicEvents.map((musicEvent, musicEventKey) => {
-          const titlePlus = musicEvent.title + " in " + musicEvent.location;
           const priceElement = this.priceElement(musicEvent);
           const startMomentLang = this.createStartMoment(musicEvent);
           const linkToVenueHTML = this.createLinkToVenue(musicEvent);
@@ -130,24 +134,30 @@ class EventBlock extends React.Component {
               {imageHTML}
               <header className="event-block__header contrast-with-dark">
                 <h1 className="event-block__title contrast-with-dark">
-                  {titlePlus}
+                  <span className="event-block__title-showname">
+                    {musicEvent.title}
+                  </span>
+                  <span className="event-block__title-location">
+                    {musicEvent.location}
+                  </span>
+
                   <span className="event-block__startDate contrast-with-dark">
                     {startMomentLang}
                   </span>
                 </h1>
-                {priceElement}
-              </header>
-              <section className="event-block__main contrast-with-dark">
                 <p
-                  className={`event-block__paragraph contrast-with-dark ${
+                  className={`event-block__paragraph event-block__paragraph--short-text contrast-with-dark ${
                     musicEvent.enlarged ? "hidden" : ""
                   }`}
                 >
-                  {musicEvent.shortText}
+                  {this.stripHTML(musicEvent.shortText)}
                 </p>
-
+                {priceElement}
+              </header>
+              <section className="event-block__main contrast-with-dark">
                 {moreButtonHTML}
                 <div
+                  className="void-container-for-enlarged"
                   dangerouslySetInnerHTML={{ __html: musicEvent.longTextHTML }}
                 ></div>
                 <footer className="event-block__footer contrast-with-dark">
