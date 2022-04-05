@@ -19,6 +19,25 @@ export function handleError(error) {
   fs.writeFileSync(fsDirections.errorLog, newErrorLog, "utf-8");
 }
 
+export async function autoScroll(page) {
+  await page.evaluate(async () => {
+    await new Promise((resolve, reject) => {
+      var totalHeight = 0;
+      var distance = 500;
+      var timer = setInterval(() => {
+        var scrollHeight = document.body.scrollHeight;
+        window.scrollBy(0, distance);
+        totalHeight += distance;
+
+        if (totalHeight >= scrollHeight) {
+          clearInterval(timer);
+          resolve();
+        }
+      }, 150);
+    });
+  });
+}
+
 export function errorAfterSeconds(time = 10000) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -51,6 +70,11 @@ export function getPriceFromHTML(testText = null, contextText = null) {
     }
 
     return (integers + cents) / 100;
+  }
+
+  const onlyIntegers = testText.match(/\d{1,3}/);
+  if (onlyIntegers && onlyIntegers.length) {
+    return onlyIntegers[0];
   }
 
   if (contextText) {

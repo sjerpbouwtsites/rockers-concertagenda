@@ -26,7 +26,7 @@ function init() {
     }
   }
 
-  if (EventsList.isOld("patronaat") || true) {
+  if (EventsList.isOld("patronaat")) {
     startWorker(fsDirections.scrapePatronaat, "patronaat", 0);
     startWorker(fsDirections.scrapePatronaat, "patronaat", 1);
     startWorker(fsDirections.scrapePatronaat, "patronaat", 2);
@@ -53,12 +53,21 @@ function init() {
     startWorker(fsDirections.scrapeTivolivredenburg, "tivolivredenburg", 3);
   }
 
-  // if (EventsList.isOld("doornroosje")) {
-  //   startWorker(fsDirections.scrapeDoornroosje, "doornroosje", 0);
-  //   startWorker(fsDirections.scrapeDoornroosje, "doornroosje", 1);
-  //   startWorker(fsDirections.scrapeDoornroosje, "doornroosje", 2);
-  //   startWorker(fsDirections.scrapeDoornroosje, "doornroosje", 3);
-  // }
+  if (EventsList.isOld("doornroosje")) {
+    startWorker(fsDirections.scrapeDoornroosje, "doornroosje", 0);
+    startWorker(fsDirections.scrapeDoornroosje, "doornroosje", 1);
+    startWorker(fsDirections.scrapeDoornroosje, "doornroosje", 2);
+    startWorker(fsDirections.scrapeDoornroosje, "doornroosje", 3);
+    startWorker(fsDirections.scrapeDoornroosje, "doornroosje", 4);
+    startWorker(fsDirections.scrapeDoornroosje, "doornroosje", 5);
+  }
+
+  if (EventsList.isOld("metropool")) {
+    startWorker(fsDirections.scrapeMetropool, "metropool", 0);
+    startWorker(fsDirections.scrapeMetropool, "metropool", 1);
+    startWorker(fsDirections.scrapeMetropool, "metropool", 2);
+    startWorker(fsDirections.scrapeMetropool, "metropool", 3);
+  }
 
   if (EventsList.isOld("boerderij")) {
     startWorker(fsDirections.scrapeBoerderij, "boerderij", 0);
@@ -71,6 +80,10 @@ function init() {
   if (EventsList.isOld("dynamo")) {
     startWorker(fsDirections.scrapeDynamo, "dynamo", 0);
     startWorker(fsDirections.scrapeDynamo, "dynamo", 1);
+  }
+
+  if (EventsList.isOld("melkweg")) {
+    startWorker(fsDirections.scrapeMelkweg, "melkweg", 0);
   }
 
   WorkerStatus.reportOnActiveWorkers();

@@ -9,28 +9,15 @@ import {
   getPriceFromHTML,
   handleError,
   errorAfterSeconds,
-  log,
+  autoScroll,
 } from "./tools.js";
 import { letScraperListenToMasterMessageAndInit } from "./generic-scraper.js";
 
-letScraperListenToMasterMessageAndInit(scrapeDoornroosje);
+letScraperListenToMasterMessageAndInit(scrapeMetropool);
 
-async function scrapeDoornroosje(workerIndex) {
+async function scrapeMetropool(workerIndex) {
   const browser = await puppeteer.launch();
-  const months = {
-    januari: "01",
-    februari: "02",
-    maart: "03",
-    april: "04",
-    mei: "05",
-    juni: "06",
-    juli: "07",
-    augustus: "08",
-    september: "09",
-    oktober: "10",
-    november: "11",
-    december: "12",
-  };
+
   try {
     const baseMusicEvents = await Promise.race([
       makeBaseEventList(browser, workerIndex),
@@ -44,10 +31,6 @@ async function scrapeDoornroosje(workerIndex) {
 
 async function fillMusicEvents(browser, baseMusicEvents, workerIndex) {
   const baseMusicEventsCopy = [...baseMusicEvents];
-  parentPort.postMessage({
-    status: "todo",
-    message: baseMusicEvents.length,
-  });
 
   return processSingleMusicEvent(
     browser,
@@ -60,7 +43,7 @@ async function fillMusicEvents(browser, baseMusicEvents, workerIndex) {
     parentPort.postMessage({
       status: "done",
     });
-    EventsList.save("doornroosje", workerIndex);
+    EventsList.save("metropool", workerIndex);
   });
 }
 
@@ -140,41 +123,42 @@ async function getPageInfo(page) {
   let pageInfo;
 
   const months = {
-    januari: "01",
-    februari: "02",
-    maart: "03",
-    april: "04",
+    jan: "01",
+    feb: "02",
+    mrt: "03",
+    apr: "04",
     mei: "05",
-    juni: "06",
-    juli: "07",
-    augustus: "08",
-    september: "09",
-    oktober: "10",
-    november: "11",
-    december: "12",
+    jun: "06",
+    jul: "07",
+    aug: "08",
+    sep: "09",
+    okt: "10",
+    nov: "11",
+    dec: "12",
   };
 
   try {
     pageInfo = await page.evaluate((months) => {
       const res = {};
-      res.cancelReason = "";
-      res.image =
-        document.querySelector(".c-header-event__image img")?.src ?? null;
-      res.priceTextcontent =
-        document.querySelector(".c-btn__price")?.textContent.trim() ?? null;
-      res.longTextHTML =
-        document.querySelector(".s-event__container")?.innerHTML ?? null;
 
-      const embeds = document.querySelectorAll(".c-embed");
-      if (embeds && embeds.length) {
-        res.longTextHTML = res.longTextHTML + embeds.innerHTML;
-      }
+      res.cancelReason = "";
+      res.title = document.querySelector(".event-title-js")?.textContent.trim();
+
+      res.priceTextcontent =
+        document.querySelector(".doorPrice")?.textContent.trim() ?? null;
+
+      res.longTextHTML =
+        Array.from(document.querySelectorAll(".event-title-wrap ~ div"))
+          .map((divEl) => {
+            return divEl.outerHTML;
+          })
+          .join("") ?? null;
 
       try {
         const startDateRauwMatch = document
-          .querySelector(".c-event-data")
+          .querySelector(".event-title-wrap")
           ?.innerHTML.match(
-            /(\d{1,2})\s*(januari|februari|maart|april|mei|juni|juli|augustus|september|oktober|november|december)\s*(\d{4})/
+            /(\d{1,2})\s*(jan|feb|mrt|apr|mei|jun|jul|aug|sep|okt|nov|dec)\s*(\d{4})/
           );
         let startDate;
         if (startDateRauwMatch && startDateRauwMatch.length) {
@@ -185,26 +169,32 @@ async function getPageInfo(page) {
         }
 
         if (startDate) {
-          const timeMatches = document
-            .querySelector(".c-event-data")
-            .innerHTML.match(/\d\d:\d\d/g);
-
-          if (timeMatches && timeMatches.length) {
-            if (timeMatches.length == 2) {
-              res.startDateTime = new Date(
-                `${startDate}:${timeMatches[1]}`
-              ).toISOString();
-              res.doorOpenDateTime = new Date(
-                `${startDate}:${timeMatches[0]}`
-              ).toISOString();
-            } else if (timeMatches.length == 1) {
-              res.startDateTime = new Date(
-                `${startDate}:${timeMatches[0]}`
-              ).toISOString();
-            }
+          const startTimeMatch = document
+            .querySelector(".beginTime")
+            ?.innerHTML.match(/\d\d:\d\d/);
+          if (startTimeMatch && startTimeMatch.length) {
+            res.startDateTime = new Date(
+              `${startDate}:${startTimeMatch[0]}`
+            ).toISOString();
+          }
+          const doorTimeMatch = document
+            .querySelector(".doorOpen")
+            ?.innerHTML.match(/\d\d:\d\d/);
+          if (doorTimeMatch && doorTimeMatch.length) {
+            res.doorOpenDateTime = new Date(
+              `${startDate}:${doorTimeMatch[0]}`
+            ).toISOString();
           }
         }
       } catch (error) {}
+      res.image = document.querySelector(".object-fit-cover")
+        ? `https://metropool.nl/${
+            document.querySelector(".object-fit-cover")?.srcset
+          }`
+        : null;
+
+      res.location = "metropool";
+      res.dataIntegrity = 10;
 
       return res;
     }, months);
@@ -218,43 +208,22 @@ async function getPageInfo(page) {
 
 async function makeBaseEventList(browser, workerIndex) {
   const page = await browser.newPage();
-  await page.goto(
-    "https://www.doornroosje.nl/?genre=metal%252Cpunk%252Cpost-hardcore%252Cnoise-rock%252Csludge-rock",
-    {
-      waitUntil: "load",
-    }
-  );
-  await page.waitForTimeout(2500);
+  await page.goto("https://metropool.nl/zoeken?text=metal", {
+    waitUntil: "load",
+  });
+  await autoScroll(page);
 
   const rawEvents = await page.evaluate((workerIndex) => {
-    return Array.from(document.querySelectorAll(".c-program__item"))
-      .filter((eventEl, index) => {
-        return index % 6 === workerIndex;
+    return Array.from(
+      document.querySelectorAll("#search-content a[href*='agenda']")
+    )
+      .filter((rawEvent, index) => {
+        return index % 4 === workerIndex;
       })
-      .map((eventEl) => {
-        const res = {};
-        res.title =
-          eventEl.querySelector(".c-program__title")?.textContent.trim() ??
-          null;
-        res.shortText =
-          eventEl.querySelector(".c-program__info")?.textContent.trim() ?? null;
-        res.venueEventUrl = eventEl.href;
-        res.dataIntegrity = 10;
-        res.location = "doornroosje";
-        return res;
-      })
-      .filter((musicEvents) => {
-        if (!musicEvents || !musicEvents.title) {
-          return false;
-        }
-        const lowercaseTitle = musicEvents.title.toLowerCase();
-        return (
-          !lowercaseTitle.includes("uitgesteld") &&
-          !lowercaseTitle.includes("sold out") &&
-          !lowercaseTitle.includes("gecanceld") &&
-          !lowercaseTitle.includes("afgelast") &&
-          !lowercaseTitle.includes("geannuleerd")
-        );
+      .map((rawEvent) => {
+        return {
+          venueEventUrl: rawEvent.href,
+        };
       });
   }, workerIndex);
   return rawEvents.map((event) => new MusicEvent(event));

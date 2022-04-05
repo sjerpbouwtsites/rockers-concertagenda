@@ -116,6 +116,8 @@ async function getBaseMusicEvents(browser) {
           "013",
           "effenaar",
           "tivolivredenburg",
+          "doornroosje",
+          "metropool",
         ].includes(locationName)
       ) {
         return;
@@ -133,6 +135,5 @@ async function getBaseMusicEvents(browser) {
     musicEvent.register();
   });
 
-  page.close();
   return true;
 }

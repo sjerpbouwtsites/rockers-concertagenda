@@ -121,7 +121,7 @@ export default class WorkerStatus {
     if (notDone.length > 0 || WorkerStatus.waitingWorkers.length !== 0) {
       setTimeout(() => {
         WorkerStatus.reportOnActiveWorkers();
-      }, 2500);
+      }, 5000);
     }
   }
   static programEnd() {

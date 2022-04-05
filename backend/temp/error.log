@@ -1,0 +1,896 @@
+
+  Baroeg Error - Error - 5:09:05 AM
+  Error: Node is either not clickable or not an HTMLElement
+    at ElementHandle.clickablePoint (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/JSHandle.js:408:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ElementHandle.click (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/JSHandle.js:492:26)
+    at async DOMWorld.click (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:288:9)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-melkweg.js:218:3)
+    at async scrapeMelkweg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-melkweg.js:25:29) 
+  Node is either not clickable or not an HTMLElement
+  
+  
+  Baroeg Error - Error - 5:06:43 AM
+  Error: Node is either not clickable or not an HTMLElement
+    at ElementHandle.clickablePoint (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/JSHandle.js:408:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ElementHandle.click (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/JSHandle.js:492:26)
+    at async DOMWorld.click (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:288:9)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-melkweg.js:218:3)
+    at async scrapeMelkweg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-melkweg.js:25:29) 
+  Node is either not clickable or not an HTMLElement
+  
+  
+  Baroeg Error - Error - 4:58:34 AM
+  Error: REJECTED AFTER 15000
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:44:14)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7) 
+  REJECTED AFTER 15000
+  
+  
+  Baroeg Error - Error - 4:57:57 AM
+  Error: REJECTED AFTER 15000
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:44:14)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7) 
+  REJECTED AFTER 15000
+  
+  
+  Baroeg Error - Error - 4:55:18 AM
+  Error: REJECTED AFTER 15000
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:44:14)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7) 
+  REJECTED AFTER 15000
+  
+  
+  Baroeg Error - Error - 4:53:41 AM
+  Error: Node is either not clickable or not an HTMLElement
+    at ElementHandle.clickablePoint (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/JSHandle.js:408:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ElementHandle.click (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/JSHandle.js:492:26)
+    at async DOMWorld.click (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:288:9)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-melkweg.js:217:3)
+    at async scrapeMelkweg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-melkweg.js:23:29) 
+  Node is either not clickable or not an HTMLElement
+  
+  
+  Baroeg Error - Error - 4:52:40 AM
+  Error: Node is either not clickable or not an HTMLElement
+    at ElementHandle.clickablePoint (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/JSHandle.js:408:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ElementHandle.click (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/JSHandle.js:492:26)
+    at async DOMWorld.click (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:288:9)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-melkweg.js:216:3)
+    at async scrapeMelkweg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-melkweg.js:23:29) 
+  Node is either not clickable or not an HTMLElement
+  
+  
+  Baroeg Error - TypeError - 4:30:59 AM
+  TypeError [ERR_INVALID_ARG_TYPE]: The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received an instance of Array
+    at Object.writeFile (node:fs:2106:5)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-metropool.js:87:10)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async scrapeMetropool (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-metropool.js:26:5) 
+  The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received an instance of Array
+  
+  
+  Baroeg Error - TypeError - 4:30:58 AM
+  TypeError [ERR_INVALID_ARG_TYPE]: The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received an instance of Array
+    at Object.writeFile (node:fs:2106:5)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-metropool.js:87:10)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async scrapeMetropool (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-metropool.js:26:5) 
+  The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received an instance of Array
+  
+  
+  Baroeg Error - TypeError - 4:30:56 AM
+  TypeError [ERR_INVALID_ARG_TYPE]: The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received an instance of Array
+    at Object.writeFile (node:fs:2106:5)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-metropool.js:87:10)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async scrapeMetropool (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-metropool.js:26:5) 
+  The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received an instance of Array
+  
+  
+  Baroeg Error - RangeError - 4:30:01 AM
+  RangeError: Maximum call stack size exceeded
+    at getPriceFromHTML (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:30:33)
+    at getPriceFromHTML (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:32:12)
+    at getPriceFromHTML (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:32:12)
+    at getPriceFromHTML (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:32:12)
+    at getPriceFromHTML (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:32:12)
+    at getPriceFromHTML (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:32:12)
+    at getPriceFromHTML (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:32:12)
+    at getPriceFromHTML (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:32:12)
+    at getPriceFromHTML (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:32:12)
+    at getPriceFromHTML (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:32:12) 
+  Maximum call stack size exceeded
+  
+  
+  Baroeg Error - RangeError - 4:29:59 AM
+  RangeError: Maximum call stack size exceeded
+    at getPriceFromHTML (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:30:33)
+    at getPriceFromHTML (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:32:12)
+    at getPriceFromHTML (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:32:12)
+    at getPriceFromHTML (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:32:12)
+    at getPriceFromHTML (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:32:12)
+    at getPriceFromHTML (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:32:12)
+    at getPriceFromHTML (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:32:12)
+    at getPriceFromHTML (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:32:12)
+    at getPriceFromHTML (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:32:12)
+    at getPriceFromHTML (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:32:12) 
+  Maximum call stack size exceeded
+  
+  
+  Baroeg Error - RangeError - 4:29:57 AM
+  RangeError: Maximum call stack size exceeded
+    at getPriceFromHTML (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:30:33)
+    at getPriceFromHTML (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:32:12)
+    at getPriceFromHTML (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:32:12)
+    at getPriceFromHTML (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:32:12)
+    at getPriceFromHTML (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:32:12)
+    at getPriceFromHTML (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:32:12)
+    at getPriceFromHTML (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:32:12)
+    at getPriceFromHTML (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:32:12)
+    at getPriceFromHTML (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:32:12)
+    at getPriceFromHTML (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:32:12) 
+  Maximum call stack size exceeded
+  
+  
+  Baroeg Error - Error - 4:02:31 AM
+  Error: Evaluation failed: TypeError: object null is not iterable (cannot read property Symbol(Symbol.iterator))
+    at Function.from (<anonymous>)
+    at __puppeteer_evaluation_script__:2:18
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-metropool.js:193:21)
+    at async scrapeMetropool (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-metropool.js:22:29) 
+  Evaluation failed: TypeError: object null is not iterable (cannot read property Symbol(Symbol.iterator))
+    at Function.from (<anonymous>)
+    at __puppeteer_evaluation_script__:2:18
+  
+  
+  Baroeg Error - Error - 4:01:48 AM
+  Error: Evaluation failed: TypeError: object null is not iterable (cannot read property Symbol(Symbol.iterator))
+    at Function.from (<anonymous>)
+    at __puppeteer_evaluation_script__:2:18
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-metropool.js:193:21)
+    at async scrapeMetropool (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-metropool.js:22:29) 
+  Evaluation failed: TypeError: object null is not iterable (cannot read property Symbol(Symbol.iterator))
+    at Function.from (<anonymous>)
+    at __puppeteer_evaluation_script__:2:18
+  
+  
+  Baroeg Error - Error - 4:00:56 AM
+  Error: Evaluation failed: TypeError: object null is not iterable (cannot read property Symbol(Symbol.iterator))
+    at Function.from (<anonymous>)
+    at __puppeteer_evaluation_script__:2:18
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-metropool.js:192:21)
+    at async scrapeMetropool (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-metropool.js:22:29) 
+  Evaluation failed: TypeError: object null is not iterable (cannot read property Symbol(Symbol.iterator))
+    at Function.from (<anonymous>)
+    at __puppeteer_evaluation_script__:2:18
+  
+  
+  Baroeg Error - Error - 3:48:21 AM
+  Error: Node is either not clickable or not an HTMLElement
+    at ElementHandle.clickablePoint (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/JSHandle.js:408:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ElementHandle.click (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/JSHandle.js:492:26)
+    at async DOMWorld.click (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:288:9)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-metropool.js:194:3)
+    at async scrapeMetropool (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-metropool.js:22:29) 
+  Node is either not clickable or not an HTMLElement
+  
+  
+  Baroeg Error - Error - 3:48:01 AM
+  Error: Node is either not clickable or not an HTMLElement
+    at ElementHandle.clickablePoint (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/JSHandle.js:408:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ElementHandle.click (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/JSHandle.js:492:26)
+    at async DOMWorld.click (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:288:9)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-metropool.js:194:3)
+    at async scrapeMetropool (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-metropool.js:22:29) 
+  Node is either not clickable or not an HTMLElement
+  
+  
+  Baroeg Error - Error - 3:46:39 AM
+  Error: Node is either not clickable or not an HTMLElement
+    at ElementHandle.clickablePoint (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/JSHandle.js:408:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ElementHandle.click (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/JSHandle.js:492:26)
+    at async DOMWorld.click (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:288:9)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-metropool.js:194:3)
+    at async scrapeMetropool (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-metropool.js:22:29) 
+  Node is either not clickable or not an HTMLElement
+  
+  
+  Baroeg Error - Error - 3:46:21 AM
+  Error: Node is either not clickable or not an HTMLElement
+    at ElementHandle.clickablePoint (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/JSHandle.js:408:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ElementHandle.click (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/JSHandle.js:492:26)
+    at async DOMWorld.click (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:288:9)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-metropool.js:193:3)
+    at async scrapeMetropool (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-metropool.js:22:29) 
+  Node is either not clickable or not an HTMLElement
+  
+  
+  Baroeg Error - Error - 3:44:47 AM
+  Error: Node is either not clickable or not an HTMLElement
+    at ElementHandle.clickablePoint (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/JSHandle.js:408:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ElementHandle.click (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/JSHandle.js:492:26)
+    at async DOMWorld.click (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:288:9)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-metropool.js:193:3)
+    at async scrapeMetropool (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-metropool.js:22:29) 
+  Node is either not clickable or not an HTMLElement
+  
+  
+  Baroeg Error - TypeError - 3:44:37 AM
+  TypeError: baseMusicEvents is not iterable
+    at fillMusicEvents (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-metropool.js:33:35)
+    at scrapeMetropool (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-metropool.js:26:11)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) 
+  baseMusicEvents is not iterable
+  
+  
+  Baroeg Error - Error - 3:44:02 AM
+  Error: Node is either not clickable or not an HTMLElement
+    at ElementHandle.clickablePoint (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/JSHandle.js:408:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ElementHandle.click (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/JSHandle.js:492:26)
+    at async DOMWorld.click (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:288:9)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-metropool.js:193:3)
+    at async scrapeMetropool (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-metropool.js:22:29) 
+  Node is either not clickable or not an HTMLElement
+  
+  
+  Baroeg Error - Error - 3:42:57 AM
+  Error: Node is either not clickable or not an HTMLElement
+    at ElementHandle.clickablePoint (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/JSHandle.js:408:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ElementHandle.click (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/JSHandle.js:492:26)
+    at async DOMWorld.click (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:288:9)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-metropool.js:193:3)
+    at async scrapeMetropool (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-metropool.js:22:29) 
+  Node is either not clickable or not an HTMLElement
+  
+  
+  Baroeg Error - Error - 3:41:37 AM
+  Error: Node is either not clickable or not an HTMLElement
+    at ElementHandle.clickablePoint (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/JSHandle.js:408:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ElementHandle.click (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/JSHandle.js:492:26)
+    at async DOMWorld.click (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:288:9)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-metropool.js:192:3)
+    at async scrapeMetropool (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-metropool.js:22:29) 
+  Node is either not clickable or not an HTMLElement
+  
+  
+  Baroeg Error - Error - 3:41:22 AM
+  Error: Error: failed to find element matching selector "#text"
+    at ElementHandle.$eval (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/JSHandle.js:805:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-metropool.js:191:3)
+    at async scrapeMetropool (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-metropool.js:22:29) 
+  Error: failed to find element matching selector "#text"
+  
+  
+  Baroeg Error - TypeError - 3:03:47 AM
+  TypeError: Cannot read properties of undefined (reading 'name')
+    at handleError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:13:26)
+    at getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:197:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:97:22)
+    at async scrapeDoornroosje (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:39:5) 
+  Cannot read properties of undefined (reading 'name')
+  
+  
+  Baroeg Error - Error - 3:03:47 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'november')
+    at __puppeteer_evaluation_script__:25:29
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:148:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:97:22)
+    at async scrapeDoornroosje (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:39:5) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'november')
+    at __puppeteer_evaluation_script__:25:29
+  
+  
+  Baroeg Error - TypeError - 3:03:47 AM
+  TypeError: Cannot read properties of undefined (reading 'name')
+    at handleError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:13:26)
+    at getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:197:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:97:22)
+    at async scrapeDoornroosje (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:39:5) 
+  Cannot read properties of undefined (reading 'name')
+  
+  
+  Baroeg Error - Error - 3:03:47 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'november')
+    at __puppeteer_evaluation_script__:25:29
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:148:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:97:22)
+    at async scrapeDoornroosje (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:39:5) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'november')
+    at __puppeteer_evaluation_script__:25:29
+  
+  
+  Baroeg Error - TypeError - 3:03:47 AM
+  TypeError: Cannot read properties of undefined (reading 'name')
+    at handleError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:13:26)
+    at getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:197:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:97:22)
+    at async scrapeDoornroosje (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:39:5) 
+  Cannot read properties of undefined (reading 'name')
+  
+  
+  Baroeg Error - Error - 3:03:47 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'november')
+    at __puppeteer_evaluation_script__:25:29
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:148:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:97:22)
+    at async scrapeDoornroosje (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:39:5) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'november')
+    at __puppeteer_evaluation_script__:25:29
+  
+  
+  Baroeg Error - TypeError - 3:03:46 AM
+  TypeError: Cannot read properties of undefined (reading 'name')
+    at handleError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:13:26)
+    at getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:197:5)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:97:22)
+    at async scrapeDoornroosje (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:39:5) 
+  Cannot read properties of undefined (reading 'name')
+  
+  
+  Baroeg Error - Error - 3:03:46 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'augustus')
+    at __puppeteer_evaluation_script__:25:29
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:148:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:97:22)
+    at async scrapeDoornroosje (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:39:5) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'augustus')
+    at __puppeteer_evaluation_script__:25:29
+  
+  
+  Baroeg Error - TypeError - 3:03:46 AM
+  TypeError: Cannot read properties of undefined (reading 'name')
+    at handleError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:13:26)
+    at getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:197:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:97:22)
+    at async scrapeDoornroosje (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:39:5) 
+  Cannot read properties of undefined (reading 'name')
+  
+  
+  Baroeg Error - Error - 3:03:46 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'september')
+    at __puppeteer_evaluation_script__:25:29
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:148:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:97:22)
+    at async scrapeDoornroosje (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:39:5) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'september')
+    at __puppeteer_evaluation_script__:25:29
+  
+  
+  Baroeg Error - TypeError - 3:03:44 AM
+  TypeError: Cannot read properties of undefined (reading 'name')
+    at handleError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:13:26)
+    at getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:197:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:97:22)
+    at async scrapeDoornroosje (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:39:5) 
+  Cannot read properties of undefined (reading 'name')
+  
+  
+  Baroeg Error - Error - 3:03:44 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'oktober')
+    at __puppeteer_evaluation_script__:25:29
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:148:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:97:22)
+    at async scrapeDoornroosje (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:39:5) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'oktober')
+    at __puppeteer_evaluation_script__:25:29
+  
+  
+  Baroeg Error - TypeError - 3:03:44 AM
+  TypeError: Cannot read properties of undefined (reading 'name')
+    at handleError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:13:26)
+    at getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:197:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:97:22)
+    at async scrapeDoornroosje (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:39:5) 
+  Cannot read properties of undefined (reading 'name')
+  
+  
+  Baroeg Error - Error - 3:03:44 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'september')
+    at __puppeteer_evaluation_script__:25:29
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:148:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:97:22)
+    at async scrapeDoornroosje (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:39:5) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'september')
+    at __puppeteer_evaluation_script__:25:29
+  
+  
+  Baroeg Error - TypeError - 3:03:44 AM
+  TypeError: Cannot read properties of undefined (reading 'name')
+    at handleError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:13:26)
+    at getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:197:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:97:22)
+    at async scrapeDoornroosje (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:39:5) 
+  Cannot read properties of undefined (reading 'name')
+  
+  
+  Baroeg Error - Error - 3:03:44 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'september')
+    at __puppeteer_evaluation_script__:25:29
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:148:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:97:22)
+    at async scrapeDoornroosje (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:39:5) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'september')
+    at __puppeteer_evaluation_script__:25:29
+  
+  
+  Baroeg Error - TypeError - 3:03:44 AM
+  TypeError: Cannot read properties of undefined (reading 'name')
+    at handleError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:13:26)
+    at getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:197:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:97:22)
+    at async scrapeDoornroosje (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:39:5) 
+  Cannot read properties of undefined (reading 'name')
+  
+  
+  Baroeg Error - Error - 3:03:44 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'juni')
+    at __puppeteer_evaluation_script__:25:29
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:148:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:97:22)
+    at async scrapeDoornroosje (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:39:5) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'juni')
+    at __puppeteer_evaluation_script__:25:29
+  
+  
+  Baroeg Error - TypeError - 3:03:44 AM
+  TypeError: Cannot read properties of undefined (reading 'name')
+    at handleError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:13:26)
+    at getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:197:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:97:22)
+    at async scrapeDoornroosje (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:39:5) 
+  Cannot read properties of undefined (reading 'name')
+  
+  
+  Baroeg Error - Error - 3:03:44 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'juli')
+    at __puppeteer_evaluation_script__:25:29
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:148:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:97:22)
+    at async scrapeDoornroosje (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:39:5) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'juli')
+    at __puppeteer_evaluation_script__:25:29
+  
+  
+  Baroeg Error - TypeError - 3:03:43 AM
+  TypeError: Cannot read properties of undefined (reading 'name')
+    at handleError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:13:26)
+    at getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:197:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:97:22)
+    at async scrapeDoornroosje (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:39:5) 
+  Cannot read properties of undefined (reading 'name')
+  
+  
+  Baroeg Error - Error - 3:03:43 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'juni')
+    at __puppeteer_evaluation_script__:25:29
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:148:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:97:22)
+    at async scrapeDoornroosje (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:39:5) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'juni')
+    at __puppeteer_evaluation_script__:25:29
+  
+  
+  Baroeg Error - TypeError - 3:03:42 AM
+  TypeError: Cannot read properties of undefined (reading 'name')
+    at handleError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:13:26)
+    at getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:197:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:97:22)
+    at async scrapeDoornroosje (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:39:5) 
+  Cannot read properties of undefined (reading 'name')
+  
+  
+  Baroeg Error - Error - 3:03:42 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'juni')
+    at __puppeteer_evaluation_script__:25:29
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:148:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:97:22)
+    at async scrapeDoornroosje (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:39:5) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'juni')
+    at __puppeteer_evaluation_script__:25:29
+  
+  
+  Baroeg Error - TypeError - 3:03:41 AM
+  TypeError: Cannot read properties of undefined (reading 'name')
+    at handleError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:13:26)
+    at getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:197:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:97:22)
+    at async scrapeDoornroosje (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:39:5) 
+  Cannot read properties of undefined (reading 'name')
+  
+  
+  Baroeg Error - Error - 3:03:41 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'juni')
+    at __puppeteer_evaluation_script__:25:29
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:148:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:97:22)
+    at async scrapeDoornroosje (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:39:5) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'juni')
+    at __puppeteer_evaluation_script__:25:29
+  
+  
+  Baroeg Error - TypeError - 3:03:41 AM
+  TypeError: Cannot read properties of undefined (reading 'name')
+    at handleError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:13:26)
+    at getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:197:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:97:22)
+    at async scrapeDoornroosje (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:39:5) 
+  Cannot read properties of undefined (reading 'name')
+  
+  
+  Baroeg Error - Error - 3:03:41 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'juni')
+    at __puppeteer_evaluation_script__:25:29
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:148:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:97:22)
+    at async scrapeDoornroosje (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:39:5) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'juni')
+    at __puppeteer_evaluation_script__:25:29
+  
+  
+  Baroeg Error - TypeError - 3:03:41 AM
+  TypeError: Cannot read properties of undefined (reading 'name')
+    at handleError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:13:26)
+    at getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:197:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:97:22)
+    at async scrapeDoornroosje (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:39:5) 
+  Cannot read properties of undefined (reading 'name')
+  
+  
+  Baroeg Error - Error - 3:03:41 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'mei')
+    at __puppeteer_evaluation_script__:25:29
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:148:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:97:22)
+    at async scrapeDoornroosje (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:39:5) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'mei')
+    at __puppeteer_evaluation_script__:25:29
+  
+  
+  Baroeg Error - TypeError - 3:03:41 AM
+  TypeError: Cannot read properties of undefined (reading 'name')
+    at handleError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:13:26)
+    at getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:197:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:97:22)
+    at async scrapeDoornroosje (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:39:5) 
+  Cannot read properties of undefined (reading 'name')
+  
+  
+  Baroeg Error - Error - 3:03:41 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'juni')
+    at __puppeteer_evaluation_script__:25:29
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:148:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:97:22)
+    at async scrapeDoornroosje (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:39:5) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'juni')
+    at __puppeteer_evaluation_script__:25:29
+  
+  
+  Baroeg Error - TypeError - 3:03:41 AM
+  TypeError: Cannot read properties of undefined (reading 'name')
+    at handleError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:13:26)
+    at getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:197:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:97:22)
+    at async scrapeDoornroosje (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:39:5) 
+  Cannot read properties of undefined (reading 'name')
+  
+  
+  Baroeg Error - Error - 3:03:41 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'mei')
+    at __puppeteer_evaluation_script__:25:29
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:148:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:97:22)
+    at async scrapeDoornroosje (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:39:5) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'mei')
+    at __puppeteer_evaluation_script__:25:29
+  
+  
+  Baroeg Error - TypeError - 3:03:40 AM
+  TypeError: Cannot read properties of undefined (reading 'name')
+    at handleError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:13:26)
+    at getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:197:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:97:22)
+    at async scrapeDoornroosje (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:39:5) 
+  Cannot read properties of undefined (reading 'name')
+  
+  
+  Baroeg Error - Error - 3:03:40 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'mei')
+    at __puppeteer_evaluation_script__:25:29
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:148:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:97:22)
+    at async scrapeDoornroosje (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:39:5) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'mei')
+    at __puppeteer_evaluation_script__:25:29
+  
+  
+  Baroeg Error - TypeError - 3:03:39 AM
+  TypeError: Cannot read properties of undefined (reading 'name')
+    at handleError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:13:26)
+    at getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:197:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:97:22)
+    at async scrapeDoornroosje (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:39:5) 
+  Cannot read properties of undefined (reading 'name')
+  
+  
+  Baroeg Error - Error - 3:03:39 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'mei')
+    at __puppeteer_evaluation_script__:25:29
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:148:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:97:22)
+    at async scrapeDoornroosje (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:39:5) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'mei')
+    at __puppeteer_evaluation_script__:25:29
+  
+  
+  Baroeg Error - TypeError - 3:03:39 AM
+  TypeError: Cannot read properties of undefined (reading 'name')
+    at handleError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:13:26)
+    at getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:197:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:97:22)
+    at async scrapeDoornroosje (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:39:5) 
+  Cannot read properties of undefined (reading 'name')
+  
+  
+  Baroeg Error - Error - 3:03:39 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'mei')
+    at __puppeteer_evaluation_script__:25:29
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:148:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:97:22)
+    at async scrapeDoornroosje (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:39:5) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'mei')
+    at __puppeteer_evaluation_script__:25:29
+  
+  
+  Baroeg Error - TypeError - 3:03:39 AM
+  TypeError: Cannot read properties of undefined (reading 'name')
+    at handleError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:13:26)
+    at getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:197:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:97:22)
+    at async scrapeDoornroosje (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:39:5) 
+  Cannot read properties of undefined (reading 'name')
+  
+  
+  Baroeg Error - Error - 3:03:39 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'mei')
+    at __puppeteer_evaluation_script__:25:29
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:148:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:97:22)
+    at async scrapeDoornroosje (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:39:5) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'mei')
+    at __puppeteer_evaluation_script__:25:29
+  
+  
+  Baroeg Error - TypeError - 3:03:38 AM
+  TypeError: Cannot read properties of undefined (reading 'name')
+    at handleError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:13:26)
+    at getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:197:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:97:22)
+    at async scrapeDoornroosje (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:39:5) 
+  Cannot read properties of undefined (reading 'name')
+  
+  
+  Baroeg Error - Error - 3:03:38 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'mei')
+    at __puppeteer_evaluation_script__:25:29
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:148:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:97:22)
+    at async scrapeDoornroosje (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:39:5) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'mei')
+    at __puppeteer_evaluation_script__:25:29
+  
+  
+  Baroeg Error - TypeError - 3:03:38 AM
+  TypeError: Cannot read properties of undefined (reading 'name')
+    at handleError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:13:26)
+    at getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:197:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:97:22)
+    at async scrapeDoornroosje (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:39:5) 
+  Cannot read properties of undefined (reading 'name')
+  
+  
+  Baroeg Error - Error - 3:03:38 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'april')
+    at __puppeteer_evaluation_script__:25:29
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:148:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:97:22)
+    at async scrapeDoornroosje (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:39:5) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'april')
+    at __puppeteer_evaluation_script__:25:29
+  
+  
+  Baroeg Error - TypeError - 3:03:38 AM
+  TypeError: Cannot read properties of undefined (reading 'name')
+    at handleError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:13:26)
+    at getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:197:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:97:22)
+    at async scrapeDoornroosje (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:39:5) 
+  Cannot read properties of undefined (reading 'name')
+  
+  
+  Baroeg Error - Error - 3:03:38 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'mei')
+    at __puppeteer_evaluation_script__:25:29
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:148:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:97:22)
+    at async scrapeDoornroosje (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:39:5) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'mei')
+    at __puppeteer_evaluation_script__:25:29
+  
+  
+  Baroeg Error - TypeError - 3:03:37 AM
+  TypeError: Cannot read properties of undefined (reading 'name')
+    at handleError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:13:26)
+    at getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:197:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:97:22)
+    at async scrapeDoornroosje (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:39:5) 
+  Cannot read properties of undefined (reading 'name')
+  
+  
+  Baroeg Error - Error - 3:03:37 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'mei')
+    at __puppeteer_evaluation_script__:25:29
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:148:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:97:22)
+    at async scrapeDoornroosje (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:39:5) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'mei')
+    at __puppeteer_evaluation_script__:25:29
+  
+  
+  Baroeg Error - TypeError - 3:03:37 AM
+  TypeError: Cannot read properties of undefined (reading 'name')
+    at handleError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:13:26)
+    at getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:197:5)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:97:22)
+    at async scrapeDoornroosje (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:39:5) 
+  Cannot read properties of undefined (reading 'name')
+  
+  
+  Baroeg Error - Error - 3:03:37 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'mei')
+    at __puppeteer_evaluation_script__:25:29
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:148:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:97:22)
+    at async scrapeDoornroosje (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-doornroosje.js:39:5) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'mei')
+    at __puppeteer_evaluation_script__:25:29
+  
+  
+  Baroeg Error - Error - 2:16:02 AM
+  Error: REJECTED AFTER 15000
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:25:14)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7) 
+  REJECTED AFTER 15000
+  
+  
