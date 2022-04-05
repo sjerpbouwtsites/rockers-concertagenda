@@ -10,7 +10,9 @@ class EventBlock extends React.Component {
 
     getData()
       .then((musicEvents) => {
-        let me2 = musicEvents.map(frontendMusicEventExpansionMap);
+        let me2 = musicEvents
+          .map(frontendMusicEventExpansionMap)
+          .filter(musicEventDateFilter);
         this.setState({ musicEvents: me2 });
       })
       .catch((error) => {
@@ -148,6 +150,15 @@ function frontendMusicEventExpansionMap(musicEvent) {
     longTextHTML: null,
     enlarged: false,
   };
+}
+
+function musicEventDateFilter(musicEvent) {
+  if (!musicEvent.startDateTime) {
+    return false;
+  }
+  const musicEventTime = new Date(musicEvent.startDateTime).getDate();
+  const nowDate = new Date().getDate();
+  return musicEventTime >= nowDate;
 }
 
 export default EventBlock;
