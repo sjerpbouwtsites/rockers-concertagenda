@@ -3,6 +3,7 @@ import WorkerStatus from "./mods/WorkerStatus.js";
 import EventsList from "./mods/events-list.js";
 import fsDirections from "./mods/fs-directions.js";
 import { handleError, errorAfterSeconds } from "./mods/tools.js";
+import { printLocationsToPublic } from "./mods/locations.js";
 
 function init() {
   WorkerStatus.monitorCPUS();
@@ -12,7 +13,7 @@ function init() {
   if (EventsList.isOld("metalfan")) {
     workerList.push([fsDirections.scrapeMetalfan, "metalfan", 0]);
   }
-  if (EventsList.isOld("baroeg") || true) {
+  if (EventsList.isOld("baroeg")) {
     try {
       workerList.push([fsDirections.scrapeBaroeg, "baroeg", 0]);
       workerList.push([fsDirections.scrapeBaroeg, "baroeg", 1]);
@@ -107,6 +108,8 @@ function init() {
   walkThroughWorkerList(workerList);
 
   WorkerStatus.reportOnActiveWorkers();
+
+  printLocationsToPublic();
 }
 
 function walkThroughWorkerList(workerList) {

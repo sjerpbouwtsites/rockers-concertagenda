@@ -1,18 +1,5 @@
 [
   {
-    "doorOpenDateTime": "2022-04-18T18:00:00.000Z",
-    "startDateTime": "2022-04-18T18:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/coach-party/",
-    "title": "Coach Party",
-    "location": "doornroosje",
-    "price": 14.5,
-    "shortText": null,
-    "longText": "../public/texts/833ef5de-aa6f-4cfb-91c1-f243e088efdb.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2022/02/Coach-Party1920x1080-scaled-350x197-c-default.jpg",
-    "dataIntegrity": 10
-  },
-  {
     "doorOpenDateTime": "2022-05-31T17:00:00.000Z",
     "startDateTime": "2022-05-31T17:30:00.000Z",
     "endDateTime": null,
@@ -21,7 +8,7 @@
     "location": "doornroosje",
     "price": 27.5,
     "shortText": "FortaRock",
-    "longText": "../public/texts/08b17483-83be-402e-a489-b519b5b767a5.html",
+    "longText": "../public/texts/c8c08737-a332-4b48-8f59-dc1b64489806.html",
     "image": "https://www.doornroosje.nl/app/uploads/2021/10/20220531-Baroness-web-1-350x197-c-default.jpg",
     "dataIntegrity": 10
   },
@@ -34,7 +21,7 @@
     "location": "doornroosje",
     "price": 14.5,
     "shortText": null,
-    "longText": "../public/texts/a011ab71-8aa6-4b7f-bb8c-ea4d0f5ca7fb.html",
+    "longText": "../public/texts/842b844a-3041-4572-afc6-35f327a193dc.html",
     "image": "https://www.doornroosje.nl/app/uploads/2022/03/The-Bobby-Lees-350x197-c-default.jpg",
     "dataIntegrity": 10
   },
@@ -47,7 +34,7 @@
     "location": "doornroosje",
     "price": 25.5,
     "shortText": "Soulcrusher",
-    "longText": "../public/texts/02ea2105-9b7b-4b0b-b513-967af83ade9e.html",
+    "longText": "../public/texts/b0b47d50-2826-4e51-a53a-37d2f8a6e5fd.html",
     "image": "https://www.doornroosje.nl/app/uploads/2021/08/Wolves-in-the-Throne-Room-1920x1080-1-350x197-c-default.jpg",
     "dataIntegrity": 10
   },
@@ -60,8 +47,21 @@
     "location": "doornroosje",
     "price": 27.5,
     "shortText": "Fortarock",
-    "longText": "../public/texts/17f9cae6-79db-4703-b05d-e7a1b8b0d001.html",
+    "longText": "../public/texts/cf0d3267-887a-42f1-9ec3-76baf738bde4.html",
     "image": "https://www.doornroosje.nl/app/uploads/2022/02/Therion-1-350x197-c-default.jpg",
+    "dataIntegrity": 10
+  },
+  {
+    "doorOpenDateTime": "2023-05-19T18:00:00.000Z",
+    "startDateTime": "2023-05-19T18:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.doornroosje.nl/event/otoboke-beaver/",
+    "title": "Otoboke Beaver",
+    "location": "doornroosje",
+    "price": 16.5,
+    "shortText": null,
+    "longText": "../public/texts/51411cd1-33fc-4578-9fff-80dbdfa9be02.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2021/12/Promo_OtobokeBeaver-credit_Takeaki_Emori-350x197-c-default.jpg",
     "dataIntegrity": 10
   }
 ]

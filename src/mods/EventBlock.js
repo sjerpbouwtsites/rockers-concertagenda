@@ -7,7 +7,9 @@ class EventBlock extends React.Component {
 
   constructor(props) {
     super(props);
+  }
 
+  componentDidMount() {
     getData()
       .then((musicEvents) => {
         let me2 = musicEvents
@@ -48,7 +50,10 @@ class EventBlock extends React.Component {
   priceElement(musicEvent) {
     const price = `€${Number(musicEvent.price).toFixed(2)}`;
     return musicEvent.price !== null ? (
-      <span className="event-block__price contrast-with-dark">{price}</span>
+      <span className="event-block__price contrast-with-dark">
+        {price}
+        {this.createLinkToVenue(musicEvent)}
+      </span>
     ) : (
       ""
     );
@@ -56,10 +61,9 @@ class EventBlock extends React.Component {
 
   createStartMoment(musicEvent) {
     return new Date(musicEvent.startDateTime).toLocaleDateString("nl", {
-      weekday: "long",
+      weekday: "short",
       month: "long",
       day: "numeric",
-      year: "numeric",
       hour: "2-digit",
       minute: "2-digit",
     });
@@ -69,8 +73,7 @@ class EventBlock extends React.Component {
     const url = musicEvent.venueEventUrl;
     return !!musicEvent.venueEventUrl ? (
       <a className="event-block__venue-link" href={url} target="_blank">
-        get your tickets<br></br>
-        at the venue
+        tickets
       </a>
     ) : (
       ""

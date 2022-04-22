@@ -1,6 +1,45 @@
 [
   {
     "doorOpenDateTime": null,
+    "startDateTime": "2022-09-30T13:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://baroeg.nl/productie/kingfisher-sky-ann-my-guard/",
+    "title": "Kingfisher Sky + Ann My Guard",
+    "location": "baroeg",
+    "price": 12,
+    "shortText": "<p>Een portie fantastische progressieve, symfonische rock waarin je diverse invloeden terug hoort.</p>\n",
+    "longText": "../public/texts/d2d81a30-37a3-42c6-8bd5-ab291a3ad214.html",
+    "image": "https://baroeg.nl/wp-content/uploads/2021/03/Kingfisher-sky-e1643201632511-768x318.jpeg",
+    "dataIntegrity": 10
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-09-29T17:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://baroeg.nl/productie/sathanas-in-gloriam-presents-djevel/",
+    "title": "Sathanas In Gloriam presents: Djevel + Helleruin",
+    "location": "baroeg",
+    "price": 19,
+    "shortText": "<p>Sathanas In Gloriam presents: Djevel + Helleruin.</p>\n",
+    "longText": "../public/texts/1960e5f3-fee9-4962-9114-cc8f10b26c30.html",
+    "image": "https://baroeg.nl/wp-content/uploads/2021/12/Djevel-foto-door-Maarten-768x353.jpeg",
+    "dataIntegrity": 10
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-09-10T10:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://baroeg.nl/productie/baroeg-open-air-2022/",
+    "title": "Baroeg Open Air 2022",
+    "location": "baroeg",
+    "price": 9.99,
+    "shortText": "<p>Napalm Death + VNV Nation + Hardcore Superstar + Atari Teenage Riot + Thanatos + Zardonic+Fickle 6 present Takeover + Freedom Call  + Suicide Commando + Distant + Het Gezelschap + + The Essence + The Sweet Release Of Dead</p>\n",
+    "longText": "../public/texts/e04473a2-bb79-4fed-a328-ba7aa26bda7e.html",
+    "image": "https://baroeg.nl/wp-content/uploads/2021/08/Profielfoto-kopie-768x238.jpg",
+    "dataIntegrity": 10
+  },
+  {
+    "doorOpenDateTime": null,
     "startDateTime": "2022-08-21T13:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://baroeg.nl/productie/rotterdam-rocks-presents-angel-white-heat/",
@@ -8,7 +47,7 @@
     "location": "baroeg",
     "price": 15,
     "shortText": "<p>Rotterdam Rocks presents: Angel + White Heat</p>\n",
-    "longText": "../public/texts/7e865a39-24fe-48dd-95b6-40abf8f0d82d.html",
+    "longText": "../public/texts/7189d0b6-8250-4651-88aa-1d6017a5b477.html",
     "image": "https://baroeg.nl/wp-content/uploads/2022/03/band-pic-e1646396398193-768x201.jpg",
     "dataIntegrity": 10
   },
@@ -21,7 +60,7 @@
     "location": "baroeg",
     "price": 20,
     "shortText": "<p>This Shit Will Fuck You Up!</p>\n",
-    "longText": "../public/texts/3d65b9af-9246-4bdc-86b5-5156131f6051.html",
+    "longText": "../public/texts/53784cf3-810a-4cf4-b979-efee7abc89a3.html",
     "image": "https://baroeg.nl/wp-content/uploads/2020/12/BandPicMain-scaled-e1608219159819-768x217.jpg",
     "dataIntegrity": 10
   },
@@ -34,8 +73,21 @@
     "location": "baroeg",
     "price": 16.5,
     "shortText": "<p>Een thrashgranaat waar veel andere bands jaloers op kunnen zijn.</p>\n",
-    "longText": "../public/texts/de8c8bc8-e5c5-4765-bac7-c6325e9c0fd0.html",
+    "longText": "../public/texts/c44fb34c-f294-4d16-89dc-6ff5325e2ca0.html",
     "image": "https://baroeg.nl/wp-content/uploads/2021/07/Nervosa-768x432.png",
+    "dataIntegrity": 10
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-07-27T17:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://baroeg.nl/productie/sadistic-intent-sijjin/",
+    "title": "Sadistic Intent + Sijjin",
+    "location": "baroeg",
+    "price": 14,
+    "shortText": "<p>Death Metal.</p>\n",
+    "longText": "../public/texts/fb2b6a70-06b1-4546-84ff-19611486538f.html",
+    "image": "https://baroeg.nl/wp-content/uploads/2022/04/Picture-scaled-e1649859021615-768x290.jpg",
     "dataIntegrity": 10
   },
   {
@@ -47,8 +99,21 @@
     "location": "baroeg",
     "price": 20,
     "shortText": "<p>Met o.a. Acidez, Fang, Kezus Krijst, Tukatukas, Malad.</p>\n",
-    "longText": "../public/texts/c6089e89-ee53-477d-97e3-01a801d75fea.html",
+    "longText": "../public/texts/18639ce1-6de1-4e7a-a58b-57dc7849dcda.html",
     "image": "https://baroeg.nl/wp-content/uploads/2020/02/acidez-150x150.jpg",
+    "dataIntegrity": 10
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-07-09T17:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://baroeg.nl/productie/nieuwe-datum-semblant-as-i-may-secret-rule-structural/",
+    "title": "Semblant + As I May + Secret Rule + Structural",
+    "location": "baroeg",
+    "price": 19,
+    "shortText": "<p>Liefhebbers van donkere Gothic Metal opgelet!</p>\n",
+    "longText": "../public/texts/02ddb7ee-547d-4623-b617-38c1b19b8aa0.html",
+    "image": "https://baroeg.nl/wp-content/uploads/2021/01/image4_1-kopie-150x150.jpeg",
     "dataIntegrity": 10
   },
   {
@@ -60,60 +125,8 @@
     "location": "baroeg",
     "price": 15,
     "shortText": "<p>Moddervette gitaarsound, vette grooves maar ook geweldige melodielijnen.</p>\n",
-    "longText": "../public/texts/26396fd5-e8df-4eb2-8e78-0273b31f4b58.html",
+    "longText": "../public/texts/e536d23e-97cc-4c35-8892-d444da964851.html",
     "image": "https://baroeg.nl/wp-content/uploads/2022/03/bandphoto-e1647940560342-768x223.jpg",
-    "dataIntegrity": 10
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-06-26T13:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://baroeg.nl/productie/wavefest-presents-test-dept-qual-staatseinde/",
-    "title": "Wavefest Presents: Test Dept + Qual + Staatseinde",
-    "location": "baroeg",
-    "price": 19,
-    "shortText": "<p>Wavefest Presents: Test Dept + Qual + Staatseinde</p>\n",
-    "longText": "../public/texts/a1d4d012-f014-45ed-88b4-429f4da68c1c.html",
-    "image": "https://baroeg.nl/wp-content/uploads/2021/10/td_g_p_new4-e1637843530619-768x311.jpg",
-    "dataIntegrity": 10
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-06-15T17:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-maassilo-death-to-all-vltimas-coffin-feeder/",
-    "title": "Baroeg On Tour @ Maassilo: Death To All + Vltimas + Coffin Feeder",
-    "location": "baroeg",
-    "price": 25,
-    "shortText": "<p>Belangrijke grondlegger van death metal.</p>\n",
-    "longText": "../public/texts/720f255f-ff96-4218-bc06-630853ffc218.html",
-    "image": "https://baroeg.nl/wp-content/uploads/2022/04/image003-e1648821762776-768x228.png",
-    "dataIntegrity": 10
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-06-11T12:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://baroeg.nl/productie/nieuwe-datum-cenodemonic-freakout-ii-met-o-a-demented-scumcats-speedmobile/",
-    "title": "Cenodemonic Freakout II met o.a. Demented Scumcats + Speedmobile",
-    "location": "baroeg",
-    "price": 19,
-    "shortText": "<p>It&#8217;s a psychosurfgaragepunkabilly freakout! Met Demented Scumcats + Speedmobile + Sick Sick Sinners + Cenobites + Savage Beat + The Heart Monitors!</p>\n",
-    "longText": "../public/texts/2ae3d41d-8942-487d-8bfa-bbf1121c676e.html",
-    "image": "https://baroeg.nl/wp-content/uploads/2020/02/Demented-Scumcats-768x512.jpg",
-    "dataIntegrity": 10
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-06-09T17:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://baroeg.nl/productie/mondo-generator-2/",
-    "title": "Mondo Generator + TankZilla",
-    "location": "baroeg",
-    "price": 17,
-    "shortText": "<p>Frankensteinerij met desert rock en asfaltgrooves.</p>\n",
-    "longText": "../public/texts/13cea42c-e493-4967-ab30-56519feaf953.html",
-    "image": "https://baroeg.nl/wp-content/uploads/2019/11/mondogenerator-768x164.jpg",
     "dataIntegrity": 10
   }
 ]

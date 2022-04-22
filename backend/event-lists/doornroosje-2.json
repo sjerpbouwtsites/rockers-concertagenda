@@ -1,31 +1,5 @@
 [
   {
-    "doorOpenDateTime": "2022-04-10T16:30:00.000Z",
-    "startDateTime": "2022-04-10T16:45:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/dark-tranquillity-ensiferum/",
-    "title": "Dark Tranquillity + Ensiferum e.a.",
-    "location": "doornroosje",
-    "price": 27.5,
-    "shortText": "Fortarock",
-    "longText": "../public/texts/ac386a96-92a2-461f-87f7-cfa0e452b26d.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2021/10/Dark-Tranquillity-scaled-350x197-c-default.jpg",
-    "dataIntegrity": 10
-  },
-  {
-    "doorOpenDateTime": "2022-05-01T06:19:30.000Z",
-    "startDateTime": "2022-05-01T06:20:15.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/muyayo-rif-4/",
-    "title": "Muyayo Rif",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "Uitverkocht",
-    "longText": "../public/texts/76c62977-d5b1-47b5-be1d-8e63723bef7d.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2021/10/Muyayo-Rif-350x197-c-default.jpg",
-    "dataIntegrity": 10
-  },
-  {
     "doorOpenDateTime": "2022-05-27T19:00:00.000Z",
     "startDateTime": "2022-05-27T20:00:00.000Z",
     "endDateTime": null,
@@ -34,7 +8,7 @@
     "location": "doornroosje",
     "price": 14,
     "shortText": null,
-    "longText": "../public/texts/e0a69dbc-5edc-41fa-9b36-3509919c777a.html",
+    "longText": "../public/texts/b9d3dac1-8bb4-450a-8bd3-d4d08979b0d1.html",
     "image": "https://www.doornroosje.nl/app/uploads/2022/01/BeachDog-350x197-c-default.jpg",
     "dataIntegrity": 10
   },
@@ -46,8 +20,8 @@
     "title": "Kids ‘n’ Billies 2022",
     "location": "doornroosje",
     "price": 22.5,
-    "shortText": "Laatste kaarten",
-    "longText": "../public/texts/a4b2fee3-76ca-4d89-a258-ee3c5978ecec.html",
+    "shortText": null,
+    "longText": "../public/texts/4cf97b87-c398-46c5-954d-c14f17ce805a.html",
     "image": "https://www.doornroosje.nl/app/uploads/2022/03/KnB-web-scaled-350x197-c-default.jpg",
     "dataIntegrity": 10
   },
@@ -60,7 +34,7 @@
     "location": "doornroosje",
     "price": 17.5,
     "shortText": "Soulcrusher",
-    "longText": "../public/texts/1095990c-eccc-43df-b7de-8b12021fd86b.html",
+    "longText": "../public/texts/4ee1c6cf-94fd-4f65-9aa4-822e855efce9.html",
     "image": "https://www.doornroosje.nl/app/uploads/2021/09/Audn-1920x1080-1-350x197-c-default.jpg",
     "dataIntegrity": 10
   },
@@ -73,21 +47,21 @@
     "location": "doornroosje",
     "price": 22,
     "shortText": "FortaRock",
-    "longText": "../public/texts/06a7ba81-bd5a-49fe-a815-7e7f38ef0a03.html",
+    "longText": "../public/texts/59dd48d3-b04d-4627-bd87-307b10fb84d7.html",
     "image": "https://www.doornroosje.nl/app/uploads/2021/09/Fleshgod-Apocalypse-1-1920x1080-1-350x197-c-default.jpg",
     "dataIntegrity": 10
   },
   {
-    "doorOpenDateTime": "2023-03-18T18:30:00.000Z",
-    "startDateTime": "2023-03-18T19:00:00.000Z",
+    "doorOpenDateTime": "2023-03-16T18:30:00.000Z",
+    "startDateTime": "2023-03-16T19:15:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/fuzz/",
-    "title": "Fuzz",
+    "venueEventUrl": "https://www.doornroosje.nl/event/tarja-4/",
+    "title": "Tarja",
     "location": "doornroosje",
-    "price": 19.5,
-    "shortText": null,
-    "longText": "../public/texts/ef87936c-bb6e-4b81-9056-4292f2159478.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2021/09/FUZZ-1920x1080-1-350x197-c-default.jpg",
+    "price": 32,
+    "shortText": "Fortarock",
+    "longText": "../public/texts/39f5d5ee-1389-4e73-8f71-7238baae5acf.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2021/09/Tarja-1-1920x1080-1-350x197-c-default.jpg",
     "dataIntegrity": 10
   }
 ]

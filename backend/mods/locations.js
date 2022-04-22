@@ -13,14 +13,12 @@ export class Location {
   }
 }
 
-export function printToPublic() {
+export function printLocationsToPublic() {
   fs.writeFile(
-    "./concertagenda-voorkant/public/location.json",
+    "../public/locations.json",
     JSON.stringify(locations),
     "utf-8",
-    () => {
-      console.log("goedzo");
-    }
+    () => {}
   );
 }
 
