@@ -37,6 +37,9 @@
     padding:0;
   } */
 }
+.header-menu__sticky > *:first-child {
+  margin-top: 0;
+}
 .app-title {
   margin-bottom: .5em;
   color: #b3ff4d;

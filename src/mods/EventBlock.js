@@ -42,15 +42,20 @@ class EventBlock extends React.Component {
         this.setState({ musicEvents: [...oldEvents] });
         setTimeout(() => {
           const blockEl = document.getElementById(`event-id-${musicEventKey}`);
-          window.scrollTo(0, blockEl.offsetTop);
+          const appBannerHeight =
+            document.getElementById("app-banner").clientHeight;
+          window.scrollTo(0, blockEl.offsetTop + appBannerHeight);
         }, 360);
       });
   }
 
   priceElement(musicEvent) {
-    const price = `€${Number(musicEvent.price).toFixed(2)}`;
+    const price = `€ ${Number(musicEvent.price)
+      .toFixed(2)
+      .toString()
+      .replace(".", ",")}`;
     return musicEvent.price !== null ? (
-      <span className="event-block__price contrast-with-dark">
+      <span className="event-block__price contrast-with-dark sans-serif-font">
         {price}
         {this.createLinkToVenue(musicEvent)}
       </span>
@@ -72,7 +77,11 @@ class EventBlock extends React.Component {
   createLinkToVenue(musicEvent) {
     const url = musicEvent.venueEventUrl;
     return !!musicEvent.venueEventUrl ? (
-      <a className="event-block__venue-link" href={url} target="_blank">
+      <a
+        className="event-block__venue-link sans-serif-font"
+        href={url}
+        target="_blank"
+      >
         tickets
       </a>
     ) : (
@@ -96,7 +105,7 @@ class EventBlock extends React.Component {
   createMoreButtonHTML(musicEvent, musicEventKey) {
     return !!musicEvent.longText ? (
       <button
-        className="event-block__load-more"
+        className="event-block__load-more sans-serif-font"
         onClick={this.loadLongerText.bind(this, musicEventKey)}
       >
         more
@@ -136,8 +145,8 @@ class EventBlock extends React.Component {
             >
               {imageHTML}
               <header className="event-block__header contrast-with-dark">
-                <h1 className="event-block__title contrast-with-dark">
-                  <span className="event-block__title-showname">
+                <h2 className="event-block__title contrast-with-dark">
+                  <span className="event-block__title-showname cursive-font">
                     {musicEvent.title}
                   </span>
                   <span className="event-block__title-location">
@@ -147,7 +156,7 @@ class EventBlock extends React.Component {
                   <span className="event-block__startDate contrast-with-dark">
                     {startMomentLang}
                   </span>
-                </h1>
+                </h2>
                 <p
                   className={`event-block__paragraph event-block__paragraph--short-text contrast-with-dark ${
                     musicEvent.enlarged ? "hidden" : ""

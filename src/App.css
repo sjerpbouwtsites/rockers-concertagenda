@@ -4,21 +4,45 @@
   }
 }
 
+body{
+  font-size: 20px;
+  font-family: 'Tapestry', cursive;
+}
+@media (max-width: 1024px){
+  body{
+  font-size: 16px;
+  }
+}
 .app {
   display: flex;
   position: relative;
+  background-color: #0f110e;
+}
+
+.cursive-font {font-family: 'Square Peg', cursive; font-size: 1.25em;
+}
+.sans-serif-font {
+  font-family: 'Montserrat', sans-serif;
 }
 
 .app-banner {
   padding: 1em;
-  background-color:black;
+  background-color: #0f110e;
   color: #b3ff4d;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center
+  align-items: center;
 }
-
+.app-title-right {
+  font-weight: bold;
+  font-size: 1.25em;
+}
+.app-title-right:hover {
+  cursor: pointer;
+  color: #ff9bf9;
+  font-weight: bold;
+}
 .event-block__wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -31,7 +55,7 @@
   flex-direction: column;
   flex-grow: 1;
   justify-content: space-between;
-  flex-basis: calc(50% - 3em);
+  flex-basis: calc(33% - 3em);
   min-height: 300px;
   min-width: 350px;
   padding: 1.5em;
@@ -43,7 +67,7 @@
 
 @media (min-width: 1450px){
   .event-block {
-    flex-basis: calc(33.33% - 3em)
+    flex-basis: calc(25% - 3em)
   }
 }
 
@@ -113,8 +137,9 @@ height: 100%;
 }
 
 .event-block__title-showname {
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   display: block;
+  font-size: 1.5em;
 }
 .event-block__startDate, .event-block__title-location {
   margin-top: .33em;
@@ -129,8 +154,8 @@ height: 100%;
 }
 .event-block__title-location + .event-block__startDate::before {
   position: absolute;
-  top: 11px;
-  left: -2px;
+  top: 5px;
+  left: -1px;
   width: 2px;
   display: block;
   content: '';
@@ -147,7 +172,6 @@ height: 100%;
   border: 0;
   background-color: #3c0c0c;
   color: white;
-  font-weight: bold;
   padding: 0.5em 0.75em;
   margin-top: 0.5em;
   display: inline-block;
@@ -157,9 +181,11 @@ height: 100%;
   position: absolute;
   top: 2em;
   right: .25em;
+  text-transform:uppercase;
+  font-weight: 900;
 }
 .event-block__load-more:hover {
-  background-color: #f1f1f1;
+  background-color: #b3ff4d;
   cursor: pointer;
 }
 .hidden {
@@ -201,6 +227,7 @@ height: 100%;
   right: 0.25em;
   filter: blur(0.25px);
   mix-blend-mode: hard-light;
+  font-weight: 900;
 }
 .event-block--enlarged .event-block__price {
   font-size: 3rem;
@@ -235,11 +262,15 @@ height: 100%;
   color: #b3ff4d;
   text-decoration: none;
 }
+.event-block--enlarged .event-block__footer {
+  text-align: left;
+}
 
 .event-block--enlarged .event-block__venue-link {
-  position: absolute;
-  top: 50%;
+  position: static;
+  top: auto;
   font-size: 2.5rem;
-  right: 2em;
-  transform: translate(0, -50%);
+  right: auto;
+  transform: initial;
+  margin-top: 1em;
 }

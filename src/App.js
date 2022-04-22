@@ -16,6 +16,7 @@ class App extends React.Component {
       locations: [],
     };
     this.updateSwitch = this.updateSwitch.bind(this);
+    this.updateSwipeState = this.updateSwipeState.bind(this);
   }
 
   componentDidMount() {
@@ -46,19 +47,28 @@ class App extends React.Component {
     });
   }
 
+  updateSwipeState() {
+    this.setState({
+      swipeState: this.state.swipeState === 0 ? 1 : 0,
+    });
+  }
+
   appTitleRight() {
     return this.state.swipeState === 0 ? `Uitleg 👉` : `Agenda 👈`;
   }
 
   render() {
+    const { swipeState } = this.state;
     return (
       <div>
-        <div className="app-banner">
+        <div id="app-banner" className="app-banner cursive-font">
           <h1 className="app-title">Rock Agenda</h1>
-          <span className="app-title-right">{this.appTitleRight()}</span>
+          <span onClick={this.updateSwipeState} className="app-title-right">
+            {this.appTitleRight()}
+          </span>
         </div>
         <div className="app">
-          <SwipeableViews onChangeIndex={this.updateSwitch}>
+          <SwipeableViews index={swipeState} onChangeIndex={this.updateSwitch}>
             <main className="app-main">
               <EventBlock />
             </main>
