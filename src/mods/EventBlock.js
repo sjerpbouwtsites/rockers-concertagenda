@@ -4,10 +4,12 @@ class EventBlock extends React.Component {
   state = {
     musicEvents: [],
   };
+  currentYear = new Date().getFullYear();
 
   constructor(props) {
     super(props);
     this.createLocation = this.createLocation.bind(this);
+    this.createStartMoment = this.createStartMoment.bind(this);
   }
 
   componentDidMount() {
@@ -66,13 +68,25 @@ class EventBlock extends React.Component {
   }
 
   createStartMoment(musicEvent) {
-    return new Date(musicEvent.startDateTime).toLocaleDateString("nl", {
-      weekday: "short",
-      month: "long",
-      day: "numeric",
-      hour: "2-digit",
-      minute: "2-digit",
-    });
+    const StartDateTime = new Date(musicEvent.startDateTime);
+    if (StartDateTime.getFullYear() === this.currentYear) {
+      return StartDateTime.toLocaleDateString("nl", {
+        weekday: "short",
+        month: "long",
+        day: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+    } else {
+      return StartDateTime.toLocaleDateString("nl", {
+        weekday: "short",
+        month: "long",
+        day: "numeric",
+        year: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+    }
   }
 
   createLinkToVenue(musicEvent) {
