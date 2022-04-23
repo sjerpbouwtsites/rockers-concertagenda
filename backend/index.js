@@ -12,7 +12,7 @@ function init() {
 
   const workerList = [];
 
-  if (EventsList.isOld("metalfan")) {
+  if (EventsList.isOld("metalfan") || true) {
     workerList.push([fsDirections.scrapeMetalfan, "metalfan", 0]);
   }
   if (EventsList.isOld("baroeg")) {
@@ -115,6 +115,10 @@ function init() {
     workerList.push([fsDirections.scrapeDbs, "dbs", 0]);
     workerList.push([fsDirections.scrapeDbs, "dbs", 1]);
     workerList.push([fsDirections.scrapeDbs, "dbs", 2]);
+  }
+
+  if (EventsList.isOld("gebrdenobel")) {
+    workerList.push([fsDirections.scrapeGebrdenobel, "gebrdenobel", 0]);
   }
 
   walkThroughWorkerList(workerList);

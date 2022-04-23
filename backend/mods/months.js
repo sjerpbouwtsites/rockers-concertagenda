@@ -46,6 +46,7 @@ export const dynamoMonths = {
 export const metalfanMonths = dynamoMonths;
 export const bibelotMonths = baroegMonths;
 export const dbsMonths = baroegMonths;
+export const gebrdenobelMonths = baroegMonths;
 
 const months = {
   baroeg: baroegMonths,
@@ -54,5 +55,6 @@ const months = {
   metalfan: metalfanMonths,
   bibelot: bibelotMonths,
   dbs: dbsMonths,
+  gebrdenobel: gebrdenobelMonths,
 };
 export default months;
