@@ -7,6 +7,7 @@ class EventBlock extends React.Component {
 
   constructor(props) {
     super(props);
+    this.createLocation = this.createLocation.bind(this);
   }
 
   componentDidMount() {
@@ -116,6 +117,13 @@ class EventBlock extends React.Component {
       ""
     );
   }
+  createLocation(musicEvent) {
+    const locationObj = this.props.locations[musicEvent.location] ?? null;
+    if (!locationObj) {
+      return musicEvent.location;
+    }
+    return `${locationObj.name} ${locationObj.city}`;
+  }
 
   stripHTML(text) {
     if (!text) return "";
@@ -152,7 +160,7 @@ class EventBlock extends React.Component {
                     {musicEvent.title}
                   </span>
                   <span className="event-block__title-location">
-                    {musicEvent.location}
+                    {this.createLocation(musicEvent)}
                   </span>
 
                   <span className="event-block__startDate contrast-with-dark">

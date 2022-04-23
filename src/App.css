@@ -168,21 +168,12 @@ height: 100%;
   opacity: 0.75;
 }
 .event-block__title-location + .event-block__startDate {
-  margin-left: 10px;
-  padding-left: 10px;
+  margin: 0;
   position: relative;
   line-height: 1;
-}
-.event-block__title-location + .event-block__startDate::before {
-  position: absolute;
-  top: 5px;
-  left: -1px;
-  width: 2px;
   display: block;
-  content: '';
-  height: 18px;
-  background-color: #716e6ebf;
 }
+
 
 
 
