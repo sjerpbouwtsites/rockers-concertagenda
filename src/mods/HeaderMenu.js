@@ -31,27 +31,15 @@ class HeaderMenu extends React.Component {
       <header className="header-menu">
         <div className="header-menu__sticky">
           <p className="app-text">
-            Deze app verzamelt 'alle' metal, punk, hardrock etc. concerten.
-            <br></br>
-            <br></br>
-            Data komt van de varia concertzalen. Die worden stuk voor stuk
-            uitgelezen en verwerkt. De oude metalfan.nl agenda zit er ook in,
-            voorzover zalen niet direct gedekt worden.
+            Deze app verzamelt 'alle' metal, punk, hardrock etc. concerten, van
+            een groeiende lijst concertzalen.
           </p>
-          <nav className="navigation-block">
-            <ul className="navigation-block__list">
-              {names.map((nameOfScrape, key) => {
-                return (
-                  <li className="navigation-block__list-item" key={key}>
-                    {nameOfScrape}
-                  </li>
-                );
-              })}
-            </ul>
-          </nav>
-          <h2 className="app-title">Over mij</h2>
+
+          <h2 className="app-title cursive-font">Over mij</h2>
           <p className="app-text">
-            Ik was ff klaar met het organiseren van de klassestrijd bij de{" "}
+            Ik ben Sjerp van Wouden, uit Mokum, leuk dat je me app gebruikt!
+            <br></br> Ik ben een socialistische vakbondsman en ben organiser bij
+            de{" "}
             <a
               className="app-link-in-text"
               href="https://radicalriders.nl"
@@ -65,15 +53,32 @@ class HeaderMenu extends React.Component {
               href="https://vloerwerk.org"
               target="_blank"
             >
-              Vloerwerk
-            </a>{" "}
-            en had zin in iets anders. En me vorige viral app is al weer ruim
-            een jaar geleden. Na Corona ga ik geen concert meer missen. Maar
-            waarom is er nog geen goed overzicht?!
-            <br></br>
-            Ik ben Sjerp van Wouden, uit Mokum. Veel plezier met me app 🍻
+              Solidariteitsnetwerk Vloerwerk
+            </a>
+            .<br></br>Van al dat organisen heb ik soms m'n buik vol en dan draai
+            ik vaak een app in elkaar.<br></br>
+            Al jaren vind ik 't veel te moeilijk om een beetje bij te houden
+            waar nu welk optreden is. Nu na Corona wil ik wel ieder concert dat
+            ik kan bijwonen.... toch?! Dus bedacht ik deze app.
           </p>
-          <h2 className="app-title">Draag bij</h2>
+          <h2 className="app-title cursive-font">Momenteel gescrapede zalen</h2>
+          <p className="app-text">
+            Volgende zalen worden één voor één uitgelezen en verwerkt. De oude
+            metalfan.nl agenda zit er ook in, voorzover zalen niet direct gedekt
+            worden.
+          </p>
+          <nav className="navigation-block">
+            <ul className="navigation-block__list">
+              {names.map((nameOfScrape, key) => {
+                return (
+                  <li className="navigation-block__list-item" key={key}>
+                    {nameOfScrape}
+                  </li>
+                );
+              })}
+            </ul>
+          </nav>
+          <h2 className="app-title cursive-font">Draag bij</h2>
           <p className="app-text">
             <strong>Doneer.</strong> Ook gratis apps kosten geld en tijd.
             Doneren kan en wordt op prijs gesteld! Dat kan naar
@@ -95,7 +100,7 @@ class HeaderMenu extends React.Component {
             voor de vuist weg gebouwd dus wellicht wat rommelig ;) Je kan de app
             thuis installeren vanaf github en draaien.
           </p>
-          <h2 className="app-title">Contact</h2>
+          <h2 className="app-title cursive-font">Contact</h2>
           <p className="app-text">
             <a
               className="app-link-in-text"
