@@ -1,9 +1,8 @@
 import fs from "fs";
 export class Location {
-  street = null;
-  name = null;
   constructor(config) {
     this.name = config.name;
+    this.city = config.city;
   }
   static makeLocationSlug(rawName) {
     if (rawName === "nul13") {

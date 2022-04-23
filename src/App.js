@@ -13,7 +13,7 @@ class App extends React.Component {
     this.state = {
       swipeState: 0, // 0: text; 1: app
       names: [],
-      locations: [],
+      locations: {},
     };
     this.updateSwitch = this.updateSwitch.bind(this);
     this.updateSwipeState = this.updateSwipeState.bind(this);
@@ -70,7 +70,7 @@ class App extends React.Component {
         <div className="app">
           <SwipeableViews index={swipeState} onChangeIndex={this.updateSwitch}>
             <main className="app-main">
-              <EventBlock />
+              <EventBlock locations={this.state.locations} />
             </main>
             <div>
               <HeaderMenu timestampNamen={this.state.names} />
@@ -83,18 +83,16 @@ class App extends React.Component {
 }
 
 async function getAllData() {
-  const timestamps = await fetch("./public/timestamps.json", {})
+  const timestamps = await fetch("./timestamps.json", {})
     .then((response) => {
       return response.json();
     })
     .catch((err) => {
       console.error(err);
     });
-  const locations = await fetch("./public/locations.json", {}).then(
-    (response) => {
-      return response.json();
-    }
-  );
+  const locations = await fetch("./locations.json", {}).then((response) => {
+    return response.json();
+  });
   return {
     timestamps,
     locations,

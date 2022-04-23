@@ -90,10 +90,13 @@ class EventBlock extends React.Component {
   }
 
   createImageHTML(musicEvent) {
-    return !!musicEvent.image ? (
+    console.log(musicEvent);
+    const imgSrc =
+      musicEvent.image ?? `location-images/${musicEvent.location}.jpg`;
+    return !!imgSrc ? (
       <img
         className="event-block--image"
-        src={musicEvent.image}
+        src={imgSrc}
         alt={musicEvent.title}
         loading="lazy"
       />
