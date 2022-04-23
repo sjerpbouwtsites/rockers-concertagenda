@@ -14,6 +14,7 @@ const fsDirections = {
   dynamoJson: path.resolve("./event-lists/dynamo.json"),
   metalfanJson: path.resolve("./event-lists/metalfan.json"),
   bibelotJson: path.resolve("./event-lists/bibelot.json"),
+  dbsJson: path.resolve("./event-lists/dbs.json"),
   occiiJson: path.resolve("./event-lists/occii.json"),
   effenaarJson: path.resolve("./event-lists/effenaar.json"),
   timestampsJson: path.resolve("./event-lists/timestamps.json"),

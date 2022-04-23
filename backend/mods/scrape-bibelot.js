@@ -2,16 +2,11 @@ import MusicEvent from "./music-event.js";
 import puppeteer from "puppeteer";
 import { parentPort } from "worker_threads";
 import EventsList from "./events-list.js";
-import fs from "fs";
-import crypto from "crypto";
-import fsDirections from "./fs-directions.js";
 import { bibelotMonths } from "./months.js";
 import {
-  getPriceFromHTML,
   handleError,
   log,
   basicMusicEventsFilter,
-  errorAfterSeconds,
   postPageInfoProcessing,
 } from "./tools.js";
 import { letScraperListenToMasterMessageAndInit } from "./generic-scraper.js";

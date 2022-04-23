@@ -1,4 +1,177 @@
 
+  Baroeg Error - Error - 7:22:50 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of null (reading 'textContent')
+    at __puppeteer_evaluation_script__:2:56
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-dbs.js:103:33)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-dbs.js:70:18)
+    at async scrapeDbs (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-dbs.js:23:5) 
+  Evaluation failed: TypeError: Cannot read properties of null (reading 'textContent')
+    at __puppeteer_evaluation_script__:2:56
+  
+  
+  Baroeg Error - Error - 7:22:49 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of null (reading 'textContent')
+    at __puppeteer_evaluation_script__:2:56
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-dbs.js:103:33)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-dbs.js:70:18)
+    at async scrapeDbs (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-dbs.js:23:5) 
+  Evaluation failed: TypeError: Cannot read properties of null (reading 'textContent')
+    at __puppeteer_evaluation_script__:2:56
+  
+  
+  Baroeg Error - Error - 7:22:47 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of null (reading 'textContent')
+    at __puppeteer_evaluation_script__:2:56
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-dbs.js:103:33)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-dbs.js:70:18)
+    at async scrapeDbs (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-dbs.js:23:5) 
+  Evaluation failed: TypeError: Cannot read properties of null (reading 'textContent')
+    at __puppeteer_evaluation_script__:2:56
+  
+  
+  Baroeg Error - TypeError - 7:16:58 AM
+  TypeError: page.waitUntil is not a function
+    at getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-dbs.js:102:16)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-dbs.js:70:18)
+    at async scrapeDbs (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-dbs.js:23:5) 
+  page.waitUntil is not a function
+  
+  
+  Baroeg Error - TypeError - 7:16:57 AM
+  TypeError: page.waitUntil is not a function
+    at getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-dbs.js:102:16)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-dbs.js:70:18)
+    at async scrapeDbs (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-dbs.js:23:5) 
+  page.waitUntil is not a function
+  
+  
+  Baroeg Error - TypeError - 7:16:56 AM
+  TypeError: page.waitUntil is not a function
+    at getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-dbs.js:102:16)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-dbs.js:70:18)
+    at async scrapeDbs (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-dbs.js:23:5) 
+  page.waitUntil is not a function
+  
+  
+  Baroeg Error - ReferenceError - 7:03:54 AM
+  ReferenceError: pageInfos is not defined
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-dbs.js:72:7)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async scrapeDbs (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-dbs.js:21:5) 
+  pageInfos is not defined
+  
+  
+  Baroeg Error - Error - 6:57:45 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'match')
+    at __puppeteer_evaluation_script__:20:51
+    at Array.map (<anonymous>)
+    at __puppeteer_evaluation_script__:6:10
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-dbs.js:111:21)
+    at async scrapeDbs (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-dbs.js:19:29) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'match')
+    at __puppeteer_evaluation_script__:20:51
+    at Array.map (<anonymous>)
+    at __puppeteer_evaluation_script__:6:10
+  
+  
+  Baroeg Error - Error - 6:57:44 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'match')
+    at __puppeteer_evaluation_script__:20:51
+    at Array.map (<anonymous>)
+    at __puppeteer_evaluation_script__:6:10
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-dbs.js:111:21)
+    at async scrapeDbs (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-dbs.js:19:29) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'match')
+    at __puppeteer_evaluation_script__:20:51
+    at Array.map (<anonymous>)
+    at __puppeteer_evaluation_script__:6:10
+  
+  
+  Baroeg Error - Error - 6:57:42 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'match')
+    at __puppeteer_evaluation_script__:20:51
+    at Array.map (<anonymous>)
+    at __puppeteer_evaluation_script__:6:10
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-dbs.js:111:21)
+    at async scrapeDbs (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-dbs.js:19:29) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'match')
+    at __puppeteer_evaluation_script__:20:51
+    at Array.map (<anonymous>)
+    at __puppeteer_evaluation_script__:6:10
+  
+  
+  Baroeg Error - TimeoutError - 6:52:35 AM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  Baroeg Error - Error - 6:29:43 AM
+  Error: Evaluation failed: TypeError: document.querySelectorAll(...).filter is not a function
+    at __puppeteer_evaluation_script__:5:12
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-dbs.js:111:21)
+    at async scrapeDbs (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-dbs.js:19:29) 
+  Evaluation failed: TypeError: document.querySelectorAll(...).filter is not a function
+    at __puppeteer_evaluation_script__:5:12
+  
+  
+  Baroeg Error - Error - 6:29:42 AM
+  Error: Evaluation failed: TypeError: document.querySelectorAll(...).filter is not a function
+    at __puppeteer_evaluation_script__:5:12
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-dbs.js:111:21)
+    at async scrapeDbs (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-dbs.js:19:29) 
+  Evaluation failed: TypeError: document.querySelectorAll(...).filter is not a function
+    at __puppeteer_evaluation_script__:5:12
+  
+  
+  Baroeg Error - Error - 6:29:41 AM
+  Error: Evaluation failed: TypeError: document.querySelectorAll(...).filter is not a function
+    at __puppeteer_evaluation_script__:5:12
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-dbs.js:111:21)
+    at async scrapeDbs (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-dbs.js:19:29) 
+  Evaluation failed: TypeError: document.querySelectorAll(...).filter is not a function
+    at __puppeteer_evaluation_script__:5:12
+  
+  
   Baroeg Error - TypeError - 4:33:47 AM
   TypeError: t.toLowerCase is not a function
     at basicMusicEventsFilter (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:101:36)
