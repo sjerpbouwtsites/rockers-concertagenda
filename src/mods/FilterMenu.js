@@ -89,7 +89,7 @@ class FilterMenu extends React.Component {
   render() {
     return (
       <header className="header-menu header-menu--filter">
-        <div className="">
+        <div className="header-menu__sticky">
           <h2 className="app-title cursive-font">Filter op podium:</h2>
 
           <nav className="navigation-block">

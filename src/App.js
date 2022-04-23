@@ -62,21 +62,36 @@ class App extends React.Component {
   }
 
   updateSwitch(index, indexLatest, meta) {
-    this.setState({
-      swipeState: index,
-    });
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 50);
+    setTimeout(() => {
+      this.setState({
+        swipeState: index,
+      });
+    }, 300);
   }
 
   updateSwipeStateExplainer() {
-    this.setState({
-      swipeState: this.state.swipeState === 1 ? 2 : 1,
-    });
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 50);
+    setTimeout(() => {
+      this.setState({
+        swipeState: this.state.swipeState === 1 ? 2 : 1,
+      });
+    }, 300);
   }
 
   updateSwipeStateFilter() {
-    this.setState({
-      swipeState: this.state.swipeState === 0 ? 1 : 0,
-    });
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 50);
+    setTimeout(() => {
+      this.setState({
+        swipeState: this.state.swipeState === 0 ? 1 : 0,
+      });
+    }, 300);
   }
 
   appTitleToExplainer() {

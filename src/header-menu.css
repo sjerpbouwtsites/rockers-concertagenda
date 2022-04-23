@@ -12,15 +12,13 @@
   /* overflow-x:scroll; */
 }
 
-
-@media (min-width: 1024px){
-  .header-menu__sticky {
-    position: sticky;
-    top: 20px;
-    padding-right: 50px;
-    margin-right: -50px;  
-  }
+.header-menu__sticky {
+  /* position: sticky;
+  top: 20px;
+  padding-right: 50px;
+  margin-right: -50px;   */
 }
+
 @media(max-width: 1024px){
   /* .header-menu{
     position: absolute;
