@@ -3,6 +3,7 @@ import React from "react";
 class EventBlock extends React.Component {
   state = {
     musicEvents: [],
+    maxEventsShown: 100,
   };
   currentYear = new Date().getFullYear();
 
@@ -10,6 +11,7 @@ class EventBlock extends React.Component {
     super(props);
     this.createLocation = this.createLocation.bind(this);
     this.createStartMoment = this.createStartMoment.bind(this);
+    this.add100ToMaxEventsShown = this.add100ToMaxEventsShown.bind(this);
   }
 
   componentDidMount() {
@@ -23,6 +25,15 @@ class EventBlock extends React.Component {
       .catch((error) => {
         console.error(error);
       });
+  }
+
+  add100ToMaxEventsShown() {
+    const oldMax = this.state.maxEventsShown;
+    const posMax = oldMax + 100;
+    const newMax = Math.min(posMax, this.state.musicEvents.length);
+    this.setState({
+      maxEventsShown: newMax,
+    });
   }
 
   async loadLongerText(musicEventKey, buttonClicked) {
@@ -149,60 +160,104 @@ class EventBlock extends React.Component {
 
     return (
       <div className="event-block__wrapper">
-        {musicEvents.map((musicEvent, musicEventKey) => {
-          const priceElement = this.priceElement(musicEvent);
-          const startMomentLang = this.createStartMoment(musicEvent);
-          const linkToVenueHTML = this.createLinkToVenue(musicEvent);
-          const imageHTML = this.createImageHTML(musicEvent);
-          const articleID = `event-id-${musicEventKey}`;
-          const moreButtonHTML = this.createMoreButtonHTML(
-            musicEvent,
-            musicEventKey
-          );
-          return (
-            <article
-              id={articleID}
-              key={musicEventKey}
-              className={`event-block provide-dark-contrast ${
-                musicEvent.enlarged ? "event-block--enlarged" : ""
-              }`}
-            >
-              {imageHTML}
-              <header className="event-block__header contrast-with-dark">
-                <h2 className="event-block__title contrast-with-dark">
-                  <span className="event-block__title-showname cursive-font">
-                    {musicEvent.title}
-                  </span>
-                  <span className="event-block__title-location">
-                    {this.createLocation(musicEvent)}
-                  </span>
+        {musicEvents
+          .filter((musicEvent, musicEventKey) => {
+            return musicEventKey <= this.state.maxEventsShown;
+          })
+          .filter((musicEvent, musicEventKey) => {
+            if (!this.props.filterSettings?.podia[musicEvent.location]) {
+              return true;
+            }
+            return (
+              this.props.filterSettings.podia[musicEvent.location].checked ??
+              true
+            );
+          })
+          .filter((musicEvent, musicEventKey) => {
+            if (!this.props.filterSettings?.daterange?.lower) {
+              return true;
+            }
+            const lowerRangeTime = new Date(
+              this.props.filterSettings.daterange.lower
+            ).getTime();
+            const upperRangeTime = new Date(
+              this.props.filterSettings.daterange.upper
+            ).getTime();
+            const eventTime = new Date(musicEvent.startDateTime).getTime();
 
-                  <span className="event-block__startDate contrast-with-dark">
-                    {startMomentLang}
-                  </span>
-                </h2>
-                <p
-                  className={`event-block__paragraph event-block__paragraph--short-text contrast-with-dark ${
-                    musicEvent.enlarged ? "hidden" : ""
-                  }`}
-                >
-                  {this.stripHTML(musicEvent.shortText)}
-                </p>
-                {priceElement}
-              </header>
-              <section className="event-block__main contrast-with-dark">
-                {moreButtonHTML}
-                <div
-                  className="void-container-for-enlarged"
-                  dangerouslySetInnerHTML={{ __html: musicEvent.longTextHTML }}
-                ></div>
-                <footer className="event-block__footer contrast-with-dark">
-                  {linkToVenueHTML}
-                </footer>
-              </section>
-            </article>
-          );
-        })}
+            if (lowerRangeTime > eventTime) {
+              return false;
+            }
+            if (upperRangeTime < eventTime) {
+              return false;
+            }
+            return true;
+          })
+          .map((musicEvent, musicEventKey) => {
+            const priceElement = this.priceElement(musicEvent);
+            const startMomentLang = this.createStartMoment(musicEvent);
+            const linkToVenueHTML = this.createLinkToVenue(musicEvent);
+            const imageHTML = this.createImageHTML(musicEvent);
+            const articleID = `event-id-${musicEventKey}`;
+            const moreButtonHTML = this.createMoreButtonHTML(
+              musicEvent,
+              musicEventKey
+            );
+            return (
+              <article
+                id={articleID}
+                key={musicEventKey}
+                className={`event-block provide-dark-contrast ${
+                  musicEvent.enlarged ? "event-block--enlarged" : ""
+                }`}
+              >
+                {imageHTML}
+                <header className="event-block__header contrast-with-dark">
+                  <h2 className="event-block__title contrast-with-dark">
+                    <span className="event-block__title-showname cursive-font">
+                      {musicEvent.title}
+                    </span>
+                    <span className="event-block__title-location">
+                      {this.createLocation(musicEvent)}
+                    </span>
+
+                    <span className="event-block__startDate contrast-with-dark">
+                      {startMomentLang}
+                    </span>
+                  </h2>
+                  <p
+                    className={`event-block__paragraph event-block__paragraph--short-text contrast-with-dark ${
+                      musicEvent.enlarged ? "hidden" : ""
+                    }`}
+                  >
+                    {this.stripHTML(musicEvent.shortText)}
+                  </p>
+                  {priceElement}
+                </header>
+                <section className="event-block__main contrast-with-dark">
+                  {moreButtonHTML}
+                  <div
+                    className="void-container-for-enlarged"
+                    dangerouslySetInnerHTML={{
+                      __html: musicEvent.longTextHTML,
+                    }}
+                  ></div>
+                  <footer className="event-block__footer contrast-with-dark">
+                    {linkToVenueHTML}
+                  </footer>
+                </section>
+              </article>
+            );
+          })}
+        <button
+          className="event-block__more-blocks"
+          onClick={this.add100ToMaxEventsShown}
+        >
+          <span>
+            {this.state.maxEventsShown} van {this.state.musicEvents.length}{" "}
+            geladen. Klik voor meer.
+          </span>
+        </button>
       </div>
     );
   }
@@ -212,7 +267,6 @@ async function getData() {
   const musicEvents = await fetch("./events-list.json", {}).then((response) => {
     return response.json();
   });
-  console.log(musicEvents);
 
   return musicEvents;
 }

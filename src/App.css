@@ -48,7 +48,7 @@ h2.app-title {
   font-weight: bold;
   font-size: 1.25em;
 }
-.app-title-right:hover {
+.app-title-right span:hover {
   cursor: pointer;
   color: var(--pink);
   font-weight: bold;
@@ -288,4 +288,22 @@ height: 100%;
   right: auto;
   transform: initial;
   margin-top: 1em;
+}
+
+.event-block__more-blocks {
+  background-color: var(--pink);
+  color: white;
+  padding: 0.5em 0.75em;
+  margin-top: 0;
+  display: inline-block;
+  font-size: 1.5em;
+  mix-blend-mode: hard-light;
+  flex-grow: 0;
+  text-transform: uppercase;
+  font-weight: 900;
+  width: 100%;
+  border: 0;
+}
+.event-block__more-blocks:hover {
+  cursor: pointer;
 }

@@ -7,22 +7,7 @@ class HeaderMenu extends React.Component {
     super(props);
   }
 
-  componentDidMount() {
-    getAllData()
-      .then((response) => {
-        return response.timestamps;
-      })
-      .then((timestamps) => {
-        if (timestamps) {
-          this.setState({
-            names: Object.keys(timestamps),
-          });
-        }
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  }
+  componentDidMount() {}
 
   render() {
     const names = this.state.names;
@@ -69,7 +54,7 @@ class HeaderMenu extends React.Component {
           </p>
           <nav className="navigation-block">
             <ul className="navigation-block__list">
-              {names.map((nameOfScrape, key) => {
+              {this.props.timestampNamen.map((nameOfScrape, key) => {
                 return (
                   <li className="navigation-block__list-item" key={key}>
                     {nameOfScrape}
@@ -114,15 +99,6 @@ class HeaderMenu extends React.Component {
       </header>
     );
   }
-}
-
-async function getAllData() {
-  const timestamps = await fetch("./timestamps.json", {}).then((response) => {
-    return response.json();
-  });
-  return {
-    timestamps,
-  };
 }
 
 export default HeaderMenu;
