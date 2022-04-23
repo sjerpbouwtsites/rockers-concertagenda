@@ -1,31 +1,5 @@
 [
   {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-04-22T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Devin Townsend",
-    "location": "carlswerkvictoria",
-    "price": null,
-    "shortText": "Carlswerk Victoria, Keulen",
-    "longText": null,
-    "image": null,
-    "dataIntegrity": 1
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-04-22T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Infected Rain en Dagoba",
-    "location": "ragnarok",
-    "price": null,
-    "shortText": "Ragnarok, Bree (België)",
-    "longText": null,
-    "image": null,
-    "dataIntegrity": 1
-  },
-  {
     "doorOpenDateTime": "2022-04-22T11:30:00.000Z",
     "startDateTime": "2022-04-22T12:30:00.000Z",
     "endDateTime": null,
@@ -62,6 +36,19 @@
     "shortText": "Noise Rock | Sludge | Kraut",
     "longText": "../public/texts/066730cd-e17a-4121-b617-306d66932987.html",
     "image": "https://occii.org/wp-content/uploads/2022/01/the-cold-vein-promoPhoto2-color-jc-694x1024.jpg",
+    "dataIntegrity": 10
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-04-22T19:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://bibelot.net/agenda/tusky-2/",
+    "title": "Tusky",
+    "location": "bibelot",
+    "price": null,
+    "shortText": "",
+    "longText": "../public/texts/041ed508-4467-41cd-9716-5da54bc6e7a6.html",
+    "image": "https://bibelot.net/wp-content/uploads/2021/12/IMG_4789-MAON-Fotografie-e1640092674428-1400x784.jpg",
     "dataIntegrity": 10
   },
   {
@@ -504,6 +491,19 @@
     "shortText": "",
     "longText": "../public/texts/7bc824b3-51c8-41bc-9c9d-10c1da2d58bc.html",
     "image": "https://www.effenaar.nl/uploads/event_spotlight_image/5ff85fedea472.jpg",
+    "dataIntegrity": 10
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-05-01T17:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://bibelot.net/agenda/kruelty-jp/",
+    "title": "Kruelty (JP) + Purgatory (US)+ xViciousx (BE)",
+    "location": "bibelot",
+    "price": 18.5,
+    "shortText": "",
+    "longText": "../public/texts/60a09b42-81ab-4f9d-969e-dbc5de5bc316.html",
+    "image": null,
     "dataIntegrity": 10
   },
   {
@@ -1271,6 +1271,19 @@
     "shortText": "Free Jazz | Punk | Skronk | Genius",
     "longText": "../public/texts/2e549bb3-835f-4195-9ab3-b0923eeeb4ad.html",
     "image": "https://occii.org/wp-content/uploads/2022/03/277157233_10228686685774591_847428925610564401_n.jpg",
+    "dataIntegrity": 10
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-05-20T19:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://bibelot.net/agenda/drijfkracht-whorses-hypochristmutreefuzz-kalaallit-nunaat/",
+    "title": "[drijfkracht]: WHORSES + Hypochristmutreefuzz + Kalaallit Nunaat",
+    "location": "bibelot",
+    "price": 14,
+    "shortText": "",
+    "longText": "../public/texts/9fec379f-1f5d-469c-bf38-9f9d204e2277.html",
+    "image": "https://bibelot.net/wp-content/uploads/2022/01/drijfkracht-web-01-1400x788.jpg",
     "dataIntegrity": 10
   },
   {
@@ -2341,19 +2354,6 @@
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-06-15T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Epica en Blackbriar",
-    "location": "bibelot",
-    "price": null,
-    "shortText": "Bibelot, Dordrecht",
-    "longText": null,
-    "image": null,
-    "dataIntegrity": 1
-  },
-  {
-    "doorOpenDateTime": null,
     "startDateTime": "2022-06-15T17:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-maassilo-death-to-all-vltimas-coffin-feeder/",
@@ -2363,6 +2363,19 @@
     "shortText": "<p>Belangrijke grondlegger van death metal.</p>\n",
     "longText": "../public/texts/7812944f-0b83-47c3-89f8-cff52684087c.html",
     "image": "https://baroeg.nl/wp-content/uploads/2022/04/image003-e1648821762776-768x228.png",
+    "dataIntegrity": 10
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-06-15T17:50:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://bibelot.net/agenda/epica/",
+    "title": "Epica",
+    "location": "bibelot",
+    "price": 35,
+    "shortText": "",
+    "longText": "../public/texts/44e658f3-07b4-4575-89de-b6b103c11884.html",
+    "image": "https://bibelot.net/wp-content/uploads/2022/01/Epica-band-by-Tim-Tronckoe-7-1400x933.jpg",
     "dataIntegrity": 10
   },
   {
@@ -4069,6 +4082,19 @@
     "dataIntegrity": 1
   },
   {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-09-15T19:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://bibelot.net/agenda/brutality-will-prevail-uk/",
+    "title": "Brutality Will Prevail (UK)",
+    "location": "bibelot",
+    "price": 16.5,
+    "shortText": "",
+    "longText": "../public/texts/01cced0c-94a7-4140-839d-dbb6b31a5023.html",
+    "image": "https://bibelot.net/wp-content/uploads/2022/01/BWP-2-1400x932.jpg",
+    "dataIntegrity": 10
+  },
+  {
     "doorOpenDateTime": "2022-09-15T19:00:00.000Z",
     "startDateTime": "2022-09-15T20:00:00.000Z",
     "endDateTime": null,
@@ -4105,6 +4131,19 @@
     "shortText": "Support: Youth Fountain",
     "longText": "../public/texts/1a09fe63-5f0d-49b3-81a2-c962137156aa.html",
     "image": "https://www.dynamo-eindhoven.nl/wp-content/uploads/2022/01/Cory-Wells-Promo-2022-1200x1200.jpg",
+    "dataIntegrity": 10
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-09-17T17:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://bibelot.net/agenda/dordrecht-metal-fest3/",
+    "title": "Dordrecht Metal Fest",
+    "location": "bibelot",
+    "price": 14,
+    "shortText": "",
+    "longText": "../public/texts/123e59da-314c-4637-b3c1-4a36a1264101.html",
+    "image": "https://bibelot.net/wp-content/uploads/2022/03/OT2019-d97b.jpg",
     "dataIntegrity": 10
   },
   {
@@ -4937,6 +4976,19 @@
     "shortText": "Spiritueel en hard blackmetaltrio | Support: Stygian Bough (Bell Witch & Aerial Ruin samenwerking)",
     "longText": "../public/texts/5643c602-2a59-47cf-a2a5-932f26e7ecd8.html",
     "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2020/12/WITTR-2019-kopie-700x470.jpg",
+    "dataIntegrity": 10
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-10-14T19:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://bibelot.net/agenda/bleach-it/",
+    "title": "BLEACH (IT) – Nirvana Tribute",
+    "location": "bibelot",
+    "price": 13,
+    "shortText": "",
+    "longText": "../public/texts/ed889fc0-ad0f-4aa7-a51c-29beb5ffdec8.html",
+    "image": "https://bibelot.net/wp-content/uploads/2022/04/BLEACH-bandpic-2019-1400x781.jpg",
     "dataIntegrity": 10
   },
   {
@@ -5786,6 +5838,19 @@
   },
   {
     "doorOpenDateTime": null,
+    "startDateTime": "2022-11-26T20:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://bibelot.net/agenda/magnapop-us/",
+    "title": "Magnapop (US)",
+    "location": "bibelot",
+    "price": 22.5,
+    "shortText": "",
+    "longText": "../public/texts/c9b5eb60-871b-491c-9e9c-a6d8ccfc13c7.html",
+    "image": "https://bibelot.net/wp-content/uploads/2020/03/Magnapop-HR-PRESS-2018-pic-by-Pieter-Verhaeghe-1400x932.jpg",
+    "dataIntegrity": 10
+  },
+  {
+    "doorOpenDateTime": null,
     "startDateTime": "2022-11-27T00:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": null,
@@ -5991,6 +6056,19 @@
     "longText": null,
     "image": null,
     "dataIntegrity": 1
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-12-04T17:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://bibelot.net/agenda/faces-of-death/",
+    "title": "Rising Merch Faces of Death",
+    "location": "bibelot",
+    "price": 24,
+    "shortText": "",
+    "longText": "../public/texts/7bb0b18d-fba1-46b1-846a-b5e619bdc155.html",
+    "image": "https://bibelot.net/wp-content/uploads/2022/03/Faces-of-Death-fb-banner-7dbb-1400x787.jpg",
+    "dataIntegrity": 10
   },
   {
     "doorOpenDateTime": null,

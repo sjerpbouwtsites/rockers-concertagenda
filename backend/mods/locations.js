@@ -111,6 +111,8 @@ const locations = {
   }),
   tolhuistuin: new Location({ name: "Tolhuistuin", city: "Amsterdam" }),
   trix: new Location({ name: "Trix", city: "Antwerpen" }),
+  turbinenhalle: new Location({ name: "Turbinenhalle", city: "Oberhausen" }),
+  turock: new Location({ name: "Turock", city: "Essen" }),
   volt: new Location({ name: "Volt", city: "Sittard" }),
   vorstnationaal: new Location({ name: "Vorst Nationaal", city: "Brussel" }),
   wackenduitsland: new Location({

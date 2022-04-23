@@ -90,7 +90,6 @@ class EventBlock extends React.Component {
   }
 
   createImageHTML(musicEvent) {
-    console.log(musicEvent);
     const imgSrc =
       musicEvent.image ?? `location-images/${musicEvent.location}.jpg`;
     return !!imgSrc ? (
@@ -191,6 +190,7 @@ async function getData() {
   const musicEvents = await fetch("./events-list.json", {}).then((response) => {
     return response.json();
   });
+  console.log(musicEvents);
 
   return musicEvents;
 }
@@ -207,8 +207,13 @@ function musicEventDateFilter(musicEvent) {
   if (!musicEvent.startDateTime) {
     return false;
   }
-  const musicEventTime = new Date(musicEvent.startDateTime).getDate();
-  const nowDate = new Date().getDate();
+  const musicEventTime = Number(
+    musicEvent.startDateTime.match(/(.*)T/)[1].replace(/\D/g, "")
+  );
+  const nowDateString = new Date();
+  const nowDate = Number(
+    nowDateString.toISOString().match(/(.*)T/)[1].replace(/\D/g, "")
+  );
   return musicEventTime >= nowDate;
 }
 

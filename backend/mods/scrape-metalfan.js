@@ -104,6 +104,7 @@ async function getBaseMusicEvents(browser) {
           "doornroosje",
           "metropool",
           "melkweg",
+          "bibelot",
         ].includes(locationName)
       ) {
         return;

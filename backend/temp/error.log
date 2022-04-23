@@ -1,4 +1,24 @@
 
+  Baroeg Error - TypeError - 4:33:47 AM
+  TypeError: t.toLowerCase is not a function
+    at basicMusicEventsFilter (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:101:36)
+    at Array.filter (<anonymous>)
+    at makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-bibelot.js:185:6)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async scrapeBibelot (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-bibelot.js:22:29) 
+  t.toLowerCase is not a function
+  
+  
+  Baroeg Error - TypeError - 4:31:01 AM
+  TypeError: t.toLowerCase is not a function
+    at basicMusicEventsFilter (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:101:36)
+    at Array.filter (<anonymous>)
+    at makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-bibelot.js:185:6)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async scrapeBibelot (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-bibelot.js:22:29) 
+  t.toLowerCase is not a function
+  
+  
   Baroeg Error - TypeError - 4:08:54 PM
   TypeError: Cannot read properties of undefined (reading 'substring')
     at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:80:36)

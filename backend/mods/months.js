@@ -44,11 +44,13 @@ export const dynamoMonths = {
 };
 
 export const metalfanMonths = dynamoMonths;
+export const bibelotMonths = baroegMonths;
 
 const months = {
   baroeg: baroegMonths,
   occii: occiiMonths,
   dynamy: dynamoMonths,
   metalfan: metalfanMonths,
+  bibelot: bibelotMonths,
 };
 export default months;
