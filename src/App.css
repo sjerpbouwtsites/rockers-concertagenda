@@ -8,6 +8,13 @@ body{
   font-size: 20px;
   font-family: 'Montserrat', sans-serif;
 }
+
+:root {
+  --green: #b3ff4d;
+  --pink: #ff9bf9;
+  --anthracite: #0f110e
+}
+
 @media (max-width: 1024px){
   body{
   font-size: 16px;
@@ -16,7 +23,7 @@ body{
 .app {
   display: flex;
   position: relative;
-  background-color: #0f110e;
+  background-color: var(--anthracite);
 }
 
 .cursive-font {font-family: 'Square Peg', cursive;
@@ -27,8 +34,8 @@ body{
 
 .app-banner {
   padding: 1em;
-  background-color: #0f110e;
-  color: #b3ff4d;
+  background-color: var(--anthracite);
+  color: var(--green);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -43,7 +50,7 @@ h2.app-title {
 }
 .app-title-right:hover {
   cursor: pointer;
-  color: #ff9bf9;
+  color: var(--pink);
   font-weight: bold;
 }
 .event-block__wrapper {
@@ -129,6 +136,17 @@ height: 100%;
   mix-blend-mode: multiply;
   z-index: -1;
 }
+.event-block--enlarged.provide-dark-contrast::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: rgba(0,0,0,0.4);
+  mix-blend-mode: darken;
+  z-index: -1;
+}
 .event-block__header {
   margin-bottom: 0.5em;
 }
@@ -173,7 +191,7 @@ height: 100%;
 }
 .event-block__load-more {
   border: 0;
-  background-color: #3c0c0c;
+  background-color: var(--green);
   color: white;
   padding: 0.5em 0.75em;
   margin-top: 0.5em;
@@ -186,9 +204,10 @@ height: 100%;
   right: .25em;
   text-transform:uppercase;
   font-weight: 900;
+  min-width: 132px;
 }
 .event-block__load-more:hover {
-  background-color: #b3ff4d;
+  background-color: var(--pink);
   cursor: pointer;
 }
 .hidden {
@@ -221,20 +240,22 @@ height: 100%;
 .event-block__price {
   font-size: 1.33rem;
   padding: 0.5em 0.75em;
-  background-color: rgb(170, 22, 22);
+  background-color: var(--pink);
   font-weight: bold;
   mix-blend-mode: luminosity;
   display: inline-block;
   position: absolute;
   top: 0.5em;
-  right: 0.25em;
+  right: calc(0.25em + 2px);
   filter: blur(0.25px);
   mix-blend-mode: hard-light;
   font-weight: 900;
+  min-width: 110px;
+  text-align: center;
 }
 .event-block--enlarged .event-block__price {
   font-size: 3rem;
-  top: 1em;
+  top: 3em;
   right: 1em;
 }
 

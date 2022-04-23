@@ -84,6 +84,7 @@
   top: 1em;
   right: 1em;
   position: static;
+  text-align: left;
 }  
 .event-block__price .event-block__venue-link {
   margin-left: 1em;
@@ -116,6 +117,7 @@
     line-height: 0.66;    
     background-color: transparent;
     mix-blend-mode: normal;
+    min-width: auto
   }  
 }
 @media (max-width: 600px){
