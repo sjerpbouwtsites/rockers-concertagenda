@@ -116,9 +116,8 @@ async function processSingleMusicEvent(
       //   message: `Incomplete info for ${firstMusicEvent.title}`,
       // });
     } else {
-      const pageInfoError = new Error(`unclear why failure at: ${
-        firstMusicEvent.title
-      }
+      const pageInfoError = new Error(`unclear why failure at: ${firstMusicEvent.title
+        }
       ${JSON.stringify(pageInfo)}
        ${JSON.stringify(firstMusicEvent)}`);
       handleError(pageInfoError);
@@ -208,8 +207,7 @@ async function makeBaseEventList(page) {
   let errorMan = false;
   const baroegLijst = await axios
     .get(
-      `https://baroeg.nl/wp-json/wp/v2/wp_theatre_prod?_embed&per_page=10&offset=${
-        page * 10
+      `https://baroeg.nl/wp-json/wp/v2/wp_theatre_prod?_embed&per_page=10&offset=${page * 10
       }&modified_after=2022-01-01T00:00:00Z`
     )
     .then((response) => {
@@ -248,9 +246,8 @@ async function makeBaseEventList(page) {
         let uuid = crypto.randomUUID();
         const longTextPath = `${fsDirections.publicTexts}/${uuid}.html`;
 
-        fs.writeFile(longTextPath, event.content.rendered, "utf-8", () => {});
+        fs.writeFile(longTextPath, event.content.rendered, "utf-8", () => { });
         musicEventConf.longText = longTextPath;
-        musicEventConf.dataIntegrity = 10;
       }
       return new MusicEvent(musicEventConf);
     })

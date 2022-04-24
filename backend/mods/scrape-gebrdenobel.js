@@ -170,7 +170,6 @@ async function makeBaseEventList(browser, workerIndex) {
           venueEventUrl: link,
           title:
             eventEl.querySelector(".media-heading")?.textContent.trim() ?? null,
-          dataIntegrity: 10,
           location: "gebrdenobel",
         };
       });

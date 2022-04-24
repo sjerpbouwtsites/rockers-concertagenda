@@ -140,7 +140,6 @@ async function getPageInfo(page) {
         image = bgImgMatch[0].replace("-500x500x", "");
       }
     }
-    const dataIntegrity = 10;
 
     return {
       doorOpen,
@@ -149,7 +148,6 @@ async function getPageInfo(page) {
       priceTextcontent,
       longTextHTML,
       image,
-      dataIntegrity,
     };
   }, null);
 

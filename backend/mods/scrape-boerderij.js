@@ -21,8 +21,7 @@ async function scrapeBoerderij(workerIndex) {
 async function getBaseMusicEvents(workerIndex) {
   const allRockBatch = await axios
     .get(
-      `https://poppodiumboerderij.nl/includes/ajax/events.php?filters=7,8,9,6&search=&limit=15&offset=${
-        workerIndex * 15
+      `https://poppodiumboerderij.nl/includes/ajax/events.php?filters=7,8,9,6&search=&limit=15&offset=${workerIndex * 15
       }&lang_id=1&rooms=&month=&year=`
     )
     .then((response) => {
@@ -71,7 +70,7 @@ async function recursiveSingleGet(baseMusicEvents, workerIndex) {
     youtubeIframe = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${youtubeVideoIDMatch[0]}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
   }
   const longText = `${ajaxRes.description}<br>${youtubeIframe}`;
-  fs.writeFile(longTextPath, longText, "utf-8", () => {});
+  fs.writeFile(longTextPath, longText, "utf-8", () => { });
 
   let price = ajaxRes?.ticket_price?.replace("-", "00").replace(",", ".");
   if (isNaN(Number(price))) {
@@ -88,7 +87,6 @@ async function recursiveSingleGet(baseMusicEvents, workerIndex) {
     doorOpenDateTime: new Date(`${ajaxRes.event_date}T${ajaxRes.event_open}`),
     location: "boerderij",
     price,
-    dataIntegrity: 10,
     venueEventUrl: "https://poppodiumboerderij.nl/",
   });
 

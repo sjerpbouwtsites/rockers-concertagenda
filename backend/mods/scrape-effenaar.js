@@ -88,7 +88,7 @@ async function processSingleMusicEvent(browser, baseMusicEvents, workerIndex) {
       let uuid = crypto.randomUUID();
       const longTextPath = `${fsDirections.publicTexts}/${uuid}.html`;
 
-      fs.writeFile(longTextPath, pageInfo.longTextHTML, "utf-8", () => {});
+      fs.writeFile(longTextPath, pageInfo.longTextHTML, "utf-8", () => { });
       pageInfo.longText = longTextPath;
     }
 
@@ -115,9 +115,8 @@ async function processSingleMusicEvent(browser, baseMusicEvents, workerIndex) {
         message: `Incomplete info for ${firstMusicEvent.title}`,
       });
     } else {
-      const pageInfoError = new Error(`unclear why failure at: ${
-        firstMusicEvent.title
-      }
+      const pageInfoError = new Error(`unclear why failure at: ${firstMusicEvent.title
+        }
       ${JSON.stringify(pageInfo)}
        ${JSON.stringify(firstMusicEvent)}`);
       handleError(pageInfoError);
@@ -230,7 +229,6 @@ async function makeBaseEventList(browser, workerIndex) {
             : "";
         }
 
-        res.dataIntegrity = 10;
 
         res.startDateTime = null;
         const dateEl = eventEl.querySelector(".overview-date");

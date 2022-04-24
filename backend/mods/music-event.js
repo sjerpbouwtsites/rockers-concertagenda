@@ -11,7 +11,6 @@ export default class MusicEvent {
   shortText = null;
   longText = null;
   image = null;
-  dataIntegrity = 0;
   constructor(init) {
     this.merge(init);
   }

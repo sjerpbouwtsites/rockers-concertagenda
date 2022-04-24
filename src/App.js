@@ -27,9 +27,12 @@ class App extends React.Component {
     this.updateSwipeStateFilter = this.updateSwipeStateFilter.bind(this);
     this.updateSwipeStateExplainer = this.updateSwipeStateExplainer.bind(this);
     this.appProcessFilterChange = this.appProcessFilterChange.bind(this);
+    this.abstractSwitchUpdater = this.abstractSwitchUpdater.bind(this);
+    this.getScraperNamesAndLocations = this.getScraperNamesAndLocations.bind(this);
   }
 
   hasFetchedData = false;
+  isFetchingData = false;
 
   appProcessFilterChange(filterSettings) {
     this.setState({
@@ -38,60 +41,71 @@ class App extends React.Component {
   }
 
   componentDidUpdate() {
-    if (!this.hasFetchedData)
-      getAllData()
-        .then((response) => {
-          return response;
-        })
-        .then((response) => {
-          if (response?.timestamps) {
-            this.setState({
-              names: Object.keys(response.timestamps),
-            });
-          }
-          if (response?.locations) {
-            this.setState({
-              locations: response.locations,
-            });
-          }
-          this.hasFetchedData = true;
-        })
-        .catch((error) => {
-          console.error(error);
+    if (!this.hasFetchedData && !this.isFetchingData)
+      this.getScraperNamesAndLocations()
+  }
+  async getScraperNamesAndLocations() {
+
+    this.isFetchingData = true;
+    const getTimeStamps = fetch("./timestamps.json", {})
+      .then((response) => {
+        return response.json();
+      })
+      .then(timestamps => {
+        this.setState({
+          names: Object.keys(timestamps).filter(key => key !== 'metalfan'),
         });
+      })
+
+    const getLocations = fetch("./locations.json", {}).then((response) => {
+      return response.json();
+    }).then(locations => {
+      this.setState({
+        locations: locations,
+      });
+    })
+
+    Promise.all([getTimeStamps, getLocations]).then(promisesResult => {
+      this.hasFetchedData = true;
+      this.isFetchingData = false;
+    }).catch((err) => {
+      this.isFetchingData = false;
+      console.error(err);
+    });
+
+  }
+
+  abstractSwitchUpdater(setStateFunc, setStateParam) {
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 50);
+    setTimeout(() => {
+      setStateFunc(setStateParam)
+    }, 300);
   }
 
   updateSwitch(index, indexLatest, meta) {
-    setTimeout(() => {
-      window.scrollTo(0, 0);
-    }, 50);
-    setTimeout(() => {
+    this.abstractSwitchUpdater((index) => {
       this.setState({
         swipeState: index,
       });
-    }, 300);
+    }, index)
   }
 
   updateSwipeStateExplainer() {
-    setTimeout(() => {
-      window.scrollTo(0, 0);
-    }, 50);
-    setTimeout(() => {
+    this.abstractSwitchUpdater(() => {
       this.setState({
         swipeState: this.state.swipeState === 1 ? 2 : 1,
       });
-    }, 300);
+    })
   }
 
   updateSwipeStateFilter() {
-    setTimeout(() => {
-      window.scrollTo(0, 0);
-    }, 50);
-    setTimeout(() => {
+    this.abstractSwitchUpdater(() => {
       this.setState({
         swipeState: this.state.swipeState === 0 ? 1 : 0,
-      });
-    }, 300);
+      })
+    })
   }
 
   appTitleToExplainer() {
@@ -108,27 +122,33 @@ class App extends React.Component {
     return this.state.swipeState === 1 ? `👈 Filter` : `Agenda 👉`;
   }
 
+  appBanner(title) {
+    return (
+      <div id="app-banner" className="app-banner cursive-font">
+        <h1 className="app-title">{title}</h1>
+        <span className="app-title-right">
+          <span
+            onClick={this.updateSwipeStateFilter}
+            className="app-title-right-button"
+          >
+            {this.appTitleToFilter()}
+          </span>{" "}
+          <span
+            onClick={this.updateSwipeStateExplainer}
+            className="app-title-right-button"
+          >
+            {this.appTitleToExplainer()}
+          </span>
+        </span>
+      </div>
+    )
+  }
+
   render() {
     const { swipeState } = this.state;
     return (
       <div>
-        <div id="app-banner" className="app-banner cursive-font">
-          <h1 className="app-title">Rock Agenda</h1>
-          <span className="app-title-right">
-            <span
-              onClick={this.updateSwipeStateFilter}
-              className="app-title-right-button"
-            >
-              {this.appTitleToFilter()}
-            </span>{" "}
-            <span
-              onClick={this.updateSwipeStateExplainer}
-              className="app-title-right-button"
-            >
-              {this.appTitleToExplainer()}
-            </span>
-          </span>
-        </div>
+        {this.appBanner('Rock Agenda')}
         <div className="app">
           <SwipeableViews index={swipeState} onChangeIndex={this.updateSwitch}>
             <div>
@@ -149,43 +169,10 @@ class App extends React.Component {
             </div>
           </SwipeableViews>
         </div>
-        <div id="app-banner" className="app-banner cursive-font">
-          <h1 className="app-title">Pas voor meer concerten de filters aan.</h1>
-          <span className="app-title-right">
-            <span
-              onClick={this.updateSwipeStateFilter}
-              className="app-title-right-button"
-            >
-              {this.appTitleToFilter()}
-            </span>{" "}
-            <span
-              onClick={this.updateSwipeStateExplainer}
-              className="app-title-right-button"
-            >
-              {this.appTitleToExplainer()}
-            </span>
-          </span>
-        </div>
+        {this.appBanner('Swipe links voor filter.')}
       </div>
     );
   }
-}
-
-async function getAllData() {
-  const timestamps = await fetch("./timestamps.json", {})
-    .then((response) => {
-      return response.json();
-    })
-    .catch((err) => {
-      console.error(err);
-    });
-  const locations = await fetch("./locations.json", {}).then((response) => {
-    return response.json();
-  });
-  return {
-    timestamps,
-    locations,
-  };
 }
 
 export default App;

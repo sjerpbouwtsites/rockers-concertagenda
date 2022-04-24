@@ -124,7 +124,6 @@ async function makeBaseEventList(browser, workerIndex) {
           const titleLinkEl = eventEl.querySelector(".fusion-events-meta .url");
           res.title = titleLinkEl ? titleLinkEl.textContent.trim() : "";
           res.venueEventUrl = titleLinkEl ? titleLinkEl.href : "";
-          res.dataIntegrity = 10;
           res.location = "dbs";
           res.error = "geen";
           try {

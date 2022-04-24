@@ -118,7 +118,6 @@ async function processSingleMusicEvent(browser, baseMusicEvents, workerIndex) {
     const genreEl = document.querySelector('[href*="events/categories"]');
     res.genre = !!genreEl ? genreEl.textContent : null;
     res.longTextHTML = document.querySelector(".occii-event-notes").innerHTML;
-    res.dataIntegrity = 10;
     return res;
   }, occiiMonths);
 

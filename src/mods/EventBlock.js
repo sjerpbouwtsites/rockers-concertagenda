@@ -15,18 +15,22 @@ class EventBlock extends React.Component {
   }
 
   componentDidMount() {
-    getData()
-      .then((musicEvents) => {
-        let me2 = musicEvents
-          .map(frontendMusicEventExpansionMap)
-          .filter(musicEventDateFilter);
-        this.setState({ musicEvents: me2 });
-      })
+    this.getEventData()
+
+  }
+  async getEventData() {
+    return await fetch("./events-list.json", {}).then((response) => {
+      return response.json();
+    }).then((musicEvents) => {
+      let me2 = musicEvents
+        .map(frontendMusicEventExpansionMap)
+        .filter(musicEventDateFilter);
+      this.setState({ musicEvents: me2 });
+    })
       .catch((error) => {
         console.error(error);
       });
   }
-
   add100ToMaxEventsShown() {
     const oldMax = this.state.maxEventsShown;
     const posMax = oldMax + 100;
@@ -155,44 +159,48 @@ class EventBlock extends React.Component {
     return text.replace(/\<\/?\w+\>/g, "");
   }
 
+  musicEventFilters(musicEvents) {
+    return musicEvents.filter((musicEvent, musicEventKey) => {
+      return musicEventKey <= this.state.maxEventsShown;
+    })
+      .filter((musicEvent, musicEventKey) => {
+        if (!this.props.filterSettings?.podia[musicEvent.location]) {
+          return true;
+        }
+        return (
+          this.props.filterSettings.podia[musicEvent.location].checked ??
+          true
+        );
+      })
+      .filter((musicEvent, musicEventKey) => {
+        if (!this.props.filterSettings?.daterange?.lower) {
+          return true;
+        }
+        const lowerRangeTime = new Date(
+          this.props.filterSettings.daterange.lower
+        ).getTime();
+        const upperRangeTime = new Date(
+          this.props.filterSettings.daterange.upper
+        ).getTime();
+        const eventTime = new Date(musicEvent.startDateTime).getTime();
+
+        if (lowerRangeTime > eventTime) {
+          return false;
+        }
+        if (upperRangeTime < eventTime) {
+          return false;
+        }
+        return true;
+      })
+  }
+
   render() {
-    const musicEvents = this.state.musicEvents;
+    const musicEvents = this.musicEventFilters(this.state.musicEvents);
 
     return (
       <div className="event-block__wrapper">
         {musicEvents
-          .filter((musicEvent, musicEventKey) => {
-            return musicEventKey <= this.state.maxEventsShown;
-          })
-          .filter((musicEvent, musicEventKey) => {
-            if (!this.props.filterSettings?.podia[musicEvent.location]) {
-              return true;
-            }
-            return (
-              this.props.filterSettings.podia[musicEvent.location].checked ??
-              true
-            );
-          })
-          .filter((musicEvent, musicEventKey) => {
-            if (!this.props.filterSettings?.daterange?.lower) {
-              return true;
-            }
-            const lowerRangeTime = new Date(
-              this.props.filterSettings.daterange.lower
-            ).getTime();
-            const upperRangeTime = new Date(
-              this.props.filterSettings.daterange.upper
-            ).getTime();
-            const eventTime = new Date(musicEvent.startDateTime).getTime();
 
-            if (lowerRangeTime > eventTime) {
-              return false;
-            }
-            if (upperRangeTime < eventTime) {
-              return false;
-            }
-            return true;
-          })
           .map((musicEvent, musicEventKey) => {
             const priceElement = this.priceElement(musicEvent);
             const startMomentLang = this.createStartMoment(musicEvent);
@@ -207,9 +215,8 @@ class EventBlock extends React.Component {
               <article
                 id={articleID}
                 key={musicEventKey}
-                className={`event-block provide-dark-contrast ${
-                  musicEvent.enlarged ? "event-block--enlarged" : ""
-                }`}
+                className={`event-block provide-dark-contrast ${musicEvent.enlarged ? "event-block--enlarged" : ""
+                  }`}
               >
                 {imageHTML}
                 <header className="event-block__header contrast-with-dark">
@@ -226,9 +233,8 @@ class EventBlock extends React.Component {
                     </span>
                   </h2>
                   <p
-                    className={`event-block__paragraph event-block__paragraph--short-text contrast-with-dark ${
-                      musicEvent.enlarged ? "hidden" : ""
-                    }`}
+                    className={`event-block__paragraph event-block__paragraph--short-text contrast-with-dark ${musicEvent.enlarged ? "hidden" : ""
+                      }`}
                   >
                     {this.stripHTML(musicEvent.shortText)}
                   </p>
@@ -263,14 +269,6 @@ class EventBlock extends React.Component {
   }
 }
 
-async function getData() {
-  const musicEvents = await fetch("./events-list.json", {}).then((response) => {
-    return response.json();
-  });
-
-  return musicEvents;
-}
-
 function frontendMusicEventExpansionMap(musicEvent) {
   return {
     ...musicEvent,
@@ -279,6 +277,11 @@ function frontendMusicEventExpansionMap(musicEvent) {
   };
 }
 
+/**
+ * To be used in filter method. Removes those events that are past or dont have a startDateTime
+ * @param {*} musicEvent 
+ * @returns bool
+ */
 function musicEventDateFilter(musicEvent) {
   if (!musicEvent.startDateTime) {
     return false;

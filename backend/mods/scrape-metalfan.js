@@ -18,7 +18,7 @@ async function scrapeMetalfan() {
   EventsList.save("metalfan");
   try {
     browser.close();
-  } catch (error) {}
+  } catch (error) { }
 }
 
 async function getBaseMusicEvents(browser) {
@@ -112,7 +112,6 @@ async function getBaseMusicEvents(browser) {
       }
 
       thisMusicEvent.location = locationName;
-      thisMusicEvent.dataIntegrity = 1;
       return thisMusicEvent;
     })
     .filter((musicEvent) => {

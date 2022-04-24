@@ -130,14 +130,13 @@ async function makeBaseEventList(browser, workerIndex) {
               ).toISOString();
             }
           }
-        } catch (error) {}
+        } catch (error) { }
 
         return {
           venueEventUrl: linkEl.href,
           shortText: linkEl.querySelector(".tags")?.textContent ?? "",
           title: linkEl.querySelector("h1")?.textContent.trim() ?? null,
           startDateTime,
-          dataIntegrity: 10,
           location: "melkweg",
         };
       });

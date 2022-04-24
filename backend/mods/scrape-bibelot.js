@@ -130,7 +130,7 @@ async function getPageInfo(page) {
           }
         }
       }
-    } catch (error) {}
+    } catch (error) { }
 
     const verkoopElAr = Array.from(
       document.querySelectorAll(".meta-info")
@@ -173,7 +173,6 @@ async function makeBaseEventList(browser, workerIndex) {
         ? shortTextEl.textContent.split(res.title)
         : null;
       res.shortText = !!shortTextSplit ? shortTextSplit[1] : "";
-      res.dataIntegrity = 10;
       const linkEl = eventEl.querySelector(".link");
       res.venueEventUrl = !!linkEl ? linkEl.href : null;
       res.location = "bibelot";

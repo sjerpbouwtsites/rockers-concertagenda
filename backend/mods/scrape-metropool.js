@@ -154,15 +154,13 @@ async function getPageInfo(page) {
             ).toISOString();
           }
         }
-      } catch (error) {}
+      } catch (error) { }
       res.image = document.querySelector(".object-fit-cover")
-        ? `https://metropool.nl/${
-            document.querySelector(".object-fit-cover")?.srcset
-          }`
+        ? `https://metropool.nl/${document.querySelector(".object-fit-cover")?.srcset
+        }`
         : null;
 
       res.location = "metropool";
-      res.dataIntegrity = 10;
 
       return res;
     }, months);
