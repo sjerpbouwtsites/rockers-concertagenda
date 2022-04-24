@@ -9,7 +9,7 @@ const fsDirections = {
   baroegJson: path.resolve("./event-lists/baroeg.json"),
   eventsListJson: path.resolve("./event-lists/events-list.json"),
   boerderijJson: path.resolve("./event-lists/boerderij.json"),
-  nul13Json: path.resolve("./event-lists/nul13.json"),
+  '013Json': path.resolve("./event-lists/013.json"),
   patronaatJson: path.resolve("./event-lists/patronaat.json"),
   dynamoJson: path.resolve("./event-lists/dynamo.json"),
   metalfanJson: path.resolve("./event-lists/metalfan.json"),
@@ -26,7 +26,7 @@ const fsDirections = {
 };
 
 fs.readdirSync(fsDirections.mods).forEach((mod) => {
-  const modName = mod.replace(".js", "").replace(/-([a-z])/g, function (g) {
+  const modName = mod.replace(".js", "").replace(/-([a-z0-9])/g, function (g) {
     return g[1].toUpperCase();
   });
   fsDirections[modName] = path.resolve(`./mods/${mod}`);

@@ -37,11 +37,11 @@ function init() {
     workerList.push([fsDirections.scrapePatronaat, "patronaat", 2]);
   }
 
-  if (EventsList.isOld("nuldertien")) {
-    workerList.push([fsDirections.scrapeNuldertien, "nuldertien", 0]);
-    workerList.push([fsDirections.scrapeNuldertien, "nuldertien", 1]);
-    workerList.push([fsDirections.scrapeNuldertien, "nuldertien", 2]);
-    workerList.push([fsDirections.scrapeNuldertien, "nuldertien", 3]);
+  if (EventsList.isOld("013")) {
+    workerList.push([fsDirections.scrape013, "013", 0]);
+    workerList.push([fsDirections.scrape013, "013", 1]);
+    workerList.push([fsDirections.scrape013, "013", 2]);
+    workerList.push([fsDirections.scrape013, "013", 3]);
   }
 
   if (EventsList.isOld("effenaar")) {

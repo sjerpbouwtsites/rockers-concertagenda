@@ -5,8 +5,8 @@ export class Location {
     this.city = config.city;
   }
   static makeLocationSlug(rawName) {
-    if (rawName === "nul13") {
-      return "nul13";
+    if (rawName === "013") {
+      return "013";
     }
     return rawName.replace(/\s/g, "-").replace(/\W/g, "").toLowerCase();
   }
@@ -17,7 +17,7 @@ export function printLocationsToPublic() {
     "../public/locations.json",
     JSON.stringify(locations),
     "utf-8",
-    () => {}
+    () => { }
   );
 }
 
@@ -82,9 +82,10 @@ const locations = {
   melkweg: new Location({ name: "Melkweg", city: "Amsterdam" }),
   merleyn: new Location({ name: "Merleyn", city: "Nijmegen" }),
   mezz: new Location({ name: "Mezz", city: "Breda" }),
+  metropool: new Location({ name: "Metropool", city: "Hengelo" }),
   neushoorn: new Location({ name: "Neushoorn", city: "Leeuwarden" }),
   noorderkerk: new Location({ name: "Noorderkerk", city: "Sneek" }),
-  nul13: new Location({ name: "013", city: "Tilburg" }),
+  '013': new Location({ name: "013", city: "Tilburg" }),
   occii: new Location({ name: "Occii", city: "Amsterdam" }),
   oldehoofsterkerkhof: new Location({
     name: "Oldehoofsterkerkhof",

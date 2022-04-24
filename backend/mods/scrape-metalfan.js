@@ -97,7 +97,6 @@ async function getBaseMusicEvents(browser) {
           "boerderij",
           "dynamo",
           "patronaat",
-          "nul13",
           "013",
           "effenaar",
           "tivolivredenburg",
