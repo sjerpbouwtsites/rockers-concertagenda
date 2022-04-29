@@ -18,6 +18,7 @@ const fsDirections = {
   occiiJson: path.resolve("./event-lists/occii.json"),
   effenaarJson: path.resolve("./event-lists/effenaar.json"),
   gebrdenobelJson: path.resolve("./event-lists/gebrdenobel.json"),
+  neushoornJson: path.resolve("./event-lists/neushoorn.json"),
   timestampsJson: path.resolve("./event-lists/timestamps.json"),
   public: path.resolve("../public"),
   publicTexts: path.relative("./", "../public/texts"),

@@ -1,6 +1,42 @@
 [
   {
     "doorOpenDateTime": null,
+    "startDateTime": "2022-05-07T17:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://baroeg.nl/productie/80s-more-dancing-horses/",
+    "title": "80&#8217;s &#038; More: Dancing Horses",
+    "location": "baroeg",
+    "price": 9,
+    "shortText": "<p>80&#8217;s &#038; More: Dansavond!</p>\n",
+    "longText": "../public/texts/c746489d-b208-4196-8291-577bd8f246b6.html",
+    "image": "https://baroeg.nl/wp-content/uploads/2021/11/80s-now-foto-768x548.jpg"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-05-06T17:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://baroeg.nl/productie/enforcer/",
+    "title": "Enforcer + Cobra Spell + Ambush",
+    "location": "baroeg",
+    "price": 17,
+    "shortText": "<p>Een portie Zweedse heavy metal.</p>\n",
+    "longText": "../public/texts/21fcbfd1-bd1b-4ea1-86c4-0b4e4e035cff.html",
+    "image": "https://baroeg.nl/wp-content/uploads/2020/02/Enforcer2019a-Photo-by-Cintia-Regueiro-1-768x502.jpg"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-04-30T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://baroeg.nl/productie/baroeg-worldwide-on-prspct-radio-8/",
+    "title": "BAROEG WORLDWIDE ON PRSPCT RADIO",
+    "location": "baroeg",
+    "price": "28",
+    "shortText": "<p>From death and glam to polkacore and more Baroeg’s got a wonderfully weird mix of acts lined up in May, so Lucky Rot’s gonna play a bunch of ‘em; from death metal, glam, sleaze, stoner and cheesy bits to loony boomboomcore and some fookin’ more. Yes, this is a Suffering Hour.</p>\n",
+    "longText": "../public/texts/08826d84-022c-4ef0-8d94-a182aca143be.html",
+    "image": "https://baroeg.nl/wp-content/uploads/2022/04/2020-12-05-1-768x432.png"
+  },
+  {
+    "doorOpenDateTime": null,
     "startDateTime": "2022-04-30T16:30:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://baroeg.nl/productie/battle-4-boa/",
@@ -8,9 +44,8 @@
     "location": "baroeg",
     "price": 5,
     "shortText": "<p>Wedstrijd om één plek op de Talent Stage van BOA 2022.</p>\n",
-    "longText": "../public/texts/f2e52260-4e32-4e49-8c18-7dbe0136a627.html",
-    "image": "https://baroeg.nl/wp-content/uploads/2020/02/battle-4-boa-768x421.jpg",
-    "dataIntegrity": 10
+    "longText": "../public/texts/27a42191-5632-4403-85ce-c56e620a891a.html",
+    "image": "https://baroeg.nl/wp-content/uploads/2020/02/battle-4-boa-768x421.jpg"
   },
   {
     "doorOpenDateTime": null,
@@ -21,47 +56,7 @@
     "location": "baroeg",
     "price": 5,
     "shortText": "<p>Karvel+ Nafearya + Dispelled + Liquidation A.D.</p>\n",
-    "longText": "../public/texts/895a99a1-d353-41e6-af9c-7840f02722a2.html",
-    "image": "https://baroeg.nl/wp-content/uploads/2020/02/battle-768x432.jpg",
-    "dataIntegrity": 10
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-04-27T12:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://baroeg.nl/productie/koningsdag-festival-2/",
-    "title": "Koningsdag festival",
-    "location": "baroeg",
-    "price": 15,
-    "shortText": "<p>King Willy is jarig, dus dat vieren we met zeven energieke bands.</p>\n",
-    "longText": "../public/texts/b9691087-0bf2-44f7-9bea-0143f7a624db.html",
-    "image": "https://baroeg.nl/wp-content/uploads/2022/03/image_6487327-1-768x329.jpg",
-    "dataIntegrity": 10
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-04-24T14:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://baroeg.nl/productie/reunie-40-jaar-spot-the-loony/",
-    "title": "Reünie 40 jaar Spot The Loony",
-    "location": "baroeg",
-    "price": 19.82,
-    "shortText": "<p>Reünie 40 jaar Spot The Loony</p>\n",
-    "longText": "../public/texts/25bd1e8b-194c-4f8e-ae72-41b772a9ad76.html",
-    "image": "https://baroeg.nl/wp-content/uploads/2022/03/kees-150x150.jpg",
-    "dataIntegrity": 10
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-04-23T17:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://baroeg.nl/productie/art-stage-promotion-presents-fisz-emade-tworzywo/",
-    "title": "Art Stage Promotion presents: Fisz Emade Tworzywo + JoBee Project",
-    "location": "baroeg",
-    "price": 33,
-    "shortText": "<p>Fisz Emade Tworzywo is de grootste naam in Poolstalige hiphop plus aanverwante stijlen.</p>\n",
-    "longText": "../public/texts/6fd0eeec-af2c-4e44-8361-522d997dd120.html",
-    "image": "https://baroeg.nl/wp-content/uploads/2021/11/fisz-emade-tworzywo-1-e1649177883719-150x150.jpg",
-    "dataIntegrity": 10
+    "longText": "../public/texts/9f2becb5-a2cc-483e-8035-8519e747c9eb.html",
+    "image": "https://baroeg.nl/wp-content/uploads/2020/02/battle-768x432.jpg"
   }
 ]
