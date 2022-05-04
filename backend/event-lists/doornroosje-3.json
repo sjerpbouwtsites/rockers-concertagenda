@@ -1,50 +1,50 @@
 [
   {
-    "doorOpenDateTime": "2022-05-31T17:00:00.000Z",
-    "startDateTime": "2022-05-31T17:30:00.000Z",
+    "doorOpenDateTime": null,
+    "startDateTime": null,
     "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/baroness-kvelertak/",
-    "title": "Baroness + Kvelertak",
+    "venueEventUrl": "https://www.doornroosje.nl/event/kids-n-billies-2022/",
+    "title": "Kids ‘n’ Billies 2022",
     "location": "doornroosje",
-    "price": 27.5,
-    "shortText": "FortaRock",
-    "longText": "../public/texts/a342a183-1e05-4f4c-8135-4d346d7250ba.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2021/10/20220531-Baroness-web-1-350x197-c-default.jpg"
-  },
-  {
-    "doorOpenDateTime": "2022-06-19T17:00:00.000Z",
-    "startDateTime": "2022-06-19T17:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/leprous-3/",
-    "title": "Leprous + Aiming for Enrike",
-    "location": "doornroosje",
-    "price": 27.5,
-    "shortText": "Laatste kaarten",
-    "longText": "../public/texts/613268ee-d5c8-41ae-b3a0-0943206ec177.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2021/09/Leprous-1-350x197-c-default.jpg"
-  },
-  {
-    "doorOpenDateTime": "2022-09-28T17:30:00.000Z",
-    "startDateTime": "2022-09-28T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/obscura-2/",
-    "title": "Obscura + Persefone + Disillusion",
-    "location": "doornroosje",
-    "price": 24,
-    "shortText": "Fortarock",
-    "longText": "../public/texts/0ad0b813-7700-494a-8cd6-54b8e6fd3705.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2021/09/Obscura-350x197-c-default.jpg"
-  },
-  {
-    "doorOpenDateTime": "2023-03-18T18:30:00.000Z",
-    "startDateTime": "2023-03-18T19:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/fuzz/",
-    "title": "Fuzz",
-    "location": "doornroosje",
-    "price": 19.5,
+    "price": 22.5,
     "shortText": null,
-    "longText": "../public/texts/6bcf77b5-7b36-44da-b143-d7c270c93325.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2021/09/FUZZ-1920x1080-1-350x197-c-default.jpg"
+    "longText": "../public/texts/64806824-4b79-490e-b2df-6f783818fe10.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2022/03/KnB-web-scaled-350x197-c-default.jpg"
+  },
+  {
+    "doorOpenDateTime": "2022-09-24T17:00:00.000Z",
+    "startDateTime": "2022-09-24T17:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.doornroosje.nl/event/audn/",
+    "title": "Auðn + …and Oceans",
+    "location": "doornroosje",
+    "price": 17.5,
+    "shortText": "Soulcrusher",
+    "longText": "../public/texts/ce6e7d21-3857-4268-9903-e7d8386138ff.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2021/09/Audn-1920x1080-1-350x197-c-default.jpg"
+  },
+  {
+    "doorOpenDateTime": "2022-11-12T17:30:00.000Z",
+    "startDateTime": "2022-11-12T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.doornroosje.nl/event/fleshgod-apocalypse-3/",
+    "title": "Fleshgod Apocalypse + Omnium Gatherum",
+    "location": "doornroosje",
+    "price": 25,
+    "shortText": "FortaRock",
+    "longText": "../public/texts/e7222b49-bbab-4918-8ce7-d61342371148.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2021/09/Fleshgod-Apocalypse-1-1920x1080-1-350x197-c-default.jpg"
+  },
+  {
+    "doorOpenDateTime": "2023-03-16T18:30:00.000Z",
+    "startDateTime": "2023-03-16T19:15:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.doornroosje.nl/event/tarja-4/",
+    "title": "Tarja",
+    "location": "doornroosje",
+    "price": 32,
+    "shortText": "Fortarock",
+    "longText": "../public/texts/69cd39f4-da53-450e-a066-743990bfebb6.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2021/09/Tarja-1-1920x1080-1-350x197-c-default.jpg"
   }
 ]

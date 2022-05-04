@@ -1,0 +1,35 @@
+
+  Baroeg Error - Error - 3:35:35 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of null (reading 'textContent')
+    at __puppeteer_evaluation_script__:25:74
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-neushoorn.js:90:10)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-neushoorn.js:74:18)
+    at async scrapeNeushoorn (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-neushoorn.js:27:5) 
+  Evaluation failed: TypeError: Cannot read properties of null (reading 'textContent')
+    at __puppeteer_evaluation_script__:25:74
+  
+  
+  Baroeg Error - Error - 2:27:15 AM
+  Error: Evaluation failed: TypeError: dateTextcontent.match is not a function
+    at __puppeteer_evaluation_script__:5:43
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-neushoorn.js:89:10)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-neushoorn.js:73:18)
+    at async scrapeNeushoorn (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-neushoorn.js:26:5) 
+  Evaluation failed: TypeError: dateTextcontent.match is not a function
+    at __puppeteer_evaluation_script__:5:43
+  
+  
+  Baroeg Error - TypeError - 2:12:02 AM
+  TypeError: getIsRockRecursive(...).filter is not a function
+    at makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-neushoorn.js:129:76)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async scrapeNeushoorn (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-neushoorn.js:23:29) 
+  getIsRockRecursive(...).filter is not a function
+  
+  

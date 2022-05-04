@@ -1,0 +1,34 @@
+.open-screen {
+  background-color: var(--anthracite);
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  transform: translate(0,0);
+  opacity: 1;
+}
+
+.open-screen__centre{
+
+} 
+
+.open-screen__title {
+}
+
+.open-screen__text {
+  font-size: 2em;
+}
+
+.open-screen__moving {
+  transition: 0.5s ease-out;
+  transform: translate(0,200vh);
+  opacity: 0;
+}
+
+.open-screen__hidden {
+  display: none;
+}

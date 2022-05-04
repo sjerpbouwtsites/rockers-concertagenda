@@ -2,29 +2,26 @@ import MusicEvent from "./music-event.js";
 import puppeteer from "puppeteer";
 import { parentPort } from "worker_threads";
 import EventsList from "./events-list.js";
-import fs from "fs";
-import crypto from "crypto";
-import fsDirections from "./fs-directions.js";
 import {
-  getPriceFromHTML,
   handleError,
   basicMusicEventsFilter,
   autoScroll,
+  waitFor,
   postPageInfoProcessing,
   log,
 } from "./tools.js";
 import { letScraperListenToMasterMessageAndInit } from "./generic-scraper.js";
+import { neushoornMonths } from "./months.js";
 
-letScraperListenToMasterMessageAndInit(scrapeMelkweg);
+letScraperListenToMasterMessageAndInit(scrapeNeushoorn);
 
-async function scrapeMelkweg(workerIndex) {
+async function scrapeNeushoorn(workerIndex) {
   const browser = await puppeteer.launch({
-    headLess: false,
+    headLess: false
   });
 
   try {
     const baseMusicEvents = await makeBaseEventList(browser, workerIndex);
-
     await fillMusicEvents(browser, baseMusicEvents, workerIndex);
   } catch (error) {
     handleError(error);
@@ -45,7 +42,7 @@ async function fillMusicEvents(browser, baseMusicEvents, workerIndex) {
     parentPort.postMessage({
       status: "done",
     });
-    EventsList.save("melkweg", workerIndex);
+    EventsList.save("neushoorn", workerIndex);
   });
 }
 
@@ -87,61 +84,98 @@ async function processSingleMusicEvent(browser, baseMusicEvents, workerIndex) {
 }
 
 async function getPageInfo(page) {
-  return await page.evaluate(() => {
+  return await page.evaluate((months) => {
     const res = {};
-    res.cancelReason = "";
-    res.priceTextcontent =
-      document.querySelector(".event-meta__total-price")?.textContent.trim() ??
-      null;
-    res.longTextHTML = document.querySelector(".body-copy")?.innerHTML ?? null;
-    res.image = document.querySelector("figure img")?.src ?? null;
+
+    const dateTextcontent = document.querySelector('.summary .summary__item:first-child')?.textContent ?? '';
+    const dateTextMatch = dateTextcontent.match(/\w+\s?(\d+)\s?(\w+)/);
+
+    if (dateTextMatch && dateTextMatch.length === 3) {
+      const year = '2022';
+      const month = months[dateTextMatch[2]]
+      const day = dateTextMatch[1].padStart(2, '0');
+      res.startDate = `${year}-${month}-${day}`;
+    } else {
+      res.startDate = 'onbekend'
+    }
+
+    const timeTextcontent = document.querySelector('.summary .summary__item + .summary__item')?.textContent ?? '';
+    const timeTextMatch = timeTextcontent.match(/(\d{2}:\d{2}).*(\d{2}:\d{2})/);
+    if (timeTextMatch && timeTextMatch.length === 3) {
+      res.doorOpenDateTime = new Date(`${res.startDate}T${timeTextMatch[1]}`).toISOString();
+      res.startDateTime = new Date(`${res.startDate}T${timeTextMatch[2]}`).toISOString();
+    } else {
+      res.startDateTime = new Date(`${res.startDate}T${timeTextMatch[1]}`).toISOString();
+    }
+
+    res.priceTextcontent = document.querySelector('.prices__item__price')?.textContent ?? null;
+    res.priceContexttext = document.querySelector('.prices')?.textContent ?? null;
+
+    try {
+      const summaryEl = document.querySelector('.content .summary');
+      const longEl = summaryEl.parentNode;
+      longEl.removeChild(summaryEl)
+      res.longTextHTML = longEl.innerHTML;
+    } catch (error) {
+      //
+    }
+
+
+    const imageEl = document.querySelector('[style*="url"]');
+    res.imageElLen = imageEl.length
+    if (imageEl) {
+      const imageMatch = imageEl.style.backgroundImage.match(/https.*jpg/) ?? null;
+      if (imageMatch) {
+        res.image = imageMatch[1]
+      }
+    }
+
     return res;
-  });
+  }, neushoornMonths);
 }
 
 async function makeBaseEventList(browser, workerIndex) {
   const page = await browser.newPage();
-  await page.goto("https://www.melkweg.nl/nl/agenda", {
+  await page.goto("https://neushoorn.nl/#/search?category=Heavy", {
     waitUntil: "load",
   });
 
   await autoScroll(page);
+  await waitFor(500);
   await autoScroll(page);
+  await waitFor(500); await autoScroll(page);
+  await waitFor(500); await autoScroll(page);
+  await waitFor(500); await autoScroll(page);
+  await waitFor(500);
 
   const rawEvents = await page.evaluate((workerIndex) => {
-    return Array.from(document.querySelectorAll(".agenda-item"))
-      .filter((linkEl) => {
-        const tags =
-          linkEl.querySelector(".tags")?.textContent.toLowerCase() ?? "";
-        return tags.includes("metal") || tags.includes("punk");
-      })
-      .map((linkEl) => {
-        let startDateTime;
-        try {
-          const startDateMatch = linkEl.href.match(/(\d\d)-(\d\d)-(\d\d\d\d)/);
-          if (startDateMatch && startDateMatch.length === 4) {
-            const startDate = `${startDateMatch[3]}-${startDateMatch[2]}-${startDateMatch[1]}`;
-            const startTime =
-              linkEl.querySelector("[datetime]")?.getAttribute("datetime") ??
-              null;
-            if (startTime) {
-              startDateTime = new Date(
-                `${startDate}T${startTime}`
-              ).toISOString();
-            }
-          }
-        } catch (error) { }
+    return Array.from(document.querySelectorAll(".productions__item"))
+      .map((itemEl) => {
 
+        const textContent = itemEl.textContent.toLowerCase();
+        const isRockInText = textContent.includes('punk') || textContent.includes('rock') || textContent.includes('metal') || textContent.includes('industrial') || textContent.includes('noise')
+        const title = itemEl.querySelector('.productions__item__content span:first-child').textContent;
+        const eventTitles = title.split('+').map(t => t.trim())
+        const venueEventUrl = itemEl.href
+        const location = 'neushoorn'
         return {
-          venueEventUrl: linkEl.href,
-          shortText: linkEl.querySelector(".tags")?.textContent ?? "",
-          title: linkEl.querySelector("h1")?.textContent.trim() ?? null,
-          startDateTime,
-          location: "melkweg",
-        };
+          location,
+          venueEventUrl,
+          textContent,
+          isRockInText,
+          title,
+          eventTitles
+        }
       });
   }, workerIndex);
+
+  page.close();
+
   return rawEvents
     .filter(basicMusicEventsFilter)
     .map((event) => new MusicEvent(event));
 }
+
+
+
+

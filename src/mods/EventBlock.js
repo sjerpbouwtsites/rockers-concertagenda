@@ -3,7 +3,7 @@ import React from "react";
 class EventBlock extends React.Component {
   state = {
     musicEvents: [],
-    maxEventsShown: 100,
+    maxEventsShown: 250,
   };
   currentYear = new Date().getFullYear();
 

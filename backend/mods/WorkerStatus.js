@@ -36,7 +36,7 @@ export default class WorkerStatus {
   }
 
   static get OSHasSpace() {
-    return WorkerStatus.currentNotDone.length < 7 && WorkerStatus.CPUFree > 25;
+    return WorkerStatus.currentNotDone.length < 7 && WorkerStatus.CPUFree > 20;
   }
 
   static get OSHasALotOfSpace() {
@@ -125,7 +125,7 @@ export default class WorkerStatus {
     if (notDone.length > 0 || WorkerStatus.waitingWorkers.length !== 0) {
       setTimeout(() => {
         WorkerStatus.reportOnActiveWorkers();
-      }, 5000);
+      }, 2000);
     }
   }
   static programEnd() {

@@ -7,11 +7,14 @@ import "./normalize.css";
 import EventBlock from "./mods/EventBlock";
 import HeaderMenu from "./mods/HeaderMenu";
 import FilterMenu from "./mods/FilterMenu";
+import OpenScreen from "./mods/OpenScreen";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      openScreenHidden: false,
+      openScreenMoving: false,
       swipeState: 1, // 0: filter; 1: app; 2: text;
       names: [],
       locations: {},
@@ -38,6 +41,19 @@ class App extends React.Component {
     this.setState({
       filterSettings,
     });
+  }
+
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({
+        openScreenHidden: true,
+      })
+    }, 3000)
+    setTimeout(() => {
+      this.setState({
+        openScreenMoving: true,
+      })
+    }, 2000)
   }
 
   componentDidUpdate() {
@@ -125,6 +141,7 @@ class App extends React.Component {
   appBanner(title) {
     return (
       <div id="app-banner" className="app-banner cursive-font">
+        <OpenScreen hidden={this.state.openScreenHidden} moving={this.state.openScreenMoving} />
         <h1 className="app-title">{title}</h1>
         <span className="app-title-right">
           <span

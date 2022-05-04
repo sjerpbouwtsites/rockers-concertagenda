@@ -135,13 +135,73 @@ export function saveLongTextHTML(pageInfo) {
   let uuid = crypto.randomUUID();
   const longTextPath = `${fsDirections.publicTexts}/${uuid}.html`;
 
-  fs.writeFile(longTextPath, pageInfo.longTextHTML, "utf-8", () => {});
+  fs.writeFile(longTextPath, pageInfo.longTextHTML, "utf-8", () => { });
   return longTextPath;
 }
 
 const def = {
   handleError,
   errorAfterSeconds,
+  isRock
 };
 
 export default def;
+
+
+export async function isRock(
+  browser,
+  eventTitles,
+  isRockPossible = false,
+  logCheck = false
+) {
+
+  if (logCheck) {
+    log(`checking: ${eventTitles.join('; ')}`)
+  }
+
+  if (eventTitles.length) {
+    return false;
+  }
+
+  const newTitles = [...eventTitles]
+  const title = newTitles.shift();
+
+  const page = await browser.newPage();
+
+  await page.goto(
+    new URL(`https://www.metal-archives.com/search?searchString=${title}&type=band_name`)
+  );
+  isRockPossible = isRockPossible || await page.evaluate(() => {
+    const isEmptyEl = document.querySelector(".dataTables_empty");
+    return !isEmptyEl;
+  });
+
+  if (!isRockPossible) {
+    await page.goto(`https://en.wikipedia.org/wiki/${title.replace(/\s/g, '_')}`);
+    isRockPossible = await page.evaluate(() => {
+      const isRock = !!document.querySelector(".infobox a[href*='rock']");
+      const isMetal = !!document.querySelector(".infobox a[href*='metal']");
+      return isRock || isMetal;
+    });
+  }
+
+  page.close();
+
+  if (isRockPossible) {
+    return true;
+  }
+
+  if (newTitles.length) {
+    return await isRock(browser, newTitles, isRockPossible)
+  } else {
+    return false;
+  }
+
+}
+
+
+export async function waitFor(wait = 500) {
+  return new Promise((res, rej) => {
+    setTimeout(res, wait);
+  })
+}

@@ -15,6 +15,16 @@ body{
   --anthracite: #0f110e
 }
 
+.green-color {
+  color: var(--green);
+}
+.pink-color {
+  color: var(--pink);
+}
+.anthracite-color {
+  color: var(--anthracite);
+}
+
 @media (max-width: 1024px){
   body{
   font-size: 16px;
