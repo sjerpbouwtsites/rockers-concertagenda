@@ -90,7 +90,7 @@ function init() {
     workerList.push([fsDirections.scrapeMetropool, "metropool", 3]);
   }
 
-  if (EventsList.isOld("boerderij")) {
+  if (EventsList.isOld("boerderij") || true) {
     workerList.push([fsDirections.scrapeBoerderij, "boerderij", 0]);
   }
 
@@ -125,7 +125,7 @@ function init() {
     workerList.push([fsDirections.scrapeNeushoorn, "neushoorn", 0]);
   }
 
-  if (EventsList.isOld("afaslive") || true) {
+  if (EventsList.isOld("afaslive")) {
     workerList.push([fsDirections.scrapeAfaslive, "afaslive", 0]);
     workerList.push([fsDirections.scrapeAfaslive, "afaslive", 1]);
     workerList.push([fsDirections.scrapeAfaslive, "afaslive", 2]);

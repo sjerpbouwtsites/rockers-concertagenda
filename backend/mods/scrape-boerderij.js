@@ -3,20 +3,23 @@ import fs from "fs";
 import crypto from "crypto";
 import { parentPort } from "worker_threads";
 import EventsList from "./events-list.js";
+
 import axios from "axios";
 import fsDirections from "./fs-directions.js";
 import { letScraperListenToMasterMessageAndInit } from "./generic-scraper.js";
+import { log } from "./tools.js";
 
 letScraperListenToMasterMessageAndInit(scrapeBoerderij);
 
 async function scrapeBoerderij(workerIndex) {
   await getBaseMusicEvents(workerIndex);
 
+  //log(EventsList._events)
+  EventsList.save("boerderij");
   parentPort.postMessage({
     status: "done",
     message: `Boerderij worker-${workerIndex} done.`,
   });
-  EventsList.save("boerderij");
 }
 async function getBaseMusicEvents(workerIndex) {
   const allRockBatch = await axios
@@ -38,8 +41,8 @@ async function getBaseMusicEvents(workerIndex) {
     event.image = `https://lift3cdn.nl/image/115/784x476/${event.file}`;
   });
 
-  await recursiveSingleGet(allRockBatch, workerIndex);
-  return true;
+  return await recursiveSingleGet(allRockBatch, workerIndex);
+
 }
 
 async function recursiveSingleGet(baseMusicEvents, workerIndex) {
@@ -83,8 +86,8 @@ async function recursiveSingleGet(baseMusicEvents, workerIndex) {
     title: `${ajaxRes.title} ${ajaxRes?.subTitle ?? ""}`,
     shortText: ajaxRes.intro,
     longText: longTextPath,
-    startDateTime: new Date(`${ajaxRes.event_date}T${ajaxRes.event_start}`),
-    doorOpenDateTime: new Date(`${ajaxRes.event_date}T${ajaxRes.event_open}`),
+    startDateTime: new Date(`${ajaxRes.event_date}T${ajaxRes.event_start}`).toISOString(),
+    doorOpenDateTime: new Date(`${ajaxRes.event_date}T${ajaxRes.event_open}`).toISOString(),
     location: "boerderij",
     price,
     venueEventUrl: "https://poppodiumboerderij.nl/",
@@ -95,6 +98,6 @@ async function recursiveSingleGet(baseMusicEvents, workerIndex) {
   }
 
   return newMusicEvents.length
-    ? recursiveSingleGet(newMusicEvents, workerIndex)
+    ? await recursiveSingleGet(newMusicEvents, workerIndex)
     : true;
 }
