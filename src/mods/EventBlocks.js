@@ -1,6 +1,7 @@
 import React from "react";
 
-class EventBlock extends React.Component {
+
+class EventBlocks extends React.Component {
   state = {
     musicEvents: [],
     maxEventsShown: 250,
@@ -160,7 +161,7 @@ class EventBlock extends React.Component {
   }
 
   musicEventFilters(musicEvents) {
-    return musicEvents.filter((musicEvent, musicEventKey) => {
+    const filtered = musicEvents.filter((musicEvent, musicEventKey) => {
       return musicEventKey <= this.state.maxEventsShown;
     })
       .filter((musicEvent, musicEventKey) => {
@@ -192,6 +193,23 @@ class EventBlock extends React.Component {
         }
         return true;
       })
+
+    return filtered.map((musicEvent, musicEventIndex) => {
+      musicEvent.firstOfMonth = false;
+      const startDateTime = new Date(musicEvent.startDateTime);
+      musicEvent.eventMonth = startDateTime.toLocaleDateString('nl', {
+        year: 'numeric',
+        month: 'short'
+      })
+      if (!musicEventIndex || !filtered[musicEventIndex - 1]) {
+        musicEvent.firstOfMonth = true;
+      }
+      if (musicEvent.eventMonth !== filtered[musicEventIndex - 1]?.eventMonth) {
+        musicEvent.firstOfMonth = true;
+      }
+      return musicEvent;
+    });
+
   }
 
   render() {
@@ -211,13 +229,17 @@ class EventBlock extends React.Component {
               musicEvent,
               musicEventKey
             );
+            const firstOfMonthBlock = musicEvent.firstOfMonth ? <time className='event-block__first-of-month'>{musicEvent.eventMonth}</time> : '';
             return (
               <article
                 id={articleID}
                 key={musicEventKey}
+                data-date={musicEvent.eventMonth}
                 className={`event-block provide-dark-contrast ${musicEvent.enlarged ? "event-block--enlarged" : ""
+                  } ${musicEvent.firstOfMonth ? "event-block--first-of-month" : ""
                   }`}
               >
+                {firstOfMonthBlock}
                 {imageHTML}
                 <header className="event-block__header contrast-with-dark">
                   <h2 className="event-block__title contrast-with-dark">
@@ -296,4 +318,4 @@ function musicEventDateFilter(musicEvent) {
   return musicEventTime >= nowDate;
 }
 
-export default EventBlock;
+export default EventBlocks;

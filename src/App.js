@@ -2,9 +2,10 @@ import React from "react";
 import SwipeableViews from "react-swipeable-views";
 
 import "./App.css";
+import './event-blocks.css';
 import "./App-mobile.css";
 import "./normalize.css";
-import EventBlock from "./mods/EventBlock";
+import EventBlocks from "./mods/EventBlocks";
 import HeaderMenu from "./mods/HeaderMenu";
 import FilterMenu from "./mods/FilterMenu";
 import OpenScreen from "./mods/OpenScreen";
@@ -176,7 +177,7 @@ class App extends React.Component {
               />
             </div>
             <main className="app-main">
-              <EventBlock
+              <EventBlocks
                 filterSettings={this.state.filterSettings}
                 locations={this.state.locations}
               />
