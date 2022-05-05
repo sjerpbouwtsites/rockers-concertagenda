@@ -25,18 +25,6 @@
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-05-04T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Imminence",
-    "location": "dehelling",
-    "price": null,
-    "shortText": "De Helling, Utrecht",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
     "startDateTime": "2022-05-04T17:30:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://www.melkweg.nl/nl/agenda/chuck-ragan-04-05-2022",
@@ -82,18 +70,6 @@
     "shortText": "NOYS EP Release Party",
     "longText": "../public/texts/96ac372c-9ade-4b0c-aecd-a04378ebdf8d.html",
     "image": "https://occii.org/wp-content/uploads/2022/04/WhatsApp-Image-2021-06-22-at-07.22.26-1024x975.jpeg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-05-06T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Manora en Montany",
-    "location": "poppodiummax",
-    "price": null,
-    "shortText": "Poppodium Max, Alphen a/d Rijn",
-    "longText": null,
-    "image": null
   },
   {
     "doorOpenDateTime": null,
@@ -168,18 +144,6 @@
     "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/28750"
   },
   {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-05-07T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Ball Noir en Vetrar Draugurinn",
-    "location": "depeppel",
-    "price": null,
-    "shortText": "De Peppel, Zeist",
-    "longText": null,
-    "image": null
-  },
-  {
     "doorOpenDateTime": "2022-05-07T16:30:00.000Z",
     "startDateTime": "2022-05-07T17:00:00.000Z",
     "endDateTime": null,
@@ -226,42 +190,6 @@
     "shortText": "Support: KRISIUN + CRYPTA",
     "longText": "../public/texts/d1dc3197-ab8f-4d24-aeb8-102b63ca0e75.html",
     "image": "https://www.dynamo-eindhoven.nl/wp-content/uploads/2021/04/Deicide-Dynamo-500x500.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-05-08T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Batushka en Diabolical",
-    "location": "simplon",
-    "price": null,
-    "shortText": "Simplon, Groningen",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-05-08T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Meshuggah",
-    "location": "palladium",
-    "price": null,
-    "shortText": "Palladium, Keulen (Duitsland)",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-05-08T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Suicidal Angels, Dead Head, Incursion Dementa en Bloodsucker",
-    "location": "iduna",
-    "price": null,
-    "shortText": "Iduna, Drachten",
-    "longText": null,
-    "image": null
   },
   {
     "doorOpenDateTime": null,
@@ -421,30 +349,6 @@
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-05-13T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Anneke van Giersbergen",
-    "location": "stevenskerk",
-    "price": null,
-    "shortText": "Stevenskerk, Nijmegen",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-05-13T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Dream Theater en Devin Townsend",
-    "location": "afaslive",
-    "price": null,
-    "shortText": "AFAS Live, Amsterdam",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
     "startDateTime": "2022-05-13T17:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://baroeg.nl/productie/nieuw-datum-h-e-a-t-reach-deaf-rat/",
@@ -480,6 +384,18 @@
     "image": "https://patronaat.nl/app/uploads/2021/09/Normandie2-360x360.jpeg"
   },
   {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-05-13T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.afaslive.nl/agenda/dream-theater",
+    "title": "Dream Theater",
+    "location": "afaslive",
+    "price": 71.68,
+    "shortText": null,
+    "longText": "../public/texts/9718653a-caba-4736-bde8-25d60c529e32.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2022/05-mei/_agendaitem/Dream-Theater.jpg"
+  },
+  {
     "doorOpenDateTime": "2022-05-14T17:00:00.000Z",
     "startDateTime": "2022-05-14T00:00:00.000Z",
     "endDateTime": null,
@@ -489,54 +405,6 @@
     "price": 16.5,
     "shortText": "Support: Our Hollow, Our Home + Led By Lanterns",
     "longText": "../public/texts/fcae37e0-f5ec-47c7-8016-d8a77a2588ff.html",
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-05-14T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Anneke van Giersbergen",
-    "location": "grotekerk",
-    "price": null,
-    "shortText": "Grote Kerk, Zwolle",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-05-14T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Dear Mother en For I Am King",
-    "location": "dehelling",
-    "price": null,
-    "shortText": "De Helling, Utrecht",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-05-14T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Nashville Pussy en Helldriver",
-    "location": "groeneengel",
-    "price": null,
-    "shortText": "Groene Engel, Oss",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-05-14T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Tusky, Two And A Half Girl en Rites",
-    "location": "tbeest",
-    "price": null,
-    "shortText": "'t Beest, Goes",
-    "longText": null,
     "image": null
   },
   {
@@ -564,6 +432,18 @@
     "image": "https://baroeg.nl/wp-content/uploads/2021/11/crashdiet-promo2-150x150.jpg"
   },
   {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-05-14T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.afaslive.nl/agenda/yungblud-1",
+    "title": "Yungblud",
+    "location": "afaslive",
+    "price": 35.84,
+    "shortText": null,
+    "longText": "../public/texts/53004a81-f285-49b8-b967-f2c0fc28445f.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2021/10-oktober/_agendaitem/Yungblud.jpg"
+  },
+  {
     "doorOpenDateTime": "2022-05-15T18:00:00.000Z",
     "startDateTime": "2022-05-14T22:00:00.000Z",
     "endDateTime": null,
@@ -574,18 +454,6 @@
     "shortText": "metallic bombast | ritualistic howls | industrial-strength clamor",
     "longText": "../public/texts/28a6d216-1c60-429e-adb2-359158061693.html",
     "image": "https://occii.org/wp-content/uploads/2022/04/senyawa-credit-anna-spysz@2000x1270-1024x650.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-05-15T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Anneke van Giersbergen",
-    "location": "orangerie",
-    "price": null,
-    "shortText": "Orangerie, Den Bosch",
-    "longText": null,
-    "image": null
   },
   {
     "doorOpenDateTime": null,
@@ -621,30 +489,6 @@
     "price": 10,
     "shortText": null,
     "longText": "../public/texts/fa361249-24b6-4a04-afa7-ea41466d97a2.html",
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-05-17T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Firewind en Eleine",
-    "location": "kantine",
-    "price": null,
-    "shortText": "Kantine, Keulen (Duitsland)",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-05-18T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Hällas",
-    "location": "littledevil",
-    "price": null,
-    "shortText": "Little Devil, Tilburg",
-    "longText": null,
     "image": null
   },
   {
@@ -697,30 +541,6 @@
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-05-19T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Anneke van Giersbergen",
-    "location": "annakerk",
-    "price": null,
-    "shortText": "Annakerk, Amstelveen",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-05-19T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Oranssi Pazuzu, Deafkids en Sturle Dagsland",
-    "location": "dehelling",
-    "price": null,
-    "shortText": "De Helling, Utrecht",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
     "startDateTime": "2022-05-19T06:30:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://www.dbstudio.nl/event/hangmans-chair-fr-nuclear-blast-hee-hee-shamone/",
@@ -754,30 +574,6 @@
     "shortText": "Support: Cabal + Yavid + Born a New + 3 Eyed Kids",
     "longText": "../public/texts/5f374154-0a6b-4cc4-914d-46994f14ba04.html",
     "image": "https://www.dynamo-eindhoven.nl/wp-content/uploads/2021/10/KING-810-2021-1200x1200.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-05-20T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Anneke van Giersbergen",
-    "location": "annakerk",
-    "price": null,
-    "shortText": "Annakerk, Amstelveen",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-05-20T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Oranssi Pazuzu, Deafkids en Sturle Dagsland",
-    "location": "bolwerk",
-    "price": null,
-    "shortText": "Bolwerk, Sneek",
-    "longText": null,
-    "image": null
   },
   {
     "doorOpenDateTime": null,
@@ -853,30 +649,6 @@
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-05-21T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Anneke van Giersbergen",
-    "location": "noorderkerk",
-    "price": null,
-    "shortText": "Noorderkerk, Sneek",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-05-21T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Manticora",
-    "location": "poppodiumduycker",
-    "price": null,
-    "shortText": "Poppodium Duycker, Hoofddorp",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
     "startDateTime": "2022-05-21T04:30:00.000Z",
     "endDateTime": "2022-05-21T23:00:00.000Z",
     "venueEventUrl": "https://www.dbstudio.nl/event/sweat-n-wild-festival/",
@@ -937,30 +709,6 @@
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-05-22T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Anneke van Giersbergen",
-    "location": "paterskerk",
-    "price": null,
-    "shortText": "Paterskerk, Eindhoven",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-05-22T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "King Satan en Splinterbomb",
-    "location": "willemtwee",
-    "price": null,
-    "shortText": "Willem Twee, Den Bosch",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
     "startDateTime": "2022-05-22T17:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://www.melkweg.nl/nl/agenda/electric-callboy-22-05-2022",
@@ -997,42 +745,6 @@
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-05-23T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Meshuggah",
-    "location": "ab",
-    "price": null,
-    "shortText": "AB, Brussel",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-05-23T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Wolfmother",
-    "location": "paradiso",
-    "price": null,
-    "shortText": "Paradiso, Amsterdam",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-05-24T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Russian Circles",
-    "location": "trix",
-    "price": null,
-    "shortText": "Trix, Antwerpen",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
     "startDateTime": "2022-05-25T06:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://www.dbstudio.nl/event/sacri-monti-usa-teepee-records-kaleidobolt-fin-svart-records/",
@@ -1056,6 +768,18 @@
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/61fce589c2c66.jpg?version=1643964533"
   },
   {
+    "doorOpenDateTime": "2022-05-25T16:30:00.000Z",
+    "startDateTime": "2022-05-25T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.afaslive.nl/agenda/korn",
+    "title": "Korn",
+    "location": "afaslive",
+    "price": 67.2,
+    "shortText": null,
+    "longText": "../public/texts/3d82daac-ab89-462c-a035-a5a6cd243396.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2020/05-mei/_agendaitem/Korn.jpg"
+  },
+  {
     "doorOpenDateTime": "2022-05-25T17:15:00.000Z",
     "startDateTime": "2022-05-25T18:15:00.000Z",
     "endDateTime": "2022-05-25T21:00:00.000Z",
@@ -1066,30 +790,6 @@
     "shortText": "Breed uitgesponnen instrumentale post-rock",
     "longText": "../public/texts/1ac94db1-070c-4b60-ad0b-09a770648f84.html",
     "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2021/09/Mogwai-4-by-Antony-Crook-700x470.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-05-26T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Anneke van Giersbergen",
-    "location": "tbeest",
-    "price": null,
-    "shortText": "'t Beest, Goes",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-05-26T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Firewind en Eleine",
-    "location": "depul",
-    "price": null,
-    "shortText": "De Pul, Uden",
-    "longText": null,
-    "image": null
   },
   {
     "doorOpenDateTime": null,
@@ -1140,6 +840,18 @@
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/5e872176c5084.jpg?version=1585914343"
   },
   {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-05-26T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.afaslive.nl/agenda/jungle",
+    "title": "Jungle",
+    "location": "afaslive",
+    "price": 43.5,
+    "shortText": null,
+    "longText": "../public/texts/7e8f5261-7f9c-433f-bc2f-ca89add55597.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2022/05-mei/_agendaitem/Jungle.jpg"
+  },
+  {
     "doorOpenDateTime": "2022-05-26T18:15:00.000Z",
     "startDateTime": "2022-05-26T19:00:00.000Z",
     "endDateTime": null,
@@ -1162,18 +874,6 @@
     "shortText": null,
     "longText": "../public/texts/9d420694-be57-48ee-9718-7f327fd720f6.html",
     "image": "https://www.doornroosje.nl/app/uploads/2021/11/Copy-of-JOE-THE-SHITBOYS-2-350x197-c-default.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-05-27T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Fit For An Autopsy, Ingested, Enterprise Earth, Great American Ghost en Sentinels",
-    "location": "dehelling",
-    "price": null,
-    "shortText": "De Helling, Utrecht",
-    "longText": null,
-    "image": null
   },
   {
     "doorOpenDateTime": null,
@@ -1210,18 +910,6 @@
     "shortText": null,
     "longText": "../public/texts/1dfcb224-3922-4eba-aa97-2ef396eed619.html",
     "image": "https://www.doornroosje.nl/app/uploads/2022/01/BeachDog-350x197-c-default.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-05-28T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Coffin Feeder",
-    "location": "littledevil",
-    "price": null,
-    "shortText": "Little Devil, Tilburg",
-    "longText": null,
-    "image": null
   },
   {
     "doorOpenDateTime": null,
@@ -1393,18 +1081,6 @@
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-06-01T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Therapy? en Sparrow Falls",
-    "location": "luxorlive",
-    "price": null,
-    "shortText": "Luxor Live, Arnhem",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
     "startDateTime": "2022-06-01T18:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://www.effenaar.nl/agenda/11588/haevn-jun2022",
@@ -1426,30 +1102,6 @@
     "shortText": "Post-punkers dat klinkt als Parquet Courts en Charles Bukowski.",
     "longText": "../public/texts/49cf8f7d-be85-4d10-898a-c583c1635cc8.html",
     "image": "https://patronaat.nl/app/uploads/2021/12/BikeThiefs1-760x400.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-06-02T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Combichrist",
-    "location": "dehelling",
-    "price": null,
-    "shortText": "De Helling, Utrecht",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-06-02T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Therapy? en Sparrow Falls",
-    "location": "gebouwt",
-    "price": null,
-    "shortText": "Gebouw-T, Bergen Op Zoom",
-    "longText": null,
-    "image": null
   },
   {
     "doorOpenDateTime": "2022-06-02T17:00:00.000Z",
@@ -1474,30 +1126,6 @@
     "shortText": null,
     "longText": "../public/texts/1cd7b57b-f430-4ecd-bbe4-1ec3835e1151.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/60c87c43e83b1.jpg?version=1623751781"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-06-03T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Rock Hard festival",
-    "location": "amphitheater",
-    "price": null,
-    "shortText": "Amphitheater, Gelsenkirchen (Duitsland)",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-06-03T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Vestrock",
-    "location": "hulst",
-    "price": null,
-    "shortText": "Hulst",
-    "longText": null,
-    "image": null
   },
   {
     "doorOpenDateTime": null,
@@ -1546,30 +1174,6 @@
     "shortText": "Echte Amerikaanse powerpop",
     "longText": "../public/texts/83b78663-0dc5-4320-a15f-26e239e3def1.html",
     "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2021/10/7-700x470.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-06-04T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Scarlet Aura en Thorium",
-    "location": "poppodiumduycker",
-    "price": null,
-    "shortText": "Poppodium Duycker, Hoofddorp",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-06-04T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Therapy? en Sparrow Falls",
-    "location": "willemtwee",
-    "price": null,
-    "shortText": "Willemtwee, Den Bosch",
-    "longText": null,
-    "image": null
   },
   {
     "doorOpenDateTime": null,
@@ -1632,64 +1236,16 @@
     "image": "https://metropool.nl//media/23775/tygers-web.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=132935578140000000"
   },
   {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-06-06T00:00:00.000Z",
+    "doorOpenDateTime": "2022-06-08T16:30:00.000Z",
+    "startDateTime": "2022-06-08T18:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Therapy? en Sparrow Falls",
-    "location": "oosterpoort",
-    "price": null,
-    "shortText": "Oosterpoort, Groningen",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-06-07T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Therapy? en Sparrow Falls",
-    "location": "hedon",
-    "price": null,
-    "shortText": "Hedon, Zwolle",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-06-08T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Sweden Rock festival",
-    "location": "slvesborgzwedenmetgunsnroseseva",
-    "price": null,
-    "shortText": "Met Guns n' Roses e.v.a.",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-06-08T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Therapy? en Sparrow Falls",
-    "location": "paard",
-    "price": null,
-    "shortText": "Paard, Den Haag",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-06-09T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Nova Rock festival",
-    "location": "pannoniafields",
-    "price": null,
-    "shortText": "Pannonia Fields, Nickelsdorf (Oostenrijk)",
-    "longText": null,
-    "image": null
+    "venueEventUrl": "https://www.afaslive.nl/agenda/lorde",
+    "title": "Lorde",
+    "location": "afaslive",
+    "price": 42.56,
+    "shortText": null,
+    "longText": "../public/texts/1b176787-f44f-4f2a-93d5-2ed8d755fb89.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2022/06-juni/_agendaitem/Lorde.jpg"
   },
   {
     "doorOpenDateTime": null,
@@ -1737,18 +1293,6 @@
     "price": "8",
     "shortText": "A night of international punk madness. ",
     "longText": "../public/texts/3d0987c4-33ee-4c44-af0d-455024dec845.html",
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-06-10T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Into The Grave",
-    "location": "oldehoofsterkerkhof",
-    "price": null,
-    "shortText": "Oldehoofsterkerkhof, Leeuwarden",
-    "longText": null,
     "image": null
   },
   {
@@ -1932,30 +1476,6 @@
     "image": "https://bibelot.net/wp-content/uploads/2022/01/Epica-band-by-Tim-Tronckoe-7-1400x933.jpg"
   },
   {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-06-16T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Copenhell",
-    "location": "kopenhagendenemarkenmetironmaideneva",
-    "price": null,
-    "shortText": "Met Iron Maiden e.v.a.",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-06-16T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Graspop Metal Meeting",
-    "location": "desselbelgimetironmaiden",
-    "price": null,
-    "shortText": "Met Iron Maiden, Scorpions, Sabaton, Judas Priest e.v.a.",
-    "longText": null,
-    "image": null
-  },
-  {
     "doorOpenDateTime": "2022-06-16T16:30:00.000Z",
     "startDateTime": "2022-06-16T17:30:00.000Z",
     "endDateTime": "2022-06-16T20:45:00.000Z",
@@ -1990,18 +1510,6 @@
     "shortText": null,
     "longText": "../public/texts/44a4480a-441e-40a9-8b53-a237c21dbbcf.html",
     "image": "https://metropool.nl//media/24841/zomeroffensief_web_1920x1080.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=132954589460000000"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-06-17T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Pinkpop",
-    "location": "megaland",
-    "price": null,
-    "shortText": "Met Metallica, Pearl Jam, Queens Of The Stone Age, Volbeat, Nightwish, Deftones e.v.a.",
-    "longText": null,
-    "image": null
   },
   {
     "doorOpenDateTime": null,
@@ -2064,28 +1572,16 @@
     "image": "https://www.doornroosje.nl/app/uploads/2021/09/Leprous-1-350x197-c-default.jpg"
   },
   {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-06-20T00:00:00.000Z",
+    "doorOpenDateTime": "2022-06-19T16:30:00.000Z",
+    "startDateTime": "2022-06-19T18:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Five Finger Death Punch en Megadeth",
-    "location": "ahoy",
-    "price": null,
-    "shortText": "Ahoy, Rotterdam",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-06-20T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Social Distortion",
-    "location": "paradiso",
-    "price": null,
-    "shortText": "Paradiso, Amsterdam",
-    "longText": null,
-    "image": null
+    "venueEventUrl": "https://www.afaslive.nl/agenda/faith-no-more-2",
+    "title": "Faith No More",
+    "location": "afaslive",
+    "price": "19",
+    "shortText": null,
+    "longText": "../public/texts/831bbf5d-1b8a-46b7-835a-1f47ee5036b1.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2020/07-juli/_agendaitem/Faith-No-More.jpg"
   },
   {
     "doorOpenDateTime": "2022-06-20T17:00:00.000Z",
@@ -2098,18 +1594,6 @@
     "shortText": "Canadese metalformatie met stevig debuut",
     "longText": "../public/texts/4907f27c-a1f1-492b-ae0a-64ed8f6c779d.html",
     "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2022/03/275309775_540913417390745_947493037696685030_n-700x470.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-06-21T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Dragged Under",
-    "location": "halloffame",
-    "price": null,
-    "shortText": "Hall Of Fame, Tilburg",
-    "longText": null,
-    "image": null
   },
   {
     "doorOpenDateTime": "2022-06-21T17:00:00.000Z",
@@ -2148,6 +1632,18 @@
     "image": "https://www.dbstudio.nl/wp-content/uploads/2022/03/Okkultokrati-photo-Remy_Elk.jpg"
   },
   {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-06-22T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.afaslive.nl/agenda/olivia-rodrigo",
+    "title": "Olivia Rodrigo",
+    "location": "afaslive",
+    "price": 38,
+    "shortText": null,
+    "longText": "../public/texts/250a9603-b0a7-462c-aa5a-e5ad137036d3.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2022/06-juni/_agendaitem/Olivia-Rodrigo.jpg"
+  },
+  {
     "doorOpenDateTime": "2022-06-22T17:00:00.000Z",
     "startDateTime": "2022-06-22T18:00:00.000Z",
     "endDateTime": null,
@@ -2158,42 +1654,6 @@
     "shortText": "The Godfather of Punk",
     "longText": "../public/texts/067089d7-cb36-4021-81e7-65ac01b8728b.html",
     "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2021/06/Webversie-9-700x470.png"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-06-23T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Blood Incantation",
-    "location": "willemeen",
-    "price": null,
-    "shortText": "Willemeen, Arnhem",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-06-23T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Guns n' Roses",
-    "location": "stadspark",
-    "price": null,
-    "shortText": "Stadspark, Groningen",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-06-23T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Tons Of Rock festival",
-    "location": "oslonoorwegenmetironmaiden",
-    "price": null,
-    "shortText": "Met Iron Maiden, Deep Purple, Five Finger Death Punch, Opeth, Mastodon e.v.a.",
-    "longText": null,
-    "image": null
   },
   {
     "doorOpenDateTime": null,
@@ -2218,30 +1678,6 @@
     "shortText": "Iconische post-punkband, 80s, Just Like Honey",
     "longText": "../public/texts/692e91b7-fefa-417b-b8b0-6b12f96dcc01.html",
     "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/26296"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-06-24T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Converge: Bloodmoon",
-    "location": "philharmonie",
-    "price": null,
-    "shortText": "Philharmonie, Haarlem",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-06-24T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Temple Fang en Supersonic Blues",
-    "location": "groeneengel",
-    "price": null,
-    "shortText": "Groene Engel, Oss",
-    "longText": null,
-    "image": null
   },
   {
     "doorOpenDateTime": null,
@@ -2305,30 +1741,6 @@
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-06-25T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Blood Incantation",
-    "location": "kavka",
-    "price": null,
-    "shortText": "Kavka, Antwerpen",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-06-25T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Midsummer Prog",
-    "location": "openluchttheater",
-    "price": null,
-    "shortText": "Openluchttheater, Valkenburg",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
     "startDateTime": "2022-06-25T06:30:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://www.dbstudio.nl/event/the-midnight-ghost-train-sons-of-node/",
@@ -2365,15 +1777,15 @@
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-06-27T00:00:00.000Z",
+    "startDateTime": "2022-06-28T18:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Iron Maiden en Airbourne",
-    "location": "gelredome",
-    "price": null,
-    "shortText": "Gelredome, Arnhem",
-    "longText": null,
-    "image": null
+    "venueEventUrl": "https://www.afaslive.nl/agenda/elvis-costello-the-imposters",
+    "title": "Elvis Costello & The Imposters",
+    "location": "afaslive",
+    "price": 75.05,
+    "shortText": null,
+    "longText": "../public/texts/0a139c98-a94a-467a-aae9-222ed9cc871e.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2022/06-juni/_agendaitem/Elvis-Costello-The-Imposters.jpg"
   },
   {
     "doorOpenDateTime": null,
@@ -2472,6 +1884,18 @@
     "image": "https://www.doornroosje.nl/app/uploads/2022/02/Thou1-350x197-c-default.jpg"
   },
   {
+    "doorOpenDateTime": "2022-07-01T16:30:00.000Z",
+    "startDateTime": "2022-07-01T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.afaslive.nl/agenda/jack-white",
+    "title": "Jack White",
+    "location": "afaslive",
+    "price": 56,
+    "shortText": null,
+    "longText": "../public/texts/61adb25e-dbf2-476a-a544-c6364e4367dc.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2022/07-juli/_agendaitem/JackWhite.jpg"
+  },
+  {
     "doorOpenDateTime": null,
     "startDateTime": "2022-07-01T18:30:00.000Z",
     "endDateTime": null,
@@ -2496,18 +1920,6 @@
     "image": "https://metropool.nl//media/22914/savatar_web_1920x1080.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=132906181910000000"
   },
   {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-07-02T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Metalfest No Sleep",
-    "location": "wieleman",
-    "price": null,
-    "shortText": "Met Komatsu, Cryptosis, Lifelong, Godscum, Carnation, Mouflon, Killing Cult Society",
-    "longText": null,
-    "image": null
-  },
-  {
     "doorOpenDateTime": "2022-07-02T18:00:00.000Z",
     "startDateTime": "2022-07-02T18:30:00.000Z",
     "endDateTime": null,
@@ -2518,18 +1930,6 @@
     "shortText": "presented by Minor Operation Bookings",
     "longText": "../public/texts/445581f2-cf2f-4ee3-931e-e3b2d3832e84.html",
     "image": "https://patronaat.nl/app/uploads/2022/03/Cro-Mags-760x400.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-07-03T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Agnostic Front",
-    "location": "iduna",
-    "price": null,
-    "shortText": "Iduna, Drachten",
-    "longText": null,
-    "image": null
   },
   {
     "doorOpenDateTime": null,
@@ -2545,18 +1945,6 @@
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-07-04T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Rammstein",
-    "location": "goffertpark",
-    "price": null,
-    "shortText": "Goffertpark, Nijmegen",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
     "startDateTime": "2022-07-04T17:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://www.melkweg.nl/nl/agenda/the-chats-04-07-2022",
@@ -2566,18 +1954,6 @@
     "shortText": "Australische punkband, Garagerock, Pubvrienden",
     "longText": "../public/texts/19fd03a4-9042-4356-8f24-0700a97d94e4.html",
     "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/29134"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-07-05T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Rammstein",
-    "location": "goffertpark",
-    "price": null,
-    "shortText": "Goffertpark, Nijmegen",
-    "longText": null,
-    "image": null
   },
   {
     "doorOpenDateTime": null,
@@ -2677,18 +2053,6 @@
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-07-09T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Grima, Ultar en Bloody Tyrant",
-    "location": "willemeen",
-    "price": null,
-    "shortText": "Willemeen, Arnhem",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
     "startDateTime": "2022-07-09T17:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://baroeg.nl/productie/nieuwe-datum-semblant-as-i-may-secret-rule-structural/",
@@ -2698,6 +2062,18 @@
     "shortText": "<p>Liefhebbers van donkere Gothic Metal opgelet!</p>\n",
     "longText": "../public/texts/6223bbd5-3804-4b41-ad60-50ee2116226b.html",
     "image": "https://baroeg.nl/wp-content/uploads/2021/01/image4_1-kopie-150x150.jpeg"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-07-09T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.afaslive.nl/agenda/madness",
+    "title": "Madness",
+    "location": "afaslive",
+    "price": 53.9,
+    "shortText": null,
+    "longText": "../public/texts/77906269-c706-4c61-9eff-bdcd1dc353a1.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2022/07-juli/_agendaitem/Madness.jpg"
   },
   {
     "doorOpenDateTime": "2022-07-09T18:00:00.000Z",
@@ -2710,18 +2086,6 @@
     "shortText": "Cosmische trance die toch aanstekelijk is, rechtstreeks uit Chili",
     "longText": "../public/texts/c75d5f4d-7df8-49c0-a13e-baeb0e1d6c54.html",
     "image": "https://patronaat.nl/app/uploads/2022/03/20210517_sacredbones_domingae_ebruyildiz_588-2-360x360.jpeg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-07-10T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Grima, Ultar en Bloody Tyrant",
-    "location": "gent",
-    "price": null,
-    "shortText": "Gent",
-    "longText": null,
-    "image": null
   },
   {
     "doorOpenDateTime": "2022-07-10T17:00:00.000Z",
@@ -2842,18 +2206,6 @@
     "shortText": "Parabellum Tour",
     "longText": "../public/texts/d3508062-421e-4ae3-bdba-2326e54a9385.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/61b1c59f3823f.jpg?version=1639040465"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-07-21T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "KISS",
-    "location": "ziggodome",
-    "price": null,
-    "shortText": "Ziggo Dome, Amsterdam",
-    "longText": null,
-    "image": null
   },
   {
     "doorOpenDateTime": null,
@@ -2989,30 +2341,6 @@
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-07-31T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Vicious Rumors",
-    "location": "littledevil",
-    "price": null,
-    "shortText": "Little Devil, Tilburg",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-08-03T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Rammstein",
-    "location": "parkdenieuwekoers",
-    "price": null,
-    "shortText": "Park De Nieuwe Koers, Oostende (België)",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
     "startDateTime": "2022-08-03T06:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://www.dbstudio.nl/event/the-real-mckenzies-can-fat-wreck-support/",
@@ -3037,30 +2365,6 @@
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-08-04T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Rammstein",
-    "location": "parkdenieuwekoers",
-    "price": null,
-    "shortText": "Park De Nieuwe Koers, Oostende (België)",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-08-04T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Wacken Open Air",
-    "location": "wackenduitsland",
-    "price": null,
-    "shortText": "Wacken (Duitsland)",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
     "startDateTime": "2022-08-04T17:30:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://www.melkweg.nl/nl/agenda/mad-caddies-04-08-2022",
@@ -3070,18 +2374,6 @@
     "shortText": "Skapunk, Reggae, Fat Wreck Chords, Vaste gasten",
     "longText": "../public/texts/92cad12a-10ff-46f3-9ef4-1b4256d74cce.html",
     "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/27124"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-08-05T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Butcher Babies",
-    "location": "qfactory",
-    "price": null,
-    "shortText": "Q-Factory, Amsterdam",
-    "longText": null,
-    "image": null
   },
   {
     "doorOpenDateTime": null,
@@ -3133,30 +2425,6 @@
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-08-09T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Nervosa en Burning Witches",
-    "location": "hell",
-    "price": null,
-    "shortText": "Hell, Diest (België)",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-08-10T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Nervosa en Burning Witches",
-    "location": "willemeen",
-    "price": null,
-    "shortText": "Willemeen, Arnhem",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
     "startDateTime": "2022-08-11T18:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://www.effenaar.nl/agenda/11224/maybeshewill-effenaar22",
@@ -3180,18 +2448,6 @@
     "image": "https://patronaat.nl/app/uploads/2022/02/Pallbearer-760x400.jpg"
   },
   {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-08-12T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Alcatraz Hard Rock & Metal Festival",
-    "location": "delangemunte",
-    "price": null,
-    "shortText": "De Lange Munte, Kortrijk (België)",
-    "longText": null,
-    "image": null
-  },
-  {
     "doorOpenDateTime": "2022-08-12T17:30:00.000Z",
     "startDateTime": "2022-08-12T18:00:00.000Z",
     "endDateTime": null,
@@ -3202,18 +2458,6 @@
     "shortText": "Bepalende postrock-band voor het eerst in 5 jaar weer in Nederland",
     "longText": "../public/texts/2e32ae55-16d8-448c-a0a3-78ca12ef32d7.html",
     "image": "https://patronaat.nl/app/uploads/2021/09/Maybeshewill-Landscape_web-360x360.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-08-13T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "D.R.I, Neuk! en Ancestral Sin",
-    "location": "iduna",
-    "price": null,
-    "shortText": "Iduna, Drachten",
-    "longText": null,
-    "image": null
   },
   {
     "doorOpenDateTime": "2022-08-13T16:30:00.000Z",
@@ -3301,18 +2545,6 @@
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-08-20T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Dynamo Metalfest",
-    "location": "ijssportcentrum",
-    "price": null,
-    "shortText": "Met Kreator, Testament, Jinjer, Sacred Reich e.v.a.",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
     "startDateTime": "2022-08-21T00:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://www.dynamo-metalfest.nl/",
@@ -3372,6 +2604,18 @@
     "image": "https://gebrdenobel.nl/images/made/uploads/images/Blaze_Bayley_gebrdenobel_BB_fb_event_def_Tekengebied_1_1240_500_80_s_c1_c_c.jpg"
   },
   {
+    "doorOpenDateTime": "2022-08-27T16:30:00.000Z",
+    "startDateTime": "2022-08-27T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.afaslive.nl/agenda/passenger",
+    "title": "Passenger",
+    "location": "afaslive",
+    "price": 44.8,
+    "shortText": null,
+    "longText": "../public/texts/2a6b90fc-2511-4d28-b088-4d32f1abbde4.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2021/10-oktober/_agendaitem/6944/Passenger.jpg"
+  },
+  {
     "doorOpenDateTime": "2022-08-28T17:45:00.000Z",
     "startDateTime": "2022-08-28T18:30:00.000Z",
     "endDateTime": null,
@@ -3382,18 +2626,6 @@
     "shortText": null,
     "longText": "../public/texts/95990e61-26c4-4e06-a4ae-2f737f9a3dde.html",
     "image": "https://metropool.nl//media/22079/blaze-beyley-web.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=132836098690000000"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-08-29T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Imperial Triumphant",
-    "location": "merleyn",
-    "price": null,
-    "shortText": "Merleyn, Nijmegen",
-    "longText": null,
-    "image": null
   },
   {
     "doorOpenDateTime": "2022-08-29T18:00:00.000Z",
@@ -3505,18 +2737,6 @@
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-09-10T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Baroeg Open Air",
-    "location": "zuiderpark",
-    "price": null,
-    "shortText": "Met Napalm Death, Atari Teenage Riot e.v.a.",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
     "startDateTime": "2022-09-10T10:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://baroeg.nl/productie/baroeg-open-air-2022/",
@@ -3550,18 +2770,6 @@
     "shortText": "Noorse band, Hardcore punk, Deathpop",
     "longText": "../public/texts/463e8a68-df06-4d30-8856-480cc3671b43.html",
     "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/29099"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-09-13T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Riverside",
-    "location": "kavka",
-    "price": null,
-    "shortText": "Kavka, Antwerpen",
-    "longText": null,
-    "image": null
   },
   {
     "doorOpenDateTime": "2022-09-13T16:30:00.000Z",
@@ -3601,30 +2809,6 @@
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-09-15T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Riverside",
-    "location": "diekantine",
-    "price": null,
-    "shortText": "Die Kantine, Keulen (Duitsland)",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-09-15T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Stake",
-    "location": "merleyn",
-    "price": null,
-    "shortText": "Merleyn, Nijmegen",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
     "startDateTime": "2022-09-15T19:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://bibelot.net/agenda/brutality-will-prevail-uk/",
@@ -3658,18 +2842,6 @@
     "shortText": "Support: Fractal Universe + Virtual Symmetry",
     "longText": "../public/texts/a8bf90bc-b09c-49ef-8127-28dda7a55886.html",
     "image": "https://www.dynamo-eindhoven.nl/wp-content/uploads/2021/09/Announcement_PromoPic-1200x1200.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-09-16T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Riverside",
-    "location": "debosuil",
-    "price": null,
-    "shortText": "De Bosuil, Weert",
-    "longText": null,
-    "image": null
   },
   {
     "doorOpenDateTime": "2022-09-16T18:00:00.000Z",
@@ -3733,18 +2905,6 @@
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-09-18T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Battle Beast",
-    "location": "biebob",
-    "price": null,
-    "shortText": "Biebob, Vosselaar (België)",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
     "startDateTime": "2022-09-19T18:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://www.melkweg.nl/nl/agenda/IST-IST-19-09-2022",
@@ -3754,18 +2914,6 @@
     "shortText": "Post-punk, Sinister, Manchester",
     "longText": "../public/texts/34fabc46-dbca-4cef-b9d4-254633176571.html",
     "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/28928"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-09-20T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Tribulation, Bølzer en Molassess",
-    "location": "biebob",
-    "price": null,
-    "shortText": "Biebob, Vosselaar (België)",
-    "longText": null,
-    "image": null
   },
   {
     "doorOpenDateTime": "2022-09-20T17:00:00.000Z",
@@ -3778,6 +2926,18 @@
     "shortText": "Sick and Dangerous Tour 2022",
     "longText": "../public/texts/5b261965-10d8-43a0-863d-1074f7d742c7.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/61a0e0fa55292.jpg?version=1637933363"
+  },
+  {
+    "doorOpenDateTime": "2022-09-23T16:30:00.000Z",
+    "startDateTime": "2022-09-23T17:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.afaslive.nl/agenda/parkway-drive",
+    "title": "Parkway Drive",
+    "location": "afaslive",
+    "price": 50.4,
+    "shortText": null,
+    "longText": "../public/texts/98ed8e72-0db9-411f-ae3d-adf5dd665987.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2022/09-september/_agendaitem/Parkway-Drive.jpg"
   },
   {
     "doorOpenDateTime": null,
@@ -3853,30 +3013,6 @@
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-09-25T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Primus",
-    "location": "afaslive",
-    "price": null,
-    "shortText": "\"A Farewell To Kings\" Rush tribute",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-09-25T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Tribulation, Bølzer en Molassess",
-    "location": "turock",
-    "price": null,
-    "shortText": "Turock, Essen (Duitsland)",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
     "startDateTime": "2022-09-25T17:30:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://www.melkweg.nl/nl/agenda/new-model-army-25-09-2022",
@@ -3898,6 +3034,18 @@
     "shortText": null,
     "longText": "../public/texts/e5a8cde8-6487-426b-ad81-1e5fec46fc69.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/61f9591a90aef.JPG?version=1643731263"
+  },
+  {
+    "doorOpenDateTime": "2022-09-28T16:30:00.000Z",
+    "startDateTime": "2022-09-28T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.afaslive.nl/agenda/biffy-clyro",
+    "title": "Biffy Clyro",
+    "location": "afaslive",
+    "price": 43.68,
+    "shortText": null,
+    "longText": "../public/texts/1b30de51-0a55-4cfc-b73a-ad85a7da8ae3.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2020/11-november/_agendaitem/Biffy-Clyro-Website.jpg"
   },
   {
     "doorOpenDateTime": "2022-09-28T17:30:00.000Z",
@@ -3960,6 +3108,18 @@
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/6204d6774aa0a.jpg?version=1644484248"
   },
   {
+    "doorOpenDateTime": "2022-09-29T16:30:00.000Z",
+    "startDateTime": "2022-09-29T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.afaslive.nl/agenda/kaleo-1",
+    "title": "KALEO",
+    "location": "afaslive",
+    "price": 39.2,
+    "shortText": null,
+    "longText": "../public/texts/87aadc61-06cb-4c2b-8ff9-1a84efb57932.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2022/01-januari/_agendaitem/KALEO.jpg"
+  },
+  {
     "doorOpenDateTime": null,
     "startDateTime": "2022-09-29T18:00:00.000Z",
     "endDateTime": null,
@@ -3970,18 +3130,6 @@
     "shortText": "Indierock met een vleugje poppunk",
     "longText": "../public/texts/6e027bff-690c-4a43-a7b4-99b95f196305.html",
     "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/28580"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-09-30T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Visions Of Atlantis",
-    "location": "dehelling",
-    "price": null,
-    "shortText": "De Helling, Utrecht",
-    "longText": null,
-    "image": null
   },
   {
     "doorOpenDateTime": null,
@@ -4021,15 +3169,15 @@
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-10-01T00:00:00.000Z",
+    "startDateTime": "2022-09-30T18:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Mudhoney",
-    "location": "tolhuistuin",
-    "price": null,
-    "shortText": "Tolhuistuin, Amsterdam",
-    "longText": null,
-    "image": null
+    "venueEventUrl": "https://www.afaslive.nl/agenda/years-years",
+    "title": "Years & Years",
+    "location": "afaslive",
+    "price": 39.2,
+    "shortText": null,
+    "longText": "../public/texts/b02c75d9-9dad-4c51-b339-82a1919e8e9e.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2022/09-september/_agendaitem/Years-Years.jpg"
   },
   {
     "doorOpenDateTime": null,
@@ -4081,27 +3229,15 @@
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-10-02T00:00:00.000Z",
+    "startDateTime": "2022-10-02T18:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Amon Amarth, Machine Head en The Halo Effect",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/machine-head-amon-amarth",
+    "title": "Machine Head & Amon Amarth",
     "location": "afaslive",
-    "price": null,
-    "shortText": "AFAS Live, Amsterdam",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-10-02T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Watain, Abbath, Tribulation en Bølzer",
-    "location": "trix",
-    "price": null,
-    "shortText": "Trix, Antwerpen (België)",
-    "longText": null,
-    "image": null
+    "price": 60.48,
+    "shortText": null,
+    "longText": "../public/texts/bf181580-b993-472f-91ca-49ec09514309.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2022/10-oktober/_agendaitem/Machine-Head-Amon-Amarth.jpg"
   },
   {
     "doorOpenDateTime": "2022-10-03T17:00:00.000Z",
@@ -4116,28 +3252,16 @@
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/620b69d56a75d.jpg?version=1644915295"
   },
   {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-10-04T00:00:00.000Z",
+    "doorOpenDateTime": "2022-10-03T16:30:00.000Z",
+    "startDateTime": "2022-10-03T18:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Cradle Of Filth en Alcest",
-    "location": "trix",
-    "price": null,
-    "shortText": "Trix, Antwerpen",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-10-04T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Hypocrisy, Septicflesh, The Agonist en Horizon Ignited",
-    "location": "kavka",
-    "price": null,
-    "shortText": "Kavka, Antwerpen (België)",
-    "longText": null,
-    "image": null
+    "venueEventUrl": "https://www.afaslive.nl/agenda/the-black-crowes-2",
+    "title": "The Black Crowes",
+    "location": "afaslive",
+    "price": 63.84,
+    "shortText": null,
+    "longText": "../public/texts/526e4942-7f8d-46ce-8f25-16a90fb764fa.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2020/10-oktober/_agendaitem/The-Black-Crows.jpg"
   },
   {
     "doorOpenDateTime": "2022-10-05T16:45:00.000Z",
@@ -4153,15 +3277,15 @@
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-10-06T00:00:00.000Z",
+    "startDateTime": "2022-10-05T18:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Heideroosjes",
-    "location": "paradiso",
-    "price": null,
-    "shortText": "Paradiso, Amsterdam",
-    "longText": null,
-    "image": null
+    "venueEventUrl": "https://www.afaslive.nl/agenda/james-taylor-1",
+    "title": "James Taylor",
+    "location": "afaslive",
+    "price": 61.6,
+    "shortText": null,
+    "longText": "../public/texts/a6fc3d2c-27f8-4022-a268-e94eb4d15465.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2022/01-januari/_agendaitem/James-Taylor.jpg"
   },
   {
     "doorOpenDateTime": null,
@@ -4189,30 +3313,6 @@
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-10-07T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Cradle Of Filth en Alcest",
-    "location": "hedon",
-    "price": null,
-    "shortText": "Hedon, Zwolle",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-10-07T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Evergrey, Fractal Universe en Virtual Symmetry",
-    "location": "biebob",
-    "price": null,
-    "shortText": "Biebob, Vosselaar (België)",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
     "startDateTime": "2022-10-07T16:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://baroeg.nl/productie/veneration-of-the-dead-dag-1/",
@@ -4222,18 +3322,6 @@
     "shortText": "<p>Met o.a. Countess en Coldburn</p>\n",
     "longText": "../public/texts/3b40601d-fbcc-4b9f-9a5b-cf54f3387667.html",
     "image": "https://baroeg.nl/wp-content/uploads/2020/08/vene20-kopie-768x342.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-10-08T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Cradle Of Filth en Alcest",
-    "location": "matrix",
-    "price": null,
-    "shortText": "Matrix, Bochum (Duitsland)",
-    "longText": null,
-    "image": null
   },
   {
     "doorOpenDateTime": null,
@@ -4273,54 +3361,6 @@
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-10-09T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Amaranthe, Beyond The Black, Butcher Babies en Ad Infinitum",
-    "location": "trix",
-    "price": null,
-    "shortText": "Trix, Antwerpen (België)",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-10-10T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Anthrax en Municipal Waste",
-    "location": "anciennebelgique",
-    "price": null,
-    "shortText": "Ancienne Belgique, Brussel (België)",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-10-10T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Cradle Of Filth en Alcest",
-    "location": "essigfabrik",
-    "price": null,
-    "shortText": "Essigfabrik, Keulen (Duitsland)",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-10-10T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Deep Purple",
-    "location": "ziggodome",
-    "price": null,
-    "shortText": "Ziggo Dome, Amsterdam",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
     "startDateTime": "2022-10-11T17:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://www.melkweg.nl/nl/agenda/the-menzingers-11-10-2022",
@@ -4342,30 +3382,6 @@
     "shortText": null,
     "longText": "../public/texts/a19220da-701f-42ae-9e21-8b0bce2454a8.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/61091ba186596.jpg?version=1627987105"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-10-12T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Blind Guardian",
-    "location": "volt",
-    "price": null,
-    "shortText": "Volt, Sittard",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-10-12T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Saxon en Diamond Head",
-    "location": "trix",
-    "price": null,
-    "shortText": "Trix, Antwerpen (België)",
-    "longText": null,
-    "image": null
   },
   {
     "doorOpenDateTime": null,
@@ -4414,6 +3430,18 @@
     "shortText": "Amerikaanse ska-punk band, All My Best Friends Are Metalheads, Energieke sound",
     "longText": "../public/texts/add1adc3-1210-45a5-a53e-1993c65fc1bf.html",
     "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/27140"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-10-13T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.afaslive.nl/agenda/kasabian",
+    "title": "Kasabian",
+    "location": "afaslive",
+    "price": 44.8,
+    "shortText": null,
+    "longText": "../public/texts/078d2072-faf6-4eb8-a6fd-0725bcf2b105.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2022/10-oktober/_agendaitem/Kasabian.jpg"
   },
   {
     "doorOpenDateTime": "2022-10-13T17:00:00.000Z",
@@ -4485,18 +3513,6 @@
     "price": 17.5,
     "shortText": "Support: The BRKN + Jetlag Jenny",
     "longText": "../public/texts/204063d0-9b69-4259-b328-4a4cdd33a7da.html",
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-10-15T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Wolves In The Throne Room en Stygian Bough",
-    "location": "iduna",
-    "price": null,
-    "shortText": "Iduna, Drachten",
-    "longText": null,
     "image": null
   },
   {
@@ -4573,30 +3589,6 @@
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-10-21T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Amon Amarth, Machine Head en The Halo Effect",
-    "location": "vorstnationaal",
-    "price": null,
-    "shortText": "Vorst Nationaal, Brussel (België)",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-10-21T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Saxon en Diamond Head",
-    "location": "hedon",
-    "price": null,
-    "shortText": "Hedon, Zwolle",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
     "startDateTime": "2022-10-21T06:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://www.dbstudio.nl/event/nieuwe-datum-bad-cop-bad-cop-usa-fat-wreck-chords-march/",
@@ -4621,18 +3613,6 @@
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-10-22T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Arch Enemy, Behemoth, Carcass en Unto Others",
-    "location": "mainstage",
-    "price": null,
-    "shortText": "Mainstage, Den Bosch",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
     "startDateTime": "2022-10-22T17:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://baroeg.nl/productie/wavefest-presents-i-like-trains/",
@@ -4654,18 +3634,6 @@
     "shortText": "Maximum Overdrive, Nouked, Headfirst, Grave Dohls, Negative Creeps & Morning View.",
     "longText": "../public/texts/87a31f3c-b09f-471b-a1c6-675edbe03480.html",
     "image": "https://gebrdenobel.nl/images/made/uploads/images/Maxfest_2021_website_1240_500_80_s_c1_c_c.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-10-23T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Our Hollow, Our Home, For I Am King, Thecityisours en Chuggaboom",
-    "location": "willemtwee",
-    "price": null,
-    "shortText": "Willem Twee, Den Bosch",
-    "longText": null,
-    "image": null
   },
   {
     "doorOpenDateTime": "2022-10-23T12:30:00.000Z",
@@ -4693,6 +3661,18 @@
   },
   {
     "doorOpenDateTime": null,
+    "startDateTime": "2022-10-24T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.afaslive.nl/agenda/counting-crows-1",
+    "title": "Counting Crows",
+    "location": "afaslive",
+    "price": 67.2,
+    "shortText": null,
+    "longText": "../public/texts/a03e6648-c278-4971-9d13-9f7d32e998f0.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2022/03-maart/_agendaitem/Counting-Crows.jpg"
+  },
+  {
+    "doorOpenDateTime": null,
     "startDateTime": "2022-10-25T17:30:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://www.melkweg.nl/nl/agenda/pup-25-10-2022",
@@ -4704,16 +3684,16 @@
     "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/29002"
   },
   {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-10-26T00:00:00.000Z",
+    "doorOpenDateTime": "2022-10-26T16:30:00.000Z",
+    "startDateTime": "2022-10-26T18:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Paradise Lost",
-    "location": "decasino",
-    "price": null,
-    "shortText": "De Casino, Sint-Niklaas",
-    "longText": null,
-    "image": null
+    "venueEventUrl": "https://www.afaslive.nl/agenda/brit-floyd-3",
+    "title": "Brit Floyd",
+    "location": "afaslive",
+    "price": 61.6,
+    "shortText": null,
+    "longText": "../public/texts/bf371c59-43f8-4af5-9a42-d4c2d7ef3a82.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2020/10-oktober/_agendaitem/Brit-Floyd.jpg"
   },
   {
     "doorOpenDateTime": "2022-10-26T19:00:00.000Z",
@@ -4738,18 +3718,6 @@
     "shortText": "Acoustic Adventures MMXXI",
     "longText": "../public/texts/6178996e-24a1-48e3-8c1c-e1dcf46398d0.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/6063807bccf2c.jpg?version=1617133803"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-10-28T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Sepultura, Sacred Reich en Crowbar",
-    "location": "essigfabrik",
-    "price": null,
-    "shortText": "Essigfabrik, Keulen (Duitsland)",
-    "longText": null,
-    "image": null
   },
   {
     "doorOpenDateTime": "2022-10-28T17:30:00.000Z",
@@ -4825,6 +3793,18 @@
   },
   {
     "doorOpenDateTime": null,
+    "startDateTime": "2022-11-01T19:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.afaslive.nl/agenda/sigur-r%C3%B3s",
+    "title": "Sigur Rós",
+    "location": "afaslive",
+    "price": 50.4,
+    "shortText": null,
+    "longText": "../public/texts/6ea25029-728a-4aeb-8ad2-887aec4dec6a.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2022/11-november/_agendaitem/Sigur-Ros.jpg"
+  },
+  {
+    "doorOpenDateTime": null,
     "startDateTime": "2022-11-03T18:30:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://www.melkweg.nl/nl/agenda/nova-twins-03-11-2022",
@@ -4834,18 +3814,6 @@
     "shortText": "Uitgesproken punkrapduo uit Londen",
     "longText": "../public/texts/62deedcd-0542-48f6-ba4b-dc335c9cca3c.html",
     "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/28076"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-11-04T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Amaranthe, Beyond The Black, Butcher Babies en Ad Infinitum",
-    "location": "turbinenhalle",
-    "price": null,
-    "shortText": "Turbinenhalle, Oberhausen (Duitsland)",
-    "longText": null,
-    "image": null
   },
   {
     "doorOpenDateTime": null,
@@ -4872,54 +3840,6 @@
     "image": "https://metropool.nl//media/22674/rage-web.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=132846472450000000"
   },
   {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-11-05T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Holland Heavy festival",
-    "location": "iduna",
-    "price": null,
-    "shortText": "Met Picture, Highway Chile, Heloise, Metalbats e.a.",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-11-06T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Fleshgod Apocalypse en Ex Deo",
-    "location": "entrepot",
-    "price": null,
-    "shortText": "Entrepot, Brugge (België)",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-11-06T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Sepultura, Sacred Reich en Crowbar",
-    "location": "trix",
-    "price": null,
-    "shortText": "Trix, Antwerpen (België)",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-11-06T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Skid Row en Collateral",
-    "location": "zappa",
-    "price": null,
-    "shortText": "Zappa, Antwerpen (België)",
-    "longText": null,
-    "image": null
-  },
-  {
     "doorOpenDateTime": "2022-11-06T18:00:00.000Z",
     "startDateTime": "2022-11-06T18:45:00.000Z",
     "endDateTime": null,
@@ -4930,18 +3850,6 @@
     "shortText": "Donkere synthwave | Supports: Health + Author & Punisher",
     "longText": "../public/texts/aaf28861-06c2-4f3c-839e-729059a40b9b.html",
     "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2020/12/Pic-James-_-Pert-credit-Valeriya-Serpent-700x470.jpeg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-11-07T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Porcupine Tree",
-    "location": "ziggodome",
-    "price": null,
-    "shortText": "Ziggo Dome, Amsterdam",
-    "longText": null,
-    "image": null
   },
   {
     "doorOpenDateTime": "2022-11-07T17:30:00.000Z",
@@ -4957,15 +3865,15 @@
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-11-08T00:00:00.000Z",
+    "startDateTime": "2022-11-08T19:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Skid Row",
-    "location": "iduna",
-    "price": null,
-    "shortText": "Iduna, Drachten",
-    "longText": null,
-    "image": null
+    "venueEventUrl": "https://www.afaslive.nl/agenda/lil-nas-x",
+    "title": "Lil Nas X",
+    "location": "afaslive",
+    "price": 44.24,
+    "shortText": null,
+    "longText": "../public/texts/28bc3945-33d9-4bcf-b71a-667aa5428935.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2022/11-november/_agendaitem/Lil-Nas-X.jpg"
   },
   {
     "doorOpenDateTime": "2022-11-09T18:00:00.000Z",
@@ -4990,18 +3898,6 @@
     "shortText": "Vierdaags festival voor avontuurlijke en grensverleggende muziek",
     "longText": "../public/texts/0e41e6ef-91d7-423a-863d-ff33bd7086f0.html",
     "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2021/12/Le-Guess-Who-2022-foto-door-Ben-Houdijk-700x470.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-11-11T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Fleshgod Apocalypse en Ex Deo",
-    "location": "turock",
-    "price": null,
-    "shortText": "Turock, Essen (Duitsland)",
-    "longText": null,
-    "image": null
   },
   {
     "doorOpenDateTime": null,
@@ -5089,18 +3985,6 @@
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-11-19T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Helldorado",
-    "location": "klokgebouw",
-    "price": null,
-    "shortText": "Klokgebouw, Eindhoven",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
     "startDateTime": "2022-11-19T18:30:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://www.melkweg.nl/nl/agenda/guano-apes-19-11-2022",
@@ -5172,18 +4056,6 @@
     "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2020/09/Online-3-deze-gebruiken-website-700x470.jpg"
   },
   {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-11-21T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Evanescence en Within Temptation",
-    "location": "paleis12",
-    "price": null,
-    "shortText": "Paleis 12, Brussel (België)",
-    "longText": null,
-    "image": null
-  },
-  {
     "doorOpenDateTime": "2022-11-21T18:00:00.000Z",
     "startDateTime": "2022-11-21T19:00:00.000Z",
     "endDateTime": null,
@@ -5194,18 +4066,6 @@
     "shortText": null,
     "longText": "../public/texts/5d7969ba-97f6-4dba-a2a8-6720f62df1d6.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/6203aa4685cfe.jpg?version=1644407548"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-11-22T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Evanescence en Within Temptation",
-    "location": "paleis12",
-    "price": null,
-    "shortText": "Paleis 12, Brussel (België)",
-    "longText": null,
-    "image": null
   },
   {
     "doorOpenDateTime": "2022-11-25T18:30:00.000Z",
@@ -5242,18 +4102,6 @@
     "shortText": "",
     "longText": "../public/texts/e280f934-f824-428b-88fd-b51f5dd42eb8.html",
     "image": "https://bibelot.net/wp-content/uploads/2020/03/Magnapop-HR-PRESS-2018-pic-by-Pieter-Verhaeghe-1400x932.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-11-27T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Nightwish, Beast In Black en Turmion Kätilöt",
-    "location": "ziggodome",
-    "price": null,
-    "shortText": "Ziggo Dome, Amsterdam",
-    "longText": null,
-    "image": null
   },
   {
     "doorOpenDateTime": "2022-11-27T16:00:00.000Z",
@@ -5304,18 +4152,6 @@
     "image": "https://www.doornroosje.nl/app/uploads/2022/02/Therion-1-350x197-c-default.jpg"
   },
   {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-11-28T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Nightwish, Beast In Black en Turmion Kätilöt",
-    "location": "ziggodome",
-    "price": null,
-    "shortText": "Ziggo Dome, Amsterdam",
-    "longText": null,
-    "image": null
-  },
-  {
     "doorOpenDateTime": "2022-11-28T18:30:00.000Z",
     "startDateTime": "2022-11-28T19:00:00.000Z",
     "endDateTime": "2022-11-28T22:00:00.000Z",
@@ -5340,18 +4176,6 @@
     "image": "https://www.doornroosje.nl/app/uploads/2022/03/Halocene-1934x1088-c-default.jpg22-350x197-c-default.jpg"
   },
   {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-11-29T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Evanescence en Within Temptation",
-    "location": "ziggodome",
-    "price": null,
-    "shortText": "Ziggo Dome, Amsterdam",
-    "longText": null,
-    "image": null
-  },
-  {
     "doorOpenDateTime": "2022-11-29T16:00:00.000Z",
     "startDateTime": "2022-11-29T17:00:00.000Z",
     "endDateTime": null,
@@ -5362,18 +4186,6 @@
     "shortText": null,
     "longText": "../public/texts/96e3f1eb-935f-4111-bf2d-ab952a250f66.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/61793840aae97.png?version=1635334265"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-11-30T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Evanescence en Within Temptation",
-    "location": "ziggodome",
-    "price": null,
-    "shortText": "Ziggo Dome, Amsterdam",
-    "longText": null,
-    "image": null
   },
   {
     "doorOpenDateTime": "2022-11-30T18:00:00.000Z",
@@ -5388,30 +4200,6 @@
     "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2021/04/Arstidir_Reharsal-Space-I-foto-by-Hordur-Sveinsson-kopie-700x470.jpg"
   },
   {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-12-01T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Árstíðir",
-    "location": "nieuwekerk",
-    "price": null,
-    "shortText": "Nieuwe Kerk, Haarlem",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-12-01T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Powerwolf, Dragonforce en Warkings",
-    "location": "afaslive",
-    "price": null,
-    "shortText": "AFAS Live, Amsterdam",
-    "longText": null,
-    "image": null
-  },
-  {
     "doorOpenDateTime": "2022-12-01T01:19:30.000Z",
     "startDateTime": "2022-12-01T01:20:00.000Z",
     "endDateTime": null,
@@ -5424,6 +4212,18 @@
     "image": "https://www.doornroosje.nl/app/uploads/2022/04/Bleed-From-Within-1934x1088-350x197-c-default.jpg"
   },
   {
+    "doorOpenDateTime": "2022-12-01T17:00:00.000Z",
+    "startDateTime": "2022-12-01T17:40:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.afaslive.nl/agenda/powerwolf-1",
+    "title": "POWERWOLF",
+    "location": "afaslive",
+    "price": 45,
+    "shortText": null,
+    "longText": "../public/texts/495c5689-3582-4f61-a00c-a4ebac351afc.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2021/10-oktober/_agendaitem/Powerwolf.jpg"
+  },
+  {
     "doorOpenDateTime": null,
     "startDateTime": "2022-12-02T19:00:00.000Z",
     "endDateTime": null,
@@ -5434,30 +4234,6 @@
     "shortText": "Duitse rockband, Post-punk, Indie rock",
     "longText": "../public/texts/2efc795a-4839-4ab4-9452-95aed5f2f621.html",
     "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/29281"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-12-03T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Tarja",
-    "location": "paterskerk",
-    "price": null,
-    "shortText": "Kerstshow",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-12-04T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Molasses, Verwoed en Doodswens",
-    "location": "iduna",
-    "price": null,
-    "shortText": "Iduna, Drachten",
-    "longText": null,
-    "image": null
   },
   {
     "doorOpenDateTime": null,
@@ -5554,42 +4330,6 @@
     "shortText": "Legal at Last Tour 2022",
     "longText": "../public/texts/22fb010e-596b-4e5e-b6a0-a6c0193332b7.html",
     "image": "https://gebrdenobel.nl/images/made/uploads/images/anvil_1240_500_80_s_c1_c_c.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-12-16T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Bömbers feat. Abbath",
-    "location": "dehelling",
-    "price": null,
-    "shortText": "De Helling, Utrecht",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-12-17T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Bömbers en Dikke Dennis & The Rockers",
-    "location": "iduna",
-    "price": null,
-    "shortText": "Iduna, Drachten",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-12-17T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Ronnie James Dio - The Memorial Concert",
-    "location": "tbeest",
-    "price": null,
-    "shortText": "'t Beest, Goes",
-    "longText": null,
-    "image": null
   },
   {
     "doorOpenDateTime": "2022-12-17T15:00:00.000Z",
@@ -5698,6 +4438,18 @@
     "shortText": null,
     "longText": "../public/texts/258bd972-61d8-416e-9505-88b968a88361.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/5fbc10e14e362.jpg?version=1606160851"
+  },
+  {
+    "doorOpenDateTime": "2023-01-27T17:30:00.000Z",
+    "startDateTime": "2023-01-27T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.afaslive.nl/agenda/epica-apocalyptica-2",
+    "title": "EPICA & Apocalyptica",
+    "location": "afaslive",
+    "price": 51.52,
+    "shortText": null,
+    "longText": "../public/texts/6f93c951-114d-4c49-8bab-9859e3c25a01.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2020/12-december/_agendaitem/Epica.jpg"
   },
   {
     "doorOpenDateTime": "2023-01-31T18:00:00.000Z",
@@ -6012,6 +4764,18 @@
     "image": "https://patronaat.nl/app/uploads/2021/09/Loudness-760x400.jpg"
   },
   {
+    "doorOpenDateTime": "2023-04-07T16:30:00.000Z",
+    "startDateTime": "2023-04-07T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.afaslive.nl/agenda/eels-1",
+    "title": "EELS",
+    "location": "afaslive",
+    "price": 46.5,
+    "shortText": null,
+    "longText": "../public/texts/1fc95e5d-28a7-4c7a-ad2f-ecd02d7477d4.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2022/04-april/_agendaitem/Eels.jpg"
+  },
+  {
     "doorOpenDateTime": null,
     "startDateTime": "2023-04-08T16:45:00.000Z",
     "endDateTime": null,
@@ -6022,6 +4786,18 @@
     "shortText": "",
     "longText": "../public/texts/6d7f984d-f9a7-4a48-b47a-d3e28743825e.html",
     "image": "https://www.effenaar.nl/uploads/event_spotlight_image/6177d7bd5b283.jpg"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-04-14T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.afaslive.nl/agenda/avril-lavigne-1",
+    "title": "Avril Lavigne",
+    "location": "afaslive",
+    "price": 47.04,
+    "shortText": null,
+    "longText": "../public/texts/0134aa06-8ef4-4ecf-a30f-18cf3df61eaa.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2022/02-februari/_agendaitem/Avril-Lavigne.jpg"
   },
   {
     "doorOpenDateTime": null,

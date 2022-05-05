@@ -39,6 +39,7 @@
     ]
   },
   "devDependencies": {
+    "node-fetch": "^3.2.4",
     "os-utils": "^0.0.14"
   }
 }

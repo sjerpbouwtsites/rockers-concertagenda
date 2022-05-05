@@ -1,12 +1,11 @@
-import fs from "fs";
+import fetch from 'node-fetch';
 
-async function init() {
-  const alleEvents = JSON.parse(
-    fs.readFileSync("./event-lists/events-list.json")
-  );
-  console.log(`Er zijn nu ${alleEvents.length} events`);
-}
+const foundInMetalEncyclopedia = await fetch(`https://www.metal-archives.com/search/ajax-band-search/?field=name&query=Queen_Latifa`)
+  .then(result => result.json())
+  .then(parsedJson => {
+    console.log(parsedJson.iTotalRecords > 0)
+    return parsedJson.iTotalRecords > 0;
+  })
 
-(() => {
-  init();
-})();
+
+console.log(foundInMetalEncyclopedia)

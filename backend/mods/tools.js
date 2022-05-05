@@ -2,6 +2,7 @@ import { parentPort } from "worker_threads";
 import fs from "fs";
 import fsDirections from "./fs-directions.js";
 import crypto from "crypto";
+import fetch from 'node-fetch';
 
 export function handleError(error) {
   parentPort.postMessage({
@@ -155,37 +156,42 @@ export async function isRock(
   logCheck = false
 ) {
 
-  if (logCheck) {
-    log(`checking: ${eventTitles.join('; ')}`)
-  }
-
-  if (eventTitles.length) {
+  if (!eventTitles.length) {
     return false;
+  }
+  if (isRockPossible) {
+    return true;
   }
 
   const newTitles = [...eventTitles]
   const title = newTitles.shift();
 
-  const page = await browser.newPage();
+  const MetalEncFriendlyTitle = title.replace(/\s/g, '_');
+  const foundInMetalEncyclopedia = await fetch(`https://www.metal-archives.com/search/ajax-band-search/?field=name&query=${MetalEncFriendlyTitle}`)
+    .then(result => result.json())
+    .then(parsedJson => {
+      return parsedJson.iTotalRecords > 0;
+    })
+  isRockPossible = isRockPossible || foundInMetalEncyclopedia
 
-  await page.goto(
-    new URL(`https://www.metal-archives.com/search?searchString=${title}&type=band_name`)
-  );
-  isRockPossible = isRockPossible || await page.evaluate(() => {
-    const isEmptyEl = document.querySelector(".dataTables_empty");
-    return !isEmptyEl;
-  });
-
+  let wikipediaSaysRock = false;
   if (!isRockPossible) {
+    const page = await browser.newPage();
     await page.goto(`https://en.wikipedia.org/wiki/${title.replace(/\s/g, '_')}`);
-    isRockPossible = await page.evaluate(() => {
-      const isRock = !!document.querySelector(".infobox a[href*='rock']");
+    wikipediaSaysRock = await page.evaluate(() => {
+      const isRock = !!document.querySelector(".infobox a[href*='rock']") && !document.querySelector(".infobox a[href*='Indie_rock']");
       const isMetal = !!document.querySelector(".infobox a[href*='metal']");
       return isRock || isMetal;
     });
+    page.close();
   }
 
-  page.close();
+  isRockPossible = isRockPossible || wikipediaSaysRock
+
+
+  if (logCheck) {
+    log(`checking: ${eventTitles.join('; ')}, isRock: ${isRockPossible} MetalEnc: ${foundInMetalEncyclopedia} wiki: ${wikipediaSaysRock}`)
+  }
 
   if (isRockPossible) {
     return true;

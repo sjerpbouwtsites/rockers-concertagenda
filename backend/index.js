@@ -13,7 +13,7 @@ function init() {
   const workerList = [];
 
   if (EventsList.isOld("metalfan")) {
-    workerList.push([fsDirections.scrapeMetalfan, "metalfan", 0]);
+    //workerList.push([fsDirections.scrapeMetalfan, "metalfan", 0]);
   }
   if (EventsList.isOld("baroeg")) {
     try {
@@ -123,6 +123,14 @@ function init() {
 
   if (EventsList.isOld("neushoorn")) {
     workerList.push([fsDirections.scrapeNeushoorn, "neushoorn", 0]);
+  }
+
+  if (EventsList.isOld("afaslive") || true) {
+    workerList.push([fsDirections.scrapeAfaslive, "afaslive", 0]);
+    workerList.push([fsDirections.scrapeAfaslive, "afaslive", 1]);
+    workerList.push([fsDirections.scrapeAfaslive, "afaslive", 2]);
+    workerList.push([fsDirections.scrapeAfaslive, "afaslive", 3]);
+
   }
 
   walkThroughWorkerList(workerList);

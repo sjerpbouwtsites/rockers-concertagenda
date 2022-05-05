@@ -48,8 +48,10 @@ export const bibelotMonths = baroegMonths;
 export const dbsMonths = baroegMonths;
 export const gebrdenobelMonths = baroegMonths;
 export const neushoornMonths = baroegMonths;
+export const afasliveMonths = baroegMonths;
 
 const months = {
+  afaslive: afasliveMonths,
   baroeg: baroegMonths,
   occii: occiiMonths,
   dynamy: dynamoMonths,
