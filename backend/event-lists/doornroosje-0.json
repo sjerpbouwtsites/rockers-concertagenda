@@ -1,62 +1,74 @@
 [
   {
-    "doorOpenDateTime": "2022-05-26T17:00:00.000Z",
-    "startDateTime": "2022-05-26T17:30:00.000Z",
+    "doorOpenDateTime": "2022-05-20T19:00:00.000Z",
+    "startDateTime": "2022-05-20T20:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/de-roos-finale/",
-    "title": "De Roos finale",
+    "venueEventUrl": "https://www.doornroosje.nl/event/cash-savage-3/",
+    "title": "Cash Savage and The Last Drinks",
+    "location": "doornroosje",
+    "price": 13,
+    "shortText": null,
+    "longText": "../public/texts/f478563e-ab4c-4d80-9c96-2ec4584bb4cf.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2021/09/Cash-Savage-1920x1080-1-350x197-c-default.jpg"
+  },
+  {
+    "doorOpenDateTime": "2022-05-31T17:00:00.000Z",
+    "startDateTime": "2022-05-31T17:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.doornroosje.nl/event/baroness-kvelertak/",
+    "title": "Kvelertak + Baroness",
+    "location": "doornroosje",
+    "price": 27.5,
+    "shortText": "FortaRock",
+    "longText": "../public/texts/1b33a79c-4984-4081-ad53-0c5ff1378661.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2021/10/20220531-Baroness-web-1-350x197-c-default.jpg"
+  },
+  {
+    "doorOpenDateTime": "2022-06-19T17:00:00.000Z",
+    "startDateTime": "2022-06-19T17:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.doornroosje.nl/event/leprous-3/",
+    "title": "Leprous + Aiming for Enrike",
+    "location": "doornroosje",
+    "price": 27.5,
+    "shortText": "Laatste kaarten",
+    "longText": "../public/texts/4f7d8e54-307f-4784-b382-254a9db6fee8.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2021/09/Leprous-1-350x197-c-default.jpg"
+  },
+  {
+    "doorOpenDateTime": "2022-09-15T19:00:00.000Z",
+    "startDateTime": "2022-09-15T20:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.doornroosje.nl/event/stake-4/",
+    "title": "Stake",
+    "location": "doornroosje",
+    "price": 13,
+    "shortText": null,
+    "longText": "../public/texts/74338489-9621-414f-adc5-65fc103ace1d.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2021/08/Stake-1920x1080-1-350x197-c-default.jpg"
+  },
+  {
+    "doorOpenDateTime": "2022-10-26T19:00:00.000Z",
+    "startDateTime": "2022-10-26T20:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.doornroosje.nl/event/life/",
+    "title": "LIFE",
     "location": "doornroosje",
     "price": 10,
-    "shortText": "Net bevestigd",
-    "longText": "../public/texts/6295d539-7c50-47e4-ab23-9074c6cc4d06.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2022/02/de-roos-banner-2022-350x197-c-default.jpg"
-  },
-  {
-    "doorOpenDateTime": "2022-06-11T18:00:00.000Z",
-    "startDateTime": "2022-06-11T18:45:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/the-gathering/",
-    "title": "The Gathering",
-    "location": "doornroosje",
-    "price": 22,
     "shortText": null,
-    "longText": "../public/texts/e7294916-418b-4532-beff-d560b4822562.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2022/01/The-Gathering-350x197-c-default.jpg"
+    "longText": "../public/texts/8de04c62-2643-45b2-b852-94e6e3b31d46.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2022/03/LIFE-MOON-1920x1080-1-350x197-c-default.jpg"
   },
   {
-    "doorOpenDateTime": "2022-07-01T02:20:00.000Z",
-    "startDateTime": "2022-07-01T02:20:30.000Z",
+    "doorOpenDateTime": "2023-03-01T07:21:00.000Z",
+    "startDateTime": "2023-03-01T07:22:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/thou/",
-    "title": "Thou + Portrayal of Guilt",
+    "venueEventUrl": "https://www.doornroosje.nl/event/bloodywood/",
+    "title": "Bloodywood",
     "location": "doornroosje",
     "price": 15,
-    "shortText": "Soulcrusher",
-    "longText": "../public/texts/f379c900-497e-489a-97f6-e38db4284bb4.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2022/02/Thou1-350x197-c-default.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": null,
-    "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/soulcrusher-2022/",
-    "title": "Soulcrusher 2022",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": null,
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": "2022-11-28T19:00:00.000Z",
-    "startDateTime": "2022-11-28T19:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/halocene/",
-    "title": "Halocene",
-    "location": "doornroosje",
-    "price": 16,
     "shortText": "Fortarock",
-    "longText": "../public/texts/42f3c517-acd4-4d64-b0d3-774574ecce13.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2022/03/Halocene-1934x1088-c-default.jpg22-350x197-c-default.jpg"
+    "longText": "../public/texts/c6c07643-2351-4c2b-b3f9-cd3927c6adc1.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2022/02/Bloodywood-350x197-c-default.jpg"
   }
 ]

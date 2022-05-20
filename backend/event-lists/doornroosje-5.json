@@ -1,62 +1,50 @@
 [
   {
-    "doorOpenDateTime": "2022-05-22T18:00:00.000Z",
-    "startDateTime": "2022-05-22T18:30:00.000Z",
+    "doorOpenDateTime": null,
+    "startDateTime": null,
     "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/pist-idiots/",
-    "title": "Pist Idiots + Shaemless",
+    "venueEventUrl": "https://www.doornroosje.nl/event/kids-n-billies-2022/",
+    "title": "Kids ‘n’ Billies 2022",
     "location": "doornroosje",
-    "price": 14.5,
-    "shortText": null,
-    "longText": "../public/texts/2b59900d-b6e7-43ad-9ea4-5f4afff4409f.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2022/02/Pist-Idiots-2021-by-Rad-Dan1920x1080-scaled-350x197-c-default.jpg"
+    "price": 22.5,
+    "shortText": "Laatste kaarten",
+    "longText": "../public/texts/be8eab40-c2da-49d5-8ff7-2021dc9847ed.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2022/03/KnB-web-scaled-350x197-c-default.jpg"
   },
   {
-    "doorOpenDateTime": "2022-06-24T19:00:00.000Z",
-    "startDateTime": "2022-06-24T20:00:00.000Z",
+    "doorOpenDateTime": "2022-08-29T18:00:00.000Z",
+    "startDateTime": "2022-08-29T18:30:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/the-bobby-lees/",
-    "title": "The Bobby Lees",
+    "venueEventUrl": "https://www.doornroosje.nl/event/imperial-triumphant-2/",
+    "title": "Imperial Triumphant",
     "location": "doornroosje",
     "price": 14.5,
-    "shortText": null,
-    "longText": "../public/texts/1ff74e4a-8697-4e4b-a836-8570ff22117b.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2022/03/The-Bobby-Lees-350x197-c-default.jpg"
-  },
-  {
-    "doorOpenDateTime": "2022-10-13T17:00:00.000Z",
-    "startDateTime": "2022-10-13T17:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/wolves-in-the-throne-room-2/",
-    "title": "Wolves in the Throne Room",
-    "location": "doornroosje",
-    "price": 25.5,
     "shortText": "Soulcrusher",
-    "longText": "../public/texts/e164abef-9b01-4a38-9608-f5f0fc057a2a.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2021/08/Wolves-in-the-Throne-Room-1920x1080-1-350x197-c-default.jpg"
+    "longText": "../public/texts/f72648db-6c9e-4290-b56b-2147b20e694e.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2021/09/Imperial-Triumphant-1920x1080-1-350x197-c-default.jpg"
   },
   {
-    "doorOpenDateTime": "2022-11-27T18:30:00.000Z",
-    "startDateTime": "2022-11-27T19:30:00.000Z",
+    "doorOpenDateTime": null,
+    "startDateTime": null,
     "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/therion/",
-    "title": "Therion",
+    "venueEventUrl": "https://www.doornroosje.nl/event/soulcrusher-2022-2/",
+    "title": "Soulcrusher 2022",
     "location": "doornroosje",
-    "price": 27.5,
-    "shortText": "Fortarock",
-    "longText": "../public/texts/c5041337-b9b1-47eb-b782-c725a2384d73.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2022/02/Therion-1-350x197-c-default.jpg"
-  },
-  {
-    "doorOpenDateTime": "2023-05-19T18:00:00.000Z",
-    "startDateTime": "2023-05-19T18:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/otoboke-beaver/",
-    "title": "Otoboke Beaver",
-    "location": "doornroosje",
-    "price": 16.5,
+    "price": null,
     "shortText": null,
-    "longText": "../public/texts/471c0980-5a67-4f9e-97e5-0eee65464080.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2021/12/Promo_OtobokeBeaver-credit_Takeaki_Emori-350x197-c-default.jpg"
+    "longText": null,
+    "image": null
+  },
+  {
+    "doorOpenDateTime": "2022-12-01T01:19:30.000Z",
+    "startDateTime": "2022-12-01T01:20:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.doornroosje.nl/event/bleed-from-within-2/",
+    "title": "Bleed From Within e.a.",
+    "location": "doornroosje",
+    "price": 17.5,
+    "shortText": "Fortarock",
+    "longText": "../public/texts/4bb8a3eb-c959-44a6-8c1e-7251fb6ea3d9.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2022/04/Bleed-From-Within-1934x1088-350x197-c-default.jpg"
   }
 ]

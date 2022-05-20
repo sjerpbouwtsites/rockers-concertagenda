@@ -1,51 +1,39 @@
 [
   {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-06-22T18:00:00.000Z",
+    "doorOpenDateTime": "2022-06-08T16:30:00.000Z",
+    "startDateTime": "2022-06-08T18:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/olivia-rodrigo",
-    "title": "Olivia Rodrigo",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/lorde",
+    "title": "Lorde",
     "location": "afaslive",
-    "price": 38,
+    "price": 42.56,
     "shortText": null,
-    "longText": "../public/texts/f11778ec-9783-45bb-a801-0db026641afb.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2022/06-juni/_agendaitem/Olivia-Rodrigo.jpg"
+    "longText": "../public/texts/1151e3b7-9d8d-460d-8eb1-fbf66ae7e46d.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2022/06-juni/_agendaitem/Lorde.jpg"
   },
   {
-    "doorOpenDateTime": "2022-07-01T16:30:00.000Z",
-    "startDateTime": "2022-07-01T18:00:00.000Z",
+    "doorOpenDateTime": "2022-08-27T16:30:00.000Z",
+    "startDateTime": "2022-08-27T18:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/jack-white",
-    "title": "Jack White",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/passenger",
+    "title": "Passenger",
     "location": "afaslive",
-    "price": 56,
+    "price": 44.8,
     "shortText": null,
-    "longText": "../public/texts/c70ae6e7-828b-42cb-bee5-7e180618841f.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2022/07-juli/_agendaitem/JackWhite.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-09-30T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/years-years",
-    "title": "Years & Years",
-    "location": "afaslive",
-    "price": 39.2,
-    "shortText": null,
-    "longText": "../public/texts/b1e68314-0701-411d-b235-da18e428a383.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2022/09-september/_agendaitem/Years-Years.jpg"
+    "longText": "../public/texts/0961b294-de17-4ace-b83f-19dec23451eb.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2021/10-oktober/_agendaitem/6944/Passenger.jpg"
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-10-05T18:00:00.000Z",
+    "startDateTime": "2022-10-13T18:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/james-taylor-1",
-    "title": "James Taylor",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/kasabian",
+    "title": "Kasabian",
     "location": "afaslive",
-    "price": 61.6,
+    "price": 44.8,
     "shortText": null,
-    "longText": "../public/texts/b2facdbf-a94d-467a-adf7-5367d242ae15.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2022/01-januari/_agendaitem/James-Taylor.jpg"
+    "longText": "../public/texts/8b37a406-853a-46a0-96cd-8a51dbcba4fc.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2022/10-oktober/_agendaitem/Kasabian.jpg"
   },
   {
     "doorOpenDateTime": "2022-10-26T16:30:00.000Z",
@@ -56,7 +44,7 @@
     "location": "afaslive",
     "price": 61.6,
     "shortText": null,
-    "longText": "../public/texts/45d87ad6-eadf-4193-bbaf-223d5726045e.html",
+    "longText": "../public/texts/450e4974-3f12-4db2-9848-49ea4c53e3e3.html",
     "image": "https://www.afaslive.nl/files/Agenda/2020/10-oktober/_agendaitem/Brit-Floyd.jpg"
   },
   {
@@ -66,9 +54,9 @@
     "venueEventUrl": "https://www.afaslive.nl/agenda/lil-nas-x",
     "title": "Lil Nas X",
     "location": "afaslive",
-    "price": 44.24,
+    "price": 50.4,
     "shortText": null,
-    "longText": "../public/texts/41d7d3d7-b263-4d44-8578-816299fa06d1.html",
+    "longText": "../public/texts/436f1c6a-c5f3-4e87-8962-32ecac0198e3.html",
     "image": "https://www.afaslive.nl/files/Agenda/2022/11-november/_agendaitem/Lil-Nas-X.jpg"
   }
 ]

@@ -1,50 +1,62 @@
 [
   {
-    "doorOpenDateTime": "2022-06-05T18:30:00.000Z",
-    "startDateTime": "2022-06-05T19:00:00.000Z",
+    "doorOpenDateTime": "2022-09-29T16:30:00.000Z",
+    "startDateTime": "2022-09-29T17:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://metropool.nl/agenda/tygers-of-pan-tang/",
-    "title": "Tygers Of Pan Tang",
+    "venueEventUrl": "https://metropool.nl/agenda/visions-of-atlantis/",
+    "title": "Visions of Atlantis",
     "location": "metropool",
-    "price": 18.5,
+    "price": 29.5,
     "shortText": null,
-    "longText": "../public/texts/70b4cfc2-5e66-4a67-b2af-052b228fcb20.html",
-    "image": "https://metropool.nl//media/23775/tygers-web.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=132935578140000000"
+    "longText": "../public/texts/a782baee-4da2-474e-8777-dc1411d79158.html",
+    "image": "https://metropool.nl//media/18960/visions-web.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=132301271800000000"
   },
   {
-    "doorOpenDateTime": "2022-09-17T18:30:00.000Z",
-    "startDateTime": "2022-09-17T19:00:00.000Z",
+    "doorOpenDateTime": "2023-02-11T17:00:00.000Z",
+    "startDateTime": "2023-02-11T17:30:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://metropool.nl/agenda/bokassa-plus-planet-of-zeus/",
-    "title": "Bokassa + Planet of Zeus",
+    "venueEventUrl": "https://metropool.nl/agenda/smyrna-death-fest/",
+    "title": "Smyrna Death Fest",
     "location": "metropool",
-    "price": 17.5,
+    "price": 30,
     "shortText": null,
-    "longText": "../public/texts/a425a04e-bc2a-4d9b-a9e3-880e4a1d3d43.html",
-    "image": "https://metropool.nl//media/22750/bokassa_web.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=132888820970000000"
+    "longText": "../public/texts/c969f117-70a5-4a10-adef-60027674d28a.html",
+    "image": "https://metropool.nl//media/20598/smyrna-web.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=132836079750000000"
   },
   {
-    "doorOpenDateTime": "2023-03-25T19:00:00.000Z",
-    "startDateTime": "2023-03-25T19:30:00.000Z",
+    "doorOpenDateTime": "2022-11-04T18:45:00.000Z",
+    "startDateTime": "2022-11-04T19:30:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://metropool.nl/agenda/sworn-enemy-plus-pain-of-truth-plus-worst-doubt/",
-    "title": "Sworn Enemy + Pain Of Truth + Worst Doubt",
+    "venueEventUrl": "https://metropool.nl/agenda/rage-plus-brainstorm/",
+    "title": "Rage + Brainstorm",
     "location": "metropool",
-    "price": 17.5,
+    "price": 31,
     "shortText": null,
-    "longText": "../public/texts/10105a94-04dc-4b5a-b110-3652de172eff.html",
-    "image": "https://metropool.nl//media/22074/sworn-enemy-web.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=132836103780000000"
+    "longText": "../public/texts/be214c6f-d824-4bc5-aba4-03ca35073c4a.html",
+    "image": "https://metropool.nl//media/22674/rage-web.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=132846472450000000"
   },
   {
-    "doorOpenDateTime": "2022-07-01T18:30:00.000Z",
-    "startDateTime": "2022-07-01T19:00:00.000Z",
+    "doorOpenDateTime": "2022-09-03T16:00:00.000Z",
+    "startDateTime": "2022-09-03T18:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://metropool.nl/agenda/savatar/",
-    "title": "Savatar",
+    "venueEventUrl": "https://metropool.nl/agenda/floor-jansen-hertme-2022/",
+    "title": "Floor Jansen (Metropool Open Air)",
     "location": "metropool",
-    "price": 18.5,
+    "price": null,
     "shortText": null,
-    "longText": "../public/texts/2c481722-ac75-4830-b706-6a5eed8e3734.html",
-    "image": "https://metropool.nl//media/22914/savatar_web_1920x1080.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=132906181910000000"
+    "longText": "../public/texts/4285c6fb-0425-4cea-bd88-57ab40ff8bb0.html",
+    "image": "https://metropool.nl//media/24640/floorjansen-web.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=132949381280000000"
+  },
+  {
+    "doorOpenDateTime": "2023-02-25T18:30:00.000Z",
+    "startDateTime": "2023-02-25T19:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://metropool.nl/agenda/in-extremo/",
+    "title": "In Extremo",
+    "location": "metropool",
+    "price": 27.5,
+    "shortText": null,
+    "longText": "../public/texts/52a002d4-be12-4801-b1d5-af31ad8a953f.html",
+    "image": "https://metropool.nl//media/25200/inextremo_web.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=132966732300000000"
   }
 ]

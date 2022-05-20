@@ -1,74 +1,62 @@
 [
   {
-    "doorOpenDateTime": "2022-05-12T19:00:00.000Z",
-    "startDateTime": "2022-05-12T20:00:00.000Z",
+    "doorOpenDateTime": "2022-05-26T16:30:00.000Z",
+    "startDateTime": "2022-05-26T17:30:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/the-queers/",
-    "title": "The Queers",
-    "location": "doornroosje",
-    "price": 14,
-    "shortText": null,
-    "longText": "../public/texts/ca2bba0a-179a-41bd-8ccb-85ed1b9fd305.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2021/09/The-queers-1920x1080-1-350x197-c-default.jpg"
-  },
-  {
-    "doorOpenDateTime": "2022-05-27T19:00:00.000Z",
-    "startDateTime": "2022-05-27T20:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/beachdog/",
-    "title": "Beachdog",
-    "location": "doornroosje",
-    "price": 14,
-    "shortText": null,
-    "longText": "../public/texts/1dfcb224-3922-4eba-aa97-2ef396eed619.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2022/01/BeachDog-350x197-c-default.jpg"
-  },
-  {
-    "doorOpenDateTime": "2022-06-14T17:30:00.000Z",
-    "startDateTime": "2022-06-14T18:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/black-label-society-1/",
-    "title": "Black Label Society",
-    "location": "doornroosje",
-    "price": 29,
-    "shortText": "Fortarock",
-    "longText": "../public/texts/d5d951ba-8eb6-4895-a6a2-4587df256634.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2021/12/Black-Label-Society-scaled-350x197-c-default.jpg"
-  },
-  {
-    "doorOpenDateTime": "2022-09-15T19:00:00.000Z",
-    "startDateTime": "2022-09-15T20:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/stake-4/",
-    "title": "Stake",
-    "location": "doornroosje",
-    "price": 13,
-    "shortText": null,
-    "longText": "../public/texts/651378cd-67da-48a7-942f-7932144121fc.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2021/08/Stake-1920x1080-1-350x197-c-default.jpg"
-  },
-  {
-    "doorOpenDateTime": "2022-10-26T19:00:00.000Z",
-    "startDateTime": "2022-10-26T20:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/life/",
-    "title": "LIFE",
+    "venueEventUrl": "https://www.doornroosje.nl/event/de-roos-finale/",
+    "title": "De Roos finale",
     "location": "doornroosje",
     "price": 10,
-    "shortText": null,
-    "longText": "../public/texts/e61ae649-a69e-4d3d-9ea8-b90aa2a9e375.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2022/03/LIFE-MOON-1920x1080-1-350x197-c-default.jpg"
+    "shortText": "De Roos van Nijmegen",
+    "longText": "../public/texts/144996b9-ffa9-40e2-96de-3240ae965310.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2022/02/de-roos-banner-2022-350x197-c-default.jpg"
   },
   {
-    "doorOpenDateTime": "2023-03-01T07:21:00.000Z",
-    "startDateTime": "2023-03-01T07:22:00.000Z",
+    "doorOpenDateTime": "2022-06-11T18:00:00.000Z",
+    "startDateTime": "2022-06-11T18:45:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/bloodywood/",
-    "title": "Bloodywood",
+    "venueEventUrl": "https://www.doornroosje.nl/event/the-gathering/",
+    "title": "The Gathering",
+    "location": "doornroosje",
+    "price": 22,
+    "shortText": null,
+    "longText": "../public/texts/a723e1d4-cdc6-4811-9cbe-246b24747fb6.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2022/01/The-Gathering-350x197-c-default.jpg"
+  },
+  {
+    "doorOpenDateTime": "2022-07-01T02:20:00.000Z",
+    "startDateTime": "2022-07-01T02:20:30.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.doornroosje.nl/event/thou/",
+    "title": "Thou + Portrayal of Guilt",
     "location": "doornroosje",
     "price": 15,
+    "shortText": "Soulcrusher",
+    "longText": "../public/texts/e7c1657f-cc96-4405-b924-69572ed0dfb7.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2022/02/Thou1-350x197-c-default.jpg"
+  },
+  {
+    "doorOpenDateTime": "2022-09-28T17:30:00.000Z",
+    "startDateTime": "2022-09-28T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.doornroosje.nl/event/obscura-2/",
+    "title": "Obscura + Persefone + Disillusion",
+    "location": "doornroosje",
+    "price": 24,
     "shortText": "Fortarock",
-    "longText": "../public/texts/73f0c7f9-daff-4829-ad55-1ca4fad67dbc.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2022/02/Bloodywood-350x197-c-default.jpg"
+    "longText": "../public/texts/bb286fa8-6570-49c3-8a72-d4dc0a34c726.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2021/09/Obscura-350x197-c-default.jpg"
+  },
+  {
+    "doorOpenDateTime": "2023-03-18T18:30:00.000Z",
+    "startDateTime": "2023-03-18T19:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.doornroosje.nl/event/fuzz/",
+    "title": "Fuzz",
+    "location": "doornroosje",
+    "price": 19.5,
+    "shortText": null,
+    "longText": "../public/texts/181462b7-61f1-4397-a14f-185a444e3516.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2021/09/FUZZ-1920x1080-1-350x197-c-default.jpg"
   }
 ]
