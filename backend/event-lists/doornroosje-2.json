@@ -1,39 +1,27 @@
 [
   {
-    "doorOpenDateTime": "2022-05-26T16:30:00.000Z",
-    "startDateTime": "2022-05-26T17:30:00.000Z",
+    "doorOpenDateTime": "2022-06-14T17:30:00.000Z",
+    "startDateTime": "2022-06-14T18:30:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/de-roos-finale/",
-    "title": "De Roos finale",
+    "venueEventUrl": "https://www.doornroosje.nl/event/black-label-society-1/",
+    "title": "Black Label Society",
     "location": "doornroosje",
-    "price": 10,
-    "shortText": "De Roos van Nijmegen",
-    "longText": "../public/texts/144996b9-ffa9-40e2-96de-3240ae965310.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2022/02/de-roos-banner-2022-350x197-c-default.jpg"
+    "price": 29,
+    "shortText": "Fortarock",
+    "longText": "../public/texts/09a91861-c3b8-4f60-a489-26c85f63a1b1.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2021/12/Black-Label-Society-scaled-350x197-c-default.jpg"
   },
   {
-    "doorOpenDateTime": "2022-06-11T18:00:00.000Z",
-    "startDateTime": "2022-06-11T18:45:00.000Z",
+    "doorOpenDateTime": "2022-08-01T03:21:00.000Z",
+    "startDateTime": "2022-08-01T03:22:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/the-gathering/",
-    "title": "The Gathering",
+    "venueEventUrl": "https://www.doornroosje.nl/event/taqbir/",
+    "title": "Taqbir",
     "location": "doornroosje",
-    "price": 22,
+    "price": 15.5,
     "shortText": null,
-    "longText": "../public/texts/a723e1d4-cdc6-4811-9cbe-246b24747fb6.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2022/01/The-Gathering-350x197-c-default.jpg"
-  },
-  {
-    "doorOpenDateTime": "2022-07-01T02:20:00.000Z",
-    "startDateTime": "2022-07-01T02:20:30.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/thou/",
-    "title": "Thou + Portrayal of Guilt",
-    "location": "doornroosje",
-    "price": 15,
-    "shortText": "Soulcrusher",
-    "longText": "../public/texts/e7c1657f-cc96-4405-b924-69572ed0dfb7.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2022/02/Thou1-350x197-c-default.jpg"
+    "longText": "../public/texts/864aab48-7c07-4dd7-a60b-6fb863ac27a8.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2022/05/Taqbir1920x1080-1934x1088-350x197-c-default.png"
   },
   {
     "doorOpenDateTime": "2022-09-28T17:30:00.000Z",
@@ -44,19 +32,31 @@
     "location": "doornroosje",
     "price": 24,
     "shortText": "Fortarock",
-    "longText": "../public/texts/bb286fa8-6570-49c3-8a72-d4dc0a34c726.html",
+    "longText": "../public/texts/4dfee0ee-800f-4e84-8c48-fe90039119c4.html",
     "image": "https://www.doornroosje.nl/app/uploads/2021/09/Obscura-350x197-c-default.jpg"
   },
   {
-    "doorOpenDateTime": "2023-03-18T18:30:00.000Z",
-    "startDateTime": "2023-03-18T19:00:00.000Z",
+    "doorOpenDateTime": "2022-11-12T17:30:00.000Z",
+    "startDateTime": "2022-11-12T18:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/fuzz/",
-    "title": "Fuzz",
+    "venueEventUrl": "https://www.doornroosje.nl/event/fleshgod-apocalypse-3/",
+    "title": "Fleshgod Apocalypse + Omnium Gatherum",
     "location": "doornroosje",
-    "price": 19.5,
-    "shortText": null,
-    "longText": "../public/texts/181462b7-61f1-4397-a14f-185a444e3516.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2021/09/FUZZ-1920x1080-1-350x197-c-default.jpg"
+    "price": 25,
+    "shortText": "FortaRock",
+    "longText": "../public/texts/662168ba-983b-4c56-ba2d-2a62568a6bbe.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2021/09/Fleshgod-Apocalypse-1-1920x1080-1-350x197-c-default.jpg"
+  },
+  {
+    "doorOpenDateTime": "2023-03-01T07:21:00.000Z",
+    "startDateTime": "2023-03-01T07:22:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.doornroosje.nl/event/bloodywood/",
+    "title": "Bloodywood",
+    "location": "doornroosje",
+    "price": 15,
+    "shortText": "Fortarock",
+    "longText": "../public/texts/d1cda65e-4f39-4f61-a1e7-549c0d1bf877.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2022/02/Bloodywood-350x197-c-default.jpg"
   }
 ]

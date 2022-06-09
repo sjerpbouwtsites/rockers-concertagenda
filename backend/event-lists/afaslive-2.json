@@ -1,50 +1,62 @@
 [
   {
-    "doorOpenDateTime": "2022-05-25T16:30:00.000Z",
-    "startDateTime": "2022-05-25T18:00:00.000Z",
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-06-22T18:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/korn",
-    "title": "Korn",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/olivia-rodrigo",
+    "title": "Olivia Rodrigo",
     "location": "afaslive",
-    "price": 67.2,
+    "price": 38,
     "shortText": null,
-    "longText": "../public/texts/87f9296a-32a5-4961-bae6-f22c30712e0d.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2022/05-mei/_agendaitem/Korn-2022.jpg"
+    "longText": "../public/texts/ccb2f48e-a700-4a1f-99c9-6a9bba280ad8.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2022/06-juni/_agendaitem/Olivia-Rodrigo.jpg"
+  },
+  {
+    "doorOpenDateTime": "2022-07-01T16:30:00.000Z",
+    "startDateTime": "2022-07-01T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.afaslive.nl/agenda/jack-white",
+    "title": "Jack White",
+    "location": "afaslive",
+    "price": 56,
+    "shortText": null,
+    "longText": "../public/texts/467b4d1d-0c9e-4090-9fdf-b8e459970d2f.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2022/07-juli/_agendaitem/JackWhite.jpg"
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-07-09T18:00:00.000Z",
+    "startDateTime": "2022-09-30T18:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/madness",
-    "title": "Madness",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/years-years",
+    "title": "Years & Years",
     "location": "afaslive",
-    "price": 53.9,
+    "price": 39.2,
     "shortText": null,
-    "longText": "../public/texts/d3fd197f-84da-401e-8414-a5d38ea59d00.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2022/07-juli/_agendaitem/Madness.jpg"
-  },
-  {
-    "doorOpenDateTime": "2022-09-28T16:30:00.000Z",
-    "startDateTime": "2022-09-28T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/biffy-clyro",
-    "title": "Biffy Clyro",
-    "location": "afaslive",
-    "price": 43.68,
-    "shortText": null,
-    "longText": "../public/texts/7bfa5a32-aaba-4fae-8cf0-0c9ee8793d81.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2020/11-november/_agendaitem/Biffy-Clyro-Website.jpg"
+    "longText": "../public/texts/a3e503ad-bba6-4b07-852a-e2ab1bea5fd9.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2022/09-september/_agendaitem/Years-Years.jpg"
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-10-02T18:00:00.000Z",
+    "startDateTime": "2022-10-05T18:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/machine-head-amon-amarth",
-    "title": "Machine Head & Amon Amarth",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/james-taylor-1",
+    "title": "James Taylor",
     "location": "afaslive",
-    "price": 60.48,
+    "price": 61.6,
     "shortText": null,
-    "longText": "../public/texts/67b980bb-f18e-42c4-a45f-684fc897acb5.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2022/10-oktober/_agendaitem/Machine-Head-Amon-Amarth.jpg"
+    "longText": "../public/texts/6b2d3055-b8d0-4376-ab22-e88a0be7e98f.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2022/01-januari/_agendaitem/James-Taylor.jpg"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-04-14T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.afaslive.nl/agenda/avril-lavigne-1",
+    "title": "Avril Lavigne",
+    "location": "afaslive",
+    "price": 47.04,
+    "shortText": null,
+    "longText": "../public/texts/cbb9400f-93a4-47bf-8e75-c8b927719a51.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2022/02-februari/_agendaitem/Avril-Lavigne.jpg"
   }
 ]

@@ -1,27 +1,27 @@
 [
   {
-    "doorOpenDateTime": null,
-    "startDateTime": null,
+    "doorOpenDateTime": "2022-06-24T19:00:00.000Z",
+    "startDateTime": "2022-06-24T20:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/kids-n-billies-2022/",
-    "title": "Kids ‘n’ Billies 2022",
-    "location": "doornroosje",
-    "price": 22.5,
-    "shortText": "Laatste kaarten",
-    "longText": "../public/texts/be8eab40-c2da-49d5-8ff7-2021dc9847ed.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2022/03/KnB-web-scaled-350x197-c-default.jpg"
-  },
-  {
-    "doorOpenDateTime": "2022-08-29T18:00:00.000Z",
-    "startDateTime": "2022-08-29T18:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/imperial-triumphant-2/",
-    "title": "Imperial Triumphant",
+    "venueEventUrl": "https://www.doornroosje.nl/event/the-bobby-lees/",
+    "title": "The Bobby Lees",
     "location": "doornroosje",
     "price": 14.5,
+    "shortText": null,
+    "longText": "../public/texts/573a4c11-69da-4ec9-b322-1694a6fb5ac3.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2022/03/The-Bobby-Lees-350x197-c-default.jpg"
+  },
+  {
+    "doorOpenDateTime": "2022-09-01T03:20:00.000Z",
+    "startDateTime": "2022-09-01T03:20:30.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.doornroosje.nl/event/hexis/",
+    "title": "Hexis",
+    "location": "doornroosje",
+    "price": "13",
     "shortText": "Soulcrusher",
-    "longText": "../public/texts/f72648db-6c9e-4290-b56b-2147b20e694e.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2021/09/Imperial-Triumphant-1920x1080-1-350x197-c-default.jpg"
+    "longText": "../public/texts/16be3ae5-c2c2-4605-9c6c-cc0b0f28dbda.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2022/05/Hexis-1934x1088-350x197-c-default.jpg"
   },
   {
     "doorOpenDateTime": null,
@@ -36,15 +36,27 @@
     "image": null
   },
   {
-    "doorOpenDateTime": "2022-12-01T01:19:30.000Z",
-    "startDateTime": "2022-12-01T01:20:00.000Z",
+    "doorOpenDateTime": "2022-11-27T18:30:00.000Z",
+    "startDateTime": "2022-11-27T19:30:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/bleed-from-within-2/",
-    "title": "Bleed From Within e.a.",
+    "venueEventUrl": "https://www.doornroosje.nl/event/therion/",
+    "title": "Therion",
     "location": "doornroosje",
-    "price": 17.5,
+    "price": 27.5,
     "shortText": "Fortarock",
-    "longText": "../public/texts/4bb8a3eb-c959-44a6-8c1e-7251fb6ea3d9.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2022/04/Bleed-From-Within-1934x1088-350x197-c-default.jpg"
+    "longText": "../public/texts/49c0f7bd-4d74-49e5-a757-17ab67306179.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2022/02/Therion-1-350x197-c-default.jpg"
+  },
+  {
+    "doorOpenDateTime": "2023-05-19T18:00:00.000Z",
+    "startDateTime": "2023-05-19T18:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.doornroosje.nl/event/otoboke-beaver/",
+    "title": "Otoboke Beaver",
+    "location": "doornroosje",
+    "price": 16.5,
+    "shortText": null,
+    "longText": "../public/texts/2f97789b-04e1-4963-ac47-df6eac28fdbf.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2021/12/Promo_OtobokeBeaver-credit_Takeaki_Emori-350x197-c-default.jpg"
   }
 ]

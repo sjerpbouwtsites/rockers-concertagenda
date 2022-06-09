@@ -1,641 +1,5 @@
 [
   {
-    "doorOpenDateTime": "2022-05-20T16:30:00.000Z",
-    "startDateTime": "2022-05-20T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.dynamo-eindhoven.nl/programma/king-810/#spotify-embed",
-    "title": "King 810",
-    "location": "dynamo",
-    "price": 17.5,
-    "shortText": "Support: Cabal + Yavid + Born a New + 3 Eyed Kids",
-    "longText": "../public/texts/5262f876-c058-480d-8afe-fd7b065aae00.html",
-    "image": "https://www.dynamo-eindhoven.nl/wp-content/uploads/2021/10/KING-810-2021-1200x1200.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-05-20T06:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.dbstudio.nl/event/bongloard-magnetic-spacemen-cloudsurfers/",
-    "title": "BONGLOARD + MAGNETIC SPACEMEN + CLOUDSURFERS",
-    "location": "dbs",
-    "price": null,
-    "shortText": null,
-    "longText": "../public/texts/c8efd483-437e-400a-8f57-d4a715dc9c56.html",
-    "image": "https://www.dbstudio.nl/wp-content/uploads/2022/02/avatars-000263285463-q7gbad-t500x500.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-05-20T17:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://baroeg.nl/productie/hangmans-chair/",
-    "title": "Hangman’s Chair + An Evening With Knives + Lifelong",
-    "location": "baroeg",
-    "price": 14,
-    "shortText": "<p>Met Hangman’s Chair gaan ze de kant van de sludgy stonerdoom op.</p>\n",
-    "longText": "../public/texts/7616698b-2b74-4ce6-b58b-4f1605bf780d.html",
-    "image": "https://baroeg.nl/wp-content/uploads/2021/06/Hangmans-Chair-768x349.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-05-20T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.effenaar.nl/agenda/11510/thebacksaetlovers-mei22",
-    "title": "The Backseat Lovers",
-    "location": "effenaar",
-    "price": 17,
-    "shortText": "",
-    "longText": "../public/texts/2987664b-15e8-49e0-95b9-63e63356904a.html",
-    "image": "https://www.effenaar.nl/uploads/event_spotlight_image/61aa122ab4ab6.JPG"
-  },
-  {
-    "doorOpenDateTime": "2022-05-20T18:00:00.000Z",
-    "startDateTime": "2022-05-20T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://occii.org/events/blurt-earwurms/",
-    "title": "BLURT (UK) + THE EARWURMS",
-    "location": "occii",
-    "price": "10",
-    "shortText": "Free Jazz | Punk | Skronk | Genius",
-    "longText": "../public/texts/6ca8b2c7-ed38-4fa1-b537-4be8b2e1dce7.html",
-    "image": "https://occii.org/wp-content/uploads/2022/03/277157233_10228686685774591_847428925610564401_n.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-05-20T19:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://bibelot.net/agenda/drijfkracht-whorses-hypochristmutreefuzz-kalaallit-nunaat/",
-    "title": "[drijfkracht]: WHORSES + Hypochristmutreefuzz + Kalaallit Nunaat",
-    "location": "bibelot",
-    "price": null,
-    "shortText": "",
-    "longText": "../public/texts/17e08b11-ae79-4ff6-a22b-dbf67f49d801.html",
-    "image": "https://bibelot.net/wp-content/uploads/2022/01/drijfkracht-web-01-1400x788.jpg"
-  },
-  {
-    "doorOpenDateTime": "2022-05-20T19:00:00.000Z",
-    "startDateTime": "2022-05-20T20:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/cash-savage-3/",
-    "title": "Cash Savage and The Last Drinks",
-    "location": "doornroosje",
-    "price": 13,
-    "shortText": null,
-    "longText": "../public/texts/f478563e-ab4c-4d80-9c96-2ec4584bb4cf.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2021/09/Cash-Savage-1920x1080-1-350x197-c-default.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-05-21T04:30:00.000Z",
-    "endDateTime": "2022-05-21T23:00:00.000Z",
-    "venueEventUrl": "https://www.dbstudio.nl/event/sweat-n-wild-festival/",
-    "title": "SWEAT ’n WILD Festival met DISMINDED (DE), VAIN LOUIE, CHANGING TIDES, ICARIUS, FIVE MINUTE MARCH",
-    "location": "dbs",
-    "price": null,
-    "shortText": null,
-    "longText": "../public/texts/07749405-d791-49a4-82a6-23f40475ec05.html",
-    "image": "https://www.dbstudio.nl/wp-content/uploads/2022/03/258787581_883790342116667_1668169671400130536_n.png"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-05-21T12:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://baroeg.nl/productie/harlequin-fest-2022/",
-    "title": "Harlequin Fest 2022",
-    "location": "baroeg",
-    "price": 17,
-    "shortText": "<p>Tribute To The 90’s ft. Rudeboy &#038; Green Lizard + Fire Horse + Kid Harlequin + Komatsu + Splinter + Karvel</p>\n",
-    "longText": "../public/texts/62f88fcb-1654-494a-afb2-4c12e166123f.html",
-    "image": "https://baroeg.nl/wp-content/uploads/2020/02/GreenlizardftRudeboy-Robert-WesteraFotografie-974x520-1-768x410.jpg"
-  },
-  {
-    "doorOpenDateTime": "2022-05-21T16:00:00.000Z",
-    "startDateTime": "2022-05-21T16:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://metropool.nl/agenda/folkland-2022/",
-    "title": "Folkland: Fiddler's Green + SCRUM + Rapalje + Saint City Orchestra",
-    "location": "metropool",
-    "price": 32,
-    "shortText": null,
-    "longText": "../public/texts/0969f4b8-9823-4a19-8a57-1333f283d447.html",
-    "image": "https://metropool.nl//media/24842/folkland_web_1920x1080.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=132956322690000000"
-  },
-  {
-    "doorOpenDateTime": "2022-05-21T18:00:00.000Z",
-    "startDateTime": "2022-05-21T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://occii.org/events/dekonstrukt/",
-    "title": "DEKONSTRUKT (DE) + SABOT NOIR (DE) + LOCURA",
-    "location": "occii",
-    "price": "6",
-    "shortText": "CRUST TAKEOVER!!!",
-    "longText": "../public/texts/da93b58a-a616-431c-8265-d262f514d323.html",
-    "image": "https://occii.org/wp-content/uploads/2022/04/280187356_5327404590623067_2973788261301677714_n-724x1024.jpg"
-  },
-  {
-    "doorOpenDateTime": "2022-05-22T18:00:00.000Z",
-    "startDateTime": "2022-05-21T22:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://occii.org/events/escape-ism/",
-    "title": "ESCAPE-ISM (us) + Film: THE LOST RECORD (2021 USA, Alexandra Cabral & Ian F Svenonius)",
-    "location": "occii",
-    "price": "10",
-    "shortText": "a new kind of \"beneath the underground\" cinema |  LIMITED SCREENING",
-    "longText": "../public/texts/48313c2e-8906-4fb9-9964-2b7b6efe24ef.html",
-    "image": "https://occii.org/wp-content/uploads/2022/04/film-the-lost-record--819x1024.png"
-  },
-  {
-    "doorOpenDateTime": "2022-05-22T17:00:00.000Z",
-    "startDateTime": "2022-05-22T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.dynamo-eindhoven.nl/programma/savatage-judas-priest/",
-    "title": "NOSTALGICA presents: SAVATAGE & JUDAS PRIEST",
-    "location": "dynamo",
-    "price": 16.5,
-    "shortText": "By: Savatar & Concrete Priest",
-    "longText": "../public/texts/95cd98bb-ab31-43c9-87fb-76730514c9f7.html",
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-05-22T17:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/electric-callboy-22-05-2022",
-    "title": "Electric Callboy",
-    "location": "melkweg",
-    "price": 16.1,
-    "shortText": "Metalcore, Post-hardcore, Duitsland, Feest!",
-    "longText": "../public/texts/feded645-120d-4194-b169-09bdc44a5692.html",
-    "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/28768"
-  },
-  {
-    "doorOpenDateTime": "2022-05-22T18:00:00.000Z",
-    "startDateTime": "2022-05-22T18:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/pist-idiots/",
-    "title": "Pist Idiots + Shaemless",
-    "location": "doornroosje",
-    "price": 14.5,
-    "shortText": null,
-    "longText": "../public/texts/26469a90-9df6-44fd-be41-62cc504d27cb.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2022/02/Pist-Idiots-2021-by-Rad-Dan1920x1080-scaled-350x197-c-default.jpg"
-  },
-  {
-    "doorOpenDateTime": "2022-05-22T18:00:00.000Z",
-    "startDateTime": "2022-05-22T18:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://patronaat.nl/event/stake-22-05-22/",
-    "title": "Stake + Cloudsurfers",
-    "location": "patronaat",
-    "price": null,
-    "shortText": "Van rauwe steak naar premium dry-aged beef.",
-    "longText": "../public/texts/bcecea62-ab11-46d6-8013-927499c747e1.html",
-    "image": "https://patronaat.nl/app/uploads/2021/11/Stake--760x400.jpeg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-05-25T06:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.dbstudio.nl/event/sacri-monti-usa-teepee-records-kaleidobolt-fin-svart-records/",
-    "title": "SACRI MONTI (USA – Teepee Records) + KALEIDOBOLT (Fin – Svart Records)",
-    "location": "dbs",
-    "price": null,
-    "shortText": null,
-    "longText": "../public/texts/80230d42-9921-453f-b5c7-5230cb6bceef.html",
-    "image": "https://www.dbstudio.nl/wp-content/uploads/2022/03/SMKB_Poster_FINAL.png"
-  },
-  {
-    "doorOpenDateTime": "2022-05-25T17:00:00.000Z",
-    "startDateTime": "2022-05-25T17:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.013.nl/programma/7025/the-night-flight-orchestra",
-    "title": "The Night Flight Orchestra",
-    "location": "013",
-    "price": 22.9,
-    "shortText": null,
-    "longText": "../public/texts/493ddd7e-ae08-4634-972c-4360e19f74af.html",
-    "image": "https://www.013.nl/uploads/cache/event_main_desktop/61fce589c2c66.jpg?version=1643964533"
-  },
-  {
-    "doorOpenDateTime": "2022-05-25T16:30:00.000Z",
-    "startDateTime": "2022-05-25T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/korn",
-    "title": "Korn",
-    "location": "afaslive",
-    "price": 67.2,
-    "shortText": null,
-    "longText": "../public/texts/87f9296a-32a5-4961-bae6-f22c30712e0d.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2022/05-mei/_agendaitem/Korn-2022.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-05-26T06:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.dbstudio.nl/event/cocaine-piss-b-support/",
-    "title": "COCAINE PISS (B) + THe COVIDS",
-    "location": "dbs",
-    "price": null,
-    "shortText": null,
-    "longText": "../public/texts/0445df1c-5098-4ec0-b75e-0d649cbf2e62.html",
-    "image": "https://www.dbstudio.nl/wp-content/uploads/2021/11/2016-07-15_-_17u57_-_5851_0.jpeg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-05-26T06:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.dbstudio.nl/event/guitar-wolf-japan/",
-    "title": "GUITAR WOLF (Japan) + COCAINE PISS + THE COVIDS !!!!!!",
-    "location": "dbs",
-    "price": null,
-    "shortText": null,
-    "longText": "../public/texts/1be27b54-badc-4a36-943d-5d42dc739aa5.html",
-    "image": "https://www.dbstudio.nl/wp-content/uploads/2021/11/0016345174_10-e1643041005520.jpeg"
-  },
-  {
-    "doorOpenDateTime": "2022-05-26T16:30:00.000Z",
-    "startDateTime": "2022-05-26T17:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/de-roos-finale/",
-    "title": "De Roos finale",
-    "location": "doornroosje",
-    "price": 10,
-    "shortText": "De Roos van Nijmegen",
-    "longText": "../public/texts/144996b9-ffa9-40e2-96de-3240ae965310.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2022/02/de-roos-banner-2022-350x197-c-default.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-05-26T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.013.nl/programma/6665/mayhem-mortiis",
-    "title": "Mayhem + Mortiis",
-    "location": "013",
-    "price": 28.9,
-    "shortText": null,
-    "longText": "../public/texts/f404266f-5b5d-4e4c-9763-645e5f284cf7.html",
-    "image": "https://www.013.nl/uploads/cache/event_main_desktop/5e872176c5084.jpg?version=1585914343"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-05-26T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/jungle",
-    "title": "Jungle",
-    "location": "afaslive",
-    "price": 43.5,
-    "shortText": null,
-    "longText": "../public/texts/22de4897-bb62-4440-80a1-a1e5e7bc0a55.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2022/05-mei/_agendaitem/Jungle.jpg"
-  },
-  {
-    "doorOpenDateTime": "2022-05-26T19:00:00.000Z",
-    "startDateTime": "2022-05-26T20:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/joe-and-the-shitboys/",
-    "title": "Joe and the Shitboys",
-    "location": "doornroosje",
-    "price": 12,
-    "shortText": null,
-    "longText": "../public/texts/502bb430-5101-4f4d-9ea4-4a3074114fa0.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2021/12/e9a88fea_Joe-and-The-Shitboys-September-2021-wwwpatrickgunningcom-7285-1-1934x1088-350x197-c-default.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-05-27T06:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.dbstudio.nl/event/verplaatst-naar-4-maart-2022-stake-be-onmens-be/",
-    "title": "STAKE (BE) + Glitterkots & de Nasmaak",
-    "location": "dbs",
-    "price": null,
-    "shortText": null,
-    "longText": "../public/texts/bae18407-3dc9-4b1e-8efb-7af76ce1082c.html",
-    "image": "https://www.dbstudio.nl/wp-content/uploads/2022/01/stake-press-e1642951302367.jpeg"
-  },
-  {
-    "doorOpenDateTime": "2022-05-27T17:00:00.000Z",
-    "startDateTime": "2022-05-27T17:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://patronaat.nl/event/m-o-b-the-monsters-supports-27-05-22/",
-    "title": "The Monsters, Guitar Wolf, Dead Cat Stimpy",
-    "location": "patronaat",
-    "price": null,
-    "shortText": "Minor Operation Bookings presenteert deze monster line-up!",
-    "longText": "../public/texts/acc4170b-da26-4b00-bf31-2b099aa2074e.html",
-    "image": "https://patronaat.nl/app/uploads/2021/12/Monsters02_habibifoto.ch_-360x360.jpg"
-  },
-  {
-    "doorOpenDateTime": "2022-05-27T19:00:00.000Z",
-    "startDateTime": "2022-05-27T20:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/beachdog/",
-    "title": "Beachdog",
-    "location": "doornroosje",
-    "price": 14,
-    "shortText": null,
-    "longText": "../public/texts/2a85f195-0f99-476f-ad3b-09378c527ab7.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2022/01/BeachDog-350x197-c-default.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-05-28T06:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.dbstudio.nl/event/el-zombie-albumrelease-kommando-el-zombie/",
-    "title": "EL ZOMBIE Albumrelease Kommando El Zombie",
-    "location": "dbs",
-    "price": null,
-    "shortText": null,
-    "longText": "../public/texts/19c05b42-29eb-46f7-9dc8-319eebe9b833.html",
-    "image": "https://www.dbstudio.nl/wp-content/uploads/2022/04/hoes-voorkant.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-05-28T12:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://baroeg.nl/productie/nieuwe-datum-submit-fest-2021/",
-    "title": "Submit Fest 2022",
-    "location": "baroeg",
-    "price": 19,
-    "shortText": "<p>Submit Fest 2022 met: InVisions + Cold Night For Alligators + Exist Immortal + Another Now + Changing Tides + Reformist + Mountain Eye.</p>\n",
-    "longText": "../public/texts/c7a368e6-8bf0-4e36-aee1-b03bfe4837ee.html",
-    "image": "https://baroeg.nl/wp-content/uploads/2021/11/Submit-Fest-2022-Invisions-e1650898947993-768x182.jpg"
-  },
-  {
-    "doorOpenDateTime": "2022-05-28T17:00:00.000Z",
-    "startDateTime": "2022-05-28T17:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://patronaat.nl/event/evil-invaders-supports-28-05-22/",
-    "title": "Evil Invaders + Cobra Spell + Obstruktor",
-    "location": "patronaat",
-    "price": null,
-    "shortText": "Thrashen alsof het '84 is!",
-    "longText": "../public/texts/603c22b0-c8e4-4226-be85-7dd3de45231d.html",
-    "image": "https://patronaat.nl/app/uploads/2021/09/Evil-Invaders-Photo-scaled-1-360x360.jpg"
-  },
-  {
-    "doorOpenDateTime": "2022-05-28T17:00:00.000Z",
-    "startDateTime": "2022-05-28T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.013.nl/programma/6991/coffin-feeder",
-    "title": "Coffin Feeder",
-    "location": "013",
-    "price": 16.9,
-    "shortText": null,
-    "longText": "../public/texts/bd5abade-c41b-41a7-8215-da0b67270632.html",
-    "image": "https://www.013.nl/uploads/cache/event_main_desktop/61e8364422a98.jpg?version=1642608393"
-  },
-  {
-    "doorOpenDateTime": "2022-05-28T17:30:00.000Z",
-    "startDateTime": "2022-05-28T18:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://poppodiumboerderij.nl/",
-    "title": "The Eagles Legacy ",
-    "location": "boerderij",
-    "price": "28.50",
-    "shortText": "<p>The Eagles Legacy is d&eacute; Nederlandse tribute die de unieke sound van de Eagles perfect authentiek brengt. De band behaalde de finale van het populaire SBS programma The Tribute &ndash; Battle Of The Bands.</p>\r\n",
-    "longText": "../public/texts/d9c64c69-f7ad-459a-b86f-1f64d92711b0.html",
-    "image": "https://lift3cdn.nl/image/115/784x476/the-eagles-legacy.jpg"
-  },
-  {
-    "doorOpenDateTime": "2022-05-29T17:00:00.000Z",
-    "startDateTime": "2022-05-29T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.dynamo-eindhoven.nl/programma/state-champs-2022/#spotify-embed",
-    "title": "State Champs",
-    "location": "dynamo",
-    "price": 19,
-    "shortText": "Support: Meet Me @ The Altar",
-    "longText": "../public/texts/c973bea1-72dd-4deb-80af-0c8b62fc3fb3.html",
-    "image": "https://www.dynamo-eindhoven.nl/wp-content/uploads/2021/09/300-1200x1200.jpg"
-  },
-  {
-    "doorOpenDateTime": "2022-05-29T18:00:00.000Z",
-    "startDateTime": "2022-05-29T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://occii.org/events/horse-lords/",
-    "title": "HORSE LORDS (US) + MARTA WARELIS (PL)",
-    "location": "occii",
-    "price": "12",
-    "shortText": "Hypnotic Experience | Geregeld Ontregeld",
-    "longText": "../public/texts/66f1c731-add2-4360-bdb5-937559c8ee4d.html",
-    "image": "https://occii.org/wp-content/uploads/2022/03/horse-lords-occii-insta.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-05-29T18:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/beachdog-29-05-2022",
-    "title": "Beachdog",
-    "location": "melkweg",
-    "price": 14.95,
-    "shortText": "Post-hardcore, Punk, Grunge, John Coffey",
-    "longText": "../public/texts/cb1e3d80-5837-4a60-b6fd-941ba0fea674.html",
-    "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/28793"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-05-30T06:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.dbstudio.nl/event/pulled-apart-by-horses-uk-haggard-cat-uk/",
-    "title": "PULLED APART BY HORSES (UK) + HAGGARD CAT (UK)",
-    "location": "dbs",
-    "price": null,
-    "shortText": null,
-    "longText": "../public/texts/8d79a3b8-889f-43c1-8da4-177db75fd453.html",
-    "image": "https://www.dbstudio.nl/wp-content/uploads/2022/04/PABH.png"
-  },
-  {
-    "doorOpenDateTime": "2022-05-30T17:00:00.000Z",
-    "startDateTime": "2022-05-30T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.013.nl/programma/6679/brass-against",
-    "title": "Brass Against",
-    "location": "013",
-    "price": 21.9,
-    "shortText": null,
-    "longText": "../public/texts/04de4093-7ed6-476a-b176-6ab508b1474f.html",
-    "image": "https://www.013.nl/uploads/cache/event_main_desktop/5dc5958ab3f0c.jpg?version=1573230258"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-05-31T16:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/me-first-and-the-gimme-gimmes-31-05-2022",
-    "title": "Me First and The Gimme Gimmes",
-    "location": "melkweg",
-    "price": 29.9,
-    "shortText": "Punk, Rock, Covers, Humor",
-    "longText": "../public/texts/7f88d772-ae99-4687-8c0d-b3730021e989.html",
-    "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/28975"
-  },
-  {
-    "doorOpenDateTime": "2022-05-31T17:00:00.000Z",
-    "startDateTime": "2022-05-31T17:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/baroness-kvelertak/",
-    "title": "Kvelertak + Baroness",
-    "location": "doornroosje",
-    "price": 27.5,
-    "shortText": "FortaRock",
-    "longText": "../public/texts/1b33a79c-4984-4081-ad53-0c5ff1378661.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2021/10/20220531-Baroness-web-1-350x197-c-default.jpg"
-  },
-  {
-    "doorOpenDateTime": "2022-05-31T18:00:00.000Z",
-    "startDateTime": "2022-05-31T18:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://patronaat.nl/event/lil-lotus-31-05-22/",
-    "title": "Lil Lotus",
-    "location": "patronaat",
-    "price": null,
-    "shortText": "Nieuwe emo-sensatie",
-    "longText": "../public/texts/5fb98fe1-0793-43a0-96bb-0a7e0913bbb2.html",
-    "image": "https://patronaat.nl/app/uploads/2022/04/LiLLotus_Photo_Epitaph_1-360x360.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-06-01T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.effenaar.nl/agenda/11588/haevn-jun2022",
-    "title": "HAEVN",
-    "location": "effenaar",
-    "price": 27.5,
-    "shortText": "",
-    "longText": "../public/texts/58e0aac8-5b3e-4c1d-87bf-7681f5102782.html",
-    "image": "https://www.effenaar.nl/uploads/event_spotlight_image/61e97298dcb49.png"
-  },
-  {
-    "doorOpenDateTime": "2022-06-01T18:00:00.000Z",
-    "startDateTime": "2022-06-01T18:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://patronaat.nl/event/bike-thiefs-support-01-06-22/",
-    "title": "Bike Thiefs + The Irrational Library",
-    "location": "patronaat",
-    "price": null,
-    "shortText": "Post-punkers dat klinkt als Parquet Courts en Charles Bukowski.",
-    "longText": "../public/texts/47291348-4c33-4632-a370-107a0132249e.html",
-    "image": "https://patronaat.nl/app/uploads/2021/12/BikeThiefs1-760x400.jpg"
-  },
-  {
-    "doorOpenDateTime": "2022-06-02T18:00:00.000Z",
-    "startDateTime": "2022-06-01T22:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://occii.org/events/obstacle-illusion/",
-    "title": "THOLLEM & ACVilla (us) ‘Obstacle Illusion’ + SANEM KALFA (TR) + tRIO Van der Weide/Zwerver/Hadow",
-    "location": "occii",
-    "price": "8",
-    "shortText": "a multimedia experience | iMPROV | ",
-    "longText": "../public/texts/93f7ac67-8c52-444b-909f-893b7dac206a.html",
-    "image": "https://occii.org/wp-content/uploads/2022/05/obstacle-illusion-graphic-website_orig-1024x732.jpg"
-  },
-  {
-    "doorOpenDateTime": "2022-06-02T17:00:00.000Z",
-    "startDateTime": "2022-06-02T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.013.nl/programma/6597/the-neal-morse-band",
-    "title": "The Neal Morse Band",
-    "location": "013",
-    "price": 41.95,
-    "shortText": null,
-    "longText": "../public/texts/d7ee965a-7eb3-44a2-bfde-e16cf7d0b73a.html",
-    "image": "https://www.013.nl/uploads/cache/event_main_desktop/60c87c43e83b1.jpg?version=1623751781"
-  },
-  {
-    "doorOpenDateTime": "2022-06-02T17:00:00.000Z",
-    "startDateTime": "2022-06-02T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.013.nl/programma/6895/tribute-to-the-90s-ft-rudeboy-green-lizard",
-    "title": "Tribute To The 90's ft. Rudeboy & Green Lizard",
-    "location": "013",
-    "price": 20.9,
-    "shortText": null,
-    "longText": "../public/texts/c3f9af06-6ff4-4c7f-90ce-1b597db56e51.html",
-    "image": "https://www.013.nl/uploads/cache/event_main_desktop/5e17347c32748.jpg?version=1578579092"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-06-03T05:15:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.dbstudio.nl/event/cervus-ep-release-karvel-desert-colossus/",
-    "title": "CERVUS – EP release + Karvel & Desert Colossus",
-    "location": "dbs",
-    "price": null,
-    "shortText": null,
-    "longText": "../public/texts/fdd91995-1e4c-462f-b74e-3fac6bc9177b.html",
-    "image": "https://www.dbstudio.nl/wp-content/uploads/2022/02/Cervus_dBagenda_thumb3.jpg"
-  },
-  {
-    "doorOpenDateTime": "2022-06-03T17:00:00.000Z",
-    "startDateTime": "2022-06-03T17:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://patronaat.nl/event/none-shall-fall-fest-03-06-22/",
-    "title": "None Shall Fall + Anger Machine + Collide + Man As Plague",
-    "location": "patronaat",
-    "price": null,
-    "shortText": "None Shall Fall 12,5 Year Anniversary Fest",
-    "longText": "../public/texts/afbdf98d-d027-4fa5-8bee-7b0e5018b5bc.html",
-    "image": "https://patronaat.nl/app/uploads/2022/03/NSF-bandpic-360x360.jpeg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-06-04T12:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://baroeg.nl/productie/ontmoet-elkaar-in-baroeg-met-bruinisser-visserkoor/",
-    "title": "Ontmoet elkaar in Baroeg met Bruinisser Visserkoor",
-    "location": "baroeg",
-    "price": 0,
-    "shortText": "<p>Samen met het Spinozapark comité organiseert Baroeg twee keer per jaar activiteiten rondom het pand van Baroeg.</p>\n",
-    "longText": "../public/texts/db6dd8ce-ff69-4b8e-9f4b-6927a8c00dce.html",
-    "image": "https://baroeg.nl/wp-content/uploads/2022/04/Spinozapark-1-e1650981348651-768x288.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-06-04T17:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/abraham-sarache-04-06-2022",
-    "title": "Abraham Sarache",
-    "location": "melkweg",
-    "price": 17.25,
-    "shortText": "Venezolaanse cuatro, Progressieve rock, Metal",
-    "longText": "../public/texts/bd240e35-84ef-4594-b014-63e9aeb48dd8.html",
-    "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/29238"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-06-05T13:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://baroeg.nl/productie/bizkit-park-be-limp-bizkit-linkin-park-tribute/",
-    "title": "Bizkit Park + Black Dog Forge + DJ’s Neverm?nd &#038; Ser!ous",
-    "location": "baroeg",
-    "price": 14,
-    "shortText": "<p>Een feest der herkenning vol nu-metalhits.</p>\n",
-    "longText": "../public/texts/ed2e8177-5b91-4c36-966b-3110798d1697.html",
-    "image": "https://baroeg.nl/wp-content/uploads/2021/09/BP-2-e1637065718747-768x323.jpg"
-  },
-  {
-    "doorOpenDateTime": "2022-06-05T18:30:00.000Z",
-    "startDateTime": "2022-06-05T19:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://metropool.nl/agenda/tygers-of-pan-tang/",
-    "title": "Tygers Of Pan Tang",
-    "location": "metropool",
-    "price": 18.5,
-    "shortText": null,
-    "longText": "../public/texts/0935293e-6a71-4cdd-add8-dc944526cb0a.html",
-    "image": "https://metropool.nl//media/23775/tygers-web.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=132935578140000000"
-  },
-  {
-    "doorOpenDateTime": "2022-06-08T16:30:00.000Z",
-    "startDateTime": "2022-06-08T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/lorde",
-    "title": "Lorde",
-    "location": "afaslive",
-    "price": 42.56,
-    "shortText": null,
-    "longText": "../public/texts/1151e3b7-9d8d-460d-8eb1-fbf66ae7e46d.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2022/06-juni/_agendaitem/Lorde.jpg"
-  },
-  {
     "doorOpenDateTime": "2022-06-08T18:00:00.000Z",
     "startDateTime": "2022-06-08T18:30:00.000Z",
     "endDateTime": null,
@@ -644,7 +8,7 @@
     "location": "013",
     "price": "08",
     "shortText": "Andy & the Antichrist + Marathon",
-    "longText": "../public/texts/a28efba2-9753-4d18-83b6-c9e489ea3c3c.html",
+    "longText": "../public/texts/ffae4317-dd72-4ec1-b13f-007a3abac745.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/627e12b141b62.jpg?version=1652429562"
   },
   {
@@ -656,23 +20,11 @@
     "location": "baroeg",
     "price": 17,
     "shortText": "<p>Frankensteinerij met desert rock en asfaltgrooves.</p>\n",
-    "longText": "../public/texts/dcef45f7-bdd1-41a4-b873-92b7fab3a11b.html",
+    "longText": "../public/texts/6f1bbac2-41fb-4cfd-bbbe-3302a978a327.html",
     "image": "https://baroeg.nl/wp-content/uploads/2019/11/mondogenerator-768x164.jpg"
   },
   {
-    "doorOpenDateTime": "2022-06-09T17:00:00.000Z",
-    "startDateTime": "2022-06-09T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.013.nl/programma/6731/mastodon",
-    "title": "Mastodon",
-    "location": "013",
-    "price": 34.4,
-    "shortText": null,
-    "longText": "../public/texts/b562b70a-60de-4f54-aa94-af1781f81eb1.html",
-    "image": "https://www.013.nl/uploads/cache/event_main_desktop/6140559bb2e7f.png?version=1631606478"
-  },
-  {
-    "doorOpenDateTime": "2022-06-09T17:00:00.000Z",
+    "doorOpenDateTime": null,
     "startDateTime": "2022-06-09T18:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://www.013.nl/programma/6973/ice-nine-kills",
@@ -680,8 +32,20 @@
     "location": "013",
     "price": 24.4,
     "shortText": null,
-    "longText": "../public/texts/46676c7a-4f6e-4694-bfba-de1427d86579.html",
+    "longText": "../public/texts/d35d5b36-581a-4a2d-ae58-e4077022ed37.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/61d45cb007696.jpg?version=1641307396"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-06-09T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.013.nl/programma/6731/mastodon",
+    "title": "Mastodon",
+    "location": "013",
+    "price": 34.4,
+    "shortText": null,
+    "longText": "../public/texts/411822b3-4303-4982-9be5-5f60be13bcc9.html",
+    "image": "https://www.013.nl/uploads/cache/event_main_desktop/6140559bb2e7f.png?version=1631606478"
   },
   {
     "doorOpenDateTime": "2022-06-09T18:00:00.000Z",
@@ -692,7 +56,19 @@
     "location": "occii",
     "price": "8",
     "shortText": "A night of international punk madness. ",
-    "longText": "../public/texts/d489e26a-94c3-483c-904d-724a2d0f7ebc.html",
+    "longText": "../public/texts/1bf27b5f-86cd-4e6b-a531-95b4d5bc26f7.html",
+    "image": "https://occii.org/wp-content/uploads/2022/04/Flyer-OCCII.jpg"
+  },
+  {
+    "doorOpenDateTime": "2022-06-09T18:00:00.000Z",
+    "startDateTime": "2022-06-09T18:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://neushoorn.nl/production/skeletal-remains-usa-ancestral-sin-atmoran-2/",
+    "title": "Skeletal Remains (USA) + Ancestral Sin + Atmoran",
+    "location": "neushoorn",
+    "price": 8,
+    "shortText": null,
+    "longText": "../public/texts/4eeb119c-5f9a-428e-905e-c5dc4cc9fa72.html",
     "image": null
   },
   {
@@ -704,7 +80,7 @@
     "location": "melkweg",
     "price": 13.8,
     "shortText": "Postpunk, Brooklyn-based, Partisan Records",
-    "longText": "../public/texts/5b479a52-a1a3-4a42-b667-5e69ffcd929f.html",
+    "longText": "../public/texts/26de7e05-369f-46d9-a972-37f82d0b8e54.html",
     "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/28487"
   },
   {
@@ -716,8 +92,20 @@
     "location": "013",
     "price": 17.9,
     "shortText": null,
-    "longText": "../public/texts/83d1bfe2-25a1-4717-be71-11c55cec62d7.html",
+    "longText": "../public/texts/b8235167-4fdd-435a-b1f6-4554f1bc220f.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/6218ef8bbcf11.jpeg?version=1645801372"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-06-10T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.effenaar.nl/agenda/11314/gbh-jun22",
+    "title": "GBH",
+    "location": "effenaar",
+    "price": 20,
+    "shortText": "",
+    "longText": "../public/texts/35311d03-29f1-4649-a5f7-b4c7686c85f3.html",
+    "image": "https://www.effenaar.nl/uploads/event_spotlight_image/6128dcb10fd92.png"
   },
   {
     "doorOpenDateTime": "2022-06-10T18:00:00.000Z",
@@ -728,7 +116,7 @@
     "location": "occii",
     "price": "12",
     "shortText": "Experimental | Avant-garde | Sound Art | FieldElectronic | Electro | IDM | EBM | Punk",
-    "longText": "../public/texts/9d868a90-f7f3-4ee4-b165-cac80478b210.html",
+    "longText": "../public/texts/474401ca-d573-46d5-a597-01f37bbf8ec7.html",
     "image": "https://occii.org/wp-content/uploads/2022/02/Matmos-by-the-band-1024x683.jpg"
   },
   {
@@ -740,7 +128,7 @@
     "location": "boerderij",
     "price": "26.00",
     "shortText": "<p>The Gathering brengt na 10 jaar een nieuw album uit. Van doom en gothic metal in hun beginjaren tot triprock met elektronische elementen en soundscapes: het geluid van The Gathering was altijd al moeilijk in een hokje te plaatsen. En ook nu klinkt het geluid weer uniek!</p>\r\n",
-    "longText": "../public/texts/4623c96c-de0f-41a1-9a44-0d4226f31659.html",
+    "longText": "../public/texts/2595afd1-8996-43ce-a34f-078a468ac7c9.html",
     "image": "https://lift3cdn.nl/image/115/784x476/the-gathering-2022.jpg"
   },
   {
@@ -751,8 +139,8 @@
     "title": "Cenodemonic Freakout II met o.a. Demented Scumcats + Speedmobile",
     "location": "baroeg",
     "price": 19,
-    "shortText": "<p>It&#8217;s a psychosurfgaragepunkabilly freakout! Met Demented Scumcats + Speedmobile + Sick Sick Sinners + Cenobites + The Heart Monitors!</p>\n",
-    "longText": "../public/texts/8c2309ab-e47f-4207-a0ed-324711180a03.html",
+    "shortText": "<p>It&#8217;s a psychosurfgaragepunkabilly freakout met Demented Scumcats + Speedmobile + Skroetbalg  + Sick Sick Sinners + Cenobites + Nim Vind + The Heart Monitors.</p>\n",
+    "longText": "../public/texts/13ff8628-5e60-413b-8fe7-084053b132ed.html",
     "image": "https://baroeg.nl/wp-content/uploads/2020/02/Demented-Scumcats-768x512.jpg"
   },
   {
@@ -764,7 +152,7 @@
     "location": "melkweg",
     "price": 20.7,
     "shortText": "Harde Trapbeats, Engelse rapper, Rap metal",
-    "longText": "../public/texts/821b40a7-afe0-45a6-81ef-b3664d5bb498.html",
+    "longText": "../public/texts/8e1c55d9-4d2c-4435-8dd3-256a1025a74c.html",
     "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/26689"
   },
   {
@@ -776,19 +164,19 @@
     "location": "occii",
     "price": "8",
     "shortText": "Dancing? Definitely!",
-    "longText": "../public/texts/9a18a0ae-8397-4a02-b21b-1663578f8793.html",
+    "longText": "../public/texts/496914d5-f9d2-49f8-8ac3-5bfb3f60a1c5.html",
     "image": "https://occii.org/wp-content/uploads/2022/05/280753098_1919958148191628_6536877449847261664_n-1024x536.jpg"
   },
   {
-    "doorOpenDateTime": "2022-06-11T18:00:00.000Z",
-    "startDateTime": "2022-06-11T18:45:00.000Z",
+    "doorOpenDateTime": "2022-06-11T17:45:00.000Z",
+    "startDateTime": "2022-06-11T18:35:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://www.doornroosje.nl/event/the-gathering/",
     "title": "The Gathering",
     "location": "doornroosje",
     "price": 22,
     "shortText": null,
-    "longText": "../public/texts/a723e1d4-cdc6-4811-9cbe-246b24747fb6.html",
+    "longText": "../public/texts/c63928bd-78b6-4fd5-81a6-d44b82c7ccb6.html",
     "image": "https://www.doornroosje.nl/app/uploads/2022/01/The-Gathering-350x197-c-default.jpg"
   },
   {
@@ -800,7 +188,7 @@
     "location": "doornroosje",
     "price": 23,
     "shortText": "Fortarock",
-    "longText": "../public/texts/8166dcbd-5679-448e-ac9a-f7028bbe4005.html",
+    "longText": "../public/texts/9cabfd37-a148-40f8-9224-a3540243be0c.html",
     "image": "https://www.doornroosje.nl/app/uploads/2022/04/Dying-Fetus-min-1934x1088-350x197-c-default.jpeg"
   },
   {
@@ -812,19 +200,19 @@
     "location": "patronaat",
     "price": null,
     "shortText": "Legendarische band is na 10 jaar terug met een nieuwe plaat",
-    "longText": "../public/texts/e3cdfee8-a1e7-4576-b469-a5da118a37dc.html",
-    "image": "https://patronaat.nl/app/uploads/2021/12/The-Gathering-360x360.jpg"
+    "longText": "../public/texts/2149d1ab-5c5f-400e-8a7e-dc3f0db21dd6.html",
+    "image": "https://patronaat.nl/app/uploads/2021/12/The-Gathering-760x400.jpg"
   },
   {
     "doorOpenDateTime": null,
     "startDateTime": "2022-06-14T17:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://baroeg.nl/productie/rotting-christ/",
-    "title": "Rotting Christ",
+    "title": "Rotting Christ + Cthuluminati + Spartan",
     "location": "baroeg",
     "price": 14,
     "shortText": "<p>Melodic black metal.</p>\n",
-    "longText": "../public/texts/3035a93c-8878-48da-8c2d-ea5aced22a2b.html",
+    "longText": "../public/texts/ba0fa65c-42da-412c-9a61-a518ebbbd552.html",
     "image": "https://baroeg.nl/wp-content/uploads/2022/04/R.C.-PHOTO-e1650047480596-768x269.jpg"
   },
   {
@@ -836,7 +224,7 @@
     "location": "013",
     "price": 37.4,
     "shortText": null,
-    "longText": "../public/texts/69302a51-f448-4e33-96da-f425940d664b.html",
+    "longText": "../public/texts/c387e854-f5bd-497a-b92b-67863a5e25ae.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/5e5e52b0ad22a.jpg?version=1583239958"
   },
   {
@@ -848,7 +236,7 @@
     "location": "doornroosje",
     "price": 29,
     "shortText": "Fortarock",
-    "longText": "../public/texts/86749b13-ec55-44a9-89ba-a6888355e59c.html",
+    "longText": "../public/texts/09a91861-c3b8-4f60-a489-26c85f63a1b1.html",
     "image": "https://www.doornroosje.nl/app/uploads/2021/12/Black-Label-Society-scaled-350x197-c-default.jpg"
   },
   {
@@ -856,11 +244,11 @@
     "startDateTime": "2022-06-15T17:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-maassilo-death-to-all-vltimas-coffin-feeder/",
-    "title": "Baroeg On Tour @ Maassilo: Death To All + Vltimas + Coffin Feeder",
+    "title": "Death To All + Vltimas + Coffin Feeder",
     "location": "baroeg",
     "price": 25,
     "shortText": "<p>Belangrijke grondlegger van death metal.</p>\n",
-    "longText": "../public/texts/45014da4-4421-4702-af6a-701b946ae825.html",
+    "longText": "../public/texts/85b51253-99aa-4c20-8f89-d0d8b7cc09fd.html",
     "image": "https://baroeg.nl/wp-content/uploads/2022/04/image003-e1648821762776-768x228.png"
   },
   {
@@ -872,7 +260,7 @@
     "location": "bibelot",
     "price": 35,
     "shortText": "",
-    "longText": "../public/texts/33f12acb-a411-4820-ab0e-0132fd4e2b42.html",
+    "longText": "../public/texts/6dbb7dab-731c-4e64-b28f-cfb41df33ad5.html",
     "image": "https://bibelot.net/wp-content/uploads/2022/01/Epica-band-by-Tim-Tronckoe-7-1400x933.jpg"
   },
   {
@@ -880,12 +268,12 @@
     "startDateTime": "2022-06-16T18:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://occii.org/events/a-fungus-releaseparty/",
-    "title": "A FUNGUS + PETERSBURG + MORE TBA",
+    "title": "A FUNGUS + PETERSBURG + DIMBIT + DJ PEBBLE",
     "location": "occii",
     "price": "8",
-    "shortText": "releaseparty | ",
-    "longText": "../public/texts/780b6948-9d80-423e-9177-0c58d3e423f6.html",
-    "image": "https://occii.org/wp-content/uploads/2022/05/AFUNGUS-1024x768.jpg"
+    "shortText": "releaseparty 'It already does that' ",
+    "longText": "../public/texts/dd71556d-b272-47fe-9354-9d5e3a93b79c.html",
+    "image": "https://occii.org/wp-content/uploads/2022/05/AFUNGUS-1-1024x1024.jpg"
   },
   {
     "doorOpenDateTime": "2022-06-16T17:30:00.000Z",
@@ -896,7 +284,7 @@
     "location": "013",
     "price": 39.4,
     "shortText": null,
-    "longText": "../public/texts/bce697fa-c20e-4e1d-9281-058937f48ef7.html",
+    "longText": "../public/texts/61f8333d-db4c-4e51-9377-456e47fd6e8e.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/623dc7146ea96.jpg?version=1648215845"
   },
   {
@@ -908,7 +296,7 @@
     "location": "metropool",
     "price": 7.5,
     "shortText": null,
-    "longText": "../public/texts/e49bdbd8-66d2-4155-b452-f84c794655c9.html",
+    "longText": "../public/texts/cd6e7d8e-f266-431b-8eb5-0bc7c0e23726.html",
     "image": "https://metropool.nl//media/24841/zomeroffensief_web_1920x1080.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=132954589460000000"
   },
   {
@@ -920,7 +308,7 @@
     "location": "dbs",
     "price": null,
     "shortText": null,
-    "longText": "../public/texts/8967395a-2204-4725-9e66-7052eb23be7a.html",
+    "longText": "../public/texts/69fc938c-683f-42ea-a499-df7a5169a4dd.html",
     "image": "https://www.dbstudio.nl/wp-content/uploads/2022/03/circle.jpg"
   },
   {
@@ -932,7 +320,7 @@
     "location": "013",
     "price": 39.4,
     "shortText": null,
-    "longText": "../public/texts/71efa2a6-89eb-41b1-8add-33d8140c8567.html",
+    "longText": "../public/texts/a70e3a1d-5ed5-4192-8d4d-8fc409d903df.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/6155b3081efa6.jpg?version=1633006794"
   },
   {
@@ -944,7 +332,7 @@
     "location": "dbs",
     "price": null,
     "shortText": null,
-    "longText": "../public/texts/8a21153c-309a-46b8-848a-c39538163646.html",
+    "longText": "../public/texts/c8d3f635-21c6-4f22-b1e9-9f15fb5bf14c.html",
     "image": "https://www.dbstudio.nl/wp-content/uploads/2022/03/the-bottom-line-2019.webp"
   },
   {
@@ -952,24 +340,12 @@
     "startDateTime": "2022-06-18T11:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://occii.org/events/conference-women-in-dutch-punk/",
-    "title": "Conference: Women in Dutch punk W/ FiLM: Stories from the She-Punks (UK, 2018, Helen Reddington & Gina Birch) + PERSONA NON DATA + WICK BAMBIX + MORE TBC",
+    "title": "Conference: Women in Dutch punk W/ FiLM: Stories from the She-Punks (UK, 2018, Helen Reddington & Gina Birch) + PERSONA NON DATA + WICK BAMBIX + STRESSSYSTEM + ASBEST BOYS + DJ STEVE",
     "location": "occii",
     "price": "10",
     "shortText": "Conference | Film | Live Bands | Food | Info",
-    "longText": "../public/texts/e0f47689-d152-4142-b991-780036c4537f.html",
-    "image": "https://occii.org/wp-content/uploads/2022/03/IMG_2895.jpg"
-  },
-  {
-    "doorOpenDateTime": "2022-06-19T17:00:00.000Z",
-    "startDateTime": "2022-06-19T17:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/leprous-3/",
-    "title": "Leprous + Aiming for Enrike",
-    "location": "doornroosje",
-    "price": 27.5,
-    "shortText": "Laatste kaarten",
-    "longText": "../public/texts/4f7d8e54-307f-4784-b382-254a9db6fee8.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2021/09/Leprous-1-350x197-c-default.jpg"
+    "longText": "../public/texts/0bc84562-134f-4d10-ade6-4312af39dca6.html",
+    "image": "https://occii.org/wp-content/uploads/2022/03/WOMEN-724x1024.jpg"
   },
   {
     "doorOpenDateTime": "2022-06-19T16:30:00.000Z",
@@ -980,7 +356,7 @@
     "location": "afaslive",
     "price": "19",
     "shortText": null,
-    "longText": "../public/texts/a522fb27-145e-4858-b8e4-c38100c95ae5.html",
+    "longText": "../public/texts/8532ee15-23df-4104-b919-6ed8ee426a05.html",
     "image": "https://www.afaslive.nl/files/Agenda/2020/07-juli/_agendaitem/Faith-No-More.jpg"
   },
   {
@@ -992,7 +368,7 @@
     "location": "013",
     "price": 16.9,
     "shortText": null,
-    "longText": "../public/texts/bf86a6d6-eee6-4f45-b5a6-8703869eb07d.html",
+    "longText": "../public/texts/d2a23398-a93a-4d50-8c18-5722e9998603.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/625eb6cad6e32.jpeg?version=1650374376"
   },
   {
@@ -1004,8 +380,20 @@
     "location": "occii",
     "price": "10",
     "shortText": "",
-    "longText": "../public/texts/25b6b543-92d1-46e9-8e42-2e45d97604f3.html",
+    "longText": "../public/texts/1d79cace-5cd7-4e8f-b941-bff787aeb4f4.html",
     "image": "https://occii.org/wp-content/uploads/2022/04/WARTHOG-PA-TOURPOSTER.jpg"
+  },
+  {
+    "doorOpenDateTime": "2022-06-21T18:00:00.000Z",
+    "startDateTime": "2022-06-21T18:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://metropool.nl/agenda/grade-2/",
+    "title": "Grade 2",
+    "location": "metropool",
+    "price": 8,
+    "shortText": null,
+    "longText": "../public/texts/dbaa41b0-655f-4431-9a36-c04c49054169.html",
+    "image": "https://metropool.nl//media/18201/grade-web.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=132267683980000000"
   },
   {
     "doorOpenDateTime": null,
@@ -1016,7 +404,7 @@
     "location": "dbs",
     "price": null,
     "shortText": null,
-    "longText": "../public/texts/4ac72f86-ddba-401b-9558-07b6c8c77244.html",
+    "longText": "../public/texts/0a975e8b-b10b-4cc6-9c0c-ae231982cac4.html",
     "image": "https://www.dbstudio.nl/wp-content/uploads/2022/03/Okkultokrati-photo-Remy_Elk.jpg"
   },
   {
@@ -1028,43 +416,19 @@
     "location": "afaslive",
     "price": 38,
     "shortText": null,
-    "longText": "../public/texts/a122c13e-5e45-46d9-96c7-af7a06b4591c.html",
+    "longText": "../public/texts/ccb2f48e-a700-4a1f-99c9-6a9bba280ad8.html",
     "image": "https://www.afaslive.nl/files/Agenda/2022/06-juni/_agendaitem/Olivia-Rodrigo.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-06-23T17:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/1000-mods-23-06-2022",
-    "title": "1000mods",
-    "location": "melkweg",
-    "price": 20.7,
-    "shortText": "Stoner, Metal, Griekenland",
-    "longText": "../public/texts/18752aa3-c90b-4611-8a02-f4dd9a5c75f4.html",
-    "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/28920"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-06-23T17:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/the-jesus-and-mary-chain-23-06-2022",
-    "title": "The Jesus and Mary Chain",
-    "location": "melkweg",
-    "price": 43.15,
-    "shortText": "Iconische post-punkband, 80s, Just Like Honey",
-    "longText": "../public/texts/d4b055d8-a9af-4c55-99c3-238e8a25f834.html",
-    "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/26296"
   },
   {
     "doorOpenDateTime": "2022-06-23T18:00:00.000Z",
     "startDateTime": "2022-06-23T18:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://occii.org/events/blissmal-deliluh/",
-    "title": "DELILUH (CA) + MORE TBA",
+    "title": "DELILUH (CA) + RÊVERIE",
     "location": "occii",
     "price": "10",
     "shortText": "Art Rock | Post Punk | synth-led motorik beat",
-    "longText": "../public/texts/555eb6f7-5dff-4e9b-ac2a-8f9e381b3449.html",
+    "longText": "../public/texts/ddc9e7d7-df0a-4747-995d-773c1f6e8adb.html",
     "image": "https://occii.org/wp-content/uploads/2022/05/deliluh-romain-silvi.jpg"
   },
   {
@@ -1076,7 +440,7 @@
     "location": "dbs",
     "price": null,
     "shortText": null,
-    "longText": "../public/texts/d4be2068-9cea-410f-b617-46561c94a5fc.html",
+    "longText": "../public/texts/1e9179fa-9e48-47e9-9133-8e865fbfece0.html",
     "image": "https://www.dbstudio.nl/wp-content/uploads/2022/04/index-1.jpg"
   },
   {
@@ -1088,7 +452,7 @@
     "location": "patronaat",
     "price": null,
     "shortText": "Afscheidsshow van een van de meest heavy bands van Haarlem",
-    "longText": "../public/texts/4e841c2c-bbf1-4dc6-a02f-ecb519bfe431.html",
+    "longText": "../public/texts/86b55463-47de-43ae-8a34-114399a393f8.html",
     "image": "https://patronaat.nl/app/uploads/2022/03/Hibakusha-band-360x360.jpg"
   },
   {
@@ -1100,7 +464,7 @@
     "location": "doornroosje",
     "price": 14.5,
     "shortText": null,
-    "longText": "../public/texts/e9dd6b2f-e15a-45b8-90b9-cd39fa7c6665.html",
+    "longText": "../public/texts/573a4c11-69da-4ec9-b322-1694a6fb5ac3.html",
     "image": "https://www.doornroosje.nl/app/uploads/2022/03/The-Bobby-Lees-350x197-c-default.jpg"
   },
   {
@@ -1112,8 +476,20 @@
     "location": "dbs",
     "price": null,
     "shortText": null,
-    "longText": "../public/texts/20122f7e-4726-4b2b-a799-b09e8de4f92e.html",
+    "longText": "../public/texts/43dc4078-c4cb-4dd2-83ca-7e2ba7255573.html",
     "image": "https://www.dbstudio.nl/wp-content/uploads/2021/11/TMGT-e1643041114954.jpeg"
+  },
+  {
+    "doorOpenDateTime": "2022-06-25T17:30:00.000Z",
+    "startDateTime": "2022-06-25T17:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://occii.org/events/vaagner-meets-zenevloed-a-reunion-of-spheres/",
+    "title": "Vaagner meets zenevloed: A reunion of spheres",
+    "location": "occii",
+    "price": "8",
+    "shortText": "Ambient / Rhythmic / Acoustic",
+    "longText": "../public/texts/1d37c0b3-a6a6-400d-9323-658dd79cd115.html",
+    "image": "https://occii.org/wp-content/uploads/2022/05/282373950_5046131255494847_6033085211285228502_n-1024x536.jpg"
   },
   {
     "doorOpenDateTime": "2022-06-25T17:30:00.000Z",
@@ -1124,7 +500,7 @@
     "location": "boerderij",
     "price": "22.50",
     "shortText": "<p>De Amerikaanse band The Perfect Tool is &rsquo;s werelds beste Tool tribute band. Dit vinden niet alleen heel veel fans maar ook Tool bandleden Maynard James Keenan en Adam Jones. Compleet met videoprojecties veroveren ze de Verenigde Staten &eacute;n Europa al een aantal jaar.</p>\r\n",
-    "longText": "../public/texts/8db669df-4e33-482a-ac0c-7ce2653b3544.html",
+    "longText": "../public/texts/1ee67eea-b811-46fb-af15-09602731ce77.html",
     "image": "https://lift3cdn.nl/image/115/784x476/the-perfect-tool.jpg"
   },
   {
@@ -1136,7 +512,7 @@
     "location": "dbs",
     "price": null,
     "shortText": null,
-    "longText": "../public/texts/b55e6cbc-8e2c-4077-9fe0-5a1bbbdc325d.html",
+    "longText": "../public/texts/85805a3c-a587-4d2a-9137-1c755618fbb0.html",
     "image": "https://www.dbstudio.nl/wp-content/uploads/2022/05/DEAFKIDSPROMO1_JeanRibeiro.jpg"
   },
   {
@@ -1148,20 +524,8 @@
     "location": "patronaat",
     "price": null,
     "shortText": "Vervaarlijk zwartgeblakerde punk uit het hoge Noorden",
-    "longText": "../public/texts/93230c27-670f-4055-88ef-9e82b2858608.html",
+    "longText": "../public/texts/2b27c43e-9e84-4d4d-90c5-3668d4f7c857.html",
     "image": "https://patronaat.nl/app/uploads/2022/03/Okkulto_red1-360x360.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-06-26T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/dropout-kings-26-06-2022",
-    "title": "DROPOUT KINGS",
-    "location": "melkweg",
-    "price": 13.8,
-    "shortText": "Trap, Metal",
-    "longText": "../public/texts/e5651323-ed3e-4f48-9cb9-be478385dbe2.html",
-    "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/29294"
   },
   {
     "doorOpenDateTime": null,
@@ -1172,7 +536,7 @@
     "location": "afaslive",
     "price": 75.05,
     "shortText": null,
-    "longText": "../public/texts/85aded6b-c682-476c-b7bc-e55317561728.html",
+    "longText": "../public/texts/a7ad598b-72bd-4564-b022-f65a2066d3b1.html",
     "image": "https://www.afaslive.nl/files/Agenda/2022/06-juni/_agendaitem/Elvis-Costello-The-Imposters.jpg"
   },
   {
@@ -1184,20 +548,8 @@
     "location": "dbs",
     "price": null,
     "shortText": null,
-    "longText": "../public/texts/4e32c0fc-a7be-42d5-b700-5ece5ca9a504.html",
+    "longText": "../public/texts/8378c380-cc3e-4d31-b8d9-e8e6fc006072.html",
     "image": "https://www.dbstudio.nl/wp-content/uploads/2022/03/Attila-40th-Tour-v4-scaled.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-06-29T17:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/waterparks-29-06-2022",
-    "title": "Waterparks",
-    "location": "melkweg",
-    "price": 20.15,
-    "shortText": "Next-gen pop-punk, Hopeless records",
-    "longText": "../public/texts/16a15194-e444-41f9-8777-81c07695c15e.html",
-    "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/29364"
   },
   {
     "doorOpenDateTime": "2022-06-29T18:00:00.000Z",
@@ -1208,7 +560,7 @@
     "location": "patronaat",
     "price": null,
     "shortText": "Grondleggers van classic emo indie rock met een vleugje (pop)punk",
-    "longText": "../public/texts/9818be07-5489-48f3-ac3e-0e0752c815ad.html",
+    "longText": "../public/texts/b5fa2e78-c1c0-4e7c-87ea-fe98357ba0b6.html",
     "image": "https://patronaat.nl/app/uploads/2022/05/The-Get-Up-Kids-band-360x360.jpg"
   },
   {
@@ -1220,20 +572,8 @@
     "location": "baroeg",
     "price": 15,
     "shortText": "<p>Moddervette gitaarsound, vette grooves maar ook geweldige melodielijnen.</p>\n",
-    "longText": "../public/texts/a6eb4c4d-026c-4264-9cf0-43bc27b903ef.html",
+    "longText": "../public/texts/cae26afa-b60a-4bd7-9e1b-d32b24e993d6.html",
     "image": "https://baroeg.nl/wp-content/uploads/2022/03/bandphoto-e1647940560342-768x223.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-06-30T17:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/neck-deep-30-06-2022",
-    "title": "Neck Deep",
-    "location": "melkweg",
-    "price": 24.15,
-    "shortText": "Poppunk, Aanstekelijk, Hyperenergieke liveshow",
-    "longText": "../public/texts/507cc2df-8f56-4474-8436-10757ed104d9.html",
-    "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/28245"
   },
   {
     "doorOpenDateTime": "2022-06-30T18:00:00.000Z",
@@ -1242,10 +582,10 @@
     "venueEventUrl": "https://occii.org/events/attila-w/",
     "title": "ATTILA THE STOCKBROKER (UK) + TRESPASSERS W (Cor Gout & Lukas Simonis)",
     "location": "occii",
-    "price": "8",
-    "shortText": "",
-    "longText": "../public/texts/3c681a2b-e8fe-415a-b53d-a5c3f5b84358.html",
-    "image": "https://occii.org/wp-content/uploads/2022/04/attila-1-724x1024.jpg"
+    "price": "40",
+    "shortText": "OCCii Hands Out Free Tickets, Celebrating 30th Anniversary",
+    "longText": "../public/texts/2bea61a2-3f40-47f0-80f7-688f728850f9.html",
+    "image": "https://occii.org/wp-content/uploads/2022/04/attila-1-free-724x1024.jpg"
   },
   {
     "doorOpenDateTime": "2022-06-30T17:30:00.000Z",
@@ -1256,8 +596,32 @@
     "location": "patronaat",
     "price": null,
     "shortText": "Exclusieve Benelux show van uniek project door legendarische hardcore band",
-    "longText": "../public/texts/d34934ae-17c7-47cb-b84d-05ff49365f28.html",
+    "longText": "../public/texts/4914093b-79ec-42ce-811b-674543457a66.html",
     "image": "https://patronaat.nl/app/uploads/2022/02/Converge-Bloodmoon-360x360.jpeg"
+  },
+  {
+    "doorOpenDateTime": "2022-07-01T18:00:00.000Z",
+    "startDateTime": "2022-06-30T22:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://occii.org/events/rosa-vertov/",
+    "title": "ROSA VERTOV (PL) + SUPPORT",
+    "location": "occii",
+    "price": "8",
+    "shortText": "dream pop / sadcore / etheral",
+    "longText": "../public/texts/7a602987-32a4-40fb-92d3-be0c96482553.html",
+    "image": "https://occii.org/wp-content/uploads/2022/06/ROSAVERTOV-BANDFOTO-1024x679.jpg"
+  },
+  {
+    "doorOpenDateTime": "2022-07-01T00:21:00.000Z",
+    "startDateTime": "2022-07-01T00:22:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.doornroosje.nl/event/x-raiders-2/",
+    "title": "X Raiders",
+    "location": "doornroosje",
+    "price": 14,
+    "shortText": "Special Farewell Show (ft. Rectum Raiders)",
+    "longText": "../public/texts/71a2220f-b6c4-4daf-95ee-906daa31aa2e.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2022/05/X-Raiders-1732x1088-350x197-c-default.jpg"
   },
   {
     "doorOpenDateTime": "2022-07-01T02:20:00.000Z",
@@ -1268,7 +632,7 @@
     "location": "doornroosje",
     "price": 15,
     "shortText": "Soulcrusher",
-    "longText": "../public/texts/e7c1657f-cc96-4405-b924-69572ed0dfb7.html",
+    "longText": "../public/texts/4d7a3c4b-70ff-430a-92e5-ba9ad7688934.html",
     "image": "https://www.doornroosje.nl/app/uploads/2022/02/Thou1-350x197-c-default.jpg"
   },
   {
@@ -1280,7 +644,7 @@
     "location": "afaslive",
     "price": 56,
     "shortText": null,
-    "longText": "../public/texts/fcdc72f8-49a6-4ffd-b178-5abda70f8e6f.html",
+    "longText": "../public/texts/467b4d1d-0c9e-4090-9fdf-b8e459970d2f.html",
     "image": "https://www.afaslive.nl/files/Agenda/2022/07-juli/_agendaitem/JackWhite.jpg"
   },
   {
@@ -1292,7 +656,7 @@
     "location": "boerderij",
     "price": "31.50",
     "shortText": "<p>Tremonti is een Amerikaanse heavy metal band opgericht en geleid door zanger en gitarist Mark Tremonti (ook bekend van de toonaangevende bands Creed en Alter Bridge). Wat oorspronkelijk begon als een soloproject van Mark evolueerde naar een volwaardige band en vorig jaar brachten zij hun vijfde studioalbum uit.</p>\r\n",
-    "longText": "../public/texts/08142c44-6c19-40e6-9127-0dce50f294ca.html",
+    "longText": "../public/texts/0c5d5ca8-d405-47ba-9348-a6c18f00de3f.html",
     "image": "https://lift3cdn.nl/image/115/784x476/tremonti-.jpg"
   },
   {
@@ -1304,7 +668,7 @@
     "location": "effenaar",
     "price": 15.5,
     "shortText": "",
-    "longText": "../public/texts/420eadcf-5d84-4bcf-b959-c5be7e469926.html",
+    "longText": "../public/texts/99022e2b-1026-4fbf-9c11-89f974ca1101.html",
     "image": "https://www.effenaar.nl/uploads/event_spotlight_image/622b1b2eb49e6.jpg"
   },
   {
@@ -1316,7 +680,7 @@
     "location": "metropool",
     "price": 18.5,
     "shortText": null,
-    "longText": "../public/texts/9226b225-c682-4c41-93fb-c321c39552c1.html",
+    "longText": "../public/texts/7b685dc0-5c89-4964-b1a8-f421527b1d39.html",
     "image": "https://metropool.nl//media/22914/savatar_web_1920x1080.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=132906181910000000"
   },
   {
@@ -1328,32 +692,8 @@
     "location": "patronaat",
     "price": null,
     "shortText": "presented by Minor Operation Bookings",
-    "longText": "../public/texts/42eddde4-5fc9-4949-836b-4fb06c471549.html",
+    "longText": "../public/texts/a673ede6-b966-4ba5-a9ba-a329613541ca.html",
     "image": "https://patronaat.nl/app/uploads/2022/03/Cro-Mags-760x400.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-07-03T17:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/molchat-doma-03-07-2022",
-    "title": "Molchat Doma",
-    "location": "melkweg",
-    "price": 17.25,
-    "shortText": "Post-punk, Synthpop, New wave",
-    "longText": "../public/texts/01a33f18-78d6-4063-b619-7c84b8bf6d83.html",
-    "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/28266"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-07-04T17:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/the-chats-04-07-2022",
-    "title": "The Chats",
-    "location": "melkweg",
-    "price": 19.55,
-    "shortText": "Australische punkband, Garagerock, Pubvrienden",
-    "longText": "../public/texts/1abe61a1-4298-4b6f-a8ca-9e5aad1afec4.html",
-    "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/29134"
   },
   {
     "doorOpenDateTime": null,
@@ -1364,7 +704,7 @@
     "location": "dbs",
     "price": null,
     "shortText": null,
-    "longText": "../public/texts/f9467019-2576-44b5-b993-e0a860a64a79.html",
+    "longText": "../public/texts/9bea46bf-1ef9-4a76-bd76-feeb51302499.html",
     "image": "https://www.dbstudio.nl/wp-content/uploads/2022/01/stiff.jpeg"
   },
   {
@@ -1376,20 +716,8 @@
     "location": "patronaat",
     "price": null,
     "shortText": "Grindcore is liefde",
-    "longText": "../public/texts/865d85f6-ef96-402e-838d-5e611cb05ae4.html",
+    "longText": "../public/texts/73f9d5aa-2e12-4432-b03e-02a11a4ffe1f.html",
     "image": "https://patronaat.nl/app/uploads/2022/04/promo-square-360x360.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-07-06T17:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/the-faim-06-07-2022",
-    "title": "The Faim",
-    "location": "melkweg",
-    "price": 17.25,
-    "shortText": "Poppunk, Australië",
-    "longText": "../public/texts/fecd1e15-1dcd-4ada-a90b-8f62d1c9a45a.html",
-    "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/28870"
   },
   {
     "doorOpenDateTime": "2022-07-06T17:00:00.000Z",
@@ -1400,32 +728,32 @@
     "location": "013",
     "price": 22.9,
     "shortText": null,
-    "longText": "../public/texts/6e49ea77-1844-4cb3-9710-fe356ce124ad.html",
+    "longText": "../public/texts/d086ca6a-0527-4250-a9de-72eb64e1f3f4.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/6259810fc580e.jpg?version=1650033036"
   },
   {
     "doorOpenDateTime": "2022-07-06T17:00:00.000Z",
-    "startDateTime": "2022-07-06T17:30:00.000Z",
+    "startDateTime": "2022-07-06T18:30:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://patronaat.nl/event/turnstile-06-07-22/",
-    "title": "Turnstile",
-    "location": "patronaat",
-    "price": null,
-    "shortText": "Een van de meest vernieuwende bands in hardcore punk",
-    "longText": "../public/texts/8ec3e710-3b36-48f0-91bb-5e373a696f89.html",
-    "image": "https://patronaat.nl/app/uploads/2021/09/Turnstile_square_press-360x360.jpg"
+    "venueEventUrl": "https://neushoorn.nl/production/nh-cafe-kamchatka/",
+    "title": "NH Café: Kamchatka",
+    "location": "neushoorn",
+    "price": 10,
+    "shortText": null,
+    "longText": "../public/texts/bdcd3db8-7a70-4f31-a50e-0b0a889d4eba.html",
+    "image": null
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-07-07T17:30:00.000Z",
+    "startDateTime": "2022-07-07T17:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/idles-07-07-2022",
-    "title": "IDLES",
-    "location": "melkweg",
-    "price": 28.75,
-    "shortText": "'Brutalism', Postpunk, cut the bullshit",
-    "longText": "../public/texts/7d9fe8b0-3d9e-480d-a4ba-e41cff4eec24.html",
-    "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/28716"
+    "venueEventUrl": "https://baroeg.nl/productie/rock-central-showcase-5/",
+    "title": "Rock Central showcase",
+    "location": "baroeg",
+    "price": "24",
+    "shortText": "<p>Rock Central is een samenwerkingsverband tussen SKVR en Baroeg.</p>\n",
+    "longText": "../public/texts/2aa9e2f5-4616-4a1b-afca-339b35b1fe21.html",
+    "image": "https://baroeg.nl/wp-content/uploads/2022/05/RockCentral_Logo-1-e1653397048373-768x202.jpg"
   },
   {
     "doorOpenDateTime": null,
@@ -1436,7 +764,7 @@
     "location": "bibelot",
     "price": 19,
     "shortText": "",
-    "longText": "../public/texts/160bff5a-e709-40c3-8236-a035bccbb885.html",
+    "longText": "../public/texts/324a919c-04e8-42dc-8e57-1f0cb2199495.html",
     "image": "https://bibelot.net/wp-content/uploads/2022/03/angeldust.jpg"
   },
   {
@@ -1448,20 +776,44 @@
     "location": "boerderij",
     "price": "28.50",
     "shortText": "<p>Vandenberg zal in Poppodium Boerderij optreden met de nieuwe leadzanger Mats Leven, die eerder werkte met onder andere Yngwie Malmsteen, Candlemass en toerde met het Trans-Siberian Orchestra. Hij vervangt Ronnie Romero en werkt met de band aan de opvolging van het laatste Vandenberg album genaamd <em>2020.</em></p>\r\n",
-    "longText": "../public/texts/ed3db8eb-28d4-421f-9ac5-acdefe62b939.html",
+    "longText": "../public/texts/f8f77ec2-1f9f-4a1e-9165-0fbd53fae944.html",
     "image": "https://lift3cdn.nl/image/115/784x476/vandenberg-2022.jpg"
   },
   {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-07-08T17:30:00.000Z",
+    "doorOpenDateTime": "2022-07-08T17:00:00.000Z",
+    "startDateTime": "2022-07-08T17:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/idles-08-07-2022",
-    "title": "IDLES",
-    "location": "melkweg",
-    "price": 28.75,
-    "shortText": "'Brutalism', Postpunk, cut the bullshit",
-    "longText": "../public/texts/10f67247-946b-4e0c-b37e-7568e140d2d1.html",
-    "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/28716"
+    "venueEventUrl": "https://occii.org/events/k-boy-en-de-goedzo-jongens-quincy-the-david-poodle/",
+    "title": "K-BOY EN DE GOEDZO JONGENS + QUINCY & THE DAVID + POODLE",
+    "location": "occii",
+    "price": "8",
+    "shortText": "",
+    "longText": "../public/texts/2629e1be-2cb5-4378-9044-f78406d39abf.html",
+    "image": "https://occii.org/wp-content/uploads/2022/06/WhatsApp-Image-2022-06-01-at-4.09.43-PM-812x1024.jpeg"
+  },
+  {
+    "doorOpenDateTime": "2022-07-08T18:00:00.000Z",
+    "startDateTime": "2022-07-08T18:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://neushoorn.nl/production/hardcore-vrijdag-10/",
+    "title": "Hardcore Vrijdag",
+    "location": "neushoorn",
+    "price": 5,
+    "shortText": null,
+    "longText": "../public/texts/0d51d9c4-8715-43da-b8f1-a2eac4fe9625.html",
+    "image": null
+  },
+  {
+    "doorOpenDateTime": "2022-07-09T18:00:00.000Z",
+    "startDateTime": "2022-07-08T22:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://occii.org/events/reborn-bliep-occii/",
+    "title": "REBORN BLIEP ‘s animation film: ‘Waiting for the Bliep’ (Bethany de Forest & Alexander van Zanten) w/ Pim Heijne (de Kift)  + DJ",
+    "location": "occii",
+    "price": "5",
+    "shortText": "An electro musical fantasy w/ A Message!",
+    "longText": "../public/texts/54a55717-45dc-4c7f-8303-af301bb91fd7.html",
+    "image": "https://occii.org/wp-content/uploads/2022/06/bliep-725x1024.jpg"
   },
   {
     "doorOpenDateTime": null,
@@ -1471,8 +823,8 @@
     "title": "Semblant + As I May + Secret Rule + Structural",
     "location": "baroeg",
     "price": 21,
-    "shortText": "<p>Liefhebbers van donkere Gothic Metal opgelet!</p>\n",
-    "longText": "../public/texts/71fd37c6-6bce-4d41-894a-2e05cc80c867.html",
+    "shortText": "<p>Voor liefhebbers van donkere gothic metal.</p>\n",
+    "longText": "../public/texts/d8b723b6-200c-4597-8299-8dd229211c8b.html",
     "image": "https://baroeg.nl/wp-content/uploads/2021/01/image4_1-kopie-150x150.jpeg"
   },
   {
@@ -1484,7 +836,7 @@
     "location": "afaslive",
     "price": 53.9,
     "shortText": null,
-    "longText": "../public/texts/d3fd197f-84da-401e-8414-a5d38ea59d00.html",
+    "longText": "../public/texts/3d969dbe-ccdc-4c7a-94f5-b4b31b54d270.html",
     "image": "https://www.afaslive.nl/files/Agenda/2022/07-juli/_agendaitem/Madness.jpg"
   },
   {
@@ -1496,8 +848,20 @@
     "location": "patronaat",
     "price": null,
     "shortText": "Cosmische trance die toch aanstekelijk is, rechtstreeks uit Chili",
-    "longText": "../public/texts/211adc8f-bd6b-480e-ab77-ddb90ac27d04.html",
+    "longText": "../public/texts/d205ca31-d214-4c34-af8e-2f5b78afc9d1.html",
     "image": "https://patronaat.nl/app/uploads/2022/03/20210517_sacredbones_domingae_ebruyildiz_588-2-360x360.jpeg"
+  },
+  {
+    "doorOpenDateTime": "2022-07-10T16:00:00.000Z",
+    "startDateTime": "2022-07-09T22:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://occii.org/events/south-of-north-2022/",
+    "title": "IC-RED + FIZZY VEINS & MONTEL PALMER + NASSSAU + DEVON REXI",
+    "location": "occii",
+    "price": "12",
+    "shortText": "electronic, experimental, new wave, dub, psychedelic rock ",
+    "longText": "../public/texts/c42014a5-0fe0-449f-bad0-2fe7c2a725f6.html",
+    "image": "https://occii.org/wp-content/uploads/2022/06/poster-sq-white-bg-1024x1024.jpg"
   },
   {
     "doorOpenDateTime": "2022-07-10T18:00:00.000Z",
@@ -1508,7 +872,7 @@
     "location": "metropool",
     "price": 21,
     "shortText": null,
-    "longText": "../public/texts/9949b468-df35-444f-b8af-f1f84b2b3130.html",
+    "longText": "../public/texts/024d83e8-f818-4e99-aa39-f5672809fd50.html",
     "image": "https://metropool.nl//media/25045/vltimas_web.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=132963151660000000"
   },
   {
@@ -1520,20 +884,8 @@
     "location": "baroeg",
     "price": 15,
     "shortText": "<p> Een trap metal explosie.</p>\n",
-    "longText": "../public/texts/1981b42f-b3b9-4847-8bd2-8cf678f45a04.html",
+    "longText": "../public/texts/a1575437-3ee6-4936-8b4c-e418141018d1.html",
     "image": "https://baroeg.nl/wp-content/uploads/2022/05/dropout-kings_band-web-e1651668995381-768x173.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-07-12T17:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/hatari-12-07-2022-2",
-    "title": "Hatari",
-    "location": "melkweg",
-    "price": 19.55,
-    "shortText": "Ijsland, Industrial, Techno-Punk, Eurovisie Songfestival '19",
-    "longText": "../public/texts/c2eee793-613c-439a-977d-d7df404406f9.html",
-    "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/25849"
   },
   {
     "doorOpenDateTime": "2022-07-13T17:00:00.000Z",
@@ -1544,7 +896,7 @@
     "location": "013",
     "price": 34.4,
     "shortText": null,
-    "longText": "../public/texts/516c7afc-d91b-4516-aa45-bf57bbb92833.html",
+    "longText": "../public/texts/b25e4d25-5057-48d3-8864-f006ead7c817.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/611f7dd70a5bf.jpg?version=1629453866"
   },
   {
@@ -1556,7 +908,7 @@
     "location": "013",
     "price": 34.4,
     "shortText": null,
-    "longText": "../public/texts/5d0adb54-570b-4e43-9af1-0b06ca50afab.html",
+    "longText": "../public/texts/17ca4465-2810-47f9-8457-78cf41ce7f27.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/60db16515b99f.jpg?version=1624970953"
   },
   {
@@ -1568,8 +920,8 @@
     "location": "occii",
     "price": "8",
     "shortText": "",
-    "longText": "../public/texts/e5b94c10-d004-4eaf-84f5-0a88419a08cd.html",
-    "image": null
+    "longText": "../public/texts/16ec0aff-9d08-401b-883e-2a540518ba69.html",
+    "image": "https://occii.org/wp-content/uploads/2022/04/WhatsApp-Image-2022-06-02-at-5.29.58-PM-724x1024.jpeg"
   },
   {
     "doorOpenDateTime": "2022-07-14T17:30:00.000Z",
@@ -1580,7 +932,7 @@
     "location": "patronaat",
     "price": null,
     "shortText": "Meezingen op Smells Like Teen Spirit!",
-    "longText": "../public/texts/dca13e19-40e1-4bc5-8538-bebdc78ed6ef.html",
+    "longText": "../public/texts/d40779d8-fa93-43a3-b61a-c7008f2973d8.html",
     "image": "https://patronaat.nl/app/uploads/2022/01/ntribute-360x360.jpeg"
   },
   {
@@ -1588,12 +940,24 @@
     "startDateTime": "2022-07-15T06:30:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://www.dbstudio.nl/event/dirty-fences-usa-support/",
-    "title": "DIRTY FENCES (USA) + SKROETBALG",
+    "title": "DIRTY FENCES (USA) + SKROETBALG + VURRO (Spanje)",
     "location": "dbs",
     "price": null,
     "shortText": null,
-    "longText": "../public/texts/5379a694-ebd3-4733-ba24-a1ecc4ea2b3e.html",
+    "longText": "../public/texts/6f89ad10-1e90-4784-9652-2f64ec438baa.html",
     "image": "https://www.dbstudio.nl/wp-content/uploads/2022/05/dirty-fences.jpg"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-07-17T02:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.dbstudio.nl/event/dbs-buiten-possessed-by-paul-james-usa/",
+    "title": "dB’s Buiten > POSSESSED BY PAUL JAMES (USA)",
+    "location": "dbs",
+    "price": null,
+    "shortText": null,
+    "longText": "../public/texts/d25c2f7a-5d45-425e-b0e3-7db6502741e5.html",
+    "image": "https://www.dbstudio.nl/wp-content/uploads/2022/05/PBPJ20_SQphoto2-e1581959858937.jpg"
   },
   {
     "doorOpenDateTime": "2022-07-17T17:00:00.000Z",
@@ -1604,7 +968,7 @@
     "location": "013",
     "price": 47.4,
     "shortText": null,
-    "longText": "../public/texts/10992558-03e7-4d72-8fe5-b323bbe1155d.html",
+    "longText": "../public/texts/9fd311b2-1dd0-468e-bd7d-8e5a7da640cc.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/62347965b0ec4.jpg?version=1647606578"
   },
   {
@@ -1616,7 +980,7 @@
     "location": "occii",
     "price": "8",
     "shortText": "Dream Punk | Rock | New Wave",
-    "longText": "../public/texts/d52725e9-4e7f-4745-9ece-595cb99eae65.html",
+    "longText": "../public/texts/f62f70ed-1d8e-4a5d-8260-c8e588f307fb.html",
     "image": "https://occii.org/wp-content/uploads/2022/03/lowlife-occii-724x1024.jpg"
   },
   {
@@ -1628,8 +992,20 @@
     "location": "013",
     "price": 53.4,
     "shortText": "Parabellum Tour",
-    "longText": "../public/texts/8b125fe2-098f-48a3-b855-e4dd1a576b04.html",
+    "longText": "../public/texts/d9c0eae5-6633-46c0-9f80-7dfc66f998ae.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/61b1c59f3823f.jpg?version=1639040465"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-07-21T06:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.dbstudio.nl/event/dbs-buiten-jesco/",
+    "title": "dB’s Buiten > JESCO",
+    "location": "dbs",
+    "price": null,
+    "shortText": null,
+    "longText": "../public/texts/7259a8e8-8681-4427-b2a0-d3a4d5da373b.html",
+    "image": "https://www.dbstudio.nl/wp-content/uploads/2022/05/jesco-trio-2022-scaled.jpg"
   },
   {
     "doorOpenDateTime": null,
@@ -1640,7 +1016,7 @@
     "location": "dbs",
     "price": null,
     "shortText": null,
-    "longText": "../public/texts/9c08ff97-16f1-4a97-a294-8f8d81e45f6c.html",
+    "longText": "../public/texts/2d853aff-1415-474c-bbcb-7449cf959d16.html",
     "image": "https://www.dbstudio.nl/wp-content/uploads/2022/04/Punk-Rock-poster.png"
   },
   {
@@ -1652,7 +1028,7 @@
     "location": "occii",
     "price": "8",
     "shortText": "",
-    "longText": "../public/texts/fb31ef2e-dde5-402a-8e74-cd2cdeb1f88c.html",
+    "longText": "../public/texts/705f47b3-dde1-4dd8-98ed-b760ddf20daf.html",
     "image": "https://occii.org/wp-content/uploads/2022/04/277764376_5359537267413139_9197472873538758671_n.jpg"
   },
   {
@@ -1660,24 +1036,12 @@
     "startDateTime": "2022-07-23T12:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://baroeg.nl/productie/tales-from-the-punx-met-o-a-acidez-fang/",
-    "title": "Tales From The Punx met o.a. Acidez + Blatoida",
+    "title": "Tales From The Punx met o.a. Acidez + Disturbance",
     "location": "baroeg",
     "price": 20,
-    "shortText": "<p>Met o.a. Acidez, Fang, Kezus Krijst, Tukatukas, Malad.</p>\n",
-    "longText": "../public/texts/6bbfb7ea-3cd7-46ef-a0f6-ef9461358019.html",
+    "shortText": "<p>Met o.a. Acidez, Blatoidea, Kezus Krijst, Tukatukas.</p>\n",
+    "longText": "../public/texts/52072f9a-2aad-46d2-8fed-28a737b1b049.html",
     "image": "https://baroeg.nl/wp-content/uploads/2020/02/acidez-150x150.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-07-23T17:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/blood-red-shoes-23-07-2022",
-    "title": "Blood Red Shoes",
-    "location": "melkweg",
-    "price": 20.7,
-    "shortText": "Punk, Elektronica, Brits duo",
-    "longText": "../public/texts/3e86f58a-49dd-407f-a5f9-96c9b1f9f30b.html",
-    "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/28822"
   },
   {
     "doorOpenDateTime": "2022-07-25T17:00:00.000Z",
@@ -1688,7 +1052,7 @@
     "location": "013",
     "price": 55.4,
     "shortText": null,
-    "longText": "../public/texts/a791b47f-4a9d-491d-9735-515544997374.html",
+    "longText": "../public/texts/b1fc4a68-d923-4965-a187-2bde812fca55.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/6110fabcaf33c.jpg?version=1628502847"
   },
   {
@@ -1696,11 +1060,11 @@
     "startDateTime": "2022-07-26T06:30:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://www.dbstudio.nl/event/strung-out-usa-fat-wreck-makewar-usa-fat-wreck/",
-    "title": "STRUNG OUT (USA – Fat Wreck) + ANTILLECTUAL",
+    "title": "* CANCELLED* STRUNG OUT (USA – Fat Wreck) + ANTILLECTUAL",
     "location": "dbs",
     "price": null,
     "shortText": null,
-    "longText": "../public/texts/110aa4ed-77d5-4058-8b41-e55ea3f530d4.html",
+    "longText": "../public/texts/2736d262-6823-4028-8cc5-60b4ab9d3191.html",
     "image": "https://www.dbstudio.nl/wp-content/uploads/2021/11/Strung-Out-e1643041239237.jpeg"
   },
   {
@@ -1712,7 +1076,7 @@
     "location": "013",
     "price": 61,
     "shortText": null,
-    "longText": "../public/texts/e3025b44-270a-48d3-a05f-fd084897b9f7.html",
+    "longText": "../public/texts/3f296c83-80b6-4a0e-83db-7e939fb6d45d.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/5db2cdd66fa20.jpg?version=1571999224"
   },
   {
@@ -1724,7 +1088,7 @@
     "location": "baroeg",
     "price": 15,
     "shortText": "<p>Death Metal.</p>\n",
-    "longText": "../public/texts/25632be6-5f1d-44a2-95cb-b0e62746597c.html",
+    "longText": "../public/texts/da5972f7-77e9-4548-95bb-07acab524537.html",
     "image": "https://baroeg.nl/wp-content/uploads/2022/04/Picture-scaled-e1649859021615-768x290.jpg"
   },
   {
@@ -1736,7 +1100,7 @@
     "location": "013",
     "price": 61,
     "shortText": null,
-    "longText": "../public/texts/de91c8bb-737b-4304-9117-0f139a268f52.html",
+    "longText": "../public/texts/d8d14cd3-207f-4323-9b8a-1f6f9f5ee934.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/5db2cdd66fa20.jpg?version=1571999224"
   },
   {
@@ -1744,11 +1108,11 @@
     "startDateTime": "2022-07-29T17:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://baroeg.nl/productie/evoken-ophis/",
-    "title": "Evoken + Ophis",
+    "title": "Dutch Doom Days presents: Evoken + Ophis",
     "location": "baroeg",
     "price": 15,
     "shortText": "<p>Grondleggers van funeral doom.</p>\n",
-    "longText": "../public/texts/673e31e7-aad9-448a-bb23-58d20755d181.html",
+    "longText": "../public/texts/83bfc0b4-34a9-442c-a987-ed2fe6227003.html",
     "image": "https://baroeg.nl/wp-content/uploads/2022/05/evoken-96-of-154-scaled-e1652871151431-768x186.jpg"
   },
   {
@@ -1760,7 +1124,7 @@
     "location": "013",
     "price": 27.9,
     "shortText": null,
-    "longText": "../public/texts/dfd4d076-10f5-49cc-aa34-e0e9feee3ce7.html",
+    "longText": "../public/texts/edda3727-dc61-4fa7-b3a9-7690b2cdbd1b.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/61f3abaccbbbd.png?version=1643359208"
   },
   {
@@ -1772,19 +1136,31 @@
     "location": "013",
     "price": 58.4,
     "shortText": null,
-    "longText": "../public/texts/eae1f0b4-f432-4763-8724-104717613625.html",
+    "longText": "../public/texts/3c1d43aa-2fd2-4d25-abae-855f580aac19.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/5e3845c648f60.jpg?version=1580747069"
+  },
+  {
+    "doorOpenDateTime": "2022-07-30T21:30:00.000Z",
+    "startDateTime": "2022-07-30T21:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://neushoorn.nl/production/%e2%9c%af-alarm-%e2%9c%af-7/",
+    "title": "✯ ALARM! ✯",
+    "location": "neushoorn",
+    "price": 5,
+    "shortText": null,
+    "longText": "../public/texts/8a2d4bf9-542f-4a66-bcc9-1e3e7b6728f0.html",
+    "image": null
   },
   {
     "doorOpenDateTime": "2022-07-31T17:30:00.000Z",
     "startDateTime": "2022-07-31T18:30:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://poppodiumboerderij.nl/",
-    "title": "The Iron Maidens ",
+    "title": "The Iron Maidens - female Iron Maiden tribute ",
     "location": "boerderij",
     "price": "28.50",
     "shortText": "<p>Sinds 2001 zijn The Iron Maidens niet alleen &#39;s werelds enige vrouwelijke eerbetoon aan Iron Maiden, maar ook nog eens een van de meest populaire tribute bands ooit. Deze all-female heavy metal band beschikt over zowel schoonheid als muzikaal vakmanschap. Uiteraard zullen klassiekers als The Number of the Beast, Run to the Hills, Wasted Years, Can I Play with Madness, The Trooper en Fear of the Dark niet ontbreken.</p>\r\n",
-    "longText": "../public/texts/153f5cc6-6e06-4d63-b9a0-806c5650cbcf.html",
+    "longText": "../public/texts/d8f87054-5d5e-489f-b762-d2e7706433a8.html",
     "image": "https://lift3cdn.nl/image/115/784x476/the-iron-maidens.jpg"
   },
   {
@@ -1796,7 +1172,7 @@
     "location": "doornroosje",
     "price": 15.5,
     "shortText": null,
-    "longText": "../public/texts/2847149e-85af-4607-a29a-9f17e3158bd7.html",
+    "longText": "../public/texts/864aab48-7c07-4dd7-a60b-6fb863ac27a8.html",
     "image": "https://www.doornroosje.nl/app/uploads/2022/05/Taqbir1920x1080-1934x1088-350x197-c-default.png"
   },
   {
@@ -1804,11 +1180,11 @@
     "startDateTime": "2022-08-02T17:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://baroeg.nl/productie/riffsniffer-presents-wo-fat/",
-    "title": "Riffsniffer presents: Wo Fat",
+    "title": "Riffsniffer presents: Wo Fat + Cosmic Debris",
     "location": "baroeg",
     "price": 16.5,
-    "shortText": "<p>Tweede Riffsniffer presents stoneravond.</p>\n",
-    "longText": "../public/texts/32586fca-79f2-45ff-b18a-2995bdd9dbdc.html",
+    "shortText": "<p>Moddervette riffs, zompige stonergrooves en fuzzadelic psychjams </p>\n",
+    "longText": "../public/texts/f5c7ce96-ab54-4aff-9608-08f7240cd66d.html",
     "image": "https://baroeg.nl/wp-content/uploads/2022/05/WO-Fat-promo-4-BW-768x512.jpg"
   },
   {
@@ -1820,7 +1196,7 @@
     "location": "dbs",
     "price": null,
     "shortText": null,
-    "longText": "../public/texts/1dd3591e-7185-4ea5-9c13-d79f9d1f87be.html",
+    "longText": "../public/texts/45626dd7-7523-42e8-9cf8-d28f9bc8afeb.html",
     "image": "https://www.dbstudio.nl/wp-content/uploads/2022/03/Promo_Pic-2022.jpg"
   },
   {
@@ -1832,44 +1208,20 @@
     "location": "013",
     "price": 41.9,
     "shortText": null,
-    "longText": "../public/texts/f354496e-1ecb-4c79-aa1e-91bf514505c3.html",
+    "longText": "../public/texts/0354a396-2cc8-4a56-b7d7-aad655f42c6a.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/627a67ac51fb0.jpg?version=1652189136"
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-08-04T17:30:00.000Z",
+    "startDateTime": "2022-08-07T13:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/mad-caddies-04-08-2022",
-    "title": "Mad Caddies",
-    "location": "melkweg",
-    "price": "23",
-    "shortText": "Ska, Reggae, Punk, Fat Wreck Chords",
-    "longText": "../public/texts/059cde87-fcf6-46b1-a9e0-6ab9658b5017.html",
-    "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/27124"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-08-06T17:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/the-flatliners-a-wilhelm-scream-06-08-2022",
-    "title": "The Flatliners / A Wilhelm Scream",
-    "location": "melkweg",
-    "price": 18.4,
-    "shortText": "Punkrock, Skatepunk",
-    "longText": "../public/texts/7a8d4e69-9c75-48d7-beb7-22bce6c20fd8.html",
-    "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/26389"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-08-07T17:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/circle-jerks-07-08-2022-2",
-    "title": "Circle Jerks",
-    "location": "melkweg",
-    "price": "23",
-    "shortText": "Hardcore punk, Punkrocklegende, Keith Morris",
-    "longText": "../public/texts/1d12ca98-1a62-4900-8e3a-e30ffd869de6.html",
-    "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/26592"
+    "venueEventUrl": "https://baroeg.nl/productie/uada-panzerfaust/",
+    "title": "Uada + Panzerfaust",
+    "location": "baroeg",
+    "price": 19,
+    "shortText": "<p>Combinatie van de klassieke ijzige Noorse sound met epische, sfeervolle melodieën.</p>\n",
+    "longText": "../public/texts/2819d183-e788-4f5c-8c71-cd758950abbd.html",
+    "image": "https://baroeg.nl/wp-content/uploads/2022/06/UADA_2018_band-e1654606004505-768x259.jpg"
   },
   {
     "doorOpenDateTime": "2022-08-07T17:00:00.000Z",
@@ -1880,7 +1232,7 @@
     "location": "013",
     "price": 27.9,
     "shortText": null,
-    "longText": "../public/texts/04182874-76b3-4425-ab7e-6fb20ca33d0b.html",
+    "longText": "../public/texts/b3cb3ed3-2b83-4bd7-88a0-985181a90d8a.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/6267973dee0b0.jpg?version=1650956117"
   },
   {
@@ -1892,7 +1244,7 @@
     "location": "baroeg",
     "price": 16.5,
     "shortText": "<p>Een thrashgranaat waar veel andere bands jaloers op kunnen zijn.</p>\n",
-    "longText": "../public/texts/28ffd3e4-f845-48c6-8132-dcd9efdc52a5.html",
+    "longText": "../public/texts/8c4f9c5c-57be-4687-a6e3-db7f1887ef07.html",
     "image": "https://baroeg.nl/wp-content/uploads/2021/07/Nervosa-768x432.png"
   },
   {
@@ -1904,7 +1256,7 @@
     "location": "effenaar",
     "price": 17.5,
     "shortText": "",
-    "longText": "../public/texts/820f0245-61b2-4e9c-927c-4515555626d1.html",
+    "longText": "../public/texts/31d3c04a-b95c-4ee7-bb0c-a9e24bf8e3f9.html",
     "image": "https://www.effenaar.nl/uploads/event_spotlight_image/60d46faf2ab64.jpg"
   },
   {
@@ -1916,7 +1268,7 @@
     "location": "patronaat",
     "price": null,
     "shortText": "Doommetal-kwartet vertolkt succesdebuut 'Sorrow & Extinction' integraal",
-    "longText": "../public/texts/d666b339-e10f-4429-904b-6151602ac547.html",
+    "longText": "../public/texts/f7ffbe43-7db9-42ef-af24-140a341469f3.html",
     "image": "https://patronaat.nl/app/uploads/2022/02/Pallbearer-760x400.jpg"
   },
   {
@@ -1928,8 +1280,32 @@
     "location": "patronaat",
     "price": null,
     "shortText": "Bepalende postrock-band voor het eerst in 5 jaar weer in Nederland",
-    "longText": "../public/texts/7720fb93-9d11-44b5-8bb1-2e4ccbdb5972.html",
+    "longText": "../public/texts/4bda9b19-bf85-4bce-9db3-1cd55ed1e140.html",
     "image": "https://patronaat.nl/app/uploads/2021/09/Maybeshewill-Landscape_web-360x360.jpg"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-08-13T05:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.dbstudio.nl/event/adversary-release-show-met-dagger-threat-d-voidcrawler-swell/",
+    "title": "ADVERSARY release show met DAGGER THREAT (D) + VOIDCRAWLER + SWELL",
+    "location": "dbs",
+    "price": null,
+    "shortText": null,
+    "longText": "../public/texts/eae64790-137a-4056-9e21-992e2368d284.html",
+    "image": "https://www.dbstudio.nl/wp-content/uploads/2022/06/adversary.jpeg"
+  },
+  {
+    "doorOpenDateTime": "2022-08-15T16:30:00.000Z",
+    "startDateTime": "2022-08-15T17:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://patronaat.nl/event/suffocation-rivers-of-nihil-humanitys-last-breath-frontierer-15-08-22/",
+    "title": "Suffocation + Rivers Of Nihil + Humanity’s Last Breath + Frontierer",
+    "location": "patronaat",
+    "price": null,
+    "shortText": "Bloedstollend death metal package",
+    "longText": "../public/texts/e0e26c4c-83c6-472f-a6d6-1ef98e597169.html",
+    "image": "https://patronaat.nl/app/uploads/2022/05/Suffocation-1-360x360.jpg"
   },
   {
     "doorOpenDateTime": "2022-08-16T17:00:00.000Z",
@@ -1940,7 +1316,7 @@
     "location": "013",
     "price": 29.4,
     "shortText": null,
-    "longText": "../public/texts/649f3498-1bf0-4c15-b618-f5cdc14ba898.html",
+    "longText": "../public/texts/416de097-9ea2-4d68-bdbe-c6c04d231523.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/60815773cfc44.jpg?version=1619089404"
   },
   {
@@ -1948,11 +1324,11 @@
     "startDateTime": "2022-08-17T17:30:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://patronaat.nl/event/ty-segall-freedom-band-locatie-rapa-nui-17-08-22/",
-    "title": "Ty Segall & Freedom Band • Rapa Nui",
+    "title": "Ty Segall & Freedom Band + Meatbodies • Rapa Nui",
     "location": "patronaat",
     "price": null,
-    "shortText": "Ty Segall presenteert zijn nieuwe album Harmonizer tijdens exclusieve zomershow op het strand!",
-    "longText": "../public/texts/0b1b4af4-3023-4a68-8716-53153722c8af.html",
+    "shortText": "Ook de knallende gitaren van Californische rockband Meatbodies komen naar het strand!",
+    "longText": "../public/texts/68a3c29a-6887-47ae-89f1-c6c0fb77c4cd.html",
     "image": "https://patronaat.nl/app/uploads/2022/02/Harmonizer-Promo-06-by-Denee-Segall-360x360.jpg"
   },
   {
@@ -1963,8 +1339,8 @@
     "title": "Pink Siifu & Negro 6′!",
     "location": "doornroosje",
     "price": 14.5,
-    "shortText": "Net bevestigd",
-    "longText": "../public/texts/fb42d25e-b917-4620-9349-f92ba760ef29.html",
+    "shortText": null,
+    "longText": "../public/texts/b93e523f-79ca-4121-8146-79e09d508085.html",
     "image": "https://www.doornroosje.nl/app/uploads/2022/05/20220817-Pink-Siifu-350x197-c-default.jpg"
   },
   {
@@ -1976,7 +1352,7 @@
     "location": "dbs",
     "price": null,
     "shortText": null,
-    "longText": "../public/texts/f903f0de-09f7-48b0-a873-8c50b72ea150.html",
+    "longText": "../public/texts/fffc3aef-6d14-4e9f-aa5b-5763acfa74bf.html",
     "image": "https://www.dbstudio.nl/wp-content/uploads/2022/03/maxresdefault.jpg"
   },
   {
@@ -1988,7 +1364,7 @@
     "location": "baroeg",
     "price": 20,
     "shortText": "<p>This Shit Will Fuck You Up!</p>\n",
-    "longText": "../public/texts/a6b2d511-f57a-45ef-ad94-cd76964ab424.html",
+    "longText": "../public/texts/aac60e1f-c8fb-44b9-a07f-19a3267d43f3.html",
     "image": "https://baroeg.nl/wp-content/uploads/2020/12/BandPicMain-scaled-e1608219159819-768x217.jpg"
   },
   {
@@ -2002,6 +1378,18 @@
     "shortText": "w/ Testament + Candlemass + Exodus and more",
     "longText": null,
     "image": null
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-08-20T17:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://baroeg.nl/productie/flipper-16/",
+    "title": "Flipper + 16",
+    "location": "baroeg",
+    "price": 19,
+    "shortText": "<p>Exclusieve NL show.</p>\n",
+    "longText": "../public/texts/716b503b-f614-4e69-9cc5-4e422b36a7ef.html",
+    "image": "https://baroeg.nl/wp-content/uploads/2022/05/Flipper-150x150.jpeg"
   },
   {
     "doorOpenDateTime": null,
@@ -2020,11 +1408,11 @@
     "startDateTime": "2022-08-21T13:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://baroeg.nl/productie/rotterdam-rocks-presents-angel-white-heat/",
-    "title": "Rotterdam Rocks presents: Angel + White Heat",
+    "title": "Rotterdam Rocks presents: Angel + Picture + White Heat",
     "location": "baroeg",
     "price": 15,
-    "shortText": "<p>Rotterdam Rocks presents: Angel + White Heat</p>\n",
-    "longText": "../public/texts/bc7813aa-5221-4ebd-a9cd-223fb48979bc.html",
+    "shortText": "<p>Rotterdam Rocks presents: Angel + Picture + White Heat</p>\n",
+    "longText": "../public/texts/6b1ddaca-a17d-421b-818a-6f8d8d79ddf4.html",
     "image": "https://baroeg.nl/wp-content/uploads/2022/03/band-pic-e1646396398193-768x201.jpg"
   },
   {
@@ -2035,21 +1423,9 @@
     "title": "The Ocean + LLNN + Playgrounded",
     "location": "baroeg",
     "price": "28",
-    "shortText": "<p>Dit concert is zónder coronatoegangsbewijs. Lees ons statement hier. The Ocean Eén van de meest opzienbarende bands die in het nieuwe millennium zijn opgericht is het Duitse The Ocean. Omdat het zestal uit Berlijn vaak met de nodige gasten werkt gebruiken ze tegenwoordig de naam The Ocean Collective. Met recht kunnen we zeggen dat we hier met een toonaangevende act in het post-metal genre te maken hebben. Met een uitgebreid oeuvre en een ruime ervaring als live band is het dan ook een eer om een band van dit formaat in Baroeg te mogen ontvangen. LLNN Het Deense LLNN heft een duidelijke link met The Ocean. De band uit Kopenhagen brengt namelijk hun albums uit op Pelagic Records. En dat label wordt gerund door The Ocean. Sinds de oprichting in 2016 zijn er drie albums uitgebracht. Hierop hoor je post-metal met invloeden uit sludge en hardcore ondersteund met vette synthesizer partijen. Daardoor ontstaat een post-apocalyptisch geluidsorgasme. Playgrounded Playgrounded is in 2007 geboren in Griekenland maar nu based in Rotterdam! Hun genre overschrijdende Electro/Heavy rock geluid wordt vergeleken met bands als Tool en Massive Attack, Deftones en Unkle maar ook met Karnivool en Trentmoller. Hun optredens tijdens hun tour met hun tweede album ‘In Time With Gravity’ zorgde voor een uitnodiging om het concert van Nine Inch Nails in de AFAS Amsterdam af te sluiten!</p>\n",
-    "longText": "../public/texts/59168f31-443b-4285-9515-bf85fec46b0c.html",
+    "shortText": "<p>Toonaangevende act in het post-metal genre.</p>\n",
+    "longText": "../public/texts/35d8141c-5d6c-4e09-b657-025365af2fdc.html",
     "image": "https://baroeg.nl/wp-content/uploads/2022/04/The-Ocean-flyer-150x150.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-08-25T17:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/boy-harsher-25-08-2022",
-    "title": "Boy Harsher",
-    "location": "melkweg",
-    "price": 20.7,
-    "shortText": "EBM, Darkwave, Postpunk, Synthpop",
-    "longText": "../public/texts/fa188ed3-5a76-49bb-aaba-4120d588b807.html",
-    "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/28841"
   },
   {
     "doorOpenDateTime": null,
@@ -2060,7 +1436,7 @@
     "location": "gebrdenobel",
     "price": 15,
     "shortText": null,
-    "longText": "../public/texts/01f2d7df-999a-4731-8f3f-7df4cc7ba300.html",
+    "longText": "../public/texts/f0efe955-6728-43e5-86d2-22cce22da7e8.html",
     "image": "https://gebrdenobel.nl/images/made/uploads/images/Blaze_Bayley_gebrdenobel_BB_fb_event_def_Tekengebied_1_1240_500_80_s_c1_c_c.jpg"
   },
   {
@@ -2072,8 +1448,20 @@
     "location": "afaslive",
     "price": 44.8,
     "shortText": null,
-    "longText": "../public/texts/0961b294-de17-4ace-b83f-19dec23451eb.html",
+    "longText": "../public/texts/531b20aa-59ae-423a-9040-c98dc887c724.html",
     "image": "https://www.afaslive.nl/files/Agenda/2021/10-oktober/_agendaitem/6944/Passenger.jpg"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-08-27T19:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://baroeg.nl/productie/the-shape-of-punk-to-come-baroeg-present-v11-ithaca-respire/",
+    "title": "The Shape Of Punk To Come &#038; Baroeg present @V11: Ithaca + Respire",
+    "location": "baroeg",
+    "price": 11,
+    "shortText": "<p>Veelzijdige metalcore en orkestrale post-hardcore.</p>\n",
+    "longText": "../public/texts/056e755b-3e07-408f-814c-6a965c933556.html",
+    "image": "https://baroeg.nl/wp-content/uploads/2022/06/Ithaca-Feb-22-Martyna-Wisniewska-kopie-768x310.jpg"
   },
   {
     "doorOpenDateTime": "2022-08-28T17:45:00.000Z",
@@ -2084,7 +1472,7 @@
     "location": "metropool",
     "price": 24,
     "shortText": null,
-    "longText": "../public/texts/64c6a500-e4d8-48f4-bd72-b355b4a791f5.html",
+    "longText": "../public/texts/a23c8c7b-f2a7-4687-ab64-10aa80810925.html",
     "image": "https://metropool.nl//media/22079/blaze-beyley-web.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=132836098690000000"
   },
   {
@@ -2092,12 +1480,24 @@
     "startDateTime": "2022-08-29T18:30:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://www.doornroosje.nl/event/imperial-triumphant-2/",
-    "title": "Imperial Triumphant",
+    "title": "Imperial Triumphant + Grey Aura",
     "location": "doornroosje",
     "price": 14.5,
     "shortText": "Soulcrusher",
-    "longText": "../public/texts/f72648db-6c9e-4290-b56b-2147b20e694e.html",
+    "longText": "../public/texts/b5961fee-99bc-4e59-8c4c-f64bb0fee90e.html",
     "image": "https://www.doornroosje.nl/app/uploads/2021/09/Imperial-Triumphant-1920x1080-1-350x197-c-default.jpg"
+  },
+  {
+    "doorOpenDateTime": "2022-09-01T03:20:00.000Z",
+    "startDateTime": "2022-09-01T03:20:30.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.doornroosje.nl/event/hexis/",
+    "title": "Hexis",
+    "location": "doornroosje",
+    "price": "13",
+    "shortText": "Soulcrusher",
+    "longText": "../public/texts/16be3ae5-c2c2-4605-9c6c-cc0b0f28dbda.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2022/05/Hexis-1934x1088-350x197-c-default.jpg"
   },
   {
     "doorOpenDateTime": null,
@@ -2108,7 +1508,7 @@
     "location": "effenaar",
     "price": 12.5,
     "shortText": "",
-    "longText": "../public/texts/9c1cb428-8054-4d44-8d67-3792063d0cf9.html",
+    "longText": "../public/texts/3df8d6c3-a8f4-4c16-9f03-dcd303747b9f.html",
     "image": "https://www.effenaar.nl/uploads/event_spotlight_image/6256ec2b35f34.jpg"
   },
   {
@@ -2120,7 +1520,7 @@
     "location": "013",
     "price": 58.4,
     "shortText": null,
-    "longText": "../public/texts/ec337ad3-e691-401b-8dbc-1165d28df2fe.html",
+    "longText": "../public/texts/0f4afde0-6cf3-47da-af3a-f94f7dfc264a.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/5e3845c648f60.jpg?version=1580747069"
   },
   {
@@ -2132,8 +1532,20 @@
     "location": "gebrdenobel",
     "price": 35,
     "shortText": null,
-    "longText": "../public/texts/dddc4e7c-74a5-453a-986e-1e6b8a94e9bf.html",
+    "longText": "../public/texts/cee97a18-415e-4c78-a05b-ff8e7f787223.html",
     "image": "https://gebrdenobel.nl/images/made/uploads/images/MEF4_1240_500_80_s_c1_c_c.jpeg"
+  },
+  {
+    "doorOpenDateTime": "2022-09-03T17:00:00.000Z",
+    "startDateTime": "2022-09-03T17:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://neushoorn.nl/production/taake-kampfar/",
+    "title": "Taake + Kampfar",
+    "location": "neushoorn",
+    "price": 20,
+    "shortText": null,
+    "longText": "../public/texts/2b8ff553-6a03-453a-a96f-5560b5a99181.html",
+    "image": null
   },
   {
     "doorOpenDateTime": "2022-09-03T17:00:00.000Z",
@@ -2144,7 +1556,7 @@
     "location": "013",
     "price": 44.4,
     "shortText": "20th Anniversary Show",
-    "longText": "../public/texts/062e7465-75b8-4659-ac8b-5a26e72f13b7.html",
+    "longText": "../public/texts/e61de25e-73c2-45cb-95f9-4085b9f188d4.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/61a7c52cabca9.jpg?version=1638385066"
   },
   {
@@ -2156,7 +1568,7 @@
     "location": "metropool",
     "price": null,
     "shortText": null,
-    "longText": "../public/texts/4285c6fb-0425-4cea-bd88-57ab40ff8bb0.html",
+    "longText": "../public/texts/09a93e9d-bb24-469b-a87b-31c20513636a.html",
     "image": "https://metropool.nl//media/24640/floorjansen-web.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=132949381280000000"
   },
   {
@@ -2168,7 +1580,7 @@
     "location": "boerderij",
     "price": "26.50",
     "shortText": "<p>Crippled Black Phoenix doet een Album Release Tour door Europa en zij doen de Boerderij aan voor een exclusieve NL show!<br />\r\nAl jaren maakt Crippled Black Phoenix, de Engelse band rondom multi-instrumentalist Justin Greaves (Iron Monkey en Electric Wizard) overdonderende muziek met een duister apocalyptisch randje. Prog- post en stonerrock waar het op het ene moment dromerig aanvoelt, het andere weer snoeihard met een psychedelische elementen. De band bestaat verder uit tekstschrijver en zangeres Belinda Kordic, piano-, trompet- &amp; synthspeler Helen Stanley, gitarist Andy Taylor en zanger/tekstschrijver Joel Segerstedt.</p>\r\n",
-    "longText": "../public/texts/0015014f-1744-4bc4-81ea-428db836790b.html",
+    "longText": "../public/texts/4d2bc5c6-618a-440f-87b3-52db5e2e0e7a.html",
     "image": "https://lift3cdn.nl/image/115/784x476/crippled-black-phoenix_1.jpg"
   },
   {
@@ -2180,7 +1592,7 @@
     "location": "dbs",
     "price": null,
     "shortText": null,
-    "longText": "../public/texts/be66f9e3-127e-4494-848e-8a64af334a44.html",
+    "longText": "../public/texts/3e34131d-3453-45dd-968c-fb4d3d8f9765.html",
     "image": "https://www.dbstudio.nl/wp-content/uploads/2022/02/kjeld_blackmetal_decibel_2021-820x547-1.jpeg"
   },
   {
@@ -2191,8 +1603,8 @@
     "title": "Baroeg Open Air 2022",
     "location": "baroeg",
     "price": 9.99,
-    "shortText": "<p>Napalm Death + VNV Nation + Hardcore Superstar + Atari Teenage Riot + Thanatos + Zardonic+Fickle 6 present Takeover + Freedom Call  + Suicide Commando + Distant + Het Gezelschap + The Essence + The Sweet Release Of Dead</p>\n",
-    "longText": "../public/texts/392cdb41-e1ce-4c0f-bd8a-e3e382994d5e.html",
+    "shortText": "<p>Napalm Death + VNV Nation + Hardcore Superstar + Atari Teenage Riot + Thanatos + Zardonic+Fickle 6 present Takeover + Freedom Call  + Suicide Commando + Distant + Het Gezelschap + The Essence + The Sweet Release Of Dead + Nephylim + Neroth + SubRockers + Kalaallit Nunaat + Menacer + Mayleaf + Sterf.</p>\n",
+    "longText": "../public/texts/2560ddb7-056a-4ee0-a76d-eab9d5f7296a.html",
     "image": "https://baroeg.nl/wp-content/uploads/2021/08/Profielfoto-kopie-768x238.jpg"
   },
   {
@@ -2204,20 +1616,8 @@
     "location": "gebrdenobel",
     "price": 19,
     "shortText": "NORTHERN ALLIANCE TOUR 2022",
-    "longText": "../public/texts/aec170d0-1d77-4223-a556-d4ffa87dced6.html",
+    "longText": "../public/texts/ed263117-67fa-4726-96b5-594fbb14bd09.html",
     "image": "https://gebrdenobel.nl/images/made/uploads/images/2022_Taake-Kampfar_1240_500_80_s_c1_c_c.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-09-11T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/blood-command-11-09-2022",
-    "title": "Blood Command",
-    "location": "melkweg",
-    "price": 14.95,
-    "shortText": "Noorse band, Hardcore punk, Deathpop",
-    "longText": "../public/texts/12458a1d-3ade-4fe3-9b3f-c86952f836c7.html",
-    "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/29099"
   },
   {
     "doorOpenDateTime": "2022-09-13T16:30:00.000Z",
@@ -2228,20 +1628,8 @@
     "location": "013",
     "price": 50.4,
     "shortText": "United Forces 2022",
-    "longText": "../public/texts/db24ba7b-dc48-483e-a893-dd2c54a40172.html",
+    "longText": "../public/texts/ca9d032f-73b5-45f4-86de-9baabe6e2354.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/605388a27c174.jpg?version=1616087241"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-09-13T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/dave-hause-and-the-mermaid-13-09-2022",
-    "title": "Dave Hause and the Mermaid",
-    "location": "melkweg",
-    "price": 19.55,
-    "shortText": "Americana, Punkrock, The Loved Ones",
-    "longText": "../public/texts/1c310a9c-911b-46be-8a7b-f94038fea2bd.html",
-    "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/28772"
   },
   {
     "doorOpenDateTime": null,
@@ -2252,7 +1640,7 @@
     "location": "bibelot",
     "price": 16.5,
     "shortText": "",
-    "longText": "../public/texts/1538e491-8819-470b-b3b9-235bdb532567.html",
+    "longText": "../public/texts/b12107db-bb7c-4b9f-a99c-df62d5df7ef7.html",
     "image": "https://bibelot.net/wp-content/uploads/2022/01/BWP-2-1400x932.jpg"
   },
   {
@@ -2264,7 +1652,7 @@
     "location": "doornroosje",
     "price": 13,
     "shortText": null,
-    "longText": "../public/texts/74338489-9621-414f-adc5-65fc103ace1d.html",
+    "longText": "../public/texts/808e9f92-192f-4e6b-8cb6-7f4c44285a80.html",
     "image": "https://www.doornroosje.nl/app/uploads/2021/08/Stake-1920x1080-1-350x197-c-default.jpg"
   },
   {
@@ -2276,8 +1664,20 @@
     "location": "dynamo",
     "price": 23.5,
     "shortText": "Support: Fractal Universe + Virtual Symmetry",
-    "longText": "../public/texts/16c7eb1e-1835-40bf-bc8c-b02983687a63.html",
+    "longText": "../public/texts/ff780016-b54a-4f85-ba4e-e018969efde1.html",
     "image": "https://www.dynamo-eindhoven.nl/wp-content/uploads/2021/09/Announcement_PromoPic-1200x1200.jpg"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-09-16T17:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://gebrdenobel.nl/programma/nacht-van-de-powerballad-am-zing-snake-electrify-meer-16-sep-2022",
+    "title": "Nacht van de Powerballad: Amæzing Snake, Electrify & meer",
+    "location": "gebrdenobel",
+    "price": 15,
+    "shortText": null,
+    "longText": "../public/texts/e72c1744-c934-4b5b-a8d9-6f2e7027edaf.html",
+    "image": "https://gebrdenobel.nl/images/made/uploads/images/AMAEZING_SNAKE_-_Bandfoto_+_logo_1240_500_80_s_c1_c_c.jpg"
   },
   {
     "doorOpenDateTime": "2022-09-16T17:30:00.000Z",
@@ -2288,8 +1688,32 @@
     "location": "boerderij",
     "price": "23.50",
     "shortText": "<p>In ABBA Rocks worden de wereldhits van het Zweedse viertal uitgevoerd tijdens een dampende en dynamische rockshow. Reken op veel muzikale vrijheid en virtuositeit, stoere zang, opzwepende gitaarsolo&#39;s en een bedwelmend lekkere Hammond sound. En t&oacute;ch blijft de herkenbaarheid van het repertoire onaangetast, met dank aan de genialiteit van de nummers van ABBA.</p>\r\n",
-    "longText": "../public/texts/2ac4da74-3296-4b6f-b774-3d70a1754087.html",
+    "longText": "../public/texts/7a944924-87a0-4890-a5f8-b258d5b38eab.html",
     "image": "https://lift3cdn.nl/image/115/784x476/abba-rocks.jpg"
+  },
+  {
+    "doorOpenDateTime": "2022-09-16T18:00:00.000Z",
+    "startDateTime": "2022-09-16T18:45:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://neushoorn.nl/production/stake/",
+    "title": "STAKE",
+    "location": "neushoorn",
+    "price": 12,
+    "shortText": null,
+    "longText": "../public/texts/42d19b70-9671-435a-b8e6-d1eb58985c85.html",
+    "image": null
+  },
+  {
+    "doorOpenDateTime": "2022-09-16T17:00:00.000Z",
+    "startDateTime": "2022-09-16T19:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://neushoorn.nl/production/nh-cafe-drunktank-x-florida-men-2/",
+    "title": "NH Café: Drunktank x Florida Men",
+    "location": "neushoorn",
+    "price": 5,
+    "shortText": null,
+    "longText": "../public/texts/c731550f-e6eb-472a-9e1f-16956b19d2a0.html",
+    "image": null
   },
   {
     "doorOpenDateTime": "2022-09-17T17:00:00.000Z",
@@ -2300,7 +1724,7 @@
     "location": "dynamo",
     "price": 16.5,
     "shortText": "Support: Youth Fountain",
-    "longText": "../public/texts/228c5caf-db92-491d-add8-5239b692229e.html",
+    "longText": "../public/texts/d4a2caac-e0d5-4fb9-bfd1-0dd0beaa6553.html",
     "image": "https://www.dynamo-eindhoven.nl/wp-content/uploads/2022/01/Cory-Wells-Promo-2022-1200x1200.jpg"
   },
   {
@@ -2312,20 +1736,8 @@
     "location": "bibelot",
     "price": 14,
     "shortText": "",
-    "longText": "../public/texts/7990384e-4e96-42ee-88be-aad8955e1726.html",
+    "longText": "../public/texts/ea8f159c-29f7-4db6-b315-da0abe77b48d.html",
     "image": "https://bibelot.net/wp-content/uploads/2022/03/OT2019-d97b.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-09-17T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/soul-glo-17-09-2022",
-    "title": "Soul Glo",
-    "location": "melkweg",
-    "price": 14.4,
-    "shortText": "Heavy, Hardcore punk",
-    "longText": "../public/texts/c0e145cb-1347-432a-ac6c-dafa75e1b60e.html",
-    "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/29271"
   },
   {
     "doorOpenDateTime": "2022-09-17T17:30:00.000Z",
@@ -2336,7 +1748,7 @@
     "location": "boerderij",
     "price": "21.50",
     "shortText": "<p>Twee Nederlandse tribute bands staan deze avond op het podium van de Boerderij. Purple Shade speelt <em>Live In The Heart Of The City </em>van Whitesnake aangevuld met Deep Purple nummers. Fan Halen brengt Van Halen in hun vroege jaren.</p>\r\n",
-    "longText": "../public/texts/9f1a8010-1065-4943-b8be-fb92e7997d43.html",
+    "longText": "../public/texts/8d1b0f34-405b-4388-bb37-2db28b386b73.html",
     "image": "https://lift3cdn.nl/image/115/784x476/purple-shade-en-fan-halen_1.jpg"
   },
   {
@@ -2348,20 +1760,8 @@
     "location": "metropool",
     "price": 17.5,
     "shortText": null,
-    "longText": "../public/texts/9d25e859-e435-4cd4-b5cd-754fe0da496c.html",
+    "longText": "../public/texts/459485f7-b428-4cdc-96f7-7c7371b16d5f.html",
     "image": "https://metropool.nl//media/22750/bokassa_web.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=132888820970000000"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-09-19T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/IST-IST-19-09-2022",
-    "title": "IST IST",
-    "location": "melkweg",
-    "price": 16.1,
-    "shortText": "Post-punk, Sinister, Manchester",
-    "longText": "../public/texts/239f6aa3-083b-4b8b-a551-40681416ce4f.html",
-    "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/28928"
   },
   {
     "doorOpenDateTime": "2022-09-20T17:00:00.000Z",
@@ -2372,7 +1772,7 @@
     "location": "013",
     "price": 22.9,
     "shortText": "Sick and Dangerous Tour 2022",
-    "longText": "../public/texts/20f406e9-c206-4284-acf5-c09da3f163e9.html",
+    "longText": "../public/texts/977af2a1-b865-49a7-9fc9-41d120b4d4d2.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/61a0e0fa55292.jpg?version=1637933363"
   },
   {
@@ -2380,11 +1780,11 @@
     "startDateTime": "2022-09-20T19:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://baroeg.nl/productie/nieuwe-datum-black-orchid-empire-palmist-v11/",
-    "title": "Black Orchid Empire + Palmist (locatie: V11)",
+    "title": "Black Orchid Empire + Giant Walker (locatie: V11)",
     "location": "baroeg",
     "price": 10,
     "shortText": "<p>Submit Fest, The Shape Of Punk To Come &#038; Baroeg present.</p>\n",
-    "longText": "../public/texts/7c837006-5d71-40de-99e2-194cd07070ce.html",
+    "longText": "../public/texts/9a9ba701-0de2-40c1-a158-8a3f48d61c2b.html",
     "image": "https://baroeg.nl/wp-content/uploads/2020/05/2020-02-BOE-Profile-Pic-768x512.jpg"
   },
   {
@@ -2396,20 +1796,8 @@
     "location": "baroeg",
     "price": 16.5,
     "shortText": "<p>Sfeervolle black metal met waanzinnig mooie melodieën.</p>\n",
-    "longText": "../public/texts/837a9172-f6a2-44cc-a73b-b5b6a0a8985e.html",
+    "longText": "../public/texts/61e791cc-709c-4cda-96e2-f6f889da9af0.html",
     "image": "https://baroeg.nl/wp-content/uploads/2021/09/Audn_Daria_Endresen_building-768x481.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-09-22T17:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://gebrdenobel.nl/programma/akhlys-supports-22-sep-2022",
-    "title": "Akhlys + supports",
-    "location": "gebrdenobel",
-    "price": 22.5,
-    "shortText": null,
-    "longText": "../public/texts/c75b2682-304d-40b0-8d45-066940b1a431.html",
-    "image": "https://gebrdenobel.nl/images/made/uploads/images/Akhlys_liggend_1240_500_80_s_c1_c_c.jpg"
   },
   {
     "doorOpenDateTime": null,
@@ -2420,7 +1808,7 @@
     "location": "baroeg",
     "price": 19,
     "shortText": "<p>Een van Ruslands beste exportproducten op muzikaal gebied.</p>\n",
-    "longText": "../public/texts/137267fd-dbe2-4088-b946-d668370a0668.html",
+    "longText": "../public/texts/2efcbb88-dd79-4a69-acfb-9fbe5def7e20.html",
     "image": "https://baroeg.nl/wp-content/uploads/2021/11/280947676_5536188623082250_2657855784158928000_n-150x150.jpeg"
   },
   {
@@ -2432,20 +1820,20 @@
     "location": "afaslive",
     "price": 50.4,
     "shortText": null,
-    "longText": "../public/texts/750f2b2e-3877-4942-b0f7-d131552a06ec.html",
+    "longText": "../public/texts/bde095a9-c132-4a61-baf5-f5878f17488f.html",
     "image": "https://www.afaslive.nl/files/Agenda/2022/09-september/_agendaitem/Parkway-Drive.jpg"
   },
   {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-09-23T17:00:00.000Z",
+    "doorOpenDateTime": "2022-09-23T18:00:00.000Z",
+    "startDateTime": "2022-09-23T18:45:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/shortparis-23-09-2022",
-    "title": "Shortparis",
-    "location": "melkweg",
-    "price": 17.25,
-    "shortText": "Artpunk, Experimenteel, Darkwave",
-    "longText": "../public/texts/918649f2-320c-4aff-b436-4da9768db1cd.html",
-    "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/26995"
+    "venueEventUrl": "https://neushoorn.nl/production/audn-and-oceans/",
+    "title": "Auðn + …And Oceans",
+    "location": "neushoorn",
+    "price": 14,
+    "shortText": null,
+    "longText": "../public/texts/7b71f9d3-dba5-481e-a961-379d7f0e1f65.html",
+    "image": null
   },
   {
     "doorOpenDateTime": "2022-09-23T18:30:00.000Z",
@@ -2456,7 +1844,7 @@
     "location": "metropool",
     "price": 24,
     "shortText": null,
-    "longText": "../public/texts/e1d36d89-de30-4004-a80e-81a8f1604c3d.html",
+    "longText": "../public/texts/5aaba211-2514-405d-a21f-7c9cfee6e951.html",
     "image": "https://metropool.nl//media/20579/freedomcall.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=132836104130000000"
   },
   {
@@ -2468,20 +1856,8 @@
     "location": "doornroosje",
     "price": 17.5,
     "shortText": "Soulcrusher",
-    "longText": "../public/texts/dfb54476-83ee-4a01-8aec-fa090b0bd21a.html",
+    "longText": "../public/texts/80350ad8-8df1-4b9a-95ab-8d0f8baba9d4.html",
     "image": "https://www.doornroosje.nl/app/uploads/2021/09/Audn-1920x1080-1-350x197-c-default.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-09-24T17:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/new-model-army-24-09-2022",
-    "title": "New Model Army",
-    "location": "melkweg",
-    "price": 28.75,
-    "shortText": "Postpunk, Folk, Engeland, 40-jarig jubileum",
-    "longText": "../public/texts/49674f59-f57d-4f33-b9d3-f00cb75f5a57.html",
-    "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/27133"
   },
   {
     "doorOpenDateTime": null,
@@ -2492,20 +1868,20 @@
     "location": "gebrdenobel",
     "price": 20,
     "shortText": "+ special guests: FRACTAL UNIVERSE + VIRTUAL SYMMETRY",
-    "longText": "../public/texts/2628177b-6468-4a34-a00a-e27b6aedcad9.html",
+    "longText": "../public/texts/c6275946-9e1d-4c22-aa01-aa9b3d417324.html",
     "image": "https://gebrdenobel.nl/images/made/uploads/images/Evergrey_Flyer_without_dates_1240_500_80_s_c1_c_c.jpg"
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-09-25T17:30:00.000Z",
+    "startDateTime": "2022-09-25T13:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/new-model-army-25-09-2022",
-    "title": "New Model Army",
-    "location": "melkweg",
-    "price": 28.75,
-    "shortText": "Postpunk, Folk, Engeland, 40-jarig jubileum",
-    "longText": "../public/texts/21554895-3638-459f-b142-b97eb75dc7a3.html",
-    "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/27133"
+    "venueEventUrl": "https://baroeg.nl/productie/meat-puppets/",
+    "title": "Meat Puppets",
+    "location": "baroeg",
+    "price": 21.5,
+    "shortText": "<p>Kurt Cobain was ook fan!</p>\n",
+    "longText": "../public/texts/a899115b-ddf7-4b52-9647-ba7daef39d5e.html",
+    "image": "https://baroeg.nl/wp-content/uploads/2022/06/156909599_276949153796929_5068669173402747598_n-e1654080222892-768x257.jpg"
   },
   {
     "doorOpenDateTime": "2022-09-27T17:00:00.000Z",
@@ -2516,7 +1892,7 @@
     "location": "013",
     "price": 25.9,
     "shortText": null,
-    "longText": "../public/texts/de319685-889f-4eae-b650-373d870f818f.html",
+    "longText": "../public/texts/858640b1-0e54-4229-9e6a-d43230c5b7f7.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/61f9591a90aef.JPG?version=1643731263"
   },
   {
@@ -2528,7 +1904,7 @@
     "location": "afaslive",
     "price": 43.68,
     "shortText": null,
-    "longText": "../public/texts/7bfa5a32-aaba-4fae-8cf0-0c9ee8793d81.html",
+    "longText": "../public/texts/0a5777d9-24fd-480e-94aa-223e88a11ff2.html",
     "image": "https://www.afaslive.nl/files/Agenda/2020/11-november/_agendaitem/Biffy-Clyro-Website.jpg"
   },
   {
@@ -2540,7 +1916,7 @@
     "location": "doornroosje",
     "price": 24,
     "shortText": "Fortarock",
-    "longText": "../public/texts/bb286fa8-6570-49c3-8a72-d4dc0a34c726.html",
+    "longText": "../public/texts/4dfee0ee-800f-4e84-8c48-fe90039119c4.html",
     "image": "https://www.doornroosje.nl/app/uploads/2021/09/Obscura-350x197-c-default.jpg"
   },
   {
@@ -2552,7 +1928,7 @@
     "location": "patronaat",
     "price": null,
     "shortText": "Een echte moderne rockband",
-    "longText": "../public/texts/fe0767fc-53c3-45dd-94e7-8ef051fb2362.html",
+    "longText": "../public/texts/f3ef9887-6ba0-4860-9f0e-27f9170fd879.html",
     "image": "https://patronaat.nl/app/uploads/2021/09/02_Moon_Shot_PROMO-760x400.jpg"
   },
   {
@@ -2564,7 +1940,7 @@
     "location": "baroeg",
     "price": 19,
     "shortText": "<p>Sathanas In Gloriam presents: Djevel + Helleruin.</p>\n",
-    "longText": "../public/texts/3de0695b-1e39-4dd5-8695-952b3c68fa6f.html",
+    "longText": "../public/texts/26cdaab7-ee8c-478a-a77b-e38204ef5d85.html",
     "image": "https://baroeg.nl/wp-content/uploads/2021/12/Djevel-foto-door-Maarten-768x353.jpeg"
   },
   {
@@ -2572,12 +1948,12 @@
     "startDateTime": "2022-09-29T17:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://metropool.nl/agenda/visions-of-atlantis/",
-    "title": "Visions of Atlantis",
+    "title": "Visions of Atlantis + Xandria",
     "location": "metropool",
     "price": 29.5,
     "shortText": null,
-    "longText": "../public/texts/a782baee-4da2-474e-8777-dc1411d79158.html",
-    "image": "https://metropool.nl//media/18960/visions-web.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=132301271800000000"
+    "longText": "../public/texts/0d038d77-1b85-4bd8-85cf-305c802879b9.html",
+    "image": "https://metropool.nl//media/25550/visions-web.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=132978801710000000"
   },
   {
     "doorOpenDateTime": "2022-09-29T17:00:00.000Z",
@@ -2588,7 +1964,7 @@
     "location": "013",
     "price": 36.4,
     "shortText": null,
-    "longText": "../public/texts/cccfb417-13f0-4332-9cd0-e0b688860897.html",
+    "longText": "../public/texts/4963ef3b-9abc-4099-a0ac-f3e0cd36c2db.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/6204d6774aa0a.jpg?version=1644484248"
   },
   {
@@ -2600,31 +1976,19 @@
     "location": "afaslive",
     "price": 39.2,
     "shortText": null,
-    "longText": "../public/texts/b80ea7f9-aff5-4544-96c9-1114187aaf8c.html",
+    "longText": "../public/texts/4463be37-070e-4723-b0de-78f1d11ce66d.html",
     "image": "https://www.afaslive.nl/files/Agenda/2022/01-januari/_agendaitem/KALEO.jpg"
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-09-29T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/baby-strange-29-09-2022",
-    "title": "Baby Strange",
-    "location": "melkweg",
-    "price": 13.25,
-    "shortText": "Indierock met een vleugje poppunk",
-    "longText": "../public/texts/fdddbf78-9031-4e62-a84f-fcc0f4764b24.html",
-    "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/28580"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-09-30T13:00:00.000Z",
+    "startDateTime": "2022-09-30T17:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://baroeg.nl/productie/kingfisher-sky-ann-my-guard/",
     "title": "Kingfisher Sky + Ann My Guard",
     "location": "baroeg",
     "price": 12,
     "shortText": "<p>Een portie fantastische progressieve, symfonische rock waarin je diverse invloeden terug hoort.</p>\n",
-    "longText": "../public/texts/8c120e83-dd28-4a5e-b824-ce7fdd413f02.html",
+    "longText": "../public/texts/76ac3333-53dd-48c7-9433-6d94ecd96478.html",
     "image": "https://baroeg.nl/wp-content/uploads/2021/03/Kingfisher-sky-e1643201632511-768x318.jpeg"
   },
   {
@@ -2636,7 +2000,7 @@
     "location": "013",
     "price": 18.9,
     "shortText": null,
-    "longText": "../public/texts/64597fa7-eb97-46d9-a5c0-ebca55429857.html",
+    "longText": "../public/texts/04044097-22fa-4626-8c65-1675ac083135.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/61f806bfd753d.jpg?version=1643644654"
   },
   {
@@ -2648,7 +2012,7 @@
     "location": "patronaat",
     "price": null,
     "shortText": "Het nieuwste vehikel van een black metal-icoon",
-    "longText": "../public/texts/d0cd068c-cba8-4d1a-a30b-eb173a685505.html",
+    "longText": "../public/texts/e884c135-89cd-4ed5-8d7c-9756eaa44534.html",
     "image": "https://patronaat.nl/app/uploads/2021/12/GaahlsWYRD-360x360.jpg"
   },
   {
@@ -2660,7 +2024,7 @@
     "location": "afaslive",
     "price": 39.2,
     "shortText": null,
-    "longText": "../public/texts/e4edd226-e117-44e6-9ced-a6209659de82.html",
+    "longText": "../public/texts/a3e503ad-bba6-4b07-852a-e2ab1bea5fd9.html",
     "image": "https://www.afaslive.nl/files/Agenda/2022/09-september/_agendaitem/Years-Years.jpg"
   },
   {
@@ -2672,7 +2036,7 @@
     "location": "boerderij",
     "price": "25.50",
     "shortText": "<p>Soen voegt een bijzondere show toe; de enige acoustische show in Europa. Zij sluiten hun Europese tour nu dus af met een speciaal Soen weekend in de Boerderij!</p>\r\n",
-    "longText": "../public/texts/7512821e-b1ea-4946-8bd1-e8f0a8155676.html",
+    "longText": "../public/texts/df50ee8f-3946-4b55-9a81-e7618f90f41c.html",
     "image": "https://lift3cdn.nl/image/115/784x476/soen-acoustic-web.jpg"
   },
   {
@@ -2684,7 +2048,7 @@
     "location": "baroeg",
     "price": 9,
     "shortText": "<p>Een hardcore punkkabaalbacchanaal. &#8216;100 jaar Jeroen &#038; Klaas&#8217; </p>\n",
-    "longText": "../public/texts/0b33f92b-07d4-45e8-af96-85f9732d7a6e.html",
+    "longText": "../public/texts/37b79f72-8e5a-4ba2-a3de-07f1d2c0aef8.html",
     "image": "https://baroeg.nl/wp-content/uploads/2021/09/Die-Nakse-Bananen-768x512.jpg"
   },
   {
@@ -2695,9 +2059,9 @@
     "title": "Visions of Atlantis + Xandria",
     "location": "013",
     "price": 16.9,
-    "shortText": null,
-    "longText": "../public/texts/d277e014-cf5d-47cc-afb3-09854c40dda3.html",
-    "image": "https://www.013.nl/uploads/cache/event_main_desktop/6234658f5230e.jpg?version=1647601051"
+    "shortText": "Symphonic Metal Nights",
+    "longText": "../public/texts/f52e0346-5121-45bf-b8c0-78e81c11e5b1.html",
+    "image": "https://www.013.nl/uploads/cache/event_main_desktop/628c89db037e8.jpg?version=1653377985"
   },
   {
     "doorOpenDateTime": "2022-10-01T17:00:00.000Z",
@@ -2708,20 +2072,8 @@
     "location": "boerderij",
     "price": "25.50",
     "shortText": "<p>Soen is een prog-metal supergroep met voormalige leden van Death, Opeth en Willowtree. Drummer Martin Lopez (ex-Opeth) omschrijft hun muziek als melodisch, heavy en complex. De band wordt vergeleken met de stijl van Tool en Pink Floyd maar Soen heeft bovenal een eigen spannend geluid.</p>\r\n",
-    "longText": "../public/texts/2d8fb435-e939-41f9-8df6-640fb5678d90.html",
+    "longText": "../public/texts/4bd5d1d5-3dbe-4adc-9afe-1d3aa78869d9.html",
     "image": "https://lift3cdn.nl/image/115/784x476/soen-1.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-10-01T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/vola-01-10-2022",
-    "title": "Vola",
-    "location": "melkweg",
-    "price": 18.4,
-    "shortText": "Prog, Metal, Djent, Catchy, Deens-Zweeds",
-    "longText": "../public/texts/d7835f3d-e7e1-4ed4-bf1a-a2b44f0081bc.html",
-    "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/28881"
   },
   {
     "doorOpenDateTime": null,
@@ -2732,7 +2084,7 @@
     "location": "effenaar",
     "price": 25,
     "shortText": "",
-    "longText": "../public/texts/d699fc9a-d795-4f0e-929a-8e905846f7a9.html",
+    "longText": "../public/texts/a6547e33-40c5-47e2-b6c2-29461f61aa2a.html",
     "image": "https://www.effenaar.nl/uploads/event_spotlight_image/611657ca7f973.jpg"
   },
   {
@@ -2744,7 +2096,7 @@
     "location": "afaslive",
     "price": 60.48,
     "shortText": null,
-    "longText": "../public/texts/67b980bb-f18e-42c4-a45f-684fc897acb5.html",
+    "longText": "../public/texts/bf881679-a306-4843-bb75-2a76ce0fefea.html",
     "image": "https://www.afaslive.nl/files/Agenda/2022/10-oktober/_agendaitem/Machine-Head-Amon-Amarth.jpg"
   },
   {
@@ -2756,7 +2108,7 @@
     "location": "013",
     "price": 43.4,
     "shortText": null,
-    "longText": "../public/texts/d9d14b1b-1f1f-4815-9805-6bd5cfc678a5.html",
+    "longText": "../public/texts/a677f757-06f4-40c1-bff4-b8c3a7604011.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/620b69d56a75d.jpg?version=1644915295"
   },
   {
@@ -2768,7 +2120,7 @@
     "location": "afaslive",
     "price": 63.84,
     "shortText": null,
-    "longText": "../public/texts/869ebd1d-6bb3-48db-9c94-d35b9d4c1893.html",
+    "longText": "../public/texts/1a488627-117b-4157-a044-6f2da3b1a768.html",
     "image": "https://www.afaslive.nl/files/Agenda/2020/10-oktober/_agendaitem/The-Black-Crows.jpg"
   },
   {
@@ -2780,7 +2132,7 @@
     "location": "013",
     "price": 15.9,
     "shortText": null,
-    "longText": "../public/texts/718d42b3-4809-4ea6-85ff-d5ac48a735ae.html",
+    "longText": "../public/texts/b3cad8b5-6bdb-4757-b079-e33d3ccdac2b.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/6273a145c9b6e.jpg?version=1651745104"
   },
   {
@@ -2792,20 +2144,8 @@
     "location": "afaslive",
     "price": 61.6,
     "shortText": null,
-    "longText": "../public/texts/f29b3802-816c-4d5e-a67b-3bafef0d8519.html",
+    "longText": "../public/texts/6b2d3055-b8d0-4376-ab22-e88a0be7e98f.html",
     "image": "https://www.afaslive.nl/files/Agenda/2022/01-januari/_agendaitem/James-Taylor.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-10-06T16:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/hot-water-music-boysetsfire-06-10-2022",
-    "title": "Hot Water Music / Boysetsfire",
-    "location": "melkweg",
-    "price": 26.45,
-    "shortText": "Punk, Posthardcore, Iconisch",
-    "longText": "../public/texts/bbfdb2f1-da66-4200-9e63-58d97871a5de.html",
-    "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/29073"
   },
   {
     "doorOpenDateTime": null,
@@ -2815,9 +2155,21 @@
     "title": "Veneration Of The Dead preludium",
     "location": "baroeg",
     "price": 16.5,
-    "shortText": "<p>Met o.a. Countess en Coldburn</p>\n",
-    "longText": "../public/texts/c3688199-d6e6-488d-a612-d9e61c2900a2.html",
+    "shortText": "<p>Met Countess + Coldburn + Bezwering.</p>\n",
+    "longText": "../public/texts/8dd00b20-a731-4373-a30a-2e9b1ed58098.html",
     "image": "https://baroeg.nl/wp-content/uploads/2020/08/vene20-kopie-768x342.jpg"
+  },
+  {
+    "doorOpenDateTime": "2022-10-07T17:30:00.000Z",
+    "startDateTime": "2022-10-07T18:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://poppodiumboerderij.nl/",
+    "title": "Magoria – JtR1888 ",
+    "location": "boerderij",
+    "price": "28.50",
+    "shortText": "<p>Na een fantastische release show in 2019 gaat Magoria door. Pak je kans, want dit zijn exclusieve shows met een waanzinnige cast. JtR1888 is een rockopera over het verhaal van Jack the Ripper!</p>\r\n",
+    "longText": "../public/texts/dc477c70-d374-409e-b1c6-d7ae3c525af6.html",
+    "image": "https://lift3cdn.nl/image/115/784x476/magoria-jtr1888-rockopera.jpg"
   },
   {
     "doorOpenDateTime": null,
@@ -2827,8 +2179,8 @@
     "title": "Veneration Of The Dead",
     "location": "baroeg",
     "price": 21.5,
-    "shortText": "<p>Met o.a. Haat.</p>\n",
-    "longText": "../public/texts/c5162ee6-8319-49a2-abd6-bf384c269cfa.html",
+    "shortText": "<p>Met Tulus +Archgoat +Sauron +Tsatthoggua +Sammath + Haat + Asgrauw.</p>\n",
+    "longText": "../public/texts/4bbcaa8e-fe77-4f36-b4c8-bb4bd5ded0c7.html",
     "image": "https://baroeg.nl/wp-content/uploads/2020/08/vene20-kopie-768x342.jpg"
   },
   {
@@ -2840,20 +2192,8 @@
     "location": "dynamo",
     "price": 26.5,
     "shortText": "Support: Terror + Get The Shot + Dying Wish",
-    "longText": "../public/texts/c58d4c42-6cb3-41e5-89f2-3c493146f331.html",
+    "longText": "../public/texts/6aa0c59d-9336-4043-8bf7-df44ab31a489.html",
     "image": "https://www.dynamo-eindhoven.nl/wp-content/uploads/2020/12/Lionheart-digi-1200x1200.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-10-11T17:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/the-menzingers-11-10-2022",
-    "title": "The Menzingers",
-    "location": "melkweg",
-    "price": 27.6,
-    "shortText": "Punkrock, Catchy en melodieuze meezingers, Non-stop energie",
-    "longText": "../public/texts/5ae57a8c-4d7c-4431-b553-11a2f9758ebf.html",
-    "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/29037"
   },
   {
     "doorOpenDateTime": "2022-10-11T16:30:00.000Z",
@@ -2863,8 +2203,8 @@
     "title": "Anthrax",
     "location": "013",
     "price": 44,
-    "shortText": null,
-    "longText": "../public/texts/2de2718c-e6be-4fb5-ba8a-735f4c12d60c.html",
+    "shortText": "40th anniversary tour",
+    "longText": "../public/texts/d0b5de66-eb1c-4ec6-bf96-91eb1fbafd7d.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/61091ba186596.jpg?version=1627987105"
   },
   {
@@ -2876,20 +2216,8 @@
     "location": "baroeg",
     "price": 16.5,
     "shortText": "<p>Grootheid der apocalyptische metallic hardcore.</p>\n",
-    "longText": "../public/texts/5dbc18bb-09ab-45d1-804e-89e965a7d287.html",
+    "longText": "../public/texts/9263f2fe-c768-43d6-9afa-5e7d59b32033.html",
     "image": "https://baroeg.nl/wp-content/uploads/2022/05/integrity_band-e1652795852533-768x226.png"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-10-12T17:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/wage-war-12-10-2022",
-    "title": "Wage War",
-    "location": "melkweg",
-    "price": 18.4,
-    "shortText": "Metalcore, Florida",
-    "longText": "../public/texts/883d13de-fbf4-4b18-9c6a-8dac6bf074e9.html",
-    "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/29113"
   },
   {
     "doorOpenDateTime": "2022-10-12T17:00:00.000Z",
@@ -2900,7 +2228,7 @@
     "location": "013",
     "price": 34.4,
     "shortText": null,
-    "longText": "../public/texts/39d6faa5-1e80-4d7e-8752-3a395fd21877.html",
+    "longText": "../public/texts/c8112e6d-7266-4c3c-a443-75db3723ac5a.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/623db0bef2e80.jpg?version=1648210143"
   },
   {
@@ -2912,20 +2240,8 @@
     "location": "doornroosje",
     "price": 25.5,
     "shortText": "Soulcrusher",
-    "longText": "../public/texts/4da64dc1-c06f-4895-845e-d749e8df425a.html",
+    "longText": "../public/texts/89dd721d-c345-4e9c-abec-05e86105929f.html",
     "image": "https://www.doornroosje.nl/app/uploads/2021/08/Wolves-in-the-Throne-Room-1920x1080-1-350x197-c-default.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-10-13T17:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/less-than-jake-13-10-2022",
-    "title": "Less Than Jake",
-    "location": "melkweg",
-    "price": "23",
-    "shortText": "Amerikaanse ska-punk band, All My Best Friends Are Metalheads, Energieke sound",
-    "longText": "../public/texts/20a71f12-2b76-43ed-8ead-ac50533cc995.html",
-    "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/27140"
   },
   {
     "doorOpenDateTime": null,
@@ -2936,7 +2252,7 @@
     "location": "afaslive",
     "price": 44.8,
     "shortText": null,
-    "longText": "../public/texts/8b37a406-853a-46a0-96cd-8a51dbcba4fc.html",
+    "longText": "../public/texts/cf234409-7c34-4bb4-8d18-a4efd13d9e6f.html",
     "image": "https://www.afaslive.nl/files/Agenda/2022/10-oktober/_agendaitem/Kasabian.jpg"
   },
   {
@@ -2948,7 +2264,7 @@
     "location": "patronaat",
     "price": null,
     "shortText": "New Wave of British Heavy Metal legendes komen naar Haarlem!",
-    "longText": "../public/texts/1dc9c0b0-8dc3-4d26-9918-917f57ab5897.html",
+    "longText": "../public/texts/a5970124-77c3-4a1d-9f24-22563b129ac7.html",
     "image": "https://patronaat.nl/app/uploads/2022/02/Saxon-360x360.jpg"
   },
   {
@@ -2960,7 +2276,7 @@
     "location": "gebrdenobel",
     "price": 36.25,
     "shortText": "legendarische 80s live band",
-    "longText": "../public/texts/6e502f66-7ec5-4f3a-bdbd-7786759e699d.html",
+    "longText": "../public/texts/a9364c25-76a2-4661-a618-40cdbc4aa02e.html",
     "image": "https://gebrdenobel.nl/images/made/uploads/images/YT-Header_1240_500_s_c1_c_c.png"
   },
   {
@@ -2972,7 +2288,7 @@
     "location": "bibelot",
     "price": 13,
     "shortText": "",
-    "longText": "../public/texts/7aef5757-9931-411a-b3e9-7fff9b53f2d4.html",
+    "longText": "../public/texts/e4db6bc8-9f6c-47d0-b252-662d36bf471f.html",
     "image": "https://bibelot.net/wp-content/uploads/2022/04/BLEACH-bandpic-2019-1400x781.jpg"
   },
   {
@@ -2984,7 +2300,7 @@
     "location": "metropool",
     "price": 12.5,
     "shortText": null,
-    "longText": "../public/texts/8f4ad607-e792-4bb3-a7d7-5b0af98dabe2.html",
+    "longText": "../public/texts/90e65adf-9805-49f3-81b5-3b0569e7822f.html",
     "image": "https://metropool.nl//media/25330/lollipop_1920x1080_notxt1.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=132971692670000000"
   },
   {
@@ -2996,7 +2312,7 @@
     "location": "dynamo",
     "price": 17.5,
     "shortText": "Support: The BRKN + Jetlag Jenny",
-    "longText": "../public/texts/9cb15f31-2433-4e34-8f0b-a3103d51f5a5.html",
+    "longText": "../public/texts/70530f84-d707-4adf-9219-ef4b32eaff91.html",
     "image": null
   },
   {
@@ -3008,7 +2324,7 @@
     "location": "013",
     "price": 16.9,
     "shortText": null,
-    "longText": "../public/texts/146cb680-fa95-4325-a39a-172efbccdcd4.html",
+    "longText": "../public/texts/2d0576b8-88b5-4962-878a-cc0c80c1cd43.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/6086b9e480670.jpg?version=1619442444"
   },
   {
@@ -3020,7 +2336,7 @@
     "location": "013",
     "price": 25.9,
     "shortText": null,
-    "longText": "../public/texts/38cac774-4749-4490-a392-cc1374304e37.html",
+    "longText": "../public/texts/f6ca84b1-1358-4849-ae73-99405fcd1e58.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/613617a9f1e8c.jpg?version=1630935195"
   },
   {
@@ -3032,20 +2348,8 @@
     "location": "013",
     "price": 34,
     "shortText": "Last Orders tour",
-    "longText": "../public/texts/244ef148-3909-4fd0-b5ed-dc45a9bf9112.html",
+    "longText": "../public/texts/c0c77bca-7019-4a26-9690-6c02da381909.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/5df0c7ecb1eea.png?version=1576060997"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-10-17T17:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/steve-ignorant-s-crass-17-10-2022",
-    "title": "Steve Ignorant's CRASS",
-    "location": "melkweg",
-    "price": "23",
-    "shortText": "Anarcho-punk, CRASS",
-    "longText": "../public/texts/9e868f46-60ee-417a-b9e3-3edf19fa366e.html",
-    "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/26720"
   },
   {
     "doorOpenDateTime": null,
@@ -3056,7 +2360,7 @@
     "location": "dbs",
     "price": null,
     "shortText": null,
-    "longText": "../public/texts/9315abd5-3492-4abb-afaa-25c1b346dcba.html",
+    "longText": "../public/texts/e4b7b4ce-f549-4dd8-ad73-d2429b7c7cb3.html",
     "image": "https://www.dbstudio.nl/wp-content/uploads/2021/11/BCBC_new_2019_2-e1643041317651.jpeg"
   },
   {
@@ -3068,7 +2372,7 @@
     "location": "baroeg",
     "price": 14,
     "shortText": "<p>Hoe deze formatie het werk van de band uit Oost-Londen vertolkt is gewoon magistraal te noemen.</p>\n",
-    "longText": "../public/texts/8f53edac-a239-407c-b2bb-c28f23973eab.html",
+    "longText": "../public/texts/7c8a24f2-94be-4c81-aa8b-2b0185d22d16.html",
     "image": "https://baroeg.nl/wp-content/uploads/2021/06/UTI-Band-silver-e1629464012188-768x368.jpg"
   },
   {
@@ -3080,7 +2384,7 @@
     "location": "baroeg",
     "price": 19,
     "shortText": "<p> I Like Trains naar Baroeg voor een avond Wavefest presents.</p>\n",
-    "longText": "../public/texts/091dae95-78e5-45b6-8298-2ba7242fd820.html",
+    "longText": "../public/texts/4ad61935-435b-4f45-a016-3c854d893af9.html",
     "image": "https://baroeg.nl/wp-content/uploads/2021/02/trains-2-768x432.jpeg"
   },
   {
@@ -3092,8 +2396,20 @@
     "location": "gebrdenobel",
     "price": 20,
     "shortText": "Maximum Overdrive, Nouked, Headfirst, Grave Dohls, Negative Creeps & Morning View.",
-    "longText": "../public/texts/a8364494-5617-4d81-bfcf-4639809f1900.html",
+    "longText": "../public/texts/c7e65d97-6e0a-404d-a624-1ace822790b3.html",
     "image": "https://gebrdenobel.nl/images/made/uploads/images/Maxfest_2021_website_1240_500_80_s_c1_c_c.jpg"
+  },
+  {
+    "doorOpenDateTime": "2022-10-22T18:30:00.000Z",
+    "startDateTime": "2022-10-22T19:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://metropool.nl/agenda/eric-steckel/",
+    "title": "Eric Steckel",
+    "location": "metropool",
+    "price": 21.5,
+    "shortText": null,
+    "longText": "../public/texts/24c897cc-ff24-48ce-834c-b4f8c8ebc4cd.html",
+    "image": "https://metropool.nl//media/25981/ericsteckel_web_1920x1080.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=132990664260000000"
   },
   {
     "doorOpenDateTime": "2022-10-23T12:30:00.000Z",
@@ -3104,7 +2420,7 @@
     "location": "patronaat",
     "price": null,
     "shortText": "Gloednieuwe metalcore band uit Eindhoven",
-    "longText": "../public/texts/5012237c-6992-4a43-bec9-27e27020fcd9.html",
+    "longText": "../public/texts/bc4498e0-206f-4e46-9757-1f858e2a2546.html",
     "image": "https://patronaat.nl/app/uploads/2021/09/Another-Now-360x360.jpg"
   },
   {
@@ -3116,7 +2432,7 @@
     "location": "013",
     "price": 36.4,
     "shortText": null,
-    "longText": "../public/texts/27ce78fd-dda0-4787-864d-54108007261b.html",
+    "longText": "../public/texts/8d32887f-0dd5-40ec-8692-8ec7e166efa0.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/627a21b798934.jpg?version=1652171263"
   },
   {
@@ -3128,20 +2444,20 @@
     "location": "afaslive",
     "price": 67.2,
     "shortText": null,
-    "longText": "../public/texts/bfa7cf04-86c4-4b6b-9b52-fa4058f65c00.html",
+    "longText": "../public/texts/0d235996-f606-4773-b1f4-c065f60b3919.html",
     "image": "https://www.afaslive.nl/files/Agenda/2022/03-maart/_agendaitem/Counting-Crows.jpg"
   },
   {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-10-25T17:30:00.000Z",
+    "doorOpenDateTime": "2022-10-24T18:00:00.000Z",
+    "startDateTime": "2022-10-24T18:30:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/pup-25-10-2022",
-    "title": "Pup",
-    "location": "melkweg",
-    "price": 20.7,
-    "shortText": "Punk, Rise Records, Canada",
-    "longText": "../public/texts/e82e4abe-b9bb-4052-9f7e-af8757bfc37c.html",
-    "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/29002"
+    "venueEventUrl": "https://www.doornroosje.nl/event/tv-priest/",
+    "title": "TV Priest",
+    "location": "doornroosje",
+    "price": 14.5,
+    "shortText": null,
+    "longText": "../public/texts/c739ddab-cfe0-42c6-b08e-4a3a3e9ce74d.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2022/05/TV-Priest-1934x1088-350x197-c-default.jpg"
   },
   {
     "doorOpenDateTime": "2022-10-26T16:30:00.000Z",
@@ -3152,7 +2468,7 @@
     "location": "afaslive",
     "price": 61.6,
     "shortText": null,
-    "longText": "../public/texts/450e4974-3f12-4db2-9848-49ea4c53e3e3.html",
+    "longText": "../public/texts/10653e0d-a195-47e8-b9e1-0040a249fdb3.html",
     "image": "https://www.afaslive.nl/files/Agenda/2020/10-oktober/_agendaitem/Brit-Floyd.jpg"
   },
   {
@@ -3164,7 +2480,7 @@
     "location": "doornroosje",
     "price": 10,
     "shortText": null,
-    "longText": "../public/texts/8de04c62-2643-45b2-b852-94e6e3b31d46.html",
+    "longText": "../public/texts/3a93f2d1-5959-4b6e-83db-2b90bec231b4.html",
     "image": "https://www.doornroosje.nl/app/uploads/2022/03/LIFE-MOON-1920x1080-1-350x197-c-default.jpg"
   },
   {
@@ -3176,7 +2492,7 @@
     "location": "013",
     "price": 32.9,
     "shortText": "Acoustic Adventures MMXXI",
-    "longText": "../public/texts/26c257c7-d28a-4f76-9d47-4ca92ccf55d5.html",
+    "longText": "../public/texts/883822a6-cb7d-41f6-936a-06eed43d0c3e.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/6063807bccf2c.jpg?version=1617133803"
   },
   {
@@ -3188,8 +2504,20 @@
     "location": "patronaat",
     "price": null,
     "shortText": "Finse rockgoden van formaat",
-    "longText": "../public/texts/064d11c4-10d8-4498-8bd9-f00ec821c71e.html",
+    "longText": "../public/texts/82e558c4-d6d4-4716-a3e3-437a5e5a5bf1.html",
     "image": "https://patronaat.nl/app/uploads/2021/09/The-Rasmus-Jezebel-Press-1-photo-Venla-Shalin-360x360.jpg"
+  },
+  {
+    "doorOpenDateTime": "2022-10-28T17:30:00.000Z",
+    "startDateTime": "2022-10-28T18:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://poppodiumboerderij.nl/",
+    "title": "Sloper ",
+    "location": "boerderij",
+    "price": "25.00",
+    "shortText": "<p>In december 2019 deed deze band hun try-out in de Boerderij, inmiddels staan zijn in alle grote zalen en op de bekende festivals. En nu is Sloper terug in de Boerderij. Drummer Cesar Zuiderwijk (Golden Earring) en collega Mario Goossens (Triggerfinger) waren al langer onder de indruk van elkaar en ronselden de Britse gitarist-met-zijn-gouden-stem Peter Shoulder (Winterville, The Union en Silverthorne) en gitarist Fabio Canini uit Belgisch Limburg om samen dit muzikaal deconstructiebedrijf op te richten.</p>\r\n",
+    "longText": "../public/texts/9d43b856-e530-4222-b6bc-873b408ca338.html",
+    "image": "https://lift3cdn.nl/image/115/784x476/sloper-2022.jpg"
   },
   {
     "doorOpenDateTime": null,
@@ -3200,7 +2528,7 @@
     "location": "baroeg",
     "price": 33,
     "shortText": "<p>Toprock van Poolse bodem</p>\n",
-    "longText": "../public/texts/c9c0ac11-ddec-465b-a244-7c019644d3fe.html",
+    "longText": "../public/texts/2878ef6c-2c7e-43a6-8300-384936bc5496.html",
     "image": "https://baroeg.nl/wp-content/uploads/2021/11/Karol-Kacperski-zespól-ORGANEK-768x512.jpg"
   },
   {
@@ -3208,11 +2536,11 @@
     "startDateTime": "2022-10-30T14:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://baroeg.nl/productie/wavefest-ix-actors-bootblacks-buzz-kull-ultra-sunn/",
-    "title": "Wavefest IX: Actors + Bootblacks + Buzz Kull + Ultra Sunn",
+    "title": "Wavefest IX: Actors + Bootblacks + Buzz Kull + Dead Lights + Ultra Sunn",
     "location": "baroeg",
     "price": 20,
     "shortText": "<p>De negende editie van Wavefest.</p>\n",
-    "longText": "../public/texts/ab520b56-0e04-467b-94ed-ea3dd4cf380f.html",
+    "longText": "../public/texts/5d40ccfd-277b-4bca-b361-02efab67224d.html",
     "image": "https://baroeg.nl/wp-content/uploads/2022/04/ACTORS_LUMPromo_2-scaled-e1648934858558-768x269.jpg"
   },
   {
@@ -3224,7 +2552,7 @@
     "location": "013",
     "price": 39.4,
     "shortText": null,
-    "longText": "../public/texts/38f8977c-186c-4f49-a532-20448299ed7f.html",
+    "longText": "../public/texts/9396e10d-ec53-444f-b577-dfbf137599c3.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/62384e5eec85d.jpg?version=1647857429"
   },
   {
@@ -3236,7 +2564,7 @@
     "location": "013",
     "price": 17.9,
     "shortText": null,
-    "longText": "../public/texts/4f5323c3-ce4d-4b64-ad19-6ae1f28e2871.html",
+    "longText": "../public/texts/33292476-d063-4e01-ac3a-8657b535bc35.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/628397f1af58d.jpg?version=1652791336"
   },
   {
@@ -3248,32 +2576,32 @@
     "location": "afaslive",
     "price": 50.4,
     "shortText": null,
-    "longText": "../public/texts/3df3570e-bd40-49e8-afc3-c01a17551412.html",
+    "longText": "../public/texts/cc1cd2ea-e504-45ec-a9e8-b23be1715315.html",
     "image": "https://www.afaslive.nl/files/Agenda/2022/11-november/_agendaitem/Sigur-Ros.jpg"
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-11-03T18:30:00.000Z",
+    "startDateTime": "2022-11-02T19:30:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/nova-twins-03-11-2022",
-    "title": "Nova Twins",
-    "location": "melkweg",
-    "price": 13.8,
-    "shortText": "Uitgesproken punkrapduo uit Londen",
-    "longText": "../public/texts/0a249e8f-6720-4e6d-92f8-d83c7c2159c2.html",
-    "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/29319"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-11-03T19:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.effenaar.nl/agenda/11748/dedijk-0311",
-    "title": "De Dijk (extra show)",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/11767/dedijk-0211",
+    "title": "De Dijk (derde show)",
     "location": "effenaar",
     "price": 37,
     "shortText": "",
-    "longText": "../public/texts/bf73f518-6351-411c-8865-786852dbc340.html",
-    "image": "https://www.effenaar.nl/uploads/event_spotlight_image/6283855c90be2.jpg"
+    "longText": "../public/texts/c55f022e-5338-4348-82a8-95f204705b66.html",
+    "image": "https://www.effenaar.nl/uploads/event_spotlight_image/629f07113676e.jpg"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-11-03T20:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://baroeg.nl/productie/the-shape-of-punk-to-come-baroeg-presenteren-v11-frayle/",
+    "title": "The Shape Of Punk To Come &#038; Baroeg presenteren @V11: Frayle",
+    "location": "baroeg",
+    "price": "11",
+    "shortText": "<p>Zware, hypnotische doom.</p>\n",
+    "longText": "../public/texts/fb8404a4-d0a2-4664-9697-c1299987ddc9.html",
+    "image": "https://baroeg.nl/wp-content/uploads/2022/05/Picca-768x768.jpeg"
   },
   {
     "doorOpenDateTime": "2022-11-04T18:45:00.000Z",
@@ -3284,7 +2612,7 @@
     "location": "metropool",
     "price": 31,
     "shortText": null,
-    "longText": "../public/texts/be214c6f-d824-4bc5-aba4-03ca35073c4a.html",
+    "longText": "../public/texts/5145c46a-e443-4228-b72f-a8dcaa7395c8.html",
     "image": "https://metropool.nl//media/22674/rage-web.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=132846472450000000"
   },
   {
@@ -3296,7 +2624,7 @@
     "location": "baroeg",
     "price": "1",
     "shortText": "<p>Dutch Doom Days XX (Dag 1): Majestic Downfall + Mourners Lament and more TBA</p>\n",
-    "longText": "../public/texts/81b21584-894b-4c67-9de5-996d6b1c35e4.html",
+    "longText": "../public/texts/b8dbf068-0743-4be5-bd12-3d020645c58d.html",
     "image": "https://baroeg.nl/wp-content/uploads/2022/05/61349598_449501809149186_7756351877310054400_n-768x768.jpg"
   },
   {
@@ -3308,7 +2636,7 @@
     "location": "baroeg",
     "price": "2",
     "shortText": "<p>Dutch Doom Days XX (Dag 2): TBA</p>\n",
-    "longText": "../public/texts/4494a434-8c94-4728-931e-71576ae88f40.html",
+    "longText": "../public/texts/924ae306-380a-404e-ab20-d4aedefe53c9.html",
     "image": "https://baroeg.nl/wp-content/uploads/2021/03/baroeg-1024x576-1-768x432.jpg"
   },
   {
@@ -3320,7 +2648,7 @@
     "location": "013",
     "price": 32.4,
     "shortText": "DEATH BY ROCK AND ROLL TOUR 2022",
-    "longText": "../public/texts/61c8cd1d-bbbb-444f-a5b5-1a4ef3d4b9b5.html",
+    "longText": "../public/texts/085424a8-af8e-4f8f-aad1-8c4db1e0bcba.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/623845acc4722.jpg?version=1647855431"
   },
   {
@@ -3332,20 +2660,20 @@
     "location": "afaslive",
     "price": 50.4,
     "shortText": null,
-    "longText": "../public/texts/436f1c6a-c5f3-4e87-8962-32ecac0198e3.html",
+    "longText": "../public/texts/8bd50e5a-892a-4d3c-a225-3ef62ed2862f.html",
     "image": "https://www.afaslive.nl/files/Agenda/2022/11-november/_agendaitem/Lil-Nas-X.jpg"
   },
   {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-11-11T18:30:00.000Z",
+    "doorOpenDateTime": "2022-11-10T18:30:00.000Z",
+    "startDateTime": "2022-11-10T19:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/porridge-radio-11-11-2022",
-    "title": "Porridge Radio",
-    "location": "melkweg",
-    "price": 19.55,
-    "shortText": "Postpunkformatie, Artpunk, Brighton",
-    "longText": "../public/texts/162670c8-c13d-4642-bc03-533f81196620.html",
-    "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/29197"
+    "venueEventUrl": "https://poppodiumboerderij.nl/",
+    "title": "xPropaganda ",
+    "location": "boerderij",
+    "price": "35.50",
+    "shortText": "<p>Iedereen kan Propaganda&rsquo;s superhit <em>Duel </em>meezingen: &#39;The first cut won&rsquo;t hurt at all. The second only makes you wonder&#39;. Propaganda scoorde in Nederland nog een grote hit met <em>p: Machinery</em>.</p>\r\n",
+    "longText": "../public/texts/6d90bc1f-eaa9-40a2-a982-6a3bca0ea081.html",
+    "image": "https://lift3cdn.nl/image/115/784x476/xpropaganda-2.jpg"
   },
   {
     "doorOpenDateTime": "2022-11-11T18:00:00.000Z",
@@ -3356,8 +2684,8 @@
     "location": "patronaat",
     "price": null,
     "shortText": "Nederlandse supergroep rond voormalige leden van The Devil's Blood",
-    "longText": "../public/texts/7d7521b5-a785-448d-b424-4b6dd5f76ff2.html",
-    "image": "https://patronaat.nl/app/uploads/2022/05/MOLASSES_2020_MAIN_RyannevanDorst-small-1024x1024-1-760x400.jpg"
+    "longText": "../public/texts/7234cc20-9ac9-4d4f-9586-8340ebd96aa6.html",
+    "image": "https://patronaat.nl/app/uploads/2022/05/MOLASSES_2020_MAIN_RyannevanDorst-small-1024x1024-1-360x360.jpg"
   },
   {
     "doorOpenDateTime": "2022-11-12T17:30:00.000Z",
@@ -3368,8 +2696,20 @@
     "location": "doornroosje",
     "price": 25,
     "shortText": "FortaRock",
-    "longText": "../public/texts/dbb5e0a6-6a26-44c9-a658-12ed7f1e0e97.html",
+    "longText": "../public/texts/662168ba-983b-4c56-ba2d-2a62568a6bbe.html",
     "image": "https://www.doornroosje.nl/app/uploads/2021/09/Fleshgod-Apocalypse-1-1920x1080-1-350x197-c-default.jpg"
+  },
+  {
+    "doorOpenDateTime": "2022-11-12T20:00:00.000Z",
+    "startDateTime": "2022-11-12T21:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.doornroosje.nl/event/birds-in-row/",
+    "title": "Birds in Row",
+    "location": "doornroosje",
+    "price": 14.5,
+    "shortText": "Soulcrusher",
+    "longText": "../public/texts/fa64ec7d-bbcd-4627-8b25-31d9f6cd916f.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2022/05/Birds-in-Row-min-1934x1088-350x197-c-default.jpg"
   },
   {
     "doorOpenDateTime": null,
@@ -3380,7 +2720,7 @@
     "location": "gebrdenobel",
     "price": 20,
     "shortText": "+ supports: Azteca & Irony of Fate | Veleno across Europe Tour",
-    "longText": "../public/texts/088cd11b-549f-40a5-93c1-10689d5fba42.html",
+    "longText": "../public/texts/d9d7263c-73f1-47c7-8a15-840848c172a2.html",
     "image": "https://gebrdenobel.nl/images/made/uploads/images/Fleshgod_Header_1240_500_80_s_c1_c_c.jpg"
   },
   {
@@ -3392,20 +2732,8 @@
     "location": "013",
     "price": 22.9,
     "shortText": null,
-    "longText": "../public/texts/49e72646-d30f-43bf-89cc-b10dfcc5e35c.html",
+    "longText": "../public/texts/ce861c72-4cba-4467-a414-0f9dd7434369.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/5e3154f0b3c2b.jpg?version=1580291333"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-11-16T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/steve-n-seagulls-16-11-2022",
-    "title": "Steve 'N' Seagulls",
-    "location": "melkweg",
-    "price": 21.85,
-    "shortText": "Finse countryband, Bluegrassversies van bekende hardrock- en metalnummers",
-    "longText": "../public/texts/4d184286-963a-42fb-9be7-b3d843bb192f.html",
-    "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/27211"
   },
   {
     "doorOpenDateTime": "2022-11-17T18:00:00.000Z",
@@ -3416,8 +2744,20 @@
     "location": "013",
     "price": 21.9,
     "shortText": null,
-    "longText": "../public/texts/4a984dd1-ea81-402c-994d-3160b0e1b158.html",
+    "longText": "../public/texts/0e42756e-9b76-4151-b124-9a13dcf93ab6.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/5e6a3f2eb9b86.jpg?version=1584021514"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-11-17T19:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.afaslive.nl/agenda/sting-1",
+    "title": "Sting",
+    "location": "afaslive",
+    "price": 88.48,
+    "shortText": null,
+    "longText": "../public/texts/2216ad6d-1f65-4aa3-b63f-283e78b1aad4.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2022/03-maart/_agendaitem/Sting.jpg"
   },
   {
     "doorOpenDateTime": "2022-11-18T17:00:00.000Z",
@@ -3428,20 +2768,20 @@
     "location": "013",
     "price": 28.9,
     "shortText": null,
-    "longText": "../public/texts/b4e7913d-eb8e-43f5-a809-22dd147c52dc.html",
+    "longText": "../public/texts/6c3ccb4c-c48b-498f-b323-d50e4414a7fc.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/625f0424c946b.jpeg?version=1650394160"
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-11-19T18:30:00.000Z",
+    "startDateTime": "2022-11-18T18:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/guano-apes-19-11-2022",
-    "title": "Guano Apes",
-    "location": "melkweg",
-    "price": null,
-    "shortText": "Nu-metal, Alternatieve rock, Open Your Eyes",
-    "longText": "../public/texts/28032c34-19b5-4991-a77d-dc202cb82f59.html",
-    "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/27037"
+    "venueEventUrl": "https://gebrdenobel.nl/programma/speedmobile-support-dikke-dennis-de-r-ckers-18-nov-2022",
+    "title": "Speedmobile + support: Dikke Dennis & de Røckers",
+    "location": "gebrdenobel",
+    "price": 17.5,
+    "shortText": null,
+    "longText": "../public/texts/10156815-e96e-4fa0-93ae-d6d73b09a38c.html",
+    "image": "https://gebrdenobel.nl/images/made/uploads/images/Speedmobile_1240_500_80_s_c1_c_c.jpg"
   },
   {
     "doorOpenDateTime": null,
@@ -3452,7 +2792,7 @@
     "location": "baroeg",
     "price": 26,
     "shortText": "<p>Tankcsapda geeft je een kijkje in de Hongaarkeuken van harde muziek.</p>\n",
-    "longText": "../public/texts/e95f3bf5-c9ef-4f15-a03d-21f26744cae0.html",
+    "longText": "../public/texts/9eab96d0-d4ff-4ead-af8e-853b1f266426.html",
     "image": "https://baroeg.nl/wp-content/uploads/2020/10/93169866_3078476552195611_7368021885256204288_o-e1601556070779-768x365.jpg"
   },
   {
@@ -3464,7 +2804,7 @@
     "location": "baroeg",
     "price": 16.5,
     "shortText": "<p>Een dosis met rock ’n roll doorspekte grind waar de Rotterdamse riolen met spanning op wachten.</p>\n",
-    "longText": "../public/texts/9463ecd2-69ff-4017-89b0-ade3723257c8.html",
+    "longText": "../public/texts/4b6a4085-8d83-4419-b384-58f42784c317.html",
     "image": "https://baroeg.nl/wp-content/uploads/2021/01/gutalax-e1610721473193-768x219.jpg"
   },
   {
@@ -3476,7 +2816,7 @@
     "location": "patronaat",
     "price": null,
     "shortText": "Braziliaanse metallegendes",
-    "longText": "../public/texts/1aba3414-097f-4d7e-92ed-16d044c848ab.html",
+    "longText": "../public/texts/8f36ee2d-a0e9-4c52-b13d-94432e5570cd.html",
     "image": "https://patronaat.nl/app/uploads/2021/09/Sepultura-2020-360x360.jpg"
   },
   {
@@ -3488,8 +2828,32 @@
     "location": "013",
     "price": 58.4,
     "shortText": null,
-    "longText": "../public/texts/3973dfae-e7cd-412a-a632-ad38f420f000.html",
+    "longText": "../public/texts/b46c2adf-9093-4a81-a982-9b7d9d10ba5f.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/6203aa4685cfe.jpg?version=1644407548"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-11-23T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://baroeg.nl/productie/jennifer-batten/",
+    "title": "Jennifer Batten + Marcel Singor en band",
+    "location": "baroeg",
+    "price": 19,
+    "shortText": "<p>US rock, ex-guitarist Michael Jackson.</p>\n",
+    "longText": "../public/texts/f16fc8e1-2e00-49ef-a721-9d386029910c.html",
+    "image": "https://baroeg.nl/wp-content/uploads/2022/05/jennifer-batten-e1654082775646-768x336.jpg"
+  },
+  {
+    "doorOpenDateTime": "2022-11-23T18:00:00.000Z",
+    "startDateTime": "2022-11-23T19:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.013.nl/programma/7203/billy-talent",
+    "title": "Billy Talent",
+    "location": "013",
+    "price": 40.49,
+    "shortText": null,
+    "longText": "../public/texts/a8d4b979-882a-4b40-8513-766de4268f98.html",
+    "image": "https://www.013.nl/uploads/cache/event_main_desktop/628e055c20435.jpg?version=1653474695"
   },
   {
     "doorOpenDateTime": "2022-11-23T18:30:00.000Z",
@@ -3500,7 +2864,7 @@
     "location": "boerderij",
     "price": "27.00",
     "shortText": "<p>In de loop der jaren is Popa Chubby uitgegroeid tot &eacute;&eacute;n van de meest populaire karakters in de blues scene van New York. Blues rock icoon Popa Chubby, geboren als Ted Horowitz, is een imposante verschijning met zijn kaal geschoren hoofd en getatoe&euml;erde armen. Maar hij imponeert net zo hard met zijn performance!</p>\r\n",
-    "longText": "../public/texts/f7930be6-5466-438d-af4d-49d625c0007c.html",
+    "longText": "../public/texts/ebf3ac18-246f-47b0-b119-e2dfcc3396b5.html",
     "image": "https://lift3cdn.nl/image/115/784x476/popa-chubby.jpg"
   },
   {
@@ -3512,8 +2876,32 @@
     "location": "patronaat",
     "price": null,
     "shortText": "Amerikaanse rockband bekend van de hit 'Gay Bar'",
-    "longText": "../public/texts/97693e42-09f9-4f18-a11b-e048b5de995f.html",
+    "longText": "../public/texts/f4c058b5-7660-4b9c-8ed2-ec364c6e9d88.html",
     "image": "https://patronaat.nl/app/uploads/2021/09/E6-360x360.jpg"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-11-26T15:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://baroeg.nl/productie/rotterdam-rocks-tygers-of-pan-tang-lovells-blade/",
+    "title": "Rotterdam Rocks: Tygers Of Pan Tang + Lovell’s Blade",
+    "location": "baroeg",
+    "price": 19,
+    "shortText": "<p>Rotterdam Rocks in Baroeg.</p>\n",
+    "longText": "../public/texts/66d666f6-ff80-42ca-aebc-3a0dc6c1b493.html",
+    "image": "https://baroeg.nl/wp-content/uploads/2022/05/Tygers-e1653475488956-768x230.jpg"
+  },
+  {
+    "doorOpenDateTime": "2022-11-26T18:00:00.000Z",
+    "startDateTime": "2022-11-26T18:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://metropool.nl/agenda/leaves-eyes-enschede/",
+    "title": "Leaves' Eyes + Temperance",
+    "location": "metropool",
+    "price": 25,
+    "shortText": null,
+    "longText": "../public/texts/8bf648af-6204-46be-8e11-cfd599ae5696.html",
+    "image": "https://metropool.nl//media/25822/leaves_web_1920x1080.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=132984858670000000"
   },
   {
     "doorOpenDateTime": "2022-11-26T18:00:00.000Z",
@@ -3524,7 +2912,7 @@
     "location": "013",
     "price": 20.4,
     "shortText": "Born to Be Ridiculed",
-    "longText": "../public/texts/7b850071-3d07-4f78-813a-97a767472dfd.html",
+    "longText": "../public/texts/9c5c7cec-cbce-4ac7-a30a-5165539ab016.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/5e8d937c5ad13.jpg?version=1586336793"
   },
   {
@@ -3536,7 +2924,7 @@
     "location": "boerderij",
     "price": "24.50",
     "shortText": "<p>Antimatter is een melancholische, progressieve rockformatie uit Liverpool. De band onder leiding van Mick Moss draait al even mee en is niet meer weg te denken uit het Britse proglandschap. Antimatter komt voor &#39;an expansive and enhanced electric tour&#39; naar de Boerderij!</p>\r\n",
-    "longText": "../public/texts/0ca2e74d-b697-4a97-96e9-197c019b10d5.html",
+    "longText": "../public/texts/6fb8d84d-ff80-4abe-b61b-5a326179d81f.html",
     "image": "https://lift3cdn.nl/image/115/784x476/antimatter-mick-moss.jpg"
   },
   {
@@ -3548,7 +2936,7 @@
     "location": "bibelot",
     "price": 22.5,
     "shortText": "",
-    "longText": "../public/texts/ebb322f3-08b6-4250-a06f-e3127b963b3a.html",
+    "longText": "../public/texts/e692b29e-e803-459a-a2b0-586f7a7c1f34.html",
     "image": "https://bibelot.net/wp-content/uploads/2020/03/Magnapop-HR-PRESS-2018-pic-by-Pieter-Verhaeghe-1400x932.jpg"
   },
   {
@@ -3560,7 +2948,7 @@
     "location": "013",
     "price": 36.9,
     "shortText": null,
-    "longText": "../public/texts/77225810-268d-4190-8e98-31470017aefa.html",
+    "longText": "../public/texts/3d19446d-002c-4998-93a5-6fcd59897ece.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/624575f7afcf6.jpg?version=1648719666"
   },
   {
@@ -3572,7 +2960,7 @@
     "location": "metropool",
     "price": 22.5,
     "shortText": null,
-    "longText": "../public/texts/6e32b2fd-d80e-452e-be57-74231b4ee659.html",
+    "longText": "../public/texts/314a054c-6df2-418e-b173-d3f7c89922b9.html",
     "image": "https://metropool.nl//media/20142/archgoat_web_1920x1080.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=132823915880000000"
   },
   {
@@ -3584,7 +2972,7 @@
     "location": "patronaat",
     "price": null,
     "shortText": "YouTube-succes voor het eerst in Nederland!",
-    "longText": "../public/texts/3ef31b61-6089-4bf5-bc52-8d9c46f9822e.html",
+    "longText": "../public/texts/b84b4e7e-7107-4481-9733-1c474cb8def8.html",
     "image": "https://patronaat.nl/app/uploads/2022/03/Halocene-360x360.jpg"
   },
   {
@@ -3596,8 +2984,20 @@
     "location": "doornroosje",
     "price": 27.5,
     "shortText": "Fortarock",
-    "longText": "../public/texts/0e018f50-e9d4-4f29-b373-b7d10ec760d1.html",
+    "longText": "../public/texts/49c0f7bd-4d74-49e5-a757-17ab67306179.html",
     "image": "https://www.doornroosje.nl/app/uploads/2022/02/Therion-1-350x197-c-default.jpg"
+  },
+  {
+    "doorOpenDateTime": "2022-11-28T18:30:00.000Z",
+    "startDateTime": "2022-11-28T19:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.013.nl/programma/7279/a-a-williams-karin-park",
+    "title": "A.A. Williams + Karin Park",
+    "location": "013",
+    "price": 17.9,
+    "shortText": null,
+    "longText": "../public/texts/18a51b2f-3917-4a97-ac31-257aa654c350.html",
+    "image": "https://www.013.nl/uploads/cache/event_main_desktop/629e5ae93d1b4.jpg?version=1654545173"
   },
   {
     "doorOpenDateTime": "2022-11-28T18:30:00.000Z",
@@ -3608,7 +3008,7 @@
     "location": "patronaat",
     "price": null,
     "shortText": "Emorap goes poppunk",
-    "longText": "../public/texts/2d727fd8-2d72-4098-a023-60da993c74b5.html",
+    "longText": "../public/texts/2086b8f8-75a9-4000-9b0e-94480a72c95b.html",
     "image": "https://patronaat.nl/app/uploads/2021/09/nothingnowhere-360x360.jpg"
   },
   {
@@ -3620,7 +3020,7 @@
     "location": "doornroosje",
     "price": 16,
     "shortText": "Fortarock",
-    "longText": "../public/texts/66461c68-662d-48d5-b03b-c0f0b0985cec.html",
+    "longText": "../public/texts/b34638c8-cbe8-4fd5-8012-bc2a35a40fcf.html",
     "image": "https://www.doornroosje.nl/app/uploads/2022/03/Halocene-1934x1088-c-default.jpg22-350x197-c-default.jpg"
   },
   {
@@ -3632,7 +3032,7 @@
     "location": "013",
     "price": 45.4,
     "shortText": null,
-    "longText": "../public/texts/f5760e2d-86dd-4752-8639-5ab6e14362f6.html",
+    "longText": "../public/texts/80dbf120-624f-4736-b0b0-d54383376280.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/61793840aae97.png?version=1635334265"
   },
   {
@@ -3644,7 +3044,7 @@
     "location": "doornroosje",
     "price": 17.5,
     "shortText": "Fortarock",
-    "longText": "../public/texts/4bb8a3eb-c959-44a6-8c1e-7251fb6ea3d9.html",
+    "longText": "../public/texts/fd5435ce-dd17-472e-98d5-ac9900bbbab3.html",
     "image": "https://www.doornroosje.nl/app/uploads/2022/04/Bleed-From-Within-1934x1088-350x197-c-default.jpg"
   },
   {
@@ -3656,32 +3056,8 @@
     "location": "afaslive",
     "price": 45,
     "shortText": null,
-    "longText": "../public/texts/df9fc552-1467-4c7a-b12a-0cfe5ca046d0.html",
+    "longText": "../public/texts/60c8b245-64be-4ac0-9530-1b14945cc128.html",
     "image": "https://www.afaslive.nl/files/Agenda/2021/10-oktober/_agendaitem/Powerwolf.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-12-02T19:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/die-nerven-02-12-2022",
-    "title": "Die Nerven",
-    "location": "melkweg",
-    "price": 14.4,
-    "shortText": "Duitse rockband, Post-punk, Indie rock",
-    "longText": "../public/texts/a82ab182-4df7-43ce-a939-01d130a13209.html",
-    "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/29281"
-  },
-  {
-    "doorOpenDateTime": "2022-12-02T18:30:00.000Z",
-    "startDateTime": "2022-12-02T19:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://poppodiumboerderij.nl/",
-    "title": "Ultimate Eagles ",
-    "location": "boerderij",
-    "price": "29.50",
-    "shortText": "<p>Ultimate Eagles komt ongelofelijk dicht bij de kenmerkende Eagles sound. Tijdens een concert van deze band waan je je in de jaren &#39;70 in Southern California, de hoogtijdagen van The Eagles. Een optreden is &eacute;&eacute;n groot hoogtepunt, met als klap op de vuurpijl natuurlijk de megahit &quot;Hotel California&quot;.</p>\r\n",
-    "longText": "../public/texts/eaea99c5-031d-4363-ae11-10de17400010.html",
-    "image": "https://lift3cdn.nl/image/115/784x476/ultimate-eagles-2021-01.jpg"
   },
   {
     "doorOpenDateTime": null,
@@ -3692,7 +3068,7 @@
     "location": "bibelot",
     "price": 24,
     "shortText": "",
-    "longText": "../public/texts/8bf1ab06-6185-4adc-8147-4638a01ce3fc.html",
+    "longText": "../public/texts/82d78e88-206e-47fa-b3cc-f89d498c32e0.html",
     "image": "https://bibelot.net/wp-content/uploads/2022/03/Faces-of-Death-fb-banner-7dbb-1400x787.jpg"
   },
   {
@@ -3704,7 +3080,7 @@
     "location": "baroeg",
     "price": 19,
     "shortText": "<p>Nile komt terug naar Baroeg!</p>\n",
-    "longText": "../public/texts/9c6f534c-6b0c-46b5-ab29-8ae764914615.html",
+    "longText": "../public/texts/14bd1859-2b90-45c0-9a05-fe0c100c6a2e.html",
     "image": "https://baroeg.nl/wp-content/uploads/2022/03/baner-WWW-768x432.png"
   },
   {
@@ -3716,20 +3092,8 @@
     "location": "effenaar",
     "price": 22.5,
     "shortText": "",
-    "longText": "../public/texts/5f06b1b8-085b-4af6-8cfe-828f672720a8.html",
+    "longText": "../public/texts/c3e2a731-09e9-4c42-868c-9b512b721d43.html",
     "image": "https://www.effenaar.nl/uploads/event_spotlight_image/61a5e2e5caa87.jpg"
-  },
-  {
-    "doorOpenDateTime": "2022-12-09T18:30:00.000Z",
-    "startDateTime": "2022-12-09T19:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://poppodiumboerderij.nl/",
-    "title": "The 80s Show ",
-    "location": "boerderij",
-    "price": "30.50",
-    "shortText": "<p>The 80s Show - The Greatest Tribute to the Greatest Decade brengt je het beste jaren &rsquo;80 feest ter wereld! De beste zangers en muzikanten, een geweldige licht-, video- en lasershow en alleen maar herkenbare muziek uit de jaren &rsquo;80! Zing en dans mee op de hits van Frankie Goes To Hollywood, Duran Duran, Tears For Fears, Spandau Ballet, Wham, Go West, Level 42, OMD, Erasure, Elton John, David Bowie en nog veel meer.</p>\r\n",
-    "longText": "../public/texts/5664da6e-8c29-494d-a6b8-8a730a001c77.html",
-    "image": "https://lift3cdn.nl/image/115/784x476/the-80s-show-2022.jpg"
   },
   {
     "doorOpenDateTime": "2022-12-10T18:00:00.000Z",
@@ -3740,44 +3104,8 @@
     "location": "013",
     "price": 27.9,
     "shortText": null,
-    "longText": "../public/texts/993243da-f260-4b75-b5b0-77bf5eceef78.html",
+    "longText": "../public/texts/fb408093-7c3b-4549-a9c4-22ad67b717d4.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/5f313007c91b7.jpg?version=1597061475"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-12-11T17:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/finntroll-11-12-2022",
-    "title": "Finntroll",
-    "location": "melkweg",
-    "price": 28.75,
-    "shortText": "Black metal, Polka, Finland, Humppa",
-    "longText": "../public/texts/6bbbf50d-ce5e-4922-a22d-26d58cdd1087.html",
-    "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/27552"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-12-13T23:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://gebrdenobel.nl/programma/nazareth",
-    "title": "Nazareth",
-    "location": "gebrdenobel",
-    "price": 27.5,
-    "shortText": "20 Nights in 2020 Tour",
-    "longText": "../public/texts/3d7e0840-c2c4-4b68-a691-32f3f76f5d6c.html",
-    "image": "https://gebrdenobel.nl/images/made/uploads/images/Nazareth_header_1240_500_80_s_c1_c_c.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-12-15T18:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://gebrdenobel.nl/programma/anvil-12-dec-2020-1",
-    "title": "Anvil",
-    "location": "gebrdenobel",
-    "price": 17.5,
-    "shortText": "Legal at Last Tour 2022",
-    "longText": "../public/texts/4097ca0a-afc0-43e6-96f7-ac09d7158767.html",
-    "image": "https://gebrdenobel.nl/images/made/uploads/images/anvil_1240_500_80_s_c1_c_c.jpg"
   },
   {
     "doorOpenDateTime": "2022-12-17T15:00:00.000Z",
@@ -3788,7 +3116,7 @@
     "location": "metropool",
     "price": 15,
     "shortText": null,
-    "longText": "../public/texts/5abbe0b6-037e-469a-85e3-6046e402a962.html",
+    "longText": "../public/texts/c6018bb4-574a-4cff-9467-7e6ca8e58805.html",
     "image": "https://metropool.nl//media/22473/x-mass-core-web.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=132823936290000000"
   },
   {
@@ -3800,8 +3128,20 @@
     "location": "baroeg",
     "price": 14,
     "shortText": "<p>vertolkingen van pophits in een metalen jasje.</p>\n",
-    "longText": "../public/texts/5652504b-c390-4612-907f-327c0f40b39e.html",
+    "longText": "../public/texts/3b61861c-b78e-4855-bfc8-93c1aa358837.html",
     "image": "https://baroeg.nl/wp-content/uploads/2022/05/2020-Foto-1-LoRes-768x617.jpg"
+  },
+  {
+    "doorOpenDateTime": "2022-12-21T19:15:00.000Z",
+    "startDateTime": "2022-12-21T19:45:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://patronaat.nl/event/a-a-williams-karin-park-21-12-22/",
+    "title": "A.A. Williams + Karin Park",
+    "location": "patronaat",
+    "price": null,
+    "shortText": "De winter bevangen in duistere, wonderschone muziek",
+    "longText": "../public/texts/29957455-112f-4485-9b87-4af204d11765.html",
+    "image": "https://patronaat.nl/app/uploads/2022/06/SOFT-PROFILE-760x400.jpg"
   },
   {
     "doorOpenDateTime": "2023-01-08T17:30:00.000Z",
@@ -3812,8 +3152,8 @@
     "location": "013",
     "price": 18.9,
     "shortText": null,
-    "longText": "../public/texts/abc5e5fd-ba9d-41b3-8e3c-e1aa50126c23.html",
-    "image": "https://www.013.nl/uploads/cache/event_main_desktop/5f365611f3aac.jpg?version=1597396523"
+    "longText": "../public/texts/45120967-f36f-443a-9ad0-1a7d52910c5f.html",
+    "image": "https://www.013.nl/uploads/cache/event_main_desktop/5f365611f3aac.jpg?version=1597396522"
   },
   {
     "doorOpenDateTime": "2023-01-12T18:00:00.000Z",
@@ -3824,7 +3164,7 @@
     "location": "013",
     "price": 34.4,
     "shortText": null,
-    "longText": "../public/texts/947d4f84-7ffa-47e0-a079-96398ca33c0e.html",
+    "longText": "../public/texts/90fd2917-9199-448f-91db-348f3bd773d9.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/5f60b467edfcb.jpg?version=1600173166"
   },
   {
@@ -3836,7 +3176,7 @@
     "location": "effenaar",
     "price": 22.5,
     "shortText": "",
-    "longText": "../public/texts/c705e993-f2b7-44e7-b4d2-f4c04e877fcd.html",
+    "longText": "../public/texts/3999d46c-5133-4245-abed-ea5c325f44bc.html",
     "image": "https://www.effenaar.nl/uploads/event_spotlight_image/611296434151e.jpg"
   },
   {
@@ -3848,7 +3188,7 @@
     "location": "013",
     "price": 39.4,
     "shortText": null,
-    "longText": "../public/texts/66655088-51dd-4a37-83e9-560278051386.html",
+    "longText": "../public/texts/0d14cade-c95b-48ba-9cf3-163e10cc4277.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/617282e7546b1.jpg?version=1634894578"
   },
   {
@@ -3860,7 +3200,7 @@
     "location": "013",
     "price": 25.4,
     "shortText": null,
-    "longText": "../public/texts/574c2121-1ac0-4bb3-a670-3d69ea939497.html",
+    "longText": "../public/texts/d1396bfb-e9ff-4f28-87a8-6ae56f1134a4.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/5fbc10e14e362.jpg?version=1606160851"
   },
   {
@@ -3872,7 +3212,7 @@
     "location": "afaslive",
     "price": 51.52,
     "shortText": null,
-    "longText": "../public/texts/c4fc0363-f7b0-4670-96ef-cdd00d911684.html",
+    "longText": "../public/texts/2aa348bf-a3e7-4fc6-8246-0531de892a06.html",
     "image": "https://www.afaslive.nl/files/Agenda/2020/12-december/_agendaitem/Epica.jpg"
   },
   {
@@ -3884,32 +3224,20 @@
     "location": "013",
     "price": 26.9,
     "shortText": null,
-    "longText": "../public/texts/9b2ce370-7dd4-49b1-b0f8-be53bc451a97.html",
+    "longText": "../public/texts/4e37383b-518b-472d-a4e2-8ad79e07a6da.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/624bed86c1aa4.jpg?version=1649143191"
   },
   {
-    "doorOpenDateTime": null,
-    "startDateTime": "2023-02-03T23:00:00.000Z",
+    "doorOpenDateTime": "2023-02-01T17:30:00.000Z",
+    "startDateTime": "2023-02-01T18:30:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://gebrdenobel.nl/programma/harakiri-for-the-sky-1",
-    "title": "Harakiri for the Sky European Tour",
-    "location": "gebrdenobel",
-    "price": 20,
-    "shortText": "+ Gaerea + Schammasch",
-    "longText": "../public/texts/a6e0346e-0a63-4fb2-9bf5-93ace2f9d4c4.html",
-    "image": "https://gebrdenobel.nl/images/made/uploads/images/Harakiri-for-the-sky-header-Header_1240_500_s_c1_c_c.png"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2023-02-04T19:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/doctor-krapula-04-02-2023",
-    "title": "Doctor Krapula",
-    "location": "melkweg",
-    "price": 17.25,
-    "shortText": "Mestizo, Colombia, Ska, Punk, Cumbia",
-    "longText": "../public/texts/8de1dd3b-bca0-435e-a654-99f7ca3cef01.html",
-    "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/28689"
+    "venueEventUrl": "https://www.013.nl/programma/7275/bullet-for-my-valentine",
+    "title": "Bullet For My Valentine",
+    "location": "013",
+    "price": 37.4,
+    "shortText": null,
+    "longText": "../public/texts/94865150-50c9-4b45-9d48-70c91ce98c29.html",
+    "image": "https://www.013.nl/uploads/cache/event_main_desktop/62989d72bb388.jpg?version=1654169078"
   },
   {
     "doorOpenDateTime": "2023-02-09T18:00:00.000Z",
@@ -3920,7 +3248,7 @@
     "location": "dynamo",
     "price": 31.5,
     "shortText": "Plus support",
-    "longText": "../public/texts/53915147-fe1a-4e95-b5e0-0ca11fb11d77.html",
+    "longText": "../public/texts/bb5709a4-99ac-4d31-9329-ba0af932da16.html",
     "image": null
   },
   {
@@ -3932,7 +3260,7 @@
     "location": "effenaar",
     "price": 27.5,
     "shortText": "",
-    "longText": "../public/texts/c4fd8948-2bd6-4663-ae9a-97fe52d8642d.html",
+    "longText": "../public/texts/33bade91-e3d8-4839-b96e-39bfc631e254.html",
     "image": "https://www.effenaar.nl/uploads/event_spotlight_image/6278e13f33625.jpg"
   },
   {
@@ -3944,7 +3272,7 @@
     "location": "metropool",
     "price": 30,
     "shortText": null,
-    "longText": "../public/texts/c969f117-70a5-4a10-adef-60027674d28a.html",
+    "longText": "../public/texts/4cd1e43c-87e9-4e74-8cd2-04d08b6b9c44.html",
     "image": "https://metropool.nl//media/20598/smyrna-web.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=132836079750000000"
   },
   {
@@ -3956,20 +3284,8 @@
     "location": "patronaat",
     "price": null,
     "shortText": "Twee gerespecteerde grootmeesters van melancholie",
-    "longText": "../public/texts/16ad2bee-7a24-4e62-babb-7feb0c488edd.html",
+    "longText": "../public/texts/d3d3a417-ea36-4c37-b823-dc11362ff95c.html",
     "image": "https://patronaat.nl/app/uploads/2021/09/KATATONIA-scaled-e1626372244229-760x400.jpeg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2023-02-24T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://gebrdenobel.nl/programma/scott-stapp",
-    "title": "Scott Stapp",
-    "location": "gebrdenobel",
-    "price": 35,
-    "shortText": "The Survivor Tour",
-    "longText": "../public/texts/fe65fcad-59b9-441d-93cb-a64fe8ebcc40.html",
-    "image": "https://gebrdenobel.nl/images/made/uploads/images/Scott_Stapp_header_1240_500_80_s_c1_c_c.jpg"
   },
   {
     "doorOpenDateTime": "2023-02-25T18:30:00.000Z",
@@ -3980,20 +3296,8 @@
     "location": "metropool",
     "price": 27.5,
     "shortText": null,
-    "longText": "../public/texts/52a002d4-be12-4801-b1d5-af31ad8a953f.html",
+    "longText": "../public/texts/1c9fcf49-cef8-43b5-9adf-38110472e575.html",
     "image": "https://metropool.nl//media/25200/inextremo_web.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=132966732300000000"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2023-02-27T18:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://gebrdenobel.nl/programma/twelve-foot-ninja",
-    "title": "Twelve Foot Ninja",
-    "location": "gebrdenobel",
-    "price": 20,
-    "shortText": null,
-    "longText": "../public/texts/c6134e85-efea-4b36-a43f-d2ae79cc7de6.html",
-    "image": "https://gebrdenobel.nl/images/made/uploads/images/TFN_23_Ontwerp_zonder_titel_1240_500_80_s_c1_c_c.jpg"
   },
   {
     "doorOpenDateTime": "2023-03-01T07:21:00.000Z",
@@ -4004,7 +3308,7 @@
     "location": "doornroosje",
     "price": 15,
     "shortText": "Fortarock",
-    "longText": "../public/texts/c6c07643-2351-4c2b-b3f9-cd3927c6adc1.html",
+    "longText": "../public/texts/d1cda65e-4f39-4f61-a1e7-549c0d1bf877.html",
     "image": "https://www.doornroosje.nl/app/uploads/2022/02/Bloodywood-350x197-c-default.jpg"
   },
   {
@@ -4016,20 +3320,20 @@
     "location": "013",
     "price": 30.4,
     "shortText": "Tekkno Tour 2023",
-    "longText": "../public/texts/579db6c9-4bc2-47b0-abca-7d404e1e748c.html",
+    "longText": "../public/texts/45d9c87b-4a6e-44cb-86a9-599768d15533.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/62610fc38ea89.jpg?version=1650528388"
   },
   {
-    "doorOpenDateTime": null,
-    "startDateTime": "2023-03-09T19:00:00.000Z",
+    "doorOpenDateTime": "2023-03-03T18:00:00.000Z",
+    "startDateTime": "2023-03-03T19:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/bloodywood-09-03-2023",
-    "title": "Bloodywood",
-    "location": "melkweg",
-    "price": 17.25,
-    "shortText": "Folkmetal, India",
-    "longText": "../public/texts/e899c04c-1230-4eaf-94ce-484d2554475c.html",
-    "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/28605"
+    "venueEventUrl": "https://www.013.nl/programma/7277/devin-townsend",
+    "title": "Devin Townsend",
+    "location": "013",
+    "price": 36.9,
+    "shortText": null,
+    "longText": "../public/texts/2fee1883-b71d-4cb6-b574-883201105bc9.html",
+    "image": "https://www.013.nl/uploads/cache/event_main_desktop/6294a7de35418.jpg?version=1653909630"
   },
   {
     "doorOpenDateTime": "2023-03-11T18:00:00.000Z",
@@ -4040,7 +3344,7 @@
     "location": "metropool",
     "price": 28,
     "shortText": null,
-    "longText": "../public/texts/c925c892-bb93-4f40-82cf-3efebe9c77a6.html",
+    "longText": "../public/texts/8b5e6399-1fa9-4f27-ba80-52b52e6777d2.html",
     "image": "https://metropool.nl//media/21235/bloodbound_web_1920x1080.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=132836088110000000"
   },
   {
@@ -4052,32 +3356,8 @@
     "location": "baroeg",
     "price": 20,
     "shortText": "<p>Wavefest presents! </p>\n",
-    "longText": "../public/texts/cbb9c8ae-3a34-4415-bdbb-e3cc2e9ff580.html",
+    "longText": "../public/texts/3bb1b257-4f2e-41e6-b219-6d7b70132251.html",
     "image": "https://baroeg.nl/wp-content/uploads/2020/12/Big-Country-2015-colour-credit-Paul-Green-scaled-e1608633274815-768x196.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2023-03-12T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/i-prevail-12-03-2023",
-    "title": "I Prevail",
-    "location": "melkweg",
-    "price": 17.25,
-    "shortText": "Metalcore, Trauma",
-    "longText": "../public/texts/7e792037-16a7-4cb3-8ded-44fa2002aa73.html",
-    "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/25927"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2023-03-12T18:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/human-tetris-12-03-2023",
-    "title": "Human Tetris",
-    "location": "melkweg",
-    "price": 12.65,
-    "shortText": "Minimalistische post-punk uit Moskou",
-    "longText": "../public/texts/a025fe70-ddf6-49be-b130-bd109bce0ff6.html",
-    "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/27969"
   },
   {
     "doorOpenDateTime": "2023-03-12T18:00:00.000Z",
@@ -4088,7 +3368,7 @@
     "location": "013",
     "price": 23.9,
     "shortText": null,
-    "longText": "../public/texts/5c55dee1-6772-4b7f-9b28-724d51208f2d.html",
+    "longText": "../public/texts/d24bc6c5-b3d7-4bca-ac0d-effcaf05973c.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/60d1bf677e76a.jpeg?version=1624358911"
   },
   {
@@ -4100,7 +3380,7 @@
     "location": "013",
     "price": 20.9,
     "shortText": null,
-    "longText": "../public/texts/304944d3-b263-44e8-8093-5a0fc7134551.html",
+    "longText": "../public/texts/44b41342-c16c-45b5-ad15-d1462b474533.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/5e84aee077933.jpg?version=1585753912"
   },
   {
@@ -4112,7 +3392,7 @@
     "location": "doornroosje",
     "price": 32,
     "shortText": "Fortarock",
-    "longText": "../public/texts/f4a89316-4739-4822-9ee5-9548ac20dd8c.html",
+    "longText": "../public/texts/a69d468f-719c-4d7c-b534-8a028afdf198.html",
     "image": "https://www.doornroosje.nl/app/uploads/2021/09/Tarja-1-1920x1080-1-350x197-c-default.jpg"
   },
   {
@@ -4124,7 +3404,7 @@
     "location": "patronaat",
     "price": null,
     "shortText": "Finse sopraan goes metal",
-    "longText": "../public/texts/40b78bff-620f-4306-b4e5-3b214e927866.html",
+    "longText": "../public/texts/22e5c108-8ab3-4c81-b3f2-1af70a62890e.html",
     "image": "https://patronaat.nl/app/uploads/2021/09/Tarja-Turunen-760x400.jpg"
   },
   {
@@ -4136,7 +3416,7 @@
     "location": "doornroosje",
     "price": 19.5,
     "shortText": null,
-    "longText": "../public/texts/181462b7-61f1-4397-a14f-185a444e3516.html",
+    "longText": "../public/texts/3cec4be8-9d0d-42ce-8114-da50d759d91b.html",
     "image": "https://www.doornroosje.nl/app/uploads/2021/09/FUZZ-1920x1080-1-350x197-c-default.jpg"
   },
   {
@@ -4148,7 +3428,7 @@
     "location": "013",
     "price": 33.4,
     "shortText": null,
-    "longText": "../public/texts/dc45924a-6f1b-456a-9b59-19c557ac1ca5.html",
+    "longText": "../public/texts/237b0bc5-8f09-4436-8186-1097b3cdea1d.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/605de467c2e9d.jpg?version=1616766067"
   },
   {
@@ -4160,7 +3440,7 @@
     "location": "effenaar",
     "price": 11.5,
     "shortText": "",
-    "longText": "../public/texts/2e835bde-1041-4131-8589-2dfef97fd3ba.html",
+    "longText": "../public/texts/c20b0a70-10cc-41d1-99c2-3da689f9c6df.html",
     "image": "https://www.effenaar.nl/uploads/event_spotlight_image/6218e6675ce02.jpg"
   },
   {
@@ -4172,7 +3452,7 @@
     "location": "metropool",
     "price": 17.5,
     "shortText": null,
-    "longText": "../public/texts/63b177cf-6e95-4b96-8c16-6d99ac855251.html",
+    "longText": "../public/texts/84765d5d-b950-4ce1-aba0-ed46bd1aa562.html",
     "image": "https://metropool.nl//media/22074/sworn-enemy-web.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=132836103780000000"
   },
   {
@@ -4184,7 +3464,7 @@
     "location": "patronaat",
     "price": null,
     "shortText": "Een van de grootste rockbands uit het Land van de Rijzende Zon",
-    "longText": "../public/texts/c28d970e-bbf6-4551-9549-8e78b798bbd5.html",
+    "longText": "../public/texts/85dce0b2-21e8-414e-b413-7b7e69449166.html",
     "image": "https://patronaat.nl/app/uploads/2021/09/Loudness-760x400.jpg"
   },
   {
@@ -4196,7 +3476,7 @@
     "location": "afaslive",
     "price": 46.5,
     "shortText": null,
-    "longText": "../public/texts/1dfffe07-f9a3-4879-bd47-c9362b7ab210.html",
+    "longText": "../public/texts/3dc88c05-296b-4efa-9ac1-27965c452d86.html",
     "image": "https://www.afaslive.nl/files/Agenda/2022/04-april/_agendaitem/Eels.jpg"
   },
   {
@@ -4208,7 +3488,7 @@
     "location": "effenaar",
     "price": 33.5,
     "shortText": "",
-    "longText": "../public/texts/bfb77246-fe4f-4e73-bb41-76d5e05b4bdd.html",
+    "longText": "../public/texts/3e8e8e5b-ffde-4b86-a36f-ad35bd27a893.html",
     "image": "https://www.effenaar.nl/uploads/event_spotlight_image/6177d7bd5b283.jpg"
   },
   {
@@ -4220,20 +3500,8 @@
     "location": "afaslive",
     "price": 47.04,
     "shortText": null,
-    "longText": "../public/texts/b1925519-ab74-4ee2-95b7-7c126c6e25d5.html",
+    "longText": "../public/texts/cbb9400f-93a4-47bf-8e75-c8b927719a51.html",
     "image": "https://www.afaslive.nl/files/Agenda/2022/02-februari/_agendaitem/Avril-Lavigne.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2023-04-20T17:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/conception-20-04-2023",
-    "title": "Conception",
-    "location": "melkweg",
-    "price": 31.05,
-    "shortText": "Power metal, Progressieve metal",
-    "longText": "../public/texts/437856bc-c61d-4bd0-a42c-eb5a11bbff21.html",
-    "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/25773"
   },
   {
     "doorOpenDateTime": "2023-04-21T18:00:00.000Z",
@@ -4244,7 +3512,7 @@
     "location": "metropool",
     "price": 20,
     "shortText": null,
-    "longText": "../public/texts/2792dd02-4e35-428a-9bd3-1b4bd263829e.html",
+    "longText": "../public/texts/ee432d0c-06be-49df-be2e-94c39e7a0b87.html",
     "image": "https://metropool.nl//media/19673/mayan-web.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=132455095640000000"
   },
   {
@@ -4256,7 +3524,7 @@
     "location": "effenaar",
     "price": 30,
     "shortText": "",
-    "longText": "../public/texts/4aab1eaf-66f8-4be1-9a8e-1b5fe1f9fe77.html",
+    "longText": "../public/texts/a4532d3c-a3c8-4a57-a186-097fdf411b9c.html",
     "image": "https://www.effenaar.nl/uploads/event_spotlight_image/601966c0bac10.jpg"
   },
   {
@@ -4268,8 +3536,20 @@
     "location": "doornroosje",
     "price": 16.5,
     "shortText": null,
-    "longText": "../public/texts/c3350aa6-faa1-4f1c-8b4c-92ec90578a8c.html",
+    "longText": "../public/texts/2f97789b-04e1-4963-ac47-df6eac28fdbf.html",
     "image": "https://www.doornroosje.nl/app/uploads/2021/12/Promo_OtobokeBeaver-credit_Takeaki_Emori-350x197-c-default.jpg"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": null,
+    "endDateTime": null,
+    "venueEventUrl": "https://www.doornroosje.nl/event/kids-n-billies-2022/",
+    "title": "Kids ‘n’ Billies 2022",
+    "location": "doornroosje",
+    "price": 22.5,
+    "shortText": null,
+    "longText": "../public/texts/d32e5ab8-103b-48c2-9323-1ba95cb53648.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2022/03/KnB-web-scaled-350x197-c-default.jpg"
   },
   {
     "doorOpenDateTime": null,
@@ -4282,18 +3562,6 @@
     "shortText": null,
     "longText": null,
     "image": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": null,
-    "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/kids-n-billies-2022/",
-    "title": "Kids ‘n’ Billies 2022",
-    "location": "doornroosje",
-    "price": 22.5,
-    "shortText": "Laatste kaarten",
-    "longText": "../public/texts/be8eab40-c2da-49d5-8ff7-2021dc9847ed.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2022/03/KnB-web-scaled-350x197-c-default.jpg"
   },
   {
     "doorOpenDateTime": null,
@@ -4316,8 +3584,20 @@
     "location": "patronaat",
     "price": null,
     "shortText": "Patronaat’s festival voor garage, punk, rock ’n roll, trash, blues, surf, noise, beat en meer",
-    "longText": "../public/texts/5bac741d-e823-4794-ba6e-98fb240ee53c.html",
+    "longText": "../public/texts/ee52280e-444d-4126-ba99-03acc94bf32c.html",
     "image": "https://patronaat.nl/app/uploads/2022/03/kliko-2022-fb-e1646816159765-360x360.jpg"
+  },
+  {
+    "doorOpenDateTime": "2022-07-06T17:30:00.000Z",
+    "startDateTime": null,
+    "endDateTime": null,
+    "venueEventUrl": "https://patronaat.nl/event/turnstile-06-07-22/",
+    "title": "Turnstile + Chubby & The Gang",
+    "location": "patronaat",
+    "price": null,
+    "shortText": "Een van de meest vernieuwende bands in hardcore punk",
+    "longText": "../public/texts/2dd6759e-bf8d-4384-b0c0-6a949641cc28.html",
+    "image": "https://patronaat.nl/app/uploads/2021/09/Turnstile_square_press-360x360.jpg"
   },
   {
     "doorOpenDateTime": null,
@@ -4328,8 +3608,32 @@
     "location": "patronaat",
     "price": null,
     "shortText": "Het festival voor avontuurlijke en grensverleggende heavy muziek",
-    "longText": "../public/texts/d1399a9f-8a91-42f8-9202-e38abcda82cf.html",
+    "longText": "../public/texts/10699b76-0126-416f-ad6c-44d8ca27d41f.html",
     "image": "https://patronaat.nl/app/uploads/2022/04/2204-Complexity-square-360x360.png"
+  },
+  {
+    "doorOpenDateTime": "2022-10-22T17:30:00.000Z",
+    "startDateTime": null,
+    "endDateTime": null,
+    "venueEventUrl": "https://patronaat.nl/event/sloper-support-22-10-22/",
+    "title": "Sloper + support",
+    "location": "patronaat",
+    "price": null,
+    "shortText": "riffs en roffels van een muzikaal deconstructiebedrijf",
+    "longText": "../public/texts/68ffc01b-15e7-4e52-b0a5-e92d720c3bd2.html",
+    "image": "https://patronaat.nl/app/uploads/2022/05/SLOPER_3033-360x360.jpg"
+  },
+  {
+    "doorOpenDateTime": "2022-11-02T19:00:00.000Z",
+    "startDateTime": null,
+    "endDateTime": null,
+    "venueEventUrl": "https://patronaat.nl/event/frayle-02-11-22/",
+    "title": "Frayle",
+    "location": "patronaat",
+    "price": null,
+    "shortText": "Heavy Witch Doom",
+    "longText": "../public/texts/1ae1739a-5660-4799-b61e-66ba7ca0d54a.html",
+    "image": "https://patronaat.nl/app/uploads/2022/05/IMG_2671-760x400.jpg"
   },
   {
     "doorOpenDateTime": "2022-10-06T18:00:00.000Z",
@@ -4340,7 +3644,19 @@
     "location": "patronaat",
     "price": null,
     "shortText": "Alsof The Sonics of The Rolling Stones zijn opgegroeid met ska en reggae",
-    "longText": "../public/texts/ebb7e590-fe78-4665-b584-ba3f8d2751e0.html",
+    "longText": "../public/texts/9433012d-a962-44d4-80e5-619394956f4e.html",
     "image": "https://patronaat.nl/app/uploads/2021/09/17948-760x400.jpg"
+  },
+  {
+    "doorOpenDateTime": "2022-11-10T19:00:00.000Z",
+    "startDateTime": null,
+    "endDateTime": null,
+    "venueEventUrl": "https://patronaat.nl/event/birds-in-row-10-11-22/",
+    "title": "Birds in Row + The Guru Guru",
+    "location": "patronaat",
+    "price": null,
+    "shortText": "Gepresenteerd door Complexity",
+    "longText": "../public/texts/73d3df4a-1484-4d63-9ea9-b4c0acc953be.html",
+    "image": "https://patronaat.nl/app/uploads/2022/05/BIR-Promo_web-360x360.jpg"
   }
 ]

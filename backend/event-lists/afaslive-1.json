@@ -1,98 +1,38 @@
 [
   {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-05-26T18:00:00.000Z",
+    "doorOpenDateTime": "2022-08-27T16:30:00.000Z",
+    "startDateTime": "2022-08-27T18:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/jungle",
-    "title": "Jungle",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/passenger",
+    "title": "Passenger",
     "location": "afaslive",
-    "price": 43.5,
+    "price": 44.8,
     "shortText": null,
-    "longText": "../public/texts/22de4897-bb62-4440-80a1-a1e5e7bc0a55.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2022/05-mei/_agendaitem/Jungle.jpg"
-  },
-  {
-    "doorOpenDateTime": "2022-06-19T16:30:00.000Z",
-    "startDateTime": "2022-06-19T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/faith-no-more-2",
-    "title": "Faith No More",
-    "location": "afaslive",
-    "price": "19",
-    "shortText": null,
-    "longText": "../public/texts/a522fb27-145e-4858-b8e4-c38100c95ae5.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2020/07-juli/_agendaitem/Faith-No-More.jpg"
+    "longText": "../public/texts/531b20aa-59ae-423a-9040-c98dc887c724.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2021/10-oktober/_agendaitem/6944/Passenger.jpg"
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-06-28T18:00:00.000Z",
+    "startDateTime": "2022-10-24T18:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/elvis-costello-the-imposters",
-    "title": "Elvis Costello & The Imposters",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/counting-crows-1",
+    "title": "Counting Crows",
     "location": "afaslive",
-    "price": 75.05,
+    "price": 67.2,
     "shortText": null,
-    "longText": "../public/texts/85aded6b-c682-476c-b7bc-e55317561728.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2022/06-juni/_agendaitem/Elvis-Costello-The-Imposters.jpg"
+    "longText": "../public/texts/0d235996-f606-4773-b1f4-c065f60b3919.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2022/03-maart/_agendaitem/Counting-Crows.jpg"
   },
   {
-    "doorOpenDateTime": "2022-09-23T16:30:00.000Z",
-    "startDateTime": "2022-09-23T17:00:00.000Z",
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-11-01T19:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/parkway-drive",
-    "title": "Parkway Drive",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/sigur-r%C3%B3s",
+    "title": "Sigur Rós",
     "location": "afaslive",
     "price": 50.4,
     "shortText": null,
-    "longText": "../public/texts/750f2b2e-3877-4942-b0f7-d131552a06ec.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2022/09-september/_agendaitem/Parkway-Drive.jpg"
-  },
-  {
-    "doorOpenDateTime": "2022-09-29T16:30:00.000Z",
-    "startDateTime": "2022-09-29T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/kaleo-1",
-    "title": "KALEO",
-    "location": "afaslive",
-    "price": 39.2,
-    "shortText": null,
-    "longText": "../public/texts/b80ea7f9-aff5-4544-96c9-1114187aaf8c.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2022/01-januari/_agendaitem/KALEO.jpg"
-  },
-  {
-    "doorOpenDateTime": "2022-10-03T16:30:00.000Z",
-    "startDateTime": "2022-10-03T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/the-black-crowes-2",
-    "title": "The Black Crowes",
-    "location": "afaslive",
-    "price": 63.84,
-    "shortText": null,
-    "longText": "../public/texts/869ebd1d-6bb3-48db-9c94-d35b9d4c1893.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2020/10-oktober/_agendaitem/The-Black-Crows.jpg"
-  },
-  {
-    "doorOpenDateTime": "2023-01-27T17:30:00.000Z",
-    "startDateTime": "2023-01-27T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/epica-apocalyptica-2",
-    "title": "EPICA & Apocalyptica",
-    "location": "afaslive",
-    "price": 51.52,
-    "shortText": null,
-    "longText": "../public/texts/c4fc0363-f7b0-4670-96ef-cdd00d911684.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2020/12-december/_agendaitem/Epica.jpg"
-  },
-  {
-    "doorOpenDateTime": "2023-04-07T16:30:00.000Z",
-    "startDateTime": "2023-04-07T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/eels-1",
-    "title": "EELS",
-    "location": "afaslive",
-    "price": 46.5,
-    "shortText": null,
-    "longText": "../public/texts/1dfffe07-f9a3-4879-bd47-c9362b7ab210.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2022/04-april/_agendaitem/Eels.jpg"
+    "longText": "../public/texts/cc1cd2ea-e504-45ec-a9e8-b23be1715315.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2022/11-november/_agendaitem/Sigur-Ros.jpg"
   }
 ]
