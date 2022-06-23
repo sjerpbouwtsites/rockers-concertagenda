@@ -1,62 +1,50 @@
 [
   {
-    "doorOpenDateTime": "2022-06-12T17:30:00.000Z",
-    "startDateTime": "2022-06-12T18:00:00.000Z",
+    "doorOpenDateTime": "2022-07-01T00:21:00.000Z",
+    "startDateTime": "2022-07-01T00:22:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/dying-fetus-2/",
-    "title": "Dying Fetus + Ingested",
+    "venueEventUrl": "https://www.doornroosje.nl/event/x-raiders-2/",
+    "title": "X Raiders",
     "location": "doornroosje",
-    "price": 23,
-    "shortText": "Fortarock",
-    "longText": "../public/texts/9cabfd37-a148-40f8-9224-a3540243be0c.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2022/04/Dying-Fetus-min-1934x1088-350x197-c-default.jpeg"
+    "price": 14,
+    "shortText": "Special Farewell Show (ft. Rectum Raiders)",
+    "longText": "../public/texts/e0fc3be0-3503-424e-9b36-59bec910fe5f.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2022/05/X-Raiders-1732x1088-350x197-c-default.jpg"
   },
   {
-    "doorOpenDateTime": "2022-07-01T02:20:00.000Z",
-    "startDateTime": "2022-07-01T02:20:30.000Z",
+    "doorOpenDateTime": "2022-09-15T19:00:00.000Z",
+    "startDateTime": "2022-09-15T20:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/thou/",
-    "title": "Thou + Portrayal of Guilt",
+    "venueEventUrl": "https://www.doornroosje.nl/event/stake-4/",
+    "title": "Stake",
     "location": "doornroosje",
-    "price": 15,
-    "shortText": "Soulcrusher",
-    "longText": "../public/texts/4d7a3c4b-70ff-430a-92e5-ba9ad7688934.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2022/02/Thou1-350x197-c-default.jpg"
-  },
-  {
-    "doorOpenDateTime": "2022-09-24T17:00:00.000Z",
-    "startDateTime": "2022-09-24T17:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/audn/",
-    "title": "Auðn + …and Oceans",
-    "location": "doornroosje",
-    "price": 17.5,
-    "shortText": "Soulcrusher",
-    "longText": "../public/texts/80350ad8-8df1-4b9a-95ab-8d0f8baba9d4.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2021/09/Audn-1920x1080-1-350x197-c-default.jpg"
-  },
-  {
-    "doorOpenDateTime": "2022-10-26T19:00:00.000Z",
-    "startDateTime": "2022-10-26T20:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/life/",
-    "title": "LIFE",
-    "location": "doornroosje",
-    "price": 10,
+    "price": 13,
     "shortText": null,
-    "longText": "../public/texts/3a93f2d1-5959-4b6e-83db-2b90bec231b4.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2022/03/LIFE-MOON-1920x1080-1-350x197-c-default.jpg"
+    "longText": "../public/texts/64b4431a-ac14-4a49-8fa6-778c278b36c8.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2021/08/Stake-1920x1080-1-350x197-c-default.jpg"
   },
   {
-    "doorOpenDateTime": "2022-12-01T01:19:30.000Z",
-    "startDateTime": "2022-12-01T01:20:00.000Z",
+    "doorOpenDateTime": null,
+    "startDateTime": null,
     "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/bleed-from-within-2/",
-    "title": "Bleed From Within e.a.",
+    "venueEventUrl": "https://www.doornroosje.nl/event/soulcrusher-2022-2/",
+    "title": "Soulcrusher 2022",
     "location": "doornroosje",
-    "price": 17.5,
+    "price": null,
+    "shortText": null,
+    "longText": null,
+    "image": null
+  },
+  {
+    "doorOpenDateTime": "2023-03-16T18:30:00.000Z",
+    "startDateTime": "2023-03-16T19:15:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.doornroosje.nl/event/tarja-4/",
+    "title": "Tarja",
+    "location": "doornroosje",
+    "price": 32,
     "shortText": "Fortarock",
-    "longText": "../public/texts/fd5435ce-dd17-472e-98d5-ac9900bbbab3.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2022/04/Bleed-From-Within-1934x1088-350x197-c-default.jpg"
+    "longText": "../public/texts/28c3b75d-977c-4df8-9687-cffd49704eff.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2021/09/Tarja-1-1920x1080-1-350x197-c-default.jpg"
   }
 ]

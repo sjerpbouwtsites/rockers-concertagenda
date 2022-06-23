@@ -1,29 +1,5 @@
 [
   {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-06-09T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.013.nl/programma/6973/ice-nine-kills",
-    "title": "Ice Nine Kills",
-    "location": "013",
-    "price": 24.4,
-    "shortText": null,
-    "longText": "../public/texts/d35d5b36-581a-4a2d-ae58-e4077022ed37.html",
-    "image": "https://www.013.nl/uploads/cache/event_main_desktop/61d45cb007696.jpg?version=1641307396"
-  },
-  {
-    "doorOpenDateTime": "2022-06-16T17:30:00.000Z",
-    "startDateTime": "2022-06-16T18:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.013.nl/programma/7173/a-day-to-remember",
-    "title": "A Day To Remember",
-    "location": "013",
-    "price": 39.4,
-    "shortText": null,
-    "longText": "../public/texts/61f8333d-db4c-4e51-9377-456e47fd6e8e.html",
-    "image": "https://www.013.nl/uploads/cache/event_main_desktop/623dc7146ea96.jpg?version=1648215845"
-  },
-  {
     "doorOpenDateTime": "2022-07-13T17:00:00.000Z",
     "startDateTime": "2022-07-13T17:30:00.000Z",
     "endDateTime": null,
@@ -32,8 +8,8 @@
     "location": "013",
     "price": 34.4,
     "shortText": null,
-    "longText": "../public/texts/b25e4d25-5057-48d3-8864-f006ead7c817.html",
-    "image": "https://www.013.nl/uploads/cache/event_main_desktop/611f7dd70a5bf.jpg?version=1629453866"
+    "longText": "../public/texts/3f444abb-61ac-4498-91ce-5d75759f7f06.html",
+    "image": "https://www.013.nl/uploads/cache/event_main_desktop/611f7dd70a5bf.jpg?version=1646386754"
   },
   {
     "doorOpenDateTime": "2022-07-25T17:00:00.000Z",
@@ -44,8 +20,8 @@
     "location": "013",
     "price": 55.4,
     "shortText": null,
-    "longText": "../public/texts/b1fc4a68-d923-4965-a187-2bde812fca55.html",
-    "image": "https://www.013.nl/uploads/cache/event_main_desktop/6110fabcaf33c.jpg?version=1628502847"
+    "longText": "../public/texts/e9748ead-cc9b-42ba-8336-d44c7a0ddf43.html",
+    "image": "https://www.013.nl/uploads/cache/event_main_desktop/6110fabcaf33c.jpg?version=1646386754"
   },
   {
     "doorOpenDateTime": "2022-07-30T17:00:00.000Z",
@@ -56,8 +32,8 @@
     "location": "013",
     "price": 58.4,
     "shortText": null,
-    "longText": "../public/texts/3c1d43aa-2fd2-4d25-abae-855f580aac19.html",
-    "image": "https://www.013.nl/uploads/cache/event_main_desktop/5e3845c648f60.jpg?version=1580747069"
+    "longText": "../public/texts/83df9fb2-34ad-4053-9b5e-47725f8b8ff3.html",
+    "image": "https://www.013.nl/uploads/cache/event_main_desktop/5e3845c648f60.jpg?version=1646386754"
   },
   {
     "doorOpenDateTime": "2022-09-02T17:00:00.000Z",
@@ -68,127 +44,139 @@
     "location": "013",
     "price": 58.4,
     "shortText": null,
-    "longText": "../public/texts/0f4afde0-6cf3-47da-af3a-f94f7dfc264a.html",
-    "image": "https://www.013.nl/uploads/cache/event_main_desktop/5e3845c648f60.jpg?version=1580747069"
+    "longText": "../public/texts/84a4fae0-faa7-43e4-acd8-c12caa5970e1.html",
+    "image": "https://www.013.nl/uploads/cache/event_main_desktop/5e3845c648f60.jpg?version=1646386754"
   },
   {
-    "doorOpenDateTime": "2022-09-27T17:00:00.000Z",
-    "startDateTime": "2022-09-27T17:30:00.000Z",
+    "doorOpenDateTime": "2022-09-20T17:00:00.000Z",
+    "startDateTime": "2022-09-20T17:30:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.013.nl/programma/7021/polaris",
-    "title": "Polaris",
-    "location": "013",
-    "price": 25.9,
-    "shortText": null,
-    "longText": "../public/texts/858640b1-0e54-4229-9e6a-d43230c5b7f7.html",
-    "image": "https://www.013.nl/uploads/cache/event_main_desktop/61f9591a90aef.JPG?version=1643731263"
-  },
-  {
-    "doorOpenDateTime": "2022-10-03T17:00:00.000Z",
-    "startDateTime": "2022-10-03T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.013.nl/programma/7087/saxon",
-    "title": "Saxon",
-    "location": "013",
-    "price": 43.4,
-    "shortText": null,
-    "longText": "../public/texts/a677f757-06f4-40c1-bff4-b8c3a7604011.html",
-    "image": "https://www.013.nl/uploads/cache/event_main_desktop/620b69d56a75d.jpg?version=1644915295"
-  },
-  {
-    "doorOpenDateTime": "2022-10-15T17:00:00.000Z",
-    "startDateTime": "2022-10-15T17:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.013.nl/programma/7067/the-vintage-caravan",
-    "title": "The Vintage Caravan",
-    "location": "013",
-    "price": 16.9,
-    "shortText": null,
-    "longText": "../public/texts/2d0576b8-88b5-4962-878a-cc0c80c1cd43.html",
-    "image": "https://www.013.nl/uploads/cache/event_main_desktop/6086b9e480670.jpg?version=1619442444"
-  },
-  {
-    "doorOpenDateTime": "2022-10-27T17:00:00.000Z",
-    "startDateTime": "2022-10-27T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.013.nl/programma/6721/sonata-arctica",
-    "title": "Sonata Arctica",
-    "location": "013",
-    "price": 32.9,
-    "shortText": "Acoustic Adventures MMXXI",
-    "longText": "../public/texts/883822a6-cb7d-41f6-936a-06eed43d0c3e.html",
-    "image": "https://www.013.nl/uploads/cache/event_main_desktop/6063807bccf2c.jpg?version=1617133803"
-  },
-  {
-    "doorOpenDateTime": "2022-11-16T17:30:00.000Z",
-    "startDateTime": "2022-11-16T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.013.nl/programma/6953/antimatter",
-    "title": "Antimatter",
+    "venueEventUrl": "https://www.013.nl/programma/6903/blind-channel",
+    "title": "Blind Channel",
     "location": "013",
     "price": 22.9,
-    "shortText": null,
-    "longText": "../public/texts/ce861c72-4cba-4467-a414-0f9dd7434369.html",
-    "image": "https://www.013.nl/uploads/cache/event_main_desktop/5e3154f0b3c2b.jpg?version=1580291333"
+    "shortText": "Sick and Dangerous Tour 2022",
+    "longText": "../public/texts/1ce10004-3431-4ec1-98e2-c1fe90b894da.html",
+    "image": "https://www.013.nl/uploads/cache/event_main_desktop/61a0e0fa55292.jpg?version=1646386755"
   },
   {
-    "doorOpenDateTime": "2022-11-23T18:00:00.000Z",
-    "startDateTime": "2022-11-23T19:00:00.000Z",
+    "doorOpenDateTime": "2022-10-01T17:00:00.000Z",
+    "startDateTime": "2022-10-01T17:30:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.013.nl/programma/7203/billy-talent",
-    "title": "Billy Talent",
+    "venueEventUrl": "https://www.013.nl/programma/7157/visions-of-atlantis-xandria",
+    "title": "Visions of Atlantis + Xandria",
     "location": "013",
-    "price": 40.49,
-    "shortText": null,
-    "longText": "../public/texts/a8d4b979-882a-4b40-8513-766de4268f98.html",
-    "image": "https://www.013.nl/uploads/cache/event_main_desktop/628e055c20435.jpg?version=1653474695"
+    "price": 16.9,
+    "shortText": "Symphonic Metal Nights",
+    "longText": "../public/texts/38bcfc60-20bc-4066-a2c6-3d76450cc6d1.html",
+    "image": "https://www.013.nl/uploads/cache/event_main_desktop/628c89db037e8.jpg?version=1653649555"
   },
   {
-    "doorOpenDateTime": "2022-11-29T16:00:00.000Z",
-    "startDateTime": "2022-11-29T17:00:00.000Z",
+    "doorOpenDateTime": "2022-10-11T16:30:00.000Z",
+    "startDateTime": "2022-10-11T17:30:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.013.nl/programma/6839/lamb-of-god-kreator",
-    "title": "Lamb of God + Kreator",
+    "venueEventUrl": "https://www.013.nl/programma/6681/anthrax",
+    "title": "Anthrax",
     "location": "013",
-    "price": 45.4,
-    "shortText": null,
-    "longText": "../public/texts/80dbf120-624f-4736-b0b0-d54383376280.html",
-    "image": "https://www.013.nl/uploads/cache/event_main_desktop/61793840aae97.png?version=1635334265"
+    "price": 44,
+    "shortText": "40th anniversary tour",
+    "longText": "../public/texts/9c500813-6496-4627-b50b-bda70aaeeda0.html",
+    "image": "https://www.013.nl/uploads/cache/event_main_desktop/61091ba186596.jpg?version=1646386756"
   },
   {
-    "doorOpenDateTime": "2023-01-17T17:30:00.000Z",
-    "startDateTime": "2023-01-17T18:00:00.000Z",
+    "doorOpenDateTime": "2022-10-16T17:00:00.000Z",
+    "startDateTime": "2022-10-16T17:30:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.013.nl/programma/6819/heaven-shall-burn-trivium",
-    "title": "Heaven Shall Burn + Trivium",
+    "venueEventUrl": "https://www.013.nl/programma/6557/ufo",
+    "title": "UFO",
     "location": "013",
-    "price": 39.4,
-    "shortText": null,
-    "longText": "../public/texts/0d14cade-c95b-48ba-9cf3-163e10cc4277.html",
-    "image": "https://www.013.nl/uploads/cache/event_main_desktop/617282e7546b1.jpg?version=1634894578"
+    "price": 34,
+    "shortText": "Last Orders tour",
+    "longText": "../public/texts/ae258238-9038-4dc3-a032-39718533e6a9.html",
+    "image": "https://www.013.nl/uploads/cache/event_main_desktop/5df0c7ecb1eea.png?version=1646386757"
   },
   {
-    "doorOpenDateTime": "2023-03-01T18:00:00.000Z",
-    "startDateTime": "2023-03-01T19:00:00.000Z",
+    "doorOpenDateTime": "2022-10-30T18:00:00.000Z",
+    "startDateTime": "2022-10-30T19:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.013.nl/programma/7227/electric-callboy",
-    "title": "Electric Callboy",
+    "venueEventUrl": "https://www.013.nl/programma/7243/jozef-van-wissem-midwife",
+    "title": "Jozef van Wissem + Midwife",
     "location": "013",
-    "price": 30.4,
-    "shortText": "Tekkno Tour 2023",
-    "longText": "../public/texts/45d9c87b-4a6e-44cb-86a9-599768d15533.html",
-    "image": "https://www.013.nl/uploads/cache/event_main_desktop/62610fc38ea89.jpg?version=1650528388"
+    "price": 17.9,
+    "shortText": null,
+    "longText": "../public/texts/5b5ad986-2bd6-4bf3-bf7b-0ed71cedd9f8.html",
+    "image": "https://www.013.nl/uploads/cache/event_main_desktop/628397f1af58d.jpg?version=1653648191"
   },
   {
-    "doorOpenDateTime": "2023-03-21T17:00:00.000Z",
-    "startDateTime": "2023-03-21T18:00:00.000Z",
+    "doorOpenDateTime": "2022-11-14T17:30:00.000Z",
+    "startDateTime": "2022-11-14T18:30:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.013.nl/programma/6999/beartooth",
-    "title": "Beartooth",
+    "venueEventUrl": "https://www.013.nl/programma/7271/shinedown",
+    "title": "Shinedown",
     "location": "013",
-    "price": 33.4,
+    "price": 43.4,
+    "shortText": "Planet Zero world tour",
+    "longText": "../public/texts/9c660c2e-8b6a-4895-a50f-92513da0aa4e.html",
+    "image": "https://www.013.nl/uploads/cache/event_main_desktop/628b62990c295.jpg?version=1655296970"
+  },
+  {
+    "doorOpenDateTime": "2022-11-21T18:00:00.000Z",
+    "startDateTime": "2022-11-21T19:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.013.nl/programma/7065/status-quo",
+    "title": "Status Quo",
+    "location": "013",
+    "price": 58.4,
     "shortText": null,
-    "longText": "../public/texts/237b0bc5-8f09-4436-8186-1097b3cdea1d.html",
-    "image": "https://www.013.nl/uploads/cache/event_main_desktop/605de467c2e9d.jpg?version=1616766067"
+    "longText": "../public/texts/52ff121b-0c66-4fa0-8da8-bd8e215c3a82.html",
+    "image": "https://www.013.nl/uploads/cache/event_main_desktop/6203aa4685cfe.jpg?version=1646386758"
+  },
+  {
+    "doorOpenDateTime": "2022-11-28T18:30:00.000Z",
+    "startDateTime": "2022-11-28T19:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.013.nl/programma/7279/a-a-williams-karin-park",
+    "title": "A.A. Williams + Karin Park",
+    "location": "013",
+    "price": 17.9,
+    "shortText": null,
+    "longText": "../public/texts/003b6c1e-ceda-42c0-8049-369950f1fce0.html",
+    "image": "https://www.013.nl/uploads/cache/event_main_desktop/629e5ae93d1b4.jpg?version=1654754591"
+  },
+  {
+    "doorOpenDateTime": "2023-01-12T18:00:00.000Z",
+    "startDateTime": "2023-01-12T19:45:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.013.nl/programma/6877/heilung",
+    "title": "Heilung",
+    "location": "013",
+    "price": 34.4,
+    "shortText": null,
+    "longText": "../public/texts/2446c845-9836-4c21-94f3-677bfc335c10.html",
+    "image": "https://www.013.nl/uploads/cache/event_main_desktop/5f60b467edfcb.jpg?version=1646386760"
+  },
+  {
+    "doorOpenDateTime": "2023-02-01T17:30:00.000Z",
+    "startDateTime": "2023-02-01T18:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.013.nl/programma/7275/bullet-for-my-valentine",
+    "title": "Bullet For My Valentine",
+    "location": "013",
+    "price": 37.4,
+    "shortText": null,
+    "longText": "../public/texts/46646a35-15a4-4ff5-9de2-51838063e199.html",
+    "image": "https://www.013.nl/uploads/cache/event_main_desktop/62989d72bb388.jpg?version=1654754592"
+  },
+  {
+    "doorOpenDateTime": "2023-03-12T18:00:00.000Z",
+    "startDateTime": "2023-03-12T19:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.013.nl/programma/7009/avatar",
+    "title": "Avatar",
+    "location": "013",
+    "price": 23.9,
+    "shortText": null,
+    "longText": "../public/texts/c6bcbf41-0c64-4b0e-9108-93465e0f40e7.html",
+    "image": "https://www.013.nl/uploads/cache/event_main_desktop/60d1bf677e76a.jpeg?version=1646386740"
   }
 ]

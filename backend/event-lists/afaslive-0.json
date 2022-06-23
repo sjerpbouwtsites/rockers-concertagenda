@@ -1,86 +1,50 @@
 [
   {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-07-09T18:00:00.000Z",
+    "doorOpenDateTime": "2022-08-27T16:30:00.000Z",
+    "startDateTime": "2022-08-27T18:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/madness",
-    "title": "Madness",
-    "location": "afaslive",
-    "price": 53.9,
-    "shortText": null,
-    "longText": "../public/texts/3d969dbe-ccdc-4c7a-94f5-b4b31b54d270.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2022/07-juli/_agendaitem/Madness.jpg"
-  },
-  {
-    "doorOpenDateTime": "2022-09-28T16:30:00.000Z",
-    "startDateTime": "2022-09-28T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/biffy-clyro",
-    "title": "Biffy Clyro",
-    "location": "afaslive",
-    "price": 43.68,
-    "shortText": null,
-    "longText": "../public/texts/0a5777d9-24fd-480e-94aa-223e88a11ff2.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2020/11-november/_agendaitem/Biffy-Clyro-Website.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-10-02T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/machine-head-amon-amarth",
-    "title": "Machine Head & Amon Amarth",
-    "location": "afaslive",
-    "price": 60.48,
-    "shortText": null,
-    "longText": "../public/texts/bf881679-a306-4843-bb75-2a76ce0fefea.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2022/10-oktober/_agendaitem/Machine-Head-Amon-Amarth.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-10-13T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/kasabian",
-    "title": "Kasabian",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/passenger",
+    "title": "Passenger",
     "location": "afaslive",
     "price": 44.8,
     "shortText": null,
-    "longText": "../public/texts/cf234409-7c34-4bb4-8d18-a4efd13d9e6f.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2022/10-oktober/_agendaitem/Kasabian.jpg"
-  },
-  {
-    "doorOpenDateTime": "2022-10-26T16:30:00.000Z",
-    "startDateTime": "2022-10-26T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/brit-floyd-3",
-    "title": "Brit Floyd",
-    "location": "afaslive",
-    "price": 61.6,
-    "shortText": null,
-    "longText": "../public/texts/10653e0d-a195-47e8-b9e1-0040a249fdb3.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2020/10-oktober/_agendaitem/Brit-Floyd.jpg"
+    "longText": "../public/texts/d5b3c7a6-9374-4a1b-bf4b-15f75479ae49.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2021/10-oktober/_agendaitem/6944/Passenger.jpg"
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-11-08T19:00:00.000Z",
+    "startDateTime": "2022-10-24T18:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/lil-nas-x",
-    "title": "Lil Nas X",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/counting-crows-1",
+    "title": "Counting Crows",
+    "location": "afaslive",
+    "price": 67.2,
+    "shortText": null,
+    "longText": "../public/texts/08732b1b-cd64-4d27-be3c-966d7339524f.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2022/03-maart/_agendaitem/Counting-Crows.jpg"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-11-01T19:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.afaslive.nl/agenda/sigur-r%C3%B3s",
+    "title": "Sigur Rós",
     "location": "afaslive",
     "price": 50.4,
     "shortText": null,
-    "longText": "../public/texts/8bd50e5a-892a-4d3c-a225-3ef62ed2862f.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2022/11-november/_agendaitem/Lil-Nas-X.jpg"
+    "longText": "../public/texts/2a62c5c8-cca5-4591-8654-0c3b6742afde.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2022/11-november/_agendaitem/Sigur-Ros.jpg"
   },
   {
-    "doorOpenDateTime": "2023-01-27T17:30:00.000Z",
-    "startDateTime": "2023-01-27T18:00:00.000Z",
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-11-17T19:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/epica-apocalyptica-2",
-    "title": "EPICA & Apocalyptica",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/sting-1",
+    "title": "Sting",
     "location": "afaslive",
-    "price": 51.52,
+    "price": 88.48,
     "shortText": null,
-    "longText": "../public/texts/2aa348bf-a3e7-4fc6-8246-0531de892a06.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2020/12-december/_agendaitem/Epica.jpg"
+    "longText": "../public/texts/9f7a7c0a-8f3c-4244-9394-e5cd3b38dbd6.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2022/03-maart/_agendaitem/Sting.jpg"
   }
 ]
