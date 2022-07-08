@@ -1,75 +1,75 @@
 [
   {
-    "doorOpenDateTime": "2022-07-06T17:00:00.000Z",
-    "startDateTime": "2022-07-06T17:30:00.000Z",
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-07-13T17:30:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.013.nl/programma/7209/old-man-gloom",
-    "title": "Old Man Gloom",
+    "venueEventUrl": "https://www.013.nl/programma/7091/gojira",
+    "title": "Gojira",
+    "location": "013",
+    "price": 34.4,
+    "shortText": null,
+    "longText": "../public/texts/aec264b0-f133-4e57-b793-5ac95b5b8e1b.html",
+    "image": "https://www.013.nl/uploads/cache/event_main_desktop/611f7dd70a5bf.jpg?version=1646386754"
+  },
+  {
+    "doorOpenDateTime": "2022-07-25T17:00:00.000Z",
+    "startDateTime": "2022-07-25T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.013.nl/programma/6687/transatlantic",
+    "title": "Transatlantic",
+    "location": "013",
+    "price": 55.4,
+    "shortText": null,
+    "longText": "../public/texts/4f4e2879-217a-4a21-a14b-cf0fa6955ee1.html",
+    "image": "https://www.013.nl/uploads/cache/event_main_desktop/6110fabcaf33c.jpg?version=1646386754"
+  },
+  {
+    "doorOpenDateTime": "2022-07-30T17:00:00.000Z",
+    "startDateTime": "2022-07-30T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.013.nl/programma/6633/limp-bizkit",
+    "title": "Limp Bizkit",
+    "location": "013",
+    "price": 58.4,
+    "shortText": null,
+    "longText": "../public/texts/1ed15975-67b1-454f-b20e-47da9646b239.html",
+    "image": "https://www.013.nl/uploads/cache/event_main_desktop/5e3845c648f60.jpg?version=1646386754"
+  },
+  {
+    "doorOpenDateTime": "2022-09-02T17:00:00.000Z",
+    "startDateTime": "2022-09-02T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.013.nl/programma/7143/limp-bizkit",
+    "title": "Limp Bizkit",
+    "location": "013",
+    "price": 58.4,
+    "shortText": null,
+    "longText": "../public/texts/494963dc-21dd-4bcf-b5ad-033829586f03.html",
+    "image": "https://www.013.nl/uploads/cache/event_main_desktop/5e3845c648f60.jpg?version=1646386754"
+  },
+  {
+    "doorOpenDateTime": "2022-09-20T17:00:00.000Z",
+    "startDateTime": "2022-09-20T17:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.013.nl/programma/6903/blind-channel",
+    "title": "Blind Channel",
     "location": "013",
     "price": 22.9,
-    "shortText": null,
-    "longText": "../public/texts/ddca2bb7-0620-4fcf-8baf-fb40bb8b88e9.html",
-    "image": "https://www.013.nl/uploads/cache/event_main_desktop/6259810fc580e.jpg?version=1653648189"
+    "shortText": "Sick and Dangerous Tour 2022",
+    "longText": "../public/texts/25fe14a5-26d1-4f9c-aa74-f0ac46b97409.html",
+    "image": "https://www.013.nl/uploads/cache/event_main_desktop/61a0e0fa55292.jpg?version=1646386755"
   },
   {
-    "doorOpenDateTime": "2022-07-20T17:00:00.000Z",
-    "startDateTime": "2022-07-20T18:00:00.000Z",
+    "doorOpenDateTime": "2022-10-01T17:00:00.000Z",
+    "startDateTime": "2022-10-01T17:30:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.013.nl/programma/6929/yngwie-malmsteen",
-    "title": "Yngwie Malmsteen",
+    "venueEventUrl": "https://www.013.nl/programma/7157/visions-of-atlantis-xandria",
+    "title": "Visions of Atlantis + Xandria",
     "location": "013",
-    "price": 53.4,
-    "shortText": "Parabellum Tour",
-    "longText": "../public/texts/c74423d3-6661-4ad4-a2f9-3f0c24224231.html",
-    "image": "https://www.013.nl/uploads/cache/event_main_desktop/61b1c59f3823f.jpg?version=1646386741"
-  },
-  {
-    "doorOpenDateTime": "2022-07-29T17:00:00.000Z",
-    "startDateTime": "2022-07-29T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.013.nl/programma/7019/gwar",
-    "title": "GWAR",
-    "location": "013",
-    "price": 27.9,
-    "shortText": null,
-    "longText": "../public/texts/0f11073e-658a-455c-85e7-79db10ed49e7.html",
-    "image": "https://www.013.nl/uploads/cache/event_main_desktop/61f3abaccbbbd.png?version=1646386754"
-  },
-  {
-    "doorOpenDateTime": "2022-08-16T17:00:00.000Z",
-    "startDateTime": "2022-08-16T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.013.nl/programma/6487/lagwagon",
-    "title": "Lagwagon",
-    "location": "013",
-    "price": 29.4,
-    "shortText": null,
-    "longText": "../public/texts/39be79a0-23a4-4d0e-9391-a8ae8ac5a285.html",
-    "image": "https://www.013.nl/uploads/cache/event_main_desktop/60815773cfc44.jpg?version=1646386755"
-  },
-  {
-    "doorOpenDateTime": "2022-09-16T18:00:00.000Z",
-    "startDateTime": "2022-09-16T18:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.013.nl/programma/7301/tides-from-nebula",
-    "title": "Tides from Nebula",
-    "location": "013",
-    "price": 14.9,
-    "shortText": null,
-    "longText": "../public/texts/730af6fc-adcb-4315-95c3-01b80b60872e.html",
-    "image": "https://www.013.nl/uploads/cache/event_main_desktop/62a847fa6b095.jpg?version=1655195706"
-  },
-  {
-    "doorOpenDateTime": "2022-09-30T17:00:00.000Z",
-    "startDateTime": "2022-09-30T17:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.013.nl/programma/6807/vola",
-    "title": "Vola",
-    "location": "013",
-    "price": 18.9,
-    "shortText": null,
-    "longText": "../public/texts/21f2c5bb-d16d-4fd5-95a7-5bf486d523be.html",
-    "image": "https://www.013.nl/uploads/cache/event_main_desktop/61f806bfd753d.jpg?version=1646386756"
+    "price": 16.9,
+    "shortText": "Symphonic Metal Nights",
+    "longText": "../public/texts/d186c492-eff7-4bea-a189-bed774cd6bb2.html",
+    "image": "https://www.013.nl/uploads/cache/event_main_desktop/628c89db037e8.jpg?version=1653649555"
   },
   {
     "doorOpenDateTime": "2022-10-07T17:00:00.000Z",
@@ -80,7 +80,7 @@
     "location": "013",
     "price": 16.4,
     "shortText": "& its Supernova Arkestra",
-    "longText": "../public/texts/ad65e5fc-8747-4087-86cc-b5d73f58b1ba.html",
+    "longText": "../public/texts/356223dc-8f5b-4b4d-8613-b6c221408a5b.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/62a6f0c7964ee.jpg?version=1655107794"
   },
   {
@@ -92,7 +92,7 @@
     "location": "013",
     "price": 25.9,
     "shortText": null,
-    "longText": "../public/texts/67b3e3d8-f72d-468b-924e-04c5abf02b56.html",
+    "longText": "../public/texts/e972d12b-b880-4a9d-9e77-9340fa57da2d.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/613617a9f1e8c.jpg?version=1646386757"
   },
   {
@@ -104,7 +104,7 @@
     "location": "013",
     "price": 32.9,
     "shortText": "Acoustic Adventures MMXXI",
-    "longText": "../public/texts/2514c608-c83a-4389-913c-912cc7866fb9.html",
+    "longText": "../public/texts/4813f540-f384-4aba-b644-ff442e317ac1.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/6063807bccf2c.jpg?version=1646386757"
   },
   {
@@ -116,7 +116,7 @@
     "location": "013",
     "price": 32.4,
     "shortText": "DEATH BY ROCK AND ROLL TOUR 2022",
-    "longText": "../public/texts/bc533127-f8ac-4a03-a9c1-81559d33105b.html",
+    "longText": "../public/texts/b811f0d6-7301-4b28-a317-fd762809d22d.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/623845acc4722.jpg?version=1653648191"
   },
   {
@@ -128,67 +128,67 @@
     "location": "013",
     "price": 28.9,
     "shortText": null,
-    "longText": "../public/texts/ef7d407f-2533-4f72-8226-a8c6c994b89c.html",
+    "longText": "../public/texts/d16ea69b-8754-495a-8792-b3e8a82bb869.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/625f0424c946b.jpeg?version=1653648192"
   },
   {
-    "doorOpenDateTime": "2022-11-27T16:00:00.000Z",
-    "startDateTime": "2022-11-27T17:00:00.000Z",
+    "doorOpenDateTime": "2022-11-26T18:00:00.000Z",
+    "startDateTime": "2022-11-26T19:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.013.nl/programma/7181/amorphis-eluveitie",
-    "title": "Amorphis + Eluveitie",
+    "venueEventUrl": "https://www.013.nl/programma/6881/electric-six",
+    "title": "Electric Six",
     "location": "013",
-    "price": 36.9,
-    "shortText": null,
-    "longText": "../public/texts/a77952b0-fcdf-4580-9ba1-332ef04998d9.html",
-    "image": "https://www.013.nl/uploads/cache/event_main_desktop/624575f7afcf6.jpg?version=1653648192"
+    "price": 20.4,
+    "shortText": "Born to Be Ridiculed",
+    "longText": "../public/texts/c2c81fe2-afd2-4674-bd5a-b8273c58d9d2.html",
+    "image": "https://www.013.nl/uploads/cache/event_main_desktop/5e8d937c5ad13.jpg?version=1646386758"
   },
   {
-    "doorOpenDateTime": "2023-01-08T17:30:00.000Z",
-    "startDateTime": "2023-01-08T19:00:00.000Z",
+    "doorOpenDateTime": "2022-12-10T18:00:00.000Z",
+    "startDateTime": "2022-12-10T18:30:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.013.nl/programma/6933/shadow-of-intent",
-    "title": "Shadow Of Intent",
+    "venueEventUrl": "https://www.013.nl/programma/6813/finntroll",
+    "title": "Finntroll",
     "location": "013",
-    "price": 18.9,
+    "price": 27.9,
     "shortText": null,
-    "longText": "../public/texts/13fb04e7-72e9-4486-a939-914ab79a36d1.html",
-    "image": "https://www.013.nl/uploads/cache/event_main_desktop/5f365611f3aac.jpg?version=1646386760"
+    "longText": "../public/texts/7d1c8f8c-e759-41b4-9a84-e21f546adb0a.html",
+    "image": "https://www.013.nl/uploads/cache/event_main_desktop/5f313007c91b7.jpg?version=1646386758"
   },
   {
-    "doorOpenDateTime": "2023-01-31T18:00:00.000Z",
-    "startDateTime": "2023-01-31T19:00:00.000Z",
+    "doorOpenDateTime": "2023-01-17T17:30:00.000Z",
+    "startDateTime": "2023-01-17T18:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.013.nl/programma/7191/pvris",
-    "title": "PVRIS",
+    "venueEventUrl": "https://www.013.nl/programma/6819/heaven-shall-burn-trivium",
+    "title": "Heaven Shall Burn + Trivium",
     "location": "013",
-    "price": 26.9,
+    "price": 39.4,
     "shortText": null,
-    "longText": "../public/texts/7388fe90-5145-43d4-900d-985474f61e92.html",
-    "image": "https://www.013.nl/uploads/cache/event_main_desktop/624bed86c1aa4.jpg?version=1653648192"
+    "longText": "../public/texts/806cf6b5-f13e-4902-bf68-36283f0455b9.html",
+    "image": "https://www.013.nl/uploads/cache/event_main_desktop/617282e7546b1.jpg?version=1646386760"
   },
   {
-    "doorOpenDateTime": "2023-03-03T18:00:00.000Z",
-    "startDateTime": "2023-03-03T19:00:00.000Z",
+    "doorOpenDateTime": "2023-02-26T18:00:00.000Z",
+    "startDateTime": "2023-02-26T18:30:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.013.nl/programma/7277/devin-townsend",
-    "title": "Devin Townsend",
+    "venueEventUrl": "https://www.013.nl/programma/7302/hang-youth",
+    "title": "Hang Youth",
     "location": "013",
-    "price": 36.9,
-    "shortText": null,
-    "longText": "../public/texts/fc4cb319-238a-4c29-8603-d60817037966.html",
-    "image": "https://www.013.nl/uploads/cache/event_main_desktop/62a203e618b3b.jpg?version=1654785578"
+    "price": 19.9,
+    "shortText": "DE BELANGRIJKSTE BAND VAN NEDERLAND TOUR",
+    "longText": "../public/texts/975372c7-9e92-4dc6-8037-d11605705488.html",
+    "image": "https://www.013.nl/uploads/cache/event_main_desktop/62ab305ab1626.jpg?version=1655386295"
   },
   {
-    "doorOpenDateTime": "2023-04-12T17:00:00.000Z",
-    "startDateTime": "2023-04-12T18:00:00.000Z",
+    "doorOpenDateTime": "2023-03-15T18:00:00.000Z",
+    "startDateTime": "2023-03-15T19:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.013.nl/programma/7295/floor-jansen",
-    "title": "Floor Jansen",
+    "venueEventUrl": "https://www.013.nl/programma/7107/i-prevail",
+    "title": "I Prevail",
     "location": "013",
-    "price": 38.4,
+    "price": 20.9,
     "shortText": null,
-    "longText": "../public/texts/e87b678b-47ce-438d-a602-4cfa340ac4a7.html",
-    "image": "https://www.013.nl/uploads/cache/event_main_desktop/62a051f9d42f1.jpg?version=1655379810"
+    "longText": "../public/texts/83e47764-5327-411e-bf76-e03d4ec642b5.html",
+    "image": "https://www.013.nl/uploads/cache/event_main_desktop/5e84aee077933.jpg?version=1646386741"
   }
 ]

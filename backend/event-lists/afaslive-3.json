@@ -1,51 +1,39 @@
 [
   {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-07-09T18:00:00.000Z",
+    "doorOpenDateTime": "2022-09-23T16:30:00.000Z",
+    "startDateTime": "2022-09-23T17:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/madness",
-    "title": "Madness",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/parkway-drive",
+    "title": "Parkway Drive",
     "location": "afaslive",
-    "price": 53.9,
+    "price": 50.4,
     "shortText": null,
-    "longText": "../public/texts/f83c5c49-c587-4800-a5ff-cc732ff13870.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2022/07-juli/_agendaitem/Madness.jpg"
+    "longText": "../public/texts/253b57bf-a0c0-4243-a7f8-5f87d90903eb.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2022/09-september/_agendaitem/Parkway-Drive.jpg"
   },
   {
-    "doorOpenDateTime": "2022-09-28T16:30:00.000Z",
-    "startDateTime": "2022-09-28T18:00:00.000Z",
+    "doorOpenDateTime": "2022-09-29T16:30:00.000Z",
+    "startDateTime": "2022-09-29T18:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/biffy-clyro",
-    "title": "Biffy Clyro",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/kaleo-1",
+    "title": "KALEO",
     "location": "afaslive",
-    "price": 43.68,
+    "price": 39.2,
     "shortText": null,
-    "longText": "../public/texts/9de22241-f712-4f51-b2c9-b0cd96d699d1.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2020/11-november/_agendaitem/Biffy-Clyro-Website.jpg"
+    "longText": "../public/texts/4b47d0a7-0304-4bff-8ec8-77a13a0c870a.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2022/01-januari/_agendaitem/KALEO.jpg"
   },
   {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-10-02T18:00:00.000Z",
+    "doorOpenDateTime": "2022-10-03T16:30:00.000Z",
+    "startDateTime": "2022-10-03T18:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/machine-head-amon-amarth",
-    "title": "Machine Head & Amon Amarth",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/the-black-crowes-2",
+    "title": "The Black Crowes",
     "location": "afaslive",
-    "price": 60.48,
+    "price": 63.84,
     "shortText": null,
-    "longText": "../public/texts/745e8a37-a905-4fda-95a3-e79f7a5a2fc0.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2022/10-oktober/_agendaitem/Machine-Head-Amon-Amarth.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-10-13T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/kasabian",
-    "title": "Kasabian",
-    "location": "afaslive",
-    "price": 44.8,
-    "shortText": null,
-    "longText": "../public/texts/dbd3a2a2-060f-4d8e-acda-9a6b442f5be7.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2022/10-oktober/_agendaitem/Kasabian.jpg"
+    "longText": "../public/texts/d0b422db-b24f-42df-b1c7-be33b3879dee.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2020/10-oktober/_agendaitem/The-Black-Crows.jpg"
   },
   {
     "doorOpenDateTime": "2022-10-26T16:30:00.000Z",
@@ -56,7 +44,7 @@
     "location": "afaslive",
     "price": 61.6,
     "shortText": null,
-    "longText": "../public/texts/1d8e069a-5aa3-4370-aa58-55fba7d1766e.html",
+    "longText": "../public/texts/601f68df-5ed5-4eb8-9e10-b98691f9fcb7.html",
     "image": "https://www.afaslive.nl/files/Agenda/2020/10-oktober/_agendaitem/Brit-Floyd.jpg"
   },
   {
@@ -66,22 +54,10 @@
     "venueEventUrl": "https://www.afaslive.nl/agenda/rise-against",
     "title": "Rise Against",
     "location": "afaslive",
-    "price": 51.62,
+    "price": 51.52,
     "shortText": null,
-    "longText": "../public/texts/baa024cd-0398-4ae2-b3ab-4c596ede3685.html",
+    "longText": "../public/texts/257cb783-b206-487e-bea8-7831af1ce8d5.html",
     "image": "https://www.afaslive.nl/files/Agenda/2022/11-november/_agendaitem/13497/Rise-Against.jpg"
-  },
-  {
-    "doorOpenDateTime": "2022-12-01T17:00:00.000Z",
-    "startDateTime": "2022-12-01T17:40:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/powerwolf-1",
-    "title": "POWERWOLF",
-    "location": "afaslive",
-    "price": 45,
-    "shortText": null,
-    "longText": "../public/texts/507cc0c5-f9ac-4e2c-8d75-8ec1d99722d3.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2021/10-oktober/_agendaitem/Powerwolf.jpg"
   },
   {
     "doorOpenDateTime": "2023-01-27T17:30:00.000Z",
@@ -92,7 +68,19 @@
     "location": "afaslive",
     "price": 51.52,
     "shortText": null,
-    "longText": "../public/texts/497614de-cb54-4c8e-8628-8d7dcf5e548a.html",
+    "longText": "../public/texts/1add6e13-1523-4103-b6ab-1f1a745c48eb.html",
     "image": "https://www.afaslive.nl/files/Agenda/2020/12-december/_agendaitem/Epica.jpg"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-04-01T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.afaslive.nl/agenda/madness-1",
+    "title": "Madness",
+    "location": "afaslive",
+    "price": 53.9,
+    "shortText": null,
+    "longText": "../public/texts/678f8308-0b52-4bb1-ab80-29816247e371.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2022/07-juli/_agendaitem/Madness.jpg"
   }
 ]

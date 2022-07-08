@@ -1,50 +1,38 @@
 [
   {
-    "doorOpenDateTime": "2022-08-29T18:00:00.000Z",
-    "startDateTime": "2022-08-29T18:30:00.000Z",
+    "doorOpenDateTime": "2022-09-17T19:00:00.000Z",
+    "startDateTime": "2022-09-17T20:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/imperial-triumphant-2/",
-    "title": "Imperial Triumphant + Grey Aura",
+    "venueEventUrl": "https://www.doornroosje.nl/event/yellow-eyes/",
+    "title": "Yellow Eyes + Sun Worship",
     "location": "doornroosje",
-    "price": 14.5,
+    "price": 13,
     "shortText": "Soulcrusher",
-    "longText": "../public/texts/90d87710-f795-4ca6-a77a-ca5a76a6d585.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2021/09/Imperial-Triumphant-1920x1080-1-350x197-c-default.jpg"
+    "longText": "../public/texts/c57708a8-528e-4e4a-8031-bef2d954deb7.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2022/06/Yellow-Eyes-350x197-c-default.jpg"
   },
   {
-    "doorOpenDateTime": "2022-10-13T17:00:00.000Z",
-    "startDateTime": "2022-10-13T17:30:00.000Z",
+    "doorOpenDateTime": null,
+    "startDateTime": null,
     "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/wolves-in-the-throne-room-2/",
-    "title": "Wolves in the Throne Room",
+    "venueEventUrl": "https://www.doornroosje.nl/event/soulcrusher-2022-2/",
+    "title": "Soulcrusher 2022",
     "location": "doornroosje",
-    "price": 25.5,
-    "shortText": "Soulcrusher",
-    "longText": "../public/texts/197f8477-9460-4e1e-94ac-8245b1a0446b.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2021/08/Wolves-in-the-Throne-Room-1920x1080-1-350x197-c-default.jpg"
+    "price": null,
+    "shortText": null,
+    "longText": null,
+    "image": null
   },
   {
-    "doorOpenDateTime": "2022-11-12T20:00:00.000Z",
-    "startDateTime": "2022-11-12T21:00:00.000Z",
+    "doorOpenDateTime": "2023-03-16T18:30:00.000Z",
+    "startDateTime": "2023-03-16T19:15:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/birds-in-row/",
-    "title": "Birds in Row",
+    "venueEventUrl": "https://www.doornroosje.nl/event/tarja-4/",
+    "title": "Tarja",
     "location": "doornroosje",
-    "price": 14.5,
-    "shortText": "Soulcrusher",
-    "longText": "../public/texts/42d976db-4df9-4def-9e20-3e4791772030.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2022/05/Birds-in-Row-min-1934x1088-350x197-c-default.jpg"
-  },
-  {
-    "doorOpenDateTime": "2023-02-25T18:00:00.000Z",
-    "startDateTime": "2023-02-25T18:45:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/hang-youth-3/",
-    "title": "Hang Youth",
-    "location": "doornroosje",
-    "price": 17.5,
-    "shortText": "Net bevestigd",
-    "longText": "../public/texts/4ac71384-2bff-47f1-8290-b4ea55ffdc0c.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2022/06/hangyouth-1920x1080-2023-1934x1088-350x197-c-default.jpg"
+    "price": 32,
+    "shortText": "Fortarock",
+    "longText": "../public/texts/7f363eee-40df-4fe5-a085-69790f409cf8.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2021/09/Tarja-1-1920x1080-1-350x197-c-default.jpg"
   }
 ]

@@ -1,15 +1,51 @@
 [
   {
-    "doorOpenDateTime": "2022-08-27T16:30:00.000Z",
-    "startDateTime": "2022-08-27T18:00:00.000Z",
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-07-09T18:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/passenger",
-    "title": "Passenger",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/madness",
+    "title": "Madness",
+    "location": "afaslive",
+    "price": 53.9,
+    "shortText": null,
+    "longText": "../public/texts/d79b4db2-b2f1-4cbe-931e-19ef65327e2a.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2022/07-juli/_agendaitem/Madness.jpg"
+  },
+  {
+    "doorOpenDateTime": "2022-09-28T16:30:00.000Z",
+    "startDateTime": "2022-09-28T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.afaslive.nl/agenda/biffy-clyro",
+    "title": "Biffy Clyro",
+    "location": "afaslive",
+    "price": 43.68,
+    "shortText": null,
+    "longText": "../public/texts/d22db91c-bc3b-4ca1-aed4-5384d5f55dfd.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2022/09-september/_agendaitem/Biffy-Clyro-nieuwe.jpg"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-10-02T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.afaslive.nl/agenda/machine-head-amon-amarth",
+    "title": "Machine Head & Amon Amarth",
+    "location": "afaslive",
+    "price": 60.48,
+    "shortText": null,
+    "longText": "../public/texts/896ad3c6-8b57-4115-a1a1-c908c9e57377.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2022/10-oktober/_agendaitem/Machine-Head-Amon-Amarth.jpg"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-10-13T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.afaslive.nl/agenda/kasabian",
+    "title": "Kasabian",
     "location": "afaslive",
     "price": 44.8,
     "shortText": null,
-    "longText": "../public/texts/d5b3c7a6-9374-4a1b-bf4b-15f75479ae49.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2021/10-oktober/_agendaitem/6944/Passenger.jpg"
+    "longText": "../public/texts/dbab3311-6c0d-4de0-b89a-93921a078bcf.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2022/10-oktober/_agendaitem/Kasabian.jpg"
   },
   {
     "doorOpenDateTime": null,
@@ -20,7 +56,7 @@
     "location": "afaslive",
     "price": 67.2,
     "shortText": null,
-    "longText": "../public/texts/08732b1b-cd64-4d27-be3c-966d7339524f.html",
+    "longText": "../public/texts/a6e72458-a434-49c0-9bc8-6086138c0e72.html",
     "image": "https://www.afaslive.nl/files/Agenda/2022/03-maart/_agendaitem/Counting-Crows.jpg"
   },
   {
@@ -32,7 +68,7 @@
     "location": "afaslive",
     "price": 50.4,
     "shortText": null,
-    "longText": "../public/texts/2a62c5c8-cca5-4591-8654-0c3b6742afde.html",
+    "longText": "../public/texts/59141088-ddda-4df5-a449-dc146cf00cf9.html",
     "image": "https://www.afaslive.nl/files/Agenda/2022/11-november/_agendaitem/Sigur-Ros.jpg"
   },
   {
@@ -44,7 +80,19 @@
     "location": "afaslive",
     "price": 88.48,
     "shortText": null,
-    "longText": "../public/texts/9f7a7c0a-8f3c-4244-9394-e5cd3b38dbd6.html",
+    "longText": "../public/texts/76a70e14-a63a-4f39-b17c-b19ce0ee34f5.html",
     "image": "https://www.afaslive.nl/files/Agenda/2022/03-maart/_agendaitem/Sting.jpg"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-04-14T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.afaslive.nl/agenda/avril-lavigne-1",
+    "title": "Avril Lavigne",
+    "location": "afaslive",
+    "price": 47.04,
+    "shortText": null,
+    "longText": "../public/texts/01ce0808-1ee0-4f33-8d96-30a7f405dacd.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2022/02-februari/_agendaitem/Avril-Lavigne.jpg"
   }
 ]

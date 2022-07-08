@@ -1,50 +1,38 @@
 [
   {
-    "doorOpenDateTime": "2022-07-01T16:30:00.000Z",
-    "startDateTime": "2022-07-01T18:00:00.000Z",
+    "doorOpenDateTime": "2022-08-27T16:30:00.000Z",
+    "startDateTime": "2022-08-27T18:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/jack-white",
-    "title": "Jack White",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/passenger",
+    "title": "Passenger",
     "location": "afaslive",
-    "price": 56,
+    "price": 44.8,
     "shortText": null,
-    "longText": "../public/texts/5d61a8bd-8113-4609-b6d2-96a68618c643.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2022/07-juli/_agendaitem/JackWhite.jpg"
+    "longText": "../public/texts/17ca2a82-f52c-43d7-a840-eb71b58ced92.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2021/10-oktober/_agendaitem/6944/Passenger.jpg"
+  },
+  {
+    "doorOpenDateTime": "2023-04-07T16:30:00.000Z",
+    "startDateTime": "2023-04-07T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.afaslive.nl/agenda/eels-1",
+    "title": "EELS",
+    "location": "afaslive",
+    "price": 46.5,
+    "shortText": null,
+    "longText": "../public/texts/7f3bb3c5-daff-4769-ba2a-9a1baf8ded19.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2022/04-april/_agendaitem/Eels.jpg"
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-09-30T18:00:00.000Z",
+    "startDateTime": "2023-05-20T18:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/years-years",
-    "title": "Years & Years",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/the-offspring",
+    "title": "The Offspring",
     "location": "afaslive",
-    "price": 39.2,
+    "price": 49.28,
     "shortText": null,
-    "longText": "../public/texts/2d8edf5c-276e-4c17-8e0d-b6c3255de96c.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2022/09-september/_agendaitem/Years-Years.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-10-05T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/james-taylor-1",
-    "title": "James Taylor",
-    "location": "afaslive",
-    "price": 61.6,
-    "shortText": null,
-    "longText": "../public/texts/2dc191de-9f97-4d89-b5c8-47ef69f90ebd.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2022/01-januari/_agendaitem/James-Taylor.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2023-04-14T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/avril-lavigne-1",
-    "title": "Avril Lavigne",
-    "location": "afaslive",
-    "price": 47.04,
-    "shortText": null,
-    "longText": "../public/texts/0f12d902-4133-4f5f-ac26-2888cbe19abe.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2022/02-februari/_agendaitem/Avril-Lavigne.jpg"
+    "longText": "../public/texts/33d99bcb-f3f7-4c77-8c41-b3f0a5e02391.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2023/5-Mei/_agendaitem/The-Offspring.jpg"
   }
 ]

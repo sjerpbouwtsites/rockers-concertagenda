@@ -1,50 +1,62 @@
 [
   {
-    "doorOpenDateTime": "2022-07-01T00:21:00.000Z",
-    "startDateTime": "2022-07-01T00:22:00.000Z",
+    "doorOpenDateTime": "2022-08-17T18:00:00.000Z",
+    "startDateTime": "2022-08-17T19:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/x-raiders-2/",
-    "title": "X Raiders",
+    "venueEventUrl": "https://www.doornroosje.nl/event/pink-siifu-negro-6/",
+    "title": "Pink Siifu & Negro 6′!",
     "location": "doornroosje",
-    "price": 14,
-    "shortText": "Special Farewell Show (ft. Rectum Raiders)",
-    "longText": "../public/texts/e0fc3be0-3503-424e-9b36-59bec910fe5f.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2022/05/X-Raiders-1732x1088-350x197-c-default.jpg"
-  },
-  {
-    "doorOpenDateTime": "2022-09-15T19:00:00.000Z",
-    "startDateTime": "2022-09-15T20:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/stake-4/",
-    "title": "Stake",
-    "location": "doornroosje",
-    "price": 13,
+    "price": 14.5,
     "shortText": null,
-    "longText": "../public/texts/64b4431a-ac14-4a49-8fa6-778c278b36c8.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2021/08/Stake-1920x1080-1-350x197-c-default.jpg"
+    "longText": "../public/texts/72dba2a4-91fd-4984-bdea-eba3ad5328c7.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2022/05/20220817-Pink-Siifu-350x197-c-default.jpg"
   },
   {
-    "doorOpenDateTime": null,
-    "startDateTime": null,
+    "doorOpenDateTime": "2022-09-28T17:30:00.000Z",
+    "startDateTime": "2022-09-28T18:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/soulcrusher-2022-2/",
-    "title": "Soulcrusher 2022",
+    "venueEventUrl": "https://www.doornroosje.nl/event/obscura-2/",
+    "title": "Obscura + Persefone + Disillusion",
     "location": "doornroosje",
-    "price": null,
-    "shortText": null,
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": "2023-03-16T18:30:00.000Z",
-    "startDateTime": "2023-03-16T19:15:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/tarja-4/",
-    "title": "Tarja",
-    "location": "doornroosje",
-    "price": 32,
+    "price": 24,
     "shortText": "Fortarock",
-    "longText": "../public/texts/28c3b75d-977c-4df8-9687-cffd49704eff.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2021/09/Tarja-1-1920x1080-1-350x197-c-default.jpg"
+    "longText": "../public/texts/a216ed5f-fcb5-4ddc-95c3-8036d217a22f.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2021/09/Obscura-350x197-c-default.jpg"
+  },
+  {
+    "doorOpenDateTime": "2022-10-26T19:00:00.000Z",
+    "startDateTime": "2022-10-26T20:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.doornroosje.nl/event/life/",
+    "title": "LIFE",
+    "location": "doornroosje",
+    "price": 10,
+    "shortText": null,
+    "longText": "../public/texts/69991848-ba81-464e-936d-b591657ae1d4.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2022/03/LIFE-MOON-1920x1080-1-350x197-c-default.jpg"
+  },
+  {
+    "doorOpenDateTime": "2022-11-28T19:00:00.000Z",
+    "startDateTime": "2022-11-28T19:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.doornroosje.nl/event/halocene/",
+    "title": "Halocene",
+    "location": "doornroosje",
+    "price": 16,
+    "shortText": "Fortarock",
+    "longText": "../public/texts/4f2b5e6f-87e5-4f40-9d24-fc01cde9d942.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2022/03/Halocene-1934x1088-c-default.jpg22-350x197-c-default.jpg"
+  },
+  {
+    "doorOpenDateTime": "2023-04-01T04:19:00.000Z",
+    "startDateTime": "2023-04-01T04:19:30.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.doornroosje.nl/event/swallow-the-sun-2/",
+    "title": "Swallow the Sun + Draconian",
+    "location": "doornroosje",
+    "price": 24,
+    "shortText": "Fortarock",
+    "longText": "../public/texts/763f0efe-d30c-4dc9-af0f-1b84d1e313ca.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2022/06/Swallow-The-Sun-1-1920x1088-350x197-c-default.jpg"
   }
 ]
