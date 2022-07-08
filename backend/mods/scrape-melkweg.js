@@ -20,6 +20,7 @@ async function scrapeMelkweg(workerIndex) {
   try {
     const baseMusicEvents = await makeBaseEventList(browser, workerIndex);
 
+
     await fillMusicEvents(browser, baseMusicEvents, workerIndex);
   } catch (error) {
     handleError(error);
@@ -100,6 +101,8 @@ async function makeBaseEventList(browser, workerIndex) {
     waitUntil: "load",
   });
 
+  await autoScroll(page);
+  await autoScroll(page);
   await autoScroll(page);
   await autoScroll(page);
 
