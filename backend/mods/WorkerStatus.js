@@ -130,9 +130,6 @@ export default class WorkerStatus {
   }
   static programEnd() {
     EventsList.printAllToJSON();
-    console.log(" ");
-    console.log("😎😎😎😎😎");
-    console.log(" ");
     console.log("PROGRAM END");
     setTimeout(() => {
       process.exit();

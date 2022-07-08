@@ -1,72 +1,72 @@
 {
-  "locations": [
-    {
-      "name": "metalfan",
-      "count": 0
-    },
-    {
-      "name": "melkweg",
-      "count": 0
-    },
-    {
-      "name": "baroeg",
-      "count": 47
-    },
-    {
-      "name": "patronaat",
-      "count": 29
-    },
-    {
+  "locations": {
+    "013": {
       "name": "013",
       "count": 63
     },
-    {
-      "name": "effenaar",
-      "count": 11
+    "afaslive": {
+      "name": "afaslive",
+      "count": 23
     },
-    {
-      "name": "tivolivredenburg",
-      "count": 0
+    "baroeg": {
+      "name": "baroeg",
+      "count": 47
     },
-    {
-      "name": "doornroosje",
-      "count": 26
-    },
-    {
-      "name": "metropool",
-      "count": 21
-    },
-    {
-      "name": "boerderij",
-      "count": 15
-    },
-    {
-      "name": "dynamo",
-      "count": 8
-    },
-    {
-      "name": "occii",
-      "count": 9
-    },
-    {
+    "bibelot": {
       "name": "bibelot",
       "count": 11
     },
-    {
+    "boerderij": {
+      "name": "boerderij",
+      "count": 15
+    },
+    "dbs": {
       "name": "dbs",
       "count": 20
     },
-    {
+    "doornroosje": {
+      "name": "doornroosje",
+      "count": 26
+    },
+    "dynamo": {
+      "name": "dynamo",
+      "count": 8
+    },
+    "effenaar": {
+      "name": "effenaar",
+      "count": 11
+    },
+    "gebrdenobel": {
       "name": "gebrdenobel",
       "count": 17
     },
-    {
+    "melkweg": {
+      "name": "melkweg",
+      "count": 0
+    },
+    "metalfan": {
+      "name": "metalfan",
+      "count": 91
+    },
+    "metropool": {
+      "name": "metropool",
+      "count": 21
+    },
+    "neushoorn": {
       "name": "neushoorn",
       "count": 0
     },
-    {
-      "name": "afaslive",
-      "count": 23
+    "occii": {
+      "name": "occii",
+      "count": 9
+    },
+    "patronaat": {
+      "name": "patronaat",
+      "count": 29
+    },
+    "tivolivredenburg": {
+      "name": "tivolivredenburg",
+      "count": 0
     }
-  ]
+  }
 }

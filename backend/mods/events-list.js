@@ -76,9 +76,10 @@ export default class EventsList {
     const pathToEventList = fsDirections.eventLists;
     const eventListTimestamps = Object.keys(
       JSON.parse(fs.readFileSync(fsDirections.timestampsJson))
-    );
+    )
 
     EventsList._events = [];
+    EventsList._meta.locations = {};
     const allEventLists = fs
       .readdirSync(fsDirections.eventLists)
       .filter((fileInEventsListDir) => {
@@ -91,25 +92,20 @@ export default class EventsList {
         return false;
       })
       .map((fileInEventsListDir) => {
-        return JSON.parse(
+        const parsedJSON = JSON.parse(
           fs.readFileSync(`${pathToEventList}/${fileInEventsListDir}`)
         );
+        const correspondingTimestampName = fileInEventsListDir
+          .replace(/-\d/, "")
+          .replace(".json", "");
+        if (!EventsList._meta.locations[correspondingTimestampName]) {
+          EventsList._meta.locations[correspondingTimestampName] = {};
+          EventsList._meta.locations[correspondingTimestampName].name = correspondingTimestampName
+          EventsList._meta.locations[correspondingTimestampName].count = 0;
+        }
+        EventsList._meta.locations[correspondingTimestampName].count = EventsList._meta.locations[correspondingTimestampName].count + parsedJSON.length
+        return parsedJSON;
       });
-
-    EventsList._meta.locations = eventListTimestamps.map(locatieNaam => {
-
-      let count = 0;
-      allEventLists.filter(eventList => {
-        if (!eventList.length) return;
-        if (eventList[0].location !== locatieNaam) return;
-        count = count + eventList.length;
-      });
-
-      return {
-        name: locatieNaam,
-        count
-      }
-    });
 
 
     EventsList._events = allEventLists.flat();
@@ -157,7 +153,7 @@ export default class EventsList {
     console.log("events written to events-list.json");
     console.log(" ")
     console.log("Events per location:")
-    EventsList._meta.locations.forEach(locationMeta => {
+    Object.values(EventsList._meta.locations).forEach(locationMeta => {
       console.log(`${locationMeta.name.padEnd(30, ' ')} ${locationMeta.count}`)
     })
   }
