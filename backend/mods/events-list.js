@@ -3,6 +3,7 @@ import fsDirections from "./fs-directions.js";
 import { handleError, errorAfterSeconds } from "./tools.js";
 export default class EventsList {
   static _events = [];
+  static _meta = {};
 
   static save(name, workerIndex = null) {
     try {
@@ -95,6 +96,22 @@ export default class EventsList {
         );
       });
 
+    EventsList._meta.locations = eventListTimestamps.map(locatieNaam => {
+
+      let count = 0;
+      allEventLists.filter(eventList => {
+        if (!eventList.length) return;
+        if (eventList[0].location !== locatieNaam) return;
+        count = count + eventList.length;
+      });
+
+      return {
+        name: locatieNaam,
+        count
+      }
+    });
+
+
     EventsList._events = allEventLists.flat();
 
     EventsList._events.sort((eventA, eventB) => {
@@ -114,10 +131,21 @@ export default class EventsList {
       }
     });
     fs.writeFileSync(
+      fsDirections.metaJson,
+      JSON.stringify(EventsList._meta, null, "  "),
+      "utf-8"
+    );
+
+    fs.writeFileSync(
       fsDirections.eventsListJson,
       JSON.stringify(EventsList._events, null, "  "),
       "utf-8"
     );
+    fs.copyFileSync(
+      fsDirections.metaJson,
+      fsDirections.metaPublicJson
+    );
+
     fs.copyFileSync(
       fsDirections.eventsListJson,
       fsDirections.eventsListPublicJson
@@ -127,6 +155,11 @@ export default class EventsList {
       fsDirections.timestampsPublicJson
     );
     console.log("events written to events-list.json");
+    console.log(" ")
+    console.log("Events per location:")
+    EventsList._meta.locations.forEach(locationMeta => {
+      console.log(`${locationMeta.name.padEnd(30, ' ')} ${locationMeta.count}`)
+    })
   }
 }
 

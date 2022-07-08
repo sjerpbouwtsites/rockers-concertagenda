@@ -12,8 +12,8 @@ function init() {
 
   const workerList = [];
 
-  if (EventsList.isOld("metalfan")) {
-    //workerList.push([fsDirections.scrapeMetalfan, "metalfan", 0]);
+  if (EventsList.isOld("metalfan") || true) {
+    workerList.push([fsDirections.scrapeMetalfan, "metalfan", 0]);
   }
   if (EventsList.isOld("baroeg")) {
     try {
@@ -90,7 +90,7 @@ function init() {
     workerList.push([fsDirections.scrapeMetropool, "metropool", 3]);
   }
 
-  if (EventsList.isOld("boerderij") || true) {
+  if (EventsList.isOld("boerderij")) {
     workerList.push([fsDirections.scrapeBoerderij, "boerderij", 0]);
   }
 

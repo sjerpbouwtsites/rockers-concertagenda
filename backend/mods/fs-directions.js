@@ -8,6 +8,7 @@ const fsDirections = {
   errorLog: path.resolve("./temp/error.log"),
   baroegJson: path.resolve("./event-lists/baroeg.json"),
   eventsListJson: path.resolve("./event-lists/events-list.json"),
+  metaJson: path.resolve("./event-lists/meta.json"),
   boerderijJson: path.resolve("./event-lists/boerderij.json"),
   '013Json': path.resolve("./event-lists/013.json"),
   patronaatJson: path.resolve("./event-lists/patronaat.json"),
@@ -25,6 +26,7 @@ const fsDirections = {
   publicTexts: path.relative("./", "../public/texts"),
   eventsListPublicJson: path.resolve("../public/events-list.json"),
   timestampsPublicJson: path.resolve("../public/timestamps.json"),
+  metaPublicJson: path.resolve("../public/meta.json"),
 };
 
 fs.readdirSync(fsDirections.mods).forEach((mod) => {
