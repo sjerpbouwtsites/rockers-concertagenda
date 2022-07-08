@@ -22,7 +22,7 @@ async function scrapeTivolivredenburg(workerIndex) {
   try {
     const baseMusicEvents = await Promise.race([
       makeBaseEventList(browser, workerIndex),
-      errorAfterSeconds(15000),
+      errorAfterSeconds(30000),
     ]);
     await fillMusicEvents(browser, baseMusicEvents, workerIndex);
   } catch (error) {
@@ -129,11 +129,11 @@ async function getPageInfo(page) {
       const res = {};
       res.cancelReason = "";
       res.priceTextcontent =
-        document.querySelector(".price .amount")?.textContent.trim() ?? null;
+        document.querySelector(".btn-group__price")?.textContent.trim() ?? null;
       res.priceContexttext =
-        document.querySelector(".event-content")?.textContent.trim() ?? null;
+        document.querySelector(".event-cta")?.textContent.trim() ?? null;
       res.longTextHTML =
-        document.querySelector(".the_content")?.innerHTML ?? null;
+        document.querySelector(".event__text")?.innerHTML ?? null;
 
       const startDateMatch = document.location.href.match(/\d\d-\d\d-\d\d\d\d/); //
 
@@ -142,35 +142,35 @@ async function getPageInfo(page) {
       }
 
       if (!!res.startDate) {
-        const infoInner = Array.from(
-          document.querySelectorAll(".info-block--times .info-inner")
+        const eventInfoDtDD = Array.from(
+          document.querySelector(".event__info .description-list").children
         );
-        res.startTime =
-          infoInner
-            .find((row) => row.innerHTML.includes("aanvang"))
-            ?.querySelector(".label")
-            ?.textContent.trim() ?? null;
-        res.openDoorTime =
-          infoInner
-            .find((row) => row.innerHTML.includes("open"))
-            ?.querySelector(".label")
-            ?.textContent.trim() ?? null;
-        res.endTime =
-          infoInner
-            .find((row) => row.innerHTML.includes("eind"))
-            ?.querySelector(".label")
-            ?.textContent.trim() ?? null;
-
-        res.doorOpenDateTime = res.openDoorTime
-          ? new Date(`${res.startDate}T${res.openDoorTime}`).toISOString()
-          : null;
-        res.startDateTime = res.startTime
-          ? new Date(`${res.startDate}T${res.startTime}`).toISOString()
-          : null;
-        res.endDateTime = res.endTime
-          ? new Date(`${res.startDate}T${res.endTime}`).toISOString()
-          : null;
+        res.startTime = null;
+        res.openDoorTime = null;
+        res.endTime = null;
+        eventInfoDtDD.forEach((eventInfoDtDDItem, index) => {
+          if (eventInfoDtDDItem.textContent.toLowerCase().includes("aanvang")) {
+            res.startTime = eventInfoDtDD[index + 1].textContent
+          }
+          if (eventInfoDtDDItem.textContent.toLowerCase().includes("open")) {
+            res.openDoorTime = eventInfoDtDD[index + 1].textContent
+          }
+          if (eventInfoDtDDItem.textContent.toLowerCase().includes("eind")) {
+            res.endTime = eventInfoDtDD[index + 1].textContent
+          }
+        })
       }
+
+      res.doorOpenDateTime = res.openDoorTime
+        ? new Date(`${res.startDate}T${res.openDoorTime}`).toISOString()
+        : null;
+      res.startDateTime = res.startTime
+        ? new Date(`${res.startDate}T${res.startTime}`).toISOString()
+        : null;
+      res.endDateTime = res.endTime
+        ? new Date(`${res.startDate}T${res.endTime}`).toISOString()
+        : null;
+
 
       return res;
     }, null);
@@ -191,20 +191,22 @@ async function makeBaseEventList(browser, workerIndex) {
     }
   );
   const rawEvents = await page.evaluate((workerIndex) => {
-    return Array.from(document.querySelectorAll(".item--agenda"))
+    return Array.from(document.querySelectorAll(".agenda-list-item"))
       .filter((eventEl, index) => {
         return index % 4 === workerIndex;
       })
       .map((eventEl) => {
         const res = {};
-        res.title = eventEl.querySelector("h3")?.textContent.trim() ?? null;
-        res.shortText = eventEl.querySelector("h4")?.textContent.trim() ?? null;
-        res.image = eventEl.querySelector("img")?.src ?? null;
-        res.venueEventUrl = eventEl.href;
+        res.title = eventEl.querySelector(".agenda-list-item__title")?.textContent.trim() ?? null;
+        res.shortText = eventEl.querySelector(".agenda-list-item__text")?.textContent.trim() ?? null;
+        res.image = eventEl.querySelector(".agenda-list-item__figure img")?.src.replace(/-\d\d\dx\d\d\d.jpg/, '.jpg') ?? null;
+        res.venueEventUrl = eventEl.querySelector('.agenda-list-item__title-link').href;
         res.location = "tivolivredenburg";
         return res;
       });
   }, workerIndex);
+
+
   return rawEvents
     .filter(basicMusicEventsFilter)
     .map((event) => new MusicEvent(event));

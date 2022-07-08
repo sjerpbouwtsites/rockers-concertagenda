@@ -1,0 +1,136 @@
+
+  Baroeg Error - TypeError - 5:59:01 AM
+  TypeError: Cannot read properties of undefined (reading 'name')
+    at handleError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:15:26)
+    at getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:179:5)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:75:22)
+    at async scrapeTivolivredenburg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:27:5) 
+  Cannot read properties of undefined (reading 'name')
+  
+  
+  Baroeg Error - Error - 5:59:01 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'textContent')
+    at __puppeteer_evaluation_script__:29:57
+    at Array.forEach (<anonymous>)
+    at __puppeteer_evaluation_script__:24:23
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:128:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:75:22)
+    at async scrapeTivolivredenburg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:27:5) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'textContent')
+    at __puppeteer_evaluation_script__:29:57
+    at Array.forEach (<anonymous>)
+    at __puppeteer_evaluation_script__:24:23
+  
+  
+  Baroeg Error - TypeError - 5:59:01 AM
+  TypeError: Cannot read properties of undefined (reading 'name')
+    at handleError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:15:26)
+    at getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:179:5)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:75:22)
+    at async scrapeTivolivredenburg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:27:5) 
+  Cannot read properties of undefined (reading 'name')
+  
+  
+  Baroeg Error - Error - 5:59:01 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'textContent')
+    at __puppeteer_evaluation_script__:29:57
+    at Array.forEach (<anonymous>)
+    at __puppeteer_evaluation_script__:24:23
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:128:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:75:22)
+    at async scrapeTivolivredenburg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:27:5) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'textContent')
+    at __puppeteer_evaluation_script__:29:57
+    at Array.forEach (<anonymous>)
+    at __puppeteer_evaluation_script__:24:23
+  
+  
+  Baroeg Error - TypeError - 5:58:59 AM
+  TypeError: Cannot read properties of undefined (reading 'name')
+    at handleError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:15:26)
+    at getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:179:5)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:75:22)
+    at async scrapeTivolivredenburg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:27:5) 
+  Cannot read properties of undefined (reading 'name')
+  
+  
+  Baroeg Error - Error - 5:58:59 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'textContent')
+    at __puppeteer_evaluation_script__:29:57
+    at Array.forEach (<anonymous>)
+    at __puppeteer_evaluation_script__:24:23
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:128:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:75:22)
+    at async scrapeTivolivredenburg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:27:5) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'textContent')
+    at __puppeteer_evaluation_script__:29:57
+    at Array.forEach (<anonymous>)
+    at __puppeteer_evaluation_script__:24:23
+  
+  
+  Baroeg Error - TypeError - 5:58:58 AM
+  TypeError: Cannot read properties of undefined (reading 'name')
+    at handleError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:15:26)
+    at getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:179:5)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:75:22)
+    at async scrapeTivolivredenburg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:27:5) 
+  Cannot read properties of undefined (reading 'name')
+  
+  
+  Baroeg Error - Error - 5:58:58 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'textContent')
+    at __puppeteer_evaluation_script__:29:57
+    at Array.forEach (<anonymous>)
+    at __puppeteer_evaluation_script__:24:23
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:128:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:75:22)
+    at async scrapeTivolivredenburg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:27:5) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'textContent')
+    at __puppeteer_evaluation_script__:29:57
+    at Array.forEach (<anonymous>)
+    at __puppeteer_evaluation_script__:24:23
+  
+  
+  Baroeg Error - TypeError - 5:58:57 AM
+  TypeError: Cannot read properties of undefined (reading 'name')
+    at handleError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:15:26)
+    at getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:179:5)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:75:22)
+    at async scrapeTivolivredenburg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:27:5) 
+  Cannot read properties of undefined (reading 'name')
+  
+  
+  Baroeg Error - Error - 5:58:57 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'textContent')
+    at __puppeteer_evaluation_script__:29:57
+    at Array.forEach (<anonymous>)
+    at __puppeteer_evaluation_script__:24:23
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:128:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:75:22)
+    at async scrapeTivolivredenburg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:27:5) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'textContent')
+    at __puppeteer_evaluation_script__:29:57
+    at Array.forEach (<anonymous>)
+    at __puppeteer_evaluation_script__:24:23
+  
+  
