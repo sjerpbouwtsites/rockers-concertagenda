@@ -1,62 +1,50 @@
 [
   {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-09-30T18:00:00.000Z",
+    "doorOpenDateTime": "2022-10-26T16:30:00.000Z",
+    "startDateTime": "2022-10-26T18:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/years-years",
-    "title": "Years & Years",
-    "location": "afaslive",
-    "price": 39.2,
-    "shortText": null,
-    "longText": "../public/texts/7f0578de-7f16-4a59-8d73-87bcb22f97e6.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2022/09-september/_agendaitem/Years-Years.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-10-05T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/james-taylor-1",
-    "title": "James Taylor",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/brit-floyd-3",
+    "title": "Brit Floyd",
     "location": "afaslive",
     "price": 61.6,
     "shortText": null,
-    "longText": "../public/texts/56d3f455-16d6-49fe-a1a4-97fea312bc90.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2022/01-januari/_agendaitem/James-Taylor.jpg"
+    "longText": "../public/texts/206d5705-aede-474b-8009-1ab9d9513e2e.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2020/10-oktober/_agendaitem/Brit-Floyd.jpg"
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-11-08T19:00:00.000Z",
+    "startDateTime": "2022-11-04T20:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/lil-nas-x",
-    "title": "Lil Nas X",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/rampage",
+    "title": "RAMPAGE",
     "location": "afaslive",
-    "price": 50.4,
+    "price": 38,
     "shortText": null,
-    "longText": "../public/texts/8db7a069-e9f0-4605-92ec-535e4d12e81e.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2022/11-november/_agendaitem/Lil-Nas-X.jpg"
+    "longText": "../public/texts/7e034ccc-4b70-4ef3-8567-07bb50330c7f.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2022/11-november/_agendaitem/Rampage.jpg"
+  },
+  {
+    "doorOpenDateTime": "2023-04-07T16:30:00.000Z",
+    "startDateTime": "2023-04-07T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.afaslive.nl/agenda/eels-1",
+    "title": "EELS",
+    "location": "afaslive",
+    "price": 46.5,
+    "shortText": null,
+    "longText": "../public/texts/91a61008-226d-4692-ba85-0ba4c89daa4c.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2022/04-april/_agendaitem/Eels.jpg"
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-11-13T19:00:00.000Z",
+    "startDateTime": "2023-05-20T18:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/kid-cudi",
-    "title": "Kid Cudi",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/the-offspring",
+    "title": "The Offspring",
     "location": "afaslive",
-    "price": 47.05,
+    "price": 49.28,
     "shortText": null,
-    "longText": "../public/texts/5e715032-e234-4b14-aa75-66a691ca4842.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2022/09-september/_agendaitem/Kid-Cudi-Nieuw.jpg"
-  },
-  {
-    "doorOpenDateTime": "2022-12-01T17:00:00.000Z",
-    "startDateTime": "2022-12-01T17:40:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/powerwolf-1",
-    "title": "POWERWOLF",
-    "location": "afaslive",
-    "price": 45,
-    "shortText": null,
-    "longText": "../public/texts/46271cb9-15bf-4638-9205-5f673655524c.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2021/10-oktober/_agendaitem/Powerwolf.jpg"
+    "longText": "../public/texts/147637f1-1e5c-4e70-94e2-9b0965838059.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2023/5-Mei/_agendaitem/The-Offspring.jpg"
   }
 ]

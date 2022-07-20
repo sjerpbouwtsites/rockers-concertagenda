@@ -121,7 +121,7 @@ function init() {
     workerList.push([fsDirections.scrapeGebrdenobel, "gebrdenobel", 0]);
   }
 
-  if (EventsList.isOld("neushoorn")) {
+  if (EventsList.isOld("neushoorn") || true) {
     workerList.push([fsDirections.scrapeNeushoorn, "neushoorn", 0]);
   }
 
