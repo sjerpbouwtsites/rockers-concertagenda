@@ -136,6 +136,10 @@ function init() {
     workerList.push([fsDirections.scrapeIduna, "iduna", 0]);
   }
 
+  if (EventsList.isOld("kavka") || true) {
+    workerList.push([fsDirections.scrapeKavka, "kavka", 0]);
+  }
+
   walkThroughWorkerList(workerList);
 
   WorkerStatus.reportOnActiveWorkers();

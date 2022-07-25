@@ -1,4 +1,125 @@
 
+  Baroeg Error - TimeoutError - 9:30:26 AM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  Baroeg Error - TimeoutError - 9:28:32 AM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  Baroeg Error - TimeoutError - 8:56:17 AM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  Baroeg Error - TimeoutError - 8:51:53 AM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  Baroeg Error - TimeoutError - 8:48:17 AM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  Baroeg Error - Error - 8:42:55 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of null (reading 'innerHTML')
+    at __puppeteer_evaluation_script__:51:63
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-kavka.js:90:10)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-kavka.js:74:18)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-kavka.js:27:5) 
+  Evaluation failed: TypeError: Cannot read properties of null (reading 'innerHTML')
+    at __puppeteer_evaluation_script__:51:63
+  
+  
+  Baroeg Error - Error - 8:37:55 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of null (reading 'innerHTML')
+    at __puppeteer_evaluation_script__:51:63
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-kavka.js:90:10)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-kavka.js:74:18)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-kavka.js:27:5) 
+  Evaluation failed: TypeError: Cannot read properties of null (reading 'innerHTML')
+    at __puppeteer_evaluation_script__:51:63
+  
+  
+  Baroeg Error - Error - 8:35:54 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of null (reading 'innerHTML')
+    at __puppeteer_evaluation_script__:51:63
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-kavka.js:90:10)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-kavka.js:74:18)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-kavka.js:27:5) 
+  Evaluation failed: TypeError: Cannot read properties of null (reading 'innerHTML')
+    at __puppeteer_evaluation_script__:51:63
+  
+  
+  Baroeg Error - Error - 8:33:24 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of null (reading 'innerHTML')
+    at __puppeteer_evaluation_script__:51:63
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-kavka.js:90:10)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-kavka.js:74:18)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-kavka.js:27:5) 
+  Evaluation failed: TypeError: Cannot read properties of null (reading 'innerHTML')
+    at __puppeteer_evaluation_script__:51:63
+  
+  
+  Baroeg Error - Error - 8:32:57 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of null (reading 'innerHTML')
+    at __puppeteer_evaluation_script__:51:63
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-kavka.js:90:10)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-kavka.js:74:18)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-kavka.js:27:5) 
+  Evaluation failed: TypeError: Cannot read properties of null (reading 'innerHTML')
+    at __puppeteer_evaluation_script__:51:63
+  
+  
+  Baroeg Error - Error - 8:32:05 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of null (reading 'innerHTML')
+    at __puppeteer_evaluation_script__:51:63
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-kavka.js:90:10)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-kavka.js:74:18)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-kavka.js:27:5) 
+  Evaluation failed: TypeError: Cannot read properties of null (reading 'innerHTML')
+    at __puppeteer_evaluation_script__:51:63
+  
+  
+  Baroeg Error - Error - 8:20:12 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of null (reading 'innerHTML')
+    at __puppeteer_evaluation_script__:43:63
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-kavka.js:90:10)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-kavka.js:74:18)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-kavka.js:27:5) 
+  Evaluation failed: TypeError: Cannot read properties of null (reading 'innerHTML')
+    at __puppeteer_evaluation_script__:43:63
+  
+  
   Baroeg Error - DataCloneError - 6:48:09 AM
   DataCloneError: class EventsList {
   static _events = [];

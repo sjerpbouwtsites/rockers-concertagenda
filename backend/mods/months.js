@@ -50,6 +50,7 @@ export const gebrdenobelMonths = baroegMonths;
 export const neushoornMonths = baroegMonths;
 export const afasliveMonths = baroegMonths;
 export const idunaMonths = baroegMonths;
+export const kavkaMonths = dynamoMonths;
 
 const months = {
   afaslive: afasliveMonths,

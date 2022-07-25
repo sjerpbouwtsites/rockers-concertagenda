@@ -103,8 +103,11 @@ async function getBaseMusicEvents(browser) {
           "effenaar",
           "gebrdenobel",
           "iduna",
+          "kavka",
           "melkweg",
           "metropool",
+          "metropoolopenair",
+          "merleyn", // onderdeel doornroosje
           'neushoorn',
           "occii",
           "patronaat",
