@@ -121,7 +121,7 @@ function init() {
     workerList.push([fsDirections.scrapeGebrdenobel, "gebrdenobel", 0]);
   }
 
-  if (EventsList.isOld("neushoorn")) {
+  if (EventsList.isOld("neushoorn") || true) {
     workerList.push([fsDirections.scrapeNeushoorn, "neushoorn", 0]);
   }
 
@@ -132,7 +132,7 @@ function init() {
     workerList.push([fsDirections.scrapeAfaslive, "afaslive", 3]);
   }
 
-  if (EventsList.isOld("iduna") || true) {
+  if (EventsList.isOld("iduna")) {
     workerList.push([fsDirections.scrapeIduna, "iduna", 0]);
   }
 
