@@ -16,6 +16,7 @@ const fsDirections = {
   metalfanJson: path.resolve("./event-lists/metalfan.json"),
   bibelotJson: path.resolve("./event-lists/bibelot.json"),
   afasliveJson: path.resolve("./event-lists/afaslive.json"),
+  idunaJson: path.resolve("./event-lists/iduna.json"),
   dbsJson: path.resolve("./event-lists/dbs.json"),
   occiiJson: path.resolve("./event-lists/occii.json"),
   effenaarJson: path.resolve("./event-lists/effenaar.json"),

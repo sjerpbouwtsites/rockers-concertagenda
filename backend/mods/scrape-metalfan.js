@@ -92,21 +92,23 @@ async function getBaseMusicEvents(browser) {
 
       if (
         [
-          "baroeg",
-          "occii",
-          "boerderij",
-          "dynamo",
-          "patronaat",
           "013",
-          "effenaar",
-          "tivolivredenburg",
-          "doornroosje",
-          "metropool",
-          "melkweg",
-          "bibelot",
-          "gebrdenobel",
-          'neushoorn',
           "afaslive",
+          "baroeg",
+          "bibelot",
+          "boerderij",
+          "dbs",
+          "doornroosje",
+          "dynamo",
+          "effenaar",
+          "gebrdenobel",
+          "iduna",
+          "melkweg",
+          "metropool",
+          'neushoorn',
+          "occii",
+          "patronaat",
+          "tivolivredenburg",
         ].includes(locationName)
       ) {
         return;

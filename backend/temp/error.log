@@ -1,4 +1,169 @@
 
+  Baroeg Error - DataCloneError - 6:48:09 AM
+  DataCloneError: class EventsList {
+  static _events = [];
+  static _meta = {};
+
+  static save(name, workerIndex = null) {
+    t...<omitted>...
+} could not be cloned.
+    at new DOMException (node:internal/per_context/domexception:70:5)
+    at log (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:93:14)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-iduna.js:47:5
+    at <anonymous>
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-iduna.js:27:5) 
+  class EventsList {
+  static _events = [];
+  static _meta = {};
+
+  static save(name, workerIndex = null) {
+    t...<omitted>...
+} could not be cloned.
+  
+  
+  Baroeg Error - Error - 6:22:18 AM
+  Error: Evaluation failed: ReferenceError: metalEvents is not defined
+    at __puppeteer_evaluation_script__:19:15
+    at new Promise (<anonymous>)
+    at __puppeteer_evaluation_script__:7:12
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-iduna.js:153:21)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-iduna.js:25:29) 
+  Evaluation failed: ReferenceError: metalEvents is not defined
+    at __puppeteer_evaluation_script__:19:15
+    at new Promise (<anonymous>)
+    at __puppeteer_evaluation_script__:7:12
+  
+  
+  Baroeg Error - Error - 6:18:36 AM
+  Error: Evaluation failed: ReferenceError: page is not defined
+    at __puppeteer_evaluation_script__:6:5
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-iduna.js:153:21)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-iduna.js:25:29) 
+  Evaluation failed: ReferenceError: page is not defined
+    at __puppeteer_evaluation_script__:6:5
+  
+  
+  Baroeg Error - Error - 6:06:19 AM
+  Error: Evaluation failed: ReferenceError: metalEventsTitles is not defined
+    at __puppeteer_evaluation_script__:11:9
+    at Array.filter (<anonymous>)
+    at __puppeteer_evaluation_script__:10:8
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-iduna.js:169:22)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-iduna.js:25:29) 
+  Evaluation failed: ReferenceError: metalEventsTitles is not defined
+    at __puppeteer_evaluation_script__:11:9
+    at Array.filter (<anonymous>)
+    at __puppeteer_evaluation_script__:10:8
+  
+  
+  Baroeg Error - DataCloneError - 5:59:57 AM
+  DataCloneError: #<Promise> could not be cloned.
+    at new DOMException (node:internal/per_context/domexception:70:5)
+    at log (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:93:14)
+    at makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-iduna.js:167:3)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-iduna.js:25:29) 
+  #<Promise> could not be cloned.
+  
+  
+  Baroeg Error - DataCloneError - 5:57:22 AM
+  DataCloneError: #<Promise> could not be cloned.
+    at new DOMException (node:internal/per_context/domexception:70:5)
+    at log (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:93:14)
+    at makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-iduna.js:165:3)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-iduna.js:25:29) 
+  #<Promise> could not be cloned.
+  
+  
+  Baroeg Error - TypeError - 5:18:47 AM
+  TypeError: baseMusicEvents is not iterable
+    at fillMusicEvents (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-iduna.js:33:35)
+    at scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-iduna.js:26:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  baseMusicEvents is not iterable
+  
+  
+  Baroeg Error - Error - 5:12:56 AM
+  Error: hallo
+    at makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-iduna.js:154:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-iduna.js:25:29) 
+  hallo
+  
+  
+  Baroeg Error - Error - 5:11:02 AM
+  Error: hallo
+    at makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-iduna.js:150:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-iduna.js:25:29) 
+  hallo
+  
+  
+  Baroeg Error - Error - 5:10:46 AM
+  Error: Evaluation failed: SyntaxError: Unexpected token < in JSON at position 0
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-iduna.js:144:17)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-iduna.js:25:29) 
+  Evaluation failed: SyntaxError: Unexpected token < in JSON at position 0
+  
+  
+  Baroeg Error - Error - 5:10:23 AM
+  Error: Evaluation failed: ReferenceError: parentPort is not defined
+    at __puppeteer_evaluation_script__:3:7
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-iduna.js:144:17)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-iduna.js:25:29) 
+  Evaluation failed: ReferenceError: parentPort is not defined
+    at __puppeteer_evaluation_script__:3:7
+  
+  
+  Baroeg Error - Error - 5:08:06 AM
+  Error: Evaluation failed: ReferenceError: parentPort is not defined
+    at __puppeteer_evaluation_script__:3:7
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-iduna.js:144:17)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-iduna.js:25:29) 
+  Evaluation failed: ReferenceError: parentPort is not defined
+    at __puppeteer_evaluation_script__:3:7
+  
+  
+  Baroeg Error - Error - 5:07:09 AM
+  Error: Evaluation failed: ReferenceError: log is not defined
+    at __puppeteer_evaluation_script__:3:7
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-iduna.js:144:17)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-iduna.js:25:29) 
+  Evaluation failed: ReferenceError: log is not defined
+    at __puppeteer_evaluation_script__:3:7
+  
+  
+  Baroeg Error - Error - 5:06:07 AM
+  Error: Evaluation failed: SyntaxError: Unexpected token < in JSON at position 0
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-iduna.js:144:17)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-iduna.js:25:29) 
+  Evaluation failed: SyntaxError: Unexpected token < in JSON at position 0
+  
+  
   Baroeg Error - TypeError - 5:59:01 AM
   TypeError: Cannot read properties of undefined (reading 'name')
     at handleError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:15:26)

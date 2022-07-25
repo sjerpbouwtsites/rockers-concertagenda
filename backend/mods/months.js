@@ -49,6 +49,7 @@ export const dbsMonths = baroegMonths;
 export const gebrdenobelMonths = baroegMonths;
 export const neushoornMonths = baroegMonths;
 export const afasliveMonths = baroegMonths;
+export const idunaMonths = baroegMonths;
 
 const months = {
   afaslive: afasliveMonths,

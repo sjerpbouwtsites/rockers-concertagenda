@@ -1,4 +1,5 @@
 import EventsList from "./events-list.js";
+import { log } from "./tools.js";
 
 export default class MusicEvent {
   doorOpenDateTime = null;

@@ -1,18 +1,6 @@
 [
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-07-21T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "KISS",
-    "location": "ziggodome",
-    "price": null,
-    "shortText": "Ziggo Dome, Amsterdam",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
     "startDateTime": "2022-07-31T00:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": null,
@@ -715,7 +703,7 @@
     "title": "Audrey Horne en Seven Sisters",
     "location": "turock",
     "price": null,
-    "shortText": "Turock, Essen",
+    "shortText": "Turock, Essen (Duitsland)",
     "longText": null,
     "image": null
   },
@@ -752,6 +740,18 @@
     "location": "burgerweeshuis",
     "price": null,
     "shortText": "Burgerweeshuis, Deventer",
+    "longText": null,
+    "image": null
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-11-04T00:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": null,
+    "title": "Delain",
+    "location": "hedon",
+    "price": null,
+    "shortText": "Hedon, Zwolle",
     "longText": null,
     "image": null
   },

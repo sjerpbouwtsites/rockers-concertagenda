@@ -121,7 +121,7 @@ function init() {
     workerList.push([fsDirections.scrapeGebrdenobel, "gebrdenobel", 0]);
   }
 
-  if (EventsList.isOld("neushoorn") || true) {
+  if (EventsList.isOld("neushoorn")) {
     workerList.push([fsDirections.scrapeNeushoorn, "neushoorn", 0]);
   }
 
@@ -130,7 +130,10 @@ function init() {
     workerList.push([fsDirections.scrapeAfaslive, "afaslive", 1]);
     workerList.push([fsDirections.scrapeAfaslive, "afaslive", 2]);
     workerList.push([fsDirections.scrapeAfaslive, "afaslive", 3]);
+  }
 
+  if (EventsList.isOld("iduna") || true) {
+    workerList.push([fsDirections.scrapeIduna, "iduna", 0]);
   }
 
   walkThroughWorkerList(workerList);

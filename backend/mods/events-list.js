@@ -1,11 +1,12 @@
 import fs from "fs";
 import fsDirections from "./fs-directions.js";
-import { handleError, errorAfterSeconds } from "./tools.js";
+import { handleError, errorAfterSeconds, log } from "./tools.js";
 export default class EventsList {
   static _events = [];
   static _meta = {};
 
   static save(name, workerIndex = null) {
+
     try {
       EventsList.checkTimestampsExist();
       const pathToEventList = fsDirections.eventLists;
