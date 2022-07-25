@@ -89,9 +89,9 @@ async function getPageInfo(page) {
   return await page.evaluate(() => {
 
     const res = {};
-    res.image = document.querySelector('img.no-ratio.entered.lazyloaded')?.src ?? '';
+    res.image = document.querySelector('div.desktop img[src*="kavka.be/wp-content"]')?.src ?? '';
 
-    res.longTextHTML = document.querySelectorAll('h2 + .entry-content')?.innerHTML ?? 'NAKKO';
+    res.longTextHTML = document.querySelector('h2 + .entry-content')?.innerHTML ?? null;
 
     res.priceTextcontent =
       document.querySelector(".prijzen")?.textContent.trim() ??
@@ -108,17 +108,17 @@ async function makeBaseEventList(browser, workerIndex) {
 
   let rawEvents = await page.evaluate(kavkaMonths => {
     return Array.from(document.querySelectorAll('.events-list > a'))
-      .filter(event => {
-        const isMetalOrPunk = Array.from(event.querySelectorAll('.tags')).map(a => a.innerHTML.trim()).join(' ').toLowerCase().includes('metal')
-        const isCancelled = !!event.querySelector('.cancelled')
+      .filter(rawEvent => {
+        const isMetalOrPunk = Array.from(rawEvent.querySelectorAll('.tags')).map(a => a.innerHTML.trim()).join(' ').toLowerCase().includes('metal')
+        const isCancelled = !!rawEvent.querySelector('.cancelled')
         return isMetalOrPunk && !isCancelled
       })
-      .map(event => {
+      .map(rawEvent => {
 
         let startDateTime, ojee, startDateEl, startDate, startTime, startDay, startMonthName, startMonth, startMonthJSNumber, refDate, startYear, dateStringAttempt
         try {
-          startDateEl = event.querySelector('date .date') ?? null;
-          startDay = startDateEl.querySelector('.dayofweek')?.textContent.trim()?.padStart(2, '0') ?? null;
+          startDateEl = rawEvent.querySelector('date .date') ?? null;
+          startDay = startDateEl.querySelector('.day')?.textContent.trim()?.padStart(2, '0') ?? null;
           startMonthName = startDateEl.querySelector('.month')?.textContent.trim() ?? null;
           startMonth = kavkaMonths[startMonthName]
           startMonthJSNumber = Number(startMonth) - 1;
@@ -128,18 +128,18 @@ async function makeBaseEventList(browser, workerIndex) {
             startYear = startYear + 1;
           }
           startDate = `${startYear}-${startMonth}-${startDay}`
-          startTime = event.querySelector('.loc-time time')?.textContent.trim() ?? '';
+          startTime = rawEvent.querySelector('.loc-time time')?.textContent.trim() ?? '';
           dateStringAttempt = `${startDate}T${startTime}:00`;
-          startDateTime = new Date().toISOString(dateStringAttempt);
+          startDateTime = new Date(dateStringAttempt).toISOString();
         } catch (error) {
           ojee = `${error.message} \n ${[dateStringAttempt, startDateTime, startDate, startTime, startDay, startMonthName, startMonth, startMonthJSNumber, refDate, startYear].join('\n')}`;
         }
 
-        const title = event.querySelector('article h3:first-child')?.textContent.trim() ?? '';
-        const shortText = event.querySelector('article h3 + p')?.textContent.trim() ?? '';
+        const title = rawEvent.querySelector('article h3:first-child')?.textContent.trim() ?? '';
+        const shortText = rawEvent.querySelector('article h3 + p')?.textContent.trim() ?? '';
         return {
           error: ojee,
-          venueEventUrl: event.href,
+          venueEventUrl: rawEvent.href,
           location: 'kavka',
           title,
           startDateTime,
@@ -147,7 +147,6 @@ async function makeBaseEventList(browser, workerIndex) {
         }
       })
   }, kavkaMonths);
-
   return rawEvents
     .filter(basicMusicEventsFilter)
     .map((event) => new MusicEvent(event));

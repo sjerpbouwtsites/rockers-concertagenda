@@ -1,4 +1,20 @@
 
+  Baroeg Error - Error - 10:51:11 AM
+  Error: Evaluation failed: ReferenceError: log is not defined
+    at __puppeteer_evaluation_script__:28:11
+    at Array.map (<anonymous>)
+    at __puppeteer_evaluation_script__:8:8
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-kavka.js:109:19)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-kavka.js:25:29) 
+  Evaluation failed: ReferenceError: log is not defined
+    at __puppeteer_evaluation_script__:28:11
+    at Array.map (<anonymous>)
+    at __puppeteer_evaluation_script__:8:8
+  
+  
   Baroeg Error - TimeoutError - 9:30:26 AM
   TimeoutError: Navigation timeout of 30000 ms exceeded
     at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
