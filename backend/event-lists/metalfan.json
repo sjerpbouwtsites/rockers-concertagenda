@@ -1,18 +1,6 @@
 [
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-07-31T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Vicious Rumors",
-    "location": "littledevil",
-    "price": null,
-    "shortText": "Little Devil, Tilburg",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
     "startDateTime": "2022-08-03T00:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": null,
@@ -20,6 +8,18 @@
     "location": "parkdenieuwekoers",
     "price": null,
     "shortText": "Park De Nieuwe Koers, Oostende (België)",
+    "longText": null,
+    "image": null
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-08-04T00:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": null,
+    "title": "Infected Rain",
+    "location": "thejack",
+    "price": null,
+    "shortText": "The Jack, Tilburg",
     "longText": null,
     "image": null
   },
@@ -97,18 +97,6 @@
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-08-13T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "D.R.I, Neuk! en Ancestral Sin",
-    "location": "iduna",
-    "price": null,
-    "shortText": "Iduna, Drachten",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
     "startDateTime": "2022-08-20T00:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": null,
@@ -121,18 +109,6 @@
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-08-29T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Imperial Triumphant",
-    "location": "merleyn",
-    "price": null,
-    "shortText": "Merleyn, Nijmegen",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
     "startDateTime": "2022-09-02T00:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": null,
@@ -140,18 +116,6 @@
     "location": "littledevil",
     "price": null,
     "shortText": "Little Devil, Tilburg",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-09-03T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Floor Jansen",
-    "location": "metropoolopenair",
-    "price": null,
-    "shortText": "Metropool Open Air, Hertme",
     "longText": null,
     "image": null
   },
@@ -184,10 +148,10 @@
     "startDateTime": "2022-09-13T00:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": null,
-    "title": "Riverside",
-    "location": "kavka",
+    "title": "My Disco en Nadja",
+    "location": "",
     "price": null,
-    "shortText": "Kavka, Antwerpen (België)",
+    "shortText": "",
     "longText": null,
     "image": null
   },
@@ -200,18 +164,6 @@
     "location": "diekantine",
     "price": null,
     "shortText": "Die Kantine, Keulen (Duitsland)",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-09-15T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Stake",
-    "location": "merleyn",
-    "price": null,
-    "shortText": "Merleyn, Nijmegen",
     "longText": null,
     "image": null
   },
@@ -280,6 +232,18 @@
     "startDateTime": "2022-09-20T00:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": null,
+    "title": "Atheist, Suicidal Angels, Abysmal Dawn en Critical Mess",
+    "location": "dedreef",
+    "price": null,
+    "shortText": "De Dreef, Vosselaar",
+    "longText": null,
+    "image": null
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-09-20T00:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": null,
     "title": "Black Orchid Empire en Giant Walker",
     "location": "v11",
     "price": null,
@@ -308,6 +272,54 @@
     "location": "biebob",
     "price": null,
     "shortText": "Biebob, Vosselaar (België)",
+    "longText": null,
+    "image": null
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-09-21T00:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": null,
+    "title": "Atheist, Suicidal Angels, Abysmal Dawn en Critical Mess",
+    "location": "turock",
+    "price": null,
+    "shortText": "Turock, Essen",
+    "longText": null,
+    "image": null
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-09-22T00:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": null,
+    "title": "Atheist, Suicidal Angels, Abysmal Dawn en Critical Mess",
+    "location": "gigant",
+    "price": null,
+    "shortText": "Gigant, Apeldoorn",
+    "longText": null,
+    "image": null
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-09-23T00:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": null,
+    "title": "Atheist, Suicidal Angels, Abysmal Dawn en Critical Mess",
+    "location": "cafdemeister",
+    "price": null,
+    "shortText": "Café De Meister, Geleen",
+    "longText": null,
+    "image": null
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-09-25T00:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": null,
+    "title": "Atheist, Suicidal Angels, Abysmal Dawn en Critical Mess",
+    "location": "bastardclub",
+    "price": null,
+    "shortText": "Bastard Club, Osnabrück",
     "longText": null,
     "image": null
   },
@@ -380,18 +392,6 @@
     "location": "trix",
     "price": null,
     "shortText": "Trix, Antwerpen",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-10-04T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Hypocrisy, Septicflesh, The Agonist en Horizon Ignited",
-    "location": "kavka",
-    "price": null,
-    "shortText": "Kavka, Antwerpen (België)",
     "longText": null,
     "image": null
   },
@@ -536,18 +536,6 @@
     "location": "trix",
     "price": null,
     "shortText": "Trix, Antwerpen (België)",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-10-15T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Wolves In The Throne Room en Stygian Bough",
-    "location": "iduna",
-    "price": null,
-    "shortText": "Iduna, Drachten",
     "longText": null,
     "image": null
   },
@@ -793,18 +781,6 @@
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-11-05T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Holland Heavy festival",
-    "location": "iduna",
-    "price": null,
-    "shortText": "Met Picture, Highway Chile, Heloise, Metalbats e.a.",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
     "startDateTime": "2022-11-06T00:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": null,
@@ -848,18 +824,6 @@
     "location": "ziggodome",
     "price": null,
     "shortText": "Ziggo Dome, Amsterdam",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-11-08T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Skid Row",
-    "location": "iduna",
-    "price": null,
-    "shortText": "Iduna, Drachten",
     "longText": null,
     "image": null
   },
@@ -1048,10 +1012,10 @@
     "startDateTime": "2022-12-04T00:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": null,
-    "title": "Molasses, Verwoed en Doodswens",
-    "location": "iduna",
+    "title": "In Flames, At The Gates, Imminence en Orbit Culture",
+    "location": "palladium",
     "price": null,
-    "shortText": "Iduna, Drachten",
+    "shortText": "Palladium, Keulen",
     "longText": null,
     "image": null
   },
@@ -1064,6 +1028,18 @@
     "location": "kavkazappa",
     "price": null,
     "shortText": "Kavka Zappa, Antwerpen (België)",
+    "longText": null,
+    "image": null
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-12-07T00:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": null,
+    "title": "In Flames, At The Gates, Imminence en Orbit Culture",
+    "location": "ab",
+    "price": null,
+    "shortText": "AB, Brussel",
     "longText": null,
     "image": null
   },
@@ -1100,18 +1076,6 @@
     "location": "dehelling",
     "price": null,
     "shortText": "De Helling, Utrecht",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-12-17T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Bömbers en Dikke Dennis & The Rockers",
-    "location": "iduna",
-    "price": null,
-    "shortText": "Iduna, Drachten",
     "longText": null,
     "image": null
   },

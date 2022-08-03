@@ -51,6 +51,7 @@ export const neushoornMonths = baroegMonths;
 export const afasliveMonths = baroegMonths;
 export const idunaMonths = baroegMonths;
 export const kavkaMonths = dynamoMonths;
+export const depulMonths = dynamoMonths;
 
 const months = {
   afaslive: afasliveMonths,

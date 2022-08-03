@@ -8,6 +8,7 @@ const fsDirections = {
   bibelotJson: path.resolve("./event-lists/bibelot.json"),
   boerderijJson: path.resolve("./event-lists/boerderij.json"),
   dbsJson: path.resolve("./event-lists/dbs.json"),
+  depulJson: path.resolve("./event-lists/depul.json"),
   dynamoJson: path.resolve("./event-lists/dynamo.json"),
   effenaarJson: path.resolve("./event-lists/effenaar.json"),
   errorLog: path.resolve("./temp/error.log"),

@@ -1,5 +1,53 @@
 [
   {
+    "doorOpenDateTime": "2022-09-17T18:30:00.000Z",
+    "startDateTime": "2022-09-17T19:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://metropool.nl/agenda/bokassa-plus-planet-of-zeus/",
+    "title": "Bokassa + Planet of Zeus",
+    "location": "metropool",
+    "price": 17.5,
+    "shortText": null,
+    "longText": "../public/texts/81a03f92-d19f-4f4a-9fc2-8ee9e0abdcca.html",
+    "image": "https://metropool.nl//media/22750/bokassa_web.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=132888820970000000"
+  },
+  {
+    "doorOpenDateTime": "2023-03-25T19:00:00.000Z",
+    "startDateTime": "2023-03-25T19:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://metropool.nl/agenda/sworn-enemy-plus-pain-of-truth-plus-worst-doubt/",
+    "title": "Sworn Enemy + Pain Of Truth + Worst Doubt",
+    "location": "metropool",
+    "price": 17.5,
+    "shortText": null,
+    "longText": "../public/texts/37859b17-e6a8-42b0-9e24-39c913ec6b26.html",
+    "image": "https://metropool.nl//media/22074/sworn-enemy-web.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=132836103780000000"
+  },
+  {
+    "doorOpenDateTime": "2022-10-14T20:00:00.000Z",
+    "startDateTime": "2022-10-14T20:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://metropool.nl/agenda/lollipop/",
+    "title": "LOLLIPOP",
+    "location": "metropool",
+    "price": 12.5,
+    "shortText": null,
+    "longText": "../public/texts/e9a0b61d-acf1-4ca1-945e-a420ae9fceec.html",
+    "image": "https://metropool.nl//media/25330/lollipop_1920x1080_notxt1.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=132971692670000000"
+  },
+  {
+    "doorOpenDateTime": "2022-10-29T13:30:00.000Z",
+    "startDateTime": "2022-10-29T14:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://metropool.nl/agenda/beerland-festival-2022/",
+    "title": "BEERLAND Festival 2022",
+    "location": "metropool",
+    "price": 30,
+    "shortText": null,
+    "longText": "../public/texts/77165a98-26d9-4b64-9348-513b7dae0c55.html",
+    "image": "https://metropool.nl//media/26006/beerland_web_1920x1080.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=132993351240000000"
+  },
+  {
     "doorOpenDateTime": "2022-09-23T18:30:00.000Z",
     "startDateTime": "2022-09-23T19:00:00.000Z",
     "endDateTime": null,
@@ -8,55 +56,7 @@
     "location": "metropool",
     "price": 24,
     "shortText": null,
-    "longText": "../public/texts/853056b7-6b33-4b8d-bd95-fa91c8ec0b2c.html",
+    "longText": "../public/texts/2735e977-83ee-456a-a486-02d294f27a48.html",
     "image": "https://metropool.nl//media/20579/freedomcall.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=132836104130000000"
-  },
-  {
-    "doorOpenDateTime": "2022-08-28T17:45:00.000Z",
-    "startDateTime": "2022-08-28T18:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://metropool.nl/agenda/blaze-bayley/",
-    "title": "Blaze Bayley",
-    "location": "metropool",
-    "price": 24,
-    "shortText": null,
-    "longText": "../public/texts/7f0c8edc-b25b-4aa0-89cd-7cce80d30aa9.html",
-    "image": "https://metropool.nl//media/22079/blaze-beyley-web.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=132836098690000000"
-  },
-  {
-    "doorOpenDateTime": "2022-09-03T16:00:00.000Z",
-    "startDateTime": "2022-09-03T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://metropool.nl/agenda/floor-jansen-hertme-2022/",
-    "title": "Floor Jansen (Metropool Open Air)",
-    "location": "metropool",
-    "price": null,
-    "shortText": null,
-    "longText": "../public/texts/87433cc0-11b7-4d26-ad20-419060eadeea.html",
-    "image": "https://metropool.nl//media/24640/floorjansen-web.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=132949381280000000"
-  },
-  {
-    "doorOpenDateTime": "2022-11-26T18:00:00.000Z",
-    "startDateTime": "2022-11-26T18:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://metropool.nl/agenda/leaves-eyes-enschede/",
-    "title": "Leaves' Eyes + Temperance",
-    "location": "metropool",
-    "price": 25,
-    "shortText": null,
-    "longText": "../public/texts/ddf92c18-e8ff-48f6-a9e2-e298a1c0bb51.html",
-    "image": "https://metropool.nl//media/25822/leaves_web_1920x1080.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=132984858670000000"
-  },
-  {
-    "doorOpenDateTime": "2022-10-11T18:00:00.000Z",
-    "startDateTime": "2022-10-11T18:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://metropool.nl/agenda/ancst-innocent/",
-    "title": "ANCST + Radeloos///Ziedend",
-    "location": "metropool",
-    "price": 10,
-    "shortText": null,
-    "longText": "../public/texts/be0613c8-66b9-471e-b009-6389a8ecc576.html",
-    "image": "https://metropool.nl//media/26431/ancst_web_1920x1080.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=133014086820000000"
   }
 ]
