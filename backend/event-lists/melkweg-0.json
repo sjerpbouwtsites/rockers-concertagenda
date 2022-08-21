@@ -1,30 +1,6 @@
 [
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-08-04T17:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/mad-caddies-04-08-2022",
-    "title": "Mad Caddies",
-    "location": "melkweg",
-    "price": "23",
-    "shortText": "Ska, Reggae, Punk, Fat Wreck Chords",
-    "longText": "../public/texts/cb4905e0-be0c-4fb7-9dbd-636b61bebced.html",
-    "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/29683"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-08-07T17:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/circle-jerks-07-08-2022-2",
-    "title": "Circle Jerks",
-    "location": "melkweg",
-    "price": "23",
-    "shortText": "Hardcore punk, Punkrocklegende, Keith Morris",
-    "longText": "../public/texts/b4767c46-7b79-444f-bcbf-c2af6bbc2b00.html",
-    "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/26592"
-  },
-  {
-    "doorOpenDateTime": null,
     "startDateTime": "2022-08-23T17:30:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://www.melkweg.nl/nl/agenda/sueco-23-08-2022",
@@ -32,7 +8,7 @@
     "location": "melkweg",
     "price": 20.7,
     "shortText": "Emo, Poppunk, Rap",
-    "longText": "../public/texts/07afb4f2-1df2-49e2-9db7-5ada7963721f.html",
+    "longText": "../public/texts/42cb141c-779d-4abe-9f83-1c1496fc315b.html",
     "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/29442"
   },
   {
@@ -44,8 +20,20 @@
     "location": "melkweg",
     "price": 20.7,
     "shortText": "EBM, Darkwave, Postpunk, Synthpop",
-    "longText": "../public/texts/6c17ef71-ae83-422d-834c-f0c497769e7a.html",
+    "longText": "../public/texts/7ad59147-19f9-4b94-bc6f-8dcafd57da20.html",
     "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/28841"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-09-10T17:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/sirens-2022-10-09-2022",
+    "title": "Sirens (2022)",
+    "location": "melkweg",
+    "price": "11",
+    "shortText": "Muziekdocumentaire, Vrouwelijke metalband, Beiroet, Libanon",
+    "longText": "../public/texts/7a5a0c72-ab13-4155-a379-63e54b5c9625.html",
+    "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/29682"
   },
   {
     "doorOpenDateTime": null,
@@ -56,7 +44,7 @@
     "location": "melkweg",
     "price": 14.95,
     "shortText": "Hardcore punk, Deathpop, Posthardcore",
-    "longText": "../public/texts/26e5274d-7505-4af6-8b17-f36f75fa85fd.html",
+    "longText": "../public/texts/67657d43-fef6-4140-b36a-c9251846932c.html",
     "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/29099"
   },
   {
@@ -68,7 +56,7 @@
     "location": "melkweg",
     "price": 19.55,
     "shortText": "Americana, Punkrock",
-    "longText": "../public/texts/5ab03b24-3b6a-42db-a449-54994a67b2ed.html",
+    "longText": "../public/texts/df2f1ddd-60c4-4571-94b9-d5ea126fb52b.html",
     "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/28772"
   },
   {
@@ -80,7 +68,7 @@
     "location": "melkweg",
     "price": 14.4,
     "shortText": "Hardcore punk, Punk, Screamo",
-    "longText": "../public/texts/608b7a79-2b5b-4ce4-8191-ac3fcdc670b6.html",
+    "longText": "../public/texts/4f5490f1-eb01-42e0-9cd4-f9126819eec4.html",
     "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/29271"
   },
   {
@@ -92,7 +80,7 @@
     "location": "melkweg",
     "price": 16.1,
     "shortText": "Post-punk, Sinister, Manchester",
-    "longText": "../public/texts/80ff29c1-19cc-4993-9bc9-7ecec63f899c.html",
+    "longText": "../public/texts/7f98c7cc-c7a5-49d4-b831-f469c5403bf1.html",
     "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/28928"
   },
   {
@@ -104,7 +92,7 @@
     "location": "melkweg",
     "price": 17.25,
     "shortText": "Artpunk, Experimenteel, Darkwave",
-    "longText": "../public/texts/1eeb4012-74bc-466d-9701-bff63ca4727d.html",
+    "longText": "../public/texts/c9219efc-d5c5-403e-8bee-9232ec054889.html",
     "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/29509"
   },
   {
@@ -116,8 +104,20 @@
     "location": "melkweg",
     "price": 28.75,
     "shortText": "Postpunk, Folk, Engeland, 40-jarig jubileum",
-    "longText": "../public/texts/a277ca65-810b-4e8d-a8f7-f9289f241a2b.html",
+    "longText": "../public/texts/02d6bf1e-25d2-42b3-aa7a-21d62f339cf5.html",
     "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/29458"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-09-25T17:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/desolation-center-2019-25-09-2022",
+    "title": "Desolation Center (2019) + Q&A",
+    "location": "melkweg",
+    "price": "11",
+    "shortText": "Muziekdocumentaire, Postpunk, Woestijnfestivals, Jaren '80",
+    "longText": "../public/texts/fec87e37-ab4d-4769-9938-f381446a5fd5.html",
+    "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/29706"
   },
   {
     "doorOpenDateTime": null,
@@ -128,7 +128,7 @@
     "location": "melkweg",
     "price": 28.75,
     "shortText": "Postpunk, Folk, Engeland, 40-jarig jubileum",
-    "longText": "../public/texts/f291d63a-c492-45a9-90cd-4c44e846b292.html",
+    "longText": "../public/texts/b67839b2-02b0-481d-826b-95073e252955.html",
     "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/29458"
   },
   {
@@ -140,7 +140,7 @@
     "location": "melkweg",
     "price": 13.25,
     "shortText": "Indierock, Poppunk",
-    "longText": "../public/texts/58409366-06e9-4c68-86ac-940c7e0bcf78.html",
+    "longText": "../public/texts/2bddf207-5f92-428d-9581-d04431d9f387.html",
     "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/28580"
   },
   {
@@ -152,7 +152,7 @@
     "location": "melkweg",
     "price": 18.4,
     "shortText": "Prog, Metal, Djent, Catchy, Deens-Zweeds",
-    "longText": "../public/texts/a7f17232-568c-4efa-b93a-4a0f5184d08b.html",
+    "longText": "../public/texts/eb7dc4a5-9e74-4c56-96a3-5f2c9bcfcc22.html",
     "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/28881"
   },
   {
@@ -164,7 +164,7 @@
     "location": "melkweg",
     "price": 26.45,
     "shortText": "Punk, Posthardcore, Iconisch",
-    "longText": "../public/texts/c8e7fca0-68d0-46ce-8fad-b13a789f60e0.html",
+    "longText": "../public/texts/98ef81d4-23aa-4efc-a132-c5591ba9e0a8.html",
     "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/29073"
   },
   {
@@ -176,7 +176,7 @@
     "location": "melkweg",
     "price": 27.6,
     "shortText": "Punkrock, Catchy en melodieuze meezingers, Non-stop energie",
-    "longText": "../public/texts/19752b64-2382-4f40-aac3-35eee6f90a77.html",
+    "longText": "../public/texts/7012e5c1-088b-47a1-b5c5-f72b7e4c9261.html",
     "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/29037"
   },
   {
@@ -188,7 +188,7 @@
     "location": "melkweg",
     "price": 18.4,
     "shortText": "Metalcore, Florida",
-    "longText": "../public/texts/f0735c8f-82c2-44c7-83f5-286c1ea2ae89.html",
+    "longText": "../public/texts/df16fb86-f676-43e5-b0e8-0b954a17f998.html",
     "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/29113"
   },
   {
@@ -200,7 +200,7 @@
     "location": "melkweg",
     "price": "23",
     "shortText": "Anarcho-punk, CRASS",
-    "longText": "../public/texts/6da73c8b-0a96-49a1-a57d-bdffe4e1485e.html",
+    "longText": "../public/texts/2f99ab82-d81c-4438-b092-4ebf61a13380.html",
     "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/26720"
   },
   {
@@ -212,8 +212,20 @@
     "location": "melkweg",
     "price": "23",
     "shortText": "Electro, Acid, Rauwe beats, Technopunk",
-    "longText": "../public/texts/8a39c57b-cf1d-496c-89d5-293f78e63b0b.html",
+    "longText": "../public/texts/197da501-dc1c-4e8f-a1c6-c73885f10575.html",
     "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/29429"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-10-23T17:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/scalping-23-10-2022",
+    "title": "SCALPING",
+    "location": "melkweg",
+    "price": 17.25,
+    "shortText": "Electronica, Noise, Experimenteel, Metal",
+    "longText": "../public/texts/57e1d1e8-67cd-4d6d-b464-0d4f8491c744.html",
+    "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/29719"
   },
   {
     "doorOpenDateTime": null,
@@ -224,7 +236,7 @@
     "location": "melkweg",
     "price": 20.7,
     "shortText": "Punk, Rise Records, Canada",
-    "longText": "../public/texts/f4079d41-3633-477d-ac9f-1c60819f8e30.html",
+    "longText": "../public/texts/f5a4b61a-348e-4c5d-b675-b5f8ee8e70a4.html",
     "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/29002"
   },
   {
@@ -236,7 +248,7 @@
     "location": "melkweg",
     "price": 14.4,
     "shortText": "Britse postpunk",
-    "longText": "../public/texts/7cad72f2-2089-4712-a759-052549224bd0.html",
+    "longText": "../public/texts/2cfd97d1-8987-4929-9ca9-27807cd523e9.html",
     "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/29465"
   },
   {
@@ -248,7 +260,7 @@
     "location": "melkweg",
     "price": 13.8,
     "shortText": "Uitgesproken punkrapduo uit Londen",
-    "longText": "../public/texts/328fed73-c62d-44a9-a342-1ccbf3830fc7.html",
+    "longText": "../public/texts/744e26d7-eb38-4740-ae2d-2b138b727319.html",
     "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/29319"
   },
   {
@@ -260,7 +272,7 @@
     "location": "melkweg",
     "price": 12.65,
     "shortText": "Hardcore punk, Punk, Feministisch",
-    "longText": "../public/texts/bc83c166-9ff4-4aec-9e0d-7c5ec771828b.html",
+    "longText": "../public/texts/c86b69fd-d015-4983-8396-015044343650.html",
     "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/29650"
   },
   {
@@ -272,7 +284,7 @@
     "location": "melkweg",
     "price": 19.55,
     "shortText": "Postpunkformatie, Artpunk, Brighton",
-    "longText": "../public/texts/94e3e7d7-ddd6-4530-ade4-9e0cbec15ab7.html",
+    "longText": "../public/texts/5a86e524-47e8-4a4f-ba43-f4108a2b921d.html",
     "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/29197"
   },
   {
@@ -284,7 +296,7 @@
     "location": "melkweg",
     "price": 13.8,
     "shortText": "Elektropop, Postpunk",
-    "longText": "../public/texts/a954c24d-ed04-47b0-afd7-3d229d55ff95.html",
+    "longText": "../public/texts/83ddfb02-5b07-4476-989c-255bfaeb27f5.html",
     "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/29674"
   },
   {
@@ -296,7 +308,7 @@
     "location": "melkweg",
     "price": 27.6,
     "shortText": "Black metal, African-American spirituals",
-    "longText": "../public/texts/8173f78a-188b-44e3-b5d4-c5fed8c17dd6.html",
+    "longText": "../public/texts/5eecd383-2809-4650-b100-b4c9095c6747.html",
     "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/29468"
   },
   {
@@ -308,7 +320,7 @@
     "location": "melkweg",
     "price": 21.85,
     "shortText": "Finse countryband, Bluegrassversies van bekende hardrock- en metalnummers",
-    "longText": "../public/texts/6becb441-c609-431d-b2af-22ca7abaf416.html",
+    "longText": "../public/texts/a48810c7-11b5-4944-b72a-5ddfbf62bf6e.html",
     "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/27211"
   },
   {
@@ -320,7 +332,7 @@
     "location": "melkweg",
     "price": null,
     "shortText": "Nu-metal, Alternatieve rock, Open Your Eyes",
-    "longText": "../public/texts/22fc0d09-7c1d-4ca0-86b4-b91798e11111.html",
+    "longText": "../public/texts/783d3634-aac0-4b81-8ade-270752ede7e3.html",
     "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/27037"
   },
   {
@@ -332,7 +344,7 @@
     "location": "melkweg",
     "price": 29.9,
     "shortText": "Folk, Metal",
-    "longText": "../public/texts/5cfb26b2-ebaf-48db-9831-72ffd2612cf6.html",
+    "longText": "../public/texts/f6c634e9-452c-451e-aa37-2033799275fa.html",
     "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/29523"
   },
   {
@@ -344,7 +356,7 @@
     "location": "melkweg",
     "price": 20.7,
     "shortText": "Ska, Punk, Politiek",
-    "longText": "../public/texts/6ab0e22c-67aa-4bcd-a913-3aeaea99558f.html",
+    "longText": "../public/texts/978a9776-36c9-476c-aba7-4c6cd2e9ee43.html",
     "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/29551"
   },
   {
@@ -356,7 +368,7 @@
     "location": "melkweg",
     "price": 14.4,
     "shortText": "Duitse rockband, Post-punk, Indie rock",
-    "longText": "../public/texts/ebb2ea43-c472-4784-808a-0081f741e412.html",
+    "longText": "../public/texts/bf8b0ac7-cda7-409e-a9bb-3aa46dfeb386.html",
     "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/29281"
   },
   {
@@ -368,7 +380,7 @@
     "location": "melkweg",
     "price": 28.75,
     "shortText": "Black metal, Polka, Finland, Humppa",
-    "longText": "../public/texts/f99b4576-300f-4c51-b20a-27af59f172c6.html",
+    "longText": "../public/texts/1cc70cda-7dcb-4812-a2b4-477fcacfb1f0.html",
     "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/27552"
   },
   {
@@ -380,7 +392,7 @@
     "location": "melkweg",
     "price": 17.25,
     "shortText": "Mestizo, Colombia, Ska, Punk, Cumbia",
-    "longText": "../public/texts/3add41ea-d15f-451c-aed4-2dccbf54b5c6.html",
+    "longText": "../public/texts/e55f6592-5101-4c85-ac39-1ad012c11f45.html",
     "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/28689"
   },
   {
@@ -392,7 +404,7 @@
     "location": "melkweg",
     "price": 28.75,
     "shortText": "Post-hardcore, Metalcore, Horror",
-    "longText": "../public/texts/22ee8e3b-16ea-4d03-99ed-135df9f10ff4.html",
+    "longText": "../public/texts/64308d35-aba0-471b-a072-deaa6abb624e.html",
     "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/29467"
   },
   {
@@ -404,7 +416,7 @@
     "location": "melkweg",
     "price": 17.25,
     "shortText": "Folkmetal, India",
-    "longText": "../public/texts/a3077517-105f-41f4-99fa-623bb5c4a4de.html",
+    "longText": "../public/texts/5c040ded-b696-42d9-8329-3d1d68ae2585.html",
     "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/28605"
   },
   {
@@ -416,7 +428,7 @@
     "location": "melkweg",
     "price": 17.25,
     "shortText": "Metalcore, Trauma",
-    "longText": "../public/texts/729b7837-2e98-4255-a1a7-55d5d97d9107.html",
+    "longText": "../public/texts/422a62a9-ccc6-4e87-b1da-152b73b98a49.html",
     "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/25927"
   },
   {
@@ -428,8 +440,20 @@
     "location": "melkweg",
     "price": 12.65,
     "shortText": "Minimalistische post-punk uit Moskou",
-    "longText": "../public/texts/273e110c-c4f7-442e-aace-1fb0c437037f.html",
+    "longText": "../public/texts/4133d9f9-4655-4955-af1c-c2231ae92b98.html",
     "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/27969"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-03-17T18:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/ferocious-dog-17-03-2023",
+    "title": "Ferocious Dog",
+    "location": "melkweg",
+    "price": 19.55,
+    "shortText": "Folkpunk, Ska, Rock, Celtic punk",
+    "longText": "../public/texts/6304f279-9837-480c-8384-ce4427fabe24.html",
+    "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/29727"
   },
   {
     "doorOpenDateTime": null,
@@ -440,7 +464,7 @@
     "location": "melkweg",
     "price": 31.05,
     "shortText": "Power metal, Progressieve metal",
-    "longText": "../public/texts/f28a018c-34ce-4cc8-9851-380d4a4e00fc.html",
+    "longText": "../public/texts/bf9a0f45-2c74-4a08-8710-4507f23de7bb.html",
     "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/25773"
   }
 ]

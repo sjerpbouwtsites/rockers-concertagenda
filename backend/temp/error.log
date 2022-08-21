@@ -1,4 +1,10 @@
 
+  Baroeg Error - TimeoutError - 5:49:53 PM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 30000 ms exceeded
+  
+  
   Baroeg Error - TimeoutError - 4:40:21 PM
   TimeoutError: Navigation timeout of 30000 ms exceeded
     at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 

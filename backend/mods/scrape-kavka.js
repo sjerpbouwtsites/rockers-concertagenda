@@ -22,9 +22,13 @@ async function scrapeInit(workerIndex) {
   });
 
   try {
+    setTimeout(() => {
+      throw new Error('timeout lul')
+    }, 60000)
     const baseMusicEvents = await makeBaseEventList(browser, workerIndex);
 
     await fillMusicEvents(browser, baseMusicEvents, workerIndex);
+
   } catch (error) {
     handleError(error);
   }
