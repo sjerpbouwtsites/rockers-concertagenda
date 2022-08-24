@@ -1,5 +1,6 @@
 //https://en.concerts-metal.com/s-2429__Ragnarok_-_Bree.html
 
+import fs from 'fs';
 import { Worker } from "worker_threads";
 import WorkerStatus from "./mods/WorkerStatus.js";
 import EventsList from "./mods/events-list.js";
@@ -8,6 +9,9 @@ import { handleError, errorAfterSeconds } from "./mods/tools.js";
 import { printLocationsToPublic } from "./mods/locations.js";
 
 function init() {
+
+  houseKeeping();
+
   WorkerStatus.monitorCPUS();
 
   const workerList = [];
@@ -228,4 +232,12 @@ async function startWorker(
   return true;
 }
 
+function houseKeeping() {
+  fs.rmdirSync(fsDirections.publicTexts, {
+    recursive: true
+  });
+  fs.mkdirSync(fsDirections.publicTexts);
+}
+
 init();
+
