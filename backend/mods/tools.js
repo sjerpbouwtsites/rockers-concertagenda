@@ -4,7 +4,7 @@ import fsDirections from "./fs-directions.js";
 import crypto from "crypto";
 import fetch from 'node-fetch';
 
-export function handleError(error) {
+export function handleError(error, location = 'unknown location') {
   parentPort.postMessage({
     status: "error",
     message: error,
@@ -12,7 +12,7 @@ export function handleError(error) {
   const time = new Date();
   const curErrorLog = fs.readFileSync(fsDirections.errorLog) || "";
   const newErrorLog = `
-  Baroeg Error - ${error.name} - ${time.toLocaleTimeString()}
+  ${location} Error - ${time.toLocaleTimeString()}
   ${error.stack} 
   ${error.message}
   
