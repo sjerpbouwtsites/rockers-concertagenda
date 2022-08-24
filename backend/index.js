@@ -14,9 +14,9 @@ function init() {
 
   WorkerStatus.monitorCPUS();
 
-  const workerList = [];
+  let workerList = [];
 
-  if (EventsList.isOld("metalfan") || true) {
+  if (EventsList.isOld("metalfan")) {
     workerList.push([fsDirections.scrapeMetalfan, "metalfan", 0]);
   }
   if (EventsList.isOld("baroeg")) {
@@ -109,6 +109,8 @@ function init() {
 
   if (EventsList.isOld("melkweg")) {
     workerList.push([fsDirections.scrapeMelkweg, "melkweg", 0, null, true]);
+    workerList.push([fsDirections.scrapeMelkweg, "melkweg", 1, null, true]);
+    workerList.push([fsDirections.scrapeMelkweg, "melkweg", 2, null, true]);
   }
 
   if (EventsList.isOld("bibelot")) {
@@ -144,11 +146,21 @@ function init() {
     workerList.push([fsDirections.scrapeKavka, "kavka", 0]);
   }
 
-  if (EventsList.isOld("depul") || true) {
+  if (EventsList.isOld("depul")) {
     workerList.push([fsDirections.scrapeDepul, "depul", 0]);
     workerList.push([fsDirections.scrapeDepul, "depul", 1]);
     workerList.push([fsDirections.scrapeDepul, "depul", 2]);
   }
+
+  if (EventsList.isOld("paradiso")) {
+    workerList.push([fsDirections.scrapeParadiso, "paradiso", 0]);
+    workerList.push([fsDirections.scrapeParadiso, "paradiso", 1]);
+    workerList.push([fsDirections.scrapeParadiso, "paradiso", 2]);
+    workerList.push([fsDirections.scrapeParadiso, "paradiso", 3]);
+  }
+
+  workerList = shuffleArray(workerList)
+  WorkerStatus.totalWorkers = workerList.length + 1;
 
   walkThroughWorkerList(workerList);
 
@@ -239,6 +251,17 @@ function houseKeeping() {
     recursive: true
   });
   fs.mkdirSync(fsDirections.publicTexts);
+}
+
+function shuffleArray(array) {
+  let currentIndex = array.length, randomIndex;
+  while (currentIndex != 0) {
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex], array[currentIndex]];
+  }
+  return array;
 }
 
 init();

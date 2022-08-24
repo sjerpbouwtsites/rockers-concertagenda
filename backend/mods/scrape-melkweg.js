@@ -113,6 +113,9 @@ async function makeBaseEventList(browser, workerIndex) {
           linkEl.querySelector(".tags")?.textContent.toLowerCase() ?? "";
         return tags.includes("metal") || tags.includes("punk");
       })
+      .filter((rawEvent, eventIndex) => {
+        return eventIndex % 3 === workerIndex;
+      })
       .map((linkEl) => {
         let startDateTime;
         try {

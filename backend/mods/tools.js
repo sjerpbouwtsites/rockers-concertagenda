@@ -21,6 +21,17 @@ export function handleError(error, location = 'unknown location') {
   fs.writeFileSync(fsDirections.errorLog, newErrorLog, "utf-8");
 }
 
+export function failurePromiseAfter(time) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      reject({
+        status: 'failure',
+        data: null
+      });
+    }, time)
+  })
+}
+
 export async function autoScroll(page) {
   await page.evaluate(async () => {
     await new Promise((resolve, reject) => {

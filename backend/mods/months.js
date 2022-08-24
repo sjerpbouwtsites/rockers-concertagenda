@@ -52,12 +52,14 @@ export const afasliveMonths = baroegMonths;
 export const idunaMonths = baroegMonths;
 export const kavkaMonths = dynamoMonths;
 export const depulMonths = dynamoMonths;
+export const paradisoMonths = baroegMonths;
 
 const months = {
   afaslive: afasliveMonths,
   baroeg: baroegMonths,
   occii: occiiMonths,
   dynamy: dynamoMonths,
+  paradiso: paradisoMonths,
   metalfan: metalfanMonths,
   bibelot: bibelotMonths,
   dbs: dbsMonths,

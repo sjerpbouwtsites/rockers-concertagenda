@@ -6,6 +6,7 @@ import {
   handleError,
   basicMusicEventsFilter,
   log,
+  failurePromiseAfter,
   waitFor,
   autoScroll,
   postPageInfoProcessing,
@@ -95,16 +96,7 @@ async function processSingleMusicEvent(browser, baseMusicEvents, workerIndex) {
     })
 }
 
-function failurePromiseAfter(time) {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      reject({
-        status: 'failure',
-        data: null
-      });
-    }, time)
-  })
-}
+
 
 
 async function kavkaPageInfo(page, firstMusicEvent) {

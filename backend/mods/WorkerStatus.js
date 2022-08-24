@@ -5,6 +5,8 @@ export default class WorkerStatus {
   static _workers = {};
   static CPUFree = 100;
   static waitingWorkers = [];
+  static totalWorkers = 0;
+  static completedWorkers = 0;
   static registerWorker(newWorkerName) {
     if (WorkerStatus.waitingWorkers.indexOf(newWorkerName) !== -1) {
       WorkerStatus.waitingWorkers = WorkerStatus.waitingWorkers.filter(
@@ -40,7 +42,7 @@ export default class WorkerStatus {
   }
 
   static get OSHasALotOfSpace() {
-    return WorkerStatus.currentNotDone.length < 3 && WorkerStatus.CPUFree > 50;
+    return WorkerStatus.currentNotDone.length < 5 && WorkerStatus.CPUFree > 50;
   }
 
   static change(name, status, message, worker) {
@@ -50,8 +52,9 @@ export default class WorkerStatus {
     const statusses = status.split(" ");
 
     if (statusses.includes("done")) {
+      WorkerStatus.completedWorkers = WorkerStatus.completedWorkers + 1;
       console.log("");
-      console.log(`${name} done.`.padStart(20, " ").padStart(30, "✔️"));
+      console.log(`${name} done.`);
       if (statusses.includes("dirty")) {
         console.log(
           `${name} dirty dirty.`.padStart(20, " ").padStart(30, "🚮🌁")
@@ -80,6 +83,10 @@ export default class WorkerStatus {
     if (statusses.includes("todo")) {
       WorkerStatus._workers[name].todo = message;
     }
+  }
+
+  static get countedWorkersToDo() {
+    return WorkerStatus.totalWorkers - WorkerStatus.completedWorkers;
   }
 
   static get currentNotDone() {
@@ -117,11 +124,13 @@ export default class WorkerStatus {
 
   static reportOnActiveWorkers() {
     const notDone = WorkerStatus.currentNotDone;
-    console.log("Currently active:");
-    notDone.forEach((notDoneWorker) => {
-      const todoMSG = notDoneWorker.todo ? ` todo: ${notDoneWorker.todo}` : " initializing";
-      console.log(`${notDoneWorker.name}${todoMSG}`);
-    });
+    console.log(`\n`)
+    console.log(`Unfinished workers: ${WorkerStatus.countedWorkersToDo}`)
+    const currentTodoMsg = notDone.map((notDoneWorker) => {
+      const todoMSG = notDoneWorker.todo ? ` todo: ${notDoneWorker.todo}` : " init";
+      return `${notDoneWorker.name}${todoMSG}`;
+    }).join('; ');
+    console.log(`Active: ${currentTodoMsg}`);
     if (notDone.length > 0 || WorkerStatus.waitingWorkers.length !== 0) {
       setTimeout(() => {
         WorkerStatus.reportOnActiveWorkers();
