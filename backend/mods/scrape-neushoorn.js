@@ -141,11 +141,25 @@ async function makeBaseEventList(browser, workerIndex) {
     waitUntil: "load",
   })
 
-  await waitFor(7500);
+  try {
+    await page.waitForSelector('[href*="Heavy"]', {
+      timeout: 10000
+    })
+  } catch (error) {
+    handleError(error, 'Neushoorn wacht op laden agenda pagina')
+  }
 
   await page.click('[href*="Heavy"]')
 
-  await waitFor(2500);
+  try {
+    await page.waitForSelector('.productions__item', {
+      timeout: 10000
+    })
+  } catch (error) {
+    handleError(error, 'Neushoorn wacht op laden resultaten filter')
+  }
+
+  await waitFor(50)
 
   const rawEvents = await page.evaluate((workerIndex) => {
     return Array.from(document.querySelectorAll(".productions__item"))

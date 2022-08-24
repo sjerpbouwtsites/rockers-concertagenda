@@ -160,7 +160,7 @@ function init() {
   }
 
   workerList = shuffleArray(workerList)
-  WorkerStatus.totalWorkers = workerList.length + 1;
+  WorkerStatus.totalWorkers = workerList.length;
 
   walkThroughWorkerList(workerList);
 

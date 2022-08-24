@@ -76,10 +76,11 @@ async function processSingleMusicEvent(browser, baseMusicEvents, workerIndex) {
   let pageInfo = await getPageInfo(page);
   pageInfo = postPageInfoProcessing(pageInfo);
   firstMusicEvent.merge(pageInfo);
+  firstMusicEvent.price = firstMusicEvent.price + 4; // lidmaatschap
   if (firstMusicEvent.isValid) {
     firstMusicEvent.register();
   } else {
-    log(firstMusicEvent)
+    //
   }
 
   page.close();
