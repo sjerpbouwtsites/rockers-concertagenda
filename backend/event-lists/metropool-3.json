@@ -1,1 +1,62 @@
-[]
+[
+  {
+    "doorOpenDateTime": "2022-09-23T18:30:00.000Z",
+    "startDateTime": "2022-09-23T19:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://metropool.nl/agenda/freedom-call/",
+    "title": "Freedom Call",
+    "location": "metropool",
+    "price": 24,
+    "shortText": null,
+    "longText": "../public/texts/cbfac2c7-6c3a-4a1a-b742-a12dd95f46b0.html",
+    "image": "https://metropool.nl//media/20579/freedomcall.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=132836104130000000"
+  },
+  {
+    "doorOpenDateTime": "2022-08-28T17:45:00.000Z",
+    "startDateTime": "2022-08-28T18:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://metropool.nl/agenda/blaze-bayley/",
+    "title": "Blaze Bayley",
+    "location": "metropool",
+    "price": 24,
+    "shortText": null,
+    "longText": "../public/texts/3381beb4-3974-4764-a452-5daad1d248c4.html",
+    "image": "https://metropool.nl//media/22079/blaze-beyley-web.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=132836098690000000"
+  },
+  {
+    "doorOpenDateTime": "2022-09-03T16:00:00.000Z",
+    "startDateTime": "2022-09-03T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://metropool.nl/agenda/floor-jansen-hertme-2022/",
+    "title": "Floor Jansen (Metropool Open Air)",
+    "location": "metropool",
+    "price": null,
+    "shortText": null,
+    "longText": "../public/texts/6c73d9f6-0ef7-447d-9462-4bf71ebbdd4e.html",
+    "image": "https://metropool.nl//media/24640/floorjansen-web.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=132949381280000000"
+  },
+  {
+    "doorOpenDateTime": "2022-10-29T13:30:00.000Z",
+    "startDateTime": "2022-10-29T14:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://metropool.nl/agenda/beerland-festival-2022/",
+    "title": "BEERLAND Festival 2022",
+    "location": "metropool",
+    "price": 30,
+    "shortText": null,
+    "longText": "../public/texts/0923e9d9-c3a7-44e7-9013-7721f2532ed5.html",
+    "image": "https://metropool.nl//media/26006/beerland_web_1920x1080.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=132993351240000000"
+  },
+  {
+    "doorOpenDateTime": "2022-11-20T17:30:00.000Z",
+    "startDateTime": "2022-11-20T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://metropool.nl/agenda/betraying-the-martyrs/",
+    "title": "Betraying The Martyrs",
+    "location": "metropool",
+    "price": "25",
+    "shortText": null,
+    "longText": "../public/texts/633dc705-eab3-4332-bd5b-5d31c6d42518.html",
+    "image": "https://metropool.nl//media/26729/betraying_web_1920x1080.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=133045359570000000"
+  }
+]

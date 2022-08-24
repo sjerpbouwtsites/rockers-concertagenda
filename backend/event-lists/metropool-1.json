@@ -1,1 +1,62 @@
-[]
+[
+  {
+    "doorOpenDateTime": "2022-09-29T16:30:00.000Z",
+    "startDateTime": "2022-09-29T17:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://metropool.nl/agenda/visions-of-atlantis/",
+    "title": "Visions of Atlantis + Xandria",
+    "location": "metropool",
+    "price": 29.5,
+    "shortText": null,
+    "longText": "../public/texts/ee43595c-5ac1-40d8-a357-d32cd0054470.html",
+    "image": "https://metropool.nl//media/25550/visions-web.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=132978801710000000"
+  },
+  {
+    "doorOpenDateTime": "2023-02-11T17:00:00.000Z",
+    "startDateTime": "2023-02-11T17:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://metropool.nl/agenda/smyrna-death-fest/",
+    "title": "Smyrna Death Fest",
+    "location": "metropool",
+    "price": 30,
+    "shortText": null,
+    "longText": "../public/texts/553159aa-089d-472f-af11-9e632f07b407.html",
+    "image": "https://metropool.nl//media/20598/smyrna-web.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=132836079750000000"
+  },
+  {
+    "doorOpenDateTime": "2022-11-04T18:45:00.000Z",
+    "startDateTime": "2022-11-04T19:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://metropool.nl/agenda/rage-plus-brainstorm/",
+    "title": "Rage + Brainstorm",
+    "location": "metropool",
+    "price": 31,
+    "shortText": null,
+    "longText": "../public/texts/403d42b0-931c-44e3-8c47-44ad9de11de4.html",
+    "image": "https://metropool.nl//media/22674/rage-web.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=132846472450000000"
+  },
+  {
+    "doorOpenDateTime": "2023-02-25T18:30:00.000Z",
+    "startDateTime": "2023-02-25T19:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://metropool.nl/agenda/in-extremo/",
+    "title": "In Extremo",
+    "location": "metropool",
+    "price": 27.5,
+    "shortText": null,
+    "longText": "../public/texts/38d38cfe-dcbe-4297-802d-a5555864b75c.html",
+    "image": "https://metropool.nl//media/25200/inextremo_web.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=132966732300000000"
+  },
+  {
+    "doorOpenDateTime": "2022-10-16T16:00:00.000Z",
+    "startDateTime": "2022-10-16T16:45:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://metropool.nl/agenda/stray-from-the-path/",
+    "title": "Stray From The Path",
+    "location": "metropool",
+    "price": 27,
+    "shortText": null,
+    "longText": "../public/texts/9a9d352e-7593-46ab-a39f-0452d2ba1d8f.html",
+    "image": "https://metropool.nl//media/26435/stray_web_1920x1080.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=133014284390000000"
+  }
+]

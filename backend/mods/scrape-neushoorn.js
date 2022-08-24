@@ -136,17 +136,16 @@ async function getPageInfo(page) {
 
 async function makeBaseEventList(browser, workerIndex) {
   const page = await browser.newPage();
-  await page.goto("https://neushoorn.nl/#/search?category=Heavy", {
-    waitUntil: "load",
-  });
 
-  await autoScroll(page);
-  await waitFor(500);
-  await autoScroll(page);
-  await waitFor(500); await autoScroll(page);
-  await waitFor(500); await autoScroll(page);
-  await waitFor(500); await autoScroll(page);
-  await waitFor(500);
+  await page.goto("https://neushoorn.nl/#/agenda", {
+    waitUntil: "load",
+  })
+
+  await waitFor(5000);
+
+  await page.click('[href*="Heavy"]')
+
+  await waitFor(2500);
 
   const rawEvents = await page.evaluate((workerIndex) => {
     return Array.from(document.querySelectorAll(".productions__item"))
