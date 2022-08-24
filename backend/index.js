@@ -136,7 +136,7 @@ function init() {
     workerList.push([fsDirections.scrapeIduna, "iduna", 0]);
   }
 
-  if (EventsList.isOld("kavka")) {
+  if (EventsList.isOld("kavka") || true) {
     workerList.push([fsDirections.scrapeKavka, "kavka", 0]);
   }
 

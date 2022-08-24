@@ -1,4 +1,10 @@
 
+  Baroeg Error - TimeoutError - 9:26:52 AM
+  TimeoutError: Navigation timeout of 10000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 10000 ms exceeded
+  
+  
   Baroeg Error - Error - 9:09:15 AM
   Error: No node found for selector: [href*="Heavy"]
     at assert (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/assert.js:26:15)

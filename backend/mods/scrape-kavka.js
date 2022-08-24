@@ -94,6 +94,9 @@ async function getPageInfo(page) {
 
       const res = {};
       res.image = document.querySelector('div.desktop img[src*="kavka.be/wp-content"]')?.src ?? '';
+      if (!res.image) {
+        res.image = document.querySelector('img[src*="kavka.be/wp-content"]')?.src ?? '';
+      }
 
       res.longTextHTML = document.querySelector('h2 + .entry-content')?.innerHTML ?? null;
 
