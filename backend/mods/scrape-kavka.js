@@ -22,9 +22,6 @@ async function scrapeInit(workerIndex) {
   });
 
   try {
-    setTimeout(() => {
-      throw new Error('timeout lul')
-    }, 60000)
     const baseMusicEvents = await makeBaseEventList(browser, workerIndex);
 
     await fillMusicEvents(browser, baseMusicEvents, workerIndex);
@@ -73,6 +70,7 @@ async function processSingleMusicEvent(browser, baseMusicEvents, workerIndex) {
   const page = await browser.newPage();
   await page.goto(firstMusicEvent.venueEventUrl, {
     waitUntil: "load",
+    timeout: 10000
   });
 
   let pageInfo = await getPageInfo(page);
@@ -90,18 +88,24 @@ async function processSingleMusicEvent(browser, baseMusicEvents, workerIndex) {
 }
 
 async function getPageInfo(page) {
-  return await page.evaluate(() => {
+  let pageInfo;
+  try {
+    pageInfo = await page.evaluate(() => {
 
-    const res = {};
-    res.image = document.querySelector('div.desktop img[src*="kavka.be/wp-content"]')?.src ?? '';
+      const res = {};
+      res.image = document.querySelector('div.desktop img[src*="kavka.be/wp-content"]')?.src ?? '';
 
-    res.longTextHTML = document.querySelector('h2 + .entry-content')?.innerHTML ?? null;
+      res.longTextHTML = document.querySelector('h2 + .entry-content')?.innerHTML ?? null;
 
-    res.priceTextcontent =
-      document.querySelector(".prijzen")?.textContent.trim() ??
-      null;
-    return res;
-  });
+      res.priceTextcontent =
+        document.querySelector(".prijzen")?.textContent.trim() ??
+        null;
+      return res;
+    });
+  } catch (error) {
+    log(error)
+  }
+  return pageInfo;
 }
 
 async function makeBaseEventList(browser, workerIndex) {

@@ -73,9 +73,9 @@ async function processSingleMusicEvent(browser, baseMusicEvents, workerIndex) {
 
   let pageInfo = await getPageInfo(page);
   pageInfo = postPageInfoProcessing(pageInfo);
-  log(pageInfo)
   firstMusicEvent.merge(pageInfo);
   if (firstMusicEvent.isValid) {
+
     firstMusicEvent.register();
   }
 
@@ -90,34 +90,34 @@ async function getPageInfo(page) {
   return await page.evaluate((idunaMonths) => {
 
     const res = {};
-
-    const startDateMatch = document.querySelector('#sideinfo .capitalize')
-      ?.textContent.match(/(\d+)\s+(\w+)\s+(\d\d\d\d)/) ?? null
-    if (startDateMatch && Array.isArray(startDateMatch) && startDateMatch.length > 3) {
-      res.startDate = `${startDateMatch[3]}-${idunaMonths[startDateMatch[2]]}-${startDateMatch[1]}`
-    }
-
-    const startEl = Array.from(document.querySelectorAll('#sideinfo h2')).find(h2El => {
-      return h2El.textContent.toLowerCase().includes('aanvang')
-    });
-    if (startEl) {
-      const startmatch = startEl.textContent.match(/\d\d:\d\d/);
-      if (startmatch) {
-        res.startTime = startmatch[0]
-      }
-    }
-
-    const doorEl = Array.from(document.querySelectorAll('#sideinfo h2')).find(h2El => {
-      return h2El.textContent.toLowerCase().includes('deur')
-    });
-    if (doorEl) {
-      const doormatch = doorEl.textContent.match(/\d\d:\d\d/);
-      if (doormatch) {
-        res.doorTime = doormatch[0]
-      }
-    }
-
     try {
+      const startDateMatch = document.querySelector('#sideinfo .capitalize')
+        ?.textContent.match(/(\d+)\s+(\w+)\s+(\d\d\d\d)/) ?? null
+      if (startDateMatch && Array.isArray(startDateMatch) && startDateMatch.length > 3) {
+        res.startDate = `${startDateMatch[3]}-${idunaMonths[startDateMatch[2]]}-${startDateMatch[1]}`
+      }
+
+      const startEl = Array.from(document.querySelectorAll('#sideinfo h2')).find(h2El => {
+        return h2El.textContent.toLowerCase().includes('aanvang')
+      });
+      if (startEl) {
+        const startmatch = startEl.textContent.match(/\d\d:\d\d/);
+        if (startmatch) {
+          res.startTime = startmatch[0]
+        }
+      }
+
+      const doorEl = Array.from(document.querySelectorAll('#sideinfo h2')).find(h2El => {
+        return h2El.textContent.toLowerCase().includes('deur')
+      });
+      if (doorEl) {
+        const doormatch = doorEl.textContent.match(/\d\d:\d\d/);
+        if (doormatch) {
+          res.doorTime = doormatch[0]
+        }
+      }
+
+
       if (res.startTime) {
         res.startDateTime = new Date(`${res.startDate}T${res.startTime}:00`).toISOString();
       }
