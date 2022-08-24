@@ -27,7 +27,7 @@ async function scrapeInit(workerIndex) {
     await fillMusicEvents(browser, baseMusicEvents, workerIndex);
 
   } catch (error) {
-    handleError(error);
+    handleError(error, 'Generic catch scrape init Kavka');
   }
 }
 
@@ -68,24 +68,67 @@ async function processSingleMusicEvent(browser, baseMusicEvents, workerIndex) {
   }
 
   const page = await browser.newPage();
-  await page.goto(firstMusicEvent.venueEventUrl, {
-    waitUntil: "load",
-    timeout: 10000
-  });
+  const pageInfoPromise = kavkaPageInfo(page, firstMusicEvent);
+  const failurePromise = failurePromiseAfter(7500);
+
+  return Promise.race([pageInfoPromise, failurePromise])
+    .then(firstResult => {
+      if (firstResult.status !== 'success') {
+        const errMsg = firstResult.data && typeof firstResult.data === 'string' ? `\nOriginal error message:\n${firstResult.data}` : '';
+        const err = new Error(`Kavka single failure, failure promise fired, at: \n${firstMusicEvent.title}\n${firstMusicEvent.venueEventUrl}${errMsg}`)
+        handleError(err, "Kavka promise race")
+      } else {
+        const pageInfo = firstResult.data;
+        firstMusicEvent.merge(pageInfo);
+        if (firstMusicEvent.isValid) {
+          firstMusicEvent.register();
+        }
+      }
+
+    }).catch(() => {
+      //
+    }).finally(() => {
+      page.close();
+      return newMusicEvents.length
+        ? processSingleMusicEvent(browser, newMusicEvents, workerIndex)
+        : true;
+    })
+}
+
+function failurePromiseAfter(time) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      reject({
+        status: 'failure',
+        data: null
+      });
+    }, time)
+  })
+}
+
+
+async function kavkaPageInfo(page, firstMusicEvent) {
+  try {
+    await page.goto(firstMusicEvent.venueEventUrl, {
+      waitUntil: "load",
+      timeout: 7500
+    });
+  } catch (error) {
+    error.message = `${error.message}\nurl: ${firstMusicEvent.venueEventUrl}`
+    return {
+      status: 'failure',
+      data: error.message
+    }
+  }
 
   let pageInfo = await getPageInfo(page);
   pageInfo = postPageInfoProcessing(pageInfo);
-  firstMusicEvent.merge(pageInfo);
-  if (firstMusicEvent.isValid) {
-    firstMusicEvent.register();
-  }
-
-  page.close();
-
-  return newMusicEvents.length
-    ? processSingleMusicEvent(browser, newMusicEvents, workerIndex)
-    : true;
+  return {
+    status: 'success',
+    data: pageInfo
+  };
 }
+
 
 async function getPageInfo(page) {
   let pageInfo;

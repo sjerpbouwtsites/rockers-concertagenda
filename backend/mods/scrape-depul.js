@@ -27,13 +27,10 @@ async function scrapeInit(workerIndex) {
     const eventGen = eventGenerator(baseMusicEvents);
     const nextEvent = eventGen.next().value;
     const checkedEvents = await eventAsyncCheck(browser, eventGen, nextEvent);
-    log(checkedEvents)
-    parentPort.postMessage({
-      status: "done",
-    });
-    //await fillMusicEvents(browser, checkedEvents, workerIndex);
+
+    await fillMusicEvents(browser, checkedEvents, workerIndex);
   } catch (error) {
-    handleError(error);
+    handleError(error, 'Generic error catch De Pul scrape init');
   }
 }
 
@@ -93,18 +90,56 @@ async function processSingleMusicEvent(browser, baseMusicEvents, workerIndex) {
 }
 
 async function getPageInfo(page) {
-  return await page.evaluate(() => {
+  return await page.evaluate(depulMonths => {
 
     const res = {};
-    res.image = document.querySelector('div.desktop img[src*="kavka.be/wp-content"]')?.src ?? '';
 
-    res.longTextHTML = document.querySelector('h2 + .entry-content')?.innerHTML ?? null;
+    const contentBox = document.querySelector('#content-box') ?? null;
+    if (contentBox) {
+      [
+        contentBox.querySelector('.item-bottom') ?? null,
+        contentBox.querySelector('.social-content') ?? null,
+        contentBox.querySelector('.facebook-comments') ?? null
+      ].forEach(removeFromContentBox => {
+        if (removeFromContentBox) {
+          contentBox.removeChild(removeFromContentBox)
+        }
+      })
+      res.longTextHTML = contentBox.innerHTML;
+    }
 
-    res.priceTextcontent =
-      document.querySelector(".prijzen")?.textContent.trim() ??
-      null;
+    const agendaTitleBar = document.getElementById('agenda-title-bar') ?? null;
+    res.shortText = agendaTitleBar?.querySelector('h3')?.textContent.trim();
+    const rightHandDataColumn = agendaTitleBar?.querySelector('.column.right') ?? null
+    if (rightHandDataColumn) {
+      rightHandDataColumn.querySelectorAll('h1 + ul li')?.forEach(columnRow => {
+        const lowerCaseTextContent = columnRow.textContent.toLowerCase();
+        if (lowerCaseTextContent.includes('datum')) {
+          const startDateMatch = lowerCaseTextContent.match(/(\d\d)\s+(\w{2,3})\s+(\d{4})/)
+          if (startDateMatch && Array.isArray(startDateMatch) && startDateMatch.length === 4) {
+            res.startDate = `${startDateMatch[3]}-${depulMonths[startDateMatch[2]]}-${startDateMatch[1]}`
+          }
+        } else if (lowerCaseTextContent.includes('aanvang')) {
+          if (!res.startDate) {
+            return;
+          }
+          const startTimeMatch = lowerCaseTextContent.match(/\d\d:\d\d/);
+          if (startTimeMatch && Array.isArray(startTimeMatch) && startTimeMatch.length === 1) {
+            res.startDateTime = new Date(`${res.startDate}T${startTimeMatch[0]}:00`).toISOString()
+          }
+        } else if (lowerCaseTextContent.includes('open')) {
+          if (!res.startDate) {
+            return;
+          }
+          const doorTimeMatch = lowerCaseTextContent.match(/\d\d:\d\d/);
+          if (doorTimeMatch && Array.isArray(doorTimeMatch) && doorTimeMatch.length === 1) {
+            res.doorOpenDateTime = new Date(`${res.startDate}T${doorTimeMatch[0]}:00`).toISOString()
+          }
+        }
+      })
+    }
     return res;
-  });
+  }, depulMonths);
 }
 
 async function makeBaseEventList(browser, workerIndex) {
@@ -161,13 +196,13 @@ async function eventAsyncCheck(browser, eventGen, currentEvent = null, checkedEv
 
   const firstCheckText = `${currentEvent.title} ${currentEvent.shortText}`;
   if (
-    firstCheckText.includes('rock') ||
     firstCheckText.includes('metal') ||
     firstCheckText.includes('punk') ||
     firstCheckText.includes('punx') ||
     firstCheckText.includes('noise') ||
     firstCheckText.includes('industrial')
   ) {
+    currentEvent.passReason = `title and/or short text genre match`
     checkedEvents.push(currentEvent)
   } else {
 
@@ -178,8 +213,7 @@ async function eventAsyncCheck(browser, eventGen, currentEvent = null, checkedEv
 
     const rockMetalOpPagina = await tempPage.evaluate(() => {
       const tc = document.getElementById('content-box')?.textContent ?? '';
-      return tc.includes('rock') ||
-        tc.includes('metal') ||
+      return tc.includes('metal') ||
         tc.includes('punk') ||
         tc.includes('punx') ||
         tc.includes('noise') ||
@@ -187,6 +221,7 @@ async function eventAsyncCheck(browser, eventGen, currentEvent = null, checkedEv
     });
 
     if (rockMetalOpPagina) {
+      currentEvent.passReason = `Page of event contained genres`
       checkedEvents.push(currentEvent)
     }
 
@@ -196,7 +231,7 @@ async function eventAsyncCheck(browser, eventGen, currentEvent = null, checkedEv
 
   const nextEvent = eventGen.next().value;
   if (nextEvent) {
-    return eventAsyncCheck(eventGen, nextEvent, checkedEvents)
+    return eventAsyncCheck(browser, eventGen, nextEvent, checkedEvents)
   } else {
     return checkedEvents;
   }

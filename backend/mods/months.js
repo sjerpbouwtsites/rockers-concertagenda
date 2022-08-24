@@ -63,5 +63,6 @@ const months = {
   dbs: dbsMonths,
   gebrdenobel: gebrdenobelMonths,
   neushoorn: neushoornMonths,
+  depul: depulMonths,
 };
 export default months;

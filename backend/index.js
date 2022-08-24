@@ -140,11 +140,11 @@ function init() {
     workerList.push([fsDirections.scrapeIduna, "iduna", 0]);
   }
 
-  if (EventsList.isOld("kavka") || true) {
+  if (EventsList.isOld("kavka")) {
     workerList.push([fsDirections.scrapeKavka, "kavka", 0]);
   }
 
-  if (EventsList.isOld("depul") && false) {
+  if (EventsList.isOld("depul") || true) {
     workerList.push([fsDirections.scrapeDepul, "depul", 0]);
   }
 
