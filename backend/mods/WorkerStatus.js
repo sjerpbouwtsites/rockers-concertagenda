@@ -119,7 +119,9 @@ export default class WorkerStatus {
       console.log(" ");
       console.log("All workers done");
       WorkerStatus.programEnd();
+      return true
     }
+    return false;
   }
 
   static reportOnActiveWorkers() {

@@ -166,7 +166,9 @@ function init() {
 
   walkThroughWorkerList(workerList);
 
-  WorkerStatus.reportOnActiveWorkers();
+  if (!WorkerStatus.checkIfAllDone()) {
+    WorkerStatus.reportOnActiveWorkers();
+  };
 
   printLocationsToPublic();
 }
@@ -249,10 +251,14 @@ async function startWorker(
 }
 
 function houseKeeping() {
-  fs.rmdirSync(fsDirections.publicTexts, {
-    recursive: true
-  });
-  fs.mkdirSync(fsDirections.publicTexts);
+
+  fs.rm(fsDirections.publicTexts, { recursive: true }, () => {
+    fs.mkdirSync(fsDirections.publicTexts);
+  })
+
+  // fs.rmdirSync(fsDirections.publicTexts, {
+  //   recursive: true
+  // });
 }
 
 function shuffleArray(array) {

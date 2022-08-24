@@ -156,7 +156,6 @@ export default class EventsList {
       fsDirections.timestampsJson,
       fsDirections.timestampsPublicJson
     );
-    console.log("events written to events-list.json");
     console.log(" ")
     console.log("Events per location:")
     Object.values(EventsList._meta.locations).forEach(locationMeta => {
