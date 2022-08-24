@@ -31,6 +31,7 @@ const fsDirections = {
   temp: path.resolve("./temp"),
   timestampsJson: path.resolve("./event-lists/timestamps.json"),
   timestampsPublicJson: path.resolve("../public/timestamps.json"),
+  voltJson: path.resolve("./event-lists/volt.json"),
 };
 
 fs.readdirSync(fsDirections.mods).forEach((mod) => {

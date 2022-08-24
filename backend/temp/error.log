@@ -1,4 +1,82 @@
 
+  Generic error catch Volt scrape init Error - 12:12:32 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'toLowerCase')
+    at __puppeteer_evaluation_script__:26:46
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-volt.js:100:18)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-volt.js:71:18)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-volt.js:25:5) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'toLowerCase')
+    at __puppeteer_evaluation_script__:26:46
+  
+  
+  Generic error catch Volt scrape init Error - 12:12:31 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'toLowerCase')
+    at __puppeteer_evaluation_script__:26:46
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-volt.js:100:18)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-volt.js:71:18)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-volt.js:25:5) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'toLowerCase')
+    at __puppeteer_evaluation_script__:26:46
+  
+  
+  Generic error catch Volt scrape init Error - 12:12:31 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'toLowerCase')
+    at __puppeteer_evaluation_script__:26:46
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-volt.js:100:18)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-volt.js:71:18)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-volt.js:25:5) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'toLowerCase')
+    at __puppeteer_evaluation_script__:26:46
+  
+  
+  Generic error catch Volt scrape init Error - 11:58:20 PM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'trim')
+    at __puppeteer_evaluation_script__:12:82
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-volt.js:100:18)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-volt.js:72:18)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-volt.js:26:5) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'trim')
+    at __puppeteer_evaluation_script__:12:82
+  
+  
+  Generic error catch Volt scrape init Error - 11:58:19 PM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'trim')
+    at __puppeteer_evaluation_script__:12:82
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-volt.js:100:18)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-volt.js:72:18)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-volt.js:26:5) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'trim')
+    at __puppeteer_evaluation_script__:12:82
+  
+  
+  Generic error catch Volt scrape init Error - 11:58:19 PM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'trim')
+    at __puppeteer_evaluation_script__:12:82
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-volt.js:100:18)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-volt.js:72:18)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-volt.js:26:5) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'trim')
+    at __puppeteer_evaluation_script__:12:82
+  
+  
   Kavka promise race Error - 9:07:54 PM
   Error: Kavka single failure, failure promise fired, at: 
 Deathstars

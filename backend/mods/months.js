@@ -43,28 +43,32 @@ export const dynamoMonths = {
   dec: "12",
 };
 
-export const metalfanMonths = dynamoMonths;
+export const afasliveMonths = baroegMonths;
 export const bibelotMonths = baroegMonths;
 export const dbsMonths = baroegMonths;
+export const depulMonths = dynamoMonths;
 export const gebrdenobelMonths = baroegMonths;
-export const neushoornMonths = baroegMonths;
-export const afasliveMonths = baroegMonths;
 export const idunaMonths = baroegMonths;
 export const kavkaMonths = dynamoMonths;
-export const depulMonths = dynamoMonths;
+export const metalfanMonths = dynamoMonths;
+export const neushoornMonths = baroegMonths;
 export const paradisoMonths = baroegMonths;
+export const voltMonths = dynamoMonths;
 
 const months = {
   afaslive: afasliveMonths,
   baroeg: baroegMonths,
-  occii: occiiMonths,
-  dynamy: dynamoMonths,
-  paradiso: paradisoMonths,
-  metalfan: metalfanMonths,
   bibelot: bibelotMonths,
   dbs: dbsMonths,
-  gebrdenobel: gebrdenobelMonths,
-  neushoorn: neushoornMonths,
   depul: depulMonths,
+  dynamy: dynamoMonths,
+  gebrdenobel: gebrdenobelMonths,
+  iduna: idunaMonths,
+  kavka: kavkaMonths,
+  metalfan: metalfanMonths,
+  neushoorn: neushoornMonths,
+  occii: occiiMonths,
+  paradiso: paradisoMonths,
+  volt: voltMonths,
 };
 export default months;

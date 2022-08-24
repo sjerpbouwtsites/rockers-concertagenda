@@ -161,6 +161,12 @@ function init() {
     workerList.push([fsDirections.scrapeParadiso, "paradiso", 3]);
   }
 
+  if (EventsList.isOld("volt", shellArguments?.force)) {
+    workerList.push([fsDirections.scrapeVolt, "volt", 0]);
+    workerList.push([fsDirections.scrapeVolt, "volt", 1]);
+    workerList.push([fsDirections.scrapeVolt, "volt", 2]);
+  }
+
   workerList = shuffleArray(workerList)
   WorkerStatus.totalWorkers = workerList.length;
 
