@@ -1,4 +1,24 @@
 
+  Kavka promise race Error - 9:07:54 PM
+  Error: Kavka single failure, failure promise fired, at: 
+Deathstars
+https://kavka.be/event/deathstars/
+Original error message:
+Navigation timeout of 7500 ms exceeded
+url: https://kavka.be/event/deathstars/
+    at file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-kavka.js:79:21
+    at runNextTicks (node:internal/process/task_queues:60:5)
+    at listOnTimeout (node:internal/timers:533:9)
+    at process.processTimers (node:internal/timers:507:7)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-kavka.js:28:5) 
+  Kavka single failure, failure promise fired, at: 
+Deathstars
+https://kavka.be/event/deathstars/
+Original error message:
+Navigation timeout of 7500 ms exceeded
+url: https://kavka.be/event/deathstars/
+  
+  
   unknown location Error - 7:54:45 PM
   Error: No node found for selector: [href*="Heavy"]
     at assert (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/assert.js:26:15)

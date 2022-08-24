@@ -5,8 +5,10 @@ import { Worker } from "worker_threads";
 import WorkerStatus from "./mods/WorkerStatus.js";
 import EventsList from "./mods/events-list.js";
 import fsDirections from "./mods/fs-directions.js";
-import { handleError, errorAfterSeconds } from "./mods/tools.js";
+import { handleError, errorAfterSeconds, getShellArguments } from "./mods/tools.js";
 import { printLocationsToPublic } from "./mods/locations.js";
+
+const shellArguments = getShellArguments();
 
 function init() {
 
@@ -16,10 +18,10 @@ function init() {
 
   let workerList = [];
 
-  if (EventsList.isOld("metalfan")) {
+  if (EventsList.isOld("metalfan", shellArguments?.force)) {
     workerList.push([fsDirections.scrapeMetalfan, "metalfan", 0]);
   }
-  if (EventsList.isOld("baroeg")) {
+  if (EventsList.isOld("baroeg", shellArguments?.force)) {
     try {
       workerList.push([fsDirections.scrapeBaroeg, "baroeg", 0]);
       workerList.push([fsDirections.scrapeBaroeg, "baroeg", 1]);
@@ -35,27 +37,27 @@ function init() {
     }
   }
 
-  if (EventsList.isOld("patronaat")) {
+  if (EventsList.isOld("patronaat", shellArguments?.force)) {
     workerList.push([fsDirections.scrapePatronaat, "patronaat", 0]);
     workerList.push([fsDirections.scrapePatronaat, "patronaat", 1]);
     workerList.push([fsDirections.scrapePatronaat, "patronaat", 2]);
   }
 
-  if (EventsList.isOld("013")) {
+  if (EventsList.isOld("013", shellArguments?.force)) {
     workerList.push([fsDirections.scrape013, "013", 0]);
     workerList.push([fsDirections.scrape013, "013", 1]);
     workerList.push([fsDirections.scrape013, "013", 2]);
     workerList.push([fsDirections.scrape013, "013", 3]);
   }
 
-  if (EventsList.isOld("effenaar")) {
+  if (EventsList.isOld("effenaar", shellArguments?.force)) {
     workerList.push([fsDirections.scrapeEffenaar, "effenaar", 0]);
     workerList.push([fsDirections.scrapeEffenaar, "effenaar", 1]);
     workerList.push([fsDirections.scrapeEffenaar, "effenaar", 2]);
     workerList.push([fsDirections.scrapeEffenaar, "effenaar", 3]);
   }
 
-  if (EventsList.isOld("tivolivredenburg")) {
+  if (EventsList.isOld("tivolivredenburg", shellArguments?.force)) {
     workerList.push([
       fsDirections.scrapeTivolivredenburg,
       "tivolivredenburg",
@@ -78,7 +80,7 @@ function init() {
     ]);
   }
 
-  if (EventsList.isOld("doornroosje")) {
+  if (EventsList.isOld("doornroosje", shellArguments?.force)) {
     workerList.push([fsDirections.scrapeDoornroosje, "doornroosje", 0]);
     workerList.push([fsDirections.scrapeDoornroosje, "doornroosje", 1]);
     workerList.push([fsDirections.scrapeDoornroosje, "doornroosje", 2]);
@@ -87,72 +89,72 @@ function init() {
     workerList.push([fsDirections.scrapeDoornroosje, "doornroosje", 5]);
   }
 
-  if (EventsList.isOld("metropool")) {
+  if (EventsList.isOld("metropool", shellArguments?.force)) {
     workerList.push([fsDirections.scrapeMetropool, "metropool", 0]);
     workerList.push([fsDirections.scrapeMetropool, "metropool", 1]);
     workerList.push([fsDirections.scrapeMetropool, "metropool", 2]);
     workerList.push([fsDirections.scrapeMetropool, "metropool", 3]);
   }
 
-  if (EventsList.isOld("boerderij")) {
+  if (EventsList.isOld("boerderij", shellArguments?.force)) {
     workerList.push([fsDirections.scrapeBoerderij, "boerderij", 0]);
   }
 
-  if (EventsList.isOld("occii")) {
+  if (EventsList.isOld("occii", shellArguments?.force)) {
     workerList.push([fsDirections.scrapeOccii, "occii", 0]);
     workerList.push([fsDirections.scrapeOccii, "occii", 1]);
   }
-  if (EventsList.isOld("dynamo")) {
+  if (EventsList.isOld("dynamo", shellArguments?.force)) {
     workerList.push([fsDirections.scrapeDynamo, "dynamo", 0]);
     workerList.push([fsDirections.scrapeDynamo, "dynamo", 1]);
   }
 
-  if (EventsList.isOld("melkweg")) {
+  if (EventsList.isOld("melkweg", shellArguments?.force)) {
     workerList.push([fsDirections.scrapeMelkweg, "melkweg", 0, null, true]);
     workerList.push([fsDirections.scrapeMelkweg, "melkweg", 1, null, true]);
     workerList.push([fsDirections.scrapeMelkweg, "melkweg", 2, null, true]);
   }
 
-  if (EventsList.isOld("bibelot")) {
+  if (EventsList.isOld("bibelot", shellArguments?.force)) {
     workerList.push([fsDirections.scrapeBibelot, "bibelot", 0]);
   }
 
-  if (EventsList.isOld("dbs")) {
+  if (EventsList.isOld("dbs", shellArguments?.force)) {
     workerList.push([fsDirections.scrapeDbs, "dbs", 0]);
     workerList.push([fsDirections.scrapeDbs, "dbs", 1]);
     workerList.push([fsDirections.scrapeDbs, "dbs", 2]);
   }
 
-  if (EventsList.isOld("gebrdenobel")) {
+  if (EventsList.isOld("gebrdenobel", shellArguments?.force)) {
     workerList.push([fsDirections.scrapeGebrdenobel, "gebrdenobel", 0]);
   }
 
-  if (EventsList.isOld("neushoorn")) {
+  if (EventsList.isOld("neushoorn", shellArguments?.force)) {
     workerList.push([fsDirections.scrapeNeushoorn, "neushoorn", 0]);
   }
 
-  if (EventsList.isOld("afaslive")) {
+  if (EventsList.isOld("afaslive", shellArguments?.force)) {
     workerList.push([fsDirections.scrapeAfaslive, "afaslive", 0]);
     workerList.push([fsDirections.scrapeAfaslive, "afaslive", 1]);
     workerList.push([fsDirections.scrapeAfaslive, "afaslive", 2]);
     workerList.push([fsDirections.scrapeAfaslive, "afaslive", 3]);
   }
 
-  if (EventsList.isOld("iduna")) {
+  if (EventsList.isOld("iduna", shellArguments?.force)) {
     workerList.push([fsDirections.scrapeIduna, "iduna", 0]);
   }
 
-  if (EventsList.isOld("kavka")) {
+  if (EventsList.isOld("kavka", shellArguments?.force)) {
     workerList.push([fsDirections.scrapeKavka, "kavka", 0]);
   }
 
-  if (EventsList.isOld("depul")) {
+  if (EventsList.isOld("depul", shellArguments?.force)) {
     workerList.push([fsDirections.scrapeDepul, "depul", 0]);
     workerList.push([fsDirections.scrapeDepul, "depul", 1]);
     workerList.push([fsDirections.scrapeDepul, "depul", 2]);
   }
 
-  if (EventsList.isOld("paradiso")) {
+  if (EventsList.isOld("paradiso", shellArguments?.force)) {
     workerList.push([fsDirections.scrapeParadiso, "paradiso", 0]);
     workerList.push([fsDirections.scrapeParadiso, "paradiso", 1]);
     workerList.push([fsDirections.scrapeParadiso, "paradiso", 2]);

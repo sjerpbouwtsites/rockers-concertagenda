@@ -32,6 +32,21 @@ export function failurePromiseAfter(time) {
   })
 }
 
+export function getShellArguments() {
+  const shellArguments = {};
+  process.argv.forEach(function (val, index, array) {
+    if (index < 2) {
+      return;
+    }
+    if (!val.includes('=')) {
+      throw new Error(`Invalid shell arguments passed to node. Please use foo=bar bat=gee.`)
+    }
+    const [argName, argValue] = val.split('=');
+    shellArguments[argName] = argValue;
+  });
+  return shellArguments;
+}
+
 export async function autoScroll(page) {
   await page.evaluate(async () => {
     await new Promise((resolve, reject) => {

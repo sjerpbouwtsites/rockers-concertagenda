@@ -39,7 +39,12 @@ export default class EventsList {
     }
   }
 
-  static isOld(name) {
+  static isOld(name, forceScrapeList = '') {
+
+    if (forceScrapeList.includes(name)) {
+      return true;
+    }
+
     EventsList.checkTimestampsExist();
     const eventListTimestamps = JSON.parse(
       fs.readFileSync(fsDirections.timestampsJson)
