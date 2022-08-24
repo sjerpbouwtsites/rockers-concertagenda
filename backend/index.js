@@ -16,7 +16,7 @@ function init() {
 
   const workerList = [];
 
-  if (EventsList.isOld("metalfan")) {
+  if (EventsList.isOld("metalfan") || true) {
     workerList.push([fsDirections.scrapeMetalfan, "metalfan", 0]);
   }
   if (EventsList.isOld("baroeg")) {
@@ -146,6 +146,8 @@ function init() {
 
   if (EventsList.isOld("depul") || true) {
     workerList.push([fsDirections.scrapeDepul, "depul", 0]);
+    workerList.push([fsDirections.scrapeDepul, "depul", 1]);
+    workerList.push([fsDirections.scrapeDepul, "depul", 2]);
   }
 
   walkThroughWorkerList(workerList);

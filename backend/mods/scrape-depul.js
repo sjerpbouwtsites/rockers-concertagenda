@@ -148,12 +148,15 @@ async function makeBaseEventList(browser, workerIndex) {
     waitUntil: "load",
   });
 
-  let rawEvents = await page.evaluate(depulMonths => {
+  let rawEvents = await page.evaluate(({ depulMonths, workerIndex }) => {
 
     // hack op site
     loadContent('all', 'music');
 
     return Array.from(document.querySelectorAll('.agenda-item'))
+      .filter((rawEvent, eventIndex) => {
+        return eventIndex % 3 === workerIndex;
+      })
       .map(rawEvent => {
 
         const title = rawEvent.querySelector('h2')?.textContent.trim() ?? '';
@@ -185,7 +188,7 @@ async function makeBaseEventList(browser, workerIndex) {
           shortText,
         }
       })
-  }, depulMonths);
+  }, { depulMonths, workerIndex });
   return rawEvents
     .filter(basicMusicEventsFilter)
     .map((event) => new MusicEvent(event));
