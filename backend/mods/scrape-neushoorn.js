@@ -141,7 +141,7 @@ async function makeBaseEventList(browser, workerIndex) {
     waitUntil: "load",
   })
 
-  await waitFor(5000);
+  await waitFor(7500);
 
   await page.click('[href*="Heavy"]')
 

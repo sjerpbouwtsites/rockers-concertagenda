@@ -1,4 +1,40 @@
 
+  Baroeg Error - Error - 9:09:15 AM
+  Error: No node found for selector: [href*="Heavy"]
+    at assert (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/assert.js:26:15)
+    at DOMWorld.click (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:287:32)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-neushoorn.js:146:3)
+    at async scrapeNeushoorn (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-neushoorn.js:24:29) 
+  No node found for selector: [href*="Heavy"]
+  
+  
+  Baroeg Error - Error - 9:05:27 AM
+  Error: No node found for selector: [href*="Heavy"]
+    at assert (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/assert.js:26:15)
+    at DOMWorld.click (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:287:32)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-neushoorn.js:146:3)
+    at async scrapeNeushoorn (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-neushoorn.js:24:29) 
+  No node found for selector: [href*="Heavy"]
+  
+  
+  Baroeg Error - TimeoutError - 8:57:42 AM
+  TimeoutError: Navigation timeout of 10000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 10000 ms exceeded
+  
+  
+  Baroeg Error - Error - 8:55:12 AM
+  Error: No node found for selector: [href*="Heavy"]
+    at assert (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/assert.js:26:15)
+    at DOMWorld.click (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:287:32)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-neushoorn.js:146:3)
+    at async scrapeNeushoorn (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-neushoorn.js:24:29) 
+  No node found for selector: [href*="Heavy"]
+  
+  
   Baroeg Error - Error - 8:44:56 AM
   Error: No node found for selector: [href*="Heavy"]
     at assert (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/assert.js:26:15)
