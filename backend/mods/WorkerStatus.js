@@ -119,7 +119,7 @@ export default class WorkerStatus {
     const notDone = WorkerStatus.currentNotDone;
     console.log("Currently active:");
     notDone.forEach((notDoneWorker) => {
-      const todoMSG = notDoneWorker.todo ? ` todo: ${notDoneWorker.todo}` : "";
+      const todoMSG = notDoneWorker.todo ? ` todo: ${notDoneWorker.todo}` : " initializing";
       console.log(`${notDoneWorker.name}${todoMSG}`);
     });
     if (notDone.length > 0 || WorkerStatus.waitingWorkers.length !== 0) {
