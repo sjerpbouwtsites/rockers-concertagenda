@@ -167,6 +167,10 @@ function init() {
     workerList.push([fsDirections.scrapeVolt, "volt", 2]);
   }
 
+  if (EventsList.isOld("duycker", shellArguments?.force)) {
+    workerList.push([fsDirections.scrapeDuycker, "duycker", 0]);
+  }
+
   workerList = shuffleArray(workerList)
   WorkerStatus.totalWorkers = workerList.length;
 

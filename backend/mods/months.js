@@ -54,6 +54,7 @@ export const metalfanMonths = dynamoMonths;
 export const neushoornMonths = baroegMonths;
 export const paradisoMonths = baroegMonths;
 export const voltMonths = dynamoMonths;
+export const duyckerMonths = dynamoMonths;
 
 const months = {
   afaslive: afasliveMonths,
@@ -62,6 +63,7 @@ const months = {
   dbs: dbsMonths,
   depul: depulMonths,
   dynamy: dynamoMonths,
+  duycker: duyckerMonths,
   gebrdenobel: gebrdenobelMonths,
   iduna: idunaMonths,
   kavka: kavkaMonths,

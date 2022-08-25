@@ -1,4 +1,64 @@
 
+  Generic error catch Duycker scrape init Error - 3:15:52 AM
+  TypeError: testText.match is not a function
+    at getPriceFromHTML (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:82:31)
+    at postPageInfoProcessing (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:151:26)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-duycker.js:72:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-duycker.js:25:5) 
+  testText.match is not a function
+  
+  
+  Generic error catch Duycker scrape init Error - 3:15:22 AM
+  TypeError: testText.match is not a function
+    at getPriceFromHTML (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:82:31)
+    at postPageInfoProcessing (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:151:26)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-duycker.js:72:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-duycker.js:25:5) 
+  testText.match is not a function
+  
+  
+  Duycker wacht op laden single pagina Error - 3:15:22 AM
+  TimeoutError: waiting for selector `#container .content-block` failed: timeout 7500ms exceeded
+    at new WaitTask (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:528:34)
+    at DOMWorld.waitForSelectorInPage (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:432:26)
+    at internalHandler.waitFor (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/QueryHandler.js:31:77)
+    at DOMWorld.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:323:29)
+    at Frame.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:942:51)
+    at Page.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:2359:33)
+    at getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-duycker.js:93:16)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-duycker.js:71:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-duycker.js:25:5) 
+  waiting for selector `#container .content-block` failed: timeout 7500ms exceeded
+  
+  
+  Generic error catch Duycker scrape init Error - 3:13:02 AM
+  TypeError: testText.match is not a function
+    at getPriceFromHTML (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:82:31)
+    at postPageInfoProcessing (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:151:26)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-duycker.js:72:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-duycker.js:25:5) 
+  testText.match is not a function
+  
+  
+  Volt wacht op laden single pagina Error - 3:13:02 AM
+  TimeoutError: waiting for selector `#main .content-block` failed: timeout 7500ms exceeded
+    at new WaitTask (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:528:34)
+    at DOMWorld.waitForSelectorInPage (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:432:26)
+    at internalHandler.waitFor (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/QueryHandler.js:31:77)
+    at DOMWorld.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:323:29)
+    at Frame.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:942:51)
+    at Page.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:2359:33)
+    at getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-duycker.js:93:16)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-duycker.js:71:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-duycker.js:25:5) 
+  waiting for selector `#main .content-block` failed: timeout 7500ms exceeded
+  
+  
   Generic error catch Volt scrape init Error - 12:12:32 AM
   Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'toLowerCase')
     at __puppeteer_evaluation_script__:26:46
