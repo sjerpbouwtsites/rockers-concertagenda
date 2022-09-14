@@ -1,5 +1,41 @@
 [
   {
+    "doorOpenDateTime": "2022-09-28T16:30:00.000Z",
+    "startDateTime": "2022-09-28T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.afaslive.nl/agenda/biffy-clyro",
+    "title": "Biffy Clyro",
+    "location": "afaslive",
+    "price": 43.68,
+    "shortText": null,
+    "longText": "../public/texts/c11105d7-1eea-472c-913d-b2fd7a273881.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2022/09-september/_agendaitem/Biffy-Clyro-nieuwe.jpg"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-10-02T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.afaslive.nl/agenda/machine-head-amon-amarth",
+    "title": "Machine Head & Amon Amarth",
+    "location": "afaslive",
+    "price": 60.48,
+    "shortText": null,
+    "longText": "../public/texts/7c826181-5b32-4e64-ac45-1bcbdde59630.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2022/10-oktober/_agendaitem/Machine-Head-Amon-Amarth.jpg"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-10-13T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.afaslive.nl/agenda/kasabian",
+    "title": "Kasabian",
+    "location": "afaslive",
+    "price": 44.8,
+    "shortText": null,
+    "longText": "../public/texts/632ca99e-dd95-4abe-a863-850f1fdf4968.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2022/10-oktober/_agendaitem/Kasabian.jpg"
+  },
+  {
     "doorOpenDateTime": null,
     "startDateTime": "2022-10-24T18:00:00.000Z",
     "endDateTime": null,
@@ -8,7 +44,7 @@
     "location": "afaslive",
     "price": 67.2,
     "shortText": null,
-    "longText": "../public/texts/bbd76fd0-0281-44bd-9ac0-da65302cb58a.html",
+    "longText": "../public/texts/008b245a-24ba-4384-bcbf-cfaccf02bf0d.html",
     "image": "https://www.afaslive.nl/files/Agenda/2022/03-maart/_agendaitem/Counting-Crows.jpg"
   },
   {
@@ -20,43 +56,19 @@
     "location": "afaslive",
     "price": 51.52,
     "shortText": null,
-    "longText": "../public/texts/a37dcb4a-1ee7-4d76-b033-d631a5d4e4a0.html",
+    "longText": "../public/texts/7882b461-baba-4cee-ae6b-6aaf8c3e3fb3.html",
     "image": "https://www.afaslive.nl/files/Agenda/2022/11-november/_agendaitem/13497/Rise-Against.jpg"
   },
   {
-    "doorOpenDateTime": "2023-01-27T17:30:00.000Z",
-    "startDateTime": "2023-01-27T18:00:00.000Z",
+    "doorOpenDateTime": "2023-04-07T16:30:00.000Z",
+    "startDateTime": "2023-04-07T18:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/epica-apocalyptica-2",
-    "title": "EPICA & Apocalyptica",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/eels-1",
+    "title": "EELS",
     "location": "afaslive",
-    "price": 51.52,
+    "price": 46.5,
     "shortText": null,
-    "longText": "../public/texts/490a5bf9-21e5-4d9c-92b2-3838daf4ba00.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2020/12-december/_agendaitem/Epica.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2023-04-14T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/avril-lavigne-1",
-    "title": "Avril Lavigne",
-    "location": "afaslive",
-    "price": 47.04,
-    "shortText": null,
-    "longText": "../public/texts/8d749efa-b070-46d1-9df0-a51b5c73a61f.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2022/02-februari/_agendaitem/Avril-Lavigne.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2023-05-20T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/the-offspring",
-    "title": "The Offspring",
-    "location": "afaslive",
-    "price": 49.28,
-    "shortText": null,
-    "longText": "../public/texts/e058d6e0-fee6-4847-88ad-d6b1b96821f4.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2023/5-Mei/_agendaitem/The-Offspring.jpg"
+    "longText": "../public/texts/ff7cfbdd-dc1a-437c-b036-3287ec259701.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2022/04-april/_agendaitem/Eels.jpg"
   }
 ]

@@ -1,14 +1,26 @@
 [
   {
     "doorOpenDateTime": null,
+    "startDateTime": "2022-11-16T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://baroeg.nl/productie/demilich-concrete-winds/",
+    "title": "Demilich + Concrete Winds",
+    "location": "baroeg",
+    "price": 14,
+    "shortText": "<p>Extreem en barbaars.</p>\n",
+    "longText": "../public/texts/ba904458-a182-4381-aaf5-ef43495b4139.html",
+    "image": "https://baroeg.nl/wp-content/uploads/2022/07/035-Sam-Jamsen-07655-scaled-e1657792225919-768x223.jpg"
+  },
+  {
+    "doorOpenDateTime": null,
     "startDateTime": "2022-11-06T12:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://baroeg.nl/productie/dutch-doom-days-xx-dag-2/",
     "title": "Dutch Doom Days XX (Dag 2)",
     "location": "baroeg",
     "price": "2",
-    "shortText": "<p>Dutch Doom Days XX (Dag 2): Poema Arcanvs + Akelei.</p>\n",
-    "longText": "../public/texts/9c4f6d77-5083-4179-b9bc-85d22d87129a.html",
+    "shortText": "<p>Dutch Doom Days XX (Dag 2): Poema Arcanvs + Heavy Lord + Akelei.</p>\n",
+    "longText": "../public/texts/425a3073-b89d-487a-a821-917a969c0d55.html",
     "image": "https://baroeg.nl/wp-content/uploads/2022/05/Poema_Arcanus_live_76-768x512.jpg"
   },
   {
@@ -20,7 +32,7 @@
     "location": "baroeg",
     "price": "1",
     "shortText": "<p>Dutch Doom Days XX (Dag 1): Saturnus + Esoteric + Majestic Downfall + Mourners Lament and more TBA</p>\n",
-    "longText": "../public/texts/2aaf3510-96e2-49b1-b226-fa6aa9f03816.html",
+    "longText": "../public/texts/613a0951-a6b4-461b-b48c-efc726ebc67e.html",
     "image": "https://baroeg.nl/wp-content/uploads/2022/05/Saturnus1-768x576.jpg"
   },
   {
@@ -32,7 +44,7 @@
     "location": "baroeg",
     "price": "11",
     "shortText": "<p>Zware, hypnotische doom.</p>\n",
-    "longText": "../public/texts/6b47876d-c284-4e83-b844-ae2d86cd5ae1.html",
+    "longText": "../public/texts/efc795d9-4434-4311-b2f9-3a462343b69b.html",
     "image": "https://baroeg.nl/wp-content/uploads/2022/05/Picca-768x768.jpeg"
   },
   {
@@ -44,7 +56,7 @@
     "location": "baroeg",
     "price": 16.5,
     "shortText": "<p>Teringjantje, briljante punkrockgiganten!</p>\n",
-    "longText": "../public/texts/d756bd77-a7be-4feb-b702-5e051ca986ae.html",
+    "longText": "../public/texts/0fed08ed-4cac-4e52-bd3c-43679ec27bcf.html",
     "image": "https://baroeg.nl/wp-content/uploads/2022/08/Down-By-Law-150x150.jpg"
   },
   {
@@ -56,7 +68,7 @@
     "location": "baroeg",
     "price": 20,
     "shortText": "<p>De negende editie van Wavefest.</p>\n",
-    "longText": "../public/texts/57c59159-7c2a-4291-b4f1-6bad3a3ee9f0.html",
+    "longText": "../public/texts/6aaf6191-33f4-4e81-88f3-ac042392792a.html",
     "image": "https://baroeg.nl/wp-content/uploads/2022/04/ACTORS_LUMPromo_2-scaled-e1648934858558-768x269.jpg"
   },
   {
@@ -68,8 +80,20 @@
     "location": "baroeg",
     "price": 33,
     "shortText": "<p>Toprock van Poolse bodem</p>\n",
-    "longText": "../public/texts/888e83c5-459e-4558-b0f1-3bd23f4721f6.html",
+    "longText": "../public/texts/857cf5c8-685a-4b9a-b002-e6cec0249b4f.html",
     "image": "https://baroeg.nl/wp-content/uploads/2021/11/Karol-Kacperski-zespól-ORGANEK-768x512.jpg"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-10-27T17:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://baroeg.nl/productie/riffsniffer-presents-1000mods/",
+    "title": "Riffsniffer presents: 1000mods",
+    "location": "baroeg",
+    "price": 15,
+    "shortText": "<p>1000mods</p>\n",
+    "longText": "../public/texts/25b2a4e5-9d56-430e-a8e2-514ab7e41fb2.html",
+    "image": "https://baroeg.nl/wp-content/uploads/2022/09/Parking1-768x512.jpg"
   },
   {
     "doorOpenDateTime": null,
@@ -80,8 +104,8 @@
     "location": "baroeg",
     "price": 11,
     "shortText": "<p>Postrock én postmetal van het zuiverste water</p>\n",
-    "longText": "../public/texts/eac7877a-3e6f-4259-90cf-21bf1f3ed3f5.html",
-    "image": "https://baroeg.nl/wp-content/uploads/2022/08/ShyLow_BandPhoto2-2-768x552.jpg"
+    "longText": "../public/texts/c9760017-04fa-44a2-abf2-b115c3f052ff.html",
+    "image": "https://baroeg.nl/wp-content/uploads/2022/08/ShyLow_BandPhoto2-2-scaled-e1661512513249-768x246.jpg"
   },
   {
     "doorOpenDateTime": null,
@@ -92,31 +116,7 @@
     "location": "baroeg",
     "price": 22.5,
     "shortText": "<p>Punk is not dead, just getting older!</p>\n",
-    "longText": "../public/texts/3bcc6278-ec32-400f-8d15-de28d72105ff.html",
+    "longText": "../public/texts/2f35acdd-17f6-4a6e-a344-778b707a9360.html",
     "image": "https://baroeg.nl/wp-content/uploads/2022/06/Exploited-e1656593964810-768x243.jpeg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-10-23T13:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://baroeg.nl/productie/13156/",
-    "title": "Skelethal + Outre-Tombe",
-    "location": "baroeg",
-    "price": 14,
-    "shortText": "<p>Een heerlijke death metal-zondag</p>\n",
-    "longText": "../public/texts/bffd6363-66ef-4204-88c8-363f9fb70486.html",
-    "image": "https://baroeg.nl/wp-content/uploads/2022/08/SKLTHL-Band-Pic-1-768x512.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-10-22T17:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://baroeg.nl/productie/wavefest-presents-i-like-trains/",
-    "title": "Wavefest presents: I Like Trains",
-    "location": "baroeg",
-    "price": 19,
-    "shortText": "<p> I Like Trains naar Baroeg voor een avond Wavefest presents.</p>\n",
-    "longText": "../public/texts/22fffd3b-0f11-4f6e-80f1-01b22973f4ff.html",
-    "image": "https://baroeg.nl/wp-content/uploads/2021/02/trains-2-768x432.jpeg"
   }
 ]

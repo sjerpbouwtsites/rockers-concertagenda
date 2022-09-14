@@ -1,51 +1,27 @@
 [
   {
-    "doorOpenDateTime": "2022-08-27T16:30:00.000Z",
-    "startDateTime": "2022-08-27T18:00:00.000Z",
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-09-30T18:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/passenger",
-    "title": "Passenger",
-    "location": "afaslive",
-    "price": 44.8,
-    "shortText": null,
-    "longText": "../public/texts/4201305f-1b16-4ace-b36d-4e1a13accaac.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2021/10-oktober/_agendaitem/6944/Passenger.jpg"
-  },
-  {
-    "doorOpenDateTime": "2022-09-23T16:30:00.000Z",
-    "startDateTime": "2022-09-23T17:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/parkway-drive",
-    "title": "Parkway Drive",
-    "location": "afaslive",
-    "price": 50.4,
-    "shortText": null,
-    "longText": "../public/texts/6ec02db1-4ade-4350-8cb1-c05310e9745f.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2022/09-september/_agendaitem/Parkway-Drive.jpg"
-  },
-  {
-    "doorOpenDateTime": "2022-09-29T16:30:00.000Z",
-    "startDateTime": "2022-09-29T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/kaleo-1",
-    "title": "KALEO",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/years-years",
+    "title": "Years & Years",
     "location": "afaslive",
     "price": 39.2,
     "shortText": null,
-    "longText": "../public/texts/31df533d-27df-4337-b800-4410c9685dd5.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2022/01-januari/_agendaitem/KALEO.jpg"
+    "longText": "../public/texts/2de0fe24-5a38-409c-b0d6-62e10f971fd2.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2022/09-september/_agendaitem/Years-Years.jpg"
   },
   {
-    "doorOpenDateTime": "2022-10-03T16:30:00.000Z",
-    "startDateTime": "2022-10-03T18:00:00.000Z",
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-10-05T18:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/the-black-crowes-2",
-    "title": "The Black Crowes",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/james-taylor-1",
+    "title": "James Taylor",
     "location": "afaslive",
-    "price": 63.84,
+    "price": 61.6,
     "shortText": null,
-    "longText": "../public/texts/bf9c5a16-6977-4917-a5cc-022b3d151255.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2020/10-oktober/_agendaitem/The-Black-Crows.jpg"
+    "longText": "../public/texts/69b31289-ef76-4214-9c41-6b03a02bb669.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2022/01-januari/_agendaitem/James-Taylor.jpg"
   },
   {
     "doorOpenDateTime": null,
@@ -56,7 +32,31 @@
     "location": "afaslive",
     "price": 38,
     "shortText": null,
-    "longText": "../public/texts/ae629b09-e2ec-41df-96a4-0f3981f05b5c.html",
+    "longText": "../public/texts/9ec9c31b-a07c-447c-a21d-e2e00916f11a.html",
     "image": "https://www.afaslive.nl/files/Agenda/2022/11-november/_agendaitem/Rampage.jpg"
+  },
+  {
+    "doorOpenDateTime": "2022-12-01T17:00:00.000Z",
+    "startDateTime": "2022-12-01T17:40:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.afaslive.nl/agenda/powerwolf-1",
+    "title": "POWERWOLF",
+    "location": "afaslive",
+    "price": 45,
+    "shortText": null,
+    "longText": "../public/texts/04199dee-b62c-459e-bf24-766709c4f1da.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2021/10-oktober/_agendaitem/Powerwolf.jpg"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-04-01T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.afaslive.nl/agenda/madness-1",
+    "title": "Madness",
+    "location": "afaslive",
+    "price": 53.9,
+    "shortText": null,
+    "longText": "../public/texts/0b265949-3793-44af-85fc-f0366cad9868.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2022/07-juli/_agendaitem/Madness.jpg"
   }
 ]

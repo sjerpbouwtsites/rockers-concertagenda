@@ -101,6 +101,7 @@ async function getBaseMusicEvents(browser) {
           "dbs",
           "doornroosje",
           "dynamo",
+          "duycker",
           "effenaar",
           "gebrdenobel",
           "iduna",

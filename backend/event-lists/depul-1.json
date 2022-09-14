@@ -1,15 +1,41 @@
 [
   {
-    "doorOpenDateTime": "2022-10-28T17:30:00.000Z",
-    "startDateTime": "2022-10-28T18:30:00.000Z",
+    "doorOpenDateTime": "2022-10-21T17:30:00.000Z",
+    "startDateTime": "2022-10-21T17:30:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.livepul.com/agenda/pom/",
-    "title": "POM",
+    "venueEventUrl": "https://www.livepul.com/agenda/breuklijn-the-exploited/",
+    "title": "BREUKLIJN: The Exploited",
+    "location": "depul",
+    "price": null,
+    "shortText": "Punx, Skins & Hardcorekids!",
+    "longText": "../public/texts/b25120cf-dcb3-4877-91af-0d02b28c1e3f.html",
+    "image": "https://lift3cdn.nl/image/29/resize-3297/exploited_2_1.jpg",
+    "passReason": "Page of event contained genres"
+  },
+  {
+    "doorOpenDateTime": "2022-10-29T12:30:00.000Z",
+    "startDateTime": "2022-10-29T13:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.livepul.com/agenda/masters-of-metal-uden-2022/",
+    "title": "Masters of Metal",
     "location": "depul",
     "price": null,
     "shortText": "",
-    "longText": "../public/texts/6fed6958-5d75-4b57-aaf8-344aa4b4928e.html",
-    "image": "https://lift3cdn.nl/image/29/resize-3478/079a61443.jpg",
+    "longText": "../public/texts/6b039a7b-c0cb-429f-ad7b-2f3fe15db306.html",
+    "image": "https://lift3cdn.nl/image/29/1335x1335/pexels-milo-textures-2850515.jpg",
+    "passReason": "Page of event contained genres"
+  },
+  {
+    "doorOpenDateTime": "2022-11-10T18:30:00.000Z",
+    "startDateTime": "2022-11-10T19:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.livepul.com/agenda/coven-usa/",
+    "title": "Coven + support: Iron Walrus",
+    "location": "depul",
+    "price": null,
+    "shortText": "",
+    "longText": "../public/texts/bbfd92b3-8c7e-45c4-a6e7-26040d59a991.html",
+    "image": "https://lift3cdn.nl/image/29/resize-3524/2022-tour-pic-jinxxxxxxxxxxxxxxxx-klaus.jpg",
     "passReason": "Page of event contained genres"
   }
 ]
