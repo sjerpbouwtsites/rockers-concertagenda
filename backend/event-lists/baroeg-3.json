@@ -1,6 +1,18 @@
 [
   {
     "doorOpenDateTime": null,
+    "startDateTime": "2022-10-01T16:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://baroeg.nl/productie/100-jaar-jeroen-klaas/",
+    "title": "Die Nakse Bananen + City Riot  + Complaint",
+    "location": "baroeg",
+    "price": 9,
+    "shortText": "<p>Een hardcore punkkabaalbacchanaal. &#8216;100 jaar Jeroen &#038; Klaas&#8217; </p>\n",
+    "longText": "../public/texts/d9dc68e2-38ea-4360-b3a2-243ca59481e2.html",
+    "image": "https://baroeg.nl/wp-content/uploads/2021/09/Die-Nakse-Bananen-768x512.jpg"
+  },
+  {
+    "doorOpenDateTime": null,
     "startDateTime": "2022-09-30T17:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://baroeg.nl/productie/kingfisher-sky-ann-my-guard/",
@@ -8,7 +20,7 @@
     "location": "baroeg",
     "price": 12,
     "shortText": "<p>Een portie fantastische progressieve, symfonische rock waarin je diverse invloeden terug hoort.</p>\n",
-    "longText": "../public/texts/1cf25c03-8e75-444e-8b71-ec6d3bb9cf11.html",
+    "longText": "../public/texts/45e46ecc-9e20-4bbc-87b6-acc94fc83248.html",
     "image": "https://baroeg.nl/wp-content/uploads/2021/03/Kingfisher-sky-e1643201632511-768x318.jpeg"
   },
   {
@@ -20,43 +32,7 @@
     "location": "baroeg",
     "price": 19,
     "shortText": "<p>Sathanas In Gloriam presents: Djevel + Helleruin + Wrang.</p>\n",
-    "longText": "../public/texts/3c1751c2-d25c-4c89-886e-9b5303981dfa.html",
+    "longText": "../public/texts/f90f8eba-c5b1-4805-9307-2dcd481d1c1f.html",
     "image": "https://baroeg.nl/wp-content/uploads/2021/12/Djevel-foto-door-Maarten-768x353.jpeg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-09-24T19:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://baroeg.nl/productie/the-shape-of-punk-to-come-baroeg-v11-present-v11-cadaveric-incubator-phantasmagore/",
-    "title": "The Shape Of Punk To Come + Baroeg + V11 present @ V11: Cadaveric Incubator + Phantasmagore",
-    "location": "baroeg",
-    "price": "11",
-    "shortText": "<p>Underground parels in V11.</p>\n",
-    "longText": "../public/texts/200afaef-3dd7-4deb-b18c-610969712366.html",
-    "image": "https://baroeg.nl/wp-content/uploads/2022/07/cadaveric-incubator-band-pic-e1658326069586-768x271.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-09-24T16:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://baroeg.nl/productie/the-analogs-ga-ga-zielone-zabki-zenek-kupatasa/",
-    "title": "Art Stage Promotion presents: The Analogs + Ga-Ga/Zielone Żabki + Zenek Kupatasa",
-    "location": "baroeg",
-    "price": 41,
-    "shortText": "<p>Polski punk rockowy fest w Holandii!</p>\n",
-    "longText": "../public/texts/37b5364b-2ef7-4cbc-b575-60b1ee274724.html",
-    "image": "https://baroeg.nl/wp-content/uploads/2022/06/Analogs-Baroeg-768x292.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-09-23T16:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://baroeg.nl/productie/imperial-age/",
-    "title": "Imperial Age",
-    "location": "baroeg",
-    "price": 19,
-    "shortText": "<p>Een van Ruslands beste exportproducten op muzikaal gebied.</p>\n",
-    "longText": "../public/texts/96ff4bbb-3d69-42a3-8f79-ee6d4a8467d4.html",
-    "image": "https://baroeg.nl/wp-content/uploads/2021/11/280947676_5536188623082250_2657855784158928000_n-150x150.jpeg"
   }
 ]

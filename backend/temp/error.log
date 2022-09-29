@@ -1,4 +1,48 @@
 
+  Kavka promise race Error - 11:26:09 AM
+  Error: Kavka single failure, failure promise fired, at: 
+Deathstars
+https://kavka.be/event/deathstars/
+Original error message:
+Navigation timeout of 7500 ms exceeded
+url: https://kavka.be/event/deathstars/
+    at file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-kavka.js:79:21
+    at runNextTicks (node:internal/process/task_queues:60:5)
+    at listOnTimeout (node:internal/timers:533:9)
+    at process.processTimers (node:internal/timers:507:7)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-kavka.js:28:5) 
+  Kavka single failure, failure promise fired, at: 
+Deathstars
+https://kavka.be/event/deathstars/
+Original error message:
+Navigation timeout of 7500 ms exceeded
+url: https://kavka.be/event/deathstars/
+  
+  
+  unknown location Error - 11:23:53 AM
+  Error: No node found for selector: [href*="Heavy"]
+    at assert (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/assert.js:26:15)
+    at DOMWorld.click (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:287:32)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-neushoorn.js:152:3)
+    at async scrapeNeushoorn (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-neushoorn.js:24:29) 
+  No node found for selector: [href*="Heavy"]
+  
+  
+  Neushoorn wacht op laden agenda pagina Error - 11:23:53 AM
+  TimeoutError: waiting for selector `[href*="Heavy"]` failed: timeout 10000ms exceeded
+    at new WaitTask (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:528:34)
+    at DOMWorld.waitForSelectorInPage (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:432:26)
+    at internalHandler.waitFor (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/QueryHandler.js:31:77)
+    at DOMWorld.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:323:29)
+    at Frame.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:942:51)
+    at Page.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:2359:33)
+    at makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-neushoorn.js:145:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeNeushoorn (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-neushoorn.js:24:29) 
+  waiting for selector `[href*="Heavy"]` failed: timeout 10000ms exceeded
+  
+  
   Kavka promise race Error - 11:03:15 PM
   Error: Kavka single failure, failure promise fired, at: 
 Deathstars

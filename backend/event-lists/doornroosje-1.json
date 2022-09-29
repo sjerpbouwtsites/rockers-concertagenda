@@ -1,62 +1,50 @@
 [
   {
-    "doorOpenDateTime": "2022-09-17T19:00:00.000Z",
-    "startDateTime": "2022-09-17T20:00:00.000Z",
+    "doorOpenDateTime": "2022-10-13T17:00:00.000Z",
+    "startDateTime": "2022-10-13T17:30:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/yellow-eyes/",
-    "title": "Yellow Eyes + Sun Worship",
+    "venueEventUrl": "https://www.doornroosje.nl/event/wolves-in-the-throne-room-2/",
+    "title": "Wolves in the Throne Room + Incantation e.a.",
+    "location": "doornroosje",
+    "price": 25.5,
+    "shortText": "Soulcrusher",
+    "longText": "../public/texts/469ea0b8-4444-4954-b138-4b060de903c5.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2021/08/Wolves-in-the-Throne-Room-1920x1080-1-350x197-c-default.jpg"
+  },
+  {
+    "doorOpenDateTime": "2022-11-01T08:18:30.000Z",
+    "startDateTime": "2022-11-01T08:19:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.doornroosje.nl/event/converge/",
+    "title": "Converge + Full of Hell + Petbrick",
+    "location": "doornroosje",
+    "price": 27.5,
+    "shortText": "Soulcrusher",
+    "longText": "../public/texts/44cb8fc1-c3a0-4517-b1fd-9d2adab5b571.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2022/07/Converge-1934x1088-350x197-c-default.jpg"
+  },
+  {
+    "doorOpenDateTime": "2022-11-28T19:00:00.000Z",
+    "startDateTime": "2022-11-28T19:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.doornroosje.nl/event/halocene/",
+    "title": "Halocene",
+    "location": "doornroosje",
+    "price": 16,
+    "shortText": "Fortarock",
+    "longText": "../public/texts/eff88c1a-6021-4610-bb35-641ba5d9f2c8.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2022/03/Halocene-1934x1088-c-default.jpg22-350x197-c-default.jpg"
+  },
+  {
+    "doorOpenDateTime": "2023-03-01T06:20:00.000Z",
+    "startDateTime": "2023-03-01T06:20:30.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.doornroosje.nl/event/gel/",
+    "title": "GEL + Cold Brats",
     "location": "doornroosje",
     "price": 13,
     "shortText": "Soulcrusher",
-    "longText": "../public/texts/50c70803-3d4b-46f7-88e9-4f136d95ef01.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2022/06/Yellow-Eyes-350x197-c-default.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": null,
-    "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/soulcrusher-2022-2/",
-    "title": "Soulcrusher 2022",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": null,
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": "2022-11-12T20:00:00.000Z",
-    "startDateTime": "2022-11-12T21:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/birds-in-row/",
-    "title": "Birds in Row + The Guru Guru",
-    "location": "doornroosje",
-    "price": 14.5,
-    "shortText": "Soulcrusher",
-    "longText": "../public/texts/c217f647-b98a-42cc-843b-e48bccf3e946.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2022/05/Birds-in-Row-min-1934x1088-350x197-c-default.jpg"
-  },
-  {
-    "doorOpenDateTime": "2022-12-22T20:00:00.000Z",
-    "startDateTime": "2022-12-22T21:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/cloudsurfers/",
-    "title": "Cloudsurfers",
-    "location": "doornroosje",
-    "price": 12,
-    "shortText": null,
-    "longText": "../public/texts/edf68d10-93f8-473e-b4b9-77c283bd3f58.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2022/08/Cloudsurfers-web-1934x1088-350x197-c-default.jpg"
-  },
-  {
-    "doorOpenDateTime": "2023-03-18T18:30:00.000Z",
-    "startDateTime": "2023-03-18T19:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/fuzz/",
-    "title": "Fuzz",
-    "location": "doornroosje",
-    "price": 19.5,
-    "shortText": null,
-    "longText": "../public/texts/f2579f30-f0c0-4f17-9049-dcd612ec2ac8.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2021/09/FUZZ-1920x1080-1-350x197-c-default.jpg"
+    "longText": "../public/texts/40ce1698-a5f8-4339-9ddc-fe735b114284.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2022/09/GEL-350x197-c-default.jpeg"
   }
 ]

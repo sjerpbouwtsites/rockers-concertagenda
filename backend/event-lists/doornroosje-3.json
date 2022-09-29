@@ -1,62 +1,50 @@
 [
   {
-    "doorOpenDateTime": "2022-09-28T17:30:00.000Z",
-    "startDateTime": "2022-09-28T18:00:00.000Z",
+    "doorOpenDateTime": null,
+    "startDateTime": null,
     "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/obscura-2/",
-    "title": "Obscura + Persefone + Disillusion",
+    "venueEventUrl": "https://www.doornroosje.nl/event/soulcrusher-2022-2/",
+    "title": "Soulcrusher 2022",
     "location": "doornroosje",
-    "price": 24,
+    "price": null,
+    "shortText": null,
+    "longText": null,
+    "image": null
+  },
+  {
+    "doorOpenDateTime": "2022-11-12T20:00:00.000Z",
+    "startDateTime": "2022-11-12T21:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.doornroosje.nl/event/birds-in-row/",
+    "title": "Birds in Row + The Guru Guru",
+    "location": "doornroosje",
+    "price": 14.5,
+    "shortText": "Soulcrusher",
+    "longText": "../public/texts/523d5f24-bd25-4293-b460-abbdbc057107.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2022/05/Birds-in-Row-min-1934x1088-350x197-c-default.jpg"
+  },
+  {
+    "doorOpenDateTime": "2022-12-22T20:00:00.000Z",
+    "startDateTime": "2022-12-22T21:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.doornroosje.nl/event/cloudsurfers/",
+    "title": "Cloudsurfers",
+    "location": "doornroosje",
+    "price": 12,
+    "shortText": null,
+    "longText": "../public/texts/e73cd850-33cf-487d-8417-296d1406bb6f.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2022/08/Cloudsurfers-web-1934x1088-350x197-c-default.jpg"
+  },
+  {
+    "doorOpenDateTime": "2023-03-16T18:30:00.000Z",
+    "startDateTime": "2023-03-16T19:15:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.doornroosje.nl/event/tarja-4/",
+    "title": "Tarja",
+    "location": "doornroosje",
+    "price": 32,
     "shortText": "Fortarock",
-    "longText": "../public/texts/0c8ec7da-6e7e-4c4e-842b-415da1f5bb2d.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2021/09/Obscura-350x197-c-default.jpg"
-  },
-  {
-    "doorOpenDateTime": "2022-10-26T19:00:00.000Z",
-    "startDateTime": "2022-10-26T20:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/life/",
-    "title": "LIFE",
-    "location": "doornroosje",
-    "price": 10,
-    "shortText": null,
-    "longText": "../public/texts/4f469391-ebf0-47ba-9fd6-966ae4aba932.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2022/03/LIFE-MOON-1920x1080-1-350x197-c-default.jpg"
-  },
-  {
-    "doorOpenDateTime": "2022-11-25T17:30:00.000Z",
-    "startDateTime": "2022-11-25T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/faces-of-death-2/",
-    "title": "Rivers of Nihil + Fallujah e.a.",
-    "location": "doornroosje",
-    "price": 24,
-    "shortText": "Faces of Death Tour 2022",
-    "longText": "../public/texts/bb5eb674-ce84-4572-b3ef-d3e14c0cb717.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2021/08/Faces-of-Death-1920x1080-1-350x197-c-default.jpg"
-  },
-  {
-    "doorOpenDateTime": "2023-02-25T18:00:00.000Z",
-    "startDateTime": "2023-02-25T18:45:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/hang-youth-3/",
-    "title": "Hang Youth",
-    "location": "doornroosje",
-    "price": 17.5,
-    "shortText": null,
-    "longText": "../public/texts/8aac324f-3353-4f6f-b98b-5411eeca74f1.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2022/06/hangyouth-1920x1080-2023-1934x1088-350x197-c-default.jpg"
-  },
-  {
-    "doorOpenDateTime": "2023-05-19T18:00:00.000Z",
-    "startDateTime": "2023-05-19T18:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/otoboke-beaver/",
-    "title": "Otoboke Beaver",
-    "location": "doornroosje",
-    "price": 16.5,
-    "shortText": null,
-    "longText": "../public/texts/74e349a5-0c2e-423b-b633-4fe314e8bd0b.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2021/12/Promo_OtobokeBeaver-credit_Takeaki_Emori-350x197-c-default.jpg"
+    "longText": "../public/texts/b8bec9bf-a84b-4567-9ec5-ab31fba6ce52.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2021/09/Tarja-1-1920x1080-1-350x197-c-default.jpg"
   }
 ]

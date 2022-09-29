@@ -1,38 +1,50 @@
 [
   {
-    "doorOpenDateTime": "2022-10-11T18:00:00.000Z",
-    "startDateTime": "2022-10-11T18:30:00.000Z",
+    "doorOpenDateTime": "2022-10-24T18:00:00.000Z",
+    "startDateTime": "2022-10-24T18:30:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/destrage/",
-    "title": "Destrage + VAIN LOUIE",
+    "venueEventUrl": "https://www.doornroosje.nl/event/tv-priest/",
+    "title": "TV Priest",
     "location": "doornroosje",
-    "price": 13,
-    "shortText": "Fortarock",
-    "longText": "../public/texts/a365ad8b-5293-4e30-845b-ea75f00e58ab.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2022/06/Destrage-1934x1088-350x197-c-default.jpg"
+    "price": 14.5,
+    "shortText": null,
+    "longText": "../public/texts/90772fe2-daac-40d3-8c86-b627b691ea64.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2022/05/TV-Priest-1934x1088-350x197-c-default.jpg"
   },
   {
-    "doorOpenDateTime": "2022-10-31T19:00:00.000Z",
-    "startDateTime": "2022-10-31T19:30:00.000Z",
+    "doorOpenDateTime": "2022-11-22T19:00:00.000Z",
+    "startDateTime": "2022-11-22T19:30:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/show-me-the-body/",
-    "title": "Show Me The Body",
+    "venueEventUrl": "https://www.doornroosje.nl/event/the-mary-wallopers/",
+    "title": "The Mary Wallopers",
     "location": "doornroosje",
     "price": 14,
-    "shortText": "Soulcrusher",
-    "longText": "../public/texts/97103f62-bf10-4bd1-a04a-c13c54fce24b.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2022/09/SMTB-press-1934x1088-350x197-c-default.jpg"
+    "shortText": null,
+    "longText": "../public/texts/d8c3fee9-4ffe-4e55-a86d-7a6b9a52d193.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2022/06/The-Mary-Wallopers-1920x1080-1-1934x1088-350x197-c-default.jpg"
   },
   {
-    "doorOpenDateTime": "2023-03-01T06:20:00.000Z",
-    "startDateTime": "2023-03-01T06:20:30.000Z",
+    "doorOpenDateTime": null,
+    "startDateTime": null,
     "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/gel/",
-    "title": "GEL + Cold Brats",
+    "venueEventUrl": "https://www.doornroosje.nl/event/animals-as-leaders/",
+    "title": "Animals As Leaders",
     "location": "doornroosje",
-    "price": 13,
-    "shortText": "Soulcrusher",
-    "longText": "../public/texts/906dde7f-a3db-42a9-8545-60141c68f9ff.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2022/09/GEL-350x197-c-default.jpeg"
+    "price": 25.5,
+    "shortText": "Net bevestigd",
+    "longText": "../public/texts/f1cd7b36-525f-4f0e-b097-65820eeecc95.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2022/09/Animals-As-Leaders-web-1934x1088-350x197-c-default.jpg"
+  },
+  {
+    "doorOpenDateTime": "2023-03-18T18:30:00.000Z",
+    "startDateTime": "2023-03-18T19:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.doornroosje.nl/event/fuzz/",
+    "title": "Fuzz",
+    "location": "doornroosje",
+    "price": 19.5,
+    "shortText": null,
+    "longText": "../public/texts/e936f2d1-9600-4bc2-9809-1a7619dca8f5.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2021/09/FUZZ-1920x1080-1-350x197-c-default.jpg"
   }
 ]

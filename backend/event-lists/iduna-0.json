@@ -1,26 +1,14 @@
 [
   {
-    "doorOpenDateTime": "2022-09-18T13:00:00.000Z",
-    "startDateTime": "2022-09-18T13:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://iduna.nl/event/kapmes-rituelen-1/",
-    "title": "KAPMES RITUELEN #1\n                    Faceless Entity • Witchfukker • Dodenbezweerder",
-    "location": "iduna",
-    "price": "18",
-    "shortText": null,
-    "longText": "../public/texts/10d52d9a-61cb-4c60-922f-416b6dd664a1.html",
-    "image": "https://iduna.nl/wp-content/uploads/2022/06/22-09-18_website_kapmes-rituelen-1.png"
-  },
-  {
     "doorOpenDateTime": "2022-10-15T17:00:00.000Z",
     "startDateTime": "2022-10-15T17:30:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://iduna.nl/event/wolves-in-the-throne-room/",
     "title": "Wolves in The Throne Room\n                    Incantation & Stygian Bough (ft Bell Witch & Aerial Ruin)",
     "location": "iduna",
-    "price": "15",
+    "price": 23,
     "shortText": null,
-    "longText": "../public/texts/e3edf6bd-2252-4b13-97ce-221253e52403.html",
+    "longText": "../public/texts/783ef3e9-8cc8-4e5f-b5d1-8945505d01fc.html",
     "image": "https://iduna.nl/wp-content/uploads/2021/09/1st_Lead__WITTR-GROUP_1C4A3116sepia-scaled.jpg"
   },
   {
@@ -32,7 +20,7 @@
     "location": "iduna",
     "price": "05",
     "shortText": null,
-    "longText": "../public/texts/67ce1f18-a3f0-4f31-aff9-a065077ab559.html",
+    "longText": "../public/texts/90f6d42a-673e-45c6-81e6-2125371958ec.html",
     "image": "https://iduna.nl/wp-content/uploads/2021/04/22-11-05_site_holland-heavy.png"
   },
   {
@@ -44,7 +32,7 @@
     "location": "iduna",
     "price": "06",
     "shortText": null,
-    "longText": "../public/texts/51b6201c-acea-4dfc-a768-27e638c1f9c3.html",
+    "longText": "../public/texts/2efd0776-45aa-49b4-bbe4-e847859210eb.html",
     "image": "https://iduna.nl/wp-content/uploads/2017/01/2017-11-11_promo-doro.jpg"
   },
   {
@@ -52,11 +40,11 @@
     "startDateTime": "2022-11-08T18:30:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://iduna.nl/event/skid-row/",
-    "title": "Skid Row",
+    "title": "Skid Row\n                    The rebellion continues",
     "location": "iduna",
     "price": "08",
     "shortText": null,
-    "longText": "../public/texts/7a8629c7-474d-414e-9368-d1af3a18a817.html",
+    "longText": "../public/texts/68fc1dee-b0dd-4fb6-9c9d-2044a3b40a27.html",
     "image": "https://iduna.nl/wp-content/uploads/2020/09/IMG_2B3E13508927-1-2.jpeg"
   },
   {
@@ -68,7 +56,7 @@
     "location": "iduna",
     "price": "19",
     "shortText": null,
-    "longText": "../public/texts/564e6f0b-83cd-4c02-8dfb-f53d604a1c73.html",
+    "longText": "../public/texts/58f8c15e-d908-471b-9eb2-b80aeae26551.html",
     "image": "https://iduna.nl/wp-content/uploads/2022/09/Baldrs-Draumar_website.jpg"
   },
   {
@@ -80,7 +68,7 @@
     "location": "iduna",
     "price": "25",
     "shortText": null,
-    "longText": "../public/texts/069839c3-e02d-4513-a259-9d2827a90469.html",
+    "longText": "../public/texts/c91e0898-93ee-4e57-90dd-f6d85e0588c4.html",
     "image": "https://iduna.nl/wp-content/uploads/2022/09/fleddy-melcult_website.jpg"
   },
   {
@@ -92,8 +80,20 @@
     "location": "iduna",
     "price": "17",
     "shortText": null,
-    "longText": "../public/texts/7a56482a-51c8-4eb0-950a-d0b217312f33.html",
+    "longText": "../public/texts/7d75b4da-ea5c-44d5-8b65-3cf09ea59968.html",
     "image": "https://iduna.nl/wp-content/uploads/2019/02/19-12-24_bombers-site.png"
+  },
+  {
+    "doorOpenDateTime": "2023-01-21T18:00:00.000Z",
+    "startDateTime": "2023-01-21T18:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://iduna.nl/event/a-tribute-to-monsters-of-rock/",
+    "title": "A Tribute to Monsters of Rock\n                    Iron Maiden • Black Sabbath • Slayer • Slipknot",
+    "location": "iduna",
+    "price": "21",
+    "shortText": null,
+    "longText": "../public/texts/2d2cd682-d5a1-4716-b503-15c61ede2620.html",
+    "image": "https://iduna.nl/wp-content/uploads/2022/09/23-01-21_site_monsters-of-rock.png"
   },
   {
     "doorOpenDateTime": "2023-04-08T17:00:00.000Z",
@@ -104,7 +104,7 @@
     "location": "iduna",
     "price": 27.5,
     "shortText": null,
-    "longText": "../public/texts/74f73703-3d12-4bb1-b9af-f72dfc379244.html",
+    "longText": "../public/texts/052c822b-e7d9-42a8-a5fb-5a0eed75c0a3.html",
     "image": "https://iduna.nl/wp-content/uploads/2019/09/2020-04-11_promo_loudness.jpg"
   },
   {
@@ -116,7 +116,7 @@
     "location": "iduna",
     "price": "13",
     "shortText": null,
-    "longText": "../public/texts/e5ff5f71-6b32-4ec2-86ee-b3cba40ea411.html",
+    "longText": "../public/texts/6e57b958-dc08-408a-8c94-d25d21db8d4c.html",
     "image": "https://iduna.nl/wp-content/uploads/2019/11/2020-05-09_promo_axel-rudi-pell-scaled.jpg"
   },
   {
@@ -126,9 +126,9 @@
     "venueEventUrl": "https://iduna.nl/event/show-me-the-body/",
     "title": "Show Me The Body\n                    Powerplant",
     "location": "iduna",
-    "price": "30",
+    "price": 11,
     "shortText": null,
-    "longText": "../public/texts/ec47b654-9f98-4bd7-a768-5f4436b36037.html",
+    "longText": "../public/texts/872880ea-9352-46f8-bb4e-87c4b75edb91.html",
     "image": "https://iduna.nl/wp-content/uploads/2022/09/show-mw-the-body_website.jpg"
   }
 ]
