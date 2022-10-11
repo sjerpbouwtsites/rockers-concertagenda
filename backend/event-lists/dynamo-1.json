@@ -1,17 +1,5 @@
 [
   {
-    "doorOpenDateTime": "2022-10-09T16:00:00.000Z",
-    "startDateTime": "2022-10-09T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.dynamo-eindhoven.nl/programma/lionheart-2022/#spotify-embed",
-    "title": "Lionheart ",
-    "location": "dynamo",
-    "price": 26.5,
-    "shortText": "Support: Terror + Get The Shot + Dying Wish",
-    "longText": "../public/texts/ce085d75-7047-4e3d-8c06-3c34ba66982f.html",
-    "image": "https://www.dynamo-eindhoven.nl/wp-content/uploads/2020/12/Lionheart-digi-1200x1200.jpg"
-  },
-  {
     "doorOpenDateTime": null,
     "startDateTime": "2022-10-22T00:00:00.000Z",
     "endDateTime": null,
@@ -20,7 +8,7 @@
     "location": "dynamo",
     "price": 0,
     "shortText": "Een avond gecureerd door Doodswens",
-    "longText": "../public/texts/67640278-f3d0-4f95-8660-97f20ade0eb8.html",
+    "longText": "../public/texts/c56ac808-bcd4-4a52-95f1-36bb7b5d8c5b.html",
     "image": null
   },
   {
@@ -32,19 +20,43 @@
     "location": "dynamo",
     "price": 17.5,
     "shortText": "Plus support",
-    "longText": "../public/texts/d4050ce9-c5d8-49df-b759-7ed616c86ac5.html",
+    "longText": "../public/texts/58376dbb-a18b-44bf-adb0-a011ff19d1a1.html",
     "image": null
   },
   {
-    "doorOpenDateTime": "2023-02-09T18:00:00.000Z",
-    "startDateTime": "2023-02-09T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.dynamo-eindhoven.nl/programma/napalm-death-2023/#spotify-embed",
-    "title": "Napalm Death",
+    "doorOpenDateTime": "2022-12-03T13:00:00.000Z",
+    "startDateTime": "2022-12-03T00:00:00.000Z",
+    "endDateTime": "2022-12-03T16:00:00.000Z",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/programma/band-merch-rommelmarkt-2/",
+    "title": "Band Merch Rommelmarkt",
     "location": "dynamo",
-    "price": 31.5,
-    "shortText": "Plus support",
-    "longText": "../public/texts/04cab83d-aff5-426f-9018-89b7ddcf249f.html",
+    "price": 0,
+    "shortText": "Alle opbrengsten gaan naar Stichting No Guts No Glory",
+    "longText": "../public/texts/fb389387-06fe-4947-9aa7-965af91a667f.html",
     "image": null
+  },
+  {
+    "doorOpenDateTime": "2023-02-05T18:00:00.000Z",
+    "startDateTime": "2023-02-05T00:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/programma/bad-omens/#spotify-embed",
+    "title": "Bad Omens",
+    "location": "dynamo",
+    "price": 18,
+    "shortText": "Support: GHØSTKID + Oxymorrons",
+    "longText": "../public/texts/1c7f6104-25df-4b15-9e85-c1e8c9819c29.html",
+    "image": "https://www.dynamo-eindhoven.nl/wp-content/uploads/2022/06/Bad-Omens-1200x1200.jpg"
+  },
+  {
+    "doorOpenDateTime": "2023-03-04T18:00:00.000Z",
+    "startDateTime": "2023-03-04T00:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/programma/zebrahead-2023/#spotify-embed",
+    "title": "Zebrahead",
+    "location": "dynamo",
+    "price": 21.5,
+    "shortText": "Plus support",
+    "longText": "../public/texts/b29b186f-6738-463f-9b84-8dba380eaa39.html",
+    "image": "https://www.dynamo-eindhoven.nl/wp-content/uploads/2022/06/Zebrahead_3_High_Res_Credit_KevinBaldes-1200x1200.jpg"
   }
 ]

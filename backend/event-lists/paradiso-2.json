@@ -1,17 +1,5 @@
 [
   {
-    "doorOpenDateTime": "2022-10-06T17:00:00.000Z",
-    "startDateTime": "2022-10-06T17:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.paradiso.nl/nl/programma/heideroosjes-afterpartees/88998/",
-    "title": "Heideroosjes + Afterpartees",
-    "location": "paradiso",
-    "price": 32,
-    "shortText": "De bekendste punkrockband van Nederland terug met nieuwe muziek",
-    "longText": "../public/texts/a9a14551-0fe3-4b1d-8fe1-f8bf2f8815e6.html",
-    "image": null
-  },
-  {
     "doorOpenDateTime": "2022-10-15T17:00:00.000Z",
     "startDateTime": "2022-10-15T17:30:00.000Z",
     "endDateTime": null,
@@ -20,7 +8,7 @@
     "location": "paradiso",
     "price": 21,
     "shortText": "Lo-fi hiphop meets punk",
-    "longText": "../public/texts/e6b7bde0-2e18-4374-986f-7afe22ca6965.html",
+    "longText": "../public/texts/a1c230f3-d2a1-4a31-b549-94299752c7a9.html",
     "image": null
   },
   {
@@ -32,7 +20,7 @@
     "location": "paradiso",
     "price": 18,
     "shortText": "Vierkoppig spacerock-monster",
-    "longText": "../public/texts/72629f00-c202-4b63-8b56-f273141bac04.html",
+    "longText": "../public/texts/a907966a-e59f-4ab0-bb56-8663bb6f3014.html",
     "image": null
   },
   {
@@ -44,7 +32,7 @@
     "location": "paradiso",
     "price": 14.5,
     "shortText": "Gehaaide postpunk en rock / Cinetol",
-    "longText": "../public/texts/340c4b42-01e6-45af-918d-63f0f064d2e5.html",
+    "longText": "../public/texts/2206b7b7-a96d-4958-b282-310d5431adb3.html",
     "image": null
   },
   {
@@ -56,31 +44,43 @@
     "location": "paradiso",
     "price": 21,
     "shortText": "Experimentele post-rock uit Frankrijk / Tolhuistuin",
-    "longText": "../public/texts/322bc35b-4502-4a12-99e8-42fcc54d99d5.html",
+    "longText": "../public/texts/00d3c0a5-30f5-47a2-8b09-804840a67cab.html",
     "image": null
   },
   {
-    "doorOpenDateTime": "2023-02-14T18:00:00.000Z",
-    "startDateTime": "2023-02-14T19:30:00.000Z",
+    "doorOpenDateTime": "2023-02-02T20:30:00.000Z",
+    "startDateTime": "2023-02-02T21:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.paradiso.nl/nl/programma/the-murder-capital/99512/",
-    "title": "The Murder Capital",
+    "venueEventUrl": "https://www.paradiso.nl/nl/programma/hotel-lux/99331/",
+    "title": "Hotel Lux",
     "location": "paradiso",
-    "price": 29.5,
-    "shortText": "Postpunk uit Dublin",
-    "longText": "../public/texts/e9112f18-e636-4b45-a512-8c7ee24c27a6.html",
+    "price": 14.5,
+    "shortText": "Creatieve mix van post-punk, ska en pubrock",
+    "longText": "../public/texts/b9c1d8ad-21e6-44b8-8eaf-4c8b45baa337.html",
     "image": null
   },
   {
-    "doorOpenDateTime": "2023-03-24T18:00:00.000Z",
-    "startDateTime": "2023-03-24T19:30:00.000Z",
+    "doorOpenDateTime": "2023-03-20T18:00:00.000Z",
+    "startDateTime": "2023-03-20T19:30:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.paradiso.nl/nl/programma/hang-youth/96581/",
-    "title": "Hang Youth",
+    "venueEventUrl": "https://www.paradiso.nl/nl/programma/dry-cleaning/98950/",
+    "title": "Dry Cleaning",
     "location": "paradiso",
-    "price": 24.5,
-    "shortText": "IJzersterke hardcore poppunk van eigen bodem",
-    "longText": "../public/texts/740a7832-d06e-4398-b591-2928e4a7b9e4.html",
+    "price": 26,
+    "shortText": "Intrigerende postpunk met praatachtige zang uit Londen",
+    "longText": "../public/texts/398cc892-99d5-4b05-9d86-f91d0e0749cf.html",
+    "image": null
+  },
+  {
+    "doorOpenDateTime": "2023-06-04T17:00:00.000Z",
+    "startDateTime": "2023-06-04T18:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.paradiso.nl/nl/programma/the-chats/98200/",
+    "title": "The Chats",
+    "location": "paradiso",
+    "price": 27,
+    "shortText": "Harde en ongetemde pub-punk uit Australië",
+    "longText": "../public/texts/d41d7cce-69ec-4a1d-bcb8-01fd87291291.html",
     "image": null
   }
 ]

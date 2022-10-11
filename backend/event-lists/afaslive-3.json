@@ -1,50 +1,74 @@
 [
   {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-09-30T18:00:00.000Z",
+    "doorOpenDateTime": "2022-10-26T16:30:00.000Z",
+    "startDateTime": "2022-10-26T18:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/years-years",
-    "title": "Years & Years",
-    "location": "afaslive",
-    "price": 39.2,
-    "shortText": null,
-    "longText": "../public/texts/cf32a232-1668-40d7-9dbd-2f2179821cdc.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2022/09-september/_agendaitem/Years-Years.jpg"
-  },
-  {
-    "doorOpenDateTime": "2022-10-05T16:30:00.000Z",
-    "startDateTime": "2022-10-05T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/james-taylor-1",
-    "title": "James Taylor",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/brit-floyd-3",
+    "title": "Brit Floyd",
     "location": "afaslive",
     "price": 61.6,
     "shortText": null,
-    "longText": "../public/texts/72ef2068-6662-4e2e-a8b3-cce33726c1bd.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2022/01-januari/_agendaitem/James-Taylor.jpg"
+    "longText": "../public/texts/7d8e1fd0-b1ca-44df-88b4-188b888ddce1.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2020/10-oktober/_agendaitem/Brit-Floyd.jpg"
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-10-24T18:00:00.000Z",
+    "startDateTime": "2022-11-01T19:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/counting-crows-1",
-    "title": "Counting Crows",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/sigur-r%C3%B3s",
+    "title": "Sigur Rós",
     "location": "afaslive",
-    "price": 67.2,
+    "price": 50.4,
     "shortText": null,
-    "longText": "../public/texts/b7fd1102-5916-470a-9388-eea65f77110d.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2022/03-maart/_agendaitem/Counting-Crows.jpg"
+    "longText": "../public/texts/a80dacd1-dc37-4b3c-b7df-e74ad4e1fecf.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2022/11-november/_agendaitem/Sigur-Ros.jpg"
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-11-06T19:00:00.000Z",
+    "startDateTime": "2022-11-08T19:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/rise-against",
-    "title": "Rise Against",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/lil-nas-x",
+    "title": "Lil Nas X",
     "location": "afaslive",
-    "price": 51.52,
+    "price": 50.4,
     "shortText": null,
-    "longText": "../public/texts/70ff8483-3ada-4abb-87f7-14605f96535e.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2022/11-november/_agendaitem/13497/Rise-Against.jpg"
+    "longText": "../public/texts/71420dfc-3742-4d6e-bd61-96f2902c867b.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2022/11-november/_agendaitem/Lil-Nas-X.jpg"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-11-13T19:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.afaslive.nl/agenda/kid-cudi",
+    "title": "Kid Cudi",
+    "location": "afaslive",
+    "price": 47.05,
+    "shortText": null,
+    "longText": "../public/texts/22702723-d09c-4a9c-827c-f04834098c55.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2022/09-september/_agendaitem/Kid-Cudi-Nieuw.jpg"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-04-14T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.afaslive.nl/agenda/avril-lavigne-1",
+    "title": "Avril Lavigne",
+    "location": "afaslive",
+    "price": 47.04,
+    "shortText": null,
+    "longText": "../public/texts/784357a5-7bcc-4110-b8da-0c58aead439e.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2022/02-februari/_agendaitem/Avril-Lavigne.jpg"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-05-20T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.afaslive.nl/agenda/the-offspring",
+    "title": "The Offspring",
+    "location": "afaslive",
+    "price": 49.28,
+    "shortText": null,
+    "longText": "../public/texts/de4d7801-830a-4757-ad2a-35d2f758a4cc.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2023/5-Mei/_agendaitem/The-Offspring.jpg"
   }
 ]

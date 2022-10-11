@@ -1,74 +1,50 @@
 [
   {
-    "doorOpenDateTime": "2022-09-29T16:30:00.000Z",
-    "startDateTime": "2022-09-29T18:00:00.000Z",
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-10-24T18:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/kaleo-1",
-    "title": "KALEO",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/counting-crows-1",
+    "title": "Counting Crows",
     "location": "afaslive",
-    "price": 39.2,
+    "price": 67.2,
     "shortText": null,
-    "longText": "../public/texts/f0745a8b-bfc6-4d02-89ab-d256a5f9ecab.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2022/01-januari/_agendaitem/KALEO.jpg"
-  },
-  {
-    "doorOpenDateTime": "2022-10-03T16:30:00.000Z",
-    "startDateTime": "2022-10-03T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/the-black-crowes-2",
-    "title": "The Black Crowes",
-    "location": "afaslive",
-    "price": 63.84,
-    "shortText": null,
-    "longText": "../public/texts/8d7a7a40-84bf-45fd-999c-11ffd9ac5b3b.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2020/10-oktober/_agendaitem/The-Black-Crows.jpg"
+    "longText": "../public/texts/07a88616-c9d0-4b41-802e-d2cffb26cb14.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2022/03-maart/_agendaitem/Counting-Crows.jpg"
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-11-05T20:00:00.000Z",
+    "startDateTime": "2022-11-06T19:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/rampage-1",
-    "title": "RAMPAGE",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/rise-against",
+    "title": "Rise Against",
     "location": "afaslive",
-    "price": 38,
+    "price": 51.52,
     "shortText": null,
-    "longText": "../public/texts/58327814-9316-4f04-91bb-1ed81e224eb3.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2022/11-november/_agendaitem/Rampage.jpg"
+    "longText": "../public/texts/fef8dc04-d9ef-4237-8bed-406b93101aca.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2022/11-november/_agendaitem/13497/Rise-Against.jpg"
   },
   {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-11-17T19:00:00.000Z",
+    "doorOpenDateTime": "2023-01-27T17:30:00.000Z",
+    "startDateTime": "2023-01-27T18:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/sting-1",
-    "title": "Sting",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/epica-apocalyptica-2",
+    "title": "EPICA & Apocalyptica",
     "location": "afaslive",
-    "price": 88.48,
+    "price": 51.52,
     "shortText": null,
-    "longText": "../public/texts/9ea45266-88ba-4fd8-83e3-970ba8c5c8c9.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2022/03-maart/_agendaitem/Sting.jpg"
+    "longText": "../public/texts/289c795a-67f5-4d20-bda7-e15a7e6cbc01.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2020/12-december/_agendaitem/Epica.jpg"
   },
   {
-    "doorOpenDateTime": "2022-12-01T17:00:00.000Z",
-    "startDateTime": "2022-12-01T17:40:00.000Z",
+    "doorOpenDateTime": "2023-04-07T16:30:00.000Z",
+    "startDateTime": "2023-04-07T18:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/powerwolf-1",
-    "title": "POWERWOLF",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/eels-1",
+    "title": "EELS",
     "location": "afaslive",
-    "price": 45,
+    "price": 46.5,
     "shortText": null,
-    "longText": "../public/texts/76844861-0ea3-4d32-afcd-4da4f65437bb.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2021/10-oktober/_agendaitem/Powerwolf.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2023-04-01T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/madness-1",
-    "title": "Madness",
-    "location": "afaslive",
-    "price": 53.9,
-    "shortText": null,
-    "longText": "../public/texts/7c508c4a-8b42-41a2-baf3-3b5f3c478b5c.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2022/07-juli/_agendaitem/Madness.jpg"
+    "longText": "../public/texts/92b7fb06-be1e-4ca0-b2ca-5a3d7701cb0c.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2022/04-april/_agendaitem/Eels.jpg"
   }
 ]
