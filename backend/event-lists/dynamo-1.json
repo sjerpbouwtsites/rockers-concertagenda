@@ -1,26 +1,38 @@
 [
   {
-    "doorOpenDateTime": null,
+    "doorOpenDateTime": "2022-10-22T17:30:00.000Z",
     "startDateTime": "2022-10-22T00:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.dynamo-eindhoven.nl/programma/hit-the-city-x-doodswens/",
-    "title": "Hit The City x Doodswens ",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/programma/another-now-2022/#spotify-embed",
+    "title": "Another Now",
     "location": "dynamo",
-    "price": 0,
-    "shortText": "Een avond gecureerd door Doodswens",
-    "longText": "../public/texts/c56ac808-bcd4-4a52-95f1-36bb7b5d8c5b.html",
+    "price": 14,
+    "shortText": "Support: Frontstreet + 3 Eyed Kids",
+    "longText": "../public/texts/c3ecf663-b3b3-4681-a23c-f7831b574ec9.html",
     "image": null
   },
   {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-11-19T00:00:00.000Z",
+    "doorOpenDateTime": "2022-10-26T17:00:00.000Z",
+    "startDateTime": "2022-10-26T00:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.dynamo-eindhoven.nl/programma/crossfaith-2022/#spotify-embed",
-    "title": "Crossfaith",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/programma/agnostic-front-2022/#spotify-embed",
+    "title": "Agnostic Front",
     "location": "dynamo",
-    "price": 17.5,
+    "price": 26.5,
+    "shortText": "Support: Charger + Spirit World + Last Hope",
+    "longText": "../public/texts/3fc62618-b157-4322-a6ec-e20eae714281.html",
+    "image": "https://www.dynamo-eindhoven.nl/wp-content/uploads/2022/08/Agnostic-Front-800x650.jpg"
+  },
+  {
+    "doorOpenDateTime": "2022-11-21T18:30:00.000Z",
+    "startDateTime": "2022-11-21T00:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/programma/ef-support/#spotify-embed",
+    "title": "EF",
+    "location": "dynamo",
+    "price": 14.5,
     "shortText": "Plus support",
-    "longText": "../public/texts/58376dbb-a18b-44bf-adb0-a011ff19d1a1.html",
+    "longText": "../public/texts/e07047b9-fdc1-4138-a405-12f7188515f0.html",
     "image": null
   },
   {
@@ -32,7 +44,7 @@
     "location": "dynamo",
     "price": 0,
     "shortText": "Alle opbrengsten gaan naar Stichting No Guts No Glory",
-    "longText": "../public/texts/fb389387-06fe-4947-9aa7-965af91a667f.html",
+    "longText": "../public/texts/e8fea88c-cbd5-4b64-84ce-f89a9eef8f3a.html",
     "image": null
   },
   {
@@ -44,7 +56,7 @@
     "location": "dynamo",
     "price": 18,
     "shortText": "Support: GHØSTKID + Oxymorrons",
-    "longText": "../public/texts/1c7f6104-25df-4b15-9e85-c1e8c9819c29.html",
+    "longText": "../public/texts/a33d7896-52e7-4b1f-8e47-730bd44cfc25.html",
     "image": "https://www.dynamo-eindhoven.nl/wp-content/uploads/2022/06/Bad-Omens-1200x1200.jpg"
   },
   {
@@ -56,7 +68,7 @@
     "location": "dynamo",
     "price": 21.5,
     "shortText": "Plus support",
-    "longText": "../public/texts/b29b186f-6738-463f-9b84-8dba380eaa39.html",
+    "longText": "../public/texts/ede057f0-d47a-48ab-8861-d93c7fbaa902.html",
     "image": "https://www.dynamo-eindhoven.nl/wp-content/uploads/2022/06/Zebrahead_3_High_Res_Credit_KevinBaldes-1200x1200.jpg"
   }
 ]

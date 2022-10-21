@@ -1,50 +1,38 @@
 [
   {
-    "doorOpenDateTime": "2022-10-24T18:00:00.000Z",
-    "startDateTime": "2022-10-24T18:30:00.000Z",
+    "doorOpenDateTime": "2022-10-31T19:00:00.000Z",
+    "startDateTime": "2022-10-31T19:30:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/tv-priest/",
-    "title": "TV Priest",
-    "location": "doornroosje",
-    "price": 14.5,
-    "shortText": null,
-    "longText": "../public/texts/957c26a8-3d20-4cc7-8e47-b72e7c16c7cf.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2022/05/TV-Priest-1934x1088-350x197-c-default.jpg"
-  },
-  {
-    "doorOpenDateTime": "2022-11-22T19:00:00.000Z",
-    "startDateTime": "2022-11-22T19:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/the-mary-wallopers/",
-    "title": "The Mary Wallopers",
+    "venueEventUrl": "https://www.doornroosje.nl/event/show-me-the-body/",
+    "title": "Show Me The Body",
     "location": "doornroosje",
     "price": 14,
+    "shortText": "Soulcrusher",
+    "longText": "../public/texts/0aeccbd7-fcb1-4dfb-96f3-78c2a1536d75.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2022/09/SMTB-press-1934x1088-350x197-c-default.jpg"
+  },
+  {
+    "doorOpenDateTime": "2023-02-25T18:00:00.000Z",
+    "startDateTime": "2023-02-25T18:45:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.doornroosje.nl/event/hang-youth-3/",
+    "title": "Hang Youth",
+    "location": "doornroosje",
+    "price": 17.5,
     "shortText": null,
-    "longText": "../public/texts/228fccca-8d44-42f4-97e5-d3acf395580f.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2022/06/The-Mary-Wallopers-1920x1080-1-1934x1088-350x197-c-default.jpg"
+    "longText": "../public/texts/fca692d8-7acd-43a4-ae09-1853199c10a0.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2022/06/hangyouth-1920x1080-2023-1934x1088-350x197-c-default.jpg"
   },
   {
-    "doorOpenDateTime": "2023-01-17T18:30:00.000Z",
-    "startDateTime": "2023-01-17T19:15:00.000Z",
+    "doorOpenDateTime": "2023-04-01T04:19:00.000Z",
+    "startDateTime": "2023-04-01T04:19:30.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/animals-as-leaders/",
-    "title": "Animals As Leaders",
+    "venueEventUrl": "https://www.doornroosje.nl/event/swallow-the-sun-2/",
+    "title": "Swallow the Sun + Draconian",
     "location": "doornroosje",
-    "price": 25.5,
+    "price": 24,
     "shortText": "Fortarock",
-    "longText": "../public/texts/fafd130e-7be6-4680-afe0-070ba5e8d535.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2022/09/Animals-As-Leaders-web-1934x1088-350x197-c-default.jpg"
-  },
-  {
-    "doorOpenDateTime": "2023-03-16T18:30:00.000Z",
-    "startDateTime": "2023-03-16T19:15:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/tarja-4/",
-    "title": "Tarja",
-    "location": "doornroosje",
-    "price": 32,
-    "shortText": "Fortarock",
-    "longText": "../public/texts/ef9d8eca-e6a2-4911-becd-8d1e5526df07.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2021/09/Tarja-1-1920x1080-1-350x197-c-default.jpg"
+    "longText": "../public/texts/f3c0c029-d3b6-41f5-a9b3-622fc27194e6.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2022/06/Swallow-The-Sun-1-1920x1088-350x197-c-default.jpg"
   }
 ]

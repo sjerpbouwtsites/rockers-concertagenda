@@ -1,18 +1,6 @@
 [
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-10-12T17:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/wage-war-12-10-2022",
-    "title": "Wage War",
-    "location": "melkweg",
-    "price": 18.4,
-    "shortText": "Metalcore, Florida",
-    "longText": "../public/texts/dc5da4c8-f99f-4d2c-94b6-e4ca1ccb9b6b.html",
-    "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/29113"
-  },
-  {
-    "doorOpenDateTime": null,
     "startDateTime": "2022-10-23T17:30:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://www.melkweg.nl/nl/agenda/scalping-23-10-2022",
@@ -20,7 +8,7 @@
     "location": "melkweg",
     "price": 17.25,
     "shortText": "Electronica, Noise, Experimenteel, Metal",
-    "longText": "../public/texts/976dabf4-86d3-4286-81a4-c240119838b4.html",
+    "longText": "../public/texts/9f96a39e-84e7-43b7-9df1-09e1f8eb0ed9.html",
     "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/29719"
   },
   {
@@ -32,7 +20,7 @@
     "location": "melkweg",
     "price": 14.4,
     "shortText": "Britse postpunk",
-    "longText": "../public/texts/356d07d3-625f-4765-9996-ad2d7b68bb75.html",
+    "longText": "../public/texts/b3b0ec7c-9019-4db8-b268-84ae03548e04.html",
     "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/29465"
   },
   {
@@ -44,7 +32,7 @@
     "location": "melkweg",
     "price": 19.55,
     "shortText": "Postpunkformatie, Artpunk, Brighton",
-    "longText": "../public/texts/61f08946-fe24-45f9-8f23-073fa2c73cd2.html",
+    "longText": "../public/texts/a99dc114-6480-4594-b463-7e045fcee28e.html",
     "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/29197"
   },
   {
@@ -56,7 +44,7 @@
     "location": "melkweg",
     "price": 21.85,
     "shortText": "Finse countryband, Bluegrassversies van bekende hardrock- en metalnummers",
-    "longText": "../public/texts/01e4ef10-cde7-4f63-9651-c7492550867a.html",
+    "longText": "../public/texts/1e4c5183-59ce-4dd3-bad1-73641254bb7a.html",
     "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/27211"
   },
   {
@@ -68,7 +56,7 @@
     "location": "melkweg",
     "price": 20.7,
     "shortText": "Ska, Punk, Politiek",
-    "longText": "../public/texts/b7abea39-fd8e-4240-ad9e-4c64e031d1c9.html",
+    "longText": "../public/texts/33632412-d861-4f81-b46d-2ddbca8f76a9.html",
     "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/29551"
   },
   {
@@ -80,55 +68,55 @@
     "location": "melkweg",
     "price": 28.75,
     "shortText": "Black metal, Polka, Finland, Humppa",
-    "longText": "../public/texts/5fabdbe5-7d17-479c-a307-a0aec3b36ef9.html",
+    "longText": "../public/texts/a61b984b-bd7f-49b4-93f6-67df45b85e35.html",
     "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/27552"
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2023-02-04T19:30:00.000Z",
+    "startDateTime": "2023-02-01T18:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/doctor-krapula-04-02-2023",
-    "title": "Doctor Krapula",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/life-of-agony-prong-01-02-2023",
+    "title": "Life Of Agony / Prong",
+    "location": "melkweg",
+    "price": 34.5,
+    "shortText": "Hardcore, Alternative Metal",
+    "longText": "../public/texts/53945566-950f-49d9-8d62-26750c879942.html",
+    "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/29890"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-02-22T19:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/kid-kapichi-22-02-2023",
+    "title": "Kid Kapichi",
+    "location": "melkweg",
+    "price": 16.1,
+    "shortText": "Alternatieve rock, Punk",
+    "longText": "../public/texts/94868bfe-fd14-4810-8b3b-6b1c39de5244.html",
+    "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/29912"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-03-12T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/i-prevail-12-03-2023",
+    "title": "I Prevail",
     "location": "melkweg",
     "price": 17.25,
-    "shortText": "Mestizo, Colombia, Ska, Punk, Cumbia",
-    "longText": "../public/texts/a052b2ab-a6a0-4731-bd02-ab027fa324ac.html",
-    "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/28689"
+    "shortText": "Metalcore, Trauma",
+    "longText": "../public/texts/9e75806b-14fe-49c5-8ebf-8aa6e6dbe02f.html",
+    "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/25927"
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2023-03-09T19:00:00.000Z",
+    "startDateTime": "2023-03-24T18:30:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/bloodywood-09-03-2023",
-    "title": "Bloodywood",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/nova-twins-24-03-2023",
+    "title": "Nova Twins",
     "location": "melkweg",
-    "price": 17.25,
-    "shortText": "Folkmetal, India",
-    "longText": "../public/texts/08d65781-b31d-4f38-9b15-87d922dc41db.html",
-    "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/28605"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2023-03-17T18:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/ferocious-dog-17-03-2023",
-    "title": "Ferocious Dog",
-    "location": "melkweg",
-    "price": 19.55,
-    "shortText": "Folkpunk, Ska, Rock, Celtic punk",
-    "longText": "../public/texts/43e5adfa-3176-4e30-8e3a-b7ecabe29e1c.html",
-    "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/29727"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2023-04-20T17:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/conception-20-04-2023",
-    "title": "Conception",
-    "location": "melkweg",
-    "price": 31.05,
-    "shortText": "Power metal, Progressieve metal",
-    "longText": "../public/texts/cdb1fed8-c75b-4df4-aaa8-a5e9c0f61494.html",
-    "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/25773"
+    "price": 20.15,
+    "shortText": "Punk, Alternative, Rock",
+    "longText": "../public/texts/221da180-ba35-448c-9159-a7ed1410208d.html",
+    "image": "https://s3-eu-west-1.amazonaws.com/static.melkweg.nl/uploads/images/scaled/inspiration_view_huge/29733"
   }
 ]

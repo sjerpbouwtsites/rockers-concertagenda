@@ -1,62 +1,50 @@
 [
   {
-    "doorOpenDateTime": "2022-10-13T17:00:00.000Z",
-    "startDateTime": "2022-10-13T17:30:00.000Z",
+    "doorOpenDateTime": null,
+    "startDateTime": null,
     "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/wolves-in-the-throne-room-2/",
-    "title": "Wolves in the Throne Room + Incantation e.a.",
+    "venueEventUrl": "https://www.doornroosje.nl/event/soulcrusher-2022-2/",
+    "title": "Soulcrusher 2022",
     "location": "doornroosje",
-    "price": 25.5,
+    "price": null,
+    "shortText": "Laatste kaarten",
+    "longText": null,
+    "image": null
+  },
+  {
+    "doorOpenDateTime": "2022-11-12T20:00:00.000Z",
+    "startDateTime": "2022-11-12T21:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.doornroosje.nl/event/birds-in-row/",
+    "title": "Birds in Row + The Guru Guru",
+    "location": "doornroosje",
+    "price": 14.5,
     "shortText": "Soulcrusher",
-    "longText": "../public/texts/5a498d47-86bf-4381-9225-865da5e45168.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2021/08/Wolves-in-the-Throne-Room-1920x1080-1-350x197-c-default.jpg"
+    "longText": "../public/texts/00385eb6-1329-4c96-a948-1e1949621526.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2022/05/Birds-in-Row-min-1934x1088-350x197-c-default.jpg"
   },
   {
-    "doorOpenDateTime": "2022-11-01T08:18:30.000Z",
-    "startDateTime": "2022-11-01T08:19:00.000Z",
+    "doorOpenDateTime": "2022-12-22T20:00:00.000Z",
+    "startDateTime": "2022-12-22T21:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/converge/",
-    "title": "Converge + Full of Hell + Petbrick",
+    "venueEventUrl": "https://www.doornroosje.nl/event/cloudsurfers/",
+    "title": "Cloudsurfers",
     "location": "doornroosje",
-    "price": 27.5,
-    "shortText": "Soulcrusher",
-    "longText": "../public/texts/7a7c3c29-34b2-4404-9655-adb85a963bd2.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2022/07/Converge-1934x1088-350x197-c-default.jpg"
-  },
-  {
-    "doorOpenDateTime": "2022-11-28T19:00:00.000Z",
-    "startDateTime": "2022-11-28T19:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/halocene/",
-    "title": "Halocene",
-    "location": "doornroosje",
-    "price": 16,
-    "shortText": "Fortarock",
-    "longText": "../public/texts/291ab9d9-1380-43a5-a55b-8426af869979.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2022/03/Halocene-1934x1088-c-default.jpg22-350x197-c-default.jpg"
-  },
-  {
-    "doorOpenDateTime": "2023-03-01T01:19:00.000Z",
-    "startDateTime": "2023-03-01T01:19:30.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/brutus/",
-    "title": "Brutus + Psychonaut + Doodseskader",
-    "location": "doornroosje",
-    "price": 24,
-    "shortText": "Net bevestigd",
-    "longText": "../public/texts/697c8475-048b-4241-9c4a-f24e166caf10.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2022/10/Brutus-1934x1088-350x197-c-default.jpg"
-  },
-  {
-    "doorOpenDateTime": "2023-05-19T18:00:00.000Z",
-    "startDateTime": "2023-05-19T18:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/otoboke-beaver/",
-    "title": "Otoboke Beaver",
-    "location": "doornroosje",
-    "price": 16.5,
+    "price": 12,
     "shortText": null,
-    "longText": "../public/texts/8f25580a-6fb6-4ba4-889c-47507088d768.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2021/12/Promo_OtobokeBeaver-credit_Takeaki_Emori-350x197-c-default.jpg"
+    "longText": "../public/texts/c4402bf2-08ae-45a0-9e02-51f4a4373cab.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2022/08/Cloudsurfers-web-1934x1088-350x197-c-default.jpg"
+  },
+  {
+    "doorOpenDateTime": "2023-03-01T07:21:00.000Z",
+    "startDateTime": "2023-03-01T07:22:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.doornroosje.nl/event/bloodywood/",
+    "title": "Bloodywood",
+    "location": "doornroosje",
+    "price": 15,
+    "shortText": "Fortarock",
+    "longText": "../public/texts/477436ae-cf62-453e-80a2-78388b7873a1.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2022/02/Bloodywood-350x197-c-default.jpg"
   }
 ]

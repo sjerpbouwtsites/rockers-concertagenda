@@ -55,6 +55,7 @@ export const neushoornMonths = baroegMonths;
 export const paradisoMonths = baroegMonths;
 export const voltMonths = dynamoMonths;
 export const duyckerMonths = dynamoMonths;
+export const effenaarMonths = dynamoMonths;
 
 const months = {
   afaslive: afasliveMonths,
@@ -62,6 +63,7 @@ const months = {
   bibelot: bibelotMonths,
   dbs: dbsMonths,
   depul: depulMonths,
+  effenaar: effenaarMonths,
   dynamy: dynamoMonths,
   duycker: duyckerMonths,
   gebrdenobel: gebrdenobelMonths,

@@ -1,18 +1,6 @@
 [
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-10-13T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/kasabian",
-    "title": "Kasabian",
-    "location": "afaslive",
-    "price": 44.8,
-    "shortText": null,
-    "longText": "../public/texts/e7e41a5c-c502-47d6-bc02-ea3dabd1bca6.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2022/10-oktober/_agendaitem/Kasabian.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
     "startDateTime": "2022-11-04T20:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://www.afaslive.nl/agenda/rampage",
@@ -20,19 +8,19 @@
     "location": "afaslive",
     "price": 38,
     "shortText": null,
-    "longText": "../public/texts/5a3a20fe-c95b-415f-9ae4-fbf154271153.html",
+    "longText": "../public/texts/a0051a1c-9ea8-4c48-a5d5-621f7a9e4044.html",
     "image": "https://www.afaslive.nl/files/Agenda/2022/11-november/_agendaitem/Rampage.jpg"
   },
   {
-    "doorOpenDateTime": null,
-    "startDateTime": "2023-04-01T18:00:00.000Z",
+    "doorOpenDateTime": "2023-01-27T17:30:00.000Z",
+    "startDateTime": "2023-01-27T18:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/madness-1",
-    "title": "Madness",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/epica-apocalyptica-2",
+    "title": "EPICA & Apocalyptica",
     "location": "afaslive",
-    "price": 53.9,
+    "price": 51.52,
     "shortText": null,
-    "longText": "../public/texts/af9247f9-56eb-41d1-b7f4-0fe8eb60b9ea.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2022/07-juli/_agendaitem/Madness.jpg"
+    "longText": "../public/texts/57c51584-0c3f-49c8-9eb0-775bf9b1dabe.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2020/12-december/_agendaitem/Epica.jpg"
   }
 ]
