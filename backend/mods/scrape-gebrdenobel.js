@@ -19,6 +19,16 @@ async function scrapeGebrdenobel(workerIndex) {
     headLess: false,
   });
 
+  setTimeout(() => {
+    parentPort.postMessage({
+      status: "console",
+      message: 'leven is zwaar'
+    });
+  }, 5000)
+
+
+
+
   try {
     const baseMusicEvents = await makeBaseEventList(browser, workerIndex);
 

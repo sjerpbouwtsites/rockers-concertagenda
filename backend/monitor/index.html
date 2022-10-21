@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rockagenda scrapers monitor</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      rel="stylesheet"
+    />
+    <link href="monitor.css" rel="stylesheet" />
+  </head>
+  <body>
+    <main class="monitorfields__container">
+      <div
+        id="update-field-target"
+        class="monitorfield__outer monitorfield__outer--updates"
+      ></div>
+      <div
+        id="error-field-target"
+        class="monitorfield__outer monitorfield__outer--errors"
+      ></div>
+      <div
+        id="debugger-field-target"
+        class="monitorfield__outer monitorfield__outer--debugger"
+      ></div>
+    </main>
+    <script defer src="frontend.js" type="module"></script>
+  </body>
+</html>

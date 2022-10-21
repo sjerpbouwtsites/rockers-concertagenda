@@ -1,5 +1,7 @@
 import os from "os-utils";
 import EventsList from "./events-list.js";
+import wsMessage from "../monitor/wsMessage.js";
+import { parentPort } from "worker_threads";
 
 export default class WorkerStatus {
   static _workers = {};
@@ -7,6 +9,7 @@ export default class WorkerStatus {
   static waitingWorkers = [];
   static totalWorkers = 0;
   static completedWorkers = 0;
+  static monitorWebsocketServer = null;
   static registerWorker(newWorkerName) {
     if (WorkerStatus.waitingWorkers.indexOf(newWorkerName) !== -1) {
       WorkerStatus.waitingWorkers = WorkerStatus.waitingWorkers.filter(
@@ -53,31 +56,47 @@ export default class WorkerStatus {
 
     if (statusses.includes("done")) {
       WorkerStatus.completedWorkers = WorkerStatus.completedWorkers + 1;
-      console.log("");
-      console.log(`${name} done.`);
-      if (statusses.includes("dirty")) {
-        console.log(
-          `${name} dirty dirty.`.padStart(20, " ").padStart(30, "🚮🌁")
-        );
+      if (WorkerStatus.monitorWebsocketServer) {
+        const broadcastMsg = new wsMessage('update', 'message-roll', {
+          workerName: name,
+          text: `${name} done.`
+        });
+        WorkerStatus.monitorWebsocketServer.broadcast(broadcastMsg.json)
       }
       WorkerStatus.checkIfAllDone();
     }
 
     if (statusses.includes("error")) {
-      console.log("");
-      console.error(`${name} ERROR.`.padStart(20, " ").padStart(30, "💣"));
-      console.error(message);
+      if (WorkerStatus.monitorWebsocketServer) {
+        const broadcastMsg = new wsMessage('update', 'scraper-error message-roll', {
+          workerName: name,
+          text: `Error in ${name}:
+          ${message}`
+        });
+        WorkerStatus.monitorWebsocketServer.broadcast(broadcastMsg.json)
+      }
     }
 
     if (statusses.includes("working")) {
+
+
+      // TT!!! todu TODO
+
       console.log("");
       console.log(`${name}: ${message}`);
     }
 
     if (statusses.includes("console")) {
-      console.log("");
-      console.log(`${name}`.padStart(20, " ").padStart(30, "💬"));
-      console.log(message);
+      if (WorkerStatus.monitorWebsocketServer) {
+        const bullshit = new wsMessage('update', 'debugger', {
+          workerName: name,
+          worker: worker,
+          text: message,
+        })
+        WorkerStatus.monitorWebsocketServer.broadcast(bullshit.json)
+      } else {
+        console.log("NOG NIET OPGESTART monitor websocket server")
+      }
     }
 
     if (statusses.includes("todo")) {
@@ -116,7 +135,6 @@ export default class WorkerStatus {
   static checkIfAllDone() {
     const notDone = WorkerStatus.currentNotDone;
     if (notDone.length === 0 && WorkerStatus.waitingWorkers.length === 0) {
-      console.log(" ");
       console.log("All workers done");
       WorkerStatus.programEnd();
       return true
@@ -126,13 +144,16 @@ export default class WorkerStatus {
 
   static reportOnActiveWorkers() {
     const notDone = WorkerStatus.currentNotDone;
-    console.log(`\n`)
-    console.log(`Unfinished workers: ${WorkerStatus.countedWorkersToDo}`)
     const currentTodoMsg = notDone.map((notDoneWorker) => {
       const todoMSG = notDoneWorker.todo ? ` todo: ${notDoneWorker.todo}` : " init";
       return `${notDoneWorker.name}${todoMSG}`;
     }).join('; ');
-    console.log(`Active: ${currentTodoMsg}`);
+    const consoleMessage = `Unfinished workers: ${WorkerStatus.countedWorkersToDo} 
+    Active: ${currentTodoMsg}`;
+    if (WorkerStatus.monitorWebsocketServer) {
+      const wsMsg = new wsMessage('update', 'message-roll', { text: consoleMessage })
+      WorkerStatus.monitorWebsocketServer.broadcast(wsMsg.json)
+    }
     if (notDone.length > 0 || WorkerStatus.waitingWorkers.length !== 0) {
       setTimeout(() => {
         WorkerStatus.reportOnActiveWorkers();
@@ -140,8 +161,11 @@ export default class WorkerStatus {
     }
   }
   static programEnd() {
+    if (WorkerStatus.monitorWebsocketServer) {
+      const wsMsg2 = new wsMessage('process', 'closed')
+      WorkerStatus.monitorWebsocketServer.broadcast(wsMsg2.json)
+    }
     EventsList.printAllToJSON();
-    console.log("PROGRAM END");
     setTimeout(() => {
       process.exit();
     }, 10000);

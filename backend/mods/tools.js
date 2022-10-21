@@ -115,10 +115,12 @@ export function getPriceFromHTML(testText = null, contextText = null) {
   return null;
 }
 
-export function log(message) {
+export function log(message, worker = null, workerName = null) {
   parentPort.postMessage({
     status: "console",
     message: message,
+    workerName,
+    worker,
   });
 }
 

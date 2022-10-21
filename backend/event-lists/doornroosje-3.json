@@ -1,50 +1,50 @@
 [
   {
-    "doorOpenDateTime": null,
-    "startDateTime": null,
+    "doorOpenDateTime": "2022-10-26T19:00:00.000Z",
+    "startDateTime": "2022-10-26T20:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/soulcrusher-2022-2/",
-    "title": "Soulcrusher 2022",
+    "venueEventUrl": "https://www.doornroosje.nl/event/life/",
+    "title": "LIFE",
     "location": "doornroosje",
-    "price": null,
+    "price": 10,
     "shortText": null,
-    "longText": null,
-    "image": null
+    "longText": "../public/texts/9395495a-705f-441e-9a01-28e4dba4fa81.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2022/03/LIFE-MOON-1920x1080-1-350x197-c-default.jpg"
   },
   {
-    "doorOpenDateTime": "2022-11-12T20:00:00.000Z",
-    "startDateTime": "2022-11-12T21:00:00.000Z",
+    "doorOpenDateTime": "2022-11-25T17:30:00.000Z",
+    "startDateTime": "2022-11-25T18:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/birds-in-row/",
-    "title": "Birds in Row + The Guru Guru",
+    "venueEventUrl": "https://www.doornroosje.nl/event/faces-of-death-2/",
+    "title": "Rivers of Nihil + Fallujah e.a.",
     "location": "doornroosje",
-    "price": 14.5,
-    "shortText": "Soulcrusher",
-    "longText": "../public/texts/aa359b1e-57da-4ef8-944f-ad71f361db5f.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2022/05/Birds-in-Row-min-1934x1088-350x197-c-default.jpg"
+    "price": 24,
+    "shortText": "Laatste kaarten",
+    "longText": "../public/texts/5f422cdf-7488-4927-b8ae-6918c82d104c.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2021/08/Faces-of-Death-1920x1080-1-350x197-c-default.jpg"
   },
   {
-    "doorOpenDateTime": "2022-12-22T20:00:00.000Z",
-    "startDateTime": "2022-12-22T21:00:00.000Z",
+    "doorOpenDateTime": "2023-01-21T18:00:00.000Z",
+    "startDateTime": "2023-01-21T18:30:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/cloudsurfers/",
-    "title": "Cloudsurfers",
+    "venueEventUrl": "https://www.doornroosje.nl/event/revocation-3/",
+    "title": "Revocation + Goatwhore e.a.",
     "location": "doornroosje",
-    "price": 12,
-    "shortText": null,
-    "longText": "../public/texts/aebf31f3-c8fe-4973-92ae-7986373e39ed.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2022/08/Cloudsurfers-web-1934x1088-350x197-c-default.jpg"
-  },
-  {
-    "doorOpenDateTime": "2023-03-01T07:21:00.000Z",
-    "startDateTime": "2023-03-01T07:22:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/bloodywood/",
-    "title": "Bloodywood",
-    "location": "doornroosje",
-    "price": 15,
+    "price": 24,
     "shortText": "Fortarock",
-    "longText": "../public/texts/a0678f8c-e594-4c0a-9bc9-a2698e3f087f.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2022/02/Bloodywood-350x197-c-default.jpg"
+    "longText": "../public/texts/ded3de5c-c165-45da-9489-4563b577e902.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2022/07/Revocation-a-1934x1088-350x197-c-default.jpg"
+  },
+  {
+    "doorOpenDateTime": "2023-03-18T18:30:00.000Z",
+    "startDateTime": "2023-03-18T19:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.doornroosje.nl/event/fuzz/",
+    "title": "Fuzz",
+    "location": "doornroosje",
+    "price": 19.5,
+    "shortText": null,
+    "longText": "../public/texts/316d0c2e-bdde-4838-b28a-f3e3dc58a91d.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2021/09/FUZZ-1920x1080-1-350x197-c-default.jpg"
   }
 ]

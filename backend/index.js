@@ -7,10 +7,20 @@ import EventsList from "./mods/events-list.js";
 import fsDirections from "./mods/fs-directions.js";
 import { handleError, errorAfterSeconds, getShellArguments } from "./mods/tools.js";
 import { printLocationsToPublic } from "./mods/locations.js";
+import initMonitorBackend from "./monitor/backend.js"
+import wsMessage from './monitor/wsMessage.js';
 
 const shellArguments = getShellArguments();
 
+
 function init() {
+
+  let monitorWebsocketServer = null;
+
+  initMonitorBackend().then(wsServer => {
+    monitorWebsocketServer = wsServer;
+    WorkerStatus.monitorWebsocketServer = wsServer;
+  });
 
   houseKeeping();
 
@@ -230,6 +240,7 @@ async function startWorker(
 
   const thisWorker = new Worker(workerPath);
   thisWorker.workerName = workerNameWithIndex;
+
   thisWorker.postMessage({
     command: "start",
     data: {
@@ -239,6 +250,9 @@ async function startWorker(
 
   WorkerStatus.registerWorker(thisWorker.workerName);
   thisWorker.on("message", (messageData) => {
+
+
+
     if (messageData?.status) {
       WorkerStatus.change(
         thisWorker.workerName,
@@ -283,4 +297,6 @@ function shuffleArray(array) {
 }
 
 init();
+
+
 

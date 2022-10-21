@@ -40,6 +40,8 @@
   },
   "devDependencies": {
     "node-fetch": "^3.2.4",
-    "os-utils": "^0.0.14"
+    "open": "^8.4.0",
+    "os-utils": "^0.0.14",
+    "websocket": "^1.0.34"
   }
 }
