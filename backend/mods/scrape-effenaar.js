@@ -5,11 +5,13 @@ import EventsList from "./events-list.js";
 import fs from "fs";
 import crypto from "crypto";
 import fsDirections from "./fs-directions.js";
+import { effenaarMonths } from "./months.js";
 import {
   getPriceFromHTML,
   handleError,
   basicMusicEventsFilter,
   errorAfterSeconds,
+  log
 } from "./tools.js";
 import { letScraperListenToMasterMessageAndInit } from "./generic-scraper.js";
 
@@ -19,18 +21,12 @@ async function scrapeEffenaar(workerIndex) {
 
   try {
     const baseMusicEvents = await Promise.race([
-      makeBaseEventList(browser, workerIndex),
+      makeBaseEventList(browser, workerIndex, effenaarMonths),
       errorAfterSeconds(15000),
     ]);
 
-    const filteredForRock = await filterForRock(
-      browser,
-      baseMusicEvents,
-      [],
-      workerIndex
-    );
 
-    await fillMusicEvents(browser, filteredForRock, workerIndex);
+    await fillMusicEvents(browser, baseMusicEvents, workerIndex);
   } catch (error) {
     handleError(error);
   }
@@ -72,11 +68,20 @@ async function processSingleMusicEvent(browser, baseMusicEvents, workerIndex) {
   }
 
   const page = await browser.newPage();
-  await page.goto(firstMusicEvent.venueEventUrl);
+
+  try {
+    await page.goto(firstMusicEvent.venueEventUrl, {
+      timeout: 10000
+    });
+  } catch (error) {
+    handleError(`${error.message} \n${firstMusicEvent.venueEventUrl}`, 'Effenaar goto single page')
+  }
+
+
 
   try {
     const pageInfo = await Promise.race([
-      getPageInfo(page),
+      getPageInfo(page, effenaarMonths),
       errorAfterSeconds(15000),
     ]);
 
@@ -92,34 +97,9 @@ async function processSingleMusicEvent(browser, baseMusicEvents, workerIndex) {
       pageInfo.longText = longTextPath;
     }
 
-    // @TODO OPEN DOOR TIME OF EFFENAAR DOES NOT COME THROUGH YET
-    if (pageInfo && pageInfo.doorOpenTime) {
-      const openDoorDateTime = new Date(firstMusicEvent.startDateTime);
-      const openDoorTimeSplit = pageInfo.doorOpenTime.split(":");
-      if (openDoorTimeSplit.length & (openDoorTimeSplit.length > 1)) {
-        const openDoorHours = openDoorTimeSplit[0];
-        const openDoorMinutes = openDoorTimeSplit[1];
-        openDoorDateTime.setHours(openDoorHours);
-        openDoorDateTime.setMinutes(openDoorMinutes);
-        firstMusicEvent.openDoorDateTime = openDoorDateTime.toISOString();
-      }
-    }
-
     // no date no registration.
-    if (pageInfo && !pageInfo.cancelReason) {
-      delete pageInfo.cancelReason;
+    if (pageInfo) {
       firstMusicEvent.merge(pageInfo);
-    } else if (pageInfo.cancelReason !== "") {
-      parentPort.postMessage({
-        status: "console",
-        message: `Incomplete info for ${firstMusicEvent.title}`,
-      });
-    } else {
-      const pageInfoError = new Error(`unclear why failure at: ${firstMusicEvent.title
-        }
-      ${JSON.stringify(pageInfo)}
-       ${JSON.stringify(firstMusicEvent)}`);
-      handleError(pageInfoError);
     }
     firstMusicEvent.register();
 
@@ -135,153 +115,119 @@ async function processSingleMusicEvent(browser, baseMusicEvents, workerIndex) {
   }
 }
 
-async function getPageInfo(page, months) {
+async function getPageInfo(page, effenaarMonths) {
   let pageInfo = {};
   pageInfo.cancelReason = "";
-  try {
-    await page.waitForSelector(".js-event-detail-organizer-sidebar");
-    pageInfo = await page.evaluate(
-      ({ months }) => {
-        const imageEl = document.querySelector(".spotlight-image");
-        let image = "";
-        let doorOpenTime = null;
-        let longTextHTML = null;
-        if (!!imageEl) {
-          image = imageEl.src;
+
+  await page.waitForSelector('.event-bar-inner-row');
+
+  pageInfo = await page.evaluate(
+    (effenaarMonths) => {
+
+      const image = document.querySelector(".header-image img")?.src ?? null;
+      const priceTextcontent = document.querySelector(".tickets-btn")?.textContent ?? null;
+      let startDate, doorTime, startTime, doorOpenDateTime, startDateTime;
+
+      try {
+        const dateText = document.querySelector(".header-meta-date")?.textContent.trim() ?? '';
+        if (!dateText) {
+          return null;
         }
-
-        let priceTextcontent =
-          document.querySelector(".js-event-detail-organizer-sidebar")
-            ?.textContent ?? null;
-
-        try {
-          let doorOpenEl;
-          let doorOpenPotentials = Array.from(
-            document.querySelectorAll(".js-event-detail-organizer-sidebar dd")
-          ).filter((dd) => {
-            const m = dd.textContent.trim().match(/(\d\d)[\:]+(\d\d)/);
-            return !!m && m.length > 2;
-          });
-          if (
-            doorOpenPotentials &&
-            doorOpenPotentials.length &&
-            doorOpenPotentials.length > 1
-          ) {
-            doorOpenEl = doorOpenPotentials[1];
-          }
-          if (doorOpenEl) {
-            doorOpenTime = doorOpenEl.textContent
-              .trim()
-              .match(/(\d\d)[\:]+(\d\d)/)[0];
-          }
-        } catch (error) {
-          parentPort.postMessage({
-            status: "console",
-            message: `Error in effenaar door open search of ${document.location}`,
-          });
-        }
-
-        const longTextHTMLEl = document.querySelector(
-          ".js-event-detail-organizer-content"
-        );
-        if (longTextHTMLEl) {
-          longTextHTML = longTextHTMLEl.innerHTML;
-        }
-
+        const [, dayNumber, monthName, year] = dateText.match(/(\d+)\s(\w+)\s(\d\d\d\d)/)
+        const fixedDay = dayNumber.padStart(2, '0');
+        const monthNumber = effenaarMonths[monthName]
+        startDate = `${year}-${monthNumber}-${fixedDay}`;
+      } catch (error) {
         return {
-          priceTextcontent,
-          image,
-          doorOpenTime,
-          longTextHTML,
-        };
-      },
-      { months }
-    );
-    return pageInfo;
-  } catch (error) {
-    handleError(error);
+          error: error.message,
+        }
+      }
 
-    return pageInfo;
+
+      try {
+        const startTimeAr = document.querySelector('.time-start-end')?.textContent.match(/\d\d:\d\d/)
+        if (Array.isArray(startTimeAr) && startTimeAr.length) {
+          startTime = startTimeAr[0]
+        }
+        const doorTimeAr = document.querySelector('.time-open')?.textContent.match(/\d\d:\d\d/)
+        if (Array.isArray(doorTimeAr) && doorTimeAr.length) {
+          doorTime = doorTimeAr[0]
+        }
+
+      } catch (error) {
+        return {
+          error: `${error.message}\n${startTime}\n${doorTime}`
+        }
+      }
+
+      try {
+        if (doorTime) {
+          doorOpenDateTime = new Date(`${startDate}T${doorTime}:00`).toISOString();
+        }
+
+        if (startTime) {
+          startDateTime = new Date(`${startDate}T${startTime}:00`).toISOString();
+        }
+      } catch (error) {
+        return {
+          error: error.message
+        }
+
+      }
+
+      const longTextHTML = document.querySelector(".header ~ .blocks")?.innerHTML ?? null;
+
+      return {
+        priceTextcontent,
+        doorOpenDateTime,
+        startDateTime,
+        image,
+        longTextHTML, doorTime, startTime
+      };
+    },
+    effenaarMonths
+  );
+  if (pageInfo.error) {
+    handleError(pageInfo.error, `Effenaar pageinfo `);
   }
+  return pageInfo;
+
 }
 
-async function makeBaseEventList(browser, workerIndex) {
+async function makeBaseEventList(browser, workerIndex, effenaarMonths) {
   const page = await browser.newPage();
-  await page.goto("https://www.effenaar.nl/agenda", {
+  await page.goto("https://www.effenaar.nl/agenda?genres.title=heavy", {
     waitUntil: "load",
   });
-  const rawEvents = await page.evaluate((workerIndex) => {
-    return Array.from(document.querySelectorAll(".overview-list"))
+
+  const rawEvents = await page.evaluate(({ workerIndex, months }) => {
+
+    return Array.from(document.querySelectorAll(".search-and-filter .agenda-card"))
       .filter((eventEl, index) => {
-        return index % 3 === workerIndex;
+        return index % 4 === workerIndex;
       })
-      .map((eventEl) => {
+      .map((eventEl, index) => {
         const res = {};
         res.title = "";
-        const titleEl = eventEl.querySelector(".overview-title");
+        const titleEl = eventEl.querySelector(".card-title");
         if (!!titleEl) {
           res.title = titleEl.textContent.trim();
         }
-        res.shortText = "";
-        if (!!titleEl) {
-          res.shortText = titleEl.hasAttribute("data-original-title")
-            ? titleEl.gasAttribute("data-original-title")
-            : "";
-        }
+        res.shortText = eventEl.querySelector('.card-subtitle')?.textContent;
 
+        res.venueEventUrl = eventEl?.href;
 
-        res.startDateTime = null;
-        const dateEl = eventEl.querySelector(".overview-date");
-        if (dateEl && dateEl.hasAttribute("datetime")) {
-          res.startDateTime = new Date(
-            dateEl.getAttribute("datetime")
-          ).toISOString();
-        }
-
-        if (!!titleEl) {
-          res.venueEventUrl = titleEl.href;
-        }
         res.location = "effenaar";
         return res;
       });
-  }, workerIndex);
+  }, { workerIndex: workerIndex, months: effenaarMonths });
+
+  rawEvents.filter(rawEvent => {
+    return !!rawEvent.error
+  }).forEach(rawEventWithError => {
+    handleError(rawEventWithError)
+  })
   return rawEvents
     .filter(basicMusicEventsFilter)
     .map((event) => new MusicEvent(event));
-}
-
-async function filterForRock(
-  browser,
-  baseMusicEvents,
-  filteredEvents,
-  workerIndex
-) {
-  if (!baseMusicEvents.length) return filteredEvents;
-
-  const eventsCopy = [...baseMusicEvents];
-  const firstEvent = eventsCopy.shift();
-
-  const page = await browser.newPage();
-  await page.goto(
-    `https://www.metal-archives.com/search?searchString=${firstEvent.title}&type=band_name`
-  );
-  let isRockPossible = await page.evaluate(() => {
-    const isEmptyEl = document.querySelector(".dataTables_empty");
-    return !isEmptyEl;
-  });
-
-  if (!isRockPossible) {
-    await page.goto(`https://en.wikipedia.org/wiki/${firstEvent.title}`);
-    isRockPossible = await page.evaluate(() => {
-      const isRock = !!document.querySelector(".infobox a[href*='rock']");
-      const isMetal = !!document.querySelector(".infobox a[href*='metal']");
-      return isRock || isMetal;
-    });
-  }
-
-  if (isRockPossible) {
-    filteredEvents.push(firstEvent);
-  }
-
-  return filterForRock(browser, eventsCopy, filteredEvents, workerIndex);
 }
