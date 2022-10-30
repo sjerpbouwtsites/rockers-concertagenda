@@ -1,0 +1,1125 @@
+
+  Effenaar goto single page Error - 7:20:44 AM
+  undefined 
+  undefined
+  
+  
+  unknown location Error - 7:18:06 AM
+  TimeoutError: Navigation timeout of 10000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 10000 ms exceeded
+  
+  
+  unknown location Error - 7:13:48 AM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  unknown location Error - 7:12:45 AM
+  ReferenceError: filterForRock is not defined
+    at scrapeEffenaar (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-effenaar.js:28:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  filterForRock is not defined
+  
+  
+  unknown location Error - 7:08:56 AM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  unknown location Error - 7:06:52 AM
+  Error: REJECTED AFTER 15000
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:72:14)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  REJECTED AFTER 15000
+  
+  
+  unknown location Error - 6:59:33 AM
+  RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-effenaar.js:95:100)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeEffenaar (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-effenaar.js:35:5) 
+  Invalid time value
+  
+  
+  unknown location Error - 6:57:47 AM
+  RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-effenaar.js:94:98)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeEffenaar (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-effenaar.js:35:5) 
+  Invalid time value
+  
+  
+  unknown location Error - 6:54:02 AM
+  undefined 
+  undefined
+  
+  
+  unknown location Error - 6:51:35 AM
+  undefined 
+  undefined
+  
+  
+  unknown location Error - 6:51:00 AM
+  undefined 
+  undefined
+  
+  
+  unknown location Error - 6:50:53 AM
+  undefined 
+  undefined
+  
+  
+  unknown location Error - 6:49:30 AM
+  undefined 
+  undefined
+  
+  
+  unknown location Error - 6:48:58 AM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  unknown location Error - 6:48:27 AM
+  undefined 
+  undefined
+  
+  
+  unknown location Error - 6:48:22 AM
+  undefined 
+  undefined
+  
+  
+  unknown location Error - 6:47:01 AM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  unknown location Error - 6:46:31 AM
+  undefined 
+  undefined
+  
+  
+  unknown location Error - 6:46:25 AM
+  undefined 
+  undefined
+  
+  
+  unknown location Error - 6:45:54 AM
+  undefined 
+  undefined
+  
+  
+  unknown location Error - 6:45:50 AM
+  undefined 
+  undefined
+  
+  
+  unknown location Error - 6:30:27 AM
+  undefined 
+  undefined
+  
+  
+  unknown location Error - 6:30:27 AM
+  undefined 
+  undefined
+  
+  
+  unknown location Error - 6:30:27 AM
+  undefined 
+  undefined
+  
+  
+  unknown location Error - 6:30:27 AM
+  undefined 
+  undefined
+  
+  
+  unknown location Error - 6:30:27 AM
+  undefined 
+  undefined
+  
+  
+  unknown location Error - 6:30:27 AM
+  undefined 
+  undefined
+  
+  
+  unknown location Error - 6:30:27 AM
+  undefined 
+  undefined
+  
+  
+  unknown location Error - 6:29:45 AM
+  undefined 
+  undefined
+  
+  
+  unknown location Error - 6:29:45 AM
+  undefined 
+  undefined
+  
+  
+  unknown location Error - 6:29:45 AM
+  undefined 
+  undefined
+  
+  
+  unknown location Error - 6:29:45 AM
+  undefined 
+  undefined
+  
+  
+  unknown location Error - 6:29:45 AM
+  undefined 
+  undefined
+  
+  
+  unknown location Error - 6:29:45 AM
+  undefined 
+  undefined
+  
+  
+  unknown location Error - 6:29:45 AM
+  undefined 
+  undefined
+  
+  
+  unknown location Error - 6:26:35 AM
+  Error: Evaluation failed: ReferenceError: handleError is not defined
+    at __puppeteer_evaluation_script__:27:11
+    at Array.map (<anonymous>)
+    at __puppeteer_evaluation_script__:7:8
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-effenaar.js:216:21)
+    at async scrapeEffenaar (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-effenaar.js:23:29) 
+  Evaluation failed: ReferenceError: handleError is not defined
+    at __puppeteer_evaluation_script__:27:11
+    at Array.map (<anonymous>)
+    at __puppeteer_evaluation_script__:7:8
+  
+  
+  unknown location Error - 6:05:16 AM
+  Error: Evaluation failed: ReferenceError: log is not defined
+    at __puppeteer_evaluation_script__:3:5
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-effenaar.js:217:21)
+    at async scrapeEffenaar (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-effenaar.js:23:29) 
+  Evaluation failed: ReferenceError: log is not defined
+    at __puppeteer_evaluation_script__:3:5
+  
+  
+  unknown location Error - 6:05:15 AM
+  Error: Evaluation failed: ReferenceError: log is not defined
+    at __puppeteer_evaluation_script__:3:5
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-effenaar.js:217:21)
+    at async scrapeEffenaar (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-effenaar.js:23:29) 
+  Evaluation failed: ReferenceError: log is not defined
+    at __puppeteer_evaluation_script__:3:5
+  
+  
+  unknown location Error - 6:05:15 AM
+  Error: Evaluation failed: ReferenceError: log is not defined
+    at __puppeteer_evaluation_script__:3:5
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-effenaar.js:217:21)
+    at async scrapeEffenaar (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-effenaar.js:23:29) 
+  Evaluation failed: ReferenceError: log is not defined
+    at __puppeteer_evaluation_script__:3:5
+  
+  
+  Baroeg 0 Error - 5:47:39 AM
+  undefined 
+  undefined
+  
+  
+  Baroeg 0 Error - 5:47:20 AM
+  undefined 
+  undefined
+  
+  
+  Baroeg 0 Error - 5:46:34 AM
+  undefined 
+  undefined
+  
+  
+  unknown location Error - 5:39:33 AM
+  TypeError: Cannot read properties of undefined (reading 'wp:featuredmedia')
+    at file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:237:24
+    at Array.map (<anonymous>)
+    at makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:229:6)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:36:29) 
+  Cannot read properties of undefined (reading 'wp:featuredmedia')
+  
+  
+  unknown location Error - 5:37:31 AM
+  TypeError: Cannot read properties of undefined (reading 'wp:featuredmedia')
+    at file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:237:24
+    at Array.map (<anonymous>)
+    at makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:229:6)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:36:29) 
+  Cannot read properties of undefined (reading 'wp:featuredmedia')
+  
+  
+  unknown location Error - 5:32:06 AM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  Generic error catch De Pul scrape init Error - 5:31:50 AM
+  TypeError: Cannot read properties of null (reading 'title')
+    at eventAsyncCheck (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-depul.js:200:42)
+    at scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-depul.js:29:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of null (reading 'title')
+  
+  
+  unknown location Error - 5:31:39 AM
+  TypeError: Cannot read properties of undefined (reading 'wp:featuredmedia')
+    at file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:237:24
+    at Array.map (<anonymous>)
+    at makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:229:6)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:36:29) 
+  Cannot read properties of undefined (reading 'wp:featuredmedia')
+  
+  
+  Kavka promise race Error - 5:27:03 AM
+  Error: Kavka single failure, failure promise fired, at: 
+Deathstars
+https://kavka.be/event/deathstars/
+Original error message:
+Navigation timeout of 7500 ms exceeded
+url: https://kavka.be/event/deathstars/
+    at file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-kavka.js:79:21
+    at runNextTicks (node:internal/process/task_queues:60:5)
+    at listOnTimeout (node:internal/timers:533:9)
+    at process.processTimers (node:internal/timers:507:7)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-kavka.js:28:5) 
+  Kavka single failure, failure promise fired, at: 
+Deathstars
+https://kavka.be/event/deathstars/
+Original error message:
+Navigation timeout of 7500 ms exceeded
+url: https://kavka.be/event/deathstars/
+  
+  
+  Kavka promise race Error - 11:26:09 AM
+  Error: Kavka single failure, failure promise fired, at: 
+Deathstars
+https://kavka.be/event/deathstars/
+Original error message:
+Navigation timeout of 7500 ms exceeded
+url: https://kavka.be/event/deathstars/
+    at file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-kavka.js:79:21
+    at runNextTicks (node:internal/process/task_queues:60:5)
+    at listOnTimeout (node:internal/timers:533:9)
+    at process.processTimers (node:internal/timers:507:7)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-kavka.js:28:5) 
+  Kavka single failure, failure promise fired, at: 
+Deathstars
+https://kavka.be/event/deathstars/
+Original error message:
+Navigation timeout of 7500 ms exceeded
+url: https://kavka.be/event/deathstars/
+  
+  
+  unknown location Error - 11:23:53 AM
+  Error: No node found for selector: [href*="Heavy"]
+    at assert (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/assert.js:26:15)
+    at DOMWorld.click (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:287:32)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-neushoorn.js:152:3)
+    at async scrapeNeushoorn (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-neushoorn.js:24:29) 
+  No node found for selector: [href*="Heavy"]
+  
+  
+  Neushoorn wacht op laden agenda pagina Error - 11:23:53 AM
+  TimeoutError: waiting for selector `[href*="Heavy"]` failed: timeout 10000ms exceeded
+    at new WaitTask (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:528:34)
+    at DOMWorld.waitForSelectorInPage (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:432:26)
+    at internalHandler.waitFor (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/QueryHandler.js:31:77)
+    at DOMWorld.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:323:29)
+    at Frame.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:942:51)
+    at Page.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:2359:33)
+    at makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-neushoorn.js:145:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeNeushoorn (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-neushoorn.js:24:29) 
+  waiting for selector `[href*="Heavy"]` failed: timeout 10000ms exceeded
+  
+  
+  Kavka promise race Error - 11:03:15 PM
+  Error: Kavka single failure, failure promise fired, at: 
+Deathstars
+https://kavka.be/event/deathstars/
+Original error message:
+Navigation timeout of 7500 ms exceeded
+url: https://kavka.be/event/deathstars/
+    at file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-kavka.js:79:21
+    at runNextTicks (node:internal/process/task_queues:60:5)
+    at listOnTimeout (node:internal/timers:533:9)
+    at process.processTimers (node:internal/timers:507:7)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-kavka.js:28:5) 
+  Kavka single failure, failure promise fired, at: 
+Deathstars
+https://kavka.be/event/deathstars/
+Original error message:
+Navigation timeout of 7500 ms exceeded
+url: https://kavka.be/event/deathstars/
+  
+  
+  Kavka promise race Error - 3:38:51 AM
+  Error: Kavka single failure, failure promise fired, at: 
+Deathstars
+https://kavka.be/event/deathstars/
+Original error message:
+Navigation timeout of 7500 ms exceeded
+url: https://kavka.be/event/deathstars/
+    at file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-kavka.js:79:21
+    at runNextTicks (node:internal/process/task_queues:60:5)
+    at listOnTimeout (node:internal/timers:533:9)
+    at process.processTimers (node:internal/timers:507:7)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-kavka.js:28:5) 
+  Kavka single failure, failure promise fired, at: 
+Deathstars
+https://kavka.be/event/deathstars/
+Original error message:
+Navigation timeout of 7500 ms exceeded
+url: https://kavka.be/event/deathstars/
+  
+  
+  Generic error catch Duycker scrape init Error - 3:15:52 AM
+  TypeError: testText.match is not a function
+    at getPriceFromHTML (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:82:31)
+    at postPageInfoProcessing (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:151:26)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-duycker.js:72:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-duycker.js:25:5) 
+  testText.match is not a function
+  
+  
+  Generic error catch Duycker scrape init Error - 3:15:22 AM
+  TypeError: testText.match is not a function
+    at getPriceFromHTML (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:82:31)
+    at postPageInfoProcessing (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:151:26)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-duycker.js:72:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-duycker.js:25:5) 
+  testText.match is not a function
+  
+  
+  Duycker wacht op laden single pagina Error - 3:15:22 AM
+  TimeoutError: waiting for selector `#container .content-block` failed: timeout 7500ms exceeded
+    at new WaitTask (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:528:34)
+    at DOMWorld.waitForSelectorInPage (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:432:26)
+    at internalHandler.waitFor (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/QueryHandler.js:31:77)
+    at DOMWorld.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:323:29)
+    at Frame.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:942:51)
+    at Page.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:2359:33)
+    at getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-duycker.js:93:16)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-duycker.js:71:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-duycker.js:25:5) 
+  waiting for selector `#container .content-block` failed: timeout 7500ms exceeded
+  
+  
+  Generic error catch Duycker scrape init Error - 3:13:02 AM
+  TypeError: testText.match is not a function
+    at getPriceFromHTML (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:82:31)
+    at postPageInfoProcessing (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:151:26)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-duycker.js:72:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-duycker.js:25:5) 
+  testText.match is not a function
+  
+  
+  Volt wacht op laden single pagina Error - 3:13:02 AM
+  TimeoutError: waiting for selector `#main .content-block` failed: timeout 7500ms exceeded
+    at new WaitTask (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:528:34)
+    at DOMWorld.waitForSelectorInPage (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:432:26)
+    at internalHandler.waitFor (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/QueryHandler.js:31:77)
+    at DOMWorld.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:323:29)
+    at Frame.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:942:51)
+    at Page.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:2359:33)
+    at getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-duycker.js:93:16)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-duycker.js:71:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-duycker.js:25:5) 
+  waiting for selector `#main .content-block` failed: timeout 7500ms exceeded
+  
+  
+  Generic error catch Volt scrape init Error - 12:12:32 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'toLowerCase')
+    at __puppeteer_evaluation_script__:26:46
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-volt.js:100:18)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-volt.js:71:18)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-volt.js:25:5) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'toLowerCase')
+    at __puppeteer_evaluation_script__:26:46
+  
+  
+  Generic error catch Volt scrape init Error - 12:12:31 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'toLowerCase')
+    at __puppeteer_evaluation_script__:26:46
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-volt.js:100:18)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-volt.js:71:18)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-volt.js:25:5) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'toLowerCase')
+    at __puppeteer_evaluation_script__:26:46
+  
+  
+  Generic error catch Volt scrape init Error - 12:12:31 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'toLowerCase')
+    at __puppeteer_evaluation_script__:26:46
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-volt.js:100:18)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-volt.js:71:18)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-volt.js:25:5) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'toLowerCase')
+    at __puppeteer_evaluation_script__:26:46
+  
+  
+  Generic error catch Volt scrape init Error - 11:58:20 PM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'trim')
+    at __puppeteer_evaluation_script__:12:82
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-volt.js:100:18)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-volt.js:72:18)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-volt.js:26:5) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'trim')
+    at __puppeteer_evaluation_script__:12:82
+  
+  
+  Generic error catch Volt scrape init Error - 11:58:19 PM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'trim')
+    at __puppeteer_evaluation_script__:12:82
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-volt.js:100:18)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-volt.js:72:18)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-volt.js:26:5) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'trim')
+    at __puppeteer_evaluation_script__:12:82
+  
+  
+  Generic error catch Volt scrape init Error - 11:58:19 PM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'trim')
+    at __puppeteer_evaluation_script__:12:82
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-volt.js:100:18)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-volt.js:72:18)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-volt.js:26:5) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'trim')
+    at __puppeteer_evaluation_script__:12:82
+  
+  
+  Kavka promise race Error - 9:07:54 PM
+  Error: Kavka single failure, failure promise fired, at: 
+Deathstars
+https://kavka.be/event/deathstars/
+Original error message:
+Navigation timeout of 7500 ms exceeded
+url: https://kavka.be/event/deathstars/
+    at file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-kavka.js:79:21
+    at runNextTicks (node:internal/process/task_queues:60:5)
+    at listOnTimeout (node:internal/timers:533:9)
+    at process.processTimers (node:internal/timers:507:7)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-kavka.js:28:5) 
+  Kavka single failure, failure promise fired, at: 
+Deathstars
+https://kavka.be/event/deathstars/
+Original error message:
+Navigation timeout of 7500 ms exceeded
+url: https://kavka.be/event/deathstars/
+  
+  
+  unknown location Error - 7:54:45 PM
+  Error: No node found for selector: [href*="Heavy"]
+    at assert (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/assert.js:26:15)
+    at DOMWorld.click (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:287:32)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-neushoorn.js:146:3)
+    at async scrapeNeushoorn (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-neushoorn.js:24:29) 
+  No node found for selector: [href*="Heavy"]
+  
+  
+  Kavka promise race Error - 7:52:12 PM
+  Error: Kavka single failure, failure promise fired, at: 
+Deathstars
+https://kavka.be/event/deathstars/
+Original error message:
+Navigation timeout of 7500 ms exceeded
+url: https://kavka.be/event/deathstars/
+    at file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-kavka.js:79:21
+    at runNextTicks (node:internal/process/task_queues:60:5)
+    at listOnTimeout (node:internal/timers:533:9)
+    at process.processTimers (node:internal/timers:507:7)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-kavka.js:28:5) 
+  Kavka single failure, failure promise fired, at: 
+Deathstars
+https://kavka.be/event/deathstars/
+Original error message:
+Navigation timeout of 7500 ms exceeded
+url: https://kavka.be/event/deathstars/
+  
+  
+  Kavka promise race Error - 6:50:55 PM
+  Error: Kavka single failure, failure promise fired, at: 
+Deathstars
+https://kavka.be/event/deathstars/
+Original error message:
+Navigation timeout of 7500 ms exceeded
+url: https://kavka.be/event/deathstars/
+    at file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-kavka.js:79:21
+    at runNextTicks (node:internal/process/task_queues:60:5)
+    at listOnTimeout (node:internal/timers:533:9)
+    at process.processTimers (node:internal/timers:507:7)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-kavka.js:28:5) 
+  Kavka single failure, failure promise fired, at: 
+Deathstars
+https://kavka.be/event/deathstars/
+Original error message:
+Navigation timeout of 7500 ms exceeded
+url: https://kavka.be/event/deathstars/
+  
+  
+  Kavka promise race Error - 6:39:22 PM
+  Error: Kavka single failure, failure promise fired, at: 
+Deathstars
+https://kavka.be/event/deathstars/
+Original error message:
+Navigation timeout of 7500 ms exceeded
+url: https://kavka.be/event/deathstars/
+    at file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-kavka.js:79:21
+    at runNextTicks (node:internal/process/task_queues:60:5)
+    at listOnTimeout (node:internal/timers:533:9)
+    at process.processTimers (node:internal/timers:507:7)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-kavka.js:28:5) 
+  Kavka single failure, failure promise fired, at: 
+Deathstars
+https://kavka.be/event/deathstars/
+Original error message:
+Navigation timeout of 7500 ms exceeded
+url: https://kavka.be/event/deathstars/
+  
+  
+  unknown location Error - 6:39:11 PM
+  Error: No node found for selector: [href*="Heavy"]
+    at assert (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/assert.js:26:15)
+    at DOMWorld.click (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:287:32)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-neushoorn.js:146:3)
+    at async scrapeNeushoorn (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-neushoorn.js:24:29) 
+  No node found for selector: [href*="Heavy"]
+  
+  
+  unknown location Error - 6:31:29 PM
+  Error: No node found for selector: [href*="Heavy"]
+    at assert (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/assert.js:26:15)
+    at DOMWorld.click (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:287:32)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-neushoorn.js:146:3)
+    at async scrapeNeushoorn (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-neushoorn.js:24:29) 
+  No node found for selector: [href*="Heavy"]
+  
+  
+  Kavka promise race Error - 6:30:51 PM
+  Error: Kavka single failure, failure promise fired, at: 
+Deathstars
+https://kavka.be/event/deathstars/
+Original error message:
+Navigation timeout of 7500 ms exceeded
+url: https://kavka.be/event/deathstars/
+    at file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-kavka.js:79:21
+    at runNextTicks (node:internal/process/task_queues:60:5)
+    at listOnTimeout (node:internal/timers:533:9)
+    at process.processTimers (node:internal/timers:507:7)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-kavka.js:28:5) 
+  Kavka single failure, failure promise fired, at: 
+Deathstars
+https://kavka.be/event/deathstars/
+Original error message:
+Navigation timeout of 7500 ms exceeded
+url: https://kavka.be/event/deathstars/
+  
+  
+  unknown location Error - 6:26:17 PM
+  Error: No node found for selector: [href*="Heavy"]
+    at assert (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/assert.js:26:15)
+    at DOMWorld.click (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:287:32)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-neushoorn.js:146:3)
+    at async scrapeNeushoorn (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-neushoorn.js:24:29) 
+  No node found for selector: [href*="Heavy"]
+  
+  
+  Paradiso wacht op laden single pagina Error - 6:14:18 PM
+  TimeoutError: waiting for selector `.header-template-2__subcontent .date` failed: timeout 7500ms exceeded
+    at new WaitTask (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:528:34)
+    at DOMWorld.waitForSelectorInPage (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:432:26)
+    at internalHandler.waitFor (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/QueryHandler.js:31:77)
+    at DOMWorld.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:323:29)
+    at Frame.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:942:51)
+    at Page.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:2359:33)
+    at getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:95:16)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:76:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:29:5) 
+  waiting for selector `.header-template-2__subcontent .date` failed: timeout 7500ms exceeded
+  
+  
+  Paradiso wacht op laden agenda na filter Error - 6:13:50 PM
+  TimeoutError: waiting for selector `.event-list__item` failed: timeout 3000ms exceeded
+    at new WaitTask (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:528:34)
+    at DOMWorld.waitForSelectorInPage (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:432:26)
+    at internalHandler.waitFor (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/QueryHandler.js:31:77)
+    at DOMWorld.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:323:29)
+    at Frame.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:942:51)
+    at Page.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:2359:33)
+    at makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:165:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:24:29) 
+  waiting for selector `.event-list__item` failed: timeout 3000ms exceeded
+  
+  
+  Paradiso wacht op laden agenda na filter Error - 6:13:49 PM
+  TimeoutError: waiting for selector `.event-list__item` failed: timeout 3000ms exceeded
+    at new WaitTask (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:528:34)
+    at DOMWorld.waitForSelectorInPage (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:432:26)
+    at internalHandler.waitFor (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/QueryHandler.js:31:77)
+    at DOMWorld.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:323:29)
+    at Frame.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:942:51)
+    at Page.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:2359:33)
+    at makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:165:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:24:29) 
+  waiting for selector `.event-list__item` failed: timeout 3000ms exceeded
+  
+  
+  Paradiso wacht op laden agenda na filter Error - 6:13:00 PM
+  TimeoutError: waiting for selector `.event-list__item` failed: timeout 3000ms exceeded
+    at new WaitTask (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:528:34)
+    at DOMWorld.waitForSelectorInPage (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:432:26)
+    at internalHandler.waitFor (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/QueryHandler.js:31:77)
+    at DOMWorld.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:323:29)
+    at Frame.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:942:51)
+    at Page.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:2359:33)
+    at makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:165:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:24:29) 
+  waiting for selector `.event-list__item` failed: timeout 3000ms exceeded
+  
+  
+  Paradiso wacht op laden agenda na filter Error - 6:13:00 PM
+  TimeoutError: waiting for selector `.event-list__item` failed: timeout 3000ms exceeded
+    at new WaitTask (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:528:34)
+    at DOMWorld.waitForSelectorInPage (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:432:26)
+    at internalHandler.waitFor (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/QueryHandler.js:31:77)
+    at DOMWorld.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:323:29)
+    at Frame.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:942:51)
+    at Page.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:2359:33)
+    at makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:165:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:24:29) 
+  waiting for selector `.event-list__item` failed: timeout 3000ms exceeded
+  
+  
+  Paradiso wacht op laden single pagina Error - 6:11:57 PM
+  TimeoutError: waiting for selector `.header-template-2__subcontent .date` failed: timeout 5000ms exceeded
+    at new WaitTask (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:528:34)
+    at DOMWorld.waitForSelectorInPage (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:432:26)
+    at internalHandler.waitFor (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/QueryHandler.js:31:77)
+    at DOMWorld.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:323:29)
+    at Frame.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:942:51)
+    at Page.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:2359:33)
+    at getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:95:16)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:76:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:29:5) 
+  waiting for selector `.header-template-2__subcontent .date` failed: timeout 5000ms exceeded
+  
+  
+  Paradiso getPageInfo Error - 6:00:02 PM
+  Error: ongeldige tijden: 19:00 20:30
+Invalid time value
+    at getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:126:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:76:18)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:29:5) 
+  ongeldige tijden: 19:00 20:30
+Invalid time value
+  
+  
+  Paradiso getPageInfo Error - 5:59:58 PM
+  Error: ongeldige tijden: 19:00 20:30
+Invalid time value
+    at getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:126:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:76:18)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:29:5) 
+  ongeldige tijden: 19:00 20:30
+Invalid time value
+  
+  
+  Paradiso getPageInfo Error - 5:59:57 PM
+  Error: ongeldige tijden: 19:00 19:30 20:30
+Invalid time value
+    at getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:126:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:76:18)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:29:5) 
+  ongeldige tijden: 19:00 19:30 20:30
+Invalid time value
+  
+  
+  Paradiso getPageInfo Error - 5:59:51 PM
+  Error: ongeldige tijden: 21:30 22:00
+Invalid time value
+    at getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:126:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:76:18)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:29:5) 
+  ongeldige tijden: 21:30 22:00
+Invalid time value
+  
+  
+  Paradiso getPageInfo Error - 5:59:45 PM
+  Error: ongeldige tijden: 19:00 19:30 20:30
+Invalid time value
+    at getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:126:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:76:18)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:29:5) 
+  ongeldige tijden: 19:00 19:30 20:30
+Invalid time value
+  
+  
+  Paradiso getPageInfo Error - 5:59:42 PM
+  Error: ongeldige tijden: 19:00 19:30 20:30
+Invalid time value
+    at getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:126:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:76:18)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:29:5) 
+  ongeldige tijden: 19:00 19:30 20:30
+Invalid time value
+  
+  
+  Paradiso getPageInfo Error - 5:59:41 PM
+  Error: ongeldige tijden: 19:30 20:00 21:00
+Invalid time value
+    at getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:126:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:76:18)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:29:5) 
+  ongeldige tijden: 19:30 20:00 21:00
+Invalid time value
+  
+  
+  Paradiso getPageInfo Error - 5:59:36 PM
+  Error: ongeldige tijden: 19:00 19:30 19:30
+Invalid time value
+    at getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:126:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:76:18)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:29:5) 
+  ongeldige tijden: 19:00 19:30 19:30
+Invalid time value
+  
+  
+  Paradiso getPageInfo Error - 5:58:21 PM
+  undefined 
+  undefined
+  
+  
+  Paradiso getPageInfo Error - 5:56:18 PM
+  undefined 
+  undefined
+  
+  
+  Paradiso getPageInfo Error - 5:56:10 PM
+  undefined 
+  undefined
+  
+  
+  Paradiso getPageInfo Error - 5:56:01 PM
+  undefined 
+  undefined
+  
+  
+  Paradiso getPageInfo Error - 5:55:59 PM
+  undefined 
+  undefined
+  
+  
+  Paradiso getPageInfo Error - 5:55:58 PM
+  undefined 
+  undefined
+  
+  
+  Paradiso getPageInfo Error - 5:55:54 PM
+  undefined 
+  undefined
+  
+  
+  Paradiso getPageInfo Error - 5:55:10 PM
+  undefined 
+  undefined
+  
+  
+  Paradiso getPageInfo Error - 5:55:10 PM
+  undefined 
+  undefined
+  
+  
+  Paradiso getPageInfo Error - 5:55:07 PM
+  undefined 
+  undefined
+  
+  
+  Generic error catch Paradiso scrape init Error - 5:52:48 PM
+  Error: Evaluation failed: ReferenceError: handleError is not defined
+    at __puppeteer_evaluation_script__:25:9
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:93:10)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:77:18)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:30:5) 
+  Evaluation failed: ReferenceError: handleError is not defined
+    at __puppeteer_evaluation_script__:25:9
+  
+  
+  Generic error catch Paradiso scrape init Error - 5:52:45 PM
+  Error: Evaluation failed: ReferenceError: handleError is not defined
+    at __puppeteer_evaluation_script__:25:9
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:93:10)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:77:18)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:30:5) 
+  Evaluation failed: ReferenceError: handleError is not defined
+    at __puppeteer_evaluation_script__:25:9
+  
+  
+  Generic error catch Paradiso scrape init Error - 5:50:23 PM
+  Error: Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:20:81
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:93:10)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:77:18)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:30:5) 
+  Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:20:81
+  
+  
+  Generic error catch Paradiso scrape init Error - 5:50:22 PM
+  Error: Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:20:81
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:93:10)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:77:18)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:30:5) 
+  Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:20:81
+  
+  
+  Generic error catch Paradiso scrape init Error - 5:02:12 PM
+  ReferenceError: waitResult is not defined
+    at makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:163:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:26:29) 
+  waitResult is not defined
+  
+  
+  Generic error catch Paradiso scrape init Error - 4:59:28 PM
+  DataCloneError: function () { [native code] } could not be cloned.
+    at new DOMException (node:internal/per_context/domexception:70:5)
+    at log (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:104:14)
+    at makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:158:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:26:29) 
+  function () { [native code] } could not be cloned.
+  
+  
+  Generic error catch Paradiso scrape init Error - 4:57:00 PM
+  Error: unknown issue see error log
+    at file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:163:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:155:3)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:26:29) 
+  unknown issue see error log
+  
+  
+  unknown location Error - 4:57:00 PM
+  DataCloneError: function () { [native code] } could not be cloned.
+    at new DOMException (node:internal/per_context/domexception:70:5)
+    at log (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:104:14)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:156:5
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:155:3)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:26:29) 
+  function () { [native code] } could not be cloned.
+  
+  
+  Generic error catch Paradiso scrape init Error - 4:56:30 PM
+  Error: unknown issue see error log
+    at file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:162:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:155:3)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:26:29) 
+  unknown issue see error log
+  
+  
+  unknown location Error - 4:56:30 PM
+  DataCloneError: function () { [native code] } could not be cloned.
+    at new DOMException (node:internal/per_context/domexception:70:5)
+    at log (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:104:14)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:156:5
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:155:3)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:26:29) 
+  function () { [native code] } could not be cloned.
+  
+  
+  Generic error catch Paradiso scrape init Error - 4:54:55 PM
+  Error: DataCloneError: function () { [native code] } could not be cloned.
+    at file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:161:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:155:3)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-paradiso.js:26:29) 
+  DataCloneError: function () { [native code] } could not be cloned.
+  
+  
+  Generic error catch De Pul scrape init Error - 4:38:51 PM
+  Error: Evaluation failed: ReferenceError: workerIndex is not defined
+    at __puppeteer_evaluation_script__:8:35
+    at Array.filter (<anonymous>)
+    at __puppeteer_evaluation_script__:7:8
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-depul.js:151:19)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-depul.js:25:29) 
+  Evaluation failed: ReferenceError: workerIndex is not defined
+    at __puppeteer_evaluation_script__:8:35
+    at Array.filter (<anonymous>)
+    at __puppeteer_evaluation_script__:7:8
+  
+  
+  Generic error catch De Pul scrape init Error - 4:38:50 PM
+  Error: Evaluation failed: ReferenceError: workerIndex is not defined
+    at __puppeteer_evaluation_script__:8:35
+    at Array.filter (<anonymous>)
+    at __puppeteer_evaluation_script__:7:8
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-depul.js:151:19)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-depul.js:25:29) 
+  Evaluation failed: ReferenceError: workerIndex is not defined
+    at __puppeteer_evaluation_script__:8:35
+    at Array.filter (<anonymous>)
+    at __puppeteer_evaluation_script__:7:8
+  
+  
+  Generic error catch De Pul scrape init Error - 4:38:49 PM
+  Error: Evaluation failed: ReferenceError: workerIndex is not defined
+    at __puppeteer_evaluation_script__:8:35
+    at Array.filter (<anonymous>)
+    at __puppeteer_evaluation_script__:7:8
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-depul.js:151:19)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-depul.js:25:29) 
+  Evaluation failed: ReferenceError: workerIndex is not defined
+    at __puppeteer_evaluation_script__:8:35
+    at Array.filter (<anonymous>)
+    at __puppeteer_evaluation_script__:7:8
+  
+  
+  Generic error catch De Pul scrape init Error - 4:20:16 PM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'toLowerCase')
+    at __puppeteer_evaluation_script__:26:67
+    at NodeList.forEach (<anonymous>)
+    at __puppeteer_evaluation_script__:23:59
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-depul.js:96:10)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-depul.js:81:18)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-depul.js:31:5) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'toLowerCase')
+    at __puppeteer_evaluation_script__:26:67
+    at NodeList.forEach (<anonymous>)
+    at __puppeteer_evaluation_script__:23:59
+  
+  
+  Generic error catch De Pul scrape init Error - 4:17:31 PM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'toLowerCase')
+    at __puppeteer_evaluation_script__:27:67
+    at NodeList.forEach (<anonymous>)
+    at __puppeteer_evaluation_script__:24:51
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-depul.js:96:10)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-depul.js:81:18)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-depul.js:31:5) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'toLowerCase')
+    at __puppeteer_evaluation_script__:27:67
+    at NodeList.forEach (<anonymous>)
+    at __puppeteer_evaluation_script__:24:51
+  
+  
+  unknown location Error - 3:40:22 PM
+  TypeError: browser.newPage is not a function
+    at eventAsyncCheck (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-depul.js:174:36)
+    at eventAsyncCheck (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-depul.js:199:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-depul.js:29:27) 
+  browser.newPage is not a function
+  
+  

@@ -10,6 +10,7 @@ import {
   handleError,
   basicMusicEventsFilter,
   errorAfterSeconds,
+  log,
   getPriceFromHTML,
 } from "./tools.js";
 import { letScraperListenToMasterMessageAndInit } from "./generic-scraper.js";
@@ -94,7 +95,7 @@ async function processSingleMusicEvent(
 
   try {
     const pageInfo = await Promise.race([
-      getPageInfo(page, months),
+      getPageInfo(page, months, workerIndex),
       errorAfterSeconds(15000),
     ]);
 
@@ -233,6 +234,12 @@ async function makeBaseEventList(page) {
       const musicEventConf = {};
       musicEventConf.title = event.title.rendered;
       musicEventConf.shortText = event.excerpt.rendered;
+      if (!event._embedded) {
+        const title = event?.title?.rendered ?? '';
+        const url = event?.link ?? '';
+        handleError(`Event zonder _embedded. ${title} ${url}`, `Baroeg ${page}`)
+        return null;
+      }
       if (
         event._embedded["wp:featuredmedia"] &&
         event._embedded["wp:featuredmedia"].length

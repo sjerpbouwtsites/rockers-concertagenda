@@ -62,9 +62,9 @@ function init() {
 
   if (EventsList.isOld("effenaar", shellArguments?.force)) {
     workerList.push([fsDirections.scrapeEffenaar, "effenaar", 0]);
-    workerList.push([fsDirections.scrapeEffenaar, "effenaar", 1]);
-    workerList.push([fsDirections.scrapeEffenaar, "effenaar", 2]);
-    workerList.push([fsDirections.scrapeEffenaar, "effenaar", 3]);
+    // workerList.push([fsDirections.scrapeEffenaar, "effenaar", 1]);
+    // workerList.push([fsDirections.scrapeEffenaar, "effenaar", 2]);
+    // workerList.push([fsDirections.scrapeEffenaar, "effenaar", 3]);
   }
 
   if (EventsList.isOld("tivolivredenburg", shellArguments?.force)) {
