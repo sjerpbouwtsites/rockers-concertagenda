@@ -40,12 +40,23 @@ export default class WorkerStatus {
     }
   }
 
+  /**
+   * monitorWebsocketServer
+   */
+  static get mwss(){
+    return WorkerStatus.monitorWebsocketServer
+  }
+
   static get OSHasSpace() {
     return WorkerStatus.currentNotDone.length < 7 && WorkerStatus.CPUFree > 20;
   }
 
   static get OSHasALotOfSpace() {
     return WorkerStatus.currentNotDone.length < 5 && WorkerStatus.CPUFree > 50;
+  }
+
+  static setTodo(workerName, todo) {
+    console.log('SET TODO @ WORKERSTATUS AFBOUWEN')
   }
 
   static change(name, status, message, worker) {
@@ -56,25 +67,25 @@ export default class WorkerStatus {
 
     if (statusses.includes("done")) {
       WorkerStatus.completedWorkers = WorkerStatus.completedWorkers + 1;
-      if (WorkerStatus.monitorWebsocketServer) {
-        const broadcastMsg = new wsMessage('update', 'message-roll', {
-          workerName: name,
-          text: `${name} done.`
-        });
-        WorkerStatus.monitorWebsocketServer.broadcast(broadcastMsg.json)
-      }
+      // if (WorkerStatus.monitorWebsocketServer) {
+      //   const broadcastMsg = new wsMessage('update', 'message-roll', {
+      //     workerName: name,
+      //     text: `${name} done.`
+      //   });
+      //   WorkerStatus.monitorWebsocketServer.broadcast(broadcastMsg.json)
+      // }
       WorkerStatus.checkIfAllDone();
     }
 
     if (statusses.includes("error")) {
-      if (WorkerStatus.monitorWebsocketServer) {
-        const broadcastMsg = new wsMessage('update', 'scraper-error message-roll', {
-          workerName: name,
-          text: `Error in ${name}:
-          ${message}`
-        });
-        WorkerStatus.monitorWebsocketServer.broadcast(broadcastMsg.json)
-      }
+      // if (WorkerStatus.monitorWebsocketServer) {
+      //   const broadcastMsg = new wsMessage('update', 'scraper-error message-roll', {
+      //     workerName: name,
+      //     text: `Error in ${name}:
+      //     ${message}`
+      //   });
+      //   WorkerStatus.monitorWebsocketServer.broadcast(broadcastMsg.json)
+      // }
     }
 
     if (statusses.includes("working")) {
@@ -86,20 +97,7 @@ export default class WorkerStatus {
       console.log(`${name}: ${message}`);
     }
 
-    if (statusses.includes("console")) {
-      if (WorkerStatus.monitorWebsocketServer) {
-        const bullshit = new wsMessage('update', 'debugger', {
-          workerName: name,
-          worker: worker,
-          text: message,
-        })
-        WorkerStatus.monitorWebsocketServer.broadcast(bullshit.json)
-      } else {
-        console.log("NOG NIET OPGESTART monitor websocket server")
-      }
-    }
-
-    if (statusses.includes("todo")) {
+       if (statusses.includes("todo")) {
       WorkerStatus._workers[name].todo = message;
     }
   }

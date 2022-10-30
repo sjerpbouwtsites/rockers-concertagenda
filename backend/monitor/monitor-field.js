@@ -28,7 +28,12 @@ export default class MonitorField {
     targetEl.innerHTML = this.initialHTML;
   }
   linebreaksNaarBR(tekst) {
-    return tekst.replace(/[\n\r]/g, '<br>');
+    return JSON.stringify(tekst, null, 2).replace(/["':]/g, '').replace(/\\n/g, '<br>');
+  }
+  objectNaarTekst(objectTeVeranderen){
+    let tt = {...objectTeVeranderen};
+    delete tt.workerData;
+    return JSON.stringify(tt, null, 2).replace(/[{]/g, '<br>').replace(/[}]/g, '');
   }
   updateConsole(updateData) {
     this.data.splice(2);
@@ -55,9 +60,22 @@ export default class MonitorField {
   get rollUpdatedHTML() {
 
     const listItems = this.data.map(rollRow => {
+      let t = rollRow.messageData?.content?.text ?? rollRow.messageData?.content?.tekst ?? rollRow.messageData?.tekst ?? rollRow.messageData?.text ?? null
+      if (t) {
+        t = this.linebreaksNaarBR(t);
+      } else {
+        console.log('geen tekst gevonden', rollRow)
+        t = (rollRow.messageData?.content ?? rollRow.messageData) instanceof Object 
+        ? this.objectNaarTekst(rollRow.messageData?.content ?? rollRow.messageData)
+        : String(rollRow.messageData?.content ?? rollRow.messageData.text ?? rollRow.messageData)
+      }
+      
+
+      
+
       return `<li class='monitorfield__list-item'>
         <span class='monitorfield__list-item-left'>${rollRow.messageData?.workerName ?? rollRow.messageData?.title ?? ''}</span>
-        <span class='monitorfield__list-item-right'>${this.linebreaksNaarBR(rollRow.messageData.text)}</span>
+        <span class='monitorfield__list-item-right'>${t}</span>
       </li>`
     }).join('');
     return `
@@ -66,10 +84,13 @@ export default class MonitorField {
   get expandedUpdatedHTML() {
 
     const listItems = this.data.map(rollRow => {
-      const titleText = `${rollRow.messageData?.title} ${rollRow.messageData?.worker} ${rollRow.messageData?.workerName}`;
+      const titleText = `${rollRow.messageData?.title ?? ''}${rollRow.messageData?.workerName ?? ''}`;
+      let hoofdPrintTekst = (rollRow.messageData?.content ?? rollRow.messageData) instanceof Object 
+        ? this.objectNaarTekst(rollRow.messageData?.content ?? rollRow.messageData)
+        : String(rollRow.messageData?.content ?? rollRow.messageData)
       return `<li class='monitorfield__list-item'>
         <span class='monitorfield__list-item-left'>${titleText}</span>
-        <span class='monitorfield__list-item-right'>${this.linebreaksNaarBR(rollRow.messageData.text)}</span>
+        <span class='monitorfield__list-item-right'><pre>${hoofdPrintTekst}</pre></span>
       </li>`
     }).join('');
     return ` <ul class='monitorfield__list'>${listItems}</ul>`;

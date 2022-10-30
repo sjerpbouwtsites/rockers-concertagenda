@@ -1,27 +1,57 @@
 import MusicEvent from "./music-event.js";
 import { Location } from "./locations.js";
 import puppeteer from "puppeteer";
-import { parentPort } from "worker_threads";
+import { parentPort, workerData } from "worker_threads";
 import EventsList from "./events-list.js";
 import { metalfanMonths } from "./months.js";
+import { handleError, waitFor } from "./tools.js";
 import { letScraperListenToMasterMessageAndInit } from "./generic-scraper.js";
+import {QuickWorkerMessage, WorkerMessage} from "./rock-worker.js";
 
 letScraperListenToMasterMessageAndInit(scrapeMetalfan);
 
-async function scrapeMetalfan() {
-  const browser = await puppeteer.launch();
-  await getBaseMusicEvents(browser);
-  parentPort.postMessage({
-    status: "done",
-    message: "metalfan worker done.",
-  });
-  EventsList.save("metalfan");
+const skipWithMetalfan = [
+  "013",
+  "afaslive",
+  "baroeg",
+  "bibelot",
+  "boerderij",
+  "depul",
+  "dbs",
+  "doornroosje",
+  "dynamo",
+  "duycker",
+  "effenaar",
+  "gebrdenobel",
+  "iduna",
+  "kavka",
+  "kavkaoudaan",
+  "melkweg",
+  "metropool",
+  "metropoolopenair",
+  "merleyn", // onderdeel doornroosje
+  'neushoorn',
+  'paradiso',
+  "occii",
+  "patronaat",
+  "tivolivredenburg",
+]
+
+async function scrapeMetalfan(mainThreadData) {
+
   try {
+  const qwm = new QuickWorkerMessage(workerData);
+  const browser = await puppeteer.launch();
+  await getBaseMusicEvents(browser, skipWithMetalfan);
+  parentPort.postMessage(qwm.workerDone());
+  EventsList.save("metalfan");
     browser.close();
-  } catch (error) { }
+  } catch (error) {
+    handleError(error);
+  }
 }
 
-async function getBaseMusicEvents(browser) {
+async function getBaseMusicEvents(browser, skipWithMetalfan) {
   const page = await browser.newPage();
   await page.goto(`https://www.metalfan.nl/agenda.php`);
 
@@ -90,37 +120,7 @@ async function getBaseMusicEvents(browser) {
         eventDatum.eventLocationName
       );
 
-      if (
-        [
-          "013",
-          "afaslive",
-          "baroeg",
-          "bibelot",
-          "boerderij",
-          "depul",
-          "dbs",
-          "doornroosje",
-          "dynamo",
-          "duycker",
-          "effenaar",
-          "gebrdenobel",
-          "iduna",
-          "kavka",
-          "kavkaoudaan",
-          "melkweg",
-          "metropool",
-          "metropoolopenair",
-          "merleyn", // onderdeel doornroosje
-          'neushoorn',
-          'paradiso',
-          "occii",
-          "patronaat",
-          "tivolivredenburg",
-        ].includes(locationName)
-      ) {
-        return;
-      }
-
+      if (         skipWithMetalfan.includes(locationName)       ) {         return;       }
       thisMusicEvent.location = locationName;
       return thisMusicEvent;
     })

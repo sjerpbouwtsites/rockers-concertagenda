@@ -6,14 +6,13 @@ function createFields() {
   updateField.initialize();
   const errorField = new MonitorField('Fouten', 'error-field-target', 'roll')
   errorField.initialize();
-  const debuggerField = new MonitorField('Debugger', 'debugger-field-target', 'roll')
+  const debuggerField = new MonitorField('Debugger', 'debugger-field-target', 'expanded')
   debuggerField.initialize();
   return { updateField, errorField, debuggerField }
 }
 
 function openClientWebsocket(fields) {
-  console.log(fields)
-  const socket = new WebSocket('ws://localhost:8001');
+  const socket = new WebSocket('ws://localhost:8002');
 
   socket.addEventListener('open', () => {
     const msg = new wsMessage('server-log', null, 'Hallo server!')
@@ -33,6 +32,8 @@ function openClientWebsocket(fields) {
       ${eventMsg.messageData} `);
     } else if (eventMsg.type === 'clients-log') {
       eventToClientsLog(eventMsg)
+          }      else if (eventMsg.type === 'clients-html') {
+        eventToClientsHTML(eventMsg)
     } else if (eventMsg.type === 'process') {
       eventToProcesses(eventMsg)
     } else if (eventMsg.type === 'update') {
@@ -49,16 +50,24 @@ function eventToUpdates(eventMsg, fields) {
   if (eventMsg.subtype.includes('message-roll')) {
     fields.updateField.update(eventMsg)
   }
-  if (eventMsg.subtype.includes('scraper-error') || eventMsg.subtype.includes('terminal-error')) {
+  if (eventMsg.subtype.includes('error')) {
     fields.errorField.update(eventMsg)
   }
   if (eventMsg.subtype.includes('debugger')) {
     fields.debuggerField.updateConsole(eventMsg)
   }
 
-  if (eventMsg.subtype.includes('terminal-error')) {
+  if (eventMsg.subtype.includes('terminal-error')) { 
     initiateClosingClient();
   }
+}
+
+function eventToClientsHTML (eventMsg) {
+  const targetEl = document.querySelector(eventMsg.subtype) ?? null;
+  if (!targetEl) {
+    throw new Error('NEE')
+  }
+  targetEl.innerHTML = eventMsg.messageData
 }
 
 function monitorInternalErrors() {
@@ -75,6 +84,10 @@ function eventToProcesses(eventMsg) {
 }
 
 function initiateClosingClient() {
+  if (document.body.hasAttribute('data-dont-close')) {
+    return; // @TODO: als server uitgaat, nadat het programma klaar is, loopt deze func opnieuw.
+    // niet van DOM laten afhangen.
+  }
   setTimeout(() => {
     if (!document.body.hasAttribute('data-dont-close')) {
       window.close();
@@ -98,7 +111,7 @@ function initiateClosingClient() {
 
   }, 5000)
 }
-
+ 
 function eventToWarning(eventMsg) {
   console.warn(`Onbekende / onverwerkbare message type`)
   console.log(eventMsg)
@@ -111,7 +124,7 @@ function eventToClientsLog(eventMsg) {
 
 function initFrontend() {
   const fields = createFields()
-  const socket = openClientWebsocket(fields)
+  openClientWebsocket(fields)
 
 }
 

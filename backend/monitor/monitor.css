@@ -62,6 +62,10 @@ body {
   opacity: .75;
 }
 
+.monitorfield__list-item-left {
+  display: block;
+}
+
 .monitorfield--Updates {
   background-color: #8ce88c;
 }
@@ -71,7 +75,7 @@ body {
 }
 
 .monitorfield--Fouten .monitorfield__list-item-left {
-  display: block;
+
   font-size: 1rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -88,4 +92,8 @@ body {
   font-weight: bold;
   color: white;
   background-color: #212112;
+}
+
+pre {
+  margin: 0;
 }

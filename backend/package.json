@@ -12,6 +12,7 @@
   "devDependencies": {
     "axios": "^0.26.1",
     "os-utils": "^0.0.14",
-    "puppeteer": "^13.5.1"
+    "puppeteer": "^13.5.1",
+    "showdown": "^2.1.0"
   }
 }

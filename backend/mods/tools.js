@@ -3,16 +3,20 @@ import fs from "fs";
 import fsDirections from "./fs-directions.js";
 import crypto from "crypto";
 import fetch from 'node-fetch';
+import { WorkerMessage } from "./rock-worker.js";
 
-export function handleError(error, location = 'unknown location') {
-  parentPort.postMessage({
-    status: "error",
-    message: error,
-  });
+export function handleError(error, workerData) {
+  parentPort.postMessage(WorkerMessage.quick("update", 'error', {
+    content: {
+      workerData: workerData,
+      status: 'error',
+      text: error.message
+    },
+  }));
   const time = new Date();
   const curErrorLog = fs.readFileSync(fsDirections.errorLog) || "";
   const newErrorLog = `
-  ${location} Error - ${time.toLocaleTimeString()}
+  ${workerData.name} Error - ${time.toLocaleTimeString()}
   ${error.stack} 
   ${error.message}
   
