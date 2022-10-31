@@ -24,17 +24,14 @@ async function scrapeBaroeg() {
 
   parentPort.postMessage(qwm.workerInitialized());
 
-  parentPort.postMessage(qwm.messageRoll("voor basic music events"));
   const baseMusicEvents = await Promise.race([
     makeBaseEventList(),
     errorAfterSeconds(10000),
   ]).catch((err) => handleError(err, workerData, "base event race failure"));
-  parentPort.postMessage(qwm.messageRoll("na basic music events"));
 
   parentPort.postMessage(qwm.workerStarted());
 
   await fillMusicEvents(baseMusicEvents, baroegMonths, qwm);
-  parentPort.postMessage(qwm.messageRoll("na basic music events"));
 
   EventsList.save(workerData.family, workerData.index);
   parentPort.postMessage(qwm.workerDone());
@@ -67,7 +64,11 @@ async function processSingleMusicEvent(
 ) {
   const newMusicEvents = [...baseMusicEvents];
   const firstMusicEvent = newMusicEvents.shift();
-  qwm.todo(baseMusicEvents.length);
+
+  qwm.todo(baseMusicEvents.length).forEach((JSONblob) => {
+    parentPort.postMessage(JSONblob);
+  });
+  
 
   if (!firstMusicEvent || !firstMusicEvent.venueEventUrl) {
     return true;

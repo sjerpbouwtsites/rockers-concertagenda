@@ -4,7 +4,8 @@
  * Data word gecontroleerd. 
  * construct: type (string) en data.
  * verstuur als msg.json (je krijgt de json)
- * type kan zijn: process|server-log|update
+ * type kan zijn: process|server-log|update|app-overview
+ * als type = app-overview dan subtype is all-workers
  * als type = process data string is 'close-client' of 'closed'
  * als type = clients-html, dan subtype moet zijn string niet null.
  * als type = update:
@@ -16,8 +17,8 @@
  *    ,,     ,,  = scraper-results. object met één of meerdere records van huidige aantallen.
  *    ,,     ,,  = workers-status
  *    ,,     ,,  = debugger. Komt in de debug rol terecht, en in de console.
- * @property {string} type process|server-log|update
- * @property {string} subtype terminal-error|scraper-error|scraper-terminal-error|message-roll|scraper-results|workers-status
+ * @property {string} type process|server-log|update|app-overview
+ * @property {string} subtype terminal-error|scraper-error|scraper-terminal-error|message-roll|scraper-results|workers-status|all-workers
  * @property {*} messageData bevat data van message.
  */
 export default class wsMessage {
@@ -54,27 +55,53 @@ export default class wsMessage {
     }
 
     switch (this.type) {
-      case 'process':
-        this.subtype.split(' ').map(thisSubtype => {
-          return !['close-client', 'closed', 'workers-status', 'command-start'].includes(thisSubtype)
-        }).find(subtypeFout => {
-          return subtypeFout;
-        }) && this.throwSubtypeError();
+      case "app-overview":
+        !this.subtype.includes("all-workers") && this.throwSubtypeError();
+        return true;
         break;
-        case 'clients-html':
-          typeof this.subtype !== 'string' || (this.subtype.length && this.subtype.length < 1)  && this.throwSubtypeError();
-          break;        
-        case 'update':
-          this.subtype.split(' ').map(thisSubtype => {
-            return !['error', 'terminal-error', 'scraper-error', 'scraper-terminal-error', 'message-roll', 'scraper-results', 'workers-status', 'debugger'].includes(thisSubtype)
-          }).find(subtypeFout => {
-            return subtypeFout;
+      case "process":
+        this.subtype
+          .split(" ")
+          .map((thisSubtype) => {
+            return ![
+              "close-client",
+              "closed",
+              "workers-status",
+              "command-start",
+            ].includes(thisSubtype);
           })
-           && this.throwSubtypeError();
+          .find((subtypeFout) => {
+            return subtypeFout;
+          }) && this.throwSubtypeError();
         break;
-        case 'server-log':
-         // niets te doen.
-        break;    
+      case "clients-html":
+        typeof this.subtype !== "string" ||
+          (this.subtype.length &&
+            this.subtype.length < 1 &&
+            this.throwSubtypeError());
+        break;
+      case "update":
+        this.subtype
+          .split(" ")
+          .map((thisSubtype) => {
+            return ![
+              "error",
+              "terminal-error",
+              "scraper-error",
+              "scraper-terminal-error",
+              "message-roll",
+              "scraper-results",
+              "workers-status",
+              "debugger",
+            ].includes(thisSubtype);
+          })
+          .find((subtypeFout) => {
+            return subtypeFout;
+          }) && this.throwSubtypeError();
+        break;
+      case "server-log":
+        // niets te doen.
+        break;
       default:
         console.log(this);
         throw new Error("ONBEKEND TYPE wsMessage!");

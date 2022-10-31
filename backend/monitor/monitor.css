@@ -2,34 +2,30 @@ html, body {
   width: 100%;
   height: 100%;
 }
-
 body {
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
 .monitorfields__container {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
-
 .monitorfield__outer {
   flex-basis: 300px;
   flex-shrink: 0;
 }
-
 .monitorfield {
   background-color: #eee;
   height: 300px;
   overflow-y: scroll;
   border-radius: 1px;
-  margin: 20px;  
+  margin: 20px;
 }
-
 .monitorfield__header {
   text-align: center;
   text-transform: uppercase;
   font-weight: 900;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   color: white;
   padding: 20px;
 }
@@ -53,7 +49,6 @@ body {
   margin-bottom: 7.55px;
   border-bottom: 1px solid #ffffff52;
   line-height: 1;
-
 }
 .monitorfield__list-item:first-child {
   font-weight: 800;
@@ -61,27 +56,26 @@ body {
 .monitorfield__list-item ~ .monitorfield__list-item {
   opacity: .75;
 }
-
 .monitorfield__list-item-left {
   display: block;
 }
-
 .monitorfield--Updates {
   background-color: #8ce88c;
 }
-
 .monitorfield--Fouten {
   background-color: #c1472e;
 }
-
 .monitorfield--Fouten .monitorfield__list-item-left {
-
   font-size: 1rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   margin-bottom: 5px;
 }
-
+.monitorfield--AppOverview {
+  background-color: #121212;
+  color: rgb(249, 234, 232);
+  flex-basis: 100%;
+}
 .warning-client-closing {
   position: fixed;
   bottom: 20px;
@@ -93,7 +87,6 @@ body {
   color: white;
   background-color: #212112;
 }
-
 pre {
   margin: 0;
 }

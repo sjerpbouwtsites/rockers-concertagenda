@@ -34,6 +34,10 @@ export class QuickWorkerMessage {
   constructor(workerData) {
     this.workerData = workerData;
   }
+  /**
+   * @param {Error} error
+   * @returns update, error, {content: workerData, status, text}
+   */
   error(error) {
     return WorkerMessage.quick("update", "error", {
       content: {
@@ -43,39 +47,51 @@ export class QuickWorkerMessage {
       },
     });
   }
-  workerInitialized() {
+  abstractQuickWorker(statusString = "registered") {
     return WorkerMessage.quick("process", "workers-status", {
       content: {
         workerData: this.workerData,
-        status: "init",
+        status: statusString,
       },
     });
+  }
+  workerInitialized() {
+    return this.abstractQuickWorker("init");
   }
   workerStarted() {
-    return WorkerMessage.quick("process", "workers-status", {
-      content: {
-        workerData: this.workerData,
-        status: "working",
-      },
-    });
+    return this.abstractQuickWorker("working");
   }
   workerDone() {
-    return WorkerMessage.quick("process", "workers-status", {
-      content: {
-        workerData: this.workerData,
-        status: "done",
-      },
-    });
+    return this.abstractQuickWorker("done");
   }
+  /**
+   * ATTENTION
+   * @param {Number} numberToDo
+   * @returns {JSONArray} RETURNS TWO JSON OBJECTS FOR TWO CALLS.
+   */
   todo(numberToDo) {
-    return WorkerMessage.quick("update", "scraper-results message-roll", {
-      todo: numberToDo,
-      content: {
-        workerData: this.workerData,
-        text: `Todo: ${numberToDo}`,
-      },
-    });
+    return [
+      WorkerMessage.quick("update", "message-roll", {
+        todo: numberToDo,
+        content: {
+          workerData: this.workerData,
+          text: `Todo: ${numberToDo}`,
+          status: "todo",
+        },
+      }),
+      WorkerMessage.quick("process", "workers-status", {
+        todo: numberToDo,
+        content: {
+          status: "todo",
+          workerData: this.workerData,
+        },
+      }),
+    ];
   }
+  /**
+   * @param {*} toDebug
+   * @returns {JSON} update debugger {content: workerData, debug}
+   */
   debugger(toDebug) {
     return WorkerMessage.quick("update", "debugger", {
       content: {
@@ -84,11 +100,15 @@ export class QuickWorkerMessage {
       },
     });
   }
+  /**
+   * @param {any} text
+   * @returns {JSON} update message-roll {content: workerData, text}
+   */
   messageRoll(text) {
     return WorkerMessage.quick("update", "message-roll", {
       content: {
         workerData: this.workerData,
-        text,
+        text: String(text),
       },
     });
   }

@@ -23,6 +23,7 @@ async function init() {
 
   let workerList = [];
 
+  // @TODO maak hier mooie configuratie objecten van
   if (EventsList.isOld("metalfan", shellArguments?.force) || true) {
     workerList.push([fsDirections.scrapeMetalfan, "metalfan", 0]);
   }
@@ -38,20 +39,20 @@ async function init() {
     // workerList.push([fsDirections.scrapeBaroeg, "baroeg", 8]);
   }
 
-  // if (EventsList.isOld("patronaat", shellArguments?.force)) {
+  // if (EventsList.isOld("patronaat", shellArguments?.force) || true) {
   //   workerList.push([fsDirections.scrapePatronaat, "patronaat", 0]);
   //   workerList.push([fsDirections.scrapePatronaat, "patronaat", 1]);
   //   workerList.push([fsDirections.scrapePatronaat, "patronaat", 2]);
   // }
 
-  // if (EventsList.isOld("013", shellArguments?.force)) {
+  // if (EventsList.isOld("013", shellArguments?.force) || true) {
   //   workerList.push([fsDirections.scrape013, "013", 0]);
   //   workerList.push([fsDirections.scrape013, "013", 1]);
   //   workerList.push([fsDirections.scrape013, "013", 2]);
   //   workerList.push([fsDirections.scrape013, "013", 3]);
   // }
 
-  // if (EventsList.isOld("effenaar", shellArguments?.force)) {
+  // if (EventsList.isOld("effenaar", shellArguments?.force) || true) {
   //   workerList.push([fsDirections.scrapeEffenaar, "effenaar", 0]);
   //   // workerList.push([fsDirections.scrapeEffenaar, "effenaar", 1]);
   //   // workerList.push([fsDirections.scrapeEffenaar, "effenaar", 2]);
@@ -174,13 +175,8 @@ async function init() {
 
   workerList = shuffleArray(workerList);
   WorkerStatus.totalWorkers = workerList.length;
-
   walkThroughWorkerList(workerList);
-
-  if (!WorkerStatus.checkIfAllDone()) {
-    WorkerStatus.reportOnActiveWorkers();
-  }
-
+  WorkerStatus.initializeReporting();
   printLocationsToPublic();
 }
 
@@ -242,7 +238,7 @@ function addWorkerMessageHandler(thisWorker) {
     if (message?.status) {
       // change worker status
       // and trigger message propagation to monitor / console
-      console.log("OUDE SYSTEEM!!!");
+      console.log("OUDE SYSTEEM!!!", "indexjs addWorkerMessageHandler");
       console.log(message);
       WorkerStatus.change(
         thisWorker.name,
@@ -296,11 +292,6 @@ function addWorkerMessageHandler(thisWorker) {
           wsMsgInst.subtype.includes("message-roll") ||
           wsMsgInst.subtype.includes("debugger")
         ) {
-          WorkerStatus.mwss.broadcast(wsMsgInst.json);
-        }
-
-        if (wsMsgInst.subtype.includes("todo")) {
-          WorkerStatus.todo(thisWorker.name, wsMsgInst.messageData?.todo);
           WorkerStatus.mwss.broadcast(wsMsgInst.json);
         }
       }
