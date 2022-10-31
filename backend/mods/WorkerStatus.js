@@ -76,6 +76,7 @@ export default class WorkerStatus {
 
     if (statusses.includes("done")) {
       WorkerStatus._workers[name].status = "done";
+      WorkerStatus._workers[name].todo = 0;
       WorkerStatus.completedWorkers = WorkerStatus.completedWorkers + 1;
     }
 

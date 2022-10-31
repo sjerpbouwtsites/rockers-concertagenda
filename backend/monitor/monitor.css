@@ -71,10 +71,17 @@ body {
   text-transform: uppercase;
   margin-bottom: 5px;
 }
-.monitorfield--AppOverview {
+.monitorfield__outer--app-overview {
+  flex-basis: 800px;
+}
+
+.monitorfield__outer--app-overview .monitorfield {
   background-color: #121212;
   color: rgb(249, 234, 232);
-  flex-basis: 100%;
+}
+
+.monitorfield__outer--app-overview .monitorfield__header {
+  background-color: rgba(185, 27, 27, 0.5);
 }
 .warning-client-closing {
   position: fixed;
@@ -89,4 +96,57 @@ body {
 }
 pre {
   margin: 0;
+}
+
+.app-overview-table thead {
+  line-height: 50px;
+}
+
+.app-overview-table {
+  border-collapse: collapse;
+}
+
+.app-overview-table tbody th,
+.app-overview-table thead th:first-child {
+  width: 120px;
+  text-align: right;
+}
+
+.app-overview-table tbody th::after,
+.app-overview-table thead th:first-child::after {
+  content: "    ";
+}
+
+.worker-data-cell {
+  line-height: 1;
+  min-width: 50px;
+  text-align: center;
+}
+
+.worker-data-cell.worker-status--registered {
+  background-color: rgba(rgb(148, 148, 114), 0.2)
+}
+
+.worker-data-cell.worker-status--working {
+  background-color: rgba(139, 0, 0, 0.5);
+}
+
+.worker-data-cell.worker-status--done {
+  background-color: rgba(34, 255, 255, 0.6);
+}
+
+
+
+.worker-cell-inner {
+  display: block;
+  line-height: 2em;
+}
+
+.worker-errors--has-errors {
+  border: 3px dotted blue;
+}
+
+.kutspacer {
+  display: inline-block;
+  width: 25px;
 }

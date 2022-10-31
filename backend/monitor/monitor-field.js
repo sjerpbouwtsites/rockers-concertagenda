@@ -51,7 +51,7 @@ export default class MonitorField {
         mainFieldEl.innerHTML = this.rollUpdatedHTML;
         break;
       case "table":
-        mainFieldEl.innerHTML = this.tableUpdatedHTML;
+        
         break;
       case "expanded":
         mainFieldEl.innerHTML = this.expandedUpdatedHTML;
@@ -62,8 +62,9 @@ export default class MonitorField {
     }
   }
   updateTable(updateData) {
-    this.data = [];
-    this.update(updateData);
+    this.data = updateData.messageData;
+    document.getElementById(this.mainFieldName).innerHTML =
+      this.tableUpdatedHTML;
   }
   get rollUpdatedHTML() {
     const listItems = this.data
@@ -124,7 +125,6 @@ export default class MonitorField {
     return ` <ul class='monitorfield__list'>${listItems}</ul>`;
   }
   get tableUpdatedHTML() {
-    console.log(this.data);
     const workersPerFamily = {};
     Object.entries(this.data.workers).forEach(([workerName, workerData]) => {
       const family = workerName.split("-")[0];
@@ -135,27 +135,42 @@ export default class MonitorField {
       workersPerFamily[family][workerIndex] = workerData;
     });
 
+    const highestNumberOfWorkersPerFamily = Math.max(
+      ...Object.values(workersPerFamily).map(
+        (workerFamily) => workerFamily.length
+      )
+    );
+
+    let workerNumberedHeads = "";
+    for (let i = 0; i < highestNumberOfWorkersPerFamily; i++) {
+      workerNumberedHeads += `<th class='tableheadnumber'>${i}</th>`;
+    }
+
     const tableHead = `
     <thead>
     <tr>
-    <th>Die gekke tabel shit!</th>
+    <th>Workers<span class='kutspacer'></span></th>${workerNumberedHeads}
     </tr>
     </thead>
     `;
+
     const tableRowsFirstCellsTextcontent = Object.keys(workersPerFamily);
-    const tableBodyRows = workersPerFamily
+    const tableBodyRows = Object.values(workersPerFamily)
       .map((workerFamily, index) => {
         return `
       <tr>
-        <th>${tableRowsFirstCellsTextcontent[index]}</th>
-        ${workerFamily.workers
+        <th>${
+          tableRowsFirstCellsTextcontent[index]
+        }<span class='kutspacer'></span></th>
+        ${workerFamily
           .map((worker) => {
-            let tdClass = "";
+            let tdClass = "worker-data-cell ";
             tdClass += "worker-status--" + worker.status;
             tdClass +=
-              "worker-errors--" + worker.errors.length ? "has-errors" : "none";
+              " worker-errors--" +
+              (worker.errors.length ? "has-errors" : "none");
 
-            errorsHTML = !worker.errors.length
+            const errorsHTML = !worker.errors.length
               ? ""
               : `<ol class='worker-cell-inner--errors'>
               ${worker.errors
@@ -163,9 +178,8 @@ export default class MonitorField {
                 .join("")}
             </ol>`;
 
-            return `<td class='${tdClass}'>
-            <span class='worker-cell-inner--status'>${worker.status}</span>
-            <span class='worker-cell-inner--todo'>${worker.status} todo</span>
+            return `<td class='${tdClass}' title='${worker.status}'>
+            <span class='worker-cell-inner worker-cell-inner--todo'>${worker.todo}</span>
             ${errorsHTML}
           </td>`;
           })
