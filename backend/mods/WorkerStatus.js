@@ -7,6 +7,7 @@ export default class WorkerStatus {
   static _workers = {};
   static CPUFree = 100;
   static waitingWorkers = [];
+  0;
   /**
    * Niet een dynamische waarde maar éénmalig ingesteld
    */
@@ -29,22 +30,17 @@ export default class WorkerStatus {
     WorkerStatus._workers[newWorkerName] = {
       status: "registered",
       todo: 0,
+      eventsRegistered: 0,
       errors: [],
     };
   }
 
   static monitorCPUS() {
-    os.cpuFree(function (v) {
-      WorkerStatus.CPUFree = v * 100;
-    });
-    if (
-      Object.keys(WorkerStatus._workers).length === 0 ||
-      WorkerStatus.currentNotDone > 0
-    ) {
-      setTimeout(() => {
-        WorkerStatus.monitorCPUS();
-      }, 50);
-    }
+    setInterval(() => {
+      os.cpuFree(function (v) {
+        WorkerStatus.CPUFree = v * 100;
+      });
+    }, 250);
   }
 
   /**
@@ -153,6 +149,7 @@ export default class WorkerStatus {
   }
   static programEnd() {
     console.log("All workers done");
+    clearInterval(WorkerStatus.monitorCPUS);
     if (WorkerStatus.mwss) {
       const wsMsg2 = new wsMessage("process", "closed");
       WorkerStatus.mwss.broadcast(wsMsg2.json);

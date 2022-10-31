@@ -43,7 +43,7 @@ async function scrapeMetalfan(mainThreadData) {
     parentPort.postMessage(qwm.workerInitialized());
     const browser = await puppeteer.launch();
     await getBaseMusicEvents(browser, skipWithMetalfan, qwm);
-    parentPort.postMessage(qwm.workerDone());
+    parentPort.postMessage(qwm.workerDone(EventsList.amountOfEvents));
     EventsList.save("metalfan");
     browser.close();
   } catch (error) {

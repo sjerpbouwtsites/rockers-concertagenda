@@ -44,8 +44,9 @@ function openClientWebsocket(fields) {
 
   socket.addEventListener("message", (event) => {
     const eventMsg = JSON.parse(event.data);
-    console.log(eventMsg.type, eventMsg.subtype);
-
+    if (!["app-overview", "update"].includes(eventMsg.type)) {
+      console.log(eventMsg);
+    }
     if (eventMsg.type === "server-log") {
       monitorInternalErrors(`Er is een event naar de client verstuurd bedoelt voor de server.
       ${eventMsg.messageData} `);
@@ -54,7 +55,7 @@ function openClientWebsocket(fields) {
     } else if (eventMsg.type === "clients-html") {
       eventToClientsHTML(eventMsg);
     } else if (eventMsg.type === "process") {
-      eventToProcesses(eventMsg);
+      eventToProcesses(eventMsg, fields);
     } else if (eventMsg.type === "update") {
       eventToUpdates(eventMsg, fields);
     } else if (eventMsg.type === "app-overview") {
@@ -83,7 +84,7 @@ function eventToUpdates(eventMsg, fields) {
 }
 
 function eventToAppOverView(eventMsg, fields) {
-  fields.appOverviewField.updateTable(eventMsg);
+  fields.appOverviewField.updateTable(eventMsg.messageData);
 }
 
 function eventToClientsHTML(eventMsg) {
@@ -97,15 +98,26 @@ function eventToClientsHTML(eventMsg) {
 
 function monitorInternalErrors() {
   // TODO
-  console.error("NOG NIET GEBOUWD: monitorInternalErrors")
+  console.error("NOG NIET GEBOUWD: monitorInternalErrors");
 }
 
-function eventToProcesses(eventMsg) {
-  if (!eventMsg.subtype.includes('closed')) {
-    console.error('onbekende subtype')
-    console.log(eventMsg.subtype)
+function eventToProcesses(eventMsg, fields) {
+  console.log(eventMsg);
+  if (eventMsg.subtype === "closed") {
+    initiateClosingClient();
+  } else if (eventMsg.subtype === "workers-status") {
+    console.log(eventMsg);
+    if (eventMsg?.messageData?.content?.status === "done") {
+      fields.appOverviewField.updateTable({
+        [`amountOfEvents-${eventMsg.messageData.content.workerData.name}`]:
+          eventMsg.messageData.amountOfEvents,
+      });
+    } else {
+    }
+  } else {
+    console.error("onbekende subtype");
+    console.log(eventMsg.subtype);
   }
-  initiateClosingClient();
 }
 
 function initiateClosingClient() {

@@ -7,6 +7,9 @@ export default class MonitorField {
     this.name = name;
     this.target = target;
     this.type = type;
+    if (this.type === "table") {
+      this.data = {};
+    }
   }
   get mainFieldName() {
     return `monitorfield-main-${this.name}`;
@@ -51,7 +54,6 @@ export default class MonitorField {
         mainFieldEl.innerHTML = this.rollUpdatedHTML;
         break;
       case "table":
-        
         break;
       case "expanded":
         mainFieldEl.innerHTML = this.expandedUpdatedHTML;
@@ -62,10 +64,20 @@ export default class MonitorField {
     }
   }
   updateTable(updateData) {
-    this.data = updateData.messageData;
+    this.data = {
+      ...this.data,
+      ...updateData,
+    };
+    
     document.getElementById(this.mainFieldName).innerHTML =
       this.tableUpdatedHTML;
+    document.querySelector(
+      "#monitorfield-AppOverview .monitorfield__title"
+    ).innerHTML = `AppOverview - CPU vrij: ${
+      Math.round(this.data.CPUFree * 100) / 100
+    }%`;
   }
+
   get rollUpdatedHTML() {
     const listItems = this.data
       .map((rollRow) => {
@@ -132,7 +144,10 @@ export default class MonitorField {
       if (!workersPerFamily[family]) {
         workersPerFamily[family] = [];
       }
-      workersPerFamily[family][workerIndex] = workerData;
+      workersPerFamily[family][workerIndex] = {
+        ...workerData,
+        amountOfEvents: this.data[`amountOfEvents-${family}-${workerIndex}`],
+      };
     });
 
     const highestNumberOfWorkersPerFamily = Math.max(
@@ -177,11 +192,14 @@ export default class MonitorField {
                 .map((error) => `<li>${error.message}</li>`)
                 .join("")}
             </ol>`;
+            const statusHTML = `<td class='${tdClass}' title='${worker.status}'>`;
+            const numberHTML = this.data.hasOwnProperty(
+              `amountOfEvents-${worker.name}`
+            )
+              ? this.data[`amountOfEvents-${worker.name}`]
+              : `<span class='worker-cell-inner worker-cell-inner--todo'>${worker.todo}</span>`;
 
-            return `<td class='${tdClass}' title='${worker.status}'>
-            <span class='worker-cell-inner worker-cell-inner--todo'>${worker.todo}</span>
-            ${errorsHTML}
-          </td>`;
+            return statusHTML + numberHTML + errorsHTML + "</td>";
           })
           .join("")}
       </tr>

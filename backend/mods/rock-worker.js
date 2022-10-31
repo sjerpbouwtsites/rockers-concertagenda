@@ -47,12 +47,13 @@ export class QuickWorkerMessage {
       },
     });
   }
-  abstractQuickWorker(statusString = "registered") {
+  abstractQuickWorker(statusString = "registered", moreData) {
     return WorkerMessage.quick("process", "workers-status", {
       content: {
         workerData: this.workerData,
         status: statusString,
       },
+      ...moreData,
     });
   }
   workerInitialized() {
@@ -61,8 +62,9 @@ export class QuickWorkerMessage {
   workerStarted() {
     return this.abstractQuickWorker("working");
   }
-  workerDone() {
-    return this.abstractQuickWorker("done");
+  workerDone(amountOfEvents) {
+    const as = this.abstractQuickWorker("done", { amountOfEvents });
+    return as;
   }
   /**
    * ATTENTION

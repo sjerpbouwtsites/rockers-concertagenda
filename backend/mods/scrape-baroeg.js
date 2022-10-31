@@ -34,7 +34,7 @@ async function scrapeBaroeg() {
   await fillMusicEvents(baseMusicEvents, baroegMonths, qwm);
 
   EventsList.save(workerData.family, workerData.index);
-  parentPort.postMessage(qwm.workerDone());
+  parentPort.postMessage(qwm.workerDone(EventsList.amountOfEvents));
 }
 
 async function fillMusicEvents(baseMusicEvents, baroegMonths, qwm) {

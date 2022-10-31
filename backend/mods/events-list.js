@@ -5,8 +5,10 @@ export default class EventsList {
   static _events = [];
   static _meta = {};
 
+  static get amountOfEvents() {
+    return EventsList._events.length;
+  }
   static save(name, workerIndex = null) {
-
     try {
       EventsList.checkTimestampsExist();
       const pathToEventList = fsDirections.eventLists;
@@ -39,8 +41,7 @@ export default class EventsList {
     }
   }
 
-  static isOld(name, forceScrapeList = '') {
-
+  static isOld(name, forceScrapeList = "") {
     if (forceScrapeList.includes(name)) {
       return true;
     }
@@ -82,7 +83,7 @@ export default class EventsList {
     const pathToEventList = fsDirections.eventLists;
     const eventListTimestamps = Object.keys(
       JSON.parse(fs.readFileSync(fsDirections.timestampsJson))
-    )
+    );
 
     EventsList._events = [];
     EventsList._meta.locations = {};
@@ -106,13 +107,15 @@ export default class EventsList {
           .replace(".json", "");
         if (!EventsList._meta.locations[correspondingTimestampName]) {
           EventsList._meta.locations[correspondingTimestampName] = {};
-          EventsList._meta.locations[correspondingTimestampName].name = correspondingTimestampName
+          EventsList._meta.locations[correspondingTimestampName].name =
+            correspondingTimestampName;
           EventsList._meta.locations[correspondingTimestampName].count = 0;
         }
-        EventsList._meta.locations[correspondingTimestampName].count = EventsList._meta.locations[correspondingTimestampName].count + parsedJSON.length
+        EventsList._meta.locations[correspondingTimestampName].count =
+          EventsList._meta.locations[correspondingTimestampName].count +
+          parsedJSON.length;
         return parsedJSON;
       });
-
 
     EventsList._events = allEventLists.flat();
 
@@ -143,10 +146,7 @@ export default class EventsList {
       JSON.stringify(EventsList._events, null, "  "),
       "utf-8"
     );
-    fs.copyFileSync(
-      fsDirections.metaJson,
-      fsDirections.metaPublicJson
-    );
+    fs.copyFileSync(fsDirections.metaJson, fsDirections.metaPublicJson);
 
     fs.copyFileSync(
       fsDirections.eventsListJson,

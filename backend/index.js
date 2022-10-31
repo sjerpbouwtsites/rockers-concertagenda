@@ -285,16 +285,15 @@ function addWorkerMessageHandler(thisWorker) {
 
         if (wsMsgInst.subtype.includes("error")) {
           WorkerStatus.change(thisWorker.name, "error", wsMsgInst.messageData);
-          WorkerStatus.mwss.broadcast(wsMsgInst.json);
         }
 
         if (
           wsMsgInst.subtype.includes("message-roll") ||
           wsMsgInst.subtype.includes("debugger")
         ) {
-          WorkerStatus.mwss.broadcast(wsMsgInst.json);
         }
       }
+      WorkerStatus.mwss.broadcast(wsMsgInst.json);
     }
   });
 }
