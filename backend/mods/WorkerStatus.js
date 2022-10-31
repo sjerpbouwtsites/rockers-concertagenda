@@ -67,37 +67,18 @@ export default class WorkerStatus {
 
     if (statusses.includes("done")) {
       WorkerStatus.completedWorkers = WorkerStatus.completedWorkers + 1;
-      // if (WorkerStatus.monitorWebsocketServer) {
-      //   const broadcastMsg = new wsMessage('update', 'message-roll', {
-      //     workerName: name,
-      //     text: `${name} done.`
-      //   });
-      //   WorkerStatus.monitorWebsocketServer.broadcast(broadcastMsg.json)
-      // }
-      WorkerStatus.checkIfAllDone();
+      WorkerStatus.checkIfAllDone(); // @TODO naar interval die gecanceld wordt aan eind programma
     }
 
     if (statusses.includes("error")) {
-      // if (WorkerStatus.monitorWebsocketServer) {
-      //   const broadcastMsg = new wsMessage('update', 'scraper-error message-roll', {
-      //     workerName: name,
-      //     text: `Error in ${name}:
-      //     ${message}`
-      //   });
-      //   WorkerStatus.monitorWebsocketServer.broadcast(broadcastMsg.json)
-      // }
+      //
     }
 
     if (statusses.includes("working")) {
-
-
-      // TT!!! todu TODO
-
-      console.log("");
-      console.log(`${name}: ${message}`);
+      // alles goed
     }
 
-       if (statusses.includes("todo")) {
+    if (statusses.includes("todo")) {
       WorkerStatus._workers[name].todo = message;
     }
   }

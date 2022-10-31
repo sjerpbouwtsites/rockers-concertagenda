@@ -1,4 +1,326 @@
 
+  baroeg-1 Error - 1:03:29 AM
+  TypeError: Cannot read properties of undefined (reading 'todo')
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:66:7)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:111:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:34:3) 
+  Cannot read properties of undefined (reading 'todo')
+  
+  
+  baroeg-0 Error - 1:03:29 AM
+  TypeError: Cannot read properties of undefined (reading 'todo')
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:66:7)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:111:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:34:3) 
+  Cannot read properties of undefined (reading 'todo')
+  
+  
+  baroeg-1 Error - 1:02:51 AM
+  ReferenceError: months is not defined
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:111:56)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:34:3) 
+  months is not defined
+  
+  
+  baroeg-0 Error - 1:02:51 AM
+  ReferenceError: months is not defined
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:111:56)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:34:3) 
+  months is not defined
+  
+  
+  baroeg-1 Error - 1:01:13 AM
+  ReferenceError: months is not defined
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:110:56)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:34:3) 
+  months is not defined
+  
+  
+  baroeg-5 Error - 12:12:20 AM
+  ReferenceError: months is not defined
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:110:56)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:34:3) 
+  months is not defined
+  
+  
+  baroeg-4 Error - 12:00:04 AM
+  TypeError: firstMusicEvent.isValid is not a function
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:106:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:34:3) 
+  firstMusicEvent.isValid is not a function
+  
+  
+  baroeg-8 Error - 12:00:03 AM
+  TypeError: firstMusicEvent.isValid is not a function
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:106:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:34:3) 
+  firstMusicEvent.isValid is not a function
+  
+  
+  baroeg-6 Error - 12:00:03 AM
+  TypeError: firstMusicEvent.isValid is not a function
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:106:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:34:3) 
+  firstMusicEvent.isValid is not a function
+  
+  
+  baroeg-1 Error - 12:00:03 AM
+  TypeError: firstMusicEvent.isValid is not a function
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:106:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:34:3) 
+  firstMusicEvent.isValid is not a function
+  
+  
+  baroeg-1 Error - 12:00:03 AM
+  Error: Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:33:67
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:120:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:80:20)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:34:3) 
+  Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:33:67
+  
+  
+  baroeg-5 Error - 12:00:02 AM
+  TypeError: firstMusicEvent.isValid is not a function
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:106:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:34:3) 
+  firstMusicEvent.isValid is not a function
+  
+  
+  baroeg-7 Error - 12:00:01 AM
+  TypeError: firstMusicEvent.isValid is not a function
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:106:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:34:3) 
+  firstMusicEvent.isValid is not a function
+  
+  
+  baroeg-8 Error - 11:59:57 PM
+  TypeError: firstMusicEvent.isValid is not a function
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:106:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:34:3) 
+  firstMusicEvent.isValid is not a function
+  
+  
+  baroeg-0 Error - 11:59:56 PM
+  TypeError: firstMusicEvent.isValid is not a function
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:106:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:34:3) 
+  firstMusicEvent.isValid is not a function
+  
+  
+  baroeg-2 Error - 11:59:54 PM
+  TypeError: firstMusicEvent.isValid is not a function
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:106:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:34:3) 
+  firstMusicEvent.isValid is not a function
+  
+  
+  baroeg-2 Error - 11:59:53 PM
+  Error: Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:33:67
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:120:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:80:20)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:34:3) 
+  Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:33:67
+  
+  
+  baroeg-3 Error - 11:58:43 PM
+  ReferenceError: page is not defined
+    at makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:183:9)
+    at scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:28:5)
+    at MessagePort.<anonymous> (file:///home/sjerp/dev/apache/concertagenda/backend/mods/generic-scraper.js:12:9)
+    at [nodejs.internal.kHybridDispatch] (node:internal/event_target:639:20)
+    at exports.emitMessage (node:internal/per_context/messageport:23:28) 
+  page is not defined
+  
+  
+  baroeg-8 Error - 11:58:43 PM
+  ReferenceError: page is not defined
+    at makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:183:9)
+    at scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:28:5)
+    at MessagePort.<anonymous> (file:///home/sjerp/dev/apache/concertagenda/backend/mods/generic-scraper.js:12:9)
+    at [nodejs.internal.kHybridDispatch] (node:internal/event_target:639:20)
+    at exports.emitMessage (node:internal/per_context/messageport:23:28) 
+  page is not defined
+  
+  
+  baroeg-6 Error - 11:58:43 PM
+  ReferenceError: page is not defined
+    at makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:183:9)
+    at scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:28:5)
+    at MessagePort.<anonymous> (file:///home/sjerp/dev/apache/concertagenda/backend/mods/generic-scraper.js:12:9)
+    at [nodejs.internal.kHybridDispatch] (node:internal/event_target:639:20)
+    at exports.emitMessage (node:internal/per_context/messageport:23:28) 
+  page is not defined
+  
+  
+  baroeg-5 Error - 11:58:43 PM
+  ReferenceError: page is not defined
+    at makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:183:9)
+    at scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:28:5)
+    at MessagePort.<anonymous> (file:///home/sjerp/dev/apache/concertagenda/backend/mods/generic-scraper.js:12:9)
+    at [nodejs.internal.kHybridDispatch] (node:internal/event_target:639:20)
+    at exports.emitMessage (node:internal/per_context/messageport:23:28) 
+  page is not defined
+  
+  
+  baroeg-8 Error - 11:58:43 PM
+  ReferenceError: page is not defined
+    at makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:183:9)
+    at scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:28:5)
+    at MessagePort.<anonymous> (file:///home/sjerp/dev/apache/concertagenda/backend/mods/generic-scraper.js:12:9)
+    at [nodejs.internal.kHybridDispatch] (node:internal/event_target:639:20)
+    at exports.emitMessage (node:internal/per_context/messageport:23:28) 
+  page is not defined
+  
+  
+  baroeg-2 Error - 11:58:43 PM
+  ReferenceError: page is not defined
+    at makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:183:9)
+    at scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:28:5)
+    at MessagePort.<anonymous> (file:///home/sjerp/dev/apache/concertagenda/backend/mods/generic-scraper.js:12:9)
+    at [nodejs.internal.kHybridDispatch] (node:internal/event_target:639:20)
+    at exports.emitMessage (node:internal/per_context/messageport:23:28) 
+  page is not defined
+  
+  
+  baroeg-2 Error - 11:58:42 PM
+  ReferenceError: page is not defined
+    at makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:183:9)
+    at scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:28:5)
+    at MessagePort.<anonymous> (file:///home/sjerp/dev/apache/concertagenda/backend/mods/generic-scraper.js:12:9)
+    at [nodejs.internal.kHybridDispatch] (node:internal/event_target:639:20)
+    at exports.emitMessage (node:internal/per_context/messageport:23:28) 
+  page is not defined
+  
+  
+  baroeg-8 Error - 11:58:42 PM
+  ReferenceError: page is not defined
+    at makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:183:9)
+    at scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:28:5)
+    at MessagePort.<anonymous> (file:///home/sjerp/dev/apache/concertagenda/backend/mods/generic-scraper.js:12:9)
+    at [nodejs.internal.kHybridDispatch] (node:internal/event_target:639:20)
+    at exports.emitMessage (node:internal/per_context/messageport:23:28) 
+  page is not defined
+  
+  
+  baroeg-3 Error - 11:58:42 PM
+  ReferenceError: page is not defined
+    at makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:183:9)
+    at scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:28:5)
+    at MessagePort.<anonymous> (file:///home/sjerp/dev/apache/concertagenda/backend/mods/generic-scraper.js:12:9)
+    at [nodejs.internal.kHybridDispatch] (node:internal/event_target:639:20)
+    at exports.emitMessage (node:internal/per_context/messageport:23:28) 
+  page is not defined
+  
+  
+  baroeg-6 Error - 11:58:42 PM
+  ReferenceError: page is not defined
+    at makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:183:9)
+    at scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:28:5)
+    at MessagePort.<anonymous> (file:///home/sjerp/dev/apache/concertagenda/backend/mods/generic-scraper.js:12:9)
+    at [nodejs.internal.kHybridDispatch] (node:internal/event_target:639:20)
+    at exports.emitMessage (node:internal/per_context/messageport:23:28) 
+  page is not defined
+  
+  
+  baroeg-5 Error - 11:58:40 PM
+  ReferenceError: page is not defined
+    at makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:183:9)
+    at scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:28:5)
+    at MessagePort.<anonymous> (file:///home/sjerp/dev/apache/concertagenda/backend/mods/generic-scraper.js:12:9)
+    at [nodejs.internal.kHybridDispatch] (node:internal/event_target:639:20)
+    at exports.emitMessage (node:internal/per_context/messageport:23:28) 
+  page is not defined
+  
+  
+  baroeg-8 Error - 11:58:40 PM
+  ReferenceError: page is not defined
+    at makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:183:9)
+    at scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:28:5)
+    at MessagePort.<anonymous> (file:///home/sjerp/dev/apache/concertagenda/backend/mods/generic-scraper.js:12:9)
+    at [nodejs.internal.kHybridDispatch] (node:internal/event_target:639:20)
+    at exports.emitMessage (node:internal/per_context/messageport:23:28) 
+  page is not defined
+  
+  
+  baroeg-3 Error - 11:58:40 PM
+  ReferenceError: page is not defined
+    at makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:183:9)
+    at scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:28:5)
+    at MessagePort.<anonymous> (file:///home/sjerp/dev/apache/concertagenda/backend/mods/generic-scraper.js:12:9)
+    at [nodejs.internal.kHybridDispatch] (node:internal/event_target:639:20)
+    at exports.emitMessage (node:internal/per_context/messageport:23:28) 
+  page is not defined
+  
+  
+  baroeg-7 Error - 11:58:40 PM
+  ReferenceError: page is not defined
+    at makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:183:9)
+    at scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:28:5)
+    at MessagePort.<anonymous> (file:///home/sjerp/dev/apache/concertagenda/backend/mods/generic-scraper.js:12:9)
+    at [nodejs.internal.kHybridDispatch] (node:internal/event_target:639:20)
+    at exports.emitMessage (node:internal/per_context/messageport:23:28) 
+  page is not defined
+  
+  
+  baroeg-1 Error - 11:58:40 PM
+  ReferenceError: page is not defined
+    at makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:183:9)
+    at scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:28:5)
+    at MessagePort.<anonymous> (file:///home/sjerp/dev/apache/concertagenda/backend/mods/generic-scraper.js:12:9)
+    at [nodejs.internal.kHybridDispatch] (node:internal/event_target:639:20)
+    at exports.emitMessage (node:internal/per_context/messageport:23:28) 
+  page is not defined
+  
+  
+  baroeg-4 Error - 11:58:38 PM
+  ReferenceError: page is not defined
+    at makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:183:9)
+    at scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:28:5)
+    at MessagePort.<anonymous> (file:///home/sjerp/dev/apache/concertagenda/backend/mods/generic-scraper.js:12:9)
+    at [nodejs.internal.kHybridDispatch] (node:internal/event_target:639:20)
+    at exports.emitMessage (node:internal/per_context/messageport:23:28) 
+  page is not defined
+  
+  
+  baroeg-3 Error - 11:56:49 PM
+  ReferenceError: page is not defined
+    at makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:183:9)
+    at scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:28:5)
+    at MessagePort.<anonymous> (file:///home/sjerp/dev/apache/concertagenda/backend/mods/generic-scraper.js:12:9)
+    at [nodejs.internal.kHybridDispatch] (node:internal/event_target:639:20)
+    at exports.emitMessage (node:internal/per_context/messageport:23:28) 
+  page is not defined
+  
+  
   Effenaar goto single page Error - 7:20:44 AM
   undefined 
   undefined

@@ -5,14 +5,25 @@ import crypto from "crypto";
 import fetch from 'node-fetch';
 import { WorkerMessage } from "./rock-worker.js";
 
-export function handleError(error, workerData) {
-  parentPort.postMessage(WorkerMessage.quick("update", 'error', {
-    content: {
-      workerData: workerData,
-      status: 'error',
-      text: error.message
-    },
-  }));
+/**
+ * handleError, generic error handling for the entire app
+ * passes a marked up error to the monitor
+ * adds error to the errorLog in temp.
+ * @param {Error} error 
+ * @param {family,name,index} workerData 
+ * @param {string} remarks Add some remarks to help you find back the origin of the error.
+ */
+export function handleError(error, workerData, remarks = null) {
+  parentPort.postMessage(
+    WorkerMessage.quick("update", "error", {
+      content: {
+        workerData: workerData,
+        remarks: remarks,
+        status: "error",
+        text: `${error.message}\n${error.stack}`,
+      },
+    })
+  );
   const time = new Date();
   const curErrorLog = fs.readFileSync(fsDirections.errorLog) || "";
   const newErrorLog = `

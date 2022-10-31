@@ -1,7 +1,7 @@
 import axios from "axios";
 import MusicEvent from "./music-event.js";
 import puppeteer from "puppeteer";
-import { parentPort } from "worker_threads";
+import { parentPort, workerData } from "worker_threads";
 import EventsList from "./events-list.js";
 import fs from "fs";
 import crypto from "crypto";
@@ -13,133 +13,107 @@ import {
   log,
   getPriceFromHTML,
 } from "./tools.js";
+import { baroegMonths } from "./months.js";
 import { letScraperListenToMasterMessageAndInit } from "./generic-scraper.js";
+import { QuickWorkerMessage } from "./rock-worker.js";
 
 letScraperListenToMasterMessageAndInit(scrapeBaroeg);
 
-async function scrapeBaroeg(workerIndex) {
-  const months = {
-    januari: "01",
-    februari: "02",
-    maart: "03",
-    april: "04",
-    mei: "05",
-    juni: "06",
-    juli: "07",
-    augustus: "08",
-    september: "09",
-    oktober: "10",
-    november: "11",
-    december: "12",
-  };
+async function scrapeBaroeg() {
+  const qwm = new QuickWorkerMessage(workerData);
 
-  try {
-    const baseMusicEvents = await Promise.race([
-      makeBaseEventList(workerIndex),
-      errorAfterSeconds(20000),
-    ]);
-    await fillMusicEvents(baseMusicEvents, months, workerIndex);
-  } catch (error) {
-    handleError(error);
-  }
+  parentPort.postMessage(qwm.workerInitialized());
+
+  parentPort.postMessage(qwm.messageRoll("voor basic music events"));
+  const baseMusicEvents = await Promise.race([
+    makeBaseEventList(),
+    errorAfterSeconds(10000),
+  ]).catch((err) => handleError(err, workerData, "base event race failure"));
+  parentPort.postMessage(qwm.messageRoll("na basic music events"));
+
+  parentPort.postMessage(qwm.workerStarted());
+
+  await fillMusicEvents(baseMusicEvents, baroegMonths, qwm);
+  parentPort.postMessage(qwm.messageRoll("na basic music events"));
+
+  EventsList.save(workerData.family, workerData.index);
+  parentPort.postMessage(qwm.workerDone());
 }
 
-async function fillMusicEvents(baseMusicEvents, months, workerIndex) {
+async function fillMusicEvents(baseMusicEvents, baroegMonths, qwm) {
   const browser = await puppeteer.launch();
   const baseMusicEventsCopy = [...baseMusicEvents];
 
   return processSingleMusicEvent(
     browser,
     baseMusicEventsCopy,
-    months,
-    workerIndex
-  ).finally(() => {
-    browser.close();
-    parentPort.postMessage({
-      status: "done",
-      message: `Baroeg worker-${workerIndex} done.`,
+    baroegMonths,
+    qwm
+  )
+    .finally(() => {
+      browser.close();
+      return true;
+    })
+    .catch((error) => {
+      handleError(error, workerData);
     });
-    EventsList.save("baroeg", workerIndex);
-  });
 }
 
 async function processSingleMusicEvent(
   browser,
   baseMusicEvents,
-  months,
-  workerIndex
+  baroegMonths,
+  qwm
 ) {
-  parentPort.postMessage({
-    status: "todo",
-    message: baseMusicEvents.length,
-  });
-
   const newMusicEvents = [...baseMusicEvents];
   const firstMusicEvent = newMusicEvents.shift();
+  qwm.todo(baseMusicEvents.length);
 
-  if (!firstMusicEvent) {
+  if (!firstMusicEvent || !firstMusicEvent.venueEventUrl) {
     return true;
   }
-  if (
-    baseMusicEvents.length === 0 ||
-    !firstMusicEvent ||
-    typeof firstMusicEvent === "undefined"
-  ) {
+  if (!firstMusicEvent || baseMusicEvents.length === 0) {
     return true;
   }
+
   const page = await browser.newPage();
   await page.goto(firstMusicEvent.venueEventUrl, {
     waitUntil: "load",
     timeout: 0,
   });
 
-  try {
-    const pageInfo = await Promise.race([
-      getPageInfo(page, months, workerIndex),
-      errorAfterSeconds(15000),
-    ]);
+  const pageInfo = await Promise.race([
+    getPageInfo(page, baroegMonths),
+    errorAfterSeconds(15000),
+  ]).catch((error) =>
+    handleError(error, workerData, "pageInfo race condition failed")
+  );
 
-    if (pageInfo && (pageInfo.priceElText || pageInfo.contextText)) {
-      firstMusicEvent.price = getPriceFromHTML(
-        pageInfo.priceText,
-        pageInfo.contextText
-      );
-      delete pageInfo.price;
-    }
-
-    // no date no registration.
-    if (pageInfo && !pageInfo.cancelReason) {
-      delete pageInfo.cancelReason;
-      firstMusicEvent.merge(pageInfo);
-    } else if (pageInfo.cancelReason !== "") {
-      // parentPort.postMessage({
-      //   status: "console",
-      //   message: `Incomplete info for ${firstMusicEvent.title}`,
-      // });
-    } else {
-      const pageInfoError = new Error(`unclear why failure at: ${firstMusicEvent.title
-        }
-      ${JSON.stringify(pageInfo)}
-       ${JSON.stringify(firstMusicEvent)}`);
-      handleError(pageInfoError);
-    }
-    if (firstMusicEvent.startDateTime) {
-      firstMusicEvent.register();
-    }
-  } catch (error) {
-    handleError(error);
-  }
-
-  if (newMusicEvents.length) {
-    return processSingleMusicEvent(
-      browser,
-      newMusicEvents,
-      months,
-      workerIndex
+  if (pageInfo && (pageInfo.priceElText || pageInfo.contextText)) {
+    firstMusicEvent.price = getPriceFromHTML(
+      pageInfo.priceText,
+      pageInfo.contextText
     );
-  } else {
-    return true;
+    delete pageInfo.price;
   }
+
+  // no date no registration.
+  if (pageInfo && !pageInfo.cancelReason) {
+    delete pageInfo.cancelReason;
+    firstMusicEvent.merge(pageInfo);
+  } else if (pageInfo.cancelReason !== "") {
+    qwm.debugger({
+      issue: `Incomplete info for ${firstMusicEvent.title}`,
+      event: firstMusicEvent,
+      pageInfo,
+    });
+  }
+
+  firstMusicEvent.registerIfValid();
+
+  return newMusicEvents.length
+    ? processSingleMusicEvent(browser, newMusicEvents, baroegMonths, qwm)
+    : true;
 }
 
 async function getPageInfo(page, months) {
@@ -199,26 +173,28 @@ async function getPageInfo(page, months) {
     );
     return pageInfo;
   } catch (error) {
-    handleError(error);
+    handleError(error, workerData, "getPageInfo");
     return pageInfo;
   }
 }
 
-async function makeBaseEventList(page) {
+async function makeBaseEventList() {
   let errorMan = false;
   const baroegLijst = await axios
     .get(
-      `https://baroeg.nl/wp-json/wp/v2/wp_theatre_prod?_embed&per_page=10&offset=${page * 10
-      }&modified_after=2022-01-01T00:00:00Z`
+      `https://baroeg.nl/wp-json/wp/v2/wp_theatre_prod?_embed&per_page=10&offset=${
+        workerData.index * 10
+      }&modified_after=2022-06-01T00:00:00Z`
     )
     .then((response) => {
       return response.data;
     })
     .catch((response) => {
-      parentPort.postMessage({
-        status: "console",
-        message: axios.error(response),
-      });
+      handleError(
+        response,
+        workerData,
+        "axios get baroeg wp json fail makeBaseEventList"
+      );
       errorMan = true;
     });
 
@@ -235,9 +211,14 @@ async function makeBaseEventList(page) {
       musicEventConf.title = event.title.rendered;
       musicEventConf.shortText = event.excerpt.rendered;
       if (!event._embedded) {
-        const title = event?.title?.rendered ?? '';
-        const url = event?.link ?? '';
-        handleError(`Event zonder _embedded. ${title} ${url}`, `Baroeg ${page}`)
+        const title = event?.title?.rendered ?? "";
+        const url = event?.link ?? "";
+        const eeerrr = new Error(`Event zonder _embedded. ${title} ${url}`);
+        handleError(
+          eeerrr,
+          workerData,
+          "baroeg map over wpjson events makeBaseEventList"
+        );
         return null;
       }
       if (
@@ -253,7 +234,7 @@ async function makeBaseEventList(page) {
         let uuid = crypto.randomUUID();
         const longTextPath = `${fsDirections.publicTexts}/${uuid}.html`;
 
-        fs.writeFile(longTextPath, event.content.rendered, "utf-8", () => { });
+        fs.writeFile(longTextPath, event.content.rendered, "utf-8", () => {});
         musicEventConf.longText = longTextPath;
       }
       return new MusicEvent(musicEventConf);

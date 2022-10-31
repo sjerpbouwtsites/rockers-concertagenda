@@ -6,7 +6,7 @@ import EventsList from "./events-list.js";
 import { metalfanMonths } from "./months.js";
 import { handleError, waitFor } from "./tools.js";
 import { letScraperListenToMasterMessageAndInit } from "./generic-scraper.js";
-import {QuickWorkerMessage, WorkerMessage} from "./rock-worker.js";
+import { QuickWorkerMessage } from "./rock-worker.js";
 
 letScraperListenToMasterMessageAndInit(scrapeMetalfan);
 
@@ -30,31 +30,31 @@ const skipWithMetalfan = [
   "metropool",
   "metropoolopenair",
   "merleyn", // onderdeel doornroosje
-  'neushoorn',
-  'paradiso',
+  "neushoorn",
+  "paradiso",
   "occii",
   "patronaat",
   "tivolivredenburg",
-]
+];
 
 async function scrapeMetalfan(mainThreadData) {
-
   try {
-  const qwm = new QuickWorkerMessage(workerData);
-  const browser = await puppeteer.launch();
-  await getBaseMusicEvents(browser, skipWithMetalfan);
-  parentPort.postMessage(qwm.workerDone());
-  EventsList.save("metalfan");
+    const qwm = new QuickWorkerMessage(workerData);
+    parentPort.postMessage(qwm.workerInitialized());
+    const browser = await puppeteer.launch();
+    await getBaseMusicEvents(browser, skipWithMetalfan, qwm);
+    parentPort.postMessage(qwm.workerDone());
+    EventsList.save("metalfan");
     browser.close();
   } catch (error) {
     handleError(error);
   }
 }
 
-async function getBaseMusicEvents(browser, skipWithMetalfan) {
+async function getBaseMusicEvents(browser, skipWithMetalfan, qwm) {
   const page = await browser.newPage();
   await page.goto(`https://www.metalfan.nl/agenda.php`);
-
+  parentPort.postMessage(qwm.workerStarted());
   const eventData = await page.evaluate((months) => {
     return Array.from(document.querySelectorAll(".calentry")).map(
       (metalfanEvent) => {
@@ -120,7 +120,9 @@ async function getBaseMusicEvents(browser, skipWithMetalfan) {
         eventDatum.eventLocationName
       );
 
-      if (         skipWithMetalfan.includes(locationName)       ) {         return;       }
+      if (skipWithMetalfan.includes(locationName)) {
+        return;
+      }
       thisMusicEvent.location = locationName;
       return thisMusicEvent;
     })

@@ -32,32 +32,65 @@ export default class RockWorker extends Worker{
  */
 export class QuickWorkerMessage {
   constructor(workerData) {
-   this.workerData = workerData
+    this.workerData = workerData;
   }
-  error(error){
-    return WorkerMessage.quick("update", 'error', {
+  error(error) {
+    return WorkerMessage.quick("update", "error", {
       content: {
         workerData: this.workerData,
-        status: 'error',
-        text: error.message
+        status: "error",
+        text: error.message,
       },
-    })
+    });
   }
-  workerDone(){
-    return WorkerMessage.quick("process", 'workers-status', {
+  workerInitialized() {
+    return WorkerMessage.quick("process", "workers-status", {
       content: {
         workerData: this.workerData,
-        status: "done"
+        status: "init",
       },
-    })
+    });
   }
-  debugger(toDebug){
-    return WorkerMessage.quick("update", 'debugger', {
+  workerStarted() {
+    return WorkerMessage.quick("process", "workers-status", {
       content: {
         workerData: this.workerData,
-        debug: toDebug 
-      }
-    })
+        status: "working",
+      },
+    });
+  }
+  workerDone() {
+    return WorkerMessage.quick("process", "workers-status", {
+      content: {
+        workerData: this.workerData,
+        status: "done",
+      },
+    });
+  }
+  todo(numberToDo) {
+    return WorkerMessage.quick("update", "scraper-results message-roll", {
+      todo: numberToDo,
+      content: {
+        workerData: this.workerData,
+        text: `Todo: ${numberToDo}`,
+      },
+    });
+  }
+  debugger(toDebug) {
+    return WorkerMessage.quick("update", "debugger", {
+      content: {
+        workerData: this.workerData,
+        debug: toDebug,
+      },
+    });
+  }
+  messageRoll(text) {
+    return WorkerMessage.quick("update", "message-roll", {
+      content: {
+        workerData: this.workerData,
+        text,
+      },
+    });
   }
 }
 

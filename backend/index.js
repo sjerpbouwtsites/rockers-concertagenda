@@ -14,9 +14,8 @@ const shellArguments = getShellArguments();
 let monitorWebsocketServer = null;
 
 async function init() {
-
   const monitorWebsocketServer = await initMonitorBackend();
-   WorkerStatus.monitorWebsocketServer = monitorWebsocketServer;
+  WorkerStatus.monitorWebsocketServer = monitorWebsocketServer;
 
   houseKeeping();
 
@@ -27,21 +26,17 @@ async function init() {
   if (EventsList.isOld("metalfan", shellArguments?.force) || true) {
     workerList.push([fsDirections.scrapeMetalfan, "metalfan", 0]);
   }
-  // if (EventsList.isOld("baroeg", shellArguments?.force) || true) {
-  //   try {
-  //     workerList.push([fsDirections.scrapeBaroeg, "baroeg", 0]);
-  //     workerList.push([fsDirections.scrapeBaroeg, "baroeg", 1]);
-  //     workerList.push([fsDirections.scrapeBaroeg, "baroeg", 2]);
-  //     workerList.push([fsDirections.scrapeBaroeg, "baroeg", 3]);
-  //     workerList.push([fsDirections.scrapeBaroeg, "baroeg", 4]);
-  //     workerList.push([fsDirections.scrapeBaroeg, "baroeg", 5]);
-  //     workerList.push([fsDirections.scrapeBaroeg, "baroeg", 6]);
-  //     workerList.push([fsDirections.scrapeBaroeg, "baroeg", 7]);
-  //     workerList.push([fsDirections.scrapeBaroeg, "baroeg", 8]);
-  //   } catch (error) {
-  //     handleError(error);
-  //   }
-  // }
+  if (EventsList.isOld("baroeg", shellArguments?.force) || true) {
+    workerList.push([fsDirections.scrapeBaroeg, "baroeg", 0]);
+    workerList.push([fsDirections.scrapeBaroeg, "baroeg", 1]);
+    // workerList.push([fsDirections.scrapeBaroeg, "baroeg", 2]);
+    // workerList.push([fsDirections.scrapeBaroeg, "baroeg", 3]);
+    // workerList.push([fsDirections.scrapeBaroeg, "baroeg", 4]);
+    // workerList.push([fsDirections.scrapeBaroeg, "baroeg", 5]);
+    // workerList.push([fsDirections.scrapeBaroeg, "baroeg", 6]);
+    // workerList.push([fsDirections.scrapeBaroeg, "baroeg", 7]);
+    // workerList.push([fsDirections.scrapeBaroeg, "baroeg", 8]);
+  }
 
   // if (EventsList.isOld("patronaat", shellArguments?.force)) {
   //   workerList.push([fsDirections.scrapePatronaat, "patronaat", 0]);
@@ -177,14 +172,14 @@ async function init() {
   //   workerList.push([fsDirections.scrapeDuycker, "duycker", 0]);
   // }
 
-  workerList = shuffleArray(workerList)
+  workerList = shuffleArray(workerList);
   WorkerStatus.totalWorkers = workerList.length;
 
   walkThroughWorkerList(workerList);
 
   if (!WorkerStatus.checkIfAllDone()) {
     WorkerStatus.reportOnActiveWorkers();
-  };
+  }
 
   printLocationsToPublic();
 }
@@ -215,89 +210,102 @@ async function startWorker(
   highCapacity = false
 ) {
   const thisWorker = new RockWorker(workerPath, workerFamily, workerIndex);
-  thisWorker.postMessage(WorkerMessage.quick('process', 'command-start'));
+  thisWorker.postMessage(WorkerMessage.quick("process", "command-start"));
 
   WorkerStatus.registerWorker(thisWorker.name);
-  addWorkerMessageHandler(thisWorker)
+  addWorkerMessageHandler(thisWorker);
   if (highCapacity) {
     if (!WorkerStatus.OSHasSpace) {
-      WorkerStatus.waitingWorkers.push(workerNameWithIndex);
+      WorkerStatus.waitingWorkers.push(thisWorker.name);
       setTimeout(() => {
-        startWorker(workerPath, workerName, workerIndex);
+        startWorker(workerPath, workerFamily, workerIndex);
       }, 250);
       return true;
     }
   } else {
     if (!WorkerStatus.OSHasALotOfSpace) {
-      WorkerStatus.waitingWorkers.push(workerNameWithIndex);
+      WorkerStatus.waitingWorkers.push(thisWorker.name);
       setTimeout(() => {
-        startWorker(workerPath, workerName, workerIndex);
+        startWorker(workerPath, workerFamily, workerIndex);
       }, 250);
       return true;
     }
-  }  
+  }
   return true;
 }
 
 /**
  * @param {Worker} thisWorker instantiated worker with path etc
  */
-function addWorkerMessageHandler(thisWorker){
+function addWorkerMessageHandler(thisWorker) {
   thisWorker.on("message", (message) => {
-
     if (message?.status) {
-    // change worker status 
-    // and trigger message propagation to monitor / console
-    console.log("OUDE SYSTEEM!!!");
-    console.log(message)
-    WorkerStatus.change(
-      thisWorker.name,
-      message?.status,
-      message?.message,
-      thisWorker
-    );
-    
-    // pass worker data to EventsList 
-    // free Worker thread and memory
-    if (message?.status === "done") {
-      if (message?.data) {
-        EventsList.merge(message.data);
+      // change worker status
+      // and trigger message propagation to monitor / console
+      console.log("OUDE SYSTEEM!!!");
+      console.log(message);
+      WorkerStatus.change(
+        thisWorker.name,
+        message?.status,
+        message?.message,
+        thisWorker
+      );
+
+      // pass worker data to EventsList
+      // free Worker thread and memory
+      if (message?.status === "done") {
+        if (message?.data) {
+          EventsList.merge(message.data);
+        }
+        thisWorker.unref();
       }
-      thisWorker.unref();
-    }
     } else {
       const parsedMessaged = JSON.parse(message);
       parsedMessaged.messageData.workerName = thisWorker.name;
       // to check integrity
-      const wsMsgInst = new wsMessage(parsedMessaged?.type, parsedMessaged?.subtype, parsedMessaged?.messageData);
-      if (wsMsgInst.type === 'process') {
-        
-        if (wsMsgInst?.subtype === 'workers-status') {
-          WorkerStatus.change(thisWorker.name, 'done', wsMsgInst.messageData)
+      const wsMsgInst = new wsMessage(
+        parsedMessaged?.type,
+        parsedMessaged?.subtype,
+        parsedMessaged?.messageData
+      );
+      if (wsMsgInst.type === "process") {
+        if (wsMsgInst?.subtype === "workers-status") {
+          const statusString = wsMsgInst?.messageData?.content?.status ?? null;
+          WorkerStatus.change(
+            thisWorker.name,
+            statusString,
+            wsMsgInst.messageData
+          );
         }
-        
       }
-      if (wsMsgInst.type === 'update')  {
+      if (wsMsgInst.type === "update") {
+        if (wsMsgInst?.subtype === "scraper-results") {
+          WorkerStatus.change(
+            thisWorker.name,
+            "todo",
+            wsMsgInst?.messageData?.todo
+          );
+        }
 
-        if (wsMsgInst.subtype.includes('error')) {
-          WorkerStatus.change(thisWorker.name, 'error', wsMsgInst.messageData)
+        if (wsMsgInst.subtype.includes("error")) {
+          WorkerStatus.change(thisWorker.name, "error", wsMsgInst.messageData);
           WorkerStatus.mwss.broadcast(wsMsgInst.json);
         }
 
-        if (wsMsgInst.subtype.includes('message-roll') || wsMsgInst.subtype.includes('debugger')) {
-          WorkerStatus.mwss.broadcast(wsMsgInst.json);
-        }
-        
-        if (wsMsgInst.subtype.includes('todo')) {
-          WorkerStatus.todo(thisWorker.name, wsMsgInst.messageData)
+        if (
+          wsMsgInst.subtype.includes("message-roll") ||
+          wsMsgInst.subtype.includes("debugger")
+        ) {
           WorkerStatus.mwss.broadcast(wsMsgInst.json);
         }
 
+        if (wsMsgInst.subtype.includes("todo")) {
+          WorkerStatus.todo(thisWorker.name, wsMsgInst.messageData?.todo);
+          WorkerStatus.mwss.broadcast(wsMsgInst.json);
+        }
       }
-      }
-   
-
-  });  
+    }
+  });
 }
 
 function houseKeeping() {
