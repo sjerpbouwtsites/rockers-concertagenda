@@ -15,7 +15,7 @@ const flicketyOptions = {
   pageDots: false,
   freeScroll: false,
   contain: true,
-  dragThreshold: 180,
+  dragThreshold: 140,
 };
 
 class App extends React.Component {
