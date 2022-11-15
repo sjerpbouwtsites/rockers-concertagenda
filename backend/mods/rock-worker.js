@@ -20,9 +20,6 @@ export default class RockWorker extends Worker{
     console.warn('OUDE METHODE');
     return this.name;
   }
-  postToWorkerThread(message){
-
-  }
 }
 
 /**

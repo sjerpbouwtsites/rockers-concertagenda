@@ -1,4 +1,138 @@
 
+  patronaat-1 Error - 1:28:23 AM
+  ReferenceError: startDateTime is not defined
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-patronaat.js:83:34)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapePatronaat (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-patronaat.js:29:5) 
+  startDateTime is not defined
+  
+  
+  patronaat-2 Error - 1:28:20 AM
+  ReferenceError: startDateTime is not defined
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-patronaat.js:83:34)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapePatronaat (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-patronaat.js:29:5) 
+  startDateTime is not defined
+  
+  
+  patronaat-0 Error - 1:28:17 AM
+  ReferenceError: startDateTime is not defined
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-patronaat.js:83:34)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapePatronaat (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-patronaat.js:29:5) 
+  startDateTime is not defined
+  
+  
+  patronaat-1 Error - 1:28:15 AM
+  ReferenceError: startDateTime is not defined
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-patronaat.js:83:34)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapePatronaat (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-patronaat.js:29:5) 
+  startDateTime is not defined
+  
+  
+  patronaat-2 Error - 1:28:14 AM
+  ReferenceError: startDateTime is not defined
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-patronaat.js:83:34)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapePatronaat (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-patronaat.js:29:5) 
+  startDateTime is not defined
+  
+  
+  patronaat-2 Error - 1:16:17 AM
+  TypeError: parentPort.debugger is not a function
+    at scrapePatronaat (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-patronaat.js:29:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  parentPort.debugger is not a function
+  
+  
+  baroeg-2 Error - 12:53:48 AM
+  undefined 
+  undefined
+  
+  
+  baroeg-2 Error - 12:53:47 AM
+  undefined 
+  undefined
+  
+  
+  baroeg-1 Error - 12:53:46 AM
+  undefined 
+  undefined
+  
+  
+  baroeg-0 Error - 12:53:42 AM
+  undefined 
+  undefined
+  
+  
+  baroeg-0 Error - 12:47:00 AM
+  Error: REJECTED AFTER 10000
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:87:14)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  REJECTED AFTER 10000
+  
+  
+  baroeg-4 Error - 11:47:38 PM
+  Error: socket hang up
+    at connResetException (node:internal/errors:693:14)
+    at TLSSocket.socketOnEnd (node:_http_client:478:23)
+    at TLSSocket.emit (node:events:539:35)
+    at endReadableNT (node:internal/streams/readable:1344:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) 
+  socket hang up
+  
+  
+  baroeg-0 Error - 11:47:21 PM
+  Error: REJECTED AFTER 10000
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:87:14)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  REJECTED AFTER 10000
+  
+  
+  baroeg-3 Error - 11:47:09 PM
+  Error: REJECTED AFTER 10000
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:87:14)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  REJECTED AFTER 10000
+  
+  
+  baroeg-0 Error - 11:46:59 PM
+  Error: REJECTED AFTER 10000
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:87:14)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  REJECTED AFTER 10000
+  
+  
+  baroeg-1 Error - 11:46:43 PM
+  undefined 
+  undefined
+  
+  
+  baroeg-2 Error - 11:46:41 PM
+  undefined 
+  undefined
+  
+  
+  baroeg-0 Error - 11:33:51 PM
+  Error: Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:33:67
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:122:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:84:20)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:33:3) 
+  Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:33:67
+  
+  
   baroeg-1 Error - 1:03:29 AM
   TypeError: Cannot read properties of undefined (reading 'todo')
     at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-baroeg.js:66:7)

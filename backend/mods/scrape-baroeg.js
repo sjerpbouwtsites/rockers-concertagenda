@@ -21,7 +21,6 @@ letScraperListenToMasterMessageAndInit(scrapeBaroeg);
 
 async function scrapeBaroeg() {
   const qwm = new QuickWorkerMessage(workerData);
-
   parentPort.postMessage(qwm.workerInitialized());
 
   const baseMusicEvents = await Promise.race([
@@ -52,6 +51,7 @@ async function fillMusicEvents(baseMusicEvents, baroegMonths, qwm) {
       return true;
     })
     .catch((error) => {
+      browser.close();
       handleError(error, workerData);
     });
 }
@@ -68,7 +68,6 @@ async function processSingleMusicEvent(
   qwm.todo(baseMusicEvents.length).forEach((JSONblob) => {
     parentPort.postMessage(JSONblob);
   });
-  
 
   if (!firstMusicEvent || !firstMusicEvent.venueEventUrl) {
     return true;
@@ -120,26 +119,26 @@ async function processSingleMusicEvent(
 async function getPageInfo(page, months) {
   let pageInfo = {};
   pageInfo.cancelReason = "";
-  try {
-    pageInfo = await page.evaluate(
-      ({ months }) => {
-        const ticketsEl = document.querySelector(".wp_theatre_event_tickets");
 
-        if (!ticketsEl) {
-          return {
-            cancelReason: "no tickets available",
-          };
-        }
+  pageInfo = await page.evaluate(
+    ({ months }) => {
+      const ticketsEl = document.querySelector(".wp_theatre_event_tickets");
 
-        const startDateEl = document.querySelector(
-          ".wp_theatre_event_startdate"
-        );
-        if (!startDateEl) {
-          return {
-            cancelReason: "no start date found",
-          };
-        }
-        let startDateTime = null;
+      if (!ticketsEl) {
+        return {
+          cancelReason: "no tickets available",
+        };
+      }
+
+      const startDateEl = document.querySelector(".wp_theatre_event_startdate");
+      if (!startDateEl) {
+        return {
+          cancelReason: "no start date found",
+        };
+      }
+      let startDateTime = null;
+      let dateError = null;
+      try {
         if (!!startDateEl) {
           let startDateSplit = startDateEl?.textContent
             .replace(",", "")
@@ -157,26 +156,30 @@ async function getPageInfo(page, months) {
             startDateTime = new Date(`${startDate}T${startTime}`).toISOString();
           }
         }
+      } catch (error) {
+        dateError = error;
+        dateError.message = `date html basis: ${startDateEl?.textContent}\n${dateError.message}`;
+      }
 
-        const priceElText =
-          document.querySelector(".wp_theatre_event_tickets_url")
-            ?.textContent ?? null;
-        const contextText =
-          document.getElementById("content")?.textContent ?? null;
+      const priceElText =
+        document.querySelector(".wp_theatre_event_tickets_url")?.textContent ??
+        null;
+      const contextText =
+        document.getElementById("content")?.textContent ?? null;
 
-        return {
-          priceElText,
-          startDateTime,
-          contextText,
-        };
-      },
-      { months }
-    );
-    return pageInfo;
-  } catch (error) {
-    handleError(error, workerData, "getPageInfo");
-    return pageInfo;
+      return {
+        priceElText,
+        startDateTime,
+        contextText,
+        error: dateError,
+      };
+    },
+    { months }
+  );
+  if (pageInfo.error) {
+    handleError(pageInfo.error, workerData, "getPageInfo");
   }
+  return pageInfo;
 }
 
 async function makeBaseEventList() {

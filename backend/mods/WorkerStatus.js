@@ -40,7 +40,7 @@ export default class WorkerStatus {
       os.cpuFree(function (v) {
         WorkerStatus.CPUFree = v * 100;
       });
-    }, 250);
+    }, 50);
   }
 
   /**

@@ -3,12 +3,17 @@ import { Worker } from "worker_threads";
 import WorkerStatus from "./mods/WorkerStatus.js";
 import EventsList from "./mods/events-list.js";
 import fsDirections from "./mods/fs-directions.js";
-import { handleError, errorAfterSeconds, getShellArguments } from "./mods/tools.js";
+import {
+  handleError,
+  errorAfterSeconds,
+  getShellArguments,
+  waitFor,
+} from "./mods/tools.js";
 import { printLocationsToPublic } from "./mods/locations.js";
-import initMonitorBackend from "./monitor/backend.js"
-import wsMessage from './monitor/wsMessage.js';
+import initMonitorBackend from "./monitor/backend.js";
+import wsMessage from "./monitor/wsMessage.js";
 import RockWorker from "./mods/rock-worker.js";
-import {WorkerMessage} from "./mods/rock-worker.js";
+import { WorkerMessage } from "./mods/rock-worker.js";
 
 const shellArguments = getShellArguments();
 let monitorWebsocketServer = null;
@@ -24,26 +29,26 @@ async function init() {
   let workerList = [];
 
   // @TODO maak hier mooie configuratie objecten van
-  if (EventsList.isOld("metalfan", shellArguments?.force) || true) {
-    workerList.push([fsDirections.scrapeMetalfan, "metalfan", 0]);
-  }
-  if (EventsList.isOld("baroeg", shellArguments?.force) || true) {
-    workerList.push([fsDirections.scrapeBaroeg, "baroeg", 0]);
-    workerList.push([fsDirections.scrapeBaroeg, "baroeg", 1]);
-    // workerList.push([fsDirections.scrapeBaroeg, "baroeg", 2]);
-    // workerList.push([fsDirections.scrapeBaroeg, "baroeg", 3]);
-    // workerList.push([fsDirections.scrapeBaroeg, "baroeg", 4]);
-    // workerList.push([fsDirections.scrapeBaroeg, "baroeg", 5]);
-    // workerList.push([fsDirections.scrapeBaroeg, "baroeg", 6]);
-    // workerList.push([fsDirections.scrapeBaroeg, "baroeg", 7]);
-    // workerList.push([fsDirections.scrapeBaroeg, "baroeg", 8]);
-  }
-
-  // if (EventsList.isOld("patronaat", shellArguments?.force) || true) {
-  //   workerList.push([fsDirections.scrapePatronaat, "patronaat", 0]);
-  //   workerList.push([fsDirections.scrapePatronaat, "patronaat", 1]);
-  //   workerList.push([fsDirections.scrapePatronaat, "patronaat", 2]);
+  // if (EventsList.isOld("metalfan", shellArguments?.force) || true) {
+  //   workerList.push([fsDirections.scrapeMetalfan, "metalfan", 0]);
   // }
+  // if (EventsList.isOld("baroeg", shellArguments?.force) || true) {
+  //   workerList.push([fsDirections.scrapeBaroeg, "baroeg", 0]);
+  //   workerList.push([fsDirections.scrapeBaroeg, "baroeg", 1]);
+  //   workerList.push([fsDirections.scrapeBaroeg, "baroeg", 2]);
+  //   workerList.push([fsDirections.scrapeBaroeg, "baroeg", 3]);
+  //   workerList.push([fsDirections.scrapeBaroeg, "baroeg", 4]);
+  //   workerList.push([fsDirections.scrapeBaroeg, "baroeg", 5]);
+  //   workerList.push([fsDirections.scrapeBaroeg, "baroeg", 6]);
+  //   workerList.push([fsDirections.scrapeBaroeg, "baroeg", 7]);
+  //   workerList.push([fsDirections.scrapeBaroeg, "baroeg", 8]);
+  // }
+
+  if (EventsList.isOld("patronaat", shellArguments?.force) || true) {
+    workerList.push([fsDirections.scrapePatronaat, "patronaat", 0]);
+    workerList.push([fsDirections.scrapePatronaat, "patronaat", 1]);
+    workerList.push([fsDirections.scrapePatronaat, "patronaat", 2]);
+  }
 
   // if (EventsList.isOld("013", shellArguments?.force) || true) {
   //   workerList.push([fsDirections.scrape013, "013", 0]);
@@ -205,29 +210,19 @@ async function startWorker(
   workerIndex = null,
   highCapacity = false
 ) {
-  const thisWorker = new RockWorker(workerPath, workerFamily, workerIndex);
-  thisWorker.postMessage(WorkerMessage.quick("process", "command-start"));
-
-  WorkerStatus.registerWorker(thisWorker.name);
-  addWorkerMessageHandler(thisWorker);
   if (highCapacity) {
-    if (!WorkerStatus.OSHasSpace) {
-      WorkerStatus.waitingWorkers.push(thisWorker.name);
-      setTimeout(() => {
-        startWorker(workerPath, workerFamily, workerIndex);
-      }, 250);
-      return true;
+    while (!WorkerStatus.OSHasALotOfSpace) {
+      await waitFor(111);
     }
   } else {
-    if (!WorkerStatus.OSHasALotOfSpace) {
-      WorkerStatus.waitingWorkers.push(thisWorker.name);
-      setTimeout(() => {
-        startWorker(workerPath, workerFamily, workerIndex);
-      }, 250);
-      return true;
+    while (!WorkerStatus.OSHasALotOfSpace) {
+      await waitFor(111);
     }
   }
-  return true;
+  const thisWorker = new RockWorker(workerPath, workerFamily, workerIndex);
+  thisWorker.postMessage(WorkerMessage.quick("process", "command-start"));
+  WorkerStatus.registerWorker(thisWorker.name);
+  addWorkerMessageHandler(thisWorker);
 }
 
 /**

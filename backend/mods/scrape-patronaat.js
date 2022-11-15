@@ -1,7 +1,7 @@
 import axios from "axios";
 import MusicEvent from "./music-event.js";
 import puppeteer from "puppeteer";
-import { parentPort } from "worker_threads";
+import { parentPort, workerData } from "worker_threads";
 import EventsList from "./events-list.js";
 import fs from "fs";
 import crypto from "crypto";
@@ -14,41 +14,41 @@ import {
 } from "./tools.js";
 import { letScraperListenToMasterMessageAndInit } from "./generic-scraper.js";
 
+import { QuickWorkerMessage } from "./rock-worker.js";
+
 letScraperListenToMasterMessageAndInit(scrapePatronaat);
 
 async function scrapePatronaat(workerIndex) {
-  const browser = await puppeteer.launch();
+  const qwm = new QuickWorkerMessage(workerData);
+  parentPort.postMessage(qwm.workerInitialized());
 
+  const browser = await puppeteer.launch();
   try {
-    const baseMusicEvents = await makeBaseEventList(browser, workerIndex);
-    await fillMusicEvents(browser, baseMusicEvents, workerIndex);
+    const baseMusicEvents = await makeBaseEventList(browser, qwm);
+    parentPort.postMessage(qwm.workerStarted());
+    await fillMusicEvents(browser, baseMusicEvents, qwm);
   } catch (error) {
-    handleError(error);
+    handleError(error, workerData, "outer try patronaat scraper");
   }
+  EventsList.save(workerData.family, workerData.index);
+  parentPort.postMessage(qwm.workerDone(EventsList.amountOfEvents));
 }
 
-async function fillMusicEvents(browser, baseMusicEvents, workerIndex) {
+async function fillMusicEvents(browser, baseMusicEvents, qwm) {
   const baseMusicEventsCopy = [...baseMusicEvents];
 
-  return processSingleMusicEvent(
-    browser,
-    baseMusicEventsCopy,
-    workerIndex
-  ).finally(() => {
-    setTimeout(() => {
+  return processSingleMusicEvent(browser, baseMusicEventsCopy, qwm).finally(
+    () => {
+      parentPort.postMessage(qwm.debugger("finally debug"));
       browser.close();
-    }, 5000);
-    parentPort.postMessage({
-      status: "done",
-    });
-    EventsList.save("patronaat", workerIndex);
-  });
+      return true;
+    }
+  );
 }
 
-async function processSingleMusicEvent(browser, baseMusicEvents, workerIndex) {
-  parentPort.postMessage({
-    status: "todo",
-    message: baseMusicEvents.length,
+async function processSingleMusicEvent(browser, baseMusicEvents, qwm) {
+  qwm.todo(baseMusicEvents.length).forEach((JSONblob) => {
+    parentPort.postMessage(JSONblob);
   });
 
   const newMusicEvents = [...baseMusicEvents];
@@ -76,8 +76,13 @@ async function processSingleMusicEvent(browser, baseMusicEvents, workerIndex) {
   try {
     const pageInfo = await Promise.race([
       getPageInfo(page),
-      errorAfterSeconds(15000),
-    ]);
+      errorAfterSeconds(25000),
+    ]).catch((err) =>
+      handleError(err, workerData, "patronaar pageinfo racecondition fail")
+    );
+    if (!pageInfo.hasOwnProperty(startDateTime) || !pageInfo.startDateTime) {
+      return processSingleMusicEvent(browser, newMusicEvents, qwm);
+    }
 
     if (pageInfo && pageInfo.price) {
       firstMusicEvent.price = getPriceFromHTML(pageInfo.price);
@@ -88,7 +93,7 @@ async function processSingleMusicEvent(browser, baseMusicEvents, workerIndex) {
       let uuid = crypto.randomUUID();
       const longTextPath = `${fsDirections.publicTexts}/${uuid}.html`;
 
-      fs.writeFile(longTextPath, pageInfo.longTextHTML, "utf-8", () => { });
+      fs.writeFile(longTextPath, pageInfo.longTextHTML, "utf-8", () => {});
       pageInfo.longText = longTextPath;
     }
 
@@ -97,26 +102,18 @@ async function processSingleMusicEvent(browser, baseMusicEvents, workerIndex) {
       delete pageInfo.cancelReason;
       firstMusicEvent.merge(pageInfo);
     } else if (pageInfo.cancelReason !== "") {
-      parentPort.postMessage({
-        status: "console",
-        message: `Incomplete info for ${firstMusicEvent.title}`,
+      qwm.debugger({
+        text: `Incomplete info for ${firstMusicEvent.title}`,
+        event: firstMusicEvent,
       });
-    } else {
-      const pageInfoError = new Error(`unclear why failure at: ${firstMusicEvent.title
-        }
-      ${JSON.stringify(pageInfo)}
-       ${JSON.stringify(firstMusicEvent)}`);
-      handleError(pageInfoError);
     }
-    firstMusicEvent.register();
-
-    page.close();
+    firstMusicEvent.registerIfValid();
   } catch (error) {
-    handleError(error);
+    handleError(error, workerData, "process single event try fail");
   }
 
   if (newMusicEvents.length) {
-    return processSingleMusicEvent(browser, newMusicEvents, workerIndex);
+    return processSingleMusicEvent(browser, newMusicEvents, qwm);
   } else {
     return true;
   }
@@ -222,15 +219,16 @@ async function getPageInfo(page, months) {
       },
       { months }
     );
+    page.close();
     return pageInfo;
   } catch (error) {
-    handleError(error);
-
+    page.close();
+    handleError(error, workerData, "page info outer try wrapper");
     return pageInfo;
   }
 }
 
-async function makeBaseEventList(browser, workerIndex) {
+async function makeBaseEventList(browser) {
   const page = await browser.newPage();
   await page.goto(
     "https://patronaat.nl/programma/?type=event&s=&eventtype%5B%5D=84",
@@ -266,7 +264,7 @@ async function makeBaseEventList(browser, workerIndex) {
         }
         return res;
       });
-  }, workerIndex);
+  }, workerData.index);
   return rawEvents
     .filter(basicMusicEventsFilter)
     .map((event) => new MusicEvent(event));

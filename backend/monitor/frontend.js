@@ -44,9 +44,6 @@ function openClientWebsocket(fields) {
 
   socket.addEventListener("message", (event) => {
     const eventMsg = JSON.parse(event.data);
-    if (!["app-overview", "update"].includes(eventMsg.type)) {
-      console.log(eventMsg);
-    }
     if (eventMsg.type === "server-log") {
       monitorInternalErrors(`Er is een event naar de client verstuurd bedoelt voor de server.
       ${eventMsg.messageData} `);
@@ -102,11 +99,9 @@ function monitorInternalErrors() {
 }
 
 function eventToProcesses(eventMsg, fields) {
-  console.log(eventMsg);
   if (eventMsg.subtype === "closed") {
     initiateClosingClient();
   } else if (eventMsg.subtype === "workers-status") {
-    console.log(eventMsg);
     if (eventMsg?.messageData?.content?.status === "done") {
       fields.appOverviewField.updateTable({
         [`amountOfEvents-${eventMsg.messageData.content.workerData.name}`]:
