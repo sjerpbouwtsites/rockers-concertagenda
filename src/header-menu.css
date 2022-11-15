@@ -9,6 +9,9 @@
   font-size: .9rem;
   z-index: -1;
   min-height: 100%;
+  max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
   /* overflow-x:scroll; */
 }
 

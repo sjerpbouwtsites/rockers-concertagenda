@@ -9,7 +9,7 @@ class FilterMenu extends React.Component {
         podia: {},
         daterange: {
           lower: "2022-01-01",
-          upper: "2022-06-30",
+          upper: "2023-06-31",
         },
       },
     };

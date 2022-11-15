@@ -5,6 +5,8 @@ class EventBlocks extends React.Component {
   state = {
     musicEvents: [],
     maxEventsShown: 250,
+    eventDataLoading: false,
+    eventDataLoaded: false,
   };
   currentYear = new Date().getFullYear();
 
@@ -15,21 +17,30 @@ class EventBlocks extends React.Component {
     this.add100ToMaxEventsShown = this.add100ToMaxEventsShown.bind(this);
   }
 
-  componentDidMount() {
-    this.getEventData()
-
+  componentDidUpdate() {
+    if (!this.state.eventDataLoaded && !this.state.eventDataLoading) {
+      this.getEventData();
+    }
   }
   async getEventData() {
-    return await fetch("./events-list.json", {}).then((response) => {
-      return response.json();
-    }).then((musicEvents) => {
-      let me2 = musicEvents
-        .map(frontendMusicEventExpansionMap)
-        .filter(musicEventDateFilter);
-      this.setState({ musicEvents: me2 });
-    })
+    this.setState({ eventDataLoading: true });
+    return await fetch("./events-list.json", {})
+      .then((response) => {
+        return response.json();
+      })
+      .then((musicEvents) => {
+        let me2 = musicEvents
+          .map(frontendMusicEventExpansionMap)
+          .filter(musicEventDateFilter);
+        this.setState({ musicEvents: me2 });
+        this.setState({ eventDataLoaded: true });
+      })
       .catch((error) => {
         console.error(error);
+        this.setState({ eventDataLoaded: false });
+      })
+      .finally(() => {
+        this.setState({ eventDataLoading: false });
       });
   }
   add100ToMaxEventsShown() {
@@ -161,16 +172,16 @@ class EventBlocks extends React.Component {
   }
 
   musicEventFilters(musicEvents) {
-    const filtered = musicEvents.filter((musicEvent, musicEventKey) => {
-      return musicEventKey <= this.state.maxEventsShown;
-    })
+    const filtered = musicEvents
+      .filter((musicEvent, musicEventKey) => {
+        return musicEventKey <= this.state.maxEventsShown;
+      })
       .filter((musicEvent, musicEventKey) => {
         if (!this.props.filterSettings?.podia[musicEvent.location]) {
           return true;
         }
         return (
-          this.props.filterSettings.podia[musicEvent.location].checked ??
-          true
+          this.props.filterSettings.podia[musicEvent.location].checked ?? true
         );
       })
       .filter((musicEvent, musicEventKey) => {
@@ -192,15 +203,15 @@ class EventBlocks extends React.Component {
           return false;
         }
         return true;
-      })
+      });
 
     return filtered.map((musicEvent, musicEventIndex) => {
       musicEvent.firstOfMonth = false;
       const startDateTime = new Date(musicEvent.startDateTime);
-      musicEvent.eventMonth = startDateTime.toLocaleDateString('nl', {
-        year: 'numeric',
-        month: 'short'
-      })
+      musicEvent.eventMonth = startDateTime.toLocaleDateString("nl", {
+        year: "numeric",
+        month: "short",
+      });
       if (!musicEventIndex || !filtered[musicEventIndex - 1]) {
         musicEvent.firstOfMonth = true;
       }
@@ -209,7 +220,6 @@ class EventBlocks extends React.Component {
       }
       return musicEvent;
     });
-
   }
 
   render() {
@@ -217,66 +227,73 @@ class EventBlocks extends React.Component {
 
     return (
       <div className="event-block__wrapper">
-        {musicEvents
+        {musicEvents.map((musicEvent, musicEventKey) => {
+          const priceElement = this.priceElement(musicEvent);
+          const startMomentLang = this.createStartMoment(musicEvent);
+          const linkToVenueHTML = this.createLinkToVenue(musicEvent);
+          const imageHTML = this.createImageHTML(musicEvent);
+          const articleID = `event-id-${musicEventKey}`;
+          const moreButtonHTML = this.createMoreButtonHTML(
+            musicEvent,
+            musicEventKey
+          );
+          const firstOfMonthBlock = musicEvent.firstOfMonth ? (
+            <time className="event-block__first-of-month">
+              {musicEvent.eventMonth}
+            </time>
+          ) : (
+            ""
+          );
+          return (
+            <article
+              id={articleID}
+              key={musicEventKey}
+              data-date={musicEvent.eventMonth}
+              className={`event-block provide-dark-contrast ${
+                musicEvent.enlarged ? "event-block--enlarged" : ""
+              } ${
+                musicEvent.firstOfMonth ? "event-block--first-of-month" : ""
+              }`}
+            >
+              {firstOfMonthBlock}
+              {imageHTML}
+              <header className="event-block__header contrast-with-dark">
+                <h2 className="event-block__title contrast-with-dark">
+                  <span className="event-block__title-showname cursive-font">
+                    {musicEvent.title}
+                  </span>
+                  <span className="event-block__title-location">
+                    {this.createLocation(musicEvent)}
+                  </span>
 
-          .map((musicEvent, musicEventKey) => {
-            const priceElement = this.priceElement(musicEvent);
-            const startMomentLang = this.createStartMoment(musicEvent);
-            const linkToVenueHTML = this.createLinkToVenue(musicEvent);
-            const imageHTML = this.createImageHTML(musicEvent);
-            const articleID = `event-id-${musicEventKey}`;
-            const moreButtonHTML = this.createMoreButtonHTML(
-              musicEvent,
-              musicEventKey
-            );
-            const firstOfMonthBlock = musicEvent.firstOfMonth ? <time className='event-block__first-of-month'>{musicEvent.eventMonth}</time> : '';
-            return (
-              <article
-                id={articleID}
-                key={musicEventKey}
-                data-date={musicEvent.eventMonth}
-                className={`event-block provide-dark-contrast ${musicEvent.enlarged ? "event-block--enlarged" : ""
-                  } ${musicEvent.firstOfMonth ? "event-block--first-of-month" : ""
+                  <span className="event-block__startDate contrast-with-dark">
+                    {startMomentLang}
+                  </span>
+                </h2>
+                <p
+                  className={`event-block__paragraph event-block__paragraph--short-text contrast-with-dark ${
+                    musicEvent.enlarged ? "hidden" : ""
                   }`}
-              >
-                {firstOfMonthBlock}
-                {imageHTML}
-                <header className="event-block__header contrast-with-dark">
-                  <h2 className="event-block__title contrast-with-dark">
-                    <span className="event-block__title-showname cursive-font">
-                      {musicEvent.title}
-                    </span>
-                    <span className="event-block__title-location">
-                      {this.createLocation(musicEvent)}
-                    </span>
-
-                    <span className="event-block__startDate contrast-with-dark">
-                      {startMomentLang}
-                    </span>
-                  </h2>
-                  <p
-                    className={`event-block__paragraph event-block__paragraph--short-text contrast-with-dark ${musicEvent.enlarged ? "hidden" : ""
-                      }`}
-                  >
-                    {this.stripHTML(musicEvent.shortText)}
-                  </p>
-                  {priceElement}
-                </header>
-                <section className="event-block__main contrast-with-dark">
-                  {moreButtonHTML}
-                  <div
-                    className="void-container-for-enlarged"
-                    dangerouslySetInnerHTML={{
-                      __html: musicEvent.longTextHTML,
-                    }}
-                  ></div>
-                  <footer className="event-block__footer contrast-with-dark">
-                    {linkToVenueHTML}
-                  </footer>
-                </section>
-              </article>
-            );
-          })}
+                >
+                  {this.stripHTML(musicEvent.shortText)}
+                </p>
+                {priceElement}
+              </header>
+              <section className="event-block__main contrast-with-dark">
+                {moreButtonHTML}
+                <div
+                  className="void-container-for-enlarged"
+                  dangerouslySetInnerHTML={{
+                    __html: musicEvent.longTextHTML,
+                  }}
+                ></div>
+                <footer className="event-block__footer contrast-with-dark">
+                  {linkToVenueHTML}
+                </footer>
+              </section>
+            </article>
+          );
+        })}
         <button
           className="event-block__more-blocks"
           onClick={this.add100ToMaxEventsShown}
