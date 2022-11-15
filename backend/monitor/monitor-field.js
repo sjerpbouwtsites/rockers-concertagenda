@@ -74,12 +74,8 @@ export default class MonitorField {
   }
   updateError(updateData){
     this.data.unshift(updateData);
-    const mainFieldEl = document.getElementById(this.mainFieldName);    
-      console.log("HET IS EEN ERROR");
-      console.log(mainFieldEl);
-      const aaaa = this.errorUpdateHTML;
-      console.log(aaaa);
-      mainFieldEl.innerHTML = aaaa;    
+    document.getElementById(this.mainFieldName).innerHTML =
+      this.errorUpdateHTML;
   }
   updateTable(updateData) {
     this.data = {
@@ -134,9 +130,11 @@ export default class MonitorField {
     <ul class='monitorfield__list monitorfield__list--roll'>${listItems}</ul>`;
   }
   get errorUpdateHTML() {
+
+    const errorsPerWorkerCounter = {};
+
     const listItems = this.data
       .map((rollRow) => {
-        console.log(rollRow, 'errorUpdateHTML 138')
         const titleText = `${rollRow.messageData?.title ?? ""}${
           rollRow.messageData?.workerName ?? ""
         }`;
@@ -144,15 +142,23 @@ export default class MonitorField {
           ${rollRow.messageData.content.remarks}
           ${rollRow.messageData.content.text}
         `;
-        
 
-        return `<li class='monitorfield__list-item' id='${rollRow.messageData?.workerName}-${Math.floor(Math.random() * 250)}'>
+        let currentErrorsForThisWorkerCount = 0;
+        if (!errorsPerWorkerCounter[errorsPerWorkerCounter]) {
+          errorsPerWorkerCounter[errorsPerWorkerCounter] = 0;
+        } else {
+          errorsPerWorkerCounter[errorsPerWorkerCounter] =
+            errorsPerWorkerCounter[errorsPerWorkerCounter] + 1;
+          currentErrorsForThisWorkerCount =
+            errorsPerWorkerCounter[errorsPerWorkerCounter];
+        }
+
+        return `<li class='monitorfield__list-item' id='error-ref-${rollRow.messageData?.workerName}-${currentErrorsForThisWorkerCount}'>
         <span class='monitorfield__list-item-left'>${titleText}</span>
         <div class='monitorfield__list-item-right'>${hoofdPrintTekst}</div>
       </li>`;
       })
       .join("");
-      console.log('PROINTING', ` <ul class='monitorfield__list'>${listItems}</ul>`, 'errorUpdateHTML')
     return ` <ul class='monitorfield__list monitorfield__list--error'>${listItems}</ul>`;
   }
   get expandedUpdatedHTML() {
@@ -216,6 +222,7 @@ export default class MonitorField {
         }<span class='kutspacer'></span></th>
         ${sortedFamily
           .map((worker) => {
+            console.log(worker, "monitor fields 212");
             let tdClass = "worker-data-cell ";
             tdClass += "worker-status--" + worker.status;
             tdClass +=
@@ -226,7 +233,10 @@ export default class MonitorField {
               ? ""
               : `<ol class='worker-cell-inner--errors'>
               ${worker.errors
-                .map((error) => `<li>${error.message}</li>`)
+                .map(
+                  (error, index) =>
+                    `<li><a href='#error-ref-${worker.name}-${index}'>😒</a></li>`
+                )
                 .join("")}
             </ol>`;
             const statusHTML = `<td class='${tdClass}' title='${worker.workerNamedIndex}'>`;

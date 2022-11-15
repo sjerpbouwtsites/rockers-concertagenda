@@ -124,17 +124,20 @@ pre {
 }
 
 .worker-data-cell.worker-status--registered {
-  background-color: rgba(rgb(148, 148, 114), 0.2)
+  background-color: rgba(148, 148, 114, 0.2)
 }
 
 .worker-data-cell.worker-status--working {
-  background-color: rgba(139, 0, 0, 0.5);
+  background-color: rgba(148, 148, 114, 0.5)
 }
 
 .worker-data-cell.worker-status--done {
   background-color: rgba(34, 255, 255, 0.6);
 }
-
+.worker-data-cell.worker-errors--has-errors,
+.worker-data-cell.worker-status--done.worker-errors--has-errors {
+  background-color: #c1472e;
+}
 
 
 .worker-cell-inner {

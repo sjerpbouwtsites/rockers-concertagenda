@@ -19,12 +19,14 @@ import { QuickWorkerMessage } from "./rock-worker.js";
 letScraperListenToMasterMessageAndInit(scrapeEffenaar);
 async function scrapeEffenaar() {
   const qwm = new QuickWorkerMessage(workerData);
+  parentPort.postMessage(qwm.workerInitialized());
   const browser = await puppeteer.launch();
   Promise.race([
     makeBaseEventList(browser, qwm, effenaarMonths),
     errorAfterSeconds(15000),
   ])
     .then((baseMusicEvents) => {
+      parentPort.postMessage(qwm.workerStarted());
       return fillMusicEvents(browser, baseMusicEvents, qwm);
     })
     .then((browser) => {
@@ -58,7 +60,7 @@ async function processSingleMusicEvent(browser, baseMusicEvents, qwm) {
   if (
     !(await page
       .goto(firstMusicEvent.venueEventUrl, {
-        timeout: 9999,
+        timeout: 20000,
       })
       .then(() => true)
       .catch((err) => {

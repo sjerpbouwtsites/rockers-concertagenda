@@ -23,6 +23,7 @@ async function scrape013() {
 
   Promise.race([makeBaseEventList(browser), errorAfterSeconds(15000)])
     .then((baseMusicEvents) => {
+      parentPort.postMessage(qwm.workerStarted());
       return fillMusicEvents(browser, baseMusicEvents, qwm);
     })
     .then((browser) => {
