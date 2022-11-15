@@ -1,54 +1,6 @@
 [
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-10-22T19:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://bibelot.net/agenda/dear-mother/",
-    "title": "DEAR MOTHER",
-    "location": "bibelot",
-    "price": 16.5,
-    "shortText": "",
-    "longText": "../public/texts/158cfc17-1530-4787-b868-d719e981b712.html",
-    "image": "https://bibelot.net/wp-content/uploads/2022/07/Ferry-Duijsens-DEAR-MOTHER-2jpg-1400x933.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-10-28T20:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://bibelot.net/agenda/halloween-upside-down/",
-    "title": "Halloween: Upside Down",
-    "location": "bibelot",
-    "price": 12.5,
-    "shortText": "",
-    "longText": "../public/texts/838a7106-c34e-4f2d-b073-6aff4363bd7b.html",
-    "image": "https://bibelot.net/wp-content/uploads/2022/09/Halloween-Upside-Down-web-1400x833.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-11-05T20:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://bibelot.net/agenda/temple-fang/",
-    "title": "Temple Fang",
-    "location": "bibelot",
-    "price": 13.5,
-    "shortText": "",
-    "longText": "../public/texts/aea0445d-c5fe-42ac-ad1e-6e3086c381f3.html",
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-11-06T16:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://bibelot.net/agenda/impericon-never-say-die-tour/",
-    "title": "Impericon Never Say Die! tour",
-    "location": "bibelot",
-    "price": 27,
-    "shortText": "",
-    "longText": "../public/texts/5be532ad-1931-4dae-9c9b-70b55475a81a.html",
-    "image": "https://bibelot.net/wp-content/uploads/2022/02/NSD-FB-Web-1400x788.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
     "startDateTime": "2022-11-18T20:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://bibelot.net/agenda/the-vacant-lots-us/",
@@ -56,7 +8,7 @@
     "location": "bibelot",
     "price": 14.5,
     "shortText": "",
-    "longText": "../public/texts/dfaf7abf-f564-4674-bf37-353d9b2945df.html",
+    "longText": "../public/texts/3cc7f8e7-ca44-404c-8631-86cbfb2f94d8.html",
     "image": "https://bibelot.net/wp-content/uploads/2022/07/291501342_1396640617523726_2465287206863332460_n-1400x874.jpg"
   },
   {
@@ -68,7 +20,7 @@
     "location": "bibelot",
     "price": 22.5,
     "shortText": "",
-    "longText": "../public/texts/e036f886-92ca-48df-89d5-d705ebf225a5.html",
+    "longText": "../public/texts/891aeeff-67bf-4779-8823-a0cdf27ef15d.html",
     "image": "https://bibelot.net/wp-content/uploads/2020/03/Magnapop-HR-PRESS-2018-pic-by-Pieter-Verhaeghe-1400x932.jpg"
   },
   {
@@ -80,7 +32,7 @@
     "location": "bibelot",
     "price": 24,
     "shortText": "",
-    "longText": "../public/texts/ce742e37-0a83-4e87-b264-2d49091e9e9a.html",
+    "longText": "../public/texts/ec2cd6ec-8162-48e7-8d7e-03ee5f8ee6e3.html",
     "image": null
   },
   {
@@ -92,7 +44,19 @@
     "location": "bibelot",
     "price": 14,
     "shortText": "",
-    "longText": "../public/texts/5c52b979-4b60-4be6-b6f5-1cd79af18e1a.html",
+    "longText": "../public/texts/c4b408ac-5f89-4d2f-88b3-ffd31f9e9a69.html",
     "image": "https://bibelot.net/wp-content/uploads/2022/09/Live-rock-karaoke-band-e1663922841996.jpg"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-04-07T19:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://bibelot.net/agenda/feuerengel-de-2023/",
+    "title": "FEUERENGEL (DE)",
+    "location": "bibelot",
+    "price": null,
+    "shortText": "",
+    "longText": "../public/texts/4bb313a3-3f64-4e28-8ace-f6a4e2869847.html",
+    "image": null
   }
 ]

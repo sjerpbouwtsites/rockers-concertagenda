@@ -1,4 +1,70 @@
 
+  unknown location Error - 1:20:42 AM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  unknown location Error - 1:20:41 AM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  unknown location Error - 1:15:00 AM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  Kavka promise race Error - 1:14:56 AM
+  Error: Kavka single failure, failure promise fired, at: 
+Deathstars
+https://kavka.be/event/deathstars/
+Original error message:
+Navigation timeout of 7500 ms exceeded
+url: https://kavka.be/event/deathstars/
+    at file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-kavka.js:79:21
+    at async scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-kavka.js:28:5) 
+  Kavka single failure, failure promise fired, at: 
+Deathstars
+https://kavka.be/event/deathstars/
+Original error message:
+Navigation timeout of 7500 ms exceeded
+url: https://kavka.be/event/deathstars/
+  
+  
+  unknown location Error - 1:14:13 AM
+  TypeError: Cannot read properties of undefined (reading 'stack')
+    at handleError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:16:11)
+    at getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:180:5)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:75:22)
+    at async scrapeTivolivredenburg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:27:5) 
+  Cannot read properties of undefined (reading 'stack')
+  
+  
+  unknown location Error - 1:14:13 AM
+  Error: Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:38:60
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:128:16)
+    at async processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:75:22)
+    at async scrapeTivolivredenburg (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-tivolivredenburg.js:27:5) 
+  Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:38:60
+  
+  
+  unknown location Error - 1:11:36 AM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 30000 ms exceeded
+  
+  
   Effenaar goto single page Error - 7:20:44 AM
   undefined 
   undefined

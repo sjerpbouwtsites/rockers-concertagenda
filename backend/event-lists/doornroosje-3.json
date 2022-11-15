@@ -1,39 +1,27 @@
 [
   {
-    "doorOpenDateTime": "2022-10-26T19:00:00.000Z",
-    "startDateTime": "2022-10-26T20:00:00.000Z",
+    "doorOpenDateTime": "2022-11-28T19:00:00.000Z",
+    "startDateTime": "2022-11-28T19:30:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/life/",
-    "title": "LIFE",
+    "venueEventUrl": "https://www.doornroosje.nl/event/halocene/",
+    "title": "Halocene",
     "location": "doornroosje",
-    "price": 10,
-    "shortText": null,
-    "longText": "../public/texts/4e0f29fb-0bba-4d0e-ab0b-73e19aac6f13.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2022/03/LIFE-MOON-1920x1080-1-350x197-c-default.jpg"
-  },
-  {
-    "doorOpenDateTime": "2022-11-25T17:30:00.000Z",
-    "startDateTime": "2022-11-25T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/faces-of-death-2/",
-    "title": "Rivers of Nihil + Fallujah e.a.",
-    "location": "doornroosje",
-    "price": 24,
-    "shortText": "Laatste kaarten",
-    "longText": "../public/texts/e6e8a21b-3dd3-419c-9293-1ef9d64f9d77.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2021/08/Faces-of-Death-1920x1080-1-350x197-c-default.jpg"
-  },
-  {
-    "doorOpenDateTime": "2023-01-21T18:00:00.000Z",
-    "startDateTime": "2023-01-21T18:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/revocation-3/",
-    "title": "Revocation + Goatwhore e.a.",
-    "location": "doornroosje",
-    "price": 24,
+    "price": 16,
     "shortText": "Fortarock",
-    "longText": "../public/texts/b789d293-89e6-4e2d-862c-bde7ea1e0194.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2022/07/Revocation-a-1934x1088-350x197-c-default.jpg"
+    "longText": "../public/texts/eaa40859-711c-4293-9be3-549d5825ee99.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2022/03/Halocene-1934x1088-c-default.jpg22-350x197-c-default.jpg"
+  },
+  {
+    "doorOpenDateTime": "2023-02-25T18:00:00.000Z",
+    "startDateTime": "2023-02-25T18:45:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.doornroosje.nl/event/hang-youth-3/",
+    "title": "Hang Youth",
+    "location": "doornroosje",
+    "price": 17.5,
+    "shortText": null,
+    "longText": "../public/texts/4c0fc2e0-d1d1-43d1-a380-b4fcaaa06b0a.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2022/06/hangyouth-1920x1080-2023-1934x1088-350x197-c-default.jpg"
   },
   {
     "doorOpenDateTime": "2023-03-18T18:30:00.000Z",
@@ -44,7 +32,7 @@
     "location": "doornroosje",
     "price": 19.5,
     "shortText": null,
-    "longText": "../public/texts/6a74016b-555b-471b-8217-a6c9275f7ab8.html",
+    "longText": "../public/texts/1e526ac6-b478-434f-a4c9-6d61e915359e.html",
     "image": "https://www.doornroosje.nl/app/uploads/2021/09/FUZZ-1920x1080-1-350x197-c-default.jpg"
   }
 ]
