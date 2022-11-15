@@ -12,7 +12,6 @@ import {
   getPriceFromHTML,
 } from "./tools.js";
 import { letScraperListenToMasterMessageAndInit } from "./generic-scraper.js";
-
 import { QuickWorkerMessage } from "./rock-worker.js";
 
 letScraperListenToMasterMessageAndInit(scrape013);

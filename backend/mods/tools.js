@@ -24,6 +24,12 @@ export function handleError(error, workerData, remarks = null) {
       },
     })
   );
+  parentPort.postMessage(
+    WorkerMessage.quick("clients-log", "error", {
+      error,
+      workerData,
+    })
+  );    
   const time = new Date();
   const curErrorLog = fs.readFileSync(fsDirections.errorLog) || "";
   const newErrorLog = `

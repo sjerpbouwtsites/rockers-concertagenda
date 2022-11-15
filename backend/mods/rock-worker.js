@@ -148,26 +148,42 @@ export class WorkerMessage {
     }
 
     switch (this.type) {
-      case 'process':
-        this.subtype.split(' ').map(thisSubtype => {
-          return !['close-client', 'closed', 'workers-status', 'command-start'].includes(thisSubtype)
-        }).find(subtypeFout => {
-          return subtypeFout;
-        }) && this.throwSubtypeError();
-         break;
-         case 'update':
-          this.subtype?.split(' ').map(thisSubtype => {
-            return !['error', 'message-roll', 'scraper-results', 'debugger'].includes(thisSubtype)
-          }).find(subtypeFout => {
-            return subtypeFout;
+      case "clients-log":
+        return true;
+      case "process":
+        this.subtype
+          .split(" ")
+          .map((thisSubtype) => {
+            return ![
+              "close-client",
+              "closed",
+              "workers-status",
+              "command-start",
+            ].includes(thisSubtype);
           })
-           && this.throwSubtypeError();
-          break;   
+          .find((subtypeFout) => {
+            return subtypeFout;
+          }) && this.throwSubtypeError();
+        break;
+      case "update":
+        this.subtype
+          ?.split(" ")
+          .map((thisSubtype) => {
+            return ![
+              "error",
+              "message-roll",
+              "scraper-results",
+              "debugger",
+            ].includes(thisSubtype);
+          })
+          .find((subtypeFout) => {
+            return subtypeFout;
+          }) && this.throwSubtypeError();
+        break;
       default:
         console.log(this);
         throw new Error("ONBEKEND TYPE WorkerMessage!");
-        break;
-    return true;
+        return true;
     }
   }
   

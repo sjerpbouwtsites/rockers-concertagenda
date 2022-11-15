@@ -1,6 +1,6 @@
 import MusicEvent from "./music-event.js";
 import puppeteer from "puppeteer";
-import { parentPort } from "worker_threads";
+import { parentPort, workerData } from "worker_threads";
 import EventsList from "./events-list.js";
 import fs from "fs";
 import crypto from "crypto";
@@ -11,77 +11,72 @@ import {
   handleError,
   basicMusicEventsFilter,
   errorAfterSeconds,
-  log
+  log,
 } from "./tools.js";
 import { letScraperListenToMasterMessageAndInit } from "./generic-scraper.js";
+import { QuickWorkerMessage } from "./rock-worker.js";
 
 letScraperListenToMasterMessageAndInit(scrapeEffenaar);
-async function scrapeEffenaar(workerIndex) {
+async function scrapeEffenaar() {
+  const qwm = new QuickWorkerMessage(workerData);
   const browser = await puppeteer.launch();
-
-  try {
-    const baseMusicEvents = await Promise.race([
-      makeBaseEventList(browser, workerIndex, effenaarMonths),
-      errorAfterSeconds(15000),
-    ]);
-
-
-    await fillMusicEvents(browser, baseMusicEvents, workerIndex);
-  } catch (error) {
-    handleError(error);
-  }
+  Promise.race([
+    makeBaseEventList(browser, qwm, effenaarMonths),
+    errorAfterSeconds(15000),
+  ])
+    .then((baseMusicEvents) => {
+      return fillMusicEvents(browser, baseMusicEvents, qwm);
+    })
+    .then((browser) => {
+      parentPort.postMessage(qwm.workerDone(EventsList.amountOfEvents));
+      EventsList.save(workerData.family, workerData.index);
+      browser && browser.hasOwnProperty("close") && browser.close();
+    })
+    .catch((error) =>
+      handleError(error, workerData, "outer catch scrape effenaar")
+    );
 }
 
-async function fillMusicEvents(browser, baseMusicEvents, workerIndex) {
+async function fillMusicEvents(browser, baseMusicEvents, qwm) {
   const baseMusicEventsCopy = [...baseMusicEvents];
-
-  return processSingleMusicEvent(
-    browser,
-    baseMusicEventsCopy,
-    workerIndex
-  ).finally(() => {
-    setTimeout(() => {
-      browser.close();
-    }, 5000);
-    parentPort.postMessage({
-      status: "done",
-    });
-    EventsList.save("effenaar", workerIndex);
-  });
+  return processSingleMusicEvent(browser, baseMusicEventsCopy, qwm);
 }
 
-async function processSingleMusicEvent(browser, baseMusicEvents, workerIndex) {
-  parentPort.postMessage({
-    status: "todo",
-    message: baseMusicEvents.length,
+async function processSingleMusicEvent(browser, baseMusicEvents, qwm) {
+  qwm.todo(baseMusicEvents.length).forEach((JSONblob) => {
+    parentPort.postMessage(JSONblob);
   });
 
   const newMusicEvents = [...baseMusicEvents];
   const firstMusicEvent = newMusicEvents.shift();
 
   if (!firstMusicEvent || baseMusicEvents.length === 0) {
-    return true;
+    return browser;
   }
-
-  if (!firstMusicEvent.venueEventUrl) {
-    return true;
-  }
-
   const page = await browser.newPage();
 
-  try {
-    await page.goto(firstMusicEvent.venueEventUrl, {
-      timeout: 10000
-    });
-  } catch (error) {
-    handleError(`${error.message} \n${firstMusicEvent.venueEventUrl}`, 'Effenaar goto single page')
+  if (
+    !(await page
+      .goto(firstMusicEvent.venueEventUrl, {
+        timeout: 9999,
+      })
+      .then(() => true)
+      .catch((err) => {
+        handleError(
+          err,
+          workerData,
+          `Effenaar goto single page mislukt:<br><a href='${firstMusicEvent.venueEventUrl}'>${firstMusicEvent.title}</a><br>`
+        );
+      }))
+  ) {
+    return newMusicEvents.length
+      ? processSingleMusicEvent(browser, newMusicEvents, qwm)
+      : browser;
   }
-
-
 
   try {
     const pageInfo = await Promise.race([
-      getPageInfo(page, effenaarMonths),
+      getPageInfo(page, effenaarMonths, qwm),
       errorAfterSeconds(15000),
     ]);
 
@@ -93,7 +88,7 @@ async function processSingleMusicEvent(browser, baseMusicEvents, workerIndex) {
       let uuid = crypto.randomUUID();
       const longTextPath = `${fsDirections.publicTexts}/${uuid}.html`;
 
-      fs.writeFile(longTextPath, pageInfo.longTextHTML, "utf-8", () => { });
+      fs.writeFile(longTextPath, pageInfo.longTextHTML, "utf-8", () => {});
       pageInfo.longText = longTextPath;
     }
 
@@ -101,133 +96,140 @@ async function processSingleMusicEvent(browser, baseMusicEvents, workerIndex) {
     if (pageInfo) {
       firstMusicEvent.merge(pageInfo);
     }
-    firstMusicEvent.register();
-
-    page.close();
+    firstMusicEvent.registerIfValid();
+    if (!page.isClosed() && page.close());
   } catch (error) {
-    handleError(error);
+    handleError(pageInfoError, workerData, "get page info fail");
   }
 
-  if (newMusicEvents.length) {
-    return processSingleMusicEvent(browser, newMusicEvents, workerIndex);
-  } else {
-    return true;
-  }
+  return newMusicEvents.length
+    ? processSingleMusicEvent(browser, newMusicEvents, qwm)
+    : browser;
 }
 
-async function getPageInfo(page, effenaarMonths) {
+async function getPageInfo(page, effenaarMonths, qwm) {
   let pageInfo = {};
   pageInfo.cancelReason = "";
 
-  await page.waitForSelector('.event-bar-inner-row');
+  await page.waitForSelector(".event-bar-inner-row");
 
-  pageInfo = await page.evaluate(
-    (effenaarMonths) => {
+  pageInfo = await page.evaluate((effenaarMonths) => {
+    const image = document.querySelector(".header-image img")?.src ?? null;
+    const priceTextcontent =
+      document.querySelector(".tickets-btn")?.textContent ?? null;
+    let startDate, doorTime, startTime, doorOpenDateTime, startDateTime;
 
-      const image = document.querySelector(".header-image img")?.src ?? null;
-      const priceTextcontent = document.querySelector(".tickets-btn")?.textContent ?? null;
-      let startDate, doorTime, startTime, doorOpenDateTime, startDateTime;
-
-      try {
-        const dateText = document.querySelector(".header-meta-date")?.textContent.trim() ?? '';
-        if (!dateText) {
-          return null;
-        }
-        const [, dayNumber, monthName, year] = dateText.match(/(\d+)\s(\w+)\s(\d\d\d\d)/)
-        const fixedDay = dayNumber.padStart(2, '0');
-        const monthNumber = effenaarMonths[monthName]
-        startDate = `${year}-${monthNumber}-${fixedDay}`;
-      } catch (error) {
-        return {
-          error: error.message,
-        }
+    try {
+      const dateText =
+        document.querySelector(".header-meta-date")?.textContent.trim() ?? "";
+      if (!dateText) {
+        return null;
       }
-
-
-      try {
-        const startTimeAr = document.querySelector('.time-start-end')?.textContent.match(/\d\d:\d\d/)
-        if (Array.isArray(startTimeAr) && startTimeAr.length) {
-          startTime = startTimeAr[0]
-        }
-        const doorTimeAr = document.querySelector('.time-open')?.textContent.match(/\d\d:\d\d/)
-        if (Array.isArray(doorTimeAr) && doorTimeAr.length) {
-          doorTime = doorTimeAr[0]
-        }
-
-      } catch (error) {
-        return {
-          error: `${error.message}\n${startTime}\n${doorTime}`
-        }
-      }
-
-      try {
-        if (doorTime) {
-          doorOpenDateTime = new Date(`${startDate}T${doorTime}:00`).toISOString();
-        }
-
-        if (startTime) {
-          startDateTime = new Date(`${startDate}T${startTime}:00`).toISOString();
-        }
-      } catch (error) {
-        return {
-          error: error.message
-        }
-
-      }
-
-      const longTextHTML = document.querySelector(".header ~ .blocks")?.innerHTML ?? null;
-
+      const [, dayNumber, monthName, year] = dateText.match(
+        /(\d+)\s(\w+)\s(\d\d\d\d)/
+      );
+      const fixedDay = dayNumber.padStart(2, "0");
+      const monthNumber = effenaarMonths[monthName];
+      startDate = `${year}-${monthNumber}-${fixedDay}`;
+    } catch (error) {
       return {
-        priceTextcontent,
-        doorOpenDateTime,
-        startDateTime,
-        image,
-        longTextHTML, doorTime, startTime
+        error: error.message,
       };
-    },
-    effenaarMonths
-  );
+    }
+
+    try {
+      const startTimeAr = document
+        .querySelector(".time-start-end")
+        ?.textContent.match(/\d\d:\d\d/);
+      if (Array.isArray(startTimeAr) && startTimeAr.length) {
+        startTime = startTimeAr[0];
+      }
+      const doorTimeAr = document
+        .querySelector(".time-open")
+        ?.textContent.match(/\d\d:\d\d/);
+      if (Array.isArray(doorTimeAr) && doorTimeAr.length) {
+        doorTime = doorTimeAr[0];
+      }
+    } catch (error) {
+      return {
+        error: `${error.message}\n${startTime}\n${doorTime}`,
+      };
+    }
+
+    try {
+      if (doorTime) {
+        doorOpenDateTime = new Date(
+          `${startDate}T${doorTime}:00`
+        ).toISOString();
+      }
+
+      if (startTime) {
+        startDateTime = new Date(`${startDate}T${startTime}:00`).toISOString();
+      }
+    } catch (error) {
+      return {
+        error: error.message,
+      };
+    }
+
+    const longTextHTML =
+      document.querySelector(".header ~ .blocks")?.innerHTML ?? null;
+
+    return {
+      priceTextcontent,
+      doorOpenDateTime,
+      startDateTime,
+      image,
+      longTextHTML,
+      doorTime,
+      startTime,
+    };
+  }, effenaarMonths);
   if (pageInfo.error) {
-    handleError(pageInfo.error, `Effenaar pageinfo `);
+    handleError(pageInfo.error, workerData, `Effenaar pageinfo `);
   }
   return pageInfo;
-
 }
 
-async function makeBaseEventList(browser, workerIndex, effenaarMonths) {
+async function makeBaseEventList(browser, qwm, effenaarMonths) {
   const page = await browser.newPage();
   await page.goto("https://www.effenaar.nl/agenda?genres.title=heavy", {
     waitUntil: "load",
   });
 
-  const rawEvents = await page.evaluate(({ workerIndex, months }) => {
+  return page
+    .evaluate(
+      ({ workerIndex, months }) => {
+        return Array.from(
+          document.querySelectorAll(".search-and-filter .agenda-card")
+        )
+          .filter((eventEl, index) => {
+            return index % 4 === workerIndex;
+          })
+          .map((eventEl, index) => {
+            const res = {};
+            res.title = "";
+            const titleEl = eventEl.querySelector(".card-title");
+            if (!!titleEl) {
+              res.title = titleEl.textContent.trim();
+            }
+            res.shortText =
+              eventEl.querySelector(".card-subtitle")?.textContent;
 
-    return Array.from(document.querySelectorAll(".search-and-filter .agenda-card"))
-      .filter((eventEl, index) => {
-        return index % 4 === workerIndex;
-      })
-      .map((eventEl, index) => {
-        const res = {};
-        res.title = "";
-        const titleEl = eventEl.querySelector(".card-title");
-        if (!!titleEl) {
-          res.title = titleEl.textContent.trim();
-        }
-        res.shortText = eventEl.querySelector('.card-subtitle')?.textContent;
+            res.venueEventUrl = eventEl?.href;
 
-        res.venueEventUrl = eventEl?.href;
-
-        res.location = "effenaar";
-        return res;
-      });
-  }, { workerIndex: workerIndex, months: effenaarMonths });
-
-  rawEvents.filter(rawEvent => {
-    return !!rawEvent.error
-  }).forEach(rawEventWithError => {
-    handleError(rawEventWithError)
-  })
-  return rawEvents
-    .filter(basicMusicEventsFilter)
-    .map((event) => new MusicEvent(event));
+            res.location = "effenaar";
+            return res;
+          });
+      },
+      { workerIndex: workerData.index, months: effenaarMonths }
+    )
+    .then((rawEvents) => {
+      return rawEvents
+        .filter(basicMusicEventsFilter)
+        .map((event) => new MusicEvent(event));
+    })
+    .catch((err) => {
+      handleError(err, workerData, "make base event list");
+    });
 }
