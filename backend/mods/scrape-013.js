@@ -1,6 +1,6 @@
 import MusicEvent from "./music-event.js";
 import puppeteer from "puppeteer";
-import { parentPort } from "worker_threads";
+import { parentPort, workerData } from "worker_threads";
 import EventsList from "./events-list.js";
 import fs from "fs";
 import crypto from "crypto";
@@ -13,44 +13,35 @@ import {
 } from "./tools.js";
 import { letScraperListenToMasterMessageAndInit } from "./generic-scraper.js";
 
+import { QuickWorkerMessage } from "./rock-worker.js";
+
 letScraperListenToMasterMessageAndInit(scrape013);
 
-async function scrape013(workerIndex) {
+async function scrape013() {
+  const qwm = new QuickWorkerMessage(workerData);
+  parentPort.postMessage(qwm.workerInitialized());
   const browser = await puppeteer.launch();
 
-  try {
-    const baseMusicEvents = await Promise.race([
-      makeBaseEventList(browser, workerIndex),
-      errorAfterSeconds(15000),
-    ]);
-    await fillMusicEvents(browser, baseMusicEvents, workerIndex);
-  } catch (error) {
-    handleError(error);
-  }
+  Promise.race([makeBaseEventList(browser), errorAfterSeconds(15000)])
+    .then((baseMusicEvents) => {
+      return fillMusicEvents(browser, baseMusicEvents, qwm);
+    })
+    .then((browser) => {
+      parentPort.postMessage(qwm.workerDone(EventsList.amountOfEvents));
+      EventsList.save(workerData.family, workerData.index);
+      browser && browser.hasOwnProperty("close") && browser.close();
+    })
+    .catch((error) => handleError(error, workerData, "outer catch scrape 013"));
 }
 
-async function fillMusicEvents(browser, baseMusicEvents, workerIndex) {
+async function fillMusicEvents(browser, baseMusicEvents, qwm) {
   const baseMusicEventsCopy = [...baseMusicEvents];
-
-  return processSingleMusicEvent(
-    browser,
-    baseMusicEventsCopy,
-    workerIndex
-  ).finally(() => {
-    setTimeout(() => {
-      browser.close();
-    }, 500);
-    parentPort.postMessage({
-      status: "done",
-    });
-    EventsList.save("013", workerIndex);
-  });
+  return processSingleMusicEvent(browser, baseMusicEventsCopy, qwm);
 }
 
-async function processSingleMusicEvent(browser, baseMusicEvents, workerIndex) {
-  parentPort.postMessage({
-    status: "todo",
-    message: baseMusicEvents.length,
+async function processSingleMusicEvent(browser, baseMusicEvents, qwm) {
+  qwm.todo(baseMusicEvents.length).forEach((JSONblob) => {
+    parentPort.postMessage(JSONblob);
   });
 
   const newMusicEvents = [...baseMusicEvents];
@@ -62,11 +53,7 @@ async function processSingleMusicEvent(browser, baseMusicEvents, workerIndex) {
     !firstMusicEvent ||
     typeof firstMusicEvent === "undefined"
   ) {
-    return true;
-  }
-
-  if (!firstMusicEvent.venueEventUrl) {
-    return true;
+    return browser;
   }
 
   const page = await browser.newPage();
@@ -92,7 +79,7 @@ async function processSingleMusicEvent(browser, baseMusicEvents, workerIndex) {
       let uuid = crypto.randomUUID();
       const longTextPath = `${fsDirections.publicTexts}/${uuid}.html`;
 
-      fs.writeFile(longTextPath, pageInfo.longTextHTML, "utf-8", () => { });
+      fs.writeFile(longTextPath, pageInfo.longTextHTML, "utf-8", () => {});
       pageInfo.longText = longTextPath;
     }
 
@@ -100,30 +87,16 @@ async function processSingleMusicEvent(browser, baseMusicEvents, workerIndex) {
     if (pageInfo && !pageInfo.cancelReason) {
       delete pageInfo.cancelReason;
       firstMusicEvent.merge(pageInfo);
-    } else if (pageInfo.cancelReason !== "") {
-      parentPort.postMessage({
-        status: "console",
-        message: `Incomplete info for ${firstMusicEvent.title}`,
-      });
-    } else {
-      const pageInfoError = new Error(`unclear why failure at: ${firstMusicEvent.title
-        }
-      ${JSON.stringify(pageInfo)}
-       ${JSON.stringify(firstMusicEvent)}`);
-      handleError(pageInfoError);
     }
-    firstMusicEvent.register();
-
-    page.close();
+    firstMusicEvent.registerIfValid();
+    if (!page.isClosed() && page.close());
   } catch (error) {
-    handleError(error);
+    handleError(pageInfoError, workerData, "get page info fail");
   }
 
-  if (newMusicEvents.length) {
-    return processSingleMusicEvent(browser, newMusicEvents, workerIndex);
-  } else {
-    return true;
-  }
+  return newMusicEvents.length
+    ? processSingleMusicEvent(browser, newMusicEvents, qwm)
+    : browser;
 }
 
 async function getPageInfo(page, months) {
@@ -174,12 +147,12 @@ async function getPageInfo(page, months) {
     );
     return pageInfo;
   } catch (error) {
-    handleError(error);
+    handleError(error, workerdata, "page evaluate fail");
     return pageInfo;
   }
 }
 
-async function makeBaseEventList(browser, workerIndex) {
+async function makeBaseEventList(browser) {
   const page = await browser.newPage();
   await page.goto("https://www.013.nl/programma/heavy", {
     waitUntil: "load",
@@ -215,7 +188,7 @@ async function makeBaseEventList(browser, workerIndex) {
         }
         return res;
       });
-  }, workerIndex);
+  }, workerData.index);
   return rawEvents
     .filter(basicMusicEventsFilter)
     .map((event) => new MusicEvent(event));

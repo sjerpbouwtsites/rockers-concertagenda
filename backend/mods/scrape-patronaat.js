@@ -18,11 +18,11 @@ import { QuickWorkerMessage } from "./rock-worker.js";
 
 letScraperListenToMasterMessageAndInit(scrapePatronaat);
 
-async function scrapePatronaat(workerIndex) {
+async function scrapePatronaat() {
   const qwm = new QuickWorkerMessage(workerData);
   parentPort.postMessage(qwm.workerInitialized());
-
   const browser = await puppeteer.launch();
+
   try {
     const baseMusicEvents = await makeBaseEventList(browser, qwm);
     parentPort.postMessage(qwm.workerStarted());
@@ -115,11 +115,9 @@ async function processSingleMusicEvent(browser, baseMusicEvents, qwm) {
     handleError(error, workerData, "process single event try fail");
   }
 
-  if (newMusicEvents.length) {
-    return processSingleMusicEvent(browser, newMusicEvents, qwm);
-  } else {
-    return browser;
-  }
+  return newMusicEvents.length
+    ? processSingleMusicEvent(browser, newMusicEvents, qwm)
+    : browser;
 }
 
 async function getPageInfo(page, months) {

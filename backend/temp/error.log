@@ -1,4 +1,76 @@
 
+  013-2 Error - 6:44:49 AM
+  ReferenceError: qwm is not defined
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-013.js:43:3)
+    at fillMusicEvents (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-013.js:39:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-013.js:27:14
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  qwm is not defined
+  
+  
+  013-1 Error - 6:44:49 AM
+  ReferenceError: qwm is not defined
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-013.js:43:3)
+    at fillMusicEvents (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-013.js:39:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-013.js:27:14
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  qwm is not defined
+  
+  
+  013-3 Error - 6:44:49 AM
+  ReferenceError: qwm is not defined
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-013.js:43:3)
+    at fillMusicEvents (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-013.js:39:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-013.js:27:14
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  qwm is not defined
+  
+  
+  013-0 Error - 6:44:49 AM
+  ReferenceError: qwm is not defined
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-013.js:43:3)
+    at fillMusicEvents (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-013.js:39:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-013.js:27:14
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  qwm is not defined
+  
+  
+  013-3 Error - 6:39:13 AM
+  ReferenceError: qwm is not defined
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-013.js:43:3)
+    at fillMusicEvents (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-013.js:39:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-013.js:27:14
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  qwm is not defined
+  
+  
+  013-0 Error - 6:39:13 AM
+  ReferenceError: qwm is not defined
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-013.js:43:3)
+    at fillMusicEvents (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-013.js:39:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-013.js:27:14
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  qwm is not defined
+  
+  
+  013-2 Error - 6:39:13 AM
+  ReferenceError: qwm is not defined
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-013.js:43:3)
+    at fillMusicEvents (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-013.js:39:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-013.js:27:14
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  qwm is not defined
+  
+  
+  013-1 Error - 6:39:13 AM
+  ReferenceError: qwm is not defined
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-013.js:43:3)
+    at fillMusicEvents (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-013.js:39:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-013.js:27:14
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  qwm is not defined
+  
+  
   patronaat-1 Error - 5:20:33 AM
   TypeError: Cannot read properties of undefined (reading 'close')
     at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/scrape-patronaat.js:83:14)
