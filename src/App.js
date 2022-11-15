@@ -201,9 +201,8 @@ class App extends React.Component {
             <div className="app-view app-view--3">
               <HeaderMenu timestampNamen={this.state.names} />
             </div>
-
-            {this.appBanner("Swipe links voor filter.")}
           </Flickity>
+          {this.appBanner("Swipe links voor filter.")}
         </div>
       </div>
     );
