@@ -38,9 +38,7 @@ export default class MonitorField {
   objectNaarTekst(objectTeVeranderen) {
     let tt = { ...objectTeVeranderen };
     delete tt.workerData;
-    return JSON.stringify(tt, null, 2)
-      .replace(/[{]/g, "<br>")
-      .replace(/[}]/g, "");
+    return JSON.stringify(tt, null, 2).replace(/[{]/g, "").replace(/[}]/g, "");
   }
   compareWorkers(workerA, workerB) {
     const wai = Number(workerA.workerNamedIndex);
@@ -73,6 +71,15 @@ export default class MonitorField {
         mainFieldEl.innerHTML = this.rollUpdatedHTML;
         break;
     }
+  }
+  updateError(updateData){
+    this.data.unshift(updateData);
+    const mainFieldEl = document.getElementById(this.mainFieldName);    
+      console.log("HET IS EEN ERROR");
+      console.log(mainFieldEl);
+      const aaaa = this.errorUpdateHTML;
+      console.log(aaaa);
+      mainFieldEl.innerHTML = aaaa;    
   }
   updateTable(updateData) {
     this.data = {
@@ -124,7 +131,29 @@ export default class MonitorField {
       })
       .join("");
     return `
-    <ul class='monitorfield__list'>${listItems}</ul>`;
+    <ul class='monitorfield__list monitorfield__list--roll'>${listItems}</ul>`;
+  }
+  get errorUpdateHTML() {
+    const listItems = this.data
+      .map((rollRow) => {
+        console.log(rollRow, 'errorUpdateHTML 138')
+        const titleText = `${rollRow.messageData?.title ?? ""}${
+          rollRow.messageData?.workerName ?? ""
+        }`;
+        let hoofdPrintTekst = ` 
+          ${rollRow.messageData.content.remarks}
+          ${rollRow.messageData.content.text}
+        `;
+        
+
+        return `<li class='monitorfield__list-item' id='${rollRow.messageData?.workerName}-${Math.floor(Math.random() * 250)}'>
+        <span class='monitorfield__list-item-left'>${titleText}</span>
+        <div class='monitorfield__list-item-right'>${hoofdPrintTekst}</div>
+      </li>`;
+      })
+      .join("");
+      console.log('PROINTING', ` <ul class='monitorfield__list'>${listItems}</ul>`, 'errorUpdateHTML')
+    return ` <ul class='monitorfield__list monitorfield__list--error'>${listItems}</ul>`;
   }
   get expandedUpdatedHTML() {
     const listItems = this.data
@@ -141,11 +170,11 @@ export default class MonitorField {
             : String(rollRow.messageData?.content ?? rollRow.messageData);
         return `<li class='monitorfield__list-item'>
         <span class='monitorfield__list-item-left'>${titleText}</span>
-        <span class='monitorfield__list-item-right'><pre>${hoofdPrintTekst}</pre></span>
+        <div class='monitorfield__list-item-right'>${hoofdPrintTekst}</div>
       </li>`;
       })
       .join("");
-    return ` <ul class='monitorfield__list'>${listItems}</ul>`;
+    return ` <ul class='monitorfield__list monitorfield__list--expanded'>${listItems}</ul>`;
   }
   get tableUpdatedHTML() {
     const workersPerFamily = {};
@@ -180,7 +209,6 @@ export default class MonitorField {
     const tableBodyRows = Object.values(workersPerFamily)
       .map((workerFamily, index) => {
         const sortedFamily = workerFamily.sort(this.compareWorkers);
-        console.log(sortedFamily);
         return `
       <tr>
         <th>${

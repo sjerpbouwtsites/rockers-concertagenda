@@ -8,6 +8,7 @@
  * als type = app-overview dan subtype is all-workers
  * als type = process data string is 'close-client' of 'closed'
  * als type = clients-html, dan subtype moet zijn string niet null.
+ * als type = clients-log , dan weet ik veel
  * als type = update:
  *    en subtype = terminal-error. is als server vastloopt. print error. LEGACY
  *    en subtype = scraper-error. is als scraper piept.                  LEGACY
@@ -17,7 +18,7 @@
  *    ,,     ,,  = scraper-results. object met één of meerdere records van huidige aantallen.
  *    ,,     ,,  = workers-status
  *    ,,     ,,  = debugger. Komt in de debug rol terecht, en in de console.
- * @property {string} type process|server-log|update|app-overview
+ * @property {string} type process|server-log|clients-log|update|app-overview
  * @property {string} subtype terminal-error|scraper-error|scraper-terminal-error|message-roll|scraper-results|workers-status|all-workers
  * @property {*} messageData bevat data van message.
  */
@@ -100,6 +101,9 @@ export default class wsMessage {
           }) && this.throwSubtypeError();
         break;
       case "server-log":
+        // niets te doen.
+        break;
+      case "clients-log":
         // niets te doen.
         break;
       default:

@@ -8,7 +8,7 @@ function createFields() {
     "roll"
   );
   updateField.initialize();
-  const errorField = new MonitorField("Fouten", "error-field-target", "roll");
+  const errorField = new MonitorField("Fouten", "error-field-target", "error");
   errorField.initialize();
   const debuggerField = new MonitorField(
     "Debugger",
@@ -30,11 +30,12 @@ function openClientWebsocket(fields) {
   let socket = new WebSocket("ws://localhost:8001");
 
   socket.addEventListener("error", (event) => {
-    const msg = new wsMessage("update", "terminal-error", {
-      title: "Socket err",
-      text: event.error,
-    });
-    eventToUpdates(msg, fields);
+    // const msg = new wsMessage("update", "terminal-error", {
+    //   title: "Socket err",
+    //   text: event.error,
+    // });
+    // eventToUpdates(msg, fields);
+    console.error(event, "frontend 42");
     const msg2 = new wsMessage("update", "debugger", {
       title: "Socket err",
       content: event,
@@ -81,8 +82,10 @@ function eventToUpdates(eventMsg, fields) {
   if (eventMsg.subtype.includes("message-roll")) {
     fields.updateField.update(eventMsg);
   }
-  if (eventMsg.subtype.includes("error")) {
-    fields.errorField.update(eventMsg);
+  if (eventMsg.subtype === "error") {
+    console.log(`\nupdating errorfield with`, "frontend 85");
+    console.dir(eventMsg);
+    fields.errorField.updateError(eventMsg);
   }
   if (eventMsg.subtype.includes("debugger")) {
     alert("JA");
@@ -130,42 +133,43 @@ function eventToProcesses(eventMsg, fields) {
 }
 
 function initiateClosingClient() {
-  if (document.body.hasAttribute('data-dont-close')) {
+  if (document.body.hasAttribute("data-dont-close")) {
     return; // @TODO: als server uitgaat, nadat het programma klaar is, loopt deze func opnieuw.
     // niet van DOM laten afhangen.
   }
   setTimeout(() => {
-    if (!document.body.hasAttribute('data-dont-close')) {
+    if (!document.body.hasAttribute("data-dont-close")) {
       window.close();
     }
-  }, 20000)
+  }, 20000);
   setTimeout(() => {
-
-    const divdiv = document.createElement('div')
-    divdiv.className = 'warning-client-closing';
-    divdiv.id = 'warning-client-closing'
-    divdiv.innerHTML = `De server is klaar. De monitor word afgesloten over 15 seconden. Klik op het scherm om dit scherm te behouden.`
+    const divdiv = document.createElement("div");
+    divdiv.className = "warning-client-closing";
+    divdiv.id = "warning-client-closing";
+    divdiv.innerHTML = `De server is klaar. De monitor word afgesloten over 15 seconden. Klik op het scherm om dit scherm te behouden.`;
     document.body.appendChild(divdiv);
-    document.body.addEventListener('click', () => {
-      if (!document.body.hasAttribute('data-dont-close')) {
-        document.body.setAttribute('data-dont-close', true)
-        const diediv = document.getElementById('warning-client-closing')
-        diediv.parentNode.removeChild(diediv)
+    document.body.addEventListener("click", () => {
+      if (!document.body.hasAttribute("data-dont-close")) {
+        document.body.setAttribute("data-dont-close", true);
+        const diediv = document.getElementById("warning-client-closing");
+        diediv.parentNode.removeChild(diediv);
       }
-
-    })
-
-  }, 5000)
+    });
+  }, 5000);
 }
- 
+
 function eventToWarning(eventMsg) {
-  console.warn(`Onbekende / onverwerkbare message type`)
-  console.log(eventMsg)
+  console.warn(`Onbekende / onverwerkbare message type`);
+  console.log(eventMsg);
 }
 
 function eventToClientsLog(eventMsg) {
-  console.log(eventMsg.type + ' ' + eventMsg.subtype)
-  console.log(eventMsg.messageData);
+  if (eventMsg.subtype === "error") {
+    console.log("Error in " + eventMsg.messageData.workerData.name);
+    console.error(eventMsg.messageData.error);
+  } else {
+    console.dir(eventMsg.messageData);
+  }
 }
 
 function initFrontend() {
