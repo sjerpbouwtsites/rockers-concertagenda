@@ -13,6 +13,9 @@ const flicketyOptions = {
   initialIndex: 1, // 0: filter; 1: app; 2: text;
   prevNextButtons: false,
   pageDots: false,
+  freeScroll: true,
+  contain: true,
+  dragThreshold: 180,
 };
 
 class App extends React.Component {
