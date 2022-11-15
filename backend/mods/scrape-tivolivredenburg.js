@@ -78,9 +78,6 @@ async function processSingleMusicEvent(baseMusicEvents) {
 
     if (pageInfo) {
       firstMusicEvent.merge(pageInfo);
-      const copecopy = { ...firstMusicEvent };
-      delete copecopy.longTextHTML;
-      parentPort.postMessage(qwm.toConsole(copecopy));
       firstMusicEvent.registerIfValid();
     }
   } catch (error) {
