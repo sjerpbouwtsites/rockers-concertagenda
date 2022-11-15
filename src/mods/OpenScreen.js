@@ -20,8 +20,9 @@ class OpenScreen extends React.Component {
             Welkom op<br></br>Rock Agenda
           </h1>
           <p className="open-screen__text serif-font">
-            Filters links<br></br>
-            Uitleg rechts
+            Filters &<br></br>
+            uitleg <br></br>
+            links
           </p>
           <p className="open-screen__text serif-font pink-color">🖤 Sjerp</p>
         </div>

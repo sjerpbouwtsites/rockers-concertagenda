@@ -194,6 +194,7 @@ class App extends React.Component {
                 locations={this.state.locations}
                 timestampNamen={this.state.names}
               />
+              <HeaderMenu timestampNamen={this.state.names} />
             </div>
             <main className="app-main app-view app-view--2">
               <EventBlocks
@@ -201,11 +202,11 @@ class App extends React.Component {
                 locations={this.state.locations}
               />
             </main>
-            <div className="app-view app-view--3">
-              <HeaderMenu timestampNamen={this.state.names} />
-            </div>
+            {/* <div className="app-view app-view--3">
+              
+            </div> */}
           </Flickity>
-          {this.appBanner("Swipe links voor filter.")}
+          {this.appBanner("Swipe links voor filter & uitleg.")}
         </div>
       </div>
     );
