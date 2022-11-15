@@ -61,8 +61,9 @@ async function initMonitorBackend() {
   const clients = createClients();
 
   const wsServer = createServerWebsocket();
+  console.log("waiting");
   await open(monitorURL);
-
+  console.log("after waiting");
   wsServer.on('request', function (request) {
     const connection = request.accept(null, request.origin);
     const newConnectionID = clients.setActive(request.origin, connection);
@@ -94,10 +95,8 @@ async function initMonitorBackend() {
   return new Promise((res, rej)=>{
     const testInterval = setInterval(()=>{
       if (reallyConnected) {
-        clearInterval(testInterval)
-        
-          res(wsServer)
-        
+        clearInterval(testInterval);
+          res(wsServer);
       }
     }, 100)
   });

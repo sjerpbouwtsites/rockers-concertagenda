@@ -37,13 +37,20 @@ async function scrapePatronaat(workerIndex) {
 async function fillMusicEvents(browser, baseMusicEvents, qwm) {
   const baseMusicEventsCopy = [...baseMusicEvents];
 
-  return processSingleMusicEvent(browser, baseMusicEventsCopy, qwm).finally(
-    () => {
-      parentPort.postMessage(qwm.debugger("finally debug"));
-      browser.close();
+  return processSingleMusicEvent(browser, baseMusicEventsCopy, qwm)
+    .then((browser) => {
+      if (browser && browser.hasOwnProperty("close")) {
+        browser.close();
+      }
       return true;
-    }
-  );
+    })
+    .catch((err) => {
+      handleError(
+        err,
+        workerData,
+        "process single music event recursive catch"
+      );
+    });
 }
 
 async function processSingleMusicEvent(browser, baseMusicEvents, qwm) {
@@ -60,11 +67,7 @@ async function processSingleMusicEvent(browser, baseMusicEvents, qwm) {
     !firstMusicEvent ||
     typeof firstMusicEvent === "undefined"
   ) {
-    return true;
-  }
-
-  if (!firstMusicEvent.venueEventUrl) {
-    return true;
+    return browser;
   }
 
   const page = await browser.newPage();
@@ -80,7 +83,7 @@ async function processSingleMusicEvent(browser, baseMusicEvents, qwm) {
     ]).catch((err) =>
       handleError(err, workerData, "patronaar pageinfo racecondition fail")
     );
-    if (!pageInfo.hasOwnProperty(startDateTime) || !pageInfo.startDateTime) {
+    if (!pageInfo.hasOwnProperty("startDateTime") || !pageInfo.startDateTime) {
       return processSingleMusicEvent(browser, newMusicEvents, qwm);
     }
 
@@ -115,7 +118,7 @@ async function processSingleMusicEvent(browser, baseMusicEvents, qwm) {
   if (newMusicEvents.length) {
     return processSingleMusicEvent(browser, newMusicEvents, qwm);
   } else {
-    return true;
+    return browser;
   }
 }
 
@@ -219,11 +222,11 @@ async function getPageInfo(page, months) {
       },
       { months }
     );
-    page.close();
+    !page.isClosed() && page.close();
     return pageInfo;
   } catch (error) {
-    page.close();
     handleError(error, workerData, "page info outer try wrapper");
+    !page.isClosed() && page.close();
     return pageInfo;
   }
 }

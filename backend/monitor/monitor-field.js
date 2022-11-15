@@ -42,6 +42,17 @@ export default class MonitorField {
       .replace(/[{]/g, "<br>")
       .replace(/[}]/g, "");
   }
+  compareWorkers(workerA, workerB) {
+    const wai = Number(workerA.workerNamedIndex);
+    const wbi = Number(workerB.workerNamedIndex);
+    if (wai < wbi) {
+      return -1;
+    }
+    if (wbi > wai) {
+      return 1;
+    }
+    return 0;
+  }
   updateConsole(updateData) {
     this.data.splice(2);
     this.update(updateData);
@@ -68,7 +79,7 @@ export default class MonitorField {
       ...this.data,
       ...updateData,
     };
-    
+
     document.getElementById(this.mainFieldName).innerHTML =
       this.tableUpdatedHTML;
     document.querySelector(
@@ -146,18 +157,13 @@ export default class MonitorField {
       }
       workersPerFamily[family][workerIndex] = {
         ...workerData,
+        workerNamedIndex: workerIndex,
         amountOfEvents: this.data[`amountOfEvents-${family}-${workerIndex}`],
       };
     });
 
-    const highestNumberOfWorkersPerFamily = Math.max(
-      ...Object.values(workersPerFamily).map(
-        (workerFamily) => workerFamily.length
-      )
-    );
-
     let workerNumberedHeads = "";
-    for (let i = 0; i < highestNumberOfWorkersPerFamily; i++) {
+    for (let i = 0; i < 9; i++) {
       workerNumberedHeads += `<th class='tableheadnumber'>${i}</th>`;
     }
 
@@ -170,14 +176,17 @@ export default class MonitorField {
     `;
 
     const tableRowsFirstCellsTextcontent = Object.keys(workersPerFamily);
+
     const tableBodyRows = Object.values(workersPerFamily)
       .map((workerFamily, index) => {
+        const sortedFamily = workerFamily.sort(this.compareWorkers);
+        console.log(sortedFamily);
         return `
       <tr>
         <th>${
           tableRowsFirstCellsTextcontent[index]
         }<span class='kutspacer'></span></th>
-        ${workerFamily
+        ${sortedFamily
           .map((worker) => {
             let tdClass = "worker-data-cell ";
             tdClass += "worker-status--" + worker.status;
@@ -192,12 +201,12 @@ export default class MonitorField {
                 .map((error) => `<li>${error.message}</li>`)
                 .join("")}
             </ol>`;
-            const statusHTML = `<td class='${tdClass}' title='${worker.status}'>`;
+            const statusHTML = `<td class='${tdClass}' title='${worker.workerNamedIndex}'>`;
             const numberHTML = this.data.hasOwnProperty(
               `amountOfEvents-${worker.name}`
             )
               ? this.data[`amountOfEvents-${worker.name}`]
-              : `<span class='worker-cell-inner worker-cell-inner--todo'>${worker.todo}</span>`;
+              : `<span  class='worker-cell-inner worker-cell-inner--todo'>${worker.todo}</span>`;
 
             return statusHTML + numberHTML + errorsHTML + "</td>";
           })
