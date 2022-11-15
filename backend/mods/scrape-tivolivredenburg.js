@@ -1,6 +1,6 @@
 import MusicEvent from "./music-event.js";
 import puppeteer from "puppeteer";
-import { parentPort } from "worker_threads";
+import { parentPort, workerData } from "worker_threads";
 import EventsList from "./events-list.js";
 import fs from "fs";
 import crypto from "crypto";
@@ -10,54 +10,37 @@ import {
   handleError,
   errorAfterSeconds,
   basicMusicEventsFilter,
-  log,
 } from "./tools.js";
 import { letScraperListenToMasterMessageAndInit } from "./generic-scraper.js";
 import { QuickWorkerMessage } from "./rock-worker.js";
+const qwm = new QuickWorkerMessage(workerData);
+let browser = null;
 
 letScraperListenToMasterMessageAndInit(scrapeTivolivredenburg);
-
 async function scrapeTivolivredenburg() {
-  const qwm = new QuickWorkerMessage(workerData);
-  const browser = await puppeteer.launch();
+  browser = await puppeteer.launch();
   parentPort.postMessage(qwm.workerInitialized());
-  Promise.race([makeBaseEventList(browser, qwm), errorAfterSeconds(15000)])
+  Promise.race([makeBaseEventList(), errorAfterSeconds(15000)])
     .then((baseMusicEvents) => {
+      const baseMusicEventsCopy = [...baseMusicEvents];
       parentPort.postMessage(qwm.workerStarted());
-      return fillMusicEvents(browser, baseMusicEvents, qwm);
+      return processSingleMusicEvent(baseMusicEventsCopy);
     })
-    .then((browser) => {
+    .then(() => {
       parentPort.postMessage(qwm.workerDone(EventsList.amountOfEvents));
       EventsList.save(workerData.family, workerData.index);
-      browser && browser.hasOwnProperty("close") && browser.close();
     })
     .catch((error) =>
-      handleError(error, workerData, "outer catch scrape effenaar")
-    );
-}
-
-async function fillMusicEvents(browser, baseMusicEvents, qwm) {
-  const baseMusicEventsCopy = [...baseMusicEvents];
-
-  return processSingleMusicEvent(
-    browser,
-    baseMusicEventsCopy,
-    workerIndex
-  ).finally(() => {
-    setTimeout(() => {
-      browser.close();
-    }, 5000);
-    parentPort.postMessage({
-      status: "done",
+      handleError(error, workerData, `outer catch scrape ${workerData.family}`)
+    )
+    .finally(() => {
+      browser && browser.hasOwnProperty("close") && browser.close();
     });
-    EventsList.save("tivolivredenburg", workerIndex);
-  });
 }
 
-async function processSingleMusicEvent(browser, baseMusicEvents, workerIndex) {
-  parentPort.postMessage({
-    status: "todo",
-    message: baseMusicEvents.length,
+async function processSingleMusicEvent(baseMusicEvents) {
+  qwm.todo(baseMusicEvents.length).forEach((JSONblob) => {
+    parentPort.postMessage(JSONblob);
   });
 
   const newMusicEvents = [...baseMusicEvents];
@@ -72,14 +55,9 @@ async function processSingleMusicEvent(browser, baseMusicEvents, workerIndex) {
     return true;
   }
 
-  const page = await browser.newPage();
-  await page.goto(firstMusicEvent.venueEventUrl, {
-    waitUntil: "load",
-  });
-
   try {
     const pageInfo = await Promise.race([
-      getPageInfo(page),
+      getPageInfo(firstMusicEvent.venueEventUrl),
       errorAfterSeconds(15000),
     ]);
 
@@ -94,46 +72,34 @@ async function processSingleMusicEvent(browser, baseMusicEvents, workerIndex) {
       let uuid = crypto.randomUUID();
       const longTextPath = `${fsDirections.publicTexts}/${uuid}.html`;
 
-      fs.writeFile(longTextPath, pageInfo.longTextHTML, "utf-8", () => { });
+      fs.writeFile(longTextPath, pageInfo.longTextHTML, "utf-8", () => {});
       pageInfo.longText = longTextPath;
     }
 
-    // no date no registration.
     if (pageInfo) {
-      delete pageInfo.cancelReason;
       firstMusicEvent.merge(pageInfo);
-    } else if (pageInfo.cancelReason !== "") {
-      parentPort.postMessage({
-        status: "console",
-        message: `Incomplete info for ${firstMusicEvent.title}`,
-      });
-    } else {
-      const pageInfoError = new Error(`unclear why failure at: ${firstMusicEvent.title
-        }
-      ${JSON.stringify(pageInfo)}
-       ${JSON.stringify(firstMusicEvent)}`);
-      handleError(pageInfoError);
+      const copecopy = { ...firstMusicEvent };
+      delete copecopy.longTextHTML;
+      parentPort.postMessage(qwm.toConsole(copecopy));
+      firstMusicEvent.registerIfValid();
     }
-    firstMusicEvent.register();
-
-    page.close();
   } catch (error) {
-    handleError(error);
+    handleError(error, workerData, "get page info fail");
   }
 
-  if (newMusicEvents.length) {
-    return processSingleMusicEvent(browser, newMusicEvents, workerIndex);
-  } else {
-    return true;
-  }
+  return newMusicEvents.length
+    ? processSingleMusicEvent(newMusicEvents)
+    : browser;
 }
 
-async function getPageInfo(page) {
-  let pageInfo;
-  try {
-    pageInfo = await page.evaluate(() => {
+async function getPageInfo(url) {
+  const page = await browser.newPage();
+  await page.goto(url, {
+    waitUntil: "load",
+  });
+  return await page
+    .evaluate(() => {
       const res = {};
-      res.cancelReason = "";
       res.priceTextcontent =
         document.querySelector(".btn-group__price")?.textContent.trim() ?? null;
       res.priceContexttext =
@@ -142,53 +108,88 @@ async function getPageInfo(page) {
         document.querySelector(".event__text")?.innerHTML ?? null;
 
       const startDateMatch = document.location.href.match(/\d\d-\d\d-\d\d\d\d/); //
-
+      res.startDate = "";
       if (startDateMatch && startDateMatch.length) {
         res.startDate = startDateMatch[0].split("-").reverse().join("-");
       }
 
-      if (!!res.startDate) {
-        const eventInfoDtDD = Array.from(
-          document.querySelector(".event__info .description-list").children
+      if (!res.startDate || res.startDate.length < 7) {
+        throw new Error(
+          `Startdate mist / niet goed genoeg<br>${startDateMatch.join(
+            "; "
+          )}<br>${res.startDate}`
         );
-        res.startTime = null;
-        res.openDoorTime = null;
-        res.endTime = null;
-        eventInfoDtDD.forEach((eventInfoDtDDItem, index) => {
-          if (eventInfoDtDDItem.textContent.toLowerCase().includes("aanvang")) {
-            res.startTime = eventInfoDtDD[index + 1].textContent
-          }
-          if (eventInfoDtDDItem.textContent.toLowerCase().includes("open")) {
-            res.openDoorTime = eventInfoDtDD[index + 1].textContent
-          }
-          if (eventInfoDtDDItem.textContent.toLowerCase().includes("eind")) {
-            res.endTime = eventInfoDtDD[index + 1].textContent
-          }
-        })
+      }
+      const eventInfoDtDDText = document
+        .querySelector(".event__info .description-list")
+        ?.textContent.replace(/[\n\r\s]/g, "")
+        .toLowerCase();
+      res.startTime = null;
+      res.openDoorTime = null;
+      res.endTime = null;
+      const openMatch = eventInfoDtDDText.match(/open.*(\d\d:\d\d)/);
+      const startMatch = eventInfoDtDDText.match(/aanvang.*(\d\d:\d\d)/);
+      const endMatch = eventInfoDtDDText.match(/einde.*(\d\d:\d\d)/);
+
+      if (Array.isArray(openMatch) && openMatch.length > 1) {
+        try {
+          res.openDoorTime = openMatch[1];
+          res.doorOpenDateTime = res.startDate
+            ? new Date(`${res.startDate}T${res.openDoorTime}:00`).toISOString()
+            : null;
+        } catch (error) {
+          const errorrrs = new Error(
+            `Open door time faal. brontekst: ${eventInfoDtDDText} \n ${error.message}`
+          );
+          throw errorrrs;
+        }
+      }
+      if (Array.isArray(startMatch) && startMatch.length > 1) {
+        try {
+          res.startTime = startMatch[1];
+          res.startDateTime = res.startDate
+            ? new Date(`${res.startDate}T${res.startTime}:00`).toISOString()
+            : null;
+        } catch (error) {
+          const errorrrs = new Error(
+            `start time faal. brontekst: ${eventInfoDtDDText} \n ${error.message}`
+          );
+          throw errorrrs;
+        }
+      }
+      if (Array.isArray(endMatch) && endMatch.length > 1) {
+        try {
+          res.endTime = endMatch[1];
+          res.endDateTime = res.startDate
+            ? new Date(`${res.startDate}T${res.endTime}:00`).toISOString()
+            : null;
+        } catch (error) {
+          const errorrrs = new Error(
+            `end time faal. brontekst: ${eventInfoDtDDText} \n ${error.message}`
+          );
+          throw errorrrs;
+        }
       }
 
-      res.doorOpenDateTime = res.openDoorTime
-        ? new Date(`${res.startDate}T${res.openDoorTime}`).toISOString()
-        : null;
-      res.startDateTime = res.startTime
-        ? new Date(`${res.startDate}T${res.startTime}`).toISOString()
-        : null;
-      res.endDateTime = res.endTime
-        ? new Date(`${res.startDate}T${res.endTime}`).toISOString()
-        : null;
-
-
       return res;
-    }, null);
-    return pageInfo;
-  } catch (error) {
-    handleError(error);
-    handleError(pageInfo);
-    return pageInfo;
-  }
+    }, null)
+    .then((pageInfo) => {
+      return pageInfo;
+    })
+    .catch((error) => {
+      handleError(
+        error,
+        workerData,
+        `<a href='${url}'> get page info tivoli</a><br>`
+      );
+      return null;
+    })
+    .finally(() => {
+      if (!page.isClosed() && page.close());
+    });
 }
 
-async function makeBaseEventList(browser, qwm) {
+async function makeBaseEventList() {
   const page = await browser.newPage();
   await page.goto(
     "https://www.tivolivredenburg.nl/agenda/?event_category=metal-punk-heavy",
@@ -221,7 +222,7 @@ async function makeBaseEventList(browser, qwm) {
         res.location = "tivolivredenburg";
         return res;
       });
-  }, workerIndex);
+  }, workerData.index);
 
   return rawEvents
     .filter(basicMusicEventsFilter)

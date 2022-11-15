@@ -222,7 +222,6 @@ export default class MonitorField {
         }<span class='kutspacer'></span></th>
         ${sortedFamily
           .map((worker) => {
-            console.log(worker, "monitor fields 212");
             let tdClass = "worker-data-cell ";
             tdClass += "worker-status--" + worker.status;
             tdClass +=

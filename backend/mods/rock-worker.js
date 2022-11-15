@@ -88,6 +88,18 @@ export class QuickWorkerMessage {
     ];
   }
   /**
+   * @param {*} toConsole
+   * @returns {JSON} update debugger {content: workerData, debug}
+   */
+  toConsole(toConsole, type = "dir") {
+    return WorkerMessage.quick("clients-log", type, {
+      content: {
+        workerData: this.workerData,
+        debug: toConsole,
+      },
+    });
+  }
+  /**
    * @param {*} toDebug
    * @returns {JSON} update debugger {content: workerData, debug}
    */

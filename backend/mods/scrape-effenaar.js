@@ -11,7 +11,6 @@ import {
   handleError,
   basicMusicEventsFilter,
   errorAfterSeconds,
-  log,
 } from "./tools.js";
 import { letScraperListenToMasterMessageAndInit } from "./generic-scraper.js";
 import { QuickWorkerMessage } from "./rock-worker.js";
@@ -30,14 +29,16 @@ async function scrapeEffenaar() {
       const baseMusicEventsCopy = [...baseMusicEvents];
       return processSingleMusicEvent(browser, baseMusicEventsCopy, qwm);
     })
-    .then((browser) => {
+    .then(() => {
       parentPort.postMessage(qwm.workerDone(EventsList.amountOfEvents));
       EventsList.save(workerData.family, workerData.index);
-      browser && browser.hasOwnProperty("close") && browser.close();
     })
     .catch((error) =>
-      handleError(error, workerData, "outer catch scrape effenaar")
-    );
+      handleError(error, workerData, `outer catch scrape ${workerData.family}`)
+    )
+    .finally(() => {
+      browser && browser.hasOwnProperty("close") && browser.close();
+    });
 }
 
 async function processSingleMusicEvent(browser, baseMusicEvents, qwm) {

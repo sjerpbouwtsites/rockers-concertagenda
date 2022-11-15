@@ -83,8 +83,6 @@ function eventToUpdates(eventMsg, fields) {
     fields.updateField.update(eventMsg);
   }
   if (eventMsg.subtype === "error") {
-    console.log(`\nupdating errorfield with`, "frontend 85");
-    console.dir(eventMsg);
     fields.errorField.updateError(eventMsg);
   }
   if (eventMsg.subtype.includes("debugger")) {
@@ -165,9 +163,39 @@ function eventToWarning(eventMsg) {
 function eventToClientsLog(eventMsg) {
   if (eventMsg.subtype === "error") {
     console.log("Error in " + eventMsg.messageData.workerData.name);
-    console.error(eventMsg.messageData.error);
+    console.log(eventMsg.messageData.error.message);
+    console.log(eventMsg.messageData.error.stack);
   } else {
-    console.dir(eventMsg.messageData);
+    const debug = eventMsg.messageData?.content?.debug ?? null;
+    if (!debug) {
+      console.log(eventMsg.messageData, "eventToClientsLog");
+      throw new Error("bad debug mkay");
+    }
+    if (Array.isArray(debug)) {
+      console.log(`${eventMsg.messageData?.content?.workerData?.name}`);
+      console.dir(debug);
+    } else if (debug instanceof Object) {
+      const keys = Object.keys(debug);
+      const values = Object.values(debug);
+      console.log(
+        `${eventMsg.messageData?.content?.workerData?.name} - ${keys.join(
+          ", "
+        )}`
+      );
+      values.forEach((val, index) => {
+        if (typeof val === "string" || typeof val === "number") {
+          console.log(`${keys[index]} - ${val}`);
+        } else if (typeof val === "undefined") {
+          console.log(`${keys[index]} - undefined`);
+        } else if (val === null) {
+          console.log(`${keys[index]} - null`);
+        } else {
+          console.dir(val);
+        }
+      });
+    } else {
+      console.log(debug);
+    }
   }
 }
 

@@ -1,9 +1,18 @@
 import fs from "fs";
 import fsDirections from "./fs-directions.js";
 import { handleError, errorAfterSeconds, log } from "./tools.js";
+import { QuickWorkerMessage } from "./rock-worker.js";
+import passMessageToMonitor from "../monitor/pass-message-to-monitor.js";
+
 export default class EventsList {
   static _events = [];
   static _meta = {};
+  static workerSignature = {
+    // dit is (nog) geen worker
+    family: "events-list",
+    index: 0,
+    name: `${"events-list-0"}`,
+  };
 
   static get amountOfEvents() {
     return EventsList._events.length;
@@ -18,6 +27,7 @@ export default class EventsList {
         pathToEventListFile,
         JSON.stringify(EventsList._events, null, "  ")
       );
+
       const eventListTimestamps = JSON.parse(
         fs.readFileSync(fsDirections.timestampsJson)
       );
@@ -140,12 +150,22 @@ export default class EventsList {
       JSON.stringify(EventsList._meta, null, "  "),
       "utf-8"
     );
+    const qwm = new QuickWorkerMessage(EventsList.workerSignature);
+    passMessageToMonitor(
+      qwm.toConsole(EventsList._meta),
+      EventsList.workerSignature
+    );
 
     fs.writeFileSync(
       fsDirections.eventsListJson,
       JSON.stringify(EventsList._events, null, "  "),
       "utf-8"
     );
+    passMessageToMonitor(
+      qwm.toConsole(EventsList._events),
+      EventsList.workerSignature
+    );
+
     fs.copyFileSync(fsDirections.metaJson, fsDirections.metaPublicJson);
 
     fs.copyFileSync(
