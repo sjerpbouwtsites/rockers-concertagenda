@@ -1,23 +1,31 @@
 [
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2023-03-12T14:00:00.000Z",
+    "startDateTime": "2023-05-20T12:30:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://baroeg.nl/productie/nieuwe-datum-wavefest-presents-big-country-the-dreamside-2/",
-    "title": "Wavefest presents: Big Country + The Dreamside",
+    "venueEventUrl": "https://baroeg.nl/productie/submit-fest-destrage/",
+    "title": "Submit Fest: Destrage",
     "location": "baroeg",
+<<<<<<< HEAD
     "price": 20,
     "shortText": "<p>Wavefest presents! </p>\n",
     "longText": "../public/texts/d95adce4-e131-4eec-baa7-d10228f3708b.html",
     "image": "https://baroeg.nl/wp-content/uploads/2020/12/Big-Country-2015-colour-credit-Paul-Green-scaled-e1608633274815-768x196.jpg"
+=======
+    "price": 19,
+    "shortText": "<p>Submit Fest is het indoor festival met de beste ‘up and coming’ en ‘breaking through’ metal acts van regionale, nationale en internationale bodem.</p>\n",
+    "longText": "../public/texts/75b78706-51bb-4a1f-a5c8-1f07db4a0053.html",
+    "image": "https://baroeg.nl/wp-content/uploads/2022/11/Submit-fest-2023-Destrage-e1667920628107-768x240.jpg"
+>>>>>>> master
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2023-02-23T18:00:00.000Z",
+    "startDateTime": "2023-04-30T13:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://baroeg.nl/productie/hang-youth/",
-    "title": "Hang Youth",
+    "venueEventUrl": "https://baroeg.nl/productie/evil-invaders-warbringer-schizophrenia/",
+    "title": "Evil Invaders + Warbringer + Schizophrenia",
     "location": "baroeg",
+<<<<<<< HEAD
     "price": 18.5,
     "shortText": "<p>Keihard komen of nog harder spijt krijgen.</p>\n",
     "longText": "../public/texts/ba7ff97a-c3a4-4dd0-9f44-a40b4c5cdc98.html",
@@ -50,73 +58,136 @@
   {
     "doorOpenDateTime": null,
     "startDateTime": "2023-02-03T18:00:00.000Z",
+=======
+    "price": 16,
+    "shortText": "<p>De vetste elementen uit speed en thrash metal.</p>\n",
+    "longText": "../public/texts/15d65362-7e6e-43be-99c0-8895abc9b59b.html",
+    "image": "https://baroeg.nl/wp-content/uploads/2022/11/IMG_0838-scaled-e1668075458747-768x335.jpg"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-04-12T17:00:00.000Z",
+>>>>>>> master
+    "endDateTime": null,
+    "venueEventUrl": "https://baroeg.nl/productie/death-to-false-tours-tour-2023-nanowar-of-steel/",
+    "title": "Nanowar Of Steel",
+    "location": "baroeg",
+<<<<<<< HEAD
+    "price": 15,
+    "shortText": "<p>Vette grind van Wormrot uit Singapore.</p>\n",
+    "longText": "../public/texts/a1e868d6-fcb1-4e37-b7e4-1748c26e0dda.html",
+    "image": "https://baroeg.nl/wp-content/uploads/2022/09/IG-01-e1662978748839-768x355.jpg"
+=======
+    "price": 19,
+    "shortText": "<p>Dubbele dosis compleet geflipte feestmetal.</p>\n",
+    "longText": "../public/texts/3f07c2bd-1948-4d4e-801f-34b80d3de91d.html",
+    "image": "https://baroeg.nl/wp-content/uploads/2022/11/Nanowar-of-Steel_band-photo-scaled-e1668074576890-768x324.jpg"
+>>>>>>> master
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-04-09T12:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://baroeg.nl/productie/festerfest/",
+    "title": "Festerfest",
+    "location": "baroeg",
+<<<<<<< HEAD
+    "price": 11.5,
+    "shortText": "<p>Welcome to the black parade.</p>\n",
+    "longText": "../public/texts/12e99d74-4bfd-4f56-af52-bd26f2b46ed7.html",
+    "image": "https://baroeg.nl/wp-content/uploads/2022/09/20230127-Baroeg-Banner-e1664979701513-768x275.png"
+=======
+    "price": 10,
+    "shortText": "<p>Annual fest to crush the boundaries between different forms of underground music and to spread the knowledge of its diversity.</p>\n",
+    "longText": "../public/texts/c61d1d1e-7b78-45c7-98c1-90ae805b185c.html",
+    "image": "https://baroeg.nl/wp-content/uploads/2022/11/Festerfest1-1-768x402.jpeg"
+>>>>>>> master
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-03-12T14:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://baroeg.nl/productie/nieuwe-datum-wavefest-presents-big-country-the-dreamside-2/",
+    "title": "Wavefest presents: Big Country + The Dreamside",
+    "location": "baroeg",
+<<<<<<< HEAD
+    "price": 21,
+    "shortText": "<p>Eén van de belangrijkste exponenten van de US Metal.</p>\n",
+    "longText": "../public/texts/7ec83c2e-a2b2-40b2-9b70-3acb372ba6b6.html",
+    "image": "https://baroeg.nl/wp-content/uploads/2022/10/unnamed-5-768x512.jpg"
+=======
+    "price": 20,
+    "shortText": "<p>Wavefest presents! </p>\n",
+    "longText": "../public/texts/9c38468f-571c-4860-a94a-ba80bf02aefe.html",
+    "image": "https://baroeg.nl/wp-content/uploads/2020/12/Big-Country-2015-colour-credit-Paul-Green-scaled-e1608633274815-768x196.jpg"
+>>>>>>> master
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-03-04T14:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://baroeg.nl/productie/in-the-grip-of-winter-wiegedood-consolation-knife-deadspeak/",
+    "title": "In The Grip Of Winter: Wiegedood + Consolation + Knife + Deadspeak",
+    "location": "baroeg",
+<<<<<<< HEAD
+    "price": 14,
+    "shortText": "<p>Vertolkingen van pophits in een metalen jasje.</p>\n",
+    "longText": "../public/texts/ac7ca565-315d-4f08-b4a5-641dfd140132.html",
+    "image": "https://baroeg.nl/wp-content/uploads/2022/05/2020-Foto-1-LoRes-768x617.jpg"
+=======
+    "price": 21,
+    "shortText": "<p>Dagvullend programma met de beste underground metalbands zonder nadruk op één specifiek subgenre.</p>\n",
+    "longText": "../public/texts/72788bd1-9a1c-4c3d-9a6c-fe86cc489064.html",
+    "image": "https://baroeg.nl/wp-content/uploads/2022/11/wd2-1-768x512.jpg"
+>>>>>>> master
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-02-22T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://baroeg.nl/productie/inhumate-teethgrinder-distaste-2/",
+    "title": "Inhumate + Teethgrinder + Distaste",
+    "location": "baroeg",
+<<<<<<< HEAD
+    "price": 35,
+    "shortText": "<p>Pioniers van de Oostblokpunk</p>\n",
+    "longText": "../public/texts/fd8751c6-5a66-43d8-ae1c-b9bd0925abe5.html",
+    "image": "https://baroeg.nl/wp-content/uploads/2020/02/D4_male_Fot_Malgorzata_Wasilewska-768x511.jpg"
+=======
+    "price": 14,
+    "shortText": "<p>Voor de diehard grindcore fans.</p>\n",
+    "longText": "../public/texts/9bb00ed2-8302-4184-a26a-b1441104c72a.html",
+    "image": "https://baroeg.nl/wp-content/uploads/2020/12/2017-09-29-0004-scaled-e1606829579702-768x180.jpg"
+>>>>>>> master
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-02-12T14:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://baroeg.nl/productie/baroeg-tribute-night-the-perfect-tool/",
+    "title": "Baroeg Tribute Night The Perfect Tool",
+    "location": "baroeg",
+    "price": 19,
+<<<<<<< HEAD
+    "shortText": "<p>Nile komt terug naar Baroeg!</p>\n",
+    "longText": "../public/texts/ea430cda-0f43-4641-8474-a61f29108d36.html",
+    "image": "https://baroeg.nl/wp-content/uploads/2022/03/baner-WWW-768x432.png"
+=======
+    "shortText": "<p>The Perfect Tool is de beste Tool tributeband.</p>\n",
+    "longText": "../public/texts/041395cf-4b91-466f-b96b-7bb4666078b2.html",
+    "image": "https://baroeg.nl/wp-content/uploads/2022/10/PERFECTTOOL-FLYERA3-V2-1-scaled-e1666699210949-768x514.jpg"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-02-03T18:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://baroeg.nl/productie/wormrot/",
     "title": "Wormrot",
     "location": "baroeg",
     "price": 15,
     "shortText": "<p>Vette grind van Wormrot uit Singapore.</p>\n",
-    "longText": "../public/texts/a1e868d6-fcb1-4e37-b7e4-1748c26e0dda.html",
+    "longText": "../public/texts/5087fbe5-153a-459f-8597-6683caf7ad83.html",
     "image": "https://baroeg.nl/wp-content/uploads/2022/09/IG-01-e1662978748839-768x355.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2023-01-27T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://baroeg.nl/productie/emo-night-mainland/",
-    "title": "Emo Night Mainland",
-    "location": "baroeg",
-    "price": 11.5,
-    "shortText": "<p>Welcome to the black parade.</p>\n",
-    "longText": "../public/texts/12e99d74-4bfd-4f56-af52-bd26f2b46ed7.html",
-    "image": "https://baroeg.nl/wp-content/uploads/2022/09/20230127-Baroeg-Banner-e1664979701513-768x275.png"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2023-01-22T14:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://baroeg.nl/productie/rotterdam-rocks-presents-jag-panzer/",
-    "title": "Rotterdam Rocks presents: Jag Panzer",
-    "location": "baroeg",
-    "price": 21,
-    "shortText": "<p>Eén van de belangrijkste exponenten van de US Metal.</p>\n",
-    "longText": "../public/texts/7ec83c2e-a2b2-40b2-9b70-3acb372ba6b6.html",
-    "image": "https://baroeg.nl/wp-content/uploads/2022/10/unnamed-5-768x512.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-12-17T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://baroeg.nl/productie/pene-corrida-2/",
-    "title": "Pene Corrida",
-    "location": "baroeg",
-    "price": 14,
-    "shortText": "<p>Vertolkingen van pophits in een metalen jasje.</p>\n",
-    "longText": "../public/texts/ac7ca565-315d-4f08-b4a5-641dfd140132.html",
-    "image": "https://baroeg.nl/wp-content/uploads/2022/05/2020-Foto-1-LoRes-768x617.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-12-10T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://baroeg.nl/productie/dezerter/",
-    "title": "Art Stage Promotion presents: Dezerter",
-    "location": "baroeg",
-    "price": 35,
-    "shortText": "<p>Pioniers van de Oostblokpunk</p>\n",
-    "longText": "../public/texts/fd8751c6-5a66-43d8-ae1c-b9bd0925abe5.html",
-    "image": "https://baroeg.nl/wp-content/uploads/2020/02/D4_male_Fot_Malgorzata_Wasilewska-768x511.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-12-08T17:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://baroeg.nl/productie/nile/",
-    "title": "Nile + Krisiun + In Element + Wrath Of The Nebula",
-    "location": "baroeg",
-    "price": 19,
-    "shortText": "<p>Nile komt terug naar Baroeg!</p>\n",
-    "longText": "../public/texts/ea430cda-0f43-4641-8474-a61f29108d36.html",
-    "image": "https://baroeg.nl/wp-content/uploads/2022/03/baner-WWW-768x432.png"
+>>>>>>> master
   }
 ]

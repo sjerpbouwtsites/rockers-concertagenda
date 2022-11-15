@@ -1,14 +1,33 @@
 [
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-11-03T20:00:00.000Z",
+    "startDateTime": "2022-11-19T19:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://baroeg.nl/productie/the-shape-of-punk-to-come-baroeg-presenteren-v11-frayle/",
-    "title": "The Shape Of Punk To Come &#038; Baroeg presenteren @V11: Frayle + Mould",
+    "venueEventUrl": "https://baroeg.nl/productie/nieuwe-datum-tankcsapda/",
+    "title": "Tankcsapda",
     "location": "baroeg",
+<<<<<<< HEAD
     "price": 0,
     "shortText": "<p>Zware, hypnotische doom.</p>\n",
     "longText": "../public/texts/3a04468c-e90a-4ac8-81d7-6cf152131543.html",
     "image": "https://baroeg.nl/wp-content/uploads/2022/05/Picca-e1667155370973-768x385.jpeg"
+=======
+    "price": 26,
+    "shortText": "<p>Tankcsapda geeft je een kijkje in de Hongaarkeuken van harde muziek.</p>\n",
+    "longText": "../public/texts/c1f56577-bca0-4f6b-83ce-e9cf887837a9.html",
+    "image": "https://baroeg.nl/wp-content/uploads/2020/10/93169866_3078476552195611_7368021885256204288_o-e1601556070779-768x365.jpg"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-11-16T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://baroeg.nl/productie/demilich-concrete-winds/",
+    "title": "Demilich + Concrete Winds +  Deathless Void",
+    "location": "baroeg",
+    "price": 14,
+    "shortText": "<p>Extreem en barbaars.</p>\n",
+    "longText": "../public/texts/fa4cc003-21f7-4a27-8df1-09b36cb3012c.html",
+    "image": "https://baroeg.nl/wp-content/uploads/2022/07/035-Sam-Jamsen-07655-scaled-e1657792225919-768x223.jpg"
+>>>>>>> master
   }
 ]

@@ -1,5 +1,6 @@
 [
   {
+<<<<<<< HEAD
     "doorOpenDateTime": "2022-10-26T19:00:00.000Z",
     "startDateTime": "2022-10-26T20:00:00.000Z",
     "endDateTime": null,
@@ -34,6 +35,30 @@
     "shortText": "Fortarock",
     "longText": "../public/texts/d1fec256-ee6d-4f09-9d87-e8ea52db7c0d.html",
     "image": "https://www.doornroosje.nl/app/uploads/2022/07/Revocation-a-1934x1088-350x197-c-default.jpg"
+=======
+    "doorOpenDateTime": "2022-12-22T20:00:00.000Z",
+    "startDateTime": "2022-12-22T21:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.doornroosje.nl/event/cloudsurfers/",
+    "title": "Cloudsurfers",
+    "location": "doornroosje",
+    "price": 12,
+    "shortText": null,
+    "longText": "../public/texts/d4c286cf-9e86-4a6c-a521-a6ec55006931.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2022/08/Cloudsurfers-web-1934x1088-350x197-c-default.jpg"
+  },
+  {
+    "doorOpenDateTime": "2023-03-01T02:19:30.000Z",
+    "startDateTime": "2023-03-01T02:20:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.doornroosje.nl/event/plini/",
+    "title": "Plini e.a.",
+    "location": "doornroosje",
+    "price": 22,
+    "shortText": "Fortarock",
+    "longText": "../public/texts/d23a14ad-3e67-4c8c-b5d2-95e5177ee053.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2022/10/Plini-1934x1088-350x197-c-default.jpg"
+>>>>>>> master
   },
   {
     "doorOpenDateTime": "2023-03-18T18:30:00.000Z",
@@ -44,7 +69,12 @@
     "location": "doornroosje",
     "price": 19.5,
     "shortText": null,
+<<<<<<< HEAD
     "longText": "../public/texts/d541955f-fc53-4390-9d75-6e55c4d56b11.html",
     "image": "https://www.doornroosje.nl/app/uploads/2021/09/FUZZ-1920x1080-1-350x197-c-default.jpg"
+=======
+    "longText": "../public/texts/1f73be5d-630a-473a-92d3-0369ca519db3.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2021/12/Promo_OtobokeBeaver-credit_Takeaki_Emori-350x197-c-default.jpg"
+>>>>>>> master
   }
 ]

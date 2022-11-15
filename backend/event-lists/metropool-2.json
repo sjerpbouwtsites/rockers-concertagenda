@@ -1,15 +1,20 @@
 [
   {
-    "doorOpenDateTime": "2023-02-11T17:00:00.000Z",
-    "startDateTime": "2023-02-11T17:30:00.000Z",
+    "doorOpenDateTime": "2022-11-27T18:00:00.000Z",
+    "startDateTime": "2022-11-27T18:30:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://metropool.nl/agenda/smyrna-death-fest/",
-    "title": "Smyrna Death Fest",
+    "venueEventUrl": "https://metropool.nl/agenda/archgoat/",
+    "title": "Archgoat + Whoredom Rife",
     "location": "metropool",
-    "price": 30,
+    "price": 22.5,
     "shortText": null,
+<<<<<<< HEAD
     "longText": "../public/texts/37a6ca66-7d63-4599-9645-21e97660a8b2.html",
     "image": "https://metropool.nl//media/20598/smyrna-web.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=132836079750000000"
+=======
+    "longText": "../public/texts/3f9dd965-c3fe-4724-868e-5e1a00269b35.html",
+    "image": "https://metropool.nl//media/20142/archgoat_web_1920x1080.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=132823915880000000"
+>>>>>>> master
   },
   {
     "doorOpenDateTime": "2022-12-17T15:00:00.000Z",
@@ -20,6 +25,7 @@
     "location": "metropool",
     "price": 15,
     "shortText": null,
+<<<<<<< HEAD
     "longText": "../public/texts/1354f4ea-a441-4d81-95bf-3c7b5e399e9a.html",
     "image": "https://metropool.nl//media/22473/x-mass-core-web.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=132823936290000000"
   },
@@ -58,5 +64,45 @@
     "shortText": null,
     "longText": "../public/texts/38ffb1c0-2e0e-41ef-a2c6-91f59ad49dac.html",
     "image": "https://metropool.nl//media/27474/legends_web_1920x1080.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=133081375190000000"
+=======
+    "longText": "../public/texts/d52af84f-c7d1-4d45-82b8-684d56cf5ec7.html",
+    "image": "https://metropool.nl//media/22473/x-mass-core-web.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=132823936290000000"
+  },
+  {
+    "doorOpenDateTime": "2022-11-20T17:30:00.000Z",
+    "startDateTime": "2022-11-20T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://metropool.nl/agenda/betraying-the-martyrs/",
+    "title": "Betraying The Martyrs",
+    "location": "metropool",
+    "price": "25",
+    "shortText": null,
+    "longText": "../public/texts/07b87e92-ea73-44af-ae5e-26d05129c1b5.html",
+    "image": "https://metropool.nl//media/26729/betraying_web_1920x1080.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=133045359570000000"
+  },
+  {
+    "doorOpenDateTime": "2023-04-15T18:30:00.000Z",
+    "startDateTime": "2023-04-15T19:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://metropool.nl/agenda/helstar/",
+    "title": "Helstar",
+    "location": "metropool",
+    "price": "19",
+    "shortText": null,
+    "longText": "../public/texts/0f0e6115-bd6e-45e7-9279-0954e81d635a.html",
+    "image": "https://metropool.nl//media/27367/helstar-web.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=133077151530000000"
+  },
+  {
+    "doorOpenDateTime": "2023-05-12T18:30:00.000Z",
+    "startDateTime": "2023-05-12T19:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://metropool.nl/agenda/dear-mother/",
+    "title": "Dear Mother",
+    "location": "metropool",
+    "price": 19,
+    "shortText": null,
+    "longText": "../public/texts/7f45cd79-cc66-4a49-af3f-3508bc559052.html",
+    "image": "https://metropool.nl//media/28696/dearmother_web_1920x1080.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=133108257120000000"
+>>>>>>> master
   }
 ]

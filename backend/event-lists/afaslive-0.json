@@ -1,13 +1,14 @@
 [
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-10-24T18:00:00.000Z",
+    "startDateTime": "2023-04-01T18:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/counting-crows-1",
-    "title": "Counting Crows",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/madness-1",
+    "title": "Madness",
     "location": "afaslive",
-    "price": 67.2,
+    "price": 53.9,
     "shortText": null,
+<<<<<<< HEAD
     "longText": "../public/texts/07a88616-c9d0-4b41-802e-d2cffb26cb14.html",
     "image": "https://www.afaslive.nl/files/Agenda/2022/03-maart/_agendaitem/Counting-Crows.jpg"
   },
@@ -46,5 +47,9 @@
     "shortText": null,
     "longText": "../public/texts/92b7fb06-be1e-4ca0-b2ca-5a3d7701cb0c.html",
     "image": "https://www.afaslive.nl/files/Agenda/2022/04-april/_agendaitem/Eels.jpg"
+=======
+    "longText": "../public/texts/b3887234-ac98-48ff-8a42-e3befab3ec1e.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2022/07-juli/_agendaitem/Madness.jpg"
+>>>>>>> master
   }
 ]

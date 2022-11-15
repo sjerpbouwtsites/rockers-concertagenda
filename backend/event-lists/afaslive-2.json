@@ -1,5 +1,6 @@
 [
   {
+<<<<<<< HEAD
     "doorOpenDateTime": null,
     "startDateTime": "2022-10-13T18:00:00.000Z",
     "endDateTime": null,
@@ -26,13 +27,22 @@
   {
     "doorOpenDateTime": null,
     "startDateTime": "2023-04-01T18:00:00.000Z",
+=======
+    "doorOpenDateTime": "2023-01-27T17:30:00.000Z",
+    "startDateTime": "2023-01-27T18:00:00.000Z",
+>>>>>>> master
     "endDateTime": null,
     "venueEventUrl": "https://www.afaslive.nl/agenda/madness-1",
     "title": "Madness",
     "location": "afaslive",
     "price": 53.9,
     "shortText": null,
+<<<<<<< HEAD
     "longText": "../public/texts/af9247f9-56eb-41d1-b7f4-0fe8eb60b9ea.html",
     "image": "https://www.afaslive.nl/files/Agenda/2022/07-juli/_agendaitem/Madness.jpg"
+=======
+    "longText": "../public/texts/e2b72ade-7bdf-4345-ba18-b117b5687e06.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2020/12-december/_agendaitem/Epica.jpg"
+>>>>>>> master
   }
 ]

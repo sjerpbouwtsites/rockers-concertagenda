@@ -1,14 +1,27 @@
 [
   {
+<<<<<<< HEAD
     "doorOpenDateTime": "2022-12-04T19:00:00.000Z",
     "startDateTime": "2022-12-04T19:30:00.000Z",
     "endDateTime": "2022-12-04T22:59:00.000Z",
     "venueEventUrl": "https://www.poppodium-volt.nl/programma/vetrar-draugurinn",
     "title": "Vetrar Draugurinn",
+=======
+    "doorOpenDateTime": "2023-05-20T18:00:00.000Z",
+    "startDateTime": "2023-05-20T18:30:00.000Z",
+    "endDateTime": "2023-05-20T21:00:00.000Z",
+    "venueEventUrl": "https://www.poppodium-volt.nl/programma/speedmobile",
+    "title": "Speedmobile",
+>>>>>>> master
     "location": "volt",
     "price": 12.5,
     "shortText": null,
+<<<<<<< HEAD
     "longText": "../public/texts/025b5522-d645-489a-b73e-bb324ed7b04b.html",
     "image": "https://www.poppodium-volt.nl/wp-content/uploads/2022/01/VDTickets2-640x640.jpg"
+=======
+    "longText": "../public/texts/3cf37f05-13ac-4054-bf49-d7330344ad50.html",
+    "image": "https://www.poppodium-volt.nl/wp-content/uploads/2022/05/SpeedTickets2-640x600.jpg"
+>>>>>>> master
   }
 ]

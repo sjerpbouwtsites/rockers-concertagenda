@@ -1,5 +1,6 @@
 [
   {
+<<<<<<< HEAD
     "doorOpenDateTime": "2022-10-11T18:00:00.000Z",
     "startDateTime": "2022-10-11T18:30:00.000Z",
     "endDateTime": null,
@@ -34,6 +35,30 @@
     "shortText": null,
     "longText": "../public/texts/24c16333-31a3-4a21-8a1f-8ddd4536f2d5.html",
     "image": "https://www.doornroosje.nl/app/uploads/2022/06/hangyouth-1920x1080-2023-1934x1088-350x197-c-default.jpg"
+=======
+    "doorOpenDateTime": "2022-11-22T19:00:00.000Z",
+    "startDateTime": "2022-11-22T19:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.doornroosje.nl/event/the-mary-wallopers/",
+    "title": "The Mary Wallopers",
+    "location": "doornroosje",
+    "price": 14,
+    "shortText": null,
+    "longText": "../public/texts/8329c9d6-88c0-4e49-b565-99fbcde478f9.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2022/06/The-Mary-Wallopers-1920x1080-1-1934x1088-350x197-c-default.jpg"
+  },
+  {
+    "doorOpenDateTime": "2023-01-17T18:30:00.000Z",
+    "startDateTime": "2023-01-17T19:15:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.doornroosje.nl/event/animals-as-leaders/",
+    "title": "Animals As Leaders",
+    "location": "doornroosje",
+    "price": 25.5,
+    "shortText": "Fortarock",
+    "longText": "../public/texts/cbf9babc-4e2e-4998-abaa-a4d28efc9e17.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2022/09/Animals-As-Leaders-web-1934x1088-350x197-c-default.jpg"
+>>>>>>> master
   },
   {
     "doorOpenDateTime": "2023-04-01T04:19:00.000Z",
@@ -42,9 +67,16 @@
     "venueEventUrl": "https://www.doornroosje.nl/event/swallow-the-sun-2/",
     "title": "Swallow the Sun + Draconian",
     "location": "doornroosje",
+<<<<<<< HEAD
     "price": 24,
     "shortText": "Fortarock",
     "longText": "../public/texts/388acac4-32b9-41d2-a617-f37771d2595a.html",
     "image": "https://www.doornroosje.nl/app/uploads/2022/06/Swallow-The-Sun-1-1920x1088-350x197-c-default.jpg"
+=======
+    "price": 13,
+    "shortText": "Soulcrusher",
+    "longText": "../public/texts/a6909ada-a5c9-4350-ae2b-d1c65769b69a.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2022/09/GEL-350x197-c-default.jpeg"
+>>>>>>> master
   }
 ]

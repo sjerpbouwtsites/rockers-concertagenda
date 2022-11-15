@@ -4,7 +4,6 @@ import "../open-screen.css";
 class OpenScreen extends React.Component {
   constructor(props) {
     super(props);
-
   }
 
 
@@ -13,18 +12,19 @@ class OpenScreen extends React.Component {
   }
 
   render() {
+    if (this.props.hidden) return "";
     return (
       <div className={this.classNameTop()}>
-        <div className='open-screen__centre'>
-
-          <h1 className='open-screen__title sans-serif-font'>Welkom op<br></br>Rock Agenda</h1>
-          <p className='open-screen__text serif-font'>
-            Filters links -
-            Uitleg rechts
+        <div className="open-screen__centre">
+          <h1 className="open-screen__title sans-serif-font">
+            Welkom op<br></br>Rock Agenda
+          </h1>
+          <p className="open-screen__text serif-font">
+            Filters &<br></br>
+            uitleg <br></br>
+            links
           </p>
-          <p className='open-screen__text serif-font pink-color'>
-            🖤 Sjerp
-          </p>
+          <p className="open-screen__text serif-font pink-color">🖤 Sjerp</p>
         </div>
       </div>
     );

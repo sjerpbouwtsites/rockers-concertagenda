@@ -1,5 +1,6 @@
 [
   {
+<<<<<<< HEAD
     "doorOpenDateTime": "2022-10-26T16:30:00.000Z",
     "startDateTime": "2022-10-26T18:00:00.000Z",
     "endDateTime": null,
@@ -58,17 +59,34 @@
     "shortText": null,
     "longText": "../public/texts/784357a5-7bcc-4110-b8da-0c58aead439e.html",
     "image": "https://www.afaslive.nl/files/Agenda/2022/02-februari/_agendaitem/Avril-Lavigne.jpg"
+=======
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-11-17T19:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.afaslive.nl/agenda/sting-1",
+    "title": "Sting",
+    "location": "afaslive",
+    "price": 88.48,
+    "shortText": null,
+    "longText": "../public/texts/fac4e172-3bb1-42fa-98b0-9cfefd131276.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2022/03-maart/_agendaitem/Sting.jpg"
+>>>>>>> master
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2023-05-20T18:00:00.000Z",
+    "startDateTime": "2023-04-14T18:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/the-offspring",
-    "title": "The Offspring",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/avril-lavigne-1",
+    "title": "Avril Lavigne",
     "location": "afaslive",
-    "price": 49.28,
+    "price": 47.04,
     "shortText": null,
+<<<<<<< HEAD
     "longText": "../public/texts/de4d7801-830a-4757-ad2a-35d2f758a4cc.html",
     "image": "https://www.afaslive.nl/files/Agenda/2023/5-Mei/_agendaitem/The-Offspring.jpg"
+=======
+    "longText": "../public/texts/b655707a-cefd-4823-8589-c7c2d71a0654.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2022/02-februari/_agendaitem/Avril-Lavigne.jpg"
+>>>>>>> master
   }
 ]

@@ -1,6 +1,7 @@
 [
   {
     "doorOpenDateTime": null,
+<<<<<<< HEAD
     "startDateTime": "2022-10-22T00:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://www.dynamo-eindhoven.nl/programma/hit-the-city-x-doodswens/",
@@ -38,10 +39,26 @@
   {
     "doorOpenDateTime": "2023-02-05T18:00:00.000Z",
     "startDateTime": "2023-02-05T00:00:00.000Z",
+=======
+    "startDateTime": "2022-11-19T00:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.dynamo-eindhoven.nl/programma/bad-omens/#spotify-embed",
-    "title": "Bad Omens",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/programma/crossfaith-2022/#spotify-embed",
+    "title": "Crossfaith",
     "location": "dynamo",
+    "price": 17.5,
+    "shortText": "Plus support",
+    "longText": "../public/texts/de95c9aa-691e-4ffe-b4dc-60a103cb99ba.html",
+    "image": null
+  },
+  {
+    "doorOpenDateTime": "2023-02-09T18:00:00.000Z",
+    "startDateTime": "2023-02-09T00:00:00.000Z",
+>>>>>>> master
+    "endDateTime": null,
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/programma/napalm-death-2023/#spotify-embed",
+    "title": "Campaign for Musical Destruction ft Napalm Death",
+    "location": "dynamo",
+<<<<<<< HEAD
     "price": 18,
     "shortText": "Support: GHØSTKID + Oxymorrons",
     "longText": "../public/texts/1c7f6104-25df-4b15-9e85-c1e8c9819c29.html",
@@ -58,5 +75,11 @@
     "shortText": "Plus support",
     "longText": "../public/texts/b29b186f-6738-463f-9b84-8dba380eaa39.html",
     "image": "https://www.dynamo-eindhoven.nl/wp-content/uploads/2022/06/Zebrahead_3_High_Res_Credit_KevinBaldes-1200x1200.jpg"
+=======
+    "price": 31.5,
+    "shortText": "Support: Dropdead + Siberian Meat Grinder",
+    "longText": "../public/texts/99cf74f8-6f4e-4af4-8e30-e13074647801.html",
+    "image": null
+>>>>>>> master
   }
 ]

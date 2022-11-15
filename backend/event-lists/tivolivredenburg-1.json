@@ -1,5 +1,6 @@
 [
   {
+<<<<<<< HEAD
     "doorOpenDateTime": "2022-10-14T16:00:00.000Z",
     "startDateTime": "2022-10-14T17:00:00.000Z",
     "endDateTime": "2022-10-14T20:45:00.000Z",
@@ -74,61 +75,112 @@
   {
     "doorOpenDateTime": "2022-11-28T18:30:00.000Z",
     "startDateTime": "2022-11-28T19:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/einsturzende-neubauten-28-11-2022/",
-    "title": "Einstürzende Neubauten",
+=======
+    "doorOpenDateTime": "2022-11-18T19:00:00.000Z",
+    "startDateTime": "2022-11-18T20:00:00.000Z",
+    "endDateTime": "2022-11-18T21:00:00.000Z",
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/of-the-wand-the-moon-18-11-2022/",
+    "title": "Of The Wand & The Moon",
     "location": "tivolivredenburg",
+    "price": 17.05,
+    "shortText": "Solo optreden van Kim Larsen's (ex-Saturnus) project",
+    "longText": "../public/texts/83576252-92c1-4445-acb3-2836809e5e65.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2022/09/flowers1_Easy-Resize.com_.jpg"
+  },
+  {
+    "doorOpenDateTime": "2022-11-26T17:45:00.000Z",
+    "startDateTime": "2022-11-26T18:30:00.000Z",
+>>>>>>> master
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/the-gathering-26-11-2022/",
+    "title": "The Gathering",
+    "location": "tivolivredenburg",
+<<<<<<< HEAD
     "price": 39.75,
     "shortText": "Eigenzinnig avant-gardegezelschap",
     "longText": "../public/texts/59867467-a7b4-44b0-a72e-bc30f905f1ea.html",
     "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2022/07/webversie-380x214.png"
+=======
+    "price": 25.85,
+    "shortText": "+ support: Green Carnation",
+    "longText": "../public/texts/d721a91e-2c72-4641-a017-e075ad6b4b23.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2022/06/The-Gathering-promo-picture-2019-II-Gema-Perez_Easy-Resize.com_.jpg"
+>>>>>>> master
   },
   {
-    "doorOpenDateTime": "2022-12-10T18:00:00.000Z",
-    "startDateTime": "2022-12-10T18:45:00.000Z",
-    "endDateTime": "2022-12-10T22:00:00.000Z",
-    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/viagra-boys-10-12-2022/",
-    "title": "Viagra Boys",
+    "doorOpenDateTime": "2022-12-03T18:00:00.000Z",
+    "startDateTime": "2022-12-03T18:45:00.000Z",
+    "endDateTime": "2022-12-03T21:00:00.000Z",
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/frank-carter-the-rattlesnakes-03-12-2022/",
+    "title": "Frank Carter & The Rattlesnakes",
     "location": "tivolivredenburg",
+<<<<<<< HEAD
     "price": 24.85,
     "shortText": "Zweedse postpunkband",
     "longText": "../public/texts/dcd8b6bd-034a-4945-8519-72523a06a163.html",
     "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2022/04/2_VB-2022-PRESS_FREDRIK-BENGTSSON_Easy-Resize.com_.jpg"
+=======
+    "price": 25.85,
+    "shortText": "Extra concert - In your face punk en catchy meezingers | KINK Presents",
+    "longText": "../public/texts/258872e0-1133-4a64-8f15-0a968b8abf03.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2022/06/Rattlesnakes_EU_Tour_Poster_Update_1x1_1E.jpg"
+>>>>>>> master
   },
   {
-    "doorOpenDateTime": "2022-12-20T18:00:00.000Z",
-    "startDateTime": "2022-12-20T19:15:00.000Z",
+    "doorOpenDateTime": "2022-12-19T18:00:00.000Z",
+    "startDateTime": "2022-12-19T19:15:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/anneke-van-giersbergen-20-12-2022/",
-    "title": "Anneke van Giersbergen",
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/heino-19-12-2022/",
+    "title": "Heino",
     "location": "tivolivredenburg",
+<<<<<<< HEAD
     "price": 34.25,
     "shortText": "Fairytale of TivoliVredenburg - Een alternatieve kerst met Anneke van Giersbergen",
     "longText": "../public/texts/743526c4-37e3-43ee-a4e0-6411a28160f6.html",
     "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2021/12/crm-anneke-van-giersbergen.jpg"
+=======
+    "price": 37.25,
+    "shortText": "De populairste schlagerartiest ter wereld | Weihnachtsfest",
+    "longText": "../public/texts/c1ad92a5-30d1-4968-9605-c3d99ace68e7.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2021/12/Heino-website-1-380x214.png"
+>>>>>>> master
   },
   {
-    "doorOpenDateTime": "2023-02-26T18:00:00.000Z",
-    "startDateTime": "2023-02-26T19:15:00.000Z",
+    "doorOpenDateTime": "2023-03-02T18:00:00.000Z",
+    "startDateTime": "2023-03-02T19:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/wardruna-26-02-2023/",
-    "title": "Wardruna",
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/zebrahead-02-03-2023/",
+    "title": "Zebrahead",
     "location": "tivolivredenburg",
+<<<<<<< HEAD
     "price": 40.75,
     "shortText": "Hypnotiserende, donkere folk op traditionele instrumenten met teksten in het oud-Noors.",
     "longText": "../public/texts/13bbedfa-3dd9-499d-b1aa-2105ff7a11e2.html",
     "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2020/08/Wardruna-persfoto-kleiner-scaled.jpg"
+=======
+    "price": 23.85,
+    "shortText": "Meezingbare punkrocksongs met catchy hooks",
+    "longText": "../public/texts/898290e9-af9d-46c0-882e-4521aaf59606.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2022/08/Zebrahead_3_High_Res_Credit_KevinBaldes_Easy-Resize.com_.jpg"
+>>>>>>> master
   },
   {
-    "doorOpenDateTime": "2023-03-20T16:30:00.000Z",
-    "startDateTime": "2023-03-20T17:00:00.000Z",
+    "doorOpenDateTime": "2023-04-13T17:00:00.000Z",
+    "startDateTime": "2023-04-13T17:45:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/cult-of-luna-russian-circles-20-03-2023/",
-    "title": "Cult of Luna + Russian Circles",
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/floor-jansen-13-04-2023/",
+    "title": "Floor Jansen",
     "location": "tivolivredenburg",
+<<<<<<< HEAD
     "price": 31.75,
     "shortText": "Avond vol zware metal + support: SVALBARD",
     "longText": "../public/texts/bdb3fad1-b2ab-44d0-8127-a9b058c0a3fb.html",
     "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2022/06/comp-15.jpg"
+=======
+    "price": 38.75,
+    "shortText": "Zangeres van metalband Nightwish en bekend van Beste Zangers",
+    "longText": "../public/texts/1fb1187e-492a-4d89-83b8-4fac92c5b738.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2022/06/EH_Floorjansen-e1655461424761-380x214.png"
+>>>>>>> master
   }
 ]

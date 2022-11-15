@@ -1,6 +1,7 @@
 [
   {
     "doorOpenDateTime": null,
+<<<<<<< HEAD
     "startDateTime": "2022-10-21T06:30:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://www.dbstudio.nl/event/de-kraaien-support/",
@@ -34,5 +35,28 @@
     "shortText": null,
     "longText": "../public/texts/d4acf8ef-7f2f-4aa1-93b4-04e531e277ea.html",
     "image": "https://www.dbstudio.nl/wp-content/uploads/2022/09/RatsandDaggers_horizontal-scaled.jpg"
+=======
+    "startDateTime": "2022-11-20T07:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.dbstudio.nl/event/girls-in-synthesis-uk/",
+    "title": "GIRLS IN SYNTHESIS (UK) + Kallaallit Nunaat",
+    "location": "dbs",
+    "price": null,
+    "shortText": null,
+    "longText": "../public/texts/6456e7fe-a480-492f-98d9-c5556031d30d.html",
+    "image": "https://www.dbstudio.nl/wp-content/uploads/2022/07/GIS-PYLOT-Cover_2.jpg"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-12-03T07:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.dbstudio.nl/event/hackedepicciotto-glice/",
+    "title": "HACKEDEPICCIOTTO + Glice",
+    "location": "dbs",
+    "price": null,
+    "shortText": null,
+    "longText": "../public/texts/5a8a01c1-1282-40ea-a004-7fdd2e7537a6.html",
+    "image": "https://www.dbstudio.nl/wp-content/uploads/2022/06/HackedepicciottoBanner03.jpg"
+>>>>>>> master
   }
 ]

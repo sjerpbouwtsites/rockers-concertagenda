@@ -1,6 +1,7 @@
 [
   {
     "doorOpenDateTime": null,
+<<<<<<< HEAD
     "startDateTime": "2022-11-02T00:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": null,
@@ -158,12 +159,15 @@
   {
     "doorOpenDateTime": null,
     "startDateTime": "2022-11-11T00:00:00.000Z",
+=======
+    "startDateTime": "2022-11-19T00:00:00.000Z",
+>>>>>>> master
     "endDateTime": null,
     "venueEventUrl": null,
-    "title": "Fleshgod Apocalypse, Omnium Gatherum, Chaoseum, Irony Of Fate en Azteca",
-    "location": "turock",
+    "title": "Crown Compass",
+    "location": "qfactory",
     "price": null,
-    "shortText": "Turock, Essen (Duitsland)",
+    "shortText": "Q-Factory, Amsterdam",
     "longText": null,
     "image": null
   },
@@ -211,7 +215,7 @@
     "title": "Leaves' Eyes, Temperance en Catalyst Crime",
     "location": "deflux",
     "price": null,
-    "shortText": "De Flux, Zaandam",
+    "shortText": "<b>Gecanceld</b>",
     "longText": null,
     "image": null
   },
@@ -241,13 +245,13 @@
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-11-27T00:00:00.000Z",
+    "startDateTime": "2022-11-26T00:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": null,
-    "title": "Leaves' Eyes, Temperance en Catalyst Crime",
-    "location": "ragnarok",
+    "title": "Heidevolk en Alvenrad",
+    "location": "estrado",
     "price": null,
-    "shortText": "Ragnarok, Bree",
+    "shortText": "Estrado, Harderwijk",
     "longText": null,
     "image": null
   },
@@ -284,18 +288,6 @@
     "location": "ziggodome",
     "price": null,
     "shortText": "Ziggo Dome, Amsterdam",
-    "longText": null,
-    "image": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-11-29T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Leaves' Eyes, Temperance en Catalyst Crime",
-    "location": "matrix",
-    "price": null,
-    "shortText": "Matrix, Bochum",
     "longText": null,
     "image": null
   },
@@ -355,7 +347,7 @@
     "title": "In Flames, At The Gates, Imminence en Orbit Culture",
     "location": "palladium",
     "price": null,
-    "shortText": "Palladium, Keulen",
+    "shortText": "Palladium, Keulen (Duitsland)",
     "longText": null,
     "image": null
   },
@@ -379,7 +371,7 @@
     "title": "Finntroll, Brymir en Skálmöld",
     "location": "essigfabrik",
     "price": null,
-    "shortText": "Essigfabrik, Keulen",
+    "shortText": "Essigfabrik, Keulen (Duitsland)",
     "longText": null,
     "image": null
   },
@@ -391,7 +383,19 @@
     "title": "In Flames, At The Gates, Imminence en Orbit Culture",
     "location": "ab",
     "price": null,
-    "shortText": "AB, Brussel",
+    "shortText": "AB, Brussel (België)",
+    "longText": null,
+    "image": null
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-12-09T00:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": null,
+    "title": "Haltpop Winterfest",
+    "location": "deflux",
+    "price": null,
+    "shortText": "met For I Am King, Two And A Half Girl, March, Azrael en Permission To Land",
     "longText": null,
     "image": null
   },

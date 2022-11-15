@@ -1,62 +1,14 @@
 [
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-10-22T17:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://gebrdenobel.nl/programma/maxfest071-22-oct-2022",
-    "title": "Maxfest071",
-    "location": "gebrdenobel",
-    "price": 20,
-    "shortText": "Maximum Overdrive, Nouked, Headfirst, Grave Dohls, Negative Creeps & Morning View.",
-    "longText": "../public/texts/66935bfa-0a00-4610-9540-21981f8ca3b6.html",
-    "image": "https://gebrdenobel.nl/images/jcogs_img/cache/Maxfest_2021_website_-_28de80_-_aef0dc6b573bf9871c6e2c054f666d91e625794b.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-11-04T18:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://gebrdenobel.nl/programma/fire-horse-support-4-nov-2022",
-    "title": "Fire Horse + support Cosmic Debris",
-    "location": "gebrdenobel",
-    "price": 15,
-    "shortText": null,
-    "longText": "../public/texts/b449e9ca-8643-4156-b518-eeff2809b5a9.html",
-    "image": "https://gebrdenobel.nl/images/jcogs_img/cache/Fire_Horse_liggend_-_28de80_-_0dfc26b0a198439b735a6f77fd22316c88e083bd.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-11-06T18:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://gebrdenobel.nl/programma/temple-of-rock-on-tour-featuring-acdcuk-up-the-irons-imitallica-6-nov-2022",
-    "title": "TEMPLE OF ROCK on Tour, featuring : ACDCUK, Up the Irons & Imitallica",
-    "location": "gebrdenobel",
-    "price": 20,
-    "shortText": null,
-    "longText": "../public/texts/d1ad24c1-f2a0-4637-9833-5e1f4e9cc39d.html",
-    "image": "https://gebrdenobel.nl/images/jcogs_img/cache/imitallica_nirwana_tuinfeest_2_2017_-_28de80_-_acda58d8ac603d60ebe60627f223bcb0d7602dd9.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-11-13T17:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://gebrdenobel.nl/programma/fleshgod-apocalypse-omnium-gatherum-13-nov-2022",
-    "title": "Fleshgod Apocalypse + Omnium Gatherum",
-    "location": "gebrdenobel",
-    "price": 20,
-    "shortText": "+ supports: Imperial Slave & Azteca | Veleno Across Europe Tour",
-    "longText": "../public/texts/902b6c0f-63cf-4a87-ae47-357f1b5658fa.html",
-    "image": "https://gebrdenobel.nl/images/jcogs_img/cache/Fleshgod_Header_-_28de80_-_b72e058525c62594b97c316b6075faed2e137a59.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
     "startDateTime": "2022-11-18T18:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://gebrdenobel.nl/programma/speedmobile-supports-dikke-dennis-de-r-ckers-maverick-18-nov-2022",
-    "title": "Speedmobile + supports: Dikke Dennis & de Røckers + MavericK",
+    "title": "Speedmobile",
     "location": "gebrdenobel",
     "price": 17.5,
-    "shortText": null,
-    "longText": "../public/texts/56b438b3-6a71-4b46-8e32-822426bf6372.html",
+    "shortText": "met support acts Dikke Dennis & de Røckers en MavericK",
+    "longText": null,
     "image": "https://gebrdenobel.nl/images/jcogs_img/cache/Speedmobile_-_28de80_-_eedf9596e029294369ff42420e52257cf650004d.jpg"
   },
   {
@@ -68,19 +20,19 @@
     "location": "gebrdenobel",
     "price": 15,
     "shortText": "Indierock, sterk geïnspireerd door Oasis, The Libertines en The Who",
-    "longText": "../public/texts/157320cb-4feb-4fd2-bbae-6fe847e2fa1b.html",
+    "longText": null,
     "image": "https://gebrdenobel.nl/images/jcogs_img/cache/FB_event_orange_-_28de80_-_f73034a6ea40f52ddae2967757fd74e51beb9aba.jpg"
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-12-13T23:00:00.000Z",
+    "startDateTime": "2022-12-14T18:30:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://gebrdenobel.nl/programma/nazareth-14-dec-2022",
     "title": "Nazareth",
     "location": "gebrdenobel",
     "price": 27.5,
     "shortText": "20 Nights in 2020 Tour",
-    "longText": "../public/texts/0a17da20-256b-4a16-852e-e8e915d465d7.html",
+    "longText": null,
     "image": "https://gebrdenobel.nl/images/jcogs_img/cache/Nazareth_header_-_28de80_-_0325b297ce0ec40e40188db32ae69e0dc2409c26.jpg"
   },
   {
@@ -92,8 +44,20 @@
     "location": "gebrdenobel",
     "price": 17.5,
     "shortText": "Legal at Last Tour 2022",
-    "longText": "../public/texts/5a9bb437-611e-4844-86bd-be317c82ddac.html",
+    "longText": null,
     "image": "https://gebrdenobel.nl/images/jcogs_img/cache/anvil_-_28de80_-_2f31e3e1c427c42714fa986918584755a1f10abb.jpg"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-01-05T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://gebrdenobel.nl/programma/mis-yrming-is-kringa-at-ritual-death-no-en-nubivagant-it-5-jan-2023",
+    "title": "Misþyrming (IS), Kringa (AT), Ritual Death (NO) en Nubivagant (IT)",
+    "location": "gebrdenobel",
+    "price": 20,
+    "shortText": "Black metalbands alle hoeken van Europa",
+    "longText": null,
+    "image": "https://gebrdenobel.nl/images/jcogs_img/cache/MIS%C3%9EYRMING-band-photo_-_28de80_-_0520bc739f7d9f8b124af1d470ae369d711ec851.jpg"
   },
   {
     "doorOpenDateTime": null,
@@ -103,8 +67,8 @@
     "title": "Kutschurft: Nog 1 keer met volle zakken",
     "location": "gebrdenobel",
     "price": 15,
-    "shortText": null,
-    "longText": "../public/texts/6d27683e-7d24-460f-8b4c-80454210c5c2.html",
+    "shortText": "De meest eetlustbedervende band van Nederland",
+    "longText": null,
     "image": "https://gebrdenobel.nl/images/jcogs_img/cache/FB_event_kmk_-_28de80_-_5e64d89a22eba649f4f26791ba004c1eb00ef130.jpg"
   },
   {
@@ -116,7 +80,7 @@
     "location": "gebrdenobel",
     "price": 20,
     "shortText": "+ Gaerea + Schammasch",
-    "longText": "../public/texts/fa229b94-ecee-4989-aeeb-208667e0dd34.html",
+    "longText": null,
     "image": "https://gebrdenobel.nl/images/jcogs_img/cache/Harakiri-for-the-sky-header-Header_-_28de80_-_ca51900725b3579e602a09dc6db714db338c77e4.png"
   },
   {
@@ -127,8 +91,8 @@
     "title": "Scott Stapp",
     "location": "gebrdenobel",
     "price": 35,
-    "shortText": "The Survivor Tour",
-    "longText": "../public/texts/816ad038-63fd-4043-9733-6668ff6d2a76.html",
+    "shortText": "Creed frontman op The Survivor Tour",
+    "longText": null,
     "image": "https://gebrdenobel.nl/images/jcogs_img/cache/Scott_Stapp_header_-_28de80_-_59b92a25ee1d945d2b1b10145a9b50448c1e9726.jpg"
   },
   {
@@ -140,19 +104,43 @@
     "location": "gebrdenobel",
     "price": 20,
     "shortText": null,
-    "longText": "../public/texts/7cbaa282-f06e-424e-9d3b-f5e74a631501.html",
+    "longText": null,
     "image": "https://gebrdenobel.nl/images/jcogs_img/cache/TFN_23_Ontwerp_zonder_titel_-_28de80_-_754fa8047337efc4cd7e525e26ec59bcc224cc9f.jpg"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-03-03T18:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://gebrdenobel.nl/programma/hallo-venray-3-mar-2023",
+    "title": "Hallo Venray",
+    "location": "gebrdenobel",
+    "price": 20,
+    "shortText": "Haags alternatief popfenomeen klinkt jonger dan ooit tevoren",
+    "longText": null,
+    "image": "https://gebrdenobel.nl/images/jcogs_img/cache/Hallo_Venray_banner_-_28de80_-_3f0bbdfdec23bd69c22aa71954694428f2888c0f.png"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-03-31T17:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://gebrdenobel.nl/programma/metal-heads-31-mar-2023",
+    "title": "Metal Heads",
+    "location": "gebrdenobel",
+    "price": 16,
+    "shortText": "Tributes aan Black Sabbath, Iron Maiden en Judas Priest",
+    "longText": null,
+    "image": "https://gebrdenobel.nl/images/jcogs_img/cache/MH_2023_banner_-_28de80_-_40513dd73bee09a4a5bbd3442e53a7d41cc4dbac.jpg"
   },
   {
     "doorOpenDateTime": null,
     "startDateTime": "2023-04-12T16:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://gebrdenobel.nl/programma/cannibal-corpse-dark-funeral-ingested-storm-ruler-12-apr-2023",
-    "title": "Cannibal Corpse | Dark Funeral | Ingested |Storm Ruler",
+    "title": "Cannibal Corpse | Dark Funeral | Ingested | Storm Ruler",
     "location": "gebrdenobel",
     "price": 30,
-    "shortText": "Een avond vol metal",
-    "longText": "../public/texts/3a94dbae-fae8-4f4b-9616-d31aa58a0023.html",
+    "shortText": "Death metalveteranen Cannibal Corpse op Europese tour",
+    "longText": null,
     "image": "https://gebrdenobel.nl/images/jcogs_img/cache/Cannibal_Corpse_website_banner_-_28de80_-_f1aca92b79334f30f55f936f856bff770716b107.png"
   },
   {
@@ -163,8 +151,8 @@
     "title": "Clearwater Creedence Revival",
     "location": "gebrdenobel",
     "price": 27.5,
-    "shortText": null,
-    "longText": "../public/texts/1a5b5315-2786-4a39-9eb6-40d19c254cdd.html",
+    "shortText": "Tribute aan Creedence Clearwater Revival",
+    "longText": null,
     "image": "https://gebrdenobel.nl/images/jcogs_img/cache/Clearwater_liggend_-_28de80_-_72ee72b90f83c9c01ca2ad260529d031d61cf857.jpg"
   },
   {
@@ -176,7 +164,7 @@
     "location": "gebrdenobel",
     "price": 35,
     "shortText": "met o.a.: Sanctuary (USA), Halcyon Way en meer!",
-    "longText": "../public/texts/c17879bf-2b1f-4bad-ba69-3f2962b5c5f0.html",
+    "longText": null,
     "image": "https://gebrdenobel.nl/images/jcogs_img/cache/MEF_5_header_2023_-_28de80_-_b0cc360dd84f1cf5533c3bad256705535b3d49a4.jpg"
   }
 ]

@@ -7,6 +7,7 @@
 body{
   font-size: 20px;
   font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
 }
 
 :root {
@@ -31,9 +32,21 @@ body{
   }
 }
 .app {
-  display: flex;
+  /* display: flex; */
   position: relative;
   background-color: var(--anthracite);
+}
+.app-view {
+  width: 100vw;
+}
+
+.flickity-viewport:focus {
+  border: 0;
+  outline: 0;
+}
+
+.flickity-enabled:focus {
+  outline: none;
 }
 
 .cursive-font {font-family: 'Square Peg', cursive;
