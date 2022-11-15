@@ -13,24 +13,30 @@ import {
   log,
 } from "./tools.js";
 import { letScraperListenToMasterMessageAndInit } from "./generic-scraper.js";
+import { QuickWorkerMessage } from "./rock-worker.js";
 
 letScraperListenToMasterMessageAndInit(scrapeTivolivredenburg);
 
-async function scrapeTivolivredenburg(workerIndex) {
+async function scrapeTivolivredenburg() {
+  const qwm = new QuickWorkerMessage(workerData);
   const browser = await puppeteer.launch();
-
-  try {
-    const baseMusicEvents = await Promise.race([
-      makeBaseEventList(browser, workerIndex),
-      errorAfterSeconds(30000),
-    ]);
-    await fillMusicEvents(browser, baseMusicEvents, workerIndex);
-  } catch (error) {
-    handleError(error);
-  }
+  parentPort.postMessage(qwm.workerInitialized());
+  Promise.race([makeBaseEventList(browser, qwm), errorAfterSeconds(15000)])
+    .then((baseMusicEvents) => {
+      parentPort.postMessage(qwm.workerStarted());
+      return fillMusicEvents(browser, baseMusicEvents, qwm);
+    })
+    .then((browser) => {
+      parentPort.postMessage(qwm.workerDone(EventsList.amountOfEvents));
+      EventsList.save(workerData.family, workerData.index);
+      browser && browser.hasOwnProperty("close") && browser.close();
+    })
+    .catch((error) =>
+      handleError(error, workerData, "outer catch scrape effenaar")
+    );
 }
 
-async function fillMusicEvents(browser, baseMusicEvents, workerIndex) {
+async function fillMusicEvents(browser, baseMusicEvents, qwm) {
   const baseMusicEventsCopy = [...baseMusicEvents];
 
   return processSingleMusicEvent(
@@ -182,7 +188,7 @@ async function getPageInfo(page) {
   }
 }
 
-async function makeBaseEventList(browser, workerIndex) {
+async function makeBaseEventList(browser, qwm) {
   const page = await browser.newPage();
   await page.goto(
     "https://www.tivolivredenburg.nl/agenda/?event_category=metal-punk-heavy",
@@ -197,15 +203,25 @@ async function makeBaseEventList(browser, workerIndex) {
       })
       .map((eventEl) => {
         const res = {};
-        res.title = eventEl.querySelector(".agenda-list-item__title")?.textContent.trim() ?? null;
-        res.shortText = eventEl.querySelector(".agenda-list-item__text")?.textContent.trim() ?? null;
-        res.image = eventEl.querySelector(".agenda-list-item__figure img")?.src.replace(/-\d\d\dx\d\d\d.jpg/, '.jpg') ?? null;
-        res.venueEventUrl = eventEl.querySelector('.agenda-list-item__title-link').href;
+        res.title =
+          eventEl
+            .querySelector(".agenda-list-item__title")
+            ?.textContent.trim() ?? null;
+        res.shortText =
+          eventEl
+            .querySelector(".agenda-list-item__text")
+            ?.textContent.trim() ?? null;
+        res.image =
+          eventEl
+            .querySelector(".agenda-list-item__figure img")
+            ?.src.replace(/-\d\d\dx\d\d\d.jpg/, ".jpg") ?? null;
+        res.venueEventUrl = eventEl.querySelector(
+          ".agenda-list-item__title-link"
+        ).href;
         res.location = "tivolivredenburg";
         return res;
       });
   }, workerIndex);
-
 
   return rawEvents
     .filter(basicMusicEventsFilter)

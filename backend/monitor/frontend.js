@@ -88,7 +88,6 @@ function eventToUpdates(eventMsg, fields) {
     fields.errorField.updateError(eventMsg);
   }
   if (eventMsg.subtype.includes("debugger")) {
-    alert("JA");
     fields.debuggerField.updateConsole(eventMsg);
   }
 

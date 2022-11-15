@@ -23,34 +23,18 @@ async function scrapePatronaat() {
   parentPort.postMessage(qwm.workerInitialized());
   const browser = await puppeteer.launch();
 
-  try {
-    const baseMusicEvents = await makeBaseEventList(browser, qwm);
-    parentPort.postMessage(qwm.workerStarted());
-    await fillMusicEvents(browser, baseMusicEvents, qwm);
-  } catch (error) {
-    handleError(error, workerData, "outer try patronaat scraper");
-  }
-  EventsList.save(workerData.family, workerData.index);
-  parentPort.postMessage(qwm.workerDone(EventsList.amountOfEvents));
-}
-
-async function fillMusicEvents(browser, baseMusicEvents, qwm) {
-  const baseMusicEventsCopy = [...baseMusicEvents];
-
-  return processSingleMusicEvent(browser, baseMusicEventsCopy, qwm)
-    .then((browser) => {
-      if (browser && browser.hasOwnProperty("close")) {
-        browser.close();
-      }
-      return true;
+  Promise.race([makeBaseEventList(browser), errorAfterSeconds(15000)])
+    .then((baseMusicEvents) => {
+      parentPort.postMessage(qwm.workerStarted());
+      const baseMusicEventsCopy = [...baseMusicEvents];
+      return processSingleMusicEvent(browser, baseMusicEventsCopy, qwm);
     })
-    .catch((err) => {
-      handleError(
-        err,
-        workerData,
-        "process single music event recursive catch"
-      );
-    });
+    .then((browser) => {
+      parentPort.postMessage(qwm.workerDone(EventsList.amountOfEvents));
+      EventsList.save(workerData.family, workerData.index);
+      browser && browser.hasOwnProperty("close") && browser.close();
+    })
+    .catch((error) => handleError(error, workerData, "outer catch scrape 013"));
 }
 
 async function processSingleMusicEvent(browser, baseMusicEvents, qwm) {

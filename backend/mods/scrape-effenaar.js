@@ -27,7 +27,8 @@ async function scrapeEffenaar() {
   ])
     .then((baseMusicEvents) => {
       parentPort.postMessage(qwm.workerStarted());
-      return fillMusicEvents(browser, baseMusicEvents, qwm);
+      const baseMusicEventsCopy = [...baseMusicEvents];
+      return processSingleMusicEvent(browser, baseMusicEventsCopy, qwm);
     })
     .then((browser) => {
       parentPort.postMessage(qwm.workerDone(EventsList.amountOfEvents));
@@ -37,11 +38,6 @@ async function scrapeEffenaar() {
     .catch((error) =>
       handleError(error, workerData, "outer catch scrape effenaar")
     );
-}
-
-async function fillMusicEvents(browser, baseMusicEvents, qwm) {
-  const baseMusicEventsCopy = [...baseMusicEvents];
-  return processSingleMusicEvent(browser, baseMusicEventsCopy, qwm);
 }
 
 async function processSingleMusicEvent(browser, baseMusicEvents, qwm) {
