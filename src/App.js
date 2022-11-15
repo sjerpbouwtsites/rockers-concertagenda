@@ -13,7 +13,7 @@ const flicketyOptions = {
   initialIndex: 1, // 0: filter; 1: app; 2: text;
   prevNextButtons: false,
   pageDots: false,
-  freeScroll: true,
+  freeScroll: false,
   contain: true,
   dragThreshold: 180,
 };
