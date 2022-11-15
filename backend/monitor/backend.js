@@ -12,93 +12,107 @@ const monitorURL = 'http://localhost/concertagenda/backend/monitor/'
  * @returns webSocketServer
  */
 function createServerWebsocket() {
-  const webSocketsServerPort = 8002;
+  const webSocketsServerPort = 8001;
   const server = http.createServer();
   server.listen(webSocketsServerPort);
   const wsServer = new webSocketServer({
-    httpServer: server
+    httpServer: server,
   });
-  return wsServer
+  return wsServer;
 }
 function createClients() {
   // I'm maintaining all active connections in this object
   const clients = {
     setActive(origin, connection) {
       var userID = this.getUniqueID();
-      const saveOrigin = origin.replace(/[^a-zA-Z]/g, '').toUpperCase();
-      const clientName = `${saveOrigin}_${userID}`
+      const saveOrigin = origin.replace(/[^a-zA-Z]/g, "").toUpperCase();
+      const clientName = `${saveOrigin}_${userID}`;
       connection.clientName = clientName;
       this.active[clientName] = connection;
       return clientName;
     },
     setInactive(clientName) {
       if (!this.active.hasOwnProperty(clientName)) {
-        throw new Error('clientname onbekend in actieve verbindingen clients obj backend')
+        throw new Error(
+          "clientname onbekend in actieve verbindingen clients obj backend"
+        );
       }
-      const connectionCopy = { ...this.active[clientName] }
+      const connectionCopy = { ...this.active[clientName] };
       this.inactive[clientName] = connectionCopy;
       delete this.active[clientName];
     },
     inactive: {},
     active: {},
     getUniqueID() {
-      const s4 = () => Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);
-      return s4() + s4() + '-' + s4();
+      const s4 = () =>
+        Math.floor((1 + Math.random()) * 0x10000)
+          .toString(16)
+          .substring(1);
+      return s4() + s4() + "-" + s4();
     },
     logConnected() {
       console.log(`connected ${Object.keys(this.active)}`);
-
-    }
+    },
   };
   return clients;
 }
 
-
 // TODO als client exited
 
 async function initMonitorBackend() {
-  console.log('starting monitor')
+  console.log("starting monitor");
   const clients = createClients();
-
   const wsServer = createServerWebsocket();
-  console.log("waiting");
-  await open(monitorURL);
-  console.log("after waiting");
-  wsServer.on('request', function (request) {
+
+  setTimeout(() => {
+    console.log("opened connection");
+    open(monitorURL, { wait: true });
+  }, 1000);
+
+  wsServer.on("request", function (request) {
     const connection = request.accept(null, request.origin);
     const newConnectionID = clients.setActive(request.origin, connection);
     connection.clientName = newConnectionID;
-    clients.logConnected()
+    clients.logConnected();
     reallyConnected = true;
   });
 
   let reallyConnected = false;
 
-  wsServer.on('handleUpgrade', function (request, socket, head) {
-    const newConnectionMsg = new wsMessage('clients-log', null, `Nieuwe verbinding ${socket.clientName}. Nu ${Object.keys(clients.active).length} verbindingen`)
+  wsServer.on("handleUpgrade", function (request, socket, head) {
+    const newConnectionMsg = new wsMessage(
+      "clients-log",
+      null,
+      `Nieuwe verbinding ${socket.clientName}. Nu ${
+        Object.keys(clients.active).length
+      } verbindingen`
+    );
 
     wsServer.broadcast(newConnectionMsg.json);
     reallyConnected = true;
-    fs.readFile('./README.md', 'utf-8', (markdownText => {
+    fs.readFile("./README.md", "utf-8", (markdownText) => {
       const marktDownConverter = new showdown.Converter();
       const markDownHTML = marktDownConverter.makeHtml(markdownText);
-      const newConnectionMsg = new wsMessage('clients-html', '#monitor-readme', markDownHTML)
-      wsServer.broadcast(newConnectionMsg.json);      
-    }))
-
-  })
-  wsServer.on('close', function (request) {
-    if (request.hasOwnProperty('clientName')) {
-      clients.setInactive(request.clientName)
+      const newConnectionMsg = new wsMessage(
+        "clients-html",
+        "#monitor-readme",
+        markDownHTML
+      );
+      wsServer.broadcast(newConnectionMsg.json);
+    });
+  });
+  wsServer.on("close", function (request) {
+    if (request.hasOwnProperty("clientName")) {
+      clients.setInactive(request.clientName);
     }
-  })
-  return new Promise((res, rej)=>{
-    const testInterval = setInterval(()=>{
+  });
+  return new Promise((res, rej) => {
+    const testInterval = setInterval(() => {
       if (reallyConnected) {
         clearInterval(testInterval);
-          res(wsServer);
+        res(wsServer);
       }
-    }, 100)
+    }, 100);
   });
 }
 

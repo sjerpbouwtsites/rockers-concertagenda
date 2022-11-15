@@ -27,7 +27,20 @@ function createFields() {
 }
 
 function openClientWebsocket(fields) {
-  const socket = new WebSocket("ws://localhost:8002");
+  let socket = new WebSocket("ws://localhost:8001");
+
+  socket.addEventListener("error", (event) => {
+    const msg = new wsMessage("update", "terminal-error", {
+      title: "Socket err",
+      text: event.error,
+    });
+    eventToUpdates(msg, fields);
+    const msg2 = new wsMessage("update", "debugger", {
+      title: "Socket err",
+      content: event,
+    });
+    eventToUpdates(msg, fields);
+  });
 
   socket.addEventListener("open", () => {
     const msg = new wsMessage("server-log", null, "Hallo server!");
@@ -35,7 +48,7 @@ function openClientWebsocket(fields) {
   });
 
   socket.addEventListener("close", () => {
-    const msg = new wsMessage("update", "terminal-error message-roll", {
+    const msg = new wsMessage("update", "message-roll", {
       title: "De server zelf",
       text: "De server lijkt afgesloten te zijn.",
     });
@@ -72,6 +85,7 @@ function eventToUpdates(eventMsg, fields) {
     fields.errorField.update(eventMsg);
   }
   if (eventMsg.subtype.includes("debugger")) {
+    alert("JA");
     fields.debuggerField.updateConsole(eventMsg);
   }
 
