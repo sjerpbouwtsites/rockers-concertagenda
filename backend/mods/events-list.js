@@ -39,7 +39,11 @@ export default class EventsList {
         JSON.stringify(eventListTimestamps, null, "  ")
       );
     } catch (error) {
-      handleError(error);
+      handleError(
+        error,
+        EventsList.workerSignature,
+        `error while saving name ${name} and workerIndex ${workerIndex}`
+      );
       return false;
     }
     return true;
@@ -83,7 +87,11 @@ export default class EventsList {
     try {
       EventsList._events.push(event);
     } catch (error) {
-      handleError(error);
+      handleError(
+        error,
+        EventsList.workerSignature,
+        `kan niet pushen addEvent`
+      );
     }
   }
 
