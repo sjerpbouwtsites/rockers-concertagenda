@@ -47,6 +47,7 @@ export const afasliveMonths = baroegMonths;
 export const bibelotMonths = baroegMonths;
 export const dbsMonths = baroegMonths;
 export const depulMonths = dynamoMonths;
+export const doornRoosjeMonths = baroegMonths;
 export const gebrdenobelMonths = baroegMonths;
 export const idunaMonths = baroegMonths;
 export const kavkaMonths = dynamoMonths;
@@ -58,11 +59,13 @@ export const duyckerMonths = dynamoMonths;
 export const effenaarMonths = dynamoMonths;
 
 const months = {
+  // @TODO welke export is het nou serieus.
   afaslive: afasliveMonths,
   baroeg: baroegMonths,
   bibelot: bibelotMonths,
   dbs: dbsMonths,
   depul: depulMonths,
+  doornroosje: baroegMonths,
   effenaar: effenaarMonths,
   dynamy: dynamoMonths,
   duycker: duyckerMonths,

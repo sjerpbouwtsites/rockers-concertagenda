@@ -177,7 +177,7 @@ async function getPageInfo(url) {
       handleError(
         error,
         workerData,
-        `<a href='${url}'> get page info tivoli</a><br>`
+        `<a href='${url}'> get page info ${workerData.family}</a><br>`
       );
       return null;
     })

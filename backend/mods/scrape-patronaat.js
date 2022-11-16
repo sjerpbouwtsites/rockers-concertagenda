@@ -13,12 +13,11 @@ import {
   errorAfterSeconds,
 } from "./tools.js";
 import { letScraperListenToMasterMessageAndInit } from "./generic-scraper.js";
-
 import { QuickWorkerMessage } from "./rock-worker.js";
 
-letScraperListenToMasterMessageAndInit(scrapePatronaat);
+letScraperListenToMasterMessageAndInit(scrapeInit);
 
-async function scrapePatronaat() {
+async function scrapeInit() {
   const qwm = new QuickWorkerMessage(workerData);
   parentPort.postMessage(qwm.workerInitialized());
   const browser = await puppeteer.launch();

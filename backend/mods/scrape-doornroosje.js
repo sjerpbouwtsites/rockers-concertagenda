@@ -1,6 +1,6 @@
 import MusicEvent from "./music-event.js";
 import puppeteer from "puppeteer";
-import { parentPort } from "worker_threads";
+import { parentPort, workerData } from "worker_threads";
 import EventsList from "./events-list.js";
 import fs from "fs";
 import crypto from "crypto";
@@ -10,65 +10,35 @@ import {
   handleError,
   errorAfterSeconds,
   basicMusicEventsFilter,
-  log,
 } from "./tools.js";
+import { doornRoosjeMonths } from "./months.js";
 import { letScraperListenToMasterMessageAndInit } from "./generic-scraper.js";
+import { QuickWorkerMessage } from "./rock-worker.js";
+const qwm = new QuickWorkerMessage(workerData);
+let browser = null;
 
-letScraperListenToMasterMessageAndInit(scrapeDoornroosje);
+letScraperListenToMasterMessageAndInit(scrapeInit);
 
-async function scrapeDoornroosje(workerIndex) {
-  const browser = await puppeteer.launch();
-  const months = {
-    januari: "01",
-    februari: "02",
-    maart: "03",
-    april: "04",
-    mei: "05",
-    juni: "06",
-    juli: "07",
-    augustus: "08",
-    september: "09",
-    oktober: "10",
-    november: "11",
-    december: "12",
-  };
-  try {
-    const baseMusicEvents = await Promise.race([
-      makeBaseEventList(browser, workerIndex),
-      errorAfterSeconds(15000),
-    ]);
-    await fillMusicEvents(browser, baseMusicEvents, workerIndex);
-  } catch (error) {
-    handleError(error);
-  }
+async function scrapeInit() {
+  parentPort.postMessage(qwm.workerInitialized());
+  browser = await puppeteer.launch();
+  Promise.race([makeBaseEventList(), errorAfterSeconds(15000)])
+    .then((baseMusicEvents) => {
+      parentPort.postMessage(qwm.workerStarted());
+
+      const baseMusicEventsCopy = [...baseMusicEvents];
+      return processSingleMusicEvent(baseMusicEventsCopy);
+    })
+    .then(() => {
+      parentPort.postMessage(qwm.workerDone(EventsList.amountOfEvents));
+      EventsList.save(workerData.family, workerData.index);
+      browser && browser.hasOwnProperty("close") && browser.close();
+    })
+    .catch((error) => handleError(error, workerData, "outer catch scrape 013"));
 }
-
-async function fillMusicEvents(browser, baseMusicEvents, workerIndex) {
-  const baseMusicEventsCopy = [...baseMusicEvents];
-  parentPort.postMessage({
-    status: "todo",
-    message: baseMusicEvents.length,
-  });
-
-  return processSingleMusicEvent(
-    browser,
-    baseMusicEventsCopy,
-    workerIndex
-  ).finally(() => {
-    setTimeout(() => {
-      browser.close();
-    }, 5000);
-    parentPort.postMessage({
-      status: "done",
-    });
-    EventsList.save("doornroosje", workerIndex);
-  });
-}
-
-async function processSingleMusicEvent(browser, baseMusicEvents, workerIndex) {
-  parentPort.postMessage({
-    status: "todo",
-    message: baseMusicEvents.length,
+async function processSingleMusicEvent(baseMusicEvents) {
+  qwm.todo(baseMusicEvents.length).forEach((JSONblob) => {
+    parentPort.postMessage(JSONblob);
   });
 
   const newMusicEvents = [...baseMusicEvents];
@@ -78,145 +48,120 @@ async function processSingleMusicEvent(browser, baseMusicEvents, workerIndex) {
     !firstMusicEvent ||
     baseMusicEvents.length === 0 ||
     !firstMusicEvent ||
-    !firstMusicEvent.venueEventUrl
+    typeof firstMusicEvent === "undefined"
   ) {
     return true;
   }
 
-  const page = await browser.newPage();
-  await page.goto(firstMusicEvent.venueEventUrl, {
-    waitUntil: "load",
-  });
-
   try {
     const pageInfo = await Promise.race([
-      getPageInfo(page),
+      getPageInfo(firstMusicEvent.venueEventUrl),
       errorAfterSeconds(15000),
     ]);
 
-    if (pageInfo && pageInfo.priceTextcontent) {
-      firstMusicEvent.price = getPriceFromHTML(pageInfo.priceTextcontent);
-    }
+    firstMusicEvent.price =
+      pageInfo?.priceTextcontent ?? null
+        ? getPriceFromHTML(pageInfo.priceTextcontent)
+        : null;
 
-    if (pageInfo && pageInfo.longTextHTML) {
+    if (pageInfo?.longTextHTML ?? null) {
       let uuid = crypto.randomUUID();
       const longTextPath = `${fsDirections.publicTexts}/${uuid}.html`;
 
-      fs.writeFile(longTextPath, pageInfo.longTextHTML, "utf-8", () => { });
+      fs.writeFile(longTextPath, pageInfo.longTextHTML, "utf-8", () => {});
       pageInfo.longText = longTextPath;
     }
 
     // no date no registration.
     if (pageInfo) {
-      delete pageInfo.cancelReason;
       firstMusicEvent.merge(pageInfo);
-    } else if (pageInfo.cancelReason !== "") {
-      parentPort.postMessage({
-        status: "console",
-        message: `Incomplete info for ${firstMusicEvent.title}`,
-      });
+      firstMusicEvent.registerIfValid();
     } else {
-      const pageInfoError = new Error(`unclear why failure at: ${firstMusicEvent.title
-        }
-      ${JSON.stringify(pageInfo)}
-       ${JSON.stringify(firstMusicEvent)}`);
-      handleError(pageInfoError);
+      parentPort.postMessage(qwm.debugger(firstMusicEvent));
     }
-    firstMusicEvent.register();
-
-    page.close();
   } catch (error) {
-    handleError(error);
+    handleError(error, workerData, "get page info fail");
   }
-
-  if (newMusicEvents.length) {
-    return processSingleMusicEvent(browser, newMusicEvents, workerIndex);
-  } else {
-    return true;
-  }
+  return newMusicEvents.length ? processSingleMusicEvent(newMusicEvents) : true;
 }
 
-async function getPageInfo(page) {
-  let pageInfo;
+async function getPageInfo(url) {
+  const page = await browser.newPage();
+  await page.goto(url, {
+    waitUntil: "load",
+  });
 
-  const months = {
-    januari: "01",
-    februari: "02",
-    maart: "03",
-    april: "04",
-    mei: "05",
-    juni: "06",
-    juli: "07",
-    augustus: "08",
-    september: "09",
-    oktober: "10",
-    november: "11",
-    december: "12",
-  };
+  const pageResult = await page.evaluate((months) => {
+    const res = { error: null };
+    res.image =
+      document.querySelector(".c-header-event__image img")?.src ?? null;
+    res.priceTextcontent =
+      document.querySelector(".c-btn__price")?.textContent.trim() ?? null;
+    res.longTextHTML =
+      document.querySelector(".s-event__container")?.innerHTML ?? null;
 
-  try {
-    pageInfo = await page.evaluate((months) => {
-      const res = {};
-      res.cancelReason = "";
-      res.image =
-        document.querySelector(".c-header-event__image img")?.src ?? null;
-      res.priceTextcontent =
-        document.querySelector(".c-btn__price")?.textContent.trim() ?? null;
-      res.longTextHTML =
-        document.querySelector(".s-event__container")?.innerHTML ?? null;
+    const embeds = document.querySelectorAll(".c-embed");
+    res.longTextHTML =
+      embeds?.length ?? false
+        ? res.longTextHTML + embeds.innerHTML
+        : res.longTextHTML;
 
-      const embeds = document.querySelectorAll(".c-embed");
-      if (embeds && embeds.length) {
-        res.longTextHTML = res.longTextHTML + embeds.innerHTML;
+    try {
+      const startDateRauwMatch = document
+        .querySelector(".c-event-data")
+        ?.innerHTML.match(
+          /(\d{1,2})\s*(januari|februari|maart|april|mei|juni|juli|augustus|september|oktober|november|december)\s*(\d{4})/
+        );
+      let startDate;
+      if (startDateRauwMatch && startDateRauwMatch.length) {
+        const day = startDateRauwMatch[1];
+        const month = months[startDateRauwMatch[2]];
+        const year = startDateRauwMatch[3];
+        startDate = `${year}-${month}-${day}`;
       }
 
-      try {
-        const startDateRauwMatch = document
+      if (startDate) {
+        const timeMatches = document
           .querySelector(".c-event-data")
-          ?.innerHTML.match(
-            /(\d{1,2})\s*(januari|februari|maart|april|mei|juni|juli|augustus|september|oktober|november|december)\s*(\d{4})/
-          );
-        let startDate;
-        if (startDateRauwMatch && startDateRauwMatch.length) {
-          const day = startDateRauwMatch[1];
-          const month = months[startDateRauwMatch[2]];
-          const year = startDateRauwMatch[3];
-          startDate = `${year}-${month}-${day}`;
-        }
+          .innerHTML.match(/\d\d:\d\d/g);
 
-        if (startDate) {
-          const timeMatches = document
-            .querySelector(".c-event-data")
-            .innerHTML.match(/\d\d:\d\d/g);
-
-          if (timeMatches && timeMatches.length) {
-            if (timeMatches.length == 2) {
-              res.startDateTime = new Date(
-                `${startDate}:${timeMatches[1]}`
-              ).toISOString();
-              res.doorOpenDateTime = new Date(
-                `${startDate}:${timeMatches[0]}`
-              ).toISOString();
-            } else if (timeMatches.length == 1) {
-              res.startDateTime = new Date(
-                `${startDate}:${timeMatches[0]}`
-              ).toISOString();
-            }
+        if (timeMatches && timeMatches.length) {
+          if (timeMatches.length == 2) {
+            res.startDateTime = new Date(
+              `${startDate}:${timeMatches[1]}`
+            ).toISOString();
+            res.doorOpenDateTime = new Date(
+              `${startDate}:${timeMatches[0]}`
+            ).toISOString();
+          } else if (timeMatches.length == 1) {
+            res.startDateTime = new Date(
+              `${startDate}:${timeMatches[0]}`
+            ).toISOString();
           }
         }
-      } catch (error) { }
-
-      return res;
-    }, months);
-    return pageInfo;
-  } catch (error) {
-    handleError(error);
-    handleError(pageInfo);
-    return pageInfo;
+      }
+    } catch (error) {
+      error.pageInfo = res;
+      throw error; // naar then en daar erroren om pageInfo te kunnen zien
+    }
+    return res;
+  }, doornRoosjeMonths);
+  if (!page.isClosed() && page.close());
+  if (pageResult instanceof Error) {
+    handleError(
+      pageResult,
+      workerData,
+      `<a href='${url}'> get page info ${workerData.family}</a><br>`
+    );
+    (error?.pageInfo ?? null) &&
+      parentPort.postMessage(qwm.debugger(pageResult.pageInfo));
+    return null;
   }
+  // parentPort.postMessage(qwm.toConsole(pageResult));
+  return pageResult; // is pageInfo
 }
 
-async function makeBaseEventList(browser, workerIndex) {
+async function makeBaseEventList() {
   const page = await browser.newPage();
   await page.goto(
     "https://www.doornroosje.nl/?genre=metal%252Cpunk%252Cpost-hardcore%252Cnoise-rock%252Csludge-rock",
@@ -242,7 +187,7 @@ async function makeBaseEventList(browser, workerIndex) {
         res.location = "doornroosje";
         return res;
       });
-  }, workerIndex);
+  }, workerData.index);
   return rawEvents
     .filter(basicMusicEventsFilter)
     .map((event) => new MusicEvent(event));

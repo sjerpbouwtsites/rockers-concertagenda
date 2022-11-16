@@ -1,23 +1,26 @@
 import { Worker } from "worker_threads";
 
-export default class RockWorker extends Worker{
+export default class RockWorker extends Worker {
   family = null;
   index = null;
   highCapacity = false;
-  constructor(path, family, index){
-    super(path, { workerData: {
-      family,
-      index,
-      name: `${family}-${index}`
-    } });
+  constructor(path, family, index) {
+    super(path, {
+      workerData: {
+        family,
+        index,
+        name: `${family}-${index}`,
+        scraper: true,
+      },
+    });
     this.family = family;
     this.index = index;
   }
-  get name(){
+  get name() {
     return `${this.family}-${this.index}`;
   }
-  get workerName(){
-    console.warn('OUDE METHODE');
+  get workerName() {
+    console.warn("OUDE METHODE");
     return this.name;
   }
 }
@@ -67,17 +70,9 @@ export class QuickWorkerMessage {
    * ATTENTION
    * @param {Number} numberToDo
    * @returns {JSONArray} RETURNS TWO JSON OBJECTS FOR TWO CALLS.
-   */
+   */ // @ Dit was een array van meuk. Nu is het een kutte API door de app heen. HJerstellen.
   todo(numberToDo) {
     return [
-      WorkerMessage.quick("update", "message-roll", {
-        todo: numberToDo,
-        content: {
-          workerData: this.workerData,
-          text: `Todo: ${numberToDo}`,
-          status: "todo",
-        },
-      }),
       WorkerMessage.quick("process", "workers-status", {
         todo: numberToDo,
         content: {
@@ -95,7 +90,7 @@ export class QuickWorkerMessage {
     return WorkerMessage.quick("clients-log", type, {
       content: {
         workerData: this.workerData,
-        debug: toConsole,
+        debug: toConsole ?? "debugger heeft null meegekregen.",
       },
     });
   }

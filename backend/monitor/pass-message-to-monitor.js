@@ -1,6 +1,13 @@
 import WorkerStatus from "../mods/WorkerStatus.js";
 import wsMessage from "./wsMessage.js";
 
+/**
+ * Indien 'worker' niet op eigen thread, 
+ * maar op main thread, dan kan niet via postMessage 
+ * via index/workerStatus naar monitor gepraat worden 
+ * @param {wsMessage} message 
+ * @param {string} workerName workerfamily-workerindex
+ */
 export default function passMessageToMonitor(message, workerName) {
   const parsedMessage = JSON.parse(message);
 
@@ -27,7 +34,10 @@ export default function passMessageToMonitor(message, workerName) {
       WorkerStatus.change(workerName, "todo", wsMsgInst?.messageData?.todo);
     }
 
-    if (wsMsgInst.subtype.includes("error")) {
+    if (
+      wsMsgInst.subtype.includes("error") &&
+      WorkerStatus.isRegisteredWorker(workerName)
+    ) {
       WorkerStatus.change(workerName, "error", wsMsgInst.messageData);
     }
 

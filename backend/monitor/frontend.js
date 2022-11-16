@@ -1,6 +1,5 @@
 import wsMessage from './wsMessage.js';
-import MonitorField from './monitor-field.js';
-
+import MonitorField from "./monitor-field.js";
 function createFields() {
   const updateField = new MonitorField(
     "Updates",
@@ -62,7 +61,7 @@ function openClientWebsocket(fields) {
       monitorInternalErrors(`Er is een event naar de client verstuurd bedoelt voor de server.
       ${eventMsg.messageData} `);
     } else if (eventMsg.type === "clients-log") {
-      eventToClientsLog(eventMsg);
+      eventToClientsLog(eventMsg, fields);
     } else if (eventMsg.type === "clients-html") {
       eventToClientsHTML(eventMsg);
     } else if (eventMsg.type === "process") {
@@ -160,7 +159,7 @@ function eventToWarning(eventMsg) {
   console.log(eventMsg);
 }
 
-function eventToClientsLog(eventMsg) {
+function eventToClientsLog(eventMsg, fields) {
   if (eventMsg.subtype === "error") {
     console.log("Error in " + eventMsg.messageData.workerData.name);
     console.log(eventMsg.messageData.error.message);
@@ -168,8 +167,26 @@ function eventToClientsLog(eventMsg) {
   } else {
     const debug = eventMsg.messageData?.content?.debug ?? null;
     if (!debug) {
-      console.log(eventMsg.messageData, "eventToClientsLog");
-      throw new Error("bad debug mkay");
+      const updateErrorMsg = {
+        type: "update",
+        subtype: "error",
+        messageData: {
+          content: {
+            workerData: {
+              family: "monitor",
+              index: "frontend",
+              name: `monitor-frontend`,
+              scraper: false,
+            },
+            remarks:
+              "er is iets gevraagd te debuggen maar debug property op content was niet gezet.\n<br>Zie de console.",
+            text: ``,
+          },
+        },
+      };
+      console.error("debug zit niet in messageData.content!");
+      console.dir(eventMsg);
+      fields.errorField.updateError(updateErrorMsg);
     }
     if (Array.isArray(debug)) {
       console.log(`${eventMsg.messageData?.content?.workerData?.name}`);

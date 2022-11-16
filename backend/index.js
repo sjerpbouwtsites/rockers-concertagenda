@@ -65,37 +65,37 @@ async function init() {
   //   workerList.push([fsDirections.scrapeEffenaar, "effenaar", 3]);
   // }
 
-  if (EventsList.isOld("tivolivredenburg", shellArguments?.force) || true) {
-    workerList.push([
-      fsDirections.scrapeTivolivredenburg,
-      "tivolivredenburg",
-      0,
-    ]);
-    workerList.push([
-      fsDirections.scrapeTivolivredenburg,
-      "tivolivredenburg",
-      1,
-    ]);
-    workerList.push([
-      fsDirections.scrapeTivolivredenburg,
-      "tivolivredenburg",
-      2,
-    ]);
-    workerList.push([
-      fsDirections.scrapeTivolivredenburg,
-      "tivolivredenburg",
-      3,
-    ]);
-  }
-
-  // if (EventsList.isOld("doornroosje", shellArguments?.force)) {
-  //   workerList.push([fsDirections.scrapeDoornroosje, "doornroosje", 0]);
-  //   workerList.push([fsDirections.scrapeDoornroosje, "doornroosje", 1]);
-  //   workerList.push([fsDirections.scrapeDoornroosje, "doornroosje", 2]);
-  //   workerList.push([fsDirections.scrapeDoornroosje, "doornroosje", 3]);
-  //   workerList.push([fsDirections.scrapeDoornroosje, "doornroosje", 4]);
-  //   workerList.push([fsDirections.scrapeDoornroosje, "doornroosje", 5]);
+  // if (EventsList.isOld("tivolivredenburg", shellArguments?.force) || true) {
+  //   workerList.push([
+  //     fsDirections.scrapeTivolivredenburg,
+  //     "tivolivredenburg",
+  //     0,
+  //   ]);
+  //   workerList.push([
+  //     fsDirections.scrapeTivolivredenburg,
+  //     "tivolivredenburg",
+  //     1,
+  //   ]);
+  //   workerList.push([
+  //     fsDirections.scrapeTivolivredenburg,
+  //     "tivolivredenburg",
+  //     2,
+  //   ]);
+  //   workerList.push([
+  //     fsDirections.scrapeTivolivredenburg,
+  //     "tivolivredenburg",
+  //     3,
+  //   ]);
   // }
+
+  if (EventsList.isOld("doornroosje", shellArguments?.force) || true) {
+    workerList.push([fsDirections.scrapeDoornroosje, "doornroosje", 0]);
+    workerList.push([fsDirections.scrapeDoornroosje, "doornroosje", 1]);
+    workerList.push([fsDirections.scrapeDoornroosje, "doornroosje", 2]);
+    workerList.push([fsDirections.scrapeDoornroosje, "doornroosje", 3]);
+    workerList.push([fsDirections.scrapeDoornroosje, "doornroosje", 4]);
+    workerList.push([fsDirections.scrapeDoornroosje, "doornroosje", 5]);
+  }
 
   // if (EventsList.isOld("metropool", shellArguments?.force)) {
   //   workerList.push([fsDirections.scrapeMetropool, "metropool", 0]);

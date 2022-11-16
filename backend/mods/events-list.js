@@ -7,11 +7,13 @@ import passMessageToMonitor from "../monitor/pass-message-to-monitor.js";
 export default class EventsList {
   static _events = [];
   static _meta = {};
+  static timestampsExistenceVerified = false;
   static workerSignature = {
     // dit is (nog) geen worker
     family: "events-list",
     index: 0,
     name: `${"events-list-0"}`,
+    scraper: false,
   };
 
   static get amountOfEvents() {
@@ -19,7 +21,7 @@ export default class EventsList {
   }
   static save(name, workerIndex = null) {
     try {
-      EventsList.checkTimestampsExist();
+      EventsList.guaranteeTimestampExistence();
       const pathToEventList = fsDirections.eventLists;
       const inbetweenFix = workerIndex !== null ? `-${workerIndex}` : ``;
       const pathToEventListFile = `${pathToEventList}/${name}${inbetweenFix}.json`;
@@ -49,10 +51,24 @@ export default class EventsList {
     return true;
   }
 
-  static checkTimestampsExist() {
-    if (!fs.existsSync(fsDirections.timestampsJson)) {
+  static guaranteeTimestampExistence() {
+    if (EventsList.timestampsExistenceVerified) return true;
+    const timestampsExist = fs.existsSync(fsDirections.timestampsJson);
+    if (!timestampsExist) {
       fs.writeFileSync(fsDirections.timestampsJson, JSON.stringify({}));
+    } else {
+      try {
+        JSON.parse(fs.readFileSync(fsDirections.timestampsJson));
+      } catch (error) {
+        handleError(
+          error,
+          EventsList.workerSignature,
+          `timestamps konden niet gelezen worden als JSON. nieuwe timestamp json gemaakt`
+        );
+        fs.writeFileSync(fsDirections.timestampsJson, JSON.stringify({}));
+      }
     }
+    return true;
   }
 
   static isOld(name, forceScrapeList = "") {
@@ -60,10 +76,18 @@ export default class EventsList {
       return true;
     }
 
-    EventsList.checkTimestampsExist();
-    const eventListTimestamps = JSON.parse(
-      fs.readFileSync(fsDirections.timestampsJson)
-    );
+    let eventListTimestamps;
+    if (EventsList.guaranteeTimestampExistence()) {
+      try {
+        eventListTimestamps = JSON.parse(
+          fs.readFileSync(fsDirections.timestampsJson)
+        );
+      } catch (error) {
+        throw new Error(`Kan timestamp niet lezen van naam ${name}.\n<br>
+        locatie van timestamps zou moeten zijn ${fsDirections.timestampsJson}.\n<br>
+        ${error.message}`);
+      }
+    }
 
     const d = new Date();
     const currentMilliseconds = d.getTime();

@@ -35,6 +35,14 @@ export default class WorkerStatus {
     };
   }
 
+  static isRegisteredWorker(workerName) {
+    return (
+      !!WorkerStatus._workers[workerName] &&
+      !!(WorkerStatus._workers[workerName]?.status ?? null) &&
+      WorkerStatus._workers[workerName]?.status !== "done"
+    );
+  }
+
   static monitorCPUS() {
     setInterval(() => {
       os.cpuFree(function (v) {
@@ -133,7 +141,6 @@ export default class WorkerStatus {
     const messageRollMsg = new wsMessage("update", "message-roll", {
       text: `${WorkerStatus.countedWorkersToDo} workers unfinished`,
     });
-
     const allWorkersStatussenMsg = new wsMessage(
       "app-overview",
       "all-workers",
