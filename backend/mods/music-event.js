@@ -36,6 +36,7 @@ export default class MusicEvent {
       this.register(); // @TODO registreer welke events invalid waren. 
     } else {
       const err = new Error('invalid music event!')
+      console.warn('invalid music event plz fix later')
       handleError(err, {
         name: 'inmusicevent',
         index: '1',

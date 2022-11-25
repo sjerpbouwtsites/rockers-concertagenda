@@ -35,10 +35,11 @@ export default function passMessageToMonitor(message, workerName) {
     }
 
     if (
+      wsMsgInst.type.includes('update') && 
       wsMsgInst.subtype.includes("error") &&
       WorkerStatus.isRegisteredWorker(workerName)
     ) {
-      WorkerStatus.change(workerName, "error", wsMsgInst.messageData);
+      WorkerStatus.saveError(workerName, wsMsgInst.messageData);
     }
 
     if (

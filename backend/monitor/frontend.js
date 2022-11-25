@@ -94,6 +94,7 @@ function eventToUpdates(eventMsg, fields) {
 }
 
 function eventToAppOverView(eventMsg, fields) {
+  
   fields.appOverviewField.updateTable(eventMsg.messageData);
 }
 
@@ -162,8 +163,7 @@ function eventToWarning(eventMsg) {
 function eventToClientsLog(eventMsg, fields) {
   if (eventMsg.subtype === "error") {
     console.log("Error in " + eventMsg.messageData.workerData.name);
-    console.log(eventMsg.messageData.error.message);
-    console.log(eventMsg.messageData.error.stack);
+    console.error(eventMsg.messageData.error);
   } else {
     const debug = eventMsg.messageData?.content?.debug ?? null;
     if (!debug) {

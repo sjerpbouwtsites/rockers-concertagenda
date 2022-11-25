@@ -2,12 +2,22 @@ import os from "os-utils";
 import EventsList from "./events-list.js";
 import wsMessage from "../monitor/wsMessage.js";
 import { parentPort } from "worker_threads";
+import { AbstractWorkerConfig } from "./worker-config.js";
+
+export function AbstractWorkerData() {
+  return {...{
+    ...AbstractWorkerConfig,
+    status: null,
+    todo : null,
+    eventsRegistered : [],
+    errors : [],
+  }}
+}
 
 export default class WorkerStatus {
   static _workers = {};
   static CPUFree = 100;
-  static waitingWorkers = [];
-  0;
+  
   /**
    * Niet een dynamische waarde maar éénmalig ingesteld
    */
@@ -18,28 +28,42 @@ export default class WorkerStatus {
   static completedWorkers = 0;
   static monitorWebsocketServer = null;
   static reportingInterval = null;
-  static registerWorker(newWorkerName) {
-    if (WorkerStatus.waitingWorkers.indexOf(newWorkerName) !== -1) {
-      WorkerStatus.waitingWorkers = WorkerStatus.waitingWorkers.filter(
-        (workerName) => {
-          return newWorkerName !== workerName;
-        }
-      );
-    }
+  static registerWorker(workerConf) {
+    WorkerStatus._workers[workerConf.name].status = 'registered';
+  }
+  static getWorkerData(workerName){
+    return WorkerStatus._workers(workerName)
+  }
 
-    WorkerStatus._workers[newWorkerName] = {
-      status: "registered",
-      todo: 0,
-      eventsRegistered: 0,
-      errors: [],
-    };
+
+  static registerAllWorkersAsWaiting(workerConfList){
+    workerConfList.forEach(workerConf => {
+      WorkerStatus._workers[workerConf.name] = 
+       {
+        ...AbstractWorkerData(),
+        ...workerConf,
+        status: "waiting",
+      }      
+    })
+  }
+
+  static workersWorkingOfFamily(family){
+    const a = Object.values(WorkerStatus._workers).filter(worker => {
+      return !['done', 'waiting'].includes(worker.status) && worker.family === family
+    }).length
+    return a;
+  }
+
+  static workersWorking(){
+    return Object.values(WorkerStatus._workers).filter(worker => {
+      return !['done', 'waiting'].includes(worker.status)
+    }).length
   }
 
   static isRegisteredWorker(workerName) {
     return (
       !!WorkerStatus._workers[workerName] &&
-      !!(WorkerStatus._workers[workerName]?.status ?? null) &&
-      WorkerStatus._workers[workerName]?.status !== "done"
+      !!(WorkerStatus._workers[workerName]?.status ?? null) 
     );
   }
 
@@ -59,11 +83,11 @@ export default class WorkerStatus {
   }
 
   static get OSHasSpace() {
-    return WorkerStatus.currentNotDone.length < 7 && WorkerStatus.CPUFree > 20;
+    return WorkerStatus.CPUFree > 20;
   }
 
   static get OSHasALotOfSpace() {
-    return WorkerStatus.currentNotDone.length < 5 && WorkerStatus.CPUFree > 50;
+    return WorkerStatus.CPUFree > 50;
   }
 
   // @TODO CREEER: tbv niet één familie meerdere tegelijk
@@ -89,10 +113,6 @@ export default class WorkerStatus {
       WorkerStatus.completedWorkers = WorkerStatus.completedWorkers + 1;
     }
 
-    if (statusses.includes("error")) {
-      WorkerStatus._workers[name].errors.push(message);
-    }
-
     if (statusses.includes("working")) {
       WorkerStatus._workers[name].status = "working";
     }
@@ -100,6 +120,10 @@ export default class WorkerStatus {
     if (statusses.includes("todo")) {
       WorkerStatus._workers[name].todo = message.todo;
     }
+  } 
+
+  static saveError(name, message){
+    WorkerStatus._workers[name].errors.push(message);
   }
 
   static get countedWorkersToDo() {
@@ -109,7 +133,6 @@ export default class WorkerStatus {
   static get currentNotDone() {
     const notDone = Object.entries(WorkerStatus._workers)
       .map(([workerName, workerData]) => {
-        workerData.name = workerName;
         return workerData;
       })
       .filter((workerData) => {
@@ -121,7 +144,6 @@ export default class WorkerStatus {
   static get currentDone() {
     const notDone = Object.entries(WorkerStatus._workers)
       .map(([workerName, workerData]) => {
-        workerData.name = workerName;
         return workerData;
       })
       .filter((workerData) => {
@@ -132,7 +154,7 @@ export default class WorkerStatus {
 
   static checkIfAllDone() {
     const notDone = WorkerStatus.currentNotDone;
-    if (notDone.length === 0 && WorkerStatus.waitingWorkers.length === 0) {
+    if (notDone.length === 0) {
       WorkerStatus.programEnd();
       return true;
     }

@@ -71,8 +71,8 @@ export default class EventsList {
     return true;
   }
 
-  static isOld(name, forceScrapeList = "") {
-    if (forceScrapeList.includes(name)) {
+  static isOld(name, ignoreAgeForceScrape = false) {
+    if (ignoreAgeForceScrape) {
       return true;
     }
 

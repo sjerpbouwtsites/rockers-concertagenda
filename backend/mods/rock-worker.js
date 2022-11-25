@@ -1,23 +1,16 @@
 import { Worker } from "worker_threads";
+import {AbstractWorkerConfig} from "./worker-config.js"
+
 
 export default class RockWorker extends Worker {
-  family = null;
-  index = null;
-  highCapacity = false;
-  constructor(path, family, index) {
-    super(path, {
-      workerData: {
-        family,
-        index,
-        name: `${family}-${index}`,
-        scraper: true,
-      },
-    });
-    this.family = family;
-    this.index = index;
-  }
-  get name() {
-    return `${this.family}-${this.index}`;
+  
+  constructor(confObject) {
+    super(confObject.path, {
+      workerData: confObject
+    }) 
+    this.name = confObject.name,
+    this.family = confObject.family;
+    this.index =confObject.index;  
   }
   get workerName() {
     console.warn("OUDE METHODE");

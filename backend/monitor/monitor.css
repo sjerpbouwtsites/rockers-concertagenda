@@ -78,6 +78,8 @@ body {
 .monitorfield__outer--app-overview .monitorfield {
   background-color: #121212;
   color: rgb(249, 234, 232);
+  height: auto;
+  min-height: 300px;  
 }
 
 .monitorfield__outer--app-overview .monitorfield__header {

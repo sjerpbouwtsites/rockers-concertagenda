@@ -1,4 +1,654 @@
 
+  afaslive-1 Error - 11:41:38 AM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  afaslive-1 Error - 11:41:32 AM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  afaslive-1 Error - 11:41:08 AM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  kavka-0 Error - 11:39:20 AM
+  TimeoutError: Navigation timeout of 20000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 20000 ms exceeded
+  
+  
+  kavka-0 Error - 11:39:19 AM
+  TimeoutError: Navigation timeout of 20000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 20000 ms exceeded
+  
+  
+  metropool-2 Error - 11:36:48 AM
+  TimeoutError: Navigation timeout of 20000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 20000 ms exceeded
+  
+  
+  metropool-2 Error - 11:36:20 AM
+  TimeoutError: Navigation timeout of 20000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 20000 ms exceeded
+  
+  
+  afaslive-2 Error - 11:32:33 AM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  afaslive-2 Error - 11:32:33 AM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  afaslive-2 Error - 11:28:42 AM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  afaslive-2 Error - 11:28:42 AM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  kavka-0 Error - 11:26:20 AM
+  TimeoutError: Navigation timeout of 20000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 20000 ms exceeded
+  
+  
+  kavka-0 Error - 11:26:20 AM
+  TimeoutError: Navigation timeout of 20000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 20000 ms exceeded
+  
+  
+  kavka-0 Error - 11:20:35 AM
+  TimeoutError: Navigation timeout of 20000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 20000 ms exceeded
+  
+  
+  kavka-0 Error - 11:20:33 AM
+  TimeoutError: Navigation timeout of 20000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 20000 ms exceeded
+  
+  
+  kavka-0 Error - 11:17:16 AM
+  TimeoutError: Navigation timeout of 20000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 20000 ms exceeded
+  
+  
+  afaslive-2 Error - 11:12:29 AM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  afaslive-2 Error - 11:12:25 AM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  inmusicevent Error - 11:07:20 AM
+  Error: invalid music event!
+    at MusicEvent.registerIfValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:38:19)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:106:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:27:3) 
+  invalid music event!
+  
+  
+  inmusicevent Error - 11:07:16 AM
+  Error: invalid music event!
+    at MusicEvent.registerIfValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:38:19)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:106:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:27:3) 
+  invalid music event!
+  
+  
+  inmusicevent Error - 11:07:15 AM
+  Error: invalid music event!
+    at MusicEvent.registerIfValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:38:19)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:106:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:27:3) 
+  invalid music event!
+  
+  
+  inmusicevent Error - 11:07:11 AM
+  Error: invalid music event!
+    at MusicEvent.registerIfValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:38:19)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:106:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:27:3) 
+  invalid music event!
+  
+  
+  neushoorn-0 Error - 11:07:08 AM
+  Error: No node found for selector: [href*="Heavy"]
+    at assert (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/assert.js:26:15)
+    at DOMWorld.click (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:287:32)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/neushoorn.js:180:3) 
+  No node found for selector: [href*="Heavy"]
+  
+  
+  neushoorn-0 Error - 11:07:08 AM
+  TimeoutError: waiting for selector `[href*="Heavy"]` failed: timeout 10000ms exceeded
+    at new WaitTask (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:528:34)
+    at DOMWorld.waitForSelectorInPage (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:432:26)
+    at internalHandler.waitFor (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/QueryHandler.js:31:77)
+    at DOMWorld.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:323:29)
+    at Frame.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:942:51)
+    at Page.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:2359:33)
+    at makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/neushoorn.js:173:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  waiting for selector `[href*="Heavy"]` failed: timeout 10000ms exceeded
+  
+  
+  inmusicevent Error - 11:07:08 AM
+  Error: invalid music event!
+    at MusicEvent.registerIfValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:38:19)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:106:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:27:3) 
+  invalid music event!
+  
+  
+  inmusicevent Error - 11:07:04 AM
+  Error: invalid music event!
+    at MusicEvent.registerIfValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:38:19)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:106:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:27:3) 
+  invalid music event!
+  
+  
+  inmusicevent Error - 11:07:00 AM
+  Error: invalid music event!
+    at MusicEvent.registerIfValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:38:19)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:106:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:27:3) 
+  invalid music event!
+  
+  
+  inmusicevent Error - 11:06:55 AM
+  Error: invalid music event!
+    at MusicEvent.registerIfValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:38:19)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:106:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:27:3) 
+  invalid music event!
+  
+  
+  inmusicevent Error - 11:06:52 AM
+  Error: invalid music event!
+    at MusicEvent.registerIfValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:38:19)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:106:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:27:3) 
+  invalid music event!
+  
+  
+  inmusicevent Error - 10:52:41 AM
+  Error: invalid music event!
+    at MusicEvent.registerIfValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:38:19)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:106:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:27:3) 
+  invalid music event!
+  
+  
+  inmusicevent Error - 10:52:39 AM
+  Error: invalid music event!
+    at MusicEvent.registerIfValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:38:19)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:106:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:27:3) 
+  invalid music event!
+  
+  
+  tivolivredenburg-2 Error - 10:52:36 AM
+  Error: REJECTED AFTER 15000
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:102:14)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  REJECTED AFTER 15000
+  
+  
+  inmusicevent Error - 10:52:35 AM
+  Error: invalid music event!
+    at MusicEvent.registerIfValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:38:19)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:106:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:27:3) 
+  invalid music event!
+  
+  
+  inmusicevent Error - 10:52:34 AM
+  Error: invalid music event!
+    at MusicEvent.registerIfValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:38:19)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:106:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:27:3) 
+  invalid music event!
+  
+  
+  inmusicevent Error - 10:52:32 AM
+  Error: invalid music event!
+    at MusicEvent.registerIfValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:38:19)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:106:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:27:3) 
+  invalid music event!
+  
+  
+  inmusicevent Error - 10:52:28 AM
+  Error: invalid music event!
+    at MusicEvent.registerIfValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:38:19)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:106:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:27:3) 
+  invalid music event!
+  
+  
+  inmusicevent Error - 10:52:26 AM
+  Error: invalid music event!
+    at MusicEvent.registerIfValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:38:19)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:106:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:27:3) 
+  invalid music event!
+  
+  
+  inmusicevent Error - 10:52:26 AM
+  Error: invalid music event!
+    at MusicEvent.registerIfValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:38:19)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:106:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:27:3) 
+  invalid music event!
+  
+  
+  inmusicevent Error - 10:52:21 AM
+  Error: invalid music event!
+    at MusicEvent.registerIfValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:38:19)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:106:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:27:3) 
+  invalid music event!
+  
+  
+  inmusicevent Error - 10:52:20 AM
+  Error: invalid music event!
+    at MusicEvent.registerIfValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:38:19)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/tivolivredenburg.js:76:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  invalid music event!
+  
+  
+  inmusicevent Error - 10:52:20 AM
+  Error: invalid music event!
+    at MusicEvent.registerIfValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:38:19)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:106:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:27:3) 
+  invalid music event!
+  
+  
+  inmusicevent Error - 10:52:19 AM
+  Error: invalid music event!
+    at MusicEvent.registerIfValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:38:19)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:106:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:27:3) 
+  invalid music event!
+  
+  
+  inmusicevent Error - 10:52:13 AM
+  Error: invalid music event!
+    at MusicEvent.registerIfValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:38:19)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dynamo.js:94:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  invalid music event!
+  
+  
+  inmusicevent Error - 10:52:13 AM
+  Error: invalid music event!
+    at MusicEvent.registerIfValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:38:19)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:106:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:27:3) 
+  invalid music event!
+  
+  
+  inmusicevent Error - 10:52:12 AM
+  Error: invalid music event!
+    at MusicEvent.registerIfValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:38:19)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dynamo.js:94:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  invalid music event!
+  
+  
+  inmusicevent Error - 10:52:10 AM
+  Error: invalid music event!
+    at MusicEvent.registerIfValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:38:19)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:106:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:27:3) 
+  invalid music event!
+  
+  
+  inmusicevent Error - 10:52:07 AM
+  Error: invalid music event!
+    at MusicEvent.registerIfValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:38:19)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dynamo.js:94:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  invalid music event!
+  
+  
+  inmusicevent Error - 10:52:03 AM
+  Error: invalid music event!
+    at MusicEvent.registerIfValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:38:19)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:106:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:27:3) 
+  invalid music event!
+  
+  
+  inmusicevent Error - 10:52:03 AM
+  Error: invalid music event!
+    at MusicEvent.registerIfValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:38:19)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dynamo.js:94:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  invalid music event!
+  
+  
+  inmusicevent Error - 10:51:59 AM
+  Error: invalid music event!
+    at MusicEvent.registerIfValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:38:19)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:106:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:27:3) 
+  invalid music event!
+  
+  
+  inmusicevent Error - 10:51:53 AM
+  Error: invalid music event!
+    at MusicEvent.registerIfValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:38:19)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:106:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:27:3) 
+  invalid music event!
+  
+  
+  inmusicevent Error - 10:51:50 AM
+  Error: invalid music event!
+    at MusicEvent.registerIfValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:38:19)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:106:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:27:3) 
+  invalid music event!
+  
+  
+  inmusicevent Error - 10:51:36 AM
+  Error: invalid music event!
+    at MusicEvent.registerIfValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:38:19)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dynamo.js:94:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  invalid music event!
+  
+  
+  inmusicevent Error - 10:51:34 AM
+  Error: invalid music event!
+    at MusicEvent.registerIfValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:38:19)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dynamo.js:94:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  invalid music event!
+  
+  
+  inmusicevent Error - 10:51:32 AM
+  Error: invalid music event!
+    at MusicEvent.registerIfValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:38:19)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dynamo.js:94:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  invalid music event!
+  
+  
+  inmusicevent Error - 10:51:26 AM
+  Error: invalid music event!
+    at MusicEvent.registerIfValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:38:19)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dynamo.js:94:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  invalid music event!
+  
+  
+  inmusicevent Error - 10:51:23 AM
+  Error: invalid music event!
+    at MusicEvent.registerIfValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:38:19)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dynamo.js:94:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  invalid music event!
+  
+  
+  inmusicevent Error - 10:51:21 AM
+  Error: invalid music event!
+    at MusicEvent.registerIfValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:38:19)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dynamo.js:94:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  invalid music event!
+  
+  
+  inmusicevent Error - 10:48:26 AM
+  Error: invalid music event!
+    at MusicEvent.registerIfValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:38:19)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:106:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:27:3) 
+  invalid music event!
+  
+  
+  inmusicevent Error - 10:48:23 AM
+  Error: invalid music event!
+    at MusicEvent.registerIfValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:38:19)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:106:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:27:3) 
+  invalid music event!
+  
+  
+  inmusicevent Error - 10:48:23 AM
+  Error: invalid music event!
+    at MusicEvent.registerIfValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:38:19)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:106:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:27:3) 
+  invalid music event!
+  
+  
+  inmusicevent Error - 10:48:22 AM
+  Error: invalid music event!
+    at MusicEvent.registerIfValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:38:19)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:106:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:27:3) 
+  invalid music event!
+  
+  
+  inmusicevent Error - 10:48:20 AM
+  Error: invalid music event!
+    at MusicEvent.registerIfValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:38:19)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:106:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:27:3) 
+  invalid music event!
+  
+  
+  inmusicevent Error - 10:48:18 AM
+  Error: invalid music event!
+    at MusicEvent.registerIfValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:38:19)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:106:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:27:3) 
+  invalid music event!
+  
+  
+  inmusicevent Error - 10:48:17 AM
+  Error: invalid music event!
+    at MusicEvent.registerIfValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:38:19)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:106:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:27:3) 
+  invalid music event!
+  
+  
+  inmusicevent Error - 10:48:15 AM
+  Error: invalid music event!
+    at MusicEvent.registerIfValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:38:19)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:106:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:27:3) 
+  invalid music event!
+  
+  
+  inmusicevent Error - 10:48:15 AM
+  Error: invalid music event!
+    at MusicEvent.registerIfValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:38:19)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:106:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:27:3) 
+  invalid music event!
+  
+  
+  inmusicevent Error - 10:48:12 AM
+  Error: invalid music event!
+    at MusicEvent.registerIfValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:38:19)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:106:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:27:3) 
+  invalid music event!
+  
+  
+  inmusicevent Error - 10:48:08 AM
+  Error: invalid music event!
+    at MusicEvent.registerIfValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:38:19)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:106:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:27:3) 
+  invalid music event!
+  
+  
+  inmusicevent Error - 10:48:04 AM
+  Error: invalid music event!
+    at MusicEvent.registerIfValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:38:19)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:106:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:27:3) 
+  invalid music event!
+  
+  
+  inmusicevent Error - 10:47:57 AM
+  Error: invalid music event!
+    at MusicEvent.registerIfValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:38:19)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:106:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:27:3) 
+  invalid music event!
+  
+  
+  inmusicevent Error - 10:47:52 AM
+  Error: invalid music event!
+    at MusicEvent.registerIfValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:38:19)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:106:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:27:3) 
+  invalid music event!
+  
+  
+  kavka-0 Error - 10:42:43 AM
+  TimeoutError: Navigation timeout of 20000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 20000 ms exceeded
+  
+  
+  depul-0 Error - 10:42:42 AM
+  Error: REJECTED AFTER 30000
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:102:14)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  REJECTED AFTER 30000
+  
+  
+  kavka-0 Error - 10:42:42 AM
+  TimeoutError: Navigation timeout of 20000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 20000 ms exceeded
+  
+  
+  inmusicevent Error - 10:42:27 AM
+  Error: invalid music event!
+    at MusicEvent.registerIfValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:38:19)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/tivolivredenburg.js:76:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  invalid music event!
+  
+  
+  inmusicevent Error - 10:41:56 AM
+  Error: invalid music event!
+    at MusicEvent.registerIfValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:38:19)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:106:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:27:3) 
+  invalid music event!
+  
+  
+  inmusicevent Error - 10:41:54 AM
+  Error: invalid music event!
+    at MusicEvent.registerIfValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:38:19)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:106:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:27:3) 
+  invalid music event!
+  
+  
+  inmusicevent Error - 10:41:53 AM
+  Error: invalid music event!
+    at MusicEvent.registerIfValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:38:19)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:106:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:27:3) 
+  invalid music event!
+  
+  
+  inmusicevent Error - 10:41:47 AM
+  Error: invalid music event!
+    at MusicEvent.registerIfValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:38:19)
+    at processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:106:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeBaroeg (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:27:3) 
+  invalid music event!
+  
+  
   undefined Error - 7:39:35 AM
   TimeoutError: waiting for selector `[data-category="60102"]` failed: timeout 2500ms exceeded
     at new WaitTask (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:528:34)

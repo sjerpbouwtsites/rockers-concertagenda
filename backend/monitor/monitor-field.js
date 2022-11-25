@@ -184,6 +184,7 @@ export default class MonitorField {
   }
   get tableUpdatedHTML() {
     const workersPerFamily = {};
+
     Object.entries(this.data.workers).forEach(([workerName, workerData]) => {
       const family = workerName.split("-")[0];
       const workerIndex = workerName.split("-")[1];
