@@ -3,11 +3,15 @@ import fsDirections from "./fs-directions.js";
 import { handleError, errorAfterSeconds } from "./tools.js";
 import { QuickWorkerMessage } from "./rock-worker.js";
 import passMessageToMonitor from "../monitor/pass-message-to-monitor.js";
+import {parentPort} from "worker_threads"
+
 
 export default class EventsList {
   static _events = [];
+  static _invalidEvents = [];
   static _meta = {};
   static timestampsExistenceVerified = false;
+
   static workerSignature = {
     // dit is (nog) geen worker
     family: "events-list",
@@ -20,6 +24,11 @@ export default class EventsList {
     return EventsList._events.length;
   }
   static save(name, workerIndex = null) {
+  const qwm = new QuickWorkerMessage(EventsList.workerSignature);
+    // parentPort.postMessage(qwm.toConsole({
+    //   name, _events: EventsList._events
+    // }))
+
     try {
       EventsList.guaranteeTimestampExistence();
       const pathToEventList = fsDirections.eventLists;
@@ -108,6 +117,9 @@ export default class EventsList {
   }
 
   static addEvent(event) {
+    // const qwm = new QuickWorkerMessage(EventsList.workerSignature);
+    // parentPort.postMessage(qwm.toConsole(event))
+
     try {
       EventsList._events.push(event);
     } catch (error) {

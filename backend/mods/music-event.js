@@ -34,19 +34,7 @@ export default class MusicEvent {
   registerIfValid() {
     if (this.isValid) {
       this.register(); // @TODO registreer welke events invalid waren. 
-    } else {
-      const err = new Error('invalid music event!')
-      console.warn('invalid music event plz fix later')
-      handleError(err, {
-        name: 'inmusicevent',
-        index: '1',
-        family: 'oei'
-      }, `
-      
-      title ${this.title}
-      startDateTime ${this.startDateTime} 
-      
-      `)
+    
     }
   }
 }

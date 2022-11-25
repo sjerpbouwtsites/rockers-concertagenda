@@ -1,129 +1,83 @@
 import MusicEvent from "../mods/music-event.js";
-import puppeteer from "puppeteer";
 import { parentPort, workerData } from "worker_threads";
-import EventsList from "../mods/events-list.js";
-import fs from "fs";
-import crypto from "crypto";
-import fsDirections from "../mods/fs-directions.js";
 import * as _t from "../mods/tools.js";
-import { letScraperListenToMasterMessageAndInit } from "../mods/generic-scraper.js";
-import { QuickWorkerMessage } from "../mods/rock-worker.js";
 import { voltMonths } from "../mods/months.js";
-
-
-letScraperListenToMasterMessageAndInit(scrapeInit);
+import AbstractScraper from "./abstract-scraper.js";
+import { QuickWorkerMessage } from "../mods/rock-worker.js";
 const qwm = new QuickWorkerMessage(workerData);
-let browser = null;
 
-async function scrapeInit() {
-  parentPort.postMessage(qwm.workerInitialized());
-  browser = await puppeteer.launch();
-  Promise.race([makeBaseEventList(), _t.errorAfterSeconds(30000)])
-    
-    .then(baseMusicEvents => {
-      parentPort.postMessage(qwm.workerStarted());
-      parentPort.postMessage(qwm.toConsole(baseMusicEvents))
-      const baseMusicEventsCopy = [...baseMusicEvents];
-      const eventGen = eventGenerator(baseMusicEventsCopy);
-      const nextEvent = eventGen.next().value;
-      return eventAsyncCheck(eventGen, nextEvent)
-    })
-    .then(eventList => {
-      parentPort.postMessage(qwm.toConsole(eventList))      
-      return processSingleMusicEvent(eventList)      
-    })
-    .then(() => {
-      parentPort.postMessage(qwm.workerDone(EventsList.amountOfEvents));
-    })
-    .catch((error) =>
-    _t.handleError(error, workerData, `outer catch scrape ${workerData.family}`)
-    )
-    .finally(() => {
-      EventsList.save(workerData.family, workerData.index);
-      browser && browser.hasOwnProperty("close") && browser.close();
-    });
+const scraperConfig = {
+  baseEventTimeout: 30000,
+  singlePageTimeout: 15000,
+  workerData: {}
+}
+const workerDataCopy = {
+  ...workerData
+}
+for (let key in workerDataCopy){
+  scraperConfig.workerData[key] = workerDataCopy
 }
 
-async function createSinglePage(url) {
-  const page = await browser.newPage();
-  await page
-    .goto(url, {
-      waitUntil: "load",
-      timeout: 20000,
-    })
-    .then(() => true)
-    .catch((err) => {
-      _t.handleError(
-        err,
-        workerData,
-        `${workerData.name} goto single page mislukt:<br><a href='${url}'>${url}</a><br>`
-      );
-      return false;
-    });
-  return page;
-}
+const voltScraper = new AbstractScraper(scraperConfig)
 
-async function processSingleMusicEvent(baseMusicEvents) {
-  qwm.todo(baseMusicEvents.length).forEach((JSONblob) => {
-    parentPort.postMessage(JSONblob);
+voltScraper.listenToMasterThread();
+
+//
+
+voltScraper.makeBaseEventList = async function (self) {
+  const page = await self.browser.newPage();
+  await page.goto("https://www.poppodium-volt.nl/", {
+    waitUntil: "load",
   });
 
-  const newMusicEvents = [...baseMusicEvents];
-  const firstMusicEvent = newMusicEvents.shift();
-
-  if (!firstMusicEvent || baseMusicEvents.length === 0) {
-    return true;
-  }
-
-  const singleEventPage = await createSinglePage(firstMusicEvent.venueEventUrl);
-  if (!singleEventPage) {
-    return newMusicEvents.length
-      ? processSingleMusicEvent(newMusicEvents)
-      : true;
-  }
-
   try {
-    const pageInfo = await Promise.race([
-      getPageInfo(singleEventPage, firstMusicEvent.venueEventUrl),
-      _t.errorAfterSeconds(15000),
-    ]);
-
-    if (pageInfo && pageInfo.priceTextcontent) {
-      pageInfo.price = _t.getPriceFromHTML(pageInfo.priceTextcontent);
-    }
-
-    if (pageInfo && pageInfo.longTextHTML) {
-      let uuid = crypto.randomUUID();
-      const longTextPath = `${fsDirections.publicTexts}/${uuid}.html`;
-
-      fs.writeFile(longTextPath, pageInfo.longTextHTML, "utf-8", () => {});
-      pageInfo.longText = longTextPath;
-    }
-
-    // no date no registration.
-    if (pageInfo) {
-      firstMusicEvent.merge(pageInfo);
-    }
-
-    firstMusicEvent.registerIfValid();
-    if (!singleEventPage.isClosed() && singleEventPage.close());
-  } catch (pageInfoError) {
-    _t.handleError(pageInfoError, workerData, "get page info fail");
+    await page.waitForSelector('.row.event', {
+      timeout: 2500
+    })
+    await page.waitForSelector('.row.event .card-social', {
+      timeout: 2500
+    })
+  } catch (error) {
+    _t.handleError(error, 'Volt wacht op laden eventlijst')
   }
 
-  return newMusicEvents.length
-    ? processSingleMusicEvent(newMusicEvents)
-    : true;
+  let rawEvents = await page.evaluate(({ workerIndex }) => {
+
+    return Array.from(document.querySelectorAll('.row.event .card'))
+      .filter(rawEvent => {
+        const hasGenreName = rawEvent.querySelector('.card-location')?.textContent.toLowerCase().trim() ?? '';
+        return hasGenreName.includes('metal') || hasGenreName.includes('punk')
+      })
+      .map(rawEvent => {
+        const anchor = rawEvent.querySelector('h3 [href*="programma"]') ?? null;
+        const title = anchor?.textContent.trim() ?? '';
+        const venueEventUrl = anchor.hasAttribute('href') ? anchor.href : null
+        const image = rawEvent.querySelector('img')?.src ?? null;
+        return {
+          venueEventUrl,
+          location: 'volt',
+          title,
+          image,
+        }
+      })
+  }, { workerIndex: workerData.index });
+  const baseMusicEvents = rawEvents
+    .filter(_t.basicMusicEventsFilter)
+    .map((event) => new MusicEvent(event));
+    return {
+      self,
+      baseMusicEvents
+    }
 }
 
-async function getPageInfo(page, url) {
+voltScraper.getPageInfo = async function ({page, url, self}) {
 
   try {
     await page.waitForSelector('#main .content-block', {
       timeout: 7500
     })
   } catch (error) {
-    _t.handleError(error, workerData, 'Volt wacht op laden single pagina')
+    _t.handleError(error, this.workerData, 'Volt wacht op laden single pagina')
   }
 
   const result = await page.evaluate(({ voltMonths, url }) => {
@@ -183,6 +137,10 @@ async function getPageInfo(page, url) {
     res.priceTextcontent = document.querySelector('#main .aside .list-unstyled.prices')?.textContent ?? null;
     return res;
   }, { voltMonths, url });
+  
+  if (!result){
+    throw Error(`page info empty`)
+  }
 
   if (result.error) {
     _t.handleError(new Error(result.error), workerData, 'getPageInfo')
@@ -192,85 +150,9 @@ async function getPageInfo(page, url) {
 
 }
 
-async function makeBaseEventList() {
-  const page = await browser.newPage();
-  await page.goto("https://www.poppodium-volt.nl/", {
-    waitUntil: "load",
-  });
 
-  try {
-    await page.waitForSelector('.row.event', {
-      timeout: 2500
-    })
-    await page.waitForSelector('.row.event .card-social', {
-      timeout: 2500
-    })
-  } catch (error) {
-    _t.handleError(error, 'Volt wacht op laden eventlijst')
-  }
 
-  let rawEvents = await page.evaluate(({ voltMonths, workerIndex }) => {
 
-    return Array.from(document.querySelectorAll('.row.event .card'))
-      .filter(rawEvent => {
-        const hasGenreName = rawEvent.querySelector('.card-location')?.textContent.toLowerCase().trim() ?? '';
-        return hasGenreName.includes('metal') || hasGenreName.includes('punk')
-      })
-      .filter((rawEvent, eventIndex) => {
-        return eventIndex % 3 === workerIndex;
-      })
-      .map(rawEvent => {
-        const anchor = rawEvent.querySelector('h3 [href*="programma"]') ?? null;
-        const title = anchor?.textContent.trim() ?? '';
-        const venueEventUrl = anchor.hasAttribute('href') ? anchor.href : null
-        const image = rawEvent.querySelector('img')?.src ?? null;
-        return {
-          venueEventUrl,
-          location: 'volt',
-          title,
-          image,
 
-        }
-      })
-  }, { voltMonths, workerIndex: workerData.index });
-  return rawEvents
-    .filter(_t.basicMusicEventsFilter)
-    .map((event) => new MusicEvent(event));
-}
 
-async function eventAsyncCheck(eventGen, currentEvent = null, checkedEvents = []) {
-  checkedEvents.push(currentEvent)
-  const nextEvent = eventGen.next().value;
-  if (nextEvent) {
-    return eventAsyncCheck(eventGen, nextEvent, checkedEvents)
-  } else {
-    return checkedEvents;
-  }
-  
 
-  // const firstCheckText = `${currentEvent.title} ${currentEvent.shortText}`.toLowerCase();
-  // if (
-  //   !firstCheckText.includes('indie') &&
-  //   !firstCheckText.includes('dromerig') &&
-  //   !firstCheckText.includes('shoegaze') &&
-  //   !firstCheckText.includes('alternatieve rock')
-  // ) {
-  //   checkedEvents.push(currentEvent)
-  // }
-
-  // const nextEvent = eventGen.next().value;
-  // if (nextEvent) {
-  //   return eventAsyncCheck(eventGen, nextEvent, checkedEvents)
-  // } else {
-  //   return checkedEvents;
-  // }
-
-}
-
-function* eventGenerator(baseMusicEvents) {
-
-  while (baseMusicEvents.length) {
-    yield baseMusicEvents.shift();
-
-  }
-}

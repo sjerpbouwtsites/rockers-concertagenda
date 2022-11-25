@@ -1,4 +1,4 @@
-import wsMessage from './wsMessage.js';
+import wsMessage from "./wsMessage.js";
 import MonitorField from "./monitor-field.js";
 function createFields() {
   const updateField = new MonitorField(
@@ -94,7 +94,6 @@ function eventToUpdates(eventMsg, fields) {
 }
 
 function eventToAppOverView(eventMsg, fields) {
-  
   fields.appOverviewField.updateTable(eventMsg.messageData);
 }
 
@@ -164,64 +163,64 @@ function eventToClientsLog(eventMsg, fields) {
   if (eventMsg.subtype === "error") {
     console.log("Error in " + eventMsg.messageData.workerData.name);
     console.error(eventMsg.messageData.error);
-  } else {
-    const debug = eventMsg.messageData?.content?.debug ?? null;
-    if (!debug) {
-      const updateErrorMsg = {
-        type: "update",
-        subtype: "error",
-        messageData: {
-          content: {
-            workerData: {
-              family: "monitor",
-              index: "frontend",
-              name: `monitor-frontend`,
-              scraper: false,
-            },
-            remarks:
-              "er is iets gevraagd te debuggen maar debug property op content was niet gezet.\n<br>Zie de console.",
-            text: ``,
+    return;
+  }
+  const debug = eventMsg.messageData?.content?.debug ?? null;
+  if (!debug) {
+    const updateErrorMsg = {
+      type: "update",
+      subtype: "error",
+      messageData: {
+        content: {
+          workerData: {
+            family: "monitor",
+            index: "frontend",
+            name: `monitor-frontend`,
+            scraper: false,
           },
+          remarks:
+            "er is iets gevraagd te debuggen maar debug property op content was niet gezet.\n<br>Zie de console.",
+          text: ``,
         },
-      };
-      console.error("debug zit niet in messageData.content!");
-      console.dir(eventMsg);
-      fields.errorField.updateError(updateErrorMsg);
-    }
-    if (Array.isArray(debug)) {
-      console.log(`${eventMsg.messageData?.content?.workerData?.name}`);
-      console.dir(debug);
-    } else if (debug instanceof Object) {
-      const keys = Object.keys(debug);
-      const values = Object.values(debug);
-      console.log(
-        `${eventMsg.messageData?.content?.workerData?.name} - ${keys.join(
-          ", "
-        )}`
-      );
-      values.forEach((val, index) => {
-        if (typeof val === "string" || typeof val === "number") {
-          console.log(`${keys[index]} - ${val}`);
-        } else if (typeof val === "undefined") {
-          console.log(`${keys[index]} - undefined`);
-        } else if (val === null) {
-          console.log(`${keys[index]} - null`);
-        } else {
-          console.dir(val);
-        }
-      });
-    } else {
-      console.log(debug);
-    }
+      },
+    };
+    console.error("debug zit niet in messageData.content!");
+    console.dir(eventMsg);
+    fields.errorField.updateError(updateErrorMsg);
+  }
+  if (eventMsg.subtype.includes("log")) {
+    console.log(`${eventMsg.messageData?.content?.workerData?.name}`);
+    console.log(debug);
+    return;
+  }
+  if (Array.isArray(debug)) {
+    console.log(`${eventMsg.messageData?.content?.workerData?.name}`);
+    console.dir(debug);
+  } else if (debug instanceof Object) {
+    const keys = Object.keys(debug);
+    const values = Object.values(debug);
+    console.log(
+      `${eventMsg.messageData?.content?.workerData?.name} - ${keys.join(", ")}`
+    );
+    values.forEach((val, index) => {
+      if (typeof val === "string" || typeof val === "number") {
+        console.log(`${keys[index]} - ${val}`);
+      } else if (typeof val === "undefined") {
+        console.log(`${keys[index]} - undefined`);
+      } else if (val === null) {
+        console.log(`${keys[index]} - null`);
+      } else {
+        console.dir(val);
+      }
+    });
+  } else {
+    console.log(debug);
   }
 }
 
 function initFrontend() {
-  const fields = createFields()
-  openClientWebsocket(fields)
-
+  const fields = createFields();
+  openClientWebsocket(fields);
 }
 
-initFrontend()
-
-
+initFrontend();
