@@ -12,11 +12,11 @@ body {
 }
 .monitorfield__outer {
   flex-basis: 450px;
-    max-width: calc(100% - 450px);
   flex-shrink: 0;
 }
 .monitorfield__outer--errors {
-  flex-basis: 600px;
+  max-width: calc(100% - 450px);
+    flex-basis: 750px;
 }
 .monitorfield {
   background-color: #eee;
@@ -32,6 +32,21 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
   padding: 20px;
+}
+.monitorfield__filelink {
+  display: inline-block;
+  margin-left: 2em;
+}
+
+.monitorfield__error-line {
+  max-width: 75ch;
+  font-family: monospace;
+  display: block;
+  word-wrap: anywhere;
+}
+
+.monitorfield__error-line+.monitorfield__error-line {
+  margin-left: 2rem;
 }
 .monitorfield__title {
   margin: 0;
@@ -84,6 +99,9 @@ body {
   text-transform: uppercase;
 }
 
+.monitorfield__errortext {
+  letter-spacing: -.04em;
+}
 .monitorfield__error-remarks {
   font-weight: 600;
   font-size: 1.2rem;

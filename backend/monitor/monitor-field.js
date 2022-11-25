@@ -138,8 +138,39 @@ export default class MonitorField {
         const titleText = `${rollRow.messageData?.title ?? ""}${
           rollRow.messageData?.workerName ?? ""
         }`;
+
+        console.log(rollRow.messageData.content.text);
+
+        const bewerkteFoutTekst = rollRow.messageData.content.text
+          .split(/[\r\n]/)
+          .map((errorTextRow, index) => {
+            if (index < 1) return "";
+            if (errorTextRow.includes("node:internal")) return "";
+            let t = errorTextRow;
+            if (errorTextRow.includes("file://")) {
+              const volleFileNaam = errorTextRow.match(/(file.*)\)/)[1];
+              const fileLink = errorTextRow
+                .split("dev/apache")[1]
+                .replace(")", "");
+              const fileNaamIngekort = fileLink
+                .split("backend")[1]
+                .substring(1, fileLink.length - 1);
+              const fileLinkWSL = `vscode://vscode-remote/wsl+Ubuntu/home/sjerp/dev/apache${fileLink}`;
+              t = t.replace(
+                volleFileNaam,
+                `<a class='monitorfield__filelink' href='${fileLinkWSL}'>${fileNaamIngekort}</a>`
+              );
+              t = t.replace(/[\(\)]/g, "");
+            }
+
+            t = t.replace(/\sError: /, "");
+            t = `<span class='monitorfield__error-line'>${t}</span>`;
+            return t + "\r";
+          })
+          .join("");
+
         let hoofdPrintTekst = ` 
-          <pre class='monitorfield__errortext'>${rollRow.messageData.content.text}</pre>
+          <div class='monitorfield__errortext'>${bewerkteFoutTekst}</div>
         `;
 
         let currentErrorsForThisWorkerCount = 0;
