@@ -1,4 +1,942 @@
 
+  volt-0 Error - 7:20:46 PM
+  Error: random lol
+    at voltScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/volt.js:25:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  random lol
+  
+  
+  baroeg-2 Error - 7:20:43 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  baroeg-3 Error - 7:20:42 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  volt-0 Error - 7:19:01 PM
+  Error: random lol
+    at voltScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/volt.js:25:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  random lol
+  
+  
+  baroeg-7 Error - 7:18:57 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  baroeg-5 Error - 7:18:56 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  baroeg-5 Error - 7:17:29 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  baroeg-2 Error - 7:17:29 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  volt-0 Error - 7:17:28 PM
+  Error: random lol
+    at voltScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/volt.js:25:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  random lol
+  
+  
+  volt-0 Error - 7:15:55 PM
+  Error: random lol
+    at voltScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/volt.js:25:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  random lol
+  
+  
+  baroeg-7 Error - 7:15:51 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  baroeg-3 Error - 7:15:50 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  volt-0 Error - 7:15:19 PM
+  Error: random lol
+    at voltScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/volt.js:25:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  random lol
+  
+  
+  baroeg-3 Error - 7:15:17 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  baroeg-2 Error - 7:15:16 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  baroeg-6 Error - 7:14:01 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  volt-0 Error - 7:14:01 PM
+  Error: random lol
+    at voltScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/volt.js:25:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  random lol
+  
+  
+  baroeg-2 Error - 7:14:00 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  volt-0 Error - 7:12:47 PM
+  Error: random lol
+    at voltScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/volt.js:25:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  random lol
+  
+  
+  baroeg-2 Error - 7:12:45 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  baroeg-4 Error - 7:12:44 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  baroeg-6 Error - 7:10:58 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  baroeg-3 Error - 7:10:58 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  volt-0 Error - 7:10:57 PM
+  Error: random lol
+    at voltScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/volt.js:25:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  random lol
+  
+  
+  volt-0 Error - 7:10:06 PM
+  Error: random lol
+    at voltScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/volt.js:25:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  random lol
+  
+  
+  baroeg-3 Error - 7:10:01 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  baroeg-1 Error - 7:10:01 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  baroeg-1 Error - 7:08:15 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  baroeg-4 Error - 7:08:14 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  volt-0 Error - 7:08:14 PM
+  Error: random lol
+    at voltScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/volt.js:25:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  random lol
+  
+  
+  volt-0 Error - 7:06:14 PM
+  Error: random lol
+    at voltScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/volt.js:25:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  random lol
+  
+  
+  baroeg-4 Error - 7:06:12 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  baroeg-1 Error - 7:06:12 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  volt-0 Error - 6:56:45 PM
+  Error: random lol
+    at voltScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/volt.js:25:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  random lol
+  
+  
+  baroeg-0 Error - 6:56:43 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  baroeg-4 Error - 6:56:43 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  baroeg-6 Error - 6:55:21 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  baroeg-2 Error - 6:55:20 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  volt-0 Error - 6:51:47 PM
+  Error: random lol
+    at voltScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/volt.js:25:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  random lol
+  
+  
+  baroeg-7 Error - 6:51:45 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  baroeg-3 Error - 6:51:44 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  volt-0 Error - 6:50:56 PM
+  Error: random lol
+    at voltScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/volt.js:25:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  random lol
+  
+  
+  baroeg-7 Error - 6:50:51 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  baroeg-5 Error - 6:50:50 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  baroeg-0 Error - 6:50:31 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  baroeg-4 Error - 6:50:31 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  volt-0 Error - 6:50:30 PM
+  Error: random lol
+    at voltScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/volt.js:25:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  random lol
+  
+  
+  baroeg-6 Error - 6:48:23 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  volt-0 Error - 6:48:23 PM
+  Error: random lol
+    at voltScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/volt.js:25:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  random lol
+  
+  
+  baroeg-2 Error - 6:48:22 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  baroeg-2 Error - 6:47:46 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  volt-0 Error - 6:47:46 PM
+  Error: random lol
+    at voltScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/volt.js:25:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  random lol
+  
+  
+  baroeg-4 Error - 6:47:45 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  volt-0 Error - 6:36:56 PM
+  Error: random lol
+    at voltScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/volt.js:25:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  random lol
+  
+  
+  baroeg-5 Error - 6:36:54 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  baroeg-2 Error - 6:36:53 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  volt-0 Error - 6:36:19 PM
+  Error: random lol
+    at voltScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/volt.js:25:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  random lol
+  
+  
+  volt-0 Error - 6:36:00 PM
+  Error: random lol
+    at voltScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/volt.js:25:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  random lol
+  
+  
+  baroeg-6 Error - 6:35:56 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  baroeg-7 Error - 6:35:55 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  volt-0 Error - 6:34:13 PM
+  Error: random lol
+    at voltScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/volt.js:25:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  random lol
+  
+  
+  baroeg-3 Error - 6:34:12 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  baroeg-4 Error - 6:34:12 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  baroeg-7 Error - 6:33:59 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  volt-0 Error - 6:33:58 PM
+  Error: random lol
+    at voltScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/volt.js:25:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  random lol
+  
+  
+  baroeg-5 Error - 6:33:57 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  volt-0 Error - 6:32:52 PM
+  Error: random lol
+    at voltScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/volt.js:25:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  random lol
+  
+  
+  baroeg-1 Error - 6:32:50 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  baroeg-2 Error - 6:32:50 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  volt-0 Error - 6:30:14 PM
+  Error: random lol
+    at voltScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/volt.js:25:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  random lol
+  
+  
+  baroeg-7 Error - 6:30:13 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  baroeg-5 Error - 6:30:13 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  volt-0 Error - 6:29:44 PM
+  Error: random lol
+    at voltScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/volt.js:25:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  random lol
+  
+  
+  baroeg-0 Error - 6:29:40 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  baroeg-6 Error - 6:29:39 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  volt-0 Error - 6:29:23 PM
+  Error: random lol
+    at voltScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/volt.js:25:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  random lol
+  
+  
+  baroeg-4 Error - 6:29:20 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  baroeg-6 Error - 6:29:19 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  volt-0 Error - 6:29:03 PM
+  Error: random lol
+    at voltScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/volt.js:25:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  random lol
+  
+  
+  baroeg-1 Error - 6:29:02 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  baroeg-0 Error - 6:29:01 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  volt-0 Error - 6:18:22 PM
+  Error: random lol
+    at voltScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/volt.js:25:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  random lol
+  
+  
+  baroeg-6 Error - 6:18:21 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  baroeg-0 Error - 6:18:20 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  volt-0 Error - 6:18:13 PM
+  Error: random lol
+    at voltScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/volt.js:25:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  random lol
+  
+  
+  baroeg-2 Error - 6:18:09 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  baroeg-5 Error - 6:18:08 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  volt-0 Error - 6:17:46 PM
+  Error: random lol
+    at voltScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/volt.js:25:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  random lol
+  
+  
+  baroeg-3 Error - 6:17:45 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  baroeg-1 Error - 6:17:45 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  volt-0 Error - 6:17:33 PM
+  Error: random lol
+    at voltScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/volt.js:25:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  random lol
+  
+  
+  baroeg-4 Error - 6:17:28 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  baroeg-3 Error - 6:17:27 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  baroeg-3 Error - 6:17:00 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  volt-0 Error - 6:17:00 PM
+  Error: random lol
+    at voltScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/volt.js:25:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  random lol
+  
+  
+  baroeg-7 Error - 6:16:57 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  volt-0 Error - 6:16:20 PM
+  Error: random lol
+    at voltScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/volt.js:25:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  random lol
+  
+  
+  baroeg-0 Error - 6:16:16 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  baroeg-5 Error - 6:16:15 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  volt-0 Error - 6:15:26 PM
+  Error: random lol
+    at voltScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/volt.js:25:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  random lol
+  
+  
+  baroeg-4 Error - 6:15:21 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  baroeg-1 Error - 6:15:20 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  volt-0 Error - 6:13:34 PM
+  Error: random lol
+    at voltScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/volt.js:25:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  random lol
+  
+  
+  baroeg-6 Error - 6:13:30 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  baroeg-5 Error - 6:13:29 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  baroeg-7 Error - 6:13:12 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  baroeg-1 Error - 6:13:11 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  volt-0 Error - 6:13:11 PM
+  Error: random lol
+    at voltScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/volt.js:25:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  random lol
+  
+  
+  volt-0 Error - 6:11:20 PM
+  Error: random lol
+    at voltScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/volt.js:25:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  random lol
+  
+  
+  baroeg-7 Error - 6:11:18 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  baroeg-2 Error - 6:11:17 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  volt-0 Error - 6:10:32 PM
+  Error: random hahaha
+    at voltScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/volt.js:25:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  random hahaha
+  
+  
+  baroeg-7 Error - 6:10:26 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  baroeg-0 Error - 6:10:25 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  baroeg-1 Error - 6:07:29 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  baroeg-7 Error - 6:07:28 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  baroeg-4 Error - 6:00:24 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  baroeg-2 Error - 6:00:23 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  baroeg-2 Error - 5:58:09 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  baroeg-5 Error - 5:58:09 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  baroeg-0 Error - 5:56:23 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  baroeg-2 Error - 5:56:22 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  baroeg-7 Error - 5:51:52 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  baroeg-6 Error - 5:51:51 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  baroeg-5 Error - 5:48:56 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  baroeg-4 Error - 5:48:56 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  baroeg-6 Error - 5:47:01 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  baroeg-7 Error - 5:47:00 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  baroeg-3 Error - 5:40:10 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  baroeg-6 Error - 5:40:09 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  baroeg-6 Error - 5:38:20 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  baroeg-3 Error - 5:38:18 PM
+  TypeError: Cannot read properties of undefined (reading 'eventGenerator')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:56:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'eventGenerator')
+  
+  
+  baroeg-4 Error - 5:37:20 PM
+  TypeError: Cannot read properties of undefined (reading 'qwm')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:55:35)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'qwm')
+  
+  
+  baroeg-1 Error - 5:37:19 PM
+  TypeError: Cannot read properties of undefined (reading 'qwm')
+    at takeBaseEventsAnnounceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:55:35)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'qwm')
+  
+  
   volt-0 Error - 5:14:08 PM
   ReferenceError: price is not defined
     at AbstractScraper.getPrice (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:141:20)

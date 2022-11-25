@@ -9,17 +9,9 @@ const qwm = new QuickWorkerMessage(workerData);
 const scraperConfig = {
   baseEventTimeout: 30000,
   singlePageTimeout: 15000,
-  workerData: {}
+  workerData: Object.assign({}, workerData)
 }
-const workerDataCopy = {
-  ...workerData
-}
-for (let key in workerDataCopy){
-  scraperConfig.workerData[key] = workerDataCopy
-}
-
 const voltScraper = new AbstractScraper(scraperConfig)
-
 voltScraper.listenToMasterThread();
 
 //
@@ -29,6 +21,8 @@ voltScraper.makeBaseEventList = async function (self) {
   await page.goto("https://www.poppodium-volt.nl/", {
     waitUntil: "load",
   });
+
+  _t.handleError(new Error('random lol'), workerData, 'wat een onzin')
 
   try {
     await page.waitForSelector('.row.event', {

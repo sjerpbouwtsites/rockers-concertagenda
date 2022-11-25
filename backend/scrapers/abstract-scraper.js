@@ -52,7 +52,7 @@ export default class AbstractScraper {
   async takeBaseEventsAnnounceAndCheck({self, baseMusicEvents}){
     const qwm = new QuickWorkerMessage(workerData);
     parentPort.postMessage(qwm.messageRoll(`take base events announce and check`)) 
-      parentPort.postMessage(self.qwm.workerStarted());
+      parentPort.postMessage(qwm.workerStarted());
       const eventGen = self.eventGenerator(baseMusicEvents);
       const nextEvent = eventGen.next().value;
       return self.eventAsyncCheck({eventGen, currentEvent: nextEvent, self})    

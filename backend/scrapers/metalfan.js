@@ -5,10 +5,7 @@ import { parentPort, workerData } from "worker_threads";
 import EventsList from "../mods/events-list.js";
 import { metalfanMonths } from "../mods/months.js";
 import * as _t from "../mods/tools.js";
-import { letScraperListenToMasterMessageAndInit } from "../mods/generic-scraper.js";
 import { QuickWorkerMessage } from "../mods/rock-worker.js";
-
-letScraperListenToMasterMessageAndInit(scrapeMetalfan);
 
 const skipWithMetalfan = [
   "013",
@@ -35,7 +32,22 @@ const skipWithMetalfan = [
   "occii",
   "patronaat",
   "tivolivredenburg",
+  "volt"
 ];
+
+parentPort.on("message", (message) => {
+  const pm = JSON.parse(message);
+  if (pm?.type === 'process' && pm?.subtype === "command-start") {
+    try {
+      scrapeMetalfan(pm?.messageData);
+    } catch (error) {
+      parentPort.postMessage({
+        status: "error",
+        message: error,
+      });
+    }
+  }
+});
 
 async function scrapeMetalfan(mainThreadData) {
   try {

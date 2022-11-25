@@ -1,116 +1,23 @@
 import axios from "axios";
 import MusicEvent from "../mods/music-event.js";
-import puppeteer from "puppeteer";
 import { parentPort, workerData } from "worker_threads";
-import EventsList from "../mods/events-list.js";
 import fs from "fs";
 import crypto from "crypto";
 import fsDirections from "../mods/fs-directions.js";
 import * as _t from "../mods/tools.js";
 import { baroegMonths } from "../mods/months.js";
-import { letScraperListenToMasterMessageAndInit } from "../mods/generic-scraper.js";
-import { QuickWorkerMessage } from "../mods/rock-worker.js";
+import AbstractScraper from "./abstract-scraper.js";
 
-letScraperListenToMasterMessageAndInit(scrapeBaroeg);
 
-async function scrapeBaroeg() {
-  const qwm = new QuickWorkerMessage(workerData);
-  parentPort.postMessage(qwm.workerInitialized());
-
-  const baseMusicEvents = await Promise.race([
-    makeBaseEventList(),
-    _t.errorAfterSeconds(10000),
-  ]).catch((err) => _t.handleError(err, workerData, "base event race failure"));
-
-  parentPort.postMessage(qwm.workerStarted());
-
-  await fillMusicEvents(baseMusicEvents, baroegMonths, qwm);
-
-  EventsList.save(workerData.family, workerData.index);
-  parentPort.postMessage(qwm.workerDone(EventsList.amountOfEvents));
+const scraperConfig = {
+  baseEventTimeout: 10000,
+  singlePageTimeout: 15000,
+  workerData: Object.assign({}, workerData)
 }
+const baroegScraper = new AbstractScraper(scraperConfig)
+baroegScraper.listenToMasterThread();
 
-async function fillMusicEvents(baseMusicEvents, baroegMonths, qwm) {
-  const browser = await puppeteer.launch();
-  const baseMusicEventsCopy = [...baseMusicEvents];
-
-  return processSingleMusicEvent(
-    browser,
-    baseMusicEventsCopy,
-    baroegMonths,
-    qwm
-  )
-    .finally(() => {
-      browser.close();
-      return true;
-    })
-    .catch((error) => {
-      browser.close();
-      _t.handleError(error, workerData);
-    });
-}
-
-async function processSingleMusicEvent(
-  browser,
-  baseMusicEvents,
-  baroegMonths,
-  qwm
-) {
-  const newMusicEvents = [...baseMusicEvents];
-  const firstMusicEvent = newMusicEvents.shift();
-
-  qwm.todo(baseMusicEvents.length).forEach((JSONblob) => {
-    parentPort.postMessage(JSONblob);
-  });
-
-  if (!firstMusicEvent || !firstMusicEvent.venueEventUrl) {
-    return true;
-  }
-  if (!firstMusicEvent || baseMusicEvents.length === 0) {
-    return true;
-  }
-
-  const page = await browser.newPage();
-  await page.goto(firstMusicEvent.venueEventUrl, {
-    waitUntil: "load",
-    timeout: 0,
-  });
-
-  const pageInfo = await Promise.race([
-    getPageInfo(page, baroegMonths),
-    _t.errorAfterSeconds(15000),
-  ]).catch((error) =>
-    _t.handleError(error, workerData, "pageInfo race condition failed")
-  );
-
-  if (pageInfo && (pageInfo.priceElText || pageInfo.contextText)) {
-    firstMusicEvent.price = _t.getPriceFromHTML(
-      pageInfo.priceText,
-      pageInfo.contextText
-    );
-    delete pageInfo.price;
-  }
-
-  // no date no registration.
-  if (pageInfo && !pageInfo.cancelReason) {
-    delete pageInfo.cancelReason;
-    firstMusicEvent.merge(pageInfo);
-  } else if (pageInfo.cancelReason !== "") {
-    qwm.debugger({
-      issue: `Incomplete info for ${firstMusicEvent.title}`,
-      event: firstMusicEvent,
-      pageInfo,
-    });
-  }
-
-  firstMusicEvent.registerIfValid();
-
-  return newMusicEvents.length
-    ? processSingleMusicEvent(browser, newMusicEvents, baroegMonths, qwm)
-    : true;
-}
-
-async function getPageInfo(page, months) {
+baroegScraper.getPageInfo = async function({page, url, self}) {
   let pageInfo = {};
   pageInfo.cancelReason = "";
 
@@ -168,7 +75,7 @@ async function getPageInfo(page, months) {
         error: dateError,
       };
     },
-    { months }
+    { months: baroegMonths }
   );
   if (pageInfo.error) {
     _t.handleError(pageInfo.error, workerData, "getPageInfo");
@@ -176,7 +83,7 @@ async function getPageInfo(page, months) {
   return pageInfo;
 }
 
-async function makeBaseEventList() {
+baroegScraper.makeBaseEventList = async function () {
   let errorMan = false;
   const baroegLijst = await axios
     .get(
