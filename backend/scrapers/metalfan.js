@@ -4,7 +4,7 @@ import puppeteer from "puppeteer";
 import { parentPort, workerData } from "worker_threads";
 import EventsList from "../mods/events-list.js";
 import { metalfanMonths } from "../mods/months.js";
-import { handleError, waitFor } from "../mods/tools.js";
+import * as _t from "../mods/tools.js";
 import { letScraperListenToMasterMessageAndInit } from "../mods/generic-scraper.js";
 import { QuickWorkerMessage } from "../mods/rock-worker.js";
 
@@ -47,7 +47,7 @@ async function scrapeMetalfan(mainThreadData) {
     EventsList.save("metalfan");
     browser.close();
   } catch (error) {
-    handleError(error);
+    _t.handleError(error);
   }
 }
 

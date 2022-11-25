@@ -5,16 +5,7 @@ import EventsList from "../mods/events-list.js";
 import fs from "fs";
 import crypto from "crypto";
 import fsDirections from "../mods/fs-directions.js";
-import {
-  getPriceFromHTML,
-  handleError,
-  autoScroll,
-  waitFor,
-  failurePromiseAfter,
-  errorAfterSeconds,
-  postPageInfoProcessing,
-  basicMusicEventsFilter,
-} from "../mods/tools.js";
+import * as _t from "../mods/tools.js";
 import { letScraperListenToMasterMessageAndInit } from "../mods/generic-scraper.js";
 import { QuickWorkerMessage } from "../mods/rock-worker.js";
 import { kavkaMonths } from "../mods/months.js";
@@ -29,7 +20,7 @@ letScraperListenToMasterMessageAndInit(scrapeInit);
 async function scrapeInit() {
   parentPort.postMessage(qwm.workerInitialized());
   browser = await puppeteer.launch();
-  Promise.race([makeBaseEventList(), errorAfterSeconds(30000)])
+  Promise.race([makeBaseEventList(), _t.errorAfterSeconds(30000)])
     .then((baseMusicEvents) => {
       parentPort.postMessage(qwm.workerStarted());
       const baseMusicEventsCopy = [...baseMusicEvents];
@@ -40,7 +31,7 @@ async function scrapeInit() {
       EventsList.save(workerData.family, workerData.index);
     })
     .catch((error) =>
-      handleError(error, workerData, `outer catch scrape ${workerData.family}`)
+      _t.handleError(error, workerData, `outer catch scrape ${workerData.family}`)
     )
     .finally(() => {
       browser && browser.hasOwnProperty("close") && browser.close();
@@ -56,7 +47,7 @@ async function createSinglePage(url) {
     })
     .then(() => true)
     .catch((err) => {
-      handleError(
+      _t.handleError(
         err,
         workerData,
         `${workerData.name} goto single page mislukt:<br><a href='${url}'>${url}</a><br>`
@@ -90,7 +81,7 @@ async function processSingleMusicEvent(baseMusicEvents) {
       : true;
   }
   const pageInfoPromise = getPageInfo(singleEventPage, firstMusicEvent);
-  const failurePromise = failurePromiseAfter(20000);
+  const failurePromise = _t.failurePromiseAfter(20000);
 
   return Promise.race([pageInfoPromise, failurePromise])
     .then(firstResult => {
@@ -98,10 +89,10 @@ async function processSingleMusicEvent(baseMusicEvents) {
         const errMsg = firstResult.data && typeof firstResult.data === 'string' ? `\nOriginal error message:\n${firstResult.data}` : '';
         const err = new Error(`Kavka single failure, failure promise fired, at: \n${firstMusicEvent.title}\n${firstMusicEvent.venueEventUrl}${errMsg}`)
         parentPort.postMessage(qwm.debugger(firstResult));
-        handleError(err, workerData, 'error in race condition')
+        _t.handleError(err, workerData, 'error in race condition')
       } else {
         let pageInfo = firstResult.data;
-        pageInfo = postPageInfoProcessing(pageInfo);
+        pageInfo = _t.postPageInfoProcessing(pageInfo);
         firstMusicEvent.merge(pageInfo);
         firstMusicEvent.registerIfValid();
       }
@@ -135,7 +126,7 @@ async function getPageInfo(page) {
       return res;
     });
   } catch (error) {
-    log(error)
+    _t.handleError(error, workerData, `get page info`)
   }
   return {
     status: 'success',
@@ -203,6 +194,6 @@ async function makeBaseEventList() {
       })
   }, kavkaMonths);
   return rawEvents
-    .filter(basicMusicEventsFilter)
+    .filter(_t.basicMusicEventsFilter)
     .map((event) => new MusicEvent(event));
 }

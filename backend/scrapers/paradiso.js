@@ -5,15 +5,7 @@ import EventsList from "../mods/events-list.js";
 import fs from "fs";
 import crypto from "crypto";
 import fsDirections from "../mods/fs-directions.js";
-import {
-  getPriceFromHTML,
-  handleError,
-  autoScroll,
-  waitFor,
-  errorAfterSeconds,
-  postPageInfoProcessing,
-  basicMusicEventsFilter,
-} from "../mods/tools.js";
+import * as _t from "../mods/tools.js";
 import { letScraperListenToMasterMessageAndInit } from "../mods/generic-scraper.js";
 import { QuickWorkerMessage } from "../mods/rock-worker.js";
 import { paradisoMonths } from "../mods/months.js";
@@ -25,7 +17,7 @@ let browser = null;
 async function scrapeInit() {
   parentPort.postMessage(qwm.workerInitialized());
   browser = await puppeteer.launch();
-  Promise.race([makeBaseEventList(), errorAfterSeconds(30000)])
+  Promise.race([makeBaseEventList(), _t.errorAfterSeconds(30000)])
     
     .then(baseMusicEvents => {
       parentPort.postMessage(qwm.workerStarted());
@@ -43,7 +35,7 @@ async function scrapeInit() {
       parentPort.postMessage(qwm.workerDone(EventsList.amountOfEvents));
     })
     .catch((error) =>
-    handleError(error, workerData, `outer catch scrape ${workerData.family}`)
+    _t.handleError(error, workerData, `outer catch scrape ${workerData.family}`)
     )
     .finally(() => {
       EventsList.save(workerData.family, workerData.index);
@@ -60,7 +52,7 @@ async function createSinglePage(url) {
     })
     .then(() => true)
     .catch((err) => {
-      handleError(
+      _t.handleError(
         err,
         workerData,
         `${workerData.name} goto single page mislukt:<br><a href='${url}'>${url}</a><br>`
@@ -92,11 +84,11 @@ async function processSingleMusicEvent(baseMusicEvents) {
   try {
     const pageInfo = await Promise.race([
       getPageInfo(singleEventPage, firstMusicEvent.venueEventUrl),
-      errorAfterSeconds(15000),
+      _t.errorAfterSeconds(15000),
     ]);
 
     if (pageInfo && pageInfo.priceTextcontent) {
-      pageInfo.price = getPriceFromHTML(pageInfo.priceTextcontent);
+      pageInfo.price = _t.getPriceFromHTML(pageInfo.priceTextcontent);
     }
 
     if (pageInfo && pageInfo.longTextHTML) {
@@ -115,7 +107,7 @@ async function processSingleMusicEvent(baseMusicEvents) {
     firstMusicEvent.registerIfValid();
     if (!singleEventPage.isClosed() && singleEventPage.close());
   } catch (pageInfoError) {
-    handleError(pageInfoError, workerData, "get page info fail");
+    _t.handleError(pageInfoError, workerData, "get page info fail");
   }
 
   return newMusicEvents.length
@@ -130,7 +122,7 @@ async function getPageInfo(page) {
       timeout: 7500
     })
   } catch (error) {
-    handleError(error, 'Paradiso wacht op laden single pagina')
+    _t.handleError(error, 'Paradiso wacht op laden single pagina')
   }
 
   const result = await page.evaluate(paradisoMonths => {
@@ -168,7 +160,7 @@ async function getPageInfo(page) {
   }, paradisoMonths);
 
   if (result.error) {
-    handleError(new Error(result.error), workerData, 'Paradiso getPageInfo')
+    _t.handleError(new Error(result.error), workerData, 'Paradiso getPageInfo')
   }
   return result
 
@@ -181,10 +173,10 @@ async function makeBaseEventList() {
   });
   try {
     await page.waitForSelector('[data-category="60102"]', {
-      timeout: 2500
+      timeout: 2500 // @TODO TE STRAK?
     })
   } catch (error) {
-    handleError(error, 'Paradiso wacht op punk categorie')
+    _t.handleError(error, 'Paradiso wacht op punk categorie')
   }
   await page.click('[data-category="60102"]')
   try {
@@ -192,7 +184,7 @@ async function makeBaseEventList() {
       timeout: 1000
     })
   } catch (error) {
-    handleError(error, 'Paradiso wacht op submit knop filters')
+    _t.handleError(error, 'Paradiso wacht op submit knop filters')
   }
   await page.click('.block-list-search__submit')
   try {
@@ -200,9 +192,9 @@ async function makeBaseEventList() {
       timeout: 5000
     })
   } catch (error) {
-    handleError(error, 'Paradiso wacht op laden agenda na filter')
+    _t.handleError(error, 'Paradiso wacht op laden agenda na filter')
   }
-  await waitFor(150);
+  await _t.waitFor(150);
 
   let rawEvents = await page.evaluate(({ paradisoMonths, workerIndex }) => {
 
@@ -225,7 +217,7 @@ async function makeBaseEventList() {
       })
   }, { paradisoMonths, workerIndex: workerData.index });
   return rawEvents
-    .filter(basicMusicEventsFilter)
+    .filter(_t.basicMusicEventsFilter)
     .map((event) => new MusicEvent(event));
 }
 

@@ -33,7 +33,7 @@ export default class MusicEvent {
   }
   registerIfValid() {
     if (this.isValid) {
-      this.register();
+      this.register(); // @TODO registreer welke events invalid waren. 
     } else {
       const err = new Error('invalid music event!')
       handleError(err, {

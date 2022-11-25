@@ -29,7 +29,6 @@ async function init() {
 
   // @TODO maak hier mooie configuratie objecten van
   if (EventsList.isOld("metalfan", shellArguments?.force)) {
-    console.log(`\n this is metalfan fsdir ${fsDirections.scrapers.metalfan}\n` )
     workerList.push([fsDirections.scrapers.metalfan, "metalfan", 0]);
   }
 

@@ -6,12 +6,7 @@ import fs from "fs";
 import crypto from "crypto";
 import fsDirections from "../mods/fs-directions.js";
 import { effenaarMonths } from "../mods/months.js";
-import {
-  getPriceFromHTML,
-  handleError,
-  basicMusicEventsFilter,
-  errorAfterSeconds,
-} from "../mods/tools.js";
+import * as _t from "../mods/tools.js";
 import { letScraperListenToMasterMessageAndInit } from "../mods/generic-scraper.js";
 import { QuickWorkerMessage } from "../mods/rock-worker.js";
 
@@ -22,7 +17,7 @@ async function scrapeEffenaar() {
   const browser = await puppeteer.launch();
   Promise.race([
     makeBaseEventList(browser, qwm, effenaarMonths),
-    errorAfterSeconds(15000),
+    _t.errorAfterSeconds(15000),
   ])
     .then((baseMusicEvents) => {
       parentPort.postMessage(qwm.workerStarted());
@@ -34,7 +29,7 @@ async function scrapeEffenaar() {
       EventsList.save(workerData.family, workerData.index);
     })
     .catch((error) =>
-      handleError(error, workerData, `outer catch scrape ${workerData.family}`)
+      _t.handleError(error, workerData, `outer catch scrape ${workerData.family}`)
     )
     .finally(() => {
       browser && browser.hasOwnProperty("close") && browser.close();
@@ -61,7 +56,7 @@ async function processSingleMusicEvent(browser, baseMusicEvents, qwm) {
       })
       .then(() => true)
       .catch((err) => {
-        handleError(
+        _t.handleError(
           err,
           workerData,
           `Effenaar goto single page mislukt:<br><a href='${firstMusicEvent.venueEventUrl}'>${firstMusicEvent.title}</a><br>`
@@ -76,11 +71,11 @@ async function processSingleMusicEvent(browser, baseMusicEvents, qwm) {
   try {
     const pageInfo = await Promise.race([
       getPageInfo(page, effenaarMonths, qwm),
-      errorAfterSeconds(15000),
+      _t.errorAfterSeconds(15000),
     ]);
 
     if (pageInfo && pageInfo.priceTextcontent) {
-      pageInfo.price = getPriceFromHTML(pageInfo.priceTextcontent);
+      pageInfo.price = _t.getPriceFromHTML(pageInfo.priceTextcontent);
     }
 
     if (pageInfo && pageInfo.longTextHTML) {
@@ -98,7 +93,7 @@ async function processSingleMusicEvent(browser, baseMusicEvents, qwm) {
     firstMusicEvent.registerIfValid();
     if (!page.isClosed() && page.close());
   } catch (pageInfoError) {
-    handleError(pageInfoError, workerData, "get page info fail");
+    _t.handleError(pageInfoError, workerData, "get page info fail");
   }
 
   return newMusicEvents.length
@@ -185,7 +180,7 @@ async function getPageInfo(page, effenaarMonths, qwm) {
     };
   }, effenaarMonths);
   if (pageInfo.error) {
-    handleError(pageInfo.error, workerData, `Effenaar pageinfo `);
+    _t.handleError(pageInfo.error, workerData, `Effenaar pageinfo `);
   }
   return pageInfo;
 }
@@ -225,10 +220,10 @@ async function makeBaseEventList(browser, qwm, effenaarMonths) {
     )
     .then((rawEvents) => {
       return rawEvents
-        .filter(basicMusicEventsFilter)
+        .filter(_t.basicMusicEventsFilter)
         .map((event) => new MusicEvent(event));
     })
     .catch((err) => {
-      handleError(err, workerData, "make base event list");
+      _t.handleError(err, workerData, "make base event list");
     });
 }

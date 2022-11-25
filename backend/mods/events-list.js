@@ -1,6 +1,6 @@
 import fs from "fs";
 import fsDirections from "./fs-directions.js";
-import { handleError, errorAfterSeconds, log } from "./tools.js";
+import { handleError, errorAfterSeconds } from "./tools.js";
 import { QuickWorkerMessage } from "./rock-worker.js";
 import passMessageToMonitor from "../monitor/pass-message-to-monitor.js";
 

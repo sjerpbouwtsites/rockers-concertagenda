@@ -2,12 +2,7 @@ import MusicEvent from "../mods/music-event.js";
 import puppeteer from "puppeteer";
 import { parentPort, workerData } from "worker_threads";
 import EventsList from "../mods/events-list.js";
-import {
-  handleError,
-  postPageInfoProcessing,
-  errorAfterSeconds,
-  basicMusicEventsFilter,
-} from "../mods/tools.js";
+import * as _t from "../mods/tools.js";
 import { letScraperListenToMasterMessageAndInit } from "../mods/generic-scraper.js";
 import { QuickWorkerMessage } from "../mods/rock-worker.js";
 import { bibelotMonths } from "../mods/months.js";
@@ -19,7 +14,7 @@ letScraperListenToMasterMessageAndInit(scrapeInit);
 async function scrapeInit() {
   parentPort.postMessage(qwm.workerInitialized());
   browser = await puppeteer.launch();
-  Promise.race([makeBaseEventList(), errorAfterSeconds(30000)])
+  Promise.race([makeBaseEventList(), _t.errorAfterSeconds(30000)])
     .then((baseMusicEvents) => {
       parentPort.postMessage(qwm.workerStarted());
       const baseMusicEventsCopy = [...baseMusicEvents];
@@ -30,7 +25,7 @@ async function scrapeInit() {
       EventsList.save(workerData.family, workerData.index);
     })
     .catch((error) =>
-      handleError(error, workerData, `outer catch scrape ${workerData.family}`)
+      _t.handleError(error, workerData, `outer catch scrape ${workerData.family}`)
     )
     .finally(() => {
       browser && browser.hasOwnProperty("close") && browser.close();
@@ -80,7 +75,7 @@ async function processSingleMusicEvent(baseMusicEvents) {
   }
 
   let pageInfo = await getPageInfo(singleEventPage);
-  pageInfo = postPageInfoProcessing(pageInfo);
+  pageInfo = _t.postPageInfoProcessing(pageInfo);
   firstMusicEvent.merge(pageInfo);
   firstMusicEvent.registerIfValid();
   if (!singleEventPage.isClosed() && singleEventPage.close());
@@ -99,7 +94,7 @@ async function createSinglePage(url) {
     })
     .then(() => true)
     .catch((err) => {
-      handleError(
+      _t.handleError(
         err,
         workerData,
         `${workerData.name} goto single page mislukt:<br><a href='${url}'>${url}</a><br>`
@@ -213,6 +208,6 @@ async function makeBaseEventList() {
     });
   });
   return rawEvents
-    .filter(basicMusicEventsFilter)
+    .filter(_t.basicMusicEventsFilter)
     .map((event) => new MusicEvent(event));
 }

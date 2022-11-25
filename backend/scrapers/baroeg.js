@@ -6,13 +6,7 @@ import EventsList from "../mods/events-list.js";
 import fs from "fs";
 import crypto from "crypto";
 import fsDirections from "../mods/fs-directions.js";
-import {
-  handleError,
-  basicMusicEventsFilter,
-  errorAfterSeconds,
-  log,
-  getPriceFromHTML,
-} from "../mods/tools.js";
+import * as _t from "../mods/tools.js";
 import { baroegMonths } from "../mods/months.js";
 import { letScraperListenToMasterMessageAndInit } from "../mods/generic-scraper.js";
 import { QuickWorkerMessage } from "../mods/rock-worker.js";
@@ -25,8 +19,8 @@ async function scrapeBaroeg() {
 
   const baseMusicEvents = await Promise.race([
     makeBaseEventList(),
-    errorAfterSeconds(10000),
-  ]).catch((err) => handleError(err, workerData, "base event race failure"));
+    _t.errorAfterSeconds(10000),
+  ]).catch((err) => _t.handleError(err, workerData, "base event race failure"));
 
   parentPort.postMessage(qwm.workerStarted());
 
@@ -52,7 +46,7 @@ async function fillMusicEvents(baseMusicEvents, baroegMonths, qwm) {
     })
     .catch((error) => {
       browser.close();
-      handleError(error, workerData);
+      _t.handleError(error, workerData);
     });
 }
 
@@ -84,13 +78,13 @@ async function processSingleMusicEvent(
 
   const pageInfo = await Promise.race([
     getPageInfo(page, baroegMonths),
-    errorAfterSeconds(15000),
+    _t.errorAfterSeconds(15000),
   ]).catch((error) =>
-    handleError(error, workerData, "pageInfo race condition failed")
+    _t.handleError(error, workerData, "pageInfo race condition failed")
   );
 
   if (pageInfo && (pageInfo.priceElText || pageInfo.contextText)) {
-    firstMusicEvent.price = getPriceFromHTML(
+    firstMusicEvent.price = _t.getPriceFromHTML(
       pageInfo.priceText,
       pageInfo.contextText
     );
@@ -177,7 +171,7 @@ async function getPageInfo(page, months) {
     { months }
   );
   if (pageInfo.error) {
-    handleError(pageInfo.error, workerData, "getPageInfo");
+    _t.handleError(pageInfo.error, workerData, "getPageInfo");
   }
   return pageInfo;
 }
@@ -194,7 +188,7 @@ async function makeBaseEventList() {
       return response.data;
     })
     .catch((response) => {
-      handleError(
+      _t.handleError(
         response,
         workerData,
         "axios get baroeg wp json fail makeBaseEventList"
@@ -218,7 +212,7 @@ async function makeBaseEventList() {
         const title = event?.title?.rendered ?? "";
         const url = event?.link ?? "";
         const eeerrr = new Error(`Event zonder _embedded. ${title} ${url}`);
-        handleError(
+        _t.handleError(
           eeerrr,
           workerData,
           "baroeg map over wpjson events makeBaseEventList"
@@ -243,6 +237,6 @@ async function makeBaseEventList() {
       }
       return new MusicEvent(musicEventConf);
     })
-    .filter(basicMusicEventsFilter);
+    .filter(_t.basicMusicEventsFilter);
   return musicEvents;
 }

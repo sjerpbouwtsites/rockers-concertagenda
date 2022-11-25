@@ -66,6 +66,11 @@ export default class WorkerStatus {
     return WorkerStatus.currentNotDone.length < 5 && WorkerStatus.CPUFree > 50;
   }
 
+  // @TODO CREEER: tbv niet één familie meerdere tegelijk
+  // static get currentWorkersOfThisFamily() {
+  //   //
+  // }  
+
   static initializeReporting() {
     WorkerStatus.reportingInterval = setInterval(
       WorkerStatus.reportOnActiveWorkers,

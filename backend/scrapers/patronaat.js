@@ -6,12 +6,7 @@ import EventsList from "../mods/events-list.js";
 import fs from "fs";
 import crypto from "crypto";
 import fsDirections from "../mods/fs-directions.js";
-import {
-  getPriceFromHTML,
-  handleError,
-  basicMusicEventsFilter,
-  errorAfterSeconds,
-} from "../mods/tools.js";
+import * as _t from "../mods/tools.js";
 import { letScraperListenToMasterMessageAndInit } from "../mods/generic-scraper.js";
 import { QuickWorkerMessage } from "../mods/rock-worker.js";
 
@@ -22,7 +17,7 @@ async function scrapeInit() {
   parentPort.postMessage(qwm.workerInitialized());
   const browser = await puppeteer.launch();
 
-  Promise.race([makeBaseEventList(browser), errorAfterSeconds(15000)])
+  Promise.race([makeBaseEventList(browser), _t.errorAfterSeconds(15000)])
     .then((baseMusicEvents) => {
       parentPort.postMessage(qwm.workerStarted());
       const baseMusicEventsCopy = [...baseMusicEvents];
@@ -33,7 +28,7 @@ async function scrapeInit() {
       EventsList.save(workerData.family, workerData.index);
       browser && browser.hasOwnProperty("close") && browser.close();
     })
-    .catch((error) => handleError(error, workerData, "outer catch scrape 013"));
+    .catch((error) => _t.handleError(error, workerData, "outer catch scrape 013"));
 }
 
 async function processSingleMusicEvent(browser, baseMusicEvents, qwm) {
@@ -62,16 +57,16 @@ async function processSingleMusicEvent(browser, baseMusicEvents, qwm) {
   try {
     const pageInfo = await Promise.race([
       getPageInfo(page),
-      errorAfterSeconds(25000),
+      _t.errorAfterSeconds(25000),
     ]).catch((err) =>
-      handleError(err, workerData, "patronaar pageinfo racecondition fail")
+      _t.handleError(err, workerData, "patronaar pageinfo racecondition fail")
     );
     if (!pageInfo.hasOwnProperty("startDateTime") || !pageInfo.startDateTime) {
       return processSingleMusicEvent(browser, newMusicEvents, qwm);
     }
 
     if (pageInfo && pageInfo.price) {
-      firstMusicEvent.price = getPriceFromHTML(pageInfo.price);
+      firstMusicEvent.price = _t.getPriceFromHTML(pageInfo.price);
       delete pageInfo.price;
     }
 
@@ -95,7 +90,7 @@ async function processSingleMusicEvent(browser, baseMusicEvents, qwm) {
     }
     firstMusicEvent.registerIfValid();
   } catch (error) {
-    handleError(error, workerData, "process single event try fail");
+    _t.handleError(error, workerData, "process single event try fail");
   }
 
   return newMusicEvents.length
@@ -206,7 +201,7 @@ async function getPageInfo(page, months) {
     !page.isClosed() && page.close();
     return pageInfo;
   } catch (error) {
-    handleError(error, workerData, "page info outer try wrapper");
+    _t.handleError(error, workerData, "page info outer try wrapper");
     !page.isClosed() && page.close();
     return pageInfo;
   }
@@ -250,6 +245,6 @@ async function makeBaseEventList(browser) {
       });
   }, workerData.index);
   return rawEvents
-    .filter(basicMusicEventsFilter)
+    .filter(_t.basicMusicEventsFilter)
     .map((event) => new MusicEvent(event));
 }

@@ -144,16 +144,6 @@ export function getPriceFromHTML(testText = null, contextText = null) {
 
   return null;
 }
-
-export function log(message, worker = null, workerName = null) {
-  parentPort.postMessage({
-    status: "console",
-    message: message,
-    workerName,
-    worker,
-  });
-}
-
 export function basicMusicEventsFilter(musicEvent, index) {
   const t = musicEvent?.title ?? "";
   const st = musicEvent?.shortText ?? "";

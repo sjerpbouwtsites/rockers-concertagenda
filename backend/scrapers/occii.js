@@ -5,10 +5,9 @@ import puppeteer from "puppeteer";
 import { parentPort, workerData } from "worker_threads";
 import EventsList from "../mods/events-list.js";
 import fsDirections from "../mods/fs-directions.js";
-import { errorAfterSeconds } from "../mods/tools.js";
+import * as _t from "../mods/tools.js";
 import { letScraperListenToMasterMessageAndInit } from "../mods/generic-scraper.js";
 import { occiiMonths } from "../mods/months.js";
-import { basicMusicEventsFilter, postPageInfoProcessing } from "../mods/tools.js";
 import { QuickWorkerMessage } from "../mods/rock-worker.js";
 const qwm = new QuickWorkerMessage(workerData);
 let browser = null;
@@ -18,7 +17,7 @@ letScraperListenToMasterMessageAndInit(scrapeInit);
 async function scrapeInit() {
   parentPort.postMessage(qwm.workerInitialized());
   browser = await puppeteer.launch();
-  Promise.race([makeBaseEventList(), errorAfterSeconds(30000)])
+  Promise.race([makeBaseEventList(), _t.errorAfterSeconds(30000)])
     .then((baseMusicEvents) => {
       parentPort.postMessage(qwm.workerStarted());
       const baseMusicEventsCopy = [...baseMusicEvents];
@@ -29,7 +28,7 @@ async function scrapeInit() {
       EventsList.save(workerData.family, workerData.index);
     })
     .catch((error) =>
-      handleError(error, workerData, `outer catch scrape ${workerData.family}`)
+      _t.handleError(error, workerData, `outer catch scrape ${workerData.family}`)
     )
     .finally(() => {
       browser && browser.hasOwnProperty("close") && browser.close();
@@ -61,7 +60,7 @@ async function makeBaseEventList() {
   }, workerData.index);
 
   const baseMusicEvents = eventsData
-    .filter(basicMusicEventsFilter)
+    .filter(_t.basicMusicEventsFilter)
     .map((eventDatum) => {
       const thisMusicEvent = new MusicEvent(eventDatum);
       return thisMusicEvent;
@@ -128,7 +127,7 @@ async function processSingleMusicEvent(baseMusicEvents) {
     return res;
   }, occiiMonths);
 
-  pageInfo = postPageInfoProcessing(pageInfo);
+  pageInfo = _t.postPageInfoProcessing(pageInfo);
   firstMusicEvent.merge(pageInfo);
   if (firstMusicEvent.isValid) {
     firstMusicEvent.registerIfValid();

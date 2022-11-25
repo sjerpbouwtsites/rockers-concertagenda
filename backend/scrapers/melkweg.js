@@ -5,14 +5,7 @@ import EventsList from "../mods/events-list.js";
 import fs from "fs";
 import crypto from "crypto";
 import fsDirections from "../mods/fs-directions.js";
-import {
-  getPriceFromHTML,
-  handleError,
-  autoScroll,
-  postPageInfoProcessing,
-  errorAfterSeconds,
-  basicMusicEventsFilter,
-} from "../mods/tools.js";
+import * as _t from "../mods/tools.js";
 import { letScraperListenToMasterMessageAndInit } from "../mods/generic-scraper.js";
 import { QuickWorkerMessage } from "../mods/rock-worker.js";
 const qwm = new QuickWorkerMessage(workerData);
@@ -23,7 +16,7 @@ letScraperListenToMasterMessageAndInit(scrapeInit);
 async function scrapeInit() {
   parentPort.postMessage(qwm.workerInitialized());
   browser = await puppeteer.launch();
-  Promise.race([makeBaseEventList(), errorAfterSeconds(50000)])
+  Promise.race([makeBaseEventList(), _t.errorAfterSeconds(50000)])
     .then((baseMusicEvents) => {
       parentPort.postMessage(qwm.workerStarted());
       const baseMusicEventsCopy = [...baseMusicEvents];
@@ -34,7 +27,7 @@ async function scrapeInit() {
       EventsList.save(workerData.family, workerData.index);
     })
     .catch((error) =>
-      handleError(error, workerData, `outer catch scrape ${workerData.family}`)
+      _t.handleError(error, workerData, `outer catch scrape ${workerData.family}`)
     )
     .finally(() => {
       browser && browser.hasOwnProperty("close") && browser.close();
@@ -50,7 +43,7 @@ async function createSinglePage(url) {
     })
     .then(() => true)
     .catch((err) => {
-      handleError(
+      _t.handleError(
         err,
         workerData,
         `${workerData.name} goto single page mislukt:<br><a href='${url}'>${url}</a><br>`
@@ -86,9 +79,9 @@ async function processSingleMusicEvent(baseMusicEvents) {
 
   let pageInfo = await Promise.race([
     getPageInfo(singleEventPage, firstMusicEvent.venueEventUrl),
-    errorAfterSeconds(15000),
+    _t.errorAfterSeconds(15000),
   ]);
-  pageInfo = postPageInfoProcessing(pageInfo);
+  pageInfo = _t.postPageInfoProcessing(pageInfo);
   
   if (pageInfo && pageInfo.longTextHTML) {
     let uuid = crypto.randomUUID();
@@ -98,7 +91,7 @@ async function processSingleMusicEvent(baseMusicEvents) {
   }
 
   if (pageInfo.error){
-    handleError(pageInfo.error, workerData, 'getPageInfo error')
+    _t.handleError(pageInfo.error, workerData, 'getPageInfo error')
   }
 
   // no date no registration.
@@ -135,10 +128,10 @@ async function makeBaseEventList() {
     waitUntil: "load",
   });
 
-  await autoScroll(page);
-  await autoScroll(page);
-  await autoScroll(page);
-  await autoScroll(page);
+  await _t.autoScroll(page);
+  await _t.autoScroll(page);
+  await _t.autoScroll(page);
+  await _t.autoScroll(page);
 
   const rawEvents = await page.evaluate((workerIndex) => {
     return Array.from(document.querySelectorAll("[data-element='agenda'] li"))

@@ -5,12 +5,7 @@ import EventsList from "../mods/events-list.js";
 import fs from "fs";
 import crypto from "crypto";
 import fsDirections from "../mods/fs-directions.js";
-import {
-  handleError,
-  errorAfterSeconds,
-  basicMusicEventsFilter,
-  getPriceFromHTML,
-} from "../mods/tools.js";
+import * as _t from "../mods/tools.js";
 import { letScraperListenToMasterMessageAndInit } from "../mods/generic-scraper.js";
 import { QuickWorkerMessage } from "../mods/rock-worker.js";
 
@@ -21,7 +16,7 @@ async function scrape013() {
   parentPort.postMessage(qwm.workerInitialized());
   const browser = await puppeteer.launch();
 
-  Promise.race([makeBaseEventList(browser), errorAfterSeconds(15000)])
+  Promise.race([makeBaseEventList(browser), _t.errorAfterSeconds(15000)])
     .then((baseMusicEvents) => {
       parentPort.postMessage(qwm.workerStarted());
       const baseMusicEventsCopy = [...baseMusicEvents];
@@ -32,7 +27,7 @@ async function scrape013() {
       EventsList.save(workerData.family, workerData.index);
       browser && browser.hasOwnProperty("close") && browser.close();
     })
-    .catch((error) => handleError(error, workerData, "outer catch scrape 013"));
+    .catch((error) => _t.handleError(error, workerData, "outer catch scrape 013"));
 }
 
 async function processSingleMusicEvent(browser, baseMusicEvents, qwm) {
@@ -61,11 +56,11 @@ async function processSingleMusicEvent(browser, baseMusicEvents, qwm) {
   try {
     const pageInfo = await Promise.race([
       getPageInfo(page),
-      errorAfterSeconds(15000),
+      _t.errorAfterSeconds(15000),
     ]);
 
     if (pageInfo && (pageInfo.priceTextcontent || pageInfo.priceContextText)) {
-      pageInfo.price = getPriceFromHTML(
+      pageInfo.price = _t.getPriceFromHTML(
         pageInfo.priceTextcontent,
         pageInfo.priceContextText
       );
@@ -87,7 +82,7 @@ async function processSingleMusicEvent(browser, baseMusicEvents, qwm) {
     firstMusicEvent.registerIfValid();
     if (!page.isClosed() && page.close());
   } catch (error) {
-    handleError(pageInfoError, workerData, "get page info fail");
+    _t.handleError(pageInfoError, workerData, "get page info fail");
   }
 
   return newMusicEvents.length
@@ -143,7 +138,7 @@ async function getPageInfo(page, months) {
     );
     return pageInfo;
   } catch (error) {
-    handleError(error, workerdata, "page evaluate fail");
+    _t.handleError(error, workerdata, "page evaluate fail");
     return pageInfo;
   }
 }
@@ -186,6 +181,6 @@ async function makeBaseEventList(browser) {
       });
   }, workerData.index);
   return rawEvents
-    .filter(basicMusicEventsFilter)
+    .filter(_t.basicMusicEventsFilter)
     .map((event) => new MusicEvent(event));
 }

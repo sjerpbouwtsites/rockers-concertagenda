@@ -6,10 +6,7 @@ import fs from "fs";
 import crypto from "crypto";
 import fsDirections from "../mods/fs-directions.js";
 import axios from "axios";
-import {
-  handleError,
-  errorAfterSeconds
-} from "../mods/tools.js";
+import * as _t from "../mods/tools.js";
 import { letScraperListenToMasterMessageAndInit } from "../mods/generic-scraper.js";
 import { QuickWorkerMessage } from "../mods/rock-worker.js";
 const qwm = new QuickWorkerMessage(workerData);
@@ -18,7 +15,7 @@ letScraperListenToMasterMessageAndInit(scrapeInit);
 
 async function scrapeInit() {
   parentPort.postMessage(qwm.workerInitialized());
-  Promise.race([makeBaseEventList(), errorAfterSeconds(30000)])
+  Promise.race([makeBaseEventList(), _t.errorAfterSeconds(30000)])
     .then((baseMusicEvents) => {
       parentPort.postMessage(qwm.workerStarted());
       const baseMusicEventsCopy = [...baseMusicEvents];
@@ -30,7 +27,7 @@ async function scrapeInit() {
       return true;
     })
     .catch((error) =>
-      handleError(error, workerData, `outer catch scrape ${workerData.family}`)
+      _t.handleError(error, workerData, `outer catch scrape ${workerData.family}`)
     )
     .finally(() => {
       // NO BROWSER USED
@@ -71,7 +68,7 @@ async function recursiveSingleGet(baseMusicEvents) {
       return response.data;
     })
     .catch((error) => {
-      handleError(error, workerData, `recursive single get fail`)
+      _t.handleError(error, workerData, `recursive single get fail`)
     });
 
   let uuid = crypto.randomUUID();
