@@ -139,8 +139,7 @@ export default class MonitorField {
           rollRow.messageData?.workerName ?? ""
         }`;
         let hoofdPrintTekst = ` 
-          ${rollRow.messageData.content.remarks}
-          ${rollRow.messageData.content.text}
+          <pre class='monitorfield__errortext'>${rollRow.messageData.content.text}</pre>
         `;
 
         let currentErrorsForThisWorkerCount = 0;
@@ -154,7 +153,11 @@ export default class MonitorField {
         }
 
         return `<li class='monitorfield__list-item' id='error-ref-${rollRow.messageData?.workerName}-${currentErrorsForThisWorkerCount}'>
-        <span class='monitorfield__list-item-left'>${titleText}</span>
+        <header class='monitorfield__error-header'>
+          <span class='monitorfield__error-workername'>${titleText}</span>
+          <span class='monitorfield__error-remarks'>${rollRow.messageData.content.remarks}</span>
+        </header>
+        
         <div class='monitorfield__list-item-right'>${hoofdPrintTekst}</div>
       </li>`;
       })

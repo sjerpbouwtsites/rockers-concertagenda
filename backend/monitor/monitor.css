@@ -11,8 +11,12 @@ body {
   flex-wrap: wrap;
 }
 .monitorfield__outer {
-  flex-basis: 300px;
+  flex-basis: 450px;
+    max-width: calc(100% - 450px);
   flex-shrink: 0;
+}
+.monitorfield__outer--errors {
+  flex-basis: 600px;
 }
 .monitorfield {
   background-color: #eee;
@@ -38,7 +42,7 @@ body {
 }
 .monitorfield__list {
   list-style-type: none;
-  font-size: .75rem;
+  font-size: .9rem;
   font-weight: 600;
   letter-spacing: .05em;
   margin: 0;
@@ -50,6 +54,10 @@ body {
   border-bottom: 1px solid #ffffff52;
   line-height: 1;
 }
+.monitorfield__list--error .monitorfield__list-item{
+  padding-bottom: .75em;
+  margin-bottom: .75ems;  
+}
 .monitorfield__list-item:first-child {
   font-weight: 800;
 }
@@ -59,6 +67,34 @@ body {
 .monitorfield__list-item-left {
   display: block;
 }
+.monitorfield__error-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: .75rem;
+  max-width: 450px;
+}
+
+.monitorfield__error-header>span {}
+
+.monitorfield__error-workername {
+  line-height: 0.9em;
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.monitorfield__error-remarks {
+  font-weight: 600;
+  font-size: 1.2rem;
+  font-variant: small-caps;
+  max-width: 150px;
+  text-align: right;
+  line-height: .7em;
+  color: #f7e0e0;
+}
+
+.monitorfield__subtitle {}
 .monitorfield--Updates {
   background-color: #8ce88c;
 }
