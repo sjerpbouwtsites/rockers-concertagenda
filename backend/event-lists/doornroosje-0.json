@@ -1,27 +1,15 @@
 [
   {
-    "doorOpenDateTime": "2022-11-22T19:00:00.000Z",
-    "startDateTime": "2022-11-22T19:30:00.000Z",
+    "doorOpenDateTime": "2023-01-21T18:00:00.000Z",
+    "startDateTime": "2023-01-21T18:30:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/the-mary-wallopers/",
-    "title": "The Mary Wallopers",
+    "venueEventUrl": "https://www.doornroosje.nl/event/revocation-3/",
+    "title": "Revocation + Goatwhore e.a.",
     "location": "doornroosje",
-    "price": 14,
-    "shortText": null,
-    "longText": "../public/texts/dca09a24-a539-4ac4-a961-2885d4a44b9d.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2022/06/The-Mary-Wallopers-1920x1080-1-1934x1088-350x197-c-default.jpg"
-  },
-  {
-    "doorOpenDateTime": "2023-01-17T18:30:00.000Z",
-    "startDateTime": "2023-01-17T19:15:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/animals-as-leaders/",
-    "title": "Animals As Leaders",
-    "location": "doornroosje",
-    "price": 25.5,
+    "price": 24,
     "shortText": "Fortarock",
-    "longText": "../public/texts/446c934b-0873-43a1-8139-c6411540d8ca.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2022/09/Animals-As-Leaders-web-1934x1088-350x197-c-default.jpg"
+    "longText": "../public/texts/98e317c4-8c03-41b8-8041-7e74ac869411.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2022/07/Revocation-a-1934x1088-350x197-c-default.jpg"
   },
   {
     "doorOpenDateTime": "2023-03-01T06:20:00.000Z",
@@ -32,7 +20,19 @@
     "location": "doornroosje",
     "price": 13,
     "shortText": "Soulcrusher",
-    "longText": "../public/texts/d2c33d4a-eca2-48bd-83a9-faebd43b91aa.html",
+    "longText": "../public/texts/10361a54-fbf6-4121-a1de-5d42655d2015.html",
     "image": "https://www.doornroosje.nl/app/uploads/2022/09/GEL-350x197-c-default.jpeg"
+  },
+  {
+    "doorOpenDateTime": "2023-05-19T18:00:00.000Z",
+    "startDateTime": "2023-05-19T18:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.doornroosje.nl/event/otoboke-beaver/",
+    "title": "Otoboke Beaver",
+    "location": "doornroosje",
+    "price": 16.5,
+    "shortText": null,
+    "longText": "../public/texts/93cd79c1-c0ab-47c8-830d-bd53558d2b91.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2021/12/Promo_OtobokeBeaver-credit_Takeaki_Emori-350x197-c-default.jpg"
   }
 ]

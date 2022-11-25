@@ -29,17 +29,26 @@ const fsDirections = {
   patronaatJson: path.resolve("./event-lists/patronaat.json"),
   public: path.resolve("../public"),
   publicTexts: path.relative("./", "../public/texts"),
+  scrapers: {},
+  scrapersDir: path.resolve("./scrapers"),
   temp: path.resolve("./temp"),
   timestampsJson: path.resolve("./event-lists/timestamps.json"),
   timestampsPublicJson: path.resolve("../public/timestamps.json"),
   voltJson: path.resolve("./event-lists/volt.json"),
 };
 
+// OLD
 fs.readdirSync(fsDirections.mods).forEach((mod) => {
   const modName = mod.replace(".js", "").replace(/-([a-z0-9])/g, function (g) {
     return g[1].toUpperCase();
   });
   fsDirections[modName] = path.resolve(`./mods/${mod}`);
+});
+
+// NEW
+fs.readdirSync(fsDirections.scrapersDir).forEach((scraper) => {
+  const scraperName = scraper.replace(".js", "");
+  fsDirections.scrapers[scraperName] = path.resolve(`./scrapers/${scraper}`);
 });
 
 export default fsDirections;

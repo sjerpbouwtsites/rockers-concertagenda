@@ -34,7 +34,8 @@ export function handleError(error, workerData, remarks = null) {
     parentPort.postMessage(clientsLogMsg);
   } else {
     console.log(`ODD ERROR HANDLING. neither on main thread nor in scraper.`);
-    console.log(error, workerData);
+    console.log(error, workerData, remarks);
+    console.log('')
   }
   const time = new Date();
   const curErrorLog = fs.readFileSync(fsDirections.errorLog) || "";

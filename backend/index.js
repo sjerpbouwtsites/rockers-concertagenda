@@ -4,15 +4,13 @@ import WorkerStatus from "./mods/WorkerStatus.js";
 import EventsList from "./mods/events-list.js";
 import fsDirections from "./mods/fs-directions.js";
 import {
-  handleError,
-  errorAfterSeconds,
   getShellArguments,
   waitFor,
 } from "./mods/tools.js";
 import passMessageToMonitor from "./monitor/pass-message-to-monitor.js";
 import { printLocationsToPublic } from "./mods/locations.js";
 import initMonitorBackend from "./monitor/backend.js";
-import wsMessage from "./monitor/wsMessage.js";
+
 import RockWorker from "./mods/rock-worker.js";
 import { WorkerMessage } from "./mods/rock-worker.js";
 
@@ -30,154 +28,156 @@ async function init() {
   let workerList = [];
 
   // @TODO maak hier mooie configuratie objecten van
-  // if (EventsList.isOld("metalfan", shellArguments?.force) || true) {
-  //   workerList.push([fsDirections.scrapeMetalfan, "metalfan", 0]);
-  // }
-  // if (EventsList.isOld("baroeg", shellArguments?.force) || true) {
-  //   workerList.push([fsDirections.scrapeBaroeg, "baroeg", 0]);
-  //   workerList.push([fsDirections.scrapeBaroeg, "baroeg", 1]);
-  //   workerList.push([fsDirections.scrapeBaroeg, "baroeg", 2]);
-  //   workerList.push([fsDirections.scrapeBaroeg, "baroeg", 3]);
-  //   workerList.push([fsDirections.scrapeBaroeg, "baroeg", 4]);
-  //   workerList.push([fsDirections.scrapeBaroeg, "baroeg", 5]);
-  //   workerList.push([fsDirections.scrapeBaroeg, "baroeg", 6]);
-  //   workerList.push([fsDirections.scrapeBaroeg, "baroeg", 7]);
-  //   workerList.push([fsDirections.scrapeBaroeg, "baroeg", 8]);
-  // }
-
-  // if (EventsList.isOld("patronaat", shellArguments?.force) || true) {
-  //   workerList.push([fsDirections.scrapePatronaat, "patronaat", 0]);
-  //   workerList.push([fsDirections.scrapePatronaat, "patronaat", 1]);
-  //   workerList.push([fsDirections.scrapePatronaat, "patronaat", 2]);
-  // }
-
-  // if (EventsList.isOld("013", shellArguments?.force) || true) {
-  //   workerList.push([fsDirections.scrape013, "013", 0]);
-  //   workerList.push([fsDirections.scrape013, "013", 1]);
-  //   workerList.push([fsDirections.scrape013, "013", 2]);
-  //   workerList.push([fsDirections.scrape013, "013", 3]);
-  // }
-
-  // if (EventsList.isOld("effenaar", shellArguments?.force) || true) {
-  //   workerList.push([fsDirections.scrapeEffenaar, "effenaar", 0]);
-  //   workerList.push([fsDirections.scrapeEffenaar, "effenaar", 1]);
-  //   workerList.push([fsDirections.scrapeEffenaar, "effenaar", 2]);
-  //   workerList.push([fsDirections.scrapeEffenaar, "effenaar", 3]);
-  // }
-
-  // if (EventsList.isOld("tivolivredenburg", shellArguments?.force) || true) {
-  //   workerList.push([
-  //     fsDirections.scrapeTivolivredenburg,
-  //     "tivolivredenburg",
-  //     0,
-  //   ]);
-  //   workerList.push([
-  //     fsDirections.scrapeTivolivredenburg,
-  //     "tivolivredenburg",
-  //     1,
-  //   ]);
-  //   workerList.push([
-  //     fsDirections.scrapeTivolivredenburg,
-  //     "tivolivredenburg",
-  //     2,
-  //   ]);
-  //   workerList.push([
-  //     fsDirections.scrapeTivolivredenburg,
-  //     "tivolivredenburg",
-  //     3,
-  //   ]);
-  // }
-
-  if (EventsList.isOld("doornroosje", shellArguments?.force) || true) {
-    workerList.push([fsDirections.scrapeDoornroosje, "doornroosje", 0]);
-    workerList.push([fsDirections.scrapeDoornroosje, "doornroosje", 1]);
-    workerList.push([fsDirections.scrapeDoornroosje, "doornroosje", 2]);
-    workerList.push([fsDirections.scrapeDoornroosje, "doornroosje", 3]);
-    workerList.push([fsDirections.scrapeDoornroosje, "doornroosje", 4]);
-    workerList.push([fsDirections.scrapeDoornroosje, "doornroosje", 5]);
+  if (EventsList.isOld("metalfan", shellArguments?.force)) {
+    console.log(`\n this is metalfan fsdir ${fsDirections.scrapers.metalfan}\n` )
+    workerList.push([fsDirections.scrapers.metalfan, "metalfan", 0]);
   }
 
-  // if (EventsList.isOld("metropool", shellArguments?.force)) {
-  //   workerList.push([fsDirections.scrapeMetropool, "metropool", 0]);
-  //   workerList.push([fsDirections.scrapeMetropool, "metropool", 1]);
-  //   workerList.push([fsDirections.scrapeMetropool, "metropool", 2]);
-  //   workerList.push([fsDirections.scrapeMetropool, "metropool", 3]);
-  // }
+  if (EventsList.isOld("baroeg", shellArguments?.force)) {
+    workerList.push([fsDirections.scrapers.baroeg, "baroeg", 0]);
+    workerList.push([fsDirections.scrapers.baroeg, "baroeg", 1]);
+    workerList.push([fsDirections.scrapers.baroeg, "baroeg", 2]);
+    workerList.push([fsDirections.scrapers.baroeg, "baroeg", 3]);
+    workerList.push([fsDirections.scrapers.baroeg, "baroeg", 4]);
+    workerList.push([fsDirections.scrapers.baroeg, "baroeg", 5]);
+    workerList.push([fsDirections.scrapers.baroeg, "baroeg", 6]);
+    workerList.push([fsDirections.scrapers.baroeg, "baroeg", 7]);
+    workerList.push([fsDirections.scrapers.baroeg, "baroeg", 8]);
+  }
 
-  // if (EventsList.isOld("boerderij", shellArguments?.force)) {
-  //   workerList.push([fsDirections.scrapeBoerderij, "boerderij", 0]);
-  // }
+  if (EventsList.isOld("patronaat", shellArguments?.force)) {
+    workerList.push([fsDirections.scrapers.patronaat, "patronaat", 0]);
+    workerList.push([fsDirections.scrapers.patronaat, "patronaat", 1]);
+    workerList.push([fsDirections.scrapers.patronaat, "patronaat", 2]);
+  }
 
-  // if (EventsList.isOld("occii", shellArguments?.force)) {
-  //   workerList.push([fsDirections.scrapeOccii, "occii", 0]);
-  //   workerList.push([fsDirections.scrapeOccii, "occii", 1]);
-  // }
-  // if (EventsList.isOld("dynamo", shellArguments?.force)) {
-  //   workerList.push([fsDirections.scrapeDynamo, "dynamo", 0]);
-  //   workerList.push([fsDirections.scrapeDynamo, "dynamo", 1]);
-  // }
+  if (EventsList.isOld("013", shellArguments?.force)) {
+    workerList.push([fsDirections.scrapers['013'], "013", 0]);
+    workerList.push([fsDirections.scrapers['013'], "013", 1]);
+    workerList.push([fsDirections.scrapers['013'], "013", 2]);
+    workerList.push([fsDirections.scrapers['013'], "013", 3]);
+  }
 
-  // if (EventsList.isOld("melkweg", shellArguments?.force)) {
-  //   workerList.push([fsDirections.scrapeMelkweg, "melkweg", 0, true]);
-  //   workerList.push([fsDirections.scrapeMelkweg, "melkweg", 1, true]);
-  //   workerList.push([fsDirections.scrapeMelkweg, "melkweg", 2, true]);
-  // }
+  if (EventsList.isOld("effenaar", shellArguments?.force)) {
+    workerList.push([fsDirections.scrapers.effenaar, "effenaar", 0]);
+    workerList.push([fsDirections.scrapers.effenaar, "effenaar", 1]);
+    workerList.push([fsDirections.scrapers.effenaar, "effenaar", 2]);
+    workerList.push([fsDirections.scrapers.effenaar, "effenaar", 3]);
+  }
 
-  // if (EventsList.isOld("bibelot", shellArguments?.force)) {
-  //   workerList.push([fsDirections.scrapeBibelot, "bibelot", 0]);
-  // }
+  if (EventsList.isOld("tivolivredenburg", shellArguments?.force)) {
+    workerList.push([
+      fsDirections.scrapers.tivolivredenburg,
+      "tivolivredenburg",
+      0,
+    ]);
+    workerList.push([
+      fsDirections.scrapers.tivolivredenburg,
+      "tivolivredenburg",
+      1,
+    ]);
+    workerList.push([
+      fsDirections.scrapers.tivolivredenburg,
+      "tivolivredenburg",
+      2,
+    ]);
+    workerList.push([
+      fsDirections.scrapers.tivolivredenburg,
+      "tivolivredenburg",
+      3,
+    ]);
+  }
 
-  // if (EventsList.isOld("dbs", shellArguments?.force)) {
-  //   workerList.push([fsDirections.scrapeDbs, "dbs", 0]);
-  //   workerList.push([fsDirections.scrapeDbs, "dbs", 1]);
-  //   workerList.push([fsDirections.scrapeDbs, "dbs", 2]);
-  // }
+  if (EventsList.isOld("doornroosje", shellArguments?.force)) {
+    workerList.push([fsDirections.scrapers.doornroosje, "doornroosje", 0]);
+    workerList.push([fsDirections.scrapers.doornroosje, "doornroosje", 1]);
+    workerList.push([fsDirections.scrapers.doornroosje, "doornroosje", 2]);
+    workerList.push([fsDirections.scrapers.doornroosje, "doornroosje", 3]);
+    workerList.push([fsDirections.scrapers.doornroosje, "doornroosje", 4]);
+    workerList.push([fsDirections.scrapers.doornroosje, "doornroosje", 5]);
+  }
 
-  // if (EventsList.isOld("gebrdenobel", shellArguments?.force)) {
-  //   workerList.push([fsDirections.scrapeGebrdenobel, "gebrdenobel", 0]);
-  // }
+  if (EventsList.isOld("metropool", shellArguments?.force)) {
+    workerList.push([fsDirections.scrapers.metropool, "metropool", 0]);
+    workerList.push([fsDirections.scrapers.metropool, "metropool", 1]);
+    workerList.push([fsDirections.scrapers.metropool, "metropool", 2]);
+    workerList.push([fsDirections.scrapers.metropool, "metropool", 3]);
+  }
 
-  // if (EventsList.isOld("neushoorn", shellArguments?.force)) {
-  //   workerList.push([fsDirections.scrapeNeushoorn, "neushoorn", 0]);
-  // }
+  if (EventsList.isOld("boerderij", shellArguments?.force)) {
+    workerList.push([fsDirections.scrapers.boerderij, "boerderij", 0]);
+  }
 
-  // if (EventsList.isOld("afaslive", shellArguments?.force)) {
-  //   workerList.push([fsDirections.scrapeAfaslive, "afaslive", 0]);
-  //   workerList.push([fsDirections.scrapeAfaslive, "afaslive", 1]);
-  //   workerList.push([fsDirections.scrapeAfaslive, "afaslive", 2]);
-  //   workerList.push([fsDirections.scrapeAfaslive, "afaslive", 3]);
-  // }
+  if (EventsList.isOld("occii", shellArguments?.force)) {
+    workerList.push([fsDirections.scrapers.occii, "occii", 0]);
+    workerList.push([fsDirections.scrapers.occii, "occii", 1]);
+  }
+  if (EventsList.isOld("dynamo", shellArguments?.force)) {
+    workerList.push([fsDirections.scrapers.dynamo, "dynamo", 0]);
+    workerList.push([fsDirections.scrapers.dynamo, "dynamo", 1]);
+  }
 
-  // if (EventsList.isOld("iduna", shellArguments?.force)) {
-  //   workerList.push([fsDirections.scrapeIduna, "iduna", 0]);
-  // }
+  if (EventsList.isOld("melkweg", shellArguments?.force)) {
+    workerList.push([fsDirections.scrapers.melkweg, "melkweg", 0, true]);
+    workerList.push([fsDirections.scrapers.melkweg, "melkweg", 1, true]);
+    workerList.push([fsDirections.scrapers.melkweg, "melkweg", 2, true]);
+  }
 
-  // if (EventsList.isOld("kavka", shellArguments?.force)) {
-  //   workerList.push([fsDirections.scrapeKavka, "kavka", 0]);
-  // }
+  if (EventsList.isOld("bibelot", shellArguments?.force)) {
+    workerList.push([fsDirections.scrapers.bibelot, "bibelot", 0]);
+  }
 
-  // if (EventsList.isOld("depul", shellArguments?.force)) {
-  //   workerList.push([fsDirections.scrapeDepul, "depul", 0]);
-  //   workerList.push([fsDirections.scrapeDepul, "depul", 1]);
-  //   workerList.push([fsDirections.scrapeDepul, "depul", 2]);
-  // }
+  if (EventsList.isOld("dbs", shellArguments?.force)) {
+    workerList.push([fsDirections.scrapers.dbs, "dbs", 0]);
+    workerList.push([fsDirections.scrapers.dbs, "dbs", 1]);
+    workerList.push([fsDirections.scrapers.dbs, "dbs", 2]);
+  }
 
-  // if (EventsList.isOld("paradiso", shellArguments?.force)) {
-  //   workerList.push([fsDirections.scrapeParadiso, "paradiso", 0]);
-  //   workerList.push([fsDirections.scrapeParadiso, "paradiso", 1]);
-  //   workerList.push([fsDirections.scrapeParadiso, "paradiso", 2]);
-  //   workerList.push([fsDirections.scrapeParadiso, "paradiso", 3]);
-  // }
+  if (EventsList.isOld("gebrdenobel", shellArguments?.force)) {
+    workerList.push([fsDirections.scrapers.gebrdenobel, "gebrdenobel", 0]);
+  }
 
-  // if (EventsList.isOld("volt", shellArguments?.force)) {
-  //   workerList.push([fsDirections.scrapeVolt, "volt", 0]);
-  //   workerList.push([fsDirections.scrapeVolt, "volt", 1]);
-  //   workerList.push([fsDirections.scrapeVolt, "volt", 2]);
-  // }
+  if (EventsList.isOld("neushoorn", shellArguments?.force)) {
+    workerList.push([fsDirections.scrapers.neushoorn, "neushoorn", 0]);
+  }
 
-  // if (EventsList.isOld("duycker", shellArguments?.force)) {
-  //   workerList.push([fsDirections.scrapeDuycker, "duycker", 0]);
-  // }
+  if (EventsList.isOld("afaslive", shellArguments?.force)) {
+    workerList.push([fsDirections.scrapers.afaslive, "afaslive", 0]);
+    workerList.push([fsDirections.scrapers.afaslive, "afaslive", 1]);
+    workerList.push([fsDirections.scrapers.afaslive, "afaslive", 2]);
+    workerList.push([fsDirections.scrapers.afaslive, "afaslive", 3]);
+  }
+
+  if (EventsList.isOld("iduna", shellArguments?.force)) {
+    workerList.push([fsDirections.scrapers.iduna, "iduna", 0]);
+  }
+
+  if (EventsList.isOld("kavka", shellArguments?.force)) {
+    workerList.push([fsDirections.scrapers.kavka, "kavka", 0]);
+  }
+
+  if (EventsList.isOld("depul", shellArguments?.force)) {
+     workerList.push([fsDirections.scrapers.depul, "depul", 0]);
+    workerList.push([fsDirections.scrapers.depul, "depul", 1]);
+    workerList.push([fsDirections.scrapers.depul, "depul", 2]);
+  }
+
+  if (EventsList.isOld("paradiso", shellArguments?.force)) {
+    workerList.push([fsDirections.scrapers.paradiso, "paradiso", 0]);
+    workerList.push([fsDirections.scrapers.paradiso, "paradiso", 1]);
+    workerList.push([fsDirections.scrapers.paradiso, "paradiso", 2]);
+    workerList.push([fsDirections.scrapers.paradiso, "paradiso", 3]);
+  }
+
+  if (EventsList.isOld("volt", shellArguments?.force)) {
+    workerList.push([fsDirections.scrapers.volt, "volt", 0]);
+    workerList.push([fsDirections.scrapers.volt, "volt", 1]);
+    workerList.push([fsDirections.scrapers.volt, "volt", 2]);
+  }
+
+  if (EventsList.isOld("duycker", shellArguments?.force) || true) {
+    workerList.push([fsDirections.scrapers.duycker, "duycker", 0]);
+  }
 
   workerList = shuffleArray(workerList);
   WorkerStatus.totalWorkers = workerList.length;

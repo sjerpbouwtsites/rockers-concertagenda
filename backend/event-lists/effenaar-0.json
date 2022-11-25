@@ -1,17 +1,5 @@
 [
   {
-    "doorOpenDateTime": "2022-11-16T18:30:00.000Z",
-    "startDateTime": "2022-11-16T19:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.effenaar.nl/agenda/club-void-4",
-    "title": "Club Void",
-    "location": "effenaar",
-    "price": 15,
-    "shortText": "Samavayo + The Machine",
-    "longText": "../public/texts/d0a4ac47-7a97-4b81-8421-49ccfaf69b5e.html",
-    "image": "https://d3gy47dclw6o24.cloudfront.net/2022-09/ClubVoid_16nov_FBeventheader.jpg"
-  },
-  {
     "doorOpenDateTime": "2022-11-30T18:30:00.000Z",
     "startDateTime": "2022-11-30T19:00:00.000Z",
     "endDateTime": null,
@@ -20,7 +8,7 @@
     "location": "effenaar",
     "price": 12.5,
     "shortText": "Your Highness + Tangled Horns + Bear",
-    "longText": "../public/texts/4aedc58b-f819-46b7-a414-cd0db8a4cad6.html",
+    "longText": "../public/texts/a91b76ac-91d1-431b-8449-7b4ed6fd5ccc.html",
     "image": "https://d3gy47dclw6o24.cloudfront.net/2022-09/ClubVoid_30nov_FBeventheader_0.jpg"
   },
   {
@@ -32,8 +20,8 @@
     "location": "effenaar",
     "price": 93,
     "shortText": "O.a. Suffocation, Unleashed, Benediction, Legion of the Damned en Ancient",
-    "longText": "../public/texts/9f408ad3-2586-45ea-9d5b-9579f5c19b18.html",
-    "image": "https://d3gy47dclw6o24.cloudfront.net/2022-09/Eindhoven%20Metal%20Meeting%20Weekend%20-%20Effenaar%201920x1080_0.jpg"
+    "longText": "../public/texts/ecfd656e-ef52-4bc3-a45d-59da0f2fcc4b.html",
+    "image": "https://d3gy47dclw6o24.cloudfront.net/2022-11/EMM2022_header_event_1920x1080pix_Nov.jpg"
   },
   {
     "doorOpenDateTime": "2023-01-19T17:00:00.000Z",
@@ -44,7 +32,7 @@
     "location": "effenaar",
     "price": "28",
     "shortText": "+ Fit For A King + Gideon + Seeyouspacecowboy ",
-    "longText": "../public/texts/baf34357-72e5-4357-a417-ca2ddd906ad1.html",
+    "longText": "../public/texts/a9ad199a-dcdd-4408-abba-b74eda116de8.html",
     "image": "https://d3gy47dclw6o24.cloudfront.net/2022-09/amity%20affliction%20header.jpg"
   },
   {
@@ -56,7 +44,31 @@
     "location": "effenaar",
     "price": 33.5,
     "shortText": "40th Anniversary Tour",
-    "longText": "../public/texts/0d4083ce-bf1f-482d-bf02-fcef5b33cc10.html",
+    "longText": "../public/texts/c55960f7-3c5b-4378-9380-160d8d102e8a.html",
     "image": "https://d3gy47dclw6o24.cloudfront.net/2022-09/W.A.S.P.%20-%20Metal%20-%20Effenaar%20-%201920x1080.jpg"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-05-11T10:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.effenaar.nl/agenda/bridge-do-11-mei",
+    "title": "BRIDGE - do 11 mei",
+    "location": "effenaar",
+    "price": null,
+    "shortText": "Eindhoven Guitar Festival",
+    "longText": "../public/texts/f494134f-2e35-45ac-acb6-1eec124f4085.html",
+    "image": "https://d3gy47dclw6o24.cloudfront.net/2022-11/Bridge-Mailchimp_Header2ENG.jpg"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-05-14T10:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.effenaar.nl/agenda/bridge-zo-14-mei",
+    "title": "BRIDGE - zo 14 mei",
+    "location": "effenaar",
+    "price": null,
+    "shortText": "Eindhoven Guitar Festival",
+    "longText": "../public/texts/817efb7b-3a2f-4462-9fd3-c02b5af6c1e0.html",
+    "image": "https://d3gy47dclw6o24.cloudfront.net/2022-11/Bridge-Mailchimp_Header2ENG.jpg"
   }
 ]

@@ -1,5 +1,17 @@
 [
   {
+    "doorOpenDateTime": "2022-12-22T20:00:00.000Z",
+    "startDateTime": "2022-12-22T21:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.doornroosje.nl/event/cloudsurfers/",
+    "title": "Cloudsurfers",
+    "location": "doornroosje",
+    "price": 12,
+    "shortText": null,
+    "longText": "../public/texts/7f10e23c-1f10-4c9e-b501-e7d5d62a1782.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2022/08/Cloudsurfers-web-1934x1088-350x197-c-default.jpg"
+  },
+  {
     "doorOpenDateTime": "2023-03-01T01:19:00.000Z",
     "startDateTime": "2023-03-01T01:19:30.000Z",
     "endDateTime": null,
@@ -8,7 +20,7 @@
     "location": "doornroosje",
     "price": 24,
     "shortText": null,
-    "longText": "../public/texts/a886a055-23e9-4903-98ca-cd05e7791606.html",
+    "longText": "../public/texts/a9ac9ea1-73a5-47a9-a6a8-d302cd7a17fb.html",
     "image": "https://www.doornroosje.nl/app/uploads/2022/10/Brutus-1934x1088-350x197-c-default.jpg"
   },
   {
@@ -20,7 +32,7 @@
     "location": "doornroosje",
     "price": 24,
     "shortText": "Fortarock",
-    "longText": "../public/texts/6d7e921f-1659-451d-945b-dc959db0b207.html",
+    "longText": "../public/texts/ec69a340-8c3e-43b0-8683-05be69912fd5.html",
     "image": "https://www.doornroosje.nl/app/uploads/2022/06/Swallow-The-Sun-1-1920x1088-350x197-c-default.jpg"
   }
 ]

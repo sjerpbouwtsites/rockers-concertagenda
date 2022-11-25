@@ -48,15 +48,16 @@ export const bibelotMonths = baroegMonths;
 export const dbsMonths = baroegMonths;
 export const depulMonths = dynamoMonths;
 export const doornRoosjeMonths = baroegMonths;
+export const duyckerMonths = dynamoMonths;
+export const effenaarMonths = dynamoMonths;
 export const gebrdenobelMonths = baroegMonths;
 export const idunaMonths = baroegMonths;
 export const kavkaMonths = dynamoMonths;
 export const metalfanMonths = dynamoMonths;
+export const metropoolMonths = dynamoMonths;
 export const neushoornMonths = baroegMonths;
 export const paradisoMonths = baroegMonths;
 export const voltMonths = dynamoMonths;
-export const duyckerMonths = dynamoMonths;
-export const effenaarMonths = dynamoMonths;
 
 const months = {
   // @TODO welke export is het nou serieus.
@@ -66,13 +67,14 @@ const months = {
   dbs: dbsMonths,
   depul: depulMonths,
   doornroosje: baroegMonths,
-  effenaar: effenaarMonths,
-  dynamy: dynamoMonths,
   duycker: duyckerMonths,
+  dynamy: dynamoMonths,
+  effenaar: effenaarMonths,
   gebrdenobel: gebrdenobelMonths,
   iduna: idunaMonths,
   kavka: kavkaMonths,
   metalfan: metalfanMonths,
+  metropool: metalfanMonths,
   neushoorn: neushoornMonths,
   occii: occiiMonths,
   paradiso: paradisoMonths,

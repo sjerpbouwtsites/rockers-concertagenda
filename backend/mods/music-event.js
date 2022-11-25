@@ -1,5 +1,5 @@
 import EventsList from "./events-list.js";
-import { log } from "./tools.js";
+import { handleError } from "./tools.js";
 
 export default class MusicEvent {
   doorOpenDateTime = null;
@@ -32,6 +32,20 @@ export default class MusicEvent {
     );
   }
   registerIfValid() {
-    if (this.isValid) this.register();
+    if (this.isValid) {
+      this.register();
+    } else {
+      const err = new Error('invalid music event!')
+      handleError(err, {
+        name: 'inmusicevent',
+        index: '1',
+        family: 'oei'
+      }, `
+      
+      title ${this.title}
+      startDateTime ${this.startDateTime} 
+      
+      `)
+    }
   }
 }
