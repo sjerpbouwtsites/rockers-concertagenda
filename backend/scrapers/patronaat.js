@@ -51,6 +51,7 @@ patronaatScraper.makeBaseEventList = async function () {
   }, workerData.index);
 
   clearTimeout(stopFunctie);
+  !page.isClosed() && page.close();
 
   return rawEvents
     .filter(_t.basicMusicEventsFilter)

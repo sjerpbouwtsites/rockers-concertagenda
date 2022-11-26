@@ -1,117 +1,85 @@
 import MusicEvent from "../mods/music-event.js";
-import puppeteer from "puppeteer";
 import { parentPort, workerData } from "worker_threads";
-import EventsList from "../mods/events-list.js";
-import fs from "fs";
-import crypto from "crypto";
-import fsDirections from "../mods/fs-directions.js";
 import { effenaarMonths } from "../mods/months.js";
 import * as _t from "../mods/tools.js";
-import { letScraperListenToMasterMessageAndInit } from "../mods/generic-scraper.js";
-import { QuickWorkerMessage } from "../mods/rock-worker.js";
+import AbstractScraper from "./abstract-scraper.js";
 
-letScraperListenToMasterMessageAndInit(scrapeEffenaar);
-async function scrapeEffenaar() {
-  const qwm = new QuickWorkerMessage(workerData);
-  parentPort.postMessage(qwm.workerInitialized());
-  const browser = await puppeteer.launch();
-  Promise.race([
-    makeBaseEventList(browser, qwm, effenaarMonths),
-    _t.errorAfterSeconds(15000),
-  ])
-    .then((baseMusicEvents) => {
-      parentPort.postMessage(qwm.workerStarted());
-      const baseMusicEventsCopy = [...baseMusicEvents];
-      return processSingleMusicEvent(browser, baseMusicEventsCopy, qwm);
-    })
-    .then(() => {
-      parentPort.postMessage(qwm.workerDone(EventsList.amountOfEvents));
-      EventsList.save(workerData.family, workerData.index);
-    })
-    .catch((error) =>
-      _t.handleError(error, workerData, `outer catch scrape ${workerData.family}`)
-    )
-    .finally(() => {
-      browser && browser.hasOwnProperty("close") && browser.close();
-    });
-}
+// SCRAPER CONFIG
 
-async function processSingleMusicEvent(browser, baseMusicEvents, qwm) {
-  qwm.todo(baseMusicEvents.length).forEach((JSONblob) => {
-    parentPort.postMessage(JSONblob);
+const scraperConfig = {
+  baseEventTimeout: 30000,
+  singlePageTimeout: 15000,
+  workerData: Object.assign({}, workerData),
+};
+const effenaarScraper = new AbstractScraper(scraperConfig);
+
+effenaarScraper.listenToMasterThread();
+
+// MAKE BASE EVENTS
+
+effenaarScraper.makeBaseEventList = async function () {
+  const stopFunctie = setTimeout(() => {
+    throw new Error(
+      `makeBaseEventList is de max tijd voor zn functie ${this.maxExecutionTimethis} voorbij `
+    );
+  }, this.maxExecutionTime);
+
+  const page = await this.browser.newPage();
+  await page.goto("https://www.effenaar.nl/agenda?genres.title=heavy", {
+    waitUntil: "load",
   });
 
-  const newMusicEvents = [...baseMusicEvents];
-  const firstMusicEvent = newMusicEvents.shift();
+  const rawEvents = await page.evaluate(
+    ({ workerIndex }) => {
+      return Array.from(
+        document.querySelectorAll(".search-and-filter .agenda-card")
+      )
+        .filter((eventEl, index) => {
+          return index % 4 === workerIndex;
+        })
+        .map((eventEl, index) => {
+          const res = {};
+          res.title = eventEl.querySelector(".card-title")?.textContent.trim();
+          res.shortText = eventEl.querySelector(".card-subtitle")?.textContent;
+          res.venueEventUrl = eventEl?.href;
+          res.location = "effenaar";
+          return res;
+        });
+    },
+    { workerIndex: workerData.index }
+  );
 
-  if (!firstMusicEvent || baseMusicEvents.length === 0) {
-    return browser;
-  }
-  const page = await browser.newPage();
+  clearTimeout(stopFunctie);
+  !page.isClosed() && page.close();
 
-  if (
-    !(await page
-      .goto(firstMusicEvent.venueEventUrl, {
-        timeout: 20000,
-      })
-      .then(() => true)
-      .catch((err) => {
-        _t.handleError(
-          err,
-          workerData,
-          `Effenaar goto single page mislukt:<br><a href='${firstMusicEvent.venueEventUrl}'>${firstMusicEvent.title}</a><br>`
-        );
-      }))
-  ) {
-    return newMusicEvents.length
-      ? processSingleMusicEvent(browser, newMusicEvents, qwm)
-      : browser;
-  }
+  this.dirtyLog(rawEvents);
 
-  try {
-    const pageInfo = await Promise.race([
-      getPageInfo(page, effenaarMonths, qwm),
-      _t.errorAfterSeconds(15000),
-    ]);
+  return rawEvents
+    .filter(_t.basicMusicEventsFilter)
+    .map((event) => new MusicEvent(event));
+};
 
-    if (pageInfo && pageInfo.priceTextcontent) {
-      pageInfo.price = _t.getPriceFromHTML(pageInfo.priceTextcontent);
-    }
+// GET PAGE INFO
 
-    if (pageInfo && pageInfo.longTextHTML) {
-      let uuid = crypto.randomUUID();
-      const longTextPath = `${fsDirections.publicTexts}/${uuid}.html`;
-
-      fs.writeFile(longTextPath, pageInfo.longTextHTML, "utf-8", () => {});
-      pageInfo.longText = longTextPath;
-    }
-
-    // no date no registration.
-    if (pageInfo) {
-      firstMusicEvent.merge(pageInfo);
-    }
-    firstMusicEvent.registerIfValid();
-    if (!page.isClosed() && page.close());
-  } catch (pageInfoError) {
-    _t.handleError(pageInfoError, workerData, "get page info fail");
-  }
-
-  return newMusicEvents.length
-    ? processSingleMusicEvent(browser, newMusicEvents, qwm)
-    : browser;
-}
-
-async function getPageInfo(page, effenaarMonths, qwm) {
-  let pageInfo = {};
-  pageInfo.cancelReason = "";
+effenaarScraper.getPageInfo = async function ({ page, url }) {
+  const stopFunctie = setTimeout(() => {
+    throw new Error(
+      `makeBaseEventList is de max tijd voor zn functie ${this.maxExecutionTimethis} voorbij `
+    );
+  }, this.maxExecutionTime);
 
   await page.waitForSelector(".event-bar-inner-row");
 
-  pageInfo = await page.evaluate((effenaarMonths) => {
-    const image = document.querySelector(".header-image img")?.src ?? null;
-    const priceTextcontent =
+  const pageInfo = await page.evaluate((effenaarMonths) => {
+    const res = {
+      unavailable: "",
+      pageInfoID: `<a href='${document.location.href}'>${document.title}</a>`,
+      errorsVoorErrorHandler: [],
+    };
+    res.image = document.querySelector(".header-image img")?.src ?? null;
+    res.priceTextcontent =
       document.querySelector(".tickets-btn")?.textContent ?? null;
-    let startDate, doorTime, startTime, doorOpenDateTime, startDateTime;
+    let startDate, doorTime, startTime;
 
     try {
       const dateText =
@@ -124,106 +92,91 @@ async function getPageInfo(page, effenaarMonths, qwm) {
       );
       const fixedDay = dayNumber.padStart(2, "0");
       const monthNumber = effenaarMonths[monthName];
-      startDate = `${year}-${monthNumber}-${fixedDay}`;
+      res.startDate = `${year}-${monthNumber}-${fixedDay}`;
     } catch (error) {
-      return {
-        error: error.message,
-      };
+      res.errorsVoorErrorHandler.push({
+        error,
+        remarks: "bepalen datum get page info",
+      });
+      res.unavailable = "Geen datum";
     }
 
+    let startTimeAr = [],
+      doorTimeAr = [];
     try {
-      const startTimeAr = document
+      startTimeAr = document
         .querySelector(".time-start-end")
         ?.textContent.match(/\d\d:\d\d/);
       if (Array.isArray(startTimeAr) && startTimeAr.length) {
         startTime = startTimeAr[0];
       }
-      const doorTimeAr = document
+      doorTimeAr = document
         .querySelector(".time-open")
         ?.textContent.match(/\d\d:\d\d/);
       if (Array.isArray(doorTimeAr) && doorTimeAr.length) {
         doorTime = doorTimeAr[0];
       }
     } catch (error) {
-      return {
-        error: `${error.message}\n${startTime}\n${doorTime}`,
-      };
+      res.errorsVoorErrorHandler.push({
+        error,
+        remarks: `starttijd & deurtijd ${startTimeAr.join(
+          ""
+        )} ${doorTimeAr.join("")} get page info`,
+      });
+      res.unavailable = "Geen tijd";
     }
+
+    res.startTime = startTime;
+    res.doorTime = doorTime;
+    res.startDateTimeString = `${res.startDate}T${startTime}:00`;
+    res.openDoorDateTimeString = `${res.startDate}T${doorTime}:00`;
 
     try {
       if (doorTime) {
-        doorOpenDateTime = new Date(
-          `${startDate}T${doorTime}:00`
+        res.doorOpenDateTime = new Date(
+          `${res.openDoorDateTimeString}`
         ).toISOString();
       }
 
       if (startTime) {
-        startDateTime = new Date(`${startDate}T${startTime}:00`).toISOString();
+        res.startDateTime = new Date(
+          `${res.startDateTimeString}`
+        ).toISOString();
       }
     } catch (error) {
-      return {
-        error: error.message,
-      };
+      res.errorsVoorErrorHandler.push({
+        error,
+        remarks: `omzetten naar Date iso gaat fout ${startTimeAr.join(
+          ""
+        )} ${doorTimeAr.join("")} get page info`,
+      });
+      res.unavailable = "Geen tijd";
     }
 
-    const longTextHTML =
+    res.longTextHTML =
       document.querySelector(".header ~ .blocks")?.innerHTML ?? null;
-
-    return {
-      priceTextcontent,
-      doorOpenDateTime,
-      startDateTime,
-      image,
-      longTextHTML,
-      doorTime,
-      startTime,
-    };
+    if (!!res.unavailable) {
+      res.unavailable = `${res.unavailable}\n${res.pageInfoID}`;
+    }
+    return res;
   }, effenaarMonths);
-  if (pageInfo.error) {
-    _t.handleError(pageInfo.error, workerData, `Effenaar pageinfo `);
+
+  this.dirtyLog(pageInfo);
+
+  pageInfo?.errorsVoorErrorHandler?.forEach((errorHandlerMeuk) => {
+    _t.handleError(
+      errorHandlerMeuk.error,
+      workerData,
+      errorHandlerMeuk.remarks
+    );
+  });
+  clearTimeout(stopFunctie);
+  !page.isClosed() && page.close();
+
+  if (!pageInfo) {
+    return {
+      unavailable: `Geen resultaat <a href="${url}">van pageInfo</a>`,
+    };
   }
   return pageInfo;
-}
-
-async function makeBaseEventList(browser, qwm, effenaarMonths) {
-  const page = await browser.newPage();
-  await page.goto("https://www.effenaar.nl/agenda?genres.title=heavy", {
-    waitUntil: "load",
-  });
-
-  return page
-    .evaluate(
-      ({ workerIndex, months }) => {
-        return Array.from(
-          document.querySelectorAll(".search-and-filter .agenda-card")
-        )
-          .filter((eventEl, index) => {
-            return index % 4 === workerIndex;
-          })
-          .map((eventEl, index) => {
-            const res = {};
-            res.title = "";
-            const titleEl = eventEl.querySelector(".card-title");
-            if (!!titleEl) {
-              res.title = titleEl.textContent.trim();
-            }
-            res.shortText =
-              eventEl.querySelector(".card-subtitle")?.textContent;
-
-            res.venueEventUrl = eventEl?.href;
-
-            res.location = "effenaar";
-            return res;
-          });
-      },
-      { workerIndex: workerData.index, months: effenaarMonths }
-    )
-    .then((rawEvents) => {
-      return rawEvents
-        .filter(_t.basicMusicEventsFilter)
-        .map((event) => new MusicEvent(event));
-    })
-    .catch((err) => {
-      _t.handleError(err, workerData, "make base event list");
-    });
-}
+};
