@@ -29,7 +29,7 @@ export function handleError(error, workerData, remarks = null) {
   if (isMainThread) {
     passMessageToMonitor(updateErrorMsg, workerData.name);
     passMessageToMonitor(clientsLogMsg, workerData.name);
-  } else if (workerData.scraper) {
+  } else if (workerData?.scraper) {
     parentPort.postMessage(updateErrorMsg);
     parentPort.postMessage(clientsLogMsg);
   } else {

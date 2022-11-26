@@ -2,6 +2,7 @@ import MusicEvent from "../mods/music-event.js";
 import { parentPort, workerData } from "worker_threads";
 import * as _t from "../mods/tools.js";
 import AbstractScraper from "./abstract-scraper.js";
+import { patronaatMonths } from "../mods/months.js";
 
 // SCRAPER CONFIG
 
@@ -67,7 +68,7 @@ patronaatScraper.getPageInfo = async function ({ page, url }) {
     );
   }, this.maxExecutionTime);
 
-  const pageInfo = await page.evaluate(() => {
+  const pageInfo = await page.evaluate((months) => {
     const res = {
       unavailable: "",
       pageInfoID: `<a href='${document.location.href}'>${document.title}</a>`,
@@ -78,85 +79,63 @@ patronaatScraper.getPageInfo = async function ({ page, url }) {
       ?.textContent.toLowerCase()
       .trim();
 
-    res.startDatum = "";
     try {
-      let startDatumMatch = document.location.href.match(
-        /(\d\d)\-(\d\d)\-(\d\d)/
-      );
-      if (startDatumMatch && startDatumMatch.length > 3) {
-        const j = `20${startDatumMatch[3]}`;
-        const m = startDatumMatch[2];
-        const d = startDatumMatch[1];
-        res.startDatum = `${j}-${m}-${d}`;
+      res.startDatumM = document
+        .querySelector(".event__info-bar--star-date")
+        ?.textContent.toLowerCase()
+        .match(/(\d{1,2})\s+(\w{3,4})\s+(\d\d\d\d)/);
+      if (Array.isArray(res.startDatumM) && res.startDatumM.length >= 4) {
+        let day = res.startDatumM[1].padStart(2, "0");
+        let month = months[res.startDatumM[2]];
+        let year = res.startDatumM[3];
+        res.startDatum = `${year}-${month}-${day}`;
       }
-    } catch (error) {
-      res.unavailable = `${res.unavailable} mislukt datum te berekenen.`;
-      res.errorsVoorErrorHandler.push([
-        error,
-        `get page info datum berekening`,
-      ]);
-    }
 
-    res.startDateTime;
-    try {
-      const startEl = document.querySelector(".event__info-bar--start-time");
-      let startTime;
-      if (!!startEl && !!startDatum) {
-        const match = startEl.textContent.trim().match(/(\d\d)[\:]+(\d\d)/);
-        if (match && match.length) {
-          res.startTime = match[0];
-          res.startDateTime = new Date(
-            `${startDatum}T${startTime}:00`
-          ).toISOString();
-        }
-      }
-    } catch (error) {
-      res.unavailable = `${res.unavailable} \nmislukt tijd te berekenen.`;
-      res.errorsVoorErrorHandler.push([error, `get page info tijd berekening`]);
-    }
+      if (res.startDatum) {
+        [
+          ["doorOpenTime", ".event__info-bar--doors-open"],
+          ["startTime", ".event__info-bar--start-time"],
+          ["endTime", ".event__info-bar--end-time"],
+        ].forEach((timeField) => {
+          const [timeName, selector] = timeField;
 
-    res.doorOpenDateTime;
-    try {
-      const doorsEl = document.querySelector(".event__info-bar--doors-open");
-      let doorsTime;
-      if (!!doorsEl) {
-        const match = doorsEl.textContent.trim().match(/(\d\d)[\:]+(\d\d)/);
-        if (match && match.length) {
-          res.doorsTime = match[0];
-          res.doorOpenDateTime = new Date(
-            `${startDatum}T${doorsTime}:00`
-          ).toISOString();
-        }
-      }
-    } catch (error) {
-      res.errorsVoorErrorHandler.push([
-        error,
-        `get page info deur open berekening`,
-      ]);
-    }
-
-    res.endDateTime;
-    try {
-      const endEl = document.querySelector(".event__info-bar--end-time");
-      let endTime;
-      if (!!endEl) {
-        const match = endEl.textContent.trim().match(/(\d\d)[\:]+(\d\d)/);
-        if (match && match.length) {
-          endTime = match[0];
-          endDateTime = new Date(`${startDatum}T${endTime}:00`);
-          if (endDateTime < startDateTime) {
-            endDateTime.setDate(startDateTime.getDate() + 1);
-            endDateTime.setHours(startDateTime.getHours());
-            endDateTime.setMinutes(startDateTime.getMinutes());
+          const mmm = document
+            .querySelector(selector)
+            ?.textContent.match(/\d\d:\d\d/);
+          if (Array.isArray(mmm) && mmm.length === 1) {
+            res[timeName] = mmm[0];
           }
+        });
+
+        if (!!res.startTime) {
+          res.startTime = res.doorOpenTime;
+        }
+
+        if (res.doorOpenTime) {
+          res.doorOpenDateTime = new Date(
+            `${res.startDatum}T${res.doorOpenTime}:00`
+          ).toISOString();
+        }
+        if (res.startTime) {
+          res.startDateTime = new Date(
+            `${res.startDatum}T${res.startTime}:00`
+          ).toISOString();
+        }
+        if (res.endTime) {
+          res.endDateTime = new Date(
+            `${res.startDatum}T${res.endTime}:00`
+          ).toISOString();
         }
       }
-      res.endDateTime = endDateTime.toISOString();
     } catch (error) {
-      res.errorsVoorErrorHandler.push([
+      res.errorsVoorErrorHandler.push({
         error,
-        `get page info eind avond berekening`,
-      ]);
+        remarks: `Zo wat heb ik een hekel aan werken met datums ad infinitivum zeg`,
+      });
+    }
+
+    if (!res.startDateTime) {
+      res.unavailable = "Geen starttijd gevonden.";
     }
 
     res.longTextHTML = document.querySelector(".event__content")?.innerHTML;
@@ -164,10 +143,15 @@ patronaatScraper.getPageInfo = async function ({ page, url }) {
       res.unavailable = `${res.unavailable}\n${res.pageInfoID}`;
     }
     return res;
-  }, null);
+  }, patronaatMonths);
 
+  this.dirtyLog(pageInfo);
   pageInfo.errorsVoorErrorHandler.forEach((errorHandlerMeuk) => {
-    _t.handleError(errorHandlerMeuk[0], workerData, errorHandlerMeuk[1]);
+    _t.handleError(
+      errorHandlerMeuk.error,
+      workerData,
+      errorHandlerMeuk.remarks
+    );
   });
 
   clearTimeout(stopFunctie);

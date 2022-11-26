@@ -41,7 +41,7 @@ export default class MusicEvent {
     handleError(
       new Error(`
     title: ${this.title} \n
-    url: ${this.url} \n
+    url: ${this.venueEventUrl} \n
     startDateTime: ${this.startDateTime}
     `),
       workerData,

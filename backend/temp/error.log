@@ -1,4 +1,309 @@
 
+  patronaat-1 Error - 6:49:46 AM
+  undefined 
+  undefined
+  
+  
+  patronaat-1 Error - 6:49:41 AM
+  undefined 
+  undefined
+  
+  
+  patronaat-1 Error - 6:49:36 AM
+  undefined 
+  undefined
+  
+  
+  patronaat-1 Error - 6:49:28 AM
+  undefined 
+  undefined
+  
+  
+  patronaat-0 Error - 6:49:26 AM
+  undefined 
+  undefined
+  
+  
+  patronaat-1 Error - 6:49:24 AM
+  undefined 
+  undefined
+  
+  
+  patronaat-0 Error - 6:49:19 AM
+  undefined 
+  undefined
+  
+  
+  patronaat-2 Error - 6:49:16 AM
+  undefined 
+  undefined
+  
+  
+  patronaat-2 Error - 6:49:12 AM
+  undefined 
+  undefined
+  
+  
+  patronaat-0 Error - 6:49:12 AM
+  undefined 
+  undefined
+  
+  
+  patronaat-2 Error - 6:49:04 AM
+  undefined 
+  undefined
+  
+  
+  patronaat-0 Error - 6:49:02 AM
+  undefined 
+  undefined
+  
+  
+  patronaat-2 Error - 6:48:59 AM
+  undefined 
+  undefined
+  
+  
+  patronaat-0 Error - 6:48:58 AM
+  undefined 
+  undefined
+  
+  
+  patronaat-1 Error - 6:48:40 AM
+  undefined 
+  undefined
+  
+  
+  patronaat-1 Error - 6:48:35 AM
+  undefined 
+  undefined
+  
+  
+  patronaat-0 Error - 6:48:35 AM
+  undefined 
+  undefined
+  
+  
+  patronaat-0 Error - 6:48:28 AM
+  undefined 
+  undefined
+  
+  
+  patronaat-2 Error - 6:48:27 AM
+  undefined 
+  undefined
+  
+  
+  patronaat-2 Error - 6:48:23 AM
+  undefined 
+  undefined
+  
+  
+  patronaat-0 Error - 6:48:21 AM
+  undefined 
+  undefined
+  
+  
+  patronaat-2 Error - 6:48:15 AM
+  undefined 
+  undefined
+  
+  
+  patronaat-0 Error - 6:48:12 AM
+  undefined 
+  undefined
+  
+  
+  patronaat-2 Error - 6:48:10 AM
+  undefined 
+  undefined
+  
+  
+  patronaat-0 Error - 6:48:08 AM
+  undefined 
+  undefined
+  
+  
+  patronaat-2 Error - 6:47:39 AM
+  undefined 
+  undefined
+  
+  
+  patronaat-1 Error - 6:44:05 AM
+  undefined 
+  undefined
+  
+  
+  patronaat-1 Error - 6:44:01 AM
+  undefined 
+  undefined
+  
+  
+  patronaat-1 Error - 6:43:55 AM
+  undefined 
+  undefined
+  
+  
+  patronaat-1 Error - 6:43:48 AM
+  undefined 
+  undefined
+  
+  
+  patronaat-1 Error - 6:43:44 AM
+  undefined 
+  undefined
+  
+  
+  patronaat-0 Error - 6:43:42 AM
+  undefined 
+  undefined
+  
+  
+  patronaat-0 Error - 6:43:37 AM
+  undefined 
+  undefined
+  
+  
+  patronaat-2 Error - 6:43:36 AM
+  undefined 
+  undefined
+  
+  
+  patronaat-2 Error - 6:43:33 AM
+  undefined 
+  undefined
+  
+  
+  patronaat-0 Error - 6:43:31 AM
+  undefined 
+  undefined
+  
+  
+  patronaat-2 Error - 6:43:25 AM
+  undefined 
+  undefined
+  
+  
+  patronaat-0 Error - 6:43:23 AM
+  undefined 
+  undefined
+  
+  
+  patronaat-2 Error - 6:43:21 AM
+  undefined 
+  undefined
+  
+  
+  patronaat-0 Error - 6:43:20 AM
+  undefined 
+  undefined
+  
+  
+  patronaat-0 Error - 6:42:40 AM
+  Error: Evaluation failed: ReferenceError: errorsVoorErrorHandler is not defined
+    at __puppeteer_evaluation_script__:55:7
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async patronaatScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/patronaat.js:71:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:180:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:54:5) 
+  Evaluation failed: ReferenceError: errorsVoorErrorHandler is not defined
+    at __puppeteer_evaluation_script__:55:7
+  
+  
+  patronaat-2 Error - 6:42:34 AM
+  Error: Evaluation failed: ReferenceError: errorsVoorErrorHandler is not defined
+    at __puppeteer_evaluation_script__:55:7
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async patronaatScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/patronaat.js:71:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:180:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:54:5) 
+  Evaluation failed: ReferenceError: errorsVoorErrorHandler is not defined
+    at __puppeteer_evaluation_script__:55:7
+  
+  
+  patronaat-1 Error - 6:42:33 AM
+  Error: Evaluation failed: ReferenceError: errorsVoorErrorHandler is not defined
+    at __puppeteer_evaluation_script__:55:7
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async patronaatScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/patronaat.js:71:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:180:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:54:5) 
+  Evaluation failed: ReferenceError: errorsVoorErrorHandler is not defined
+    at __puppeteer_evaluation_script__:55:7
+  
+  
+  patronaat-0 Error - 6:40:24 AM
+  TypeError: Cannot read properties of undefined (reading 'name')
+    at handleError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:43:16)
+    at MusicEvent.registerINVALID (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:41:5)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:207:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:54:5) 
+  Cannot read properties of undefined (reading 'name')
+  
+  
+  patronaat-0 Error - 6:40:22 AM
+  TimeoutError: Navigation timeout of 15000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 15000 ms exceeded
+  
+  
+  patronaat-2 Error - 6:40:19 AM
+  TypeError: Cannot read properties of undefined (reading 'name')
+    at handleError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:43:16)
+    at MusicEvent.registerINVALID (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:41:5)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:207:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:54:5) 
+  Cannot read properties of undefined (reading 'name')
+  
+  
+  patronaat-1 Error - 6:40:12 AM
+  TypeError: Cannot read properties of undefined (reading 'name')
+    at handleError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:43:16)
+    at MusicEvent.registerINVALID (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:41:5)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:207:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:54:5) 
+  Cannot read properties of undefined (reading 'name')
+  
+  
+  patronaat-0 Error - 6:39:02 AM
+  TypeError: Cannot read properties of undefined (reading 'scraper')
+    at handleError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:32:25)
+    at MusicEvent.registerINVALID (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:41:5)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:207:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:54:5) 
+  Cannot read properties of undefined (reading 'scraper')
+  
+  
+  patronaat-2 Error - 6:38:56 AM
+  TypeError: Cannot read properties of undefined (reading 'scraper')
+    at handleError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:32:25)
+    at MusicEvent.registerINVALID (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:41:5)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:207:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:54:5) 
+  Cannot read properties of undefined (reading 'scraper')
+  
+  
+  patronaat-1 Error - 6:38:55 AM
+  TypeError: Cannot read properties of undefined (reading 'scraper')
+    at handleError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:32:25)
+    at MusicEvent.registerINVALID (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:41:5)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:207:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:54:5) 
+  Cannot read properties of undefined (reading 'scraper')
+  
+  
   patronaat-0 Error - 5:08:00 AM
   undefined 
   undefined

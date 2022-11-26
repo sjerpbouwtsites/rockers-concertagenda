@@ -57,6 +57,7 @@ export const metalfanMonths = dynamoMonths;
 export const metropoolMonths = dynamoMonths;
 export const neushoornMonths = baroegMonths;
 export const paradisoMonths = baroegMonths;
+export const patronaatMonths = dynamoMonths;
 export const voltMonths = dynamoMonths;
 
 const months = {
@@ -78,6 +79,7 @@ const months = {
   neushoorn: neushoornMonths,
   occii: occiiMonths,
   paradiso: paradisoMonths,
+  patronaat: dynamoMonths,
   volt: voltMonths,
 };
 export default months;
