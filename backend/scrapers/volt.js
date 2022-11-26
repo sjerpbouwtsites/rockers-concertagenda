@@ -180,6 +180,7 @@ voltScraper.getPageInfo = async function ({ page, url }) {
   );
 
   clearTimeout(stopFunctie);
+  !page.isClosed() && page.close();
 
   if (!pageInfo) {
     return {
@@ -188,7 +189,7 @@ voltScraper.getPageInfo = async function ({ page, url }) {
   }
 
   if (pageInfo?.error) {
-    page.unavailable = `Dikke error bij href="${url}">van pageInfo</a>`;
+    pageInfo.unavailable = `Dikke error bij href="${url}">van pageInfo</a>`;
     _t.handleError(page.error, workerData);
   }
 

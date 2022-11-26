@@ -181,7 +181,7 @@ export default class AbstractScraper {
       page: singleEventPage,
       url: singleEvent.venueEventUrl,
     });
-    if (!pageInfo || pageInfo?.unavailable) {
+    if (!pageInfo || !!pageInfo?.unavailable) {
       parentPort.postMessage(
         this.qwm.messageRoll(
           `${singleEventPage.title} onbeschikbaar ${
