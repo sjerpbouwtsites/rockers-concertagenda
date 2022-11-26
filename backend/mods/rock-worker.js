@@ -65,6 +65,7 @@ export class QuickWorkerMessage {
    * @returns {JSONArray} RETURNS TWO JSON OBJECTS FOR TWO CALLS.
    */ // @ Dit was een array van meuk. Nu is het een kutte API door de app heen. HJerstellen.
   todo(numberToDo) {
+    console.log("LEGACY")
     return [
       WorkerMessage.quick("process", "workers-status", {
         todo: numberToDo,
@@ -74,6 +75,15 @@ export class QuickWorkerMessage {
         },
       }),
     ];
+  }
+  todoNew(numberToDo) {
+    return WorkerMessage.quick("process", "workers-status", {
+      todo: numberToDo,
+      content: {
+        status: "todo",
+        workerData: this.workerData,
+      },
+    })
   }
   /**
    * @param {*} toConsole

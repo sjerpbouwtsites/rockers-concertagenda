@@ -31,9 +31,7 @@ export default class MonitorField {
     targetEl.innerHTML = this.initialHTML;
   }
   linebreaksNaarBR(tekst) {
-    return JSON.stringify(tekst, null, 2)
-      .replace(/["':]/g, "")
-      .replace(/\\n/g, "<br>");
+    return JSON.stringify(tekst, null, 2).replace(/\\n/g, "<br>");
   }
   objectNaarTekst(objectTeVeranderen) {
     let tt = { ...objectTeVeranderen };
@@ -52,7 +50,7 @@ export default class MonitorField {
     return 0;
   }
   updateConsole(updateData) {
-    this.data.splice(2);
+    this.data.splice(5);
     this.update(updateData);
   }
   update(updateData) {

@@ -34,7 +34,9 @@ class WorkerListConf {
   }
   create (config){
 
-    if (!EventsList.isOld(config.family, this.shellArguments?.force?.includes(family) ?? null)) {
+    const forceArg = this.shellArguments?.force ?? "";
+    const forced = forceArg.includes(config.family) || forceArg.includes("all");
+    if (!EventsList.isOld(config.family, forced)) {
       return false;
     }
 
@@ -66,8 +68,8 @@ class WorkerListConf {
     return this.data;
   }
   run(){
-    this.create({family: 'metalfan', workerCount: 1, CPUReq: 'low'})
-    this.create({family: 'baroeg', workerCount: 8})
+    this.create({ family: "metalfan", workerCount: 1, CPUReq: "low" });
+    this.create({ family: "baroeg", workerCount: 8, workerConcurrent: 3 });
     // this.create({family: 'patronaat', workerCount: 3})
     // this.create({family: '013', workerCount: 4})
     // this.create({family: 'effenaar', workerCount: 4})
@@ -87,7 +89,7 @@ class WorkerListConf {
     // this.create({family: 'kavka', workerCount: 1,workerConcurrent: 1, CPUReq: 'high' })
     // this.create({family: 'depul', workerCount: 3})
     // this.create({family: 'paradiso', workerCount: 4})
-    this.create({family: 'volt', workerCount: 1})
+    this.create({ family: "volt", workerCount: 1 });
     // this.create({family: 'duycker', workerCount: 1})
     this.shuffleArray();
   }

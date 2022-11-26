@@ -26,7 +26,7 @@ function createFields() {
 }
 
 function openClientWebsocket(fields) {
-  let socket = new WebSocket("ws://localhost:8001");
+  let socket = new WebSocket("ws://localhost:8000");
 
   socket.addEventListener("error", (event) => {
     // const msg = new wsMessage("update", "terminal-error", {

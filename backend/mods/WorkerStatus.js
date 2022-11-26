@@ -165,9 +165,6 @@ export default class WorkerStatus {
     if (WorkerStatus.checkIfAllDone()) {
       clearInterval(WorkerStatus.reportingInterval);
     }
-    const messageRollMsg = new wsMessage("update", "message-roll", {
-      text: `${WorkerStatus.countedWorkersToDo} workers unfinished`,
-    });
     const allWorkersStatussenMsg = new wsMessage(
       "app-overview",
       "all-workers",
@@ -177,7 +174,6 @@ export default class WorkerStatus {
       }
     );
     if (WorkerStatus.mwss) {
-      WorkerStatus.mwss.broadcast(messageRollMsg.json);
       WorkerStatus.mwss.broadcast(allWorkersStatussenMsg.json);
     }
   }

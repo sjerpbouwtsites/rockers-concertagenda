@@ -145,6 +145,11 @@ export function getPriceFromHTML(testText = null, contextText = null) {
   return null;
 }
 export function basicMusicEventsFilter(musicEvent, index) {
+
+  if (!musicEvent.venueEventUrl) {
+    return false;
+  }
+
   const t = musicEvent?.title ?? "";
   const st = musicEvent?.shortText ?? "";
   const searchShowNotOnDate = `${t.toLowerCase()} ${st.toLowerCase()}`;

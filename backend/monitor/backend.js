@@ -12,7 +12,7 @@ const monitorURL = 'http://localhost/concertagenda/backend/monitor/'
  * @returns webSocketServer
  */
 function createServerWebsocket() {
-  const webSocketsServerPort = 8001;
+  const webSocketsServerPort = 8000;
   const server = http.createServer();
   server.listen(webSocketsServerPort);
   const wsServer = new webSocketServer({

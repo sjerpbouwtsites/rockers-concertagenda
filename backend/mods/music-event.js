@@ -24,6 +24,7 @@ export default class MusicEvent {
   }
   register() {
     EventsList.addEvent(this);
+    return this;
   }
   get isValid() {
     return (
@@ -34,7 +35,17 @@ export default class MusicEvent {
   registerIfValid() {
     if (this.isValid) {
       this.register(); // @TODO registreer welke events invalid waren. 
-    
     }
   }
+  registerINVALID(workerData){
+    handleError(
+      new Error(`
+    title: ${this.title} \n
+    url: ${this.url} \n
+    startDateTime: ${this.startDateTime}
+    `),
+      workerData,
+      `Music event ongeldig`
+    );    
+    }
 }
