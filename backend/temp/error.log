@@ -1,4 +1,56 @@
 
+  metropool-3 Error - 2:37:53 PM
+  ReferenceError: stopFunctie is not defined
+    at metropoolScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/metropool.js:151:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:180:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:54:5) 
+  stopFunctie is not defined
+  
+  
+  metropool-1 Error - 2:37:47 PM
+  ReferenceError: stopFunctie is not defined
+    at metropoolScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/metropool.js:151:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:180:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:54:5) 
+  stopFunctie is not defined
+  
+  
+  metropool-0 Error - 2:37:30 PM
+  ReferenceError: stopFunctie is not defined
+    at metropoolScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/metropool.js:151:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:180:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:54:5) 
+  stopFunctie is not defined
+  
+  
+  metropool-2 Error - 2:37:24 PM
+  ReferenceError: stopFunctie is not defined
+    at metropoolScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/metropool.js:151:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:180:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:54:5) 
+  stopFunctie is not defined
+  
+  
+  metropool-1 Error - 2:36:41 PM
+  ReferenceError: browser is not defined
+    at metropoolScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/metropool.js:20:16)
+    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:46:40)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  browser is not defined
+  
+  
+  metropool-0 Error - 2:36:40 PM
+  ReferenceError: browser is not defined
+    at metropoolScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/metropool.js:20:16)
+    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:46:40)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  browser is not defined
+  
+  
   doornroosje-3 Error - 2:07:49 PM
   Error: Evaluation failed: ReferenceError: unavailable is not defined
     at __puppeteer_evaluation_script__:8:11

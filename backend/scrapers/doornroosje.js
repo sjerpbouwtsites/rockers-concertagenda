@@ -63,7 +63,6 @@ doornroosjeScraper.makeBaseEventList = async function () {
   }, workerData.index);
   clearTimeout(stopFunctie);
   !page.isClosed() && page.close();
-  this.dirtyLog(rawEvents);
   return rawEvents
     .map((event) => {
       (!event.venueEventUrl || !event.title) &&
@@ -76,7 +75,7 @@ doornroosjeScraper.makeBaseEventList = async function () {
     })
     .filter(_t.basicMusicEventsFilter)
     .map((event) => new MusicEvent(event));
-};;
+};
 
 // GET PAGE INFO
 
@@ -159,8 +158,6 @@ doornroosjeScraper.getPageInfo = async function ({ page, url }) {
     }
     return res;
   }, doornRoosjeMonths);
-
-  this.dirtyLog(pageInfo);
 
   pageInfo?.errorsVoorErrorHandler?.forEach((errorHandlerMeuk) => {
     _t.handleError(
