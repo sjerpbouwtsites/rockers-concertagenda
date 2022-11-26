@@ -50,8 +50,6 @@ patronaatScraper.makeBaseEventList = async function () {
       });
   }, workerData.index);
 
-  this.dirtyLog(rawEvents);
-
   clearTimeout(stopFunctie);
 
   return rawEvents
@@ -145,7 +143,6 @@ patronaatScraper.getPageInfo = async function ({ page, url }) {
     return res;
   }, patronaatMonths);
 
-  this.dirtyLog(pageInfo);
   pageInfo.errorsVoorErrorHandler.forEach((errorHandlerMeuk) => {
     _t.handleError(
       errorHandlerMeuk.error,
