@@ -61,6 +61,15 @@ baroegScraper.makeBaseEventList = async function () {
   clearTimeout(stopFunctie);
 
   return rawEvents
+    .map((event) => {
+      !event.venueEventUrl &&
+        parentPort.postMessage(
+          this.qwm.messageRoll(
+            `Red het niet: <a href='${event.venueEventUrl}'>${event.title}</a> ongeldig.`
+          )
+        );
+      return event;
+    })
     .filter(_t.basicMusicEventsFilter)
     .map((event) => new MusicEvent(event));
 };
@@ -78,18 +87,16 @@ baroegScraper.getPageInfo = async function ({ page, url }) {
     ({ baroegMonths }) => {
       const res = {
         unavailable: null,
-        pageInfoID: `<a href='${document.location.href}'>${document.title}</a>`,
+        pageInfoID: `<a href='${document.location.href}'>💻</a>`,
       };
       const ticketsEl = document.querySelector(".wp_theatre_event_tickets");
       if (!ticketsEl) {
-        res.unavailable = `Geen kaarten beschikbaar voor ${res.pageInfoID}`;
+        res.unavailable = `Geen kaarten. `;
       }
 
       const startDateEl = document.querySelector(".wp_theatre_event_startdate");
       if (!startDateEl) {
-        res.unavailable = `${res.unavailable ?? ""} no start date found for ${
-          res.pageInfoID
-        }<br>`;
+        res.unavailable = `${res.unavailable ?? ""} no start date.`;
       }
       const startDateMatch =
         document
@@ -106,11 +113,7 @@ baroegScraper.getPageInfo = async function ({ page, url }) {
         startDateMatch.length < 4 ||
         !startTime
       ) {
-        res.unavailable = `${
-          res.unavailable ?? ""
-        } incorrect startDate for <a href='${document.location.href}'>${
-          document.title
-        }</a><br>`;
+        res.unavailable = `${res.unavailable ?? ""} incorrect startDate.`;
       } else {
         let [, monthName, day, year] = startDateMatch;
         let month = baroegMonths[monthName];
@@ -127,6 +130,9 @@ baroegScraper.getPageInfo = async function ({ page, url }) {
         null;
       res.contextText = document.getElementById("content")?.textContent ?? null;
 
+      if (res.unavailable) {
+        res.unavailable = `${res.unavailable} ${res.pageInfoID}`;
+      }
       return res;
     },
     { baroegMonths }

@@ -1,4 +1,392 @@
 
+  doornroosje-3 Error - 2:07:49 PM
+  Error: Evaluation failed: ReferenceError: unavailable is not defined
+    at __puppeteer_evaluation_script__:8:11
+    at Array.map (<anonymous>)
+    at __puppeteer_evaluation_script__:6:8
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async doornroosjeScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:38:21)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:46:29) 
+  Evaluation failed: ReferenceError: unavailable is not defined
+    at __puppeteer_evaluation_script__:8:11
+    at Array.map (<anonymous>)
+    at __puppeteer_evaluation_script__:6:8
+  
+  
+  doornroosje-0 Error - 2:07:48 PM
+  Error: Evaluation failed: ReferenceError: unavailable is not defined
+    at __puppeteer_evaluation_script__:8:11
+    at Array.map (<anonymous>)
+    at __puppeteer_evaluation_script__:6:8
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async doornroosjeScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:38:21)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:46:29) 
+  Evaluation failed: ReferenceError: unavailable is not defined
+    at __puppeteer_evaluation_script__:8:11
+    at Array.map (<anonymous>)
+    at __puppeteer_evaluation_script__:6:8
+  
+  
+  doornroosje-2 Error - 1:55:02 PM
+  ReferenceError: pageInfo is not defined
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:151:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:180:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:54:5) 
+  pageInfo is not defined
+  
+  
+  doornroosje-1 Error - 1:55:02 PM
+  ReferenceError: pageInfo is not defined
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:151:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:180:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:54:5) 
+  pageInfo is not defined
+  
+  
+  doornroosje-4 Error - 1:54:58 PM
+  ReferenceError: pageInfo is not defined
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:151:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:180:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:54:5) 
+  pageInfo is not defined
+  
+  
+  doornroosje-5 Error - 1:54:57 PM
+  ReferenceError: pageInfo is not defined
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:151:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:180:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:54:5) 
+  pageInfo is not defined
+  
+  
+  doornroosje-0 Error - 1:54:55 PM
+  ReferenceError: pageInfo is not defined
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:151:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:180:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:54:5) 
+  pageInfo is not defined
+  
+  
+  doornroosje-3 Error - 1:54:54 PM
+  ReferenceError: pageInfo is not defined
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:151:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:180:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:54:5) 
+  pageInfo is not defined
+  
+  
+  patronaat-0 Error - 8:57:23 AM
+  TimeoutError: Navigation timeout of 15000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 15000 ms exceeded
+  
+  
+  patronaat-1 Error - 8:57:23 AM
+  TimeoutError: Navigation timeout of 15000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 15000 ms exceeded
+  
+  
+  patronaat-1 Error - 8:57:08 AM
+  TimeoutError: Navigation timeout of 15000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 15000 ms exceeded
+  
+  
+  tivolivredenburg-2 Error - 8:53:16 AM
+  TypeError: Cannot read properties of undefined (reading 'filter')
+    at tivoliVredenburgScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/tivolivredenburg.js:71:5)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:46:29) 
+  Cannot read properties of undefined (reading 'filter')
+  
+  
+  tivolivredenburg-1 Error - 8:53:15 AM
+  TypeError: Cannot read properties of undefined (reading 'filter')
+    at tivoliVredenburgScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/tivolivredenburg.js:71:5)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:46:29) 
+  Cannot read properties of undefined (reading 'filter')
+  
+  
+  tivolivredenburg-2 Error - 8:41:53 AM
+  TypeError: Cannot read properties of null (reading 'broadcast')
+    at MusicEvent.registerINVALID (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:54:41)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:207:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:54:5) 
+  Cannot read properties of null (reading 'broadcast')
+  
+  
+  tivolivredenburg-3 Error - 8:41:48 AM
+  TypeError: Cannot read properties of null (reading 'broadcast')
+    at MusicEvent.registerINVALID (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:54:41)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:207:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:54:5) 
+  Cannot read properties of null (reading 'broadcast')
+  
+  
+  tivolivredenburg-3 Error - 8:39:01 AM
+  TypeError: Cannot read properties of null (reading 'broadcast')
+    at passMessageToMonitor (file:///home/sjerp/dev/apache/concertagenda/backend/monitor/pass-message-to-monitor.js:53:39)
+    at MusicEvent.registerINVALID (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:51:5)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:207:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:54:5) 
+  Cannot read properties of null (reading 'broadcast')
+  
+  
+  tivolivredenburg-2 Error - 8:38:58 AM
+  TypeError: Cannot read properties of null (reading 'broadcast')
+    at passMessageToMonitor (file:///home/sjerp/dev/apache/concertagenda/backend/monitor/pass-message-to-monitor.js:53:39)
+    at MusicEvent.registerINVALID (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:51:5)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:207:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:54:5) 
+  Cannot read properties of null (reading 'broadcast')
+  
+  
+  tivolivredenburg-2 Error - 8:38:25 AM
+  Error: websocket ontbreekt op WorkerStatus
+    at get mwss [as mwss] (file:///home/sjerp/dev/apache/concertagenda/backend/mods/WorkerStatus.js:83:13)
+    at passMessageToMonitor (file:///home/sjerp/dev/apache/concertagenda/backend/monitor/pass-message-to-monitor.js:53:16)
+    at MusicEvent.registerINVALID (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:51:5)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:207:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:54:5) 
+  websocket ontbreekt op WorkerStatus
+  
+  
+  tivolivredenburg-3 Error - 8:38:21 AM
+  Error: websocket ontbreekt op WorkerStatus
+    at get mwss [as mwss] (file:///home/sjerp/dev/apache/concertagenda/backend/mods/WorkerStatus.js:83:13)
+    at passMessageToMonitor (file:///home/sjerp/dev/apache/concertagenda/backend/monitor/pass-message-to-monitor.js:53:16)
+    at MusicEvent.registerINVALID (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:51:5)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:207:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:54:5) 
+  websocket ontbreekt op WorkerStatus
+  
+  
+  tivolivredenburg-3 Error - 8:36:33 AM
+  Error: websocket ontbreekt op WorkerStatus
+    at get mwss [as mwss] (file:///home/sjerp/dev/apache/concertagenda/backend/mods/WorkerStatus.js:83:13)
+    at passMessageToMonitor (file:///home/sjerp/dev/apache/concertagenda/backend/monitor/pass-message-to-monitor.js:52:16)
+    at MusicEvent.registerINVALID (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:51:5)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:207:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:54:5) 
+  websocket ontbreekt op WorkerStatus
+  
+  
+  tivolivredenburg-2 Error - 8:36:23 AM
+  Error: websocket ontbreekt op WorkerStatus
+    at get mwss [as mwss] (file:///home/sjerp/dev/apache/concertagenda/backend/mods/WorkerStatus.js:83:13)
+    at passMessageToMonitor (file:///home/sjerp/dev/apache/concertagenda/backend/monitor/pass-message-to-monitor.js:52:16)
+    at MusicEvent.registerINVALID (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:51:5)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:207:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:54:5) 
+  websocket ontbreekt op WorkerStatus
+  
+  
+  tivolivredenburg-3 Error - 8:34:58 AM
+  TypeError: Cannot read properties of null (reading 'broadcast')
+    at passMessageToMonitor (file:///home/sjerp/dev/apache/concertagenda/backend/monitor/pass-message-to-monitor.js:52:21)
+    at MusicEvent.registerINVALID (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:51:5)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:207:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:54:5) 
+  Cannot read properties of null (reading 'broadcast')
+  
+  
+  tivolivredenburg-2 Error - 8:34:49 AM
+  TypeError: Cannot read properties of null (reading 'broadcast')
+    at passMessageToMonitor (file:///home/sjerp/dev/apache/concertagenda/backend/monitor/pass-message-to-monitor.js:52:21)
+    at MusicEvent.registerINVALID (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:51:5)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:207:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:54:5) 
+  Cannot read properties of null (reading 'broadcast')
+  
+  
+  tivolivredenburg-2 Error - 8:32:26 AM
+  TypeError: Cannot read properties of null (reading 'broadcast')
+    at passMessageToMonitor (file:///home/sjerp/dev/apache/concertagenda/backend/monitor/pass-message-to-monitor.js:51:21)
+    at MusicEvent.registerINVALID (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:51:5)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:207:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:54:5) 
+  Cannot read properties of null (reading 'broadcast')
+  
+  
+  tivolivredenburg-3 Error - 8:32:23 AM
+  TypeError: Cannot read properties of null (reading 'broadcast')
+    at passMessageToMonitor (file:///home/sjerp/dev/apache/concertagenda/backend/monitor/pass-message-to-monitor.js:51:21)
+    at MusicEvent.registerINVALID (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:51:5)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:207:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:54:5) 
+  Cannot read properties of null (reading 'broadcast')
+  
+  
+  tivolivredenburg-3 Error - 8:30:46 AM
+  TypeError: Cannot create property 'workerName' on string '<a href='https://www.tivolivredenburg.nl/agenda/le-guess-who-2023-passe-partout-09-11-2023/'>Le Guess Who? 2023 | Passe-partout</a> ongeldig.'
+    at passMessageToMonitor (file:///home/sjerp/dev/apache/concertagenda/backend/monitor/pass-message-to-monitor.js:19:40)
+    at MusicEvent.registerINVALID (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:53:5)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:207:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:54:5) 
+  Cannot create property 'workerName' on string '<a href='https://www.tivolivredenburg.nl/agenda/le-guess-who-2023-passe-partout-09-11-2023/'>Le Guess Who? 2023 | Passe-partout</a> ongeldig.'
+  
+  
+  tivolivredenburg-2 Error - 8:30:45 AM
+  TypeError: Cannot create property 'workerName' on string '<a href='https://www.tivolivredenburg.nl/agenda/viagra-boys-afterparty-tramhaus-dj-set-10-12-2022/'>Viagra Boys Afterparty - Tramhaus DJ Set</a> ongeldig.'
+    at passMessageToMonitor (file:///home/sjerp/dev/apache/concertagenda/backend/monitor/pass-message-to-monitor.js:19:40)
+    at MusicEvent.registerINVALID (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:53:5)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:207:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:54:5) 
+  Cannot create property 'workerName' on string '<a href='https://www.tivolivredenburg.nl/agenda/viagra-boys-afterparty-tramhaus-dj-set-10-12-2022/'>Viagra Boys Afterparty - Tramhaus DJ Set</a> ongeldig.'
+  
+  
+  tivolivredenburg-3 Error - 8:29:53 AM
+  TypeError: Cannot create property 'workerName' on string 'Event <a href='https://www.tivolivredenburg.nl/agenda/le-guess-who-2023-passe-partout-09-11-2023/'>Le Guess Who? 2023 | Passe-partout</a> ongeldig.'
+    at passMessageToMonitor (file:///home/sjerp/dev/apache/concertagenda/backend/monitor/pass-message-to-monitor.js:19:40)
+    at MusicEvent.registerINVALID (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:53:5)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:207:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:54:5) 
+  Cannot create property 'workerName' on string 'Event <a href='https://www.tivolivredenburg.nl/agenda/le-guess-who-2023-passe-partout-09-11-2023/'>Le Guess Who? 2023 | Passe-partout</a> ongeldig.'
+  
+  
+  tivolivredenburg-2 Error - 8:29:52 AM
+  TypeError: Cannot create property 'workerName' on string 'Event <a href='https://www.tivolivredenburg.nl/agenda/viagra-boys-afterparty-tramhaus-dj-set-10-12-2022/'>Viagra Boys Afterparty - Tramhaus DJ Set</a> ongeldig.'
+    at passMessageToMonitor (file:///home/sjerp/dev/apache/concertagenda/backend/monitor/pass-message-to-monitor.js:19:40)
+    at MusicEvent.registerINVALID (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:53:5)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:207:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:54:5) 
+  Cannot create property 'workerName' on string 'Event <a href='https://www.tivolivredenburg.nl/agenda/viagra-boys-afterparty-tramhaus-dj-set-10-12-2022/'>Viagra Boys Afterparty - Tramhaus DJ Set</a> ongeldig.'
+  
+  
+  tivolivredenburg-3 Error - 8:28:33 AM
+  Error: message send by unspecified worker
+    at passMessageToMonitor (file:///home/sjerp/dev/apache/concertagenda/backend/monitor/pass-message-to-monitor.js:17:11)
+    at MusicEvent.registerINVALID (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:53:5)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:207:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:54:5) 
+  message send by unspecified worker
+  
+  
+  tivolivredenburg-2 Error - 8:28:30 AM
+  Error: message send by unspecified worker
+    at passMessageToMonitor (file:///home/sjerp/dev/apache/concertagenda/backend/monitor/pass-message-to-monitor.js:17:11)
+    at MusicEvent.registerINVALID (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:53:5)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:207:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:54:5) 
+  message send by unspecified worker
+  
+  
+  tivolivredenburg-3 Error - 8:24:20 AM
+  TypeError: Cannot read properties of undefined (reading 'split')
+    at wsMessage.check (file:///home/sjerp/dev/apache/concertagenda/backend/monitor/wsMessage.js:86:12)
+    at new wsMessage (file:///home/sjerp/dev/apache/concertagenda/backend/monitor/wsMessage.js:33:10)
+    at Function.quick (file:///home/sjerp/dev/apache/concertagenda/backend/monitor/wsMessage.js:41:25)
+    at MusicEvent.registerINVALID (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:49:17)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:207:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:54:5) 
+  Cannot read properties of undefined (reading 'split')
+  
+  
+  tivolivredenburg-2 Error - 8:24:19 AM
+  TypeError: Cannot read properties of undefined (reading 'split')
+    at wsMessage.check (file:///home/sjerp/dev/apache/concertagenda/backend/monitor/wsMessage.js:86:12)
+    at new wsMessage (file:///home/sjerp/dev/apache/concertagenda/backend/monitor/wsMessage.js:33:10)
+    at Function.quick (file:///home/sjerp/dev/apache/concertagenda/backend/monitor/wsMessage.js:41:25)
+    at MusicEvent.registerINVALID (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:49:17)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:207:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:54:5) 
+  Cannot read properties of undefined (reading 'split')
+  
+  
+  undefined Error - 8:14:37 AM
+  Error: 
+    title: Viagra Boys Afterparty - Tramhaus DJ Set 
+
+    url: https://www.tivolivredenburg.nl/agenda/viagra-boys-afterparty-tramhaus-dj-set-10-12-2022/ 
+
+    startDateTime: null
+    
+    at MusicEvent.registerINVALID (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:42:7)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:207:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:54:5) 
+  
+    title: Viagra Boys Afterparty - Tramhaus DJ Set 
+
+    url: https://www.tivolivredenburg.nl/agenda/viagra-boys-afterparty-tramhaus-dj-set-10-12-2022/ 
+
+    startDateTime: null
+    
+  
+  
+  undefined Error - 8:14:34 AM
+  Error: 
+    title: Le Guess Who? 2023 | Passe-partout 
+
+    url: https://www.tivolivredenburg.nl/agenda/le-guess-who-2023-passe-partout-09-11-2023/ 
+
+    startDateTime: null
+    
+    at MusicEvent.registerINVALID (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:42:7)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:207:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:54:5) 
+  
+    title: Le Guess Who? 2023 | Passe-partout 
+
+    url: https://www.tivolivredenburg.nl/agenda/le-guess-who-2023-passe-partout-09-11-2023/ 
+
+    startDateTime: null
+    
+  
+  
+  tivolivredenburg-3 Error - 8:02:01 AM
+  TypeError: Cannot read properties of undefined (reading 'name')
+    at handleError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:43:16)
+    at MusicEvent.registerINVALID (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:41:5)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:207:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:54:5) 
+  Cannot read properties of undefined (reading 'name')
+  
+  
+  tivolivredenburg-2 Error - 8:01:51 AM
+  TypeError: Cannot read properties of undefined (reading 'name')
+    at handleError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/tools.js:43:16)
+    at MusicEvent.registerINVALID (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:41:5)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:207:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:54:5) 
+  Cannot read properties of undefined (reading 'name')
+  
+  
   effenaar-0 Error - 7:50:42 AM
   Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'join')
     at __puppeteer_evaluation_script__:79:25

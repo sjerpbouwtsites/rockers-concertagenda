@@ -3,8 +3,6 @@ import fsDirections from "./fs-directions.js";
 import { handleError, errorAfterSeconds } from "./tools.js";
 import { QuickWorkerMessage } from "./rock-worker.js";
 import passMessageToMonitor from "../monitor/pass-message-to-monitor.js";
-import {parentPort} from "worker_threads"
-
 
 export default class EventsList {
   static _events = [];
@@ -24,19 +22,22 @@ export default class EventsList {
     return EventsList._events.length;
   }
   static save(name, workerIndex = null) {
-  const qwm = new QuickWorkerMessage(EventsList.workerSignature);
-    // parentPort.postMessage(qwm.toConsole({
-    //   name, _events: EventsList._events
-    // }))
-
     try {
       EventsList.guaranteeTimestampExistence();
       const pathToEventList = fsDirections.eventLists;
+      const pathToINVALIDEventList = fsDirections.invalidEventLists;
       const inbetweenFix = workerIndex !== null ? `-${workerIndex}` : ``;
       const pathToEventListFile = `${pathToEventList}/${name}${inbetweenFix}.json`;
-      fs.writeFileSync(
+      const pathToINVALIDEventListFile = `${pathToINVALIDEventList}/${name}${inbetweenFix}.json`;
+      fs.writeFile(
         pathToEventListFile,
-        JSON.stringify(EventsList._events, null, "  ")
+        JSON.stringify(EventsList._events, null, "  "),
+        () => {}
+      );
+      fs.writeFile(
+        pathToINVALIDEventListFile,
+        JSON.stringify(EventsList._invalidEvents, null, "  "),
+        () => {}
       );
 
       const eventListTimestamps = JSON.parse(
@@ -117,9 +118,6 @@ export default class EventsList {
   }
 
   static addEvent(event) {
-    // const qwm = new QuickWorkerMessage(EventsList.workerSignature);
-    // parentPort.postMessage(qwm.toConsole(event))
-
     try {
       EventsList._events.push(event);
     } catch (error) {
@@ -129,6 +127,9 @@ export default class EventsList {
         `kan niet pushen addEvent`
       );
     }
+  }
+  static addInvalidEvent(invalidEvent) {
+    EventsList._invalidEvents.push(invalidEvent);
   }
 
   static async printAllToJSON() {

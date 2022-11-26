@@ -52,9 +52,16 @@ effenaarScraper.makeBaseEventList = async function () {
   clearTimeout(stopFunctie);
   !page.isClosed() && page.close();
 
-  this.dirtyLog(rawEvents);
-
   return rawEvents
+    .map((event) => {
+      !event.venueEventUrl &&
+        parentPort.postMessage(
+          this.qwm.messageRoll(
+            `Red het niet: <a href='${event.venueEventUrl}'>${event.title}</a> ongeldig.`
+          )
+        );
+      return event;
+    })
     .filter(_t.basicMusicEventsFilter)
     .map((event) => new MusicEvent(event));
 };
@@ -160,8 +167,6 @@ effenaarScraper.getPageInfo = async function ({ page, url }) {
     }
     return res;
   }, effenaarMonths);
-
-  this.dirtyLog(pageInfo);
 
   pageInfo?.errorsVoorErrorHandler?.forEach((errorHandlerMeuk) => {
     _t.handleError(

@@ -35,7 +35,7 @@ export default function passMessageToMonitor(message, workerName) {
     }
 
     if (
-      wsMsgInst.type.includes('update') && 
+      wsMsgInst.type.includes("update") &&
       wsMsgInst.subtype.includes("error") &&
       WorkerStatus.isRegisteredWorker(workerName)
     ) {
@@ -48,5 +48,6 @@ export default function passMessageToMonitor(message, workerName) {
     ) {
     }
   }
-  WorkerStatus.mwss.broadcast(wsMsgInst.json);
+
+  WorkerStatus.monitorWebsocketServer.broadcast(wsMsgInst.json);
 }

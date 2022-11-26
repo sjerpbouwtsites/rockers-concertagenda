@@ -2,7 +2,7 @@ import path from "path";
 import fs from "fs";
 
 const fsDirections = {
-  '013Json': path.resolve("./event-lists/013.json"),
+  "013Json": path.resolve("./event-lists/013.json"),
   afasliveJson: path.resolve("./event-lists/afaslive.json"),
   baroegJson: path.resolve("./event-lists/baroeg.json"),
   bibelotJson: path.resolve("./event-lists/bibelot.json"),
@@ -16,6 +16,8 @@ const fsDirections = {
   errorLog: path.resolve("./temp/error.log"),
   eventLists: path.resolve("./event-lists"),
   eventsListJson: path.resolve("./event-lists/events-list.json"),
+  invalidEventLists: path.resolve("./temp"),
+  invalidEventsListJson: path.resolve("./temp/invalid-events-list.json"),
   eventsListPublicJson: path.resolve("../public/events-list.json"),
   gebrdenobelJson: path.resolve("./event-lists/gebrdenobel.json"),
   idunaJson: path.resolve("./event-lists/iduna.json"),

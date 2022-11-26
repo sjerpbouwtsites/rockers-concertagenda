@@ -184,9 +184,7 @@ export default class AbstractScraper {
     if (!pageInfo || !!pageInfo?.unavailable) {
       parentPort.postMessage(
         this.qwm.messageRoll(
-          `${singleEventPage.title} onbeschikbaar ${
-            pageInfo?.unavailable ?? ""
-          }`
+          `pageInfo ext ${singleEvent.title} ${pageInfo?.unavailable ?? ""}`
         )
       );
       return useableEventsList.length

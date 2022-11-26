@@ -7,8 +7,8 @@ import { patronaatMonths } from "../mods/months.js";
 // SCRAPER CONFIG
 
 const scraperConfig = {
-  baseEventTimeout: 30000,
-  singlePageTimeout: 15000,
+  baseEventTimeout: 35000,
+  singlePageTimeout: 25000,
   workerData: Object.assign({}, workerData),
 };
 const patronaatScraper = new AbstractScraper(scraperConfig);
@@ -54,6 +54,15 @@ patronaatScraper.makeBaseEventList = async function () {
   !page.isClosed() && page.close();
 
   return rawEvents
+    .map((event) => {
+      !event.venueEventUrl &&
+        parentPort.postMessage(
+          this.qwm.messageRoll(
+            `Red het niet: <a href='${event.venueEventUrl}'>${event.title}</a> ongeldig.`
+          )
+        );
+      return event;
+    })
     .filter(_t.basicMusicEventsFilter)
     .map((event) => new MusicEvent(event));
 };
@@ -144,7 +153,7 @@ patronaatScraper.getPageInfo = async function ({ page, url }) {
     return res;
   }, patronaatMonths);
 
-  pageInfo.errorsVoorErrorHandler.forEach((errorHandlerMeuk) => {
+  pageInfo?.errorsVoorErrorHandler?.forEach((errorHandlerMeuk) => {
     _t.handleError(
       errorHandlerMeuk.error,
       workerData,

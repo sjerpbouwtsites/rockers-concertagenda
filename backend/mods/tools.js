@@ -40,7 +40,7 @@ export function handleError(error, workerData, remarks = null) {
   const time = new Date();
   const curErrorLog = fs.readFileSync(fsDirections.errorLog) || "";
   const newErrorLog = `
-  ${workerData.name} Error - ${time.toLocaleTimeString()}
+  ${workerData?.name} Error - ${time.toLocaleTimeString()}
   ${error.stack} 
   ${error.message}
   

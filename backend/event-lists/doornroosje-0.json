@@ -1,38 +1,50 @@
 [
   {
-    "doorOpenDateTime": "2023-01-21T18:00:00.000Z",
-    "startDateTime": "2023-01-21T18:30:00.000Z",
+    "doorOpenDateTime": "2022-12-22T20:00:00.000Z",
+    "startDateTime": "2022-12-22T21:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/revocation-3/",
-    "title": "Revocation + Goatwhore e.a.",
+    "venueEventUrl": "https://www.doornroosje.nl/event/cloudsurfers/",
+    "title": "Cloudsurfers",
+    "location": "doornroosje",
+    "price": 12,
+    "shortText": "",
+    "longText": "../public/texts/bd8f3876-1fc7-4fb9-a862-349261ef1ebb.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2022/08/Cloudsurfers-web-1934x1088-350x197-c-default.jpg"
+  },
+  {
+    "doorOpenDateTime": "2023-01-21T20:00:00.000Z",
+    "startDateTime": "2023-01-21T21:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.doornroosje.nl/event/avalanche-kaito/",
+    "title": "Avalanche Kaito",
+    "location": "doornroosje",
+    "price": 13,
+    "shortText": "",
+    "longText": "../public/texts/edd5fa56-1a48-461b-b81d-2547fb3c9b3a.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2022/10/GB125CD_pic-350x197-c-default.jpg"
+  },
+  {
+    "doorOpenDateTime": "2023-03-01T01:19:00.000Z",
+    "startDateTime": "2023-03-01T01:19:30.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.doornroosje.nl/event/brutus/",
+    "title": "Brutus + Psychonaut + Doodseskader",
+    "location": "doornroosje",
+    "price": 24,
+    "shortText": "",
+    "longText": "../public/texts/95d3dde5-e418-4536-a139-1a4480a1b00d.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2022/10/Brutus-1934x1088-350x197-c-default.jpg"
+  },
+  {
+    "doorOpenDateTime": "2023-04-01T04:19:00.000Z",
+    "startDateTime": "2023-04-01T04:19:30.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.doornroosje.nl/event/swallow-the-sun-2/",
+    "title": "Swallow the Sun + Draconian",
     "location": "doornroosje",
     "price": 24,
     "shortText": "Fortarock",
-    "longText": "../public/texts/d4da303b-a5d3-4b4e-92c6-42116fc2791e.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2022/07/Revocation-a-1934x1088-350x197-c-default.jpg"
-  },
-  {
-    "doorOpenDateTime": "2023-03-01T06:20:00.000Z",
-    "startDateTime": "2023-03-01T06:20:30.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/gel/",
-    "title": "GEL + Cold Brats",
-    "location": "doornroosje",
-    "price": 13,
-    "shortText": "Soulcrusher",
-    "longText": "../public/texts/a9f890c7-2401-464f-9ed9-309af7e9f58f.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2022/09/GEL-350x197-c-default.jpeg"
-  },
-  {
-    "doorOpenDateTime": "2023-05-19T18:00:00.000Z",
-    "startDateTime": "2023-05-19T18:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/otoboke-beaver/",
-    "title": "Otoboke Beaver",
-    "location": "doornroosje",
-    "price": 16.5,
-    "shortText": null,
-    "longText": "../public/texts/4114a79b-c46a-43da-b432-89609edf10b1.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2021/12/Promo_OtobokeBeaver-credit_Takeaki_Emori-350x197-c-default.jpg"
+    "longText": "../public/texts/df1f405d-bdc3-4b76-a536-fdfbfa62f537.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2022/06/Swallow-The-Sun-1-1920x1088-350x197-c-default.jpg"
   }
 ]

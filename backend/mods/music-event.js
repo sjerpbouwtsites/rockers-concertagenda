@@ -1,5 +1,8 @@
 import EventsList from "./events-list.js";
 import { handleError } from "./tools.js";
+import passMessageToMonitor from "../monitor/pass-message-to-monitor.js";
+import wsMessage from "../monitor/wsMessage.js";
+import WorkerStatus from "./WorkerStatus.js";
 
 export default class MusicEvent {
   doorOpenDateTime = null;
@@ -34,18 +37,13 @@ export default class MusicEvent {
   }
   registerIfValid() {
     if (this.isValid) {
-      this.register(); // @TODO registreer welke events invalid waren. 
+      this.register(); // @TODO registreer welke events invalid waren.
     }
   }
-  registerINVALID(workerData){
-    handleError(
-      new Error(`
-    title: ${this.title} \n
-    url: ${this.venueEventUrl} \n
-    startDateTime: ${this.startDateTime}
-    `),
-      workerData,
-      `Music event ongeldig`
-    );    
-    }
+  registerINVALID(workerData = {}) {
+    const prod = {};
+    Object.assign(prod, this);
+    Object.assign(prod, workerData);
+    EventsList.addInvalidEvent(prod);
+  }
 }

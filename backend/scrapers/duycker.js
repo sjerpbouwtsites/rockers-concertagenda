@@ -18,24 +18,26 @@ async function scrapeInit() {
   parentPort.postMessage(qwm.workerInitialized());
   browser = await puppeteer.launch();
   Promise.race([makeBaseEventList(), _t.errorAfterSeconds(30000)])
-    
-    .then(baseMusicEvents => {
+
+    .then((baseMusicEvents) => {
       parentPort.postMessage(qwm.workerStarted());
-      parentPort.postMessage(qwm.toConsole(baseMusicEvents))
       const baseMusicEventsCopy = [...baseMusicEvents];
       const eventGen = eventGenerator(baseMusicEventsCopy);
       const nextEvent = eventGen.next().value;
-      return eventAsyncCheck(eventGen, nextEvent)
+      return eventAsyncCheck(eventGen, nextEvent);
     })
-    .then(eventList => {
-      parentPort.postMessage(qwm.toConsole(eventList))      
-      return processSingleMusicEvent(eventList)      
+    .then((eventList) => {
+      return processSingleMusicEvent(eventList);
     })
     .then(() => {
       parentPort.postMessage(qwm.workerDone(EventsList.amountOfEvents));
     })
     .catch((error) =>
-    _t.handleError(error, workerData, `outer catch scrape ${workerData.family}`)
+      _t.handleError(
+        error,
+        workerData,
+        `outer catch scrape ${workerData.family}`
+      )
     )
     .finally(() => {
       EventsList.save(workerData.family, workerData.index);

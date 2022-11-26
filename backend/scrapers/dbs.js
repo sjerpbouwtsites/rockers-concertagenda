@@ -213,7 +213,7 @@ async function makeBaseEventList() {
     }
   })
 
-  parentPort.postMessage(qwm.toConsole(rawEvents));
+
   return rawEvents
     .filter(_t.basicMusicEventsFilter)
     .map((event) => new MusicEvent(event));

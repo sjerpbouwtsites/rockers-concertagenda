@@ -1,115 +1,98 @@
 import MusicEvent from "../mods/music-event.js";
-import puppeteer from "puppeteer";
 import { parentPort, workerData } from "worker_threads";
-import EventsList from "../mods/events-list.js";
-import fs from "fs";
-import crypto from "crypto";
-import fsDirections from "../mods/fs-directions.js";
 import * as _t from "../mods/tools.js";
 import { doornRoosjeMonths } from "../mods/months.js";
-import { letScraperListenToMasterMessageAndInit } from "../mods/generic-scraper.js";
-import { QuickWorkerMessage } from "../mods/rock-worker.js";
-const qwm = new QuickWorkerMessage(workerData);
-let browser = null;
+import AbstractScraper from "./abstract-scraper.js";
 
-letScraperListenToMasterMessageAndInit(scrapeInit);
+// SCRAPER CONFIG
 
-async function scrapeInit() {
-  parentPort.postMessage(qwm.workerInitialized());
-  browser = await puppeteer.launch();
-  Promise.race([makeBaseEventList(), _t.errorAfterSeconds(15000)])
-    .then((baseMusicEvents) => {
-      parentPort.postMessage(qwm.workerStarted());
-      const baseMusicEventsCopy = [...baseMusicEvents];
-      return processSingleMusicEvent(baseMusicEventsCopy);
-    })
-    .then(() => {
-      parentPort.postMessage(qwm.workerDone(EventsList.amountOfEvents));
-      EventsList.save(workerData.family, workerData.index);
-    })
-    .catch((error) =>
-      _t.handleError(error, workerData, `outer catch scrape ${workerData.family}`)
-    )
-    .finally(() => {
-      browser && browser.hasOwnProperty("close") && browser.close();
-    });
-}
+const scraperConfig = {
+  baseEventTimeout: 35000,
+  singlePageTimeout: 25000,
+  workerData: Object.assign({}, workerData),
+};
+const doornroosjeScraper = new AbstractScraper(scraperConfig);
 
-async function createSinglePage(url){
-  const page = await browser.newPage();
-  await page
-    .goto(url, {
-      waitUntil: "load", 
-      timeout: 20000,
-    })
-    .then(() => true)
-    .catch((err) => {
-      _t.handleError(
-        err,
-        workerData,
-        `${workerData.name} goto single page mislukt:<br><a href='${url}'>${url}</a><br>`
-      );
-      return false;
-    });
-    return page;
-}
+doornroosjeScraper.listenToMasterThread();
 
-async function processSingleMusicEvent(baseMusicEvents) {
-  qwm.todo(baseMusicEvents.length).forEach((JSONblob) => {
-    parentPort.postMessage(JSONblob);
-  });
+// MAKE BASE EVENTS
 
-  const newMusicEvents = [...baseMusicEvents];
-  const firstMusicEvent = newMusicEvents.shift();
+doornroosjeScraper.makeBaseEventList = async function () {
+  const stopFunctie = setTimeout(() => {
+    throw new Error(
+      `makeBaseEventList is de max tijd voor zn functie ${this.maxExecutionTimethis} voorbij `
+    );
+  }, this.maxExecutionTime);
 
-  if (!firstMusicEvent || baseMusicEvents.length === 0) {
-    return true;
-  }
-
-  const singleEventPage = await createSinglePage(firstMusicEvent.venueEventUrl);
-  if (!singleEventPage) {
-    return newMusicEvents.length
-      ? processSingleMusicEvent(newMusicEvents)
-      : true;
-  }
-
-  try {
-    const pageInfo = await Promise.race([
-      getPageInfo(singleEventPage, firstMusicEvent.venueEventUrl),
-      _t.errorAfterSeconds(15000),
-    ]);
-
-    if (pageInfo && pageInfo.priceTextcontent) {
-      pageInfo.price = _t.getPriceFromHTML(pageInfo.priceTextcontent);
+  const page = await this.browser.newPage();
+  await page.goto(
+    "https://www.doornroosje.nl/?genre=metal%252Cpunk%252Cpost-hardcore%252Cnoise-rock%252Csludge-rock",
+    {
+      waitUntil: "load",
     }
+  );
+  await page.waitForSelector(".c-program__title");
+  await _t.waitFor(50);
+  //await page.waitForTimeout(2500); mogelijk ff wachten op selector
 
-    if (pageInfo && pageInfo.longTextHTML) {
-      let uuid = crypto.randomUUID();
-      const longTextPath = `${fsDirections.publicTexts}/${uuid}.html`;
+  const rawEvents = await page.evaluate((workerIndex) => {
+    return Array.from(document.querySelectorAll(".c-program__item"))
+      .filter((eventEl, index) => {
+        return index % 3 === workerIndex;
+      }) // de deling van die index afhankelijk van workerData.
+      .map((eventEl) => {
+        const res = {
+          unavailable: null,
+        };
+        res.title =
+          eventEl.querySelector(".c-program__title")?.textContent.trim() ??
+          eventEl.querySelector("h1,h2,h3")?.textContent.trim();
+        null;
+        res.shortText =
+          eventEl
+            .querySelector(".c-program__content")
+            ?.textContent.trim()
+            .replace(res.title, "") ?? null;
+        res.venueEventUrl = eventEl?.href;
+        if (!res.title || !res.venueEventUrl) {
+          res.unavailable = "title of url ontbreken";
+        }
+        res.location = "doornroosje";
+        return res;
+      });
+  }, workerData.index);
+  clearTimeout(stopFunctie);
+  !page.isClosed() && page.close();
+  this.dirtyLog(rawEvents);
+  return rawEvents
+    .map((event) => {
+      (!event.venueEventUrl || !event.title) &&
+        parentPort.postMessage(
+          this.qwm.messageRoll(
+            `Red het niet: <a href='${event.venueEventUrl}'>${event.title}</a> ongeldig.`
+          )
+        );
+      return event;
+    })
+    .filter(_t.basicMusicEventsFilter)
+    .map((event) => new MusicEvent(event));
+};;
 
-      fs.writeFile(longTextPath, pageInfo.longTextHTML, "utf-8", () => {});
-      pageInfo.longText = longTextPath;
-    }
+// GET PAGE INFO
 
-    // no date no registration.
-    if (pageInfo) {
-      firstMusicEvent.merge(pageInfo);
-    }
-    firstMusicEvent.registerIfValid();
-    if (!singleEventPage.isClosed() && singleEventPage.close());
-  } catch (pageInfoError) {
-    _t.handleError(pageInfoError, workerData, "get page info fail");
-  }
+doornroosjeScraper.getPageInfo = async function ({ page, url }) {
+  const stopFunctie = setTimeout(() => {
+    throw new Error(
+      `makeBaseEventList is de max tijd voor zn functie ${this.maxExecutionTimethis} voorbij `
+    );
+  }, this.maxExecutionTime);
 
-  return newMusicEvents.length
-    ? processSingleMusicEvent(newMusicEvents)
-    : browser;
-}
-
-async function getPageInfo(page, url) {
-
-  const pageResult = await page.evaluate((months) => {
-    const res = { error: null };
+  const pageInfo = await page.evaluate((months) => {
+    const res = {
+      unavailable: "",
+      pageInfoID: `<a href='${document.location.href}'>${document.title}</a>`,
+      errorsVoorErrorHandler: [],
+    };
     res.image =
       document.querySelector(".c-header-event__image img")?.src ?? null;
     res.priceTextcontent =
@@ -123,26 +106,28 @@ async function getPageInfo(page, url) {
         ? res.longTextHTML + embeds.innerHTML
         : res.longTextHTML;
 
-    try {
-      const startDateRauwMatch = document
+    const startDateRauwMatch = document
+      .querySelector(".c-event-data")
+      ?.innerHTML.match(
+        /(\d{1,2})\s*(januari|februari|maart|april|mei|juni|juli|augustus|september|oktober|november|december)\s*(\d{4})/
+      ); // welke mongool schrijft zo'n regex
+    let startDate;
+    if (startDateRauwMatch && startDateRauwMatch.length) {
+      const day = startDateRauwMatch[1];
+      const month = months[startDateRauwMatch[2]];
+      const year = startDateRauwMatch[3];
+      startDate = `${year}-${month}-${day}`;
+    } else {
+      res.unavailable = "geen startdatum gevonden. ";
+    }
+
+    if (startDate) {
+      const timeMatches = document
         .querySelector(".c-event-data")
-        ?.innerHTML.match(
-          /(\d{1,2})\s*(januari|februari|maart|april|mei|juni|juli|augustus|september|oktober|november|december)\s*(\d{4})/
-        );
-      let startDate;
-      if (startDateRauwMatch && startDateRauwMatch.length) {
-        const day = startDateRauwMatch[1];
-        const month = months[startDateRauwMatch[2]];
-        const year = startDateRauwMatch[3];
-        startDate = `${year}-${month}-${day}`;
-      }
+        .innerHTML.match(/\d\d:\d\d/g);
 
-      if (startDate) {
-        const timeMatches = document
-          .querySelector(".c-event-data")
-          .innerHTML.match(/\d\d:\d\d/g);
-
-        if (timeMatches && timeMatches.length) {
+      if (timeMatches && timeMatches.length) {
+        try {
           if (timeMatches.length == 2) {
             res.startDateTime = new Date(
               `${startDate}:${timeMatches[1]}`
@@ -155,55 +140,43 @@ async function getPageInfo(page, url) {
               `${startDate}:${timeMatches[0]}`
             ).toISOString();
           }
+        } catch (error) {
+          errorsVoorErrorHandler.push({
+            error,
+            remarks:
+              "fout bij tijd of datums. matches: " +
+              timeMatches +
+              " datum: " +
+              startDate,
+          });
         }
+      } else {
+        res.unavailable += `geen tijden gevonden. `;
       }
-    } catch (error) {
-      error.pageInfo = res;
-      throw error; // naar then en daar erroren om pageInfo te kunnen zien
+    }
+    if (res.unavailable) {
+      res.unavailable += res.pageInfoID;
     }
     return res;
   }, doornRoosjeMonths);
-  if (pageResult instanceof Error) {
+
+  this.dirtyLog(pageInfo);
+
+  pageInfo?.errorsVoorErrorHandler?.forEach((errorHandlerMeuk) => {
     _t.handleError(
-      pageResult,
+      errorHandlerMeuk.error,
       workerData,
-      `<a href='${url}'> get page info ${workerData.family}</a><br>`
+      errorHandlerMeuk.remarks
     );
-    (error?.pageInfo ?? null) &&
-      parentPort.postMessage(qwm.debugger(pageResult.pageInfo));
-    return null;
+  });
+
+  clearTimeout(stopFunctie);
+  !page.isClosed() && page.close();
+
+  if (!pageInfo) {
+    return {
+      unavailable: `Geen resultaat <a href="${url}">van pageInfo</a>`,
+    };
   }
-  return pageResult; // is pageInfo
-}
-
-async function makeBaseEventList() {
-  const page = await browser.newPage();
-  await page.goto(
-    "https://www.doornroosje.nl/?genre=metal%252Cpunk%252Cpost-hardcore%252Cnoise-rock%252Csludge-rock",
-    {
-      waitUntil: "load",
-    }
-  );
-  await page.waitForTimeout(2500);
-
-  const rawEvents = await page.evaluate((workerIndex) => {
-    return Array.from(document.querySelectorAll(".c-program__item"))
-      .filter((eventEl, index) => {
-        return index % 6 === workerIndex;
-      })
-      .map((eventEl) => {
-        const res = {};
-        res.title =
-          eventEl.querySelector(".c-program__title")?.textContent.trim() ??
-          null;
-        res.shortText =
-          eventEl.querySelector(".c-program__info")?.textContent.trim() ?? null;
-        res.venueEventUrl = eventEl.href;
-        res.location = "doornroosje";
-        return res;
-      });
-  }, workerData.index);
-  return rawEvents
-    .filter(_t.basicMusicEventsFilter)
-    .map((event) => new MusicEvent(event));
-}
+  return pageInfo;
+};

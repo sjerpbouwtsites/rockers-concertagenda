@@ -66,6 +66,15 @@ nuldertienScraper.makeBaseEventList = async function () {
   !page.isClosed() && page.close();
   clearTimeout(stopFunctie);
   return rawEvents
+    .map((event) => {
+      !event.venueEventUrl &&
+        parentPort.postMessage(
+          this.qwm.messageRoll(
+            `Red het niet: <a href='${event.venueEventUrl}'>${event.title}</a> ongeldig.`
+          )
+        );
+      return event;
+    })
     .filter(_t.basicMusicEventsFilter)
     .map((event) => new MusicEvent(event));
 };

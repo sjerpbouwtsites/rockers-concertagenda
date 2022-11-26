@@ -79,6 +79,9 @@ export default class WorkerStatus {
    * monitorWebsocketServer
    */
   static get mwss() {
+    if (!WorkerStatus.monitorWebsocketServer) {
+      throw Error("websocket ontbreekt op WorkerStatus");
+    }
     return WorkerStatus.monitorWebsocketServer;
   }
 
