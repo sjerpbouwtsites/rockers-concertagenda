@@ -1,21 +1,45 @@
 import fs from "fs";
 import fsDirections from "./fs-directions.js";
-import { handleError, errorAfterSeconds, log } from "./tools.js";
+import { handleError, errorAfterSeconds } from "./tools.js";
+import { QuickWorkerMessage } from "./rock-worker.js";
+import passMessageToMonitor from "../monitor/pass-message-to-monitor.js";
+
 export default class EventsList {
   static _events = [];
+  static _invalidEvents = [];
   static _meta = {};
+  static timestampsExistenceVerified = false;
 
+  static workerSignature = {
+    // dit is (nog) geen worker
+    family: "events-list",
+    index: 0,
+    name: `${"events-list-0"}`,
+    scraper: false,
+  };
+
+  static get amountOfEvents() {
+    return EventsList._events.length;
+  }
   static save(name, workerIndex = null) {
-
     try {
-      EventsList.checkTimestampsExist();
+      EventsList.guaranteeTimestampExistence();
       const pathToEventList = fsDirections.eventLists;
+      const pathToINVALIDEventList = fsDirections.invalidEventLists;
       const inbetweenFix = workerIndex !== null ? `-${workerIndex}` : ``;
       const pathToEventListFile = `${pathToEventList}/${name}${inbetweenFix}.json`;
-      fs.writeFileSync(
+      const pathToINVALIDEventListFile = `${pathToINVALIDEventList}/${name}${inbetweenFix}.json`;
+      fs.writeFile(
         pathToEventListFile,
-        JSON.stringify(EventsList._events, null, "  ")
+        JSON.stringify(EventsList._events, null, "  "),
+        () => {}
       );
+      fs.writeFile(
+        pathToINVALIDEventListFile,
+        JSON.stringify(EventsList._invalidEvents, null, "  "),
+        () => {}
+      );
+
       const eventListTimestamps = JSON.parse(
         fs.readFileSync(fsDirections.timestampsJson)
       );
@@ -27,28 +51,53 @@ export default class EventsList {
         JSON.stringify(eventListTimestamps, null, "  ")
       );
     } catch (error) {
-      handleError(error);
+      handleError(
+        error,
+        EventsList.workerSignature,
+        `error while saving name ${name} and workerIndex ${workerIndex}`
+      );
       return false;
     }
     return true;
   }
 
-  static checkTimestampsExist() {
-    if (!fs.existsSync(fsDirections.timestampsJson)) {
+  static guaranteeTimestampExistence() {
+    if (EventsList.timestampsExistenceVerified) return true;
+    const timestampsExist = fs.existsSync(fsDirections.timestampsJson);
+    if (!timestampsExist) {
       fs.writeFileSync(fsDirections.timestampsJson, JSON.stringify({}));
+    } else {
+      try {
+        JSON.parse(fs.readFileSync(fsDirections.timestampsJson));
+      } catch (error) {
+        handleError(
+          error,
+          EventsList.workerSignature,
+          `timestamps konden niet gelezen worden als JSON. nieuwe timestamp json gemaakt`
+        );
+        fs.writeFileSync(fsDirections.timestampsJson, JSON.stringify({}));
+      }
     }
+    return true;
   }
 
-  static isOld(name, forceScrapeList = '') {
-
-    if (forceScrapeList.includes(name)) {
+  static isOld(name, ignoreAgeForceScrape = false) {
+    if (ignoreAgeForceScrape) {
       return true;
     }
 
-    EventsList.checkTimestampsExist();
-    const eventListTimestamps = JSON.parse(
-      fs.readFileSync(fsDirections.timestampsJson)
-    );
+    let eventListTimestamps;
+    if (EventsList.guaranteeTimestampExistence()) {
+      try {
+        eventListTimestamps = JSON.parse(
+          fs.readFileSync(fsDirections.timestampsJson)
+        );
+      } catch (error) {
+        throw new Error(`Kan timestamp niet lezen van naam ${name}.\n<br>
+        locatie van timestamps zou moeten zijn ${fsDirections.timestampsJson}.\n<br>
+        ${error.message}`);
+      }
+    }
 
     const d = new Date();
     const currentMilliseconds = d.getTime();
@@ -72,8 +121,15 @@ export default class EventsList {
     try {
       EventsList._events.push(event);
     } catch (error) {
-      handleError(error);
+      handleError(
+        error,
+        EventsList.workerSignature,
+        `kan niet pushen addEvent`
+      );
     }
+  }
+  static addInvalidEvent(invalidEvent) {
+    EventsList._invalidEvents.push(invalidEvent);
   }
 
   static async printAllToJSON() {
@@ -82,7 +138,7 @@ export default class EventsList {
     const pathToEventList = fsDirections.eventLists;
     const eventListTimestamps = Object.keys(
       JSON.parse(fs.readFileSync(fsDirections.timestampsJson))
-    )
+    );
 
     EventsList._events = [];
     EventsList._meta.locations = {};
@@ -106,13 +162,15 @@ export default class EventsList {
           .replace(".json", "");
         if (!EventsList._meta.locations[correspondingTimestampName]) {
           EventsList._meta.locations[correspondingTimestampName] = {};
-          EventsList._meta.locations[correspondingTimestampName].name = correspondingTimestampName
+          EventsList._meta.locations[correspondingTimestampName].name =
+            correspondingTimestampName;
           EventsList._meta.locations[correspondingTimestampName].count = 0;
         }
-        EventsList._meta.locations[correspondingTimestampName].count = EventsList._meta.locations[correspondingTimestampName].count + parsedJSON.length
+        EventsList._meta.locations[correspondingTimestampName].count =
+          EventsList._meta.locations[correspondingTimestampName].count +
+          parsedJSON.length;
         return parsedJSON;
       });
-
 
     EventsList._events = allEventLists.flat();
 
@@ -137,16 +195,23 @@ export default class EventsList {
       JSON.stringify(EventsList._meta, null, "  "),
       "utf-8"
     );
+    const qwm = new QuickWorkerMessage(EventsList.workerSignature);
+    passMessageToMonitor(
+      qwm.toConsole(EventsList._meta),
+      EventsList.workerSignature
+    );
 
     fs.writeFileSync(
       fsDirections.eventsListJson,
       JSON.stringify(EventsList._events, null, "  "),
       "utf-8"
     );
-    fs.copyFileSync(
-      fsDirections.metaJson,
-      fsDirections.metaPublicJson
+    passMessageToMonitor(
+      qwm.toConsole(EventsList._events),
+      EventsList.workerSignature
     );
+
+    fs.copyFileSync(fsDirections.metaJson, fsDirections.metaPublicJson);
 
     fs.copyFileSync(
       fsDirections.eventsListJson,
@@ -156,11 +221,15 @@ export default class EventsList {
       fsDirections.timestampsJson,
       fsDirections.timestampsPublicJson
     );
-    console.log(" ")
-    console.log("Events per location:")
-    Object.values(EventsList._meta.locations).forEach(locationMeta => {
-      console.log(`${locationMeta.name.padEnd(30, ' ')} ${locationMeta.count}`)
-    })
+    console.log(
+      "hier was de events perlocation",
+      "events-list EventsList._events.sort"
+    );
+    // console.log(" ")
+    // console.log("Events per location:")
+    // Object.values(EventsList._meta.locations).forEach(locationMeta => {
+    //   console.log(`${locationMeta.name.padEnd(30, ' ')} ${locationMeta.count}`)
+    // })
   }
 }
 

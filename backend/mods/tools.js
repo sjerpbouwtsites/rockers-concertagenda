@@ -1,18 +1,46 @@
-import { parentPort } from "worker_threads";
+import { parentPort, isMainThread } from "worker_threads";
 import fs from "fs";
 import fsDirections from "./fs-directions.js";
 import crypto from "crypto";
-import fetch from 'node-fetch';
-
-export function handleError(error, location = 'unknown location') {
-  parentPort.postMessage({
-    status: "error",
-    message: error,
+import fetch from "node-fetch";
+import { WorkerMessage } from "./rock-worker.js";
+import passMessageToMonitor from "../monitor/pass-message-to-monitor.js";
+/**
+ * handleError, generic error handling for the entire app
+ * passes a marked up error to the monitor
+ * adds error to the errorLog in temp.
+ * @param {Error} error
+ * @param {family,name,index} workerData
+ * @param {string} remarks Add some remarks to help you find back the origin of the error.
+ */
+export function handleError(error, workerData, remarks = null) {
+  const updateErrorMsg = WorkerMessage.quick("update", "error", {
+    content: {
+      workerData: workerData,
+      remarks: remarks,
+      status: "error",
+      text: `${error.message}\n${error.stack}`,
+    },
   });
+  const clientsLogMsg = WorkerMessage.quick("clients-log", "error", {
+    error,
+    workerData,
+  });
+  if (isMainThread) {
+    passMessageToMonitor(updateErrorMsg, workerData.name);
+    passMessageToMonitor(clientsLogMsg, workerData.name);
+  } else if (workerData?.scraper) {
+    parentPort.postMessage(updateErrorMsg);
+    parentPort.postMessage(clientsLogMsg);
+  } else {
+    console.log(`ODD ERROR HANDLING. neither on main thread nor in scraper.`);
+    console.log(error, workerData, remarks);
+    console.log('')
+  }
   const time = new Date();
   const curErrorLog = fs.readFileSync(fsDirections.errorLog) || "";
   const newErrorLog = `
-  ${location} Error - ${time.toLocaleTimeString()}
+  ${workerData?.name} Error - ${time.toLocaleTimeString()}
   ${error.stack} 
   ${error.message}
   
@@ -25,11 +53,11 @@ export function failurePromiseAfter(time) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       reject({
-        status: 'failure',
-        data: null
+        status: "failure",
+        data: null,
       });
-    }, time)
-  })
+    }, time);
+  });
 }
 
 export function getShellArguments() {
@@ -38,12 +66,21 @@ export function getShellArguments() {
     if (index < 2) {
       return;
     }
-    if (!val.includes('=')) {
-      throw new Error(`Invalid shell arguments passed to node. Please use foo=bar bat=gee.`)
+    if (!val.includes("=")) {
+      throw new Error(
+        `Invalid shell arguments passed to node. Please use foo=bar bat=gee.`
+      );
     }
-    const [argName, argValue] = val.split('=');
+    const [argName, argValue] = val.split("=");
     shellArguments[argName] = argValue;
   });
+  
+  if (shellArguments.force && shellArguments.force.includes("all")) {
+    shellArguments.force += Object.keys(
+      JSON.parse(fs.readFileSync(fsDirections.timestampsJson))
+    ).join(";");
+  }
+
   return shellArguments;
 }
 
@@ -114,15 +151,12 @@ export function getPriceFromHTML(testText = null, contextText = null) {
 
   return null;
 }
-
-export function log(message) {
-  parentPort.postMessage({
-    status: "console",
-    message: message,
-  });
-}
-
 export function basicMusicEventsFilter(musicEvent, index) {
+
+  if (!musicEvent.venueEventUrl) {
+    return false;
+  }
+
   const t = musicEvent?.title ?? "";
   const st = musicEvent?.shortText ?? "";
   const searchShowNotOnDate = `${t.toLowerCase()} ${st.toLowerCase()}`;
@@ -162,78 +196,19 @@ export function saveLongTextHTML(pageInfo) {
   let uuid = crypto.randomUUID();
   const longTextPath = `${fsDirections.publicTexts}/${uuid}.html`;
 
-  fs.writeFile(longTextPath, pageInfo.longTextHTML, "utf-8", () => { });
+  fs.writeFile(longTextPath, pageInfo.longTextHTML, "utf-8", () => {});
   return longTextPath;
 }
 
 const def = {
   handleError,
   errorAfterSeconds,
-  isRock
 };
 
 export default def;
 
-
-export async function isRock(
-  browser,
-  eventTitles,
-  isRockPossible = false,
-  logCheck = false
-) {
-
-  if (!eventTitles.length) {
-    return false;
-  }
-  if (isRockPossible) {
-    return true;
-  }
-
-  const newTitles = [...eventTitles]
-  const title = newTitles.shift();
-
-  const MetalEncFriendlyTitle = title.replace(/\s/g, '_');
-  const foundInMetalEncyclopedia = await fetch(`https://www.metal-archives.com/search/ajax-band-search/?field=name&query=${MetalEncFriendlyTitle}`)
-    .then(result => result.json())
-    .then(parsedJson => {
-      return parsedJson.iTotalRecords > 0;
-    })
-  isRockPossible = isRockPossible || foundInMetalEncyclopedia
-
-  let wikipediaSaysRock = false;
-  if (!isRockPossible) {
-    const page = await browser.newPage();
-    await page.goto(`https://en.wikipedia.org/wiki/${title.replace(/\s/g, '_')}`);
-    wikipediaSaysRock = await page.evaluate(() => {
-      const isRock = !!document.querySelector(".infobox a[href*='rock']") && !document.querySelector(".infobox a[href*='Indie_rock']");
-      const isMetal = !!document.querySelector(".infobox a[href*='metal']");
-      return isRock || isMetal;
-    });
-    page.close();
-  }
-
-  isRockPossible = isRockPossible || wikipediaSaysRock
-
-
-  if (logCheck) {
-    log(`checking: ${eventTitles.join('; ')}, isRock: ${isRockPossible} MetalEnc: ${foundInMetalEncyclopedia} wiki: ${wikipediaSaysRock}`)
-  }
-
-  if (isRockPossible) {
-    return true;
-  }
-
-  if (newTitles.length) {
-    return await isRock(browser, newTitles, isRockPossible)
-  } else {
-    return false;
-  }
-
-}
-
-
 export async function waitFor(wait = 500) {
   return new Promise((res, rej) => {
     setTimeout(res, wait);
-  })
+  });
 }

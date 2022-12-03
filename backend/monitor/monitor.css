@@ -1,0 +1,211 @@
+html, body {
+  width: 100%;
+  height: 100%;
+}
+body {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.monitorfields__container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.monitorfield__outer {
+  flex-basis: 450px;
+  flex-shrink: 0;
+}
+.monitorfield__outer--errors {
+  max-width: calc(100% - 450px);
+    flex-basis: 750px;
+}
+.monitorfield {
+  background-color: #eee;
+  height: 300px;
+  overflow-y: scroll;
+  border-radius: 1px;
+  margin: 20px;
+}
+.monitorfield__header {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 20px;
+}
+.monitorfield__filelink {
+  display: inline-block;
+  margin-left: 2em;
+}
+
+.monitorfield__error-line {
+  max-width: 75ch;
+  font-family: monospace;
+  display: block;
+  word-wrap: anywhere;
+}
+
+.monitorfield__error-line+.monitorfield__error-line {
+  margin-left: 2rem;
+}
+.monitorfield__title {
+  margin: 0;
+  line-height: 1;
+}
+.monitorfield__main {
+  padding: 20px 40px;
+}
+.monitorfield__list {
+  list-style-type: none;
+  font-size: .9rem;
+  font-weight: 600;
+  letter-spacing: .05em;
+  margin: 0;
+  padding: 0;
+}
+.monitorfield__list-item {
+  padding-bottom: 7.5px;
+  margin-bottom: 7.55px;
+  border-bottom: 1px solid #ffffff52;
+  line-height: 1;
+}
+.monitorfield__list--error .monitorfield__list-item{
+  padding-bottom: .75em;
+  margin-bottom: .75ems;  
+}
+.monitorfield__list-item:first-child {
+  font-weight: 800;
+}
+.monitorfield__list-item ~ .monitorfield__list-item {
+  opacity: .75;
+}
+.monitorfield__list-item-left {
+  display: block;
+}
+.monitorfield__error-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: .75rem;
+  max-width: 450px;
+}
+
+.monitorfield__error-header>span {}
+
+.monitorfield__error-workername {
+  line-height: 0.9em;
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.monitorfield__errortext {
+  letter-spacing: -.04em;
+}
+.monitorfield__error-remarks {
+  font-weight: 600;
+  font-size: 1.2rem;
+  font-variant: small-caps;
+  max-width: 150px;
+  text-align: right;
+  line-height: .7em;
+  color: #f7e0e0;
+}
+
+.monitorfield__subtitle {}
+.monitorfield--Updates {
+  background-color: #8ce88c;
+}
+.monitorfield--Fouten {
+  background-color: #c1472e;
+}
+.monitorfield--Fouten .monitorfield__list-item-left {
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+.monitorfield__outer--app-overview {
+  flex-basis: 800px;
+}
+
+.monitorfield__outer--app-overview .monitorfield {
+  background-color: #121212;
+  color: rgb(249, 234, 232);
+  height: auto;
+  min-height: 300px;  
+}
+
+.monitorfield__outer--app-overview .monitorfield__header {
+  background-color: rgba(185, 27, 27, 0.5);
+}
+.warning-client-closing {
+  position: fixed;
+  bottom: 20px;
+  width: 380px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  padding: 20px;
+  font-weight: bold;
+  color: white;
+  background-color: #212112;
+}
+pre {
+  margin: 0;
+}
+
+.app-overview-table thead {
+  line-height: 50px;
+}
+
+.app-overview-table {
+  border-collapse: collapse;
+}
+
+.app-overview-table tbody th,
+.app-overview-table thead th:first-child {
+  width: 120px;
+  text-align: right;
+}
+
+.app-overview-table tbody th::after,
+.app-overview-table thead th:first-child::after {
+  content: "    ";
+}
+
+.worker-data-cell {
+  line-height: 1;
+  min-width: 50px;
+  text-align: center;
+}
+
+.worker-data-cell.worker-status--registered {
+  background-color: rgba(148, 148, 114, 0.2)
+}
+
+.worker-data-cell.worker-status--working {
+  background-color: rgba(148, 148, 114, 0.5)
+}
+
+.worker-data-cell.worker-status--done {
+  background-color: rgba(34, 255, 255, 0.6);
+}
+.worker-data-cell.worker-errors--has-errors,
+.worker-data-cell.worker-status--done.worker-errors--has-errors {
+  background-color: #c1472e;
+}
+
+
+.worker-cell-inner {
+  display: block;
+  line-height: 2em;
+}
+
+.worker-errors--has-errors {
+  border: 3px dotted blue;
+}
+
+.kutspacer {
+  display: inline-block;
+  width: 25px;
+}

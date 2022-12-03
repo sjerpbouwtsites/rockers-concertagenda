@@ -17,7 +17,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "backend-rockagenda": "killall -s 9 chrome; cd ~/dev/apache/concertagenda/backend; clear; node index.js force=all"
   },
   "eslintConfig": {
     "extends": [
@@ -39,6 +40,9 @@
   },
   "devDependencies": {
     "node-fetch": "^3.2.4",
-    "os-utils": "^0.0.14"
-  }
+    "open": "^8.4.0",
+    "os-utils": "^0.0.14",
+    "websocket": "^1.0.34"
+  },
+  "type": "module"
 }

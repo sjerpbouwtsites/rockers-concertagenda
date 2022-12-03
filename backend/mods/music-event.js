@@ -1,5 +1,8 @@
 import EventsList from "./events-list.js";
-import { log } from "./tools.js";
+import { handleError } from "./tools.js";
+import passMessageToMonitor from "../monitor/pass-message-to-monitor.js";
+import wsMessage from "../monitor/wsMessage.js";
+import WorkerStatus from "./WorkerStatus.js";
 
 export default class MusicEvent {
   doorOpenDateTime = null;
@@ -24,11 +27,23 @@ export default class MusicEvent {
   }
   register() {
     EventsList.addEvent(this);
+    return this;
   }
   get isValid() {
     return (
       this.startDateTime &&
       /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}.\d{3}Z/.test(this.startDateTime)
     );
+  }
+  registerIfValid() {
+    if (this.isValid) {
+      this.register(); // @TODO registreer welke events invalid waren.
+    }
+  }
+  registerINVALID(workerData = {}) {
+    const prod = {};
+    Object.assign(prod, this);
+    Object.assign(prod, workerData);
+    EventsList.addInvalidEvent(prod);
   }
 }
