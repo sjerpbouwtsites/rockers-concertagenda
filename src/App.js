@@ -1,4 +1,5 @@
 import React from "react";
+import Flickity from "react-flickity-component";
 import "./App.css";
 import "./event-blocks.css";
 import "./App-mobile.css";
@@ -7,7 +8,6 @@ import EventBlocks from "./mods/EventBlocks.js";
 import HeaderMenu from "./mods/HeaderMenu.js";
 import FilterMenu from "./mods/FilterMenu.js";
 import OpenScreen from "./mods/OpenScreen.js";
-import Flickity from "react-flickity-component.js";
 
 const flicketyOptions = {
   initialIndex: 1, // 0: filter; 1: app; 2: text;
