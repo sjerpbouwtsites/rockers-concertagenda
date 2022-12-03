@@ -1,40 +1,41 @@
-import MusicEvent from "../mods/music-event.js";
-import { parentPort, workerData } from "worker_threads";
+import { workerData } from "worker_threads";
 import * as _t from "../mods/tools.js";
-import AbstractScraper from "./abstract-scraper.js";
+import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import { dbsMonths } from "../mods/months.js";
+import makeScraperConfig from "./gedeeld/scraper-config.js";
 
 // SCRAPER CONFIG
 
-const scraperConfig = {
-  baseEventTimeout: 15000,
-  singlePageTimeout: 30000,
+const dbsScraper = new AbstractScraper(makeScraperConfig({
   maxExecutionTime: 60000,
-  puppeteerConfig: {
-    singlePage: {
-      waitUntil: "domcontentloaded", // @TODO overal invoeren
-      timeout: 25000,
-    },
-  },
   workerData: Object.assign({}, workerData),
-};
-const dbsScraper = new AbstractScraper(scraperConfig);
+  puppeteerConfig: {
+    mainPage: {
+      timeout: 15000,
+      waitUntil: 'domcontentloaded'
+    },
+    singlepage: {
+      timeout: 25000
+    },
+    app: {
+      mainPage: {
+        url: "https://www.dbstudio.nl/agenda/",
+        requiredProperties: ['venueEventUrl', 'title', 'startDateTime']
+      }
+    }
+  }
+}));
 
 dbsScraper.listenToMasterThread();
 
 // MAKE BASE EVENTS
 
 dbsScraper.makeBaseEventList = async function () {
-  const stopFunctie = setTimeout(() => {
-    throw new Error(
-      `makeBaseEventList is de max tijd voor zn functie ${this.maxExecutionTime} voorbij `
-    );
-  }, this.maxExecutionTime);
-  const page = await this.browser.newPage();
 
-  await page.goto("https://www.dbstudio.nl/agenda/", {
-    waitUntil: "load",
-  });
+  const {stopFunctie, page} = this.makeBaseEventListStart()
+
+  await page.waitForSelector('.fusion-events-post')
+  await _t.waitFor(100)
 
   const rawEvents = await page.evaluate(
     ({ months, workerIndex }) => {
@@ -114,23 +115,11 @@ dbsScraper.makeBaseEventList = async function () {
     },
     { months: dbsMonths, workerIndex: workerData.index }
   );
-  clearTimeout(stopFunctie);
-  !page.isClosed() && page.close();
-
-  this.dirtyLog(rawEvents);
-
-  return rawEvents
-    .map((event) => {
-      (!event.venueEventUrl || !event.title) &&
-        parentPort.postMessage(
-          this.qwm.messageRoll(
-            `Red het niet: <a href='${event.venueEventUrl}'>${event.title}</a> ongeldig.`
-          )
-        );
-      return event;
-    })
-    .filter(_t.basicMusicEventsFilter)
-    .map((event) => new MusicEvent(event));
+ 
+  return await this.makeBaseEventListEnd({
+    stopFunctie, page, rawEvents}
+  );
+  
 };
 
 // GET PAGE INFO

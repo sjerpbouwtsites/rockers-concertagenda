@@ -1,33 +1,37 @@
-import MusicEvent from "../mods/music-event.js";
-import { parentPort, workerData } from "worker_threads";
+import { workerData } from "worker_threads";
 import * as _t from "../mods/tools.js";
-import AbstractScraper from "./abstract-scraper.js";
+import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import { occiiMonths } from "../mods/months.js";
+import makeScraperConfig from "./gedeeld/scraper-config.js";
 
 // SCRAPER CONFIG
 
-const scraperConfig = {
-  baseEventTimeout: 120000,
-  singlePageTimeout: 45000,
+const occiiScraper = new AbstractScraper(makeScraperConfig({
   maxExecutionTime: 120000,
   workerData: Object.assign({}, workerData),
-};
-const occiiScraper = new AbstractScraper(scraperConfig);
+  puppeteerConfig: {
+    mainPage: {
+      timeout: 90000,
+    },
+    singlepage: {
+      timeout: 45000
+    },
+    app: {
+      mainPage: {
+        url: "https://occii.org/events/",
+        requiredProperties: ['venueEventUrl']        
+      }
+    }
+  }
+}));
 
 occiiScraper.listenToMasterThread();
 
 // MAKE BASE EVENTS
 
 occiiScraper.makeBaseEventList = async function () {
-  const stopFunctie = setTimeout(() => {
-    throw new Error(
-      `makeBaseEventList is de max tijd voor zn functie ${this.maxExecutionTime} voorbij `
-    );
-  }, this.maxExecutionTime);
-  const page = await this.browser.newPage();
-  await page.goto("https://occii.org/events/", {
-    waitUntil: "domcontentloaded",
-  });
+
+  const {stopFunctie, page} = this.makeBaseEventListStart()
 
   const rawEvents = await page.evaluate((workerIndex) => {
     return Array.from(document.querySelectorAll(".occii-event-display"))
@@ -49,27 +53,10 @@ occiiScraper.makeBaseEventList = async function () {
       });
   }, workerData.index);
 
-  clearTimeout(stopFunctie);
-  !page.isClosed() && page.close();
-
-  const baseMusicEvents = rawEvents
-    .filter(_t.basicMusicEventsFilter)
-    .map((event) => {
-      !event.venueEventUrl &&
-        parentPort.postMessage(
-          this.qwm.messageRoll(
-            `Red het niet: <a href='${event.venueEventUrl}'>${event.title}</a> ongeldig.`
-          )
-        );
-      return event;
-    })
-    .map((eventDatum) => {
-      const thisMusicEvent = new MusicEvent(eventDatum);
-      return thisMusicEvent;
-    });
-
-  !page.isClosed() && page.close();
-  return baseMusicEvents;
+  return await this.makeBaseEventListEnd({
+    stopFunctie, page, rawEvents}
+  );
+  
 };
 // GET PAGE INFO
 

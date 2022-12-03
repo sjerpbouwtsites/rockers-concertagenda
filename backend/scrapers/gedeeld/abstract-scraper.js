@@ -1,11 +1,13 @@
-import { QuickWorkerMessage } from "../mods/rock-worker.js";
+import { QuickWorkerMessage } from "../../mods/rock-worker.js";
 import {parentPort, workerData} from "worker_threads"
 import puppeteer from "puppeteer";
-import fsDirections from "../mods/fs-directions.js";
+import fsDirections from "../../mods/fs-directions.js";
 import crypto from "crypto";
-import * as _t from "../mods/tools.js";
+import * as _t from "../../mods/tools.js";
 import fs from "fs";
-import EventsList from "../mods/events-list.js";
+import EventsList from "../../mods/events-list.js";
+import MusicEvent from "../../mods/music-event.js";
+
 
 /**
  * @method eventGenerator<Generator>
@@ -65,6 +67,116 @@ export default class AbstractScraper {
   async makeBaseEventList() {
     throw Error("abstract method used thx ");
   }
+
+  /**
+   * // stap 1.2
+   * Initieert stopFunctie; 
+   * indien puppeteer niet uitgezet, initieert pagina & navigeert naar main
+   * @returns {stopFunctie timeout, page puppeteer.Page}
+   */
+  async makeBaseEventListStart(){
+    const stopFunctie = setTimeout(() => {
+      throw new Error(`makeBaseEvent overtijd. Max: ${this.puppeteerConfig.mainPage.timeout}`);
+    }, this.puppeteerConfig.mainPage.timeout);
+  
+    if (this.app.mainPage.useCustomScraper) {
+      return {
+        stopFunctie,
+        page: null
+      }
+    }
+    if (!this.app.mainPage.url) {
+      throw new Error(`geen app.mainPage.url ingesteld`);
+    }
+    
+    const page = await this.browser.newPage();
+    await page.goto(this.puppeteerConfig.app.mainPage.url, this.puppeteerConfig.mainPage); 
+    return {
+      stopFunctie,
+      page,
+    } 
+  }
+
+  /**
+   * beeindigt stopFunctie timeout
+   * sluit page
+   * verwerkt fouten van raw make base events
+   * haalt rawEvents door basicMusicEventsFilter en returned
+   *
+   * @param {stopFunctie timeout, page Puppeteer.Page, rawEvents {}<>} 
+   * @return {MusicEvent[]}
+   * @memberof AbstractScraper
+   */
+  async makeBaseEventListEnd({stopFunctie, page, rawEvents}){
+
+    clearTimeout(stopFunctie);
+    
+    page && !page.isClosed() && page.close();
+
+    rawEvents.forEach((event) => {
+      event.errorsVoorErrorHandler?.forEach((errorHandlerMeuk) => {
+        _t.handleError(
+          errorHandlerMeuk.error,
+          this.workerData,
+          errorHandlerMeuk.remarks
+        );
+      });
+    });
+
+    return rawEvents
+      .filter(this.basicMusicEventsFilter)
+      .map((event) => new MusicEvent(event));
+  }
+
+  /**
+   * verifieert requiredProperties uit puppeteerConfig.app.mainPage.requiredProperties
+   * waarschuwt naar monitor wie uitvalt 
+   * controleert op verboden woorden zoals 'verplaatst' etc.
+   * 
+   * @param {MusicEvent} musicEvent 
+   * @return {boolean}
+   * @memberof AbstractScraper
+   */
+  basicMusicEventsFilter(musicEvent){
+    
+    const meetsRequiredProperties = this.puppeteerConfig.app.mainPage.requiredProperties.reduce((prev, next)=>{
+      return prev && musicEvent[next]
+    }, true)        
+    if (!meetsRequiredProperties) {
+      parentPort.postMessage(this.qwm.messageRoll(`<a href='${musicEvent.venueEventUrl}'>${musicEvent.title}</a> ongeldig.`));
+    }
+   
+    const t = musicEvent?.title ?? "";
+    const st = musicEvent?.shortText ?? "";
+    const searchShowNotOnDate = `${t.toLowerCase()} ${st.toLowerCase()}`;
+    
+    let forbiddenTermUsed = '';
+    const hasForbiddenTerm = [
+      "uitgesteld",
+      "sold out",
+      "gecanceld",
+      "uitverkocht",
+      "afgelast",
+      "geannuleerd",
+      "verplaatst",
+    ].map((forbiddenTerm) => {
+      if (searchShowNotOnDate.includes(forbiddenTerm)) {
+        forbiddenTermUsed += ` ${forbiddenTerm}`;
+      }
+      return searchShowNotOnDate.includes(forbiddenTerm);
+    }).reduce((prev, next) =>{
+      return prev && next
+    }, true);
+    
+    if (hasForbiddenTerm) {
+      parentPort.postMessage(this.qwm.messageRoll(`<a href='${musicEvent.venueEventUrl}'>${musicEvent.title}</a> is ${forbiddenTermUsed}/`));
+    }
+
+    return hasForbiddenTerm && meetsRequiredProperties;
+     
+  }
+
+  
 
   // step 2
   /**

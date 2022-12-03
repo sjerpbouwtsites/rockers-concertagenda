@@ -1,34 +1,39 @@
 import { dynamoMonths } from "../mods/months.js";
-import MusicEvent from "../mods/music-event.js";
-import { parentPort, workerData } from "worker_threads";
-import * as _t from "../mods/tools.js";
-import AbstractScraper from "./abstract-scraper.js";
+import { workerData } from "worker_threads";
+import AbstractScraper from "./gedeeld/abstract-scraper.js";
+import makeScraperConfig from "./gedeeld/scraper-config.js";
 
 // SCRAPER CONFIG
 
-const scraperConfig = {
-  baseEventTimeout: 35000,
-  singlePageTimeout: 25000,
+const dynamoScraper = new AbstractScraper(makeScraperConfig({
+  maxExecutionTime: 60000,
   workerData: Object.assign({}, workerData),
-};
-const dynamoScraper = new AbstractScraper(scraperConfig);
+  puppeteerConfig: {
+    mainPage: {
+      timeout: 35000,
+    },
+    singlepage: {
+      timeout: 25000
+    },
+    app: {
+      mainPage: {
+        url: "https://www.dynamo-eindhoven.nl/programma/?_sfm_fw%3Aopt%3Astyle=15",
+        requiredProperties: ['venueEventUrl', 'title']
+      }
+    }
+  }
+}));
 
 dynamoScraper.listenToMasterThread();
 
 // MAKE BASE EVENTS
 
 dynamoScraper.makeBaseEventList = async function () {
-  const stopFunctie = setTimeout(() => {
-    throw new Error(
-      `makeBaseEventList is de max tijd voor zn functie ${this.maxExecutionTimethis} voorbij `
-    );
-  }, this.maxExecutionTime);
-  const page = await this.browser.newPage();
-  await page.goto(
-    "https://www.dynamo-eindhoven.nl/programma/?_sfm_fw%3Aopt%3Astyle=15"
-  );
+
+  const {stopFunctie, page} = this.makeBaseEventListStart()
+
   const rawEvents = await page.evaluate(
-    ({ months, workerIndex }) => {
+    ({ workerIndex }) => {
       return Array.from(
         document.querySelectorAll(".search-filter-results .timeline-article")
       )
@@ -43,49 +48,37 @@ dynamoScraper.makeBaseEventList = async function () {
           const timelineInfoContainerEl = baseEvent.querySelector(
             ".timeline-info-container"
           );
-          let shortText, dateDay, dateMonth, dateYear;
-          if (timelineInfoContainerEl) {
-            shortText = timelineInfoContainerEl.querySelector("p").textContent;
-            const dateBasis =
-              timelineInfoContainerEl.querySelector(".date").textContent;
-            const dateSplit = dateBasis.split("/").map((str) => str.trim());
-            if (dateSplit.length < 3) {
-              return;
-            }
-            dateDay = dateSplit[0].replace(/\D/g, "");
-            dateMonth = months[dateSplit[1].trim()];
-            dateYear = dateSplit[2];
-          }
+          //          let shortText, dateDay, dateMonth, dateYear;
+          let shortText = timelineInfoContainerEl?.querySelector("p")?.textContent.trim();
+          // @TODO DBBEL met page info?
+          // if (timelineInfoContainerEl) {
+          //   const dateBasis = timelineInfoContainerEl.querySelector(".date").textContent;
+          //   const dateSplit = dateBasis.split("/").map((str) => str.trim());
+          //   if (dateSplit.length < 3) {
+          //     return;
+          //   }
+          //   dateDay = dateSplit[0].replace(/\D/g, "");
+          //   dateMonth = months[dateSplit[1].trim()];
+          //   dateYear = dateSplit[2];
+          // }
           return {
             venueEventUrl,
             title,
             location,
             shortText,
-            dateDay,
-            dateMonth,
-            dateYear,
+            // dateDay,
+            // dateMonth,
+            // dateYear,
           };
         });
     },
-    { months: dynamoMonths, workerIndex: workerData.index }
+    {workerIndex: workerData.index }
   );
-  clearTimeout(stopFunctie);
-  !page.isClosed() && page.close();
 
-  return rawEvents
-    .map((event) => {
-      const baseDate = `${event.dateYear}-${event.dateMonth}-${event.dateDay}`;
-      event.startDateTime = new Date(baseDate).toISOString();
-      (!event.venueEventUrl || !event.title) &&
-        parentPort.postMessage(
-          this.qwm.messageRoll(
-            `Red het niet: <a href='${event.venueEventUrl}'>${event.title}</a> ongeldig.`
-          )
-        );
-      return event;
-    })
-    .filter(_t.basicMusicEventsFilter)
-    .map((event) => new MusicEvent(event));
+  return await this.makeBaseEventListEnd({
+    stopFunctie, page, rawEvents}
+  );
+
 };
 
 // GET PAGE INFO

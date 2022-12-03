@@ -1,29 +1,40 @@
 import axios from "axios";
-import MusicEvent from "../mods/music-event.js";
-import { parentPort, workerData } from "worker_threads";
+import { workerData } from "worker_threads";
 import * as _t from "../mods/tools.js";
 import { baroegMonths } from "../mods/months.js";
-import AbstractScraper from "./abstract-scraper.js";
+import AbstractScraper from "./gedeeld/abstract-scraper.js";
+import makeScraperConfig from "./gedeeld/scraper-config.js";
 
 // SCRAPER CONFIG
 
-const scraperConfig = {
-  baseEventTimeout: 10000,
-  singlePageTimeout: 15000,
+const baroegScraper = new AbstractScraper(makeScraperConfig({
   maxExecutionTime: 45000,
   workerData: Object.assign({}, workerData),
-};
-const baroegScraper = new AbstractScraper(scraperConfig);
+  puppeteerConfig: {
+    mainPage: {
+      timeout: 10000,
+    },
+    singlepage: {
+      timeout: 15000
+    },
+    app: {
+      mainPage: {
+        url: "https://zieconcreet.nl/hieronder",
+        useCustomScraper: true,
+        requiredProperties: ['venueEventUrl', 'title']
+      }
+    }    
+  }
+}));
+
 baroegScraper.listenToMasterThread();
 
 // MAKE BASE EVENTS
 
 baroegScraper.makeBaseEventList = async function () {
-  const stopFunctie = setTimeout(() => {
-    throw new Error(
-      `makeBaseEventList is de max tijd voor zn functie ${this.maxExecutionTime} voorbij `
-    );
-  }, this.maxExecutionTime);
+
+  const {stopFunctie} = this.makeBaseEventListStart()
+
   const baroegLijst = await axios
     .get(
       `https://baroeg.nl/wp-json/wp/v2/wp_theatre_prod?_embed&per_page=10&offset=${
@@ -57,20 +68,10 @@ baroegScraper.makeBaseEventList = async function () {
     return res;
   });
 
-  clearTimeout(stopFunctie);
+  return await this.makeBaseEventListEnd({
+    stopFunctie, rawEvents}
+  );
 
-  return rawEvents
-    .map((event) => {
-      !event.venueEventUrl &&
-        parentPort.postMessage(
-          this.qwm.messageRoll(
-            `Red het niet: <a href='${event.venueEventUrl}'>${event.title}</a> ongeldig.`
-          )
-        );
-      return event;
-    })
-    .filter(_t.basicMusicEventsFilter)
-    .map((event) => new MusicEvent(event));
 };
 
 // GET PAGE INFO

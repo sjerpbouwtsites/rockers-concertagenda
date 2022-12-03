@@ -1,37 +1,33 @@
-import MusicEvent from "../mods/music-event.js";
-import { parentPort, workerData } from "worker_threads";
+import { workerData } from "worker_threads";
 import * as _t from "../mods/tools.js";
-import AbstractScraper from "./abstract-scraper.js";
+import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import { neushoornMonths } from "../mods/months.js";
+import makeScraperConfig from "./gedeeld/scraper-config.js";
 
 // SCRAPER CONFIG
 
-const scraperConfig = {
-  baseEventTimeout: 15000,
-  singlePageTimeout: 20000,
-  maxExecutionTime: 30000,
+const neushoornScraper = new AbstractScraper(makeScraperConfig({
   workerData: Object.assign({}, workerData),
-};
-const neushoornScraper = new AbstractScraper(scraperConfig);
+  puppeteerConfig: {
+    singlepage: {
+      timeout: 20000
+    },
+    app: {
+      mainPage: {
+        url: "https://neushoorn.nl/#/agenda",
+        requiredProperties: ['venueEventUrl', 'title']
+      }
+    }
+  }
+}));
 
 neushoornScraper.listenToMasterThread();
 
 // MAKE BASE EVENTS
 
 neushoornScraper.makeBaseEventList = async function () {
-  const stopFunctie = setTimeout(() => {
-    throw new Error(
-      `makeBaseEventList is de max tijd voor zn functie ${this.maxExecutionTime} voorbij `
-    );
-  }, this.maxExecutionTime);
-  const page = await this.browser.newPage();
 
-  
-
-  await page.goto("https://neushoorn.nl/#/agenda", {
-    waitUntil: "domcontentloaded",
-    timeout: this.singlePageTimeout,
-  });
+  const {stopFunctie, page} = this.makeBaseEventListStart()
 
   try {
     await page.waitForSelector('[href*="Heavy"]', {
@@ -55,8 +51,6 @@ neushoornScraper.makeBaseEventList = async function () {
     );
   }
 
-  
-
   await _t.waitFor(50);
 
   const rawEvents = await page.evaluate(() => {
@@ -72,7 +66,6 @@ neushoornScraper.makeBaseEventList = async function () {
         const title = itemEl.querySelector(
           ".productions__item__content span:first-child"
         ).textContent;
-        const eventTitles = title.split("+").map((t) => t.trim());
         const venueEventUrl = itemEl.href;
         const location = "neushoorn";
         return {
@@ -80,28 +73,18 @@ neushoornScraper.makeBaseEventList = async function () {
           venueEventUrl,
           textContent,
           isRockInText,
-          title,
-          eventTitles,
+          title
         };
       }
     );
   }, workerData.index);
-  clearTimeout(stopFunctie);
-  !page.isClosed() && page.close();
-
-  return rawEvents
-    .map((event) => {
-      (!event.venueEventUrl || !event.title) &&
-        parentPort.postMessage(
-          this.this.qwm.messageRoll(
-            `Red het niet: <a href='${event.venueEventUrl}'>${event.title}</a> ongeldig.`
-          )
-        );
-      return event;
-    })
-    .filter(_t.basicMusicEventsFilter)
-    .map((event) => new MusicEvent(event));
+  return await this.makeBaseEventListEnd({
+    stopFunctie, page, rawEvents}
+  );
 };
+
+
+// @TODO Rock control naar async
 
 // GET PAGE INFO
 

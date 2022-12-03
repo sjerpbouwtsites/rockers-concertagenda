@@ -1,42 +1,36 @@
-import MusicEvent from "../mods/music-event.js";
 import { parentPort, workerData } from "worker_threads";
 import * as _t from "../mods/tools.js";
-import AbstractScraper from "./abstract-scraper.js";
+import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import { kavkaMonths } from "../mods/months.js";
+import makeScraperConfig from "./gedeeld/scraper-config.js";
 
 // SCRAPER CONFIG
 
-const scraperConfig = {
-  baseEventTimeout: 35000,
-  singlePageTimeout: 30000,
+const kavkaScraper = new AbstractScraper(makeScraperConfig({
   workerData: Object.assign({}, workerData),
   puppeteerConfig: {
-    //@TODO alle puppeteerSettings naar puppeteerconfig
-    singlePage: {
-      waitUntil: "domcontentloaded", // @TODO overal invoeren
-      timeout: 30000,
+    mainPage: {
+      timeout: 35000,
     },
-  },
-};
-const kavkaScraper = new AbstractScraper(scraperConfig);
+    singlepage: {
+      timeout: 30000
+    },
+    app: {
+      mainPage: {
+        url: "https://kavka.be/programma/",
+        requiredProperties: ['venueEventUrl', 'title', 'startDateTime']
+      }
+    }
+  }
+}));
 
 kavkaScraper.listenToMasterThread();
 
 // MAKE BASE EVENTS
 
 kavkaScraper.makeBaseEventList = async function () {
-  const stopFunctie = setTimeout(() => {
-    throw new Error(
-      `makeBaseEventList is de max tijd voor zn functie ${this.maxExecutionTime} voorbij `
-    );
-  }, this.maxExecutionTime);
 
-  parentPort.postMessage(this.qwm.messageRoll(`voor maken base events pagina`));
-  const page = await this.browser.newPage();
-  await page.goto("https://kavka.be/programma/", {
-    waitUntil: "domcontentloaded",
-  });
-  parentPort.postMessage(this.qwm.messageRoll(`base events pagina geladen`));
+  const {stopFunctie, page} = this.makeBaseEventListStart()
 
   let rawEvents = await page.evaluate(
     ({ months }) => {
@@ -54,7 +48,6 @@ kavkaScraper.makeBaseEventList = async function () {
           let startTimeM,
             startDateEl,
             startDate,
-            startTime,
             startDay,
             startMonthName,
             startMonth,
@@ -129,34 +122,11 @@ kavkaScraper.makeBaseEventList = async function () {
     },
     { months: kavkaMonths }
   );
+  
+  return await this.makeBaseEventListEnd({
+    stopFunctie, page, rawEvents}
+  );
 
-  clearTimeout(stopFunctie);
-  !page.isClosed() && page.close();
-  rawEvents.forEach((event) => {
-    // @TODO fatsoenlijke afgesplitse functie van maken
-    event.errorsVoorErrorHandler?.forEach((errorHandlerMeuk) => {
-      _t.handleError(
-        errorHandlerMeuk.error,
-        workerData,
-        errorHandlerMeuk.remarks
-      );
-    });
-  });
-
-  parentPort.postMessage(this.qwm.toConsole(rawEvents));
-
-  return rawEvents
-    .map((event) => {
-      !event.venueEventUrl &&
-        parentPort.postMessage(
-          this.qwm.messageRoll(
-            `Red het niet: <a href='${event.venueEventUrl}'>${event.title}</a> ongeldig.`
-          )
-        );
-      return event;
-    })
-    .filter(_t.basicMusicEventsFilter)
-    .map((event) => new MusicEvent(event));
 };
 
 kavkaScraper.getPageInfo = async function ({ url, page }) {

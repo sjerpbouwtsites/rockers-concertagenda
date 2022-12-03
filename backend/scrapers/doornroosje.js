@@ -1,39 +1,40 @@
-import MusicEvent from "../mods/music-event.js";
-import { parentPort, workerData } from "worker_threads";
+import { workerData } from "worker_threads";
 import * as _t from "../mods/tools.js";
 import { doornRoosjeMonths } from "../mods/months.js";
-import AbstractScraper from "./abstract-scraper.js";
+import AbstractScraper from "./gedeeld/abstract-scraper.js";
+import makeScraperConfig from "./gedeeld/scraper-config.js";
 
 // SCRAPER CONFIG
 
-const scraperConfig = {
-  baseEventTimeout: 35000,
-  singlePageTimeout: 25000,
+const doornroosjeScraper = new AbstractScraper(makeScraperConfig({
   workerData: Object.assign({}, workerData),
-};
-const doornroosjeScraper = new AbstractScraper(scraperConfig);
+  puppeteerConfig: {
+    mainPage: {
+      timeout: 35000,
+      waitUntil: 'load'
+    },
+    singlepage: {
+      timeout: 25000
+    },
+    app: {
+      mainPage: {
+        url: "https://www.doornroosje.nl/?genre=metal%252Cpunk%252Cpost-hardcore%252Cnoise-rock%252Csludge-rock",
+        requiredProperties: ['venueEventUrl', 'title']
+      }
+    }
+  }
+}));
 
 doornroosjeScraper.listenToMasterThread();
 
 // MAKE BASE EVENTS
 
 doornroosjeScraper.makeBaseEventList = async function () {
-  const stopFunctie = setTimeout(() => {
-    throw new Error(
-      `makeBaseEventList is de max tijd voor zn functie ${this.maxExecutionTime} voorbij `
-    );
-  }, this.maxExecutionTime);
+  
+  const {stopFunctie, page} = this.makeBaseEventListStart()
 
-  const page = await this.browser.newPage();
-  await page.goto(
-    "https://www.doornroosje.nl/?genre=metal%252Cpunk%252Cpost-hardcore%252Cnoise-rock%252Csludge-rock",
-    {
-      waitUntil: "load",
-    }
-  );
   await page.waitForSelector(".c-program__title");
   await _t.waitFor(50);
-  //await page.waitForTimeout(2500); mogelijk ff wachten op selector
 
   const rawEvents = await page.evaluate((workerIndex) => {
     return Array.from(document.querySelectorAll(".c-program__item"))
@@ -61,20 +62,11 @@ doornroosjeScraper.makeBaseEventList = async function () {
         return res;
       });
   }, workerData.index);
-  clearTimeout(stopFunctie);
-  !page.isClosed() && page.close();
-  return rawEvents
-    .map((event) => {
-      (!event.venueEventUrl || !event.title) &&
-        parentPort.postMessage(
-          this.qwm.messageRoll(
-            `Red het niet: <a href='${event.venueEventUrl}'>${event.title}</a> ongeldig.`
-          )
-        );
-      return event;
-    })
-    .filter(_t.basicMusicEventsFilter)
-    .map((event) => new MusicEvent(event));
+
+  return await this.makeBaseEventListEnd({
+    stopFunctie, page, rawEvents}
+  );
+
 };
 
 // GET PAGE INFO

@@ -1,46 +1,40 @@
-import MusicEvent from "../mods/music-event.js";
-import { parentPort, workerData } from "worker_threads";
+import { workerData } from "worker_threads";
 import * as _t from "../mods/tools.js";
-import AbstractScraper from "./abstract-scraper.js";
+import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import { patronaatMonths } from "../mods/months.js";
-
+import makeScraperConfig from "./gedeeld/scraper-config.js";
 // SCRAPER CONFIG
 
-const scraperConfig = {
-  baseEventTimeout: 35000,
-  singlePageTimeout: 30000,
+const patronaatScraper = new AbstractScraper(makeScraperConfig({
   workerData: Object.assign({}, workerData),
   puppeteerConfig: {
+    mainPage: {
+      timeout: 35000,
+    },
     singlePage: {
       timeout: 30000,
-      waitUntil: "domcontentloaded",
     },
+    app: {
+      mainPage: {
+        url: "https://patronaat.nl/programma/?type=event&s=&eventtype%5B%5D=84",
+        requiredProperties: ['venueEventUrl', 'title']
+      }
+    }
   },
-};
-const patronaatScraper = new AbstractScraper(scraperConfig);
+}));
 
 patronaatScraper.listenToMasterThread();
 
 // MAKE BASE EVENTS
 
 patronaatScraper.makeBaseEventList = async function () {
-  const stopFunctie = setTimeout(() => {
-    throw new Error(
-      `makeBaseEventList is de max tijd voor zn functie ${this.maxExecutionTime} voorbij `
-    );
-  }, this.maxExecutionTime);
 
-  const page = await this.browser.newPage();
-  await page.goto(
-    "https://patronaat.nl/programma/?type=event&s=&eventtype%5B%5D=84",
-    {
-      waitUntil: "load",
-    }
-  );
+  const {stopFunctie, page} = this.makeBaseEventListStart()
+
   const rawEvents = await page.evaluate((workerIndex) => {
     return Array.from(document.querySelectorAll(".overview__list-item--event"))
       .filter((eventEl, index) => {
-        return index % 3 === workerIndex;
+        return index % 3 === workerIndex; // TODO naar settings afleiden
       })
       .map((eventEl) => {
         const res = {};
@@ -56,21 +50,9 @@ patronaatScraper.makeBaseEventList = async function () {
       });
   }, workerData.index);
 
-  clearTimeout(stopFunctie);
-  !page.isClosed() && page.close();
-
-  return rawEvents
-    .map((event) => {
-      !event.venueEventUrl &&
-        parentPort.postMessage(
-          this.qwm.messageRoll(
-            `Red het niet: <a href='${event.venueEventUrl}'>${event.title}</a> ongeldig.`
-          )
-        );
-      return event;
-    })
-    .filter(_t.basicMusicEventsFilter)
-    .map((event) => new MusicEvent(event));
+  return await this.makeBaseEventListEnd({
+    stopFunctie, page, rawEvents}
+  );
 };
 
 // GET PAGE INFO

@@ -1,33 +1,36 @@
 import { idunaMonths } from "../mods/months.js"; // @TODO fatsoenlijke months mechanisme invoeren.
-import MusicEvent from "../mods/music-event.js";
-import { parentPort, workerData } from "worker_threads";
+import { workerData } from "worker_threads";
 import * as _t from "../mods/tools.js";
-import AbstractScraper from "./abstract-scraper.js";
+import AbstractScraper from "./gedeeld/abstract-scraper.js";
+import makeScraperConfig from "./gedeeld/scraper-config.js";
 
 // SCRAPER CONFIG
 
-const scraperConfig = {
-  baseEventTimeout: 15000,
-  singlePageTimeout: 20000,
-  maxExecutionTime: 30000,
+const idunaScraper = new AbstractScraper(makeScraperConfig({
   workerData: Object.assign({}, workerData),
-};
-const idunaScraper = new AbstractScraper(scraperConfig);
+  puppeteerConfig: {
+    singlepage: {
+      timeout: 20000
+    },
+    mainPage: {
+      waitUntil: 'load'
+    },
+    app: {
+      mainPage: {
+        url: "https://iduna.nl/",
+        requiredProperties: ['venueEventUrl', 'title']
+      }
+    }
+  }
+}));
 
 idunaScraper.listenToMasterThread();
 
 // MAKE BASE EVENTS
 
 idunaScraper.makeBaseEventList = async function () {
-  const stopFunctie = setTimeout(() => {
-    throw new Error(
-      `makeBaseEventList is de max tijd voor zn functie ${this.maxExecutionTime} voorbij `
-    );
-  }, this.maxExecutionTime);
-  const page = await this.browser.newPage();
-  await page.goto("https://iduna.nl/", {
-    waitUntil: "load",
-  });
+
+  const {stopFunctie, page} = this.makeBaseEventListStart()
 
   let metalEvents = await page
     .evaluate(() => {
@@ -82,21 +85,9 @@ idunaScraper.makeBaseEventList = async function () {
     }
   });
 
-  clearTimeout(stopFunctie);
-  !page.isClosed() && page.close();
-
-  return metalEvents
-    .map((event) => {
-      (!event.venueEventUrl || !event.title) &&
-        parentPort.postMessage(
-          this.this.qwm.messageRoll(
-            `Red het niet: <a href='${event.venueEventUrl}'>${event.title}</a> ongeldig.`
-          )
-        );
-      return event;
-    })
-    .filter(_t.basicMusicEventsFilter)
-    .map((event) => new MusicEvent(event));
+  return await this.makeBaseEventListEnd({
+    stopFunctie, page, metalEvents}
+  );
 };
 
 // GET PAGE INFO

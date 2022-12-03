@@ -2,17 +2,28 @@ import { afasliveMonths } from "../mods/months.js";
 import MusicEvent from "../mods/music-event.js";
 import { parentPort, workerData } from "worker_threads";
 import * as _t from "../mods/tools.js";
-import AbstractScraper from "./abstract-scraper.js";
+import AbstractScraper from "./gedeeld/abstract-scraper.js";
+import makeScraperConfig from "./gedeeld/scraper-config.js";
 
 // SCRAPER CONFIG
 
-const scraperConfig = {
-  baseEventTimeout: 15000,
-  singlePageTimeout: 20000,
-  maxExecutionTime: 30000,
+const afasliveScraper = new AbstractScraper(makeScraperConfig({
+  maxExecutionTime: 40000,
   workerData: Object.assign({}, workerData),
-};
-const afasliveScraper = new AbstractScraper(scraperConfig);
+  puppeteerConfig: {
+    mainPage: {
+      timeout: 15000,
+    },
+    singlepage: {
+      timeout: 20000
+    },
+    app: {
+      mainPage: {
+        url: "https://www.afaslive.nl/agenda"
+      }
+    }
+  }
+}));
 
 afasliveScraper.singleEventCheck = afasliveScraper.isRock;
 
@@ -21,15 +32,8 @@ afasliveScraper.listenToMasterThread();
 // MAKE BASE EVENTS
 
 afasliveScraper.makeBaseEventList = async function () {
-  const stopFunctie = setTimeout(() => {
-    throw new Error(
-      `makeBaseEventList is de max tijd voor zn functie ${this.maxExecutionTime} voorbij `
-    );
-  }, this.maxExecutionTime);
-  const page = await this.browser.newPage();
-  await page.goto("https://www.afaslive.nl/agenda", {
-    waitUntil: "load",
-  });
+  
+  const {stopFunctie, page} = this.makeBaseEventListStart()
 
   await _t.autoScroll(page);
   await _t.waitFor(750);

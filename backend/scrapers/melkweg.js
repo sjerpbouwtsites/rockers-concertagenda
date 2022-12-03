@@ -1,32 +1,37 @@
-import MusicEvent from "../mods/music-event.js";
-import { parentPort, workerData } from "worker_threads";
+import { workerData } from "worker_threads";
 import * as _t from "../mods/tools.js";
-import AbstractScraper from "./abstract-scraper.js";
+import AbstractScraper from "./gedeeld/abstract-scraper.js";
+import makeScraperConfig from "./gedeeld/scraper-config.js";
 
 // SCRAPER CONFIG
 
-const scraperConfig = {
-  baseEventTimeout: 30000,
-  singlePageTimeout: 20000,
+const melkwegScraper = new AbstractScraper(makeScraperConfig({
   maxExecutionTime: 60000,
   workerData: Object.assign({}, workerData),
-};
-const melkwegScraper = new AbstractScraper(scraperConfig);
+  puppeteerConfig: {
+    mainPage: {
+      timeout: 30000,
+      waitUntil: 'load'
+    },
+    singlepage: {
+      timeout: 20000
+    },
+    app: {
+      mainPage: {
+        url: "https://www.melkweg.nl/nl/agenda",
+        requiredProperties: ['venueEventUrl', 'title']
+      }
+    }
+  }
+}));
 
 melkwegScraper.listenToMasterThread();
 
 // MAKE BASE EVENTS
 
 melkwegScraper.makeBaseEventList = async function () {
-  const stopFunctie = setTimeout(() => {
-    throw new Error(
-      `makeBaseEventList is de max tijd voor zn functie ${this.maxExecutionTime} voorbij `
-    );
-  }, this.maxExecutionTime);
-  const page = await this.browser.newPage();
-  await page.goto("https://www.melkweg.nl/nl/agenda", {
-    waitUntil: "load",
-  });
+
+  const {stopFunctie, page} = this.makeBaseEventListStart()
 
   await _t.autoScroll(page);
   await _t.autoScroll(page);
@@ -52,28 +57,16 @@ melkwegScraper.makeBaseEventList = async function () {
           eventEl.querySelector('[class*="subtitle"]')?.textContent ?? "";
         res.title =
           eventEl.querySelector('h3[class*="title"]')?.textContent ?? "";
-        res.error = null;
         res.venueEventUrl = anchor.href;
         res.location = "melkweg";
         return res;
       });
   }, workerData.index);
 
-  clearTimeout(stopFunctie);
-  !page.isClosed() && page.close();
-
-  return rawEvents
-    .map((event) => {
-      (!event.venueEventUrl || !event.title) &&
-        parentPort.postMessage(
-          this.qwm.messageRoll(
-            `Red het niet: <a href='${event.venueEventUrl}'>${event.title}</a> ongeldig.`
-          )
-        );
-      return event;
-    })
-    .filter(_t.basicMusicEventsFilter)
-    .map((event) => new MusicEvent(event));
+  return await this.makeBaseEventListEnd({
+    stopFunctie, page, rawEvents}
+  );
+  
 };
 
 melkwegScraper.getPageInfo = async function ({ page, url }) {

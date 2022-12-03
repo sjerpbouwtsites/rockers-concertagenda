@@ -1,33 +1,39 @@
 import { bibelotMonths } from "../mods/months.js";
-import MusicEvent from "../mods/music-event.js";
-import { parentPort, workerData } from "worker_threads";
+import { workerData } from "worker_threads";
 import * as _t from "../mods/tools.js";
-import AbstractScraper from "./abstract-scraper.js";
+import AbstractScraper from "./gedeeld/abstract-scraper.js";
+import makeScraperConfig from "./gedeeld/scraper-config.js";
 
 // SCRAPER CONFIG
 
-const scraperConfig = {
-  baseEventTimeout: 15000,
-  singlePageTimeout: 20000,
+const bibelotScraper = new AbstractScraper(makeScraperConfig({
   maxExecutionTime: 30000,
   workerData: Object.assign({}, workerData),
-};
-const bibelotScraper = new AbstractScraper(scraperConfig);
+  puppeteerConfig: {
+    mainPage: {
+      timeout: 15000,
+    },
+    singlepage: {
+      timeout: 20000
+    },
+    app: {
+      mainPage: {
+        url: "https://bibelot.net/",
+        requiredProperties: ['venueEventUrl', 'title']
+      }
+    }
+  
+  }
+}));
 
 bibelotScraper.listenToMasterThread();
 
 // MAKE BASE EVENTS
 
 bibelotScraper.makeBaseEventList = async function () {
-  const stopFunctie = setTimeout(() => {
-    throw new Error(
-      `makeBaseEventList is de max tijd voor zn functie ${this.maxExecutionTime} voorbij `
-    );
-  }, this.maxExecutionTime);
-  const page = await this.browser.newPage();
-  await page.goto("https://bibelot.net/", {
-    waitUntil: "load",
-  });
+
+  const {stopFunctie, page} = this.makeBaseEventListStart()
+
   const rawEvents = await page.evaluate(() => {
     return Array.from(
       document.querySelectorAll(
@@ -47,21 +53,11 @@ bibelotScraper.makeBaseEventList = async function () {
       return res;
     });
   });
-  clearTimeout(stopFunctie);
-  !page.isClosed() && page.close();
 
-  return rawEvents
-    .map((event) => {
-      (!event.venueEventUrl || !event.title) &&
-        parentPort.postMessage(
-          this.qwm.messageRoll(
-            `Red het niet: <a href='${event.venueEventUrl}'>${event.title}</a> ongeldig.`
-          )
-        );
-      return event;
-    })
-    .filter(_t.basicMusicEventsFilter)
-    .map((event) => new MusicEvent(event));
+  return await this.makeBaseEventListEnd({
+    stopFunctie, page, rawEvents}
+  );
+  
 };
 
 // GET PAGE INFO

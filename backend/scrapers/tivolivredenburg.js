@@ -1,37 +1,36 @@
-import MusicEvent from "../mods/music-event.js";
-import { parentPort, workerData } from "worker_threads";
+import { workerData } from "worker_threads";
 import * as _t from "../mods/tools.js";
-import AbstractScraper from "./abstract-scraper.js";
+import AbstractScraper from "./gedeeld/abstract-scraper.js";
+import makeScraperConfig from "./gedeeld/scraper-config.js";
 
 // SCRAPER CONFIG
 
-const scraperConfig = {
-  baseEventTimeout: 30000,
-  singlePageTimeout: 15000,
+const tivoliVredenburgScraper = new AbstractScraper(makeScraperConfig({
   workerData: Object.assign({}, workerData),
-};
-const tivoliVredenburgScraper = new AbstractScraper(scraperConfig);
+  puppeteerConfig: {
+    mainPage: {
+      waitUntil: "load"
+    },
+    app: {
+      mainPage: {
+        url: "https://www.tivolivredenburg.nl/agenda/?event_category=metal-punk-heavy",
+        requiredProperties: ['venueEventUrl', 'title']
+      }
+    }    
+  }
+}));
 
 tivoliVredenburgScraper.listenToMasterThread();
 
 // MAKE BASE EVENTS
 
 tivoliVredenburgScraper.makeBaseEventList = async function () {
-  const stopFunctie = setTimeout(() => {
-    throw new Error(
-      `makeBaseEventList is de max tijd voor zn functie ${this.maxExecutionTime} voorbij `
-    );
-  }, this.maxExecutionTime);
-  const page = await this.browser.newPage();
-  await page.goto(
-    "https://www.tivolivredenburg.nl/agenda/?event_category=metal-punk-heavy",
-    {
-      waitUntil: "load",
-    }
-  );
+  
+  const {stopFunctie, page} = this.makeBaseEventListStart()
+
   const rawEvents = await page.evaluate((workerIndex) => {
     return Array.from(document.querySelectorAll(".agenda-list-item"))
-      .filter((eventEl, index) => {
+      .filter((index) => {
         return index % 4 === workerIndex;
       })
       .map((eventEl) => {
@@ -56,21 +55,10 @@ tivoliVredenburgScraper.makeBaseEventList = async function () {
       });
   }, workerData.index);
 
-  clearTimeout(stopFunctie);
-  !page.isClosed() && page.close();
+  return await this.makeBaseEventListEnd({
+    stopFunctie, page, rawEvents}
+  );
 
-  return rawEvents
-    .map((event) => {
-      !event.venueEventUrl &&
-        parentPort.postMessage(
-          this.qwm.messageRoll(
-            `Red het niet: <a href='${event.venueEventUrl}'>${event.title}</a> ongeldig.`
-          )
-        );
-      return event;
-    })
-    .filter(_t.basicMusicEventsFilter)
-    .map((event) => new MusicEvent(event));
 };
 
 // GET PAGE INFO

@@ -1,36 +1,40 @@
-import MusicEvent from "../mods/music-event.js";
-import { parentPort, workerData } from "worker_threads";
+import { workerData } from "worker_threads";
 import * as _t from "../mods/tools.js";
-import AbstractScraper from "./abstract-scraper.js";
+import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import { duyckerMonths } from "../mods/months.js";
+import makeScraperConfig from "./gedeeld/scraper-config.js";
 
 // SCRAPER CONFIG
 
-const scraperConfig = {
-  baseEventTimeout: 15000,
-  singlePageTimeout: 20000,
-  maxExecutionTime: 30000,
+const duyckerScraper = new AbstractScraper(makeScraperConfig({
   workerData: Object.assign({}, workerData),
-};
-const duyckerScraper = new AbstractScraper(scraperConfig);
+  puppeteerConfig: {
+    singlepage: {
+      timeout: 10000,
+    },
+    mainPage: {
+      waitUntil: 'load'
+    },
+    app: {
+      mainPage: {
+        url: "https://www.duycker.nl/agenda/?music_genre=metal-punk",
+        requiredProperties: ['venueEventUrl', 'title', 'startDateTime']
+      }
+    }
+  }
+}
+));
 
 duyckerScraper.listenToMasterThread();
 
 // MAKE BASE EVENTS
 
 duyckerScraper.makeBaseEventList = async function () {
-  const stopFunctie = setTimeout(() => {
-    throw new Error(
-      `makeBaseEventList is de max tijd voor zn functie ${this.maxExecutionTime} voorbij `
-    );
-  }, this.maxExecutionTime);
-  const page = await this.browser.newPage();
-  await page.goto("https://www.duycker.nl/agenda/?music_genre=metal-punk", {
-    waitUntil: "load",
-  });
+
+  const {stopFunctie, page} = this.makeBaseEventListStart()
 
   await page.waitForSelector(".duycker.agenda .item-container", {
-    timeout: 5000,
+    timeout: 2000,
   });
 
   await _t.waitFor(50);
@@ -119,21 +123,10 @@ duyckerScraper.makeBaseEventList = async function () {
     { months: duyckerMonths, workerIndex: workerData.index }
   );
 
-  clearTimeout(stopFunctie);
-  !page.isClosed() && page.close();
-
-  return rawEvents
-    .map((event) => {
-      (!event.venueEventUrl || !event.title || !event.startDateTime) &&
-        parentPort.postMessage(
-          this.this.qwm.messageRoll(
-            `Red het niet: <a href='${event.venueEventUrl}'>${event.title}</a> ongeldig.`
-          )
-        );
-      return event;
-    })
-    .filter(_t.basicMusicEventsFilter)
-    .map((event) => new MusicEvent(event));
+  return await this.makeBaseEventListEnd({
+    stopFunctie, page, rawEvents}
+  );
+  
 };
 // GET PAGE INFO
 

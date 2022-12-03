@@ -1,30 +1,38 @@
-import MusicEvent from "../mods/music-event.js";
-import { parentPort, workerData } from "worker_threads";
+import { workerData } from "worker_threads";
 import * as _t from "../mods/tools.js";
-import AbstractScraper from "./abstract-scraper.js";
+import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import axios from "axios";
+import makeScraperConfig from "./gedeeld/scraper-config.js";
 
 // SCRAPER CONFIG
 
-const scraperConfig = {
-  baseEventTimeout: 15000,
-  singlePageTimeout: 20000,
+const boerderijScraper = new AbstractScraper(makeScraperConfig({
   maxExecutionTime: 30000,
-  // @TODO maak geen puppeteer aan config
   workerData: Object.assign({}, workerData),
-};
-const boerderijScraper = new AbstractScraper(scraperConfig);
+  puppeteerConfig: {
+    mainPage: {
+      timeout: 15000,
+    },
+    singlepage: {
+      timeout: 20000
+    },
+    app: {
+      mainPage: {
+        useCustomScraper: true,
+        url: 'https://zieonder.nl',
+        requiredProperties: ['venueEventUrl', 'title']
+      }
+    }
+  }
+}));
 
 boerderijScraper.listenToMasterThread();
 
 // MAKE BASE EVENTS
 
 boerderijScraper.makeBaseEventList = async function () {
-  const stopFunctie = setTimeout(() => {
-    throw new Error(
-      `makeBaseEventList is de max tijd voor zn functie ${this.maxExecutionTime} voorbij `
-    );
-  }, this.maxExecutionTime);
+
+  const {stopFunctie} = this.makeBaseEventListStart()
 
   const rawEvents = await axios
     .get(
@@ -44,20 +52,10 @@ boerderijScraper.makeBaseEventList = async function () {
     event.title = event.title + `&id=${event.id}`;
   });
 
-  clearTimeout(stopFunctie);
+  return await this.makeBaseEventListEnd({
+    stopFunctie, rawEvents}
+  );
 
-  return rawEvents
-    .map((event) => {
-      (!event.venueEventUrl || !event.title) &&
-        parentPort.postMessage(
-          this.qwm.messageRoll(
-            `Red het niet: <a href='${event.venueEventUrl}'>${event.title}</a> ongeldig.`
-          )
-        );
-      return event;
-    })
-    .filter(_t.basicMusicEventsFilter)
-    .map((event) => new MusicEvent(event));
 };
 
 // GET PAGE INFO

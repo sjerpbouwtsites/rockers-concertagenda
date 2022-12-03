@@ -1,32 +1,37 @@
-import MusicEvent from "../mods/music-event.js";
 import { parentPort, workerData } from "worker_threads";
 import * as _t from "../mods/tools.js";
-import AbstractScraper from "./abstract-scraper.js";
+import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import { depulMonths } from "../mods/months.js";
+import makeScraperConfig from "./gedeeld/scraper-config.js";
 
 // SCRAPER CONFIG
 
-const scraperConfig = {
-  baseEventTimeout: 35000,
-  singlePageTimeout: 25000,
+const depulScraper = new AbstractScraper(makeScraperConfig({
+  maxExecutionTime: 60000,
   workerData: Object.assign({}, workerData),
-};
-const depulScraper = new AbstractScraper(scraperConfig);
+  puppeteerConfig: {
+    mainPage: {
+      timeout: 35000,
+    },
+    singlepage: {
+      timeout: 25000
+    },
+    app: {
+      mainPage: {
+        url: "https://www.livepul.com/agenda/",
+        requiredProperties: ['venueEventUrl', 'title']
+      }
+    }
+  }
+}));
 
 depulScraper.listenToMasterThread();
 
 // MAKE BASE EVENTS
 
 depulScraper.makeBaseEventList = async function () {
-  const stopFunctie = setTimeout(() => {
-    throw new Error(
-      `makeBaseEventList is de max tijd voor zn functie ${this.maxExecutionTime} voorbij `
-    );
-  }, this.maxExecutionTime);
-  const page = await this.browser.newPage();
-  await page.goto("https://www.livepul.com/agenda/", {
-    waitUntil: "load",
-  });
+
+  const {stopFunctie, page} = this.makeBaseEventListStart()
 
   await page.evaluate(() => {
     // hack op site
@@ -89,21 +94,10 @@ depulScraper.makeBaseEventList = async function () {
     { months: depulMonths, workerIndex: workerData.index }
   );
 
-  clearTimeout(stopFunctie);
-  !page.isClosed() && page.close();
-
-  return rawEvents
-    .map((event) => {
-      !event.venueEventUrl &&
-        parentPort.postMessage(
-          this.qwm.messageRoll(
-            `Red het niet: <a href='${event.venueEventUrl}'>${event.title}</a> ongeldig.`
-          )
-        );
-      return event;
-    })
-    .filter(_t.basicMusicEventsFilter)
-    .map((event) => new MusicEvent(event));
+  return await this.makeBaseEventListEnd({
+    stopFunctie, page, rawEvents}
+  );
+  
 };
 
 // GET PAGE INFO

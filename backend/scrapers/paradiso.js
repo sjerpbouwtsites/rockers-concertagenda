@@ -1,34 +1,39 @@
-import MusicEvent from "../mods/music-event.js";
-import { parentPort, workerData } from "worker_threads";
+import { workerData } from "worker_threads";
 import * as _t from "../mods/tools.js";
-import AbstractScraper from "./abstract-scraper.js";
+import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import { paradisoMonths } from "../mods/months.js";
+import makeScraperConfig from "./gedeeld/scraper-config.js";
 
 //HEEFT ASYNC CHECK
 
 // SCRAPER CONFIG
 
-const scraperConfig = {
-  baseEventTimeout: 35000,
-  singlePageTimeout: 25000,
-  maxExecutionTime: 40000,
+const paradisoScraper = new AbstractScraper(makeScraperConfig({
+  maxExecutionTime: 60000,
   workerData: Object.assign({}, workerData),
-};
-const paradisoScraper = new AbstractScraper(scraperConfig);
+  puppeteerConfig: {
+    mainPage: {
+      timeout: 30000,
+      waitUntil: 'load'
+    },
+    singlepage: {
+      timeout: 15000
+    },
+    app: {
+      mainPage: {
+        url: "https://www.paradiso.nl/nl/zoeken/categorie/",
+        requiredProperties: ['venueEventUrl', 'title']
+      }
+    }
+  }
+}));
 
 paradisoScraper.listenToMasterThread();
 
 // MAKE BASE EVENTS
 paradisoScraper.makeBaseEventList = async function () {
-  const stopFunctie = setTimeout(() => {
-    throw new Error(
-      `makeBaseEventList is de max tijd voor zn functie ${this.maxExecutionTime} voorbij `
-    );
-  }, this.maxExecutionTime);
-  const page = await this.browser.newPage();
-  await page.goto("https://www.paradiso.nl/nl/zoeken/categorie/", {
-    waitUntil: "domcontentloaded",
-  });
+
+  const {stopFunctie, page} = this.makeBaseEventListStart()
   
   try {
     await page.waitForSelector('[data-category="60102"]', {
@@ -87,21 +92,11 @@ paradisoScraper.makeBaseEventList = async function () {
     },
     { months: paradisoMonths, workerIndex: workerData.index }
   );
-  clearTimeout(stopFunctie);
-  !page.isClosed() && page.close();
 
-  return rawEvents
-    .map((event) => {
-      !event.venueEventUrl &&
-        parentPort.postMessage(
-          this.qwm.messageRoll(
-            `Red het niet: <a href='${event.venueEventUrl}'>${event.title}</a> ongeldig.`
-          )
-        );
-      return event;
-    })
-    .filter(_t.basicMusicEventsFilter)
-    .map((event) => new MusicEvent(event));
+  return await this.makeBaseEventListEnd({
+    stopFunctie, page, rawEvents}
+  );
+  
 };
 
 // GET PAGE INFO

@@ -1,33 +1,36 @@
-import MusicEvent from "../mods/music-event.js";
-import { parentPort, workerData } from "worker_threads";
+import { workerData } from "worker_threads";
 import * as _t from "../mods/tools.js";
-import AbstractScraper from "./abstract-scraper.js";
+import AbstractScraper from "./gedeeld/abstract-scraper.js";
+import makeScraperConfig from "./gedeeld/scraper-config.js";
 import { gebrdenobelMonths } from "../mods/months.js";
 
 // SCRAPER CONFIG
 
-const scraperConfig = {
-  baseEventTimeout: 15000,
-  singlePageTimeout: 20000,
-  maxExecutionTime: 30000,
+const gebrdenobelScraper = new AbstractScraper(makeScraperConfig({
   workerData: Object.assign({}, workerData),
-};
-const gebrdenobelScraper = new AbstractScraper(scraperConfig);
+  puppeteerConfig: {
+    mainPage: {
+      timeout: 15000,
+    },
+    singlepage: {
+      timeout: 20000
+    },
+    app: {
+      mainPage: {
+        url: "https://gebrdenobel.nl/programma/",
+        requiredProperties: ['venueEventUrl', 'title']
+      }
+    }
+  }
+}));
 
 gebrdenobelScraper.listenToMasterThread();
 
 // MAKE BASE EVENTS
 
 gebrdenobelScraper.makeBaseEventList = async function () {
-  const stopFunctie = setTimeout(() => {
-    throw new Error(
-      `makeBaseEventList is de max tijd voor zn functie ${this.maxExecutionTime} voorbij `
-    );
-  }, this.maxExecutionTime);
-  const page = await this.browser.newPage();
-  await page.goto("https://gebrdenobel.nl/programma/", {
-    waitUntil: "domcontentloaded",
-  });
+
+  const {stopFunctie, page} = this.makeBaseEventListStart()
 
   await _t.autoScroll(page);
   await _t.autoScroll(page);
@@ -57,21 +60,11 @@ gebrdenobelScraper.makeBaseEventList = async function () {
         return res;
       });
   }, workerData.index);
-  clearTimeout(stopFunctie);
-  !page.isClosed() && page.close();
 
-  return rawEvents
-    .map((event) => {
-      (!event.venueEventUrl || !event.title) &&
-        parentPort.postMessage(
-          this.qwm.messageRoll(
-            `Red het niet: <a href='${event.venueEventUrl}'>${event.title}</a> ongeldig.`
-          )
-        );
-      return event;
-    })
-    .filter(_t.basicMusicEventsFilter)
-    .map((event) => new MusicEvent(event));
+  return await this.makeBaseEventListEnd({
+    stopFunctie, page, rawEvents}
+  );
+  
 };
 
 // GET PAGE INFO
