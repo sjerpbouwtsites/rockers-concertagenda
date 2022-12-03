@@ -1,4 +1,13 @@
 
+  duycker-0 Error - 9:53:54 AM
+  ReferenceError: musicEvent is not defined
+    at duyckerScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/duycker.js:165:30)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:248:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:55:5) 
+  musicEvent is not defined
+  
+  
   paradiso-0 Error - 9:27:11 AM
   ReferenceError: browser is not defined
     at paradisoScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/paradiso.js:28:16)
