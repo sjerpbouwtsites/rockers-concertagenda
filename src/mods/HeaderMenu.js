@@ -2,22 +2,20 @@ import React from "react";
 import "../header-menu.css";
 
 class HeaderMenu extends React.Component {
-  state = { names: [] };
   constructor(props) {
     super(props);
+    this.state = { names: [] };
   }
 
   componentDidMount() {}
 
   render() {
-    const names = this.state.names;
-
     return (
       <header className="header-menu">
         <div className="header-menu__sticky">
           <p className="app-text">
-            Deze app verzamelt 'alle' metal, punk, hardrock etc. concerten, van
-            een groeiende lijst concertzalen.
+            Deze app verzamelt &lsquo;alle&rsquo; metal, punk, hardrock etc.
+            concerten, van een groeiende lijst concertzalen.
           </p>
 
           <h2 className="app-title cursive-font">Over mij</h2>
@@ -40,11 +38,11 @@ class HeaderMenu extends React.Component {
             >
               Solidariteitsnetwerk Vloerwerk
             </a>
-            .<br></br>Van al dat organisen heb ik soms m'n buik vol en dan draai
-            ik vaak een app in elkaar.<br></br>
-            Al jaren vind ik 't veel te moeilijk om een beetje bij te houden
-            waar nu welk optreden is. Nu na Corona wil ik wel ieder concert dat
-            ik kan bijwonen.... toch?! Dus bedacht ik deze app.
+            .<br></br>Van al dat organisen heb ik soms m&lsquo;n buik vol en dan
+            draai ik vaak een app in elkaar.<br></br>
+            Al jaren vind ik &lsquo;t veel te moeilijk om een beetje bij te
+            houden waar nu welk optreden is. Nu na Corona wil ik wel ieder
+            concert dat ik kan bijwonen.... toch?! Dus bedacht ik deze app.
           </p>
           <h2 className="app-title cursive-font">Momenteel gescrapede zalen</h2>
           <p className="app-text">

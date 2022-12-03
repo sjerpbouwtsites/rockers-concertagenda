@@ -142,13 +142,4 @@ class FilterMenu extends React.Component {
   }
 }
 
-async function getAllData() {
-  const timestamps = await fetch("./timestamps.json", {}).then((response) => {
-    return response.json();
-  });
-  return {
-    timestamps,
-  };
-}
-
 export default FilterMenu;

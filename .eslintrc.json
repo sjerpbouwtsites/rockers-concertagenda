@@ -1,14 +1,37 @@
 {
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],  
   "env": {
     "browser": true,
+    "jquery": true,
     "node": true,
+    "mocha": true,
+    "es6": true
   },
+  "ecmaFeatures": {
+    "blockBindings": true,
+    "jsx": true
+  },  
   "parserOptions": {
     "ecmaVersion": 2021,
     "sourceType": "module"
 },  
   "rules": {
-    "no-mixed-operators": "off"
+    "no-mixed-operators": "off",
+    "strict": 0,
+    "indent": [2, 2],
+
+    "no-multi-spaces": [1, {
+      "exceptions": {
+        "VariableDeclarator": true,
+        "FunctionExpression": true
+      }
+    }],
+    "key-spacing": [0, {"align": "value"}],
+    "no-underscore-dangle": 0,
+    "react/jsx-no-target-blank": 0,
+    "react/prop-types":0
   }
-  
 }

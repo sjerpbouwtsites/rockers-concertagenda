@@ -2,16 +2,15 @@ import React from "react";
 
 
 class EventBlocks extends React.Component {
-  state = {
-    musicEvents: [],
-    maxEventsShown: 250,
-    eventDataLoading: false,
-    eventDataLoaded: false,
-  };
-  currentYear = new Date().getFullYear();
-
   constructor(props) {
     super(props);
+    this.state = {
+      musicEvents: [],
+      maxEventsShown: 250,
+      eventDataLoading: false,
+      eventDataLoaded: false,
+    };
+    this.currentYear = new Date().getFullYear();
     this.createLocation = this.createLocation.bind(this);
     this.createStartMoment = this.createStartMoment.bind(this);
     this.add100ToMaxEventsShown = this.add100ToMaxEventsShown.bind(this);
@@ -118,7 +117,7 @@ class EventBlocks extends React.Component {
 
   createLinkToVenue(musicEvent) {
     const url = musicEvent.venueEventUrl;
-    return !!musicEvent.venueEventUrl ? (
+    return musicEvent.venueEventUrl ? (
       <a
         className="event-block__venue-link sans-serif-font"
         href={url}
@@ -134,7 +133,7 @@ class EventBlocks extends React.Component {
   createImageHTML(musicEvent) {
     const imgSrc =
       musicEvent.image ?? `location-images/${musicEvent.location}.jpg`;
-    return !!imgSrc ? (
+    return imgSrc ? (
       <img
         className="event-block--image"
         src={imgSrc}
@@ -147,7 +146,7 @@ class EventBlocks extends React.Component {
   }
 
   createMoreButtonHTML(musicEvent, musicEventKey) {
-    return !!musicEvent.longText ? (
+    return musicEvent.longText ? (
       <button
         className="event-block__load-more sans-serif-font"
         onClick={this.loadLongerText.bind(this, musicEventKey)}
@@ -168,7 +167,7 @@ class EventBlocks extends React.Component {
 
   stripHTML(text) {
     if (!text) return "";
-    return text.replace(/\<\/?\w+\>/g, "");
+    return text.replace(/<\/?\w+>/g, "");
   }
 
   musicEventFilters(musicEvents) {
@@ -176,7 +175,7 @@ class EventBlocks extends React.Component {
       .filter((musicEvent, musicEventKey) => {
         return musicEventKey <= this.state.maxEventsShown;
       })
-      .filter((musicEvent, musicEventKey) => {
+      .filter((musicEvent) => {
         if (!this.props.filterSettings?.podia[musicEvent.location]) {
           return true;
         }
@@ -184,7 +183,7 @@ class EventBlocks extends React.Component {
           this.props.filterSettings.podia[musicEvent.location].checked ?? true
         );
       })
-      .filter((musicEvent, musicEventKey) => {
+      .filter((musicEvent) => {
         if (!this.props.filterSettings?.daterange?.lower) {
           return true;
         }

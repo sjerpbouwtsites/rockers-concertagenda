@@ -38,13 +38,13 @@ class App extends React.Component {
     // this.updateSwipeStateFilter = this.updateSwipeStateFilter.bind(this);
     // this.updateSwipeStateExplainer = this.updateSwipeStateExplainer.bind(this);
     // this.abstractSwitchUpdater = this.abstractSwitchUpdater.bind(this);
+    this.hasFetchedData = false;
+    this.isFetchingData = false;
     this.appProcessFilterChange = this.appProcessFilterChange.bind(this);
     this.getScraperNamesAndLocations =
       this.getScraperNamesAndLocations.bind(this);
   }
 
-  hasFetchedData = false;
-  isFetchingData = false;
 
   appProcessFilterChange(filterSettings) {
     this.setState({
@@ -92,7 +92,7 @@ class App extends React.Component {
       });
 
     Promise.all([getTimeStamps, getLocations])
-      .then((promisesResult) => {
+      .then(() => {
         this.hasFetchedData = true;
         this.isFetchingData = false;
       })
