@@ -1,282 +1,319 @@
 import MusicEvent from "../mods/music-event.js";
-import puppeteer from "puppeteer";
 import { parentPort, workerData } from "worker_threads";
-import EventsList from "../mods/events-list.js";
-import fs from "fs";
-import crypto from "crypto";
-import fsDirections from "../mods/fs-directions.js";
 import * as _t from "../mods/tools.js";
-import { letScraperListenToMasterMessageAndInit } from "../mods/generic-scraper.js";
-import { QuickWorkerMessage } from "../mods/rock-worker.js";
+import AbstractScraper from "./abstract-scraper.js";
 import { depulMonths } from "../mods/months.js";
 
-letScraperListenToMasterMessageAndInit(scrapeInit);
-const qwm = new QuickWorkerMessage(workerData);
-let browser = null;
+// SCRAPER CONFIG
 
-async function scrapeInit() {
-  parentPort.postMessage(qwm.workerInitialized());
-  browser = await puppeteer.launch();
-  Promise.race([makeBaseEventList(), _t.errorAfterSeconds(30000)])
+const scraperConfig = {
+  baseEventTimeout: 35000,
+  singlePageTimeout: 25000,
+  workerData: Object.assign({}, workerData),
+};
+const depulScraper = new AbstractScraper(scraperConfig);
 
-    .then((baseMusicEvents) => {
-      parentPort.postMessage(qwm.workerStarted());
-      const baseMusicEventsCopy = [...baseMusicEvents];
-      const eventGen = eventGenerator(baseMusicEventsCopy);
-      const nextEvent = eventGen.next().value;
-      return eventAsyncCheck(eventGen, nextEvent);
-    })
-    .then((eventList) => {
-      return processSingleMusicEvent(eventList);
-    })
-    .then(() => {
-      parentPort.postMessage(qwm.workerDone(EventsList.amountOfEvents));
-    })
-    .catch((error) =>
-      _t.handleError(
-        error,
-        workerData,
-        `outer catch scrape ${workerData.family}`
-      )
-    )
-    .finally(() => {
-      EventsList.save(workerData.family, workerData.index);
-      browser && browser.hasOwnProperty("close") && browser.close();
-    });
-}
+depulScraper.listenToMasterThread();
 
-async function createSinglePage(url) {
-  const page = await browser.newPage();
-  await page
-    .goto(url, {
-      waitUntil: "load",
-      timeout: 20000,
-    })
-    .then(() => true)
-    .catch((err) => {
-      _t.handleError(
-        err,
-        workerData,
-        `${workerData.name} goto single page mislukt:<br><a href='${url}'>${url}</a><br>`
-      );
-      return false;
-    });
-  return page;
-}
+// MAKE BASE EVENTS
 
-async function processSingleMusicEvent(baseMusicEvents) {
-  qwm.todo(baseMusicEvents.length).forEach((JSONblob) => {
-    parentPort.postMessage(JSONblob);
-  });
-
-  const newMusicEvents = [...baseMusicEvents];
-  const firstMusicEvent = newMusicEvents.shift();
-
-  if (!firstMusicEvent || baseMusicEvents.length === 0) {
-    return true;
-  }
-
-  const singleEventPage = await createSinglePage(firstMusicEvent.venueEventUrl);
-  if (!singleEventPage) {
-    return newMusicEvents.length
-      ? processSingleMusicEvent(newMusicEvents)
-      : true;
-  }
-
-  try {
-    const pageInfo = await Promise.race([
-      getPageInfo(singleEventPage, firstMusicEvent.venueEventUrl),
-      _t.errorAfterSeconds(15000),
-    ]);
-
-    if (pageInfo && pageInfo.priceTextcontent) {
-      pageInfo.price = _t.getPriceFromHTML(pageInfo.priceTextcontent);
-    }
-
-    if (pageInfo && pageInfo.longTextHTML) {
-      let uuid = crypto.randomUUID();
-      const longTextPath = `${fsDirections.publicTexts}/${uuid}.html`;
-
-      fs.writeFile(longTextPath, pageInfo.longTextHTML, "utf-8", () => {});
-      pageInfo.longText = longTextPath;
-    }
-
-    // no date no registration.
-    if (pageInfo) {
-      firstMusicEvent.merge(pageInfo);
-    }
-    firstMusicEvent.registerIfValid();
-    if (!singleEventPage.isClosed() && singleEventPage.close());
-  } catch (pageInfoError) {
-    _t.handleError(pageInfoError, workerData, "get page info fail");
-  }
-
-  return newMusicEvents.length
-    ? processSingleMusicEvent(newMusicEvents)
-    : true;
-}
-
-async function getPageInfo(page) {
-  return await page.evaluate(depulMonths => {
-
-    const res = {};
-
-    const contentBox = document.querySelector('#content-box') ?? null;
-    if (contentBox) {
-      [
-        contentBox.querySelector('.item-bottom') ?? null,
-        contentBox.querySelector('.social-content') ?? null,
-        contentBox.querySelector('.facebook-comments') ?? null
-      ].forEach(removeFromContentBox => {
-        if (removeFromContentBox) {
-          contentBox.removeChild(removeFromContentBox)
-        }
-      })
-      res.longTextHTML = contentBox.innerHTML;
-    }
-
-    const agendaTitleBar = document.getElementById('agenda-title-bar') ?? null;
-    res.shortText = agendaTitleBar?.querySelector('h3')?.textContent.trim();
-    const rightHandDataColumn = agendaTitleBar?.querySelector('.column.right') ?? null
-    if (rightHandDataColumn) {
-      rightHandDataColumn.querySelectorAll('h1 + ul li')?.forEach(columnRow => {
-        const lowerCaseTextContent = columnRow.textContent.toLowerCase();
-        if (lowerCaseTextContent.includes('datum')) {
-          const startDateMatch = lowerCaseTextContent.match(/(\d\d)\s+(\w{2,3})\s+(\d{4})/)
-          if (startDateMatch && Array.isArray(startDateMatch) && startDateMatch.length === 4) {
-            res.startDate = `${startDateMatch[3]}-${depulMonths[startDateMatch[2]]}-${startDateMatch[1]}`
-          }
-        } else if (lowerCaseTextContent.includes('aanvang')) {
-          if (!res.startDate) {
-            return;
-          }
-          const startTimeMatch = lowerCaseTextContent.match(/\d\d:\d\d/);
-          if (startTimeMatch && Array.isArray(startTimeMatch) && startTimeMatch.length === 1) {
-            res.startDateTime = new Date(`${res.startDate}T${startTimeMatch[0]}:00`).toISOString()
-          }
-        } else if (lowerCaseTextContent.includes('open')) {
-          if (!res.startDate) {
-            return;
-          }
-          const doorTimeMatch = lowerCaseTextContent.match(/\d\d:\d\d/);
-          if (doorTimeMatch && Array.isArray(doorTimeMatch) && doorTimeMatch.length === 1) {
-            res.doorOpenDateTime = new Date(`${res.startDate}T${doorTimeMatch[0]}:00`).toISOString()
-          }
-        }
-        if (!res.startDateTime && res.doorOpenDateTime) {
-          res.startDateTime = res.doorOpenDateTime;
-          res.doorOpenDateTime = null;
-        }
-      })
-    }
-    return res;
-  }, depulMonths);
-}
-
-async function makeBaseEventList() {
-  const page = await browser.newPage();
+depulScraper.makeBaseEventList = async function () {
+  const stopFunctie = setTimeout(() => {
+    throw new Error(
+      `makeBaseEventList is de max tijd voor zn functie ${this.maxExecutionTime} voorbij `
+    );
+  }, this.maxExecutionTime);
+  const page = await this.browser.newPage();
   await page.goto("https://www.livepul.com/agenda/", {
     waitUntil: "load",
   });
 
-  let rawEvents = await page.evaluate(({ depulMonths, workerIndex }) => {
-
+  await page.evaluate(() => {
     // hack op site
-    loadContent('all', 'music');
+    loadContent("all", "music");
+  });
 
-    return Array.from(document.querySelectorAll('.agenda-item'))
-      .filter((rawEvent, eventIndex) => {
-        return eventIndex % 3 === workerIndex;
-      })
-      .map(rawEvent => {
+  await _t.waitFor(250);
 
-        const title = rawEvent.querySelector('h2')?.textContent.trim() ?? '';
-        const shortText = rawEvent.querySelector('.text-box .desc')?.textContent.trim() ?? '';
-        const startDay = rawEvent.querySelector('time .number')?.textContent.trim()?.padStart(2, '0') ?? null;
-        const startMonthName = rawEvent.querySelector('.time month')?.textContent.trim() ?? null;
-        const startMonth = depulMonths[startMonthName]
-        const startMonthJSNumber = Number(startMonth) - 1;
-        const refDate = new Date();
-        let startYear = refDate.getFullYear();
-        if (startMonthJSNumber < refDate.getMonth()) {
-          startYear = startYear + 1;
-        }
-        const startDate = `${startYear}-${startMonth}-${startDay}`
-        const venueEventUrl = rawEvent.querySelector('a')?.href ?? null;
+  let rawEvents = await page.evaluate(
+    ({ months, workerIndex }) => {
+      return (
+        Array.from(document.querySelectorAll(".agenda-item"))
+          .filter((rawEvent, eventIndex) => {
+            return eventIndex % 2 === workerIndex;
+          })
+          .map((rawEvent) => {
+            const title =
+              rawEvent.querySelector("h2")?.textContent.trim() ?? "";
+            const shortText =
+              rawEvent.querySelector(".text-box .desc")?.textContent.trim() ??
+              "";
+            const startDay =
+              rawEvent
+                .querySelector("time .number")
+                ?.textContent.trim()
+                ?.padStart(2, "0") ?? null;
+            const startMonthName =
+              rawEvent.querySelector(".time month")?.textContent.trim() ?? null;
+            const startMonth = months[startMonthName];
+            const startMonthJSNumber = Number(startMonth) - 1;
+            const refDate = new Date();
+            let startYear = refDate.getFullYear();
+            if (startMonthJSNumber < refDate.getMonth()) {
+              startYear = startYear + 1;
+            }
+            const startDate = `${startYear}-${startMonth}-${startDay}`;
+            const venueEventUrl = rawEvent.querySelector("a")?.href ?? null;
 
-        const imageMatch = rawEvent.querySelector('a')?.getAttribute('style').match(/url\(\'(.*)\'\)/) ?? null;
-        let image;
-        if (imageMatch && Array.isArray(imageMatch) && imageMatch.length === 2) {
-          image = imageMatch[1]
-        }
+            const imageMatch =
+              rawEvent
+                .querySelector("a")
+                ?.getAttribute("style")
+                .match(/url\(\'(.*)\'\)/) ?? null;
+            let image;
+            if (
+              imageMatch &&
+              Array.isArray(imageMatch) &&
+              imageMatch.length === 2
+            ) {
+              image = imageMatch[1];
+            }
 
-        return {
-          image,
-          venueEventUrl,
-          location: 'depul',
-          title,
-          startDate,
-          shortText,
-        }
-      })
-  }, { depulMonths, workerIndex: workerData.index });
+            return {
+              image,
+              venueEventUrl,
+              location: "depul",
+              title,
+              startDate,
+              shortText,
+            };
+          })
+      );
+    },
+    { months: depulMonths, workerIndex: workerData.index }
+  );
+
+  clearTimeout(stopFunctie);
+  !page.isClosed() && page.close();
+
+  this.dirtyLog(rawEvents);
   return rawEvents
+    .map((event) => {
+      !event.venueEventUrl &&
+        parentPort.postMessage(
+          this.qwm.messageRoll(
+            `Red het niet: <a href='${event.venueEventUrl}'>${event.title}</a> ongeldig.`
+          )
+        );
+      return event;
+    })
     .filter(_t.basicMusicEventsFilter)
     .map((event) => new MusicEvent(event));
-}
+};
 
+// GET PAGE INFO
 
-async function eventAsyncCheck(eventGen, currentEvent = null, checkedEvents = []) {
+depulScraper.getPageInfo = async function ({ page, url }) {
+  parentPort.postMessage(this.qwm.messageRoll(`get ${url}`));
 
-  const firstCheckText = `${currentEvent?.title ?? ''} ${currentEvent?.shortText ?? ''}`;
-  if (
-    firstCheckText.includes('metal') ||
-    firstCheckText.includes('punk') ||
-    firstCheckText.includes('punx') ||
-    firstCheckText.includes('noise') ||
-    firstCheckText.includes('industrial')
-  ) {
-    currentEvent.passReason = `title and/or short text genre match`
-    checkedEvents.push(currentEvent)
-  } else {
+  const stopFunctie = setTimeout(() => {
+    throw new Error(
+      `makeBaseEventList is de max tijd voor zn functie ${this.maxExecutionTime} voorbij `
+    );
+  }, this.maxExecutionTime);
+  const pageInfo = await page.evaluate(
+    ({ months }) => {
+      const res = {
+        unavailable: "",
+        pageInfoID: `<a href='${document.location.href}'>${document.title}</a>`,
+        errorsVoorErrorHandler: [],
+      };
 
-    const tempPage = await browser.newPage();
-    await tempPage.goto(currentEvent.venueEventUrl, {
-      waitUntil: "load",
-    });
+      try {
+        const contentBox = document.querySelector("#content-box") ?? null;
+        if (contentBox) {
+          [
+            contentBox.querySelector(".item-bottom") ?? null,
+            contentBox.querySelector(".social-content") ?? null,
+            contentBox.querySelector(".facebook-comments") ?? null,
+          ].forEach((removeFromContentBox) => {
+            if (removeFromContentBox) {
+              contentBox.removeChild(removeFromContentBox);
+            }
+          });
+          res.longTextHTML = contentBox.innerHTML;
+        }
+      } catch (error) {
+        res.errorsVoorErrorHandler.push({
+          error,
+          remarks: "longTextHTML",
+        });
+      }
 
-    const rockMetalOpPagina = await tempPage.evaluate(() => {
-      const tc = document.getElementById('content-box')?.textContent.toLowerCase() ?? '';
-      return tc.includes('metal') ||
-        tc.includes('punk') ||
-        tc.includes('thrash') ||
-        tc.includes('punx') ||
-        tc.includes('noise') ||
-        tc.includes('industrial')
-    });
+      const agendaTitleBar =
+        document.getElementById("agenda-title-bar") ?? null;
+      res.shortText = agendaTitleBar?.querySelector("h3")?.textContent.trim();
+      const rightHandDataColumn =
+        agendaTitleBar?.querySelector(".column.right") ?? null;
+      if (!rightHandDataColumn) {
+        return res;
+      }
+      rightHandDataColumn
+        .querySelectorAll("h1 + ul li")
+        ?.forEach((columnRow) => {
+          const lowerCaseTextContent = columnRow?.textContent.toLowerCase();
+          if (lowerCaseTextContent.includes("datum")) {
+            try {
+              const startDateMatch = lowerCaseTextContent.match(
+                /(\d\d)\s+(\w{2,3})\s+(\d{4})/
+              );
+              if (
+                startDateMatch &&
+                Array.isArray(startDateMatch) &&
+                startDateMatch.length === 4
+              ) {
+                res.startDate = `${startDateMatch[3]}-${
+                  months[startDateMatch[2]]
+                }-${startDateMatch[1]}`;
+              }
+            } catch (error) {
+              res.errorsVoorErrorHandler({ error, remarks: "startDate" });
+            }
+          } else if (lowerCaseTextContent.includes("aanvang")) {
+            if (!res.startDate) {
+              return;
+            }
+            try {
+              const startTimeMatch = lowerCaseTextContent.match(/\d\d:\d\d/);
+              if (
+                startTimeMatch &&
+                Array.isArray(startTimeMatch) &&
+                startTimeMatch.length === 1
+              ) {
+                res.startDateTime = new Date(
+                  `${res.startDate}T${startTimeMatch[0]}:00`
+                ).toISOString();
+              }
+            } catch (error) {
+              res.errorsVoorErrorHandler({
+                error,
+                remarks: "startDateTime en startDate",
+              });
+            }
+          } else if (lowerCaseTextContent.includes("open")) {
+            if (!res.startDate) {
+              return;
+            }
+            try {
+              const doorTimeMatch = lowerCaseTextContent.match(/\d\d:\d\d/);
+              if (
+                doorTimeMatch &&
+                Array.isArray(doorTimeMatch) &&
+                doorTimeMatch.length === 1
+              ) {
+                res.doorOpenDateTime = new Date(
+                  `${res.startDate}T${doorTimeMatch[0]}:00`
+                ).toISOString();
+              }
+            } catch (error) {
+              res.errorsVoorErrorHandler({
+                error,
+                remarks: "doorDateTime en startDate",
+              });
+            }
+          }
+          if (!res.startDateTime && res.doorOpenDateTime) {
+            res.startDateTime = res.doorOpenDateTime;
+            res.doorOpenDateTime = null;
+          }
+        });
+      if (!res.startDateTime) {
+        res.unavailable += " geen start date time";
+      }
+      if (!!res.unavailable) {
+        res.unavailable += `${res.unavailable}\n${res.pageInfoID}`;
+      }
+      return res;
+    },
+    { months: depulMonths }
+  );
 
-    if (rockMetalOpPagina) {
-      currentEvent.passReason = `Page of event contained genres`
-      checkedEvents.push(currentEvent)
-    }
+  this.dirtyLog(pageInfo);
 
-    await tempPage.close();
+  pageInfo?.errorsVoorErrorHandler?.forEach((errorHandlerMeuk) => {
+    _t.handleError(
+      errorHandlerMeuk.error,
+      workerData,
+      errorHandlerMeuk.remarks
+    );
+  });
 
+  clearTimeout(stopFunctie);
+  !page.isClosed() && page.close();
+
+  if (!pageInfo) {
+    const uuu = new URL(url);
+    return {
+      unavailable: `Geen resultaat <a href="${uuu}">van pageInfo</a>`,
+    };
   }
+  return pageInfo;
+};
 
-  const nextEvent = eventGen.next().value;
-  if (nextEvent) {
-    return eventAsyncCheck(eventGen, nextEvent, checkedEvents)
-  } else {
-    return checkedEvents;
-  }
+// async function eventAsyncCheck(
+//   eventGen,
+//   currentEvent = null,
+//   checkedEvents = []
+// ) {
+//   const firstCheckText = `${currentEvent?.title ?? ""} ${
+//     currentEvent?.shortText ?? ""
+//   }`;
+//   if (
+//     firstCheckText.includes("metal") ||
+//     firstCheckText.includes("punk") ||
+//     firstCheckText.includes("punx") ||
+//     firstCheckText.includes("noise") ||
+//     firstCheckText.includes("industrial")
+//   ) {
+//     currentEvent.passReason = `title and/or short text genre match`;
+//     checkedEvents.push(currentEvent);
+//   } else {
+//     const tempPage = await browser.newPage();
+//     await tempPage.goto(currentEvent.venueEventUrl, {
+//       waitUntil: "load",
+//     });
 
-}
+//     const rockMetalOpPagina = await tempPage.evaluate(() => {
+//       const tc =
+//         document.getElementById("content-box")?.textContent.toLowerCase() ?? "";
+//       return (
+//         tc.includes("metal") ||
+//         tc.includes("punk") ||
+//         tc.includes("thrash") ||
+//         tc.includes("punx") ||
+//         tc.includes("noise") ||
+//         tc.includes("industrial")
+//       );
+//     });
 
-function* eventGenerator(baseMusicEvents) {
+//     if (rockMetalOpPagina) {
+//       currentEvent.passReason = `Page of event contained genres`;
+//       checkedEvents.push(currentEvent);
+//     }
 
-  while (baseMusicEvents.length) {
-    yield baseMusicEvents.shift();
+//     await tempPage.close();
+//   }
 
-  }
-}
+//   const nextEvent = eventGen.next().value;
+//   if (nextEvent) {
+//     return eventAsyncCheck(eventGen, nextEvent, checkedEvents);
+//   } else {
+//     return checkedEvents;
+//   }
+// }
+
+// function* eventGenerator(baseMusicEvents) {
+//   while (baseMusicEvents.length) {
+//     yield baseMusicEvents.shift();
+//   }
+// }

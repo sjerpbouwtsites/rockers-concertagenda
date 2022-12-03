@@ -98,6 +98,7 @@ export default class MonitorField {
           rollRow.messageData?.content?.tekst ??
           rollRow.messageData?.tekst ??
           rollRow.messageData?.text ??
+          rollRow.messageData?.content;
           null;
         if (t) {
           t = this.linebreaksNaarBR(t);
