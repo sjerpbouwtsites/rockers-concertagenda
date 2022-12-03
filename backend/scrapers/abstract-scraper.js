@@ -25,6 +25,7 @@ export default class AbstractScraper {
     this.baseEventTimeout = obj.baseEventTimeout ?? 15000;
     this.singlePageTimeout = obj.singlePageTimeout ?? 5000;
     this.maxExecutionTime = obj.maxExecutionTime ?? 30000;
+    this.puppeteerConfig = obj.puppeteerConfig ?? {};
     this.months = obj.months ?? null;
   }
 
@@ -266,10 +267,10 @@ export default class AbstractScraper {
   async createSinglePage(url) {
     try {
       const page = await this.browser.newPage();
-      await page.goto(url, {
-        waitUntil: "load",
+      const singlePagePuppeteerConfig = this.puppeteerConfig?.singlePage ?? {
         timeout: this.singlePageTimeout,
-      });
+      };
+      await page.goto(url, singlePagePuppeteerConfig);
       return page;
     } catch (error) {
       _t.handleError(

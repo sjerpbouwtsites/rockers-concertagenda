@@ -204,8 +204,6 @@ bibelotScraper.getPageInfo = async function ({ page, url }) {
     { months: bibelotMonths }
   );
 
-  this.dirtyLog(pageInfo, "log");
-
   pageInfo?.errorsVoorErrorHandler?.forEach((errorHandlerMeuk) => {
     _t.handleError(
       errorHandlerMeuk.error,

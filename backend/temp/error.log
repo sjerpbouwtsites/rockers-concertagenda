@@ -1,4 +1,28 @@
 
+  dbs-1 Error - 5:22:20 AM
+  TimeoutError: Navigation timeout of 20000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 20000 ms exceeded
+  
+  
+  dbs-2 Error - 5:22:19 AM
+  TimeoutError: Navigation timeout of 20000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111
+    at async FrameManager.navigateFrame (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:131:21)
+    at async Frame.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:512:16)
+    at async Page.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1167:16)
+    at async AbstractScraper.createSinglePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:269:7)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:170:29)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:54:5) 
+  Navigation timeout of 20000 ms exceeded
+  
+  
+  dbs-1 Error - 5:21:24 AM
+  TimeoutError: Navigation timeout of 20000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 20000 ms exceeded
+  
+  
   bibelot-0 Error - 5:10:25 AM
   Error: Evaluation failed: ReferenceError: eventMetaColomText is not defined
     at __puppeteer_evaluation_script__:52:54
