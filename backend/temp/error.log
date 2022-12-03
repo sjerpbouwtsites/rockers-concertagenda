@@ -1,4 +1,60 @@
 
+  depul-0 Error - 8:59:28 AM
+  ReferenceError: currentEvent is not defined
+    at depulScraper.singleEventCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/depul.js:35:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.eventAsyncCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:112:27)
+    at async AbstractScraper.announceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:85:12)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:51:27) 
+  currentEvent is not defined
+  
+  
+  depul-1 Error - 8:59:27 AM
+  ReferenceError: currentEvent is not defined
+    at depulScraper.singleEventCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/depul.js:35:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.eventAsyncCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:112:27)
+    at async AbstractScraper.announceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:85:12)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:51:27) 
+  currentEvent is not defined
+  
+  
+  depul-1 Error - 8:58:03 AM
+  ReferenceError: nextEvent is not defined
+    at AbstractScraper.eventAsyncCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:135:37)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.announceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:85:12)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:51:27) 
+  nextEvent is not defined
+  
+  
+  depul-0 Error - 8:58:03 AM
+  ReferenceError: nextEvent is not defined
+    at AbstractScraper.eventAsyncCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:135:37)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.announceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:85:12)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:51:27) 
+  nextEvent is not defined
+  
+  
+  depul-1 Error - 8:46:48 AM
+  ReferenceError: nextEvent is not defined
+    at AbstractScraper.eventAsyncCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:121:37)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.announceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:85:12)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:51:27) 
+  nextEvent is not defined
+  
+  
+  depul-0 Error - 8:46:47 AM
+  ReferenceError: nextEvent is not defined
+    at AbstractScraper.eventAsyncCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:121:37)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.announceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:85:12)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:51:27) 
+  nextEvent is not defined
+  
+  
   kavka-0 Error - 7:32:21 AM
   TimeoutError: Navigation timeout of 45000 ms exceeded
     at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 

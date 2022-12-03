@@ -101,7 +101,7 @@ class WorkerListConf {
     //   workerConcurrent: 1
     // });
     this.create({ family: "depul", workerCount: 2 });
-    // this.create({family: 'paradiso', workerCount: 4})
+    // this.create({ family: "paradiso", workerCount: 4 });
     // this.create({ family: "volt", workerCount: 1 });
     // this.create({family: 'duycker', workerCount: 1})
     this.shuffleArray();

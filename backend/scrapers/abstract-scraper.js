@@ -8,7 +8,7 @@ import fs from "fs";
 import EventsList from "../mods/events-list.js";
 
 /**
- * @method eventGenerator<Generator> 
+ * @method eventGenerator<Generator>
  *
  * @export
  * @class AbstractScraper
@@ -100,14 +100,30 @@ export default class AbstractScraper {
    * @memberof AbstractScraper
    */
   async eventAsyncCheck({ eventGen, checkedEvents }) {
+
+    let generatedEvent;
     try {
       const useableEventsCheckedArray = checkedEvents.map((a) => a);
 
       const generatedEvent = eventGen.next();
       if (generatedEvent.done) return useableEventsCheckedArray;
 
-      if ((await this.singleEventCheck(generatedEvent.value)).success) {
-        useableEventsCheckedArray.push(generatedEvent.value);
+      const eventToCheck = generatedEvent.value;
+      const checkResult = await this.singleEventCheck(eventToCheck);
+      if (checkResult.success) {
+        useableEventsCheckedArray.push(eventToCheck);
+      } else {
+        parentPort.postMessage(
+          this.qwm.debugger([
+            `${eventToCheck?.title} uitgefilterd asyncCheck`,
+            {
+              title: eventToCheck.title,
+              shortText: eventToCheck.shortText,
+              url: eventToCheck.venueEventUrl,
+              reason: checkResult.reason,
+            },
+          ])
+        );
       }
 
       return await this.eventAsyncCheck({
@@ -118,7 +134,7 @@ export default class AbstractScraper {
       _t.handleError(
         error,
         workerData,
-        `eventAsyncCheck faal met ${nextEvent?.value?.title}`
+        `eventAsyncCheck faal met ${generatedEvent?.value?.title}`
       );
     }
   }
@@ -141,6 +157,7 @@ export default class AbstractScraper {
     return {
       event,
       success: true,
+      reason: null,
     };
   }
 

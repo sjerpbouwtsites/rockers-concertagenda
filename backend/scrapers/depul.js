@@ -15,6 +15,57 @@ const depulScraper = new AbstractScraper(scraperConfig);
 
 depulScraper.listenToMasterThread();
 
+depulScraper.singleEventCheck = async function (event) {
+  const firstCheckText = `${event?.title ?? ""} ${event?.shortText ?? ""}`;
+  if (
+    firstCheckText.includes("metal") ||
+    firstCheckText.includes("punk") ||
+    firstCheckText.includes("punx") ||
+    firstCheckText.includes("noise") ||
+    firstCheckText.includes("industrial")
+  ) {
+    return {
+      event,
+      success: true,
+      reason: "Genres in title+shortText",
+    };
+  }
+
+  const tempPage = await this.browser.newPage();
+  await tempPage.goto(event.venueEventUrl, {
+    waitUntil: "domcontentloaded",
+    timeout: this.singlePageTimeout,
+  });
+
+  const rockMetalOpPagina = await tempPage.evaluate(() => {
+    const tc =
+      document.getElementById("content-box")?.textContent.toLowerCase() ?? "";
+    return (
+      tc.includes("metal") ||
+      tc.includes("punk") ||
+      tc.includes("thrash") ||
+      tc.includes("punx") ||
+      tc.includes("noise") ||
+      tc.includes("industrial")
+    );
+  });
+  await tempPage.close();
+
+  if (rockMetalOpPagina) {
+    return {
+      event,
+      success: true,
+      reason: "Genres found in text of event URL",
+    };
+  }
+
+  return {
+    event,
+    success: false,
+    reason: "genres not in title, shortText, or event URL",
+  };
+};
+
 // MAKE BASE EVENTS
 
 depulScraper.makeBaseEventList = async function () {
@@ -37,58 +88,54 @@ depulScraper.makeBaseEventList = async function () {
 
   let rawEvents = await page.evaluate(
     ({ months, workerIndex }) => {
-      return (
-        Array.from(document.querySelectorAll(".agenda-item"))
-          .filter((rawEvent, eventIndex) => {
-            return eventIndex % 2 === workerIndex;
-          })
-          .map((rawEvent) => {
-            const title =
-              rawEvent.querySelector("h2")?.textContent.trim() ?? "";
-            const shortText =
-              rawEvent.querySelector(".text-box .desc")?.textContent.trim() ??
-              "";
-            const startDay =
-              rawEvent
-                .querySelector("time .number")
-                ?.textContent.trim()
-                ?.padStart(2, "0") ?? null;
-            const startMonthName =
-              rawEvent.querySelector(".time month")?.textContent.trim() ?? null;
-            const startMonth = months[startMonthName];
-            const startMonthJSNumber = Number(startMonth) - 1;
-            const refDate = new Date();
-            let startYear = refDate.getFullYear();
-            if (startMonthJSNumber < refDate.getMonth()) {
-              startYear = startYear + 1;
-            }
-            const startDate = `${startYear}-${startMonth}-${startDay}`;
-            const venueEventUrl = rawEvent.querySelector("a")?.href ?? null;
+      return Array.from(document.querySelectorAll(".agenda-item"))
+        .filter((rawEvent, eventIndex) => {
+          return eventIndex % 2 === workerIndex;
+        })
+        .map((rawEvent) => {
+          const title = rawEvent.querySelector("h2")?.textContent.trim() ?? "";
+          const shortText =
+            rawEvent.querySelector(".text-box .desc")?.textContent.trim() ?? "";
+          const startDay =
+            rawEvent
+              .querySelector("time .number")
+              ?.textContent.trim()
+              ?.padStart(2, "0") ?? null;
+          const startMonthName =
+            rawEvent.querySelector(".time month")?.textContent.trim() ?? null;
+          const startMonth = months[startMonthName];
+          const startMonthJSNumber = Number(startMonth) - 1;
+          const refDate = new Date();
+          let startYear = refDate.getFullYear();
+          if (startMonthJSNumber < refDate.getMonth()) {
+            startYear = startYear + 1;
+          }
+          const startDate = `${startYear}-${startMonth}-${startDay}`;
+          const venueEventUrl = rawEvent.querySelector("a")?.href ?? null;
 
-            const imageMatch =
-              rawEvent
-                .querySelector("a")
-                ?.getAttribute("style")
-                .match(/url\(\'(.*)\'\)/) ?? null;
-            let image;
-            if (
-              imageMatch &&
-              Array.isArray(imageMatch) &&
-              imageMatch.length === 2
-            ) {
-              image = imageMatch[1];
-            }
+          const imageMatch =
+            rawEvent
+              .querySelector("a")
+              ?.getAttribute("style")
+              .match(/url\(\'(.*)\'\)/) ?? null;
+          let image;
+          if (
+            imageMatch &&
+            Array.isArray(imageMatch) &&
+            imageMatch.length === 2
+          ) {
+            image = imageMatch[1];
+          }
 
-            return {
-              image,
-              venueEventUrl,
-              location: "depul",
-              title,
-              startDate,
-              shortText,
-            };
-          })
-      );
+          return {
+            image,
+            venueEventUrl,
+            location: "depul",
+            title,
+            startDate,
+            shortText,
+          };
+        });
     },
     { months: depulMonths, workerIndex: workerData.index }
   );
@@ -96,7 +143,6 @@ depulScraper.makeBaseEventList = async function () {
   clearTimeout(stopFunctie);
   !page.isClosed() && page.close();
 
-  this.dirtyLog(rawEvents);
   return rawEvents
     .map((event) => {
       !event.venueEventUrl &&
@@ -237,8 +283,6 @@ depulScraper.getPageInfo = async function ({ page, url }) {
     },
     { months: depulMonths }
   );
-
-  this.dirtyLog(pageInfo);
 
   pageInfo?.errorsVoorErrorHandler?.forEach((errorHandlerMeuk) => {
     _t.handleError(
