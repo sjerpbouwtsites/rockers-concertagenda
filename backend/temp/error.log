@@ -1,4 +1,12 @@
 
+  neushoorn-0 Error - 6:09:39 AM
+  ReferenceError: qwm is not defined
+    at neushoornScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/neushoorn.js:29:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:47:29) 
+  qwm is not defined
+  
+  
   dbs-1 Error - 5:22:20 AM
   TimeoutError: Navigation timeout of 20000 ms exceeded
     at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 

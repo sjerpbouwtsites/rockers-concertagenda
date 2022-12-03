@@ -86,8 +86,8 @@ class WorkerListConf {
     // });
     // this.create({ family: "bibelot", workerCount: 1 });
     // this.create({ family: "dbs", workerCount: 4, workerConcurrent: 1 });
-    this.create({ family: "gebrdenobel", workerCount: 1 });
-    // this.create({family: 'neushoorn', workerCount: 1})
+    // this.create({ family: "gebrdenobel", workerCount: 1 });
+    this.create({ family: "neushoorn", workerCount: 1 });
     // this.create({family: 'afaslive', workerCount: 4, CPUReq: 'high', workerConcurrent: 1})
     // this.create({family: 'iduna', workerCount: 1})
     // this.create({family: 'kavka', workerCount: 1,workerConcurrent: 1, CPUReq: 'high' })

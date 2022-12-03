@@ -3,21 +3,25 @@ import EventsList from "./events-list.js";
 import wsMessage from "../monitor/wsMessage.js";
 import { parentPort } from "worker_threads";
 import { AbstractWorkerConfig } from "./worker-config.js";
+import { getShellArguments } from "./tools.js";
 
 export function AbstractWorkerData() {
-  return {...{
-    ...AbstractWorkerConfig,
-    status: null,
-    todo : null,
-    eventsRegistered : [],
-    errors : [],
-  }}
+  return {
+    ...{
+      ...AbstractWorkerConfig,
+      status: null,
+      todo: null,
+      eventsRegistered: [],
+      errors: [],
+    },
+  };
 }
 
 export default class WorkerStatus {
   static _workers = {};
   static CPUFree = 100;
-  
+  static shellArguments = getShellArguments();
+
   /**
    * Niet een dynamische waarde maar éénmalig ingesteld
    */
@@ -29,41 +33,41 @@ export default class WorkerStatus {
   static monitorWebsocketServer = null;
   static reportingInterval = null;
   static registerWorker(workerConf) {
-    WorkerStatus._workers[workerConf.name].status = 'registered';
+    WorkerStatus._workers[workerConf.name].status = "registered";
   }
-  static getWorkerData(workerName){
-    return WorkerStatus._workers(workerName)
+  static getWorkerData(workerName) {
+    return WorkerStatus._workers(workerName);
   }
 
-
-  static registerAllWorkersAsWaiting(workerConfList){
-    workerConfList.forEach(workerConf => {
-      WorkerStatus._workers[workerConf.name] = 
-       {
+  static registerAllWorkersAsWaiting(workerConfList) {
+    workerConfList.forEach((workerConf) => {
+      WorkerStatus._workers[workerConf.name] = {
         ...AbstractWorkerData(),
         ...workerConf,
         status: "waiting",
-      }      
-    })
+      };
+    });
   }
 
-  static workersWorkingOfFamily(family){
-    const a = Object.values(WorkerStatus._workers).filter(worker => {
-      return !['done', 'waiting'].includes(worker.status) && worker.family === family
-    }).length
+  static workersWorkingOfFamily(family) {
+    const a = Object.values(WorkerStatus._workers).filter((worker) => {
+      return (
+        !["done", "waiting"].includes(worker.status) && worker.family === family
+      );
+    }).length;
     return a;
   }
 
-  static workersWorking(){
-    return Object.values(WorkerStatus._workers).filter(worker => {
-      return !['done', 'waiting'].includes(worker.status)
-    }).length
+  static workersWorking() {
+    return Object.values(WorkerStatus._workers).filter((worker) => {
+      return !["done", "waiting"].includes(worker.status);
+    }).length;
   }
 
   static isRegisteredWorker(workerName) {
     return (
       !!WorkerStatus._workers[workerName] &&
-      !!(WorkerStatus._workers[workerName]?.status ?? null) 
+      !!(WorkerStatus._workers[workerName]?.status ?? null)
     );
   }
 
@@ -96,7 +100,7 @@ export default class WorkerStatus {
   // @TODO CREEER: tbv niet één familie meerdere tegelijk
   // static get currentWorkersOfThisFamily() {
   //   //
-  // }  
+  // }
 
   static initializeReporting() {
     WorkerStatus.reportingInterval = setInterval(
@@ -110,22 +114,40 @@ export default class WorkerStatus {
     // console.log(name, status, message);
     const statusses = status?.split(" ") ?? "";
 
+    const thisWorker = WorkerStatus._workers[name];
     if (statusses.includes("done")) {
-      WorkerStatus._workers[name].status = "done";
-      WorkerStatus._workers[name].todo = 0;
+      thisWorker.status = "done";
+      thisWorker.todo = 0;
       WorkerStatus.completedWorkers = WorkerStatus.completedWorkers + 1;
     }
 
+    if (statusses.includes("registered")) {
+      thisWorker.status = "registered";
+    }
+
     if (statusses.includes("working")) {
-      WorkerStatus._workers[name].status = "working";
+      thisWorker.status = "working";
     }
 
     if (statusses.includes("todo")) {
-      WorkerStatus._workers[name].todo = message.todo;
+      thisWorker.todo = message.todo;
     }
-  } 
 
-  static saveError(name, message){
+    if (
+      !statusses.includes("todo") &&
+      WorkerStatus.shellArguments?.force.includes(thisWorker.family)
+    ) {
+      const forcedMessage = new wsMessage("update", "message-roll", {
+        title: `Status update`,
+        content: `${name} is nu ${status}`,
+      });
+      if (WorkerStatus.mwss) {
+        WorkerStatus.mwss.broadcast(forcedMessage.json);
+      }
+    }
+  }
+
+  static saveError(name, message) {
     WorkerStatus._workers[name].errors.push(message);
   }
 
