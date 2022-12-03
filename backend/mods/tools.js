@@ -196,73 +196,9 @@ export function saveLongTextHTML(pageInfo) {
 const def = {
   handleError,
   errorAfterSeconds,
-  isRock,
 };
 
 export default def;
-
-export async function isRock(
-  browser,
-  eventTitles,
-  isRockPossible = false,
-  logCheck = false
-) {
-  if (!eventTitles.length) {
-    return false;
-  }
-  if (isRockPossible) {
-    return true;
-  }
-
-  const newTitles = [...eventTitles];
-  const title = newTitles.shift();
-
-  const MetalEncFriendlyTitle = title.replace(/\s/g, "_");
-  const foundInMetalEncyclopedia = await fetch(
-    `https://www.metal-archives.com/search/ajax-band-search/?field=name&query=${MetalEncFriendlyTitle}`
-  )
-    .then((result) => result.json())
-    .then((parsedJson) => {
-      return parsedJson.iTotalRecords > 0;
-    });
-  isRockPossible = isRockPossible || foundInMetalEncyclopedia;
-
-  let wikipediaSaysRock = false;
-  if (!isRockPossible) {
-    const page = await browser.newPage();
-    await page.goto(
-      `https://en.wikipedia.org/wiki/${title.replace(/\s/g, "_")}`
-    );
-    wikipediaSaysRock = await page.evaluate(() => {
-      const isRock =
-        !!document.querySelector(".infobox a[href*='rock']") &&
-        !document.querySelector(".infobox a[href*='Indie_rock']");
-      const isMetal = !!document.querySelector(".infobox a[href*='metal']");
-      return isRock || isMetal;
-    });
-    page.close();
-  }
-
-  isRockPossible = isRockPossible || wikipediaSaysRock;
-
-  if (logCheck) {
-    log(
-      `checking: ${eventTitles.join(
-        "; "
-      )}, isRock: ${isRockPossible} MetalEnc: ${foundInMetalEncyclopedia} wiki: ${wikipediaSaysRock}`
-    );
-  }
-
-  if (isRockPossible) {
-    return true;
-  }
-
-  if (newTitles.length) {
-    return await isRock(browser, newTitles, isRockPossible);
-  } else {
-    return false;
-  }
-}
 
 export async function waitFor(wait = 500) {
   return new Promise((res, rej) => {

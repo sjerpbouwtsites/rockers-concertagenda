@@ -145,6 +145,56 @@ export default class AbstractScraper {
   }
 
   /**
+   * methode waarmee singleEventCheck vervangen kan worden.
+   * kijkt naar 'voornaamste titel', dwz de event.title tot aan een '&'.
+   *
+   * @param {*} event
+   * @return {event: MusicEvent, success: boolean}
+   * @memberof AbstractScraper
+   */
+  async isRock(event) {
+    const mainTitle = event.title.replace(/&.*/, "").trim().toLowerCase();
+    const MetalEncFriendlyTitle = mainTitle.replace(/\s/g, "_");
+
+    const foundInMetalEncyclopedia = await fetch(
+      `https://www.metal-archives.com/search/ajax-band-search/?field=name&query=${MetalEncFriendlyTitle}`
+    )
+      .then((result) => result.json())
+      .then((parsedJson) => {
+        return parsedJson.iTotalRecords > 0;
+      });
+    if (foundInMetalEncyclopedia) {
+      return {
+        event,
+        success: true,
+      };
+    }
+
+    const page = await this.browser.newPage();
+    await page.goto(
+      `https://en.wikipedia.org/wiki/${mainTitle.replace(/\s/g, "_")}`
+    );
+    const wikiRockt = await page.evaluate(() => {
+      const isRock =
+        !!document.querySelector(".infobox a[href*='rock']") &&
+        !document.querySelector(".infobox a[href*='Indie_rock']");
+      const isMetal = !!document.querySelector(".infobox a[href*='metal']");
+      return isRock || isMetal;
+    });
+    !page.isClosed() && page.close();
+    if (wikiRockt) {
+      return {
+        event,
+        success: true,
+      };
+    }
+    return {
+      event,
+      success: false,
+    };
+  }
+
+  /**
    * Process single Music Event
    * Naait het scrapen aan elkaar
    * Laat puppeteer pagina maken

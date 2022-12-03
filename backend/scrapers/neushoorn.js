@@ -26,14 +26,12 @@ neushoornScraper.makeBaseEventList = async function () {
   }, this.maxExecutionTime);
   const page = await this.browser.newPage();
 
-  parentPort.postMessage(this.qwm.messageRoll("voor laden agenda"));
+  
 
   await page.goto("https://neushoorn.nl/#/agenda", {
     waitUntil: "domcontentloaded",
     timeout: this.singlePageTimeout,
   });
-
-  parentPort.postMessage(this.qwm.messageRoll("na laden agenda"));
 
   try {
     await page.waitForSelector('[href*="Heavy"]', {
@@ -43,13 +41,7 @@ neushoornScraper.makeBaseEventList = async function () {
     _t.handleError(error, workerData, "Neushoorn wacht op laden agenda pagina");
   }
 
-  parentPort.postMessage(this.qwm.messageRoll("heavy href is er"));
-
   await page.click('[href*="Heavy"]');
-
-  parentPort.postMessage(
-    this.qwm.messageRoll("geklikt op heavy, wachten op laden resultaat")
-  );
 
   try {
     await page.waitForSelector(".productions__item", {
@@ -63,7 +55,7 @@ neushoornScraper.makeBaseEventList = async function () {
     );
   }
 
-  parentPort.postMessage(this.qwm.messageRoll("resultaat is er"));
+  
 
   await _t.waitFor(50);
 
