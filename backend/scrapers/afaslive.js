@@ -33,19 +33,19 @@ afasliveScraper.makeBaseEventList = async function () {
 
   await _t.autoScroll(page);
   await _t.waitFor(750);
-  parentPort.postMessage(this.qwm.messageRoll("na autoscroll 1"));
+  
   await _t.autoScroll(page);
   await _t.waitFor(750);
-  parentPort.postMessage(this.qwm.messageRoll("na autoscroll 2"));
+
   await _t.autoScroll(page);
   await _t.waitFor(750);
-  parentPort.postMessage(this.qwm.messageRoll("na autoscroll 3"));
+
   await _t.autoScroll(page);
   await _t.waitFor(750);
-  parentPort.postMessage(this.qwm.messageRoll("na autoscroll 4"));
+
   await _t.autoScroll(page);
   await _t.waitFor(750);
-  parentPort.postMessage(this.qwm.messageRoll("na autoscroll 5"));
+  
   await _t.autoScroll(page);
 
   const rawEvents = await page.evaluate((workerIndex) => {

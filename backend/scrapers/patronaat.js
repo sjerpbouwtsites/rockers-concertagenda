@@ -8,8 +8,14 @@ import { patronaatMonths } from "../mods/months.js";
 
 const scraperConfig = {
   baseEventTimeout: 35000,
-  singlePageTimeout: 25000,
+  singlePageTimeout: 30000,
   workerData: Object.assign({}, workerData),
+  puppeteerConfig: {
+    singlePage: {
+      timeout: 30000,
+      waitUntil: "domcontentloaded",
+    },
+  },
 };
 const patronaatScraper = new AbstractScraper(scraperConfig);
 

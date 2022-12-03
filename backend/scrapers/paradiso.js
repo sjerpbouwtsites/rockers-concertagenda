@@ -29,7 +29,7 @@ paradisoScraper.makeBaseEventList = async function () {
   await page.goto("https://www.paradiso.nl/nl/zoeken/categorie/", {
     waitUntil: "domcontentloaded",
   });
-  parentPort.postMessage(this.qwm.messageRoll("content loaded"));
+  
   try {
     await page.waitForSelector('[data-category="60102"]', {
       timeout: 2500, // @TODO TE STRAK?
@@ -37,7 +37,7 @@ paradisoScraper.makeBaseEventList = async function () {
   } catch (error) {
     _t.handleError(error, "Paradiso wacht op punk categorie");
   }
-  parentPort.postMessage(this.qwm.messageRoll("na punk categorie"));
+
   await page.click('[data-category="60102"]');
   try {
     await page.waitForSelector(".block-list-search__submit", {
@@ -46,7 +46,7 @@ paradisoScraper.makeBaseEventList = async function () {
   } catch (error) {
     _t.handleError(error, "Paradiso wacht op submit knop filters");
   }
-  parentPort.postMessage(this.qwm.messageRoll("na submit knop bestaat"));
+
   await page.click(".block-list-search__submit");
   try {
     await page.waitForSelector(".event-list__item", {
@@ -55,7 +55,7 @@ paradisoScraper.makeBaseEventList = async function () {
   } catch (error) {
     _t.handleError(error, "Paradiso wacht op laden agenda na filter");
   }
-  parentPort.postMessage(this.qwm.messageRoll("na laden filter res"));
+  
   await _t.waitFor(150);
 
   let rawEvents = await page.evaluate(

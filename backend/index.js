@@ -54,7 +54,7 @@ function wait150ms() {
 
 async function startWorker(workerConfig
 ) {
-  const toManyWorkersWorking = WorkerStatus.workersWorking() >= 6;
+  const toManyWorkersWorking = WorkerStatus.workersWorking() >= 5;
   if (toManyWorkersWorking){
     await wait150ms();
     return recursiveStartWorkers(workerConfig)

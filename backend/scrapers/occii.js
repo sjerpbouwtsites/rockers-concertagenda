@@ -8,9 +8,9 @@ import { occiiMonths } from "../mods/months.js";
 // SCRAPER CONFIG
 
 const scraperConfig = {
-  baseEventTimeout: 60000,
+  baseEventTimeout: 120000,
   singlePageTimeout: 45000,
-  maxExecutionTime: 60000,
+  maxExecutionTime: 120000,
   workerData: Object.assign({}, workerData),
 };
 const occiiScraper = new AbstractScraper(scraperConfig);
@@ -27,7 +27,7 @@ occiiScraper.makeBaseEventList = async function () {
   }, this.maxExecutionTime);
   const page = await this.browser.newPage();
   await page.goto("https://occii.org/events/", {
-    waitUntil: "load",
+    waitUntil: "domcontentloaded",
   });
 
   const rawEvents = await page.evaluate((workerIndex) => {
@@ -79,42 +79,48 @@ occiiScraper.getPageInfo = async function ({ page, url }) {
   }, this.maxExecutionTime);
 
   const pageInfo = await page.evaluate((months) => {
-    const res = {};
+    const res = {
+      unavailable: "",
+      pageInfoID: `<a href='${document.location.href}'>${document.title}</a>`,
+      errorsVoorErrorHandler: [],
+    };
+
     const imageEl = document.querySelector(".wp-post-image");
     res.image = !!imageEl ? imageEl.src : null;
-    const eventDateEl = document.querySelector(".occii-event-date-highlight");
-    const eventDateSplit1 = eventDateEl.textContent.trim().split(",");
-    const eventYear = eventDateSplit1[2].trim();
-    const eventDateSplit2 = eventDateSplit1[1].trim().split(" ");
-    const eventMonthEnglish = eventDateSplit2[0].trim();
-    const eventDay = eventDateSplit2[1].trim();
-    const eventMonth = months[eventMonthEnglish];
-    const eventDateString = `${eventYear}-${eventMonth}-${eventDay}`;
     const eventCategoriesEl = document.querySelector(".occii-event-details");
-    const doorsOpenMatch = eventCategoriesEl.textContent.match(
-      /Doors\sopen\:\s+(\d\d\:\d\d)/
-    );
-    const doorsOpen =
-      doorsOpenMatch && doorsOpenMatch.length > 1 ? doorsOpenMatch[1] : null;
     try {
+      const eventDateEl = document.querySelector(".occii-event-date-highlight");
+      const eventDateSplit1 = eventDateEl.textContent.trim().split(",");
+      const eventYear = eventDateSplit1[2].trim();
+      const eventDateSplit2 = eventDateSplit1[1].trim().split(" ");
+      const eventMonthEnglish = eventDateSplit2[0].trim();
+      const eventDay = eventDateSplit2[1].trim();
+      const eventMonth = months[eventMonthEnglish];
+      const eventDateString = `${eventYear}-${eventMonth}-${eventDay}`;
+      const doorsOpenMatch = eventCategoriesEl.textContent.match(
+        /Doors\sopen\:\s+(\d\d\:\d\d)/
+      );
+      const doorsOpen =
+        doorsOpenMatch && doorsOpenMatch.length > 1 ? doorsOpenMatch[1] : null;
+
       res.doorOpenDateTime = doorsOpen
         ? new Date(`${eventDateString}T${doorsOpen}`).toISOString()
         : new Date(`${eventDateString}T00:00`).toISOString();
-    } catch (error) {
-      res.doorOpenDateTime = null;
-    }
 
-    const showtimeMatch = eventCategoriesEl.textContent.match(
-      /Showtime\:\s+(\d\d\:\d\d)/
-    );
-    const showtime =
-      showtimeMatch && showtimeMatch.length > 1 ? doorsOpenMatch[1] : null;
-    try {
+      const showtimeMatch = eventCategoriesEl.textContent.match(
+        /Showtime\:\s+(\d\d\:\d\d)/
+      );
+      const showtime =
+        showtimeMatch && showtimeMatch.length > 1 ? doorsOpenMatch[1] : null;
+
       res.startDateTime = showtime
         ? new Date(`${eventDateString}T${showtime}`).toISOString()
         : new Date(`${eventDateString}T00:00`).toISOString();
     } catch (error) {
-      res.startDateTime = null;
+      res.errorsVoorErrorHandler.push({
+        error,
+        remarks: "date time wrap trycatch",
+      });
     }
 
     const damageMatch =

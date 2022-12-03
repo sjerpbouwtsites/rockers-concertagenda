@@ -74,6 +74,13 @@ export function getShellArguments() {
     const [argName, argValue] = val.split("=");
     shellArguments[argName] = argValue;
   });
+  
+  if (shellArguments.force && shellArguments.force.includes("all")) {
+    shellArguments.force += Object.keys(
+      JSON.parse(fs.readFileSync(fsDirections.timestampsJson))
+    ).join(";");
+  }
+
   return shellArguments;
 }
 
