@@ -63,8 +63,7 @@ export default class EventsList {
 
   static guaranteeTimestampExistence() {
     if (EventsList.timestampsExistenceVerified) return true;
-    const timestampsExist = fs.existsSync(fsDirections.timestampsJson);
-    if (!timestampsExist) {
+    if (!fs.existsSync(fsDirections.timestampsJson)) {
       fs.writeFileSync(fsDirections.timestampsJson, JSON.stringify({}));
     } else {
       try {
