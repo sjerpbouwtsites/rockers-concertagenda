@@ -1,45 +1,36 @@
+import { metropoolMonths } from "../mods/months.js";
 import MusicEvent from "../mods/music-event.js";
-import fs from "fs";
-import crypto from "crypto";
-import puppeteer from "puppeteer";
 import { parentPort, workerData } from "worker_threads";
-import EventsList from "../mods/events-list.js";
-import fsDirections from "../mods/fs-directions.js";
 import * as _t from "../mods/tools.js";
-import { letScraperListenToMasterMessageAndInit } from "../mods/generic-scraper.js";
+import AbstractScraper from "./abstract-scraper.js";
 import { occiiMonths } from "../mods/months.js";
-import { QuickWorkerMessage } from "../mods/rock-worker.js";
-const qwm = new QuickWorkerMessage(workerData);
-let browser = null;
 
-letScraperListenToMasterMessageAndInit(scrapeInit);
+// SCRAPER CONFIG
 
-async function scrapeInit() {
-  parentPort.postMessage(qwm.workerInitialized());
-  browser = await puppeteer.launch();
-  Promise.race([makeBaseEventList(), _t.errorAfterSeconds(30000)])
-    .then((baseMusicEvents) => {
-      parentPort.postMessage(qwm.workerStarted());
-      const baseMusicEventsCopy = [...baseMusicEvents];
-      return processSingleMusicEvent(baseMusicEventsCopy);
-    })
-    .then(() => {
-      parentPort.postMessage(qwm.workerDone(EventsList.amountOfEvents));
-      EventsList.save(workerData.family, workerData.index);
-    })
-    .catch((error) =>
-      _t.handleError(error, workerData, `outer catch scrape ${workerData.family}`)
-    )
-    .finally(() => {
-      browser && browser.hasOwnProperty("close") && browser.close();
-    });
-}
+const scraperConfig = {
+  baseEventTimeout: 60000,
+  singlePageTimeout: 45000,
+  maxExecutionTime: 60000,
+  workerData: Object.assign({}, workerData),
+};
+const occiiScraper = new AbstractScraper(scraperConfig);
 
-async function makeBaseEventList() {
-  const page = await browser.newPage();
-  await page.goto(`https://occii.org/events/`);
+occiiScraper.listenToMasterThread();
 
-  const eventsData = await page.evaluate((workerIndex) => {
+// MAKE BASE EVENTS
+
+occiiScraper.makeBaseEventList = async function () {
+  const stopFunctie = setTimeout(() => {
+    throw new Error(
+      `makeBaseEventList is de max tijd voor zn functie ${this.maxExecutionTimethis} voorbij `
+    );
+  }, this.maxExecutionTime);
+  const page = await this.browser.newPage();
+  await page.goto("https://occii.org/events/", {
+    waitUntil: "load",
+  });
+
+  const rawEvents = await page.evaluate((workerIndex) => {
     return Array.from(document.querySelectorAll(".occii-event-display"))
       .filter((event, index) => {
         // here divide events over workers.
@@ -59,27 +50,35 @@ async function makeBaseEventList() {
       });
   }, workerData.index);
 
-  const baseMusicEvents = eventsData
+  const baseMusicEvents = rawEvents
     .filter(_t.basicMusicEventsFilter)
+    .map((event) => {
+      !event.venueEventUrl &&
+        parentPort.postMessage(
+          this.qwm.messageRoll(
+            `Red het niet: <a href='${event.venueEventUrl}'>${event.title}</a> ongeldig.`
+          )
+        );
+      return event;
+    })
     .map((eventDatum) => {
       const thisMusicEvent = new MusicEvent(eventDatum);
       return thisMusicEvent;
     });
 
-    !page.isClosed() && page.close()
+  !page.isClosed() && page.close();
   return baseMusicEvents;
-}
+};
+// GET PAGE INFO
 
-async function processSingleMusicEvent(baseMusicEvents) {
-  qwm.todo(baseMusicEvents.length).forEach((JSONblob) => {
-    parentPort.postMessage(JSONblob);
-  });
-  const newMusicEvents = [...baseMusicEvents];
-  const firstMusicEvent = newMusicEvents.shift();
-  const page = await browser.newPage();
-  await page.goto(firstMusicEvent.venueEventUrl);
+occiiScraper.getPageInfo = async function ({ page, url }) {
+  const stopFunctie = setTimeout(() => {
+    throw new Error(
+      `makeBaseEventList is de max tijd voor zn functie ${this.maxExecutionTimethis} voorbij `
+    );
+  }, this.maxExecutionTime);
 
-  let pageInfo = await page.evaluate((months) => {
+  const pageInfo = await page.evaluate((months) => {
     const res = {};
     const imageEl = document.querySelector(".wp-post-image");
     res.image = !!imageEl ? imageEl.src : null;
@@ -120,20 +119,29 @@ async function processSingleMusicEvent(baseMusicEvents) {
 
     const damageMatch =
       eventCategoriesEl.textContent.match(/Damage\:\s+\D+(\d+)/);
-    res.price = damageMatch && damageMatch.length > 1 ? damageMatch[1] : null;
+    res.price =
+      damageMatch && damageMatch.length > 1 ? Number(damageMatch[1]) : null;
     const genreEl = document.querySelector('[href*="events/categories"]');
     res.genre = !!genreEl ? genreEl.textContent : null;
     res.longTextHTML = document.querySelector(".occii-event-notes").innerHTML;
     return res;
   }, occiiMonths);
 
-  pageInfo = _t.postPageInfoProcessing(pageInfo);
-  firstMusicEvent.merge(pageInfo);
-  if (firstMusicEvent.isValid) {
-    firstMusicEvent.registerIfValid();
-  }
+  pageInfo?.errorsVoorErrorHandler?.forEach((errorHandlerMeuk) => {
+    _t.handleError(
+      errorHandlerMeuk.error,
+      workerData,
+      errorHandlerMeuk.remarks
+    );
+  });
 
-  return newMusicEvents.length
-    ? processSingleMusicEvent(newMusicEvents)
-    : true;
-}
+  clearTimeout(stopFunctie);
+  !page.isClosed() && page.close();
+
+  if (!pageInfo) {
+    return {
+      unavailable: `Geen resultaat <a href="${url}">van pageInfo</a>`,
+    };
+  }
+  return pageInfo;
+};

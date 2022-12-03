@@ -1,4 +1,20 @@
 
+  tivolivredenburg-3 Error - 5:54:31 PM
+  ReferenceError: FclearTimeout is not defined
+    at tivoliVredenburgScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/tivolivredenburg.js:59:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:46:29) 
+  FclearTimeout is not defined
+  
+  
+  tivolivredenburg-2 Error - 5:54:31 PM
+  ReferenceError: FclearTimeout is not defined
+    at tivoliVredenburgScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/tivolivredenburg.js:59:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:46:29) 
+  FclearTimeout is not defined
+  
+  
   metropool-3 Error - 2:37:53 PM
   ReferenceError: stopFunctie is not defined
     at metropoolScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/metropool.js:151:16)

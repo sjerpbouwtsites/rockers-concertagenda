@@ -17,6 +17,7 @@ const metropoolScraper = new AbstractScraper(scraperConfig);
 metropoolScraper.listenToMasterThread();
 
 // MAKE BASE EVENTS
+
 metropoolScraper.makeBaseEventList = async function () {
   const stopFunctie = setTimeout(() => {
     throw new Error(
@@ -58,8 +59,6 @@ metropoolScraper.makeBaseEventList = async function () {
         };
       });
   }, workerData.index);
-
-  this.dirtyLog(rawEvents);
 
   return rawEvents
     .filter(_t.basicMusicEventsFilter)
@@ -155,8 +154,6 @@ metropoolScraper.getPageInfo = async function ({ page, url }) {
       errorHandlerMeuk.remarks
     );
   });
-
-  this.dirtyLog(pageInfo);
 
   clearTimeout(stopFunctie);
   !page.isClosed() && page.close();
