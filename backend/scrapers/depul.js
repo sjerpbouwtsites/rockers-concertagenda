@@ -15,57 +15,6 @@ const depulScraper = new AbstractScraper(scraperConfig);
 
 depulScraper.listenToMasterThread();
 
-depulScraper.singleEventCheck = async function (event) {
-  const firstCheckText = `${event?.title ?? ""} ${event?.shortText ?? ""}`;
-  if (
-    firstCheckText.includes("metal") ||
-    firstCheckText.includes("punk") ||
-    firstCheckText.includes("punx") ||
-    firstCheckText.includes("noise") ||
-    firstCheckText.includes("industrial")
-  ) {
-    return {
-      event,
-      success: true,
-      reason: "Genres in title+shortText",
-    };
-  }
-
-  const tempPage = await this.browser.newPage();
-  await tempPage.goto(event.venueEventUrl, {
-    waitUntil: "domcontentloaded",
-    timeout: this.singlePageTimeout,
-  });
-
-  const rockMetalOpPagina = await tempPage.evaluate(() => {
-    const tc =
-      document.getElementById("content-box")?.textContent.toLowerCase() ?? "";
-    return (
-      tc.includes("metal") ||
-      tc.includes("punk") ||
-      tc.includes("thrash") ||
-      tc.includes("punx") ||
-      tc.includes("noise") ||
-      tc.includes("industrial")
-    );
-  });
-  await tempPage.close();
-
-  if (rockMetalOpPagina) {
-    return {
-      event,
-      success: true,
-      reason: "Genres found in text of event URL",
-    };
-  }
-
-  return {
-    event,
-    success: false,
-    reason: "genres not in title, shortText, or event URL",
-  };
-};
-
 // MAKE BASE EVENTS
 
 depulScraper.makeBaseEventList = async function () {
@@ -302,4 +251,57 @@ depulScraper.getPageInfo = async function ({ page, url }) {
     };
   }
   return pageInfo;
+};
+
+// SINGLE EVENT CHECK
+
+depulScraper.singleEventCheck = async function (event) {
+  const firstCheckText = `${event?.title ?? ""} ${event?.shortText ?? ""}`;
+  if (
+    firstCheckText.includes("metal") ||
+    firstCheckText.includes("punk") ||
+    firstCheckText.includes("punx") ||
+    firstCheckText.includes("noise") ||
+    firstCheckText.includes("industrial")
+  ) {
+    return {
+      event,
+      success: true,
+      reason: "Genres in title+shortText",
+    };
+  }
+
+  const tempPage = await this.browser.newPage();
+  await tempPage.goto(event.venueEventUrl, {
+    waitUntil: "domcontentloaded",
+    timeout: this.singlePageTimeout,
+  });
+
+  const rockMetalOpPagina = await tempPage.evaluate(() => {
+    const tc =
+      document.getElementById("content-box")?.textContent.toLowerCase() ?? "";
+    return (
+      tc.includes("metal") ||
+      tc.includes("punk") ||
+      tc.includes("thrash") ||
+      tc.includes("punx") ||
+      tc.includes("noise") ||
+      tc.includes("industrial")
+    );
+  });
+  await tempPage.close();
+
+  if (rockMetalOpPagina) {
+    return {
+      event,
+      success: true,
+      reason: "Genres found in text of event URL",
+    };
+  }
+
+  return {
+    event,
+    success: false,
+    reason: "genres not in title, shortText, or event URL",
+  };
 };

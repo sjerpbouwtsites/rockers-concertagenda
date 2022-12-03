@@ -1,4 +1,20 @@
 
+  paradiso-0 Error - 9:27:11 AM
+  ReferenceError: browser is not defined
+    at paradisoScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/paradiso.js:28:16)
+    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:47:40)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  browser is not defined
+  
+  
+  paradiso-2 Error - 9:27:10 AM
+  ReferenceError: browser is not defined
+    at paradisoScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/paradiso.js:28:16)
+    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:47:40)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  browser is not defined
+  
+  
   depul-0 Error - 8:59:28 AM
   ReferenceError: currentEvent is not defined
     at depulScraper.singleEventCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/depul.js:35:23)

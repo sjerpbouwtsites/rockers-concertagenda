@@ -11,6 +11,7 @@ import { paradisoMonths } from "../mods/months.js";
 const scraperConfig = {
   baseEventTimeout: 35000,
   singlePageTimeout: 25000,
+  maxExecutionTime: 40000,
   workerData: Object.assign({}, workerData),
 };
 const paradisoScraper = new AbstractScraper(scraperConfig);
@@ -19,10 +20,16 @@ paradisoScraper.listenToMasterThread();
 
 // MAKE BASE EVENTS
 paradisoScraper.makeBaseEventList = async function () {
-  const page = await browser.newPage();
+  const stopFunctie = setTimeout(() => {
+    throw new Error(
+      `makeBaseEventList is de max tijd voor zn functie ${this.maxExecutionTime} voorbij `
+    );
+  }, this.maxExecutionTime);
+  const page = await this.browser.newPage();
   await page.goto("https://www.paradiso.nl/nl/zoeken/categorie/", {
-    waitUntil: "load",
+    waitUntil: "domcontentloaded",
   });
+  parentPort.postMessage(this.qwm.messageRoll("content loaded"));
   try {
     await page.waitForSelector('[data-category="60102"]', {
       timeout: 2500, // @TODO TE STRAK?
@@ -30,6 +37,7 @@ paradisoScraper.makeBaseEventList = async function () {
   } catch (error) {
     _t.handleError(error, "Paradiso wacht op punk categorie");
   }
+  parentPort.postMessage(this.qwm.messageRoll("na punk categorie"));
   await page.click('[data-category="60102"]');
   try {
     await page.waitForSelector(".block-list-search__submit", {
@@ -38,6 +46,7 @@ paradisoScraper.makeBaseEventList = async function () {
   } catch (error) {
     _t.handleError(error, "Paradiso wacht op submit knop filters");
   }
+  parentPort.postMessage(this.qwm.messageRoll("na submit knop bestaat"));
   await page.click(".block-list-search__submit");
   try {
     await page.waitForSelector(".event-list__item", {
@@ -46,10 +55,11 @@ paradisoScraper.makeBaseEventList = async function () {
   } catch (error) {
     _t.handleError(error, "Paradiso wacht op laden agenda na filter");
   }
+  parentPort.postMessage(this.qwm.messageRoll("na laden filter res"));
   await _t.waitFor(150);
 
   let rawEvents = await page.evaluate(
-    ({ paradisoMonths, workerIndex }) => {
+    ({ months, workerIndex }) => {
       return Array.from(document.querySelectorAll(".event-list__item"))
         .filter((rawEvent, eventIndex) => {
           return eventIndex % 4 === workerIndex;
@@ -75,9 +85,21 @@ paradisoScraper.makeBaseEventList = async function () {
           };
         });
     },
-    { paradisoMonths, workerIndex: workerData.index }
+    { months: paradisoMonths, workerIndex: workerData.index }
   );
+  clearTimeout(stopFunctie);
+  !page.isClosed() && page.close();
+
   return rawEvents
+    .map((event) => {
+      !event.venueEventUrl &&
+        parentPort.postMessage(
+          this.qwm.messageRoll(
+            `Red het niet: <a href='${event.venueEventUrl}'>${event.title}</a> ongeldig.`
+          )
+        );
+      return event;
+    })
     .filter(_t.basicMusicEventsFilter)
     .map((event) => new MusicEvent(event));
 };
@@ -85,6 +107,11 @@ paradisoScraper.makeBaseEventList = async function () {
 // GET PAGE INFO
 
 paradisoScraper.getPageInfo = async function ({ page, url }) {
+  const stopFunctie = setTimeout(() => {
+    throw new Error(
+      `getPageInfo is de max tijd voor zn functie ${this.maxExecutionTime} voorbij `
+    );
+  }, this.maxExecutionTime);
   try {
     await page.waitForSelector(".header-template-2__subcontent .date", {
       timeout: 7500,
@@ -93,113 +120,129 @@ paradisoScraper.getPageInfo = async function ({ page, url }) {
     _t.handleError(error, "Paradiso wacht op laden single pagina");
   }
 
-  const result = await page.evaluate((paradisoMonths) => {
-    const res = {};
+  const pageInfo = await page.evaluate(
+    ({ months }) => {
+      const res = {
+        unavailable: "",
+        pageInfoID: `<a href='${document.location.href}'>${document.title}</a>`,
+        errorsVoorErrorHandler: [],
+      };
 
-    const contentBox =
-      document.querySelector(".header-template-2__description") ?? null;
-    if (contentBox) {
-      res.longTextHTML = contentBox.innerHTML;
-    }
+      const contentBox =
+        document.querySelector(".header-template-2__description") ?? null;
+      if (contentBox) {
+        res.longTextHTML = contentBox.innerHTML;
+      }
 
-    const startDateMatch = document
-      .querySelector(".header-template-2__subcontent .date")
-      ?.textContent.toLowerCase()
-      .match(/(\d{1,2})\s+(\w+)\s+(\d{4})/);
-    if (
-      startDateMatch &&
-      Array.isArray(startDateMatch) &&
-      startDateMatch.length === 4
-    ) {
-      res.startDate = `${startDateMatch[3]}-${
-        paradisoMonths[startDateMatch[2]]
-      }-${startDateMatch[1].padStart(2, "0")}`;
-    }
-
-    const timesMatch =
-      document
-        .querySelector(".template-2__content-header")
-        ?.textContent.match(/(\d\d:\d\d)/g) ?? null;
-    res.timesMatch = timesMatch;
-    res.tijdText = document.querySelector(
-      ".template-2__content-header"
-    )?.textContent;
-    if (timesMatch && Array.isArray(timesMatch) && timesMatch.length >= 1) {
       try {
-        if (timesMatch.length === 1) {
-          res.startDateTime = new Date(
-            `${res.startDate}T${timesMatch[0]}:00`
-          ).toISOString();
-        } else {
-          res.doorOpenDateTime = new Date(
-            `${res.startDate}T${timesMatch[0]}:00`
-          ).toISOString();
-          res.startDateTime = new Date(
-            `${res.startDate}T${timesMatch[1]}:00`
-          ).toISOString();
+        const startDateMatch = document
+          .querySelector(".header-template-2__subcontent .date")
+          ?.textContent.toLowerCase()
+          .match(/(\d{1,2})\s+(\w+)\s+(\d{4})/);
+        if (
+          startDateMatch &&
+          Array.isArray(startDateMatch) &&
+          startDateMatch.length === 4
+        ) {
+          res.startDate = `${startDateMatch[3]}-${
+            months[startDateMatch[2]]
+          }-${startDateMatch[1].padStart(2, "0")}`;
         }
       } catch (error) {
-        res.error = `ongeldige tijden: ${timesMatch.join(" ")}\n${
-          error.message
-        }`;
+        res.errorsVoorErrorHandler.push({ error, remarks: "startDateMatch" });
+        res.unavailable += " geen start date.";
       }
-    }
-    res.priceTextcontent =
-      document.querySelector(".template-2__price-wrapper-container")
-        ?.textContent ?? null;
-    return res;
-  }, paradisoMonths);
 
-  if (result.error) {
-    _t.handleError(new Error(result.error), workerData, "Paradiso getPageInfo");
+      const timesMatch =
+        document
+          .querySelector(".template-2__content-header")
+          ?.textContent.match(/(\d\d:\d\d)/g) ?? null;
+      res.timesMatch = timesMatch;
+      res.tijdText = document.querySelector(
+        ".template-2__content-header"
+      )?.textContent;
+      if (timesMatch && Array.isArray(timesMatch) && timesMatch.length >= 1) {
+        try {
+          if (timesMatch.length === 1) {
+            res.startDateTime = new Date(
+              `${res.startDate}T${timesMatch[0]}:00`
+            ).toISOString();
+          } else {
+            res.doorOpenDateTime = new Date(
+              `${res.startDate}T${timesMatch[0]}:00`
+            ).toISOString();
+            res.startDateTime = new Date(
+              `${res.startDate}T${timesMatch[1]}:00`
+            ).toISOString();
+          }
+        } catch (error) {
+          res.errorsVoorErrorHandler.push({
+            error: new Error(
+              `ongeldige tijden: ${timesMatch.join(" ")}\n${error.message}`
+            ),
+            remarks: "start deur end samen",
+          });
+          res.unavailable += "nog meer tijd issues";
+        }
+      }
+      res.priceTextcontent =
+        document.querySelector(".template-2__price-wrapper-container")
+          ?.textContent ?? null;
+
+      const imageM = document
+        .querySelector('[style*="background-im"]')
+        ?.style.backgroundImage.match(/https.*.jpg|https.*.jpg/);
+      if (imageM && imageM.length) {
+        res.image = imageM[0] + "?w=600&h=400&fit=crop-50-50";
+      }
+
+      if (!!res.unavailable) {
+        res.unavailable = `${res.unavailable}\n${res.pageInfoID}`;
+      }
+      return res;
+    },
+    { months: paradisoMonths }
+  );
+
+  pageInfo?.errorsVoorErrorHandler?.forEach((errorHandlerMeuk) => {
+    _t.handleError(
+      errorHandlerMeuk.error,
+      workerData,
+      errorHandlerMeuk.remarks
+    );
+  });
+
+  clearTimeout(stopFunctie);
+  !page.isClosed() && page.close();
+
+  if (!pageInfo) {
+    return {
+      unavailable: `Geen resultaat <a href="${url}">van pageInfo</a>`,
+    };
   }
-  return result;
+  return pageInfo;
 };
 
-async function eventAsyncCheck(
-  eventGen,
-  currentEvent = null,
-  checkedEvents = []
-) {
-  const firstCheckText =
-    `${currentEvent.title} ${currentEvent.shortText}`.toLowerCase();
+// SINGLE EVENT CHECK
+
+paradisoScraper.singleEventCheck = async function (event) {
+  const firstCheckText = `${event?.title ?? ""} ${event?.shortText ?? ""}`;
   if (
-    !firstCheckText.includes("indie") &&
-    !firstCheckText.includes("dromerig") &&
-    !firstCheckText.includes("shoegaze") &&
-    !firstCheckText.includes("alternatieve rock")
+    firstCheckText.includes("indie") ||
+    firstCheckText.includes("dromerig") ||
+    firstCheckText.includes("shoegaze") ||
+    firstCheckText.includes("alternatieve rock")
   ) {
-    checkedEvents.push(currentEvent);
+    return {
+      event,
+      success: false,
+      reason: "verboden genres gevonden in title+shortText",
+    };
   }
 
-  const nextEvent = eventGen.next().value;
-  if (nextEvent) {
-    return eventAsyncCheck(eventGen, nextEvent, checkedEvents);
-  } else {
-    return checkedEvents;
-  }
-}
-
-function* eventGenerator(baseMusicEvents) {
-  while (baseMusicEvents.length) {
-    yield baseMusicEvents.shift();
-  }
-}
-
-// const startDay = rawEvent.querySelector('time .number')?.textContent.trim()?.padStart(2, '0') ?? null;
-// const startMonthName = rawEvent.querySelector('.time month')?.textContent.trim() ?? null;
-// const startMonth = depulMonths[startMonthName]
-// const startMonthJSNumber = Number(startMonth) - 1;
-// const refDate = new Date();
-// let startYear = refDate.getFullYear();
-// if (startMonthJSNumber < refDate.getMonth()) {
-//   startYear = startYear + 1;
-// }
-// const startDate = `${startYear}-${startMonth}-${startDay}`
-// const venueEventUrl = rawEvent.querySelector('a')?.href ?? null;
-
-// const imageMatch = rawEvent.querySelector('a')?.getAttribute('style').match(/url\(\'(.*)\'\)/) ?? null;
-// let image;
-// if (imageMatch && Array.isArray(imageMatch) && imageMatch.length === 2) {
-//   image = imageMatch[1]
-// }
+  return {
+    event,
+    success: true,
+    reason: "verboden genres niet gevonden.",
+  };
+};
