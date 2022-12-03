@@ -1,14 +1,86 @@
 [
   {
+    "doorOpenDateTime": "",
+    "startDateTime": "2022-12-03T18:00:00.000Z",
+    "endDateTime": "2022-12-03T22:00:00.000Z",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/programma/bleed-from-within-2/#spotify-embed",
+    "title": "Bleed From Within",
+    "location": "dynamo",
+    "price": 17.5,
+    "shortText": "Support: Humanity's Last Breath + ALLT",
+    "longText": "../public/texts/342a3fb7-bb62-457c-a0bc-331ab996aca2.html",
+    "image": "https://www.dynamo-eindhoven.nl/wp-content/uploads/2022/04/274900435_516825839807811_5925743944572628892_n-1200x1200.jpg"
+  },
+  {
+    "doorOpenDateTime": "2022-12-18T18:30:00.000Z",
+    "startDateTime": "2022-12-18T19:00:00.000Z",
+    "endDateTime": "2022-12-18T22:00:00.000Z",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/programma/sylvaine/#spotify-embed",
+    "title": "Sylvaine",
+    "location": "dynamo",
+    "price": 21.5,
+    "shortText": "Support: Fvnerals",
+    "longText": "../public/texts/89f2b882-17a2-46fe-bac4-3d478d2ded57.html",
+    "image": "https://www.dynamo-eindhoven.nl/wp-content/uploads/2022/02/1-by-Daria-Endresen-1200x1100.jpg"
+  },
+  {
     "doorOpenDateTime": "2023-02-09T18:00:00.000Z",
-    "startDateTime": "2023-02-09T00:00:00.000Z",
+    "startDateTime": "2023-02-09T18:30:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://www.dynamo-eindhoven.nl/programma/napalm-death-2023/#spotify-embed",
     "title": "Campaign for Musical Destruction ft Napalm Death",
     "location": "dynamo",
     "price": 31.5,
-    "shortText": "Support: Dropdead + Siberian Meat Grinder",
-    "longText": "../public/texts/d371f354-d4dc-421f-b513-1cede99fed6c.html",
-    "image": null
+    "shortText": "Support: Dropdead + Siberian Meat Grinder + Escuela Grind",
+    "longText": "../public/texts/a31c8b67-bf75-4762-abc0-9f9f1a612703.html",
+    "image": ""
+  },
+  {
+    "doorOpenDateTime": "2023-02-25T18:00:00.000Z",
+    "startDateTime": "2023-02-25T18:30:00.000Z",
+    "endDateTime": "2023-02-25T22:00:00.000Z",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/programma/deez-nuts-2023/#spotify-embed",
+    "title": "Deez Nuts",
+    "location": "dynamo",
+    "price": 18.5,
+    "shortText": "Support: The Acacia Strain + Unity TX + Brothers Till We Die",
+    "longText": "../public/texts/e9f114e9-2f72-432d-bfe5-535fa1b467cc.html",
+    "image": "https://www.dynamo-eindhoven.nl/wp-content/uploads/2021/09/deez-nuts-promofoto-1200x1200.jpg"
+  },
+  {
+    "doorOpenDateTime": "2023-03-25T18:00:00.000Z",
+    "startDateTime": "2023-03-25T18:30:00.000Z",
+    "endDateTime": "2023-03-25T22:59:00.000Z",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/programma/dynamo-metalfest-bandbattle/",
+    "title": "Dynamo Metalfest Bandbattle",
+    "location": "dynamo",
+    "price": 0,
+    "shortText": "Maak kans om op DMF te spelen!",
+    "longText": "../public/texts/087348fd-c1a1-4eba-a1d5-acd231b7d0b5.html",
+    "image": ""
+  },
+  {
+    "doorOpenDateTime": "2023-04-16T17:00:00.000Z",
+    "startDateTime": "2023-04-16T17:30:00.000Z",
+    "endDateTime": "2023-04-16T21:00:00.000Z",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/programma/helstar-2022/#spotify-embed",
+    "title": "Helstar",
+    "location": "dynamo",
+    "price": 16.5,
+    "shortText": "Support: Solicitor",
+    "longText": "../public/texts/7e40155e-65ac-41ed-b7d5-a1435224dc9c.html",
+    "image": ""
+  },
+  {
+    "doorOpenDateTime": "2023-09-08T17:30:00.000Z",
+    "startDateTime": "2023-09-08T18:30:00.000Z",
+    "endDateTime": "2023-09-08T20:45:00.000Z",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/programma/stream-of-passion-extra-show/#spotify-embed",
+    "title": "Stream of Passion",
+    "location": "dynamo",
+    "price": 22.5,
+    "shortText": "Extra show",
+    "longText": "../public/texts/bead5946-cb31-4a47-8250-78d89180ac3e.html",
+    "image": "https://www.dynamo-eindhoven.nl/wp-content/uploads/2022/11/IMG_0439-2a-1200x1200.jpg"
   }
 ]

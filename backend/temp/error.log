@@ -1,4 +1,56 @@
 
+  dynamo-1 Error - 2:36:00 AM
+  ReferenceError: firstMusicEvent is not defined
+    at dynamoScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dynamo.js:183:31)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:180:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:54:5) 
+  firstMusicEvent is not defined
+  
+  
+  dynamo-0 Error - 2:35:59 AM
+  ReferenceError: firstMusicEvent is not defined
+    at dynamoScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dynamo.js:183:31)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:180:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:54:5) 
+  firstMusicEvent is not defined
+  
+  
+  dynamo-1 Error - 2:21:12 AM
+  ReferenceError: firstMusicEvent is not defined
+    at dynamoScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dynamo.js:168:31)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:180:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:54:5) 
+  firstMusicEvent is not defined
+  
+  
+  dynamo-0 Error - 2:21:12 AM
+  ReferenceError: firstMusicEvent is not defined
+    at dynamoScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dynamo.js:168:31)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:180:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:54:5) 
+  firstMusicEvent is not defined
+  
+  
+  dynamo-0 Error - 2:20:27 AM
+  ReferenceError: browser is not defined
+    at dynamoScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dynamo.js:26:16)
+    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:46:40)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  browser is not defined
+  
+  
+  dynamo-1 Error - 2:20:26 AM
+  ReferenceError: browser is not defined
+    at dynamoScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dynamo.js:26:16)
+    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:46:40)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  browser is not defined
+  
+  
   tivolivredenburg-3 Error - 5:54:31 PM
   ReferenceError: FclearTimeout is not defined
     at tivoliVredenburgScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/tivolivredenburg.js:59:3)
