@@ -279,6 +279,7 @@ export default class MonitorField {
               : `<span  class='worker-cell-inner worker-cell-inner--todo'>${worker.todo}</span>`;
 
             return statusHTML + numberHTML + errorsHTML + "</td>";
+            // @TODO vscode link naar JSON bestand in event-lists
           })
           .join("")}
       </tr>
