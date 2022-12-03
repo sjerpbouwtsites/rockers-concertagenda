@@ -59,7 +59,7 @@ neushoornScraper.makeBaseEventList = async function () {
 
   await _t.waitFor(50);
 
-  const rawEvents = await page.evaluate((workerIndex) => {
+  const rawEvents = await page.evaluate(() => {
     return Array.from(document.querySelectorAll(".productions__item")).map(
       (itemEl) => {
         const textContent = itemEl.textContent.toLowerCase();

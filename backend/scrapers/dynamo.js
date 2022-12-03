@@ -106,7 +106,6 @@ dynamoScraper.getPageInfo = async function ({ page, url }) {
       const agendaDatesEls = document.querySelectorAll(".agenda-date");
       res.baseDate = null;
       if (agendaDatesEls && agendaDatesEls.length > 1) {
-        const leftHandSideTableTRs = agendaDatesEls[0].querySelectorAll("tr");
         try {
           const dateMatch = document
             .querySelector(".event-content")
@@ -192,7 +191,7 @@ dynamoScraper.getPageInfo = async function ({ page, url }) {
           ?.at(0)
           .replace("-500x500x", "") ?? "";
 
-      if (!!res.unavailable) {
+      if (res.unavailable) {
         res.unavailable = `${res.unavailable}\n${res.pageInfoID}`;
       }
       return res;

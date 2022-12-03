@@ -59,7 +59,7 @@ paradisoScraper.makeBaseEventList = async function () {
   await _t.waitFor(150);
 
   let rawEvents = await page.evaluate(
-    ({ months, workerIndex }) => {
+    ({ workerIndex }) => {
       return Array.from(document.querySelectorAll(".event-list__item"))
         .filter((rawEvent, eventIndex) => {
           return eventIndex % 4 === workerIndex;
@@ -196,7 +196,7 @@ paradisoScraper.getPageInfo = async function ({ page, url }) {
         res.image = imageM[0] + "?w=600&h=400&fit=crop-50-50";
       }
 
-      if (!!res.unavailable) {
+      if (res.unavailable !== "") {
         res.unavailable = `${res.unavailable}\n${res.pageInfoID}`;
       }
       return res;

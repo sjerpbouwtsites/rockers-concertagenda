@@ -33,7 +33,7 @@ gebrdenobelScraper.makeBaseEventList = async function () {
   await _t.autoScroll(page);
   await _t.autoScroll(page);
 
-  const rawEvents = await page.evaluate((workerIndex) => {
+  const rawEvents = await page.evaluate(() => {
     return Array.from(document.querySelectorAll(".event-item"))
       .filter((eventEl) => {
         const tags =

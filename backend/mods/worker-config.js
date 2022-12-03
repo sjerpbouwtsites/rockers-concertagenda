@@ -4,16 +4,16 @@ import fsDirections from "./fs-directions.js";
 
 export const AbstractWorkerConfig = {
   
-    CPUReq : 'normal',
-    workerConcurrent : 2,
-    index : null,
-    path : null,
-    name : null,
-    family : null,
-    workerCount : null,
-    scraper : true   ,
+  CPUReq : 'normal',
+  workerConcurrent : 2,
+  index : null,
+  path : null,
+  name : null,
+  family : null,
+  workerCount : null,
+  scraper : true ,
 
-  }
+}
 
 
 class WorkerListConf {
@@ -124,7 +124,7 @@ class WorkerListConf {
   backIntoLine(completeConfig){
     this.data.push(completeConfig)
   }
-};
+}
 
 export default function getWorkerConfig(){
   return new WorkerListConf();

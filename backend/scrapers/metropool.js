@@ -1,6 +1,6 @@
 import { metropoolMonths } from "../mods/months.js";
 import MusicEvent from "../mods/music-event.js";
-import { parentPort, workerData } from "worker_threads";
+import { workerData } from "worker_threads";
 import * as _t from "../mods/tools.js";
 import AbstractScraper from "./abstract-scraper.js";
 
@@ -136,11 +136,8 @@ metropoolScraper.getPageInfo = async function ({ page, url }) {
       }
     }
 
-    res.image = document.querySelector(".object-fit-cover")
-      ? `https://metropool.nl/${
-          document.querySelector(".object-fit-cover")?.srcset
-        }`
-      : null;
+    const ofc = document.querySelector(".object-fit-cover");
+    res.image = document.contains(ofc) && `https://metropool.nl/${ofc.srcset}`;
 
     res.location = "metropool";
     if (res.unavailable) {

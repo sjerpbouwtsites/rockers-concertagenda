@@ -1,6 +1,6 @@
 import fs from "fs";
 import fsDirections from "./fs-directions.js";
-import { handleError, errorAfterSeconds } from "./tools.js";
+import { handleError } from "./tools.js";
 import { QuickWorkerMessage } from "./rock-worker.js";
 import passMessageToMonitor from "../monitor/pass-message-to-monitor.js";
 
@@ -100,7 +100,7 @@ export default class EventsList {
 
     const d = new Date();
     const currentMilliseconds = d.getTime();
-    const stored = eventListTimestamps.hasOwnProperty(name)
+    const stored = Object.prototype.hasOwnProperty.call(eventListTimestamps, name)
       ? eventListTimestamps[name]
       : "0";
     const ageOfStoredEventList = Number(stored);

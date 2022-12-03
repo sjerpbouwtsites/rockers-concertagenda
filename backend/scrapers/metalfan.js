@@ -8,6 +8,7 @@ import * as _t from "../mods/tools.js";
 import { QuickWorkerMessage } from "../mods/rock-worker.js";
 
 const skipWithMetalfan = [
+  // @TODO vanuit timestamps lezen
   "013",
   "afaslive",
   "baroeg",
@@ -32,12 +33,12 @@ const skipWithMetalfan = [
   "occii",
   "patronaat",
   "tivolivredenburg",
-  "volt"
+  "volt",
 ];
 
 parentPort.on("message", (message) => {
   const pm = JSON.parse(message);
-  if (pm?.type === 'process' && pm?.subtype === "command-start") {
+  if (pm?.type === "process" && pm?.subtype === "command-start") {
     try {
       scrapeMetalfan(pm?.messageData);
     } catch (error) {
@@ -49,7 +50,7 @@ parentPort.on("message", (message) => {
   }
 });
 
-async function scrapeMetalfan(mainThreadData) {
+async function scrapeMetalfan() {
   try {
     const qwm = new QuickWorkerMessage(workerData);
     parentPort.postMessage(qwm.workerInitialized());
@@ -80,9 +81,9 @@ async function getBaseMusicEvents(browser, skipWithMetalfan, qwm) {
           shortText;
 
         dateAnchorEl = metalfanEvent.querySelector("a[name]");
-        eventDate = !!dateAnchorEl
-          ? new Date(dateAnchorEl.getAttribute("name")).toISOString()
-          : null;
+        eventDate =
+          metalfanEvent.contains(dateAnchorEl) &&
+          new Date(dateAnchorEl.getAttribute("name")).toISOString();
         if (!eventDate) {
           const metalfanEventCaldateEl =
             metalfanEvent.querySelector(".caldate");
@@ -98,7 +99,7 @@ async function getBaseMusicEvents(browser, skipWithMetalfan, qwm) {
           }
         }
         eventNameEl = metalfanEvent.querySelector(".event");
-        eventName = !!eventNameEl
+        eventName = metalfanEvent.contains(eventNameEl)
           ? eventNameEl.textContent.trim()
           : "geen naam!";
 

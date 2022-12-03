@@ -42,11 +42,11 @@ export default function passMessageToMonitor(message, workerName) {
       WorkerStatus.saveError(workerName, wsMsgInst.messageData);
     }
 
-    if (
-      wsMsgInst.subtype.includes("message-roll") ||
-      wsMsgInst.subtype.includes("debugger")
-    ) {
-    }
+    // if (
+    //   wsMsgInst.subtype.includes("message-roll") ||
+    //   wsMsgInst.subtype.includes("debugger")
+    // ) {
+    // }
   }
 
   WorkerStatus.monitorWebsocketServer.broadcast(wsMsgInst.json);

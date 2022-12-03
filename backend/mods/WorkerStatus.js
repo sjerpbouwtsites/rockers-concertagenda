@@ -1,7 +1,6 @@
 import os from "os-utils";
 import EventsList from "./events-list.js";
 import wsMessage from "../monitor/wsMessage.js";
-import { parentPort } from "worker_threads";
 import { AbstractWorkerConfig } from "./worker-config.js";
 import { getShellArguments } from "./tools.js";
 
@@ -157,7 +156,7 @@ export default class WorkerStatus {
 
   static get currentNotDone() {
     const notDone = Object.entries(WorkerStatus._workers)
-      .map(([workerName, workerData]) => {
+      .map(([, workerData]) => {
         return workerData;
       })
       .filter((workerData) => {
@@ -168,7 +167,7 @@ export default class WorkerStatus {
 
   static get currentDone() {
     const notDone = Object.entries(WorkerStatus._workers)
-      .map(([workerName, workerData]) => {
+      .map(([, workerData]) => {
         return workerData;
       })
       .filter((workerData) => {

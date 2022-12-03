@@ -36,7 +36,7 @@ duyckerScraper.makeBaseEventList = async function () {
   await _t.waitFor(50);
 
   let rawEvents = await page.evaluate(
-    ({ months, workerIndex }) => {
+    ({ months }) => {
       return Array.from(
         document.querySelectorAll(".duycker.agenda .item-container")
       ).map((rawEvent) => {
@@ -53,7 +53,7 @@ duyckerScraper.makeBaseEventList = async function () {
           .trim()
           .match(/(\d{1,2})\s(\w+)/);
         let startDate;
-        let error;
+
         if (
           startDateMatch &&
           Array.isArray(startDateMatch) &&

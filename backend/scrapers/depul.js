@@ -30,7 +30,7 @@ depulScraper.makeBaseEventList = async function () {
 
   await page.evaluate(() => {
     // hack op site
-    loadContent("all", "music");
+    loadContent("all", "music"); // eslint-disable-line
   });
 
   await _t.waitFor(250);
@@ -66,7 +66,7 @@ depulScraper.makeBaseEventList = async function () {
             rawEvent
               .querySelector("a")
               ?.getAttribute("style")
-              .match(/url\(\'(.*)\'\)/) ?? null;
+              .match(/url\('(.*)'\)/) ?? null;
           let image;
           if (
             imageMatch &&
@@ -225,7 +225,7 @@ depulScraper.getPageInfo = async function ({ page, url }) {
       if (!res.startDateTime) {
         res.unavailable += " geen start date time";
       }
-      if (!!res.unavailable) {
+      if (res.unavailable !== "") {
         res.unavailable += `${res.unavailable}\n${res.pageInfoID}`;
       }
       return res;

@@ -1,6 +1,6 @@
 import { Worker } from "worker_threads";
-import {AbstractWorkerConfig} from "./worker-config.js"
 
+// @TODO 
 
 export default class RockWorker extends Worker {
   
@@ -158,42 +158,41 @@ export class WorkerMessage {
     }
 
     switch (this.type) {
-      case "clients-log":
-        return true;
-      case "process":
-        this.subtype
-          .split(" ")
-          .map((thisSubtype) => {
-            return ![
-              "close-client",
-              "closed",
-              "workers-status",
-              "command-start",
-            ].includes(thisSubtype);
-          })
-          .find((subtypeFout) => {
-            return subtypeFout;
-          }) && this.throwSubtypeError();
-        break;
-      case "update":
-        this.subtype
-          ?.split(" ")
-          .map((thisSubtype) => {
-            return ![
-              "error",
-              "message-roll",
-              "scraper-results",
-              "debugger",
-            ].includes(thisSubtype);
-          })
-          .find((subtypeFout) => {
-            return subtypeFout;
-          }) && this.throwSubtypeError();
-        break;
-      default:
-        console.log(this);
-        throw new Error("ONBEKEND TYPE WorkerMessage!");
-        return true;
+    case "clients-log":
+      return true;
+    case "process":
+      this.subtype
+        .split(" ")
+        .map((thisSubtype) => {
+          return ![
+            "close-client",
+            "closed",
+            "workers-status",
+            "command-start",
+          ].includes(thisSubtype);
+        })
+        .find((subtypeFout) => {
+          return subtypeFout;
+        }) && this.throwSubtypeError();
+      break;
+    case "update":
+      this.subtype
+        ?.split(" ")
+        .map((thisSubtype) => {
+          return ![
+            "error",
+            "message-roll",
+            "scraper-results",
+            "debugger",
+          ].includes(thisSubtype);
+        })
+        .find((subtypeFout) => {
+          return subtypeFout;
+        }) && this.throwSubtypeError();
+      break;
+    default:
+      console.log(this);
+      throw new Error("ONBEKEND TYPE WorkerMessage!");
     }
   }
   
@@ -201,7 +200,7 @@ export class WorkerMessage {
    * data is checked by constructor.
    * @returns JSON object of {type, subtype, messageData}
    */
-   get json() {
+  get json() {
     return JSON.stringify({
       type: this.type,
       subtype: this.subtype,

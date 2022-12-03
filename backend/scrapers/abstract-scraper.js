@@ -14,9 +14,9 @@ import EventsList from "../mods/events-list.js";
  * @class AbstractScraper
  */
 export default class AbstractScraper {
-  qwm;
-  browser;
   constructor(obj) {
+    this.qwm;
+    this.browser;
     this.install(obj);
   }
 
@@ -100,7 +100,6 @@ export default class AbstractScraper {
    * @memberof AbstractScraper
    */
   async eventAsyncCheck({ eventGen, checkedEvents }) {
-
     let generatedEvent;
     try {
       const useableEventsCheckedArray = checkedEvents.map((a) => a);
@@ -298,7 +297,7 @@ export default class AbstractScraper {
   }
 
   // step 3.5
-  async getPageInfo(page, url) {
+  async getPageInfo() {
     // abstract function getPageInfo
     throw Error("abstact function getPAgeInfo called");
   }
@@ -312,7 +311,7 @@ export default class AbstractScraper {
   // step 4.5
   async closeBrowser() {
     this.browser &&
-      this.browser.hasOwnProperty("close") &&
+      Object.prototype.hasOwnProperty.call(this.browser, "close") &&
       this.browser.close();
     return true;
   }

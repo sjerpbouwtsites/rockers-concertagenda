@@ -37,10 +37,10 @@ bibelotScraper.makeBaseEventList = async function () {
       const res = {};
       res.title = eventEl.querySelector("h1")?.textContent.trim() ?? "";
       const shortTextEl = eventEl.querySelector("h1")?.parentNode;
-      const shortTextSplit = !!shortTextEl
+      const shortTextSplit = eventEl.contains(shortTextEl)
         ? shortTextEl.textContent.split(res.title)
-        : null;
-      res.shortText = !!shortTextSplit ? shortTextSplit[1] : "";
+        : [null, null];
+      res.shortText = shortTextSplit[1];
       res.venueEventUrl = eventEl.querySelector(".link")?.href ?? null;
       res.location = "bibelot";
 
@@ -196,7 +196,7 @@ bibelotScraper.getPageInfo = async function ({ page, url }) {
       if (imageMatch && imageMatch.length) {
         res.image = imageMatch[0];
       }
-      if (!!res.unavailable) {
+      if (res.unavailable !== "") {
         res.unavailable = `${res.unavailable}\n${res.pageInfoID}`;
       }
       return res;

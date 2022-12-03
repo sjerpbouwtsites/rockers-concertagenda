@@ -1,12 +1,10 @@
 export default class MonitorField {
-  name = null;
-  target = null; // element-id
-  type = null; // rol of tabel
-  data = [];
+
   constructor(name, target, type) {
     this.name = name;
     this.target = target;
     this.type = type;
+    this.data = [];
     if (this.type === "table") {
       this.data = {};
     }
@@ -57,17 +55,17 @@ export default class MonitorField {
     this.data.unshift(updateData);
     const mainFieldEl = document.getElementById(this.mainFieldName);
     switch (this.type) {
-      case "roll":
-        mainFieldEl.innerHTML = this.rollUpdatedHTML;
-        break;
-      case "table":
-        break;
-      case "expanded":
-        mainFieldEl.innerHTML = this.expandedUpdatedHTML;
-        break;
-      default:
-        mainFieldEl.innerHTML = this.rollUpdatedHTML;
-        break;
+    case "roll":
+      mainFieldEl.innerHTML = this.rollUpdatedHTML;
+      break;
+    case "table":
+      break;
+    case "expanded":
+      mainFieldEl.innerHTML = this.expandedUpdatedHTML;
+      break;
+    default:
+      mainFieldEl.innerHTML = this.rollUpdatedHTML;
+      break;
     }
   }
   updateError(updateData){
@@ -99,7 +97,7 @@ export default class MonitorField {
           rollRow.messageData?.tekst ??
           rollRow.messageData?.text ??
           rollRow.messageData?.content;
-          null;
+        null;
         if (t) {
           t = this.linebreaksNaarBR(t);
         } else {
@@ -108,19 +106,19 @@ export default class MonitorField {
             (rollRow.messageData?.content ?? rollRow.messageData) instanceof
             Object
               ? this.objectNaarTekst(
-                  rollRow.messageData?.content ?? rollRow.messageData
-                )
+                rollRow.messageData?.content ?? rollRow.messageData
+              )
               : String(
-                  rollRow.messageData?.content ??
+                rollRow.messageData?.content ??
                     rollRow.messageData.text ??
                     rollRow.messageData
-                );
+              );
         }
 
         return `<li class='monitorfield__list-item'>
         <span class='monitorfield__list-item-left'>${
-          rollRow.messageData?.workerName ?? rollRow.messageData?.title ?? ""
-        }</span>
+  rollRow.messageData?.workerName ?? rollRow.messageData?.title ?? ""
+}</span>
         <span class='monitorfield__list-item-right'>${t}</span>
       </li>`;
       })
@@ -159,7 +157,7 @@ export default class MonitorField {
                 volleFileNaam,
                 `<a class='monitorfield__filelink' href='${fileLinkWSL}'>${fileNaamIngekort}</a>`
               );
-              t = t.replace(/[\(\)]/g, "");
+              t = t.replace(/[()]/g, "");
             }
 
             t = t.replace(/\sError: /, "");
@@ -204,8 +202,8 @@ export default class MonitorField {
           (rollRow.messageData?.content ?? rollRow.messageData) instanceof
           Object
             ? this.objectNaarTekst(
-                rollRow.messageData?.content ?? rollRow.messageData
-              )
+              rollRow.messageData?.content ?? rollRow.messageData
+            )
             : String(rollRow.messageData?.content ?? rollRow.messageData);
         return `<li class='monitorfield__list-item'>
         <span class='monitorfield__list-item-left'>${titleText}</span>
@@ -252,37 +250,35 @@ export default class MonitorField {
         return `
       <tr>
         <th>${
-          tableRowsFirstCellsTextcontent[index]
-        }<span class='kutspacer'></span></th>
+  tableRowsFirstCellsTextcontent[index]
+}<span class='kutspacer'></span></th>
         ${sortedFamily
-          .map((worker) => {
-            let tdClass = "worker-data-cell ";
-            tdClass += "worker-status--" + worker.status;
-            tdClass +=
+    .map((worker) => {
+      let tdClass = "worker-data-cell ";
+      tdClass += "worker-status--" + worker.status;
+      tdClass +=
               " worker-errors--" +
               (worker.errors.length ? "has-errors" : "none");
 
-            const errorsHTML = !worker.errors.length
-              ? ""
-              : `<ol class='worker-cell-inner--errors'>
+      const errorsHTML = !worker.errors.length
+        ? ""
+        : `<ol class='worker-cell-inner--errors'>
               ${worker.errors
-                .map(
-                  (error, index) =>
-                    `<li><a href='#error-ref-${worker.name}-${index}'>😒</a></li>`
-                )
-                .join("")}
+    .map(
+      (error, index) =>
+        `<li><a href='#error-ref-${worker.name}-${index}'>😒</a></li>`
+    )
+    .join("")}
             </ol>`;
-            const statusHTML = `<td class='${tdClass}' title='${worker.workerNamedIndex}'>`;
-            const numberHTML = this.data.hasOwnProperty(
-              `amountOfEvents-${worker.name}`
-            )
-              ? this.data[`amountOfEvents-${worker.name}`]
-              : `<span  class='worker-cell-inner worker-cell-inner--todo'>${worker.todo}</span>`;
+      const statusHTML = `<td class='${tdClass}' title='${worker.workerNamedIndex}'>`;
+      const numberHTML = Object.prototype.hasOwnProperty.call(this.data, `amountOfEvents-${worker.name}`)
+        ? this.data[`amountOfEvents-${worker.name}`]
+        : `<span  class='worker-cell-inner worker-cell-inner--todo'>${worker.todo}</span>`;
 
-            return statusHTML + numberHTML + errorsHTML + "</td>";
-            // @TODO vscode link naar JSON bestand in event-lists
-          })
-          .join("")}
+      return statusHTML + numberHTML + errorsHTML + "</td>";
+      // @TODO vscode link naar JSON bestand in event-lists
+    })
+    .join("")}
       </tr>
       `;
       })

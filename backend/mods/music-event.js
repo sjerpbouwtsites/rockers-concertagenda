@@ -1,8 +1,4 @@
 import EventsList from "./events-list.js";
-import { handleError } from "./tools.js";
-import passMessageToMonitor from "../monitor/pass-message-to-monitor.js";
-import wsMessage from "../monitor/wsMessage.js";
-import WorkerStatus from "./WorkerStatus.js";
 
 export default class MusicEvent {
   doorOpenDateTime = null;
@@ -20,7 +16,7 @@ export default class MusicEvent {
   }
   merge(conf) {
     for (let confKey in conf) {
-      if (this.hasOwnProperty(confKey)) {
+      if (Object.prototype.hasOwnProperty.call(this, confKey)) {
         this[confKey] = conf[confKey];
       }
     }

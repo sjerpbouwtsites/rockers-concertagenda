@@ -112,7 +112,7 @@ melkwegScraper.getPageInfo = async function ({ page, url }) {
     res.image =
       document.querySelector('[class*="styles_event-header__figure"] img')
         ?.src ?? null;
-    if (!!res.unavailable) {
+    if (res.unavailable !== "") {
       res.unavailable = `${res.unavailable}\n${res.pageInfoID}`;
     }
     return res;

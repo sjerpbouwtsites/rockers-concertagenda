@@ -40,37 +40,29 @@ voltScraper.makeBaseEventList = async function () {
     _t.handleError(error, workerData, "Volt wacht op laden eventlijst");
   }
 
-  let rawEvents = await page.evaluate(
-    ({ workerIndex }) => {
-      return Array.from(document.querySelectorAll(".row.event .card"))
-        .filter((rawEvent) => {
-          const hasGenreName =
-            rawEvent
-              .querySelector(".card-location")
-              ?.textContent.toLowerCase()
-              .trim() ?? "";
-          return (
-            hasGenreName.includes("metal") || hasGenreName.includes("punk")
-          );
-        })
-        .map((rawEvent) => {
-          const anchor =
-            rawEvent.querySelector('h3 [href*="programma"]') ?? null;
-          const title = anchor?.textContent.trim() ?? "";
-          const venueEventUrl = anchor.hasAttribute("href")
-            ? anchor.href
-            : null;
-          const image = rawEvent.querySelector("img")?.src ?? null;
-          return {
-            venueEventUrl,
-            location: "volt",
-            title,
-            image,
-          };
-        });
-    },
-    { workerIndex: workerData.index }
-  );
+  let rawEvents = await page.evaluate(() => {
+    return Array.from(document.querySelectorAll(".row.event .card"))
+      .filter((rawEvent) => {
+        const hasGenreName =
+          rawEvent
+            .querySelector(".card-location")
+            ?.textContent.toLowerCase()
+            .trim() ?? "";
+        return hasGenreName.includes("metal") || hasGenreName.includes("punk");
+      })
+      .map((rawEvent) => {
+        const anchor = rawEvent.querySelector('h3 [href*="programma"]') ?? null;
+        const title = anchor?.textContent.trim() ?? "";
+        const venueEventUrl = anchor.hasAttribute("href") ? anchor.href : null;
+        const image = rawEvent.querySelector("img")?.src ?? null;
+        return {
+          venueEventUrl,
+          location: "volt",
+          title,
+          image,
+        };
+      });
+  }, null);
 
   clearTimeout(stopFunctie);
 
@@ -106,7 +98,7 @@ voltScraper.getPageInfo = async function ({ page, url }) {
   }
 
   const pageInfo = await page.evaluate(
-    ({ voltMonths, url }) => {
+    ({ months }) => {
       const res = {
         unavailable: null,
         pageInfoID: `<a href='${document.location.href}'>${document.title}</a>`,
@@ -135,7 +127,7 @@ voltScraper.getPageInfo = async function ({ page, url }) {
         startDateMatch.length === 3
       ) {
         const day = startDateMatch[1].padStart(2, "0");
-        const month = voltMonths[startDateMatch[2]];
+        const month = months[startDateMatch[2]];
         const year = Number(month) >= curMonthNumber ? curYear : curYear + 1;
         startDate = `${year}-${month}-${day}`;
         res.startDate = startDate;
@@ -185,7 +177,7 @@ voltScraper.getPageInfo = async function ({ page, url }) {
           ?.textContent ?? null;
       return res;
     },
-    { voltMonths, url }
+    { months: voltMonths, url }
   );
 
   clearTimeout(stopFunctie);

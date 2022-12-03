@@ -39,12 +39,11 @@ baroegScraper.makeBaseEventList = async function () {
         workerData,
         "axios get baroeg wp json fail makeBaseEventList"
       );
-      errorMan = true;
     });
 
   if (!baroegLijst) return [];
 
-  const rawEvents = baroegLijst.map((event, index) => {
+  const rawEvents = baroegLijst.map((event) => {
     const res = {};
     res.title = event.title.rendered;
     res.shortText = event.excerpt.rendered;

@@ -37,7 +37,7 @@ effenaarScraper.makeBaseEventList = async function () {
         .filter((eventEl, index) => {
           return index % 4 === workerIndex;
         })
-        .map((eventEl, index) => {
+        .map((eventEl) => {
           const res = {};
           res.title = eventEl.querySelector(".card-title")?.textContent.trim();
           res.shortText = eventEl.querySelector(".card-subtitle")?.textContent;
@@ -86,7 +86,6 @@ effenaarScraper.getPageInfo = async function ({ page, url }) {
     res.image = document.querySelector(".header-image img")?.src ?? null;
     res.priceTextcontent =
       document.querySelector(".tickets-btn")?.textContent ?? null;
-    let startDate, doorTime, startTime;
 
     try {
       const dateText =
@@ -115,13 +114,13 @@ effenaarScraper.getPageInfo = async function ({ page, url }) {
         .querySelector(".time-start-end")
         ?.textContent.match(/\d\d:\d\d/);
       if (Array.isArray(startTimeAr) && startTimeAr.length) {
-        startTime = startTimeAr[0];
+        res.startTime = startTimeAr[0];
       }
       doorTimeAr = document
         .querySelector(".time-open")
         ?.textContent.match(/\d\d:\d\d/);
       if (Array.isArray(doorTimeAr) && doorTimeAr.length) {
-        doorTime = doorTimeAr[0];
+        res.doorTime = doorTimeAr[0];
       }
     } catch (error) {
       res.errorsVoorErrorHandler.push({
@@ -133,19 +132,17 @@ effenaarScraper.getPageInfo = async function ({ page, url }) {
       res.unavailable = "Geen tijd";
     }
 
-    res.startTime = startTime;
-    res.doorTime = doorTime;
-    res.startDateTimeString = `${res.startDate}T${startTime}:00`;
-    res.openDoorDateTimeString = `${res.startDate}T${doorTime}:00`;
+    res.startDateTimeString = `${res.startDate}T${res.startTime}:00`;
+    res.openDoorDateTimeString = `${res.startDate}T${res.doorTime}:00`;
 
     try {
-      if (doorTime) {
+      if (res.doorTime) {
         res.doorOpenDateTime = new Date(
           `${res.openDoorDateTimeString}`
         ).toISOString();
       }
 
-      if (startTime) {
+      if (res.startTime) {
         res.startDateTime = new Date(
           `${res.startDateTimeString}`
         ).toISOString();
@@ -162,7 +159,7 @@ effenaarScraper.getPageInfo = async function ({ page, url }) {
 
     res.longTextHTML =
       document.querySelector(".header ~ .blocks")?.innerHTML ?? null;
-    if (!!res.unavailable) {
+    if (res.unavailable !== "") {
       res.unavailable = `${res.unavailable}\n${res.pageInfoID}`;
     }
     return res;

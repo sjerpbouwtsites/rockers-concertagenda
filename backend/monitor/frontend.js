@@ -35,7 +35,7 @@ function openClientWebsocket(fields) {
     // });
     // eventToUpdates(msg, fields);
     console.error(event, "frontend 42");
-    const msg2 = new wsMessage("update", "debugger", {
+    const msg = new wsMessage("update", "debugger", {
       title: "Socket err",
       content: event,
     });
@@ -114,14 +114,11 @@ function monitorInternalErrors() {
 function eventToProcesses(eventMsg, fields) {
   if (eventMsg.subtype === "closed") {
     initiateClosingClient();
-  } else if (eventMsg.subtype === "workers-status") {
-    if (eventMsg?.messageData?.content?.status === "done") {
-      fields.appOverviewField.updateTable({
-        [`amountOfEvents-${eventMsg.messageData.content.workerData.name}`]:
+  } else if (eventMsg.subtype === "workers-status" && eventMsg?.messageData?.content?.status === "done") {
+    fields.appOverviewField.updateTable({
+      [`amountOfEvents-${eventMsg.messageData.content.workerData.name}`]:
           eventMsg.messageData.amountOfEvents,
-      });
-    } else {
-    }
+    });
   } else {
     console.error("onbekende subtype");
     console.log(eventMsg.subtype);

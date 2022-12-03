@@ -2,7 +2,6 @@ import { parentPort, isMainThread } from "worker_threads";
 import fs from "fs";
 import fsDirections from "./fs-directions.js";
 import crypto from "crypto";
-import fetch from "node-fetch";
 import { WorkerMessage } from "./rock-worker.js";
 import passMessageToMonitor from "../monitor/pass-message-to-monitor.js";
 /**
@@ -35,7 +34,7 @@ export function handleError(error, workerData, remarks = null) {
   } else {
     console.log(`ODD ERROR HANDLING. neither on main thread nor in scraper.`);
     console.log(error, workerData, remarks);
-    console.log('')
+    console.log("");
   }
   const time = new Date();
   const curErrorLog = fs.readFileSync(fsDirections.errorLog) || "";
@@ -62,7 +61,7 @@ export function failurePromiseAfter(time) {
 
 export function getShellArguments() {
   const shellArguments = {};
-  process.argv.forEach(function (val, index, array) {
+  process.argv.forEach(function (val, index) {
     if (index < 2) {
       return;
     }
@@ -74,7 +73,7 @@ export function getShellArguments() {
     const [argName, argValue] = val.split("=");
     shellArguments[argName] = argValue;
   });
-  
+
   if (shellArguments.force && shellArguments.force.includes("all")) {
     shellArguments.force += Object.keys(
       JSON.parse(fs.readFileSync(fsDirections.timestampsJson))
@@ -86,7 +85,7 @@ export function getShellArguments() {
 
 export async function autoScroll(page) {
   await page.evaluate(async () => {
-    await new Promise((resolve, reject) => {
+    await new Promise((resolve) => {
       var totalHeight = 0;
       var distance = 500;
       var timer = setInterval(() => {
@@ -128,7 +127,7 @@ export function getPriceFromHTML(testText = null, contextText = null) {
   if (priceMatch && priceMatch.length >= 4) {
     const integers = Number(priceMatch[2]) * 100;
     let cents;
-    if (!!priceMatch[3].includes("-")) {
+    if (priceMatch[3].includes("-")) {
       cents = 0;
     } else {
       cents = Number(priceMatch[3]);
@@ -151,8 +150,7 @@ export function getPriceFromHTML(testText = null, contextText = null) {
 
   return null;
 }
-export function basicMusicEventsFilter(musicEvent, index) {
-
+export function basicMusicEventsFilter(musicEvent) {
   if (!musicEvent.venueEventUrl) {
     return false;
   }
@@ -190,7 +188,10 @@ export function postPageInfoProcessing(pageInfo = null) {
 }
 
 export function saveLongTextHTML(pageInfo) {
-  if (!pageInfo.hasOwnProperty("longTextHTML") || !pageInfo.longTextHTML) {
+  if (
+    !Object.prototype.hasOwnProperty.call(pageInfo, "longTextHTML") ||
+    !pageInfo.longTextHTML
+  ) {
     return null;
   }
   let uuid = crypto.randomUUID();
@@ -208,7 +209,7 @@ const def = {
 export default def;
 
 export async function waitFor(wait = 500) {
-  return new Promise((res, rej) => {
+  return new Promise((res) => {
     setTimeout(res, wait);
   });
 }

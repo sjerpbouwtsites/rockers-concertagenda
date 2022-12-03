@@ -121,7 +121,7 @@ patronaatScraper.getPageInfo = async function ({ page, url }) {
           }
         });
 
-        if (!!res.startTime) {
+        if (!res.startTime) {
           res.startTime = res.doorOpenTime;
         }
 
@@ -153,7 +153,7 @@ patronaatScraper.getPageInfo = async function ({ page, url }) {
     }
 
     res.longTextHTML = document.querySelector(".event__content")?.innerHTML;
-    if (!!res.unavailable) {
+    if (res.unavailable !== "") {
       res.unavailable = `${res.unavailable}\n${res.pageInfoID}`;
     }
     return res;

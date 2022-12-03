@@ -1,4 +1,3 @@
-import { metropoolMonths } from "../mods/months.js";
 import MusicEvent from "../mods/music-event.js";
 import { parentPort, workerData } from "worker_threads";
 import * as _t from "../mods/tools.js";
@@ -38,17 +37,20 @@ occiiScraper.makeBaseEventList = async function () {
       })
       .map((occiiEvent) => {
         const firstAnchor = occiiEvent.querySelector("a");
-        const eventDescriptionEl = occiiEvent.querySelector(
-          ".occii-events-description"
-        );
+
         return {
           venueEventUrl: firstAnchor.href,
           title: firstAnchor.title,
-          shortText: !!eventDescriptionEl ? eventDescriptionEl.textContent : "",
+          shortText:
+            occiiEvent.querySelector(".occii-events-description")
+              ?.textContent ?? "",
           location: "occii",
         };
       });
   }, workerData.index);
+
+  clearTimeout(stopFunctie);
+  !page.isClosed() && page.close();
 
   const baseMusicEvents = rawEvents
     .filter(_t.basicMusicEventsFilter)
@@ -85,8 +87,7 @@ occiiScraper.getPageInfo = async function ({ page, url }) {
       errorsVoorErrorHandler: [],
     };
 
-    const imageEl = document.querySelector(".wp-post-image");
-    res.image = !!imageEl ? imageEl.src : null;
+    res.image = document.querySelector(".wp-post-image")?.src ?? null;
     const eventCategoriesEl = document.querySelector(".occii-event-details");
     try {
       const eventDateEl = document.querySelector(".occii-event-date-highlight");
@@ -98,7 +99,7 @@ occiiScraper.getPageInfo = async function ({ page, url }) {
       const eventMonth = months[eventMonthEnglish];
       const eventDateString = `${eventYear}-${eventMonth}-${eventDay}`;
       const doorsOpenMatch = eventCategoriesEl.textContent.match(
-        /Doors\sopen\:\s+(\d\d\:\d\d)/
+        /Doors\sopen:\s+(\d\d:\d\d)/
       );
       const doorsOpen =
         doorsOpenMatch && doorsOpenMatch.length > 1 ? doorsOpenMatch[1] : null;
@@ -108,7 +109,7 @@ occiiScraper.getPageInfo = async function ({ page, url }) {
         : new Date(`${eventDateString}T00:00`).toISOString();
 
       const showtimeMatch = eventCategoriesEl.textContent.match(
-        /Showtime\:\s+(\d\d\:\d\d)/
+        /Showtime:\s+(\d\d:\d\d)/
       );
       const showtime =
         showtimeMatch && showtimeMatch.length > 1 ? doorsOpenMatch[1] : null;
@@ -124,11 +125,13 @@ occiiScraper.getPageInfo = async function ({ page, url }) {
     }
 
     const damageMatch =
-      eventCategoriesEl.textContent.match(/Damage\:\s+\D+(\d+)/);
+      eventCategoriesEl.textContent.match(/Damage:\s+\D+(\d+)/);
     res.price =
       damageMatch && damageMatch.length > 1 ? Number(damageMatch[1]) : null;
-    const genreEl = document.querySelector('[href*="events/categories"]');
-    res.genre = !!genreEl ? genreEl.textContent : null;
+
+    res.genre =
+      document.querySelector('[href*="events/categories"]')?.textContent ??
+      null;
     res.longTextHTML = document.querySelector(".occii-event-notes").innerHTML;
     return res;
   }, occiiMonths);

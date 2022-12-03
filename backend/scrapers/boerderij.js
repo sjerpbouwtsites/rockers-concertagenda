@@ -62,7 +62,7 @@ boerderijScraper.makeBaseEventList = async function () {
 
 // GET PAGE INFO
 
-boerderijScraper.getPageInfo = async function ({ page, event }) {
+boerderijScraper.getPageInfo = async function ({ page, url, event }) {
   const stopFunctie = setTimeout(() => {
     throw new Error(
       `getPageInfo is de max tijd voor zn functie ${this.maxExecutionTime} voorbij `

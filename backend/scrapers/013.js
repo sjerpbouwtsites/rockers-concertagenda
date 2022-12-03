@@ -45,7 +45,7 @@ nuldertienScraper.makeBaseEventList = async function () {
           ?.textContent.trim();
 
         const datumEl = eventEl.querySelector(".event-list-item__date");
-        if (!!datumEl) {
+        if (datumEl) {
           res.startDateTime = new Date(
             datumEl.getAttribute("datetime")
           ).toISOString();
@@ -56,7 +56,7 @@ nuldertienScraper.makeBaseEventList = async function () {
         res.shortText = eventEl
           .querySelector(".event-list-item__subtitle")
           ?.textContent.trim();
-        if (!!res.unavailable) {
+        if (res.unavailable) {
           res.unavailable = `${res.unavailable}\n${res.pageInfoID}`;
         }
         return res;
@@ -81,14 +81,12 @@ nuldertienScraper.makeBaseEventList = async function () {
 
 // GET PAGE INFO
 
-nuldertienScraper.getPageInfo = async function () {
+nuldertienScraper.getPageInfo = async function ({ page, url }) {
   const stopFunctie = setTimeout(() => {
     throw new Error(
       `getPageInfo is de max tijd voor zn functie ${this.maxExecutionTime} voorbij `
     );
   }, this.maxExecutionTime);
-
-  const page = await this.browser.newPage();
 
   const pageInfo = await page.evaluate(() => {
     const res = {
@@ -107,13 +105,13 @@ nuldertienScraper.getPageInfo = async function () {
     );
 
     try {
-      if (!!doorOpenEl) {
+      if (doorOpenEl) {
         res.doorOpenDateTime = new Date(
           doorOpenEl.getAttribute("datetime")
         ).toISOString();
       }
     } catch (error) {
-      errorsVoorErrorHandler.push({
+      res.errorsVoorErrorHandler.push({
         error,
         remarks: "deur open tijd fout",
       });
@@ -121,7 +119,7 @@ nuldertienScraper.getPageInfo = async function () {
     res.longTextHTML = document.querySelector(
       ".event-detail header + div"
     )?.innerHTML;
-    if (!!res.unavailable) {
+    if (res.unavailable) {
       res.unavailable = `${res.unavailable}\n${res.pageInfoID}`;
     }
     return res;

@@ -140,7 +140,7 @@ doornroosjeScraper.getPageInfo = async function ({ page, url }) {
             ).toISOString();
           }
         } catch (error) {
-          errorsVoorErrorHandler.push({
+          res.errorsVoorErrorHandler.push({
             error,
             remarks:
               "fout bij tijd of datums. matches: " +

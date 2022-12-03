@@ -31,11 +31,8 @@ idunaScraper.makeBaseEventList = async function () {
 
   let metalEvents = await page
     .evaluate(() => {
-      // no-eslint
-      // HACK VAN DE SITE ZELF
-      loadposts("metal", 1, 50);
-
-      return new Promise((resolve, reject) => {
+      loadposts("metal", 1, 50); // eslint-disable-line
+      return new Promise((resolve) => {
         setTimeout(() => {
           const metalEvents = Array.from(
             document.querySelectorAll("#gridcontent .griditemanchor")
@@ -56,9 +53,9 @@ idunaScraper.makeBaseEventList = async function () {
     .evaluate(() => {
       // no-eslint
       // HACK VAN DE SITE ZELF
-      loadposts("punk", 1, 50);
+      loadposts("punk", 1, 50); // eslint-disable-line
 
-      return new Promise((resolve, reject) => {
+      return new Promise((resolve) => {
         setTimeout(() => {
           const punkEvents = Array.from(
             document.querySelectorAll("#gridcontent .griditemanchor")
@@ -184,7 +181,7 @@ idunaScraper.getPageInfo = async function ({ page, url }) {
 
       const imageMatch = document
         .getElementById("photoandinfo")
-        .innerHTML.match(/url\(\'(.*)\'\)/);
+        .innerHTML.match(/url\('(.*)'\)/);
       if (imageMatch && Array.isArray(imageMatch) && imageMatch.length === 2) {
         res.image = imageMatch[1];
       }

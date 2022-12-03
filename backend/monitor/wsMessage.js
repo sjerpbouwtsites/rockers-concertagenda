@@ -23,106 +23,118 @@
  * @property {*} messageData bevat data van message.
  */
 export default class wsMessage {
-  type = null
-  subtype = null;
-  messageData = null
   constructor(type, subtype, messageData) {
+    this.checkType = {};
+    this.setCheckType();
     this.type = type;
     this.subtype = subtype;
     this.messageData = messageData;
-    this.check();
+    this.initCheck();
   }
   /**
    * Converteer een config in één keer in een wsMessage json object.
    * @param {*} config as in constructor
    * @returns {JSON} output of json getter wsMessage.
    */
-  static quick(config){
+  static quick(config) {
     const thisMessage = new wsMessage(config);
-    return thisMessage.json
+    return thisMessage.json;
   }
-  throwSubtypeError(){
-    throw new Error(`subtype ${typeof this.subtype} ${this.subtype.length ? ` lengte ${this.subtype.length}` : ''} ${this.subtype} niet toegestaan bij type ${this.type}`)
+  throwSubtypeError() {
+    throw new Error(
+      `subtype ${typeof this.subtype} ${
+        this.subtype.length ? ` lengte ${this.subtype.length}` : ""
+      } ${this.subtype} niet toegestaan bij type ${this.type}`
+    );
   }
-  check(){
+  initCheck() {
+    if (typeof this.type !== "string") {
+      throw new Error(`type moet string zijn, nu ${typeof this.type} ${this.type}`);
+    }
+    if (this.subtype && typeof this.subtype !== "string") {
+      throw new Error(`subtype moet string zijn, nu ${typeof this.subtype} ${this.subtype}`);
+    }
+    if (!Object.prototype.hasOwnProperty.call(this.checkType, this.type)) {
+      throw new Error(`Onbekend type: ${this.type}`)
+    } 
+    return this.checkType[this.type](this.subtype)
+    
+  }
+  setCheckType(){
+    this.checkType['app-overview'] = subtype =>{
+      if (!subtype.includes("all-workers")) {
+        this.throwSubtypeError();
+      }
+      return true;
+    }
+    this.checkType['process'] = subtype =>{
+      if(subtype
+        .split(" ")
+        .map((thisSubtype) => {
+          return ![
+            "close-client",
+            "closed",
+            "workers-status",
+            "command-start",
+          ].includes(thisSubtype);
+        })
+        .find((subtypeFout) => {
+          return subtypeFout;
+        })) {
+        this.throwSubtypeError();
+      } return true
+    }
+    this.checkType['clients-html'] = subtype =>{
+      if (typeof subtype !== "string" ||
+      (subtype.length &&
+        subtype.length < 1)){
 
-    if (typeof this.type !== 'string') {
-      console.log(this);
-      throw new Error('type moet string zijn')
+        this.throwSubtypeError();
+      } return true;
     }
-    if (this.subtype && typeof this.subtype !== 'string') {
-      console.log(this);
-      throw new Error('subtype moet string zijn')      
+    this.checkType['update'] = subtype =>{
+      if (subtype
+        .split(" ")
+        .map((subtypeSplit) => {
+          return ![
+            "error",
+            "terminal-error",
+            "scraper-error",
+            "scraper-terminal-error",
+            "message-roll",
+            "scraper-results",
+            "workers-status",
+            "debugger",
+          ].includes(subtypeSplit);
+        })
+        .find((subtypeFout) => {
+          return subtypeFout;
+        }) ) {
+        this.throwSubtypeError();
+      } return true;
     }
-
-    switch (this.type) {
-      case "app-overview":
-        !this.subtype.includes("all-workers") && this.throwSubtypeError();
-        return true;
-        break;
-      case "process":
-        this.subtype
-          .split(" ")
-          .map((thisSubtype) => {
-            return ![
-              "close-client",
-              "closed",
-              "workers-status",
-              "command-start",
-            ].includes(thisSubtype);
-          })
-          .find((subtypeFout) => {
-            return subtypeFout;
-          }) && this.throwSubtypeError();
-        break;
-      case "clients-html":
-        typeof this.subtype !== "string" ||
-          (this.subtype.length &&
-            this.subtype.length < 1 &&
-            this.throwSubtypeError());
-        break;
-      case "update":
-        this.subtype
-          .split(" ")
-          .map((thisSubtype) => {
-            return ![
-              "error",
-              "terminal-error",
-              "scraper-error",
-              "scraper-terminal-error",
-              "message-roll",
-              "scraper-results",
-              "workers-status",
-              "debugger",
-            ].includes(thisSubtype);
-          })
-          .find((subtypeFout) => {
-            return subtypeFout;
-          }) && this.throwSubtypeError();
-        break;
-      case "server-log":
-        // niets te doen.
-        break;
-      case "clients-log":
-        // niets te doen.
-        break;
-      default:
-        console.log(this);
-        throw new Error("ONBEKEND TYPE wsMessage!");
-        break;
+    this.checkType['server-log'] = () =>{
+      return true;
     }
-    return true;
+    this.checkType['clients-log'] = () =>{
+      return true;
+    }
+    
   }
-  
+
   /**
    * data is checked by constructor.
    * @returns JSON object of {type, subtype, messageData}
    */
   get json() {
-    return JSON.stringify({
-      type: this.type,
-      subtype: this.subtype,
-      messageData: this.messageData
-    }, null, 2)
+    return JSON.stringify(
+      {
+        type: this.type,
+        subtype: this.subtype,
+        messageData: this.messageData,
+      },
+      null,
+      2
+    );
   }
 }
