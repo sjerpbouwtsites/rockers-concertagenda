@@ -1,129 +1,29 @@
 import MusicEvent from "../mods/music-event.js";
-import puppeteer from "puppeteer";
 import { parentPort, workerData } from "worker_threads";
-import EventsList from "../mods/events-list.js";
-import fs from "fs";
-import crypto from "crypto";
-import fsDirections from "../mods/fs-directions.js";
 import * as _t from "../mods/tools.js";
-import { letScraperListenToMasterMessageAndInit } from "../mods/generic-scraper.js";
-import { QuickWorkerMessage } from "../mods/rock-worker.js";
-const qwm = new QuickWorkerMessage(workerData);
-let browser = null;
+import AbstractScraper from "./abstract-scraper.js";
 
-letScraperListenToMasterMessageAndInit(scrapeInit);
+// SCRAPER CONFIG
 
-async function scrapeInit() {
-  parentPort.postMessage(qwm.workerInitialized());
-  browser = await puppeteer.launch();
-  Promise.race([makeBaseEventList(), _t.errorAfterSeconds(50000)])
-    .then((baseMusicEvents) => {
-      parentPort.postMessage(qwm.workerStarted());
-      const baseMusicEventsCopy = [...baseMusicEvents];
-      return processSingleMusicEvent(baseMusicEventsCopy);
-    })
-    .then(() => {
-      parentPort.postMessage(qwm.workerDone(EventsList.amountOfEvents));
-      EventsList.save(workerData.family, workerData.index);
-    })
-    .catch((error) =>
-      _t.handleError(error, workerData, `outer catch scrape ${workerData.family}`)
-    )
-    .finally(() => {
-      browser && browser.hasOwnProperty("close") && browser.close();
-    });
-}
+const scraperConfig = {
+  baseEventTimeout: 30000,
+  singlePageTimeout: 20000,
+  maxExecutionTime: 60000,
+  workerData: Object.assign({}, workerData),
+};
+const melkwegScraper = new AbstractScraper(scraperConfig);
 
-async function createSinglePage(url) {
-  const page = await browser.newPage();
-  await page
-    .goto(url, {
-      waitUntil: "load",
-      timeout: 20000,
-    })
-    .then(() => true)
-    .catch((err) => {
-      _t.handleError(
-        err,
-        workerData,
-        `${workerData.name} goto single page mislukt:<br><a href='${url}'>${url}</a><br>`
-      );
-      return false;
-    });
-  return page;
-}
+melkwegScraper.listenToMasterThread();
 
-async function processSingleMusicEvent(baseMusicEvents) {
-  qwm.todo(baseMusicEvents.length).forEach((JSONblob) => {
-    parentPort.postMessage(JSONblob);
-  });
+// MAKE BASE EVENTS
 
-  const newMusicEvents = [...baseMusicEvents];
-  const firstMusicEvent = newMusicEvents.shift();
-
-  if (
-    !firstMusicEvent ||
-    baseMusicEvents.length === 0 ||
-    !firstMusicEvent ||
-    !firstMusicEvent.venueEventUrl
-  ) {
-    return true;
-  }
-
-  const singleEventPage = await createSinglePage(firstMusicEvent.venueEventUrl);
-  if (!singleEventPage) {
-    return newMusicEvents.length
-      ? processSingleMusicEvent(newMusicEvents)
-      : true;
-  }
-
-  let pageInfo = await Promise.race([
-    getPageInfo(singleEventPage, firstMusicEvent.venueEventUrl),
-    _t.errorAfterSeconds(15000),
-  ]);
-  pageInfo = _t.postPageInfoProcessing(pageInfo);
-  
-  if (pageInfo && pageInfo.longTextHTML) {
-    let uuid = crypto.randomUUID();
-    const longTextPath = `${fsDirections.publicTexts}/${uuid}.html`;
-    fs.writeFile(longTextPath, pageInfo.longTextHTML, "utf-8", () => {});
-    pageInfo.longText = longTextPath;
-  }
-
-  if (pageInfo.error){
-    _t.handleError(pageInfo.error, workerData, 'getPageInfo error')
-  }
-
-  // no date no registration.
-  if (pageInfo) {
-    firstMusicEvent.merge(pageInfo);
-  }
-
-  firstMusicEvent.registerIfValid();
-  if (!singleEventPage.isClosed() && singleEventPage.close());
-
-  return newMusicEvents.length
-    ? processSingleMusicEvent(newMusicEvents)
-    : true;
-}
-
-async function getPageInfo(page) {
-  return await page.evaluate(() => {
-    const res = {};
-    try {
-      res.startDateTime = new Date(document.querySelector('[class*="styles_event-header"] time')?.getAttribute('datetime') ?? null).toISOString();
-    } catch (error) {
-      res.error = error;
-    }
-    res.priceTextcontent = document.querySelector('[class*="styles_ticket-prices"]')?.textContent ?? null
-    res.longTextHTML = document.querySelector('[class*="styles_event-info"]')?.innerHTML ?? null;
-    res.image = document.querySelector('[class*="styles_event-header__figure"] img')?.src ?? null;
-    return res;
-  });
-}
-
-async function makeBaseEventList() {
-  const page = await browser.newPage();
+melkwegScraper.makeBaseEventList = async function () {
+  const stopFunctie = setTimeout(() => {
+    throw new Error(
+      `makeBaseEventList is de max tijd voor zn functie ${this.maxExecutionTimethis} voorbij `
+    );
+  }, this.maxExecutionTime);
+  const page = await this.browser.newPage();
   await page.goto("https://www.melkweg.nl/nl/agenda", {
     waitUntil: "load",
   });
@@ -136,24 +36,100 @@ async function makeBaseEventList() {
   const rawEvents = await page.evaluate((workerIndex) => {
     return Array.from(document.querySelectorAll("[data-element='agenda'] li"))
       .filter((eventEl) => {
-        const tags = eventEl.querySelector('[class*="styles_tags-list"]')?.textContent.toLowerCase() ?? ''
+        const tags =
+          eventEl
+            .querySelector('[class*="styles_tags-list"]')
+            ?.textContent.toLowerCase() ?? "";
         return tags.includes("metal") || tags.includes("punk");
       })
       .filter((eventEl, eventIndex) => {
         return eventIndex % 3 === workerIndex;
       })
       .map((eventEl) => {
-        const res = {}
-        const anchor = eventEl.querySelector('a');
-        res.shortText = eventEl.querySelector('[class*="subtitle"]')?.textContent ?? ''
-        res.title = eventEl.querySelector('h3[class*="title"]')?.textContent ?? ''
+        const res = {};
+        const anchor = eventEl.querySelector("a");
+        res.shortText =
+          eventEl.querySelector('[class*="subtitle"]')?.textContent ?? "";
+        res.title =
+          eventEl.querySelector('h3[class*="title"]')?.textContent ?? "";
         res.error = null;
-        res.venueEventUrl = anchor.href
-        res.location = 'melkweg';
-         return res;
+        res.venueEventUrl = anchor.href;
+        res.location = "melkweg";
+        return res;
       });
   }, workerData.index);
-  
+
+  clearTimeout(stopFunctie);
+  !page.isClosed() && page.close();
+
   return rawEvents
+    .map((event) => {
+      (!event.venueEventUrl || !event.title) &&
+        parentPort.postMessage(
+          this.qwm.messageRoll(
+            `Red het niet: <a href='${event.venueEventUrl}'>${event.title}</a> ongeldig.`
+          )
+        );
+      return event;
+    })
+    .filter(_t.basicMusicEventsFilter)
     .map((event) => new MusicEvent(event));
-}
+};
+
+melkwegScraper.getPageInfo = async function ({ page, url }) {
+  const stopFunctie = setTimeout(() => {
+    throw new Error(
+      `getPageInfo is de max tijd voor zn functie ${this.maxExecutionTimethis} voorbij `
+    );
+  }, this.maxExecutionTime);
+  const pageInfo = await page.evaluate(() => {
+    const res = {
+      unavailable: "",
+      pageInfoID: `<a href='${document.location.href}'>${document.title}</a>`,
+      errorsVoorErrorHandler: [],
+    };
+    try {
+      res.startDateTime = new Date(
+        document
+          .querySelector('[class*="styles_event-header"] time')
+          ?.getAttribute("datetime") ?? null
+      ).toISOString();
+    } catch (error) {
+      res.unavailable = "geen startDateTime";
+      res.errorsVoorErrorHandler.push({
+        error,
+        remarks: `start date time ${
+          document.querySelector('[class*="styles_event-header"] time')
+            ?.outerHTML
+        }`,
+      });
+    }
+    res.priceTextcontent =
+      document.querySelector('[class*="styles_ticket-prices"]')?.textContent ??
+      null;
+    res.longTextHTML =
+      document.querySelector('[class*="styles_event-info"]')?.innerHTML ?? null;
+    res.image =
+      document.querySelector('[class*="styles_event-header__figure"] img')
+        ?.src ?? null;
+    return res;
+  });
+
+  pageInfo?.errorsVoorErrorHandler?.forEach((errorHandlerMeuk) => {
+    _t.handleError(
+      errorHandlerMeuk.error,
+      workerData,
+      errorHandlerMeuk.remarks
+    );
+  });
+
+  clearTimeout(stopFunctie);
+  !page.isClosed() && page.close();
+
+  if (!pageInfo) {
+    return {
+      unavailable: `Geen resultaat <a href="${url}">van pageInfo</a>`,
+    };
+  }
+  return pageInfo;
+};

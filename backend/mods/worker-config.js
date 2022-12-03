@@ -78,8 +78,12 @@ class WorkerListConf {
     // this.create({ family: "metropool", workerCount: 2 });
     // this.create({ family: "boerderij", workerCount: 1, CPUReq: "low" });
     // this.create({ family: "occii", workerCount: 2, workerConcurrent: 1 });
-    this.create({ family: "dynamo", workerCount: 2 });
-    // this.create({family: 'melkweg', workerCount: 3, CPUReq: 'high'})
+    // this.create({ family: "dynamo", workerCount: 2 });
+    // this.create({
+    //   family: "melkweg",
+    //   workerCount: 3,
+    //   CPUReq: "high",
+    // });
     // this.create({family: 'bibelot', workerCount: 1})
     // this.create({family: 'dbs', workerCount: 3})
     // this.create({family: 'gebrdenobel', workerCount: 1})
