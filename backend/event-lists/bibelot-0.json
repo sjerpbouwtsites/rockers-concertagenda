@@ -1,38 +1,26 @@
 [
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-11-26T20:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://bibelot.net/agenda/magnapop-us/",
-    "title": "Magnapop (US)",
-    "location": "bibelot",
-    "price": 22.5,
-    "shortText": "",
-    "longText": "../public/texts/133241d1-2827-46ab-8237-8e2ba1efa668.html",
-    "image": "https://bibelot.net/wp-content/uploads/2020/03/Magnapop-HR-PRESS-2018-pic-by-Pieter-Verhaeghe-1400x932.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
     "startDateTime": "2022-12-04T17:30:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://bibelot.net/agenda/faces-of-death/",
     "title": "Rising Merch Faces of Death",
     "location": "bibelot",
     "price": 24,
-    "shortText": "",
-    "longText": "../public/texts/f107eeb2-532f-4a43-a7c1-77c0cacda81a.html",
+    "shortText": "\n\t\t\t\tRivers of Nihil + Allegaeon + Black Crown Initiate + HARBINGER + Fallujah\t\t\t",
+    "longText": "../public/texts/3c23b864-857f-435f-856a-e089fe25f09c.html",
     "image": null
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-12-23T20:00:00.000Z",
+    "startDateTime": "2022-12-23T19:30:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://bibelot.net/agenda/live-rock-karaoke-band-kerstshow-2/",
     "title": "Live Rock Karaoke Band – Kerstshow",
     "location": "bibelot",
     "price": 14,
-    "shortText": "",
-    "longText": "../public/texts/4ee45a10-a8c0-42d9-a9bc-2465d5149f10.html",
+    "shortText": "\n\t\t\t\tMeezingen op de beste kerst & rock nummers!\t\t\t",
+    "longText": "../public/texts/098fe79d-e913-41a5-8fce-8a6bc6c65303.html",
     "image": "https://bibelot.net/wp-content/uploads/2022/09/Live-rock-karaoke-band-e1663922841996.jpg"
   },
   {
@@ -42,9 +30,8 @@
     "venueEventUrl": "https://bibelot.net/agenda/alternative-anthems-9/",
     "title": "ALTERNATIVE ANTHEMS",
     "location": "bibelot",
-    "price": null,
-    "shortText": "",
-    "longText": "../public/texts/ea1c9dc8-4c21-432a-a449-2a63adab3d2b.html",
+    "shortText": "\n\t\t\t\tGratis afterparty na Live Rock Karaoke Band - Kerstshow\t\t\t",
+    "longText": "../public/texts/f9d85eb5-be55-4d53-9fe9-b290b1aad5cf.html",
     "image": "https://bibelot.net/wp-content/uploads/2022/11/Alternative-Anthems-horizontaal-1400x782.jpg"
   },
   {
@@ -55,9 +42,21 @@
     "title": "The Doors In Concert",
     "location": "bibelot",
     "price": 18,
-    "shortText": "",
-    "longText": "../public/texts/4dfe8e4a-6d76-44d2-ac82-9eef7e682c72.html",
+    "shortText": "\n\t\t\t\tHerbeleef The Doors als nooit tevoren\t\t\t",
+    "longText": "../public/texts/beb14899-679f-4b17-8e6d-1590086d1c2d.html",
     "image": null
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-03-17T19:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://bibelot.net/agenda/st-patricks-day-bunch-of-bastards-more/",
+    "title": "St. Patricks Day: Bunch Of Bastards & more",
+    "location": "bibelot",
+    "price": 9.5,
+    "shortText": "\n\t\t\t\t\t\t\t",
+    "longText": "../public/texts/0b4808be-9195-4970-b578-b8676761c957.html",
+    "image": "https://bibelot.net/wp-content/uploads/2022/12/fb-event-01-1400x788.jpg"
   },
   {
     "doorOpenDateTime": null,
@@ -66,9 +65,8 @@
     "venueEventUrl": "https://bibelot.net/agenda/feuerengel-de-2023/",
     "title": "FEUERENGEL (DE)",
     "location": "bibelot",
-    "price": null,
-    "shortText": "",
-    "longText": "../public/texts/9cafc5dc-7db1-424e-a8ee-4596689206ca.html",
+    "shortText": "\n\t\t\t\tA tribute to Rammstein! \t\t\t",
+    "longText": "../public/texts/5df903d6-6e3c-49a1-9f05-6ba284df763a.html",
     "image": null
   }
 ]

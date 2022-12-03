@@ -84,7 +84,7 @@ class WorkerListConf {
     //   workerCount: 3,
     //   CPUReq: "high",
     // });
-    // this.create({family: 'bibelot', workerCount: 1})
+    this.create({ family: "bibelot", workerCount: 1 });
     // this.create({family: 'dbs', workerCount: 3})
     // this.create({family: 'gebrdenobel', workerCount: 1})
     // this.create({family: 'neushoorn', workerCount: 1})

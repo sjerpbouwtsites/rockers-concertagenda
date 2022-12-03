@@ -20,7 +20,7 @@ melkwegScraper.listenToMasterThread();
 melkwegScraper.makeBaseEventList = async function () {
   const stopFunctie = setTimeout(() => {
     throw new Error(
-      `makeBaseEventList is de max tijd voor zn functie ${this.maxExecutionTimethis} voorbij `
+      `makeBaseEventList is de max tijd voor zn functie ${this.maxExecutionTime} voorbij `
     );
   }, this.maxExecutionTime);
   const page = await this.browser.newPage();
@@ -79,7 +79,7 @@ melkwegScraper.makeBaseEventList = async function () {
 melkwegScraper.getPageInfo = async function ({ page, url }) {
   const stopFunctie = setTimeout(() => {
     throw new Error(
-      `getPageInfo is de max tijd voor zn functie ${this.maxExecutionTimethis} voorbij `
+      `getPageInfo is de max tijd voor zn functie ${this.maxExecutionTime} voorbij `
     );
   }, this.maxExecutionTime);
   const pageInfo = await page.evaluate(() => {
@@ -112,6 +112,9 @@ melkwegScraper.getPageInfo = async function ({ page, url }) {
     res.image =
       document.querySelector('[class*="styles_event-header__figure"] img')
         ?.src ?? null;
+    if (!!res.unavailable) {
+      res.unavailable = `${res.unavailable}\n${res.pageInfoID}`;
+    }
     return res;
   });
 

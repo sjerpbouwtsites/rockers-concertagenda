@@ -21,7 +21,7 @@ metropoolScraper.listenToMasterThread();
 metropoolScraper.makeBaseEventList = async function () {
   const stopFunctie = setTimeout(() => {
     throw new Error(
-      `makeBaseEventList is de max tijd voor zn functie ${this.maxExecutionTimethis} voorbij `
+      `makeBaseEventList is de max tijd voor zn functie ${this.maxExecutionTime} voorbij `
     );
   }, this.maxExecutionTime);
   const page = await this.browser.newPage();
@@ -61,7 +61,7 @@ metropoolScraper.makeBaseEventList = async function () {
   }, workerData.index);
 
   clearTimeout(stopFunctie);
-  !page.isClosed() && page.close();  
+  !page.isClosed() && page.close();
 
   return rawEvents
     .filter(_t.basicMusicEventsFilter)
@@ -73,7 +73,7 @@ metropoolScraper.makeBaseEventList = async function () {
 metropoolScraper.getPageInfo = async function ({ page, url }) {
   const stopFunctie = setTimeout(() => {
     throw new Error(
-      `makeBaseEventList is de max tijd voor zn functie ${this.maxExecutionTimethis} voorbij `
+      `makeBaseEventList is de max tijd voor zn functie ${this.maxExecutionTime} voorbij `
     );
   }, this.maxExecutionTime);
   const pageInfo = await page.evaluate((months) => {

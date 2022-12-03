@@ -20,7 +20,7 @@ patronaatScraper.listenToMasterThread();
 patronaatScraper.makeBaseEventList = async function () {
   const stopFunctie = setTimeout(() => {
     throw new Error(
-      `makeBaseEventList is de max tijd voor zn functie ${this.maxExecutionTimethis} voorbij `
+      `makeBaseEventList is de max tijd voor zn functie ${this.maxExecutionTime} voorbij `
     );
   }, this.maxExecutionTime);
 
@@ -72,7 +72,7 @@ patronaatScraper.makeBaseEventList = async function () {
 patronaatScraper.getPageInfo = async function ({ page, url }) {
   const stopFunctie = setTimeout(() => {
     throw new Error(
-      `getPageInfo is de max tijd voor zn functie ${this.maxExecutionTimethis} voorbij `
+      `getPageInfo is de max tijd voor zn functie ${this.maxExecutionTime} voorbij `
     );
   }, this.maxExecutionTime);
 

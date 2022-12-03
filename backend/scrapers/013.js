@@ -19,7 +19,7 @@ nuldertienScraper.listenToMasterThread();
 nuldertienScraper.makeBaseEventList = async function () {
   const stopFunctie = setTimeout(() => {
     throw new Error(
-      `getPageInfo is de max tijd voor zn functie ${this.maxExecutionTimethis} voorbij `
+      `getPageInfo is de max tijd voor zn functie ${this.maxExecutionTime} voorbij `
     );
   }, this.maxExecutionTime);
 
@@ -84,7 +84,7 @@ nuldertienScraper.makeBaseEventList = async function () {
 nuldertienScraper.getPageInfo = async function () {
   const stopFunctie = setTimeout(() => {
     throw new Error(
-      `getPageInfo is de max tijd voor zn functie ${this.maxExecutionTimethis} voorbij `
+      `getPageInfo is de max tijd voor zn functie ${this.maxExecutionTime} voorbij `
     );
   }, this.maxExecutionTime);
 

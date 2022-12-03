@@ -20,7 +20,7 @@ effenaarScraper.listenToMasterThread();
 effenaarScraper.makeBaseEventList = async function () {
   const stopFunctie = setTimeout(() => {
     throw new Error(
-      `makeBaseEventList is de max tijd voor zn functie ${this.maxExecutionTimethis} voorbij `
+      `makeBaseEventList is de max tijd voor zn functie ${this.maxExecutionTime} voorbij `
     );
   }, this.maxExecutionTime);
 
@@ -71,7 +71,7 @@ effenaarScraper.makeBaseEventList = async function () {
 effenaarScraper.getPageInfo = async function ({ page, url }) {
   const stopFunctie = setTimeout(() => {
     throw new Error(
-      `makeBaseEventList is de max tijd voor zn functie ${this.maxExecutionTimethis} voorbij `
+      `makeBaseEventList is de max tijd voor zn functie ${this.maxExecutionTime} voorbij `
     );
   }, this.maxExecutionTime);
 

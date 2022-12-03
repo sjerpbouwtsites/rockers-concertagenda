@@ -20,7 +20,7 @@ doornroosjeScraper.listenToMasterThread();
 doornroosjeScraper.makeBaseEventList = async function () {
   const stopFunctie = setTimeout(() => {
     throw new Error(
-      `makeBaseEventList is de max tijd voor zn functie ${this.maxExecutionTimethis} voorbij `
+      `makeBaseEventList is de max tijd voor zn functie ${this.maxExecutionTime} voorbij `
     );
   }, this.maxExecutionTime);
 
@@ -82,7 +82,7 @@ doornroosjeScraper.makeBaseEventList = async function () {
 doornroosjeScraper.getPageInfo = async function ({ page, url }) {
   const stopFunctie = setTimeout(() => {
     throw new Error(
-      `makeBaseEventList is de max tijd voor zn functie ${this.maxExecutionTimethis} voorbij `
+      `makeBaseEventList is de max tijd voor zn functie ${this.maxExecutionTime} voorbij `
     );
   }, this.maxExecutionTime);
 
