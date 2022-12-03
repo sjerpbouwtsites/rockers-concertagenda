@@ -94,8 +94,13 @@ class WorkerListConf {
     //   CPUReq: "high",
     //   workerConcurrent: 1,
     // });
-    this.create({ family: "iduna", workerCount: 1 });
-    // this.create({family: 'kavka', workerCount: 1,workerConcurrent: 1, CPUReq: 'high' })
+    // this.create({ family: "iduna", workerCount: 1 });
+    this.create({
+      family: "kavka",
+      workerCount: 1,
+      workerConcurrent: 1,
+      CPUReq: "high",
+    });
     // this.create({family: 'depul', workerCount: 3})
     // this.create({family: 'paradiso', workerCount: 4})
     // this.create({ family: "volt", workerCount: 1 });

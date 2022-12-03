@@ -1,4 +1,22 @@
 
+  kavka-0 Error - 7:32:21 AM
+  TimeoutError: Navigation timeout of 45000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 45000 ms exceeded
+  
+  
+  kavka-0 Error - 7:30:05 AM
+  TimeoutError: Navigation timeout of 25000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 25000 ms exceeded
+  
+  
+  kavka-0 Error - 7:26:13 AM
+  TimeoutError: Navigation timeout of 25000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 25000 ms exceeded
+  
+  
   neushoorn-0 Error - 6:09:39 AM
   ReferenceError: qwm is not defined
     at neushoornScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/neushoorn.js:29:26)
