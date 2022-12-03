@@ -247,7 +247,8 @@ export default class AbstractScraper {
     // page info ophalen
     const pageInfo = await this.getPageInfo({
       page: singleEventPage,
-      url: singleEvent.venueEventUrl,
+      url: singleEvent.venueEventUrl, // @TODO overal weghalen vervangen met event
+      event: singleEvent,
     });
     if (!pageInfo || !!pageInfo?.unavailable) {
       parentPort.postMessage(

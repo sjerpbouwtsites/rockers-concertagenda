@@ -1,4 +1,386 @@
 
+  boerderij-0 Error - 10:42:12 AM
+  RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at boerderijScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/boerderij.js:148:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:248:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:55:5) 
+  Invalid time value
+  
+  
+  boerderij-0 Error - 10:42:12 AM
+  RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at boerderijScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/boerderij.js:137:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:248:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:55:5) 
+  Invalid time value
+  
+  
+  boerderij-0 Error - 10:42:12 AM
+  RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at boerderijScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/boerderij.js:148:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:248:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:55:5) 
+  Invalid time value
+  
+  
+  boerderij-0 Error - 10:42:12 AM
+  RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at boerderijScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/boerderij.js:137:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:248:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:55:5) 
+  Invalid time value
+  
+  
+  boerderij-0 Error - 10:42:11 AM
+  RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at boerderijScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/boerderij.js:148:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:248:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:55:5) 
+  Invalid time value
+  
+  
+  boerderij-0 Error - 10:42:11 AM
+  RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at boerderijScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/boerderij.js:137:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:248:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:55:5) 
+  Invalid time value
+  
+  
+  boerderij-0 Error - 10:42:10 AM
+  RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at boerderijScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/boerderij.js:148:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:248:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:55:5) 
+  Invalid time value
+  
+  
+  boerderij-0 Error - 10:42:10 AM
+  RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at boerderijScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/boerderij.js:137:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:248:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:55:5) 
+  Invalid time value
+  
+  
+  boerderij-0 Error - 10:42:09 AM
+  RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at boerderijScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/boerderij.js:148:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:248:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:55:5) 
+  Invalid time value
+  
+  
+  boerderij-0 Error - 10:42:09 AM
+  RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at boerderijScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/boerderij.js:137:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:248:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:55:5) 
+  Invalid time value
+  
+  
+  boerderij-0 Error - 10:42:09 AM
+  RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at boerderijScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/boerderij.js:148:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:248:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:55:5) 
+  Invalid time value
+  
+  
+  boerderij-0 Error - 10:42:09 AM
+  RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at boerderijScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/boerderij.js:137:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:248:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:55:5) 
+  Invalid time value
+  
+  
+  boerderij-0 Error - 10:42:08 AM
+  RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at boerderijScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/boerderij.js:148:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:248:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:55:5) 
+  Invalid time value
+  
+  
+  boerderij-0 Error - 10:42:08 AM
+  RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at boerderijScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/boerderij.js:137:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:248:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:55:5) 
+  Invalid time value
+  
+  
+  boerderij-0 Error - 10:42:07 AM
+  RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at boerderijScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/boerderij.js:148:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:248:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:55:5) 
+  Invalid time value
+  
+  
+  boerderij-0 Error - 10:42:07 AM
+  RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at boerderijScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/boerderij.js:137:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:248:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:55:5) 
+  Invalid time value
+  
+  
+  boerderij-0 Error - 10:42:07 AM
+  RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at boerderijScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/boerderij.js:148:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:248:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:55:5) 
+  Invalid time value
+  
+  
+  boerderij-0 Error - 10:42:07 AM
+  RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at boerderijScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/boerderij.js:137:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:248:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:55:5) 
+  Invalid time value
+  
+  
+  boerderij-0 Error - 10:42:05 AM
+  RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at boerderijScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/boerderij.js:148:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:248:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:55:5) 
+  Invalid time value
+  
+  
+  boerderij-0 Error - 10:42:05 AM
+  RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at boerderijScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/boerderij.js:137:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:248:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:55:5) 
+  Invalid time value
+  
+  
+  boerderij-0 Error - 10:42:03 AM
+  RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at boerderijScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/boerderij.js:148:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:248:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:55:5) 
+  Invalid time value
+  
+  
+  boerderij-0 Error - 10:42:03 AM
+  RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at boerderijScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/boerderij.js:137:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:248:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:55:5) 
+  Invalid time value
+  
+  
+  boerderij-0 Error - 10:42:03 AM
+  RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at boerderijScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/boerderij.js:148:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:248:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:55:5) 
+  Invalid time value
+  
+  
+  boerderij-0 Error - 10:42:03 AM
+  RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at boerderijScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/boerderij.js:137:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:248:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:55:5) 
+  Invalid time value
+  
+  
+  boerderij-0 Error - 10:42:02 AM
+  RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at boerderijScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/boerderij.js:148:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:248:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:55:5) 
+  Invalid time value
+  
+  
+  boerderij-0 Error - 10:42:02 AM
+  RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at boerderijScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/boerderij.js:137:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:248:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:55:5) 
+  Invalid time value
+  
+  
+  boerderij-0 Error - 10:42:01 AM
+  RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at boerderijScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/boerderij.js:148:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:248:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:55:5) 
+  Invalid time value
+  
+  
+  boerderij-0 Error - 10:42:01 AM
+  RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at boerderijScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/boerderij.js:137:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:248:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:55:5) 
+  Invalid time value
+  
+  
+  boerderij-0 Error - 10:42:00 AM
+  RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at boerderijScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/boerderij.js:148:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:248:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:55:5) 
+  Invalid time value
+  
+  
+  boerderij-0 Error - 10:42:00 AM
+  RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at boerderijScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/boerderij.js:137:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:248:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:55:5) 
+  Invalid time value
+  
+  
+  boerderij-0 Error - 10:39:30 AM
+  TypeError: pageInfo.errorsVoorErrorHandler is not a function
+    at boerderijScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/boerderij.js:131:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:248:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:55:5) 
+  pageInfo.errorsVoorErrorHandler is not a function
+  
+  
+  boerderij-0 Error - 10:33:27 AM
+  TypeError: Cannot read properties of undefined (reading 'match')
+    at boerderijScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/boerderij.js:97:37)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:248:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:55:5) 
+  Cannot read properties of undefined (reading 'match')
+  
+  
+  boerderij-0 Error - 10:32:02 AM
+  TypeError: Cannot read properties of undefined (reading 'match')
+    at boerderijScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/boerderij.js:97:37)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:248:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:55:5) 
+  Cannot read properties of undefined (reading 'match')
+  
+  
+  boerderij-0 Error - 10:30:41 AM
+  TypeError: Cannot read properties of undefined (reading 'match')
+    at boerderijScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/boerderij.js:94:37)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:248:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:55:5) 
+  Cannot read properties of undefined (reading 'match')
+  
+  
+  boerderij-0 Error - 10:30:15 AM
+  ReferenceError: document is not defined
+    at boerderijScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/boerderij.js:75:29)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:248:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:55:5) 
+  document is not defined
+  
+  
+  boerderij-0 Error - 10:28:33 AM
+  ReferenceError: document is not defined
+    at boerderijScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/boerderij.js:74:29)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:248:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:55:5) 
+  document is not defined
+  
+  
+  boerderij-0 Error - 10:20:18 AM
+  ReferenceError: page is not defined
+    at boerderijScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/boerderij.js:45:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:47:29) 
+  page is not defined
+  
+  
+  boerderij-0 Error - 10:19:17 AM
+  ReferenceError: axios is not defined
+    at boerderijScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/boerderij.js:27:21)
+    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:47:40)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  axios is not defined
+  
+  
+  dbs-3 Error - 10:00:23 AM
+  TimeoutError: Navigation timeout of 20000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111
+    at async FrameManager.navigateFrame (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:131:21)
+    at async Frame.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:512:16)
+    at async Page.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1167:16)
+    at async AbstractScraper.createSinglePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:340:7)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:238:29)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/abstract-scraper.js:55:5) 
+  Navigation timeout of 20000 ms exceeded
+  
+  
   duycker-0 Error - 9:53:54 AM
   ReferenceError: musicEvent is not defined
     at duyckerScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/duycker.js:165:30)

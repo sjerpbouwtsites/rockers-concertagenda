@@ -13,7 +13,7 @@ const scraperConfig = {
   puppeteerConfig: {
     singlePage: {
       waitUntil: "domcontentloaded", // @TODO overal invoeren
-      timeout: 20000,
+      timeout: 25000,
     },
   },
   workerData: Object.assign({}, workerData),

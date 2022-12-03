@@ -76,7 +76,7 @@ class WorkerListConf {
     // this.create({ family: "tivolivredenburg", workerCount: 4 });
     // this.create({ family: "doornroosje", workerCount: 3, workerConcurrent: 1 });
     // this.create({ family: "metropool", workerCount: 2 });
-    // this.create({ family: "boerderij", workerCount: 1, CPUReq: "low" });
+    this.create({ family: "boerderij", workerCount: 1, CPUReq: "low" });
     // this.create({ family: "occii", workerCount: 2, workerConcurrent: 1 });
     // this.create({ family: "dynamo", workerCount: 2 });
     // this.create({
@@ -98,12 +98,12 @@ class WorkerListConf {
     // this.create({
     //   family: "kavka",
     //   workerCount: 1,
-    //   workerConcurrent: 1
+    //   workerConcurrent: 1,
     // });
     // this.create({ family: "depul", workerCount: 2 });
     // this.create({ family: "paradiso", workerCount: 4 });
     // this.create({ family: "volt", workerCount: 1 });
-    this.create({ family: "duycker", workerCount: 1 });
+    // this.create({ family: "duycker", workerCount: 1 });
     this.shuffleArray();
   }
   get hasWorkerConfigs(){
