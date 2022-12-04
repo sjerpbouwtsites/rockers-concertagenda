@@ -1,4 +1,48 @@
 
+  events-list-0 Error - 11:40:10 PM
+  SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at Function.guaranteeTimestampExistence (file:///home/sjerp/dev/apache/concertagenda/backend/mods/events-list.js:70:14)
+    at Function.save (file:///home/sjerp/dev/apache/concertagenda/backend/mods/events-list.js:26:18)
+    at AbstractScraper.saveEvents (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:540:16)
+    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:60:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Unexpected end of JSON input
+  
+  
+  events-list-0 Error - 11:37:08 PM
+  SyntaxError: Unexpected token / in JSON at position 4
+    at JSON.parse (<anonymous>)
+    at Function.guaranteeTimestampExistence (file:///home/sjerp/dev/apache/concertagenda/backend/mods/events-list.js:70:14)
+    at Function.isOld (file:///home/sjerp/dev/apache/concertagenda/backend/mods/events-list.js:89:20)
+    at WorkerListConf.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/worker-config.js:39:21)
+    at WorkerListConf.run (file:///home/sjerp/dev/apache/concertagenda/backend/mods/worker-config.js:71:10)
+    at new WorkerListConf (file:///home/sjerp/dev/apache/concertagenda/backend/mods/worker-config.js:29:12)
+    at getWorkerConfig (file:///home/sjerp/dev/apache/concertagenda/backend/mods/worker-config.js:131:10)
+    at init (file:///home/sjerp/dev/apache/concertagenda/backend/index.js:20:24) 
+  Unexpected token / in JSON at position 4
+  
+  
+  dbs-3 Error - 11:36:30 PM
+  TimeoutError: Navigation timeout of 15000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111
+    at async FrameManager.navigateFrame (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:131:21)
+    at async Frame.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:512:16)
+    at async Page.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1167:16)
+    at async AbstractScraper.makeBaseEventListStart (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:99:5)
+    at async dbsScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dbs.js:34:31)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:47:29) 
+  Navigation timeout of 15000 ms exceeded
+  
+  
+  undefined Error - 11:36:30 PM
+  Error: makeBaseEvent overtijd. Max: 15000
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:81:9)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  makeBaseEvent overtijd. Max: 15000
+  
+  
   dbs-0 Error - 11:01:52 PM
   TimeoutError: Navigation timeout of 25000 ms exceeded
     at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111
