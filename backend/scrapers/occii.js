@@ -1,7 +1,7 @@
 import { workerData } from "worker_threads";
+import getVenueMonths from "../mods/months.js";
 import * as _t from "../mods/tools.js";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
-import { occiiMonths } from "../mods/months.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 
 // SCRAPER CONFIG
@@ -34,22 +34,22 @@ occiiScraper.makeBaseEventList = async function () {
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
-  const rawEvents = await page.evaluate(() => {
+  const rawEvents = await page.evaluate(({workerData}) => {
     return Array.from(document.querySelectorAll(".occii-event-display"))
-      .filter((event, index) => index % this.workerData.workerCount === this.workerData.index)
+      .filter((event, index) => index % workerData.workerCount === workerData.index)
       .map((occiiEvent) => {
         const firstAnchor = occiiEvent.querySelector("a");
 
         return {
           venueEventUrl: firstAnchor.href,
           title: firstAnchor.title,
-          shortText:_t.killWhitespaceExcess(
+          shortText:
             occiiEvent.querySelector(".occii-events-description")
-              ?.textContent ?? ""),
+              ?.textContent ?? "",
           location: "occii",
         };
       });
-  }, null);
+  }, {workerData});
 
   return await this.makeBaseEventListEnd({
     stopFunctie, page, rawEvents}
@@ -78,7 +78,7 @@ occiiScraper.getPageInfo = async function ({ page }) {
       const eventDateSplit2 = eventDateSplit1[1].trim().split(" ");
       const eventMonthEnglish = eventDateSplit2[0].trim();
       const eventDay = eventDateSplit2[1].trim();
-      const eventMonth = months[eventMonthEnglish];
+      const eventMonth = months[eventMonthEnglish.toLowerCase()];
       const eventDateString = `${eventYear}-${eventMonth}-${eventDay}`;
       const doorsOpenMatch = eventCategoriesEl.textContent.match(
         /Doors\sopen:\s+(\d\d:\d\d)/
@@ -114,9 +114,9 @@ occiiScraper.getPageInfo = async function ({ page }) {
     res.genre =
       document.querySelector('[href*="events/categories"]')?.textContent ??
       null;
-    res.longTextHTML = _t.killWhitespaceExcess(document.querySelector(".occii-event-notes").innerHTML);
+    res.longTextHTML = document.querySelector(".occii-event-notes").innerHTML;
     return res;
-  }, occiiMonths);
+  }, getVenueMonths('occii'));
 
   return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
   

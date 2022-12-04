@@ -1,7 +1,6 @@
 import { workerData } from "worker_threads";
 import * as _t from "../mods/tools.js";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
-import { depulMonths } from "../mods/months.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 
 // SCRAPER CONFIG
@@ -41,13 +40,13 @@ depulScraper.makeBaseEventList = async function () {
   await _t.waitFor(250);
 
   let rawEvents = await page.evaluate(
-    ({ months }) => {
+    ({ months,workerData }) => {
       return Array.from(document.querySelectorAll(".agenda-item"))
-        .filter((rawEvent, index) => index % this.workerData.workerCount === this.workerData.index)
+        .filter((rawEvent, index) => index % workerData.workerCount === workerData.index)
         .map((rawEvent) => {
           const title = rawEvent.querySelector("h2")?.textContent.trim() ?? "";
-          const shortText = _t.killWhitespaceExcess(
-            rawEvent.querySelector(".text-box .desc")?.textContent.trim() ?? "");
+          const shortText = 
+            rawEvent.querySelector(".text-box .desc")?.textContent.trim() ?? "";
           const startDay =
             rawEvent
               .querySelector("time .number")
@@ -89,7 +88,7 @@ depulScraper.makeBaseEventList = async function () {
           };
         });
     },
-    { months: depulMonths}
+    { months: this.months,workerData}
   );
 
   return await this.makeBaseEventListEnd({
@@ -100,7 +99,7 @@ depulScraper.makeBaseEventList = async function () {
 
 // GET PAGE INFO
 
-depulScraper.getPageInfo = async function ({ page, url }) {
+depulScraper.getPageInfo = async function ({ page }) {
   
   const {stopFunctie} =  await this.getPageInfoStart()
   
@@ -124,7 +123,7 @@ depulScraper.getPageInfo = async function ({ page, url }) {
               contentBox.removeChild(removeFromContentBox);
             }
           });
-          res.longTextHTML = _t.killWhitespaceExcess(contentBox.innerHTML);
+          res.longTextHTML = contentBox.innerHTML;
         }
       } catch (error) {
         res.errorsVoorErrorHandler.push({
@@ -160,7 +159,7 @@ depulScraper.getPageInfo = async function ({ page, url }) {
                 }-${startDateMatch[1]}`;
               }
             } catch (error) {
-              res.errorsVoorErrorHandler({ error, remarks: "startDate" });
+              res.errorsVoorErrorHandler.push({ error, remarks: "startDate" });
             }
           } else if (lowerCaseTextContent.includes("aanvang")) {
             if (!res.startDate) {
@@ -178,7 +177,7 @@ depulScraper.getPageInfo = async function ({ page, url }) {
                 ).toISOString();
               }
             } catch (error) {
-              res.errorsVoorErrorHandler({
+              res.errorsVoorErrorHandler.push({
                 error,
                 remarks: "startDateTime en startDate",
               });
@@ -199,7 +198,7 @@ depulScraper.getPageInfo = async function ({ page, url }) {
                 ).toISOString();
               }
             } catch (error) {
-              res.errorsVoorErrorHandler({
+              res.errorsVoorErrorHandler.push({
                 error,
                 remarks: "doorDateTime en startDate",
               });
@@ -218,7 +217,7 @@ depulScraper.getPageInfo = async function ({ page, url }) {
       }
       return res;
     },
-    { months: depulMonths }
+    { months: this.months }
   );
 
   return await this.getPageInfoEnd({pageInfo, stopFunctie, page})

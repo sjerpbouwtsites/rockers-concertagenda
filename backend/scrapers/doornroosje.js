@@ -1,6 +1,5 @@
 import { workerData } from "worker_threads";
 import * as _t from "../mods/tools.js";
-import { doornRoosjeMonths } from "../mods/months.js";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 
@@ -36,9 +35,9 @@ doornroosjeScraper.makeBaseEventList = async function () {
   await page.waitForSelector(".c-program__title");
   await _t.waitFor(50);
 
-  const rawEvents = await page.evaluate(() => {
+  const rawEvents = await page.evaluate(({workerData}) => {
     return Array.from(document.querySelectorAll(".c-program__item"))
-      .filter((eventEl, index) => index % this.workerData.workerCount === this.workerData.index)
+      .filter((eventEl, index) => index % workerData.workerCount === workerData.index)
       .map((eventEl) => {
         const res = {
           unavailable: null,
@@ -47,11 +46,11 @@ doornroosjeScraper.makeBaseEventList = async function () {
           eventEl.querySelector(".c-program__title")?.textContent.trim() ??
           eventEl.querySelector("h1,h2,h3")?.textContent.trim();
         null;
-        res.shortText = _t.killWhitespaceExcess(
+        res.shortText = 
           eventEl
             .querySelector(".c-program__content")
             ?.textContent.trim()
-            .replace(res.title, "") ?? '');
+            .replace(res.title, "") ?? '';
         res.venueEventUrl = eventEl?.href;
         if (!res.title || !res.venueEventUrl) {
           res.unavailable = "title of url ontbreken";
@@ -59,7 +58,7 @@ doornroosjeScraper.makeBaseEventList = async function () {
         res.location = "doornroosje";
         return res;
       });
-  }, null);
+  }, {workerData});
 
   return await this.makeBaseEventListEnd({
     stopFunctie, page, rawEvents}
@@ -73,7 +72,7 @@ doornroosjeScraper.getPageInfo = async function ({ page }) {
   
   const {stopFunctie} =  await this.getPageInfoStart()
 
-  const pageInfo = await page.evaluate((months) => {
+  const pageInfo = await page.evaluate(({months}) => {
     const res = {
       unavailable: "",
       pageInfoID: `<a href='${document.location.href}'>${document.title}</a>`,
@@ -81,16 +80,16 @@ doornroosjeScraper.getPageInfo = async function ({ page }) {
     };
     res.image =
       document.querySelector(".c-header-event__image img")?.src ?? null;
-    res.priceTextcontent = _t.killWhitespaceExcess(
-      document.querySelector(".c-btn__price")?.textContent.trim() ?? '');
-    res.longTextHTML = _t.killWhitespaceExcess(
-      document.querySelector(".s-event__container")?.innerHTML ?? '');
+    res.priceTextcontent = 
+      document.querySelector(".c-btn__price")?.textContent.trim() ?? '';
+    res.longTextHTML = 
+      document.querySelector(".s-event__container")?.innerHTML ?? '';
 
     const embeds = document.querySelectorAll(".c-embed");
-    res.longTextHTML = _t.killWhitespaceExcess(
+    res.longTextHTML =
       embeds?.length ?? false
         ? res.longTextHTML + embeds.innerHTML
-        : res.longTextHTML);
+        : res.longTextHTML;
 
     const startDateRauwMatch = document
       .querySelector(".c-event-data")
@@ -144,7 +143,7 @@ doornroosjeScraper.getPageInfo = async function ({ page }) {
       res.unavailable += res.pageInfoID;
     }
     return res;
-  }, doornRoosjeMonths);
+  }, {months: this.months});
 
   return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
 

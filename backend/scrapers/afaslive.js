@@ -1,6 +1,4 @@
-import { afasliveMonths } from "../mods/months.js";
-import MusicEvent from "../mods/music-event.js";
-import { parentPort, workerData } from "worker_threads";
+import { workerData } from "worker_threads";
 import * as _t from "../mods/tools.js";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
@@ -52,9 +50,9 @@ afasliveScraper.makeBaseEventList = async function () {
   
   await _t.autoScroll(page);
 
-  const rawEvents = await page.evaluate(() => {
+  const rawEvents = await page.evaluate(({workerData}) => {
     return Array.from(document.querySelectorAll(".agenda__item__block "))
-      .filter((event, index) => index % this.workerData.workerCount === this.workerData.index)
+      .filter((event, index) => index % workerData.workerCount === workerData.index)
       .map((agendaBlock) => {
         const res = {};
         res.venueEventUrl = agendaBlock.querySelector("a")?.href ?? null;
@@ -63,7 +61,7 @@ afasliveScraper.makeBaseEventList = async function () {
         res.location = "afaslive";
         return res;
       });
-  }, );
+  }, {workerData});
 
   return await this.makeBaseEventListEnd({
     stopFunctie, page, rawEvents}
@@ -139,14 +137,14 @@ afasliveScraper.getPageInfo = async function ({ page }) {
         res.unavailable += " geen startDateTime";
       }
 
-      res.longTextHTML = _t.killWhitespaceExcess(
-        document.querySelector("article .wysiwyg")?.innerHTML ?? '');
+      res.longTextHTML = 
+        document.querySelector("article .wysiwyg")?.innerHTML ?? '';
 
-      res.priceTextcontent = _t.killWhitespaceExcess(
-        document.querySelector("#tickets")?.textContent.trim() ?? '');
+      res.priceTextcontent = 
+        document.querySelector("#tickets")?.textContent.trim() ?? '';
       return res;
     },
-    { months: afasliveMonths }
+    { months: this.months }
   );
   return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
 };

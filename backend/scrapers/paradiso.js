@@ -1,7 +1,6 @@
 import { workerData } from "worker_threads";
 import * as _t from "../mods/tools.js";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
-import { paradisoMonths } from "../mods/months.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 
 //HEEFT ASYNC CHECK
@@ -64,18 +63,18 @@ paradisoScraper.makeBaseEventList = async function () {
   await _t.waitFor(150);
 
   let rawEvents = await page.evaluate(
-    () => {
+    ({workerData}) => {
       return Array.from(document.querySelectorAll(".event-list__item"))
-        .filter((rawEvent, index) => index % this.workerData.workerCount === this.workerData.index)
+        .filter((rawEvent, index) => index % workerData.workerCount === workerData.index)
         .map((rawEvent) => {
           const title =
             rawEvent
               .querySelector(".event-list__item-title")
               ?.textContent.trim() ?? "";
-          const shortText = _t.killWhitespaceExcess(
+          const shortText = 
             rawEvent
               .querySelector(".event-list__item-subtitle")
-              ?.textContent.trim() ?? "");
+              ?.textContent.trim() ?? "";
           const venueEventUrl = rawEvent.hasAttribute("href")
             ? rawEvent.href
             : null;
@@ -88,7 +87,7 @@ paradisoScraper.makeBaseEventList = async function () {
           };
         });
     },
-    null
+    {workerData}
   );
 
   return await this.makeBaseEventListEnd({
@@ -176,9 +175,9 @@ paradisoScraper.getPageInfo = async function ({ page }) {
           res.unavailable += "nog meer tijd issues";
         }
       }
-      res.priceTextcontent =_t.killWhitespaceExcess(
+      res.priceTextcontent =
         document.querySelector(".template-2__price-wrapper-container")
-          ?.textContent ?? '');
+          ?.textContent ?? '';
 
       const imageM = document
         .querySelector('[style*="background-im"]')
@@ -192,7 +191,7 @@ paradisoScraper.getPageInfo = async function ({ page }) {
       }
       return res;
     },
-    { months: paradisoMonths }
+    { months: this.months }
   );
 
   return await this.getPageInfoEnd({pageInfo, stopFunctie, page})

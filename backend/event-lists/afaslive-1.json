@@ -1,5 +1,17 @@
 [
   {
+    "doorOpenDateTime": "2023-01-27T17:30:00.000Z",
+    "startDateTime": "2023-01-27T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.afaslive.nl/agenda/epica-apocalyptica-2",
+    "title": "EPICA & Apocalyptica",
+    "location": "afaslive",
+    "price": 51.52,
+    "shortText": null,
+    "longText": "../public/texts/10210d26-68d7-469b-b780-495e420e42ed.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2020/12-december/_agendaitem/Epica.jpg"
+  },
+  {
     "doorOpenDateTime": "2023-02-03T18:00:00.000Z",
     "startDateTime": "2023-02-03T19:30:00.000Z",
     "endDateTime": null,
@@ -8,7 +20,7 @@
     "location": "afaslive",
     "price": "03",
     "shortText": null,
-    "longText": "../public/texts/a5011ce0-a175-41ef-84e4-4c833be53efd.html",
+    "longText": "../public/texts/5ea3c210-f4ad-4aa1-9211-f1739d6a47a1.html",
     "image": "https://www.afaslive.nl/files/_agendaitem/Di-Rect-Residentie-Orkest.jpg"
   },
   {
@@ -20,7 +32,19 @@
     "location": "afaslive",
     "price": 53.9,
     "shortText": null,
-    "longText": "../public/texts/a6aa51cd-1507-42cf-a167-376f6132bbbc.html",
+    "longText": "../public/texts/b0c8e7a1-79b9-46a2-ba06-63bd95aa99cd.html",
     "image": "https://www.afaslive.nl/files/Agenda/2022/07-juli/_agendaitem/Madness.jpg"
+  },
+  {
+    "doorOpenDateTime": "2023-04-07T16:30:00.000Z",
+    "startDateTime": "2023-04-07T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.afaslive.nl/agenda/eels-1",
+    "title": "EELS",
+    "location": "afaslive",
+    "price": 46.5,
+    "shortText": null,
+    "longText": "../public/texts/33289997-9239-4479-8205-e2341db1361a.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2022/04-april/_agendaitem/Eels.jpg"
   }
 ]

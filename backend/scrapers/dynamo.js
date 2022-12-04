@@ -1,4 +1,3 @@
-import { dynamoMonths } from "../mods/months.js";
 import { workerData } from "worker_threads";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
@@ -34,11 +33,11 @@ dynamoScraper.makeBaseEventList = async function () {
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
   const rawEvents = await page.evaluate(
-    () => {
+    ({workerData}) => {
       return Array.from(
         document.querySelectorAll(".search-filter-results .timeline-article")
       )
-        .filter((baseEvent, index) => index % this.workerData.workerCount === this.workerData.index)
+        .filter((baseEvent, index) => index % workerData.workerCount === workerData.index)
         .map((baseEvent) => {
           const venueEventUrl = baseEvent.querySelector("a")?.href ?? "";
           const title = baseEvent.querySelector("h4")?.textContent ?? "";
@@ -48,7 +47,7 @@ dynamoScraper.makeBaseEventList = async function () {
             ".timeline-info-container"
           );
 
-          let shortText = _t.killWhitespaceExcess(timelineInfoContainerEl?.querySelector("p")?.textContent ?? '');
+          let shortText = timelineInfoContainerEl?.querySelector("p")?.textContent ?? '';
 
           return {
             venueEventUrl,
@@ -59,7 +58,7 @@ dynamoScraper.makeBaseEventList = async function () {
           };
         });
     },
-    null
+    {workerData}
   );
 
   return await this.makeBaseEventListEnd({
@@ -174,10 +173,8 @@ dynamoScraper.getPageInfo = async function ({ page }) {
       }
       return res;
     },
-    { months: dynamoMonths }
+    { months: this.months }
   );
-
-  pageInfo.longTextHTML = _t.killWhitespaceExcess(pageInfo.longTextHTML);
 
   return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
   

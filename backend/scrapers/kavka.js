@@ -1,7 +1,6 @@
 import { workerData } from "worker_threads";
 import * as _t from "../mods/tools.js";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
-import { kavkaMonths } from "../mods/months.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 
 // SCRAPER CONFIG
@@ -113,14 +112,14 @@ kavkaScraper.makeBaseEventList = async function () {
             rawEvent
               .querySelector("article h3:first-child")
               ?.textContent.trim() ?? "";
-          res.shortText = _t.killWhitespaceExcess(
-            rawEvent.querySelector("article h3 + p")?.textContent.trim() ?? "");
+          res.shortText = 
+            rawEvent.querySelector("article h3 + p")?.textContent.trim() ?? "";
           res.location = "kavka";
           res.venueEventUrl = rawEvent.href;
           return res;
         });
     },
-    { months: kavkaMonths }
+    { months: this.months }
   );
   
   return await this.makeBaseEventListEnd({
@@ -148,11 +147,11 @@ kavkaScraper.getPageInfo = async function ({ page }) {
           document.querySelector('img[src*="kavka.be/wp-content"]')?.src ?? "";
       }
 
-      res.longTextHTML = _t.killWhitespaceExcess(
-        document.querySelector("h2 + .entry-content")?.innerHTML ?? '');
+      res.longTextHTML = 
+        document.querySelector("h2 + .entry-content")?.innerHTML ?? '';
 
-      res.priceTextcontent = _t.killWhitespaceExcess(
-        document.querySelector(".prijzen")?.textContent.trim() ?? '');
+      res.priceTextcontent = 
+        document.querySelector(".prijzen")?.textContent.trim() ?? '';
       return res;
     } catch (error) {
       res.errorsVoorErrorHandler.push({

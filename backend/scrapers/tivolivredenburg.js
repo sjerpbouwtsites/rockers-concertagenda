@@ -1,7 +1,7 @@
 import { workerData } from "worker_threads";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
-import _t from "../mods/tools.js";
+import * as _t from "../mods/tools.js";
 
 // SCRAPER CONFIG
 
@@ -28,19 +28,19 @@ tivoliVredenburgScraper.makeBaseEventList = async function () {
   
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
-  const rawEvents = await page.evaluate(() => {
+  const rawEvents = await page.evaluate(({workerData}) => {
     return Array.from(document.querySelectorAll(".agenda-list-item"))
-      .filter((eventEl,index) => index % this.workerData.workerCount === this.workerData.index)
+      .filter((eventEl,index) => index % workerData.workerCount === workerData.index)
       .map((eventEl) => {
         const res = {};
         res.title =
           eventEl
             .querySelector(".agenda-list-item__title")
             ?.textContent.trim() ?? null;
-        res.shortText =_t.killWhitespaceExcess(
+        res.shortText =
           eventEl
             .querySelector(".agenda-list-item__text")
-            ?.textContent.trim() ?? '');
+            ?.textContent.trim() ?? '';
         res.image =
           eventEl
             .querySelector(".agenda-list-item__figure img")
@@ -51,7 +51,7 @@ tivoliVredenburgScraper.makeBaseEventList = async function () {
         res.location = "tivolivredenburg";
         return res;
       });
-  }, null);
+  }, {workerData});
 
   this.dirtyLog(rawEvents)
 
@@ -73,12 +73,12 @@ tivoliVredenburgScraper.getPageInfo = async function ({ page }) {
       pageInfoID: `<a href='${document.location.href}'>${document.title}</a>`,
       errorsVoorErrorHandler: [],
     };
-    res.priceTextcontent =_t.killWhitespaceExcess(
-      document.querySelector(".btn-group__price")?.textContent.trim() ?? '');
-    res.priceContexttext = _t.killWhitespaceExcess(
-      document.querySelector(".event-cta")?.textContent.trim() ?? '');
-    res.longTextHTML = _t.killWhitespaceExcess(
-      document.querySelector(".event__text")?.innerHTML ?? '');
+    res.priceTextcontent =
+      document.querySelector(".btn-group__price")?.textContent.trim() ?? '';
+    res.priceContexttext =
+      document.querySelector(".event-cta")?.textContent.trim() ?? '';
+    res.longTextHTML = 
+      document.querySelector(".event__text")?.innerHTML ?? '';
 
     const startDateMatch = document.location.href.match(/\d\d-\d\d-\d\d\d\d/); //
     res.startDate = "";

@@ -3,38 +3,19 @@ import { Location } from "../mods/locations.js";
 import puppeteer from "puppeteer";
 import { parentPort, workerData } from "worker_threads";
 import EventsList from "../mods/events-list.js";
-import { metalfanMonths } from "../mods/months.js";
 import * as _t from "../mods/tools.js";
 import { QuickWorkerMessage } from "../mods/rock-worker.js";
+import fs from 'fs';
+import fsDirections from "../mods/fs-directions.js";
+import getVenueMonths from "../mods/months.js";
 
-const skipWithMetalfan = [
-  // @TODO vanuit timestamps lezen
-  "013",
-  "afaslive",
-  "baroeg",
-  "bibelot",
-  "boerderij",
-  "depul",
-  "dbs",
-  "doornroosje",
-  "dynamo",
-  "duycker",
-  "effenaar",
-  "gebrdenobel",
-  "iduna",
-  "kavka",
+const timestampsKeys = Object.keys(JSON.parse(fs.readFileSync(fsDirections.timestampsJson)))
+
+const skipWithMetalfan = timestampsKeys.concat([
   "kavkaoudaan",
-  "melkweg",
-  "metropool",
   "metropoolopenair",
   "merleyn", // onderdeel doornroosje
-  "neushoorn",
-  "paradiso",
-  "occii",
-  "patronaat",
-  "tivolivredenburg",
-  "volt",
-];
+]);
 
 parentPort.on("message", (message) => {
   const pm = JSON.parse(message);
@@ -68,7 +49,7 @@ async function getBaseMusicEvents(browser, skipWithMetalfan, qwm) {
   const page = await browser.newPage();
   await page.goto(`https://www.metalfan.nl/agenda.php`);
   parentPort.postMessage(qwm.workerStarted());
-  const eventData = await page.evaluate((months) => {
+  const eventData = await page.evaluate(({months}) => {
     return Array.from(document.querySelectorAll(".calentry")).map(
       (metalfanEvent) => {
         let dateAnchorEl,
@@ -111,10 +92,10 @@ async function getBaseMusicEvents(browser, skipWithMetalfan, qwm) {
         eventLocationName = (eventCommaSplice[0] || "").trim();
 
         eventHTMLrules = eventHTML.split("<br>");
-        shortText = _t.killWhitespaceExcess(
+        shortText = 
           eventHTMLrules.length > 1
             ? (eventHTMLrules[eventHTMLrules.length - 1] || "")
-            : "");
+            : "";
 
         return {
           title: eventName,
@@ -124,7 +105,7 @@ async function getBaseMusicEvents(browser, skipWithMetalfan, qwm) {
         };
       }
     );
-  }, metalfanMonths);
+  }, {months: getVenueMonths('metalfan')});
 
   const musicEvents = eventData
     .map((eventDatum) => {

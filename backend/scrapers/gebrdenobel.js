@@ -2,7 +2,6 @@ import { workerData } from "worker_threads";
 import * as _t from "../mods/tools.js";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
-import { gebrdenobelMonths } from "../mods/months.js";
 
 // SCRAPER CONFIG
 
@@ -69,7 +68,7 @@ gebrdenobelScraper.makeBaseEventList = async function () {
 
 // GET PAGE INFO
 
-gebrdenobelScraper.getPageInfo = async function ({ page, url }) {
+gebrdenobelScraper.getPageInfo = async function ({ page }) {
   
   const {stopFunctie} =  await this.getPageInfoStart()
 
@@ -125,17 +124,17 @@ gebrdenobelScraper.getPageInfo = async function ({ page, url }) {
       }
 
       if (priceRow) {
-        res.priceTextcontent = _t.killWhitespaceExcess(priceRow.textContent);
+        res.priceTextcontent = priceRow.textContent;
       }
-      res.shortText = _t.killWhitespaceExcess(
-        document.querySelector(".hero-cta_left__text p")?.textContent ?? '');
-      res.longTextHTML = _t.killWhitespaceExcess(
-        document.querySelector(".js-contentBlocks")?.innerHTML ?? '');
+      res.shortText = 
+        document.querySelector(".hero-cta_left__text p")?.textContent ?? '';
+      res.longTextHTML = 
+        document.querySelector(".js-contentBlocks")?.innerHTML ?? '';
       res.image = document.querySelector(".hero img")?.src ?? null;
 
       return res;
     },
-    { months: gebrdenobelMonths }
+    { months: this.months }
   );
 
   return await this.getPageInfoEnd({pageInfo, stopFunctie, page})

@@ -1,7 +1,6 @@
 import { workerData } from "worker_threads";
 import * as _t from "../mods/tools.js";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
-import { duyckerMonths } from "../mods/months.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 
 // SCRAPER CONFIG
@@ -47,8 +46,8 @@ duyckerScraper.makeBaseEventList = async function () {
         const anchor = rawEvent.querySelector('[itemprop="url"]') ?? null;
         const title =
           rawEvent.querySelector('[itemprop="name"]')?.textContent ?? null;
-        const shortText = _t.killWhitespaceExcess(
-          rawEvent.querySelector('[itemprop="name"] + p')?.textContent ?? '');
+        const shortText = 
+          rawEvent.querySelector('[itemprop="name"] + p')?.textContent ?? '';
         const venueEventUrl = anchor?.dataset.href ?? null;
         const image = anchor?.querySelector("img")?.src ?? null;
         const startDateMatch = rawEvent
@@ -120,7 +119,7 @@ duyckerScraper.makeBaseEventList = async function () {
         };
       });
     },
-    { months: duyckerMonths, workerIndex: workerData.index }
+    { months: this.months, workerIndex: workerData.index }
   );
 
   return await this.makeBaseEventListEnd({
@@ -142,12 +141,12 @@ duyckerScraper.getPageInfo = async function ({ page }) {
     const res = {};
     const contentBox = document.querySelector(".the_content") ?? null;
     if (contentBox) {
-      res.longTextHTML = _t.killWhitespaceExcess(contentBox.innerHTML);
+      res.longTextHTML = contentBox.innerHTML;
     }
 
-    res.priceTextcontent = _t.killWhitespaceExcess(
+    res.priceTextcontent = 
       document.querySelector(".event-info .content-info")?.textContent.trim() ??
-      "" );
+      "" ;
 
     return res;
   }, null);

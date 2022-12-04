@@ -1,7 +1,6 @@
 import { workerData } from "worker_threads";
 import * as _t from "../mods/tools.js";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
-import { dbsMonths } from "../mods/months.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 
 // SCRAPER CONFIG
@@ -38,9 +37,9 @@ dbsScraper.makeBaseEventList = async function () {
   await _t.waitFor(100)
 
   const rawEvents = await page.evaluate(
-    ({ months }) => {
+    ({ months,workerData }) => {
       return Array.from(document.querySelectorAll(".fusion-events-post"))
-        .filter((eventEl, index) => index % this.workerData.workerCount === this.workerData.index)
+        .filter((eventEl, index) => index % workerData.workerCount === workerData.index)
         .map((eventEl) => {
           const res = {};
           const titleLinkEl = eventEl.querySelector(".fusion-events-meta .url");
@@ -111,7 +110,7 @@ dbsScraper.makeBaseEventList = async function () {
           return res;
         });
     },
-    { months: dbsMonths }
+    { months: this.months,workerData }
   );
  
   return await this.makeBaseEventListEnd({
@@ -132,9 +131,9 @@ dbsScraper.getPageInfo = async function ({ page, url }) {
       pageInfoID: `<a href='${document.location.href}'>${document.title}</a>`,
       errorsVoorErrorHandler: [],
     };
-    res.longTextHTML = _t.killWhitespaceExcess(
+    res.longTextHTML = 
       document.querySelector(".tribe-events-single-event-description")
-        ?.innerHTML ?? '');
+        ?.innerHTML ?? '';
     res.image =
       document.querySelector(".tribe-events-event-image .wp-post-image")?.src ??
       null;

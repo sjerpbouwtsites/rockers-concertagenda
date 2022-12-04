@@ -7,7 +7,7 @@ import * as _t from "../../mods/tools.js";
 import fs from "fs";
 import EventsList from "../../mods/events-list.js";
 import MusicEvent from "../../mods/music-event.js";
-
+import getVenueMonths from "../../mods/months.js";
 
 /**
  * @method eventGenerator<Generator>
@@ -26,7 +26,7 @@ export default class AbstractScraper {
     this.qwm = new QuickWorkerMessage(workerData);
     this.maxExecutionTime = obj.maxExecutionTime ?? 30000;
     this.puppeteerConfig = obj.puppeteerConfig ?? {};
-    this.months = obj.months ?? null;// @TODO NAAR ECHTE MAANDENSYSTEEM GAAN
+    this.months = getVenueMonths(workerData.family)
   }
 
   /**
@@ -107,6 +107,7 @@ export default class AbstractScraper {
   /**
    * beeindigt stopFunctie timeout
    * sluit page
+   * verwerkt mogelijke witruimte weg
    * verwerkt fouten van raw make base events
    * haalt rawEvents door basicMusicEventsFilter en returned
    *
@@ -119,6 +120,15 @@ export default class AbstractScraper {
     clearTimeout(stopFunctie);
     
     page && !page.isClosed() && page.close();
+
+    rawEvents = rawEvents.map(event => {
+      if (event.longTextHTML) {
+        event.longTextHTML = _t.killWhitespaceExcess(event.longTextHTML);
+      } 
+      if (event.shortText) {
+        event.shortText = _t.killWhitespaceExcess(event.shortText);
+      } return event;
+    })
 
     rawEvents.forEach((event) => {
       event.errorsVoorErrorHandler?.forEach((errorHandlerMeuk) => {
@@ -445,6 +455,7 @@ export default class AbstractScraper {
    * step 3.9
    * Vervangt generieke code aan eind getPageInfo
    * stopt stopFunctie
+   * verwijderd overbodige witruimte
    * kijkt naar evt fouten in pageInfo.errorsVoorErrorHandler
    * @returns {*} pageInfo
    * @memberof AbstractScraper
@@ -459,6 +470,13 @@ export default class AbstractScraper {
       );
     });
   
+    if (pageInfo.longTextHTML) {
+      pageInfo.longTextHTML = _t.killWhitespaceExcess(pageInfo.longTextHTML)
+    }
+    if (pageInfo.priceTextcontent) {
+      pageInfo.priceTextcontent = _t.killWhitespaceExcess(pageInfo.priceTextcontent)
+    }
+
     if (!pageInfo) {
       return {
         unavailable: `Geen resultaat van pageInfo`,

@@ -2,7 +2,7 @@
 import { workerData } from "worker_threads";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
-import _t from "../mods/tools.js"
+import * as _t from "../mods/tools.js";
 
 // SCRAPER CONFIG
 
@@ -26,9 +26,9 @@ nuldertienScraper.makeBaseEventList = async function () {
   
   const {stopFunctie, page} =  await this.makeBaseEventListStart()
 
-  const rawEvents = await page.evaluate(() => {
+  const rawEvents = await page.evaluate(({workerData}) => {
     return Array.from(document.querySelectorAll(".event-list-item"))
-      .filter((eventEl, index) => index % this.workerData.workerCount === this.workerData.index)
+      .filter((eventEl, index) => index % workerData.workerCount === workerData.index)
       .map((eventEl) => {
         const res = {
           pageInfoID: `<a href='${document.location.href}'>${document.title}</a>`,
@@ -50,15 +50,15 @@ nuldertienScraper.makeBaseEventList = async function () {
           res.unavailable = "geen datum gevonden";
         }
         res.location = "013";
-        res.shortText = _t.killWhitespaceExcess(eventEl
+        res.shortText = eventEl
           .querySelector(".event-list-item__subtitle")
-          ?.textContent.trim() ?? '');
+          ?.textContent.trim() ?? '';
         if (res.unavailable) {
           res.unavailable = `${res.unavailable}\n${res.pageInfoID}`;
         }
         return res;
       });
-  }, null);
+  }, {workerData});
 
   return await this.makeBaseEventListEnd({
     stopFunctie, page, rawEvents}
@@ -77,11 +77,11 @@ nuldertienScraper.getPageInfo = async function ({ page }) {
       errorsVoorErrorHandler: [],
     };
     res.image = document.querySelector(".event-spotlight__image")?.src;
-    res.priceTextcontent = _t.killWhitespaceExcess(
+    res.priceTextcontent = 
       document.querySelector(".practical-information tr:first-child dd")
-        ?.textContent ?? '');
-    res.priceContextText =_t.killWhitespaceExcess(
-      document.querySelector(".practical-information")?.textContent ?? '');
+        ?.textContent ?? '';
+    res.priceContextText =
+      document.querySelector(".practical-information")?.textContent ?? '';
 
     const doorOpenEl = document.querySelector(
       ".timetable__times dl:first-child time"
@@ -99,15 +99,15 @@ nuldertienScraper.getPageInfo = async function ({ page }) {
         remarks: "deur open tijd fout",
       });
     }
-    res.longTextHTML = _t.killWhitespaceExcess(
+    res.longTextHTML = 
       document.querySelector(
         ".event-detail header + div"
-      )?.innerHTML ?? '');
+      )?.innerHTML ?? '';
     if (res.unavailable) {
       res.unavailable = `${res.unavailable}\n${res.pageInfoID}`;
     }
     return res;
-  }, null);
+  }, workerData);
 
   return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
 

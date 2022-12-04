@@ -2,6 +2,7 @@ import { workerData } from "worker_threads";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import axios from "axios";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
+import * as _t from "../mods/tools.js";
 
 // SCRAPER CONFIG
 
@@ -101,7 +102,7 @@ boerderijScraper.getPageInfo = async function ({ event }) {
     if (youtubeVideoIDMatch && youtubeVideoIDMatch.length) {
       youtubeIframe = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${youtubeVideoIDMatch[0]}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
     }
-    pageInfo.longTextHTML =_t.killWhitespaceExcess(`${ajaxRes.description}<br>${youtubeIframe}`);
+    pageInfo.longTextHTML =`${ajaxRes.description}<br>${youtubeIframe}`;
   } catch (error) {
     pageInfo.errorsVoorErrorHandler.push({
       error,

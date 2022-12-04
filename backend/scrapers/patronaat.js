@@ -1,7 +1,6 @@
 import { workerData } from "worker_threads";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
-import { patronaatMonths } from "../mods/months.js";
-import _t from "../mods/tools.js";
+import * as _t from "../mods/tools.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 // SCRAPER CONFIG
 
@@ -31,9 +30,9 @@ patronaatScraper.makeBaseEventList = async function () {
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
-  const rawEvents = await page.evaluate(() => {
+  const rawEvents = await page.evaluate(({workerData}) => {
     return Array.from(document.querySelectorAll(".overview__list-item--event"))
-      .filter((eventEl, index) =>index % this.workerData.workerCount === this.workerData.index)
+      .filter((eventEl, index) =>index % workerData.workerCount === workerData.index)
       .map((eventEl) => {
         const res = {};
         res.image =
@@ -41,12 +40,12 @@ patronaatScraper.makeBaseEventList = async function () {
         res.venueEventUrl = eventEl.querySelector("a[href]")?.href ?? null;
         res.title = eventEl.querySelector(".event__name")?.textContent.trim();
         res.location = "patronaat";
-        res.shortText = _t.killWhitespaceExcess(eventEl
+        res.shortText = eventEl
           .querySelector(".event__subtitle")
-          ?.textContent.trim() ?? '');
+          ?.textContent.trim() ?? '';
         return res;
       });
-  }, null);
+  }, {workerData});
 
   return await this.makeBaseEventListEnd({
     stopFunctie, page, rawEvents}
@@ -59,7 +58,7 @@ patronaatScraper.getPageInfo = async function ({ page }) {
  
   const {stopFunctie} =  await this.getPageInfoStart()
 
-  const pageInfo = await page.evaluate((months) => {
+  const pageInfo = await page.evaluate(({months}) => {
     const res = {
       unavailable: "",
       pageInfoID: `<a href='${document.location.href}'>${document.title}</a>`,
@@ -129,12 +128,12 @@ patronaatScraper.getPageInfo = async function ({ page }) {
       res.unavailable = "Geen starttijd gevonden.";
     }
 
-    res.longTextHTML = _t.killWhitespaceExcess(document.querySelector(".event__content")?.innerHTML);
+    res.longTextHTML = document.querySelector(".event__content")?.innerHTML;
     if (res.unavailable !== "") {
       res.unavailable = `${res.unavailable}\n${res.pageInfoID}`;
     }
     return res;
-  }, patronaatMonths);
+  }, {months: this.months});
 
   return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
   

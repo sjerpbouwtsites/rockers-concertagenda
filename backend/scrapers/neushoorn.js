@@ -56,7 +56,7 @@ neushoornScraper.makeBaseEventList = async function () {
   const rawEvents = await page.evaluate(() => {
     return Array.from(document.querySelectorAll(".productions__item")).map(
       (itemEl) => {
-        const textContent = _t.killWhitespaceExcess(itemEl.textContent.toLowerCase());
+        const textContent = itemEl.textContent.toLowerCase();
         const isRockInText =
           textContent.includes("punk") ||
           textContent.includes("rock") ||
@@ -143,7 +143,6 @@ neushoornScraper.getPageInfo = async function ({ page }) {
         const summaryEl = document.querySelector(".content .summary");
         const longEl = summaryEl.parentNode;
         longEl.removeChild(summaryEl);
-        res.longTextHTML = _t.killWhitespaceExcess(longEl.innerHTML);
       } catch (error) {
         res.errorsVoorErrorHandler.push({
           error,

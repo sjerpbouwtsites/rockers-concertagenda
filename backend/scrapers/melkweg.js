@@ -38,7 +38,7 @@ melkwegScraper.makeBaseEventList = async function () {
   await _t.autoScroll(page);
   await _t.autoScroll(page);
 
-  const rawEvents = await page.evaluate(() => {
+  const rawEvents = await page.evaluate(({workerData}) => {
     return Array.from(document.querySelectorAll("[data-element='agenda'] li"))
       .filter((eventEl) => {
         const tags =
@@ -47,19 +47,19 @@ melkwegScraper.makeBaseEventList = async function () {
             ?.textContent.toLowerCase() ?? "";
         return tags.includes("metal") || tags.includes("punk");
       })
-      .filter((eventEl, index) => index % this.workerData.workerCount === this.workerData.index)
+      .filter((eventEl, index) => index % workerData.workerCount === workerData.index)
       .map((eventEl) => {
         const res = {};
         const anchor = eventEl.querySelector("a");
-        res.shortText = _t.killWhitespaceExcess(
-          eventEl.querySelector('[class*="subtitle"]')?.textContent ?? "");
+        res.shortText = 
+          eventEl.querySelector('[class*="subtitle"]')?.textContent ?? "";
         res.title =
           eventEl.querySelector('h3[class*="title"]')?.textContent ?? "";
         res.venueEventUrl = anchor.href;
         res.location = "melkweg";
         return res;
       });
-  }, null);
+  }, {workerData});
 
   return await this.makeBaseEventListEnd({
     stopFunctie, page, rawEvents}
@@ -93,11 +93,11 @@ melkwegScraper.getPageInfo = async function ({ page }) {
         }`,
       });
     }
-    res.priceTextcontent = _t.killWhitespaceExcess(
+    res.priceTextcontent = 
       document.querySelector('[class*="styles_ticket-prices"]')?.textContent ??
-      '');
-    res.longTextHTML = _t.killWhitespaceExcess(
-      document.querySelector('[class*="styles_event-info"]')?.innerHTML ?? '');
+      '';
+    res.longTextHTML = 
+      document.querySelector('[class*="styles_event-info"]')?.innerHTML ?? '';
     res.image =
       document.querySelector('[class*="styles_event-header__figure"] img')
         ?.src ?? null;

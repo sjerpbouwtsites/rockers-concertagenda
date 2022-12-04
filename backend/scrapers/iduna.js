@@ -1,4 +1,3 @@
-import { idunaMonths } from "../mods/months.js"; // @TODO fatsoenlijke months mechanisme invoeren.
 import { workerData } from "worker_threads";
 import * as _t from "../mods/tools.js";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
@@ -176,14 +175,14 @@ idunaScraper.getPageInfo = async function ({ page }) {
         res.image = imageMatch[1];
       }
 
-      res.longTextHTML = _t.killWhitespaceExcess(
-        document.querySelector("#postcontenttext")?.innerHTML ?? '');
+      res.longTextHTML =
+        document.querySelector("#postcontenttext")?.innerHTML ?? '';
 
-      res.priceTextcontent = _t.killWhitespaceExcess(
-        document.querySelector("#sideinfo")?.textContent.trim() ?? '');
+      res.priceTextcontent = 
+        document.querySelector("#sideinfo")?.textContent.trim() ?? '';
       return res;
     },
-    { months: idunaMonths }
+    { months: this.months }
   );
 
   return await this.getPageInfoEnd({pageInfo, stopFunctie, page})

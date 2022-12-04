@@ -1,4 +1,3 @@
-import { bibelotMonths } from "../mods/months.js";
 import { workerData } from "worker_threads";
 import * as _t from "../mods/tools.js";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
@@ -46,7 +45,7 @@ bibelotScraper.makeBaseEventList = async function () {
       const shortTextSplit = eventEl.contains(shortTextEl)
         ? shortTextEl.textContent.split(res.title)
         : [null, null];
-      res.shortText = _t.killWhitespaceExcess(shortTextSplit[1]);
+      res.shortText = shortTextSplit[1];
       res.venueEventUrl = eventEl.querySelector(".link")?.href ?? null;
       res.location = "bibelot";
 
@@ -103,10 +102,10 @@ bibelotScraper.getPageInfo = async function ({ page }) {
 
       res.eventMetaColomText;
       try {
-        res.eventMetaColomText = _t.killWhitespaceExcess(
+        res.eventMetaColomText = 
           document
             .querySelector(".meta-colom")
-            ?.textContent.toLowerCase())
+            ?.textContent.toLowerCase()
 
         res.startTimeMatch = res.eventMetaColomText.match(
           /(aanvang\sshow|aanvang|start\sshow|show)\W?\s+(\d\d:\d\d)/
@@ -175,15 +174,15 @@ bibelotScraper.getPageInfo = async function ({ page }) {
       });
 
       if (verkoopElAr && Array.isArray(verkoopElAr) && verkoopElAr.length) {
-        res.priceTextcontent = _t.killWhitespaceExcess(verkoopElAr[0].textContent);
+        res.priceTextcontent = verkoopElAr[0].textContent;
       }
 
       res.longTextHTML =
-      _t.killWhitespaceExcess(
+      
         document
           .querySelector(".main-column .content")
           ?.innerHTML ?? ''
-      );
+      ;
       const imageMatch = document
         .querySelector(".achtergrond-afbeelding")
         ?.style.backgroundImage.match(/https.*.jpg|https.*.jpg/);
@@ -195,7 +194,7 @@ bibelotScraper.getPageInfo = async function ({ page }) {
       }
       return res;
     },
-    { months: bibelotMonths }
+    { months: this.months }
   );
 
   return await this.getPageInfoEnd({pageInfo, stopFunctie, page})

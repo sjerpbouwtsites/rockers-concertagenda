@@ -1,6 +1,5 @@
 import { workerData } from "worker_threads";
 import * as _t from "../mods/tools.js";
-import { voltMonths } from "../mods/months.js";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 
@@ -97,7 +96,7 @@ voltScraper.getPageInfo = async function ({ page, url}) {
       const contentBox =
         document.querySelector("#main .aside + div > .content-block") ?? null;
       if (contentBox) {
-        res.longTextHTML = _t.killWhitespaceExcess(contentBox.innerHTML);
+        res.longTextHTML = contentBox.innerHTML;
       }
       const unstyledListsInAside = document.querySelectorAll(
         "#main .aside .list-unstyled"
@@ -160,13 +159,13 @@ voltScraper.getPageInfo = async function ({ page, url}) {
           }`;
         }
       }
-      res.priceTextcontent =_t.killWhitespaceExcess(
+      res.priceTextcontent =
         document.querySelector("#main .aside .list-unstyled.prices")
           ?.textContent ?? ''
-      );
+      ;
       return res;
     },
-    { months: voltMonths, url }
+    { months: this.months, url }
   );
 
   return await this.getPageInfoEnd({pageInfo, stopFunctie, page})

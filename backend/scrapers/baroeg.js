@@ -1,7 +1,6 @@
 import axios from "axios";
 import { workerData } from "worker_threads";
 import * as _t from "../mods/tools.js";
-import { baroegMonths } from "../mods/months.js";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 
@@ -59,7 +58,7 @@ baroegScraper.makeBaseEventList = async function () {
     res.title = event.title.rendered;
     res.shortText = event.excerpt.rendered;
     res.location = "baroeg";
-    res.longText = _t.killWhitespaceExcess(event?.content?.rendered ?? '');
+    res.longText = event?.content?.rendered ?? '';
     res.image =
       event?._embedded?.[
         "wp:featuredmedia"
@@ -76,12 +75,12 @@ baroegScraper.makeBaseEventList = async function () {
 
 // GET PAGE INFO
 
-baroegScraper.getPageInfo = async function ({ page, url }) {
+baroegScraper.getPageInfo = async function ({ page }) {
   
   const {stopFunctie} =  await this.getPageInfoStart()
 
   const pageInfo = await page.evaluate(
-    ({ baroegMonths }) => {
+    ({ months }) => {
       const res = {
         unavailable: null,
         pageInfoID: `<a href='${document.location.href}'>💻</a>`,
@@ -113,7 +112,7 @@ baroegScraper.getPageInfo = async function ({ page, url }) {
         res.unavailable = `${res.unavailable ?? ""} incorrect startDate.`;
       } else {
         let [, monthName, day, year] = startDateMatch;
-        let month = baroegMonths[monthName];
+        let month = months[monthName];
         day = day.padStart(2, "0");
 
         startTime = startTime.padStart(5, "0");
@@ -122,17 +121,17 @@ baroegScraper.getPageInfo = async function ({ page, url }) {
         ).toISOString();
       }
 
-      res.priceElText =_t.killWhitespaceExcess(
+      res.priceElText =
         document.querySelector(".wp_theatre_event_tickets_url")?.textContent ??
-        '');
-      res.contextText = _t.killWhitespaceExcess(document.getElementById("content")?.textContent ?? '');
+        '';
+      res.contextText = document.getElementById("content")?.textContent ?? '';
 
       if (res.unavailable) {
         res.unavailable = `${res.unavailable} ${res.pageInfoID}`;
       }
       return res;
     },
-    { baroegMonths }
+    { months: this.months }
   );
 
   return await this.getPageInfoEnd({pageInfo, stopFunctie, page})

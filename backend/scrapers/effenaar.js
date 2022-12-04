@@ -1,5 +1,4 @@
 import { workerData } from "worker_threads";
-import { effenaarMonths } from "../mods/months.js";
 import * as _t from "../mods/tools.js";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
@@ -33,21 +32,21 @@ effenaarScraper.makeBaseEventList = async function () {
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
   const rawEvents = await page.evaluate(
-    () => {
+    ({workerData}) => {
       return Array.from(
         document.querySelectorAll(".search-and-filter .agenda-card")
       )
-        .filter((eventEl, index) => index % this.workerData.workerCount === this.workerData.index)
+        .filter((eventEl, index) => index % workerData.workerCount === workerData.index)
         .map((eventEl) => {
           const res = {};
           res.title = eventEl.querySelector(".card-title")?.textContent.trim();
-          res.shortText = _t.killWhitespaceExcess( eventEl.querySelector(".card-subtitle")?.textContent ?? '');
+          res.shortText = eventEl.querySelector(".card-subtitle")?.textContent ?? '';
           res.venueEventUrl = eventEl?.href;
           res.location = "effenaar";
           return res;
         });
     },
-    null
+    {workerData}
   );
 
   return await this.makeBaseEventListEnd({
@@ -64,15 +63,15 @@ effenaarScraper.getPageInfo = async function ({ page }) {
 
   await page.waitForSelector(".event-bar-inner-row");
 
-  const pageInfo = await page.evaluate((effenaarMonths) => {
+  const pageInfo = await page.evaluate(({months}) => {
     const res = {
       unavailable: "",
       pageInfoID: `<a href='${document.location.href}'>${document.title}</a>`,
       errorsVoorErrorHandler: [],
     };
     res.image = document.querySelector(".header-image img")?.src ?? null;
-    res.priceTextcontent = _t.killWhitespaceExcess(
-      document.querySelector(".tickets-btn")?.textContent ?? '');
+    res.priceTextcontent = 
+      document.querySelector(".tickets-btn")?.textContent ?? '';
 
     try {
       const dateText =
@@ -84,7 +83,7 @@ effenaarScraper.getPageInfo = async function ({ page }) {
         /(\d+)\s(\w+)\s(\d\d\d\d)/
       );
       const fixedDay = dayNumber.padStart(2, "0");
-      const monthNumber = effenaarMonths[monthName];
+      const monthNumber = months[monthName];
       res.startDate = `${year}-${monthNumber}-${fixedDay}`;
     } catch (error) {
       res.errorsVoorErrorHandler.push({
@@ -144,13 +143,13 @@ effenaarScraper.getPageInfo = async function ({ page }) {
       res.unavailable = "Geen tijd";
     }
 
-    res.longTextHTML = _t.killWhitespaceExcess(
-      document.querySelector(".header ~ .blocks")?.innerHTML ?? '');
+    res.longTextHTML = 
+      document.querySelector(".header ~ .blocks")?.innerHTML ?? '';
     if (res.unavailable !== "") {
       res.unavailable = `${res.unavailable}\n${res.pageInfoID}`;
     }
     return res;
-  }, effenaarMonths);
+  },{ months: this.months});
 
   return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
   

@@ -1,4 +1,3 @@
-import { metropoolMonths } from "../mods/months.js";
 import { workerData } from "worker_threads";
 import * as _t from "../mods/tools.js";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
@@ -38,7 +37,7 @@ metropoolScraper.makeBaseEventList = async function () {
   await _t.autoScroll(page);
   await _t.autoScroll(page);
 
-  const rawEvents = await page.evaluate(() => {
+  const rawEvents = await page.evaluate(({workerData}) => {
     return Array.from(document.querySelectorAll(".card--event"))
       .filter((rawEvent) => {
         const testText = rawEvent.dataset?.genres || rawEvent.textContent;
@@ -51,17 +50,17 @@ metropoolScraper.makeBaseEventList = async function () {
           testText.includes("ska")
         );
       })
-      .filter((rawEvent, index) => index % this.workerData.workerCount === this.workerData.index)
+      .filter((rawEvent, index) => index % workerData.workerCount === workerData.index)
       .map((rawEvent) => {
         return {
           venueEventUrl: rawEvent.href,
           title: rawEvent.querySelector(".card__title")?.textContent ?? null,
-          shortText: _t.killWhitespaceExcess(
+          shortText: 
             rawEvent.querySelector(".card__title card__title--sub")
-              ?.textContent ?? ''),
+              ?.textContent ?? '',
         };
       });
-  }, null);
+  }, {workerData});
 
   return await this.makeBaseEventListEnd({
     stopFunctie, page, rawEvents}
@@ -74,22 +73,22 @@ metropoolScraper.getPageInfo = async function ({ page }) {
 
   const {stopFunctie} =  await this.getPageInfoStart()
   
-  const pageInfo = await page.evaluate((months) => {
+  const pageInfo = await page.evaluate(({months}) => {
     const res = {
       unavailable: "",
       pageInfoID: `<a href='${document.location.href}'>${document.title}</a>`,
       errorsVoorErrorHandler: [],
     };
 
-    res.priceTextcontent = _t.killWhitespaceExcess(
-      document.querySelector(".doorPrice")?.textContent.trim() ?? '');
+    res.priceTextcontent = 
+      document.querySelector(".doorPrice")?.textContent.trim() ?? '';
 
-    res.longTextHTML = _t.killWhitespaceExcess(
+    res.longTextHTML = 
       Array.from(document.querySelectorAll(".event-title-wrap ~ div"))
         .map((divEl) => {
           return divEl.outerHTML;
         })
-        .join("") ?? '');
+        .join("") ?? '';
 
     const startDateRauwMatch = document
       .querySelector(".event-title-wrap")
@@ -143,7 +142,7 @@ metropoolScraper.getPageInfo = async function ({ page }) {
     }
 
     return res;
-  }, metropoolMonths);
+  }, {months: this.months});
 
   return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
   
