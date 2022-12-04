@@ -31,7 +31,7 @@ doornroosjeScraper.listenToMasterThread();
 
 doornroosjeScraper.makeBaseEventList = async function () {
   
-  const {stopFunctie, page} = this.makeBaseEventListStart()
+  const {stopFunctie, page} = await this.makeBaseEventListStart()
 
   await page.waitForSelector(".c-program__title");
   await _t.waitFor(50);

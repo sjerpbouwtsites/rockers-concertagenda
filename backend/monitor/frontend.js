@@ -114,14 +114,15 @@ function monitorInternalErrors() {
 function eventToProcesses(eventMsg, fields) {
   if (eventMsg.subtype === "closed") {
     initiateClosingClient();
-  } else if (eventMsg.subtype === "workers-status" && eventMsg?.messageData?.content?.status === "done") {
+    // @TODO de updates naar app overview moeten helemaal via workers-status, niet via updates.
+    // 
+  } else if (eventMsg.subtype === "workers-status" && eventMsg?.messageData?.content?.status === "done") { 
     fields.appOverviewField.updateTable({
       [`amountOfEvents-${eventMsg.messageData.content.workerData.name}`]:
           eventMsg.messageData.amountOfEvents,
     });
   } else {
-    console.error("onbekende subtype");
-    console.log(eventMsg.subtype);
+    console.log(`nog niet geprogrammeerde optie`);
   }
 }
 

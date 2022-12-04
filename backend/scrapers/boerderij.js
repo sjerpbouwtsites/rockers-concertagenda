@@ -11,7 +11,7 @@ const boerderijScraper = new AbstractScraper(makeScraperConfig({
   workerData: Object.assign({}, workerData),
   puppeteerConfig: {
     mainPage: {
-      timeout: 15000,
+      timeout: 30000,
     },
     singlepage: {
       timeout: 20000
@@ -32,7 +32,7 @@ boerderijScraper.listenToMasterThread();
 
 boerderijScraper.makeBaseEventList = async function () {
 
-  const {stopFunctie} = this.makeBaseEventListStart()
+  const {stopFunctie} = await this.makeBaseEventListStart()
 
   const rawEvents = await axios
     .get(
@@ -60,14 +60,12 @@ boerderijScraper.makeBaseEventList = async function () {
 
 // GET PAGE INFO
 
-boerderijScraper.getPageInfo = async function ({ page, url, event }) {
+boerderijScraper.getPageInfo = async function ({ url, event }) {
   const stopFunctie = setTimeout(() => {
     throw new Error(
       `getPageInfo is de max tijd voor zn functie ${this.maxExecutionTime} voorbij `
     );
   }, this.maxExecutionTime);
-
-  !page.isClosed() && page.close();
 
   const [realEventTitle, realEventId] = event.title.split("&id=");
   event.title = realEventTitle;

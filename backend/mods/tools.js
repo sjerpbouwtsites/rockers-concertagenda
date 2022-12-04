@@ -28,13 +28,13 @@ export function handleError(error, workerData, remarks = null) {
   if (isMainThread) {
     passMessageToMonitor(updateErrorMsg, workerData.name);
     passMessageToMonitor(clientsLogMsg, workerData.name);
-  } else if (workerData?.scraper) {
-    parentPort.postMessage(updateErrorMsg);
-    parentPort.postMessage(clientsLogMsg);
-  } else {
+  } else if (!(workerData?.scraper ?? true)) {
     console.log(`ODD ERROR HANDLING. neither on main thread nor in scraper.`);
     console.log(error, workerData, remarks);
     console.log("");
+  } else {
+    parentPort.postMessage(updateErrorMsg);
+    parentPort.postMessage(clientsLogMsg);
   }
   const time = new Date();
   const curErrorLog = fs.readFileSync(fsDirections.errorLog) || "";

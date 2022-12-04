@@ -30,7 +30,7 @@ kavkaScraper.listenToMasterThread();
 
 kavkaScraper.makeBaseEventList = async function () {
 
-  const {stopFunctie, page} = this.makeBaseEventListStart()
+  const {stopFunctie, page} = await this.makeBaseEventListStart()
 
   let rawEvents = await page.evaluate(
     ({ months }) => {

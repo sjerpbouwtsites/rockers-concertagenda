@@ -8,11 +8,11 @@ import makeScraperConfig from "./gedeeld/scraper-config.js";
 // SCRAPER CONFIG
 
 const baroegScraper = new AbstractScraper(makeScraperConfig({
-  maxExecutionTime: 45000,
+  maxExecutionTime: 60000,
   workerData: Object.assign({}, workerData),
   puppeteerConfig: {
     mainPage: {
-      timeout: 10000,
+      timeout: 45000,
     },
     singlepage: {
       timeout: 15000
@@ -33,7 +33,7 @@ baroegScraper.listenToMasterThread();
 
 baroegScraper.makeBaseEventList = async function () {
 
-  const {stopFunctie} = this.makeBaseEventListStart()
+  const {stopFunctie} = await this.makeBaseEventListStart()
 
   const baroegLijst = await axios
     .get(
@@ -79,7 +79,7 @@ baroegScraper.makeBaseEventList = async function () {
 baroegScraper.getPageInfo = async function ({ page, url }) {
   const stopFunctie = setTimeout(() => {
     throw new Error(
-      `makeBaseEventList is de max tijd voor zn functie ${this.maxExecutionTime} voorbij `
+      `getPageInfo is de max tijd voor zn functie ${this.maxExecutionTime} voorbij `
     );
   }, this.maxExecutionTime);
 

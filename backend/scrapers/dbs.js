@@ -32,7 +32,7 @@ dbsScraper.listenToMasterThread();
 
 dbsScraper.makeBaseEventList = async function () {
 
-  const {stopFunctie, page} = this.makeBaseEventListStart()
+  const {stopFunctie, page} = await this.makeBaseEventListStart()
 
   await page.waitForSelector('.fusion-events-post')
   await _t.waitFor(100)

@@ -9,10 +9,10 @@ const patronaatScraper = new AbstractScraper(makeScraperConfig({
   workerData: Object.assign({}, workerData),
   puppeteerConfig: {
     mainPage: {
-      timeout: 35000,
+      timeout: 20000,
     },
     singlePage: {
-      timeout: 30000,
+      timeout: 15000,
     },
     app: {
       mainPage: {
@@ -29,7 +29,7 @@ patronaatScraper.listenToMasterThread();
 
 patronaatScraper.makeBaseEventList = async function () {
 
-  const {stopFunctie, page} = this.makeBaseEventListStart()
+  const {stopFunctie, page} = await this.makeBaseEventListStart()
 
   const rawEvents = await page.evaluate((workerIndex) => {
     return Array.from(document.querySelectorAll(".overview__list-item--event"))

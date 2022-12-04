@@ -31,7 +31,7 @@ depulScraper.listenToMasterThread();
 
 depulScraper.makeBaseEventList = async function () {
 
-  const {stopFunctie, page} = this.makeBaseEventListStart()
+  const {stopFunctie, page} = await this.makeBaseEventListStart()
 
   await page.evaluate(() => {
     // hack op site

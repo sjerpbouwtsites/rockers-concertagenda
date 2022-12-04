@@ -24,11 +24,12 @@ export default class AbstractScraper {
 
   install(obj) {
     this.qwm = new QuickWorkerMessage(workerData);
-    this.baseEventTimeout = obj.baseEventTimeout ?? 15000;
-    this.singlePageTimeout = obj.singlePageTimeout ?? 5000;
     this.maxExecutionTime = obj.maxExecutionTime ?? 30000;
     this.puppeteerConfig = obj.puppeteerConfig ?? {};
-    this.months = obj.months ?? null;
+    this.months = obj.months ?? null;// @TODO NAAR ECHTE MAANDENSYSTEEM GAAN
+    parentPort.postMessage(this.qwm.toConsole({
+      [`${workerData.name}-config`]: obj
+    }))
   }
 
   /**
@@ -75,17 +76,25 @@ export default class AbstractScraper {
    * @returns {stopFunctie timeout, page puppeteer.Page}
    */
   async makeBaseEventListStart(){
+
+
+    // @TODO 3 stopfuncties maken: 1 base events; 1 single; 1 totaal.
     const stopFunctie = setTimeout(() => {
-      throw new Error(`makeBaseEvent overtijd. Max: ${this.puppeteerConfig.mainPage.timeout}`);
+      _t.handleError(
+        new Error(`makeBaseEvent overtijd. Max: ${this.puppeteerConfig.mainPage.timeout}`), 
+        this.workerData
+      );
     }, this.puppeteerConfig.mainPage.timeout);
+    
   
-    if (this.app.mainPage.useCustomScraper) {
+    if (this.puppeteerConfig.app.mainPage.useCustomScraper) {
+      parentPort.postMessage(this.qwm.messageRoll('customScraper'))
       return {
         stopFunctie,
         page: null
       }
     }
-    if (!this.app.mainPage.url) {
+    if (!this.puppeteerConfig.app.mainPage.url) {
       throw new Error(`geen app.mainPage.url ingesteld`);
     }
     
@@ -137,13 +146,15 @@ export default class AbstractScraper {
    * @return {boolean}
    * @memberof AbstractScraper
    */
-  basicMusicEventsFilter(musicEvent){
-    
+  basicMusicEventsFilter = (musicEvent) => {
+
     const meetsRequiredProperties = this.puppeteerConfig.app.mainPage.requiredProperties.reduce((prev, next)=>{
       return prev && musicEvent[next]
     }, true)        
     if (!meetsRequiredProperties) {
-      parentPort.postMessage(this.qwm.messageRoll(`<a href='${musicEvent.venueEventUrl}'>${musicEvent.title}</a> ongeldig.`));
+      parentPort.postMessage(this.qwm.messageRoll(`
+      <a href='${musicEvent.venueEventUrl}'>${musicEvent.title}</a> ongeldig.
+    `));
     }
    
     const t = musicEvent?.title ?? "";
@@ -172,7 +183,7 @@ export default class AbstractScraper {
       parentPort.postMessage(this.qwm.messageRoll(`<a href='${musicEvent.venueEventUrl}'>${musicEvent.title}</a> is ${forbiddenTermUsed}/`));
     }
 
-    return hasForbiddenTerm && meetsRequiredProperties;
+    return !hasForbiddenTerm && meetsRequiredProperties;
      
   }
 

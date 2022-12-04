@@ -30,7 +30,7 @@ idunaScraper.listenToMasterThread();
 
 idunaScraper.makeBaseEventList = async function () {
 
-  const {stopFunctie, page} = this.makeBaseEventListStart()
+  const {stopFunctie, page} = await this.makeBaseEventListStart()
 
   let metalEvents = await page
     .evaluate(() => {
@@ -74,19 +74,20 @@ idunaScraper.makeBaseEventList = async function () {
       });
     })
     .then((punkEvents) => punkEvents);
-
+    
   const metalEventsTitles = metalEvents.map((event) => {
     return event.title;
   });
-
+    
   punkEvents.forEach((punkEvent) => {
     if (!metalEventsTitles.includes(punkEvent)) {
       metalEvents.push(punkEvent);
     }
   });
-
+    
+  this.dirtyLog(metalEvents)
   return await this.makeBaseEventListEnd({
-    stopFunctie, page, metalEvents}
+    stopFunctie, page, rawEvents: metalEvents}
   );
 };
 

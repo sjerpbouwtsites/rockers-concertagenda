@@ -26,7 +26,7 @@ tivoliVredenburgScraper.listenToMasterThread();
 
 tivoliVredenburgScraper.makeBaseEventList = async function () {
   
-  const {stopFunctie, page} = this.makeBaseEventListStart()
+  const {stopFunctie, page} = await this.makeBaseEventListStart()
 
   const rawEvents = await page.evaluate((workerIndex) => {
     return Array.from(document.querySelectorAll(".agenda-list-item"))

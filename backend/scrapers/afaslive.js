@@ -12,7 +12,7 @@ const afasliveScraper = new AbstractScraper(makeScraperConfig({
   workerData: Object.assign({}, workerData),
   puppeteerConfig: {
     mainPage: {
-      timeout: 15000,
+      timeout: 60000,
     },
     singlepage: {
       timeout: 20000
@@ -33,7 +33,7 @@ afasliveScraper.listenToMasterThread();
 
 afasliveScraper.makeBaseEventList = async function () {
   
-  const {stopFunctie, page} = this.makeBaseEventListStart()
+  const {stopFunctie, page} = await this.makeBaseEventListStart()
 
   await _t.autoScroll(page);
   await _t.waitFor(750);

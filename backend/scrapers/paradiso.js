@@ -33,7 +33,7 @@ paradisoScraper.listenToMasterThread();
 // MAKE BASE EVENTS
 paradisoScraper.makeBaseEventList = async function () {
 
-  const {stopFunctie, page} = this.makeBaseEventListStart()
+  const {stopFunctie, page} = await this.makeBaseEventListStart()
   
   try {
     await page.waitForSelector('[data-category="60102"]', {

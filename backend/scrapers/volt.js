@@ -28,7 +28,7 @@ voltScraper.listenToMasterThread();
 
 voltScraper.makeBaseEventList = async function () {
   
-  const {stopFunctie, page} = this.makeBaseEventListStart()
+  const {stopFunctie, page} = await this.makeBaseEventListStart()
 
   try {
     await page.waitForSelector(".row.event", {

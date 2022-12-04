@@ -27,7 +27,7 @@ neushoornScraper.listenToMasterThread();
 
 neushoornScraper.makeBaseEventList = async function () {
 
-  const {stopFunctie, page} = this.makeBaseEventListStart()
+  const {stopFunctie, page} = await this.makeBaseEventListStart()
 
   try {
     await page.waitForSelector('[href*="Heavy"]', {

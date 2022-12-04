@@ -31,7 +31,7 @@ duyckerScraper.listenToMasterThread();
 
 duyckerScraper.makeBaseEventList = async function () {
 
-  const {stopFunctie, page} = this.makeBaseEventListStart()
+  const {stopFunctie, page} = await this.makeBaseEventListStart()
 
   await page.waitForSelector(".duycker.agenda .item-container", {
     timeout: 2000,

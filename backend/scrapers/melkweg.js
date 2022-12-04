@@ -31,7 +31,7 @@ melkwegScraper.listenToMasterThread();
 
 melkwegScraper.makeBaseEventList = async function () {
 
-  const {stopFunctie, page} = this.makeBaseEventListStart()
+  const {stopFunctie, page} = await this.makeBaseEventListStart()
 
   await _t.autoScroll(page);
   await _t.autoScroll(page);
