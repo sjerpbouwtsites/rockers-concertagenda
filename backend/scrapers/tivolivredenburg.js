@@ -30,7 +30,7 @@ tivoliVredenburgScraper.makeBaseEventList = async function () {
 
   const rawEvents = await page.evaluate((workerIndex) => {
     return Array.from(document.querySelectorAll(".agenda-list-item"))
-      .filter((index) => {
+      .filter((eventEl,index) => { // eslint-disable-line
         return index % 4 === workerIndex;
       })
       .map((eventEl) => {
@@ -54,6 +54,8 @@ tivoliVredenburgScraper.makeBaseEventList = async function () {
         return res;
       });
   }, workerData.index);
+
+  this.dirtyLog(rawEvents)
 
   return await this.makeBaseEventListEnd({
     stopFunctie, page, rawEvents}

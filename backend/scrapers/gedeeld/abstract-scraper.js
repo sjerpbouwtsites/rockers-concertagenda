@@ -457,10 +457,8 @@ export default class AbstractScraper {
   async createSinglePage(url) {
     try {
       const page = await this.browser.newPage();
-      const singlePagePuppeteerConfig = this.puppeteerConfig?.singlePage ?? {
-        timeout: this.singlePageTimeout,
-      };
-      await page.goto(url, singlePagePuppeteerConfig);
+      this.dirtyLog(this.puppeteerConfig?.singlePage)
+      await page.goto(url, this.puppeteerConfig.singlePage);
       return page;
     } catch (error) {
       _t.handleError(

@@ -1,4 +1,4 @@
-import { workerData } from "worker_threads";
+import { parentPort, workerData } from "worker_threads";
 import * as _t from "../mods/tools.js";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import { occiiMonths } from "../mods/months.js";
@@ -13,7 +13,7 @@ const occiiScraper = new AbstractScraper(makeScraperConfig({
     mainPage: {
       timeout: 90000,
     },
-    singlepage: {
+    singlePage: {
       timeout: 45000
     },
     app: {
@@ -24,6 +24,7 @@ const occiiScraper = new AbstractScraper(makeScraperConfig({
     }
   }
 }));
+
 
 occiiScraper.listenToMasterThread();
 

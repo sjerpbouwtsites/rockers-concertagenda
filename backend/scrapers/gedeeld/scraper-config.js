@@ -4,17 +4,14 @@ export default function makeScraperConfig(obj){
 
 export function MakeScraperConfig(obj){
 
-  this.baseEventTimeout = obj.baseEventTimeout ?? 15000;
-  this.singlePageTimeout = obj.singlePageTimeout ?? 5000;
-  this.maxExecutionTime = obj.maxExecutionTime ?? 30000;
   const basePuppeteerConfig = {
     singlePage: {
       waitUntil: 'domcontentloaded',
-      timeout: this.singlePageTimeout || this.baseEventTimeout
+      timeout: 5001
     },
     mainPage: {
       waitUntil: 'domcontentloaded',
-      timeout: this.baseEventTimeout
+      timeout: 15001
     },
     app: { // in deze eigen app
       mainPage: { // make base events
@@ -28,36 +25,29 @@ export function MakeScraperConfig(obj){
       }
     }
   }
-
+  
   if (!Object.prototype.hasOwnProperty.call(obj, 'workerData')){
     throw new Error(`geen workerData scraperConfig`);
   }
 
+  this.maxExecutionTime = obj.maxExecutionTime ?? 30001;
+
   // basis
   this.puppeteerConfig = Object.assign({}, basePuppeteerConfig);
-  this.workerData = Object.assign({}, obj.workerData);
+  this.workerData = obj.workerData;
+  
+  this.puppeteerConfig.singlePage.timeout = obj?.puppeteerConfig?.singlePage?.timeout ?? this.puppeteerConfig.singlePage.timeout;
+  this.puppeteerConfig.singlePage.waitUntil = obj?.puppeteerConfig?.singlePage?.waitUntil ?? this.puppeteerConfig.singlePage.waitUntil;
+  
+  this.puppeteerConfig.mainPage.timeout = obj?.puppeteerConfig?.mainPage?.timeout ?? this.puppeteerConfig.mainPage.timeout;
+  this.puppeteerConfig.mainPage.waitUntil = obj?.puppeteerConfig?.mainPage?.waitUntil ?? this.puppeteerConfig.mainPage.waitUntil;
 
-  // puppeteerConfig.singlePage & puppeteerConfig.mainPage
-  if (!Object.prototype.hasOwnProperty.call(obj, 'puppeteerConfig')){
-    return this;
-  }
-  if (Object.prototype.hasOwnProperty.call(obj.puppeteerConfig, 'singlePage')) {
-    this.puppeteerConfig.singlePage = Object.assign(this.puppeteerConfig.singlePage, obj.puppeteerConfig.singlePage)
-  }
-  if (Object.prototype.hasOwnProperty.call(obj.puppeteerConfig, 'mainPage')) {
-    this.puppeteerConfig.mainPage = Object.assign(this.puppeteerConfig.mainPage, obj.puppeteerConfig.mainPage)
-  }
-
-  // puppeteerConfig.app
-  if (!Object.prototype.hasOwnProperty.call(obj.puppeteerConfig, 'app')){
-    return this;
-  }
-  if (Object.prototype.hasOwnProperty.call(obj.puppeteerConfig.app, 'singlePage')) {
-    this.puppeteerConfig.app.singlePage = Object.assign(this.puppeteerConfig.app.singlePage, obj.puppeteerConfig.app.singlePage)
-  }
-  if (Object.prototype.hasOwnProperty.call(obj.puppeteerConfig.app, 'mainPage')) {
-    this.puppeteerConfig.app.mainPage = Object.assign(this.puppeteerConfig.app.mainPage, obj.puppeteerConfig.app.mainPage)
-  }      
+  this.puppeteerConfig.app.mainPage.url = obj?.puppeteerConfig?.app?.mainPage?.url ?? this.puppeteerConfig.app.mainPage.url
+  this.puppeteerConfig.app.mainPage.useCustomScraper = obj?.puppeteerConfig?.app?.mainPage?.useCustomScraper ?? this.puppeteerConfig.app.mainPage.useCustomScraper
+  this.puppeteerConfig.app.mainPage.requiredProperties = obj?.puppeteerConfig?.app?.mainPage?.requiredProperties ?? this.puppeteerConfig.app.mainPage.requiredProperties
+  
+  this.puppeteerConfig.app.singlePage.useCustomScraper = obj?.puppeteerConfig?.app?.singlePage?.useCustomScraper ?? this.puppeteerConfig.app.singlePage.useCustomScraper
+  this.puppeteerConfig.app.singlePage.requiredProperties = obj?.puppeteerConfig?.app?.singlePage?.requiredProperties ?? this.puppeteerConfig.app.singlePage.requiredProperties  
          
   return this;
   
