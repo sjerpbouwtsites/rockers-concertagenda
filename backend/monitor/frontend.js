@@ -123,6 +123,7 @@ function eventToProcesses(eventMsg, fields) {
     });
   } else {
     console.log(`nog niet geprogrammeerde optie`);
+    console.log(eventMsg)
   }
 }
 

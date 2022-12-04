@@ -53,6 +53,7 @@ const podiumGebruikt = {
   bibelot: voluitNederlands,
   dbs: voluitNederlands,
   depul: kortNederlands,
+  deflux:voluitNederlands,
   doornroosje: voluitNederlands,
   duycker: kortNederlands,
   effenaar: kortNederlands,

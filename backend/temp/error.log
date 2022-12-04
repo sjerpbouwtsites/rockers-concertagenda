@@ -1,4 +1,231 @@
 
+  deflux-0 Error - 9:53:44 PM
+  TypeError: Cannot read properties of undefined (reading 'longTextHTML')
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:473:18)
+    at defluxScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/deflux.js:94:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:378:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:55:5) 
+  Cannot read properties of undefined (reading 'longTextHTML')
+  
+  
+  deflux-0 Error - 9:52:38 PM
+  TypeError: Cannot read properties of undefined (reading 'longTextHTML')
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:473:18)
+    at defluxScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/deflux.js:94:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:378:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:55:5) 
+  Cannot read properties of undefined (reading 'longTextHTML')
+  
+  
+  deflux-0 Error - 9:51:41 PM
+  TypeError: Cannot read properties of undefined (reading 'longTextHTML')
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:473:18)
+    at defluxScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/deflux.js:94:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:378:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:55:5) 
+  Cannot read properties of undefined (reading 'longTextHTML')
+  
+  
+  deflux-0 Error - 9:50:03 PM
+  TypeError: Cannot read properties of undefined (reading 'longTextHTML')
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:473:18)
+    at defluxScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/deflux.js:94:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:378:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:55:5) 
+  Cannot read properties of undefined (reading 'longTextHTML')
+  
+  
+  deflux-0 Error - 9:49:29 PM
+  TypeError: Cannot read properties of undefined (reading 'longTextHTML')
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:473:18)
+    at defluxScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/deflux.js:94:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:378:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:55:5) 
+  Cannot read properties of undefined (reading 'longTextHTML')
+  
+  
+  deflux-0 Error - 9:48:25 PM
+  TypeError: Cannot read properties of undefined (reading 'longTextHTML')
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:473:18)
+    at defluxScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/deflux.js:94:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:378:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:55:5) 
+  Cannot read properties of undefined (reading 'longTextHTML')
+  
+  
+  deflux-0 Error - 9:45:00 PM
+  Error: Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:14:131
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async defluxScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/deflux.js:71:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:378:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:55:5) 
+  Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:14:131
+  
+  
+  deflux-0 Error - 9:43:59 PM
+  Error: Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:14:131
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async defluxScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/deflux.js:71:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:378:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:55:5) 
+  Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:14:131
+  
+  
+  deflux-0 Error - 9:32:37 PM
+  Error: Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:14:112
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async defluxScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/deflux.js:71:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:378:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:55:5) 
+  Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:14:112
+  
+  
+  deflux-0 Error - 9:32:05 PM
+  TypeError: t.toLowerCase is not a function
+    at basicMusicEventsFilter (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:170:38)
+    at Array.filter (<anonymous>)
+    at AbstractScraper.makeBaseEventListEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:144:8)
+    at defluxScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/deflux.js:59:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:47:29) 
+  t.toLowerCase is not a function
+  
+  
+  deflux-0 Error - 9:29:48 PM
+  TypeError: t.toLowerCase is not a function
+    at basicMusicEventsFilter (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:170:38)
+    at Array.filter (<anonymous>)
+    at AbstractScraper.makeBaseEventListEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:144:8)
+    at defluxScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/deflux.js:61:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:47:29) 
+  t.toLowerCase is not a function
+  
+  
+  undefined Error - 9:27:11 PM
+  Error: makeBaseEvent overtijd. Max: 5000
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:81:9)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  makeBaseEvent overtijd. Max: 5000
+  
+  
+  deflux-0 Error - 9:27:06 PM
+  TypeError: Cannot read properties of undefined (reading 'map')
+    at defluxScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/deflux.js:50:30)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:47:29) 
+  Cannot read properties of undefined (reading 'map')
+  
+  
+  deflux-0 Error - 9:27:06 PM
+  TypeError: Cannot read properties of undefined (reading 'data')
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/deflux.js:43:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async defluxScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/deflux.js:40:20)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:47:29) 
+  Cannot read properties of undefined (reading 'data')
+  
+  
+  undefined Error - 9:25:42 PM
+  Error: makeBaseEvent overtijd. Max: 5000
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:81:9)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  makeBaseEvent overtijd. Max: 5000
+  
+  
+  deflux-0 Error - 9:25:37 PM
+  TypeError: Cannot read properties of undefined (reading 'map')
+    at defluxScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/deflux.js:49:30)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:47:29) 
+  Cannot read properties of undefined (reading 'map')
+  
+  
+  deflux-0 Error - 9:25:37 PM
+  TypeError: Cannot read properties of undefined (reading 'data')
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/deflux.js:42:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async defluxScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/deflux.js:39:20)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:47:29) 
+  Cannot read properties of undefined (reading 'data')
+  
+  
+  undefined Error - 9:23:06 PM
+  Error: makeBaseEvent overtijd. Max: 5000
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:81:9)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  makeBaseEvent overtijd. Max: 5000
+  
+  
+  deflux-0 Error - 9:23:02 PM
+  TypeError: Cannot read properties of undefined (reading 'map')
+    at defluxScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/deflux.js:48:30)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:47:29) 
+  Cannot read properties of undefined (reading 'map')
+  
+  
+  deflux-0 Error - 9:23:02 PM
+  TypeError: Cannot read properties of undefined (reading 'data')
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/deflux.js:42:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async defluxScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/deflux.js:39:20)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:47:29) 
+  Cannot read properties of undefined (reading 'data')
+  
+  
+  undefined Error - 9:22:08 PM
+  Error: makeBaseEvent overtijd. Max: 5000
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:81:9)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  makeBaseEvent overtijd. Max: 5000
+  
+  
+  deflux-0 Error - 9:22:03 PM
+  TypeError: Cannot read properties of undefined (reading 'map')
+    at defluxScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/deflux.js:47:30)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:47:29) 
+  Cannot read properties of undefined (reading 'map')
+  
+  
+  deflux-0 Error - 9:22:03 PM
+  TypeError: Cannot read properties of undefined (reading 'data')
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/deflux.js:42:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async defluxScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/deflux.js:39:20)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:47:29) 
+  Cannot read properties of undefined (reading 'data')
+  
+  
   undefined Error - 6:10:49 PM
   Error: makeBaseEvent overtijd. Max: 60000
     at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:81:9)
