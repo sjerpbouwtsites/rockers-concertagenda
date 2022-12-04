@@ -21,7 +21,7 @@ const defluxScraper = new AbstractScraper(makeScraperConfig({
     app: {
       mainPage: {
         useCustomScraper: true,
-        url: `https://www.podiumdeflux.nl/wp-json/wp/v2/ajde_events?event_type=81,87,78&filter[startdate]=${vandaag}`,
+        url: `https://www.podiumdeflux.nl/wp-json/wp/v2/ajde_events?event_type=81,87,78,88,80&filter[startdate]=${vandaag}`,
         requiredProperties: ['venueEventUrl', 'title']
       }
     }
@@ -81,11 +81,27 @@ defluxScraper.getPageInfo = async function ({ page }) {
     }
 
     res.image = eventScheme.querySelector('[itemprop="image"]')?.getAttribute('content') ?? '';
-    res.startDateTime = new Date(eventScheme.querySelector('[itemprop="startDate"]')?.getAttribute('content').replace(/\+\d/,'').split(/[-T]/)).toISOString() ?? '';
+    res.startDate = eventScheme.querySelector('[itemprop="startDate"]')?.getAttribute('content').split('T')[0].split('-').map(dateStuk => dateStuk.padStart(2, '0')).join('-')
+    try {
+      res.startTime = document.querySelector('.evcal_time.evo_tz_time').textContent.match(/\d\d:\d\d/)[0];
+      res.startDateTime = new Date(`${res.startDate}T${res.startTime}:00`).toISOString()
+    } catch (error) {
+      res.errorsVoorErrorHandler.push({error, remarks: 'starttime match'})
+    }
+    
     if (!res.startDateTime) {
       res.unavailable += ' geen start date time'
     }
-    res.endDateTime = new Date(eventScheme.querySelector('[itemprop="endDate"]')?.getAttribute('content').replace(/\+\d/,'').split(/[-T]/)).toISOString() ?? '';
+
+    if (document.querySelector('.evcal_desc3')?.textContent.toLowerCase().includes('deur open') ?? false) {
+      try {
+        res.endTime = document.querySelector('.evcal_desc3').textContent.match(/\d\d:\d\d/)[0];
+        res.endDateTime = new Date(`${res.startDate}T${res.endTime}:00`).toISOString();
+      } catch (error) {
+        //res.errorsVoorErrorHandler.push({error, remarks: 'door open starttime match'})
+      }
+    }
+    
     res.price = eventScheme.querySelector('[itemprop="event-price"]')?.getAttribute('content') ?? '';
     res.longTextHTML = document.querySelector('[itemprop="description"]')?.innerHTML ?? '';
     return res;

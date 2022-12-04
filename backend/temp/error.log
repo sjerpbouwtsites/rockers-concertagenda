@@ -1,4 +1,52 @@
 
+  deflux-0 Error - 10:50:21 PM
+  undefined 
+  undefined
+  
+  
+  deflux-0 Error - 10:50:20 PM
+  undefined 
+  undefined
+  
+  
+  deflux-0 Error - 10:49:32 PM
+  Error: Evaluation failed: TypeError: First argument to String.prototype.includes must not be a regular expression
+    at String.includes (<anonymous>)
+    at __puppeteer_evaluation_script__:26:61
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async defluxScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/deflux.js:71:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:378:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:55:5) 
+  Evaluation failed: TypeError: First argument to String.prototype.includes must not be a regular expression
+    at String.includes (<anonymous>)
+    at __puppeteer_evaluation_script__:26:61
+  
+  
+  deflux-0 Error - 10:46:38 PM
+  Error: Evaluation failed: ReferenceError: _t is not defined
+    at __puppeteer_evaluation_script__:30:7
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async defluxScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/deflux.js:71:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:378:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:55:5) 
+  Evaluation failed: ReferenceError: _t is not defined
+    at __puppeteer_evaluation_script__:30:7
+  
+  
+  undefined Error - 10:33:49 PM
+  TypeError: Cannot read properties of undefined (reading 'location')
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/metalfan.js:126:25
+    at Array.filter (<anonymous>)
+    at getBaseMusicEvents (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/metalfan.js:125:6)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scrapeMetalfan (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/metalfan.js:41:5) 
+  Cannot read properties of undefined (reading 'location')
+  
+  
   deflux-0 Error - 9:53:44 PM
   TypeError: Cannot read properties of undefined (reading 'longTextHTML')
     at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:473:18)

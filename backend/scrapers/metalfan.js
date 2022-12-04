@@ -13,7 +13,9 @@ const timestampsKeys = Object.keys(JSON.parse(fs.readFileSync(fsDirections.times
 
 const skipWithMetalfan = timestampsKeys.concat([
   "kavkaoudaan",
+  "kavkazappa",
   "metropoolopenair",
+  "013tilburg",
   "merleyn", // onderdeel doornroosje
 ]);
 
@@ -121,7 +123,7 @@ async function getBaseMusicEvents(browser, skipWithMetalfan, qwm) {
       return thisMusicEvent;
     })
     .filter((musicEvent) => {
-      return musicEvent;
+      return musicEvent && musicEvent.location;
     });
 
   musicEvents.forEach((musicEvent) => {
