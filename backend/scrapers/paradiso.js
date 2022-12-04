@@ -16,7 +16,7 @@ const paradisoScraper = new AbstractScraper(makeScraperConfig({
       timeout: 30000,
       waitUntil: 'load'
     },
-    singlepage: {
+    singlePage: {
       timeout: 15000
     },
     app: {
@@ -64,20 +64,18 @@ paradisoScraper.makeBaseEventList = async function () {
   await _t.waitFor(150);
 
   let rawEvents = await page.evaluate(
-    ({ workerIndex }) => {
+    () => {
       return Array.from(document.querySelectorAll(".event-list__item"))
-        .filter((rawEvent, eventIndex) => {
-          return eventIndex % 4 === workerIndex;
-        })
+        .filter((rawEvent, index) => index % this.workerData.workerCount === this.workerData.index)
         .map((rawEvent) => {
           const title =
             rawEvent
               .querySelector(".event-list__item-title")
               ?.textContent.trim() ?? "";
-          const shortText =
+          const shortText = _t.killWhitespaceExcess(
             rawEvent
               .querySelector(".event-list__item-subtitle")
-              ?.textContent.trim() ?? "";
+              ?.textContent.trim() ?? "");
           const venueEventUrl = rawEvent.hasAttribute("href")
             ? rawEvent.href
             : null;
@@ -90,7 +88,7 @@ paradisoScraper.makeBaseEventList = async function () {
           };
         });
     },
-    { months: paradisoMonths, workerIndex: workerData.index }
+    null
   );
 
   return await this.makeBaseEventListEnd({
@@ -101,12 +99,10 @@ paradisoScraper.makeBaseEventList = async function () {
 
 // GET PAGE INFO
 
-paradisoScraper.getPageInfo = async function ({ page, url }) {
-  const stopFunctie = setTimeout(() => {
-    throw new Error(
-      `getPageInfo is de max tijd voor zn functie ${this.maxExecutionTime} voorbij `
-    );
-  }, this.maxExecutionTime);
+paradisoScraper.getPageInfo = async function ({ page }) {
+  
+  const {stopFunctie} =  await this.getPageInfoStart()
+  
   try {
     await page.waitForSelector(".header-template-2__subcontent .date", {
       timeout: 7500,
@@ -180,9 +176,9 @@ paradisoScraper.getPageInfo = async function ({ page, url }) {
           res.unavailable += "nog meer tijd issues";
         }
       }
-      res.priceTextcontent =
+      res.priceTextcontent =_t.killWhitespaceExcess(
         document.querySelector(".template-2__price-wrapper-container")
-          ?.textContent ?? null;
+          ?.textContent ?? '');
 
       const imageM = document
         .querySelector('[style*="background-im"]')
@@ -199,23 +195,8 @@ paradisoScraper.getPageInfo = async function ({ page, url }) {
     { months: paradisoMonths }
   );
 
-  pageInfo?.errorsVoorErrorHandler?.forEach((errorHandlerMeuk) => {
-    _t.handleError(
-      errorHandlerMeuk.error,
-      workerData,
-      errorHandlerMeuk.remarks
-    );
-  });
+  return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
 
-  clearTimeout(stopFunctie);
-  !page.isClosed() && page.close();
-
-  if (!pageInfo) {
-    return {
-      unavailable: `Geen resultaat <a href="${url}">van pageInfo</a>`,
-    };
-  }
-  return pageInfo;
 };
 
 // SINGLE EVENT CHECK

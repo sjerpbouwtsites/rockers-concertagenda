@@ -14,7 +14,7 @@ const dbsScraper = new AbstractScraper(makeScraperConfig({
       timeout: 15000,
       waitUntil: 'domcontentloaded'
     },
-    singlepage: {
+    singlePage: {
       timeout: 25000
     },
     app: {
@@ -38,11 +38,9 @@ dbsScraper.makeBaseEventList = async function () {
   await _t.waitFor(100)
 
   const rawEvents = await page.evaluate(
-    ({ months, workerIndex }) => {
+    ({ months }) => {
       return Array.from(document.querySelectorAll(".fusion-events-post"))
-        .filter((eventEl, index) => {
-          return index % 4 === workerIndex;
-        })
+        .filter((eventEl, index) => index % this.workerData.workerCount === this.workerData.index)
         .map((eventEl) => {
           const res = {};
           const titleLinkEl = eventEl.querySelector(".fusion-events-meta .url");
@@ -113,7 +111,7 @@ dbsScraper.makeBaseEventList = async function () {
           return res;
         });
     },
-    { months: dbsMonths, workerIndex: workerData.index }
+    { months: dbsMonths }
   );
  
   return await this.makeBaseEventListEnd({
@@ -125,20 +123,18 @@ dbsScraper.makeBaseEventList = async function () {
 // GET PAGE INFO
 
 dbsScraper.getPageInfo = async function ({ page, url }) {
-  const stopFunctie = setTimeout(() => {
-    throw new Error(
-      `getPageInfo is de max tijd voor zn functie ${this.maxExecutionTime} voorbij `
-    );
-  }, this.maxExecutionTime);
+  
+  const {stopFunctie} =  await this.getPageInfoStart()
+  
   const pageInfo = await page.evaluate(() => {
     const res = {
       unavailable: "",
       pageInfoID: `<a href='${document.location.href}'>${document.title}</a>`,
       errorsVoorErrorHandler: [],
     };
-    res.longTextHTML =
+    res.longTextHTML = _t.killWhitespaceExcess(
       document.querySelector(".tribe-events-single-event-description")
-        ?.innerHTML ?? null;
+        ?.innerHTML ?? '');
     res.image =
       document.querySelector(".tribe-events-event-image .wp-post-image")?.src ??
       null;
@@ -155,22 +151,7 @@ dbsScraper.getPageInfo = async function ({ page, url }) {
 
     return res;
   }, null);
-  pageInfo?.errorsVoorErrorHandler?.forEach((errorHandlerMeuk) => {
-    _t.handleError(
-      errorHandlerMeuk.error,
-      workerData,
-      errorHandlerMeuk.remarks
-    );
-  });
 
-  clearTimeout(stopFunctie);
-  !page.isClosed() && page.close();
-
-  if (!pageInfo) {
-    return {
-      unavailable: `Geen resultaat <a href="${url}">van pageInfo</a>`,
-    };
-  }
-  this.dirtyLog(pageInfo, "log");
-  return pageInfo;
+  return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
+  
 };

@@ -1,8 +1,8 @@
 
 import { workerData } from "worker_threads";
-import * as _t from "../mods/tools.js";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
+import _t from "../mods/tools.js"
 
 // SCRAPER CONFIG
 
@@ -26,11 +26,9 @@ nuldertienScraper.makeBaseEventList = async function () {
   
   const {stopFunctie, page} =  await this.makeBaseEventListStart()
 
-  const rawEvents = await page.evaluate((workerIndex) => {
+  const rawEvents = await page.evaluate(() => {
     return Array.from(document.querySelectorAll(".event-list-item"))
-      .filter((eventEl, index) => {
-        return index % 4 === workerIndex;
-      })
+      .filter((eventEl, index) => index % this.workerData.workerCount === this.workerData.index)
       .map((eventEl) => {
         const res = {
           pageInfoID: `<a href='${document.location.href}'>${document.title}</a>`,
@@ -52,15 +50,15 @@ nuldertienScraper.makeBaseEventList = async function () {
           res.unavailable = "geen datum gevonden";
         }
         res.location = "013";
-        res.shortText = eventEl
+        res.shortText = _t.killWhitespaceExcess(eventEl
           .querySelector(".event-list-item__subtitle")
-          ?.textContent.trim();
+          ?.textContent.trim() ?? '');
         if (res.unavailable) {
           res.unavailable = `${res.unavailable}\n${res.pageInfoID}`;
         }
         return res;
       });
-  }, workerData.index);
+  }, null);
 
   return await this.makeBaseEventListEnd({
     stopFunctie, page, rawEvents}
@@ -69,12 +67,9 @@ nuldertienScraper.makeBaseEventList = async function () {
 
 // GET PAGE INFO
 
-nuldertienScraper.getPageInfo = async function ({ page, url }) {
-  const stopFunctie = setTimeout(() => {
-    throw new Error(
-      `getPageInfo is de max tijd voor zn functie ${this.maxExecutionTime} voorbij `
-    );
-  }, this.maxExecutionTime);
+nuldertienScraper.getPageInfo = async function ({ page }) {
+  
+  const {stopFunctie} =  await this.getPageInfoStart()
 
   const pageInfo = await page.evaluate(() => {
     const res = {
@@ -82,11 +77,11 @@ nuldertienScraper.getPageInfo = async function ({ page, url }) {
       errorsVoorErrorHandler: [],
     };
     res.image = document.querySelector(".event-spotlight__image")?.src;
-    res.priceTextcontent =
+    res.priceTextcontent = _t.killWhitespaceExcess(
       document.querySelector(".practical-information tr:first-child dd")
-        ?.textContent ?? null;
-    res.priceContextText =
-      document.querySelector(".practical-information")?.textContent ?? null;
+        ?.textContent ?? '');
+    res.priceContextText =_t.killWhitespaceExcess(
+      document.querySelector(".practical-information")?.textContent ?? '');
 
     const doorOpenEl = document.querySelector(
       ".timetable__times dl:first-child time"
@@ -104,30 +99,16 @@ nuldertienScraper.getPageInfo = async function ({ page, url }) {
         remarks: "deur open tijd fout",
       });
     }
-    res.longTextHTML = document.querySelector(
-      ".event-detail header + div"
-    )?.innerHTML;
+    res.longTextHTML = _t.killWhitespaceExcess(
+      document.querySelector(
+        ".event-detail header + div"
+      )?.innerHTML ?? '');
     if (res.unavailable) {
       res.unavailable = `${res.unavailable}\n${res.pageInfoID}`;
     }
     return res;
   }, null);
 
-  pageInfo?.errorsVoorErrorHandler?.forEach((errorHandlerMeuk) => {
-    _t.handleError(
-      errorHandlerMeuk.error,
-      workerData,
-      errorHandlerMeuk.remarks
-    );
-  });
+  return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
 
-  if (!pageInfo) {
-    return {
-      unavailable: `Geen resultaat <a href="${url}">van pageInfo</a>`,
-    };
-  }
-
-  !page.isClosed() && page.close();
-  clearTimeout(stopFunctie);
-  return pageInfo;
 };

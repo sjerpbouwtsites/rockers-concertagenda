@@ -1,5 +1,4 @@
 import { workerData } from "worker_threads";
-import * as _t from "../mods/tools.js";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import axios from "axios";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
@@ -13,7 +12,7 @@ const boerderijScraper = new AbstractScraper(makeScraperConfig({
     mainPage: {
       timeout: 30000,
     },
-    singlepage: {
+    singlePage: {
       timeout: 20000
     },
     app: {
@@ -60,12 +59,9 @@ boerderijScraper.makeBaseEventList = async function () {
 
 // GET PAGE INFO
 
-boerderijScraper.getPageInfo = async function ({ url, event }) {
-  const stopFunctie = setTimeout(() => {
-    throw new Error(
-      `getPageInfo is de max tijd voor zn functie ${this.maxExecutionTime} voorbij `
-    );
-  }, this.maxExecutionTime);
+boerderijScraper.getPageInfo = async function ({ event }) {
+ 
+  const {stopFunctie} =  await this.getPageInfoStart()
 
   const [realEventTitle, realEventId] = event.title.split("&id=");
   event.title = realEventTitle;
@@ -105,7 +101,7 @@ boerderijScraper.getPageInfo = async function ({ url, event }) {
     if (youtubeVideoIDMatch && youtubeVideoIDMatch.length) {
       youtubeIframe = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${youtubeVideoIDMatch[0]}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
     }
-    pageInfo.longTextHTML = `${ajaxRes.description}<br>${youtubeIframe}`;
+    pageInfo.longTextHTML =_t.killWhitespaceExcess(`${ajaxRes.description}<br>${youtubeIframe}`);
   } catch (error) {
     pageInfo.errorsVoorErrorHandler.push({
       error,
@@ -151,20 +147,6 @@ boerderijScraper.getPageInfo = async function ({ url, event }) {
   }
   pageInfo.location = "boerderij";
 
-  pageInfo?.errorsVoorErrorHandler?.forEach((errorHandlerMeuk) => {
-    _t.handleError(
-      errorHandlerMeuk.error,
-      workerData,
-      errorHandlerMeuk.remarks
-    );
-  });
+  return await this.getPageInfoEnd({pageInfo, stopFunctie})
 
-  clearTimeout(stopFunctie);
-
-  if (!pageInfo) {
-    return {
-      unavailable: `Geen resultaat <a href="${url}">van pageInfo</a>`,
-    };
-  }
-  return pageInfo;
 };

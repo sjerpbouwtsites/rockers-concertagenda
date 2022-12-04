@@ -14,7 +14,7 @@ const metropoolScraper = new AbstractScraper(makeScraperConfig({
       timeout: 35000,
       waitUntil: "load",
     },
-    singlepage: {
+    singlePage: {
       timeout: 25000
     },
     app: {
@@ -38,7 +38,7 @@ metropoolScraper.makeBaseEventList = async function () {
   await _t.autoScroll(page);
   await _t.autoScroll(page);
 
-  const rawEvents = await page.evaluate((workerIndex) => {
+  const rawEvents = await page.evaluate(() => {
     return Array.from(document.querySelectorAll(".card--event"))
       .filter((rawEvent) => {
         const testText = rawEvent.dataset?.genres || rawEvent.textContent;
@@ -51,19 +51,17 @@ metropoolScraper.makeBaseEventList = async function () {
           testText.includes("ska")
         );
       })
-      .filter((rawEvent, index) => {
-        return index % 2 === workerIndex;
-      })
+      .filter((rawEvent, index) => index % this.workerData.workerCount === this.workerData.index)
       .map((rawEvent) => {
         return {
           venueEventUrl: rawEvent.href,
           title: rawEvent.querySelector(".card__title")?.textContent ?? null,
-          shortText:
+          shortText: _t.killWhitespaceExcess(
             rawEvent.querySelector(".card__title card__title--sub")
-              ?.textContent ?? null,
+              ?.textContent ?? ''),
         };
       });
-  }, workerData.index);
+  }, null);
 
   return await this.makeBaseEventListEnd({
     stopFunctie, page, rawEvents}
@@ -72,12 +70,10 @@ metropoolScraper.makeBaseEventList = async function () {
 
 // GET PAGE INFO
 
-metropoolScraper.getPageInfo = async function ({ page, url }) {
-  const stopFunctie = setTimeout(() => {
-    throw new Error(
-      `makeBaseEventList is de max tijd voor zn functie ${this.maxExecutionTime} voorbij `
-    );
-  }, this.maxExecutionTime);
+metropoolScraper.getPageInfo = async function ({ page }) {
+
+  const {stopFunctie} =  await this.getPageInfoStart()
+  
   const pageInfo = await page.evaluate((months) => {
     const res = {
       unavailable: "",
@@ -85,15 +81,15 @@ metropoolScraper.getPageInfo = async function ({ page, url }) {
       errorsVoorErrorHandler: [],
     };
 
-    res.priceTextcontent =
-      document.querySelector(".doorPrice")?.textContent.trim() ?? null;
+    res.priceTextcontent = _t.killWhitespaceExcess(
+      document.querySelector(".doorPrice")?.textContent.trim() ?? '');
 
-    res.longTextHTML =
+    res.longTextHTML = _t.killWhitespaceExcess(
       Array.from(document.querySelectorAll(".event-title-wrap ~ div"))
         .map((divEl) => {
           return divEl.outerHTML;
         })
-        .join("") ?? null;
+        .join("") ?? '');
 
     const startDateRauwMatch = document
       .querySelector(".event-title-wrap")
@@ -149,21 +145,6 @@ metropoolScraper.getPageInfo = async function ({ page, url }) {
     return res;
   }, metropoolMonths);
 
-  pageInfo?.errorsVoorErrorHandler?.forEach((errorHandlerMeuk) => {
-    _t.handleError(
-      errorHandlerMeuk.error,
-      workerData,
-      errorHandlerMeuk.remarks
-    );
-  });
-
-  clearTimeout(stopFunctie);
-  !page.isClosed() && page.close();
-
-  if (!pageInfo) {
-    return {
-      unavailable: `Geen resultaat <a href="${url}">van pageInfo</a>`,
-    };
-  }
-  return pageInfo;
+  return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
+  
 };

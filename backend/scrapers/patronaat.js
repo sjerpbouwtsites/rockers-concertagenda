@@ -1,7 +1,7 @@
 import { workerData } from "worker_threads";
-import * as _t from "../mods/tools.js";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import { patronaatMonths } from "../mods/months.js";
+import _t from "../mods/tools.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 // SCRAPER CONFIG
 
@@ -31,11 +31,9 @@ patronaatScraper.makeBaseEventList = async function () {
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
-  const rawEvents = await page.evaluate((workerIndex) => {
+  const rawEvents = await page.evaluate(() => {
     return Array.from(document.querySelectorAll(".overview__list-item--event"))
-      .filter((eventEl, index) => {
-        return index % 3 === workerIndex; // TODO naar settings afleiden
-      })
+      .filter((eventEl, index) =>index % this.workerData.workerCount === this.workerData.index)
       .map((eventEl) => {
         const res = {};
         res.image =
@@ -43,12 +41,12 @@ patronaatScraper.makeBaseEventList = async function () {
         res.venueEventUrl = eventEl.querySelector("a[href]")?.href ?? null;
         res.title = eventEl.querySelector(".event__name")?.textContent.trim();
         res.location = "patronaat";
-        res.shortText = eventEl
+        res.shortText = _t.killWhitespaceExcess(eventEl
           .querySelector(".event__subtitle")
-          ?.textContent.trim();
+          ?.textContent.trim() ?? '');
         return res;
       });
-  }, workerData.index);
+  }, null);
 
   return await this.makeBaseEventListEnd({
     stopFunctie, page, rawEvents}
@@ -57,12 +55,9 @@ patronaatScraper.makeBaseEventList = async function () {
 
 // GET PAGE INFO
 
-patronaatScraper.getPageInfo = async function ({ page, url }) {
-  const stopFunctie = setTimeout(() => {
-    throw new Error(
-      `getPageInfo is de max tijd voor zn functie ${this.maxExecutionTime} voorbij `
-    );
-  }, this.maxExecutionTime);
+patronaatScraper.getPageInfo = async function ({ page }) {
+ 
+  const {stopFunctie} =  await this.getPageInfoStart()
 
   const pageInfo = await page.evaluate((months) => {
     const res = {
@@ -134,28 +129,13 @@ patronaatScraper.getPageInfo = async function ({ page, url }) {
       res.unavailable = "Geen starttijd gevonden.";
     }
 
-    res.longTextHTML = document.querySelector(".event__content")?.innerHTML;
+    res.longTextHTML = _t.killWhitespaceExcess(document.querySelector(".event__content")?.innerHTML);
     if (res.unavailable !== "") {
       res.unavailable = `${res.unavailable}\n${res.pageInfoID}`;
     }
     return res;
   }, patronaatMonths);
 
-  pageInfo?.errorsVoorErrorHandler?.forEach((errorHandlerMeuk) => {
-    _t.handleError(
-      errorHandlerMeuk.error,
-      workerData,
-      errorHandlerMeuk.remarks
-    );
-  });
-
-  clearTimeout(stopFunctie);
-  !page.isClosed() && page.close();
-
-  if (!pageInfo) {
-    return {
-      unavailable: `Geen resultaat <a href="${url}">van pageInfo</a>`,
-    };
-  }
-  return pageInfo;
+  return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
+  
 };

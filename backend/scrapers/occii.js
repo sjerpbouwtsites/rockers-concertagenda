@@ -1,4 +1,4 @@
-import { parentPort, workerData } from "worker_threads";
+import { workerData } from "worker_threads";
 import * as _t from "../mods/tools.js";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import { occiiMonths } from "../mods/months.js";
@@ -34,25 +34,22 @@ occiiScraper.makeBaseEventList = async function () {
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
-  const rawEvents = await page.evaluate((workerIndex) => {
+  const rawEvents = await page.evaluate(() => {
     return Array.from(document.querySelectorAll(".occii-event-display"))
-      .filter((event, index) => {
-        // here divide events over workers.
-        return index % 2 === workerIndex;
-      })
+      .filter((event, index) => index % this.workerData.workerCount === this.workerData.index)
       .map((occiiEvent) => {
         const firstAnchor = occiiEvent.querySelector("a");
 
         return {
           venueEventUrl: firstAnchor.href,
           title: firstAnchor.title,
-          shortText:
+          shortText:_t.killWhitespaceExcess(
             occiiEvent.querySelector(".occii-events-description")
-              ?.textContent ?? "",
+              ?.textContent ?? ""),
           location: "occii",
         };
       });
-  }, workerData.index);
+  }, null);
 
   return await this.makeBaseEventListEnd({
     stopFunctie, page, rawEvents}
@@ -61,12 +58,9 @@ occiiScraper.makeBaseEventList = async function () {
 };
 // GET PAGE INFO
 
-occiiScraper.getPageInfo = async function ({ page, url }) {
-  const stopFunctie = setTimeout(() => {
-    throw new Error(
-      `makeBaseEventList is de max tijd voor zn functie ${this.maxExecutionTime} voorbij `
-    );
-  }, this.maxExecutionTime);
+occiiScraper.getPageInfo = async function ({ page }) {
+  
+  const {stopFunctie} =  await this.getPageInfoStart()
 
   const pageInfo = await page.evaluate((months) => {
     const res = {
@@ -120,25 +114,10 @@ occiiScraper.getPageInfo = async function ({ page, url }) {
     res.genre =
       document.querySelector('[href*="events/categories"]')?.textContent ??
       null;
-    res.longTextHTML = document.querySelector(".occii-event-notes").innerHTML;
+    res.longTextHTML = _t.killWhitespaceExcess(document.querySelector(".occii-event-notes").innerHTML);
     return res;
   }, occiiMonths);
 
-  pageInfo?.errorsVoorErrorHandler?.forEach((errorHandlerMeuk) => {
-    _t.handleError(
-      errorHandlerMeuk.error,
-      workerData,
-      errorHandlerMeuk.remarks
-    );
-  });
-
-  clearTimeout(stopFunctie);
-  !page.isClosed() && page.close();
-
-  if (!pageInfo) {
-    return {
-      unavailable: `Geen resultaat <a href="${url}">van pageInfo</a>`,
-    };
-  }
-  return pageInfo;
+  return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
+  
 };

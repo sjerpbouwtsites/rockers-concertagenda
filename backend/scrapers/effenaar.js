@@ -12,7 +12,7 @@ const effenaarScraper = new AbstractScraper(makeScraperConfig({
     mainPage: {
       timeout: 30000,
     },
-    singlepage: {
+    singlePage: {
       timeout: 15000
     },
     app: {
@@ -33,23 +33,21 @@ effenaarScraper.makeBaseEventList = async function () {
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
   const rawEvents = await page.evaluate(
-    ({ workerIndex }) => {
+    () => {
       return Array.from(
         document.querySelectorAll(".search-and-filter .agenda-card")
       )
-        .filter((eventEl, index) => {
-          return index % 4 === workerIndex;
-        })
+        .filter((eventEl, index) => index % this.workerData.workerCount === this.workerData.index)
         .map((eventEl) => {
           const res = {};
           res.title = eventEl.querySelector(".card-title")?.textContent.trim();
-          res.shortText = eventEl.querySelector(".card-subtitle")?.textContent;
+          res.shortText = _t.killWhitespaceExcess( eventEl.querySelector(".card-subtitle")?.textContent ?? '');
           res.venueEventUrl = eventEl?.href;
           res.location = "effenaar";
           return res;
         });
     },
-    { workerIndex: workerData.index }
+    null
   );
 
   return await this.makeBaseEventListEnd({
@@ -60,12 +58,9 @@ effenaarScraper.makeBaseEventList = async function () {
 
 // GET PAGE INFO
 
-effenaarScraper.getPageInfo = async function ({ page, url }) {
-  const stopFunctie = setTimeout(() => {
-    throw new Error(
-      `makeBaseEventList is de max tijd voor zn functie ${this.maxExecutionTime} voorbij `
-    );
-  }, this.maxExecutionTime);
+effenaarScraper.getPageInfo = async function ({ page }) {
+  
+  const {stopFunctie} =  await this.getPageInfoStart()
 
   await page.waitForSelector(".event-bar-inner-row");
 
@@ -76,8 +71,8 @@ effenaarScraper.getPageInfo = async function ({ page, url }) {
       errorsVoorErrorHandler: [],
     };
     res.image = document.querySelector(".header-image img")?.src ?? null;
-    res.priceTextcontent =
-      document.querySelector(".tickets-btn")?.textContent ?? null;
+    res.priceTextcontent = _t.killWhitespaceExcess(
+      document.querySelector(".tickets-btn")?.textContent ?? '');
 
     try {
       const dateText =
@@ -149,28 +144,14 @@ effenaarScraper.getPageInfo = async function ({ page, url }) {
       res.unavailable = "Geen tijd";
     }
 
-    res.longTextHTML =
-      document.querySelector(".header ~ .blocks")?.innerHTML ?? null;
+    res.longTextHTML = _t.killWhitespaceExcess(
+      document.querySelector(".header ~ .blocks")?.innerHTML ?? '');
     if (res.unavailable !== "") {
       res.unavailable = `${res.unavailable}\n${res.pageInfoID}`;
     }
     return res;
   }, effenaarMonths);
 
-  pageInfo?.errorsVoorErrorHandler?.forEach((errorHandlerMeuk) => {
-    _t.handleError(
-      errorHandlerMeuk.error,
-      workerData,
-      errorHandlerMeuk.remarks
-    );
-  });
-  clearTimeout(stopFunctie);
-  !page.isClosed() && page.close();
-
-  if (!pageInfo) {
-    return {
-      unavailable: `Geen resultaat <a href="${url}">van pageInfo</a>`,
-    };
-  }
-  return pageInfo;
+  return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
+  
 };

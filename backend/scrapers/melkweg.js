@@ -13,7 +13,7 @@ const melkwegScraper = new AbstractScraper(makeScraperConfig({
       timeout: 30000,
       waitUntil: 'load'
     },
-    singlepage: {
+    singlePage: {
       timeout: 20000
     },
     app: {
@@ -38,7 +38,7 @@ melkwegScraper.makeBaseEventList = async function () {
   await _t.autoScroll(page);
   await _t.autoScroll(page);
 
-  const rawEvents = await page.evaluate((workerIndex) => {
+  const rawEvents = await page.evaluate(() => {
     return Array.from(document.querySelectorAll("[data-element='agenda'] li"))
       .filter((eventEl) => {
         const tags =
@@ -47,21 +47,19 @@ melkwegScraper.makeBaseEventList = async function () {
             ?.textContent.toLowerCase() ?? "";
         return tags.includes("metal") || tags.includes("punk");
       })
-      .filter((eventEl, eventIndex) => {
-        return eventIndex % 3 === workerIndex;
-      })
+      .filter((eventEl, index) => index % this.workerData.workerCount === this.workerData.index)
       .map((eventEl) => {
         const res = {};
         const anchor = eventEl.querySelector("a");
-        res.shortText =
-          eventEl.querySelector('[class*="subtitle"]')?.textContent ?? "";
+        res.shortText = _t.killWhitespaceExcess(
+          eventEl.querySelector('[class*="subtitle"]')?.textContent ?? "");
         res.title =
           eventEl.querySelector('h3[class*="title"]')?.textContent ?? "";
         res.venueEventUrl = anchor.href;
         res.location = "melkweg";
         return res;
       });
-  }, workerData.index);
+  }, null);
 
   return await this.makeBaseEventListEnd({
     stopFunctie, page, rawEvents}
@@ -69,12 +67,10 @@ melkwegScraper.makeBaseEventList = async function () {
   
 };
 
-melkwegScraper.getPageInfo = async function ({ page, url }) {
-  const stopFunctie = setTimeout(() => {
-    throw new Error(
-      `getPageInfo is de max tijd voor zn functie ${this.maxExecutionTime} voorbij `
-    );
-  }, this.maxExecutionTime);
+melkwegScraper.getPageInfo = async function ({ page }) {
+ 
+  const {stopFunctie} =  await this.getPageInfoStart()
+  
   const pageInfo = await page.evaluate(() => {
     const res = {
       unavailable: "",
@@ -97,11 +93,11 @@ melkwegScraper.getPageInfo = async function ({ page, url }) {
         }`,
       });
     }
-    res.priceTextcontent =
+    res.priceTextcontent = _t.killWhitespaceExcess(
       document.querySelector('[class*="styles_ticket-prices"]')?.textContent ??
-      null;
-    res.longTextHTML =
-      document.querySelector('[class*="styles_event-info"]')?.innerHTML ?? null;
+      '');
+    res.longTextHTML = _t.killWhitespaceExcess(
+      document.querySelector('[class*="styles_event-info"]')?.innerHTML ?? '');
     res.image =
       document.querySelector('[class*="styles_event-header__figure"] img')
         ?.src ?? null;
@@ -111,21 +107,6 @@ melkwegScraper.getPageInfo = async function ({ page, url }) {
     return res;
   });
 
-  pageInfo?.errorsVoorErrorHandler?.forEach((errorHandlerMeuk) => {
-    _t.handleError(
-      errorHandlerMeuk.error,
-      workerData,
-      errorHandlerMeuk.remarks
-    );
-  });
+  return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
 
-  clearTimeout(stopFunctie);
-  !page.isClosed() && page.close();
-
-  if (!pageInfo) {
-    return {
-      unavailable: `Geen resultaat <a href="${url}">van pageInfo</a>`,
-    };
-  }
-  return pageInfo;
 };

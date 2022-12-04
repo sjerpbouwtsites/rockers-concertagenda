@@ -1,4 +1,4 @@
-import { parentPort, workerData } from "worker_threads";
+import { workerData } from "worker_threads";
 import * as _t from "../mods/tools.js";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import { depulMonths } from "../mods/months.js";
@@ -13,7 +13,7 @@ const depulScraper = new AbstractScraper(makeScraperConfig({
     mainPage: {
       timeout: 35000,
     },
-    singlepage: {
+    singlePage: {
       timeout: 25000
     },
     app: {
@@ -41,15 +41,13 @@ depulScraper.makeBaseEventList = async function () {
   await _t.waitFor(250);
 
   let rawEvents = await page.evaluate(
-    ({ months, workerIndex }) => {
+    ({ months }) => {
       return Array.from(document.querySelectorAll(".agenda-item"))
-        .filter((rawEvent, eventIndex) => {
-          return eventIndex % 2 === workerIndex;
-        })
+        .filter((rawEvent, index) => index % this.workerData.workerCount === this.workerData.index)
         .map((rawEvent) => {
           const title = rawEvent.querySelector("h2")?.textContent.trim() ?? "";
-          const shortText =
-            rawEvent.querySelector(".text-box .desc")?.textContent.trim() ?? "";
+          const shortText = _t.killWhitespaceExcess(
+            rawEvent.querySelector(".text-box .desc")?.textContent.trim() ?? "");
           const startDay =
             rawEvent
               .querySelector("time .number")
@@ -91,7 +89,7 @@ depulScraper.makeBaseEventList = async function () {
           };
         });
     },
-    { months: depulMonths, workerIndex: workerData.index }
+    { months: depulMonths}
   );
 
   return await this.makeBaseEventListEnd({
@@ -103,13 +101,9 @@ depulScraper.makeBaseEventList = async function () {
 // GET PAGE INFO
 
 depulScraper.getPageInfo = async function ({ page, url }) {
-  parentPort.postMessage(this.qwm.messageRoll(`get ${url}`));
-
-  const stopFunctie = setTimeout(() => {
-    throw new Error(
-      `makeBaseEventList is de max tijd voor zn functie ${this.maxExecutionTime} voorbij `
-    );
-  }, this.maxExecutionTime);
+  
+  const {stopFunctie} =  await this.getPageInfoStart()
+  
   const pageInfo = await page.evaluate(
     ({ months }) => {
       const res = {
@@ -130,7 +124,7 @@ depulScraper.getPageInfo = async function ({ page, url }) {
               contentBox.removeChild(removeFromContentBox);
             }
           });
-          res.longTextHTML = contentBox.innerHTML;
+          res.longTextHTML = _t.killWhitespaceExcess(contentBox.innerHTML);
         }
       } catch (error) {
         res.errorsVoorErrorHandler.push({
@@ -227,27 +221,11 @@ depulScraper.getPageInfo = async function ({ page, url }) {
     { months: depulMonths }
   );
 
-  pageInfo?.errorsVoorErrorHandler?.forEach((errorHandlerMeuk) => {
-    _t.handleError(
-      errorHandlerMeuk.error,
-      workerData,
-      errorHandlerMeuk.remarks
-    );
-  });
+  return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
 
-  clearTimeout(stopFunctie);
-  !page.isClosed() && page.close();
-
-  if (!pageInfo) {
-    const uuu = new URL(url);
-    return {
-      unavailable: `Geen resultaat <a href="${uuu}">van pageInfo</a>`,
-    };
-  }
-  return pageInfo;
 };
 
-// SINGLE EVENT CHECK
+// SINGLE EVENT CHECK 
 
 depulScraper.singleEventCheck = async function (event) {
   const firstCheckText = `${event?.title ?? ""} ${event?.shortText ?? ""}`;

@@ -1,4 +1,4 @@
-import { parentPort, workerData } from "worker_threads";
+import { workerData } from "worker_threads";
 import * as _t from "../mods/tools.js";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import { kavkaMonths } from "../mods/months.js";
@@ -12,7 +12,7 @@ const kavkaScraper = new AbstractScraper(makeScraperConfig({
     mainPage: {
       timeout: 35000,
     },
-    singlepage: {
+    singlePage: {
       timeout: 30000
     },
     app: {
@@ -113,8 +113,8 @@ kavkaScraper.makeBaseEventList = async function () {
             rawEvent
               .querySelector("article h3:first-child")
               ?.textContent.trim() ?? "";
-          res.shortText =
-            rawEvent.querySelector("article h3 + p")?.textContent.trim() ?? "";
+          res.shortText = _t.killWhitespaceExcess(
+            rawEvent.querySelector("article h3 + p")?.textContent.trim() ?? "");
           res.location = "kavka";
           res.venueEventUrl = rawEvent.href;
           return res;
@@ -129,17 +129,11 @@ kavkaScraper.makeBaseEventList = async function () {
 
 };
 
-kavkaScraper.getPageInfo = async function ({ url, page }) {
-  parentPort.postMessage(this.qwm.messageRoll(`kavka ga naar ${url}`));
+kavkaScraper.getPageInfo = async function ({ page }) {
+  
+  const {stopFunctie} =  await this.getPageInfoStart()
 
-  const stopFunctie = setTimeout(() => {
-    throw new Error(
-      `getPageInfo is de max tijd voor zn functie ${this.maxExecutionTime} voorbij `
-    );
-  }, this.maxExecutionTime);
-  let pageInfo;
-
-  pageInfo = await page.evaluate(() => {
+  const pageInfo = await page.evaluate(() => {
     const res = {
       unavailable: "",
       pageInfoID: `<a href='${document.location.href}'>${document.title}</a>`,
@@ -154,11 +148,11 @@ kavkaScraper.getPageInfo = async function ({ url, page }) {
           document.querySelector('img[src*="kavka.be/wp-content"]')?.src ?? "";
       }
 
-      res.longTextHTML =
-        document.querySelector("h2 + .entry-content")?.innerHTML ?? null;
+      res.longTextHTML = _t.killWhitespaceExcess(
+        document.querySelector("h2 + .entry-content")?.innerHTML ?? '');
 
-      res.priceTextcontent =
-        document.querySelector(".prijzen")?.textContent.trim() ?? null;
+      res.priceTextcontent = _t.killWhitespaceExcess(
+        document.querySelector(".prijzen")?.textContent.trim() ?? '');
       return res;
     } catch (error) {
       res.errorsVoorErrorHandler.push({
@@ -168,23 +162,6 @@ kavkaScraper.getPageInfo = async function ({ url, page }) {
     }
   });
 
-  parentPort.postMessage(this.qwm.toConsole(pageInfo));
+  return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
 
-  pageInfo?.errorsVoorErrorHandler?.forEach((errorHandlerMeuk) => {
-    _t.handleError(
-      errorHandlerMeuk.error,
-      workerData,
-      errorHandlerMeuk.remarks
-    );
-  });
-
-  clearTimeout(stopFunctie);
-  !page.isClosed() && page.close();
-
-  if (!pageInfo) {
-    return {
-      unavailable: `Geen resultaat <a href="${url}">van pageInfo</a>`,
-    };
-  }
-  return pageInfo;
 };

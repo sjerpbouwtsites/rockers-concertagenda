@@ -13,7 +13,7 @@ const bibelotScraper = new AbstractScraper(makeScraperConfig({
     mainPage: {
       timeout: 15000,
     },
-    singlepage: {
+    singlePage: {
       timeout: 20000
     },
     app: {
@@ -46,7 +46,7 @@ bibelotScraper.makeBaseEventList = async function () {
       const shortTextSplit = eventEl.contains(shortTextEl)
         ? shortTextEl.textContent.split(res.title)
         : [null, null];
-      res.shortText = shortTextSplit[1];
+      res.shortText = _t.killWhitespaceExcess(shortTextSplit[1]);
       res.venueEventUrl = eventEl.querySelector(".link")?.href ?? null;
       res.location = "bibelot";
 
@@ -62,12 +62,10 @@ bibelotScraper.makeBaseEventList = async function () {
 
 // GET PAGE INFO
 
-bibelotScraper.getPageInfo = async function ({ page, url }) {
-  const stopFunctie = setTimeout(() => {
-    throw new Error(
-      `getPageInfo is de max tijd voor zn functie ${this.maxExecutionTime} voorbij `
-    );
-  }, this.maxExecutionTime);
+bibelotScraper.getPageInfo = async function ({ page }) {
+  
+  const {stopFunctie} =  await this.getPageInfoStart()
+  
   const pageInfo = await page.evaluate(
     ({ months }) => {
       const res = {
@@ -105,11 +103,10 @@ bibelotScraper.getPageInfo = async function ({ page, url }) {
 
       res.eventMetaColomText;
       try {
-        res.eventMetaColomText = document
-          .querySelector(".meta-colom")
-          ?.textContent.toLowerCase()
-          .replace(/\t{2,100}/g, "")
-          .replace(/\n{2,100}/g, "\n"); // @TODO door hele app verwerken
+        res.eventMetaColomText = _t.killWhitespaceExcess(
+          document
+            .querySelector(".meta-colom")
+            ?.textContent.toLowerCase())
 
         res.startTimeMatch = res.eventMetaColomText.match(
           /(aanvang\sshow|aanvang|start\sshow|show)\W?\s+(\d\d:\d\d)/
@@ -178,14 +175,15 @@ bibelotScraper.getPageInfo = async function ({ page, url }) {
       });
 
       if (verkoopElAr && Array.isArray(verkoopElAr) && verkoopElAr.length) {
-        res.priceTextcontent = verkoopElAr[0].textContent;
+        res.priceTextcontent = _t.killWhitespaceExcess(verkoopElAr[0].textContent);
       }
 
       res.longTextHTML =
+      _t.killWhitespaceExcess(
         document
           .querySelector(".main-column .content")
-          ?.innerHTML.replace(/\t{2,100}/g, "")
-          .replace(/\n{2,100}/g, "\n") ?? null;
+          ?.innerHTML ?? ''
+      );
       const imageMatch = document
         .querySelector(".achtergrond-afbeelding")
         ?.style.backgroundImage.match(/https.*.jpg|https.*.jpg/);
@@ -200,21 +198,6 @@ bibelotScraper.getPageInfo = async function ({ page, url }) {
     { months: bibelotMonths }
   );
 
-  pageInfo?.errorsVoorErrorHandler?.forEach((errorHandlerMeuk) => {
-    _t.handleError(
-      errorHandlerMeuk.error,
-      workerData,
-      errorHandlerMeuk.remarks
-    );
-  });
-
-  clearTimeout(stopFunctie);
-  !page.isClosed() && page.close();
-
-  if (!pageInfo) {
-    return {
-      unavailable: `Geen resultaat <a href="${url}">van pageInfo</a>`,
-    };
-  }
-  return pageInfo;
-};
+  return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
+  
+}

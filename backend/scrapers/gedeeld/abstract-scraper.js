@@ -27,9 +27,6 @@ export default class AbstractScraper {
     this.maxExecutionTime = obj.maxExecutionTime ?? 30000;
     this.puppeteerConfig = obj.puppeteerConfig ?? {};
     this.months = obj.months ?? null;// @TODO NAAR ECHTE MAANDENSYSTEEM GAAN
-    parentPort.postMessage(this.qwm.toConsole({
-      [`${workerData.name}-config`]: obj
-    }))
   }
 
   /**
@@ -106,6 +103,7 @@ export default class AbstractScraper {
     } 
   }
 
+  
   /**
    * beeindigt stopFunctie timeout
    * sluit page
@@ -425,6 +423,53 @@ export default class AbstractScraper {
     throw Error("abstact function getPAgeInfo called");
   }
 
+  /**
+   * step 3.6
+   * Vervangt generieke code aan begin getPageInfo
+   * start stopFunctie op
+   * @returns {timeout} stopFunctie
+   * @memberof AbstractScraper
+   */
+  async getPageInfoStart(){
+    const stopFunctie = setTimeout(() => {
+      throw new Error(
+        `getPageInfo is de max tijd voor zn functie ${this.maxExecutionTime} voorbij `
+      );
+    }, this.maxExecutionTime);
+    return {
+      stopFunctie
+    }
+  }
+
+  /**
+   * step 3.9
+   * Vervangt generieke code aan eind getPageInfo
+   * stopt stopFunctie
+   * kijkt naar evt fouten in pageInfo.errorsVoorErrorHandler
+   * @returns {*} pageInfo
+   * @memberof AbstractScraper
+   */  
+  async getPageInfoEnd({pageInfo, stopFunctie, page}){
+    
+    pageInfo?.errorsVoorErrorHandler?.forEach((errorHandlerMeuk) => {
+      _t.handleError(
+        errorHandlerMeuk.error,
+        workerData,
+        errorHandlerMeuk.remarks
+      );
+    });
+  
+    if (!pageInfo) {
+      return {
+        unavailable: `Geen resultaat van pageInfo`,
+      };
+    }
+  
+    page && !page.isClosed() && page.close();
+    clearTimeout(stopFunctie);
+    return pageInfo;    
+  }
+
   // step 4
   async announceToMonitorDone() {
     parentPort.postMessage(this.qwm.workerDone(EventsList.amountOfEvents));
@@ -468,6 +513,9 @@ export default class AbstractScraper {
       );
     }
   }
+
+
+
 
   // step 6
   async saveEvents() {

@@ -111,10 +111,10 @@ async function getBaseMusicEvents(browser, skipWithMetalfan, qwm) {
         eventLocationName = (eventCommaSplice[0] || "").trim();
 
         eventHTMLrules = eventHTML.split("<br>");
-        shortText =
+        shortText = _t.killWhitespaceExcess(
           eventHTMLrules.length > 1
-            ? (eventHTMLrules[eventHTMLrules.length - 1] || "").trim()
-            : "";
+            ? (eventHTMLrules[eventHTMLrules.length - 1] || "")
+            : "");
 
         return {
           title: eventName,

@@ -12,7 +12,7 @@ const gebrdenobelScraper = new AbstractScraper(makeScraperConfig({
     mainPage: {
       timeout: 15000,
     },
-    singlepage: {
+    singlePage: {
       timeout: 20000
     },
     app: {
@@ -70,11 +70,8 @@ gebrdenobelScraper.makeBaseEventList = async function () {
 // GET PAGE INFO
 
 gebrdenobelScraper.getPageInfo = async function ({ page, url }) {
-  const stopFunctie = setTimeout(() => {
-    throw new Error(
-      `getPageInfo is de max tijd voor zn functie ${this.maxExecutionTime} voorbij `
-    );
-  }, this.maxExecutionTime);
+  
+  const {stopFunctie} =  await this.getPageInfoStart()
 
   const pageInfo = await page.evaluate(
     ({ months }) => {
@@ -128,33 +125,19 @@ gebrdenobelScraper.getPageInfo = async function ({ page, url }) {
       }
 
       if (priceRow) {
-        res.priceTextcontent = priceRow.textContent;
+        res.priceTextcontent = _t.killWhitespaceExcess(priceRow.textContent);
       }
-      res.shortText =
-        document.querySelector(".hero-cta_left__text p")?.textContent ?? null;
-      res.longTextHTML =
-        document.querySelector(".js-contentBlocks")?.innerHTML ?? null;
+      res.shortText = _t.killWhitespaceExcess(
+        document.querySelector(".hero-cta_left__text p")?.textContent ?? '');
+      res.longTextHTML = _t.killWhitespaceExcess(
+        document.querySelector(".js-contentBlocks")?.innerHTML ?? '');
       res.image = document.querySelector(".hero img")?.src ?? null;
 
       return res;
     },
     { months: gebrdenobelMonths }
   );
-  pageInfo?.errorsVoorErrorHandler?.forEach((errorHandlerMeuk) => {
-    _t.handleError(
-      errorHandlerMeuk.error,
-      workerData,
-      errorHandlerMeuk.remarks
-    );
-  });
 
-  clearTimeout(stopFunctie);
-  !page.isClosed() && page.close();
-
-  if (!pageInfo) {
-    return {
-      unavailable: `Geen resultaat <a href="${url}">van pageInfo</a>`,
-    };
-  }
-  return pageInfo;
+  return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
+  
 };

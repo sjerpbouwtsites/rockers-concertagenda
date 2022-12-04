@@ -73,12 +73,9 @@ voltScraper.makeBaseEventList = async function () {
 
 // GET PAGE INFO
 
-voltScraper.getPageInfo = async function ({ page, url }) {
-  const stopFunctie = setTimeout(() => {
-    throw new Error(
-      `getPageInfo is de max tijd voor zn functie ${this.maxExecutionTime} voorbij `
-    );
-  }, this.maxExecutionTime);
+voltScraper.getPageInfo = async function ({ page, url}) {
+
+  const {stopFunctie} =  await this.getPageInfoStart()
 
   try {
     await page.waitForSelector("#main .content-block", {
@@ -100,7 +97,7 @@ voltScraper.getPageInfo = async function ({ page, url }) {
       const contentBox =
         document.querySelector("#main .aside + div > .content-block") ?? null;
       if (contentBox) {
-        res.longTextHTML = contentBox.innerHTML;
+        res.longTextHTML = _t.killWhitespaceExcess(contentBox.innerHTML);
       }
       const unstyledListsInAside = document.querySelectorAll(
         "#main .aside .list-unstyled"
@@ -163,29 +160,16 @@ voltScraper.getPageInfo = async function ({ page, url }) {
           }`;
         }
       }
-      res.priceTextcontent =
+      res.priceTextcontent =_t.killWhitespaceExcess(
         document.querySelector("#main .aside .list-unstyled.prices")
-          ?.textContent ?? null;
+          ?.textContent ?? ''
+      );
       return res;
     },
     { months: voltMonths, url }
   );
 
-  clearTimeout(stopFunctie);
-  !page.isClosed() && page.close();
-
-  if (!pageInfo) {
-    return {
-      unavailable: `Geen resultaat <a href="${url}">van pageInfo</a>`,
-    };
-  }
-
-  if (pageInfo?.error) {
-    pageInfo.unavailable = `Dikke error bij href="${url}">van pageInfo</a>`;
-    _t.handleError(page.error, workerData);
-  }
-
-  return pageInfo;
+  return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
 };
 
 

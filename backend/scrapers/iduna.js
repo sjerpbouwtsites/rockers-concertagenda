@@ -9,7 +9,7 @@ import makeScraperConfig from "./gedeeld/scraper-config.js";
 const idunaScraper = new AbstractScraper(makeScraperConfig({
   workerData: Object.assign({}, workerData),
   puppeteerConfig: {
-    singlepage: {
+    singlePage: {
       timeout: 20000
     },
     mainPage: {
@@ -55,7 +55,7 @@ idunaScraper.makeBaseEventList = async function () {
   let punkEvents = await page
     .evaluate(() => {
       // no-eslint
-      // HACK VAN DE SITE ZELF
+      // hack VAN DE SITE ZELF
       loadposts("punk", 1, 50); // eslint-disable-line
 
       return new Promise((resolve) => {
@@ -93,12 +93,10 @@ idunaScraper.makeBaseEventList = async function () {
 
 // GET PAGE INFO
 
-idunaScraper.getPageInfo = async function ({ page, url }) {
-  const stopFunctie = setTimeout(() => {
-    throw new Error(
-      `getPageInfo is de max tijd voor zn functie ${this.maxExecutionTime} voorbij `
-    );
-  }, this.maxExecutionTime);
+idunaScraper.getPageInfo = async function ({ page }) {
+  
+  const {stopFunctie} =  await this.getPageInfoStart()
+  
   const pageInfo = await page.evaluate(
     ({ months }) => {
       const res = {
@@ -178,30 +176,16 @@ idunaScraper.getPageInfo = async function ({ page, url }) {
         res.image = imageMatch[1];
       }
 
-      res.longTextHTML =
-        document.querySelector("#postcontenttext")?.innerHTML ?? null;
+      res.longTextHTML = _t.killWhitespaceExcess(
+        document.querySelector("#postcontenttext")?.innerHTML ?? '');
 
-      res.priceTextcontent =
-        document.querySelector("#sideinfo")?.textContent.trim() ?? null;
+      res.priceTextcontent = _t.killWhitespaceExcess(
+        document.querySelector("#sideinfo")?.textContent.trim() ?? '');
       return res;
     },
     { months: idunaMonths }
   );
-  pageInfo?.errorsVoorErrorHandler?.forEach((errorHandlerMeuk) => {
-    _t.handleError(
-      errorHandlerMeuk.error,
-      workerData,
-      errorHandlerMeuk.remarks
-    );
-  });
 
-  clearTimeout(stopFunctie);
-  !page.isClosed() && page.close();
-
-  if (!pageInfo) {
-    return {
-      unavailable: `Geen resultaat <a href="${url}">van pageInfo</a>`,
-    };
-  }
-  return pageInfo;
+  return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
+  
 };

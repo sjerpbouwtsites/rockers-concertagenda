@@ -14,7 +14,7 @@ const afasliveScraper = new AbstractScraper(makeScraperConfig({
     mainPage: {
       timeout: 60000,
     },
-    singlepage: {
+    singlePage: {
       timeout: 20000
     },
     app: {
@@ -52,11 +52,9 @@ afasliveScraper.makeBaseEventList = async function () {
   
   await _t.autoScroll(page);
 
-  const rawEvents = await page.evaluate((workerIndex) => {
+  const rawEvents = await page.evaluate(() => {
     return Array.from(document.querySelectorAll(".agenda__item__block "))
-      .filter((event, eventIndex) => {
-        return (eventIndex + workerIndex) % 4 === 0;
-      })
+      .filter((event, index) => index % this.workerData.workerCount === this.workerData.index)
       .map((agendaBlock) => {
         const res = {};
         res.venueEventUrl = agendaBlock.querySelector("a")?.href ?? null;
@@ -65,31 +63,17 @@ afasliveScraper.makeBaseEventList = async function () {
         res.location = "afaslive";
         return res;
       });
-  }, workerData.index);
+  }, );
 
-  clearTimeout(stopFunctie);
-  !page.isClosed() && page.close();
-
-  return rawEvents
-    .map((event) => {
-      (!event.venueEventUrl || !event.title) &&
-        parentPort.postMessage(
-          this.qwm.messageRoll(
-            `Red het niet: <a href='${event.venueEventUrl}'>${event.title}</a> ongeldig.`
-          )
-        );
-      return event;
-    })
-    .filter(_t.basicMusicEventsFilter)
-    .map((event) => new MusicEvent(event));
+  return await this.makeBaseEventListEnd({
+    stopFunctie, page, rawEvents}
+  );
 };
 
-afasliveScraper.getPageInfo = async function ({ page, url }) {
-  const stopFunctie = setTimeout(() => {
-    throw new Error(
-      `getPageInfo is de max tijd voor zn functie ${this.maxExecutionTime} voorbij `
-    );
-  }, this.maxExecutionTime);
+afasliveScraper.getPageInfo = async function ({ page }) {
+  
+  const {stopFunctie} =  await this.getPageInfoStart()
+  
   const pageInfo = await page.evaluate(
     ({ months }) => {
       const res = {
@@ -155,30 +139,14 @@ afasliveScraper.getPageInfo = async function ({ page, url }) {
         res.unavailable += " geen startDateTime";
       }
 
-      res.longTextHTML =
-        document.querySelector("article .wysiwyg")?.innerHTML ?? null;
+      res.longTextHTML = _t.killWhitespaceExcess(
+        document.querySelector("article .wysiwyg")?.innerHTML ?? '');
 
-      res.priceTextcontent =
-        document.querySelector("#tickets")?.textContent.trim() ?? null;
+      res.priceTextcontent = _t.killWhitespaceExcess(
+        document.querySelector("#tickets")?.textContent.trim() ?? '');
       return res;
     },
     { months: afasliveMonths }
   );
-  pageInfo?.errorsVoorErrorHandler?.forEach((errorHandlerMeuk) => {
-    _t.handleError(
-      errorHandlerMeuk.error,
-      workerData,
-      errorHandlerMeuk.remarks
-    );
-  });
-
-  clearTimeout(stopFunctie);
-  !page.isClosed() && page.close();
-
-  if (!pageInfo) {
-    return {
-      unavailable: `Geen resultaat <a href="${url}">van pageInfo</a>`,
-    };
-  }
-  return pageInfo;
+  return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
 };

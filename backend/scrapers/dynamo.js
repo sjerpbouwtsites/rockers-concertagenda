@@ -2,6 +2,7 @@ import { dynamoMonths } from "../mods/months.js";
 import { workerData } from "worker_threads";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
+import * as _t from "../mods/tools.js"
 
 // SCRAPER CONFIG
 
@@ -12,7 +13,7 @@ const dynamoScraper = new AbstractScraper(makeScraperConfig({
     mainPage: {
       timeout: 35000,
     },
-    singlepage: {
+    singlePage: {
       timeout: 25000
     },
     app: {
@@ -33,13 +34,11 @@ dynamoScraper.makeBaseEventList = async function () {
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
   const rawEvents = await page.evaluate(
-    ({ workerIndex }) => {
+    () => {
       return Array.from(
         document.querySelectorAll(".search-filter-results .timeline-article")
       )
-        .filter((baseEvent, index) => {
-          return (index + workerIndex) % 2 === 0;
-        })
+        .filter((baseEvent, index) => index % this.workerData.workerCount === this.workerData.index)
         .map((baseEvent) => {
           const venueEventUrl = baseEvent.querySelector("a")?.href ?? "";
           const title = baseEvent.querySelector("h4")?.textContent ?? "";
@@ -48,31 +47,19 @@ dynamoScraper.makeBaseEventList = async function () {
           const timelineInfoContainerEl = baseEvent.querySelector(
             ".timeline-info-container"
           );
-          //          let shortText, dateDay, dateMonth, dateYear;
-          let shortText = timelineInfoContainerEl?.querySelector("p")?.textContent.trim();
-          // @TODO DBBEL met page info?
-          // if (timelineInfoContainerEl) {
-          //   const dateBasis = timelineInfoContainerEl.querySelector(".date").textContent;
-          //   const dateSplit = dateBasis.split("/").map((str) => str.trim());
-          //   if (dateSplit.length < 3) {
-          //     return;
-          //   }
-          //   dateDay = dateSplit[0].replace(/\D/g, "");
-          //   dateMonth = months[dateSplit[1].trim()];
-          //   dateYear = dateSplit[2];
-          // }
+
+          let shortText = _t.killWhitespaceExcess(timelineInfoContainerEl?.querySelector("p")?.textContent ?? '');
+
           return {
             venueEventUrl,
             title,
             location,
-            shortText,
-            // dateDay,
-            // dateMonth,
-            // dateYear,
+            shortText
+  
           };
         });
     },
-    {workerIndex: workerData.index }
+    null
   );
 
   return await this.makeBaseEventListEnd({
@@ -83,12 +70,10 @@ dynamoScraper.makeBaseEventList = async function () {
 
 // GET PAGE INFO
 
-dynamoScraper.getPageInfo = async function ({ page, url }) {
-  const stopFunctie = setTimeout(() => {
-    throw new Error(
-      `getPageInfo is de max tijd voor zn functie ${this.maxExecutionTimethis} voorbij `
-    );
-  }, this.maxExecutionTime);
+dynamoScraper.getPageInfo = async function ({ page }) {
+  
+  const {stopFunctie} =  await this.getPageInfoStart()
+  
   const pageInfo = await page.evaluate(
     ({ months }) => {
       const res = {
@@ -173,7 +158,7 @@ dynamoScraper.getPageInfo = async function ({ page, url }) {
         res.unavailable = `tijd en datum\n${res.startTimeMatch}\n${res.endTimeMatch}\n${res.doorTimeMatch}`;
       }
 
-      res.longTextHTML =
+      res.longTextHTML = 
         document.querySelector("section.article .article-block")?.innerHTML ??
         "";
 
@@ -192,12 +177,8 @@ dynamoScraper.getPageInfo = async function ({ page, url }) {
     { months: dynamoMonths }
   );
 
-  clearTimeout(stopFunctie);
-  !page.isClosed() && page.close();
-  if (!pageInfo) {
-    return {
-      unavailable: `Geen resultaat <a href="${url}">van pageInfo</a>`,
-    };
-  }
-  return pageInfo;
+  pageInfo.longTextHTML = _t.killWhitespaceExcess(pageInfo.longTextHTML);
+
+  return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
+  
 };

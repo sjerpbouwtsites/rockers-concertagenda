@@ -213,3 +213,7 @@ export async function waitFor(wait = 500) {
     setTimeout(res, wait);
   });
 }
+
+export function killWhitespaceExcess(text = ''){
+  return text.replace(/\t{2,100}/g, "").replace(/\n{2,100}/g, "\n"); 
+}

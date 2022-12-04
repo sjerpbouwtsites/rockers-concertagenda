@@ -9,7 +9,7 @@ import makeScraperConfig from "./gedeeld/scraper-config.js";
 const neushoornScraper = new AbstractScraper(makeScraperConfig({
   workerData: Object.assign({}, workerData),
   puppeteerConfig: {
-    singlepage: {
+    singlePage: {
       timeout: 20000
     },
     app: {
@@ -56,7 +56,7 @@ neushoornScraper.makeBaseEventList = async function () {
   const rawEvents = await page.evaluate(() => {
     return Array.from(document.querySelectorAll(".productions__item")).map(
       (itemEl) => {
-        const textContent = itemEl.textContent.toLowerCase();
+        const textContent = _t.killWhitespaceExcess(itemEl.textContent.toLowerCase());
         const isRockInText =
           textContent.includes("punk") ||
           textContent.includes("rock") ||
@@ -88,12 +88,10 @@ neushoornScraper.makeBaseEventList = async function () {
 
 // GET PAGE INFO
 
-neushoornScraper.getPageInfo = async function ({ page, url }) {
-  const stopFunctie = setTimeout(() => {
-    throw new Error(
-      `getPageInfo is de max tijd voor zn functie ${this.maxExecutionTime} voorbij `
-    );
-  }, this.maxExecutionTime);
+neushoornScraper.getPageInfo = async function ({ page }) {
+  
+  const {stopFunctie} =  await this.getPageInfoStart()
+  
   const pageInfo = await page.evaluate(
     ({ months }) => {
       const res = {
@@ -145,7 +143,7 @@ neushoornScraper.getPageInfo = async function ({ page, url }) {
         const summaryEl = document.querySelector(".content .summary");
         const longEl = summaryEl.parentNode;
         longEl.removeChild(summaryEl);
-        res.longTextHTML = longEl.innerHTML;
+        res.longTextHTML = _t.killWhitespaceExcess(longEl.innerHTML);
       } catch (error) {
         res.errorsVoorErrorHandler.push({
           error,
@@ -167,24 +165,7 @@ neushoornScraper.getPageInfo = async function ({ page, url }) {
     },
     { months: neushoornMonths }
   );
-  if (pageInfo.error) {
-    _t.handleError(new Error(pageInfo.error, workerData, `get page info fail`));
-  }
-  pageInfo?.errorsVoorErrorHandler?.forEach((errorHandlerMeuk) => {
-    _t.handleError(
-      errorHandlerMeuk.error,
-      workerData,
-      errorHandlerMeuk.remarks
-    );
-  });
 
-  clearTimeout(stopFunctie);
-  !page.isClosed() && page.close();
-
-  if (!pageInfo) {
-    return {
-      unavailable: `Geen resultaat <a href="${url}">van pageInfo</a>`,
-    };
-  }
-  return pageInfo;
+  return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
+  
 };

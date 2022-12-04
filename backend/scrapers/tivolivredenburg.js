@@ -1,7 +1,7 @@
 import { workerData } from "worker_threads";
-import * as _t from "../mods/tools.js";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
+import _t from "../mods/tools.js";
 
 // SCRAPER CONFIG
 
@@ -28,21 +28,19 @@ tivoliVredenburgScraper.makeBaseEventList = async function () {
   
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
-  const rawEvents = await page.evaluate((workerIndex) => {
+  const rawEvents = await page.evaluate(() => {
     return Array.from(document.querySelectorAll(".agenda-list-item"))
-      .filter((eventEl,index) => { // eslint-disable-line
-        return index % 4 === workerIndex;
-      })
+      .filter((eventEl,index) => index % this.workerData.workerCount === this.workerData.index)
       .map((eventEl) => {
         const res = {};
         res.title =
           eventEl
             .querySelector(".agenda-list-item__title")
             ?.textContent.trim() ?? null;
-        res.shortText =
+        res.shortText =_t.killWhitespaceExcess(
           eventEl
             .querySelector(".agenda-list-item__text")
-            ?.textContent.trim() ?? null;
+            ?.textContent.trim() ?? '');
         res.image =
           eventEl
             .querySelector(".agenda-list-item__figure img")
@@ -53,7 +51,7 @@ tivoliVredenburgScraper.makeBaseEventList = async function () {
         res.location = "tivolivredenburg";
         return res;
       });
-  }, workerData.index);
+  }, null);
 
   this.dirtyLog(rawEvents)
 
@@ -65,12 +63,9 @@ tivoliVredenburgScraper.makeBaseEventList = async function () {
 
 // GET PAGE INFO
 
-tivoliVredenburgScraper.getPageInfo = async function ({ page, url }) {
-  const stopFunctie = setTimeout(() => {
-    throw new Error(
-      `makeBaseEventList is de max tijd voor zn functie ${this.maxExecutionTime} voorbij `
-    );
-  }, this.maxExecutionTime);
+tivoliVredenburgScraper.getPageInfo = async function ({ page }) {
+ 
+  const {stopFunctie} =  await this.getPageInfoStart()
 
   const pageInfo = await page.evaluate(() => {
     const res = {
@@ -78,12 +73,12 @@ tivoliVredenburgScraper.getPageInfo = async function ({ page, url }) {
       pageInfoID: `<a href='${document.location.href}'>${document.title}</a>`,
       errorsVoorErrorHandler: [],
     };
-    res.priceTextcontent =
-      document.querySelector(".btn-group__price")?.textContent.trim() ?? null;
-    res.priceContexttext =
-      document.querySelector(".event-cta")?.textContent.trim() ?? null;
-    res.longTextHTML =
-      document.querySelector(".event__text")?.innerHTML ?? null;
+    res.priceTextcontent =_t.killWhitespaceExcess(
+      document.querySelector(".btn-group__price")?.textContent.trim() ?? '');
+    res.priceContexttext = _t.killWhitespaceExcess(
+      document.querySelector(".event-cta")?.textContent.trim() ?? '');
+    res.longTextHTML = _t.killWhitespaceExcess(
+      document.querySelector(".event__text")?.innerHTML ?? '');
 
     const startDateMatch = document.location.href.match(/\d\d-\d\d-\d\d\d\d/); //
     res.startDate = "";
@@ -156,21 +151,6 @@ tivoliVredenburgScraper.getPageInfo = async function ({ page, url }) {
     return res;
   }, null);
 
-  pageInfo?.errorsVoorErrorHandler?.forEach((errorHandlerMeuk) => {
-    _t.handleError(
-      errorHandlerMeuk.error,
-      workerData,
-      errorHandlerMeuk.remarks
-    );
-  });
+  return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
 
-  clearTimeout(stopFunctie);
-  !page.isClosed() && page.close();
-
-  if (!pageInfo) {
-    return {
-      unavailable: `Geen resultaat <a href="${url}">van pageInfo</a>`,
-    };
-  }
-  return pageInfo;
 };

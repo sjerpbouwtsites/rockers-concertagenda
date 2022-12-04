@@ -13,7 +13,7 @@ const doornroosjeScraper = new AbstractScraper(makeScraperConfig({
       timeout: 35000,
       waitUntil: 'load'
     },
-    singlepage: {
+    singlePage: {
       timeout: 25000
     },
     app: {
@@ -36,11 +36,9 @@ doornroosjeScraper.makeBaseEventList = async function () {
   await page.waitForSelector(".c-program__title");
   await _t.waitFor(50);
 
-  const rawEvents = await page.evaluate((workerIndex) => {
+  const rawEvents = await page.evaluate(() => {
     return Array.from(document.querySelectorAll(".c-program__item"))
-      .filter((eventEl, index) => {
-        return index % 3 === workerIndex;
-      }) // de deling van die index afhankelijk van workerData.
+      .filter((eventEl, index) => index % this.workerData.workerCount === this.workerData.index)
       .map((eventEl) => {
         const res = {
           unavailable: null,
@@ -49,11 +47,11 @@ doornroosjeScraper.makeBaseEventList = async function () {
           eventEl.querySelector(".c-program__title")?.textContent.trim() ??
           eventEl.querySelector("h1,h2,h3")?.textContent.trim();
         null;
-        res.shortText =
+        res.shortText = _t.killWhitespaceExcess(
           eventEl
             .querySelector(".c-program__content")
             ?.textContent.trim()
-            .replace(res.title, "") ?? null;
+            .replace(res.title, "") ?? '');
         res.venueEventUrl = eventEl?.href;
         if (!res.title || !res.venueEventUrl) {
           res.unavailable = "title of url ontbreken";
@@ -61,7 +59,7 @@ doornroosjeScraper.makeBaseEventList = async function () {
         res.location = "doornroosje";
         return res;
       });
-  }, workerData.index);
+  }, null);
 
   return await this.makeBaseEventListEnd({
     stopFunctie, page, rawEvents}
@@ -71,12 +69,9 @@ doornroosjeScraper.makeBaseEventList = async function () {
 
 // GET PAGE INFO
 
-doornroosjeScraper.getPageInfo = async function ({ page, url }) {
-  const stopFunctie = setTimeout(() => {
-    throw new Error(
-      `makeBaseEventList is de max tijd voor zn functie ${this.maxExecutionTime} voorbij `
-    );
-  }, this.maxExecutionTime);
+doornroosjeScraper.getPageInfo = async function ({ page }) {
+  
+  const {stopFunctie} =  await this.getPageInfoStart()
 
   const pageInfo = await page.evaluate((months) => {
     const res = {
@@ -86,16 +81,16 @@ doornroosjeScraper.getPageInfo = async function ({ page, url }) {
     };
     res.image =
       document.querySelector(".c-header-event__image img")?.src ?? null;
-    res.priceTextcontent =
-      document.querySelector(".c-btn__price")?.textContent.trim() ?? null;
-    res.longTextHTML =
-      document.querySelector(".s-event__container")?.innerHTML ?? null;
+    res.priceTextcontent = _t.killWhitespaceExcess(
+      document.querySelector(".c-btn__price")?.textContent.trim() ?? '');
+    res.longTextHTML = _t.killWhitespaceExcess(
+      document.querySelector(".s-event__container")?.innerHTML ?? '');
 
     const embeds = document.querySelectorAll(".c-embed");
-    res.longTextHTML =
+    res.longTextHTML = _t.killWhitespaceExcess(
       embeds?.length ?? false
         ? res.longTextHTML + embeds.innerHTML
-        : res.longTextHTML;
+        : res.longTextHTML);
 
     const startDateRauwMatch = document
       .querySelector(".c-event-data")
@@ -151,21 +146,6 @@ doornroosjeScraper.getPageInfo = async function ({ page, url }) {
     return res;
   }, doornRoosjeMonths);
 
-  pageInfo?.errorsVoorErrorHandler?.forEach((errorHandlerMeuk) => {
-    _t.handleError(
-      errorHandlerMeuk.error,
-      workerData,
-      errorHandlerMeuk.remarks
-    );
-  });
+  return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
 
-  clearTimeout(stopFunctie);
-  !page.isClosed() && page.close();
-
-  if (!pageInfo) {
-    return {
-      unavailable: `Geen resultaat <a href="${url}">van pageInfo</a>`,
-    };
-  }
-  return pageInfo;
 };

@@ -1,4 +1,222 @@
 
+  undefined Error - 4:35:20 PM
+  Error: makeBaseEvent overtijd. Max: 15001
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:84:9)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  makeBaseEvent overtijd. Max: 15001
+  
+  
+  undefined Error - 4:35:19 PM
+  Error: makeBaseEvent overtijd. Max: 15001
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:84:9)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  makeBaseEvent overtijd. Max: 15001
+  
+  
+  013-2 Error - 4:35:06 PM
+  Error: Evaluation failed: TypeError: undefined is not a function
+    at Array.filter (<anonymous>)
+    at __puppeteer_evaluation_script__:3:8
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async nuldertienScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/013.js:28:21)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:50:29) 
+  Evaluation failed: TypeError: undefined is not a function
+    at Array.filter (<anonymous>)
+    at __puppeteer_evaluation_script__:3:8
+  
+  
+  013-3 Error - 4:35:06 PM
+  Error: Evaluation failed: TypeError: undefined is not a function
+    at Array.filter (<anonymous>)
+    at __puppeteer_evaluation_script__:3:8
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async nuldertienScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/013.js:28:21)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:50:29) 
+  Evaluation failed: TypeError: undefined is not a function
+    at Array.filter (<anonymous>)
+    at __puppeteer_evaluation_script__:3:8
+  
+  
+  undefined Error - 4:29:44 PM
+  Error: makeBaseEvent overtijd. Max: 15001
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:84:9)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  makeBaseEvent overtijd. Max: 15001
+  
+  
+  iduna-0 Error - 4:29:29 PM
+  TypeError: Cannot read properties of undefined (reading 'newPage')
+    at AbstractScraper.makeBaseEventListStart (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:101:37)
+    at idunaScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/iduna.js:36:42)
+    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:50:40)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'newPage')
+  
+  
+  iduna-0 Error - 4:29:13 PM
+  TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Browser'
+    |     property '_defaultContext' -> object with constructor 'BrowserContext'
+    --- property '_browser' closes the circle
+    at JSON.stringify (<anonymous>)
+    at idunaScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/iduna.js:33:33)
+    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:50:40)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Converting circular structure to JSON
+    --> starting at object with constructor 'Browser'
+    |     property '_defaultContext' -> object with constructor 'BrowserContext'
+    --- property '_browser' closes the circle
+  
+  
+  dbs-0 Error - 2:10:17 PM
+  TimeoutError: Navigation timeout of 5001 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111
+    at async FrameManager.navigateFrame (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:131:21)
+    at async Frame.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:512:16)
+    at async Page.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1167:16)
+    at async AbstractScraper.createSinglePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:508:7)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:360:29)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:58:5) 
+  Navigation timeout of 5001 ms exceeded
+  
+  
+  dbs-0 Error - 2:10:12 PM
+  TimeoutError: Navigation timeout of 5001 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111
+    at async FrameManager.navigateFrame (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:131:21)
+    at async Frame.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:512:16)
+    at async Page.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1167:16)
+    at async AbstractScraper.createSinglePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:508:7)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:360:29)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:58:5) 
+  Navigation timeout of 5001 ms exceeded
+  
+  
+  dbs-1 Error - 2:09:38 PM
+  TimeoutError: Navigation timeout of 5001 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111
+    at async FrameManager.navigateFrame (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:131:21)
+    at async Frame.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:512:16)
+    at async Page.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1167:16)
+    at async AbstractScraper.createSinglePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:508:7)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:360:29)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:58:5) 
+  Navigation timeout of 5001 ms exceeded
+  
+  
+  dbs-1 Error - 2:09:33 PM
+  TimeoutError: Navigation timeout of 5001 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111
+    at async FrameManager.navigateFrame (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:131:21)
+    at async Frame.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:512:16)
+    at async Page.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1167:16)
+    at async AbstractScraper.createSinglePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:508:7)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:360:29)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:58:5) 
+  Navigation timeout of 5001 ms exceeded
+  
+  
+  dbs-1 Error - 2:09:28 PM
+  TimeoutError: Navigation timeout of 5001 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111
+    at async FrameManager.navigateFrame (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:131:21)
+    at async Frame.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:512:16)
+    at async Page.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1167:16)
+    at async AbstractScraper.createSinglePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:508:7)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:360:29)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:58:5) 
+  Navigation timeout of 5001 ms exceeded
+  
+  
+  dbs-1 Error - 2:09:23 PM
+  TimeoutError: Navigation timeout of 5001 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111
+    at async FrameManager.navigateFrame (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:131:21)
+    at async Frame.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:512:16)
+    at async Page.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1167:16)
+    at async AbstractScraper.createSinglePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:508:7)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:360:29)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:58:5) 
+  Navigation timeout of 5001 ms exceeded
+  
+  
+  dbs-1 Error - 2:09:18 PM
+  TimeoutError: Navigation timeout of 5001 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111
+    at async FrameManager.navigateFrame (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:131:21)
+    at async Frame.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:512:16)
+    at async Page.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1167:16)
+    at async AbstractScraper.createSinglePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:508:7)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:360:29)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:58:5) 
+  Navigation timeout of 5001 ms exceeded
+  
+  
+  dbs-1 Error - 2:09:12 PM
+  TimeoutError: Navigation timeout of 5001 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111
+    at async FrameManager.navigateFrame (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:131:21)
+    at async Frame.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:512:16)
+    at async Page.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1167:16)
+    at async AbstractScraper.createSinglePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:508:7)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:360:29)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:58:5) 
+  Navigation timeout of 5001 ms exceeded
+  
+  
+  dbs-1 Error - 2:09:07 PM
+  TimeoutError: Navigation timeout of 5001 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111
+    at async FrameManager.navigateFrame (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:131:21)
+    at async Frame.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:512:16)
+    at async Page.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1167:16)
+    at async AbstractScraper.createSinglePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:508:7)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:360:29)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:58:5) 
+  Navigation timeout of 5001 ms exceeded
+  
+  
+  dbs-1 Error - 2:09:02 PM
+  TimeoutError: Navigation timeout of 5001 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111
+    at async FrameManager.navigateFrame (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:131:21)
+    at async Frame.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:512:16)
+    at async Page.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1167:16)
+    at async AbstractScraper.createSinglePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:508:7)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:360:29)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:58:5) 
+  Navigation timeout of 5001 ms exceeded
+  
+  
+  dbs-1 Error - 2:08:57 PM
+  TimeoutError: Navigation timeout of 5001 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111
+    at async FrameManager.navigateFrame (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:131:21)
+    at async Frame.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:512:16)
+    at async Page.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1167:16)
+    at async AbstractScraper.createSinglePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:508:7)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:360:29)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:58:5) 
+  Navigation timeout of 5001 ms exceeded
+  
+  
+  boerderij-0 Error - 2:07:17 PM
+  TypeError: Cannot read properties of undefined (reading 'isClosed')
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:470:11)
+    at boerderijScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/boerderij.js:151:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:370:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:58:5) 
+  Cannot read properties of undefined (reading 'isClosed')
+  
+  
   occii-0 Error - 1:39:10 PM
   TypeError: Converting circular structure to JSON
     --> starting at object with constructor 'Browser'

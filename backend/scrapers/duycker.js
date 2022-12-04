@@ -9,7 +9,7 @@ import makeScraperConfig from "./gedeeld/scraper-config.js";
 const duyckerScraper = new AbstractScraper(makeScraperConfig({
   workerData: Object.assign({}, workerData),
   puppeteerConfig: {
-    singlepage: {
+    singlePage: {
       timeout: 10000,
     },
     mainPage: {
@@ -47,8 +47,8 @@ duyckerScraper.makeBaseEventList = async function () {
         const anchor = rawEvent.querySelector('[itemprop="url"]') ?? null;
         const title =
           rawEvent.querySelector('[itemprop="name"]')?.textContent ?? null;
-        const shortText =
-          rawEvent.querySelector('[itemprop="name"] + p')?.textContent ?? null;
+        const shortText = _t.killWhitespaceExcess(
+          rawEvent.querySelector('[itemprop="name"] + p')?.textContent ?? '');
         const venueEventUrl = anchor?.dataset.href ?? null;
         const image = anchor?.querySelector("img")?.src ?? null;
         const startDateMatch = rawEvent
@@ -130,12 +130,10 @@ duyckerScraper.makeBaseEventList = async function () {
 };
 // GET PAGE INFO
 
-duyckerScraper.getPageInfo = async function ({ url, page }) {
-  const stopFunctie = setTimeout(() => {
-    throw new Error(
-      `getPageInfo is de max tijd voor zn functie ${this.maxExecutionTime} voorbij `
-    );
-  }, this.maxExecutionTime);
+duyckerScraper.getPageInfo = async function ({ page }) {
+  
+  const {stopFunctie} =  await this.getPageInfoStart()
+  
   await page.waitForSelector("#container .content.event", {
     timeout: 7500,
   });
@@ -144,36 +142,18 @@ duyckerScraper.getPageInfo = async function ({ url, page }) {
     const res = {};
     const contentBox = document.querySelector(".the_content") ?? null;
     if (contentBox) {
-      res.longTextHTML = contentBox.innerHTML;
+      res.longTextHTML = _t.killWhitespaceExcess(contentBox.innerHTML);
     }
 
-    res.priceTextcontent =
+    res.priceTextcontent = _t.killWhitespaceExcess(
       document.querySelector(".event-info .content-info")?.textContent.trim() ??
-      "";
+      "" );
 
     return res;
   }, null);
 
-  if (pageInfo.error) {
-    _t.handleError(new Error(pageInfo.error, workerData, `get page info fail`));
-  }
-  pageInfo?.errorsVoorErrorHandler?.forEach((errorHandlerMeuk) => {
-    _t.handleError(
-      errorHandlerMeuk.error,
-      workerData,
-      errorHandlerMeuk.remarks
-    );
-  });
-
-  clearTimeout(stopFunctie);
-  !page.isClosed() && page.close();
-
-  if (!pageInfo) {
-    return {
-      unavailable: `Geen resultaat <a href="${url}">van pageInfo</a>`,
-    };
-  }
-  return pageInfo;
+  return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
+  
 };
 
 // SINGLE EVENT CHECK

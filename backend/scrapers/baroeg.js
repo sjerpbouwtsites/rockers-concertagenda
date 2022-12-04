@@ -14,7 +14,7 @@ const baroegScraper = new AbstractScraper(makeScraperConfig({
     mainPage: {
       timeout: 45000,
     },
-    singlepage: {
+    singlePage: {
       timeout: 15000
     },
     app: {
@@ -59,7 +59,7 @@ baroegScraper.makeBaseEventList = async function () {
     res.title = event.title.rendered;
     res.shortText = event.excerpt.rendered;
     res.location = "baroeg";
-    res.longText = event?.content?.rendered;
+    res.longText = _t.killWhitespaceExcess(event?.content?.rendered ?? '');
     res.image =
       event?._embedded?.[
         "wp:featuredmedia"
@@ -77,11 +77,8 @@ baroegScraper.makeBaseEventList = async function () {
 // GET PAGE INFO
 
 baroegScraper.getPageInfo = async function ({ page, url }) {
-  const stopFunctie = setTimeout(() => {
-    throw new Error(
-      `getPageInfo is de max tijd voor zn functie ${this.maxExecutionTime} voorbij `
-    );
-  }, this.maxExecutionTime);
+  
+  const {stopFunctie} =  await this.getPageInfoStart()
 
   const pageInfo = await page.evaluate(
     ({ baroegMonths }) => {
@@ -125,10 +122,10 @@ baroegScraper.getPageInfo = async function ({ page, url }) {
         ).toISOString();
       }
 
-      res.priceElText =
+      res.priceElText =_t.killWhitespaceExcess(
         document.querySelector(".wp_theatre_event_tickets_url")?.textContent ??
-        null;
-      res.contextText = document.getElementById("content")?.textContent ?? null;
+        '');
+      res.contextText = _t.killWhitespaceExcess(document.getElementById("content")?.textContent ?? '');
 
       if (res.unavailable) {
         res.unavailable = `${res.unavailable} ${res.pageInfoID}`;
@@ -138,21 +135,8 @@ baroegScraper.getPageInfo = async function ({ page, url }) {
     { baroegMonths }
   );
 
-  clearTimeout(stopFunctie);
-  !page.isClosed() && page.close();
-
-  if (!pageInfo) {
-    return {
-      unavailable: `Geen resultaat <a href="${url}">van pageInfo</a>`,
-    };
-  }
-
-  if (pageInfo?.error) {
-    pageInfo.unavailable = `Dikke error bij href="${url}">van pageInfo</a>`;
-    _t.handleError(page.error, workerData);
-  }
-
-  return pageInfo;
+  return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
+  
 };
 
 
