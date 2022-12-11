@@ -54,6 +54,7 @@ const podiumGebruikt = {
   dbs: voluitNederlands,
   depul: kortNederlands,
   deflux:voluitNederlands,
+  dehelling:voluitNederlands,
   doornroosje: voluitNederlands,
   duycker: kortNederlands,
   effenaar: kortNederlands,

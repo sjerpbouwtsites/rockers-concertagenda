@@ -1,6 +1,18 @@
 [
   {
     "doorOpenDateTime": null,
+    "startDateTime": "2022-12-11T19:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.spotgroningen.nl/programma/enter-shikari/",
+    "title": "Enter Shikari",
+    "location": "oosterpoort",
+    "price": 26.1,
+    "shortText": "+ support: Trash Boat & Wargasm<br>Heftige post-hardcore goed voor bloedstollend feest",
+    "longText": "../public/texts/802aa00f-84a7-4a8c-b26b-a69ca11bb29c.html",
+    "image": "https://www.spotgroningen.nl/wp-content/uploads/2022/04/Enter-Shikari-768x375.jpg"
+  },
+  {
+    "doorOpenDateTime": null,
     "startDateTime": "2023-02-10T18:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://www.spotgroningen.nl/programma/dream-theater/",
@@ -8,19 +20,7 @@
     "location": "oosterpoort",
     "price": 69.6,
     "shortText": "<br>Progressieve metalpioniers kijken neer vanaf de top van de wereld",
-    "longText": "../public/texts/e57b056d-2a55-4d44-a139-c6f754d699b2.html",
+    "longText": "../public/texts/8a2a5f22-0034-4bf5-acd4-8c9a058fac31.html",
     "image": "https://www.spotgroningen.nl/wp-content/uploads/2022/11/A-Photo-Credit-Rayon-Richards-1-e1667922696677-768x434.jpg"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2023-03-30T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.spotgroningen.nl/programma/warhaus/",
-    "title": "Warhaus",
-    "location": "oosterpoort",
-    "price": 25.1,
-    "shortText": "<br>Het geesteskind van Maarten Devoldere (Balthazar) is terug met nieuw werk!",
-    "longText": "../public/texts/24a2514a-4b5e-4c03-b77b-a7221a9448af.html",
-    "image": "https://www.spotgroningen.nl/wp-content/uploads/2022/10/WarhausFW-1-768x432.jpg"
   }
 ]

@@ -1,4 +1,30 @@
 
+  undefined Error - 2:45:40 PM
+  Error: makeBaseEvent overtijd. Max: 20000
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:81:9)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  makeBaseEvent overtijd. Max: 20000
+  
+  
+  dehelling-0 Error - 2:45:21 PM
+  Error: Evaluation failed: SyntaxError: Unexpected token o in JSON at position 1
+    at JSON.parse (<anonymous>)
+    at __puppeteer_evaluation_script__:14:31
+    at Array.map (<anonymous>)
+    at __puppeteer_evaluation_script__:6:7
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async dehellingScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dehelling.js:35:21)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:47:29) 
+  Evaluation failed: SyntaxError: Unexpected token o in JSON at position 1
+    at JSON.parse (<anonymous>)
+    at __puppeteer_evaluation_script__:14:31
+    at Array.map (<anonymous>)
+    at __puppeteer_evaluation_script__:6:7
+  
+  
   metropool-0 Error - 1:42:19 PM
   TimeoutError: Navigation timeout of 25000 ms exceeded
     at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
