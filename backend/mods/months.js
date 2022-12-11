@@ -64,7 +64,7 @@ const podiumGebruikt = {
   melkweg: kortNederlands,
   metropool: kortNederlands,
   neushoorn: kortNederlands,
-  oostpoort: kortNederlands,
+  oosterpoort: kortNederlands,
   paradiso: voluitNederlands,
   patronaat: kortNederlands,
   volt: kortNederlands,

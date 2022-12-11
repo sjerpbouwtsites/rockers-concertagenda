@@ -107,7 +107,7 @@ class WorkerListConf {
     });
     this.create({ family: "depul", workerCount: 2 });
     this.create({ family: "deflux", workerCount: 1 });
-    this.create({ family: "oostpoort", workerCount: 3, workerConcurrent: 3 });
+    this.create({ family: "oosterpoort", workerCount: 3, workerConcurrent: 3 });
     this.create({ family: "paradiso", workerCount: 4 });
     this.create({ family: "volt", workerCount: 1 });
     this.create({ family: "duycker", workerCount: 1 });
