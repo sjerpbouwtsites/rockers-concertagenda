@@ -10,6 +10,7 @@ const fsDirections = {
   dbsJson: path.resolve("./event-lists/dbs.json"),
   defluxJson: path.resolve("./event-lists/deflux.json"),
   depulJson: path.resolve("./event-lists/depul.json"),
+  dehellingJson: path.resolve("./event-lists/dehelling.json"),
   duyckerJson: path.resolve("./event-lists/duycker.json"),
   dynamoJson: path.resolve("./event-lists/dynamo.json"),
   effenaarJson: path.resolve("./event-lists/effenaar.json"),
