@@ -1,4 +1,4 @@
-import { workerData } from "worker_threads";
+import { parentPort, workerData } from "worker_threads";
 import * as _t from "../mods/tools.js";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
@@ -147,8 +147,28 @@ dbsScraper.getPageInfo = async function ({ page }) {
       categories.includes("doom") ||
       categories.includes("industrial");
 
+    res.ticketURL = document.querySelector('.tribe-events-event-url a')?.href ?? null;
+    if (!res.ticketURL){
+      res.priceTextcontent = `€0,00`;
+    }
+
     return res;
   }, null);
+
+  if (pageInfo.ticketURL) {
+    try {
+      await page.goto(pageInfo.ticketURL)
+      await page.waitForSelector('[data-testid]', {timeout: 6500})
+      await _t.waitFor(250);
+      pageInfo.priceTextcontent = await page.evaluate(()=>{
+        return document.querySelectorAll('[data-testid]')[1]?.textContent ?? null
+      })
+    } catch (error) {
+      parentPort.postMessage(this.qwm.debugger({
+        error, remark: 'prijs ophalen dbs ticketpagina'
+      }))
+    }
+  }
 
   return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
   
