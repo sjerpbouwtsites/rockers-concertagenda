@@ -129,7 +129,7 @@ gebrdenobelScraper.getPageInfo = async function ({ page }) {
       res.shortText = 
         document.querySelector(".hero-cta_left__text p")?.textContent ?? '';
       res.longTextHTML = 
-        document.querySelector(".js-contentBlocks")?.innerHTML ?? '';
+        document.querySelector(".content .contentBlocks")?.innerHTML ?? '';
       res.image = document.querySelector(".hero img")?.src ?? null;
 
       return res;

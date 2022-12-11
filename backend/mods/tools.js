@@ -138,7 +138,7 @@ export function getPriceFromHTML(testText = null, contextText = null) {
 
   const onlyIntegers = testText.match(/\d{1,3}/);
   if (onlyIntegers && onlyIntegers.length) {
-    return onlyIntegers[0];
+    return Number(onlyIntegers[0]);
   }
 
   if (contextText) {
@@ -180,7 +180,7 @@ export function postPageInfoProcessing(pageInfo = null) {
 
   if (pageInfo.priceTextcontent || pageInfo.priceContexttext) {
     const context = pageInfo?.priceContexttext ?? null;
-    pageInfoCopy.price = getPriceFromHTML(pageInfo.priceTextcontent, context);
+    pageInfoCopy.price = Number(getPriceFromHTML(pageInfo.priceTextcontent, context));
   }
 
   pageInfoCopy.longText = saveLongTextHTML(pageInfo);
@@ -215,5 +215,5 @@ export async function waitFor(wait = 500) {
 }
 
 export function killWhitespaceExcess(text = ''){
-  return text.replace(/\t{2,100}/g, "").replace(/\n{2,100}/g, "\n"); 
+  return text.replace(/\t{2,100}/g, "").replace(/\n{2,100}/g, "\n").replace(/\s{2,100}/g, "\n").trim(); 
 }

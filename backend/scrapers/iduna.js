@@ -31,62 +31,73 @@ idunaScraper.makeBaseEventList = async function () {
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
-  let metalEvents = await page
-    .evaluate(() => {
-      loadposts("metal", 1, 50); // eslint-disable-line
-      return new Promise((resolve) => {
-        setTimeout(() => {
-          const metalEvents = Array.from(
-            document.querySelectorAll("#gridcontent .griditemanchor")
-          ).map((event) => {
-            return {
-              venueEventUrl: event.href,
-              title: event.querySelector(".griditemtitle")?.textContent.trim(),
-              location: "iduna",
-            };
-          });
-          resolve(metalEvents);
-        }, 2500);
-      });
-    })
-    .then((metalEvents) => metalEvents);
+  let metalEvents, punkEvents;
+  try {
 
-  let punkEvents = await page
-    .evaluate(() => {
+    metalEvents = await page
+      .evaluate(() => {
+      loadposts("metal", 1, 50); // eslint-disable-line
+        return new Promise((resolve) => {
+          setTimeout(() => {
+            const metalEvents = Array.from(
+              document.querySelectorAll("#gridcontent .griditemanchor")
+            ).map((event) => {
+              return {
+                venueEventUrl: event.href,
+                title: event.querySelector(".griditemtitle")?.textContent ?? '',
+                location: "iduna",
+              };
+            });
+            resolve(metalEvents);
+          }, 2500);
+        });
+      })
+      .then((metalEvents) => metalEvents);
+
+    punkEvents = await page
+      .evaluate(() => {
       // no-eslint
       // hack VAN DE SITE ZELF
       loadposts("punk", 1, 50); // eslint-disable-line
 
-      return new Promise((resolve) => {
-        setTimeout(() => {
-          const punkEvents = Array.from(
-            document.querySelectorAll("#gridcontent .griditemanchor")
-          ).map((event) => {
-            return {
-              venueEventUrl: event.href,
-              title: event.querySelector(".griditemtitle")?.textContent.trim(),
-              location: "iduna",
-            };
-          });
-          resolve(punkEvents);
-        }, 2500);
-      });
-    })
-    .then((punkEvents) => punkEvents);
+        return new Promise((resolve) => {
+          setTimeout(() => {
+            const punkEvents = Array.from(
+              document.querySelectorAll("#gridcontent .griditemanchor")
+            ).map((event) => {
+              return {
+                venueEventUrl: event.href,
+                title: event.querySelector(".griditemtitle")?.textContent.trim(),
+                location: "iduna",
+              };
+            });
+            resolve(punkEvents);
+          }, 2500);
+        });
+      })
+      .then((punkEvents) => punkEvents);
     
-  const metalEventsTitles = metalEvents.map((event) => {
-    return event.title;
+    const metalEventsTitles = metalEvents.map((event) => {
+      return event.title;
+    });
+    
+    punkEvents.forEach((punkEvent) => {
+      if (!metalEventsTitles.includes(punkEvent)) {
+        metalEvents.push(punkEvent);
+      }
+    });    
+  } catch (error) {
+    _t.handleError(error, workerData, 'wrapper shit weer he')
+  }
+    
+  const rawEvents = metalEvents.map(musicEvent =>{
+    musicEvent.title = _t.killWhitespaceExcess(musicEvent.title);
+    return musicEvent;
   });
-    
-  punkEvents.forEach((punkEvent) => {
-    if (!metalEventsTitles.includes(punkEvent)) {
-      metalEvents.push(punkEvent);
-    }
-  });
-    
-  this.dirtyLog(metalEvents)
+
+  
   return await this.makeBaseEventListEnd({
-    stopFunctie, page, rawEvents: metalEvents}
+    stopFunctie, page, rawEvents}
   );
 };
 
