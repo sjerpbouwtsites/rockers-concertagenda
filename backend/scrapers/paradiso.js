@@ -81,7 +81,6 @@ paradisoScraper.makeBaseEventList = async function () {
 
           return {
             venueEventUrl,
-            location: "paradiso",
             title,
             shortText,
           };
@@ -181,7 +180,7 @@ paradisoScraper.getPageInfo = async function ({ page }) {
 
       const imageM = document
         .querySelector('[style*="background-im"]')
-        ?.style.backgroundImage.match(/https.*.jpg|https.*.jpg/);
+        ?.style.backgroundImage.match(/https.*.jpg|https.*.png/);
       if (imageM && imageM.length) {
         res.image = imageM[0] + "?w=600&h=400&fit=crop-50-50";
       }

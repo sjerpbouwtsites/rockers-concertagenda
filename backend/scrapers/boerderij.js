@@ -2,7 +2,6 @@ import { workerData } from "worker_threads";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import axios from "axios";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
-import * as _t from "../mods/tools.js";
 
 // SCRAPER CONFIG
 
@@ -146,7 +145,6 @@ boerderijScraper.getPageInfo = async function ({ event }) {
       remarks: "doorOpenDateTime samenvoeging",
     });
   }
-  pageInfo.location = "boerderij";
 
   return await this.getPageInfoEnd({pageInfo, stopFunctie})
 

@@ -45,7 +45,6 @@ dbsScraper.makeBaseEventList = async function () {
           const titleLinkEl = eventEl.querySelector(".fusion-events-meta .url");
           res.title = titleLinkEl ? titleLinkEl.textContent.trim() : "";
           res.venueEventUrl = titleLinkEl ? titleLinkEl.href : "";
-          res.location = "dbs";
           res.error = null;
           const startDateEl =
             eventEl.querySelector(".tribe-event-date-start") ?? null;
@@ -121,7 +120,7 @@ dbsScraper.makeBaseEventList = async function () {
 
 // GET PAGE INFO
 
-dbsScraper.getPageInfo = async function ({ page, url }) {
+dbsScraper.getPageInfo = async function ({ page }) {
   
   const {stopFunctie} =  await this.getPageInfoStart()
   

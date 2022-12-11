@@ -55,7 +55,6 @@ gebrdenobelScraper.makeBaseEventList = async function () {
 
         res.title =
           eventEl.querySelector(".media-heading")?.textContent ?? null;
-        res.location = "gebrdenobel";
         return res;
       });
   }, workerData.index);

@@ -67,9 +67,7 @@ neushoornScraper.makeBaseEventList = async function () {
           ".productions__item__content span:first-child"
         ).textContent;
         const venueEventUrl = itemEl.href;
-        const location = "neushoorn";
         return {
-          location,
           venueEventUrl,
           textContent,
           isRockInText,
@@ -153,7 +151,7 @@ neushoornScraper.getPageInfo = async function ({ page }) {
 
       const imageMatch = document
         .querySelector(".header--theatre")
-        ?.style.backgroundImage.match(/https.*.png|https.*.jpg/); // TODO REGEXES afsplitsen
+        ?.style.backgroundImage.match(/https.*.png|https.*.jpg/);
       if (imageMatch && imageMatch.length) {
         res.image = imageMatch[0];
       }

@@ -45,7 +45,6 @@ idunaScraper.makeBaseEventList = async function () {
               return {
                 venueEventUrl: event.href,
                 title: event.querySelector(".griditemtitle")?.textContent ?? '',
-                location: "iduna",
               };
             });
             resolve(metalEvents);
@@ -68,7 +67,6 @@ idunaScraper.makeBaseEventList = async function () {
               return {
                 venueEventUrl: event.href,
                 title: event.querySelector(".griditemtitle")?.textContent.trim(),
-                location: "iduna",
               };
             });
             resolve(punkEvents);

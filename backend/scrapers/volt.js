@@ -57,7 +57,6 @@ voltScraper.makeBaseEventList = async function () {
         const image = rawEvent.querySelector("img")?.src ?? null;
         return {
           venueEventUrl,
-          location: "volt",
           title,
           image,
         };

@@ -57,7 +57,6 @@ baroegScraper.makeBaseEventList = async function () {
     const res = {};
     res.title = event.title.rendered;
     res.shortText = event.excerpt.rendered;
-    res.location = "baroeg"; // TODO naar config oid verplaatsen
     res.image =
       event?._embedded?.[
         "wp:featuredmedia"

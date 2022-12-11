@@ -49,7 +49,6 @@ defluxScraper.makeBaseEventList = async function () {
     return {
       venueEventUrl: axiosResultSingle.link,
       title: axiosResultSingle.title.rendered,
-      location: 'deflux',
       id: axiosResultSingle.id
     }
   })

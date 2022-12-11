@@ -58,7 +58,6 @@ afasliveScraper.makeBaseEventList = async function () {
         res.venueEventUrl = agendaBlock.querySelector("a")?.href ?? null;
         res.image = agendaBlock.querySelector("img")?.src ?? null;
         res.title = agendaBlock.querySelector(".eventTitle")?.textContent ?? "";
-        res.location = "afaslive";
         return res;
       });
   }, {workerData});

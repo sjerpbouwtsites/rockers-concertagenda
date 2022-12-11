@@ -43,7 +43,7 @@ metropoolScraper.makeBaseEventList = async function () {
         const testText = rawEvent.dataset?.genres || rawEvent.textContent;
 
         return (
-          testText.includes("metal") ||
+          testText.includes("metal") || // TODO ALGEMENE TEST VAN MAKEN
           testText.includes("punk") ||
           testText.includes("noise") ||
           testText.includes("hardcore") ||
@@ -136,7 +136,6 @@ metropoolScraper.getPageInfo = async function ({ page }) {
     const ofc = document.querySelector(".object-fit-cover");
     res.image = document.contains(ofc) && `https://metropool.nl/${ofc.srcset}`;
 
-    res.location = "metropool";
     if (res.unavailable) {
       res.unavailable += res.pageInfoID;
     }

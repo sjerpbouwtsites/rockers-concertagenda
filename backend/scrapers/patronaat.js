@@ -1,6 +1,5 @@
 import { workerData } from "worker_threads";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
-import * as _t from "../mods/tools.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 // SCRAPER CONFIG
 
@@ -39,7 +38,6 @@ patronaatScraper.makeBaseEventList = async function () {
           eventEl.querySelector("[class^='event__image'] img")?.src ?? null;
         res.venueEventUrl = eventEl.querySelector("a[href]")?.href ?? null;
         res.title = eventEl.querySelector(".event__name")?.textContent.trim();
-        res.location = "patronaat";
         res.shortText = eventEl
           .querySelector(".event__subtitle")
           ?.textContent.trim() ?? '';

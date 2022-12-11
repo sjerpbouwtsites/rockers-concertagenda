@@ -56,7 +56,6 @@ melkwegScraper.makeBaseEventList = async function () {
         res.title =
           eventEl.querySelector('h3[class*="title"]')?.textContent ?? "";
         res.venueEventUrl = anchor.href;
-        res.location = "melkweg";
         return res;
       });
   }, {workerData});
