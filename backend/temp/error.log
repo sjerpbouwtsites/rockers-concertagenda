@@ -1,4 +1,59 @@
 
+  iduna-0 Error - 8:42:35 AM
+  TypeError: Cannot read properties of undefined (reading 'longTextHTML')
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:125:17
+    at Array.map (<anonymous>)
+    at AbstractScraper.makeBaseEventListEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:124:27)
+    at idunaScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/iduna.js:98:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:47:29) 
+  Cannot read properties of undefined (reading 'longTextHTML')
+  
+  
+  iduna-0 Error - 8:42:35 AM
+  TypeError: Cannot read properties of undefined (reading 'title')
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/iduna.js:85:20
+    at Array.map (<anonymous>)
+    at idunaScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/iduna.js:84:43)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:47:29) 
+  Cannot read properties of undefined (reading 'title')
+  
+  
+  undefined Error - 8:40:55 AM
+  Error: makeBaseEvent overtijd. Max: 15001
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:81:9)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  makeBaseEvent overtijd. Max: 15001
+  
+  
+  iduna-0 Error - 8:40:46 AM
+  TypeError: Cannot read properties of undefined (reading 'title')
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/iduna.js:82:18
+    at Array.map (<anonymous>)
+    at idunaScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/iduna.js:81:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:47:29) 
+  Cannot read properties of undefined (reading 'title')
+  
+  
+  undefined Error - 8:38:28 AM
+  Error: makeBaseEvent overtijd. Max: 15001
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:81:9)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  makeBaseEvent overtijd. Max: 15001
+  
+  
+  undefined Error - 8:37:39 AM
+  Error: makeBaseEvent overtijd. Max: 15001
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:81:9)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  makeBaseEvent overtijd. Max: 15001
+  
+  
   events-list-0 Error - 11:40:10 PM
   SyntaxError: Unexpected end of JSON input
     at JSON.parse (<anonymous>)

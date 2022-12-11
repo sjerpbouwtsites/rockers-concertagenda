@@ -215,5 +215,5 @@ export async function waitFor(wait = 500) {
 }
 
 export function killWhitespaceExcess(text = ''){
-  return text.replace(/\t{2,100}/g, "").replace(/\n{2,100}/g, "\n"); 
+  return text.replace(/\t{2,100}/g, "").replace(/\n{2,100}/g, "\n").replace(/\s{2,100}/g, "\n").trim(); 
 }
