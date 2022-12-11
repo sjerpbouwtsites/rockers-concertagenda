@@ -124,7 +124,13 @@ async function getBaseMusicEvents(browser, skipWithMetalfan, qwm) {
     })
     .filter((musicEvent) => {
       return musicEvent && musicEvent.location;
+    })
+    .filter(musicEvent => {
+      return !skipWithMetalfan.includes(musicEvent.location)
     });
+
+  
+
 
   musicEvents.forEach((musicEvent) => {
     musicEvent.register();
