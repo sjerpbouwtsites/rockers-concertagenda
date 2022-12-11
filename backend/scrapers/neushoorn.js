@@ -143,6 +143,7 @@ neushoornScraper.getPageInfo = async function ({ page }) {
         const summaryEl = document.querySelector(".content .summary");
         const longEl = summaryEl.parentNode;
         longEl.removeChild(summaryEl);
+        res.longTextHTML = longEl.innerHTML;
       } catch (error) {
         res.errorsVoorErrorHandler.push({
           error,
@@ -150,14 +151,11 @@ neushoornScraper.getPageInfo = async function ({ page }) {
         });
       }
 
-      const imageEl = document.querySelector('[style*="url"]');
-      res.imageElLen = imageEl.length;
-      if (imageEl) {
-        const imageMatch =
-          imageEl.style.backgroundImage.match(/https.*jpg/) ?? null;
-        if (imageMatch) {
-          res.image = imageMatch[1];
-        }
+      const imageMatch = document
+        .querySelector(".header--theatre")
+        ?.style.backgroundImage.match(/https.*.png|https.*.jpg/); // TODO REGEXES afsplitsen
+      if (imageMatch && imageMatch.length) {
+        res.image = imageMatch[0];
       }
 
       return res;
