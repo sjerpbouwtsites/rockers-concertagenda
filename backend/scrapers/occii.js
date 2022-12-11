@@ -1,6 +1,5 @@
 import { workerData } from "worker_threads";
 import getVenueMonths from "../mods/months.js";
-import * as _t from "../mods/tools.js";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 
@@ -46,7 +45,6 @@ occiiScraper.makeBaseEventList = async function () {
           shortText:
             occiiEvent.querySelector(".occii-events-description")
               ?.textContent ?? "",
-          location: "occii",
         };
       });
   }, {workerData});

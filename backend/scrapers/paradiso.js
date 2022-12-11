@@ -81,7 +81,6 @@ paradisoScraper.makeBaseEventList = async function () {
 
           return {
             venueEventUrl,
-            location: "paradiso",
             title,
             shortText,
           };

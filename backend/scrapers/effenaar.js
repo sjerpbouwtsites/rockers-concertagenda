@@ -1,5 +1,4 @@
 import { workerData } from "worker_threads";
-import * as _t from "../mods/tools.js";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 
@@ -42,7 +41,6 @@ effenaarScraper.makeBaseEventList = async function () {
           res.title = eventEl.querySelector(".card-title")?.textContent.trim();
           res.shortText = eventEl.querySelector(".card-subtitle")?.textContent ?? '';
           res.venueEventUrl = eventEl?.href;
-          res.location = "effenaar";
           return res;
         });
     },

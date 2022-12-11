@@ -46,8 +46,6 @@ bibelotScraper.makeBaseEventList = async function () {
         : [null, null];
       res.shortText = shortTextSplit[1];
       res.venueEventUrl = eventEl.querySelector(".link")?.href ?? null;
-      res.location = "bibelot";
-
       return res;
     });
   });

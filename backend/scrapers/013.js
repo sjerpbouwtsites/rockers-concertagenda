@@ -2,7 +2,6 @@
 import { workerData } from "worker_threads";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
-import * as _t from "../mods/tools.js";
 
 // SCRAPER CONFIG
 
@@ -49,7 +48,6 @@ nuldertienScraper.makeBaseEventList = async function () {
         } else {
           res.unavailable = "geen datum gevonden";
         }
-        res.location = "013";
         res.shortText = eventEl
           .querySelector(".event-list-item__subtitle")
           ?.textContent.trim() ?? '';

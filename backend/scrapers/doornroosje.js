@@ -55,7 +55,6 @@ doornroosjeScraper.makeBaseEventList = async function () {
         if (!res.title || !res.venueEventUrl) {
           res.unavailable = "title of url ontbreken";
         }
-        res.location = "doornroosje";
         return res;
       });
   }, {workerData});

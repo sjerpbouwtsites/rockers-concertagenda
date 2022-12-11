@@ -141,6 +141,10 @@ export default class AbstractScraper {
     });
 
     return rawEvents
+      .map(rawEvent => {
+        rawEvent.location = workerData.family;
+        return rawEvent
+      })
       .filter(this.basicMusicEventsFilter)
       .map((event) => new MusicEvent(event));
   }

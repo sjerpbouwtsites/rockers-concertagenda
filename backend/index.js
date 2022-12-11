@@ -10,6 +10,8 @@ import RockWorker from "./mods/rock-worker.js";
 import getWorkerConfig from "./mods/worker-config.js";
 import { WorkerMessage } from "./mods/rock-worker.js";
 
+//killall -s 9 chrome; clear; node index.js
+
 let monitorWebsocketServer = null;
 
 async function init() {

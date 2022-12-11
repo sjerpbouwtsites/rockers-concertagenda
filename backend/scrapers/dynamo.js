@@ -1,7 +1,6 @@
 import { workerData } from "worker_threads";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
-import * as _t from "../mods/tools.js"
 
 // SCRAPER CONFIG
 
@@ -41,8 +40,6 @@ dynamoScraper.makeBaseEventList = async function () {
         .map((baseEvent) => {
           const venueEventUrl = baseEvent.querySelector("a")?.href ?? "";
           const title = baseEvent.querySelector("h4")?.textContent ?? "";
-          const location = "dynamo";
-
           const timelineInfoContainerEl = baseEvent.querySelector(
             ".timeline-info-container"
           );
@@ -52,7 +49,6 @@ dynamoScraper.makeBaseEventList = async function () {
           return {
             venueEventUrl,
             title,
-            location,
             shortText
   
           };

@@ -113,7 +113,6 @@ duyckerScraper.makeBaseEventList = async function () {
           startDateTime,
           openDoorDateTime,
           shortText,
-          location: "duycker",
           title,
           image,
         };

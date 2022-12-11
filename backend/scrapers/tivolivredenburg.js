@@ -1,7 +1,6 @@
 import { workerData } from "worker_threads";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
-import * as _t from "../mods/tools.js";
 
 // SCRAPER CONFIG
 
@@ -48,7 +47,6 @@ tivoliVredenburgScraper.makeBaseEventList = async function () {
         res.venueEventUrl = eventEl.querySelector(
           ".agenda-list-item__title-link"
         ).href;
-        res.location = "tivolivredenburg";
         return res;
       });
   }, {workerData});

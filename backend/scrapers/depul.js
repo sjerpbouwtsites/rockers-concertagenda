@@ -81,7 +81,6 @@ depulScraper.makeBaseEventList = async function () {
           return {
             image,
             venueEventUrl,
-            location: "depul",
             title,
             startDate,
             shortText,

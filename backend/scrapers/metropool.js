@@ -136,7 +136,6 @@ metropoolScraper.getPageInfo = async function ({ page }) {
     const ofc = document.querySelector(".object-fit-cover");
     res.image = document.contains(ofc) && `https://metropool.nl/${ofc.srcset}`;
 
-    res.location = "metropool";
     if (res.unavailable) {
       res.unavailable += res.pageInfoID;
     }

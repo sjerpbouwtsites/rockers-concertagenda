@@ -1,5 +1,4 @@
 import { workerData } from "worker_threads";
-import * as _t from "../mods/tools.js";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 
@@ -114,7 +113,6 @@ kavkaScraper.makeBaseEventList = async function () {
               ?.textContent.trim() ?? "";
           res.shortText = 
             rawEvent.querySelector("article h3 + p")?.textContent.trim() ?? "";
-          res.location = "kavka";
           res.venueEventUrl = rawEvent.href;
           return res;
         });

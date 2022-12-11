@@ -67,9 +67,7 @@ neushoornScraper.makeBaseEventList = async function () {
           ".productions__item__content span:first-child"
         ).textContent;
         const venueEventUrl = itemEl.href;
-        const location = "neushoorn";
         return {
-          location,
           venueEventUrl,
           textContent,
           isRockInText,
