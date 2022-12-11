@@ -1,17 +1,5 @@
 [
   {
-    "doorOpenDateTime": "2022-12-07T18:30:00.000Z",
-    "startDateTime": "2022-12-07T19:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.effenaar.nl/agenda/club-void-6",
-    "title": "Club Void",
-    "location": "effenaar",
-    "price": 12.5,
-    "shortText": "Ter Ziele + Radeloos/Ziedend + Pothamus",
-    "longText": "../public/texts/220aab97-9a87-4c70-abbb-3ee46a30aadc.html",
-    "image": "https://d3gy47dclw6o24.cloudfront.net/2022-10/ClubVoid_TerZiele_eventheader.jpg"
-  },
-  {
     "doorOpenDateTime": "2022-12-15T18:30:00.000Z",
     "startDateTime": "2022-12-15T19:00:00.000Z",
     "endDateTime": null,
@@ -20,7 +8,7 @@
     "location": "effenaar",
     "price": 12.5,
     "shortText": "Atlanta + Soothsayer Orchestra",
-    "longText": "../public/texts/e3ce30f0-f2cc-444f-aae3-165a79efb03d.html",
+    "longText": "../public/texts/cf9ee447-8415-4efc-ad30-c9833f8cea02.html",
     "image": "https://d3gy47dclw6o24.cloudfront.net/2022-10/ClubVoid_Atlanta_eventheader.jpg"
   },
   {
@@ -30,45 +18,55 @@
     "venueEventUrl": "https://www.effenaar.nl/agenda/twilight-force-winter-wonder-tour",
     "title": "Twilight Force - Winter Wonder Tour",
     "location": "effenaar",
-    "price": "22",
+    "price": 22,
     "shortText": "+ Seven Spires + Silver Bullet",
-    "longText": "../public/texts/fc210680-4857-44fc-9b2a-4610352e9951.html",
+    "longText": "../public/texts/1045f76b-d763-403a-923d-b273dfab3900.html",
     "image": "https://d3gy47dclw6o24.cloudfront.net/2022-08/615d5d666ae0e.jpg"
   },
   {
-    "doorOpenDateTime": "2023-04-15T18:00:00.000Z",
-    "startDateTime": "2023-04-15T17:30:00.000Z",
+    "doorOpenDateTime": "2023-03-17T19:00:00.000Z",
+    "startDateTime": "2023-03-17T19:30:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.effenaar.nl/agenda/prognosis-festival-zaterdag",
-    "title": "Prognosis Festival | Zaterdag",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/ibex-angel-order-coldborn-witchfukker",
+    "title": "Ibex Angel Order + Coldborn + Witchfukker",
     "location": "effenaar",
-    "price": 59,
-    "shortText": "",
-    "longText": "../public/texts/a81a8e52-1d4d-4e7c-89e8-f45d9095b94c.html",
-    "image": "https://d3gy47dclw6o24.cloudfront.net/2022-08/627264277d1b9.jpg"
+    "shortText": "Eternal Eclipse presents",
+    "longText": "../public/texts/7f6ddcad-4c79-41b2-b1f2-738b71286bf6.html",
+    "image": "https://d3gy47dclw6o24.cloudfront.net/2022-12/Eternal%20Eclipse%20-%20Wide%20zonder%20genres.jpg"
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2023-05-12T10:00:00.000Z",
+    "startDateTime": "2023-05-10T10:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.effenaar.nl/agenda/bridge-vr-12-mei",
-    "title": "BRIDGE - vr 12 mei",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/bridge-wo-10-mei",
+    "title": "BRIDGE - wo 10 mei",
     "location": "effenaar",
     "price": null,
     "shortText": "Eindhoven Guitar Festival",
-    "longText": "../public/texts/acff31d9-0cc3-4cc9-af36-eaf5f6f247c6.html",
+    "longText": "../public/texts/b6ea6c2e-2c2b-429c-bcf4-955b245a1bff.html",
     "image": "https://d3gy47dclw6o24.cloudfront.net/2022-11/Bridge-Mailchimp_Header2ENG.jpg"
   },
   {
-    "doorOpenDateTime": "2023-10-07T14:00:00.000Z",
-    "startDateTime": "2023-10-07T14:30:00.000Z",
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-05-13T10:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.effenaar.nl/agenda/come-you-are-2023",
-    "title": "Come As You Are 2023",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/bridge-za-13-mei",
+    "title": "BRIDGE - za 13 mei",
     "location": "effenaar",
-    "price": "30",
-    "shortText": "Het beste van drie decennia gitaarmuziek",
-    "longText": "../public/texts/8801286f-4ec5-4247-88bf-0a2785eda38d.html",
-    "image": "https://d3gy47dclw6o24.cloudfront.net/2022-11/Come%20As%20You%20Are%202023%20-%20gitaarmuziekfestival%20-%20Effenaar%201920x1080.jpg"
+    "price": null,
+    "shortText": "Eindhoven Guitar Festival",
+    "longText": "../public/texts/1b1b84ee-2739-4c90-ac72-f1cec5748c35.html",
+    "image": "https://d3gy47dclw6o24.cloudfront.net/2022-11/Bridge-Mailchimp_Header2ENG.jpg"
+  },
+  {
+    "doorOpenDateTime": "2023-12-08T15:00:00.000Z",
+    "startDateTime": "2023-12-08T15:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.effenaar.nl/agenda/eindhoven-metal-meeting-2023",
+    "title": "EINDHOVEN METAL MEETING 2023",
+    "location": "effenaar",
+    "shortText": "",
+    "longText": "../public/texts/5f05b6b3-eee4-4d67-ba08-e4cf5050cc0f.html",
+    "image": "https://d3gy47dclw6o24.cloudfront.net/2022-12/EMM2023_header_event_2400x1256pix.jpg"
   }
 ]

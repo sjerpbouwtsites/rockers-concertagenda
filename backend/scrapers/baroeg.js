@@ -57,8 +57,7 @@ baroegScraper.makeBaseEventList = async function () {
     const res = {};
     res.title = event.title.rendered;
     res.shortText = event.excerpt.rendered;
-    res.location = "baroeg";
-    res.longText = event?.content?.rendered ?? '';
+    res.location = "baroeg"; // TODO naar config oid verplaatsen
     res.image =
       event?._embedded?.[
         "wp:featuredmedia"
@@ -125,6 +124,21 @@ baroegScraper.getPageInfo = async function ({ page }) {
         document.querySelector(".wp_theatre_event_tickets_url")?.textContent ??
         '';
       res.contextText = document.getElementById("content")?.textContent ?? '';
+
+      const postContent = document.querySelector('.single-post .post-content') ?? null;
+      if (postContent){
+        const postHeading = postContent.querySelector('.wpt_events') ?? null;
+        if (postHeading) {
+          postContent.removeChild(postHeading)
+        }
+        const someH3 = postContent.querySelector('h3') ?? null;
+        if (someH3) {
+          postContent.removeChild(someH3)
+        }
+        res.longTextHTML = postContent.innerHTML;
+      }
+
+
 
       if (res.unavailable) {
         res.unavailable = `${res.unavailable} ${res.pageInfoID}`;
