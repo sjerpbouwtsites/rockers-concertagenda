@@ -14,7 +14,8 @@ const oostpoortScraper = new AbstractScraper(makeScraperConfig({
       timeout: 60000,
     },
     singlePage: {
-      timeout: 20000
+      timeout: 20000,
+      waitFor: 'load'
     },
     app: {
       mainPage: {
@@ -102,14 +103,14 @@ oostpoortScraper.singleEventCheck = async function (event) {
     return {
       event,
       success: true,
-      reason: "is rock check successfull",
+      reason: `is rock check successfull ${thisIsRock.reason}` ,
     }
   } 
 
   return {
     event,
     success: false,
-    reason: "no evidence for heavy music found",
+    reason: `no evidence for heavy music found ${thisIsRock.reason}`,
   }
 
 };
@@ -120,7 +121,7 @@ oostpoortScraper.getPageInfo = async function ({ page }) {
   
   const {stopFunctie} =  await this.getPageInfoStart()
   
-  await _t.waitFor(333);
+  await _t.waitFor(600);
  
   const pageInfo = await page.evaluate(
     () => {
@@ -140,6 +141,11 @@ oostpoortScraper.getPageInfo = async function ({ page }) {
           error,
           remarks: 'page info wrap catch'
         })    
+      }
+
+      if (document.querySelector('.event__cta') && document.querySelector('.event__cta').hasAttribute('disabled')) {
+        res.unavailable += ` ${document.querySelector('.event__cta').textContent}`;
+   
       }
 
       if (res.unavailable !== "") {

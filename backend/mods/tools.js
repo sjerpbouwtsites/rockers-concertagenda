@@ -115,6 +115,7 @@ export function textContainsForbiddenMusicTerms(text){
   text.includes("indierock") ||
   text.includes("indiepop") ||
   text.includes("shoegaze") ||
+  text.includes("swingende soul") ||
   text.includes("indie-pop") 
 }
 

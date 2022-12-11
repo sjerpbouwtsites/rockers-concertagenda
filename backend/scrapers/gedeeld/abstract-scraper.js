@@ -250,25 +250,25 @@ export default class AbstractScraper {
       if (checkResult.success) {
         useableEventsCheckedArray.push(eventToCheck);
       } else {
-        parentPort.postMessage(
-          this.qwm.debugger([
-            `${eventToCheck?.title} uitgefilterd asyncCheck`,
-            {
-              title: eventToCheck.title,
-              shortText: eventToCheck.shortText,
-              url: eventToCheck.venueEventUrl,
-              reason: checkResult.reason,
-            },
-          ])
-        );
+        // parentPort.postMessage(
+        //   this.qwm.debugger([
+        //     `${eventToCheck?.title} uitgefilterd asyncCheck`,
+        //     {
+        //       title: eventToCheck.title,
+        //       shortText: eventToCheck.shortText,
+        //       url: eventToCheck.venueEventUrl,
+        //       reason: checkResult.reason,
+        //     },
+        //   ])
+        // );
       }
 
-      // parentPort.postMessage(
-      //   this.qwm.debugger([
-      //     `${eventToCheck?.title} filterres`,
-      //     {sucess: checkResult.success, reason: checkResult.reason},
-      //   ])
-      // );
+      parentPort.postMessage(
+        this.qwm.debugger([
+          `${eventToCheck?.title} filterres`,
+          {sucess: checkResult.success, reason: checkResult.reason},
+        ])
+      );
 
       return await this.eventAsyncCheck({
         eventGen,
@@ -328,6 +328,7 @@ export default class AbstractScraper {
       return {
         event,
         success: true,
+        reason: 'found in metal encyclopedia'
       };
     }
 
@@ -347,11 +348,13 @@ export default class AbstractScraper {
       return {
         event,
         success: true,
+        reason: `found on wikipedia`
       };
     }
     return {
       event,
       success: false,
+      reason: 'nothing found'
     };
   }
 
