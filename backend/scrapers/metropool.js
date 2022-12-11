@@ -43,7 +43,7 @@ metropoolScraper.makeBaseEventList = async function () {
         const testText = rawEvent.dataset?.genres || rawEvent.textContent;
 
         return (
-          testText.includes("metal") ||
+          testText.includes("metal") || // TODO ALGEMENE TEST VAN MAKEN
           testText.includes("punk") ||
           testText.includes("noise") ||
           testText.includes("hardcore") ||
