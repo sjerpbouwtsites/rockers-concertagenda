@@ -28,7 +28,7 @@ const fsDirections = {
   mods: path.resolve("./mods"),
   neushoornJson: path.resolve("./event-lists/neushoorn.json"),
   occiiJson: path.resolve("./event-lists/occii.json"),
-  oostpoortJson: path.resolve("./event-lists/oostpoort.json"),
+  oosterpoortJson: path.resolve("./event-lists/oostpoort.json"),
   paradisoJson: path.resolve("./event-lists/paradiso.json"),
   patronaatJson: path.resolve("./event-lists/patronaat.json"),
   public: path.resolve("../public"),
