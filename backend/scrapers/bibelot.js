@@ -184,10 +184,13 @@ bibelotScraper.getPageInfo = async function ({ page }) {
       ;
       const imageMatch = document
         .querySelector(".achtergrond-afbeelding")
-        ?.style.backgroundImage.match(/https.*.jpg|https.*.jpg/);
+        ?.style.backgroundImage.match(/https.*.png|https.*.jpg/); // TODO REGEXES afsplitsen
       if (imageMatch && imageMatch.length) {
         res.image = imageMatch[0];
       }
+
+
+
       if (res.unavailable !== "") {
         res.unavailable = `${res.unavailable}\n${res.pageInfoID}`;
       }
