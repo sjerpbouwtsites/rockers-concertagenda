@@ -1,4 +1,48 @@
 
+  metropool-0 Error - 1:42:19 PM
+  TimeoutError: Navigation timeout of 25000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 25000 ms exceeded
+  
+  
+  neushoorn-0 Error - 1:42:14 PM
+  TimeoutError: Navigation timeout of 20000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 20000 ms exceeded
+  
+  
+  deflux-0 Error - 1:42:11 PM
+  TimeoutError: Navigation timeout of 20000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 20000 ms exceeded
+  
+  
+  neushoorn-0 Error - 1:41:06 PM
+  TimeoutError: Navigation timeout of 20000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 20000 ms exceeded
+  
+  
+  deflux-0 Error - 1:41:03 PM
+  TimeoutError: Navigation timeout of 20000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 20000 ms exceeded
+  
+  
+  undefined Error - 1:40:47 PM
+  Error: makeBaseEvent overtijd. Max: 30000
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:81:9)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  makeBaseEvent overtijd. Max: 30000
+  
+  
+  patronaat-2 Error - 1:40:46 PM
+  TimeoutError: Navigation timeout of 15000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 15000 ms exceeded
+  
+  
   dbs-0 Error - 1:25:30 PM
   TimeoutError: waiting for selector `[data-testid]` failed: timeout 30000ms exceeded
     at new WaitTask (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:528:34)

@@ -112,11 +112,8 @@ boerderijScraper.getPageInfo = async function ({ event }) {
   pageInfo.boerderijID = ajaxRes.id;
 
   try {
-    let price = ajaxRes?.ticket_price?.replace("-", "00").replace(",", ".");
-    if (isNaN(Number(price))) {
-      price = ajaxRes?.ticket_price;
-    }
-    pageInfo.price = price;
+    
+    pageInfo.priceTextcontent = `${ajaxRes?.entrance_price ?? ''} ${ajaxRes?.ticket_price ?? ''} `
   } catch (error) {
     pageInfo.errorsVoorErrorHandler.push({
       error,
@@ -145,6 +142,8 @@ boerderijScraper.getPageInfo = async function ({ event }) {
       remarks: "doorOpenDateTime samenvoeging",
     });
   }
+
+  this.dirtyLog(ajaxRes)
 
   return await this.getPageInfoEnd({pageInfo, stopFunctie})
 
