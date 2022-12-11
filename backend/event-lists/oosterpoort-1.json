@@ -1,6 +1,66 @@
 [
   {
     "doorOpenDateTime": null,
+    "startDateTime": "2022-12-11T19:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.spotgroningen.nl/programma/enter-shikari/",
+    "title": "Enter Shikari",
+    "location": "oosterpoort",
+    "price": 26.1,
+    "shortText": "+ support: Trash Boat & Wargasm<br>Heftige post-hardcore goed voor bloedstollend feest",
+    "longText": "../public/texts/9870f89c-768f-4e59-bbd5-c513da56f721.html",
+    "image": "https://www.spotgroningen.nl/wp-content/uploads/2022/04/Enter-Shikari-768x375.jpg"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-01-29T19:15:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.spotgroningen.nl/programma/brakema-producties/",
+    "title": "& Brakema Producties",
+    "location": "oosterpoort",
+    "price": 19.5,
+    "shortText": "Isotopia<br>Liefdevol en indringend sciencefiction theater",
+    "longText": "../public/texts/ffa7b7f5-576b-43f8-8421-197514c874ba.html",
+    "image": "https://www.spotgroningen.nl/wp-content/uploads/2022/05/ISOTOPIA-high-ress-%C2%A9HALIE-1-768x512.jpg"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-03-02T19:15:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.spotgroningen.nl/programma/nite-20/",
+    "title": "NITE",
+    "location": "oosterpoort",
+    "price": 14.5,
+    "shortText": "Yara’s Wedding (Try out)<br>Interdisciplinaire voorstelling over hoe we naar de ander kijken",
+    "longText": "../public/texts/2fd0e18a-8c86-492b-92fc-e0c74f0da493.html",
+    "image": "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-03-16T19:15:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.spotgroningen.nl/programma/nite-23/",
+    "title": "NITE",
+    "location": "oosterpoort",
+    "price": 25.5,
+    "shortText": "Yara’s Wedding<br>Interdisciplinaire voorstelling over hoe we naar de ander kijken",
+    "longText": "../public/texts/2089d579-be8d-49cf-9ae8-165f190f12e1.html",
+    "image": "https://www.spotgroningen.nl/wp-content/uploads/2022/05/Yaras-Wedding-Temporary-image-Lennart-Sjoberg-scaled.jpg"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-03-18T19:15:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.spotgroningen.nl/programma/nite-25/",
+    "title": "NITE",
+    "location": "oosterpoort",
+    "price": 25.5,
+    "shortText": "Yara’s Wedding<br>Interdisciplinaire voorstelling over hoe we naar de ander kijken",
+    "longText": "../public/texts/f2435a18-aa4c-4a18-9c6e-8bc95e8699b3.html",
+    "image": "https://www.spotgroningen.nl/wp-content/uploads/2022/05/Yaras-Wedding-Temporary-image-Lennart-Sjoberg-scaled.jpg"
+  },
+  {
+    "doorOpenDateTime": null,
     "startDateTime": "2023-03-20T19:15:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://www.spotgroningen.nl/programma/henry-rollins-3/",
@@ -8,19 +68,43 @@
     "location": "oosterpoort",
     "price": 23.1,
     "shortText": "Good To See You 2023<br>Punk Rock-icoon van Rollins Band en Black Flag komt met vlijmscherpe theatershow",
-    "longText": "../public/texts/acc5209d-8f2c-450c-a0c0-5cd4df13a76b.html",
+    "longText": "../public/texts/fd7dbcb8-735c-4239-8a18-252c3d4f2686.html",
     "image": "https://www.spotgroningen.nl/wp-content/uploads/2022/10/TR_NationalAsset_HenryRollins_WG_2426x1365-768x432.jpg"
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2023-11-07T19:30:00.000Z",
+    "startDateTime": "2023-03-29T18:30:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.spotgroningen.nl/programma/level-42-4/",
-    "title": "Level 42",
+    "venueEventUrl": "https://www.spotgroningen.nl/programma/anneke-van-giersbergen-3/",
+    "title": "Anneke van Giersbergen",
     "location": "oosterpoort",
-    "price": 38.6,
-    "shortText": "Living It Up<br>Funky hits uit de 80s",
-    "longText": "../public/texts/6af6879e-a65a-4ea8-8c4d-c2aad15f1f5c.html",
-    "image": "https://www.spotgroningen.nl/wp-content/uploads/2022/11/level42-768x385.jpg"
+    "price": 22,
+    "shortText": "zingt Kate Bush<br>De songs van Kate Bush door een van de beste zangeressen van Nederland",
+    "longText": "../public/texts/52395280-6328-449c-9689-9f4fcfadf29f.html",
+    "image": "https://www.spotgroningen.nl/wp-content/uploads/2022/05/Anneke-van-Giersbergen-zingt-Kate-Bush-Mark-Uyl-2-768x548.jpg"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-05-19T18:15:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.spotgroningen.nl/programma/nite-28/",
+    "title": "NITE",
+    "location": "oosterpoort",
+    "price": 25.5,
+    "shortText": "Yara’s Wedding<br>Interdisciplinaire voorstelling over hoe we naar de ander kijken",
+    "longText": "../public/texts/918a418f-448c-439c-af32-31de074ccb77.html",
+    "image": "https://www.spotgroningen.nl/wp-content/uploads/2022/05/Yaras-Wedding-Temporary-image-Lennart-Sjoberg-scaled.jpg"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-05-20T18:15:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.spotgroningen.nl/programma/nite-29/",
+    "title": "NITE",
+    "location": "oosterpoort",
+    "price": 25.5,
+    "shortText": "Yara’s Wedding<br>Interdisciplinaire voorstelling over hoe we naar de ander kijken",
+    "longText": "../public/texts/eb42e05f-4571-46e9-8697-24467a7665d2.html",
+    "image": "https://www.spotgroningen.nl/wp-content/uploads/2022/05/Yaras-Wedding-Temporary-image-Lennart-Sjoberg-scaled.jpg"
   }
 ]

@@ -119,8 +119,8 @@ baroegScraper.getPageInfo = async function ({ page }) {
         ).toISOString();
       }
 
-      res.priceElText =
-        document.querySelector(".wp_theatre_event_tickets_url")?.textContent ??
+      res.priceTextcontent =
+        document.querySelector(".wp_theatre_event_tickets")?.textContent ??
         '';
       res.contextText = document.getElementById("content")?.textContent ?? '';
 
@@ -136,8 +136,6 @@ baroegScraper.getPageInfo = async function ({ page }) {
         }
         res.longTextHTML = postContent.innerHTML;
       }
-
-
 
       if (res.unavailable) {
         res.unavailable = `${res.unavailable} ${res.pageInfoID}`;

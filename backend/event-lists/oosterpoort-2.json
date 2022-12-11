@@ -1,14 +1,26 @@
 [
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2023-04-29T14:00:00.000Z",
+    "startDateTime": "2023-02-17T19:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.spotgroningen.nl/events/rhythm-blues-night/",
-    "title": "Rhythm & Blues Night",
+    "venueEventUrl": "https://www.spotgroningen.nl/programma/the-brian-jonestown-massacre/",
+    "title": "The Brian Jonestown Massacre",
     "location": "oosterpoort",
-    "price": 48.5,
-    "shortText": "<br>De top uit de internationale blues, roots en Rhythm ‘n’ Blues onder één dak",
-    "longText": null,
-    "image": null
+    "price": 23.1,
+    "shortText": "<br>Eén van de meest invloedrijke psychedelische bands van de afgelopen 30 jaar",
+    "longText": "../public/texts/c0b415f4-f5bb-4e3b-9fd2-8cfc5211a90f.html",
+    "image": "https://www.spotgroningen.nl/wp-content/uploads/2022/06/Nieuw-project-43-768x432.jpg"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-03-29T18:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.spotgroningen.nl/programma/anneke-van-giersbergen-3/",
+    "title": "Anneke van Giersbergen",
+    "location": "oosterpoort",
+    "price": 22,
+    "shortText": "zingt Kate Bush<br>De songs van Kate Bush door een van de beste zangeressen van Nederland",
+    "longText": "../public/texts/9074750b-e02c-492a-ab2d-410b18b8c34b.html",
+    "image": "https://www.spotgroningen.nl/wp-content/uploads/2022/05/Anneke-van-Giersbergen-zingt-Kate-Bush-Mark-Uyl-2-768x548.jpg"
   }
 ]

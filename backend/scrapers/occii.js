@@ -104,10 +104,7 @@ occiiScraper.getPageInfo = async function ({ page }) {
       });
     }
 
-    const damageMatch =
-      eventCategoriesEl.textContent.match(/Damage:\s+\D+(\d+)/);
-    res.price =
-      damageMatch && damageMatch.length > 1 ? Number(damageMatch[1]) : null;
+    res.priceTextcontent = document.getElementById('occii-single-event')?.textContent ?? null;
 
     res.genre =
       document.querySelector('[href*="events/categories"]')?.textContent ??
