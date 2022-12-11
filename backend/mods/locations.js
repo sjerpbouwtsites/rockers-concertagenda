@@ -93,6 +93,10 @@ const locations = {
     name: "Oldehoofsterkerkhof",
     city: "Leeuwarden",
   }),
+  oostpoort: new Location({
+    name: "Oostpoort",
+    city: "Groningen",
+  }),  
   orangerie: new Location({ name: "Orangerie", city: "Den Bosch" }),
   paleis12: new Location({ name: "Paleis12", city: "Brussel" }),
   palladium: new Location({ name: "Palladium", city: "Keulen" }),

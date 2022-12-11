@@ -263,6 +263,13 @@ export default class AbstractScraper {
         );
       }
 
+      // parentPort.postMessage(
+      //   this.qwm.debugger([
+      //     `${eventToCheck?.title} filterres`,
+      //     {sucess: checkResult.success, reason: checkResult.reason},
+      //   ])
+      // );
+
       return await this.eventAsyncCheck({
         eventGen,
         checkedEvents: useableEventsCheckedArray,
@@ -419,7 +426,7 @@ export default class AbstractScraper {
 
   getPrice(priceTextcontent) {
     if (!priceTextcontent) return;
-    return _t.getPriceFromHTML(priceTextcontent);
+    return this.getPriceFromHTML(priceTextcontent);
   }
 
   writeLongTextHTML(longTextHTML) {
@@ -494,6 +501,74 @@ export default class AbstractScraper {
     clearTimeout(stopFunctie);
     return pageInfo;    
   }
+
+  getPriceFromHTML(testText = null, contextText = null) {
+    if (!testText) {
+      return this.getPriceFromHTML(contextText);
+    }
+  
+    const priceMatch = testText.match(/((\d{1,3})[,.]+(\d\d|-))/);
+  
+    if (
+      !priceMatch &&
+      (testText.includes("gratis") || testText.includes("free"))
+    ) {
+      return 0;
+    }
+  
+    if (priceMatch && priceMatch.length >= 4) {
+      const integers = Number(priceMatch[2]) * 100;
+      let cents;
+      if (priceMatch[3].includes("-")) {
+        cents = 0;
+      } else {
+        cents = Number(priceMatch[3]);
+      }
+  
+      return (integers + cents) / 100;
+    }
+  
+    const onlyIntegers = testText.match(/\d{1,3}/);
+    if (onlyIntegers && onlyIntegers.length) {
+      return Number(onlyIntegers[0]);
+    }
+  
+    if (contextText) {
+      const searchresultInBroaderContext = this.getPriceFromHTML(contextText);
+      if (searchresultInBroaderContext) {
+        return searchresultInBroaderContext;
+      }
+    }
+  
+    return null;
+  }  
+
+  postPageInfoProcessing(pageInfo = null) {
+    const pageInfoCopy = { ...pageInfo };
+    if (!pageInfo) return {};
+  
+    if (pageInfo.priceTextcontent || pageInfo.priceContexttext) {
+      const context = pageInfo?.priceContexttext ?? null;
+      pageInfoCopy.price = Number(this.getPriceFromHTML(pageInfo.priceTextcontent, context));
+    }
+  
+    pageInfoCopy.longText = this.saveLongTextHTML(pageInfo);
+    return pageInfoCopy;
+  }  
+
+  saveLongTextHTML(pageInfo) {
+    if (
+      !Object.prototype.hasOwnProperty.call(pageInfo, "longTextHTML") ||
+      !pageInfo.longTextHTML
+    ) {
+      return null;
+    }
+    let uuid = crypto.randomUUID();
+    const longTextPath = `${fsDirections.publicTexts}/${uuid}.html`;
+  
+    fs.writeFile(longTextPath, pageInfo.longTextHTML, "utf-8", () => {});
+    return longTextPath;
+  }  
 
   // step 4
   async announceToMonitorDone() {

@@ -48,7 +48,7 @@ export default class MonitorField {
     return 0;
   }
   updateConsole(updateData) {
-    this.data.splice(5);
+    //this.data.splice(5);
     this.update(updateData);
   }
   update(updateData) {

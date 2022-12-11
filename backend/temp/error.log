@@ -1,4 +1,88 @@
 
+  oostpoort-2 Error - 11:21:24 AM
+  Error: Evaluation failed: ReferenceError: workerData is not defined
+    at __puppeteer_evaluation_script__:11:44
+    at Array.filter (<anonymous>)
+    at __puppeteer_evaluation_script__:11:8
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async oostpoortScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/oostpoort.js:39:21)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:47:29) 
+  Evaluation failed: ReferenceError: workerData is not defined
+    at __puppeteer_evaluation_script__:11:44
+    at Array.filter (<anonymous>)
+    at __puppeteer_evaluation_script__:11:8
+  
+  
+  oostpoort-1 Error - 11:21:23 AM
+  Error: Evaluation failed: ReferenceError: workerData is not defined
+    at __puppeteer_evaluation_script__:11:44
+    at Array.filter (<anonymous>)
+    at __puppeteer_evaluation_script__:11:8
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async oostpoortScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/oostpoort.js:39:21)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:47:29) 
+  Evaluation failed: ReferenceError: workerData is not defined
+    at __puppeteer_evaluation_script__:11:44
+    at Array.filter (<anonymous>)
+    at __puppeteer_evaluation_script__:11:8
+  
+  
+  oostpoort-0 Error - 11:21:23 AM
+  Error: Evaluation failed: ReferenceError: workerData is not defined
+    at __puppeteer_evaluation_script__:11:44
+    at Array.filter (<anonymous>)
+    at __puppeteer_evaluation_script__:11:8
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async oostpoortScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/oostpoort.js:39:21)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:47:29) 
+  Evaluation failed: ReferenceError: workerData is not defined
+    at __puppeteer_evaluation_script__:11:44
+    at Array.filter (<anonymous>)
+    at __puppeteer_evaluation_script__:11:8
+  
+  
+  oostpoort-2 Error - 11:17:35 AM
+  Error: Evaluation failed: ReferenceError: regexes is not defined
+    at __puppeteer_evaluation_script__:10:90
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async oostpoortScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/oostpoort.js:115:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:385:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:55:5) 
+  Evaluation failed: ReferenceError: regexes is not defined
+    at __puppeteer_evaluation_script__:10:90
+  
+  
+  oostpoort-1 Error - 11:17:35 AM
+  Error: Evaluation failed: ReferenceError: regexes is not defined
+    at __puppeteer_evaluation_script__:10:90
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async oostpoortScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/oostpoort.js:115:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:385:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:55:5) 
+  Evaluation failed: ReferenceError: regexes is not defined
+    at __puppeteer_evaluation_script__:10:90
+  
+  
+  oostpoort-0 Error - 11:03:31 AM
+  TypeError: textContainsForbiddenMusicTerms is not a function
+    at oostpoortScraper.singleEventCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/oostpoort.js:73:7)
+    at AbstractScraper.eventAsyncCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:249:38)
+    at AbstractScraper.announceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:223:23)
+    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:51:38)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  textContainsForbiddenMusicTerms is not a function
+  
+  
   effenaar-3 Error - 9:16:57 AM
   undefined 
   undefined

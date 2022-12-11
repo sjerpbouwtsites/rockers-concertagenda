@@ -1,7 +1,6 @@
 import { parentPort, isMainThread } from "worker_threads";
 import fs from "fs";
 import fsDirections from "./fs-directions.js";
-import crypto from "crypto";
 import { WorkerMessage } from "./rock-worker.js";
 import passMessageToMonitor from "../monitor/pass-message-to-monitor.js";
 /**
@@ -110,96 +109,26 @@ export function errorAfterSeconds(time = 10000) {
   });
 }
 
-export function getPriceFromHTML(testText = null, contextText = null) {
-  if (!testText) {
-    return getPriceFromHTML(contextText);
-  }
 
-  const priceMatch = testText.match(/((\d{1,3})[,.]+(\d\d|-))/);
-
-  if (
-    !priceMatch &&
-    (testText.includes("gratis") || testText.includes("free"))
-  ) {
-    return 0;
-  }
-
-  if (priceMatch && priceMatch.length >= 4) {
-    const integers = Number(priceMatch[2]) * 100;
-    let cents;
-    if (priceMatch[3].includes("-")) {
-      cents = 0;
-    } else {
-      cents = Number(priceMatch[3]);
-    }
-
-    return (integers + cents) / 100;
-  }
-
-  const onlyIntegers = testText.match(/\d{1,3}/);
-  if (onlyIntegers && onlyIntegers.length) {
-    return Number(onlyIntegers[0]);
-  }
-
-  if (contextText) {
-    const searchresultInBroaderContext = getPriceFromHTML(contextText);
-    if (searchresultInBroaderContext) {
-      return searchresultInBroaderContext;
-    }
-  }
-
-  return null;
-}
-export function basicMusicEventsFilter(musicEvent) {
-  if (!musicEvent.venueEventUrl) {
-    return false;
-  }
-
-  const t = musicEvent?.title ?? "";
-  const st = musicEvent?.shortText ?? "";
-  const searchShowNotOnDate = `${t.toLowerCase()} ${st.toLowerCase()}`;
-
-  const mayNotContainTrue = [
-    "uitgesteld",
-    "sold out",
-    "gecanceld",
-    "uitverkocht",
-    "afgelast",
-    "geannuleerd",
-    "verplaatst",
-  ].map((forbiddenTerm) => {
-    return searchShowNotOnDate.includes(forbiddenTerm);
-  });
-
-  return !mayNotContainTrue.includes(true);
+export function textContainsForbiddenMusicTerms(text){
+  return text.includes("pop") ||
+  text.includes("indierock") ||
+  text.includes("indiepop") ||
+  text.includes("shoegaze") ||
+  text.includes("indie-pop") 
 }
 
-export function postPageInfoProcessing(pageInfo = null) {
-  const pageInfoCopy = { ...pageInfo };
-  if (!pageInfo) return {};
-
-  if (pageInfo.priceTextcontent || pageInfo.priceContexttext) {
-    const context = pageInfo?.priceContexttext ?? null;
-    pageInfoCopy.price = Number(getPriceFromHTML(pageInfo.priceTextcontent, context));
-  }
-
-  pageInfoCopy.longText = saveLongTextHTML(pageInfo);
-  return pageInfoCopy;
+export function textContainsHeavyMusicTerms(text){
+  return text.includes("metal") ||
+  text.includes("punk") ||
+  text.includes("noise") ||
+  text.includes("doom") ||
+  text.includes("hardcore") ||
+  text.includes("ska") ||
+  text.includes("industrial");  
 }
 
-export function saveLongTextHTML(pageInfo) {
-  if (
-    !Object.prototype.hasOwnProperty.call(pageInfo, "longTextHTML") ||
-    !pageInfo.longTextHTML
-  ) {
-    return null;
-  }
-  let uuid = crypto.randomUUID();
-  const longTextPath = `${fsDirections.publicTexts}/${uuid}.html`;
 
-  fs.writeFile(longTextPath, pageInfo.longTextHTML, "utf-8", () => {});
-  return longTextPath;
-}
 
 const def = {
   handleError,

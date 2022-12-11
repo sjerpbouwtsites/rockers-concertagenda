@@ -159,7 +159,7 @@ duyckerScraper.getPageInfo = async function ({ page }) {
 duyckerScraper.singleEventCheck = async function (event) {
   const firstCheckText = `${event?.title ?? ""} ${event?.shortText ?? ""}`;
   if (
-    firstCheckText.includes("indie") ||
+    firstCheckText.includes("indie") || // TODO naar tool func hiervoor
     firstCheckText.includes("dromerig") ||
     firstCheckText.includes("shoegaze") ||
     firstCheckText.includes("alternatieve rock")
