@@ -10,7 +10,7 @@ const dbsScraper = new AbstractScraper(makeScraperConfig({
   workerData: Object.assign({}, workerData),
   puppeteerConfig: {
     mainPage: {
-      timeout: 45000,
+      timeout: 60000,
       waitUntil: 'domcontentloaded'
     },
     singlePage: {
