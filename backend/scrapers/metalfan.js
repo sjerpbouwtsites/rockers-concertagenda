@@ -47,8 +47,25 @@ async function getBaseMusicEvents(browser, qwm) {
     "kavkazappa",
     "metropoolopenair",
     "013tilburg",
-    "merleyn", // onderdeel doornroosje
+    "013enomgevingn",
+    "slvesborg", 
+    "royalparklive",
   ]);
+
+  const rename = {
+    "013enomgevingn": "013",
+    "013enomgevingen": "013",
+    "kopenhagendenemarkenmetmtleycre": "kopenhagen",
+    "desselbelgimetoaslipknot": "dessel",
+    "dinkelsbhlmetoapowerwolf": "dinkel",
+    "merleyn": "doornroosje", // onderdeel doornroosje
+    "botanique brussel": "botanique",
+    "oilsjt omploft": "sintannazaal",
+    "ysselsteyn": "ijsselstein",
+    "langemunt": "langemunte",
+    "wackenduitslandmetoamegadeth": "wacken",
+    "wackenduitsland": 'wacken'
+  }
 
   const eventData = await page.evaluate(({months}) => {
     return Array.from(document.querySelectorAll(".calentry")).map(
@@ -91,6 +108,9 @@ async function getBaseMusicEvents(browser, qwm) {
           .querySelector(".calevent")
           .textContent.split(",");
         eventLocationName = (eventCommaSplice[0] || "").trim();
+        if (rename.includes(eventLocationName.toLowerCase())) {
+          eventLocationName = rename[eventLocationName.toLowerCase()]
+        }
 
         eventHTMLrules = eventHTML.split("<br>");
         shortText = 
