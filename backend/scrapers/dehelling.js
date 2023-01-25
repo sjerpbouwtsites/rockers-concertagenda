@@ -28,7 +28,7 @@ dehellingScraper.listenToMasterThread();
 
 // MAKE BASE EVENTS
 
-dehellingScraper.makeBaseEventList = async function () {
+dehellingScraper.makeBaseEventList = async function () { 
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
@@ -45,6 +45,8 @@ dehellingScraper.makeBaseEventList = async function () {
         errorsVoorErrorHandler: [],
       };      
 
+
+
       const schemaData = JSON.parse(eventEl.querySelector('[type="application/ld+json"]').innerHTML) 
       res.title = schemaData?.name
       try {
@@ -53,11 +55,29 @@ dehellingScraper.makeBaseEventList = async function () {
         res.errorsVoorErrorHandler.push({error, remarks: 'end date time datestring omzetting'})        
       }
       res.image = schemaData?.image
+      let startDateTimeString;
       try {
-        res.startDateTime = new Date(schemaData.startDate.replace(' ','T')).toISOString();
+        const metaEl = eventEl.querySelector('.c-event-card__meta') ?? null;
+        if (metaEl) {
+          const tijdMatch = metaEl.textContent.match(/(\d\d):(\d\d)/);
+          if (tijdMatch && tijdMatch.length > 2) {
+            res.startTime = tijdMatch[0]
+            const hours = tijdMatch[1];
+            const minutes = tijdMatch[2];
+            startDateTimeString = res.endDateTime.replace(/T.*/, `T${hours.padStart(2, '0')}:${minutes.padStart(2, '0')}:00`);
+            res.startDateTime = new Date(startDateTimeString).toISOString();
+          }
+        }
       } catch (error) {
-        res.errorsVoorErrorHandler.push({error, remarks: 'start date time datestring omzetting'})        
+        res.errorsVoorErrorHandler.push({error, remarks: `start date time eruit filteren error \n ${res.endDateTime} \n ${startDateTimeString}`})        
       }
+
+
+      if (!res.startTime) {
+        res.startDateTime= res.endDateTime;
+        res.endDateTime = null;
+      } 
+
       res.venueEventUrl = schemaData.url
       res.shortText = schemaData?.description
       return res;

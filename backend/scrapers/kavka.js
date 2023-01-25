@@ -137,9 +137,16 @@ kavkaScraper.getPageInfo = async function ({ page }) {
       errorsVoorErrorHandler: [],
     };
     try {
-      res.image =
-        document.querySelector('div.desktop img[src*="kavka.be/wp-content"]')
-          ?.src ?? "";
+      const imageEl = document.querySelector('div.desktop img[src*="kavka.be/wp-content"]') ?? null;
+      if (imageEl) {
+        if (imageEl.hasAttribute('data-lazy-src')) {
+          res.image = imageEl.getAttribute('data-lazy-src')
+        } else if (imageEl.hasAttribute('src')){
+          res.image = imageEl.getAttribute('src')
+        }
+      }
+        
+          
       if (!res.image) {
         res.image =
           document.querySelector('img[src*="kavka.be/wp-content"]')?.src ?? "";

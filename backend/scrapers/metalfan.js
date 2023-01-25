@@ -5,19 +5,8 @@ import { parentPort, workerData } from "worker_threads";
 import EventsList from "../mods/events-list.js";
 import * as _t from "../mods/tools.js";
 import { QuickWorkerMessage } from "../mods/rock-worker.js";
-import fs from 'fs';
-import fsDirections from "../mods/fs-directions.js";
 import getVenueMonths from "../mods/months.js";
-
-const timestampsKeys = Object.keys(JSON.parse(fs.readFileSync(fsDirections.timestampsJson)))
-
-const skipWithMetalfan = timestampsKeys.concat([
-  "kavkaoudaan",
-  "kavkazappa",
-  "metropoolopenair",
-  "013tilburg",
-  "merleyn", // onderdeel doornroosje
-]);
+import { workerConfig } from "../mods/worker-config.js";
 
 parentPort.on("message", (message) => {
   const pm = JSON.parse(message);
@@ -38,7 +27,7 @@ async function scrapeMetalfan() {
     const qwm = new QuickWorkerMessage(workerData);
     parentPort.postMessage(qwm.workerInitialized());
     const browser = await puppeteer.launch();
-    await getBaseMusicEvents(browser, skipWithMetalfan, qwm);
+    await getBaseMusicEvents(browser, qwm);
     parentPort.postMessage(qwm.workerDone(EventsList.amountOfEvents));
     EventsList.save("metalfan");
     browser.close();
@@ -47,11 +36,45 @@ async function scrapeMetalfan() {
   }
 }
 
-async function getBaseMusicEvents(browser, skipWithMetalfan, qwm) {
+async function getBaseMusicEvents(browser, qwm) {
   const page = await browser.newPage();
   await page.goto(`https://www.metalfan.nl/agenda.php`);
   parentPort.postMessage(qwm.workerStarted());
-  const eventData = await page.evaluate(({months}) => {
+
+  const workerNames = Object.keys(workerConfig);
+  const skipWithMetalfan = workerNames.concat([
+    "metropoolopenair",
+    "013tilburg",
+    "013enomgevingn",
+    "slvesborg", 
+    "royalparklive",
+  ]);
+
+  const rename = {
+    "013enomgevingen": "013",
+    "013enomgeving": "013",
+    "013enomgevingn": "013",
+    "botanique brussel": "botanique",
+    "desselbelgimetoaslipknot": "dessel",
+    "dinkelsbhlmetoapowerwolf": "dinkel",
+    "dynamo eindhoven": "dynamo",
+    "dynamoeindhoven": "dynamo",
+    "kopenhagendenemarkenmetmtleycre": "kopenhagen",
+    "kavka antwerpen": "kavka",
+    "kavka oudaan": "kavka",
+    "kavkaoudaan": "kavka",
+    "kavka zappa": "kavka",
+    "kavkazappa": "kavka",    
+    "kavkaantwerpen": "kavka",
+    "langemunt": "langemunte",
+    "merleyn": "doornroosje", // onderdeel doornroosje
+    "oilsjt omploft": "sintannazaal",
+    "wackenduitsland": 'wacken',
+    "wackenduitslandmetoamegadeth": "wacken",
+    "ysselsteyn": "ijsselstein",
+  }
+
+  const eventData = await page.evaluate(({months, rename}) => {
     return Array.from(document.querySelectorAll(".calentry")).map(
       (metalfanEvent) => {
         let dateAnchorEl,
@@ -92,6 +115,9 @@ async function getBaseMusicEvents(browser, skipWithMetalfan, qwm) {
           .querySelector(".calevent")
           .textContent.split(",");
         eventLocationName = (eventCommaSplice[0] || "").trim();
+        if (Object.prototype.hasOwnProperty.call(rename, eventLocationName.toLowerCase())) {
+          eventLocationName = rename[eventLocationName.toLowerCase()]
+        }
 
         eventHTMLrules = eventHTML.split("<br>");
         shortText = 
@@ -107,7 +133,7 @@ async function getBaseMusicEvents(browser, skipWithMetalfan, qwm) {
         };
       }
     );
-  }, {months: getVenueMonths('metalfan')});
+  }, {months: getVenueMonths('metalfan'), rename});
 
   const musicEvents = eventData
     .map((eventDatum) => {

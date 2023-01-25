@@ -56,7 +56,7 @@ const podiumGebruikt = {
   deflux:voluitNederlands,
   dehelling:voluitNederlands,
   doornroosje: voluitNederlands,
-  duycker: kortNederlands,
+  cpunt: voluitNederlands,
   effenaar: kortNederlands,
   gebrdenobel: voluitNederlands,
   iduna: voluitNederlands,
@@ -90,7 +90,7 @@ export const bibelotMonths = baroegMonths;
 export const dbsMonths = baroegMonths;
 export const depulMonths = dynamoMonths;
 export const doornRoosjeMonths = baroegMonths;
-export const duyckerMonths = dynamoMonths;
+export const cpuntMonths = dynamoMonths;
 export const effenaarMonths = dynamoMonths;
 export const gebrdenobelMonths = baroegMonths;
 export const idunaMonths = baroegMonths;

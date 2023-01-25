@@ -3,6 +3,7 @@ import fsDirections from "./fs-directions.js";
 import { handleError } from "./tools.js";
 import { QuickWorkerMessage } from "./rock-worker.js";
 import passMessageToMonitor from "../monitor/pass-message-to-monitor.js";
+import { workerConfig } from "./worker-config.js";
 
 export default class EventsList {
   static _events = [];
@@ -26,9 +27,9 @@ export default class EventsList {
       EventsList.guaranteeTimestampExistence();
       const pathToEventList = fsDirections.eventLists;
       const pathToINVALIDEventList = fsDirections.invalidEventLists;
-      const inbetweenFix = workerIndex !== null ? `-${workerIndex}` : ``;
-      const pathToEventListFile = `${pathToEventList}/${name}${inbetweenFix}.json`;
-      const pathToINVALIDEventListFile = `${pathToINVALIDEventList}/${name}${inbetweenFix}.json`;
+      const inbetweenFix = workerIndex !== null ? `${workerIndex}` : `0`;
+      const pathToEventListFile = `${pathToEventList}/${name}/${inbetweenFix}.json`;
+      const pathToINVALIDEventListFile = `${pathToINVALIDEventList}/${name}/invalid-${inbetweenFix}.json`;
       fs.writeFile(
         pathToEventListFile,
         JSON.stringify(EventsList._events, null, "  "),
@@ -66,6 +67,7 @@ export default class EventsList {
     if (!fs.existsSync(fsDirections.timestampsJson)) {
       fs.writeFileSync(fsDirections.timestampsJson, JSON.stringify({}));
     } else {
+
       try {
         JSON.parse(fs.readFileSync(fsDirections.timestampsJson));
       } catch (error) {
@@ -81,33 +83,39 @@ export default class EventsList {
   }
 
   static isOld(name, ignoreAgeForceScrape = false) {
+
+    // @TODO helemaal herschrijven. timestamps onzin eruit halen. 
+
     if (ignoreAgeForceScrape) {
       return true;
     }
 
-    let eventListTimestamps;
-    if (EventsList.guaranteeTimestampExistence()) {
-      try {
-        eventListTimestamps = JSON.parse(
-          fs.readFileSync(fsDirections.timestampsJson)
-        );
-      } catch (error) {
-        throw new Error(`Kan timestamp niet lezen van naam ${name}.\n<br>
-        locatie van timestamps zou moeten zijn ${fsDirections.timestampsJson}.\n<br>
-        ${error.message}`);
-      }
-    }
+    //@ TODO TIJDELIJK;
+    return false;
 
-    const d = new Date();
-    const currentMilliseconds = d.getTime();
-    const stored = Object.prototype.hasOwnProperty.call(eventListTimestamps, name)
-      ? eventListTimestamps[name]
-      : "0";
-    const ageOfStoredEventList = Number(stored);
-    const oneDay = 86400000;
+    // let eventListTimestamps;
+    // if (EventsList.guaranteeTimestampExistence()) {
+    //   try {
+    //     eventListTimestamps = JSON.parse(
+    //       fs.readFileSync(fsDirections.timestampsJson)
+    //     );
+    //   } catch (error) {
+    //     throw new Error(`Kan timestamp niet lezen van naam ${name}.\n<br>
+    //     locatie van timestamps zou moeten zijn ${fsDirections.timestampsJson}.\n<br>
+    //     ${error.message}`);
+    //   }
+    // }
 
-    const notFresh = currentMilliseconds > ageOfStoredEventList + 2 * oneDay;
-    return notFresh || ageOfStoredEventList == 0;
+    // const d = new Date();
+    // const currentMilliseconds = d.getTime();
+    // const stored = Object.prototype.hasOwnProperty.call(eventListTimestamps, name)
+    //   ? eventListTimestamps[name]
+    //   : "0";
+    // const ageOfStoredEventList = Number(stored);
+    // const oneDay = 86400000;
+
+    // const notFresh = currentMilliseconds > ageOfStoredEventList + 2 * oneDay;
+    // return notFresh || ageOfStoredEventList == 0;
   }
 
   static merge(events) {
@@ -135,43 +143,44 @@ export default class EventsList {
     await waitABit();
 
     const pathToEventList = fsDirections.eventLists;
-    const eventListTimestamps = Object.keys(
-      JSON.parse(fs.readFileSync(fsDirections.timestampsJson))
-    );
+    // const eventListTimestamps = Object.keys(
+    //   JSON.parse(fs.readFileSync(fsDirections.timestampsJson))
+    // ); // @TODO hele timestamps concept wegsodemieteren. Verplaatsen naar Meta.
 
     EventsList._events = [];
     EventsList._meta.locations = {};
-    const allEventLists = fs
-      .readdirSync(fsDirections.eventLists)
-      .filter((fileInEventsListDir) => {
-        const correspondingTimestampName = fileInEventsListDir
-          .replace(/-\d/, "")
-          .replace(".json", "");
-        if (eventListTimestamps.includes(correspondingTimestampName)) {
-          return fileInEventsListDir;
-        }
-        return false;
-      })
-      .map((fileInEventsListDir) => {
-        const parsedJSON = JSON.parse(
-          fs.readFileSync(`${pathToEventList}/${fileInEventsListDir}`)
-        );
-        const correspondingTimestampName = fileInEventsListDir
-          .replace(/-\d/, "")
-          .replace(".json", "");
-        if (!EventsList._meta.locations[correspondingTimestampName]) {
-          EventsList._meta.locations[correspondingTimestampName] = {};
-          EventsList._meta.locations[correspondingTimestampName].name =
-            correspondingTimestampName;
-          EventsList._meta.locations[correspondingTimestampName].count = 0;
-        }
-        EventsList._meta.locations[correspondingTimestampName].count =
-          EventsList._meta.locations[correspondingTimestampName].count +
-          parsedJSON.length;
-        return parsedJSON;
-      });
 
-    EventsList._events = allEventLists.flat();
+    let allEventListFiles = [];
+    Object.entries(workerConfig).forEach(([familyName, {workerCount}]) =>{
+    
+      for (let i = 0; i < workerCount; i++){
+        const pad = `${pathToEventList}/${familyName}/${i}.json`;
+        if (fs.existsSync(pad)) {
+          allEventListFiles.push(pad)
+        }
+      }
+      
+    })
+
+    EventsList._events = allEventListFiles
+      .map(eventListFile => {
+        const parsedEventFile = JSON.parse(fs.readFileSync(eventListFile));
+        return parsedEventFile;
+      })
+      .flat()
+
+    EventsList._events.forEach(eventUitLijst => {
+      const loc = eventUitLijst.location;
+      if (!EventsList._meta.locations[loc]) {
+        EventsList._meta.locations[loc] = {};
+        EventsList._meta.locations[loc].name =
+            loc;
+        EventsList._meta.locations[loc].count = 0;
+      }
+
+      EventsList._meta.locations[loc].count = EventsList._meta.locations[loc].count + 1;
+    })
+
 
     EventsList._events.sort((eventA, eventB) => {
       const dataA = eventA.startDateTime || "2050-01-01T00:00:00.000Z";
