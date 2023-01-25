@@ -1,4 +1,56 @@
 
+  dbs-2 Error - 6:39:35 AM
+  TimeoutError: Navigation timeout of 45000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111
+    at async FrameManager.navigateFrame (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:131:21)
+    at async Frame.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:512:16)
+    at async Page.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1167:16)
+    at async AbstractScraper.makeBaseEventListStart (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:99:5)
+    at async dbsScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dbs.js:34:31)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:47:29) 
+  Navigation timeout of 45000 ms exceeded
+  
+  
+  undefined Error - 6:39:35 AM
+  Error: makeBaseEvent overtijd. Max: 45000
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:81:9)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  makeBaseEvent overtijd. Max: 45000
+  
+  
+  undefined Error - 6:19:16 AM
+  Error: Evaluation failed: ReferenceError: rename is not defined
+    at __puppeteer_evaluation_script__:42:50
+    at Array.map (<anonymous>)
+    at __puppeteer_evaluation_script__:2:63
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getBaseMusicEvents (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/metalfan.js:70:21)
+    at async scrapeMetalfan (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/metalfan.js:30:5) 
+  Evaluation failed: ReferenceError: rename is not defined
+    at __puppeteer_evaluation_script__:42:50
+    at Array.map (<anonymous>)
+    at __puppeteer_evaluation_script__:2:63
+  
+  
+  undefined Error - 6:17:36 AM
+  Error: Evaluation failed: ReferenceError: rename is not defined
+    at __puppeteer_evaluation_script__:42:9
+    at Array.map (<anonymous>)
+    at __puppeteer_evaluation_script__:2:63
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async getBaseMusicEvents (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/metalfan.js:70:21)
+    at async scrapeMetalfan (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/metalfan.js:30:5) 
+  Evaluation failed: ReferenceError: rename is not defined
+    at __puppeteer_evaluation_script__:42:9
+    at Array.map (<anonymous>)
+    at __puppeteer_evaluation_script__:2:63
+  
+  
   cpunt-0 Error - 5:14:18 AM
   undefined 
   undefined

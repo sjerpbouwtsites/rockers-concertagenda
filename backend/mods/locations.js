@@ -40,7 +40,7 @@ const locations = {
   biebob: new Location({ name: "Biebob", city: "Vosselaar" }),
   boerderij: new Location({ name: "Boerderij", city: "Zoetemeer" }),
   bolwerk: new Location({ name: "Bolwerk", city: "Sneek" }),
-  bosuil:  new Location({ name: "Bosuil", city: "Weert" }),
+  debosuil:  new Location({ name: "De Bosuil", city: "Weert" }),
   botanique: new Location({ name: "Botanique", city: "Brussel" }),
   cacaofabriek: new Location({ name: "Cacaofabriek", city: "Helmond" }),
   carlswerkvictoria: new Location({
@@ -109,6 +109,7 @@ const locations = {
   paradiso: new Location({ name: "Paradiso", city: "Amsterdam" }),
   paterskerk: new Location({ name: "Paterskerk", city: "Eindhoven" }),
   patronaat: new Location({ name: "Patronaat", city: "Haarlem" }),
+  p60: new Location({ name: "P60", city: "Amstelveen" }),
   qfactory: new Location({ name: "Qfactory", city: "Amsterdam" }),
   ragnarok: new Location({ name: "Ragnarok", city: "Bree" }),
   redbox: new Location({ name: "Redbox", city: "Moenchengladbach" }),

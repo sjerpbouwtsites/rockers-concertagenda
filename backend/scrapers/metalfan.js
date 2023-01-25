@@ -43,8 +43,6 @@ async function getBaseMusicEvents(browser, qwm) {
 
   const workerNames = Object.keys(workerConfig);
   const skipWithMetalfan = workerNames.concat([
-    "kavkaoudaan",
-    "kavkazappa",
     "metropoolopenair",
     "013tilburg",
     "013enomgevingn",
@@ -53,21 +51,30 @@ async function getBaseMusicEvents(browser, qwm) {
   ]);
 
   const rename = {
-    "013enomgevingn": "013",
     "013enomgevingen": "013",
-    "kopenhagendenemarkenmetmtleycre": "kopenhagen",
+    "013enomgeving": "013",
+    "013enomgevingn": "013",
+    "botanique brussel": "botanique",
     "desselbelgimetoaslipknot": "dessel",
     "dinkelsbhlmetoapowerwolf": "dinkel",
-    "merleyn": "doornroosje", // onderdeel doornroosje
-    "botanique brussel": "botanique",
-    "oilsjt omploft": "sintannazaal",
-    "ysselsteyn": "ijsselstein",
+    "dynamo eindhoven": "dynamo",
+    "dynamoeindhoven": "dynamo",
+    "kopenhagendenemarkenmetmtleycre": "kopenhagen",
+    "kavka antwerpen": "kavka",
+    "kavka oudaan": "kavka",
+    "kavkaoudaan": "kavka",
+    "kavka zappa": "kavka",
+    "kavkazappa": "kavka",    
+    "kavkaantwerpen": "kavka",
     "langemunt": "langemunte",
+    "merleyn": "doornroosje", // onderdeel doornroosje
+    "oilsjt omploft": "sintannazaal",
+    "wackenduitsland": 'wacken',
     "wackenduitslandmetoamegadeth": "wacken",
-    "wackenduitsland": 'wacken'
+    "ysselsteyn": "ijsselstein",
   }
 
-  const eventData = await page.evaluate(({months}) => {
+  const eventData = await page.evaluate(({months, rename}) => {
     return Array.from(document.querySelectorAll(".calentry")).map(
       (metalfanEvent) => {
         let dateAnchorEl,
@@ -108,7 +115,7 @@ async function getBaseMusicEvents(browser, qwm) {
           .querySelector(".calevent")
           .textContent.split(",");
         eventLocationName = (eventCommaSplice[0] || "").trim();
-        if (rename.includes(eventLocationName.toLowerCase())) {
+        if (Object.prototype.hasOwnProperty.call(rename, eventLocationName.toLowerCase())) {
           eventLocationName = rename[eventLocationName.toLowerCase()]
         }
 
@@ -126,7 +133,7 @@ async function getBaseMusicEvents(browser, qwm) {
         };
       }
     );
-  }, {months: getVenueMonths('metalfan')});
+  }, {months: getVenueMonths('metalfan'), rename});
 
   const musicEvents = eventData
     .map((eventDatum) => {
