@@ -10,6 +10,9 @@ import RockWorker from "./mods/rock-worker.js";
 import getWorkerConfig from "./mods/worker-config.js";
 import { WorkerMessage } from "./mods/rock-worker.js";
 
+// TODO. eerste worker maakt temp json bestand van eerste scrape mainpage.
+// TODO. fouten leggen niet langer worker stil.
+
 //killall -s 9 chrome; clear; node index.js
 
 let monitorWebsocketServer = null;

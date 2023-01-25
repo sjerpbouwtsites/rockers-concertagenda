@@ -77,15 +77,6 @@ dehellingScraper.makeBaseEventList = async function () {
         res.startDateTime= res.endDateTime;
         res.endDateTime = null;
       } 
-      // else {
-      //   try {
-
-      //   } catch (error) {
-      //     res.errorsVoorErrorHandler.push({error, remarks: `start date omzetting`})        
-      //   }
-      // }
-
-
 
       res.venueEventUrl = schemaData.url
       res.shortText = schemaData?.description

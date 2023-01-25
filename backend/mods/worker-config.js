@@ -15,6 +15,49 @@ export const AbstractWorkerConfig = {
 
 }
 
+export const workerConfig = {
+  metalfan: {workerCount: 1, CPUReq: "low" },
+  baroeg: {workerCount: 8, workerConcurrent: 3 },
+  patronaat: { workerCount: 3, workerConcurrent: 3 },
+  "013" : {workerCount: 4 },
+  effenaar:{ workerCount: 4 },
+  tivolivredenburg:{ workerCount: 4 },
+  doornroosje :{ workerCount: 3, workerConcurrent: 1 },
+  dehelling :{ workerCount: 1, CPUReq: 'low' },
+  metropool :{ workerCount: 2 },
+  boerderij:{ workerCount: 1, CPUReq: "low" },
+  dynamo: { workerCount: 2 },
+  bibelot: { workerCount: 1 },
+  dbs: { workerCount: 4, workerConcurrent: 1 },
+  gebrdenobel: { workerCount: 1 },
+  neushoorn: { workerCount: 1 },
+  iduna: { workerCount: 1 },
+  depul: { workerCount: 2 },
+  deflux: { workerCount: 1 },
+  oosterpoort: { workerCount: 3, workerConcurrent: 3 },
+  paradiso: { workerCount: 4 },
+  volt: { workerCount: 1 },
+  cpunt: { workerCount: 1 },
+  occii :{
+    workerCount: 1,
+    workerConcurrent: 1,
+    CPUReq: "high",
+  },
+  melkweg :{
+    workerCount: 3,
+    CPUReq: "high",
+  },
+  afaslive :{
+    workerCount: 2,
+    CPUReq: "high",
+    workerConcurrent: 1,
+  },
+  kavka :{
+    workerCount: 1,
+    workerConcurrent: 1,
+  },
+}
+
 
 class WorkerListConf {
   data = []
@@ -25,7 +68,7 @@ class WorkerListConf {
       return WorkerListConf._self;
     } else {
       this._self = this;
-      this.shellArguments = getShellArguments();
+      this.shellArguments = getShellArguments(); 
       this.run();
     }
   }
@@ -68,50 +111,11 @@ class WorkerListConf {
     return this.data;
   }
   run(){
-    this.create({ family: "metalfan", workerCount: 1, CPUReq: "low" });
-    this.create({ family: "baroeg", workerCount: 8, workerConcurrent: 3 });
-    this.create({ family: "patronaat", workerCount: 3, workerConcurrent: 3 });
-    this.create({ family: "013", workerCount: 4 });
-    this.create({ family: "effenaar", workerCount: 4 });
-    this.create({ family: "tivolivredenburg", workerCount: 4 });
-    this.create({ family: "doornroosje", workerCount: 3, workerConcurrent: 1 });
-    this.create({ family: "dehelling", workerCount: 1, CPUReq: 'low' });
-    this.create({ family: "metropool", workerCount: 2 });
-    this.create({ family: "boerderij", workerCount: 1, CPUReq: "low" });
-    this.create({
-      family: "occii",
-      workerCount: 1,
-      workerConcurrent: 1,
-      CPUReq: "high",
+
+    Object.entries(workerConfig).forEach(([familyName, values]) => {
+      this.create({family: familyName, ...values})
     });
-    this.create({ family: "dynamo", workerCount: 2 });
-    this.create({
-      family: "melkweg",
-      workerCount: 3,
-      CPUReq: "high",
-    });
-    this.create({ family: "bibelot", workerCount: 1 });
-    this.create({ family: "dbs", workerCount: 4, workerConcurrent: 1 });
-    this.create({ family: "gebrdenobel", workerCount: 1 });
-    this.create({ family: "neushoorn", workerCount: 1 });
-    this.create({
-      family: "afaslive",
-      workerCount: 2,
-      CPUReq: "high",
-      workerConcurrent: 1,
-    });
-    this.create({ family: "iduna", workerCount: 1 });
-    this.create({
-      family: "kavka",
-      workerCount: 1,
-      workerConcurrent: 1,
-    });
-    this.create({ family: "depul", workerCount: 2 });
-    this.create({ family: "deflux", workerCount: 1 });
-    this.create({ family: "oosterpoort", workerCount: 3, workerConcurrent: 3 });
-    this.create({ family: "paradiso", workerCount: 4 });
-    this.create({ family: "volt", workerCount: 1 });
-    this.create({ family: "duycker", workerCount: 1 });
+
     this.shuffleArray();
   }
   get hasWorkerConfigs(){
