@@ -1,5 +1,32 @@
 [
   {
+<<<<<<< HEAD:backend/event-lists/013/1.json
+=======
+    "doorOpenDateTime": "2023-01-06T18:00:00.000Z",
+    "startDateTime": "2023-01-06T19:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.013.nl/programma/7408/heilung",
+    "title": "Heilung",
+    "location": "013",
+    "price": 38.4,
+    "shortText": "Extra show",
+    "longText": "../public/texts/31b27215-352f-483e-9025-cc286265b230.html",
+    "image": "https://www.013.nl/uploads/cache/event_main_desktop/634e84137e307.jpg?version=1666090120"
+  },
+  {
+    "doorOpenDateTime": "2023-01-17T17:30:00.000Z",
+    "startDateTime": "2023-01-17T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.013.nl/programma/6819/heaven-shall-burn-trivium",
+    "title": "Heaven Shall Burn + Trivium",
+    "location": "013",
+    "price": 39.4,
+    "shortText": "",
+    "longText": "../public/texts/a1e356af-a662-40c7-8a94-fb2696aa4a28.html",
+    "image": "https://www.013.nl/uploads/cache/event_main_desktop/617282e7546b1.jpg?version=1646386760"
+  },
+  {
+>>>>>>> 8c12652e65e3568edb2b1a08fd7c715db26e0a28:backend/event-lists/013-2.json
     "doorOpenDateTime": "2023-02-01T17:30:00.000Z",
     "startDateTime": "2023-02-01T18:30:00.000Z",
     "endDateTime": null,
@@ -8,7 +35,11 @@
     "location": "013",
     "price": 37.4,
     "shortText": "",
+<<<<<<< HEAD:backend/event-lists/013/1.json
     "longText": "../public/texts/89bffff3-8561-4855-bcbd-6ce543252425.html",
+=======
+    "longText": "../public/texts/c31e3cae-7fc2-4ae1-a0fe-a2d4862f8a51.html",
+>>>>>>> 8c12652e65e3568edb2b1a08fd7c715db26e0a28:backend/event-lists/013-2.json
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/62989d72bb388.jpg?version=1654754592"
   },
   {
@@ -20,7 +51,11 @@
     "location": "013",
     "price": 19.9,
     "shortText": "",
+<<<<<<< HEAD:backend/event-lists/013/1.json
     "longText": "../public/texts/fdfcde4f-380f-4f40-9636-d385d3fafc90.html",
+=======
+    "longText": "../public/texts/d3092f58-a6ce-46b0-bf2e-33a25bd88f96.html",
+>>>>>>> 8c12652e65e3568edb2b1a08fd7c715db26e0a28:backend/event-lists/013-2.json
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/631894addb951.jpg?version=1662558061"
   },
   {
@@ -32,7 +67,11 @@
     "location": "013",
     "price": 30.4,
     "shortText": "Tekkno Tour 2023",
+<<<<<<< HEAD:backend/event-lists/013/1.json
     "longText": "../public/texts/16280a55-f26f-4639-9b04-a700f6c40e8a.html",
+=======
+    "longText": "../public/texts/20b8da8c-c705-4e58-a36c-7697758eb4ab.html",
+>>>>>>> 8c12652e65e3568edb2b1a08fd7c715db26e0a28:backend/event-lists/013-2.json
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/62610fc38ea89.jpg?version=1653648193"
   },
   {
@@ -44,7 +83,11 @@
     "location": "013",
     "price": 36.4,
     "shortText": "",
+<<<<<<< HEAD:backend/event-lists/013/1.json
     "longText": "../public/texts/0d1cb66c-e1fb-41f2-ac6b-71af3e4a7df2.html",
+=======
+    "longText": "../public/texts/a3d81f04-90c2-492b-a0b8-e9f7db2bf6e9.html",
+>>>>>>> 8c12652e65e3568edb2b1a08fd7c715db26e0a28:backend/event-lists/013-2.json
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/633ec496b8527.png?version=1669035849"
   },
   {
@@ -56,7 +99,11 @@
     "location": "013",
     "price": 27.3,
     "shortText": "Good to see you tour",
+<<<<<<< HEAD:backend/event-lists/013/1.json
     "longText": "../public/texts/eb81d15a-89b9-4336-99fb-e981d5e2dd84.html",
+=======
+    "longText": "../public/texts/7e6e7540-f1dd-403a-ad00-8bb1c7aa0236.html",
+>>>>>>> 8c12652e65e3568edb2b1a08fd7c715db26e0a28:backend/event-lists/013-2.json
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/635f9b7330ac7.jpg?version=1667210109"
   },
   {
@@ -68,7 +115,11 @@
     "location": "013",
     "price": 25.9,
     "shortText": "",
+<<<<<<< HEAD:backend/event-lists/013/1.json
     "longText": "../public/texts/418301c3-6998-4570-8b3e-e14699c6eb35.html",
+=======
+    "longText": "../public/texts/81b32889-28c5-4d47-8e53-966da19f03fd.html",
+>>>>>>> 8c12652e65e3568edb2b1a08fd7c715db26e0a28:backend/event-lists/013-2.json
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/63243db196d99.jpg?version=1663319478"
   },
   {
@@ -80,7 +131,11 @@
     "location": "013",
     "price": 14.9,
     "shortText": "",
+<<<<<<< HEAD:backend/event-lists/013/1.json
     "longText": "../public/texts/c3afdda5-ec3a-4873-ab2c-e18aa8969380.html",
+=======
+    "longText": "../public/texts/926d704f-266e-4539-b36c-d425e17a5e83.html",
+>>>>>>> 8c12652e65e3568edb2b1a08fd7c715db26e0a28:backend/event-lists/013-2.json
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/632acb3a337fc.png?version=1663748987"
   },
   {
@@ -104,8 +159,13 @@
     "location": "013",
     "price": 23.3,
     "shortText": "",
+<<<<<<< HEAD:backend/event-lists/013/1.json
     "longText": "../public/texts/9f847cf3-06f3-4d6b-b00f-080416efbd2c.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/63808864ec7df.jpg?version=1669368003"
+=======
+    "longText": "../public/texts/006217ed-5589-4d1c-8eea-af5caa97e2e7.html",
+    "image": "https://www.013.nl/uploads/cache/event_main_desktop/62f4ce79a3632.jpg?version=1660210919"
+>>>>>>> 8c12652e65e3568edb2b1a08fd7c715db26e0a28:backend/event-lists/013-2.json
   },
   {
     "doorOpenDateTime": "2023-04-23T11:00:00.000Z",
@@ -116,8 +176,13 @@
     "location": "013",
     "price": null,
     "shortText": "Redefining heaviness",
+<<<<<<< HEAD:backend/event-lists/013/1.json
     "longText": "../public/texts/7fdf041e-c7b5-4ce9-9f0d-7b1f9fb7aba9.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/63721baa75600.jpg?version=1668422576"
+=======
+    "longText": "../public/texts/07156ab8-afc6-4f64-bed9-2ffff90a1332.html",
+    "image": "https://www.013.nl/uploads/cache/event_main_desktop/63721bbd14b99.jpg?version=1668422598"
+>>>>>>> 8c12652e65e3568edb2b1a08fd7c715db26e0a28:backend/event-lists/013-2.json
   },
   {
     "doorOpenDateTime": "2023-07-01T17:00:00.000Z",
@@ -126,10 +191,17 @@
     "venueEventUrl": "https://www.013.nl/programma/7483/puscifer",
     "title": "Puscifer",
     "location": "013",
+<<<<<<< HEAD:backend/event-lists/013/1.json
     "price": 50.8,
     "shortText": "",
     "longText": "../public/texts/08f2e13b-4d79-4eb3-8d1a-c6ecde20a24e.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/63b53b4e11a31.jpg?version=1673449369"
+=======
+    "price": 70,
+    "shortText": "- 01011001 - Live Beneath the Waves",
+    "longText": "../public/texts/f4bd997c-9580-4fe6-99ad-2d2ca30576d0.html",
+    "image": "https://www.013.nl/uploads/cache/event_main_desktop/6346b267d7970.jpg?version=1665639188"
+>>>>>>> 8c12652e65e3568edb2b1a08fd7c715db26e0a28:backend/event-lists/013-2.json
   },
   {
     "doorOpenDateTime": "2023-09-17T10:00:00.000Z",
@@ -140,7 +212,12 @@
     "location": "013",
     "price": 70,
     "shortText": "- 01011001 - Live Beneath the Waves",
+<<<<<<< HEAD:backend/event-lists/013/1.json
     "longText": "../public/texts/da59716b-7384-44a8-8ed1-5ebb66b8d870.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/63622c8151b6b.jpg?version=1667378577"
+=======
+    "longText": "../public/texts/64d4a131-601b-4725-89bc-bba231d2c5a9.html",
+    "image": "https://www.013.nl/uploads/cache/event_main_desktop/6346b267d7970.jpg?version=1665639188"
+>>>>>>> 8c12652e65e3568edb2b1a08fd7c715db26e0a28:backend/event-lists/013-2.json
   }
 ]

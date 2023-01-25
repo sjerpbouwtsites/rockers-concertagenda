@@ -1,5 +1,32 @@
 [
   {
+<<<<<<< HEAD:backend/event-lists/013/2.json
+=======
+    "doorOpenDateTime": "2023-01-08T17:30:00.000Z",
+    "startDateTime": "2023-01-08T19:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.013.nl/programma/6933/shadow-of-intent",
+    "title": "Shadow Of Intent",
+    "location": "013",
+    "price": 18.9,
+    "shortText": "",
+    "longText": "../public/texts/8e580a03-3960-454d-9dbe-76e31e214afc.html",
+    "image": "https://www.013.nl/uploads/cache/event_main_desktop/62b57c2eeb4a3.jpg?version=1656060990"
+  },
+  {
+    "doorOpenDateTime": "2023-01-19T18:00:00.000Z",
+    "startDateTime": "2023-01-19T19:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.013.nl/programma/7183/karnivool",
+    "title": "Karnivool",
+    "location": "013",
+    "price": 25.4,
+    "shortText": "",
+    "longText": "../public/texts/774770a5-a9e3-4166-8438-8de3b42bc76e.html",
+    "image": "https://www.013.nl/uploads/cache/event_main_desktop/5fbc10e14e362.jpg?version=1646386746"
+  },
+  {
+>>>>>>> 8c12652e65e3568edb2b1a08fd7c715db26e0a28:backend/event-lists/013-3.json
     "doorOpenDateTime": "2023-02-03T18:00:00.000Z",
     "startDateTime": "2023-02-03T19:00:00.000Z",
     "endDateTime": null,
@@ -8,7 +35,11 @@
     "location": "013",
     "price": 25.9,
     "shortText": "",
+<<<<<<< HEAD:backend/event-lists/013/2.json
     "longText": "../public/texts/7afe221d-2c4c-44e6-a2b4-e6bf8aec6bd5.html",
+=======
+    "longText": "../public/texts/8e3fcad7-9848-4dd3-9c85-edc70e9cb96d.html",
+>>>>>>> 8c12652e65e3568edb2b1a08fd7c715db26e0a28:backend/event-lists/013-3.json
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/62f27574c3e8a.png?version=1660056961"
   },
   {
@@ -20,7 +51,11 @@
     "location": "013",
     "price": 19.9,
     "shortText": "DE BELANGRIJKSTE BAND VAN NEDERLAND TOUR",
+<<<<<<< HEAD:backend/event-lists/013/2.json
     "longText": "../public/texts/53b94605-dab3-47a2-b529-b2bc1d9a9668.html",
+=======
+    "longText": "../public/texts/7ad47c48-e22e-488f-9bf9-6666a50c7f59.html",
+>>>>>>> 8c12652e65e3568edb2b1a08fd7c715db26e0a28:backend/event-lists/013-3.json
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/62ab305ab1626.jpg?version=1655386295"
   },
   {
@@ -32,7 +67,11 @@
     "location": "013",
     "price": 45.4,
     "shortText": "",
+<<<<<<< HEAD:backend/event-lists/013/2.json
     "longText": "../public/texts/5c6e6780-2457-4473-8862-a1403fd46bbf.html",
+=======
+    "longText": "../public/texts/d5a363fd-d26c-49e8-8721-d6741bbd6ace.html",
+>>>>>>> 8c12652e65e3568edb2b1a08fd7c715db26e0a28:backend/event-lists/013-3.json
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/6368f31ed4cee.jpg?version=1667822412"
   },
   {
@@ -44,7 +83,11 @@
     "location": "013",
     "price": 39.4,
     "shortText": "",
+<<<<<<< HEAD:backend/event-lists/013/2.json
     "longText": "../public/texts/4c003b73-3946-4458-83fd-b32f13cc9f02.html",
+=======
+    "longText": "../public/texts/c0f4fbd3-5316-4484-b356-6959e496c771.html",
+>>>>>>> 8c12652e65e3568edb2b1a08fd7c715db26e0a28:backend/event-lists/013-3.json
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/6304998fb8782.jpeg?version=1661245990"
   },
   {
@@ -56,7 +99,11 @@
     "location": "013",
     "price": 20.9,
     "shortText": "",
+<<<<<<< HEAD:backend/event-lists/013/2.json
     "longText": "../public/texts/780a8cd7-9a55-481b-96b1-e2dc18f0a571.html",
+=======
+    "longText": "../public/texts/94422388-0811-4f04-8372-58c00bb637a9.html",
+>>>>>>> 8c12652e65e3568edb2b1a08fd7c715db26e0a28:backend/event-lists/013-3.json
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/5e84aee077933.jpg?version=1646386741"
   },
   {
@@ -68,7 +115,11 @@
     "location": "013",
     "price": 33.4,
     "shortText": "",
+<<<<<<< HEAD:backend/event-lists/013/2.json
     "longText": "../public/texts/9d11a960-2f34-46ba-ad15-b23001faa005.html",
+=======
+    "longText": "../public/texts/8f5c9019-d5d9-4c8f-8dd3-1791418ae43c.html",
+>>>>>>> 8c12652e65e3568edb2b1a08fd7c715db26e0a28:backend/event-lists/013-3.json
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/62d685c0111a5.jpg?version=1658226133"
   },
   {
@@ -80,8 +131,13 @@
     "location": "013",
     "price": 16.8,
     "shortText": "",
+<<<<<<< HEAD:backend/event-lists/013/2.json
     "longText": "../public/texts/d04775d0-7e8b-47f3-bfa7-c2fee965583e.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/639331db62927.jpeg?version=1670591039"
+=======
+    "longText": "../public/texts/47c40f6d-b7f2-447f-8a59-a026b0118825.html",
+    "image": "https://www.013.nl/uploads/cache/event_main_desktop/5e3845c648f60.jpg?version=1646386754"
+>>>>>>> 8c12652e65e3568edb2b1a08fd7c715db26e0a28:backend/event-lists/013-3.json
   },
   {
     "doorOpenDateTime": "2023-04-12T17:00:00.000Z",
@@ -92,8 +148,13 @@
     "location": "013",
     "price": 38.4,
     "shortText": "",
+<<<<<<< HEAD:backend/event-lists/013/2.json
     "longText": "../public/texts/0b9c8de8-4629-4a29-828d-b1d623ba6098.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/62a051f9d42f1.jpg?version=1655379810"
+=======
+    "longText": "../public/texts/4d841a99-3d1d-4eec-919e-5a975a388cb4.html",
+    "image": "https://www.013.nl/uploads/cache/event_main_desktop/63808864ec7df.jpg?version=1669368003"
+>>>>>>> 8c12652e65e3568edb2b1a08fd7c715db26e0a28:backend/event-lists/013-3.json
   },
   {
     "doorOpenDateTime": "2023-04-20T11:00:00.000Z",
@@ -104,6 +165,7 @@
     "location": "013",
     "price": null,
     "shortText": "Redefining heaviness",
+<<<<<<< HEAD:backend/event-lists/013/2.json
     "longText": "../public/texts/2c814b14-f9b2-4c83-a78e-6fe53e352b72.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/6372184fdbb03.jpg?version=1668422376"
   },
@@ -130,6 +192,10 @@
     "shortText": "- 01011001 - Live Beneath the Waves",
     "longText": "../public/texts/814285dc-45b4-4950-9998-873cc663e9ab.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/6346b267d7970.jpg?version=1665639188"
+=======
+    "longText": "../public/texts/f10648af-b2f4-441e-a737-456c49169071.html",
+    "image": "https://www.013.nl/uploads/cache/event_main_desktop/63721baa75600.jpg?version=1668422576"
+>>>>>>> 8c12652e65e3568edb2b1a08fd7c715db26e0a28:backend/event-lists/013-3.json
   },
   {
     "doorOpenDateTime": "2023-09-17T17:00:00.000Z",
@@ -140,7 +206,12 @@
     "location": "013",
     "price": 70,
     "shortText": "- 01011001 - Live Beneath the Waves",
+<<<<<<< HEAD:backend/event-lists/013/2.json
     "longText": "../public/texts/6c8600da-ddbe-4d21-b71e-37944e4c3b18.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/6346b267d7970.jpg?version=1665639188"
+=======
+    "longText": "../public/texts/cfee02b5-2dd4-45b1-9629-c666c029efa3.html",
+    "image": "https://www.013.nl/uploads/cache/event_main_desktop/636b67f58516f.jpg?version=1668074822"
+>>>>>>> 8c12652e65e3568edb2b1a08fd7c715db26e0a28:backend/event-lists/013-3.json
   }
 ]

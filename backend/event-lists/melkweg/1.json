@@ -1,6 +1,45 @@
 [
   {
     "doorOpenDateTime": null,
+<<<<<<< HEAD:backend/event-lists/melkweg/1.json
+=======
+    "startDateTime": "2022-12-11T17:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/finntroll-11-12-2022/",
+    "title": "Finntroll",
+    "location": "melkweg",
+    "price": 28.75,
+    "shortText": "",
+    "longText": "../public/texts/6253ecc2-eebe-4cef-bae6-d46ed7261932.html",
+    "image": "https://assets.melkweg.nl/scaled/1080x600/eventpages/bc55dad5-1462-4641-8b8c-91521fec6895/27552.jpeg.jpg"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-12-16T16:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/thy-art-is-murder-16-12-2022/",
+    "title": "Thy Art Is Murder",
+    "location": "melkweg",
+    "price": 31.35,
+    "shortText": "Presented by Impericon",
+    "longText": "../public/texts/8a332369-ee66-4ce7-b96e-fc738e2b32d3.html",
+    "image": "https://assets.melkweg.nl/scaled/1080x600/eventpages/aa008d0b-cfb5-49cd-9c15-e0e422675f75/27795.jpeg.jpg"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-01-13T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/magic-tom-yuri-13-01-2023/",
+    "title": "Magic Tom & Yuri",
+    "location": "melkweg",
+    "price": 12.52,
+    "shortText": "",
+    "longText": "../public/texts/0e26cee5-d9be-41d3-a516-9eb000538d7c.html",
+    "image": "https://assets.melkweg.nl/scaled/1200x800/eventpages/112b2d1a-6fb7-4ba1-8f3a-a316d3d310bd/mty-cms.png.jpg"
+  },
+  {
+    "doorOpenDateTime": null,
+>>>>>>> 8c12652e65e3568edb2b1a08fd7c715db26e0a28:backend/event-lists/melkweg-0.json
     "startDateTime": "2023-01-29T18:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://www.melkweg.nl/nl/agenda/fever-333-29-01-2023/",
@@ -8,7 +47,11 @@
     "location": "melkweg",
     "price": 20.15,
     "shortText": "",
+<<<<<<< HEAD:backend/event-lists/melkweg/1.json
     "longText": "../public/texts/cb6862a9-4d36-4315-86ad-ea83ff51681c.html",
+=======
+    "longText": "../public/texts/8ebf59db-5389-4b61-b00a-a1cdf466f636.html",
+>>>>>>> 8c12652e65e3568edb2b1a08fd7c715db26e0a28:backend/event-lists/melkweg-0.json
     "image": "https://assets.melkweg.nl/scaled/2000x1333/eventpages/cf801fa5-256f-4c71-bf11-fac1654c01d0/Fever333_2020_JW_026.jpg.jpg"
   },
   {
@@ -20,7 +63,11 @@
     "location": "melkweg",
     "price": 20.15,
     "shortText": "",
+<<<<<<< HEAD:backend/event-lists/melkweg/1.json
     "longText": "../public/texts/9aa7c15f-fc07-4726-84b4-cdd1eac72b1b.html",
+=======
+    "longText": "../public/texts/74cc1d93-69ca-4c53-b2e3-a9019ec81987.html",
+>>>>>>> 8c12652e65e3568edb2b1a08fd7c715db26e0a28:backend/event-lists/melkweg-0.json
     "image": "https://assets.melkweg.nl/scaled/1920x1280/eventpages/ee962915-cab2-4b44-9097-295d46ee6e83/cms.jpg.jpg"
   },
   {
@@ -32,7 +79,11 @@
     "location": "melkweg",
     "price": 20.7,
     "shortText": "",
+<<<<<<< HEAD:backend/event-lists/melkweg/1.json
     "longText": "../public/texts/6ce3d3f8-a66d-48ee-ab09-ebe3f2bc239b.html",
+=======
+    "longText": "../public/texts/775aec2d-e119-4ab5-b360-f32b612158c2.html",
+>>>>>>> 8c12652e65e3568edb2b1a08fd7c715db26e0a28:backend/event-lists/melkweg-0.json
     "image": "https://assets.melkweg.nl/scaled/1080x600/eventpages/5e7fd790-7ce1-416b-84e4-6bd9df690529/29882.jpeg.jpg"
   },
   {
@@ -44,7 +95,11 @@
     "location": "melkweg",
     "price": 15.55,
     "shortText": "",
+<<<<<<< HEAD:backend/event-lists/melkweg/1.json
     "longText": "../public/texts/e1a3b645-cc7e-4729-b8d9-651215db1ba3.html",
+=======
+    "longText": "../public/texts/5c3efaa5-9999-48be-b4fb-70946f9302c1.html",
+>>>>>>> 8c12652e65e3568edb2b1a08fd7c715db26e0a28:backend/event-lists/melkweg-0.json
     "image": "https://assets.melkweg.nl/scaled/1080x600/eventpages/08238879-c7ad-4579-a67e-477fa1e1386c/Mom-jeans.png.jpg"
   },
   {
@@ -56,7 +111,11 @@
     "location": "melkweg",
     "price": 31.05,
     "shortText": "",
+<<<<<<< HEAD:backend/event-lists/melkweg/1.json
     "longText": "../public/texts/4b4df06f-9690-4f7c-a590-a9d8544592d3.html",
+=======
+    "longText": "../public/texts/5f9c4cc9-80cd-4cf5-8d94-c5417a97accc.html",
+>>>>>>> 8c12652e65e3568edb2b1a08fd7c715db26e0a28:backend/event-lists/melkweg-0.json
     "image": "https://assets.melkweg.nl/scaled/1080x600/eventpages/ec62846a-3cba-409b-a057-ec4df1d70a25/29943.png.jpg"
   },
   {
@@ -68,7 +127,11 @@
     "location": "melkweg",
     "price": 28.75,
     "shortText": "",
+<<<<<<< HEAD:backend/event-lists/melkweg/1.json
     "longText": "../public/texts/1402ae44-d57d-4056-8440-a3878341a88b.html",
+=======
+    "longText": "../public/texts/2e548684-1388-418d-a94e-c2c992c52058.html",
+>>>>>>> 8c12652e65e3568edb2b1a08fd7c715db26e0a28:backend/event-lists/melkweg-0.json
     "image": "https://assets.melkweg.nl/scaled/1080x600/eventpages/a33e19f7-c199-4b46-a0ad-3fc170b9258d/29467.png.jpg"
   },
   {

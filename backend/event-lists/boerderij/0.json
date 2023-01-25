@@ -1,5 +1,80 @@
 [
   {
+<<<<<<< HEAD:backend/event-lists/boerderij/0.json
+=======
+    "doorOpenDateTime": "2022-12-11T18:30:00.000Z",
+    "startDateTime": "2022-12-11T19:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://poppodiumboerderij.nl/programma/john-corabi",
+    "title": "John Corabi solo",
+    "location": "boerderij",
+    "price": 20,
+    "shortText": "(Mötley Crüe & The Dead Daisies)",
+    "longText": "../public/texts/10c60b15-5974-4ebf-b302-ac619edbc2c9.html",
+    "image": "https://lift3cdn.nl/image/115/784x476/john-corabi-website.jpg"
+  },
+  {
+    "doorOpenDateTime": "2022-12-16T18:30:00.000Z",
+    "startDateTime": "2022-12-16T19:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://poppodiumboerderij.nl/programma/the-doors-alive-the-doors-tribute",
+    "title": "The Doors Alive",
+    "location": "boerderij",
+    "price": 29,
+    "shortText": "+ support The Mocks",
+    "longText": "../public/texts/bc7831ee-a8a6-4fa7-8c6e-f73e42270e4b.html",
+    "image": "https://lift3cdn.nl/image/115/784x476/the-doors-alive.jpg"
+  },
+  {
+    "doorOpenDateTime": "2022-12-18T12:30:00.000Z",
+    "startDateTime": "2022-12-18T13:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://poppodiumboerderij.nl/programma/courbois-courbois",
+    "title": "Courbois Courbois",
+    "location": "boerderij",
+    "price": 13,
+    "shortText": "Jazz & hardrock",
+    "longText": "../public/texts/0cd3e625-a0bd-4fda-8ef4-b08a09cae2e7.html",
+    "image": "https://lift3cdn.nl/image/115/784x476/courbois-courbois-2022.jpg"
+  },
+  {
+    "doorOpenDateTime": "2023-01-07T18:30:00.000Z",
+    "startDateTime": "2023-01-07T19:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://poppodiumboerderij.nl/programma/ronnie-james-dio-the-memorial-concert",
+    "title": "Ronnie James Dio - The Memorial Concert",
+    "location": "boerderij",
+    "price": 24,
+    "shortText": "Met sterbezetting uit de Nederlandse hardrock en metal",
+    "longText": "../public/texts/11ada6ab-b2f5-4c72-9b6f-e0922f8509a1.html",
+    "image": "https://lift3cdn.nl/image/115/784x476/rj-dio.jpg"
+  },
+  {
+    "doorOpenDateTime": "2023-01-16T18:00:00.000Z",
+    "startDateTime": "2023-01-16T18:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://poppodiumboerderij.nl/programma/animals-as-leaders",
+    "title": "Animals As Leaders",
+    "location": "boerderij",
+    "price": 26,
+    "shortText": "Supports: Allt & Alluvial",
+    "longText": "../public/texts/6c52d0f5-4498-4e9b-90ba-38565bed99d8.html",
+    "image": "https://lift3cdn.nl/image/115/784x476/animals-as-leaders.jpg"
+  },
+  {
+    "doorOpenDateTime": "2023-01-21T18:30:00.000Z",
+    "startDateTime": "2023-01-21T19:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://poppodiumboerderij.nl/programma/amarok-support",
+    "title": "Amarok",
+    "location": "boerderij",
+    "price": 24,
+    "shortText": "+ support Semistereo",
+    "longText": "../public/texts/b1848588-09d6-4995-ad80-397a7ca99b0b.html",
+    "image": "https://lift3cdn.nl/image/115/784x476/amarok-2023.jpg"
+  },
+  {
+>>>>>>> 8c12652e65e3568edb2b1a08fd7c715db26e0a28:backend/event-lists/boerderij-0.json
     "doorOpenDateTime": "2023-01-28T18:30:00.000Z",
     "startDateTime": "2023-01-28T19:00:00.000Z",
     "endDateTime": null,
@@ -8,7 +83,11 @@
     "location": "boerderij",
     "price": 30,
     "shortText": "70's & 80's rock - special guest: Rinus Gerritsen",
+<<<<<<< HEAD:backend/event-lists/boerderij/0.json
     "longText": "../public/texts/552f52ca-9e85-45de-a3b6-2c995a31ad04.html",
+=======
+    "longText": "../public/texts/41d3753f-3c9e-4a36-bc6d-c8d74333459b.html",
+>>>>>>> 8c12652e65e3568edb2b1a08fd7c715db26e0a28:backend/event-lists/boerderij-0.json
     "image": "https://lift3cdn.nl/image/115/784x476/rock-party-of-the-year.jpg"
   },
   {
@@ -19,8 +98,13 @@
     "title": "Lonely Robot",
     "location": "boerderij",
     "price": 29,
+<<<<<<< HEAD:backend/event-lists/boerderij/0.json
     "shortText": "+ support Eddie Mulder",
     "longText": "../public/texts/26215f95-60e5-4e0a-a979-17dd7ec9a644.html",
+=======
+    "shortText": "An evening with + support Eddie Mulder",
+    "longText": "../public/texts/1836a4f7-4e83-417a-adfa-0c74bc990230.html",
+>>>>>>> 8c12652e65e3568edb2b1a08fd7c715db26e0a28:backend/event-lists/boerderij-0.json
     "image": "https://lift3cdn.nl/image/115/784x476/john-mitchell-2023.jpg"
   },
   {
@@ -32,7 +116,11 @@
     "location": "boerderij",
     "price": 31,
     "shortText": "From Love Me Do to Let It Be + special Please Please Me set",
+<<<<<<< HEAD:backend/event-lists/boerderij/0.json
     "longText": "../public/texts/9bf168f3-aa31-4dcf-9a37-1b91c684999f.html",
+=======
+    "longText": "../public/texts/529cc1d3-37a3-4576-8b99-823f19952ffa.html",
+>>>>>>> 8c12652e65e3568edb2b1a08fd7c715db26e0a28:backend/event-lists/boerderij-0.json
     "image": "https://lift3cdn.nl/image/115/784x476/the-bootleg-beatles-2023.jpg"
   },
   {
@@ -44,7 +132,11 @@
     "location": "boerderij",
     "price": 24,
     "shortText": "ex-Purson",
+<<<<<<< HEAD:backend/event-lists/boerderij/0.json
     "longText": "../public/texts/bb5a069f-cfa8-40e9-9025-7852e7f8a381.html",
+=======
+    "longText": "../public/texts/277b27d0-fab9-49c6-85be-43bd1bf84cc9.html",
+>>>>>>> 8c12652e65e3568edb2b1a08fd7c715db26e0a28:backend/event-lists/boerderij-0.json
     "image": "https://lift3cdn.nl/image/115/784x476/rosalie-cunningham.jpg"
   },
   {
@@ -92,7 +184,11 @@
     "location": "boerderij",
     "price": 30,
     "shortText": "Crime Scene Tour 2023 + support Tanyc",
+<<<<<<< HEAD:backend/event-lists/boerderij/0.json
     "longText": "../public/texts/62e73926-cc8b-4fa7-9af5-1cde9bfdd960.html",
+=======
+    "longText": "../public/texts/521d485f-d3e3-4f12-86bf-2493dc43c47b.html",
+>>>>>>> 8c12652e65e3568edb2b1a08fd7c715db26e0a28:backend/event-lists/boerderij-0.json
     "image": "https://lift3cdn.nl/image/115/784x476/rpwl-2-2023.jpg"
   },
   {
@@ -104,7 +200,11 @@
     "location": "boerderij",
     "price": 35.5,
     "shortText": "35 yrs operation:mindcrime + greatest hits",
+<<<<<<< HEAD:backend/event-lists/boerderij/0.json
     "longText": "../public/texts/09beeb08-910f-4708-bf29-820643f01500.html",
+=======
+    "longText": "../public/texts/4c3a5ada-2c51-4804-8566-8f1c4adc2e66.html",
+>>>>>>> 8c12652e65e3568edb2b1a08fd7c715db26e0a28:backend/event-lists/boerderij-0.json
     "image": "https://lift3cdn.nl/image/115/784x476/geoff-tate-2023.jpg"
   },
   {
@@ -128,7 +228,11 @@
     "location": "boerderij",
     "price": 25.5,
     "shortText": "met band Zeus",
+<<<<<<< HEAD:backend/event-lists/boerderij/0.json
     "longText": "../public/texts/bec7b179-caa1-4a12-9bad-4550b3ae89ba.html",
+=======
+    "longText": "../public/texts/df09da6e-a72f-41ca-86db-c12bdf791878.html",
+>>>>>>> 8c12652e65e3568edb2b1a08fd7c715db26e0a28:backend/event-lists/boerderij-0.json
     "image": "https://lift3cdn.nl/image/115/784x476/jeroen-van-kningsbrugge-sings-pearl-jam-2023.jpg"
   },
   {
@@ -140,7 +244,11 @@
     "location": "boerderij",
     "price": 30,
     "shortText": "The Music of The Moody Blues",
+<<<<<<< HEAD:backend/event-lists/boerderij/0.json
     "longText": "../public/texts/95768bea-d940-4d70-bd9b-4547b2ae943b.html",
+=======
+    "longText": "../public/texts/5f74e346-b647-42c6-832b-c07e7ba3d61d.html",
+>>>>>>> 8c12652e65e3568edb2b1a08fd7c715db26e0a28:backend/event-lists/boerderij-0.json
     "image": "https://lift3cdn.nl/image/115/784x476/go-now.jpg"
   },
   {
@@ -152,7 +260,11 @@
     "location": "boerderij",
     "price": 29,
     "shortText": "Double Headliner",
+<<<<<<< HEAD:backend/event-lists/boerderij/0.json
     "longText": "../public/texts/6032d333-2dcb-4713-9749-78d2edcd9489.html",
+=======
+    "longText": "../public/texts/a0150188-282a-4807-a751-dd3a8e78a478.html",
+>>>>>>> 8c12652e65e3568edb2b1a08fd7c715db26e0a28:backend/event-lists/boerderij-0.json
     "image": "https://lift3cdn.nl/image/115/784x476/lizzard-en-ork.jpg"
   },
   {

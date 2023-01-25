@@ -1,6 +1,33 @@
 [
   {
     "doorOpenDateTime": null,
+<<<<<<< HEAD:backend/event-lists/melkweg/0.json
+=======
+    "startDateTime": "2022-12-16T16:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/thy-art-is-murder-16-12-2022/",
+    "title": "Thy Art Is Murder",
+    "location": "melkweg",
+    "price": 31.35,
+    "shortText": "Presented by Impericon",
+    "longText": "../public/texts/a958ab03-c25f-4e16-b801-537b10425d3c.html",
+    "image": "https://assets.melkweg.nl/scaled/1080x600/eventpages/aa008d0b-cfb5-49cd-9c15-e0e422675f75/27795.jpeg.jpg"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-12-23T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/emo-night-mainland-23-12-2022/",
+    "title": "Emo Night Mainland",
+    "location": "melkweg",
+    "price": 14.4,
+    "shortText": "",
+    "longText": "../public/texts/35680d4d-32eb-4031-af57-a34a55d80f4d.html",
+    "image": "https://assets.melkweg.nl/scaled/1080x600/eventpages/50b3e93d-31d8-474e-ab1c-a98142139e4b/29802.jpeg.jpg"
+  },
+  {
+    "doorOpenDateTime": null,
+>>>>>>> 8c12652e65e3568edb2b1a08fd7c715db26e0a28:backend/event-lists/melkweg-2.json
     "startDateTime": "2023-01-29T18:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://www.melkweg.nl/nl/agenda/fever-333-29-01-2023/",
@@ -8,7 +35,11 @@
     "location": "melkweg",
     "price": 20.15,
     "shortText": "",
+<<<<<<< HEAD:backend/event-lists/melkweg/0.json
     "longText": "../public/texts/b40a5682-4a47-4160-8515-9aa3ead13e5c.html",
+=======
+    "longText": "../public/texts/d0b3be61-7948-489c-9cb6-0c94a8cbc7d1.html",
+>>>>>>> 8c12652e65e3568edb2b1a08fd7c715db26e0a28:backend/event-lists/melkweg-2.json
     "image": "https://assets.melkweg.nl/scaled/2000x1333/eventpages/cf801fa5-256f-4c71-bf11-fac1654c01d0/Fever333_2020_JW_026.jpg.jpg"
   },
   {
@@ -20,7 +51,11 @@
     "location": "melkweg",
     "price": 34.5,
     "shortText": "",
+<<<<<<< HEAD:backend/event-lists/melkweg/0.json
     "longText": "../public/texts/bc16cef2-3825-41e4-a6b2-50a3a54f0504.html",
+=======
+    "longText": "../public/texts/e0180f5c-1230-43ba-9ec1-27ac25335641.html",
+>>>>>>> 8c12652e65e3568edb2b1a08fd7c715db26e0a28:backend/event-lists/melkweg-2.json
     "image": "https://assets.melkweg.nl/scaled/3819x2667/eventpages/e5e8c0a3-dbef-4381-b5d8-945172b340e4/LIFE-OF-AGONY-GINO-DEPINTO_273.jpg.jpg"
   },
   {
@@ -32,7 +67,11 @@
     "location": "melkweg",
     "price": 17.25,
     "shortText": "",
+<<<<<<< HEAD:backend/event-lists/melkweg/0.json
     "longText": "../public/texts/ec248a7b-0703-49c4-930b-6ce6d49a3c88.html",
+=======
+    "longText": "../public/texts/c81361cf-a1e6-4f16-a729-6af69da3a473.html",
+>>>>>>> 8c12652e65e3568edb2b1a08fd7c715db26e0a28:backend/event-lists/melkweg-2.json
     "image": "https://assets.melkweg.nl/scaled/1080x600/eventpages/e8d661e6-933b-4e43-9599-883535b00c62/28689.jpeg.jpg"
   },
   {
@@ -44,7 +83,11 @@
     "location": "melkweg",
     "price": 15.55,
     "shortText": "",
+<<<<<<< HEAD:backend/event-lists/melkweg/0.json
     "longText": "../public/texts/4f003f50-53d9-43c7-ae17-34c00183d375.html",
+=======
+    "longText": "../public/texts/8bb23bed-a4f7-4341-9e06-b8bc580f1dc0.html",
+>>>>>>> 8c12652e65e3568edb2b1a08fd7c715db26e0a28:backend/event-lists/melkweg-2.json
     "image": "https://assets.melkweg.nl/scaled/1080x600/eventpages/08238879-c7ad-4579-a67e-477fa1e1386c/Mom-jeans.png.jpg"
   },
   {
@@ -56,7 +99,11 @@
     "location": "melkweg",
     "price": 16.1,
     "shortText": "",
+<<<<<<< HEAD:backend/event-lists/melkweg/0.json
     "longText": "../public/texts/9ad2b20f-48c9-457e-98e4-9f1a7b10bb84.html",
+=======
+    "longText": "../public/texts/4a5113ed-d800-42a2-8fae-1c1a5a10b80b.html",
+>>>>>>> 8c12652e65e3568edb2b1a08fd7c715db26e0a28:backend/event-lists/melkweg-2.json
     "image": "https://assets.melkweg.nl/scaled/1080x600/eventpages/38974f9e-b617-4721-8187-e081cba4d119/Kid-Kapichi-CMS.png.jpg"
   },
   {
@@ -68,7 +115,11 @@
     "location": "melkweg",
     "price": 17.25,
     "shortText": "",
+<<<<<<< HEAD:backend/event-lists/melkweg/0.json
     "longText": "../public/texts/a15768ba-ed0d-41cf-b251-0f7bd224ae3b.html",
+=======
+    "longText": "../public/texts/28f8e651-5dba-4dbf-8c4e-d109a7d01717.html",
+>>>>>>> 8c12652e65e3568edb2b1a08fd7c715db26e0a28:backend/event-lists/melkweg-2.json
     "image": "https://assets.melkweg.nl/scaled/2999x1999/eventpages/fc6b276b-5e8b-480c-b752-7c35f10276ee/Joy-Division-Undercover-3--Picture-by-Anne-Marie-van-Rijn.jpg.jpg"
   },
   {
@@ -80,7 +131,11 @@
     "location": "melkweg",
     "price": 17.25,
     "shortText": "",
+<<<<<<< HEAD:backend/event-lists/melkweg/0.json
     "longText": "../public/texts/b5ebeff6-0554-42e4-9b27-222699cd1d22.html",
+=======
+    "longText": "../public/texts/2fad5c47-cf09-4319-bcc3-83ce98f86459.html",
+>>>>>>> 8c12652e65e3568edb2b1a08fd7c715db26e0a28:backend/event-lists/melkweg-2.json
     "image": "https://assets.melkweg.nl/scaled/1080x600/eventpages/846d0f9e-3760-43f8-8228-42185cd80c15/28605.jpeg.jpg"
   },
   {

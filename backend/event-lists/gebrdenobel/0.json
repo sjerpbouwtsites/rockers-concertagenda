@@ -1,6 +1,69 @@
 [
   {
     "doorOpenDateTime": null,
+<<<<<<< HEAD:backend/event-lists/gebrdenobel/0.json
+=======
+    "startDateTime": "2022-12-14T18:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://gebrdenobel.nl/programma/nazareth-14-dec-2022",
+    "title": "Nazareth",
+    "location": "gebrdenobel",
+    "price": 27.5,
+    "shortText": "20 Nights in 2020 Tour",
+    "longText": "../public/texts/dca9450e-190b-44a7-b7e9-2a819e2d7fc6.html",
+    "image": "https://gebrdenobel.nl/images/jcogs_img/cache/Nazareth_header_-_28de80_-_0325b297ce0ec40e40188db32ae69e0dc2409c26.jpg"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-12-15T18:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://gebrdenobel.nl/programma/anvil-15-dec-2022",
+    "title": "Anvil",
+    "location": "gebrdenobel",
+    "price": 17.5,
+    "shortText": "Legal at Last Tour 2022",
+    "longText": "../public/texts/17745760-106c-4201-9f17-21a4524b5856.html",
+    "image": "https://gebrdenobel.nl/images/jcogs_img/cache/anvil_-_28de80_-_2f31e3e1c427c42714fa986918584755a1f10abb.jpg"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-01-05T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://gebrdenobel.nl/programma/mis-yrming-is-kringa-at-ritual-death-no-en-nubivagant-it-5-jan-2023",
+    "title": "Misþyrming (IS), Kringa (AT), Ritual Death (NO) en Nubivagant (IT)",
+    "location": "gebrdenobel",
+    "price": 20,
+    "shortText": "Black metalbands uit alle hoeken van Europa",
+    "longText": "../public/texts/a2592577-feed-489d-bcd4-839ca6c2a9b1.html",
+    "image": "https://gebrdenobel.nl/images/jcogs_img/cache/MIS%C3%9EYRMING-band-photo_-_28de80_-_0520bc739f7d9f8b124af1d470ae369d711ec851.jpg"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-01-07T17:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://gebrdenobel.nl/programma/kutschurft-nog-1-keer-met-volle-zakken-7-jan-2023",
+    "title": "Kutschurft: Nog 1 keer met volle zakken",
+    "location": "gebrdenobel",
+    "price": 15,
+    "shortText": "De meest eetlustbedervende band van Nederland",
+    "longText": "../public/texts/8929051a-e1d7-4d05-bb47-5e0c08289ddb.html",
+    "image": "https://gebrdenobel.nl/images/jcogs_img/cache/FB_event_kmk_-_28de80_-_5e64d89a22eba649f4f26791ba004c1eb00ef130.jpg"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-01-13T18:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://gebrdenobel.nl/programma/downtown-district-13-jan-2023",
+    "title": "Downtown District",
+    "location": "gebrdenobel",
+    "price": 7.5,
+    "shortText": "Album-release van Leidse punkrockband",
+    "longText": "../public/texts/1dd3472e-6be8-4720-b148-2846e93f7955.html",
+    "image": "https://gebrdenobel.nl/images/jcogs_img/cache/DD_Presspicture_4_2023_lowres_banner_-_28de80_-_416f503af820dfaa11990d98aa93b3dadab2a89f.jpg"
+  },
+  {
+    "doorOpenDateTime": null,
+>>>>>>> 8c12652e65e3568edb2b1a08fd7c715db26e0a28:backend/event-lists/gebrdenobel-0.json
     "startDateTime": "2023-02-04T17:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://gebrdenobel.nl/programma/harakiri-for-the-sky-4-feb-2023",
@@ -8,7 +71,11 @@
     "location": "gebrdenobel",
     "price": 20,
     "shortText": "+ GROZA + Schammasch",
+<<<<<<< HEAD:backend/event-lists/gebrdenobel/0.json
     "longText": "../public/texts/d3b7e5e3-c969-4eff-8bc5-f7ea19cd5179.html",
+=======
+    "longText": "../public/texts/f69b7a86-cba4-4665-b7dc-0943d213bbd8.html",
+>>>>>>> 8c12652e65e3568edb2b1a08fd7c715db26e0a28:backend/event-lists/gebrdenobel-0.json
     "image": "https://gebrdenobel.nl/images/jcogs_img/cache/Harakiri-for-the-sky-header-Header_-_28de80_-_ca51900725b3579e602a09dc6db714db338c77e4.png"
   },
   {
@@ -32,7 +99,11 @@
     "location": "gebrdenobel",
     "price": 35,
     "shortText": "Creed frontman op The Survivor Tour",
+<<<<<<< HEAD:backend/event-lists/gebrdenobel/0.json
     "longText": "../public/texts/adfd5db3-eeef-4696-9c8c-524eb6224d8d.html",
+=======
+    "longText": "../public/texts/d6440bdd-9c72-4f30-bf74-e8b12d6f9c00.html",
+>>>>>>> 8c12652e65e3568edb2b1a08fd7c715db26e0a28:backend/event-lists/gebrdenobel-0.json
     "image": "https://gebrdenobel.nl/images/jcogs_img/cache/Scott_Stapp_header_-_28de80_-_59b92a25ee1d945d2b1b10145a9b50448c1e9726.jpg"
   },
   {
@@ -44,7 +115,11 @@
     "location": "gebrdenobel",
     "price": 20,
     "shortText": "",
+<<<<<<< HEAD:backend/event-lists/gebrdenobel/0.json
     "longText": "../public/texts/9f18f7af-ad71-4b88-b9b4-d50cbb96979c.html",
+=======
+    "longText": "../public/texts/fb889e1d-e8e9-48b8-88d1-59fdd0d4825a.html",
+>>>>>>> 8c12652e65e3568edb2b1a08fd7c715db26e0a28:backend/event-lists/gebrdenobel-0.json
     "image": "https://gebrdenobel.nl/images/jcogs_img/cache/TFN_23_Ontwerp_zonder_titel_-_28de80_-_754fa8047337efc4cd7e525e26ec59bcc224cc9f.jpg"
   },
   {
@@ -56,7 +131,11 @@
     "location": "gebrdenobel",
     "price": 20,
     "shortText": "Haags alternatief popfenomeen klinkt jonger dan ooit tevoren",
+<<<<<<< HEAD:backend/event-lists/gebrdenobel/0.json
     "longText": "../public/texts/ee79cff0-8bf2-4f67-9652-9c67be747227.html",
+=======
+    "longText": "../public/texts/fcbbc663-9153-4041-9077-241840f294ac.html",
+>>>>>>> 8c12652e65e3568edb2b1a08fd7c715db26e0a28:backend/event-lists/gebrdenobel-0.json
     "image": "https://gebrdenobel.nl/images/jcogs_img/cache/Hallo_Venray_banner_-_28de80_-_3f0bbdfdec23bd69c22aa71954694428f2888c0f.png"
   },
   {
@@ -80,7 +159,11 @@
     "location": "gebrdenobel",
     "price": 25,
     "shortText": "Ongehoorde mix van funk, soul, jazz, punk, rock en hiphop",
+<<<<<<< HEAD:backend/event-lists/gebrdenobel/0.json
     "longText": "../public/texts/8bf26071-0813-4167-a186-64f82569e0f9.html",
+=======
+    "longText": "../public/texts/34eacdba-248a-41d1-b201-b8192707d019.html",
+>>>>>>> 8c12652e65e3568edb2b1a08fd7c715db26e0a28:backend/event-lists/gebrdenobel-0.json
     "image": "https://gebrdenobel.nl/images/jcogs_img/cache/UDSPetitBain_dec2021_-_28de80_-_19d643e2ab8fd1afdf2dd4c1849769aec351acda.jpg"
   },
   {
@@ -92,7 +175,11 @@
     "location": "gebrdenobel",
     "price": 16,
     "shortText": "Tributes aan Black Sabbath, Iron Maiden en Judas Priest",
+<<<<<<< HEAD:backend/event-lists/gebrdenobel/0.json
     "longText": "../public/texts/b08d649c-b64f-4617-8ab7-06a1b371b9aa.html",
+=======
+    "longText": "../public/texts/1f203d62-e017-4dd4-9096-de33b3b587d5.html",
+>>>>>>> 8c12652e65e3568edb2b1a08fd7c715db26e0a28:backend/event-lists/gebrdenobel-0.json
     "image": "https://gebrdenobel.nl/images/jcogs_img/cache/MH_2023_banner_-_28de80_-_40513dd73bee09a4a5bbd3442e53a7d41cc4dbac.jpg"
   },
   {
@@ -116,7 +203,11 @@
     "location": "gebrdenobel",
     "price": 17.5,
     "shortText": "Stoner- en alternatief rockfestival met 6 bands",
+<<<<<<< HEAD:backend/event-lists/gebrdenobel/0.json
     "longText": "../public/texts/e49036a3-e05f-4580-ad46-6f023b1d8aef.html",
+=======
+    "longText": "../public/texts/52a225cf-3833-4147-9baa-dcd95568b27f.html",
+>>>>>>> 8c12652e65e3568edb2b1a08fd7c715db26e0a28:backend/event-lists/gebrdenobel-0.json
     "image": "https://gebrdenobel.nl/images/jcogs_img/cache/interstellar_solar_fest_header_copy_-_28de80_-_750701c918e447d5c5a982336b7c1a726c5e602e.jpg"
   },
   {
@@ -128,7 +219,11 @@
     "location": "gebrdenobel",
     "price": 30,
     "shortText": "Death metalveteranen Cannibal Corpse op Europese tour",
+<<<<<<< HEAD:backend/event-lists/gebrdenobel/0.json
     "longText": "../public/texts/0268e7d9-11fb-4864-bf5a-03a6e2bb256b.html",
+=======
+    "longText": "../public/texts/e36f1793-351b-43a8-bb53-87a4c61a56b8.html",
+>>>>>>> 8c12652e65e3568edb2b1a08fd7c715db26e0a28:backend/event-lists/gebrdenobel-0.json
     "image": "https://gebrdenobel.nl/images/jcogs_img/cache/Cannibal_Corpse_website_banner_-_28de80_-_f1aca92b79334f30f55f936f856bff770716b107.png"
   },
   {
@@ -140,7 +235,11 @@
     "location": "gebrdenobel",
     "price": 27.5,
     "shortText": "Tribute aan Creedence Clearwater Revival",
+<<<<<<< HEAD:backend/event-lists/gebrdenobel/0.json
     "longText": "../public/texts/8495311e-81fa-4a5a-8c50-cf88e63e68a1.html",
+=======
+    "longText": "../public/texts/16cffdad-2584-4ebd-ba64-2e6aa3701d30.html",
+>>>>>>> 8c12652e65e3568edb2b1a08fd7c715db26e0a28:backend/event-lists/gebrdenobel-0.json
     "image": "https://gebrdenobel.nl/images/jcogs_img/cache/Clearwater_liggend_-_28de80_-_72ee72b90f83c9c01ca2ad260529d031d61cf857.jpg"
   },
   {
@@ -152,7 +251,11 @@
     "location": "gebrdenobel",
     "price": 22.5,
     "shortText": "Progressive Metal uit Australië - Met special guest Persefone",
+<<<<<<< HEAD:backend/event-lists/gebrdenobel/0.json
     "longText": "../public/texts/6e1f0fb7-2276-4e62-b798-4b6f47b50902.html",
+=======
+    "longText": "../public/texts/4da5036f-2a76-4298-b43a-ebd33e45e271.html",
+>>>>>>> 8c12652e65e3568edb2b1a08fd7c715db26e0a28:backend/event-lists/gebrdenobel-0.json
     "image": "https://gebrdenobel.nl/images/jcogs_img/cache/NeObliviscaris_eventheader_-_28de80_-_374f0f028f2f3c3ff7831c2b613b3fb95067cd91.jpg"
   },
   {

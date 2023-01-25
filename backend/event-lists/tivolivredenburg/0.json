@@ -1,14 +1,36 @@
 [
   {
+<<<<<<< HEAD:backend/event-lists/tivolivredenburg/0.json
     "doorOpenDateTime": "2023-02-05T21:35:00.000Z",
     "startDateTime": "2023-02-05T21:35:00.000Z",
     "endDateTime": "2023-02-05T21:35:00.000Z",
+=======
+    "doorOpenDateTime": "2022-12-18T15:00:00.000Z",
+    "startDateTime": "2022-12-18T15:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/doomstad-xl-terzij-de-horde-laster-verwoed-18-12-2022/",
+    "title": "Doomstad XL - Terzij de Horde + Laster + Verwoed",
+    "location": "tivolivredenburg",
+    "price": 23.85,
+    "shortText": "Speciale editie vol underground metal + GGU:LL & Wesenwille",
+    "longText": "../public/texts/87b5701b-abd1-4cf3-9053-9ac97e7bf8ac.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2022/10/Doomstad-Webbanner.jpg"
+  },
+  {
+    "doorOpenDateTime": "2023-02-05T18:00:00.000Z",
+    "startDateTime": "2023-02-05T18:00:00.000Z",
+    "endDateTime": null,
+>>>>>>> 8c12652e65e3568edb2b1a08fd7c715db26e0a28:backend/event-lists/tivolivredenburg-1.json
     "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/leprous-05-02-2023/",
     "title": "Leprous",
     "location": "tivolivredenburg",
     "price": 32.25,
     "shortText": "Progressive metal- en rockvirtuozen",
+<<<<<<< HEAD:backend/event-lists/tivolivredenburg/0.json
     "longText": "../public/texts/2a367b3e-f30b-4868-b277-ddbbb8c60f36.html",
+=======
+    "longText": "../public/texts/7176d660-13ca-4532-962e-54bbd2056ba3.html",
+>>>>>>> 8c12652e65e3568edb2b1a08fd7c715db26e0a28:backend/event-lists/tivolivredenburg-1.json
     "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2022/07/Band-Photo-Leprous-25815_Easy-Resize.com_.jpg"
   },
   {
@@ -20,7 +42,11 @@
     "location": "tivolivredenburg",
     "price": 26.35,
     "shortText": "+ special guests Psychonaut & Doodseskader",
+<<<<<<< HEAD:backend/event-lists/tivolivredenburg/0.json
     "longText": "../public/texts/75e376a5-afd3-46fe-a30a-7b913d0a6db1.html",
+=======
+    "longText": "../public/texts/2fb6b4a5-b780-48e0-8a1a-c95cdbc5a64f.html",
+>>>>>>> 8c12652e65e3568edb2b1a08fd7c715db26e0a28:backend/event-lists/tivolivredenburg-1.json
     "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2022/10/Schermafbeelding-2022-10-05-om-09.57.34-380x214.png"
   },
   {
@@ -32,7 +58,11 @@
     "location": "tivolivredenburg",
     "price": 33.75,
     "shortText": "Onversneden en pure southern rock à la ZZ Top en Lynyrd Skynyrd",
+<<<<<<< HEAD:backend/event-lists/tivolivredenburg/0.json
     "longText": "../public/texts/77919c40-1b73-465e-850e-71e8a772ddd9.html",
+=======
+    "longText": "../public/texts/851b8d76-b7b4-48bd-b72b-4d39a35ef497.html",
+>>>>>>> 8c12652e65e3568edb2b1a08fd7c715db26e0a28:backend/event-lists/tivolivredenburg-1.json
     "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2021/05/Webversie-BBS-1-380x214.png"
   },
   {
