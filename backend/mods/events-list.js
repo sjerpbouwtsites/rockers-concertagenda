@@ -143,9 +143,9 @@ export default class EventsList {
     await waitABit();
 
     const pathToEventList = fsDirections.eventLists;
-    const eventListTimestamps = Object.keys(
-      JSON.parse(fs.readFileSync(fsDirections.timestampsJson))
-    ); // @TODO hele timestamps concept wegsodemieteren. Verplaatsen naar Meta.
+    // const eventListTimestamps = Object.keys(
+    //   JSON.parse(fs.readFileSync(fsDirections.timestampsJson))
+    // ); // @TODO hele timestamps concept wegsodemieteren. Verplaatsen naar Meta.
 
     EventsList._events = [];
     EventsList._meta.locations = {};
