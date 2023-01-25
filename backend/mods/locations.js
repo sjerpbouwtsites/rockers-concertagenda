@@ -99,8 +99,8 @@ const locations = {
     name: "Oldehoofsterkerkhof",
     city: "Leeuwarden",
   }),
-  oostpoort: new Location({
-    name: "Oostpoort",
+  oosterpoort: new Location({
+    name: "Oosterpoort",
     city: "Groningen",
   }),  
   orangerie: new Location({ name: "Orangerie", city: "Den Bosch" }),
@@ -141,6 +141,6 @@ const locations = {
   zappa: new Location({ name: "Zappa", city: "Antwerpen" }),
   ziggodome: new Location({ name: "Ziggodome", city: "Amsterdam" }),
   zuiderpark: new Location({ name: "Zuiderpark", city: "Den Haag" }),
-  zag: new Location({ name: "Zag Arena", city: "Hannoverw" }),
+  zag: new Location({ name: "Zag Arena", city: "Hannover" }),
 };
 export default locations;
