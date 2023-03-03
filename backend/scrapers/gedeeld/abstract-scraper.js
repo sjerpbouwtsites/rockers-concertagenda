@@ -41,6 +41,16 @@ export default class AbstractScraper {
     parentPort.postMessage(this.qwm.toConsole(logThis));
   }
 
+  /**
+   * Wrapper om parentPort.postMessage(qwm.messageRoll(xx)) heen.
+   *
+   * @param {*} talkingString wat dan ook.
+   * @memberof AbstractScraper
+   */
+  dirtyTalk(talkingString) {
+    parentPort.postMessage(this.qwm.messageRoll(String(talkingString)));
+  }  
+
   async scrapeInit() {
     this.browser = await puppeteer.launch();
 
