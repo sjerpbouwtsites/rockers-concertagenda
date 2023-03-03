@@ -1,27 +1,39 @@
 [
   {
-    "doorOpenDateTime": null,
-    "startDateTime": "2023-02-09T20:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.cpunt.nl/agenda/the-perfect-tool-47466",
-    "title": "The Perfect Tool",
-    "location": "cpunt",
-    "price": 20,
-    "shortText": null,
-    "longText": "../public/texts/8ce54ba9-2018-43d4-b29f-29b5ccc57883.html",
-    "image": "https://static.cpunt.nl/cache/the-perfect-tool.33496/the-perfect-tool-s400x400-q80.jpg"
-  },
-  {
     "doorOpenDateTime": "2023-03-10T19:00:00.000Z",
     "startDateTime": "2023-03-10T19:30:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.cpunt.nl/agenda/dikke-dennis-the-rockers-f-47614",
-    "title": "Dikke Dennis & the Rockers & Fire Horse",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/fire-horse",
+    "title": "Fire Horse",
     "location": "cpunt",
     "price": 15,
     "shortText": null,
-    "longText": "../public/texts/33d0cf2b-9c13-4143-a2ab-0fe68cf3baef.html",
-    "image": "https://static.cpunt.nl/cache/dikke-dennis-the-rockers-fire-horse.35385/dikke-dennis-the-rockers-fire-horse-s400x400-q80.jpg"
+    "longText": "../public/texts/7cc070e8-15c8-4622-a97a-f797b594093e.html",
+    "image": "https://static.cpunt.nl/cache/fire-horse.35386/fire-horse-s400x400-q80.jpg"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-03-17T19:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.cpunt.nl/agenda/frisse-duyck-mdi-mind-your-step",
+    "title": "Frisse Duyck: MØDI & Mind Your Step",
+    "location": "cpunt",
+    "price": 7.5,
+    "shortText": null,
+    "longText": "../public/texts/46b0128a-dbda-4443-a5e2-ed9cc962489b.html",
+    "image": "https://static.cpunt.nl/cache/frisse-duyck-mdi-mind-your-step.38024/frisse-duyck-mdi-mind-your-step-s400x400-q80.jpg"
+  },
+  {
+    "doorOpenDateTime": "2023-03-25T19:00:00.000Z",
+    "startDateTime": "2023-03-25T19:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.cpunt.nl/agenda/oi-in-hoofddorp",
+    "title": "Oi! in Hoofddorp",
+    "location": "cpunt",
+    "price": 15,
+    "shortText": null,
+    "longText": "../public/texts/c46b583a-f15f-4c95-b0d2-0ad68aa8bbbc.html",
+    "image": "https://static.cpunt.nl/cache/oi-in-hoofddorp.39198/oi-in-hoofddorp-s400x400-q80.jpg"
   },
   {
     "doorOpenDateTime": "2023-03-31T18:00:00.000Z",
@@ -32,8 +44,20 @@
     "location": "cpunt",
     "price": 16,
     "shortText": null,
-    "longText": "../public/texts/90c321cc-4997-46ce-8453-ae1cd51a6cbd.html",
+    "longText": "../public/texts/d1e8a4f2-af93-48af-bebc-9d6aea73debe.html",
     "image": "https://static.cpunt.nl/cache/kristoffer-gildenlow.35094/kristoffer-gildenlow-s400x400-q80.jpg"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-04-06T18:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.cpunt.nl/agenda/nick-oliveri-47664",
+    "title": "Nick Oliveri",
+    "location": "cpunt",
+    "price": 15,
+    "shortText": null,
+    "longText": "../public/texts/bb8a7fdf-3a52-40ff-b307-898b8214c475.html",
+    "image": "https://static.cpunt.nl/cache/nick-oliveri.38298/nick-oliveri-s400x400-q80.png"
   },
   {
     "doorOpenDateTime": "2023-04-08T18:00:00.000Z",
@@ -44,8 +68,44 @@
     "location": "cpunt",
     "price": 15,
     "shortText": null,
-    "longText": "../public/texts/7097b14c-b69a-4ea9-95e2-54f8b0c7c8ef.html",
+    "longText": "../public/texts/22ed6fda-0c0f-474e-8f9d-465807db5867.html",
     "image": "https://static.cpunt.nl/cache/alternative-90s-met-beastie-boys-undercover-rage-a.33561/alternative-90s-met-beastie-boys-undercover-rage-a-s400x400-q80.jpg"
+  },
+  {
+    "doorOpenDateTime": "2023-04-23T18:00:00.000Z",
+    "startDateTime": "2023-04-23T19:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.cpunt.nl/agenda/mr-punch-2023",
+    "title": "Mr. Punch",
+    "location": "cpunt",
+    "price": 10,
+    "shortText": null,
+    "longText": "../public/texts/fee6a74f-b5ed-4e29-8f25-43871f439fd6.html",
+    "image": "https://static.cpunt.nl/cache/mr-punch.39684/mr-punch-s400x400-q80.jpg"
+  },
+  {
+    "doorOpenDateTime": "2023-04-28T18:00:00.000Z",
+    "startDateTime": "2023-04-28T18:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.cpunt.nl/agenda/the-tomboys-47662",
+    "title": "The Tomboys",
+    "location": "cpunt",
+    "price": 10,
+    "shortText": null,
+    "longText": "../public/texts/985a3c2e-b398-4fee-8a9a-2cf160e08e18.html",
+    "image": "https://static.cpunt.nl/cache/the-tomboys.39337/the-tomboys-s400x400-q80.jpg"
+  },
+  {
+    "doorOpenDateTime": "2023-05-06T18:00:00.000Z",
+    "startDateTime": "2023-05-06T18:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.cpunt.nl/agenda/damian-wilson-2023",
+    "title": "Damian Wilson",
+    "location": "cpunt",
+    "price": 16,
+    "shortText": null,
+    "longText": "../public/texts/a6df2eb4-c6e7-49e5-9e37-05c2fbb0c345.html",
+    "image": "https://static.cpunt.nl/cache/damian-wilson.40063/damian-wilson-s400x400-q80.jpg"
   },
   {
     "doorOpenDateTime": "2023-06-08T18:00:00.000Z",
@@ -56,7 +116,7 @@
     "location": "cpunt",
     "price": 17.5,
     "shortText": null,
-    "longText": "../public/texts/d7131cb8-4c1f-43ac-8e11-09f93cb3716e.html",
+    "longText": "../public/texts/06b46b91-117c-4420-a586-b6d0151fd67e.html",
     "image": "https://static.cpunt.nl/cache/the-creepshow.33625/the-creepshow-s400x400-q80.jpg"
   }
 ]

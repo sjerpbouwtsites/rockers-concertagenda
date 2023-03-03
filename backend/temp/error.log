@@ -1,0 +1,341 @@
+
+  undefined Error - 10:59:18 PM
+  Error: makeBaseEvent overtijd. Max: 15000
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:81:9)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  makeBaseEvent overtijd. Max: 15000
+  
+  
+  undefined Error - 10:56:37 PM
+  Error: makeBaseEvent overtijd. Max: 15000
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:81:9)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  makeBaseEvent overtijd. Max: 15000
+  
+  
+  melkweg-1 Error - 10:47:33 PM
+  TypeError: Cannot read properties of undefined (reading 'map')
+    at AbstractScraper.makeBaseEventListEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:124:27)
+    at melkwegScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/melkweg.js:89:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:47:29) 
+  Cannot read properties of undefined (reading 'map')
+  
+  
+  melkweg-2 Error - 10:47:33 PM
+  TypeError: Cannot read properties of undefined (reading 'map')
+    at AbstractScraper.makeBaseEventListEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:124:27)
+    at melkwegScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/melkweg.js:89:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:47:29) 
+  Cannot read properties of undefined (reading 'map')
+  
+  
+  melkweg-0 Error - 10:45:30 PM
+  TypeError: Cannot read properties of undefined (reading 'map')
+    at AbstractScraper.makeBaseEventListEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:124:27)
+    at melkwegScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/melkweg.js:77:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:47:29) 
+  Cannot read properties of undefined (reading 'map')
+  
+  
+  melkweg-1 Error - 10:45:30 PM
+  TypeError: Cannot read properties of undefined (reading 'map')
+    at AbstractScraper.makeBaseEventListEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:124:27)
+    at melkwegScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/melkweg.js:77:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:47:29) 
+  Cannot read properties of undefined (reading 'map')
+  
+  
+  undefined Error - 10:45:01 PM
+  Error: makeBaseEvent overtijd. Max: 45000
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:81:9)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  makeBaseEvent overtijd. Max: 45000
+  
+  
+  undefined Error - 10:45:01 PM
+  Error: makeBaseEvent overtijd. Max: 45000
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:81:9)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  makeBaseEvent overtijd. Max: 45000
+  
+  
+  undefined Error - 10:43:13 PM
+  Error: makeBaseEvent overtijd. Max: 45000
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:81:9)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  makeBaseEvent overtijd. Max: 45000
+  
+  
+  undefined Error - 10:43:13 PM
+  Error: makeBaseEvent overtijd. Max: 45000
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:81:9)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  makeBaseEvent overtijd. Max: 45000
+  
+  
+  undefined Error - 10:20:33 PM
+  Error: makeBaseEvent overtijd. Max: 45000
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:81:9)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  makeBaseEvent overtijd. Max: 45000
+  
+  
+  undefined Error - 10:19:07 PM
+  Error: makeBaseEvent overtijd. Max: 45000
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:81:9)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  makeBaseEvent overtijd. Max: 45000
+  
+  
+  undefined Error - 10:19:07 PM
+  Error: makeBaseEvent overtijd. Max: 45000
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:81:9)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  makeBaseEvent overtijd. Max: 45000
+  
+  
+  undefined Error - 10:11:38 PM
+  Error: makeBaseEvent overtijd. Max: 45000
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:81:9)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  makeBaseEvent overtijd. Max: 45000
+  
+  
+  undefined Error - 8:51:24 PM
+  Error: makeBaseEvent overtijd. Max: 45000
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:81:9)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  makeBaseEvent overtijd. Max: 45000
+  
+  
+  undefined Error - 8:51:00 PM
+  Error: makeBaseEvent overtijd. Max: 45000
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:81:9)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  makeBaseEvent overtijd. Max: 45000
+  
+  
+  undefined Error - 8:49:21 PM
+  Error: makeBaseEvent overtijd. Max: 45000
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:81:9)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  makeBaseEvent overtijd. Max: 45000
+  
+  
+  undefined Error - 8:49:07 PM
+  Error: makeBaseEvent overtijd. Max: 15000
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:81:9)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  makeBaseEvent overtijd. Max: 15000
+  
+  
+  undefined Error - 6:39:00 PM
+  Error: makeBaseEvent overtijd. Max: 45000
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:81:9)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  makeBaseEvent overtijd. Max: 45000
+  
+  
+  undefined Error - 6:38:39 PM
+  Error: makeBaseEvent overtijd. Max: 15000
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:81:9)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  makeBaseEvent overtijd. Max: 15000
+  
+  
+  undefined Error - 6:38:24 PM
+  Error: makeBaseEvent overtijd. Max: 45000
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:81:9)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  makeBaseEvent overtijd. Max: 45000
+  
+  
+  undefined Error - 6:36:49 PM
+  Error: makeBaseEvent overtijd. Max: 45000
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:81:9)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  makeBaseEvent overtijd. Max: 45000
+  
+  
+  undefined Error - 6:34:35 PM
+  Error: makeBaseEvent overtijd. Max: 30000
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:81:9)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  makeBaseEvent overtijd. Max: 30000
+  
+  
+  undefined Error - 2:57:13 PM
+  Error: makeBaseEvent overtijd. Max: 30000
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:81:9)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  makeBaseEvent overtijd. Max: 30000
+  
+  
+  undefined Error - 2:55:49 PM
+  Error: makeBaseEvent overtijd. Max: 30000
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:81:9)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  makeBaseEvent overtijd. Max: 30000
+  
+  
+  undefined Error - 2:54:25 PM
+  Error: makeBaseEvent overtijd. Max: 30000
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:81:9)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  makeBaseEvent overtijd. Max: 30000
+  
+  
+  undefined Error - 2:54:15 PM
+  Error: makeBaseEvent overtijd. Max: 15000
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:81:9)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  makeBaseEvent overtijd. Max: 15000
+  
+  
+  undefined Error - 2:49:25 PM
+  Error: makeBaseEvent overtijd. Max: 30000
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:81:9)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  makeBaseEvent overtijd. Max: 30000
+  
+  
+  undefined Error - 2:48:26 PM
+  Error: makeBaseEvent overtijd. Max: 30000
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:81:9)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  makeBaseEvent overtijd. Max: 30000
+  
+  
+  undefined Error - 2:47:20 PM
+  Error: makeBaseEvent overtijd. Max: 30000
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:81:9)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  makeBaseEvent overtijd. Max: 30000
+  
+  
+  undefined Error - 2:46:18 PM
+  Error: makeBaseEvent overtijd. Max: 15000
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:81:9)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  makeBaseEvent overtijd. Max: 15000
+  
+  
+  undefined Error - 2:44:09 PM
+  Error: makeBaseEvent overtijd. Max: 15000
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:81:9)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  makeBaseEvent overtijd. Max: 15000
+  
+  
+  undefined Error - 2:44:07 PM
+  Error: makeBaseEvent overtijd. Max: 30000
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:81:9)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  makeBaseEvent overtijd. Max: 30000
+  
+  
+  undefined Error - 6:55:41 AM
+  Error: makeBaseEvent overtijd. Max: 30000
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:81:9)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  makeBaseEvent overtijd. Max: 30000
+  
+  
+  undefined Error - 9:04:23 AM
+  Error: makeBaseEvent overtijd. Max: 60000
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:81:9)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  makeBaseEvent overtijd. Max: 60000
+  
+  
+  p60-0 Error - 9:03:39 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'venueEventUrl')
+    at __puppeteer_evaluation_script__:9:41
+    at Array.map (<anonymous>)
+    at __puppeteer_evaluation_script__:4:8
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async p60Scraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/p60.js:42:21)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:47:29) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'venueEventUrl')
+    at __puppeteer_evaluation_script__:9:41
+    at Array.map (<anonymous>)
+    at __puppeteer_evaluation_script__:4:8
+  
+  
+  undefined Error - 8:02:27 AM
+  Error: makeBaseEvent overtijd. Max: 60000
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:81:9)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  makeBaseEvent overtijd. Max: 60000
+  
+  
+  p60-0 Error - 8:01:43 AM
+  Error: Evaluation failed: ReferenceError: regexes is not defined
+    at __puppeteer_evaluation_script__:18:122
+    at Array.map (<anonymous>)
+    at __puppeteer_evaluation_script__:4:8
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async p60Scraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/p60.js:43:21)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:47:29) 
+  Evaluation failed: ReferenceError: regexes is not defined
+    at __puppeteer_evaluation_script__:18:122
+    at Array.map (<anonymous>)
+    at __puppeteer_evaluation_script__:4:8
+  
+  
+  p60-0 Error - 8:01:02 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of null (reading 'style')
+    at __puppeteer_evaluation_script__:18:93
+    at Array.map (<anonymous>)
+    at __puppeteer_evaluation_script__:4:8
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async p60Scraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/p60.js:43:21)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:47:29) 
+  Evaluation failed: TypeError: Cannot read properties of null (reading 'style')
+    at __puppeteer_evaluation_script__:18:93
+    at Array.map (<anonymous>)
+    at __puppeteer_evaluation_script__:4:8
+  
+  

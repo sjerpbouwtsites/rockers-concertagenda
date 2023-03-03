@@ -1,29 +1,5 @@
 [
   {
-    "doorOpenDateTime": "2023-01-27T19:00:00.000Z",
-    "startDateTime": "2023-01-27T19:30:00.000Z",
-    "endDateTime": "2023-01-27T22:00:00.000Z",
-    "venueEventUrl": "https://www.poppodium-volt.nl/programma/for-i-am-king",
-    "title": "For I Am King",
-    "location": "volt",
-    "price": 14,
-    "shortText": null,
-    "longText": "../public/texts/04fcbb55-7976-473e-a157-9a7f56282757.html",
-    "image": "https://www.poppodium-volt.nl/wp-content/uploads/2022/11/FAIKTickets2-640x600.jpg"
-  },
-  {
-    "doorOpenDateTime": "2023-01-27T21:30:00.000Z",
-    "startDateTime": "2023-01-27T21:30:00.000Z",
-    "endDateTime": "2023-01-27T01:00:00.000Z",
-    "venueEventUrl": "https://www.poppodium-volt.nl/programma/metal-disko-4",
-    "title": "Metal Disko",
-    "location": "volt",
-    "price": null,
-    "shortText": null,
-    "longText": "../public/texts/fbbce7e4-bd45-41f9-b558-19609dd23c2c.html",
-    "image": "https://www.poppodium-volt.nl/wp-content/uploads/2023/01/2-640x640.jpg"
-  },
-  {
     "doorOpenDateTime": "2023-03-10T19:00:00.000Z",
     "startDateTime": "2023-03-10T19:30:00.000Z",
     "endDateTime": "2023-03-10T22:00:00.000Z",
@@ -32,8 +8,32 @@
     "location": "volt",
     "price": 18.5,
     "shortText": null,
-    "longText": "../public/texts/aa36f213-92d3-423a-b433-0d819cc084e5.html",
+    "longText": "../public/texts/3a00beb8-b20c-40a5-8add-0d4d3a30a687.html",
     "image": "https://www.poppodium-volt.nl/wp-content/uploads/2022/11/ROFTickets-640x600.jpg"
+  },
+  {
+    "doorOpenDateTime": "2023-04-15T18:00:00.000Z",
+    "startDateTime": "2023-04-15T18:30:00.000Z",
+    "endDateTime": "2023-04-15T21:00:00.000Z",
+    "venueEventUrl": "https://www.poppodium-volt.nl/programma/illumishade-2",
+    "title": "Illumishade",
+    "location": "volt",
+    "price": 16.5,
+    "shortText": null,
+    "longText": "../public/texts/4ca4e00d-a352-45af-8c66-b31d640b0492.html",
+    "image": "https://www.poppodium-volt.nl/wp-content/uploads/2023/02/IL3-640x640.jpg"
+  },
+  {
+    "doorOpenDateTime": "2023-04-15T21:00:00.000Z",
+    "startDateTime": "2023-04-15T21:00:00.000Z",
+    "endDateTime": "2023-04-15T00:00:00.000Z",
+    "venueEventUrl": "https://www.poppodium-volt.nl/programma/metal-disko-5",
+    "title": "Metal Disko",
+    "location": "volt",
+    "price": null,
+    "shortText": null,
+    "longText": "../public/texts/a4b970e2-459a-44b2-971f-c650f5065bf0.html",
+    "image": "https://www.poppodium-volt.nl/wp-content/uploads/2023/01/2-640x640.jpg"
   },
   {
     "doorOpenDateTime": "2023-05-20T18:00:00.000Z",
@@ -44,7 +44,7 @@
     "location": "volt",
     "price": 17.5,
     "shortText": null,
-    "longText": "../public/texts/d67da476-c74b-491f-bd1f-a918c41613ee.html",
+    "longText": "../public/texts/90cb05bf-dd57-4a7f-8d4f-12805ad8842f.html",
     "image": "https://www.poppodium-volt.nl/wp-content/uploads/2022/05/SpeedTickets2-640x600.jpg"
   },
   {
@@ -56,7 +56,7 @@
     "location": "volt",
     "price": 49,
     "shortText": null,
-    "longText": "../public/texts/60e559fb-60e3-4ff1-8182-8e9fd33f4e32.html",
+    "longText": "../public/texts/59500574-a111-4dd6-b147-8649baa0e4c2.html",
     "image": "https://www.poppodium-volt.nl/wp-content/uploads/2022/12/FGTickets2-1-640x600.jpg"
   },
   {
@@ -68,7 +68,19 @@
     "location": "volt",
     "price": 26,
     "shortText": null,
-    "longText": "../public/texts/037921d2-dd2a-45f0-b6b3-791f69cd68f0.html",
+    "longText": "../public/texts/e6772027-3c7b-484b-85a9-f8b8a54c66a5.html",
     "image": "https://www.poppodium-volt.nl/wp-content/uploads/2022/12/FGTickets2-640x600.jpg"
+  },
+  {
+    "doorOpenDateTime": "2023-09-22T18:00:00.000Z",
+    "startDateTime": "2023-09-22T18:30:00.000Z",
+    "endDateTime": "2023-09-22T21:59:00.000Z",
+    "venueEventUrl": "https://www.poppodium-volt.nl/programma/heart-attack",
+    "title": "Heart Attack",
+    "location": "volt",
+    "price": 17.5,
+    "shortText": null,
+    "longText": "../public/texts/b6374a18-483f-4fd6-8c25-0798079271e7.html",
+    "image": "https://www.poppodium-volt.nl/wp-content/uploads/2023/01/HATickets2-640x600.jpg"
   }
 ]

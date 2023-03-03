@@ -1,27 +1,15 @@
 [
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2023-02-04T18:00:00.000Z",
+    "startDateTime": "2023-03-10T20:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://bibelot.net/agenda/dordrecht-metal-fest-4-2/",
-    "title": "Dordrecht Metal Fest #4",
+    "venueEventUrl": "https://bibelot.net/agenda/the-one-albumrelease/",
+    "title": "The One (albumrelease)",
     "location": "bibelot",
-    "price": 14.5,
-    "shortText": "Dordrecht Metal Fest presents vierde editie.",
-    "longText": "../public/texts/cc51cede-a447-41a9-bb68-a9bc009f8f64.html",
-    "image": "https://bibelot.net/wp-content/uploads/2022/12/webbanner-1-1400x733.png"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2023-02-10T19:45:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://bibelot.net/agenda/the-doors-in-concert-26/",
-    "title": "The Doors In Concert",
-    "location": "bibelot",
-    "price": 18,
-    "shortText": "Herbeleef The Doors als nooit tevoren",
-    "longText": "../public/texts/c8da8329-29cb-4fe7-a6ab-665509626a15.html",
-    "image": "https://bibelot.net/wp-content/uploads/2022/11/THE-DOORS-WEB-1400x788.png"
+    "price": 9,
+    "shortText": "Prog Band in de Power Stage",
+    "longText": "../public/texts/94300720-ff40-46a0-a1bc-89befd1e2a59.html",
+    "image": "https://bibelot.net/wp-content/uploads/2023/01/The-One-foto-klein-1400x890.jpg"
   },
   {
     "doorOpenDateTime": null,
@@ -32,7 +20,7 @@
     "location": "bibelot",
     "price": 9.5,
     "shortText": "Happy St. Patrick's Day!",
-    "longText": "../public/texts/751015dc-4224-4073-a0dc-bb86c953cf69.html",
+    "longText": "../public/texts/6a65ce64-17fd-4d42-8457-536659202e02.html",
     "image": "https://bibelot.net/wp-content/uploads/2022/12/fb-event-01-1400x788.jpg"
   },
   {
@@ -43,7 +31,7 @@
     "title": "FEUERENGEL (DE)",
     "location": "bibelot",
     "shortText": "A tribute to Rammstein!",
-    "longText": "../public/texts/82c68ef4-c1ae-47a0-9f80-b2d1d3e0095f.html",
+    "longText": "../public/texts/47571611-04d9-4b03-a6cd-e8f034f7d2db.html",
     "image": "https://bibelot.net/wp-content/uploads/2022/07/FEUERENGEL-WEB-1400x742.png"
   },
   {
@@ -55,7 +43,7 @@
     "location": "bibelot",
     "price": 19,
     "shortText": "Beleef een avond vol hits en guilty pleasures van vroeger en nu, tijdens de Loco Mexicano Tour!",
-    "longText": "../public/texts/7f77f2a5-8c18-4ff6-9ba1-772c0e0988ba.html",
+    "longText": "../public/texts/28a5341b-1f94-4924-9756-8b2c07fba411.html",
     "image": "https://bibelot.net/wp-content/uploads/2022/12/PERSFOTO-1400x1000.jpg"
   },
   {
@@ -67,7 +55,31 @@
     "location": "bibelot",
     "price": 16,
     "shortText": "Beleef een unieke avond samen met ska-legende Mark Foggo!",
-    "longText": "../public/texts/db81df42-2e4a-45d8-ba31-6fb01ffa1dff.html",
+    "longText": "../public/texts/39cf36f7-0020-42b8-a9cb-0dbf0a36fb63.html",
     "image": "https://bibelot.net/wp-content/uploads/2023/01/pressmarkfoggo19.jpg"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-05-25T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://bibelot.net/agenda/distant-extortionist-dagger-threat-abbie-falls/",
+    "title": "DISTANT + EXTORTIONIST + DAGGER THREAT + ABBIE FALLS",
+    "location": "bibelot",
+    "price": 18,
+    "shortText": "Een avond vol gruwelijke metal 🔥",
+    "longText": "../public/texts/cf977d2d-3c50-4b2e-ba2f-228a99ce38de.html",
+    "image": "https://bibelot.net/wp-content/uploads/2023/01/Distant-FB-Headers-1400x788.jpg"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-10-28T19:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://bibelot.net/agenda/bleach-it-nirvana-tribute/",
+    "title": "BLEACH (IT) – Nirvana Tribute",
+    "location": "bibelot",
+    "price": 16,
+    "shortText": "Een ode aan de legendarische grunge band, Nirvana!",
+    "longText": "../public/texts/b1c83659-cd4d-45af-82a5-a94cc56fa109.html",
+    "image": "https://bibelot.net/wp-content/uploads/2023/02/BLEACH-bandpic-2019-1400x781.jpg"
   }
 ]
