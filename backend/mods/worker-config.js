@@ -44,9 +44,10 @@ export const workerConfig = {
     CPUReq: "high",
   },
   melkweg :{
-    workerCount: 3,
-    CPUReq: "high",
+    workerCount: 4,
+    CPUReq: "low",
   },
+  p60 :{ workerCount: 1},  
   afaslive :{
     workerCount: 2,
     CPUReq: "high",

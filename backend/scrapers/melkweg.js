@@ -1,4 +1,4 @@
-import { workerData } from "worker_threads";
+import { workerData, parentPort } from "worker_threads";
 import * as _t from "../mods/tools.js";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
@@ -10,7 +10,7 @@ const melkwegScraper = new AbstractScraper(makeScraperConfig({
   workerData: Object.assign({}, workerData),
   puppeteerConfig: {
     mainPage: {
-      timeout: 30000,
+      timeout: 75000,
       waitUntil: 'load'
     },
     singlePage: {
@@ -33,32 +33,59 @@ melkwegScraper.makeBaseEventList = async function () {
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
-  await _t.autoScroll(page);
-  await _t.autoScroll(page);
-  await _t.autoScroll(page);
-  await _t.autoScroll(page);
+  parentPort.postMessage(
+    this.qwm.messageRoll(`melkweg scraper ${workerData.index} begin base event list.`)
+  );
+
+  // await _t.autoScroll(page);
+  // parentPort.postMessage(
+  //   this.qwm.messageRoll(`melkweg scraper ${workerData.index} na scroll wait 1.`)
+  // );  
+  // await _t.autoScroll(page);
+  // parentPort.postMessage(
+  //   this.qwm.messageRoll(`melkweg scraper ${workerData.index} na scroll wait 2.`)
+  // );    
+  // await _t.autoScroll(page);
+  // parentPort.postMessage(
+  //   this.qwm.messageRoll(`melkweg scraper ${workerData.index} na scroll wait 3.`)
+  // );      
+  // await _t.autoScroll(page);
+  // parentPort.postMessage(
+  //   this.qwm.messageRoll(`melkweg scraper ${workerData.index} na scroll wait 4.`)
+  // );      
 
   const rawEvents = await page.evaluate(({workerData}) => {
-    return Array.from(document.querySelectorAll("[data-element='agenda'] li"))
+    return Array.from(document.querySelectorAll("[data-element='agenda'] li[class*='event-list-day__list-item']"))
       .filter((eventEl) => {
-        const tags =
-          eventEl
-            .querySelector('[class*="styles_tags-list"]')
-            ?.textContent.toLowerCase() ?? "";
-        return tags.includes("metal") || tags.includes("punk");
+        const anker = eventEl
+          .querySelector('a') ?? null;
+        const genre = anker?.hasAttribute('data-genres') 
+          ? anker?.getAttribute('data-genres') 
+          : '';
+        const isHeavy = genre === '53';
+        return isHeavy;
+
       })
-      .filter((eventEl, index) => index % workerData.workerCount === workerData.index)
+    //      .filter((eventEl, index) => index % workerData.workerCount === workerData.index)
       .map((eventEl) => {
+        const tags =
+        eventEl
+          .querySelector('[class*="styles_tags-list"]')
+          ?.textContent.toLowerCase().split(` . `).join(' - ') ?? "";        
         const res = {};
         const anchor = eventEl.querySelector("a");
-        res.shortText = 
-          eventEl.querySelector('[class*="subtitle"]')?.textContent ?? "";
+        let shortTitle = 
+        eventEl.querySelector('[class*="subtitle"]')?.textContent ?? "";
+        shortTitle = shortTitle ? `<br>${shortTitle}` : '';
+        res.shortText = `${tags}${shortTitle}`;
         res.title =
-          eventEl.querySelector('h3[class*="title"]')?.textContent ?? "";
+        eventEl.querySelector('h3[class*="title"]')?.textContent ?? "";
         res.venueEventUrl = anchor.href;
         return res;
       });
   }, {workerData});
+
+  this.dirtyLog(rawEvents)
 
   return await this.makeBaseEventListEnd({
     stopFunctie, page, rawEvents}

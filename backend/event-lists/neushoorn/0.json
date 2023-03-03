@@ -1,65 +1,5 @@
 [
   {
-    "doorOpenDateTime": "2022-01-27T19:00:00.000Z",
-    "startDateTime": "2022-01-27T20:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://neushoorn.nl/production/hardcore-vrijdag-13/",
-    "title": "Hardcore Vrijdag",
-    "location": "neushoorn",
-    "price": 5,
-    "shortText": null,
-    "longText": "../public/texts/30319f43-58f8-4013-a4f6-b3114b44cecf.html",
-    "image": "https://neushoorn.nl/wp-content/uploads/2022/11/hardcorevrijdag_detail-0f8a-720x432.png"
-  },
-  {
-    "doorOpenDateTime": "2022-01-28T22:30:00.000Z",
-    "startDateTime": "2022-01-28T22:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://neushoorn.nl/production/alarm-11/",
-    "title": "ALARM!",
-    "location": "neushoorn",
-    "price": 5,
-    "shortText": null,
-    "longText": "../public/texts/64ee1c57-3a14-4bfe-8c24-b375953c3a10.html",
-    "image": "https://neushoorn.nl/wp-content/uploads/2022/11/alarm_detail-81f1-7a54-4fd3-2-34de-720x432.jpg"
-  },
-  {
-    "doorOpenDateTime": "2022-02-03T19:00:00.000Z",
-    "startDateTime": "2022-02-03T19:45:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://neushoorn.nl/production/pronk/",
-    "title": "PRONK",
-    "location": "neushoorn",
-    "price": 12,
-    "shortText": null,
-    "longText": "../public/texts/835afa84-d70b-46ce-ae41-033126ea7392.html",
-    "image": "https://neushoorn.nl/wp-content/uploads/2022/12/Pronk_detail-bd3b-691x460.png"
-  },
-  {
-    "doorOpenDateTime": "2022-02-10T19:00:00.000Z",
-    "startDateTime": "2022-02-10T19:45:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://neushoorn.nl/production/the-perfect-tool/",
-    "title": "The Perfect Tool",
-    "location": "neushoorn",
-    "price": 17.5,
-    "shortText": null,
-    "longText": "../public/texts/84e7b0af-fb52-4350-ad16-2657e09b3ee7.html",
-    "image": "https://neushoorn.nl/wp-content/uploads/2022/10/Tool_detail-bb65.png"
-  },
-  {
-    "doorOpenDateTime": "2022-02-24T19:00:00.000Z",
-    "startDateTime": "2022-02-24T20:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://neushoorn.nl/production/iron-jinn/",
-    "title": "NH Café: Iron Jinn",
-    "location": "neushoorn",
-    "price": 5,
-    "shortText": null,
-    "longText": "../public/texts/e527bb48-7edb-405e-93d5-7ede6cb16670.html",
-    "image": "https://neushoorn.nl/wp-content/uploads/2022/11/iron-jinn_detail-2ce2-690x460.png"
-  },
-  {
     "doorOpenDateTime": "2022-03-10T19:00:00.000Z",
     "startDateTime": "2022-03-10T20:00:00.000Z",
     "endDateTime": null,
@@ -68,7 +8,7 @@
     "location": "neushoorn",
     "price": 5,
     "shortText": null,
-    "longText": "../public/texts/e396a6df-cb91-48c6-82f6-9c6cea942b2a.html",
+    "longText": "../public/texts/d650e58a-aed8-43a5-ad79-a214a7558d30.html",
     "image": "https://neushoorn.nl/wp-content/uploads/2023/01/IoanaIorgu_detail-a983-691x460.png"
   },
   {
@@ -80,8 +20,32 @@
     "location": "neushoorn",
     "price": 17.5,
     "shortText": null,
-    "longText": "../public/texts/b86c5d85-90b0-4d66-b101-c1fc1a3818cf.html",
+    "longText": "../public/texts/4a5d043b-623f-4056-9174-d39f1b8c39c8.html",
     "image": "https://neushoorn.nl/wp-content/uploads/2022/06/Kingfisher-Sky2_detail-720x346.jpg"
+  },
+  {
+    "doorOpenDateTime": "2022-03-31T18:00:00.000Z",
+    "startDateTime": "2022-03-31T18:45:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://neushoorn.nl/production/hardcore-vrijdag-14/",
+    "title": "Hardcore Vrijdag",
+    "location": "neushoorn",
+    "price": 5,
+    "shortText": null,
+    "longText": "../public/texts/ac69ed37-9a6d-4630-9344-5615eb5e55f8.html",
+    "image": "https://neushoorn.nl/wp-content/uploads/2023/01/DETAIL-hardcore-vrijdag-b468-720x405.jpg"
+  },
+  {
+    "doorOpenDateTime": "2022-03-31T18:00:00.000Z",
+    "startDateTime": "2022-03-31T19:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://neushoorn.nl/production/nh-cafe-combo-qazam-x-ultimate-crumpets/",
+    "title": "NH Café: Combo Qazam x Ultimate Crumpets",
+    "location": "neushoorn",
+    "price": 5,
+    "shortText": null,
+    "longText": "../public/texts/3ee81ddf-8a6c-4c9f-8c5d-3007492de16d.html",
+    "image": "https://neushoorn.nl/wp-content/uploads/2023/02/detail-cq-ace5-720x405.jpg"
   },
   {
     "doorOpenDateTime": "2022-04-06T17:30:00.000Z",
@@ -92,7 +56,7 @@
     "location": "neushoorn",
     "price": 25,
     "shortText": null,
-    "longText": "../public/texts/98a21b3a-114f-40a6-91d2-ea6df7490f91.html",
+    "longText": "../public/texts/2a181cb0-c6da-4c21-b8ae-a70fc58dd2a9.html",
     "image": "https://neushoorn.nl/wp-content/uploads/2022/12/ensiferum_detail-491f-720x328.png"
   },
   {
@@ -104,7 +68,7 @@
     "location": "neushoorn",
     "price": 10,
     "shortText": null,
-    "longText": "../public/texts/239eeee1-6613-43f8-9336-166989996948.html",
+    "longText": "../public/texts/618e7d69-4702-4010-ab58-608c4ecd1f36.html",
     "image": "https://neushoorn.nl/wp-content/uploads/2023/01/disillusion_detail-05cb-691x460.png"
   },
   {
@@ -116,7 +80,7 @@
     "location": "neushoorn",
     "price": 25,
     "shortText": null,
-    "longText": "../public/texts/00fbfe68-00c6-459f-9167-9c650c6d9f8d.html",
+    "longText": "../public/texts/95a54372-a846-4e48-acf6-26176ec419a1.html",
     "image": "https://neushoorn.nl/wp-content/uploads/2022/12/rubenblock_detail-720x372.png"
   },
   {
@@ -128,7 +92,7 @@
     "location": "neushoorn",
     "price": 23,
     "shortText": null,
-    "longText": "../public/texts/1a609df6-5e4c-407e-9496-15b5c9509729.html",
+    "longText": "../public/texts/663c9300-6038-465b-a54d-01701dc031be.html",
     "image": "https://neushoorn.nl/wp-content/uploads/2023/01/CharlotteWessels_detail-4784-691x460.png"
   },
   {
@@ -140,7 +104,7 @@
     "location": "neushoorn",
     "price": 18,
     "shortText": null,
-    "longText": "../public/texts/90e46dca-7010-40c8-b8fe-4ff5be88fbca.html",
+    "longText": "../public/texts/08860cf7-db57-4562-9dd7-00ed5c384c29.html",
     "image": "https://neushoorn.nl/wp-content/uploads/2022/12/raurygallagher_detail-939e-1-692x460.png"
   },
   {
@@ -152,7 +116,7 @@
     "location": "neushoorn",
     "price": 20,
     "shortText": null,
-    "longText": "../public/texts/975f4cc1-1805-491a-b509-b0c58a9f3738.html",
+    "longText": "../public/texts/4267eb10-816c-4807-bf39-b58cb1d3b743.html",
     "image": "https://neushoorn.nl/wp-content/uploads/2022/12/chriscornell_detail-9dff-691x460.png"
   }
 ]

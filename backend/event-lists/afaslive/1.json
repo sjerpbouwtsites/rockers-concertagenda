@@ -1,26 +1,74 @@
 [
   {
-    "doorOpenDateTime": "2023-02-04T18:00:00.000Z",
-    "startDateTime": "2023-02-04T19:30:00.000Z",
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-03-16T19:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/di-rect-residentie-orkest",
-    "title": "DI-RECT & Residentie Orkest",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/suicideboy",
+    "title": "$UICIDEBOY$",
     "location": "afaslive",
-    "price": 4,
+    "price": 67.2,
     "shortText": null,
-    "longText": "../public/texts/c31bef63-9fda-463f-9327-f0b6600e3a0a.html",
-    "image": "https://www.afaslive.nl/files/_agendaitem/Di-Rect-Residentie-Orkest.jpg"
+    "longText": "../public/texts/096738ed-eff8-415d-9731-7ef979cd2120.html",
+    "image": "https://www.afaslive.nl/files/_agendaitem/Suicide-Boys_221213_105649.jpg"
   },
   {
-    "doorOpenDateTime": "2023-04-07T16:30:00.000Z",
-    "startDateTime": "2023-04-07T18:00:00.000Z",
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-04-01T18:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/eels-1",
-    "title": "EELS",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/madness-1",
+    "title": "Madness",
     "location": "afaslive",
-    "price": 46.5,
+    "price": 53.9,
     "shortText": null,
-    "longText": "../public/texts/6b2041c1-5f05-4a18-89bb-84dbe5e3de8b.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2022/04-april/_agendaitem/Eels.jpg"
+    "longText": "../public/texts/0f7604df-8c5f-406c-ae69-5e7037637567.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2023/_agendaitem/Madness.jpg"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-04-14T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.afaslive.nl/agenda/avril-lavigne-1",
+    "title": "Avril Lavigne",
+    "location": "afaslive",
+    "price": 47.04,
+    "shortText": null,
+    "longText": "../public/texts/d27ddb17-3c61-4210-8a16-ac36345fd473.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2023/_agendaitem/Avril-Lavigne.jpg"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-05-20T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.afaslive.nl/agenda/the-offspring",
+    "title": "The Offspring",
+    "location": "afaslive",
+    "price": 49.28,
+    "shortText": null,
+    "longText": "../public/texts/0f668c65-e26b-4a52-8b99-00977a34c3b3.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2023/05-Mei/_agendaitem/The-Offspring.jpg"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-06-06T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.afaslive.nl/agenda/gojira",
+    "title": "Gojira",
+    "location": "afaslive",
+    "price": 52.64,
+    "shortText": null,
+    "longText": "../public/texts/1146d5a4-7de8-44d7-a520-a254e0a39be5.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2023/06-Juni/_agendaitem/Gojira.jpg"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-11-30T19:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.afaslive.nl/agenda/sting-2",
+    "title": "Sting",
+    "location": "afaslive",
+    "price": 88.48,
+    "shortText": null,
+    "longText": "../public/texts/78ae8ac2-70bb-437c-8be3-68cb7697b65b.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2023/_agendaitem/Sting.jpg"
   }
 ]

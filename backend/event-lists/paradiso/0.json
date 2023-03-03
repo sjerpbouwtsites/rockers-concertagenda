@@ -1,62 +1,50 @@
 [
   {
-    "doorOpenDateTime": "2023-01-26T18:00:00.000Z",
-    "startDateTime": "2023-01-26T18:30:00.000Z",
+    "doorOpenDateTime": "2023-04-09T17:00:00.000Z",
+    "startDateTime": "2023-04-09T18:30:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.paradiso.nl/nl/programma/traumahelikopter-l-a-sagne/100173/",
-    "title": "traumahelikopter + L.A. Sagne",
+    "venueEventUrl": "https://www.paradiso.nl/nl/programma/godspeed-you-black-emperor/92455/",
+    "title": "Godspeed You! Black Emperor",
     "location": "paradiso",
-    "price": 14,
-    "shortText": "Garagerock uit Groningen / Doka",
-    "longText": "../public/texts/c11d5b60-bfbb-4926-a79e-d68e9370a7c8.html",
-    "image": "https://api.paradiso.nl/img/events/traumahelikopter-2023-webn.jpg?w=600&h=400&fit=crop-50-50"
+    "price": 34,
+    "shortText": "Hypnotiserende postrock",
+    "longText": "../public/texts/bdd5d2c3-7273-43cc-be38-0843e35cfbe1.html",
+    "image": "https://api.paradiso.nl/img/events/gybe.jpg?w=600&h=400&fit=crop-50-50"
   },
   {
-    "doorOpenDateTime": "2023-02-27T18:30:00.000Z",
-    "startDateTime": "2023-02-27T19:30:00.000Z",
+    "doorOpenDateTime": "2023-05-19T15:30:00.000Z",
+    "startDateTime": "2023-05-19T16:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.paradiso.nl/nl/programma/xink/101250/",
-    "title": "XINK",
-    "location": "paradiso",
-    "price": 17,
-    "shortText": "Nederlandstalige poppunk uit Vlaanderen / Tolhuistuin",
-    "longText": "../public/texts/bbdf2cdc-1ab0-4e86-ac44-e5d73845b0f0.html",
-    "image": "https://api.paradiso.nl/img/events/XINK-1600x1200.jpg?w=600&h=400&fit=crop-50-50"
-  },
-  {
-    "doorOpenDateTime": "2023-03-20T18:00:00.000Z",
-    "startDateTime": "2023-03-20T18:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.paradiso.nl/nl/programma/dry-cleaning-dead-finks/98950/",
-    "title": "Dry Cleaning + Dead Finks",
-    "location": "paradiso",
-    "price": 22,
-    "shortText": "Intrigerende postpunk met praatachtige zang uit Londen",
-    "longText": "../public/texts/af3e7a44-a49a-418a-9cb6-f689205ef4dc.html",
-    "image": "https://api.paradiso.nl/img/events/Dry-Cleaning2022.jpg?w=600&h=400&fit=crop-50-50"
-  },
-  {
-    "doorOpenDateTime": "2023-04-05T17:30:00.000Z",
-    "startDateTime": "2023-04-05T18:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.paradiso.nl/nl/programma/billy-nomates/100252/",
-    "title": "Billy Nomates",
-    "location": "paradiso",
-    "price": 17,
-    "shortText": "Stekelige no-wave van uitgesproken artiest uit Bristol / Tolhuistuin",
-    "longText": "../public/texts/7439f4ba-9cc5-4e69-ad71-15037563fc55.html",
-    "image": "https://api.paradiso.nl/img/events/BILLYNOMATES-023.jpg?w=600&h=400&fit=crop-50-50"
-  },
-  {
-    "doorOpenDateTime": "2023-05-20T15:00:00.000Z",
-    "startDateTime": "2023-05-20T15:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.paradiso.nl/nl/programma/london-calling/103015/",
+    "venueEventUrl": "https://www.paradiso.nl/nl/programma/london-calling/103012/",
     "title": "London Calling",
     "location": "paradiso",
-    "price": 44.5,
+    "price": 45,
     "shortText": "Showcasefestival voor spraakmakende nieuwe bands",
-    "longText": "../public/texts/813d37c5-7971-4713-ac95-f7e592c69076.html",
-    "image": "https://api.paradiso.nl/img/events/20221029_LondonCalling_LIFE_by-BibianBingen_3W0A6358.jpg?w=600&h=400&fit=crop-50-50"
+    "longText": "../public/texts/c8a8a32b-7f79-4826-8740-610c504f949b.html",
+    "image": "https://api.paradiso.nl/img/events/20221029_LondonCalling_Gurriers_by-BibianBingen_3W0A6673.jpg?w=600&h=400&fit=crop-50-50"
+  },
+  {
+    "doorOpenDateTime": "2023-06-04T17:00:00.000Z",
+    "startDateTime": "2023-06-04T18:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.paradiso.nl/nl/programma/the-chats/98200/",
+    "title": "The Chats",
+    "location": "paradiso",
+    "price": 23,
+    "shortText": "Harde en ongetemde pub-punk uit Australië",
+    "longText": "../public/texts/25f0c743-d6bf-4794-a3f3-ee947ac790a5.html",
+    "image": "https://api.paradiso.nl/img/events/The-Chats-Luke-Henery390012-WEB.jpg?w=600&h=400&fit=crop-50-50"
+  },
+  {
+    "doorOpenDateTime": "2023-08-28T17:00:00.000Z",
+    "startDateTime": "2023-08-28T18:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.paradiso.nl/nl/programma/yeah-yeah-yeahs/104045/",
+    "title": "Yeah Yeah Yeahs",
+    "location": "paradiso",
+    "price": 44.5,
+    "shortText": "Indierockband uit New York keert terug met nieuw werk",
+    "longText": "../public/texts/17048c74-3245-41c5-a418-c179fddaa57a.html",
+    "image": "https://api.paradiso.nl/img/events/YYY-PORTRAIT-square-web.jpg?w=600&h=400&fit=crop-50-50"
   }
 ]

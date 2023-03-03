@@ -41,7 +41,7 @@ async function recursiveStartWorkers(workerConfig) {
 }
 
 async function startWorker(workerConfig) {
-  const toManyWorkersWorking = WorkerStatus.workersWorking() >= 5;
+  const toManyWorkersWorking = WorkerStatus.workersWorking() >= WorkerStatus.maxSimultaneousWorkers;
   if (toManyWorkersWorking) {
     await _t.waitFor(150);
     return recursiveStartWorkers(workerConfig);

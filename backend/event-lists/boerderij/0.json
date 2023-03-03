@@ -1,41 +1,5 @@
 [
   {
-    "doorOpenDateTime": "2023-01-28T18:30:00.000Z",
-    "startDateTime": "2023-01-28T19:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://poppodiumboerderij.nl/programma/rock-party-of-the-year",
-    "title": "Rock Party Of The Year",
-    "location": "boerderij",
-    "price": 30,
-    "shortText": "70's & 80's rock - special guest: Rinus Gerritsen",
-    "longText": "../public/texts/19f66abd-32ba-47f1-a745-e652d4e47a64.html",
-    "image": "https://lift3cdn.nl/image/115/784x476/rock-party-of-the-year.jpg"
-  },
-  {
-    "doorOpenDateTime": "2023-02-11T18:30:00.000Z",
-    "startDateTime": "2023-02-11T19:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://poppodiumboerderij.nl/programma/john-mitchell",
-    "title": "Lonely Robot",
-    "location": "boerderij",
-    "price": 29,
-    "shortText": "+ support Eddie Mulder",
-    "longText": "../public/texts/f0a0b056-5a38-406b-b29d-dd0829c2b08f.html",
-    "image": "https://lift3cdn.nl/image/115/784x476/john-mitchell-2023.jpg"
-  },
-  {
-    "doorOpenDateTime": "2023-02-17T18:30:00.000Z",
-    "startDateTime": "2023-02-17T19:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://poppodiumboerderij.nl/programma/the-bootleg-beatles",
-    "title": "The Bootleg Beatles",
-    "location": "boerderij",
-    "price": 31,
-    "shortText": "From Love Me Do to Let It Be + special Please Please Me set",
-    "longText": "../public/texts/4bcc0920-3ce9-4c5e-9d17-9ad464ae5cd6.html",
-    "image": "https://lift3cdn.nl/image/115/784x476/the-bootleg-beatles-2023.jpg"
-  },
-  {
     "doorOpenDateTime": "2023-03-08T18:30:00.000Z",
     "startDateTime": "2023-03-08T19:30:00.000Z",
     "endDateTime": null,
@@ -44,7 +8,7 @@
     "location": "boerderij",
     "price": 24,
     "shortText": "ex-Purson",
-    "longText": "../public/texts/7cc30b57-ed04-485c-8c9c-58d57007c753.html",
+    "longText": "../public/texts/ff7ea411-b1eb-4a0c-9291-7710297f6b47.html",
     "image": "https://lift3cdn.nl/image/115/784x476/rosalie-cunningham.jpg"
   },
   {
@@ -56,7 +20,7 @@
     "location": "boerderij",
     "price": 24,
     "shortText": "",
-    "longText": "../public/texts/53cf856f-4b9a-4ca7-a505-32833370b93f.html",
+    "longText": "../public/texts/b873b327-e55a-4eee-adb9-57e060dd967d.html",
     "image": "https://lift3cdn.nl/image/115/784x476/the-godfathers-2023.jpg"
   },
   {
@@ -68,7 +32,7 @@
     "location": "boerderij",
     "price": 25,
     "shortText": "guitar superstar + support Mark Bogert Band",
-    "longText": "../public/texts/5d6f6767-f4e1-4dcc-b019-83d6f04b58c7.html",
+    "longText": "../public/texts/6e85e451-2679-4d42-ac80-9cf0865a6a67.html",
     "image": "https://lift3cdn.nl/image/115/784x476/lari-basilio-2023.jpg"
   },
   {
@@ -80,7 +44,7 @@
     "location": "boerderij",
     "price": 28,
     "shortText": "+ support Inhalo",
-    "longText": "../public/texts/12f61023-84bf-430d-a1fd-96d675fa4117.html",
+    "longText": "../public/texts/3e1853bf-cca7-4018-8b1b-c1f616f771b9.html",
     "image": "https://lift3cdn.nl/image/115/784x476/pure-reason-revolution-2023.jpg"
   },
   {
@@ -92,19 +56,19 @@
     "location": "boerderij",
     "price": 30,
     "shortText": "Crime Scene Tour 2023 + support Tanyc",
-    "longText": "../public/texts/b144ba26-0dbc-4c30-b3d0-2eae01fc1b91.html",
+    "longText": "../public/texts/a78f2e19-112f-4ccd-a4a4-d97449f3caad.html",
     "image": "https://lift3cdn.nl/image/115/784x476/rpwl-2-2023.jpg"
   },
   {
     "doorOpenDateTime": "2023-04-05T17:00:00.000Z",
-    "startDateTime": "2023-04-05T18:00:00.000Z",
+    "startDateTime": "2023-04-05T17:30:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://poppodiumboerderij.nl/programma/geoff-tate",
     "title": "Geoff Tate",
     "location": "boerderij",
     "price": 35.5,
-    "shortText": "35 yrs operation:mindcrime + greatest hits",
-    "longText": "../public/texts/ae31df17-44fa-4072-88c1-06ec1ca80764.html",
+    "shortText": "35 yrs operation:mindcrime + supports",
+    "longText": "../public/texts/c9e6c455-ef59-4eb2-84d0-f2606e4e4081.html",
     "image": "https://lift3cdn.nl/image/115/784x476/geoff-tate-2023.jpg"
   },
   {
@@ -115,8 +79,8 @@
     "title": "Threshold",
     "location": "boerderij",
     "price": 31,
-    "shortText": "Dividing Lines Tour + supports",
-    "longText": "../public/texts/3973f6ad-f778-4791-a811-326d4830e8c0.html",
+    "shortText": "Dividing Lines Tour + supports Virtual Symmetry & Oddland",
+    "longText": "../public/texts/0e4fdbb8-f759-468b-acc1-7d8cf3d91c34.html",
     "image": "https://lift3cdn.nl/image/115/784x476/threshold-2023.jpg"
   },
   {
@@ -128,7 +92,7 @@
     "location": "boerderij",
     "price": 25.5,
     "shortText": "met band Zeus",
-    "longText": "../public/texts/16a2fd3b-0dfa-4752-b729-abb157945e61.html",
+    "longText": "../public/texts/648cc5b2-bcd9-4b4c-9a65-5e454d2b1151.html",
     "image": "https://lift3cdn.nl/image/115/784x476/jeroen-van-kningsbrugge-sings-pearl-jam-2023.jpg"
   },
   {
@@ -140,7 +104,7 @@
     "location": "boerderij",
     "price": 30,
     "shortText": "The Music of The Moody Blues",
-    "longText": "../public/texts/ea638374-895d-4f1b-aa8e-338dfef65cb4.html",
+    "longText": "../public/texts/7fa91681-8d14-4d93-842a-00761e0905dd.html",
     "image": "https://lift3cdn.nl/image/115/784x476/go-now.jpg"
   },
   {
@@ -152,8 +116,20 @@
     "location": "boerderij",
     "price": 29,
     "shortText": "Double Headliner",
-    "longText": "../public/texts/dc5b45a3-0de5-43ca-81ed-bb858037ed0b.html",
+    "longText": "../public/texts/3d1129e8-bdf3-40da-8685-f139ae05685f.html",
     "image": "https://lift3cdn.nl/image/115/784x476/lizzard-en-ork.jpg"
+  },
+  {
+    "doorOpenDateTime": "2023-05-15T17:30:00.000Z",
+    "startDateTime": "2023-05-15T18:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://poppodiumboerderij.nl/programma/steve-vai",
+    "title": "Steve Vai Masterclass",
+    "location": "boerderij",
+    "price": 53,
+    "shortText": "Leer van de master",
+    "longText": "../public/texts/b285f8e0-393b-4268-ac82-4571cec903e3.html",
+    "image": "https://lift3cdn.nl/image/115/784x476/steve-vai-masterclass-2023.jpg"
   },
   {
     "doorOpenDateTime": "2023-05-18T17:30:00.000Z",
@@ -164,7 +140,7 @@
     "location": "boerderij",
     "price": 32,
     "shortText": "Met originele members Tony Brock en Wally Stocker",
-    "longText": "../public/texts/782a5024-98c5-4485-bd4e-1aba15c9b043.html",
+    "longText": "../public/texts/028e3f6f-0ebf-41a8-ba74-af61e79d2c59.html",
     "image": "https://lift3cdn.nl/image/115/784x476/babys.jpg"
   },
   {
@@ -175,8 +151,32 @@
     "title": "Tyketto",
     "location": "boerderij",
     "price": 32,
-    "shortText": "met Danny Vaughn",
-    "longText": "../public/texts/0ae43853-83db-431d-9b8e-6d32a4964907.html",
+    "shortText": "+ support WildHeart",
+    "longText": "../public/texts/e8516600-bb2b-436d-a4ff-a8cfc27c2abe.html",
     "image": "https://lift3cdn.nl/image/115/784x476/tyketto2023.jpg"
+  },
+  {
+    "doorOpenDateTime": "2023-06-13T17:00:00.000Z",
+    "startDateTime": "2023-06-13T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://poppodiumboerderij.nl/programma/the-winery-dogs",
+    "title": "The Winery Dogs",
+    "location": "boerderij",
+    "price": 37,
+    "shortText": "ft. Mike Portnoy, Billy Sheehan & Richie Kotzen",
+    "longText": "../public/texts/0d69cc01-5132-49af-ba67-e471de6257dd.html",
+    "image": "https://lift3cdn.nl/image/115/784x476/the-winery-dogs-2023-2.jpg"
+  },
+  {
+    "doorOpenDateTime": "2023-06-23T17:30:00.000Z",
+    "startDateTime": "2023-06-23T18:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://poppodiumboerderij.nl/programma/the-dear-hunter",
+    "title": "The Dear Hunter",
+    "location": "boerderij",
+    "price": 26,
+    "shortText": "+ support Redwood",
+    "longText": "../public/texts/4ef7f133-9d60-4f48-86ad-82cfda07119a.html",
+    "image": "https://lift3cdn.nl/image/115/784x476/the-dear-hunter-2023.jpg"
   }
 ]
