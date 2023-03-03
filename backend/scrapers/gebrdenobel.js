@@ -31,10 +31,6 @@ gebrdenobelScraper.makeBaseEventList = async function () {
 
   const {stopFunctie, page} =await this.makeBaseEventListStart()
 
-  await _t.autoScroll(page);
-  await _t.autoScroll(page);
-  await _t.autoScroll(page);
-
   const rawEvents = await page.evaluate(() => {
     return Array.from(document.querySelectorAll(".event-item"))
       .filter((eventEl) => {
@@ -44,7 +40,7 @@ gebrdenobelScraper.makeBaseEventList = async function () {
           tags.includes("metal") ||
           tags.includes("punk") ||
           tags.includes("rock")
-        );
+        ); //TODO door Isrock controle halen
       })
       .map((eventEl) => {
         const res = {};
@@ -71,6 +67,7 @@ gebrdenobelScraper.getPageInfo = async function ({ page }) {
   
   const {stopFunctie} =  await this.getPageInfoStart()
 
+  //TODO op de voorpagina is er gewoon nette microData.
   const pageInfo = await page.evaluate(
     ({ months }) => {
       const res = {
