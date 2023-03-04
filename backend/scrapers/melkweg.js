@@ -45,7 +45,7 @@ melkwegScraper.makeBaseEventList = async function () {
         return isHeavy;
 
       })
-    //      .filter((eventEl, index) => index % workerData.workerCount === workerData.index)
+      .filter((eventEl, index) => index % workerData.workerCount === workerData.index)
       .map((eventEl) => {
         const tags =
         eventEl

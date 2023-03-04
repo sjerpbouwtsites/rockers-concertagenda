@@ -1,15 +1,41 @@
 [
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2023-11-07T19:30:00.000Z",
+    "startDateTime": "2023-03-16T19:15:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.spotgroningen.nl/programma/level-42-4/",
-    "title": "Level 42",
+    "venueEventUrl": "https://www.spotgroningen.nl/programma/nite-23/",
+    "title": "NITE",
     "location": "oosterpoort",
-    "price": 38.6,
-    "shortText": "Living It Up<br>Funky hits uit de 80s",
-    "longText": "../public/texts/b43f866e-e787-4ec3-a23a-ebf4c79780bc.html",
-    "image": "https://www.spotgroningen.nl/wp-content/uploads/2022/11/level42-768x385.jpg",
+    "price": 25.5,
+    "shortText": "Yara’s Wedding<br>Een interdisciplinaire (bijna) musical door Guy Weizman, NITE en Schauspiel Hannover",
+    "longText": "../public/texts/8baa8256-9fec-4ef1-8402-084179945761.html",
+    "image": "https://www.spotgroningen.nl/wp-content/uploads/2023/01/NITE_YARASWEDDINGNEW_LIGGEND16x9._credits_HALIE-768x432.jpg",
+    "soldOut": false
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-05-19T18:15:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.spotgroningen.nl/programma/nite-28/",
+    "title": "NITE",
+    "location": "oosterpoort",
+    "price": 25.5,
+    "shortText": "Yara’s Wedding<br>Een interdisciplinaire (bijna) musical door Guy Weizman, NITE en Schauspiel Hannover",
+    "longText": "../public/texts/621d8791-062b-4c7d-903b-95e9c93130dd.html",
+    "image": "https://www.spotgroningen.nl/wp-content/uploads/2023/01/NITE_YARASWEDDINGNEW_LIGGEND16x9._credits_HALIE-768x432.jpg",
+    "soldOut": false
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-05-20T18:15:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.spotgroningen.nl/programma/nite-29/",
+    "title": "NITE",
+    "location": "oosterpoort",
+    "price": 25.5,
+    "shortText": "Yara’s Wedding<br>Een interdisciplinaire (bijna) musical door Guy Weizman, NITE en Schauspiel Hannover",
+    "longText": "../public/texts/30588959-95e4-46c8-b891-89c161fe3d0b.html",
+    "image": "https://www.spotgroningen.nl/wp-content/uploads/2023/01/NITE_YARASWEDDINGNEW_LIGGEND16x9._credits_HALIE-768x432.jpg",
     "soldOut": false
   }
 ]
