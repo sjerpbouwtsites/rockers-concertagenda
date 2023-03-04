@@ -97,6 +97,7 @@ nuldertienScraper.getPageInfo = async function ({ page }) {
         remarks: "deur open tijd fout",
       });
     }
+    res.soldOut = !!(document.querySelector('.order-tickets button[disabled]') ?? null)
     res.longTextHTML = 
       document.querySelector(
         ".event-detail header + div"

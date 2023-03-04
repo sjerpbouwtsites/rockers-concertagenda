@@ -189,9 +189,7 @@ export default class AbstractScraper {
     let forbiddenTermUsed = '';
     const hasForbiddenTerm = [
       "uitgesteld",
-      "sold out",
       "gecanceld",
-      "uitverkocht",
       "afgelast",
       "geannuleerd",
       "verplaatst",
@@ -417,8 +415,6 @@ export default class AbstractScraper {
         ? this.processSingleMusicEvent(useableEventsList)
         : useableEventsList;
     }
-
-    //parentPort.postMessage(this.qwm.toConsole({ pageInfo }));
 
     // nabewerken page info
     pageInfo.price = this.getPrice(pageInfo?.priceTextcontent);

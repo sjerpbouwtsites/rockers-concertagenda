@@ -45,10 +45,11 @@ dynamoScraper.makeBaseEventList = async function () {
           );
 
           let shortText = timelineInfoContainerEl?.querySelector("p")?.textContent ?? '';
-
+          const soldOut = !!(baseEvent.querySelector(".sold-out") ?? null)
           return {
             venueEventUrl,
             title,
+            soldOut,
             shortText
   
           };

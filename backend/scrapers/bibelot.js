@@ -46,6 +46,7 @@ bibelotScraper.makeBaseEventList = async function () {
         : [null, null];
       res.shortText = shortTextSplit[1];
       res.venueEventUrl = eventEl.querySelector(".link")?.href ?? null;
+      res.soldOut = !!(!eventEl.querySelector('.ticket-button')?.hasAttribute('href') ?? null) // als uitverkocht is span
       return res;
     });
   });
@@ -163,6 +164,8 @@ bibelotScraper.getPageInfo = async function ({ page }) {
       if (!res.startDateTime) {
         res.unavailable = "geen start date time";
       }
+
+ 
 
       const verkoopElAr = Array.from(
         document.querySelectorAll(".meta-info")

@@ -38,10 +38,12 @@ occiiScraper.makeBaseEventList = async function () {
       .filter((event, index) => index % workerData.workerCount === workerData.index)
       .map((occiiEvent) => {
         const firstAnchor = occiiEvent.querySelector("a");
-
+        const eventText = occiiEvent.textContent.toLowerCase();
+        const soldOut = eventText.includes('uitverkocht') || eventText.includes('sold out');
         return {
           venueEventUrl: firstAnchor.href,
           title: firstAnchor.title,
+          soldOut,
           shortText:
             occiiEvent.querySelector(".occii-events-description")
               ?.textContent ?? "",

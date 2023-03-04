@@ -53,12 +53,14 @@ cpuntScraper.makeBaseEventList = async function () {
         const image = rawEvent?.querySelector(".bg-image-img")?.src ?? null;
         const parpar = rawEvent.parentNode.parentNode;
         const startDate = parpar.hasAttribute('data-last-date') ? parpar.getAttribute('data-last-date').split('-').reverse().join('-') : null;
-
+        const artInfoText = rawEvent.querySelector('.article-info')?.textContent.toLowerCase() ?? '';
+        const soldOut = artInfoText.includes('wachtlijst') || artInfoText.includes('uitverkocht');
         return {
           venueEventUrl,
           startDate,
           title,
           image,
+          soldOut
         };
       });
     },

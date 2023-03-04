@@ -51,6 +51,7 @@ gebrdenobelScraper.makeBaseEventList = async function () {
 
         res.title =
           eventEl.querySelector(".media-heading")?.textContent ?? null;
+        res.soldOut = !!(eventEl.querySelector('.meta-info')?.textContent.toLowerCase().includes('uitverkocht') ?? null)
         return res;
       });
   }, workerData.index);

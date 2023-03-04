@@ -67,6 +67,11 @@ body  .event-block {
     filter: none;
     mix-blend-mode: initial;
   }
+  .event-block__venue-link--sold-out {
+    font-size: 3em;
+    margin-left: 0 !important;
+    margin-right: -90vw;
+  }
 }
 @media (min-width: 601px){
   body .event-block__price .event-block__venue-link {

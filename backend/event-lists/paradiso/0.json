@@ -8,8 +8,9 @@
     "location": "paradiso",
     "price": 34,
     "shortText": "Hypnotiserende postrock",
-    "longText": "../public/texts/bdd5d2c3-7273-43cc-be38-0843e35cfbe1.html",
-    "image": "https://api.paradiso.nl/img/events/gybe.jpg?w=600&h=400&fit=crop-50-50"
+    "longText": "../public/texts/5c34f345-b137-4fea-8b77-75cf3ce72a43.html",
+    "image": "https://api.paradiso.nl/img/events/gybe.jpg?w=600&h=400&fit=crop-50-50",
+    "soldOut": false
   },
   {
     "doorOpenDateTime": "2023-05-19T15:30:00.000Z",
@@ -20,8 +21,9 @@
     "location": "paradiso",
     "price": 45,
     "shortText": "Showcasefestival voor spraakmakende nieuwe bands",
-    "longText": "../public/texts/c8a8a32b-7f79-4826-8740-610c504f949b.html",
-    "image": "https://api.paradiso.nl/img/events/20221029_LondonCalling_Gurriers_by-BibianBingen_3W0A6673.jpg?w=600&h=400&fit=crop-50-50"
+    "longText": "../public/texts/33fa194f-072f-4959-9759-8b0de81f67c5.html",
+    "image": "https://api.paradiso.nl/img/events/20221029_LondonCalling_Gurriers_by-BibianBingen_3W0A6673.jpg?w=600&h=400&fit=crop-50-50",
+    "soldOut": false
   },
   {
     "doorOpenDateTime": "2023-06-04T17:00:00.000Z",
@@ -32,8 +34,9 @@
     "location": "paradiso",
     "price": 23,
     "shortText": "Harde en ongetemde pub-punk uit Australië",
-    "longText": "../public/texts/25f0c743-d6bf-4794-a3f3-ee947ac790a5.html",
-    "image": "https://api.paradiso.nl/img/events/The-Chats-Luke-Henery390012-WEB.jpg?w=600&h=400&fit=crop-50-50"
+    "longText": "../public/texts/1e17091d-004c-4711-a722-7bbd59442c26.html",
+    "image": "https://api.paradiso.nl/img/events/The-Chats-Luke-Henery390012-WEB.jpg?w=600&h=400&fit=crop-50-50",
+    "soldOut": false
   },
   {
     "doorOpenDateTime": "2023-08-28T17:00:00.000Z",
@@ -44,7 +47,8 @@
     "location": "paradiso",
     "price": 44.5,
     "shortText": "Indierockband uit New York keert terug met nieuw werk",
-    "longText": "../public/texts/17048c74-3245-41c5-a418-c179fddaa57a.html",
-    "image": "https://api.paradiso.nl/img/events/YYY-PORTRAIT-square-web.jpg?w=600&h=400&fit=crop-50-50"
+    "longText": "../public/texts/e6c6a3c7-c3b1-4c16-afdc-b4c4a32a9008.html",
+    "image": "https://api.paradiso.nl/img/events/YYY-PORTRAIT-square-web.jpg?w=600&h=400&fit=crop-50-50",
+    "soldOut": true
   }
 ]

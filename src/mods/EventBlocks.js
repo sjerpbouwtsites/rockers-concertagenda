@@ -84,9 +84,9 @@ class EventBlocks extends React.Component {
       .toString()
       .replace(".", ",")}`;
     return musicEvent.price !== null ? (
-      <span className="event-block__price contrast-with-dark sans-serif-font">
-        {price}
-        {this.createLinkToVenue(musicEvent)}
+      <span className={`event-block__price contrast-with-dark sans-serif-font ${musicEvent.soldOut ? "event-block__price--sold-out" : ""}`}>
+        {musicEvent.soldOut ? "" : price}
+        {this.createLinkToVenue(musicEvent)} 
       </span>
     ) : (
       ""
@@ -117,7 +117,16 @@ class EventBlocks extends React.Component {
 
   createLinkToVenue(musicEvent) {
     const url = musicEvent.venueEventUrl;
-    return musicEvent.venueEventUrl ? (
+    const soldOut = musicEvent.soldOut;
+    if (!url) return '';
+
+    return soldOut ? (
+      <span
+        className="event-block__venue-link sans-serif-font event-block__venue-link--sold-out" title='Ik zoek nog uit hoe door te verwijzen naar ticketswap ofzo. Thx'
+      >
+        uitverkocht
+      </span>      
+    ) : (
       <a
         className="event-block__venue-link sans-serif-font"
         href={url}
@@ -125,8 +134,6 @@ class EventBlocks extends React.Component {
       >
         tickets
       </a>
-    ) : (
-      ""
     );
   }
 
@@ -135,7 +142,7 @@ class EventBlocks extends React.Component {
       musicEvent.image ?? `location-images/${musicEvent.location}.jpg`;
     return imgSrc ? (
       <img
-        className="event-block--image"
+        className={`event-block--image ${musicEvent.soldOut ? "event-block--image-blurred" : ""}`}
         src={imgSrc}
         alt={musicEvent.title}
         loading="lazy"
@@ -148,7 +155,7 @@ class EventBlocks extends React.Component {
   createMoreButtonHTML(musicEvent, musicEventKey) {
     return musicEvent.longText ? (
       <button
-        className="event-block__load-more sans-serif-font"
+        className={`event-block__load-more sans-serif-font ${musicEvent.soldOut ? "event-block__load-more--blurred" : ""}`}
         onClick={this.loadLongerText.bind(this, musicEventKey)}
       >
         more
@@ -251,6 +258,8 @@ class EventBlocks extends React.Component {
               className={`event-block provide-dark-contrast ${
                 musicEvent.enlarged ? "event-block--enlarged" : ""
               } ${
+                musicEvent.soldOut ? "event-block--sold-out" : ""
+              } ${
                 musicEvent.firstOfMonth ? "event-block--first-of-month" : ""
               }`}
             >
@@ -258,10 +267,10 @@ class EventBlocks extends React.Component {
               {imageHTML}
               <header className="event-block__header contrast-with-dark">
                 <h2 className="event-block__title contrast-with-dark">
-                  <span className="event-block__title-showname cursive-font">
+                  <span className={`event-block__title-showname cursive-font ${musicEvent.soldOut ? "event-block__title-showname--blurred" : ""}`}>
                     {musicEvent.title}
                   </span>
-                  <span className="event-block__title-location">
+                  <span className={`event-block__title-location ${musicEvent.soldOut ? "event-block__title-location--blurred" : ""}`}>
                     {this.createLocation(musicEvent)}
                   </span>
 
