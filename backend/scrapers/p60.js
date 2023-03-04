@@ -114,28 +114,6 @@ p60Scraper.getPageInfo = async function ({ page }) {
     }, null
   );
 
-  // if (pageInfo.ticketURL) {
-  //   try {
-  //     await page.goto(pageInfo.ticketURL,{waitUntill: 'domcontentloaded'} )
-  //     // await page.waitForSelector('#main-content', {timeout: 12500})
-  //     await _t.waitFor(250);
-  //     pageInfo.priceTextcontent = await page.evaluate(()=>{
-
-  //       // 5pMuEpHRPhexiJelCHBWUcr4f6GcjB5G
-
-  //       return document.querySelector('#main-content')?.textContent ?? null
-  //     })
-  //   } catch (error) {
-  //     parentPort.postMessage(this.qwm.debugger({
-  //       error, remark: `prijs ophalen dbs ticketpagina ${pageInfo.ticketURL}`
-  //     }))
-  //   }
-  // }  
-
-  this.dirtyLog(pageInfo)
-
-
-
   return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
   
 };

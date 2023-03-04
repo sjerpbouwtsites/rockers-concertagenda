@@ -136,6 +136,8 @@ afasliveScraper.getPageInfo = async function ({ page }) {
         res.unavailable += " geen startDateTime";
       }
 
+      res.soldOut = !!(document.querySelector('#tickets .soldout') ?? null)
+
       res.longTextHTML = 
         document.querySelector("article .wysiwyg")?.innerHTML ?? '';
 

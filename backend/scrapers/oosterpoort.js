@@ -57,6 +57,7 @@ oostpoortScraper.makeBaseEventList = async function () {
         const tweedeDeelKorteTekst = eventEl.querySelector('.program__content p')?.textContent ?? '';
         res.shortText = `${eersteDeelKorteTekst}<br>${tweedeDeelKorteTekst}`;
         res.venueEventUrl = eventEl.querySelector(".program__link")?.href ?? null;
+        res.soldOut = !!(eventEl.querySelector(".program__status")?.textContent.toLowerCase().includes('uitverkocht') ?? null)
         try {
           res.startDateTime = new Date(eventEl.querySelector('.program__date')?.getAttribute('datetime') ?? null).toISOString();
         } catch (error) {

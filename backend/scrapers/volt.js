@@ -55,10 +55,12 @@ voltScraper.makeBaseEventList = async function () {
         const title = anchor?.textContent.trim() ?? "";
         const venueEventUrl = anchor.hasAttribute("href") ? anchor.href : null;
         const image = rawEvent.querySelector("img")?.src ?? null;
+        const soldOut = !!(rawEvent.querySelector(".card-content")?.textContent.toLowerCase().includes('uitverkocht') ?? null)
         return {
           venueEventUrl,
           title,
           image,
+          soldOut,
         };
       });
   }, null);

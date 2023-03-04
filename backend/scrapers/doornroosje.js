@@ -52,6 +52,7 @@ doornroosjeScraper.makeBaseEventList = async function () {
             ?.textContent.trim()
             .replace(res.title, "") ?? '';
         res.venueEventUrl = eventEl?.href;
+        res.soldOut = eventEl.querySelector('.c-program__info-container')?.textContent.toLowerCase().includes('uitverkocht') ?? null;
         if (!res.title || !res.venueEventUrl) {
           res.unavailable = "title of url ontbreken";
         }

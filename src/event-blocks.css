@@ -33,7 +33,9 @@
   width: 100%;
 height: 100%;
 }
-
+.event-block--image-blurred {
+ filter: saturate(90%) blur(1px) grayscale(100%) hue-rotate(15deg) sepia(100%);
+}
 .event-block--enlarged {
   width: 100vw;
   height: calc(100vh - 3em);
@@ -129,16 +131,24 @@ height: 100%;
   display: block;
   font-size: 1.5em;
 }
+.event-block__title-showname--blurred {
+  opacity: 0.5;
+  filter: blur(0.5px);
+}
 .event-block__startDate, .event-block__title-location {
   margin-top: .33em;
   font-size: 0.75em;
-  opacity: 0.75;
+  opacity: 0.5;
 }
 .event-block__title-location + .event-block__startDate {
   margin: 0;
   position: relative;
   line-height: 1;
   display: block;
+}
+.event-block__title-location--blurred {
+  opacity: 0.6;
+  filter: blur(0.5px)
 }
 
 
@@ -163,6 +173,10 @@ height: 100%;
   text-transform:uppercase;
   font-weight: 900;
   min-width: 132px;
+}
+.event-block__load-more--blurred{
+  filter: grayscale(50%);
+  opacity: 0.6;
 }
 .event-block__load-more:hover {
   background-color: var(--pink);
@@ -210,6 +224,10 @@ height: 100%;
   min-width: 110px;
   text-align: center;
 }
+.event-block__price--sold-out {
+  background: none;  
+}
+
 .event-block--enlarged .event-block__price {
   font-size: 3rem;
   top: 3em;
@@ -242,6 +260,22 @@ height: 100%;
 .event-block__venue-link:hover {
   color: #b3ff4d;
   text-decoration: none;
+}
+.event-block__venue-link--sold-out {
+  color: #1cd880;
+  mix-blend-mode: hard-light;
+  font-size: 6rem;
+  word-wrap: anywhere;
+  max-width: 66%;
+}
+@media (max-width: 1024px){
+  .event-block__venue-link--sold-out {
+    font-size: 4rem;
+  }
+}
+
+.event-block__venue-link--sold-out:hover {
+  color: #1cd880;
 }
 .event-block--enlarged .event-block__footer {
   text-align: left;

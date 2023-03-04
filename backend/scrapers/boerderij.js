@@ -143,7 +143,9 @@ boerderijScraper.getPageInfo = async function ({ event }) {
     });
   }
 
-  this.dirtyLog(ajaxRes)
+  pageInfo.soldOut = ajaxRes?.label?.title?.toLowerCase().includes('uitverkocht') ?? null
+
+  this.dirtyLog({jal: ajaxRes})
 
   return await this.getPageInfoEnd({pageInfo, stopFunctie})
 

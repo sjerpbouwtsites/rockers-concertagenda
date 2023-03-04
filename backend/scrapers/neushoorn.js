@@ -67,8 +67,10 @@ neushoornScraper.makeBaseEventList = async function () {
           ".productions__item__content span:first-child"
         ).textContent;
         const venueEventUrl = itemEl.href;
+        const soldOut = !!(itemEl.querySelector(".chip")?.textContent.toLowerCase().includes('uitverkocht') ?? null)
         return {
           venueEventUrl,
+          soldOut,
           textContent,
           isRockInText,
           title

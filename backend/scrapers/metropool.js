@@ -58,6 +58,7 @@ metropoolScraper.makeBaseEventList = async function () {
           shortText: 
             rawEvent.querySelector(".card__title card__title--sub")
               ?.textContent ?? '',
+          soldOut: !!(rawEvent.querySelector(".card__title--label")?.textContent.toLowerCase().includes('uitverkocht') ?? null)
         };
       });
   }, {workerData});

@@ -78,11 +78,13 @@ paradisoScraper.makeBaseEventList = async function () {
           const venueEventUrl = rawEvent.hasAttribute("href")
             ? rawEvent.href
             : null;
+          const soldOut = !!(rawEvent.querySelector(".event-list__item-info")?.textContent.toLowerCase().includes('uitverkocht') ?? null)
 
           return {
             venueEventUrl,
             title,
             shortText,
+            soldOut,
           };
         });
     },

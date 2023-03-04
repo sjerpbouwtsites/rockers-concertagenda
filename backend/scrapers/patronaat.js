@@ -41,6 +41,7 @@ patronaatScraper.makeBaseEventList = async function () {
         res.shortText = eventEl
           .querySelector(".event__subtitle")
           ?.textContent.trim() ?? '';
+        res.soldOut = !!(eventEl.querySelector('.event__tags-item--sold-out') ?? null)
         return res;
       });
   }, {workerData});

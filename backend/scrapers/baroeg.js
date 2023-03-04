@@ -83,10 +83,11 @@ baroegScraper.getPageInfo = async function ({ page }) {
         unavailable: null,
         pageInfoID: `<a href='${document.location.href}'>💻</a>`,
       };
-      const ticketsEl = document.querySelector(".wp_theatre_event_tickets");
-      if (!ticketsEl) {
-        res.unavailable = `Geen kaarten. `;
-      }
+      //TODO is dit legacy? check of tickets beschikbaar zijn? Gaat naar de soldOut toch
+      // const ticketsEl = document.querySelector(".wp_theatre_event_tickets");
+      // if (!ticketsEl) {
+      //   res.unavailable = `Geen kaarten. `;
+      // }
 
       const startDateEl = document.querySelector(".wp_theatre_event_startdate");
       if (!startDateEl) {
@@ -136,6 +137,8 @@ baroegScraper.getPageInfo = async function ({ page }) {
         }
         res.longTextHTML = postContent.innerHTML;
       }
+      res.soldOut = !!(document.querySelector('.wp_theatre_event_tickets_status_soldout') ?? null)
+      
 
       if (res.unavailable) {
         res.unavailable = `${res.unavailable} ${res.pageInfoID}`;

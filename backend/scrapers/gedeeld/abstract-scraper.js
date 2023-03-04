@@ -41,6 +41,16 @@ export default class AbstractScraper {
     parentPort.postMessage(this.qwm.toConsole(logThis));
   }
 
+  /**
+   * Wrapper om parentPort.postMessage(qwm.messageRoll(xx)) heen.
+   *
+   * @param {*} talkingString wat dan ook.
+   * @memberof AbstractScraper
+   */
+  dirtyTalk(talkingString) {
+    parentPort.postMessage(this.qwm.messageRoll(String(talkingString)));
+  }  
+
   async scrapeInit() {
     this.browser = await puppeteer.launch();
 
@@ -179,9 +189,7 @@ export default class AbstractScraper {
     let forbiddenTermUsed = '';
     const hasForbiddenTerm = [
       "uitgesteld",
-      "sold out",
       "gecanceld",
-      "uitverkocht",
       "afgelast",
       "geannuleerd",
       "verplaatst",
@@ -407,8 +415,6 @@ export default class AbstractScraper {
         ? this.processSingleMusicEvent(useableEventsList)
         : useableEventsList;
     }
-
-    //parentPort.postMessage(this.qwm.toConsole({ pageInfo }));
 
     // nabewerken page info
     pageInfo.price = this.getPrice(pageInfo?.priceTextcontent);

@@ -11,6 +11,7 @@ export default class MusicEvent {
   shortText = null;
   longText = null;
   image = null;
+  soldOut = null;
   constructor(init) {
     this.merge(init);
   }

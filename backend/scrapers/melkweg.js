@@ -33,27 +33,6 @@ melkwegScraper.makeBaseEventList = async function () {
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
-  parentPort.postMessage(
-    this.qwm.messageRoll(`melkweg scraper ${workerData.index} begin base event list.`)
-  );
-
-  // await _t.autoScroll(page);
-  // parentPort.postMessage(
-  //   this.qwm.messageRoll(`melkweg scraper ${workerData.index} na scroll wait 1.`)
-  // );  
-  // await _t.autoScroll(page);
-  // parentPort.postMessage(
-  //   this.qwm.messageRoll(`melkweg scraper ${workerData.index} na scroll wait 2.`)
-  // );    
-  // await _t.autoScroll(page);
-  // parentPort.postMessage(
-  //   this.qwm.messageRoll(`melkweg scraper ${workerData.index} na scroll wait 3.`)
-  // );      
-  // await _t.autoScroll(page);
-  // parentPort.postMessage(
-  //   this.qwm.messageRoll(`melkweg scraper ${workerData.index} na scroll wait 4.`)
-  // );      
-
   const rawEvents = await page.evaluate(({workerData}) => {
     return Array.from(document.querySelectorAll("[data-element='agenda'] li[class*='event-list-day__list-item']"))
       .filter((eventEl) => {
@@ -66,7 +45,7 @@ melkwegScraper.makeBaseEventList = async function () {
         return isHeavy;
 
       })
-    //      .filter((eventEl, index) => index % workerData.workerCount === workerData.index)
+      .filter((eventEl, index) => index % workerData.workerCount === workerData.index)
       .map((eventEl) => {
         const tags =
         eventEl
@@ -81,6 +60,7 @@ melkwegScraper.makeBaseEventList = async function () {
         res.title =
         eventEl.querySelector('h3[class*="title"]')?.textContent ?? "";
         res.venueEventUrl = anchor.href;
+        res.soldOut = !!(eventEl.querySelector("[class*='styles_event-compact__text']")?.textContent.toLowerCase().includes('uitverkocht') ?? null);
         return res;
       });
   }, {workerData});

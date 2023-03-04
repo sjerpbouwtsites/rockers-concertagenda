@@ -39,7 +39,7 @@ export const workerConfig = {
   volt: { workerCount: 1 },
   cpunt: { workerCount: 1 },
   occii :{
-    workerCount: 1,
+    workerCount: 2,
     workerConcurrent: 1,
     CPUReq: "high",
   },
