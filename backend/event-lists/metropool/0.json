@@ -1,30 +1,5 @@
 [
   {
-    "doorOpenDateTime": "2023-03-10T17:00:00.000Z",
-    "startDateTime": "2023-03-10T17:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://metropool.nl/agenda/cannibal-corpse-dark-funeral/",
-    "title": "Cannibal Corpse + Dark Funeral",
-    "location": "metropool",
-    "shortText": "",
-    "longText": "../public/texts/007d4e80-d3bb-402f-87e1-413fb97207a0.html",
-    "image": "https://metropool.nl//media/26765/cannible_web_1920x1080.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=133065118890000000",
-    "soldOut": true
-  },
-  {
-    "doorOpenDateTime": "2023-03-17T17:30:00.000Z",
-    "startDateTime": "2023-03-17T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://metropool.nl/agenda/kissin-dynamite-dynazty/",
-    "title": "Kissin' Dynamite & Dynazty",
-    "location": "metropool",
-    "price": 28,
-    "shortText": "",
-    "longText": "../public/texts/6de58cf6-6b65-4c5b-aff8-f0f32368431c.html",
-    "image": "https://metropool.nl//media/30065/kissin-dynamite_web_1920x1080.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=133153204530000000",
-    "soldOut": false
-  },
-  {
     "doorOpenDateTime": "2023-03-24T19:30:00.000Z",
     "startDateTime": "2023-03-24T20:00:00.000Z",
     "endDateTime": null,
@@ -33,7 +8,7 @@
     "location": "metropool",
     "price": 19.5,
     "shortText": "",
-    "longText": "../public/texts/c8e819c2-e73d-4eb2-8c0f-4f4e798dd6d9.html",
+    "longText": "../public/texts/831f76fa-ddaa-44de-8d37-84aa502f87b2.html",
     "image": "https://metropool.nl//media/20730/bohemianbetyars_web_1920x1080.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=132836096270000000",
     "soldOut": false
   },
@@ -46,7 +21,7 @@
     "location": "metropool",
     "price": 22,
     "shortText": "",
-    "longText": "../public/texts/8323abee-264e-470e-973a-cceabcf90f9d.html",
+    "longText": "../public/texts/fe01bc80-b662-47c8-860b-3cc5b8313fe8.html",
     "image": "https://metropool.nl//media/30082/crowbar-web.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=133154917150000000",
     "soldOut": false
   },
@@ -59,7 +34,7 @@
     "location": "metropool",
     "price": 21.5,
     "shortText": "",
-    "longText": "../public/texts/89beec6f-0f1d-407a-a9e8-83efba88688f.html",
+    "longText": "../public/texts/97af4a73-f6f2-43e7-ba4b-237db701152b.html",
     "image": "https://metropool.nl//media/30339/no-fun-at-all_web_1920x1080.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=133161042230000000",
     "soldOut": false
   },
@@ -72,7 +47,7 @@
     "location": "metropool",
     "price": 19,
     "shortText": "",
-    "longText": "../public/texts/bac8b3c1-0fe1-448f-ac2d-dbc04cffdd0a.html",
+    "longText": "../public/texts/88fe0d59-67eb-44fe-854b-a0c8dc128c5e.html",
     "image": "https://metropool.nl//media/27367/helstar-web.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=133077151530000000",
     "soldOut": false
   },
@@ -85,7 +60,7 @@
     "location": "metropool",
     "price": 17.5,
     "shortText": "",
-    "longText": "../public/texts/842ba991-fb78-493a-9407-7b5d902e7d83.html",
+    "longText": "../public/texts/9c042700-66c0-4c55-9c59-d8d4869a941e.html",
     "image": "https://metropool.nl//media/29659/classic_web.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=133132595570000000",
     "soldOut": false
   },
@@ -98,8 +73,21 @@
     "location": "metropool",
     "price": 32.5,
     "shortText": "",
-    "longText": "../public/texts/a095448c-aef6-4f13-9c92-fb9ad1ca79fe.html",
+    "longText": "../public/texts/7be81499-d4ac-4689-aeae-e7ebd9c722a1.html",
     "image": "https://metropool.nl//media/31357/watain-web.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=133199102750000000",
+    "soldOut": false
+  },
+  {
+    "doorOpenDateTime": "2023-08-26T18:30:00.000Z",
+    "startDateTime": "2023-08-26T19:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://metropool.nl/agenda/mad-sin/",
+    "title": "Mad Sin",
+    "location": "metropool",
+    "price": 22.5,
+    "shortText": "",
+    "longText": "../public/texts/b0b95d4c-3c22-48cc-b588-663a7fbdc814.html",
+    "image": "https://metropool.nl//media/33073/mad-sin_web_1920x1080.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=133238733840000000",
     "soldOut": false
   },
   {
@@ -111,7 +99,7 @@
     "location": "metropool",
     "price": 17,
     "shortText": "",
-    "longText": "../public/texts/f74e3ddb-cfa6-4478-a21b-dac9790b7e9d.html",
+    "longText": "../public/texts/39227f60-4157-4727-b4e1-327d1873bcb5.html",
     "image": "https://metropool.nl//media/29629/future-palace_web_1920x1080.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=133131054400000000",
     "soldOut": false
   }

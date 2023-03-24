@@ -1,57 +1,5 @@
 [
   {
-    "doorOpenDateTime": "2023-03-08T18:30:00.000Z",
-    "startDateTime": "2023-03-08T19:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://poppodiumboerderij.nl/programma/rosalie-cunningham-band",
-    "title": "Rosalie Cunningham",
-    "location": "boerderij",
-    "price": 24,
-    "shortText": "ex-Purson",
-    "longText": "../public/texts/129cb929-ce90-4ce0-a429-6deb31c03c77.html",
-    "image": "https://lift3cdn.nl/image/115/784x476/rosalie-cunningham.jpg",
-    "soldOut": null
-  },
-  {
-    "doorOpenDateTime": "2023-03-10T18:30:00.000Z",
-    "startDateTime": "2023-03-10T19:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://poppodiumboerderij.nl/programma/the-godfathers",
-    "title": "The Godfathers",
-    "location": "boerderij",
-    "price": 24,
-    "shortText": "",
-    "longText": "../public/texts/e15822cc-4fd1-4578-bc8f-1e2800e5b685.html",
-    "image": "https://lift3cdn.nl/image/115/784x476/the-godfathers-2023.jpg",
-    "soldOut": null
-  },
-  {
-    "doorOpenDateTime": "2023-03-16T18:30:00.000Z",
-    "startDateTime": "2023-03-16T19:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://poppodiumboerderij.nl/programma/lari-basilio-trio",
-    "title": "Lari Basilio Trio",
-    "location": "boerderij",
-    "price": 25,
-    "shortText": "guitar superstar + support Mark Bogert Band",
-    "longText": "../public/texts/f25172ab-7eea-4476-8abb-aa658723abcc.html",
-    "image": "https://lift3cdn.nl/image/115/784x476/lari-basilio-2023.jpg",
-    "soldOut": null
-  },
-  {
-    "doorOpenDateTime": "2023-03-17T18:30:00.000Z",
-    "startDateTime": "2023-03-17T19:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://poppodiumboerderij.nl/programma/pure-reason-revolution",
-    "title": "Pure Reason Revolution",
-    "location": "boerderij",
-    "price": 28,
-    "shortText": "+ support Inhalo",
-    "longText": "../public/texts/a4990402-8916-4588-967f-0b4fd76f8f70.html",
-    "image": "https://lift3cdn.nl/image/115/784x476/pure-reason-revolution-2023.jpg",
-    "soldOut": null
-  },
-  {
     "doorOpenDateTime": "2023-04-01T17:30:00.000Z",
     "startDateTime": "2023-04-01T18:30:00.000Z",
     "endDateTime": null,
@@ -60,7 +8,7 @@
     "location": "boerderij",
     "price": 30,
     "shortText": "Crime Scene Tour 2023 + support Tanyc",
-    "longText": "../public/texts/cfa8af90-860c-4f83-9280-5caebe3cf112.html",
+    "longText": "../public/texts/56675b3b-d4ad-4f61-bc0c-5b670a2f3bbf.html",
     "image": "https://lift3cdn.nl/image/115/784x476/rpwl-2-2023.jpg",
     "soldOut": null
   },
@@ -73,8 +21,21 @@
     "location": "boerderij",
     "price": 35.5,
     "shortText": "35 yrs operation:mindcrime + supports",
-    "longText": "../public/texts/73024f99-2c2e-431b-b0cf-6fa58906fdab.html",
+    "longText": "../public/texts/d0c584a2-5eaf-4e91-8480-ad9728a80d38.html",
     "image": "https://lift3cdn.nl/image/115/784x476/geoff-tate-2023.jpg",
+    "soldOut": null
+  },
+  {
+    "doorOpenDateTime": "2023-04-06T19:00:00.000Z",
+    "startDateTime": "2023-04-06T19:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://poppodiumboerderij.nl/programma/captain-scarlet-pyke",
+    "title": "RIOT/FARM presents Captain Scarlet & Pyke",
+    "location": "boerderij",
+    "price": 7,
+    "shortText": "PODIUMCAFÉ",
+    "longText": "../public/texts/f6137be4-e287-42a0-9983-13849d9acd34.html",
+    "image": "https://lift3cdn.nl/image/115/784x476/riotfarm-6-april-2023.jpg",
     "soldOut": null
   },
   {
@@ -86,7 +47,7 @@
     "location": "boerderij",
     "price": 31,
     "shortText": "Dividing Lines Tour + supports Virtual Symmetry & Oddland",
-    "longText": "../public/texts/15acb089-0217-486a-a286-3aefb4e2383c.html",
+    "longText": "../public/texts/6a72e351-7385-44f3-9160-7532e091a90a.html",
     "image": "https://lift3cdn.nl/image/115/784x476/threshold-2023.jpg",
     "soldOut": null
   },
@@ -99,7 +60,7 @@
     "location": "boerderij",
     "price": 25.5,
     "shortText": "met band Zeus",
-    "longText": "../public/texts/74ce9455-0eee-4160-a880-8411b6998304.html",
+    "longText": "../public/texts/15c2f351-778c-43f5-ae10-039a04b9df13.html",
     "image": "https://lift3cdn.nl/image/115/784x476/jeroen-van-kningsbrugge-sings-pearl-jam-2023.jpg",
     "soldOut": null
   },
@@ -112,7 +73,7 @@
     "location": "boerderij",
     "price": 30,
     "shortText": "The Music of The Moody Blues",
-    "longText": "../public/texts/a00a4e45-992a-423d-b1ba-32098b8f2c9e.html",
+    "longText": "../public/texts/03ef54c9-d052-4efc-9f0b-770398a9031b.html",
     "image": "https://lift3cdn.nl/image/115/784x476/go-now.jpg",
     "soldOut": null
   },
@@ -125,7 +86,7 @@
     "location": "boerderij",
     "price": 29,
     "shortText": "Double Headliner",
-    "longText": "../public/texts/052caf97-663e-4aea-8b09-5f8bc2dbdf9a.html",
+    "longText": "../public/texts/ab20c038-7ec4-4d20-af61-2e2806fdef19.html",
     "image": "https://lift3cdn.nl/image/115/784x476/lizzard-en-ork.jpg",
     "soldOut": null
   },
@@ -138,7 +99,7 @@
     "location": "boerderij",
     "price": 53,
     "shortText": "Leer van de master",
-    "longText": "../public/texts/257822c3-ac76-402a-9244-edc0c4e25ad7.html",
+    "longText": "../public/texts/b2778f4c-04d9-433f-a0a1-3dc1956ccfd2.html",
     "image": "https://lift3cdn.nl/image/115/784x476/steve-vai-masterclass-2023.jpg",
     "soldOut": null
   },
@@ -151,7 +112,7 @@
     "location": "boerderij",
     "price": 32,
     "shortText": "Met originele members Tony Brock en Wally Stocker",
-    "longText": "../public/texts/d3a412f1-f169-4808-9922-6c8b38db8f5f.html",
+    "longText": "../public/texts/6504a882-3fc2-4b83-a32d-b47b5d5e2299.html",
     "image": "https://lift3cdn.nl/image/115/784x476/babys.jpg",
     "soldOut": false
   },
@@ -164,7 +125,7 @@
     "location": "boerderij",
     "price": 32,
     "shortText": "+ support WildHeart",
-    "longText": "../public/texts/ac599c4d-4b4c-416c-b096-9f18a9ad8926.html",
+    "longText": "../public/texts/26fdf202-ca3c-40e0-915f-c951dae63a97.html",
     "image": "https://lift3cdn.nl/image/115/784x476/tyketto2023.jpg",
     "soldOut": null
   },
@@ -177,7 +138,7 @@
     "location": "boerderij",
     "price": 37,
     "shortText": "ft. Mike Portnoy, Billy Sheehan & Richie Kotzen",
-    "longText": "../public/texts/8d6cc2a3-1ca4-4247-b205-a9ba0012644e.html",
+    "longText": "../public/texts/6cff748b-fa63-45d5-b827-513a867e09ae.html",
     "image": "https://lift3cdn.nl/image/115/784x476/the-winery-dogs-2023-2.jpg",
     "soldOut": true
   },
@@ -190,8 +151,47 @@
     "location": "boerderij",
     "price": 26,
     "shortText": "+ support Redwood",
-    "longText": "../public/texts/a17f5437-f415-4fa4-9508-9e52a1a20dcf.html",
+    "longText": "../public/texts/44076d45-990e-4056-a993-08915a91de3f.html",
     "image": "https://lift3cdn.nl/image/115/784x476/the-dear-hunter-2023.jpg",
+    "soldOut": null
+  },
+  {
+    "doorOpenDateTime": "2023-07-02T13:00:00.000Z",
+    "startDateTime": "2023-07-02T14:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://poppodiumboerderij.nl/programma/dutch-rush-fan-event",
+    "title": "Dutch Rush Fan Event",
+    "location": "boerderij",
+    "price": 21.5,
+    "shortText": "Meeting + concert The Rushians",
+    "longText": "../public/texts/6d5121a0-a1b4-40e0-82dc-51b66a85213d.html",
+    "image": "https://lift3cdn.nl/image/115/784x476/dutch-rush-fan-event-2023.jpg",
+    "soldOut": null
+  },
+  {
+    "doorOpenDateTime": "2023-09-16T17:30:00.000Z",
+    "startDateTime": "2023-09-16T18:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://poppodiumboerderij.nl/programma/clan-of-xymox",
+    "title": "Clan Of Xymox",
+    "location": "boerderij",
+    "price": 27,
+    "shortText": "+ support Silent Runners",
+    "longText": "../public/texts/b0dd8204-6f61-4be5-bc61-a07ab95b5724.html",
+    "image": "https://lift3cdn.nl/image/115/784x476/clan-of-xymox-2-2023.jpg",
+    "soldOut": null
+  },
+  {
+    "doorOpenDateTime": "2023-10-03T17:30:00.000Z",
+    "startDateTime": "2023-10-03T18:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://poppodiumboerderij.nl/programma/cutting-crew",
+    "title": "Cutting Crew",
+    "location": "boerderij",
+    "price": 36,
+    "shortText": "I just died in your arms 2023",
+    "longText": "../public/texts/57a6e8ad-b50e-46f2-8d0d-1184b5616b08.html",
+    "image": "https://lift3cdn.nl/image/115/784x476/cutting-crew-2023.jpg",
     "soldOut": null
   }
 ]
