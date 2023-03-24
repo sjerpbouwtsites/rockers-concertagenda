@@ -1,18 +1,5 @@
 [
   {
-    "doorOpenDateTime": "2023-03-11T14:00:00.000Z",
-    "startDateTime": "2023-03-11T14:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.effenaar.nl/agenda/welcome-hell-festival",
-    "title": "Welcome To Hell Festival",
-    "location": "effenaar",
-    "price": 38.5,
-    "shortText": "Trek je patchvest uit de kast en knoop je spijkerbanden strak aan!",
-    "longText": "../public/texts/7b5fae4b-d2fe-4a3d-9e81-5811e26dc88e.html",
-    "image": "https://d3gy47dclw6o24.cloudfront.net/styles/320w/s3/2023-02/WTH_eventheader.jpg?itok=HkutnLEc",
-    "soldOut": false
-  },
-  {
     "doorOpenDateTime": "2023-03-29T17:30:00.000Z",
     "startDateTime": "2023-03-29T18:00:00.000Z",
     "endDateTime": null,
@@ -20,7 +7,7 @@
     "title": "Club Void: Wiegedood",
     "location": "effenaar",
     "shortText": "+ Modder",
-    "longText": "../public/texts/4cb3dbed-7c54-4c62-b0e6-79e7a8002a75.html",
+    "longText": "../public/texts/783e8d9c-48e3-481f-bef9-c28d8adcb103.html",
     "image": "https://d3gy47dclw6o24.cloudfront.net/styles/320w/s3/2022-12/Header.jpg?itok=fa-qqM73",
     "soldOut": false
   },
@@ -32,7 +19,7 @@
     "title": "Snaren 90: In Utero",
     "location": "effenaar",
     "shortText": "Dé alternatieve dansavond met een tribute aan Nirvana",
-    "longText": "../public/texts/d4a6e5bc-c845-46a1-a8d3-78d59c5fd3ce.html",
+    "longText": "../public/texts/7160b9e8-f20c-440b-a67e-ee7fbb4fc8b5.html",
     "image": "https://d3gy47dclw6o24.cloudfront.net/styles/320w/s3/2023-02/Snaren%2090%20-%20In%20Utero%20-%20header%20website.jpg?itok=r13cR9Hp",
     "soldOut": false
   },
@@ -45,7 +32,7 @@
     "location": "effenaar",
     "price": null,
     "shortText": "Eindhoven Guitar Festival",
-    "longText": "../public/texts/7b5d57b2-58ff-42bb-be86-6d0466de3401.html",
+    "longText": "../public/texts/12336fcd-b5ee-4970-8259-4a45f1788aaa.html",
     "image": "https://d3gy47dclw6o24.cloudfront.net/styles/320w/s3/2023-01/Header%20BRIDGE%202.jpg?itok=v1yskyqK",
     "soldOut": false
   },
@@ -56,11 +43,10 @@
     "venueEventUrl": "https://www.effenaar.nl/agenda/eisbrecher",
     "title": "Eisbrecher",
     "location": "effenaar",
-    "price": 30,
     "shortText": "Duitse industrial rockband",
-    "longText": "../public/texts/d2e47e0b-bce9-4576-990d-38bde741255b.html",
+    "longText": "../public/texts/abb601e9-0b14-4e9a-a7dc-22585b3da73b.html",
     "image": "https://d3gy47dclw6o24.cloudfront.net/styles/320w/s3/2022-08/601966c0bac10.jpg?itok=pNmunTkE",
-    "soldOut": false
+    "soldOut": true
   },
   {
     "doorOpenDateTime": "2023-06-01T17:30:00.000Z",
@@ -70,34 +56,34 @@
     "title": "Club Void: The Obsessed",
     "location": "effenaar",
     "shortText": "+ Stone In Egypt",
-    "longText": "../public/texts/a98e3c0e-911a-49e9-ad5e-cfb3d55d4edd.html",
+    "longText": "../public/texts/88a78924-4ca4-4c11-85ee-26c9cc92b7f5.html",
     "image": "https://d3gy47dclw6o24.cloudfront.net/styles/320w/s3/2023-01/TheObsessed_eventheader.jpg?itok=1AEkuZ4j",
     "soldOut": false
   },
   {
-    "doorOpenDateTime": "2023-06-30T16:30:00.000Z",
-    "startDateTime": "2023-06-30T17:00:00.000Z",
+    "doorOpenDateTime": "2023-06-27T17:00:00.000Z",
+    "startDateTime": "2023-06-27T17:30:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.effenaar.nl/agenda/zeke-nine-pound-hammer",
-    "title": "Zeke + Nine Pound Hammer",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/spiritbox",
+    "title": "Spiritbox",
     "location": "effenaar",
-    "price": 22.5,
-    "shortText": "+ 69 Charger",
-    "longText": "../public/texts/e6833844-8d53-46ef-b74f-5210a12daec1.html",
-    "image": "https://d3gy47dclw6o24.cloudfront.net/styles/320w/s3/2023-01/Zeke%20header.jpg?itok=9GhvHB7S",
+    "price": 27,
+    "shortText": "+ Unprocessed + InVisions",
+    "longText": "../public/texts/06951665-790c-46dd-aea6-07b16f020c7f.html",
+    "image": "https://d3gy47dclw6o24.cloudfront.net/styles/320w/s3/2023-03/spiritbox%20header.png?itok=9ziOkrhX",
     "soldOut": false
   },
   {
-    "doorOpenDateTime": "2023-12-08T15:00:00.000Z",
-    "startDateTime": "2023-12-08T15:00:00.000Z",
+    "doorOpenDateTime": "2023-10-07T14:00:00.000Z",
+    "startDateTime": "2023-10-07T14:30:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.effenaar.nl/agenda/eindhoven-metal-meeting-2023",
-    "title": "EINDHOVEN METAL MEETING 2023",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/come-you-are-2023-oa-therapy",
+    "title": "Come As You Are 2023: o.a. Therapy?",
     "location": "effenaar",
-    "price": 110,
-    "shortText": "",
-    "longText": "../public/texts/67863ac7-fbc4-4096-95cc-29f6277c0ec4.html",
-    "image": "https://d3gy47dclw6o24.cloudfront.net/styles/320w/s3/2023-01/EMM2023_1920X1080pix.jpg?itok=tZyT3U0P",
+    "price": 42,
+    "shortText": "Het beste van drie decennia gitaarmuziek",
+    "longText": "../public/texts/edca253b-8d04-4781-bda3-2dcb7788ef39.html",
+    "image": "https://d3gy47dclw6o24.cloudfront.net/styles/320w/s3/2023-03/Socials%20CAYA%202023%20-%20header_FB%20header%20copy.jpg?itok=e3yTlSfe",
     "soldOut": false
   }
 ]

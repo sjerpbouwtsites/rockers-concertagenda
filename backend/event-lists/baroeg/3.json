@@ -1,6 +1,32 @@
 [
   {
     "doorOpenDateTime": null,
+    "startDateTime": "2023-04-08T14:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://baroeg.nl/productie/blokhut-live-purple-shade-turbo-fan-halen/",
+    "title": "Blokhut Live: Purple Shade + Turbo + Fan Halen + Rob Orlemans &#038; Half Past Midnight",
+    "location": "baroeg",
+    "price": 19,
+    "shortText": "<p>Blokhut Live is intussen een vast onderdeel van de Baroegprogrammering.</p>",
+    "longText": "../public/texts/37734597-7d63-4e9b-bbab-945698f16b2d.html",
+    "image": "https://baroeg.nl/wp-content/uploads/2022/12/Presentatie-23-5-768x592.jpg",
+    "soldOut": false
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-04-01T15:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://baroeg.nl/productie/mascolori-x-baroeg-releaseparty/",
+    "title": "Mascolori x Baroeg releaseparty",
+    "location": "baroeg",
+    "price": null,
+    "shortText": "<p>Baroeg komt met eigen schoenen.</p>",
+    "longText": "../public/texts/8d55fde9-7f6e-4984-9627-0b78ef2787be.html",
+    "image": "https://baroeg.nl/wp-content/uploads/2023/03/MASCOLORI-OMSLAG-FOTO-2-768x232.jpg",
+    "soldOut": false
+  },
+  {
+    "doorOpenDateTime": null,
     "startDateTime": "2023-03-29T17:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://baroeg.nl/productie/riffsniffer-presents-nightstalker-baardvader/",
@@ -8,7 +34,7 @@
     "location": "baroeg",
     "price": 14,
     "shortText": "<p>Riffs opsnuiven bij stonerfuiven</p>",
-    "longText": "../public/texts/209ec9dc-f247-4031-8f3b-c4c03d644ad1.html",
+    "longText": "../public/texts/60a13c39-a60a-4009-9aba-6581a30c586a.html",
     "image": "https://baroeg.nl/wp-content/uploads/2023/01/Nightstalker-e1674562538717-768x282.jpeg",
     "soldOut": false
   },
@@ -21,73 +47,8 @@
     "location": "baroeg",
     "price": 7,
     "shortText": "<p>Koop je je kaartje in de voorverkoop dan krijg je een gratis Modern Victims button bij de entree!</p>",
-    "longText": "../public/texts/436335cf-1a2f-4484-8069-5fe9c5aaf78a.html",
+    "longText": "../public/texts/d660ccc2-02db-4604-90d8-24f586289660.html",
     "image": "https://baroeg.nl/wp-content/uploads/2023/01/Banner-e1674039295527-768x404.png",
-    "soldOut": false
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2023-03-19T14:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://baroeg.nl/productie/onslaught/",
-    "title": "Onslaught + Bodyfarm + Helleruin",
-    "location": "baroeg",
-    "price": 20,
-    "shortText": "<p>40 jaar bestaan van Onslaught.</p>",
-    "longText": "../public/texts/f92fccc1-e237-4d4f-ae2e-356c4ca9b149.html",
-    "image": "https://baroeg.nl/wp-content/uploads/2022/11/media_onslaught_02-1-768x454.jpeg",
-    "soldOut": false
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2023-03-18T18:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://baroeg.nl/productie/a-tribute-to-pim-voormeulen-graceless-bloodphemy/",
-    "title": "A Tribute To Pim Voormeulen: Graceless + Sepiroth + Bloodphemy + Defazer",
-    "location": "baroeg",
-    "price": 14,
-    "shortText": "<p>Een tribute concert ter ere van metalhead in hart en nieren: Pim Voormeulen. De opbrengst van de avond gaat naar Stichting Neurofibromatose.</p>",
-    "longText": "../public/texts/b79b38b1-3740-45a3-8127-ff3af2db847b.html",
-    "image": "https://baroeg.nl/wp-content/uploads/2023/02/Pim-Voormeulen-0-e1676888581410-768x234.jpg",
-    "soldOut": false
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2023-03-12T14:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://baroeg.nl/productie/wavefest-presents-big-country/",
-    "title": "UITVERKOCHT: Wavefest presents Big Country + Stokes’ Law",
-    "location": "baroeg",
-    "price": null,
-    "shortText": "<p>Wavefest presents! </p>",
-    "longText": "../public/texts/70cef9a9-5e79-4598-871c-0ab3b6e098e5.html",
-    "image": "https://baroeg.nl/wp-content/uploads/2020/12/Big-Country-2015-colour-credit-Paul-Green-scaled-e1608633274815-768x196.jpg",
-    "soldOut": false
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2023-03-10T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://baroeg.nl/productie/metal-battle-voorronde-zuid-holland-2/",
-    "title": "Metal Battle voorronde Zuid-Holland: Feral Grounds + Old Man’s Riot + Pigs + Ylisia",
-    "location": "baroeg",
-    "price": 5,
-    "shortText": "<p>Vandaag strijden 4 bands voor 1 plaats in de Veldslag West die op vrijdag 14 april ook plaatsvindt in Baroeg.</p>",
-    "longText": "../public/texts/1892476e-7bc0-4b0d-adb6-d95c00eba463.html",
-    "image": "https://baroeg.nl/wp-content/uploads/2023/02/Metal-Battle-logo-_-omslagfoto-768x379.jpeg",
-    "soldOut": false
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2023-03-04T14:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://baroeg.nl/productie/in-the-grip-of-winter-wiegedood-consolation-knife-deadspeak/",
-    "title": "In The Grip Of Winter: Wiegedood + Consolation + Knife + Onheil + Grindpad +  Deadspeak",
-    "location": "baroeg",
-    "price": 21,
-    "shortText": "<p>Dagvullend programma met de beste underground metalbands zonder nadruk op één specifiek subgenre.</p>",
-    "longText": "../public/texts/b0a18b55-3d0d-4962-8f36-d703908910f4.html",
-    "image": "https://baroeg.nl/wp-content/uploads/2022/11/wd2-1-768x512.jpg",
     "soldOut": false
   }
 ]
