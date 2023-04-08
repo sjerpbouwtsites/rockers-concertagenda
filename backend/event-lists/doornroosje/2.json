@@ -1,18 +1,5 @@
 [
   {
-    "doorOpenDateTime": "2023-04-01T05:18:30.000Z",
-    "startDateTime": "2023-04-01T05:19:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/alpha-wolf/",
-    "title": "Alpha Wolf + King 810 e.a.+ ten56. + Xile",
-    "location": "doornroosje",
-    "price": 20,
-    "shortText": "Knetterende metalcore die de zaal laat ontploffen",
-    "longText": "../public/texts/40fe2cf8-3de3-4757-a685-de5d966779c2.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2022/11/Alpha-Wolf-1934x1088-350x197-c-default.jpg",
-    "soldOut": false
-  },
-  {
     "doorOpenDateTime": "2023-05-01T01:21:00.000Z",
     "startDateTime": "2023-05-01T01:22:00.000Z",
     "endDateTime": null,
@@ -20,8 +7,8 @@
     "title": "Combichrist+ Priest",
     "location": "doornroosje",
     "price": 21,
-    "shortText": "Merleyn\ncompromisloze industrial metal met volvette electronica en dikke beats",
-    "longText": "../public/texts/49448ca3-89a7-47ba-a3f3-810cff403089.html",
+    "shortText": "Laatste kaarten\nMerleyn\ncompromisloze industrial metal met volvette electronica en dikke beats",
+    "longText": "../public/texts/8fa13638-47b6-4fbc-a6de-a16241bea0c7.html",
     "image": "https://www.doornroosje.nl/app/uploads/2023/01/Combichrist-1934x1088-350x197-c-default.jpg",
     "soldOut": false
   },
@@ -34,7 +21,7 @@
     "location": "doornroosje",
     "price": 10,
     "shortText": "De Onderbroek\nUnieke DIY sound van post-punk, NWOBHM met dungeon synth",
-    "longText": "../public/texts/5d9e25d9-cad0-4776-a90c-ba03e210680a.html",
+    "longText": "../public/texts/462ad1e6-7a35-4f51-8c1b-bfc92f805028.html",
     "image": "https://www.doornroosje.nl/app/uploads/2023/01/Poison-Ruin-1934x1088-350x197-c-default.jpg",
     "soldOut": false
   },
@@ -45,23 +32,36 @@
     "venueEventUrl": "https://www.doornroosje.nl/event/touche-amore/",
     "title": "Touché Amoré+ Wrong Man + Chalk Hands",
     "location": "doornroosje",
-    "price": 20,
-    "shortText": "Laatste kaarten\nMerleyn\nEmotioneel geladen Amerikaanse posthardcore",
-    "longText": "../public/texts/54ff95ad-6ff9-4104-951d-b23fae3c1129.html",
+    "price": 21,
+    "shortText": "Emotioneel geladen Amerikaanse posthardcore",
+    "longText": "../public/texts/4c55ee15-a242-4aaa-8d1d-22a12c9e8bee.html",
     "image": "https://www.doornroosje.nl/app/uploads/2023/03/Touche-Amore-1934x1088-350x197-c-default.jpg",
     "soldOut": false
   },
   {
-    "doorOpenDateTime": "2023-07-01T05:19:00.000Z",
-    "startDateTime": "2023-07-01T05:19:30.000Z",
+    "doorOpenDateTime": "2023-06-22T17:30:00.000Z",
+    "startDateTime": "2023-06-22T18:15:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.doornroosje.nl/event/tribulation-2/",
-    "title": "Tribulation+ Laster",
+    "venueEventUrl": "https://www.doornroosje.nl/event/la-pegatina-maurino/",
+    "title": "La Pegatina + Maurino",
     "location": "doornroosje",
-    "price": 23,
-    "shortText": "Dynamische duistere metal met de nodige spannende black en death metal invloeden",
-    "longText": "../public/texts/83b4436e-f924-48cd-9f0a-2a0c75c20309.html",
-    "image": "https://www.doornroosje.nl/app/uploads/2023/01/Tribulation-1934x1088-350x197-c-default.jpg",
+    "price": 24,
+    "shortText": "Net bevestigdOpzwepende mix van ska, polka, punk, rumba met een flinke dosis speelplezier en energie.",
+    "longText": "../public/texts/237ac5ac-fd1b-4c08-8d71-fdc277a68214.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2023/04/LaPegatina-PWalter23-1934x1088-350x197-c-default.jpg",
+    "soldOut": false
+  },
+  {
+    "doorOpenDateTime": "2023-11-18T19:00:00.000Z",
+    "startDateTime": "2023-11-18T19:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.doornroosje.nl/event/smash-into-pieces/",
+    "title": "Smash Into Pieces",
+    "location": "doornroosje",
+    "price": 22,
+    "shortText": "Alternatieve Zweedse rock & metal hitmachine",
+    "longText": "../public/texts/7c25163d-5c1e-490d-8242-4a6fc5ed5a97.html",
+    "image": "https://www.doornroosje.nl/app/uploads/2023/02/Smash-Into-Pieces-1934x1088-350x197-c-default.jpg",
     "soldOut": false
   }
 ]

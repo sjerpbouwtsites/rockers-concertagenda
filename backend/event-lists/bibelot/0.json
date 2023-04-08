@@ -1,18 +1,6 @@
 [
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2023-04-07T19:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://bibelot.net/agenda/feuerengel-de-2023/",
-    "title": "FEUERENGEL (DE)",
-    "location": "bibelot",
-    "shortText": "A tribute to Rammstein!",
-    "longText": "../public/texts/64972573-2059-4c16-8cd3-671a9b5a636b.html",
-    "image": "https://bibelot.net/wp-content/uploads/2022/07/FEUERENGEL-WEB-1400x742.png",
-    "soldOut": true
-  },
-  {
-    "doorOpenDateTime": null,
     "startDateTime": "2023-04-22T19:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://bibelot.net/agenda/pene-corrida-4/",
@@ -20,7 +8,7 @@
     "location": "bibelot",
     "price": 19,
     "shortText": "Beleef een avond vol hits en guilty pleasures van vroeger en nu, tijdens de Loco Mexicano Tour!",
-    "longText": "../public/texts/ca5be4dd-7bbf-49d9-93c3-902097db3644.html",
+    "longText": "../public/texts/c098aba3-4165-4fbd-b83b-2624e4521e83.html",
     "image": "https://bibelot.net/wp-content/uploads/2022/12/PERSFOTO-1400x1000.jpg",
     "soldOut": false
   },
@@ -33,8 +21,21 @@
     "location": "bibelot",
     "price": 16,
     "shortText": "Beleef een unieke avond samen met ska-legende Mark Foggo!",
-    "longText": "../public/texts/f0c5e8b4-4656-42f5-bf68-4cb43cb2d806.html",
+    "longText": "../public/texts/404136db-56d3-4c9d-b180-0c0d4ca66553.html",
     "image": "https://bibelot.net/wp-content/uploads/2023/01/pressmarkfoggo19.jpg",
+    "soldOut": false
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-05-20T20:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://bibelot.net/agenda/its-not-a-phase-mom/",
+    "title": "It’s Not a Phase, Mom!",
+    "location": "bibelot",
+    "price": 14.5,
+    "shortText": "Een nacht vol emo, rock, metal & hiphop 🖤",
+    "longText": "../public/texts/92e36b41-a981-4ba0-99cd-13e6438933b3.html",
+    "image": "https://bibelot.net/wp-content/uploads/2023/03/webafbeelding_Tekengebied-1-1400x788.jpg",
     "soldOut": false
   },
   {
@@ -42,12 +43,25 @@
     "startDateTime": "2023-05-25T18:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://bibelot.net/agenda/distant-extortionist-dagger-threat-abbie-falls/",
-    "title": "DISTANT + EXTORTIONIST + DAGGER THREAT + ABBIE FALLS",
+    "title": "DISTANT + EXTORTIONIST (US) + DAGGER THREAT (DE) + ABBIE FALLS (CZ)",
     "location": "bibelot",
     "price": 18,
-    "shortText": "Een avond vol gruwelijke metal 🔥",
-    "longText": "../public/texts/bd95b536-726c-452e-8e96-d988cf08af30.html",
+    "shortText": "Een avond vol deathcore en hardcore-metal 🔥",
+    "longText": "../public/texts/cfb93444-3389-4559-a65a-ffefdd7debb0.html",
     "image": "https://bibelot.net/wp-content/uploads/2023/01/Distant-FB-Headers-1400x788.jpg",
+    "soldOut": false
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-06-09T19:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://bibelot.net/agenda/live-rock-karaoke-band-summer-edition/",
+    "title": "Live Rock Karaoke Band – Summer Edition",
+    "location": "bibelot",
+    "price": 14.5,
+    "shortText": "Let’s get ready to rock! 🎙",
+    "longText": "../public/texts/f286bc7c-61ab-42d3-892d-6c76dfcd488b.html",
+    "image": null,
     "soldOut": false
   },
   {
@@ -59,7 +73,7 @@
     "location": "bibelot",
     "price": 14.5,
     "shortText": "ONHEIL is back! Sterker dan ooit 🤘🏻",
-    "longText": "../public/texts/e99df589-2924-48f6-ba23-a1bd291de9e1.html",
+    "longText": "../public/texts/9fa26a8f-cebf-48fc-9226-905a06f292b1.html",
     "image": "https://bibelot.net/wp-content/uploads/2023/03/ONHEIL-BAND-PHOTO-2022-2-1400x933.jpg",
     "soldOut": false
   },
@@ -72,7 +86,7 @@
     "location": "bibelot",
     "price": 11,
     "shortText": "Dordrecht Metal Fest is back!",
-    "longText": "../public/texts/a97276f1-596c-47e4-9990-bc6eb6be1341.html",
+    "longText": "../public/texts/5635cbe8-6c24-48a6-b7ed-c189f7fac777.html",
     "image": "https://bibelot.net/wp-content/uploads/2023/03/dmf-banner-1400x788.png",
     "soldOut": false
   },
@@ -85,7 +99,7 @@
     "location": "bibelot",
     "price": 16,
     "shortText": "Een ode aan de legendarische grunge band, Nirvana!",
-    "longText": "../public/texts/36a84d33-ede4-4e87-b068-60b252eb30d5.html",
+    "longText": "../public/texts/4bb11e71-071b-41af-96e1-a9faa37ba42b.html",
     "image": "https://bibelot.net/wp-content/uploads/2023/02/BLEACH-bandpic-2019-1400x781.jpg",
     "soldOut": false
   },
@@ -98,7 +112,7 @@
     "location": "bibelot",
     "price": 18.5,
     "shortText": "MAGNETICA (BE) brengt Metallica naar onze Power Stage 🤘🏻",
-    "longText": "../public/texts/966f80ad-1e82-4e5d-aeda-53e1e2a2095e.html",
+    "longText": "../public/texts/1eb94aba-22a9-4514-a30f-c11b9dd44c4b.html",
     "image": "https://bibelot.net/wp-content/uploads/2023/03/web-1400x788.png",
     "soldOut": false
   }

@@ -30,6 +30,7 @@ export const workerConfig = {
   bibelot: { workerCount: 1 },
   dbs: { workerCount: 4, workerConcurrent: 1 },
   gebrdenobel: { workerCount: 1 },
+  groeneengel: { workerCount: 1 },
   neushoorn: { workerCount: 1 },
   iduna: { workerCount: 1 },
   depul: { workerCount: 2 },

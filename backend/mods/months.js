@@ -60,6 +60,7 @@ const podiumGebruikt = {
   cpunt: voluitNederlands,
   effenaar: kortNederlands,
   gebrdenobel: voluitNederlands,
+  groeneengel: voluitNederlands,
   iduna: voluitNederlands,
   kavka: kortNederlands,
   metalfan: kortNederlands,

@@ -1,4 +1,176 @@
 
+  baroeg-5 Error - 2:59:14 PM
+  TimeoutError: Navigation timeout of 15000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 15000 ms exceeded
+  
+  
+  deflux-0 Error - 2:58:59 PM
+  TimeoutError: Timed out after 30000 ms while trying to connect to the browser! Only Chrome at revision r970485 is guaranteed to work.
+    at Timeout.onTimeout (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/node/BrowserRunner.js:248:20)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timed out after 30000 ms while trying to connect to the browser! Only Chrome at revision r970485 is guaranteed to work.
+  
+  
+  dbs-1 Error - 2:58:24 PM
+  TimeoutError: Timed out after 30000 ms while trying to connect to the browser! Only Chrome at revision r970485 is guaranteed to work.
+    at Timeout.onTimeout (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/node/BrowserRunner.js:248:20)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timed out after 30000 ms while trying to connect to the browser! Only Chrome at revision r970485 is guaranteed to work.
+  
+  
+  patronaat-1 Error - 2:47:20 PM
+  TimeoutError: Navigation timeout of 15000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 15000 ms exceeded
+  
+  
+  undefined Error - 2:47:11 PM
+  Error: makeBaseEvent overtijd. Max: 15001
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:91:9)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  makeBaseEvent overtijd. Max: 15001
+  
+  
+  baroeg-7 Error - 2:47:06 PM
+  TimeoutError: Navigation timeout of 15000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 15000 ms exceeded
+  
+  
+  groeneengel-0 Error - 2:33:52 PM
+  undefined 
+  undefined
+  
+  
+  groeneengel-0 Error - 2:33:52 PM
+  undefined 
+  undefined
+  
+  
+  groeneengel-0 Error - 2:33:04 PM
+  undefined 
+  undefined
+  
+  
+  groeneengel-0 Error - 2:33:03 PM
+  undefined 
+  undefined
+  
+  
+  groeneengel-0 Error - 2:31:19 PM
+  undefined 
+  undefined
+  
+  
+  groeneengel-0 Error - 2:31:18 PM
+  undefined 
+  undefined
+  
+  
+  groeneengel-0 Error - 2:30:34 PM
+  undefined 
+  undefined
+  
+  
+  groeneengel-0 Error - 2:30:33 PM
+  undefined 
+  undefined
+  
+  
+  groeneengel-0 Error - 2:29:35 PM
+  undefined 
+  undefined
+  
+  
+  groeneengel-0 Error - 2:29:35 PM
+  undefined 
+  undefined
+  
+  
+  groeneengel-0 Error - 2:29:05 PM
+  undefined 
+  undefined
+  
+  
+  groeneengel-0 Error - 2:29:04 PM
+  undefined 
+  undefined
+  
+  
+  groeneengel-0 Error - 2:27:30 PM
+  undefined 
+  undefined
+  
+  
+  groeneengel-0 Error - 2:27:30 PM
+  undefined 
+  undefined
+  
+  
+  groeneengel-0 Error - 2:25:22 PM
+  undefined 
+  undefined
+  
+  
+  groeneengel-0 Error - 2:25:22 PM
+  undefined 
+  undefined
+  
+  
+  groeneengel-0 Error - 2:25:03 PM
+  undefined 
+  undefined
+  
+  
+  groeneengel-0 Error - 2:25:03 PM
+  undefined 
+  undefined
+  
+  
+  groeneengel-0 Error - 2:24:08 PM
+  undefined 
+  undefined
+  
+  
+  groeneengel-0 Error - 2:24:07 PM
+  undefined 
+  undefined
+  
+  
+  groeneengel-0 Error - 2:23:21 PM
+  undefined 
+  undefined
+  
+  
+  groeneengel-0 Error - 2:23:20 PM
+  undefined 
+  undefined
+  
+  
+  groeneengel-0 Error - 2:20:05 PM
+  undefined 
+  undefined
+  
+  
+  groeneengel-0 Error - 2:20:05 PM
+  undefined 
+  undefined
+  
+  
+  events-list-0 Error - 1:15:23 PM
+  SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at Function.save (file:///home/sjerp/dev/apache/concertagenda/backend/mods/events-list.js:44:40)
+    at AbstractScraper.saveEvents (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:631:16)
+    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:70:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Unexpected end of JSON input
+  
+  
   undefined Error - 11:01:30 PM
   Error: makeBaseEvent overtijd. Max: 15000
     at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:81:9)
