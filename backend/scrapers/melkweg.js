@@ -65,8 +65,6 @@ melkwegScraper.makeBaseEventList = async function () {
       });
   }, {workerData});
 
-  this.dirtyLog(rawEvents)
-
   return await this.makeBaseEventListEnd({
     stopFunctie, page, rawEvents}
   );

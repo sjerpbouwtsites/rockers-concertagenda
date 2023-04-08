@@ -1,53 +1,14 @@
 [
   {
-    "doorOpenDateTime": "2022-03-31T18:00:00.000Z",
-    "startDateTime": "2022-03-31T18:45:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://neushoorn.nl/production/hardcore-vrijdag-14/",
-    "title": "Hardcore Vrijdag",
-    "location": "neushoorn",
-    "price": 5,
-    "shortText": null,
-    "longText": "../public/texts/85496ba9-2fb9-46b7-83e8-d4975de914a7.html",
-    "image": "https://neushoorn.nl/wp-content/uploads/2023/01/DETAIL-hardcore-vrijdag-b468-720x405.jpg",
-    "soldOut": false
-  },
-  {
-    "doorOpenDateTime": "2022-03-31T18:00:00.000Z",
-    "startDateTime": "2022-03-31T19:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://neushoorn.nl/production/nh-cafe-combo-qazam-x-ultimate-crumpets/",
-    "title": "NH Café: Combo Qazam x Ultimate Crumpets",
-    "location": "neushoorn",
-    "price": 5,
-    "shortText": null,
-    "longText": "../public/texts/6cdf4aa0-e76e-416a-bcf4-6c650f8a5d2a.html",
-    "image": "https://neushoorn.nl/wp-content/uploads/2023/02/detail-cq-ace5-720x405.jpg",
-    "soldOut": false
-  },
-  {
-    "doorOpenDateTime": "2022-04-06T17:30:00.000Z",
-    "startDateTime": "2022-04-06T18:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://neushoorn.nl/production/ensiferum/",
-    "title": "Ensiferum",
-    "location": "neushoorn",
-    "price": 25,
-    "shortText": null,
-    "longText": "../public/texts/11969f2b-9304-428c-b84a-446362418efe.html",
-    "image": "https://neushoorn.nl/wp-content/uploads/2022/12/ensiferum_detail-491f-720x328.png",
-    "soldOut": false
-  },
-  {
     "doorOpenDateTime": "2022-04-14T18:00:00.000Z",
     "startDateTime": "2022-04-14T19:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://neushoorn.nl/production/nh-cafe-disillusion-de/",
-    "title": "NH Café: Disillusion (DE)",
+    "title": "NH Café: Disillusion (DE) x Hoarhound",
     "location": "neushoorn",
     "price": 10,
     "shortText": null,
-    "longText": "../public/texts/53f52654-acc9-4fbf-bf74-0d45650c28a9.html",
+    "longText": "../public/texts/04d61069-a08c-4a27-9a9e-093ff995afe0.html",
     "image": "https://neushoorn.nl/wp-content/uploads/2023/01/disillusion_detail-05cb-691x460.png",
     "soldOut": false
   },
@@ -60,7 +21,7 @@
     "location": "neushoorn",
     "price": 25,
     "shortText": null,
-    "longText": "../public/texts/d8ddbff0-956b-4dda-8cf2-a88724d6d06c.html",
+    "longText": "../public/texts/703c0023-966e-4b9f-abb0-670cf4322abd.html",
     "image": "https://neushoorn.nl/wp-content/uploads/2022/12/rubenblock_detail-720x372.png",
     "soldOut": false
   },
@@ -73,8 +34,21 @@
     "location": "neushoorn",
     "price": 23,
     "shortText": null,
-    "longText": "../public/texts/4e2c0de0-af66-443d-9967-c51f20f100e3.html",
+    "longText": "../public/texts/068ff327-e5c9-4e80-95d7-9e85849a7c7a.html",
     "image": "https://neushoorn.nl/wp-content/uploads/2023/01/CharlotteWessels_detail-4784-691x460.png",
+    "soldOut": false
+  },
+  {
+    "doorOpenDateTime": "2022-05-19T18:00:00.000Z",
+    "startDateTime": "2022-05-19T18:45:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://neushoorn.nl/production/rory-gallagher-tribute-a-project-of-the-innes-sibun-trio/",
+    "title": "Rory Gallagher tribute – a project of the Innes Sibun trio",
+    "location": "neushoorn",
+    "price": 18,
+    "shortText": null,
+    "longText": "../public/texts/ca763bfc-96d9-4e65-ab3b-200bfdfd19eb.html",
+    "image": "https://neushoorn.nl/wp-content/uploads/2022/12/raurygallagher_detail-939e-692x460.png",
     "soldOut": false
   },
   {
@@ -86,7 +60,7 @@
     "location": "neushoorn",
     "price": 5,
     "shortText": null,
-    "longText": "../public/texts/66aeb868-4c4b-4d79-874e-67d5746034bb.html",
+    "longText": "../public/texts/63172cb5-94bf-48b4-b0a2-7a3d376b8452.html",
     "image": "https://neushoorn.nl/wp-content/uploads/2023/03/detail-4337-691x460.jpg",
     "soldOut": false
   },
@@ -98,7 +72,7 @@
     "title": "The Rock Circus Talent Tour – Friesland",
     "location": "neushoorn",
     "shortText": null,
-    "longText": "../public/texts/d33910ab-258a-49b2-b44b-460a3fcc902c.html",
+    "longText": "../public/texts/8e8ef38a-3f4c-4447-9754-50290c221544.html",
     "image": "https://neushoorn.nl/wp-content/uploads/2023/03/detail-2-2bb8-691x460.jpg",
     "soldOut": false
   },
@@ -111,8 +85,21 @@
     "location": "neushoorn",
     "price": 20,
     "shortText": null,
-    "longText": "../public/texts/dd8568e7-00fc-4248-a6fa-a39766e85f60.html",
+    "longText": "../public/texts/bfda878e-05ec-45c8-a6cf-f8a81d398ded.html",
     "image": "https://neushoorn.nl/wp-content/uploads/2022/12/chriscornell_detail-9dff-691x460.png",
+    "soldOut": false
+  },
+  {
+    "doorOpenDateTime": "2022-06-16T18:00:00.000Z",
+    "startDateTime": "2022-06-16T19:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://neushoorn.nl/production/nh-cafe-abdomen-x-paracetamol/",
+    "title": "NH Café: Abdomen x Paracetamøl",
+    "location": "neushoorn",
+    "price": 5,
+    "shortText": null,
+    "longText": "../public/texts/e2216103-f0f6-4a93-958a-bec4f0860253.html",
+    "image": "https://neushoorn.nl/wp-content/uploads/2023/03/Abdomen_detail-733a-720x345.jpg",
     "soldOut": false
   },
   {
@@ -124,7 +111,7 @@
     "location": "neushoorn",
     "price": 13,
     "shortText": null,
-    "longText": "../public/texts/e61b7738-e19d-462c-8ca0-3a478253cebe.html",
+    "longText": "../public/texts/382d29d5-a203-4cd8-93d8-539b5ceceaa2.html",
     "image": "https://neushoorn.nl/wp-content/uploads/2023/03/101431340_2943254452410007_6867402550228811776_n-f399-586x460.jpg",
     "soldOut": false
   },
@@ -137,8 +124,21 @@
     "location": "neushoorn",
     "price": 15,
     "shortText": null,
-    "longText": "../public/texts/21e730fb-6d0d-4490-8099-96e7751bde59.html",
+    "longText": "../public/texts/c3290b27-591d-4fb8-9082-ce5e00dd1571.html",
     "image": "https://neushoorn.nl/wp-content/uploads/2023/03/detail-3-a1ce-691x460.jpg",
+    "soldOut": false
+  },
+  {
+    "doorOpenDateTime": "2022-03-16T19:00:00.000Z",
+    "startDateTime": "2022-03-16T20:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://neushoorn.nl/production/regressive-hypnosis-a-tribute-to-dream-theater/",
+    "title": "Regressive Hypnosis: A tribute to Dream Theater",
+    "location": "neushoorn",
+    "price": 15,
+    "shortText": null,
+    "longText": "../public/texts/2fe860a9-f790-4d55-9279-0a1d4b641fc1.html",
+    "image": "https://neushoorn.nl/wp-content/uploads/2023/01/regressivehypnosis_detail-4966-692x460.png",
     "soldOut": false
   }
 ]
