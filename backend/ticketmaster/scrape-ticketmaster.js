@@ -1,16 +1,10 @@
 import fs from 'fs';
 
-
 const apiKey = getTicketMasterApiKey();
 
 recursiveTickermasterFetch().then(() => {
   console.log('hoera')
 })
-
-
-
-
-
 
 function recursiveTickermasterFetch(page = 0, fileSystemPromises = []) {
   return fetch(`https://app.ticketmaster.com/discovery/v2/events.json?countryCode=NL&apikey=${apiKey}&size=199&page=${page}`).then(result => {
@@ -21,6 +15,8 @@ function recursiveTickermasterFetch(page = 0, fileSystemPromises = []) {
       return waitFor(50).then(() => {
         return recursiveTickermasterFetch(page + 1, fileSystemPromises)
       })
+    } else {
+      console.log('voorbij page 5')
     }
     return Promise.all(fileSystemPromises);
   }).catch(fail => {
