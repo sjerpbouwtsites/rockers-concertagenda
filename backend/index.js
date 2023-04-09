@@ -9,6 +9,8 @@ import initMonitorBackend from "./monitor/backend.js";
 import RockWorker from "./mods/rock-worker.js";
 import getWorkerConfig from "./mods/worker-config.js";
 import { WorkerMessage } from "./mods/rock-worker.js";
+import * as dotenv from 'dotenv';
+dotenv.config();
 
 // TODO. eerste worker maakt temp json bestand van eerste scrape mainpage.
 // TODO. fouten leggen niet langer worker stil.
@@ -48,6 +50,8 @@ async function startWorker(workerConfig) {
   }
 
   const thisConfig = workerConfig.get();
+
+  thisConfig.masterEnv = {...process.env}
 
   const workingThisFamily = WorkerStatus.workersWorkingOfFamily(
     thisConfig.family

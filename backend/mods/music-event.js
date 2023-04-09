@@ -12,12 +12,12 @@ export default class MusicEvent {
   longText = null;
   image = null;
   soldOut = null;
-  constructor(init) {
-    this.merge(init);
+  constructor(init, enforceMusicEventType = true) {
+    this.merge(init, enforceMusicEventType);
   }
-  merge(conf) {
+  merge(conf, enforceMusicEventType) {
     for (let confKey in conf) {
-      if (Object.prototype.hasOwnProperty.call(this, confKey)) {
+      if (!enforceMusicEventType || Object.prototype.hasOwnProperty.call(this, confKey)) {
         this[confKey] = conf[confKey];
       }
     }
@@ -29,7 +29,7 @@ export default class MusicEvent {
   get isValid() {
     return (
       this.startDateTime &&
-      /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}.\d{3}Z/.test(this.startDateTime)
+      /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}/.test(this.startDateTime)
     );
   }
   registerIfValid() {
