@@ -40,7 +40,7 @@ gebrdenobelScraper.makeBaseEventList = async function () {
           tags.includes("metal") ||
           tags.includes("punk") ||
           tags.includes("rock")
-        ); //TODO door Isrock controle halen
+        );
       })
       .map((eventEl) => {
         const res = {};
@@ -68,7 +68,7 @@ gebrdenobelScraper.getPageInfo = async function ({ page }) {
   
   const {stopFunctie} =  await this.getPageInfoStart()
 
-  //TODO op de voorpagina is er gewoon nette microData.
+ 
   const pageInfo = await page.evaluate(
     ({ months }) => {
       const res = {

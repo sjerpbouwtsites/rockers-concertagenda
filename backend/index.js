@@ -12,11 +12,6 @@ import { WorkerMessage } from "./mods/rock-worker.js";
 import * as dotenv from 'dotenv';
 dotenv.config();
 
-// TODO. eerste worker maakt temp json bestand van eerste scrape mainpage.
-// TODO. fouten leggen niet langer worker stil.
-
-//killall -s 9 chrome; clear; node index.js
-
 let monitorWebsocketServer = null;
 
 async function init() {

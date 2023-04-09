@@ -153,7 +153,7 @@ cpuntScraper.getPageInfo = async function ({ page }) {
 cpuntScraper.singleEventCheck = async function (event) {
   const firstCheckText = `${event?.title ?? ""} ${event?.shortText ?? ""}`;
   if (
-    firstCheckText.includes("indie") || // TODO naar tool func hiervoor
+    firstCheckText.includes("indie") || 
     firstCheckText.includes("dromerig") ||
     firstCheckText.includes("shoegaze") ||
     firstCheckText.includes("alternatieve rock")

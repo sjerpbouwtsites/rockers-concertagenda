@@ -24,11 +24,11 @@ const ticketmasterScraper = new AbstractScraper(makeScraperConfig({
         useCustomScraper: true,
         url: `https://app.ticketmaster.com/discovery/v2/events.json?countryCode=NL&apikey=${workerData.masterEnv.TICKETMASTER_CONSUMER_KEY}&size=199&page=${workerData.index}`,
         requiredProperties: [],
-        enforceMusicEventType: false, // TODO
+        enforceMusicEventType: false,
       }, 
       singlePage: {
-        useCustomScraper: true, // TODO in pageinfo mogelijk maken geen browser wordt gebruikt. Indien mainpage & singlepage allebei geen puppeteer dan cancel browser.
-        requiredProperties: ['venueEventUrl', 'title'], //TODO inbouwen in abstractscraper
+        useCustomScraper: true,
+        requiredProperties: ['venueEventUrl', 'title'], 
       }
     }
   }
@@ -172,7 +172,7 @@ ticketmasterScraper.getPageInfo = async function ({event}) {
 
 // ON EVENT REGISTER
 
-// TODO
+
 // ticketmasterScraper.afterFamilyDone = async function(){
 
 //   const parsedAgain = JSON.parse(totalJSON);
