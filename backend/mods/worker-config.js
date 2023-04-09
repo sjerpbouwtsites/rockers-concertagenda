@@ -17,7 +17,7 @@ export const AbstractWorkerConfig = {
 
 export const workerConfig = {
   metalfan: {workerCount: 1, CPUReq: "low" },
-  baroeg: {workerCount: 8, workerConcurrent: 3 },
+  baroeg: {workerCount: 4, workerConcurrent: 2 },
   patronaat: { workerCount: 3, workerConcurrent: 3 },
   "013" : {workerCount: 4 },
   effenaar:{ workerCount: 4 },

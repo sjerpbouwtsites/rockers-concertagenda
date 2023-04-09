@@ -1,579 +1,824 @@
 
-  ticketmaster-0 Error - 1:54:09 AM
-  TypeError: Cannot read properties of undefined (reading 'length')
-    at ticketmasterScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:72:18)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:64:29) 
-  Cannot read properties of undefined (reading 'length')
-  
-  
-  ticketmaster-0 Error - 1:54:09 AM
-  TypeError: Cannot read properties of undefined (reading 'events')
-    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:52:41
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async ticketmasterScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:43:19)
-    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:64:29) 
-  Cannot read properties of undefined (reading 'events')
-  
-  
-  ticketmaster-2 Error - 1:52:01 AM
-  Error: Geen locatie gevonden
-    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:138:7)
-    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:425:22) 
-  Geen locatie gevonden
-  
-  
-  ticketmaster-2 Error - 1:52:01 AM
-  Error: Geen locatie gevonden
-    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:138:7)
-    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:425:22) 
-  Geen locatie gevonden
-  
-  
-  ticketmaster-2 Error - 1:52:01 AM
-  Error: Geen locatie gevonden
-    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:138:7)
-    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:425:22) 
-  Geen locatie gevonden
-  
-  
-  ticketmaster-0 Error - 12:23:54 AM
-  TypeError: singleEvent.merge is not a function
-    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:446:17)
-    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:72:5) 
-  singleEvent.merge is not a function
-  
-  
-  ticketmaster-0 Error - 12:21:04 AM
-  TypeError: Cannot read properties of undefined (reading 'find')
-    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:126:6)
-    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:425:22)
-    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:72:5) 
-  Cannot read properties of undefined (reading 'find')
-  
-  
-  ticketmaster-0 Error - 12:20:36 AM
-  TypeError: Cannot read properties of undefined (reading 'find')
-    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:126:6)
-    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:424:22)
-    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:72:5) 
-  Cannot read properties of undefined (reading 'find')
-  
-  
-  ticketmaster-0 Error - 12:20:15 AM
-  TypeError: Cannot read properties of undefined (reading 'find')
-    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:126:6)
-    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:424:22)
-    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:72:5) 
-  Cannot read properties of undefined (reading 'find')
-  
-  
-  ticketmaster-0 Error - 12:16:03 AM
-  TypeError: Cannot read properties of undefined (reading 'find')
-    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:127:6)
-    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:417:22)
-    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:72:5) 
-  Cannot read properties of undefined (reading 'find')
-  
-  
-  ticketmaster-0 Error - 12:14:13 AM
-  TypeError: Cannot read properties of undefined (reading 'find')
-    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:127:6)
-    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:417:22)
-    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:72:5) 
-  Cannot read properties of undefined (reading 'find')
-  
-  
-  ticketmaster-0 Error - 12:13:41 AM
-  TypeError: Cannot read properties of undefined (reading 'find')
-    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:131:6)
-    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:417:22)
-    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:72:5) 
-  Cannot read properties of undefined (reading 'find')
-  
-  
-  ticketmaster-0 Error - 12:12:56 AM
-  TypeError: Cannot read properties of undefined (reading 'find')
-    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:129:6)
-    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:417:22)
-    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:72:5) 
-  Cannot read properties of undefined (reading 'find')
-  
-  
-  ticketmaster-0 Error - 12:12:34 AM
-  TypeError: Cannot read properties of undefined (reading 'index')
-    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:117:110)
-    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:417:22)
-    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:72:5) 
-  Cannot read properties of undefined (reading 'index')
-  
-  
-  ticketmaster-0 Error - 11:58:25 PM
-  ProtocolError: Protocol error (Page.navigate): Invalid parameters Failed to deserialize params.url - BINDINGS: string value expected at position 11
-    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Connection.js:230:24
-    at new Promise (<anonymous>)
-    at CDPSession.send (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Connection.js:226:16)
-    at navigate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:149:47)
-    at FrameManager.navigateFrame (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:132:13)
-    at Frame.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:512:41)
-    at Page.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1167:53)
-    at AbstractScraper.createSinglePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:617:18)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:395:29) 
-  Protocol error (Page.navigate): Invalid parameters Failed to deserialize params.url - BINDINGS: string value expected at position 11
-  
-  
-  ticketmaster-0 Error - 11:58:25 PM
-  ProtocolError: Protocol error (Page.navigate): Invalid parameters Failed to deserialize params.url - BINDINGS: string value expected at position 11
-    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Connection.js:230:24
-    at new Promise (<anonymous>)
-    at CDPSession.send (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Connection.js:226:16)
-    at navigate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:149:47)
-    at FrameManager.navigateFrame (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:132:13)
-    at Frame.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:512:41)
-    at Page.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1167:53)
-    at AbstractScraper.createSinglePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:617:18)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:395:29) 
-  Protocol error (Page.navigate): Invalid parameters Failed to deserialize params.url - BINDINGS: string value expected at position 11
-  
-  
-  ticketmaster-0 Error - 11:58:25 PM
-  ProtocolError: Protocol error (Page.navigate): Invalid parameters Failed to deserialize params.url - BINDINGS: string value expected at position 11
-    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Connection.js:230:24
-    at new Promise (<anonymous>)
-    at CDPSession.send (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Connection.js:226:16)
-    at navigate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:149:47)
-    at FrameManager.navigateFrame (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:132:13)
-    at Frame.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:512:41)
-    at Page.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1167:53)
-    at AbstractScraper.createSinglePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:617:18)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:395:29) 
-  Protocol error (Page.navigate): Invalid parameters Failed to deserialize params.url - BINDINGS: string value expected at position 11
-  
-  
-  ticketmaster-0 Error - 11:58:25 PM
-  ProtocolError: Protocol error (Page.navigate): Invalid parameters Failed to deserialize params.url - BINDINGS: string value expected at position 11
-    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Connection.js:230:24
-    at new Promise (<anonymous>)
-    at CDPSession.send (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Connection.js:226:16)
-    at navigate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:149:47)
-    at FrameManager.navigateFrame (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:132:13)
-    at Frame.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:512:41)
-    at Page.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1167:53)
-    at AbstractScraper.createSinglePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:617:18)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:395:29) 
-  Protocol error (Page.navigate): Invalid parameters Failed to deserialize params.url - BINDINGS: string value expected at position 11
-  
-  
-  ticketmaster-0 Error - 11:58:25 PM
-  ProtocolError: Protocol error (Page.navigate): Invalid parameters Failed to deserialize params.url - BINDINGS: string value expected at position 11
-    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Connection.js:230:24
-    at new Promise (<anonymous>)
-    at CDPSession.send (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Connection.js:226:16)
-    at navigate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:149:47)
-    at FrameManager.navigateFrame (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:132:13)
-    at Frame.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:512:41)
-    at Page.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1167:53)
-    at AbstractScraper.createSinglePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:617:18)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:395:29) 
-  Protocol error (Page.navigate): Invalid parameters Failed to deserialize params.url - BINDINGS: string value expected at position 11
-  
-  
-  ticketmaster-0 Error - 11:58:25 PM
-  ProtocolError: Protocol error (Page.navigate): Invalid parameters Failed to deserialize params.url - BINDINGS: string value expected at position 11
-    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Connection.js:230:24
-    at new Promise (<anonymous>)
-    at CDPSession.send (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Connection.js:226:16)
-    at navigate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:149:47)
-    at FrameManager.navigateFrame (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:132:13)
-    at Frame.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:512:41)
-    at Page.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1167:53)
-    at AbstractScraper.createSinglePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:617:18)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:395:29) 
-  Protocol error (Page.navigate): Invalid parameters Failed to deserialize params.url - BINDINGS: string value expected at position 11
-  
-  
-  ticketmaster-0 Error - 11:58:25 PM
-  ProtocolError: Protocol error (Page.navigate): Invalid parameters Failed to deserialize params.url - BINDINGS: string value expected at position 11
-    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Connection.js:230:24
-    at new Promise (<anonymous>)
-    at CDPSession.send (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Connection.js:226:16)
-    at navigate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:149:47)
-    at FrameManager.navigateFrame (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:132:13)
-    at Frame.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:512:41)
-    at Page.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1167:53)
-    at AbstractScraper.createSinglePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:617:18)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:395:29) 
-  Protocol error (Page.navigate): Invalid parameters Failed to deserialize params.url - BINDINGS: string value expected at position 11
-  
-  
-  ticketmaster-0 Error - 11:58:25 PM
-  ProtocolError: Protocol error (Page.navigate): Invalid parameters Failed to deserialize params.url - BINDINGS: string value expected at position 11
-    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Connection.js:230:24
-    at new Promise (<anonymous>)
-    at CDPSession.send (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Connection.js:226:16)
-    at navigate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:149:47)
-    at FrameManager.navigateFrame (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:132:13)
-    at Frame.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:512:41)
-    at Page.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1167:53)
-    at AbstractScraper.createSinglePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:617:18)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:395:29) 
-  Protocol error (Page.navigate): Invalid parameters Failed to deserialize params.url - BINDINGS: string value expected at position 11
-  
-  
-  ticketmaster-0 Error - 11:58:25 PM
-  ProtocolError: Protocol error (Page.navigate): Invalid parameters Failed to deserialize params.url - BINDINGS: string value expected at position 11
-    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Connection.js:230:24
-    at new Promise (<anonymous>)
-    at CDPSession.send (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Connection.js:226:16)
-    at navigate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:149:47)
-    at FrameManager.navigateFrame (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:132:13)
-    at Frame.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:512:41)
-    at Page.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1167:53)
-    at AbstractScraper.createSinglePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:617:18)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:395:29) 
-  Protocol error (Page.navigate): Invalid parameters Failed to deserialize params.url - BINDINGS: string value expected at position 11
-  
-  
-  ticketmaster-0 Error - 11:58:25 PM
-  ProtocolError: Protocol error (Page.navigate): Invalid parameters Failed to deserialize params.url - BINDINGS: string value expected at position 11
-    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Connection.js:230:24
-    at new Promise (<anonymous>)
-    at CDPSession.send (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Connection.js:226:16)
-    at navigate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:149:47)
-    at FrameManager.navigateFrame (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:132:13)
-    at Frame.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:512:41)
-    at Page.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1167:53)
-    at AbstractScraper.createSinglePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:617:18)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:395:29) 
-  Protocol error (Page.navigate): Invalid parameters Failed to deserialize params.url - BINDINGS: string value expected at position 11
-  
-  
-  ticketmaster-0 Error - 11:58:25 PM
-  ProtocolError: Protocol error (Page.navigate): Invalid parameters Failed to deserialize params.url - BINDINGS: string value expected at position 11
-    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Connection.js:230:24
-    at new Promise (<anonymous>)
-    at CDPSession.send (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Connection.js:226:16)
-    at navigate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:149:47)
-    at FrameManager.navigateFrame (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:132:13)
-    at Frame.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:512:41)
-    at Page.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1167:53)
-    at AbstractScraper.createSinglePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:617:18)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:395:29) 
-  Protocol error (Page.navigate): Invalid parameters Failed to deserialize params.url - BINDINGS: string value expected at position 11
-  
-  
-  ticketmaster-0 Error - 11:58:25 PM
-  ProtocolError: Protocol error (Page.navigate): Invalid parameters Failed to deserialize params.url - BINDINGS: string value expected at position 11
-    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Connection.js:230:24
-    at new Promise (<anonymous>)
-    at CDPSession.send (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Connection.js:226:16)
-    at navigate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:149:47)
-    at FrameManager.navigateFrame (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:132:13)
-    at Frame.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:512:41)
-    at Page.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1167:53)
-    at AbstractScraper.createSinglePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:617:18)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:395:29) 
-  Protocol error (Page.navigate): Invalid parameters Failed to deserialize params.url - BINDINGS: string value expected at position 11
-  
-  
-  ticketmaster-0 Error - 11:58:25 PM
-  ProtocolError: Protocol error (Page.navigate): Invalid parameters Failed to deserialize params.url - BINDINGS: string value expected at position 11
-    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Connection.js:230:24
-    at new Promise (<anonymous>)
-    at CDPSession.send (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Connection.js:226:16)
-    at navigate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:149:47)
-    at FrameManager.navigateFrame (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:132:13)
-    at Frame.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:512:41)
-    at Page.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1167:53)
-    at AbstractScraper.createSinglePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:617:18)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:395:29) 
-  Protocol error (Page.navigate): Invalid parameters Failed to deserialize params.url - BINDINGS: string value expected at position 11
-  
-  
-  ticketmaster-0 Error - 11:58:25 PM
-  ProtocolError: Protocol error (Page.navigate): Invalid parameters Failed to deserialize params.url - BINDINGS: string value expected at position 11
-    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Connection.js:230:24
-    at new Promise (<anonymous>)
-    at CDPSession.send (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Connection.js:226:16)
-    at navigate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:149:47)
-    at FrameManager.navigateFrame (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:132:13)
-    at Frame.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:512:41)
-    at Page.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1167:53)
-    at AbstractScraper.createSinglePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:617:18)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:395:29) 
-  Protocol error (Page.navigate): Invalid parameters Failed to deserialize params.url - BINDINGS: string value expected at position 11
-  
-  
-  ticketmaster-0 Error - 11:58:24 PM
-  ProtocolError: Protocol error (Page.navigate): Invalid parameters Failed to deserialize params.url - BINDINGS: string value expected at position 11
-    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Connection.js:230:24
-    at new Promise (<anonymous>)
-    at CDPSession.send (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Connection.js:226:16)
-    at navigate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:149:47)
-    at FrameManager.navigateFrame (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:132:13)
-    at Frame.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:512:41)
-    at Page.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1167:53)
-    at AbstractScraper.createSinglePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:617:18)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:395:29) 
-  Protocol error (Page.navigate): Invalid parameters Failed to deserialize params.url - BINDINGS: string value expected at position 11
-  
-  
-  ticketmaster-0 Error - 11:58:24 PM
-  ProtocolError: Protocol error (Page.navigate): Invalid parameters Failed to deserialize params.url - BINDINGS: string value expected at position 11
-    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Connection.js:230:24
-    at new Promise (<anonymous>)
-    at CDPSession.send (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Connection.js:226:16)
-    at navigate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:149:47)
-    at FrameManager.navigateFrame (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:132:13)
-    at Frame.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:512:41)
-    at Page.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1167:53)
-    at AbstractScraper.createSinglePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:617:18)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:395:29) 
-  Protocol error (Page.navigate): Invalid parameters Failed to deserialize params.url - BINDINGS: string value expected at position 11
-  
-  
-  undefined Error - 11:58:18 PM
-  Error: makeBaseEvent overtijd. Max: 60000
-    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:93:9)
-    at listOnTimeout (node:internal/timers:564:17)
-    at process.processTimers (node:internal/timers:507:7) 
-  makeBaseEvent overtijd. Max: 60000
-  
-  
-  ticketmaster-0 Error - 11:57:20 PM
-  TypeError: rawEvents.filter is not a function
-    at ticketmasterScraper.filterForMetal (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:175:20)
-    at Array.filter (<anonymous>)
-    at ticketmasterScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:88:37)
-    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:59:29) 
-  rawEvents.filter is not a function
-  
-  
-  undefined Error - 11:56:44 PM
-  Error: makeBaseEvent overtijd. Max: 60000
-    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:93:9)
-    at listOnTimeout (node:internal/timers:564:17)
-    at process.processTimers (node:internal/timers:507:7) 
-  makeBaseEvent overtijd. Max: 60000
-  
-  
-  ticketmaster-0 Error - 11:55:45 PM
-  TypeError: rawEvents.filter is not a function
-    at ticketmasterScraper.filterForMetal (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:175:20)
-    at Array.filter (<anonymous>)
-    at ticketmasterScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:88:37)
-    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:59:29) 
-  rawEvents.filter is not a function
-  
-  
-  undefined Error - 11:54:30 PM
-  Error: makeBaseEvent overtijd. Max: 60000
-    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:93:9)
-    at listOnTimeout (node:internal/timers:564:17)
-    at process.processTimers (node:internal/timers:507:7) 
-  makeBaseEvent overtijd. Max: 60000
-  
-  
-  ticketmaster-0 Error - 11:53:32 PM
-  Error: ENOENT: no such file or directory, open 'undefined/0.json'
-    at Object.openSync (node:fs:590:3)
-    at Object.writeFileSync (node:fs:2184:35)
-    at ticketmasterScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:82:6)
-    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:59:29) 
-  ENOENT: no such file or directory, open 'undefined/0.json'
-  
-  
-  ticketmaster-0 Error - 11:52:52 PM
-  TypeError: Cannot read properties of undefined (reading 'index')
-    at ticketmasterScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:84:58)
-    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:59:29) 
-  Cannot read properties of undefined (reading 'index')
-  
-  
-  ticketmaster-0 Error - 11:47:35 PM
-  ReferenceError: qwm is not defined
-    at ticketmasterScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:47:26)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:59:29) 
-  qwm is not defined
-  
-  
-  ticketmaster-0 Error - 11:27:15 PM
-  TypeError: Cannot read properties of undefined (reading 'TICKETMASTER_CONSUMER_KEY')
-    at ticketmasterScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:47:143)
-    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:59:40)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
-  Cannot read properties of undefined (reading 'TICKETMASTER_CONSUMER_KEY')
-  
-  
-  ticketmaster-0 Error - 11:24:22 PM
-  TypeError: Cannot read properties of undefined (reading 'TICKETMASTER_CONSUMER_KEY')
-    at ticketmasterScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:47:143)
-    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:59:40)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
-  Cannot read properties of undefined (reading 'TICKETMASTER_CONSUMER_KEY')
-  
-  
-  ticketmaster-0 Error - 11:23:11 PM
-  TypeError: Cannot read properties of undefined (reading 'masterEnv')
-    at ticketmasterScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:47:138)
-    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:59:40)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
-  Cannot read properties of undefined (reading 'masterEnv')
-  
-  
-  ticketmaster-0 Error - 11:22:42 PM
-  TypeError: Cannot read properties of undefined (reading 'masterEnv')
-    at ticketmasterScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:47:138)
-    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:59:40)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
-  Cannot read properties of undefined (reading 'masterEnv')
-  
-  
-  ticketmaster-0 Error - 11:17:42 PM
-  TypeError: Cannot read properties of undefined (reading 'TICKETMASTER_CONSUMER_KEY')
-    at ticketmasterScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:47:131)
-    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:57:40)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
-  Cannot read properties of undefined (reading 'TICKETMASTER_CONSUMER_KEY')
-  
-  
-  ticketmaster-0 Error - 11:17:29 PM
-  TypeError: Cannot read properties of undefined (reading 'TICKETMASTER_CONSUMER_KEY')
-    at ticketmasterScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:47:131)
-    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:57:40)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
-  Cannot read properties of undefined (reading 'TICKETMASTER_CONSUMER_KEY')
-  
-  
-  ticketmaster-0 Error - 11:16:44 PM
-  TypeError: Cannot read properties of undefined (reading 'TICKETMASTER_CONSUMER_KEY')
-    at ticketmasterScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:47:131)
-    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:57:40)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
-  Cannot read properties of undefined (reading 'TICKETMASTER_CONSUMER_KEY')
-  
-  
-  ticketmaster-0 Error - 11:15:09 PM
-  TypeError: Cannot read properties of undefined (reading 'TICKETMASTER_CONSUMER_KEY')
-    at ticketmasterScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:47:131)
-    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:57:40)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
-  Cannot read properties of undefined (reading 'TICKETMASTER_CONSUMER_KEY')
-  
-  
-  ticketmaster-0 Error - 11:14:20 PM
-  TypeError: Cannot read properties of undefined (reading 'TICKETMASTER_CONSUMER_KEY')
-    at ticketmasterScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:47:131)
-    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:57:40)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
-  Cannot read properties of undefined (reading 'TICKETMASTER_CONSUMER_KEY')
-  
-  
-  ticketmaster-0 Error - 11:13:37 PM
-  TypeError: Cannot read properties of undefined (reading 'TICKETMASTER_CONSUMER_KEY')
-    at ticketmasterScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:47:131)
-    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:57:40)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
-  Cannot read properties of undefined (reading 'TICKETMASTER_CONSUMER_KEY')
-  
-  
-  ticketmaster-0 Error - 11:13:01 PM
-  TypeError: Converting circular structure to JSON
-    --> starting at object with constructor 'Browser'
-    |     property '_defaultContext' -> object with constructor 'BrowserContext'
-    --- property '_browser' closes the circle
-    at JSON.stringify (<anonymous>)
-    at get json [as json] (file:///home/sjerp/dev/apache/concertagenda/backend/mods/rock-worker.js:205:17)
-    at Function.quick (file:///home/sjerp/dev/apache/concertagenda/backend/mods/rock-worker.js:144:24)
-    at QuickWorkerMessage.toConsole (file:///home/sjerp/dev/apache/concertagenda/backend/mods/rock-worker.js:94:26)
-    at AbstractScraper.dirtyLog (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:41:37)
-    at ticketmasterScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:45:8)
-    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:57:40)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
-  Converting circular structure to JSON
-    --> starting at object with constructor 'Browser'
-    |     property '_defaultContext' -> object with constructor 'BrowserContext'
-    --- property '_browser' closes the circle
-  
-  
-  ticketmaster-0 Error - 11:12:38 PM
-  TypeError: Cannot read properties of undefined (reading 'TICKETMASTER_CONSUMER_KEY')
-    at ticketmasterScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:45:131)
-    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:57:40)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
-  Cannot read properties of undefined (reading 'TICKETMASTER_CONSUMER_KEY')
-  
-  
-  ticketmaster-0 Error - 11:12:22 PM
-  TypeError: Cannot read properties of undefined (reading 'TICKETMASTER_CONSUMER_KEY')
-    at ticketmasterScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:45:131)
-    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:57:40)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
-  Cannot read properties of undefined (reading 'TICKETMASTER_CONSUMER_KEY')
-  
-  
-  neushoorn-0 Error - 9:29:13 PM
-  Error: Evaluation failed: TypeError: Cannot read properties of null (reading '1')
-    at __puppeteer_evaluation_script__:38:44
+  undefined Error - 4:20:51 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:20:51 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:20:51 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:20:51 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:20:51 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:20:51 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:20:51 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:20:51 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:20:51 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:20:51 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:20:51 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:20:51 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:20:51 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:20:51 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:20:50 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:20:50 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:20:50 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:20:50 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:20:50 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:20:50 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:20:50 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:20:50 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:20:50 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:20:50 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:20:50 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:20:50 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:20:50 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:20:50 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:20:50 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:20:50 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:20:50 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:20:50 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:20:50 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:20:50 AM
+  undefined 
+  undefined
+  
+  
+  baroeg-1 Error - 4:20:29 AM
+  Error: Evaluation failed: TypeError: this.dirtyLog is not a function
+    at __puppeteer_evaluation_script__:67:16
+    at Array.map (<anonymous>)
+    at __puppeteer_evaluation_script__:31:8
     at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
     at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
-    at async neushoornScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/neushoorn.js:95:20)
-    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:403:22)
-    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:65:5) 
-  Evaluation failed: TypeError: Cannot read properties of null (reading '1')
-    at __puppeteer_evaluation_script__:38:44
+    at async baroegScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:37:21)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:64:29) 
+  Evaluation failed: TypeError: this.dirtyLog is not a function
+    at __puppeteer_evaluation_script__:67:16
+    at Array.map (<anonymous>)
+    at __puppeteer_evaluation_script__:31:8
   
   
-  effenaar-3 Error - 9:23:26 PM
-  TimeoutError: Navigation timeout of 15000 ms exceeded
-    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111
-    at async FrameManager.navigateFrame (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:131:21)
-    at async Frame.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:512:16)
-    at async Page.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1167:16)
-    at async AbstractScraper.createSinglePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:615:7)
-    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:393:29)
-    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:65:5) 
-  Navigation timeout of 15000 ms exceeded
-  
-  
-  oosterpoort-2 Error - 9:23:19 PM
-  TypeError: fetch failed
-    at Object.processResponse (node:internal/deps/undici/undici:5575:34)
-    at node:internal/deps/undici/undici:5901:42
-    at node:internal/process/task_queues:140:7
-    at AsyncResource.runInAsyncScope (node:async_hooks:202:9)
-    at AsyncResource.runMicrotask (node:internal/process/task_queues:137:8) 
-  fetch failed
-  
-  
-  doornroosje-0 Error - 9:23:18 PM
-  Error: net::ERR_CONNECTION_RESET at https://www.doornroosje.nl/?genre=metal%252Cpunk%252Cpost-hardcore%252Cnoise-rock%252Csludge-rock
-    at navigate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:156:23)
+  baroeg-2 Error - 4:20:28 AM
+  Error: Evaluation failed: TypeError: this.dirtyLog is not a function
+    at __puppeteer_evaluation_script__:67:16
+    at Array.map (<anonymous>)
+    at __puppeteer_evaluation_script__:31:8
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async FrameManager.navigateFrame (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:131:21)
-    at async Frame.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:512:16)
-    at async Page.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1167:16)
-    at async AbstractScraper.makeBaseEventListStart (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:109:5)
-    at async doornroosjeScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:33:31)
-    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:57:29) 
-  net::ERR_CONNECTION_RESET at https://www.doornroosje.nl/?genre=metal%252Cpunk%252Cpost-hardcore%252Cnoise-rock%252Csludge-rock
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async baroegScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:37:21)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:64:29) 
+  Evaluation failed: TypeError: this.dirtyLog is not a function
+    at __puppeteer_evaluation_script__:67:16
+    at Array.map (<anonymous>)
+    at __puppeteer_evaluation_script__:31:8
+  
+  
+  baroeg-0 Error - 4:20:28 AM
+  Error: Evaluation failed: TypeError: this.dirtyLog is not a function
+    at __puppeteer_evaluation_script__:67:16
+    at Array.map (<anonymous>)
+    at __puppeteer_evaluation_script__:31:8
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async baroegScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:37:21)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:64:29) 
+  Evaluation failed: TypeError: this.dirtyLog is not a function
+    at __puppeteer_evaluation_script__:67:16
+    at Array.map (<anonymous>)
+    at __puppeteer_evaluation_script__:31:8
+  
+  
+  undefined Error - 4:18:59 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:18:59 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:18:59 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:18:59 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:18:59 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:18:59 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:18:59 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:18:59 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:18:59 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:18:59 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:18:59 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:18:59 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:18:59 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:18:59 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:18:59 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:18:59 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:18:59 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:18:59 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:18:59 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:18:59 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:18:59 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:18:59 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:18:59 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:18:58 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:18:58 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:18:58 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:18:58 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:18:58 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:18:58 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:18:58 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:18:58 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:18:58 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:18:58 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:18:58 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:17:50 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:17:50 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:17:50 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:17:50 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:17:50 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:17:50 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:17:50 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:17:50 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:17:50 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:17:50 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:17:50 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:17:50 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:17:50 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:17:50 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:17:50 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:17:50 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:17:50 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:17:50 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:17:50 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:17:50 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:17:50 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:17:50 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:17:50 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:17:50 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:17:50 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:17:50 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:17:50 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:17:50 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:17:50 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:17:50 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:17:50 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:17:50 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:17:50 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:17:50 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:15:09 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:15:09 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:15:09 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:15:09 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:15:09 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:15:09 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:15:09 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:15:09 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:15:09 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:15:09 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:15:09 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:15:09 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:15:09 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:15:09 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:15:09 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:15:09 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:15:09 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:15:09 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:15:09 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:15:09 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:15:08 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:15:08 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:15:08 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:15:08 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:15:08 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:15:08 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:15:08 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:15:08 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:15:08 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:15:08 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:15:08 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:15:08 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:15:08 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:15:08 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:13:54 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:13:54 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:13:54 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:13:54 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:13:54 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:13:54 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:13:54 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:13:54 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:13:54 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:13:54 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:13:54 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:13:53 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:13:53 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:13:53 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:13:53 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:13:53 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:13:53 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:13:53 AM
+  undefined 
+  undefined
+  
+  
+  undefined Error - 4:13:53 AM
+  undefined 
+  undefined
   
   
