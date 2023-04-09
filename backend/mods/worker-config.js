@@ -11,7 +11,7 @@ export const AbstractWorkerConfig = {
   name : null,
   family : null,
   workerCount : null,
-  scraper : true ,
+  scraper : true, //TODO word dit gebruikt
 
 }
 
@@ -58,8 +58,13 @@ export const workerConfig = {
     workerCount: 1,
     workerConcurrent: 1,
   },
+  ticketmaster :{
+    workerCount: 5,CPUReq: 'high'
+  },  
 }
 
+
+export const workerNames = Object.keys(workerConfig);
 
 class WorkerListConf {
   data = []

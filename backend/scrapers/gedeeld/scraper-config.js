@@ -2,6 +2,14 @@ export default function makeScraperConfig(obj){
   return new MakeScraperConfig(obj)
 }
 
+/**
+ * TODO
+ *
+ * @export
+ * @param {*} obj 
+ * @param {*} additional added to this
+ * @return 
+ */
 export function MakeScraperConfig(obj){
 
   const basePuppeteerConfig = {
@@ -17,11 +25,13 @@ export function MakeScraperConfig(obj){
       mainPage: { // make base events
         url: null,
         useCustomScraper: false, // geen puppeteer, geen page aangemaakt
-        requiredProperties: [] //waarop base events worden gecontroleerd
+        requiredProperties: [], //waarop base events worden gecontroleerd
+        enforceMusicEventType: true, // geeft MusicEvent opdracht om properties te trimmen
       },
       singlePage: { // get page info
         useCustomScraper: null, // geen puppeteer, geen page aangemaakt
-        requiredProperties: [] //waarop page Info word gecontroleerd
+        requiredProperties: [], //waarop page Info word gecontroleerd
+        enforceMusicEventType: false, // geeft MusicEvent opdracht om properties te trimmen.
       }
     }
   }
@@ -45,9 +55,10 @@ export function MakeScraperConfig(obj){
   this.puppeteerConfig.app.mainPage.url = obj?.puppeteerConfig?.app?.mainPage?.url ?? this.puppeteerConfig.app.mainPage.url
   this.puppeteerConfig.app.mainPage.useCustomScraper = obj?.puppeteerConfig?.app?.mainPage?.useCustomScraper ?? this.puppeteerConfig.app.mainPage.useCustomScraper
   this.puppeteerConfig.app.mainPage.requiredProperties = obj?.puppeteerConfig?.app?.mainPage?.requiredProperties ?? this.puppeteerConfig.app.mainPage.requiredProperties
+  this.puppeteerConfig.app.mainPage.enforceMusicEventType = obj?.puppeteerConfig?.app?.mainPage?.enforceMusicEventType ?? this.puppeteerConfig.app.mainPage.enforceMusicEventType
   
   this.puppeteerConfig.app.singlePage.useCustomScraper = obj?.puppeteerConfig?.app?.singlePage?.useCustomScraper ?? this.puppeteerConfig.app.singlePage.useCustomScraper
-  this.puppeteerConfig.app.singlePage.requiredProperties = obj?.puppeteerConfig?.app?.singlePage?.requiredProperties ?? this.puppeteerConfig.app.singlePage.requiredProperties  
+  this.puppeteerConfig.app.singlePage.requiredProperties = obj?.puppeteerConfig?.app?.singlePage?.enforceMusicEventType ?? this.puppeteerConfig.app.singlePage.enforceMusicEventType  
          
   return this;
   

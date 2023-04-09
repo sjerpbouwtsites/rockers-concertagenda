@@ -29,6 +29,8 @@ export default class AbstractScraper {
     this.months = getVenueMonths(workerData.family)
   }
 
+
+
   /**
    * Wrapper om parentPort.postMessage(qwm.toConsole(xx)) heen.
    *
@@ -52,7 +54,12 @@ export default class AbstractScraper {
   }  
 
   async scrapeInit() {
-    this.browser = await puppeteer.launch();
+
+    if (!this.puppeteerConfig.app.mainPage.useCustomScraper || !this.puppeteerConfig.app.singlePage.useCustomScraper) {
+      this.browser = await puppeteer.launch();
+    } else {
+      this.browser = 'disabled';
+    }
 
     const baseMusicEvents = await this.makeBaseEventList().catch(
       this.handleOuterScrapeCatch
@@ -66,7 +73,9 @@ export default class AbstractScraper {
       this.handleOuterScrapeCatch
     );
     await this.announceToMonitorDone();
-    await this.closeBrowser();
+    if (!this.puppeteerConfig.app.mainPage.useCustomScraper || !this.puppeteerConfig.app.singlePage.useCustomScraper) {
+      await this.closeBrowser();
+    }
     await this.saveEvents();
     // overige catch in om init heen
   }
@@ -104,7 +113,9 @@ export default class AbstractScraper {
     if (!this.puppeteerConfig.app.mainPage.url) {
       throw new Error(`geen app.mainPage.url ingesteld`);
     }
-    
+    if (this.puppeteerConfig.app.mainPage.useCustomScraper) {
+      return {stopFunctie}
+    }
     const page = await this.browser.newPage();
     await page.goto(this.puppeteerConfig.app.mainPage.url, this.puppeteerConfig.mainPage); 
     return {
@@ -150,13 +161,21 @@ export default class AbstractScraper {
       });
     });
 
-    return rawEvents
+    const r = rawEvents
       .map(rawEvent => {
         rawEvent.location = workerData.family;
         return rawEvent
       })
       .filter(this.basicMusicEventsFilter)
-      .map((event) => new MusicEvent(event));
+    ;
+    if (this.puppeteerConfig.app.mainPage.enforceMusicEventType){
+      this.dirtyLog(this.puppeteerConfig)
+      this.dirtyLog({fdfd: 'JAAAA'})
+      return r.map((event) => new MusicEvent(event));
+    } else {
+      return r;
+    }
+      
   }
 
   /**
@@ -386,17 +405,20 @@ export default class AbstractScraper {
     const useableEventsList = eventsList.map((a) => a);
     if (useableEventsList.length === 0) return useableEventsList;
 
-    const singleEvent = useableEventsList.shift();
+    let singleEvent = useableEventsList.shift();
     parentPort.postMessage(this.qwm.todoNew(useableEventsList.length));
 
     // maak pagina
-    const singleEventPage = await this.createSinglePage(
-      singleEvent.venueEventUrl
-    );
-    if (!singleEventPage) {
-      return useableEventsList.length
-        ? this.processSingleMusicEvent(useableEventsList)
-        : useableEventsList;
+    let singleEventPage
+    if (!this.puppeteerConfig.app.singlePage.useCustomScraper) {
+      singleEventPage = await this.createSinglePage(
+        singleEvent.venueEventUrl
+      );
+      if (!singleEventPage) {
+        return useableEventsList.length
+          ? this.processSingleMusicEvent(useableEventsList)
+          : useableEventsList;
+      }
     }
 
     // page info ophalen
@@ -420,13 +442,18 @@ export default class AbstractScraper {
     pageInfo.price = this.getPrice(pageInfo?.priceTextcontent);
     pageInfo.longText = this.writeLongTextHTML(pageInfo?.longTextHTML);
 
+    // als single event nog music event moet worden.
+    if (!(singleEvent instanceof MusicEvent)) {
+      singleEvent = new MusicEvent(singleEvent)
+    } 
+
     // samenvoegen & naar EventsList sturen
     singleEvent.merge(pageInfo);
     singleEvent.isValid
       ? singleEvent.register()
       : singleEvent.registerINVALID(this.workerData);
 
-    !singleEventPage.isClosed() && (await singleEventPage.close());
+    singleEventPage && !singleEventPage.isClosed() && (await singleEventPage.close());
 
     return useableEventsList.length
       ? this.processSingleMusicEvent(useableEventsList)
@@ -611,7 +638,6 @@ export default class AbstractScraper {
   async createSinglePage(url) {
     try {
       const page = await this.browser.newPage();
-      this.dirtyLog(this.puppeteerConfig?.singlePage)
       await page.goto(url, this.puppeteerConfig.singlePage);
       return page;
     } catch (error) {
@@ -621,6 +647,7 @@ export default class AbstractScraper {
         `Mislukken aanmaken <a href='${url}'>single pagina</a> wss duurt te lang`
       );
     }
+    
   }
 
 
