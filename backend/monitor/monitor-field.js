@@ -1,5 +1,4 @@
 export default class MonitorField {
-
   constructor(name, target, type) {
     this.name = name;
     this.target = target;
@@ -214,6 +213,7 @@ export default class MonitorField {
     return ` <ul class='monitorfield__list monitorfield__list--expanded'>${listItems}</ul>`;
   }
   get tableUpdatedHTML() {
+
     const workersPerFamily = {};
 
     Object.entries(this.data.workers).forEach(([workerName, workerData]) => {
@@ -230,15 +230,15 @@ export default class MonitorField {
     });
 
     let workerNumberedHeads = "";
-    for (let i = 0; i < 9; i++) {
+    for (let i = 0; i < 5; i++) {
       workerNumberedHeads += `<th class='tableheadnumber'>${i}</th>`;
     }
 
     const tableHead = `
     <thead>
-    <tr>
+    <!--<tr>-->
     <th>Workers<span class='kutspacer'></span></th>${workerNumberedHeads}
-    </tr>
+    <!--</tr>-->
     </thead>
     `;
 
@@ -246,12 +246,20 @@ export default class MonitorField {
 
     const tableBodyRows = Object.values(workersPerFamily)
       .map((workerFamily, index) => {
+
+        const workerFamilyNamesCharsets = []
+        tableRowsFirstCellsTextcontent[index].split('').forEach((char,index) => {
+          const charsetIndex = Math.floor(index / 6);
+          if (!workerFamilyNamesCharsets[charsetIndex]) {
+            workerFamilyNamesCharsets[charsetIndex] = '';
+          }
+          workerFamilyNamesCharsets[charsetIndex] = workerFamilyNamesCharsets[charsetIndex] + char
+        })
+
         const sortedFamily = workerFamily.sort(this.compareWorkers);
         return `
       <tr>
-        <th>${
-  tableRowsFirstCellsTextcontent[index]
-}<span class='kutspacer'></span></th>
+        <th>${workerFamilyNamesCharsets.join('<br>')}<span class='kutspacer'></span></th>
         ${sortedFamily
     .map((worker) => {
       let tdClass = "worker-data-cell ";

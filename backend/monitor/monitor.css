@@ -126,7 +126,7 @@ body {
   margin-bottom: 5px;
 }
 .monitorfield__outer--app-overview {
-  flex-basis: 750px;
+  flex-basis: 100%;
 }
 
 .monitorfield__outer--app-overview .monitorfield {
@@ -155,23 +155,61 @@ pre {
 }
 
 .app-overview-table thead {
-  line-height: 50px;
+  line-height: 23.5px;
 }
 
 .app-overview-table {
   border-collapse: collapse;
+  margin-top:40px
 }
 
 .app-overview-table tbody th,
 .app-overview-table thead th:first-child {
-  width: 120px;
+  width: 40px;
   text-align: right;
+  line-height: 10px;
+  transform: rotateZ(5deg) rotateY(10deg) rotate(70deg) translate(-80%,-15%);
+  display: block;
+  white-space: nowrap;
+  font-size: .9em;
+  font-weight: 600;
+  letter-spacing: .05em;
+  height: 23.5px;
+  overflow-y: visible;
+}
+.app-overview-table tbody th:hover,
+.app-overview-table thead th:first-child:hover {
+  text-overflow: initial;
+  overflow-x: visible;
+}
+.app-overview-table thead th:first-child {
+
 }
 
 .app-overview-table tbody th::after,
 .app-overview-table thead th:first-child::after {
   content: "    ";
 }
+
+/** flipping the table **/
+.app-overview-table thead,
+.app-overview-table tbody{
+  float:left;
+}
+
+.app-overview-table thead tr{
+  display: block;
+  float: left;
+}
+.app-overview-table tbody tr{
+  float: left;
+}
+.app-overview-table th, 
+.app-overview-table td {
+  display: block;
+}
+
+/** end flipping the table **/
 
 .worker-data-cell {
   line-height: 1;
@@ -206,6 +244,7 @@ pre {
 }
 
 .kutspacer {
-  display: inline-block;
-  width: 25px;
+  display: block;
+  width: 60px;
+  height: 10px;
 }

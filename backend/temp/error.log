@@ -1,0 +1,9 @@
+
+  undefined Error - 3:17:43 AM
+  Error: makeBaseEvent overtijd. Max: 5000
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:100:9)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  makeBaseEvent overtijd. Max: 5000
+  
+  
