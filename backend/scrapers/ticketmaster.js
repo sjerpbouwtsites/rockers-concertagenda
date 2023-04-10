@@ -1,4 +1,4 @@
-import { workerData } from "worker_threads";
+import { parentPort, workerData } from "worker_threads";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 import fs from 'fs';
@@ -49,13 +49,18 @@ ticketmasterScraper.makeBaseEventList = async function() {
 
       fs.writeFile(`${fsDirections.temp + '/ticketmaster/raw'}/${workerData.index}.json`, JSON.stringify(fetchedData), "UTF-8", ()=>{})
 
+      if (fetchedData?.fault) {
+        this.dirtyDebug(fetchedData?.fault, 'TM 249')
+        throw new Error(`429 🪓 TicketMaster weigert met ${fetchedData?.fault.faultstring}\nWACHT EVEN.`)
+      }
+
       const res1 = {
         unavailable: '',
         pageInfo: `<a href='${this.puppeteerConfig.app.mainPage.url}'>Ticketmaster overview ${workerData.index}</a>`,
         errors: [],
       };      
 
-      const res = fetchedData._embedded.events.map(rawEvent => {
+      const res = fetchedData?._embedded?.events.map(rawEvent => {
         const copyEvent = {...rawEvent, ...res1};
         copyEvent.title = rawEvent.name
         copyEvent.image = copyEvent.images[0].url;
@@ -72,7 +77,7 @@ ticketmasterScraper.makeBaseEventList = async function() {
         response,
         workerData,
         "ticketmaster mainpage fetch",
-        "close-thread"
+        "close-app"
       );
     });
 
@@ -139,12 +144,12 @@ ticketmasterScraper.getPageInfo = async function ({event}) {
     pageInfo.location = 'musicon';
   } else if (event?.venue?.id === 'Z598xZbpZAdAF') {
     pageInfo.location = 'afaslive';
-  } else {
-    pageInfo.errors.push({
-      error: new Error('Geen locatie gevonden'),
-      remarks: "getPageInfo ticketmaster.",
-    })
-    pageInfo.unavailable += 'geen locatie';
+  } else if (event?.venue?.id === 'Z598xZbpZ77ek') {
+    pageInfo.location = 'groeneheuvels';
+  }
+  else {
+    pageInfo.location = event?.venue?.id;
+    this.dirtyDebug(event?.venue, 'Geen herkende ID locatie')
   }
 
   if (workerNames.includes(pageInfo.location)){
@@ -155,11 +160,21 @@ ticketmasterScraper.getPageInfo = async function ({event}) {
 
   pageInfo.venueEventUrl = event.url;
   pageInfo.title = event.name;
-  const priceR = event.priceRanges
-    .find(priceRange => {
-      return priceRange.type.includes('fees')
-    }) || event.priceRanges[0]
-  pageInfo.price = Object.prototype.hasOwnProperty.call(priceR, 'max') && priceR.max
+  try {
+    const priceR = event?.priceRanges
+      .find(priceRange => {
+        return priceRange.type.includes('fees')
+      }) || event?.priceRanges[0]
+    pageInfo.price = Object.prototype.hasOwnProperty.call(priceR, 'max') && priceR.max    
+  } catch (caughtError) {
+    // TODO moet eerst errors zaak niet laten crashen
+    // pageInfo.errors.push({
+    //   error: new Error('Geen price gevonden'),
+    //   remarks: `Geen prijs ${pageInfo.pageInfo}`,
+    // })    
+
+  }
+
   if (event.attractions.length > 1) {
     pageInfo.shortTitle = event.attractions.reduce((prev, next) => {
       if (next.classifications[0] && next.classifications[0].genre?.name === 'Metal'){
@@ -202,10 +217,10 @@ ticketmasterScraper.getPageInfo = async function ({event}) {
 // }
 
 ticketmasterScraper.filterCoveredLocations = function(eventList){
-  this.dirtyLog({
-    workerNames,
-    eventList
-  })
+  // this.dirtyLog({
+  //   workerNames,
+  //   eventList
+  // })
   return eventList.filter(TMEvent =>{
     return !workerNames.includes(TMEvent.location) 
   })
@@ -215,15 +230,19 @@ ticketmasterScraper.filterForMetal = function(rawEvents){
 
   return rawEvents.filter(evs => {
     const hasMetalSelf = evs?.classifications.some(classif => {
-      return classif.genre.name.toLowerCase() === 'metal' 
-    })  
+      const genreAndSub = `${classif?.genre?.name} ${classif?.subGenre.name}`.toLowerCase();
+      return genreAndSub.includes('metal') || genreAndSub.includes('rock') ||genreAndSub.includes('punk') 
+    })
     const hasMetalAttractions = evs?.attractions.some(attr => {
       return attr.classifications.some(classif => {
-        return classif.genre.name.toLowerCase() === 'metal' 
+        const genreAndSub = `${classif?.genre?.name} ${classif?.subGenre.name}`.toLowerCase();
+        return genreAndSub.includes('rock') || genreAndSub.includes('metal') || genreAndSub.includes('punk')
       })
     })
     return hasMetalSelf || hasMetalAttractions;
   })
+  
+   
 }
 
 // function* readRawJSON(dir) {

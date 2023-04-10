@@ -85,7 +85,7 @@ function eventToUpdates(eventMsg, fields) {
     fields.errorField.updateError(eventMsg);
   }
   if (eventMsg.subtype.includes("debugger")) {
-    fields.debuggerField.updateConsole(eventMsg);
+    fields.debuggerField.updateConsole(eventMsg); // HIER
   }
 
   if (eventMsg.subtype.includes("terminal-error")) {

@@ -33,6 +33,9 @@ export default class MonitorField {
   objectNaarTekst(objectTeVeranderen) {
     let tt = { ...objectTeVeranderen };
     delete tt.workerData;
+    if (tt.debug){
+      tt = tt.debug
+    }
     return JSON.stringify(tt, null, 2).replace(/[{]/g, "").replace(/[}]/g, "");
   }
   compareWorkers(workerA, workerB) {
@@ -51,6 +54,7 @@ export default class MonitorField {
     this.update(updateData);
   }
   update(updateData) {
+
     this.data.unshift(updateData);
     const mainFieldEl = document.getElementById(this.mainFieldName);
     switch (this.type) {
@@ -204,9 +208,15 @@ export default class MonitorField {
               rollRow.messageData?.content ?? rollRow.messageData
             )
             : String(rollRow.messageData?.content ?? rollRow.messageData);
+
+        // vervang losse links met ankers
+        const metAnkers = hoofdPrintTekst.replaceAll(/"(https:.*)"/g, "<a href='$1' target='_blank'>link</a>");
+        const zonderAanhalingstekens = metAnkers.replace(/\"/g,'');
+
+
         return `<li class='monitorfield__list-item'>
         <span class='monitorfield__list-item-left'>${titleText}</span>
-        <div class='monitorfield__list-item-right'>${hoofdPrintTekst}</div>
+        <div class='monitorfield__list-item-right'>${zonderAanhalingstekens}</div>
       </li>`;
       })
       .join("");

@@ -25,6 +25,12 @@ body {
   border-radius: 1px;
   margin: 20px;
 }
+.monitorfield--Debugger .monitorfield__list-item-right {
+  font-family: monospace;
+  white-space: pre-wrap;
+  letter-spacing: -0.05em;  
+}
+
 .monitorfield__header {
   text-align: center;
   text-transform: uppercase;

@@ -99,10 +99,12 @@ export class QuickWorkerMessage {
   }
   /**
    * @param {*} toDebug
+   * @param {string} title //TODO implementeren voorkant 
    * @returns {JSON} update debugger {content: workerData, debug}
    */
-  debugger(toDebug) {
+  debugger(toDebug, title) {
     return WorkerMessage.quick("update", "debugger", {
+      title,
       content: {
         workerData: this.workerData,
         debug: toDebug,

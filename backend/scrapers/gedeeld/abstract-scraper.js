@@ -44,6 +44,17 @@ export default class AbstractScraper {
   }
 
   /**
+   * Wrapper om parentPort.postMessage(qwm.debugger(xx)) heen.
+   *
+   * @param {*} logSource wat dan ook.
+   * @param {string} [title=null] titel erboven.
+   * @memberof AbstractScraper
+   */
+  dirtyDebug(logSource, title = null) {
+    parentPort.postMessage(this.qwm.debugger(logSource, title));
+  }
+
+  /**
    * Wrapper om parentPort.postMessage(qwm.messageRoll(xx)) heen.
    *
    * @param {*} talkingString wat dan ook.

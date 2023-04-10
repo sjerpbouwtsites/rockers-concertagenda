@@ -72,6 +72,7 @@ const locations = {
   gelredome: new Location({ name: "Gelredome", city: "Arnhem" }),
   goffertpark: new Location({ name: "Goffertpark", city: "Nijmegen" }),
   groeneengel: new Location({ name: "Groene Engel", city: "Oss" }),
+  groeneheuvels: new Location({ name: "Groene Heuvels", city: "Beuningen" }),
   grotekerk: new Location({ name: "Grote Kerk", city: "Zwolle" }),
   halloffame: new Location({ name: "Hall of fame", city: "Tilburg" }),
   hedon: new Location({ name: "Hedon", city: "Zwolle" }),
