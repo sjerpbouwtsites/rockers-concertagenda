@@ -4,6 +4,7 @@ import { handleError } from "./tools.js";
 import { QuickWorkerMessage } from "./rock-worker.js";
 import passMessageToMonitor from "../monitor/pass-message-to-monitor.js";
 import { workerConfig } from "./worker-config.js";
+import MusicEvent from "./music-event.js";
 
 export default class EventsList {
   static _events = [];
@@ -168,6 +169,13 @@ export default class EventsList {
         return parsedEventFile;
       })
       .flat()
+    
+    // console.log(`!!!!!!!!!!!!!!!!!!!!!!!!!`.red)
+    // console.log(`NOODGREEP. eventslist is vervuild geraakt. Hardhandig leegrukken!`.underline.green)
+    // console.log(`!!!!!!!!!!!!!!!!!!!!!!!!!`.red)
+    // //TODO FIX
+    // const refMusicEvent = new MusicEvent();
+
 
     EventsList._events.forEach(eventUitLijst => {
       const loc = eventUitLijst.location;

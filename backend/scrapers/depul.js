@@ -45,8 +45,15 @@ depulScraper.makeBaseEventList = async function () {
         .filter((rawEvent, index) => index % workerData.workerCount === workerData.index)
         .map((rawEvent) => {
           const title = rawEvent.querySelector("h2")?.textContent.trim() ?? "";
-          const shortText = 
+          const res = {
+            unavailable: "",
+            pageInfo: `<a href='${document.location.href}'>${workerData.family} - main - ${title}</a>`,
+            errors: [],
+            title
+          };     
+          res.shortText = 
             rawEvent.querySelector(".text-box .desc")?.textContent.trim() ?? "";
+          
           const startDay =
             rawEvent
               .querySelector("time .number")
@@ -61,30 +68,23 @@ depulScraper.makeBaseEventList = async function () {
           if (startMonthJSNumber < refDate.getMonth()) {
             startYear = startYear + 1;
           }
-          const startDate = `${startYear}-${startMonth}-${startDay}`;
-          const venueEventUrl = rawEvent.querySelector("a")?.href ?? null;
+          res.startDate = `${startYear}-${startMonth}-${startDay}`;
+          res.venueEventUrl = rawEvent.querySelector("a")?.href ?? null;
 
           const imageMatch =
             rawEvent
               .querySelector("a")
               ?.getAttribute("style")
               .match(/url\('(.*)'\)/) ?? null;
-          let image;
           if (
             imageMatch &&
             Array.isArray(imageMatch) &&
             imageMatch.length === 2
           ) {
-            image = imageMatch[1];
+            res.image = imageMatch[1];
           }
 
-          return {
-            image,
-            venueEventUrl,
-            title,
-            startDate,
-            shortText,
-          };
+          return res;
         });
     },
     { months: this.months,workerData}
@@ -98,16 +98,16 @@ depulScraper.makeBaseEventList = async function () {
 
 // GET PAGE INFO
 
-depulScraper.getPageInfo = async function ({ page }) {
+depulScraper.getPageInfo = async function ({ page, event }) {
   
   const {stopFunctie} =  await this.getPageInfoStart()
   
   const pageInfo = await page.evaluate(
-    ({ months }) => {
+    ({ months , event}) => {
       const res = {
-        unavailable: "",
-        pageInfoID: `<a href='${document.location.href}'>${document.title}</a>`,
-        errorsVoorErrorHandler: [],
+        unavailable: event.unavailable,
+        pageInfo: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
+        errors: [],
       };
 
       try {
@@ -124,10 +124,10 @@ depulScraper.getPageInfo = async function ({ page }) {
           });
           res.longTextHTML = contentBox.innerHTML;
         }
-      } catch (error) {
-        res.errorsVoorErrorHandler.push({
-          error,
-          remarks: "longTextHTML",
+      } catch (caughtError) {
+        res.errors.push({
+          caughtError,
+          remarks: `longTextHTML ${event.title}`,
         });
       }
 
@@ -156,13 +156,16 @@ depulScraper.getPageInfo = async function ({ page }) {
                 res.startDate = `${startDateMatch[3]}-${
                   months[startDateMatch[2]]
                 }-${startDateMatch[1]}`;
+                if (!res.startDate){
+                  throw Error('geen start date');
+                }
               }
-            } catch (error) {
-              res.errorsVoorErrorHandler.push({ error, remarks: "startDate" });
+            } catch (caughtError) {
+              res.errors.push({ error: caughtError, remarks: `startDate mislukt ${event.title}` });
             }
           } else if (lowerCaseTextContent.includes("aanvang")) {
             if (!res.startDate) {
-              return;
+              return res;
             }
             try {
               const startTimeMatch = lowerCaseTextContent.match(/\d\d:\d\d/);
@@ -175,15 +178,15 @@ depulScraper.getPageInfo = async function ({ page }) {
                   `${res.startDate}T${startTimeMatch[0]}:00`
                 ).toISOString();
               }
-            } catch (error) {
-              res.errorsVoorErrorHandler.push({
-                error,
-                remarks: "startDateTime en startDate",
+            } catch (caughtError) {
+              res.errors.push({
+                error: caughtError,
+                remarks: `startDateTime en startDate samenvoegen ${event.title}`,
               });
             }
           } else if (lowerCaseTextContent.includes("open")) {
             if (!res.startDate) {
-              return;
+              return res;
             }
             try {
               const doorTimeMatch = lowerCaseTextContent.match(/\d\d:\d\d/);
@@ -196,10 +199,10 @@ depulScraper.getPageInfo = async function ({ page }) {
                   `${res.startDate}T${doorTimeMatch[0]}:00`
                 ).toISOString();
               }
-            } catch (error) {
-              res.errorsVoorErrorHandler.push({
-                error,
-                remarks: "doorDateTime en startDate",
+            } catch (caughtError) {
+              res.errors.push({
+                error: caughtError,
+                remarks: `doorDateTime en startDate ${event.title}`,
               });
             }
           }
@@ -211,12 +214,9 @@ depulScraper.getPageInfo = async function ({ page }) {
       if (!res.startDateTime) {
         res.unavailable += " geen start date time";
       }
-      if (res.unavailable !== "") {
-        res.unavailable += `${res.unavailable}\n${res.pageInfoID}`;
-      }
       return res;
     },
-    { months: this.months }
+    { months: this.months , event}
   );
 
   return await this.getPageInfoEnd({pageInfo, stopFunctie, page})

@@ -34,61 +34,59 @@ paradisoScraper.makeBaseEventList = async function () {
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
   
+  const res = await page.evaluate(({workerData}) => {
+    return {
+      unavailable: '',
+      pageInfo: `<a href='${document.location.href}'>${workerData.family} main - ${workerData.index}</a>`,
+      errors: [],
+    }
+  }, {workerData});
+
   try {
     await page.waitForSelector('[data-category="60102"]', {
       timeout: 2500, // @TODO TE STRAK?
     });
-  } catch (error) {
-    _t.handleError(error, "Paradiso wacht op punk categorie");
-  }
-
-  await page.click('[data-category="60102"]');
-  try {
+    await page.click('[data-category="60102"]');
     await page.waitForSelector(".block-list-search__submit", {
       timeout: 1000,
     });
-  } catch (error) {
-    _t.handleError(error, "Paradiso wacht op submit knop filters");
-  }
-
-  await page.click(".block-list-search__submit");
-  try {
+    await page.click(".block-list-search__submit");
     await page.waitForSelector(".event-list__item", {
       timeout: 5000,
-    });
-  } catch (error) {
-    _t.handleError(error, "Paradiso wacht op laden agenda na filter");
+    });    
+  } catch (caughtError) {
+    res.errors.push({error: caughtError, remarks: 'wachten en klikken', errorLevel: 'close-thread'})
   }
-  
-  await _t.waitFor(150);
+
+  await _t.waitFor(250);
 
   let rawEvents = await page.evaluate(
-    ({workerData}) => {
+    ({workerData, resBuiten}) => {
+
+        
       return Array.from(document.querySelectorAll(".event-list__item"))
         .filter((rawEvent, index) => index % workerData.workerCount === workerData.index)
         .map((rawEvent) => {
-          const title =
+          const res = {
+            ...resBuiten,
+            errors: [...resBuiten.errors]
+          }          
+          res.title =
             rawEvent
               .querySelector(".event-list__item-title")
               ?.textContent.trim() ?? "";
-          const shortText = 
+          res.shortText = 
             rawEvent
               .querySelector(".event-list__item-subtitle")
               ?.textContent.trim() ?? "";
-          const venueEventUrl = rawEvent.hasAttribute("href")
+          res.venueEventUrl = rawEvent.hasAttribute("href")
             ? rawEvent.href
             : null;
-          const soldOut = !!(rawEvent.querySelector(".event-list__item-info")?.textContent.toLowerCase().includes('uitverkocht') ?? null)
-
-          return {
-            venueEventUrl,
-            title,
-            shortText,
-            soldOut,
-          };
+          res.soldOut = !!(rawEvent.querySelector(".event-list__item-info")?.textContent.toLowerCase().includes('uitverkocht') ?? null)
+          return res;
         });
     },
-    {workerData}
+    {workerData, resBuiten: res}
   );
 
   return await this.makeBaseEventListEnd({
@@ -99,25 +97,33 @@ paradisoScraper.makeBaseEventList = async function () {
 
 // GET PAGE INFO
 
-paradisoScraper.getPageInfo = async function ({ page }) {
+paradisoScraper.getPageInfo = async function ({ page, event }) {
   
   const {stopFunctie} =  await this.getPageInfoStart()
+
+  const buitenRes = {
+    unavailable: event.unavailable,
+    pageInfo: `<a href='${event.venueEventUrl}'>${event.title}</a>`,
+    errors: [],
+  };  
   
   try {
     await page.waitForSelector(".header-template-2__subcontent .date", {
       timeout: 7500,
     });
-  } catch (error) {
-    _t.handleError(error, "Paradiso wacht op laden single pagina");
+  } catch (caughtError) {
+    buitenRes.errors.push({
+      error: caughtError,
+      remarks: "Paradiso wacht op laden single pagina",
+      errorLevel: 'notify'
+    })
+    buitenRes.unavailable += 'single pagina niet snel genoeg geladen.'
+    return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
   }
 
   const pageInfo = await page.evaluate(
-    ({ months }) => {
-      const res = {
-        unavailable: "",
-        pageInfoID: `<a href='${document.location.href}'>${document.title}</a>`,
-        errorsVoorErrorHandler: [],
-      };
+    ({ months, buitenRes }) => {
+      const res = {...buitenRes};
 
       const contentBox =
         document.querySelector(".header-template-2__description") ?? null;
@@ -139,9 +145,10 @@ paradisoScraper.getPageInfo = async function ({ page }) {
             months[startDateMatch[2]]
           }-${startDateMatch[1].padStart(2, "0")}`;
         }
-      } catch (error) {
-        res.errorsVoorErrorHandler.push({ error, remarks: "startDateMatch" });
+      } catch (caughtError) {
+        res.errors.push({ error: caughtError, remarks: "startDateMatch"});
         res.unavailable += " geen start date.";
+        return res;
       }
 
       const timesMatch =
@@ -166,16 +173,16 @@ paradisoScraper.getPageInfo = async function ({ page }) {
               `${res.startDate}T${timesMatch[1]}:00`
             ).toISOString();
           }
-        } catch (error) {
-          res.errorsVoorErrorHandler.push({
-            error: new Error(
-              `ongeldige tijden: ${timesMatch.join(" ")}\n${error.message}`
-            ),
-            remarks: "start deur end samen",
+        } catch (caughtError) {
+          res.errors.push({
+            error: caughtError,
+            remarks: `ging hiermee mis: ${timesMatch.join(" ")}\n`,
           });
-          res.unavailable += "nog meer tijd issues";
+          res.unavailable += "geen start date, tijd, drama";
+          return res;
         }
       }
+
       res.priceTextcontent =
         document.querySelector(".template-2__price-wrapper-container")
           ?.textContent ?? '';
@@ -187,12 +194,9 @@ paradisoScraper.getPageInfo = async function ({ page }) {
         res.image = imageM[0] + "?w=600&h=400&fit=crop-50-50";
       }
 
-      if (res.unavailable !== "") {
-        res.unavailable = `${res.unavailable}\n${res.pageInfoID}`;
-      }
       return res;
     },
-    { months: this.months }
+    { months: this.months, buitenRes }
   );
 
   return await this.getPageInfoEnd({pageInfo, stopFunctie, page})

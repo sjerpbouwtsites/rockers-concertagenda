@@ -1,5 +1,4 @@
 import { workerData } from "worker_threads";
-import * as _t from "../mods/tools.js";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 
@@ -29,9 +28,9 @@ gebrdenobelScraper.listenToMasterThread();
 
 gebrdenobelScraper.makeBaseEventList = async function () {
 
-  const {stopFunctie, page} =await this.makeBaseEventListStart()
+  const {stopFunctie, page} = await this.makeBaseEventListStart()
 
-  const rawEvents = await page.evaluate(() => {
+  const rawEvents = await page.evaluate(({workerData}) => {
     return Array.from(document.querySelectorAll(".event-item"))
       .filter((eventEl) => {
         const tags =
@@ -43,18 +42,22 @@ gebrdenobelScraper.makeBaseEventList = async function () {
         );
       })
       .map((eventEl) => {
-        const res = {};
+        const title = eventEl.querySelector(".media-heading")?.textContent ?? null;
+        const res = {
+          unavailable: '',
+          pageInfo: `<a href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+          errors: [],
+          title
+        };
         res.venueEventUrl =
           eventEl
             .querySelector(".jq-modal-trigger")
             ?.getAttribute("data-url") ?? "";
 
-        res.title =
-          eventEl.querySelector(".media-heading")?.textContent ?? null;
         res.soldOut = !!(eventEl.querySelector('.meta-info')?.textContent.toLowerCase().includes('uitverkocht') ?? null)
         return res;
       });
-  }, workerData.index);
+  }, {workerData});
 
   return await this.makeBaseEventListEnd({
     stopFunctie, page, rawEvents}
@@ -64,17 +67,16 @@ gebrdenobelScraper.makeBaseEventList = async function () {
 
 // GET PAGE INFO
 
-gebrdenobelScraper.getPageInfo = async function ({ page }) {
+gebrdenobelScraper.getPageInfo = async function ({ page, event }) {
   
   const {stopFunctie} =  await this.getPageInfoStart()
-
  
   const pageInfo = await page.evaluate(
-    ({ months }) => {
+    ({ months, event }) => {
       const res = {
-        unavailable: "",
-        pageInfoID: `<a href='${document.location.href}'>${document.title}</a>`,
-        errorsVoorErrorHandler: [],
+        unavailable: event.unavailable,
+        pageInfo: `<a href='${document.location.href}'>${document.title}</a>`,
+        errors: [],
       };
       const eventDataRows = Array.from(
         document.querySelectorAll(".event-table tr")
@@ -131,7 +133,7 @@ gebrdenobelScraper.getPageInfo = async function ({ page }) {
 
       return res;
     },
-    { months: this.months }
+    { months: this.months, event}
   );
 
   return await this.getPageInfoEnd({pageInfo, stopFunctie, page})

@@ -4,34 +4,35 @@ import makeScraperConfig from "./gedeeld/scraper-config.js";
 
 // SCRAPER CONFIG
 
-const kavkaScraper = new AbstractScraper(makeScraperConfig({
-  workerData: Object.assign({}, workerData),
-  puppeteerConfig: {
-    mainPage: {
-      timeout: 35000,
-    },
-    singlePage: {
-      timeout: 30000
-    },
-    app: {
+const kavkaScraper = new AbstractScraper(
+  makeScraperConfig({
+    workerData: Object.assign({}, workerData),
+    puppeteerConfig: {
       mainPage: {
-        url: "https://kavka.be/programma/",
-        requiredProperties: ['venueEventUrl', 'title', 'startDateTime']
-      }
-    }
-  }
-}));
+        timeout: 35000,
+      },
+      singlePage: {
+        timeout: 30000,
+      },
+      app: {
+        mainPage: {
+          url: "https://kavka.be/programma/",
+          requiredProperties: ["venueEventUrl", "title", "startDateTime"],
+        },
+      },
+    },
+  })
+);
 
 kavkaScraper.listenToMasterThread();
 
 // MAKE BASE EVENTS
 
 kavkaScraper.makeBaseEventList = async function () {
-
-  const {stopFunctie, page} = await this.makeBaseEventListStart()
+  const { stopFunctie, page } = await this.makeBaseEventListStart();
 
   let rawEvents = await page.evaluate(
-    ({ months }) => {
+    ({ months, workerData }) => {
       return Array.from(document.querySelectorAll(".events-list > a"))
         .filter((rawEvent) => {
           const isMetalOrPunk = Array.from(rawEvent.querySelectorAll(".tags"))
@@ -53,11 +54,19 @@ kavkaScraper.makeBaseEventList = async function () {
             refDate,
             startYear;
 
+          const title =
+            rawEvent
+              .querySelector("article h3:first-child")
+              ?.textContent.trim() ?? null;
+
           const res = {
             unavailable: "",
-            pageInfoID: `<a href='${document.location.href}'>${document.title}</a>`,
-            errorsVoorErrorHandler: [],
+            pageInfo: `<a href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+            errors: [],
+            title,
           };
+
+          // TODO BELACHELIJK GROTE TRY CATHC
           try {
             startDateEl = rawEvent.querySelector("date .date") ?? null;
             startDay =
@@ -88,12 +97,15 @@ kavkaScraper.makeBaseEventList = async function () {
               res.dateStringAttempt = `${startDate}T19:00:00`;
             }
             res.startDateTime = new Date(res.dateStringAttempt).toISOString();
-          } catch (error) {
-            res.errorsVoorErrorHandler.push({
-              error,
-              remarks:
-                "weer zon gigantische trycatch om alle datum en tijden heen.",
+          } catch (caughtError) {
+            res.errors.push({
+              error: caughtError,
+              remarks: `kkgrote trycatch baseEventList iduna ${res.pageInfo}.`,
             });
+          }
+          if (!res.startDateTime) {
+            res.unavailable += " geen startDateTime.";
+            return res;
           }
 
           if (
@@ -107,65 +119,62 @@ kavkaScraper.makeBaseEventList = async function () {
             ).toISOString();
           }
 
-          res.title =
-            rawEvent
-              .querySelector("article h3:first-child")
-              ?.textContent.trim() ?? "";
-          res.shortText = 
+          res.shortText =
             rawEvent.querySelector("article h3 + p")?.textContent.trim() ?? "";
-          res.venueEventUrl = rawEvent.href;
+          res.venueEventUrl = rawEvent?.href ?? null;
+
           return res;
         });
     },
-    { months: this.months }
-  );
-  
-  return await this.makeBaseEventListEnd({
-    stopFunctie, page, rawEvents}
+    { months: this.months, workerData }
   );
 
+  return await this.makeBaseEventListEnd({
+    stopFunctie,
+    page,
+    rawEvents,
+  });
 };
 
-kavkaScraper.getPageInfo = async function ({ page }) {
-  
-  const {stopFunctie} =  await this.getPageInfoStart()
+kavkaScraper.getPageInfo = async function ({ page, event }) {
+  const { stopFunctie } = await this.getPageInfoStart();
 
-  const pageInfo = await page.evaluate(() => {
+  const pageInfo = await page.evaluate(({event}) => {
     const res = {
-      unavailable: "",
-      pageInfoID: `<a href='${document.location.href}'>${document.title}</a>`,
-      errorsVoorErrorHandler: [],
+      unavailable: event.unavailable,
+      pageInfo: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
+      errors: [],
     };
     try {
-      const imageEl = document.querySelector('div.desktop img[src*="kavka.be/wp-content"]') ?? null;
-      if (imageEl) {
-        if (imageEl.hasAttribute('data-lazy-src')) {
-          res.image = imageEl.getAttribute('data-lazy-src')
-        } else if (imageEl.hasAttribute('src')){
-          res.image = imageEl.getAttribute('src')
+      const imageEl =
+        document.querySelector('div.desktop img[src*="kavka.be/wp-content"]') ??
+        null;
+      if (imageEl) { //TODO kan gewoon met selectors
+        if (imageEl.hasAttribute("data-lazy-src")) {
+          res.image = imageEl.getAttribute("data-lazy-src");
+        } else if (imageEl.hasAttribute("src")) {
+          res.image = imageEl.getAttribute("src");
         }
       }
-        
-          
+
       if (!res.image) {
         res.image =
           document.querySelector('img[src*="kavka.be/wp-content"]')?.src ?? "";
       }
 
-      res.longTextHTML = 
-        document.querySelector("h2 + .entry-content")?.innerHTML ?? '';
+      res.longTextHTML =
+        document.querySelector("h2 + .entry-content")?.innerHTML ?? "";
 
-      res.priceTextcontent = 
-        document.querySelector(".prijzen")?.textContent.trim() ?? '';
+      res.priceTextcontent =
+        document.querySelector(".prijzen")?.textContent.trim() ?? "";
       return res;
-    } catch (error) {
-      res.errorsVoorErrorHandler.push({
-        error,
-        remarks: `page info top level trycatch`,
+    } catch (caughtError) {
+      res.errors.push({
+        error:caughtError,
+        remarks: `page info top level trycatch ${res.pageInfo}`,
       });
     }
-  });
+  }, {event});
 
-  return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
-
+  return await this.getPageInfoEnd({ pageInfo, stopFunctie, page });
 };

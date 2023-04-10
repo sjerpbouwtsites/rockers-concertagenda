@@ -1,22 +1,6 @@
 [
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2023-10-15T16:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.ticketmaster.nl/event/ultima-ratio-fest-ii-tickets/288789?language=en-us",
-    "title": "Ultima Ratio Fest II",
-    "location": "tivolivredenburg",
-    "shortText": null,
-    "longText": null,
-    "image": "https://s1.ticketm.net/dam/a/e28/9d80f220-544f-457d-b874-321067c18e28_SOURCE",
-    "soldOut": null,
-    "unavailable": false,
-    "pageInfoID": "<a href='https://app.ticketmaster.com/discovery/v2/events.json?countryCode=NL&apikey=5pMuEpHRPhexiJelCHBWUcr4f6GcjB5G&size=199&page=4'>ticketMaster JSON page 4</a>",
-    "errorsVoorErrorHandler": [],
-    "rescheduled": false
-  },
-  {
-    "doorOpenDateTime": null,
     "startDateTime": "2023-11-04T11:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://www.ticketmaster.nl/event/the-rock-circus-2023-saturday-tickets/290865?language=en-us",
@@ -26,11 +10,9 @@
     "longText": null,
     "image": "https://s1.ticketm.net/dam/a/bcb/2d409eb2-8b98-4586-82e4-02e2e5d9fbcb_RETINA_LANDSCAPE_16_9.jpg",
     "soldOut": null,
-    "unavailable": false,
-    "pageInfoID": "<a href='https://app.ticketmaster.com/discovery/v2/events.json?countryCode=NL&apikey=5pMuEpHRPhexiJelCHBWUcr4f6GcjB5G&size=199&page=4'>ticketMaster JSON page 4</a>",
-    "errorsVoorErrorHandler": [],
-    "shortTitle": "Met oa: The Rock Circus, Avatar, Cradle of Filth, Powerwolf, Beast In Black, Imminence, Enemy Inside",
-    "rescheduled": false
+    "unavailable": "",
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": null,
@@ -43,10 +25,8 @@
     "longText": null,
     "image": "https://s1.ticketm.net/dam/a/bcb/2d409eb2-8b98-4586-82e4-02e2e5d9fbcb_RETINA_LANDSCAPE_16_9.jpg",
     "soldOut": null,
-    "unavailable": false,
-    "pageInfoID": "<a href='https://app.ticketmaster.com/discovery/v2/events.json?countryCode=NL&apikey=5pMuEpHRPhexiJelCHBWUcr4f6GcjB5G&size=199&page=4'>ticketMaster JSON page 4</a>",
-    "errorsVoorErrorHandler": [],
-    "shortTitle": "Met oa: The Rock Circus, Electric Callboy, Finntroll, As Everything Unfolds",
-    "rescheduled": false
+    "unavailable": "",
+    "corrupted": null,
+    "correctMusic": null
   }
 ]

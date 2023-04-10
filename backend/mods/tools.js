@@ -11,13 +11,13 @@ import passMessageToMonitor from "../monitor/pass-message-to-monitor.js";
  * @param {family,name,index} workerData
  * @param {string} remarks Add some remarks to help you find back the origin of the error.
  */
-export function handleError(error, workerData, remarks = null) {
+export function handleError(error, workerData, remarks = null, errorLevel = 'notify') {
   const updateErrorMsg = WorkerMessage.quick("update", "error", {
     content: {
       workerData: workerData,
       remarks: remarks,
       status: "error",
-      text: `${error.message}\n${error.stack}`,
+      text: `${error.message}\n${error.stack}\nlevel:${errorLevel}`,
     },
   });
   const clientsLogMsg = WorkerMessage.quick("clients-log", "error", {

@@ -29,32 +29,39 @@ nuldertienScraper.makeBaseEventList = async function () {
     return Array.from(document.querySelectorAll(".event-list-item"))
       .filter((eventEl, index) => index % workerData.workerCount === workerData.index)
       .map((eventEl) => {
+      
+        const title = eventEl
+          .querySelector(".event-list-item__title")
+          ?.textContent.trim() ?? null;
+
         const res = {
-          pageInfoID: `<a href='${document.location.href}'>${document.title}</a>`,
-          unavailable: null,
-        };
+          unavailable: "",
+          pageInfo: `<a href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+          errors: [],          
+          title,
+        }   
+
         res.venueEventUrl = eventEl.querySelector(
           ".event-list-item__link"
-        )?.href;
-        res.title = eventEl
-          .querySelector(".event-list-item__title")
-          ?.textContent.trim();
+        )?.href ?? null;
 
         const datumEl = eventEl.querySelector(".event-list-item__date");
         if (datumEl) {
           res.startDateTime = new Date(
             datumEl.getAttribute("datetime")
           ).toISOString();
-        } else {
+        } 
+        if (!datumEl || !res.startDateTime){
           res.unavailable = "geen datum gevonden";
+          return res;
         }
+        
         res.shortText = eventEl
           .querySelector(".event-list-item__subtitle")
           ?.textContent.trim() ?? '';
-        if (res.unavailable) {
-          res.unavailable = `${res.unavailable}\n${res.pageInfoID}`;
-        }
+
         return res;
+
       });
   }, {workerData});
 
@@ -65,48 +72,53 @@ nuldertienScraper.makeBaseEventList = async function () {
 
 // GET PAGE INFO
 
-nuldertienScraper.getPageInfo = async function ({ page }) {
+nuldertienScraper.getPageInfo = async function ({ page , event}) {
   
   const {stopFunctie} =  await this.getPageInfoStart()
 
-  const pageInfo = await page.evaluate(() => {
+  const pageInfo = await page.evaluate(({event}) => {
+
     const res = {
-      pageInfoID: `<a href='${document.location.href}'>${document.title}</a>`,
-      errorsVoorErrorHandler: [],
+      unavailable: event.unavailable,
+      pageInfo: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
+      errors: [],
     };
-    res.image = document.querySelector(".event-spotlight__image")?.src;
+
+    res.image = document.querySelector(".event-spotlight__image")?.src ?? null;
+
     res.priceTextcontent = 
       document.querySelector(".practical-information tr:first-child dd")
         ?.textContent ?? '';
+
     res.priceContextText =
       document.querySelector(".practical-information")?.textContent ?? '';
 
-    const doorOpenEl = document.querySelector(
-      ".timetable__times dl:first-child time"
-    );
-
     try {
-      if (doorOpenEl) {
+      if (document.querySelector(
+        ".timetable__times dl:first-child time"
+      )) {
         res.doorOpenDateTime = new Date(
-          doorOpenEl.getAttribute("datetime")
+          document.querySelector(
+            ".timetable__times dl:first-child time"
+          )?.getAttribute("datetime")
         ).toISOString();
       }
-    } catch (error) {
-      res.errorsVoorErrorHandler.push({
-        error,
-        remarks: "deur open tijd fout",
+    } catch (errorCaught) {
+      res.errors.push({
+        error: errorCaught,
+        remarks: `deur open tijd ${res.pageInfo}`,
       });
     }
     res.soldOut = !!(document.querySelector('.order-tickets button[disabled]') ?? null)
+
     res.longTextHTML = 
       document.querySelector(
         ".event-detail header + div"
       )?.innerHTML ?? '';
-    if (res.unavailable) {
-      res.unavailable = `${res.unavailable}\n${res.pageInfoID}`;
-    }
+
+    
     return res;
-  }, workerData);
+  }, {event});
 
   return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
 

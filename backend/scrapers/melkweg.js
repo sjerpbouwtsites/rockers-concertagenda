@@ -1,5 +1,4 @@
-import { workerData, parentPort } from "worker_threads";
-import * as _t from "../mods/tools.js";
+import { workerData } from "worker_threads";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 
@@ -41,24 +40,27 @@ melkwegScraper.makeBaseEventList = async function () {
         const genre = anker?.hasAttribute('data-genres') 
           ? anker?.getAttribute('data-genres') 
           : '';
-        const isHeavy = genre === '53';
+        const isHeavy = genre === '53'; //TODO kan ook direct met selectors.
         return isHeavy;
-
       })
       .filter((eventEl, index) => index % workerData.workerCount === workerData.index)
       .map((eventEl) => {
+        const title = eventEl.querySelector('h3[class*="title"]')?.textContent ?? "";
+        const res = {
+          unavailable: "",
+          pageInfo: `<a href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+          errors: [],          
+          title,
+        }
         const tags =
         eventEl
           .querySelector('[class*="styles_tags-list"]')
           ?.textContent.toLowerCase().split(` . `).join(' - ') ?? "";        
-        const res = {};
         const anchor = eventEl.querySelector("a");
         let shortTitle = 
         eventEl.querySelector('[class*="subtitle"]')?.textContent ?? "";
         shortTitle = shortTitle ? `<br>${shortTitle}` : '';
         res.shortText = `${tags}${shortTitle}`;
-        res.title =
-        eventEl.querySelector('h3[class*="title"]')?.textContent ?? "";
         res.venueEventUrl = anchor.href;
         res.soldOut = !!(eventEl.querySelector("[class*='styles_event-compact__text']")?.textContent.toLowerCase().includes('uitverkocht') ?? null);
         return res;
@@ -71,15 +73,15 @@ melkwegScraper.makeBaseEventList = async function () {
   
 };
 
-melkwegScraper.getPageInfo = async function ({ page }) {
+melkwegScraper.getPageInfo = async function ({ page, event }) {
  
   const {stopFunctie} =  await this.getPageInfoStart()
   
-  const pageInfo = await page.evaluate(() => {
+  const pageInfo = await page.evaluate(({event}) => {
     const res = {
-      unavailable: "",
-      pageInfoID: `<a href='${document.location.href}'>${document.title}</a>`,
-      errorsVoorErrorHandler: [],
+      unavailable: event.unavailable,
+      pageInfo: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
+      errors: [],
     };
     try {
       res.startDateTime = new Date(
@@ -87,15 +89,20 @@ melkwegScraper.getPageInfo = async function ({ page }) {
           .querySelector('[class*="styles_event-header"] time')
           ?.getAttribute("datetime") ?? null
       ).toISOString();
-    } catch (error) {
-      res.unavailable = "geen startDateTime";
-      res.errorsVoorErrorHandler.push({
-        error,
-        remarks: `start date time ${
-          document.querySelector('[class*="styles_event-header"] time')
-            ?.outerHTML
-        }`,
+    } catch (caughtError) {
+
+      // ${ voor debug
+      //   document.querySelector('[class*="styles_event-header"] time')
+      //     ?.outerHTML
+      // }
+
+      res.errors.push({
+        error: caughtError,
+        remarks: `startdatetime faal ${res.pageInfo}`,
       });
+    }
+    if (!res.startDateTime){
+      res.unavailable = 'geen startDateTime'
     }
     res.priceTextcontent = 
       document.querySelector('[class*="styles_ticket-prices"]')?.textContent ??
@@ -105,11 +112,8 @@ melkwegScraper.getPageInfo = async function ({ page }) {
     res.image =
       document.querySelector('[class*="styles_event-header__figure"] img')
         ?.src ?? null;
-    if (res.unavailable !== "") {
-      res.unavailable = `${res.unavailable}\n${res.pageInfoID}`;
-    }
     return res;
-  });
+  }, {event});
 
   return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
 

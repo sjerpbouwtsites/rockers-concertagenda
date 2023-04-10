@@ -52,7 +52,7 @@ export default class AbstractScraper {
   dirtyTalk(talkingString) {
     parentPort.postMessage(this.qwm.messageRoll(String(talkingString)));
   }  
-
+  
   async scrapeInit() {
 
     if (!this.puppeteerConfig.app.mainPage.useCustomScraper || !this.puppeteerConfig.app.singlePage.useCustomScraper) {
@@ -152,11 +152,17 @@ export default class AbstractScraper {
     })
 
     rawEvents.forEach((event) => {
-      event.errorsVoorErrorHandler?.forEach((errorHandlerMeuk) => {
+      const errorVerz = Object.prototype.hasOwnProperty.call(event, 'errors') 
+        ? event.errors 
+        : Object.prototype.hasOwnProperty.call(event, 'errors') 
+          ? event.errors
+          : [];
+      errorVerz.forEach((errorWrappers) => {
         _t.handleError(
-          errorHandlerMeuk.error,
+          errorWrappers?.error,
           this.workerData,
-          errorHandlerMeuk.remarks
+          errorWrappers?.remarks,
+          errorWrappers?.errorLevel, //TODO
         );
       });
     });
@@ -169,8 +175,6 @@ export default class AbstractScraper {
       .filter(this.basicMusicEventsFilter)
     ;
     if (this.puppeteerConfig.app.mainPage.enforceMusicEventType){
-      this.dirtyLog(this.puppeteerConfig)
-      this.dirtyLog({fdfd: 'JAAAA'})
       return r.map((event) => new MusicEvent(event));
     } else {
       return r;
@@ -427,10 +431,11 @@ export default class AbstractScraper {
       url: singleEvent.venueEventUrl, // @TODO overal weghalen vervangen met event
       event: singleEvent,
     });
+
     if (!pageInfo || !!pageInfo?.unavailable) {
       parentPort.postMessage(
         this.qwm.messageRoll(
-          `pageInfo ext ${singleEvent.title} ${pageInfo?.unavailable ?? ""}`
+          `SKIP ${pageInfo.pageInfo} ${pageInfo?.unavailable ?? ""}`
         )
       );
       return useableEventsList.length
@@ -506,17 +511,18 @@ export default class AbstractScraper {
    * Vervangt generieke code aan eind getPageInfo
    * stopt stopFunctie
    * verwijderd overbodige witruimte
-   * kijkt naar evt fouten in pageInfo.errorsVoorErrorHandler
+   * kijkt naar evt fouten in pageInfo.errors
    * @returns {*} pageInfo
    * @memberof AbstractScraper
    */  
   async getPageInfoEnd({pageInfo, stopFunctie, page}){
     
-    pageInfo?.errorsVoorErrorHandler?.forEach((errorHandlerMeuk) => {
+    pageInfo.errors.forEach((errorWrapper) => {
       _t.handleError(
-        errorHandlerMeuk.error,
+        errorWrapper.error,
         workerData,
-        errorHandlerMeuk.remarks
+        errorWrapper?.remarks ?? null,
+        errorWrapper?.errorLevel
       );
     });
   
@@ -529,7 +535,7 @@ export default class AbstractScraper {
 
     if (!pageInfo) {
       return {
-        unavailable: `Geen resultaat van pageInfo`,
+        unavailable: `Geen resultaat van pageInfo`, //TODO samen met musicEvent.unavailable
       };
     }
   

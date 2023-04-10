@@ -41,19 +41,34 @@ dbsScraper.makeBaseEventList = async function () {
       return Array.from(document.querySelectorAll(".fusion-events-post"))
         .filter((eventEl, index) => index % workerData.workerCount === workerData.index)
         .map((eventEl) => {
-          const res = {};
-          const titleLinkEl = eventEl.querySelector(".fusion-events-meta .url");
-          res.title = titleLinkEl ? titleLinkEl.textContent.trim() : "";
-          res.venueEventUrl = titleLinkEl ? titleLinkEl.href : "";
-          res.error = null;
+          const title = eventEl.querySelector(".fusion-events-meta .url")?.textContent.trim() ?? null;
+          const res = {
+            unavailable: "",
+            pageInfo: `<a href='${document.location.href}'>${workerData.family} - main - ${title}</a>`,
+            errors: [],
+            title
+          };
+
+          if (title.toLowerCase().includes('cancelled')){ //TODO 1.algemene check maken 2. uitbreiden.
+            res.unavailable += ' event cancelled'
+            //TODO debugger
+            return res;
+          }
+
+          res.venueEventUrl = eventEl.querySelector(".fusion-events-meta .url")?.href ?? null;
+
           const startDateEl =
             eventEl.querySelector(".tribe-event-date-start") ?? null;
-          if (!startDateEl) return null;
+          if (!startDateEl) {
+            res.unavailable += 'geen start date el.'
+            return res;
+          }
+
           const startTextcontent =
             eventEl
               .querySelector(".tribe-event-date-start")
               ?.textContent.toLowerCase() ?? "LEEG";
-          res.eventDateText = startTextcontent;
+          // res.eventDateText = startTextcontent;
 
           try {
             const match1 = startTextcontent.match(/(\d+)\s+(\w+)/);
@@ -79,8 +94,8 @@ dbsScraper.makeBaseEventList = async function () {
             res.startDateTime = new Date(
               `${res.startDate}T${res.time}:00Z`
             ).toISOString();
-          } catch (error) {
-            res.error = error.message;
+          } catch (caughtError) {
+            res.errors.push({error: caughtError, remarks: `Wirwar datums e.d. ${title}`});
           }
 
           if (res.startDate) {
@@ -101,8 +116,8 @@ dbsScraper.makeBaseEventList = async function () {
                   }
                 }
               }
-            } catch (error) {
-              res.error = error.message;
+            } catch (caughtError) {
+              res.errors.push({error: caughtError, remarks: `Wirwar datums e.d. ${title}`});
             }
           }
 
@@ -120,16 +135,17 @@ dbsScraper.makeBaseEventList = async function () {
 
 // GET PAGE INFO
 
-dbsScraper.getPageInfo = async function ({ page }) {
+dbsScraper.getPageInfo = async function ({ page, event }) {
   
   const {stopFunctie} =  await this.getPageInfoStart()
   
-  const pageInfo = await page.evaluate(() => {
+  const pageInfo = await page.evaluate(({event}) => {
     const res = {
-      unavailable: "",
-      pageInfoID: `<a href='${document.location.href}'>${document.title}</a>`,
-      errorsVoorErrorHandler: [],
+      unavailable: event.unavailable,
+      pageInfo: `<a href='${document.location.href}'>${document.title}</a>`,
+      errors: [],
     };
+
     res.longTextHTML = 
       document.querySelector(".tribe-events-single-event-description")
         ?.innerHTML ?? '';
@@ -153,7 +169,7 @@ dbsScraper.getPageInfo = async function ({ page }) {
     }
 
     return res;
-  }, null);
+  }, {event});
 
   if (pageInfo.ticketURL) {
     try {
@@ -163,10 +179,14 @@ dbsScraper.getPageInfo = async function ({ page }) {
       pageInfo.priceTextcontent = await page.evaluate(()=>{
         return document.querySelectorAll('[data-testid]')[1]?.textContent ?? null
       })
-    } catch (error) {
-      parentPort.postMessage(this.qwm.debugger({
-        error, remark: 'prijs ophalen dbs ticketpagina'
-      }))
+    } catch (caughtError) {
+      parentPort.postMessage(this.qwm.messageRoll(`
+      !!
+      ${`prijs ophalen dbs ticketpagina ${event.title} ${caughtError.message}`}}
+      hier moeten een error van gemaakt worden maar de errors crashen nu de thread!
+      !!
+      `))
+      //pageInfo.errors.push({error: caughtError, remarks: `prijs ophalen dbs ticketpagina ${event.title}`})
     }
   }
 

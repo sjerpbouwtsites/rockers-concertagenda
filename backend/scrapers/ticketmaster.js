@@ -1,4 +1,4 @@
-import { parentPort, workerData } from "worker_threads";
+import { workerData } from "worker_threads";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 import fs from 'fs';
@@ -48,9 +48,16 @@ ticketmasterScraper.makeBaseEventList = async function() {
     .then(fetchedData => {
 
       fs.writeFile(`${fsDirections.temp + '/ticketmaster/raw'}/${workerData.index}.json`, JSON.stringify(fetchedData), "UTF-8", ()=>{})
-      
+
+      const res1 = {
+        unavailable: '',
+        pageInfo: `<a href='${this.puppeteerConfig.app.mainPage.url}'>Ticketmaster overview ${workerData.index}</a>`,
+        errors: [],
+      };      
+
       const res = fetchedData._embedded.events.map(rawEvent => {
-        const copyEvent = {...rawEvent};
+        const copyEvent = {...rawEvent, ...res1};
+        copyEvent.title = rawEvent.name
         copyEvent.image = copyEvent.images[0].url;
         delete copyEvent.images;
         copyEvent.attractions = editAttractionsInRaw(copyEvent?._embedded?.attractions ?? []);
@@ -59,22 +66,25 @@ ticketmasterScraper.makeBaseEventList = async function() {
         return copyEvent;
       });  
       
-      
       return res;
     }).catch((response) => {
       _t.handleError(
         response,
         workerData,
-        "ticketmaster mainpage fetch"
+        "ticketmaster mainpage fetch",
+        "close-thread"
       );
     });
 
-  if (!rawEvents.length) return true;
+  if (!Array.isArray(rawEvents) || !rawEvents.length) {
+    return await this.makeBaseEventListEnd({
+      stopFunctie, rawEvents: []}
+    );  
+  }
 
   fs.writeFileSync(`${fsDirections.temp + '/ticketmaster/trimmed'}/${workerData.index}.json`, JSON.stringify(rawEvents), "UTF-8")
 
   let filteredRawEvents = this.filterForMetal(rawEvents)
-  filteredRawEvents = this.filterCoveredLocations(filteredRawEvents);
 
   return await this.makeBaseEventListEnd({
     stopFunctie, rawEvents: filteredRawEvents}
@@ -102,9 +112,9 @@ ticketmasterScraper.getPageInfo = async function ({event}) {
   const {stopFunctie} =  await this.getPageInfoStart()
 
   const pageInfo = {
-    unavailable: "",
-    pageInfoID: `<a href='${this.puppeteerConfig.app.mainPage.url}'>ticketMaster JSON page ${workerData.index}</a>`,
-    errorsVoorErrorHandler: [],
+    unavailable: event.unavailable,
+    pageInfo: `<a class='page-info' href='${event.venueEventUrl}'>TM ${event.title}</a>`,
+    errors: [],
   };
 
   pageInfo.startDateTime = event.dates?.start?.dateTime;
@@ -129,16 +139,17 @@ ticketmasterScraper.getPageInfo = async function ({event}) {
     pageInfo.location = 'musicon';
   } else if (event?.venue?.id === 'Z598xZbpZAdAF') {
     pageInfo.location = 'afaslive';
-  }  
-  
-  else {
-  
-    parentPort.postMessage(this.qwm.debugger(event?.venue))
-    _t.handleError(
-      new Error('Geen locatie gevonden'),
-      workerData,
-      "getPageInfo ticketmaster."
-    )    
+  } else {
+    pageInfo.errors.push({
+      error: new Error('Geen locatie gevonden'),
+      remarks: "getPageInfo ticketmaster.",
+    })
+    pageInfo.unavailable += 'geen locatie';
+  }
+
+  if (workerNames.includes(pageInfo.location)){
+    pageInfo.unavailable += ` locatie ${pageInfo.location} niet bij TM.`
+    return await this.getPageInfoEnd({pageInfo, stopFunctie})
   }
 
 
@@ -161,9 +172,9 @@ ticketmasterScraper.getPageInfo = async function ({event}) {
   }
   pageInfo.image = event.image;
   pageInfo.rescheduled = event.dates?.status?.code === 'rescheduled';
-  pageInfo.unavailable = pageInfo.pageInfocheduled 
-    ? 'rescheduled' 
-    : pageInfo.location ? false : 'geen location';
+  if (pageInfo.rescheduled) {
+    pageInfo.unavailable += ' rescheduled' 
+  }    
 
   return await this.getPageInfoEnd({pageInfo, stopFunctie})
 
@@ -191,6 +202,10 @@ ticketmasterScraper.getPageInfo = async function ({event}) {
 // }
 
 ticketmasterScraper.filterCoveredLocations = function(eventList){
+  this.dirtyLog({
+    workerNames,
+    eventList
+  })
   return eventList.filter(TMEvent =>{
     return !workerNames.includes(TMEvent.location) 
   })

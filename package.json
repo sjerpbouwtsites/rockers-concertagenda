@@ -18,7 +18,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "backend-rockagenda": "killall -s 9 chrome; cd ~/dev/apache/concertagenda/backend; clear; node index.js force=all"
+    "backend": "killall -s 9 chrome; cd ~/dev/apache/concertagenda/backend; clear; node index.js force=all"
   },
   "eslintConfig": {
     "extends": [

@@ -37,17 +37,22 @@ occiiScraper.makeBaseEventList = async function () {
     return Array.from(document.querySelectorAll(".occii-event-display"))
       .filter((event, index) => index % workerData.workerCount === workerData.index)
       .map((occiiEvent) => {
+        
         const firstAnchor = occiiEvent.querySelector("a");
+        const title = firstAnchor.title;
+        const res = {
+          unavailable: "",
+          pageInfo: `<a href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+          errors: [],          
+          title,
+        }         
+
         const eventText = occiiEvent.textContent.toLowerCase();
-        const soldOut = eventText.includes('uitverkocht') || eventText.includes('sold out');
-        return {
-          venueEventUrl: firstAnchor.href,
-          title: firstAnchor.title,
-          soldOut,
-          shortText:
-            occiiEvent.querySelector(".occii-events-description")
-              ?.textContent ?? "",
-        };
+        res.soldOut = eventText.includes('uitverkocht') || eventText.includes('sold out');
+        res.venueEventUrl = firstAnchor.href;
+        res.shortText = occiiEvent.querySelector(".occii-events-description")?.textContent ?? null
+        return res;
+
       });
   }, {workerData});
 
@@ -58,17 +63,16 @@ occiiScraper.makeBaseEventList = async function () {
 };
 // GET PAGE INFO
 
-occiiScraper.getPageInfo = async function ({ page }) {
+occiiScraper.getPageInfo = async function ({ page, event}) {
   
   const {stopFunctie} =  await this.getPageInfoStart()
 
-  const pageInfo = await page.evaluate((months) => {
+  const pageInfo = await page.evaluate(({months, event}) => {
     const res = {
-      unavailable: "",
-      pageInfoID: `<a href='${document.location.href}'>${document.title}</a>`,
-      errorsVoorErrorHandler: [],
+      unavailable: event.unavailable,
+      pageInfo: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
+      errors: [],
     };
-
     res.image = document.querySelector(".wp-post-image")?.src ?? null;
     const eventCategoriesEl = document.querySelector(".occii-event-details");
     try {
@@ -99,21 +103,22 @@ occiiScraper.getPageInfo = async function ({ page }) {
       res.startDateTime = showtime
         ? new Date(`${eventDateString}T${showtime}`).toISOString()
         : new Date(`${eventDateString}T00:00`).toISOString();
-    } catch (error) {
-      res.errorsVoorErrorHandler.push({
-        error,
-        remarks: "date time wrap trycatch",
+    } catch (caughtError) {
+      res.errors.push({
+        error: caughtError,
+        remarks: `date time wrap trycatch drama ${res.pageInfo}`,
       });
+      return res;
     }
 
     res.priceTextcontent = document.getElementById('occii-single-event')?.textContent ?? null;
 
     res.genre =
       document.querySelector('[href*="events/categories"]')?.textContent ??
-      null;
+      null; // TODO genre?? 
     res.longTextHTML = document.querySelector(".occii-event-notes").innerHTML;
     return res;
-  }, getVenueMonths('occii'));
+  }, {months: getVenueMonths('occii'), event}); //TODO is verouderde functie getVenueMonths
 
   return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
   

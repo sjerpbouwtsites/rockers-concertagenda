@@ -37,10 +37,15 @@ effenaarScraper.makeBaseEventList = async function () {
       )
         .filter((eventEl, index) => index % workerData.workerCount === workerData.index)
         .map((eventEl) => {
-          const res = {};
-          res.title = eventEl.querySelector(".card-title")?.textContent.trim();
+          const title = eventEl.querySelector(".card-title")?.textContent.trim();
+          const res = {
+            unavailable: "",
+            pageInfo: `<a href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+            errors: [],          
+            title
+          }
           res.shortText = eventEl.querySelector(".card-subtitle")?.textContent ?? '';
-          res.venueEventUrl = eventEl?.href;
+          res.venueEventUrl = eventEl?.href ?? null;
           res.soldOut = !!(eventEl.querySelector('.card-content .card-status')?.textContent.toLowerCase().includes('uitverkocht') ?? null)
           return res;
         });
@@ -56,17 +61,17 @@ effenaarScraper.makeBaseEventList = async function () {
 
 // GET PAGE INFO
 
-effenaarScraper.getPageInfo = async function ({ page }) {
+effenaarScraper.getPageInfo = async function ({ page, event }) {
   
   const {stopFunctie} =  await this.getPageInfoStart()
 
   await page.waitForSelector(".event-bar-inner-row");
 
-  const pageInfo = await page.evaluate(({months}) => {
+  const pageInfo = await page.evaluate(({months, event}) => {
     const res = {
-      unavailable: "",
-      pageInfoID: `<a href='${document.location.href}'>${document.title}</a>`,
-      errorsVoorErrorHandler: [],
+      unavailable: event.unavailable,
+      pageInfo: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
+      errors: [],
     };
     res.image = document.querySelector(".header-image img")?.src ?? null;
     res.priceTextcontent = 
@@ -76,7 +81,8 @@ effenaarScraper.getPageInfo = async function ({ page }) {
       const dateText =
         document.querySelector(".header-meta-date")?.textContent.trim() ?? "";
       if (!dateText) {
-        return null;
+        res.unavailable += ' geen datumtext';
+        return res;
       }
       const [, dayNumber, monthName, year] = dateText.match(
         /(\d+)\s(\w+)\s(\d\d\d\d)/
@@ -84,12 +90,12 @@ effenaarScraper.getPageInfo = async function ({ page }) {
       const fixedDay = dayNumber.padStart(2, "0");
       const monthNumber = months[monthName];
       res.startDate = `${year}-${monthNumber}-${fixedDay}`;
-    } catch (error) {
-      res.errorsVoorErrorHandler.push({
-        error,
-        remarks: "bepalen datum get page info",
+    } catch (caughtError) {
+      res.errors.push({
+        error: caughtError,
+        remarks: `datumtext naar startDatum faal ${res.pageInfo}`,
       });
-      res.unavailable = "Geen datum";
+      res.unavailable += "datum omzetting faal";
     }
 
     let startTimeAr = [],
@@ -107,14 +113,13 @@ effenaarScraper.getPageInfo = async function ({ page }) {
       if (Array.isArray(doorTimeAr) && doorTimeAr.length) {
         res.doorTime = doorTimeAr[0];
       }
-    } catch (error) {
-      res.errorsVoorErrorHandler.push({
-        error,
-        remarks: `starttijd & deurtijd ${startTimeAr.join(
-          ""
-        )} ${doorTimeAr.join("")} get page info`,
+    } catch (caughtError) {
+      res.errors.push({
+        error: caughtError,
+        remarks: `date startDateTime etc faal ${res.pageInfo}`,
+        //TODO debugger  ${startTimeAr.join( ""          )} ${doorTimeAr.join("")}      
       });
-      res.unavailable = "Geen tijd";
+      res.unavailable += "Geen tijd gevonden";
     }
 
     res.startDateTimeString = `${res.startDate}T${res.startTime}:00`;
@@ -132,23 +137,17 @@ effenaarScraper.getPageInfo = async function ({ page }) {
           `${res.startDateTimeString}`
         ).toISOString();
       }
-    } catch (error) {
-      res.errorsVoorErrorHandler.push({
-        error,
-        remarks: `omzetten naar Date iso gaat fout ${startTimeAr.join(
-          ""
-        )} ${doorTimeAr.join("")} get page info`,
+    } catch (caughtError) {
+      res.errors.push({
+        error: caughtError,
+        remarks: `omzetten naar Date iso gaat fout ${res.pageInfo}`,
+        //TODO debugger ${startTimeAr.join(          ""          )} ${doorTimeAr.join("")}
       });
-      res.unavailable = "Geen tijd";
     }
 
-    res.longTextHTML = 
-      document.querySelector(".header ~ .blocks")?.innerHTML ?? '';
-    if (res.unavailable !== "") {
-      res.unavailable = `${res.unavailable}\n${res.pageInfoID}`;
-    }
+    res.longTextHTML = document.querySelector(".header ~ .blocks")?.innerHTML ?? '';
     return res;
-  },{ months: this.months});
+  },{ months: this.months,event});
 
   return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
   

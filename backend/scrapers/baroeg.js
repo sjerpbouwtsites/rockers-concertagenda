@@ -65,20 +65,20 @@ baroegScraper.makeBaseEventList = async function () {
         const title = eventEl.querySelector('.wp_theatre_event_title')?.textContent.trim() ?? null;
         const res = {
           unavailable: "",
-          pageInfoID: `<a href='${document.location.href}'>${title}</a>`,
-          errorsVoorErrorHandler: [],
+          pageInfo: `<a href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+          errors: [],
         };
         res.title = title;
         res.shortText = eventEl.querySelector('.wp_theatre_prod_excerpt')?.textContent.trim() ?? null;
         res.shortText += categorieTeksten;
-        res.image =eventEl.querySelector('.media .attachment-thumbnail')?.src.replace(/\d\d\dx\d\d\d/, '958x299') ?? null;
+        res.image =eventEl.querySelector('.media .attachment-thumbnail')?.src.replace(/\d\d\dx\d\d\d/, '300x300') ?? null; //TODO opzoeken wat ideale maten zijn
         res.venueEventUrl =venueEventUrl;
         
         res.startDate = eventEl.querySelector('.wp_theatre_event_startdate')?.textContent.trim().substring(3,26).split('/').reverse() ?? null;
         if (!res.startDate) {
-          res.errorsVoorErrorHandler.push({
-            error: new Error('geen startDate text gevonden.')
-          })
+          res.unavailable += 'geen startdate gevonden';
+          // debugger
+          return res;
         }
         const startYear = res.startDate[0].padStart(4, '20');
         const startMonth = res.startDate[1].padStart(2, '0');
@@ -86,16 +86,17 @@ baroegScraper.makeBaseEventList = async function () {
         res.startDate = `${startYear}-${startMonth}-${startDay}`;
         res.startTime = eventEl.querySelector('.wp_theatre_event_starttime')?.textContent ?? null;
         if (!res.startTime){
-          res.errorsVoorErrorHandler.push({
-            error: new Error(`geen startTime gevonden.`)
-          })            
+          res.unavailable += 'geen startDateTime etc gevonden';
+          // debugger
+          return res;   
         }
         try{
           res.startDateTime = new Date(`${res.startDate}T${res.startTime}:00`).toISOString();
-        } catch (error) {
-          res.errorsVoorErrorHandler.push({
-            error,
-            remarks: `date omzetting error ${error.message}<br>${res.pageInfoID}<br>${res.startDateTime}`,
+        } catch (errorCaught) {
+          res.errors.push({
+            error: errorCaught,
+            remarks: `date omzetting error ${res.pageInfo}`,
+            // TODO debugger ${error.message}<br>${res.pageInfo}<br>${res.startDateTime}
           });
         }
         return res;
@@ -109,16 +110,16 @@ baroegScraper.makeBaseEventList = async function () {
 
 // GET PAGE INFO
 
-baroegScraper.getPageInfo = async function ({ page }) {
+baroegScraper.getPageInfo = async function ({ page, event }) {
   
   const {stopFunctie} =  await this.getPageInfoStart()
 
   const pageInfo = await page.evaluate(
-    () => {
+    ({event}) => {
       const res = {
-        unavailable: "",
-        pageInfoID: `<a href='${document.location.href}'>${document.title}</a>`,
-        errorsVoorErrorHandler: [],
+        unavailable: event.unavailable,
+        pageInfo: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
+        errors: [],
       };
 
       res.priceTextcontent =
@@ -139,11 +140,8 @@ baroegScraper.getPageInfo = async function ({ page }) {
       }
       res.soldOut = !!(document.querySelector('.wp_theatre_event_tickets_status_soldout') ?? null)
 
-      if (res.unavailable) {
-        res.unavailable = `${res.unavailable} ${res.pageInfoID}`;
-      }
       return res;
-    },
+    }, {event}
     
   );
 

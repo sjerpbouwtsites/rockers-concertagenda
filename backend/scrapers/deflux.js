@@ -36,25 +36,28 @@ defluxScraper.makeBaseEventList = async function () {
 
   const {stopFunctie} = await this.makeBaseEventListStart()
 
-  const axiosRes = await axios
+  const axiosRes = await axios //TODO naar fetch
     .get(this.puppeteerConfig.app.mainPage.url)
     .then(( response )=> {
       return response.data;
     })
-    .catch((err)=> {
-      _t.handleError(err, workerData, 'main axios fail')
+    .catch((caughtError)=> {
+      _t.handleError(caughtError, workerData, `main axios fail`, 'close-thread')
     })
-
+  if (!axiosRes) return;
   const rawEvents = axiosRes.map(axiosResultSingle =>{
-    return {
+    const title = axiosResultSingle.title.rendered;
+    const res = {
+      unavailable: "",
+      pageInfo: `<a class='pageinfo' href="${this.puppeteerConfig.app.mainPage.url}">${workerData.family} main - ${title}</a>`,
+      errors: [],
       venueEventUrl: axiosResultSingle.link,
-      title: axiosResultSingle.title.rendered,
-      id: axiosResultSingle.id
-    }
+      id: axiosResultSingle.id,
+      title,
+    };    
+    return res;
   })
   
-  if (!rawEvents.length) return true;
-
   return await this.makeBaseEventListEnd({
     stopFunctie, rawEvents}
   );
@@ -63,20 +66,23 @@ defluxScraper.makeBaseEventList = async function () {
 
 // GET PAGE INFO
 
-defluxScraper.getPageInfo = async function ({ page }) {
+defluxScraper.getPageInfo = async function ({ page, event}) {
  
   const {stopFunctie} =  await this.getPageInfoStart()
 
-  const pageInfo = await page.evaluate(() => {
+  const pageInfo = await page.evaluate(({event}) => {
+
     const res = {
-      unavailable: "",
-      pageInfoID: `<a href='${document.location.href}'>${document.title}</a>`,
-      errorsVoorErrorHandler: [],
+      unavailable: event.unavailable,
+      pageInfo: `<a href='${document.location.href}'>${document.title}</a>`,
+      errors: [],
     };
 
     const eventScheme = document.querySelector('.evo_event_schema');
     if(!eventScheme) {
-      res.unavailable += ` geen event scheme gevonden` 
+      res.errors.push({error: new Error('HTML parsing error'), remarks: `geen event scheme gevonden ${res.pageInfo}`})
+      res.unavailable += 'geen event scheme gevonden, geen data'
+      return res;  
     }
 
     res.image = eventScheme.querySelector('[itemprop="image"]')?.getAttribute('content') ?? '';
@@ -84,27 +90,24 @@ defluxScraper.getPageInfo = async function ({ page }) {
     try {
       res.startTime = document.querySelector('.evcal_time.evo_tz_time').textContent.match(/\d\d:\d\d/)[0];
       res.startDateTime = new Date(`${res.startDate}T${res.startTime}:00`).toISOString()
-    } catch (error) {
-      res.errorsVoorErrorHandler.push({error, remarks: 'starttime match'})
-    }
-    
-    if (!res.startDateTime) {
-      res.unavailable += ' geen start date time'
+    } catch (caughtError) {
+      res.errors.push({error: caughtError, remarks: `starttime match ${res.pageInfo}`})
+      return res;
     }
 
     if (document.querySelector('.evcal_desc3')?.textContent.toLowerCase().includes('deur open') ?? false) {
       try {
         res.endTime = document.querySelector('.evcal_desc3').textContent.match(/\d\d:\d\d/)[0];
         res.endDateTime = new Date(`${res.startDate}T${res.endTime}:00`).toISOString();
-      } catch (error) {
-        //res.errorsVoorErrorHandler.push({error, remarks: 'door open starttime match'})
+      } catch (caughtError) {
+        res.errors.push({error: caughtError, remarks: `door open starttime match ${res.pageInfo}`})
       }
     }
     
     res.price = eventScheme.querySelector('[itemprop="event-price"]')?.getAttribute('content') ?? '';
     res.longTextHTML = document.querySelector('[itemprop="description"]')?.innerHTML ?? '';
     return res;
-  }, null);
+  }, {event});
 
   return await this.getPageInfoEnd({pageInfo, stopFunctie})
 
