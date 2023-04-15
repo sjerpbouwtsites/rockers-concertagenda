@@ -14,7 +14,7 @@ const patronaatScraper = new AbstractScraper(makeScraperConfig({
     },
     app: {
       mainPage: {
-        url: "https://patronaat.nl/programma/?type=event&s=&eventtype%5B%5D=84",
+        url: "https://patronaat.nl/programma/?type=event&s=&eventtype%5B%5D=157",
         requiredProperties: ['venueEventUrl', 'title']
       }
     }
