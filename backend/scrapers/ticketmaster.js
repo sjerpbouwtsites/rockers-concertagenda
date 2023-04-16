@@ -230,12 +230,12 @@ ticketmasterScraper.filterForMetal = function(rawEvents){
 
   return rawEvents.filter(evs => {
     const hasMetalSelf = evs?.classifications.some(classif => {
-      const genreAndSub = `${classif?.genre?.name} ${classif?.subGenre.name}`.toLowerCase();
+      const genreAndSub = `${classif?.genre?.name} ${classif?.subGenre?.name}`.toLowerCase();
       return genreAndSub.includes('metal') || genreAndSub.includes('rock') ||genreAndSub.includes('punk') 
     })
     const hasMetalAttractions = evs?.attractions.some(attr => {
       return attr.classifications.some(classif => {
-        const genreAndSub = `${classif?.genre?.name} ${classif?.subGenre.name}`.toLowerCase();
+        const genreAndSub = `${classif?.genre?.name} ${classif?.subGenre?.name}`.toLowerCase();
         return genreAndSub.includes('rock') || genreAndSub.includes('metal') || genreAndSub.includes('punk')
       })
     })
