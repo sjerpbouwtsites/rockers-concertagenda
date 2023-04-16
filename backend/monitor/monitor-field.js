@@ -148,7 +148,14 @@ export default class MonitorField {
             if (errorTextRow.includes("node:internal")) return "";
             let t = errorTextRow;
             if (errorTextRow.includes("file://")) {
-              const volleFileNaam = errorTextRow.match(/(file.*)\)/)[1];
+              let volleFileNaam
+              try {
+                volleFileNaam= errorTextRow.match(/(file.*)\)/)[1];
+              } catch (error) {
+                volleFileNaam= errorTextRow.match(/(file.*)/)[1];
+                console.error(new Error('SCHEIT'))                
+              }
+               
               const fileLink = errorTextRow
                 .split("dev/apache")[1]
                 .replace(")", "");
