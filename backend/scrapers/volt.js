@@ -73,7 +73,7 @@ voltScraper.makeBaseEventList = async function () {
 
 // GET PAGE INFO
 
-voltScraper.getPageInfo = async function ({ page, url}) {
+voltScraper.getPageInfo = async function ({ page, url, event}) {
 
   const {stopFunctie} =  await this.getPageInfoStart()
 
@@ -86,10 +86,12 @@ voltScraper.getPageInfo = async function ({ page, url}) {
   }
 
   const pageInfo = await page.evaluate(
-    ({ months }) => {
+    ({ months, event }) => {
+
       const res = {
-        unavailable: null,
-        pageInfoID: `<a href='${document.location.href}'>${document.title}</a>`,
+        unavailable: event.unavailable,
+        pageInfo: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
+        errors: [],
       };
       const curMonthNumber = new Date().getMonth() + 1;
       const curYear = new Date().getFullYear();
@@ -166,7 +168,7 @@ voltScraper.getPageInfo = async function ({ page, url}) {
       ;
       return res;
     },
-    { months: this.months, url }
+    { months: this.months, url ,event}
   );
 
   return await this.getPageInfoEnd({pageInfo, stopFunctie, page})

@@ -39,13 +39,15 @@ doornroosjeScraper.makeBaseEventList = async function () {
     return Array.from(document.querySelectorAll(".c-program__item"))
       .filter((eventEl, index) => index % workerData.workerCount === workerData.index)
       .map((eventEl) => {
-        const res = {
-          unavailable: null,
-        };
-        res.title =
+        const title =
           eventEl.querySelector(".c-program__title")?.textContent.trim() ??
-          eventEl.querySelector("h1,h2,h3")?.textContent.trim();
-        null;
+          eventEl.querySelector("h1,h2,h3")?.textContent.trim() ?? null;
+        const res = {
+          unavailable: "",
+          pageInfo: `<a href='${document.location.href}'>${workerData.family} - main - ${title}</a>`,
+          errors: [],
+          title
+        };
         res.shortText = 
           eventEl
             .querySelector(".c-program__content")
@@ -53,9 +55,6 @@ doornroosjeScraper.makeBaseEventList = async function () {
             .replace(res.title, "") ?? '';
         res.venueEventUrl = eventEl?.href;
         res.soldOut = eventEl.querySelector('.c-program__info-container')?.textContent.toLowerCase().includes('uitverkocht') ?? null;
-        if (!res.title || !res.venueEventUrl) {
-          res.unavailable = "title of url ontbreken";
-        }
         return res;
       });
   }, {workerData});
@@ -68,15 +67,15 @@ doornroosjeScraper.makeBaseEventList = async function () {
 
 // GET PAGE INFO
 
-doornroosjeScraper.getPageInfo = async function ({ page }) {
+doornroosjeScraper.getPageInfo = async function ({ page, event }) {
   
   const {stopFunctie} =  await this.getPageInfoStart()
 
-  const pageInfo = await page.evaluate(({months}) => {
+  const pageInfo = await page.evaluate(({months, event}) => {
     const res = {
-      unavailable: "",
-      pageInfoID: `<a href='${document.location.href}'>${document.title}</a>`,
-      errorsVoorErrorHandler: [],
+      unavailable: event.unavailable,
+      pageInfo: `<a href='${event.venueEventUrl}'>${event.title}</a>`,
+      errors: [],
     };
     res.image =
       document.querySelector(".c-header-event__image img")?.src ?? null;
@@ -104,6 +103,7 @@ doornroosjeScraper.getPageInfo = async function ({ page }) {
       startDate = `${year}-${month}-${day}`;
     } else {
       res.unavailable = "geen startdatum gevonden. ";
+      return res;
     }
 
     if (startDate) {
@@ -125,9 +125,9 @@ doornroosjeScraper.getPageInfo = async function ({ page }) {
               `${startDate}:${timeMatches[0]}`
             ).toISOString();
           }
-        } catch (error) {
-          res.errorsVoorErrorHandler.push({
-            error,
+        } catch (caughtError) {
+          res.errors.push({
+            error: caughtError,
             remarks:
               "fout bij tijd of datums. matches: " +
               timeMatches +
@@ -135,15 +135,14 @@ doornroosjeScraper.getPageInfo = async function ({ page }) {
               startDate,
           });
         }
-      } else {
-        res.unavailable += `geen tijden gevonden. `;
-      }
+      } 
     }
-    if (res.unavailable) {
-      res.unavailable += res.pageInfoID;
+    if (!res.startDateTime) {
+      res.unavailable += `geen starttijden gevonden. `; //TODO nog via unavailable want de check in getPageInfo gaat dit oplossen.
     }
+  
     return res;
-  }, {months: this.months});
+  }, {months: this.months, event});
 
   return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
 

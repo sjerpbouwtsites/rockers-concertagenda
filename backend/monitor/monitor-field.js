@@ -1,5 +1,4 @@
 export default class MonitorField {
-
   constructor(name, target, type) {
     this.name = name;
     this.target = target;
@@ -34,6 +33,9 @@ export default class MonitorField {
   objectNaarTekst(objectTeVeranderen) {
     let tt = { ...objectTeVeranderen };
     delete tt.workerData;
+    if (tt.debug){
+      tt = tt.debug
+    }
     return JSON.stringify(tt, null, 2).replace(/[{]/g, "").replace(/[}]/g, "");
   }
   compareWorkers(workerA, workerB) {
@@ -52,6 +54,7 @@ export default class MonitorField {
     this.update(updateData);
   }
   update(updateData) {
+
     this.data.unshift(updateData);
     const mainFieldEl = document.getElementById(this.mainFieldName);
     switch (this.type) {
@@ -145,7 +148,14 @@ export default class MonitorField {
             if (errorTextRow.includes("node:internal")) return "";
             let t = errorTextRow;
             if (errorTextRow.includes("file://")) {
-              const volleFileNaam = errorTextRow.match(/(file.*)\)/)[1];
+              let volleFileNaam
+              try {
+                volleFileNaam= errorTextRow.match(/(file.*)\)/)[1];
+              } catch (error) {
+                volleFileNaam= errorTextRow.match(/(file.*)/)[1];
+                console.error(new Error('SCHEIT'))                
+              }
+               
               const fileLink = errorTextRow
                 .split("dev/apache")[1]
                 .replace(")", "");
@@ -205,15 +215,22 @@ export default class MonitorField {
               rollRow.messageData?.content ?? rollRow.messageData
             )
             : String(rollRow.messageData?.content ?? rollRow.messageData);
+
+        // vervang losse links met ankers
+        const metAnkers = hoofdPrintTekst.replaceAll(/"(https:.*)"/g, "<a href='$1' target='_blank'>link</a>");
+        const zonderAanhalingstekens = metAnkers.replace(/\"/g,'');
+
+
         return `<li class='monitorfield__list-item'>
         <span class='monitorfield__list-item-left'>${titleText}</span>
-        <div class='monitorfield__list-item-right'>${hoofdPrintTekst}</div>
+        <div class='monitorfield__list-item-right'>${zonderAanhalingstekens}</div>
       </li>`;
       })
       .join("");
     return ` <ul class='monitorfield__list monitorfield__list--expanded'>${listItems}</ul>`;
   }
   get tableUpdatedHTML() {
+
     const workersPerFamily = {};
 
     Object.entries(this.data.workers).forEach(([workerName, workerData]) => {
@@ -230,15 +247,15 @@ export default class MonitorField {
     });
 
     let workerNumberedHeads = "";
-    for (let i = 0; i < 9; i++) {
+    for (let i = 0; i < 5; i++) {
       workerNumberedHeads += `<th class='tableheadnumber'>${i}</th>`;
     }
 
     const tableHead = `
     <thead>
-    <tr>
+    <!--<tr>-->
     <th>Workers<span class='kutspacer'></span></th>${workerNumberedHeads}
-    </tr>
+    <!--</tr>-->
     </thead>
     `;
 
@@ -246,12 +263,20 @@ export default class MonitorField {
 
     const tableBodyRows = Object.values(workersPerFamily)
       .map((workerFamily, index) => {
+
+        const workerFamilyNamesCharsets = []
+        tableRowsFirstCellsTextcontent[index].split('').forEach((char,index) => {
+          const charsetIndex = Math.floor(index / 6);
+          if (!workerFamilyNamesCharsets[charsetIndex]) {
+            workerFamilyNamesCharsets[charsetIndex] = '';
+          }
+          workerFamilyNamesCharsets[charsetIndex] = workerFamilyNamesCharsets[charsetIndex] + char
+        })
+
         const sortedFamily = workerFamily.sort(this.compareWorkers);
         return `
       <tr>
-        <th>${
-  tableRowsFirstCellsTextcontent[index]
-}<span class='kutspacer'></span></th>
+        <th>${workerFamilyNamesCharsets.join('<br>')}<span class='kutspacer'></span></th>
         ${sortedFamily
     .map((worker) => {
       let tdClass = "worker-data-cell ";

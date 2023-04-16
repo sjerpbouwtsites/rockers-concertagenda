@@ -42,14 +42,16 @@ melkwegScraper.makeBaseEventList = async function () {
       })
       .filter((eventEl, index) => index % workerData.workerCount === workerData.index)
       .map((eventEl) => {
+        const title = eventEl.querySelector('h2')?.textContent ?? "";
         const res = {
           unavailable: "",
-          pageInfoID: `<a href='${document.location.href}'>${document.title}</a>`,
-          errorsVoorErrorHandler: [],
-        };
-        const anchor = eventEl.querySelector("a");
-        res.venueEventUrl = anchor.href;
-        res.title = eventEl.querySelector('h2')?.textContent ?? "";
+          pageInfo: `<a href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+          errors: [],          
+          title
+        }   
+        
+        res.venueEventUrl = eventEl.querySelector("a")?.href ?? null;
+
         try {
           const startDateMatch = eventEl.querySelector('.date-label')?.textContent.toLowerCase().match(/(\d+)\s+(\w+)\s+(\d+)/)
           if (startDateMatch && startDateMatch.length > 3){
@@ -59,10 +61,10 @@ melkwegScraper.makeBaseEventList = async function () {
             // PAS IN PAGE INFO TIJD AAN.
             res.startDateTime = new Date(`${year}-${month}-${day}T12:00:00`).toISOString(); 
           }          
-        } catch (error) {
+        } catch (caughtError) {
           res.unavailable = "geen startDate";
-          res.errorsVoorErrorHandler.push({
-            error,remarks: `startDate main fout ${res.title}`
+          res.errors.push({
+            error: caughtError,remarks: `startDate main fout ${res.pageInfo}`
           })
         }
         return res;
@@ -77,21 +79,21 @@ melkwegScraper.makeBaseEventList = async function () {
 
 melkwegScraper.getPageInfo = async function ({ page, event }) {
 
-  this.dirtyLog(event)
-
   const {stopFunctie} =  await this.getPageInfoStart()
   
   const pageInfo = await page.evaluate(({event}) => {
     const res = {
-      unavailable: "",
-      pageInfoID: `<a href='${document.location.href}'>${document.title}</a>`,
-      errorsVoorErrorHandler: [],
+      unavailable: event.unavailable,
+      pageInfo: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
+      errors: [],
     };
     const mainTicketInfo =  document.querySelector('.main-ticket-info') ?? null;
     try {
       const timeText = mainTicketInfo?.textContent.toLowerCase().split('tijden')[1] ?? null;
-      if (!timeText) {
-        throw Error(`geen tijd tekst gevonden in ${mainTicketInfo?.textContent}`)
+      if (!timeText){
+        res.unavailable += `geen tijd tekst gevonden in `;
+        return res;
+        //TODO debugger ${mainTicketInfo?.textContent}
       }
       const timesMatches = timeText.match(/(\d\d:\d\d).*(\d\d:\d\d)/);
       const startTime = timesMatches[1]
@@ -99,19 +101,18 @@ melkwegScraper.getPageInfo = async function ({ page, event }) {
       const startDate = event.startDateTime.split('T')[0]
       res.startDateTime = new Date(`${startDate}T${startTime}:00`).toISOString();
       res.doorOpenDateTime = new Date(`${startDate}T${openTime}:00`).toISOString();
-    } catch (error) {
+    } catch (caughtError) {
       res.unavailable = "time fouten";
-      res.errorsVoorErrorHandler.push({
-        error,
-        remarks: `time fouten ${event.title} ${error.message}`,
+      res.errors.push({
+        error: caughtError,
+        remarks: `time fouten ${res.pageInfo}`,
       });
+      return res;
     }
     res.priceTextcontent = mainTicketInfo?.textContent ?? '';
     res.longTextHTML = Array.from(document.querySelectorAll('.main-content .production-title-wrapper ~ *')).reduce((prev, next) =>{return prev + next.outerHTML}, '');
     res.image = document.querySelector('.img-wrapper img')?.getAttribute('data-lazy-src') ?? null;
-    if (res.unavailable !== "") {
-      res.unavailable = `${res.unavailable}\n${res.pageInfoID}`;
-    }
+
     return res;
   }, {event});
 

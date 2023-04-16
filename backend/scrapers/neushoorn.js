@@ -33,51 +33,50 @@ neushoornScraper.makeBaseEventList = async function () {
     await page.waitForSelector('[href*="Heavy"]', {
       timeout: this.singlePageTimeout,
     });
-  } catch (error) {
-    _t.handleError(error, workerData, "Neushoorn wacht op laden agenda pagina");
-  }
-
-  await page.click('[href*="Heavy"]');
-
-  try {
+    await page.click('[href*="Heavy"]');
     await page.waitForSelector(".productions__item", {
       timeout: this.singlePageTimeout,
     });
-  } catch (error) {
-    _t.handleError(
-      error,
-      workerData,
-      "Neushoorn wacht op laden resultaten filter"
+    await _t.waitFor(50);
+  } catch (caughtError) {
+    _t.handleError(caughtError, workerData, `Laad en klikwachten timeout neushoorn`, 'close-thread');
+    return await this.makeBaseEventListEnd({
+      stopFunctie, page, rawEvents:[]}
     );
   }
 
-  await _t.waitFor(50);
-
-  const rawEvents = await page.evaluate(() => {
-    return Array.from(document.querySelectorAll(".productions__item")).map(
-      (itemEl) => {
-        const textContent = itemEl.textContent.toLowerCase();
+  const rawEvents = await page.evaluate(({workerData}) => {
+    return Array.from(document.querySelectorAll(".productions__item"))
+      .filter(eventEl => {
+        const textContent = eventEl.textContent.toLowerCase();
         const isRockInText =
           textContent.includes("punk") ||
           textContent.includes("rock") ||
           textContent.includes("metal") ||
           textContent.includes("industrial") ||
-          textContent.includes("noise");
-        const title = itemEl.querySelector(
-          ".productions__item__content span:first-child"
-        ).textContent;
-        const venueEventUrl = itemEl.href;
-        const soldOut = !!(itemEl.querySelector(".chip")?.textContent.toLowerCase().includes('uitverkocht') ?? null)
-        return {
-          venueEventUrl,
-          soldOut,
-          textContent,
-          isRockInText,
-          title
-        };
-      }
-    );
-  }, workerData.index);
+          textContent.includes("noise");        
+        return isRockInText;
+      })
+      .filter((eventEl, index) => index % workerData.workerCount === workerData.index)
+      .map(
+        (eventEl) => {
+        
+          const title = eventEl.querySelector(
+            ".productions__item__content span:first-child"
+          ).textContent;
+          const res = {
+            unavailable: "",
+            pageInfo: `<a href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+            errors: [],          
+            title
+          }  
+
+          res.venueEventUrl = eventEl.href;
+          res.soldOut = !!(eventEl.querySelector(".chip")?.textContent.toLowerCase().includes('uitverkocht') ?? null)
+          return res;
+        }
+      );
+  }, {workerData});
   return await this.makeBaseEventListEnd({
     stopFunctie, page, rawEvents}
   );
@@ -88,16 +87,16 @@ neushoornScraper.makeBaseEventList = async function () {
 
 // GET PAGE INFO
 
-neushoornScraper.getPageInfo = async function ({ page }) {
+neushoornScraper.getPageInfo = async function ({ page,event }) {
   
   const {stopFunctie} =  await this.getPageInfoStart()
   
   const pageInfo = await page.evaluate(
-    ({ months }) => {
+    ({ months, event }) => {
       const res = {
-        unavailable: "",
-        pageInfoID: `<a href='${document.location.href}'>${document.title}</a>`,
-        errorsVoorErrorHandler: [],
+        unavailable: event.unavailable,
+        pageInfo: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
+        errors: [],
       };
 
       const dateTextcontent =
@@ -111,8 +110,9 @@ neushoornScraper.getPageInfo = async function ({ page }) {
         const day = dateTextMatch[1].padStart(2, "0");
         res.startDate = `${year}-${month}-${day}`;
       } else {
-        res.startDate = "onbekend";
+        res.startDate = null;
         res.unavailable += " geen start date";
+        return res;
       }
 
       const timeTextcontent =
@@ -144,10 +144,10 @@ neushoornScraper.getPageInfo = async function ({ page }) {
         const longEl = summaryEl.parentNode;
         longEl.removeChild(summaryEl);
         res.longTextHTML = longEl.innerHTML;
-      } catch (error) {
-        res.errorsVoorErrorHandler.push({
-          error,
-          remarks: "long text html poging mislukt",
+      } catch (caughtError) {
+        res.errors.push({
+          error: caughtError,
+          remarks: `longTextHTML faal ${res.pageInfo}`,
         });
       }
 
@@ -160,7 +160,7 @@ neushoornScraper.getPageInfo = async function ({ page }) {
 
       return res;
     },
-    { months: neushoornMonths }
+    { months: neushoornMonths, event }
   );
 
   return await this.getPageInfoEnd({pageInfo, stopFunctie, page})

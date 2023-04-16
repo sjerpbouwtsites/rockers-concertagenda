@@ -12,14 +12,23 @@ export default class MusicEvent {
   longText = null;
   image = null;
   soldOut = null;
+  unavailable = null; // wordt: of iets verplaatst is. // TODO
+  corrupted = null; // wordt: als datum ontbreekt oid. //TODO
+  correctMusic = null; // TODO music check integreren hiermee
   constructor(init, enforceMusicEventType = true) {
     this.merge(init, enforceMusicEventType);
   }
-  merge(conf, enforceMusicEventType) {
-    for (let confKey in conf) {
-      if (!enforceMusicEventType || Object.prototype.hasOwnProperty.call(this, confKey)) {
-        this[confKey] = conf[confKey];
+  merge(conf, enforceMusicEventType = true) {
+    if (enforceMusicEventType){
+      for (let confKey in conf) {
+        if (Object.prototype.hasOwnProperty.call(this, confKey)) {
+          this[confKey] = conf[confKey];
+        }
       }
+    } else {
+      for (let confKey in conf) {
+        this[confKey] = conf[confKey];
+      }      
     }
   }
   register() {

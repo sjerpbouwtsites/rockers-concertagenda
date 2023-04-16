@@ -32,29 +32,29 @@ dehellingScraper.makeBaseEventList = async function () {
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
-  const rawEvents = await page.evaluate(() => {
+  const rawEvents = await page.evaluate(({workerData}) => {
     return Array.from(
       document.querySelectorAll(
         '.c-event-card'
       )
     ).map((eventEl) => {
+      
+      const schemaData = JSON.parse(eventEl.querySelector('[type="application/ld+json"]').innerHTML) 
+      const title = schemaData?.name
 
       const res = {
         unavailable: "",
-        pageInfoID: `<a href='${document.location.href}'>${document.title}</a>`,
-        errorsVoorErrorHandler: [],
+        pageInfo: `<a href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+        errors: [],
+        title,
       };      
 
-
-
-      const schemaData = JSON.parse(eventEl.querySelector('[type="application/ld+json"]').innerHTML) 
-      res.title = schemaData?.name
       try {
         res.endDateTime = new Date(schemaData.endDate.replace(' ','T')).toISOString();
-      } catch (error) {
-        res.errorsVoorErrorHandler.push({error, remarks: 'end date time datestring omzetting'})        
+      } catch (caughtError) {
+        res.errors.push({error: caughtError, remarks: `end date time datestring omzetting ${title}`})        
       }
-      res.image = schemaData?.image
+      res.image = schemaData?.image ?? null;
       let startDateTimeString;
       try {
         const metaEl = eventEl.querySelector('.c-event-card__meta') ?? null;
@@ -68,21 +68,20 @@ dehellingScraper.makeBaseEventList = async function () {
             res.startDateTime = new Date(startDateTimeString).toISOString();
           }
         }
-      } catch (error) {
-        res.errorsVoorErrorHandler.push({error, remarks: `start date time eruit filteren error \n ${res.endDateTime} \n ${startDateTimeString}`})        
+      } catch (caughtError) {
+        res.errors.push({error: caughtError, remarks: `start date time eruit filteren error \n ${res.endDateTime} \n ${startDateTimeString} ${title}`})        
       }
 
-
-      if (!res.startTime) {
-        res.startDateTime= res.endDateTime;
+      if (!res.startTime && res.endDateTime) {
+        res.startDateTime = res.endDateTime;
         res.endDateTime = null;
       } 
 
       res.venueEventUrl = schemaData.url
-      res.shortText = schemaData?.description
+      res.shortText = schemaData?.description ?? null;
+
       return res;
-    });
-  });
+    })},{workerData});
 
   return await this.makeBaseEventListEnd({
     stopFunctie, page, rawEvents}
@@ -92,27 +91,21 @@ dehellingScraper.makeBaseEventList = async function () {
 
 // GET PAGE INFO
 
-dehellingScraper.getPageInfo = async function ({ page }) {
+dehellingScraper.getPageInfo = async function ({ page,event }) {
   
   const {stopFunctie} =  await this.getPageInfoStart()
   
   const pageInfo = await page.evaluate(
-    () => {
+    ({event}) => {
       const res = {
-        unavailable: "",
-        pageInfoID: `<a href='${document.location.href}'>${document.title}</a>`,
-        errorsVoorErrorHandler: [],
+        unavailable: event.unavailable,
+        pageInfo: `<a href='${event.venueEventUrl}'>${event.title}</a>`,
+        errors: [],
       };
-
       res.longTextHTML = document.querySelector('.c-event-content')?.innerHTML
-
-
-      if (res.unavailable !== "") {
-        res.unavailable = `${res.unavailable}\n${res.pageInfoID}`;
-      }
       return res;
     },
-    null
+    {event}
   );
 
   return await this.getPageInfoEnd({pageInfo, stopFunctie, page})

@@ -18,7 +18,9 @@ const boerderijScraper = new AbstractScraper(makeScraperConfig({
     app: {
       mainPage: {
         useCustomScraper: true,
-        url: 'https://zieonder.nl',
+        url: `https://poppodiumboerderij.nl/includes/ajax/events.php?filters=7,8,9,6&search=&limit=15&offset=${
+          workerData.index * 15
+        }&lang_id=1&rooms=&month=&year=`,
         requiredProperties: ['venueEventUrl', 'title']
       }
     }
@@ -34,22 +36,21 @@ boerderijScraper.makeBaseEventList = async function () {
   const {stopFunctie} = await this.makeBaseEventListStart()
 
   const rawEvents = await axios
-    .get(
-      `https://poppodiumboerderij.nl/includes/ajax/events.php?filters=7,8,9,6&search=&limit=15&offset=${
-        workerData.index * 15
-      }&lang_id=1&rooms=&month=&year=`
-    )
+    .get(this.puppeteerConfig.app.mainPage.url)
     .then((response) => {
       return response.data;
     });
 
-  if (!rawEvents.length) return true;
-  rawEvents.forEach((event) => {
-    event.image = `https://lift3cdn.nl/image/115/784x476/${event.file}`;
-    event.venueEventUrl = `https://poppodiumboerderij.nl/programma/${event.seo_slug}`;
-    event.shortText = event.subtitle;
-    event.title = event.title + `&id=${event.id}`;
-  });
+  if (rawEvents.length) {
+    rawEvents.forEach((event) => {
+      event.image = `https://lift3cdn.nl/image/115/784x476/${event.file}`;
+      event.venueEventUrl = `https://poppodiumboerderij.nl/programma/${event.seo_slug}`;
+      event.shortText = event.subtitle;
+      event.title = event.title + `&id=${event.id}`;
+    });
+  } else {
+    // debugger
+  }
 
   return await this.makeBaseEventListEnd({
     stopFunctie, rawEvents}
@@ -66,33 +67,29 @@ boerderijScraper.getPageInfo = async function ({ event }) {
   const [realEventTitle, realEventId] = event.title.split("&id=");
   event.title = realEventTitle;
 
-  const pageInfo = {
-    unavailable: "",
-    pageInfoID: `<a href='${event.venueEventUrl}'>${event.title}</a>`,
-    errorsVoorErrorHandler: [],
-    ...event,
+  const res = {
+    unavailable: event.unavailable,
+    pageInfo: `<a class='page-info' href='${this.puppeteerConfig.app.mainPage.url}'>${event.title}</a>`,
+    errors: [],
   };
 
-  ///
-
+  const url = `https://poppodiumboerderij.nl/includes/ajax.inc.php?id=${realEventId}&action=getEvent&lang_id=1`;
   const ajaxRes = await axios
-    .get(
-      `https://poppodiumboerderij.nl/includes/ajax.inc.php?id=${realEventId}&action=getEvent&lang_id=1`
-    )
+    .get(url)
     .then((response) => {
       return response.data;
     })
-    .catch((error) => {
-      pageInfo.errorsVoorErrorHandler.push({
-        error,
-        remarks: `ajax req ${`https://poppodiumboerderij.nl/includes/ajax.inc.php?id=${realEventId}&action=getEvent&lang_id=1`} faal`,
+    .catch(caughtError => {
+      res.errors.push({
+        error:caughtError,
+        remarks: `ajax ${url} faal ${res.pageInfo}`,
       });
+      res.unavailable += 'singlePage gecatched'
     });
 
   if (!ajaxRes) {
-    pageInfo.unavailable += ` ajax verzoek faalt naar ${`https://poppodiumboerderij.nl/includes/ajax.inc.php?id=${realEventId}&action=getEvent&lang_id=1`}`;
-    clearTimeout(stopFunctie);
-    return pageInfo;
+    res.unavailable += `ajax verzoek faalt naar ${url}`;
+    return await this.getPageInfoEnd({res, stopFunctie})
   }
 
   try {
@@ -101,52 +98,50 @@ boerderijScraper.getPageInfo = async function ({ event }) {
     if (youtubeVideoIDMatch && youtubeVideoIDMatch.length) {
       youtubeIframe = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${youtubeVideoIDMatch[0]}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
     }
-    pageInfo.longTextHTML =`${ajaxRes.description}<br>${youtubeIframe}`;
-  } catch (error) {
-    pageInfo.errorsVoorErrorHandler.push({
-      error,
-      remarks: "ajax fail lol",
+    res.longTextHTML =`${ajaxRes.description}<br>${youtubeIframe}`;
+  } catch (catchedError) {
+    res.errors.push({
+      error: catchedError,
+      remarks: `Mislukt iframe te knutselen met video ${res.pageInfo}`,
     });
   }
 
-  pageInfo.boerderijID = ajaxRes.id;
+  res.boerderijID = ajaxRes.id;
 
   try {
     
-    pageInfo.priceTextcontent = `${ajaxRes?.entrance_price ?? ''} ${ajaxRes?.ticket_price ?? ''} `
-  } catch (error) {
-    pageInfo.errorsVoorErrorHandler.push({
-      error,
-      remarks: "prijsbewerking faal",
+    res.priceTextcontent = `${ajaxRes?.entrance_price ?? ''} ${ajaxRes?.ticket_price ?? ''} `
+  } catch (catchedError) {
+    res.errors.push({
+      error: catchedError,
+      remarks: `prijsbewerking faal ${res.pageInfo}`,
     });
   }
 
   try {
-    pageInfo.startDateTime = new Date(
+    res.startDateTime = new Date(
       `${ajaxRes.event_date}T${ajaxRes.event_start}`
     ).toISOString();
-  } catch (error) {
-    pageInfo.errorsVoorErrorHandler.push({
-      error,
-      remarks: "startDateTime samenvoeging",
+  } catch (catchedError) {
+    res.errors.push({
+      error: catchedError,
+      remarks: `startDateTime samenvoeging ${res.pageInfo}`,
     });
-    pageInfo.unavailable += " geen startDateTime";
+    res.unavailable += " geen startDateTime";
   }
   try {
-    pageInfo.doorOpenDateTime = new Date(
+    res.doorOpenDateTime = new Date(
       `${ajaxRes.event_date}T${ajaxRes.event_open}`
     ).toISOString();
-  } catch (error) {
-    pageInfo.errorsVoorErrorHandler.push({
-      error,
-      remarks: "doorOpenDateTime samenvoeging",
+  } catch (catchedError) {
+    res.errors.push({
+      error: catchedError,
+      remarks: `doorOpenDateTime samenvoeging ${res.pageInfo}`,
     });
   }
 
-  pageInfo.soldOut = ajaxRes?.label?.title?.toLowerCase().includes('uitverkocht') ?? null
+  res.soldOut = ajaxRes?.label?.title?.toLowerCase().includes('uitverkocht') ?? null
 
-  this.dirtyLog({jal: ajaxRes})
-
-  return await this.getPageInfoEnd({pageInfo, stopFunctie})
+  return await this.getPageInfoEnd({pageInfo: res, stopFunctie})
 
 };

@@ -39,40 +39,43 @@ p60Scraper.makeBaseEventList = async function () {
 
   await _t.waitFor(50);
 
-  const rawEvents = await page.evaluate(() => {
+  const rawEvents = await page.evaluate(({workerData}) => {
     return Array.from(document.querySelectorAll(".views-infinite-scroll-content-wrapper > .p60-list__item-container")).filter(itemEl => {
       return itemEl.textContent.includes('concert')
     }).map(
       (itemEl) => {
-
-        const res = {
-          unavailable: "",
-          errorsVoorErrorHandler: [],          
-        }
-        
-        //const textContent = itemEl.textContent.toLowerCase();
-        res.title = itemEl.querySelector(
+        const title = itemEl.querySelector(
           ".p60-list__item__title"
         )?.textContent.trim() ?? '';
+
+        const res = {
+          unavailable: '',
+          pageInfo: `<a href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+          errors: [],
+          title
+        };
+
         res.venueEventUrl = itemEl.querySelector('.field-group-link')?.href;
-        res.pageInfoID = `<a href='${res.venueEventUrl}'>${res.title}</a>`;
+
         const doorOpenDateTimeB = itemEl.querySelector('.p60-list__item__date time')?.getAttribute('datetime')
-        
         try {
           res.doorOpenDateTime = new Date(doorOpenDateTimeB).toISOString();
-        } catch (error) {
-          res.errorsVoorErrorHandler.push({error, remarks: `openDoorDateTime omzetten ${doorOpenDateTimeB}`})
+        } catch (caughtError) {
+          res.errors.push({error: caughtError, remarks: `openDoorDateTime omzetten ${doorOpenDateTimeB}`})
         }
+
         const startTime = itemEl.querySelector('.field--name-field-aanvang')?.textContent.trim();
         let startDateTimeB ;
         if (res.doorOpenDateTime){
           startDateTimeB = doorOpenDateTimeB.replace(/T\d\d:\d\d/, `T${startTime}`);
           try {
             res.startDateTime = new Date(startDateTimeB).toISOString();
-          } catch (error) {
-            res.errorsVoorErrorHandler.push({error, remarks: `startDateTime omzetten ${startDateTimeB}`})
+          } catch (caughtError) {
+            res.errors.push({error: caughtError, remarks: `startDateTime omzetten ${startDateTimeB}`})
+            res.unavailable = 'geen startdatetime.'
           }
         }
+
         res.shortText = itemEl.querySelector('.p60-list__item__description')?.textContent.trim() ?? '';
         const imageMatch = Array.from(document.querySelectorAll('style')).map(styleEl => styleEl.innerHTML).join(`\n`).match(/topbanner.*background-image.*(https.*\.jpg)/)
         if (imageMatch){
@@ -81,9 +84,7 @@ p60Scraper.makeBaseEventList = async function () {
         return res;
       }
     );
-  }, null);
-
-  // this.dirtyLog(rawEvents)
+  }, {workerData});
 
   return await this.makeBaseEventListEnd({
     stopFunctie, page, rawEvents}
@@ -95,23 +96,27 @@ p60Scraper.makeBaseEventList = async function () {
 
 // GET PAGE INFO
 
-p60Scraper.getPageInfo = async function ({ page }) {
+p60Scraper.getPageInfo = async function ({ page, event }) {
   
   const {stopFunctie} =  await this.getPageInfoStart()
+
+  if (event.unavailable){
+    return await this.getPageInfoEnd({pageInfo: {}, stopFunctie, page})
+  }
   
   const pageInfo = await page.evaluate(
-    () => {
+    ({event}) => {
 
       const res = {
-        unavailable: "",
-        pageInfoID: `<a href='${document.location.href}'>${document.title}</a>`,
-        errorsVoorErrorHandler: [],
+        unavailable: event.unavailable,
+        pageInfo: `<a href='${document.location.href}'>${document.title}</a>`,
+        errors: [],
       };
 
       // res.ticketURL = document.querySelector('.content-section__event-info [href*="ticketmaster"]')?.href ?? null;
       res.longTextHTML = Array.from(document.querySelectorAll('.kmtContent, .group-footer .media-section')).reduce((prev, next) => prev + next.innerHTML,'')
       return res;
-    }, null
+    }, {event}
   );
 
   return await this.getPageInfoEnd({pageInfo, stopFunctie, page})

@@ -31,11 +31,16 @@ tivoliVredenburgScraper.makeBaseEventList = async function () {
     return Array.from(document.querySelectorAll(".agenda-list-item"))
       .filter((eventEl,index) => index % workerData.workerCount === workerData.index)
       .map((eventEl) => {
-        const res = {};
-        res.title =
+        const title =
           eventEl
             .querySelector(".agenda-list-item__title")
             ?.textContent.trim() ?? null;
+        const res = {
+          unavailable: '',
+          pageInfo: `<a href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+          errors: [],
+          title
+        };
         res.shortText =
           eventEl
             .querySelector(".agenda-list-item__text")
@@ -52,8 +57,6 @@ tivoliVredenburgScraper.makeBaseEventList = async function () {
       });
   }, {workerData});
 
-  this.dirtyLog(rawEvents)
-
   return await this.makeBaseEventListEnd({
     stopFunctie, page, rawEvents}
   );
@@ -62,15 +65,15 @@ tivoliVredenburgScraper.makeBaseEventList = async function () {
 
 // GET PAGE INFO
 
-tivoliVredenburgScraper.getPageInfo = async function ({ page }) {
+tivoliVredenburgScraper.getPageInfo = async function ({ page, event }) {
  
   const {stopFunctie} =  await this.getPageInfoStart()
 
-  const pageInfo = await page.evaluate(() => {
+  const pageInfo = await page.evaluate(({event}) => {
     const res = {
-      unavailable: "",
-      pageInfoID: `<a href='${document.location.href}'>${document.title}</a>`,
-      errorsVoorErrorHandler: [],
+      unavailable: event.unavailable,
+      pageInfo: `<a href='${event.venueEventUrl}'>${event.title}</a>`,
+      errors: [],
     };
     res.priceTextcontent =
       document.querySelector(".btn-group__price")?.textContent.trim() ?? '';
@@ -86,13 +89,12 @@ tivoliVredenburgScraper.getPageInfo = async function ({ page }) {
     }
 
     if (!res.startDate || res.startDate.length < 7) {
-      res.unavailable = "startdate gaat mis";
-      res.errorsVoorErrorHandler({
-        error: new Error(
-          `Startdate mist / niet goed genoeg<br>${startDateMatch.join(
-            "; "
-          )}<br>${res.startDate}`
-        ),
+      res.unavailable += "startdate gaat mis";
+      const errorMsg = `Startdate mist`
+      const remarkMsg =`niet goed genoeg<br>${startDateMatch.join("; ")}<br>${res.startDate}`
+      res.errors.push({
+        error: new Error(errorMsg),
+        remarks: remarkMsg
       });
     }
     const eventInfoDtDDText = document
@@ -112,9 +114,9 @@ tivoliVredenburgScraper.getPageInfo = async function ({ page }) {
         res.doorOpenDateTime = res.startDate
           ? new Date(`${res.startDate}T${res.openDoorTime}:00`).toISOString()
           : null;
-      } catch (error) {
-        res.errorsVoorErrorHandler({
-          error,
+      } catch (caughtError) {
+        res.errors.push({
+          error: caughtError,
           remarks: `Open door ${eventInfoDtDDText}`,
         });
       }
@@ -125,9 +127,9 @@ tivoliVredenburgScraper.getPageInfo = async function ({ page }) {
         res.startDateTime = res.startDate
           ? new Date(`${res.startDate}T${res.startTime}:00`).toISOString()
           : null;
-      } catch (error) {
-        res.errorsVoorErrorHandler({
-          error,
+      } catch (caughtError) {
+        res.errors.push({
+          error: caughtError,
           remarks: `startTijd door ${startMatch.join("")}`,
         });
         res.unavailable = `${res.unavailable}  geen start tijd.`;
@@ -139,16 +141,16 @@ tivoliVredenburgScraper.getPageInfo = async function ({ page }) {
         res.endDateTime = res.startDate
           ? new Date(`${res.startDate}T${res.endTime}:00`).toISOString()
           : null;
-      } catch (error) {
-        res.errorsVoorErrorHandler({
-          error,
+      } catch (caughtError) {
+        res.errors.push({
+          error: caughtError,
           remarks: `endtijd ${eventInfoDtDDText}`,
         });
       }
     }
 
     return res;
-  }, null);
+  }, {event});
 
   return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
 

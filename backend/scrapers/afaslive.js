@@ -17,7 +17,8 @@ const afasliveScraper = new AbstractScraper(makeScraperConfig({
     },
     app: {
       mainPage: {
-        url: "https://www.afaslive.nl/agenda"
+        url: "https://www.afaslive.nl/agenda",
+        requiredProperties: ['venueEventUrl']
       }
     }
   }
@@ -48,16 +49,22 @@ afasliveScraper.makeBaseEventList = async function () {
   await _t.autoScroll(page);
   await _t.waitFor(750);
   
-  await _t.autoScroll(page);
+  await _t.autoScroll(page); // TODO hier wat aan doen. maak er een do while van met een timeout. dit is waardeloos.
 
   const rawEvents = await page.evaluate(({workerData}) => {
     return Array.from(document.querySelectorAll(".agenda__item__block "))
       .filter((event, index) => index % workerData.workerCount === workerData.index)
       .map((agendaBlock) => {
-        const res = {};
+
+        const title = agendaBlock.querySelector(".eventTitle")?.textContent ?? "";
+        const res = {
+          unavailable: "",
+          pageInfo: `<a href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+          errors: [],          
+          title
+        }
         res.venueEventUrl = agendaBlock.querySelector("a")?.href ?? null;
         res.image = agendaBlock.querySelector("img")?.src ?? null;
-        res.title = agendaBlock.querySelector(".eventTitle")?.textContent ?? "";
         return res;
       });
   }, {workerData});
@@ -67,16 +74,17 @@ afasliveScraper.makeBaseEventList = async function () {
   );
 };
 
-afasliveScraper.getPageInfo = async function ({ page }) {
+afasliveScraper.getPageInfo = async function ({ page, event }) {
   
   const {stopFunctie} =  await this.getPageInfoStart()
   
   const pageInfo = await page.evaluate(
-    ({ months }) => {
+    ({ months,event }) => {
+
       const res = {
-        unavailable: "",
-        pageInfoID: `<a href='${document.location.href}'>${document.title}</a>`,
-        errorsVoorErrorHandler: [],
+        unavailable: event.unavailable,
+        pageInfo: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
+        errors: [],
       };
 
       const startDateMatch =
@@ -92,6 +100,10 @@ afasliveScraper.getPageInfo = async function ({ page }) {
         res.startDate = `${startDateMatch[3]}-${months[startDateMatch[2]]}-${
           startDateMatch[1]
         }`;
+      } else {
+        res.unavailable += 'Geen start date.';
+        // debugger doen.
+        return res;
       }
 
       const startEl = document.querySelector(
@@ -99,8 +111,12 @@ afasliveScraper.getPageInfo = async function ({ page }) {
       );
       if (startEl) {
         const startmatch = startEl.textContent.match(/\d\d:\d\d/);
-        if (startmatch) {
+        if (startmatch && Array.isArray(startmatch) && startmatch.length) {
           res.startTime = startmatch[0];
+        } else {
+          res.unavailable += 'Geen start tijd.';
+          // debugger doen.
+          return res;          
         }
       }
 
@@ -109,7 +125,7 @@ afasliveScraper.getPageInfo = async function ({ page }) {
       );
       if (doorEl) {
         const doormatch = doorEl.textContent.match(/\d\d:\d\d/);
-        if (doormatch) {
+        if (doormatch && Array.isArray(doormatch) && doormatch.length) {
           res.doorTime = doormatch[0];
         }
       }
@@ -126,14 +142,14 @@ afasliveScraper.getPageInfo = async function ({ page }) {
             `${res.startDate}T${res.doorTime}:00`
           ).toISOString();
         }
-      } catch (error) {
-        res.errorsVoorErrorHandler.push({
-          error,
-          remarks: `error samen time en date ${res.startDate}T${res.startTime}:00 ${res.startDate}T${res.doorTime}:00`,
+      } catch (errorCaught) {
+        res.errors.push({
+          error: errorCaught,
+          remarks: `tijd en datum samenvoegen ${res.pageInfo}`,
+          // TODO debugger error samen time en date ${res.startDate}T${res.startTime}:00 ${res.startDate}T${res.doorTime}:00
         });
-      }
-      if (!res.startDateTime) {
-        res.unavailable += " geen startDateTime";
+        res.unavailable += 'geen starttijd wegens fout';
+        return res;
       }
 
       res.soldOut = !!(document.querySelector('#tickets .soldout') ?? null)
@@ -145,7 +161,7 @@ afasliveScraper.getPageInfo = async function ({ page }) {
         document.querySelector("#tickets")?.textContent.trim() ?? '';
       return res;
     },
-    { months: this.months }
+    { months: this.months,event }
   );
   return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
 };

@@ -1,52 +1,35 @@
 [
   {
-    "doorOpenDateTime": "2023-05-02T17:00:00.000Z",
-    "startDateTime": "2023-05-02T17:30:00.000Z",
+    "doorOpenDateTime": "2023-05-04T17:00:00.000Z",
+    "startDateTime": "2023-05-04T18:30:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.paradiso.nl/nl/programma/the-undertones/99072/",
-    "title": "The Undertones",
+    "venueEventUrl": "https://www.paradiso.nl/nl/programma/siouxsie/103466/",
+    "title": "Siouxsie",
     "location": "paradiso",
-    "price": 28,
-    "shortText": "Noord-Ierse rockgiganten",
-    "longText": "../public/texts/b5b06885-b0cc-4d16-8b5f-dba7815af247.html",
-    "image": "https://api.paradiso.nl/img/events/undertones-2022.jpg?w=600&h=400&fit=crop-50-50",
-    "soldOut": false,
+    "price": 61,
+    "shortText": "Brits postpunkicoon keert terug",
+    "longText": "../public/texts/04aa4ff4-60c0-4983-b3e6-a9239262e69f.html",
+    "image": "https://api.paradiso.nl/img/events/Siouxsie.png?w=600&h=400&fit=crop-50-50",
+    "soldOut": true,
     "unavailable": "",
-    "pageInfoID": "<a href='https://www.paradiso.nl/nl/programma/the-undertones/99072/'>The Undertones - Paradiso</a>",
-    "errorsVoorErrorHandler": [],
-    "longTextHTML": "<p>Eind jaren zeventig brak de Noord-Ierse punkband The Undertones door met onweerstaanbare nummers als ‘Teenage Kicks’, ‘Get Over You’ en ‘Jimmy Jimmy’. Na een flinke tussenpauze kwam de band in 1999 weer bij elkaar - nu met zanger Paul McLoone aan boord – en is sindsdien weer vol energie aan het spelen. Tot op de dag van vandaag één van de meest invloedrijke poppunkbands uit de muziekgeschiedenis.&nbsp;</p>",
-    "startDate": "2023-05-02",
-    "timesMatch": [
-      "19:00",
-      "19:30",
-      "20:30"
-    ],
-    "tijdText": "    The Undertonesdinsdag 2 mei 2023  in  Paradiso Zaal open  19:00, Voorprogramma 19:30, Hoofdprogramma 20:30",
-    "priceTextcontent": "€ 28,00Ledenprijs*Tickets"
+    "corrupted": null,
+    "correctMusic": null
   },
   {
-    "doorOpenDateTime": "2023-05-20T11:00:00.000Z",
-    "startDateTime": "2023-05-20T11:30:00.000Z",
+    "doorOpenDateTime": "2023-05-20T15:30:00.000Z",
+    "startDateTime": "2023-05-20T16:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.paradiso.nl/nl/programma/london-calling-high-tea/105499/",
-    "title": "London Calling: High Tea",
+    "venueEventUrl": "https://www.paradiso.nl/nl/programma/london-calling/103015/",
+    "title": "London Calling",
     "location": "paradiso",
-    "price": 17,
-    "shortText": "Middagprogramma van showcasefestival",
-    "longText": "../public/texts/69ea4096-5b40-4aad-afb8-3af5d05e5c13.html",
-    "image": "https://api.paradiso.nl/img/events/Bully.jpg?w=600&h=400&fit=crop-50-50",
+    "price": 45,
+    "shortText": "Showcasefestival voor spraakmakende nieuwe bands",
+    "longText": "../public/texts/4d508efa-9f3f-4962-b9f3-b631489fdd47.html",
+    "image": "https://api.paradiso.nl/img/events/20221029_LondonCalling_LIFE_by-BibianBingen_3W0A6358.jpg?w=600&h=400&fit=crop-50-50",
     "soldOut": false,
     "unavailable": "",
-    "pageInfoID": "<a href='https://www.paradiso.nl/nl/programma/london-calling-high-tea/105499/'>London Calling: High Tea - Paradiso</a>",
-    "errorsVoorErrorHandler": [],
-    "longTextHTML": "<p>London Calling organiseert op zaterdagmiddag een heuse High Tea om nóg meer artiesten te showcasen. Na de vrijdagavond kun je dus al om 13 uur terecht in Paradiso voor een variatie aan thee, scones en acht optredens van onder meer Bully (solo), Glass Beams en CARRTOONS.&nbsp;</p>\n<p>Wat in 1992 begon als springplank naar het Europese vasteland voor Britse bands (Blur, Slowdive, Placebo) is inmiddels in 30 jaar uitgegroeid tot een showcasefestival voor bands van over de hele wereld. Tijdens de laatste edities bood London Calling een podium aan onder meer The Murder Capital, Orville Peck, Car Seat Headrest, Shame, Alex Cameron, Fontaines D.C., Rolling Blackouts Coastal Fever, Isaac Gracie, Superorganism, Japanese Breakfast en Wet Leg.<br></p>\n<p><strong>Volledige line up 19 + 20 mei 2023:</strong><br>Baba Ali&nbsp;•&nbsp;Benefits • Ber • Bilk • Blondshell • Bully • Cam Kahin • CARRTOONS • DEADLETTER • Enola Gay • Enumclaw • Girl and Girl • Girl Scout • Glass Beams • Gurriers • Hamish Hawk • Heartworms • Joe Unknown • Kate Davis • Lael Neale • Ron Gallo • SHELF LIVES • Surprise Chef • Tchotchka • The Golden Dregs • The Grogans • The Lemon Twigs • The Tubs • Trampolene • VLURE</p>\n<p>Kijk voor meer informatie op de&nbsp;<a href=\"https://www.londoncalling.nl/\">website</a> van London Calling.<br></p>",
-    "startDate": "2023-05-20",
-    "timesMatch": [
-      "13:00",
-      "13:30"
-    ],
-    "tijdText": "    London Calling: High Teazaterdag 20 mei 2023  in  Paradiso Zaal open  13:00, Aanvang 13:30",
-    "priceTextcontent": "€ 17,00Ledenprijs*Tickets"
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": "2023-06-04T17:00:00.000Z",
@@ -57,20 +40,12 @@
     "location": "paradiso",
     "price": 23,
     "shortText": "Harde en ongetemde pub-punk uit Australië",
-    "longText": "../public/texts/b079c9c0-19af-4aa6-98d4-10f7e08c0c45.html",
+    "longText": "../public/texts/589c163b-0275-4277-b951-9c2ff0004557.html",
     "image": "https://api.paradiso.nl/img/events/The-Chats-Luke-Henery390012-WEB.jpg?w=600&h=400&fit=crop-50-50",
     "soldOut": false,
     "unavailable": "",
-    "pageInfoID": "<a href='https://www.paradiso.nl/nl/programma/the-chats/98200/'>The Chats - Paradiso</a>",
-    "errorsVoorErrorHandler": [],
-    "longTextHTML": "<p>Wie aan Australische pub-punk denkt, denkt aan The Chats. De band uit Queensland, Australië begon samen te spelen op de middelbare school. Een maand voordat de jongens hun diploma in ontvangst namen, brachten ze hun zelf getitelde debuut-EP uit. The Chats' tweede EP, 'Get This In Ya', stond al een half jaar online totdat de band plots een virale hit had met de videoclip voor het nummer 'Smoko', die binnen een paar dagen miljoenen views behaalde op YouTube. Sindsdien staan The Chats bekend om hun luide en chaotische liveshows en hun 'zero fucks attitude'. De band heeft getoerd met Australische punklegendes Cosmic Psychos, US rock zwaargewichten Queens of the Stone Age en collega pisswrecks Pist Idiots. Ondertussen zijn ze vier EP'S, een debuutalbum, nationale en internationale tournees verder, maar The Chats vertonen gelukkig nog geen tekenen dat ze het ooit rustiger aan zullen doen.</p>",
-    "startDate": "2023-06-04",
-    "timesMatch": [
-      "19:00",
-      "20:30"
-    ],
-    "tijdText": "    The Chatszondag 4 juni 2023  in  Paradiso Zaal open  19:00, Aanvang 20:30",
-    "priceTextcontent": "€ 23,00Ledenprijs*Tickets"
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": "2023-06-28T17:30:00.000Z",
@@ -81,20 +56,12 @@
     "location": "paradiso",
     "price": 23,
     "shortText": "Postpunk met melodische synths, folk en onheilspellende saxofoons / Bitterzoet",
-    "longText": "../public/texts/7139dcde-af9a-4998-85a7-f49c03fbfb24.html",
+    "longText": "../public/texts/f7da4a77-d9c2-4880-a8b8-14a974730c3a.html",
     "image": "https://api.paradiso.nl/img/events/The-Waeve-Press-shot-jpg?w=600&h=400&fit=crop-50-50",
     "soldOut": false,
     "unavailable": "",
-    "pageInfoID": "<a href='https://www.paradiso.nl/nl/programma/the-waeve/104390/'>The Waeve - Paradiso</a>",
-    "errorsVoorErrorHandler": [],
-    "longTextHTML": "<p>Graham Coxon en Rose Elinor Dougall ontmoeten elkaar als ze beiden met hun ziel onder hun arm lopen. Als vage kennissen beginnen ze samen aan een project waarbij ze hun gevoelens willen omzetten in muziek. Met een wederzijdse liefde voor Engelse folkmuziek, verhalen over het leven en de schoonheid van (ruige) natuur wordt the Waeve geboren. Met hun stemmen, piano, drum, saxofoons en synths maken ze cinematische muziek, die hoop in een wereld vol wanhoop moet representeren. Begin 2023 komt debuutplaat 'the WAEVE' uit, waarop postpunk wordt gemengd met melodische synths, folk en spanning.</p>",
-    "startDate": "2023-06-28",
-    "timesMatch": [
-      "19:30",
-      "20:30"
-    ],
-    "tijdText": "    The Waevewoensdag 28 juni 2023  in  Bitterzoet Zaal open  19:30, Aanvang 20:30",
-    "priceTextcontent": "€ 23,00Inclusief daglidmaatschap*Tickets"
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": "2023-08-28T17:00:00.000Z",
@@ -105,67 +72,27 @@
     "location": "paradiso",
     "price": 44.5,
     "shortText": "Indierockband uit New York keert terug met nieuw werk",
-    "longText": "../public/texts/4fb2f8d5-96bf-4dce-9994-528285a901de.html",
+    "longText": "../public/texts/afa60602-ebff-47b0-9b41-277801f99278.html",
     "image": "https://api.paradiso.nl/img/events/YYY-PORTRAIT-square-web.jpg?w=600&h=400&fit=crop-50-50",
     "soldOut": true,
     "unavailable": "",
-    "pageInfoID": "<a href='https://www.paradiso.nl/nl/programma/yeah-yeah-yeahs/104045/'>Yeah Yeah Yeahs - Paradiso</a>",
-    "errorsVoorErrorHandler": [],
-    "longTextHTML": "<p>Het laatste optreden in Paradiso van Yeah Yeah&nbsp;Yeahs is alweer 10 jaar geleden, maar nu keert het energieke trio weer terug naar Amsterdam voor een concert. Album 'Cool It Down' van afgelopen jaar is de opvolger van 'Mosquito' uit 2013 en wist hoge ogen te gooien bij critici. In de beginjaren '00 brak de band door in de indierockscene van New York door hun uitzinnige optredens met Karen O als frontvrouw en door&nbsp;optredens met The Strokes en The White Stripes, zoals ook te zien in de onlangs verschenen muziekdocumentaire 'Meet Me In&nbsp;The Bathroom'. </p>",
-    "startDate": "2023-08-28",
-    "timesMatch": [
-      "19:00",
-      "20:30"
-    ],
-    "tijdText": "    Yeah Yeah Yeahsmaandag 28 augustus 2023  in  Paradiso Zaal open  19:00, Aanvang 20:30",
-    "priceTextcontent": "€ 44,50Ledenprijs*Uitverkocht"
+    "corrupted": null,
+    "correctMusic": null
   },
   {
-    "doorOpenDateTime": "2023-11-10T18:30:00.000Z",
-    "startDateTime": "2023-11-10T19:30:00.000Z",
+    "doorOpenDateTime": "2023-11-26T19:00:00.000Z",
+    "startDateTime": "2023-11-26T20:30:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.paradiso.nl/nl/programma/cash-savage-the-last-drinks/105904/",
-    "title": "Cash Savage & The Last Drinks",
+    "venueEventUrl": "https://www.paradiso.nl/nl/programma/lankum/103643/",
+    "title": "Lankum",
     "location": "paradiso",
-    "price": 17,
-    "shortText": "Mix van post-punk, folk en donkere blues / Bitterzoet",
-    "longText": "../public/texts/101b6695-2435-41d9-8a0e-92361402f0c7.html",
-    "image": "https://api.paradiso.nl/img/events/CashSavage2021-photobyNaomiLeeBeveridge-37.jpg?w=600&h=400&fit=crop-50-50",
+    "price": 23,
+    "shortText": "Ierse band mixt folk met punk en drones",
+    "longText": "../public/texts/401871a6-1b20-46ce-8773-da0a44906295.html",
+    "image": "https://api.paradiso.nl/img/events/Lankum-nov.jpg?w=600&h=400&fit=crop-50-50",
     "soldOut": false,
     "unavailable": "",
-    "pageInfoID": "<a href='https://www.paradiso.nl/nl/programma/cash-savage-the-last-drinks/105904/'>Cash Savage & The Last Drinks - Paradiso</a>",
-    "errorsVoorErrorHandler": [],
-    "longTextHTML": "<p>Cash Savage &amp; The Last Drinks is een Australische alternatieve band geleid door singer-songwriter Cash Savage, die groot is in Melbourne's muziek en queer gemeenschap. De muziek van de band is beïnvloed door genres als post-punk, blues en country, en behandelt vaak politieke en sociale thema's. De band heeft inmiddels meerdere albums uitgebracht, die allemaal werden geprezen om hun rauwe energie en emotionele intensiteit.&nbsp;</p>\n<p>In 2023 komt het album 'So This Is Love' uit, waar het thema kwetsbaarheid als een breuklijn door het album loopt. Kwetsbare geestelijke gezondheid, een kwetsbare economie, de kwetsbaarheid van het milieu en onze persoonlijke relaties, allemaal op de rand van de afgrond, dreigend te barsten onder de druk; dit is het beladen terrein dat 'So This Is Love' bewoont en onverschrokken verkent.</p>\n<p>In de loop der jaren heeft Cash Savage &amp; The Last Drinks een steeds groter publiek aangetrokken en staan ze bekend om hun intense live-optredens en de compromisloze teksten van Savage. Op 10 november geeft de band een concert in Bitterzoet.&nbsp;</p>",
-    "startDate": "2023-11-10",
-    "timesMatch": [
-      "19:30",
-      "20:30"
-    ],
-    "tijdText": "    Cash Savage & The Last Drinksvrijdag 10 november 2023  in  Bitterzoet Zaal open  19:30, Aanvang 20:30",
-    "priceTextcontent": "€ 17,00Inclusief daglidmaatschap*Tickets"
-  },
-  {
-    "doorOpenDateTime": "2024-01-05T18:00:00.000Z",
-    "startDateTime": "2024-01-05T18:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.paradiso.nl/nl/programma/cloudsurfers/105432/",
-    "title": "Cloudsurfers",
-    "location": "paradiso",
-    "price": 14,
-    "shortText": "Met fuzz overgoten garageband van eigen bodem",
-    "longText": "../public/texts/a7e2b852-69f0-42a4-8c92-87ba26841f3c.html",
-    "image": "https://api.paradiso.nl/img/events/Cloudsurfers_web.jpg?w=600&h=400&fit=crop-50-50",
-    "soldOut": false,
-    "unavailable": "",
-    "pageInfoID": "<a href='https://www.paradiso.nl/nl/programma/cloudsurfers/105432/'>Cloudsurfers - Paradiso</a>",
-    "errorsVoorErrorHandler": [],
-    "longTextHTML": "<p>De met fuzz overgoten garageband Cloudsurfers is een opkomende naam uit de Nederlandse garagepunk. Naast optredens bij de Popronde, maar ook op Paaspop, Zwarte Cross en Into The Great Wide Open gaat het snoeihard met het vijftal. Hoewel de band naar eigen zeggen geïnspireerd is door acts als Ty&nbsp;Segall, Osees en King Gizzard &amp;&nbsp;The Lizard Wizard, weet de band op debuut 'Don't Know What Hit Me' een heel eigen geluid te produceren.</p>",
-    "startDate": "2024-01-05",
-    "timesMatch": [
-      "19:00",
-      "19:30"
-    ],
-    "tijdText": "    Cloudsurfersvrijdag 5 januari 2024  in  Paradiso Zaal open  19:00, Aanvang 19:30",
-    "priceTextcontent": "€ 14,00Ledenprijs*Tickets"
+    "corrupted": null,
+    "correctMusic": null
   }
 ]

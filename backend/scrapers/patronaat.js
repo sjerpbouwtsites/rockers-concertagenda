@@ -14,7 +14,7 @@ const patronaatScraper = new AbstractScraper(makeScraperConfig({
     },
     app: {
       mainPage: {
-        url: "https://patronaat.nl/programma/?type=event&s=&eventtype%5B%5D=84",
+        url: "https://patronaat.nl/programma/?type=event&s=&eventtype%5B%5D=157",
         requiredProperties: ['venueEventUrl', 'title']
       }
     }
@@ -33,11 +33,16 @@ patronaatScraper.makeBaseEventList = async function () {
     return Array.from(document.querySelectorAll(".overview__list-item--event"))
       .filter((eventEl, index) =>index % workerData.workerCount === workerData.index)
       .map((eventEl) => {
-        const res = {};
+        const title = eventEl.querySelector(".event__name")?.textContent.trim();
+        const res = {
+          unavailable: '',
+          pageInfo: `<a href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+          errors: [],
+          title
+        };
         res.image =
           eventEl.querySelector("[class^='event__image'] img")?.src ?? null;
         res.venueEventUrl = eventEl.querySelector("a[href]")?.href ?? null;
-        res.title = eventEl.querySelector(".event__name")?.textContent.trim();
         res.shortText = eventEl
           .querySelector(".event__subtitle")
           ?.textContent.trim() ?? '';
@@ -53,15 +58,15 @@ patronaatScraper.makeBaseEventList = async function () {
 
 // GET PAGE INFO
 
-patronaatScraper.getPageInfo = async function ({ page }) {
+patronaatScraper.getPageInfo = async function ({ page, event }) {
  
   const {stopFunctie} =  await this.getPageInfoStart()
 
-  const pageInfo = await page.evaluate(({months}) => {
+  const pageInfo = await page.evaluate(({months, event}) => {
     const res = {
-      unavailable: "",
-      pageInfoID: `<a href='${document.location.href}'>${document.title}</a>`,
-      errorsVoorErrorHandler: [],
+      unavailable: event.unavailable,
+      pageInfo: `<a href='${event.venueEventUrl}'>${event.title}</a>`,
+      errors: [],
     };
     res.priceTextcontent = document
       .querySelector(".event__info-bar--ticket-price")
@@ -116,23 +121,23 @@ patronaatScraper.getPageInfo = async function ({ page }) {
           ).toISOString();
         }
       }
-    } catch (error) {
-      res.errorsVoorErrorHandler.push({
-        error,
-        remarks: `Zo wat heb ik een hekel aan werken met datums ad infinitivum zeg`,
+    } catch (caughtError) { //TODO opsplitsen
+      res.errors.push({
+        error: caughtError,
+        remarks: `Datum error patronaat.`,
       });
     }
 
     if (!res.startDateTime) {
-      res.unavailable = "Geen starttijd gevonden.";
+      res.unavailable += "Geen starttijd gevonden.";
     }
 
     res.longTextHTML = document.querySelector(".event__content")?.innerHTML;
     if (res.unavailable !== "") {
-      res.unavailable = `${res.unavailable}\n${res.pageInfoID}`;
+      res.unavailable = `${res.unavailable}\n${res.pageInfo}`; //TODO naar alles doorzetten
     }
     return res;
-  }, {months: this.months});
+  }, {months: this.months, event});
 
   return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
   

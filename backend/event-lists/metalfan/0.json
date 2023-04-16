@@ -1,97 +1,6 @@
 [
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2022-04-09T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Rhapsody Of Fire, Nightmare en Phantom Elite",
-    "location": "musicon",
-    "price": null,
-    "shortText": "Musicon, Den Haag",
-    "longText": null,
-    "image": null,
-    "soldOut": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2023-04-13T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Cannibal Corpse, Ingested, Dark Funeral en Stormruler",
-    "location": "trix",
-    "price": null,
-    "shortText": "Trix, Antwerpen",
-    "longText": null,
-    "image": null,
-    "soldOut": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-04-13T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Joe Satriani",
-    "location": "muziekcentrum",
-    "price": null,
-    "shortText": "Muziekcentrum, Enschede",
-    "longText": null,
-    "image": null,
-    "soldOut": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-04-13T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "King Heavy, VIIHB",
-    "location": "littledevil",
-    "price": null,
-    "shortText": "Little Devil, Tilburg",
-    "longText": null,
-    "image": null,
-    "soldOut": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-04-14T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Overkill, Heathen en Exhorder",
-    "location": "hedon",
-    "price": null,
-    "shortText": "Hedon, Zwolle",
-    "longText": null,
-    "image": null,
-    "soldOut": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-04-14T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Unearth, Misery Index en Year Of The Knife",
-    "location": "zollhaus",
-    "price": null,
-    "shortText": "Zollhaus, Leer (Duitsland)",
-    "longText": null,
-    "image": null,
-    "soldOut": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2022-04-15T00:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": null,
-    "title": "Guilt Trip, Mindwar en Sorcerer",
-    "location": "littledevil",
-    "price": null,
-    "shortText": "Little Devil, Tilburg",
-    "longText": null,
-    "image": null,
-    "soldOut": null
-  },
-  {
-    "doorOpenDateTime": null,
     "startDateTime": "2022-04-16T00:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": null,
@@ -101,7 +10,10 @@
     "shortText": "'t Paard, Den Haag",
     "longText": null,
     "image": null,
-    "soldOut": null
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": null,
@@ -114,11 +26,30 @@
     "shortText": "Willem Twee, Den Bosch",
     "longText": null,
     "image": null,
-    "soldOut": null
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": null,
     "startDateTime": "2023-04-20T00:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": null,
+    "title": "Brutus en Psychonaut",
+    "location": "vera",
+    "price": null,
+    "shortText": "Vera, Groningen",
+    "longText": null,
+    "image": null,
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-04-20T00:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": null,
     "title": "Roadburn festival",
@@ -127,7 +58,26 @@
     "shortText": "013 en omgeving, Tilburg",
     "longText": null,
     "image": null,
-    "soldOut": null
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-04-21T00:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": null,
+    "title": "Ter Ziele, Oltas en Pander",
+    "location": "littledevil",
+    "price": null,
+    "shortText": "Little Devil, Tilburg",
+    "longText": null,
+    "image": null,
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": null,
@@ -140,7 +90,26 @@
     "shortText": "\nMet Evil Invaders, Warbringer, Mad Max e.v.a.",
     "longText": null,
     "image": null,
-    "soldOut": null
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-04-22T00:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": null,
+    "title": "Zwart en Gavran",
+    "location": "littledevil",
+    "price": null,
+    "shortText": "Little Devil, Tilburg",
+    "longText": null,
+    "image": null,
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": null,
@@ -153,7 +122,26 @@
     "shortText": "Cacaofabriek, Helmond",
     "longText": null,
     "image": null,
-    "soldOut": null
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-04-23T00:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": null,
+    "title": "Radeloos // Ziedend, Thammuz en Neroth",
+    "location": "littledevil",
+    "price": null,
+    "shortText": "Little Devil, Tilburg",
+    "longText": null,
+    "image": null,
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": null,
@@ -166,7 +154,10 @@
     "shortText": "Johan Cruijff Arena, Amsterdam",
     "longText": null,
     "image": null,
-    "soldOut": null
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": null,
@@ -179,7 +170,10 @@
     "shortText": "Little Devil, Tilburg ",
     "longText": null,
     "image": null,
-    "soldOut": null
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": null,
@@ -192,7 +186,26 @@
     "shortText": "Willemeen, Arnhem",
     "longText": null,
     "image": null,
-    "soldOut": null
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-04-28T00:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": null,
+    "title": "Fleddy Melculy en Tusky",
+    "location": "vera",
+    "price": null,
+    "shortText": "Vera, Groningen",
+    "longText": null,
+    "image": null,
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": null,
@@ -205,7 +218,10 @@
     "shortText": "Popei, Eindhoven",
     "longText": null,
     "image": null,
-    "soldOut": null
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": null,
@@ -218,7 +234,26 @@
     "shortText": "Johan Cruijff Arena, Amsterdam",
     "longText": null,
     "image": null,
-    "soldOut": null
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-04-30T00:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": null,
+    "title": "Bad Omen en CelticVenom",
+    "location": "littledevil",
+    "price": null,
+    "shortText": "Little Devil, Tilburg",
+    "longText": null,
+    "image": null,
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": null,
@@ -231,33 +266,74 @@
     "shortText": "Hedon, Zwolle",
     "longText": null,
     "image": null,
-    "soldOut": null
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2023-05-02T00:00:00.000Z",
+    "startDateTime": "2022-05-02T00:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": null,
-    "title": "Sabaton",
+    "title": "Sabaton, Baby Metal en Lordi",
     "location": "zagarena",
     "price": null,
     "shortText": "ZAG Arena, Hannover (Duitsland)",
     "longText": null,
     "image": null,
-    "soldOut": null
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": null,
     "startDateTime": "2023-05-03T00:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": null,
-    "title": "Sabaton",
+    "title": "Profanatica en Necrobode",
+    "location": "vera",
+    "price": null,
+    "shortText": "Vera, Groningen",
+    "longText": null,
+    "image": null,
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-05-03T00:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": null,
+    "title": "Sabaton, Baby Metal en Lordi",
     "location": "ziggodome",
     "price": null,
     "shortText": "Ziggo Dome, Amsterdam",
     "longText": null,
     "image": null,
-    "soldOut": null
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-05-03T00:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": null,
+    "title": "Visigoth",
+    "location": "littledevil",
+    "price": null,
+    "shortText": "Little Devil, Tilburg",
+    "longText": null,
+    "image": null,
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": null,
@@ -270,7 +346,10 @@
     "shortText": "Little Devil Tilburg ",
     "longText": null,
     "image": null,
-    "soldOut": null
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": null,
@@ -283,7 +362,58 @@
     "shortText": "Hedon, Zwolle",
     "longText": null,
     "image": null,
-    "soldOut": null
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-05-07T00:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": null,
+    "title": "Queensbury Rules, Midnight Tattoo en Complaint",
+    "location": "littledevil",
+    "price": null,
+    "shortText": "Little Devil, Tilburg",
+    "longText": null,
+    "image": null,
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-05-10T00:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": null,
+    "title": "Stake",
+    "location": "vera",
+    "price": null,
+    "shortText": "Vera, Groningen",
+    "longText": null,
+    "image": null,
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-05-10T00:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": null,
+    "title": "Weedpecker",
+    "location": "littledevil",
+    "price": null,
+    "shortText": "Little Devil, Tilburg",
+    "longText": null,
+    "image": null,
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": null,
@@ -296,33 +426,90 @@
     "shortText": "Oefenbunker, Landgraaf",
     "longText": null,
     "image": null,
-    "soldOut": null
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": null,
     "startDateTime": "2022-05-12T00:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": null,
-    "title": "Sabaton",
+    "title": "Little Devil Doom Day V Pre-party",
+    "location": "littledevil",
+    "price": null,
+    "shortText": "\nmet Splendidula en Columbarium",
+    "longText": null,
+    "image": null,
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-05-12T00:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": null,
+    "title": "Sabaton, Baby Metal en Lordi",
     "location": "lanxessarena",
     "price": null,
     "shortText": "Lanxess Arena, Keulen (Duitsland)",
     "longText": null,
     "image": null,
-    "soldOut": null
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": null,
     "startDateTime": "2022-05-13T00:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": null,
-    "title": "Sabaton",
+    "title": "Little Devil Doom Day V",
+    "location": "littledevil",
+    "price": null,
+    "shortText": "\nmet Officium Triste, Magma Rise, Pentacle, B.S.T, The Drowning en Tortured Spirit",
+    "longText": null,
+    "image": null,
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-05-13T00:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": null,
+    "title": "Nebula",
+    "location": "vera",
+    "price": null,
+    "shortText": "Vera, Groningen",
+    "longText": null,
+    "image": null,
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-05-13T00:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": null,
+    "title": "Sabaton, Baby Metal en Lordi",
     "location": "sportpaleis",
     "price": null,
     "shortText": "Sportpaleis, Antwerpen (België)",
     "longText": null,
     "image": null,
-    "soldOut": null
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": null,
@@ -335,7 +522,10 @@
     "shortText": "Muziekgebouw, Eindhoven",
     "longText": null,
     "image": null,
-    "soldOut": null
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": null,
@@ -348,7 +538,10 @@
     "shortText": "Ekko, Utrecht",
     "longText": null,
     "image": null,
-    "soldOut": null
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": null,
@@ -361,7 +554,26 @@
     "shortText": "Trix, Antwerpen (België)",
     "longText": null,
     "image": null,
-    "soldOut": null
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-05-15T00:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": null,
+    "title": "Mad Sin",
+    "location": "littledevil",
+    "price": null,
+    "shortText": "Little Devil, Tilburg",
+    "longText": null,
+    "image": null,
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": null,
@@ -374,7 +586,10 @@
     "shortText": "Ekko, Utrecht",
     "longText": null,
     "image": null,
-    "soldOut": null
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": null,
@@ -387,7 +602,10 @@
     "shortText": "De Klinker, Aarschot (België)",
     "longText": null,
     "image": null,
-    "soldOut": null
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": null,
@@ -400,7 +618,10 @@
     "shortText": "\nMet o.a. Party Cannon en Profanity",
     "longText": null,
     "image": null,
-    "soldOut": null
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": null,
@@ -413,7 +634,10 @@
     "shortText": "Rotown, Rotterdam",
     "longText": null,
     "image": null,
-    "soldOut": null
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": null,
@@ -426,7 +650,10 @@
     "shortText": "Hedon, Zwolle",
     "longText": null,
     "image": null,
-    "soldOut": null
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": null,
@@ -439,7 +666,10 @@
     "shortText": "Paard, Den Haag",
     "longText": null,
     "image": null,
-    "soldOut": null
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": null,
@@ -452,7 +682,26 @@
     "shortText": "De Vorstin, Hilversum",
     "longText": null,
     "image": null,
-    "soldOut": null
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-05-21T00:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": null,
+    "title": "Exciter, Artillery en Blood Star",
+    "location": "littledevil",
+    "price": null,
+    "shortText": "Little Devil, Tilburg",
+    "longText": null,
+    "image": null,
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": null,
@@ -465,7 +714,10 @@
     "shortText": "Spirit Of 66, Verviers (België)",
     "longText": null,
     "image": null,
-    "soldOut": null
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": null,
@@ -478,7 +730,42 @@
     "shortText": "Willem Twee, Den Bosch",
     "longText": null,
     "image": null,
-    "soldOut": null
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-05-25T00:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": null,
+    "title": "Toxik",
+    "location": "littledevil",
+    "price": null,
+    "shortText": "Little Devil, Tilburg",
+    "longText": null,
+    "image": null,
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-05-26T00:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": null,
+    "title": "Kjeld, Changing Tides, Plauge en Shuulak",
+    "location": "halloffame",
+    "price": null,
+    "shortText": "Hall of Fame, Tilburg",
+    "longText": null,
+    "image": null,
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": null,
@@ -491,7 +778,10 @@
     "shortText": "\nMet Michael Schenker Group e.v.a.",
     "longText": null,
     "image": null,
-    "soldOut": null
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": null,
@@ -504,7 +794,42 @@
     "shortText": "Mezz, Breda",
     "longText": null,
     "image": null,
-    "soldOut": null
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-05-28T00:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": null,
+    "title": "White Spandex",
+    "location": "littledevil",
+    "price": null,
+    "shortText": "Little Devil, Tilburg",
+    "longText": null,
+    "image": null,
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-06-01T00:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": null,
+    "title": "White Hills",
+    "location": "vera",
+    "price": null,
+    "shortText": "Vera, Groningen",
+    "longText": null,
+    "image": null,
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": null,
@@ -517,7 +842,26 @@
     "shortText": "Red Box, Mönchengladbach (Duitsland)",
     "longText": null,
     "image": null,
-    "soldOut": null
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-06-03T00:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": null,
+    "title": "Lost Society",
+    "location": "littledevil",
+    "price": null,
+    "shortText": "Little Devil, Tilburg",
+    "longText": null,
+    "image": null,
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": null,
@@ -530,7 +874,10 @@
     "shortText": "Het Depot, Leuven (België)",
     "longText": null,
     "image": null,
-    "soldOut": null
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": null,
@@ -543,7 +890,10 @@
     "shortText": "Duycker, Hoofddorp",
     "longText": null,
     "image": null,
-    "soldOut": null
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": null,
@@ -556,7 +906,26 @@
     "shortText": "\nMet Testament, Jinjer e.v.a.",
     "longText": null,
     "image": null,
-    "soldOut": null
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-06-09T00:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": null,
+    "title": "Onthou en Gavran",
+    "location": "vera",
+    "price": null,
+    "shortText": "Vera, Groningen",
+    "longText": null,
+    "image": null,
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": null,
@@ -569,7 +938,10 @@
     "shortText": "Ziggo Dome, Amsterdam",
     "longText": null,
     "image": null,
-    "soldOut": null
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": null,
@@ -582,7 +954,10 @@
     "shortText": "Paleis 12, Brussel (België)",
     "longText": null,
     "image": null,
-    "soldOut": null
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": null,
@@ -595,7 +970,10 @@
     "shortText": "Ziggo Dome, Amsterdam",
     "longText": null,
     "image": null,
-    "soldOut": null
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": null,
@@ -608,7 +986,26 @@
     "shortText": "\nMet Mötley Crüe, Def Leppard, Parkway Drive e.v.a.",
     "longText": null,
     "image": null,
-    "soldOut": null
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-06-14T00:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": null,
+    "title": "King Buffalo",
+    "location": "vera",
+    "price": null,
+    "shortText": "Vera, Groningen",
+    "longText": null,
+    "image": null,
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": null,
@@ -621,7 +1018,10 @@
     "shortText": "\nMet o.a. Guns n' Roses, Slipknot, Pantera, Ghost, Def Leppard en Mötley Crüe",
     "longText": null,
     "image": null,
-    "soldOut": null
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": null,
@@ -634,7 +1034,26 @@
     "shortText": "\nMet Iron Maiden, Slipknot, Kiss, Mötley Crue e.v.a.",
     "longText": null,
     "image": null,
-    "soldOut": null
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-06-17T00:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": null,
+    "title": "Celeste",
+    "location": "vera",
+    "price": null,
+    "shortText": "Vera, Groningen",
+    "longText": null,
+    "image": null,
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": null,
@@ -647,7 +1066,10 @@
     "shortText": "Ysselsteyn",
     "longText": null,
     "image": null,
-    "soldOut": null
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": null,
@@ -660,7 +1082,26 @@
     "shortText": "\nMet Ghost, Pantera, Nightwish, Gojira e.v.a.",
     "longText": null,
     "image": null,
-    "soldOut": null
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-06-23T00:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": null,
+    "title": "Zeke, Rough Gutts en Evilcentric",
+    "location": "vera",
+    "price": null,
+    "shortText": "Vera, Groningen",
+    "longText": null,
+    "image": null,
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": null,
@@ -673,7 +1114,10 @@
     "shortText": "\nMet Bizkit Park, For I Am King, Paceshifters, Hippotraktor, Black Mirrors, Baardvader, Square en Changing Tides",
     "longText": null,
     "image": null,
-    "soldOut": null
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": null,
@@ -686,7 +1130,10 @@
     "shortText": "\nmet o.a. Mayhem, Phil Campbell And The Bastard Sons, Exhorder e.v.a.",
     "longText": null,
     "image": null,
-    "soldOut": null
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": null,
@@ -699,7 +1146,26 @@
     "shortText": "Caprera, Haarlem",
     "longText": null,
     "image": null,
-    "soldOut": null
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2022-07-06T00:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": null,
+    "title": "Predatory Void en Takh",
+    "location": "vera",
+    "price": null,
+    "shortText": "Vera, Groningen",
+    "longText": null,
+    "image": null,
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": null,
@@ -712,7 +1178,10 @@
     "shortText": "Stadspark, Groningen",
     "longText": null,
     "image": null,
-    "soldOut": null
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": null,
@@ -725,7 +1194,10 @@
     "shortText": "Evenemententerrein Weert Noord, Weert",
     "longText": null,
     "image": null,
-    "soldOut": null
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": null,
@@ -738,7 +1210,10 @@
     "shortText": "Evenemententerrein Weert Noord, Weert",
     "longText": null,
     "image": null,
-    "soldOut": null
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": null,
@@ -751,7 +1226,10 @@
     "shortText": "Ziggo Dome, Amsterdam",
     "longText": null,
     "image": null,
-    "soldOut": null
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": null,
@@ -764,7 +1242,10 @@
     "shortText": "Sportpaleis, Antwerpen (België)",
     "longText": null,
     "image": null,
-    "soldOut": null
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": null,
@@ -772,12 +1253,15 @@
     "endDateTime": null,
     "venueEventUrl": null,
     "title": "Wacken Open Air",
-    "location": "wackenduitslandmetoamegadeth",
+    "location": "wackenduitslandmetoaironmaiden",
     "price": null,
-    "shortText": "\nmet o.a. Megadeth, Jinjer, Deicide e.v.a.",
+    "shortText": "\nmet o.a. Iron Maiden, Helloween, Megadeth, Jinjer, Deicide e.v.a.",
     "longText": null,
     "image": null,
-    "soldOut": null
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": null,
@@ -787,10 +1271,29 @@
     "title": "Rammstein",
     "location": "koningboudewijnstadion",
     "price": null,
-    "shortText": "Koning Boudewijnstadion, Groningen",
+    "shortText": "Koning Boudewijnstadion, Brussel (België)",
     "longText": null,
     "image": null,
-    "soldOut": null
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-08-06T00:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": null,
+    "title": "Spectral Wound en Afsky",
+    "location": "littledevil",
+    "price": null,
+    "shortText": "Little Devil, Tilburg",
+    "longText": null,
+    "image": null,
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": null,
@@ -803,7 +1306,10 @@
     "shortText": "Lange Munte, Kortrijk (België)",
     "longText": null,
     "image": null,
-    "soldOut": null
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": null,
@@ -816,7 +1322,10 @@
     "shortText": "\nMet o.a. Powerwolf, Megadeth, In Flames en Trivium",
     "longText": null,
     "image": null,
-    "soldOut": null
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": null,
@@ -829,7 +1338,10 @@
     "shortText": "\nMet Megadeth, In Flames, Trivium, Biohazard, Sepultura, Killswitch Engage, Obituary e.v.a.",
     "longText": null,
     "image": null,
-    "soldOut": null
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": null,
@@ -842,7 +1354,10 @@
     "shortText": "Q-Factory, Amsterdam",
     "longText": null,
     "image": null,
-    "soldOut": null
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": null,
@@ -855,7 +1370,10 @@
     "shortText": "Zuiderpark, Rotterdam",
     "longText": null,
     "image": null,
-    "soldOut": null
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": null,
@@ -868,7 +1386,10 @@
     "shortText": "\nMet Dead Head, Martyr, X-Tinxion e.a.",
     "longText": null,
     "image": null,
-    "soldOut": null
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": null,
@@ -881,7 +1402,10 @@
     "shortText": "Hall Of Fame, Tilburg",
     "longText": null,
     "image": null,
-    "soldOut": null
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
   },
   {
     "doorOpenDateTime": null,
@@ -894,6 +1418,9 @@
     "shortText": "Q-Factory, Amsterdam",
     "longText": null,
     "image": null,
-    "soldOut": null
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null,
+    "correctMusic": null
   }
 ]

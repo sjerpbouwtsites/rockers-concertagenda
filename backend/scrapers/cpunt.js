@@ -34,40 +34,45 @@ cpuntScraper.makeBaseEventList = async function () {
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
-  await page.waitForSelector("#filter .article-wrapper", {
+  if (!await page.waitForSelector("#filter .article-wrapper", {
     timeout: 2000,
-  });
+  }).catch(caughtError =>{
+    _t.handleError(caughtError, workerData, `Timeout wachten op #filter .article-wrapper Main page`, 'close-thread');
+  })){
+    return await this.makeBaseEventListEnd({
+      stopFunctie, page, rawEvents: []}
+    );
+  }
 
   await _t.waitFor(50);
 
   let rawEvents = await page.evaluate(
-    () => {
+    ({workerData}) => {
       return Array.from(
         document.querySelectorAll('#filter .article-wrapper')
       ).map((rawEvent) => {
-
-        const anchor = rawEvent.querySelector('.absolute-link') ?? null;
+        
         const title =
           rawEvent.querySelector('.article-title')?.textContent ?? null;
-        const venueEventUrl = anchor?.href ?? null;
-        const image = rawEvent?.querySelector(".bg-image-img")?.src ?? null;
-        const parpar = rawEvent.parentNode.parentNode;
-        const startDate = parpar.hasAttribute('data-last-date') ? parpar.getAttribute('data-last-date').split('-').reverse().join('-') : null;
-        const artInfoText = rawEvent.querySelector('.article-info')?.textContent.toLowerCase() ?? '';
-        const soldOut = artInfoText.includes('wachtlijst') || artInfoText.includes('uitverkocht');
-        return {
-          venueEventUrl,
-          startDate,
-          title,
-          image,
-          soldOut
+        const res = {
+          unavailable: "",
+          pageInfo: `<a href='${document.location.href}'>${workerData.family} - main - ${title}</a>`,
+          errors: [],
         };
+
+        res.title = title;
+        const anchor = rawEvent.querySelector('.absolute-link') ?? null;
+        res.venueEventUrl = anchor?.href ?? null;
+        res.image = rawEvent?.querySelector(".bg-image-img")?.src ?? null;
+        const parpar = rawEvent.parentNode.parentNode;
+        res.startDate = parpar.hasAttribute('data-last-date') ? parpar.getAttribute('data-last-date').split('-').reverse().join('-') : null;
+        const artInfoText = rawEvent.querySelector('.article-info')?.textContent.toLowerCase() ?? '';
+        res.soldOut = artInfoText.includes('wachtlijst') || artInfoText.includes('uitverkocht');
+        return res
       });
     },
-    {workerIndex: workerData.index }
+    {workerData}
   );
-
-  this.dirtyLog(rawEvents)
 
   return await this.makeBaseEventListEnd({
     stopFunctie, page, rawEvents}
@@ -76,15 +81,19 @@ cpuntScraper.makeBaseEventList = async function () {
 };
 // GET PAGE INFO
 
-cpuntScraper.getPageInfo = async function ({ page }) {
+cpuntScraper.getPageInfo = async function ({ page, event }) {
   
   const {stopFunctie} =  await this.getPageInfoStart()
   
-  await page.waitForSelector("#main .content-blocks", {
+  if (!await page.waitForSelector("#main .content-blocks", {
     timeout: 7500,
-  });
+  }).catch(caughtError =>{
+    _t.handleError(caughtError, workerData, `Timeout wachten op #main .content-blocks ${event.title}`, 'close-thread');
+  })){
+    return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
+  }
 
-  const pageInfo = await page.evaluate(({months}) => {
+  const pageInfo = await page.evaluate(({months, event}) => {
 
     const contentSections = Array.from(document.querySelectorAll('.content-blocks section'));
     let indexOfTicketSection = 0;
@@ -97,9 +106,9 @@ cpuntScraper.getPageInfo = async function ({ page }) {
     const ticketSection = contentSections[indexOfTicketSection];
 
     const res = {
-      unavailable: "",
-      pageInfoID: `<a href='${document.location.href}'>${document.title}</a>`,
-      errorsVoorErrorHandler: [],      
+      unavailable: event.unavailable,
+      pageInfo: `<a href='${document.location.href}'>${document.title}</a>`,
+      errors: [],      
     };
 
     const [, shortDay, monthName,year] = ticketSection.querySelector('.article-date')?.textContent.match(/(\d+)\s+(\w+)\s+(\d\d\d\d)/) ?? [null, null, null, null]
@@ -124,25 +133,24 @@ cpuntScraper.getPageInfo = async function ({ page }) {
     if (deurTijd){
       try {
         res.doorOpenDateTime = new Date(`${year}-${month}-${day}T${deurTijd}`).toISOString();
-      } catch (error) {
-        res.errorsVoorErrorHandler.push({error, remarks: `open door date error ${day} ${monthName} ${month} ${year}`})                
+      } catch (caughtError) {
+        res.errors.push({error: caughtError, remarks: `open door date error ${event.title} ${day} ${monthName} ${month} ${year}`})                
       }
     } 
     if (startTijd) {
       try {
         res.startDateTime = new Date(`${year}-${month}-${day}T${startTijd}`).toISOString();          
-      } catch (error) {
-        res.errorsVoorErrorHandler.push({error, remarks: `startTijd date error ${day} ${monthName} ${month} ${year}`})                
+      } catch (caughtError) {
+        res.errors.push({error: caughtError, remarks: `startTijd date error ${event.title} ${day} ${monthName} ${month} ${year}`})                
       }
     } 
-    
 
     res.priceTextcontent = 
       document.querySelector(".article-price")?.textContent.trim() ??
       "" ;
 
     return res;
-  }, {months: this.months});
+  }, {months: this.months, event});
 
   return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
   
@@ -153,7 +161,7 @@ cpuntScraper.getPageInfo = async function ({ page }) {
 cpuntScraper.singleEventCheck = async function (event) {
   const firstCheckText = `${event?.title ?? ""} ${event?.shortText ?? ""}`;
   if (
-    firstCheckText.includes("indie") || // TODO naar tool func hiervoor
+    firstCheckText.includes("indie") || 
     firstCheckText.includes("dromerig") ||
     firstCheckText.includes("shoegaze") ||
     firstCheckText.includes("alternatieve rock")

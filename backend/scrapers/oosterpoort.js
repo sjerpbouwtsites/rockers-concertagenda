@@ -49,23 +49,31 @@ oostpoortScraper.makeBaseEventList = async function () {
       })
       .filter((rawEvent, index) => index % workerData.workerCount === workerData.index)
       .map((eventEl) => {
-        const res = {};
         const eersteDeelKorteTekst = eventEl.querySelector('h1 span')?.textContent ?? '';
-        res.title = eersteDeelKorteTekst.length === 0 
+        const title = eersteDeelKorteTekst.length === 0 
           ? eventEl.querySelector('h1')?.textContent ?? ''
           : eventEl.querySelector('h1')?.textContent.replace(eersteDeelKorteTekst, '') ?? ''
+        const res = {
+          unavailable: "",
+          pageInfo: `<a class='pageinfo' href="${document.location.href}">${workerData.family} - main - ${title}</a>`,
+          errors: [],
+          title,
+        };
+        
+        try {
+          res.startDateTime = new Date(eventEl.querySelector('.program__date')?.getAttribute('datetime') ?? null).toISOString();
+        } catch (caughtError) {
+          res.errors.push({
+            error: caughtError, remarks: `date time faal ${title}.`,
+          })
+          return res;
+        }
+
+
         const tweedeDeelKorteTekst = eventEl.querySelector('.program__content p')?.textContent ?? '';
         res.shortText = `${eersteDeelKorteTekst}<br>${tweedeDeelKorteTekst}`;
         res.venueEventUrl = eventEl.querySelector(".program__link")?.href ?? null;
         res.soldOut = !!(eventEl.querySelector(".program__status")?.textContent.toLowerCase().includes('uitverkocht') ?? null)
-        try {
-          res.startDateTime = new Date(eventEl.querySelector('.program__date')?.getAttribute('datetime') ?? null).toISOString();
-        } catch (error) {
-          res.errorsVoorErrorHandler.push({
-            error,
-            remarks: 'date time faal'
-          })
-        }
         res.longText = eventEl.querySelector('.program__content')?.textContent ?? null; // tijdelijk om in te controleren
         return res;
       });
@@ -118,18 +126,18 @@ oostpoortScraper.singleEventCheck = async function (event) {
 
 // GET PAGE INFO
 
-oostpoortScraper.getPageInfo = async function ({ page }) {
+oostpoortScraper.getPageInfo = async function ({ page, event }) {
   
   const {stopFunctie} =  await this.getPageInfoStart()
   
   await _t.waitFor(600);
  
   const pageInfo = await page.evaluate(
-    () => {
+    ({event}) => {
       const res = {
-        unavailable: "",
-        pageInfoID: `<a href='${document.location.href}'>${document.title}</a>`,
-        errorsVoorErrorHandler: [],
+        unavailable: event.unavailable,
+        pageInfo: `<a href='${document.location.href}'>${document.title}</a>`,
+        errors: [],
       };
 
       try {
@@ -137,9 +145,9 @@ oostpoortScraper.getPageInfo = async function ({ page }) {
         res.image = document.querySelector('.hero__image')?.src ?? null;
         res.priceTextcontent = document.querySelector('.event__pricing__costs')?.textContent ?? document.querySelector('.festival__tickets__toggle') ?? '';
 
-      } catch (error) {
-        res.errorsVoorErrorHandler.push({
-          error,
+      } catch (caughtError) {
+        res.errors.push({
+          error: caughtError,
           remarks: 'page info wrap catch'
         })    
       }
@@ -148,12 +156,8 @@ oostpoortScraper.getPageInfo = async function ({ page }) {
         res.unavailable += ` ${document.querySelector('.event__cta').textContent}`;
    
       }
-
-      if (res.unavailable !== "") {
-        res.unavailable = `${res.unavailable}\n${res.pageInfoID}`;
-      }
       return res;
-    },
+    }, {event},
     
   );
   return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
