@@ -46,7 +46,12 @@ async function startWorker(workerConfig) {
 
   const thisConfig = workerConfig.get();
 
-  thisConfig.masterEnv = {...process.env}
+  const shellArguments = _t.getShellArguments();
+
+  thisConfig.masterEnv = {
+    TICKETMASTER_CONSUMER_KEY: process.env.TICKETMASTER_CONSUMER_KEY,
+    TICKETMASTER_CONSUMER_SECRET: process.env.TICKETMASTER_CONSUMER_SECRET
+  }
 
   const workingThisFamily = WorkerStatus.workersWorkingOfFamily(
     thisConfig.family
@@ -69,7 +74,7 @@ async function startWorker(workerConfig) {
     return recursiveStartWorkers(workerConfig);
   }
 
-  const thisWorker = new RockWorker(thisConfig);
+  const thisWorker = new RockWorker(thisConfig, shellArguments);
   thisWorker.postMessage(WorkerMessage.quick("process", "command-start"));
   WorkerStatus.registerWorker(thisConfig);
   addWorkerMessageHandler(thisWorker);

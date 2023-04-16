@@ -1,4 +1,178 @@
 
+  013-2 Error - 12:05:39 PM
+  TypeError: this.debugger is not a function
+    at nuldertienScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/013.js:28:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:92:29) 
+  this.debugger is not a function
+  
+  
+  013-3 Error - 11:22:38 AM
+  TypeError: Cannot read properties of undefined (reading 'forced')
+    at nuldertienScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/013.js:29:31)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:75:29) 
+  Cannot read properties of undefined (reading 'forced')
+  
+  
+  undefined Error - 11:13:28 AM
+  Error: makeBaseEvent overtijd. Max: 15001
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:111:9)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  makeBaseEvent overtijd. Max: 15001
+  
+  
+  undefined Error - 11:13:28 AM
+  Error: makeBaseEvent overtijd. Max: 15001
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:111:9)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  makeBaseEvent overtijd. Max: 15001
+  
+  
+  013-1 Error - 11:13:14 AM
+  TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Browser'
+    |     property '_defaultContext' -> object with constructor 'BrowserContext'
+    --- property '_browser' closes the circle
+    at JSON.stringify (<anonymous>)
+    at get json [as json] (file:///home/sjerp/dev/apache/concertagenda/backend/mods/rock-worker.js:206:17)
+    at Function.quick (file:///home/sjerp/dev/apache/concertagenda/backend/mods/rock-worker.js:145:24)
+    at QuickWorkerMessage.toConsole (file:///home/sjerp/dev/apache/concertagenda/backend/mods/rock-worker.js:93:26)
+    at AbstractScraper.dirtyLog (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:43:37)
+    at nuldertienScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/013.js:28:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:75:29) 
+  Converting circular structure to JSON
+    --> starting at object with constructor 'Browser'
+    |     property '_defaultContext' -> object with constructor 'BrowserContext'
+    --- property '_browser' closes the circle
+  
+  
+  013-2 Error - 11:13:14 AM
+  TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Browser'
+    |     property '_defaultContext' -> object with constructor 'BrowserContext'
+    --- property '_browser' closes the circle
+    at JSON.stringify (<anonymous>)
+    at get json [as json] (file:///home/sjerp/dev/apache/concertagenda/backend/mods/rock-worker.js:206:17)
+    at Function.quick (file:///home/sjerp/dev/apache/concertagenda/backend/mods/rock-worker.js:145:24)
+    at QuickWorkerMessage.toConsole (file:///home/sjerp/dev/apache/concertagenda/backend/mods/rock-worker.js:93:26)
+    at AbstractScraper.dirtyLog (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:43:37)
+    at nuldertienScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/013.js:28:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:75:29) 
+  Converting circular structure to JSON
+    --> starting at object with constructor 'Browser'
+    |     property '_defaultContext' -> object with constructor 'BrowserContext'
+    --- property '_browser' closes the circle
+  
+  
+  013-2 Error - 11:06:39 AM
+  TypeError: Cannot read properties of undefined (reading 'map')
+    at AbstractScraper.makeBaseEventListEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:156:27)
+    at nuldertienScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/013.js:73:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:75:29) 
+  Cannot read properties of undefined (reading 'map')
+  
+  
+  013-2 Error - 11:06:39 AM
+  Error: Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:36:46
+    at Array.map (<anonymous>)
+    at __puppeteer_evaluation_script__:4:8
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async nuldertienScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/013.js:29:21)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:75:29) 
+  Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:36:46
+    at Array.map (<anonymous>)
+    at __puppeteer_evaluation_script__:4:8
+  
+  
+  013-1 Error - 11:06:39 AM
+  TypeError: Cannot read properties of undefined (reading 'map')
+    at AbstractScraper.makeBaseEventListEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:156:27)
+    at nuldertienScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/013.js:73:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:75:29) 
+  Cannot read properties of undefined (reading 'map')
+  
+  
+  013-1 Error - 11:06:39 AM
+  Error: Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:36:46
+    at Array.map (<anonymous>)
+    at __puppeteer_evaluation_script__:4:8
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async nuldertienScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/013.js:29:21)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:75:29) 
+  Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:36:46
+    at Array.map (<anonymous>)
+    at __puppeteer_evaluation_script__:4:8
+  
+  
+  013-3 Error - 11:04:08 AM
+  TypeError: Cannot read properties of undefined (reading 'map')
+    at AbstractScraper.makeBaseEventListEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:156:27)
+    at nuldertienScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/013.js:73:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:75:29) 
+  Cannot read properties of undefined (reading 'map')
+  
+  
+  013-3 Error - 11:04:08 AM
+  Error: Evaluation failed: Error: hallo!
+    at __puppeteer_evaluation_script__:36:15
+    at Array.map (<anonymous>)
+    at __puppeteer_evaluation_script__:4:8
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async nuldertienScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/013.js:29:21)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:75:29) 
+  Evaluation failed: Error: hallo!
+    at __puppeteer_evaluation_script__:36:15
+    at Array.map (<anonymous>)
+    at __puppeteer_evaluation_script__:4:8
+  
+  
+  013-1 Error - 11:04:07 AM
+  TypeError: Cannot read properties of undefined (reading 'map')
+    at AbstractScraper.makeBaseEventListEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:156:27)
+    at nuldertienScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/013.js:73:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:75:29) 
+  Cannot read properties of undefined (reading 'map')
+  
+  
+  013-1 Error - 11:04:07 AM
+  Error: Evaluation failed: Error: hallo!
+    at __puppeteer_evaluation_script__:36:15
+    at Array.map (<anonymous>)
+    at __puppeteer_evaluation_script__:4:8
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async nuldertienScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/013.js:29:21)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:75:29) 
+  Evaluation failed: Error: hallo!
+    at __puppeteer_evaluation_script__:36:15
+    at Array.map (<anonymous>)
+    at __puppeteer_evaluation_script__:4:8
+  
+  
   undefined Error - 10:42:10 AM
   Error: makeBaseEvent overtijd. Max: 60000
     at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:111:9)

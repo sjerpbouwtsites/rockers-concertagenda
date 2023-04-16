@@ -4,13 +4,13 @@ import { Worker } from "worker_threads";
 
 export default class RockWorker extends Worker {
   
-  constructor(confObject) {
+  constructor(confObject, shellArguments) {
     super(confObject.path, {
-      workerData: confObject
+      workerData: {...confObject, shellArguments}
     }) 
-    this.name = confObject.name,
+    this.name = confObject.name;
     this.family = confObject.family;
-    this.index = confObject.index;  
+    this.index = confObject.index;
   }
   get workerName() {
     console.warn("OUDE METHODE");

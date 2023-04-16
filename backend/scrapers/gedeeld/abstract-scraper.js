@@ -22,12 +22,24 @@ export default class AbstractScraper {
     this.install(obj);
   }
 
+  /**
+   * Checks in workerData if this family is forced.
+   *
+   * @readonly
+   * @memberof AbstractScraper
+   */
+  get isForced(){
+    const forced = workerData?.shellArguments?.force ?? '';
+    return forced.includes(workerData.family)
+  }
+
   install(obj) {
     this.qwm = new QuickWorkerMessage(workerData);
     this.maxExecutionTime = obj.maxExecutionTime ?? 30000;
     this.puppeteerConfig = obj.puppeteerConfig ?? {};
     this.months = getVenueMonths(workerData.family)
   }
+
 
 
 
@@ -148,6 +160,8 @@ export default class AbstractScraper {
    * @memberof AbstractScraper
    */
   async makeBaseEventListEnd({stopFunctie, page, rawEvents}){
+
+    this.isForced && this.dirtyLog(rawEvents)
 
     clearTimeout(stopFunctie);
     
@@ -527,6 +541,8 @@ export default class AbstractScraper {
    * @memberof AbstractScraper
    */  
   async getPageInfoEnd({pageInfo, stopFunctie, page}){
+
+    this.isForced && this.dirtyLog(pageInfo)
     
     pageInfo.errors.forEach((errorWrapper) => {
       _t.handleError(
