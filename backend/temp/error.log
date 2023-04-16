@@ -1,4 +1,64 @@
 
+  undefined Error - 10:42:10 AM
+  Error: makeBaseEvent overtijd. Max: 60000
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:111:9)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  makeBaseEvent overtijd. Max: 60000
+  
+  
+  ticketmaster-1 Error - 10:41:11 AM
+  TypeError: Cannot read properties of undefined (reading 'name')
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:233:71
+    at Array.some (<anonymous>)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:232:47
+    at Array.filter (<anonymous>)
+    at ticketmasterScraper.filterForMetal (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:231:20)
+    at ticketmasterScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:92:32)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:75:29) 
+  Cannot read properties of undefined (reading 'name')
+  
+  
+  undefined Error - 12:18:44 PM
+  Error: makeBaseEvent overtijd. Max: 60000
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:111:9)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  makeBaseEvent overtijd. Max: 60000
+  
+  
+  ticketmaster-1 Error - 12:17:45 PM
+  TypeError: Cannot read properties of undefined (reading 'name')
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:233:71
+    at Array.some (<anonymous>)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:232:47
+    at Array.filter (<anonymous>)
+    at ticketmasterScraper.filterForMetal (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:231:20)
+    at ticketmasterScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:92:32)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:75:29) 
+  Cannot read properties of undefined (reading 'name')
+  
+  
+  undefined Error - 12:01:17 PM
+  Error: makeBaseEvent overtijd. Max: 60000
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:111:9)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  makeBaseEvent overtijd. Max: 60000
+  
+  
+  ticketmaster-1 Error - 12:00:18 PM
+  TypeError: Cannot read properties of undefined (reading 'name')
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:233:71
+    at Array.some (<anonymous>)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:232:47
+    at Array.filter (<anonymous>)
+    at ticketmasterScraper.filterForMetal (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:231:20)
+    at ticketmasterScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:92:32)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:75:29) 
+  Cannot read properties of undefined (reading 'name')
+  
+  
   ticketmaster-1 Error - 8:28:05 AM
   Error: Geen locatie gevonden
     at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:149:14)

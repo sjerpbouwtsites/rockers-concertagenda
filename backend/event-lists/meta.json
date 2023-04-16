@@ -1,25 +1,5 @@
 {
   "locations": {
-    "trix": {
-      "name": "trix",
-      "count": 2
-    },
-    "muziekcentrum": {
-      "name": "muziekcentrum",
-      "count": 1
-    },
-    "littledevil": {
-      "name": "littledevil",
-      "count": 3
-    },
-    "hedon": {
-      "name": "hedon",
-      "count": 4
-    },
-    "zollhaus": {
-      "name": "zollhaus",
-      "count": 1
-    },
     "tpaard": {
       "name": "tpaard",
       "count": 1
@@ -28,9 +8,17 @@
       "name": "willemtwee",
       "count": 2
     },
+    "vera": {
+      "name": "vera",
+      "count": 11
+    },
     "013enomgeving": {
       "name": "013enomgeving",
       "count": 1
+    },
+    "littledevil": {
+      "name": "littledevil",
+      "count": 16
     },
     "willemeen": {
       "name": "willemeen",
@@ -48,13 +36,17 @@
       "name": "popei",
       "count": 1
     },
+    "hedon": {
+      "name": "hedon",
+      "count": 3
+    },
     "zagarena": {
       "name": "zagarena",
       "count": 1
     },
     "ziggodome": {
       "name": "ziggodome",
-      "count": 50
+      "count": 57
     },
     "littledeviltilburg": {
       "name": "littledeviltilburg",
@@ -80,6 +72,10 @@
       "name": "ekko",
       "count": 2
     },
+    "trix": {
+      "name": "trix",
+      "count": 1
+    },
     "deklinker": {
       "name": "deklinker",
       "count": 1
@@ -103,6 +99,10 @@
     "spiritof66": {
       "name": "spiritof66",
       "count": 1
+    },
+    "halloffame": {
+      "name": "halloffame",
+      "count": 2
     },
     "amphitheater": {
       "name": "amphitheater",
@@ -172,8 +172,8 @@
       "name": "evenemententerreinweertnoord",
       "count": 7
     },
-    "wackenduitslandmetoamegadeth": {
-      "name": "wackenduitslandmetoamegadeth",
+    "wackenduitslandmetoaironmaiden": {
+      "name": "wackenduitslandmetoaironmaiden",
       "count": 1
     },
     "koningboudewijnstadion": {
@@ -204,25 +204,21 @@
       "name": "musicon",
       "count": 3
     },
-    "halloffame": {
-      "name": "halloffame",
-      "count": 1
-    },
     "baroeg": {
       "name": "baroeg",
-      "count": 27
+      "count": 23
     },
     "patronaat": {
       "name": "patronaat",
-      "count": 21
+      "count": 20
     },
     "013": {
       "name": "013",
-      "count": 40
+      "count": 37
     },
     "effenaar": {
       "name": "effenaar",
-      "count": 28
+      "count": 27
     },
     "tivolivredenburg": {
       "name": "tivolivredenburg",
@@ -230,7 +226,7 @@
     },
     "doornroosje": {
       "name": "doornroosje",
-      "count": 16
+      "count": 17
     },
     "dehelling": {
       "name": "dehelling",
@@ -238,7 +234,7 @@
     },
     "metropool": {
       "name": "metropool",
-      "count": 10
+      "count": 8
     },
     "boerderij": {
       "name": "boerderij",
@@ -246,7 +242,7 @@
     },
     "dynamo": {
       "name": "dynamo",
-      "count": 17
+      "count": 18
     },
     "bibelot": {
       "name": "bibelot",
@@ -258,7 +254,7 @@
     },
     "gebrdenobel": {
       "name": "gebrdenobel",
-      "count": 7
+      "count": 6
     },
     "groeneengel": {
       "name": "groeneengel",
@@ -266,11 +262,11 @@
     },
     "neushoorn": {
       "name": "neushoorn",
-      "count": 4
+      "count": 3
     },
     "iduna": {
       "name": "iduna",
-      "count": 2
+      "count": 3
     },
     "deflux": {
       "name": "deflux",
@@ -278,23 +274,23 @@
     },
     "oosterpoort": {
       "name": "oosterpoort",
-      "count": 3
+      "count": 2
     },
     "paradiso": {
       "name": "paradiso",
-      "count": 12
+      "count": 25
     },
     "volt": {
       "name": "volt",
-      "count": 7
+      "count": 5
     },
     "occii": {
       "name": "occii",
-      "count": 23
+      "count": 22
     },
     "melkweg": {
       "name": "melkweg",
-      "count": 51
+      "count": 50
     },
     "p60": {
       "name": "p60",
@@ -302,7 +298,7 @@
     },
     "afaslive": {
       "name": "afaslive",
-      "count": 10
+      "count": 9
     },
     "kavka": {
       "name": "kavka",
@@ -311,10 +307,6 @@
     "megaland": {
       "name": "megaland",
       "count": 8
-    },
-    "phil": {
-      "name": "phil",
-      "count": 5
     },
     "musissacrum": {
       "name": "musissacrum",
@@ -327,6 +319,10 @@
     "lantarenvenster": {
       "name": "lantarenvenster",
       "count": 1
+    },
+    "phil": {
+      "name": "phil",
+      "count": 5
     },
     "spotstadsschouwburg": {
       "name": "spotstadsschouwburg",
