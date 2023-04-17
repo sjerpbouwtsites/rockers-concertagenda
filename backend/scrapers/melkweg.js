@@ -5,20 +5,23 @@ import makeScraperConfig from "./gedeeld/scraper-config.js";
 // SCRAPER CONFIG
 
 const melkwegScraper = new AbstractScraper(makeScraperConfig({
-  maxExecutionTime: 60000,
+  maxExecutionTime: 60062,
   workerData: Object.assign({}, workerData),
   puppeteerConfig: {
     mainPage: {
-      timeout: 75000,
+      timeout: 75073,
       waitUntil: 'load'
     },
     singlePage: {
-      timeout: 20000
+      timeout: 20074
     },
     app: {
       mainPage: {
         url: "https://www.melkweg.nl/nl/agenda",
         requiredProperties: ['venueEventUrl', 'title']
+      },
+      singlePage: {
+        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
       }
     }
   }
@@ -29,6 +32,13 @@ melkwegScraper.listenToMasterThread();
 // MAKE BASE EVENTS
 
 melkwegScraper.makeBaseEventList = async function () {
+
+  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.name);
+  if (availableBaseEvent){
+    return await this.makeBaseEventListEnd({
+      stopFunctie: null, rawEvents: availableBaseEvent}
+    );    
+  }  
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
@@ -67,6 +77,8 @@ melkwegScraper.makeBaseEventList = async function () {
       });
   }, {workerData});
 
+  this.saveBaseEventlist(workerData.family, rawEvents)
+
   return await this.makeBaseEventListEnd({
     stopFunctie, page, rawEvents}
   );
@@ -91,19 +103,17 @@ melkwegScraper.getPageInfo = async function ({ page, event }) {
       ).toISOString();
     } catch (caughtError) {
 
-      // ${ voor debug
-      //   document.querySelector('[class*="styles_event-header"] time')
-      //     ?.outerHTML
-      // }
-
       res.errors.push({
         error: caughtError,
         remarks: `startdatetime faal ${res.pageInfo}`,
+        toDebug: {
+          text: document.querySelector('[class*="styles_event-header"] time')
+            ?.outerHTML ?? 'geen time element',
+          res, event
+        }
       });
     }
-    if (!res.startDateTime){
-      res.unavailable = 'geen startDateTime'
-    }
+
     res.priceTextcontent = 
       document.querySelector('[class*="styles_ticket-prices"]')?.textContent ??
       '';
@@ -112,6 +122,11 @@ melkwegScraper.getPageInfo = async function ({ page, event }) {
     res.image =
       document.querySelector('[class*="styles_event-header__figure"] img')
         ?.src ?? null;
+    if (!res.image){
+      res.errors.push({
+        remarks: `image missing ${res.pageInfo}`
+      })
+    }
     return res;
   }, {event});
 

@@ -18,6 +18,9 @@ const idunaScraper = new AbstractScraper(makeScraperConfig({
       mainPage: {
         url: "https://iduna.nl/",
         requiredProperties: ['venueEventUrl', 'title']
+      },
+      singlePage: {
+        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
       }
     }
   }
@@ -28,6 +31,13 @@ idunaScraper.listenToMasterThread();
 // MAKE BASE EVENTS
 
 idunaScraper.makeBaseEventList = async function () {
+
+  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.name);
+  if (availableBaseEvent){
+    return await this.makeBaseEventListEnd({
+      stopFunctie: null, rawEvents: availableBaseEvent}
+    );    
+  }  
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
@@ -91,7 +101,11 @@ idunaScraper.makeBaseEventList = async function () {
       }
     });    
   } catch (caughtError) { // belachelijke try catch.
-    _t.handleError(caughtError, workerData, `uiterste catch om pak metalEvents punkEvents iduna main`, 'close-thread')
+
+    // TODO WRAPPER ERRRO
+    _t.handleError(caughtError, workerData, `uiterste catch om pak metalEvents punkEvents iduna main`, 'close-thread',{
+      metalEvents, punkEvents
+    })
     return await this.makeBaseEventListEnd({
       stopFunctie, page, rawEvents:[]}
     );    
@@ -101,6 +115,8 @@ idunaScraper.makeBaseEventList = async function () {
     musicEvent.title = _t.killWhitespaceExcess(musicEvent.title);
     return musicEvent;
   });
+
+  this.saveBaseEventlist(workerData.family, rawEvents)
   
   return await this.makeBaseEventListEnd({
     stopFunctie, page, rawEvents}
@@ -136,7 +152,15 @@ idunaScraper.getPageInfo = async function ({ page, event }) {
           }`;
         }
         if (!res.startDate){
-          res.unavailable += 'geen startDate';
+          res.errors.push({
+            remarks: `geen startDate ${res.pageInfo}`,
+            toDebug: {
+              res,event,
+              text:  document
+                .querySelector("#sideinfo .capitalize")
+                ?.textContent
+            }
+          })
           return res;
         }
 
@@ -152,7 +176,12 @@ idunaScraper.getPageInfo = async function ({ page, event }) {
           }
         }
         if (!res.startTime){
-          res.unavailable += 'geen startTime';
+          res.errors.push({
+            remarks: `geen startTime ${res.pageInfo}`,
+            toDebug: {
+              res,event
+            }
+          })
           return res;
         }        
 
@@ -184,11 +213,12 @@ idunaScraper.getPageInfo = async function ({ page, event }) {
           ).toISOString();
         }
       } catch (caughtError) { //TODO BELACHELJIK GROTE TRY CATCH
-        res.unavailable += `iets desastreus in een te grote catch`
         res.errors.push({
           error:caughtError,
           remarks: `belacheljik grote catch iduna getPageInfo ${res.pageInfo}`,
-          //TODO debugger
+          toDebug:{
+            res, event
+          }
         });
         return res;
       }
@@ -199,6 +229,11 @@ idunaScraper.getPageInfo = async function ({ page, event }) {
       if (imageMatch && Array.isArray(imageMatch) && imageMatch.length === 2) {
         res.image = imageMatch[1];
       }
+      if (!res.image){
+        res.errors.push({
+          remarks: `image missing ${res.pageInfo}`
+        })
+      }      
 
       res.longTextHTML =
         document.querySelector("#postcontenttext")?.innerHTML ?? '';

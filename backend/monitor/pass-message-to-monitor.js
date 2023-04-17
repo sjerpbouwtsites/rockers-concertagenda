@@ -39,7 +39,7 @@ export default function passMessageToMonitor(message, workerName) {
       wsMsgInst.subtype.includes("error") &&
       WorkerStatus.isRegisteredWorker(workerName)
     ) {
-      WorkerStatus.saveError(workerName, wsMsgInst.messageData);
+      WorkerStatus.processError(workerName, wsMsgInst.messageData);
     }
 
     // if (

@@ -22,3 +22,30 @@ const res = {
     errors: [],
   };
 ```
+
+## image error
+```js
+  if (!res.image){
+    res.errors.push({
+      remarks: `image missing ${res.pageInfo}`
+    })
+  }
+```
+
+## scraperConfig basic
+```js
+new AbstractScraper(makeScraperConfig({
+  workerData: Object.assign({}, workerData),
+  puppeteerConfig: {
+    app: {
+      mainPage: {
+        url: "",
+        requiredProperties: ['venueEventUrl', 'title']
+      },
+      singlePage: {
+        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
+      }
+    }
+  }
+}));
+```

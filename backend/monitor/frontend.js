@@ -122,8 +122,9 @@ function eventToProcesses(eventMsg, fields) {
           eventMsg.messageData.amountOfEvents,
     });
   } else {
-    console.log(`nog niet geprogrammeerde optie`);
-    console.log(eventMsg)
+    // TODO nog niet geprogrammeerd
+    // console.log(`nog niet geprogrammeerde optie`);
+    // console.log(eventMsg)
   }
 }
 

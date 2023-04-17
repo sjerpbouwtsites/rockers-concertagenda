@@ -10,7 +10,7 @@ const afasliveScraper = new AbstractScraper(makeScraperConfig({
   workerData: Object.assign({}, workerData),
   puppeteerConfig: {
     mainPage: {
-      timeout: 60000,
+      timeout: 60043,
     },
     singlePage: {
       timeout: 20000
@@ -19,7 +19,10 @@ const afasliveScraper = new AbstractScraper(makeScraperConfig({
       mainPage: {
         url: "https://www.afaslive.nl/agenda",
         requiredProperties: ['venueEventUrl']
-      }
+      },
+      singlePage: {
+        requiredProperties: ['venueEventUrl', 'title', 'startDateTime']
+      }      
     }
   }
 }));
@@ -31,6 +34,13 @@ afasliveScraper.listenToMasterThread();
 // MAKE BASE EVENTS
 
 afasliveScraper.makeBaseEventList = async function () {
+
+  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.name);
+  if (availableBaseEvent){
+    return await this.makeBaseEventListEnd({
+      stopFunctie: null, rawEvents: availableBaseEvent}
+    );    
+  }  
   
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
@@ -69,6 +79,8 @@ afasliveScraper.makeBaseEventList = async function () {
       });
   }, {workerData});
 
+  this.saveBaseEventlist(workerData.family, rawEvents)
+
   return await this.makeBaseEventListEnd({
     stopFunctie, page, rawEvents}
   );
@@ -101,8 +113,15 @@ afasliveScraper.getPageInfo = async function ({ page, event }) {
           startDateMatch[1]
         }`;
       } else {
-        res.unavailable += 'Geen start date.';
-        // debugger doen.
+        res.errors.push({
+          remarks: `geen startdate`,
+          toDebug: {
+            startDateText: document
+              .querySelector(".eventTitle")
+              ?.parentNode.querySelector("time")
+              ?.textContent
+          }
+        })        
         return res;
       }
 
@@ -114,8 +133,12 @@ afasliveScraper.getPageInfo = async function ({ page, event }) {
         if (startmatch && Array.isArray(startmatch) && startmatch.length) {
           res.startTime = startmatch[0];
         } else {
-          res.unavailable += 'Geen start tijd.';
-          // debugger doen.
+          res.errors.push({
+            remarks: `Geen start tijd`,
+            toDebug: {
+              startDateText: startEl.textContent
+            }
+          })  
           return res;          
         }
       }
@@ -145,8 +168,8 @@ afasliveScraper.getPageInfo = async function ({ page, event }) {
       } catch (errorCaught) {
         res.errors.push({
           error: errorCaught,
-          remarks: `tijd en datum samenvoegen ${res.pageInfo}`,
-          // TODO debugger error samen time en date ${res.startDate}T${res.startTime}:00 ${res.startDate}T${res.doorTime}:00
+          remarks: `merge time date ${res.pageInfo}`,
+          toDebug: res
         });
         res.unavailable += 'geen starttijd wegens fout';
         return res;

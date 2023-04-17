@@ -32,7 +32,7 @@ async function scrapeMetalfan() {
     EventsList.save("metalfan");
     browser.close();
   } catch (error) {
-    _t.handleError(error);
+    _t.handleError(error, workerData, `metal fan outer catch`, 'close-thread', null);
   }
 }
 

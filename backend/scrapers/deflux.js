@@ -9,20 +9,23 @@ import * as _t from "../mods/tools.js";
 
 const vandaag = new Date().toISOString().split('T')[0]
 const defluxScraper = new AbstractScraper(makeScraperConfig({
-  maxExecutionTime: 30000,
+  maxExecutionTime: 30007,
   workerData: Object.assign({}, workerData),
   puppeteerConfig: {
     mainPage: {
-      timeout: 5000,
+      timeout: 5008,
     },
     singlePage: {
-      timeout: 20000
+      timeout: 20009
     },
     app: {
       mainPage: {
         useCustomScraper: true,
         url: `https://www.podiumdeflux.nl/wp-json/wp/v2/ajde_events?event_type=81,87,78,88,80&filter[startdate]=${vandaag}`,
         requiredProperties: ['venueEventUrl', 'title']
+      },
+      singlePage: {
+        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
       }
     }
   }
@@ -33,6 +36,7 @@ defluxScraper.listenToMasterThread();
 // MAKE BASE EVENTS
 
 defluxScraper.makeBaseEventList = async function () {
+  
 
   const {stopFunctie} = await this.makeBaseEventListStart()
 
@@ -42,7 +46,8 @@ defluxScraper.makeBaseEventList = async function () {
       return response.data;
     })
     .catch((caughtError)=> {
-      _t.handleError(caughtError, workerData, `main axios fail`, 'close-thread')
+      // TODO WRAPPEN
+      _t.handleError(caughtError, workerData, `main axios fail`, 'close-thread', null)
     })
   if (!axiosRes) return;
   const rawEvents = axiosRes.map(axiosResultSingle =>{
@@ -80,18 +85,22 @@ defluxScraper.getPageInfo = async function ({ page, event}) {
 
     const eventScheme = document.querySelector('.evo_event_schema');
     if(!eventScheme) {
-      res.errors.push({error: new Error('HTML parsing error'), remarks: `geen event scheme gevonden ${res.pageInfo}`})
-      res.unavailable += 'geen event scheme gevonden, geen data'
+      res.errors.push({remarks: `geen event scheme gevonden ${res.pageInfo}`,toDebug:res})
       return res;  
     }
 
     res.image = eventScheme.querySelector('[itemprop="image"]')?.getAttribute('content') ?? '';
+    if (!res.image){
+      res.errors.push({
+        remarks: `image missing ${res.pageInfo}`
+      })
+    }    
     res.startDate = eventScheme.querySelector('[itemprop="startDate"]')?.getAttribute('content').split('T')[0].split('-').map(dateStuk => dateStuk.padStart(2, '0')).join('-')
     try {
       res.startTime = document.querySelector('.evcal_time.evo_tz_time').textContent.match(/\d\d:\d\d/)[0];
       res.startDateTime = new Date(`${res.startDate}T${res.startTime}:00`).toISOString()
     } catch (caughtError) {
-      res.errors.push({error: caughtError, remarks: `starttime match ${res.pageInfo}`})
+      res.errors.push({error: caughtError, remarks: `starttime match ${res.pageInfo}`,toDebug:res})
       return res;
     }
 
@@ -100,7 +109,7 @@ defluxScraper.getPageInfo = async function ({ page, event}) {
         res.endTime = document.querySelector('.evcal_desc3').textContent.match(/\d\d:\d\d/)[0];
         res.endDateTime = new Date(`${res.startDate}T${res.endTime}:00`).toISOString();
       } catch (caughtError) {
-        res.errors.push({error: caughtError, remarks: `door open starttime match ${res.pageInfo}`})
+        res.errors.push({error: caughtError, remarks: `door open starttime match ${res.pageInfo}`,toDebug:res})
       }
     }
     

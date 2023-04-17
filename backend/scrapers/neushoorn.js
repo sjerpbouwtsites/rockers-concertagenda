@@ -16,6 +16,9 @@ const neushoornScraper = new AbstractScraper(makeScraperConfig({
       mainPage: {
         url: "https://neushoorn.nl/#/agenda",
         requiredProperties: ['venueEventUrl', 'title']
+      },
+      singlePage: {
+        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
       }
     }
   }
@@ -26,6 +29,13 @@ neushoornScraper.listenToMasterThread();
 // MAKE BASE EVENTS
 
 neushoornScraper.makeBaseEventList = async function () {
+
+  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.name);
+  if (availableBaseEvent){
+    return await this.makeBaseEventListEnd({
+      stopFunctie: null, rawEvents: availableBaseEvent}
+    );    
+  }
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
@@ -39,7 +49,7 @@ neushoornScraper.makeBaseEventList = async function () {
     });
     await _t.waitFor(50);
   } catch (caughtError) {
-    _t.handleError(caughtError, workerData, `Laad en klikwachten timeout neushoorn`, 'close-thread');
+    _t.handleError(caughtError, workerData, `Laad en klikwachten timeout neushoorn`, 'close-thread', null);
     return await this.makeBaseEventListEnd({
       stopFunctie, page, rawEvents:[]}
     );
@@ -77,6 +87,9 @@ neushoornScraper.makeBaseEventList = async function () {
         }
       );
   }, {workerData});
+
+  this.saveBaseEventlist(workerData.family, rawEvents)
+
   return await this.makeBaseEventListEnd({
     stopFunctie, page, rawEvents}
   );
@@ -110,8 +123,14 @@ neushoornScraper.getPageInfo = async function ({ page,event }) {
         const day = dateTextMatch[1].padStart(2, "0");
         res.startDate = `${year}-${month}-${day}`;
       } else {
-        res.startDate = null;
-        res.unavailable += " geen start date";
+        res.errors.push({
+          remarks: `geen startDate ${res.pageInfo}`,
+          toDebug:{
+            text:  document.querySelector(".summary .summary__item:first-child")
+              ?.textContent,
+            res
+          }
+        })
         return res;
       }
 
@@ -147,7 +166,10 @@ neushoornScraper.getPageInfo = async function ({ page,event }) {
       } catch (caughtError) {
         res.errors.push({
           error: caughtError,
-          remarks: `longTextHTML faal ${res.pageInfo}`,
+          remarks: `longTextHTML faal ${res.pageInfo}`, 
+          toDebug: {
+            res, event
+          }
         });
       }
 
@@ -157,6 +179,11 @@ neushoornScraper.getPageInfo = async function ({ page,event }) {
       if (imageMatch && imageMatch.length) {
         res.image = imageMatch[0];
       }
+      if (!res.image){
+        res.errors.push({
+          remarks: `image missing ${res.pageInfo}`
+        })
+      }      
 
       return res;
     },

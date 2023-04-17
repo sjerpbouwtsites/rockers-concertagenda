@@ -12,6 +12,9 @@ const nuldertienScraper = new AbstractScraper(makeScraperConfig({
       mainPage: {
         url: "https://www.013.nl/programma/heavy",
         requiredProperties: ['venueEventUrl', 'title']
+      },
+      singlePage: {
+        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
       }
     }
   }
@@ -52,7 +55,10 @@ nuldertienScraper.makeBaseEventList = async function () {
           ).toISOString();
         } 
         if (!datumEl || !res.startDateTime){
-          res.unavailable = "geen datum gevonden";
+          res.errors.push({
+            remarks: `geen datumEl of startDateTime ${res.pageInfo}`,
+            toDebug: {res, datumEl},
+          })
           return res;
         }
         
@@ -85,6 +91,11 @@ nuldertienScraper.getPageInfo = async function ({ page , event}) {
     };
 
     res.image = document.querySelector(".event-spotlight__image")?.src ?? null;
+    if (!res.image){
+      res.errors.push({
+        remarks: `image missing ${res.pageInfo}`
+      })
+    }
 
     res.priceTextcontent = 
       document.querySelector(".practical-information tr:first-child dd")
@@ -107,6 +118,8 @@ nuldertienScraper.getPageInfo = async function ({ page , event}) {
       res.errors.push({
         error: errorCaught,
         remarks: `deur open tijd ${res.pageInfo}`,
+        errorLevel: 'close-thread',
+        toDebug: res,
       });
     }
     res.soldOut = !!(document.querySelector('.order-tickets button[disabled]') ?? null)
@@ -115,7 +128,6 @@ nuldertienScraper.getPageInfo = async function ({ page , event}) {
       document.querySelector(
         ".event-detail header + div"
       )?.innerHTML ?? '';
-
     
     return res;
   }, {event});

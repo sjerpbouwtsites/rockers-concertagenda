@@ -20,6 +20,9 @@ const metropoolScraper = new AbstractScraper(makeScraperConfig({
       mainPage: {
         url: "https://metropool.nl/agenda",
         requiredProperties: ['venueEventUrl', 'title']
+      },
+      singlePage: {
+        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
       }
     }
   }
@@ -30,6 +33,13 @@ metropoolScraper.listenToMasterThread();
 // MAKE BASE EVENTS
 
 metropoolScraper.makeBaseEventList = async function () {
+
+  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.name);
+  if (availableBaseEvent){
+    return await this.makeBaseEventListEnd({
+      stopFunctie: null, rawEvents: availableBaseEvent}
+    );    
+  }
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
@@ -65,6 +75,8 @@ metropoolScraper.makeBaseEventList = async function () {
         return res;
       });
   }, {workerData});
+  
+  this.saveBaseEventlist(workerData.family, rawEvents)
 
   return await this.makeBaseEventListEnd({
     stopFunctie, page, rawEvents}
@@ -101,7 +113,15 @@ metropoolScraper.getPageInfo = async function ({ page, event}) {
       );
 
     if (!Array.isArray(startDateRauwMatch) || !startDateRauwMatch.length) {
-      res.unavailable += "geen datum gevonden.";
+      res.errors.push({
+        remarks: `geen match startDate ${res.pageInfo}`,
+        toDebug: {
+          text: document
+            .querySelector(".event-title-wrap")
+            ?.innerHTML,
+          res
+        }
+      })
       return res;
     } 
 
@@ -110,10 +130,6 @@ metropoolScraper.getPageInfo = async function ({ page, event}) {
     const year = startDateRauwMatch[3];
     const startDate = `${year}-${month}-${day}`;
 
-    if (!startDate) {
-      res.unavailable += "startDate incorrect.";
-      return res;      
-    }
     try {
       const startTimeMatch = document
         .querySelector(".beginTime")
@@ -123,7 +139,16 @@ metropoolScraper.getPageInfo = async function ({ page, event}) {
           `${startDate}:${startTimeMatch[0]}`
         ).toISOString();
       } else {
-        res.unavailable += "wel datum, maar geen starttijd gevonden.";
+        res.errors.push({
+          remarks: `wel datum, geen starttijd ${res.pageInfo}`,
+          toDebug: {
+            text: document
+              .querySelector(".beginTime")
+              ?.innerHTML,
+            res
+          }
+        })
+        return res;
       }
       const doorTimeMatch = document
         .querySelector(".doorOpen")
@@ -137,11 +162,19 @@ metropoolScraper.getPageInfo = async function ({ page, event}) {
       res.errors.push({
         error: caughtError,
         remarks: `start deurtijd match en of dateconversie ${res.pageInfo}`,
+        toDebug: {
+          res, event
+        }
       });
     }
 
     const ofc = document.querySelector(".object-fit-cover");
     res.image = document.contains(ofc) && `https://metropool.nl/${ofc.srcset}`;
+    if (!res.image){
+      res.errors.push({
+        remarks: `image missing ${res.pageInfo}`
+      })
+    }   
 
     return res;
   }, {months: this.months, event});

@@ -39,6 +39,8 @@ export default class MusicEvent {
     return (
       this.startDateTime &&
       /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}/.test(this.startDateTime)
+      && !this.unavailable 
+      && !this.corrupted
     );
   }
   registerIfValid() {

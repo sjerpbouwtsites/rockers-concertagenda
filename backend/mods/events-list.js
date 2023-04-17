@@ -25,7 +25,7 @@ export default class EventsList {
   }
   static save(name, workerIndex = null) {
     try {
-      EventsList.guaranteeTimestampExistence();
+      //EventsList.guaranteeTimestampExistence(); // TODO LEGACY
       const pathToEventList = fsDirections.eventLists;
       const pathToINVALIDEventList = fsDirections.invalidEventLists;
       const inbetweenFix = workerIndex !== null ? `${workerIndex}` : `0`;
@@ -56,31 +56,38 @@ export default class EventsList {
       handleError(
         error,
         EventsList.workerSignature,
-        `error while saving name ${name} and workerIndex ${workerIndex}`
+        `error while saving name ${name} and workerIndex ${workerIndex}`,
+        'close-app',
+        {
+          events: EventsList._events,
+          invalidEvents: EventsList._invalidEvent,
+          meta: EventsList._meta
+        }
+
       );
       return false;
     }
     return true;
   }
 
-  static guaranteeTimestampExistence() {
-    if (EventsList.timestampsExistenceVerified) return true;
-    if (!fs.existsSync(fsDirections.timestampsJson)) {
-      fs.writeFileSync(fsDirections.timestampsJson, JSON.stringify({}));
-    } else {
+  static guaranteeTimestampExistence() { // TODO LEGACY
+    // if (EventsList.timestampsExistenceVerified) return true;
+    // if (!fs.existsSync(fsDirections.timestampsJson)) {
+    //   fs.writeFileSync(fsDirections.timestampsJson, JSON.stringify({}));
+    // } else {
 
-      try {
-        JSON.parse(fs.readFileSync(fsDirections.timestampsJson));
-      } catch (error) {
-        handleError(
-          error,
-          EventsList.workerSignature,
-          `timestamps konden niet gelezen worden als JSON. nieuwe timestamp json gemaakt`
-        );
-        fs.writeFileSync(fsDirections.timestampsJson, JSON.stringify({}));
-      }
-    }
-    return true;
+    //   try {
+    //     JSON.parse(fs.readFileSync(fsDirections.timestampsJson));
+    //   } catch (error) {
+    //     handleError(
+    //       error,
+    //       EventsList.workerSignature,
+    //       `timestamps konden niet gelezen worden als JSON. nieuwe timestamp json gemaakt`
+    //     );
+    //     fs.writeFileSync(fsDirections.timestampsJson, JSON.stringify({}));
+    //   }
+    // }
+    // return true;
   }
 
   static isOld(name, ignoreAgeForceScrape = false) {
@@ -126,15 +133,7 @@ export default class EventsList {
   }
 
   static addEvent(event) {
-    try {
-      EventsList._events.push(event);
-    } catch (error) {
-      handleError(
-        error,
-        EventsList.workerSignature,
-        `kan niet pushen addEvent`
-      );
-    }
+    EventsList._events.push(event);
   }
   static addInvalidEvent(invalidEvent) {
     EventsList._invalidEvents.push(invalidEvent);

@@ -8,20 +8,23 @@ import makeScraperConfig from "./gedeeld/scraper-config.js";
 // SCRAPER CONFIG
 
 const paradisoScraper = new AbstractScraper(makeScraperConfig({
-  maxExecutionTime: 60000,
+  maxExecutionTime: 60022,
   workerData: Object.assign({}, workerData),
   puppeteerConfig: {
     mainPage: {
-      timeout: 30000,
+      timeout: 30023,
       waitUntil: 'load'
     },
     singlePage: {
-      timeout: 15000
+      timeout: 15024
     },
     app: {
       mainPage: {
         url: "https://www.paradiso.nl/nl/zoeken/categorie/",
         requiredProperties: ['venueEventUrl', 'title']
+      },
+      singlePage: {
+        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
       }
     }
   }
@@ -31,6 +34,13 @@ paradisoScraper.listenToMasterThread();
 
 // MAKE BASE EVENTS
 paradisoScraper.makeBaseEventList = async function () {
+
+  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.name);
+  if (availableBaseEvent){
+    return await this.makeBaseEventListEnd({
+      stopFunctie: null, rawEvents: availableBaseEvent}
+    );    
+  }  
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
   
@@ -55,7 +65,8 @@ paradisoScraper.makeBaseEventList = async function () {
       timeout: 5000,
     });    
   } catch (caughtError) {
-    res.errors.push({error: caughtError, remarks: 'wachten en klikken', errorLevel: 'close-thread'})
+    res.errors.push({error: caughtError, remarks: 'wachten en klikken', errorLevel: 'close-thread',
+      toDebug:res})
   }
 
   await _t.waitFor(250);
@@ -89,6 +100,8 @@ paradisoScraper.makeBaseEventList = async function () {
     {workerData, resBuiten: res}
   );
 
+  this.saveBaseEventlist(workerData.family, rawEvents)
+
   return await this.makeBaseEventListEnd({
     stopFunctie, page, rawEvents}
   );
@@ -115,7 +128,9 @@ paradisoScraper.getPageInfo = async function ({ page, event }) {
     buitenRes.errors.push({
       error: caughtError,
       remarks: "Paradiso wacht op laden single pagina",
-      errorLevel: 'notify'
+      toDebug: {
+        buitenRes, event
+      }
     })
     buitenRes.unavailable += 'single pagina niet snel genoeg geladen.'
     return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
@@ -146,8 +161,12 @@ paradisoScraper.getPageInfo = async function ({ page, event }) {
           }-${startDateMatch[1].padStart(2, "0")}`;
         }
       } catch (caughtError) {
-        res.errors.push({ error: caughtError, remarks: "startDateMatch"});
-        res.unavailable += " geen start date.";
+        res.errors.push({ 
+          error: caughtError, 
+          remarks: `startDateMatch ${res.pageInfo}`, 
+          toDebug: {
+            res, event
+          }});
         return res;
       }
 
@@ -176,9 +195,12 @@ paradisoScraper.getPageInfo = async function ({ page, event }) {
         } catch (caughtError) {
           res.errors.push({
             error: caughtError,
-            remarks: `ging hiermee mis: ${timesMatch.join(" ")}\n`,
+            remarks: `Times match ${res.pageInfo}`,
+            toDebug: {
+              text: `ging hiermee mis: ${timesMatch.join(" ")}\n`,
+              res, event
+            }
           });
-          res.unavailable += "geen start date, tijd, drama";
           return res;
         }
       }
@@ -192,6 +214,11 @@ paradisoScraper.getPageInfo = async function ({ page, event }) {
         ?.style.backgroundImage.match(/https.*.jpg|https.*.png/);
       if (imageM && imageM.length) {
         res.image = imageM[0] + "?w=600&h=400&fit=crop-50-50";
+      }
+      if (!res.image){
+        res.errors.push({
+          remarks: `image missing ${res.pageInfo}`
+        })
       }
 
       return res;

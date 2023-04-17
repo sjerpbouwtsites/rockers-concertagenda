@@ -3,6 +3,25 @@ import fs from "fs";
 import fsDirections from "./fs-directions.js";
 import { WorkerMessage } from "./rock-worker.js";
 import passMessageToMonitor from "../monitor/pass-message-to-monitor.js";
+
+export function wrappedHandleError(errorWrapperInst){
+
+  if (errorWrapperInst.isValid()){
+    handleError(
+      errorWrapperInst?.error, 
+      errorWrapperInst?.workerData,
+      errorWrapperInst?.remarks,
+      errorWrapperInst?.errorLevel,
+      errorWrapperInst?.toDebug
+    )
+    return;
+  }
+
+  throw Error('geen wrapped error!!')
+
+  
+}
+
 /**
  * handleError, generic error handling for the entire app
  * passes a marked up error to the monitor
@@ -10,13 +29,18 @@ import passMessageToMonitor from "../monitor/pass-message-to-monitor.js";
  * @param {Error} error
  * @param {family,name,index} workerData
  * @param {string} remarks Add some remarks to help you find back the origin of the error.
+ * @param {string} errorLevel notify, close-thread, close-app
+ * @param {*} toDebug gaat naar debugger.
  */
-export function handleError(error, workerData, remarks = null, errorLevel = 'notify') {
+export function handleError(error, workerData, remarks = null, errorLevel = 'notify', toDebug = null) {
+
+  // TODO link errors aan debugger
   const updateErrorMsg = WorkerMessage.quick("update", "error", {
     content: {
       workerData: workerData,
       remarks: remarks,
       status: "error",
+      errorLevel,
       text: `${error.message}\n${error.stack}\nlevel:${errorLevel}`,
     },
   });
@@ -24,16 +48,24 @@ export function handleError(error, workerData, remarks = null, errorLevel = 'not
     error,
     workerData,
   });
+  let debuggerMsg
+  if (toDebug) {
+    debuggerMsg = WorkerMessage.quick('update', 'debugger', {
+      remarks,
+      content: {
+        workerData: workerData,
+        debug: toDebug,
+      },    
+    })
+  }
   if (isMainThread) {
     passMessageToMonitor(updateErrorMsg, workerData.name);
     passMessageToMonitor(clientsLogMsg, workerData.name);
-  } else if (!(workerData?.scraper ?? true)) {
-    console.log(`ODD ERROR HANDLING. neither on main thread nor in scraper.`);
-    console.log(error, workerData, remarks);
-    console.log("");
+    toDebug && passMessageToMonitor(debuggerMsg, workerData.name);
   } else {
     parentPort.postMessage(updateErrorMsg);
     parentPort.postMessage(clientsLogMsg);
+    toDebug && parentPort.postMessage(debuggerMsg);
   }
   const time = new Date();
   const curErrorLog = fs.readFileSync(fsDirections.errorLog) || "";
@@ -46,6 +78,7 @@ export function handleError(error, workerData, remarks = null, errorLevel = 'not
 
   fs.writeFileSync(fsDirections.errorLog, newErrorLog, "utf-8");
 }
+
 
 export function failurePromiseAfter(time) {
   return new Promise((resolve, reject) => {
@@ -73,11 +106,11 @@ export function getShellArguments() {
     shellArguments[argName] = argValue;
   });
 
-  if (shellArguments.force && shellArguments.force.includes("all")) {
-    shellArguments.force += Object.keys(
-      JSON.parse(fs.readFileSync(fsDirections.timestampsJson))
-    ).join(";");
-  }
+  // if (shellArguments.force && shellArguments.force.includes("all")) {
+  //   shellArguments.force += Object.keys(
+  //     JSON.parse(fs.readFileSync(fsDirections.timestampsJson))
+  //   ).join(";");
+  // }
 
   return shellArguments;
 }

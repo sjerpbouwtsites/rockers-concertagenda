@@ -7,20 +7,23 @@ import * as _t from "../mods/tools.js";
 // SCRAPER CONFIG
 
 const oostpoortScraper = new AbstractScraper(makeScraperConfig({
-  maxExecutionTime: 30000,
+  maxExecutionTime: 30019,
   workerData: Object.assign({}, workerData),
   puppeteerConfig: {
     mainPage: {
-      timeout: 60000,
+      timeout: 60017,
     },
     singlePage: {
-      timeout: 20000,
+      timeout: 20018,
       waitFor: 'load'
     },
     app: {
       mainPage: {
         url: "https://www.spotgroningen.nl/programma/#genres=muziek&subgenres=metal-heavy,pop-rock",
         requiredProperties: ['venueEventUrl', 'title']
+      },
+      singlePage: {
+        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
       }
     }
   
@@ -32,6 +35,13 @@ oostpoortScraper.listenToMasterThread();
 // MAKE BASE EVENTS
 
 oostpoortScraper.makeBaseEventList = async function () {
+
+  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.name);
+  if (availableBaseEvent){
+    return await this.makeBaseEventListEnd({
+      stopFunctie: null, rawEvents: availableBaseEvent}
+    );    
+  }
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
@@ -64,7 +74,8 @@ oostpoortScraper.makeBaseEventList = async function () {
           res.startDateTime = new Date(eventEl.querySelector('.program__date')?.getAttribute('datetime') ?? null).toISOString();
         } catch (caughtError) {
           res.errors.push({
-            error: caughtError, remarks: `date time faal ${title}.`,
+            error: caughtError, remarks: `date time faal ${title}.`,        
+            toDebug: res
           })
           return res;
         }
@@ -80,6 +91,8 @@ oostpoortScraper.makeBaseEventList = async function () {
   }, {
     workerData: workerData
   });
+
+  this.saveBaseEventlist(workerData.family, rawEvents)
 
   return await this.makeBaseEventListEnd({
     stopFunctie, page, rawEvents}
@@ -143,18 +156,25 @@ oostpoortScraper.getPageInfo = async function ({ page, event }) {
       try {
         res.longTextHTML = document.querySelector('.content__article .event__language')?.innerHTML;
         res.image = document.querySelector('.hero__image')?.src ?? null;
+        if (!res.image){
+          res.errors.push({
+            remarks: `image missing ${res.pageInfo}`
+          })
+        }
         res.priceTextcontent = document.querySelector('.event__pricing__costs')?.textContent ?? document.querySelector('.festival__tickets__toggle') ?? '';
 
       } catch (caughtError) {
         res.errors.push({
           error: caughtError,
-          remarks: 'page info wrap catch'
+          remarks: 'page info wrap catch'        
+          ,toDebug: {
+            res, event
+          }
         })    
       }
 
       if (document.querySelector('.event__cta') && document.querySelector('.event__cta').hasAttribute('disabled')) {
         res.unavailable += ` ${document.querySelector('.event__cta').textContent}`;
-   
       }
       return res;
     }, {event},

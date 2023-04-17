@@ -19,6 +19,9 @@ const occiiScraper = new AbstractScraper(makeScraperConfig({
       mainPage: {
         url: "https://occii.org/events/",
         requiredProperties: ['venueEventUrl']        
+      },
+      singlePage: {
+        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
       }
     }
   }
@@ -30,6 +33,13 @@ occiiScraper.listenToMasterThread();
 // MAKE BASE EVENTS
 
 occiiScraper.makeBaseEventList = async function () {
+
+  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.name);
+  if (availableBaseEvent){
+    return await this.makeBaseEventListEnd({
+      stopFunctie: null, rawEvents: availableBaseEvent}
+    );    
+  }
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
@@ -56,6 +66,8 @@ occiiScraper.makeBaseEventList = async function () {
       });
   }, {workerData});
 
+  this.saveBaseEventlist(workerData.family, rawEvents)
+
   return await this.makeBaseEventListEnd({
     stopFunctie, page, rawEvents}
   );
@@ -74,6 +86,11 @@ occiiScraper.getPageInfo = async function ({ page, event}) {
       errors: [],
     };
     res.image = document.querySelector(".wp-post-image")?.src ?? null;
+    if (!res.image){
+      res.errors.push({
+        remarks: `image missing ${res.pageInfo}`
+      })
+    }    
     const eventCategoriesEl = document.querySelector(".occii-event-details");
     try {
       const eventDateEl = document.querySelector(".occii-event-date-highlight");
@@ -106,7 +123,10 @@ occiiScraper.getPageInfo = async function ({ page, event}) {
     } catch (caughtError) {
       res.errors.push({
         error: caughtError,
-        remarks: `date time wrap trycatch drama ${res.pageInfo}`,
+        remarks: `date time wrap trycatch drama ${res.pageInfo}`,        
+        toDebug: {
+          res, event
+        }
       });
       return res;
     }

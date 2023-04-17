@@ -9,16 +9,19 @@ const kavkaScraper = new AbstractScraper(
     workerData: Object.assign({}, workerData),
     puppeteerConfig: {
       mainPage: {
-        timeout: 35000,
+        timeout: 35015,
       },
       singlePage: {
-        timeout: 30000,
+        timeout: 30016,
       },
       app: {
         mainPage: {
           url: "https://kavka.be/programma/",
           requiredProperties: ["venueEventUrl", "title", "startDateTime"],
         },
+        singlePage: {
+          requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
+        }
       },
     },
   })
@@ -29,6 +32,14 @@ kavkaScraper.listenToMasterThread();
 // MAKE BASE EVENTS
 
 kavkaScraper.makeBaseEventList = async function () {
+
+  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.name);
+  if (availableBaseEvent){
+    return await this.makeBaseEventListEnd({
+      stopFunctie: null, rawEvents: availableBaseEvent}
+    );    
+  }
+
   const { stopFunctie, page } = await this.makeBaseEventListStart();
 
   let rawEvents = await page.evaluate(
@@ -101,22 +112,26 @@ kavkaScraper.makeBaseEventList = async function () {
             res.errors.push({
               error: caughtError,
               remarks: `kkgrote trycatch baseEventList iduna ${res.pageInfo}.`,
+              toDebug: res
             });
           }
-          if (!res.startDateTime) {
-            res.unavailable += " geen startDateTime.";
-            return res;
-          }
 
-          if (
-            startTimeM &&
-            Array.isArray(startTimeM) &&
-            startTimeM.length > 1
-          ) {
-            res.dateStringAttempt = `${startDate}T${startTimeM[1]}:00`;
-            res.doorOpenDateTime = new Date(
-              res.dateStringAttempt
-            ).toISOString();
+          try {
+            if (
+              startTimeM &&
+              Array.isArray(startTimeM) &&
+              startTimeM.length > 1
+            ) {
+              res.dateStringAttempt = `${startDate}T${startTimeM[1]}:00`;
+              res.doorOpenDateTime = new Date(
+                res.dateStringAttempt
+              ).toISOString();
+            }            
+          } catch (error) {
+            res.errors.push({
+              remarks: `openDoorDateTime faal ${res.pageInfo}`,
+              toDebug: res
+            })
           }
 
           res.shortText =
@@ -128,6 +143,8 @@ kavkaScraper.makeBaseEventList = async function () {
     },
     { months: this.months, workerData }
   );
+
+  this.saveBaseEventlist(workerData.family, rawEvents)
 
   return await this.makeBaseEventListEnd({
     stopFunctie,
@@ -162,6 +179,12 @@ kavkaScraper.getPageInfo = async function ({ page, event }) {
           document.querySelector('img[src*="kavka.be/wp-content"]')?.src ?? "";
       }
 
+      if (!res.image){
+        res.errors.push({
+          remarks: `image missing ${res.pageInfo}`
+        })
+      }
+
       res.longTextHTML =
         document.querySelector("h2 + .entry-content")?.innerHTML ?? "";
 
@@ -172,6 +195,7 @@ kavkaScraper.getPageInfo = async function ({ page, event }) {
       res.errors.push({
         error:caughtError,
         remarks: `page info top level trycatch ${res.pageInfo}`,
+        toDebug: {res,event}
       });
     }
   }, {event});

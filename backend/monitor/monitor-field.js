@@ -248,7 +248,9 @@ export default class MonitorField {
 
     let workerNumberedHeads = "";
     for (let i = 0; i < 5; i++) {
-      workerNumberedHeads += `<th class='tableheadnumber'>${i}</th>`;
+      workerNumberedHeads += `<th class='tablehead tablehead--number'>
+        <span class='tablehead-span'>${i}</span>
+      </th>`;
     }
 
     const tableHead = `
@@ -297,11 +299,11 @@ export default class MonitorField {
             </ol>`;
       const statusHTML = `<td class='${tdClass}' title='${worker.workerNamedIndex}'>`;
       const numberHTML = Object.prototype.hasOwnProperty.call(this.data, `amountOfEvents-${worker.name}`)
-        ? this.data[`amountOfEvents-${worker.name}`]
-        : `<span  class='worker-cell-inner worker-cell-inner--todo'>${worker.todo}</span>`;
+        ? `<span class='worker-cell-inner worker-cell-inner--done'>${this.data[`amountOfEvents-${worker.name}`]}</span>`
+        : `<span class='worker-cell-inner worker-cell-inner--todo'>${worker.todo}</span>`;
 
       return statusHTML + numberHTML + errorsHTML + "</td>";
-      // @TODO vscode link naar JSON bestand in event-lists
+      //TODO vscode link naar JSON bestand in event-lists
     })
     .join("")}
       </tr>

@@ -216,11 +216,19 @@ pre {
 }
 
 /** end flipping the table **/
-
-.worker-data-cell {
+.tablehead--number,
+.worker-data-cell td,
+.worker-data-cell th{
   line-height: 1;
   min-width: 50px;
   text-align: center;
+  min-height: 90px;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tableheadnumber {
+  text-align:right;
 }
 
 .worker-data-cell.worker-status--registered {

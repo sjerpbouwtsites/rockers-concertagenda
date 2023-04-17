@@ -16,6 +16,9 @@ const voltScraper = new AbstractScraper(makeScraperConfig({
       mainPage: {
         url: "https://www.poppodium-volt.nl/",
         requiredProperties: ['venueEventUrl', 'title']
+      },
+      singlePage: {
+        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
       }
     }    
   }  
@@ -27,6 +30,13 @@ voltScraper.listenToMasterThread();
 
 voltScraper.makeBaseEventList = async function () {
   
+  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.name);
+  if (availableBaseEvent){
+    return await this.makeBaseEventListEnd({
+      stopFunctie: null, rawEvents: availableBaseEvent}
+    );    
+  }
+
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
   try {
@@ -37,10 +47,10 @@ voltScraper.makeBaseEventList = async function () {
       timeout: 1250,
     });
   } catch (error) {
-    _t.handleError(error, workerData, "Volt wacht op laden eventlijst");
+    _t.handleError(error, workerData, "Volt wacht op laden eventlijst", 'close-thread', null);
   }
 
-  let rawEvents = await page.evaluate(() => {
+  let rawEvents = await page.evaluate(({workerData}) => {
     return Array.from(document.querySelectorAll(".row.event .card"))
       .filter((rawEvent) => {
         const hasGenreName =
@@ -53,17 +63,25 @@ voltScraper.makeBaseEventList = async function () {
       .map((rawEvent) => {
         const anchor = rawEvent.querySelector('h3 [href*="programma"]') ?? null;
         const title = anchor?.textContent.trim() ?? "";
-        const venueEventUrl = anchor.hasAttribute("href") ? anchor.href : null;
-        const image = rawEvent.querySelector("img")?.src ?? null;
-        const soldOut = !!(rawEvent.querySelector(".card-content")?.textContent.toLowerCase().includes('uitverkocht') ?? null)
-        return {
-          venueEventUrl,
-          title,
-          image,
-          soldOut,
-        };
+        const res = {
+          unavailable: '',
+          pageInfo: `<a href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+          errors: [],
+          title
+        };        
+        res.venueEventUrl = anchor.hasAttribute("href") ? anchor.href : null;
+        res.image = rawEvent.querySelector("img")?.src ?? null;
+        if (!res.image){
+          res.errors.push({
+            remarks: `image missing ${res.pageInfo}`
+          })
+        }        
+        res.soldOut = !!(rawEvent.querySelector(".card-content")?.textContent.toLowerCase().includes('uitverkocht') ?? null)
+        return res;
       });
-  }, null);
+  }, {workerData});
+
+  this.saveBaseEventlist(workerData.family, rawEvents)
 
   return await this.makeBaseEventListEnd({
     stopFunctie, page, rawEvents}
@@ -82,25 +100,23 @@ voltScraper.getPageInfo = async function ({ page, url, event}) {
       timeout: 7500,
     });
   } catch (error) {
-    _t.handleError(error, this.workerData, "Volt wacht op laden single pagina");
+    // TODO WRAPPER ERREOR
+    _t.handleError(error, this.workerData, "Volt wacht op laden single pagina", 'notice', event);
   }
 
   const pageInfo = await page.evaluate(
-    ({ months, event }) => {
+    ({ months, event, url }) => {
 
-      const res = {
-        unavailable: event.unavailable,
-        pageInfo: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
-        errors: [],
-      };
+      let res = {};
+      res.unavailable= event.unavailable;
+      res.pageInfo= `<a class='page-info' href='${url}'>${event.title}</a>`;
+      res.errors = [];
+
       const curMonthNumber = new Date().getMonth() + 1;
       const curYear = new Date().getFullYear();
 
-      const contentBox =
-        document.querySelector("#main .aside + div > .content-block") ?? null;
-      if (contentBox) {
-        res.longTextHTML = contentBox.innerHTML;
-      }
+      res.longTextHTML = document.querySelector("#main .aside + div > .content-block")?.innerHTML ?? null
+
       const unstyledListsInAside = document.querySelectorAll(
         "#main .aside .list-unstyled"
       ) ?? [null];
@@ -157,9 +173,15 @@ voltScraper.getPageInfo = async function ({ page, url, event}) {
             ).toISOString();
           }
         } catch (error) {
-          res.error = `ongeldige tijden: ${timesMatch.join(" ")}\n${
-            error.message
-          }`;
+          res.errors.push({
+            error,
+            remarks: `ongeldige tijden ${res.pageInfo}`,
+            toDebug: {
+              matches:   timesMatch.join(" "),
+              res,event
+            }
+          });
+          return res;
         }
       }
       res.priceTextcontent =
@@ -168,7 +190,7 @@ voltScraper.getPageInfo = async function ({ page, url, event}) {
       ;
       return res;
     },
-    { months: this.months, url ,event}
+    { months: this.months, url, event}
   );
 
   return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
