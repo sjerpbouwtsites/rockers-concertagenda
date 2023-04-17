@@ -1,5 +1,9 @@
 {
   "locations": {
+    "dbs": {
+      "name": "dbs",
+      "count": 5
+    },
     "vera": {
       "name": "vera",
       "count": 11
@@ -8,24 +12,60 @@
       "name": "013enomgeving",
       "count": 1
     },
+    "metropool": {
+      "name": "metropool",
+      "count": 4
+    },
     "littledevil": {
       "name": "littledevil",
       "count": 16
+    },
+    "boerderij": {
+      "name": "boerderij",
+      "count": 3
     },
     "willemeen": {
       "name": "willemeen",
       "count": 2
     },
+    "dehelling": {
+      "name": "dehelling",
+      "count": 3
+    },
     "cacaofabriek": {
       "name": "cacaofabriek",
       "count": 1
+    },
+    "iduna": {
+      "name": "iduna",
+      "count": 4
     },
     "johancruijffarena": {
       "name": "johancruijffarena",
       "count": 39
     },
+    "doornroosje": {
+      "name": "doornroosje",
+      "count": 4
+    },
+    "melkweg": {
+      "name": "melkweg",
+      "count": 61
+    },
     "popei": {
       "name": "popei",
+      "count": 1
+    },
+    "effenaar": {
+      "name": "effenaar",
+      "count": 16
+    },
+    "groeneengel": {
+      "name": "groeneengel",
+      "count": 1
+    },
+    "p60": {
+      "name": "p60",
       "count": 1
     },
     "hedon": {
@@ -44,12 +84,20 @@
       "name": "littledeviltilburg",
       "count": 1
     },
+    "tivolivredenburg": {
+      "name": "tivolivredenburg",
+      "count": 20
+    },
     "oefenbunker": {
       "name": "oefenbunker",
       "count": 1
     },
     "lanxessarena": {
       "name": "lanxessarena",
+      "count": 1
+    },
+    "neushoorn": {
+      "name": "neushoorn",
       "count": 1
     },
     "sportpaleis": {
@@ -68,6 +116,10 @@
       "name": "trix",
       "count": 1
     },
+    "013": {
+      "name": "013",
+      "count": 16
+    },
     "deklinker": {
       "name": "deklinker",
       "count": 1
@@ -79,6 +131,10 @@
     "rotown": {
       "name": "rotown",
       "count": 1
+    },
+    "gebrdenobel": {
+      "name": "gebrdenobel",
+      "count": 2
     },
     "paard": {
       "name": "paard",
@@ -111,6 +167,10 @@
     "redbox": {
       "name": "redbox",
       "count": 1
+    },
+    "afaslive": {
+      "name": "afaslive",
+      "count": 15
     },
     "hetdepot": {
       "name": "hetdepot",
@@ -192,8 +252,16 @@
       "name": "qfactory",
       "count": 2
     },
+    "dynamo": {
+      "name": "dynamo",
+      "count": 2
+    },
     "zuiderpark": {
       "name": "zuiderpark",
+      "count": 1
+    },
+    "paradiso": {
+      "name": "paradiso",
       "count": 1
     },
     "musicon": {
@@ -208,97 +276,9 @@
       "name": "patronaat",
       "count": 20
     },
-    "013": {
-      "name": "013",
-      "count": 36
-    },
-    "effenaar": {
-      "name": "effenaar",
-      "count": 26
-    },
-    "tivolivredenburg": {
-      "name": "tivolivredenburg",
-      "count": 20
-    },
-    "doornroosje": {
-      "name": "doornroosje",
-      "count": 17
-    },
-    "dehelling": {
-      "name": "dehelling",
-      "count": 7
-    },
-    "metropool": {
-      "name": "metropool",
-      "count": 8
-    },
-    "boerderij": {
-      "name": "boerderij",
-      "count": 15
-    },
-    "dynamo": {
-      "name": "dynamo",
-      "count": 16
-    },
-    "bibelot": {
-      "name": "bibelot",
-      "count": 9
-    },
-    "dbs": {
-      "name": "dbs",
-      "count": 34
-    },
-    "gebrdenobel": {
-      "name": "gebrdenobel",
-      "count": 6
-    },
-    "groeneengel": {
-      "name": "groeneengel",
-      "count": 1
-    },
-    "neushoorn": {
-      "name": "neushoorn",
-      "count": 3
-    },
-    "iduna": {
-      "name": "iduna",
-      "count": 3
-    },
-    "deflux": {
-      "name": "deflux",
-      "count": 10
-    },
     "oosterpoort": {
       "name": "oosterpoort",
-      "count": 5
-    },
-    "paradiso": {
-      "name": "paradiso",
-      "count": 26
-    },
-    "volt": {
-      "name": "volt",
-      "count": 5
-    },
-    "occii": {
-      "name": "occii",
-      "count": 21
-    },
-    "melkweg": {
-      "name": "melkweg",
-      "count": 44
-    },
-    "p60": {
-      "name": "p60",
-      "count": 16
-    },
-    "afaslive": {
-      "name": "afaslive",
-      "count": 9
-    },
-    "kavka": {
-      "name": "kavka",
-      "count": 5
+      "count": 2
     },
     "megaland": {
       "name": "megaland",

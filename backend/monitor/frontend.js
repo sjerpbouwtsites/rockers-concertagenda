@@ -108,7 +108,7 @@ function eventToClientsHTML(eventMsg) {
 
 function monitorInternalErrors() {
   // TODO
-  console.error("NOG NIET GEBOUWD: monitorInternalErrors");
+  console.warn("NOG NIET GEBOUWD: monitorInternalErrors");
 }
 
 function eventToProcesses(eventMsg, fields) {
@@ -189,19 +189,22 @@ function eventToClientsLog(eventMsg, fields) {
     fields.errorField.updateError(updateErrorMsg);
   }
   if (eventMsg.subtype.includes("log")) {
+    console.log('')
     console.log(`${eventMsg.messageData?.content?.workerData?.name}`);
     console.log(debug);
     return;
   }
   if (Array.isArray(debug)) {
+    console.log('')
     console.log(`${eventMsg.messageData?.content?.workerData?.name}`);
     console.dir(debug);
   } else if (debug instanceof Object) {
     const keys = Object.keys(debug);
     const values = Object.values(debug);
-    console.log(
-      `${eventMsg.messageData?.content?.workerData?.name} - ${keys.join(", ")}`
-    );
+    // console.log(
+    //   `${eventMsg.messageData?.content?.workerData?.name} - ${keys.join(", ")}`
+    // );
+    console.log('')
     values.forEach((val, index) => {
       if (typeof val === "string" || typeof val === "number") {
         console.log(`${keys[index]} - ${val}`);

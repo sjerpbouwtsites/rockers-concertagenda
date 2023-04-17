@@ -31,6 +31,16 @@ body {
   letter-spacing: -0.05em;  
 }
 
+.ingekort-lange-tekst::after{
+  content: '......'
+}
+.ingekort-lange-tekst:hover{
+  cursor: pointer;
+}
+.ingekort-lange-tekst:hover::after{
+  content: attr(data-meer-tekst);
+}
+
 .monitorfield__header {
   text-align: center;
   text-transform: uppercase;
@@ -87,6 +97,7 @@ body {
 }
 .monitorfield__list-item-left {
   display: block;
+  font-weight: 900;
 }
 .monitorfield__error-header {
   display: flex;

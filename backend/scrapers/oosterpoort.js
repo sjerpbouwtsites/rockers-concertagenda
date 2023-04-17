@@ -38,6 +38,10 @@ oostpoortScraper.makeBaseEventList = async function () {
 
   const availableBaseEvent = await this.checkBaseEventAvailable(workerData.name);
   if (availableBaseEvent){
+    this.dirtyDebug({
+      title: 'gelul',
+      availableBaseEvent
+    })
     return await this.makeBaseEventListEnd({
       stopFunctie: null, rawEvents: availableBaseEvent}
     );    

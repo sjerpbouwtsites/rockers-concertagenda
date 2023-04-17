@@ -1,4 +1,1013 @@
 
+  oosterpoort-0 Error - 1:04:11 PM
+  Error: image missing <a href='https://www.spotgroningen.nl/events/rockit/'>Rockit | 11 november 2023 | Trompsingel 27 | Spot Groningen</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at oostpoortScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/oosterpoort.js:187:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:97:5) 
+  image missing <a href='https://www.spotgroningen.nl/events/rockit/'>Rockit | 11 november 2023 | Trompsingel 27 | Spot Groningen</a>
+  
+  
+  ticketmaster-3 Error - 1:03:59 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-snelle-tickets/292043?language=en-us'>TM Zuiderpark Live: Snelle</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-snelle-tickets/292043?language=en-us'>TM Zuiderpark Live: Snelle</a>
+  
+  
+  ticketmaster-3 Error - 1:03:59 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-racoon-tickets/292035?language=en-us'>TM Zuiderpark Live: Racoon</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-racoon-tickets/292035?language=en-us'>TM Zuiderpark Live: Racoon</a>
+  
+  
+  ticketmaster-3 Error - 1:03:59 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-suzan--freek-tickets/292423?language=en-us'>TM Zuiderpark Live: Suzan & Freek</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-suzan--freek-tickets/292423?language=en-us'>TM Zuiderpark Live: Suzan & Freek</a>
+  
+  
+  ticketmaster-3 Error - 1:03:59 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-meau-tickets/292027?language=en-us'>TM Zuiderpark Live: MEAU</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-meau-tickets/292027?language=en-us'>TM Zuiderpark Live: MEAU</a>
+  
+  
+  ticketmaster-3 Error - 1:03:59 PM
+  Error: Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/live-in-hoorn-tickets/289883?language=en-us'>TM LIVE IN HOORN</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:219:21)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/live-in-hoorn-tickets/289883?language=en-us'>TM LIVE IN HOORN</a>
+  
+  
+  ticketmaster-3 Error - 1:03:59 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/vintage-trouble-tickets/292115?language=en-us'>TM Vintage Trouble</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:97:5) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/vintage-trouble-tickets/292115?language=en-us'>TM Vintage Trouble</a>
+  
+  
+  ticketmaster-2 Error - 1:03:58 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/polderfest-festival-tickets/292469?language=en-us'>TM Polderfest Festival</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/polderfest-festival-tickets/292469?language=en-us'>TM Polderfest Festival</a>
+  
+  
+  ticketmaster-2 Error - 1:03:58 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-miss-montreal-tickets/292031?language=en-us'>TM Zuiderpark Live: Miss Montreal</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-miss-montreal-tickets/292031?language=en-us'>TM Zuiderpark Live: Miss Montreal</a>
+  
+  
+  oosterpoort-1 Error - 1:03:54 PM
+  Error: image missing <a href='https://www.spotgroningen.nl/events/rhythm-blues-night/'>Rhythm & Blues Night | 29 april 2023 | Trompsingel 27 | Spot Groningen</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at oostpoortScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/oosterpoort.js:187:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:97:5) 
+  image missing <a href='https://www.spotgroningen.nl/events/rhythm-blues-night/'>Rhythm & Blues Night | 29 april 2023 | Trompsingel 27 | Spot Groningen</a>
+  
+  
+  ticketmaster-4 Error - 1:03:29 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/new-order-%7C-premium-seat-package-tickets/292367?language=en-us'>TM New Order | Premium Seat Package</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/new-order-%7C-premium-seat-package-tickets/292367?language=en-us'>TM New Order | Premium Seat Package</a>
+  
+  
+  ticketmaster-4 Error - 1:03:29 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/new-order-tickets/292263?language=en-us'>TM New Order</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/new-order-tickets/292263?language=en-us'>TM New Order</a>
+  
+  
+  ticketmaster-4 Error - 1:03:29 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/new-order-%7C-standing-package-tickets/292395?language=en-us'>TM New Order | Standing Package</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/new-order-%7C-standing-package-tickets/292395?language=en-us'>TM New Order | Standing Package</a>
+  
+  
+  ticketmaster-1 Error - 1:03:29 PM
+  Error: Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/muse--park--tram--location-megastores-1-vehicle--tickets/291593?language=en-us'>TM Muse – Park & Tram – Location MegaStores (1 vehicle)</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:219:21)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/muse--park--tram--location-megastores-1-vehicle--tickets/291593?language=en-us'>TM Muse – Park & Tram – Location MegaStores (1 vehicle)</a>
+  
+  
+  ticketmaster-1 Error - 1:03:29 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/sza-sos-tour-tickets/292303?language=en-us'>TM SZA - SOS Tour</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/sza-sos-tour-tickets/292303?language=en-us'>TM SZA - SOS Tour</a>
+  
+  
+  ticketmaster-1 Error - 1:03:29 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/sza-sos-tour-tickets/292301?language=en-us'>TM SZA - SOS Tour</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/sza-sos-tour-tickets/292301?language=en-us'>TM SZA - SOS Tour</a>
+  
+  
+  ticketmaster-1 Error - 1:03:29 PM
+  Error: Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/the-dire-straits-experience-uk--tickets/276317?language=en-us'>TM The Dire Straits Experience (UK)</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:219:21)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/the-dire-straits-experience-uk--tickets/276317?language=en-us'>TM The Dire Straits Experience (UK)</a>
+  
+  
+  ticketmaster-1 Error - 1:03:29 PM
+  Error: Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/normaal-48-joar-olderwets-hoken-tickets/286253?language=en-us'>TM Normaal - 48 Joar Olderwets Høken</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:219:21)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/normaal-48-joar-olderwets-hoken-tickets/286253?language=en-us'>TM Normaal - 48 Joar Olderwets Høken</a>
+  
+  
+  ticketmaster-4 Error - 12:59:13 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/new-order-%7C-premium-seat-package-tickets/292367?language=en-us'>TM New Order | Premium Seat Package</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/new-order-%7C-premium-seat-package-tickets/292367?language=en-us'>TM New Order | Premium Seat Package</a>
+  
+  
+  ticketmaster-4 Error - 12:59:13 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/new-order-tickets/292263?language=en-us'>TM New Order</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/new-order-tickets/292263?language=en-us'>TM New Order</a>
+  
+  
+  ticketmaster-4 Error - 12:59:13 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/new-order-%7C-standing-package-tickets/292395?language=en-us'>TM New Order | Standing Package</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/new-order-%7C-standing-package-tickets/292395?language=en-us'>TM New Order | Standing Package</a>
+  
+  
+  ticketmaster-3 Error - 12:59:11 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-snelle-tickets/292043?language=en-us'>TM Zuiderpark Live: Snelle</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-snelle-tickets/292043?language=en-us'>TM Zuiderpark Live: Snelle</a>
+  
+  
+  ticketmaster-3 Error - 12:59:11 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-racoon-tickets/292035?language=en-us'>TM Zuiderpark Live: Racoon</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-racoon-tickets/292035?language=en-us'>TM Zuiderpark Live: Racoon</a>
+  
+  
+  ticketmaster-3 Error - 12:59:11 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-suzan--freek-tickets/292423?language=en-us'>TM Zuiderpark Live: Suzan & Freek</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-suzan--freek-tickets/292423?language=en-us'>TM Zuiderpark Live: Suzan & Freek</a>
+  
+  
+  ticketmaster-3 Error - 12:59:11 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-meau-tickets/292027?language=en-us'>TM Zuiderpark Live: MEAU</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-meau-tickets/292027?language=en-us'>TM Zuiderpark Live: MEAU</a>
+  
+  
+  ticketmaster-3 Error - 12:59:11 PM
+  Error: Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/live-in-hoorn-tickets/289883?language=en-us'>TM LIVE IN HOORN</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:219:21)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/live-in-hoorn-tickets/289883?language=en-us'>TM LIVE IN HOORN</a>
+  
+  
+  ticketmaster-3 Error - 12:59:11 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/vintage-trouble-tickets/292115?language=en-us'>TM Vintage Trouble</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:97:5) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/vintage-trouble-tickets/292115?language=en-us'>TM Vintage Trouble</a>
+  
+  
+  ticketmaster-2 Error - 12:59:11 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/polderfest-festival-tickets/292469?language=en-us'>TM Polderfest Festival</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/polderfest-festival-tickets/292469?language=en-us'>TM Polderfest Festival</a>
+  
+  
+  ticketmaster-2 Error - 12:59:11 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-miss-montreal-tickets/292031?language=en-us'>TM Zuiderpark Live: Miss Montreal</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-miss-montreal-tickets/292031?language=en-us'>TM Zuiderpark Live: Miss Montreal</a>
+  
+  
+  oosterpoort-0 Error - 12:59:06 PM
+  Error: image missing <a href='https://www.spotgroningen.nl/events/rockit/'>Rockit | 11 november 2023 | Trompsingel 27 | Spot Groningen</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at oostpoortScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/oosterpoort.js:187:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:97:5) 
+  image missing <a href='https://www.spotgroningen.nl/events/rockit/'>Rockit | 11 november 2023 | Trompsingel 27 | Spot Groningen</a>
+  
+  
+  oosterpoort-1 Error - 12:59:04 PM
+  Error: image missing <a href='https://www.spotgroningen.nl/events/rhythm-blues-night/'>Rhythm & Blues Night | 29 april 2023 | Trompsingel 27 | Spot Groningen</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at oostpoortScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/oosterpoort.js:187:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:97:5) 
+  image missing <a href='https://www.spotgroningen.nl/events/rhythm-blues-night/'>Rhythm & Blues Night | 29 april 2023 | Trompsingel 27 | Spot Groningen</a>
+  
+  
+  ticketmaster-1 Error - 12:58:40 PM
+  Error: Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/muse--park--tram--location-megastores-1-vehicle--tickets/291593?language=en-us'>TM Muse – Park & Tram – Location MegaStores (1 vehicle)</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:219:21)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/muse--park--tram--location-megastores-1-vehicle--tickets/291593?language=en-us'>TM Muse – Park & Tram – Location MegaStores (1 vehicle)</a>
+  
+  
+  ticketmaster-1 Error - 12:58:40 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/sza-sos-tour-tickets/292303?language=en-us'>TM SZA - SOS Tour</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/sza-sos-tour-tickets/292303?language=en-us'>TM SZA - SOS Tour</a>
+  
+  
+  ticketmaster-1 Error - 12:58:40 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/sza-sos-tour-tickets/292301?language=en-us'>TM SZA - SOS Tour</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/sza-sos-tour-tickets/292301?language=en-us'>TM SZA - SOS Tour</a>
+  
+  
+  ticketmaster-1 Error - 12:58:40 PM
+  Error: Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/the-dire-straits-experience-uk--tickets/276317?language=en-us'>TM The Dire Straits Experience (UK)</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:219:21)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/the-dire-straits-experience-uk--tickets/276317?language=en-us'>TM The Dire Straits Experience (UK)</a>
+  
+  
+  ticketmaster-1 Error - 12:58:40 PM
+  Error: Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/normaal-48-joar-olderwets-hoken-tickets/286253?language=en-us'>TM Normaal - 48 Joar Olderwets Høken</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:219:21)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/normaal-48-joar-olderwets-hoken-tickets/286253?language=en-us'>TM Normaal - 48 Joar Olderwets Høken</a>
+  
+  
+  ticketmaster-3 Error - 12:58:12 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-snelle-tickets/292043?language=en-us'>TM Zuiderpark Live: Snelle</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-snelle-tickets/292043?language=en-us'>TM Zuiderpark Live: Snelle</a>
+  
+  
+  ticketmaster-3 Error - 12:58:12 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-racoon-tickets/292035?language=en-us'>TM Zuiderpark Live: Racoon</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-racoon-tickets/292035?language=en-us'>TM Zuiderpark Live: Racoon</a>
+  
+  
+  ticketmaster-3 Error - 12:58:12 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-suzan--freek-tickets/292423?language=en-us'>TM Zuiderpark Live: Suzan & Freek</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-suzan--freek-tickets/292423?language=en-us'>TM Zuiderpark Live: Suzan & Freek</a>
+  
+  
+  ticketmaster-3 Error - 12:58:12 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-meau-tickets/292027?language=en-us'>TM Zuiderpark Live: MEAU</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-meau-tickets/292027?language=en-us'>TM Zuiderpark Live: MEAU</a>
+  
+  
+  ticketmaster-3 Error - 12:58:12 PM
+  Error: Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/live-in-hoorn-tickets/289883?language=en-us'>TM LIVE IN HOORN</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:219:21)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/live-in-hoorn-tickets/289883?language=en-us'>TM LIVE IN HOORN</a>
+  
+  
+  ticketmaster-3 Error - 12:58:12 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/vintage-trouble-tickets/292115?language=en-us'>TM Vintage Trouble</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:97:5) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/vintage-trouble-tickets/292115?language=en-us'>TM Vintage Trouble</a>
+  
+  
+  oosterpoort-0 Error - 12:58:11 PM
+  Error: image missing <a href='https://www.spotgroningen.nl/events/rockit/'>Rockit | 11 november 2023 | Trompsingel 27 | Spot Groningen</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at oostpoortScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/oosterpoort.js:187:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:97:5) 
+  image missing <a href='https://www.spotgroningen.nl/events/rockit/'>Rockit | 11 november 2023 | Trompsingel 27 | Spot Groningen</a>
+  
+  
+  ticketmaster-2 Error - 12:58:11 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/polderfest-festival-tickets/292469?language=en-us'>TM Polderfest Festival</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/polderfest-festival-tickets/292469?language=en-us'>TM Polderfest Festival</a>
+  
+  
+  ticketmaster-2 Error - 12:58:11 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-miss-montreal-tickets/292031?language=en-us'>TM Zuiderpark Live: Miss Montreal</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-miss-montreal-tickets/292031?language=en-us'>TM Zuiderpark Live: Miss Montreal</a>
+  
+  
+  oosterpoort-1 Error - 12:58:07 PM
+  Error: image missing <a href='https://www.spotgroningen.nl/events/rhythm-blues-night/'>Rhythm & Blues Night | 29 april 2023 | Trompsingel 27 | Spot Groningen</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at oostpoortScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/oosterpoort.js:187:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:97:5) 
+  image missing <a href='https://www.spotgroningen.nl/events/rhythm-blues-night/'>Rhythm & Blues Night | 29 april 2023 | Trompsingel 27 | Spot Groningen</a>
+  
+  
+  ticketmaster-1 Error - 12:57:43 PM
+  Error: Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/muse--park--tram--location-megastores-1-vehicle--tickets/291593?language=en-us'>TM Muse – Park & Tram – Location MegaStores (1 vehicle)</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:219:21)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/muse--park--tram--location-megastores-1-vehicle--tickets/291593?language=en-us'>TM Muse – Park & Tram – Location MegaStores (1 vehicle)</a>
+  
+  
+  ticketmaster-1 Error - 12:57:43 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/sza-sos-tour-tickets/292303?language=en-us'>TM SZA - SOS Tour</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/sza-sos-tour-tickets/292303?language=en-us'>TM SZA - SOS Tour</a>
+  
+  
+  ticketmaster-1 Error - 12:57:43 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/sza-sos-tour-tickets/292301?language=en-us'>TM SZA - SOS Tour</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/sza-sos-tour-tickets/292301?language=en-us'>TM SZA - SOS Tour</a>
+  
+  
+  ticketmaster-1 Error - 12:57:43 PM
+  Error: Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/the-dire-straits-experience-uk--tickets/276317?language=en-us'>TM The Dire Straits Experience (UK)</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:219:21)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/the-dire-straits-experience-uk--tickets/276317?language=en-us'>TM The Dire Straits Experience (UK)</a>
+  
+  
+  ticketmaster-1 Error - 12:57:43 PM
+  Error: Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/normaal-48-joar-olderwets-hoken-tickets/286253?language=en-us'>TM Normaal - 48 Joar Olderwets Høken</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:219:21)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/normaal-48-joar-olderwets-hoken-tickets/286253?language=en-us'>TM Normaal - 48 Joar Olderwets Høken</a>
+  
+  
+  ticketmaster-4 Error - 12:57:42 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/new-order-%7C-premium-seat-package-tickets/292367?language=en-us'>TM New Order | Premium Seat Package</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/new-order-%7C-premium-seat-package-tickets/292367?language=en-us'>TM New Order | Premium Seat Package</a>
+  
+  
+  ticketmaster-4 Error - 12:57:42 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/new-order-tickets/292263?language=en-us'>TM New Order</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/new-order-tickets/292263?language=en-us'>TM New Order</a>
+  
+  
+  ticketmaster-4 Error - 12:57:42 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/new-order-%7C-standing-package-tickets/292395?language=en-us'>TM New Order | Standing Package</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/new-order-%7C-standing-package-tickets/292395?language=en-us'>TM New Order | Standing Package</a>
+  
+  
+  oosterpoort-0 Error - 12:57:11 PM
+  Error: image missing <a href='https://www.spotgroningen.nl/events/rockit/'>Rockit | 11 november 2023 | Trompsingel 27 | Spot Groningen</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at oostpoortScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/oosterpoort.js:187:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:97:5) 
+  image missing <a href='https://www.spotgroningen.nl/events/rockit/'>Rockit | 11 november 2023 | Trompsingel 27 | Spot Groningen</a>
+  
+  
+  ticketmaster-4 Error - 12:57:00 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/new-order-%7C-premium-seat-package-tickets/292367?language=en-us'>TM New Order | Premium Seat Package</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/new-order-%7C-premium-seat-package-tickets/292367?language=en-us'>TM New Order | Premium Seat Package</a>
+  
+  
+  ticketmaster-4 Error - 12:57:00 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/new-order-tickets/292263?language=en-us'>TM New Order</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/new-order-tickets/292263?language=en-us'>TM New Order</a>
+  
+  
+  ticketmaster-4 Error - 12:57:00 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/new-order-%7C-standing-package-tickets/292395?language=en-us'>TM New Order | Standing Package</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/new-order-%7C-standing-package-tickets/292395?language=en-us'>TM New Order | Standing Package</a>
+  
+  
+  ticketmaster-3 Error - 12:56:56 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-snelle-tickets/292043?language=en-us'>TM Zuiderpark Live: Snelle</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-snelle-tickets/292043?language=en-us'>TM Zuiderpark Live: Snelle</a>
+  
+  
+  ticketmaster-3 Error - 12:56:56 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-racoon-tickets/292035?language=en-us'>TM Zuiderpark Live: Racoon</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-racoon-tickets/292035?language=en-us'>TM Zuiderpark Live: Racoon</a>
+  
+  
+  ticketmaster-3 Error - 12:56:56 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-suzan--freek-tickets/292423?language=en-us'>TM Zuiderpark Live: Suzan & Freek</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-suzan--freek-tickets/292423?language=en-us'>TM Zuiderpark Live: Suzan & Freek</a>
+  
+  
+  ticketmaster-3 Error - 12:56:56 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-meau-tickets/292027?language=en-us'>TM Zuiderpark Live: MEAU</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-meau-tickets/292027?language=en-us'>TM Zuiderpark Live: MEAU</a>
+  
+  
+  ticketmaster-3 Error - 12:56:56 PM
+  Error: Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/live-in-hoorn-tickets/289883?language=en-us'>TM LIVE IN HOORN</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:219:21)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/live-in-hoorn-tickets/289883?language=en-us'>TM LIVE IN HOORN</a>
+  
+  
+  ticketmaster-3 Error - 12:56:56 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/vintage-trouble-tickets/292115?language=en-us'>TM Vintage Trouble</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:97:5) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/vintage-trouble-tickets/292115?language=en-us'>TM Vintage Trouble</a>
+  
+  
+  oosterpoort-1 Error - 12:56:47 PM
+  Error: image missing <a href='https://www.spotgroningen.nl/events/rhythm-blues-night/'>Rhythm & Blues Night | 29 april 2023 | Trompsingel 27 | Spot Groningen</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at oostpoortScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/oosterpoort.js:187:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:97:5) 
+  image missing <a href='https://www.spotgroningen.nl/events/rhythm-blues-night/'>Rhythm & Blues Night | 29 april 2023 | Trompsingel 27 | Spot Groningen</a>
+  
+  
+  ticketmaster-2 Error - 12:56:22 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/polderfest-festival-tickets/292469?language=en-us'>TM Polderfest Festival</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/polderfest-festival-tickets/292469?language=en-us'>TM Polderfest Festival</a>
+  
+  
+  ticketmaster-2 Error - 12:56:22 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-miss-montreal-tickets/292031?language=en-us'>TM Zuiderpark Live: Miss Montreal</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-miss-montreal-tickets/292031?language=en-us'>TM Zuiderpark Live: Miss Montreal</a>
+  
+  
+  ticketmaster-1 Error - 12:56:21 PM
+  Error: Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/muse--park--tram--location-megastores-1-vehicle--tickets/291593?language=en-us'>TM Muse – Park & Tram – Location MegaStores (1 vehicle)</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:219:21)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/muse--park--tram--location-megastores-1-vehicle--tickets/291593?language=en-us'>TM Muse – Park & Tram – Location MegaStores (1 vehicle)</a>
+  
+  
+  ticketmaster-1 Error - 12:56:21 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/sza-sos-tour-tickets/292303?language=en-us'>TM SZA - SOS Tour</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/sza-sos-tour-tickets/292303?language=en-us'>TM SZA - SOS Tour</a>
+  
+  
+  ticketmaster-1 Error - 12:56:21 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/sza-sos-tour-tickets/292301?language=en-us'>TM SZA - SOS Tour</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/sza-sos-tour-tickets/292301?language=en-us'>TM SZA - SOS Tour</a>
+  
+  
+  ticketmaster-1 Error - 12:56:21 PM
+  Error: Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/the-dire-straits-experience-uk--tickets/276317?language=en-us'>TM The Dire Straits Experience (UK)</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:219:21)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/the-dire-straits-experience-uk--tickets/276317?language=en-us'>TM The Dire Straits Experience (UK)</a>
+  
+  
+  ticketmaster-1 Error - 12:56:21 PM
+  Error: Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/normaal-48-joar-olderwets-hoken-tickets/286253?language=en-us'>TM Normaal - 48 Joar Olderwets Høken</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:219:21)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/normaal-48-joar-olderwets-hoken-tickets/286253?language=en-us'>TM Normaal - 48 Joar Olderwets Høken</a>
+  
+  
+  oosterpoort-1 Error - 12:54:05 PM
+  Error: image missing <a href='https://www.spotgroningen.nl/events/rhythm-blues-night/'>Rhythm & Blues Night | 29 april 2023 | Trompsingel 27 | Spot Groningen</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at oostpoortScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/oosterpoort.js:183:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:97:5) 
+  image missing <a href='https://www.spotgroningen.nl/events/rhythm-blues-night/'>Rhythm & Blues Night | 29 april 2023 | Trompsingel 27 | Spot Groningen</a>
+  
+  
+  ticketmaster-1 Error - 12:54:02 PM
+  Error: Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/muse--park--tram--location-megastores-1-vehicle--tickets/291593?language=en-us'>TM Muse – Park & Tram – Location MegaStores (1 vehicle)</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:219:21)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/muse--park--tram--location-megastores-1-vehicle--tickets/291593?language=en-us'>TM Muse – Park & Tram – Location MegaStores (1 vehicle)</a>
+  
+  
+  ticketmaster-1 Error - 12:54:02 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/sza-sos-tour-tickets/292303?language=en-us'>TM SZA - SOS Tour</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/sza-sos-tour-tickets/292303?language=en-us'>TM SZA - SOS Tour</a>
+  
+  
+  ticketmaster-1 Error - 12:54:02 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/sza-sos-tour-tickets/292301?language=en-us'>TM SZA - SOS Tour</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/sza-sos-tour-tickets/292301?language=en-us'>TM SZA - SOS Tour</a>
+  
+  
+  ticketmaster-1 Error - 12:54:02 PM
+  Error: Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/the-dire-straits-experience-uk--tickets/276317?language=en-us'>TM The Dire Straits Experience (UK)</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:219:21)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/the-dire-straits-experience-uk--tickets/276317?language=en-us'>TM The Dire Straits Experience (UK)</a>
+  
+  
+  ticketmaster-1 Error - 12:54:02 PM
+  Error: Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/normaal-48-joar-olderwets-hoken-tickets/286253?language=en-us'>TM Normaal - 48 Joar Olderwets Høken</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:219:21)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/normaal-48-joar-olderwets-hoken-tickets/286253?language=en-us'>TM Normaal - 48 Joar Olderwets Høken</a>
+  
+  
+  ticketmaster-4 Error - 12:54:02 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/new-order-%7C-premium-seat-package-tickets/292367?language=en-us'>TM New Order | Premium Seat Package</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/new-order-%7C-premium-seat-package-tickets/292367?language=en-us'>TM New Order | Premium Seat Package</a>
+  
+  
+  ticketmaster-4 Error - 12:54:02 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/new-order-tickets/292263?language=en-us'>TM New Order</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/new-order-tickets/292263?language=en-us'>TM New Order</a>
+  
+  
+  ticketmaster-4 Error - 12:54:02 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/new-order-%7C-standing-package-tickets/292395?language=en-us'>TM New Order | Standing Package</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/new-order-%7C-standing-package-tickets/292395?language=en-us'>TM New Order | Standing Package</a>
+  
+  
+  ticketmaster-2 Error - 12:53:41 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/polderfest-festival-tickets/292469?language=en-us'>TM Polderfest Festival</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/polderfest-festival-tickets/292469?language=en-us'>TM Polderfest Festival</a>
+  
+  
+  ticketmaster-2 Error - 12:53:41 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-miss-montreal-tickets/292031?language=en-us'>TM Zuiderpark Live: Miss Montreal</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-miss-montreal-tickets/292031?language=en-us'>TM Zuiderpark Live: Miss Montreal</a>
+  
+  
+  ticketmaster-3 Error - 12:53:40 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-snelle-tickets/292043?language=en-us'>TM Zuiderpark Live: Snelle</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-snelle-tickets/292043?language=en-us'>TM Zuiderpark Live: Snelle</a>
+  
+  
+  ticketmaster-3 Error - 12:53:40 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-racoon-tickets/292035?language=en-us'>TM Zuiderpark Live: Racoon</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-racoon-tickets/292035?language=en-us'>TM Zuiderpark Live: Racoon</a>
+  
+  
+  ticketmaster-3 Error - 12:53:40 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-suzan--freek-tickets/292423?language=en-us'>TM Zuiderpark Live: Suzan & Freek</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-suzan--freek-tickets/292423?language=en-us'>TM Zuiderpark Live: Suzan & Freek</a>
+  
+  
+  ticketmaster-3 Error - 12:53:40 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-meau-tickets/292027?language=en-us'>TM Zuiderpark Live: MEAU</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-meau-tickets/292027?language=en-us'>TM Zuiderpark Live: MEAU</a>
+  
+  
+  ticketmaster-3 Error - 12:53:40 PM
+  Error: Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/live-in-hoorn-tickets/289883?language=en-us'>TM LIVE IN HOORN</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:219:21)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22) 
+  Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/live-in-hoorn-tickets/289883?language=en-us'>TM LIVE IN HOORN</a>
+  
+  
+  ticketmaster-3 Error - 12:53:40 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/vintage-trouble-tickets/292115?language=en-us'>TM Vintage Trouble</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:97:5) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/vintage-trouble-tickets/292115?language=en-us'>TM Vintage Trouble</a>
+  
+  
+  oosterpoort-0 Error - 12:53:04 PM
+  Error: image missing <a href='https://www.spotgroningen.nl/events/rockit/'>Rockit | 11 november 2023 | Trompsingel 27 | Spot Groningen</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at oostpoortScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/oosterpoort.js:183:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:97:5) 
+  image missing <a href='https://www.spotgroningen.nl/events/rockit/'>Rockit | 11 november 2023 | Trompsingel 27 | Spot Groningen</a>
+  
+  
+  oosterpoort-1 Error - 12:53:03 PM
+  Error: image missing <a href='https://www.spotgroningen.nl/events/rhythm-blues-night/'>Rhythm & Blues Night | 29 april 2023 | Trompsingel 27 | Spot Groningen</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at oostpoortScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/oosterpoort.js:183:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:97:5) 
+  image missing <a href='https://www.spotgroningen.nl/events/rhythm-blues-night/'>Rhythm & Blues Night | 29 april 2023 | Trompsingel 27 | Spot Groningen</a>
+  
+  
+  oosterpoort-0 Error - 12:49:29 PM
+  Error: image missing <a href='https://www.spotgroningen.nl/events/rockit/'>Rockit | 11 november 2023 | Trompsingel 27 | Spot Groningen</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at oostpoortScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/oosterpoort.js:183:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:97:5) 
+  image missing <a href='https://www.spotgroningen.nl/events/rockit/'>Rockit | 11 november 2023 | Trompsingel 27 | Spot Groningen</a>
+  
+  
+  oosterpoort-1 Error - 12:49:25 PM
+  Error: image missing <a href='https://www.spotgroningen.nl/events/rhythm-blues-night/'>Rhythm & Blues Night | 29 april 2023 | Trompsingel 27 | Spot Groningen</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at oostpoortScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/oosterpoort.js:183:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:97:5) 
+  image missing <a href='https://www.spotgroningen.nl/events/rhythm-blues-night/'>Rhythm & Blues Night | 29 april 2023 | Trompsingel 27 | Spot Groningen</a>
+  
+  
+  oosterpoort-0 Error - 12:47:26 PM
+  Error: image missing <a href='https://www.spotgroningen.nl/events/rockit/'>Rockit | 11 november 2023 | Trompsingel 27 | Spot Groningen</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at oostpoortScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/oosterpoort.js:183:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:97:5) 
+  image missing <a href='https://www.spotgroningen.nl/events/rockit/'>Rockit | 11 november 2023 | Trompsingel 27 | Spot Groningen</a>
+  
+  
+  oosterpoort-1 Error - 12:47:25 PM
+  Error: image missing <a href='https://www.spotgroningen.nl/events/rhythm-blues-night/'>Rhythm & Blues Night | 29 april 2023 | Trompsingel 27 | Spot Groningen</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at oostpoortScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/oosterpoort.js:183:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:97:5) 
+  image missing <a href='https://www.spotgroningen.nl/events/rhythm-blues-night/'>Rhythm & Blues Night | 29 april 2023 | Trompsingel 27 | Spot Groningen</a>
+  
+  
+  oosterpoort-1 Error - 12:40:42 PM
+  Error: image missing <a href='https://www.spotgroningen.nl/events/rhythm-blues-night/'>Rhythm & Blues Night | 29 april 2023 | Trompsingel 27 | Spot Groningen</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at oostpoortScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/oosterpoort.js:183:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:97:5) 
+  image missing <a href='https://www.spotgroningen.nl/events/rhythm-blues-night/'>Rhythm & Blues Night | 29 april 2023 | Trompsingel 27 | Spot Groningen</a>
+  
+  
+  oosterpoort-0 Error - 12:40:42 PM
+  Error: image missing <a href='https://www.spotgroningen.nl/events/rockit/'>Rockit | 11 november 2023 | Trompsingel 27 | Spot Groningen</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:635:21)
+    at oostpoortScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/oosterpoort.js:183:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:97:5) 
+  image missing <a href='https://www.spotgroningen.nl/events/rockit/'>Rockit | 11 november 2023 | Trompsingel 27 | Spot Groningen</a>
+  
+  
   oosterpoort-0 Error - 12:29:57 PM
   Error: image missing <a href='https://www.spotgroningen.nl/events/rockit/'>Rockit | 11 november 2023 | Trompsingel 27 | Spot Groningen</a>
     at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:27

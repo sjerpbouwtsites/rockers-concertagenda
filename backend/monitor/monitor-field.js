@@ -36,7 +36,23 @@ export default class MonitorField {
     if (tt.debug){
       tt = tt.debug
     }
-    return JSON.stringify(tt, null, 2).replace(/[{]/g, "").replace(/[}]/g, "");
+    const jsoned = JSON.stringify(tt, null, 2);
+    const zonderJSONtekens = jsoned.replace(/[{}\[\]]/g, "");
+    console.log({
+      jsoned,
+      zonderJSONtekens,
+    })
+    const ingekort = zonderJSONtekens.split(`\n`).map(rij => {
+      if (!rij.includes(':')) return rij;
+      let [sleutel, waarde] = rij.split(':');
+      if (waarde.length > 50){
+        const waardeKort = waarde.substring(0,50)
+        const waardeRest = waarde.substring(50, 1999);
+        waarde = `<span class='ingekort-lange-tekst' data-meer-tekst='${waardeRest}'>${waardeKort}</span>`
+      }
+      return `${sleutel}:${waarde}`
+    })
+    return ingekort.join(`\n`);
   }
   compareWorkers(workerA, workerB) {
     const wai = Number(workerA.workerNamedIndex);
@@ -139,8 +155,6 @@ export default class MonitorField {
           rollRow.messageData?.workerName ?? ""
         }`;
 
-        console.log(rollRow.messageData.content.text);
-
         const bewerkteFoutTekst = rollRow.messageData.content.text
           .split(/[\r\n]/)
           .map((errorTextRow, index) => {
@@ -205,9 +219,12 @@ export default class MonitorField {
   get expandedUpdatedHTML() {
     const listItems = this.data
       .map((rollRow) => {
-        const titleText = `${rollRow.messageData?.title ?? ""}${
+        const titleText = `${rollRow.messageData?.content?.title ?? rollRow.messageData?.title ?? ""}${
           rollRow.messageData?.workerName ?? ""
         }`;
+        delete rollRow.messageData?.content?.title;
+        delete rollRow.messageData?.title;
+        
         let hoofdPrintTekst =
           (rollRow.messageData?.content ?? rollRow.messageData) instanceof
           Object
