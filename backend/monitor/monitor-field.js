@@ -292,8 +292,18 @@ export default class MonitorField {
         : `<ol class='worker-cell-inner--errors'>
               ${worker.errors
     .map(
-      (error, index) =>
-        `<li><a href='#error-ref-${worker.name}-${index}'>😒</a></li>`
+      (error, index) => {
+        const errorLevel = error?.content?.errorLevel ?? 'notice';
+        const emoji = errorLevel === 'notice' 
+          ? `🤦‍♂️`
+          : errorLevel === 'close-thread'
+            ? `🫣`
+            : errorLevel === 'close-app'
+              ? `💥`
+              : `❓`
+         
+        return `<li class='worker-cell-inner-error-item worker-cell-inner-error-item--${errorLevel}'><a class='error-link error-link--${errorLevel}' href='#error-ref-${worker.name}-${index}'>${emoji}</a></li>`
+      }
     )
     .join("")}
             </ol>`;
