@@ -38,10 +38,7 @@ export default class MonitorField {
     }
     const jsoned = JSON.stringify(tt, null, 2);
     const zonderJSONtekens = jsoned.replace(/[{}\[\]]/g, "");
-    console.log({
-      jsoned,
-      zonderJSONtekens,
-    })
+
     const ingekort = zonderJSONtekens.split(`\n`).map(rij => {
       if (!rij.includes(':')) return rij;
       let [sleutel, waarde] = rij.split(':');

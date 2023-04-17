@@ -9,6 +9,7 @@ import EventsList from "../../mods/events-list.js";
 import MusicEvent from "../../mods/music-event.js";
 import getVenueMonths from "../../mods/months.js";
 import ErrorWrapper from "../../mods/error-wrapper.js";
+import { cloneElement } from "react";
 
 
 /**
@@ -246,7 +247,7 @@ export default class AbstractScraper {
       errorVerz.forEach((errorData) => {
         errorData.workerData = workerData;
         if (!errorData.error){
-          errorData.error = new Error(errorData.remarks);
+          errorData.error = new Error(errorData?.remarks ?? '');
         }
         const wrappedError = new ErrorWrapper(errorData);
         _t.wrappedHandleError(wrappedError);
@@ -632,27 +633,47 @@ export default class AbstractScraper {
   async getPageInfoEnd({pageInfo, stopFunctie, page}){
 
     this.isForced && this.dirtyLog(pageInfo)
-    
-    pageInfo.errors.forEach((errorData) => {
-      errorData.workerData = workerData;
-      if (!errorData.error){
-        errorData.error = new Error(errorData.remarks);
-      }
-      const wrappedError = new ErrorWrapper(errorData);
-      _t.wrappedHandleError(wrappedError);
-    });
-  
-    if (pageInfo.longTextHTML) {
-      pageInfo.longTextHTML = _t.killWhitespaceExcess(pageInfo.longTextHTML)
-    }
-    if (pageInfo.priceTextcontent) {
-      pageInfo.priceTextcontent = _t.killWhitespaceExcess(pageInfo.priceTextcontent)
-    }
 
-    if (!pageInfo) {
+    if (!pageInfo || !Array.isArray(pageInfo?.errors)) {
+      const wrappedError = new ErrorWrapper({
+        error: new Error(`pageInfo object incompleet; geen errors`),
+        remarks: `pageInfo object incompleet; geen errors`,
+        workerData,
+        errorLevel: 'notice',
+        toDebug: {
+          title: 'failed page info',
+          pageInfoData: pageInfo,
+        }
+      });
+      _t.wrappedHandleError(wrappedError);
+      page && !page.isClosed() && page.close();
+      clearTimeout(stopFunctie);
       return {
         corrupted: `Geen resultaat van pageInfo`, //TODO samen met musicEvent.unavailable
-      };
+      };      
+    }
+    
+    pageInfo?.errors?.forEach((errorData) => {
+      try {
+        errorData.workerData = workerData;
+        if (!errorData?.error){
+          let errorTekst = errorData?.remarks ?? 'geen remarks'
+          errorData.error = new Error(!errorTekst ? 'geen tekst' : errorTekst);
+        }
+        const wrappedError = new ErrorWrapper(errorData);
+        _t.wrappedHandleError(wrappedError);        
+      } catch (error) {
+        const wrappedError = new ErrorWrapper(error);
+        _t.wrappedHandleError(wrappedError);        
+      }
+
+    });
+  
+    if (pageInfo?.longTextHTML) {
+      pageInfo.longTextHTML = _t.killWhitespaceExcess(pageInfo.longTextHTML)
+    }
+    if (pageInfo?.priceTextcontent) {
+      pageInfo.priceTextcontent = _t.killWhitespaceExcess(pageInfo.priceTextcontent)
     }
   
     page && !page.isClosed() && page.close();

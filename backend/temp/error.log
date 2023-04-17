@@ -1,4 +1,547 @@
 
+  oosterpoort-0 Error - 4:18:11 PM
+  Error: image missing <a href='https://www.spotgroningen.nl/events/rockit/'>Rockit | 11 november 2023 | Trompsingel 27 | Spot Groningen</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:661:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:656:23)
+    at oostpoortScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/oosterpoort.js:220:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:98:5) 
+  image missing <a href='https://www.spotgroningen.nl/events/rockit/'>Rockit | 11 november 2023 | Trompsingel 27 | Spot Groningen</a>
+  
+  
+  oosterpoort-0 Error - 4:17:03 PM
+  Error: image missing <a href='https://www.spotgroningen.nl/events/rockit/'>Rockit | 11 november 2023 | Trompsingel 27 | Spot Groningen</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:661:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:656:23)
+    at oostpoortScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/oosterpoort.js:229:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:98:5) 
+  image missing <a href='https://www.spotgroningen.nl/events/rockit/'>Rockit | 11 november 2023 | Trompsingel 27 | Spot Groningen</a>
+  
+  
+  oosterpoort-0 Error - 4:16:18 PM
+  Error: image missing
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:661:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:656:23)
+    at oostpoortScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/oosterpoort.js:229:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:98:5) 
+  image missing
+  
+  
+  oosterpoort-0 Error - 4:15:39 PM
+  Error: pageInfo object incompleet; geen errors
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:639:16)
+    at oostpoortScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/oosterpoort.js:229:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:98:5) 
+  pageInfo object incompleet; geen errors
+  
+  
+  oosterpoort-0 Error - 4:15:39 PM
+  Error: Evaluation failed: TypeError: Cannot read properties of null (reading 'src')
+    at __puppeteer_evaluation_script__:9:116
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async oostpoortScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/oosterpoort.js:171:14)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:98:5) 
+  Evaluation failed: TypeError: Cannot read properties of null (reading 'src')
+    at __puppeteer_evaluation_script__:9:116
+  
+  
+  oosterpoort-0 Error - 4:14:35 PM
+  SyntaxError: Unexpected token u in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:645:30)
+    at oostpoortScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/oosterpoort.js:229:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:98:5) 
+  Unexpected token u in JSON at position 0
+  
+  
+  oosterpoort-0 Error - 4:14:35 PM
+  Error: Evaluation failed: TypeError: Cannot read properties of null (reading 'src')
+    at __puppeteer_evaluation_script__:9:116
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async oostpoortScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/oosterpoort.js:171:14)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:98:5) 
+  Evaluation failed: TypeError: Cannot read properties of null (reading 'src')
+    at __puppeteer_evaluation_script__:9:116
+  
+  
+  oosterpoort-0 Error - 4:13:41 PM
+  Error: typeerror error. Type undefined  undefined
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:666:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:656:23)
+    at oostpoortScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/oosterpoort.js:229:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22) 
+  typeerror error. Type undefined  undefined
+  
+  
+  oosterpoort-0 Error - 4:11:48 PM
+  Error: typeerror error. Type undefined  undefined
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:666:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:656:23)
+    at oostpoortScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/oosterpoort.js:225:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22) 
+  typeerror error. Type undefined  undefined
+  
+  
+  oosterpoort-0 Error - 4:11:03 PM
+  Error: typeerror error. Type undefined  undefined
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:666:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:656:23)
+    at oostpoortScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/oosterpoort.js:226:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22) 
+  typeerror error. Type undefined  undefined
+  
+  
+  oosterpoort-0 Error - 4:07:18 PM
+  Error: typeerror error. Type undefined  undefined
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:666:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:656:23)
+    at oostpoortScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/oosterpoort.js:233:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22) 
+  typeerror error. Type undefined  undefined
+  
+  
+  oosterpoort-0 Error - 3:58:30 PM
+  Error: typeerror error. Type object  {}
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:662:28
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:656:23)
+    at oostpoortScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/oosterpoort.js:227:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22) 
+  typeerror error. Type object  {}
+  
+  
+  oosterpoort-0 Error - 3:56:12 PM
+  Error: typeerror error. Type object  {}
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:661:28
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:656:23)
+    at oostpoortScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/oosterpoort.js:227:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22) 
+  typeerror error. Type object  {}
+  
+  
+  oosterpoort-0 Error - 3:54:52 PM
+  Error: typeerror error. Type object  [object Object]
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:661:28
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:656:23)
+    at oostpoortScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/oosterpoort.js:227:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22) 
+  typeerror error. Type object  [object Object]
+  
+  
+  oosterpoort-0 Error - 3:53:43 PM
+  Error: typeerror error. Type object
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:661:28
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:656:23)
+    at oostpoortScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/oosterpoort.js:227:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22) 
+  typeerror error. Type object
+  
+  
+  oosterpoort-0 Error - 3:51:49 PM
+  Error: typeerror remarks. Type object
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:661:28
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:656:23)
+    at oostpoortScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/oosterpoort.js:227:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22) 
+  typeerror remarks. Type object
+  
+  
+  oosterpoort-0 Error - 3:50:17 PM
+  Error: typeerror remarks. Type object
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:661:28
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:656:23)
+    at oostpoortScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/oosterpoort.js:227:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22) 
+  typeerror remarks. Type object
+  
+  
+  oosterpoort-0 Error - 3:48:17 PM
+  Error: typeerror remarks. Type object
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:661:28
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:656:23)
+    at oostpoortScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/oosterpoort.js:227:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22) 
+  typeerror remarks. Type object
+  
+  
+  oosterpoort-1 Error - 3:47:29 PM
+  Error: ENOENT: no such file or directory, open '/home/sjerp/dev/apache/concertagenda/backend/temp/isRock/text.txt'
+    at Object.openSync (node:fs:590:3)
+    at Object.readFileSync (node:fs:458:35)
+    at oostpoortScraper.singleEventCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/oosterpoort.js:115:26)
+    at AbstractScraper.eventAsyncCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:370:38)
+    at AbstractScraper.announceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:344:23)
+    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:94:38)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  ENOENT: no such file or directory, open '/home/sjerp/dev/apache/concertagenda/backend/temp/isRock/text.txt'
+  
+  
+  oosterpoort-0 Error - 3:47:29 PM
+  Error: ENOENT: no such file or directory, open '/home/sjerp/dev/apache/concertagenda/backend/temp/isRock/text.txt'
+    at Object.openSync (node:fs:590:3)
+    at Object.readFileSync (node:fs:458:35)
+    at oostpoortScraper.singleEventCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/oosterpoort.js:115:26)
+    at AbstractScraper.eventAsyncCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:370:38)
+    at AbstractScraper.announceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:344:23)
+    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:94:38)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  ENOENT: no such file or directory, open '/home/sjerp/dev/apache/concertagenda/backend/temp/isRock/text.txt'
+  
+  
+  oosterpoort-2 Error - 3:47:29 PM
+  Error: ENOENT: no such file or directory, open '/home/sjerp/dev/apache/concertagenda/backend/temp/isRock/text.txt'
+    at Object.openSync (node:fs:590:3)
+    at Object.readFileSync (node:fs:458:35)
+    at oostpoortScraper.singleEventCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/oosterpoort.js:115:26)
+    at AbstractScraper.eventAsyncCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:370:38)
+    at AbstractScraper.announceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:344:23)
+    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:94:38)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  ENOENT: no such file or directory, open '/home/sjerp/dev/apache/concertagenda/backend/temp/isRock/text.txt'
+  
+  
+  oosterpoort-0 Error - 3:38:17 PM
+  Error: typeerror remarks. Type object
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:663:28
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:658:22)
+    at oostpoortScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/oosterpoort.js:211:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22) 
+  typeerror remarks. Type object
+  
+  
+  oosterpoort-0 Error - 3:35:50 PM
+  Error: typeerror remarks. Type object
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:664:28
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:659:22)
+    at oostpoortScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/oosterpoort.js:211:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22) 
+  typeerror remarks. Type object
+  
+  
+  oosterpoort-0 Error - 3:28:23 PM
+  TypeError: Cannot set properties of undefined (setting 'errors')
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:23)
+    at oostpoortScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/oosterpoort.js:200:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:98:5) 
+  Cannot set properties of undefined (setting 'errors')
+  
+  
+  oosterpoort-0 Error - 3:26:40 PM
+  TypeError: Cannot set properties of undefined (setting 'errors')
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:23)
+    at oostpoortScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/oosterpoort.js:200:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:98:5) 
+  Cannot set properties of undefined (setting 'errors')
+  
+  
+  oosterpoort-0 Error - 3:23:01 PM
+  TypeError: Cannot set properties of undefined (setting 'errors')
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:638:23)
+    at oostpoortScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/oosterpoort.js:198:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:98:5) 
+  Cannot set properties of undefined (setting 'errors')
+  
+  
+  oosterpoort-0 Error - 3:17:25 PM
+  TypeError: Cannot read properties of undefined (reading 'errors')
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:636:14)
+    at oostpoortScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/oosterpoort.js:198:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:522:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:97:5) 
+  Cannot read properties of undefined (reading 'errors')
+  
+  
+  oosterpoort-0 Error - 3:13:50 PM
+  TypeError: Cannot read properties of undefined (reading 'errors')
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:636:14)
+    at oostpoortScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/oosterpoort.js:187:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:522:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:97:5) 
+  Cannot read properties of undefined (reading 'errors')
+  
+  
+  ticketmaster-1 Error - 3:12:44 PM
+  Error: Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/muse--park--tram--location-megastores-1-vehicle--tickets/291593?language=en-us'>TM Muse – Park & Tram – Location MegaStores (1 vehicle)</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:639:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:636:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:224:21)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:522:22) 
+  Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/muse--park--tram--location-megastores-1-vehicle--tickets/291593?language=en-us'>TM Muse – Park & Tram – Location MegaStores (1 vehicle)</a>
+  
+  
+  ticketmaster-1 Error - 3:12:44 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/sza-sos-tour-tickets/292303?language=en-us'>TM SZA - SOS Tour</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:639:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:636:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:522:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/sza-sos-tour-tickets/292303?language=en-us'>TM SZA - SOS Tour</a>
+  
+  
+  ticketmaster-1 Error - 3:12:44 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/sza-sos-tour-tickets/292301?language=en-us'>TM SZA - SOS Tour</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:639:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:636:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:522:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/sza-sos-tour-tickets/292301?language=en-us'>TM SZA - SOS Tour</a>
+  
+  
+  ticketmaster-1 Error - 3:12:44 PM
+  Error: Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/the-dire-straits-experience-uk--tickets/276317?language=en-us'>TM The Dire Straits Experience (UK)</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:639:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:636:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:224:21)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:522:22) 
+  Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/the-dire-straits-experience-uk--tickets/276317?language=en-us'>TM The Dire Straits Experience (UK)</a>
+  
+  
+  ticketmaster-1 Error - 3:12:44 PM
+  Error: Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/normaal-48-joar-olderwets-hoken-tickets/286253?language=en-us'>TM Normaal - 48 Joar Olderwets Høken</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:639:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:636:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:224:21)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:522:22) 
+  Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/normaal-48-joar-olderwets-hoken-tickets/286253?language=en-us'>TM Normaal - 48 Joar Olderwets Høken</a>
+  
+  
+  ticketmaster-3 Error - 3:12:43 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-snelle-tickets/292043?language=en-us'>TM Zuiderpark Live: Snelle</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:639:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:636:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:522:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-snelle-tickets/292043?language=en-us'>TM Zuiderpark Live: Snelle</a>
+  
+  
+  ticketmaster-3 Error - 3:12:43 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-racoon-tickets/292035?language=en-us'>TM Zuiderpark Live: Racoon</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:639:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:636:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:522:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-racoon-tickets/292035?language=en-us'>TM Zuiderpark Live: Racoon</a>
+  
+  
+  ticketmaster-3 Error - 3:12:43 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-suzan--freek-tickets/292423?language=en-us'>TM Zuiderpark Live: Suzan & Freek</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:639:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:636:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:522:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-suzan--freek-tickets/292423?language=en-us'>TM Zuiderpark Live: Suzan & Freek</a>
+  
+  
+  ticketmaster-3 Error - 3:12:43 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-meau-tickets/292027?language=en-us'>TM Zuiderpark Live: MEAU</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:639:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:636:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:522:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-meau-tickets/292027?language=en-us'>TM Zuiderpark Live: MEAU</a>
+  
+  
+  ticketmaster-3 Error - 3:12:43 PM
+  Error: Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/live-in-hoorn-tickets/289883?language=en-us'>TM LIVE IN HOORN</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:639:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:636:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:224:21)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:522:22) 
+  Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/live-in-hoorn-tickets/289883?language=en-us'>TM LIVE IN HOORN</a>
+  
+  
+  ticketmaster-3 Error - 3:12:43 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/vintage-trouble-tickets/292115?language=en-us'>TM Vintage Trouble</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:639:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:636:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:522:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:97:5) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/vintage-trouble-tickets/292115?language=en-us'>TM Vintage Trouble</a>
+  
+  
+  ticketmaster-4 Error - 3:12:31 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/new-order-%7C-premium-seat-package-tickets/292367?language=en-us'>TM New Order | Premium Seat Package</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:639:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:636:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:522:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/new-order-%7C-premium-seat-package-tickets/292367?language=en-us'>TM New Order | Premium Seat Package</a>
+  
+  
+  ticketmaster-4 Error - 3:12:31 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/new-order-tickets/292263?language=en-us'>TM New Order</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:639:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:636:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:522:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/new-order-tickets/292263?language=en-us'>TM New Order</a>
+  
+  
+  ticketmaster-4 Error - 3:12:31 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/new-order-%7C-standing-package-tickets/292395?language=en-us'>TM New Order | Standing Package</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:639:27
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:636:21)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:522:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/new-order-%7C-standing-package-tickets/292395?language=en-us'>TM New Order | Standing Package</a>
+  
+  
+  dbs-3 Error - 3:12:21 PM
+  TimeoutError: waiting for selector `[data-testid]` failed: timeout 6500ms exceeded
+    at new WaitTask (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:528:34)
+    at DOMWorld.waitForSelectorInPage (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:432:26)
+    at internalHandler.waitFor (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/QueryHandler.js:31:77)
+    at DOMWorld.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:323:29)
+    at Frame.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:942:51)
+    at Page.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:2359:33)
+    at dbsScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dbs.js:191:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:522:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:97:5) 
+  waiting for selector `[data-testid]` failed: timeout 6500ms exceeded
+  
+  
+  dbs-3 Error - 3:12:00 PM
+  TimeoutError: waiting for selector `[data-testid]` failed: timeout 6500ms exceeded
+    at new WaitTask (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:528:34)
+    at DOMWorld.waitForSelectorInPage (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:432:26)
+    at internalHandler.waitFor (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/QueryHandler.js:31:77)
+    at DOMWorld.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:323:29)
+    at Frame.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:942:51)
+    at Page.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:2359:33)
+    at dbsScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dbs.js:191:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:522:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:97:5) 
+  waiting for selector `[data-testid]` failed: timeout 6500ms exceeded
+  
+  
+  oosterpoort-0 Error - 3:11:19 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:611:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
   oosterpoort-0 Error - 3:11:00 PM
   TypeError: Cannot read properties of undefined (reading 'errors')
     at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:636:14)

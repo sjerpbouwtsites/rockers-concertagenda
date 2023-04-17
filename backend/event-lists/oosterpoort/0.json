@@ -1,1 +1,35 @@
-[]
+[
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-11-11T15:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.spotgroningen.nl/events/rockit/",
+    "title": "Rockit",
+    "location": "oosterpoort",
+    "shortText": "<br>",
+    "longText": null,
+    "image": null,
+    "soldOut": false,
+    "unavailable": "",
+    "corrupted": null,
+    "correctMusic": null,
+    "origin": "oosterpoort"
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2024-04-13T18:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.spotgroningen.nl/programma/krezip-2/",
+    "title": "Krezip",
+    "location": "oosterpoort",
+    "price": 46,
+    "shortText": "<br>Theatershow neemt je mee op muzikale reis langs hun volledige oeuvre",
+    "longText": "../public/texts/9ddb783f-67a8-4b1f-8491-a9017b6bc7c5.html",
+    "image": "https://www.spotgroningen.nl/wp-content/uploads/2023/04/Krezip-2022-620-photo-credits-Paul-Bellaart-scaled-e1680616393801-768x392.jpg",
+    "soldOut": false,
+    "unavailable": "",
+    "corrupted": null,
+    "correctMusic": null,
+    "origin": "oosterpoort"
+  }
+]

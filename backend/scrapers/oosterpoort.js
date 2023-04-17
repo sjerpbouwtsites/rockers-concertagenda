@@ -3,6 +3,9 @@ import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 import {textContainsHeavyMusicTerms, textContainsForbiddenMusicTerms, waitFor} from "../mods/tools.js"
 import * as _t from "../mods/tools.js";
+import fs from 'fs';
+import ErrorWrapper from "../mods/error-wrapper.js";
+import fsDirections from "../mods/fs-directions.js";
 
 // SCRAPER CONFIG
 
@@ -20,7 +23,7 @@ const oostpoortScraper = new AbstractScraper(makeScraperConfig({
     app: {
       mainPage: {
         url: "https://www.spotgroningen.nl/programma/#genres=muziek&subgenres=metal-heavy,pop-rock",
-        requiredProperties: ['venueEventUrl', 'title']
+        requiredProperties: ['venueEventUrl', 'title', 'startDateTime']
       },
       singlePage: {
         requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
@@ -107,6 +110,18 @@ oostpoortScraper.makeBaseEventList = async function () {
 // SINGLE EVENT CHECK
 
 oostpoortScraper.singleEventCheck = async function (event) {
+
+  if (!(this?.isRockDump)){
+    this.isRockDump = fs.readFileSync(fsDirections.isRockDump, 'utf8');
+  }
+
+  if (this.isRockDump.includes(event.title)) {
+    return {
+      event,
+      success: false,
+      reason: "event contains forbidden terms",
+    };     
+  }
   
   if (textContainsHeavyMusicTerms(event.longText)) {
     return {
@@ -116,6 +131,7 @@ oostpoortScraper.singleEventCheck = async function (event) {
     };    
   }
   if (textContainsForbiddenMusicTerms(event.longText)) {
+    this.isRockDump = `${this.isRockDump}\n${event.title}`
     return {
       event,
       success: false,
@@ -132,7 +148,8 @@ oostpoortScraper.singleEventCheck = async function (event) {
       reason: `is rock check successfull ${thisIsRock.reason}` ,
     }
   } 
-
+  this.isRockDump = `${this.isRockDump}\n${event.title}`
+  fs.writeFileSync(fsDirections.isRockDump, this.isRockDump, 'utf8');
   return {
     event,
     success: false,
@@ -148,8 +165,10 @@ oostpoortScraper.getPageInfo = async function ({ page, event }) {
   const {stopFunctie} =  await this.getPageInfoStart()
   
   await _t.waitFor(600);
+
+  let pageInfo;
  
-  const pageInfo = await page.evaluate(
+  pageInfo = await page.evaluate(
     ({event}) => {
       const res = {
         unavailable: event.unavailable,
@@ -157,33 +176,47 @@ oostpoortScraper.getPageInfo = async function ({ page, event }) {
         errors: [],
       };
 
+      res.longTextHTML = document.querySelector('.content__article .event__language')?.innerHTML;
+      res.image = document.querySelector('.hero__image')?.src ?? document.querySelector('.festival__header__image')?.src ?? null;
+      if (!res.image){
+        res.errors.push({
+          remarks: `image missing ${res.pageInfo}`
+        })
+      }
+  
+      if (document.querySelector('.event__pricing__costs')){
+        res.priceTextcontent = document.querySelector('.event__pricing__costs')?.textContent ?? null;
+      } else if(document.querySelector('.festival__tickets__toggle')){
+        res.priceTextcontent = document.querySelector('.festival__tickets__toggle')?.textContent ?? null;
+      }
+     
       try {
-        res.longTextHTML = document.querySelector('.content__article .event__language')?.innerHTML;
-        res.image = document.querySelector('.hero__image')?.src ?? document.querySelector('.festival__header__image').src ?? null;
-        if (!res.image){
-          res.errors.push({
-            remarks: `image missing ${res.pageInfo}`
-          })
-        }
-        res.priceTextcontent = document.querySelector('.event__pricing__costs')?.textContent ?? document.querySelector('.festival__tickets__toggle') ?? '';
-
+        if (document.querySelector('.event__cta') && document.querySelector('.event__cta').hasAttribute('disabled')) {
+          res.unavailable += ` ${document.querySelector('.event__cta')?.textContent}`;
+        }        
       } catch (caughtError) {
         res.errors.push({
           error: caughtError,
-          remarks: 'page info wrap catch'        
-          ,toDebug: {
-            res, event
-          }
-        })    
+          remarks: `check if disabled fail  ${res.pageInfo}`,
+          toDebug: event
+          
+        })            
       }
 
-      if (document.querySelector('.event__cta') && document.querySelector('.event__cta').hasAttribute('disabled')) {
-        res.unavailable += ` ${document.querySelector('.event__cta').textContent}`;
-      }
       return res;
     }, {event},
-    
-  );
+  ).catch(caughtError => {
+    _t.wrappedHandleError(new ErrorWrapper({
+      error:caughtError,
+      remarks: `pageInfo catch`,
+      errorLevel: 'notice',
+      workerData,
+      toDebug: {
+        event,
+        pageInfo
+      }
+    }))
+  });
   return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
     
 }
