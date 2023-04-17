@@ -1,5 +1,5 @@
 # MONITOR voor rockagenda
-
+TODO afchrijven
 ### Websocketed debugger / logger / error console voor backend / scrapers
 
 statussen mogelijk: done error console todo
@@ -13,7 +13,7 @@ VAN WORKER NAAR MONITOR:
     // of
     parentPort.postMessage({ status: "todo", message: baseMusicEvents.length });
     // of
-    function handleError(error, location = 'unknown location') {
+    function handleError(error, workerDataObj, remarks, errorLevel, toDebug) {
       parentPort.postMessage({
         status: "error",
         message: error,

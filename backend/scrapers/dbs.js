@@ -6,11 +6,11 @@ import makeScraperConfig from "./gedeeld/scraper-config.js";
 // SCRAPER CONFIG
 
 const dbsScraper = new AbstractScraper(makeScraperConfig({
-  maxExecutionTime: 60000,
+  maxExecutionTime: 60044,
   workerData: Object.assign({}, workerData),
   puppeteerConfig: {
     mainPage: {
-      timeout: 60000,
+      timeout: 60045,
       waitUntil: 'domcontentloaded'
     },
     singlePage: {
@@ -20,6 +20,9 @@ const dbsScraper = new AbstractScraper(makeScraperConfig({
       mainPage: {
         url: "https://www.dbstudio.nl/agenda/",
         requiredProperties: ['venueEventUrl', 'title', 'startDateTime']
+      },
+      singlePage: {
+        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
       }
     }
   }
@@ -30,6 +33,13 @@ dbsScraper.listenToMasterThread();
 // MAKE BASE EVENTS
 
 dbsScraper.makeBaseEventList = async function () {
+
+  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.name);
+  if (availableBaseEvent){
+    return await this.makeBaseEventListEnd({
+      stopFunctie: null, rawEvents: availableBaseEvent}
+    );    
+  }  
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
@@ -51,8 +61,6 @@ dbsScraper.makeBaseEventList = async function () {
 
           if (title.toLowerCase().includes('cancelled')){ //TODO 1.algemene check maken 2. uitbreiden.
             res.unavailable += ' event cancelled'
-            //TODO debugger
-            return res;
           }
 
           res.venueEventUrl = eventEl.querySelector(".fusion-events-meta .url")?.href ?? null;
@@ -60,7 +68,6 @@ dbsScraper.makeBaseEventList = async function () {
           const startDateEl =
             eventEl.querySelector(".tribe-event-date-start") ?? null;
           if (!startDateEl) {
-            res.unavailable += 'geen start date el.'
             return res;
           }
 
@@ -95,7 +102,7 @@ dbsScraper.makeBaseEventList = async function () {
               `${res.startDate}T${res.time}:00Z`
             ).toISOString();
           } catch (caughtError) {
-            res.errors.push({error: caughtError, remarks: `Wirwar datums e.d. ${title}`});
+            res.errors.push({error: caughtError, remarks: `Wirwar datums e.d. ${title}`,toDebug:res});
           }
 
           if (res.startDate) {
@@ -117,7 +124,7 @@ dbsScraper.makeBaseEventList = async function () {
                 }
               }
             } catch (caughtError) {
-              res.errors.push({error: caughtError, remarks: `Wirwar datums e.d. ${title}`});
+              res.errors.push({error: caughtError, remarks: `Wirwar datums e.d. ${title}`,toDebug:res});
             }
           }
 
@@ -126,6 +133,8 @@ dbsScraper.makeBaseEventList = async function () {
     },
     { months: this.months,workerData }
   );
+
+  this.saveBaseEventlist(workerData.family, rawEvents)
  
   return await this.makeBaseEventListEnd({
     stopFunctie, page, rawEvents}
@@ -152,6 +161,11 @@ dbsScraper.getPageInfo = async function ({ page, event }) {
     res.image =
       document.querySelector(".tribe-events-event-image .wp-post-image")?.src ??
       null;
+    if (!res.image){
+      res.errors.push({
+        remarks: `image missing ${res.pageInfo}`
+      })
+    }    
     let categories =
       document.querySelector(".tribe-events-event-categories")?.textContent ??
       "";
@@ -186,7 +200,11 @@ dbsScraper.getPageInfo = async function ({ page, event }) {
       hier moeten een error van gemaakt worden maar de errors crashen nu de thread!
       !!
       `))
-      //pageInfo.errors.push({error: caughtError, remarks: `prijs ophalen dbs ticketpagina ${event.title}`})
+      pageInfo.errors.push({
+        error: caughtError, 
+        remarks: `prijs ophalen dbs ticketpagina ${pageInfo.pageInfo}`, 
+        toDebug: {pageInfo,event}
+      })
     }
   }
 

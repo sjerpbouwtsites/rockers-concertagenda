@@ -5,19 +5,22 @@ import makeScraperConfig from "./gedeeld/scraper-config.js";
 // SCRAPER CONFIG
 
 const dynamoScraper = new AbstractScraper(makeScraperConfig({
-  maxExecutionTime: 60000,
+  maxExecutionTime: 60059,
   workerData: Object.assign({}, workerData),
   puppeteerConfig: {
     mainPage: {
-      timeout: 35000,
+      timeout: 35060,
     },
     singlePage: {
-      timeout: 25000
+      timeout: 25061
     },
     app: {
       mainPage: {
         url: "https://www.dynamo-eindhoven.nl/programma/?_sfm_fw%3Aopt%3Astyle=15",
         requiredProperties: ['venueEventUrl', 'title']
+      },
+      singlePage: {
+        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
       }
     }
   }
@@ -28,6 +31,13 @@ dynamoScraper.listenToMasterThread();
 // MAKE BASE EVENTS
 
 dynamoScraper.makeBaseEventList = async function () {
+
+  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.name);
+  if (availableBaseEvent){
+    return await this.makeBaseEventListEnd({
+      stopFunctie: null, rawEvents: availableBaseEvent}
+    );    
+  }  
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
@@ -61,6 +71,8 @@ dynamoScraper.makeBaseEventList = async function () {
     {workerData}
   );
 
+  this.saveBaseEventlist(workerData.family, rawEvents)
+
   return await this.makeBaseEventListEnd({
     stopFunctie, page, rawEvents}
   );
@@ -83,8 +95,11 @@ dynamoScraper.getPageInfo = async function ({ page, event}) {
       const agendaDatesEls = document.querySelectorAll(".agenda-date");
       let baseDate = null;
       if (agendaDatesEls && agendaDatesEls.length < 2) {
-        res.unavailable += `Te weinig 'agendaDataEls' ${event.title}`
-        res.errors.push({error: new Error('HTML parsing error'), remarks: `Te weinig 'agendaDataEls' ${event.title}`})
+        res.errors.push({remarks: `Te weinig 'agendaDataEls' ${res.pageInfo}`, 
+          toDebug: {
+            event,
+            agendaDatesEls
+          },})
         return res;
       }
       try {
@@ -101,9 +116,9 @@ dynamoScraper.getPageInfo = async function ({ page, event}) {
       } catch (caughtError) {
         res.errors.push({
           error: caughtError,
-          remarks: `datum match faal ${event.title}`,
+          remarks: `datum match faal ${res.pageInfo}`, 
+          toDebug:event
         });
-        res.unavailable += 'Datum match mislukt';
         return res;
       }
 
@@ -149,7 +164,8 @@ dynamoScraper.getPageInfo = async function ({ page, event}) {
       } catch (caughtError) {
         res.errors.push({
           error: caughtError,
-          remarks: `tijd matches samen met tijden voegen ${event.title}`,
+          remarks: `tijd matches samen met tijden voegen ${res.pageInfo}`,
+          toDebug: res,
         });
       }
 
@@ -162,9 +178,15 @@ dynamoScraper.getPageInfo = async function ({ page, event}) {
       res.image =
         document
           .querySelector(".dynamic-background-color#intro .color-pick")
-          ?.style.backgroundImage.match(/(https.*\.jpg)/)
+          ?.style.backgroundImage.match(/(https.*\.[jpg|jpeg|png])/)
           ?.at(0)
           .replace("-500x500x", "") ?? "";
+      if (!res.image){
+        res.errors.push({
+          remarks: `image missing ${res.pageInfo}`
+        })
+      }
+
 
       return res;
     },

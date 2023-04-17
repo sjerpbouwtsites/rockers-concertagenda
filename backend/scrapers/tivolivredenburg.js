@@ -14,6 +14,9 @@ const tivoliVredenburgScraper = new AbstractScraper(makeScraperConfig({
       mainPage: {
         url: "https://www.tivolivredenburg.nl/agenda/?event_category=metal-punk-heavy",
         requiredProperties: ['venueEventUrl', 'title']
+      },
+      singlePage: {
+        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
       }
     }    
   }
@@ -25,6 +28,13 @@ tivoliVredenburgScraper.listenToMasterThread();
 
 tivoliVredenburgScraper.makeBaseEventList = async function () {
   
+  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.name);
+  if (availableBaseEvent){
+    return await this.makeBaseEventListEnd({
+      stopFunctie: null, rawEvents: availableBaseEvent}
+    );    
+  }
+
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
   const rawEvents = await page.evaluate(({workerData}) => {
@@ -49,6 +59,11 @@ tivoliVredenburgScraper.makeBaseEventList = async function () {
           eventEl
             .querySelector(".agenda-list-item__figure img")
             ?.src.replace(/-\d\d\dx\d\d\d.jpg/, ".jpg") ?? null;
+        if (!res.image){
+          res.errors.push({
+            remarks: `image missing ${res.pageInfo}`
+          })
+        }      
         res.venueEventUrl = eventEl.querySelector(
           ".agenda-list-item__title-link"
         ).href;
@@ -56,6 +71,8 @@ tivoliVredenburgScraper.makeBaseEventList = async function () {
         return res;
       });
   }, {workerData});
+
+  this.saveBaseEventlist(workerData.family, rawEvents)
 
   return await this.makeBaseEventListEnd({
     stopFunctie, page, rawEvents}
@@ -89,13 +106,14 @@ tivoliVredenburgScraper.getPageInfo = async function ({ page, event }) {
     }
 
     if (!res.startDate || res.startDate.length < 7) {
-      res.unavailable += "startdate gaat mis";
-      const errorMsg = `Startdate mist`
-      const remarkMsg =`niet goed genoeg<br>${startDateMatch.join("; ")}<br>${res.startDate}`
       res.errors.push({
-        error: new Error(errorMsg),
-        remarks: remarkMsg
+        remarks: `startdate mis ${res.pageInfo}`,
+        toDebug: {
+          text: `niet goed genoeg<br>${startDateMatch.join("; ")}<br>${res.startDate}`,
+          res,event
+        }
       });
+      return res;
     }
     const eventInfoDtDDText = document
       .querySelector(".event__info .description-list")
@@ -117,7 +135,11 @@ tivoliVredenburgScraper.getPageInfo = async function ({ page, event }) {
       } catch (caughtError) {
         res.errors.push({
           error: caughtError,
-          remarks: `Open door ${eventInfoDtDDText}`,
+          remarks: `Open door ${res.pageInfo}`,
+          toDebug:{
+            text: eventInfoDtDDText,
+            res,event
+          }
         });
       }
     }
@@ -130,9 +152,13 @@ tivoliVredenburgScraper.getPageInfo = async function ({ page, event }) {
       } catch (caughtError) {
         res.errors.push({
           error: caughtError,
-          remarks: `startTijd door ${startMatch.join("")}`,
+          remarks: `startTijd door ${res.pageInfo}`,
+          toDebug: {
+            matches:`${startMatch.join("")}`,
+            res,event
+          }
         });
-        res.unavailable = `${res.unavailable}  geen start tijd.`;
+        return res;
       }
     }
     if (Array.isArray(endMatch) && endMatch.length > 1) {
@@ -144,7 +170,11 @@ tivoliVredenburgScraper.getPageInfo = async function ({ page, event }) {
       } catch (caughtError) {
         res.errors.push({
           error: caughtError,
-          remarks: `endtijd ${eventInfoDtDDText}`,
+          remarks: `endtijd ${res.pageInfo}`,
+          toDebug: {
+            text: eventInfoDtDDText,
+            res,event
+          }
         });
       }
     }

@@ -3,6 +3,7 @@ import EventsList from "./events-list.js";
 import wsMessage from "../monitor/wsMessage.js";
 import { AbstractWorkerConfig } from "./worker-config.js";
 import { getShellArguments } from "./tools.js";
+import * as _t from "./tools.js"
 
 export function AbstractWorkerData() {
   return {
@@ -32,8 +33,10 @@ export default class WorkerStatus {
   static completedWorkers = 0;
   static monitorWebsocketServer = null;
   static reportingInterval = null;
-  static registerWorker(workerConf) {
-    WorkerStatus._workers[workerConf.name].status = "registered";
+  static registerWorker(rockWorkerInstance) {
+    const _w = WorkerStatus._workers[rockWorkerInstance.name];
+    _w.status = "registered";
+    _w.workerRef = rockWorkerInstance;
   }
   static getWorkerData(workerName) {
     return WorkerStatus._workers(workerName);
@@ -147,8 +150,36 @@ export default class WorkerStatus {
     }
   }
 
-  static saveError(name, message) {
+  static async processError(name, message) {
     WorkerStatus._workers[name].errors.push(message);
+    WorkerStatus.printWorkersToConsole()
+    const content = message?.content ?? null;
+    const errorLevel = content?.level ?? null;
+    if (!content || !errorLevel) return;
+    console.log(errorLevel, message?.text?.substring(0, 30) ?? '');
+    if (errorLevel === 'close-app'){
+      const serverStoptBoodschap = new wsMessage("update", "message-roll", {
+        title: `SERVER STOPT`,
+        content: `Terminale fout in ${name}`,
+      });
+      // TODO wordt niet goed opgepakt
+      console.log(`%cSTOPPING SERVER\nbecause of ${name}`, 'color: red; background: yellow; font-weight: bold; font-size: 24px')
+      const serverStoptProcess = new wsMessage("process", "closed", {
+        content: `SERVER STOPT vanwege fout in ${name}`,
+      });      
+      if (WorkerStatus.mwss) {
+        WorkerStatus.mwss.broadcast(serverStoptBoodschap.json);
+        WorkerStatus.mwss.broadcast(serverStoptProcess.json);
+      }     
+      await _t.waitFor(25);
+      process.exit()
+    } else if (errorLevel === 'close-thread'){
+      console.log(`%cSTOPPING THREAD\n of ${name}`, 'color: red; background: yellow; font-weight: bold; font-size: 18px')
+      WorkerStatus.change(name, 'done', message)
+      WorkerStatus.getWorkerData(name)?.workerRef?.terminate();
+    } else {
+      // is notice, verder afgehandeld.
+    }
   }
 
   static get countedWorkersToDo() {
@@ -214,4 +245,42 @@ export default class WorkerStatus {
       process.exit();
     }, 10000);
   }
+
+
+  static printWorkersToConsole(){
+
+    console.log('')
+    const sorted = Object.entries(WorkerStatus._workers)
+      .map(([,w])=>{
+        return `${w.name} - ${w.status}`
+      })
+      .sort((eventA, eventB) => {
+        if ( eventB > eventA) {
+          return -1;
+        } else if ( eventB < eventA) {
+          return 1;
+        } else {
+          return 0;
+        }    
+      })
+    
+    const done = sorted.filter(w => w.includes('done'));
+    const waiting = sorted.filter(w => w.includes('waiting'));
+    const working = sorted.filter(w => w.includes('working'));
+    const error = sorted.filter(w => w.includes('error'));
+  
+    console.log(`%cDONE WORKERS\r`, 'color: white; background: black; font-weight: bold; font-size: 18px')
+    console.log(done.join(`\r`)) 
+    console.log('')
+    console.log(`%cWAITING WORKERS\r`, 'color: grey; background: black; font-weight: bold; font-size: 18px')
+    console.log(waiting.join(`\r`)) 
+    console.log('')
+    console.log(`%cWORKING WORKERS\r`, 'color: gold; background: black; font-weight: bold; font-size: 18px')
+    console.log(working.join(`\r`)) 
+    console.log('')
+    console.log(`%cERROR WORKERS\r`, 'color: red; background: black; font-weight: bold; font-size: 18px')
+    console.log(error.join(`\r`))             
+    console.log('')    
+  }  
 }
+

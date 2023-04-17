@@ -6,7 +6,7 @@ import makeScraperConfig from "./gedeeld/scraper-config.js";
 // SCRAPER CONFIG
 
 const depulScraper = new AbstractScraper(makeScraperConfig({
-  maxExecutionTime: 60000,
+  maxExecutionTime: 60048,
   workerData: Object.assign({}, workerData),
   puppeteerConfig: {
     mainPage: {
@@ -19,6 +19,9 @@ const depulScraper = new AbstractScraper(makeScraperConfig({
       mainPage: {
         url: "https://www.livepul.com/agenda/",
         requiredProperties: ['venueEventUrl', 'title']
+      },
+      singlePage: {
+        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
       }
     }
   }
@@ -29,6 +32,13 @@ depulScraper.listenToMasterThread();
 // MAKE BASE EVENTS
 
 depulScraper.makeBaseEventList = async function () {
+
+  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.name);
+  if (availableBaseEvent){
+    return await this.makeBaseEventListEnd({
+      stopFunctie: null, rawEvents: availableBaseEvent}
+    );    
+  }  
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
@@ -84,11 +94,19 @@ depulScraper.makeBaseEventList = async function () {
             res.image = imageMatch[1];
           }
 
+          if (!res.image){
+            res.errors.push({
+              remarks: `image missing ${res.pageInfo}`
+            })
+          }
+
           return res;
         });
     },
     { months: this.months,workerData}
   );
+
+  this.saveBaseEventlist(workerData.family, rawEvents)
 
   return await this.makeBaseEventListEnd({
     stopFunctie, page, rawEvents}
@@ -127,7 +145,8 @@ depulScraper.getPageInfo = async function ({ page, event }) {
       } catch (caughtError) {
         res.errors.push({
           caughtError,
-          remarks: `longTextHTML ${event.title}`,
+          remarks: `longTextHTML ${res.pageInfo}`,
+          toDebug:res
         });
       }
 
@@ -161,7 +180,7 @@ depulScraper.getPageInfo = async function ({ page, event }) {
                 }
               }
             } catch (caughtError) {
-              res.errors.push({ error: caughtError, remarks: `startDate mislukt ${event.title}` });
+              res.errors.push({ error: caughtError, remarks: `startDate mislukt ${event.title} ${res.pageInfo}`,toDebug:res });
             }
           } else if (lowerCaseTextContent.includes("aanvang")) {
             if (!res.startDate) {
@@ -181,7 +200,7 @@ depulScraper.getPageInfo = async function ({ page, event }) {
             } catch (caughtError) {
               res.errors.push({
                 error: caughtError,
-                remarks: `startDateTime en startDate samenvoegen ${event.title}`,
+                remarks: `startDateTime en startDate samenvoegen ${res.pageInfo}`,toDebug:res
               });
             }
           } else if (lowerCaseTextContent.includes("open")) {
@@ -202,7 +221,7 @@ depulScraper.getPageInfo = async function ({ page, event }) {
             } catch (caughtError) {
               res.errors.push({
                 error: caughtError,
-                remarks: `doorDateTime en startDate ${event.title}`,
+                remarks: `doorDateTime en startDate ${res.pageInfo}`,toDebug:res
               });
             }
           }
@@ -211,9 +230,7 @@ depulScraper.getPageInfo = async function ({ page, event }) {
             res.doorOpenDateTime = null;
           }
         });
-      if (!res.startDateTime) {
-        res.unavailable += " geen start date time";
-      }
+
       return res;
     },
     { months: this.months , event}

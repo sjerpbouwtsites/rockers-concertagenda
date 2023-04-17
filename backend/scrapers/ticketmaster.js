@@ -10,14 +10,14 @@ import {workerNames} from "../mods/worker-config.js";
 // SCRAPER CONFIG
 
 const ticketmasterScraper = new AbstractScraper(makeScraperConfig({
-  maxExecutionTime: 30000,
+  maxExecutionTime: 75003,
   workerData: Object.assign({}, workerData),
   puppeteerConfig: {
     mainPage: {
-      timeout: 60000,
+      timeout: 60007,
     },
     singlePage: {
-      timeout: 30000
+      timeout: 30005
     },
     app: {
       mainPage: {
@@ -28,7 +28,7 @@ const ticketmasterScraper = new AbstractScraper(makeScraperConfig({
       }, 
       singlePage: {
         useCustomScraper: true,
-        requiredProperties: ['venueEventUrl', 'title'], 
+        requiredProperties:['venueEventUrl', 'title', 'price', 'startDateTime']
       }
     }
   }
@@ -37,6 +37,13 @@ const ticketmasterScraper = new AbstractScraper(makeScraperConfig({
 ticketmasterScraper.listenToMasterThread();
 
 ticketmasterScraper.makeBaseEventList = async function() {
+
+  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.name);
+  if (availableBaseEvent){
+    return await this.makeBaseEventListEnd({
+      stopFunctie: null, rawEvents: availableBaseEvent}
+    );    
+  }
 
   const {stopFunctie} = await this.makeBaseEventListStart()
 
@@ -47,7 +54,7 @@ ticketmasterScraper.makeBaseEventList = async function() {
     })
     .then(fetchedData => {
 
-      fs.writeFile(`${fsDirections.temp + '/ticketmaster/raw'}/${workerData.index}.json`, JSON.stringify(fetchedData), "UTF-8", ()=>{})
+      //fs.writeFile(`${fsDirections.temp + '/ticketmaster/raw'}/${workerData.index}.json`, JSON.stringify(fetchedData), "UTF-8", ()=>{})
 
       if (fetchedData?.fault) {
         this.dirtyDebug(fetchedData?.fault, 'TM 249')
@@ -70,14 +77,17 @@ ticketmasterScraper.makeBaseEventList = async function() {
         delete copyEvent._embedded;
         return copyEvent;
       });  
-      
+
+
+
       return res;
     }).catch((response) => {
       _t.handleError(
         response,
         workerData,
         "ticketmaster mainpage fetch",
-        "close-app"
+        "close-thread",
+        response
       );
     });
 
@@ -87,9 +97,11 @@ ticketmasterScraper.makeBaseEventList = async function() {
     );  
   }
 
-  fs.writeFileSync(`${fsDirections.temp + '/ticketmaster/trimmed'}/${workerData.index}.json`, JSON.stringify(rawEvents), "UTF-8")
+  //fs.writeFile(`${fsDirections.temp + '/ticketmaster/trimmed'}/${workerData.index}.json`, JSON.stringify(rawEvents), "UTF-8", ()=>{})
 
   let filteredRawEvents = this.filterForMetal(rawEvents)
+
+  this.saveBaseEventlist(workerData.name, filteredRawEvents)
 
   return await this.makeBaseEventListEnd({
     stopFunctie, rawEvents: filteredRawEvents}
@@ -118,7 +130,7 @@ ticketmasterScraper.getPageInfo = async function ({event}) {
 
   const pageInfo = {
     unavailable: event.unavailable,
-    pageInfo: `<a class='page-info' href='${event.venueEventUrl}'>TM ${event.title}</a>`,
+    pageInfo: `<a class='page-info' href='${event.url}'>TM ${event.title}</a>`,
     errors: [],
   };
 
@@ -146,17 +158,23 @@ ticketmasterScraper.getPageInfo = async function ({event}) {
     pageInfo.location = 'afaslive';
   } else if (event?.venue?.id === 'Z598xZbpZ77ek') {
     pageInfo.location = 'groeneheuvels';
-  }
-  else {
+  } else if (event?.venue?.id === 'Z698xZbpZ171axd'){
+    pageInfo.location = 'liveinhoorn';
+  } else {
     pageInfo.location = event?.venue?.id;
-    this.dirtyDebug(event?.venue, 'Geen herkende ID locatie')
+    pageInfo.errors.push({
+      remarks: `Geen herkende ID locatie ${pageInfo.pageInfo}`,
+      toDebug: {
+        venue: event?.venue,
+      }
+    })
+    
   }
 
   if (workerNames.includes(pageInfo.location)){
     pageInfo.unavailable += ` locatie ${pageInfo.location} niet bij TM.`
     return await this.getPageInfoEnd({pageInfo, stopFunctie})
   }
-
 
   pageInfo.venueEventUrl = event.url;
   pageInfo.title = event.name;
@@ -167,12 +185,13 @@ ticketmasterScraper.getPageInfo = async function ({event}) {
       }) || event?.priceRanges[0]
     pageInfo.price = Object.prototype.hasOwnProperty.call(priceR, 'max') && priceR.max    
   } catch (caughtError) {
-    // TODO moet eerst errors zaak niet laten crashen
-    // pageInfo.errors.push({
-    //   error: new Error('Geen price gevonden'),
-    //   remarks: `Geen prijs ${pageInfo.pageInfo}`,
-    // })    
-
+    pageInfo.errors.push({
+      remarks: `Geen prijs gevonden ${pageInfo.pageInfo}`,
+      debug: {
+        prijzen: event?.priceRanges
+      }
+    })    
+    return await this.getPageInfoEnd({pageInfo, stopFunctie})
   }
 
   if (event.attractions.length > 1) {
@@ -186,6 +205,12 @@ ticketmasterScraper.getPageInfo = async function ({event}) {
     pageInfo.shortTitle = pageInfo.shortTitle.substring(0, pageInfo.shortTitle.length -2)
   }
   pageInfo.image = event.image;
+  if (!pageInfo.image){
+    pageInfo.errors.push({
+      remarks: `image missing ${pageInfo.pageInfo}`
+    })
+  }
+
   pageInfo.rescheduled = event.dates?.status?.code === 'rescheduled';
   if (pageInfo.rescheduled) {
     pageInfo.unavailable += ' rescheduled' 

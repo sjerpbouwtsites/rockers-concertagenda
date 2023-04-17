@@ -58,7 +58,7 @@ export function MakeScraperConfig(obj){
   this.puppeteerConfig.app.mainPage.enforceMusicEventType = obj?.puppeteerConfig?.app?.mainPage?.enforceMusicEventType ?? this.puppeteerConfig.app.mainPage.enforceMusicEventType
   
   this.puppeteerConfig.app.singlePage.useCustomScraper = obj?.puppeteerConfig?.app?.singlePage?.useCustomScraper ?? this.puppeteerConfig.app.singlePage.useCustomScraper
-  this.puppeteerConfig.app.singlePage.requiredProperties = obj?.puppeteerConfig?.app?.singlePage?.enforceMusicEventType ?? this.puppeteerConfig.app.singlePage.enforceMusicEventType  
+  this.puppeteerConfig.app.singlePage.requiredProperties = obj?.puppeteerConfig?.app?.singlePage?.requiredProperties ?? this.puppeteerConfig.app.singlePage.requiredProperties
          
   return this;
   

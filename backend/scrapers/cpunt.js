@@ -18,6 +18,9 @@ const cpuntScraper = new AbstractScraper(makeScraperConfig({
       mainPage: {
         url: "https://www.cpunt.nl/agenda?q=&genre=metalpunkheavy&StartDate=&EndDate=#filter",
         requiredProperties: ['venueEventUrl', 'title']
+      },
+      singlePage: {
+        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
       }
     }
   }
@@ -32,12 +35,19 @@ cpuntScraper.listenToMasterThread();
 
 cpuntScraper.makeBaseEventList = async function () {
 
+  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.name);
+  if (availableBaseEvent){
+    return await this.makeBaseEventListEnd({
+      stopFunctie: null, rawEvents: availableBaseEvent}
+    );    
+  }  
+
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
   if (!await page.waitForSelector("#filter .article-wrapper", {
     timeout: 2000,
   }).catch(caughtError =>{
-    _t.handleError(caughtError, workerData, `Timeout wachten op #filter .article-wrapper Main page`, 'close-thread');
+    _t.handleError(caughtError, workerData, `Timeout wachten op #filter .article-wrapper Main page`, 'close-thread', null);
   })){
     return await this.makeBaseEventListEnd({
       stopFunctie, page, rawEvents: []}
@@ -64,6 +74,11 @@ cpuntScraper.makeBaseEventList = async function () {
         const anchor = rawEvent.querySelector('.absolute-link') ?? null;
         res.venueEventUrl = anchor?.href ?? null;
         res.image = rawEvent?.querySelector(".bg-image-img")?.src ?? null;
+        if (!res.image){
+          res.errors.push({
+            remarks: `image missing ${res.pageInfo}`
+          })
+        }        
         const parpar = rawEvent.parentNode.parentNode;
         res.startDate = parpar.hasAttribute('data-last-date') ? parpar.getAttribute('data-last-date').split('-').reverse().join('-') : null;
         const artInfoText = rawEvent.querySelector('.article-info')?.textContent.toLowerCase() ?? '';
@@ -73,6 +88,8 @@ cpuntScraper.makeBaseEventList = async function () {
     },
     {workerData}
   );
+
+  this.saveBaseEventlist(workerData.family, rawEvents)
 
   return await this.makeBaseEventListEnd({
     stopFunctie, page, rawEvents}
@@ -88,7 +105,7 @@ cpuntScraper.getPageInfo = async function ({ page, event }) {
   if (!await page.waitForSelector("#main .content-blocks", {
     timeout: 7500,
   }).catch(caughtError =>{
-    _t.handleError(caughtError, workerData, `Timeout wachten op #main .content-blocks ${event.title}`, 'close-thread');
+    _t.handleError(caughtError, workerData, `Timeout wachten op #main .content-blocks ${event.title}`, 'close-thread', event);
   })){
     return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
   }
@@ -120,28 +137,26 @@ cpuntScraper.getPageInfo = async function ({ page, event }) {
     const tijdMatches = document.querySelector('.article-times')?.textContent.match(/\d\d:\d\d/g) ?? [];
 
     let startTijd, deurTijd;
-    if (!tijdMatches.length) {
-      res.unavailable = 'geen tijden gevonden';
-    } else if (tijdMatches.length == 1){
+    if (tijdMatches.length == 1){
       startTijd = tijdMatches[0];
-    } else {
+    } else if (tijdMatches.length > 1){
       deurTijd = tijdMatches[0];
       startTijd = tijdMatches[1];
-    }
+    } 
 
     
     if (deurTijd){
       try {
         res.doorOpenDateTime = new Date(`${year}-${month}-${day}T${deurTijd}`).toISOString();
       } catch (caughtError) {
-        res.errors.push({error: caughtError, remarks: `open door date error ${event.title} ${day} ${monthName} ${month} ${year}`})                
+        res.errors.push({error: caughtError, remarks: `open door date error ${event.title} ${day} ${monthName} ${month} ${year}`, toDebug:res,})                
       }
     } 
     if (startTijd) {
       try {
         res.startDateTime = new Date(`${year}-${month}-${day}T${startTijd}`).toISOString();          
       } catch (caughtError) {
-        res.errors.push({error: caughtError, remarks: `startTijd date error ${event.title} ${day} ${monthName} ${month} ${year}`})                
+        res.errors.push({error: caughtError, remarks: `startTijd date error ${event.title} ${day} ${monthName} ${month} ${year}`,toDebug:res,})                
       }
     } 
 

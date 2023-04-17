@@ -8,6 +8,8 @@ import fs from "fs";
 import EventsList from "../../mods/events-list.js";
 import MusicEvent from "../../mods/music-event.js";
 import getVenueMonths from "../../mods/months.js";
+import ErrorWrapper from "../../mods/error-wrapper.js";
+
 
 /**
  * @method eventGenerator<Generator>
@@ -103,9 +105,57 @@ export default class AbstractScraper {
     // overige catch in om init heen
   }
 
+  async scrapeDie(){
+    this.dirtyTalk('DIEING!')
+    await this.closeBrowser();
+    await this.saveEvents();
+    await this.announceToMonitorDone()
+    this.dirtyTalk('DEAD')
+    await _t.waitFor(50);
+    process.exit()
+  }
+
   // step 1
   async makeBaseEventList() {
     throw Error("abstract method used thx ");
+  }
+
+  baseEventDate(){
+    const ddd = new Date();
+    const thisMonth =((new Date()).getMonth() + 1).toString().padStart(2,'0');
+    const thisDay =((new Date()).getDate()).toString().padStart(2,'0');
+    return `${ddd.getFullYear()}${thisMonth}${thisDay}`;    
+  }
+
+  async checkBaseEventAvailable(searching){
+    const baseEventFiles = fs.readdirSync(fsDirections.baseEventlists);
+    const theseBaseEvents = baseEventFiles.filter(filenames => filenames.includes(searching));
+    if (!theseBaseEvents || (theseBaseEvents.length < 1)) {
+      return false;
+    }
+    const thisBaseEvent = theseBaseEvents[0];
+    // 20231201
+    const baseEventDate = thisBaseEvent.split('T')[1].split('.json')[0];
+    const refDate = this.baseEventDate();
+    if (refDate !== baseEventDate) {
+      return false;
+    }
+    return JSON.parse(fs.readFileSync(`${fsDirections.baseEventlists}/${thisBaseEvent}`));
+  }
+
+  async saveBaseEventlist(key, data){
+    //verwijder oude
+    const baseEventFiles = fs.readdirSync(fsDirections.baseEventlists);
+    const theseBaseEvents = baseEventFiles.filter(filenames => filenames.includes(key));
+    if (theseBaseEvents && theseBaseEvents.length) {
+      theseBaseEvents.forEach(file => {
+        fs.unlinkSync(`${fsDirections.baseEventlists}/${file}`);
+      })
+    }    
+    //sla nieuwe op
+    const refDate = this.baseEventDate();    
+    const fileName = `${fsDirections.baseEventlists}/${key}T${refDate}.json`;
+    fs.writeFileSync(fileName, JSON.stringify(data), 'utf8')
   }
 
   /**
@@ -116,13 +166,15 @@ export default class AbstractScraper {
    */
   async makeBaseEventListStart(){
 
-
     // @TODO 3 stopfuncties maken: 1 base events; 1 single; 1 totaal.
     const stopFunctie = setTimeout(() => {
-      _t.handleError(
-        new Error(`makeBaseEvent overtijd. Max: ${this.puppeteerConfig.mainPage.timeout}`), 
-        this.workerData
-      );
+      _t.wrappedHandleError(new ErrorWrapper({
+        error: new Error('Timeout baseEvent'),
+        remarks: `baseEvent ${workerData.name} overtijd. Max: ${this.puppeteerConfig.mainPage.timeout}`,
+        workerData,
+        errorLevel: 'close-thread',
+      }
+      ))
     }, this.puppeteerConfig.mainPage.timeout);
     
   
@@ -141,6 +193,15 @@ export default class AbstractScraper {
     }
     const page = await this.browser.newPage();
     await page.goto(this.puppeteerConfig.app.mainPage.url, this.puppeteerConfig.mainPage); 
+
+    // zet ErrorWrapper class in puppeteer document.
+    await page.evaluate(({ErrorWrapperString}) => {
+      const newScriptContent = ErrorWrapperString;
+      const scriptTag = document.createElement('script');
+      scriptTag.id = 'rockagenda-extra-code';
+      scriptTag.innerHTML = newScriptContent;
+      document.body.appendChild(scriptTag);
+    }, {ErrorWrapperString: ErrorWrapper.toString()});
     return {
       stopFunctie,
       page,
@@ -163,7 +224,9 @@ export default class AbstractScraper {
 
     this.isForced && this.dirtyLog(rawEvents)
 
-    clearTimeout(stopFunctie);
+    if (stopFunctie) {
+      clearTimeout(stopFunctie);
+    }
     
     page && !page.isClosed() && page.close();
 
@@ -179,16 +242,14 @@ export default class AbstractScraper {
     rawEvents.forEach((event) => {
       const errorVerz = Object.prototype.hasOwnProperty.call(event, 'errors') 
         ? event.errors 
-        : Object.prototype.hasOwnProperty.call(event, 'errors') 
-          ? event.errors
-          : [];
-      errorVerz.forEach((errorWrappers) => {
-        _t.handleError(
-          errorWrappers?.error,
-          this.workerData,
-          errorWrappers?.remarks,
-          errorWrappers?.errorLevel, //TODO
-        );
+        : [];
+      errorVerz.forEach((errorData) => {
+        errorData.workerData = workerData;
+        if (!errorData.error){
+          errorData.error = new Error(errorData.remarks);
+        }
+        const wrappedError = new ErrorWrapper(errorData);
+        _t.wrappedHandleError(wrappedError);
       });
     });
 
@@ -221,13 +282,15 @@ export default class AbstractScraper {
    */
   basicMusicEventsFilter = (musicEvent) => {
 
+    let missingProperties = []
     const meetsRequiredProperties = this.puppeteerConfig.app.mainPage.requiredProperties.reduce((prev, next)=>{
+      if (!musicEvent[next]){
+        missingProperties.push(next)
+      }
       return prev && musicEvent[next]
     }, true)        
     if (!meetsRequiredProperties) {
-      parentPort.postMessage(this.qwm.messageRoll(`
-      <a href='${musicEvent.venueEventUrl}'>${musicEvent.title}</a> ongeldig.
-    `));
+      musicEvent.corrupted = missingProperties.join(',')
     }
    
     const t = musicEvent?.title ?? "";
@@ -334,7 +397,11 @@ export default class AbstractScraper {
       _t.handleError(
         error,
         workerData,
-        `eventAsyncCheck faal met ${generatedEvent?.value?.title}`
+        `eventAsyncCheck faal met ${generatedEvent?.value?.title}`,
+        'close-thread',
+        {
+          generatedEvent,          
+        }
       );
     }
   }
@@ -457,10 +524,10 @@ export default class AbstractScraper {
       event: singleEvent,
     });
 
-    if (!pageInfo || !!pageInfo?.unavailable) {
+    if (!pageInfo || !!pageInfo?.unavailable || !!pageInfo?.corrupted) {
       parentPort.postMessage(
         this.qwm.messageRoll(
-          `SKIP ${pageInfo.pageInfo} ${pageInfo?.unavailable ?? ""}`
+          `SKIP ${pageInfo.pageInfo} ${pageInfo?.unavailable ?? ""} ${pageInfo?.corrupted ?? ""}`
         )
       );
       return useableEventsList.length
@@ -479,6 +546,20 @@ export default class AbstractScraper {
 
     // samenvoegen & naar EventsList sturen
     singleEvent.merge(pageInfo);
+
+    // check op properties vanuit single page
+    let missingProperties = []
+    const meetsRequiredProperties = this.puppeteerConfig.app?.singlePage?.requiredProperties?.reduce((prev, next)=>{
+      if (!singleEvent[next]){
+        missingProperties.push(next)
+      }
+      return prev && singleEvent[next]
+    }, true) ?? true
+    if (!meetsRequiredProperties) {
+      singleEvent.corrupted += missingProperties.join(',')
+    }
+
+    // TODO 
     singleEvent.isValid
       ? singleEvent.register()
       : singleEvent.registerINVALID(this.workerData);
@@ -496,14 +577,17 @@ export default class AbstractScraper {
   }
 
   writeLongTextHTML(longTextHTML) {
+    let uuid = crypto.randomUUID();
     try {
       if (!longTextHTML) return null;
-      let uuid = crypto.randomUUID();
       const longTextPath = `${fsDirections.publicTexts}/${uuid}.html`;
       fs.writeFile(longTextPath, longTextHTML, "utf-8", () => {});
       return longTextPath;
     } catch (err) {
-      _t.handleError(err, workerData, `write long text fail`);
+      _t.handleError(err, workerData, `write long text fail`, 'notice', {
+        path: `${fsDirections.publicTexts}/${uuid}.html`,
+        text: longTextHTML
+      });
     }
   }
 
@@ -520,12 +604,16 @@ export default class AbstractScraper {
    * @returns {timeout} stopFunctie
    * @memberof AbstractScraper
    */
-  async getPageInfoStart(){
+  async getPageInfoStart(event){
     const stopFunctie = setTimeout(() => {
-      throw new Error(
-        `getPageInfo is de max tijd voor zn functie ${this.maxExecutionTime} voorbij `
-      );
-    }, this.maxExecutionTime);
+      _t.wrappedHandleError(new ErrorWrapper({
+        error: new Error('Timeout baseEvent'),
+        remarks: `<a href='${event?.venueEventUrl}' class='page-info'>getPageInfo ${workerData.name} overtijd</a>.\nMax: ${this.puppeteerConfig.singlePage.timeout}`,
+        workerData,
+        errorLevel: 'notice',
+      }
+      ))
+    }, this.puppeteerConfig.singlePage.timeout);
     return {
       stopFunctie
     }
@@ -544,13 +632,13 @@ export default class AbstractScraper {
 
     this.isForced && this.dirtyLog(pageInfo)
     
-    pageInfo.errors.forEach((errorWrapper) => {
-      _t.handleError(
-        errorWrapper.error,
-        workerData,
-        errorWrapper?.remarks ?? null,
-        errorWrapper?.errorLevel
-      );
+    pageInfo.errors.forEach((errorData) => {
+      errorData.workerData = workerData;
+      if (!errorData.error){
+        errorData.error = new Error(errorData.remarks);
+      }
+      const wrappedError = new ErrorWrapper(errorData);
+      _t.wrappedHandleError(wrappedError);
     });
   
     if (pageInfo.longTextHTML) {
@@ -562,7 +650,7 @@ export default class AbstractScraper {
 
     if (!pageInfo) {
       return {
-        unavailable: `Geen resultaat van pageInfo`, //TODO samen met musicEvent.unavailable
+        corrupted: `Geen resultaat van pageInfo`, //TODO samen met musicEvent.unavailable
       };
     }
   
@@ -657,7 +745,9 @@ export default class AbstractScraper {
     _t.handleError(
       catchError,
       workerData,
-      `outer catch scrape ${workerData.family}`
+      `outer catch scrape ${workerData.family}`,
+      'close-thread',
+      null
     );
   }
 
@@ -672,12 +762,23 @@ export default class AbstractScraper {
     try {
       const page = await this.browser.newPage();
       await page.goto(url, this.puppeteerConfig.singlePage);
+      
+      // zet ErrorWrapper class in puppeteer document.
+      await page.evaluate(({ErrorWrapperString}) => {
+        const newScriptContent = ErrorWrapperString;
+        const scriptTag = document.createElement('script');
+        scriptTag.id = 'rockagenda-extra-code';
+        scriptTag.innerHTML = newScriptContent;
+        document.body.appendChild(scriptTag);
+      }, {ErrorWrapperString: ErrorWrapper.toString()});      
       return page;
     } catch (error) {
       _t.handleError(
         error,
         workerData,
-        `Mislukken aanmaken <a href='${url}'>single pagina</a> wss duurt te lang`
+        `Mislukken aanmaken <a href='${url}'>single pagina</a> wss duurt te lang`,
+        'notice',
+        null,
       );
     }
     
@@ -697,6 +798,9 @@ export default class AbstractScraper {
       if (pm?.type === "process" && pm?.subtype === "command-start") {
         this.scrapeInit(pm?.messageData).catch(this.handleOuterScrapeCatch);
       }
+      if (pm?.type === "process" && pm?.subtype === "command-die") {
+        this.scrapeDie(pm?.messageData).catch(this.handleOuterScrapeCatch);
+      }      
     });
   }
 }

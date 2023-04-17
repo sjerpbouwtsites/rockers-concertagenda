@@ -17,6 +17,9 @@ const gebrdenobelScraper = new AbstractScraper(makeScraperConfig({
       mainPage: {
         url: "https://gebrdenobel.nl/programma/",
         requiredProperties: ['venueEventUrl', 'title']
+      },
+      singlePage: {
+        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
       }
     }
   }
@@ -27,6 +30,13 @@ gebrdenobelScraper.listenToMasterThread();
 // MAKE BASE EVENTS
 
 gebrdenobelScraper.makeBaseEventList = async function () {
+
+  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.name);
+  if (availableBaseEvent){
+    return await this.makeBaseEventListEnd({
+      stopFunctie: null, rawEvents: availableBaseEvent}
+    );    
+  }  
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
@@ -58,6 +68,8 @@ gebrdenobelScraper.makeBaseEventList = async function () {
         return res;
       });
   }, {workerData});
+
+  this.saveBaseEventlist(workerData.family, rawEvents)
 
   return await this.makeBaseEventListEnd({
     stopFunctie, page, rawEvents}
@@ -130,6 +142,11 @@ gebrdenobelScraper.getPageInfo = async function ({ page, event }) {
       res.longTextHTML = 
         document.querySelector(".content .contentBlocks")?.innerHTML ?? '';
       res.image = document.querySelector(".hero img")?.src ?? null;
+      if (!res.image){
+        res.errors.push({
+          remarks: `image missing ${res.pageInfo}`
+        })
+      }      
 
       return res;
     },

@@ -1,21 +1,27 @@
 import { workerData } from "worker_threads";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
+import ErrorWrapper from "../mods/error-wrapper.js";
+import * as _t from "../mods/tools.js";
+
 // SCRAPER CONFIG
 
 const patronaatScraper = new AbstractScraper(makeScraperConfig({
   workerData: Object.assign({}, workerData),
   puppeteerConfig: {
     mainPage: {
-      timeout: 20000,
+      timeout: 30034,
     },
     singlePage: {
-      timeout: 15000,
+      timeout: 20036,
     },
     app: {
       mainPage: {
         url: "https://patronaat.nl/programma/?type=event&s=&eventtype%5B%5D=157",
         requiredProperties: ['venueEventUrl', 'title']
+      },
+      singlePage: {
+        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
       }
     }
   },
@@ -26,6 +32,13 @@ patronaatScraper.listenToMasterThread();
 // MAKE BASE EVENTS
 
 patronaatScraper.makeBaseEventList = async function () {
+
+  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.name);
+  if (availableBaseEvent){
+    return await this.makeBaseEventListEnd({
+      stopFunctie: null, rawEvents: availableBaseEvent}
+    );    
+  }
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
@@ -42,6 +55,11 @@ patronaatScraper.makeBaseEventList = async function () {
         };
         res.image =
           eventEl.querySelector("[class^='event__image'] img")?.src ?? null;
+        if (!res.image){
+          res.errors.push({
+            remarks: `image missing ${res.pageInfo}`
+          })
+        }          
         res.venueEventUrl = eventEl.querySelector("a[href]")?.href ?? null;
         res.shortText = eventEl
           .querySelector(".event__subtitle")
@@ -50,6 +68,8 @@ patronaatScraper.makeBaseEventList = async function () {
         return res;
       });
   }, {workerData});
+
+  this.saveBaseEventlist(workerData.family, rawEvents)
 
   return await this.makeBaseEventListEnd({
     stopFunctie, page, rawEvents}
@@ -103,6 +123,13 @@ patronaatScraper.getPageInfo = async function ({ page, event }) {
 
         if (!res.startTime) {
           res.startTime = res.doorOpenTime;
+        } 
+        if (!res.startTime){
+          res.errors.push({
+            remarks: `geen startTime ${res.pageInfo}`,
+            toDebug: event
+          })
+          return res;          
         }
 
         if (res.doorOpenTime) {
@@ -120,24 +147,36 @@ patronaatScraper.getPageInfo = async function ({ page, event }) {
             `${res.startDatum}T${res.endTime}:00`
           ).toISOString();
         }
+      } else {
+        res.errors.push({
+          remarks: `geen startDate ${res.pageInfo}`,
+          toDebug: event,res
+        })
+        return res;        
       }
     } catch (caughtError) { //TODO opsplitsen
       res.errors.push({
         error: caughtError,
-        remarks: `Datum error patronaat.`,
+        remarks: `Datum error patronaat ${res.pageInfo}.`,
+        toDebug: {res, event}
       });
     }
 
-    if (!res.startDateTime) {
-      res.unavailable += "Geen starttijd gevonden.";
-    }
+    res.longTextHTML = document.querySelector(".event__content")?.innerHTML ?? null;
 
-    res.longTextHTML = document.querySelector(".event__content")?.innerHTML;
-    if (res.unavailable !== "") {
-      res.unavailable = `${res.unavailable}\n${res.pageInfo}`; //TODO naar alles doorzetten
-    }
     return res;
-  }, {months: this.months, event});
+  }, {months: this.months, event}).catch(caughtError =>{
+    _t.wrappedHandleError(new ErrorWrapper({
+      error: caughtError,
+      remarks: `page Info catch patronaat`,
+      errorLevel: 'notice',
+      workerData: workerData,
+      toDebug: {
+        event, 
+        pageInfo
+      }
+    }))
+  });
 
   return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
   

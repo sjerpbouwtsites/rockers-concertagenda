@@ -5,20 +5,23 @@ import makeScraperConfig from "./gedeeld/scraper-config.js";
 // SCRAPER CONFIG
 
 const bibelotScraper = new AbstractScraper(makeScraperConfig({
-  maxExecutionTime: 30000,
+  maxExecutionTime: 30001,
   workerData: Object.assign({}, workerData),
   puppeteerConfig: {
     mainPage: {
-      timeout: 15000,
+      timeout: 15002,
     },
     singlePage: {
-      timeout: 20000
+      timeout: 20003
     },
     app: {
       mainPage: {
         url: "https://bibelot.net/",
         requiredProperties: ['venueEventUrl', 'title']
-      }
+      },
+      singlePage: {
+        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
+      }      
     }
   
   }
@@ -29,6 +32,13 @@ bibelotScraper.listenToMasterThread();
 // MAKE BASE EVENTS
 
 bibelotScraper.makeBaseEventList = async function () {
+
+  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.name);
+  if (availableBaseEvent){
+    return await this.makeBaseEventListEnd({
+      stopFunctie: null, rawEvents: availableBaseEvent}
+    );    
+  }  
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
@@ -58,6 +68,8 @@ bibelotScraper.makeBaseEventList = async function () {
     });
   }, {workerData});
 
+  this.saveBaseEventlist(workerData.family, rawEvents)
+
   return await this.makeBaseEventListEnd({
     stopFunctie, page, rawEvents}
   );
@@ -68,7 +80,7 @@ bibelotScraper.makeBaseEventList = async function () {
 
 bibelotScraper.getPageInfo = async function ({ page, event }) {
   
-  const {stopFunctie} =  await this.getPageInfoStart()
+  const {stopFunctie} =  await this.getPageInfoStart(event)
   
   const pageInfo = await page.evaluate(
     ({ months , event}) => {
@@ -78,25 +90,33 @@ bibelotScraper.getPageInfo = async function ({ page, event }) {
         errors: [],
       };
 
-      let baseDateM;
+      let baseDateM, ttt;
       try {
-        baseDateM = document
+        ttt = document
           .querySelector(".main-column h3")
-          ?.textContent.toLowerCase()
-          .match(/(\d+)\s(\w+)\s(\d{4})/);
+          ?.textContent.toLowerCase();
+        baseDateM = ttt.match(/(\d+)\s(\w+)\s(\d{4})/);
       } catch (errorCaught) {
         res.errors.push({
           error: errorCaught,
           remarks: `base date match ${res.pageInfo}`,
+          errorLevel: 'notice',
+          toDebug: {
+            text: ttt
+          }
         });
-        res.unavailable += " geen base date match";
         return res;
       }
 
       if (!Array.isArray(baseDateM) || baseDateM.length < 4) {
-        res.unavailable = `geen datum match uit ${
-          document.querySelector(".main-column h3")?.textContent
-        }`;
+        res.errors.push({
+          remarks: `base date match faal2 ${res.pageInfo}`,
+          toDebug:{
+            res,
+            baseDateM
+          }
+        });        
+        return res;
       } else {
         res.baseDate = `${baseDateM[3]}-${
           months[baseDateM[2]]
@@ -104,7 +124,13 @@ bibelotScraper.getPageInfo = async function ({ page, event }) {
       }
 
       if (!res.baseDate) {
-        res.unavailable += " geen base date";
+        res.errors.push({
+          remarks: `base date match faal3 ${res.pageInfo}`,
+          toDebug:{
+            res,
+            baseDateM
+          }
+        }); 
         return res;
       }
 
@@ -127,10 +153,9 @@ bibelotScraper.getPageInfo = async function ({ page, event }) {
       } catch (errorCaught) {
         res.errors.push({
           error: errorCaught,
-          remarks: `matching van bibelotspecifieke woorden omtrent open/deur/dicht ${res.pageInfo}`
-          // debugger 
+          remarks: `matching van bibelotspecifieke woorden omtrent open/deur/dicht ${res.pageInfo}`,
+          toDebug: res,
         })
-        res.unavailable += `tijd matches errors in ${res.eventMetaColomText}`;
         return res;
       }
 
@@ -144,6 +169,7 @@ bibelotScraper.getPageInfo = async function ({ page, event }) {
         res.errors.push({
           error: errorCaught,
           remarks: `doortime match met basedate ${res.pageInfo}`,
+          toDebug: res
         });
       }
       try {
@@ -162,6 +188,7 @@ bibelotScraper.getPageInfo = async function ({ page, event }) {
         res.errors.push({
           error: errorCaught,
           remarks: `startTime match met basedate ${res.pageInfo}`,
+          toDebug: res          
         });
       }
       try {
@@ -174,12 +201,8 @@ bibelotScraper.getPageInfo = async function ({ page, event }) {
         res.errors.push({
           error: errorCaught,
           remarks: `endtime match met basedate ${res.pageInfo}`,
+          toDebug: res          
         });
-      }
-
-      if (!res.startDateTime) {
-        res.unavailable = "geen start date time";
-        return res;
       }
 
       const verkoopElAr = Array.from(
@@ -198,9 +221,20 @@ bibelotScraper.getPageInfo = async function ({ page, event }) {
       ;
       const imageMatch = document
         .querySelector(".achtergrond-afbeelding")
-        ?.style.backgroundImage.match(/https.*.png|https.*.jpg/);
+        ?.style.backgroundImage.match(/https.*.png|https.*.jpg|https.*.jpeg/);
       if (imageMatch && imageMatch.length) {
         res.image = imageMatch[0];
+      }
+
+      if (!res.image){
+        res.errors.push({
+          remarks: `image niet gevonden ${res.pageInfo}`,
+          toDebug:{
+            imageStyle: document
+              .querySelector(".achtergrond-afbeelding")
+              ?.style
+          }
+        })
       }
 
       return res;

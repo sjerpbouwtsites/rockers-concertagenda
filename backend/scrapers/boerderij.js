@@ -6,14 +6,14 @@ import makeScraperConfig from "./gedeeld/scraper-config.js";
 // SCRAPER CONFIG
 
 const boerderijScraper = new AbstractScraper(makeScraperConfig({
-  maxExecutionTime: 30000,
+  maxExecutionTime: 30004,
   workerData: Object.assign({}, workerData),
   puppeteerConfig: {
     mainPage: {
-      timeout: 30000,
+      timeout: 30005,
     },
     singlePage: {
-      timeout: 20000
+      timeout: 20006
     },
     app: {
       mainPage: {
@@ -22,6 +22,9 @@ const boerderijScraper = new AbstractScraper(makeScraperConfig({
           workerData.index * 15
         }&lang_id=1&rooms=&month=&year=`,
         requiredProperties: ['venueEventUrl', 'title']
+      },
+      singlePage: {
+        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
       }
     }
   }
@@ -83,8 +86,9 @@ boerderijScraper.getPageInfo = async function ({ event }) {
       res.errors.push({
         error:caughtError,
         remarks: `ajax ${url} faal ${res.pageInfo}`,
+        errorLevel: 'close-thread',
+        toDebug: event,
       });
-      res.unavailable += 'singlePage gecatched'
     });
 
   if (!ajaxRes) {
@@ -103,18 +107,25 @@ boerderijScraper.getPageInfo = async function ({ event }) {
     res.errors.push({
       error: catchedError,
       remarks: `Mislukt iframe te knutselen met video ${res.pageInfo}`,
+      toDebug: ajaxRes
     });
+  }
+
+  if (!event.image){
+    res.errors.push({
+      remarks: `image missing ${res.pageInfo}`
+    })
   }
 
   res.boerderijID = ajaxRes.id;
 
   try {
-    
     res.priceTextcontent = `${ajaxRes?.entrance_price ?? ''} ${ajaxRes?.ticket_price ?? ''} `
   } catch (catchedError) {
     res.errors.push({
       error: catchedError,
       remarks: `prijsbewerking faal ${res.pageInfo}`,
+      toDebug:res,
     });
   }
 
@@ -126,8 +137,8 @@ boerderijScraper.getPageInfo = async function ({ event }) {
     res.errors.push({
       error: catchedError,
       remarks: `startDateTime samenvoeging ${res.pageInfo}`,
+      toDebug:res,
     });
-    res.unavailable += " geen startDateTime";
   }
   try {
     res.doorOpenDateTime = new Date(
@@ -137,6 +148,7 @@ boerderijScraper.getPageInfo = async function ({ event }) {
     res.errors.push({
       error: catchedError,
       remarks: `doorOpenDateTime samenvoeging ${res.pageInfo}`,
+      toDebug:res,
     });
   }
 

@@ -5,19 +5,22 @@ import makeScraperConfig from "./gedeeld/scraper-config.js";
 // SCRAPER CONFIG
 
 const dehellingScraper = new AbstractScraper(makeScraperConfig({
-  maxExecutionTime: 30000,
+  maxExecutionTime: 30010,
   workerData: Object.assign({}, workerData),
   puppeteerConfig: {
     mainPage: {
-      timeout: 20000,
+      timeout: 20011,
     },
     singlePage: {
-      timeout: 10000
+      timeout: 10012
     },
     app: {
       mainPage: {
         url: "https://dehelling.nl/agenda/?zoeken=&genre%5B%5D=heavy",
         requiredProperties: ['venueEventUrl', 'title', 'startDateTime']
+      },
+      singlePage: {
+        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
       }
     }
   
@@ -29,6 +32,13 @@ dehellingScraper.listenToMasterThread();
 // MAKE BASE EVENTS
 
 dehellingScraper.makeBaseEventList = async function () { 
+
+  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.name);
+  if (availableBaseEvent){
+    return await this.makeBaseEventListEnd({
+      stopFunctie: null, rawEvents: availableBaseEvent}
+    );    
+  }  
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
@@ -52,9 +62,14 @@ dehellingScraper.makeBaseEventList = async function () {
       try {
         res.endDateTime = new Date(schemaData.endDate.replace(' ','T')).toISOString();
       } catch (caughtError) {
-        res.errors.push({error: caughtError, remarks: `end date time datestring omzetting ${title}`})        
+        res.errors.push({error: caughtError, remarks: `end date time datestring omzetting ${title} ${res.pageInfo}`,toDebug:res})        
       }
       res.image = schemaData?.image ?? null;
+      if (!res.image){
+        res.errors.push({
+          remarks: `image missing ${res.pageInfo}`
+        })
+      }
       let startDateTimeString;
       try {
         const metaEl = eventEl.querySelector('.c-event-card__meta') ?? null;
@@ -69,7 +84,7 @@ dehellingScraper.makeBaseEventList = async function () {
           }
         }
       } catch (caughtError) {
-        res.errors.push({error: caughtError, remarks: `start date time eruit filteren error \n ${res.endDateTime} \n ${startDateTimeString} ${title}`})        
+        res.errors.push({error: caughtError, remarks: `start date time eruit filteren error \n ${res.endDateTime} \n ${startDateTimeString} ${title} ${res.pageInfo}`,toDebug:res})        
       }
 
       if (!res.startTime && res.endDateTime) {
@@ -82,6 +97,8 @@ dehellingScraper.makeBaseEventList = async function () {
 
       return res;
     })},{workerData});
+
+  this.saveBaseEventlist(workerData.family, rawEvents)    
 
   return await this.makeBaseEventListEnd({
     stopFunctie, page, rawEvents}

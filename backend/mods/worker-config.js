@@ -59,7 +59,7 @@ export const workerConfig = {
     workerConcurrent: 1,
   },
   ticketmaster :{
-    workerCount: 5,CPUReq: 'high'
+    workerCount: 5,CPUReq: 'high', workerConcurrent: 1
   },  
 }
 

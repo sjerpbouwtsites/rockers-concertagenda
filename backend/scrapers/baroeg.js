@@ -1,11 +1,12 @@
 import { workerData } from "worker_threads";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
+import ErrorWrapper from "../mods/error-wrapper.js";
 
 // SCRAPER CONFIG
 
 const baroegScraper = new AbstractScraper(makeScraperConfig({
-  maxExecutionTime: 60000,
+  maxExecutionTime: 60047,
   workerData: Object.assign({}, workerData),
   puppeteerConfig: {
     mainPage: {
@@ -18,10 +19,14 @@ const baroegScraper = new AbstractScraper(makeScraperConfig({
       mainPage: {
         url: "  https://baroeg.nl/agenda-categorieen/",
         requiredProperties: ['venueEventUrl', 'title', 'startDateTime']
-      }
+      },
+      singlePage: {
+        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
+      }      
     }    
   }
 }));
+
 
 baroegScraper.listenToMasterThread();
 
@@ -29,9 +34,17 @@ baroegScraper.listenToMasterThread();
 
 baroegScraper.makeBaseEventList = async function () {
 
+  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.name);
+  if (availableBaseEvent){
+    return await this.makeBaseEventListEnd({
+      stopFunctie: null, rawEvents: availableBaseEvent}
+    );    
+  }  
+
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
   const rawEvents = await page.evaluate(({workerData}) => {
+
     const reedsGevondenEvents = [];
     const toegestaneCategorieen = `death metal,doom,hardcore,new wave,punk,hardcore punk,heavy rock 'n roll,symphonic metal,thrash,metalcore,black,crossover,grindcore,industrial,noise,post-punk,heavy metal,power metal,heavy psych,metal,surfpunkabilly`;
     return Array
@@ -71,23 +84,43 @@ baroegScraper.makeBaseEventList = async function () {
         res.title = title;
         res.shortText = eventEl.querySelector('.wp_theatre_prod_excerpt')?.textContent.trim() ?? null;
         res.shortText += categorieTeksten;
-        res.image =eventEl.querySelector('.media .attachment-thumbnail')?.src.replace(/\d\d\dx\d\d\d/, '300x300') ?? null; //TODO opzoeken wat ideale maten zijn
+        res.image = eventEl.querySelector('.media .attachment-thumbnail')?.src.replace(/\d\d\dx\d\d\d/, '300x300') ?? null; //TODO opzoeken wat ideale maten zijn
+        if (!res.image){
+          res.errors.push({
+            remarks: `geen image ${res.pageInfo}`,
+            toDebug: {
+              srcWaarinGezocht: eventEl.querySelector('.media .attachment-thumbnail')?.src
+            }
+          })
+        }
         res.venueEventUrl =venueEventUrl;
         
         res.startDate = eventEl.querySelector('.wp_theatre_event_startdate')?.textContent.trim().substring(3,26).split('/').reverse() ?? null;
         if (!res.startDate) {
-          res.unavailable += 'geen startdate gevonden';
-          // debugger
+          res.errors.push({
+            remarks: `geen startdate`,
+            toDebug: {
+              startDateText: eventEl.querySelector('.wp_theatre_event_startdate')?.textContent,
+              res
+            }
+          })
+          res.unavailable += 'geen startdate'
           return res;
         }
+        res.testError = new ErrorWrapper({error: new Error('fdfd'), remarks: 'hallo', workerData, errorLevel: 'notice', toDebug: ['1', '2']})
         const startYear = res.startDate[0].padStart(4, '20');
         const startMonth = res.startDate[1].padStart(2, '0');
         const startDay = res.startDate[2].padStart(2, '0');
         res.startDate = `${startYear}-${startMonth}-${startDay}`;
         res.startTime = eventEl.querySelector('.wp_theatre_event_starttime')?.textContent ?? null;
         if (!res.startTime){
-          res.unavailable += 'geen startDateTime etc gevonden';
-          // debugger
+          res.errors.push({
+            remarks: 'geen startdatetime',
+            toDebug: {
+              startDateText: eventEl.querySelector('.wp_theatre_event_starttime')?.textContent,
+              res
+            }
+          })
           return res;   
         }
         try{
@@ -96,12 +129,14 @@ baroegScraper.makeBaseEventList = async function () {
           res.errors.push({
             error: errorCaught,
             remarks: `date omzetting error ${res.pageInfo}`,
-            // TODO debugger ${error.message}<br>${res.pageInfo}<br>${res.startDateTime}
-          });
+            toDebug: res
+          })
         }
         return res;
       })
-  }, {workerData});
+  }, {workerData})
+
+  this.saveBaseEventlist(workerData.family, rawEvents)
 
   return await this.makeBaseEventListEnd({
     stopFunctie, page, rawEvents}
@@ -148,5 +183,4 @@ baroegScraper.getPageInfo = async function ({ page, event }) {
   return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
   
 };
-
 

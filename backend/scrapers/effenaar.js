@@ -8,15 +8,18 @@ const effenaarScraper = new AbstractScraper(makeScraperConfig({
   workerData: Object.assign({}, workerData),
   puppeteerConfig: {
     mainPage: {
-      timeout: 30000,
+      timeout: 30013,
     },
     singlePage: {
-      timeout: 15000
+      timeout: 15014
     },
     app: {
       mainPage: {
         url: 'https://www.effenaar.nl/agenda?genres.title=heavy',
         requiredProperties: ['venueEventUrl', 'title']
+      },
+      singlePage: {
+        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
       }
     }
   }
@@ -27,6 +30,13 @@ effenaarScraper.listenToMasterThread();
 // MAKE BASE EVENTS
 
 effenaarScraper.makeBaseEventList = async function () {
+
+  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.name);
+  if (availableBaseEvent){
+    return await this.makeBaseEventListEnd({
+      stopFunctie: null, rawEvents: availableBaseEvent}
+    );    
+  }  
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
@@ -53,6 +63,8 @@ effenaarScraper.makeBaseEventList = async function () {
     {workerData}
   );
 
+  this.saveBaseEventlist(workerData.family, rawEvents)
+
   return await this.makeBaseEventListEnd({
     stopFunctie, page, rawEvents}
   );
@@ -74,6 +86,11 @@ effenaarScraper.getPageInfo = async function ({ page, event }) {
       errors: [],
     };
     res.image = document.querySelector(".header-image img")?.src ?? null;
+    if (!res.image){
+      res.errors.push({
+        remarks: `image missing ${res.pageInfo}`
+      })
+    }  
     res.priceTextcontent = 
       document.querySelector(".tickets-btn")?.textContent ?? '';
 
@@ -81,7 +98,10 @@ effenaarScraper.getPageInfo = async function ({ page, event }) {
       const dateText =
         document.querySelector(".header-meta-date")?.textContent.trim() ?? "";
       if (!dateText) {
-        res.unavailable += ' geen datumtext';
+        res.errors.push({
+          remarks: `geen datumtext ${res.pageInfo}`,
+          toDebug: res
+        })
         return res;
       }
       const [, dayNumber, monthName, year] = dateText.match(
@@ -94,8 +114,9 @@ effenaarScraper.getPageInfo = async function ({ page, event }) {
       res.errors.push({
         error: caughtError,
         remarks: `datumtext naar startDatum faal ${res.pageInfo}`,
+        toDebug: {event, res}
       });
-      res.unavailable += "datum omzetting faal";
+      return res;
     }
 
     let startTimeAr = [],
@@ -117,9 +138,13 @@ effenaarScraper.getPageInfo = async function ({ page, event }) {
       res.errors.push({
         error: caughtError,
         remarks: `date startDateTime etc faal ${res.pageInfo}`,
-        //TODO debugger  ${startTimeAr.join( ""          )} ${doorTimeAr.join("")}      
+        toDebug: {
+          ars: `${startTimeAr.join()} ${doorTimeAr.join("")}`,
+          res, event
+        }
+        
       });
-      res.unavailable += "Geen tijd gevonden";
+      return res;
     }
 
     res.startDateTimeString = `${res.startDate}T${res.startTime}:00`;
@@ -141,7 +166,10 @@ effenaarScraper.getPageInfo = async function ({ page, event }) {
       res.errors.push({
         error: caughtError,
         remarks: `omzetten naar Date iso gaat fout ${res.pageInfo}`,
-        //TODO debugger ${startTimeAr.join(          ""          )} ${doorTimeAr.join("")}
+        toDebug: {
+          ars: `${startTimeAr.join("")} ${doorTimeAr.join("")}`,
+          res, event
+        }
       });
     }
 

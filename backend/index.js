@@ -76,7 +76,7 @@ async function startWorker(workerConfig) {
 
   const thisWorker = new RockWorker(thisConfig, shellArguments);
   thisWorker.postMessage(WorkerMessage.quick("process", "command-start"));
-  WorkerStatus.registerWorker(thisConfig);
+  WorkerStatus.registerWorker(thisWorker);
   addWorkerMessageHandler(thisWorker);
   return recursiveStartWorkers(workerConfig);
 }

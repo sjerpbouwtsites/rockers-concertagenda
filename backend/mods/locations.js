@@ -88,6 +88,7 @@ const locations = {
   kulttempel: new Location({ name: "Kulttempel", city: "Oberhausen" }),
   langemunte: new Location({ name: "Lange munte", city: "Kortrijk" }),
   littledevil: new Location({ name: "Littledevil", city: "Tilburg" }),
+  liveinhoorn: new Location({ name: "Live in Hoorn", city: "Hoorn" }),
   mainstage: new Location({ name: "Mainstage", city: "Den Bosch" }),
   megaland: new Location({ name: "Megaland", city: "Landgraad" }),
   melkweg: new Location({ name: "Melkweg", city: "Amsterdam" }),

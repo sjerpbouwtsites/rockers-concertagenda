@@ -10,15 +10,18 @@ const p60Scraper = new AbstractScraper(makeScraperConfig({
   workerData: Object.assign({}, workerData),
   puppeteerConfig: {
     mainPage: {
-      timeout: 60000,
+      timeout: 60020,
     },    
     singlePage: {
-      timeout: 30000
+      timeout: 30021
     },
     app: {
       mainPage: {
         url: "https://p60.nl/agenda",
         requiredProperties: ['venueEventUrl', 'title', 'startDateTime']
+      },
+      singlePage: {
+        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
       }
     }
   }
@@ -29,6 +32,13 @@ p60Scraper.listenToMasterThread();
 // MAKE BASE EVENTS
 
 p60Scraper.makeBaseEventList = async function () {
+
+  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.name);
+  if (availableBaseEvent){
+    return await this.makeBaseEventListEnd({
+      stopFunctie: null, rawEvents: availableBaseEvent}
+    );    
+  }
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
@@ -61,7 +71,8 @@ p60Scraper.makeBaseEventList = async function () {
         try {
           res.doorOpenDateTime = new Date(doorOpenDateTimeB).toISOString();
         } catch (caughtError) {
-          res.errors.push({error: caughtError, remarks: `openDoorDateTime omzetten ${doorOpenDateTimeB}`})
+          res.errors.push({error: caughtError, remarks: `openDoorDateTime omzetten ${doorOpenDateTimeB}`,         
+            toDebug: res})
         }
 
         const startTime = itemEl.querySelector('.field--name-field-aanvang')?.textContent.trim();
@@ -71,20 +82,20 @@ p60Scraper.makeBaseEventList = async function () {
           try {
             res.startDateTime = new Date(startDateTimeB).toISOString();
           } catch (caughtError) {
-            res.errors.push({error: caughtError, remarks: `startDateTime omzetten ${startDateTimeB}`})
-            res.unavailable = 'geen startdatetime.'
+            res.errors.push({error: caughtError, remarks: `startDateTime omzetten ${startDateTimeB}`,         
+              toDebug: res
+            })
+            return res;
           }
         }
 
         res.shortText = itemEl.querySelector('.p60-list__item__description')?.textContent.trim() ?? '';
-        const imageMatch = Array.from(document.querySelectorAll('style')).map(styleEl => styleEl.innerHTML).join(`\n`).match(/topbanner.*background-image.*(https.*\.jpg)/)
-        if (imageMatch){
-          res.image = imageMatch[1]
-        }
         return res;
       }
     );
   }, {workerData});
+
+  this.saveBaseEventlist(workerData.family, rawEvents)
 
   return await this.makeBaseEventListEnd({
     stopFunctie, page, rawEvents}
@@ -112,7 +123,19 @@ p60Scraper.getPageInfo = async function ({ page, event }) {
         pageInfo: `<a href='${document.location.href}'>${document.title}</a>`,
         errors: [],
       };
-
+      const imageMatch = Array.from(document.querySelectorAll('style')).map(styleEl => styleEl.innerHTML).join(`\n`).match(/topbanner.*background-image.*(https.*\.[jpg|jpeg|png])/)
+      if (imageMatch){
+        res.image = imageMatch[1]
+      }
+      if (!res.image){
+        res.errors.push({
+          remarks: `image missing ${res.pageInfo}`,
+          toDebug: {
+            styles: Array.from(document.querySelectorAll('style')).map(styleEl => styleEl.innerHTML),
+            match: imageMatch
+          }
+        })
+      } 
       // res.ticketURL = document.querySelector('.content-section__event-info [href*="ticketmaster"]')?.href ?? null;
       res.longTextHTML = Array.from(document.querySelectorAll('.kmtContent, .group-footer .media-section')).reduce((prev, next) => prev + next.innerHTML,'')
       return res;
