@@ -159,7 +159,7 @@ oostpoortScraper.getPageInfo = async function ({ page, event }) {
 
       try {
         res.longTextHTML = document.querySelector('.content__article .event__language')?.innerHTML;
-        res.image = document.querySelector('.hero__image')?.src ?? null;
+        res.image = document.querySelector('.hero__image')?.src ?? document.querySelector('.festival__header__image').src ?? null;
         if (!res.image){
           res.errors.push({
             remarks: `image missing ${res.pageInfo}`

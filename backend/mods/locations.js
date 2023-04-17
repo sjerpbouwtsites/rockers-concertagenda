@@ -137,6 +137,7 @@ const locations = {
   trix: new Location({ name: "Trix", city: "Antwerpen" }),
   turbinenhalle: new Location({ name: "Turbinenhalle", city: "Oberhausen" }),
   turock: new Location({ name: "Turock", city: "Essen" }),
+  vera: new Location({ name: "Vera", city: "Groningen" }),
   volt: new Location({ name: "Volt", city: "Sittard" }),
   vorstnationaal: new Location({ name: "Vorst Nationaal", city: "Brussel" }),
   weertnoord: new Location({ name: "Weert Noord", city: "Weert" }),

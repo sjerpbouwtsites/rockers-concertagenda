@@ -194,16 +194,10 @@ dbsScraper.getPageInfo = async function ({ page, event }) {
         return document.querySelectorAll('[data-testid]')[1]?.textContent ?? null
       })
     } catch (caughtError) {
-      parentPort.postMessage(this.qwm.messageRoll(`
-      !!
-      ${`prijs ophalen dbs ticketpagina ${event.title} ${caughtError.message}`}}
-      hier moeten een error van gemaakt worden maar de errors crashen nu de thread!
-      !!
-      `))
       pageInfo.errors.push({
         error: caughtError, 
         remarks: `prijs ophalen dbs ticketpagina ${pageInfo.pageInfo}`, 
-        toDebug: {pageInfo,event}
+        toDebug: {event}
       })
     }
   }

@@ -79,11 +79,25 @@ class EventBlocks extends React.Component {
   }
 
   priceElement(musicEvent) {
-    const price = `€ ${Number(musicEvent.price)
-      .toFixed(2)
-      .toString()
-      .replace(".", ",")}`;
-    return musicEvent.price !== null ? (
+
+    let price;
+    if (musicEvent?.origin === 'ticketmaster'){
+      price = musicEvent?.price 
+        ? `€ ${Number(musicEvent?.price)
+          .toFixed(2)
+          .toString()
+          .replace(".", ",")}`
+        : '€?'
+    } else {
+      price = musicEvent?.price 
+        ? `€ ${Number(musicEvent?.price)
+          .toFixed(2)
+          .toString()
+          .replace(".", ",")}`
+        : 'gratis'      
+    }
+
+    return musicEvent?.price !== null ? (
       <span className={`event-block__price contrast-with-dark sans-serif-font ${musicEvent.soldOut ? "event-block__price--sold-out" : ""}`}>
         {musicEvent.soldOut ? "" : price}
         {this.createLinkToVenue(musicEvent)} 

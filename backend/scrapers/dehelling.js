@@ -119,7 +119,8 @@ dehellingScraper.getPageInfo = async function ({ page,event }) {
         pageInfo: `<a href='${event.venueEventUrl}'>${event.title}</a>`,
         errors: [],
       };
-      res.longTextHTML = document.querySelector('.c-event-content')?.innerHTML
+      res.priceTextcontent = document.querySelector('.c-event-meta__table')?.textContent ?? null;
+      res.longTextHTML = document.querySelector('.c-event-content')?.innerHTML ?? null
       return res;
     },
     {event}

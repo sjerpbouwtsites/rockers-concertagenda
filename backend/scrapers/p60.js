@@ -117,13 +117,12 @@ p60Scraper.getPageInfo = async function ({ page, event }) {
   
   const pageInfo = await page.evaluate(
     ({event}) => {
-
       const res = {
         unavailable: event.unavailable,
         pageInfo: `<a href='${document.location.href}'>${document.title}</a>`,
         errors: [],
       };
-      const imageMatch = Array.from(document.querySelectorAll('style')).map(styleEl => styleEl.innerHTML).join(`\n`).match(/topbanner.*background-image.*(https.*\.[jpg|jpeg|png])/)
+      const imageMatch = Array.from(document.querySelectorAll('style')).map(styleEl => styleEl.innerHTML).join(`\n`).match(/topbanner.*background-image.*(https.*\.\w{3,4})/)
       if (imageMatch){
         res.image = imageMatch[1]
       }
@@ -136,6 +135,7 @@ p60Scraper.getPageInfo = async function ({ page, event }) {
           }
         })
       } 
+      res.priceTextcontent = document.querySelector('.event-info__price')?.textContent ?? document.querySelector('.content-section__event-info')?.textContent ?? null;
       // res.ticketURL = document.querySelector('.content-section__event-info [href*="ticketmaster"]')?.href ?? null;
       res.longTextHTML = Array.from(document.querySelectorAll('.kmtContent, .group-footer .media-section')).reduce((prev, next) => prev + next.innerHTML,'')
       return res;

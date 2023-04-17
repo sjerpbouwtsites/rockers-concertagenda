@@ -216,6 +216,11 @@ ticketmasterScraper.getPageInfo = async function ({event}) {
     pageInfo.unavailable += ' rescheduled' 
   }    
 
+  const tl = pageInfo.title.toLowerCase();
+  if (tl.includes('|') || (tl.includes('package') || tl.includes('ticket') || tl.includes('parking'))){
+    pageInfo.unavailable += ' double event' 
+  }
+
   return await this.getPageInfoEnd({pageInfo, stopFunctie})
 
 };
@@ -238,7 +243,6 @@ ticketmasterScraper.getPageInfo = async function ({event}) {
 //     }
 //   })
 
-//   fs.writeFileSync(`${fsDirections.eventLists}/ticketmaster/0.json`, JSON.stringify(filteredTotalSkipOfferings), "UTF-8", () => { })
 // }
 
 ticketmasterScraper.filterCoveredLocations = function(eventList){

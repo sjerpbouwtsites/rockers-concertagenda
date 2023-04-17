@@ -178,7 +178,7 @@ dynamoScraper.getPageInfo = async function ({ page, event}) {
       res.image =
         document
           .querySelector(".dynamic-background-color#intro .color-pick")
-          ?.style.backgroundImage.match(/(https.*\.[jpg|jpeg|png])/)
+          ?.style.backgroundImage.match(/https.*.jpg|https.*.jpeg|https.*.png|https.*.webp/)
           ?.at(0)
           .replace("-500x500x", "") ?? "";
       if (!res.image){

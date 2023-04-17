@@ -256,6 +256,7 @@ export default class AbstractScraper {
     const r = rawEvents
       .map(rawEvent => {
         rawEvent.location = workerData.family;
+        rawEvent.origin = workerData.family;
         return rawEvent
       })
       .filter(this.basicMusicEventsFilter)
