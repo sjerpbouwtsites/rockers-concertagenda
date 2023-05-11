@@ -63,7 +63,7 @@ ticketmasterScraper.makeBaseEventList = async function() {
 
       const res1 = {
         unavailable: '',
-        pageInfo: `<a href='${this.puppeteerConfig.app.mainPage.url}'>Ticketmaster overview ${workerData.index}</a>`,
+        pageInfo: `<a class='page-info' href='${this.puppeteerConfig.app.mainPage.url}'>Ticketmaster overview ${workerData.index}</a>`,
         errors: [],
       };      
 

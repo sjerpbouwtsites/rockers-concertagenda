@@ -35,7 +35,7 @@ cpuntScraper.listenToMasterThread();
 
 cpuntScraper.makeBaseEventList = async function () {
 
-  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.name);
+  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.family);
   if (availableBaseEvent){
     return await this.makeBaseEventListEnd({
       stopFunctie: null, rawEvents: availableBaseEvent}
@@ -66,7 +66,7 @@ cpuntScraper.makeBaseEventList = async function () {
           rawEvent.querySelector('.article-title')?.textContent ?? null;
         const res = {
           unavailable: "",
-          pageInfo: `<a href='${document.location.href}'>${workerData.family} - main - ${title}</a>`,
+          pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} - main - ${title}</a>`,
           errors: [],
         };
 
@@ -124,7 +124,7 @@ cpuntScraper.getPageInfo = async function ({ page, event }) {
 
     const res = {
       unavailable: event.unavailable,
-      pageInfo: `<a href='${document.location.href}'>${document.title}</a>`,
+      pageInfo: `<a class='page-info' href='${document.location.href}'>${document.title}</a>`,
       errors: [],      
     };
 

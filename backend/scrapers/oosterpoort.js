@@ -39,7 +39,7 @@ oostpoortScraper.listenToMasterThread();
 
 oostpoortScraper.makeBaseEventList = async function () {
 
-  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.name);
+  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.family);
   if (availableBaseEvent){
     this.dirtyDebug({
       title: 'gelul',
@@ -72,7 +72,7 @@ oostpoortScraper.makeBaseEventList = async function () {
           : eventEl.querySelector('h1')?.textContent.replace(eersteDeelKorteTekst, '') ?? ''
         const res = {
           unavailable: "",
-          pageInfo: `<a class='pageinfo' href="${document.location.href}">${workerData.family} - main - ${title}</a>`,
+          pageInfo: `<a class='page-info' href="${document.location.href}">${workerData.family} - main - ${title}</a>`,
           errors: [],
           title,
         };
@@ -172,7 +172,7 @@ oostpoortScraper.getPageInfo = async function ({ page, event }) {
     ({event}) => {
       const res = {
         unavailable: event.unavailable,
-        pageInfo: `<a href='${document.location.href}'>${document.title}</a>`,
+        pageInfo: `<a class='page-info' href='${document.location.href}'>${document.title}</a>`,
         errors: [],
       };
 

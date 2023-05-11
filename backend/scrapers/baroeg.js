@@ -34,7 +34,7 @@ baroegScraper.listenToMasterThread();
 
 baroegScraper.makeBaseEventList = async function () {
 
-  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.name);
+  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.family);
   if (availableBaseEvent){
     return await this.makeBaseEventListEnd({
       stopFunctie: null, rawEvents: availableBaseEvent}
@@ -78,7 +78,7 @@ baroegScraper.makeBaseEventList = async function () {
         const title = eventEl.querySelector('.wp_theatre_event_title')?.textContent.trim() ?? null;
         const res = {
           unavailable: "",
-          pageInfo: `<a href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+          pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
           errors: [],
         };
         res.title = title;

@@ -1,3 +1,5 @@
+import prettyPrint from '../mods/pretty-print.js';
+
 export default class MonitorField {
   constructor(name, target, type) {
     this.name = name;
@@ -28,7 +30,7 @@ export default class MonitorField {
     targetEl.innerHTML = this.initialHTML;
   }
   linebreaksNaarBR(tekst) {
-    return JSON.stringify(tekst, null, 2).replace(/\\n/g, "<br>");
+    return prettyPrint(tekst)
   }
   objectNaarTekst(objectTeVeranderen) {
     let tt = { ...objectTeVeranderen };
@@ -36,20 +38,29 @@ export default class MonitorField {
     if (tt.debug){
       tt = tt.debug
     }
-    const jsoned = JSON.stringify(tt, null, 2);
-    const zonderJSONtekens = jsoned.replace(/[{}\[\]]/g, "");
 
-    const ingekort = zonderJSONtekens.split(`\n`).map(rij => {
-      if (!rij.includes(':')) return rij;
-      let [sleutel, waarde] = rij.split(':');
-      if (waarde.length > 50){
-        const waardeKort = waarde.substring(0,50)
-        const waardeRest = waarde.substring(50, 1999);
-        waarde = `<span class='ingekort-lange-tekst' data-meer-tekst='${waardeRest}'>${waardeKort}</span>`
-      }
-      return `${sleutel}:${waarde}`
-    })
-    return ingekort.join(`\n`);
+    let pretty = prettyPrint(tt, {
+      indent: '  ',
+      singleQuotes: false,
+      // transform: (obj, prop, originalResult) => {
+      //   if (prop === 'url') {
+      //     return 'https://'+originalResult
+      //   }
+
+      //   return originalResult;
+      // }
+    });
+
+    const langeTekenMatches = pretty.match(/([\w.,\s]{50,5000})/g);
+    console.log(langeTekenMatches)
+    if (Array.isArray(langeTekenMatches) && langeTekenMatches.length > 1) {
+      langeTekenMatches.forEach(langeTeken => {
+        const kortereTekenReeds = langeTeken.substring(0,50);
+        pretty = pretty.replace(langeTeken,`<span class='ingekort-lange-tekst' data-meer-tekst='${langeTeken}'>${kortereTekenReeds}</span>`) 
+                
+      })
+    }
+    return pretty
   }
   compareWorkers(workerA, workerB) {
     const wai = Number(workerA.workerNamedIndex);
@@ -115,7 +126,9 @@ export default class MonitorField {
           rollRow.messageData?.content;
         null;
         if (t) {
+
           t = this.linebreaksNaarBR(t);
+
         } else {
           console.log("geen tekst gevonden", rollRow);
           t =
@@ -231,9 +244,10 @@ export default class MonitorField {
             : String(rollRow.messageData?.content ?? rollRow.messageData);
 
         // vervang losse links met ankers
-        const metAnkers = hoofdPrintTekst.replaceAll(/"(https:.*)"/g, "<a href='$1' target='_blank'>link</a>");
-        const zonderAanhalingstekens = metAnkers.replace(/\"/g,'');
-
+        //const metAnkers = hoofdPrintTekst.replaceAll(/[^=][^"'](https:.*)/g, "<a href='$1' target='_blank'>link</a>");
+        const metAnkers = hoofdPrintTekst
+        // const zonderAanhalingstekens = metAnkers.replace(/"/g,'');
+        const zonderAanhalingstekens = metAnkers;
 
         return `<li class='monitorfield__list-item'>
         <span class='monitorfield__list-item-left'>${titleText}</span>
@@ -261,7 +275,7 @@ export default class MonitorField {
     });
 
     let workerNumberedHeads = "";
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 6; i++) {
       workerNumberedHeads += `<th class='tablehead tablehead--number'>
         <span class='tablehead-span'>${i}</span>
       </th>`;

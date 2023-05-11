@@ -33,7 +33,7 @@ doornroosjeScraper.listenToMasterThread();
 
 doornroosjeScraper.makeBaseEventList = async function () {
 
-  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.name);
+  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.family);
   if (availableBaseEvent){
     return await this.makeBaseEventListEnd({
       stopFunctie: null, rawEvents: availableBaseEvent}
@@ -54,7 +54,7 @@ doornroosjeScraper.makeBaseEventList = async function () {
           eventEl.querySelector("h1,h2,h3")?.textContent.trim() ?? null;
         const res = {
           unavailable: "",
-          pageInfo: `<a href='${document.location.href}'>${workerData.family} - main - ${title}</a>`,
+          pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} - main - ${title}</a>`,
           errors: [],
           title
         };
@@ -88,7 +88,7 @@ doornroosjeScraper.getPageInfo = async function ({ page, event }) {
     pageInfo = await page.evaluate(({months, event}) => {
       const res = {
         unavailable: event.unavailable,
-        pageInfo: `<a href='${event.venueEventUrl}'>${event.title}</a>`,
+        pageInfo: `<a class='page-info' href='${event.venueEventUrl}'>${event.title}</a>`,
         errors: [],
       };
       res.image =
@@ -168,7 +168,7 @@ doornroosjeScraper.getPageInfo = async function ({ page, event }) {
     pageInfo = await page.evaluate(({months, event}) => {
       const res = {
         unavailable: event.unavailable,
-        pageInfo: `<a href='${event.venueEventUrl}'>${event.title}</a>`,
+        pageInfo: `<a class='page-info' href='${event.venueEventUrl}'>${event.title}</a>`,
         errors: [],
       };
       res.image =

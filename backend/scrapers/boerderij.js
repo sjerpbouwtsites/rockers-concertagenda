@@ -36,6 +36,13 @@ boerderijScraper.listenToMasterThread();
 
 boerderijScraper.makeBaseEventList = async function () {
 
+  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.family);
+  if (availableBaseEvent){
+    return await this.makeBaseEventListEnd({
+      stopFunctie: null, rawEvents: availableBaseEvent}
+    );    
+  }   
+
   const {stopFunctie} = await this.makeBaseEventListStart()
 
   const rawEvents = await axios
@@ -54,6 +61,8 @@ boerderijScraper.makeBaseEventList = async function () {
   } else {
     // debugger
   }
+
+  this.saveBaseEventlist(workerData.family, rawEvents)
 
   return await this.makeBaseEventListEnd({
     stopFunctie, rawEvents}

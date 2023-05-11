@@ -12,7 +12,6 @@ export const AbstractWorkerConfig = {
   family : null,
   workerCount : null,
   scraper : true, //TODO word dit gebruikt
-
 }
 
 export const workerConfig = {
@@ -36,7 +35,7 @@ export const workerConfig = {
   depul: { workerCount: 2 },
   deflux: { workerCount: 1 },
   oosterpoort: { workerCount: 3, workerConcurrent: 3 },
-  paradiso: { workerCount: 4 },
+  paradiso: { workerCount: 6, workerConcurrent: 2 },
   volt: { workerCount: 1 },
   cpunt: { workerCount: 1 },
   occii :{

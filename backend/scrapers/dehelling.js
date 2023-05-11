@@ -33,7 +33,7 @@ dehellingScraper.listenToMasterThread();
 
 dehellingScraper.makeBaseEventList = async function () { 
 
-  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.name);
+  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.family);
   if (availableBaseEvent){
     return await this.makeBaseEventListEnd({
       stopFunctie: null, rawEvents: availableBaseEvent}
@@ -54,7 +54,7 @@ dehellingScraper.makeBaseEventList = async function () {
 
       const res = {
         unavailable: "",
-        pageInfo: `<a href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+        pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
         errors: [],
         title,
       };      
@@ -116,7 +116,7 @@ dehellingScraper.getPageInfo = async function ({ page,event }) {
     ({event}) => {
       const res = {
         unavailable: event.unavailable,
-        pageInfo: `<a href='${event.venueEventUrl}'>${event.title}</a>`,
+        pageInfo: `<a class='page-info' href='${event.venueEventUrl}'>${event.title}</a>`,
         errors: [],
       };
       res.priceTextcontent = document.querySelector('.c-event-meta__table')?.textContent ?? null;

@@ -37,6 +37,12 @@ defluxScraper.listenToMasterThread();
 
 defluxScraper.makeBaseEventList = async function () {
   
+  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.family);
+  if (availableBaseEvent){
+    return await this.makeBaseEventListEnd({
+      stopFunctie: null, rawEvents: availableBaseEvent}
+    );    
+  } 
 
   const {stopFunctie} = await this.makeBaseEventListStart()
 
@@ -62,6 +68,8 @@ defluxScraper.makeBaseEventList = async function () {
     };    
     return res;
   })
+
+  this.saveBaseEventlist(workerData.family, rawEvents)
   
   return await this.makeBaseEventListEnd({
     stopFunctie, rawEvents}
@@ -79,7 +87,7 @@ defluxScraper.getPageInfo = async function ({ page, event}) {
 
     const res = {
       unavailable: event.unavailable,
-      pageInfo: `<a href='${document.location.href}'>${document.title}</a>`,
+      pageInfo: `<a class='page-info' href='${document.location.href}'>${document.title}</a>`,
       errors: [],
     };
 

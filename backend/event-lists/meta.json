@@ -1,340 +1,44 @@
 {
   "locations": {
-    "vera": {
-      "name": "vera",
-      "count": 11
-    },
-    "013enomgeving": {
-      "name": "013enomgeving",
-      "count": 1
-    },
-    "littledevil": {
-      "name": "littledevil",
-      "count": 16
-    },
-    "willemeen": {
-      "name": "willemeen",
-      "count": 2
-    },
-    "cacaofabriek": {
-      "name": "cacaofabriek",
-      "count": 1
-    },
-    "johancruijffarena": {
-      "name": "johancruijffarena",
-      "count": 11
-    },
-    "popei": {
-      "name": "popei",
-      "count": 1
-    },
-    "hedon": {
-      "name": "hedon",
-      "count": 3
-    },
-    "zagarena": {
-      "name": "zagarena",
-      "count": 1
-    },
-    "ziggodome": {
-      "name": "ziggodome",
-      "count": 30
-    },
-    "littledeviltilburg": {
-      "name": "littledeviltilburg",
-      "count": 1
-    },
-    "oefenbunker": {
-      "name": "oefenbunker",
-      "count": 1
-    },
-    "lanxessarena": {
-      "name": "lanxessarena",
-      "count": 1
-    },
-    "sportpaleis": {
-      "name": "sportpaleis",
-      "count": 2
-    },
-    "muziekgebouw": {
-      "name": "muziekgebouw",
-      "count": 1
-    },
-    "ekko": {
-      "name": "ekko",
-      "count": 2
-    },
-    "trix": {
-      "name": "trix",
-      "count": 1
-    },
-    "deklinker": {
-      "name": "deklinker",
-      "count": 1
-    },
-    "hal25": {
-      "name": "hal25",
-      "count": 1
-    },
-    "rotown": {
-      "name": "rotown",
-      "count": 1
-    },
-    "paard": {
-      "name": "paard",
-      "count": 2
-    },
-    "devorstin": {
-      "name": "devorstin",
-      "count": 1
-    },
-    "spiritof66": {
-      "name": "spiritof66",
-      "count": 1
-    },
-    "willemtwee": {
-      "name": "willemtwee",
-      "count": 1
-    },
-    "halloffame": {
-      "name": "halloffame",
-      "count": 2
-    },
-    "amphitheater": {
-      "name": "amphitheater",
-      "count": 1
-    },
-    "mezz": {
-      "name": "mezz",
-      "count": 1
-    },
-    "redbox": {
-      "name": "redbox",
-      "count": 1
-    },
-    "hetdepot": {
-      "name": "hetdepot",
-      "count": 1
-    },
-    "duycker": {
-      "name": "duycker",
-      "count": 1
-    },
-    "oldehoofsterkerkhof": {
-      "name": "oldehoofsterkerkhof",
-      "count": 1
-    },
-    "paleis12": {
-      "name": "paleis12",
-      "count": 1
-    },
-    "kopenhagendenemarkenmetmtleycre": {
-      "name": "kopenhagendenemarkenmetmtleycre",
-      "count": 1
-    },
-    "desselbelgimetoagunsnroses": {
-      "name": "desselbelgimetoagunsnroses",
-      "count": 1
-    },
-    "clissonfrankrijkmetironmaiden": {
-      "name": "clissonfrankrijkmetironmaiden",
-      "count": 1
-    },
-    "ijsselstein": {
-      "name": "ijsselstein",
-      "count": 1
-    },
-    "oslonoorwegenmetghost": {
-      "name": "oslonoorwegenmetghost",
-      "count": 1
-    },
-    "nederlanddrie": {
-      "name": "nederlanddrie",
-      "count": 1
-    },
-    "oudemeerdijk": {
-      "name": "oudemeerdijk",
-      "count": 1
-    },
-    "caprera": {
-      "name": "caprera",
-      "count": 1
-    },
-    "stadspark": {
-      "name": "stadspark",
-      "count": 1
-    },
-    "evenemententerreinweertnoord": {
-      "name": "evenemententerreinweertnoord",
-      "count": 3
-    },
-    "wackenduitslandmetoaironmaiden": {
-      "name": "wackenduitslandmetoaironmaiden",
-      "count": 1
-    },
-    "koningboudewijnstadion": {
-      "name": "koningboudewijnstadion",
-      "count": 1
-    },
-    "langemunte": {
-      "name": "langemunte",
-      "count": 1
-    },
-    "dinkelsbhlmetoapowerwolf": {
-      "name": "dinkelsbhlmetoapowerwolf",
-      "count": 1
-    },
-    "ijssportcentrum": {
-      "name": "ijssportcentrum",
-      "count": 1
-    },
-    "qfactory": {
-      "name": "qfactory",
-      "count": 2
-    },
-    "zuiderpark": {
-      "name": "zuiderpark",
-      "count": 1
-    },
-    "musicon": {
-      "name": "musicon",
-      "count": 3
-    },
-    "baroeg": {
-      "name": "baroeg",
-      "count": 22
-    },
-    "patronaat": {
-      "name": "patronaat",
-      "count": 20
-    },
-    "013": {
-      "name": "013",
-      "count": 36
-    },
-    "effenaar": {
-      "name": "effenaar",
-      "count": 26
-    },
-    "tivolivredenburg": {
-      "name": "tivolivredenburg",
-      "count": 21
-    },
-    "doornroosje": {
-      "name": "doornroosje",
-      "count": 17
-    },
-    "dehelling": {
-      "name": "dehelling",
-      "count": 7
-    },
-    "metropool": {
-      "name": "metropool",
-      "count": 9
-    },
-    "boerderij": {
-      "name": "boerderij",
-      "count": 15
-    },
-    "dynamo": {
-      "name": "dynamo",
-      "count": 16
-    },
-    "bibelot": {
-      "name": "bibelot",
-      "count": 9
-    },
-    "dbs": {
-      "name": "dbs",
-      "count": 41
-    },
-    "gebrdenobel": {
-      "name": "gebrdenobel",
-      "count": 6
-    },
-    "groeneengel": {
-      "name": "groeneengel",
-      "count": 1
-    },
-    "neushoorn": {
-      "name": "neushoorn",
-      "count": 3
-    },
-    "iduna": {
-      "name": "iduna",
-      "count": 3
-    },
-    "deflux": {
-      "name": "deflux",
-      "count": 10
-    },
-    "oosterpoort": {
-      "name": "oosterpoort",
-      "count": 5
-    },
-    "paradiso": {
-      "name": "paradiso",
-      "count": 26
-    },
-    "volt": {
-      "name": "volt",
-      "count": 5
-    },
-    "occii": {
-      "name": "occii",
-      "count": 21
-    },
-    "melkweg": {
-      "name": "melkweg",
-      "count": 44
-    },
-    "p60": {
-      "name": "p60",
-      "count": 16
-    },
-    "afaslive": {
-      "name": "afaslive",
-      "count": 9
-    },
     "kavka": {
       "name": "kavka",
-      "count": 5
+      "count": 19
     },
     "megaland": {
       "name": "megaland",
       "count": 7
     },
+    "maassilo": {
+      "name": "maassilo",
+      "count": 3
+    },
+    "oosterpoort": {
+      "name": "oosterpoort",
+      "count": 40
+    },
+    "tivolivredenburg": {
+      "name": "tivolivredenburg",
+      "count": 9
+    },
+    "openluchttheatercaprera": {
+      "name": "openluchttheatercaprera",
+      "count": 37
+    },
     "spotluthersekerk": {
       "name": "spotluthersekerk",
       "count": 3
     },
-    "lantarenvenster": {
-      "name": "lantarenvenster",
-      "count": 1
+    "effenaar": {
+      "name": "effenaar",
+      "count": 12
     },
-    "phil": {
-      "name": "phil",
-      "count": 5
+    "melkweg": {
+      "name": "melkweg",
+      "count": 63
     },
-    "spotstadsschouwburg": {
-      "name": "spotstadsschouwburg",
-      "count": 1
-    },
-    "deonderzeebootloods": {
-      "name": "deonderzeebootloods",
-      "count": 1
-    },
-    "musissacrum": {
-      "name": "musissacrum",
-      "count": 5
-    },
-    "maassilo": {
-      "name": "maassilo",
-      "count": 2
-    },
-    "openluchttheatercaprera": {
-      "name": "openluchttheatercaprera",
-      "count": 36
+    "ziggodome": {
+      "name": "ziggodome",
+      "count": 26
     },
     "zuiderparktheater": {
       "name": "zuiderparktheater",
@@ -344,12 +48,40 @@
       "name": "Z598xZbpZAFeF",
       "count": 1
     },
+    "afaslive": {
+      "name": "afaslive",
+      "count": 15
+    },
+    "phil": {
+      "name": "phil",
+      "count": 7
+    },
+    "metropool": {
+      "name": "metropool",
+      "count": 1
+    },
+    "johancruijffarena": {
+      "name": "johancruijffarena",
+      "count": 9
+    },
+    "musissacrum": {
+      "name": "musissacrum",
+      "count": 5
+    },
     "feesttentpesse": {
       "name": "feesttentpesse",
       "count": 2
     },
+    "em2": {
+      "name": "em2",
+      "count": 1
+    },
     "eilandbuitenvest": {
       "name": "eilandbuitenvest",
+      "count": 2
+    },
+    "musicon": {
+      "name": "musicon",
       "count": 2
     },
     "malieveld": {
@@ -358,11 +90,11 @@
     },
     "deraatheater": {
       "name": "deraatheater",
-      "count": 1
+      "count": 3
     },
     "rotterdamahoy": {
       "name": "rotterdamahoy",
-      "count": 2
+      "count": 3
     },
     "worldforumtheater": {
       "name": "worldforumtheater",
@@ -384,6 +116,14 @@
       "name": "groeneheuvels",
       "count": 20
     },
+    "evenemententerreinweertnoord": {
+      "name": "evenemententerreinweertnoord",
+      "count": 1
+    },
+    "paard": {
+      "name": "paard",
+      "count": 1
+    },
     "Z198xZbpZa7e": {
       "name": "Z198xZbpZa7e",
       "count": 1
@@ -400,6 +140,14 @@
       "name": "gelredome",
       "count": 1
     },
+    "patronaat": {
+      "name": "patronaat",
+      "count": 1
+    },
+    "Z598xZbpZAve7": {
+      "name": "Z598xZbpZAve7",
+      "count": 1
+    },
     "brabanthallen": {
       "name": "brabanthallen",
       "count": 2
@@ -407,6 +155,22 @@
     "hetconcertgebouw": {
       "name": "hetconcertgebouw",
       "count": 2
+    },
+    "lantarenvenster": {
+      "name": "lantarenvenster",
+      "count": 2
+    },
+    "spotstadsschouwburg": {
+      "name": "spotstadsschouwburg",
+      "count": 1
+    },
+    "metropoolenschede": {
+      "name": "metropoolenschede",
+      "count": 1
+    },
+    "dynamo": {
+      "name": "dynamo",
+      "count": 1
     }
   }
 }

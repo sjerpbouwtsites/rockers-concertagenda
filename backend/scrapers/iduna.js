@@ -32,7 +32,7 @@ idunaScraper.listenToMasterThread();
 
 idunaScraper.makeBaseEventList = async function () {
 
-  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.name);
+  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.family);
   if (availableBaseEvent){
     return await this.makeBaseEventListEnd({
       stopFunctie: null, rawEvents: availableBaseEvent}
@@ -55,7 +55,7 @@ idunaScraper.makeBaseEventList = async function () {
               const title = event.querySelector(".griditemtitle")?.textContent ?? null;
               return {
                 unavailable: "",
-                pageInfo: `<a href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+                pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
                 errors: [],          
                 venueEventUrl: event?.href ?? null,
               }               
@@ -82,7 +82,7 @@ idunaScraper.makeBaseEventList = async function () {
               return {
                 venueEventUrl: event?.href ?? null,
                 title,
-                pageInfo: `<a href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+                pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
                 errors: [],
               };
             });

@@ -1,4 +1,4 @@
-import { parentPort, workerData } from "worker_threads";
+import { workerData } from "worker_threads";
 import * as _t from "../mods/tools.js";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
@@ -34,7 +34,7 @@ dbsScraper.listenToMasterThread();
 
 dbsScraper.makeBaseEventList = async function () {
 
-  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.name);
+  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.family);
   if (availableBaseEvent){
     return await this.makeBaseEventListEnd({
       stopFunctie: null, rawEvents: availableBaseEvent}
@@ -49,17 +49,18 @@ dbsScraper.makeBaseEventList = async function () {
   const rawEvents = await page.evaluate(
     ({ months,workerData }) => {
       return Array.from(document.querySelectorAll(".fusion-events-post"))
+
         .filter((eventEl, index) => index % workerData.workerCount === workerData.index)
         .map((eventEl) => {
           const title = eventEl.querySelector(".fusion-events-meta .url")?.textContent.trim() ?? null;
           const res = {
             unavailable: "",
-            pageInfo: `<a href='${document.location.href}'>${workerData.family} - main - ${title}</a>`,
+            pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} - main - ${title}</a>`,
             errors: [],
             title
           };
 
-          if (title.toLowerCase().includes('cancelled')){ //TODO 1.algemene check maken 2. uitbreiden.
+          if (title?.toLowerCase().includes('cancelled')){ //TODO 1.algemene check maken 2. uitbreiden.
             res.unavailable += ' event cancelled'
           }
 
@@ -68,14 +69,14 @@ dbsScraper.makeBaseEventList = async function () {
           const startDateEl =
             eventEl.querySelector(".tribe-event-date-start") ?? null;
           if (!startDateEl) {
-            return res;
+            res.corrupted = 'no start date el';
           }
 
           const startTextcontent =
             eventEl
               .querySelector(".tribe-event-date-start")
               ?.textContent.toLowerCase() ?? "LEEG";
-          // res.eventDateText = startTextcontent;
+          res.eventDateText = startTextcontent;
 
           try {
             const match1 = startTextcontent.match(/(\d+)\s+(\w+)/);
@@ -94,21 +95,28 @@ dbsScraper.makeBaseEventList = async function () {
               res.year = yearMatch[1];
             }
             res.year = res.year || new Date().getFullYear();
-            res.time = startTextcontent
-              .match(/\d{1,2}:\d\d/)[0]
-              .padStart(5, "0");
-            res.startDate = `${res.year}-${res.month}-${res.day}`;
-            res.startDateTime = new Date(
-              `${res.startDate}T${res.time}:00Z`
-            ).toISOString();
+            const timeMatch = startTextcontent
+              .match(/\d{1,2}:\d\d/);
+            if (!timeMatch ||
+              !Array.isArray(timeMatch) ||
+              timeMatch.length < 1) {
+              res.time = '12:00';
+            } else {
+              res.time = timeMatch[0].padStart(5, "0");
+              res.startDate = `${res.year}-${res.month}-${res.day}`;
+              res.startDateTime = new Date(
+                `${res.startDate}T${res.time}:00Z`
+              ).toISOString();
+            }
+                
           } catch (caughtError) {
             res.errors.push({error: caughtError, remarks: `Wirwar datums e.d. ${title}`,toDebug:res});
           }
 
-          if (res.startDate) {
-            try {
-              const endDateEl =
-                eventEl.querySelector(".tribe-event-time") ?? null;
+          try {
+            const endDateEl =
+            eventEl.querySelector(".tribe-event-time") ?? null;            
+            if (res.startDate && endDateEl) {
               if (endDateEl) {
                 const endDateM = endDateEl.textContent
                   .toLowerCase()
@@ -123,9 +131,10 @@ dbsScraper.makeBaseEventList = async function () {
                   }
                 }
               }
-            } catch (caughtError) {
-              res.errors.push({error: caughtError, remarks: `Wirwar datums e.d. ${title}`,toDebug:res});
-            }
+            } 
+          }
+          catch (caughtError) {
+            res.errors.push({error: caughtError, remarks: `Wirwar datums e.d. ${title}`,toDebug:res});
           }
 
           return res;
@@ -151,7 +160,7 @@ dbsScraper.getPageInfo = async function ({ page, event }) {
   const pageInfo = await page.evaluate(({event}) => {
     const res = {
       unavailable: event.unavailable,
-      pageInfo: `<a href='${document.location.href}'>${document.title}</a>`,
+      pageInfo: `<a class='page-info' href='${document.location.href}'>${document.title}</a>`,
       errors: [],
     };
 
@@ -185,7 +194,7 @@ dbsScraper.getPageInfo = async function ({ page, event }) {
     return res;
   }, {event});
 
-  if (pageInfo.ticketURL) {
+  if (pageInfo.ticketURL && !pageInfo.unavailable) {
     try {
       await page.goto(pageInfo.ticketURL)
       await page.waitForSelector('[data-testid]', {timeout: 6500})

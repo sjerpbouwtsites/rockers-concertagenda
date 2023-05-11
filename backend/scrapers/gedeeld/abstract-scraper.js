@@ -9,7 +9,6 @@ import EventsList from "../../mods/events-list.js";
 import MusicEvent from "../../mods/music-event.js";
 import getVenueMonths from "../../mods/months.js";
 import ErrorWrapper from "../../mods/error-wrapper.js";
-import { cloneElement } from "react";
 
 
 /**
@@ -19,6 +18,24 @@ import { cloneElement } from "react";
  * @class AbstractScraper
  */
 export default class AbstractScraper {
+
+  /**
+   * Gebruikt in singleEventChecks' hasForbiddenTerms
+   *
+   * @static
+   * @memberof AbstractScraper
+   */
+  static forbiddenTerms = [
+    "london calling",
+    "filmvertoning",
+    "indie",
+    "dromerig",
+    "shoegaze",
+    "countryrock",
+    "americana",
+    "alternatieve rock",
+  ];
+
   constructor(obj) {
     this.qwm;
     this.browser;
@@ -145,6 +162,21 @@ export default class AbstractScraper {
   }
 
   async saveBaseEventlist(key, data){
+
+    if (!data){
+      const err = new Error(`No data in saveBaseEventList ${key}`);
+      _t.wrappedHandleError(new ErrorWrapper({
+        error:err,
+        remarks: `saveBaseEventList`,
+        errorLevel: 'close-thread',
+        workerData,
+        // toDebug: {
+        //   //
+        // }
+      }))
+      return;
+    }
+
     //verwijder oude
     const baseEventFiles = fs.readdirSync(fsDirections.baseEventlists);
     const theseBaseEvents = baseEventFiles.filter(filenames => filenames.includes(key));
@@ -157,6 +189,7 @@ export default class AbstractScraper {
     const refDate = this.baseEventDate();    
     const fileName = `${fsDirections.baseEventlists}/${key}T${refDate}.json`;
     fs.writeFileSync(fileName, JSON.stringify(data), 'utf8')
+    return true;
   }
 
   /**
@@ -231,16 +264,17 @@ export default class AbstractScraper {
     
     page && !page.isClosed() && page.close();
 
-    rawEvents = rawEvents.map(event => {
+    const eventsWithLongHTMLShortText = rawEvents.map(event => {
       if (event.longTextHTML) {
         event.longTextHTML = _t.killWhitespaceExcess(event.longTextHTML);
       } 
       if (event.shortText) {
         event.shortText = _t.killWhitespaceExcess(event.shortText);
-      } return event;
+      } 
+      return event;
     })
 
-    rawEvents.forEach((event) => {
+    eventsWithLongHTMLShortText.forEach((event) => {
       const errorVerz = Object.prototype.hasOwnProperty.call(event, 'errors') 
         ? event.errors 
         : [];
@@ -316,7 +350,7 @@ export default class AbstractScraper {
     }, true);
     
     if (hasForbiddenTerm) {
-      parentPort.postMessage(this.qwm.messageRoll(`<a href='${musicEvent.venueEventUrl}'>${musicEvent.title}</a> is ${forbiddenTermUsed}/`));
+      parentPort.postMessage(this.qwm.messageRoll(`<a class='forbidden-term' href='${musicEvent.venueEventUrl}'>${musicEvent.title}</a> is ${forbiddenTermUsed}/`));
     }
 
     return !hasForbiddenTerm && meetsRequiredProperties;
@@ -372,15 +406,12 @@ export default class AbstractScraper {
         useableEventsCheckedArray.push(eventToCheck);
       } else {
         parentPort.postMessage(
-          this.qwm.debugger([
-            `${eventToCheck?.title} uitgefilterd asyncCheck`,
+          this.qwm.debugger(
             {
-              title: eventToCheck.title,
-              shortText: eventToCheck.shortText,
-              url: eventToCheck.venueEventUrl,
+              event: `<a class='single-event-check-notice' href='${eventToCheck.venueEventUrl}'>nee: ${eventToCheck.title}<a/>`,              
               reason: checkResult.reason,
             },
-          ])
+          )
         );
       }
 
@@ -429,6 +460,37 @@ export default class AbstractScraper {
       reason: null,
     };
   }
+  
+  /**
+   * Loopt over AbstractScraper.forbiddenTerms en kijkt of ze in 
+   * een bepaalde text voorkomen, standaard bestaande uit de titel en de shorttext van 
+   * de event.
+   *
+   * @param {*} event 
+   * @param {string} [keysToCheck=['title', 'shortText']] 
+   * @return {event, {bool} succes, {string} reason}
+   * @memberof AbstractScraper
+   */
+  async hasForbiddenTerms(event, keysToCheck = ['title', 'shortText']){
+    const checkedKeysToCheck = keysToCheck.filter(key=>{
+      return Object.prototype.hasOwnProperty.call(key, event)
+    })
+    const combinedTextToCheck = checkedKeysToCheck.reduce((prev, next)=>{event[next] + prev}, '')
+    const hasForbiddenTerm = AbstractScraper.forbiddenTerms.find(forbiddenTerm=> combinedTextToCheck.includes(forbiddenTerm))
+    if (hasForbiddenTerm) {
+      return {
+        event,
+        success: false,
+        reason: "verboden genres gevonden in title+shortText",
+      };
+    }
+
+    return {
+      event,
+      success: true,
+      reason: "verboden genres niet gevonden.",
+    };    
+  }
 
   /**
    * methode waarmee singleEventCheck vervangen kan worden.
@@ -442,9 +504,8 @@ export default class AbstractScraper {
     const mainTitle = event.title.replace(/&.*/, "").trim().toLowerCase();
     const MetalEncFriendlyTitle = mainTitle.replace(/\s/g, "_");
 
-    const foundInMetalEncyclopedia = await fetch(
-      `https://www.metal-archives.com/search/ajax-band-search/?field=name&query=${MetalEncFriendlyTitle}`
-    )
+    const metalEncUrl = `https://www.metal-archives.com/search/ajax-band-search/?field=name&query=${MetalEncFriendlyTitle}`;
+    const foundInMetalEncyclopedia = await fetch(metalEncUrl)
       .then((result) => result.json())
       .then((parsedJson) => {
         return parsedJson.iTotalRecords > 0;
@@ -453,14 +514,13 @@ export default class AbstractScraper {
       return {
         event,
         success: true,
-        reason: 'found in metal encyclopedia'
+        reason: `found in <a class='single-event-check-reason metal-encyclopedie metal-encyclopedie--success' href='${metalEncUrl}'>metal encyclopedia</a>`
       };
     }
 
     const page = await this.browser.newPage();
-    await page.goto(
-      `https://en.wikipedia.org/wiki/${mainTitle.replace(/\s/g, "_")}`
-    );
+    const wikiPage = `https://en.wikipedia.org/wiki/${mainTitle.replace(/\s/g, "_")}`;
+    await page.goto(wikiPage);
     const wikiRockt = await page.evaluate(() => {
       const isRock =
         !!document.querySelector(".infobox a[href*='rock']") &&
@@ -473,14 +533,13 @@ export default class AbstractScraper {
       return {
         event,
         success: true,
-        reason: `found on wikipedia`
+        reason: `found on <a class='single-event-check-reason wikipedia wikipedia--success' href='${wikiPage}'>wikipedia</a>`
       };
     }
     return {
       event,
       success: false,
-      reason: 'nothing found'
-    };
+      reason: `<a class='single-event-check-reason wikipedia wikipedia--failure metal-encyclopedie metal-encyclopedie--failure' href='${wikiPage}'>wikipedia</a> + <a href='${metalEncUrl}'>metal encyclopedia</a> nope.`};
   }
 
   /**
@@ -610,7 +669,7 @@ export default class AbstractScraper {
     const stopFunctie = setTimeout(() => {
       _t.wrappedHandleError(new ErrorWrapper({
         error: new Error('Timeout baseEvent'),
-        remarks: `<a href='${event?.venueEventUrl}' class='page-info'>getPageInfo ${workerData.name} overtijd</a>.\nMax: ${this.puppeteerConfig.singlePage.timeout}`,
+        remarks: `<a href='${event?.venueEventUrl}' class='error-link get-page-info-timeout'>getPageInfo ${workerData.name} overtijd</a>.\nMax: ${this.puppeteerConfig.singlePage.timeout}`,
         workerData,
         errorLevel: 'notice',
       }
@@ -798,7 +857,7 @@ export default class AbstractScraper {
       _t.handleError(
         error,
         workerData,
-        `Mislukken aanmaken <a href='${url}'>single pagina</a> wss duurt te lang`,
+        `Mislukken aanmaken <a class='single-page-failure error-link' href='${url}'>single pagina</a> wss duurt te lang`,
         'notice',
         null,
       );

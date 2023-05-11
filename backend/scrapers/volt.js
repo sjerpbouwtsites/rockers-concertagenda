@@ -30,7 +30,7 @@ voltScraper.listenToMasterThread();
 
 voltScraper.makeBaseEventList = async function () {
   
-  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.name);
+  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.family);
   if (availableBaseEvent){
     return await this.makeBaseEventListEnd({
       stopFunctie: null, rawEvents: availableBaseEvent}
@@ -65,7 +65,7 @@ voltScraper.makeBaseEventList = async function () {
         const title = anchor?.textContent.trim() ?? "";
         const res = {
           unavailable: '',
-          pageInfo: `<a href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+          pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
           errors: [],
           title
         };        
@@ -109,7 +109,7 @@ voltScraper.getPageInfo = async function ({ page, url, event}) {
 
       let res = {};
       res.unavailable= event.unavailable;
-      res.pageInfo= `<a class='page-info' href='${url}'>${event.title}</a>`;
+      res.pageInfo= `<a class='page-info' class='page-info' href='${url}'>${event.title}</a>`;
       res.errors = [];
 
       const curMonthNumber = new Date().getMonth() + 1;

@@ -25,6 +25,13 @@ nuldertienScraper.listenToMasterThread();
 // MAKE BASE EVENTS
 
 nuldertienScraper.makeBaseEventList = async function () {
+
+  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.family);
+  if (availableBaseEvent){
+    return await this.makeBaseEventListEnd({
+      stopFunctie: null, rawEvents: availableBaseEvent}
+    );    
+  }   
   
   const {stopFunctie, page} =  await this.makeBaseEventListStart()
 
@@ -39,7 +46,7 @@ nuldertienScraper.makeBaseEventList = async function () {
 
         const res = {
           unavailable: "",
-          pageInfo: `<a href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+          pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
           errors: [],          
           title,
         }   
@@ -70,6 +77,8 @@ nuldertienScraper.makeBaseEventList = async function () {
 
       });
   }, {workerData});
+
+  this.saveBaseEventlist(workerData.family, rawEvents)
 
   return await this.makeBaseEventListEnd({
     stopFunctie, page, rawEvents}
