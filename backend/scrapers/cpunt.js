@@ -7,6 +7,7 @@ import makeScraperConfig from "./gedeeld/scraper-config.js";
 
 const cpuntScraper = new AbstractScraper(makeScraperConfig({
   workerData: Object.assign({}, workerData),
+
   puppeteerConfig: {
     singlePage: {
       timeout: 10000,
@@ -131,33 +132,58 @@ cpuntScraper.getPageInfo = async function ({ page, event }) {
     const [, shortDay, monthName,year] = ticketSection.querySelector('.article-date')?.textContent.match(/(\d+)\s+(\w+)\s+(\d\d\d\d)/) ?? [null, null, null, null]
     const day = shortDay.padStart(2, '0');
     const month = months[monthName.toLowerCase()];
-
+    const startDate = `${year}-${month}-${day}`;
     res.longTextHTML = textSection.querySelector('.text')?.innerHTML ?? document.querySelector('.contentblock-TextOneColumn')?.innerHTML ?? null;
 
-    const tijdMatches = document.querySelector('.article-times')?.textContent.match(/\d\d:\d\d/g) ?? [];
+    let deurTijd, startTijd
+    const tijdMatches = document.querySelector('.article-bottom .article-times')?.innerHTML.match(/(\d\d[:.]\d\d)/).map(strings => strings.replace('.', ':')) ?? null;
 
-    let startTijd, deurTijd;
-    if (tijdMatches.length == 1){
-      startTijd = tijdMatches[0];
-    } else if (tijdMatches.length > 1){
-      deurTijd = tijdMatches[0];
-      startTijd = tijdMatches[1];
-    } 
-
-    
-    if (deurTijd){
-      try {
-        res.doorOpenDateTime = new Date(`${year}-${month}-${day}T${deurTijd}`).toISOString();
-      } catch (caughtError) {
-        res.errors.push({error: caughtError, remarks: `open door date error ${event.title} ${day} ${monthName} ${month} ${year}`, toDebug:res,})                
+    res.tijdMatches = tijdMatches;
+    if (Array.isArray(tijdMatches) && tijdMatches.length) {
+      if (tijdMatches.length >= 2) {
+        startTijd = tijdMatches[1]+':00'
+        deurTijd = tijdMatches[0]+':00'
+      } else {
+        startTijd = tijdMatches[0]+':00'
       }
+    }else {
+      res.errors.push({
+        remarks: `geen startTijdMatch res.`,
+        toDebug: {
+          html: document.querySelector('.article-bottom .article-times')?.innerHTML,
+          match: tijdMatches
+        }
+      })
+    }
+
+    if (deurTijd) {
+      try {
+        res.doorOpenDateTime = new Date(`${startDate}T${deurTijd}`).toISOString();          
+      } catch (caughtError) {
+        res.errors.push(
+          {
+            error: caughtError, 
+            remarks: `deurtijd door date error ${event.title} ${startDate}`, 
+            toDebug: 
+          {timeTried: `${startDate}T${deurTijd}`, 
+            event}
+          })                
+      }            
     } 
+    
     if (startTijd) {
       try {
-        res.startDateTime = new Date(`${year}-${month}-${day}T${startTijd}`).toISOString();          
+        res.startDateTime = new Date(`${startDate}T${startTijd}`).toISOString();          
       } catch (caughtError) {
-        res.errors.push({error: caughtError, remarks: `startTijd date error ${event.title} ${day} ${monthName} ${month} ${year}`,toDebug:res,})                
-      }
+        res.errors.push(
+          {
+            error: caughtError, 
+            remarks: `starttijd door date error ${event.title} ${startDate}`, 
+            toDebug: 
+          {timeTried: `${startDate}T${startTijd}`, 
+            event}
+          })                
+      }            
     } 
 
     res.priceTextcontent = 
@@ -167,6 +193,8 @@ cpuntScraper.getPageInfo = async function ({ page, event }) {
     return res;
   }, {months: this.months, event});
 
+  this.dirtyDebug(pageInfo)
+
   return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
   
 };
@@ -174,23 +202,17 @@ cpuntScraper.getPageInfo = async function ({ page, event }) {
 // SINGLE EVENT CHECK
 
 cpuntScraper.singleEventCheck = async function (event) {
-  const firstCheckText = `${event?.title ?? ""} ${event?.shortText ?? ""}`;
-  if (
-    firstCheckText.includes("indie") || 
-    firstCheckText.includes("dromerig") ||
-    firstCheckText.includes("shoegaze") ||
-    firstCheckText.includes("alternatieve rock")
-  ) {
-    return {
-      event,
-      success: false,
-      reason: "verboden genres gevonden in title+shortText",
-    };
-  }
 
+  const goodTermsRes = await this.hasGoodTerms(event) 
+  if (goodTermsRes.success) return goodTermsRes;
+
+  const forbiddenTermsRes = await this.hasForbiddenTerms(event);
+
+  if (!forbiddenTermsRes.success) return forbiddenTermsRes;
   return {
     event,
     success: true,
-    reason: "verboden genres niet gevonden.",
-  };
+    reason: `check inconclusive <a href='${event.venueEventUrl}'>${event.title}</a>`
+  }
+
 };
