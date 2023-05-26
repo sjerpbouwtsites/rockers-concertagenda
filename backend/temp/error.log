@@ -1,4 +1,16 @@
 
+  kavka-1 Error - 1:04:58 PM
+  Error: image missing <a class='page-info' href='https://kavka.be/event/hanabie/'>HANABIE.</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:880:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:875:23)
+    at kavkaScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/kavka.js:201:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:737:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:125:5) 
+  image missing <a class='page-info' href='https://kavka.be/event/hanabie/'>HANABIE.</a>
+  
+  
   iduna-0 Error - 12:30:13 PM
   Error: geen startTime <a class='page-info' href='https://iduna.nl/event/ac-dc-50th-anniversary-tour/'>AC/DC 50th Anniversary Tour • a tribute by AC/DC UK</a>
     at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:880:29

@@ -47,13 +47,9 @@ kavkaScraper.makeBaseEventList = async function () {
     ({ months, workerData }) => {
       return Array.from(document.querySelectorAll(".events-list > a"))
         .filter((rawEvent) => {
-          const isMetalOrPunk = Array.from(rawEvent.querySelectorAll(".tags"))
-            .map((a) => a.innerHTML.trim())
-            .join(" ")
-            .toLowerCase()
-            .includes("metal");
-          const isCancelled = !!rawEvent.querySelector(".cancelled");
-          return isMetalOrPunk && !isCancelled;
+          return Array.from(rawEvent.querySelectorAll(".tags"))
+            .map((a) => a.textContent.trim().toLowerCase())
+            .join(' ').includes("metal");
         })
         .map((rawEvent) => {
           let startTimeM,
@@ -77,6 +73,9 @@ kavkaScraper.makeBaseEventList = async function () {
             errors: [],
             title,
           };
+          if (rawEvent.querySelector(".cancelled")) {
+            res.unavailable = 'cancelled'
+          }
 
           // TODO BELACHELIJK GROTE TRY CATHC
           try {
@@ -154,6 +153,12 @@ kavkaScraper.makeBaseEventList = async function () {
 
 kavkaScraper.getPageInfo = async function ({ page, event }) {
   const { stopFunctie } = await this.getPageInfoStart();
+
+  await page.waitForSelector('img[src*="kavka.be/wp-content"].lazyloaded',{
+    timeout: 1500,
+  }).catch(err => {
+    // niets doen.
+  })
 
   const pageInfo = await page.evaluate(({event}) => {
     const res = {

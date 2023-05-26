@@ -36,8 +36,8 @@ export const workerConfig = {
   groeneengel: { workerCount: 1 },
   iduna: { workerCount: 1 },
   kavka :{
-    workerCount: 1,
-    workerConcurrent: 1,
+    workerCount: 2,
+    workerConcurrent: 2,
   },
   melkweg :{
     workerCount: 4,
