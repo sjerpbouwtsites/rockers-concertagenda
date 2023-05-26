@@ -49,8 +49,6 @@ oostpoortScraper.makeBaseEventList = async function () {
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
-  await waitFor(500); // site set filters aan
-
   const rawEvents = await page.evaluate(({workerData}) => {
     return Array
       .from(
@@ -107,50 +105,33 @@ oostpoortScraper.makeBaseEventList = async function () {
 
 oostpoortScraper.singleRawEventCheck = async function (event) {
 
-  if (!(this?.isRockDump)){
-    this.isRockDump = fs.readFileSync(fsDirections.isRockDump, 'utf8');
-  }
-
-  if (this.isRockDump.includes(event.title)) {
-    return {
-      event,
-      success: false,
-      reason: "event contains forbidden terms",
-    };     
-  }
-  
-  if (textContainsHeavyMusicTerms(event.longText)) {
-    return {
-      event,
-      success: true,
-      reason: "event contains heavy terms",
-    };    
-  }
-  if (textContainsForbiddenMusicTerms(event.longText)) {
-    this.isRockDump = `${this.isRockDump}\n${event.title}`
-    return {
-      event,
-      success: false,
-      reason: "event contains forbidden terms",
-    };    
-  }
-
-
-  const thisIsRock = await this.isRock(event);
-  if (thisIsRock.success) {
-    return {
-      event,
-      success: true,
-      reason: `is rock check successfull ${thisIsRock.reason}` ,
-    }
-  } 
-  this.isRockDump = `${this.isRockDump}\n${event.title}`
-  fs.writeFileSync(fsDirections.isRockDump, this.isRockDump, 'utf8');
-  return {
+  const isRefused = await this.rockRefuseListCheck(event, event.title.toLowerCase())
+  if (isRefused.success) return {
+    reason: isRefused.reason,
     event,
-    success: false,
-    reason: `no evidence for heavy music found ${thisIsRock.reason}`,
+    success: false
+  };
+
+  const isAllowed = await this.rockAllowListCheck(event, event.title.toLowerCase())
+  if (isAllowed.success) return isAllowed;
+
+  const hasForbiddenTerms = await this.hasForbiddenTerms(event);
+  if (hasForbiddenTerms.success) {
+    await this.saveRefusedTitle(event.title.toLowerCase())
+    return {
+      reason: hasForbiddenTerms.reason,
+      success: false,
+      event
+    }
   }
+
+  const isRockRes = await this.isRock(event);
+  if (isRockRes.success){
+    await this.saveAllowedTitle(event.title.toLowerCase())
+  } else {
+    await this.saveRefusedTitle(event.title.toLowerCase())
+  }
+  return isRockRes;  
 
 };
 

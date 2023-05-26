@@ -33,6 +33,48 @@ const paradisoScraper = new AbstractScraper(makeScraperConfig({
 
 paradisoScraper.listenToMasterThread();
 
+// SINGLE EVENT CHECK
+
+paradisoScraper.singleRawEventCheck = async function (event) {
+
+
+  const isRefused = await this.rockRefuseListCheck(event, event.title.toLowerCase())
+  if (isRefused.success) return {
+    reason: isRefused.reason,
+    event,
+    success: false
+  };
+
+  const isAllowed = await this.rockAllowListCheck(event, event.title.toLowerCase())
+  if (isAllowed.success) return isAllowed;
+
+  const hasForbiddenTerms = await this.hasForbiddenTerms(event);
+  if (hasForbiddenTerms.success) {
+    await this.saveRefusedTitle(event.title.toLowerCase())
+    return {
+      reason: hasForbiddenTerms.reason,
+      success: false,
+      event
+    }
+  }
+
+  const hasGoodTermsRes = await this.hasGoodTerms(event);
+  if (hasGoodTermsRes.success) {
+    await this.saveAllowedTitle(event.title.toLowerCase())
+    return hasGoodTermsRes;
+  }
+
+  const isRockRes = await this.isRock(event);
+  if (isRockRes.success){
+    await this.saveAllowedTitle(event.title.toLowerCase())
+  } else {
+    await this.saveRefusedTitle(event.title.toLowerCase())
+  }
+  return isRockRes;
+  
+};
+
+
 // MAKE BASE EVENTS
 paradisoScraper.makeBaseEventList = async function () {
 
@@ -254,25 +296,3 @@ paradisoScraper.getPageInfo = async function ({ page, event }) {
 
 };
 
-// SINGLE EVENT CHECK
-
-paradisoScraper.singleRawEventCheck = async function (event) {
-
-  const forbidenTermCheckRes = await this.hasForbiddenTerms(event, ['title', 'shortText']);
-  if (forbidenTermCheckRes.success) {
-    return {
-      event,
-      reason: forbidenTermCheckRes.reason,
-      success: false
-    };
-  } else {
-    return {
-      event,
-      reason: forbidenTermCheckRes.reason,
-      success: true
-    }
-  }
-
-  //return await this.isRock(event);
-  
-};

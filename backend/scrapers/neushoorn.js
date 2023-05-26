@@ -26,6 +26,44 @@ const neushoornScraper = new AbstractScraper(makeScraperConfig({
 
 neushoornScraper.listenToMasterThread();
 
+// SINGLE RAW EVENT CHECK
+
+neushoornScraper.singleRawEventCheck = async function(event){
+
+  const isRefused = await this.rockRefuseListCheck(event, event.title.toLowerCase())
+  if (isRefused.success) return {
+    reason: isRefused.reason,
+    event,
+    success: false
+  };
+
+  const isAllowed = await this.rockAllowListCheck(event, event.title.toLowerCase())
+  if (isAllowed.success) return isAllowed;
+
+  const hasForbiddenTerms = await this.hasForbiddenTerms(event);
+  if (hasForbiddenTerms.success) {
+    await this.saveRefusedTitle(event.title.toLowerCase())
+    return {
+      reason: hasForbiddenTerms.reason,
+      success: false,
+      event
+    }
+  }
+
+  const hasGoodTermsRes = await this.hasGoodTerms(event);
+  if (hasGoodTermsRes.success) {
+    await this.saveAllowedTitle(event.title.toLowerCase())
+    return hasGoodTermsRes;
+  }
+
+  return {
+    reason: 'shitty reason',
+    success: false,
+    event
+  }  
+
+}
+
 // MAKE BASE EVENTS
 
 neushoornScraper.makeBaseEventList = async function () {
@@ -41,10 +79,6 @@ neushoornScraper.makeBaseEventList = async function () {
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
   try {
-    // await page.waitForSelector('[href*="Heavy"]', {
-    //   timeout: this.singlePageTimeout,
-    // });
-    // await page.click('[href*="Heavy"]');
     await page.waitForSelector(".productions__item", {
       timeout: this.singlePageTimeout,
     });
@@ -58,16 +92,6 @@ neushoornScraper.makeBaseEventList = async function () {
 
   const rawEvents = await page.evaluate(({workerData}) => {
     return Array.from(document.querySelectorAll(".productions__item"))
-      // .filter(eventEl => {
-      //   const textContent = eventEl.textContent.toLowerCase();
-      //   const isRockInText =
-      //     textContent.includes("punk") ||
-      //     textContent.includes("rock") ||
-      //     textContent.includes("metal") ||
-      //     textContent.includes("industrial") ||
-      //     textContent.includes("noise");        
-      //   return isRockInText;
-      // })
       .map(
         (eventEl) => {
         
@@ -80,7 +104,7 @@ neushoornScraper.makeBaseEventList = async function () {
             errors: [],          
             title
           }  
-
+          res.shortText = eventEl.querySelector('.productions__item__subtitle')?.textContent ?? '';
           res.venueEventUrl = eventEl.href;
           res.soldOut = !!(eventEl.querySelector(".chip")?.textContent.toLowerCase().includes('uitverkocht') ?? null)
           return res;

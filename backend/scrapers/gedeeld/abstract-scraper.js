@@ -27,6 +27,13 @@ export default class AbstractScraper {
    */
   static forbiddenTerms = [
     "fan event",
+    'clubnacht',
+    `pubquiz`, 
+    `schaakinstuif`,
+    `jazz-core`,
+    `experi-metal`,
+    `Dream Punk`,
+    `poetry`,
     "interactieve lezing",
     "karaoke",
     "london calling",
@@ -37,6 +44,7 @@ export default class AbstractScraper {
     "countryrock",
     "americana",
     "alternatieve rock",
+    `dream pop`
   ];
 
   static wikipediaGoodGenres = [
@@ -81,7 +89,32 @@ export default class AbstractScraper {
 
   ];
 
-  static goodCategories = [`neue deutsche harte`, `neue deutsche haerte`, `punx`,`death metal`,`doom`,`hardcore`,`new wave`,`punk`,`hardcore punk`,`heavy rock 'n roll`,`symphonic metal`,`thrash`,`metalcore`,`grindcore`,`industrial`,`noise`,`postpunk`,`post-punk`,`heavy metal`,`power metal`,`heavy psych`,`metal`,`surfpunkabilly`, `psychobilly`]
+  static goodCategories = [
+    'heavy rock',
+    `neue deutsche harte`,
+    `neue deutsche haerte`,
+    `punx`,
+    `death metal`,
+    `doom`,
+    `hardcore`,
+    `new wave`,
+    `punk`,
+    `hardcore punk`,
+    `heavy rock 'n roll`,
+    `symphonic metal`,
+    `thrash`,
+    `metalcore`,
+    `grindcore`,
+    `industrial`,
+    `noise`,
+    `postpunk`,
+    `post-punk`,
+    `heavy metal`,
+    `power metal`,
+    `heavy psych`,
+    `metal`,
+    `surfpunkabilly`,
+    `psychobilly`]
 
   rockAllowList = '';
   rockRefuseList = '';
@@ -524,7 +557,7 @@ export default class AbstractScraper {
    * @return {event {MusicEvent, success bool}}
    * @memberof AbstractScraper
    */
-  async singleMergedEventCheck(event) {
+  async singleMergedEventCheck(event, pageInfo = null) {
     // abstracte methode, over te schrijven
     return {
       event,
@@ -605,12 +638,12 @@ export default class AbstractScraper {
 
   async saveRefusedTitle(title){
     const curForbiddenList = fs.readFileSync(fsDirections.isRockRefuse, 'utf-8');
-    fs.writeFileSync(fsDirections.isRockRefuse, `${curForbiddenList}\n${title.toLowerCase()}`, 'utf-8')
+    fs.writeFileSync(fsDirections.isRockRefuse, `${title.toLowerCase()}\n${curForbiddenList}`, 'utf-8')
   }
 
   async saveAllowedTitle(title){
     const curAllowList = fs.readFileSync(fsDirections.isRockAllow, 'utf-8');
-    fs.writeFileSync(fsDirections.isRockAllow, `${curAllowList}\n${title.toLowerCase()}`, 'utf-8')
+    fs.writeFileSync(fsDirections.isRockAllow, `${title.toLowerCase()}\n${curAllowList}`, 'utf-8')
   }
 
   async rockAllowListCheck(event, title){
@@ -686,13 +719,26 @@ export default class AbstractScraper {
   }
 
   async wikipedia(event, title){
+
     const page = await this.browser.newPage();
-    const wikifiedTitled = title.split(' ').map(word => {
-      return word[0].toUpperCase() + word.substring(1,word.length)
-    }).join('_').replace(/\W/g,'')
-    const wikiPage = `https://en.wikipedia.org/wiki/${wikifiedTitled}`;
-    this.dirtyTalk(`${event.title} asks <a href='${wikiPage}'>${wikiPage}</a>`)
-    await page.goto(wikiPage);
+    let wikiPage
+    try {
+      const wikifiedTitled = title.split(' ')
+        .filter(a => a)
+        .map(word => {
+          return word[0].toUpperCase() + word.substring(1,word.length)
+        }).join('_').replace(/\W/g,'')
+      wikiPage = `https://en.wikipedia.org/wiki/${wikifiedTitled}`;
+      await page.goto(wikiPage);
+    } catch (error) {
+      _t.wrappedHandleError(new ErrorWrapper({
+        error,
+        remarks: `<a href='${event?.venueEventUrl}' class='error-link get-page-info-timeout'>wikititel maken fout ${workerData.name}</a> ${title}`,
+        workerData,
+        errorLevel: 'notice',
+      }
+      ))            
+    }
 
     const pageDoesNotExist = await page.evaluate(()=>{
       return document.getElementById('noarticletext');
@@ -702,7 +748,6 @@ export default class AbstractScraper {
       const searchPage =  await page.evaluate(()=>{
         return document.getElementById('noarticletext').querySelector('[href*=search]')?.href ?? '';
       })
-      this.dirtyTalk(`${event.title} asks ${searchPage}`)
       await page.goto(searchPage);
       if (!searchPage) {
         return {
@@ -723,7 +768,6 @@ export default class AbstractScraper {
           success: false,
         }
       }
-      this.dirtyTalk(`${event.title} asks ${matchingResults}`)
       await page.goto(matchingResults[0])
     }
 
@@ -779,7 +823,6 @@ export default class AbstractScraper {
     const workingTitle = recursiveTitle || event.title.replace(/&.*/, "").trim().toLowerCase();
 
     const rockRefuseListRes = await this.rockRefuseListCheck(event, workingTitle);
-    this.dirtyDebug(rockRefuseListRes);
     if (rockRefuseListRes.succes) {
       return {
         reason: rockRefuseListRes.reason,
@@ -789,19 +832,16 @@ export default class AbstractScraper {
     }
 
     const rockAllowListRes = await this.rockAllowListCheck(event, workingTitle);
-    this.dirtyDebug(rockAllowListRes);
     if (rockAllowListRes.succes) {
       rockAllowListRes
     }
 
     const metalEncyclopediaRes = await this.metalEncyclopedia(event, workingTitle);
-    this.dirtyDebug(metalEncyclopediaRes);
     if (metalEncyclopediaRes.success) {
       return metalEncyclopediaRes;
     }
 
     const wikipediaRes = await this.wikipedia(event, workingTitle);
-    this.dirtyDebug(wikipediaRes)
     if (wikipediaRes.success) {
       return wikipediaRes;
     }
@@ -902,13 +942,16 @@ export default class AbstractScraper {
       singleEvent.corrupted += missingProperties.join(',')
     }
 
-    const mergedEventCheckRes = await this.singleMergedEventCheck(singleEvent);
+    const mergedEventCheckRes = await this.singleMergedEventCheck(singleEvent, pageInfo);
     if (mergedEventCheckRes.success) {
       singleEvent.isValid
         ? singleEvent.register() // TODO hier lopen dingen echt dwars door elkaar. integreren in soort van singleMergedEventCheckBase en dan anderen reducen erop of weet ik veel wat een gehack vandaag
         : singleEvent.registerINVALID(this.workerData);
     } else {
-      this.dirtyDebug( mergedEventCheckRes)
+      this.dirtyDebug({
+        title: mergedEventCheckRes.event.title + ' afwezen',
+        reason: mergedEventCheckRes.reason,
+      })
       singleEvent.registerINVALID(this.workerData);
     }
 

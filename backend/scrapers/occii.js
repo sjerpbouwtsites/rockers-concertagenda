@@ -17,7 +17,7 @@ const occiiScraper = new AbstractScraper(makeScraperConfig({
     },
     app: {
       mainPage: {
-        url: "https://occii.org/events/",
+        url: "https://occii.org/events/categories/rock/",
         requiredProperties: ['venueEventUrl']        
       },
       singlePage: {
@@ -27,8 +27,58 @@ const occiiScraper = new AbstractScraper(makeScraperConfig({
   }
 }));
 
-
 occiiScraper.listenToMasterThread();
+
+// SINGLE RAW EVENT CHECK
+
+occiiScraper.singleRawEventCheck = async function(event){
+  const tl = event.title.toLowerCase();
+  const isRefused = await this.rockRefuseListCheck(event, tl)
+  if (isRefused.success) {
+    return {
+      reason: isRefused.reason,
+      event,
+      success: false
+    };
+  } 
+
+  const isAllowed = await this.rockAllowListCheck(event, tl)
+  if (isAllowed.success) return isAllowed;
+
+  const hasForbiddenTerms = await this.hasForbiddenTerms(event);
+  if (hasForbiddenTerms.success) {
+    await this.saveRefusedTitle(tl)
+    return {
+      reason: hasForbiddenTerms.reason,
+      success: false,
+      event
+    }
+  }
+
+  return {
+    reason: 'occii rules',
+    success: true,
+    event
+  }  
+
+}
+
+// SINGLE MERGED EVENT CHECK
+
+occiiScraper.singleMergedEventCheck = async function(event, pageInfo){
+  const ss = !(pageInfo?.genres?.include('electronic') ?? false);
+  if (ss) {
+    this.saveAllowedTitle(event.title.toLowerCase())
+  } else {
+    this.saveRefusedTitle(event.title.toLowerCase())
+  }
+  return {
+    reason: 'ja genre controle' +ss,
+    success: ss,
+    event
+  };
+  
+}
 
 // MAKE BASE EVENTS
 
@@ -45,7 +95,7 @@ occiiScraper.makeBaseEventList = async function () {
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
   const rawEvents = await page.evaluate(({workerData}) => {
-    return Array.from(document.querySelectorAll(".occii-event-display"))
+    return Array.from(document.querySelector('.occii-events-display-container').querySelectorAll(".occii-event-display"))
       .map((occiiEvent) => {
         
         const firstAnchor = occiiEvent.querySelector("a");
@@ -133,9 +183,8 @@ occiiScraper.getPageInfo = async function ({ page, event}) {
 
     res.priceTextcontent = document.getElementById('occii-single-event')?.textContent ?? null;
 
-    res.genre =
-      document.querySelector('[href*="events/categories"]')?.textContent ??
-      null; // TODO genre?? 
+    res.genre = Array.from(document.querySelectorAll('.event-categories [href*="events/categories"]')).map(cats => cats.textContent.toLowerCase().trim())
+
     res.longTextHTML = document.querySelector(".occii-event-notes").innerHTML;
     return res;
   }, {months: getVenueMonths('occii'), event}); //TODO is verouderde functie getVenueMonths

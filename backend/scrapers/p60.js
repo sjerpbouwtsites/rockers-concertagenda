@@ -29,6 +29,40 @@ const p60Scraper = new AbstractScraper(makeScraperConfig({
 
 p60Scraper.listenToMasterThread();
 
+// SINGLE EVENT CHECK
+
+p60Scraper.singleRawEventCheck = async function (event) {
+
+  const isRefused = await this.rockRefuseListCheck(event, event.title.toLowerCase())
+  if (isRefused.success) return {
+    reason: isRefused.reason,
+    event,
+    success: false
+  };
+
+  const isAllowed = await this.rockAllowListCheck(event, event.title.toLowerCase())
+  if (isAllowed.success) return isAllowed;
+
+  const hasForbiddenTerms = await this.hasForbiddenTerms(event);
+  if (hasForbiddenTerms.success) {
+    await this.saveRefusedTitle(event.title.toLowerCase())
+    return {
+      reason: hasForbiddenTerms.reason,
+      success: false,
+      event
+    }
+  }
+
+  const isRockRes = await this.isRock(event);
+  if (isRockRes.success){
+    await this.saveAllowedTitle(event.title.toLowerCase())
+  } else {
+    await this.saveRefusedTitle(event.title.toLowerCase())
+  }
+  return isRockRes;  
+
+};
+
 // MAKE BASE EVENTS
 
 p60Scraper.makeBaseEventList = async function () {
@@ -43,16 +77,13 @@ p60Scraper.makeBaseEventList = async function () {
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
+  this.dirtyTalk('jaja1');
   await _t.autoScroll(page);
-  await _t.autoScroll(page);
-  await _t.autoScroll(page);
-  await _t.autoScroll(page);
-
-  await _t.waitFor(50);
+  this.dirtyTalk('jaja2');
 
   const rawEvents = await page.evaluate(({workerData}) => {
     return Array.from(document.querySelectorAll(".views-infinite-scroll-content-wrapper > .p60-list__item-container")).filter(itemEl => {
-      return itemEl.textContent.includes('concert')
+      return !!itemEl.querySelector('[href*=ticketmaster]')
     }).map(
       (itemEl) => {
         const title = itemEl.querySelector(
@@ -95,6 +126,10 @@ p60Scraper.makeBaseEventList = async function () {
       }
     );
   }, {workerData});
+
+  this.dirtyLog(rawEvents);
+
+  this.dirtyTalk(`geheel aan events ${rawEvents.length}`)
 
   this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
