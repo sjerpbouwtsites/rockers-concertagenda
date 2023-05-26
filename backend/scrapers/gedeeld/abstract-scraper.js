@@ -39,7 +39,7 @@ export default class AbstractScraper {
     "alternatieve rock",
   ];
 
-  static goodCategories = [`punx`,`death metal`,`doom`,`hardcore`,`new wave`,`punk`,`hardcore punk`,`heavy rock 'n roll`,`symphonic metal`,`thrash`,`metalcore`,`black`,`crossover`,`grindcore`,`industrial`,`noise`,`postpunk`,`post-punk`,`heavy metal`,`power metal`,`heavy psych`,`metal`,`surfpunkabilly`, `psychobilly`]
+  static goodCategories = [`punx`,`death metal`,`doom`,`hardcore`,`new wave`,`punk`,`hardcore punk`,`heavy rock 'n roll`,`symphonic metal`,`thrash`,`metalcore`,`grindcore`,`industrial`,`noise`,`postpunk`,`post-punk`,`heavy metal`,`power metal`,`heavy psych`,`metal`,`surfpunkabilly`, `psychobilly`]
 
   rockAllowList = '';
   rockRefuseList = '';
@@ -500,36 +500,31 @@ export default class AbstractScraper {
    * @return {event, {bool} succes, {string} reason}
    * @memberof AbstractScraper
    */
-  async hasGoodTerms(event, keysToCheck = ['title', 'shortText']){
-    const checkedKeysToCheck = keysToCheck.filter(key=>{
-      return Object.prototype.hasOwnProperty.call(key, event)
-    })
-    const combinedTextToCheck = checkedKeysToCheck.reduce((prev, next)=>{
-      if (next !== 'longTextHTML') {
-        return event[next] + prev
-      } 
-      const longTextHTML = fs.readFileSync(event[next], 'utf-8');
-      return longTextHTML + prev;
-    }, '')
-    this.dirtyLog({
-      title: event.title,
-      shortText: event.shortText,
-      combinedTextToCheck
-    })
-    const hasGoodTerm = AbstractScraper.goodCategories.find(forbiddenTerm=> combinedTextToCheck.includes(forbiddenTerm))
+  async hasGoodTerms(event, keysToCheck ){
+    const keysToCheck2 = keysToCheck || ['title', 'shortText'];
+    let combinedTextToCheck = '';
+    for (let i = 0; i < keysToCheck2.length; i++){
+      if (keysToCheck2[i] === 'longTextHTML'){
+        const longTextHTML = fs.readFileSync(event.longTextHTML, 'utf-8');
+        combinedTextToCheck += longTextHTML
+      } else {
+        combinedTextToCheck += event[keysToCheck2[1]]
+      }
+    }
+
+    const hasGoodTerm = AbstractScraper.goodCategories.find(goodTerm=> combinedTextToCheck.includes(goodTerm))
     if (hasGoodTerm) {
-      this.dirtyTalk(`good terms ${event.title}`)
       return {
         event,
         success: true,
-        reason: `Goed in `+keysToCheck.join(''),
+        reason: `Goed in `+keysToCheck2.join(''),
       };    
     }
     
     return {
       event,
       success: false,
-      reason: `Geen bevestiging gekregen uit ${keysToCheck.join(';')} ${combinedTextToCheck}`,
+      reason: `Geen bevestiging gekregen uit ${keysToCheck2.join(';')} ${combinedTextToCheck}`,
     };
   }  
   

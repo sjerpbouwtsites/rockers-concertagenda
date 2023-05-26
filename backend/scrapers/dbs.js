@@ -156,16 +156,18 @@ dbsScraper.getPageInfo = async function ({ page, event }) {
   
   const {stopFunctie} =  await this.getPageInfoStart()
   
-  const pageInfo = await page.evaluate(({event}) => {
+  const pageInfo = await page.evaluate(({event, goodCategories}) => {
     const res = {
       unavailable: event.unavailable,
       pageInfo: `<a class='page-info' href='${document.location.href}'>${document.title}</a>`,
       errors: [],
     };
 
+    
     res.longTextHTML = 
-      document.querySelector(".tribe-events-single-event-description")
-        ?.innerHTML ?? '';
+    document.querySelector(".tribe-events-single-event-description")
+      ?.innerHTML ?? '';
+    
     res.image =
       document.querySelector(".tribe-events-event-image .wp-post-image")?.src ??
       null;
@@ -174,8 +176,15 @@ dbsScraper.getPageInfo = async function ({ page, event }) {
         remarks: `image missing ${res.pageInfo}`
       })
     }    
-    res.shortText += document.querySelector(".tribe-events-event-categories")?.textContent.toLowerCase() ??
+    res.shortText = document.querySelector(".tribe-events-event-categories")?.textContent.toLowerCase().replace('concert, ', '').replace('concert', '').trim() ??
       "";
+    // const hasGoodCategories = goodCategories.some(category => {
+    //   return res.shortText.includes(category)
+    // })
+    // if (!hasGoodCategories) {
+    //   res.unavailable = ' no good categories';
+    //   return res;
+    // }
 
     res.ticketURL = document.querySelector('.tribe-events-event-url a')?.href ?? null;
     if (!res.ticketURL){
@@ -183,7 +192,7 @@ dbsScraper.getPageInfo = async function ({ page, event }) {
     }
 
     return res;
-  }, {event});
+  }, {event, goodCategories: AbstractScraper.goodCategories});
 
   if (pageInfo.ticketURL && !pageInfo.unavailable) {
     try {
@@ -208,12 +217,13 @@ dbsScraper.getPageInfo = async function ({ page, event }) {
 
 dbsScraper.singleMergedEventCheck = async function(event){
 
-  const hasGoodTerms = await this.hasGoodTerms(event)
-  if (hasGoodTerms.success) return hasGoodTerms
-
-  return {
-    event,
-    reason: `no good terms found ${event.categoriesToTest}`,
-    success: false
+  const hasForbiddenTermsRes = await this.hasForbiddenTerms(event)
+  if (hasForbiddenTermsRes.success) {
+    return {
+      event,
+      reason: hasForbiddenTermsRes.reason,
+      success: !hasForbiddenTermsRes
+    }
   }
+  return await this.hasGoodTerms(event);
 }
