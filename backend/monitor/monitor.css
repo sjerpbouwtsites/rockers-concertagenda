@@ -299,3 +299,11 @@ table th.worker-data-cell {
   width: 60px;
   height: 10px;
 }
+
+.single-event-check-notice--success {
+  color: green;
+}
+
+.single-event-check-notice--failure {
+  color: red;
+}

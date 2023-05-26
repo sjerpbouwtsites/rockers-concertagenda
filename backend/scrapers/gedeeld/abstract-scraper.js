@@ -28,7 +28,8 @@ export default class AbstractScraper {
   static forbiddenTerms = [
     "fan event",
     'clubnacht',
-    `pubquiz`, 
+    `pubquiz`,  
+    `quiz'm`,
     `schaakinstuif`,
     `jazz-core`,
     `experi-metal`,
@@ -498,23 +499,25 @@ export default class AbstractScraper {
       const checkResult = await this.singleRawEventCheck(eventToCheck);
       if (checkResult.success) {
         useableEventsCheckedArray.push(eventToCheck);
-        // parentPort.postMessage(
-        //   this.qwm.debugger(
-        //     {
-        //       event: `<a class='single-event-check-notice' href='${eventToCheck.venueEventUrl}'>ja: ${eventToCheck.title}<a/>`,              
-        //       reason: checkResult.reason,
-        //     },
-        //   )
-        // );        
+        parentPort.postMessage(
+          this.qwm.debugger(
+            {
+              title: 'Raw event async check',
+              event: `<a class='single-event-check-notice single-event-check-notice--success' href='${eventToCheck.venueEventUrl}'>${eventToCheck.title}<a/>`,              
+              reason: checkResult.reason,
+            },
+          )
+        );        
       } else {
-        // parentPort.postMessage(
-        //   this.qwm.debugger(
-        //     {
-        //       event: `<a class='single-event-check-notice' href='${eventToCheck.venueEventUrl}'>nee: ${eventToCheck.title}<a/>`,              
-        //       reason: checkResult.reason,
-        //     },
-        //   )
-        // );
+        parentPort.postMessage(
+          this.qwm.debugger(
+            {
+              title: 'Raw event async check',
+              event: `<a class='single-event-check-notice single-event-check-notice--failure' href='${eventToCheck.venueEventUrl}'>${eventToCheck.title}<a/>`,              
+              reason: checkResult.reason,
+            },
+          )
+        );
       }
 
       return await this.rawEventsAsyncCheck({
@@ -826,7 +829,12 @@ export default class AbstractScraper {
    */
   async isRock(event, overloadTitles = null, recursiveTitle = null) {
 
-    const workingTitle = recursiveTitle || event.title.replace(/&.*/, "").trim().toLowerCase();
+    let workingTitle = recursiveTitle || event.title.replace(/&.*/, "").trim().toLowerCase();
+
+    // - 14:35 zoals bij afas
+    if (workingTitle.match(/\s?-\s?\d\d:\d\d/)){
+      workingTitle = workingTitle.replace(/\s?-\s?\d\d:\d\d/, '');
+    }
 
     const rockRefuseListRes = await this.rockRefuseListCheck(event, workingTitle);
     if (rockRefuseListRes.succes) {

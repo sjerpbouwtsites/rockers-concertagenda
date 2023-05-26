@@ -23,6 +23,36 @@ const nuldertienScraper = new AbstractScraper(makeScraperConfig({
 
 nuldertienScraper.listenToMasterThread();
 
+// SINGLE RAW EVENT CHECK
+
+nuldertienScraper.singleRawEventCheck = async function(event){
+
+  const isRefused = await this.rockRefuseListCheck(event, event.title.toLowerCase())
+  if (isRefused.success) return {
+    reason: isRefused.reason,
+    event,
+    success: false
+  };
+
+  const isAllowed = await this.rockAllowListCheck(event, event.title.toLowerCase())
+  if (isAllowed.success) return isAllowed;
+
+  const hasForbiddenTerms = await this.hasForbiddenTerms(event);
+  if (hasForbiddenTerms.success) {
+    await this.saveRefusedTitle(event.title.toLowerCase())
+    return {
+      reason: hasForbiddenTerms.reason,
+      success: false,
+      event
+    }
+  }
+
+  return {
+    reason: [isRefused.reason, isAllowed.reason, hasForbiddenTerms.reason].join(';'),
+    event,
+    success: true
+  }
+}
 // MAKE BASE EVENTS
 
 nuldertienScraper.makeBaseEventList = async function () {

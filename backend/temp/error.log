@@ -1,4 +1,35 @@
 
+  afaslive-1 Error - 10:00:25 PM
+  TypeError: Cannot read properties of null (reading 'toLowerCase')
+    at AbstractScraper.hasForbiddenTerms (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:630:53)
+    at afasliveScraper.singleRawEventCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/afaslive.js:45:40)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.rawEventsAsyncCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:499:27)
+    at async AbstractScraper.announceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:473:12)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:204:27) 
+  Cannot read properties of null (reading 'toLowerCase')
+  
+  
+  013-3 Error - 9:51:49 PM
+  SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at AbstractScraper.checkBaseEventAvailable (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:256:17)
+    at nuldertienScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/013.js:60:42)
+    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:200:40)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Unexpected end of JSON input
+  
+  
+  013-2 Error - 9:51:49 PM
+  SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at AbstractScraper.checkBaseEventAvailable (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:256:17)
+    at nuldertienScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/013.js:60:42)
+    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:200:40)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Unexpected end of JSON input
+  
+  
   ticketmaster-3 Error - 9:35:40 PM
   Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-snelle-tickets/292043?language=en-us'>TM Zuiderpark Live: Snelle</a>
     at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
