@@ -243,8 +243,24 @@ depulScraper.getPageInfo = async function ({ page, event }) {
 // SINGLE EVENT CHECK 
 
 depulScraper.singleMergedEventCheck = async function (event) {
-  this.dirtyDebug(event)
-  const hasGoodTerms = await this.hasGoodTerms(event, ['title','shortText', 'longText']);
+  
+
+  let overloadTitle = '';
+  try {
+    overloadTitle = event.title.toLowerCase().replace(/\(.*\)/g, '').trim();  
+  } catch (error) {
+    this.debugger(error)
+  }
+
+  const isRockRes = await this.isRock(
+    event, 
+    [overloadTitle]
+  );
+  if (isRockRes.success){
+    return isRockRes;
+  }
+
+  const hasGoodTerms = await this.hasGoodTerms(event, ['title','shortText']);
   if (hasGoodTerms.success) return hasGoodTerms;
 
   return {

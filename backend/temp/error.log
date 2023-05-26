@@ -1,4 +1,172 @@
 
+  depul-0 Error - 10:20:41 AM
+  TypeError: Cannot read properties of undefined (reading 'replace')
+    at AbstractScraper.isRock (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:658:35)
+    at AbstractScraper.isRock (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:667:35)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async depulScraper.singleMergedEventCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/depul.js:255:21)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:755:33)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:125:5) 
+  Cannot read properties of undefined (reading 'replace')
+  
+  
+  depul-1 Error - 10:20:40 AM
+  TypeError: Cannot read properties of undefined (reading 'replace')
+    at AbstractScraper.isRock (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:658:35)
+    at AbstractScraper.isRock (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:667:35)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async depulScraper.singleMergedEventCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/depul.js:255:21)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:755:33)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:125:5) 
+  Cannot read properties of undefined (reading 'replace')
+  
+  
+  depul-0 Error - 10:10:43 AM
+  TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefined
+    at Object.openSync (node:fs:582:10)
+    at Object.readFileSync (node:fs:458:35)
+    at AbstractScraper.hasGoodTerms (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:508:33)
+    at depulScraper.singleMergedEventCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/depul.js:257:35)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:756:33)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:125:5) 
+  The "path" argument must be of type string or an instance of Buffer or URL. Received undefined
+  
+  
+  depul-0 Error - 10:10:23 AM
+  TypeError: overloadFunc is not a function
+    at AbstractScraper.isRock (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:667:27)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async depulScraper.singleMergedEventCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/depul.js:249:21)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:756:33)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:125:5) 
+  overloadFunc is not a function
+  
+  
+  depul-0 Error - 9:56:48 AM
+  ReferenceError: wikiPage is not defined
+    at AbstractScraper.isRock (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:663:137)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async depulScraper.singleMergedEventCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/depul.js:247:21)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:744:33)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:125:5) 
+  wikiPage is not defined
+  
+  
+  depul-1 Error - 9:56:47 AM
+  ReferenceError: wikiPage is not defined
+    at AbstractScraper.isRock (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:663:137)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async depulScraper.singleMergedEventCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/depul.js:247:21)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:744:33)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:125:5) 
+  wikiPage is not defined
+  
+  
+  dehelling-0 Error - 9:37:36 AM
+  Error: image missing <a class='page-info' href='https://dehelling.nl/agenda/?zoeken=&genre%5B%5D=heavy'>dehelling main - Le Guess Who?</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:296:29
+    at Array.forEach (<anonymous>)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:293:17
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.makeBaseEventListEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:289:33)
+    at dehellingScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dehelling.js:39:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:117:29) 
+  image missing <a class='page-info' href='https://dehelling.nl/agenda/?zoeken=&genre%5B%5D=heavy'>dehelling main - Le Guess Who?</a>
+  
+  
+  dehelling-0 Error - 9:37:36 AM
+  Error: image missing <a class='page-info' href='https://dehelling.nl/agenda/?zoeken=&genre%5B%5D=heavy'>dehelling main - Le Guess Who?</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:296:29
+    at Array.forEach (<anonymous>)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:293:17
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.makeBaseEventListEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:289:33)
+    at dehellingScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dehelling.js:39:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:117:29) 
+  image missing <a class='page-info' href='https://dehelling.nl/agenda/?zoeken=&genre%5B%5D=heavy'>dehelling main - Le Guess Who?</a>
+  
+  
+  dehelling-0 Error - 9:37:36 AM
+  Error: image missing <a class='page-info' href='https://dehelling.nl/agenda/?zoeken=&genre%5B%5D=heavy'>dehelling main - Le Guess Who?</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:296:29
+    at Array.forEach (<anonymous>)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:293:17
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.makeBaseEventListEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:289:33)
+    at dehellingScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dehelling.js:39:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:117:29) 
+  image missing <a class='page-info' href='https://dehelling.nl/agenda/?zoeken=&genre%5B%5D=heavy'>dehelling main - Le Guess Who?</a>
+  
+  
+  dehelling-0 Error - 9:37:36 AM
+  Error: image missing <a class='page-info' href='https://dehelling.nl/agenda/?zoeken=&genre%5B%5D=heavy'>dehelling main - Le Guess Who?</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:296:29
+    at Array.forEach (<anonymous>)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:293:17
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.makeBaseEventListEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:289:33)
+    at dehellingScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dehelling.js:39:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:117:29) 
+  image missing <a class='page-info' href='https://dehelling.nl/agenda/?zoeken=&genre%5B%5D=heavy'>dehelling main - Le Guess Who?</a>
+  
+  
+  dehelling-0 Error - 9:35:24 AM
+  Error: image missing <a class='page-info' href='https://dehelling.nl/agenda/?zoeken=&genre%5B%5D=heavy'>dehelling main - Le Guess Who?</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:296:29
+    at Array.forEach (<anonymous>)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:293:17
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.makeBaseEventListEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:289:33)
+    at dehellingScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dehelling.js:39:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:117:29) 
+  image missing <a class='page-info' href='https://dehelling.nl/agenda/?zoeken=&genre%5B%5D=heavy'>dehelling main - Le Guess Who?</a>
+  
+  
+  dehelling-0 Error - 9:35:24 AM
+  Error: image missing <a class='page-info' href='https://dehelling.nl/agenda/?zoeken=&genre%5B%5D=heavy'>dehelling main - Le Guess Who?</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:296:29
+    at Array.forEach (<anonymous>)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:293:17
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.makeBaseEventListEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:289:33)
+    at dehellingScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dehelling.js:39:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:117:29) 
+  image missing <a class='page-info' href='https://dehelling.nl/agenda/?zoeken=&genre%5B%5D=heavy'>dehelling main - Le Guess Who?</a>
+  
+  
+  dehelling-0 Error - 9:35:24 AM
+  Error: image missing <a class='page-info' href='https://dehelling.nl/agenda/?zoeken=&genre%5B%5D=heavy'>dehelling main - Le Guess Who?</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:296:29
+    at Array.forEach (<anonymous>)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:293:17
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.makeBaseEventListEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:289:33)
+    at dehellingScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dehelling.js:39:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:117:29) 
+  image missing <a class='page-info' href='https://dehelling.nl/agenda/?zoeken=&genre%5B%5D=heavy'>dehelling main - Le Guess Who?</a>
+  
+  
+  dehelling-0 Error - 9:35:24 AM
+  Error: image missing <a class='page-info' href='https://dehelling.nl/agenda/?zoeken=&genre%5B%5D=heavy'>dehelling main - Le Guess Who?</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:296:29
+    at Array.forEach (<anonymous>)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:293:17
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.makeBaseEventListEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:289:33)
+    at dehellingScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dehelling.js:39:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:117:29) 
+  image missing <a class='page-info' href='https://dehelling.nl/agenda/?zoeken=&genre%5B%5D=heavy'>dehelling main - Le Guess Who?</a>
+  
+  
   dbs-0 Error - 6:05:40 AM
   TimeoutError: waiting for selector `[data-testid]` failed: timeout 6500ms exceeded
     at new WaitTask (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:528:34)
