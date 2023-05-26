@@ -1,4 +1,814 @@
 
+  ticketmaster-3 Error - 9:35:40 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-snelle-tickets/292043?language=en-us'>TM Zuiderpark Live: Snelle</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:200:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-snelle-tickets/292043?language=en-us'>TM Zuiderpark Live: Snelle</a>
+  
+  
+  ticketmaster-1 Error - 9:35:40 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/parkheuvel-sunday-late-lunch-only-valid-icw-a-dayticket--tickets/293375?language=en-us'>TM Parkheuvel - Sunday: Late Lunch (Only Valid i.c.w. A Dayticket)</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:200:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/parkheuvel-sunday-late-lunch-only-valid-icw-a-dayticket--tickets/293375?language=en-us'>TM Parkheuvel - Sunday: Late Lunch (Only Valid i.c.w. A Dayticket)</a>
+  
+  
+  ticketmaster-1 Error - 9:35:40 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/parkheuvel-sunday-early-dinner-only-valid-icw-a-dayticket--tickets/293391?language=en-us'>TM Parkheuvel - Sunday: Early Dinner (Only Valid i.c.w. A Dayticket)</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:200:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/parkheuvel-sunday-early-dinner-only-valid-icw-a-dayticket--tickets/293391?language=en-us'>TM Parkheuvel - Sunday: Early Dinner (Only Valid i.c.w. A Dayticket)</a>
+  
+  
+  ticketmaster-1 Error - 9:35:39 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/combi-tickets-parkheuvel-at-nn-north-sea-jazz-festival-2023-%7C-sunday-tickets/293389?language=en-us'>TM Combi Tickets Parkheuvel at NN North Sea Jazz Festival 2023 | Sunday</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:200:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/combi-tickets-parkheuvel-at-nn-north-sea-jazz-festival-2023-%7C-sunday-tickets/293389?language=en-us'>TM Combi Tickets Parkheuvel at NN North Sea Jazz Festival 2023 | Sunday</a>
+  
+  
+  ticketmaster-1 Error - 9:35:39 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-miss-montreal-tickets/292031?language=en-us'>TM Zuiderpark Live: Miss Montreal</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:200:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-miss-montreal-tickets/292031?language=en-us'>TM Zuiderpark Live: Miss Montreal</a>
+  
+  
+  ticketmaster-4 Error - 9:35:39 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/l_parking-permit-brain-balance-live-dag-tickets/293725?language=en-us'>TM L_parking permit Brain Balance Live dag</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:200:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/l_parking-permit-brain-balance-live-dag-tickets/293725?language=en-us'>TM L_parking permit Brain Balance Live dag</a>
+  
+  
+  ticketmaster-0 Error - 9:35:39 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/wu-tang-clan--nas-%7C-vip2-golden-circle-early-entry-package-tickets/290597?language=en-us'>TM Wu-Tang Clan & Nas | VIP2 - Golden Circle Early Entry Package</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:200:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/wu-tang-clan--nas-%7C-vip2-golden-circle-early-entry-package-tickets/290597?language=en-us'>TM Wu-Tang Clan & Nas | VIP2 - Golden Circle Early Entry Package</a>
+  
+  
+  ticketmaster-0 Error - 9:35:39 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/wu-tang-clan--nas-%7C-vip3-premium-seated-package-tickets/290601?language=en-us'>TM Wu-Tang Clan & Nas | VIP3 - Premium Seated Package</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:200:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/wu-tang-clan--nas-%7C-vip3-premium-seated-package-tickets/290601?language=en-us'>TM Wu-Tang Clan & Nas | VIP3 - Premium Seated Package</a>
+  
+  
+  ticketmaster-0 Error - 9:35:39 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/wu-tang-clan--nas-%7C-vip1-vip-hospitality-package-tickets/290603?language=en-us'>TM Wu-Tang Clan & Nas | VIP1 - VIP Hospitality Package</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:200:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/wu-tang-clan--nas-%7C-vip1-vip-hospitality-package-tickets/290603?language=en-us'>TM Wu-Tang Clan & Nas | VIP1 - VIP Hospitality Package</a>
+  
+  
+  ticketmaster-2 Error - 9:35:39 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-racoon-tickets/292035?language=en-us'>TM Zuiderpark Live: Racoon</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:200:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-racoon-tickets/292035?language=en-us'>TM Zuiderpark Live: Racoon</a>
+  
+  
+  ticketmaster-2 Error - 9:35:39 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-suzan--freek-tickets/292423?language=en-us'>TM Zuiderpark Live: Suzan & Freek</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:200:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-suzan--freek-tickets/292423?language=en-us'>TM Zuiderpark Live: Suzan & Freek</a>
+  
+  
+  ticketmaster-2 Error - 9:35:39 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-meau-tickets/292027?language=en-us'>TM Zuiderpark Live: MEAU</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:200:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-meau-tickets/292027?language=en-us'>TM Zuiderpark Live: MEAU</a>
+  
+  
+  ticketmaster-3 Error - 9:29:30 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-snelle-tickets/292043?language=en-us'>TM Zuiderpark Live: Snelle</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:200:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-snelle-tickets/292043?language=en-us'>TM Zuiderpark Live: Snelle</a>
+  
+  
+  ticketmaster-0 Error - 9:29:29 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/wu-tang-clan--nas-%7C-vip2-golden-circle-early-entry-package-tickets/290597?language=en-us'>TM Wu-Tang Clan & Nas | VIP2 - Golden Circle Early Entry Package</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:200:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/wu-tang-clan--nas-%7C-vip2-golden-circle-early-entry-package-tickets/290597?language=en-us'>TM Wu-Tang Clan & Nas | VIP2 - Golden Circle Early Entry Package</a>
+  
+  
+  ticketmaster-0 Error - 9:29:29 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/wu-tang-clan--nas-%7C-vip3-premium-seated-package-tickets/290601?language=en-us'>TM Wu-Tang Clan & Nas | VIP3 - Premium Seated Package</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:200:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/wu-tang-clan--nas-%7C-vip3-premium-seated-package-tickets/290601?language=en-us'>TM Wu-Tang Clan & Nas | VIP3 - Premium Seated Package</a>
+  
+  
+  ticketmaster-0 Error - 9:29:29 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/wu-tang-clan--nas-%7C-vip1-vip-hospitality-package-tickets/290603?language=en-us'>TM Wu-Tang Clan & Nas | VIP1 - VIP Hospitality Package</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:200:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/wu-tang-clan--nas-%7C-vip1-vip-hospitality-package-tickets/290603?language=en-us'>TM Wu-Tang Clan & Nas | VIP1 - VIP Hospitality Package</a>
+  
+  
+  ticketmaster-2 Error - 9:29:29 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-racoon-tickets/292035?language=en-us'>TM Zuiderpark Live: Racoon</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:200:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-racoon-tickets/292035?language=en-us'>TM Zuiderpark Live: Racoon</a>
+  
+  
+  ticketmaster-2 Error - 9:29:29 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-suzan--freek-tickets/292423?language=en-us'>TM Zuiderpark Live: Suzan & Freek</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:200:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-suzan--freek-tickets/292423?language=en-us'>TM Zuiderpark Live: Suzan & Freek</a>
+  
+  
+  ticketmaster-2 Error - 9:29:29 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-meau-tickets/292027?language=en-us'>TM Zuiderpark Live: MEAU</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:200:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-meau-tickets/292027?language=en-us'>TM Zuiderpark Live: MEAU</a>
+  
+  
+  ticketmaster-1 Error - 9:29:29 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/parkheuvel-sunday-late-lunch-only-valid-icw-a-dayticket--tickets/293375?language=en-us'>TM Parkheuvel - Sunday: Late Lunch (Only Valid i.c.w. A Dayticket)</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:200:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/parkheuvel-sunday-late-lunch-only-valid-icw-a-dayticket--tickets/293375?language=en-us'>TM Parkheuvel - Sunday: Late Lunch (Only Valid i.c.w. A Dayticket)</a>
+  
+  
+  ticketmaster-1 Error - 9:29:29 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/parkheuvel-sunday-early-dinner-only-valid-icw-a-dayticket--tickets/293391?language=en-us'>TM Parkheuvel - Sunday: Early Dinner (Only Valid i.c.w. A Dayticket)</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:200:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/parkheuvel-sunday-early-dinner-only-valid-icw-a-dayticket--tickets/293391?language=en-us'>TM Parkheuvel - Sunday: Early Dinner (Only Valid i.c.w. A Dayticket)</a>
+  
+  
+  ticketmaster-1 Error - 9:29:29 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/combi-tickets-parkheuvel-at-nn-north-sea-jazz-festival-2023-%7C-sunday-tickets/293389?language=en-us'>TM Combi Tickets Parkheuvel at NN North Sea Jazz Festival 2023 | Sunday</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:200:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/combi-tickets-parkheuvel-at-nn-north-sea-jazz-festival-2023-%7C-sunday-tickets/293389?language=en-us'>TM Combi Tickets Parkheuvel at NN North Sea Jazz Festival 2023 | Sunday</a>
+  
+  
+  ticketmaster-1 Error - 9:29:29 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-miss-montreal-tickets/292031?language=en-us'>TM Zuiderpark Live: Miss Montreal</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:200:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-miss-montreal-tickets/292031?language=en-us'>TM Zuiderpark Live: Miss Montreal</a>
+  
+  
+  ticketmaster-4 Error - 9:29:28 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/l_parking-permit-brain-balance-live-dag-tickets/293725?language=en-us'>TM L_parking permit Brain Balance Live dag</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:200:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/l_parking-permit-brain-balance-live-dag-tickets/293725?language=en-us'>TM L_parking permit Brain Balance Live dag</a>
+  
+  
+  ticketmaster-3 Error - 9:29:08 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-snelle-tickets/292043?language=en-us'>TM Zuiderpark Live: Snelle</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:200:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-snelle-tickets/292043?language=en-us'>TM Zuiderpark Live: Snelle</a>
+  
+  
+  ticketmaster-2 Error - 9:29:07 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-racoon-tickets/292035?language=en-us'>TM Zuiderpark Live: Racoon</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:200:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-racoon-tickets/292035?language=en-us'>TM Zuiderpark Live: Racoon</a>
+  
+  
+  ticketmaster-2 Error - 9:29:07 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-suzan--freek-tickets/292423?language=en-us'>TM Zuiderpark Live: Suzan & Freek</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:200:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-suzan--freek-tickets/292423?language=en-us'>TM Zuiderpark Live: Suzan & Freek</a>
+  
+  
+  ticketmaster-2 Error - 9:29:07 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-meau-tickets/292027?language=en-us'>TM Zuiderpark Live: MEAU</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:200:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-meau-tickets/292027?language=en-us'>TM Zuiderpark Live: MEAU</a>
+  
+  
+  ticketmaster-4 Error - 9:29:07 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/l_parking-permit-brain-balance-live-dag-tickets/293725?language=en-us'>TM L_parking permit Brain Balance Live dag</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:200:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/l_parking-permit-brain-balance-live-dag-tickets/293725?language=en-us'>TM L_parking permit Brain Balance Live dag</a>
+  
+  
+  ticketmaster-1 Error - 9:29:07 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/parkheuvel-sunday-late-lunch-only-valid-icw-a-dayticket--tickets/293375?language=en-us'>TM Parkheuvel - Sunday: Late Lunch (Only Valid i.c.w. A Dayticket)</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:200:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/parkheuvel-sunday-late-lunch-only-valid-icw-a-dayticket--tickets/293375?language=en-us'>TM Parkheuvel - Sunday: Late Lunch (Only Valid i.c.w. A Dayticket)</a>
+  
+  
+  ticketmaster-1 Error - 9:29:07 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/parkheuvel-sunday-early-dinner-only-valid-icw-a-dayticket--tickets/293391?language=en-us'>TM Parkheuvel - Sunday: Early Dinner (Only Valid i.c.w. A Dayticket)</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:200:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/parkheuvel-sunday-early-dinner-only-valid-icw-a-dayticket--tickets/293391?language=en-us'>TM Parkheuvel - Sunday: Early Dinner (Only Valid i.c.w. A Dayticket)</a>
+  
+  
+  ticketmaster-1 Error - 9:29:07 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/combi-tickets-parkheuvel-at-nn-north-sea-jazz-festival-2023-%7C-sunday-tickets/293389?language=en-us'>TM Combi Tickets Parkheuvel at NN North Sea Jazz Festival 2023 | Sunday</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:200:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/combi-tickets-parkheuvel-at-nn-north-sea-jazz-festival-2023-%7C-sunday-tickets/293389?language=en-us'>TM Combi Tickets Parkheuvel at NN North Sea Jazz Festival 2023 | Sunday</a>
+  
+  
+  ticketmaster-1 Error - 9:29:07 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-miss-montreal-tickets/292031?language=en-us'>TM Zuiderpark Live: Miss Montreal</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:200:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-miss-montreal-tickets/292031?language=en-us'>TM Zuiderpark Live: Miss Montreal</a>
+  
+  
+  ticketmaster-0 Error - 9:29:06 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/wu-tang-clan--nas-%7C-vip2-golden-circle-early-entry-package-tickets/290597?language=en-us'>TM Wu-Tang Clan & Nas | VIP2 - Golden Circle Early Entry Package</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:200:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/wu-tang-clan--nas-%7C-vip2-golden-circle-early-entry-package-tickets/290597?language=en-us'>TM Wu-Tang Clan & Nas | VIP2 - Golden Circle Early Entry Package</a>
+  
+  
+  ticketmaster-0 Error - 9:29:06 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/wu-tang-clan--nas-%7C-vip3-premium-seated-package-tickets/290601?language=en-us'>TM Wu-Tang Clan & Nas | VIP3 - Premium Seated Package</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:200:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/wu-tang-clan--nas-%7C-vip3-premium-seated-package-tickets/290601?language=en-us'>TM Wu-Tang Clan & Nas | VIP3 - Premium Seated Package</a>
+  
+  
+  ticketmaster-0 Error - 9:29:06 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/wu-tang-clan--nas-%7C-vip1-vip-hospitality-package-tickets/290603?language=en-us'>TM Wu-Tang Clan & Nas | VIP1 - VIP Hospitality Package</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:200:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/wu-tang-clan--nas-%7C-vip1-vip-hospitality-package-tickets/290603?language=en-us'>TM Wu-Tang Clan & Nas | VIP1 - VIP Hospitality Package</a>
+  
+  
+  ticketmaster-2 Error - 9:27:38 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-racoon-tickets/292035?language=en-us'>TM Zuiderpark Live: Racoon</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:200:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-racoon-tickets/292035?language=en-us'>TM Zuiderpark Live: Racoon</a>
+  
+  
+  ticketmaster-2 Error - 9:27:38 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-suzan--freek-tickets/292423?language=en-us'>TM Zuiderpark Live: Suzan & Freek</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:200:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-suzan--freek-tickets/292423?language=en-us'>TM Zuiderpark Live: Suzan & Freek</a>
+  
+  
+  ticketmaster-2 Error - 9:27:38 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-meau-tickets/292027?language=en-us'>TM Zuiderpark Live: MEAU</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:200:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-meau-tickets/292027?language=en-us'>TM Zuiderpark Live: MEAU</a>
+  
+  
+  ticketmaster-0 Error - 9:27:38 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/wu-tang-clan--nas-%7C-vip2-golden-circle-early-entry-package-tickets/290597?language=en-us'>TM Wu-Tang Clan & Nas | VIP2 - Golden Circle Early Entry Package</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:200:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/wu-tang-clan--nas-%7C-vip2-golden-circle-early-entry-package-tickets/290597?language=en-us'>TM Wu-Tang Clan & Nas | VIP2 - Golden Circle Early Entry Package</a>
+  
+  
+  ticketmaster-0 Error - 9:27:38 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/wu-tang-clan--nas-%7C-vip3-premium-seated-package-tickets/290601?language=en-us'>TM Wu-Tang Clan & Nas | VIP3 - Premium Seated Package</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:200:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/wu-tang-clan--nas-%7C-vip3-premium-seated-package-tickets/290601?language=en-us'>TM Wu-Tang Clan & Nas | VIP3 - Premium Seated Package</a>
+  
+  
+  ticketmaster-0 Error - 9:27:38 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/wu-tang-clan--nas-%7C-vip1-vip-hospitality-package-tickets/290603?language=en-us'>TM Wu-Tang Clan & Nas | VIP1 - VIP Hospitality Package</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:200:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/wu-tang-clan--nas-%7C-vip1-vip-hospitality-package-tickets/290603?language=en-us'>TM Wu-Tang Clan & Nas | VIP1 - VIP Hospitality Package</a>
+  
+  
+  ticketmaster-4 Error - 9:27:38 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/l_parking-permit-brain-balance-live-dag-tickets/293725?language=en-us'>TM L_parking permit Brain Balance Live dag</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:200:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/l_parking-permit-brain-balance-live-dag-tickets/293725?language=en-us'>TM L_parking permit Brain Balance Live dag</a>
+  
+  
+  ticketmaster-1 Error - 9:27:37 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/parkheuvel-sunday-late-lunch-only-valid-icw-a-dayticket--tickets/293375?language=en-us'>TM Parkheuvel - Sunday: Late Lunch (Only Valid i.c.w. A Dayticket)</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:200:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/parkheuvel-sunday-late-lunch-only-valid-icw-a-dayticket--tickets/293375?language=en-us'>TM Parkheuvel - Sunday: Late Lunch (Only Valid i.c.w. A Dayticket)</a>
+  
+  
+  ticketmaster-1 Error - 9:27:37 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/parkheuvel-sunday-early-dinner-only-valid-icw-a-dayticket--tickets/293391?language=en-us'>TM Parkheuvel - Sunday: Early Dinner (Only Valid i.c.w. A Dayticket)</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:200:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/parkheuvel-sunday-early-dinner-only-valid-icw-a-dayticket--tickets/293391?language=en-us'>TM Parkheuvel - Sunday: Early Dinner (Only Valid i.c.w. A Dayticket)</a>
+  
+  
+  ticketmaster-1 Error - 9:27:37 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/combi-tickets-parkheuvel-at-nn-north-sea-jazz-festival-2023-%7C-sunday-tickets/293389?language=en-us'>TM Combi Tickets Parkheuvel at NN North Sea Jazz Festival 2023 | Sunday</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:200:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/combi-tickets-parkheuvel-at-nn-north-sea-jazz-festival-2023-%7C-sunday-tickets/293389?language=en-us'>TM Combi Tickets Parkheuvel at NN North Sea Jazz Festival 2023 | Sunday</a>
+  
+  
+  ticketmaster-1 Error - 9:27:37 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-miss-montreal-tickets/292031?language=en-us'>TM Zuiderpark Live: Miss Montreal</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:200:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-miss-montreal-tickets/292031?language=en-us'>TM Zuiderpark Live: Miss Montreal</a>
+  
+  
+  ticketmaster-3 Error - 9:27:37 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-snelle-tickets/292043?language=en-us'>TM Zuiderpark Live: Snelle</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:200:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-snelle-tickets/292043?language=en-us'>TM Zuiderpark Live: Snelle</a>
+  
+  
+  ticketmaster-0 Error - 9:25:42 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/wu-tang-clan--nas-%7C-vip2-golden-circle-early-entry-package-tickets/290597?language=en-us'>TM Wu-Tang Clan & Nas | VIP2 - Golden Circle Early Entry Package</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:200:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/wu-tang-clan--nas-%7C-vip2-golden-circle-early-entry-package-tickets/290597?language=en-us'>TM Wu-Tang Clan & Nas | VIP2 - Golden Circle Early Entry Package</a>
+  
+  
+  ticketmaster-0 Error - 9:25:42 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/wu-tang-clan--nas-%7C-vip3-premium-seated-package-tickets/290601?language=en-us'>TM Wu-Tang Clan & Nas | VIP3 - Premium Seated Package</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:200:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/wu-tang-clan--nas-%7C-vip3-premium-seated-package-tickets/290601?language=en-us'>TM Wu-Tang Clan & Nas | VIP3 - Premium Seated Package</a>
+  
+  
+  ticketmaster-0 Error - 9:25:42 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/wu-tang-clan--nas-%7C-vip1-vip-hospitality-package-tickets/290603?language=en-us'>TM Wu-Tang Clan & Nas | VIP1 - VIP Hospitality Package</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:200:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/wu-tang-clan--nas-%7C-vip1-vip-hospitality-package-tickets/290603?language=en-us'>TM Wu-Tang Clan & Nas | VIP1 - VIP Hospitality Package</a>
+  
+  
+  ticketmaster-3 Error - 9:25:42 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-snelle-tickets/292043?language=en-us'>TM Zuiderpark Live: Snelle</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:200:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-snelle-tickets/292043?language=en-us'>TM Zuiderpark Live: Snelle</a>
+  
+  
+  ticketmaster-4 Error - 9:25:41 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/l_parking-permit-brain-balance-live-dag-tickets/293725?language=en-us'>TM L_parking permit Brain Balance Live dag</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:200:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/l_parking-permit-brain-balance-live-dag-tickets/293725?language=en-us'>TM L_parking permit Brain Balance Live dag</a>
+  
+  
+  ticketmaster-1 Error - 9:25:41 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/parkheuvel-sunday-late-lunch-only-valid-icw-a-dayticket--tickets/293375?language=en-us'>TM Parkheuvel - Sunday: Late Lunch (Only Valid i.c.w. A Dayticket)</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:200:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/parkheuvel-sunday-late-lunch-only-valid-icw-a-dayticket--tickets/293375?language=en-us'>TM Parkheuvel - Sunday: Late Lunch (Only Valid i.c.w. A Dayticket)</a>
+  
+  
+  ticketmaster-1 Error - 9:25:41 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/parkheuvel-sunday-early-dinner-only-valid-icw-a-dayticket--tickets/293391?language=en-us'>TM Parkheuvel - Sunday: Early Dinner (Only Valid i.c.w. A Dayticket)</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:200:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/parkheuvel-sunday-early-dinner-only-valid-icw-a-dayticket--tickets/293391?language=en-us'>TM Parkheuvel - Sunday: Early Dinner (Only Valid i.c.w. A Dayticket)</a>
+  
+  
+  ticketmaster-1 Error - 9:25:41 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/combi-tickets-parkheuvel-at-nn-north-sea-jazz-festival-2023-%7C-sunday-tickets/293389?language=en-us'>TM Combi Tickets Parkheuvel at NN North Sea Jazz Festival 2023 | Sunday</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:200:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/combi-tickets-parkheuvel-at-nn-north-sea-jazz-festival-2023-%7C-sunday-tickets/293389?language=en-us'>TM Combi Tickets Parkheuvel at NN North Sea Jazz Festival 2023 | Sunday</a>
+  
+  
+  ticketmaster-1 Error - 9:25:41 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-miss-montreal-tickets/292031?language=en-us'>TM Zuiderpark Live: Miss Montreal</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:200:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-miss-montreal-tickets/292031?language=en-us'>TM Zuiderpark Live: Miss Montreal</a>
+  
+  
+  ticketmaster-2 Error - 9:25:41 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-racoon-tickets/292035?language=en-us'>TM Zuiderpark Live: Racoon</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:200:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-racoon-tickets/292035?language=en-us'>TM Zuiderpark Live: Racoon</a>
+  
+  
+  ticketmaster-2 Error - 9:25:41 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-suzan--freek-tickets/292423?language=en-us'>TM Zuiderpark Live: Suzan & Freek</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:200:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-suzan--freek-tickets/292423?language=en-us'>TM Zuiderpark Live: Suzan & Freek</a>
+  
+  
+  ticketmaster-2 Error - 9:25:41 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-meau-tickets/292027?language=en-us'>TM Zuiderpark Live: MEAU</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:200:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-meau-tickets/292027?language=en-us'>TM Zuiderpark Live: MEAU</a>
+  
+  
+  ticketmaster-0 Error - 9:03:20 PM
+  TypeError: Cannot read properties of undefined (reading 'id')
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:273:46
+    at Array.filter (<anonymous>)
+    at ticketmasterScraper.filterForMetal (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:269:20)
+    at ticketmasterScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:102:32)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:199:29) 
+  Cannot read properties of undefined (reading 'id')
+  
+  
+  ticketmaster-4 Error - 8:46:15 PM
+  Error: Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/night-fever--a-tribute-to-the-bee-gees-tickets/290835?language=en-us'>TM Night Fever – a tribute to the BEE GEES</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:223:21)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/night-fever--a-tribute-to-the-bee-gees-tickets/290835?language=en-us'>TM Night Fever – a tribute to the BEE GEES</a>
+  
+  
+  ticketmaster-4 Error - 8:46:15 PM
+  Error: Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/naaz-tickets/292017?language=en-us'>TM Naaz</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:223:21)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/naaz-tickets/292017?language=en-us'>TM Naaz</a>
+  
+  
+  ticketmaster-4 Error - 8:46:15 PM
+  Error: Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/the-greates-love-of-all--a-tribute-to-whitney-houston-tickets/292501?language=en-us'>TM The Greates Love Of All – A Tribute to Whitney Houston</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:223:21)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/the-greates-love-of-all--a-tribute-to-whitney-houston-tickets/292501?language=en-us'>TM The Greates Love Of All – A Tribute to Whitney Houston</a>
+  
+  
+  ticketmaster-0 Error - 8:46:14 PM
+  Error: Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/muse--park--tram--location-megastores-1-vehicle--tickets/291593?language=en-us'>TM Muse – Park & Tram – Location MegaStores (1 vehicle)</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:223:21)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/muse--park--tram--location-megastores-1-vehicle--tickets/291593?language=en-us'>TM Muse – Park & Tram – Location MegaStores (1 vehicle)</a>
+  
+  
+  ticketmaster-3 Error - 8:46:12 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-snelle-tickets/292043?language=en-us'>TM Zuiderpark Live: Snelle</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:193:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-snelle-tickets/292043?language=en-us'>TM Zuiderpark Live: Snelle</a>
+  
+  
+  ticketmaster-1 Error - 8:46:11 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-miss-montreal-tickets/292031?language=en-us'>TM Zuiderpark Live: Miss Montreal</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:193:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-miss-montreal-tickets/292031?language=en-us'>TM Zuiderpark Live: Miss Montreal</a>
+  
+  
+  ticketmaster-2 Error - 8:46:09 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-racoon-tickets/292035?language=en-us'>TM Zuiderpark Live: Racoon</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:193:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-racoon-tickets/292035?language=en-us'>TM Zuiderpark Live: Racoon</a>
+  
+  
+  ticketmaster-2 Error - 8:46:09 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-suzan--freek-tickets/292423?language=en-us'>TM Zuiderpark Live: Suzan & Freek</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:193:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-suzan--freek-tickets/292423?language=en-us'>TM Zuiderpark Live: Suzan & Freek</a>
+  
+  
+  ticketmaster-2 Error - 8:46:09 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-meau-tickets/292027?language=en-us'>TM Zuiderpark Live: MEAU</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:193:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-meau-tickets/292027?language=en-us'>TM Zuiderpark Live: MEAU</a>
+  
+  
+  ticketmaster-2 Error - 8:46:09 PM
+  Error: Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/live-in-hoorn-tickets/289883?language=en-us'>TM LIVE IN HOORN</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:223:21)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/live-in-hoorn-tickets/289883?language=en-us'>TM LIVE IN HOORN</a>
+  
+  
+  ticketmaster-1 Error - 8:44:47 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-miss-montreal-tickets/292031?language=en-us'>TM Zuiderpark Live: Miss Montreal</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:193:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-miss-montreal-tickets/292031?language=en-us'>TM Zuiderpark Live: Miss Montreal</a>
+  
+  
+  ticketmaster-4 Error - 8:44:45 PM
+  Error: Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/night-fever--a-tribute-to-the-bee-gees-tickets/290835?language=en-us'>TM Night Fever – a tribute to the BEE GEES</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:223:21)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/night-fever--a-tribute-to-the-bee-gees-tickets/290835?language=en-us'>TM Night Fever – a tribute to the BEE GEES</a>
+  
+  
+  ticketmaster-4 Error - 8:44:45 PM
+  Error: Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/naaz-tickets/292017?language=en-us'>TM Naaz</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:223:21)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/naaz-tickets/292017?language=en-us'>TM Naaz</a>
+  
+  
+  ticketmaster-4 Error - 8:44:45 PM
+  Error: Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/the-greates-love-of-all--a-tribute-to-whitney-houston-tickets/292501?language=en-us'>TM The Greates Love Of All – A Tribute to Whitney Houston</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:223:21)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/the-greates-love-of-all--a-tribute-to-whitney-houston-tickets/292501?language=en-us'>TM The Greates Love Of All – A Tribute to Whitney Houston</a>
+  
+  
+  ticketmaster-2 Error - 8:44:43 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-racoon-tickets/292035?language=en-us'>TM Zuiderpark Live: Racoon</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:193:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-racoon-tickets/292035?language=en-us'>TM Zuiderpark Live: Racoon</a>
+  
+  
+  ticketmaster-2 Error - 8:44:43 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-suzan--freek-tickets/292423?language=en-us'>TM Zuiderpark Live: Suzan & Freek</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:193:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-suzan--freek-tickets/292423?language=en-us'>TM Zuiderpark Live: Suzan & Freek</a>
+  
+  
+  ticketmaster-2 Error - 8:44:43 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-meau-tickets/292027?language=en-us'>TM Zuiderpark Live: MEAU</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:193:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-meau-tickets/292027?language=en-us'>TM Zuiderpark Live: MEAU</a>
+  
+  
+  ticketmaster-2 Error - 8:44:43 PM
+  Error: Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/live-in-hoorn-tickets/289883?language=en-us'>TM LIVE IN HOORN</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:223:21)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/live-in-hoorn-tickets/289883?language=en-us'>TM LIVE IN HOORN</a>
+  
+  
+  ticketmaster-3 Error - 8:44:42 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-snelle-tickets/292043?language=en-us'>TM Zuiderpark Live: Snelle</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:193:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-snelle-tickets/292043?language=en-us'>TM Zuiderpark Live: Snelle</a>
+  
+  
+  ticketmaster-0 Error - 8:44:41 PM
+  Error: Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/muse--park--tram--location-megastores-1-vehicle--tickets/291593?language=en-us'>TM Muse – Park & Tram – Location MegaStores (1 vehicle)</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1056:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1051:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:223:21)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:910:22) 
+  Geen herkende ID locatie <a class='page-info' href='https://www.ticketmaster.nl/event/muse--park--tram--location-megastores-1-vehicle--tickets/291593?language=en-us'>TM Muse – Park & Tram – Location MegaStores (1 vehicle)</a>
+  
+  
   paradiso-4 Error - 6:48:50 PM
   Error: image missing <a class='page-info' href='https://www.paradiso.nl/program/the-chats-guantanamo-baywatch/37567'>The Chats + Guantanamo Baywatch</a>
     at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1050:29

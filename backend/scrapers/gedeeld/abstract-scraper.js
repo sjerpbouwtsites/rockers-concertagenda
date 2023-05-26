@@ -498,23 +498,23 @@ export default class AbstractScraper {
       const checkResult = await this.singleRawEventCheck(eventToCheck);
       if (checkResult.success) {
         useableEventsCheckedArray.push(eventToCheck);
-        parentPort.postMessage(
-          this.qwm.debugger(
-            {
-              event: `<a class='single-event-check-notice' href='${eventToCheck.venueEventUrl}'>ja: ${eventToCheck.title}<a/>`,              
-              reason: checkResult.reason,
-            },
-          )
-        );        
+        // parentPort.postMessage(
+        //   this.qwm.debugger(
+        //     {
+        //       event: `<a class='single-event-check-notice' href='${eventToCheck.venueEventUrl}'>ja: ${eventToCheck.title}<a/>`,              
+        //       reason: checkResult.reason,
+        //     },
+        //   )
+        // );        
       } else {
-        parentPort.postMessage(
-          this.qwm.debugger(
-            {
-              event: `<a class='single-event-check-notice' href='${eventToCheck.venueEventUrl}'>nee: ${eventToCheck.title}<a/>`,              
-              reason: checkResult.reason,
-            },
-          )
-        );
+        // parentPort.postMessage(
+        //   this.qwm.debugger(
+        //     {
+        //       event: `<a class='single-event-check-notice' href='${eventToCheck.venueEventUrl}'>nee: ${eventToCheck.title}<a/>`,              
+        //       reason: checkResult.reason,
+        //     },
+        //   )
+        // );
       }
 
       return await this.rawEventsAsyncCheck({
