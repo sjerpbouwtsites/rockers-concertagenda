@@ -1,4 +1,36 @@
 
+  iduna-0 Error - 12:30:13 PM
+  Error: geen startTime <a class='page-info' href='https://iduna.nl/event/ac-dc-50th-anniversary-tour/'>AC/DC 50th Anniversary Tour • a tribute by AC/DC UK</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:880:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:875:23)
+    at idunaScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/iduna.js:283:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:737:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:125:5) 
+  geen startTime <a class='page-info' href='https://iduna.nl/event/ac-dc-50th-anniversary-tour/'>AC/DC 50th Anniversary Tour • a tribute by AC/DC UK</a>
+  
+  
+  iduna-0 Error - 12:26:30 PM
+  Error: pageInfo object incompleet; geen errors
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:858:16)
+    at idunaScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/iduna.js:283:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:737:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:125:5) 
+  pageInfo object incompleet; geen errors
+  
+  
+  iduna-0 Error - 12:24:22 PM
+  Error: pageInfo object incompleet; geen errors
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:858:16)
+    at idunaScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/iduna.js:285:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:737:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:125:5) 
+  pageInfo object incompleet; geen errors
+  
+  
   gebrdenobel-0 Error - 12:00:32 PM
   Error: Timeout baseEvent
     at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:218:16)
