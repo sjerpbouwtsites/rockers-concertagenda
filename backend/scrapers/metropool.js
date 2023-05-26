@@ -2,19 +2,20 @@ import { workerData } from "worker_threads";
 import * as _t from "../mods/tools.js";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
-
+import fs from "fs";
+import fsDirections from "../mods/fs-directions.js";
 // SCRAPER CONFIG
 
 const metropoolScraper = new AbstractScraper(makeScraperConfig({
-  maxExecutionTime: 60000,
+  maxExecutionTime: 120000,
   workerData: Object.assign({}, workerData),
   puppeteerConfig: {
     mainPage: {
-      timeout: 35000,
+      timeout: 60000,
       waitUntil: "load",
     },
     singlePage: {
-      timeout: 25000
+      timeout: 45000
     },
     app: {
       mainPage: {
@@ -29,6 +30,63 @@ const metropoolScraper = new AbstractScraper(makeScraperConfig({
 }));
 
 metropoolScraper.listenToMasterThread();
+
+// SINGLE RAW EVENT CHECK
+
+metropoolScraper.singleRawEventCheck = async function(event){
+
+  const isRefused = await this.rockRefuseListCheck(event, event.title.toLowerCase())
+  if (isRefused.success) return {
+    reason: isRefused.reason,
+    event,
+    success: false
+  };
+
+  const isAllowed = await this.rockAllowListCheck(event, event.title.toLowerCase())
+  if (isAllowed.success) return isAllowed;
+
+  const hasForbiddenTerms = await this.hasForbiddenTerms(event);
+  if (hasForbiddenTerms.success) {
+    await this.saveRefusedTitle(event.title.toLowerCase())
+    return {
+      reason: hasForbiddenTerms.reason,
+      success: false,
+      event
+    }
+  }
+
+  const hasGoodTermsRes = await this.hasGoodTerms(event);
+  if (hasGoodTermsRes.success) {
+    await this.saveAllowedTitle(event.title.toLowerCase())
+    return hasGoodTermsRes;
+  }
+  // try {
+  const overloadTitles = [];
+  const tl = event.title.toLowerCase();
+  const match = tl.match(/([\w\s]+)\s+[+–&-]/) 
+  if (match && Array.isArray(match) && match.length) {
+    const ol1 = match[1].replace(/\s{2,100}/g,' ').trim();
+    if (ol1 !== tl) {
+      overloadTitles.push(ol1);
+    }
+  }
+  const match2 = tl
+    .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+    .match(/([\w\s]+)\s+[+–&-]/) 
+  if (match2 && Array.isArray(match2) && match2.length) {
+    const ol2 = match2[1].replace(/\s{2,100}/g,` `).trim();
+    if (ol2 !== tl) {
+      overloadTitles.push(ol2);
+    }
+  }
+  const isRockRes = await this.isRock(event, overloadTitles);
+  if (isRockRes.success){
+    await this.saveAllowedTitle(event.title.toLowerCase())
+  } else {
+    await this.saveRefusedTitle(event.title.toLowerCase())
+  }
+  return isRockRes;
+}
 
 // MAKE BASE EVENTS
 
@@ -50,17 +108,6 @@ metropoolScraper.makeBaseEventList = async function () {
 
   const rawEvents = await page.evaluate(({workerData}) => {
     return Array.from(document.querySelectorAll(".card--event"))
-      .filter((rawEvent) => {
-        const testText = rawEvent.dataset?.genres || rawEvent.textContent;
-
-        return (
-          testText.includes("metal") || 
-          testText.includes("punk") ||
-          testText.includes("noise") ||
-          testText.includes("hardcore") ||
-          testText.includes("ska")
-        );
-      })
       .map((rawEvent) => {
         const title = rawEvent.querySelector(".card__title")?.textContent ?? null;
         const res = {
@@ -70,7 +117,9 @@ metropoolScraper.makeBaseEventList = async function () {
           title,  
         }          
         res.venueEventUrl = rawEvent?.href ?? null;
-        res.shortText = rawEvent.querySelector(".card__title card__title--sub")?.textContent ?? null
+        const genres = rawEvent.dataset?.genres ?? '';
+        const st = rawEvent.querySelector(".card__title card__title--sub")?.textContent;
+        res.shortText = (st + ' ' + genres).trim();
         res.soldOut = !!(rawEvent.querySelector(".card__title--label")?.textContent.toLowerCase().includes('uitverkocht') ?? null)
         return res;
       });

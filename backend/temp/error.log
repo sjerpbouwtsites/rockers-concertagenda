@@ -1,4 +1,193 @@
 
+  metropool-0 Error - 4:36:50 PM
+  TypeError: fetch failed
+    at Object.processResponse (node:internal/deps/undici/undici:5575:34)
+    at node:internal/deps/undici/undici:5901:42
+    at node:internal/process/task_queues:140:7
+    at AsyncResource.runInAsyncScope (node:async_hooks:202:9)
+    at AsyncResource.runMicrotask (node:internal/process/task_queues:137:8) 
+  fetch failed
+  
+  
+  metropool-0 Error - 4:34:09 PM
+  TimeoutError: Navigation timeout of 45000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 45000 ms exceeded
+  
+  
+  metropool-1 Error - 4:33:33 PM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  metropool-1 Error - 4:03:52 PM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  metropool-1 Error - 2:40:29 PM
+  TypeError: Cannot read properties of undefined (reading 'split')
+    at metropoolScraper.singleRawEventCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/metropool.js:49:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.rawEventsAsyncCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:416:27)
+    at async AbstractScraper.rawEventsAsyncCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:438:14)
+    at async AbstractScraper.rawEventsAsyncCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:438:14)
+    at async AbstractScraper.announceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:390:12)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:121:27) 
+  Cannot read properties of undefined (reading 'split')
+  
+  
+  metropool-2 Error - 2:40:28 PM
+  TypeError: Cannot read properties of undefined (reading 'split')
+    at metropoolScraper.singleRawEventCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/metropool.js:49:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.rawEventsAsyncCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:416:27)
+    at async AbstractScraper.announceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:390:12)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:121:27) 
+  Cannot read properties of undefined (reading 'split')
+  
+  
+  metropool-1 Error - 2:40:27 PM
+  TypeError: Cannot read properties of undefined (reading 'split')
+    at metropoolScraper.singleRawEventCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/metropool.js:49:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.rawEventsAsyncCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:416:27)
+    at async AbstractScraper.rawEventsAsyncCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:438:14)
+    at async AbstractScraper.announceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:390:12)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:121:27) 
+  Cannot read properties of undefined (reading 'split')
+  
+  
+  metropool-0 Error - 2:40:24 PM
+  TypeError: Cannot read properties of undefined (reading 'split')
+    at metropoolScraper.singleRawEventCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/metropool.js:49:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.rawEventsAsyncCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:416:27)
+    at async AbstractScraper.rawEventsAsyncCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:438:14)
+    at async AbstractScraper.rawEventsAsyncCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:438:14)
+    at async AbstractScraper.announceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:390:12)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:121:27) 
+  Cannot read properties of undefined (reading 'split')
+  
+  
+  metropool-1 Error - 2:40:23 PM
+  TypeError: Cannot read properties of undefined (reading 'split')
+    at metropoolScraper.singleRawEventCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/metropool.js:49:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.rawEventsAsyncCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:416:27)
+    at async AbstractScraper.announceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:390:12)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:121:27) 
+  Cannot read properties of undefined (reading 'split')
+  
+  
+  metropool-0 Error - 2:40:23 PM
+  TypeError: Cannot read properties of undefined (reading 'split')
+    at metropoolScraper.singleRawEventCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/metropool.js:49:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.rawEventsAsyncCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:416:27)
+    at async AbstractScraper.announceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:390:12)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:121:27) 
+  Cannot read properties of undefined (reading 'split')
+  
+  
+  metropool-1 Error - 2:36:26 PM
+  TypeError: Cannot read properties of null (reading 'join')
+    at AbstractScraper.isRock (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:714:267)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.isRock (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:704:24)
+    at async AbstractScraper.rawEventsAsyncCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:416:27)
+    at async AbstractScraper.announceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:390:12)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:121:27) 
+  Cannot read properties of null (reading 'join')
+  
+  
+  metropool-0 Error - 2:17:23 PM
+  SyntaxError: Unexpected token < in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at Response.json (node:internal/deps/undici/undici:1788:21)
+    at async AbstractScraper.metalEncyclopedia (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:587:38)
+    at async AbstractScraper.isRock (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:684:34)
+    at async AbstractScraper.isRock (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:692:24)
+    at async AbstractScraper.rawEventsAsyncCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:416:27)
+    at async AbstractScraper.rawEventsAsyncCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:438:14)
+    at async AbstractScraper.rawEventsAsyncCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:438:14)
+    at async AbstractScraper.rawEventsAsyncCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:438:14)
+    at async AbstractScraper.rawEventsAsyncCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:438:14) 
+  Unexpected token < in JSON at position 0
+  
+  
+  metropool-1 Error - 2:01:26 PM
+  ProtocolError: Protocol error (Page.navigate): Invalid parameters Failed to deserialize params.url - BINDINGS: string value expected at position 11
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Connection.js:230:24
+    at new Promise (<anonymous>)
+    at CDPSession.send (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Connection.js:226:16)
+    at navigate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:149:47)
+    at FrameManager.navigateFrame (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:132:13)
+    at Frame.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:512:41)
+    at Page.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1167:53)
+    at AbstractScraper.wikipedia (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:646:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.isRock (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:685:26) 
+  Protocol error (Page.navigate): Invalid parameters Failed to deserialize params.url - BINDINGS: string value expected at position 11
+  
+  
+  metropool-2 Error - 2:01:16 PM
+  ProtocolError: Protocol error (Page.navigate): Invalid parameters Failed to deserialize params.url - BINDINGS: string value expected at position 11
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Connection.js:230:24
+    at new Promise (<anonymous>)
+    at CDPSession.send (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Connection.js:226:16)
+    at navigate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:149:47)
+    at FrameManager.navigateFrame (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:132:13)
+    at Frame.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:512:41)
+    at Page.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1167:53)
+    at AbstractScraper.wikipedia (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:646:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.isRock (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:685:26) 
+  Protocol error (Page.navigate): Invalid parameters Failed to deserialize params.url - BINDINGS: string value expected at position 11
+  
+  
+  metropool-1 Error - 2:00:31 PM
+  Error: Evaluation failed: ReferenceError: title is not defined
+    at __puppeteer_evaluation_script__:3:69
+    at Array.filter (<anonymous>)
+    at __puppeteer_evaluation_script__:3:12
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async AbstractScraper.wikipedia (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:641:31)
+    at async AbstractScraper.isRock (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:685:26)
+    at async AbstractScraper.rawEventsAsyncCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:416:27)
+    at async AbstractScraper.rawEventsAsyncCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:438:14)
+    at async AbstractScraper.rawEventsAsyncCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:438:14)
+    at async AbstractScraper.rawEventsAsyncCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:438:14)
+    at async AbstractScraper.rawEventsAsyncCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:438:14) 
+  Evaluation failed: ReferenceError: title is not defined
+    at __puppeteer_evaluation_script__:3:69
+    at Array.filter (<anonymous>)
+    at __puppeteer_evaluation_script__:3:12
+  
+  
+  metropool-0 Error - 2:00:27 PM
+  Error: Evaluation failed: ReferenceError: title is not defined
+    at __puppeteer_evaluation_script__:3:69
+    at Array.filter (<anonymous>)
+    at __puppeteer_evaluation_script__:3:12
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async AbstractScraper.wikipedia (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:641:31)
+    at async AbstractScraper.isRock (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:685:26)
+    at async AbstractScraper.rawEventsAsyncCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:416:27)
+    at async AbstractScraper.announceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:390:12)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:121:27) 
+  Evaluation failed: ReferenceError: title is not defined
+    at __puppeteer_evaluation_script__:3:69
+    at Array.filter (<anonymous>)
+    at __puppeteer_evaluation_script__:3:12
+  
+  
   melkweg-0 Error - 1:29:45 PM
   TypeError: eventsList.map is not a function
     at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:717:42)

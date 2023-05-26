@@ -84,8 +84,6 @@ melkwegScraper.makeBaseEventList = async function () {
   );
 };
 
-melkwegScraper.rawEvents
-
 melkwegScraper.singleRawEventCheck = async function(event){
 
   const st = event?.shortText?.toLowerCase() ?? '';

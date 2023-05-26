@@ -39,7 +39,49 @@ export default class AbstractScraper {
     "alternatieve rock",
   ];
 
-  static goodCategories = [`punx`,`death metal`,`doom`,`hardcore`,`new wave`,`punk`,`hardcore punk`,`heavy rock 'n roll`,`symphonic metal`,`thrash`,`metalcore`,`grindcore`,`industrial`,`noise`,`postpunk`,`post-punk`,`heavy metal`,`power metal`,`heavy psych`,`metal`,`surfpunkabilly`, `psychobilly`]
+  static wikipediaGoodGenres = [
+    `[href$=metal]`,
+    `[href$=metal_music]`,
+    `[href=Hard_rock]`,
+    `[href=Acid_rock]`,
+    `[href=Death_rock]`,
+    `[href=Experimental_rock]`,
+    `[href=Garage_rock]`,
+    `[href=Hard_rock]`,
+    `[href=Post-rock]`,
+    `[href=Punk_rock]`,
+    `[href=Stoner_rock]`,
+    `[href=Hardcore_punk]`,
+    `[href=Skate_punk]`,
+    `[href=Street_punk]`,
+    `[href=Ska_punk]`,
+    `[href=Avant-garde_metal]`,
+    `[href=Extreme_metal]`,
+    `[href=Black_metal]`,
+    `[href=Death_metal]`,
+    `[href=Doom_metal]`,
+    `[href=Speed_metal]`,
+    `[href=Thrash_metal]`,
+    `[href=Glam_metal]`,
+    `[href=Groove_metal]`,
+    `[href=Power_metal]`,
+    `[href=Symphonic_metal]`,
+    `[href=Funk_metal]`,
+    `[href=Rap_metal]`,
+    `[href=Nu_metal]`,
+    `[href=Drone_metal]`,
+    `[href=Folk_metal]`,
+    `[href=Gothic_metal]`,
+    `[href=Post-metal]`,
+    `[href=Industrial_metal]`,
+    `[href=Neoclassical_metal]`,
+    `[href=Progressive_metal]`,
+    `[href=Sludge_metal]`,
+    `[href=Viking_metal]`,
+
+  ];
+
+  static goodCategories = [`neue deutsche harte`, `neue deutsche haerte`, `punx`,`death metal`,`doom`,`hardcore`,`new wave`,`punk`,`hardcore punk`,`heavy rock 'n roll`,`symphonic metal`,`thrash`,`metalcore`,`grindcore`,`industrial`,`noise`,`postpunk`,`post-punk`,`heavy metal`,`power metal`,`heavy psych`,`metal`,`surfpunkabilly`, `psychobilly`]
 
   rockAllowList = '';
   rockRefuseList = '';
@@ -66,8 +108,9 @@ export default class AbstractScraper {
     this.maxExecutionTime = obj.maxExecutionTime ?? 30000;
     this.puppeteerConfig = obj.puppeteerConfig ?? {};
     this.months = getVenueMonths(workerData.family)
-    this.rockAllowList = fs.readFileSync(fsDirections.isRockAllow)
-    this.rockRefuseList = fs.readFileSync(fsDirections.isRockRefuse)
+    this.rockAllowList = fs.readFileSync(fsDirections.isRockAllow, 'utf-8')
+    this.rockRefuseList = fs.readFileSync(fsDirections.isRockRefuse, 'utf-8')
+    this.dirtyLog(this.rockRefuseList)
   }
 
 
@@ -560,29 +603,39 @@ export default class AbstractScraper {
     };    
   }
 
+  async saveRefusedTitle(title){
+    const curForbiddenList = fs.readFileSync(fsDirections.isRockRefuse, 'utf-8');
+    fs.writeFileSync(fsDirections.isRockRefuse, `${curForbiddenList}\n${title.toLowerCase()}`, 'utf-8')
+  }
 
-  rockAllowRefuseList(event, title){
-    if (this.rockAllowList.includes(title)) {
-      return {
-        event,
-        success: true,
-        reason: `In allowed list`
-      };      
-    }
-    if (this.rockRefuseList.includes(title)) {
-      return {
-        event,
-        success: false,
-        reason: `In refuse list`
-      };      
-    }
+  async saveAllowedTitle(title){
+    const curAllowList = fs.readFileSync(fsDirections.isRockAllow, 'utf-8');
+    fs.writeFileSync(fsDirections.isRockAllow, `${curAllowList}\n${title.toLowerCase()}`, 'utf-8')
+  }
+
+  async rockAllowListCheck(event, title){
+    const t = title.toLowerCase();
+    const tt = this.rockAllowList.includes(t);
     return {
-      success: null
+      event,
+      success: tt,
+      reason: `${tt ? 'in' : 'not in'} allowed list`,
+    };
+  }
+
+  async rockRefuseListCheck(event, title){
+    const t = title.toLowerCase();
+    const tt = this.rockRefuseList.includes(t);
+    return {
+      event,
+      success: tt,
+      reason: `${tt ? 'in' : 'not in'} refuse list`,
     };
   }
 
   async metalEncyclopedia(event, title){
     const MetalEncFriendlyTitle = title.replace(/\s/g, "_");
+    this.dirtyTalk(`${event.title} asks https://www.metal-archives.com/search/ajax-band-search/?field=name&query=${MetalEncFriendlyTitle}`)
     const metalEncUrl = `https://www.metal-archives.com/search/ajax-band-search/?field=name&query=${MetalEncFriendlyTitle}`;
     const foundInMetalEncyclopedia = await fetch(metalEncUrl)
       .then((result) => result.json())
@@ -601,6 +654,20 @@ export default class AbstractScraper {
           return false;
         });
         return bandNamesAreMainTitle
+      }).catch(metalEncError => {
+        _t.wrappedHandleError(new ErrorWrapper({
+          error: metalEncError,
+          remarks: `<a href='${event?.venueEventUrl}' class='error-link get-page-info-timeout'>getPageInfo ${workerData.name} metal enc. error</a>`,
+          workerData,
+          errorLevel: 'notice',
+        }
+        ))
+        return {
+          event,
+          success: false,
+          url: metalEncUrl,
+          reason: metalEncError.message
+        };
       });
     if (foundInMetalEncyclopedia) {
       return {
@@ -611,18 +678,20 @@ export default class AbstractScraper {
       };
     }
     return {
-      success: null,
-      url: metalEncUrl
+      success: false,
+      url: metalEncUrl,
+      reason: 'no result metal enc',
+      event
     };
   }
 
   async wikipedia(event, title){
     const page = await this.browser.newPage();
-    const wikiPage = `https://en.wikipedia.org/wiki/${title.replace(/\s/g, "_")}`;
-    const emptyRes = {
-      success: null,
-      url: wikiPage
-    };
+    const wikifiedTitled = title.split(' ').map(word => {
+      return word[0].toUpperCase() + word.substring(1,word.length)
+    }).join('_').replace(/\W/g,'')
+    const wikiPage = `https://en.wikipedia.org/wiki/${wikifiedTitled}`;
+    this.dirtyTalk(`${event.title} asks <a href='${wikiPage}'>${wikiPage}</a>`)
     await page.goto(wikiPage);
 
     const pageDoesNotExist = await page.evaluate(()=>{
@@ -633,24 +702,53 @@ export default class AbstractScraper {
       const searchPage =  await page.evaluate(()=>{
         return document.getElementById('noarticletext').querySelector('[href*=search]')?.href ?? '';
       })
+      this.dirtyTalk(`${event.title} asks ${searchPage}`)
       await page.goto(searchPage);
-      if (!searchPage) return emptyRes
-      const firstSearchResult = await page.evaluate(()=>{
-        return document.querySelector('.mw-search-results [href*=wiki]')?.href;
-      })
-      if (!firstSearchResult) return emptyRes;
-      await page.goto(firstSearchResult)
+      if (!searchPage) {
+        return {
+          event,
+          reason: 'wiki page not found, als no search page',
+          success: false,
+        }
+      }
+      const matchingResults = await page.evaluate(({title})=>{
+        return Array.from(document.querySelectorAll('.mw-search-results [href*=wiki]'))
+          .filter(anker => anker.textContent.toLowerCase().includes(title.toLowerCase()))
+          .map(anker => anker.href)
+      }, {title})
+      if (!matchingResults || !Array.isArray(matchingResults) || !matchingResults.length) {
+        return {
+          event,
+          reason: 'Not found title of event on wiki search page',
+          success: false,
+        }
+      }
+      this.dirtyTalk(`${event.title} asks ${matchingResults}`)
+      await page.goto(matchingResults[0])
     }
 
-    const wikiRockt = await page.evaluate(() => {
-      const isRock =
-        !!document.querySelector(".infobox a[href*='rock']") &&
-        !document.querySelector(".infobox a[href*='Indie_rock']");
-      const isMetal = !!document.querySelector(".infobox a[href*='metal']");
-      const isPunk = !!document.querySelector(".infobox a[href*='punk']");
-      const isStoner = !!document.querySelector(".infobox a[href*='stoner']");
-      return isRock || isMetal || isPunk || isStoner;
-    });
+    const wikiRockt = await page.evaluate(({wikipediaGoodGenres}) => {
+
+      let found = false
+      let i = 0;
+      while (found === false && i < wikipediaGoodGenres.length){
+        const thisSelector = wikipediaGoodGenres[i];
+        if (document.querySelector(`.infobox ${thisSelector}`)) {
+          found = true;
+        }
+        i++;
+      }
+      return found;
+
+
+      // const isRock =
+      //   !!document.querySelector(".infobox a[href*='rock']") &&
+      //   !document.querySelector(".infobox a[href*='Indie_rock']");
+      // const isMetal = !!document.querySelector(".infobox a[href*='metal']");
+      // const isPunk = !!document.querySelector(".infobox a[href*='punk']");
+      // const isStoner = !!document.querySelector(".infobox a[href*='stoner']");
+      // return isRock || isMetal || isPunk || isStoner;
+    }, {wikipediaGoodGenres: AbstractScraper.wikipediaGoodGenres});
     !page.isClosed() && page.close();
     if (wikiRockt) {
       return {
@@ -659,8 +757,13 @@ export default class AbstractScraper {
         url: wikiPage,
         reason: `found on <a class='single-event-check-reason wikipedia wikipedia--success' href='${wikiPage}'>wikipedia</a>`
       };
-    }    
-    return emptyRes;
+    }  
+    !page.isClosed() && page.close();
+    return {
+      event,
+      success: false,
+      reason: `wiki catch return`      
+    }
   }
 
   /**
@@ -674,18 +777,42 @@ export default class AbstractScraper {
   async isRock(event, overloadTitles = null, recursiveTitle = null) {
 
     const workingTitle = recursiveTitle || event.title.replace(/&.*/, "").trim().toLowerCase();
-    const rockAllowRefuseListRes = this.rockAllowRefuseList(event, workingTitle);
-    if (rockAllowRefuseListRes?.success !== null) return rockAllowRefuseListRes;
+
+    const rockRefuseListRes = await this.rockRefuseListCheck(event, workingTitle);
+    this.dirtyDebug(rockRefuseListRes);
+    if (rockRefuseListRes.succes) {
+      return {
+        reason: rockRefuseListRes.reason,
+        event,
+        success: false,
+      }
+    }
+
+    const rockAllowListRes = await this.rockAllowListCheck(event, workingTitle);
+    this.dirtyDebug(rockAllowListRes);
+    if (rockAllowListRes.succes) {
+      rockAllowListRes
+    }
+
     const metalEncyclopediaRes = await this.metalEncyclopedia(event, workingTitle);
-    if (metalEncyclopediaRes?.success !== null) return metalEncyclopediaRes;
+    this.dirtyDebug(metalEncyclopediaRes);
+    if (metalEncyclopediaRes.success) {
+      return metalEncyclopediaRes;
+    }
+
     const wikipediaRes = await this.wikipedia(event, workingTitle);
-    if (wikipediaRes?.success !== null) return wikipediaRes;
+    this.dirtyDebug(wikipediaRes)
+    if (wikipediaRes.success) {
+      return wikipediaRes;
+    }
 
     if (Array.isArray(overloadTitles)){
       const overloadTitlesCopy = [...overloadTitles];
       const thisOverloadTitle = overloadTitlesCopy.shift();
       const extraRes = await this.isRock(event, null, thisOverloadTitle);
-      if (extraRes.success) return extraRes;
+      if (extraRes.success) {
+        return extraRes
+      }
       if (overloadTitles.length){
         return await this.isRock(event, overloadTitlesCopy);
       }
@@ -694,7 +821,7 @@ export default class AbstractScraper {
     return {
       event,
       success: false,
-      reason: `<a class='single-event-check-reason wikipedia wikipedia--failure metal-encyclopedie metal-encyclopedie--failure' href='${wikipediaRes.url}'>wikipedia</a> + <a href='${metalEncyclopediaRes.url}'>metal encyclopedia</a> nope.`};
+      reason: `<a class='single-event-check-reason wikipedia wikipedia--failure metal-encyclopedie metal-encyclopedie--failure' href='${wikipediaRes.url}'>wikipedia</a> + <a href='${metalEncyclopediaRes.url}'>metal encyclopedia</a>nope`};
   }
 
   /**
