@@ -66,7 +66,6 @@ afasliveScraper.makeBaseEventList = async function () {
   const rawEvents = await page.evaluate(({workerData}) => {
     return Array.from(document.querySelectorAll(".agenda__item__block "))
       .map((agendaBlock) => {
-
         const title = agendaBlock.querySelector(".eventTitle")?.textContent ?? "";
         const res = {
           unavailable: "",
@@ -77,6 +76,9 @@ afasliveScraper.makeBaseEventList = async function () {
         res.venueEventUrl = agendaBlock.querySelector("a")?.href ?? null;
         res.image = agendaBlock.querySelector("img")?.src ?? null;
         return res;
+      })
+      .filter(event => {
+        return !event.title.toLowerCase().includes('productiedag')
       });
   }, {workerData});
 

@@ -17,7 +17,8 @@ const fsDirections = {
   scrapersDir: path.resolve("./scrapers"),
   temp: path.resolve("./temp"),
   baseEventlists: path.resolve("./temp/baseEventlists"),
-  isRockDump: path.resolve("./temp/isRock/dump.txt"),
+  isRockAllow: path.resolve("./temp/isRock/allow.txt"),
+  isRockRefuse: path.resolve("./temp/isRock/refuse.txt"),
   timestampsJson: path.resolve("./event-lists/timestamps.json"),
   timestampsPublicJson: path.resolve("../public/timestamps.json"),
 };

@@ -38,6 +38,9 @@ export default class AbstractScraper {
 
   static goodCategories = [`punx`,`death metal`,`doom`,`hardcore`,`new wave`,`punk`,`hardcore punk`,`heavy rock 'n roll`,`symphonic metal`,`thrash`,`metalcore`,`black`,`crossover`,`grindcore`,`industrial`,`noise`,`postpunk`,`post-punk`,`heavy metal`,`power metal`,`heavy psych`,`metal`,`surfpunkabilly`, `psychobilly`]
 
+  rockAllowList = '';
+  rockRefuseList = '';
+
   constructor(obj) {
     this.qwm;
     this.browser;
@@ -60,6 +63,8 @@ export default class AbstractScraper {
     this.maxExecutionTime = obj.maxExecutionTime ?? 30000;
     this.puppeteerConfig = obj.puppeteerConfig ?? {};
     this.months = getVenueMonths(workerData.family)
+    this.rockAllowList = fs.readFileSync(fsDirections.isRockAllow)
+    this.rockRefuseList = fs.readFileSync(fsDirections.isRockRefuse)
   }
 
 
@@ -408,6 +413,14 @@ export default class AbstractScraper {
       const checkResult = await this.singleRawEventCheck(eventToCheck);
       if (checkResult.success) {
         useableEventsCheckedArray.push(eventToCheck);
+        parentPort.postMessage(
+          this.qwm.debugger(
+            {
+              event: `<a class='single-event-check-notice' href='${eventToCheck.venueEventUrl}'>ja: ${eventToCheck.title}<a/>`,              
+              reason: checkResult.reason,
+            },
+          )
+        );        
       } else {
         parentPort.postMessage(
           this.qwm.debugger(
@@ -558,13 +571,40 @@ export default class AbstractScraper {
    */
   async isRock(event) {
     const mainTitle = event.title.replace(/&.*/, "").trim().toLowerCase();
+    if (this.rockAllowList.includes(mainTitle)) {
+      return {
+        event,
+        success: true,
+        reason: `In allowed list`
+      };      
+    }
+    if (this.rockRefuseList.includes(mainTitle)) {
+      return {
+        event,
+        success: false,
+        reason: `In refuse list`
+      };      
+    }    
     const MetalEncFriendlyTitle = mainTitle.replace(/\s/g, "_");
 
     const metalEncUrl = `https://www.metal-archives.com/search/ajax-band-search/?field=name&query=${MetalEncFriendlyTitle}`;
     const foundInMetalEncyclopedia = await fetch(metalEncUrl)
       .then((result) => result.json())
       .then((parsedJson) => {
-        return parsedJson.iTotalRecords > 0;
+        if (parsedJson.iTotalRecords < 1) return false
+        const bandNamesAreMainTitle = parsedJson.aaData.some(bandData => {
+          let match;
+          try {
+            match = bandData[0].match(/>(.*)<\//);
+            if (Array.isArray(match) && match.length > 1){
+              return match[1].toLowerCase() === mainTitle;
+            } 
+          } catch (error) {
+            return false
+          }
+          return false;
+        });
+        return bandNamesAreMainTitle
       });
     if (foundInMetalEncyclopedia) {
       return {
@@ -575,6 +615,7 @@ export default class AbstractScraper {
     }
 
     const page = await this.browser.newPage();
+    //const wikiSub = mainTitle.split
     const wikiPage = `https://en.wikipedia.org/wiki/${mainTitle.replace(/\s/g, "_")}`;
     await page.goto(wikiPage);
     const wikiRockt = await page.evaluate(() => {
