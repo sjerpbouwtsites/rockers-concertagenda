@@ -1,7 +1,6 @@
 import { workerData } from "worker_threads";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
-import ErrorWrapper from "../mods/error-wrapper.js";
 
 // SCRAPER CONFIG
 
@@ -18,7 +17,7 @@ const baroegScraper = new AbstractScraper(makeScraperConfig({
     },
     app: {
       mainPage: {
-        url: "  https://baroeg.nl/agenda-categorieen/",
+        url: "https://baroeg.nl/agenda/",
         requiredProperties: ['venueEventUrl', 'title', 'startDateTime']
       },
       singlePage: {
@@ -108,7 +107,6 @@ baroegScraper.makeBaseEventList = async function () {
           res.unavailable += 'geen startdate'
           return res;
         }
-        res.testError = new ErrorWrapper({error: new Error('fdfd'), remarks: 'hallo', workerData, errorLevel: 'notice', toDebug: ['1', '2']})
         const startYear = res.startDate[0].padStart(4, '20');
         const startMonth = res.startDate[1].padStart(2, '0');
         const startDay = res.startDate[2].padStart(2, '0');

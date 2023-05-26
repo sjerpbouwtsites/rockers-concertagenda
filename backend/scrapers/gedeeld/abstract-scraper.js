@@ -36,7 +36,7 @@ export default class AbstractScraper {
     "alternatieve rock",
   ];
 
-  static goodCategories = [`punx`,`death metal`,`doom`,`hardcore`,`new wave`,`punk`,`hardcore punk`,`heavy rock 'n roll`,`symphonic metal`,`thrash`,`metalcore`,`black`,`crossover`,`grindcore`,`industrial`,`noise`,`postpunk`,`post-punk`,`heavy metal`,`power metal`,`heavy psych`,`metal`,`surfpunkabilly`]
+  static goodCategories = [`punx`,`death metal`,`doom`,`hardcore`,`new wave`,`punk`,`hardcore punk`,`heavy rock 'n roll`,`symphonic metal`,`thrash`,`metalcore`,`black`,`crossover`,`grindcore`,`industrial`,`noise`,`postpunk`,`post-punk`,`heavy metal`,`power metal`,`heavy psych`,`metal`,`surfpunkabilly`, `psychobilly`]
 
   constructor(obj) {
     this.qwm;
