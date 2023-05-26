@@ -41,18 +41,16 @@ gebrdenobelScraper.makeBaseEventList = async function () {
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
-  const rawEvents = await page.evaluate(({workerData}) => {
+  const punkMetalRawEvents = await page.evaluate(({workerData}) => {
     return Array.from(document.querySelectorAll(".event-item"))
       .filter((eventEl) => {
         const tags =
           eventEl.querySelector(".meta-tag")?.textContent.toLowerCase() ?? "";
         return (
           tags.includes("metal") ||
-          tags.includes("punk") ||
-          tags.includes("rock")
+          tags.includes("punk")
         );
-      })
-      .map((eventEl) => {
+      }).map((eventEl) =>{
         const title = eventEl.querySelector(".media-heading")?.textContent ?? null;
         const res = {
           unavailable: '',
@@ -61,21 +59,58 @@ gebrdenobelScraper.makeBaseEventList = async function () {
           title
         };
         res.venueEventUrl =
-          eventEl
-            .querySelector(".jq-modal-trigger")
-            ?.getAttribute("data-url") ?? "";
-
+            eventEl
+              .querySelector(".jq-modal-trigger")
+              ?.getAttribute("data-url") ?? "";
+      
         res.soldOut = !!(eventEl.querySelector('.meta-info')?.textContent.toLowerCase().includes('uitverkocht') ?? null)
         return res;
-      });
-  }, {workerData});
+      })
+  }, {workerData})
+  
+
+  let rockRawEvents = await page.evaluate(({workerData}) => {
+    return Array.from(document.querySelectorAll(".event-item"))
+      .filter((eventEl) => {
+        const tags =
+          eventEl.querySelector(".meta-tag")?.textContent.toLowerCase() ?? "";
+        return (
+          tags.includes("rock")
+        );
+      }).map((eventEl) => {
+        const title = eventEl.querySelector(".media-heading")?.textContent ?? null;
+        const res = {
+          unavailable: '',
+          pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+          errors: [],
+          title
+        };
+        res.venueEventUrl =
+            eventEl
+              .querySelector(".jq-modal-trigger")
+              ?.getAttribute("data-url") ?? "";
+      
+        res.soldOut = !!(eventEl.querySelector('.meta-info')?.textContent.toLowerCase().includes('uitverkocht') ?? null)
+        return res;
+      })
+  }, {workerData})
+
+  const checkedRockEvents = [];
+  while (rockRawEvents.length){
+    const thisRockRawEvent = rockRawEvents.shift();
+    const isRockRes = await this.isRock(thisRockRawEvent);
+    if (isRockRes.success){
+      checkedRockEvents.push(thisRockRawEvent)
+    }
+  }
+
+  const rawEvents = punkMetalRawEvents.concat(checkedRockEvents)
 
   this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
   return await this.makeBaseEventListEnd({
     stopFunctie, rawEvents: thisWorkersEvents}
   );
-  
 };
 
 // GET PAGE INFO

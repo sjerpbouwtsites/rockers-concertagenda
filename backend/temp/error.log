@@ -1,4 +1,58 @@
 
+  gebrdenobel-0 Error - 12:00:32 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:218:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  gebrdenobel-0 Error - 12:00:19 PM
+  TypeError: eventEl.querySelector is not a function
+    at gebrdenobelScraper.baseEventMapper (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gebrdenobel.js:89:25)
+    at Array.map (<anonymous>)
+    at gebrdenobelScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gebrdenobel.js:55:55)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:117:29) 
+  eventEl.querySelector is not a function
+  
+  
+  gebrdenobel-0 Error - 11:58:52 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:218:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  gebrdenobel-0 Error - 11:58:39 AM
+  TypeError: page.evaluate(...).map is not a function
+    at gebrdenobelScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gebrdenobel.js:55:6)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:117:29) 
+  page.evaluate(...).map is not a function
+  
+  
+  gebrdenobel-0 Error - 11:57:29 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:218:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  gebrdenobel-0 Error - 11:57:15 AM
+  Error: Evaluation failed: ReferenceError: gebrdenobelScraper is not defined
+    at __puppeteer_evaluation_script__:11:12
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async gebrdenobelScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gebrdenobel.js:44:30)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:117:29) 
+  Evaluation failed: ReferenceError: gebrdenobelScraper is not defined
+    at __puppeteer_evaluation_script__:11:12
+  
+  
   dynamo-0 Error - 11:39:45 AM
   Error: Te weinig 'agendaDataEls' <a class='page-info' href='https://www.effenaar.nl/agenda/hot-mulligan'>Hot Mulligan - Effenaar</a>
     at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:880:29
