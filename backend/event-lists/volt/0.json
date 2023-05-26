@@ -1,22 +1,5 @@
 [
   {
-    "doorOpenDateTime": "2023-05-20T18:00:00.000Z",
-    "startDateTime": "2023-05-20T18:30:00.000Z",
-    "endDateTime": "2023-05-20T21:00:00.000Z",
-    "venueEventUrl": "https://www.poppodium-volt.nl/programma/speedmobile",
-    "title": "Speedmobile",
-    "location": "volt",
-    "price": 17.5,
-    "shortText": null,
-    "longText": "../public/texts/495292d5-6498-4a69-8418-42c4b9bea36d.html",
-    "image": "https://www.poppodium-volt.nl/wp-content/uploads/2022/05/SpeedTickets2-640x600.jpg",
-    "soldOut": false,
-    "unavailable": "",
-    "corrupted": null,
-    "correctMusic": null,
-    "origin": "volt"
-  },
-  {
     "doorOpenDateTime": "2023-06-30T18:00:00.000Z",
     "startDateTime": "2023-06-30T18:30:00.000Z",
     "endDateTime": "2023-06-30T21:00:00.000Z",
@@ -25,12 +8,11 @@
     "location": "volt",
     "price": 16.5,
     "shortText": null,
-    "longText": "../public/texts/88eede9f-3c89-4441-944f-269bdfaf65e1.html",
+    "longText": "../public/texts/9c94ea1e-6999-492d-930f-6b442abad637.html",
     "image": "https://www.poppodium-volt.nl/wp-content/uploads/2023/03/SO2Tickets-640x640.jpg",
     "soldOut": false,
     "unavailable": "",
     "corrupted": null,
-    "correctMusic": null,
     "origin": "volt"
   },
   {
@@ -42,12 +24,11 @@
     "location": "volt",
     "price": 49,
     "shortText": null,
-    "longText": "../public/texts/dad5e316-60b8-4c96-a74b-6f23f27ed6fd.html",
+    "longText": "../public/texts/5b2e989b-746d-4455-b624-1d31736355cf.html",
     "image": "https://www.poppodium-volt.nl/wp-content/uploads/2022/12/FGTickets2-1-640x600.jpg",
     "soldOut": false,
     "unavailable": "",
     "corrupted": null,
-    "correctMusic": null,
     "origin": "volt"
   },
   {
@@ -59,12 +40,11 @@
     "location": "volt",
     "price": 26,
     "shortText": null,
-    "longText": "../public/texts/74f2f8db-81e2-47c3-8741-f4574b0caa88.html",
+    "longText": "../public/texts/d646ccf2-56aa-4d24-b044-8c3abd9b342e.html",
     "image": "https://www.poppodium-volt.nl/wp-content/uploads/2022/12/FGTickets2-640x600.jpg",
     "soldOut": false,
     "unavailable": "",
     "corrupted": null,
-    "correctMusic": null,
     "origin": "volt"
   },
   {
@@ -76,12 +56,27 @@
     "location": "volt",
     "price": 17.5,
     "shortText": null,
-    "longText": "../public/texts/a5ecbd9f-8931-4c73-8344-7fc093fd07ce.html",
+    "longText": "../public/texts/8465dcb1-7ce7-43cb-ad5d-54ba110eb9e6.html",
     "image": "https://www.poppodium-volt.nl/wp-content/uploads/2023/01/HATickets2-640x600.jpg",
     "soldOut": false,
     "unavailable": "",
     "corrupted": null,
-    "correctMusic": null,
+    "origin": "volt"
+  },
+  {
+    "doorOpenDateTime": "2023-11-04T19:00:00.000Z",
+    "startDateTime": "2023-11-04T19:30:00.000Z",
+    "endDateTime": "2023-11-04T22:00:00.000Z",
+    "venueEventUrl": "https://www.poppodium-volt.nl/programma/call-it-off",
+    "title": "Call it Off",
+    "location": "volt",
+    "price": 14.5,
+    "shortText": null,
+    "longText": "../public/texts/67e4a4a4-0351-4328-8cde-593b8a795afa.html",
+    "image": "https://www.poppodium-volt.nl/wp-content/uploads/2023/05/CiOTickets-640x600.jpg",
+    "soldOut": false,
+    "unavailable": "",
+    "corrupted": null,
     "origin": "volt"
   }
 ]

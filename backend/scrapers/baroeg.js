@@ -8,6 +8,7 @@ import ErrorWrapper from "../mods/error-wrapper.js";
 const baroegScraper = new AbstractScraper(makeScraperConfig({
   maxExecutionTime: 60047,
   workerData: Object.assign({}, workerData),
+  hasDecentCategorisation: true,
   puppeteerConfig: {
     mainPage: {
       timeout: 45000,
@@ -34,19 +35,20 @@ baroegScraper.listenToMasterThread();
 
 baroegScraper.makeBaseEventList = async function () {
 
-  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.family);
-  if (availableBaseEvent){
+  const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
+  if (availableBaseEvents){
+    const thisWorkersEvents = availableBaseEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
     return await this.makeBaseEventListEnd({
-      stopFunctie: null, rawEvents: availableBaseEvent}
+      stopFunctie: null, rawEvents: thisWorkersEvents}
     );    
-  }  
+  }    
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
-  const rawEvents = await page.evaluate(({workerData}) => {
+  const rawEvents = await page.evaluate(({workerData, goodCategories}) => {
 
     const reedsGevondenEvents = [];
-    const toegestaneCategorieen = `death metal,doom,hardcore,new wave,punk,hardcore punk,heavy rock 'n roll,symphonic metal,thrash,metalcore,black,crossover,grindcore,industrial,noise,post-punk,heavy metal,power metal,heavy psych,metal,surfpunkabilly`;
+
     return Array
       .from(document.querySelectorAll('.wpt_listing .wp_theatre_event'))
       .map(eventEl => {
@@ -61,7 +63,7 @@ baroegScraper.makeBaseEventList = async function () {
           return categorieNaam
         });
         const heeftGoedeCategorie = categorieTeksten.some(categorieNaam => {
-          return toegestaneCategorieen.includes(categorieNaam)
+          return goodCategories.includes(categorieNaam)
         })
         if (!heeftGoedeCategorie){
           return false;
@@ -73,7 +75,6 @@ baroegScraper.makeBaseEventList = async function () {
         }
       })
       .filter(eventData => eventData)
-      .filter((eventData, index) => index % workerData.workerCount === workerData.index)
       .map(({eventEl,categorieTeksten,venueEventUrl}) => {
         const title = eventEl.querySelector('.wp_theatre_event_title')?.textContent.trim() ?? null;
         const res = {
@@ -134,12 +135,12 @@ baroegScraper.makeBaseEventList = async function () {
         }
         return res;
       })
-  }, {workerData})
+  }, {workerData, goodCategories: AbstractScraper.goodCategories})
 
   this.saveBaseEventlist(workerData.family, rawEvents)
-
+  const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
   return await this.makeBaseEventListEnd({
-    stopFunctie, page, rawEvents}
+    stopFunctie, page, rawEvents: thisWorkersEvents}
   );
 };
 

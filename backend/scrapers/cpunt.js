@@ -36,12 +36,13 @@ cpuntScraper.listenToMasterThread();
 
 cpuntScraper.makeBaseEventList = async function () {
 
-  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.family);
-  if (availableBaseEvent){
+  const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
+  if (availableBaseEvents){
+    const thisWorkersEvents = availableBaseEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
     return await this.makeBaseEventListEnd({
-      stopFunctie: null, rawEvents: availableBaseEvent}
+      stopFunctie: null, rawEvents: thisWorkersEvents}
     );    
-  }  
+  }   
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
@@ -90,10 +91,11 @@ cpuntScraper.makeBaseEventList = async function () {
     {workerData}
   );
 
+ 
   this.saveBaseEventlist(workerData.family, rawEvents)
-
+  const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
   return await this.makeBaseEventListEnd({
-    stopFunctie, page, rawEvents}
+    stopFunctie, rawEvents: thisWorkersEvents}
   );
   
 };
@@ -201,14 +203,18 @@ cpuntScraper.getPageInfo = async function ({ page, event }) {
 
 // SINGLE EVENT CHECK
 
-cpuntScraper.singleEventCheck = async function (event) {
+cpuntScraper.singleRawEventCheck = async function (event) {
 
   const goodTermsRes = await this.hasGoodTerms(event) 
   if (goodTermsRes.success) return goodTermsRes;
 
   const forbiddenTermsRes = await this.hasForbiddenTerms(event);
 
-  if (!forbiddenTermsRes.success) return forbiddenTermsRes;
+  if (forbiddenTermsRes.success) return {
+    event,
+    success: false,
+    reason: forbiddenTermsRes.reason
+  };
   return {
     event,
     success: true,

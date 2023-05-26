@@ -207,7 +207,11 @@ function eventToClientsLog(eventMsg, fields) {
     console.log('')
     values.forEach((val, index) => {
       if (typeof val === "string" || typeof val === "number") {
-        console.log(`${keys[index]} - ${val}`);
+        if (keys[index] === 'longTextHTML') {
+          console.log(`${val.substring(0, 50)} . . .`);  
+        } else {
+          console.log(`${keys[index]} - ${val}`);
+        }
       } else if (typeof val === "undefined") {
         console.log(`${keys[index]} - undefined`);
       } else if (val === null) {

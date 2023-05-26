@@ -34,12 +34,13 @@ melkwegScraper.listenToMasterThread();
 
 melkwegScraper.makeBaseEventList = async function () {
 
-  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.family);
-  if (availableBaseEvent){
+  const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
+  if (availableBaseEvents){
+    const thisWorkersEvents = availableBaseEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
     return await this.makeBaseEventListEnd({
-      stopFunctie: null, rawEvents: availableBaseEvent}
+      stopFunctie: null, rawEvents: thisWorkersEvents}
     );    
-  }  
+  }    
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
@@ -50,7 +51,6 @@ melkwegScraper.makeBaseEventList = async function () {
           .querySelector('.part-title')?.textContent.toLowerCase() ?? '';
         return titelElText.includes('ge heavy');
       })
-      .filter((eventEl, index) => index % workerData.workerCount === workerData.index)
       .map((eventEl) => {
         const title = eventEl.querySelector('h2')?.textContent ?? "";
         const res = {
@@ -82,9 +82,9 @@ melkwegScraper.makeBaseEventList = async function () {
   }, {workerData, months: this.months });
 
   this.saveBaseEventlist(workerData.family, rawEvents)
-
+  const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
   return await this.makeBaseEventListEnd({
-    stopFunctie, page, rawEvents}
+    stopFunctie, rawEvents: thisWorkersEvents}
   );
   
 };

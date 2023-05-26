@@ -39,16 +39,13 @@ oostpoortScraper.listenToMasterThread();
 
 oostpoortScraper.makeBaseEventList = async function () {
 
-  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.family);
-  if (availableBaseEvent){
-    this.dirtyDebug({
-      title: 'gelul',
-      availableBaseEvent
-    })
+  const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
+  if (availableBaseEvents){
+    const thisWorkersEvents = availableBaseEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
     return await this.makeBaseEventListEnd({
-      stopFunctie: null, rawEvents: availableBaseEvent}
+      stopFunctie: null, rawEvents: thisWorkersEvents}
     );    
-  }
+  }  
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
@@ -64,7 +61,6 @@ oostpoortScraper.makeBaseEventList = async function () {
       .filter(eventEl => {
         return !eventEl.classList.contains('is-hidden')
       })
-      .filter((rawEvent, index) => index % workerData.workerCount === workerData.index)
       .map((eventEl) => {
         const eersteDeelKorteTekst = eventEl.querySelector('h1 span')?.textContent ?? '';
         const title = eersteDeelKorteTekst.length === 0 
@@ -100,16 +96,16 @@ oostpoortScraper.makeBaseEventList = async function () {
   });
 
   this.saveBaseEventlist(workerData.family, rawEvents)
-
+  const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
   return await this.makeBaseEventListEnd({
-    stopFunctie, page, rawEvents}
+    stopFunctie, rawEvents: thisWorkersEvents}
   );
   
 };
 
 // SINGLE EVENT CHECK
 
-oostpoortScraper.singleEventCheck = async function (event) {
+oostpoortScraper.singleRawEventCheck = async function (event) {
 
   if (!(this?.isRockDump)){
     this.isRockDump = fs.readFileSync(fsDirections.isRockDump, 'utf8');

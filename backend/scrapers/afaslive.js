@@ -8,6 +8,7 @@ import makeScraperConfig from "./gedeeld/scraper-config.js";
 const afasliveScraper = new AbstractScraper(makeScraperConfig({
   maxExecutionTime: 40000,
   workerData: Object.assign({}, workerData),
+  hasDecentCategorisation: false,
   puppeteerConfig: {
     mainPage: {
       timeout: 60043,
@@ -27,7 +28,7 @@ const afasliveScraper = new AbstractScraper(makeScraperConfig({
   }
 }));
 
-afasliveScraper.singleEventCheck = afasliveScraper.isRock;
+afasliveScraper.singleRawEventCheck = afasliveScraper.isRock;
 
 afasliveScraper.listenToMasterThread();
 
@@ -35,10 +36,11 @@ afasliveScraper.listenToMasterThread();
 
 afasliveScraper.makeBaseEventList = async function () {
 
-  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.family);
-  if (availableBaseEvent){
+  const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
+  if (availableBaseEvents){
+    const thisWorkersEvents = availableBaseEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index);
     return await this.makeBaseEventListEnd({
-      stopFunctie: null, rawEvents: availableBaseEvent}
+      stopFunctie: null, rawEvents: thisWorkersEvents}
     );    
   }  
   
@@ -63,7 +65,6 @@ afasliveScraper.makeBaseEventList = async function () {
 
   const rawEvents = await page.evaluate(({workerData}) => {
     return Array.from(document.querySelectorAll(".agenda__item__block "))
-      .filter((event, index) => index % workerData.workerCount === workerData.index)
       .map((agendaBlock) => {
 
         const title = agendaBlock.querySelector(".eventTitle")?.textContent ?? "";
@@ -80,9 +81,9 @@ afasliveScraper.makeBaseEventList = async function () {
   }, {workerData});
 
   this.saveBaseEventlist(workerData.family, rawEvents)
-
+  const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index);
   return await this.makeBaseEventListEnd({
-    stopFunctie, page, rawEvents}
+    stopFunctie, page, rawEvents: thisWorkersEvents}
   );
 };
 

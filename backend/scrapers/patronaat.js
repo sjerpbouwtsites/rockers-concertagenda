@@ -33,18 +33,18 @@ patronaatScraper.listenToMasterThread();
 
 patronaatScraper.makeBaseEventList = async function () {
 
-  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.family);
-  if (availableBaseEvent){
+  const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
+  if (availableBaseEvents){
+    const thisWorkersEvents = availableBaseEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
     return await this.makeBaseEventListEnd({
-      stopFunctie: null, rawEvents: availableBaseEvent}
+      stopFunctie: null, rawEvents: thisWorkersEvents}
     );    
-  }
+  } 
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
   const rawEvents = await page.evaluate(({workerData}) => {
     return Array.from(document.querySelectorAll(".overview__list-item--event"))
-      .filter((eventEl, index) =>index % workerData.workerCount === workerData.index)
       .map((eventEl) => {
         const title = eventEl.querySelector(".event__name")?.textContent.trim();
         const res = {
@@ -54,7 +54,7 @@ patronaatScraper.makeBaseEventList = async function () {
           title
         };
         res.image =
-          eventEl.querySelector("[class^='event__image'] img")?.src ?? null;
+          eventEl.querySelector(".event-program__image img")?.src ?? null;
         if (!res.image){
           res.errors.push({
             remarks: `image missing ${res.pageInfo}`
@@ -70,9 +70,9 @@ patronaatScraper.makeBaseEventList = async function () {
   }, {workerData});
 
   this.saveBaseEventlist(workerData.family, rawEvents)
-
+  const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
   return await this.makeBaseEventListEnd({
-    stopFunctie, page, rawEvents}
+    stopFunctie, rawEvents: thisWorkersEvents}
   );
 };
 

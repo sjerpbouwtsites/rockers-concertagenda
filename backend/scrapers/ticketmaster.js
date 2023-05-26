@@ -38,12 +38,12 @@ ticketmasterScraper.listenToMasterThread();
 
 ticketmasterScraper.makeBaseEventList = async function() {
 
-  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.name);
-  if (availableBaseEvent){
+  const availableBaseEvents = await this.checkBaseEventAvailable(workerData.name);
+  if (availableBaseEvents){
     return await this.makeBaseEventListEnd({
-      stopFunctie: null, rawEvents: availableBaseEvent}
+      stopFunctie: null, rawEvents: availableBaseEvents}
     );    
-  }
+  } 
 
   const {stopFunctie} = await this.makeBaseEventListStart()
 
@@ -101,11 +101,10 @@ ticketmasterScraper.makeBaseEventList = async function() {
 
   let filteredRawEvents = this.filterForMetal(rawEvents)
 
-  this.saveBaseEventlist(workerData.name, filteredRawEvents)
-
+  this.saveBaseEventlist(workerData.family, rawEvents)
   return await this.makeBaseEventListEnd({
     stopFunctie, rawEvents: filteredRawEvents}
-  );  
+  );
   
 }
 

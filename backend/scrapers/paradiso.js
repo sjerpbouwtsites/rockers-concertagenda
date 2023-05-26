@@ -36,10 +36,11 @@ paradisoScraper.listenToMasterThread();
 // MAKE BASE EVENTS
 paradisoScraper.makeBaseEventList = async function () {
 
-  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.family);
-  if (availableBaseEvent){
+  const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
+  if (availableBaseEvents){
+    const thisWorkersEvents = availableBaseEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
     return await this.makeBaseEventListEnd({
-      stopFunctie: null, rawEvents: availableBaseEvent}
+      stopFunctie: null, rawEvents: thisWorkersEvents}
     );    
   } 
 
@@ -57,10 +58,9 @@ paradisoScraper.makeBaseEventList = async function () {
   await _t.autoScroll(page);
   await _t.autoScroll(page);
   let rawEvents = await page.evaluate(
-    ({workerData, resBuiten}) => {
+    ({resBuiten}) => {
 
       return Array.from(document.querySelectorAll('.css-1agutam'))
-        .filter((rawEvent, index) => index % workerData.workerCount === workerData.index)
 
         .map((rawEvent) => {
           const res = {
@@ -86,9 +86,9 @@ paradisoScraper.makeBaseEventList = async function () {
   );
 
   this.saveBaseEventlist(workerData.family, rawEvents)
-
+  const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
   return await this.makeBaseEventListEnd({
-    stopFunctie, page, rawEvents}
+    stopFunctie, rawEvents: thisWorkersEvents}
   );
   
 };
@@ -256,13 +256,23 @@ paradisoScraper.getPageInfo = async function ({ page, event }) {
 
 // SINGLE EVENT CHECK
 
-paradisoScraper.singleEventCheck = async function (event) {
+paradisoScraper.singleRawEventCheck = async function (event) {
 
   const forbidenTermCheckRes = await this.hasForbiddenTerms(event, ['title', 'shortText']);
-  if (!forbidenTermCheckRes.success) {
-    return forbidenTermCheckRes;
+  if (forbidenTermCheckRes.success) {
+    return {
+      event,
+      reason: forbidenTermCheckRes.reason,
+      success: false
+    };
+  } else {
+    return {
+      event,
+      reason: forbidenTermCheckRes.reason,
+      success: true
+    }
   }
 
-  return await this.isRock(event);
+  //return await this.isRock(event);
   
 };

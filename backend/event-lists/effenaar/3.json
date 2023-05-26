@@ -1,38 +1,5 @@
 [
   {
-    "doorOpenDateTime": "2023-05-12T17:30:00.000Z",
-    "startDateTime": "2023-05-12T18:15:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.effenaar.nl/agenda/corrosion-conformity-plainride",
-    "title": "Corrosion Of Conformity + Plainride",
-    "location": "effenaar",
-    "price": 20,
-    "shortText": "Bridge Festival presents",
-    "longText": "../public/texts/f7ff605c-11e8-4d72-a0a6-2e161d86e28d.html",
-    "image": "https://d3gy47dclw6o24.cloudfront.net/styles/320w/s3/2023-02/Corrosion%20of%20Conformity%20-%20header.jpg?itok=dWrRsDGO",
-    "soldOut": false,
-    "unavailable": "",
-    "corrupted": null,
-    "correctMusic": null,
-    "origin": "effenaar"
-  },
-  {
-    "doorOpenDateTime": "2023-05-25T17:30:00.000Z",
-    "startDateTime": "2023-05-25T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.effenaar.nl/agenda/club-void-valley-sun",
-    "title": "Club Void: Valley Of The Sun",
-    "location": "effenaar",
-    "shortText": "+ Your Highness",
-    "longText": "../public/texts/74f88161-f7d6-412c-b5b1-907a92baa945.html",
-    "image": "https://d3gy47dclw6o24.cloudfront.net/styles/320w/s3/2023-01/ValleyOfTheSun_eventheader.png?itok=tPxOvHJC",
-    "soldOut": false,
-    "unavailable": "",
-    "corrupted": null,
-    "correctMusic": null,
-    "origin": "effenaar"
-  },
-  {
     "doorOpenDateTime": "2023-06-15T17:30:00.000Z",
     "startDateTime": "2023-06-15T18:00:00.000Z",
     "endDateTime": null,
@@ -40,12 +7,11 @@
     "title": "Club Void: Legion Of Doom",
     "location": "effenaar",
     "shortText": "+ Planet Of Zeus + Blackholesun",
-    "longText": "../public/texts/ecafffbe-3bed-4e5d-98b0-962af6f69309.html",
+    "longText": "../public/texts/fe5507da-b6e1-4ed9-aa9f-7398b3baab0c.html",
     "image": "https://d3gy47dclw6o24.cloudfront.net/styles/320w/s3/2023-03/LegionOfDoom_eventheader_0.png?itok=jZqFfRBZ",
     "soldOut": false,
     "unavailable": "",
     "corrupted": null,
-    "correctMusic": null,
     "origin": "effenaar"
   },
   {
@@ -57,12 +23,11 @@
     "location": "effenaar",
     "price": 32,
     "shortText": "Exclusieve NL-show",
-    "longText": "../public/texts/7db33fc6-00fd-4a2c-920c-bea5e450278a.html",
+    "longText": "../public/texts/64f4d317-c544-49b9-9c11-b5f8e104a7ad.html",
     "image": "https://d3gy47dclw6o24.cloudfront.net/styles/320w/s3/2023-02/me%20first%20header.png?itok=p6qnSNjr",
     "soldOut": true,
     "unavailable": "",
     "corrupted": null,
-    "correctMusic": null,
     "origin": "effenaar"
   },
   {
@@ -73,12 +38,11 @@
     "title": "Superbloom",
     "location": "effenaar",
     "shortText": "Puntige, gruizig melodieuze grunge pareltjes | + Wrong Man",
-    "longText": "../public/texts/5f7b263f-ead1-4df1-b1db-9ce825d39af5.html",
+    "longText": "../public/texts/107ce8be-463d-4c78-b1bb-51cae0d167ae.html",
     "image": "https://d3gy47dclw6o24.cloudfront.net/styles/320w/s3/2023-04/header%20sb.png?itok=DohUYgwA",
     "soldOut": false,
     "unavailable": "",
     "corrupted": null,
-    "correctMusic": null,
     "origin": "effenaar"
   },
   {
@@ -90,12 +54,27 @@
     "location": "effenaar",
     "price": 24.5,
     "shortText": "",
-    "longText": "../public/texts/59ca9133-0f4f-4cdb-8fac-9aad4fdf75e3.html",
+    "longText": "../public/texts/dbe4201e-6cec-4c2f-824d-7f03cf12c001.html",
     "image": "https://d3gy47dclw6o24.cloudfront.net/styles/320w/s3/2023-03/EMM%2023%20-%20warm%20up%20-%201920X1080pix.jpg?itok=MOuQQoKE",
     "soldOut": false,
     "unavailable": "",
     "corrupted": null,
-    "correctMusic": null,
+    "origin": "effenaar"
+  },
+  {
+    "doorOpenDateTime": "2024-01-07T14:00:00.000Z",
+    "startDateTime": "2024-01-07T15:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.effenaar.nl/agenda/ronnie-james-dio-memorial-concert",
+    "title": "Ronnie James Dio Memorial Concert",
+    "location": "effenaar",
+    "price": 28.5,
+    "shortText": "De crème de la crème van de Nederlandse hardrock en metal",
+    "longText": "../public/texts/9aca1c12-7ae7-4dd9-9c45-26b514bb79bf.html",
+    "image": "https://d3gy47dclw6o24.cloudfront.net/styles/320w/s3/2023-05/The%20Memorial%20Concert%20-%20foto%202023-2024%20(credits%20Cristel%20Brouwer).png?itok=Amaq7t1c",
+    "soldOut": false,
+    "unavailable": "",
+    "corrupted": null,
     "origin": "effenaar"
   }
 ]

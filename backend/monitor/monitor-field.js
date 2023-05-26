@@ -52,7 +52,6 @@ export default class MonitorField {
     });
 
     const langeTekenMatches = pretty.match(/([\w.,\s]{50,5000})/g);
-    console.log(langeTekenMatches)
     if (Array.isArray(langeTekenMatches) && langeTekenMatches.length > 1) {
       langeTekenMatches.forEach(langeTeken => {
         const kortereTekenReeds = langeTeken.substring(0,50);

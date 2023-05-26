@@ -34,12 +34,13 @@ dbsScraper.listenToMasterThread();
 
 dbsScraper.makeBaseEventList = async function () {
 
-  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.family);
-  if (availableBaseEvent){
+  const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
+  if (availableBaseEvents){
+    const thisWorkersEvents = availableBaseEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
     return await this.makeBaseEventListEnd({
-      stopFunctie: null, rawEvents: availableBaseEvent}
+      stopFunctie: null, rawEvents: thisWorkersEvents}
     );    
-  }  
+  }   
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
@@ -49,8 +50,6 @@ dbsScraper.makeBaseEventList = async function () {
   const rawEvents = await page.evaluate(
     ({ months,workerData }) => {
       return Array.from(document.querySelectorAll(".fusion-events-post"))
-
-        .filter((eventEl, index) => index % workerData.workerCount === workerData.index)
         .map((eventEl) => {
           const title = eventEl.querySelector(".fusion-events-meta .url")?.textContent.trim() ?? null;
           const res = {
@@ -144,9 +143,9 @@ dbsScraper.makeBaseEventList = async function () {
   );
 
   this.saveBaseEventlist(workerData.family, rawEvents)
- 
+  const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
   return await this.makeBaseEventListEnd({
-    stopFunctie, page, rawEvents}
+    stopFunctie, rawEvents: thisWorkersEvents}
   );
   
 };
@@ -175,16 +174,8 @@ dbsScraper.getPageInfo = async function ({ page, event }) {
         remarks: `image missing ${res.pageInfo}`
       })
     }    
-    let categories =
-      document.querySelector(".tribe-events-event-categories")?.textContent ??
+    res.shortText += document.querySelector(".tribe-events-event-categories")?.textContent.toLowerCase() ??
       "";
-    categories = categories.toLowerCase();
-    res.isMetal =
-      categories.includes("metal") ||
-      categories.includes("punk") ||
-      categories.includes("noise") ||
-      categories.includes("doom") ||
-      categories.includes("industrial");
 
     res.ticketURL = document.querySelector('.tribe-events-event-url a')?.href ?? null;
     if (!res.ticketURL){
@@ -214,3 +205,15 @@ dbsScraper.getPageInfo = async function ({ page, event }) {
   return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
   
 };
+
+dbsScraper.singleMergedEventCheck = async function(event){
+
+  const hasGoodTerms = await this.hasGoodTerms(event)
+  if (hasGoodTerms.success) return hasGoodTerms
+
+  return {
+    event,
+    reason: `no good terms found ${event.categoriesToTest}`,
+    success: false
+  }
+}

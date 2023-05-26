@@ -33,13 +33,13 @@ depulScraper.listenToMasterThread();
 
 depulScraper.makeBaseEventList = async function () {
 
-  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.family);
-  if (availableBaseEvent){
+  const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
+  if (availableBaseEvents){
+    const thisWorkersEvents = availableBaseEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
     return await this.makeBaseEventListEnd({
-      stopFunctie: null, rawEvents: availableBaseEvent}
+      stopFunctie: null, rawEvents: thisWorkersEvents}
     );    
-  }  
-
+  } 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
   await page.evaluate(() => {
@@ -52,7 +52,6 @@ depulScraper.makeBaseEventList = async function () {
   let rawEvents = await page.evaluate(
     ({ months,workerData }) => {
       return Array.from(document.querySelectorAll(".agenda-item"))
-        .filter((rawEvent, index) => index % workerData.workerCount === workerData.index)
         .map((rawEvent) => {
           const title = rawEvent.querySelector("h2")?.textContent.trim() ?? "";
           const res = {
@@ -107,9 +106,9 @@ depulScraper.makeBaseEventList = async function () {
   );
 
   this.saveBaseEventlist(workerData.family, rawEvents)
-
+  const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
   return await this.makeBaseEventListEnd({
-    stopFunctie, page, rawEvents}
+    stopFunctie, rawEvents: thisWorkersEvents}
   );
   
 };
@@ -140,6 +139,7 @@ depulScraper.getPageInfo = async function ({ page, event }) {
               contentBox.removeChild(removeFromContentBox);
             }
           });
+          res.tempHTML = contentBox.innerHTML;
           res.longTextHTML = contentBox.innerHTML;
         }
       } catch (caughtError) {
@@ -242,49 +242,10 @@ depulScraper.getPageInfo = async function ({ page, event }) {
 
 // SINGLE EVENT CHECK 
 
-depulScraper.singleEventCheck = async function (event) {
-  const firstCheckText = `${event?.title ?? ""} ${event?.shortText ?? ""}`;
-  if (
-    firstCheckText.includes("metal") ||
-    firstCheckText.includes("punk") ||
-    firstCheckText.includes("punx") ||
-    firstCheckText.includes("noise") ||
-    firstCheckText.includes("industrial")
-  ) {
-    return {
-      event,
-      success: true,
-      reason: "Genres in title+shortText",
-    };
-  }
-
-  const tempPage = await this.browser.newPage();
-  await tempPage.goto(event.venueEventUrl, {
-    waitUntil: "domcontentloaded",
-    timeout: this.singlePageTimeout,
-  });
-
-  const rockMetalOpPagina = await tempPage.evaluate(() => {
-    const tc =
-      document.getElementById("content-box")?.textContent.toLowerCase() ?? "";
-    return (
-      tc.includes("metal") ||
-      tc.includes("punk") ||
-      tc.includes("thrash") ||
-      tc.includes("punx") ||
-      tc.includes("noise") ||
-      tc.includes("industrial")
-    );
-  });
-  await tempPage.close();
-
-  if (rockMetalOpPagina) {
-    return {
-      event,
-      success: true,
-      reason: "Genres found in text of event URL",
-    };
-  }
+depulScraper.singleMergedEventCheck = async function (event) {
+  this.dirtyDebug(event)
+  const hasGoodTerms = await this.hasGoodTerms(event, ['title','shortText', 'longText']);
+  if (hasGoodTerms.success) return hasGoodTerms;
 
   return {
     event,

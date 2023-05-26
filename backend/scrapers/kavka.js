@@ -33,12 +33,13 @@ kavkaScraper.listenToMasterThread();
 
 kavkaScraper.makeBaseEventList = async function () {
 
-  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.family);
-  if (availableBaseEvent){
+  const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
+  if (availableBaseEvents){
+    const thisWorkersEvents = availableBaseEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
     return await this.makeBaseEventListEnd({
-      stopFunctie: null, rawEvents: availableBaseEvent}
+      stopFunctie: null, rawEvents: thisWorkersEvents}
     );    
-  }
+  }  
 
   const { stopFunctie, page } = await this.makeBaseEventListStart();
 
@@ -145,12 +146,10 @@ kavkaScraper.makeBaseEventList = async function () {
   );
 
   this.saveBaseEventlist(workerData.family, rawEvents)
-
+  const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
   return await this.makeBaseEventListEnd({
-    stopFunctie,
-    page,
-    rawEvents,
-  });
+    stopFunctie, rawEvents: thisWorkersEvents}
+  );
 };
 
 kavkaScraper.getPageInfo = async function ({ page, event }) {

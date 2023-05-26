@@ -20,7 +20,7 @@ import ErrorWrapper from "../../mods/error-wrapper.js";
 export default class AbstractScraper {
 
   /**
-   * Gebruikt in singleEventChecks' hasForbiddenTerms
+   * Gebruikt in singleRawEventChecks' hasForbiddenTerms
    *
    * @static
    * @memberof AbstractScraper
@@ -35,6 +35,8 @@ export default class AbstractScraper {
     "americana",
     "alternatieve rock",
   ];
+
+  static goodCategories = [`punx`,`death metal`,`doom`,`hardcore`,`new wave`,`punk`,`hardcore punk`,`heavy rock 'n roll`,`symphonic metal`,`thrash`,`metalcore`,`black`,`crossover`,`grindcore`,`industrial`,`noise`,`postpunk`,`post-punk`,`heavy metal`,`power metal`,`heavy psych`,`metal`,`surfpunkabilly`]
 
   constructor(obj) {
     this.qwm;
@@ -115,6 +117,8 @@ export default class AbstractScraper {
     await this.processSingleMusicEvent(checkedEvents).catch(
       this.handleOuterScrapeCatch
     );
+
+
     await this.announceToMonitorDone();
     if (!this.puppeteerConfig.app.mainPage.useCustomScraper || !this.puppeteerConfig.app.singlePage.useCustomScraper) {
       await this.closeBrowser();
@@ -366,7 +370,7 @@ export default class AbstractScraper {
    * Initeert de generator check op events
    *
    * @param {[MusicEvents]} baseMusicEvents uitgedraaid door makeBaseEventList
-   * @return {checkedEvents [MusicEvent]}  Want geeft werk van eventAsyncCheck door.
+   * @return {checkedEvents [MusicEvent]}  Want geeft werk van rawEventsAsyncCheck door.
    * @memberof AbstractScraper
    *
    * checkedEvents
@@ -375,7 +379,7 @@ export default class AbstractScraper {
     parentPort.postMessage(this.qwm.workerStarted());
     const eventGen = this.eventGenerator(baseMusicEvents);
     const checkedEvents = [];
-    return await this.eventAsyncCheck({
+    return await this.rawEventsAsyncCheck({
       eventGen,
       checkedEvents,
     });
@@ -392,7 +396,7 @@ export default class AbstractScraper {
    * @return {checkedEvents [MusicEvent]}
    * @memberof AbstractScraper
    */
-  async eventAsyncCheck({ eventGen, checkedEvents }) {
+  async rawEventsAsyncCheck({ eventGen, checkedEvents }) {
     let generatedEvent;
     try {
       const useableEventsCheckedArray = checkedEvents.map((a) => a);
@@ -401,7 +405,7 @@ export default class AbstractScraper {
       if (generatedEvent.done) return useableEventsCheckedArray;
 
       const eventToCheck = generatedEvent.value;
-      const checkResult = await this.singleEventCheck(eventToCheck);
+      const checkResult = await this.singleRawEventCheck(eventToCheck);
       if (checkResult.success) {
         useableEventsCheckedArray.push(eventToCheck);
       } else {
@@ -415,14 +419,7 @@ export default class AbstractScraper {
         );
       }
 
-      // parentPort.postMessage(
-      //   this.qwm.debugger([
-      //     `${eventToCheck?.title} filterres`,
-      //     {sucess: checkResult.success, reason: checkResult.reason},
-      //   ])
-      // );
-
-      return await this.eventAsyncCheck({
+      return await this.rawEventsAsyncCheck({
         eventGen,
         checkedEvents: useableEventsCheckedArray,
       });
@@ -430,7 +427,7 @@ export default class AbstractScraper {
       _t.handleError(
         error,
         workerData,
-        `eventAsyncCheck faal met ${generatedEvent?.value?.title}`,
+        `rawEventsAsyncCheck faal met ${generatedEvent?.value?.title}`,
         'close-thread',
         {
           generatedEvent,          
@@ -452,7 +449,7 @@ export default class AbstractScraper {
    * @return {event {MusicEvent, success bool}}
    * @memberof AbstractScraper
    */
-  async singleEventCheck(event) {
+  async singleRawEventCheck(event) {
     // abstracte methode, over te schrijven
     return {
       event,
@@ -460,6 +457,65 @@ export default class AbstractScraper {
       reason: null,
     };
   }
+
+  /**
+   * abstracte methode, te overschrijve in de kindWorkers.
+   *
+   * @param {MusicEvent} event om te controleren
+   * @return {event {MusicEvent, success bool}}
+   * @memberof AbstractScraper
+   */
+  async singleMergedEventCheck(event) {
+    // abstracte methode, over te schrijven
+    return {
+      event,
+      success: true,
+      reason: null,
+    };
+  }  
+
+  /**
+   * Loopt over AbstractScraper.goodCategories en kijkt of ze in 
+   * een bepaalde text voorkomen, standaard bestaande uit de titel en de shorttext van 
+   * de event.
+   *
+   * @param {*} event 
+   * @param {string} [keysToCheck=['title', 'shortText']] 
+   * @return {event, {bool} succes, {string} reason}
+   * @memberof AbstractScraper
+   */
+  async hasGoodTerms(event, keysToCheck = ['title', 'shortText']){
+    const checkedKeysToCheck = keysToCheck.filter(key=>{
+      return Object.prototype.hasOwnProperty.call(key, event)
+    })
+    const combinedTextToCheck = checkedKeysToCheck.reduce((prev, next)=>{
+      if (next !== 'longTextHTML') {
+        return event[next] + prev
+      } 
+      const longTextHTML = fs.readFileSync(event[next], 'utf-8');
+      return longTextHTML + prev;
+    }, '')
+    this.dirtyLog({
+      title: event.title,
+      shortText: event.shortText,
+      combinedTextToCheck
+    })
+    const hasGoodTerm = AbstractScraper.goodCategories.find(forbiddenTerm=> combinedTextToCheck.includes(forbiddenTerm))
+    if (hasGoodTerm) {
+      this.dirtyTalk(`good terms ${event.title}`)
+      return {
+        event,
+        success: true,
+        reason: `Goed in `+keysToCheck.join(''),
+      };    
+    }
+    
+    return {
+      event,
+      success: false,
+      reason: `Geen bevestiging gekregen uit ${keysToCheck.join(';')} ${combinedTextToCheck}`,
+    };
+  }  
   
   /**
    * Loopt over AbstractScraper.forbiddenTerms en kijkt of ze in 
@@ -480,20 +536,20 @@ export default class AbstractScraper {
     if (hasForbiddenTerm) {
       return {
         event,
-        success: false,
+        success: true,
         reason: "verboden genres gevonden in title+shortText",
       };
     }
-
+    
     return {
       event,
-      success: true,
+      success: false,
       reason: "verboden genres niet gevonden.",
     };    
   }
 
   /**
-   * methode waarmee singleEventCheck vervangen kan worden.
+   * methode waarmee singleRawEventCheck vervangen kan worden.
    * kijkt naar 'voornaamste titel', dwz de event.title tot aan een '&'.
    *
    * @param {*} event
@@ -620,10 +676,19 @@ export default class AbstractScraper {
       singleEvent.corrupted += missingProperties.join(',')
     }
 
-    // TODO 
-    singleEvent.isValid
-      ? singleEvent.register()
-      : singleEvent.registerINVALID(this.workerData);
+    const mergedEventCheckRes = await this.singleMergedEventCheck(singleEvent);
+    if (mergedEventCheckRes.success) {
+      singleEvent.isValid
+        ? singleEvent.register() // TODO hier lopen dingen echt dwars door elkaar. integreren in soort van singleMergedEventCheckBase en dan anderen reducen erop of weet ik veel wat een gehack vandaag
+        : singleEvent.registerINVALID(this.workerData);
+    } else {
+      this.dirtyDebug({
+        title: `2nd events check refused ${singleEvent.title}`,
+        mergedEventCheckRes,
+        singleEvent
+      })
+      singleEvent.registerINVALID(this.workerData);
+    }
 
     singleEventPage && !singleEventPage.isClosed() && (await singleEventPage.close());
 
@@ -642,7 +707,7 @@ export default class AbstractScraper {
     try {
       if (!longTextHTML) return null;
       const longTextPath = `${fsDirections.publicTexts}/${uuid}.html`;
-      fs.writeFile(longTextPath, longTextHTML, "utf-8", () => {});
+      fs.writeFileSync(longTextPath, longTextHTML, "utf-8");
       return longTextPath;
     } catch (err) {
       _t.handleError(err, workerData, `write long text fail`, 'notice', {
@@ -807,6 +872,8 @@ export default class AbstractScraper {
     fs.writeFile(longTextPath, pageInfo.longTextHTML, "utf-8", () => {});
     return longTextPath;
   }  
+
+
 
   // step 4
   async announceToMonitorDone() {
