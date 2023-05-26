@@ -30,6 +30,16 @@ const bibelotScraper = new AbstractScraper(makeScraperConfig({
 
 bibelotScraper.listenToMasterThread();
 
+bibelotScraper.singleRawEventCheck = async function(event){
+  const hasForbiddenTermsRes = await bibelotScraper.hasForbiddenTerms(event);
+  return {
+    event,
+    reason: hasForbiddenTermsRes.reason,
+    success: !hasForbiddenTermsRes.success,
+  }
+  
+}
+
 // MAKE BASE EVENTS
 
 bibelotScraper.makeBaseEventList = async function () {

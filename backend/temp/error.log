@@ -1,4 +1,43 @@
 
+  bibelot-0 Error - 5:16:00 AM
+  TypeError: Cannot read properties of undefined (reading 'includes')
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:548:102
+    at Array.find (<anonymous>)
+    at AbstractScraper.hasForbiddenTerms (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:548:61)
+    at bibelotScraper.singleRawEventCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/bibelot.js:34:53)
+    at AbstractScraper.rawEventsAsyncCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:414:38)
+    at AbstractScraper.announceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:388:23)
+    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:38)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'includes')
+  
+  
+  bibelot-0 Error - 5:14:38 AM
+  TypeError: Cannot read properties of undefined (reading 'includes')
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:548:102
+    at Array.find (<anonymous>)
+    at AbstractScraper.hasForbiddenTerms (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:548:61)
+    at bibelotScraper.singleRawEventCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/bibelot.js:34:53)
+    at AbstractScraper.rawEventsAsyncCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:414:38)
+    at AbstractScraper.announceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:388:23)
+    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:38)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'includes')
+  
+  
+  bibelot-0 Error - 5:13:03 AM
+  TypeError: Cannot read properties of undefined (reading 'includes')
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:547:102
+    at Array.find (<anonymous>)
+    at AbstractScraper.hasForbiddenTerms (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:547:61)
+    at bibelotScraper.singleRawEventCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/bibelot.js:34:53)
+    at AbstractScraper.rawEventsAsyncCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:414:38)
+    at AbstractScraper.announceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:388:23)
+    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:38)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'includes')
+  
+  
   ticketmaster-2 Error - 3:52:37 AM
   Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-racoon-tickets/292035?language=en-us'>TM Zuiderpark Live: Racoon</a>
     at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:785:29

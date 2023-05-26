@@ -26,6 +26,7 @@ export default class AbstractScraper {
    * @memberof AbstractScraper
    */
   static forbiddenTerms = [
+    "karaoke",
     "london calling",
     "filmvertoning",
     "indie",
@@ -540,11 +541,12 @@ export default class AbstractScraper {
    * @return {event, {bool} succes, {string} reason}
    * @memberof AbstractScraper
    */
-  async hasForbiddenTerms(event, keysToCheck = ['title', 'shortText']){
-    const checkedKeysToCheck = keysToCheck.filter(key=>{
-      return Object.prototype.hasOwnProperty.call(key, event)
-    })
-    const combinedTextToCheck = checkedKeysToCheck.reduce((prev, next)=>{event[next] + prev}, '')
+  async hasForbiddenTerms(event, keysToCheck){
+    const keysToCheck2 = Array.isArray(keysToCheck) ? keysToCheck : ['title', 'shortText'];
+    let combinedTextToCheck = '';
+    for (let i = 0; i < keysToCheck2.length; i++){
+      combinedTextToCheck += event[keysToCheck2[i]].toLowerCase() + ' ';
+    }
     const hasForbiddenTerm = AbstractScraper.forbiddenTerms.find(forbiddenTerm=> combinedTextToCheck.includes(forbiddenTerm))
     if (hasForbiddenTerm) {
       return {
