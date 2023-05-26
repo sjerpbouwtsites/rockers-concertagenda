@@ -1,4 +1,14 @@
 
+  boerderij-0 Error - 11:25:47 PM
+  SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at AbstractScraper.checkBaseEventAvailable (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:256:17)
+    at boerderijScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/boerderij.js:70:42)
+    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:200:40)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Unexpected end of JSON input
+  
+  
   afaslive-1 Error - 10:00:25 PM
   TypeError: Cannot read properties of null (reading 'toLowerCase')
     at AbstractScraper.hasForbiddenTerms (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:630:53)

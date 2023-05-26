@@ -497,13 +497,15 @@ export default class AbstractScraper {
 
       const eventToCheck = generatedEvent.value;
       const checkResult = await this.singleRawEventCheck(eventToCheck);
+      let workingTitle= this.cleanupEventTitle(eventToCheck.title);
       if (checkResult.success) {
         useableEventsCheckedArray.push(eventToCheck);
+
         parentPort.postMessage(
           this.qwm.debugger(
             {
               title: 'Raw event async check',
-              event: `<a class='single-event-check-notice single-event-check-notice--success' href='${eventToCheck.venueEventUrl}'>${eventToCheck.title}<a/>`,              
+              event: `<a class='single-event-check-notice single-event-check-notice--success' href='${eventToCheck.venueEventUrl}'>${workingTitle}<a/>`,              
               reason: checkResult.reason,
             },
           )
@@ -513,7 +515,7 @@ export default class AbstractScraper {
           this.qwm.debugger(
             {
               title: 'Raw event async check',
-              event: `<a class='single-event-check-notice single-event-check-notice--failure' href='${eventToCheck.venueEventUrl}'>${eventToCheck.title}<a/>`,              
+              event: `<a class='single-event-check-notice single-event-check-notice--failure' href='${eventToCheck.venueEventUrl}'>${workingTitle}<a/>`,              
               reason: checkResult.reason,
             },
           )
@@ -646,18 +648,20 @@ export default class AbstractScraper {
   }
 
   async saveRefusedTitle(title){
+    let workingTitle = this.cleanupEventTitle(title)
     const curForbiddenList = fs.readFileSync(fsDirections.isRockRefuse, 'utf-8');
-    fs.writeFileSync(fsDirections.isRockRefuse, `${title.toLowerCase()}\n${curForbiddenList}`, 'utf-8')
+    fs.writeFileSync(fsDirections.isRockRefuse, `${workingTitle}\n${curForbiddenList}`, 'utf-8')
   }
 
   async saveAllowedTitle(title){
+    let workingTitle = this.cleanupEventTitle(title)
     const curAllowList = fs.readFileSync(fsDirections.isRockAllow, 'utf-8');
-    fs.writeFileSync(fsDirections.isRockAllow, `${title.toLowerCase()}\n${curAllowList}`, 'utf-8')
+    fs.writeFileSync(fsDirections.isRockAllow, `${workingTitle}\n${curAllowList}`, 'utf-8')
   }
 
   async rockAllowListCheck(event, title){
-    const t = title.toLowerCase();
-    const tt = this.rockAllowList.includes(t);
+    let workingTitle = this.cleanupEventTitle(title)
+    const tt = this.rockAllowList.includes(workingTitle);
     return {
       event,
       success: tt,
@@ -666,8 +670,8 @@ export default class AbstractScraper {
   }
 
   async rockRefuseListCheck(event, title){
-    const t = title.toLowerCase();
-    const tt = this.rockRefuseList.includes(t);
+    let workingTitle = this.cleanupEventTitle(title)
+    const tt = this.rockRefuseList.includes(workingTitle);
     return {
       event,
       success: tt,
@@ -676,8 +680,11 @@ export default class AbstractScraper {
   }
 
   async metalEncyclopedia(event, title){
-    const MetalEncFriendlyTitle = title.replace(/\s/g, "_");
-    this.dirtyTalk(`${event.title} asks https://www.metal-archives.com/search/ajax-band-search/?field=name&query=${MetalEncFriendlyTitle}`)
+
+    let workingTitle = this.cleanupEventTitle(title)
+
+    const MetalEncFriendlyTitle = workingTitle.replace(/\s/g, "_");
+    this.dirtyTalk(`${workingTitle} asks https://www.metal-archives.com/search/ajax-band-search/?field=name&query=${MetalEncFriendlyTitle}`)
     const metalEncUrl = `https://www.metal-archives.com/search/ajax-band-search/?field=name&query=${MetalEncFriendlyTitle}`;
     const foundInMetalEncyclopedia = await fetch(metalEncUrl)
       .then((result) => result.json())
@@ -688,7 +695,7 @@ export default class AbstractScraper {
           try {
             match = bandData[0].match(/>(.*)<\//);
             if (Array.isArray(match) && match.length > 1){
-              return match[1].toLowerCase() === title;
+              return match[1].toLowerCase() === workingTitle;
             } 
           } catch (error) {
             return false
@@ -729,10 +736,12 @@ export default class AbstractScraper {
 
   async wikipedia(event, title){
 
+    let workingTitle = this.cleanupEventTitle(title)
+
     const page = await this.browser.newPage();
     let wikiPage
     try {
-      const wikifiedTitled = title.split(' ')
+      const wikifiedTitled = workingTitle.split(' ')
         .filter(a => a)
         .map(word => {
           return word[0].toUpperCase() + word.substring(1,word.length)
@@ -742,7 +751,7 @@ export default class AbstractScraper {
     } catch (error) {
       _t.wrappedHandleError(new ErrorWrapper({
         error,
-        remarks: `<a href='${event?.venueEventUrl}' class='error-link get-page-info-timeout'>wikititel maken fout ${workerData.name}</a> ${title}`,
+        remarks: `<a href='${event?.venueEventUrl}' class='error-link get-page-info-timeout'>wikititel maken fout ${workerData.name}</a> ${workingTitle}`,
         workerData,
         errorLevel: 'notice',
       }
@@ -819,6 +828,18 @@ export default class AbstractScraper {
     }
   }
 
+  cleanupEventTitle(workingTitle){
+    // - 14:35 zoals bij afas
+    if (workingTitle.match(/\s?-\s?\d\d:\d\d/)){
+      workingTitle = workingTitle.replace(/\s?-\s?\d\d:\d\d/, '');
+    }
+    
+    if (workingTitle.includes('&')) {
+      workingTitle = workingTitle.replace(/&.*$/,'');
+    }
+    return workingTitle.toLowerCase().trim()
+  }
+
   /**
    * methode waarmee singleRawEventCheck vervangen kan worden.
    * kijkt naar 'voornaamste titel', dwz de event.title tot aan een '&'.
@@ -829,26 +850,7 @@ export default class AbstractScraper {
    */
   async isRock(event, overloadTitles = null, recursiveTitle = null) {
 
-    let workingTitle = recursiveTitle || event.title.replace(/&.*/, "").trim().toLowerCase();
-
-    // - 14:35 zoals bij afas
-    if (workingTitle.match(/\s?-\s?\d\d:\d\d/)){
-      workingTitle = workingTitle.replace(/\s?-\s?\d\d:\d\d/, '');
-    }
-
-    const rockRefuseListRes = await this.rockRefuseListCheck(event, workingTitle);
-    if (rockRefuseListRes.succes) {
-      return {
-        reason: rockRefuseListRes.reason,
-        event,
-        success: false,
-      }
-    }
-
-    const rockAllowListRes = await this.rockAllowListCheck(event, workingTitle);
-    if (rockAllowListRes.succes) {
-      rockAllowListRes
-    }
+    let workingTitle = recursiveTitle || this.cleanupEventTitle(event.title);
 
     const metalEncyclopediaRes = await this.metalEncyclopedia(event, workingTitle);
     if (metalEncyclopediaRes.success) {
