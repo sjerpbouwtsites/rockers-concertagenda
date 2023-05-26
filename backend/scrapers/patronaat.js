@@ -29,6 +29,53 @@ const patronaatScraper = new AbstractScraper(makeScraperConfig({
 
 patronaatScraper.listenToMasterThread();
 
+// SINGLE EVENT CHECK
+
+patronaatScraper.singleRawEventCheck = async function (event) {
+
+  const isRefused = await this.rockRefuseListCheck(event, event.title.toLowerCase())
+  if (isRefused.success) return {
+    reason: isRefused.reason,
+    event,
+    success: false
+  };
+
+  const isAllowed = await this.rockAllowListCheck(event, event.title.toLowerCase())
+  if (isAllowed.success) return isAllowed;
+
+  const hasForbiddenTerms = await this.hasForbiddenTerms(event);
+  if (hasForbiddenTerms.success) {
+    await this.saveRefusedTitle(event.title.toLowerCase())
+    return {
+      reason: hasForbiddenTerms.reason,
+      success: false,
+      event
+    }
+  }
+
+  const hasGoodTermsRes = await this.hasGoodTerms(event);
+  if (hasGoodTermsRes.success) {
+    await this.saveAllowedTitle(event.title.toLowerCase())
+    return hasGoodTermsRes;
+  }
+  const tl = event.title.toLowerCase();
+  const match = tl.match(/([\w\s]+)\s+[+–&-]/) 
+  let ol1;
+  let olz = null;
+  if (match && Array.isArray(match) && match.length) {
+    ol1 = match[1].replace(/\s{2,100}/g,' ').trim();
+    olz = [ol1]
+  }
+  const isRockRes = await this.isRock(event, olz);
+  if (isRockRes.success){
+    await this.saveAllowedTitle(event.title.toLowerCase())
+  } else {
+    await this.saveRefusedTitle(event.title.toLowerCase())
+  }
+  return isRockRes;
+  
+};
+
 // MAKE BASE EVENTS
 
 patronaatScraper.makeBaseEventList = async function () {
@@ -46,7 +93,7 @@ patronaatScraper.makeBaseEventList = async function () {
   const rawEvents = await page.evaluate(({workerData}) => {
     return Array.from(document.querySelectorAll(".overview__list-item--event"))
       .map((eventEl) => {
-        const title = eventEl.querySelector(".event__name")?.textContent.trim();
+        const title = eventEl.querySelector(".event-program__name")?.textContent.trim();
         const res = {
           unavailable: '',
           pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
@@ -62,7 +109,7 @@ patronaatScraper.makeBaseEventList = async function () {
         }          
         res.venueEventUrl = eventEl.querySelector("a[href]")?.href ?? null;
         res.shortText = eventEl
-          .querySelector(".event__subtitle")
+          .querySelector(".event-program__subtitle")
           ?.textContent.trim() ?? '';
         res.soldOut = !!(eventEl.querySelector('.event__tags-item--sold-out') ?? null)
         return res;

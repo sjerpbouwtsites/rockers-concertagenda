@@ -24,6 +24,55 @@ const tivoliVredenburgScraper = new AbstractScraper(makeScraperConfig({
 
 tivoliVredenburgScraper.listenToMasterThread();
 
+
+// SINGLE EVENT CHECK
+
+tivoliVredenburgScraper.singleRawEventCheck = async function (event) {
+
+  const isRefused = await this.rockRefuseListCheck(event, event.title.toLowerCase())
+  if (isRefused.success) return {
+    reason: isRefused.reason,
+    event,
+    success: false
+  };
+
+  const isAllowed = await this.rockAllowListCheck(event, event.title.toLowerCase())
+  if (isAllowed.success) return isAllowed;
+
+  const hasForbiddenTerms = await this.hasForbiddenTerms(event);
+  if (hasForbiddenTerms.success) {
+    await this.saveRefusedTitle(event.title.toLowerCase())
+    return {
+      reason: hasForbiddenTerms.reason,
+      success: false,
+      event
+    }
+  }
+
+  const hasGoodTermsRes = await this.hasGoodTerms(event);
+  if (hasGoodTermsRes.success) {
+    await this.saveAllowedTitle(event.title.toLowerCase())
+    return hasGoodTermsRes;
+  }
+  const tl = event.title.toLowerCase();
+  const match = tl.match(/([\w\s]+)\s+[+–&-,]/) 
+  let ol1;
+  let olz = null;
+  if (match && Array.isArray(match) && match.length) {
+    ol1 = match[1].replace(/\s{2,100}/g,' ').trim();
+    olz = [ol1]
+  }
+  const isRockRes = await this.isRock(event, olz);
+  if (isRockRes.success){
+    await this.saveAllowedTitle(event.title.toLowerCase())
+  } else {
+    await this.saveRefusedTitle(event.title.toLowerCase())
+  }
+  return isRockRes;
+  
+};
+
+
 // MAKE BASE EVENTS
 
 tivoliVredenburgScraper.makeBaseEventList = async function () {

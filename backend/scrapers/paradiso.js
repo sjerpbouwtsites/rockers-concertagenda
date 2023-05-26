@@ -37,7 +37,6 @@ paradisoScraper.listenToMasterThread();
 
 paradisoScraper.singleRawEventCheck = async function (event) {
 
-
   const isRefused = await this.rockRefuseListCheck(event, event.title.toLowerCase())
   if (isRefused.success) return {
     reason: isRefused.reason,

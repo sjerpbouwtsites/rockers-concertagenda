@@ -38,13 +38,19 @@ export default class AbstractScraper {
     "karaoke",
     "london calling",
     "filmvertoning",
+    "americana",
     "indie",
     "dromerig",
     "shoegaze",
     "countryrock",
     "americana",
     "alternatieve rock",
-    `dream pop`
+    `dream pop`,
+    `punk-hop`,
+    `blaasrock`,
+    `neofolk`,
+    `art rock`,
+    `folkpunk`
   ];
 
   static wikipediaGoodGenres = [
@@ -90,7 +96,7 @@ export default class AbstractScraper {
   ];
 
   static goodCategories = [
-    'heavy rock',
+    'heavy rock', 
     `neue deutsche harte`,
     `neue deutsche haerte`,
     `punx`,
