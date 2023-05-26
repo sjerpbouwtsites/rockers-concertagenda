@@ -26,6 +26,28 @@ const dynamoScraper = new AbstractScraper(makeScraperConfig({
   }
 }));
 
+dynamoScraper.singleMergedEventCheck = async function(event){
+  const hasGoodTermsRes = await this.hasGoodTerms(event);
+  const hasForbiddenTermsRes = await this.hasForbiddenTerms(event);
+  if (hasForbiddenTermsRes.success) return {
+    event,
+    reason: hasForbiddenTermsRes.success,
+    success: false,
+  }
+  
+  if (hasGoodTermsRes.success) return hasGoodTermsRes;
+
+  const isRockRes = await this.isRock(event);
+  if (isRockRes.success) return isRockRes;
+  
+  return {
+    event,
+    reason: isRockRes.reason,
+    success: false
+  }
+  
+}
+
 dynamoScraper.listenToMasterThread();
 
 // MAKE BASE EVENTS

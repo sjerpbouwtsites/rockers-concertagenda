@@ -1,4 +1,51 @@
 
+  dynamo-0 Error - 11:39:45 AM
+  Error: Te weinig 'agendaDataEls' <a class='page-info' href='https://www.effenaar.nl/agenda/hot-mulligan'>Hot Mulligan - Effenaar</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:880:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:875:23)
+    at dynamoScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dynamo.js:218:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:737:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:125:5) 
+  Te weinig 'agendaDataEls' <a class='page-info' href='https://www.effenaar.nl/agenda/hot-mulligan'>Hot Mulligan - Effenaar</a>
+  
+  
+  dynamo-1 Error - 11:39:23 AM
+  ReferenceError: Cannot access 'wikiPage' before initialization
+    at AbstractScraper.wikipedia (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:622:12)
+    at AbstractScraper.isRock (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:681:37)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async dynamoScraper.singleMergedEventCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dynamo.js:40:21)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:778:33)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:125:5) 
+  Cannot access 'wikiPage' before initialization
+  
+  
+  dynamo-0 Error - 11:25:20 AM
+  Error: Te weinig 'agendaDataEls' <a class='page-info' href='https://www.effenaar.nl/agenda/hot-mulligan'>Hot Mulligan - Effenaar</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:865:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:860:23)
+    at dynamoScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dynamo.js:218:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:718:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:125:5) 
+  Te weinig 'agendaDataEls' <a class='page-info' href='https://www.effenaar.nl/agenda/hot-mulligan'>Hot Mulligan - Effenaar</a>
+  
+  
+  dynamo-0 Error - 11:23:51 AM
+  Error: Te weinig 'agendaDataEls' <a class='page-info' href='https://www.effenaar.nl/agenda/hot-mulligan'>Hot Mulligan - Effenaar</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:865:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:860:23)
+    at dynamoScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dynamo.js:218:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:718:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:125:5) 
+  Te weinig 'agendaDataEls' <a class='page-info' href='https://www.effenaar.nl/agenda/hot-mulligan'>Hot Mulligan - Effenaar</a>
+  
+  
   depul-0 Error - 10:20:41 AM
   TypeError: Cannot read properties of undefined (reading 'replace')
     at AbstractScraper.isRock (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:658:35)

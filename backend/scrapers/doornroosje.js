@@ -17,7 +17,7 @@ const doornroosjeScraper = new AbstractScraper(makeScraperConfig({
     },
     app: {
       mainPage: {
-        url: "https://www.doornroosje.nl/?genre=metal%252Cpunk%252Cpost-hardcore%252Cnoise-rock%252Csludge-rock",
+        url: "https://www.doornroosje.nl/?genre=metal%252Cpunk%252Cpost-hardcore%252Chardcore%252Cnoise-rock",
         requiredProperties: ['venueEventUrl', 'title']
       },
       singlePage: {

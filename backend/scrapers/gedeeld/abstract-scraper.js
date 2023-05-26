@@ -619,7 +619,29 @@ export default class AbstractScraper {
   async wikipedia(event, title){
     const page = await this.browser.newPage();
     const wikiPage = `https://en.wikipedia.org/wiki/${title.replace(/\s/g, "_")}`;
+    const emptyRes = {
+      success: null,
+      url: wikiPage
+    };
     await page.goto(wikiPage);
+
+    const pageDoesNotExist = await page.evaluate(()=>{
+      return document.getElementById('noarticletext');
+    });
+
+    if (pageDoesNotExist){
+      const searchPage =  await page.evaluate(()=>{
+        return document.getElementById('noarticletext').querySelector('[href*=search]')?.href ?? '';
+      })
+      await page.goto(searchPage);
+      if (!searchPage) return emptyRes
+      const firstSearchResult = await page.evaluate(()=>{
+        return document.querySelector('.mw-search-results [href*=wiki]')?.href;
+      })
+      if (!firstSearchResult) return emptyRes;
+      await page.goto(firstSearchResult)
+    }
+
     const wikiRockt = await page.evaluate(() => {
       const isRock =
         !!document.querySelector(".infobox a[href*='rock']") &&
@@ -638,10 +660,7 @@ export default class AbstractScraper {
         reason: `found on <a class='single-event-check-reason wikipedia wikipedia--success' href='${wikiPage}'>wikipedia</a>`
       };
     }    
-    return {
-      success: null,
-      url: wikiPage
-    };
+    return emptyRes;
   }
 
   /**
@@ -762,11 +781,7 @@ export default class AbstractScraper {
         ? singleEvent.register() // TODO hier lopen dingen echt dwars door elkaar. integreren in soort van singleMergedEventCheckBase en dan anderen reducen erop of weet ik veel wat een gehack vandaag
         : singleEvent.registerINVALID(this.workerData);
     } else {
-      this.dirtyDebug({
-        title: `2nd events check refused ${singleEvent.title}`,
-        mergedEventCheckRes,
-        singleEvent
-      })
+      this.dirtyDebug( mergedEventCheckRes)
       singleEvent.registerINVALID(this.workerData);
     }
 
