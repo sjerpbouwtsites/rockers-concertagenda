@@ -1,4 +1,108 @@
 
+  melkweg-0 Error - 1:29:45 PM
+  TypeError: eventsList.map is not a function
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:717:42)
+    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:125:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  eventsList.map is not a function
+  
+  
+  melkweg-1 Error - 1:29:45 PM
+  TypeError: eventsList.map is not a function
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:717:42)
+    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:125:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  eventsList.map is not a function
+  
+  
+  melkweg-3 Error - 1:29:45 PM
+  TypeError: eventsList.map is not a function
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:717:42)
+    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:125:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  eventsList.map is not a function
+  
+  
+  melkweg-2 Error - 1:29:45 PM
+  TypeError: eventsList.map is not a function
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:717:42)
+    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:125:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  eventsList.map is not a function
+  
+  
+  melkweg-0 Error - 1:29:25 PM
+  TypeError: Cannot read properties of undefined (reading 'toLowerCase')
+    at melkwegScraper.rawEventsAsyncCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/melkweg.js:89:30)
+    at AbstractScraper.announceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:390:23)
+    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:121:38)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'toLowerCase')
+  
+  
+  melkweg-1 Error - 1:29:25 PM
+  TypeError: Cannot read properties of undefined (reading 'toLowerCase')
+    at melkwegScraper.rawEventsAsyncCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/melkweg.js:89:30)
+    at AbstractScraper.announceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:390:23)
+    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:121:38)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'toLowerCase')
+  
+  
+  melkweg-3 Error - 1:29:25 PM
+  TypeError: Cannot read properties of undefined (reading 'toLowerCase')
+    at melkwegScraper.rawEventsAsyncCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/melkweg.js:89:30)
+    at AbstractScraper.announceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:390:23)
+    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:121:38)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'toLowerCase')
+  
+  
+  melkweg-2 Error - 1:29:25 PM
+  TypeError: Cannot read properties of undefined (reading 'toLowerCase')
+    at melkwegScraper.rawEventsAsyncCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/melkweg.js:89:30)
+    at AbstractScraper.announceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:390:23)
+    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:121:38)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'toLowerCase')
+  
+  
+  melkweg-3 Error - 1:25:45 PM
+  TypeError: Cannot read properties of undefined (reading 'includes')
+    at melkwegScraper.rawEventsAsyncCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/melkweg.js:88:30)
+    at AbstractScraper.announceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:390:23)
+    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:121:38)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'includes')
+  
+  
+  melkweg-0 Error - 1:25:45 PM
+  TypeError: Cannot read properties of undefined (reading 'includes')
+    at melkwegScraper.rawEventsAsyncCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/melkweg.js:88:30)
+    at AbstractScraper.announceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:390:23)
+    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:121:38)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'includes')
+  
+  
+  melkweg-2 Error - 1:25:45 PM
+  TypeError: Cannot read properties of undefined (reading 'includes')
+    at melkwegScraper.rawEventsAsyncCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/melkweg.js:88:30)
+    at AbstractScraper.announceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:390:23)
+    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:121:38)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'includes')
+  
+  
+  melkweg-1 Error - 1:25:45 PM
+  TypeError: Cannot read properties of undefined (reading 'includes')
+    at melkwegScraper.rawEventsAsyncCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/melkweg.js:88:30)
+    at AbstractScraper.announceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:390:23)
+    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:121:38)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'includes')
+  
+  
   kavka-1 Error - 1:04:58 PM
   Error: image missing <a class='page-info' href='https://kavka.be/event/hanabie/'>HANABIE.</a>
     at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:880:29

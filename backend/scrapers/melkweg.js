@@ -70,7 +70,7 @@ melkwegScraper.makeBaseEventList = async function () {
         let shortTitle = 
         eventEl.querySelector('[class*="subtitle"]')?.textContent ?? "";
         shortTitle = shortTitle ? `<br>${shortTitle}` : '';
-        res.shortText = `${tags}${shortTitle}`;
+        res.shortText = `${tags} ${shortTitle}`;
         res.venueEventUrl = anchor.href;
         res.soldOut = !!(eventEl.querySelector("[class*='styles_event-compact__text']")?.textContent.toLowerCase().includes('uitverkocht') ?? null);
         return res;
@@ -82,8 +82,28 @@ melkwegScraper.makeBaseEventList = async function () {
   return await this.makeBaseEventListEnd({
     stopFunctie, rawEvents: thisWorkersEvents}
   );
-  
 };
+
+melkwegScraper.rawEvents
+
+melkwegScraper.singleRawEventCheck = async function(event){
+
+  const st = event?.shortText?.toLowerCase() ?? '';
+  const rr = st.includes('rock') && st.includes('roll')
+  const prog = st.includes('prog');
+  const alt = st.includes('alternative rock');
+  const emo = st.includes('emo')
+  const acid = st.includes('acid');
+  if (!rr && !prog && !alt && !emo && !acid) {
+    return {
+      event,
+      reason: 'geen zeikmuziek',
+      success: true
+    }
+  }
+  return await this.isRock(event);
+}
+
 
 melkwegScraper.getPageInfo = async function ({ page, event }) {
  
