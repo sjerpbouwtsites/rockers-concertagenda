@@ -19,7 +19,7 @@ const boerderijScraper = new AbstractScraper(makeScraperConfig({
     app: {
       mainPage: {
         useCustomScraper: true,
-        url: `https://poppodiumboerderij.nl/includes/ajax/events.php?filters=7,8,9,6&search=&limit=15&offset=${
+        url: `https://poppodiumboerderij.nl/includes/ajax/events.php?filters=6,7,8&search=&limit=15&offset=${
           workerData.index * 15
         }&lang_id=1&rooms=&month=&year=`,
         requiredProperties: ['venueEventUrl', 'title']
@@ -30,6 +30,16 @@ const boerderijScraper = new AbstractScraper(makeScraperConfig({
     }
   }
 }));
+
+boerderijScraper.singleRawEventCheck = async function(event){
+  const hasForbiddenTermsRes = await boerderijScraper.hasForbiddenTerms(event);
+  return {
+    event,
+    reason: hasForbiddenTermsRes.reason,
+    success: !hasForbiddenTermsRes.success,
+  }
+  
+}
 
 boerderijScraper.listenToMasterThread();
 

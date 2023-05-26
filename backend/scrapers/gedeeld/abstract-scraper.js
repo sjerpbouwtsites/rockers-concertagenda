@@ -26,6 +26,8 @@ export default class AbstractScraper {
    * @memberof AbstractScraper
    */
   static forbiddenTerms = [
+    "fan event",
+    "interactieve lezing",
     "karaoke",
     "london calling",
     "filmvertoning",
