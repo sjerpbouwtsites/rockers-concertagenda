@@ -140,6 +140,12 @@ dynamoScraper.getPageInfo = async function ({ page, event}) {
       const agendaDatesEls = document.querySelectorAll(".agenda-date");
       let baseDate = null;
       if (agendaDatesEls && agendaDatesEls.length < 2) {
+
+        if (document.location.includes('effenaar')){
+          res.corrupted = `Dynamo mixed venue with ${event.venueEventUrl}`
+          return res;
+        } 
+
         res.errors.push({remarks: `Te weinig 'agendaDataEls' ${res.pageInfo}`, 
           toDebug: {
             event,

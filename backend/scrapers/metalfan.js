@@ -47,6 +47,7 @@ async function getBaseMusicEvents(browser, qwm) {
     "013tilburg",
     "013enomgevingn",
     "slvesborg", 
+    "cultuurpodiumboerderij",
     "royalparklive",
   ]);
 
@@ -55,7 +56,9 @@ async function getBaseMusicEvents(browser, qwm) {
     "013enomgeving": "013",
     "013enomgevingn": "013",
     "botanique brussel": "botanique",
+    "decacaofabriek":"cacaofabriek",
     "desselbelgimetoaslipknot": "dessel",
+    "desselbelgimetoagunsnroses": "dessel",
     "dinkelsbhlmetoapowerwolf": "dinkel",
     "dynamo eindhoven": "dynamo",
     "dynamoeindhoven": "dynamo",
@@ -71,6 +74,8 @@ async function getBaseMusicEvents(browser, qwm) {
     "oilsjt omploft": "sintannazaal",
     "wackenduitsland": 'wacken',
     "wackenduitslandmetoamegadeth": "wacken",
+    "wackenduitslandmetoaironmaiden": "wacken",
+    "evenemententerreinweertnoord":"weertnoord",
     "ysselsteyn": "ijsselstein",
   }
 

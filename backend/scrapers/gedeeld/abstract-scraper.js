@@ -1120,6 +1120,10 @@ export default class AbstractScraper {
       } catch (error) {
         const wrappedError = new ErrorWrapper(error);
         _t.wrappedHandleError(wrappedError);        
+        this.dirtyDebug({
+          title: `erroring gaat verkeerd ${workerData.family}`,
+          toDebug: pageInfo
+        })
       }
 
     });

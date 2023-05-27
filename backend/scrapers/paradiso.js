@@ -226,6 +226,7 @@ paradisoScraper.getPageInfo = async function ({ page, event }) {
           const monthName = months[startDateMatch[2]];
           if (!monthName) {
             res.errors.push({
+              
               remarks: `month not found ${startDateMatch[2]}`,
               toDebug: startDateMatch
             })

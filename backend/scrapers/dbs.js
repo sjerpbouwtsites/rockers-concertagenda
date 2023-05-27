@@ -195,11 +195,8 @@ dbsScraper.getPageInfo = async function ({ page, event }) {
         return document.querySelectorAll('[data-testid]')[1]?.textContent ?? null
       })
     } catch (caughtError) {
-      pageInfo.errors.push({
-        error: caughtError, 
-        remarks: `prijs ophalen dbs ticketpagina ${pageInfo.pageInfo}`, 
-        toDebug: {event}
-      })
+      // er is gewoon geen prijs beschikbaar.
+      page.priceTextcontent = 'onbekend';
     }
   }
 
