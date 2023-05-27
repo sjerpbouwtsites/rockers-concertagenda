@@ -92,7 +92,7 @@ paradisoScraper.makeBaseEventList = async function () {
   const res = await page.evaluate(({workerData}) => {
     return {
       unavailable: '',
-      pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${workerData.index}</a>`,
+      pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${workerData.index}</a>`,
       errors: [],
     }
   }, {workerData});
@@ -226,7 +226,7 @@ paradisoScraper.getPageInfo = async function ({ page, event }) {
           const monthName = months[startDateMatch[2]];
           if (!monthName) {
             res.errors.push({
-              
+
               remarks: `month not found ${startDateMatch[2]}`,
               toDebug: startDateMatch
             })

@@ -58,7 +58,7 @@ melkwegScraper.makeBaseEventList = async function () {
         const title = eventEl.querySelector('h3[class*="title"]')?.textContent ?? "";
         const res = {
           unavailable: "",
-          pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+          pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
           errors: [],          
           title,
         }
@@ -110,7 +110,7 @@ melkwegScraper.getPageInfo = async function ({ page, event }) {
   const pageInfo = await page.evaluate(({event}) => {
     const res = {
       unavailable: event.unavailable,
-      pageInfo: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
+      pageInfo: `<a class='page-info' href='${location.href}'>${event.title}</a>`,
       errors: [],
     };
     try {

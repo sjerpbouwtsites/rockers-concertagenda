@@ -50,7 +50,7 @@ effenaarScraper.makeBaseEventList = async function () {
           const title = eventEl.querySelector(".card-title")?.textContent.trim();
           const res = {
             unavailable: "",
-            pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+            pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
             errors: [],          
             title
           }
@@ -82,7 +82,7 @@ effenaarScraper.getPageInfo = async function ({ page, event }) {
   const pageInfo = await page.evaluate(({months, event}) => {
     const res = {
       unavailable: event.unavailable,
-      pageInfo: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
+      pageInfo: `<a class='page-info' href='${location.href}'>${event.title}</a>`,
       errors: [],
     };
     res.image = document.querySelector(".header-image img")?.src ?? null;

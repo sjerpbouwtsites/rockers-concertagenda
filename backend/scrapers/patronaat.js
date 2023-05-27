@@ -91,7 +91,7 @@ patronaatScraper.makeBaseEventList = async function () {
         const title = eventEl.querySelector(".event-program__name")?.textContent.trim();
         const res = {
           unavailable: '',
-          pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+          pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
           errors: [],
           title
         };

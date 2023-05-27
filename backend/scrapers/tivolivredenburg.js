@@ -93,7 +93,7 @@ tivoliVredenburgScraper.makeBaseEventList = async function () {
             ?.textContent.trim() ?? null;
         const res = {
           unavailable: '',
-          pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+          pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
           errors: [],
           title
         };
@@ -145,7 +145,7 @@ tivoliVredenburgScraper.getPageInfo = async function ({ page, event }) {
     res.longTextHTML = 
       document.querySelector(".event__text")?.innerHTML ?? '';
 
-    const startDateMatch = document.location.href.match(/\d\d-\d\d-\d\d\d\d/); //
+    const startDateMatch = location.href.match(/\d\d-\d\d-\d\d\d\d/); //
     res.startDate = "";
     if (startDateMatch && startDateMatch.length) {
       res.startDate = startDateMatch[0].split("-").reverse().join("-");

@@ -66,7 +66,7 @@ oostpoortScraper.makeBaseEventList = async function () {
           : eventEl.querySelector('h1')?.textContent.replace(eersteDeelKorteTekst, '') ?? ''
         const res = {
           unavailable: "",
-          pageInfo: `<a class='page-info' href="${document.location.href}">${workerData.family} - main - ${title}</a>`,
+          pageInfo: `<a class='page-info' href="${location.href}">${workerData.family} - main - ${title}</a>`,
           errors: [],
           title,
         };
@@ -151,7 +151,7 @@ oostpoortScraper.getPageInfo = async function ({ page, event }) {
     ({event}) => {
       const res = {
         unavailable: event.unavailable,
-        pageInfo: `<a class='page-info' href='${document.location.href}'>${document.title}</a>`,
+        pageInfo: `<a class='page-info' href='${location.href}'>${document.title}</a>`,
         errors: [],
       };
 

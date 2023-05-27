@@ -96,7 +96,7 @@ metropoolScraper.makeBaseEventList = async function () {
         const title = rawEvent.querySelector(".card__title")?.textContent ?? null;
         const res = {
           unavailable: "",
-          pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+          pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
           errors: [],        
           title,  
         }          
@@ -125,7 +125,7 @@ metropoolScraper.getPageInfo = async function ({ page, event}) {
   const pageInfo = await page.evaluate(({months, event}) => {
     const res = {
       unavailable: event.unavailable,
-      pageInfo: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
+      pageInfo: `<a class='page-info' href='${location.href}'>${event.title}</a>`,
       errors: [],
     };
 

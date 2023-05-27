@@ -55,7 +55,7 @@ idunaScraper.makeBaseEventList = async function () {
               const title = event.querySelector(".griditemtitle")?.textContent ?? null;
               return {
                 unavailable: "",
-                pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+                pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
                 errors: [],          
                 venueEventUrl: event?.href ?? null,
                 title,
@@ -79,7 +79,7 @@ idunaScraper.makeBaseEventList = async function () {
               const title = event.querySelector(".griditemtitle")?.textContent ?? null;
               return {
                 unavailable: "",
-                pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+                pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
                 errors: [],          
                 venueEventUrl: event?.href ?? null,
                 title,
@@ -107,7 +107,7 @@ idunaScraper.makeBaseEventList = async function () {
               return {
                 venueEventUrl: event?.href ?? null,
                 title,
-                pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+                pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
                 errors: [],
                 unavailable: "",
               };
@@ -169,7 +169,7 @@ idunaScraper.getPageInfo = async function ({ page, event }) {
 
       const res = {
         unavailable: event.unavailable,
-        pageInfo: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
+        pageInfo: `<a class='page-info' href='${location.href}'>${event.title}</a>`,
         errors: [],
       };
       try {

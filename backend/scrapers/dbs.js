@@ -54,7 +54,7 @@ dbsScraper.makeBaseEventList = async function () {
           const title = eventEl.querySelector(".fusion-events-meta .url")?.textContent.trim() ?? null;
           const res = {
             unavailable: "",
-            pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} - main - ${title}</a>`,
+            pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} - main - ${title}</a>`,
             errors: [],
             title
           };
@@ -159,7 +159,7 @@ dbsScraper.getPageInfo = async function ({ page, event }) {
   const pageInfo = await page.evaluate(({event, goodCategories}) => {
     const res = {
       unavailable: event.unavailable,
-      pageInfo: `<a class='page-info' href='${document.location.href}'>${document.title}</a>`,
+      pageInfo: `<a class='page-info' href='${location.href}'>${document.title}</a>`,
       errors: [],
     };
 

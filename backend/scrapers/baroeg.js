@@ -96,7 +96,7 @@ baroegScraper.makeBaseEventList = async function () {
         const title = eventEl.querySelector('.wp_theatre_event_title')?.textContent.trim() ?? null;
         const res = {
           unavailable: "",
-          pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+          pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
           errors: [],
         };
         res.title = title;
@@ -170,7 +170,7 @@ baroegScraper.getPageInfo = async function ({ page, event }) {
     ({event}) => {
       const res = {
         unavailable: event.unavailable,
-        pageInfo: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
+        pageInfo: `<a class='page-info' href='${location.href}'>${event.title}</a>`,
         errors: [],
       };
 

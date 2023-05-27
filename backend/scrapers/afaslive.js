@@ -108,7 +108,7 @@ afasliveScraper.makeBaseEventList = async function () {
         const title = agendaBlock.querySelector(".eventTitle")?.textContent ?? "";
         const res = {
           unavailable: "",
-          pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+          pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
           errors: [],          
           title
         }
@@ -137,7 +137,7 @@ afasliveScraper.getPageInfo = async function ({ page, event }) {
 
       const res = {
         unavailable: event.unavailable,
-        pageInfo: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
+        pageInfo: `<a class='page-info' href='${location.href}'>${event.title}</a>`,
         errors: [],
       };
 
