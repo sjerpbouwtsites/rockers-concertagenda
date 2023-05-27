@@ -1,11 +1,8 @@
 import { workerData } from "worker_threads";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
-import {textContainsHeavyMusicTerms, textContainsForbiddenMusicTerms, waitFor} from "../mods/tools.js"
 import * as _t from "../mods/tools.js";
-import fs from 'fs';
 import ErrorWrapper from "../mods/error-wrapper.js";
-import fsDirections from "../mods/fs-directions.js";
 
 // SCRAPER CONFIG
 
@@ -34,6 +31,42 @@ const oostpoortScraper = new AbstractScraper(makeScraperConfig({
 }));
 
 oostpoortScraper.listenToMasterThread();
+
+// SINGLE EVENT CHECK
+
+oostpoortScraper.singleRawEventCheck = async function (event) {
+
+  const workingTitle = this.cleanupEventTitle(event.title);
+
+  const isRefused = await this.rockRefuseListCheck(event, workingTitle)
+  if (isRefused.success) return {
+    reason: isRefused.reason,
+    event,
+    success: false
+  };
+
+  const isAllowed = await this.rockAllowListCheck(event, workingTitle)
+  if (isAllowed.success) return isAllowed;
+
+  const hasForbiddenTerms = await this.hasForbiddenTerms(event);
+  if (hasForbiddenTerms.success) {
+    await this.saveRefusedTitle(workingTitle)
+    return {
+      reason: hasForbiddenTerms.reason,
+      success: false,
+      event
+    }
+  }
+
+  const isRockRes = await this.isRock(event);
+  if (isRockRes.success){
+    await this.saveAllowedTitle(workingTitle)
+  } else {
+    await this.saveRefusedTitle(workingTitle)
+  }
+  return isRockRes;  
+
+};
 
 // MAKE BASE EVENTS
 
@@ -76,12 +109,8 @@ oostpoortScraper.makeBaseEventList = async function () {
         } catch (caughtError) {
           res.errors.push({
             error: caughtError, remarks: `date time faal ${title}.`,        
-            toDebug: res
           })
-          return res;
         }
-
-
         const tweedeDeelKorteTekst = eventEl.querySelector('.program__content p')?.textContent ?? '';
         res.shortText = `${eersteDeelKorteTekst}<br>${tweedeDeelKorteTekst}`;
         res.venueEventUrl = eventEl.querySelector(".program__link")?.href ?? null;
@@ -91,7 +120,8 @@ oostpoortScraper.makeBaseEventList = async function () {
       });
   }, {
     workerData: workerData
-  });
+  })
+    .map(this.isMusicEventCorruptedMapper);
 
   this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
@@ -99,42 +129,6 @@ oostpoortScraper.makeBaseEventList = async function () {
     stopFunctie, rawEvents: thisWorkersEvents}
   );
   
-};
-
-// SINGLE EVENT CHECK
-
-oostpoortScraper.singleRawEventCheck = async function (event) {
-
-  const workingTitle = this.cleanupEventTitle(event.title);
-
-  const isRefused = await this.rockRefuseListCheck(event, workingTitle)
-  if (isRefused.success) return {
-    reason: isRefused.reason,
-    event,
-    success: false
-  };
-
-  const isAllowed = await this.rockAllowListCheck(event, workingTitle)
-  if (isAllowed.success) return isAllowed;
-
-  const hasForbiddenTerms = await this.hasForbiddenTerms(event);
-  if (hasForbiddenTerms.success) {
-    await this.saveRefusedTitle(workingTitle)
-    return {
-      reason: hasForbiddenTerms.reason,
-      success: false,
-      event
-    }
-  }
-
-  const isRockRes = await this.isRock(event);
-  if (isRockRes.success){
-    await this.saveAllowedTitle(workingTitle)
-  } else {
-    await this.saveRefusedTitle(workingTitle)
-  }
-  return isRockRes;  
-
 };
 
 // GET PAGE INFO
@@ -171,14 +165,13 @@ oostpoortScraper.getPageInfo = async function ({ page, event }) {
      
       try {
         if (document.querySelector('.event__cta') && document.querySelector('.event__cta').hasAttribute('disabled')) {
-          res.unavailable += ` ${document.querySelector('.event__cta')?.textContent}`;
+          res.corrupted += ` ${document.querySelector('.event__cta')?.textContent}`;
         }        
       } catch (caughtError) {
         res.errors.push({
           error: caughtError,
           remarks: `check if disabled fail  ${res.pageInfo}`,
           toDebug: event
-          
         })            
       }
 

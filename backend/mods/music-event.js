@@ -12,8 +12,8 @@ export default class MusicEvent {
   longText = null;
   image = null;
   soldOut = null;
-  unavailable = null; // wordt: of iets verplaatst is. // TODO
-  corrupted = null; // wordt: als datum ontbreekt oid. //TODO
+  unavailable = null; // wordt: of iets verplaatst is.
+  corrupted = null; // wordt: als datum ontbreekt oid.
   origin = null;
   constructor(init, enforceMusicEventType = true) {
     this.merge(init, enforceMusicEventType);

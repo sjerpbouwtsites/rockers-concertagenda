@@ -3,13 +3,10 @@ import * as _t from "../mods/tools.js";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 
-
-//HEEFT ASYNC CHECK
-
 // SCRAPER CONFIG
 
 const paradisoScraper = new AbstractScraper(makeScraperConfig({
-  maxExecutionTime: 60022,
+  maxExecutionTime: 120022,
   workerData: Object.assign({}, workerData),
   puppeteerConfig: {
     mainPage: {
@@ -17,7 +14,7 @@ const paradisoScraper = new AbstractScraper(makeScraperConfig({
       waitUntil: 'load'
     },
     singlePage: {
-      timeout: 60024
+      timeout: 120024
     },
     app: {
       mainPage: {
@@ -93,7 +90,6 @@ paradisoScraper.makeBaseEventList = async function () {
     return {
       unavailable: '',
       pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${workerData.index}</a>`,
-      errors: [],
     }
   }, {workerData});
   
@@ -111,7 +107,7 @@ paradisoScraper.makeBaseEventList = async function () {
         .map((rawEvent) => {
           const res = {
             ...resBuiten,
-            errors: [...resBuiten.errors]
+            errors: []
           }          
           res.title =
             rawEvent
@@ -129,7 +125,8 @@ paradisoScraper.makeBaseEventList = async function () {
         });
     },
     {workerData, resBuiten: res}
-  );
+  )
+    .map(this.isMusicEventCorruptedMapper);
 
   this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
@@ -163,7 +160,6 @@ paradisoScraper.getPageInfo = async function ({ page, event }) {
         buitenRes, event
       }
     })
-    buitenRes.unavailable += 'single pagina niet snel genoeg geladen.'
     return await this.getPageInfoEnd({pageInfo: buitenRes, stopFunctie, page})
   }
 
@@ -233,7 +229,6 @@ paradisoScraper.getPageInfo = async function ({ page, event }) {
               remarks: `month not found ${startDateMatch[2]}`,
               toDebug: startDateMatch
             })
-            return res;
           }
           res.startDate = `2022-${
             monthName
@@ -246,14 +241,13 @@ paradisoScraper.getPageInfo = async function ({ page, event }) {
           toDebug: {
             event
           }});
-        return res;
       }
 
       const timesMatch =
         document.querySelector('.css-1mxblse')
           ?.textContent.match(/(\d\d:\d\d)/g) ?? null;
       res.timesMatch = timesMatch;
-      if (timesMatch && Array.isArray(timesMatch) && timesMatch.length >= 1) {
+      if (timesMatch && Array.isArray(timesMatch) && timesMatch.length >= 1 && res.startDate) {
         try {
           if (timesMatch.length === 1) {
             res.startDateTime = new Date(
@@ -276,7 +270,6 @@ paradisoScraper.getPageInfo = async function ({ page, event }) {
               event
             }
           });
-          return res;
         }
       }
 

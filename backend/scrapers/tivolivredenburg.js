@@ -24,7 +24,6 @@ const tivoliVredenburgScraper = new AbstractScraper(makeScraperConfig({
 
 tivoliVredenburgScraper.listenToMasterThread();
 
-
 // SINGLE EVENT CHECK
 
 tivoliVredenburgScraper.singleRawEventCheck = async function (event) {
@@ -68,7 +67,6 @@ tivoliVredenburgScraper.singleRawEventCheck = async function (event) {
   return isRockRes;
   
 };
-
 
 // MAKE BASE EVENTS
 
@@ -116,7 +114,8 @@ tivoliVredenburgScraper.makeBaseEventList = async function () {
         res.soldOut = !!eventEl.querySelector(".agenda-list-item__label")?.textContent.match(/uitverkocht|sold\s?out/i) ?? false;
         return res;
       });
-  }, {workerData});
+  }, {workerData})
+    .map(this.isMusicEventCorruptedMapper);
 
   this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
@@ -184,7 +183,7 @@ tivoliVredenburgScraper.getPageInfo = async function ({ page, event }) {
           remarks: `Open door ${res.pageInfo}`,
           toDebug:{
             text: eventInfoDtDDText,
-            res,event
+            event
           }
         });
       }
@@ -201,10 +200,9 @@ tivoliVredenburgScraper.getPageInfo = async function ({ page, event }) {
           remarks: `startTijd door ${res.pageInfo}`,
           toDebug: {
             matches:`${startMatch.join("")}`,
-            res,event
+            event
           }
         });
-        return res;
       }
     }
     if (Array.isArray(endMatch) && endMatch.length > 1) {
@@ -219,7 +217,7 @@ tivoliVredenburgScraper.getPageInfo = async function ({ page, event }) {
           remarks: `endtijd ${res.pageInfo}`,
           toDebug: {
             text: eventInfoDtDDText,
-            res,event
+            event
           }
         });
       }

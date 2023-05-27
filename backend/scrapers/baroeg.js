@@ -157,6 +157,7 @@ baroegScraper.makeBaseEventList = async function () {
         return res;
       })
   }, {workerData})
+    .map(this.isMusicEventCorruptedMapper);
 
   this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)

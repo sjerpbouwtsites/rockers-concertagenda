@@ -90,7 +90,8 @@ cpuntScraper.makeBaseEventList = async function () {
       });
     },
     {workerData}
-  );
+  )
+    .map(this.isMusicEventCorruptedMapper);
 
  
   this.saveBaseEventlist(workerData.family, rawEvents)

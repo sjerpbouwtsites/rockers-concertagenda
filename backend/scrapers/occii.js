@@ -116,7 +116,8 @@ occiiScraper.makeBaseEventList = async function () {
         return res;
 
       });
-  }, {workerData});
+  }, {workerData})
+    .map(this.isMusicEventCorruptedMapper);
 
   this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
@@ -177,7 +178,7 @@ occiiScraper.getPageInfo = async function ({ page, event}) {
         error: caughtError,
         remarks: `date time wrap trycatch drama ${res.pageInfo}`,        
         toDebug: {
-          res, event
+          event
         }
       });
       return res;

@@ -109,7 +109,8 @@ patronaatScraper.makeBaseEventList = async function () {
         res.soldOut = !!(eventEl.querySelector('.event__tags-item--sold-out') ?? null)
         return res;
       });
-  }, {workerData});
+  }, {workerData})
+    .map(this.isMusicEventCorruptedMapper);
 
   this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
@@ -171,7 +172,6 @@ patronaatScraper.getPageInfo = async function ({ page, event }) {
             remarks: `geen startTime ${res.pageInfo}`,
             toDebug: event
           })
-          return res;          
         }
 
         if (res.doorOpenTime) {
@@ -192,7 +192,7 @@ patronaatScraper.getPageInfo = async function ({ page, event }) {
       } else {
         res.errors.push({
           remarks: `geen startDate ${res.pageInfo}`,
-          toDebug: event,res
+          toDebug: event
         })
         return res;        
       }
@@ -200,7 +200,7 @@ patronaatScraper.getPageInfo = async function ({ page, event }) {
       res.errors.push({
         error: caughtError,
         remarks: `Datum error patronaat ${res.pageInfo}.`,
-        toDebug: {res, event}
+        toDebug: event
       });
     }
 

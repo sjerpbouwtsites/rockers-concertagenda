@@ -139,7 +139,7 @@ async function getBaseMusicEvents(browser, qwm) {
         };
       }
     );
-  }, {months: getVenueMonths('metalfan'), rename});
+  }, {months: getVenueMonths('metalfan'), rename})
 
   const musicEvents = eventData
     .map((eventDatum) => {

@@ -120,8 +120,9 @@ afasliveScraper.makeBaseEventList = async function () {
       .filter(event => {
         return !event.title.toLowerCase().includes('productiedag')
       });
-  }, {workerData});
-
+  }, {workerData})
+    .map(this.isMusicEventCorruptedMapper);
+    
   this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index);
   return await this.makeBaseEventListEnd({

@@ -77,21 +77,21 @@ boerderijScraper.makeBaseEventList = async function () {
 
   const {stopFunctie} = await this.makeBaseEventListStart()
 
-  const rawEvents = await axios
+  let rawEvents = await axios
     .get(this.puppeteerConfig.app.mainPage.url)
     .then((response) => {
       return response.data;
     });
 
   if (rawEvents.length) {
-    rawEvents.forEach((event) => {
+    rawEvents = rawEvents.map((event) => {
       event.image = `https://lift3cdn.nl/image/115/784x476/${event.file}`;
       event.venueEventUrl = `https://poppodiumboerderij.nl/programma/${event.seo_slug}`;
       event.shortText = event.subtitle;
       event.title = event.title + `&id=${event.id}`;
-    });
-  } else {
-    // debugger
+      return event;
+    })
+      .map(this.isMusicEventCorruptedMapper);
   }
 
   this.saveBaseEventlist(workerData.family, rawEvents)
@@ -135,7 +135,7 @@ boerderijScraper.getPageInfo = async function ({ event }) {
   
 
   if (!ajaxRes) {
-    res.unavailable += `ajax verzoek faalt naar ${url}`;
+    res.corrupted += `ajax verzoek faalt naar ${url}`;
     return await this.getPageInfoEnd({res, stopFunctie})
   }
 
@@ -161,16 +161,8 @@ boerderijScraper.getPageInfo = async function ({ event }) {
   }
 
   res.boerderijID = ajaxRes.id;
-
-  try {
-    res.priceTextcontent = `${ajaxRes?.entrance_price ?? ''} ${ajaxRes?.ticket_price ?? ''} `
-  } catch (catchedError) {
-    res.errors.push({
-      error: catchedError,
-      remarks: `prijsbewerking faal ${res.pageInfo}`,
-      toDebug:res,
-    });
-  }
+  res.priceTextcontent = `${ajaxRes?.entrance_price ?? ''} ${ajaxRes?.ticket_price ?? ''} `
+  
 
   try {
     res.startDateTime = new Date(

@@ -87,9 +87,7 @@ p60Scraper.makeBaseEventList = async function () {
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
-  this.dirtyTalk('jaja1');
   await _t.autoScroll(page);
-  this.dirtyTalk('jaja2');
 
   const rawEvents = await page.evaluate(({workerData}) => {
     return Array.from(document.querySelectorAll(".views-infinite-scroll-content-wrapper > .p60-list__item-container")).filter(itemEl => {
@@ -116,7 +114,7 @@ p60Scraper.makeBaseEventList = async function () {
           res.doorOpenDateTime = new Date(doorOpenDateTimeB).toISOString();
         } catch (caughtError) {
           res.errors.push({error: caughtError, remarks: `openDoorDateTime omzetten ${doorOpenDateTimeB}`,         
-            toDebug: res})
+          })
         }
 
         const startTime = itemEl.querySelector('.field--name-field-aanvang')?.textContent.trim();
@@ -126,10 +124,7 @@ p60Scraper.makeBaseEventList = async function () {
           try {
             res.startDateTime = new Date(startDateTimeB).toISOString();
           } catch (caughtError) {
-            res.errors.push({error: caughtError, remarks: `startDateTime omzetten ${startDateTimeB}`,         
-              toDebug: res
-            })
-            return res;
+            res.errors.push({error: caughtError, remarks: `startDateTime omzetten ${startDateTimeB}` })
           }
         }
 
@@ -137,11 +132,8 @@ p60Scraper.makeBaseEventList = async function () {
         return res;
       }
     );
-  }, {workerData});
-
-  this.dirtyLog(rawEvents);
-
-  this.dirtyTalk(`geheel aan events ${rawEvents.length}`)
+  }, {workerData})
+    .map(this.isMusicEventCorruptedMapper);
 
   this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
@@ -150,8 +142,6 @@ p60Scraper.makeBaseEventList = async function () {
   );
 };
 
-
-// @TODO Rock control naar async
 
 // GET PAGE INFO
 

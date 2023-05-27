@@ -79,7 +79,8 @@ melkwegScraper.makeBaseEventList = async function () {
         }
         return res;
       });
-  }, {workerData, months: this.months });
+  }, {workerData, months: this.months })
+    .map(this.isMusicEventCorruptedMapper);
 
   this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)

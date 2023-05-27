@@ -130,7 +130,6 @@ kavkaScraper.makeBaseEventList = async function () {
           } catch (error) {
             res.errors.push({
               remarks: `openDoorDateTime faal ${res.pageInfo}`,
-              toDebug: res
             })
           }
 
@@ -144,7 +143,8 @@ kavkaScraper.makeBaseEventList = async function () {
         });
     },
     { months: this.months, workerData }
-  );
+  )
+    .map(this.isMusicEventCorruptedMapper);
 
   this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
@@ -201,7 +201,7 @@ kavkaScraper.getPageInfo = async function ({ page, event }) {
       res.errors.push({
         error:caughtError,
         remarks: `page info top level trycatch ${res.pageInfo}`,
-        toDebug: {res,event}
+        toDebug: {event}
       });
     }
   }, {event});

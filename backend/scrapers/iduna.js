@@ -34,7 +34,6 @@ idunaScraper.makeBaseEventList = async function () {
 
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
   if (availableBaseEvents){
-    this.dirtyTalk(availableBaseEvents.length)
     return await this.makeBaseEventListEnd({
       stopFunctie: null, rawEvents: availableBaseEvents}
     );    
@@ -170,7 +169,7 @@ idunaScraper.makeBaseEventList = async function () {
     musicEvent.title = _t.killWhitespaceExcess(musicEvent.title);
     musicEvent.pageInfo = _t.killWhitespaceExcess(musicEvent.pageInfo);
     return musicEvent;
-  });
+  }).map(this.isMusicEventCorruptedMapper);
 
   this.saveBaseEventlist(workerData.family, rawEvents)
   return await this.makeBaseEventListEnd({
@@ -182,8 +181,6 @@ idunaScraper.makeBaseEventList = async function () {
 // GET PAGE INFO
 
 idunaScraper.getPageInfo = async function ({ page, event }) {
-
-  this.dirtyTalk(event.title)
   
   const {stopFunctie} =  await this.getPageInfoStart()
   

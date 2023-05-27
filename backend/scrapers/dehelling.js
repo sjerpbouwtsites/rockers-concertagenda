@@ -50,6 +50,7 @@ dehellingScraper.makeBaseEventList = async function () {
       )
     )
       .filter(eventEl => {
+        // TODO naar fatsoenlijke async check
         const tc = eventEl.querySelector('.c-event-card__meta')?.textContent.toLowerCase() ?? '';
         return !tc.includes('experimental') && !tc.includes('hiphop')
       })
@@ -104,7 +105,8 @@ dehellingScraper.makeBaseEventList = async function () {
         res.shortText = schemaData?.description ?? null;
 
         return res;
-      })},{workerData});
+      })},{workerData})
+    .map(this.isMusicEventCorruptedMapper);
 
   this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)

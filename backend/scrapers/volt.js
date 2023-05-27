@@ -80,7 +80,8 @@ voltScraper.makeBaseEventList = async function () {
         res.soldOut = rawEvent.querySelector(".card-content")?.textContent.match(/uitverkocht|sold\s?out/i) ?? false;
         return res;
       });
-  }, {workerData});
+  }, {workerData})
+    .map(this.isMusicEventCorruptedMapper);
 
   this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
@@ -179,7 +180,7 @@ voltScraper.getPageInfo = async function ({ page, url, event}) {
             remarks: `ongeldige tijden ${res.pageInfo}`,
             toDebug: {
               matches:   timesMatch.join(" "),
-              res,event
+              event
             }
           });
           return res;

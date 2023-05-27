@@ -350,7 +350,7 @@ export default class AbstractScraper {
    * sluit page
    * verwerkt mogelijke witruimte weg
    * verwerkt fouten van raw make base events
-   * haalt rawEvents door basicMusicEventsFilter en returned
+   * haalt rawEvents door isMusicEventCorruptedMapper en returned
    *
    * @param {stopFunctie timeout, page Puppeteer.Page, rawEvents {}<>} 
    * @return {MusicEvent[]}
@@ -396,7 +396,6 @@ export default class AbstractScraper {
         rawEvent.origin = workerData.family;
         return rawEvent
       })
-      .filter(this.basicMusicEventsFilter)
     ;
     if (this.puppeteerConfig.app.mainPage.enforceMusicEventType){
       return r.map((event) => new MusicEvent(event));
@@ -418,7 +417,7 @@ export default class AbstractScraper {
    * @return {boolean}
    * @memberof AbstractScraper
    */
-  basicMusicEventsFilter = (musicEvent) => {
+  isMusicEventCorruptedMapper = (musicEvent) => {
 
     let missingProperties = []
     const meetsRequiredProperties = this.puppeteerConfig.app.mainPage.requiredProperties.reduce((prev, next)=>{
@@ -428,34 +427,10 @@ export default class AbstractScraper {
       return prev && musicEvent[next]
     }, true)        
     if (!meetsRequiredProperties) {
-      musicEvent.corrupted = missingProperties.join(',')
+      musicEvent.corrupted = ((musicEvent.corrupted || ' ') + missingProperties.join(',')).trim()
     }
    
-    const t = musicEvent?.title ?? "";
-    const st = musicEvent?.shortText ?? "";
-    const searchShowNotOnDate = `${t.toLowerCase()} ${st.toLowerCase()}`;
-    
-    let forbiddenTermUsed = '';
-    const hasForbiddenTerm = [
-      "uitgesteld",
-      "gecanceld",
-      "afgelast",
-      "geannuleerd",
-      "verplaatst",
-    ].map((forbiddenTerm) => {
-      if (searchShowNotOnDate.includes(forbiddenTerm)) {
-        forbiddenTermUsed += ` ${forbiddenTerm}`;
-      }
-      return searchShowNotOnDate.includes(forbiddenTerm);
-    }).reduce((prev, next) =>{
-      return prev && next
-    }, true);
-    
-    if (hasForbiddenTerm) {
-      parentPort.postMessage(this.qwm.messageRoll(`<a class='forbidden-term' href='${musicEvent.venueEventUrl}'>${musicEvent.title}</a> is ${forbiddenTermUsed}/`));
-    }
-
-    return !hasForbiddenTerm && meetsRequiredProperties;
+    return musicEvent;
      
   }
 
@@ -1117,8 +1092,8 @@ export default class AbstractScraper {
         }
         const wrappedError = new ErrorWrapper(errorData);
         _t.wrappedHandleError(wrappedError);        
-      } catch (error) {
-        const wrappedError = new ErrorWrapper(error);
+      } catch (errorOfErrors) {
+        const wrappedError = new ErrorWrapper((errorOfErrors || 'complete faal'));
         _t.wrappedHandleError(wrappedError);        
         this.dirtyDebug({
           title: `erroring gaat verkeerd ${workerData.family}`,

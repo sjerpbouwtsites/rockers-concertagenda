@@ -67,6 +67,7 @@ gebrdenobelScraper.makeBaseEventList = async function () {
         return res;
       })
   }, {workerData})
+    .map(this.isMusicEventCorruptedMapper);
   
 
   let rockRawEvents = await page.evaluate(({workerData}) => {
@@ -94,6 +95,7 @@ gebrdenobelScraper.makeBaseEventList = async function () {
         return res;
       })
   }, {workerData})
+    .map(this.isMusicEventCorruptedMapper);
 
   const checkedRockEvents = [];
   while (rockRawEvents.length){

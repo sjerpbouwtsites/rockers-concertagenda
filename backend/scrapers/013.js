@@ -96,11 +96,9 @@ nuldertienScraper.makeBaseEventList = async function () {
             remarks: `geen datumEl of startDateTime ${res.pageInfo}`,
             toDebug: {res, datumEl},
           })
-          return res;
         }
 
         res.soldOut = !!eventEl?.innerHTML.match(/uitverkocht|sold\s?out/i) ?? false;
-        
         res.shortText = eventEl
           .querySelector(".event-list-item__subtitle")
           ?.textContent.trim() ?? '';
@@ -108,7 +106,8 @@ nuldertienScraper.makeBaseEventList = async function () {
         return res;
 
       });
-  }, {workerData});
+  }, {workerData})
+    .map(this.isMusicEventCorruptedMapper);
 
   this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
@@ -159,10 +158,13 @@ nuldertienScraper.getPageInfo = async function ({ page , event}) {
       res.errors.push({
         error: errorCaught,
         remarks: `deur open tijd ${res.pageInfo}`,
-        errorLevel: 'close-thread',
-        toDebug: res,
+        errorLevel: 'notice',
+        toDebug: document.querySelector(
+          ".timetable__times dl:first-child time"
+        )?.innerHTML ?? 'geen timetable__times first child time',
       });
     }
+    
     res.soldOut = !!(document.querySelector('.order-tickets button[disabled]') ?? null)
 
     res.longTextHTML = 

@@ -69,6 +69,7 @@ defluxScraper.makeBaseEventList = async function () {
     };    
     return res;
   })
+    .map(this.isMusicEventCorruptedMapper);
 
   this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
@@ -104,13 +105,12 @@ defluxScraper.getPageInfo = async function ({ page, event}) {
         remarks: `image missing ${res.pageInfo}`
       })
     }    
-    res.startDate = eventScheme.querySelector('[itemprop="startDate"]')?.getAttribute('content').split('T')[0].split('-').map(dateStuk => dateStuk.padStart(2, '0')).join('-')
     try {
+      res.startDate = eventScheme.querySelector('[itemprop="startDate"]')?.getAttribute('content').split('T')[0].split('-').map(dateStuk => dateStuk.padStart(2, '0')).join('-')
       res.startTime = document.querySelector('.evcal_time.evo_tz_time').textContent.match(/\d\d:\d\d/)[0];
       res.startDateTime = new Date(`${res.startDate}T${res.startTime}:00`).toISOString()
     } catch (caughtError) {
       res.errors.push({error: caughtError, remarks: `starttime match ${res.pageInfo}`,toDebug:res})
-      return res;
     }
 
     if (document.querySelector('.evcal_desc3')?.textContent.toLowerCase().includes('deur open') ?? false) {

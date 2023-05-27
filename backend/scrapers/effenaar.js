@@ -61,7 +61,7 @@ effenaarScraper.makeBaseEventList = async function () {
         });
     },
     {workerData}
-  );
+  ).map(this.isMusicEventCorruptedMapper);
 
   this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
@@ -94,34 +94,25 @@ effenaarScraper.getPageInfo = async function ({ page, event }) {
     res.priceTextcontent = 
       document.querySelector(".tickets-btn")?.textContent ?? '';
 
-    try {
-      const dateText =
+    const dateText =
         document.querySelector(".header-meta-date")?.textContent.trim() ?? "";
-      if (!dateText) {
-        res.errors.push({
-          remarks: `geen datumtext ${res.pageInfo}`,
-          toDebug: res
-        })
-        return res;
-      }
+    if (!dateText) {
+      res.errors.push({
+        remarks: `geen datumtext ${res.pageInfo}`,
+      })
+      res.corrupted = 'geen datum tekst';
+    } else {
       const [, dayNumber, monthName, year] = dateText.match(
         /(\d+)\s(\w+)\s(\d\d\d\d)/
       );
       const fixedDay = dayNumber.padStart(2, "0");
       const monthNumber = months[monthName];
       res.startDate = `${year}-${monthNumber}-${fixedDay}`;
-    } catch (caughtError) {
-      res.errors.push({
-        error: caughtError,
-        remarks: `datumtext naar startDatum faal ${res.pageInfo}`,
-        toDebug: {event, res}
-      });
-      return res;
     }
 
     let startTimeAr = [],
       doorTimeAr = [];
-    try {
+    if (res.startDate){
       startTimeAr = document
         .querySelector(".time-start-end")
         ?.textContent.match(/\d\d:\d\d/);
@@ -134,22 +125,11 @@ effenaarScraper.getPageInfo = async function ({ page, event }) {
       if (Array.isArray(doorTimeAr) && doorTimeAr.length) {
         res.doorTime = doorTimeAr[0];
       }
-    } catch (caughtError) {
-      res.errors.push({
-        error: caughtError,
-        remarks: `date startDateTime etc faal ${res.pageInfo}`,
-        toDebug: {
-          ars: `${startTimeAr.join()} ${doorTimeAr.join("")}`,
-          res, event
-        }
-        
-      });
-      return res;
+      res.startDateTimeString = `${res.startDate}T${res.startTime}:00`;
+      res.openDoorDateTimeString = `${res.startDate}T${res.doorTime}:00`;
     }
 
-    res.startDateTimeString = `${res.startDate}T${res.startTime}:00`;
-    res.openDoorDateTimeString = `${res.startDate}T${res.doorTime}:00`;
-
+  
     try {
       if (res.doorTime) {
         res.doorOpenDateTime = new Date(

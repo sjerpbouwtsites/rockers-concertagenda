@@ -2,8 +2,7 @@ import { workerData } from "worker_threads";
 import * as _t from "../mods/tools.js";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
-import fs from "fs";
-import fsDirections from "../mods/fs-directions.js";
+
 // SCRAPER CONFIG
 
 const metropoolScraper = new AbstractScraper(makeScraperConfig({
@@ -107,7 +106,8 @@ metropoolScraper.makeBaseEventList = async function () {
         res.soldOut = !!rawEvent.querySelector(".card__title--label")?.textContent.match(/uitverkocht|sold\s?out/i) ?? null;
         return res;
       });
-  }, {workerData});
+  }, {workerData})
+    .map(this.isMusicEventCorruptedMapper);
   
   this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
@@ -196,7 +196,7 @@ metropoolScraper.getPageInfo = async function ({ page, event}) {
         error: caughtError,
         remarks: `start deurtijd match en of dateconversie ${res.pageInfo}`,
         toDebug: {
-          res, event
+          event
         }
       });
     }

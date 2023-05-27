@@ -1,4 +1,4 @@
-import { parentPort, workerData } from "worker_threads";
+import { workerData } from "worker_threads";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 import * as _t from "../mods/tools.js";
@@ -47,7 +47,6 @@ ticketmasterScraper.makeBaseEventList = async function() {
 
   let rawEvents = await fetch(this.puppeteerConfig.app.mainPage.url)
     .then(result => {
-      
       return result.json()
     })
     .then(fetchedData => {
@@ -216,10 +215,7 @@ ticketmasterScraper.getPageInfo = async function ({event}) {
     })
   }
 
-  pageInfo.rescheduled = event.dates?.status?.code === 'rescheduled';
-  if (pageInfo.rescheduled) {
-    pageInfo.unavailable += ' rescheduled' 
-  }    
+  pageInfo.unavailable = event.dates?.status?.code === 'rescheduled';
 
   const tl = pageInfo.title.toLowerCase();
   if (tl.includes('|') || (tl.includes('package') || tl.includes('ticket') || tl.includes('parking'))){
@@ -229,36 +225,6 @@ ticketmasterScraper.getPageInfo = async function ({event}) {
   return await this.getPageInfoEnd({pageInfo, stopFunctie})
 
 };
-
-
-// ON EVENT REGISTER
-
-
-// ticketmasterScraper.afterFamilyDone = async function(){
-
-//   const parsedAgain = JSON.parse(totalJSON);
-//   const locationDateCombos = [];
-//   const filteredTotalSkipOfferings = parsedAgain.filter(pa => {
-//     const locDateCombo = `${pa.location} ${pa.startDateTime}`;
-//     if (locationDateCombos.indexOf(locDateCombo) === -1){
-//       locationDateCombos.push(locDateCombo);
-//       return true;
-//     } else {
-//       return false;
-//     }
-//   })
-
-// }
-
-ticketmasterScraper.filterCoveredLocations = function(eventList){
-  // this.dirtyLog({
-  //   workerNames,
-  //   eventList
-  // })
-  return eventList.filter(TMEvent =>{
-    return !workerNames.includes(TMEvent.location) 
-  })
-}
 
 ticketmasterScraper.filterForMetal = function(rawEvents){
 
@@ -286,32 +252,7 @@ ticketmasterScraper.classificationsMetal = function (classifications){
   if (classification?.genre.id === `KnvZfZ7vAvt`) return true; // metal
   if (classification?.subGenre.id === `KZazBEonSMnZfZ7v6a6`) return true; // punk
   if (classification?.subGenre.id === `KZazBEonSMnZfZ7v6kl`) return true; // hardrock
-  this.dirtyTalk(`geen metal gevonden ${classification?.genre?.name} ${classification?.subGenre?.name}`)
   return false;
 }
 
-// function* readRawJSON(dir) {
-//   const files = fs.readdirSync(dir, { withFileTypes: true });
-//   for (const file of files) {
-//     if (file.isDirectory()) {
-//       yield* readRawJSON(path.join(dir, file.name));
-//     } else {
-//       yield fs.readFileSync(path.join(dir, file.name), 'utf-8');
-//     }
-//   }
-// }
-
-// function* resultPartialJSONs(dir) {
-//   const files = fs.readdirSync(dir, { withFileTypes: true });
-//   for (const file of files) {
-//     if (file.isDirectory()) {
-//       yield* resultPartialJSONs(path.join(dir, file.name));
-//     } else {
-//       // console.log(path.join(dir, file.name))
-//       // const resres = fs.readFileSync("./" + dir + '/' + file.name, 'utf-8');
-//       // console.log(resres)
-//       yield path.join(dir, file.name);
-//     }
-//   }
-// }
 
