@@ -102,7 +102,7 @@ baroegScraper.makeBaseEventList = async function () {
         res.title = title;
         res.shortText = eventEl.querySelector('.wp_theatre_prod_excerpt')?.textContent.trim() ?? null;
         res.shortText += categorieTeksten;
-        res.image = eventEl.querySelector('.media .attachment-thumbnail')?.src.replace(/\d\d\dx\d\d\d/, '300x300') ?? null; //TODO opzoeken wat ideale maten zijn
+        res.image = eventEl.querySelector('.media .attachment-thumbnail')?.src ?? '';
         if (!res.image){
           res.errors.push({
             remarks: `geen image ${res.pageInfo}`,

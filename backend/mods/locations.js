@@ -61,7 +61,7 @@ const locations = {
     city: "Roeselare",
   }),
   doornroosje: new Location({ name: "Doornroosje", city: "Nijmegen" }),
-  dvgklub: new Location({ name: "De Verlichte Geest", city: "Kortrijk" }),
+  dvgclub: new Location({ name: "De Verlichte Geest", city: "Kortrijk" }),
   dynamo: new Location({ name: "Dynamo", city: "Eindhoven" }),
   cpunt: new Location({ name: "Cpunt", city: "Hoofddorp" }),
   effenaar: new Location({ name: "Effenaar", city: "Eindhoven" }),

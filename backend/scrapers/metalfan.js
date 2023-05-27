@@ -119,9 +119,10 @@ async function getBaseMusicEvents(browser, qwm) {
         let eventCommaSplice = metalfanEvent
           .querySelector(".calevent")
           .textContent.split(",");
-        eventLocationName = (eventCommaSplice[0] || "").trim();
-        if (Object.prototype.hasOwnProperty.call(rename, eventLocationName.toLowerCase())) {
-          eventLocationName = rename[eventLocationName.toLowerCase()]
+        eventLocationName = (eventCommaSplice[0] || "").trim().toLowerCase();
+
+        if (Object.prototype.hasOwnProperty.call(rename, eventLocationName)) {
+          eventLocationName = rename[eventLocationName]
         }
 
         eventHTMLrules = eventHTML.split("<br>");
@@ -143,9 +144,17 @@ async function getBaseMusicEvents(browser, qwm) {
   const musicEvents = eventData
     .map((eventDatum) => {
       const thisMusicEvent = new MusicEvent(eventDatum);
-      const locationName = Location.makeLocationSlug(
+      let locationName = Location.makeLocationSlug(
         eventDatum.eventLocationName
       );
+      parentPort.postMessage(qwm.debugger({
+        locationName,
+        eventDatum
+      }));
+      const watchForWeirdLocationNames = Object.keys(rename);
+      if (watchForWeirdLocationNames.includes(locationName)){
+        locationName = watchForWeirdLocationNames[locationName]
+      }
 
       if (skipWithMetalfan.includes(locationName)) {
         return;

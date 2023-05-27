@@ -141,7 +141,7 @@ dynamoScraper.getPageInfo = async function ({ page, event}) {
       let baseDate = null;
       if (agendaDatesEls && agendaDatesEls.length < 2) {
 
-        if (location.includes('effenaar')){
+        if (location.href.includes('effenaar')){
           res.corrupted = `Dynamo mixed venue with ${event.venueEventUrl}`
           return res;
         } 
