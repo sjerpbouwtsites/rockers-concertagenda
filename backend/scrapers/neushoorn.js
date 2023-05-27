@@ -30,19 +30,21 @@ neushoornScraper.listenToMasterThread();
 
 neushoornScraper.singleRawEventCheck = async function(event){
 
-  const isRefused = await this.rockRefuseListCheck(event, event.title.toLowerCase())
+  const workingTitle = this.cleanupEventTitle(event.title);
+
+  const isRefused = await this.rockRefuseListCheck(event, workingTitle)
   if (isRefused.success) return {
     reason: isRefused.reason,
     event,
     success: false
   };
 
-  const isAllowed = await this.rockAllowListCheck(event, event.title.toLowerCase())
+  const isAllowed = await this.rockAllowListCheck(event, workingTitle)
   if (isAllowed.success) return isAllowed;
 
   const hasForbiddenTerms = await this.hasForbiddenTerms(event);
   if (hasForbiddenTerms.success) {
-    await this.saveRefusedTitle(event.title.toLowerCase())
+    await this.saveRefusedTitle(workingTitle)
     return {
       reason: hasForbiddenTerms.reason,
       success: false,
@@ -52,15 +54,23 @@ neushoornScraper.singleRawEventCheck = async function(event){
 
   const hasGoodTermsRes = await this.hasGoodTerms(event);
   if (hasGoodTermsRes.success) {
-    await this.saveAllowedTitle(event.title.toLowerCase())
+    await this.saveAllowedTitle(workingTitle)
     return hasGoodTermsRes;
   }
 
-  return {
-    reason: 'shitty reason',
-    success: false,
-    event
-  }  
+  let overdinges = null;
+  if (workingTitle.match(/\s[-–]\s/)) {
+    const a = workingTitle.replace(/\s[-–]\s.*/,'');
+    overdinges = [a]
+  }
+
+  const isRockRes = await this.isRock(event, overdinges);
+  if (isRockRes.success){
+    await this.saveAllowedTitle(event.title.toLowerCase())
+  } else {
+    await this.saveRefusedTitle(event.title.toLowerCase())
+  }
+  return isRockRes;
 
 }
 

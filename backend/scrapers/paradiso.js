@@ -17,7 +17,7 @@ const paradisoScraper = new AbstractScraper(makeScraperConfig({
       waitUntil: 'load'
     },
     singlePage: {
-      timeout: 45024
+      timeout: 60024
     },
     app: {
       mainPage: {
@@ -37,14 +37,17 @@ paradisoScraper.listenToMasterThread();
 
 paradisoScraper.singleRawEventCheck = async function (event) {
 
-  const isRefused = await this.rockRefuseListCheck(event, event.title.toLowerCase())
+  this.dirtyDebug(event)
+  const workingTitle = this.cleanupEventTitle(event.title);
+
+  const isRefused = await this.rockRefuseListCheck(workingTitle)
   if (isRefused.success) return {
     reason: isRefused.reason,
     event,
     success: false
   };
 
-  const isAllowed = await this.rockAllowListCheck(event, event.title.toLowerCase())
+  const isAllowed = await this.rockAllowListCheck(workingTitle)
   if (isAllowed.success) return isAllowed;
 
   const hasForbiddenTerms = await this.hasForbiddenTerms(event);
@@ -59,15 +62,15 @@ paradisoScraper.singleRawEventCheck = async function (event) {
 
   const hasGoodTermsRes = await this.hasGoodTerms(event);
   if (hasGoodTermsRes.success) {
-    await this.saveAllowedTitle(event.title.toLowerCase())
+    await this.saveAllowedTitle(workingTitle)
     return hasGoodTermsRes;
   }
 
   const isRockRes = await this.isRock(event);
   if (isRockRes.success){
-    await this.saveAllowedTitle(event.title.toLowerCase())
+    await this.saveAllowedTitle(workingTitle)
   } else {
-    await this.saveRefusedTitle(event.title.toLowerCase())
+    await this.saveRefusedTitle(workingTitle)
   }
   return isRockRes;
   
@@ -95,6 +98,9 @@ paradisoScraper.makeBaseEventList = async function () {
     }
   }, {workerData});
   
+  await _t.autoScroll(page);
+  await _t.autoScroll(page);
+  await _t.autoScroll(page);
   await _t.autoScroll(page);
   await _t.autoScroll(page);
   await _t.autoScroll(page);

@@ -1,4 +1,52 @@
 
+  paradiso-0 Error - 3:44:08 AM
+  TypeError: Cannot read properties of undefined (reading 'match')
+    at AbstractScraper.cleanupEventTitle (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:846:22)
+    at AbstractScraper.rockRefuseListCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:684:29)
+    at paradisoScraper.singleRawEventCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/paradiso.js:43:32)
+    at AbstractScraper.rawEventsAsyncCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:506:38)
+    at AbstractScraper.announceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:480:23)
+    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:211:38)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'match')
+  
+  
+  paradiso-2 Error - 3:41:15 AM
+  TypeError: Cannot read properties of undefined (reading 'match')
+    at AbstractScraper.cleanupEventTitle (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:846:22)
+    at AbstractScraper.rockRefuseListCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:684:29)
+    at paradisoScraper.singleRawEventCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/paradiso.js:43:32)
+    at AbstractScraper.rawEventsAsyncCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:506:38)
+    at AbstractScraper.announceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:480:23)
+    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:211:38)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'match')
+  
+  
+  paradiso-1 Error - 3:40:08 AM
+  TypeError: Cannot read properties of undefined (reading 'match')
+    at AbstractScraper.cleanupEventTitle (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:846:22)
+    at AbstractScraper.rockRefuseListCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:684:29)
+    at paradisoScraper.singleRawEventCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/paradiso.js:42:32)
+    at AbstractScraper.rawEventsAsyncCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:506:38)
+    at AbstractScraper.announceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:480:23)
+    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:211:38)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  Cannot read properties of undefined (reading 'match')
+  
+  
+  melkweg-0 Error - 2:08:57 AM
+  Error: image missing <a class='page-info' href='https://www.melkweg.nl/nl/agenda/descendents-02-08-2023/'>Descendents</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1088:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1083:23)
+    at melkwegScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/melkweg.js:151:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:936:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:215:5) 
+  image missing <a class='page-info' href='https://www.melkweg.nl/nl/agenda/descendents-02-08-2023/'>Descendents</a>
+  
+  
   dynamo-1 Error - 2:03:51 AM
   Error: Te weinig 'agendaDataEls' <a class='page-info' href='https://www.effenaar.nl/agenda/hot-mulligan'>Hot Mulligan - Effenaar</a>
     at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1088:29

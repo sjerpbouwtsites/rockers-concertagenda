@@ -671,22 +671,20 @@ export default class AbstractScraper {
   }
 
   async rockAllowListCheck(event, title){
-    let workingTitle = this.cleanupEventTitle(title)
-    const tt = this.rockAllowList.includes(workingTitle);
+    const tt = this.rockAllowList.includes(title);
     return {
       event,
       success: tt,
-      reason: `${tt ? 'in' : 'not in'} allowed list`,
+      reason: `${title} ${tt ? 'in' : 'NOT in'} allowed 🛴 list`,
     };
   }
 
   async rockRefuseListCheck(event, title){
-    let workingTitle = this.cleanupEventTitle(title)
-    const tt = this.rockRefuseList.includes(workingTitle);
+    const tt = this.rockRefuseList.includes(title);
     return {
       event,
       success: tt,
-      reason: `${tt ? 'in' : 'not in'} refuse list`,
+      reason: `${title} ${tt ? 'in' : 'NOT in'} refuse 🚮 list`,
     };
   }
 
@@ -746,6 +744,8 @@ export default class AbstractScraper {
   }
 
   async wikipedia(event, title){
+
+    this.dirtyTalk(`wikipedia ${title}`)
 
     let workingTitle = this.cleanupEventTitle(title)
 
@@ -839,7 +839,7 @@ export default class AbstractScraper {
     }
   }
 
-  cleanupEventTitle(workingTitle){
+  cleanupEventTitle(workingTitle = ''){
     // - 14:35 zoals bij afas
     if (workingTitle.match(/\s?-\s?\d\d:\d\d/)){
       workingTitle = workingTitle.replace(/\s?-\s?\d\d:\d\d/, '');
@@ -848,6 +848,14 @@ export default class AbstractScraper {
     if (workingTitle.includes('&')) {
       workingTitle = workingTitle.replace(/&.*$/,'');
     }
+
+    if (workingTitle.includes('•')) {
+      workingTitle = workingTitle.replace(/•.*$/,'');
+    }
+
+    if (workingTitle.includes('+')) {
+      workingTitle = workingTitle.replace(/\+.*$/,'');
+    }    
 
     if (workingTitle.includes(':')) {
       workingTitle = workingTitle.replace(/^[\w\s]+:/,'');

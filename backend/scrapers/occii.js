@@ -32,7 +32,7 @@ occiiScraper.listenToMasterThread();
 // SINGLE RAW EVENT CHECK
 
 occiiScraper.singleRawEventCheck = async function(event){
-  const tl = event.title.toLowerCase();
+  const tl = this.cleanupEventTitle(event.title);
   const isRefused = await this.rockRefuseListCheck(event, tl)
   if (isRefused.success) {
     return {
@@ -54,6 +54,8 @@ occiiScraper.singleRawEventCheck = async function(event){
       event
     }
   }
+
+  await this.saveAllowedTitle(tl)
 
   return {
     reason: 'occii rules',

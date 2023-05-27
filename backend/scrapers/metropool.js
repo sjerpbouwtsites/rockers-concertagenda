@@ -35,19 +35,21 @@ metropoolScraper.listenToMasterThread();
 
 metropoolScraper.singleRawEventCheck = async function(event){
 
-  const isRefused = await this.rockRefuseListCheck(event, event.title.toLowerCase())
+  const workingTitle = this.cleanupEventTitle(event.title)
+
+  const isRefused = await this.rockRefuseListCheck(event, workingTitle)
   if (isRefused.success) return {
     reason: isRefused.reason,
     event,
     success: false
   };
 
-  const isAllowed = await this.rockAllowListCheck(event, event.title.toLowerCase())
+  const isAllowed = await this.rockAllowListCheck(event, workingTitle)
   if (isAllowed.success) return isAllowed;
 
   const hasForbiddenTerms = await this.hasForbiddenTerms(event);
   if (hasForbiddenTerms.success) {
-    await this.saveRefusedTitle(event.title.toLowerCase())
+    await this.saveRefusedTitle(workingTitle)
     return {
       reason: hasForbiddenTerms.reason,
       success: false,
@@ -57,33 +59,15 @@ metropoolScraper.singleRawEventCheck = async function(event){
 
   const hasGoodTermsRes = await this.hasGoodTerms(event);
   if (hasGoodTermsRes.success) {
-    await this.saveAllowedTitle(event.title.toLowerCase())
+    await this.saveAllowedTitle(workingTitle)
     return hasGoodTermsRes;
   }
-  // try {
-  const overloadTitles = [];
-  const tl = event.title.toLowerCase();
-  const match = tl.match(/([\w\s]+)\s+[+–&-]/) 
-  if (match && Array.isArray(match) && match.length) {
-    const ol1 = match[1].replace(/\s{2,100}/g,' ').trim();
-    if (ol1 !== tl) {
-      overloadTitles.push(ol1);
-    }
-  }
-  const match2 = tl
-    .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
-    .match(/([\w\s]+)\s+[+–&-]/) 
-  if (match2 && Array.isArray(match2) && match2.length) {
-    const ol2 = match2[1].replace(/\s{2,100}/g,` `).trim();
-    if (ol2 !== tl) {
-      overloadTitles.push(ol2);
-    }
-  }
-  const isRockRes = await this.isRock(event, overloadTitles);
+
+  const isRockRes = await this.isRock(event, [workingTitle]);
   if (isRockRes.success){
-    await this.saveAllowedTitle(event.title.toLowerCase())
+    await this.saveAllowedTitle(workingTitle)
   } else {
-    await this.saveRefusedTitle(event.title.toLowerCase())
+    await this.saveRefusedTitle(workingTitle)
   }
   return isRockRes;
 }
