@@ -1,4 +1,51 @@
 
+  paradiso-1 Error - 12:57:40 PM
+  Error: image missing <a class='page-info' href='https://www.paradiso.nl/program/the-chats-guantanamo-baywatch/37567'>The Chats + Guantanamo Baywatch</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1116:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1111:23)
+    at paradisoScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/paradiso.js:300:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:964:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:215:5) 
+  image missing <a class='page-info' href='https://www.paradiso.nl/program/the-chats-guantanamo-baywatch/37567'>The Chats + Guantanamo Baywatch</a>
+  
+  
+  paradiso-1 Error - 12:49:31 PM
+  Error: image missing <a class='page-info' href='https://www.paradiso.nl/program/the-chats-guantanamo-baywatch/37567'>The Chats + Guantanamo Baywatch</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1116:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1111:23)
+    at paradisoScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/paradiso.js:300:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:964:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:215:5) 
+  image missing <a class='page-info' href='https://www.paradiso.nl/program/the-chats-guantanamo-baywatch/37567'>The Chats + Guantanamo Baywatch</a>
+  
+  
+  metropool-0 Error - 12:45:49 PM
+  Error: Failed to launch the browser process!
+[0527/124549.280942:ERROR:zygote_host_impl_linux.cc(90)] Running as root without --no-sandbox is not supported. See https://crbug.com/638180.
+
+
+TROUBLESHOOTING: https://github.com/puppeteer/puppeteer/blob/main/docs/troubleshooting.md
+
+    at onClose (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/node/BrowserRunner.js:237:20)
+    at Interface.<anonymous> (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/node/BrowserRunner.js:227:68)
+    at Interface.emit (node:events:539:35)
+    at Interface.close (node:internal/readline/interface:535:10)
+    at Socket.onend (node:internal/readline/interface:261:10)
+    at Socket.emit (node:events:539:35)
+    at endReadableNT (node:internal/streams/readable:1344:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) 
+  Failed to launch the browser process!
+[0527/124549.280942:ERROR:zygote_host_impl_linux.cc(90)] Running as root without --no-sandbox is not supported. See https://crbug.com/638180.
+
+
+TROUBLESHOOTING: https://github.com/puppeteer/puppeteer/blob/main/docs/troubleshooting.md
+
+  
+  
   paradiso-1 Error - 7:33:26 AM
   Error: image missing <a class='page-info' href='https://www.paradiso.nl/program/the-chats-guantanamo-baywatch/37567'>The Chats + Guantanamo Baywatch</a>
     at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1116:29
