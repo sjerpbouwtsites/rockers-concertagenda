@@ -26,18 +26,64 @@ const dynamoScraper = new AbstractScraper(makeScraperConfig({
   }
 }));
 
+dynamoScraper.singleMergedEventCheck = async function(event){
+
+  let workingTitle = this.cleanupEventTitle(event.title);
+
+  const isRefused = await this.rockRefuseListCheck(event, workingTitle)
+  if (isRefused.success) return {
+    reason: isRefused.reason,
+    event,
+    success: false
+  };
+
+  const isAllowed = await this.rockAllowListCheck(event, workingTitle)
+  if (isAllowed.success) return isAllowed;
+
+  const hasGoodTermsRes = await this.hasGoodTerms(event);
+  const hasForbiddenTermsRes = await this.hasForbiddenTerms(event);
+  if (hasForbiddenTermsRes.success) {
+    await this.saveRefusedTitle(workingTitle);
+    return {
+      event,
+      reason: hasForbiddenTermsRes.success,
+      success: false,
+    }
+  }
+  
+  if (hasGoodTermsRes.success) {
+    await this.saveAllowedTitle(workingTitle);
+    return hasGoodTermsRes;
+  } 
+
+  const isRockRes = await this.isRock(event, [workingTitle]);
+  if (isRockRes.success) {
+    await this.saveAllowedTitle(workingTitle);
+    return isRockRes;
+  } 
+  await this.saveRefusedTitle(workingTitle);
+  
+  return {
+    event,
+    reason: isRockRes.reason,
+    success: false
+  }
+  
+}
+
 dynamoScraper.listenToMasterThread();
 
 // MAKE BASE EVENTS
 
 dynamoScraper.makeBaseEventList = async function () {
 
-  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.name);
-  if (availableBaseEvent){
+  const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
+  if (availableBaseEvents){
+    const thisWorkersEvents = availableBaseEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
     return await this.makeBaseEventListEnd({
-      stopFunctie: null, rawEvents: availableBaseEvent}
+      stopFunctie: null, rawEvents: thisWorkersEvents}
     );    
-  }  
+  }    
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
@@ -46,13 +92,12 @@ dynamoScraper.makeBaseEventList = async function () {
       return Array.from(
         document.querySelectorAll(".search-filter-results .timeline-article")
       )
-        .filter((baseEvent, index) => index % workerData.workerCount === workerData.index)
         .map((baseEvent) => {
 
           const title = baseEvent.querySelector("h4")?.textContent ?? "";
           const res = {
             unavailable: "",
-            pageInfo: `<a href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+            pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
             errors: [],          
             title
           }
@@ -72,9 +117,9 @@ dynamoScraper.makeBaseEventList = async function () {
   );
 
   this.saveBaseEventlist(workerData.family, rawEvents)
-
+  const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
   return await this.makeBaseEventListEnd({
-    stopFunctie, page, rawEvents}
+    stopFunctie, rawEvents: thisWorkersEvents}
   );
 
 };
@@ -89,12 +134,18 @@ dynamoScraper.getPageInfo = async function ({ page, event}) {
     ({ months, event}) => {
       const res = {
         unavailable: event.unavailable,
-        pageInfo: `<a href='${document.location.href}'>${document.title}</a>`,
+        pageInfo: `<a class='page-info' href='${location.href}'>${document.title}</a>`,
         errors: [],
       };
       const agendaDatesEls = document.querySelectorAll(".agenda-date");
       let baseDate = null;
       if (agendaDatesEls && agendaDatesEls.length < 2) {
+
+        if (location.href.includes('effenaar')){
+          res.corrupted = `Dynamo mixed venue with ${event.venueEventUrl}`
+          return res;
+        } 
+
         res.errors.push({remarks: `Te weinig 'agendaDataEls' ${res.pageInfo}`, 
           toDebug: {
             event,
@@ -178,7 +229,7 @@ dynamoScraper.getPageInfo = async function ({ page, event}) {
       res.image =
         document
           .querySelector(".dynamic-background-color#intro .color-pick")
-          ?.style.backgroundImage.match(/(https.*\.[jpg|jpeg|png])/)
+          ?.style.backgroundImage.match(/https.*.jpg|https.*.jpeg|https.*.png|https.*.webp/)
           ?.at(0)
           .replace("-500x500x", "") ?? "";
       if (!res.image){

@@ -24,22 +24,68 @@ const tivoliVredenburgScraper = new AbstractScraper(makeScraperConfig({
 
 tivoliVredenburgScraper.listenToMasterThread();
 
+
+// SINGLE EVENT CHECK
+
+tivoliVredenburgScraper.singleRawEventCheck = async function (event) {
+
+  const workingTitle = this.cleanupEventTitle(event.title);
+
+  const isRefused = await this.rockRefuseListCheck(event, workingTitle)
+  if (isRefused.success) return {
+    reason: isRefused.reason,
+    event,
+    success: false
+  };
+
+  const isAllowed = await this.rockAllowListCheck(event, workingTitle)
+  if (isAllowed.success) {
+    return isAllowed
+  }
+
+  const hasForbiddenTerms = await this.hasForbiddenTerms(event);
+  if (hasForbiddenTerms.success) {
+    await this.saveRefusedTitle(workingTitle)
+    return {
+      reason: hasForbiddenTerms.reason,
+      success: false,
+      event
+    }
+  }
+
+  const hasGoodTermsRes = await this.hasGoodTerms(event);
+  if (hasGoodTermsRes.success) {
+    await this.saveAllowedTitle(workingTitle)
+    return hasGoodTermsRes;
+  }
+
+  const isRockRes = await this.isRock(event, [workingTitle]);
+  if (isRockRes.success){
+    await this.saveAllowedTitle(workingTitle)
+  } else {
+    await this.saveRefusedTitle(workingTitle)
+  }
+  return isRockRes;
+  
+};
+
+
 // MAKE BASE EVENTS
 
 tivoliVredenburgScraper.makeBaseEventList = async function () {
   
-  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.name);
-  if (availableBaseEvent){
+  const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
+  if (availableBaseEvents){
+    const thisWorkersEvents = availableBaseEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
     return await this.makeBaseEventListEnd({
-      stopFunctie: null, rawEvents: availableBaseEvent}
+      stopFunctie: null, rawEvents: thisWorkersEvents}
     );    
-  }
+  } 
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
   const rawEvents = await page.evaluate(({workerData}) => {
     return Array.from(document.querySelectorAll(".agenda-list-item"))
-      .filter((eventEl,index) => index % workerData.workerCount === workerData.index)
       .map((eventEl) => {
         const title =
           eventEl
@@ -47,7 +93,7 @@ tivoliVredenburgScraper.makeBaseEventList = async function () {
             ?.textContent.trim() ?? null;
         const res = {
           unavailable: '',
-          pageInfo: `<a href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+          pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
           errors: [],
           title
         };
@@ -73,9 +119,9 @@ tivoliVredenburgScraper.makeBaseEventList = async function () {
   }, {workerData});
 
   this.saveBaseEventlist(workerData.family, rawEvents)
-
+  const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
   return await this.makeBaseEventListEnd({
-    stopFunctie, page, rawEvents}
+    stopFunctie, rawEvents: thisWorkersEvents}
   );
 
 };
@@ -89,7 +135,7 @@ tivoliVredenburgScraper.getPageInfo = async function ({ page, event }) {
   const pageInfo = await page.evaluate(({event}) => {
     const res = {
       unavailable: event.unavailable,
-      pageInfo: `<a href='${event.venueEventUrl}'>${event.title}</a>`,
+      pageInfo: `<a class='page-info' href='${event.venueEventUrl}'>${event.title}</a>`,
       errors: [],
     };
     res.priceTextcontent =
@@ -99,7 +145,7 @@ tivoliVredenburgScraper.getPageInfo = async function ({ page, event }) {
     res.longTextHTML = 
       document.querySelector(".event__text")?.innerHTML ?? '';
 
-    const startDateMatch = document.location.href.match(/\d\d-\d\d-\d\d\d\d/); //
+    const startDateMatch = location.href.match(/\d\d-\d\d-\d\d\d\d/); //
     res.startDate = "";
     if (startDateMatch && startDateMatch.length) {
       res.startDate = startDateMatch[0].split("-").reverse().join("-");

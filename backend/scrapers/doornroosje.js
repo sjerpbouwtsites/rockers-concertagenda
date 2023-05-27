@@ -17,7 +17,7 @@ const doornroosjeScraper = new AbstractScraper(makeScraperConfig({
     },
     app: {
       mainPage: {
-        url: "https://www.doornroosje.nl/?genre=metal%252Cpunk%252Cpost-hardcore%252Cnoise-rock%252Csludge-rock",
+        url: "https://www.doornroosje.nl/?genre=metal%252Cpunk%252Cpost-hardcore%252Chardcore%252Cnoise-rock",
         requiredProperties: ['venueEventUrl', 'title']
       },
       singlePage: {
@@ -33,10 +33,11 @@ doornroosjeScraper.listenToMasterThread();
 
 doornroosjeScraper.makeBaseEventList = async function () {
 
-  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.name);
-  if (availableBaseEvent){
+  const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
+  if (availableBaseEvents){
+    const thisWorkersEvents = availableBaseEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
     return await this.makeBaseEventListEnd({
-      stopFunctie: null, rawEvents: availableBaseEvent}
+      stopFunctie: null, rawEvents: thisWorkersEvents}
     );    
   }  
   
@@ -47,14 +48,14 @@ doornroosjeScraper.makeBaseEventList = async function () {
 
   const rawEvents = await page.evaluate(({workerData}) => {
     return Array.from(document.querySelectorAll(".c-program__item"))
-      .filter((eventEl, index) => index % workerData.workerCount === workerData.index)
+
       .map((eventEl) => {
         const title =
           eventEl.querySelector(".c-program__title")?.textContent.trim() ??
           eventEl.querySelector("h1,h2,h3")?.textContent.trim() ?? null;
         const res = {
           unavailable: "",
-          pageInfo: `<a href='${document.location.href}'>${workerData.family} - main - ${title}</a>`,
+          pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} - main - ${title}</a>`,
           errors: [],
           title
         };
@@ -70,9 +71,9 @@ doornroosjeScraper.makeBaseEventList = async function () {
   }, {workerData});
 
   this.saveBaseEventlist(workerData.family, rawEvents)
-
+  const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
   return await this.makeBaseEventListEnd({
-    stopFunctie, page, rawEvents}
+    stopFunctie, rawEvents: thisWorkersEvents}
   );
 
 };
@@ -88,7 +89,7 @@ doornroosjeScraper.getPageInfo = async function ({ page, event }) {
     pageInfo = await page.evaluate(({months, event}) => {
       const res = {
         unavailable: event.unavailable,
-        pageInfo: `<a href='${event.venueEventUrl}'>${event.title}</a>`,
+        pageInfo: `<a class='page-info' href='${event.venueEventUrl}'>${event.title}</a>`,
         errors: [],
       };
       res.image =
@@ -168,7 +169,7 @@ doornroosjeScraper.getPageInfo = async function ({ page, event }) {
     pageInfo = await page.evaluate(({months, event}) => {
       const res = {
         unavailable: event.unavailable,
-        pageInfo: `<a href='${event.venueEventUrl}'>${event.title}</a>`,
+        pageInfo: `<a class='page-info' href='${event.venueEventUrl}'>${event.title}</a>`,
         errors: [],
       };
       res.image =

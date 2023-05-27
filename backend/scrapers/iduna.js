@@ -32,17 +32,41 @@ idunaScraper.listenToMasterThread();
 
 idunaScraper.makeBaseEventList = async function () {
 
-  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.name);
-  if (availableBaseEvent){
+  const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
+  if (availableBaseEvents){
+    this.dirtyTalk(availableBaseEvents.length)
     return await this.makeBaseEventListEnd({
-      stopFunctie: null, rawEvents: availableBaseEvent}
+      stopFunctie: null, rawEvents: availableBaseEvents}
     );    
-  }  
-
+  }    
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
-  let metalEvents, punkEvents;
+  let metalEvents, punkEvents, doomEvents;
   try {
+
+    doomEvents = await page
+      .evaluate(({workerData}) => {
+      loadposts("doom", 1, 50); // eslint-disable-line
+        return new Promise((resolve) => {
+          setTimeout(() => {
+            const doomEvents = Array.from(
+              document.querySelectorAll("#gridcontent .griditemanchor")
+            ).map((event) => {
+              const title = event.querySelector(".griditemtitle")?.textContent ?? null;
+              return {
+                unavailable: "",
+                pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
+                errors: [],          
+                venueEventUrl: event?.href ?? null,
+                title,
+              }               
+            });
+            resolve(doomEvents);
+          }, 2500);
+        });
+      },{workerData})
+      .then((doomEvents) => doomEvents);
+    // TODO catch
 
     metalEvents = await page
       .evaluate(({workerData}) => {
@@ -55,9 +79,10 @@ idunaScraper.makeBaseEventList = async function () {
               const title = event.querySelector(".griditemtitle")?.textContent ?? null;
               return {
                 unavailable: "",
-                pageInfo: `<a href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+                pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
                 errors: [],          
                 venueEventUrl: event?.href ?? null,
+                title,
               }               
             });
             resolve(metalEvents);
@@ -82,8 +107,9 @@ idunaScraper.makeBaseEventList = async function () {
               return {
                 venueEventUrl: event?.href ?? null,
                 title,
-                pageInfo: `<a href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+                pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
                 errors: [],
+                unavailable: "",
               };
             });
             resolve(punkEvents);
@@ -93,13 +119,19 @@ idunaScraper.makeBaseEventList = async function () {
       .then((punkEvents) => punkEvents);
     //TODO catch
     
-    const metalEventsTitles = metalEvents.map((event) => event.title);
+    let metalEventsTitles = metalEvents.map((event) => event.title);
     
     punkEvents.forEach((punkEvent) => {
       if (!metalEventsTitles.includes(punkEvent)) {
         metalEvents.push(punkEvent);
       }
     });    
+    metalEventsTitles = metalEvents.map((event) => event.title);
+    doomEvents.forEach((doomEvent) => {
+      if (!metalEventsTitles.includes(doomEvent)) {
+        metalEvents.push(doomEvent);
+      }
+    })
   } catch (caughtError) { // belachelijke try catch.
 
     // TODO WRAPPER ERRRO
@@ -113,19 +145,22 @@ idunaScraper.makeBaseEventList = async function () {
     
   const rawEvents = metalEvents.map(musicEvent =>{
     musicEvent.title = _t.killWhitespaceExcess(musicEvent.title);
+    musicEvent.pageInfo = _t.killWhitespaceExcess(musicEvent.pageInfo);
     return musicEvent;
   });
 
   this.saveBaseEventlist(workerData.family, rawEvents)
-  
   return await this.makeBaseEventListEnd({
-    stopFunctie, page, rawEvents}
+    stopFunctie, rawEvents}
   );
+  
 };
 
 // GET PAGE INFO
 
 idunaScraper.getPageInfo = async function ({ page, event }) {
+
+  this.dirtyTalk(event.title)
   
   const {stopFunctie} =  await this.getPageInfoStart()
   
@@ -134,7 +169,7 @@ idunaScraper.getPageInfo = async function ({ page, event }) {
 
       const res = {
         unavailable: event.unavailable,
-        pageInfo: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
+        pageInfo: `<a class='page-info' href='${location.href}'>${event.title}</a>`,
         errors: [],
       };
       try {
@@ -155,13 +190,25 @@ idunaScraper.getPageInfo = async function ({ page, event }) {
           res.errors.push({
             remarks: `geen startDate ${res.pageInfo}`,
             toDebug: {
-              res,event,
+              event,
               text:  document
                 .querySelector("#sideinfo .capitalize")
                 ?.textContent
             }
           })
           return res;
+        }
+
+        const doorEl = Array.from(
+          document.querySelectorAll("#sideinfo h2")
+        ).find((h2El) => {
+          return h2El.textContent.toLowerCase().includes("deur");
+        });
+        if (doorEl) {
+          const doormatch = doorEl.textContent.match(/\d\d:\d\d/);
+          if (doormatch) {
+            res.doorTime = doormatch[0];
+          }
         }
 
         const startEl = Array.from(
@@ -175,27 +222,20 @@ idunaScraper.getPageInfo = async function ({ page, event }) {
             res.startTime = startmatch[0];
           }
         }
-        if (!res.startTime){
+        if (!res.startTime && res.doorTime){
+          res.startTime = res.doorTime;
+          res.doorTime = null;
+        } else if (!res.startTime) {
           res.errors.push({
             remarks: `geen startTime ${res.pageInfo}`,
             toDebug: {
-              res,event
+              event
             }
           })
           return res;
         }        
 
-        const doorEl = Array.from(
-          document.querySelectorAll("#sideinfo h2")
-        ).find((h2El) => {
-          return h2El.textContent.toLowerCase().includes("deur");
-        });
-        if (doorEl) {
-          const doormatch = doorEl.textContent.match(/\d\d:\d\d/);
-          if (doormatch) {
-            res.doorTime = doormatch[0];
-          }
-        }
+
 
         if (res.startTime) {
           res.startDateTime = new Date(
@@ -217,7 +257,7 @@ idunaScraper.getPageInfo = async function ({ page, event }) {
           error:caughtError,
           remarks: `belacheljik grote catch iduna getPageInfo ${res.pageInfo}`,
           toDebug:{
-            res, event
+            event
           }
         });
         return res;

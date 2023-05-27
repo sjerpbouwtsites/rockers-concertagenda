@@ -14,7 +14,7 @@ export default class MusicEvent {
   soldOut = null;
   unavailable = null; // wordt: of iets verplaatst is. // TODO
   corrupted = null; // wordt: als datum ontbreekt oid. //TODO
-  correctMusic = null; // TODO music check integreren hiermee
+  origin = null;
   constructor(init, enforceMusicEventType = true) {
     this.merge(init, enforceMusicEventType);
   }

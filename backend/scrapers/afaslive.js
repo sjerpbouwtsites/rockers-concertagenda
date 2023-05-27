@@ -8,6 +8,7 @@ import makeScraperConfig from "./gedeeld/scraper-config.js";
 const afasliveScraper = new AbstractScraper(makeScraperConfig({
   maxExecutionTime: 40000,
   workerData: Object.assign({}, workerData),
+  hasDecentCategorisation: false,
   puppeteerConfig: {
     mainPage: {
       timeout: 60043,
@@ -27,7 +28,46 @@ const afasliveScraper = new AbstractScraper(makeScraperConfig({
   }
 }));
 
-afasliveScraper.singleEventCheck = afasliveScraper.isRock;
+// RAW EVENT ASYNC CHECK
+
+afasliveScraper.singleRawEventCheck = async function(event){
+
+  const workingTitle = this.cleanupEventTitle(event.title)
+
+  const isRefused = await this.rockRefuseListCheck(event, workingTitle)
+  if (isRefused.success) return {
+    reason: isRefused.reason,
+    event,
+    success: false
+  };
+
+  const isAllowed = await this.rockAllowListCheck(event, workingTitle)
+  if (isAllowed.success) return isAllowed;
+
+  const hasForbiddenTerms = await this.hasForbiddenTerms(event, ['title']);
+  if (hasForbiddenTerms.success) {
+    await this.saveRefusedTitle(workingTitle)
+    return {
+      reason: hasForbiddenTerms.reason,
+      success: false,
+      event
+    }
+  }
+
+  const isRockRes = await this.isRock(event);
+  if (isRockRes.success){
+    await this.saveAllowedTitle(workingTitle)
+  } else {
+    await this.saveRefusedTitle(workingTitle)
+  }
+  return isRockRes;
+
+  // return {
+  //   reason: [isRefused.reason, isAllowed.reason, hasForbiddenTerms.reason].join(';'),
+  //   event,
+  //   success: true
+  // }
+}
 
 afasliveScraper.listenToMasterThread();
 
@@ -35,10 +75,11 @@ afasliveScraper.listenToMasterThread();
 
 afasliveScraper.makeBaseEventList = async function () {
 
-  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.name);
-  if (availableBaseEvent){
+  const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
+  if (availableBaseEvents){
+    const thisWorkersEvents = availableBaseEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index);
     return await this.makeBaseEventListEnd({
-      stopFunctie: null, rawEvents: availableBaseEvent}
+      stopFunctie: null, rawEvents: thisWorkersEvents}
     );    
   }  
   
@@ -63,26 +104,27 @@ afasliveScraper.makeBaseEventList = async function () {
 
   const rawEvents = await page.evaluate(({workerData}) => {
     return Array.from(document.querySelectorAll(".agenda__item__block "))
-      .filter((event, index) => index % workerData.workerCount === workerData.index)
       .map((agendaBlock) => {
-
         const title = agendaBlock.querySelector(".eventTitle")?.textContent ?? "";
         const res = {
           unavailable: "",
-          pageInfo: `<a href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+          pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
           errors: [],          
           title
         }
         res.venueEventUrl = agendaBlock.querySelector("a")?.href ?? null;
         res.image = agendaBlock.querySelector("img")?.src ?? null;
         return res;
+      })
+      .filter(event => {
+        return !event.title.toLowerCase().includes('productiedag')
       });
   }, {workerData});
 
   this.saveBaseEventlist(workerData.family, rawEvents)
-
+  const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index);
   return await this.makeBaseEventListEnd({
-    stopFunctie, page, rawEvents}
+    stopFunctie, page, rawEvents: thisWorkersEvents}
   );
 };
 
@@ -95,7 +137,7 @@ afasliveScraper.getPageInfo = async function ({ page, event }) {
 
       const res = {
         unavailable: event.unavailable,
-        pageInfo: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
+        pageInfo: `<a class='page-info' href='${location.href}'>${event.title}</a>`,
         errors: [],
       };
 

@@ -1,13 +1,13 @@
 import { workerData } from "worker_threads";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
-import ErrorWrapper from "../mods/error-wrapper.js";
 
 // SCRAPER CONFIG
 
 const baroegScraper = new AbstractScraper(makeScraperConfig({
   maxExecutionTime: 60047,
   workerData: Object.assign({}, workerData),
+  hasDecentCategorisation: true,
   puppeteerConfig: {
     mainPage: {
       timeout: 45000,
@@ -17,7 +17,7 @@ const baroegScraper = new AbstractScraper(makeScraperConfig({
     },
     app: {
       mainPage: {
-        url: "  https://baroeg.nl/agenda-categorieen/",
+        url: "https://baroeg.nl/agenda/",
         requiredProperties: ['venueEventUrl', 'title', 'startDateTime']
       },
       singlePage: {
@@ -27,6 +27,37 @@ const baroegScraper = new AbstractScraper(makeScraperConfig({
   }
 }));
 
+// SINGLE RAW EVENT CHECK
+
+baroegScraper.singleRawEventCheck = async function(event){
+
+  const isRefused = await this.rockRefuseListCheck(event, event.title.toLowerCase())
+  if (isRefused.success) return {
+    reason: isRefused.reason,
+    event,
+    success: false
+  };
+
+  const isAllowed = await this.rockAllowListCheck(event, event.title.toLowerCase())
+  if (isAllowed.success) return isAllowed;
+
+  const hasForbiddenTerms = await this.hasForbiddenTerms(event);
+  if (hasForbiddenTerms.success) {
+    await this.saveRefusedTitle(event.title.toLowerCase())
+    return {
+      reason: hasForbiddenTerms.reason,
+      success: false,
+      event
+    }
+  }
+ 
+  return {
+    reason: 'nothing forbidden',
+    success: true,
+    event
+  }  
+
+}
 
 baroegScraper.listenToMasterThread();
 
@@ -34,38 +65,26 @@ baroegScraper.listenToMasterThread();
 
 baroegScraper.makeBaseEventList = async function () {
 
-  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.name);
-  if (availableBaseEvent){
+  const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
+  if (availableBaseEvents){
+    const thisWorkersEvents = availableBaseEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
     return await this.makeBaseEventListEnd({
-      stopFunctie: null, rawEvents: availableBaseEvent}
+      stopFunctie: null, rawEvents: thisWorkersEvents}
     );    
-  }  
+  }    
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
   const rawEvents = await page.evaluate(({workerData}) => {
 
-    const reedsGevondenEvents = [];
-    const toegestaneCategorieen = `death metal,doom,hardcore,new wave,punk,hardcore punk,heavy rock 'n roll,symphonic metal,thrash,metalcore,black,crossover,grindcore,industrial,noise,post-punk,heavy metal,power metal,heavy psych,metal,surfpunkabilly`;
     return Array
       .from(document.querySelectorAll('.wpt_listing .wp_theatre_event'))
       .map(eventEl => {
         const venueEventUrl = eventEl.querySelector('.wp_theatre_event_title a + a').href;
-        if (!reedsGevondenEvents.includes(venueEventUrl)){
-          reedsGevondenEvents.push(venueEventUrl)
-        } else {
-          return false;
-        }
         const categorieTeksten = Array.from(eventEl.querySelectorAll('.wpt_production_categories li')).map(li => {
           const categorieNaam = li.textContent.toLowerCase().trim();
           return categorieNaam
         });
-        const heeftGoedeCategorie = categorieTeksten.some(categorieNaam => {
-          return toegestaneCategorieen.includes(categorieNaam)
-        })
-        if (!heeftGoedeCategorie){
-          return false;
-        }
         return {
           eventEl,
           categorieTeksten,
@@ -73,18 +92,17 @@ baroegScraper.makeBaseEventList = async function () {
         }
       })
       .filter(eventData => eventData)
-      .filter((eventData, index) => index % workerData.workerCount === workerData.index)
       .map(({eventEl,categorieTeksten,venueEventUrl}) => {
         const title = eventEl.querySelector('.wp_theatre_event_title')?.textContent.trim() ?? null;
         const res = {
           unavailable: "",
-          pageInfo: `<a href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+          pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
           errors: [],
         };
         res.title = title;
         res.shortText = eventEl.querySelector('.wp_theatre_prod_excerpt')?.textContent.trim() ?? null;
         res.shortText += categorieTeksten;
-        res.image = eventEl.querySelector('.media .attachment-thumbnail')?.src.replace(/\d\d\dx\d\d\d/, '300x300') ?? null; //TODO opzoeken wat ideale maten zijn
+        res.image = eventEl.querySelector('.media .attachment-thumbnail')?.src ?? '';
         if (!res.image){
           res.errors.push({
             remarks: `geen image ${res.pageInfo}`,
@@ -107,7 +125,6 @@ baroegScraper.makeBaseEventList = async function () {
           res.unavailable += 'geen startdate'
           return res;
         }
-        res.testError = new ErrorWrapper({error: new Error('fdfd'), remarks: 'hallo', workerData, errorLevel: 'notice', toDebug: ['1', '2']})
         const startYear = res.startDate[0].padStart(4, '20');
         const startMonth = res.startDate[1].padStart(2, '0');
         const startDay = res.startDate[2].padStart(2, '0');
@@ -137,9 +154,9 @@ baroegScraper.makeBaseEventList = async function () {
   }, {workerData})
 
   this.saveBaseEventlist(workerData.family, rawEvents)
-
+  const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
   return await this.makeBaseEventListEnd({
-    stopFunctie, page, rawEvents}
+    stopFunctie, page, rawEvents: thisWorkersEvents}
   );
 };
 
@@ -153,7 +170,7 @@ baroegScraper.getPageInfo = async function ({ page, event }) {
     ({event}) => {
       const res = {
         unavailable: event.unavailable,
-        pageInfo: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
+        pageInfo: `<a class='page-info' href='${location.href}'>${event.title}</a>`,
         errors: [],
       };
 

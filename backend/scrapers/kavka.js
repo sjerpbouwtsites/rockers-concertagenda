@@ -33,12 +33,13 @@ kavkaScraper.listenToMasterThread();
 
 kavkaScraper.makeBaseEventList = async function () {
 
-  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.name);
-  if (availableBaseEvent){
+  const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
+  if (availableBaseEvents){
+    const thisWorkersEvents = availableBaseEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
     return await this.makeBaseEventListEnd({
-      stopFunctie: null, rawEvents: availableBaseEvent}
+      stopFunctie: null, rawEvents: thisWorkersEvents}
     );    
-  }
+  }  
 
   const { stopFunctie, page } = await this.makeBaseEventListStart();
 
@@ -46,13 +47,9 @@ kavkaScraper.makeBaseEventList = async function () {
     ({ months, workerData }) => {
       return Array.from(document.querySelectorAll(".events-list > a"))
         .filter((rawEvent) => {
-          const isMetalOrPunk = Array.from(rawEvent.querySelectorAll(".tags"))
-            .map((a) => a.innerHTML.trim())
-            .join(" ")
-            .toLowerCase()
-            .includes("metal");
-          const isCancelled = !!rawEvent.querySelector(".cancelled");
-          return isMetalOrPunk && !isCancelled;
+          return Array.from(rawEvent.querySelectorAll(".tags"))
+            .map((a) => a.textContent.trim().toLowerCase())
+            .join(' ').includes("metal");
         })
         .map((rawEvent) => {
           let startTimeM,
@@ -72,10 +69,13 @@ kavkaScraper.makeBaseEventList = async function () {
 
           const res = {
             unavailable: "",
-            pageInfo: `<a href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+            pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
             errors: [],
             title,
           };
+          if (rawEvent.querySelector(".cancelled")) {
+            res.unavailable = 'cancelled'
+          }
 
           // TODO BELACHELIJK GROTE TRY CATHC
           try {
@@ -145,21 +145,25 @@ kavkaScraper.makeBaseEventList = async function () {
   );
 
   this.saveBaseEventlist(workerData.family, rawEvents)
-
+  const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
   return await this.makeBaseEventListEnd({
-    stopFunctie,
-    page,
-    rawEvents,
-  });
+    stopFunctie, rawEvents: thisWorkersEvents}
+  );
 };
 
 kavkaScraper.getPageInfo = async function ({ page, event }) {
   const { stopFunctie } = await this.getPageInfoStart();
 
+  await page.waitForSelector('img[src*="kavka.be/wp-content"].lazyloaded',{
+    timeout: 1500,
+  }).catch(err => {
+    // niets doen.
+  })
+
   const pageInfo = await page.evaluate(({event}) => {
     const res = {
       unavailable: event.unavailable,
-      pageInfo: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
+      pageInfo: `<a class='page-info' href='${location.href}'>${event.title}</a>`,
       errors: [],
     };
     try {

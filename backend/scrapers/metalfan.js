@@ -47,6 +47,7 @@ async function getBaseMusicEvents(browser, qwm) {
     "013tilburg",
     "013enomgevingn",
     "slvesborg", 
+    "cultuurpodiumboerderij",
     "royalparklive",
   ]);
 
@@ -55,7 +56,9 @@ async function getBaseMusicEvents(browser, qwm) {
     "013enomgeving": "013",
     "013enomgevingn": "013",
     "botanique brussel": "botanique",
+    "decacaofabriek":"cacaofabriek",
     "desselbelgimetoaslipknot": "dessel",
+    "desselbelgimetoagunsnroses": "dessel",
     "dinkelsbhlmetoapowerwolf": "dinkel",
     "dynamo eindhoven": "dynamo",
     "dynamoeindhoven": "dynamo",
@@ -71,6 +74,8 @@ async function getBaseMusicEvents(browser, qwm) {
     "oilsjt omploft": "sintannazaal",
     "wackenduitsland": 'wacken',
     "wackenduitslandmetoamegadeth": "wacken",
+    "wackenduitslandmetoaironmaiden": "wacken",
+    "evenemententerreinweertnoord":"weertnoord",
     "ysselsteyn": "ijsselstein",
   }
 
@@ -114,9 +119,10 @@ async function getBaseMusicEvents(browser, qwm) {
         let eventCommaSplice = metalfanEvent
           .querySelector(".calevent")
           .textContent.split(",");
-        eventLocationName = (eventCommaSplice[0] || "").trim();
-        if (Object.prototype.hasOwnProperty.call(rename, eventLocationName.toLowerCase())) {
-          eventLocationName = rename[eventLocationName.toLowerCase()]
+        eventLocationName = (eventCommaSplice[0] || "").trim().toLowerCase();
+
+        if (Object.prototype.hasOwnProperty.call(rename, eventLocationName)) {
+          eventLocationName = rename[eventLocationName]
         }
 
         eventHTMLrules = eventHTML.split("<br>");
@@ -138,9 +144,17 @@ async function getBaseMusicEvents(browser, qwm) {
   const musicEvents = eventData
     .map((eventDatum) => {
       const thisMusicEvent = new MusicEvent(eventDatum);
-      const locationName = Location.makeLocationSlug(
+      let locationName = Location.makeLocationSlug(
         eventDatum.eventLocationName
       );
+      parentPort.postMessage(qwm.debugger({
+        locationName,
+        eventDatum
+      }));
+      const watchForWeirdLocationNames = Object.keys(rename);
+      if (watchForWeirdLocationNames.includes(locationName)){
+        locationName = watchForWeirdLocationNames[locationName]
+      }
 
       if (skipWithMetalfan.includes(locationName)) {
         return;

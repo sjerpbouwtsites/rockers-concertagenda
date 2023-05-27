@@ -2,19 +2,20 @@ import { workerData } from "worker_threads";
 import * as _t from "../mods/tools.js";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
-
+import fs from "fs";
+import fsDirections from "../mods/fs-directions.js";
 // SCRAPER CONFIG
 
 const metropoolScraper = new AbstractScraper(makeScraperConfig({
-  maxExecutionTime: 60000,
+  maxExecutionTime: 120000,
   workerData: Object.assign({}, workerData),
   puppeteerConfig: {
     mainPage: {
-      timeout: 35000,
+      timeout: 60000,
       waitUntil: "load",
     },
     singlePage: {
-      timeout: 25000
+      timeout: 45000
     },
     app: {
       mainPage: {
@@ -30,16 +31,58 @@ const metropoolScraper = new AbstractScraper(makeScraperConfig({
 
 metropoolScraper.listenToMasterThread();
 
+// SINGLE RAW EVENT CHECK
+
+metropoolScraper.singleRawEventCheck = async function(event){
+
+  const workingTitle = this.cleanupEventTitle(event.title)
+
+  const isRefused = await this.rockRefuseListCheck(event, workingTitle)
+  if (isRefused.success) return {
+    reason: isRefused.reason,
+    event,
+    success: false
+  };
+
+  const isAllowed = await this.rockAllowListCheck(event, workingTitle)
+  if (isAllowed.success) return isAllowed;
+
+  const hasForbiddenTerms = await this.hasForbiddenTerms(event);
+  if (hasForbiddenTerms.success) {
+    await this.saveRefusedTitle(workingTitle)
+    return {
+      reason: hasForbiddenTerms.reason,
+      success: false,
+      event
+    }
+  }
+
+  const hasGoodTermsRes = await this.hasGoodTerms(event);
+  if (hasGoodTermsRes.success) {
+    await this.saveAllowedTitle(workingTitle)
+    return hasGoodTermsRes;
+  }
+
+  const isRockRes = await this.isRock(event, [workingTitle]);
+  if (isRockRes.success){
+    await this.saveAllowedTitle(workingTitle)
+  } else {
+    await this.saveRefusedTitle(workingTitle)
+  }
+  return isRockRes;
+}
+
 // MAKE BASE EVENTS
 
 metropoolScraper.makeBaseEventList = async function () {
 
-  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.name);
-  if (availableBaseEvent){
+  const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
+  if (availableBaseEvents){
+    const thisWorkersEvents = availableBaseEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
     return await this.makeBaseEventListEnd({
-      stopFunctie: null, rawEvents: availableBaseEvent}
+      stopFunctie: null, rawEvents: thisWorkersEvents}
     );    
-  }
+  }  
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
@@ -49,37 +92,27 @@ metropoolScraper.makeBaseEventList = async function () {
 
   const rawEvents = await page.evaluate(({workerData}) => {
     return Array.from(document.querySelectorAll(".card--event"))
-      .filter((rawEvent) => {
-        const testText = rawEvent.dataset?.genres || rawEvent.textContent;
-
-        return (
-          testText.includes("metal") || 
-          testText.includes("punk") ||
-          testText.includes("noise") ||
-          testText.includes("hardcore") ||
-          testText.includes("ska")
-        );
-      })
-      .filter((rawEvent, index) => index % workerData.workerCount === workerData.index)
       .map((rawEvent) => {
         const title = rawEvent.querySelector(".card__title")?.textContent ?? null;
         const res = {
           unavailable: "",
-          pageInfo: `<a href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+          pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
           errors: [],        
           title,  
         }          
         res.venueEventUrl = rawEvent?.href ?? null;
-        res.shortText = rawEvent.querySelector(".card__title card__title--sub")?.textContent ?? null
+        const genres = rawEvent.dataset?.genres ?? '';
+        const st = rawEvent.querySelector(".card__title card__title--sub")?.textContent;
+        res.shortText = (st + ' ' + genres).trim();
         res.soldOut = !!(rawEvent.querySelector(".card__title--label")?.textContent.toLowerCase().includes('uitverkocht') ?? null)
         return res;
       });
   }, {workerData});
   
   this.saveBaseEventlist(workerData.family, rawEvents)
-
+  const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
   return await this.makeBaseEventListEnd({
-    stopFunctie, page, rawEvents}
+    stopFunctie, rawEvents: thisWorkersEvents}
   );
 };
 
@@ -92,7 +125,7 @@ metropoolScraper.getPageInfo = async function ({ page, event}) {
   const pageInfo = await page.evaluate(({months, event}) => {
     const res = {
       unavailable: event.unavailable,
-      pageInfo: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
+      pageInfo: `<a class='page-info' href='${location.href}'>${event.title}</a>`,
       errors: [],
     };
 

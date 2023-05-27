@@ -3,6 +3,9 @@ import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 import {textContainsHeavyMusicTerms, textContainsForbiddenMusicTerms, waitFor} from "../mods/tools.js"
 import * as _t from "../mods/tools.js";
+import fs from 'fs';
+import ErrorWrapper from "../mods/error-wrapper.js";
+import fsDirections from "../mods/fs-directions.js";
 
 // SCRAPER CONFIG
 
@@ -20,7 +23,7 @@ const oostpoortScraper = new AbstractScraper(makeScraperConfig({
     app: {
       mainPage: {
         url: "https://www.spotgroningen.nl/programma/#genres=muziek&subgenres=metal-heavy,pop-rock",
-        requiredProperties: ['venueEventUrl', 'title']
+        requiredProperties: ['venueEventUrl', 'title', 'startDateTime']
       },
       singlePage: {
         requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
@@ -36,16 +39,15 @@ oostpoortScraper.listenToMasterThread();
 
 oostpoortScraper.makeBaseEventList = async function () {
 
-  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.name);
-  if (availableBaseEvent){
+  const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
+  if (availableBaseEvents){
+    const thisWorkersEvents = availableBaseEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
     return await this.makeBaseEventListEnd({
-      stopFunctie: null, rawEvents: availableBaseEvent}
+      stopFunctie: null, rawEvents: thisWorkersEvents}
     );    
-  }
+  }  
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
-
-  await waitFor(500); // site set filters aan
 
   const rawEvents = await page.evaluate(({workerData}) => {
     return Array
@@ -57,7 +59,6 @@ oostpoortScraper.makeBaseEventList = async function () {
       .filter(eventEl => {
         return !eventEl.classList.contains('is-hidden')
       })
-      .filter((rawEvent, index) => index % workerData.workerCount === workerData.index)
       .map((eventEl) => {
         const eersteDeelKorteTekst = eventEl.querySelector('h1 span')?.textContent ?? '';
         const title = eersteDeelKorteTekst.length === 0 
@@ -65,7 +66,7 @@ oostpoortScraper.makeBaseEventList = async function () {
           : eventEl.querySelector('h1')?.textContent.replace(eersteDeelKorteTekst, '') ?? ''
         const res = {
           unavailable: "",
-          pageInfo: `<a class='pageinfo' href="${document.location.href}">${workerData.family} - main - ${title}</a>`,
+          pageInfo: `<a class='page-info' href="${location.href}">${workerData.family} - main - ${title}</a>`,
           errors: [],
           title,
         };
@@ -93,47 +94,46 @@ oostpoortScraper.makeBaseEventList = async function () {
   });
 
   this.saveBaseEventlist(workerData.family, rawEvents)
-
+  const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
   return await this.makeBaseEventListEnd({
-    stopFunctie, page, rawEvents}
+    stopFunctie, rawEvents: thisWorkersEvents}
   );
   
 };
 
 // SINGLE EVENT CHECK
 
-oostpoortScraper.singleEventCheck = async function (event) {
-  
-  if (textContainsHeavyMusicTerms(event.longText)) {
-    return {
-      event,
-      success: true,
-      reason: "event contains heavy terms",
-    };    
-  }
-  if (textContainsForbiddenMusicTerms(event.longText)) {
-    return {
-      event,
-      success: false,
-      reason: "event contains forbidden terms",
-    };    
-  }
+oostpoortScraper.singleRawEventCheck = async function (event) {
 
+  const workingTitle = this.cleanupEventTitle(event.title);
 
-  const thisIsRock = await this.isRock(event);
-  if (thisIsRock.success) {
-    return {
-      event,
-      success: true,
-      reason: `is rock check successfull ${thisIsRock.reason}` ,
-    }
-  } 
-
-  return {
+  const isRefused = await this.rockRefuseListCheck(event, workingTitle)
+  if (isRefused.success) return {
+    reason: isRefused.reason,
     event,
-    success: false,
-    reason: `no evidence for heavy music found ${thisIsRock.reason}`,
+    success: false
+  };
+
+  const isAllowed = await this.rockAllowListCheck(event, workingTitle)
+  if (isAllowed.success) return isAllowed;
+
+  const hasForbiddenTerms = await this.hasForbiddenTerms(event);
+  if (hasForbiddenTerms.success) {
+    await this.saveRefusedTitle(workingTitle)
+    return {
+      reason: hasForbiddenTerms.reason,
+      success: false,
+      event
+    }
   }
+
+  const isRockRes = await this.isRock(event);
+  if (isRockRes.success){
+    await this.saveAllowedTitle(workingTitle)
+  } else {
+    await this.saveRefusedTitle(workingTitle)
+  }
+  return isRockRes;  
 
 };
 
@@ -144,42 +144,58 @@ oostpoortScraper.getPageInfo = async function ({ page, event }) {
   const {stopFunctie} =  await this.getPageInfoStart()
   
   await _t.waitFor(600);
+
+  let pageInfo;
  
-  const pageInfo = await page.evaluate(
+  pageInfo = await page.evaluate(
     ({event}) => {
       const res = {
         unavailable: event.unavailable,
-        pageInfo: `<a href='${document.location.href}'>${document.title}</a>`,
+        pageInfo: `<a class='page-info' href='${location.href}'>${document.title}</a>`,
         errors: [],
       };
 
+      res.longTextHTML = document.querySelector('.content__article .event__language')?.innerHTML;
+      res.image = document.querySelector('.hero__image')?.src ?? document.querySelector('.festival__header__image')?.src ?? null;
+      if (!res.image){
+        res.errors.push({
+          remarks: `image missing ${res.pageInfo}`
+        })
+      }
+  
+      if (document.querySelector('.event__pricing__costs')){
+        res.priceTextcontent = document.querySelector('.event__pricing__costs')?.textContent ?? null;
+      } else if(document.querySelector('.festival__tickets__toggle')){
+        res.priceTextcontent = document.querySelector('.festival__tickets__toggle')?.textContent ?? null;
+      }
+     
       try {
-        res.longTextHTML = document.querySelector('.content__article .event__language')?.innerHTML;
-        res.image = document.querySelector('.hero__image')?.src ?? null;
-        if (!res.image){
-          res.errors.push({
-            remarks: `image missing ${res.pageInfo}`
-          })
-        }
-        res.priceTextcontent = document.querySelector('.event__pricing__costs')?.textContent ?? document.querySelector('.festival__tickets__toggle') ?? '';
-
+        if (document.querySelector('.event__cta') && document.querySelector('.event__cta').hasAttribute('disabled')) {
+          res.unavailable += ` ${document.querySelector('.event__cta')?.textContent}`;
+        }        
       } catch (caughtError) {
         res.errors.push({
           error: caughtError,
-          remarks: 'page info wrap catch'        
-          ,toDebug: {
-            res, event
-          }
-        })    
+          remarks: `check if disabled fail  ${res.pageInfo}`,
+          toDebug: event
+          
+        })            
       }
 
-      if (document.querySelector('.event__cta') && document.querySelector('.event__cta').hasAttribute('disabled')) {
-        res.unavailable += ` ${document.querySelector('.event__cta').textContent}`;
-      }
       return res;
     }, {event},
-    
-  );
+  ).catch(caughtError => {
+    _t.wrappedHandleError(new ErrorWrapper({
+      error:caughtError,
+      remarks: `pageInfo catch`,
+      errorLevel: 'notice',
+      workerData,
+      toDebug: {
+        event,
+        pageInfo
+      }
+    }))
+  });
   return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
     
 }

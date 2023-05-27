@@ -7,6 +7,7 @@ import makeScraperConfig from "./gedeeld/scraper-config.js";
 const bibelotScraper = new AbstractScraper(makeScraperConfig({
   maxExecutionTime: 30001,
   workerData: Object.assign({}, workerData),
+  hasDecentCategorisation: true,
   puppeteerConfig: {
     mainPage: {
       timeout: 15002,
@@ -29,16 +30,27 @@ const bibelotScraper = new AbstractScraper(makeScraperConfig({
 
 bibelotScraper.listenToMasterThread();
 
+bibelotScraper.singleRawEventCheck = async function(event){
+  const hasForbiddenTermsRes = await bibelotScraper.hasForbiddenTerms(event);
+  return {
+    event,
+    reason: hasForbiddenTermsRes.reason,
+    success: !hasForbiddenTermsRes.success,
+  }
+  
+}
+
 // MAKE BASE EVENTS
 
 bibelotScraper.makeBaseEventList = async function () {
 
-  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.name);
-  if (availableBaseEvent){
+  const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
+  if (availableBaseEvents){
+    const thisWorkersEvents = availableBaseEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
     return await this.makeBaseEventListEnd({
-      stopFunctie: null, rawEvents: availableBaseEvent}
+      stopFunctie: null, rawEvents: thisWorkersEvents}
     );    
-  }  
+  }   
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
@@ -52,7 +64,7 @@ bibelotScraper.makeBaseEventList = async function () {
       const title = eventEl.querySelector("h1")?.textContent.trim() ?? null;
       const res = {
         unavailable: '',
-        pageInfo: `<a href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+        pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
         errors: [],
         title
       };
@@ -69,9 +81,9 @@ bibelotScraper.makeBaseEventList = async function () {
   }, {workerData});
 
   this.saveBaseEventlist(workerData.family, rawEvents)
-
+  const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
   return await this.makeBaseEventListEnd({
-    stopFunctie, page, rawEvents}
+    stopFunctie, page, rawEvents: thisWorkersEvents}
   );
   
 };
@@ -86,7 +98,7 @@ bibelotScraper.getPageInfo = async function ({ page, event }) {
     ({ months , event}) => {
       const res = {
         unavailable: event.unavailable,
-        pageInfo: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
+        pageInfo: `<a class='page-info' href='${location.href}'>${event.title}</a>`,
         errors: [],
       };
 

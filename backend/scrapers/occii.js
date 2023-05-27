@@ -17,7 +17,7 @@ const occiiScraper = new AbstractScraper(makeScraperConfig({
     },
     app: {
       mainPage: {
-        url: "https://occii.org/events/",
+        url: "https://occii.org/events/categories/rock/",
         requiredProperties: ['venueEventUrl']        
       },
       singlePage: {
@@ -27,32 +27,84 @@ const occiiScraper = new AbstractScraper(makeScraperConfig({
   }
 }));
 
-
 occiiScraper.listenToMasterThread();
+
+// SINGLE RAW EVENT CHECK
+
+occiiScraper.singleRawEventCheck = async function(event){
+  const tl = this.cleanupEventTitle(event.title);
+  const isRefused = await this.rockRefuseListCheck(event, tl)
+  if (isRefused.success) {
+    return {
+      reason: isRefused.reason,
+      event,
+      success: false
+    };
+  } 
+
+  const isAllowed = await this.rockAllowListCheck(event, tl)
+  if (isAllowed.success) return isAllowed;
+
+  const hasForbiddenTerms = await this.hasForbiddenTerms(event);
+  if (hasForbiddenTerms.success) {
+    await this.saveRefusedTitle(tl)
+    return {
+      reason: hasForbiddenTerms.reason,
+      success: false,
+      event
+    }
+  }
+
+  await this.saveAllowedTitle(tl)
+
+  return {
+    reason: 'occii rules',
+    success: true,
+    event
+  }  
+
+}
+
+// SINGLE MERGED EVENT CHECK
+
+occiiScraper.singleMergedEventCheck = async function(event, pageInfo){
+  const ss = !(pageInfo?.genres?.include('electronic') ?? false);
+  if (ss) {
+    this.saveAllowedTitle(event.title.toLowerCase())
+  } else {
+    this.saveRefusedTitle(event.title.toLowerCase())
+  }
+  return {
+    reason: 'ja genre controle' +ss,
+    success: ss,
+    event
+  };
+  
+}
 
 // MAKE BASE EVENTS
 
 occiiScraper.makeBaseEventList = async function () {
 
-  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.name);
-  if (availableBaseEvent){
+  const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
+  if (availableBaseEvents){
+    const thisWorkersEvents = availableBaseEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
     return await this.makeBaseEventListEnd({
-      stopFunctie: null, rawEvents: availableBaseEvent}
+      stopFunctie: null, rawEvents: thisWorkersEvents}
     );    
-  }
+  }  
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
   const rawEvents = await page.evaluate(({workerData}) => {
-    return Array.from(document.querySelectorAll(".occii-event-display"))
-      .filter((event, index) => index % workerData.workerCount === workerData.index)
+    return Array.from(document.querySelector('.occii-events-display-container').querySelectorAll(".occii-event-display"))
       .map((occiiEvent) => {
         
         const firstAnchor = occiiEvent.querySelector("a");
         const title = firstAnchor.title;
         const res = {
           unavailable: "",
-          pageInfo: `<a href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+          pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
           errors: [],          
           title,
         }         
@@ -67,9 +119,9 @@ occiiScraper.makeBaseEventList = async function () {
   }, {workerData});
 
   this.saveBaseEventlist(workerData.family, rawEvents)
-
+  const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
   return await this.makeBaseEventListEnd({
-    stopFunctie, page, rawEvents}
+    stopFunctie, rawEvents: thisWorkersEvents}
   );
   
 };
@@ -82,7 +134,7 @@ occiiScraper.getPageInfo = async function ({ page, event}) {
   const pageInfo = await page.evaluate(({months, event}) => {
     const res = {
       unavailable: event.unavailable,
-      pageInfo: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
+      pageInfo: `<a class='page-info' href='${location.href}'>${event.title}</a>`,
       errors: [],
     };
     res.image = document.querySelector(".wp-post-image")?.src ?? null;
@@ -133,9 +185,8 @@ occiiScraper.getPageInfo = async function ({ page, event}) {
 
     res.priceTextcontent = document.getElementById('occii-single-event')?.textContent ?? null;
 
-    res.genre =
-      document.querySelector('[href*="events/categories"]')?.textContent ??
-      null; // TODO genre?? 
+    res.genre = Array.from(document.querySelectorAll('.event-categories [href*="events/categories"]')).map(cats => cats.textContent.toLowerCase().trim())
+
     res.longTextHTML = document.querySelector(".occii-event-notes").innerHTML;
     return res;
   }, {months: getVenueMonths('occii'), event}); //TODO is verouderde functie getVenueMonths

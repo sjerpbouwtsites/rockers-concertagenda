@@ -33,10 +33,11 @@ melkwegScraper.listenToMasterThread();
 
 melkwegScraper.makeBaseEventList = async function () {
 
-  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.name);
-  if (availableBaseEvent){
+  const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
+  if (availableBaseEvents){
+    const thisWorkersEvents = availableBaseEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
     return await this.makeBaseEventListEnd({
-      stopFunctie: null, rawEvents: availableBaseEvent}
+      stopFunctie: null, rawEvents: thisWorkersEvents}
     );    
   }  
 
@@ -53,12 +54,11 @@ melkwegScraper.makeBaseEventList = async function () {
         const isHeavy = genre === '53'; //TODO kan ook direct met selectors.
         return isHeavy;
       })
-      .filter((eventEl, index) => index % workerData.workerCount === workerData.index)
       .map((eventEl) => {
         const title = eventEl.querySelector('h3[class*="title"]')?.textContent ?? "";
         const res = {
           unavailable: "",
-          pageInfo: `<a href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+          pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
           errors: [],          
           title,
         }
@@ -70,7 +70,7 @@ melkwegScraper.makeBaseEventList = async function () {
         let shortTitle = 
         eventEl.querySelector('[class*="subtitle"]')?.textContent ?? "";
         shortTitle = shortTitle ? `<br>${shortTitle}` : '';
-        res.shortText = `${tags}${shortTitle}`;
+        res.shortText = `${tags} ${shortTitle}`;
         res.venueEventUrl = anchor.href;
         res.soldOut = !!(eventEl.querySelector("[class*='styles_event-compact__text']")?.textContent.toLowerCase().includes('uitverkocht') ?? null);
         return res;
@@ -78,12 +78,30 @@ melkwegScraper.makeBaseEventList = async function () {
   }, {workerData});
 
   this.saveBaseEventlist(workerData.family, rawEvents)
-
+  const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
   return await this.makeBaseEventListEnd({
-    stopFunctie, page, rawEvents}
+    stopFunctie, rawEvents: thisWorkersEvents}
   );
-  
 };
+
+melkwegScraper.singleRawEventCheck = async function(event){
+
+  const st = event?.shortText?.toLowerCase() ?? '';
+  const rr = st.includes('rock') && st.includes('roll')
+  const prog = st.includes('prog');
+  const alt = st.includes('alternative rock');
+  const emo = st.includes('emo')
+  const acid = st.includes('acid');
+  if (!rr && !prog && !alt && !emo && !acid) {
+    return {
+      event,
+      reason: 'geen zeikmuziek',
+      success: true
+    }
+  }
+  return await this.isRock(event);
+}
+
 
 melkwegScraper.getPageInfo = async function ({ page, event }) {
  
@@ -92,7 +110,7 @@ melkwegScraper.getPageInfo = async function ({ page, event }) {
   const pageInfo = await page.evaluate(({event}) => {
     const res = {
       unavailable: event.unavailable,
-      pageInfo: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
+      pageInfo: `<a class='page-info' href='${location.href}'>${event.title}</a>`,
       errors: [],
     };
     try {

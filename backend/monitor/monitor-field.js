@@ -1,3 +1,5 @@
+import prettyPrint from '../mods/pretty-print.js';
+
 export default class MonitorField {
   constructor(name, target, type) {
     this.name = name;
@@ -28,7 +30,7 @@ export default class MonitorField {
     targetEl.innerHTML = this.initialHTML;
   }
   linebreaksNaarBR(tekst) {
-    return JSON.stringify(tekst, null, 2).replace(/\\n/g, "<br>");
+    return prettyPrint(tekst)
   }
   objectNaarTekst(objectTeVeranderen) {
     let tt = { ...objectTeVeranderen };
@@ -36,7 +38,28 @@ export default class MonitorField {
     if (tt.debug){
       tt = tt.debug
     }
-    return JSON.stringify(tt, null, 2).replace(/[{]/g, "").replace(/[}]/g, "");
+
+    let pretty = prettyPrint(tt, {
+      indent: '  ',
+      singleQuotes: false,
+      // transform: (obj, prop, originalResult) => {
+      //   if (prop === 'url') {
+      //     return 'https://'+originalResult
+      //   }
+
+      //   return originalResult;
+      // }
+    });
+
+    const langeTekenMatches = pretty.match(/([\w.,\s]{50,5000})/g);
+    if (Array.isArray(langeTekenMatches) && langeTekenMatches.length > 1) {
+      langeTekenMatches.forEach(langeTeken => {
+        const kortereTekenReeds = langeTeken.substring(0,50);
+        pretty = pretty.replace(langeTeken,`<span class='ingekort-lange-tekst' data-meer-tekst='${langeTeken}'>${kortereTekenReeds}</span>`) 
+                
+      })
+    }
+    return pretty
   }
   compareWorkers(workerA, workerB) {
     const wai = Number(workerA.workerNamedIndex);
@@ -50,11 +73,11 @@ export default class MonitorField {
     return 0;
   }
   updateConsole(updateData) {
-    //this.data.splice(5);
+    this.data.splice(100);
     this.update(updateData);
   }
   update(updateData) {
-
+    this.data.splice(100);
     this.data.unshift(updateData);
     const mainFieldEl = document.getElementById(this.mainFieldName);
     switch (this.type) {
@@ -102,7 +125,9 @@ export default class MonitorField {
           rollRow.messageData?.content;
         null;
         if (t) {
+
           t = this.linebreaksNaarBR(t);
+
         } else {
           console.log("geen tekst gevonden", rollRow);
           t =
@@ -138,8 +163,6 @@ export default class MonitorField {
         const titleText = `${rollRow.messageData?.title ?? ""}${
           rollRow.messageData?.workerName ?? ""
         }`;
-
-        console.log(rollRow.messageData.content.text);
 
         const bewerkteFoutTekst = rollRow.messageData.content.text
           .split(/[\r\n]/)
@@ -205,9 +228,12 @@ export default class MonitorField {
   get expandedUpdatedHTML() {
     const listItems = this.data
       .map((rollRow) => {
-        const titleText = `${rollRow.messageData?.title ?? ""}${
+        const titleText = `${rollRow.messageData?.content?.title ?? rollRow.messageData?.title ?? ""}${
           rollRow.messageData?.workerName ?? ""
         }`;
+        delete rollRow.messageData?.content?.title;
+        delete rollRow.messageData?.title;
+        
         let hoofdPrintTekst =
           (rollRow.messageData?.content ?? rollRow.messageData) instanceof
           Object
@@ -217,9 +243,10 @@ export default class MonitorField {
             : String(rollRow.messageData?.content ?? rollRow.messageData);
 
         // vervang losse links met ankers
-        const metAnkers = hoofdPrintTekst.replaceAll(/"(https:.*)"/g, "<a href='$1' target='_blank'>link</a>");
-        const zonderAanhalingstekens = metAnkers.replace(/\"/g,'');
-
+        //const metAnkers = hoofdPrintTekst.replaceAll(/[^=][^"'](https:.*)/g, "<a href='$1' target='_blank'>link</a>");
+        const metAnkers = hoofdPrintTekst
+        // const zonderAanhalingstekens = metAnkers.replace(/"/g,'');
+        const zonderAanhalingstekens = metAnkers;
 
         return `<li class='monitorfield__list-item'>
         <span class='monitorfield__list-item-left'>${titleText}</span>
@@ -247,7 +274,7 @@ export default class MonitorField {
     });
 
     let workerNumberedHeads = "";
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 6; i++) {
       workerNumberedHeads += `<th class='tablehead tablehead--number'>
         <span class='tablehead-span'>${i}</span>
       </th>`;
@@ -292,8 +319,18 @@ export default class MonitorField {
         : `<ol class='worker-cell-inner--errors'>
               ${worker.errors
     .map(
-      (error, index) =>
-        `<li><a href='#error-ref-${worker.name}-${index}'>😒</a></li>`
+      (error, index) => {
+        const errorLevel = error?.content?.errorLevel ?? 'notice';
+        const emoji = errorLevel === 'notice' 
+          ? `🤦‍♂️`
+          : errorLevel === 'close-thread'
+            ? `🫣`
+            : errorLevel === 'close-app'
+              ? `💥`
+              : `❓`
+         
+        return `<li class='worker-cell-inner-error-item worker-cell-inner-error-item--${errorLevel}'><a class='error-link error-link--${errorLevel}' href='#error-ref-${worker.name}-${index}'>${emoji}</a></li>`
+      }
     )
     .join("")}
             </ol>`;

@@ -1,17 +1,18 @@
 [
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2023-11-11T15:00:00.000Z",
+    "startDateTime": "2023-09-23T18:15:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.spotgroningen.nl/events/rockit/",
-    "title": "Rockit",
+    "venueEventUrl": "https://www.spotgroningen.nl/programma/tenebrae/",
+    "title": "Tenebrae",
     "location": "oosterpoort",
-    "shortText": "<br>",
-    "longText": null,
-    "image": null,
+    "price": 34.5,
+    "shortText": "English glories of the sixteenth century<br>Juweeltjes uit de Engelse koortraditie, met muziek van o.a. Byrd en Tallis",
+    "longText": "../public/texts/67d5c324-25a0-414a-9c3a-772549d9816e.html",
+    "image": "https://www.spotgroningen.nl/wp-content/uploads/2023/03/Tenebrae-1-Sim-Canetty-Clarke-768x480.jpg",
     "soldOut": false,
     "unavailable": "",
     "corrupted": null,
-    "correctMusic": null
+    "origin": "oosterpoort"
   }
 ]

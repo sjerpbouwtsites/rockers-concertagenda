@@ -14,7 +14,7 @@ const neushoornScraper = new AbstractScraper(makeScraperConfig({
     },
     app: {
       mainPage: {
-        url: "https://neushoorn.nl/#/agenda",
+        url: "https://neushoorn.nl/#/search?category=Heavy",
         requiredProperties: ['venueEventUrl', 'title']
       },
       singlePage: {
@@ -26,24 +26,69 @@ const neushoornScraper = new AbstractScraper(makeScraperConfig({
 
 neushoornScraper.listenToMasterThread();
 
+// SINGLE RAW EVENT CHECK
+
+neushoornScraper.singleRawEventCheck = async function(event){
+
+  const workingTitle = this.cleanupEventTitle(event.title);
+
+  const isRefused = await this.rockRefuseListCheck(event, workingTitle)
+  if (isRefused.success) return {
+    reason: isRefused.reason,
+    event,
+    success: false
+  };
+
+  const isAllowed = await this.rockAllowListCheck(event, workingTitle)
+  if (isAllowed.success) return isAllowed;
+
+  const hasForbiddenTerms = await this.hasForbiddenTerms(event);
+  if (hasForbiddenTerms.success) {
+    await this.saveRefusedTitle(workingTitle)
+    return {
+      reason: hasForbiddenTerms.reason,
+      success: false,
+      event
+    }
+  }
+
+  const hasGoodTermsRes = await this.hasGoodTerms(event);
+  if (hasGoodTermsRes.success) {
+    await this.saveAllowedTitle(workingTitle)
+    return hasGoodTermsRes;
+  }
+
+  let overdinges = null;
+  if (workingTitle.match(/\s[-–]\s/)) {
+    const a = workingTitle.replace(/\s[-–]\s.*/,'');
+    overdinges = [a]
+  }
+
+  const isRockRes = await this.isRock(event, overdinges);
+  if (isRockRes.success){
+    await this.saveAllowedTitle(event.title.toLowerCase())
+  } else {
+    await this.saveRefusedTitle(event.title.toLowerCase())
+  }
+  return isRockRes;
+
+}
+
 // MAKE BASE EVENTS
 
 neushoornScraper.makeBaseEventList = async function () {
 
-  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.name);
-  if (availableBaseEvent){
+  const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
+  if (availableBaseEvents){
+    const thisWorkersEvents = availableBaseEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
     return await this.makeBaseEventListEnd({
-      stopFunctie: null, rawEvents: availableBaseEvent}
+      stopFunctie: null, rawEvents: thisWorkersEvents}
     );    
-  }
+  }  
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
   try {
-    await page.waitForSelector('[href*="Heavy"]', {
-      timeout: this.singlePageTimeout,
-    });
-    await page.click('[href*="Heavy"]');
     await page.waitForSelector(".productions__item", {
       timeout: this.singlePageTimeout,
     });
@@ -57,17 +102,6 @@ neushoornScraper.makeBaseEventList = async function () {
 
   const rawEvents = await page.evaluate(({workerData}) => {
     return Array.from(document.querySelectorAll(".productions__item"))
-      .filter(eventEl => {
-        const textContent = eventEl.textContent.toLowerCase();
-        const isRockInText =
-          textContent.includes("punk") ||
-          textContent.includes("rock") ||
-          textContent.includes("metal") ||
-          textContent.includes("industrial") ||
-          textContent.includes("noise");        
-        return isRockInText;
-      })
-      .filter((eventEl, index) => index % workerData.workerCount === workerData.index)
       .map(
         (eventEl) => {
         
@@ -76,11 +110,11 @@ neushoornScraper.makeBaseEventList = async function () {
           ).textContent;
           const res = {
             unavailable: "",
-            pageInfo: `<a href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+            pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
             errors: [],          
             title
           }  
-
+          res.shortText = eventEl.querySelector('.productions__item__subtitle')?.textContent ?? '';
           res.venueEventUrl = eventEl.href;
           res.soldOut = !!(eventEl.querySelector(".chip")?.textContent.toLowerCase().includes('uitverkocht') ?? null)
           return res;
@@ -89,9 +123,9 @@ neushoornScraper.makeBaseEventList = async function () {
   }, {workerData});
 
   this.saveBaseEventlist(workerData.family, rawEvents)
-
+  const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
   return await this.makeBaseEventListEnd({
-    stopFunctie, page, rawEvents}
+    stopFunctie, rawEvents: thisWorkersEvents}
   );
 };
 
@@ -108,7 +142,7 @@ neushoornScraper.getPageInfo = async function ({ page,event }) {
     ({ months, event }) => {
       const res = {
         unavailable: event.unavailable,
-        pageInfo: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
+        pageInfo: `<a class='page-info' href='${location.href}'>${event.title}</a>`,
         errors: [],
       };
 

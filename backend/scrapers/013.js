@@ -7,6 +7,7 @@ import makeScraperConfig from "./gedeeld/scraper-config.js";
 
 const nuldertienScraper = new AbstractScraper(makeScraperConfig({
   workerData: Object.assign({}, workerData),
+  hasDecentCategorisation: true,
   puppeteerConfig: {
     app: {
       mainPage: {
@@ -22,24 +23,60 @@ const nuldertienScraper = new AbstractScraper(makeScraperConfig({
 
 nuldertienScraper.listenToMasterThread();
 
+// SINGLE RAW EVENT CHECK
+
+nuldertienScraper.singleRawEventCheck = async function(event){
+
+  const isRefused = await this.rockRefuseListCheck(event, event.title.toLowerCase())
+  if (isRefused.success) return {
+    reason: isRefused.reason,
+    event,
+    success: false
+  };
+
+  const isAllowed = await this.rockAllowListCheck(event, event.title.toLowerCase())
+  if (isAllowed.success) return isAllowed;
+
+  const hasForbiddenTerms = await this.hasForbiddenTerms(event);
+  if (hasForbiddenTerms.success) {
+    await this.saveRefusedTitle(event.title.toLowerCase())
+    return {
+      reason: hasForbiddenTerms.reason,
+      success: false,
+      event
+    }
+  }
+
+  return {
+    reason: [isRefused.reason, isAllowed.reason, hasForbiddenTerms.reason].join(';'),
+    event,
+    success: true
+  }
+}
 // MAKE BASE EVENTS
 
 nuldertienScraper.makeBaseEventList = async function () {
+
+  const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
+  if (availableBaseEvents){
+    const thisWorkersEvents = availableBaseEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
+    return await this.makeBaseEventListEnd({
+      stopFunctie: null, rawEvents: thisWorkersEvents}
+    );    
+  }   
   
   const {stopFunctie, page} =  await this.makeBaseEventListStart()
 
   const rawEvents = await page.evaluate(({workerData}) => {
     return Array.from(document.querySelectorAll(".event-list-item"))
-      .filter((eventEl, index) => index % workerData.workerCount === workerData.index)
       .map((eventEl) => {
-      
         const title = eventEl
           .querySelector(".event-list-item__title")
           ?.textContent.trim() ?? null;
 
         const res = {
           unavailable: "",
-          pageInfo: `<a href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+          pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
           errors: [],          
           title,
         }   
@@ -61,7 +98,6 @@ nuldertienScraper.makeBaseEventList = async function () {
           })
           return res;
         }
-        
         res.shortText = eventEl
           .querySelector(".event-list-item__subtitle")
           ?.textContent.trim() ?? '';
@@ -71,8 +107,10 @@ nuldertienScraper.makeBaseEventList = async function () {
       });
   }, {workerData});
 
+  this.saveBaseEventlist(workerData.family, rawEvents)
+  const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
   return await this.makeBaseEventListEnd({
-    stopFunctie, page, rawEvents}
+    stopFunctie, page, rawEvents: thisWorkersEvents}
   );
 };
 
@@ -86,7 +124,7 @@ nuldertienScraper.getPageInfo = async function ({ page , event}) {
 
     const res = {
       unavailable: event.unavailable,
-      pageInfo: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
+      pageInfo: `<a class='page-info' href='${location.href}'>${event.title}</a>`,
       errors: [],
     };
 

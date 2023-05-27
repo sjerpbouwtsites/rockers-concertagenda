@@ -3,6 +3,7 @@ import * as _t from "../mods/tools.js";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 
+
 //HEEFT ASYNC CHECK
 
 // SCRAPER CONFIG
@@ -12,15 +13,15 @@ const paradisoScraper = new AbstractScraper(makeScraperConfig({
   workerData: Object.assign({}, workerData),
   puppeteerConfig: {
     mainPage: {
-      timeout: 30023,
+      timeout: 120023,
       waitUntil: 'load'
     },
     singlePage: {
-      timeout: 15024
+      timeout: 60024
     },
     app: {
       mainPage: {
-        url: "https://www.paradiso.nl/nl/zoeken/categorie/",
+        url: "https://www.paradiso.nl/",
         requiredProperties: ['venueEventUrl', 'title']
       },
       singlePage: {
@@ -32,51 +33,81 @@ const paradisoScraper = new AbstractScraper(makeScraperConfig({
 
 paradisoScraper.listenToMasterThread();
 
+// SINGLE EVENT CHECK
+
+paradisoScraper.singleRawEventCheck = async function (event) {
+
+  const workingTitle = this.cleanupEventTitle(event.title);
+
+  const isRefused = await this.rockRefuseListCheck(event, workingTitle)
+  if (isRefused.success) return {
+    reason: isRefused.reason,
+    event,
+    success: false
+  };
+
+  const isAllowed = await this.rockAllowListCheck(event, workingTitle)
+  if (isAllowed.success) return isAllowed;
+
+  const hasForbiddenTerms = await this.hasForbiddenTerms(event);
+  if (hasForbiddenTerms.success) {
+    await this.saveRefusedTitle(workingTitle)
+    return {
+      reason: hasForbiddenTerms.reason,
+      success: false,
+      event
+    }
+  }
+
+  const hasGoodTermsRes = await this.hasGoodTerms(event);
+  if (hasGoodTermsRes.success) {
+    await this.saveAllowedTitle(workingTitle)
+    return hasGoodTermsRes;
+  }
+
+  const isRockRes = await this.isRock(event);
+  if (isRockRes.success){
+    await this.saveAllowedTitle(workingTitle)
+  } else {
+    await this.saveRefusedTitle(workingTitle)
+  }
+  return isRockRes;
+  
+};
+
+
 // MAKE BASE EVENTS
 paradisoScraper.makeBaseEventList = async function () {
 
-  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.name);
-  if (availableBaseEvent){
+  const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
+  if (availableBaseEvents){
+    const thisWorkersEvents = availableBaseEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
     return await this.makeBaseEventListEnd({
-      stopFunctie: null, rawEvents: availableBaseEvent}
+      stopFunctie: null, rawEvents: thisWorkersEvents}
     );    
-  }  
+  } 
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
   
   const res = await page.evaluate(({workerData}) => {
     return {
       unavailable: '',
-      pageInfo: `<a href='${document.location.href}'>${workerData.family} main - ${workerData.index}</a>`,
+      pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${workerData.index}</a>`,
       errors: [],
     }
   }, {workerData});
-
-  try {
-    await page.waitForSelector('[data-category="60102"]', {
-      timeout: 2500, // @TODO TE STRAK?
-    });
-    await page.click('[data-category="60102"]');
-    await page.waitForSelector(".block-list-search__submit", {
-      timeout: 1000,
-    });
-    await page.click(".block-list-search__submit");
-    await page.waitForSelector(".event-list__item", {
-      timeout: 5000,
-    });    
-  } catch (caughtError) {
-    res.errors.push({error: caughtError, remarks: 'wachten en klikken', errorLevel: 'close-thread',
-      toDebug:res})
-  }
-
-  await _t.waitFor(250);
-
+  
+  await _t.autoScroll(page);
+  await _t.autoScroll(page);
+  await _t.autoScroll(page);
+  await _t.autoScroll(page);
+  await _t.autoScroll(page);
+  await _t.autoScroll(page);
   let rawEvents = await page.evaluate(
-    ({workerData, resBuiten}) => {
+    ({resBuiten}) => {
 
-        
-      return Array.from(document.querySelectorAll(".event-list__item"))
-        .filter((rawEvent, index) => index % workerData.workerCount === workerData.index)
+      return Array.from(document.querySelectorAll('.css-1agutam'))
+
         .map((rawEvent) => {
           const res = {
             ...resBuiten,
@@ -84,16 +115,16 @@ paradisoScraper.makeBaseEventList = async function () {
           }          
           res.title =
             rawEvent
-              .querySelector(".event-list__item-title")
+              .querySelector(".chakra-heading")
               ?.textContent.trim() ?? "";
           res.shortText = 
             rawEvent
-              .querySelector(".event-list__item-subtitle")
+              .querySelector(".css-1ket9pb")
               ?.textContent.trim() ?? "";
-          res.venueEventUrl = rawEvent.hasAttribute("href")
-            ? rawEvent.href
-            : null;
-          res.soldOut = !!(rawEvent.querySelector(".event-list__item-info")?.textContent.toLowerCase().includes('uitverkocht') ?? null)
+          
+          res.venueEventUrl = rawEvent.href ?? null
+          res.soldOut = !!(rawEvent.textContent.toLowerCase().includes('uitverkocht') ?? null)
+          res.cancelled = !!(rawEvent.textContent.toLowerCase().includes('geannulleerd') ?? null) || !!(rawEvent.textContent.toLowerCase().includes('gecanceld') ?? null)
           return res;
         });
     },
@@ -101,9 +132,9 @@ paradisoScraper.makeBaseEventList = async function () {
   );
 
   this.saveBaseEventlist(workerData.family, rawEvents)
-
+  const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
   return await this.makeBaseEventListEnd({
-    stopFunctie, page, rawEvents}
+    stopFunctie, rawEvents: thisWorkersEvents}
   );
   
 };
@@ -116,13 +147,13 @@ paradisoScraper.getPageInfo = async function ({ page, event }) {
 
   const buitenRes = {
     unavailable: event.unavailable,
-    pageInfo: `<a href='${event.venueEventUrl}'>${event.title}</a>`,
+    pageInfo: `<a class='page-info' href='${event.venueEventUrl}'>${event.title}</a>`,
     errors: [],
   };  
   
   try {
-    await page.waitForSelector(".header-template-2__subcontent .date", {
-      timeout: 7500,
+    await page.waitForSelector(".css-tkkldl", {
+      timeout: 3000,
     });
   } catch (caughtError) {
     buitenRes.errors.push({
@@ -133,31 +164,76 @@ paradisoScraper.getPageInfo = async function ({ page, event }) {
       }
     })
     buitenRes.unavailable += 'single pagina niet snel genoeg geladen.'
-    return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
+    return await this.getPageInfoEnd({pageInfo: buitenRes, stopFunctie, page})
+  }
+
+  const editedMonths = {
+    jan: "01",
+    feb: "02",
+    mrt: "03",
+    apr: "04",
+    mei: "05",
+    jun: "06",
+    jul: "07",
+    aug: "08",
+    sep: "09",
+    okt: "10",
+    nov: "11",
+    dec: "12",
+    januari: "01",
+    februari: "02",
+    maart: "03",
+    april: "04",
+    juni: "06",
+    juli: "07",
+    augustus: "08",
+    september: "09",
+    oktober: "10",
+    november: "11",
+    december: "12",      
+    january: "01",
+    february: "02",
+    march: "03",
+    may: "05",
+    june: "06",
+    july: "07",
+    august: "08",
+    october: "10",
   }
 
   const pageInfo = await page.evaluate(
     ({ months, buitenRes }) => {
       const res = {...buitenRes};
 
-      const contentBox =
-        document.querySelector(".header-template-2__description") ?? null;
-      if (contentBox) {
-        res.longTextHTML = contentBox.innerHTML;
+      const contentBox1 =
+        document.querySelector(".css-1irwsol")?.outerHTML ?? '';
+      const contentBox2 =
+        document.querySelector(".css-gwbug6")?.outerHTML ?? '';
+      if (contentBox1 || contentBox2) {
+        res.longTextHTML = contentBox1 + contentBox2
       }
 
       try {
-        const startDateMatch = document
-          .querySelector(".header-template-2__subcontent .date")
+        const startDateMatch = document.querySelector('.css-tkkldl')
           ?.textContent.toLowerCase()
-          .match(/(\d{1,2})\s+(\w+)\s+(\d{4})/);
+          .match(/(\d{1,2})\s+(\w+)/); // TODO paradiso kan nu niet omgaan met jaarrwisselingen.
+        res.match = startDateMatch
         if (
           startDateMatch &&
           Array.isArray(startDateMatch) &&
-          startDateMatch.length === 4
+          startDateMatch.length === 3
         ) {
-          res.startDate = `${startDateMatch[3]}-${
-            months[startDateMatch[2]]
+          const monthName = months[startDateMatch[2]];
+          if (!monthName) {
+            res.errors.push({
+
+              remarks: `month not found ${startDateMatch[2]}`,
+              toDebug: startDateMatch
+            })
+            return res;
+          }
+          res.startDate = `2022-${
+            monthName
           }-${startDateMatch[1].padStart(2, "0")}`;
         }
       } catch (caughtError) {
@@ -165,19 +241,15 @@ paradisoScraper.getPageInfo = async function ({ page, event }) {
           error: caughtError, 
           remarks: `startDateMatch ${res.pageInfo}`, 
           toDebug: {
-            res, event
+            event
           }});
         return res;
       }
 
       const timesMatch =
-        document
-          .querySelector(".template-2__content-header")
+        document.querySelector('.css-1mxblse')
           ?.textContent.match(/(\d\d:\d\d)/g) ?? null;
       res.timesMatch = timesMatch;
-      res.tijdText = document.querySelector(
-        ".template-2__content-header"
-      )?.textContent;
       if (timesMatch && Array.isArray(timesMatch) && timesMatch.length >= 1) {
         try {
           if (timesMatch.length === 1) {
@@ -198,7 +270,7 @@ paradisoScraper.getPageInfo = async function ({ page, event }) {
             remarks: `Times match ${res.pageInfo}`,
             toDebug: {
               text: `ging hiermee mis: ${timesMatch.join(" ")}\n`,
-              res, event
+              event
             }
           });
           return res;
@@ -206,15 +278,14 @@ paradisoScraper.getPageInfo = async function ({ page, event }) {
       }
 
       res.priceTextcontent =
-        document.querySelector(".template-2__price-wrapper-container")
+        document.querySelector(".css-1ca1ugg")
           ?.textContent ?? '';
 
-      const imageM = document
-        .querySelector('[style*="background-im"]')
-        ?.style.backgroundImage.match(/https.*.jpg|https.*.png/);
-      if (imageM && imageM.length) {
-        res.image = imageM[0] + "?w=600&h=400&fit=crop-50-50";
+      res.image = document.querySelector('.css-xz41fi img')?.src ?? null;
+      if (!res.image){
+        res.image = document.querySelector('.css-xz41fi source:last-of-type')?.srcset.split(/\s/)[0] ?? null;
       }
+
       if (!res.image){
         res.errors.push({
           remarks: `image missing ${res.pageInfo}`
@@ -223,33 +294,10 @@ paradisoScraper.getPageInfo = async function ({ page, event }) {
 
       return res;
     },
-    { months: this.months, buitenRes }
+    { months: editedMonths, buitenRes }
   );
 
   return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
 
 };
 
-// SINGLE EVENT CHECK
-
-paradisoScraper.singleEventCheck = async function (event) {
-  const firstCheckText = `${event?.title ?? ""} ${event?.shortText ?? ""}`;
-  if (
-    firstCheckText.includes("indie") ||
-    firstCheckText.includes("dromerig") ||
-    firstCheckText.includes("shoegaze") ||
-    firstCheckText.includes("alternatieve rock")
-  ) {
-    return {
-      event,
-      success: false,
-      reason: "verboden genres gevonden in title+shortText",
-    };
-  }
-
-  return {
-    event,
-    success: true,
-    reason: "verboden genres niet gevonden.",
-  };
-};

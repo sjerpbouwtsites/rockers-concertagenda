@@ -12,55 +12,54 @@ export const AbstractWorkerConfig = {
   family : null,
   workerCount : null,
   scraper : true, //TODO word dit gebruikt
-
 }
 
 export const workerConfig = {
-  metalfan: {workerCount: 1, CPUReq: "low" },
-  baroeg: {workerCount: 4, workerConcurrent: 2 },
-  patronaat: { workerCount: 3, workerConcurrent: 3 },
   "013" : {workerCount: 4 },
-  effenaar:{ workerCount: 4 },
-  tivolivredenburg:{ workerCount: 4 },
-  doornroosje :{ workerCount: 3, workerConcurrent: 1 },
-  dehelling :{ workerCount: 1, CPUReq: 'low' },
-  metropool :{ workerCount: 2 },
-  boerderij:{ workerCount: 1, CPUReq: "low" },
-  dynamo: { workerCount: 2 },
-  bibelot: { workerCount: 1 },
-  dbs: { workerCount: 4, workerConcurrent: 1 },
-  gebrdenobel: { workerCount: 1 },
-  groeneengel: { workerCount: 1 },
-  neushoorn: { workerCount: 1 },
-  iduna: { workerCount: 1 },
-  depul: { workerCount: 2 },
-  deflux: { workerCount: 1 },
-  oosterpoort: { workerCount: 3, workerConcurrent: 3 },
-  paradiso: { workerCount: 4 },
-  volt: { workerCount: 1 },
-  cpunt: { workerCount: 1 },
-  occii :{
-    workerCount: 2,
-    workerConcurrent: 1,
-    CPUReq: "high",
-  },
-  melkweg :{
-    workerCount: 4,
-    CPUReq: "low",
-  },
-  p60 :{ workerCount: 1},  
   afaslive :{
     workerCount: 2,
     CPUReq: "high",
     workerConcurrent: 1,
   },
+  baroeg: {workerCount: 2, workerConcurrent: 1 },
+  bibelot: { workerCount: 1, workerConcurrent: 1 },
+  boerderij:{ workerCount: 1, CPUReq: "low", workerConcurrent: 1 },
+  cpunt: { workerCount: 1, workerConcurrent: 1 },
+  dbs: { workerCount: 4, workerConcurrent: 2},
+  deflux: { workerCount: 1, workerConcurrent: 1 },
+  dehelling :{ workerCount: 1, CPUReq: 'low', workerConcurrent: 1 },
+  depul: { workerCount: 2, workerConcurrent: 1 },
+  doornroosje :{ workerCount: 2, workerConcurrent: 1},
+  dynamo: { workerCount: 2, workerConcurrent: 1 },
+  effenaar:{ workerCount: 4, workerConcurrent: 1 },
+  gebrdenobel: { workerCount: 1, workerConcurrent: 1 },
+  groeneengel: { workerCount: 1, workerConcurrent: 1 },
+  iduna: { workerCount: 1, workerConcurrent: 1 },
   kavka :{
-    workerCount: 1,
+    workerCount: 2,
     workerConcurrent: 1,
   },
+  melkweg :{
+    workerCount: 4,
+    CPUReq: "low",
+    workerConcurrent: 1
+  },
+  metalfan: {workerCount: 1, CPUReq: "low", workerConcurrent: 1 },
+  metropool :{ CPUReq: "high", workerCount: 3, workerConcurrent: 1 },
+  neushoorn: { workerCount: 1, workerConcurrent: 1 },
+  occii :{
+    workerCount: 2,
+    workerConcurrent: 1,
+  },
+  oosterpoort: { workerCount: 3, workerConcurrent: 1 },
+  p60 :{ workerCount: 1, workerConcurrent: 1},  
+  paradiso: { workerCount: 3, workerConcurrent: 1 },
+  patronaat: { workerCount: 3, workerConcurrent: 1 },
+  tivolivredenburg:{ workerCount: 4, workerConcurrent: 1 },
   ticketmaster :{
-    workerCount: 5,CPUReq: 'high', workerConcurrent: 1
+    workerCount: 2, workerConcurrent: 1
   },  
+  volt: { workerCount: 1, workerConcurrent: 1 },
 }
 
 

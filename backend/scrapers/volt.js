@@ -30,12 +30,13 @@ voltScraper.listenToMasterThread();
 
 voltScraper.makeBaseEventList = async function () {
   
-  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.name);
-  if (availableBaseEvent){
+  const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
+  if (availableBaseEvents){
+    const thisWorkersEvents = availableBaseEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
     return await this.makeBaseEventListEnd({
-      stopFunctie: null, rawEvents: availableBaseEvent}
+      stopFunctie: null, rawEvents: thisWorkersEvents}
     );    
-  }
+  } 
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
@@ -65,7 +66,7 @@ voltScraper.makeBaseEventList = async function () {
         const title = anchor?.textContent.trim() ?? "";
         const res = {
           unavailable: '',
-          pageInfo: `<a href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+          pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
           errors: [],
           title
         };        
@@ -82,9 +83,9 @@ voltScraper.makeBaseEventList = async function () {
   }, {workerData});
 
   this.saveBaseEventlist(workerData.family, rawEvents)
-
+  const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
   return await this.makeBaseEventListEnd({
-    stopFunctie, page, rawEvents}
+    stopFunctie, rawEvents: thisWorkersEvents}
   );
   
 };
@@ -109,7 +110,7 @@ voltScraper.getPageInfo = async function ({ page, url, event}) {
 
       let res = {};
       res.unavailable= event.unavailable;
-      res.pageInfo= `<a class='page-info' href='${url}'>${event.title}</a>`;
+      res.pageInfo= `<a class='page-info' class='page-info' href='${url}'>${event.title}</a>`;
       res.errors = [];
 
       const curMonthNumber = new Date().getMonth() + 1;

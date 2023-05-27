@@ -1,8 +1,6 @@
 import { parentPort, workerData } from "worker_threads";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
-import fs from 'fs';
-import fsDirections from "../mods/fs-directions.js";
 import * as _t from "../mods/tools.js";
 import {workerNames} from "../mods/worker-config.js";
 
@@ -38,12 +36,12 @@ ticketmasterScraper.listenToMasterThread();
 
 ticketmasterScraper.makeBaseEventList = async function() {
 
-  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.name);
-  if (availableBaseEvent){
+  const availableBaseEvents = await this.checkBaseEventAvailable(workerData.name);
+  if (availableBaseEvents){
     return await this.makeBaseEventListEnd({
-      stopFunctie: null, rawEvents: availableBaseEvent}
+      stopFunctie: null, rawEvents: availableBaseEvents}
     );    
-  }
+  } 
 
   const {stopFunctie} = await this.makeBaseEventListStart()
 
@@ -63,7 +61,7 @@ ticketmasterScraper.makeBaseEventList = async function() {
 
       const res1 = {
         unavailable: '',
-        pageInfo: `<a href='${this.puppeteerConfig.app.mainPage.url}'>Ticketmaster overview ${workerData.index}</a>`,
+        pageInfo: `<a class='page-info' href='${this.puppeteerConfig.app.mainPage.url}'>Ticketmaster overview ${workerData.index}</a>`,
         errors: [],
       };      
 
@@ -74,7 +72,7 @@ ticketmasterScraper.makeBaseEventList = async function() {
         delete copyEvent.images;
         copyEvent.attractions = editAttractionsInRaw(copyEvent?._embedded?.attractions ?? []);
         copyEvent.venue = (Array.isArray(copyEvent?._embedded?.venues) && copyEvent?._embedded?.venues.length) ? copyEvent._embedded.venues[0] : 'geenvenue'
-        delete copyEvent._embedded;
+        copyEvent._embedded;
         return copyEvent;
       });  
 
@@ -102,10 +100,9 @@ ticketmasterScraper.makeBaseEventList = async function() {
   let filteredRawEvents = this.filterForMetal(rawEvents)
 
   this.saveBaseEventlist(workerData.name, filteredRawEvents)
-
   return await this.makeBaseEventListEnd({
     stopFunctie, rawEvents: filteredRawEvents}
-  );  
+  );
   
 }
 
@@ -161,17 +158,24 @@ ticketmasterScraper.getPageInfo = async function ({event}) {
   } else if (event?.venue?.id === 'Z698xZbpZ171axd'){
     pageInfo.location = 'liveinhoorn';
   } else {
-    pageInfo.location = event?.venue?.id;
-    pageInfo.errors.push({
-      remarks: `Geen herkende ID locatie ${pageInfo.pageInfo}`,
-      toDebug: {
-        venue: event?.venue,
+    if (event?.venue?.url){
+      const locatieMatch = event?.venue?.url.match(/venue\/([\w-]+)-tickets/)
+      if (Array.isArray(locatieMatch) && locatieMatch.length > 1){
+        const spl = locatieMatch[1].split('-');
+        pageInfo.location = spl.map((locDeel, locDeelIndex) =>{
+          if (locDeelIndex < (spl.length - 1)) {
+            return locDeel;
+          } 
+          return '';
+        }).join(' ').trim();
       }
-    })
-    
+      pageInfo.location = 'ticketmasterland';
+    } 
+    pageInfo.location = 'ticketmasterland';
+   
   }
 
-  if (workerNames.includes(pageInfo.location)){
+  if (workerNames.includes(pageInfo.location) || pageInfo.location === 'metropoolenschede'){
     pageInfo.unavailable += ` locatie ${pageInfo.location} niet bij TM.`
     return await this.getPageInfoEnd({pageInfo, stopFunctie})
   }
@@ -196,7 +200,8 @@ ticketmasterScraper.getPageInfo = async function ({event}) {
 
   if (event.attractions.length > 1) {
     pageInfo.shortTitle = event.attractions.reduce((prev, next) => {
-      if (next.classifications[0] && next.classifications[0].genre?.name === 'Metal'){
+      const isMetal = ticketmasterScraper.classificationsMetal(next.classifications[0]);
+      if (isMetal){
         return prev + next.name + ", "
       } else {
         return prev;
@@ -215,6 +220,11 @@ ticketmasterScraper.getPageInfo = async function ({event}) {
   if (pageInfo.rescheduled) {
     pageInfo.unavailable += ' rescheduled' 
   }    
+
+  const tl = pageInfo.title.toLowerCase();
+  if (tl.includes('|') || (tl.includes('package') || tl.includes('ticket') || tl.includes('parking'))){
+    pageInfo.unavailable += ' double event' 
+  }
 
   return await this.getPageInfoEnd({pageInfo, stopFunctie})
 
@@ -238,7 +248,6 @@ ticketmasterScraper.getPageInfo = async function ({event}) {
 //     }
 //   })
 
-//   fs.writeFileSync(`${fsDirections.eventLists}/ticketmaster/0.json`, JSON.stringify(filteredTotalSkipOfferings), "UTF-8", () => { })
 // }
 
 ticketmasterScraper.filterCoveredLocations = function(eventList){
@@ -253,21 +262,32 @@ ticketmasterScraper.filterCoveredLocations = function(eventList){
 
 ticketmasterScraper.filterForMetal = function(rawEvents){
 
-  return rawEvents.filter(evs => {
-    const hasMetalSelf = evs?.classifications.some(classif => {
-      const genreAndSub = `${classif?.genre?.name} ${classif?.subGenre?.name}`.toLowerCase();
-      return genreAndSub.includes('metal') || genreAndSub.includes('rock') ||genreAndSub.includes('punk') 
-    })
-    const hasMetalAttractions = evs?.attractions.some(attr => {
-      return attr.classifications.some(classif => {
-        const genreAndSub = `${classif?.genre?.name} ${classif?.subGenre?.name}`.toLowerCase();
-        return genreAndSub.includes('rock') || genreAndSub.includes('metal') || genreAndSub.includes('punk')
-      })
-    })
-    return hasMetalSelf || hasMetalAttractions;
+  // event
+  //  attractions []
+  //    classifications []
+  //      genre || subgenre {} 
+  //        id {string} name {string}
+  // genre metal id = KnvZfZ7vAvt
+  // subgenre punk van rock id = KZazBEonSMnZfZ7v6a6
+  // subgenre hardcore van rock id = KZazBEonSMnZfZ7v6kl
+  // LET OP niet genre rock nemen want pop is ook een subgenre hiervan
+
+  return rawEvents.filter(rawEvent => {
+    const attractions = rawEvent?.attractions ?? null;
+    if (!attractions || attractions.length < 1) return false;
+    const firstAttractionClassifications = attractions[0].classifications;
+    return this.classificationsMetal(firstAttractionClassifications);
   })
-  
-   
+}
+
+ticketmasterScraper.classificationsMetal = function (classifications){
+
+  const classification = Array.isArray(classifications) ? classifications[0] : classifications;
+  if (classification?.genre.id === `KnvZfZ7vAvt`) return true; // metal
+  if (classification?.subGenre.id === `KZazBEonSMnZfZ7v6a6`) return true; // punk
+  if (classification?.subGenre.id === `KZazBEonSMnZfZ7v6kl`) return true; // hardrock
+  this.dirtyTalk(`geen metal gevonden ${classification?.genre?.name} ${classification?.subGenre?.name}`)
+  return false;
 }
 
 // function* readRawJSON(dir) {

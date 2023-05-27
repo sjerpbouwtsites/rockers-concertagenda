@@ -36,7 +36,14 @@ defluxScraper.listenToMasterThread();
 // MAKE BASE EVENTS
 
 defluxScraper.makeBaseEventList = async function () {
-  
+ 
+  const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
+  if (availableBaseEvents){
+    const thisWorkersEvents = availableBaseEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
+    return await this.makeBaseEventListEnd({
+      stopFunctie: null, rawEvents: thisWorkersEvents}
+    );    
+  }   
 
   const {stopFunctie} = await this.makeBaseEventListStart()
 
@@ -62,9 +69,11 @@ defluxScraper.makeBaseEventList = async function () {
     };    
     return res;
   })
-  
+
+  this.saveBaseEventlist(workerData.family, rawEvents)
+  const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
   return await this.makeBaseEventListEnd({
-    stopFunctie, rawEvents}
+    stopFunctie, rawEvents: thisWorkersEvents}
   );
 
 };
@@ -79,7 +88,7 @@ defluxScraper.getPageInfo = async function ({ page, event}) {
 
     const res = {
       unavailable: event.unavailable,
-      pageInfo: `<a href='${document.location.href}'>${document.title}</a>`,
+      pageInfo: `<a class='page-info' href='${location.href}'>${document.title}</a>`,
       errors: [],
     };
 

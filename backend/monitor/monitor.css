@@ -1,4 +1,4 @@
-html, body {
+table html, body {
   width: 100%;
   height: 100%;
 }
@@ -29,6 +29,16 @@ body {
   font-family: monospace;
   white-space: pre-wrap;
   letter-spacing: -0.05em;  
+}
+
+.ingekort-lange-tekst::after{
+  content: '......'
+}
+.ingekort-lange-tekst:hover{
+  cursor: pointer;
+}
+.ingekort-lange-tekst:hover::after{
+  content: attr(data-meer-tekst);
 }
 
 .monitorfield__header {
@@ -87,6 +97,7 @@ body {
 }
 .monitorfield__list-item-left {
   display: block;
+  font-weight: 900;
 }
 .monitorfield__error-header {
   display: flex;
@@ -216,16 +227,17 @@ pre {
 }
 
 /** end flipping the table **/
-.tablehead--number,
-.worker-data-cell td,
-.worker-data-cell th{
+th.tablehead--number,
+table td.worker-data-cell,
+table th.worker-data-cell {
   line-height: 1;
   min-width: 50px;
   text-align: center;
   min-height: 90px;  
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  flex-direction: column;
 }
 .tableheadnumber {
   text-align:right;
@@ -240,25 +252,58 @@ pre {
 }
 
 .worker-data-cell.worker-status--done {
-  background-color: rgba(34, 255, 255, 0.6);
+  background-color: rgba(34, 255, 255, 0.3);
 }
 .worker-data-cell.worker-errors--has-errors,
 .worker-data-cell.worker-status--done.worker-errors--has-errors {
-  background-color: #c1472e;
+  background-color: hsla(0, 61%, 39%, 0.42)
+}
+.tablehead-span {
+  line-height: 2em;
 }
 
 
 .worker-cell-inner {
   display: block;
   line-height: 2em;
+  text-align: center;
+  font-weight: bold;
 }
 
 .worker-errors--has-errors {
-  border: 3px dotted blue;
+  outline: 1px dashed rgb(32, 32, 81);
+}
+
+.worker-cell-inner--errors {
+  list-style-type: none;
+  padding: 0;
+  margin-left: .5em;
+  display: inline-flex;
+  flex-wrap: wrap;
+  max-width: 4.2em;
+  margin-right: 0;
+  padding-bottom: 0.5em;
+  margin-bottom: 0;
+  margin-top: 0;
+  max-height: 2.5em;
+  overflow-y: scroll;
+  padding-right: .5em;
+}
+.worker-cell-inner-error-item li {
+  font-size:.75em;
+  padding:0.05em;
 }
 
 .kutspacer {
   display: block;
   width: 60px;
   height: 10px;
+}
+
+.single-event-check-notice--success {
+  color: green;
+}
+
+.single-event-check-notice--failure {
+  color: red;
 }

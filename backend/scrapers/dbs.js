@@ -1,4 +1,4 @@
-import { parentPort, workerData } from "worker_threads";
+import { workerData } from "worker_threads";
 import * as _t from "../mods/tools.js";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
@@ -34,12 +34,13 @@ dbsScraper.listenToMasterThread();
 
 dbsScraper.makeBaseEventList = async function () {
 
-  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.name);
-  if (availableBaseEvent){
+  const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
+  if (availableBaseEvents){
+    const thisWorkersEvents = availableBaseEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
     return await this.makeBaseEventListEnd({
-      stopFunctie: null, rawEvents: availableBaseEvent}
+      stopFunctie: null, rawEvents: thisWorkersEvents}
     );    
-  }  
+  }   
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
@@ -49,17 +50,16 @@ dbsScraper.makeBaseEventList = async function () {
   const rawEvents = await page.evaluate(
     ({ months,workerData }) => {
       return Array.from(document.querySelectorAll(".fusion-events-post"))
-        .filter((eventEl, index) => index % workerData.workerCount === workerData.index)
         .map((eventEl) => {
           const title = eventEl.querySelector(".fusion-events-meta .url")?.textContent.trim() ?? null;
           const res = {
             unavailable: "",
-            pageInfo: `<a href='${document.location.href}'>${workerData.family} - main - ${title}</a>`,
+            pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} - main - ${title}</a>`,
             errors: [],
             title
           };
 
-          if (title.toLowerCase().includes('cancelled')){ //TODO 1.algemene check maken 2. uitbreiden.
+          if (title?.toLowerCase().includes('cancelled')){ //TODO 1.algemene check maken 2. uitbreiden.
             res.unavailable += ' event cancelled'
           }
 
@@ -68,14 +68,14 @@ dbsScraper.makeBaseEventList = async function () {
           const startDateEl =
             eventEl.querySelector(".tribe-event-date-start") ?? null;
           if (!startDateEl) {
-            return res;
+            res.corrupted = 'no start date el';
           }
 
           const startTextcontent =
             eventEl
               .querySelector(".tribe-event-date-start")
               ?.textContent.toLowerCase() ?? "LEEG";
-          // res.eventDateText = startTextcontent;
+          res.eventDateText = startTextcontent;
 
           try {
             const match1 = startTextcontent.match(/(\d+)\s+(\w+)/);
@@ -94,21 +94,28 @@ dbsScraper.makeBaseEventList = async function () {
               res.year = yearMatch[1];
             }
             res.year = res.year || new Date().getFullYear();
-            res.time = startTextcontent
-              .match(/\d{1,2}:\d\d/)[0]
-              .padStart(5, "0");
-            res.startDate = `${res.year}-${res.month}-${res.day}`;
-            res.startDateTime = new Date(
-              `${res.startDate}T${res.time}:00Z`
-            ).toISOString();
+            const timeMatch = startTextcontent
+              .match(/\d{1,2}:\d\d/);
+            if (!timeMatch ||
+              !Array.isArray(timeMatch) ||
+              timeMatch.length < 1) {
+              res.time = '12:00';
+            } else {
+              res.time = timeMatch[0].padStart(5, "0");
+              res.startDate = `${res.year}-${res.month}-${res.day}`;
+              res.startDateTime = new Date(
+                `${res.startDate}T${res.time}:00Z`
+              ).toISOString();
+            }
+                
           } catch (caughtError) {
             res.errors.push({error: caughtError, remarks: `Wirwar datums e.d. ${title}`,toDebug:res});
           }
 
-          if (res.startDate) {
-            try {
-              const endDateEl =
-                eventEl.querySelector(".tribe-event-time") ?? null;
+          try {
+            const endDateEl =
+            eventEl.querySelector(".tribe-event-time") ?? null;            
+            if (res.startDate && endDateEl) {
               if (endDateEl) {
                 const endDateM = endDateEl.textContent
                   .toLowerCase()
@@ -123,9 +130,10 @@ dbsScraper.makeBaseEventList = async function () {
                   }
                 }
               }
-            } catch (caughtError) {
-              res.errors.push({error: caughtError, remarks: `Wirwar datums e.d. ${title}`,toDebug:res});
-            }
+            } 
+          }
+          catch (caughtError) {
+            res.errors.push({error: caughtError, remarks: `Wirwar datums e.d. ${title}`,toDebug:res});
           }
 
           return res;
@@ -135,9 +143,9 @@ dbsScraper.makeBaseEventList = async function () {
   );
 
   this.saveBaseEventlist(workerData.family, rawEvents)
- 
+  const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
   return await this.makeBaseEventListEnd({
-    stopFunctie, page, rawEvents}
+    stopFunctie, rawEvents: thisWorkersEvents}
   );
   
 };
@@ -148,16 +156,18 @@ dbsScraper.getPageInfo = async function ({ page, event }) {
   
   const {stopFunctie} =  await this.getPageInfoStart()
   
-  const pageInfo = await page.evaluate(({event}) => {
+  const pageInfo = await page.evaluate(({event, goodCategories}) => {
     const res = {
       unavailable: event.unavailable,
-      pageInfo: `<a href='${document.location.href}'>${document.title}</a>`,
+      pageInfo: `<a class='page-info' href='${location.href}'>${document.title}</a>`,
       errors: [],
     };
 
+    
     res.longTextHTML = 
-      document.querySelector(".tribe-events-single-event-description")
-        ?.innerHTML ?? '';
+    document.querySelector(".tribe-events-single-event-description")
+      ?.innerHTML ?? '';
+    
     res.image =
       document.querySelector(".tribe-events-event-image .wp-post-image")?.src ??
       null;
@@ -166,26 +176,17 @@ dbsScraper.getPageInfo = async function ({ page, event }) {
         remarks: `image missing ${res.pageInfo}`
       })
     }    
-    let categories =
-      document.querySelector(".tribe-events-event-categories")?.textContent ??
+    res.shortText = document.querySelector(".tribe-events-event-categories")?.textContent.toLowerCase().replace('concert, ', '').replace('concert', '').trim() ??
       "";
-    categories = categories.toLowerCase();
-    res.isMetal =
-      categories.includes("metal") ||
-      categories.includes("punk") ||
-      categories.includes("noise") ||
-      categories.includes("doom") ||
-      categories.includes("industrial");
-
     res.ticketURL = document.querySelector('.tribe-events-event-url a')?.href ?? null;
     if (!res.ticketURL){
       res.priceTextcontent = `€0,00`;
     }
 
     return res;
-  }, {event});
+  }, {event, goodCategories: AbstractScraper.goodCategories});
 
-  if (pageInfo.ticketURL) {
+  if (pageInfo.ticketURL && !pageInfo.unavailable) {
     try {
       await page.goto(pageInfo.ticketURL)
       await page.waitForSelector('[data-testid]', {timeout: 6500})
@@ -194,20 +195,24 @@ dbsScraper.getPageInfo = async function ({ page, event }) {
         return document.querySelectorAll('[data-testid]')[1]?.textContent ?? null
       })
     } catch (caughtError) {
-      parentPort.postMessage(this.qwm.messageRoll(`
-      !!
-      ${`prijs ophalen dbs ticketpagina ${event.title} ${caughtError.message}`}}
-      hier moeten een error van gemaakt worden maar de errors crashen nu de thread!
-      !!
-      `))
-      pageInfo.errors.push({
-        error: caughtError, 
-        remarks: `prijs ophalen dbs ticketpagina ${pageInfo.pageInfo}`, 
-        toDebug: {pageInfo,event}
-      })
+      // er is gewoon geen prijs beschikbaar.
+      page.priceTextcontent = 'onbekend';
     }
   }
 
   return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
   
 };
+
+dbsScraper.singleMergedEventCheck = async function(event){
+
+  const hasForbiddenTermsRes = await this.hasForbiddenTerms(event)
+  if (hasForbiddenTermsRes.success) {
+    return {
+      event,
+      reason: hasForbiddenTermsRes.reason,
+      success: !hasForbiddenTermsRes
+    }
+  }
+  return await this.hasGoodTerms(event);
+}

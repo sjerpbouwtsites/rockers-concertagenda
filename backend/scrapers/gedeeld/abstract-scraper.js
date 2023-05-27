@@ -18,6 +18,121 @@ import ErrorWrapper from "../../mods/error-wrapper.js";
  * @class AbstractScraper
  */
 export default class AbstractScraper {
+
+  /**
+   * Gebruikt in singleRawEventChecks' hasForbiddenTerms
+   *
+   * @static
+   * @memberof AbstractScraper
+   */
+  static forbiddenTerms = [
+    'clubnacht',
+    "alternatieve rock",
+    "americana",
+    "americana",
+    "countryrock",
+    "dromerig",
+    "fan event",
+    "filmvertoning",
+    "indie",
+    "interactieve lezing",
+    "karaoke",
+    "london calling",
+    "shoegaze",
+    `art rock`,
+    `blaasrock`,
+    `dream pop`,
+    `Dream Punk`,
+    `experi-metal`,
+    `folkpunk`,
+    `jazz-core`,
+    `neofolk`,
+    `poetry`,
+    `pubquiz`,  
+    `punk-hop`,
+    `quiz'm`,
+    `schaakinstuif`,
+    `afrobeats`
+  ];
+
+  static wikipediaGoodGenres = [
+    `[href$=metal]`,
+    `[href$=metal_music]`,
+    `[href=Hard_rock]`,
+    `[href=Acid_rock]`,
+    `[href=Death_rock]`,
+    `[href=Experimental_rock]`,
+    `[href=Garage_rock]`,
+    `[href=Hard_rock]`,
+    `[href=Post-rock]`,
+    `[href=Punk_rock]`,
+    `[href=Stoner_rock]`,
+    `[href=Hardcore_punk]`,
+    `[href=Skate_punk]`,
+    `[href=Street_punk]`,
+    `[href=Ska_punk]`,
+    `[href=Avant-garde_metal]`,
+    `[href=Extreme_metal]`,
+    `[href=Black_metal]`,
+    `[href=Death_metal]`,
+    `[href=Doom_metal]`,
+    `[href=Speed_metal]`,
+    `[href=Thrash_metal]`,
+    `[href=Glam_metal]`,
+    `[href=Groove_metal]`,
+    `[href=Power_metal]`,
+    `[href=Symphonic_metal]`,
+    `[href=Funk_metal]`,
+    `[href=Rap_metal]`,
+    `[href=Nu_metal]`,
+    `[href=Drone_metal]`,
+    `[href=Folk_metal]`,
+    `[href=Gothic_metal]`,
+    `[href=Post-metal]`,
+    `[href=Industrial_metal]`,
+    `[href=Neoclassical_metal]`,
+    `[href=Progressive_metal]`,
+    `[href=Sludge_metal]`,
+    `[href=Viking_metal]`,
+
+  ];
+
+  static goodCategories = [
+    'heavy rock', 
+    `death metal`,
+    `doom`,
+    `grindcore`,
+    `hard rock`,
+    `hardcore punk`,
+    `hardcore`,
+    `heavy metal`,
+    `heavy psych`,
+    `heavy rock 'n roll`,
+    `stoner`,
+    `garage`,
+    `industrial`,
+    `metal`,
+    `math rock`,
+    `metalcore`,
+    `neue deutsche haerte`,
+    `neue deutsche harte`,
+    `new wave`,
+    `noise`,
+    `post-punk`,
+    `postpunk`,
+    `power metal`,
+    `psychobilly`,
+    `punk`,
+    `punx`,
+    `rockabilly, surf`,
+    `surfpunkabilly`,
+    `symphonic metal`,
+    `thrash`,
+  ]
+
+  rockAllowList = '';
+  rockRefuseList = '';
+
   constructor(obj) {
     this.qwm;
     this.browser;
@@ -40,6 +155,9 @@ export default class AbstractScraper {
     this.maxExecutionTime = obj.maxExecutionTime ?? 30000;
     this.puppeteerConfig = obj.puppeteerConfig ?? {};
     this.months = getVenueMonths(workerData.family)
+    this.rockAllowList = fs.readFileSync(fsDirections.isRockAllow, 'utf-8')
+    this.rockRefuseList = fs.readFileSync(fsDirections.isRockRefuse, 'utf-8')
+
   }
 
 
@@ -97,6 +215,8 @@ export default class AbstractScraper {
     await this.processSingleMusicEvent(checkedEvents).catch(
       this.handleOuterScrapeCatch
     );
+
+
     await this.announceToMonitorDone();
     if (!this.puppeteerConfig.app.mainPage.useCustomScraper || !this.puppeteerConfig.app.singlePage.useCustomScraper) {
       await this.closeBrowser();
@@ -144,6 +264,21 @@ export default class AbstractScraper {
   }
 
   async saveBaseEventlist(key, data){
+
+    if (!data){
+      const err = new Error(`No data in saveBaseEventList ${key}`);
+      _t.wrappedHandleError(new ErrorWrapper({
+        error:err,
+        remarks: `saveBaseEventList`,
+        errorLevel: 'close-thread',
+        workerData,
+        // toDebug: {
+        //   //
+        // }
+      }))
+      return;
+    }
+
     //verwijder oude
     const baseEventFiles = fs.readdirSync(fsDirections.baseEventlists);
     const theseBaseEvents = baseEventFiles.filter(filenames => filenames.includes(key));
@@ -156,6 +291,7 @@ export default class AbstractScraper {
     const refDate = this.baseEventDate();    
     const fileName = `${fsDirections.baseEventlists}/${key}T${refDate}.json`;
     fs.writeFileSync(fileName, JSON.stringify(data), 'utf8')
+    return true;
   }
 
   /**
@@ -230,23 +366,24 @@ export default class AbstractScraper {
     
     page && !page.isClosed() && page.close();
 
-    rawEvents = rawEvents.map(event => {
+    const eventsWithLongHTMLShortText = rawEvents.map(event => {
       if (event.longTextHTML) {
         event.longTextHTML = _t.killWhitespaceExcess(event.longTextHTML);
       } 
       if (event.shortText) {
         event.shortText = _t.killWhitespaceExcess(event.shortText);
-      } return event;
+      } 
+      return event;
     })
 
-    rawEvents.forEach((event) => {
+    eventsWithLongHTMLShortText.forEach((event) => {
       const errorVerz = Object.prototype.hasOwnProperty.call(event, 'errors') 
         ? event.errors 
         : [];
       errorVerz.forEach((errorData) => {
         errorData.workerData = workerData;
         if (!errorData.error){
-          errorData.error = new Error(errorData.remarks);
+          errorData.error = new Error(errorData?.remarks ?? '');
         }
         const wrappedError = new ErrorWrapper(errorData);
         _t.wrappedHandleError(wrappedError);
@@ -256,6 +393,7 @@ export default class AbstractScraper {
     const r = rawEvents
       .map(rawEvent => {
         rawEvent.location = workerData.family;
+        rawEvent.origin = workerData.family;
         return rawEvent
       })
       .filter(this.basicMusicEventsFilter)
@@ -314,7 +452,7 @@ export default class AbstractScraper {
     }, true);
     
     if (hasForbiddenTerm) {
-      parentPort.postMessage(this.qwm.messageRoll(`<a href='${musicEvent.venueEventUrl}'>${musicEvent.title}</a> is ${forbiddenTermUsed}/`));
+      parentPort.postMessage(this.qwm.messageRoll(`<a class='forbidden-term' href='${musicEvent.venueEventUrl}'>${musicEvent.title}</a> is ${forbiddenTermUsed}/`));
     }
 
     return !hasForbiddenTerm && meetsRequiredProperties;
@@ -330,7 +468,7 @@ export default class AbstractScraper {
    * Initeert de generator check op events
    *
    * @param {[MusicEvents]} baseMusicEvents uitgedraaid door makeBaseEventList
-   * @return {checkedEvents [MusicEvent]}  Want geeft werk van eventAsyncCheck door.
+   * @return {checkedEvents [MusicEvent]}  Want geeft werk van rawEventsAsyncCheck door.
    * @memberof AbstractScraper
    *
    * checkedEvents
@@ -339,7 +477,7 @@ export default class AbstractScraper {
     parentPort.postMessage(this.qwm.workerStarted());
     const eventGen = this.eventGenerator(baseMusicEvents);
     const checkedEvents = [];
-    return await this.eventAsyncCheck({
+    return await this.rawEventsAsyncCheck({
       eventGen,
       checkedEvents,
     });
@@ -356,7 +494,7 @@ export default class AbstractScraper {
    * @return {checkedEvents [MusicEvent]}
    * @memberof AbstractScraper
    */
-  async eventAsyncCheck({ eventGen, checkedEvents }) {
+  async rawEventsAsyncCheck({ eventGen, checkedEvents }) {
     let generatedEvent;
     try {
       const useableEventsCheckedArray = checkedEvents.map((a) => a);
@@ -365,31 +503,33 @@ export default class AbstractScraper {
       if (generatedEvent.done) return useableEventsCheckedArray;
 
       const eventToCheck = generatedEvent.value;
-      const checkResult = await this.singleEventCheck(eventToCheck);
+      const checkResult = await this.singleRawEventCheck(eventToCheck);
+      let workingTitle= this.cleanupEventTitle(eventToCheck.title);
       if (checkResult.success) {
         useableEventsCheckedArray.push(eventToCheck);
-      } else {
+
         parentPort.postMessage(
-          this.qwm.debugger([
-            `${eventToCheck?.title} uitgefilterd asyncCheck`,
+          this.qwm.debugger(
             {
-              title: eventToCheck.title,
-              shortText: eventToCheck.shortText,
-              url: eventToCheck.venueEventUrl,
+              title: 'Raw event async check',
+              event: `<a class='single-event-check-notice single-event-check-notice--success' href='${eventToCheck.venueEventUrl}'>${workingTitle}<a/>`,              
               reason: checkResult.reason,
             },
-          ])
+          )
+        );        
+      } else {
+        parentPort.postMessage(
+          this.qwm.debugger(
+            {
+              title: 'Raw event async check',
+              event: `<a class='single-event-check-notice single-event-check-notice--failure' href='${eventToCheck.venueEventUrl}'>${workingTitle}<a/>`,              
+              reason: checkResult.reason,
+            },
+          )
         );
       }
 
-      // parentPort.postMessage(
-      //   this.qwm.debugger([
-      //     `${eventToCheck?.title} filterres`,
-      //     {sucess: checkResult.success, reason: checkResult.reason},
-      //   ])
-      // );
-
-      return await this.eventAsyncCheck({
+      return await this.rawEventsAsyncCheck({
         eventGen,
         checkedEvents: useableEventsCheckedArray,
       });
@@ -397,7 +537,7 @@ export default class AbstractScraper {
       _t.handleError(
         error,
         workerData,
-        `eventAsyncCheck faal met ${generatedEvent?.value?.title}`,
+        `rawEventsAsyncCheck faal met ${generatedEvent?.value?.title}`,
         'close-thread',
         {
           generatedEvent,          
@@ -419,7 +559,7 @@ export default class AbstractScraper {
    * @return {event {MusicEvent, success bool}}
    * @memberof AbstractScraper
    */
-  async singleEventCheck(event) {
+  async singleRawEventCheck(event) {
     // abstracte methode, over te schrijven
     return {
       event,
@@ -429,56 +569,359 @@ export default class AbstractScraper {
   }
 
   /**
-   * methode waarmee singleEventCheck vervangen kan worden.
+   * abstracte methode, te overschrijve in de kindWorkers.
+   *
+   * @param {MusicEvent} event om te controleren
+   * @return {event {MusicEvent, success bool}}
+   * @memberof AbstractScraper
+   */
+  async singleMergedEventCheck(event, pageInfo = null) {
+    // abstracte methode, over te schrijven
+    return {
+      event,
+      success: true,
+      reason: null,
+    };
+  }  
+
+  /**
+   * Loopt over AbstractScraper.goodCategories en kijkt of ze in 
+   * een bepaalde text voorkomen, standaard bestaande uit de titel en de shorttext van 
+   * de event.
+   *
+   * @param {*} event 
+   * @param {string} [keysToCheck=['title', 'shortText']] 
+   * @return {event, {bool} succes, {string} reason}
+   * @memberof AbstractScraper
+   */
+  async hasGoodTerms(event, keysToCheck ){
+    const keysToCheck2 = keysToCheck || ['title', 'shortText'];
+    let combinedTextToCheck = '';
+    for (let i = 0; i < keysToCheck2.length; i++){
+      // if (keysToCheck2[i] === 'longTextHTML'){
+      //   const longTextHTML = fs.readFileSync(event.longTextHTML, 'utf-8');
+      //   combinedTextToCheck += longTextHTML
+      // } else {
+      combinedTextToCheck += event[keysToCheck2[i]].toLowerCase()
+      //}
+    }
+
+    const hasGoodTerm = AbstractScraper.goodCategories.find(goodTerm=> combinedTextToCheck.includes(goodTerm))
+    if (hasGoodTerm) {
+      return {
+        event,
+        success: true,
+        reason: `Goed in `+keysToCheck2.join(''),
+      };    
+    }
+    
+    return {
+      event,
+      success: false,
+      reason: `Geen bevestiging gekregen uit ${keysToCheck2.join(';')} ${combinedTextToCheck}`,
+    };
+  }  
+  
+  /**
+   * Loopt over AbstractScraper.forbiddenTerms en kijkt of ze in 
+   * een bepaalde text voorkomen, standaard bestaande uit de titel en de shorttext van 
+   * de event.
+   *
+   * @param {*} event 
+   * @param {string} [keysToCheck=['title', 'shortText']] 
+   * @return {event, {bool} succes, {string} reason}
+   * @memberof AbstractScraper
+   */
+  async hasForbiddenTerms(event, keysToCheck){
+    const keysToCheck2 = Array.isArray(keysToCheck) ? keysToCheck : ['title', 'shortText'];
+    let combinedTextToCheck = '';
+    for (let i = 0; i < keysToCheck2.length; i++){
+      combinedTextToCheck += event[keysToCheck2[i]].toLowerCase() + ' ';
+    }
+    const hasForbiddenTerm = AbstractScraper.forbiddenTerms.find(forbiddenTerm=> combinedTextToCheck.includes(forbiddenTerm))
+    if (hasForbiddenTerm) {
+      return {
+        event,
+        success: true,
+        reason: "verboden genres gevonden in title+shortText",
+      };
+    }
+    
+    return {
+      event,
+      success: false,
+      reason: "verboden genres niet gevonden.",
+    };    
+  }
+
+  async saveRefusedTitle(title){
+    let workingTitle = this.cleanupEventTitle(title)
+    const curForbiddenList = fs.readFileSync(fsDirections.isRockRefuse, 'utf-8');
+    if (!curForbiddenList.includes(workingTitle)) {
+      fs.writeFileSync(fsDirections.isRockRefuse, `${workingTitle}\n${curForbiddenList}`, 'utf-8')
+    }
+  }
+
+  async saveAllowedTitle(title){
+    let workingTitle = this.cleanupEventTitle(title)
+    const curAllowList = fs.readFileSync(fsDirections.isRockAllow, 'utf-8');
+    if (!curAllowList.includes(workingTitle)) {
+      fs.writeFileSync(fsDirections.isRockAllow, `${workingTitle}\n${curAllowList}`, 'utf-8')
+    }
+  }
+
+  async rockAllowListCheck(event, title){
+    if(typeof event?.title !== 'string' || typeof title !== 'string'){
+      this.dirtyDebug(arguments);
+      throw new Error(`argument / argument type error rock allow list check`)
+    }
+    const tt = this.rockAllowList.includes(title);
+    return {
+      event,
+      success: tt,
+      reason: `${title} ${tt ? 'in' : 'NOT in'} allowed 🛴 list`,
+    };
+  }
+
+  async rockRefuseListCheck(event, title){
+    if(typeof event?.title !== 'string' || typeof title !== 'string'){
+      this.dirtyDebug(arguments);
+      throw new Error(`argument / argument type error rock refuse list check`)
+    }    
+    const tt = this.rockRefuseList.includes(title);
+    return {
+      event,
+      success: tt,
+      reason: `${title} ${tt ? 'in' : 'NOT in'} refuse 🚮 list`,
+    };
+  }
+
+  async metalEncyclopedia(event, title){
+    if(typeof event?.title !== 'string' || typeof title !== 'string'){
+      this.dirtyDebug(arguments);
+      throw new Error(`argument / argument type error metal encyclopedia check`)
+    }
+
+    let workingTitle = this.cleanupEventTitle(title)
+
+    const MetalEncFriendlyTitle = workingTitle.replace(/\s/g, "_");
+    this.dirtyTalk(`${workingTitle} asks https://www.metal-archives.com/search/ajax-band-search/?field=name&query=${MetalEncFriendlyTitle}`)
+    const metalEncUrl = `https://www.metal-archives.com/search/ajax-band-search/?field=name&query=${MetalEncFriendlyTitle}`;
+    const foundInMetalEncyclopedia = await fetch(metalEncUrl)
+      .then((result) => result.json())
+      .then((parsedJson) => {
+        if (parsedJson.iTotalRecords < 1) return false
+        const bandNamesAreMainTitle = parsedJson.aaData.some(bandData => {
+          let match;
+          try {
+            match = bandData[0].match(/>(.*)<\//);
+            if (Array.isArray(match) && match.length > 1){
+              return match[1].toLowerCase() === workingTitle;
+            } 
+          } catch (error) {
+            return false
+          }
+          return false;
+        });
+        return bandNamesAreMainTitle
+      }).catch(metalEncError => {
+        _t.wrappedHandleError(new ErrorWrapper({
+          error: metalEncError,
+          remarks: `<a href='${event?.venueEventUrl}' class='error-link get-page-info-timeout'>getPageInfo ${workerData.name} metal enc. error</a>`,
+          workerData,
+          errorLevel: 'notice',
+        }
+        ))
+        return {
+          event,
+          success: false,
+          url: metalEncUrl,
+          reason: metalEncError.message
+        };
+      });
+    if (foundInMetalEncyclopedia) {
+      return {
+        event,
+        success: true,
+        url: metalEncUrl,
+        reason: `found in <a class='single-event-check-reason metal-encyclopedie metal-encyclopedie--success' href='${metalEncUrl}'>metal encyclopedia</a>`
+      };
+    }
+    return {
+      success: false,
+      url: metalEncUrl,
+      reason: 'no result metal enc',
+      event
+    };
+  }
+
+  async wikipedia(event, title){
+    if(typeof event?.title !== 'string' || typeof title !== 'string'){
+      this.dirtyDebug(arguments);
+      throw new Error(`argument / argument type error wikipedia list check`)
+    }    
+
+    this.dirtyTalk(`wikipedia ${title}`)
+
+    let workingTitle = this.cleanupEventTitle(title)
+
+    const page = await this.browser.newPage();
+    let wikiPage
+    try {
+      const wikifiedTitled = workingTitle.split(' ')
+        .filter(a => a)
+        .map(word => {
+          return word[0].toUpperCase() + word.substring(1,word.length)
+        }).join('_').replace(/\W/g,'')
+      wikiPage = `https://en.wikipedia.org/wiki/${wikifiedTitled}`;
+      await page.goto(wikiPage);
+    } catch (error) {
+      _t.wrappedHandleError(new ErrorWrapper({
+        error,
+        remarks: `<a href='${event?.venueEventUrl}' class='error-link get-page-info-timeout'>wikititel maken fout ${workerData.name}</a> ${workingTitle}`,
+        workerData,
+        errorLevel: 'notice',
+      }
+      ))            
+    }
+
+    const pageDoesNotExist = await page.evaluate(()=>{
+      return document.getElementById('noarticletext');
+    });
+
+    if (pageDoesNotExist){
+      const searchPage =  await page.evaluate(()=>{
+        return document.getElementById('noarticletext').querySelector('[href*=search]')?.href ?? '';
+      })
+      await page.goto(searchPage);
+      if (!searchPage) {
+        return {
+          event,
+          reason: 'wiki page not found, als no search page',
+          success: false,
+        }
+      }
+      const matchingResults = await page.evaluate(({title})=>{
+        return Array.from(document.querySelectorAll('.mw-search-results [href*=wiki]'))
+          .filter(anker => anker.textContent.toLowerCase().includes(title.toLowerCase()))
+          .map(anker => anker.href)
+      }, {title})
+      if (!matchingResults || !Array.isArray(matchingResults) || !matchingResults.length) {
+        return {
+          event,
+          reason: 'Not found title of event on wiki search page',
+          success: false,
+        }
+      }
+      await page.goto(matchingResults[0])
+    }
+
+    const wikiRockt = await page.evaluate(({wikipediaGoodGenres}) => {
+
+      let found = false
+      let i = 0;
+      while (found === false && i < wikipediaGoodGenres.length){
+        const thisSelector = wikipediaGoodGenres[i];
+        if (document.querySelector(`.infobox ${thisSelector}`)) {
+          found = true;
+        }
+        i++;
+      }
+      return found;
+
+
+      // const isRock =
+      //   !!document.querySelector(".infobox a[href*='rock']") &&
+      //   !document.querySelector(".infobox a[href*='Indie_rock']");
+      // const isMetal = !!document.querySelector(".infobox a[href*='metal']");
+      // const isPunk = !!document.querySelector(".infobox a[href*='punk']");
+      // const isStoner = !!document.querySelector(".infobox a[href*='stoner']");
+      // return isRock || isMetal || isPunk || isStoner;
+    }, {wikipediaGoodGenres: AbstractScraper.wikipediaGoodGenres});
+    !page.isClosed() && page.close();
+    if (wikiRockt) {
+      return {
+        event,
+        success: true,
+        url: wikiPage,
+        reason: `found on <a class='single-event-check-reason wikipedia wikipedia--success' href='${wikiPage}'>wikipedia</a>`
+      };
+    }  
+    !page.isClosed() && page.close();
+    return {
+      event,
+      success: false,
+      reason: `wiki catch return`      
+    }
+  } 
+
+  cleanupEventTitle(workingTitle = ''){
+    // - 14:35 zoals bij afas
+    if (workingTitle.match(/\s?-\s?\d\d:\d\d/)){
+      workingTitle = workingTitle.replace(/\s?-\s?\d\d:\d\d/, '');
+    }
+    
+    if (workingTitle.includes('&')) {
+      workingTitle = workingTitle.replace(/&.*$/,'');
+    }
+
+    if (workingTitle.includes('|')) {
+      workingTitle = workingTitle.replace(/|.*$/,'');
+    }
+
+    if (workingTitle.includes('•')) {
+      workingTitle = workingTitle.replace(/•.*$/,'');
+    }
+
+    if (workingTitle.includes('+')) {
+      workingTitle = workingTitle.replace(/\+.*$/,'');
+    }    
+
+    if (workingTitle.includes(':')) {
+      workingTitle = workingTitle.replace(/^[\w\s]+:/,'');
+    }
+
+    return workingTitle.toLowerCase().trim()
+  }
+
+  /**
+   * methode waarmee singleRawEventCheck vervangen kan worden.
    * kijkt naar 'voornaamste titel', dwz de event.title tot aan een '&'.
    *
    * @param {*} event
    * @return {event: MusicEvent, success: boolean}
    * @memberof AbstractScraper
    */
-  async isRock(event) {
-    const mainTitle = event.title.replace(/&.*/, "").trim().toLowerCase();
-    const MetalEncFriendlyTitle = mainTitle.replace(/\s/g, "_");
+  async isRock(event, overloadTitles = null, recursiveTitle = null) {
 
-    const foundInMetalEncyclopedia = await fetch(
-      `https://www.metal-archives.com/search/ajax-band-search/?field=name&query=${MetalEncFriendlyTitle}`
-    )
-      .then((result) => result.json())
-      .then((parsedJson) => {
-        return parsedJson.iTotalRecords > 0;
-      });
-    if (foundInMetalEncyclopedia) {
-      return {
-        event,
-        success: true,
-        reason: 'found in metal encyclopedia'
-      };
+    let workingTitle = recursiveTitle || this.cleanupEventTitle(event.title);
+
+    const metalEncyclopediaRes = await this.metalEncyclopedia(event, workingTitle);
+    if (metalEncyclopediaRes.success) {
+      return metalEncyclopediaRes;
     }
 
-    const page = await this.browser.newPage();
-    await page.goto(
-      `https://en.wikipedia.org/wiki/${mainTitle.replace(/\s/g, "_")}`
-    );
-    const wikiRockt = await page.evaluate(() => {
-      const isRock =
-        !!document.querySelector(".infobox a[href*='rock']") &&
-        !document.querySelector(".infobox a[href*='Indie_rock']");
-      const isMetal = !!document.querySelector(".infobox a[href*='metal']");
-      return isRock || isMetal;
-    });
-    !page.isClosed() && page.close();
-    if (wikiRockt) {
-      return {
-        event,
-        success: true,
-        reason: `found on wikipedia`
-      };
+    const wikipediaRes = await this.wikipedia(event, workingTitle);
+    if (wikipediaRes.success) {
+      return wikipediaRes;
     }
+
+    if (Array.isArray(overloadTitles)){
+      const overloadTitlesCopy = [...overloadTitles];
+      const thisOverloadTitle = overloadTitlesCopy.shift();
+      const extraRes = await this.isRock(event, null, thisOverloadTitle);
+      if (extraRes.success) {
+        return extraRes
+      }
+      if (overloadTitles.length){
+        return await this.isRock(event, overloadTitlesCopy);
+      }
+    }
+
     return {
       event,
       success: false,
-      reason: 'nothing found'
-    };
+      reason: `<a class='single-event-check-reason wikipedia wikipedia--failure metal-encyclopedie metal-encyclopedie--failure' href='${wikipediaRes.url}'>wikipedia</a> + <a href='${metalEncyclopediaRes.url}'>metal encyclopedia</a> 👎`};
   }
 
   /**
@@ -559,10 +1002,24 @@ export default class AbstractScraper {
       singleEvent.corrupted += missingProperties.join(',')
     }
 
-    // TODO 
-    singleEvent.isValid
-      ? singleEvent.register()
-      : singleEvent.registerINVALID(this.workerData);
+    const mergedEventCheckRes = await this.singleMergedEventCheck(singleEvent, pageInfo);
+    if (mergedEventCheckRes.success) {
+      this.dirtyDebug({
+        title: 'Merged async check 👍',
+        event: `<a class='single-event-check-notice single-event-check-notice--success' href='${mergedEventCheckRes.event.venueEventUrl}'>${mergedEventCheckRes.event.title}</a>`,
+        reason: mergedEventCheckRes.reason,
+      })      
+      singleEvent.isValid
+        ? singleEvent.register() // TODO hier lopen dingen echt dwars door elkaar. integreren in soort van singleMergedEventCheckBase en dan anderen reducen erop of weet ik veel wat een gehack vandaag
+        : singleEvent.registerINVALID(this.workerData);
+    } else {
+      this.dirtyDebug({
+        title: 'Merged async check 👎',        
+        event: `<a class='single-event-check-notice single-event-check-notice--failure' href='${mergedEventCheckRes.event.venueEventUrl}'>${mergedEventCheckRes.event.title}</a>`,
+        reason: mergedEventCheckRes.reason,
+      })
+      singleEvent.registerINVALID(this.workerData);
+    }
 
     singleEventPage && !singleEventPage.isClosed() && (await singleEventPage.close());
 
@@ -581,7 +1038,7 @@ export default class AbstractScraper {
     try {
       if (!longTextHTML) return null;
       const longTextPath = `${fsDirections.publicTexts}/${uuid}.html`;
-      fs.writeFile(longTextPath, longTextHTML, "utf-8", () => {});
+      fs.writeFileSync(longTextPath, longTextHTML, "utf-8");
       return longTextPath;
     } catch (err) {
       _t.handleError(err, workerData, `write long text fail`, 'notice', {
@@ -608,7 +1065,7 @@ export default class AbstractScraper {
     const stopFunctie = setTimeout(() => {
       _t.wrappedHandleError(new ErrorWrapper({
         error: new Error('Timeout baseEvent'),
-        remarks: `<a href='${event?.venueEventUrl}' class='page-info'>getPageInfo ${workerData.name} overtijd</a>.\nMax: ${this.puppeteerConfig.singlePage.timeout}`,
+        remarks: `<a href='${event?.venueEventUrl}' class='error-link get-page-info-timeout'>getPageInfo ${workerData.name} overtijd</a>.\nMax: ${this.puppeteerConfig.singlePage.timeout}`,
         workerData,
         errorLevel: 'notice',
       }
@@ -631,27 +1088,51 @@ export default class AbstractScraper {
   async getPageInfoEnd({pageInfo, stopFunctie, page}){
 
     this.isForced && this.dirtyLog(pageInfo)
-    
-    pageInfo.errors.forEach((errorData) => {
-      errorData.workerData = workerData;
-      if (!errorData.error){
-        errorData.error = new Error(errorData.remarks);
-      }
-      const wrappedError = new ErrorWrapper(errorData);
-      _t.wrappedHandleError(wrappedError);
-    });
-  
-    if (pageInfo.longTextHTML) {
-      pageInfo.longTextHTML = _t.killWhitespaceExcess(pageInfo.longTextHTML)
-    }
-    if (pageInfo.priceTextcontent) {
-      pageInfo.priceTextcontent = _t.killWhitespaceExcess(pageInfo.priceTextcontent)
-    }
 
-    if (!pageInfo) {
+    if (!pageInfo || !Array.isArray(pageInfo?.errors)) {
+      const wrappedError = new ErrorWrapper({
+        error: new Error(`pageInfo object incompleet; geen errors`),
+        remarks: `pageInfo object incompleet; geen errors`,
+        workerData,
+        errorLevel: 'notice',
+        toDebug: {
+          title: 'failed page info',
+          pageInfoData: pageInfo,
+        }
+      });
+      _t.wrappedHandleError(wrappedError);
+      page && !page.isClosed() && page.close();
+      clearTimeout(stopFunctie);
       return {
         corrupted: `Geen resultaat van pageInfo`, //TODO samen met musicEvent.unavailable
-      };
+      };      
+    }
+    
+    pageInfo?.errors?.forEach((errorData) => {
+      try {
+        errorData.workerData = workerData;
+        if (!errorData?.error){
+          let errorTekst = errorData?.remarks ?? 'geen remarks'
+          errorData.error = new Error(!errorTekst ? 'geen tekst' : errorTekst);
+        }
+        const wrappedError = new ErrorWrapper(errorData);
+        _t.wrappedHandleError(wrappedError);        
+      } catch (error) {
+        const wrappedError = new ErrorWrapper(error);
+        _t.wrappedHandleError(wrappedError);        
+        this.dirtyDebug({
+          title: `erroring gaat verkeerd ${workerData.family}`,
+          toDebug: pageInfo
+        })
+      }
+
+    });
+  
+    if (pageInfo?.longTextHTML) {
+      pageInfo.longTextHTML = _t.killWhitespaceExcess(pageInfo.longTextHTML)
+    }
+    if (pageInfo?.priceTextcontent) {
+      pageInfo.priceTextcontent = _t.killWhitespaceExcess(pageInfo.priceTextcontent)
     }
   
     page && !page.isClosed() && page.close();
@@ -727,6 +1208,8 @@ export default class AbstractScraper {
     return longTextPath;
   }  
 
+
+
   // step 4
   async announceToMonitorDone() {
     parentPort.postMessage(this.qwm.workerDone(EventsList.amountOfEvents));
@@ -776,7 +1259,7 @@ export default class AbstractScraper {
       _t.handleError(
         error,
         workerData,
-        `Mislukken aanmaken <a href='${url}'>single pagina</a> wss duurt te lang`,
+        `Mislukken aanmaken <a class='single-page-failure error-link' href='${url}'>single pagina</a> wss duurt te lang`,
         'notice',
         null,
       );

@@ -8,6 +8,7 @@ import makeScraperConfig from "./gedeeld/scraper-config.js";
 const boerderijScraper = new AbstractScraper(makeScraperConfig({
   maxExecutionTime: 30004,
   workerData: Object.assign({}, workerData),
+  hasDecentCategorisation: true,
   puppeteerConfig: {
     mainPage: {
       timeout: 30005,
@@ -18,7 +19,7 @@ const boerderijScraper = new AbstractScraper(makeScraperConfig({
     app: {
       mainPage: {
         useCustomScraper: true,
-        url: `https://poppodiumboerderij.nl/includes/ajax/events.php?filters=7,8,9,6&search=&limit=15&offset=${
+        url: `https://poppodiumboerderij.nl/includes/ajax/events.php?filters=6,7,8&search=&limit=15&offset=${
           workerData.index * 15
         }&lang_id=1&rooms=&month=&year=`,
         requiredProperties: ['venueEventUrl', 'title']
@@ -30,11 +31,49 @@ const boerderijScraper = new AbstractScraper(makeScraperConfig({
   }
 }));
 
+boerderijScraper.singleRawEventCheck = async function(event){
+
+  const isRefused = await this.rockRefuseListCheck(event, event.title)
+  if (isRefused.success) return {
+    reason: isRefused.reason,
+    event,
+    success: false
+  };
+
+  const isAllowed = await this.rockAllowListCheck(event, event.title)
+  if (isAllowed.success) return isAllowed;
+
+  const hasForbiddenTerms = await this.hasForbiddenTerms(event, ['title']);
+  if (hasForbiddenTerms.success) {
+    await this.saveRefusedTitle(event.title.toLowerCase())
+    return {
+      reason: hasForbiddenTerms.reason,
+      success: false,
+      event
+    }
+  }
+
+  return {
+    reason: [isRefused.reason, isAllowed.reason, hasForbiddenTerms.reason].join(';'),
+    event,
+    success: true
+  }
+  
+}
+
 boerderijScraper.listenToMasterThread();
 
 // MAKE BASE EVENTS
 
 boerderijScraper.makeBaseEventList = async function () {
+
+  const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
+  if (availableBaseEvents){
+    const thisWorkersEvents = availableBaseEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
+    return await this.makeBaseEventListEnd({
+      stopFunctie: null, rawEvents: thisWorkersEvents}
+    );    
+  }   
 
   const {stopFunctie} = await this.makeBaseEventListStart()
 
@@ -55,8 +94,10 @@ boerderijScraper.makeBaseEventList = async function () {
     // debugger
   }
 
+  this.saveBaseEventlist(workerData.family, rawEvents)
+  const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
   return await this.makeBaseEventListEnd({
-    stopFunctie, rawEvents}
+    stopFunctie, rawEvents: thisWorkersEvents}
   );
 
 };

@@ -31,12 +31,13 @@ effenaarScraper.listenToMasterThread();
 
 effenaarScraper.makeBaseEventList = async function () {
 
-  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.name);
-  if (availableBaseEvent){
+  const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
+  if (availableBaseEvents){
+    const thisWorkersEvents = availableBaseEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
     return await this.makeBaseEventListEnd({
-      stopFunctie: null, rawEvents: availableBaseEvent}
+      stopFunctie: null, rawEvents: thisWorkersEvents}
     );    
-  }  
+  }    
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
@@ -45,12 +46,11 @@ effenaarScraper.makeBaseEventList = async function () {
       return Array.from(
         document.querySelectorAll(".search-and-filter .agenda-card")
       )
-        .filter((eventEl, index) => index % workerData.workerCount === workerData.index)
         .map((eventEl) => {
           const title = eventEl.querySelector(".card-title")?.textContent.trim();
           const res = {
             unavailable: "",
-            pageInfo: `<a href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+            pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
             errors: [],          
             title
           }
@@ -64,9 +64,9 @@ effenaarScraper.makeBaseEventList = async function () {
   );
 
   this.saveBaseEventlist(workerData.family, rawEvents)
-
+  const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
   return await this.makeBaseEventListEnd({
-    stopFunctie, page, rawEvents}
+    stopFunctie, rawEvents: thisWorkersEvents}
   );
   
 };
@@ -82,7 +82,7 @@ effenaarScraper.getPageInfo = async function ({ page, event }) {
   const pageInfo = await page.evaluate(({months, event}) => {
     const res = {
       unavailable: event.unavailable,
-      pageInfo: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
+      pageInfo: `<a class='page-info' href='${location.href}'>${event.title}</a>`,
       errors: [],
     };
     res.image = document.querySelector(".header-image img")?.src ?? null;

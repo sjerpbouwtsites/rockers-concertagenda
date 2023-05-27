@@ -1,6 +1,6 @@
 [
   {
-    "doorOpenDateTime": null,
+    "doorOpenDateTime": "2023-06-04T17:00:00.000Z",
     "startDateTime": "2023-06-04T18:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://www.afaslive.nl/agenda/ghost",
@@ -8,28 +8,12 @@
     "location": "afaslive",
     "price": 67.2,
     "shortText": null,
-    "longText": "../public/texts/0de3610c-8155-4c77-ad73-eeed5f84fd73.html",
+    "longText": "../public/texts/92429b68-a8e6-42b9-9a68-9109366eb283.html",
     "image": "https://www.afaslive.nl/files/Agenda/2023/06-Juni/_agendaitem/Ghost.jpg",
     "soldOut": true,
     "unavailable": "",
     "corrupted": null,
-    "correctMusic": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2023-06-06T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/gojira",
-    "title": "Gojira",
-    "location": "afaslive",
-    "price": 52.64,
-    "shortText": null,
-    "longText": "../public/texts/ebac9028-d739-4ca8-b7b3-8847079b55c1.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2023/06-Juni/_agendaitem/Gojira.jpg",
-    "soldOut": false,
-    "unavailable": "",
-    "corrupted": null,
-    "correctMusic": null
+    "origin": "afaslive"
   },
   {
     "doorOpenDateTime": null,
@@ -40,43 +24,11 @@
     "location": "afaslive",
     "price": 33.6,
     "shortText": null,
-    "longText": "../public/texts/4cc5dc5c-627e-4062-9869-192db037c2f5.html",
+    "longText": "../public/texts/787dabc0-a929-41aa-8f0e-fd326ae923c3.html",
     "image": "https://www.afaslive.nl/files/Agenda/2023/10-Oktober/_agendaitem/Inhaler.jpg",
     "soldOut": false,
     "unavailable": "",
     "corrupted": null,
-    "correctMusic": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2023-10-24T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/fall-out-boy",
-    "title": "Fall Out Boy",
-    "location": "afaslive",
-    "price": 57.12,
-    "shortText": null,
-    "longText": "../public/texts/87f4996d-6938-4087-a3dd-7d51f526967b.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2023/10-Oktober/_agendaitem/Fall-Out-Boy.jpg",
-    "soldOut": false,
-    "unavailable": "",
-    "corrupted": null,
-    "correctMusic": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2023-12-01T19:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/sting-3",
-    "title": "Sting",
-    "location": "afaslive",
-    "price": 92.96,
-    "shortText": null,
-    "longText": "../public/texts/1d3d89f8-6e30-4dd7-be26-9623e8b7f8d0.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2023/_agendaitem/Sting.jpg",
-    "soldOut": true,
-    "unavailable": "",
-    "corrupted": null,
-    "correctMusic": null
+    "origin": "afaslive"
   }
 ]

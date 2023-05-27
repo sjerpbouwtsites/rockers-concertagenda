@@ -29,29 +29,71 @@ const p60Scraper = new AbstractScraper(makeScraperConfig({
 
 p60Scraper.listenToMasterThread();
 
+// SINGLE EVENT CHECK
+
+p60Scraper.singleRawEventCheck = async function (event) {
+
+  if (!event || !event?.title) {
+    return {
+      reason: 'Corrupted event',
+      event,
+      success: false
+    };    
+  }
+
+  const workingTitle = this.cleanupEventTitle(event.title);
+
+  const isRefused = await this.rockRefuseListCheck(event, workingTitle)
+  if (isRefused.success) return {
+    reason: isRefused.reason,
+    event,
+    success: false
+  };
+
+  const isAllowed = await this.rockAllowListCheck(event, workingTitle)
+  if (isAllowed.success) return isAllowed;
+
+  const hasForbiddenTerms = await this.hasForbiddenTerms(event);
+  if (hasForbiddenTerms.success) {
+    await this.saveRefusedTitle(workingTitle)
+    return {
+      reason: hasForbiddenTerms.reason,
+      success: false,
+      event
+    }
+  }
+
+  const isRockRes = await this.isRock(event);
+  if (isRockRes.success){
+    await this.saveAllowedTitle(workingTitle)
+  } else {
+    await this.saveRefusedTitle(workingTitle)
+  }
+  return isRockRes;  
+
+};
+
 // MAKE BASE EVENTS
 
 p60Scraper.makeBaseEventList = async function () {
 
-  const availableBaseEvent = await this.checkBaseEventAvailable(workerData.name);
-  if (availableBaseEvent){
+  const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
+  if (availableBaseEvents){
+    const thisWorkersEvents = availableBaseEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
     return await this.makeBaseEventListEnd({
-      stopFunctie: null, rawEvents: availableBaseEvent}
+      stopFunctie: null, rawEvents: thisWorkersEvents}
     );    
-  }
+  } 
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
+  this.dirtyTalk('jaja1');
   await _t.autoScroll(page);
-  await _t.autoScroll(page);
-  await _t.autoScroll(page);
-  await _t.autoScroll(page);
-
-  await _t.waitFor(50);
+  this.dirtyTalk('jaja2');
 
   const rawEvents = await page.evaluate(({workerData}) => {
     return Array.from(document.querySelectorAll(".views-infinite-scroll-content-wrapper > .p60-list__item-container")).filter(itemEl => {
-      return itemEl.textContent.includes('concert')
+      return !!itemEl.querySelector('[href*=ticketmaster]')
     }).map(
       (itemEl) => {
         const title = itemEl.querySelector(
@@ -60,7 +102,7 @@ p60Scraper.makeBaseEventList = async function () {
 
         const res = {
           unavailable: '',
-          pageInfo: `<a href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+          pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
           errors: [],
           title
         };
@@ -95,10 +137,14 @@ p60Scraper.makeBaseEventList = async function () {
     );
   }, {workerData});
 
-  this.saveBaseEventlist(workerData.family, rawEvents)
+  this.dirtyLog(rawEvents);
 
+  this.dirtyTalk(`geheel aan events ${rawEvents.length}`)
+
+  this.saveBaseEventlist(workerData.family, rawEvents)
+  const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
   return await this.makeBaseEventListEnd({
-    stopFunctie, page, rawEvents}
+    stopFunctie, rawEvents: thisWorkersEvents}
   );
 };
 
@@ -117,13 +163,12 @@ p60Scraper.getPageInfo = async function ({ page, event }) {
   
   const pageInfo = await page.evaluate(
     ({event}) => {
-
       const res = {
         unavailable: event.unavailable,
-        pageInfo: `<a href='${document.location.href}'>${document.title}</a>`,
+        pageInfo: `<a class='page-info' href='${location.href}'>${document.title}</a>`,
         errors: [],
       };
-      const imageMatch = Array.from(document.querySelectorAll('style')).map(styleEl => styleEl.innerHTML).join(`\n`).match(/topbanner.*background-image.*(https.*\.[jpg|jpeg|png])/)
+      const imageMatch = Array.from(document.querySelectorAll('style')).map(styleEl => styleEl.innerHTML).join(`\n`).match(/topbanner.*background-image.*(https.*\.\w{3,4})/)
       if (imageMatch){
         res.image = imageMatch[1]
       }
@@ -136,6 +181,7 @@ p60Scraper.getPageInfo = async function ({ page, event }) {
           }
         })
       } 
+      res.priceTextcontent = document.querySelector('.event-info__price')?.textContent ?? document.querySelector('.content-section__event-info')?.textContent ?? null;
       // res.ticketURL = document.querySelector('.content-section__event-info [href*="ticketmaster"]')?.href ?? null;
       res.longTextHTML = Array.from(document.querySelectorAll('.kmtContent, .group-footer .media-section')).reduce((prev, next) => prev + next.innerHTML,'')
       return res;
