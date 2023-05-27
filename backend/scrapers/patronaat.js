@@ -35,9 +35,7 @@ patronaatScraper.singleRawEventCheck = async function (event) {
 
   const workingTitle = this.cleanupEventTitle(event.title.toLowerCase());
 
-  this.dirtyTalk(`clean title ${workingTitle}`)
-
-  const isRefused = await this.rockRefuseListCheck()
+  const isRefused = await this.rockRefuseListCheck(event, workingTitle)
   if (isRefused.success) return {
     reason: isRefused.reason,
     event,

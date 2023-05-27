@@ -1,4 +1,80 @@
 
+  dynamo-1 Error - 4:48:30 AM
+  Error: Te weinig 'agendaDataEls' <a class='page-info' href='https://www.effenaar.nl/agenda/hot-mulligan'>Hot Mulligan - Effenaar</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1116:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1111:23)
+    at dynamoScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dynamo.js:241:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:964:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:215:5) 
+  Te weinig 'agendaDataEls' <a class='page-info' href='https://www.effenaar.nl/agenda/hot-mulligan'>Hot Mulligan - Effenaar</a>
+  
+  
+  paradiso-1 Error - 4:48:07 AM
+  Error: image missing <a class='page-info' href='https://www.paradiso.nl/program/the-chats-guantanamo-baywatch/37567'>The Chats + Guantanamo Baywatch</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1116:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1111:23)
+    at paradisoScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/paradiso.js:299:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:964:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:215:5) 
+  image missing <a class='page-info' href='https://www.paradiso.nl/program/the-chats-guantanamo-baywatch/37567'>The Chats + Guantanamo Baywatch</a>
+  
+  
+  dbs-1 Error - 4:47:26 AM
+  TimeoutError: waiting for selector `[data-testid]` failed: timeout 6500ms exceeded
+    at new WaitTask (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:528:34)
+    at DOMWorld.waitForSelectorInPage (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:432:26)
+    at internalHandler.waitFor (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/QueryHandler.js:31:77)
+    at DOMWorld.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:323:29)
+    at Frame.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:942:51)
+    at Page.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:2359:33)
+    at dbsScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dbs.js:192:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:964:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:215:5) 
+  waiting for selector `[data-testid]` failed: timeout 6500ms exceeded
+  
+  
+  dbs-0 Error - 4:46:51 AM
+  TimeoutError: waiting for selector `[data-testid]` failed: timeout 6500ms exceeded
+    at new WaitTask (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:528:34)
+    at DOMWorld.waitForSelectorInPage (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:432:26)
+    at internalHandler.waitFor (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/QueryHandler.js:31:77)
+    at DOMWorld.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:323:29)
+    at Frame.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:942:51)
+    at Page.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:2359:33)
+    at dbsScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dbs.js:192:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:964:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:215:5) 
+  waiting for selector `[data-testid]` failed: timeout 6500ms exceeded
+  
+  
+  patronaat-0 Error - 4:45:19 AM
+  Error: argument / argument type error rock refuse list check
+    at AbstractScraper.rockRefuseListCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:689:13)
+    at patronaatScraper.singleRawEventCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/patronaat.js:40:32)
+    at AbstractScraper.rawEventsAsyncCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:506:38)
+    at AbstractScraper.announceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:480:23)
+    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:211:38)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  argument / argument type error rock refuse list check
+  
+  
+  paradiso-2 Error - 4:43:49 AM
+  Error: argument / argument type error rock refuse list check
+    at AbstractScraper.rockRefuseListCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:689:13)
+    at paradisoScraper.singleRawEventCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/paradiso.js:43:32)
+    at AbstractScraper.rawEventsAsyncCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:506:38)
+    at AbstractScraper.announceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:480:23)
+    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:211:38)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  argument / argument type error rock refuse list check
+  
+  
   tivolivredenburg-3 Error - 4:30:41 AM
   Error: mag hier niet komen
     at tivoliVredenburgScraper.singleRawEventCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/tivolivredenburg.js:49:9)

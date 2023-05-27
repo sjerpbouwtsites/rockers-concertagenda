@@ -37,22 +37,21 @@ paradisoScraper.listenToMasterThread();
 
 paradisoScraper.singleRawEventCheck = async function (event) {
 
-  this.dirtyDebug(event)
   const workingTitle = this.cleanupEventTitle(event.title);
 
-  const isRefused = await this.rockRefuseListCheck(workingTitle)
+  const isRefused = await this.rockRefuseListCheck(event, workingTitle)
   if (isRefused.success) return {
     reason: isRefused.reason,
     event,
     success: false
   };
 
-  const isAllowed = await this.rockAllowListCheck(workingTitle)
+  const isAllowed = await this.rockAllowListCheck(event, workingTitle)
   if (isAllowed.success) return isAllowed;
 
   const hasForbiddenTerms = await this.hasForbiddenTerms(event);
   if (hasForbiddenTerms.success) {
-    await this.saveRefusedTitle(event.title.toLowerCase())
+    await this.saveRefusedTitle(workingTitle)
     return {
       reason: hasForbiddenTerms.reason,
       success: false,

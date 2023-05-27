@@ -31,9 +31,7 @@ tivoliVredenburgScraper.singleRawEventCheck = async function (event) {
 
   const workingTitle = this.cleanupEventTitle(event.title);
 
-  this.dirtyTalk(workingTitle)
   const isRefused = await this.rockRefuseListCheck(event, workingTitle)
-  this.dirtyDebug(isRefused);
   if (isRefused.success) return {
     reason: isRefused.reason,
     event,
@@ -41,36 +39,33 @@ tivoliVredenburgScraper.singleRawEventCheck = async function (event) {
   };
 
   const isAllowed = await this.rockAllowListCheck(event, workingTitle)
-  this.dirtyDebug(isAllowed)
   if (isAllowed.success) {
     return isAllowed
   }
 
-  throw Error('mag hier niet komen')
+  const hasForbiddenTerms = await this.hasForbiddenTerms(event);
+  if (hasForbiddenTerms.success) {
+    await this.saveRefusedTitle(workingTitle)
+    return {
+      reason: hasForbiddenTerms.reason,
+      success: false,
+      event
+    }
+  }
 
-  // const hasForbiddenTerms = await this.hasForbiddenTerms(event);
-  // if (hasForbiddenTerms.success) {
-  //   await this.saveRefusedTitle(workingTitle)
-  //   return {
-  //     reason: hasForbiddenTerms.reason,
-  //     success: false,
-  //     event
-  //   }
-  // }
+  const hasGoodTermsRes = await this.hasGoodTerms(event);
+  if (hasGoodTermsRes.success) {
+    await this.saveAllowedTitle(workingTitle)
+    return hasGoodTermsRes;
+  }
 
-  // const hasGoodTermsRes = await this.hasGoodTerms(event);
-  // if (hasGoodTermsRes.success) {
-  //   await this.saveAllowedTitle(workingTitle)
-  //   return hasGoodTermsRes;
-  // }
-
-  // const isRockRes = await this.isRock(event, [workingTitle]);
-  // if (isRockRes.success){
-  //   await this.saveAllowedTitle(workingTitle)
-  // } else {
-  //   await this.saveRefusedTitle(workingTitle)
-  // }
-  // return isRockRes;
+  const isRockRes = await this.isRock(event, [workingTitle]);
+  if (isRockRes.success){
+    await this.saveAllowedTitle(workingTitle)
+  } else {
+    await this.saveRefusedTitle(workingTitle)
+  }
+  return isRockRes;
   
 };
 
