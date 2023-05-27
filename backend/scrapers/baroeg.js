@@ -27,6 +27,37 @@ const baroegScraper = new AbstractScraper(makeScraperConfig({
   }
 }));
 
+// SINGLE RAW EVENT CHECK
+
+baroegScraper.singleRawEventCheck = async function(event){
+
+  const isRefused = await this.rockRefuseListCheck(event, event.title.toLowerCase())
+  if (isRefused.success) return {
+    reason: isRefused.reason,
+    event,
+    success: false
+  };
+
+  const isAllowed = await this.rockAllowListCheck(event, event.title.toLowerCase())
+  if (isAllowed.success) return isAllowed;
+
+  const hasForbiddenTerms = await this.hasForbiddenTerms(event);
+  if (hasForbiddenTerms.success) {
+    await this.saveRefusedTitle(event.title.toLowerCase())
+    return {
+      reason: hasForbiddenTerms.reason,
+      success: false,
+      event
+    }
+  }
+ 
+  return {
+    reason: 'nothing forbidden',
+    success: true,
+    event
+  }  
+
+}
 
 baroegScraper.listenToMasterThread();
 
@@ -44,29 +75,16 @@ baroegScraper.makeBaseEventList = async function () {
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
-  const rawEvents = await page.evaluate(({workerData, goodCategories}) => {
-
-    const reedsGevondenEvents = [];
+  const rawEvents = await page.evaluate(({workerData}) => {
 
     return Array
       .from(document.querySelectorAll('.wpt_listing .wp_theatre_event'))
       .map(eventEl => {
         const venueEventUrl = eventEl.querySelector('.wp_theatre_event_title a + a').href;
-        if (!reedsGevondenEvents.includes(venueEventUrl)){
-          reedsGevondenEvents.push(venueEventUrl)
-        } else {
-          return false;
-        }
         const categorieTeksten = Array.from(eventEl.querySelectorAll('.wpt_production_categories li')).map(li => {
           const categorieNaam = li.textContent.toLowerCase().trim();
           return categorieNaam
         });
-        const heeftGoedeCategorie = categorieTeksten.some(categorieNaam => {
-          return goodCategories.includes(categorieNaam)
-        })
-        if (!heeftGoedeCategorie){
-          return false;
-        }
         return {
           eventEl,
           categorieTeksten,
@@ -133,7 +151,7 @@ baroegScraper.makeBaseEventList = async function () {
         }
         return res;
       })
-  }, {workerData, goodCategories: AbstractScraper.goodCategories})
+  }, {workerData})
 
   this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)

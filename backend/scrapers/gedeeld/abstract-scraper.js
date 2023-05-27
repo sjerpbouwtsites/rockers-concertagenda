@@ -26,32 +26,33 @@ export default class AbstractScraper {
    * @memberof AbstractScraper
    */
   static forbiddenTerms = [
-    "fan event",
     'clubnacht',
-    `pubquiz`,  
-    `quiz'm`,
-    `schaakinstuif`,
-    `jazz-core`,
-    `experi-metal`,
-    `Dream Punk`,
-    `poetry`,
+    "alternatieve rock",
+    "americana",
+    "americana",
+    "countryrock",
+    "dromerig",
+    "fan event",
+    "filmvertoning",
+    "indie",
     "interactieve lezing",
     "karaoke",
     "london calling",
-    "filmvertoning",
-    "americana",
-    "indie",
-    "dromerig",
     "shoegaze",
-    "countryrock",
-    "americana",
-    "alternatieve rock",
-    `dream pop`,
-    `punk-hop`,
-    `blaasrock`,
-    `neofolk`,
     `art rock`,
-    `folkpunk`
+    `blaasrock`,
+    `dream pop`,
+    `Dream Punk`,
+    `experi-metal`,
+    `folkpunk`,
+    `jazz-core`,
+    `neofolk`,
+    `poetry`,
+    `pubquiz`,  
+    `punk-hop`,
+    `quiz'm`,
+    `schaakinstuif`,
+    `afrobeats`
   ];
 
   static wikipediaGoodGenres = [
@@ -98,30 +99,36 @@ export default class AbstractScraper {
 
   static goodCategories = [
     'heavy rock', 
-    `neue deutsche harte`,
-    `neue deutsche haerte`,
-    `punx`,
     `death metal`,
     `doom`,
-    `hardcore`,
-    `new wave`,
-    `punk`,
+    `grindcore`,
+    `hard rock`,
     `hardcore punk`,
+    `hardcore`,
+    `heavy metal`,
+    `heavy psych`,
     `heavy rock 'n roll`,
+    `stoner`,
+    `garage`,
+    `industrial`,
+    `metal`,
+    `math rock`,
+    `metalcore`,
+    `neue deutsche haerte`,
+    `neue deutsche harte`,
+    `new wave`,
+    `noise`,
+    `post-punk`,
+    `postpunk`,
+    `power metal`,
+    `psychobilly`,
+    `punk`,
+    `punx`,
+    `rockabilly, surf`,
+    `surfpunkabilly`,
     `symphonic metal`,
     `thrash`,
-    `metalcore`,
-    `grindcore`,
-    `industrial`,
-    `noise`,
-    `postpunk`,
-    `post-punk`,
-    `heavy metal`,
-    `power metal`,
-    `heavy psych`,
-    `metal`,
-    `surfpunkabilly`,
-    `psychobilly`]
+  ]
 
   rockAllowList = '';
   rockRefuseList = '';
@@ -595,7 +602,7 @@ export default class AbstractScraper {
       //   const longTextHTML = fs.readFileSync(event.longTextHTML, 'utf-8');
       //   combinedTextToCheck += longTextHTML
       // } else {
-      combinedTextToCheck += event[keysToCheck2[1]]
+      combinedTextToCheck += event[keysToCheck2[i]].toLowerCase()
       //}
     }
 
@@ -650,13 +657,17 @@ export default class AbstractScraper {
   async saveRefusedTitle(title){
     let workingTitle = this.cleanupEventTitle(title)
     const curForbiddenList = fs.readFileSync(fsDirections.isRockRefuse, 'utf-8');
-    fs.writeFileSync(fsDirections.isRockRefuse, `${workingTitle}\n${curForbiddenList}`, 'utf-8')
+    if (!curForbiddenList.includes(workingTitle)) {
+      fs.writeFileSync(fsDirections.isRockRefuse, `${workingTitle}\n${curForbiddenList}`, 'utf-8')
+    }
   }
 
   async saveAllowedTitle(title){
     let workingTitle = this.cleanupEventTitle(title)
     const curAllowList = fs.readFileSync(fsDirections.isRockAllow, 'utf-8');
-    fs.writeFileSync(fsDirections.isRockAllow, `${workingTitle}\n${curAllowList}`, 'utf-8')
+    if (!curAllowList.includes(workingTitle)) {
+      fs.writeFileSync(fsDirections.isRockAllow, `${workingTitle}\n${curAllowList}`, 'utf-8')
+    }
   }
 
   async rockAllowListCheck(event, title){
@@ -837,6 +848,11 @@ export default class AbstractScraper {
     if (workingTitle.includes('&')) {
       workingTitle = workingTitle.replace(/&.*$/,'');
     }
+
+    if (workingTitle.includes(':')) {
+      workingTitle = workingTitle.replace(/^[\w\s]+:/,'');
+    }
+
     return workingTitle.toLowerCase().trim()
   }
 
@@ -877,7 +893,7 @@ export default class AbstractScraper {
     return {
       event,
       success: false,
-      reason: `<a class='single-event-check-reason wikipedia wikipedia--failure metal-encyclopedie metal-encyclopedie--failure' href='${wikipediaRes.url}'>wikipedia</a> + <a href='${metalEncyclopediaRes.url}'>metal encyclopedia</a>nope`};
+      reason: `<a class='single-event-check-reason wikipedia wikipedia--failure metal-encyclopedie metal-encyclopedie--failure' href='${wikipediaRes.url}'>wikipedia</a> + <a href='${metalEncyclopediaRes.url}'>metal encyclopedia</a> 👎`};
   }
 
   /**
@@ -960,12 +976,18 @@ export default class AbstractScraper {
 
     const mergedEventCheckRes = await this.singleMergedEventCheck(singleEvent, pageInfo);
     if (mergedEventCheckRes.success) {
+      this.dirtyDebug({
+        title: 'Merged async check 👍',
+        event: `<a class='single-event-check-notice single-event-check-notice--success' href='${mergedEventCheckRes.event.venueEventUrl}'>${mergedEventCheckRes.event.title}</a>`,
+        reason: mergedEventCheckRes.reason,
+      })      
       singleEvent.isValid
         ? singleEvent.register() // TODO hier lopen dingen echt dwars door elkaar. integreren in soort van singleMergedEventCheckBase en dan anderen reducen erop of weet ik veel wat een gehack vandaag
         : singleEvent.registerINVALID(this.workerData);
     } else {
       this.dirtyDebug({
-        title: mergedEventCheckRes.event.title + ' afwezen',
+        title: 'Merged async check 👎',        
+        event: `<a class='single-event-check-notice single-event-check-notice--failure' href='${mergedEventCheckRes.event.venueEventUrl}'>${mergedEventCheckRes.event.title}</a>`,
         reason: mergedEventCheckRes.reason,
       })
       singleEvent.registerINVALID(this.workerData);

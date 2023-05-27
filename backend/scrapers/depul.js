@@ -29,6 +29,50 @@ const depulScraper = new AbstractScraper(makeScraperConfig({
 
 depulScraper.listenToMasterThread();
 
+// SINGLE EVENT CHECK 
+
+depulScraper.singleMergedEventCheck = async function (event) {
+
+  const tl = this.cleanupEventTitle(event.title);
+
+  const isRefused = await this.rockRefuseListCheck(event, tl)
+  if (isRefused.success) {
+    return {
+      reason: isRefused.reason,
+      event,
+      success: false
+    }
+  }
+
+  const isAllowed = await this.rockAllowListCheck(event, tl)
+  if (isAllowed.success) {
+    return isAllowed;  
+  }
+
+  const hasGoodTerms = await this.hasGoodTerms(event, ['title','shortText']);
+  if (hasGoodTerms.success) {
+    await this.saveAllowedTitle(tl)     
+    return hasGoodTerms;
+  }
+
+  const isRockRes = await this.isRock(
+    event, 
+    [tl]
+  );
+  if (isRockRes.success){
+    await this.saveAllowedTitle(tl)     
+    return isRockRes;
+  }
+  await this.saveRefusedTitle(tl)    
+
+
+  return {
+    event,
+    success: false,
+    reason: "genres not in title, shortText, or event URL, or rock",
+  };
+};
+
 // MAKE BASE EVENTS
 
 depulScraper.makeBaseEventList = async function () {
@@ -240,32 +284,3 @@ depulScraper.getPageInfo = async function ({ page, event }) {
 
 };
 
-// SINGLE EVENT CHECK 
-
-depulScraper.singleMergedEventCheck = async function (event) {
-  
-
-  let overloadTitle = '';
-  try {
-    overloadTitle = event.title.toLowerCase().replace(/\(.*\)/g, '').trim();  
-  } catch (error) {
-    this.debugger(error)
-  }
-
-  const isRockRes = await this.isRock(
-    event, 
-    [overloadTitle]
-  );
-  if (isRockRes.success){
-    return isRockRes;
-  }
-
-  const hasGoodTerms = await this.hasGoodTerms(event, ['title','shortText']);
-  if (hasGoodTerms.success) return hasGoodTerms;
-
-  return {
-    event,
-    success: false,
-    reason: "genres not in title, shortText, or event URL",
-  };
-};

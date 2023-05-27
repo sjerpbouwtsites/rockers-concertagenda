@@ -1,4 +1,596 @@
 
+  dynamo-1 Error - 2:03:51 AM
+  Error: Te weinig 'agendaDataEls' <a class='page-info' href='https://www.effenaar.nl/agenda/hot-mulligan'>Hot Mulligan - Effenaar</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1088:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1083:23)
+    at dynamoScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dynamo.js:241:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:936:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:215:5) 
+  Te weinig 'agendaDataEls' <a class='page-info' href='https://www.effenaar.nl/agenda/hot-mulligan'>Hot Mulligan - Effenaar</a>
+  
+  
+  dynamo-1 Error - 2:01:08 AM
+  Error: Te weinig 'agendaDataEls' <a class='page-info' href='https://www.effenaar.nl/agenda/hot-mulligan'>Hot Mulligan - Effenaar</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1088:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1083:23)
+    at dynamoScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dynamo.js:241:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:936:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:215:5) 
+  Te weinig 'agendaDataEls' <a class='page-info' href='https://www.effenaar.nl/agenda/hot-mulligan'>Hot Mulligan - Effenaar</a>
+  
+  
+  dynamo-1 Error - 1:59:25 AM
+  Error: Te weinig 'agendaDataEls' <a class='page-info' href='https://www.effenaar.nl/agenda/hot-mulligan'>Hot Mulligan - Effenaar</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1088:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1083:23)
+    at dynamoScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dynamo.js:241:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:936:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:215:5) 
+  Te weinig 'agendaDataEls' <a class='page-info' href='https://www.effenaar.nl/agenda/hot-mulligan'>Hot Mulligan - Effenaar</a>
+  
+  
+  dynamo-1 Error - 1:54:15 AM
+  TypeError: Cannot read properties of undefined (reading 'toLowerCase')
+    at AbstractScraper.hasGoodTerms (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:605:53)
+    at dynamoScraper.singleMergedEventCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dynamo.js:33:38)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:977:44)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:215:5) 
+  Cannot read properties of undefined (reading 'toLowerCase')
+  
+  
+  dbs-0 Error - 1:26:31 AM
+  TimeoutError: waiting for selector `[data-testid]` failed: timeout 6500ms exceeded
+    at new WaitTask (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:528:34)
+    at DOMWorld.waitForSelectorInPage (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:432:26)
+    at internalHandler.waitFor (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/QueryHandler.js:31:77)
+    at DOMWorld.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:323:29)
+    at Frame.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:942:51)
+    at Page.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:2359:33)
+    at dbsScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dbs.js:192:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:931:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:215:5) 
+  waiting for selector `[data-testid]` failed: timeout 6500ms exceeded
+  
+  
+  dbs-1 Error - 1:26:15 AM
+  TimeoutError: waiting for selector `[data-testid]` failed: timeout 6500ms exceeded
+    at new WaitTask (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:528:34)
+    at DOMWorld.waitForSelectorInPage (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:432:26)
+    at internalHandler.waitFor (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/QueryHandler.js:31:77)
+    at DOMWorld.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:323:29)
+    at Frame.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:942:51)
+    at Page.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:2359:33)
+    at dbsScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dbs.js:192:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:931:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:215:5) 
+  waiting for selector `[data-testid]` failed: timeout 6500ms exceeded
+  
+  
+  dbs-0 Error - 1:14:56 AM
+  TimeoutError: waiting for selector `[data-testid]` failed: timeout 6500ms exceeded
+    at new WaitTask (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:528:34)
+    at DOMWorld.waitForSelectorInPage (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:432:26)
+    at internalHandler.waitFor (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/QueryHandler.js:31:77)
+    at DOMWorld.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:323:29)
+    at Frame.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:942:51)
+    at Page.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:2359:33)
+    at dbsScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dbs.js:200:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:924:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:208:5) 
+  waiting for selector `[data-testid]` failed: timeout 6500ms exceeded
+  
+  
+  dbs-1 Error - 1:14:40 AM
+  TimeoutError: waiting for selector `[data-testid]` failed: timeout 6500ms exceeded
+    at new WaitTask (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:528:34)
+    at DOMWorld.waitForSelectorInPage (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:432:26)
+    at internalHandler.waitFor (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/QueryHandler.js:31:77)
+    at DOMWorld.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:323:29)
+    at Frame.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:942:51)
+    at Page.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:2359:33)
+    at dbsScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dbs.js:200:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:924:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:208:5) 
+  waiting for selector `[data-testid]` failed: timeout 6500ms exceeded
+  
+  
+  dbs-0 Error - 1:11:55 AM
+  TimeoutError: waiting for selector `[data-testid]` failed: timeout 6500ms exceeded
+    at new WaitTask (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:528:34)
+    at DOMWorld.waitForSelectorInPage (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:432:26)
+    at internalHandler.waitFor (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/QueryHandler.js:31:77)
+    at DOMWorld.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:323:29)
+    at Frame.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:942:51)
+    at Page.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:2359:33)
+    at dbsScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dbs.js:200:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:924:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:208:5) 
+  waiting for selector `[data-testid]` failed: timeout 6500ms exceeded
+  
+  
+  dbs-1 Error - 1:11:38 AM
+  TimeoutError: waiting for selector `[data-testid]` failed: timeout 6500ms exceeded
+    at new WaitTask (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:528:34)
+    at DOMWorld.waitForSelectorInPage (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:432:26)
+    at internalHandler.waitFor (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/QueryHandler.js:31:77)
+    at DOMWorld.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:323:29)
+    at Frame.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:942:51)
+    at Page.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:2359:33)
+    at dbsScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dbs.js:200:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:924:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:208:5) 
+  waiting for selector `[data-testid]` failed: timeout 6500ms exceeded
+  
+  
+  paradiso-1 Error - 12:21:08 AM
+  Error: image missing <a class='page-info' href='https://www.paradiso.nl/program/the-chats-guantanamo-baywatch/37567'>The Chats + Guantanamo Baywatch</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1070:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1065:23)
+    at paradisoScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/paradiso.js:294:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:924:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:208:5) 
+  image missing <a class='page-info' href='https://www.paradiso.nl/program/the-chats-guantanamo-baywatch/37567'>The Chats + Guantanamo Baywatch</a>
+  
+  
+  ticketmaster-2 Error - 12:16:13 AM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-racoon-tickets/292035?language=en-us'>TM Zuiderpark Live: Racoon</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1070:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1065:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:198:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:924:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-racoon-tickets/292035?language=en-us'>TM Zuiderpark Live: Racoon</a>
+  
+  
+  ticketmaster-2 Error - 12:16:13 AM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-suzan--freek-tickets/292423?language=en-us'>TM Zuiderpark Live: Suzan & Freek</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1070:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1065:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:198:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:924:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-suzan--freek-tickets/292423?language=en-us'>TM Zuiderpark Live: Suzan & Freek</a>
+  
+  
+  ticketmaster-2 Error - 12:16:13 AM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-meau-tickets/292027?language=en-us'>TM Zuiderpark Live: MEAU</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1070:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1065:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:198:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:924:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-meau-tickets/292027?language=en-us'>TM Zuiderpark Live: MEAU</a>
+  
+  
+  dynamo-1 Error - 12:14:19 AM
+  Error: Te weinig 'agendaDataEls' <a class='page-info' href='https://www.effenaar.nl/agenda/hot-mulligan'>Hot Mulligan - Effenaar</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1070:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1065:23)
+    at dynamoScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dynamo.js:218:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:924:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:208:5) 
+  Te weinig 'agendaDataEls' <a class='page-info' href='https://www.effenaar.nl/agenda/hot-mulligan'>Hot Mulligan - Effenaar</a>
+  
+  
+  dbs-0 Error - 12:12:48 AM
+  TimeoutError: waiting for selector `[data-testid]` failed: timeout 6500ms exceeded
+    at new WaitTask (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:528:34)
+    at DOMWorld.waitForSelectorInPage (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:432:26)
+    at internalHandler.waitFor (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/QueryHandler.js:31:77)
+    at DOMWorld.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:323:29)
+    at Frame.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:942:51)
+    at Page.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:2359:33)
+    at dbsScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dbs.js:200:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:924:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:208:5) 
+  waiting for selector `[data-testid]` failed: timeout 6500ms exceeded
+  
+  
+  dbs-1 Error - 12:12:09 AM
+  TimeoutError: waiting for selector `[data-testid]` failed: timeout 6500ms exceeded
+    at new WaitTask (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:528:34)
+    at DOMWorld.waitForSelectorInPage (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:432:26)
+    at internalHandler.waitFor (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/QueryHandler.js:31:77)
+    at DOMWorld.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:323:29)
+    at Frame.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:942:51)
+    at Page.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:2359:33)
+    at dbsScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dbs.js:200:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:924:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:208:5) 
+  waiting for selector `[data-testid]` failed: timeout 6500ms exceeded
+  
+  
+  doornroosje-1 Error - 12:09:37 AM
+  TimeoutError: Navigation timeout of 25000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 25000 ms exceeded
+  
+  
+  dynamo-0 Error - 12:08:18 AM
+  TimeoutError: Navigation timeout of 25061 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 25061 ms exceeded
+  
+  
+  depul-0 Error - 12:02:04 AM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  doornroosje-1 Error - 12:01:50 AM
+  TimeoutError: Navigation timeout of 25000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 25000 ms exceeded
+  
+  
+  tivolivredenburg-3 Error - 12:01:42 AM
+  TimeoutError: Navigation timeout of 5001 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 5001 ms exceeded
+  
+  
+  tivolivredenburg-3 Error - 12:01:26 AM
+  TimeoutError: Navigation timeout of 5001 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 5001 ms exceeded
+  
+  
+  tivolivredenburg-3 Error - 12:01:09 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:301:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  ticketmaster-2 Error - 11:57:39 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-racoon-tickets/292035?language=en-us'>TM Zuiderpark Live: Racoon</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1066:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1061:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:198:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:920:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-racoon-tickets/292035?language=en-us'>TM Zuiderpark Live: Racoon</a>
+  
+  
+  ticketmaster-2 Error - 11:57:39 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-suzan--freek-tickets/292423?language=en-us'>TM Zuiderpark Live: Suzan & Freek</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1066:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1061:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:198:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:920:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-suzan--freek-tickets/292423?language=en-us'>TM Zuiderpark Live: Suzan & Freek</a>
+  
+  
+  ticketmaster-2 Error - 11:57:39 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-meau-tickets/292027?language=en-us'>TM Zuiderpark Live: MEAU</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1066:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1061:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:198:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:920:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-meau-tickets/292027?language=en-us'>TM Zuiderpark Live: MEAU</a>
+  
+  
+  dynamo-1 Error - 11:57:34 PM
+  Error: Te weinig 'agendaDataEls' <a class='page-info' href='https://www.effenaar.nl/agenda/hot-mulligan'>Hot Mulligan - Effenaar</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1066:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1061:23)
+    at dynamoScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dynamo.js:218:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:920:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:208:5) 
+  Te weinig 'agendaDataEls' <a class='page-info' href='https://www.effenaar.nl/agenda/hot-mulligan'>Hot Mulligan - Effenaar</a>
+  
+  
+  dbs-0 Error - 11:57:30 PM
+  TimeoutError: waiting for selector `[data-testid]` failed: timeout 6500ms exceeded
+    at new WaitTask (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:528:34)
+    at DOMWorld.waitForSelectorInPage (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:432:26)
+    at internalHandler.waitFor (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/QueryHandler.js:31:77)
+    at DOMWorld.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:323:29)
+    at Frame.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:942:51)
+    at Page.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:2359:33)
+    at dbsScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dbs.js:200:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:920:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:208:5) 
+  waiting for selector `[data-testid]` failed: timeout 6500ms exceeded
+  
+  
+  ticketmaster-3 Error - 11:57:28 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-snelle-tickets/292043?language=en-us'>TM Zuiderpark Live: Snelle</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1066:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1061:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:198:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:920:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-snelle-tickets/292043?language=en-us'>TM Zuiderpark Live: Snelle</a>
+  
+  
+  occii-0 Error - 11:56:35 PM
+  TimeoutError: Navigation timeout of 45000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 45000 ms exceeded
+  
+  
+  metropool-2 Error - 11:56:18 PM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  dbs-0 Error - 11:54:20 PM
+  TimeoutError: waiting for selector `[data-testid]` failed: timeout 6500ms exceeded
+    at new WaitTask (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:528:34)
+    at DOMWorld.waitForSelectorInPage (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:432:26)
+    at internalHandler.waitFor (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/QueryHandler.js:31:77)
+    at DOMWorld.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:323:29)
+    at Frame.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:942:51)
+    at Page.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:2359:33)
+    at dbsScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dbs.js:200:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:920:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:208:5) 
+  waiting for selector `[data-testid]` failed: timeout 6500ms exceeded
+  
+  
+  ticketmaster-0 Error - 11:54:16 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/wu-tang-clan--nas-%7C-vip2-golden-circle-early-entry-package-tickets/290597?language=en-us'>TM Wu-Tang Clan & Nas | VIP2 - Golden Circle Early Entry Package</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1066:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1061:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:198:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:920:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/wu-tang-clan--nas-%7C-vip2-golden-circle-early-entry-package-tickets/290597?language=en-us'>TM Wu-Tang Clan & Nas | VIP2 - Golden Circle Early Entry Package</a>
+  
+  
+  ticketmaster-0 Error - 11:54:16 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/wu-tang-clan--nas-%7C-vip3-premium-seated-package-tickets/290601?language=en-us'>TM Wu-Tang Clan & Nas | VIP3 - Premium Seated Package</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1066:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1061:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:198:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:920:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/wu-tang-clan--nas-%7C-vip3-premium-seated-package-tickets/290601?language=en-us'>TM Wu-Tang Clan & Nas | VIP3 - Premium Seated Package</a>
+  
+  
+  ticketmaster-0 Error - 11:54:16 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/wu-tang-clan--nas-%7C-vip1-vip-hospitality-package-tickets/290603?language=en-us'>TM Wu-Tang Clan & Nas | VIP1 - VIP Hospitality Package</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1066:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1061:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:198:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:920:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/wu-tang-clan--nas-%7C-vip1-vip-hospitality-package-tickets/290603?language=en-us'>TM Wu-Tang Clan & Nas | VIP1 - VIP Hospitality Package</a>
+  
+  
+  ticketmaster-1 Error - 11:54:15 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/parkheuvel-sunday-late-lunch-only-valid-icw-a-dayticket--tickets/293375?language=en-us'>TM Parkheuvel - Sunday: Late Lunch (Only Valid i.c.w. A Dayticket)</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1066:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1061:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:198:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:920:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/parkheuvel-sunday-late-lunch-only-valid-icw-a-dayticket--tickets/293375?language=en-us'>TM Parkheuvel - Sunday: Late Lunch (Only Valid i.c.w. A Dayticket)</a>
+  
+  
+  ticketmaster-1 Error - 11:54:15 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/parkheuvel-sunday-early-dinner-only-valid-icw-a-dayticket--tickets/293391?language=en-us'>TM Parkheuvel - Sunday: Early Dinner (Only Valid i.c.w. A Dayticket)</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1066:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1061:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:198:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:920:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/parkheuvel-sunday-early-dinner-only-valid-icw-a-dayticket--tickets/293391?language=en-us'>TM Parkheuvel - Sunday: Early Dinner (Only Valid i.c.w. A Dayticket)</a>
+  
+  
+  ticketmaster-1 Error - 11:54:15 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/combi-tickets-parkheuvel-at-nn-north-sea-jazz-festival-2023-%7C-sunday-tickets/293389?language=en-us'>TM Combi Tickets Parkheuvel at NN North Sea Jazz Festival 2023 | Sunday</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1066:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1061:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:198:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:920:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/combi-tickets-parkheuvel-at-nn-north-sea-jazz-festival-2023-%7C-sunday-tickets/293389?language=en-us'>TM Combi Tickets Parkheuvel at NN North Sea Jazz Festival 2023 | Sunday</a>
+  
+  
+  ticketmaster-1 Error - 11:54:15 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-miss-montreal-tickets/292031?language=en-us'>TM Zuiderpark Live: Miss Montreal</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1066:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1061:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:198:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:920:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-miss-montreal-tickets/292031?language=en-us'>TM Zuiderpark Live: Miss Montreal</a>
+  
+  
+  dynamo-1 Error - 11:53:52 PM
+  Error: Te weinig 'agendaDataEls' <a class='page-info' href='https://www.effenaar.nl/agenda/hot-mulligan'>Hot Mulligan - Effenaar</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1066:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1061:23)
+    at dynamoScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dynamo.js:218:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:920:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:208:5) 
+  Te weinig 'agendaDataEls' <a class='page-info' href='https://www.effenaar.nl/agenda/hot-mulligan'>Hot Mulligan - Effenaar</a>
+  
+  
+  cpunt-0 Error - 11:51:37 PM
+  TypeError: Cannot read properties of null (reading 'toLowerCase')
+    at AbstractScraper.hasForbiddenTerms (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:632:53)
+    at cpuntScraper.singleRawEventCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/cpunt.js:210:40)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.rawEventsAsyncCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:499:27)
+    at async AbstractScraper.announceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:473:12)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:204:27) 
+  Cannot read properties of null (reading 'toLowerCase')
+  
+  
+  ticketmaster-3 Error - 11:51:23 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-snelle-tickets/292043?language=en-us'>TM Zuiderpark Live: Snelle</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1066:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1061:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:198:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:920:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-snelle-tickets/292043?language=en-us'>TM Zuiderpark Live: Snelle</a>
+  
+  
+  cpunt-0 Error - 11:51:22 PM
+  TypeError: Cannot read properties of null (reading 'toLowerCase')
+    at AbstractScraper.hasForbiddenTerms (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:632:53)
+    at cpuntScraper.singleRawEventCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/cpunt.js:210:40)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.rawEventsAsyncCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:499:27)
+    at async AbstractScraper.announceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:473:12)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:204:27) 
+  Cannot read properties of null (reading 'toLowerCase')
+  
+  
+  dbs-0 Error - 11:51:19 PM
+  TimeoutError: waiting for selector `[data-testid]` failed: timeout 6500ms exceeded
+    at new WaitTask (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:528:34)
+    at DOMWorld.waitForSelectorInPage (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:432:26)
+    at internalHandler.waitFor (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/QueryHandler.js:31:77)
+    at DOMWorld.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:323:29)
+    at Frame.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:942:51)
+    at Page.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:2359:33)
+    at dbsScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dbs.js:200:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:920:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:208:5) 
+  waiting for selector `[data-testid]` failed: timeout 6500ms exceeded
+  
+  
+  dynamo-1 Error - 11:49:11 PM
+  Error: Te weinig 'agendaDataEls' <a class='page-info' href='https://www.effenaar.nl/agenda/hot-mulligan'>Hot Mulligan - Effenaar</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1066:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1061:23)
+    at dynamoScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dynamo.js:218:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:920:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:208:5) 
+  Te weinig 'agendaDataEls' <a class='page-info' href='https://www.effenaar.nl/agenda/hot-mulligan'>Hot Mulligan - Effenaar</a>
+  
+  
+  dbs-1 Error - 11:48:42 PM
+  TimeoutError: waiting for selector `[data-testid]` failed: timeout 6500ms exceeded
+    at new WaitTask (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:528:34)
+    at DOMWorld.waitForSelectorInPage (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:432:26)
+    at internalHandler.waitFor (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/QueryHandler.js:31:77)
+    at DOMWorld.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:323:29)
+    at Frame.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:942:51)
+    at Page.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:2359:33)
+    at dbsScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dbs.js:200:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:920:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:208:5) 
+  waiting for selector `[data-testid]` failed: timeout 6500ms exceeded
+  
+  
+  cpunt-0 Error - 11:48:42 PM
+  TypeError: Cannot read properties of null (reading 'toLowerCase')
+    at AbstractScraper.hasForbiddenTerms (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:632:53)
+    at cpuntScraper.singleRawEventCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/cpunt.js:209:40)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.rawEventsAsyncCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:499:27)
+    at async AbstractScraper.announceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:473:12)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:204:27) 
+  Cannot read properties of null (reading 'toLowerCase')
+  
+  
+  ticketmaster-3 Error - 11:48:32 PM
+  Error: Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-snelle-tickets/292043?language=en-us'>TM Zuiderpark Live: Snelle</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1066:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1061:23)
+    at ticketmasterScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/ticketmaster.js:198:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:920:22) 
+  Geen prijs gevonden <a class='page-info' href='https://www.ticketmaster.nl/event/zuiderpark-live-snelle-tickets/292043?language=en-us'>TM Zuiderpark Live: Snelle</a>
+  
+  
+  oosterpoort-0 Error - 11:43:51 PM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  dbs-0 Error - 11:37:53 PM
+  TimeoutError: waiting for selector `[data-testid]` failed: timeout 6500ms exceeded
+    at new WaitTask (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:528:34)
+    at DOMWorld.waitForSelectorInPage (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:432:26)
+    at internalHandler.waitFor (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/QueryHandler.js:31:77)
+    at DOMWorld.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:323:29)
+    at Frame.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:942:51)
+    at Page.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:2359:33)
+    at dbsScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dbs.js:200:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:920:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:208:5) 
+  waiting for selector `[data-testid]` failed: timeout 6500ms exceeded
+  
+  
+  depul-0 Error - 11:37:05 PM
+  TimeoutError: Navigation timeout of 25000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 25000 ms exceeded
+  
+  
+  013-0 Error - 11:36:56 PM
+  TimeoutError: Navigation timeout of 5001 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 5001 ms exceeded
+  
+  
+  013-0 Error - 11:36:48 PM
+  TimeoutError: Navigation timeout of 5001 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 5001 ms exceeded
+  
+  
+  metropool-0 Error - 11:33:42 PM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  depul-1 Error - 11:33:29 PM
+  TimeoutError: Navigation timeout of 25000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 25000 ms exceeded
+  
+  
+  depul-0 Error - 11:33:14 PM
+  TimeoutError: Navigation timeout of 25000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111 
+  Navigation timeout of 25000 ms exceeded
+  
+  
   boerderij-0 Error - 11:25:47 PM
   SyntaxError: Unexpected end of JSON input
     at JSON.parse (<anonymous>)

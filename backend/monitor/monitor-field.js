@@ -73,11 +73,11 @@ export default class MonitorField {
     return 0;
   }
   updateConsole(updateData) {
-    //this.data.splice(5);
+    this.data.splice(100);
     this.update(updateData);
   }
   update(updateData) {
-
+    this.data.splice(100);
     this.data.unshift(updateData);
     const mainFieldEl = document.getElementById(this.mainFieldName);
     switch (this.type) {

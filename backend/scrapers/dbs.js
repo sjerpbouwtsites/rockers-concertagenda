@@ -178,14 +178,6 @@ dbsScraper.getPageInfo = async function ({ page, event }) {
     }    
     res.shortText = document.querySelector(".tribe-events-event-categories")?.textContent.toLowerCase().replace('concert, ', '').replace('concert', '').trim() ??
       "";
-    // const hasGoodCategories = goodCategories.some(category => {
-    //   return res.shortText.includes(category)
-    // })
-    // if (!hasGoodCategories) {
-    //   res.unavailable = ' no good categories';
-    //   return res;
-    // }
-
     res.ticketURL = document.querySelector('.tribe-events-event-url a')?.href ?? null;
     if (!res.ticketURL){
       res.priceTextcontent = `€0,00`;

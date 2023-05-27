@@ -85,6 +85,7 @@ cpuntScraper.makeBaseEventList = async function () {
         res.startDate = parpar.hasAttribute('data-last-date') ? parpar.getAttribute('data-last-date').split('-').reverse().join('-') : null;
         const artInfoText = rawEvent.querySelector('.article-info')?.textContent.toLowerCase() ?? '';
         res.soldOut = artInfoText.includes('wachtlijst') || artInfoText.includes('uitverkocht');
+        res.shortText = '';
         return res
       });
     },
