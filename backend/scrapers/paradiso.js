@@ -123,7 +123,7 @@ paradisoScraper.makeBaseEventList = async function () {
               ?.textContent.trim() ?? "";
           
           res.venueEventUrl = rawEvent.href ?? null
-          res.soldOut = !!(rawEvent.textContent.toLowerCase().includes('uitverkocht') ?? null)
+          res.soldOut = !!rawEvent.textContent.match(/uitverkocht|sold\s?out/i);
           res.cancelled = !!(rawEvent.textContent.toLowerCase().includes('geannulleerd') ?? null) || !!(rawEvent.textContent.toLowerCase().includes('gecanceld') ?? null)
           return res;
         });
@@ -209,6 +209,9 @@ paradisoScraper.getPageInfo = async function ({ page, event }) {
         document.querySelector(".css-1irwsol")?.outerHTML ?? '';
       const contentBox2 =
         document.querySelector(".css-gwbug6")?.outerHTML ?? '';
+      if (!contentBox1 && !contentBox2) {
+        res.corrupted = true;
+      }
       if (contentBox1 || contentBox2) {
         res.longTextHTML = contentBox1 + contentBox2
       }

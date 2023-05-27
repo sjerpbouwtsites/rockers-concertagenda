@@ -132,6 +132,8 @@ boerderijScraper.getPageInfo = async function ({ event }) {
       });
     });
 
+  
+
   if (!ajaxRes) {
     res.unavailable += `ajax verzoek faalt naar ${url}`;
     return await this.getPageInfoEnd({res, stopFunctie})

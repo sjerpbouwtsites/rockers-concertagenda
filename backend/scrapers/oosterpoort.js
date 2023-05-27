@@ -85,7 +85,7 @@ oostpoortScraper.makeBaseEventList = async function () {
         const tweedeDeelKorteTekst = eventEl.querySelector('.program__content p')?.textContent ?? '';
         res.shortText = `${eersteDeelKorteTekst}<br>${tweedeDeelKorteTekst}`;
         res.venueEventUrl = eventEl.querySelector(".program__link")?.href ?? null;
-        res.soldOut = !!(eventEl.querySelector(".program__status")?.textContent.toLowerCase().includes('uitverkocht') ?? null)
+        res.soldOut = !!eventEl.querySelector(".program__status")?.textContent.match(/uitverkocht|sold\s?out/i) ?? false;
         res.longText = eventEl.querySelector('.program__content')?.textContent ?? null; // tijdelijk om in te controleren
         return res;
       });

@@ -98,6 +98,9 @@ nuldertienScraper.makeBaseEventList = async function () {
           })
           return res;
         }
+
+        res.soldOut = !!eventEl?.innerHTML.match(/uitverkocht|sold\s?out/i) ?? false;
+        
         res.shortText = eventEl
           .querySelector(".event-list-item__subtitle")
           ?.textContent.trim() ?? '';

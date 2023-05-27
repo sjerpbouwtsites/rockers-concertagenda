@@ -106,6 +106,8 @@ depulScraper.makeBaseEventList = async function () {
           };     
           res.shortText = 
             rawEvent.querySelector(".text-box .desc")?.textContent.trim() ?? "";
+
+          res.soldOut = !!rawEvent?.innerHTML?.match(/uitverkocht|sold\s?out/i) ?? null;
           
           const startDay =
             rawEvent

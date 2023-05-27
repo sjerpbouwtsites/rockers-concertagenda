@@ -72,7 +72,7 @@ melkwegScraper.makeBaseEventList = async function () {
         shortTitle = shortTitle ? `<br>${shortTitle}` : '';
         res.shortText = `${tags} ${shortTitle}`;
         res.venueEventUrl = anchor.href;
-        res.soldOut = !!(eventEl.querySelector("[class*='styles_event-compact__text']")?.textContent.toLowerCase().includes('uitverkocht') ?? null);
+        res.soldOut = !!eventEl.querySelector("[class*='styles_event-compact__text']")?.textContent.match(/uitverkocht|sold\s?out/i) ?? false;
         return res;
       });
   }, {workerData});

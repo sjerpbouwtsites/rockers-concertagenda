@@ -104,7 +104,7 @@ metropoolScraper.makeBaseEventList = async function () {
         const genres = rawEvent.dataset?.genres ?? '';
         const st = rawEvent.querySelector(".card__title card__title--sub")?.textContent;
         res.shortText = (st + ' ' + genres).trim();
-        res.soldOut = !!(rawEvent.querySelector(".card__title--label")?.textContent.toLowerCase().includes('uitverkocht') ?? null)
+        res.soldOut = !!rawEvent.querySelector(".card__title--label")?.textContent.match(/uitverkocht|sold\s?out/i) ?? null;
         return res;
       });
   }, {workerData});

@@ -51,7 +51,10 @@ dbsScraper.makeBaseEventList = async function () {
     ({ months,workerData }) => {
       return Array.from(document.querySelectorAll(".fusion-events-post"))
         .map((eventEl) => {
-          const title = eventEl.querySelector(".fusion-events-meta .url")?.textContent.trim() ?? null;
+          let title = eventEl.querySelector(".fusion-events-meta .url")?.textContent.trim() ?? null;
+          if (title.match(/sold\s?out|uitverkocht/i)) {
+            title = title.replace(/\*?(sold\s?out|uitverkocht)\s?\*?\s?/i,'')
+          }
           const res = {
             unavailable: "",
             pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} - main - ${title}</a>`,

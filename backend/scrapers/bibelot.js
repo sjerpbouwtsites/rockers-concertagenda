@@ -75,7 +75,7 @@ bibelotScraper.makeBaseEventList = async function () {
         : [null, null];
       res.shortText = shortTextSplit[1];
       res.venueEventUrl = eventEl.querySelector(".link")?.href ?? null;
-      res.soldOut = !!(!eventEl.querySelector('.ticket-button')?.hasAttribute('href') ?? null) // als uitverkocht is span
+      res.soldOut = !!eventEl.querySelector('.ticket-button')?.textContent.match(/uitverkocht|sold\s?out/i) ?? null;
       return res;
     });
   }, {workerData});

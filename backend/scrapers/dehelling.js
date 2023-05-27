@@ -93,6 +93,8 @@ dehellingScraper.makeBaseEventList = async function () {
           res.errors.push({error: caughtError, remarks: `start date time eruit filteren error \n ${res.endDateTime} \n ${startDateTimeString} ${title} ${res.pageInfo}`,toDebug:res})        
         }
 
+        res.soldOut = !!eventEl.querySelector('.c-event-card__banner--uitverkocht');
+
         if (!res.startTime && res.endDateTime) {
           res.startDateTime = res.endDateTime;
           res.endDateTime = null;

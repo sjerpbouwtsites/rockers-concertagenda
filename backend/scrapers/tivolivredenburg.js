@@ -113,7 +113,7 @@ tivoliVredenburgScraper.makeBaseEventList = async function () {
         res.venueEventUrl = eventEl.querySelector(
           ".agenda-list-item__title-link"
         ).href;
-        res.soldOut = !!(eventEl.querySelector(".agenda-list-item__label")?.textContent.toLowerCase().includes('uitverkocht') ?? null)
+        res.soldOut = !!eventEl.querySelector(".agenda-list-item__label")?.textContent.match(/uitverkocht|sold\s?out/i) ?? false;
         return res;
       });
   }, {workerData});

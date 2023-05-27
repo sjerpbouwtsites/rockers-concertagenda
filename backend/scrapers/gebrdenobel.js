@@ -63,7 +63,7 @@ gebrdenobelScraper.makeBaseEventList = async function () {
               .querySelector(".jq-modal-trigger")
               ?.getAttribute("data-url") ?? "";
       
-        res.soldOut = !!(eventEl.querySelector('.meta-info')?.textContent.toLowerCase().includes('uitverkocht') ?? null)
+        res.soldOut = !!eventEl.querySelector('.meta-info')?.textContent.match(/uitverkocht|sold\s?out/i) ?? null;
         return res;
       })
   }, {workerData})

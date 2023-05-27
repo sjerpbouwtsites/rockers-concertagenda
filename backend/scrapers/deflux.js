@@ -121,6 +121,8 @@ defluxScraper.getPageInfo = async function ({ page, event}) {
         res.errors.push({error: caughtError, remarks: `door open starttime match ${res.pageInfo}`,toDebug:res})
       }
     }
+
+    // TODO sold out flux
     
     res.price = eventScheme.querySelector('[itemprop="event-price"]')?.getAttribute('content') ?? '';
     res.longTextHTML = document.querySelector('[itemprop="description"]')?.innerHTML ?? '';

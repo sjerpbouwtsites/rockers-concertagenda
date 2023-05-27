@@ -114,6 +114,7 @@ afasliveScraper.makeBaseEventList = async function () {
         }
         res.venueEventUrl = agendaBlock.querySelector("a")?.href ?? null;
         res.image = agendaBlock.querySelector("img")?.src ?? null;
+        res.soldOut = !!agendaBlock?.innerHTML.match(/uitverkocht|sold\s?out/i) ?? false;
         return res;
       })
       .filter(event => {

@@ -110,7 +110,7 @@ occiiScraper.makeBaseEventList = async function () {
         }         
 
         const eventText = occiiEvent.textContent.toLowerCase();
-        res.soldOut = eventText.includes('uitverkocht') || eventText.includes('sold out');
+        res.soldOut = !!eventText.match(/uitverkocht|sold\s?out/i) ?? false;
         res.venueEventUrl = firstAnchor.href;
         res.shortText = occiiEvent.querySelector(".occii-events-description")?.textContent ?? null
         return res;

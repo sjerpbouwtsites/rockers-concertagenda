@@ -65,7 +65,7 @@ doornroosjeScraper.makeBaseEventList = async function () {
             ?.textContent.trim()
             .replace(res.title, "") ?? '';
         res.venueEventUrl = eventEl?.href;
-        res.soldOut = eventEl.querySelector('.c-program__info-container')?.textContent.toLowerCase().includes('uitverkocht') ?? null;
+        res.soldOut = !!eventEl?.innerHTML.match(/uitverkocht|sold\s?out/i) ?? false;
         return res;
       });
   }, {workerData});

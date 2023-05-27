@@ -134,6 +134,8 @@ kavkaScraper.makeBaseEventList = async function () {
             })
           }
 
+          res.soldOut = !!rawEvent.querySelector(".badge")?.textContent.match(/uitverkocht|sold\s?out/i) ?? false;
+
           res.shortText =
             rawEvent.querySelector("article h3 + p")?.textContent.trim() ?? "";
           res.venueEventUrl = rawEvent?.href ?? null;

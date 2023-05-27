@@ -56,7 +56,7 @@ effenaarScraper.makeBaseEventList = async function () {
           }
           res.shortText = eventEl.querySelector(".card-subtitle")?.textContent ?? '';
           res.venueEventUrl = eventEl?.href ?? null;
-          res.soldOut = !!(eventEl.querySelector('.card-content .card-status')?.textContent.toLowerCase().includes('uitverkocht') ?? null)
+          res.soldOut = !!eventEl.querySelector('.card-content .card-status')?.innerHTML.match(/uitverkocht|sold\s?out/i) ?? null;
           return res;
         });
     },

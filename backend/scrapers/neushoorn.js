@@ -116,7 +116,7 @@ neushoornScraper.makeBaseEventList = async function () {
           }  
           res.shortText = eventEl.querySelector('.productions__item__subtitle')?.textContent ?? '';
           res.venueEventUrl = eventEl.href;
-          res.soldOut = !!(eventEl.querySelector(".chip")?.textContent.toLowerCase().includes('uitverkocht') ?? null)
+          res.soldOut = !!eventEl.querySelector(".chip")?.textContent.match(/uitverkocht|sold\s?out/i) ?? false;
           return res;
         }
       );

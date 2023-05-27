@@ -52,13 +52,21 @@ idunaScraper.makeBaseEventList = async function () {
             const doomEvents = Array.from(
               document.querySelectorAll("#gridcontent .griditemanchor")
             ).map((event) => {
-              const title = event.querySelector(".griditemtitle")?.textContent ?? null;
+              const title = event.querySelector(".griditemtitle h2:first-child")?.textContent ?? null;
+              let shortText = event.querySelector(".griditemtitle h2 ~ h2")?.textContent ?? null;
+              let soldOut = false;
+              if (shortText.match(/uitverkocht|sold\soud/i)) {
+                soldOut = true;
+                shortText = shortText.replace(/uitverkocht|sold\sout\]?/i,'').replace(/[\[\]]+/i,'').trim()
+              }  
               return {
                 unavailable: "",
                 pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
-                errors: [],          
+                errors: [],         
+                soldOut, 
                 venueEventUrl: event?.href ?? null,
                 title,
+                shortText
               }               
             });
             resolve(doomEvents);
@@ -76,13 +84,21 @@ idunaScraper.makeBaseEventList = async function () {
             const metalEvents = Array.from(
               document.querySelectorAll("#gridcontent .griditemanchor")
             ).map((event) => {
-              const title = event.querySelector(".griditemtitle")?.textContent ?? null;
+              const title = event.querySelector(".griditemtitle h2:first-child")?.textContent ?? null;
+              let shortText = event.querySelector(".griditemtitle h2 ~ h2")?.textContent ?? null;
+              let soldOut = false;
+              if (shortText.match(/uitverkocht|sold\soud/i)) {
+                soldOut = true;
+                shortText = shortText.replace(/uitverkocht|sold\sout\]?/i,'').replace(/[\[\]]+/i,'').trim()
+              } 
               return {
                 unavailable: "",
                 pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
                 errors: [],          
                 venueEventUrl: event?.href ?? null,
                 title,
+                soldOut,
+                shortText
               }               
             });
             resolve(metalEvents);
@@ -103,10 +119,17 @@ idunaScraper.makeBaseEventList = async function () {
             const punkEvents = Array.from(
               document.querySelectorAll("#gridcontent .griditemanchor")
             ).map((event) => {
-              const title = event.querySelector(".griditemtitle")?.textContent.trim() ?? null;
+              const title = event.querySelector(".griditemtitle h2:first-child")?.textContent ?? null;
+              let shortText = event.querySelector(".griditemtitle h2 ~ h2")?.textContent ?? null;
+              let soldOut = false;
+              if (shortText.match(/uitverkocht|sold\soud/i)) {
+                soldOut = true;
+                shortText = shortText.replace(/uitverkocht|sold\sout\]?/i,'').replace(/[\[\]]+/i,'').trim()
+              }               
               return {
                 venueEventUrl: event?.href ?? null,
                 title,
+                soldOut,
                 pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
                 errors: [],
                 unavailable: "",

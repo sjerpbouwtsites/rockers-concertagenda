@@ -77,7 +77,7 @@ voltScraper.makeBaseEventList = async function () {
             remarks: `image missing ${res.pageInfo}`
           })
         }        
-        res.soldOut = !!(rawEvent.querySelector(".card-content")?.textContent.toLowerCase().includes('uitverkocht') ?? null)
+        res.soldOut = rawEvent.querySelector(".card-content")?.textContent.match(/uitverkocht|sold\s?out/i) ?? false;
         return res;
       });
   }, {workerData});

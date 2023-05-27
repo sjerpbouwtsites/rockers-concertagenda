@@ -107,6 +107,8 @@ p60Scraper.makeBaseEventList = async function () {
           title
         };
 
+        res.soldOut = itemEl?.textContent.match(/uitverkocht|sold\s?out/i) ?? false; // TODO gegokt soldout p60
+
         res.venueEventUrl = itemEl.querySelector('.field-group-link')?.href;
 
         const doorOpenDateTimeB = itemEl.querySelector('.p60-list__item__date time')?.getAttribute('datetime')
