@@ -57,7 +57,7 @@ export const workerConfig = {
   patronaat: { workerCount: 3, workerConcurrent: 1 },
   tivolivredenburg:{ workerCount: 4, workerConcurrent: 1 },
   ticketmaster :{
-    workerCount: 5,CPUReq: 'high', workerConcurrent: 1
+    workerCount: 2, workerConcurrent: 1
   },  
   volt: { workerCount: 1, workerConcurrent: 1 },
 }

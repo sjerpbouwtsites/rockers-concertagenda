@@ -29,46 +29,48 @@ tivoliVredenburgScraper.listenToMasterThread();
 
 tivoliVredenburgScraper.singleRawEventCheck = async function (event) {
 
-  const isRefused = await this.rockRefuseListCheck(event, event.title.toLowerCase())
+  const workingTitle = this.cleanupEventTitle(event.title);
+
+  this.dirtyTalk(workingTitle)
+  const isRefused = await this.rockRefuseListCheck(event, workingTitle)
+  this.dirtyDebug(isRefused);
   if (isRefused.success) return {
     reason: isRefused.reason,
     event,
     success: false
   };
 
-  const isAllowed = await this.rockAllowListCheck(event, event.title.toLowerCase())
-  if (isAllowed.success) return isAllowed;
-
-  const hasForbiddenTerms = await this.hasForbiddenTerms(event);
-  if (hasForbiddenTerms.success) {
-    await this.saveRefusedTitle(event.title.toLowerCase())
-    return {
-      reason: hasForbiddenTerms.reason,
-      success: false,
-      event
-    }
+  const isAllowed = await this.rockAllowListCheck(event, workingTitle)
+  this.dirtyDebug(isAllowed)
+  if (isAllowed.success) {
+    return isAllowed
   }
 
-  const hasGoodTermsRes = await this.hasGoodTerms(event);
-  if (hasGoodTermsRes.success) {
-    await this.saveAllowedTitle(event.title.toLowerCase())
-    return hasGoodTermsRes;
-  }
-  const tl = event.title.toLowerCase();
-  const match = tl.match(/([\w\s]+)\s+[+–&-,]/) 
-  let ol1;
-  let olz = null;
-  if (match && Array.isArray(match) && match.length) {
-    ol1 = match[1].replace(/\s{2,100}/g,' ').trim();
-    olz = [ol1]
-  }
-  const isRockRes = await this.isRock(event, olz);
-  if (isRockRes.success){
-    await this.saveAllowedTitle(event.title.toLowerCase())
-  } else {
-    await this.saveRefusedTitle(event.title.toLowerCase())
-  }
-  return isRockRes;
+  throw Error('mag hier niet komen')
+
+  // const hasForbiddenTerms = await this.hasForbiddenTerms(event);
+  // if (hasForbiddenTerms.success) {
+  //   await this.saveRefusedTitle(workingTitle)
+  //   return {
+  //     reason: hasForbiddenTerms.reason,
+  //     success: false,
+  //     event
+  //   }
+  // }
+
+  // const hasGoodTermsRes = await this.hasGoodTerms(event);
+  // if (hasGoodTermsRes.success) {
+  //   await this.saveAllowedTitle(workingTitle)
+  //   return hasGoodTermsRes;
+  // }
+
+  // const isRockRes = await this.isRock(event, [workingTitle]);
+  // if (isRockRes.success){
+  //   await this.saveAllowedTitle(workingTitle)
+  // } else {
+  //   await this.saveRefusedTitle(workingTitle)
+  // }
+  // return isRockRes;
   
 };
 

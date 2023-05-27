@@ -157,7 +157,7 @@ export default class AbstractScraper {
     this.months = getVenueMonths(workerData.family)
     this.rockAllowList = fs.readFileSync(fsDirections.isRockAllow, 'utf-8')
     this.rockRefuseList = fs.readFileSync(fsDirections.isRockRefuse, 'utf-8')
-    this.dirtyLog(this.rockRefuseList)
+
   }
 
 
@@ -671,6 +671,10 @@ export default class AbstractScraper {
   }
 
   async rockAllowListCheck(event, title){
+    if(typeof event?.title !== 'string' || typeof title !== 'string'){
+      this.dirtyDebug(arguments);
+      throw new Error(`argument / argument type error rock allow list check`)
+    }
     const tt = this.rockAllowList.includes(title);
     return {
       event,
@@ -680,6 +684,10 @@ export default class AbstractScraper {
   }
 
   async rockRefuseListCheck(event, title){
+    if(typeof event?.title !== 'string' || typeof title !== 'string'){
+      this.dirtyDebug(arguments);
+      throw new Error(`argument / argument type error rock refuse list check`)
+    }    
     const tt = this.rockRefuseList.includes(title);
     return {
       event,
@@ -689,6 +697,10 @@ export default class AbstractScraper {
   }
 
   async metalEncyclopedia(event, title){
+    if(typeof event?.title !== 'string' || typeof title !== 'string'){
+      this.dirtyDebug(arguments);
+      throw new Error(`argument / argument type error metal encyclopedia check`)
+    }
 
     let workingTitle = this.cleanupEventTitle(title)
 
@@ -744,6 +756,10 @@ export default class AbstractScraper {
   }
 
   async wikipedia(event, title){
+    if(typeof event?.title !== 'string' || typeof title !== 'string'){
+      this.dirtyDebug(arguments);
+      throw new Error(`argument / argument type error wikipedia list check`)
+    }    
 
     this.dirtyTalk(`wikipedia ${title}`)
 
@@ -837,7 +853,7 @@ export default class AbstractScraper {
       success: false,
       reason: `wiki catch return`      
     }
-  }
+  } 
 
   cleanupEventTitle(workingTitle = ''){
     // - 14:35 zoals bij afas
@@ -847,6 +863,10 @@ export default class AbstractScraper {
     
     if (workingTitle.includes('&')) {
       workingTitle = workingTitle.replace(/&.*$/,'');
+    }
+
+    if (workingTitle.includes('|')) {
+      workingTitle = workingTitle.replace(/|.*$/,'');
     }
 
     if (workingTitle.includes('•')) {

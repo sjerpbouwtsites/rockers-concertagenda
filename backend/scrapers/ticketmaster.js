@@ -99,7 +99,7 @@ ticketmasterScraper.makeBaseEventList = async function() {
 
   let filteredRawEvents = this.filterForMetal(rawEvents)
 
-  this.saveBaseEventlist(workerData.name, rawEvents)
+  this.saveBaseEventlist(workerData.name, filteredRawEvents)
   return await this.makeBaseEventListEnd({
     stopFunctie, rawEvents: filteredRawEvents}
   );
@@ -175,7 +175,7 @@ ticketmasterScraper.getPageInfo = async function ({event}) {
    
   }
 
-  if (workerNames.includes(pageInfo.location)){
+  if (workerNames.includes(pageInfo.location) || pageInfo.location === 'metropoolenschede'){
     pageInfo.unavailable += ` locatie ${pageInfo.location} niet bij TM.`
     return await this.getPageInfoEnd({pageInfo, stopFunctie})
   }
