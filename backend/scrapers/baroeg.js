@@ -194,6 +194,7 @@ baroegScraper.getPageInfo = async function ({ page, event }) {
         }
         res.longTextHTML = postContent.innerHTML;
       }
+      
       res.soldOut = !!(document.querySelector('.wp_theatre_event_tickets_status_soldout') ?? null)
 
       return res;

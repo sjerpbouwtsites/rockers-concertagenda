@@ -60,10 +60,13 @@ class EventBlocks extends React.Component {
 
     await fetch(thisEvent.longText.replace("../public/", "/"), {})
       .then((response) => {
+
         const rrr = response.text();
+        
         return rrr;
       })
       .then((text) => {
+        console.log(text)
         let oldEvents = this.state.musicEvents;
         oldEvents[musicEventKey].shortText = null;
         oldEvents[musicEventKey].enlarged = true;
