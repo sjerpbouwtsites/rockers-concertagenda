@@ -62,10 +62,11 @@ class EventBlocks extends React.Component {
       .then((response) => {
 
         const rrr = response.text();
-        console.log(rrr)
+        
         return rrr;
       })
       .then((text) => {
+        console.log(text)
         let oldEvents = this.state.musicEvents;
         oldEvents[musicEventKey].shortText = null;
         oldEvents[musicEventKey].enlarged = true;
