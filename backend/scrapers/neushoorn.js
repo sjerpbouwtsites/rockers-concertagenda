@@ -100,7 +100,7 @@ neushoornScraper.makeBaseEventList = async function () {
     );
   }
 
-  const rawEvents = await page.evaluate(({workerData}) => {
+  let rawEvents = await page.evaluate(({workerData,unavailabiltyTerms}) => {
     return Array.from(document.querySelectorAll(".productions__item"))
       .map(
         (eventEl) => {
@@ -109,18 +109,21 @@ neushoornScraper.makeBaseEventList = async function () {
             ".productions__item__content span:first-child"
           ).textContent;
           const res = {
-            unavailable: "",
             pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
             errors: [],          
             title
           }  
           res.shortText = eventEl.querySelector('.productions__item__subtitle')?.textContent ?? '';
           res.venueEventUrl = eventEl.href;
-          res.soldOut = !!(eventEl.querySelector(".chip")?.textContent.toLowerCase().includes('uitverkocht') ?? null)
+          const uaRex = new RegExp(unavailabiltyTerms.join("|"), 'gi');
+          res.unavailable = !!eventEl.textContent.match(uaRex);          
+          res.soldOut = !!eventEl.querySelector(".chip")?.textContent.match(/uitverkocht|sold\s?out/i) ?? false;
           return res;
         }
       );
-  }, {workerData});
+  }, {workerData,unavailabiltyTerms: AbstractScraper.unavailabiltyTerms})
+    
+  rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
 
   this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
@@ -128,9 +131,6 @@ neushoornScraper.makeBaseEventList = async function () {
     stopFunctie, rawEvents: thisWorkersEvents}
   );
 };
-
-
-// @TODO Rock control naar async
 
 // GET PAGE INFO
 
@@ -141,7 +141,6 @@ neushoornScraper.getPageInfo = async function ({ page,event }) {
   const pageInfo = await page.evaluate(
     ({ months, event }) => {
       const res = {
-        unavailable: event.unavailable,
         pageInfo: `<a class='page-info' href='${location.href}'>${event.title}</a>`,
         errors: [],
       };
@@ -162,10 +161,8 @@ neushoornScraper.getPageInfo = async function ({ page,event }) {
           toDebug:{
             text:  document.querySelector(".summary .summary__item:first-child")
               ?.textContent,
-            res
           }
         })
-        return res;
       }
 
       const timeTextcontent =
@@ -174,7 +171,7 @@ neushoornScraper.getPageInfo = async function ({ page,event }) {
       const timeTextMatch = timeTextcontent.match(
         /(\d{2}:\d{2}).*(\d{2}:\d{2})/
       );
-      if (timeTextMatch && timeTextMatch.length === 3) {
+      if (timeTextMatch && timeTextMatch.length === 3 && res.startDate) {
         res.doorOpenDateTime = new Date(
           `${res.startDate}T${timeTextMatch[1]}`
         ).toISOString();
@@ -202,7 +199,7 @@ neushoornScraper.getPageInfo = async function ({ page,event }) {
           error: caughtError,
           remarks: `longTextHTML faal ${res.pageInfo}`, 
           toDebug: {
-            res, event
+            event
           }
         });
       }

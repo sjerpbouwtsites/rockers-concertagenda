@@ -24,7 +24,6 @@ const tivoliVredenburgScraper = new AbstractScraper(makeScraperConfig({
 
 tivoliVredenburgScraper.listenToMasterThread();
 
-
 // SINGLE EVENT CHECK
 
 tivoliVredenburgScraper.singleRawEventCheck = async function (event) {
@@ -69,7 +68,6 @@ tivoliVredenburgScraper.singleRawEventCheck = async function (event) {
   
 };
 
-
 // MAKE BASE EVENTS
 
 tivoliVredenburgScraper.makeBaseEventList = async function () {
@@ -84,7 +82,7 @@ tivoliVredenburgScraper.makeBaseEventList = async function () {
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
-  const rawEvents = await page.evaluate(({workerData}) => {
+  let rawEvents = await page.evaluate(({workerData, unavailabiltyTerms}) => {
     return Array.from(document.querySelectorAll(".agenda-list-item"))
       .map((eventEl) => {
         const title =
@@ -92,7 +90,6 @@ tivoliVredenburgScraper.makeBaseEventList = async function () {
             .querySelector(".agenda-list-item__title")
             ?.textContent.trim() ?? null;
         const res = {
-          unavailable: '',
           pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
           errors: [],
           title
@@ -113,10 +110,14 @@ tivoliVredenburgScraper.makeBaseEventList = async function () {
         res.venueEventUrl = eventEl.querySelector(
           ".agenda-list-item__title-link"
         ).href;
-        res.soldOut = !!(eventEl.querySelector(".agenda-list-item__label")?.textContent.toLowerCase().includes('uitverkocht') ?? null)
+        const uaRex = new RegExp(unavailabiltyTerms.join("|"), 'gi');
+        res.unavailable = !!eventEl.textContent.match(uaRex);        
+        res.soldOut = !!eventEl.querySelector(".agenda-list-item__label")?.textContent.match(/uitverkocht|sold\s?out/i) ?? false;
         return res;
       });
-  }, {workerData});
+  }, {workerData, unavailabiltyTerms: AbstractScraper.unavailabiltyTerms})
+  
+  rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
 
   this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
@@ -134,7 +135,6 @@ tivoliVredenburgScraper.getPageInfo = async function ({ page, event }) {
 
   const pageInfo = await page.evaluate(({event}) => {
     const res = {
-      unavailable: event.unavailable,
       pageInfo: `<a class='page-info' href='${event.venueEventUrl}'>${event.title}</a>`,
       errors: [],
     };
@@ -184,7 +184,7 @@ tivoliVredenburgScraper.getPageInfo = async function ({ page, event }) {
           remarks: `Open door ${res.pageInfo}`,
           toDebug:{
             text: eventInfoDtDDText,
-            res,event
+            event
           }
         });
       }
@@ -201,10 +201,9 @@ tivoliVredenburgScraper.getPageInfo = async function ({ page, event }) {
           remarks: `startTijd door ${res.pageInfo}`,
           toDebug: {
             matches:`${startMatch.join("")}`,
-            res,event
+            event
           }
         });
-        return res;
       }
     }
     if (Array.isArray(endMatch) && endMatch.length > 1) {
@@ -219,7 +218,7 @@ tivoliVredenburgScraper.getPageInfo = async function ({ page, event }) {
           remarks: `endtijd ${res.pageInfo}`,
           toDebug: {
             text: eventInfoDtDDText,
-            res,event
+            event
           }
         });
       }

@@ -2,8 +2,7 @@ import { workerData } from "worker_threads";
 import * as _t from "../mods/tools.js";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
-import fs from "fs";
-import fsDirections from "../mods/fs-directions.js";
+
 // SCRAPER CONFIG
 
 const metropoolScraper = new AbstractScraper(makeScraperConfig({
@@ -90,12 +89,11 @@ metropoolScraper.makeBaseEventList = async function () {
   await _t.autoScroll(page);
   await _t.autoScroll(page);
 
-  const rawEvents = await page.evaluate(({workerData}) => {
+  let rawEvents = await page.evaluate(({workerData, unavailabiltyTerms}) => {
     return Array.from(document.querySelectorAll(".card--event"))
       .map((rawEvent) => {
         const title = rawEvent.querySelector(".card__title")?.textContent ?? null;
         const res = {
-          unavailable: "",
           pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
           errors: [],        
           title,  
@@ -104,10 +102,14 @@ metropoolScraper.makeBaseEventList = async function () {
         const genres = rawEvent.dataset?.genres ?? '';
         const st = rawEvent.querySelector(".card__title card__title--sub")?.textContent;
         res.shortText = (st + ' ' + genres).trim();
-        res.soldOut = !!(rawEvent.querySelector(".card__title--label")?.textContent.toLowerCase().includes('uitverkocht') ?? null)
+        const uaRex = new RegExp(unavailabiltyTerms.join("|"), 'gi');
+        res.unavailable = !!rawEvent.textContent.match(uaRex);        
+        res.soldOut = !!rawEvent.querySelector(".card__title--label")?.textContent.match(/uitverkocht|sold\s?out/i) ?? null;
         return res;
       });
-  }, {workerData});
+  }, {workerData, unavailabiltyTerms: AbstractScraper.unavailabiltyTerms})
+  
+  rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
   
   this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
@@ -124,7 +126,6 @@ metropoolScraper.getPageInfo = async function ({ page, event}) {
   
   const pageInfo = await page.evaluate(({months, event}) => {
     const res = {
-      unavailable: event.unavailable,
       pageInfo: `<a class='page-info' href='${location.href}'>${event.title}</a>`,
       errors: [],
     };
@@ -196,7 +197,7 @@ metropoolScraper.getPageInfo = async function ({ page, event}) {
         error: caughtError,
         remarks: `start deurtijd match en of dateconversie ${res.pageInfo}`,
         toDebug: {
-          res, event
+          event
         }
       });
     }

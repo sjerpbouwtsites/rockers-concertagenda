@@ -1,82 +1,5 @@
 [
   {
-    "doorOpenDateTime": "2022-05-26T18:00:00.000Z",
-    "startDateTime": "2022-05-26T19:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://neushoorn.nl/production/hardcore-vrijdag/",
-    "title": "Hardcore Vrijdag",
-    "location": "neushoorn",
-    "price": 5,
-    "shortText": "De perfecte manier om het weekend keihard in te beuken",
-    "longText": "../public/texts/0687816d-312c-491a-bece-38a1df48830d.html",
-    "image": "https://neushoorn.nl/wp-content/uploads/2023/04/DETAIL-hardcore-vrijdag-b468-d7fd-720x405.jpg",
-    "soldOut": false,
-    "unavailable": "",
-    "corrupted": null,
-    "origin": "neushoorn"
-  },
-  {
-    "doorOpenDateTime": "2022-05-28T18:00:00.000Z",
-    "startDateTime": "2022-05-28T18:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://neushoorn.nl/production/the-rock-circus-talent-tour-friesland/",
-    "title": "The Rock Circus Talent Tour – Friesland",
-    "location": "neushoorn",
-    "shortText": "Strijd om een plek op het grootste indoor rock & metal festival van de wereld!",
-    "longText": "../public/texts/9d34d640-3ef8-4950-8d98-bd4618808db5.html",
-    "image": "https://neushoorn.nl/wp-content/uploads/2023/03/detail-2-2bb8-691x460.jpg",
-    "soldOut": false,
-    "unavailable": "",
-    "corrupted": null,
-    "origin": "neushoorn"
-  },
-  {
-    "doorOpenDateTime": "2022-06-09T21:55:00.000Z",
-    "startDateTime": "2022-06-08T22:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://neushoorn.nl/production/into-the-grave-afterparty-bongzilla-ter-ziele/",
-    "title": "Into The Grave afterparty: Bongzilla + Ter Ziele",
-    "location": "neushoorn",
-    "shortText": "Weedmetal en blackened postdoom",
-    "longText": "../public/texts/a9635cfe-4e4a-4708-beb1-bc56479480b9.html",
-    "image": "https://neushoorn.nl/wp-content/uploads/2023/05/Bongzilla_detail-488b-548x460.png",
-    "soldOut": false,
-    "unavailable": "",
-    "corrupted": null,
-    "origin": "neushoorn"
-  },
-  {
-    "doorOpenDateTime": "2022-06-10T21:55:00.000Z",
-    "startDateTime": "2022-06-09T22:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://neushoorn.nl/production/into-the-grave-afterparty-cerebral-extinction-the-troopers/",
-    "title": "Into The Grave afterparty: Cerebral Extinction + The Troopers",
-    "location": "neushoorn",
-    "shortText": "Brutal death metal en Iron Maiden tribute",
-    "longText": "../public/texts/5152f389-c449-484d-b14e-ed7316311bbc.html",
-    "image": "https://neushoorn.nl/wp-content/uploads/2023/05/Cerebral_Extinction_detail-3f73-694x460.jpg",
-    "soldOut": false,
-    "unavailable": "",
-    "corrupted": null,
-    "origin": "neushoorn"
-  },
-  {
-    "doorOpenDateTime": "2022-06-16T18:00:00.000Z",
-    "startDateTime": "2022-06-16T19:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://neushoorn.nl/production/nh-cafe-abdomen-x-paracetamol/",
-    "title": "NH Café: Abdomen x Paracetamøl",
-    "location": "neushoorn",
-    "price": 5,
-    "shortText": "In your face, hard en energiek",
-    "longText": "../public/texts/725f779a-5224-45ee-97c4-6e31b026ebb3.html",
-    "image": "https://neushoorn.nl/wp-content/uploads/2023/03/Abdomen_detail-733a-720x345.jpg",
-    "soldOut": false,
-    "unavailable": "",
-    "corrupted": null,
-    "origin": "neushoorn"
-  },
-  {
     "doorOpenDateTime": "2022-06-30T18:00:00.000Z",
     "startDateTime": "2022-06-30T18:45:00.000Z",
     "endDateTime": null,
@@ -85,12 +8,11 @@
     "location": "neushoorn",
     "price": 10,
     "shortText": "FVC-plaat #10",
-    "longText": "../public/texts/ff734b8e-65e9-444f-9925-378bdae655b3.html",
+    "longText": "../public/texts/18d04295-fb7f-49a0-aa57-1ce65ae34766.html",
     "image": "https://neushoorn.nl/wp-content/uploads/2023/05/detail-2-5923-691x460.png",
     "soldOut": false,
-    "unavailable": "",
-    "corrupted": null,
-    "origin": "neushoorn"
+    "unavailable": false,
+    "corrupted": null
   },
   {
     "doorOpenDateTime": "2022-07-05T18:00:00.000Z",
@@ -101,12 +23,26 @@
     "location": "neushoorn",
     "price": 13,
     "shortText": "The American Nirvana tribute",
-    "longText": "../public/texts/87012c82-8891-4583-be23-b61d61686f3b.html",
+    "longText": "../public/texts/e79e459a-e18d-4e19-a828-694909bc8204.html",
     "image": "https://neushoorn.nl/wp-content/uploads/2023/03/101431340_2943254452410007_6867402550228811776_n-f399-586x460.jpg",
     "soldOut": false,
-    "unavailable": "",
-    "corrupted": null,
-    "origin": "neushoorn"
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
+    "doorOpenDateTime": "2022-08-10T17:30:00.000Z",
+    "startDateTime": "2022-08-10T18:45:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://neushoorn.nl/production/alestorm/",
+    "title": "Alestorm",
+    "location": "neushoorn",
+    "price": 32.5,
+    "shortText": "It's pirate party time!",
+    "longText": "../public/texts/91e35603-4e30-4b74-a6b8-11f69643560a.html",
+    "image": "https://neushoorn.nl/wp-content/uploads/2023/06/Alestorm_detail-56d8-658x460.png",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
   },
   {
     "doorOpenDateTime": "2022-09-30T11:00:00.000Z",
@@ -117,12 +53,11 @@
     "location": "neushoorn",
     "price": 49,
     "shortText": "Internationaal stoner-, sludge- en doomfestival",
-    "longText": "../public/texts/2d9f4aa7-f481-4a44-b596-8c571706066b.html",
+    "longText": "../public/texts/7246720f-45e1-44c9-91e2-cd92dafc1d68.html",
     "image": "https://neushoorn.nl/wp-content/uploads/2023/04/Atomic_bitchwax_detail-1e8f-720x430.png",
     "soldOut": false,
-    "unavailable": "",
-    "corrupted": null,
-    "origin": "neushoorn"
+    "unavailable": false,
+    "corrupted": null
   },
   {
     "doorOpenDateTime": "2022-10-22T14:00:00.000Z",
@@ -133,12 +68,11 @@
     "location": "neushoorn",
     "price": 15,
     "shortText": "All-star System of a Down tribute uit UK met leden van DragonForce, Breed 77 en Anti-Nowhere League",
-    "longText": "../public/texts/bf8fb189-fc41-47a9-ae32-a9a8850e6bbb.html",
+    "longText": "../public/texts/7393405c-3811-4c94-8d50-124b3046d4e2.html",
     "image": "https://neushoorn.nl/wp-content/uploads/2023/03/detail-3-a1ce-691x460.jpg",
     "soldOut": false,
-    "unavailable": "",
-    "corrupted": null,
-    "origin": "neushoorn"
+    "unavailable": false,
+    "corrupted": null
   },
   {
     "doorOpenDateTime": "2022-10-28T17:30:00.000Z",
@@ -147,14 +81,12 @@
     "venueEventUrl": "https://neushoorn.nl/production/feuerengel-a-tribute-to-rammstein/",
     "title": "FEUERENGEL – A Tribute to Rammstein",
     "location": "neushoorn",
-    "price": 33,
     "shortText": "Een perfecte illusie van het origineel",
-    "longText": "../public/texts/60f79910-8be4-4048-a47c-538281596718.html",
-    "image": "https://neushoorn.nl/wp-content/uploads/2023/04/detail-d5d8-691x460.jpg",
-    "soldOut": false,
-    "unavailable": "",
-    "corrupted": null,
-    "origin": "neushoorn"
+    "longText": "../public/texts/41cf0c9a-556c-450c-99dc-dc4b05515ebd.html",
+    "image": "https://neushoorn.nl/wp-content/uploads/2023/04/FEUERENGEL_detail-687x460.png",
+    "soldOut": true,
+    "unavailable": false,
+    "corrupted": null
   },
   {
     "doorOpenDateTime": "2022-11-11T13:30:00.000Z",
@@ -165,12 +97,11 @@
     "location": "neushoorn",
     "price": 19.5,
     "shortText": "Pestilence, Stellaris, Marina e.v.a.",
-    "longText": "../public/texts/d15dfc1e-eeb1-4ebb-a5d3-6dbed37644c5.html",
+    "longText": "../public/texts/949984cd-7699-42f0-b6e4-c2097b83f4fd.html",
     "image": "https://neushoorn.nl/wp-content/uploads/2023/05/Pestilence_detail-917c-720x412.png",
     "soldOut": false,
-    "unavailable": "",
-    "corrupted": null,
-    "origin": "neushoorn"
+    "unavailable": false,
+    "corrupted": null
   },
   {
     "doorOpenDateTime": "2022-01-12T18:30:00.000Z",
@@ -181,12 +112,11 @@
     "location": "neushoorn",
     "price": 21.95,
     "shortText": "Long Live Rock 'n Roll",
-    "longText": "../public/texts/3869f047-94f4-4a7f-aa5b-f30c06a448ce.html",
+    "longText": "../public/texts/a2db277e-0fae-402f-8764-e289b23c1d68.html",
     "image": "https://neushoorn.nl/wp-content/uploads/2023/05/RJD_detail-de01-720x427.png",
     "soldOut": false,
-    "unavailable": "",
-    "corrupted": null,
-    "origin": "neushoorn"
+    "unavailable": false,
+    "corrupted": null
   },
   {
     "doorOpenDateTime": "2022-03-16T19:00:00.000Z",
@@ -197,11 +127,10 @@
     "location": "neushoorn",
     "price": 15,
     "shortText": "Nederlands eerste tribute aan de koningen van prog metal",
-    "longText": "../public/texts/2fb73c84-d0ff-4132-960d-f122f00b0760.html",
+    "longText": "../public/texts/f67270ff-7876-402e-93ed-d019b939e497.html",
     "image": "https://neushoorn.nl/wp-content/uploads/2023/01/regressivehypnosis_detail-4966-692x460.png",
     "soldOut": false,
-    "unavailable": "",
-    "corrupted": null,
-    "origin": "neushoorn"
+    "unavailable": false,
+    "corrupted": null
   }
 ]

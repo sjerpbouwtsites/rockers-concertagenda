@@ -21,7 +21,7 @@ export default class WorkerStatus {
   static _workers = {};
   static CPUFree = 100;
   static shellArguments = getShellArguments();
-  static maxSimultaneousWorkers = 3;
+  static maxSimultaneousWorkers = 5;
 
   /**
    * Niet een dynamische waarde maar éénmalig ingesteld

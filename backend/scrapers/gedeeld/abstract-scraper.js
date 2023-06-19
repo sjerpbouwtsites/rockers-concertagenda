@@ -19,6 +19,16 @@ import ErrorWrapper from "../../mods/error-wrapper.js";
  */
 export default class AbstractScraper {
 
+  completedMainPage = false
+  workingOnSinglePages = false;
+  debugCorruptedUnavailable = true;
+  debugSingleMergedEventCheck = false;
+  debugRawEventAsyncCheck = false;
+
+  static unavailabiltyTerms = [
+    'uitgesteld', 'verplaatst', 'locatie gewijzigd', 'besloten', 'afgelast', 'geannuleerd'
+  ]
+
   /**
    * Gebruikt in singleRawEventChecks' hasForbiddenTerms
    *
@@ -203,7 +213,6 @@ export default class AbstractScraper {
     } else {
       this.browser = 'disabled';
     }
-
     const baseMusicEvents = await this.makeBaseEventList().catch(
       this.handleOuterScrapeCatch
     );
@@ -211,6 +220,7 @@ export default class AbstractScraper {
     const checkedEvents = await this.announceAndCheck(baseMusicEvents).catch(
       this.handleOuterScrapeCatch
     );
+    this.completedMainPage = true;
     if (!checkedEvents) return false;
     await this.processSingleMusicEvent(checkedEvents).catch(
       this.handleOuterScrapeCatch
@@ -350,7 +360,7 @@ export default class AbstractScraper {
    * sluit page
    * verwerkt mogelijke witruimte weg
    * verwerkt fouten van raw make base events
-   * haalt rawEvents door basicMusicEventsFilter en returned
+   * haalt rawEvents door isMusicEventCorruptedMapper en returned
    *
    * @param {stopFunctie timeout, page Puppeteer.Page, rawEvents {}<>} 
    * @return {MusicEvent[]}
@@ -396,7 +406,6 @@ export default class AbstractScraper {
         rawEvent.origin = workerData.family;
         return rawEvent
       })
-      .filter(this.basicMusicEventsFilter)
     ;
     if (this.puppeteerConfig.app.mainPage.enforceMusicEventType){
       return r.map((event) => new MusicEvent(event));
@@ -418,48 +427,45 @@ export default class AbstractScraper {
    * @return {boolean}
    * @memberof AbstractScraper
    */
-  basicMusicEventsFilter = (musicEvent) => {
+  isMusicEventCorruptedMapper = (musicEvent) => {
 
-    let missingProperties = []
-    const meetsRequiredProperties = this.puppeteerConfig.app.mainPage.requiredProperties.reduce((prev, next)=>{
-      if (!musicEvent[next]){
-        missingProperties.push(next)
-      }
-      return prev && musicEvent[next]
-    }, true)        
-    if (!meetsRequiredProperties) {
-      musicEvent.corrupted = missingProperties.join(',')
+    const requiredProperties = !this.completedMainPage 
+      ? this.puppeteerConfig?.app?.mainPage?.requiredProperties
+      : this.puppeteerConfig?.app?.singlePage?.requiredProperties
+
+    const missingProperties = requiredProperties
+      .map((property)=>{
+        if (property === 'price') {
+          if (musicEvent?.price === null || musicEvent?.price === 'undefined'){
+            return `<span class='corrupted-prop'>price: ${musicEvent?.price}</span>`;
+          } else {
+            return null;
+          }
+        }
+        if (property === 'startDateTime' || property === 'doorOpenDateTime' || property === 'endDateTime') {
+          if (musicEvent[property]?.match(/\d\d\d\d-\d\d-\d\dT\d\d:\d\d/)) {
+            return null;
+          } else {
+            return `<span class='corrupted-prop'>${property}: ${musicEvent[property]}</span>`;
+          }
+        } 
+        if ([null, undefined].includes(musicEvent[property])){
+          return `<span class='corrupted-prop'>${property}: ${musicEvent[property]}</span>`;
+        } else {
+          return null;
+        }
+      }).filter(a => a)
+
+    if (missingProperties.length > 0) {
+      const page = !this.completedMainPage ? 'main:' : 'single:';
+      const mis = missingProperties.join(', ');
+      musicEvent.corrupted = `${page} ${mis}`
+      this.dirtyLog(musicEvent)
     }
    
-    const t = musicEvent?.title ?? "";
-    const st = musicEvent?.shortText ?? "";
-    const searchShowNotOnDate = `${t.toLowerCase()} ${st.toLowerCase()}`;
-    
-    let forbiddenTermUsed = '';
-    const hasForbiddenTerm = [
-      "uitgesteld",
-      "gecanceld",
-      "afgelast",
-      "geannuleerd",
-      "verplaatst",
-    ].map((forbiddenTerm) => {
-      if (searchShowNotOnDate.includes(forbiddenTerm)) {
-        forbiddenTermUsed += ` ${forbiddenTerm}`;
-      }
-      return searchShowNotOnDate.includes(forbiddenTerm);
-    }).reduce((prev, next) =>{
-      return prev && next
-    }, true);
-    
-    if (hasForbiddenTerm) {
-      parentPort.postMessage(this.qwm.messageRoll(`<a class='forbidden-term' href='${musicEvent.venueEventUrl}'>${musicEvent.title}</a> is ${forbiddenTermUsed}/`));
-    }
-
-    return !hasForbiddenTerm && meetsRequiredProperties;
+    return musicEvent;
      
   }
-
-  
 
   // step 2
   /**
@@ -508,25 +514,29 @@ export default class AbstractScraper {
       if (checkResult.success) {
         useableEventsCheckedArray.push(eventToCheck);
 
-        parentPort.postMessage(
-          this.qwm.debugger(
-            {
-              title: 'Raw event async check',
-              event: `<a class='single-event-check-notice single-event-check-notice--success' href='${eventToCheck.venueEventUrl}'>${workingTitle}<a/>`,              
-              reason: checkResult.reason,
-            },
-          )
-        );        
+        if (this.debugRawEventAsyncCheck){
+          parentPort.postMessage(
+            this.qwm.debugger(
+              {
+                title: 'Raw event async check',
+                event: `<a class='single-event-check-notice single-event-check-notice--success' href='${eventToCheck.venueEventUrl}'>${workingTitle}<a/>`,              
+                reason: checkResult.reason,
+              },
+            )
+          );        
+        }
       } else {
-        parentPort.postMessage(
-          this.qwm.debugger(
-            {
-              title: 'Raw event async check',
-              event: `<a class='single-event-check-notice single-event-check-notice--failure' href='${eventToCheck.venueEventUrl}'>${workingTitle}<a/>`,              
-              reason: checkResult.reason,
-            },
-          )
-        );
+        if (this.debugRawEventAsyncCheck){
+          parentPort.postMessage(
+            this.qwm.debugger(
+              {
+                title: 'Raw event async check',
+                event: `<a class='single-event-check-notice single-event-check-notice--failure' href='${eventToCheck.venueEventUrl}'>${workingTitle}<a/>`,              
+                reason: checkResult.reason,
+              },
+            )
+          );
+        }
       }
 
       return await this.rawEventsAsyncCheck({
@@ -760,9 +770,6 @@ export default class AbstractScraper {
       this.dirtyDebug(arguments);
       throw new Error(`argument / argument type error wikipedia list check`)
     }    
-
-    this.dirtyTalk(`wikipedia ${title}`)
-
     let workingTitle = this.cleanupEventTitle(title)
 
     const page = await this.browser.newPage();
@@ -829,14 +836,6 @@ export default class AbstractScraper {
       }
       return found;
 
-
-      // const isRock =
-      //   !!document.querySelector(".infobox a[href*='rock']") &&
-      //   !document.querySelector(".infobox a[href*='Indie_rock']");
-      // const isMetal = !!document.querySelector(".infobox a[href*='metal']");
-      // const isPunk = !!document.querySelector(".infobox a[href*='punk']");
-      // const isStoner = !!document.querySelector(".infobox a[href*='stoner']");
-      // return isRock || isMetal || isPunk || isStoner;
     }, {wikipediaGoodGenres: AbstractScraper.wikipediaGoodGenres});
     !page.isClosed() && page.close();
     if (wikiRockt) {
@@ -856,31 +855,41 @@ export default class AbstractScraper {
   } 
 
   cleanupEventTitle(workingTitle = ''){
-    // - 14:35 zoals bij afas
-    if (workingTitle.match(/\s?-\s?\d\d:\d\d/)){
-      workingTitle = workingTitle.replace(/\s?-\s?\d\d:\d\d/, '');
+    try {
+    
+      if (workingTitle.match(/\s?-\s?\d\d:\d\d/)){
+        workingTitle = workingTitle.replace(/\s?-\s?\d\d:\d\d/, '');
+      }
+    
+      if (workingTitle.includes('&')) {
+        workingTitle = workingTitle.replace(/&.*$/,'');
+      }
+
+      if (workingTitle.includes('|')) {
+        workingTitle = workingTitle.replace(/|.*$/,'');
+      }
+
+      if (workingTitle.includes('•')) {
+        workingTitle = workingTitle.replace(/•.*$/,'');
+      }
+
+      if (workingTitle.includes('+')) {
+        workingTitle = workingTitle.replace(/\+.*$/,'');
+      }    
+
+      if (workingTitle.includes(':')) {
+        workingTitle = workingTitle.replace(/^[\w\s]+:/,'');
+      }
+    } catch (error) {
+      _t.wrappedHandleError(new ErrorWrapper({
+        error,
+        workerData,
+        remarks: `fout schoonmaken titel`,
+        errorLevel: 'notice',
+      }));
+      return 'TITEL SCHOONMAKEN MISLUKT';
     }
     
-    if (workingTitle.includes('&')) {
-      workingTitle = workingTitle.replace(/&.*$/,'');
-    }
-
-    if (workingTitle.includes('|')) {
-      workingTitle = workingTitle.replace(/|.*$/,'');
-    }
-
-    if (workingTitle.includes('•')) {
-      workingTitle = workingTitle.replace(/•.*$/,'');
-    }
-
-    if (workingTitle.includes('+')) {
-      workingTitle = workingTitle.replace(/\+.*$/,'');
-    }    
-
-    if (workingTitle.includes(':')) {
-      workingTitle = workingTitle.replace(/^[\w\s]+:/,'');
-    }
-
     return workingTitle.toLowerCase().trim()
   }
 
@@ -954,10 +963,24 @@ export default class AbstractScraper {
         singleEvent.venueEventUrl
       );
       if (!singleEventPage) {
+        singleEvent.corrupted = 'niet gelukt page te maken';
         return useableEventsList.length
           ? this.processSingleMusicEvent(useableEventsList)
           : useableEventsList;
       }
+    }
+
+    // corruptie check afkomstig nog van baseEvent. niet door naar pageInfo
+    if (singleEvent.corrupted){
+      singleEvent.registerINVALID();
+      parentPort.postMessage(
+        this.qwm.messageRoll(
+          `<a href='${singleEvent.venueEventUrl}'>😵 Corrupted ${singleEvent.title}</a> ${singleEvent.corrupted}`
+        )
+      );
+      return useableEventsList.length
+        ? this.processSingleMusicEvent(useableEventsList)
+        : useableEventsList;      
     }
 
     // page info ophalen
@@ -966,17 +989,6 @@ export default class AbstractScraper {
       url: singleEvent.venueEventUrl, // @TODO overal weghalen vervangen met event
       event: singleEvent,
     });
-
-    if (!pageInfo || !!pageInfo?.unavailable || !!pageInfo?.corrupted) {
-      parentPort.postMessage(
-        this.qwm.messageRoll(
-          `SKIP ${pageInfo.pageInfo} ${pageInfo?.unavailable ?? ""} ${pageInfo?.corrupted ?? ""}`
-        )
-      );
-      return useableEventsList.length
-        ? this.processSingleMusicEvent(useableEventsList)
-        : useableEventsList;
-    }
 
     // nabewerken page info
     pageInfo.price = this.getPrice(pageInfo?.priceTextcontent);
@@ -991,33 +1003,49 @@ export default class AbstractScraper {
     singleEvent.merge(pageInfo);
 
     // check op properties vanuit single page
-    let missingProperties = []
-    const meetsRequiredProperties = this.puppeteerConfig.app?.singlePage?.requiredProperties?.reduce((prev, next)=>{
-      if (!singleEvent[next]){
-        missingProperties.push(next)
-      }
-      return prev && singleEvent[next]
-    }, true) ?? true
-    if (!meetsRequiredProperties) {
-      singleEvent.corrupted += missingProperties.join(',')
-    }
+    singleEvent = this.isMusicEventCorruptedMapper(singleEvent);
 
+    if (singleEvent.corrupted || singleEvent.unavailable){
+      singleEvent.registerINVALID(this.workerData);
+      if (singleEvent.corrupted) {
+        this.dirtyDebug({
+          title: `💀 ${singleEvent.corrupted}`,
+          event: `<a class='single-event-check-notice single-event-check-notice--failure' href='${singleEvent.venueEventUrl}'>${singleEvent.title} Corr. </a>`,
+        })   
+      }
+      if (singleEvent.unavailable) {
+        this.dirtyDebug({
+          title: `😣 ${singleEvent.unavailable}`,
+          event: `<a class='single-event-check-notice single-event-check-notice--failure' href='${singleEvent.venueEventUrl}'>${singleEvent.title} Unav.</a>`,
+        })   
+      }
+      
+      singleEventPage && !singleEventPage.isClosed() && (await singleEventPage.close());
+      return useableEventsList.length
+        ? this.processSingleMusicEvent(useableEventsList)
+        : useableEventsList;      
+    }
+    
     const mergedEventCheckRes = await this.singleMergedEventCheck(singleEvent, pageInfo);
     if (mergedEventCheckRes.success) {
-      this.dirtyDebug({
-        title: 'Merged async check 👍',
-        event: `<a class='single-event-check-notice single-event-check-notice--success' href='${mergedEventCheckRes.event.venueEventUrl}'>${mergedEventCheckRes.event.title}</a>`,
-        reason: mergedEventCheckRes.reason,
-      })      
+      if (this.debugSingleMergedEventCheck) {
+        this.dirtyDebug({
+          title: 'Merged async check 👍',
+          event: `<a class='single-event-check-notice single-event-check-notice--success' href='${mergedEventCheckRes.event.venueEventUrl}'>${mergedEventCheckRes.event.title}</a>`,
+          reason: mergedEventCheckRes.reason,
+        })      
+      }
       singleEvent.isValid
         ? singleEvent.register() // TODO hier lopen dingen echt dwars door elkaar. integreren in soort van singleMergedEventCheckBase en dan anderen reducen erop of weet ik veel wat een gehack vandaag
         : singleEvent.registerINVALID(this.workerData);
     } else {
-      this.dirtyDebug({
-        title: 'Merged async check 👎',        
-        event: `<a class='single-event-check-notice single-event-check-notice--failure' href='${mergedEventCheckRes.event.venueEventUrl}'>${mergedEventCheckRes.event.title}</a>`,
-        reason: mergedEventCheckRes.reason,
-      })
+      if (this.debugSingleMergedEventCheck){
+        this.dirtyDebug({
+          title: 'Merged async check 👎',        
+          event: `<a class='single-event-check-notice single-event-check-notice--failure' href='${mergedEventCheckRes.event.venueEventUrl}'>${mergedEventCheckRes.event.title}</a>`,
+          reason: mergedEventCheckRes.reason,
+        })
+      }
       singleEvent.registerINVALID(this.workerData);
     }
 
@@ -1089,7 +1117,13 @@ export default class AbstractScraper {
 
     this.isForced && this.dirtyLog(pageInfo)
 
-    if (!pageInfo || !Array.isArray(pageInfo?.errors)) {
+    if (!pageInfo){
+      page && !page.isClosed() && page.close();
+      throw new Error('page info ontbreekt.')
+    }
+
+    if (!Array.isArray(pageInfo?.errors)) {
+      
       const wrappedError = new ErrorWrapper({
         error: new Error(`pageInfo object incompleet; geen errors`),
         remarks: `pageInfo object incompleet; geen errors`,
@@ -1101,12 +1135,14 @@ export default class AbstractScraper {
         }
       });
       _t.wrappedHandleError(wrappedError);
+      
       page && !page.isClosed() && page.close();
       clearTimeout(stopFunctie);
       return {
-        corrupted: `Geen resultaat van pageInfo`, //TODO samen met musicEvent.unavailable
+        corrupted: `Geen resultaat van pageInfo`,
       };      
     }
+    
     
     pageInfo?.errors?.forEach((errorData) => {
       try {
@@ -1117,8 +1153,9 @@ export default class AbstractScraper {
         }
         const wrappedError = new ErrorWrapper(errorData);
         _t.wrappedHandleError(wrappedError);        
-      } catch (error) {
-        const wrappedError = new ErrorWrapper(error);
+      } catch (errorOfErrors) {
+        this.dirtyDebug(pageInfo?.errors)
+        const wrappedError = new ErrorWrapper((errorOfErrors || 'complete faal'));
         _t.wrappedHandleError(wrappedError);        
         this.dirtyDebug({
           title: `erroring gaat verkeerd ${workerData.family}`,
@@ -1141,16 +1178,19 @@ export default class AbstractScraper {
   }
 
   getPriceFromHTML(testText = null, contextText = null) {
+    
     if (!testText) {
       return this.getPriceFromHTML(contextText);
     }
+
+    if (testText.includes("gratis") || testText.includes("free")) {
+      return 0;
+    }
+
   
     const priceMatch = testText.match(/((\d{1,3})[,.]+(\d\d|-))/);
   
-    if (
-      !priceMatch &&
-      (testText.includes("gratis") || testText.includes("free"))
-    ) {
+    if (!priceMatch) {
       return 0;
     }
   

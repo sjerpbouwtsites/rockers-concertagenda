@@ -87,11 +87,9 @@ p60Scraper.makeBaseEventList = async function () {
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
-  this.dirtyTalk('jaja1');
   await _t.autoScroll(page);
-  this.dirtyTalk('jaja2');
 
-  const rawEvents = await page.evaluate(({workerData}) => {
+  let rawEvents = await page.evaluate(({workerData, unavailabiltyTerms}) => {
     return Array.from(document.querySelectorAll(".views-infinite-scroll-content-wrapper > .p60-list__item-container")).filter(itemEl => {
       return !!itemEl.querySelector('[href*=ticketmaster]')
     }).map(
@@ -101,11 +99,14 @@ p60Scraper.makeBaseEventList = async function () {
         )?.textContent.trim() ?? '';
 
         const res = {
-          unavailable: '',
           pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
           errors: [],
           title
         };
+
+        const uaRex = new RegExp(unavailabiltyTerms.join("|"), 'gi');
+        res.unavailable = !!itemEl.textContent.match(uaRex);
+        res.soldOut = itemEl?.textContent.match(/uitverkocht|sold\s?out/i) ?? false; // TODO gegokt soldout p60
 
         res.venueEventUrl = itemEl.querySelector('.field-group-link')?.href;
 
@@ -114,7 +115,7 @@ p60Scraper.makeBaseEventList = async function () {
           res.doorOpenDateTime = new Date(doorOpenDateTimeB).toISOString();
         } catch (caughtError) {
           res.errors.push({error: caughtError, remarks: `openDoorDateTime omzetten ${doorOpenDateTimeB}`,         
-            toDebug: res})
+          })
         }
 
         const startTime = itemEl.querySelector('.field--name-field-aanvang')?.textContent.trim();
@@ -124,10 +125,7 @@ p60Scraper.makeBaseEventList = async function () {
           try {
             res.startDateTime = new Date(startDateTimeB).toISOString();
           } catch (caughtError) {
-            res.errors.push({error: caughtError, remarks: `startDateTime omzetten ${startDateTimeB}`,         
-              toDebug: res
-            })
-            return res;
+            res.errors.push({error: caughtError, remarks: `startDateTime omzetten ${startDateTimeB}` })
           }
         }
 
@@ -135,11 +133,9 @@ p60Scraper.makeBaseEventList = async function () {
         return res;
       }
     );
-  }, {workerData});
-
-  this.dirtyLog(rawEvents);
-
-  this.dirtyTalk(`geheel aan events ${rawEvents.length}`)
+  }, {workerData, unavailabiltyTerms: AbstractScraper.unavailabiltyTerms})
+    
+  rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
 
   this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
@@ -148,8 +144,6 @@ p60Scraper.makeBaseEventList = async function () {
   );
 };
 
-
-// @TODO Rock control naar async
 
 // GET PAGE INFO
 
@@ -162,9 +156,9 @@ p60Scraper.getPageInfo = async function ({ page, event }) {
   }
   
   const pageInfo = await page.evaluate(
-    ({event}) => {
+    () => {
       const res = {
-        unavailable: event.unavailable,
+
         pageInfo: `<a class='page-info' href='${location.href}'>${document.title}</a>`,
         errors: [],
       };
@@ -185,7 +179,7 @@ p60Scraper.getPageInfo = async function ({ page, event }) {
       // res.ticketURL = document.querySelector('.content-section__event-info [href*="ticketmaster"]')?.href ?? null;
       res.longTextHTML = Array.from(document.querySelectorAll('.kmtContent, .group-footer .media-section')).reduce((prev, next) => prev + next.innerHTML,'')
       return res;
-    }, {event}
+    }, null
   );
 
   return await this.getPageInfoEnd({pageInfo, stopFunctie, page})

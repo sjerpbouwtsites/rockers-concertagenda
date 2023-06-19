@@ -187,24 +187,38 @@ export default class EventsList {
 
       EventsList._meta.locations[loc].count = EventsList._meta.locations[loc].count + 1;
     })
+    
+    const nowDateString = new Date();
+    const nowDate = Number(
+      nowDateString.toISOString().match(/(.*)T/)[1].replace(/\D/g, "")
+    );
 
+    EventsList._events = EventsList._events
+      .filter(event => {
+        const musicEventTime = Number(
+          event.startDateTime.match(/(.*)T/)[1].replace(/\D/g, "")
+        );
+        return musicEventTime >= nowDate;
+      })
+      .sort((eventA, eventB) => {
+        const dataA = eventA.startDateTime || "2050-01-01T00:00:00.000Z";
+        const dataB = eventB.startDateTime || "2050-01-01T00:00:00.000Z";
+        if (!isIsoDate(dataA)) {
+          return -1;
+        }
+        const startA = new Date(dataA);
+        const startB = new Date(dataB);
+        if (startB > startA) {
+          return -1;
+        } else if (startB < startA) {
+          return 1;
+        } else {
+          return 0;
+        }
+      });
 
-    EventsList._events.sort((eventA, eventB) => {
-      const dataA = eventA.startDateTime || "2050-01-01T00:00:00.000Z";
-      const dataB = eventB.startDateTime || "2050-01-01T00:00:00.000Z";
-      if (!isIsoDate(dataA)) {
-        return -1;
-      }
-      const startA = new Date(dataA);
-      const startB = new Date(dataB);
-      if (startB > startA) {
-        return -1;
-      } else if (startB < startA) {
-        return 1;
-      } else {
-        return 0;
-      }
-    });
+    
+
     fs.writeFileSync(
       fsDirections.metaJson,
       JSON.stringify(EventsList._meta, null, "  "),

@@ -6,7 +6,6 @@
 ```js
 const title = doc.balblabl.textContent.etc;
 const res = {
-  unavailable: '',
   pageInfo: `<a href='${location.href}'>${workerData.family} main - ${title}</a>`,
   errors: [],
   title
@@ -17,7 +16,6 @@ const res = {
 ```js
   // event via params
   const res = {
-    unavailable: event.unavailable,
     pageInfo: `<a class='page-info' href='${location.href}'>${event.title}</a>`,
     errors: [],
   };

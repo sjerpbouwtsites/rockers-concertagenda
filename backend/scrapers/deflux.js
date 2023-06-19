@@ -6,7 +6,6 @@ import * as _t from "../mods/tools.js";
 
 // SCRAPER CONFIG
 
-
 const vandaag = new Date().toISOString().split('T')[0]
 const defluxScraper = new AbstractScraper(makeScraperConfig({
   maxExecutionTime: 30007,
@@ -32,6 +31,31 @@ const defluxScraper = new AbstractScraper(makeScraperConfig({
 }));
 
 defluxScraper.listenToMasterThread();
+
+defluxScraper.singleMergedEventCheck = async function (event) {
+  const tl = this.cleanupEventTitle(event.title);
+
+  const isRefused = await this.rockRefuseListCheck(event, tl)
+  if (isRefused.success) {
+    return {
+      reason: isRefused.reason,
+      event,
+      success: false
+    }
+  }
+
+  const isAllowed = await this.rockAllowListCheck(event, tl)
+  if (isAllowed.success) {
+    return isAllowed;  
+  }
+
+  return {
+    event,
+    success: true,
+    reason: "nothing found currently",
+  };
+};
+
 
 // MAKE BASE EVENTS
 
@@ -60,7 +84,6 @@ defluxScraper.makeBaseEventList = async function () {
   const rawEvents = axiosRes.map(axiosResultSingle =>{
     const title = axiosResultSingle.title.rendered;
     const res = {
-      unavailable: "",
       pageInfo: `<a class='pageinfo' href="${this.puppeteerConfig.app.mainPage.url}">${workerData.family} main - ${title}</a>`,
       errors: [],
       venueEventUrl: axiosResultSingle.link,
@@ -69,6 +92,7 @@ defluxScraper.makeBaseEventList = async function () {
     };    
     return res;
   })
+    .map(this.isMusicEventCorruptedMapper);
 
   this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
@@ -87,7 +111,6 @@ defluxScraper.getPageInfo = async function ({ page, event}) {
   const pageInfo = await page.evaluate(({event}) => {
 
     const res = {
-      unavailable: event.unavailable,
       pageInfo: `<a class='page-info' href='${location.href}'>${document.title}</a>`,
       errors: [],
     };
@@ -104,13 +127,12 @@ defluxScraper.getPageInfo = async function ({ page, event}) {
         remarks: `image missing ${res.pageInfo}`
       })
     }    
-    res.startDate = eventScheme.querySelector('[itemprop="startDate"]')?.getAttribute('content').split('T')[0].split('-').map(dateStuk => dateStuk.padStart(2, '0')).join('-')
     try {
+      res.startDate = eventScheme.querySelector('[itemprop="startDate"]')?.getAttribute('content').split('T')[0].split('-').map(dateStuk => dateStuk.padStart(2, '0')).join('-')
       res.startTime = document.querySelector('.evcal_time.evo_tz_time').textContent.match(/\d\d:\d\d/)[0];
       res.startDateTime = new Date(`${res.startDate}T${res.startTime}:00`).toISOString()
     } catch (caughtError) {
       res.errors.push({error: caughtError, remarks: `starttime match ${res.pageInfo}`,toDebug:res})
-      return res;
     }
 
     if (document.querySelector('.evcal_desc3')?.textContent.toLowerCase().includes('deur open') ?? false) {
@@ -121,6 +143,8 @@ defluxScraper.getPageInfo = async function ({ page, event}) {
         res.errors.push({error: caughtError, remarks: `door open starttime match ${res.pageInfo}`,toDebug:res})
       }
     }
+
+    // TODO sold out flux
     
     res.price = eventScheme.querySelector('[itemprop="event-price"]')?.getAttribute('content') ?? '';
     res.longTextHTML = document.querySelector('[itemprop="description"]')?.innerHTML ?? '';

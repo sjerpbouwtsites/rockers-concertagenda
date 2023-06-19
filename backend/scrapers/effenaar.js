@@ -29,6 +29,30 @@ effenaarScraper.listenToMasterThread();
 
 // MAKE BASE EVENTS
 
+effenaarScraper.singleMergedEventCheck = async function(event){
+
+  const workingTitle = this.cleanupEventTitle(event.title)
+
+  const isRefused = await this.rockRefuseListCheck(event, workingTitle)
+  if (isRefused.success) return {
+    reason: isRefused.reason,
+    event,
+    success: false
+  };
+
+  const isAllowed = await this.rockAllowListCheck(event, workingTitle)
+  if (isAllowed.success) return isAllowed;
+
+  return {
+    event,
+    success: true,
+    reason: "nothing found currently",
+  };
+
+}
+
+// MERGED ASYNC CHECK
+
 effenaarScraper.makeBaseEventList = async function () {
 
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
@@ -41,7 +65,7 @@ effenaarScraper.makeBaseEventList = async function () {
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
-  const rawEvents = await page.evaluate(
+  let rawEvents = await page.evaluate(
     ({workerData}) => {
       return Array.from(
         document.querySelectorAll(".search-and-filter .agenda-card")
@@ -49,19 +73,19 @@ effenaarScraper.makeBaseEventList = async function () {
         .map((eventEl) => {
           const title = eventEl.querySelector(".card-title")?.textContent.trim();
           const res = {
-            unavailable: "",
             pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
             errors: [],          
             title
           }
           res.shortText = eventEl.querySelector(".card-subtitle")?.textContent ?? '';
           res.venueEventUrl = eventEl?.href ?? null;
-          res.soldOut = !!(eventEl.querySelector('.card-content .card-status')?.textContent.toLowerCase().includes('uitverkocht') ?? null)
+          res.soldOut = !!eventEl.querySelector('.card-content .card-status')?.innerHTML.match(/uitverkocht|sold\s?out/i) ?? null;
           return res;
         });
     },
     {workerData}
-  );
+  )
+  rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
 
   this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
@@ -81,7 +105,6 @@ effenaarScraper.getPageInfo = async function ({ page, event }) {
 
   const pageInfo = await page.evaluate(({months, event}) => {
     const res = {
-      unavailable: event.unavailable,
       pageInfo: `<a class='page-info' href='${location.href}'>${event.title}</a>`,
       errors: [],
     };
@@ -94,34 +117,25 @@ effenaarScraper.getPageInfo = async function ({ page, event }) {
     res.priceTextcontent = 
       document.querySelector(".tickets-btn")?.textContent ?? '';
 
-    try {
-      const dateText =
+    const dateText =
         document.querySelector(".header-meta-date")?.textContent.trim() ?? "";
-      if (!dateText) {
-        res.errors.push({
-          remarks: `geen datumtext ${res.pageInfo}`,
-          toDebug: res
-        })
-        return res;
-      }
+    if (!dateText) {
+      res.errors.push({
+        remarks: `geen datumtext ${res.pageInfo}`,
+      })
+      res.corrupted = 'geen datum tekst';
+    } else {
       const [, dayNumber, monthName, year] = dateText.match(
         /(\d+)\s(\w+)\s(\d\d\d\d)/
       );
       const fixedDay = dayNumber.padStart(2, "0");
       const monthNumber = months[monthName];
       res.startDate = `${year}-${monthNumber}-${fixedDay}`;
-    } catch (caughtError) {
-      res.errors.push({
-        error: caughtError,
-        remarks: `datumtext naar startDatum faal ${res.pageInfo}`,
-        toDebug: {event, res}
-      });
-      return res;
     }
 
     let startTimeAr = [],
       doorTimeAr = [];
-    try {
+    if (res.startDate){
       startTimeAr = document
         .querySelector(".time-start-end")
         ?.textContent.match(/\d\d:\d\d/);
@@ -134,22 +148,11 @@ effenaarScraper.getPageInfo = async function ({ page, event }) {
       if (Array.isArray(doorTimeAr) && doorTimeAr.length) {
         res.doorTime = doorTimeAr[0];
       }
-    } catch (caughtError) {
-      res.errors.push({
-        error: caughtError,
-        remarks: `date startDateTime etc faal ${res.pageInfo}`,
-        toDebug: {
-          ars: `${startTimeAr.join()} ${doorTimeAr.join("")}`,
-          res, event
-        }
-        
-      });
-      return res;
+      res.startDateTimeString = `${res.startDate}T${res.startTime}:00`;
+      res.openDoorDateTimeString = `${res.startDate}T${res.doorTime}:00`;
     }
 
-    res.startDateTimeString = `${res.startDate}T${res.startTime}:00`;
-    res.openDoorDateTimeString = `${res.startDate}T${res.doorTime}:00`;
-
+  
     try {
       if (res.doorTime) {
         res.doorOpenDateTime = new Date(

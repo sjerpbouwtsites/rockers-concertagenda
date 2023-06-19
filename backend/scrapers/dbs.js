@@ -47,13 +47,15 @@ dbsScraper.makeBaseEventList = async function () {
   await page.waitForSelector('.fusion-events-post')
   await _t.waitFor(100)
 
-  const rawEvents = await page.evaluate(
+  let rawEvents = await page.evaluate(
     ({ months,workerData }) => {
       return Array.from(document.querySelectorAll(".fusion-events-post"))
         .map((eventEl) => {
-          const title = eventEl.querySelector(".fusion-events-meta .url")?.textContent.trim() ?? null;
+          let title = eventEl.querySelector(".fusion-events-meta .url")?.textContent.trim() ?? null;
+          if (title.match(/sold\s?out|uitverkocht/i)) {
+            title = title.replace(/\*?(sold\s?out|uitverkocht)\s?\*?\s?/i,'')
+          }
           const res = {
-            unavailable: "",
             pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} - main - ${title}</a>`,
             errors: [],
             title
@@ -65,25 +67,14 @@ dbsScraper.makeBaseEventList = async function () {
 
           res.venueEventUrl = eventEl.querySelector(".fusion-events-meta .url")?.href ?? null;
 
-          const startDateEl =
-            eventEl.querySelector(".tribe-event-date-start") ?? null;
-          if (!startDateEl) {
-            res.corrupted = 'no start date el';
-          }
-
-          const startTextcontent =
-            eventEl
-              .querySelector(".tribe-event-date-start")
-              ?.textContent.toLowerCase() ?? "LEEG";
-          res.eventDateText = startTextcontent;
-
-          try {
-            const match1 = startTextcontent.match(/(\d+)\s+(\w+)/);
-            res.day = match1[1];
-            let monthName = match1[2];
+          const startDateMatch = eventEl.querySelector(".tribe-event-date-start")?.textContent.match(/(\d+)\s+(\w+)/) ?? null;
+          if (startDateMatch) {
+           
+            res.day = startDateMatch[1];
+            let monthName = startDateMatch[2];
             res.month = months[monthName];
             res.day = res.day.padStart(2, "0");
-            const yearMatch = startTextcontent.match(/\d{4}/);
+            const yearMatch = eventEl.querySelector(".tribe-event-date-start")?.textContent.match(/\d{4}/);
             if (
               !yearMatch ||
               !Array.isArray(yearMatch) ||
@@ -94,7 +85,7 @@ dbsScraper.makeBaseEventList = async function () {
               res.year = yearMatch[1];
             }
             res.year = res.year || new Date().getFullYear();
-            const timeMatch = startTextcontent
+            const timeMatch = eventEl.querySelector(".tribe-event-date-start")?.textContent
               .match(/\d{1,2}:\d\d/);
             if (!timeMatch ||
               !Array.isArray(timeMatch) ||
@@ -107,10 +98,8 @@ dbsScraper.makeBaseEventList = async function () {
                 `${res.startDate}T${res.time}:00Z`
               ).toISOString();
             }
-                
-          } catch (caughtError) {
-            res.errors.push({error: caughtError, remarks: `Wirwar datums e.d. ${title}`,toDebug:res});
           }
+          
 
           try {
             const endDateEl =
@@ -140,7 +129,8 @@ dbsScraper.makeBaseEventList = async function () {
         });
     },
     { months: this.months,workerData }
-  );
+  )
+  rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
 
   this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
@@ -156,9 +146,8 @@ dbsScraper.getPageInfo = async function ({ page, event }) {
   
   const {stopFunctie} =  await this.getPageInfoStart()
   
-  const pageInfo = await page.evaluate(({event, goodCategories}) => {
+  const pageInfo = await page.evaluate(({event}) => {
     const res = {
-      unavailable: event.unavailable,
       pageInfo: `<a class='page-info' href='${location.href}'>${document.title}</a>`,
       errors: [],
     };
@@ -184,7 +173,7 @@ dbsScraper.getPageInfo = async function ({ page, event }) {
     }
 
     return res;
-  }, {event, goodCategories: AbstractScraper.goodCategories});
+  }, {event});
 
   if (pageInfo.ticketURL && !pageInfo.unavailable) {
     try {

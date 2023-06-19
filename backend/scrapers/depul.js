@@ -99,13 +99,14 @@ depulScraper.makeBaseEventList = async function () {
         .map((rawEvent) => {
           const title = rawEvent.querySelector("h2")?.textContent.trim() ?? "";
           const res = {
-            unavailable: "",
             pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} - main - ${title}</a>`,
             errors: [],
             title
           };     
           res.shortText = 
             rawEvent.querySelector(".text-box .desc")?.textContent.trim() ?? "";
+
+          res.soldOut = !!rawEvent?.innerHTML?.match(/uitverkocht|sold\s?out/i) ?? null;
           
           const startDay =
             rawEvent
@@ -147,7 +148,8 @@ depulScraper.makeBaseEventList = async function () {
         });
     },
     { months: this.months,workerData}
-  );
+  )
+  rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
 
   this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
@@ -166,10 +168,11 @@ depulScraper.getPageInfo = async function ({ page, event }) {
   const pageInfo = await page.evaluate(
     ({ months , event}) => {
       const res = {
-        unavailable: event.unavailable,
         pageInfo: `<a class='page-info' href='${location.href}'>${event.title}</a>`,
         errors: [],
       };
+
+      
 
       try {
         const contentBox = document.querySelector("#content-box") ?? null;
@@ -202,6 +205,7 @@ depulScraper.getPageInfo = async function ({ page, event }) {
       if (!rightHandDataColumn) {
         return res;
       }
+      res.priceTextcontent = rightHandDataColumn.textContent;
       rightHandDataColumn
         .querySelectorAll("h1 + ul li")
         ?.forEach((columnRow) => {

@@ -21,7 +21,7 @@ const baroegScraper = new AbstractScraper(makeScraperConfig({
         requiredProperties: ['venueEventUrl', 'title', 'startDateTime']
       },
       singlePage: {
-        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
+        requiredProperties: ['venueEventUrl', 'title', 'startDateTime']
       }      
     }    
   }
@@ -75,7 +75,7 @@ baroegScraper.makeBaseEventList = async function () {
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
-  const rawEvents = await page.evaluate(({workerData}) => {
+  let rawEvents = await page.evaluate(({workerData}) => {
 
     return Array
       .from(document.querySelectorAll('.wpt_listing .wp_theatre_event'))
@@ -93,13 +93,17 @@ baroegScraper.makeBaseEventList = async function () {
       })
       .filter(eventData => eventData)
       .map(({eventEl,categorieTeksten,venueEventUrl}) => {
-        const title = eventEl.querySelector('.wp_theatre_event_title')?.textContent.trim() ?? null;
+        let title = eventEl.querySelector('.wp_theatre_event_title')?.textContent.trim() ?? null;
+        if (title.match(/uitverkocht|sold\s?out/i)) {
+          title = title.replace(/uitverkocht|sold\s?out/i,'').replace(/^:\s+/,'');
+        }
         const res = {
-          unavailable: "",
           pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
           errors: [],
+          title
         };
-        res.title = title;
+        
+        res.soldOut = title.match(/uitverkocht|sold\s?out/i) ?? false;
         res.shortText = eventEl.querySelector('.wp_theatre_prod_excerpt')?.textContent.trim() ?? null;
         res.shortText += categorieTeksten;
         res.image = eventEl.querySelector('.media .attachment-thumbnail')?.src ?? '';
@@ -152,6 +156,7 @@ baroegScraper.makeBaseEventList = async function () {
         return res;
       })
   }, {workerData})
+  rawEvents = rawEvents .map(this.isMusicEventCorruptedMapper);
 
   this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
@@ -169,7 +174,6 @@ baroegScraper.getPageInfo = async function ({ page, event }) {
   const pageInfo = await page.evaluate(
     ({event}) => {
       const res = {
-        unavailable: event.unavailable,
         pageInfo: `<a class='page-info' href='${location.href}'>${event.title}</a>`,
         errors: [],
       };

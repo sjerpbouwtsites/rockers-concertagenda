@@ -3,13 +3,10 @@ import * as _t from "../mods/tools.js";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 
-
-//HEEFT ASYNC CHECK
-
 // SCRAPER CONFIG
 
 const paradisoScraper = new AbstractScraper(makeScraperConfig({
-  maxExecutionTime: 60022,
+  maxExecutionTime: 120022,
   workerData: Object.assign({}, workerData),
   puppeteerConfig: {
     mainPage: {
@@ -17,7 +14,7 @@ const paradisoScraper = new AbstractScraper(makeScraperConfig({
       waitUntil: 'load'
     },
     singlePage: {
-      timeout: 60024
+      timeout: 120024
     },
     app: {
       mainPage: {
@@ -91,9 +88,7 @@ paradisoScraper.makeBaseEventList = async function () {
   
   const res = await page.evaluate(({workerData}) => {
     return {
-      unavailable: '',
       pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${workerData.index}</a>`,
-      errors: [],
     }
   }, {workerData});
   
@@ -104,14 +99,14 @@ paradisoScraper.makeBaseEventList = async function () {
   await _t.autoScroll(page);
   await _t.autoScroll(page);
   let rawEvents = await page.evaluate(
-    ({resBuiten}) => {
+    ({resBuiten, unavailabiltyTerms}) => {
 
       return Array.from(document.querySelectorAll('.css-1agutam'))
 
         .map((rawEvent) => {
           const res = {
             ...resBuiten,
-            errors: [...resBuiten.errors]
+            errors: []
           }          
           res.title =
             rawEvent
@@ -123,13 +118,16 @@ paradisoScraper.makeBaseEventList = async function () {
               ?.textContent.trim() ?? "";
           
           res.venueEventUrl = rawEvent.href ?? null
-          res.soldOut = !!(rawEvent.textContent.toLowerCase().includes('uitverkocht') ?? null)
-          res.cancelled = !!(rawEvent.textContent.toLowerCase().includes('geannulleerd') ?? null) || !!(rawEvent.textContent.toLowerCase().includes('gecanceld') ?? null)
+          res.soldOut = !!rawEvent.textContent.match(/uitverkocht|sold\s?out/i);
+          const uaRex = new RegExp(unavailabiltyTerms.join("|"), 'gi');
+          res.unavailable = !!rawEvent.textContent.match(uaRex);
           return res;
         });
     },
-    {workerData, resBuiten: res}
-  );
+    {workerData, resBuiten: res,unavailabiltyTerms: AbstractScraper.unavailabiltyTerms}
+  )
+    
+  rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
 
   this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
@@ -146,7 +144,6 @@ paradisoScraper.getPageInfo = async function ({ page, event }) {
   const {stopFunctie} =  await this.getPageInfoStart()
 
   const buitenRes = {
-    unavailable: event.unavailable,
     pageInfo: `<a class='page-info' href='${event.venueEventUrl}'>${event.title}</a>`,
     errors: [],
   };  
@@ -163,7 +160,6 @@ paradisoScraper.getPageInfo = async function ({ page, event }) {
         buitenRes, event
       }
     })
-    buitenRes.unavailable += 'single pagina niet snel genoeg geladen.'
     return await this.getPageInfoEnd({pageInfo: buitenRes, stopFunctie, page})
   }
 
@@ -171,6 +167,7 @@ paradisoScraper.getPageInfo = async function ({ page, event }) {
     jan: "01",
     feb: "02",
     mrt: "03",
+    mar: "03",
     apr: "04",
     mei: "05",
     jun: "06",
@@ -209,6 +206,9 @@ paradisoScraper.getPageInfo = async function ({ page, event }) {
         document.querySelector(".css-1irwsol")?.outerHTML ?? '';
       const contentBox2 =
         document.querySelector(".css-gwbug6")?.outerHTML ?? '';
+      if (!contentBox1 && !contentBox2) {
+        res.corrupted = 'geen contentboxes';
+      }
       if (contentBox1 || contentBox2) {
         res.longTextHTML = contentBox1 + contentBox2
       }
@@ -230,7 +230,6 @@ paradisoScraper.getPageInfo = async function ({ page, event }) {
               remarks: `month not found ${startDateMatch[2]}`,
               toDebug: startDateMatch
             })
-            return res;
           }
           res.startDate = `2022-${
             monthName
@@ -243,14 +242,13 @@ paradisoScraper.getPageInfo = async function ({ page, event }) {
           toDebug: {
             event
           }});
-        return res;
       }
 
       const timesMatch =
         document.querySelector('.css-1mxblse')
           ?.textContent.match(/(\d\d:\d\d)/g) ?? null;
       res.timesMatch = timesMatch;
-      if (timesMatch && Array.isArray(timesMatch) && timesMatch.length >= 1) {
+      if (timesMatch && Array.isArray(timesMatch) && timesMatch.length >= 1 && res.startDate) {
         try {
           if (timesMatch.length === 1) {
             res.startDateTime = new Date(
@@ -273,7 +271,6 @@ paradisoScraper.getPageInfo = async function ({ page, event }) {
               event
             }
           });
-          return res;
         }
       }
 

@@ -29,6 +29,32 @@ const kavkaScraper = new AbstractScraper(
 
 kavkaScraper.listenToMasterThread();
 
+// MERGED ASYNC CHECK
+
+kavkaScraper.singleMergedEventCheck = async function (event) {
+  const tl = this.cleanupEventTitle(event.title);
+
+  const isRefused = await this.rockRefuseListCheck(event, tl)
+  if (isRefused.success) {
+    return {
+      reason: isRefused.reason,
+      event,
+      success: false
+    }
+  }
+
+  const isAllowed = await this.rockAllowListCheck(event, tl)
+  if (isAllowed.success) {
+    return isAllowed;  
+  }
+
+  return {
+    event,
+    success: true,
+    reason: "nothing found currently",
+  };
+};
+
 // MAKE BASE EVENTS
 
 kavkaScraper.makeBaseEventList = async function () {
@@ -44,7 +70,7 @@ kavkaScraper.makeBaseEventList = async function () {
   const { stopFunctie, page } = await this.makeBaseEventListStart();
 
   let rawEvents = await page.evaluate(
-    ({ months, workerData }) => {
+    ({ months, workerData, unavailabiltyTerms }) => {
       return Array.from(document.querySelectorAll(".events-list > a"))
         .filter((rawEvent) => {
           return Array.from(rawEvent.querySelectorAll(".tags"))
@@ -68,7 +94,7 @@ kavkaScraper.makeBaseEventList = async function () {
               ?.textContent.trim() ?? null;
 
           const res = {
-            unavailable: "",
+
             pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
             errors: [],
             title,
@@ -130,9 +156,12 @@ kavkaScraper.makeBaseEventList = async function () {
           } catch (error) {
             res.errors.push({
               remarks: `openDoorDateTime faal ${res.pageInfo}`,
-              toDebug: res
             })
           }
+
+          const uaRex = new RegExp(unavailabiltyTerms.join("|"), 'gi');
+          res.unavailable = !!rawEvent.textContent.match(uaRex);
+          res.soldOut = !!rawEvent.querySelector(".badge")?.textContent.match(/uitverkocht|sold\s?out/i) ?? false;
 
           res.shortText =
             rawEvent.querySelector("article h3 + p")?.textContent.trim() ?? "";
@@ -141,8 +170,10 @@ kavkaScraper.makeBaseEventList = async function () {
           return res;
         });
     },
-    { months: this.months, workerData }
-  );
+    { months: this.months, workerData, unavailabiltyTerms: AbstractScraper.unavailabiltyTerms }
+  )
+  
+  rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
 
   this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
@@ -162,7 +193,7 @@ kavkaScraper.getPageInfo = async function ({ page, event }) {
 
   const pageInfo = await page.evaluate(({event}) => {
     const res = {
-      unavailable: event.unavailable,
+
       pageInfo: `<a class='page-info' href='${location.href}'>${event.title}</a>`,
       errors: [],
     };
@@ -199,7 +230,7 @@ kavkaScraper.getPageInfo = async function ({ page, event }) {
       res.errors.push({
         error:caughtError,
         remarks: `page info top level trycatch ${res.pageInfo}`,
-        toDebug: {res,event}
+        toDebug: {event}
       });
     }
   }, {event});

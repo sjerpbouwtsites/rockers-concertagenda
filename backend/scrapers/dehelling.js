@@ -29,6 +29,32 @@ const dehellingScraper = new AbstractScraper(makeScraperConfig({
 
 dehellingScraper.listenToMasterThread();
 
+// MERGED ASYNC CHECK
+
+dehellingScraper.singleMergedEventCheck = async function (event) {
+  const tl = this.cleanupEventTitle(event.title);
+
+  const isRefused = await this.rockRefuseListCheck(event, tl)
+  if (isRefused.success) {
+    return {
+      reason: isRefused.reason,
+      event,
+      success: false
+    }
+  }
+
+  const isAllowed = await this.rockAllowListCheck(event, tl)
+  if (isAllowed.success) {
+    return isAllowed;  
+  }
+
+  return {
+    event,
+    success: true,
+    reason: "nothing found currently",
+  };
+};
+
 // MAKE BASE EVENTS
 
 dehellingScraper.makeBaseEventList = async function () { 
@@ -43,13 +69,14 @@ dehellingScraper.makeBaseEventList = async function () {
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
-  const rawEvents = await page.evaluate(({workerData}) => {
+  let rawEvents = await page.evaluate(({workerData}) => {
     return Array.from(
       document.querySelectorAll(
         '.c-event-card'
       )
     )
       .filter(eventEl => {
+        // TODO naar fatsoenlijke async check
         const tc = eventEl.querySelector('.c-event-card__meta')?.textContent.toLowerCase() ?? '';
         return !tc.includes('experimental') && !tc.includes('hiphop')
       })
@@ -59,7 +86,6 @@ dehellingScraper.makeBaseEventList = async function () {
         const title = schemaData?.name
 
         const res = {
-          unavailable: "",
           pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
           errors: [],
           title,
@@ -93,6 +119,8 @@ dehellingScraper.makeBaseEventList = async function () {
           res.errors.push({error: caughtError, remarks: `start date time eruit filteren error \n ${res.endDateTime} \n ${startDateTimeString} ${title} ${res.pageInfo}`,toDebug:res})        
         }
 
+        res.soldOut = !!eventEl.querySelector('.c-event-card__banner--uitverkocht');
+
         if (!res.startTime && res.endDateTime) {
           res.startDateTime = res.endDateTime;
           res.endDateTime = null;
@@ -102,7 +130,9 @@ dehellingScraper.makeBaseEventList = async function () {
         res.shortText = schemaData?.description ?? null;
 
         return res;
-      })},{workerData});
+      })},{workerData})
+
+  rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
 
   this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
@@ -121,7 +151,6 @@ dehellingScraper.getPageInfo = async function ({ page,event }) {
   const pageInfo = await page.evaluate(
     ({event}) => {
       const res = {
-        unavailable: event.unavailable,
         pageInfo: `<a class='page-info' href='${event.venueEventUrl}'>${event.title}</a>`,
         errors: [],
       };

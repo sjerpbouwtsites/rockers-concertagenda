@@ -85,12 +85,11 @@ patronaatScraper.makeBaseEventList = async function () {
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
-  const rawEvents = await page.evaluate(({workerData}) => {
+  let rawEvents = await page.evaluate(({workerData, unavailabiltyTerms}) => {
     return Array.from(document.querySelectorAll(".overview__list-item--event"))
       .map((eventEl) => {
         const title = eventEl.querySelector(".event-program__name")?.textContent.trim();
         const res = {
-          unavailable: '',
           pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
           errors: [],
           title
@@ -106,10 +105,13 @@ patronaatScraper.makeBaseEventList = async function () {
         res.shortText = eventEl
           .querySelector(".event-program__subtitle")
           ?.textContent.trim() ?? '';
+        const uaRex = new RegExp(unavailabiltyTerms.join("|"), 'gi');
+        res.unavailable = !!eventEl.textContent.match(uaRex);          
         res.soldOut = !!(eventEl.querySelector('.event__tags-item--sold-out') ?? null)
         return res;
       });
-  }, {workerData});
+  }, {workerData, unavailabiltyTerms: AbstractScraper.unavailabiltyTerms})
+  rawEvents =rawEvents.map(this.isMusicEventCorruptedMapper);
 
   this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
@@ -126,7 +128,6 @@ patronaatScraper.getPageInfo = async function ({ page, event }) {
 
   const pageInfo = await page.evaluate(({months, event}) => {
     const res = {
-      unavailable: event.unavailable,
       pageInfo: `<a class='page-info' href='${event.venueEventUrl}'>${event.title}</a>`,
       errors: [],
     };
@@ -171,7 +172,6 @@ patronaatScraper.getPageInfo = async function ({ page, event }) {
             remarks: `geen startTime ${res.pageInfo}`,
             toDebug: event
           })
-          return res;          
         }
 
         if (res.doorOpenTime) {
@@ -192,7 +192,7 @@ patronaatScraper.getPageInfo = async function ({ page, event }) {
       } else {
         res.errors.push({
           remarks: `geen startDate ${res.pageInfo}`,
-          toDebug: event,res
+          toDebug: event
         })
         return res;        
       }
@@ -200,7 +200,7 @@ patronaatScraper.getPageInfo = async function ({ page, event }) {
       res.errors.push({
         error: caughtError,
         remarks: `Datum error patronaat ${res.pageInfo}.`,
-        toDebug: {res, event}
+        toDebug: event
       });
     }
 

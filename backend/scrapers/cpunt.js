@@ -9,11 +9,12 @@ const cpuntScraper = new AbstractScraper(makeScraperConfig({
   workerData: Object.assign({}, workerData),
 
   puppeteerConfig: {
-    singlePage: {
-      timeout: 10000,
-    },
     mainPage: {
+      timeout: 20014,
       waitUntil: 'load'
+    },
+    singlePage: {
+      timeout: 20012
     },
     app: {
       mainPage: {
@@ -28,6 +29,27 @@ const cpuntScraper = new AbstractScraper(makeScraperConfig({
 }
 ));
 
+// SINGLE EVENT CHECK
+
+cpuntScraper.singleRawEventCheck = async function (event) {
+
+  const goodTermsRes = await this.hasGoodTerms(event) 
+  if (goodTermsRes.success) return goodTermsRes;
+
+  const forbiddenTermsRes = await this.hasForbiddenTerms(event);
+
+  if (forbiddenTermsRes.success) return {
+    event,
+    success: false,
+    reason: forbiddenTermsRes.reason
+  };
+  return {
+    event,
+    success: true,
+    reason: `check inconclusive <a href='${event.venueEventUrl}'>${event.title}</a>`
+  }
+
+};
 
 
 cpuntScraper.listenToMasterThread();
@@ -59,7 +81,7 @@ cpuntScraper.makeBaseEventList = async function () {
   await _t.waitFor(50);
 
   let rawEvents = await page.evaluate(
-    ({workerData}) => {
+    ({workerData,unavailabiltyTerms}) => {
       return Array.from(
         document.querySelectorAll('#filter .article-wrapper')
       ).map((rawEvent) => {
@@ -67,7 +89,6 @@ cpuntScraper.makeBaseEventList = async function () {
         const title =
           rawEvent.querySelector('.article-title')?.textContent ?? null;
         const res = {
-          unavailable: "",
           pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} - main - ${title}</a>`,
           errors: [],
         };
@@ -84,13 +105,16 @@ cpuntScraper.makeBaseEventList = async function () {
         const parpar = rawEvent.parentNode.parentNode;
         res.startDate = parpar.hasAttribute('data-last-date') ? parpar.getAttribute('data-last-date').split('-').reverse().join('-') : null;
         const artInfoText = rawEvent.querySelector('.article-info')?.textContent.toLowerCase() ?? '';
-        res.soldOut = artInfoText.includes('wachtlijst') || artInfoText.includes('uitverkocht');
+        const uaRex = new RegExp(unavailabiltyTerms.join("|"), 'gi');
+        res.unavailable = !!rawEvent.textContent.match(uaRex);        
+        res.soldOut = !!artInfoText.match(/wachtlijst|uitverkocht/i);
         res.shortText = '';
         return res
       });
     },
-    {workerData}
-  );
+    {workerData, unavailabiltyTerms: AbstractScraper.unavailabiltyTerms}
+  )
+  rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
 
  
   this.saveBaseEventlist(workerData.family, rawEvents)
@@ -127,7 +151,6 @@ cpuntScraper.getPageInfo = async function ({ page, event }) {
     const ticketSection = contentSections[indexOfTicketSection];
 
     const res = {
-      unavailable: event.unavailable,
       pageInfo: `<a class='page-info' href='${location.href}'>${document.title}</a>`,
       errors: [],      
     };
@@ -200,24 +223,3 @@ cpuntScraper.getPageInfo = async function ({ page, event }) {
   
 };
 
-// SINGLE EVENT CHECK
-
-cpuntScraper.singleRawEventCheck = async function (event) {
-
-  const goodTermsRes = await this.hasGoodTerms(event) 
-  if (goodTermsRes.success) return goodTermsRes;
-
-  const forbiddenTermsRes = await this.hasForbiddenTerms(event);
-
-  if (forbiddenTermsRes.success) return {
-    event,
-    success: false,
-    reason: forbiddenTermsRes.reason
-  };
-  return {
-    event,
-    success: true,
-    reason: `check inconclusive <a href='${event.venueEventUrl}'>${event.title}</a>`
-  }
-
-};

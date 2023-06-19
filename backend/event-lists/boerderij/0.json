@@ -1,53 +1,5 @@
 [
   {
-    "doorOpenDateTime": "2023-06-01T17:30:00.000Z",
-    "startDateTime": "2023-06-01T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://poppodiumboerderij.nl/programma/tyketto",
-    "title": "Tyketto",
-    "location": "boerderij",
-    "price": 32,
-    "shortText": "+ support WildHeart",
-    "longText": "../public/texts/3ce5b303-1ead-44e5-a9dc-92a79ae8e7a6.html",
-    "image": "https://lift3cdn.nl/image/115/784x476/tyketto2023.jpg",
-    "soldOut": null,
-    "unavailable": null,
-    "corrupted": null,
-    "origin": "boerderij"
-  },
-  {
-    "doorOpenDateTime": "2023-06-13T17:00:00.000Z",
-    "startDateTime": "2023-06-13T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://poppodiumboerderij.nl/programma/the-winery-dogs",
-    "title": "The Winery Dogs",
-    "location": "boerderij",
-    "price": 37,
-    "shortText": "ft. Mike Portnoy, Billy Sheehan & Richie Kotzen",
-    "longText": "../public/texts/98b8b41b-a94f-49a1-821a-8bbf521999af.html",
-    "image": "https://lift3cdn.nl/image/115/784x476/the-winery-dogs-2023-2.jpg",
-    "soldOut": true,
-    "unavailable": null,
-    "corrupted": null,
-    "origin": "boerderij"
-  },
-  {
-    "doorOpenDateTime": "2023-06-16T17:30:00.000Z",
-    "startDateTime": "2023-06-16T18:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://poppodiumboerderij.nl/programma/de-platenhoes-ontwerp-tussen-oog-en-oor",
-    "title": "De platenhoes – Ontwerp tussen oog en oor",
-    "location": "boerderij",
-    "price": 7,
-    "shortText": "Interactieve lezing - PODIUMCAFÉ",
-    "longText": "../public/texts/ffb15eb5-409e-4093-976c-6b589cb944ec.html",
-    "image": "https://lift3cdn.nl/image/115/784x476/lezing-platenhoes-2023.jpg",
-    "soldOut": null,
-    "unavailable": null,
-    "corrupted": null,
-    "origin": "boerderij"
-  },
-  {
     "doorOpenDateTime": "2023-08-25T17:30:00.000Z",
     "startDateTime": "2023-08-25T18:30:00.000Z",
     "endDateTime": null,
@@ -56,12 +8,11 @@
     "location": "boerderij",
     "price": 31.5,
     "shortText": "‘SIN' Album Release Show",
-    "longText": "../public/texts/e8f919f9-fbfe-40ac-908a-03cd9654b13f.html",
+    "longText": "../public/texts/8c6f51c0-2fe2-49a8-a4e1-6c5894a7afbf.html",
     "image": "https://lift3cdn.nl/image/115/784x476/vandenberg-2023.jpg",
     "soldOut": null,
     "unavailable": null,
-    "corrupted": null,
-    "origin": "boerderij"
+    "corrupted": null
   },
   {
     "doorOpenDateTime": "2023-10-13T17:30:00.000Z",
@@ -72,12 +23,11 @@
     "location": "boerderij",
     "price": 30,
     "shortText": "1980 show met Iron Maiden gitarist Dennis Stratton",
-    "longText": "../public/texts/daa5f958-eb8a-485c-97e5-448f376114f4.html",
+    "longText": "../public/texts/05a6616d-d024-49c9-9c06-accb6243e404.html",
     "image": "https://lift3cdn.nl/image/115/784x476/maiden-united-2023.jpg",
     "soldOut": null,
     "unavailable": null,
-    "corrupted": null,
-    "origin": "boerderij"
+    "corrupted": null
   },
   {
     "doorOpenDateTime": "2023-10-18T17:30:00.000Z",
@@ -88,12 +38,11 @@
     "location": "boerderij",
     "price": 24,
     "shortText": "bekend van Eurovisie Songfestival",
-    "longText": "../public/texts/9bf6bbc3-2e0d-4752-be4d-a4c0d8a65c50.html",
+    "longText": "../public/texts/363fa7c6-3581-4237-a71b-a8b88b453083.html",
     "image": "https://lift3cdn.nl/image/115/784x476/voyager-2023.jpg",
     "soldOut": null,
     "unavailable": null,
-    "corrupted": null,
-    "origin": "boerderij"
+    "corrupted": null
   },
   {
     "doorOpenDateTime": "2023-10-21T17:30:00.000Z",
@@ -104,12 +53,11 @@
     "location": "boerderij",
     "price": 26,
     "shortText": "Album Release Show",
-    "longText": "../public/texts/f5f50288-cb1e-4356-b3ae-b18a1909ffb0.html",
+    "longText": "../public/texts/ebd5f4c9-c849-48f4-b117-9ac2dcf6b50d.html",
     "image": "https://lift3cdn.nl/image/115/784x476/robby-valentine-2023.jpg",
     "soldOut": null,
     "unavailable": null,
-    "corrupted": null,
-    "origin": "boerderij"
+    "corrupted": null
   },
   {
     "doorOpenDateTime": "2023-11-02T18:00:00.000Z",
@@ -120,12 +68,11 @@
     "location": "boerderij",
     "price": 29,
     "shortText": "+ supports King Satan & Psycholies",
-    "longText": "../public/texts/29c8ce38-4f1f-40a9-9a40-ab4685345eaf.html",
+    "longText": "../public/texts/22065c5d-c3bb-453b-8093-37e1e7ead7a4.html",
     "image": "https://lift3cdn.nl/image/115/784x476/gothminister.jpg",
     "soldOut": null,
     "unavailable": null,
-    "corrupted": null,
-    "origin": "boerderij"
+    "corrupted": null
   },
   {
     "doorOpenDateTime": "2023-11-04T18:30:00.000Z",
@@ -136,12 +83,11 @@
     "location": "boerderij",
     "price": 30,
     "shortText": "One Knight Only",
-    "longText": "../public/texts/cec038ea-d140-45f4-b8f5-fd48c3e0aca1.html",
+    "longText": "../public/texts/6e2752aa-c963-48ed-bd0e-b1ca6513b6d4.html",
     "image": "https://lift3cdn.nl/image/115/784x476/damian-wilson-2023-2.jpg",
     "soldOut": null,
     "unavailable": null,
-    "corrupted": null,
-    "origin": "boerderij"
+    "corrupted": null
   },
   {
     "doorOpenDateTime": "2023-11-11T18:30:00.000Z",
@@ -152,12 +98,11 @@
     "location": "boerderij",
     "price": 31,
     "shortText": "A Decade of Daisies",
-    "longText": "../public/texts/ab8bb4f1-df7e-41de-9b26-21a534f90651.html",
+    "longText": "../public/texts/6aff8178-e691-457a-8930-fdb57b50792a.html",
     "image": "https://lift3cdn.nl/image/115/784x476/the-dead-daisies-2023-2.jpg",
     "soldOut": null,
     "unavailable": null,
-    "corrupted": null,
-    "origin": "boerderij"
+    "corrupted": null
   },
   {
     "doorOpenDateTime": "2023-11-15T18:00:00.000Z",
@@ -167,13 +112,12 @@
     "title": "Animals As Leaders",
     "location": "boerderij",
     "price": 28,
-    "shortText": "+ special guests",
-    "longText": "../public/texts/6405b76c-ad54-47cd-bb04-06bcd212c1cd.html",
+    "shortText": "+ support: Allt",
+    "longText": "../public/texts/bbaba7a9-6a59-4358-87a0-11661ce31937.html",
     "image": "https://lift3cdn.nl/image/115/784x476/animals-as-leaders.jpg",
     "soldOut": null,
     "unavailable": null,
-    "corrupted": null,
-    "origin": "boerderij"
+    "corrupted": null
   },
   {
     "doorOpenDateTime": "2023-11-17T18:30:00.000Z",
@@ -184,12 +128,11 @@
     "location": "boerderij",
     "price": 28,
     "shortText": "Beyond Dark Waters",
-    "longText": "../public/texts/5dd23f18-568e-4ab5-889c-2f34a7536aa7.html",
+    "longText": "../public/texts/012d00dc-b7d7-44fd-9112-0f18ba61fa56.html",
     "image": "https://lift3cdn.nl/image/115/784x476/delain.jpg",
     "soldOut": null,
     "unavailable": null,
-    "corrupted": null,
-    "origin": "boerderij"
+    "corrupted": null
   },
   {
     "doorOpenDateTime": "2023-12-02T18:30:00.000Z",
@@ -200,12 +143,11 @@
     "location": "boerderij",
     "price": 26,
     "shortText": "+ support Diggeth",
-    "longText": "../public/texts/ac051396-17b1-4ae9-a740-76581f8095c3.html",
+    "longText": "../public/texts/b1ac7907-9113-48f7-a52a-a0cd934b7113.html",
     "image": "https://lift3cdn.nl/image/115/784x476/acdcuk-2023.jpg",
     "soldOut": null,
     "unavailable": null,
-    "corrupted": null,
-    "origin": "boerderij"
+    "corrupted": null
   },
   {
     "doorOpenDateTime": "2023-12-22T18:30:00.000Z",
@@ -216,11 +158,40 @@
     "location": "boerderij",
     "price": 30,
     "shortText": "Nr. 1 The Doors tribute band",
-    "longText": "../public/texts/a14e1c1c-dac1-44f1-aeb8-9d7df695ad6b.html",
+    "longText": "../public/texts/fec6b4e0-8aeb-498f-a1cd-da31041276ab.html",
     "image": "https://lift3cdn.nl/image/115/784x476/the-doors-alive-2023.jpg",
     "soldOut": null,
     "unavailable": null,
-    "corrupted": null,
-    "origin": "boerderij"
+    "corrupted": null
+  },
+  {
+    "doorOpenDateTime": "2023-12-23T18:30:00.000Z",
+    "startDateTime": "2023-12-23T19:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://poppodiumboerderij.nl/programma/knight-of-the-guitar",
+    "title": "Knight of The Guitar",
+    "location": "boerderij",
+    "price": 33,
+    "shortText": "Jan Akkerman / Leendert Haaksma / Erwin Nyhoff / John Hayes / Joep Pelt",
+    "longText": "../public/texts/8da0b5e2-e3af-40a5-9081-14d89f6bbbc8.html",
+    "image": "https://lift3cdn.nl/image/115/784x476/knight-of-the-guitar-2023.jpg",
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null
+  },
+  {
+    "doorOpenDateTime": "2024-01-27T18:30:00.000Z",
+    "startDateTime": "2024-01-27T19:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://poppodiumboerderij.nl/programma/rock-party-of-the-year",
+    "title": "Rock Party Of The Year",
+    "location": "boerderij",
+    "price": 31.5,
+    "shortText": "70's & 80's rock",
+    "longText": "../public/texts/4cfd6d63-a9b2-4c3b-a9b4-bdf52f3ba0cd.html",
+    "image": "https://lift3cdn.nl/image/115/784x476/rock-party-of-the-year.jpg",
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null
   }
 ]

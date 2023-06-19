@@ -29,6 +29,48 @@ const melkwegScraper = new AbstractScraper(makeScraperConfig({
 
 melkwegScraper.listenToMasterThread();
 
+
+// SINGLE RAW EVENT CHECK
+
+melkwegScraper.singleRawEventCheck = async function(event){
+
+  const workingTitle = this.cleanupEventTitle(event.title)
+
+  const isRefused = await this.rockRefuseListCheck(event, workingTitle)
+  if (isRefused.success) return {
+    reason: isRefused.reason,
+    event,
+    success: false
+  };
+
+  const isAllowed = await this.rockAllowListCheck(event, workingTitle)
+  if (isAllowed.success) return isAllowed;
+
+  const hasForbiddenTerms = await this.hasForbiddenTerms(event);
+  if (hasForbiddenTerms.success) {
+    await this.saveRefusedTitle(workingTitle)
+    return {
+      reason: hasForbiddenTerms.reason,
+      success: false,
+      event
+    }
+  }
+
+  const hasGoodTermsRes = await this.hasGoodTerms(event);
+  if (hasGoodTermsRes.success) {
+    await this.saveAllowedTitle(workingTitle)
+    return hasGoodTermsRes;
+  }
+
+  const isRockRes = await this.isRock(event, [workingTitle]);
+  if (isRockRes.success){
+    await this.saveAllowedTitle(workingTitle)
+  } else {
+    await this.saveRefusedTitle(workingTitle)
+  }
+  return isRockRes;
+}
+
 // MAKE BASE EVENTS
 
 melkwegScraper.makeBaseEventList = async function () {
@@ -43,7 +85,7 @@ melkwegScraper.makeBaseEventList = async function () {
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
-  const rawEvents = await page.evaluate(({workerData}) => {
+  let rawEvents = await page.evaluate(({workerData,unavailabiltyTerms}) => {
     return Array.from(document.querySelectorAll("[data-element='agenda'] li[class*='event-list-day__list-item']"))
       .filter((eventEl) => {
         const anker = eventEl
@@ -57,7 +99,6 @@ melkwegScraper.makeBaseEventList = async function () {
       .map((eventEl) => {
         const title = eventEl.querySelector('h3[class*="title"]')?.textContent ?? "";
         const res = {
-          unavailable: "",
           pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
           errors: [],          
           title,
@@ -72,10 +113,14 @@ melkwegScraper.makeBaseEventList = async function () {
         shortTitle = shortTitle ? `<br>${shortTitle}` : '';
         res.shortText = `${tags} ${shortTitle}`;
         res.venueEventUrl = anchor.href;
-        res.soldOut = !!(eventEl.querySelector("[class*='styles_event-compact__text']")?.textContent.toLowerCase().includes('uitverkocht') ?? null);
+        const uaRex = new RegExp(unavailabiltyTerms.join("|"), 'gi');
+        res.unavailable = !!eventEl.textContent.match(uaRex);        
+        res.soldOut = !!eventEl.querySelector("[class*='styles_event-compact__text']")?.textContent.match(/uitverkocht|sold\s?out/i) ?? false;
         return res;
       });
-  }, {workerData});
+  }, {workerData, unavailabiltyTerms: AbstractScraper.unavailabiltyTerms})
+  
+  rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
 
   this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
@@ -84,24 +129,7 @@ melkwegScraper.makeBaseEventList = async function () {
   );
 };
 
-melkwegScraper.singleRawEventCheck = async function(event){
-
-  const st = event?.shortText?.toLowerCase() ?? '';
-  const rr = st.includes('rock') && st.includes('roll')
-  const prog = st.includes('prog');
-  const alt = st.includes('alternative rock');
-  const emo = st.includes('emo')
-  const acid = st.includes('acid');
-  if (!rr && !prog && !alt && !emo && !acid) {
-    return {
-      event,
-      reason: 'geen zeikmuziek',
-      success: true
-    }
-  }
-  return await this.isRock(event);
-}
-
+// GET PAGE INFO
 
 melkwegScraper.getPageInfo = async function ({ page, event }) {
  
@@ -109,7 +137,6 @@ melkwegScraper.getPageInfo = async function ({ page, event }) {
   
   const pageInfo = await page.evaluate(({event}) => {
     const res = {
-      unavailable: event.unavailable,
       pageInfo: `<a class='page-info' href='${location.href}'>${event.title}</a>`,
       errors: [],
     };

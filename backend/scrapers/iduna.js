@@ -28,13 +28,38 @@ const idunaScraper = new AbstractScraper(makeScraperConfig({
 
 idunaScraper.listenToMasterThread();
 
+// MERGED ASYNC CHECK
+
+idunaScraper.singleMergedEventCheck = async function (event) {
+  const tl = this.cleanupEventTitle(event.title);
+
+  const isRefused = await this.rockRefuseListCheck(event, tl)
+  if (isRefused.success) {
+    return {
+      reason: isRefused.reason,
+      event,
+      success: false
+    }
+  }
+
+  const isAllowed = await this.rockAllowListCheck(event, tl)
+  if (isAllowed.success) {
+    return isAllowed;  
+  }
+
+  return {
+    event,
+    success: true,
+    reason: "nothing found currently",
+  };
+};
+
 // MAKE BASE EVENTS
 
 idunaScraper.makeBaseEventList = async function () {
 
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
   if (availableBaseEvents){
-    this.dirtyTalk(availableBaseEvents.length)
     return await this.makeBaseEventListEnd({
       stopFunctie: null, rawEvents: availableBaseEvents}
     );    
@@ -45,55 +70,75 @@ idunaScraper.makeBaseEventList = async function () {
   try {
 
     doomEvents = await page
-      .evaluate(({workerData}) => {
+      .evaluate(({workerData, unavailabiltyTerms}) => {
       loadposts("doom", 1, 50); // eslint-disable-line
         return new Promise((resolve) => {
           setTimeout(() => {
             const doomEvents = Array.from(
               document.querySelectorAll("#gridcontent .griditemanchor")
             ).map((event) => {
-              const title = event.querySelector(".griditemtitle")?.textContent ?? null;
+              const title = event.querySelector(".griditemtitle h2:first-child")?.textContent ?? null;
+              let shortText = event.querySelector(".griditemtitle h2 ~ h2")?.textContent ?? null;
+              let soldOut = false;
+              const uaRex = new RegExp(unavailabiltyTerms.join("|"), 'gi');
+              const unavailable = !!event.textContent.match(uaRex);              
+              if (shortText.match(/uitverkocht|sold\soud/i)) {
+                soldOut = true;
+                shortText = shortText.replace(/uitverkocht|sold\sout\]?/i,'').replace(/[\[\]]+/i,'').trim()
+              }  
               return {
-                unavailable: "",
+                unavailable,
                 pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
-                errors: [],          
+                errors: [],         
+                soldOut, 
                 venueEventUrl: event?.href ?? null,
                 title,
+                shortText
               }               
             });
             resolve(doomEvents);
           }, 2500);
         });
-      },{workerData})
+      },{workerData, unavailabiltyTerms: AbstractScraper.unavailabiltyTerms})
       .then((doomEvents) => doomEvents);
     // TODO catch
 
     metalEvents = await page
-      .evaluate(({workerData}) => {
+      .evaluate(({workerData, unavailabiltyTerms}) => {
       loadposts("metal", 1, 50); // eslint-disable-line
         return new Promise((resolve) => {
           setTimeout(() => {
             const metalEvents = Array.from(
               document.querySelectorAll("#gridcontent .griditemanchor")
             ).map((event) => {
-              const title = event.querySelector(".griditemtitle")?.textContent ?? null;
+              const title = event.querySelector(".griditemtitle h2:first-child")?.textContent ?? null;
+              let shortText = event.querySelector(".griditemtitle h2 ~ h2")?.textContent ?? null;
+              let soldOut = false;
+              const uaRex = new RegExp(unavailabiltyTerms.join("|"), 'gi');
+              const unavailable = !!event.textContent.match(uaRex);                 
+              if (shortText.match(/uitverkocht|sold\soud/i)) {
+                soldOut = true;
+                shortText = shortText.replace(/uitverkocht|sold\sout\]?/i,'').replace(/[\[\]]+/i,'').trim()
+              } 
               return {
-                unavailable: "",
                 pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
                 errors: [],          
                 venueEventUrl: event?.href ?? null,
                 title,
+                soldOut,
+                shortText,
+                unavailable
               }               
             });
             resolve(metalEvents);
           }, 2500);
         });
-      },{workerData})
+      },{workerData, unavailabiltyTerms: AbstractScraper.unavailabiltyTerms})
       .then((metalEvents) => metalEvents);
     // TODO catch
 
     punkEvents = await page
-      .evaluate(({workerData}) => {
+      .evaluate(({workerData, unavailabiltyTerms}) => {
       // no-eslint
       // hack VAN DE SITE ZELF
       loadposts("punk", 1, 50); // eslint-disable-line
@@ -103,19 +148,28 @@ idunaScraper.makeBaseEventList = async function () {
             const punkEvents = Array.from(
               document.querySelectorAll("#gridcontent .griditemanchor")
             ).map((event) => {
-              const title = event.querySelector(".griditemtitle")?.textContent.trim() ?? null;
+              const title = event.querySelector(".griditemtitle h2:first-child")?.textContent ?? null;
+              let shortText = event.querySelector(".griditemtitle h2 ~ h2")?.textContent ?? null;
+              let soldOut = false;
+              const uaRex = new RegExp(unavailabiltyTerms.join("|"), 'gi');
+              const unavailable = !!event.textContent.match(uaRex);                 
+              if (shortText.match(/uitverkocht|sold\soud/i)) {
+                soldOut = true;
+                shortText = shortText.replace(/uitverkocht|sold\sout\]?/i,'').replace(/[\[\]]+/i,'').trim()
+              }               
               return {
                 venueEventUrl: event?.href ?? null,
                 title,
+                unavailable,
+                soldOut,
                 pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
                 errors: [],
-                unavailable: "",
               };
             });
             resolve(punkEvents);
           }, 2500);
         });
-      },{workerData})
+      },{workerData,unavailabiltyTerms: AbstractScraper.unavailabiltyTerms})
       .then((punkEvents) => punkEvents);
     //TODO catch
     
@@ -147,7 +201,7 @@ idunaScraper.makeBaseEventList = async function () {
     musicEvent.title = _t.killWhitespaceExcess(musicEvent.title);
     musicEvent.pageInfo = _t.killWhitespaceExcess(musicEvent.pageInfo);
     return musicEvent;
-  });
+  }).map(this.isMusicEventCorruptedMapper);
 
   this.saveBaseEventlist(workerData.family, rawEvents)
   return await this.makeBaseEventListEnd({
@@ -159,8 +213,6 @@ idunaScraper.makeBaseEventList = async function () {
 // GET PAGE INFO
 
 idunaScraper.getPageInfo = async function ({ page, event }) {
-
-  this.dirtyTalk(event.title)
   
   const {stopFunctie} =  await this.getPageInfoStart()
   
@@ -168,7 +220,6 @@ idunaScraper.getPageInfo = async function ({ page, event }) {
     ({ months , event}) => {
 
       const res = {
-        unavailable: event.unavailable,
         pageInfo: `<a class='page-info' href='${location.href}'>${event.title}</a>`,
         errors: [],
       };

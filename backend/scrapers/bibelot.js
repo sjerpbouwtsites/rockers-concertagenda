@@ -21,7 +21,7 @@ const bibelotScraper = new AbstractScraper(makeScraperConfig({
         requiredProperties: ['venueEventUrl', 'title']
       },
       singlePage: {
-        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
+        requiredProperties: ['venueEventUrl', 'title', 'startDateTime']
       }      
     }
   
@@ -54,7 +54,7 @@ bibelotScraper.makeBaseEventList = async function () {
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
-  const rawEvents = await page.evaluate(({workerData}) => {
+  let rawEvents = await page.evaluate(({workerData}) => {
     return Array.from(
       document.querySelectorAll(
         '.event[class*="metal"], .event[class*="punk"], .event[class*="rock"]'
@@ -63,7 +63,6 @@ bibelotScraper.makeBaseEventList = async function () {
       
       const title = eventEl.querySelector("h1")?.textContent.trim() ?? null;
       const res = {
-        unavailable: '',
         pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
         errors: [],
         title
@@ -75,10 +74,11 @@ bibelotScraper.makeBaseEventList = async function () {
         : [null, null];
       res.shortText = shortTextSplit[1];
       res.venueEventUrl = eventEl.querySelector(".link")?.href ?? null;
-      res.soldOut = !!(!eventEl.querySelector('.ticket-button')?.hasAttribute('href') ?? null) // als uitverkocht is span
+      res.soldOut = !!eventEl.querySelector('.ticket-button')?.textContent.match(/uitverkocht|sold\s?out/i) ?? null;
       return res;
     });
-  }, {workerData});
+  }, {workerData})
+  rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
 
   this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
@@ -97,37 +97,16 @@ bibelotScraper.getPageInfo = async function ({ page, event }) {
   const pageInfo = await page.evaluate(
     ({ months , event}) => {
       const res = {
-        unavailable: event.unavailable,
         pageInfo: `<a class='page-info' href='${location.href}'>${event.title}</a>`,
         errors: [],
       };
 
-      let baseDateM, ttt;
-      try {
-        ttt = document
-          .querySelector(".main-column h3")
-          ?.textContent.toLowerCase();
-        baseDateM = ttt.match(/(\d+)\s(\w+)\s(\d{4})/);
-      } catch (errorCaught) {
-        res.errors.push({
-          error: errorCaught,
-          remarks: `base date match ${res.pageInfo}`,
-          errorLevel: 'notice',
-          toDebug: {
-            text: ttt
-          }
-        });
-        return res;
-      }
+      const baseDateM = document
+        .querySelector(".main-column h3")
+        ?.textContent.match(/(\d+)\s(\w+)\s(\d{4})/) ?? null;
 
+      res.baseDate = null;
       if (!Array.isArray(baseDateM) || baseDateM.length < 4) {
-        res.errors.push({
-          remarks: `base date match faal2 ${res.pageInfo}`,
-          toDebug:{
-            res,
-            baseDateM
-          }
-        });        
         return res;
       } else {
         res.baseDate = `${baseDateM[3]}-${
@@ -135,44 +114,24 @@ bibelotScraper.getPageInfo = async function ({ page, event }) {
         }-${baseDateM[1].padStart(2, "0")}`;
       }
 
-      if (!res.baseDate) {
-        res.errors.push({
-          remarks: `base date match faal3 ${res.pageInfo}`,
-          toDebug:{
-            res,
-            baseDateM
-          }
-        }); 
-        return res;
-      }
-
-      res.eventMetaColomText;
-      try {
-        res.eventMetaColomText = 
+      res.eventMetaColomText = 
           document
             .querySelector(".meta-colom")
             ?.textContent.toLowerCase()
 
-        res.startTimeMatch = res.eventMetaColomText.match(
-          /(aanvang\sshow|aanvang|start\sshow|show)\W?\s+(\d\d:\d\d)/
-        );
-        res.doorTimeMatch = res.eventMetaColomText.match(
-          /(doors|deuren|zaal\sopen)\W?\s+(\d\d:\d\d)/
-        );
-        res.endTimeMatch = res.eventMetaColomText.match(
-          /(end|eind|einde|curfew)\W?\s+(\d\d:\d\d)/
-        );
-      } catch (errorCaught) {
-        res.errors.push({
-          error: errorCaught,
-          remarks: `matching van bibelotspecifieke woorden omtrent open/deur/dicht ${res.pageInfo}`,
-          toDebug: res,
-        })
-        return res;
-      }
+      res.startTimeMatch = res.eventMetaColomText.match(
+        /(aanvang\sshow|aanvang|start\sshow|show)\W?\s+(\d\d:\d\d)/
+      );
+      res.doorTimeMatch = res.eventMetaColomText.match(
+        /(doors|deuren|zaal\sopen)\W?\s+(\d\d:\d\d)/
+      );
+      res.endTimeMatch = res.eventMetaColomText.match(
+        /(end|eind|einde|curfew)\W?\s+(\d\d:\d\d)/
+      );
+     
 
       try {
-        if (Array.isArray(res.doorTimeMatch) && res.doorTimeMatch.length > 2) {
+        if (Array.isArray(res.doorTimeMatch) && res.doorTimeMatch.length > 2 && res.baseDate) {
           res.doorOpenDateTime = new Date(
             `${res.baseDate}T${res.doorTimeMatch[2]}:00`
           ).toISOString();
@@ -187,7 +146,8 @@ bibelotScraper.getPageInfo = async function ({ page, event }) {
       try {
         if (
           Array.isArray(res.startTimeMatch) &&
-          res.startTimeMatch.length > 2
+          res.startTimeMatch.length > 2 &&
+          res.baseDate
         ) {
           res.startDateTime = new Date(
             `${res.baseDate}T${res.startTimeMatch[2]}:00`
@@ -204,7 +164,7 @@ bibelotScraper.getPageInfo = async function ({ page, event }) {
         });
       }
       try {
-        if (Array.isArray(res.endTimeMatch) && res.endTimeMatch.length > 2) {
+        if (Array.isArray(res.endTimeMatch) && res.endTimeMatch.length > 2 && res.baseDate) {
           res.endDateTime = new Date(
             `${res.baseDate}T${res.endTimeMatch[2]}:00`
           ).toISOString();

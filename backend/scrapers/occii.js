@@ -68,11 +68,28 @@ occiiScraper.singleRawEventCheck = async function(event){
 // SINGLE MERGED EVENT CHECK
 
 occiiScraper.singleMergedEventCheck = async function(event, pageInfo){
+
+  const workingTitle = this.cleanupEventTitle(event.title)
+
+  const isRefused = await this.rockRefuseListCheck(event, workingTitle)
+  if (isRefused.success) {
+    return {
+      reason: isRefused.reason,
+      event,
+      success: false
+    }
+  }
+
+  const isAllowed = await this.rockAllowListCheck(event, workingTitle)
+  if (isAllowed.success) {
+    return isAllowed;  
+  }  
+
   const ss = !(pageInfo?.genres?.include('electronic') ?? false);
   if (ss) {
-    this.saveAllowedTitle(event.title.toLowerCase())
+    this.saveAllowedTitle(workingTitle)
   } else {
-    this.saveRefusedTitle(event.title.toLowerCase())
+    this.saveRefusedTitle(workingTitle)
   }
   return {
     reason: 'ja genre controle' +ss,
@@ -96,27 +113,31 @@ occiiScraper.makeBaseEventList = async function () {
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
-  const rawEvents = await page.evaluate(({workerData}) => {
+  let rawEvents = await page.evaluate(({workerData,unavailabiltyTerms}) => {
     return Array.from(document.querySelector('.occii-events-display-container').querySelectorAll(".occii-event-display"))
       .map((occiiEvent) => {
         
         const firstAnchor = occiiEvent.querySelector("a");
         const title = firstAnchor.title;
         const res = {
-          unavailable: "",
+
           pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
           errors: [],          
           title,
         }         
 
         const eventText = occiiEvent.textContent.toLowerCase();
-        res.soldOut = eventText.includes('uitverkocht') || eventText.includes('sold out');
+        const uaRex = new RegExp(unavailabiltyTerms.join("|"), 'gi');
+        res.unavailable = !!occiiEvent.textContent.match(uaRex);       
+        res.soldOut = !!eventText.match(/uitverkocht|sold\s?out/i) ?? false;
         res.venueEventUrl = firstAnchor.href;
         res.shortText = occiiEvent.querySelector(".occii-events-description")?.textContent ?? null
         return res;
 
       });
-  }, {workerData});
+  }, {workerData, unavailabiltyTerms: AbstractScraper.unavailabiltyTerms})
+
+  rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
 
   this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
@@ -133,7 +154,6 @@ occiiScraper.getPageInfo = async function ({ page, event}) {
 
   const pageInfo = await page.evaluate(({months, event}) => {
     const res = {
-      unavailable: event.unavailable,
       pageInfo: `<a class='page-info' href='${location.href}'>${event.title}</a>`,
       errors: [],
     };
@@ -177,7 +197,7 @@ occiiScraper.getPageInfo = async function ({ page, event}) {
         error: caughtError,
         remarks: `date time wrap trycatch drama ${res.pageInfo}`,        
         toDebug: {
-          res, event
+          event
         }
       });
       return res;

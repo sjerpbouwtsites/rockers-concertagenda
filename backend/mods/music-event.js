@@ -12,9 +12,8 @@ export default class MusicEvent {
   longText = null;
   image = null;
   soldOut = null;
-  unavailable = null; // wordt: of iets verplaatst is. // TODO
-  corrupted = null; // wordt: als datum ontbreekt oid. //TODO
-  origin = null;
+  unavailable = null; // wordt: of iets verplaatst is.
+  corrupted = null; // wordt: als datum ontbreekt oid.
   constructor(init, enforceMusicEventType = true) {
     this.merge(init, enforceMusicEventType);
   }
@@ -22,7 +21,14 @@ export default class MusicEvent {
     if (enforceMusicEventType){
       for (let confKey in conf) {
         if (Object.prototype.hasOwnProperty.call(this, confKey)) {
-          this[confKey] = conf[confKey];
+          if (confKey === 'corrupted' && typeof this[confKey] === 'string'){
+            this[confKey] = conf[confKey] + ' '+ this[confKey];
+          }
+          else if (typeof conf[confKey] !== 'boolean') {
+            this[confKey] = conf[confKey];
+          } else {
+            this[confKey] = this[confKey] || conf[confKey]
+          }
         }
       }
     } else {
