@@ -193,7 +193,7 @@ export default class EventsList {
       nowDateString.toISOString().match(/(.*)T/)[1].replace(/\D/g, "")
     );
 
-    EventsList._events
+    EventsList._events = EventsList._events
       .filter(event => {
         const musicEventTime = Number(
           event.startDateTime.match(/(.*)T/)[1].replace(/\D/g, "")
