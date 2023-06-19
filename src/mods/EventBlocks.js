@@ -60,7 +60,9 @@ class EventBlocks extends React.Component {
 
     await fetch(thisEvent.longText.replace("../public/", "/"), {})
       .then((response) => {
+
         const rrr = response.text();
+        console.log(rrr)
         return rrr;
       })
       .then((text) => {
