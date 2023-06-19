@@ -14,7 +14,7 @@ const voltScraper = new AbstractScraper(makeScraperConfig({
     },
     app: {
       mainPage: {
-        url: "https://www.poppodium-volt.nl/",
+        url: "https://www.poppodium-volt.nl/programma?f%5B0%5D=activity_itix_genres%3A9&f%5B1%5D=activity_itix_genres%3A30",
         requiredProperties: ['venueEventUrl', 'title']
       },
       singlePage: {
@@ -41,7 +41,7 @@ voltScraper.makeBaseEventList = async function () {
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
   try {
-    await page.waitForSelector(".card-activity-list", {
+    await page.waitForSelector(".card-activity", {
       timeout: 1250,
     });
 
@@ -50,17 +50,17 @@ voltScraper.makeBaseEventList = async function () {
   }
 
   let rawEvents = await page.evaluate(({workerData, unavailabiltyTerms}) => {
-    return Array.from(document.querySelectorAll(".card-activity-list"))
-      .filter((rawEvent) => {
-        const hasGenreName =
-          rawEvent
-            .querySelector(".card-activity-list-badge-wrapper")
-            ?.textContent.toLowerCase()
-            .trim() ?? "";
-        return hasGenreName.includes("metal") || hasGenreName.includes("punk");
-      })
+    return Array.from(document.querySelectorAll(".card-activity"))
+      // .filter((rawEvent) => {
+      //   const hasGenreName =
+      //     rawEvent
+      //       .querySelector(".card-activity-list-badge-wrapper")
+      //       ?.textContent.toLowerCase()
+      //       .trim() ?? "";
+      //   return hasGenreName.includes("metal") || hasGenreName.includes("punk");
+      // })
       .map((rawEvent) => {
-        const anchor = rawEvent.querySelector('.card-activity-list__title a') ?? null;
+        const anchor = rawEvent.querySelector('.card-activity__title a') ?? null;
         const title = anchor?.textContent.trim() ?? "";
         const res = {
           pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
@@ -68,14 +68,14 @@ voltScraper.makeBaseEventList = async function () {
           title
         };        
         res.venueEventUrl = anchor.hasAttribute("href") ? anchor.href : null;
-        res.image = rawEvent.querySelector(".card-activity-list__image img")?.src ?? null;
+        res.image = rawEvent.querySelector(".card-activity__image img")?.src ?? null;
         if (!res.image){
           res.errors.push({
             remarks: `image missing ${res.pageInfo}`
           })
         }        
         const uaRex = new RegExp(unavailabiltyTerms.join("|"), 'gi');
-        res.unavailable = !!rawEvent.textContent.match(uaRex);        
+        res.unavailable = !!rawEvent.textContent.match(uaRex);
         res.soldOut = rawEvent?.textContent.match(/uitverkocht|sold\s?out/i) ?? false;
         return res;
       });
