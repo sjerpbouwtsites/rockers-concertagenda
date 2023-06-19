@@ -3,6 +3,7 @@ import * as _t from "../mods/tools.js";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 
+
 // SCRAPER CONFIG
 
 const voltScraper = new AbstractScraper(makeScraperConfig({
@@ -30,7 +31,7 @@ voltScraper.listenToMasterThread();
 
 voltScraper.singleMergedEventCheck = async function (event) {
 
-  const workingTitle = this.cleanupEventTitle(event.title.toLowerCase());
+  const workingTitle = this.cleanupEventTitle(event.title);
 
   const isRefused = await this.rockRefuseListCheck(event, workingTitle)
   if (isRefused.success) return {
@@ -103,6 +104,7 @@ voltScraper.makeBaseEventList = async function () {
         };        
         res.venueEventUrl = anchor.hasAttribute("href") ? anchor.href : null;
         res.image = rawEvent.querySelector(".card-activity__image img")?.src ?? null;
+        res.shortText = rawEvent.querySelector('.card-activity__image-badges')?.textContent ?? null;
         if (!res.image){
           res.errors.push({
             remarks: `image missing ${res.pageInfo}`
@@ -135,6 +137,7 @@ voltScraper.getPageInfo = async function ({ page, url, event}) {
     ({ months, event, url }) => {
 
       let res = {};
+      res.title = event.title;
       res.unavailable= event.unavailable;
       res.pageInfo= `<a class='page-info' class='page-info' href='${url}'>${event.title}</a>`;
       res.errors = [];

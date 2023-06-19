@@ -855,31 +855,41 @@ export default class AbstractScraper {
   } 
 
   cleanupEventTitle(workingTitle = ''){
-    // - 14:35 zoals bij afas
-    if (workingTitle.match(/\s?-\s?\d\d:\d\d/)){
-      workingTitle = workingTitle.replace(/\s?-\s?\d\d:\d\d/, '');
+    try {
+    
+      if (workingTitle.match(/\s?-\s?\d\d:\d\d/)){
+        workingTitle = workingTitle.replace(/\s?-\s?\d\d:\d\d/, '');
+      }
+    
+      if (workingTitle.includes('&')) {
+        workingTitle = workingTitle.replace(/&.*$/,'');
+      }
+
+      if (workingTitle.includes('|')) {
+        workingTitle = workingTitle.replace(/|.*$/,'');
+      }
+
+      if (workingTitle.includes('•')) {
+        workingTitle = workingTitle.replace(/•.*$/,'');
+      }
+
+      if (workingTitle.includes('+')) {
+        workingTitle = workingTitle.replace(/\+.*$/,'');
+      }    
+
+      if (workingTitle.includes(':')) {
+        workingTitle = workingTitle.replace(/^[\w\s]+:/,'');
+      }
+    } catch (error) {
+      _t.wrappedHandleError(new ErrorWrapper({
+        error,
+        workerData,
+        remarks: `fout schoonmaken titel`,
+        errorLevel: 'notice',
+      }));
+      return 'TITEL SCHOONMAKEN MISLUKT';
     }
     
-    if (workingTitle.includes('&')) {
-      workingTitle = workingTitle.replace(/&.*$/,'');
-    }
-
-    if (workingTitle.includes('|')) {
-      workingTitle = workingTitle.replace(/|.*$/,'');
-    }
-
-    if (workingTitle.includes('•')) {
-      workingTitle = workingTitle.replace(/•.*$/,'');
-    }
-
-    if (workingTitle.includes('+')) {
-      workingTitle = workingTitle.replace(/\+.*$/,'');
-    }    
-
-    if (workingTitle.includes(':')) {
-      workingTitle = workingTitle.replace(/^[\w\s]+:/,'');
-    }
-
     return workingTitle.toLowerCase().trim()
   }
 
