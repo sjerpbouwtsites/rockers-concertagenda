@@ -30,22 +30,45 @@ const melkwegScraper = new AbstractScraper(makeScraperConfig({
 melkwegScraper.listenToMasterThread();
 
 
+// SINGLE RAW EVENT CHECK
+
 melkwegScraper.singleRawEventCheck = async function(event){
 
-  const st = event?.shortText?.toLowerCase() ?? '';
-  const rr = st.includes('rock') && st.includes('roll')
-  const prog = st.includes('prog');
-  const alt = st.includes('alternative rock');
-  const emo = st.includes('emo')
-  const acid = st.includes('acid');
-  if (!rr && !prog && !alt && !emo && !acid) {
+  const workingTitle = this.cleanupEventTitle(event.title)
+
+  const isRefused = await this.rockRefuseListCheck(event, workingTitle)
+  if (isRefused.success) return {
+    reason: isRefused.reason,
+    event,
+    success: false
+  };
+
+  const isAllowed = await this.rockAllowListCheck(event, workingTitle)
+  if (isAllowed.success) return isAllowed;
+
+  const hasForbiddenTerms = await this.hasForbiddenTerms(event);
+  if (hasForbiddenTerms.success) {
+    await this.saveRefusedTitle(workingTitle)
     return {
-      event,
-      reason: 'geen zeikmuziek',
-      success: true
+      reason: hasForbiddenTerms.reason,
+      success: false,
+      event
     }
   }
-  return await this.isRock(event);
+
+  const hasGoodTermsRes = await this.hasGoodTerms(event);
+  if (hasGoodTermsRes.success) {
+    await this.saveAllowedTitle(workingTitle)
+    return hasGoodTermsRes;
+  }
+
+  const isRockRes = await this.isRock(event, [workingTitle]);
+  if (isRockRes.success){
+    await this.saveAllowedTitle(workingTitle)
+  } else {
+    await this.saveRefusedTitle(workingTitle)
+  }
+  return isRockRes;
 }
 
 // MAKE BASE EVENTS
