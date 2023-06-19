@@ -5,7 +5,7 @@ import makeScraperConfig from "./gedeeld/scraper-config.js";
 
 // SCRAPER CONFIG
 
-const melkwegScraper = new AbstractScraper(makeScraperConfig({
+const groeneEngelScraper = new AbstractScraper(makeScraperConfig({
   maxExecutionTime: 60075,
   workerData: Object.assign({}, workerData),
   puppeteerConfig: {
@@ -28,11 +28,126 @@ const melkwegScraper = new AbstractScraper(makeScraperConfig({
   }
 }));
 
-melkwegScraper.listenToMasterThread();
+groeneEngelScraper.listenToMasterThread();
+
+// MERGED ASYNC CHECK
+
+groeneEngelScraper.singleMergedEventCheck = async function (event) {
+  const tl = this.cleanupEventTitle(event.title);
+
+  const isRefused = await this.rockRefuseListCheck(event, tl)
+  if (isRefused.success) {
+    return {
+      reason: isRefused.reason,
+      event,
+      success: false
+    }
+  }
+
+  const isAllowed = await this.rockAllowListCheck(event, tl)
+  if (isAllowed.success) {
+    return isAllowed;  
+  }
+
+  return {
+    event,
+    success: true,
+    reason: "nothing found currently",
+  };
+};
+
+// MAKE BASE EVENT LIST
+
+groeneEngelScraper.makeBaseEventList = async function () {
+
+  const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
+  if (availableBaseEvents){
+    const thisWorkersEvents = availableBaseEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
+    return await this.makeBaseEventListEnd({
+      stopFunctie: null, rawEvents: thisWorkersEvents}
+    );    
+  }    
+
+  const {stopFunctie, page} = await this.makeBaseEventListStart()
+
+  let punkMetalRawEvents = await page.evaluate(({workerData, unavailabiltyTerms}) => {
+    return Array.from(document.querySelectorAll(".event-item"))
+      .filter((eventEl) => {
+        const tags =
+          eventEl.querySelector(".meta-tag")?.textContent.toLowerCase() ?? "";
+        return (
+          tags.includes("metal") ||
+          tags.includes("punk")
+        );
+      }).map((eventEl) =>{
+        const title = eventEl.querySelector(".media-heading")?.textContent ?? null;
+        const res = {
+          pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
+          errors: [],
+          title
+        };
+        res.venueEventUrl =
+            eventEl
+              .querySelector(".jq-modal-trigger")
+              ?.getAttribute("data-url") ?? "";
+        const uaRex = new RegExp(unavailabiltyTerms.join("|"), 'gi');
+        res.unavailable = !!eventEl.textContent.match(uaRex);      
+        res.soldOut = !!eventEl.querySelector('.meta-info')?.textContent.match(/uitverkocht|sold\s?out/i) ?? null;
+        return res;
+      })
+  }, {workerData, unavailabiltyTerms: AbstractScraper.unavailabiltyTerms})
+
+  punkMetalRawEvents = punkMetalRawEvents.map(this.isMusicEventCorruptedMapper);
+  
+
+  let rockRawEvents = await page.evaluate(({workerData}) => {
+    return Array.from(document.querySelectorAll(".event-item"))
+      .filter((eventEl) => {
+        const tags =
+          eventEl.querySelector(".meta-tag")?.textContent.toLowerCase() ?? "";
+        return (
+          tags.includes("rock")
+        );
+      }).map((eventEl) => {
+        const title = eventEl.querySelector(".media-heading")?.textContent ?? null;
+        const res = {
+          pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
+          errors: [],
+          title
+        };
+        res.venueEventUrl =
+            eventEl
+              .querySelector(".jq-modal-trigger")
+              ?.getAttribute("data-url") ?? "";
+      
+        res.soldOut = !!(eventEl.querySelector('.meta-info')?.textContent.toLowerCase().includes('uitverkocht') ?? null)
+        return res;
+      })
+  }, {workerData})
+
+  rockRawEvents = rockRawEvents.map(this.isMusicEventCorruptedMapper);
+
+  const checkedRockEvents = [];
+  while (rockRawEvents.length){
+    const thisRockRawEvent = rockRawEvents.shift();
+    const isRockRes = await this.isRock(thisRockRawEvent);
+    if (isRockRes.success){
+      checkedRockEvents.push(thisRockRawEvent)
+    }
+  }
+
+  const rawEvents = punkMetalRawEvents.concat(checkedRockEvents)
+
+  this.saveBaseEventlist(workerData.family, rawEvents)
+  const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
+  return await this.makeBaseEventListEnd({
+    stopFunctie, rawEvents: thisWorkersEvents}
+  );
+};
 
 // MAKE BASE EVENTS
 
-melkwegScraper.makeBaseEventList = async function () {
+groeneEngelScraper.makeBaseEventList = async function () {
 
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
   if (availableBaseEvents){
@@ -91,7 +206,7 @@ melkwegScraper.makeBaseEventList = async function () {
   
 };
 
-melkwegScraper.getPageInfo = async function ({ page, event }) {
+groeneEngelScraper.getPageInfo = async function ({ page, event }) {
 
   const {stopFunctie} =  await this.getPageInfoStart()
   

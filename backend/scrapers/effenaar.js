@@ -29,6 +29,30 @@ effenaarScraper.listenToMasterThread();
 
 // MAKE BASE EVENTS
 
+effenaarScraper.singleMergedEventCheck = async function(event){
+
+  const workingTitle = this.cleanupEventTitle(event.title)
+
+  const isRefused = await this.rockRefuseListCheck(event, workingTitle)
+  if (isRefused.success) return {
+    reason: isRefused.reason,
+    event,
+    success: false
+  };
+
+  const isAllowed = await this.rockAllowListCheck(event, workingTitle)
+  if (isAllowed.success) return isAllowed;
+
+  return {
+    event,
+    success: true,
+    reason: "nothing found currently",
+  };
+
+}
+
+// MERGED ASYNC CHECK
+
 effenaarScraper.makeBaseEventList = async function () {
 
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);

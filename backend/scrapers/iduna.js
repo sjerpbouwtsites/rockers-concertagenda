@@ -28,6 +28,32 @@ const idunaScraper = new AbstractScraper(makeScraperConfig({
 
 idunaScraper.listenToMasterThread();
 
+// MERGED ASYNC CHECK
+
+idunaScraper.singleMergedEventCheck = async function (event) {
+  const tl = this.cleanupEventTitle(event.title);
+
+  const isRefused = await this.rockRefuseListCheck(event, tl)
+  if (isRefused.success) {
+    return {
+      reason: isRefused.reason,
+      event,
+      success: false
+    }
+  }
+
+  const isAllowed = await this.rockAllowListCheck(event, tl)
+  if (isAllowed.success) {
+    return isAllowed;  
+  }
+
+  return {
+    event,
+    success: true,
+    reason: "nothing found currently",
+  };
+};
+
 // MAKE BASE EVENTS
 
 idunaScraper.makeBaseEventList = async function () {

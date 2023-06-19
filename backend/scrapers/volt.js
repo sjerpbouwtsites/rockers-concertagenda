@@ -26,6 +26,40 @@ const voltScraper = new AbstractScraper(makeScraperConfig({
 
 voltScraper.listenToMasterThread();
 
+// MERGED ASYNC CHECK
+
+voltScraper.singleMergedEventCheck = async function (event) {
+
+  const workingTitle = this.cleanupEventTitle(event.title.toLowerCase());
+
+  const isRefused = await this.rockRefuseListCheck(event, workingTitle)
+  if (isRefused.success) return {
+    reason: isRefused.reason,
+    event,
+    success: false
+  };
+
+  const isAllowed = await this.rockAllowListCheck(event, workingTitle)
+  if (isAllowed.success) return isAllowed;
+
+  const hasForbiddenTerms = await this.hasForbiddenTerms(event);
+  if (hasForbiddenTerms.success) {
+    await this.saveRefusedTitle(workingTitle)
+    return {
+      reason: hasForbiddenTerms.reason,
+      success: false,
+      event
+    }
+  }
+
+  return {
+    event,
+    success: true,
+    reason: "nothing found currently",
+  };
+  
+};
+
 // MAKE BASE EVENTS
 
 voltScraper.makeBaseEventList = async function () {

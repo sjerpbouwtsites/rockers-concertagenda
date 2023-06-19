@@ -6,7 +6,6 @@ import * as _t from "../mods/tools.js";
 
 // SCRAPER CONFIG
 
-
 const vandaag = new Date().toISOString().split('T')[0]
 const defluxScraper = new AbstractScraper(makeScraperConfig({
   maxExecutionTime: 30007,
@@ -32,6 +31,31 @@ const defluxScraper = new AbstractScraper(makeScraperConfig({
 }));
 
 defluxScraper.listenToMasterThread();
+
+defluxScraper.singleMergedEventCheck = async function (event) {
+  const tl = this.cleanupEventTitle(event.title);
+
+  const isRefused = await this.rockRefuseListCheck(event, tl)
+  if (isRefused.success) {
+    return {
+      reason: isRefused.reason,
+      event,
+      success: false
+    }
+  }
+
+  const isAllowed = await this.rockAllowListCheck(event, tl)
+  if (isAllowed.success) {
+    return isAllowed;  
+  }
+
+  return {
+    event,
+    success: true,
+    reason: "nothing found currently",
+  };
+};
+
 
 // MAKE BASE EVENTS
 

@@ -68,11 +68,28 @@ occiiScraper.singleRawEventCheck = async function(event){
 // SINGLE MERGED EVENT CHECK
 
 occiiScraper.singleMergedEventCheck = async function(event, pageInfo){
+
+  const workingTitle = this.cleanupEventTitle(event.title)
+
+  const isRefused = await this.rockRefuseListCheck(event, workingTitle)
+  if (isRefused.success) {
+    return {
+      reason: isRefused.reason,
+      event,
+      success: false
+    }
+  }
+
+  const isAllowed = await this.rockAllowListCheck(event, workingTitle)
+  if (isAllowed.success) {
+    return isAllowed;  
+  }  
+
   const ss = !(pageInfo?.genres?.include('electronic') ?? false);
   if (ss) {
-    this.saveAllowedTitle(event.title.toLowerCase())
+    this.saveAllowedTitle(workingTitle)
   } else {
-    this.saveRefusedTitle(event.title.toLowerCase())
+    this.saveRefusedTitle(workingTitle)
   }
   return {
     reason: 'ja genre controle' +ss,

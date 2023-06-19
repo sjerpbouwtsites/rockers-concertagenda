@@ -29,6 +29,32 @@ const kavkaScraper = new AbstractScraper(
 
 kavkaScraper.listenToMasterThread();
 
+// MERGED ASYNC CHECK
+
+kavkaScraper.singleMergedEventCheck = async function (event) {
+  const tl = this.cleanupEventTitle(event.title);
+
+  const isRefused = await this.rockRefuseListCheck(event, tl)
+  if (isRefused.success) {
+    return {
+      reason: isRefused.reason,
+      event,
+      success: false
+    }
+  }
+
+  const isAllowed = await this.rockAllowListCheck(event, tl)
+  if (isAllowed.success) {
+    return isAllowed;  
+  }
+
+  return {
+    event,
+    success: true,
+    reason: "nothing found currently",
+  };
+};
+
 // MAKE BASE EVENTS
 
 kavkaScraper.makeBaseEventList = async function () {
