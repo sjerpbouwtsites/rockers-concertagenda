@@ -41,7 +41,7 @@ effenaarScraper.makeBaseEventList = async function () {
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
-  const rawEvents = await page.evaluate(
+  let rawEvents = await page.evaluate(
     ({workerData}) => {
       return Array.from(
         document.querySelectorAll(".search-and-filter .agenda-card")
@@ -49,7 +49,6 @@ effenaarScraper.makeBaseEventList = async function () {
         .map((eventEl) => {
           const title = eventEl.querySelector(".card-title")?.textContent.trim();
           const res = {
-            unavailable: "",
             pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
             errors: [],          
             title
@@ -61,7 +60,8 @@ effenaarScraper.makeBaseEventList = async function () {
         });
     },
     {workerData}
-  ).map(this.isMusicEventCorruptedMapper);
+  )
+  rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
 
   this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
@@ -81,7 +81,6 @@ effenaarScraper.getPageInfo = async function ({ page, event }) {
 
   const pageInfo = await page.evaluate(({months, event}) => {
     const res = {
-      unavailable: event.unavailable,
       pageInfo: `<a class='page-info' href='${location.href}'>${event.title}</a>`,
       errors: [],
     };

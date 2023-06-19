@@ -47,7 +47,7 @@ dbsScraper.makeBaseEventList = async function () {
   await page.waitForSelector('.fusion-events-post')
   await _t.waitFor(100)
 
-  const rawEvents = await page.evaluate(
+  let rawEvents = await page.evaluate(
     ({ months,workerData }) => {
       return Array.from(document.querySelectorAll(".fusion-events-post"))
         .map((eventEl) => {
@@ -56,7 +56,6 @@ dbsScraper.makeBaseEventList = async function () {
             title = title.replace(/\*?(sold\s?out|uitverkocht)\s?\*?\s?/i,'')
           }
           const res = {
-            unavailable: "",
             pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} - main - ${title}</a>`,
             errors: [],
             title
@@ -130,7 +129,8 @@ dbsScraper.makeBaseEventList = async function () {
         });
     },
     { months: this.months,workerData }
-  ).map(this.isMusicEventCorruptedMapper);
+  )
+  rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
 
   this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
@@ -148,7 +148,6 @@ dbsScraper.getPageInfo = async function ({ page, event }) {
   
   const pageInfo = await page.evaluate(({event}) => {
     const res = {
-      unavailable: event.unavailable,
       pageInfo: `<a class='page-info' href='${location.href}'>${document.title}</a>`,
       errors: [],
     };

@@ -89,7 +89,7 @@ p60Scraper.makeBaseEventList = async function () {
 
   await _t.autoScroll(page);
 
-  const rawEvents = await page.evaluate(({workerData}) => {
+  let rawEvents = await page.evaluate(({workerData, unavailabiltyTerms}) => {
     return Array.from(document.querySelectorAll(".views-infinite-scroll-content-wrapper > .p60-list__item-container")).filter(itemEl => {
       return !!itemEl.querySelector('[href*=ticketmaster]')
     }).map(
@@ -99,12 +99,13 @@ p60Scraper.makeBaseEventList = async function () {
         )?.textContent.trim() ?? '';
 
         const res = {
-          unavailable: '',
           pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
           errors: [],
           title
         };
 
+        const uaRex = new RegExp(unavailabiltyTerms.join("|"), 'gi');
+        res.unavailable = !!itemEl.textContent.match(uaRex);
         res.soldOut = itemEl?.textContent.match(/uitverkocht|sold\s?out/i) ?? false; // TODO gegokt soldout p60
 
         res.venueEventUrl = itemEl.querySelector('.field-group-link')?.href;
@@ -132,8 +133,9 @@ p60Scraper.makeBaseEventList = async function () {
         return res;
       }
     );
-  }, {workerData})
-    .map(this.isMusicEventCorruptedMapper);
+  }, {workerData, unavailabiltyTerms: AbstractScraper.unavailabiltyTerms})
+    
+  rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
 
   this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
@@ -154,9 +156,9 @@ p60Scraper.getPageInfo = async function ({ page, event }) {
   }
   
   const pageInfo = await page.evaluate(
-    ({event}) => {
+    () => {
       const res = {
-        unavailable: event.unavailable,
+
         pageInfo: `<a class='page-info' href='${location.href}'>${document.title}</a>`,
         errors: [],
       };
@@ -177,7 +179,7 @@ p60Scraper.getPageInfo = async function ({ page, event }) {
       // res.ticketURL = document.querySelector('.content-section__event-info [href*="ticketmaster"]')?.href ?? null;
       res.longTextHTML = Array.from(document.querySelectorAll('.kmtContent, .group-footer .media-section')).reduce((prev, next) => prev + next.innerHTML,'')
       return res;
-    }, {event}
+    }, null
   );
 
   return await this.getPageInfoEnd({pageInfo, stopFunctie, page})

@@ -67,7 +67,7 @@ nuldertienScraper.makeBaseEventList = async function () {
   
   const {stopFunctie, page} =  await this.makeBaseEventListStart()
 
-  const rawEvents = await page.evaluate(({workerData}) => {
+  let rawEvents = await page.evaluate(({workerData, unavailabiltyTerms}) => {
     return Array.from(document.querySelectorAll(".event-list-item"))
       .map((eventEl) => {
         const title = eventEl
@@ -75,7 +75,6 @@ nuldertienScraper.makeBaseEventList = async function () {
           ?.textContent.trim() ?? null;
 
         const res = {
-          unavailable: "",
           pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
           errors: [],          
           title,
@@ -98,6 +97,8 @@ nuldertienScraper.makeBaseEventList = async function () {
           })
         }
 
+        const uaRex = new RegExp(unavailabiltyTerms.join("|"), 'gi');
+        res.unavailable = !!eventEl.textContent.match(uaRex);
         res.soldOut = !!eventEl?.innerHTML.match(/uitverkocht|sold\s?out/i) ?? false;
         res.shortText = eventEl
           .querySelector(".event-list-item__subtitle")
@@ -106,8 +107,8 @@ nuldertienScraper.makeBaseEventList = async function () {
         return res;
 
       });
-  }, {workerData})
-    .map(this.isMusicEventCorruptedMapper);
+  }, {workerData, unavailabiltyTerms: AbstractScraper.unavailabiltyTerms})
+  rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
 
   this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
@@ -125,7 +126,6 @@ nuldertienScraper.getPageInfo = async function ({ page , event}) {
   const pageInfo = await page.evaluate(({event}) => {
 
     const res = {
-      unavailable: event.unavailable,
       pageInfo: `<a class='page-info' href='${location.href}'>${event.title}</a>`,
       errors: [],
     };

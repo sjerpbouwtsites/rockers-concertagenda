@@ -41,7 +41,7 @@ gebrdenobelScraper.makeBaseEventList = async function () {
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
-  const punkMetalRawEvents = await page.evaluate(({workerData}) => {
+  let punkMetalRawEvents = await page.evaluate(({workerData, unavailabiltyTerms}) => {
     return Array.from(document.querySelectorAll(".event-item"))
       .filter((eventEl) => {
         const tags =
@@ -53,7 +53,6 @@ gebrdenobelScraper.makeBaseEventList = async function () {
       }).map((eventEl) =>{
         const title = eventEl.querySelector(".media-heading")?.textContent ?? null;
         const res = {
-          unavailable: '',
           pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
           errors: [],
           title
@@ -62,12 +61,14 @@ gebrdenobelScraper.makeBaseEventList = async function () {
             eventEl
               .querySelector(".jq-modal-trigger")
               ?.getAttribute("data-url") ?? "";
-      
+        const uaRex = new RegExp(unavailabiltyTerms.join("|"), 'gi');
+        res.unavailable = !!eventEl.textContent.match(uaRex);      
         res.soldOut = !!eventEl.querySelector('.meta-info')?.textContent.match(/uitverkocht|sold\s?out/i) ?? null;
         return res;
       })
-  }, {workerData})
-    .map(this.isMusicEventCorruptedMapper);
+  }, {workerData, unavailabiltyTerms: AbstractScraper.unavailabiltyTerms})
+
+  punkMetalRawEvents = punkMetalRawEvents.map(this.isMusicEventCorruptedMapper);
   
 
   let rockRawEvents = await page.evaluate(({workerData}) => {
@@ -81,7 +82,6 @@ gebrdenobelScraper.makeBaseEventList = async function () {
       }).map((eventEl) => {
         const title = eventEl.querySelector(".media-heading")?.textContent ?? null;
         const res = {
-          unavailable: '',
           pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
           errors: [],
           title
@@ -95,7 +95,8 @@ gebrdenobelScraper.makeBaseEventList = async function () {
         return res;
       })
   }, {workerData})
-    .map(this.isMusicEventCorruptedMapper);
+
+  rockRawEvents = rockRawEvents.map(this.isMusicEventCorruptedMapper);
 
   const checkedRockEvents = [];
   while (rockRawEvents.length){
@@ -124,7 +125,6 @@ gebrdenobelScraper.getPageInfo = async function ({ page, event }) {
   const pageInfo = await page.evaluate(
     ({ months, event }) => {
       const res = {
-        unavailable: event.unavailable,
         pageInfo: `<a class='page-info' href='${location.href}'>${document.title}</a>`,
         errors: [],
       };

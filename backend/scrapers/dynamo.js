@@ -87,7 +87,7 @@ dynamoScraper.makeBaseEventList = async function () {
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
-  const rawEvents = await page.evaluate(
+  let rawEvents = await page.evaluate(
     ({workerData}) => {
       return Array.from(
         document.querySelectorAll(".search-filter-results .timeline-article")
@@ -96,7 +96,6 @@ dynamoScraper.makeBaseEventList = async function () {
 
           const title = baseEvent.querySelector("h4")?.textContent ?? "";
           const res = {
-            unavailable: "",
             pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
             errors: [],          
             title
@@ -114,7 +113,9 @@ dynamoScraper.makeBaseEventList = async function () {
         });
     },
     {workerData}
-  ).map(this.isMusicEventCorruptedMapper);
+  )
+  
+  rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
 
   this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
@@ -133,7 +134,6 @@ dynamoScraper.getPageInfo = async function ({ page, event}) {
   const pageInfo = await page.evaluate(
     ({ months, event}) => {
       const res = {
-        unavailable: event.unavailable,
         pageInfo: `<a class='page-info' href='${location.href}'>${document.title}</a>`,
         errors: [],
       };

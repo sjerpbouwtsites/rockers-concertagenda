@@ -59,7 +59,6 @@ ticketmasterScraper.makeBaseEventList = async function() {
       }
 
       const res1 = {
-        unavailable: '',
         pageInfo: `<a class='page-info' href='${this.puppeteerConfig.app.mainPage.url}'>Ticketmaster overview ${workerData.index}</a>`,
         errors: [],
       };      
@@ -72,9 +71,10 @@ ticketmasterScraper.makeBaseEventList = async function() {
         copyEvent.attractions = editAttractionsInRaw(copyEvent?._embedded?.attractions ?? []);
         copyEvent.venue = (Array.isArray(copyEvent?._embedded?.venues) && copyEvent?._embedded?.venues.length) ? copyEvent._embedded.venues[0] : 'geenvenue'
         copyEvent._embedded;
+        copyEvent.venueEventUrl = rawEvent.url;
+
         return copyEvent;
       });  
-
 
 
       return res;
@@ -125,9 +125,9 @@ ticketmasterScraper.getPageInfo = async function ({event}) {
   const {stopFunctie} =  await this.getPageInfoStart()
 
   const pageInfo = {
-    unavailable: event.unavailable,
     pageInfo: `<a class='page-info' href='${event.url}'>TM ${event.title}</a>`,
     errors: [],
+    unavailable: '',
   };
 
   pageInfo.startDateTime = event.dates?.start?.dateTime;
@@ -179,7 +179,6 @@ ticketmasterScraper.getPageInfo = async function ({event}) {
     return await this.getPageInfoEnd({pageInfo, stopFunctie})
   }
 
-  pageInfo.venueEventUrl = event.url;
   pageInfo.title = event.name;
   try {
     const priceR = event?.priceRanges
@@ -215,10 +214,12 @@ ticketmasterScraper.getPageInfo = async function ({event}) {
     })
   }
 
-  pageInfo.unavailable = event.dates?.status?.code === 'rescheduled';
+  if (event.dates?.status?.code === 'rescheduled') {
+    pageInfo.unavailable += ' verplaatst';
+  }
 
   const tl = pageInfo.title.toLowerCase();
-  if (tl.includes('|') || (tl.includes('package') || tl.includes('ticket') || tl.includes('parking'))){
+  if (tl.includes('|') || (tl.includes('package') || tl.includes('parking'))){
     pageInfo.unavailable += ' double event' 
   }
 

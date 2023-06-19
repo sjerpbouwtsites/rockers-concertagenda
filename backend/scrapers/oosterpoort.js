@@ -82,7 +82,10 @@ oostpoortScraper.makeBaseEventList = async function () {
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
-  const rawEvents = await page.evaluate(({workerData}) => {
+  await _t.autoScroll(page);
+  await _t.autoScroll(page);
+
+  let rawEvents = await page.evaluate(({workerData, unavailabiltyTerms}) => {
     return Array
       .from(
         document.querySelectorAll(
@@ -98,7 +101,6 @@ oostpoortScraper.makeBaseEventList = async function () {
           ? eventEl.querySelector('h1')?.textContent ?? ''
           : eventEl.querySelector('h1')?.textContent.replace(eersteDeelKorteTekst, '') ?? ''
         const res = {
-          unavailable: "",
           pageInfo: `<a class='page-info' href="${location.href}">${workerData.family} - main - ${title}</a>`,
           errors: [],
           title,
@@ -114,14 +116,17 @@ oostpoortScraper.makeBaseEventList = async function () {
         const tweedeDeelKorteTekst = eventEl.querySelector('.program__content p')?.textContent ?? '';
         res.shortText = `${eersteDeelKorteTekst}<br>${tweedeDeelKorteTekst}`;
         res.venueEventUrl = eventEl.querySelector(".program__link")?.href ?? null;
+        const uaRex = new RegExp(unavailabiltyTerms.join("|"), 'gi');
+        res.unavailable = !!eventEl.textContent.match(uaRex);
         res.soldOut = !!eventEl.querySelector(".program__status")?.textContent.match(/uitverkocht|sold\s?out/i) ?? false;
         res.longText = eventEl.querySelector('.program__content')?.textContent ?? null; // tijdelijk om in te controleren
         return res;
       });
   }, {
-    workerData: workerData
+    workerData: workerData, unavailabiltyTerms: AbstractScraper.unavailabiltyTerms
   })
-    .map(this.isMusicEventCorruptedMapper);
+
+  rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
 
   this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
@@ -144,7 +149,6 @@ oostpoortScraper.getPageInfo = async function ({ page, event }) {
   pageInfo = await page.evaluate(
     ({event}) => {
       const res = {
-        unavailable: event.unavailable,
         pageInfo: `<a class='page-info' href='${location.href}'>${document.title}</a>`,
         errors: [],
       };

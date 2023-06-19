@@ -1,4 +1,4 @@
-const voluitEngels = {
+export const voluitEngels = {
   january: "01",
   february: "02",
   march: "03",
@@ -13,7 +13,7 @@ const voluitEngels = {
   december: "12",  
 }
 
-const voluitNederlands = {
+export const voluitNederlands = {
   januari: "01",
   februari: "02",
   maart: "03",
@@ -28,7 +28,7 @@ const voluitNederlands = {
   december: "12",  
 }
 
-const kortNederlands ={
+export const kortNederlands ={
   jan: "01",
   feb: "02",
   mrt: "03",

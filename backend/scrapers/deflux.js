@@ -60,7 +60,6 @@ defluxScraper.makeBaseEventList = async function () {
   const rawEvents = axiosRes.map(axiosResultSingle =>{
     const title = axiosResultSingle.title.rendered;
     const res = {
-      unavailable: "",
       pageInfo: `<a class='pageinfo' href="${this.puppeteerConfig.app.mainPage.url}">${workerData.family} main - ${title}</a>`,
       errors: [],
       venueEventUrl: axiosResultSingle.link,
@@ -88,7 +87,6 @@ defluxScraper.getPageInfo = async function ({ page, event}) {
   const pageInfo = await page.evaluate(({event}) => {
 
     const res = {
-      unavailable: event.unavailable,
       pageInfo: `<a class='page-info' href='${location.href}'>${document.title}</a>`,
       errors: [],
     };

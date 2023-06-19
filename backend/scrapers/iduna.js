@@ -44,7 +44,7 @@ idunaScraper.makeBaseEventList = async function () {
   try {
 
     doomEvents = await page
-      .evaluate(({workerData}) => {
+      .evaluate(({workerData, unavailabiltyTerms}) => {
       loadposts("doom", 1, 50); // eslint-disable-line
         return new Promise((resolve) => {
           setTimeout(() => {
@@ -54,12 +54,14 @@ idunaScraper.makeBaseEventList = async function () {
               const title = event.querySelector(".griditemtitle h2:first-child")?.textContent ?? null;
               let shortText = event.querySelector(".griditemtitle h2 ~ h2")?.textContent ?? null;
               let soldOut = false;
+              const uaRex = new RegExp(unavailabiltyTerms.join("|"), 'gi');
+              const unavailable = !!event.textContent.match(uaRex);              
               if (shortText.match(/uitverkocht|sold\soud/i)) {
                 soldOut = true;
                 shortText = shortText.replace(/uitverkocht|sold\sout\]?/i,'').replace(/[\[\]]+/i,'').trim()
               }  
               return {
-                unavailable: "",
+                unavailable,
                 pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
                 errors: [],         
                 soldOut, 
@@ -71,12 +73,12 @@ idunaScraper.makeBaseEventList = async function () {
             resolve(doomEvents);
           }, 2500);
         });
-      },{workerData})
+      },{workerData, unavailabiltyTerms: AbstractScraper.unavailabiltyTerms})
       .then((doomEvents) => doomEvents);
     // TODO catch
 
     metalEvents = await page
-      .evaluate(({workerData}) => {
+      .evaluate(({workerData, unavailabiltyTerms}) => {
       loadposts("metal", 1, 50); // eslint-disable-line
         return new Promise((resolve) => {
           setTimeout(() => {
@@ -86,29 +88,31 @@ idunaScraper.makeBaseEventList = async function () {
               const title = event.querySelector(".griditemtitle h2:first-child")?.textContent ?? null;
               let shortText = event.querySelector(".griditemtitle h2 ~ h2")?.textContent ?? null;
               let soldOut = false;
+              const uaRex = new RegExp(unavailabiltyTerms.join("|"), 'gi');
+              const unavailable = !!event.textContent.match(uaRex);                 
               if (shortText.match(/uitverkocht|sold\soud/i)) {
                 soldOut = true;
                 shortText = shortText.replace(/uitverkocht|sold\sout\]?/i,'').replace(/[\[\]]+/i,'').trim()
               } 
               return {
-                unavailable: "",
                 pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
                 errors: [],          
                 venueEventUrl: event?.href ?? null,
                 title,
                 soldOut,
-                shortText
+                shortText,
+                unavailable
               }               
             });
             resolve(metalEvents);
           }, 2500);
         });
-      },{workerData})
+      },{workerData, unavailabiltyTerms: AbstractScraper.unavailabiltyTerms})
       .then((metalEvents) => metalEvents);
     // TODO catch
 
     punkEvents = await page
-      .evaluate(({workerData}) => {
+      .evaluate(({workerData, unavailabiltyTerms}) => {
       // no-eslint
       // hack VAN DE SITE ZELF
       loadposts("punk", 1, 50); // eslint-disable-line
@@ -121,6 +125,8 @@ idunaScraper.makeBaseEventList = async function () {
               const title = event.querySelector(".griditemtitle h2:first-child")?.textContent ?? null;
               let shortText = event.querySelector(".griditemtitle h2 ~ h2")?.textContent ?? null;
               let soldOut = false;
+              const uaRex = new RegExp(unavailabiltyTerms.join("|"), 'gi');
+              const unavailable = !!event.textContent.match(uaRex);                 
               if (shortText.match(/uitverkocht|sold\soud/i)) {
                 soldOut = true;
                 shortText = shortText.replace(/uitverkocht|sold\sout\]?/i,'').replace(/[\[\]]+/i,'').trim()
@@ -128,16 +134,16 @@ idunaScraper.makeBaseEventList = async function () {
               return {
                 venueEventUrl: event?.href ?? null,
                 title,
+                unavailable,
                 soldOut,
                 pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
                 errors: [],
-                unavailable: "",
               };
             });
             resolve(punkEvents);
           }, 2500);
         });
-      },{workerData})
+      },{workerData,unavailabiltyTerms: AbstractScraper.unavailabiltyTerms})
       .then((punkEvents) => punkEvents);
     //TODO catch
     
@@ -188,7 +194,6 @@ idunaScraper.getPageInfo = async function ({ page, event }) {
     ({ months , event}) => {
 
       const res = {
-        unavailable: event.unavailable,
         pageInfo: `<a class='page-info' href='${location.href}'>${event.title}</a>`,
         errors: [],
       };

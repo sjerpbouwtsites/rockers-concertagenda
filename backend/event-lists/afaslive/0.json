@@ -1,19 +1,18 @@
 [
   {
-    "doorOpenDateTime": "2023-06-04T17:00:00.000Z",
-    "startDateTime": "2023-06-04T18:00:00.000Z",
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-06-20T16:30:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/ghost",
-    "title": "Ghost",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/pantera",
+    "title": "Pantera",
     "location": "afaslive",
-    "price": 67.2,
+    "price": 84,
     "shortText": null,
-    "longText": "../public/texts/068d7d4e-a827-4298-9224-b88883c1e5a1.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2023/06-Juni/_agendaitem/Ghost.jpg",
-    "soldOut": true,
-    "unavailable": "",
-    "corrupted": null,
-    "origin": "afaslive"
+    "longText": "../public/texts/0bf734ca-38bc-49bc-be06-104b1cee1b68.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2023/06-Juni/_agendaitem/Pantera.jpg",
+    "soldOut": false,
+    "unavailable": null,
+    "corrupted": null
   },
   {
     "doorOpenDateTime": null,
@@ -24,27 +23,10 @@
     "location": "afaslive",
     "price": 33.6,
     "shortText": null,
-    "longText": "../public/texts/bcfc3d9f-6dca-4213-a071-00fe8a0f166a.html",
+    "longText": "../public/texts/a4ee2ed7-9007-4fa6-a36b-f1bdeea14b74.html",
     "image": "https://www.afaslive.nl/files/Agenda/2023/10-Oktober/_agendaitem/Inhaler.jpg",
-    "soldOut": false,
-    "unavailable": "",
-    "corrupted": null,
-    "origin": "afaslive"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2023-12-08T19:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/floor-jansen",
-    "title": "Floor Jansen",
-    "location": "afaslive",
-    "price": 42,
-    "shortText": null,
-    "longText": "../public/texts/5e6cd062-331c-492d-b251-56f5897f965a.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2023/12-December/_agendaitem/Floor-Jansen.jpg",
-    "soldOut": false,
-    "unavailable": "",
-    "corrupted": null,
-    "origin": "afaslive"
+    "soldOut": true,
+    "unavailable": null,
+    "corrupted": null
   }
 ]

@@ -88,7 +88,6 @@ paradisoScraper.makeBaseEventList = async function () {
   
   const res = await page.evaluate(({workerData}) => {
     return {
-      unavailable: '',
       pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${workerData.index}</a>`,
     }
   }, {workerData});
@@ -100,7 +99,7 @@ paradisoScraper.makeBaseEventList = async function () {
   await _t.autoScroll(page);
   await _t.autoScroll(page);
   let rawEvents = await page.evaluate(
-    ({resBuiten}) => {
+    ({resBuiten, unavailabiltyTerms}) => {
 
       return Array.from(document.querySelectorAll('.css-1agutam'))
 
@@ -120,13 +119,15 @@ paradisoScraper.makeBaseEventList = async function () {
           
           res.venueEventUrl = rawEvent.href ?? null
           res.soldOut = !!rawEvent.textContent.match(/uitverkocht|sold\s?out/i);
-          res.cancelled = !!(rawEvent.textContent.toLowerCase().includes('geannulleerd') ?? null) || !!(rawEvent.textContent.toLowerCase().includes('gecanceld') ?? null)
+          const uaRex = new RegExp(unavailabiltyTerms.join("|"), 'gi');
+          res.unavailable = !!rawEvent.textContent.match(uaRex);
           return res;
         });
     },
-    {workerData, resBuiten: res}
+    {workerData, resBuiten: res,unavailabiltyTerms: AbstractScraper.unavailabiltyTerms}
   )
-    .map(this.isMusicEventCorruptedMapper);
+    
+  rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
 
   this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
@@ -143,7 +144,6 @@ paradisoScraper.getPageInfo = async function ({ page, event }) {
   const {stopFunctie} =  await this.getPageInfoStart()
 
   const buitenRes = {
-    unavailable: event.unavailable,
     pageInfo: `<a class='page-info' href='${event.venueEventUrl}'>${event.title}</a>`,
     errors: [],
   };  

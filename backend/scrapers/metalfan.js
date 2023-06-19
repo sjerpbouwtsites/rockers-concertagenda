@@ -147,10 +147,7 @@ async function getBaseMusicEvents(browser, qwm) {
       let locationName = Location.makeLocationSlug(
         eventDatum.eventLocationName
       );
-      parentPort.postMessage(qwm.debugger({
-        locationName,
-        eventDatum
-      }));
+
       const watchForWeirdLocationNames = Object.keys(rename);
       if (watchForWeirdLocationNames.includes(locationName)){
         locationName = watchForWeirdLocationNames[locationName]

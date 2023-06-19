@@ -100,7 +100,7 @@ neushoornScraper.makeBaseEventList = async function () {
     );
   }
 
-  const rawEvents = await page.evaluate(({workerData}) => {
+  let rawEvents = await page.evaluate(({workerData,unavailabiltyTerms}) => {
     return Array.from(document.querySelectorAll(".productions__item"))
       .map(
         (eventEl) => {
@@ -109,19 +109,21 @@ neushoornScraper.makeBaseEventList = async function () {
             ".productions__item__content span:first-child"
           ).textContent;
           const res = {
-            unavailable: "",
             pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
             errors: [],          
             title
           }  
           res.shortText = eventEl.querySelector('.productions__item__subtitle')?.textContent ?? '';
           res.venueEventUrl = eventEl.href;
+          const uaRex = new RegExp(unavailabiltyTerms.join("|"), 'gi');
+          res.unavailable = !!eventEl.textContent.match(uaRex);          
           res.soldOut = !!eventEl.querySelector(".chip")?.textContent.match(/uitverkocht|sold\s?out/i) ?? false;
           return res;
         }
       );
-  }, {workerData})
-    .map(this.isMusicEventCorruptedMapper);
+  }, {workerData,unavailabiltyTerms: AbstractScraper.unavailabiltyTerms})
+    
+  rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
 
   this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
@@ -139,7 +141,6 @@ neushoornScraper.getPageInfo = async function ({ page,event }) {
   const pageInfo = await page.evaluate(
     ({ months, event }) => {
       const res = {
-        unavailable: event.unavailable,
         pageInfo: `<a class='page-info' href='${location.href}'>${event.title}</a>`,
         errors: [],
       };

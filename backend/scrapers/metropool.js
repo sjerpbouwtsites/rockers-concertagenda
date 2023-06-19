@@ -89,12 +89,11 @@ metropoolScraper.makeBaseEventList = async function () {
   await _t.autoScroll(page);
   await _t.autoScroll(page);
 
-  const rawEvents = await page.evaluate(({workerData}) => {
+  let rawEvents = await page.evaluate(({workerData, unavailabiltyTerms}) => {
     return Array.from(document.querySelectorAll(".card--event"))
       .map((rawEvent) => {
         const title = rawEvent.querySelector(".card__title")?.textContent ?? null;
         const res = {
-          unavailable: "",
           pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
           errors: [],        
           title,  
@@ -103,11 +102,14 @@ metropoolScraper.makeBaseEventList = async function () {
         const genres = rawEvent.dataset?.genres ?? '';
         const st = rawEvent.querySelector(".card__title card__title--sub")?.textContent;
         res.shortText = (st + ' ' + genres).trim();
+        const uaRex = new RegExp(unavailabiltyTerms.join("|"), 'gi');
+        res.unavailable = !!rawEvent.textContent.match(uaRex);        
         res.soldOut = !!rawEvent.querySelector(".card__title--label")?.textContent.match(/uitverkocht|sold\s?out/i) ?? null;
         return res;
       });
-  }, {workerData})
-    .map(this.isMusicEventCorruptedMapper);
+  }, {workerData, unavailabiltyTerms: AbstractScraper.unavailabiltyTerms})
+  
+  rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
   
   this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
@@ -124,7 +126,6 @@ metropoolScraper.getPageInfo = async function ({ page, event}) {
   
   const pageInfo = await page.evaluate(({months, event}) => {
     const res = {
-      unavailable: event.unavailable,
       pageInfo: `<a class='page-info' href='${location.href}'>${event.title}</a>`,
       errors: [],
     };

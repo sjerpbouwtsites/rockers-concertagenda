@@ -21,7 +21,7 @@ const bibelotScraper = new AbstractScraper(makeScraperConfig({
         requiredProperties: ['venueEventUrl', 'title']
       },
       singlePage: {
-        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
+        requiredProperties: ['venueEventUrl', 'title', 'startDateTime']
       }      
     }
   
@@ -54,7 +54,7 @@ bibelotScraper.makeBaseEventList = async function () {
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
-  const rawEvents = await page.evaluate(({workerData}) => {
+  let rawEvents = await page.evaluate(({workerData}) => {
     return Array.from(
       document.querySelectorAll(
         '.event[class*="metal"], .event[class*="punk"], .event[class*="rock"]'
@@ -63,7 +63,6 @@ bibelotScraper.makeBaseEventList = async function () {
       
       const title = eventEl.querySelector("h1")?.textContent.trim() ?? null;
       const res = {
-        unavailable: '',
         pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
         errors: [],
         title
@@ -79,7 +78,7 @@ bibelotScraper.makeBaseEventList = async function () {
       return res;
     });
   }, {workerData})
-    .map(this.isMusicEventCorruptedMapper);
+  rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
 
   this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
@@ -98,7 +97,6 @@ bibelotScraper.getPageInfo = async function ({ page, event }) {
   const pageInfo = await page.evaluate(
     ({ months , event}) => {
       const res = {
-        unavailable: event.unavailable,
         pageInfo: `<a class='page-info' href='${location.href}'>${event.title}</a>`,
         errors: [],
       };

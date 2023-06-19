@@ -1,22 +1,6 @@
 [
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2023-06-06T18:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/gojira",
-    "title": "Gojira",
-    "location": "afaslive",
-    "price": 52.64,
-    "shortText": null,
-    "longText": "../public/texts/d19e5a56-ea50-407d-af9e-8ab6ecc121f9.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2023/06-Juni/_agendaitem/Gojira.jpg",
-    "soldOut": false,
-    "unavailable": "",
-    "corrupted": null,
-    "origin": "afaslive"
-  },
-  {
-    "doorOpenDateTime": null,
     "startDateTime": "2023-10-24T18:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://www.afaslive.nl/agenda/fall-out-boy",
@@ -24,11 +8,25 @@
     "location": "afaslive",
     "price": 57.12,
     "shortText": null,
-    "longText": "../public/texts/6b41df43-1781-41e8-bc27-283a11ec16de.html",
+    "longText": "../public/texts/5aa66421-69ce-43b4-9736-9f0c9c97dfa9.html",
     "image": "https://www.afaslive.nl/files/Agenda/2023/10-Oktober/_agendaitem/Fall-Out-Boy.jpg",
     "soldOut": false,
-    "unavailable": "",
-    "corrupted": null,
-    "origin": "afaslive"
+    "unavailable": null,
+    "corrupted": null
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-12-08T19:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.afaslive.nl/agenda/floor-jansen",
+    "title": "Floor Jansen",
+    "location": "afaslive",
+    "price": 42,
+    "shortText": null,
+    "longText": "../public/texts/4e48e7c5-f135-4667-9fd0-52747e098840.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2023/12-December/_agendaitem/Floor-Jansen.jpg",
+    "soldOut": false,
+    "unavailable": null,
+    "corrupted": null
   }
 ]

@@ -41,49 +41,49 @@ voltScraper.makeBaseEventList = async function () {
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
   try {
-    await page.waitForSelector(".row.event", {
+    await page.waitForSelector(".card-activity-list", {
       timeout: 1250,
     });
-    await page.waitForSelector(".row.event .card-social", {
-      timeout: 1250,
-    });
+
   } catch (error) {
     _t.handleError(error, workerData, "Volt wacht op laden eventlijst", 'close-thread', null);
   }
 
-  let rawEvents = await page.evaluate(({workerData}) => {
-    return Array.from(document.querySelectorAll(".row.event .card"))
+  let rawEvents = await page.evaluate(({workerData, unavailabiltyTerms}) => {
+    return Array.from(document.querySelectorAll(".card-activity-list"))
       .filter((rawEvent) => {
         const hasGenreName =
           rawEvent
-            .querySelector(".card-location")
+            .querySelector(".card-activity-list-badge-wrapper")
             ?.textContent.toLowerCase()
             .trim() ?? "";
         return hasGenreName.includes("metal") || hasGenreName.includes("punk");
       })
       .map((rawEvent) => {
-        const anchor = rawEvent.querySelector('h3 [href*="programma"]') ?? null;
+        const anchor = rawEvent.querySelector('.card-activity-list__title a') ?? null;
         const title = anchor?.textContent.trim() ?? "";
         const res = {
-          unavailable: '',
           pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
           errors: [],
           title
         };        
         res.venueEventUrl = anchor.hasAttribute("href") ? anchor.href : null;
-        res.image = rawEvent.querySelector("img")?.src ?? null;
+        res.image = rawEvent.querySelector(".card-activity-list__image img")?.src ?? null;
         if (!res.image){
           res.errors.push({
             remarks: `image missing ${res.pageInfo}`
           })
         }        
-        res.soldOut = rawEvent.querySelector(".card-content")?.textContent.match(/uitverkocht|sold\s?out/i) ?? false;
+        const uaRex = new RegExp(unavailabiltyTerms.join("|"), 'gi');
+        res.unavailable = !!rawEvent.textContent.match(uaRex);        
+        res.soldOut = rawEvent?.textContent.match(/uitverkocht|sold\s?out/i) ?? false;
         return res;
       });
-  }, {workerData})
-    .map(this.isMusicEventCorruptedMapper);
-
-  this.saveBaseEventlist(workerData.family, rawEvents)
+  }, {workerData, unavailabiltyTerms: AbstractScraper.unavailabiltyTerms})
+    
+  rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
+  
+  //this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
   return await this.makeBaseEventListEnd({
     stopFunctie, rawEvents: thisWorkersEvents}
@@ -97,15 +97,6 @@ voltScraper.getPageInfo = async function ({ page, url, event}) {
 
   const {stopFunctie} =  await this.getPageInfoStart()
 
-  try {
-    await page.waitForSelector("#main .content-block", {
-      timeout: 7500,
-    });
-  } catch (error) {
-    // TODO WRAPPER ERREOR
-    _t.handleError(error, this.workerData, "Volt wacht op laden single pagina", 'notice', event);
-  }
-
   const pageInfo = await page.evaluate(
     ({ months, event, url }) => {
 
@@ -114,80 +105,64 @@ voltScraper.getPageInfo = async function ({ page, url, event}) {
       res.pageInfo= `<a class='page-info' class='page-info' href='${url}'>${event.title}</a>`;
       res.errors = [];
 
-      const curMonthNumber = new Date().getMonth() + 1;
-      const curYear = new Date().getFullYear();
+      res.longTextHTML = document.querySelector(".activity-content-wrapper")?.innerHTML ?? null
 
-      res.longTextHTML = document.querySelector("#main .aside + div > .content-block")?.innerHTML ?? null
-
-      const unstyledListsInAside = document.querySelectorAll(
-        "#main .aside .list-unstyled"
-      ) ?? [null];
-      const startDateMatch =
-        unstyledListsInAside[0].textContent
-          .trim()
-          .toLowerCase()
-          .match(/(\d{1,2})\s+(\w+)/) ?? null;
-      let startDate;
-
-      if (
-        startDateMatch &&
-        Array.isArray(startDateMatch) &&
-        startDateMatch.length === 3
-      ) {
-        const day = startDateMatch[1].padStart(2, "0");
-        const month = months[startDateMatch[2]];
-        const year = Number(month) >= curMonthNumber ? curYear : curYear + 1;
-        startDate = `${year}-${month}-${day}`;
-        res.startDate = startDate;
+      const startDateMatch = document.querySelector('.field--name-field-date')?.textContent.match(/(\d+)\s?(\w+)\s?(\d\d\d\d)/);
+      if (Array.isArray(startDateMatch) && startDateMatch.length > 2) {
+        const dag = startDateMatch[1].padStart(2, '0');
+        const maandNaam = startDateMatch[2];
+        const maand = months[maandNaam];
+        const jaar = startDateMatch[3];
+        res.startDate = `${jaar}-${maand}-${dag}`;
+      } else {
+        res.startDate = null;
       }
 
-      const timesList = document.querySelector(
-        "#main .aside .prices ~ .list-unstyled"
-      );
-      const timesMatch =
-        timesList?.textContent.toLowerCase().match(/(\d\d:\d\d)/g) ?? null;
-      if (timesMatch && Array.isArray(timesMatch) && timesMatch.length >= 1) {
-        let startTime, doorTime, endTime;
-        if (timesMatch.length === 1) {
-          startTime = timesMatch[0];
-        } else if (timesMatch.length === 2) {
-          doorTime = timesMatch[0];
-          startTime = timesMatch[1];
-        } else {
-          doorTime = timesMatch[0];
-          startTime = timesMatch[1];
-          endTime = timesMatch[2];
+      const eersteTijdRij = document.querySelector('.activity-info-row');
+      const tweedeTijdRij = document.querySelector('.activity-info-row + .activity-info-row');
+      if (!eersteTijdRij && !tweedeTijdRij){
+        res.errors.push({
+          error: new Error('geen tijdrijen'),
+        })
+        return res;
+      }
+      
+      const startTimeM = eersteTijdRij.textContent.match(/\d\d\s?:\s?\d\d/);
+      const endTimeM = tweedeTijdRij?.textContent.match(/\d\d\s?:\s?\d\d/) ?? null;
+      if (!Array.isArray(startTimeM)){
+        res.errors.push({
+          error: new Error('geen tijdmatch success'),
+          toDebug: eersteTijdRij.textContent,
+        })
+        return res;        
+      } 
+      res.startTime = startTimeM[0].replaceAll(/\s/g, '');
+      if (Array.isArray(endTimeM)){
+        res.endTime = endTimeM[0].replaceAll(/\s/g, '');
+      }
+
+      try {
+        if (res.startTime) {
+          res.startDateTime = new Date(
+            `${res.startDate}T${res.startTime}:00`
+          ).toISOString();
         }
-        try {
-          if (startTime) {
-            res.startDateTime = new Date(
-              `${startDate}T${startTime}:00`
-            ).toISOString();
-          }
-          if (doorTime) {
-            res.doorOpenDateTime = new Date(
-              `${startDate}T${doorTime}:00`
-            ).toISOString();
-          }
-          if (endTime) {
-            res.endDateTime = new Date(
-              `${startDate}T${endTime}:00`
-            ).toISOString();
-          }
-        } catch (error) {
-          res.errors.push({
-            error,
-            remarks: `ongeldige tijden ${res.pageInfo}`,
-            toDebug: {
-              matches:   timesMatch.join(" "),
-              event
-            }
-          });
-          return res;
+        
+        if (res.endTime) {
+          res.endDateTime = new Date(
+            `${res.startDate}T${res.endTime}:00`
+          ).toISOString();
         }
+      } catch (error) {
+        res.errors.push({
+          error,
+          remarks: `ongeldige tijden ${res.pageInfo}`,
+        });
+        return res;
+      
       }
       res.priceTextcontent =
-        document.querySelector("#main .aside .list-unstyled.prices")
+        document.querySelector(".activity-price")
           ?.textContent ?? ''
       ;
       return res;

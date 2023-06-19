@@ -1,33 +1,18 @@
 [
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2023-05-27T18:00:00.000Z",
+    "startDateTime": "2023-07-02T18:00:00.000Z",
     "endDateTime": null,
-    "venueEventUrl": "https://www.livepul.com/agenda/hardrockhallelujah/",
-    "title": "Hardrock Hallelujah! - Tribute Fest",
+    "venueEventUrl": "https://www.livepul.com/agenda/midnight/",
+    "title": "Midnight (USA)",
     "location": "depul",
-    "shortText": "Up The Irons + Volbeatz + Twisted Sisters",
-    "longText": "../public/texts/72e3eaa3-831f-4b64-9b98-1d6a9375ecf9.html",
-    "image": "https://lift3cdn.nl/image/29/resize-3831/website-header.png",
+    "price": 0,
+    "shortText": "Een mix van speed metal, black metal en punk rock",
+    "longText": "../public/texts/3cba32a9-03eb-494e-b646-1d272b605fde.html",
+    "image": "https://lift3cdn.nl/image/29/1335x1335/midnight_20years_11x17_admat_euro.jpg",
     "soldOut": false,
-    "unavailable": "",
-    "corrupted": null,
-    "origin": "depul"
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2023-08-11T17:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.livepul.com/agenda/jag-panzer/",
-    "title": "Jag Panzer (USA)",
-    "location": "depul",
-    "shortText": "Power metal van de bovenste plank",
-    "longText": "../public/texts/ca2587d5-dce9-4e1d-a3fe-9da0112858a0.html",
-    "image": "https://lift3cdn.nl/image/29/1335x1335/inthe-mood.jpg",
-    "soldOut": false,
-    "unavailable": "",
-    "corrupted": null,
-    "origin": "depul"
+    "unavailable": null,
+    "corrupted": null
   },
   {
     "doorOpenDateTime": null,
@@ -36,13 +21,13 @@
     "venueEventUrl": "https://www.livepul.com/agenda/welcome-to-pul-fiction/",
     "title": "Welcome To Pul Fiction",
     "location": "depul",
-    "shortText": "A heavy rock ’n roll show",
-    "longText": "../public/texts/6d960426-c4c6-442a-aee2-fee1701f6cdf.html",
+    "price": 0,
+    "shortText": "A heavy rock 'n roll show",
+    "longText": "../public/texts/8a9783ac-a96d-45cd-ac77-0341639d32c1.html",
     "image": "https://lift3cdn.nl/image/29/resize-3864/website-header-wtpf.jpg",
     "soldOut": false,
-    "unavailable": "",
-    "corrupted": null,
-    "origin": "depul"
+    "unavailable": null,
+    "corrupted": null
   },
   {
     "doorOpenDateTime": null,
@@ -51,13 +36,13 @@
     "venueEventUrl": "https://www.livepul.com/agenda/the-raven-age-1/",
     "title": "The Raven Age (UK)",
     "location": "depul",
+    "price": 0,
     "shortText": "Metal met groevende riffs en melodische hooks",
-    "longText": "../public/texts/0e0c2a89-fdf8-4f5b-a50d-d1765f1b4e88.html",
+    "longText": "../public/texts/94fdc553-371d-4638-9799-27e04aff69ce.html",
     "image": "https://lift3cdn.nl/image/29/resize-3825/the-raven-age---st-press-photo-wide-credit-john-mcmurtrie.jpg",
     "soldOut": false,
-    "unavailable": "",
-    "corrupted": null,
-    "origin": "depul"
+    "unavailable": null,
+    "corrupted": null
   },
   {
     "doorOpenDateTime": null,
@@ -66,12 +51,42 @@
     "venueEventUrl": "https://www.livepul.com/agenda/acdc-50-jaar-by-acdc-uk/",
     "title": "AC/DC 50 Jaar by AC/DC UK",
     "location": "depul",
+    "price": 0,
     "shortText": "Eén van de meest legendarische rockbands ter aarde viert verjaardag",
-    "longText": "../public/texts/3ec462c6-49ee-429f-9f59-079697aa1223.html",
+    "longText": "../public/texts/a53a4d0b-2b33-4737-96c9-e70b4ed8e0c4.html",
     "image": "https://lift3cdn.nl/image/29/resize-3778/323227668_1741263203000234_6436143641499081719_n.jpg",
     "soldOut": false,
-    "unavailable": "",
-    "corrupted": null,
-    "origin": "depul"
+    "unavailable": null,
+    "corrupted": null
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-11-18T13:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.livepul.com/agenda/masters-of-metal-3/",
+    "title": "Masters of Metal",
+    "location": "depul",
+    "price": 24.5,
+    "shortText": "Metal tribute festival",
+    "longText": "../public/texts/af4b4307-2c86-47f1-a236-d79651aa6ef1.html",
+    "image": "https://lift3cdn.nl/image/29/1335x1335/20231118-masters-of-metal-[facebook].jpeg",
+    "soldOut": false,
+    "unavailable": null,
+    "corrupted": null
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2024-01-26T19:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.livepul.com/agenda/ronnie-james-dio-memorial/",
+    "title": "Ronnie James Dio - The Memorial Concert",
+    "location": "depul",
+    "price": 0,
+    "shortText": "Met medewerking van de top van de Nederlandse  hardrock en metal",
+    "longText": "../public/texts/b2dc5546-36c8-4eef-a914-f38f055b14ff.html",
+    "image": "https://lift3cdn.nl/image/29/resize-3888/the-memorial-concert---artwork-2.jpg",
+    "soldOut": false,
+    "unavailable": null,
+    "corrupted": null
   }
 ]

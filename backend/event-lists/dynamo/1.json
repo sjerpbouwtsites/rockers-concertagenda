@@ -8,27 +8,40 @@
     "location": "dynamo",
     "price": 19.5,
     "shortText": "Plus support",
-    "longText": "../public/texts/98a53568-4336-4c44-bdf7-28308bcd7d79.html",
+    "longText": "../public/texts/13312d51-f072-453f-930f-fd51449f8cc8.html",
     "image": "https://www.dynamo-eindhoven.nl/wp-content/uploads/2023/03/Show-Me-The-Body-1200x1200.jpg",
     "soldOut": true,
-    "unavailable": "",
-    "corrupted": null,
-    "origin": "dynamo"
+    "unavailable": null,
+    "corrupted": null
   },
   {
-    "doorOpenDateTime": "2023-09-08T17:30:00.000Z",
-    "startDateTime": "2023-09-08T18:30:00.000Z",
-    "endDateTime": "2023-09-08T20:45:00.000Z",
-    "venueEventUrl": "https://www.dynamo-eindhoven.nl/programma/stream-of-passion-extra-show/#spotify-embed",
+    "doorOpenDateTime": "2023-09-09T17:30:00.000Z",
+    "startDateTime": "2023-09-09T18:30:00.000Z",
+    "endDateTime": "2023-09-09T20:45:00.000Z",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/programma/stream-of-passion/#spotify-embed",
     "title": "Stream of Passion",
     "location": "dynamo",
     "price": 22.5,
-    "shortText": "Extra show",
-    "longText": "../public/texts/08c72165-809b-4664-8353-214bea4ccc4e.html",
+    "shortText": "Reunië show",
+    "longText": "../public/texts/cfd2243f-c23b-40be-a1a7-1ef9c244eb77.html",
     "image": "https://www.dynamo-eindhoven.nl/wp-content/uploads/2022/11/IMG_0439-2a-1200x1200.jpg",
     "soldOut": true,
-    "unavailable": "",
-    "corrupted": null,
-    "origin": "dynamo"
+    "unavailable": null,
+    "corrupted": null
+  },
+  {
+    "doorOpenDateTime": "2023-10-28T17:30:00.000Z",
+    "startDateTime": "2023-10-28T18:15:00.000Z",
+    "endDateTime": "2023-10-28T21:00:00.000Z",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/programma/regressive-hypnosis/",
+    "title": "Regressive Hypnosis",
+    "location": "dynamo",
+    "price": 19,
+    "shortText": "Dream Theater Tribute",
+    "longText": "../public/texts/dfe4a323-f5f0-4eb8-98e3-08903b1ac4d4.html",
+    "image": "https://www.dynamo-eindhoven.nl/wp-content/uploads/2023/04/RHfoto-1200x1200.jpg",
+    "soldOut": false,
+    "unavailable": null,
+    "corrupted": null
   }
 ]

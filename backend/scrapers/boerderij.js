@@ -112,7 +112,7 @@ boerderijScraper.getPageInfo = async function ({ event }) {
   event.title = realEventTitle;
 
   const res = {
-    unavailable: event.unavailable,
+
     pageInfo: `<a class='page-info' href='${this.puppeteerConfig.app.mainPage.url}'>${event.title}</a>`,
     errors: [],
   };

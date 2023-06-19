@@ -44,7 +44,7 @@ kavkaScraper.makeBaseEventList = async function () {
   const { stopFunctie, page } = await this.makeBaseEventListStart();
 
   let rawEvents = await page.evaluate(
-    ({ months, workerData }) => {
+    ({ months, workerData, unavailabiltyTerms }) => {
       return Array.from(document.querySelectorAll(".events-list > a"))
         .filter((rawEvent) => {
           return Array.from(rawEvent.querySelectorAll(".tags"))
@@ -68,7 +68,7 @@ kavkaScraper.makeBaseEventList = async function () {
               ?.textContent.trim() ?? null;
 
           const res = {
-            unavailable: "",
+
             pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
             errors: [],
             title,
@@ -133,6 +133,8 @@ kavkaScraper.makeBaseEventList = async function () {
             })
           }
 
+          const uaRex = new RegExp(unavailabiltyTerms.join("|"), 'gi');
+          res.unavailable = !!rawEvent.textContent.match(uaRex);
           res.soldOut = !!rawEvent.querySelector(".badge")?.textContent.match(/uitverkocht|sold\s?out/i) ?? false;
 
           res.shortText =
@@ -142,9 +144,10 @@ kavkaScraper.makeBaseEventList = async function () {
           return res;
         });
     },
-    { months: this.months, workerData }
+    { months: this.months, workerData, unavailabiltyTerms: AbstractScraper.unavailabiltyTerms }
   )
-    .map(this.isMusicEventCorruptedMapper);
+  
+  rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
 
   this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
@@ -164,7 +167,7 @@ kavkaScraper.getPageInfo = async function ({ page, event }) {
 
   const pageInfo = await page.evaluate(({event}) => {
     const res = {
-      unavailable: event.unavailable,
+
       pageInfo: `<a class='page-info' href='${location.href}'>${event.title}</a>`,
       errors: [],
     };

@@ -1,21 +1,5 @@
 [
   {
-    "doorOpenDateTime": "2023-06-18T17:00:00.000Z",
-    "startDateTime": "2023-06-18T17:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://iduna.nl/event/imperial-triumphant/",
-    "title": "Imperial Triumphant • Wesenwille",
-    "location": "iduna",
-    "price": 15,
-    "shortText": "Northern Darkness presents",
-    "longText": "../public/texts/ffcc6c3f-e9b4-4050-9a78-421f97c7ad5a.html",
-    "image": "https://iduna.nl/wp-content/uploads/2023/05/Imperial-Triumpant_website.png",
-    "soldOut": null,
-    "unavailable": "",
-    "corrupted": null,
-    "origin": "iduna"
-  },
-  {
     "doorOpenDateTime": "2023-09-07T16:30:00.000Z",
     "startDateTime": "2023-09-07T17:00:00.000Z",
     "endDateTime": null,
@@ -24,12 +8,11 @@
     "location": "iduna",
     "price": 22,
     "shortText": "SIRENIA • AMBERIAN DAWN • DARK SARAH • REXORIA",
-    "longText": "../public/texts/9819effc-9dd9-4de8-a9e6-6a22635a2535.html",
+    "longText": "../public/texts/c75d8e8e-d55d-4839-89e0-b73c73133800.html",
     "image": "https://iduna.nl/wp-content/uploads/2023/05/sirenia_website.png",
-    "soldOut": null,
-    "unavailable": "",
-    "corrupted": null,
-    "origin": "iduna"
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
   },
   {
     "doorOpenDateTime": "2023-09-28T17:30:00.000Z",
@@ -40,12 +23,11 @@
     "location": "iduna",
     "price": 16,
     "shortText": "Support: Eat Your Heart Out",
-    "longText": "../public/texts/a564fd11-8899-408b-ae62-0caab171b158.html",
+    "longText": "../public/texts/03e7891e-3e94-4496-acb8-2d2b4a27ca07.html",
     "image": "https://iduna.nl/wp-content/uploads/2023/05/as-everything-unfolds_website.png",
-    "soldOut": null,
-    "unavailable": "",
-    "corrupted": null,
-    "origin": "iduna"
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
   },
   {
     "doorOpenDateTime": "2023-10-06T17:00:00.000Z",
@@ -56,12 +38,26 @@
     "location": "iduna",
     "price": 32,
     "shortText": "with special guest Ensiferum",
-    "longText": "../public/texts/be7c86d7-e122-4553-8e2e-9157a6aaf40c.html",
+    "longText": "../public/texts/69d6f089-5b10-4b52-9929-899a75f899e4.html",
     "image": "https://iduna.nl/wp-content/uploads/2023/05/pain_website.jpg",
-    "soldOut": null,
-    "unavailable": "",
-    "corrupted": null,
-    "origin": "iduna"
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
+    "doorOpenDateTime": "2023-10-29T14:00:00.000Z",
+    "startDateTime": "2023-10-29T14:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://iduna.nl/event/death-angel-sacred-reich-angelus-apatrida/",
+    "title": "Death Angel • Sacred Reich • Angelus Apatrida",
+    "location": "iduna",
+    "price": 31,
+    "shortText": "night of the living thrash",
+    "longText": "../public/texts/55a1d8be-4160-4ad4-b717-726f1f5ef830.html",
+    "image": "https://iduna.nl/wp-content/uploads/2023/06/Square3.jpg",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
   },
   {
     "doorOpenDateTime": "2023-11-04T12:00:00.000Z",
@@ -72,12 +68,11 @@
     "location": "iduna",
     "price": 30,
     "shortText": "Vengeance • COBRA SPELL • Martyr • Jurassic Park & more",
-    "longText": "../public/texts/16db63b8-f5f5-4a71-a275-ea60cbccd6f2.html",
+    "longText": "../public/texts/8b9b0959-e768-4d92-a220-d02602306aa4.html",
     "image": "https://iduna.nl/wp-content/uploads/2023/03/23-11-04_site_holland-heavy.png",
-    "soldOut": null,
-    "unavailable": "",
-    "corrupted": null,
-    "origin": "iduna"
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
   },
   {
     "doorOpenDateTime": "2023-11-05T14:00:00.000Z",
@@ -88,12 +83,11 @@
     "location": "iduna",
     "price": 27.5,
     "shortText": "One Knight Only",
-    "longText": "../public/texts/7196916d-5935-4e08-9db0-6b9b8494e062.html",
+    "longText": "../public/texts/8e47f227-6a21-4fdd-9a6e-1e4ccccafecd.html",
     "image": "https://iduna.nl/wp-content/uploads/2023/03/square.jpg",
-    "soldOut": null,
-    "unavailable": "",
-    "corrupted": null,
-    "origin": "iduna"
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
   },
   {
     "doorOpenDateTime": null,
@@ -104,12 +98,11 @@
     "location": "iduna",
     "price": 22,
     "shortText": "50th Anniversary Tour • a tribute by AC/DC UK",
-    "longText": "../public/texts/17763cf2-0afe-4e0e-ab37-1d76363c536c.html",
+    "longText": "../public/texts/c8c9af64-f031-4d04-b75e-8c6964faab71.html",
     "image": "https://iduna.nl/wp-content/uploads/2022/12/acdcuk_website.jpg",
-    "soldOut": null,
-    "unavailable": "",
-    "corrupted": null,
-    "origin": "iduna"
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
   },
   {
     "doorOpenDateTime": "2023-06-25T13:00:00.000Z",
@@ -120,12 +113,11 @@
     "location": "iduna",
     "price": 20,
     "shortText": null,
-    "longText": "../public/texts/dfcedc32-9a68-48af-a4db-f5dfe7558314.html",
+    "longText": "../public/texts/1c213db4-a526-4c90-a2fb-af044e5925a1.html",
     "image": "https://iduna.nl/wp-content/uploads/2023/02/Black-Flag_website1.jpg",
-    "soldOut": null,
-    "unavailable": "",
-    "corrupted": null,
-    "origin": "iduna"
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
   },
   {
     "doorOpenDateTime": "2023-09-29T18:00:00.000Z",
@@ -136,12 +128,11 @@
     "location": "iduna",
     "price": 25,
     "shortText": null,
-    "longText": "../public/texts/df83f2ba-1167-40d9-80ca-a84e0bcb882b.html",
+    "longText": "../public/texts/76c24b04-3bb8-48fb-b9df-77de09abd29a.html",
     "image": "https://iduna.nl/wp-content/uploads/2023/04/23-09-29_website_toy-dolls.png",
     "soldOut": true,
-    "unavailable": "",
-    "corrupted": null,
-    "origin": "iduna"
+    "unavailable": false,
+    "corrupted": null
   },
   {
     "doorOpenDateTime": "2023-12-01T17:00:00.000Z",
@@ -152,27 +143,10 @@
     "location": "iduna",
     "price": 32.5,
     "shortText": null,
-    "longText": "../public/texts/69be801b-190c-4488-84e2-5e611e2d5626.html",
+    "longText": "../public/texts/917750d9-1d29-4cfa-ae38-1492fc9181da.html",
     "image": "https://iduna.nl/wp-content/uploads/2023/03/23-12-01_website_exploited1.png",
-    "soldOut": null,
-    "unavailable": "",
-    "corrupted": null,
-    "origin": "iduna"
-  },
-  {
-    "doorOpenDateTime": "2023-06-15T18:00:00.000Z",
-    "startDateTime": "2023-06-15T18:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://iduna.nl/event/desert-dwellers-ii/",
-    "title": "Desert Dwellers II",
-    "location": "iduna",
-    "price": 5,
-    "shortText": "Eremit (DE) vs Echo Solar Void (BE)",
-    "longText": "../public/texts/89fa8ee8-5521-4cca-b935-20e119f569f2.html",
-    "image": "https://iduna.nl/wp-content/uploads/2023/05/desert-dwellersII_website.jpg",
-    "soldOut": null,
-    "unavailable": "",
-    "corrupted": null,
-    "origin": "iduna"
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
   }
 ]

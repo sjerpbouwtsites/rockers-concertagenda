@@ -44,7 +44,7 @@ melkwegScraper.makeBaseEventList = async function () {
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
-  const rawEvents = await page.evaluate(({workerData, months}) => {
+  let rawEvents = await page.evaluate(({workerData, months, unavailabiltyTerms}) => {
     return Array.from(document.querySelectorAll(".collection-wrapper .event-part"))
       .filter((eventEl) => {
         const titelElText = eventEl
@@ -54,12 +54,13 @@ melkwegScraper.makeBaseEventList = async function () {
       .map((eventEl) => {
         const title = eventEl.querySelector('h2')?.textContent ?? "";
         const res = {
-          unavailable: "",
+  
           pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
           errors: [],          
           title
         }   
-        
+        const uaRex = new RegExp(unavailabiltyTerms.join("|"), 'gi');
+        res.unavailable = !!eventEl.textContent.match(uaRex);        
         res.venueEventUrl = eventEl.querySelector("a")?.href ?? null;
 
         try {
@@ -79,8 +80,8 @@ melkwegScraper.makeBaseEventList = async function () {
         }
         return res;
       });
-  }, {workerData, months: this.months })
-    .map(this.isMusicEventCorruptedMapper);
+  }, {workerData, months: this.months, unavailabiltyTerms: AbstractScraper.unavailabiltyTerms })
+  rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
 
   this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
@@ -96,7 +97,6 @@ melkwegScraper.getPageInfo = async function ({ page, event }) {
   
   const pageInfo = await page.evaluate(({event}) => {
     const res = {
-      unavailable: event.unavailable,
       pageInfo: `<a class='page-info' href='${location.href}'>${event.title}</a>`,
       errors: [],
     };

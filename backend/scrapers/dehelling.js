@@ -43,7 +43,7 @@ dehellingScraper.makeBaseEventList = async function () {
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
-  const rawEvents = await page.evaluate(({workerData}) => {
+  let rawEvents = await page.evaluate(({workerData}) => {
     return Array.from(
       document.querySelectorAll(
         '.c-event-card'
@@ -60,7 +60,6 @@ dehellingScraper.makeBaseEventList = async function () {
         const title = schemaData?.name
 
         const res = {
-          unavailable: "",
           pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
           errors: [],
           title,
@@ -106,7 +105,8 @@ dehellingScraper.makeBaseEventList = async function () {
 
         return res;
       })},{workerData})
-    .map(this.isMusicEventCorruptedMapper);
+
+  rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
 
   this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
@@ -125,7 +125,6 @@ dehellingScraper.getPageInfo = async function ({ page,event }) {
   const pageInfo = await page.evaluate(
     ({event}) => {
       const res = {
-        unavailable: event.unavailable,
         pageInfo: `<a class='page-info' href='${event.venueEventUrl}'>${event.title}</a>`,
         errors: [],
       };

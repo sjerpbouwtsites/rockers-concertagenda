@@ -1,4 +1,1669 @@
 
+  doornroosje-0 Error - 9:21:42 AM
+  Error: typeerror error. Type undefined  undefined
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1148:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1137:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:258:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:977:22) 
+  typeerror error. Type undefined  undefined
+  
+  
+  dbs-0 Error - 9:21:39 AM
+  Error: image missing <a class='page-info' href='https://www.dbstudio.nl/event/open-podium-dbs/'>OPEN PODIUM @ dB's - dB's Studio</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1142:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1137:23)
+    at dbsScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dbs.js:192:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:977:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:225:5) 
+  image missing <a class='page-info' href='https://www.dbstudio.nl/event/open-podium-dbs/'>OPEN PODIUM @ dB's - dB's Studio</a>
+  
+  
+  doornroosje-1 Error - 9:19:38 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1085:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  doornroosje-1 Error - 9:19:13 AM
+  Error: typeerror error. Type undefined  undefined
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1148:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1137:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:258:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:977:22) 
+  typeerror error. Type undefined  undefined
+  
+  
+  dbs-0 Error - 9:16:24 AM
+  Error: image missing <a class='page-info' href='https://www.dbstudio.nl/event/open-podium-dbs/'>OPEN PODIUM @ dB's - dB's Studio</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1142:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1137:23)
+    at dbsScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dbs.js:192:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:977:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:225:5) 
+  image missing <a class='page-info' href='https://www.dbstudio.nl/event/open-podium-dbs/'>OPEN PODIUM @ dB's - dB's Studio</a>
+  
+  
+  doornroosje-0 Error - 9:16:15 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1085:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  doornroosje-0 Error - 9:15:51 AM
+  Error: typeerror error. Type undefined  undefined
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1148:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1137:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:258:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:977:22) 
+  typeerror error. Type undefined  undefined
+  
+  
+  doornroosje-1 Error - 9:15:44 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1085:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  doornroosje-1 Error - 9:15:19 AM
+  Error: typeerror error. Type undefined  undefined
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1148:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1137:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:258:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:977:22) 
+  typeerror error. Type undefined  undefined
+  
+  
+  undefined Error - 9:14:09 AM
+  TimeoutError: waiting for selector `#main .content-block` failed: timeout 7500ms exceeded
+    at new WaitTask (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:528:34)
+    at DOMWorld.waitForSelectorInPage (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:432:26)
+    at internalHandler.waitFor (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/QueryHandler.js:31:77)
+    at DOMWorld.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:323:29)
+    at Frame.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:942:51)
+    at Page.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:2359:33)
+    at voltScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/volt.js:102:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:977:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:225:5) 
+  waiting for selector `#main .content-block` failed: timeout 7500ms exceeded
+  
+  
+  volt-0 Error - 9:14:07 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1085:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  volt-0 Error - 8:58:40 AM
+  TimeoutError: waiting for selector `.row.event` failed: timeout 1250ms exceeded
+    at new WaitTask (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:528:34)
+    at DOMWorld.waitForSelectorInPage (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:432:26)
+    at internalHandler.waitFor (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/QueryHandler.js:31:77)
+    at DOMWorld.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:323:29)
+    at Frame.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:942:51)
+    at Page.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:2359:33)
+    at voltScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/volt.js:44:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:216:29) 
+  waiting for selector `.row.event` failed: timeout 1250ms exceeded
+  
+  
+  groeneengel-0 Error - 8:07:52 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:318:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  groeneengel-0 Error - 8:07:29 AM
+  TypeError: page.evaluate(...).map is not a function
+    at melkwegScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/groeneengel.js:84:6)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:216:29) 
+  page.evaluate(...).map is not a function
+  
+  
+  dynamo-0 Error - 7:41:43 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:318:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  dynamo-0 Error - 7:41:10 AM
+  TypeError: page.evaluate(...).map is not a function
+    at dynamoScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dynamo.js:116:5)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:216:29) 
+  page.evaluate(...).map is not a function
+  
+  
+  doornroosje-0 Error - 7:34:33 AM
+  Error: typeerror error. Type undefined  undefined
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1125:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1114:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:260:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:959:22) 
+  typeerror error. Type undefined  undefined
+  
+  
+  doornroosje-1 Error - 7:34:20 AM
+  Error: typeerror error. Type undefined  undefined
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1125:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1114:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:260:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:959:22) 
+  typeerror error. Type undefined  undefined
+  
+  
+  doornroosje-1 Error - 7:30:39 AM
+  Error: typeerror error. Type undefined  undefined
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1125:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1114:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:270:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:959:22) 
+  typeerror error. Type undefined  undefined
+  
+  
+  doornroosje-0 Error - 7:30:27 AM
+  Error: typeerror error. Type undefined  undefined
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1125:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1114:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:270:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:959:22) 
+  typeerror error. Type undefined  undefined
+  
+  
+  doornroosje-0 Error - 7:28:47 AM
+  Error: typeerror error. Type undefined  undefined
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1125:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1114:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:269:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:959:22) 
+  typeerror error. Type undefined  undefined
+  
+  
+  doornroosje-1 Error - 7:28:39 AM
+  Error: typeerror error. Type undefined  undefined
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1125:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1114:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:269:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:959:22) 
+  typeerror error. Type undefined  undefined
+  
+  
+  doornroosje-0 Error - 7:28:06 AM
+  Error: typeerror error. Type undefined  undefined
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1125:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1114:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:253:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:959:22) 
+  typeerror error. Type undefined  undefined
+  
+  
+  doornroosje-1 Error - 7:27:54 AM
+  Error: typeerror error. Type undefined  undefined
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1125:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1114:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:253:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:959:22) 
+  typeerror error. Type undefined  undefined
+  
+  
+  doornroosje-1 Error - 7:26:12 AM
+  Error: typeerror error. Type undefined  undefined
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1125:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1114:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:252:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:959:22) 
+  typeerror error. Type undefined  undefined
+  
+  
+  doornroosje-0 Error - 7:26:00 AM
+  Error: typeerror error. Type undefined  undefined
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1125:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1114:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:252:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:959:22) 
+  typeerror error. Type undefined  undefined
+  
+  
+  doornroosje-1 Error - 7:21:36 AM
+  Error: typeerror error. Type undefined  undefined
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1125:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1114:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:250:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:959:22) 
+  typeerror error. Type undefined  undefined
+  
+  
+  doornroosje-0 Error - 7:21:23 AM
+  Error: typeerror error. Type undefined  undefined
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1125:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1114:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:250:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:959:22) 
+  typeerror error. Type undefined  undefined
+  
+  
+  doornroosje-1 Error - 7:18:29 AM
+  Error: typeerror error. Type undefined  undefined
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1125:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1114:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:240:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:959:22) 
+  typeerror error. Type undefined  undefined
+  
+  
+  doornroosje-0 Error - 7:18:18 AM
+  Error: typeerror error. Type undefined  undefined
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1125:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1114:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:240:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:959:22) 
+  typeerror error. Type undefined  undefined
+  
+  
+  doornroosje-1 Error - 7:17:05 AM
+  Error: typeerror error. Type undefined  undefined
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1125:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1114:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:239:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:959:22) 
+  typeerror error. Type undefined  undefined
+  
+  
+  doornroosje-0 Error - 7:16:53 AM
+  Error: typeerror error. Type undefined  undefined
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1125:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1114:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:239:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:959:22) 
+  typeerror error. Type undefined  undefined
+  
+  
+  doornroosje-1 Error - 7:16:01 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1062:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  doornroosje-0 Error - 7:15:51 AM
+  Error: typeerror error. Type undefined  undefined
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1125:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1114:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:241:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:959:22) 
+  typeerror error. Type undefined  undefined
+  
+  
+  doornroosje-1 Error - 7:15:37 AM
+  Error: typeerror error. Type undefined  undefined
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1125:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1114:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:241:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:959:22) 
+  typeerror error. Type undefined  undefined
+  
+  
+  doornroosje-1 Error - 7:14:48 AM
+  Error: typeerror error. Type undefined  undefined
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1125:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1114:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:241:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:959:22) 
+  typeerror error. Type undefined  undefined
+  
+  
+  doornroosje-0 Error - 7:14:36 AM
+  Error: typeerror error. Type undefined  undefined
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1125:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1114:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:241:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:959:22) 
+  typeerror error. Type undefined  undefined
+  
+  
+  doornroosje-0 Error - 7:12:37 AM
+  Error: typeerror error. Type undefined  undefined
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1123:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1113:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:241:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:959:22) 
+  typeerror error. Type undefined  undefined
+  
+  
+  doornroosje-1 Error - 7:12:23 AM
+  Error: typeerror error. Type undefined  undefined
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1123:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1113:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:241:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:959:22) 
+  typeerror error. Type undefined  undefined
+  
+  
+  doornroosje-1 Error - 6:51:43 AM
+  Error: typeerror error. Type undefined  undefined
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1123:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1113:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:242:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:959:22) 
+  typeerror error. Type undefined  undefined
+  
+  
+  doornroosje-0 Error - 6:51:32 AM
+  Error: typeerror error. Type undefined  undefined
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1123:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1113:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:242:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:959:22) 
+  typeerror error. Type undefined  undefined
+  
+  
+  doornroosje-1 Error - 6:50:33 AM
+  Error: typeerror error. Type undefined  undefined
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1123:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1113:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:240:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:959:22) 
+  typeerror error. Type undefined  undefined
+  
+  
+  doornroosje-0 Error - 6:50:23 AM
+  Error: typeerror error. Type undefined  undefined
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1123:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1113:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:240:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:959:22) 
+  typeerror error. Type undefined  undefined
+  
+  
+  doornroosje-1 Error - 6:49:40 AM
+  TypeError: Cannot read properties of undefined (reading 'map')
+    at doornroosjeScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:88:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:216:29) 
+  Cannot read properties of undefined (reading 'map')
+  
+  
+  doornroosje-0 Error - 6:46:05 AM
+  Error: typeerror error. Type undefined  undefined
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1123:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1113:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:234:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:959:22) 
+  typeerror error. Type undefined  undefined
+  
+  
+  doornroosje-1 Error - 6:45:59 AM
+  Error: typeerror error. Type undefined  undefined
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1123:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1113:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:234:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:959:22) 
+  typeerror error. Type undefined  undefined
+  
+  
+  doornroosje-1 Error - 6:45:21 AM
+  Error: typeerror error. Type undefined  undefined
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1123:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1113:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:234:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:959:22) 
+  typeerror error. Type undefined  undefined
+  
+  
+  doornroosje-0 Error - 6:45:10 AM
+  Error: typeerror error. Type undefined  undefined
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1123:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1113:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:234:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:959:22) 
+  typeerror error. Type undefined  undefined
+  
+  
+  doornroosje-1 Error - 6:43:48 AM
+  Error: Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:6:67
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:195:16)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:959:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:225:5) 
+  Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:6:67
+  
+  
+  doornroosje-0 Error - 6:43:38 AM
+  Error: Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:6:67
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:195:16)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:959:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:225:5) 
+  Evaluation failed: RangeError: Invalid time value
+    at Date.toISOString (<anonymous>)
+    at __puppeteer_evaluation_script__:6:67
+  
+  
+  doornroosje-1 Error - 6:25:47 AM
+  Error: image missing <a class='page-info' href='https://www.doornroosje.nl/event/smash-into-pieces/'>Smash Into Pieces</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1118:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1113:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:209:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:959:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:225:5) 
+  image missing <a class='page-info' href='https://www.doornroosje.nl/event/smash-into-pieces/'>Smash Into Pieces</a>
+  
+  
+  doornroosje-1 Error - 6:25:46 AM
+  Error: image missing <a class='page-info' href='https://www.doornroosje.nl/event/hey-colossus/'>Hey Colossus</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1118:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1113:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:209:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:959:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:225:5) 
+  image missing <a class='page-info' href='https://www.doornroosje.nl/event/hey-colossus/'>Hey Colossus</a>
+  
+  
+  doornroosje-1 Error - 6:25:45 AM
+  Error: image missing <a class='page-info' href='https://www.doornroosje.nl/event/rauwe-kicks-2/'>Rauwe KicksMalice + Cryex + Unresolved</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1118:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1113:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:209:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:959:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:225:5) 
+  image missing <a class='page-info' href='https://www.doornroosje.nl/event/rauwe-kicks-2/'>Rauwe KicksMalice + Cryex + Unresolved</a>
+  
+  
+  doornroosje-1 Error - 6:25:44 AM
+  Error: image missing <a class='page-info' href='https://www.doornroosje.nl/event/grandson/'>grandson + Bob Vylan</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1118:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1113:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:209:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:959:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:225:5) 
+  image missing <a class='page-info' href='https://www.doornroosje.nl/event/grandson/'>grandson + Bob Vylan</a>
+  
+  
+  doornroosje-1 Error - 6:25:43 AM
+  Error: image missing <a class='page-info' href='https://www.doornroosje.nl/event/ditz/'>DITZ + Hammok + Paracetamøl</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1118:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1113:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:209:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:959:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:225:5) 
+  image missing <a class='page-info' href='https://www.doornroosje.nl/event/ditz/'>DITZ + Hammok + Paracetamøl</a>
+  
+  
+  doornroosje-1 Error - 6:25:42 AM
+  Error: image missing <a class='page-info' href='https://www.doornroosje.nl/event/algiers-2/'>Algiers+ Holy Other</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1118:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1113:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:209:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:959:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:225:5) 
+  image missing <a class='page-info' href='https://www.doornroosje.nl/event/algiers-2/'>Algiers+ Holy Other</a>
+  
+  
+  doornroosje-1 Error - 6:25:41 AM
+  Error: image missing <a class='page-info' href='https://www.doornroosje.nl/event/daniel-romano-the-outfit/'>Daniel Romano & the Outfit+ Julianna Riolino + Weird Nightmare</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1118:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1113:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:209:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:959:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:225:5) 
+  image missing <a class='page-info' href='https://www.doornroosje.nl/event/daniel-romano-the-outfit/'>Daniel Romano & the Outfit+ Julianna Riolino + Weird Nightmare</a>
+  
+  
+  doornroosje-1 Error - 6:25:40 AM
+  Error: image missing <a class='page-info' href='https://www.doornroosje.nl/event/decapitated/'>Decapitated+ Caligula's Horse + Brand of Sacrifice</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1118:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1113:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:209:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:959:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:225:5) 
+  image missing <a class='page-info' href='https://www.doornroosje.nl/event/decapitated/'>Decapitated+ Caligula's Horse + Brand of Sacrifice</a>
+  
+  
+  doornroosje-1 Error - 6:25:39 AM
+  Error: image missing <a class='page-info' href='https://www.doornroosje.nl/event/thrown/'>thrown+ Half Me</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1118:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1113:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:209:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:959:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:225:5) 
+  image missing <a class='page-info' href='https://www.doornroosje.nl/event/thrown/'>thrown+ Half Me</a>
+  
+  
+  doornroosje-1 Error - 6:25:38 AM
+  Error: image missing <a class='page-info' href='https://www.doornroosje.nl/event/tribulation-2/'>Tribulation+ Laster</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1118:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1113:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:209:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:959:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:225:5) 
+  image missing <a class='page-info' href='https://www.doornroosje.nl/event/tribulation-2/'>Tribulation+ Laster</a>
+  
+  
+  doornroosje-1 Error - 6:25:37 AM
+  Error: image missing <a class='page-info' href='https://www.doornroosje.nl/event/melvins-4/'>Melvins+ Taipei Houston</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1118:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1113:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:209:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:959:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:225:5) 
+  image missing <a class='page-info' href='https://www.doornroosje.nl/event/melvins-4/'>Melvins+ Taipei Houston</a>
+  
+  
+  doornroosje-1 Error - 6:25:36 AM
+  Error: image missing <a class='page-info' href='https://www.doornroosje.nl/event/la-pegatina-maurino/'>La Pegatina+ MAURINO</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1118:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1113:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:209:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:959:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:225:5) 
+  image missing <a class='page-info' href='https://www.doornroosje.nl/event/la-pegatina-maurino/'>La Pegatina+ MAURINO</a>
+  
+  
+  doornroosje-0 Error - 6:25:35 AM
+  Error: image missing <a class='page-info' href='https://www.doornroosje.nl/event/ascendant-vierge/'>ascendant vierge</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1118:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1113:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:209:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:959:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:225:5) 
+  image missing <a class='page-info' href='https://www.doornroosje.nl/event/ascendant-vierge/'>ascendant vierge</a>
+  
+  
+  doornroosje-0 Error - 6:25:34 AM
+  Error: image missing <a class='page-info' href='https://www.doornroosje.nl/event/animals-as-leaders/'>Animals As Leaders+ ALLT</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1118:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1113:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:209:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:959:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:225:5) 
+  image missing <a class='page-info' href='https://www.doornroosje.nl/event/animals-as-leaders/'>Animals As Leaders+ ALLT</a>
+  
+  
+  doornroosje-0 Error - 6:25:33 AM
+  Error: image missing <a class='page-info' href='https://www.doornroosje.nl/event/waterparks/'>Waterparks+ Stand Atlantic</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1118:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1113:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:209:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:959:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:225:5) 
+  image missing <a class='page-info' href='https://www.doornroosje.nl/event/waterparks/'>Waterparks+ Stand Atlantic</a>
+  
+  
+  doornroosje-0 Error - 6:25:32 AM
+  Error: image missing <a class='page-info' href='https://www.doornroosje.nl/event/wodan-boys/'>Wodan Boys</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1118:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1113:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:209:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:959:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:225:5) 
+  image missing <a class='page-info' href='https://www.doornroosje.nl/event/wodan-boys/'>Wodan Boys</a>
+  
+  
+  doornroosje-0 Error - 6:25:29 AM
+  Error: image missing <a class='page-info' href='https://www.doornroosje.nl/event/whores-2/'>Whores.</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1118:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1113:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:209:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:959:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:225:5) 
+  image missing <a class='page-info' href='https://www.doornroosje.nl/event/whores-2/'>Whores.</a>
+  
+  
+  doornroosje-0 Error - 6:25:28 AM
+  Error: image missing <a class='page-info' href='https://www.doornroosje.nl/event/the-bridge-city-sinners/'>The Bridge City Sinners</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1118:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1113:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:209:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:959:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:225:5) 
+  image missing <a class='page-info' href='https://www.doornroosje.nl/event/the-bridge-city-sinners/'>The Bridge City Sinners</a>
+  
+  
+  doornroosje-0 Error - 6:25:27 AM
+  Error: image missing <a class='page-info' href='https://www.doornroosje.nl/event/oxbow/'>Oxbow</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1118:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1113:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:209:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:959:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:225:5) 
+  image missing <a class='page-info' href='https://www.doornroosje.nl/event/oxbow/'>Oxbow</a>
+  
+  
+  doornroosje-0 Error - 6:25:26 AM
+  Error: image missing <a class='page-info' href='https://www.doornroosje.nl/event/bell-witch/'>Bell Witch+ Fuoco Fatuo</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1118:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1113:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:209:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:959:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:225:5) 
+  image missing <a class='page-info' href='https://www.doornroosje.nl/event/bell-witch/'>Bell Witch+ Fuoco Fatuo</a>
+  
+  
+  doornroosje-0 Error - 6:25:25 AM
+  Error: image missing <a class='page-info' href='https://www.doornroosje.nl/event/death-valley-girls/'>Death Valley Girls</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1118:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1113:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:209:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:959:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:225:5) 
+  image missing <a class='page-info' href='https://www.doornroosje.nl/event/death-valley-girls/'>Death Valley Girls</a>
+  
+  
+  doornroosje-0 Error - 6:25:24 AM
+  Error: image missing <a class='page-info' href='https://www.doornroosje.nl/event/uniform/'>Uniform + PSYWARFARE</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1118:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1113:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:209:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:959:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:225:5) 
+  image missing <a class='page-info' href='https://www.doornroosje.nl/event/uniform/'>Uniform + PSYWARFARE</a>
+  
+  
+  doornroosje-0 Error - 6:25:23 AM
+  Error: image missing <a class='page-info' href='https://www.doornroosje.nl/event/soul-glo/'>Soul Glo + Militarie Gun</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1118:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1113:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:209:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:959:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:225:5) 
+  image missing <a class='page-info' href='https://www.doornroosje.nl/event/soul-glo/'>Soul Glo + Militarie Gun</a>
+  
+  
+  doornroosje-0 Error - 6:25:22 AM
+  Error: image missing <a class='page-info' href='https://www.doornroosje.nl/event/vissa/'>VISSA+ gladde paling + INHUMAN + Noodsignaal + more</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1118:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1113:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:209:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:959:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:225:5) 
+  image missing <a class='page-info' href='https://www.doornroosje.nl/event/vissa/'>VISSA+ gladde paling + INHUMAN + Noodsignaal + more</a>
+  
+  
+  doornroosje-0 Error - 6:25:21 AM
+  Error: image missing <a class='page-info' href='https://www.doornroosje.nl/event/misery-index-2/'>Misery Index+ Changing Tides</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1118:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1113:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:209:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:959:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:225:5) 
+  image missing <a class='page-info' href='https://www.doornroosje.nl/event/misery-index-2/'>Misery Index+ Changing Tides</a>
+  
+  
+  doornroosje-0 Error - 6:23:34 AM
+  Error: page info ontbreekt.
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1089:13)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:215:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:959:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:225:5) 
+  page info ontbreekt.
+  
+  
+  doornroosje-1 Error - 6:23:27 AM
+  Error: page info ontbreekt.
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1089:13)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:215:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:959:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:225:5) 
+  page info ontbreekt.
+  
+  
+  dbs-0 Error - 5:28:52 AM
+  Error: image missing <a class='page-info' href='https://www.dbstudio.nl/event/open-podium-dbs/'>OPEN PODIUM @ dB's - dB's Studio</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1118:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1113:23)
+    at dbsScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dbs.js:192:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:959:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:225:5) 
+  image missing <a class='page-info' href='https://www.dbstudio.nl/event/open-podium-dbs/'>OPEN PODIUM @ dB's - dB's Studio</a>
+  
+  
+  dbs-0 Error - 4:55:49 AM
+  Error: image missing <a class='page-info' href='https://www.dbstudio.nl/event/open-podium-dbs/'>OPEN PODIUM @ dB's - dB's Studio</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1118:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1113:23)
+    at dbsScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dbs.js:192:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:959:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:225:5) 
+  image missing <a class='page-info' href='https://www.dbstudio.nl/event/open-podium-dbs/'>OPEN PODIUM @ dB's - dB's Studio</a>
+  
+  
+  doornroosje-0 Error - 4:55:41 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:318:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  doornroosje-0 Error - 4:55:10 AM
+  TypeError: page.evaluate(...).map is not a function
+    at doornroosjeScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:70:20)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:216:29) 
+  page.evaluate(...).map is not a function
+  
+  
+  afaslive-0 Error - 12:55:53 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:316:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  afaslive-0 Error - 12:55:09 AM
+  TypeError: page.evaluate(...).map is not a function
+    at afasliveScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/afaslive.js:123:6)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:214:29) 
+  page.evaluate(...).map is not a function
+  
+  
+  cpunt-0 Error - 12:54:45 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:316:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  afaslive-1 Error - 12:54:40 AM
+  TypeError: page.evaluate(...).map is not a function
+    at afasliveScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/afaslive.js:123:6)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:214:29) 
+  page.evaluate(...).map is not a function
+  
+  
+  cpunt-0 Error - 12:54:32 AM
+  TypeError: page.evaluate(...).map is not a function
+    at cpuntScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/cpunt.js:116:6)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:214:29) 
+  page.evaluate(...).map is not a function
+  
+  
+  dehelling-0 Error - 12:53:59 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:316:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  dehelling-0 Error - 12:53:39 AM
+  TypeError: page.evaluate(...).map is not a function
+    at dehellingScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dehelling.js:108:6)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:214:29) 
+  page.evaluate(...).map is not a function
+  
+  
+  dehelling-0 Error - 12:53:16 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:316:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  dehelling-0 Error - 12:52:56 AM
+  TypeError: page.evaluate(...).map is not a function
+    at dehellingScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dehelling.js:108:6)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:214:29) 
+  page.evaluate(...).map is not a function
+  
+  
+  cpunt-0 Error - 12:52:54 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:316:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  cpunt-0 Error - 12:52:41 AM
+  TypeError: page.evaluate(...).map is not a function
+    at cpuntScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/cpunt.js:116:6)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:214:29) 
+  page.evaluate(...).map is not a function
+  
+  
+  bibelot-0 Error - 12:52:27 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:316:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  bibelot-0 Error - 12:52:13 AM
+  TypeError: page.evaluate(...).map is not a function
+    at bibelotScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/bibelot.js:81:6)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:214:29) 
+  page.evaluate(...).map is not a function
+  
+  
+  bibelot-0 Error - 12:41:17 AM
+  TypeError: page.evaluate(...).map is not a function
+    at bibelotScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/bibelot.js:81:6)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:215:29) 
+  page.evaluate(...).map is not a function
+  
+  
+  dbs-2 Error - 12:40:55 AM
+  TypeError: page.evaluate(...).map is not a function
+    at dbsScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dbs.js:132:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:215:29) 
+  page.evaluate(...).map is not a function
+  
+  
+  dbs-1 Error - 12:40:53 AM
+  TypeError: page.evaluate(...).map is not a function
+    at dbsScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dbs.js:132:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:215:29) 
+  page.evaluate(...).map is not a function
+  
+  
+  afaslive-0 Error - 12:39:08 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:318:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  bibelot-0 Error - 12:38:34 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:318:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  depul-0 Error - 12:38:28 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:318:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  afaslive-0 Error - 12:38:23 AM
+  TypeError: page.evaluate(...).map is not a function
+    at afasliveScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/afaslive.js:123:6)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:215:29) 
+  page.evaluate(...).map is not a function
+  
+  
+  bibelot-0 Error - 12:38:20 AM
+  TypeError: page.evaluate(...).map is not a function
+    at bibelotScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/bibelot.js:81:6)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:215:29) 
+  page.evaluate(...).map is not a function
+  
+  
+  depul-0 Error - 12:37:55 AM
+  TypeError: page.evaluate(...).map is not a function
+    at depulScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/depul.js:151:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:215:29) 
+  page.evaluate(...).map is not a function
+  
+  
+  dehelling-0 Error - 12:35:44 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:318:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  dehelling-0 Error - 12:35:25 AM
+  TypeError: page.evaluate(...).map is not a function
+    at dehellingScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dehelling.js:108:6)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:215:29) 
+  page.evaluate(...).map is not a function
+  
+  
+  baroeg-0 Error - 12:35:09 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:318:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  baroeg-0 Error - 12:34:26 AM
+  TypeError: page.evaluate(...).map is not a function
+    at baroegScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:159:6)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:215:29) 
+  page.evaluate(...).map is not a function
+  
+  
+  cpunt-0 Error - 12:33:49 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:318:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  cpunt-0 Error - 12:33:36 AM
+  TypeError: page.evaluate(...).map is not a function
+    at cpuntScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/cpunt.js:116:6)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:215:29) 
+  page.evaluate(...).map is not a function
+  
+  
+  baroeg-1 Error - 12:33:23 AM
+  TypeError: page.evaluate(...).map is not a function
+    at baroegScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:159:6)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:215:29) 
+  page.evaluate(...).map is not a function
+  
+  
+  gebrdenobel-0 Error - 12:33:23 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:318:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  gebrdenobel-0 Error - 12:33:10 AM
+  TypeError: page.evaluate(...).map is not a function
+    at gebrdenobelScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gebrdenobel.js:70:6)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:215:29) 
+  page.evaluate(...).map is not a function
+  
+  
+  dbs-3 Error - 12:32:30 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:318:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  dbs-2 Error - 12:32:19 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:318:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  doornroosje-0 Error - 12:31:54 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:318:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  dbs-3 Error - 12:31:32 AM
+  TypeError: page.evaluate(...).map is not a function
+    at dbsScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dbs.js:132:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:215:29) 
+  page.evaluate(...).map is not a function
+  
+  
+  metropool-2 Error - 12:31:29 AM
+  ReferenceError: Cannot access 'pageInfo' before initialization
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:945:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:225:5) 
+  Cannot access 'pageInfo' before initialization
+  
+  
+  doornroosje-0 Error - 12:31:22 AM
+  TypeError: page.evaluate(...).map is not a function
+    at doornroosjeScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:70:20)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:215:29) 
+  page.evaluate(...).map is not a function
+  
+  
+  dbs-2 Error - 12:31:20 AM
+  TypeError: page.evaluate(...).map is not a function
+    at dbsScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dbs.js:132:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:215:29) 
+  page.evaluate(...).map is not a function
+  
+  
+  deflux-0 Error - 12:31:19 AM
+  ReferenceError: Cannot access 'pageInfo' before initialization
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:945:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:225:5) 
+  Cannot access 'pageInfo' before initialization
+  
+  
+  neushoorn-0 Error - 12:31:18 AM
+  ReferenceError: Cannot access 'pageInfo' before initialization
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:945:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:225:5) 
+  Cannot access 'pageInfo' before initialization
+  
+  
+  013-3 Error - 12:31:15 AM
+  ReferenceError: Cannot access 'pageInfo' before initialization
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:945:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:225:5) 
+  Cannot access 'pageInfo' before initialization
+  
+  
+  dbs-0 Error - 12:31:04 AM
+  TypeError: page.evaluate(...).map is not a function
+    at dbsScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dbs.js:132:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:215:29) 
+  page.evaluate(...).map is not a function
+  
+  
+  tivolivredenburg-3 Error - 12:31:02 AM
+  ReferenceError: Cannot access 'pageInfo' before initialization
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:945:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:225:5) 
+  Cannot access 'pageInfo' before initialization
+  
+  
+  iduna-0 Error - 12:31:00 AM
+  ReferenceError: Cannot access 'pageInfo' before initialization
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:945:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:225:5) 
+  Cannot access 'pageInfo' before initialization
+  
+  
+  doornroosje-1 Error - 12:30:54 AM
+  TypeError: page.evaluate(...).map is not a function
+    at doornroosjeScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:70:20)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:215:29) 
+  page.evaluate(...).map is not a function
+  
+  
+  kavka-0 Error - 12:30:51 AM
+  TypeError: page.evaluate(...).map is not a function
+    at kavkaScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/kavka.js:149:6)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:215:29) 
+  page.evaluate(...).map is not a function
+  
+  
+  afaslive-0 Error - 12:29:57 AM
+  TypeError: page.evaluate(...).map is not a function
+    at afasliveScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/afaslive.js:123:6)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:215:29) 
+  page.evaluate(...).map is not a function
+  
+  
+  gebrdenobel-0 Error - 12:29:53 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:318:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  effenaar-1 Error - 12:29:44 AM
+  TypeError: page.evaluate(...).map is not a function
+    at effenaarScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/effenaar.js:63:5)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:215:29) 
+  page.evaluate(...).map is not a function
+  
+  
+  013-1 Error - 12:29:41 AM
+  ReferenceError: Cannot access 'pageInfo' before initialization
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:945:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:225:5) 
+  Cannot access 'pageInfo' before initialization
+  
+  
+  gebrdenobel-0 Error - 12:29:40 AM
+  TypeError: page.evaluate(...).map is not a function
+    at gebrdenobelScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gebrdenobel.js:70:6)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:215:29) 
+  page.evaluate(...).map is not a function
+  
+  
+  013-3 Error - 12:29:39 AM
+  ReferenceError: Cannot access 'pageInfo' before initialization
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:945:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:225:5) 
+  Cannot access 'pageInfo' before initialization
+  
+  
+  013-0 Error - 12:29:39 AM
+  ReferenceError: Cannot access 'pageInfo' before initialization
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:945:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:225:5) 
+  Cannot access 'pageInfo' before initialization
+  
+  
+  013-0 Error - 12:29:25 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:318:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  013-3 Error - 12:29:25 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:318:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  013-0 Error - 12:29:11 AM
+  TypeError: page.evaluate(...).map is not a function
+    at nuldertienScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/013.js:111:6)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:215:29) 
+  page.evaluate(...).map is not a function
+  
+  
+  013-3 Error - 12:29:11 AM
+  TypeError: page.evaluate(...).map is not a function
+    at nuldertienScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/013.js:111:6)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:215:29) 
+  page.evaluate(...).map is not a function
+  
+  
+  kavka-0 Error - 12:21:29 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:318:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  effenaar-2 Error - 12:21:24 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:318:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  tivolivredenburg-2 Error - 12:21:12 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:318:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  tivolivredenburg-2 Error - 12:20:59 AM
+  TypeError: page.evaluate(...).map is not a function
+    at tivoliVredenburgScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/tivolivredenburg.js:119:6)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:215:29) 
+  page.evaluate(...).map is not a function
+  
+  
+  boerderij-0 Error - 12:20:56 AM
+  ReferenceError: Cannot access 'pageInfo' before initialization
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:945:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:225:5) 
+  Cannot access 'pageInfo' before initialization
+  
+  
+  effenaar-2 Error - 12:20:56 AM
+  TypeError: page.evaluate(...).map is not a function
+    at effenaarScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/effenaar.js:63:5)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:215:29) 
+  page.evaluate(...).map is not a function
+  
+  
+  kavka-0 Error - 12:20:55 AM
+  TypeError: page.evaluate(...).map is not a function
+    at kavkaScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/kavka.js:149:6)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:215:29) 
+  page.evaluate(...).map is not a function
+  
+  
+  afaslive-0 Error - 10:41:14 PM
+  TimeoutError: Navigation timeout of 20000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111
+    at async FrameManager.navigateFrame (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:131:21)
+    at async Frame.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:512:16)
+    at async Page.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1167:16)
+    at async AbstractScraper.createSinglePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1235:7)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:926:25)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:220:5) 
+  Navigation timeout of 20000 ms exceeded
+  
+  
+  afaslive-0 Error - 10:40:54 PM
+  TimeoutError: Navigation timeout of 20000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111
+    at async FrameManager.navigateFrame (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:131:21)
+    at async Frame.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:512:16)
+    at async Page.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1167:16)
+    at async AbstractScraper.createSinglePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1235:7)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:926:25)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:220:5) 
+  Navigation timeout of 20000 ms exceeded
+  
+  
+  afaslive-0 Error - 10:40:34 PM
+  TimeoutError: Navigation timeout of 20000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111
+    at async FrameManager.navigateFrame (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:131:21)
+    at async Frame.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:512:16)
+    at async Page.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1167:16)
+    at async AbstractScraper.createSinglePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1235:7)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:926:25)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:220:5) 
+  Navigation timeout of 20000 ms exceeded
+  
+  
+  paradiso-2 Error - 10:39:07 PM
+  Error: image missing <a class='page-info' href='https://www.paradiso.nl/program/the-chats-guantanamo-baywatch/37567'>The Chats + Guantanamo Baywatch</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1104:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1099:23)
+    at paradisoScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/paradiso.js:296:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:951:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:220:5) 
+  image missing <a class='page-info' href='https://www.paradiso.nl/program/the-chats-guantanamo-baywatch/37567'>The Chats + Guantanamo Baywatch</a>
+  
+  
+  afaslive-0 Error - 10:35:06 PM
+  TimeoutError: Navigation timeout of 20000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111
+    at async FrameManager.navigateFrame (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:131:21)
+    at async Frame.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:512:16)
+    at async Page.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1167:16)
+    at async AbstractScraper.createSinglePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1232:7)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:926:25)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:220:5) 
+  Navigation timeout of 20000 ms exceeded
+  
+  
+  afaslive-0 Error - 10:34:46 PM
+  TimeoutError: Navigation timeout of 20000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111
+    at async FrameManager.navigateFrame (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:131:21)
+    at async Frame.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:512:16)
+    at async Page.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1167:16)
+    at async AbstractScraper.createSinglePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1232:7)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:926:25)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:220:5) 
+  Navigation timeout of 20000 ms exceeded
+  
+  
+  afaslive-0 Error - 10:34:26 PM
+  TimeoutError: Navigation timeout of 20000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111
+    at async FrameManager.navigateFrame (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:131:21)
+    at async Frame.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:512:16)
+    at async Page.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1167:16)
+    at async AbstractScraper.createSinglePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1232:7)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:926:25)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:220:5) 
+  Navigation timeout of 20000 ms exceeded
+  
+  
+  afaslive-0 Error - 10:34:06 PM
+  TimeoutError: Navigation timeout of 20000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111
+    at async FrameManager.navigateFrame (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:131:21)
+    at async Frame.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:512:16)
+    at async Page.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1167:16)
+    at async AbstractScraper.createSinglePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1232:7)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:926:25)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:220:5) 
+  Navigation timeout of 20000 ms exceeded
+  
+  
+  afaslive-1 Error - 10:33:46 PM
+  TimeoutError: Navigation timeout of 20000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111
+    at async FrameManager.navigateFrame (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:131:21)
+    at async Frame.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:512:16)
+    at async Page.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1167:16)
+    at async AbstractScraper.createSinglePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1232:7)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:926:25)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:220:5) 
+  Navigation timeout of 20000 ms exceeded
+  
+  
+  afaslive-1 Error - 10:33:25 PM
+  TimeoutError: Navigation timeout of 20000 ms exceeded
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:108:111
+    at async FrameManager.navigateFrame (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:131:21)
+    at async Frame.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:512:16)
+    at async Page.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1167:16)
+    at async AbstractScraper.createSinglePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1232:7)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:926:25)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:220:5) 
+  Navigation timeout of 20000 ms exceeded
+  
+  
+  paradiso-2 Error - 10:32:12 PM
+  Error: image missing <a class='page-info' href='https://www.paradiso.nl/program/the-chats-guantanamo-baywatch/37567'>The Chats + Guantanamo Baywatch</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1101:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1096:23)
+    at paradisoScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/paradiso.js:296:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:951:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:220:5) 
+  image missing <a class='page-info' href='https://www.paradiso.nl/program/the-chats-guantanamo-baywatch/37567'>The Chats + Guantanamo Baywatch</a>
+  
+  
   paradiso-2 Error - 10:01:31 PM
   Error: image missing <a class='page-info' href='https://www.paradiso.nl/program/the-chats-guantanamo-baywatch/37567'>The Chats + Guantanamo Baywatch</a>
     at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1091:29

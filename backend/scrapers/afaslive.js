@@ -102,12 +102,11 @@ afasliveScraper.makeBaseEventList = async function () {
   
   await _t.autoScroll(page); // TODO hier wat aan doen. maak er een do while van met een timeout. dit is waardeloos.
 
-  const rawEvents = await page.evaluate(({workerData}) => {
+  let rawEvents = await page.evaluate(({workerData}) => {
     return Array.from(document.querySelectorAll(".agenda__item__block "))
       .map((agendaBlock) => {
         const title = agendaBlock.querySelector(".eventTitle")?.textContent ?? "";
         const res = {
-          unavailable: "",
           pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
           errors: [],          
           title
@@ -121,7 +120,7 @@ afasliveScraper.makeBaseEventList = async function () {
         return !event.title.toLowerCase().includes('productiedag')
       });
   }, {workerData})
-    .map(this.isMusicEventCorruptedMapper);
+  rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
     
   this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index);
@@ -133,69 +132,94 @@ afasliveScraper.makeBaseEventList = async function () {
 afasliveScraper.getPageInfo = async function ({ page, event }) {
   
   const {stopFunctie} =  await this.getPageInfoStart()
-  
+
+  await _t.waitFor(250);
+
   const pageInfo = await page.evaluate(
     ({ months,event }) => {
-
       const res = {
-        unavailable: event.unavailable,
         pageInfo: `<a class='page-info' href='${location.href}'>${event.title}</a>`,
         errors: [],
       };
 
-      const startDateMatch =
+      const timeTableEl = document.querySelector('.timetable')
+      if (timeTableEl){
+        const tijdenMatch = document.querySelector('.timetable')?.textContent.match(/\d\d:\d\d/);
+        if (Array.isArray(tijdenMatch) && tijdenMatch.length){
+          res.startTime = tijdenMatch[0];
+        } 
+      } else {
+        const startEl = document.querySelector(
+          ".eventInfo .tickets ~ p.align-mid ~ p.align-mid"
+        );
+        if (startEl) {
+          const startmatch = startEl.textContent.match(/\d\d:\d\d/);
+          if (startmatch && Array.isArray(startmatch) && startmatch.length) {
+            res.startTime = startmatch[0];
+          } else {
+            res.errors.push({
+              remarks: `Geen start tijd`,
+              toDebug: {
+                startDateText: startEl.textContent
+              }
+            })  
+            return res;          
+          }
+        } else {
+          res.errors.push({
+            remarks: `geen startTime gevonden`,
+            toDebug: {
+              heeftTimeTable: !!document.querySelector('.timetable'),
+              heeftStartEl: !!document.querySelector(
+                ".eventInfo .tickets ~ p.align-mid ~ p.align-mid"
+              )
+            }
+          })     
+        }
+      }
+
+      if (document
+        .querySelector(".eventTitle")
+        ?.parentNode.querySelector("time")
+        ?.textContent.match(/(\d+)\s+(\w+)\s+(\d\d\d\d)/)) {
+        const startDateMatch =
         document
           .querySelector(".eventTitle")
           ?.parentNode.querySelector("time")
           ?.textContent.match(/(\d+)\s+(\w+)\s+(\d\d\d\d)/) ?? null;
-      if (
-        startDateMatch &&
+        if (
+          startDateMatch &&
         Array.isArray(startDateMatch) &&
         startDateMatch.length > 3
-      ) {
-        res.startDate = `${startDateMatch[3]}-${months[startDateMatch[2]]}-${
-          startDateMatch[1]
-        }`;
-      } else {
-        res.errors.push({
-          remarks: `geen startdate`,
-          toDebug: {
-            startDateText: document
-              .querySelector(".eventTitle")
-              ?.parentNode.querySelector("time")
-              ?.textContent
-          }
-        })        
-        return res;
-      }
-
-      const startEl = document.querySelector(
-        ".eventInfo .tickets ~ p.align-mid ~ p.align-mid"
-      );
-      if (startEl) {
-        const startmatch = startEl.textContent.match(/\d\d:\d\d/);
-        if (startmatch && Array.isArray(startmatch) && startmatch.length) {
-          res.startTime = startmatch[0];
+        ) {
+          res.startDate = `${startDateMatch[3]}-${months[startDateMatch[2]]}-${
+            startDateMatch[1]
+          }`;
         } else {
           res.errors.push({
-            remarks: `Geen start tijd`,
+            remarks: `geen startdate`,
             toDebug: {
-              startDateText: startEl.textContent
+              startDateText: document
+                .querySelector(".eventTitle")
+                ?.parentNode.querySelector("time")
+                ?.textContent
             }
-          })  
-          return res;          
+          })        
+          return res;
         }
-      }
 
-      const doorEl = document.querySelector(
-        ".eventInfo .tickets ~ p.align-mid"
-      );
-      if (doorEl) {
-        const doormatch = doorEl.textContent.match(/\d\d:\d\d/);
-        if (doormatch && Array.isArray(doormatch) && doormatch.length) {
-          res.doorTime = doormatch[0];
+        const doorEl = document.querySelector(
+          ".eventInfo .tickets ~ p.align-mid"
+        );
+        if (doorEl) {
+          const doormatch = doorEl.textContent.match(/\d\d:\d\d/);
+          if (doormatch && Array.isArray(doormatch) && doormatch.length) {
+            res.doorTime = doormatch[0];
+          }
         }
-      }
+      } else {
+        res.heeftEventTitleMatch = false;
+      } // alternatieve mogelijk legacy startDate
 
       try {
         if (res.startTime) {
@@ -213,9 +237,8 @@ afasliveScraper.getPageInfo = async function ({ page, event }) {
         res.errors.push({
           error: errorCaught,
           remarks: `merge time date ${res.pageInfo}`,
-          toDebug: res
+          toDebug: {start: res.startTime, date: res.startDate}
         });
-        res.unavailable += 'geen starttijd wegens fout';
         return res;
       }
 
@@ -230,5 +253,6 @@ afasliveScraper.getPageInfo = async function ({ page, event }) {
     },
     { months: this.months,event }
   );
+
   return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
 };
