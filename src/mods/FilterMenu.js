@@ -8,8 +8,8 @@ class FilterMenu extends React.Component {
       filterSettings: {
         podia: {},
         daterange: {
-          lower: "2022-01-01",
-          upper: "2023-06-31",
+          lower: "2023-06-15",
+          upper: "2025-12-31",
         },
       },
     };

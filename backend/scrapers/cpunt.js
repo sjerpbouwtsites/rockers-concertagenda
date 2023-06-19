@@ -9,11 +9,12 @@ const cpuntScraper = new AbstractScraper(makeScraperConfig({
   workerData: Object.assign({}, workerData),
 
   puppeteerConfig: {
-    singlePage: {
-      timeout: 10000,
-    },
     mainPage: {
+      timeout: 20014,
       waitUntil: 'load'
+    },
+    singlePage: {
+      timeout: 20012
     },
     app: {
       mainPage: {

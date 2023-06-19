@@ -29,8 +29,8 @@ class App extends React.Component {
       filterSettings: {
         podia: {},
         daterange: {
-          lower: "2022-11-11",
-          upper: "2023-06-31",
+          lower: "2023-06-19",
+          upper: "2025-12-31",
         },
       },
     };

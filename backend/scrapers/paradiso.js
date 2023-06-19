@@ -167,6 +167,7 @@ paradisoScraper.getPageInfo = async function ({ page, event }) {
     jan: "01",
     feb: "02",
     mrt: "03",
+    mar: "03",
     apr: "04",
     mei: "05",
     jun: "06",
