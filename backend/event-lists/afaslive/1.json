@@ -1,1 +1,32 @@
-[]
+[
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-10-24T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.afaslive.nl/agenda/fall-out-boy",
+    "title": "Fall Out Boy",
+    "location": "afaslive",
+    "price": 57.12,
+    "shortText": null,
+    "longText": "../public/texts/6555ee14-1641-4124-9c97-9ac636a5c83b.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2023/10-Oktober/_agendaitem/Fall-Out-Boy.jpg",
+    "soldOut": false,
+    "unavailable": null,
+    "corrupted": null
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-12-08T19:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.afaslive.nl/agenda/floor-jansen",
+    "title": "Floor Jansen",
+    "location": "afaslive",
+    "price": 42,
+    "shortText": null,
+    "longText": "../public/texts/5ef543ec-7f8f-433d-909f-6608e9d21fea.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2023/12-December/_agendaitem/Floor-Jansen.jpg",
+    "soldOut": false,
+    "unavailable": null,
+    "corrupted": null
+  }
+]

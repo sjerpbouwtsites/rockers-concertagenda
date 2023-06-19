@@ -206,7 +206,7 @@ paradisoScraper.getPageInfo = async function ({ page, event }) {
       const contentBox2 =
         document.querySelector(".css-gwbug6")?.outerHTML ?? '';
       if (!contentBox1 && !contentBox2) {
-        res.corrupted = true;
+        res.corrupted = 'geen contentboxes';
       }
       if (contentBox1 || contentBox2) {
         res.longTextHTML = contentBox1 + contentBox2

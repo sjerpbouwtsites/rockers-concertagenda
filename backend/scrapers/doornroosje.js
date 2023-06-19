@@ -15,7 +15,7 @@ const doornroosjeScraper = new AbstractScraper(makeScraperConfig({
       waitUntil: 'load'
     },
     singlePage: {
-      timeout: 25000
+      timeout: 35000
     },
     app: {
       mainPage: {

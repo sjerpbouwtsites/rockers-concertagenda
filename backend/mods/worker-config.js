@@ -29,7 +29,7 @@ export const workerConfig = {
   deflux: { workerCount: 1, workerConcurrent: 1 },
   dehelling :{ workerCount: 1, CPUReq: 'low', workerConcurrent: 1 },
   depul: { workerCount: 2, workerConcurrent: 1 },
-  doornroosje :{ workerCount: 2, workerConcurrent: 1},
+  doornroosje :{ workerCount: 2, workerConcurrent: 1, CPUReq: 'high',},
   dynamo: { workerCount: 2, workerConcurrent: 1 },
   effenaar:{ workerCount: 4, workerConcurrent: 1 },
   gebrdenobel: { workerCount: 1, workerConcurrent: 1 },
@@ -53,7 +53,7 @@ export const workerConfig = {
   },
   oosterpoort: { workerCount: 3, workerConcurrent: 1 },
   p60 :{ workerCount: 1, workerConcurrent: 1},  
-  paradiso: { workerCount: 3, workerConcurrent: 1 },
+  paradiso: { workerCount: 3, workerConcurrent: 1, CPUReq: 'high', },
   patronaat: { workerCount: 3, workerConcurrent: 1 },
   tivolivredenburg:{ workerCount: 4, workerConcurrent: 1 },
   ticketmaster :{
