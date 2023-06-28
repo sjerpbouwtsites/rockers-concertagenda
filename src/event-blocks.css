@@ -21,6 +21,10 @@
   overflow-x:hidden;
 }
 
+.event-block:hover {
+  cursor: pointer;
+}
+
 
 
 .event-block--image {
@@ -206,6 +210,10 @@ height: 100%;
 .event-block__main h4,
 .event-block__main h5 {
   max-width: 55ch;
+}
+
+.event-block--enlarged .event-block--image {
+  filter: brightness(0.66) blur(1px);
 }
 
 .event-block__price {
