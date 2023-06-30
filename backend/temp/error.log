@@ -1,4 +1,13 @@
 
+  deflux-0 Error - 11:29:00 AM
+  TypeError: Cannot read properties of null (reading 'replace')
+    at AbstractScraper.titelShorttextPostfix (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1089:49)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1007:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:226:5) 
+  Cannot read properties of null (reading 'replace')
+  
+  
   occii-0 Error - 10:48:27 AM
   TypeError: youtubeIds.map is not a function
     at HTMLnaarYoutubeIframes (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/longHTML.js:80:21)

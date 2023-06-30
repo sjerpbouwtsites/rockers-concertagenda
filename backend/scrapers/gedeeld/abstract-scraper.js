@@ -1003,6 +1003,9 @@ export default class AbstractScraper {
     // samenvoegen & naar EventsList sturen
     singleEvent.merge(pageInfo);
 
+    //titel / shortext postfix
+    singleEvent = this.titelShorttextPostfix(singleEvent);
+
     // check op properties vanuit single page
     singleEvent = this.isMusicEventCorruptedMapper(singleEvent);
 
@@ -1055,6 +1058,37 @@ export default class AbstractScraper {
     return useableEventsList.length
       ? this.processSingleMusicEvent(useableEventsList)
       : useableEventsList;
+  }
+
+  titelShorttextPostfix(musicEvent){
+    const titleIsCapsArr = musicEvent.title
+      .split('')
+      .map(char => char === char.toUpperCase());
+    const noOfCapsInTitle = titleIsCapsArr.filter(a => a).length;
+    const toManyCapsInTitle = ((musicEvent.title.length - noOfCapsInTitle) / musicEvent.title.length) < .5;
+    if (toManyCapsInTitle){
+      musicEvent.title = musicEvent.title.substring(0,1).toUpperCase()+musicEvent.title.substring(1,500).toLowerCase()
+    }
+
+    if (musicEvent.title.length > 45){
+      const splittingCandidates = ['+', '&', ':', '>', '•'];
+      let i = 0;
+      do {
+        const splitted = musicEvent.title.split(splittingCandidates[i]);
+        musicEvent.title = splitted[0];
+        const titleRest = splitted.splice(1, 50).join(' ');
+        musicEvent.shortText = titleRest + ' ' + musicEvent.shortText;              
+        i = i + 1;
+      } while (musicEvent.title.length > 45 && i < splittingCandidates.length);
+    }
+
+    // if (musicEvent.title.length > 45){
+    //   musicEvent.title = musicEvent.title.replace(/\(.*\)/,'').replace(/\s{2,25}/,' ');
+    // }    
+
+    musicEvent.shortText = musicEvent.shortText.replace(/<\/?\w+>/g, "");
+
+    return musicEvent
   }
 
   getPrice(priceTextcontent) {
