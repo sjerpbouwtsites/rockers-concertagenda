@@ -1,5 +1,4 @@
 import React from "react";
-import "../open-screen.css";
 
 class OpenScreen extends React.Component {
   constructor(props) {

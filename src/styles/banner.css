@@ -1,0 +1,26 @@
+/*
+  de 'header' 
+*/
+
+.app-banner {
+  padding: 1em;
+  background-color: var(--anthracite);
+  color: var(--green);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h2.app-title {
+  font-size: 26px;
+}
+.app-title-right {
+  font-weight: bold;
+  font-size: 1.25em;
+}
+.app-title-right span:hover {
+  cursor: pointer;
+  color: var(--pink);
+  font-weight: bold;
+}

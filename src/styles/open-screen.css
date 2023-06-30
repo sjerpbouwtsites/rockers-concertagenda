@@ -1,6 +1,6 @@
 .open-screen {
   background-color: var(--anthracite);
-  background-image: url('images/friesland-amsterdam-zeer-donker.jpg');
+  background-image: url('../images/friesland-amsterdam-zeer-donker.jpg');
   background-size: cover;
   background-position: center center;    
   position: fixed;

@@ -1,0 +1,21 @@
+
+:root {
+  --green: #b3ff4d;
+  --pink: #f325e6;
+  --anthracite: #0f110e;
+  --red: rgba(222, 46, 15, 0.881);
+}
+ 
+.red-color {
+  color: var(--red);
+}
+
+.green-color {
+  color: var(--green);
+}
+.pink-color {
+  color: var(--pink);
+}
+.anthracite-color {
+  color: var(--anthracite);
+}
