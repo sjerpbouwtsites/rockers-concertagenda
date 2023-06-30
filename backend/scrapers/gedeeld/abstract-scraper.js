@@ -1076,7 +1076,7 @@ export default class AbstractScraper {
       do {
         const splitted = musicEvent.title.split(splittingCandidates[i]);
         musicEvent.title = splitted[0];
-        const titleRest = splitted.splice(1, 50).join(' ');
+        const titleRest = splitted.splice(1, 45).join(' ');
         musicEvent.shortText = titleRest + ' ' + musicEvent.shortText;              
         i = i + 1;
       } while (musicEvent.title.length > 45 && i < splittingCandidates.length);
@@ -1086,7 +1086,7 @@ export default class AbstractScraper {
     //   musicEvent.title = musicEvent.title.replace(/\(.*\)/,'').replace(/\s{2,25}/,' ');
     // }    
 
-    musicEvent.shortText = musicEvent.shortText.replace(/<\/?\w+>/g, "");
+    musicEvent.shortText = musicEvent?.shortText?.replace(/<\/?\w+>/g, "");
 
     return musicEvent
   }

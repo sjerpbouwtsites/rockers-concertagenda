@@ -1,4 +1,731 @@
 
+  doornroosje-1 Error - 4:28:40 PM
+  Error: typeerror error. Type undefined  undefined
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1178:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1167:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:284:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:988:22) 
+  typeerror error. Type undefined  undefined
+  
+  
+  doornroosje-0 Error - 4:27:53 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1115:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  doornroosje-0 Error - 4:27:18 PM
+  Error: typeerror error. Type undefined  undefined
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1178:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1167:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:284:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:988:22) 
+  typeerror error. Type undefined  undefined
+  
+  
+  doornroosje-1 Error - 4:22:37 PM
+  Error: typeerror error. Type undefined  undefined
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1178:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1167:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:284:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:988:22) 
+  typeerror error. Type undefined  undefined
+  
+  
+  doornroosje-0 Error - 4:22:24 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1115:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  doornroosje-0 Error - 4:21:49 PM
+  Error: typeerror error. Type undefined  undefined
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1178:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1167:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:284:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:988:22) 
+  typeerror error. Type undefined  undefined
+  
+  
+  doornroosje-0 Error - 4:13:46 PM
+  Error: typeerror error. Type undefined  undefined
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1178:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1167:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:284:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:988:22) 
+  typeerror error. Type undefined  undefined
+  
+  
+  doornroosje-1 Error - 4:12:41 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1115:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  doornroosje-1 Error - 4:12:06 PM
+  Error: typeerror error. Type undefined  undefined
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1178:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1167:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:284:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:988:22) 
+  typeerror error. Type undefined  undefined
+  
+  
+  doornroosje-1 Error - 4:10:29 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1115:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  doornroosje-0 Error - 4:10:28 PM
+  Error: typeerror error. Type undefined  undefined
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1178:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1167:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:284:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:988:22) 
+  typeerror error. Type undefined  undefined
+  
+  
+  doornroosje-1 Error - 4:09:54 PM
+  Error: typeerror error. Type undefined  undefined
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1178:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1167:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:284:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:988:22) 
+  typeerror error. Type undefined  undefined
+  
+  
+  occii-1 Error - 4:08:21 PM
+  TypeError: First argument to String.prototype.includes must not be a regular expression
+    at String.includes (<anonymous>)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/longHTML.js:58:22
+    at Array.map (<anonymous>)
+    at filterSocialeMedia (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/longHTML.js:57:6)
+    at verwerkLongHTML (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/longHTML.js:7:37)
+    at AbstractScraper.writeLongTextHTML (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1257:28)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:996:30)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:226:5) 
+  First argument to String.prototype.includes must not be a regular expression
+  
+  
+  dehelling-0 Error - 4:08:18 PM
+  TypeError: First argument to String.prototype.includes must not be a regular expression
+    at String.includes (<anonymous>)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/longHTML.js:58:22
+    at Array.map (<anonymous>)
+    at filterSocialeMedia (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/longHTML.js:57:6)
+    at verwerkLongHTML (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/longHTML.js:7:37)
+    at AbstractScraper.writeLongTextHTML (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1257:28)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:996:30)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:226:5) 
+  First argument to String.prototype.includes must not be a regular expression
+  
+  
+  melkweg-0 Error - 4:08:12 PM
+  TypeError: First argument to String.prototype.includes must not be a regular expression
+    at String.includes (<anonymous>)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/longHTML.js:58:22
+    at Array.map (<anonymous>)
+    at filterSocialeMedia (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/longHTML.js:57:6)
+    at verwerkLongHTML (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/longHTML.js:7:37)
+    at AbstractScraper.writeLongTextHTML (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1257:28)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:996:30)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:226:5) 
+  First argument to String.prototype.includes must not be a regular expression
+  
+  
+  melkweg-1 Error - 4:08:04 PM
+  TypeError: First argument to String.prototype.includes must not be a regular expression
+    at String.includes (<anonymous>)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/longHTML.js:58:22
+    at Array.map (<anonymous>)
+    at filterSocialeMedia (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/longHTML.js:57:6)
+    at verwerkLongHTML (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/longHTML.js:7:37)
+    at AbstractScraper.writeLongTextHTML (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1257:28)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:996:30)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:226:5) 
+  First argument to String.prototype.includes must not be a regular expression
+  
+  
+  oosterpoort-0 Error - 4:08:02 PM
+  TypeError: First argument to String.prototype.includes must not be a regular expression
+    at String.includes (<anonymous>)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/longHTML.js:58:22
+    at Array.map (<anonymous>)
+    at filterSocialeMedia (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/longHTML.js:57:6)
+    at verwerkLongHTML (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/longHTML.js:7:37)
+    at AbstractScraper.writeLongTextHTML (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1257:28)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:996:30)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:226:5) 
+  First argument to String.prototype.includes must not be a regular expression
+  
+  
+  occii-0 Error - 4:07:58 PM
+  TypeError: First argument to String.prototype.includes must not be a regular expression
+    at String.includes (<anonymous>)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/longHTML.js:58:22
+    at Array.map (<anonymous>)
+    at filterSocialeMedia (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/longHTML.js:57:6)
+    at verwerkLongHTML (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/longHTML.js:7:37)
+    at AbstractScraper.writeLongTextHTML (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1257:28)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:996:30)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:226:5) 
+  First argument to String.prototype.includes must not be a regular expression
+  
+  
+  baroeg-0 Error - 4:07:35 PM
+  TypeError: First argument to String.prototype.includes must not be a regular expression
+    at String.includes (<anonymous>)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/longHTML.js:58:22
+    at Array.map (<anonymous>)
+    at filterSocialeMedia (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/longHTML.js:57:6)
+    at verwerkLongHTML (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/longHTML.js:7:37)
+    at AbstractScraper.writeLongTextHTML (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1257:28)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:996:30)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:226:5) 
+  First argument to String.prototype.includes must not be a regular expression
+  
+  
+  melkweg-2 Error - 4:07:35 PM
+  TypeError: First argument to String.prototype.includes must not be a regular expression
+    at String.includes (<anonymous>)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/longHTML.js:58:22
+    at Array.map (<anonymous>)
+    at filterSocialeMedia (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/longHTML.js:57:6)
+    at verwerkLongHTML (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/longHTML.js:7:37)
+    at AbstractScraper.writeLongTextHTML (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1257:28)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:996:30)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:226:5) 
+  First argument to String.prototype.includes must not be a regular expression
+  
+  
+  dynamo-0 Error - 4:07:34 PM
+  TypeError: First argument to String.prototype.includes must not be a regular expression
+    at String.includes (<anonymous>)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/longHTML.js:58:22
+    at Array.map (<anonymous>)
+    at filterSocialeMedia (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/longHTML.js:57:6)
+    at verwerkLongHTML (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/longHTML.js:7:37)
+    at AbstractScraper.writeLongTextHTML (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1257:28)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:996:30)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:226:5) 
+  First argument to String.prototype.includes must not be a regular expression
+  
+  
+  dynamo-0 Error - 4:06:30 PM
+  TypeError: Cannot read properties of null (reading '0')
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/longHTML.js:60:55
+    at Array.map (<anonymous>)
+    at filterSocialeMedia (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/longHTML.js:57:6)
+    at verwerkLongHTML (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/longHTML.js:7:37)
+    at AbstractScraper.writeLongTextHTML (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1257:28)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:996:30)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:226:5) 
+  Cannot read properties of null (reading '0')
+  
+  
+  doornroosje-0 Error - 4:06:19 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1115:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  doornroosje-0 Error - 4:05:44 PM
+  Error: typeerror error. Type undefined  undefined
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1178:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1167:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:284:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:988:22) 
+  typeerror error. Type undefined  undefined
+  
+  
+  doornroosje-1 Error - 4:05:32 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1115:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  baroeg-1 Error - 4:05:20 PM
+  TypeError: Cannot read properties of null (reading '0')
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/longHTML.js:60:55
+    at Array.map (<anonymous>)
+    at filterSocialeMedia (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/longHTML.js:57:6)
+    at verwerkLongHTML (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/longHTML.js:7:37)
+    at AbstractScraper.writeLongTextHTML (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1257:28)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:996:30)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:226:5) 
+  Cannot read properties of null (reading '0')
+  
+  
+  doornroosje-1 Error - 4:04:57 PM
+  Error: typeerror error. Type undefined  undefined
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1178:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1167:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:284:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:988:22) 
+  typeerror error. Type undefined  undefined
+  
+  
+  doornroosje-1 Error - 4:00:09 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1115:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  doornroosje-1 Error - 3:59:34 PM
+  Error: typeerror error. Type undefined  undefined
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1178:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1167:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:284:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:988:22) 
+  typeerror error. Type undefined  undefined
+  
+  
+  dynamo-0 Error - 3:59:21 PM
+  TypeError: Cannot read properties of null (reading '0')
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/longHTML.js:60:55
+    at Array.map (<anonymous>)
+    at filterSocialeMedia (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/longHTML.js:57:6)
+    at verwerkLongHTML (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/longHTML.js:7:37)
+    at AbstractScraper.writeLongTextHTML (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1257:28)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:996:30)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:226:5) 
+  Cannot read properties of null (reading '0')
+  
+  
+  doornroosje-0 Error - 3:58:56 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1115:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  doornroosje-0 Error - 3:58:21 PM
+  Error: typeerror error. Type undefined  undefined
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1178:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1167:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:284:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:988:22) 
+  typeerror error. Type undefined  undefined
+  
+  
+  baroeg-1 Error - 3:58:21 PM
+  TypeError: Cannot read properties of null (reading '0')
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/longHTML.js:60:55
+    at Array.map (<anonymous>)
+    at filterSocialeMedia (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/longHTML.js:57:6)
+    at verwerkLongHTML (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/longHTML.js:7:37)
+    at AbstractScraper.writeLongTextHTML (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1257:28)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:996:30)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:226:5) 
+  Cannot read properties of null (reading '0')
+  
+  
+  doornroosje-1 Error - 3:13:31 PM
+  Error: typeerror error. Type undefined  undefined
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1178:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1167:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:284:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:988:22) 
+  typeerror error. Type undefined  undefined
+  
+  
+  doornroosje-0 Error - 3:12:04 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1115:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  doornroosje-0 Error - 3:11:29 PM
+  Error: typeerror error. Type undefined  undefined
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1178:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1167:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:284:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:988:22) 
+  typeerror error. Type undefined  undefined
+  
+  
+  doornroosje-0 Error - 2:57:16 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1115:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  paradiso-2 Error - 2:56:48 PM
+  TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Array'
+    |     index 0 -> object with constructor 'Object'
+    |     property 'toDebug' -> object with constructor 'Object'
+    |     property 'buitenRes' -> object with constructor 'Object'
+    --- property 'errors' closes the circle
+    at JSON.stringify (<anonymous>)
+    at get json [as json] (file:///home/sjerp/dev/apache/concertagenda/backend/mods/rock-worker.js:206:17)
+    at Function.quick (file:///home/sjerp/dev/apache/concertagenda/backend/mods/rock-worker.js:145:24)
+    at QuickWorkerMessage.debugger (file:///home/sjerp/dev/apache/concertagenda/backend/mods/rock-worker.js:106:26)
+    at AbstractScraper.dirtyDebug (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:197:45)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1177:14
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1167:23)
+    at paradisoScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/paradiso.js:163:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:988:22) 
+  Converting circular structure to JSON
+    --> starting at object with constructor 'Array'
+    |     index 0 -> object with constructor 'Object'
+    |     property 'toDebug' -> object with constructor 'Object'
+    |     property 'buitenRes' -> object with constructor 'Object'
+    --- property 'errors' closes the circle
+  
+  
+  doornroosje-0 Error - 2:56:41 PM
+  Error: typeerror error. Type undefined  undefined
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1178:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1167:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:284:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:988:22) 
+  typeerror error. Type undefined  undefined
+  
+  
+  doornroosje-1 Error - 2:56:25 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1115:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  doornroosje-1 Error - 2:55:50 PM
+  Error: typeerror error. Type undefined  undefined
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1178:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1167:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:284:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:988:22) 
+  typeerror error. Type undefined  undefined
+  
+  
+  doornroosje-0 Error - 12:39:49 PM
+  Error: typeerror error. Type undefined  undefined
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1178:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1167:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:284:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:988:22) 
+  typeerror error. Type undefined  undefined
+  
+  
+  paradiso-2 Error - 12:39:26 PM
+  TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Array'
+    |     index 0 -> object with constructor 'Object'
+    |     property 'toDebug' -> object with constructor 'Object'
+    |     property 'buitenRes' -> object with constructor 'Object'
+    --- property 'errors' closes the circle
+    at JSON.stringify (<anonymous>)
+    at get json [as json] (file:///home/sjerp/dev/apache/concertagenda/backend/mods/rock-worker.js:206:17)
+    at Function.quick (file:///home/sjerp/dev/apache/concertagenda/backend/mods/rock-worker.js:145:24)
+    at QuickWorkerMessage.debugger (file:///home/sjerp/dev/apache/concertagenda/backend/mods/rock-worker.js:106:26)
+    at AbstractScraper.dirtyDebug (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:197:45)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1177:14
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1167:23)
+    at paradisoScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/paradiso.js:163:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:988:22) 
+  Converting circular structure to JSON
+    --> starting at object with constructor 'Array'
+    |     index 0 -> object with constructor 'Object'
+    |     property 'toDebug' -> object with constructor 'Object'
+    |     property 'buitenRes' -> object with constructor 'Object'
+    --- property 'errors' closes the circle
+  
+  
+  doornroosje-1 Error - 12:38:52 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1115:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  doornroosje-1 Error - 12:38:17 PM
+  Error: typeerror error. Type undefined  undefined
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1178:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1167:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:284:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:988:22) 
+  typeerror error. Type undefined  undefined
+  
+  
+  doornroosje-1 Error - 12:28:51 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1115:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  doornroosje-0 Error - 12:28:24 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1115:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  doornroosje-1 Error - 12:28:16 PM
+  Error: typeerror error. Type undefined  undefined
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1178:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1167:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:284:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:988:22) 
+  typeerror error. Type undefined  undefined
+  
+  
+  doornroosje-0 Error - 12:27:50 PM
+  Error: typeerror error. Type undefined  undefined
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1178:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1167:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:284:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:988:22) 
+  typeerror error. Type undefined  undefined
+  
+  
+  doornroosje-1 Error - 11:32:49 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1115:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  doornroosje-0 Error - 11:32:31 AM
+  Error: typeerror error. Type undefined  undefined
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1178:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1167:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:284:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:988:22) 
+  typeerror error. Type undefined  undefined
+  
+  
+  doornroosje-1 Error - 11:32:14 AM
+  Error: typeerror error. Type undefined  undefined
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1178:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1167:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:284:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:988:22) 
+  typeerror error. Type undefined  undefined
+  
+  
+  ticketmaster-1 Error - 11:29:56 AM
+  TypeError: Cannot read properties of null (reading 'replace')
+    at AbstractScraper.titelShorttextPostfix (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1089:49)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1007:24)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:226:5) 
+  Cannot read properties of null (reading 'replace')
+  
+  
+  doornroosje-1 Error - 11:29:56 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1115:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  afaslive-1 Error - 11:29:41 AM
+  TypeError: Cannot read properties of null (reading 'replace')
+    at AbstractScraper.titelShorttextPostfix (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1089:49)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1007:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:226:5) 
+  Cannot read properties of null (reading 'replace')
+  
+  
+  iduna-0 Error - 11:29:25 AM
+  TypeError: Cannot read properties of null (reading 'replace')
+    at AbstractScraper.titelShorttextPostfix (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1089:49)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1007:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:226:5) 
+  Cannot read properties of null (reading 'replace')
+  
+  
+  doornroosje-1 Error - 11:29:21 AM
+  Error: typeerror error. Type undefined  undefined
+    at Function.errorValid (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:57:11)
+    at ErrorWrapper.setError (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:60:22)
+    at ErrorWrapper.create (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:30:10)
+    at new ErrorWrapper (file:///home/sjerp/dev/apache/concertagenda/backend/mods/error-wrapper.js:16:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1178:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1167:23)
+    at doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:284:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:988:22) 
+  typeerror error. Type undefined  undefined
+  
+  
   deflux-0 Error - 11:29:00 AM
   TypeError: Cannot read properties of null (reading 'replace')
     at AbstractScraper.titelShorttextPostfix (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1089:49)

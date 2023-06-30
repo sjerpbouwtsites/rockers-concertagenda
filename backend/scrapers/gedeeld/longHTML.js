@@ -9,7 +9,6 @@ export default function verwerkLongHTML(HTMLstring){
   
   const socHTML = socLinks.length
     ? `<nav class="long-html__social">
-    <h3 class='long-html__social-title'>sociale media uit dit event:</h3>
     <ul class='long-html__social-list'>
       ${socLinks.map((fbLink) => `<li class='long-html__social-list-item'>${fbLink}</li>`).join(`\n`)}
     </ul>
@@ -18,12 +17,12 @@ export default function verwerkLongHTML(HTMLstring){
 
   const muziekVideosHTML = iframeArr.length 
     ? `
-    <figure class='long-html__music-videos'>
+    <section class='long-html__music-videos'>
       ${iframeArr.join(`\n`)}
-    </figure>
+    </section>
   ` :'';
 
-  return `${htmlZonderIframes}${muziekVideosHTML}${socHTML}`
+  return `${htmlZonderIframes}${socHTML}${muziekVideosHTML}`
 }
 
 function filterSocialeMedia(htmlString){
@@ -49,12 +48,20 @@ function filterSocialeMedia(htmlString){
   const bandcampMatch = htmlString.match(/(<a.*href=\"https:\/\/.*\.bandcamp\.com.*<\/a>)/gmi);
   const bandcampLinks1 = Array.isArray(bandcampMatch) ? bandcampMatch : []; 
   bandcampLinks1.forEach(link => {
-    htmlKopie = htmlKopie.replace(link,'');
+    htmlKopie = htmlKopie.replace(link,''); 
   })
 
   htmlKopie = tweedeBatchVerwijderen(htmlKopie)
 
-  const socLinks = [...facebookLinks1, ...facebookLinks2, ...instaLinks1, ...bandcampLinks1];
+  const socLinks = [...facebookLinks1, ...facebookLinks2, ...instaLinks1, ...bandcampLinks1]
+    .map(socLinkEl => {
+      const hrefMatch = socLinkEl.match(/\/\/.[^"]*/);
+      if (!Array.isArray(hrefMatch)) return;
+      const textContent = socLinkEl.replace(/(<([^>]+)>)/gi, '');
+      const href = hrefMatch[0];
+      return `<a class='long-html__social-list-link' href='${href}'>${textContent}</a>`;
+    });
+
   return [htmlKopie, socLinks];
 }
 
@@ -62,10 +69,13 @@ function filterVideosMuziek(htmlString){
 
   let htmlKopie = htmlString + ''
   const iframeMatch = htmlString.match(/(?:<iframe[^>]*)(?:(?:\/>)|(?:>.*?<\/iframe>))/gmi);
-  let iframeArr = Array.isArray(iframeMatch) ? iframeMatch : [];
+  let iframeArr = Array.isArray(iframeMatch) 
+    ? iframeMatch
+    : [];
   iframeArr.forEach(link => {
     htmlKopie = htmlKopie.replace(link,'');
   })
+  iframeArr = iframeArr.map(ifm => `<div class='iframe-wrapper-16-9'>${ifm}</div>`)
 
   if (iframeArr.length === 0){
     iframeArr = HTMLnaarYoutubeIframes(htmlString);
@@ -87,7 +97,9 @@ function HTMLnaarYoutubeIframes(html) {
     }
   })
   return uniekeYoutubeIds.map(id => {
-    return `<iframe width="380" height="214" src="https://www.youtube.com/embed/${id}" frameborder="0" allowfullscreen></iframe>`
+    return `<div class='iframe-wrapper-16-9'>
+      <iframe width="380" data-zelfgebouwd height="214" src="https://www.youtube.com/embed/${id}" frameborder="0" allowfullscreen></iframe>
+    </div>`
   })
 }
   
