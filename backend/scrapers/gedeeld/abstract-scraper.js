@@ -9,6 +9,7 @@ import EventsList from "../../mods/events-list.js";
 import MusicEvent from "../../mods/music-event.js";
 import getVenueMonths from "../../mods/months.js";
 import ErrorWrapper from "../../mods/error-wrapper.js";
+import verwerkLongHTML from "./longHTML.js";
 
 
 /**
@@ -1061,21 +1062,6 @@ export default class AbstractScraper {
     return this.getPriceFromHTML(priceTextcontent);
   }
 
-  writeLongTextHTML(longTextHTML) {
-    let uuid = crypto.randomUUID();
-    try {
-      if (!longTextHTML) return null;
-      const longTextPath = `${fsDirections.publicTexts}/${uuid}.html`;
-      fs.writeFileSync(longTextPath, longTextHTML, "utf-8");
-      return longTextPath;
-    } catch (err) {
-      _t.handleError(err, workerData, `write long text fail`, 'notice', {
-        path: `${fsDirections.publicTexts}/${uuid}.html`,
-        text: longTextHTML
-      });
-    }
-  }
-
   // step 3.5
   async getPageInfo() {
     // abstract function getPageInfo
@@ -1165,9 +1151,6 @@ export default class AbstractScraper {
 
     });
   
-    if (pageInfo?.longTextHTML) {
-      pageInfo.longTextHTML = _t.killWhitespaceExcess(pageInfo.longTextHTML)
-    }
     if (pageInfo?.priceTextcontent) {
       pageInfo.priceTextcontent = _t.killWhitespaceExcess(pageInfo.priceTextcontent)
     }
@@ -1230,25 +1213,32 @@ export default class AbstractScraper {
       pageInfoCopy.price = Number(this.getPriceFromHTML(pageInfo.priceTextcontent, context));
     }
   
-    pageInfoCopy.longText = this.saveLongTextHTML(pageInfo);
+    pageInfoCopy.longText = this.writeLongTextHTML(pageInfo.longTextHTML);
     return pageInfoCopy;
   }  
 
-  saveLongTextHTML(pageInfo) {
-    if (
-      !Object.prototype.hasOwnProperty.call(pageInfo, "longTextHTML") ||
-      !pageInfo.longTextHTML
-    ) {
-      return null;
-    }
+  writeLongTextHTML(longTextHTML) {
+    if (!longTextHTML) return null;
     let uuid = crypto.randomUUID();
-    const longTextPath = `${fsDirections.publicTexts}/${uuid}.html`;
-  
-    fs.writeFile(longTextPath, pageInfo.longTextHTML, "utf-8", () => {});
-    return longTextPath;
-  }  
-
-
+    const gezuiverdeHTML = verwerkLongHTML(longTextHTML);
+    try {
+      const longTextPath = `${fsDirections.publicTexts}/${uuid}.html`;
+      this.dirtyLog({
+        
+        zuiver: `<code>${gezuiverdeHTML}</code>`,
+        ruw: `<code>${longTextHTML}</code>`,
+        
+      }, 'html')
+      fs.writeFileSync(longTextPath, gezuiverdeHTML, "utf-8");
+      return longTextPath;
+    } catch (err) {
+      _t.handleError(err, workerData, `write long text fail`, 'notice', {
+        path: `${fsDirections.publicTexts}/${uuid}.html`,
+        text: gezuiverdeHTML
+      });
+    }
+    return '';
+  }
 
   // step 4
   async announceToMonitorDone() {
