@@ -52,8 +52,9 @@ class EventBlocks extends React.Component {
   }
 
   async loadLongerText(musicEventKey) {
-    
+
     const thisEvent = this.state.musicEvents[musicEventKey];
+
     if (!thisEvent.longText) {
       return;
     }
@@ -61,9 +62,7 @@ class EventBlocks extends React.Component {
     await fetch(thisEvent.longText.replace("../public/", "/"), {})
       .then((response) => response.text())
       .then((text) => {
-        console.log(text)
         let oldEvents = this.state.musicEvents;
-        oldEvents[musicEventKey].shortText = null;
         oldEvents[musicEventKey].enlarged = true;
         oldEvents[musicEventKey].longTextHTML = text;
         this.setState({ musicEvents: [...oldEvents] });
@@ -184,17 +183,18 @@ class EventBlocks extends React.Component {
 
   createShortTextHTML(musicEvent, selectors){
     if (!musicEvent.shortText) return '';
-    return musicEvent.shortText ? 
-      <p className={`${selectors.headerShortText}`}>
-        {musicEvent.shortText}
-      </p> : '';    
+    if (!musicEvent.enlarged) return '';
+    return <p className={`${selectors.headerShortText}`}>
+      {musicEvent.shortText}
+    </p>
   }
 
   createShortestText(musicEvent){
     if (!musicEvent.shortText) return '';
     const m = 15;
     const splitted = musicEvent.shortText?.split(' ') ?? null;
-    let s = musicEvent.shortText?.split(' ').splice(0, m).join(' ') ?? '';
+    if (!splitted) return '';
+    let s = splitted.splice(0, m).join(' ') ?? '';
     if (splitted.length > m){
       s += '...'
     }
@@ -372,7 +372,7 @@ ${BEMify(`event-block`, [
                 
               </header>
               <section className={selectors.main}>
-                {musicEvent.enlarged ? shortTextHTML : ''}
+                {shortTextHTML}
                 <div
                   className={selectors.mainContainerForEnlarged}
                   dangerouslySetInnerHTML={{
