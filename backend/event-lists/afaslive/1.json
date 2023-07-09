@@ -1,28 +1,28 @@
 [
   {
     "doorOpenDateTime": null,
+    "startDateTime": "2023-10-06T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.afaslive.nl/agenda/inhaler",
+    "title": "Inhaler",
+    "location": "afaslive",
+    "price": 33.6,
+    "longText": "../public/texts/6268767e-0069-413e-aba0-3aa194f78c51.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2023/10-Oktober/_agendaitem/Inhaler.jpg",
+    "soldOut": true,
+    "unavailable": null,
+    "corrupted": null
+  },
+  {
+    "doorOpenDateTime": null,
     "startDateTime": "2023-10-24T18:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://www.afaslive.nl/agenda/fall-out-boy",
     "title": "Fall Out Boy",
     "location": "afaslive",
     "price": 57.12,
-    "longText": "../public/texts/d2ca2786-1e73-4318-b813-9ba311f0f972.html",
+    "longText": "../public/texts/6f53c713-b21b-4a30-b3e8-a4dc0cc77a72.html",
     "image": "https://www.afaslive.nl/files/Agenda/2023/10-Oktober/_agendaitem/Fall-Out-Boy.jpg",
-    "soldOut": false,
-    "unavailable": null,
-    "corrupted": null
-  },
-  {
-    "doorOpenDateTime": null,
-    "startDateTime": "2023-12-08T19:00:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/floor-jansen",
-    "title": "Floor Jansen",
-    "location": "afaslive",
-    "price": 42,
-    "longText": "../public/texts/d32b464b-0ec3-4973-a448-0d45d2ec9a1e.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2023/12-December/_agendaitem/Floor-Jansen.jpg",
     "soldOut": false,
     "unavailable": null,
     "corrupted": null

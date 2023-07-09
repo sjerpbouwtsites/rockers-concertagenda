@@ -1166,21 +1166,27 @@ export default class AbstractScraper {
     
     pageInfo?.errors?.forEach((errorData) => {
       try {
+        this.dirtyDebug({...errorData, loc: 'page info errors foreach abs scraper 1169'})
         errorData.workerData = workerData;
-        if (!errorData?.error){
+        if (!errorData.error?.message){
           let errorTekst = errorData?.remarks ?? 'geen remarks'
           errorData.error = new Error(!errorTekst ? 'geen tekst' : errorTekst);
+          errorData.remarks = `mislukte error van:\n\n${errorData.remarks}`;
         }
         const wrappedError = new ErrorWrapper(errorData);
         _t.wrappedHandleError(wrappedError);        
       } catch (errorOfErrors) {
-        this.dirtyDebug(pageInfo?.errors)
-        const wrappedError = new ErrorWrapper((errorOfErrors || 'complete faal'));
-        _t.wrappedHandleError(wrappedError);        
-        this.dirtyDebug({
-          title: `erroring gaat verkeerd ${workerData.family}`,
-          toDebug: pageInfo
-        })
+        const cp = {...pageInfo};
+        delete cp.longTextHTML;
+        _t.handleError(
+          errorOfErrors, 
+          workerData,
+          'mislukte error',
+          'close-thread',
+          cp
+        )
+         
+        
       }
 
     });
@@ -1308,7 +1314,17 @@ export default class AbstractScraper {
   async createSinglePage(url) {
     try {
       const page = await this.browser.newPage();
-      await page.goto(url, this.puppeteerConfig.singlePage);
+      try {
+        await page.goto(url, this.puppeteerConfig.singlePage);
+      } catch (error) {
+        _t.handleError(
+          error,
+          workerData,
+          `Mislukken aanmaken <a class='single-page-failure error-link' href='${url}'>single pagina</a>`,
+          'notice',
+          url
+        );        
+      }
       
       // zet ErrorWrapper class in puppeteer document.
       await page.evaluate(({ErrorWrapperString}) => {

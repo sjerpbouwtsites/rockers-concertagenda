@@ -150,15 +150,12 @@ paradisoScraper.getPageInfo = async function ({ page, event }) {
   
   try {
     await page.waitForSelector(".css-tkkldl", {
-      timeout: 3000,
+      timeout: 6000,
     });
   } catch (caughtError) {
     buitenRes.errors.push({
       error: caughtError,
-      remarks: "Paradiso wacht op laden single pagina",
-      toDebug: {
-        buitenRes, event
-      }
+      remarks: `Paradiso wacht op laden single pagina\n${buitenRes.pageInfo}`,
     })
     return await this.getPageInfoEnd({pageInfo: buitenRes, stopFunctie, page})
   }

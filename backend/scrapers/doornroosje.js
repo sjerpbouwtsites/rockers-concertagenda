@@ -11,7 +11,7 @@ const doornroosjeScraper = new AbstractScraper(makeScraperConfig({
   workerData: Object.assign({}, workerData),
   puppeteerConfig: {
     mainPage: {
-      timeout: 35000,
+      timeout: 60000,
       waitUntil: 'load'
     },
     singlePage: {
@@ -245,16 +245,18 @@ doornroosjeScraper.getPageInfo = async function ({ page, event }) {
         pageInfo: `<a class='page-info' href='${event.venueEventUrl}'>${event.title}</a>`,
         errors: [],
       };
-      try {
-        res.startDateTime = new Date(`${event?.startDate}T12:00:00`).toISOString();
-      } catch (thisError) {
-        const errorString = `fout bij tijd/datum festival of datums. eventStartDate ${event?.startDate} timeDing ${event?.startDate}T12:00:00} ${res.pageInfo}`; 
-        res.errors.push({
-          error: thisError,
-          remarks: errorString,
-          toDebug: event
-        });        
-        return res;
+      if (event.venueEventUrl.includes('soulcrusher')){
+        res.startDateTime = new Date('2023-10-13T18:00:00.000Z').toISOString();
+      } else {
+        try {
+          res.startDateTime = new Date(`${event?.startDate}T12:00:00`).toISOString();
+        } catch (thisError) {
+          const errorString = `fout bij tijd/datum festival of datums`; 
+          res.errors.push({
+            remarks: errorString,
+          });        
+          return res;
+        }
       }
       res.image =
         document.querySelector(".c-festival-header__logo img")?.src ?? null;
@@ -275,11 +277,21 @@ doornroosjeScraper.getPageInfo = async function ({ page, event }) {
           ? res.longTextHTML + embeds.innerHTML
           : res.longTextHTML;
   
-      res.shortText = 'Met oa: '+Array.from(document.querySelectorAll('.b-festival-line-up__title')).map(title => title.textContent).join(', ')
+      if (document.querySelector('.b-festival-line-up__title')) {
+        const lineupRedux = Array.from(document.querySelectorAll('.b-festival-line-up__title'))?.map(title => title.textContent).join(', ') ?? '';
+        res.shortText = 'Met oa: '+lineupRedux
+      }
+
 
       return res;
     }, {event});
   }
+
+  // const cp = {...pageInfo};
+  // delete cp.longTextHTML
+  // if (cp.errors.length){
+  //   this.dirtyDebug(cp)
+  // }
   
   return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
 
