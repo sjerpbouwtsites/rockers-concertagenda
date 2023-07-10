@@ -77,7 +77,7 @@
     font-size: 1rem;
     overflow: hidden;
     padding-top: 3em;
-    padding-bottom:3em;    
+    padding-bottom:0;    
   }
 }
 
@@ -240,6 +240,17 @@
   font-size: 1.5em;
   margin-right: -2.5em;
   margin-top: -1em;
+  position:relative;
+}
+
+[class*='enlarged'] .ticketemoji::before{
+  content: 'Kaarten';
+  position: absolute;
+  bottom: -87px;
+  left: -40px;
+  z-index: -1;
+  font-size: 1.66em;
+  color: #00ff70;
 }
 
 .event-block__price {
@@ -264,12 +275,14 @@
 }
 
 .event-block__venue-link--enlarged {
-  position: static;
+  position: relative;
   top: auto;
   font-size: 2.5rem;
   right: auto;
   transform: initial;
   margin-top: 1em;
+  background-color: rgba(0, 0, 0, 0);
+  padding: 0;  
 }
 
 /* #endregion HEADER AND LINK */
@@ -562,26 +575,49 @@ a.long-html__social-list-link:hover{
 
 .long-html__music-videos {
   margin: 20px -20px;
-  width: calc(100% + 40px);
-  display: flex;
-  flex-direction: row;
-  flex-wrap:wrap;
+width: calc(100% + 40px);
+display: block;
+background-color: rgba(154, 154, 177, 0.26);
+padding: 0px 20px 40px 20px;
+box-shadow: inset -10px 3px 8px 4px rgba(3, 3, 3, 0.33);
+border-top: 20px solid var(--blue);
+position: relative;
+margin-top: 50px;
 }
 
-.long-html__music-videos iframe + iframe {
+.long-html__music-videos::before {
+  content: 'Muziek';
+  position: absolute;
+  top: -85px;
+  left: -25px;
+  z-index: 0;
+  font-size: 6.5em;
+  color: #00ff70;
+  font-weight: 900;
+  mix-blend-mode: difference;
+}
+
+
+.long-html__music-videos [class*='iframe-wrapper'] + [class*='iframe-wrapper'] {
   margin-top: 20px;
 }
 
 .iframe-wrapper-16-9 {
-  flex-basis: 50%;
-  flex-grow: 1;
   position: relative;
-  padding-bottom: 28.125%;
+  padding-bottom: calc(56.25% - (40px * .5625 + 22px));
+  width: calc(100% - 40px);
 }
 .iframe-wrapper-16-9:nth-child(odd):last-child {
   padding-bottom: 56.25%;
 }
-.iframe-wrapper-16-9 > iframe {
+.iframe-wrapper-152px {
+  flex-basis: 50%;
+  flex-grow: 1;
+  position: relative;
+  padding-bottom: 152px;  
+}
+.iframe-wrapper-16-9 > iframe,
+.iframe-wrapper-152px > iframe {
   position: absolute;
   top: 0;
   left: 0;
@@ -664,7 +700,15 @@ a.long-html__social-list-link:hover{
 
 .event-block__footer--enlarged {
   text-align: left;
+  background-color: #0a0707;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 40px 20px 80px 20px;
+  box-shadow: inset -10px 2px 8px 2px rgba(255, 255, 255, 0.12);
+  border-top:1px solid #ffffff1c;
 }
+
+
 
 /* #endregion FOOTER */
 

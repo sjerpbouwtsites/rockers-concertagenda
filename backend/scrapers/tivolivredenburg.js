@@ -244,8 +244,6 @@ tivoliVredenburgScraper.getPageInfo = async function ({ page, event }) {
     return res;
   }, {event});
 
-  this.dirtyDebug(pageInfo)
-
   return await this.getPageInfoEnd({pageInfo, stopFunctie, page, event})
 
 };

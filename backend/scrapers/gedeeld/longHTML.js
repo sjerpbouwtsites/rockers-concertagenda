@@ -84,7 +84,7 @@ function filterVideosMuziek(htmlString){
   })
   iframeArr = iframeArr.map(ifm => {
     const className = ifm.includes('youtu') ? '16-9' : '152px';
-    `<div class='iframe-wrapper-${className}'>${ifm}</div>`
+    return `<div class="iframe-wrapper-${className}">${ifm}</div>`
   })
 
   if (iframeArr.length === 0){
