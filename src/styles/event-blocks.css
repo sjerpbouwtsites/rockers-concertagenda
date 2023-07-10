@@ -333,7 +333,7 @@
 
 [class*='enlarged'] .ticketemoji::before{
   content: 'Kaarten';
-  position: absolute;
+  position: absolute; 
   bottom: -87px;
   left: -40px;
   z-index: -1;
