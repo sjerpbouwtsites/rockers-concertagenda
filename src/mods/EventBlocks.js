@@ -24,6 +24,7 @@ class EventBlocks extends React.Component {
     if (!this.state.eventDataLoaded && !this.state.eventDataLoading) {
       this.getEventData();
     }
+    this.sluitEnlarged = this.sluitEnlarged.bind(this);
   }
 
   //#endregion constructor en life cycle
@@ -50,12 +51,67 @@ class EventBlocks extends React.Component {
         this.setState({ eventDataLoading: false });
       });
   }
+  async waitFor(wait = 500) {
+    return new Promise((res) => {
+      setTimeout(res, wait);
+    });
+  }
 
+  sluitEnlarged(){
+    let nieuweEventsState = this.state.musicEvents.map(event => {
+      event.enlarged = false;
+      return event;
+    })
+    this.setState({ musicEvents: nieuweEventsState }, ()=>{
+      console.log('na set state')
+    });    
+  }
   async loadLongerText(musicEventKey) {
 
+    const momenteelEnlarged = !!this.someEventIsEnlarged(this.state.musicEvents);
     const thisEvent = this.state.musicEvents[musicEventKey];
+    let readyToLoad = false;
+    // alles ontlargen.
+    let nieuweEventsState = this.state.musicEvents.map(event => {
+      event.enlarged = false;
+      return event;
+    })
+    this.setState({ musicEvents: nieuweEventsState }, ()=>{
+      console.log('na set state')
+      readyToLoad = true;
+    });
+    
+    if (momenteelEnlarged) {
+      console.log('momenteel enlarged');
+      console.log(momenteelEnlarged)
+      return; 
+    }
+
+    if (readyToLoad){
+      console.log('verdomme wat snel!')
+    }
+
+    await this.waitFor(100);
+    
+    if (!readyToLoad){
+      console.log('wacht 1')
+      await this.waitFor(100);
+    } if (!readyToLoad){
+      console.log('wacht 2')
+      await this.waitFor(100);
+    } if (!readyToLoad){
+      console.log('wacht 3')
+      await this.waitFor(100);
+    } if (!readyToLoad){
+      console.log('wacht 4')
+      await this.waitFor(100);
+    } if (!readyToLoad){
+      console.log('wacht 5')
+      await this.waitFor(100);
+    }
 
     if (!thisEvent.longText) {
+      console.log('geen longtekst')
       return;
     }
 
@@ -128,30 +184,28 @@ class EventBlocks extends React.Component {
       hour: "2-digit",
       minute: "2-digit",
     });
-    const startDateHTML = <time className={`event-block__dates event-block__dates--start-date ${enlargedBEM}`} dateTime={musicEvent.startDateTime}>{startDateText}</time>;
+    const startDateHTML = `<time className="event-block__dates event-block__dates--start-date ${enlargedBEM}" dateTime="${musicEvent.startDateTime}">${startDateText}</time>`;
     if (!musicEvent.enlarged){
       return startDateHTML;
     }
 
     let openDoorDateHTML = '';
     if (musicEvent.doorOpenDateTime) {
-      const doorOpenDateTimeText = (new Date(musicEvent.doorOpenDateTime)).toLocaleDateString("nl", {
-        hour: "2-digit",
-        minute: "2-digit",
-      });      
-      openDoorDateHTML = <time className={`event-block__dates event-block__dates--door-date ${enlargedBEM}`} dateTime={musicEvent.doorOpenDateTime}>{doorOpenDateTimeText}</time>;
+      const deurTijd = musicEvent.doorOpenDateTime.match(/T(\d\d:\d\d)/)[1]
+      openDoorDateHTML = `<time className="event-block__dates event-block__dates--door-date ${enlargedBEM}" dateTime="${musicEvent.doorOpenDateTime}">deur: ${deurTijd}</time>`;
     }
 
     let endDateHTML = '';
     if (musicEvent.endDateTime) {
-      const endDateTimeText = (new Date(musicEvent.doorOpenDateTime)).toLocaleDateString("nl", {
-        hour: "2-digit",
-        minute: "2-digit",
-      });      
-      endDateHTML = <time className={`event-block__dates event-block__dates--end-date ${enlargedBEM}`} dateTime={musicEvent.endDateTime}>{endDateTimeText}</time>;
+      // const endDateTimeText = (new Date(musicEvent.doorOpenDateTime)).toLocaleDateString("nl", {
+      //   hour: "2-digit",
+      //   minute: "2-digit",
+      // });      
+      const eindTijd = musicEvent.endDateTime.match(/T(\d\d:\d\d)/)[1]
+      endDateHTML = `<time className="event-block__dates event-block__dates--end-date ${enlargedBEM}" dateTime="${musicEvent.endDateTime}">eind: ${eindTijd}</time>`;
     }
-
-    return startDateHTML + openDoorDateHTML + endDateHTML;
+    
+    return `${startDateHTML}${openDoorDateHTML}${endDateHTML}`;
     
   }
 
@@ -216,6 +270,7 @@ ${BEMify(`event-block`, [
       headerH2: `${BEMify(`contrast-with-dark event-block__title`, sharedModifiers)}`,
       headerEventTitle: `${BEMify(`event-block__title-showname cursive-font`, sharedModifiers)}`,
       headerLocation: `${BEMify(`event-block__title-location color-green green-color event-block__header-text cursive-font`, sharedModifiers)}`,
+      sluitEnlargedBtn: `${BEMify(`event-block__sluit-enlarged-btn`, sharedModifiers)}`,
       image: BEMify('event-block__image', sharedModifiers),
       dates: `${BEMify(`event-block__dates event-block__header-text contrast-with-dark`, sharedModifiers)}`,
       headerShortText: `${BEMify(`event-block__paragraph event-block__header-text contrast-with-dark`, ['short-text', ...sharedModifiers])} `,
@@ -223,6 +278,10 @@ ${BEMify(`event-block`, [
       mainContainerForEnlarged: BEMify(`void-container-for-enlarged`, sharedModifiers),
       footer: `${BEMify(`event-block__footer`, sharedModifiers)} `,
     }    
+  }
+
+  someEventIsEnlarged(musicEvents){
+    return musicEvents.find(musicEvent => musicEvent.enlarged);
   }
 
   //#endregion event-block HTML methods
@@ -289,15 +348,17 @@ ${BEMify(`event-block`, [
 
   render() {
     const musicEvents = this.musicEventFilters(this.state.musicEvents);
+    const enlargedClassAddition = this.someEventIsEnlarged(this.state.musicEvents) ? 'some-event-is-enlarged' : 'nothing-is-enlarged';
 
     return (
-      <div className={`event-block__wrapper`}>
+      <div className={`event-block__wrapper ` + enlargedClassAddition}>
 
         {musicEvents.map((musicEvent, musicEventKey) => {
           const sharedModifiers = [musicEvent.location, musicEvent.soldOut ? 'sold-out' : '', musicEvent.enlarged ? 'enlarged': ''];
           const selectors = this.getSelectors(musicEvent,sharedModifiers);
           const priceElement = this.priceElement(musicEvent);
           const datesHTML = this.createDates(musicEvent);
+          const numberOfDates = datesHTML.match(/<time/g).length;
           const imageHTML = this.createImageHTML(musicEvent,selectors);
           const articleID = `event-id-${musicEventKey}`;
           const firstOfMonthBlock = musicEvent.firstOfMonth ? (
@@ -321,8 +382,6 @@ ${BEMify(`event-block`, [
             musicEvent.title = musicEvent.title.substring(0,1).toUpperCase()+musicEvent.title.substring(1,500).toLowerCase()
           }
 
-
-
           if (musicEvent.title.length > 45){
             const splittingCandidates = ['+', '&', ':', '>', '•'];
             let i = 0;
@@ -340,13 +399,12 @@ ${BEMify(`event-block`, [
             musicEvent.title = musicEvent.title.replace(/\(.*\)/,'').replace(/\s{2,25}/,' ');
           }
 
-
           return (
             <article
               id={articleID}
               key={musicEventKey}
               data-date={musicEvent.eventMonth}
-              onClick={this.loadLongerText.bind(this, musicEventKey)}
+              onClick={!musicEvent.enlarged ? this.loadLongerText.bind(this, musicEventKey) : null}
               className={selectors.article}
             >
               {firstOfMonthBlock}
@@ -356,20 +414,18 @@ ${BEMify(`event-block`, [
                   <span className={selectors.headerEventTitle} data-short-text={shortestText}>
                     {musicEvent.title}
                   </span>
-                  <span className={selectors.headerLocation}>
+                  <span className={selectors.headerLocation + ' number-of-dates-'+numberOfDates}>
                     {this.createLocation(musicEvent)}
-                    {!musicEvent.enlarged ? datesHTML : ''}
+                    <span
+                      dangerouslySetInnerHTML={{
+                        __html: datesHTML,
+                      }}
+                    ></span>
                   </span>
                 </h2>
-                {()=>{
-                  return musicEvent.enlarged 
-                    ? <span className={selectors.dates}>
-                      {datesHTML}
-                    </span>
-                    : ''
-                }}
-                
-                
+                <button onClick={this.sluitEnlarged} className={selectors.sluitEnlargedBtn}>
+                  <img src='icons/close.png' width='40' height='40'alt='sluit uitgelicht scherm'/>
+                </button>
               </header>
               <section className={selectors.main}>
                 {shortTextHTML}
