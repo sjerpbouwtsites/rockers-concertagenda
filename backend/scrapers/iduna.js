@@ -327,7 +327,22 @@ idunaScraper.getPageInfo = async function ({ page, event }) {
       }      
 
       res.longTextHTML =
-        document.querySelector("#postcontenttext")?.innerHTML ?? '';
+        (document.querySelector("#postcontenttext")?.innerHTML ?? '')+
+        Array.from(document.querySelectorAll('.ytembed, .spotify'))
+          .map(embedEl => {
+            if (embedEl.classList.contains('ytembed')){
+              const aHref = embedEl.querySelector('a')?.href;
+              let ytID;
+              if (aHref.includes('https://youtu.be/')){
+                ytID = aHref.replace('https://youtu.be/','') ?? '';
+              } else {
+                ytID = aHref.replace('https://www.youtube.com/watch?v=','') ?? '';
+              }
+              return `<iframe width="380" data-zelfgebouwd height="214" src="https://www.youtube.com/embed/${ytID}" frameborder="0" allowfullscreen></iframe>`;
+            }
+            return embedEl.outerHTML;
+          })
+          .join('');
 
       res.priceTextcontent = 
         document.querySelector("#sideinfo")?.textContent.trim() ?? '';
@@ -336,6 +351,6 @@ idunaScraper.getPageInfo = async function ({ page, event }) {
     { months: this.months, event }
   );
 
-  return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
+  return await this.getPageInfoEnd({pageInfo, stopFunctie, page, event})
   
 };

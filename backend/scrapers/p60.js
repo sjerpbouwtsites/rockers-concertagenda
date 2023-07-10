@@ -177,11 +177,32 @@ p60Scraper.getPageInfo = async function ({ page, event }) {
       } 
       res.priceTextcontent = document.querySelector('.event-info__price')?.textContent ?? document.querySelector('.content-section__event-info')?.textContent ?? null;
       // res.ticketURL = document.querySelector('.content-section__event-info [href*="ticketmaster"]')?.href ?? null;
-      res.longTextHTML = Array.from(document.querySelectorAll('.kmtContent, .group-footer .media-section')).reduce((prev, next) => prev + next.innerHTML,'')
+      res.longTextHTML = Array.from(document.querySelectorAll('.kmtContent'))
+        .map(el => el.innerHTML)
+        .join('');
+      res.longTextHTML += document.querySelector('.group-footer .media-section iframe')?.outerHTML ?? '';
+      res.longTextHTML += document.querySelector('.group-footer .media-section iframe')?.outerHTML ?? '';
+
+      res.longTextHTML = Array.from(document.querySelectorAll('.media-section .slick-slide a'))
+        .map(anker => {
+          const aHref = anker.href;
+          let ytID;
+          if (aHref.includes('https://youtu.be/')){
+            ytID = aHref.replace('https://youtu.be/','') ?? '';
+          } else {
+            ytID = aHref.replace('https://www.youtube.com/watch?v=','') ?? '';
+          }
+          if (ytID.includes('&')){
+            ytID = ytID.split('&')[0]
+          }
+          return `<iframe width="380" data-zelfgebouwd height="214" src="https://www.youtube.com/embed/${ytID}" frameborder="0" allowfullscreen></iframe>`;          
+        })
+        .join('');
+      
       return res;
     }, null
   );
 
-  return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
+  return await this.getPageInfoEnd({pageInfo, stopFunctie, page, event})
   
 };

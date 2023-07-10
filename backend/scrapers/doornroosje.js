@@ -174,19 +174,19 @@ doornroosjeScraper.getPageInfo = async function ({ page, event }) {
       }
       res.priceTextcontent = 
         document.querySelector(".c-btn__price")?.textContent.trim() ?? '';
-      res.longTextHTML = 
-        document.querySelector(".s-event__container .s-event__content")?.innerHTML ?? '';
-      res.longTextHTML += Array.from(document.querySelectorAll('.c-embed')).map(a => a.innerHTML).join('')
+
 
 
       // genre verwijderen en naar shorttext
-      res.shortText = event.shortText
-      document.querySelectorAll('.c-event-row__title').forEach(title => {
+      res.shortText = (event?.shortText ? event.shortText : '') + 
+      document.querySelectorAll('.c-event-row__title').map(title => {
         if (title.textContent.includes('genre')){
           const row = title.parentNode.parentNode;
-          res.shortText += ' ' + row.querySelector('.c-event-row__content')?.textContent.toLowerCase() ?? '';
+          return row.querySelector('.c-event-row__content')?.textContent.toLowerCase().trim();
         }
       })
+        .filter(a=>a)
+        .join('')
 
       const startDateRauwMatch = document
         .querySelector(".c-event-data")
@@ -255,7 +255,9 @@ doornroosjeScraper.getPageInfo = async function ({ page, event }) {
         }
       }
     
-
+      res.longTextHTML = 
+        (document.querySelector(".s-event__container .row")?.innerHTML ?? '') +
+      Array.from(document.querySelectorAll('.c-embed')).map(a => a.innerHTML).join('')
 
       return res;
     }, {months: this.months, event});
@@ -313,6 +315,6 @@ doornroosjeScraper.getPageInfo = async function ({ page, event }) {
     }, {event});
   }
   
-  return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
+  return await this.getPageInfoEnd({pageInfo, stopFunctie, page, event})
 
 };

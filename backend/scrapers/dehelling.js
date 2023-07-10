@@ -161,6 +161,6 @@ dehellingScraper.getPageInfo = async function ({ page,event }) {
     {event}
   );
 
-  return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
+  return await this.getPageInfoEnd({pageInfo, stopFunctie, page, event})
   
 }

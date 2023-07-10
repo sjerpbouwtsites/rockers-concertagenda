@@ -13,6 +13,10 @@ body {
 .monitorfield__outer {
   flex-basis: 450px;
   flex-shrink: 0;
+  order:1;
+}
+.monitorfield__outer--app-overview {
+  order: 0;
 }
 .monitorfield__outer--errors {
   max-width: calc(100% - 450px);

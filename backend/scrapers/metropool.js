@@ -133,12 +133,9 @@ metropoolScraper.getPageInfo = async function ({ page, event}) {
     res.priceTextcontent = 
       document.querySelector(".doorPrice")?.textContent.trim() ?? '';
 
-    res.longTextHTML = 
-      Array.from(document.querySelectorAll(".event-title-wrap ~ div"))
-        .map((divEl) => {
-          return divEl.outerHTML;
-        })
-        .join("") ?? '';
+    res.shortText = event.shortText + ' ' + document.querySelector('.title-wrap-medium .text-support')?.textContent.trim()
+
+
 
     const startDateRauwMatch = document
       .querySelector(".event-title-wrap")
@@ -210,9 +207,26 @@ metropoolScraper.getPageInfo = async function ({ page, event}) {
       })
     }   
 
+    const rijNietMee = document.querySelector('.main .event .row .flex + div') ?? null;
+    if (rijNietMee){
+      rijNietMee.parentNode.removeChild(rijNietMee)
+    }
+
+    document.querySelectorAll('.main .event .hide-on-mobilelarge').forEach(mob =>{
+      mob.innerHTML = '';
+      mob.parentNode.removeChild(mob)
+    })
+
+    document.querySelectorAll('.main .event .button--rsvp').forEach(rsvp =>{
+      rsvp.innerHTML = '';
+      rsvp.parentNode.removeChild(rsvp)
+    })
+
+    res.longTextHTML = document.querySelector('.main .event .row').innerHTML
+
     return res;
   }, {months: this.months, event});
 
-  return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
+  return await this.getPageInfoEnd({pageInfo, stopFunctie, page, event})
   
 };

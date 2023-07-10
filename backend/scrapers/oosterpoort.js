@@ -193,6 +193,6 @@ oostpoortScraper.getPageInfo = async function ({ page, event }) {
       }
     }))
   });
-  return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
+  return await this.getPageInfoEnd({pageInfo, stopFunctie, page, event})
     
 }

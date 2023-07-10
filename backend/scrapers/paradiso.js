@@ -291,7 +291,7 @@ paradisoScraper.getPageInfo = async function ({ page, event }) {
     { months: editedMonths, buitenRes }
   );
 
-  return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
+  return await this.getPageInfoEnd({pageInfo, stopFunctie, page, event})
 
 };
 

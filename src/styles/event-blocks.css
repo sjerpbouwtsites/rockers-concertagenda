@@ -45,6 +45,15 @@
   cursor: pointer;
 }
 
+@media(max-width: 600px){
+  .event-block {
+    min-height: 170px;
+    padding: 1em;
+    width: 100%;
+    max-width: calc(100% - 2em);
+  }
+}
+
 
 .event-block--enlarged {
   width: 100vw;
@@ -55,6 +64,8 @@
   font-size: 1.5rem;
   overflow: hidden;
   flex-basis: 100%;
+  padding-top: 3em;
+  padding-bottom:3em;
 }
 
 @media (max-width: 600px) {
@@ -65,6 +76,8 @@
     max-width: 100%;
     font-size: 1rem;
     overflow: hidden;
+    padding-top: 3em;
+    padding-bottom:3em;    
   }
 }
 
@@ -76,12 +89,7 @@
 }
 
 @media (max-width: 600px) {
-  .event-block {
-    min-height: 170px;
-    padding: 1em;
-    width: 100%;
-    max-width: calc(100% - 2em);
-  }
+
   .event-block--first-of-month {
     border-left-width: 0;
     border-top: 70px solid #0f110e;
@@ -618,23 +626,6 @@ a.long-html__social-list-link:hover{
 /* #endregion ENLARGED TYPEOGRAPHY */
 
 /* #region ENLARGED SOCIALS */
-
-a[href*="bandcamp"] {
-  font-size: 0.01px;
-}
-
-a[href*="bandcamp"]::before {
-  font-size: 1rem;
-  display: inline-block;
-  content: "Bandcamp";
-  padding: 0.25em 0.5em;
-  background-color: #e4edd7;
-  font-weight: 600;
-  color: #161615;
-  margin-top: 0.25em;
-  margin-bottom: 0.25em;
-  border-radius: 2px;
-}
 
 /* #endregion ENLARGED SOCIALS */
 

@@ -1136,7 +1136,7 @@ export default class AbstractScraper {
    * @returns {*} pageInfo
    * @memberof AbstractScraper
    */  
-  async getPageInfoEnd({pageInfo, stopFunctie, page}){
+  async getPageInfoEnd({pageInfo, stopFunctie, page, event}){
 
     this.isForced && this.dirtyLog(pageInfo)
 
@@ -1169,12 +1169,18 @@ export default class AbstractScraper {
     
     pageInfo?.errors?.forEach((errorData) => {
       try {
-        this.dirtyDebug({...errorData, loc: 'page info errors foreach abs scraper 1169'})
-        errorData.workerData = workerData;
+        if (!errorData?.workerData){
+          errorData.workerData = workerData;
+        }
+        if (!errorData?.remarks){
+          errorData.remarks = 'geen remarks';
+        }        
         if (!errorData.error?.message){
-          let errorTekst = errorData?.remarks ?? 'geen remarks'
-          errorData.error = new Error(!errorTekst ? 'geen tekst' : errorTekst);
-          errorData.remarks = `mislukte error van:\n\n${errorData.remarks}`;
+          const initRemarks = errorData?.remarks ?? '';
+          errorData.error = new Error(!errorData?.remarks);
+          const url = event.venueEventUrl ?? pageInfo.venueEventUrl;
+          const title = event?.title ?? pageInfo.title;
+          errorData.remarks = `Mislukte error van:\n\n${initRemarks}\n<a href='${url}'>${title}</a>`;
         }
         const wrappedError = new ErrorWrapper(errorData);
         _t.wrappedHandleError(wrappedError);        

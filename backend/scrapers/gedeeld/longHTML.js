@@ -4,16 +4,17 @@ export default function verwerkLongHTML(HTMLstring){
 
   const htmlKopie2 = verwijderFouteTagsEnAttributes(htmlKopie);
 
-  const [htmlZonderSoc, socLinks] = filterSocialeMedia(htmlKopie2);
+  const [htmlZonderSoc] = filterSocialeMedia(htmlKopie2);
   const [htmlZonderIframes, iframeArr] = filterVideosMuziek(htmlZonderSoc);
   
-  const socHTML = socLinks.length
-    ? `<nav class="long-html__social">
-    <ul class='long-html__social-list'>
-      ${socLinks.map((fbLink) => `<li class='long-html__social-list-item'>${fbLink}</li>`).join(`\n`)}
-    </ul>
-  </nav>`
-    :''
+  const socHTML = `<!--socials moeten toch apart-->`;
+  // const socHTML = socLinks.length
+  //   ? `<nav class="long-html__social">
+  //   <ul class='long-html__social-list'>
+  //     ${socLinks.map((fbLink) => `<li class='long-html__social-list-item'>${fbLink}</li>`).join(`\n`)}
+  //   </ul>
+  // </nav>`
+  //   :''
 
   const muziekVideosHTML = iframeArr.length 
     ? `
@@ -57,8 +58,14 @@ function filterSocialeMedia(htmlString){
     .map(socLinkEl => {
       const hrefMatch = socLinkEl.match(/\/\/.[^"]*/);
       if (!Array.isArray(hrefMatch)) return;
-      const textContent = socLinkEl.replace(/(<([^>]+)>)/gi, '');
+      let textContent = socLinkEl.replace(/(<([^>]+)>)/gi, '');
       const href = hrefMatch[0];
+      if (textContent.includes("bandcamp.com")){
+        textContent = textContent.replace('.bandcamp.com','').replace('https://','').replace('www.','')
+        textContent = "Bandcamp " + textContent;
+      } else if (href.includes('bandcamp') && !textContent.toLowerCase().includes('bandcamp')){
+        textContent = `Bandcamp ${textContent}`;
+      }
       return `<a class='long-html__social-list-link' href='${href}'>${textContent}</a>`;
     });
 
