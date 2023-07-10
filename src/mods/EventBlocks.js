@@ -1,6 +1,6 @@
 import React from "react";
 import { BEMify, filterEventsDateInPast } from "./util.js";
-
+import closeIcon from '../images/close.png';
 
 class EventBlocks extends React.Component {
 
@@ -424,7 +424,7 @@ ${BEMify(`event-block`, [
                   </span>
                 </h2>
                 <button onClick={this.sluitEnlarged} className={selectors.sluitEnlargedBtn}>
-                  <img src='icons/close.png' width='40' height='40'alt='sluit uitgelicht scherm'/>
+                  <img src={closeIcon} width='40' height='40'alt='sluit uitgelicht scherm'/>
                 </button>
               </header>
               <section className={selectors.main}>
