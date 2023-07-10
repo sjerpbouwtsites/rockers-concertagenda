@@ -5,7 +5,11 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prettier": "prettier -w --loglevel=silent ~/dev/apache/concertagenda/public/texts",
+    "start": "cd ~/dev/apache/concertagenda/; npm run start",
+    "build": "cd ~/dev/apache/concertagenda/; npm run build",
+    "backend": "killall -s 9 chrome; cd ~/dev/apache/concertagenda/backend; clear; node index.js force=all; npm run prettier; clear; echo 'backend gedaan';"
   },
   "author": "",
   "license": "ISC",

@@ -211,6 +211,10 @@ gebrdenobelScraper.getPageInfo = async function ({ page, event }) {
       }
       res.shortText = 
         document.querySelector(".hero-cta_left__text p")?.textContent ?? '';
+      if (document.querySelector('#shop-frame')){
+        document.querySelector('#shop-frame').innerHTML = '';
+        document.querySelector('#shop-frame').parentNode.removeChild(document.querySelector('#shop-frame'))
+      }
       res.longTextHTML = 
         document.querySelector(".content .contentBlocks")?.innerHTML ?? '';
       res.image = document.querySelector(".hero img")?.src ?? null;
@@ -225,6 +229,6 @@ gebrdenobelScraper.getPageInfo = async function ({ page, event }) {
     { months: this.months, event}
   );
 
-  return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
+  return await this.getPageInfoEnd({pageInfo, stopFunctie, page, event})
   
 };

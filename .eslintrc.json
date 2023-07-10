@@ -22,7 +22,7 @@
     "no-mixed-operators": "off",
     "strict": 0,
     "indent": [2, 2],
-
+    "no-useless-escape":"off",
     "no-multi-spaces": [1, {
       "exceptions": {
         "VariableDeclarator": true,

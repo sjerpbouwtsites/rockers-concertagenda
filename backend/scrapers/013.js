@@ -171,10 +171,19 @@ nuldertienScraper.getPageInfo = async function ({ page , event}) {
       document.querySelector(
         ".event-detail header + div"
       )?.innerHTML ?? '';
+
+    res.longTextHTML += Array.from(document.querySelectorAll('.slick-slide:not(.slick-cloned) img'))
+      .map(image => {
+        if (!image.src) return null
+        const src = image.src.replace('img.youtube', 'youtube').replace('/vi/', '/embed/').replace('maxresdefault.jpg', '')
+        return `<iframe src='${src}'/>`
+      })
+      .filter(a=>a)
+      .join('')
     
     return res;
   }, {event});
 
-  return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
+  return await this.getPageInfoEnd({pageInfo, stopFunctie, page, event})
 
 };

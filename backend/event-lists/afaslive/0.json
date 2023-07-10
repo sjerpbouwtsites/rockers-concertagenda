@@ -1,31 +1,29 @@
 [
   {
     "doorOpenDateTime": null,
-    "startDateTime": "2023-06-20T16:30:00.000Z",
-    "endDateTime": null,
-    "venueEventUrl": "https://www.afaslive.nl/agenda/pantera",
-    "title": "Pantera",
-    "location": "afaslive",
-    "price": 84,
-    "shortText": null,
-    "longText": "../public/texts/f1422bb9-f6ab-438b-808a-ce127e2d8c50.html",
-    "image": "https://www.afaslive.nl/files/Agenda/2023/06-Juni/_agendaitem/Pantera.jpg",
-    "soldOut": true,
-    "unavailable": null,
-    "corrupted": null
-  },
-  {
-    "doorOpenDateTime": null,
     "startDateTime": "2023-10-06T18:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://www.afaslive.nl/agenda/inhaler",
     "title": "Inhaler",
     "location": "afaslive",
     "price": 33.6,
-    "shortText": null,
-    "longText": "../public/texts/4d9a3df1-c83a-4c81-9762-463706f6f189.html",
+    "longText": "../public/texts/01410ee0-c406-4d07-8cf9-745c9bd8b100.html",
     "image": "https://www.afaslive.nl/files/Agenda/2023/10-Oktober/_agendaitem/Inhaler.jpg",
     "soldOut": true,
+    "unavailable": null,
+    "corrupted": null
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-10-24T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.afaslive.nl/agenda/fall-out-boy",
+    "title": "Fall Out Boy",
+    "location": "afaslive",
+    "price": 57.12,
+    "longText": "../public/texts/5211cbc1-d150-4535-9c14-4feeb2b08f23.html",
+    "image": "https://www.afaslive.nl/files/Agenda/2023/10-Oktober/_agendaitem/Fall-Out-Boy.jpg",
+    "soldOut": false,
     "unavailable": null,
     "corrupted": null
   }

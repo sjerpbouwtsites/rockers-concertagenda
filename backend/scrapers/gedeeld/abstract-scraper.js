@@ -9,6 +9,7 @@ import EventsList from "../../mods/events-list.js";
 import MusicEvent from "../../mods/music-event.js";
 import getVenueMonths from "../../mods/months.js";
 import ErrorWrapper from "../../mods/error-wrapper.js";
+import verwerkLongHTML from "./longHTML.js";
 
 
 /**
@@ -37,6 +38,7 @@ export default class AbstractScraper {
    */
   static forbiddenTerms = [
     'clubnacht',
+    'VERBODENGENRE',
     "alternatieve rock",
     "americana",
     "americana",
@@ -53,6 +55,7 @@ export default class AbstractScraper {
     `blaasrock`,
     `dream pop`,
     `Dream Punk`,
+    'uptempo',
     `experi-metal`,
     `folkpunk`,
     `jazz-core`,
@@ -646,8 +649,9 @@ export default class AbstractScraper {
     const keysToCheck2 = Array.isArray(keysToCheck) ? keysToCheck : ['title', 'shortText'];
     let combinedTextToCheck = '';
     for (let i = 0; i < keysToCheck2.length; i++){
-      combinedTextToCheck += event[keysToCheck2[i]].toLowerCase() + ' ';
+      combinedTextToCheck += event[keysToCheck2[i]] + ' ';
     }
+    combinedTextToCheck = combinedTextToCheck.toLowerCase();
     const hasForbiddenTerm = AbstractScraper.forbiddenTerms.find(forbiddenTerm=> combinedTextToCheck.includes(forbiddenTerm))
     if (hasForbiddenTerm) {
       return {
@@ -1002,6 +1006,9 @@ export default class AbstractScraper {
     // samenvoegen & naar EventsList sturen
     singleEvent.merge(pageInfo);
 
+    //titel / shortext postfix
+    singleEvent = this.titelShorttextPostfix(singleEvent);
+
     // check op properties vanuit single page
     singleEvent = this.isMusicEventCorruptedMapper(singleEvent);
 
@@ -1056,24 +1063,40 @@ export default class AbstractScraper {
       : useableEventsList;
   }
 
+  titelShorttextPostfix(musicEvent){
+    const titleIsCapsArr = musicEvent.title
+      .split('')
+      .map(char => char === char.toUpperCase());
+    const noOfCapsInTitle = titleIsCapsArr.filter(a => a).length;
+    const toManyCapsInTitle = ((musicEvent.title.length - noOfCapsInTitle) / musicEvent.title.length) < .5;
+    if (toManyCapsInTitle){
+      musicEvent.title = musicEvent.title.substring(0,1).toUpperCase()+musicEvent.title.substring(1,500).toLowerCase()
+    }
+
+    if (musicEvent.title.length > 45){
+      const splittingCandidates = ['+', '&', ':', '>', '•'];
+      let i = 0;
+      do {
+        const splitted = musicEvent.title.split(splittingCandidates[i]);
+        musicEvent.title = splitted[0];
+        const titleRest = splitted.splice(1, 45).join(' ');
+        musicEvent.shortText = titleRest + ' ' + musicEvent.shortText;              
+        i = i + 1;
+      } while (musicEvent.title.length > 45 && i < splittingCandidates.length);
+    }
+
+    // if (musicEvent.title.length > 45){
+    //   musicEvent.title = musicEvent.title.replace(/\(.*\)/,'').replace(/\s{2,25}/,' ');
+    // }    
+
+    musicEvent.shortText = musicEvent?.shortText?.replace(/<\/?\w+>/g, "");
+
+    return musicEvent
+  }
+
   getPrice(priceTextcontent) {
     if (!priceTextcontent) return;
     return this.getPriceFromHTML(priceTextcontent);
-  }
-
-  writeLongTextHTML(longTextHTML) {
-    let uuid = crypto.randomUUID();
-    try {
-      if (!longTextHTML) return null;
-      const longTextPath = `${fsDirections.publicTexts}/${uuid}.html`;
-      fs.writeFileSync(longTextPath, longTextHTML, "utf-8");
-      return longTextPath;
-    } catch (err) {
-      _t.handleError(err, workerData, `write long text fail`, 'notice', {
-        path: `${fsDirections.publicTexts}/${uuid}.html`,
-        text: longTextHTML
-      });
-    }
   }
 
   // step 3.5
@@ -1113,7 +1136,7 @@ export default class AbstractScraper {
    * @returns {*} pageInfo
    * @memberof AbstractScraper
    */  
-  async getPageInfoEnd({pageInfo, stopFunctie, page}){
+  async getPageInfoEnd({pageInfo, stopFunctie, page, event}){
 
     this.isForced && this.dirtyLog(pageInfo)
 
@@ -1146,28 +1169,37 @@ export default class AbstractScraper {
     
     pageInfo?.errors?.forEach((errorData) => {
       try {
-        errorData.workerData = workerData;
-        if (!errorData?.error){
-          let errorTekst = errorData?.remarks ?? 'geen remarks'
-          errorData.error = new Error(!errorTekst ? 'geen tekst' : errorTekst);
+        if (!errorData?.workerData){
+          errorData.workerData = workerData;
+        }
+        if (!errorData?.remarks){
+          errorData.remarks = 'geen remarks';
+        }        
+        if (!errorData.error?.message){
+          const initRemarks = errorData?.remarks ?? '';
+          errorData.error = new Error(!errorData?.remarks);
+          const url = event.venueEventUrl ?? pageInfo.venueEventUrl;
+          const title = event?.title ?? pageInfo.title;
+          errorData.remarks = `Mislukte error van:\n\n${initRemarks}\n<a href='${url}'>${title}</a>`;
         }
         const wrappedError = new ErrorWrapper(errorData);
         _t.wrappedHandleError(wrappedError);        
       } catch (errorOfErrors) {
-        this.dirtyDebug(pageInfo?.errors)
-        const wrappedError = new ErrorWrapper((errorOfErrors || 'complete faal'));
-        _t.wrappedHandleError(wrappedError);        
-        this.dirtyDebug({
-          title: `erroring gaat verkeerd ${workerData.family}`,
-          toDebug: pageInfo
-        })
+        const cp = {...pageInfo};
+        delete cp.longTextHTML;
+        _t.handleError(
+          errorOfErrors, 
+          workerData,
+          'mislukte error',
+          'close-thread',
+          cp
+        )
+         
+        
       }
 
     });
   
-    if (pageInfo?.longTextHTML) {
-      pageInfo.longTextHTML = _t.killWhitespaceExcess(pageInfo.longTextHTML)
-    }
     if (pageInfo?.priceTextcontent) {
       pageInfo.priceTextcontent = _t.killWhitespaceExcess(pageInfo.priceTextcontent)
     }
@@ -1230,25 +1262,32 @@ export default class AbstractScraper {
       pageInfoCopy.price = Number(this.getPriceFromHTML(pageInfo.priceTextcontent, context));
     }
   
-    pageInfoCopy.longText = this.saveLongTextHTML(pageInfo);
+    pageInfoCopy.longText = this.writeLongTextHTML(pageInfo.longTextHTML);
     return pageInfoCopy;
   }  
 
-  saveLongTextHTML(pageInfo) {
-    if (
-      !Object.prototype.hasOwnProperty.call(pageInfo, "longTextHTML") ||
-      !pageInfo.longTextHTML
-    ) {
-      return null;
-    }
+  writeLongTextHTML(longTextHTML) {
+    if (!longTextHTML) return null;
     let uuid = crypto.randomUUID();
-    const longTextPath = `${fsDirections.publicTexts}/${uuid}.html`;
-  
-    fs.writeFile(longTextPath, pageInfo.longTextHTML, "utf-8", () => {});
-    return longTextPath;
-  }  
-
-
+    const gezuiverdeHTML = verwerkLongHTML(longTextHTML);
+    try {
+      const longTextPath = `${fsDirections.publicTexts}/${uuid}.html`;
+      this.dirtyLog({
+        
+        zuiver: `<code>${gezuiverdeHTML}</code>`,
+        ruw: `<code>${longTextHTML}</code>`,
+        
+      }, 'html')
+      fs.writeFileSync(longTextPath, gezuiverdeHTML, "utf-8");
+      return longTextPath;
+    } catch (err) {
+      _t.handleError(err, workerData, `write long text fail`, 'notice', {
+        path: `${fsDirections.publicTexts}/${uuid}.html`,
+        text: gezuiverdeHTML
+      });
+    }
+    return '';
+  }
 
   // step 4
   async announceToMonitorDone() {
@@ -1284,7 +1323,17 @@ export default class AbstractScraper {
   async createSinglePage(url) {
     try {
       const page = await this.browser.newPage();
-      await page.goto(url, this.puppeteerConfig.singlePage);
+      try {
+        await page.goto(url, this.puppeteerConfig.singlePage);
+      } catch (error) {
+        _t.handleError(
+          error,
+          workerData,
+          `Mislukken aanmaken <a class='single-page-failure error-link' href='${url}'>single pagina</a>`,
+          'notice',
+          url
+        );        
+      }
       
       // zet ErrorWrapper class in puppeteer document.
       await page.evaluate(({ErrorWrapperString}) => {

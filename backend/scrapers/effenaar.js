@@ -176,10 +176,14 @@ effenaarScraper.getPageInfo = async function ({ page, event }) {
       });
     }
 
+    document.querySelectorAll('.share-bar').forEach(bar => {bar.innerHTML=''})
+    document.querySelectorAll('.cta').forEach(cta => cta.innerHTML='')
+
+
     res.longTextHTML = document.querySelector(".header ~ .blocks")?.innerHTML ?? '';
     return res;
   },{ months: this.months,event});
 
-  return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
+  return await this.getPageInfoEnd({pageInfo, stopFunctie, page, event})
   
 };

@@ -41,7 +41,7 @@ export function handleError(error, workerData, remarks = null, errorLevel = 'not
       remarks: remarks,
       status: "error",
       errorLevel,
-      text: `${error.message}\n${error.stack}\nlevel:${errorLevel}`,
+      text: `${error?.message}\n${error?.stack}\nlevel:${errorLevel}`,
     },
   });
   const clientsLogMsg = WorkerMessage.quick("clients-log", "error", {

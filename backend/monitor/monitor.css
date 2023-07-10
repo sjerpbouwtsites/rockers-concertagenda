@@ -9,14 +9,17 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  transform: scale(0.8) translate(-12.5%, -12.5%);
 }
 .monitorfield__outer {
-  flex-basis: 450px;
+  flex-basis: 430px;
   flex-shrink: 0;
 }
+.monitorfield__outer--app-overview {
+}
 .monitorfield__outer--errors {
-  max-width: calc(100% - 450px);
-    flex-basis: 750px;
+  max-width: calc(100% - 370px);
+    flex-basis: 620px;
 }
 .monitorfield {
   background-color: #eee;

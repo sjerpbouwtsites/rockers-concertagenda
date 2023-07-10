@@ -1,0 +1,17 @@
+.app {
+  /* display: flex; */
+  position: relative;
+  background-color: var(--anthracite);
+}
+.app-view {
+  width: 100vw;
+}
+
+.hidden {
+  display: none !important;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

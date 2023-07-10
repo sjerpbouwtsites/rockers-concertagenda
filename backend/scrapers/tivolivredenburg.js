@@ -142,8 +142,6 @@ tivoliVredenburgScraper.getPageInfo = async function ({ page, event }) {
       document.querySelector(".btn-group__price")?.textContent.trim() ?? '';
     res.priceContexttext =
       document.querySelector(".event-cta")?.textContent.trim() ?? '';
-    res.longTextHTML = 
-      document.querySelector(".event__text")?.innerHTML ?? '';
 
     const startDateMatch = location.href.match(/\d\d-\d\d-\d\d\d\d/); //
     res.startDate = "";
@@ -224,9 +222,28 @@ tivoliVredenburgScraper.getPageInfo = async function ({ page, event }) {
       }
     }
 
+    const iframes = Array.from(document.querySelectorAll('[data-embed]'))
+      .map(btns =>{
+        const YtIDMatch = btns.getAttribute('data-embed').match(/embed%2(.[^%]*)/);
+        if (Array.isArray(YtIDMatch)) {
+          //          return`<iframe width="560" height="315" src="https://www.youtube.com/embed/${YtIDMatch[1]}" allowfullscreen></iframe>`;
+        }
+        //return `<p>Nee balen ${btns.getAttribute('data-embed')}</p>`;
+      })
+      .filter(a=>a)
+      .join('')
+
+    document.querySelectorAll('.js-cookie-btn').forEach(btn =>{
+      btn.innerHTML = '';
+      btn.parentNode.removeChild(btn)
+    })
+    res.iframes = iframes;
+    res.longTextHTML = 
+      (document.querySelector(".event__text")?.innerHTML ?? '') +
+      iframes;
     return res;
   }, {event});
 
-  return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
+  return await this.getPageInfoEnd({pageInfo, stopFunctie, page, event})
 
 };

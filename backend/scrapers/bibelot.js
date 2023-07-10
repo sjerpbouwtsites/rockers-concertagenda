@@ -187,9 +187,10 @@ bibelotScraper.getPageInfo = async function ({ page, event }) {
         res.priceTextcontent = verkoopElAr[0].textContent;
       }
 
-      res.longTextHTML = document
-        .querySelector(".main-column .content")
-        ?.innerHTML ?? ''
+      res.longTextHTML = Array
+        .from(document.querySelectorAll(".main-column > * ~ .content"))
+        .map(a=>a.innerHTML)
+        .join('') ?? ''
       ;
       const imageMatch = document
         .querySelector(".achtergrond-afbeelding")
@@ -214,6 +215,6 @@ bibelotScraper.getPageInfo = async function ({ page, event }) {
     { months: this.months, event }
   );
 
-  return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
+  return await this.getPageInfoEnd({pageInfo, stopFunctie, page, event})
   
 }

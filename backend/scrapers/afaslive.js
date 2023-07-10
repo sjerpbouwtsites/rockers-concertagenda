@@ -244,8 +244,19 @@ afasliveScraper.getPageInfo = async function ({ page, event }) {
 
       res.soldOut = !!(document.querySelector('#tickets .soldout') ?? null)
 
+      document.querySelectorAll("article .wysiwyg p").forEach(paragraph =>{
+        const anker = paragraph.querySelector('a') ?? null;
+        if (!anker) return
+        if (anker.href.includes('eten-drinken') || anker.href.includes('Tassenbeleid')){
+          paragraph.innerHTML = '';
+        }
+      })
+
       res.longTextHTML = 
         document.querySelector("article .wysiwyg")?.innerHTML ?? '';
+
+      res.longTextHTML += 
+      Array.from(document.querySelector("article .wysiwyg").parentNode.parentNode.querySelectorAll('.video, .spotify')).map(el => el.outerHTML).join('')
 
       res.priceTextcontent = 
         document.querySelector("#tickets")?.textContent.trim() ?? '';
@@ -254,5 +265,5 @@ afasliveScraper.getPageInfo = async function ({ page, event }) {
     { months: this.months,event }
   );
 
-  return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
+  return await this.getPageInfoEnd({pageInfo, stopFunctie, page, event})
 };

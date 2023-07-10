@@ -54,7 +54,7 @@ export default class ErrorWrapper {
     if (value instanceof Error){
       return true;
     } 
-    throw new Error(`typeerror error. Type ${typeof value}  ${JSON.stringify(value)}`)
+    throw new Error(`typeerror error\nType ${typeof value}\nerror value ${JSON.stringify(value)}`)
   }
   setError(error){
     if (ErrorWrapper.errorValid(error)){

@@ -225,8 +225,11 @@ dynamoScraper.getPageInfo = async function ({ page, event}) {
       res.priceTextcontent = agendaDatesEls[1].textContent;
       
       res.longTextHTML = 
-        document.querySelector("section.article .article-block")?.innerHTML ??
-        "";
+        (document.querySelector("section.article .article-block")?.innerHTML ??
+        "")+Array.from(
+          document.querySelectorAll('#spike-pattern iframe'))
+          .map(frame => frame.outerHTML)
+          .join('');
 
       res.image =
         document
@@ -246,6 +249,6 @@ dynamoScraper.getPageInfo = async function ({ page, event}) {
     { months: this.months, event }
   );
 
-  return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
+  return await this.getPageInfoEnd({pageInfo, stopFunctie, page, event})
   
 };

@@ -207,10 +207,12 @@ occiiScraper.getPageInfo = async function ({ page, event}) {
 
     res.genre = Array.from(document.querySelectorAll('.event-categories [href*="events/categories"]')).map(cats => cats.textContent.toLowerCase().trim())
 
+    document.querySelector(".occii-event-notes h1")?.parentNode.removeChild(document.querySelector(".occii-event-notes h1"))
+    
     res.longTextHTML = document.querySelector(".occii-event-notes").innerHTML;
     return res;
   }, {months: getVenueMonths('occii'), event}); //TODO is verouderde functie getVenueMonths
 
-  return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
+  return await this.getPageInfoEnd({pageInfo, stopFunctie, page, event})
   
 };

@@ -135,7 +135,7 @@ cpuntScraper.getPageInfo = async function ({ page, event }) {
   }).catch(caughtError =>{
     _t.handleError(caughtError, workerData, `Timeout wachten op #main .content-blocks ${event.title}`, 'close-thread', event);
   })){
-    return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
+    return await this.getPageInfoEnd({pageInfo, stopFunctie, page, event})
   }
 
   const pageInfo = await page.evaluate(({months, event}) => {
@@ -159,7 +159,9 @@ cpuntScraper.getPageInfo = async function ({ page, event }) {
     const day = shortDay.padStart(2, '0');
     const month = months[monthName.toLowerCase()];
     const startDate = `${year}-${month}-${day}`;
-    res.longTextHTML = textSection.querySelector('.text')?.innerHTML ?? document.querySelector('.contentblock-TextOneColumn')?.innerHTML ?? null;
+
+    res.longTextHTML = (document.querySelector('.contentblock-TextOneColumn')?.innerHTML ?? '') + 
+    (document.querySelector('.contentblock-Video')?.innerHTML ?? '');
 
     let deurTijd, startTijd
     const tijdMatches = document.querySelector('.article-bottom .article-times')?.innerHTML.match(/(\d\d[:.]\d\d)/).map(strings => strings.replace('.', ':')) ?? null;
@@ -219,7 +221,7 @@ cpuntScraper.getPageInfo = async function ({ page, event }) {
     return res;
   }, {months: this.months, event});
 
-  return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
+  return await this.getPageInfoEnd({pageInfo, stopFunctie, page, event})
   
 };
 

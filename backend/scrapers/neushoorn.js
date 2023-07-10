@@ -151,7 +151,7 @@ neushoornScraper.getPageInfo = async function ({ page,event }) {
       const dateTextMatch = dateTextcontent.match(/\w+\s?(\d+)\s?(\w+)/);
 
       if (dateTextMatch && dateTextMatch.length === 3) {
-        const year = "2022";
+        const year = "2023";
         const month = months[dateTextMatch[2]];
         const day = dateTextMatch[1].padStart(2, "0");
         res.startDate = `${year}-${month}-${day}`;
@@ -204,6 +204,10 @@ neushoornScraper.getPageInfo = async function ({ page,event }) {
         });
       }
 
+      res.longTextHTML += Array.from(document.querySelectorAll('.tophits iframe'))
+        .map(frame => frame.outerHTML)
+        .join('')
+
       const imageMatch = document
         .querySelector(".header--theatre")
         ?.style.backgroundImage.match(/https.*.png|https.*.jpg/);
@@ -221,6 +225,6 @@ neushoornScraper.getPageInfo = async function ({ page,event }) {
     { months: neushoornMonths, event }
   );
 
-  return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
+  return await this.getPageInfoEnd({pageInfo, stopFunctie, page, event})
   
 };

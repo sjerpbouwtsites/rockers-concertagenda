@@ -1,5 +1,4 @@
 import React from "react";
-import "../header-menu.css";
 
 class HeaderMenu extends React.Component {
   constructor(props) {

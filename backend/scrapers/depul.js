@@ -284,7 +284,7 @@ depulScraper.getPageInfo = async function ({ page, event }) {
     { months: this.months , event}
   );
 
-  return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
+  return await this.getPageInfoEnd({pageInfo, stopFunctie, page, event})
 
 };
 
