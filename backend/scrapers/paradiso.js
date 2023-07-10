@@ -206,10 +206,7 @@ paradisoScraper.getPageInfo = async function ({ page, event }) {
       if (!contentBox1 && !contentBox2) {
         res.corrupted = 'geen contentboxes';
       }
-      if (contentBox1 || contentBox2) {
-        res.longTextHTML = contentBox1 + contentBox2
-      }
-
+      
       try {
         const startDateMatch = document.querySelector('.css-tkkldl')
           ?.textContent.toLowerCase()
@@ -228,7 +225,7 @@ paradisoScraper.getPageInfo = async function ({ page, event }) {
               toDebug: startDateMatch
             })
           }
-          res.startDate = `2022-${
+          res.startDate = `2023-${
             monthName
           }-${startDateMatch[1].padStart(2, "0")}`;
         }
@@ -240,7 +237,7 @@ paradisoScraper.getPageInfo = async function ({ page, event }) {
             event
           }});
       }
-
+        
       const timesMatch =
         document.querySelector('.css-1mxblse')
           ?.textContent.match(/(\d\d:\d\d)/g) ?? null;
@@ -285,12 +282,20 @@ paradisoScraper.getPageInfo = async function ({ page, event }) {
           remarks: `image missing ${res.pageInfo}`
         })
       }
+      
+      // route weghalen
+      if (document.querySelector('.css-gwbug6')){
+        document.querySelector('.css-gwbug6').innerHTML = '';
+        document.querySelector('.css-gwbug6').parentNode.removeChild(document.querySelector('.css-gwbug6'))
+      }
 
+      res.longTextHTML = Array.from(document.querySelectorAll('.css-1motkkb'))
+      
       return res;
     },
     { months: editedMonths, buitenRes }
   );
-
+  
   return await this.getPageInfoEnd({pageInfo, stopFunctie, page, event})
 
 };

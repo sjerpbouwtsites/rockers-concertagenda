@@ -82,7 +82,10 @@ function filterVideosMuziek(htmlString){
   iframeArr.forEach(link => {
     htmlKopie = htmlKopie.replace(link,'');
   })
-  iframeArr = iframeArr.map(ifm => `<div class='iframe-wrapper-16-9'>${ifm}</div>`)
+  iframeArr = iframeArr.map(ifm => {
+    const className = ifm.includes('youtu') ? '16-9' : '152px';
+    `<div class='iframe-wrapper-${className}'>${ifm}</div>`
+  })
 
   if (iframeArr.length === 0){
     iframeArr = HTMLnaarYoutubeIframes(htmlString);

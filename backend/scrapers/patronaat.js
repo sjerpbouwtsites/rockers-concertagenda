@@ -204,7 +204,13 @@ patronaatScraper.getPageInfo = async function ({ page, event }) {
       });
     }
 
-    res.longTextHTML = document.querySelector(".event__content")?.innerHTML ?? null;
+    (document.querySelector(".event__content")?.innerHTML ?? '') +
+    Array.from(document.querySelectorAll('.event__embeds iframe'))
+      .map(frame => frame.outerHTML)
+      .join('') +
+Array.from(document.querySelectorAll('.slick-slide:not(.slick-cloned) iframe'))
+  .map(frame => frame.outerHTML)
+  .join('');
 
     return res;
   }, {months: this.months, event}).catch(caughtError =>{

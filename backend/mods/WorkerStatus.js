@@ -243,7 +243,7 @@ export default class WorkerStatus {
     EventsList.printAllToJSON();
     setTimeout(() => {
       process.exit();
-    }, 3000);
+    }, 500);
   }
 
 

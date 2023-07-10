@@ -142,7 +142,10 @@ voltScraper.getPageInfo = async function ({ page, url, event}) {
       res.pageInfo= `<a class='page-info' class='page-info' href='${url}'>${event.title}</a>`;
       res.errors = [];
 
-      res.longTextHTML = document.querySelector(".activity-content-wrapper div:first-child")?.innerHTML ?? null
+      res.longTextHTML = (document.querySelector(".activity-content-wrapper div:first-child")?.innerHTML ?? '') + 
+      Array.from(document.querySelectorAll('.node__paragraphs'))
+        .map(a => a.innerHTML)
+        .join('')
 
       const startDateMatch = document.querySelector('.field--name-field-date')?.textContent.match(/(\d+)\s?(\w+)\s?(\d\d\d\d)/);
       if (Array.isArray(startDateMatch) && startDateMatch.length > 2) {

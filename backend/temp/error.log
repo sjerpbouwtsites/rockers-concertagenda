@@ -1,4 +1,333 @@
 
+  gebrdenobel-0 Error - 9:48:36 AM
+  Error: false
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1180:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1170:23)
+    at gebrdenobelScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gebrdenobel.js:232:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:991:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:228:5) 
+  false
+  
+  
+  gebrdenobel-0 Error - 9:48:36 AM
+  ProtocolError: Protocol error (Page.navigate): Cannot navigate to invalid URL
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Connection.js:230:24
+    at new Promise (<anonymous>)
+    at CDPSession.send (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Connection.js:226:16)
+    at navigate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:149:47)
+    at FrameManager.navigateFrame (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:132:13)
+    at Frame.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:512:41)
+    at Page.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1167:53)
+    at AbstractScraper.createSinglePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1327:20)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:966:25) 
+  Protocol error (Page.navigate): Cannot navigate to invalid URL
+  
+  
+  gebrdenobel-0 Error - 8:47:41 AM
+  Error: false
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1180:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1170:23)
+    at gebrdenobelScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gebrdenobel.js:232:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:991:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:228:5) 
+  false
+  
+  
+  gebrdenobel-0 Error - 8:47:40 AM
+  ProtocolError: Protocol error (Page.navigate): Cannot navigate to invalid URL
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Connection.js:230:24
+    at new Promise (<anonymous>)
+    at CDPSession.send (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Connection.js:226:16)
+    at navigate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:149:47)
+    at FrameManager.navigateFrame (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:132:13)
+    at Frame.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:512:41)
+    at Page.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1167:53)
+    at AbstractScraper.createSinglePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1327:20)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:966:25) 
+  Protocol error (Page.navigate): Cannot navigate to invalid URL
+  
+  
+  paradiso-0 Error - 8:46:23 AM
+  Error: Evaluation failed: DOMException: Failed to execute 'querySelectorAll' on 'Document': '.css-1motkkb, ' is not a valid selector.
+    at __puppeteer_evaluation_script__:94:46
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async paradisoScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/paradiso.js:198:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:991:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:228:5) 
+  Evaluation failed: DOMException: Failed to execute 'querySelectorAll' on 'Document': '.css-1motkkb, ' is not a valid selector.
+    at __puppeteer_evaluation_script__:94:46
+  
+  
+  doornroosje-0 Error - 8:18:08 AM
+  Error: Evaluation failed: TypeError: document.querySelectorAll(...).map is not a function
+    at __puppeteer_evaluation_script__:20:56
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:163:16)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:991:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:228:5) 
+  Evaluation failed: TypeError: document.querySelectorAll(...).map is not a function
+    at __puppeteer_evaluation_script__:20:56
+  
+  
+  doornroosje-1 Error - 8:18:07 AM
+  Error: Evaluation failed: TypeError: document.querySelectorAll(...).map is not a function
+    at __puppeteer_evaluation_script__:20:56
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:163:16)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:991:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:228:5) 
+  Evaluation failed: TypeError: document.querySelectorAll(...).map is not a function
+    at __puppeteer_evaluation_script__:20:56
+  
+  
+  doornroosje-1 Error - 8:16:15 AM
+  Error: Evaluation failed: TypeError: document.querySelectorAll(...).map is not a function
+    at __puppeteer_evaluation_script__:20:56
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:163:16)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:991:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:228:5) 
+  Evaluation failed: TypeError: document.querySelectorAll(...).map is not a function
+    at __puppeteer_evaluation_script__:20:56
+  
+  
+  doornroosje-0 Error - 8:16:13 AM
+  Error: Evaluation failed: TypeError: document.querySelectorAll(...).map is not a function
+    at __puppeteer_evaluation_script__:20:56
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:163:16)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:991:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:228:5) 
+  Evaluation failed: TypeError: document.querySelectorAll(...).map is not a function
+    at __puppeteer_evaluation_script__:20:56
+  
+  
+  doornroosje-1 Error - 8:15:28 AM
+  Error: Evaluation failed: TypeError: document.querySelectorAll(...).map is not a function
+    at __puppeteer_evaluation_script__:20:56
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:163:16)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:991:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:228:5) 
+  Evaluation failed: TypeError: document.querySelectorAll(...).map is not a function
+    at __puppeteer_evaluation_script__:20:56
+  
+  
+  doornroosje-0 Error - 8:15:26 AM
+  Error: Evaluation failed: TypeError: document.querySelectorAll(...).map is not a function
+    at __puppeteer_evaluation_script__:20:56
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:163:16)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:991:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:228:5) 
+  Evaluation failed: TypeError: document.querySelectorAll(...).map is not a function
+    at __puppeteer_evaluation_script__:20:56
+  
+  
+  doornroosje-0 Error - 8:14:50 AM
+  Error: Evaluation failed: TypeError: document.querySelectorAll(...).map is not a function
+    at __puppeteer_evaluation_script__:20:56
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:163:16)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:991:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:228:5) 
+  Evaluation failed: TypeError: document.querySelectorAll(...).map is not a function
+    at __puppeteer_evaluation_script__:20:56
+  
+  
+  doornroosje-1 Error - 8:14:48 AM
+  Error: Evaluation failed: TypeError: document.querySelectorAll(...).map is not a function
+    at __puppeteer_evaluation_script__:20:56
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:163:16)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:991:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:228:5) 
+  Evaluation failed: TypeError: document.querySelectorAll(...).map is not a function
+    at __puppeteer_evaluation_script__:20:56
+  
+  
+  doornroosje-0 Error - 8:13:58 AM
+  Error: Evaluation failed: TypeError: document.querySelectorAll(...).map is not a function
+    at __puppeteer_evaluation_script__:20:56
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:163:16)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:991:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:228:5) 
+  Evaluation failed: TypeError: document.querySelectorAll(...).map is not a function
+    at __puppeteer_evaluation_script__:20:56
+  
+  
+  doornroosje-1 Error - 8:13:56 AM
+  Error: Evaluation failed: TypeError: document.querySelectorAll(...).map is not a function
+    at __puppeteer_evaluation_script__:20:56
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:163:16)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:991:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:228:5) 
+  Evaluation failed: TypeError: document.querySelectorAll(...).map is not a function
+    at __puppeteer_evaluation_script__:20:56
+  
+  
+  gebrdenobel-0 Error - 8:07:15 AM
+  Error: false
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1180:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1170:23)
+    at gebrdenobelScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gebrdenobel.js:232:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:991:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:228:5) 
+  false
+  
+  
+  gebrdenobel-0 Error - 8:07:15 AM
+  ProtocolError: Protocol error (Page.navigate): Cannot navigate to invalid URL
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Connection.js:230:24
+    at new Promise (<anonymous>)
+    at CDPSession.send (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Connection.js:226:16)
+    at navigate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:149:47)
+    at FrameManager.navigateFrame (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:132:13)
+    at Frame.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:512:41)
+    at Page.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1167:53)
+    at AbstractScraper.createSinglePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1327:20)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:966:25) 
+  Protocol error (Page.navigate): Cannot navigate to invalid URL
+  
+  
+  doornroosje-0 Error - 8:07:02 AM
+  Error: Evaluation failed: TypeError: document.querySelectorAll(...).map is not a function
+    at __puppeteer_evaluation_script__:20:56
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:163:16)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:991:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:228:5) 
+  Evaluation failed: TypeError: document.querySelectorAll(...).map is not a function
+    at __puppeteer_evaluation_script__:20:56
+  
+  
+  doornroosje-1 Error - 8:03:16 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1118:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  doornroosje-1 Error - 8:02:41 AM
+  Error: Evaluation failed: TypeError: document.querySelectorAll(...).map is not a function
+    at __puppeteer_evaluation_script__:20:56
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:163:16)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:991:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:228:5) 
+  Evaluation failed: TypeError: document.querySelectorAll(...).map is not a function
+    at __puppeteer_evaluation_script__:20:56
+  
+  
+  gebrdenobel-0 Error - 8:02:27 AM
+  Error: false
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1180:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1170:23)
+    at gebrdenobelScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gebrdenobel.js:232:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:991:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:228:5) 
+  false
+  
+  
+  gebrdenobel-0 Error - 8:02:27 AM
+  ProtocolError: Protocol error (Page.navigate): Cannot navigate to invalid URL
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Connection.js:230:24
+    at new Promise (<anonymous>)
+    at CDPSession.send (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Connection.js:226:16)
+    at navigate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:149:47)
+    at FrameManager.navigateFrame (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:132:13)
+    at Frame.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:512:41)
+    at Page.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1167:53)
+    at AbstractScraper.createSinglePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1327:20)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:966:25) 
+  Protocol error (Page.navigate): Cannot navigate to invalid URL
+  
+  
+  boerderij-0 Error - 8:01:59 AM
+  Error: Failed to launch the browser process!
+[0710/080159.202871:ERROR:bus.cc(397)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[0710/080159.203810:ERROR:bus.cc(397)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+Inconsistency detected by ld.so: ../elf/dl-tls.c: 481: _dl_allocate_tls_init: Assertion `listp->slotinfo[cnt].gen <= GL(dl_tls_generation)' failed!
+
+
+TROUBLESHOOTING: https://github.com/puppeteer/puppeteer/blob/main/docs/troubleshooting.md
+
+    at onClose (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/node/BrowserRunner.js:237:20)
+    at ChildProcess.<anonymous> (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/node/BrowserRunner.js:228:79)
+    at ChildProcess.emit (node:events:539:35)
+    at ChildProcess._handle.onexit (node:internal/child_process:291:12) 
+  Failed to launch the browser process!
+[0710/080159.202871:ERROR:bus.cc(397)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[0710/080159.203810:ERROR:bus.cc(397)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+Inconsistency detected by ld.so: ../elf/dl-tls.c: 481: _dl_allocate_tls_init: Assertion `listp->slotinfo[cnt].gen <= GL(dl_tls_generation)' failed!
+
+
+TROUBLESHOOTING: https://github.com/puppeteer/puppeteer/blob/main/docs/troubleshooting.md
+
+  
+  
+  doornroosje-0 Error - 8:01:53 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1118:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  doornroosje-0 Error - 8:01:18 AM
+  Error: Evaluation failed: TypeError: document.querySelectorAll(...).map is not a function
+    at __puppeteer_evaluation_script__:20:56
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async doornroosjeScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:163:16)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:991:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:228:5) 
+  Evaluation failed: TypeError: document.querySelectorAll(...).map is not a function
+    at __puppeteer_evaluation_script__:20:56
+  
+  
   gebrdenobel-0 Error - 6:44:02 AM
   Error: false
     at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1180:29

@@ -179,7 +179,7 @@ doornroosjeScraper.getPageInfo = async function ({ page, event }) {
 
       // genre verwijderen en naar shorttext
       res.shortText = (event?.shortText ? event.shortText : '') + 
-      document.querySelectorAll('.c-event-row__title').map(title => {
+      Array.from(document.querySelectorAll('.c-event-row__title')).map(title => {
         if (title.textContent.includes('genre')){
           const row = title.parentNode.parentNode;
           return row.querySelector('.c-event-row__content')?.textContent.toLowerCase().trim();
@@ -254,10 +254,11 @@ doornroosjeScraper.getPageInfo = async function ({ page, event }) {
           }
         }
       }
-    
       res.longTextHTML = 
-        (document.querySelector(".s-event__container .row")?.innerHTML ?? '') +
-      Array.from(document.querySelectorAll('.c-embed')).map(a => a.innerHTML).join('')
+      (document.querySelector(".s-event__container .c-intro")?.innerHTML ?? '') +
+      ((document.querySelector(".s-event__container .c-intro + .row")?.innerHTML ?? '')) +
+    (Array.from(document.querySelectorAll('.c-embed')).map(a => a.innerHTML).join(''))
+
 
       return res;
     }, {months: this.months, event});
@@ -291,22 +292,18 @@ doornroosjeScraper.getPageInfo = async function ({ page, event }) {
       res.priceTextcontent = 
         document.querySelector(".b-festival-content__container")?.textContent.trim() ?? '';
       
-
-
       res.longTextHTML = 
         (document.querySelector(".b-festival-content__container")?.innerHTML ?? '') + 
-        (document.querySelector('.b-festival-line-up__grid'))?.innerHTML ?? '';
+        (document.querySelector('.b-festival-line-up__grid')?.innerHTML ?? '') +
+        Array.from(document.querySelectorAll(".c-embed"))
+          .map(embed => embed.innerHTML)
+          .join('')
       
-
-  
-      const embeds = document.querySelectorAll(".c-embed");
-      res.longTextHTML =
-        embeds?.length ?? false
-          ? res.longTextHTML + embeds.innerHTML
-          : res.longTextHTML;
   
       if (document.querySelector('.b-festival-line-up__title')) {
-        const lineupRedux = Array.from(document.querySelectorAll('.b-festival-line-up__title'))?.map(title => title.textContent).join(', ') ?? '';
+        const lineupRedux = Array.from(document.querySelectorAll('.b-festival-line-up__title'))
+          .map(title => title.textContent)
+          .join(', ');
         res.shortText += ' Met oa: '+lineupRedux
       }
 
