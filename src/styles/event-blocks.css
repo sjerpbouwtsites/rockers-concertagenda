@@ -554,22 +554,24 @@ a.long-html__social-list-link:hover{
 
 .long-html__music-videos {
   margin: 20px -20px;
-  width: calc(100% + 40px)
+  width: calc(100% + 40px);
+  display: flex;
+  flex-direction: row;
+  flex-wrap:wrap;
 }
-.long-html__music-videos iframe {
-  width: 100%;
-  height: auto;
-}
+
 .long-html__music-videos iframe + iframe {
   margin-top: 20px;
 }
 
-/* #endregion ENLARGED UNIVERSAL */
-
 .iframe-wrapper-16-9 {
+  flex-basis: 50%;
+  flex-grow: 1;
   position: relative;
+  padding-bottom: 28.125%;
+}
+.iframe-wrapper-16-9:nth-child(odd):last-child {
   padding-bottom: 56.25%;
-  width: 100%;
 }
 .iframe-wrapper-16-9 > iframe {
   position: absolute;
@@ -578,6 +580,8 @@ a.long-html__social-list-link:hover{
   width: 100%;
   height: 100%;
 }
+
+/* #endregion ENLARGED UNIVERSAL */
 
 /* #region ENLARGED TYPEOGRAPHY */
 
