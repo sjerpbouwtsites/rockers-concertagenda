@@ -38,6 +38,7 @@ export default class AbstractScraper {
    */
   static forbiddenTerms = [
     'clubnacht',
+    'VERBODENGENRE',
     "alternatieve rock",
     "americana",
     "americana",
@@ -54,6 +55,7 @@ export default class AbstractScraper {
     `blaasrock`,
     `dream pop`,
     `Dream Punk`,
+    'uptempo',
     `experi-metal`,
     `folkpunk`,
     `jazz-core`,
@@ -647,8 +649,9 @@ export default class AbstractScraper {
     const keysToCheck2 = Array.isArray(keysToCheck) ? keysToCheck : ['title', 'shortText'];
     let combinedTextToCheck = '';
     for (let i = 0; i < keysToCheck2.length; i++){
-      combinedTextToCheck += event[keysToCheck2[i]].toLowerCase() + ' ';
+      combinedTextToCheck += event[keysToCheck2[i]] + ' ';
     }
+    combinedTextToCheck = combinedTextToCheck.toLowerCase();
     const hasForbiddenTerm = AbstractScraper.forbiddenTerms.find(forbiddenTerm=> combinedTextToCheck.includes(forbiddenTerm))
     if (hasForbiddenTerm) {
       return {

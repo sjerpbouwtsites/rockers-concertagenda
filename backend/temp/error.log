@@ -1,0 +1,75 @@
+
+  doornroosje-0 Error - 2:57:53 AM
+  TypeError: Cannot read properties of undefined (reading 'toLowerCase')
+    at AbstractScraper.hasForbiddenTerms (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:652:53)
+    at doornroosjeScraper.singleMergedEventCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:54:40)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1035:33)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:228:5) 
+  Cannot read properties of undefined (reading 'toLowerCase')
+  
+  
+  doornroosje-1 Error - 2:57:52 AM
+  TypeError: Cannot read properties of undefined (reading 'toLowerCase')
+    at AbstractScraper.hasForbiddenTerms (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:652:53)
+    at doornroosjeScraper.singleMergedEventCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/doornroosje.js:54:40)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1035:33)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:228:5) 
+  Cannot read properties of undefined (reading 'toLowerCase')
+  
+  
+  gebrdenobel-0 Error - 2:15:51 AM
+  Error: image missing <a class='page-info' href='about:blank'></a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1173:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1167:23)
+    at gebrdenobelScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gebrdenobel.js:228:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:988:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:226:5) 
+  image missing <a class='page-info' href='about:blank'></a>
+  
+  
+  gebrdenobel-0 Error - 2:15:51 AM
+  ProtocolError: Protocol error (Page.navigate): Cannot navigate to invalid URL
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Connection.js:230:24
+    at new Promise (<anonymous>)
+    at CDPSession.send (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Connection.js:226:16)
+    at navigate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:149:47)
+    at FrameManager.navigateFrame (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:132:13)
+    at Frame.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:512:41)
+    at Page.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1167:53)
+    at AbstractScraper.createSinglePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1318:20)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:963:25) 
+  Protocol error (Page.navigate): Cannot navigate to invalid URL
+  
+  
+  gebrdenobel-0 Error - 2:10:05 AM
+  Error: image missing <a class='page-info' href='about:blank'></a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1173:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1167:23)
+    at gebrdenobelScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gebrdenobel.js:228:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:988:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:226:5) 
+  image missing <a class='page-info' href='about:blank'></a>
+  
+  
+  gebrdenobel-0 Error - 2:10:05 AM
+  ProtocolError: Protocol error (Page.navigate): Cannot navigate to invalid URL
+    at /home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Connection.js:230:24
+    at new Promise (<anonymous>)
+    at CDPSession.send (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Connection.js:226:16)
+    at navigate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:149:47)
+    at FrameManager.navigateFrame (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:132:13)
+    at Frame.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:512:41)
+    at Page.goto (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:1167:53)
+    at AbstractScraper.createSinglePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1318:20)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:963:25) 
+  Protocol error (Page.navigate): Cannot navigate to invalid URL
+  
+  

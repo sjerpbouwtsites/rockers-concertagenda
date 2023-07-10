@@ -34,6 +34,7 @@ doornroosjeScraper.listenToMasterThread();
 // MERGED ASYNC CHECK
 
 doornroosjeScraper.singleMergedEventCheck = async function (event) {
+
   const tl = this.cleanupEventTitle(event.title);
 
   const isRefused = await this.rockRefuseListCheck(event, tl)
@@ -49,6 +50,18 @@ doornroosjeScraper.singleMergedEventCheck = async function (event) {
   if (isAllowed.success) {
     return isAllowed;  
   }
+
+  const hasForbiddenTerms = await this.hasForbiddenTerms(event, ['longTextHTML', 'shortText', 'title'])
+  if (hasForbiddenTerms.success){
+    await this.saveRefusedTitle(tl);
+    return {
+      reason: hasForbiddenTerms.reason,
+      event,
+      success: false
+    }
+  }
+
+  await this.saveAllowedTitle(tl);
 
   return {
     event,
@@ -162,14 +175,19 @@ doornroosjeScraper.getPageInfo = async function ({ page, event }) {
       res.priceTextcontent = 
         document.querySelector(".c-btn__price")?.textContent.trim() ?? '';
       res.longTextHTML = 
-        document.querySelector(".s-event__container")?.innerHTML ?? '';
-  
-      const embeds = document.querySelectorAll(".c-embed");
-      res.longTextHTML =
-        embeds?.length ?? false
-          ? res.longTextHTML + embeds.innerHTML
-          : res.longTextHTML;
-  
+        document.querySelector(".s-event__container .s-event__content")?.innerHTML ?? '';
+      res.longTextHTML += Array.from(document.querySelectorAll('.c-embed')).map(a => a.innerHTML).join('')
+
+
+      // genre verwijderen en naar shorttext
+      res.shortText = event.shortText
+      document.querySelectorAll('.c-event-row__title').forEach(title => {
+        if (title.textContent.includes('genre')){
+          const row = title.parentNode.parentNode;
+          res.shortText += ' ' + row.querySelector('.c-event-row__content')?.textContent.toLowerCase() ?? '';
+        }
+      })
+
       const startDateRauwMatch = document
         .querySelector(".c-event-data")
         ?.innerHTML.match(
@@ -237,6 +255,8 @@ doornroosjeScraper.getPageInfo = async function ({ page, event }) {
         }
       }
     
+
+
       return res;
     }, {months: this.months, event});
   } else { // dus festival
@@ -268,8 +288,14 @@ doornroosjeScraper.getPageInfo = async function ({ page, event }) {
 
       res.priceTextcontent = 
         document.querySelector(".b-festival-content__container")?.textContent.trim() ?? '';
+      
+
+
       res.longTextHTML = 
-        document.querySelector("#ticket-info")?.innerHTML ?? '';
+        (document.querySelector(".b-festival-content__container")?.innerHTML ?? '') + 
+        (document.querySelector('.b-festival-line-up__grid'))?.innerHTML ?? '';
+      
+
   
       const embeds = document.querySelectorAll(".c-embed");
       res.longTextHTML =
@@ -279,19 +305,13 @@ doornroosjeScraper.getPageInfo = async function ({ page, event }) {
   
       if (document.querySelector('.b-festival-line-up__title')) {
         const lineupRedux = Array.from(document.querySelectorAll('.b-festival-line-up__title'))?.map(title => title.textContent).join(', ') ?? '';
-        res.shortText = 'Met oa: '+lineupRedux
+        res.shortText += ' Met oa: '+lineupRedux
       }
 
 
       return res;
     }, {event});
   }
-
-  // const cp = {...pageInfo};
-  // delete cp.longTextHTML
-  // if (cp.errors.length){
-  //   this.dirtyDebug(cp)
-  // }
   
   return await this.getPageInfoEnd({pageInfo, stopFunctie, page})
 
