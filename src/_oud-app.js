@@ -1,5 +1,5 @@
 import React from "react";
-
+import Flickity from "react-flickity-component";
 import "./styles/app.css";
 import "./styles/app-phone.css";
 import "./styles/app-tablet.css";
@@ -13,11 +13,24 @@ import "./styles/normalize.css";
 import "./styles/open-screen.css";
 import "./styles/flickety.css";
 import EventBlocks from "./mods/EventBlocks.js";
-
-
+import HeaderMenu from "./mods/HeaderMenu.js";
+import FilterMenu from "./mods/FilterMenu.js";
 import OpenScreen from "./mods/OpenScreen.js";
 
+/**
+ * Dit is app.js voordat de slider er uit gesloopt werd
+ */
 
+
+
+const flicketyOptions = {
+  initialIndex: 1, // 0: filter; 1: app; 2: text;
+  prevNextButtons: false,
+  pageDots: false,
+  freeScroll: false,
+  contain: true,
+  dragThreshold: 140,
+};
 
 class App extends React.Component {
   constructor(props) {
@@ -181,13 +194,32 @@ class App extends React.Component {
           moving={this.state.openScreenMoving}
         />
         <div className="app">
-          <main className="app-main app-view app-view--2">
-            <EventBlocks
-              filterSettings={this.state.filterSettings}
-              locations={this.state.locations}
-            />
-          </main>
-
+          <Flickity
+            className={"app-view"} // default ''
+            elementType={"div"} // default 'div'
+            options={flicketyOptions} // takes flickity options {}
+            disableImagesLoaded={false} // default false
+            // reloadOnUpdate // default false
+            // static // default false
+          >
+            <div className="app-view app-view--1">
+              <FilterMenu
+                appProcessFilterChange={this.appProcessFilterChange}
+                locations={this.state.locations}
+                timestampNamen={this.state.names}
+              />
+              <HeaderMenu timestampNamen={this.state.names} />
+            </div>
+            <main className="app-main app-view app-view--2">
+              <EventBlocks
+                filterSettings={this.state.filterSettings}
+                locations={this.state.locations}
+              />
+            </main>
+            {/* <div className="app-view app-view--3">
+              
+            </div> */}
+          </Flickity>
           {this.appBanner("Swipe links voor filter & uitleg.")}
         </div>
       </div>
