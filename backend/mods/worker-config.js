@@ -16,14 +16,14 @@ export const AbstractWorkerConfig = {
 
 export const workerConfig = {
   "013" : {workerCount: 4 },
-  afaslive :{
-    workerCount: 2,
-    CPUReq: "high",
-    workerConcurrent: 1,
-  },
-  baroeg: {workerCount: 2, workerConcurrent: 1 },
-  bibelot: { workerCount: 1, workerConcurrent: 1 },
-  boerderij:{ workerCount: 1, CPUReq: "low", workerConcurrent: 1 },
+  // afaslive :{
+  //   workerCount: 2,
+  //   CPUReq: "high",
+  //   workerConcurrent: 1,
+  // },
+  // baroeg: {workerCount: 2, workerConcurrent: 1 },
+  // bibelot: { workerCount: 1, workerConcurrent: 1 },
+  // boerderij:{ workerCount: 1, CPUReq: "low", workerConcurrent: 1 },
   // cpunt: { workerCount: 1, workerConcurrent: 1 },
   // dbs: { workerCount: 4, workerConcurrent: 2},
   // deflux: { workerCount: 1, workerConcurrent: 1 },

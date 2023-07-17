@@ -295,6 +295,16 @@
   filter: invert(100%);
   width: 15px;
 }
+.event-block__sluit-enlarged-btn--sold-out{
+  top: -50px;
+right: -16px;
+}
+@media (min-width: 600px){
+  .event-block__sluit-enlarged-btn--sold-out {
+    top: -72px;
+    right: -36px;  
+  }
+}
 
 /* #endregion HEADER */
 
