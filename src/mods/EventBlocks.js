@@ -18,14 +18,23 @@ class EventBlocks extends React.Component {
     this.createLocation = this.createLocation.bind(this);
     this.createDates = this.createDates.bind(this);
     this.add100ToMaxEventsShown = this.add100ToMaxEventsShown.bind(this);
+    this.escFunction = this.escFunction.bind(this);
   }
 
+ 
   componentDidUpdate() {
     if (!this.state.eventDataLoaded && !this.state.eventDataLoading) {
       this.getEventData();
     }
     this.sluitEnlarged = this.sluitEnlarged.bind(this);
   }
+
+  componentDidMount(){
+    document.addEventListener("keydown", this.escFunction, false);
+  }
+  componentWillUnmount(){
+    document.removeEventListener("keydown", this.escFunction, false);
+  }  
 
   //#endregion constructor en life cycle
 
@@ -55,6 +64,12 @@ class EventBlocks extends React.Component {
     return new Promise((res) => {
       setTimeout(res, wait);
     });
+  }
+
+  escFunction(event){
+    if (event.key === "Escape") {
+      this.sluitEnlarged()
+    }
   }
 
   sluitEnlarged(){

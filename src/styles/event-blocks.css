@@ -787,20 +787,26 @@ margin-top: 50px;
   opacity: 1;
   max-width: 30ch;
 }
-.event-block__main .void-container-for-enlarged p,
-.event-block__main .void-container-for-enlarged ul,
-.event-block__main .void-container-for-enlarged span,
-.event-block__main .void-container-for-enlarged a {
+.event-block__main .void-container-for-enlarged > p,
+.event-block__main .void-container-for-enlarged > ul,
+.event-block__main .void-container-for-enlarged > span,
+.event-block__main .void-container-for-enlarged > a {
   font-size: .8em;
   max-width: 40ch;
   line-height: 1.05em;
 }
+.event-block__main .void-container-for-enlarged > p *,
+.event-block__main .void-container-for-enlarged > ul *,
+.event-block__main .void-container-for-enlarged > span *,
+.event-block__main .void-container-for-enlarged > a *{
+  font-size: inherit;
+}
 
 @media (min-width: 1024px){
-  .event-block__main .void-container-for-enlarged p,
-  .event-block__main .void-container-for-enlarged ul,
-  .event-block__main .void-container-for-enlarged span,
-  .event-block__main .void-container-for-enlarged a {
+  .event-block__main .void-container-for-enlarged > p,
+  .event-block__main .void-container-for-enlarged > ul,
+  .event-block__main .void-container-for-enlarged > span,
+  .event-block__main .void-container-for-enlarged > a {
     font-size: .66em;
     max-width: 50ch;
     line-height: 1.15em;
