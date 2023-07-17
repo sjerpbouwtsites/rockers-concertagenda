@@ -12,7 +12,7 @@ const defluxScraper = new AbstractScraper(makeScraperConfig({
   workerData: Object.assign({}, workerData),
   puppeteerConfig: {
     mainPage: {
-      timeout: 5008,
+      timeout: 50008,
     },
     singlePage: {
       timeout: 20009
@@ -132,7 +132,7 @@ defluxScraper.getPageInfo = async function ({ page, event}) {
       res.startTime = document.querySelector('.evcal_time.evo_tz_time').textContent.match(/\d\d:\d\d/)[0];
       res.startDateTime = new Date(`${res.startDate}T${res.startTime}:00`).toISOString()
     } catch (caughtError) {
-      res.errors.push({error: caughtError, remarks: `starttime match ${res.pageInfo}`,toDebug:res})
+      res.errors.push({error: caughtError, remarks: `starttime match ${res.pageInfo}`})
     }
 
     if (document.querySelector('.evcal_desc3')?.textContent.toLowerCase().includes('deur open') ?? false) {
