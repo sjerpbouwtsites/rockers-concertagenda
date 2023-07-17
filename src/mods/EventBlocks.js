@@ -147,7 +147,7 @@ class EventBlocks extends React.Component {
           const blockEl = document.getElementById(`event-id-${musicEventKey}`);
           const appBannerHeight =
             document.getElementById("app-banner").clientHeight;
-          window.scrollTo(0, blockEl.offsetTop + appBannerHeight - 20);
+          window.scrollTo(0, blockEl.offsetTop + appBannerHeight - (window.innerWidth > 600 ? 20 : 0));
         }, 360);
       })
       .catch((err) => {

@@ -291,6 +291,11 @@
   z-index: 12324242;
   text-align: center
 }
+@media (max-width: 600px){
+  .event-block__sluit-enlarged-btn--enlarged{
+    position: absolute;
+  }
+}
 .event-block__sluit-enlarged-btn img {
   filter: invert(100%);
   width: 15px;
