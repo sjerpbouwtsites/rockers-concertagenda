@@ -101,7 +101,7 @@
   }
 }
 
-.some-event-is-enlarged .event-block{
+.some-event-is-enlarged .event-block:not(.event-block--enlarged){
   filter: brightness(30%) blur(2px);
   transform: scale(1.02);
 }

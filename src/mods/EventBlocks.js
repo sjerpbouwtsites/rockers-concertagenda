@@ -78,10 +78,11 @@ class EventBlocks extends React.Component {
     
     const workingMinY = minYOffset - 250;
     const workingMaxY = maxYOffset;
-    console.log(workingMinY, workingMaxY, window.scrollY)
     setTimeout(()=>{
       if (window.scrollY > workingMinY && window.scrollY < workingMaxY){
-        this.gescrolledBuitenBeeldEnlarged(minYOffset, maxYOffset);
+        if (this.someEventIsEnlarged(this.state.musicEvents)){
+          this.gescrolledBuitenBeeldEnlarged(minYOffset, maxYOffset);
+        }
         return;
       } else {
         this.sluitEnlarged();
@@ -89,7 +90,8 @@ class EventBlocks extends React.Component {
     }, 100)
   }
 
-  sluitEnlarged(){
+  async sluitEnlarged(){
+    console.log('sluit enlarged');
     let nieuweEventsState = this.state.musicEvents.map(event => {
       event.enlarged = false;
       return event;
@@ -97,13 +99,30 @@ class EventBlocks extends React.Component {
     this.setState({ musicEvents: nieuweEventsState }, ()=>{
       console.log('na set state')
     });    
-    document.querySelectorAll('.event-block[style]').forEach(el => el.removeAttribute('style'))
+    
+    await this.waitFor(10);
+    return this.recursieveStijlEraf();
+    
   }
+
+  async recursieveStijlEraf(){
+    console.log('recursieve stijl eraf')
+    document.querySelectorAll('.event-block[style]').forEach(el => el.removeAttribute('style'))
+    
+    if (document.querySelector('.event-block[style]')){
+      await this.waitFor(10);
+      return this.recursieveStijlEraf()
+    }
+    return true;
+    
+  }
+
   async loadLongerText(musicEventKey) {
 
 
     const isMomenteelEnlarged = !!this.someEventIsEnlarged(this.state.musicEvents);
-    document.querySelectorAll('.event-block[style]').forEach(el => el.removeAttribute('style'))
+    await this.sluitEnlarged();
+    //document.querySelectorAll('.event-block[style]').forEach(el => el.removeAttribute('style'))
     const thisEvent = this.state.musicEvents[musicEventKey];
     const thisElement = document.getElementById(`event-id-${musicEventKey}`);
     if (window.innerWidth > 1024){
@@ -111,7 +130,7 @@ class EventBlocks extends React.Component {
     }
     let readyToLoad = false;
     // alles ontlargen.
-    console.log(musicEventKey)
+    
     let nieuweEventsState = this.state.musicEvents.map(event => {
       event.enlarged = false;
       return event;
