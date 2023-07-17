@@ -68,10 +68,15 @@ class EventBlocks extends React.Component {
   }
   async loadLongerText(musicEventKey) {
 
-    const momenteelEnlarged = !!this.someEventIsEnlarged(this.state.musicEvents);
+
+    const isMomenteelEnlarged = !!this.someEventIsEnlarged(this.state.musicEvents);
+    document.querySelectorAll('.event-block[style]').forEach(el => el.removeAttribute('style'))
     const thisEvent = this.state.musicEvents[musicEventKey];
+    const thisElement = document.getElementById(`event-id-${musicEventKey}`);
+    thisElement.setAttribute('style', `top: ${thisElement.offsetTop - 50}px`)
     let readyToLoad = false;
     // alles ontlargen.
+    console.log(musicEventKey)
     let nieuweEventsState = this.state.musicEvents.map(event => {
       event.enlarged = false;
       return event;
@@ -81,9 +86,7 @@ class EventBlocks extends React.Component {
       readyToLoad = true;
     });
     
-    if (momenteelEnlarged) {
-      console.log('momenteel enlarged');
-      console.log(momenteelEnlarged)
+    if (isMomenteelEnlarged) {
       return; 
     }
 
@@ -126,7 +129,7 @@ class EventBlocks extends React.Component {
           const blockEl = document.getElementById(`event-id-${musicEventKey}`);
           const appBannerHeight =
             document.getElementById("app-banner").clientHeight;
-          window.scrollTo(0, blockEl.offsetTop + appBannerHeight);
+          window.scrollTo(0, blockEl.offsetTop + appBannerHeight - 20);
         }, 360);
       })
       .catch((err) => {

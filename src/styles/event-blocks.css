@@ -93,7 +93,7 @@
   .event-block.event-block--enlarged {
     max-width: 700px;
     filter: initial;
-    position: fixed;
+    position: absolute;
     left: 50%;
     z-index: 1000;
     transform: translate(-50%, 0%);    
@@ -109,20 +109,6 @@
 }
 
 
-.event-block--first-of-month {
-  border-left-width: 150px;
-  border-left-style: solid;
-  border-left-color: #0f110e;
-  overflow-x: initial;
-}
-
-@media (max-width: 600px) {
-
-  .event-block--first-of-month {
-    border-left-width: 0;
-    border-top: 70px solid #0f110e;
-  }
-}
 
 /* #endregion SELF */
 
@@ -130,6 +116,11 @@
 
 .event-block__header {
   margin-bottom: 0.5em;
+}
+@media (min-width: 1024px){
+  .event-block__header--enlarged {
+    margin-bottom: 0;
+  }
 }
 
 .event-block__header--sold-out{
@@ -162,6 +153,11 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+}
+@media (min-width: 1024px){
+  .event-block__title--enlarged{
+    margin-bottom: 0;
+  }
 }
 
 .event-block__title-showname {
@@ -554,6 +550,22 @@
 
 /* #region FIRST OF MONTH TIME */
 
+.event-block--first-of-month {
+  border-left-width: 150px;
+  border-left-style: solid;
+  border-left-color: #0f110e;
+  overflow-x: initial;
+}
+
+@media (max-width: 600px) {
+
+  .event-block--first-of-month {
+    border-left-width: 0;
+    border-top: 70px solid #0f110e;
+  }
+}
+
+
 .event-block__first-of-month-time {
   position: absolute;
   font-size: 2.5em;
@@ -569,6 +581,7 @@
   line-height: 0.95;
   text-transform: capitalize;
 }
+
 @media (max-width: 1024px) {
   .event-block--first-of-month-time {
     border-left-width: 100px;
@@ -603,6 +616,12 @@
   }
 }
 
+.event-block--first-of-month.event-block--enlarged {
+  border: 0;
+}
+.event-block--enlarged .event-block__first-of-month-time {
+  display: none;
+}
 /* #endregion FIRST OF MONTH TIME */
 
 /* #region ENLARGED UNIVERSAL */
