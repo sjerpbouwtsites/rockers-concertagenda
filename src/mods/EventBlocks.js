@@ -107,11 +107,18 @@ class EventBlocks extends React.Component {
 
   async recursieveStijlEraf(){
     console.log('recursieve stijl eraf')
-    document.querySelectorAll('.event-block[style]').forEach(el => el.removeAttribute('style'))
-    
+    document.querySelectorAll('.event-block[style]').forEach(el => {
+      el.setAttribute('data-was-enlarged', true);
+      el.removeAttribute('style')
+    })
     if (document.querySelector('.event-block[style]')){
       await this.waitFor(10);
       return this.recursieveStijlEraf()
+    } else if (document.querySelector('[data-was-enlarged')){
+      await this.waitFor(5);
+      const wasEnlarged = document.querySelector('[data-was-enlarged');
+      window.scrollTo(0, wasEnlarged.offsetTop + document.getElementById("app-banner").clientHeight - 75);
+      wasEnlarged.removeAttribute('data-was-enlarged');
     }
     return true;
     
