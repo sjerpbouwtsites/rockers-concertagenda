@@ -19,6 +19,8 @@ class EventBlocks extends React.Component {
     this.createDates = this.createDates.bind(this);
     this.add100ToMaxEventsShown = this.add100ToMaxEventsShown.bind(this);
     this.escFunction = this.escFunction.bind(this);
+    this.gescrolledBuitenBeeldEnlarged = this.gescrolledBuitenBeeldEnlarged.bind(this);
+    
   }
 
  
@@ -72,6 +74,21 @@ class EventBlocks extends React.Component {
     }
   }
 
+  gescrolledBuitenBeeldEnlarged(minYOffset,maxYOffset ){
+    
+    const workingMinY = minYOffset - 250;
+    const workingMaxY = maxYOffset;
+    console.log(workingMinY, workingMaxY, window.scrollY)
+    setTimeout(()=>{
+      if (window.scrollY > workingMinY && window.scrollY < workingMaxY){
+        this.gescrolledBuitenBeeldEnlarged(minYOffset, maxYOffset);
+        return;
+      } else {
+        this.sluitEnlarged();
+      }
+    }, 100)
+  }
+
   sluitEnlarged(){
     let nieuweEventsState = this.state.musicEvents.map(event => {
       event.enlarged = false;
@@ -112,25 +129,6 @@ class EventBlocks extends React.Component {
       console.log('verdomme wat snel!')
     }
 
-    await this.waitFor(100);
-    
-    if (!readyToLoad){
-      console.log('wacht 1')
-      await this.waitFor(100);
-    } if (!readyToLoad){
-      console.log('wacht 2')
-      await this.waitFor(100);
-    } if (!readyToLoad){
-      console.log('wacht 3')
-      await this.waitFor(100);
-    } if (!readyToLoad){
-      console.log('wacht 4')
-      await this.waitFor(100);
-    } if (!readyToLoad){
-      console.log('wacht 5')
-      await this.waitFor(100);
-    }
-
     if (!thisEvent.longText) {
       console.log('geen longtekst')
       return;
@@ -143,12 +141,17 @@ class EventBlocks extends React.Component {
         oldEvents[musicEventKey].enlarged = true;
         oldEvents[musicEventKey].longTextHTML = text;
         this.setState({ musicEvents: [...oldEvents] });
+
         setTimeout(() => {
           const blockEl = document.getElementById(`event-id-${musicEventKey}`);
           const appBannerHeight =
             document.getElementById("app-banner").clientHeight;
-          window.scrollTo(0, blockEl.offsetTop + appBannerHeight - (window.innerWidth > 600 ? 20 : 0));
+          window.scrollTo(0, blockEl.offsetTop + appBannerHeight - 20);
         }, 360);
+        setTimeout(()=>{
+          const blockEl = document.getElementById(`event-id-${musicEventKey}`);
+          this.gescrolledBuitenBeeldEnlarged(blockEl.offsetTop, blockEl.offsetTop + blockEl.scrollHeight)  
+        }, 750)
       })
       .catch((err) => {
         console.warn('ERROR RETRIEVING LONG HTML FOR EVENT')

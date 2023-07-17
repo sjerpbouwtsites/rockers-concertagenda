@@ -55,7 +55,7 @@
 }
 @media (min-width: 1024px){
   .event-block {
-    box-shadow:    inset -5px -5px 7px 1px #0f110e99;
+    box-shadow: inset -5px -5px 7px 1px #0f110e99;
   }
   .event-block--enlarged{
     box-shadow: initial;
@@ -102,7 +102,8 @@
 }
 
 .some-event-is-enlarged .event-block{
-  filter: brightness(50%) blur(2px);
+  filter: brightness(30%) blur(2px);
+  transform: scale(1.02);
 }
 .some-event-is-enlarged .event-block--enlarged{
   filter: initial;
@@ -126,6 +127,10 @@
 .event-block__header--sold-out{
   filter: brightness(50%)
 }
+.event-block__header--sold-out.event-block__header--enlarged{
+  filter: brightness(100%);
+}
+
 
 @media (max-width: 600px) {
   .event-block__header--enlarged {
