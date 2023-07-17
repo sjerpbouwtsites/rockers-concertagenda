@@ -65,6 +65,7 @@ class EventBlocks extends React.Component {
     this.setState({ musicEvents: nieuweEventsState }, ()=>{
       console.log('na set state')
     });    
+    document.querySelectorAll('.event-block[style]').forEach(el => el.removeAttribute('style'))
   }
   async loadLongerText(musicEventKey) {
 
@@ -73,7 +74,9 @@ class EventBlocks extends React.Component {
     document.querySelectorAll('.event-block[style]').forEach(el => el.removeAttribute('style'))
     const thisEvent = this.state.musicEvents[musicEventKey];
     const thisElement = document.getElementById(`event-id-${musicEventKey}`);
-    thisElement.setAttribute('style', `top: ${thisElement.offsetTop - 50}px`)
+    if (window.innerWidth > 1024){
+      thisElement.setAttribute('style', `top: ${thisElement.offsetTop - 50}px`)
+    }
     let readyToLoad = false;
     // alles ontlargen.
     console.log(musicEventKey)
