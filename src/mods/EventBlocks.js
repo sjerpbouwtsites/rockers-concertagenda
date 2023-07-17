@@ -125,9 +125,6 @@ class EventBlocks extends React.Component {
     //document.querySelectorAll('.event-block[style]').forEach(el => el.removeAttribute('style'))
     const thisEvent = this.state.musicEvents[musicEventKey];
     const thisElement = document.getElementById(`event-id-${musicEventKey}`);
-    if (window.innerWidth > 1024){
-      thisElement.setAttribute('style', `top: ${thisElement.offsetTop - 50}px`)
-    }
     let readyToLoad = false;
     // alles ontlargen.
     
@@ -153,6 +150,8 @@ class EventBlocks extends React.Component {
       return;
     }
 
+    const initialElementOffsetTop = thisElement.offsetTop;
+
     await fetch(thisEvent.longText.replace("../public/", "/"), {})
       .then((response) => response.text())
       .then((text) => {
@@ -165,6 +164,11 @@ class EventBlocks extends React.Component {
           const blockEl = document.getElementById(`event-id-${musicEventKey}`);
           const appBannerHeight =
             document.getElementById("app-banner").clientHeight;
+          if (window.innerWidth > 1024){
+            console.log(document.body.offsetHeight, thisElement.offsetHeight, initialElementOffsetTop)
+            const maxOffset = Math.min((document.body.offsetHeight - thisElement.offsetHeight - 150), initialElementOffsetTop - 50);
+            thisElement.setAttribute('style', `top: ${maxOffset}px`)
+          }            
           window.scrollTo(0, blockEl.offsetTop + appBannerHeight - 20);
         }, 360);
         setTimeout(()=>{
