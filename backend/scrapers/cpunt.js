@@ -160,9 +160,6 @@ cpuntScraper.getPageInfo = async function ({ page, event }) {
     const month = months[monthName.toLowerCase()];
     const startDate = `${year}-${month}-${day}`;
 
-    res.longTextHTML = (document.querySelector('.contentblock-TextOneColumn')?.innerHTML ?? '') + 
-    (document.querySelector('.contentblock-Video')?.innerHTML ?? '');
-
     let deurTijd, startTijd
     const tijdMatches = document.querySelector('.article-bottom .article-times')?.innerHTML.match(/(\d\d[:.]\d\d)/).map(strings => strings.replace('.', ':')) ?? null;
 
@@ -217,6 +214,103 @@ cpuntScraper.getPageInfo = async function ({ page, event }) {
     res.priceTextcontent = 
       document.querySelector(".article-price")?.textContent.trim() ??
       "" ;
+
+    // res.longTextHTML = (document.querySelector('.contentblock-TextOneColumn')?.innerHTML ?? '') + 
+    // (document.querySelector('.contentblock-Video')?.innerHTML ?? '');
+  
+
+    // #region longHTML
+
+    const mediaSelector = ['.contentblock-Video iframe', 
+    ].join(', ');
+    const textSelector = '.contentblock-TextOneColumn .text';
+    const removeEmptyHTMLFrom = textSelector
+    const socialSelector = [
+      
+    ].join(', ');
+    const removeSelectors = [
+
+    ].join(', ')
+    
+    const attributesToRemove = ['style', 'hidden', '_target', "frameborder"];
+    const attributesToRemoveSecondRound = ['class', 'id' ];
+    const removeHTMLWithStrings = [];
+
+    // eerst onzin attributes wegslopen
+    const socAttrRemSelAdd = `${socialSelector ? `, ${socialSelector} *` : ''}`
+    document.querySelectorAll(`${textSelector} *${socAttrRemSelAdd}`)
+      .forEach(elToStrip => {
+        attributesToRemove.forEach(attr => {
+          if (elToStrip.hasAttribute(attr)){
+            elToStrip.removeAttribute(attr)
+          }
+        })
+      })
+
+    // media obj maken voordat HTML verdwijnt
+    res.mediaForHTML = Array.from(document.querySelectorAll(mediaSelector))
+      .map(bron => {
+        const src = bron?.src ? bron.src : '';
+        return {
+          outer: bron.outerHTML,
+          src,
+          id: null,
+          type: src.includes('spotify') 
+            ? 'spotify' 
+            : src.includes('youtube') 
+              ? 'youtube'
+              : 'bandcamp'
+        }
+      })
+
+    // socials obj maken voordat HTML verdwijnt
+    res.socialsForHTML = !socialSelector ? '' : Array.from(document.querySelectorAll(socialSelector))
+      .map(el => {
+        el.className = 'long-html__social-list-link'
+        el.target = '_blank'
+        return el.outerHTML
+      })
+
+    // stript HTML tbv text
+    removeSelectors && document.querySelectorAll(removeSelectors)
+      .forEach(toRemove => toRemove.parentNode.removeChild(toRemove))
+
+    // verwijder ongewenste paragrafen over bv restaurants
+    Array.from(document.querySelectorAll(`${textSelector} p, ${textSelector} span, ${textSelector} a`))
+      .forEach(verwijder => {
+        const heeftEvilString = !!removeHTMLWithStrings.find(evilString => verwijder.textContent.includes(evilString))
+        if (heeftEvilString) {
+          verwijder.parentNode.removeChild(verwijder)
+        }
+      });
+
+    // lege HTML eruit cq HTML zonder tekst of getallen
+    document.querySelectorAll(`${removeEmptyHTMLFrom} > *`)
+      .forEach(checkForEmpty => {
+        const leegMatch = checkForEmpty.innerHTML.match(/[\w\d]/g);
+        if (!Array.isArray(leegMatch)){
+          checkForEmpty.parentNode.removeChild(checkForEmpty)
+        }
+      })
+
+    // laatste attributen eruit.
+    document.querySelectorAll(`${textSelector} *`)
+      .forEach(elToStrip => {
+        attributesToRemove.forEach(attr => {
+          if (elToStrip.hasAttribute(attr)){
+            elToStrip.removeAttribute(attr)
+          }
+        })
+      })      
+
+    // tekst.
+    res.textForHTML = Array.from(document.querySelectorAll(textSelector))
+      .map(el => el.innerHTML)
+      .join('')
+
+    // #endregion longHTML
+
+
 
     return res;
   }, {months: this.months, event});
