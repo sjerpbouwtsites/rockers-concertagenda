@@ -28,7 +28,7 @@ export const workerConfig = {
   dbs: { workerCount: 4, workerConcurrent: 2},
   deflux: { workerCount: 1, workerConcurrent: 1 },
   dehelling :{ workerCount: 1, CPUReq: 'low', workerConcurrent: 1 },
-  depul: { workerCount: 2, workerConcurrent: 1 },
+  depul: { workerCount: 2, workerConcurrent: 2 },
   doornroosje :{ workerCount: 2, workerConcurrent: 1, CPUReq: 'high',},
   dynamo: { workerCount: 2, workerConcurrent: 1 },
   effenaar:{ workerCount: 4, workerConcurrent: 1 },
