@@ -168,11 +168,12 @@ function youtubeSRCToIframe(src){
 }
 
 function youtubeIDToIframe(id){
-  return `<iframe width="380" data-zelfgebouwd height="214" src="${id}" frameborder="0" allowfullscreen></iframe>`
+  return `<iframe width="380" data-zelfgebouwd height="214" src="https://www.youtube.com/embed/${id}" frameborder="0" allowfullscreen></iframe>`
 }
 
 export function makeLongHTMLNewStyle(event){
   
+  if (!event.textForHTML) event.textForHTML = '';
   if (!event.mediaForHTML) event.mediaForHTML = []
   if (!event.socialsForHTML) event.socialsForHTML = []
   const mediaHTML = event.mediaForHTML

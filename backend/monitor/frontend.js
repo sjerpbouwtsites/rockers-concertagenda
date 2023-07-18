@@ -199,27 +199,28 @@ function eventToClientsLog(eventMsg, fields) {
     console.log(`${eventMsg.messageData?.content?.workerData?.name}`);
     console.dir(debug);
   } else if (debug instanceof Object) {
-    const keys = Object.keys(debug);
-    const values = Object.values(debug);
-    // console.log(
-    //   `${eventMsg.messageData?.content?.workerData?.name} - ${keys.join(", ")}`
-    // );
-    console.log('')
-    values.forEach((val, index) => {
-      if (typeof val === "string" || typeof val === "number") {
-        if (keys[index] === 'longTextHTML') {
-          console.log(`${val.substring(0, 50)} . . .`);  
-        } else {
-          console.log(`${keys[index]} - ${val}`);
-        }
-      } else if (typeof val === "undefined") {
-        console.log(`${keys[index]} - undefined`);
-      } else if (val === null) {
-        console.log(`${keys[index]} - null`);
-      } else {
-        console.dir(val);
-      }
-    });
+    console.dir(debug);
+    // const keys = Object.keys(debug);
+    // const values = Object.values(debug);
+    // // console.log(
+    // //   `${eventMsg.messageData?.content?.workerData?.name} - ${keys.join(", ")}`
+    // // );
+    // console.log('')
+    // values.forEach((val, index) => {
+    //   if (typeof val === "string" || typeof val === "number") {
+    //     if (keys[index] === 'longTextHTML') {
+    //       console.log(`${val.substring(0, 50)} . . .`);  
+    //     } else {
+    //       console.log(`${keys[index]} - ${val}`);
+    //     }
+    //   } else if (typeof val === "undefined") {
+    //     console.log(`${keys[index]} - undefined`);
+    //   } else if (val === null) {
+    //     console.log(`${keys[index]} - null`);
+    //   } else {
+    //     console.dir(val);
+    //   }
+    // });
   } else {
     console.log(debug);
   }

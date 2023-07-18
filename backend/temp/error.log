@@ -1,4 +1,129 @@
 
+  gebrdenobel-0 Error - 1:01:55 PM
+  Error: Evaluation failed: TypeError: document.querySelectorAll(...).map is not a function
+    at __puppeteer_evaluation_script__:102:59
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async gebrdenobelScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gebrdenobel.js:159:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:994:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:230:5) 
+  Evaluation failed: TypeError: document.querySelectorAll(...).map is not a function
+    at __puppeteer_evaluation_script__:102:59
+  
+  
+  gebrdenobel-0 Error - 12:54:56 PM
+  TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'BrowserContext'
+    |     property '_browser' -> object with constructor 'Browser'
+    --- property '_defaultContext' closes the circle
+    at JSON.stringify (<anonymous>)
+    at get json [as json] (file:///home/sjerp/dev/apache/concertagenda/backend/mods/rock-worker.js:206:17)
+    at Function.quick (file:///home/sjerp/dev/apache/concertagenda/backend/mods/rock-worker.js:145:24)
+    at QuickWorkerMessage.toConsole (file:///home/sjerp/dev/apache/concertagenda/backend/mods/rock-worker.js:93:26)
+    at AbstractScraper.dirtyLog (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:190:37)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1145:49)
+    at gebrdenobelScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gebrdenobel.js:370:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:994:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:230:5) 
+  Converting circular structure to JSON
+    --> starting at object with constructor 'BrowserContext'
+    |     property '_browser' -> object with constructor 'Browser'
+    --- property '_defaultContext' closes the circle
+  
+  
+  gebrdenobel-0 Error - 12:53:56 PM
+  TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'BrowserContext'
+    |     property '_browser' -> object with constructor 'Browser'
+    --- property '_defaultContext' closes the circle
+    at JSON.stringify (<anonymous>)
+    at get json [as json] (file:///home/sjerp/dev/apache/concertagenda/backend/mods/rock-worker.js:206:17)
+    at Function.quick (file:///home/sjerp/dev/apache/concertagenda/backend/mods/rock-worker.js:145:24)
+    at QuickWorkerMessage.toConsole (file:///home/sjerp/dev/apache/concertagenda/backend/mods/rock-worker.js:93:26)
+    at AbstractScraper.dirtyLog (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:190:37)
+    at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1145:49)
+    at gebrdenobelScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gebrdenobel.js:370:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:994:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:230:5) 
+  Converting circular structure to JSON
+    --> starting at object with constructor 'BrowserContext'
+    |     property '_browser' -> object with constructor 'Browser'
+    --- property '_defaultContext' closes the circle
+  
+  
+  boerderij-0 Error - 12:45:21 PM
+  TypeError: event.textForHTML.replaceAll is not a function
+    at makeLongHTMLNewStyle (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/longHTML.js:219:6)
+    at AbstractScraper.writeLongTextHTML (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1277:17)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1036:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:229:5) 
+  event.textForHTML.replaceAll is not a function
+  
+  
+  boerderij-0 Error - 12:43:55 PM
+  TypeError: event.textForHTML.replaceAll is not a function
+    at makeLongHTMLNewStyle (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/longHTML.js:218:6)
+    at AbstractScraper.writeLongTextHTML (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1277:17)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1036:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:229:5) 
+  event.textForHTML.replaceAll is not a function
+  
+  
+  metropool-1 Error - 12:43:46 PM
+  TypeError: Cannot read properties of undefined (reading 'replaceAll')
+    at makeLongHTMLNewStyle (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/longHTML.js:218:6)
+    at AbstractScraper.writeLongTextHTML (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1277:17)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1036:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:229:5) 
+  Cannot read properties of undefined (reading 'replaceAll')
+  
+  
+  occii-0 Error - 12:43:44 PM
+  TypeError: Cannot read properties of undefined (reading 'replaceAll')
+    at makeLongHTMLNewStyle (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/longHTML.js:218:6)
+    at AbstractScraper.writeLongTextHTML (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1277:17)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1036:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:229:5) 
+  Cannot read properties of undefined (reading 'replaceAll')
+  
+  
+  patronaat-2 Error - 12:43:36 PM
+  TypeError: Cannot read properties of undefined (reading 'replaceAll')
+    at makeLongHTMLNewStyle (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/longHTML.js:218:6)
+    at AbstractScraper.writeLongTextHTML (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1277:17)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1036:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:229:5) 
+  Cannot read properties of undefined (reading 'replaceAll')
+  
+  
+  kavka-1 Error - 12:43:34 PM
+  TypeError: Cannot read properties of undefined (reading 'replaceAll')
+    at makeLongHTMLNewStyle (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/longHTML.js:218:6)
+    at AbstractScraper.writeLongTextHTML (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1277:17)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1036:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:229:5) 
+  Cannot read properties of undefined (reading 'replaceAll')
+  
+  
+  boerderij-0 Error - 12:43:34 PM
+  TypeError: event.textForHTML.replaceAll is not a function
+    at makeLongHTMLNewStyle (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/longHTML.js:218:6)
+    at AbstractScraper.writeLongTextHTML (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1277:17)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1036:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:229:5) 
+  event.textForHTML.replaceAll is not a function
+  
+  
   doornroosje-1 Error - 9:26:10 AM
   Error: false
     at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1183:29

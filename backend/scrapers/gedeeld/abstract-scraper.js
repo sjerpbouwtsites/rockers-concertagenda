@@ -25,7 +25,8 @@ export default class AbstractScraper {
   debugCorruptedUnavailable = true;
   debugSingleMergedEventCheck = false;
   debugRawEventAsyncCheck = false;
-  debugPageInfo = false;
+  debugBaseEvents = false;
+  debugPageInfo = true;
 
   static unavailabiltyTerms = [
     'uitgesteld', 'verplaatst', 'locatie gewijzigd', 'besloten', 'afgelast', 'geannuleerd'
@@ -372,7 +373,7 @@ export default class AbstractScraper {
    */
   async makeBaseEventListEnd({stopFunctie, page, rawEvents}){
 
-    this.isForced && this.debugPageInfo && this.dirtyLog(rawEvents)
+    this.isForced && this.debugBaseEvents && this.dirtyLog(rawEvents)
 
     if (stopFunctie) {
       clearTimeout(stopFunctie);
@@ -959,6 +960,7 @@ export default class AbstractScraper {
     if (useableEventsList.length === 0) return useableEventsList;
 
     let singleEvent = useableEventsList.shift();
+    
     parentPort.postMessage(this.qwm.todoNew(useableEventsList.length));
 
     // maak pagina
@@ -1140,8 +1142,10 @@ export default class AbstractScraper {
    */  
   async getPageInfoEnd({pageInfo, stopFunctie, page, event}){
 
-    if (this.debug)
-      this.isForced && this.dirtyLog(pageInfo)
+    this.isForced && this.debugPageInfo && this.dirtyLog({
+      event,
+      pageInfo
+    })
 
     if (!pageInfo){
       page && !page.isClosed() && page.close();
@@ -1271,10 +1275,6 @@ export default class AbstractScraper {
 
   writeLongTextHTML(mergedEvent) {
     if (!mergedEvent) return null;
-    this.dirtyLog({
-      bla: 'writeLongTextHTML',
-      mergedEvent
-    })
     let uuid = crypto.randomUUID();
     let toPrint = '';
     if (this.puppeteerConfig.app.singlePage.longHTMLnewStyle){
@@ -1283,8 +1283,6 @@ export default class AbstractScraper {
       toPrint = verwerkLongHTML(mergedEvent.longTextHTML);
     }
 
-    this.dirtyLog(toPrint)
-    
     try {
       const longTextPath = `${fsDirections.publicTexts}/${uuid}.html`;
       fs.writeFileSync(longTextPath, toPrint, "utf-8");
