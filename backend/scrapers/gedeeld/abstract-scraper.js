@@ -1006,8 +1006,6 @@ export default class AbstractScraper {
     // samenvoegen & naar EventsList sturen
     singleEvent.merge(pageInfo);
 
-    singleEvent.longText = this.writeLongTextHTML(singleEvent);
-
     //titel / shortext postfix
     singleEvent = this.titelShorttextPostfix(singleEvent);
 
@@ -1035,6 +1033,8 @@ export default class AbstractScraper {
         : useableEventsList;      
     }
     
+    singleEvent.longText = this.writeLongTextHTML(singleEvent);
+
     const mergedEventCheckRes = await this.singleMergedEventCheck(singleEvent, pageInfo);
     if (mergedEventCheckRes.success) {
       if (this.debugSingleMergedEventCheck) {

@@ -180,8 +180,11 @@ export function makeLongHTMLNewStyle(event){
       if (bron.outer && bron.type === 'youtube'){
         return `<div class='iframe-wrapper-16-9'>${bron.outer}</div>`
       }
+      if (bron.outer && bron.type === 'spotify'){
+        return `<div class='iframe-wrapper-152px'>${bron.outer}</div>`
+      }      
       if (bron.outer){
-        return `${bron.outer}`
+        return `<div class='iframe-wrapper-generiek'>${bron.outer}</div>`
       }      
       if (bron.src && bron.type === 'youtube'){
         return `<div class='iframe-wrapper-16-9'>${youtubeSRCToIframe(bron.src)}</div>`;

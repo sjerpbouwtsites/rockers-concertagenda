@@ -257,7 +257,7 @@ dynamoScraper.getPageInfo = async function ({ page, event}) {
         ".article-block a[href*='instagram']"        
       ].join(', ')
   
-      const attributesToRemove = ['style', 'hidden', '_target', "frameborder", 'onclick', 'aria-hidden'];
+      const attributesToRemove = ['style', 'hidden', '_target', "frameborder", 'onclick', 'aria-hidden', 'allow', 'allowfullscreen', 'data-deferlazy','width', 'height'];
       const attributesToRemoveSecondRound = ['class', 'id' ];
       const removeHTMLWithStrings = [];
 
@@ -269,7 +269,7 @@ dynamoScraper.getPageInfo = async function ({ page, event}) {
 
       // eerst onzin attributes wegslopen
       const socAttrRemSelAdd = `${socialSelector ? `, ${socialSelector} *` : ''}`
-      document.querySelectorAll(`${textSelector} *${socAttrRemSelAdd}`)
+      document.querySelectorAll(`${textSelector} *${socAttrRemSelAdd}, iframe`)
         .forEach(elToStrip => {
           attributesToRemove.forEach(attr => {
             if (elToStrip.hasAttribute(attr)){
@@ -281,7 +281,15 @@ dynamoScraper.getPageInfo = async function ({ page, event}) {
       // media obj maken voordat HTML verdwijnt
       res.mediaForHTML = Array.from(document.querySelectorAll(mediaSelector))
         .map(bron => {
+
+          if (bron.hasAttribute('data-src-cmplz')){
+            bron.src = bron.getAttribute('data-src-cmplz')
+          }
           const src = bron?.src ? bron.src : '';
+          if (bron.hasAttribute('data-cmplz-target')) bron.removeAttribute('data-cmplz-target')
+          if (bron.hasAttribute('data-src-cmplz')) bron.removeAttribute('data-src-cmplz')
+          if (bron.hasAttribute('loading')) bron.removeAttribute('loading')
+          bron.className = ''
           return {
             outer: bron.outerHTML,
             src,
@@ -309,8 +317,7 @@ dynamoScraper.getPageInfo = async function ({ page, event}) {
               el.textContent = 'Onbekende social';
             }
           }
-
-          el.className = 'long-html__social-list-link'
+          el.className = ''
           el.target = '_blank';
           return el.outerHTML
         })
