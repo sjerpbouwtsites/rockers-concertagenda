@@ -258,6 +258,11 @@ afasliveScraper.getPageInfo = async function ({ page, event }) {
       const mediaSelector = '.video iframe, .spotify iframe';
       const textSelector = 'article .wysiwyg';
       const removeEmptyHTMLFrom = 'article .wysiwyg';
+      const removeSelectors = []
+      const socialSelector = [];
+      const attributesToRemove = ['style', 'hidden', '_target', "frameborder", 'onclick'];
+      const attributesToRemoveSecondRound = ['class', 'id' ];      
+      const removeHTMLWithStrings = ['Tassenbeleid']
       res.mediaForHTML = Array.from(document.querySelectorAll(mediaSelector))
         .map(bron => {
           return {
@@ -268,18 +273,48 @@ afasliveScraper.getPageInfo = async function ({ page, event }) {
           }
         })
 
+      // eerst onzin attributes wegslopen
+      const socAttrRemSelAdd = `${socialSelector ? `, ${socialSelector} *` : ''}`
+      document.querySelectorAll(`${textSelector} *${socAttrRemSelAdd}`)
+        .forEach(elToStrip => {
+          attributesToRemove.forEach(attr => {
+            if (elToStrip.hasAttribute(attr)){
+              elToStrip.removeAttribute(attr)
+            }
+          })
+        })        
+
+      // stript HTML tbv text
+      removeSelectors.length && document.querySelectorAll(removeSelectors)
+        .forEach(toRemove => toRemove.parentNode.removeChild(toRemove))
+
+      // verwijder ongewenste paragrafen over bv restaurants
+      Array.from(document.querySelectorAll(`${textSelector} p, ${textSelector} span, ${textSelector} a`))
+        .forEach(verwijder => {
+          const heeftEvilString = !!removeHTMLWithStrings.find(evilString => verwijder.textContent.includes(evilString))
+          if (heeftEvilString) {
+            verwijder.parentNode.removeChild(verwijder)
+          }
+        });
+
+      // lege HTML eruit cq HTML zonder tekst of getallen
       document.querySelectorAll(`${removeEmptyHTMLFrom} > *`)
         .forEach(checkForEmpty => {
-          const leegMatch = checkForEmpty.innerHTML.match(/[\w\d]/g);
+          const leegMatch = checkForEmpty.innerHTML.replace('&nbsp;','').match(/[\w\d]/g);
           if (!Array.isArray(leegMatch)){
             checkForEmpty.parentNode.removeChild(checkForEmpty)
           }
         })
 
-
-      Array.from(document.querySelectorAll('.wysiwyg p'))
-        .filter(paragraph => paragraph.innerHTML.includes('Tassenbeleid'))
-        .forEach(blaTas => blaTas.parentNode.removeChild(blaTas))
+      // laatste attributen eruit.
+      document.querySelectorAll(`${textSelector} *`)
+        .forEach(elToStrip => {
+          attributesToRemoveSecondRound.forEach(attr => {
+            if (elToStrip.hasAttribute(attr)){
+              elToStrip.removeAttribute(attr)
+            }
+          })
+        })    
 
       res.textForHTML = Array.from(document.querySelectorAll(textSelector))
         .map(el => el.innerHTML)

@@ -17,7 +17,7 @@ export const AbstractWorkerConfig = {
 export const workerConfig = {
   "013" : {workerCount: 4 },
   afaslive :{
-    workerCount: 2,
+    workerCount: 1,
     CPUReq: "high",
     workerConcurrent: 1,
   },

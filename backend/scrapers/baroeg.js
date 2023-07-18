@@ -248,7 +248,7 @@ baroegScraper.getPageInfo = async function ({ page, event }) {
         })
 
       // stript HTML tbv text
-      document.querySelectorAll(removeSelectors)
+      removeSelectors.length && document.querySelectorAll(removeSelectors)
         .forEach(toRemove => toRemove.parentNode.removeChild(toRemove))
 
       // lege HTML eruit cq HTML zonder tekst of getallen

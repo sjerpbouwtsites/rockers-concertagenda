@@ -147,7 +147,116 @@ defluxScraper.getPageInfo = async function ({ page, event}) {
     // TODO sold out flux
     
     res.price = eventScheme.querySelector('[itemprop="event-price"]')?.getAttribute('content') ?? '';
-    res.longTextHTML = document.querySelector('[itemprop="description"]')?.innerHTML ?? '';
+
+
+
+
+
+    // #region longHTML
+
+    const textSelector = '.eventon_desc_in';
+    const mediaSelector = [`.eventon_list_event iframe` 
+    ].join(', ');
+    const removeEmptyHTMLFrom = textSelector
+    const socialSelector = [
+      '.FacebookShare a',
+      '.Twitter a'
+    ].join(', ');
+    const removeSelectors = [
+      '.fa'
+    ].join(', ')
+    
+    const attributesToRemove = ['style', 'hidden', '_target', "frameborder", 'onclick'];
+    const attributesToRemoveSecondRound = ['class', 'id' ];
+    const removeHTMLWithStrings = [];
+
+    // eerst onzin attributes wegslopen
+    const socAttrRemSelAdd = `${socialSelector ? `, ${socialSelector} *` : ''}`
+    document.querySelectorAll(`${textSelector} *${socAttrRemSelAdd}`)
+      .forEach(elToStrip => {
+        attributesToRemove.forEach(attr => {
+          if (elToStrip.hasAttribute(attr)){
+            elToStrip.removeAttribute(attr)
+          }
+        })
+      })
+
+    // media obj maken voordat HTML verdwijnt
+    res.mediaForHTML = Array.from(document.querySelectorAll(mediaSelector))
+      .map(bron => {
+        const src = bron?.src ? bron.src : '';
+        return {
+          outer: bron.outerHTML,
+          src,
+          id: null,
+          type: src.includes('spotify') 
+            ? 'spotify' 
+            : src.includes('youtube') 
+              ? 'youtube'
+              : 'bandcamp'
+        }
+      })
+
+    // socials obj maken voordat HTML verdwijnt
+    res.socialsForHTML = !socialSelector ? '' : Array.from(document.querySelectorAll(socialSelector))
+      .map(el => {
+        //custom deflux
+        if (el.outerHTML.toLowerCase().includes('facebook')){
+          el.textContent = 'Facebook';
+        }
+        if (el.outerHTML.toLowerCase().includes('twitter')){
+          el.textContent = 'Tweet';
+        }        
+        //endcustom
+        el.className = 'long-html__social-list-link'
+        el.target = '_blank';
+
+        return el.outerHTML
+      })
+
+    // stript HTML tbv text
+    removeSelectors.length && document.querySelectorAll(removeSelectors)
+      .forEach(toRemove => toRemove.parentNode.removeChild(toRemove))
+
+    // verwijder ongewenste paragrafen over bv restaurants
+    Array.from(document.querySelectorAll(`${textSelector} p, ${textSelector} span, ${textSelector} a`))
+      .forEach(verwijder => {
+        const heeftEvilString = !!removeHTMLWithStrings.find(evilString => verwijder.textContent.includes(evilString))
+        if (heeftEvilString) {
+          verwijder.parentNode.removeChild(verwijder)
+        }
+      });
+
+    // lege HTML eruit cq HTML zonder tekst of getallen
+    document.querySelectorAll(`${removeEmptyHTMLFrom} > *`)
+      .forEach(checkForEmpty => {
+        const leegMatch = checkForEmpty.innerHTML.replace('&nbsp;','').match(/[\w\d]/g);
+        if (!Array.isArray(leegMatch)){
+          checkForEmpty.parentNode.removeChild(checkForEmpty)
+        }
+      })
+
+    // laatste attributen eruit.
+    document.querySelectorAll(`${textSelector} *`)
+      .forEach(elToStrip => {
+        attributesToRemoveSecondRound.forEach(attr => {
+          if (elToStrip.hasAttribute(attr)){
+            elToStrip.removeAttribute(attr)
+          }
+        })
+      })      
+
+    // tekst.
+    res.textForHTML = Array.from(document.querySelectorAll(textSelector))
+      .map(el => el.innerHTML)
+      .join('')
+
+    // #endregion longHTML
+
+
+
+
+
     return res;
   }, {event});
 

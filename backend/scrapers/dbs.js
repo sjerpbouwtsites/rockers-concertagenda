@@ -227,7 +227,7 @@ dbsScraper.getPageInfo = async function ({ page, event }) {
       })
 
     // stript HTML tbv text
-    removeSelectors && document.querySelectorAll(removeSelectors)
+    removeSelectors.length && document.querySelectorAll(removeSelectors)
       .forEach(toRemove => toRemove.parentNode.removeChild(toRemove))
 
     // verwijder ongewenste paragrafen over bv restaurants
