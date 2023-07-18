@@ -138,13 +138,10 @@ boerderijScraper.getPageInfo = async function ({ event }) {
     res.corrupted += `ajax verzoek faalt naar ${url}`;
     return await this.getPageInfoEnd({res, stopFunctie})
   }
+  res.ajaxRes = ajaxRes;
 
   try {
-    const youtubeVideoIDMatch = ajaxRes?.video ?? ""; //ajaxRes.video.match(/embed\/(\w+)?/);
-    let youtubeIframe;
-    if (youtubeVideoIDMatch && youtubeVideoIDMatch.length) {
-      youtubeIframe = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${youtubeVideoIDMatch[0]}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
-    }
+    const youtubeIframe = `<iframe width="560" height="315" src="${ajaxRes.video}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
     res.longTextHTML =`${ajaxRes.description}<br>${youtubeIframe}`;
   } catch (catchedError) {
     res.errors.push({
@@ -186,6 +183,8 @@ boerderijScraper.getPageInfo = async function ({ event }) {
       toDebug:res,
     });
   }
+
+  this.dirtyLog(res)
 
   res.soldOut = ajaxRes?.label?.title?.toLowerCase().includes('uitverkocht') ?? null
 
