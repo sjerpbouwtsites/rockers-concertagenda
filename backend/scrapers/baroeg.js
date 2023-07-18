@@ -213,6 +213,7 @@ baroegScraper.getPageInfo = async function ({ page, event }) {
       ].join(', ');
       const attributesToRemove = ['style', 'hidden', '_target', "frameborder"];
 
+      // eerst onzin attributes wegslopen
       document.querySelectorAll(`${textSelector} *, ${socialSelector} *`)
         .forEach(elToStrip => {
           attributesToRemove.forEach(attr => {
@@ -222,6 +223,7 @@ baroegScraper.getPageInfo = async function ({ page, event }) {
           })
         })
 
+      // media obj maken voordat HTML verdwijnt
       res.mediaForHTML = Array.from(document.querySelectorAll(mediaSelector))
         .map(bron => {
           const src = bron?.src ? bron.src : '';
@@ -237,6 +239,7 @@ baroegScraper.getPageInfo = async function ({ page, event }) {
           }
         })
 
+      // socials obj maken voordat HTML verdwijnt
       res.socialsForHTML = Array.from(document.querySelectorAll(socialSelector))
         .map(el => {
           el.className = 'long-html__social-list-link'
@@ -244,9 +247,11 @@ baroegScraper.getPageInfo = async function ({ page, event }) {
           return el.outerHTML
         })
 
+      // stript HTML tbv text
       document.querySelectorAll(removeSelectors)
         .forEach(toRemove => toRemove.parentNode.removeChild(toRemove))
 
+      // lege HTML eruit cq HTML zonder tekst of getallen
       document.querySelectorAll(`${removeEmptyHTMLFrom} > *`)
         .forEach(checkForEmpty => {
           const leegMatch = checkForEmpty.innerHTML.match(/[\w\d]/g);
@@ -255,11 +260,10 @@ baroegScraper.getPageInfo = async function ({ page, event }) {
           }
         })
 
+      // tekst.
       res.textForHTML = Array.from(document.querySelectorAll(textSelector))
         .map(el => el.innerHTML)
         .join('')
-
-
 
       // #endregion longHTML
 

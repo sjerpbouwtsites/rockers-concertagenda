@@ -187,11 +187,91 @@ bibelotScraper.getPageInfo = async function ({ page, event }) {
         res.priceTextcontent = verkoopElAr[0].textContent;
       }
 
-      res.longTextHTML = Array
-        .from(document.querySelectorAll(".main-column > * ~ .content"))
-        .map(a=>a.innerHTML)
-        .join('') ?? ''
-      ;
+      // #region longHTML
+
+      const mediaSelector = ['.main-column iframe', 
+      ].join(', ');
+      const textSelector = '.main-column';
+      const removeEmptyHTMLFrom = '.main-column'//textSelector;
+      const socialSelector = [
+        ".main-column p a[rel*='noreferrer noopener']"
+      ].join(', ');
+      const removeSelectors = [`.main-column > .content:first-child`, 
+        '.main-column > .achtergrond-afbeelding:first-child',
+        '.main-column > .content + .achtergrond-afbeelding', // onduidelijk welke
+        ".main-column .wp-block-embed",
+        ".main-column p a[rel*='noreferrer noopener']" // embed wrappers
+      ].join(', ')
+      
+      const attributesToRemove = ['style', 'hidden', '_target', "frameborder"];
+      const removeHTMLWithStrings = ['hapje en een drankje'];
+
+      // eerst onzin attributes wegslopen
+      const socAttrRemSelAdd = `${socialSelector ? `, ${socialSelector} *` : ''}`
+      res.blablabla = `${textSelector} *${socAttrRemSelAdd}`;
+      document.querySelectorAll(`${textSelector} *${socAttrRemSelAdd}`)
+        .forEach(elToStrip => {
+          attributesToRemove.forEach(attr => {
+            if (elToStrip.hasAttribute(attr)){
+              elToStrip.removeAttribute(attr)
+            }
+          })
+        })
+
+      // media obj maken voordat HTML verdwijnt
+      res.mediaForHTML = Array.from(document.querySelectorAll(mediaSelector))
+        .map(bron => {
+          const src = bron?.src ? bron.src : '';
+          return {
+            outer: bron.outerHTML,
+            src,
+            id: null,
+            type: src.includes('spotify') 
+              ? 'spotify' 
+              : src.includes('youtube') 
+                ? 'youtube'
+                : 'bandcamp'
+          }
+        })
+
+      // socials obj maken voordat HTML verdwijnt
+      res.socialsForHTML = !socialSelector ? '' : Array.from(document.querySelectorAll(socialSelector))
+        .map(el => {
+          el.className = 'long-html__social-list-link'
+          el.target = '_blank'
+          return el.outerHTML
+        })
+
+      // stript HTML tbv text
+      document.querySelectorAll(removeSelectors)
+        .forEach(toRemove => toRemove.parentNode.removeChild(toRemove))
+
+      // verwijder ongewenste paragrafen over bv restaurants
+      Array.from(document.querySelectorAll(`${textSelector} p, ${textSelector} span, ${textSelector} a`))
+        .forEach(verwijder => {
+          const heeftEvilString = !!removeHTMLWithStrings.find(evilString => verwijder.textContent.includes(evilString))
+          if (heeftEvilString) {
+            verwijder.parentNode.removeChild(verwijder)
+          }
+        });
+
+      // lege HTML eruit cq HTML zonder tekst of getallen
+      document.querySelectorAll(`${removeEmptyHTMLFrom} > *`)
+        .forEach(checkForEmpty => {
+          const leegMatch = checkForEmpty.innerHTML.match(/[\w\d]/g);
+          if (!Array.isArray(leegMatch)){
+            checkForEmpty.parentNode.removeChild(checkForEmpty)
+          }
+        })
+
+      // tekst.
+      res.textForHTML = Array.from(document.querySelectorAll(textSelector))
+        .map(el => el.innerHTML)
+        .join('')
+
+      // #endregion longHTML
+
+
       const imageMatch = document
         .querySelector(".achtergrond-afbeelding")
         ?.style.backgroundImage.match(/https.*.png|https.*.jpg|https.*.jpeg/);

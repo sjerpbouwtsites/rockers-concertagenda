@@ -1,4 +1,17 @@
 
+  bibelot-0 Error - 7:33:52 AM
+  Error: Evaluation failed: DOMException: Failed to execute 'querySelectorAll' on 'Document': The provided selector is empty.
+    at __puppeteer_evaluation_script__:143:48
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async bibelotScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/bibelot.js:97:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:992:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:229:5) 
+  Evaluation failed: DOMException: Failed to execute 'querySelectorAll' on 'Document': The provided selector is empty.
+    at __puppeteer_evaluation_script__:143:48
+  
+  
   baroeg-0 Error - 7:11:49 AM
   Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'includes')
     at __puppeteer_evaluation_script__:56:28
