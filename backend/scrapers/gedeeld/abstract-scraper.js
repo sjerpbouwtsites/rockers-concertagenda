@@ -9,7 +9,7 @@ import EventsList from "../../mods/events-list.js";
 import MusicEvent from "../../mods/music-event.js";
 import getVenueMonths from "../../mods/months.js";
 import ErrorWrapper from "../../mods/error-wrapper.js";
-import verwerkLongHTML from "./longHTML.js";
+import verwerkLongHTML, {makeLongHTMLNewStyle} from "./longHTML.js";
 
 
 /**
@@ -25,6 +25,7 @@ export default class AbstractScraper {
   debugCorruptedUnavailable = true;
   debugSingleMergedEventCheck = false;
   debugRawEventAsyncCheck = false;
+  debugPageInfo = false;
 
   static unavailabiltyTerms = [
     'uitgesteld', 'verplaatst', 'locatie gewijzigd', 'besloten', 'afgelast', 'geannuleerd'
@@ -371,7 +372,7 @@ export default class AbstractScraper {
    */
   async makeBaseEventListEnd({stopFunctie, page, rawEvents}){
 
-    this.isForced && this.dirtyLog(rawEvents)
+    this.isForced && this.debugPageInfo && this.dirtyLog(rawEvents)
 
     if (stopFunctie) {
       clearTimeout(stopFunctie);
@@ -996,7 +997,6 @@ export default class AbstractScraper {
 
     // nabewerken page info
     pageInfo.price = this.getPrice(pageInfo?.priceTextcontent);
-    pageInfo.longText = this.writeLongTextHTML(pageInfo?.longTextHTML);
 
     // als single event nog music event moet worden.
     if (!(singleEvent instanceof MusicEvent)) {
@@ -1005,6 +1005,8 @@ export default class AbstractScraper {
 
     // samenvoegen & naar EventsList sturen
     singleEvent.merge(pageInfo);
+
+    singleEvent.longText = this.writeLongTextHTML(singleEvent);
 
     //titel / shortext postfix
     singleEvent = this.titelShorttextPostfix(singleEvent);
@@ -1138,7 +1140,8 @@ export default class AbstractScraper {
    */  
   async getPageInfoEnd({pageInfo, stopFunctie, page, event}){
 
-    this.isForced && this.dirtyLog(pageInfo)
+    if (this.debug)
+      this.isForced && this.dirtyLog(pageInfo)
 
     if (!pageInfo){
       page && !page.isClosed() && page.close();
@@ -1253,37 +1256,43 @@ export default class AbstractScraper {
     return null;
   }  
 
-  postPageInfoProcessing(pageInfo = null) {
-    const pageInfoCopy = { ...pageInfo };
-    if (!pageInfo) return {};
+  // postPageInfoProcessing(pageInfo = null) {
+  //   const pageInfoCopy = { ...pageInfo };
+  //   if (!pageInfo) return {};
   
-    if (pageInfo.priceTextcontent || pageInfo.priceContexttext) {
-      const context = pageInfo?.priceContexttext ?? null;
-      pageInfoCopy.price = Number(this.getPriceFromHTML(pageInfo.priceTextcontent, context));
-    }
+  //   if (pageInfo.priceTextcontent || pageInfo.priceContexttext) {
+  //     const context = pageInfo?.priceContexttext ?? null;
+  //     pageInfoCopy.price = Number(this.getPriceFromHTML(pageInfo.priceTextcontent, context));
+  //   }
   
-    pageInfoCopy.longText = this.writeLongTextHTML(pageInfo.longTextHTML);
-    return pageInfoCopy;
-  }  
+  //   pageInfoCopy.longText = this.writeLongTextHTML(pageInfo);
+  //   return pageInfoCopy;
+  // }  
 
-  writeLongTextHTML(longTextHTML) {
-    if (!longTextHTML) return null;
+  writeLongTextHTML(mergedEvent) {
+    if (!mergedEvent) return null;
+    this.dirtyLog({
+      bla: 'writeLongTextHTML',
+      mergedEvent
+    })
     let uuid = crypto.randomUUID();
-    const gezuiverdeHTML = verwerkLongHTML(longTextHTML);
+    let toPrint = '';
+    if (this.puppeteerConfig.app.singlePage.longHTMLnewStyle){
+      toPrint = makeLongHTMLNewStyle(mergedEvent)
+    } else{
+      toPrint = verwerkLongHTML(mergedEvent.longTextHTML);
+    }
+
+    this.dirtyLog(toPrint)
+    
     try {
       const longTextPath = `${fsDirections.publicTexts}/${uuid}.html`;
-      this.dirtyLog({
-        
-        zuiver: `<code>${gezuiverdeHTML}</code>`,
-        ruw: `<code>${longTextHTML}</code>`,
-        
-      }, 'html')
-      fs.writeFileSync(longTextPath, gezuiverdeHTML, "utf-8");
+      fs.writeFileSync(longTextPath, toPrint, "utf-8");
       return longTextPath;
     } catch (err) {
       _t.handleError(err, workerData, `write long text fail`, 'notice', {
         path: `${fsDirections.publicTexts}/${uuid}.html`,
-        text: gezuiverdeHTML
+        text: toPrint
       });
     }
     return '';

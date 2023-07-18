@@ -289,7 +289,7 @@ paradisoScraper.getPageInfo = async function ({ page, event }) {
         document.querySelector('.css-gwbug6').parentNode.removeChild(document.querySelector('.css-gwbug6'))
       }
 
-      res.longTextHTML = Array.from(document.querySelectorAll('.css-1motkkb'))
+      res.longTextHTML = Array.from(document.querySelectorAll('.css-1motkkb, .css-m8ufwp'))
       
       return res;
     },

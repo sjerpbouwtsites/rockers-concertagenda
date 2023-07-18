@@ -32,6 +32,7 @@ export function MakeScraperConfig(obj){
         useCustomScraper: null, // geen puppeteer, geen page aangemaakt
         requiredProperties: [], //waarop page Info word gecontroleerd
         enforceMusicEventType: false, // geeft MusicEvent opdracht om properties te trimmen.
+        longHTMLnewStyle: true
       }
     }
   }

@@ -21,7 +21,7 @@ export const workerConfig = {
     CPUReq: "high",
     workerConcurrent: 1,
   },
-  baroeg: {workerCount: 2, workerConcurrent: 1 },
+  baroeg: {workerCount: 2, workerConcurrent: 2 },
   bibelot: { workerCount: 1, workerConcurrent: 1 },
   boerderij:{ workerCount: 1, CPUReq: "low", workerConcurrent: 1 },
   cpunt: { workerCount: 1, workerConcurrent: 1 },

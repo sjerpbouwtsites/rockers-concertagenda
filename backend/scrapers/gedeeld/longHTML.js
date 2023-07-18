@@ -159,3 +159,66 @@ function tweedeBatchVerwijderen(htmlString){
   workingString = workingString.replaceAll(/(\<div.*?\>|\<\/div.*?\>)/g,'')
   return workingString;
 }
+
+
+function youtubeSRCToIframe(src){
+  return `<div class='iframe-wrapper-16-9'>
+    <iframe width="380" data-zelfgebouwd height="214" src="${src}" frameborder="0" allowfullscreen></iframe>
+  </div>`
+}
+
+function youtubeIDToIframe(id){
+  return `<div class='iframe-wrapper-16-9'>
+    <iframe width="380" data-zelfgebouwd height="214" src="${id}" frameborder="0" allowfullscreen></iframe>
+  </div>`
+}
+
+export function makeLongHTMLNewStyle(event){
+  
+  if (!event.mediaForHTML) event.mediaForHTML = []
+  if (!event.socialsForHTML) event.socialsForHTML = []
+  const mediaHTML = event.mediaForHTML
+    .map(bron => {
+      if (bron.outer){
+        return bron.outer
+      }
+      if (bron.src && bron.type === 'youtube'){
+        return youtubeSRCToIframe(bron.src)
+      }
+      if (bron.id && bron.type === 'youtube'){
+        return youtubeIDToIframe(bron.id)
+      }      
+      if (bron.src && bron.type !== 'youtube'){
+        return `onbekende type ${bron.type}`
+      }
+      return JSON.stringify(bron)
+    })
+    .join(``)
+
+  const mediaSection = mediaHTML 
+    ? `<section class='long-html__music-videos'>${mediaHTML}</section>`
+    :''
+  const socialsHTML = event.socialsForHTML.map(socialHTML =>{
+    return `<li class='long-html__social-list-item'>${socialHTML}</li>`;
+  }).join('');
+  const socialsSection = socialsHTML.length 
+    ? `<nav class="long-html__social">
+    <ul class='long-html__social-list'>
+      ${socialsHTML}
+    </ul>
+  </nav>`
+    :'';
+
+  const reshtml = `
+    <div class='long-html'>
+    <section class='long-html__text'>
+    ${event.textForHTML}
+    </section>
+    ${mediaSection}
+    ${socialsSection}
+    </div>
+  `;
+
+  return reshtml;
+  
+}

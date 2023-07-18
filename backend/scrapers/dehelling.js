@@ -20,7 +20,8 @@ const dehellingScraper = new AbstractScraper(makeScraperConfig({
         requiredProperties: ['venueEventUrl', 'title', 'startDateTime']
       },
       singlePage: {
-        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
+        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime'],
+        longHTMLnewStyle: true
       }
     }
   
@@ -155,7 +156,48 @@ dehellingScraper.getPageInfo = async function ({ page,event }) {
         errors: [],
       };
       res.priceTextcontent = document.querySelector('.c-event-meta__table')?.textContent ?? null;
-      res.longTextHTML = document.querySelector('.c-event-content')?.innerHTML ?? null
+
+      const lineupEl = document.querySelector('.c-event-content__lineup');
+      if (lineupEl){
+        const lineup = Array.from(document.querySelectorAll('.u-section__inner.c-event-content__lineup li'))
+          .map(li=> li.textContent)
+          .join(', ');
+
+        res.shortText = `${event.shortText}. Lineup: ${lineup}`;
+        lineupEl.parentNode.removeChild(lineupEl)
+      }
+      const shareEl = document.querySelector('.c-event-content__sharer');
+      if (shareEl){
+        shareEl.parentNode.removeChild(shareEl)
+      }
+     
+
+      res.mediaForHTML = Array.from(document.querySelectorAll('iframe')).map(iframe => {
+        iframe.removeAttribute('data-cookie-consent-accepted');
+        if (!iframe.hasAttribute('src') && iframe.hasAttribute('data-src')){
+          iframe.src = iframe.getAttribute('data-src');
+          iframe.removeAttribute('data-src');
+        }
+        if (iframe.hasAttribute('hidden')){
+          iframe.removeAttribute('hidden')
+        }
+        if (iframe.hasAttribute('aria-hidden')){
+          iframe.removeAttribute('aria-hidden')
+        }        
+        return {
+          outer: iframe.outerHTML,
+          src: iframe.src,
+          id: null,
+          type: iframe.src.includes('bandcamp')
+            ? 'bandcamp'
+            : 'youtube'
+        }
+      })
+
+      res.textForHTML = Array.from(document.querySelectorAll('.c-event-content__text'))
+        .map(el => el.innerHTML)
+        .join('')
+
       return res;
     },
     {event}

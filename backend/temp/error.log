@@ -1,4 +1,274 @@
 
+  baroeg-0 Error - 7:11:49 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'includes')
+    at __puppeteer_evaluation_script__:56:28
+    at Array.map (<anonymous>)
+    at __puppeteer_evaluation_script__:51:10
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async baroegScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:174:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:992:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:229:5) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'includes')
+    at __puppeteer_evaluation_script__:56:28
+    at Array.map (<anonymous>)
+    at __puppeteer_evaluation_script__:51:10
+  
+  
+  baroeg-1 Error - 7:11:45 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'includes')
+    at __puppeteer_evaluation_script__:56:28
+    at Array.map (<anonymous>)
+    at __puppeteer_evaluation_script__:51:10
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async baroegScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:174:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:992:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:229:5) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'includes')
+    at __puppeteer_evaluation_script__:56:28
+    at Array.map (<anonymous>)
+    at __puppeteer_evaluation_script__:51:10
+  
+  
+  baroeg-0 Error - 6:42:51 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'includes')
+    at __puppeteer_evaluation_script__:56:28
+    at Array.map (<anonymous>)
+    at __puppeteer_evaluation_script__:51:10
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async baroegScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:174:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:992:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:229:5) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'includes')
+    at __puppeteer_evaluation_script__:56:28
+    at Array.map (<anonymous>)
+    at __puppeteer_evaluation_script__:51:10
+  
+  
+  baroeg-1 Error - 6:42:47 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'includes')
+    at __puppeteer_evaluation_script__:56:28
+    at Array.map (<anonymous>)
+    at __puppeteer_evaluation_script__:51:10
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async baroegScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:174:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:992:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:229:5) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'includes')
+    at __puppeteer_evaluation_script__:56:28
+    at Array.map (<anonymous>)
+    at __puppeteer_evaluation_script__:51:10
+  
+  
+  baroeg-1 Error - 6:29:43 AM
+  Error: Evaluation failed: DOMException: Failed to execute 'querySelectorAll' on 'Document': '.single-post .post-content h3, 
+        .single-post .post-content .wpt_listing, 
+        .post-content .su-youtube, 
+        .post-content .su-spotify, 
+        .post-content .su-button,
+        .post-content .su-button-center,
+        ' is not a valid selector.
+    at __puppeteer_evaluation_script__:66:16
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async baroegScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:174:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:992:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:229:5) 
+  Evaluation failed: DOMException: Failed to execute 'querySelectorAll' on 'Document': '.single-post .post-content h3, 
+        .single-post .post-content .wpt_listing, 
+        .post-content .su-youtube, 
+        .post-content .su-spotify, 
+        .post-content .su-button,
+        .post-content .su-button-center,
+        ' is not a valid selector.
+    at __puppeteer_evaluation_script__:66:16
+  
+  
+  baroeg-0 Error - 6:29:39 AM
+  Error: Evaluation failed: DOMException: Failed to execute 'querySelectorAll' on 'Document': '.single-post .post-content h3, 
+        .single-post .post-content .wpt_listing, 
+        .post-content .su-youtube, 
+        .post-content .su-spotify, 
+        .post-content .su-button,
+        .post-content .su-button-center,
+        ' is not a valid selector.
+    at __puppeteer_evaluation_script__:66:16
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async baroegScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:174:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:992:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:229:5) 
+  Evaluation failed: DOMException: Failed to execute 'querySelectorAll' on 'Document': '.single-post .post-content h3, 
+        .single-post .post-content .wpt_listing, 
+        .post-content .su-youtube, 
+        .post-content .su-spotify, 
+        .post-content .su-button,
+        .post-content .su-button-center,
+        ' is not a valid selector.
+    at __puppeteer_evaluation_script__:66:16
+  
+  
+  baroeg-1 Error - 6:16:57 AM
+  TypeError: event.socialsForHTML.map is not a function
+    at makeLongHTMLNewStyle (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/longHTML.js:201:44)
+    at AbstractScraper.writeLongTextHTML (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1281:17)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1009:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:229:5) 
+  event.socialsForHTML.map is not a function
+  
+  
+  baroeg-0 Error - 6:16:54 AM
+  TypeError: event.socialsForHTML.map is not a function
+    at makeLongHTMLNewStyle (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/longHTML.js:201:44)
+    at AbstractScraper.writeLongTextHTML (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1281:17)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1009:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:229:5) 
+  event.socialsForHTML.map is not a function
+  
+  
+  baroeg-1 Error - 6:15:47 AM
+  TypeError: event.socialsForHTML?.map is not a function
+    at makeLongHTMLNewStyle (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/longHTML.js:199:45)
+    at AbstractScraper.writeLongTextHTML (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1281:17)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1009:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:229:5) 
+  event.socialsForHTML?.map is not a function
+  
+  
+  baroeg-0 Error - 6:15:45 AM
+  TypeError: event.socialsForHTML?.map is not a function
+    at makeLongHTMLNewStyle (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/longHTML.js:199:45)
+    at AbstractScraper.writeLongTextHTML (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1281:17)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1009:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:229:5) 
+  event.socialsForHTML?.map is not a function
+  
+  
+  afaslive-0 Error - 6:02:10 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of null (reading 'length')
+    at __puppeteer_evaluation_script__:134:56
+    at NodeList.forEach (<anonymous>)
+    at __puppeteer_evaluation_script__:133:10
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async afasliveScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/afaslive.js:138:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:992:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:229:5) 
+  Evaluation failed: TypeError: Cannot read properties of null (reading 'length')
+    at __puppeteer_evaluation_script__:134:56
+    at NodeList.forEach (<anonymous>)
+    at __puppeteer_evaluation_script__:133:10
+  
+  
+  dehelling-0 Error - 4:55:41 AM
+  TypeError: Cannot read properties of undefined (reading 'call')
+    at MusicEvent.clean (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:29:38)
+    at MusicEvent.register (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:55:10)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1048:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:229:5) 
+  Cannot read properties of undefined (reading 'call')
+  
+  
+  dehelling-0 Error - 4:54:00 AM
+  TypeError: MusicEvent._ref.hasOwn is not a function
+    at MusicEvent.clean (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:29:28)
+    at MusicEvent.register (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:55:10)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1048:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:229:5) 
+  MusicEvent._ref.hasOwn is not a function
+  
+  
+  dehelling-0 Error - 4:52:43 AM
+  TypeError: toMerge is not iterable
+    at MusicEvent.merge (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:23:19)
+    at new MusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/mods/music-event.js:19:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:415:31
+    at Array.map (<anonymous>)
+    at AbstractScraper.makeBaseEventListEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:415:16)
+    at dehellingScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dehelling.js:66:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:220:29) 
+  toMerge is not iterable
+  
+  
+  dehelling-0 Error - 4:43:02 AM
+  TypeError: Cannot read properties of undefined (reading 'map')
+    at makeLongHTMLNewStyle (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/longHTML.js:172:6)
+    at AbstractScraper.writeLongTextHTML (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1277:17)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1009:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:229:5) 
+  Cannot read properties of undefined (reading 'map')
+  
+  
+  dehelling-0 Error - 4:32:13 AM
+  Error: Evaluation failed: TypeError: document.querySelectorAll(...).map is not a function
+    at __puppeteer_evaluation_script__:23:62
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async dehellingScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dehelling.js:152:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:991:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:228:5) 
+  Evaluation failed: TypeError: document.querySelectorAll(...).map is not a function
+    at __puppeteer_evaluation_script__:23:62
+  
+  
+  dehelling-0 Error - 4:27:14 AM
+  Error: Evaluation failed: TypeError: document.querySelectorAll(...).map is not a function
+    at __puppeteer_evaluation_script__:23:62
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async dehellingScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dehelling.js:152:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:991:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:228:5) 
+  Evaluation failed: TypeError: document.querySelectorAll(...).map is not a function
+    at __puppeteer_evaluation_script__:23:62
+  
+  
+  dehelling-0 Error - 3:12:28 AM
+  Error: Evaluation failed: TypeError: document.querySelectorAll(...).map is not a function
+    at __puppeteer_evaluation_script__:25:10
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async dehellingScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dehelling.js:151:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:991:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:228:5) 
+  Evaluation failed: TypeError: document.querySelectorAll(...).map is not a function
+    at __puppeteer_evaluation_script__:25:10
+  
+  
+  dehelling-0 Error - 3:12:13 AM
+  Error: Evaluation failed: TypeError: document.querySelectorAll(...).map is not a function
+    at __puppeteer_evaluation_script__:25:10
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async dehellingScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dehelling.js:151:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:991:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:228:5) 
+  Evaluation failed: TypeError: document.querySelectorAll(...).map is not a function
+    at __puppeteer_evaluation_script__:25:10
+  
+  
   deflux-0 Error - 1:44:45 AM
   Error: page info ontbreekt.
     at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1145:13)

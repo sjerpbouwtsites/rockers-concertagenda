@@ -182,19 +182,87 @@ baroegScraper.getPageInfo = async function ({ page, event }) {
         document.querySelector(".wp_theatre_event_tickets")?.textContent ??
         '';
 
-      const postContent = document.querySelector('.single-post .post-content') ?? null;
-      if (postContent){
-        const postHeading = postContent.querySelector('.wpt_events') ?? null;
-        if (postHeading) {
-          postContent.removeChild(postHeading)
-        }
-        const someH3 = postContent.querySelector('h3') ?? null;
-        if (someH3) {
-          postContent.removeChild(someH3)
-        }
-        res.longTextHTML = postContent.innerHTML;
-      }
+
       
+      // #region longHTML
+
+      const mediaSelector = ['.su-youtube iframe', 
+        '.su-spotify iframe', 
+        '.su-bandcamp iframe',
+        ".post-content h2 a[href*='bandcamp']",
+        ".post-content h2 a[href*='spotify']",
+      ].join(', ');
+      const textSelector = '.post-content';
+      const removeEmptyHTMLFrom = '.post-content';
+      const removeSelectors = [`.post-content h3`, 
+        `.post-content .wpt_listing`, 
+        `.post-content .su-youtube`, 
+        `.post-content .su-spotify`, 
+        `.post-content .su-button`, 
+        ".post-content h2 a[href*='facebook']",
+        ".post-content h2 a[href*='instagram']",
+        ".post-content h2 a[href*='bandcamp']",
+        ".post-content h2 a[href*='spotify']",
+        ".post-content .fa",
+        `.post-content .su-button-center`].join(', ')
+      const socialSelector = [
+        ".post-content .su-button[href*='facebook']", 
+        ".post-content .su-button[href*='fb']",
+        ".post-content h2 a[href*='facebook']",
+        ".post-content h2 a[href*='instagram']",
+      ].join(', ');
+      const attributesToRemove = ['style', 'hidden', '_target', "frameborder"];
+
+      document.querySelectorAll(`${textSelector} *, ${socialSelector} *`)
+        .forEach(elToStrip => {
+          attributesToRemove.forEach(attr => {
+            if (elToStrip.hasAttribute(attr)){
+              elToStrip.removeAttribute(attr)
+            }
+          })
+        })
+
+      res.mediaForHTML = Array.from(document.querySelectorAll(mediaSelector))
+        .map(bron => {
+          const src = bron?.src ? bron.src : '';
+          return {
+            outer: bron.outerHTML,
+            src,
+            id: null,
+            type: src.includes('spotify') 
+              ? 'spotify' 
+              : src.includes('youtube') 
+                ? 'youtube'
+                : 'bandcamp'
+          }
+        })
+
+      res.socialsForHTML = Array.from(document.querySelectorAll(socialSelector))
+        .map(el => {
+          el.className = 'long-html__social-list-link'
+          el.target = '_blank'
+          return el.outerHTML
+        })
+
+      document.querySelectorAll(removeSelectors)
+        .forEach(toRemove => toRemove.parentNode.removeChild(toRemove))
+
+      document.querySelectorAll(`${removeEmptyHTMLFrom} > *`)
+        .forEach(checkForEmpty => {
+          const leegMatch = checkForEmpty.innerHTML.match(/[\w\d]/g);
+          if (!Array.isArray(leegMatch)){
+            checkForEmpty.parentNode.removeChild(checkForEmpty)
+          }
+        })
+
+      res.textForHTML = Array.from(document.querySelectorAll(textSelector))
+        .map(el => el.innerHTML)
+        .join('')
+
+
+
+      // #endregion longHTML
+
       res.soldOut = !!(document.querySelector('.wp_theatre_event_tickets_status_soldout') ?? null)
 
       return res;

@@ -1,6 +1,7 @@
 import EventsList from "./events-list.js";
 
 export default class MusicEvent {
+  static _ref = new MusicEvent();
   doorOpenDateTime = null;
   startDateTime = null;
   endDateTime = null;
@@ -17,27 +18,42 @@ export default class MusicEvent {
   constructor(init, enforceMusicEventType = true) {
     this.merge(init, enforceMusicEventType);
   }
-  merge(conf, enforceMusicEventType = true) {
-    if (enforceMusicEventType){
-      for (let confKey in conf) {
-        if (Object.prototype.hasOwnProperty.call(this, confKey)) {
-          if (confKey === 'corrupted' && typeof this[confKey] === 'string'){
-            this[confKey] = conf[confKey] + ' '+ this[confKey];
-          }
-          else if (typeof conf[confKey] !== 'boolean') {
-            this[confKey] = conf[confKey];
-          } else {
-            this[confKey] = this[confKey] || conf[confKey]
-          }
-        }
-      }
-    } else {
-      for (let confKey in conf) {
-        this[confKey] = conf[confKey];
-      }      
+  merge(toMerge){
+    if (!toMerge) return
+    for (let i in toMerge){
+      this[i] = toMerge[i]
     }
   }
+  clean(){
+    for (let i in this){
+      // eslint-disable-next-line no-prototype-builtins
+      if (!MusicEvent._ref.hasOwnProperty(i)) {
+        delete this[i];
+      }
+    }    
+  }
+  // merge(conf, enforceMusicEventType = true) {
+  //   if (enforceMusicEventType){
+  //     for (let confKey in conf) {
+  //       if (Object.prototype.hasOwnProperty.call(this, confKey)) {
+  //         if (confKey === 'corrupted' && typeof this[confKey] === 'string'){
+  //           this[confKey] = conf[confKey] + ' '+ this[confKey];
+  //         }
+  //         else if (typeof conf[confKey] !== 'boolean') {
+  //           this[confKey] = conf[confKey];
+  //         } else {
+  //           this[confKey] = this[confKey] || conf[confKey]
+  //         }
+  //       }
+  //     }
+  //   } else {
+  //     for (let confKey in conf) {
+  //       this[confKey] = conf[confKey];
+  //     }      
+  //   }
+  // }
   register() {
+    this.clean()
     EventsList.addEvent(this);
     return this;
   }

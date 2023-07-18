@@ -2,6 +2,7 @@ import { workerData } from "worker_threads";
 import * as _t from "../mods/tools.js";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
+import { isArray } from "util";
 
 // SCRAPER CONFIG
 
@@ -252,11 +253,40 @@ afasliveScraper.getPageInfo = async function ({ page, event }) {
         }
       })
 
-      res.longTextHTML = 
-        document.querySelector("article .wysiwyg")?.innerHTML ?? '';
+      // #region longHTML
 
-      res.longTextHTML += 
-      Array.from(document.querySelector("article .wysiwyg").parentNode.parentNode.querySelectorAll('.video, .spotify')).map(el => el.outerHTML).join('')
+      const mediaSelector = '.video iframe, .spotify iframe';
+      const textSelector = 'article .wysiwyg';
+      const removeEmptyHTMLFrom = 'article .wysiwyg';
+      res.mediaForHTML = Array.from(document.querySelectorAll(mediaSelector))
+        .map(bron => {
+          return {
+            outer: bron.outerHTML,
+            src: bron.src,
+            id: null,
+            type: bron.src.includes('spotify') ? 'spotify' : 'youtube'
+          }
+        })
+
+      document.querySelectorAll(`${removeEmptyHTMLFrom} > *`)
+        .forEach(checkForEmpty => {
+          const leegMatch = checkForEmpty.innerHTML.match(/[\w\d]/g);
+          if (!Array.isArray(leegMatch)){
+            checkForEmpty.parentNode.removeChild(checkForEmpty)
+          }
+        })
+
+
+      Array.from(document.querySelectorAll('.wysiwyg p'))
+        .filter(paragraph => paragraph.innerHTML.includes('Tassenbeleid'))
+        .forEach(blaTas => blaTas.parentNode.removeChild(blaTas))
+
+      res.textForHTML = Array.from(document.querySelectorAll(textSelector))
+        .map(el => el.innerHTML)
+        .join('')
+
+      // #endregion longHTML
+
 
       res.priceTextcontent = 
         document.querySelector("#tickets")?.textContent.trim() ?? '';

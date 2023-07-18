@@ -15,7 +15,8 @@ const nuldertienScraper = new AbstractScraper(makeScraperConfig({
         requiredProperties: ['venueEventUrl', 'title']
       },
       singlePage: {
-        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
+        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime'],
+        
       }
     }
   }
@@ -172,15 +173,31 @@ nuldertienScraper.getPageInfo = async function ({ page , event}) {
         ".event-detail header + div"
       )?.innerHTML ?? '';
 
-    res.longTextHTML += Array.from(document.querySelectorAll('.slick-slide:not(.slick-cloned) img'))
+
+    // #region longHTML
+    const mediaSelector = '.slick-slide:not(.slick-cloned) img';
+    const textSelector = '.event-detail__content > *';
+    res.mediaForHTML = Array.from(document.querySelectorAll(mediaSelector))
       .map(image => {
-        if (!image.src) return null
-        const src = image.src.replace('img.youtube', 'youtube').replace('/vi/', '/embed/').replace('maxresdefault.jpg', '')
-        return `<iframe src='${src}'/>`
+        return {
+          outer: null,
+          src: image.src.replace('img.youtube', 'youtube').replace('/vi/', '/embed/').replace('maxresdefault.jpg', ''),
+          id: null,
+          type: 'youtube'
+        }
       })
-      .filter(a=>a)
+
+    const contentHeader = document.querySelector('.event-detail__heading-group');
+    if (contentHeader){
+      contentHeader.parentNode.removeChild(contentHeader)
+    }
+
+    res.textForHTML = Array.from(document.querySelectorAll(textSelector))
+      .map(el => el.innerHTML)
       .join('')
-    
+
+    // #endregion longHTML
+
     return res;
   }, {event});
 
