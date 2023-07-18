@@ -231,6 +231,141 @@ dynamoScraper.getPageInfo = async function ({ page, event}) {
           .map(frame => frame.outerHTML)
           .join('');
 
+
+
+
+
+
+
+      // #region longHTML
+
+      const textSelector = '.article-block.text-block';
+      const mediaSelector = [`.sidebar iframe, .article-block iframe` 
+      ].join(', ');
+      const removeEmptyHTMLFrom = textSelector
+      const socialSelector = [
+        ".event-content .fb-event a",
+        ".article-block a[href*='facebook']",
+        ".article-block a[href*='instagram']"
+      ].join(', ');
+      const removeSelectors = [
+        "[class*='icon-']",
+        "[class*='fa-']",
+        ".fa",
+        ".iframe-wrapper-tijdelijk",
+        ".article-block a[href*='facebook']",
+        ".article-block a[href*='instagram']"        
+      ].join(', ')
+  
+      const attributesToRemove = ['style', 'hidden', '_target', "frameborder", 'onclick', 'aria-hidden'];
+      const attributesToRemoveSecondRound = ['class', 'id' ];
+      const removeHTMLWithStrings = [];
+
+      //custom dynamo
+      document.querySelectorAll('.article-block iframe').forEach(
+        iframe=> iframe.parentNode.classList.add('iframe-wrapper-tijdelijk')
+      )
+      //end custom dynamo
+
+      // eerst onzin attributes wegslopen
+      const socAttrRemSelAdd = `${socialSelector ? `, ${socialSelector} *` : ''}`
+      document.querySelectorAll(`${textSelector} *${socAttrRemSelAdd}`)
+        .forEach(elToStrip => {
+          attributesToRemove.forEach(attr => {
+            if (elToStrip.hasAttribute(attr)){
+              elToStrip.removeAttribute(attr)
+            }
+          })
+        })
+
+      // media obj maken voordat HTML verdwijnt
+      res.mediaForHTML = Array.from(document.querySelectorAll(mediaSelector))
+        .map(bron => {
+          const src = bron?.src ? bron.src : '';
+          return {
+            outer: bron.outerHTML,
+            src,
+            id: null,
+            type: src.includes('spotify') 
+              ? 'spotify' 
+              : src.includes('youtube') 
+                ? 'youtube'
+                : 'bandcamp'
+          }
+        })
+
+      // socials obj maken voordat HTML verdwijnt
+      res.socialsForHTML = !socialSelector ? '' : Array.from(document.querySelectorAll(socialSelector))
+        .map(el => {
+         
+          el.querySelectorAll('i, svg, img').forEach(rm => rm.parentNode.removeChild(rm))
+
+          if (!el.textContent.trim().length){
+            if (el.href.includes('facebook')){
+              el.textContent = 'Facebook';
+            } else if(el.href.includes('twitter')) {
+              el.textContent = 'Tweet';
+            } else {
+              el.textContent = 'Onbekende social';
+            }
+          }
+
+          el.className = 'long-html__social-list-link'
+          el.target = '_blank';
+          return el.outerHTML
+        })
+
+      // stript HTML tbv text
+      removeSelectors.length && document.querySelectorAll(removeSelectors)
+        .forEach(toRemove => toRemove.parentNode.removeChild(toRemove))
+
+      // dynamo custom
+      const textBlokken = Array.from(document.querySelectorAll('.article-block.text-block'));
+      const laatsteBlok = textBlokken[textBlokken.length - 1];
+      if (laatsteBlok.textContent.includes('voorverkoop') 
+      || laatsteBlok.textContent.includes('sale')
+      || laatsteBlok.querySelector('h6')?.textContent.toLowerCase().includes('info')){
+        laatsteBlok.parentNode.removeChild(laatsteBlok)
+      }
+      // eind dynamo custom
+
+      // verwijder ongewenste paragrafen over bv restaurants
+      Array.from(document.querySelectorAll(`${textSelector} p, ${textSelector} span, ${textSelector} a`))
+        .forEach(verwijder => {
+          const heeftEvilString = !!removeHTMLWithStrings.find(evilString => verwijder.textContent.includes(evilString))
+          if (heeftEvilString) {
+            verwijder.parentNode.removeChild(verwijder)
+          }
+        });
+
+      // lege HTML eruit cq HTML zonder tekst of getallen
+      document.querySelectorAll(`${removeEmptyHTMLFrom} > *`)
+        .forEach(checkForEmpty => {
+          const leegMatch = checkForEmpty.innerHTML.replace('&nbsp;','').match(/[\w\d]/g);
+          if (!Array.isArray(leegMatch)){
+            checkForEmpty.parentNode.removeChild(checkForEmpty)
+          }
+        })
+
+      // laatste attributen eruit.
+      document.querySelectorAll(`${textSelector} *`)
+        .forEach(elToStrip => {
+          attributesToRemoveSecondRound.forEach(attr => {
+            if (elToStrip.hasAttribute(attr)){
+              elToStrip.removeAttribute(attr)
+            }
+          })
+        })      
+
+      // tekst.
+      res.textForHTML = Array.from(document.querySelectorAll(textSelector))
+        .map(el => el.innerHTML)
+        .join('')
+
+      // #endregion longHTML
+
+
+
       res.image =
         document
           .querySelector(".dynamic-background-color#intro .color-pick")

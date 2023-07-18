@@ -330,6 +330,8 @@ depulScraper.getPageInfo = async function ({ page, event }) {
       res.socialsForHTML = !socialSelector ? '' : Array.from(document.querySelectorAll(socialSelector))
         .map(el => {
           
+          el.querySelectorAll('i, svg, img').forEach(rm => rm.parentNode.removeChild(rm))
+
           if (!el.textContent.trim().length){
             if (el.href.includes('facebook')){
               el.textContent = 'Facebook';

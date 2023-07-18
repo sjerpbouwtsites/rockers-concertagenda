@@ -396,12 +396,11 @@ doornroosjeScraper.getPageInfo = async function ({ page, event }) {
       res.priceTextcontent = 
         document.querySelector(".b-festival-content__container")?.textContent.trim() ?? '';
       
-      res.longTextHTML = 
-        (document.querySelector(".b-festival-content__container")?.innerHTML ?? '') + 
-        (document.querySelector('.b-festival-line-up__grid')?.innerHTML ?? '') +
-        Array.from(document.querySelectorAll(".c-embed"))
-          .map(embed => embed.innerHTML)
-          .join('')
+      res.textForHTML = (document.querySelector(".b-festival-content__container")?.innerHTML ?? '') + 
+        (document.querySelector('.b-festival-line-up__grid')?.innerHTML ?? '')
+      res.mediaForHTML = Array.from(document.querySelectorAll(".c-embed iframe"))
+        .map(embed => embed.outerHTML)
+      res.socialsForHTML = [];
       
   
       if (document.querySelector('.b-festival-line-up__title')) {
