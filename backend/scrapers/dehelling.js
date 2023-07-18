@@ -228,6 +228,15 @@ dehellingScraper.getPageInfo = async function ({ page,event }) {
       // socials obj maken voordat HTML verdwijnt
       res.socialsForHTML = !socialSelector ? '' : Array.from(document.querySelectorAll(socialSelector))
         .map(el => {
+          if (!el.textContent.trim().length){
+            if (el.href.includes('facebook')){
+              el.textContent = 'Facebook';
+            } else if(el.href.includes('twitter')) {
+              el.textContent = 'Tweet';
+            } else {
+              el.textContent = 'Onbekende social';
+            }
+          }          
           el.className = 'long-html__social-list-link'
           el.target = '_blank';
           return el.outerHTML

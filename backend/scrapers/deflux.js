@@ -200,14 +200,15 @@ defluxScraper.getPageInfo = async function ({ page, event}) {
     // socials obj maken voordat HTML verdwijnt
     res.socialsForHTML = !socialSelector ? '' : Array.from(document.querySelectorAll(socialSelector))
       .map(el => {
-        //custom deflux
-        if (el.outerHTML.toLowerCase().includes('facebook')){
-          el.textContent = 'Facebook';
+        if (!el.textContent.trim().length){
+          if (el.href.includes('facebook')){
+            el.textContent = 'Facebook';
+          } else if(el.href.includes('twitter')) {
+            el.textContent = 'Tweet';
+          } else {
+            el.textContent = 'Onbekende social';
+          }
         }
-        if (el.outerHTML.toLowerCase().includes('twitter')){
-          el.textContent = 'Tweet';
-        }        
-        //endcustom
         el.className = 'long-html__social-list-link'
         el.target = '_blank';
 
