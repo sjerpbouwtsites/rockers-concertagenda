@@ -213,15 +213,24 @@ export function makeLongHTMLNewStyle(event){
   </nav>`
     :'';
 
+  // headings omlaag gooien.
+  const thtml = event.textForHTML
+    .replaceAll('h6', 'strong')
+    .replaceAll('h5', 'strong')
+    .replaceAll('h4', 'strong')
+    .replaceAll('h3', 'h4')
+    .replaceAll('h1', 'h2')
+    .replaceAll('h2', 'h3')
+
   const reshtml = `
     <div class='long-html'>
     <section class='long-html__text'>
-    ${event.textForHTML}
+    ${thtml}
     </section>
     ${mediaSection}
     ${socialsSection}
     </div>
-  `;
+  `
 
   return reshtml;
   
