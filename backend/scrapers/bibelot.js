@@ -208,7 +208,6 @@ bibelotScraper.getPageInfo = async function ({ page, event }) {
 
       // eerst onzin attributes wegslopen
       const socAttrRemSelAdd = `${socialSelector ? `, ${socialSelector} *` : ''}`
-      res.blablabla = `${textSelector} *${socAttrRemSelAdd}`;
       document.querySelectorAll(`${textSelector} *${socAttrRemSelAdd}`)
         .forEach(elToStrip => {
           attributesToRemove.forEach(attr => {

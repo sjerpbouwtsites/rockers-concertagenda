@@ -6,11 +6,275 @@
     "venueEventUrl": "https://www.ticketmaster.nl/event/descendents-tickets/292025?language=en-us",
     "title": "Descendents",
     "location": "melkweg",
-    "longText": null,
+    "longText": "../public/texts/ae631c13-bf6b-4fc3-b860-c2001b2a30f6.html",
     "image": "https://s1.ticketm.net/dam/a/3ac/1594c4ba-9fa5-49ae-9b9e-9921d994b3ac_1447891_RETINA_PORTRAIT_3_2.jpg",
     "soldOut": null,
     "unavailable": " locatie melkweg niet bij TM.",
-    "corrupted": null
+    "corrupted": null,
+    "name": "Descendents",
+    "type": "event",
+    "id": "Z698xZbpZ1713ZP",
+    "test": false,
+    "url": "https://www.ticketmaster.nl/event/descendents-tickets/292025?language=en-us",
+    "locale": "en-us",
+    "sales": {
+      "public": {
+        "startDateTime": "2023-03-31T09:00:00Z",
+        "startTBD": false,
+        "startTBA": false,
+        "endDateTime": "2023-08-03T01:00:00Z"
+      }
+    },
+    "dates": {
+      "start": {
+        "localDate": "2023-08-02",
+        "localTime": "19:30:00",
+        "dateTime": "2023-08-02T17:30:00Z",
+        "dateTBD": false,
+        "dateTBA": false,
+        "timeTBA": false,
+        "noSpecificTime": false
+      },
+      "timezone": "Europe/Amsterdam",
+      "status": {
+        "code": "onsale"
+      },
+      "spanMultipleDays": false
+    },
+    "classifications": [
+      {
+        "primary": true,
+        "segment": {
+          "id": "KZFzniwnSyZfZ7v7nJ",
+          "name": "Music"
+        },
+        "genre": {
+          "id": "KnvZfZ7vAvl",
+          "name": "Other"
+        },
+        "subGenre": {
+          "id": "KZazBEonSMnZfZ7vk1I",
+          "name": "Other"
+        },
+        "family": false
+      }
+    ],
+    "promoter": {
+      "id": "1189",
+      "name": "Melkweg"
+    },
+    "promoters": [
+      {
+        "id": "1189",
+        "name": "Melkweg"
+      }
+    ],
+    "priceRanges": [
+      {
+        "type": "standard",
+        "currency": "EUR",
+        "min": 27,
+        "max": 27
+      },
+      {
+        "type": "standard including fees",
+        "currency": "EUR",
+        "min": 31.05,
+        "max": 31.05
+      }
+    ],
+    "_links": {
+      "self": {
+        "href": "/discovery/v2/events/Z698xZbpZ1713ZP?locale=en-us"
+      },
+      "attractions": [
+        {
+          "href": "/discovery/v2/attractions/K8vZ917CiX0?locale=en-us"
+        }
+      ],
+      "venues": [
+        {
+          "href": "/discovery/v2/venues/Z598xZbpZd6ak?locale=en-us"
+        }
+      ]
+    },
+    "_embedded": {
+      "venues": [
+        {
+          "type": "venue",
+          "id": "Z598xZbpZd6ak",
+          "test": false,
+          "url": "https://www.ticketmaster.nl/venue/melkweg-amsterdam-tickets/melkweg/110",
+          "locale": "en-us",
+          "images": [
+            {
+              "ratio": "16_9",
+              "url": "https://media.ticketmaster.eu/netherlands/20adf24702e87f6263b0020cb434b3a3.png",
+              "width": 205,
+              "height": 115,
+              "fallback": false
+            }
+          ],
+          "postalCode": "1017 PH",
+          "timezone": "Europe/Amsterdam",
+          "city": {
+            "name": "Amsterdam"
+          },
+          "country": {
+            "name": "Netherlands",
+            "countryCode": "NL"
+          },
+          "address": {
+            "line1": "Lijnbaansgracht 234 A"
+          },
+          "location": {
+            "longitude": "4.88127",
+            "latitude": "52.36483"
+          },
+          "upcomingEvents": {
+            "mfx-nl": 253,
+            "_total": 253,
+            "_filtered": 0
+          },
+          "_links": {
+            "self": {
+              "href": "/discovery/v2/venues/Z598xZbpZd6ak?locale=en-us"
+            }
+          }
+        }
+      ],
+      "attractions": [
+        {
+          "name": "Descendents",
+          "type": "attraction",
+          "id": "K8vZ917CiX0",
+          "test": false,
+          "url": "https://www.ticketmaster.com/descendents-tickets/artist/734910",
+          "locale": "en-us",
+          "classifications": [
+            {
+              "primary": true,
+              "segment": {
+                "id": "KZFzniwnSyZfZ7v7nJ",
+                "name": "Music"
+              },
+              "genre": {
+                "id": "KnvZfZ7vAeA",
+                "name": "Rock"
+              },
+              "subGenre": {
+                "id": "KZazBEonSMnZfZ7v6a6",
+                "name": "Punk"
+              },
+              "type": {
+                "id": "KZAyXgnZfZ7v7l1",
+                "name": "Group"
+              },
+              "subType": {
+                "id": "KZFzBErXgnZfZ7vA71",
+                "name": "Band"
+              },
+              "family": false
+            }
+          ],
+          "_links": {
+            "self": {
+              "href": "/discovery/v2/attractions/K8vZ917CiX0?locale=en-us"
+            }
+          },
+          "image": "https://s1.ticketm.net/dam/a/3ac/1594c4ba-9fa5-49ae-9b9e-9921d994b3ac_1447891_RETINA_PORTRAIT_3_2.jpg"
+        }
+      ]
+    },
+    "pageInfo": "<a class='page-info' href='https://www.ticketmaster.nl/event/descendents-tickets/292025?language=en-us'>TM Descendents</a>",
+    "errors": [],
+    "attractions": [
+      {
+        "name": "Descendents",
+        "type": "attraction",
+        "id": "K8vZ917CiX0",
+        "test": false,
+        "url": "https://www.ticketmaster.com/descendents-tickets/artist/734910",
+        "locale": "en-us",
+        "classifications": [
+          {
+            "primary": true,
+            "segment": {
+              "id": "KZFzniwnSyZfZ7v7nJ",
+              "name": "Music"
+            },
+            "genre": {
+              "id": "KnvZfZ7vAeA",
+              "name": "Rock"
+            },
+            "subGenre": {
+              "id": "KZazBEonSMnZfZ7v6a6",
+              "name": "Punk"
+            },
+            "type": {
+              "id": "KZAyXgnZfZ7v7l1",
+              "name": "Group"
+            },
+            "subType": {
+              "id": "KZFzBErXgnZfZ7vA71",
+              "name": "Band"
+            },
+            "family": false
+          }
+        ],
+        "_links": {
+          "self": {
+            "href": "/discovery/v2/attractions/K8vZ917CiX0?locale=en-us"
+          }
+        },
+        "image": "https://s1.ticketm.net/dam/a/3ac/1594c4ba-9fa5-49ae-9b9e-9921d994b3ac_1447891_RETINA_PORTRAIT_3_2.jpg"
+      }
+    ],
+    "venue": {
+      "type": "venue",
+      "id": "Z598xZbpZd6ak",
+      "test": false,
+      "url": "https://www.ticketmaster.nl/venue/melkweg-amsterdam-tickets/melkweg/110",
+      "locale": "en-us",
+      "images": [
+        {
+          "ratio": "16_9",
+          "url": "https://media.ticketmaster.eu/netherlands/20adf24702e87f6263b0020cb434b3a3.png",
+          "width": 205,
+          "height": 115,
+          "fallback": false
+        }
+      ],
+      "postalCode": "1017 PH",
+      "timezone": "Europe/Amsterdam",
+      "city": {
+        "name": "Amsterdam"
+      },
+      "country": {
+        "name": "Netherlands",
+        "countryCode": "NL"
+      },
+      "address": {
+        "line1": "Lijnbaansgracht 234 A"
+      },
+      "location": {
+        "longitude": "4.88127",
+        "latitude": "52.36483"
+      },
+      "upcomingEvents": {
+        "mfx-nl": 253,
+        "_total": 253,
+        "_filtered": 0
+      },
+      "_links": {
+        "self": {
+          "href": "/discovery/v2/venues/Z598xZbpZd6ak?locale=en-us"
+        }
+      }
+    },
+    "origin": "ticketmaster",
+    "mediaForHTML": [],
+    "socialsForHTML": []
   },
   {
     "doorOpenDateTime": null,
@@ -19,11 +283,441 @@
     "venueEventUrl": "https://www.ticketmaster.nl/event/heaven-shall-burn-tickets/291715?language=en-us",
     "title": "Heaven Shall Burn",
     "location": "melkweg",
-    "longText": null,
+    "longText": "../public/texts/79ce00ed-125c-4a9d-a9d6-b210bb3ec5ae.html",
     "image": "https://s1.ticketm.net/dam/a/268/ae8b5d14-3a16-454b-a019-200d6f59b268_SOURCE",
     "soldOut": null,
     "unavailable": " locatie melkweg niet bij TM.",
-    "corrupted": null
+    "corrupted": null,
+    "name": "Heaven Shall Burn",
+    "type": "event",
+    "id": "Z698xZbpZ171oj4",
+    "test": false,
+    "url": "https://www.ticketmaster.nl/event/heaven-shall-burn-tickets/291715?language=en-us",
+    "locale": "en-us",
+    "sales": {
+      "public": {
+        "startDateTime": "2023-03-29T08:00:00Z",
+        "startTBD": false,
+        "startTBA": false,
+        "endDateTime": "2023-08-14T01:00:00Z"
+      }
+    },
+    "dates": {
+      "start": {
+        "localDate": "2023-08-13",
+        "localTime": "18:30:00",
+        "dateTime": "2023-08-13T16:30:00Z",
+        "dateTBD": false,
+        "dateTBA": false,
+        "timeTBA": false,
+        "noSpecificTime": false
+      },
+      "timezone": "Europe/Amsterdam",
+      "status": {
+        "code": "onsale"
+      },
+      "spanMultipleDays": false
+    },
+    "classifications": [
+      {
+        "primary": true,
+        "segment": {
+          "id": "KZFzniwnSyZfZ7v7nJ",
+          "name": "Music"
+        },
+        "genre": {
+          "id": "KnvZfZ7vAvl",
+          "name": "Other"
+        },
+        "subGenre": {
+          "id": "KZazBEonSMnZfZ7vk1I",
+          "name": "Other"
+        },
+        "family": false
+      }
+    ],
+    "promoter": {
+      "id": "1189",
+      "name": "Melkweg"
+    },
+    "promoters": [
+      {
+        "id": "1189",
+        "name": "Melkweg"
+      }
+    ],
+    "priceRanges": [
+      {
+        "type": "standard including fees",
+        "currency": "EUR",
+        "min": 33.35,
+        "max": 33.35
+      },
+      {
+        "type": "standard",
+        "currency": "EUR",
+        "min": 29,
+        "max": 29
+      }
+    ],
+    "_links": {
+      "self": {
+        "href": "/discovery/v2/events/Z698xZbpZ171oj4?locale=en-us"
+      },
+      "attractions": [
+        {
+          "href": "/discovery/v2/attractions/K8vZ91728ZV?locale=en-us"
+        },
+        {
+          "href": "/discovery/v2/attractions/K8vZ917pqe7?locale=en-us"
+        },
+        {
+          "href": "/discovery/v2/attractions/K8vZ9173W2V?locale=en-us"
+        }
+      ],
+      "venues": [
+        {
+          "href": "/discovery/v2/venues/Z598xZbpZd6ak?locale=en-us"
+        }
+      ]
+    },
+    "_embedded": {
+      "venues": [
+        {
+          "type": "venue",
+          "id": "Z598xZbpZd6ak",
+          "test": false,
+          "url": "https://www.ticketmaster.nl/venue/melkweg-amsterdam-tickets/melkweg/110",
+          "locale": "en-us",
+          "images": [
+            {
+              "ratio": "16_9",
+              "url": "https://media.ticketmaster.eu/netherlands/20adf24702e87f6263b0020cb434b3a3.png",
+              "width": 205,
+              "height": 115,
+              "fallback": false
+            }
+          ],
+          "postalCode": "1017 PH",
+          "timezone": "Europe/Amsterdam",
+          "city": {
+            "name": "Amsterdam"
+          },
+          "country": {
+            "name": "Netherlands",
+            "countryCode": "NL"
+          },
+          "address": {
+            "line1": "Lijnbaansgracht 234 A"
+          },
+          "location": {
+            "longitude": "4.88127",
+            "latitude": "52.36483"
+          },
+          "upcomingEvents": {
+            "mfx-nl": 253,
+            "_total": 253,
+            "_filtered": 0
+          },
+          "_links": {
+            "self": {
+              "href": "/discovery/v2/venues/Z598xZbpZd6ak?locale=en-us"
+            }
+          }
+        }
+      ],
+      "attractions": [
+        {
+          "name": "Heaven Shall Burn",
+          "type": "attraction",
+          "id": "K8vZ91728ZV",
+          "test": false,
+          "url": "https://www.ticketmaster.com/heaven-shall-burn-tickets/artist/1190397",
+          "locale": "en-us",
+          "classifications": [
+            {
+              "primary": true,
+              "segment": {
+                "id": "KZFzniwnSyZfZ7v7nJ",
+                "name": "Music"
+              },
+              "genre": {
+                "id": "KnvZfZ7vAvt",
+                "name": "Metal"
+              },
+              "subGenre": {
+                "id": "KZazBEonSMnZfZ7vkFd",
+                "name": "Heavy Metal"
+              },
+              "type": {
+                "id": "KZAyXgnZfZ7v7nI",
+                "name": "Undefined"
+              },
+              "subType": {
+                "id": "KZFzBErXgnZfZ7v7lJ",
+                "name": "Undefined"
+              },
+              "family": false
+            }
+          ],
+          "_links": {
+            "self": {
+              "href": "/discovery/v2/attractions/K8vZ91728ZV?locale=en-us"
+            }
+          },
+          "image": "https://s1.ticketm.net/dam/a/268/ae8b5d14-3a16-454b-a019-200d6f59b268_SOURCE"
+        },
+        {
+          "name": "Shadow of Intent",
+          "type": "attraction",
+          "id": "K8vZ917pqe7",
+          "test": false,
+          "url": "https://www.ticketmaster.com/shadow-of-intent-tickets/artist/2431457",
+          "locale": "en-us",
+          "classifications": [
+            {
+              "primary": true,
+              "segment": {
+                "id": "KZFzniwnSyZfZ7v7nJ",
+                "name": "Music"
+              },
+              "genre": {
+                "id": "KnvZfZ7vAvt",
+                "name": "Metal"
+              },
+              "subGenre": {
+                "id": "KZazBEonSMnZfZ7vk6t",
+                "name": "Death Metal/Black Metal"
+              },
+              "type": {
+                "id": "KZAyXgnZfZ7v7l1",
+                "name": "Group"
+              },
+              "subType": {
+                "id": "KZFzBErXgnZfZ7vA71",
+                "name": "Band"
+              },
+              "family": false
+            }
+          ],
+          "_links": {
+            "self": {
+              "href": "/discovery/v2/attractions/K8vZ917pqe7?locale=en-us"
+            }
+          },
+          "image": "https://s1.ticketm.net/dam/a/4f0/a86881ba-830d-40fe-b1e9-dd60ba47e4f0_TABLET_LANDSCAPE_LARGE_16_9.jpg"
+        },
+        {
+          "name": "Any Given Day",
+          "type": "attraction",
+          "id": "K8vZ9173W2V",
+          "test": false,
+          "url": "https://www.ticketmaster.com/any-given-day-tickets/artist/2057841",
+          "locale": "en-us",
+          "classifications": [
+            {
+              "primary": true,
+              "segment": {
+                "id": "KZFzniwnSyZfZ7v7nJ",
+                "name": "Music"
+              },
+              "genre": {
+                "id": "KnvZfZ7vAeA",
+                "name": "Rock"
+              },
+              "subGenre": {
+                "id": "KZazBEonSMnZfZ7v6F1",
+                "name": "Pop"
+              },
+              "type": {
+                "id": "KZAyXgnZfZ7v7nI",
+                "name": "Undefined"
+              },
+              "subType": {
+                "id": "KZFzBErXgnZfZ7v7lJ",
+                "name": "Undefined"
+              },
+              "family": false
+            }
+          ],
+          "_links": {
+            "self": {
+              "href": "/discovery/v2/attractions/K8vZ9173W2V?locale=en-us"
+            }
+          },
+          "image": "https://s1.ticketm.net/dam/c/fbc/b293c0ad-c904-4215-bc59-8d7f2414dfbc_106141_RETINA_PORTRAIT_16_9.jpg"
+        }
+      ]
+    },
+    "pageInfo": "<a class='page-info' href='https://www.ticketmaster.nl/event/heaven-shall-burn-tickets/291715?language=en-us'>TM Heaven Shall Burn</a>",
+    "errors": [],
+    "attractions": [
+      {
+        "name": "Heaven Shall Burn",
+        "type": "attraction",
+        "id": "K8vZ91728ZV",
+        "test": false,
+        "url": "https://www.ticketmaster.com/heaven-shall-burn-tickets/artist/1190397",
+        "locale": "en-us",
+        "classifications": [
+          {
+            "primary": true,
+            "segment": {
+              "id": "KZFzniwnSyZfZ7v7nJ",
+              "name": "Music"
+            },
+            "genre": {
+              "id": "KnvZfZ7vAvt",
+              "name": "Metal"
+            },
+            "subGenre": {
+              "id": "KZazBEonSMnZfZ7vkFd",
+              "name": "Heavy Metal"
+            },
+            "type": {
+              "id": "KZAyXgnZfZ7v7nI",
+              "name": "Undefined"
+            },
+            "subType": {
+              "id": "KZFzBErXgnZfZ7v7lJ",
+              "name": "Undefined"
+            },
+            "family": false
+          }
+        ],
+        "_links": {
+          "self": {
+            "href": "/discovery/v2/attractions/K8vZ91728ZV?locale=en-us"
+          }
+        },
+        "image": "https://s1.ticketm.net/dam/a/268/ae8b5d14-3a16-454b-a019-200d6f59b268_SOURCE"
+      },
+      {
+        "name": "Shadow of Intent",
+        "type": "attraction",
+        "id": "K8vZ917pqe7",
+        "test": false,
+        "url": "https://www.ticketmaster.com/shadow-of-intent-tickets/artist/2431457",
+        "locale": "en-us",
+        "classifications": [
+          {
+            "primary": true,
+            "segment": {
+              "id": "KZFzniwnSyZfZ7v7nJ",
+              "name": "Music"
+            },
+            "genre": {
+              "id": "KnvZfZ7vAvt",
+              "name": "Metal"
+            },
+            "subGenre": {
+              "id": "KZazBEonSMnZfZ7vk6t",
+              "name": "Death Metal/Black Metal"
+            },
+            "type": {
+              "id": "KZAyXgnZfZ7v7l1",
+              "name": "Group"
+            },
+            "subType": {
+              "id": "KZFzBErXgnZfZ7vA71",
+              "name": "Band"
+            },
+            "family": false
+          }
+        ],
+        "_links": {
+          "self": {
+            "href": "/discovery/v2/attractions/K8vZ917pqe7?locale=en-us"
+          }
+        },
+        "image": "https://s1.ticketm.net/dam/a/4f0/a86881ba-830d-40fe-b1e9-dd60ba47e4f0_TABLET_LANDSCAPE_LARGE_16_9.jpg"
+      },
+      {
+        "name": "Any Given Day",
+        "type": "attraction",
+        "id": "K8vZ9173W2V",
+        "test": false,
+        "url": "https://www.ticketmaster.com/any-given-day-tickets/artist/2057841",
+        "locale": "en-us",
+        "classifications": [
+          {
+            "primary": true,
+            "segment": {
+              "id": "KZFzniwnSyZfZ7v7nJ",
+              "name": "Music"
+            },
+            "genre": {
+              "id": "KnvZfZ7vAeA",
+              "name": "Rock"
+            },
+            "subGenre": {
+              "id": "KZazBEonSMnZfZ7v6F1",
+              "name": "Pop"
+            },
+            "type": {
+              "id": "KZAyXgnZfZ7v7nI",
+              "name": "Undefined"
+            },
+            "subType": {
+              "id": "KZFzBErXgnZfZ7v7lJ",
+              "name": "Undefined"
+            },
+            "family": false
+          }
+        ],
+        "_links": {
+          "self": {
+            "href": "/discovery/v2/attractions/K8vZ9173W2V?locale=en-us"
+          }
+        },
+        "image": "https://s1.ticketm.net/dam/c/fbc/b293c0ad-c904-4215-bc59-8d7f2414dfbc_106141_RETINA_PORTRAIT_16_9.jpg"
+      }
+    ],
+    "venue": {
+      "type": "venue",
+      "id": "Z598xZbpZd6ak",
+      "test": false,
+      "url": "https://www.ticketmaster.nl/venue/melkweg-amsterdam-tickets/melkweg/110",
+      "locale": "en-us",
+      "images": [
+        {
+          "ratio": "16_9",
+          "url": "https://media.ticketmaster.eu/netherlands/20adf24702e87f6263b0020cb434b3a3.png",
+          "width": 205,
+          "height": 115,
+          "fallback": false
+        }
+      ],
+      "postalCode": "1017 PH",
+      "timezone": "Europe/Amsterdam",
+      "city": {
+        "name": "Amsterdam"
+      },
+      "country": {
+        "name": "Netherlands",
+        "countryCode": "NL"
+      },
+      "address": {
+        "line1": "Lijnbaansgracht 234 A"
+      },
+      "location": {
+        "longitude": "4.88127",
+        "latitude": "52.36483"
+      },
+      "upcomingEvents": {
+        "mfx-nl": 253,
+        "_total": 253,
+        "_filtered": 0
+      },
+      "_links": {
+        "self": {
+          "href": "/discovery/v2/venues/Z598xZbpZd6ak?locale=en-us"
+        }
+      }
+    },
+    "origin": "ticketmaster",
+    "mediaForHTML": [],
+    "socialsForHTML": []
   },
   {
     "doorOpenDateTime": null,
@@ -32,10 +726,256 @@
     "venueEventUrl": "https://www.ticketmaster.nl/event/dynamo-metalfest-2023-%7C-vip-saturday-tickets/289331?language=en-us",
     "title": "Dynamo Metalfest 2023 | VIP Saturday",
     "location": "ijssportcentrum",
-    "longText": null,
+    "longText": "../public/texts/155594fc-622d-43a0-a095-97d496c55a0d.html",
     "image": "https://s1.ticketm.net/dam/a/98c/907a101a-b47e-4b66-81ae-9396b5bb298c_759881_TABLET_LANDSCAPE_16_9.jpg",
     "soldOut": null,
     "unavailable": " double event",
-    "corrupted": null
+    "corrupted": null,
+    "name": "Dynamo Metalfest 2023 | VIP Saturday",
+    "type": "event",
+    "id": "Z698xZbpZ171aGs",
+    "test": false,
+    "url": "https://www.ticketmaster.nl/event/dynamo-metalfest-2023-%7C-vip-saturday-tickets/289331?language=en-us",
+    "locale": "en-us",
+    "sales": {
+      "public": {
+        "startDateTime": "2023-01-27T09:00:00Z",
+        "startTBD": false,
+        "startTBA": false,
+        "endDateTime": "2023-06-20T13:52:00Z"
+      }
+    },
+    "dates": {
+      "start": {
+        "localDate": "2023-08-19",
+        "localTime": "11:30:00",
+        "dateTime": "2023-08-19T09:30:00Z",
+        "dateTBD": false,
+        "dateTBA": false,
+        "timeTBA": false,
+        "noSpecificTime": false
+      },
+      "timezone": "Europe/Amsterdam",
+      "status": {
+        "code": "offsale"
+      },
+      "spanMultipleDays": false
+    },
+    "classifications": [
+      {
+        "primary": true,
+        "segment": {
+          "id": "KZFzniwnSyZfZ7v7nn",
+          "name": "Film"
+        },
+        "genre": {
+          "id": "KnvZfZ7vAkJ",
+          "name": "Music"
+        },
+        "subGenre": {
+          "id": "KZazBEonSMnZfZ7vave",
+          "name": "Music"
+        },
+        "family": false
+      }
+    ],
+    "promoter": {
+      "id": "4049",
+      "name": "Toxic Waltz B.V."
+    },
+    "promoters": [
+      {
+        "id": "4049",
+        "name": "Toxic Waltz B.V."
+      }
+    ],
+    "priceRanges": [
+      {
+        "type": "standard including fees",
+        "currency": "EUR",
+        "min": 89,
+        "max": 89
+      },
+      {
+        "type": "standard",
+        "currency": "EUR",
+        "min": 85.5,
+        "max": 85.5
+      }
+    ],
+    "_links": {
+      "self": {
+        "href": "/discovery/v2/events/Z698xZbpZ171aGs?locale=en-us"
+      },
+      "attractions": [
+        {
+          "href": "/discovery/v2/attractions/K8vZ917fAJ0?locale=en-us"
+        }
+      ],
+      "venues": [
+        {
+          "href": "/discovery/v2/venues/Z598xZbpZ7aak?locale=en-us"
+        }
+      ]
+    },
+    "_embedded": {
+      "venues": [
+        {
+          "type": "venue",
+          "id": "Z598xZbpZ7aak",
+          "test": false,
+          "url": "https://www.ticketmaster.nl/venue/ijssportcentrum-eindhoven-eindhoven-tickets/ijssport/105",
+          "locale": "en-us",
+          "postalCode": "5644RX",
+          "timezone": "Europe/Amsterdam",
+          "city": {
+            "name": "Eindhoven"
+          },
+          "country": {
+            "name": "Netherlands",
+            "countryCode": "NL"
+          },
+          "address": {
+            "line1": "Anton Coolenlaan 3"
+          },
+          "location": {
+            "longitude": "5.47184",
+            "latitude": "51.41569"
+          },
+          "upcomingEvents": {
+            "mfx-nl": 6,
+            "_total": 6,
+            "_filtered": 0
+          },
+          "_links": {
+            "self": {
+              "href": "/discovery/v2/venues/Z598xZbpZ7aak?locale=en-us"
+            }
+          }
+        }
+      ],
+      "attractions": [
+        {
+          "name": "Dynamo Metal Fest",
+          "type": "attraction",
+          "id": "K8vZ917fAJ0",
+          "test": false,
+          "url": "https://www.ticketmaster.com/dynamo-metal-fest-tickets/artist/2137856",
+          "locale": "en-us",
+          "classifications": [
+            {
+              "primary": true,
+              "segment": {
+                "id": "KZFzniwnSyZfZ7v7nJ",
+                "name": "Music"
+              },
+              "genre": {
+                "id": "KnvZfZ7vAvt",
+                "name": "Metal"
+              },
+              "subGenre": {
+                "id": "KZazBEonSMnZfZ7vkFd",
+                "name": "Heavy Metal"
+              },
+              "type": {
+                "id": "KZAyXgnZfZ7v7nI",
+                "name": "Undefined"
+              },
+              "subType": {
+                "id": "KZFzBErXgnZfZ7v7lJ",
+                "name": "Undefined"
+              },
+              "family": false
+            }
+          ],
+          "_links": {
+            "self": {
+              "href": "/discovery/v2/attractions/K8vZ917fAJ0?locale=en-us"
+            }
+          },
+          "image": "https://s1.ticketm.net/dam/a/98c/907a101a-b47e-4b66-81ae-9396b5bb298c_759881_TABLET_LANDSCAPE_16_9.jpg"
+        }
+      ]
+    },
+    "pageInfo": "<a class='page-info' href='https://www.ticketmaster.nl/event/dynamo-metalfest-2023-%7C-vip-saturday-tickets/289331?language=en-us'>TM Dynamo Metalfest 2023 | VIP Saturday</a>",
+    "errors": [],
+    "attractions": [
+      {
+        "name": "Dynamo Metal Fest",
+        "type": "attraction",
+        "id": "K8vZ917fAJ0",
+        "test": false,
+        "url": "https://www.ticketmaster.com/dynamo-metal-fest-tickets/artist/2137856",
+        "locale": "en-us",
+        "classifications": [
+          {
+            "primary": true,
+            "segment": {
+              "id": "KZFzniwnSyZfZ7v7nJ",
+              "name": "Music"
+            },
+            "genre": {
+              "id": "KnvZfZ7vAvt",
+              "name": "Metal"
+            },
+            "subGenre": {
+              "id": "KZazBEonSMnZfZ7vkFd",
+              "name": "Heavy Metal"
+            },
+            "type": {
+              "id": "KZAyXgnZfZ7v7nI",
+              "name": "Undefined"
+            },
+            "subType": {
+              "id": "KZFzBErXgnZfZ7v7lJ",
+              "name": "Undefined"
+            },
+            "family": false
+          }
+        ],
+        "_links": {
+          "self": {
+            "href": "/discovery/v2/attractions/K8vZ917fAJ0?locale=en-us"
+          }
+        },
+        "image": "https://s1.ticketm.net/dam/a/98c/907a101a-b47e-4b66-81ae-9396b5bb298c_759881_TABLET_LANDSCAPE_16_9.jpg"
+      }
+    ],
+    "venue": {
+      "type": "venue",
+      "id": "Z598xZbpZ7aak",
+      "test": false,
+      "url": "https://www.ticketmaster.nl/venue/ijssportcentrum-eindhoven-eindhoven-tickets/ijssport/105",
+      "locale": "en-us",
+      "postalCode": "5644RX",
+      "timezone": "Europe/Amsterdam",
+      "city": {
+        "name": "Eindhoven"
+      },
+      "country": {
+        "name": "Netherlands",
+        "countryCode": "NL"
+      },
+      "address": {
+        "line1": "Anton Coolenlaan 3"
+      },
+      "location": {
+        "longitude": "5.47184",
+        "latitude": "51.41569"
+      },
+      "upcomingEvents": {
+        "mfx-nl": 6,
+        "_total": 6,
+        "_filtered": 0
+      },
+      "_links": {
+        "self": {
+          "href": "/discovery/v2/venues/Z598xZbpZ7aak?locale=en-us"
+        }
+      }
+    },
+    "origin": "ticketmaster",
+    "mediaForHTML": [],
+    "socialsForHTML": []
   }
 ]
