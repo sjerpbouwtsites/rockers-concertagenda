@@ -168,9 +168,7 @@ function youtubeSRCToIframe(src){
 }
 
 function youtubeIDToIframe(id){
-  return `<div class='iframe-wrapper-16-9'>
-    <iframe width="380" data-zelfgebouwd height="214" src="${id}" frameborder="0" allowfullscreen></iframe>
-  </div>`
+  return `<iframe width="380" data-zelfgebouwd height="214" src="${id}" frameborder="0" allowfullscreen></iframe>`
 }
 
 export function makeLongHTMLNewStyle(event){
@@ -179,14 +177,17 @@ export function makeLongHTMLNewStyle(event){
   if (!event.socialsForHTML) event.socialsForHTML = []
   const mediaHTML = event.mediaForHTML
     .map(bron => {
-      if (bron.outer){
-        return bron.outer
+      if (bron.outer && bron.type === 'youtube'){
+        return `<div class='iframe-wrapper-16-9'>${bron.outer}</div>`
       }
+      if (bron.outer){
+        return `${bron.outer}`
+      }      
       if (bron.src && bron.type === 'youtube'){
-        return youtubeSRCToIframe(bron.src)
+        return `<div class='iframe-wrapper-16-9'>${youtubeSRCToIframe(bron.src)}</div>`;
       }
       if (bron.id && bron.type === 'youtube'){
-        return youtubeIDToIframe(bron.id)
+        return `<div class='iframe-wrapper-16-9'>${youtubeIDToIframe(bron.id)}</div>`;
       }      
       if (bron.src && bron.type !== 'youtube'){
         return `onbekende type ${bron.type}`

@@ -153,13 +153,10 @@ dbsScraper.getPageInfo = async function ({ page, event }) {
     };
 
     
-    res.longTextHTML = 
-    document.querySelector(".tribe-events-single-event-description")
-      ?.innerHTML ?? '';
     
     res.image =
-      document.querySelector(".tribe-events-event-image .wp-post-image")?.src ??
-      null;
+    document.querySelector(".tribe-events-event-image .wp-post-image")?.src ??
+    null;
     if (!res.image){
       res.errors.push({
         remarks: `image missing ${res.pageInfo}`
@@ -172,9 +169,110 @@ dbsScraper.getPageInfo = async function ({ page, event }) {
       res.priceTextcontent = `€0,00`;
     }
 
+
+
+
+
+    // #region longHTML
+
+    const textSelector = '.tribe-events-single-event-description';
+    const mediaSelector = [`${textSelector} iframe` 
+    ].join(', ');
+    const removeEmptyHTMLFrom = textSelector
+    const socialSelector = [
+      
+    ].join(', ');
+    const removeSelectors = [
+      '.video-shortcode',
+      `${textSelector} img`,
+    ].join(', ')
+    
+    const attributesToRemove = ['style', 'hidden', '_target', "frameborder"];
+    const attributesToRemoveSecondRound = ['class', 'id' ];
+    const removeHTMLWithStrings = [];
+
+    // eerst onzin attributes wegslopen
+    const socAttrRemSelAdd = `${socialSelector ? `, ${socialSelector} *` : ''}`
+    document.querySelectorAll(`${textSelector} *${socAttrRemSelAdd}`)
+      .forEach(elToStrip => {
+        attributesToRemove.forEach(attr => {
+          if (elToStrip.hasAttribute(attr)){
+            elToStrip.removeAttribute(attr)
+          }
+        })
+      })
+
+    // media obj maken voordat HTML verdwijnt
+    res.mediaForHTML = Array.from(document.querySelectorAll(mediaSelector))
+      .map(bron => {
+        const src = bron?.src ? bron.src : '';
+        return {
+          outer: bron.outerHTML,
+          src,
+          id: null,
+          type: src.includes('spotify') 
+            ? 'spotify' 
+            : src.includes('youtube') 
+              ? 'youtube'
+              : 'bandcamp'
+        }
+      })
+
+    // socials obj maken voordat HTML verdwijnt
+    res.socialsForHTML = !socialSelector ? '' : Array.from(document.querySelectorAll(socialSelector))
+      .map(el => {
+        el.className = 'long-html__social-list-link'
+        el.target = '_blank'
+        return el.outerHTML
+      })
+
+    // stript HTML tbv text
+    removeSelectors && document.querySelectorAll(removeSelectors)
+      .forEach(toRemove => toRemove.parentNode.removeChild(toRemove))
+
+    // verwijder ongewenste paragrafen over bv restaurants
+    Array.from(document.querySelectorAll(`${textSelector} p, ${textSelector} span, ${textSelector} a`))
+      .forEach(verwijder => {
+        const heeftEvilString = !!removeHTMLWithStrings.find(evilString => verwijder.textContent.includes(evilString))
+        if (heeftEvilString) {
+          verwijder.parentNode.removeChild(verwijder)
+        }
+      });
+
+    // lege HTML eruit cq HTML zonder tekst of getallen
+    document.querySelectorAll(`${removeEmptyHTMLFrom} > *`)
+      .forEach(checkForEmpty => {
+        const leegMatch = checkForEmpty.innerHTML.replace('&nbsp;','').match(/[\w\d]/g);
+        if (!Array.isArray(leegMatch)){
+          checkForEmpty.parentNode.removeChild(checkForEmpty)
+        }
+      })
+
+    // laatste attributen eruit.
+    document.querySelectorAll(`${textSelector} *`)
+      .forEach(elToStrip => {
+        attributesToRemoveSecondRound.forEach(attr => {
+          if (elToStrip.hasAttribute(attr)){
+            elToStrip.removeAttribute(attr)
+          }
+        })
+      })      
+
+    // tekst.
+    res.textForHTML = Array.from(document.querySelectorAll(textSelector))
+      .map(el => el.innerHTML)
+      .join('')
+
+    // #endregion longHTML
+
+
+
+
+
+
     return res;
   }, {event});
-
+  
   if (pageInfo.ticketURL && !pageInfo.unavailable) {
     try {
       await page.goto(pageInfo.ticketURL)
@@ -188,7 +286,7 @@ dbsScraper.getPageInfo = async function ({ page, event }) {
       page.priceTextcontent = 'onbekend';
     }
   }
-
+  
   return await this.getPageInfoEnd({pageInfo, stopFunctie, page, event})
   
 };
