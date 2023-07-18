@@ -211,7 +211,8 @@ baroegScraper.getPageInfo = async function ({ page, event }) {
         ".post-content h2 a[href*='facebook']",
         ".post-content h2 a[href*='instagram']",
       ].join(', ');
-      const attributesToRemove = ['style', 'hidden', '_target', "frameborder"];
+      const attributesToRemove = ['style', 'hidden', '_target', "frameborder", 'onclick', 'aria-hidden'];
+      const attributesToRemoveSecondRound = ['class', 'id' ];
 
       // eerst onzin attributes wegslopen
       document.querySelectorAll(`${textSelector} *, ${socialSelector} *`)
@@ -240,7 +241,7 @@ baroegScraper.getPageInfo = async function ({ page, event }) {
         })
 
       // socials obj maken voordat HTML verdwijnt
-      res.socialsForHTML = Array.from(document.querySelectorAll(socialSelector))
+      res.socialsForHTML = !socialSelector ? '' : Array.from(document.querySelectorAll(socialSelector))
         .map(el => {
           el.className = 'long-html__social-list-link'
           el.target = '_blank'
@@ -259,6 +260,16 @@ baroegScraper.getPageInfo = async function ({ page, event }) {
             checkForEmpty.parentNode.removeChild(checkForEmpty)
           }
         })
+
+      // laatste attributen eruit.
+      document.querySelectorAll(`${textSelector} *`)
+        .forEach(elToStrip => {
+          attributesToRemoveSecondRound.forEach(attr => {
+            if (elToStrip.hasAttribute(attr)){
+              elToStrip.removeAttribute(attr)
+            }
+          })
+        }) 
 
       // tekst.
       res.textForHTML = Array.from(document.querySelectorAll(textSelector))

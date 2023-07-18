@@ -166,7 +166,7 @@ defluxScraper.getPageInfo = async function ({ page, event}) {
       '.fa'
     ].join(', ')
     
-    const attributesToRemove = ['style', 'hidden', '_target', "frameborder", 'onclick'];
+    const attributesToRemove = ['style', 'hidden', '_target', "frameborder", 'onclick', 'aria-hidden'];
     const attributesToRemoveSecondRound = ['class', 'id' ];
     const removeHTMLWithStrings = [];
 

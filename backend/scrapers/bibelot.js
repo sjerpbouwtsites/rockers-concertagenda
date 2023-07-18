@@ -203,7 +203,8 @@ bibelotScraper.getPageInfo = async function ({ page, event }) {
         ".main-column p a[rel*='noreferrer noopener']" // embed wrappers
       ].join(', ')
       
-      const attributesToRemove = ['style', 'hidden', '_target', "frameborder"];
+      const attributesToRemove = ['style', 'hidden', '_target', "frameborder", 'onclick', 'aria-hidden'];
+      const attributesToRemoveSecondRound = ['class', 'id' ];
       const removeHTMLWithStrings = ['hapje en een drankje'];
 
       // eerst onzin attributes wegslopen
@@ -262,6 +263,16 @@ bibelotScraper.getPageInfo = async function ({ page, event }) {
             checkForEmpty.parentNode.removeChild(checkForEmpty)
           }
         })
+
+      // laatste attributen eruit.
+      document.querySelectorAll(`${textSelector} *`)
+        .forEach(elToStrip => {
+          attributesToRemoveSecondRound.forEach(attr => {
+            if (elToStrip.hasAttribute(attr)){
+              elToStrip.removeAttribute(attr)
+            }
+          })
+        })      
 
       // tekst.
       res.textForHTML = Array.from(document.querySelectorAll(textSelector))

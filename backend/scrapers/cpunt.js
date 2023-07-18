@@ -228,7 +228,7 @@ cpuntScraper.getPageInfo = async function ({ page, event }) {
 
     ].join(', ')
     
-    const attributesToRemove = ['style', 'hidden', '_target', "frameborder"];
+    const attributesToRemove = ['style', 'hidden', '_target', "frameborder", 'onclick', 'aria-hidden'];
     const attributesToRemoveSecondRound = ['class', 'id' ];
     const removeHTMLWithStrings = [];
 
