@@ -1229,6 +1229,21 @@
     "corrupted": null
   },
   {
+    "doorOpenDateTime": "2023-10-07T13:00:00.000Z",
+    "startDateTime": "2023-10-07T14:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.groene-engel.nl/programma/engel-of-death-festival-ii-rotting-christ-more/",
+    "title": "Engel Of Death Festival II ",
+    "location": "groeneengel",
+    "price": 35,
+    "shortText": " o.a. Rotting Christ    Terzij de Horde null",
+    "longText": "../public/texts/4bc020f8-4c16-48e9-a369-f8d83dd5edf8.html",
+    "image": "https://www.groene-engel.nl/wp-content/uploads/2023/06/EOD-website-5e8d.png",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
     "doorOpenDateTime": "2023-10-07T14:00:00.000Z",
     "startDateTime": "2023-10-07T14:30:00.000Z",
     "endDateTime": null,
@@ -1718,6 +1733,20 @@
     "corrupted": null
   },
   {
+    "doorOpenDateTime": "2023-10-28T17:30:00.000Z",
+    "startDateTime": "2023-10-28T18:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.groene-engel.nl/programma/the-sound-undercover-a-tribute-to-the-sound/",
+    "title": "The Sound Undercover – A tribute to The Sound",
+    "location": "groeneengel",
+    "price": 17,
+    "longText": "../public/texts/b2c9fa49-4cde-4bb4-8fb9-f22097ed5d63.html",
+    "image": "https://www.groene-engel.nl/wp-content/uploads/2023/04/The-Sound-Undercover-website-4dca.png",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
     "doorOpenDateTime": null,
     "startDateTime": "2023-10-28T19:00:00.000Z",
     "endDateTime": null,
@@ -1805,6 +1834,20 @@
     "image": "https://baroeg.nl/wp-content/uploads/2023/04/SadWhisperings-scaled-2-150x150.jpg",
     "soldOut": false,
     "unavailable": null,
+    "corrupted": null
+  },
+  {
+    "doorOpenDateTime": "2023-11-04T18:30:00.000Z",
+    "startDateTime": "2023-11-04T19:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.groene-engel.nl/programma/spinvis-be-bop-a-lula-tour/",
+    "title": "Spinvis | Be-Bop-A-Lula Tour",
+    "location": "groeneengel",
+    "price": 27,
+    "longText": "../public/texts/e104b397-4389-4423-b025-b7dbbc318e09.html",
+    "image": "https://www.groene-engel.nl/wp-content/uploads/2023/03/Website-header-Spinvis-729a.png",
+    "soldOut": false,
+    "unavailable": false,
     "corrupted": null
   },
   {
@@ -2415,6 +2458,20 @@
     "longText": "../public/texts/5cca80d5-7828-431a-8f24-e6abfe3a3c3e.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/63c946904553a.jpg?version=1674135221",
     "soldOut": true,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
+    "doorOpenDateTime": "2024-04-05T17:30:00.000Z",
+    "startDateTime": "2024-04-05T18:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.groene-engel.nl/programma/electric-eel-shock-tankzilla/",
+    "title": "Electric Eel Shock + TankZilla",
+    "location": "groeneengel",
+    "price": 17.5,
+    "longText": "../public/texts/2c3933f8-ecc6-47c5-aeec-5195c4ee6463.html",
+    "image": "https://www.groene-engel.nl/wp-content/uploads/2023/07/Electric-Eel-Shock-TankZilla-web-f316.png",
+    "soldOut": false,
     "unavailable": false,
     "corrupted": null
   },

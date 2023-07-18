@@ -184,7 +184,7 @@ boerderijScraper.getPageInfo = async function ({ event }) {
   res.socialsForHTML = []
 
   // tekst.
-  res.textForHTML = [ajaxRes.description]
+  res.textForHTML = ajaxRes.description
 
   // #endregion longHTML
 

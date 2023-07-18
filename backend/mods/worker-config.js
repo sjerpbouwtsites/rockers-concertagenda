@@ -33,7 +33,7 @@ export const workerConfig = {
   dynamo: { workerCount: 2, workerConcurrent: 1 },
   effenaar:{ workerCount: 4, workerConcurrent: 1 },
   gebrdenobel: { workerCount: 1, workerConcurrent: 1 },
-  // groeneengel: { workerCount: 1, workerConcurrent: 1 },
+  groeneengel: { workerCount: 1, workerConcurrent: 1 },
   // iduna: { workerCount: 1, workerConcurrent: 1 },
   // kavka :{
   //   workerCount: 2,

@@ -25,7 +25,7 @@ export default class AbstractScraper {
   debugCorruptedUnavailable = true;
   debugSingleMergedEventCheck = false;
   debugRawEventAsyncCheck = false;
-  debugBaseEvents = false;
+  debugBaseEvents = true;
   debugPageInfo = true;
 
   static unavailabiltyTerms = [
@@ -613,12 +613,18 @@ export default class AbstractScraper {
     const keysToCheck2 = keysToCheck || ['title', 'shortText'];
     let combinedTextToCheck = '';
     for (let i = 0; i < keysToCheck2.length; i++){
-      // if (keysToCheck2[i] === 'longTextHTML'){
-      //   const longTextHTML = fs.readFileSync(event.longTextHTML, 'utf-8');
-      //   combinedTextToCheck += longTextHTML
-      // } else {
-      combinedTextToCheck += event[keysToCheck2[i]].toLowerCase()
-      //}
+      try {
+        combinedTextToCheck += event[keysToCheck2[i]].toLowerCase()
+      } catch (error) {
+        this.dirtyDebug({
+          fout: `fout maken controle text met keys, key${keysToCheck2[i]}`,
+          toDebug: {
+            event,
+            keysToCheck,
+            keysToCheck2
+          }
+        }, 'hasGoodTerms')        
+      }
     }
 
     const hasGoodTerm = AbstractScraper.goodCategories.find(goodTerm=> combinedTextToCheck.includes(goodTerm))

@@ -19,7 +19,7 @@ const groeneEngelScraper = new AbstractScraper(makeScraperConfig({
     app: {
       mainPage: {
         url: "https://www.groene-engel.nl/programma/?filter=concert",
-        requiredProperties: ['venueEventUrl', 'title', 'startDateTime']
+        requiredProperties: ['venueEventUrl', 'title' ]
       },
       singlePage: {
         requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
@@ -34,19 +34,68 @@ groeneEngelScraper.listenToMasterThread();
 
 groeneEngelScraper.singleMergedEventCheck = async function (event) {
   const tl = this.cleanupEventTitle(event.title);
-
   const isRefused = await this.rockRefuseListCheck(event, tl)
-  if (isRefused.success) {
+  if (isRefused.success) return {
+    reason: isRefused.reason,
+    event,
+    success: false
+  };
+
+  const isAllowed = await this.rockAllowListCheck(event, tl)
+  if (isAllowed.success) return isAllowed;
+
+  const hasForbiddenTerms = await this.hasForbiddenTerms(event, ['title','textForHTML']);
+  if (hasForbiddenTerms.success) {
+    await this.saveRefusedTitle(tl)
     return {
-      reason: isRefused.reason,
-      event,
-      success: false
+      reason: hasForbiddenTerms.reason,
+      success: false,
+      event
     }
   }
 
-  const isAllowed = await this.rockAllowListCheck(event, tl)
-  if (isAllowed.success) {
-    return isAllowed;  
+  const hasGoodTerms = await this.hasGoodTerms(event, ['title', 'textForHTML']);
+  if (hasGoodTerms.success) {
+    await this.saveAllowedTitle(tl)
+    return hasGoodTerms;
+  }
+
+  const isRockRes = await this.isRock(event);
+  if (isRockRes.success){
+    await this.saveAllowedTitle(tl)
+  } else {
+    await this.saveRefusedTitle(tl)
+  }
+  return isRockRes;  
+
+};
+
+
+
+// ASYNC RAW EVENT CHECK
+
+groeneEngelScraper.singleRawEventCheck = async function(event){
+
+  const workingTitle = this.cleanupEventTitle(event.title)
+
+  const isRefused = await this.rockRefuseListCheck(event, workingTitle)
+  if (isRefused.success) return {
+    reason: isRefused.reason,
+    event,
+    success: false
+  };
+
+  const isAllowed = await this.rockAllowListCheck(event, workingTitle)
+  if (isAllowed.success) return isAllowed;
+
+  const hasForbiddenTerms = await this.hasForbiddenTerms(event);
+  if (hasForbiddenTerms.success) {
+    await this.saveRefusedTitle(workingTitle)
+    return {
+      reason: hasForbiddenTerms.reason,
+      success: false,
+      event
+    }
   }
 
   return {
@@ -54,7 +103,8 @@ groeneEngelScraper.singleMergedEventCheck = async function (event) {
     success: true,
     reason: "nothing found currently",
   };
-};
+  
+}
 
 // MAKE BASE EVENT LIST
 
@@ -70,76 +120,43 @@ groeneEngelScraper.makeBaseEventList = async function () {
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
-  let punkMetalRawEvents = await page.evaluate(({workerData, unavailabiltyTerms}) => {
-    return Array.from(document.querySelectorAll(".event-item"))
-      .filter((eventEl) => {
-        const tags =
-          eventEl.querySelector(".meta-tag")?.textContent.toLowerCase() ?? "";
-        return (
-          tags.includes("metal") ||
-          tags.includes("punk")
-        );
-      }).map((eventEl) =>{
-        const title = eventEl.querySelector(".media-heading")?.textContent ?? null;
+
+
+  let baseEvents = await page.evaluate(({workerData, unavailabiltyTerms,months}) => 
+  {
+    return Array
+      .from(document.querySelectorAll(".collection-wrapper .event-part"))
+      .map((eventEl) =>{
+        const title = eventEl.querySelector(".part-title")?.textContent ?? null;
         const res = {
           pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
           errors: [],
           title
         };
-        res.venueEventUrl =
-            eventEl
-              .querySelector(".jq-modal-trigger")
-              ?.getAttribute("data-url") ?? "";
+        res.venueEventUrl = eventEl.querySelector(".left-side")?.href ?? "";
         const uaRex = new RegExp(unavailabiltyTerms.join("|"), 'gi');
         res.unavailable = !!eventEl.textContent.match(uaRex);      
-        res.soldOut = !!eventEl.querySelector('.meta-info')?.textContent.match(/uitverkocht|sold\s?out/i) ?? null;
+        res.soldOut = !!eventEl.querySelector('.bottom-bar')?.textContent.match(/uitverkocht|sold\s?out/i) ?? null;
+
+
+        res.startDateMatch = eventEl.querySelector('.date-label')?.textContent.match(/\s(?<datum>\d{1,2}\s\w+\s\d\d\d\d)/) ?? null
+        if (res.startDateMatch && res.startDateMatch?.groups) res.startDateRauw = res.startDateMatch.groups.datum;
+        
+        res.dag = res.startDateMatch.groups.datum.split(' ')[0].padStart(2, '0')
+        res.maand = res.startDateMatch.groups.datum.split(' ')[1]
+        res.maand = months[res.maand];
+        res.jaar = res.startDateMatch.groups.datum.split(' ')[2]
+
+        res.startDate = `${res.jaar}-${res.maand}-${res.dag}`
+
         return res;
       })
-  }, {workerData, unavailabiltyTerms: AbstractScraper.unavailabiltyTerms})
+  }, {workerData, unavailabiltyTerms: AbstractScraper.unavailabiltyTerms, months:this.months})
 
-  punkMetalRawEvents = punkMetalRawEvents.map(this.isMusicEventCorruptedMapper);
+  baseEvents = baseEvents.map(this.isMusicEventCorruptedMapper);
   
-
-  let rockRawEvents = await page.evaluate(({workerData}) => {
-    return Array.from(document.querySelectorAll(".event-item"))
-      .filter((eventEl) => {
-        const tags =
-          eventEl.querySelector(".meta-tag")?.textContent.toLowerCase() ?? "";
-        return (
-          tags.includes("rock")
-        );
-      }).map((eventEl) => {
-        const title = eventEl.querySelector(".media-heading")?.textContent ?? null;
-        const res = {
-          pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
-          errors: [],
-          title
-        };
-        res.venueEventUrl =
-            eventEl
-              .querySelector(".jq-modal-trigger")
-              ?.getAttribute("data-url") ?? "";
-      
-        res.soldOut = !!(eventEl.querySelector('.meta-info')?.textContent.toLowerCase().includes('uitverkocht') ?? null)
-        return res;
-      })
-  }, {workerData})
-
-  rockRawEvents = rockRawEvents.map(this.isMusicEventCorruptedMapper);
-
-  const checkedRockEvents = [];
-  while (rockRawEvents.length){
-    const thisRockRawEvent = rockRawEvents.shift();
-    const isRockRes = await this.isRock(thisRockRawEvent);
-    if (isRockRes.success){
-      checkedRockEvents.push(thisRockRawEvent)
-    }
-  }
-
-  const rawEvents = punkMetalRawEvents.concat(checkedRockEvents)
-
-  this.saveBaseEventlist(workerData.family, rawEvents)
-  const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
+  //this.saveBaseEventlist(workerData.family, baseEvents)
+  const thisWorkersEvents = baseEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
   return await this.makeBaseEventListEnd({
     stopFunctie, rawEvents: thisWorkersEvents}
   );
@@ -147,64 +164,64 @@ groeneEngelScraper.makeBaseEventList = async function () {
 
 // MAKE BASE EVENTS
 
-groeneEngelScraper.makeBaseEventList = async function () {
+// groeneEngelScraper.makeBaseEventList = async function () {
 
-  const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
-  if (availableBaseEvents){
-    const thisWorkersEvents = availableBaseEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
-    return await this.makeBaseEventListEnd({
-      stopFunctie: null, rawEvents: thisWorkersEvents}
-    );    
-  }    
+//   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
+//   if (availableBaseEvents){
+//     const thisWorkersEvents = availableBaseEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
+//     return await this.makeBaseEventListEnd({
+//       stopFunctie: null, rawEvents: thisWorkersEvents}
+//     );    
+//   }    
 
-  const {stopFunctie, page} = await this.makeBaseEventListStart()
+//   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
-  let rawEvents = await page.evaluate(({workerData, months, unavailabiltyTerms}) => {
-    return Array.from(document.querySelectorAll(".collection-wrapper .event-part"))
-      .filter((eventEl) => {
-        const titelElText = eventEl
-          .querySelector('.part-title')?.textContent.toLowerCase() ?? '';
-        return titelElText.includes('ge heavy');
-      })
-      .map((eventEl) => {
-        const title = eventEl.querySelector('h2')?.textContent ?? "";
-        const res = {
+//   let rawEvents = await page.evaluate(({workerData, months, unavailabiltyTerms}) => {
+//     return Array.from(document.querySelectorAll(".collection-wrapper .event-part"))
+//       .filter((eventEl) => {
+//         const titelElText = eventEl
+//           .querySelector('.part-title')?.textContent.toLowerCase() ?? '';
+//         return titelElText.includes('ge heavy');
+//       })
+//       .map((eventEl) => {
+//         const title = eventEl.querySelector('h2')?.textContent ?? "";
+//         const res = {
   
-          pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
-          errors: [],          
-          title
-        }   
-        const uaRex = new RegExp(unavailabiltyTerms.join("|"), 'gi');
-        res.unavailable = !!eventEl.textContent.match(uaRex);        
-        res.venueEventUrl = eventEl.querySelector("a")?.href ?? null;
+//           pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
+//           errors: [],          
+//           title
+//         }   
+//         const uaRex = new RegExp(unavailabiltyTerms.join("|"), 'gi');
+//         res.unavailable = !!eventEl.textContent.match(uaRex);        
+//         res.venueEventUrl = eventEl.querySelector("a")?.href ?? null;
 
-        try {
-          const startDateMatch = eventEl.querySelector('.date-label')?.textContent.toLowerCase().match(/(\d+)\s+(\w+)\s+(\d+)/)
-          if (startDateMatch && startDateMatch.length > 3){
-            const day = startDateMatch[1].padStart(2, '0');
-            const month = months[startDateMatch[2]];
-            const year = startDateMatch[3];
-            // PAS IN PAGE INFO TIJD AAN.
-            res.startDateTime = new Date(`${year}-${month}-${day}T12:00:00`).toISOString(); 
-          }          
-        } catch (caughtError) {
-          res.errors.push({
-            error: caughtError,remarks: `startDate main fout ${res.pageInfo}`,
-            toDebug: res
-          })
-        }
-        return res;
-      });
-  }, {workerData, months: this.months, unavailabiltyTerms: AbstractScraper.unavailabiltyTerms })
-  rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
+//         try {
+//           const startDateMatch = eventEl.querySelector('.date-label')?.textContent.toLowerCase().match(/(\d+)\s+(\w+)\s+(\d+)/)
+//           if (startDateMatch && startDateMatch.length > 3){
+//             const day = startDateMatch[1].padStart(2, '0');
+//             const month = months[startDateMatch[2]];
+//             const year = startDateMatch[3];
+//             // PAS IN PAGE INFO TIJD AAN.
+//             res.startDateTime = new Date(`${year}-${month}-${day}T12:00:00`).toISOString(); 
+//           }          
+//         } catch (caughtError) {
+//           res.errors.push({
+//             error: caughtError,remarks: `startDate main fout ${res.pageInfo}`,
+//             toDebug: res
+//           })
+//         }
+//         return res;
+//       });
+//   }, {workerData, months: this.months, unavailabiltyTerms: AbstractScraper.unavailabiltyTerms })
+//   rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
 
-  this.saveBaseEventlist(workerData.family, rawEvents)
-  const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
-  return await this.makeBaseEventListEnd({
-    stopFunctie, rawEvents: thisWorkersEvents}
-  );
+//   this.saveBaseEventlist(workerData.family, rawEvents)
+//   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
+//   return await this.makeBaseEventListEnd({
+//     stopFunctie, rawEvents: thisWorkersEvents}
+//   );
   
-};
+// };
 
 groeneEngelScraper.getPageInfo = async function ({ page, event }) {
 
@@ -215,43 +232,180 @@ groeneEngelScraper.getPageInfo = async function ({ page, event }) {
       pageInfo: `<a class='page-info' href='${location.href}'>${event.title}</a>`,
       errors: [],
     };
-    const mainTicketInfo =  document.querySelector('.main-ticket-info') ?? null;
-    try {
-      const timeText = mainTicketInfo?.textContent.toLowerCase().split('tijden')[1] ?? null;
-      if (!timeText){
-        res.errors.push({
-          remarks: `geen timeText gevonden ${res.pageInfo}`,
-          toDebug: {
-            mainTicketInfoTextContent: mainTicketInfo?.textContent,
-            res, event
-          }
-        })
-        return res;
-      }
-      const timesMatches = timeText.match(/(\d\d:\d\d).*(\d\d:\d\d)/);
-      const startTime = timesMatches[1]
-      const openTime = timesMatches[2]
-      const startDate = event.startDateTime.split('T')[0]
-      res.startDateTime = new Date(`${startDate}T${startTime}:00`).toISOString();
-      res.doorOpenDateTime = new Date(`${startDate}T${openTime}:00`).toISOString();
-    } catch (caughtError) {
-      res.errors.push({
-        error: caughtError,
-        remarks: `time fouten ${res.pageInfo}`,
-        toDebug: {res, event}
-      });
-      return res;
-    }
-    res.priceTextcontent = mainTicketInfo?.textContent ?? '';
-    res.longTextHTML = Array.from(document.querySelectorAll('.main-content .production-title-wrapper ~ *')).reduce((prev, next) =>{return prev + next.outerHTML}, '');
 
+    let startEl,deurEl;
+    document.querySelectorAll('.time-tag ~ *').forEach(tijdEl=>{
+      if (tijdEl.textContent.toLowerCase().includes('aanvang')){
+        startEl = tijdEl
+      }
+      if (tijdEl.textContent.toLowerCase().includes('open')){
+        deurEl = tijdEl
+      }        
+    })
+
+    if (!startEl){
+      res.errors.push({
+        remarks: 'geen tijd el gevonden'
+      })
+    }
+
+    res.startTijdMatch = startEl.textContent.match(/\d\d:\d\d/)
+    if (deurEl)res.deurTijdMatch = deurEl.textContent.match(/\d\d:\d\d/)
+    if (Array.isArray(res.startTijdMatch)) res.startTijd = res.startTijdMatch[0]
+    if (Array.isArray(res.deurTijdMatch)) res.deurTijd = res.deurTijdMatch[0]
+
+    try {
+      res.startDateTime = new Date(`${event.startDate}T${res.startTijd}:00`).toISOString();
+      res.doorOpenDateTime = !res?.deurTijd ? null : new Date(`${event.startDate}T${res.deurTijd}:00`).toISOString();
+    } catch (error) {
+      res.errors.push({
+        error,
+        remarks: `date ${event.startDate} time ${res.startTijd}`,
+        toDebug: {
+          startElT: startEl.textContent
+          
+        }
+      })      
+    }
+    
+    res.priceTextcontent = document.querySelector('.main-ticket-info')?.textContent;
+    
     res.image = document.querySelector('.img-wrapper img')?.getAttribute('data-lazy-src') ?? null;
     if (!res.image){
       res.errors.push({
         remarks: `image missing ${res.pageInfo}`
       })
-    }
-  
+    } 
+
+    // #region longHTML
+
+    const textSelector = '#main-content .left-side';
+    const mediaSelector = [
+      `.left-side .rll-youtube-player [data-id]`,
+      `.left-side iframe[src*='spotify']`
+    ].join(', ');
+    const removeEmptyHTMLFrom = textSelector
+    const socialSelector = [
+
+    ].join(', ');
+    const removeSelectors = [
+      "[class*='icon-']",
+      "[class*='fa-']",
+      ".fa",
+      ".production-title-wrapper",
+      ".left-side noscript",
+      '.left-side .rll-youtube-player'
+    ].join(', ')
+ 
+    const attributesToRemove = ['style', 'hidden', '_target', "frameborder", 'onclick', 'aria-hidden', 'allow', 'allowfullscreen', 'data-deferlazy','width', 'height'];
+    const attributesToRemoveSecondRound = ['class', 'id' ];
+    const removeHTMLWithStrings = ['Om deze content te kunnnen zien'];
+
+    // eerst onzin attributes wegslopen
+    const socAttrRemSelAdd = `${socialSelector ? `, ${socialSelector} *` : ''}`
+    document.querySelectorAll(`${textSelector} *${socAttrRemSelAdd}`)
+      .forEach(elToStrip => {
+        attributesToRemove.forEach(attr => {
+          if (elToStrip.hasAttribute(attr)){
+            elToStrip.removeAttribute(attr)
+          }
+        })
+      })
+
+    // media obj maken voordat HTML verdwijnt
+    res.mediaForHTML = Array.from(document.querySelectorAll(mediaSelector))
+      .map(bron => {
+        bron.className = ''
+        // custom groene engel  
+        if (bron.hasAttribute('data-id') && bron.hasAttribute('data-src') && bron.getAttribute('data-src').includes('youtube')){
+          return {
+            outer: null,
+            src: bron.getAttribute('data-src'),
+            id: bron.getAttribute('data-id'),
+            type: 'youtube'
+          }
+        } else if(bron.src.includes('spotify')){
+          return {
+            outer: bron.outerHTML,
+            src: bron.src,
+            id: null,
+            type: 'spotify'
+          }
+        }
+        // end custom groene engel
+
+        // terugval???? nog niet bekend met alle opties.
+        return {
+          outer: bron.outerHTML,
+          src: bron.src,
+          id: null,
+          type: bron.src.includes('spotify') 
+            ? 'spotify' 
+            : bron.src.includes('youtube') 
+              ? 'youtube'
+              : 'bandcamp'
+        }
+      })
+
+    // socials obj maken voordat HTML verdwijnt
+    res.socialsForHTML = !socialSelector ? '' : Array.from(document.querySelectorAll(socialSelector))
+      .map(el => {
+        
+        el.querySelectorAll('i, svg, img').forEach(rm => rm.parentNode.removeChild(rm))
+
+        if (!el.textContent.trim().length){
+          if (el.href.includes('facebook')){
+            el.textContent = 'Facebook';
+          } else if(el.href.includes('twitter')) {
+            el.textContent = 'Tweet';
+          } else {
+            el.textContent = 'Onbekende social';
+          }
+        }
+        el.className = ''
+        el.target = '_blank';
+        return el.outerHTML
+      })
+
+    // stript HTML tbv text
+    removeSelectors.length && document.querySelectorAll(removeSelectors)
+      .forEach(toRemove => toRemove.parentNode.removeChild(toRemove))
+
+    // verwijder ongewenste paragrafen over bv restaurants
+    Array.from(document.querySelectorAll(`${textSelector} p, ${textSelector} span, ${textSelector} a`))
+      .forEach(verwijder => {
+        const heeftEvilString = !!removeHTMLWithStrings.find(evilString => verwijder.textContent.includes(evilString))
+        if (heeftEvilString) {
+          verwijder.parentNode.removeChild(verwijder)
+        }
+      });
+
+    // lege HTML eruit cq HTML zonder tekst of getallen
+    document.querySelectorAll(`${removeEmptyHTMLFrom} > *`)
+      .forEach(checkForEmpty => {
+        const leegMatch = checkForEmpty.innerHTML.replace('&nbsp;','').match(/[\w\d]/g);
+        if (!Array.isArray(leegMatch)){
+          checkForEmpty.parentNode.removeChild(checkForEmpty)
+        }
+      })
+
+    // laatste attributen eruit.
+    document.querySelectorAll(`${textSelector} *`)
+      .forEach(elToStrip => {
+        attributesToRemoveSecondRound.forEach(attr => {
+          if (elToStrip.hasAttribute(attr)){
+            elToStrip.removeAttribute(attr)
+          }
+        })
+      })      
+
+    // tekst.
+    res.textForHTML = Array.from(document.querySelectorAll(textSelector))
+      .map(el => el.innerHTML)
+      .join('')
+
+    // #endregion longHTML
+
     return res;
   }, {event});
 

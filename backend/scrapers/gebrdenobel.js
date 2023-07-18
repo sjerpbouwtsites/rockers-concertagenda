@@ -28,7 +28,7 @@ const gebrdenobelScraper = new AbstractScraper(makeScraperConfig({
 
 gebrdenobelScraper.listenToMasterThread();
 
-// MAKE BASE EVENTS
+// ASYNC MERGED CHECK
 
 gebrdenobelScraper.singleMergedEventCheck = async function(event){
 
@@ -62,7 +62,7 @@ gebrdenobelScraper.singleMergedEventCheck = async function(event){
   
 }
 
-// MERGED ASYNC CHECK
+// MAKE BASE EVENTSx
 
 gebrdenobelScraper.makeBaseEventList = async function () {
 
