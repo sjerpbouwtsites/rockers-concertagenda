@@ -215,10 +215,6 @@ cpuntScraper.getPageInfo = async function ({ page, event }) {
       document.querySelector(".article-price")?.textContent.trim() ??
       "" ;
 
-    // res.longTextHTML = (document.querySelector('.contentblock-TextOneColumn')?.innerHTML ?? '') + 
-    // (document.querySelector('.contentblock-Video')?.innerHTML ?? '');
-  
-
     // #region longHTML
 
     const mediaSelector = ['.contentblock-Video iframe', 
@@ -296,7 +292,7 @@ cpuntScraper.getPageInfo = async function ({ page, event }) {
     // laatste attributen eruit.
     document.querySelectorAll(`${textSelector} *`)
       .forEach(elToStrip => {
-        attributesToRemove.forEach(attr => {
+        attributesToRemoveSecondRound.forEach(attr => {
           if (elToStrip.hasAttribute(attr)){
             elToStrip.removeAttribute(attr)
           }
