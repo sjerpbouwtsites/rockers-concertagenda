@@ -74,6 +74,21 @@
     "corrupted": null
   },
   {
+    "doorOpenDateTime": "2023-07-21T18:00:00.000Z",
+    "startDateTime": "2023-07-21T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://occii.org/events/h-u-t-spons-draad-the/",
+    "title": "H.u.t. + spons & draad + &the",
+    "location": "occii",
+    "price": 0,
+    "shortText": "",
+    "longText": "../public/texts/6c662a11-e468-4564-ba5d-fd13092c3817.html",
+    "image": "https://occii.org/wp-content/uploads/2023/05/insta-Hut-spons-the-1024x1024.jpg",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
     "doorOpenDateTime": null,
     "startDateTime": "2023-07-21T22:00:00.000Z",
     "endDateTime": null,
@@ -84,6 +99,21 @@
     "image": "https://www.podiumdeflux.nl/wp-content/uploads/2023/04/HP23.jpg",
     "soldOut": null,
     "unavailable": null,
+    "corrupted": null
+  },
+  {
+    "doorOpenDateTime": "2023-07-22T18:00:00.000Z",
+    "startDateTime": "2023-07-22T18:45:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://neushoorn.nl/production/friese-vinyl-club-ter-ziele-dodenbezweerder/",
+    "title": "Friese Vinyl Club: Ter Ziele ",
+    "location": "neushoorn",
+    "price": 10,
+    "shortText": " Dodenbezweerder  FVC-plaat #10",
+    "longText": "../public/texts/a8f88d76-4045-442e-9109-7820c203e182.html",
+    "image": "https://neushoorn.nl/wp-content/uploads/2023/05/detail-2-5923-691x460.png",
+    "soldOut": false,
+    "unavailable": false,
     "corrupted": null
   },
   {
@@ -174,6 +204,21 @@
     "image": "https://baroeg.nl/wp-content/uploads/2023/05/2_Sasquatch_promo_PhotoCredit_Banana-e1683720083237-150x150.jpg",
     "soldOut": false,
     "unavailable": null,
+    "corrupted": null
+  },
+  {
+    "doorOpenDateTime": "2023-07-30T17:30:00.000Z",
+    "startDateTime": "2023-07-30T17:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/steve-von-till-30-07-2023/",
+    "title": "Steve Von Till",
+    "location": "tivolivredenburg",
+    "price": 25.35,
+    "shortText": "Soloproject van NEUROSIS zanger en gitarist",
+    "longText": "../public/texts/183b8b17-ffe8-45a3-8e0c-614c97e3a89b.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2023/05/001-e1685607006644.jpg",
+    "soldOut": false,
+    "unavailable": false,
     "corrupted": null
   },
   {
@@ -339,6 +384,20 @@
     "image": null,
     "soldOut": null,
     "unavailable": null,
+    "corrupted": null
+  },
+  {
+    "doorOpenDateTime": "2023-08-10T17:30:00.000Z",
+    "startDateTime": "2023-08-10T18:15:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://neushoorn.nl/production/alestorm/",
+    "title": "Alestorm",
+    "location": "neushoorn",
+    "shortText": "It's pirate party time!",
+    "longText": "../public/texts/74a9b221-0fc0-42ab-885b-558de34a1987.html",
+    "image": "https://neushoorn.nl/wp-content/uploads/2023/06/Alestorm_detail-56d8-658x460.png",
+    "soldOut": true,
+    "unavailable": false,
     "corrupted": null
   },
   {
@@ -642,6 +701,19 @@
   },
   {
     "doorOpenDateTime": null,
+    "startDateTime": "2023-08-19T09:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.ticketmaster.nl/event/dynamo-metalfest-2023-day-ticket-saturday-tickets/284753?language=en-us",
+    "title": "Dynamo Metalfest 2023 Day ticket Saturday",
+    "location": "ijssportcentrum",
+    "longText": "../public/texts/71f2e3db-a9ed-44a4-baae-13cf99a43c87.html",
+    "image": "https://s1.ticketm.net/dam/a/98c/907a101a-b47e-4b66-81ae-9396b5bb298c_759881_TABLET_LANDSCAPE_16_9.jpg",
+    "soldOut": null,
+    "unavailable": "",
+    "corrupted": null
+  },
+  {
+    "doorOpenDateTime": null,
     "startDateTime": "2023-08-19T12:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://baroeg.nl/productie/tales-from-the-punx/",
@@ -698,6 +770,19 @@
     "image": "https://www.dbstudio.nl/wp-content/uploads/2023/05/greenleaf_press-2_2021_by_peder_bergstrand-scaled.jpg",
     "soldOut": null,
     "unavailable": null,
+    "corrupted": null
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-08-20T09:15:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.ticketmaster.nl/event/dynamo-metalfest-2023-day-ticket-sunday-tickets/284755?language=en-us",
+    "title": "Dynamo Metalfest 2023 Day ticket Sunday",
+    "location": "ijssportcentrum",
+    "longText": "../public/texts/eae2c467-f32e-4b15-955a-1b55e10bd58f.html",
+    "image": "https://s1.ticketm.net/dam/a/98c/907a101a-b47e-4b66-81ae-9396b5bb298c_759881_TABLET_LANDSCAPE_16_9.jpg",
+    "soldOut": null,
+    "unavailable": "",
     "corrupted": null
   },
   {
@@ -953,6 +1038,21 @@
     "corrupted": null
   },
   {
+    "doorOpenDateTime": "2023-08-26T21:00:00.000Z",
+    "startDateTime": "2023-08-26T21:00:00.000Z",
+    "endDateTime": "2023-08-26T21:00:00.000Z",
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/loose-ends-festival-26-08-2023/",
+    "title": "Loose Ends Festival",
+    "location": "tivolivredenburg",
+    "price": 32,
+    "shortText": "TivoliVredenburg & Friendly Fire present outdoor festival op Beton-T",
+    "longText": "../public/texts/1c4a94f8-4c53-4b44-be55-978f37c31182.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2023/05/TV-LE-23-FB-Event-1920x1005-2.jpg",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
     "doorOpenDateTime": null,
     "startDateTime": "2023-08-31T00:00:00.000Z",
     "endDateTime": null,
@@ -1012,6 +1112,21 @@
     "corrupted": null
   },
   {
+    "doorOpenDateTime": "2023-09-03T18:00:00.000Z",
+    "startDateTime": "2023-09-03T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://occii.org/events/vikendica-occii/",
+    "title": "Sereias (pt) ",
+    "location": "occii",
+    "price": 0,
+    "shortText": " 52 hertz whale (sk)   schau schau Vikendica is a travelling festival-weekender for adventurous new music",
+    "longText": "../public/texts/1ca917af-75c4-4f52-a674-029a95ccb99f.html",
+    "image": "https://occii.org/wp-content/uploads/2023/05/VIKENDICA-OCCII-POSTER-02-724x1024.png",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
     "doorOpenDateTime": null,
     "startDateTime": "2023-09-05T17:00:00.000Z",
     "endDateTime": null,
@@ -1067,6 +1182,21 @@
     "shortText": "SIRENIA • AMBERIAN DAWN • DARK SARAH • REXORIA",
     "longText": "../public/texts/efee1a39-2dfd-4338-a7e6-c258330c0c36.html",
     "image": "https://iduna.nl/wp-content/uploads/2023/05/sirenia_website.png",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
+    "doorOpenDateTime": "2023-09-07T18:30:00.000Z",
+    "startDateTime": "2023-09-07T18:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/mutoid-man-07-09-2023/",
+    "title": "Mutoid Man",
+    "location": "tivolivredenburg",
+    "price": 16,
+    "shortText": "dB's & TivoliVredenburg present",
+    "longText": "../public/texts/8e61e83c-b1d7-497d-bd02-8beca65e8597.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2023/05/jZBM1_os-e1684496591507-380x214.jpeg",
     "soldOut": false,
     "unavailable": false,
     "corrupted": null
@@ -1171,6 +1301,21 @@
     "image": "https://www.dynamo-eindhoven.nl/wp-content/uploads/2022/11/IMG_0439-2a-1200x1200.jpg",
     "soldOut": true,
     "unavailable": null,
+    "corrupted": null
+  },
+  {
+    "doorOpenDateTime": "2023-09-08T18:00:00.000Z",
+    "startDateTime": "2023-09-08T18:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://neushoorn.nl/production/helleruin-asagraum-ornaris/",
+    "title": "Helleruin + Asagraum + Ornaris",
+    "location": "neushoorn",
+    "price": 18,
+    "shortText": "Devils, Deaths and Dark Arts album release show",
+    "longText": "../public/texts/8ae39d19-cab6-46a5-bb12-57e9888cdcff.html",
+    "image": "https://neushoorn.nl/wp-content/uploads/2023/07/Helleruin_detail-ea9d-549x460.jpg",
+    "soldOut": false,
+    "unavailable": false,
     "corrupted": null
   },
   {
@@ -1291,6 +1436,21 @@
     "image": "https://baroeg.nl/wp-content/uploads/2023/06/Chantik-Photography-Wesenwille-15-scaled-e1686575252677-150x150.jpg",
     "soldOut": false,
     "unavailable": null,
+    "corrupted": null
+  },
+  {
+    "doorOpenDateTime": "2023-09-13T18:00:00.000Z",
+    "startDateTime": "2023-09-13T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://occii.org/events/wak-raw-brigade/",
+    "title": "Raw brigade (col) ",
+    "location": "occii",
+    "price": 10,
+    "shortText": " crucified (be)   hard shoulder Ferocious | old school | hardcore",
+    "longText": "../public/texts/302aaf2b-0ee8-43cb-8d30-affafffb87c2.html",
+    "image": "https://occii.org/wp-content/uploads/2023/06/230705_rawbrigade-digital_colour_instagram-819x1024.png",
+    "soldOut": false,
+    "unavailable": false,
     "corrupted": null
   },
   {
@@ -1562,6 +1722,20 @@
   },
   {
     "doorOpenDateTime": null,
+    "startDateTime": "2023-09-22T18:30:00.000Z",
+    "endDateTime": "2023-09-22T21:30:00.000Z",
+    "venueEventUrl": "https://www.poppodium-volt.nl/activiteit/heart-attack?show=32",
+    "title": "Heart Attack",
+    "location": "volt",
+    "shortText": "Metal",
+    "longText": "../public/texts/f950f568-2a7b-49ad-b338-4e242d08c089.html",
+    "image": "https://www.poppodium-volt.nl/sites/volt/files/styles/activity_teaser/public/2023-03/HATickets2_0.jpg?h=8be34f3f&itok=_gCItVI4",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
+    "doorOpenDateTime": null,
     "startDateTime": "2023-09-23T13:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://gebrdenobel.nl/programma/metal-experience-fest-v-23-sep-2023",
@@ -1664,6 +1838,21 @@
     "corrupted": null
   },
   {
+    "doorOpenDateTime": "2023-09-27T18:00:00.000Z",
+    "startDateTime": "2023-09-27T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/the-sisters-of-mercy-27-09-2023/",
+    "title": "The Sisters of Mercy",
+    "location": "tivolivredenburg",
+    "price": 42.25,
+    "shortText": "Baanbrekende eighties postpunk/new wave band",
+    "longText": "../public/texts/bf5e8e4b-5589-4446-a40e-b688b5dcc71a.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2023/03/EH_TheSistersOfMercy.jpg",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
     "doorOpenDateTime": "2023-09-28T16:30:00.000Z",
     "startDateTime": "2023-09-28T17:00:00.000Z",
     "endDateTime": null,
@@ -1694,6 +1883,21 @@
     "corrupted": null
   },
   {
+    "doorOpenDateTime": "2023-09-28T17:00:00.000Z",
+    "startDateTime": "2023-09-28T17:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/blackbriar-ad-infinitum-28-09-2023/",
+    "title": "Blackbriar + Ad Infinitum",
+    "location": "tivolivredenburg",
+    "price": 26.85,
+    "shortText": "Symfonische metal | The Euphonic Downfall Tour 2023",
+    "longText": "../public/texts/810f4094-d66a-408f-b54f-f794f8b1be0a.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2023/06/EH_BlackBriar-e1685717102475.jpg",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
     "doorOpenDateTime": "2023-09-28T17:30:00.000Z",
     "startDateTime": "2023-09-28T18:00:00.000Z",
     "endDateTime": null,
@@ -1704,6 +1908,21 @@
     "shortText": "     Support: Eat Your Heart Out",
     "longText": "../public/texts/90505dee-d6f2-4125-a2ad-ae7bc5c5ab37.html",
     "image": "https://iduna.nl/wp-content/uploads/2023/05/as-everything-unfolds_website.png",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
+    "doorOpenDateTime": "2023-09-28T18:00:00.000Z",
+    "startDateTime": "2023-09-28T18:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://patronaat.nl/event/the-jackets-28-09-23/",
+    "title": "The Jackets",
+    "location": "patronaat",
+    "price": 13,
+    "shortText": "Een geestverruimende mix van garagerock, jaren '60, punk en Psychedelia.",
+    "longText": "../public/texts/c7ee9964-4e54-418d-beef-3c2ab6c61e2e.html",
+    "image": "https://patronaat.nl/app/uploads/2023/04/2_The_Jackets_by_Yuri_Tavares-760x400.jpg",
     "soldOut": false,
     "unavailable": false,
     "corrupted": null
@@ -1857,6 +2076,21 @@
     "corrupted": null
   },
   {
+    "doorOpenDateTime": "2023-09-29T18:00:00.000Z",
+    "startDateTime": "2023-09-29T20:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://p60.nl/hang-youth",
+    "title": "Hang Youth",
+    "location": "p60",
+    "price": 20.5,
+    "shortText": "MIDDEN TUSSEN EEN GRAPPIG KUNSTPROJECT, EEN KWADE TWEET EN EEN BLOEDSERIEUZE PUNKBAND",
+    "longText": "../public/texts/233d958c-d0f8-4939-9760-2a05e5e6380a.html",
+    "image": "https://p60.nl/sites/default/files/styles/main_banner/public/2023-06/P60_HangYouth_Marketing_Website_Banner.jpg",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
     "doorOpenDateTime": null,
     "startDateTime": "2023-09-30T00:00:00.000Z",
     "endDateTime": null,
@@ -1887,6 +2121,21 @@
     "corrupted": null
   },
   {
+    "doorOpenDateTime": "2023-09-30T11:00:00.000Z",
+    "startDateTime": "2023-09-30T11:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://neushoorn.nl/production/into-the-void/",
+    "title": "Into the Void",
+    "location": "neushoorn",
+    "price": 49,
+    "shortText": "Internationaal stoner-, sludge- en doomfestival",
+    "longText": "../public/texts/73e7ab03-6bc7-4d6c-bced-04a8f73cd651.html",
+    "image": "https://neushoorn.nl/wp-content/uploads/2023/04/Atomic_bitchwax_detail-1e8f-720x430.png",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
     "doorOpenDateTime": null,
     "startDateTime": "2023-09-30T16:00:00.000Z",
     "endDateTime": null,
@@ -1897,6 +2146,21 @@
     "shortText": "Death metal dubbelslag met support acts Warside en Skaphos ",
     "longText": "../public/texts/97494c3f-09d5-43ac-b24b-a29e237dce02.html",
     "image": "https://gebrdenobel.nl/images/jcogs_img/cache/Vader_nobel_-_28de80_-_7c7ac109607f3723d06892cc30f8ed528d9e09d2.jpg",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-09-30T17:30:00.000Z",
+    "endDateTime": "2023-09-30T21:00:00.000Z",
+    "venueEventUrl": "https://www.poppodium-volt.nl/activiteit/worst?show=81",
+    "title": "Worst",
+    "location": "volt",
+    "price": 13.5,
+    "shortText": "Hardcore",
+    "longText": "../public/texts/ec5a2bd1-0d98-4985-8dce-1f6f2c652bcb.html",
+    "image": "https://www.poppodium-volt.nl/sites/volt/files/styles/activity_teaser/public/2023-06/image0.jpeg?h=ab502919&itok=0jqMPU5C",
     "soldOut": false,
     "unavailable": false,
     "corrupted": null
@@ -1947,6 +2211,21 @@
     "corrupted": null
   },
   {
+    "doorOpenDateTime": "2023-10-02T18:00:00.000Z",
+    "startDateTime": "2023-10-02T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/frog-leap-02-10-2023/",
+    "title": "Frog Leap",
+    "location": "tivolivredenburg",
+    "price": 28.35,
+    "shortText": "YouTube fenomeen haalt covers door metal shredder",
+    "longText": "../public/texts/74998384-0199-4456-a901-ea25fa109ef5.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2023/03/MAX_TAYLOR_GRANT_2022-09-23_LU_FL-Tour-Luxembourg-Luxembourg_34773.jpg",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
     "doorOpenDateTime": "2023-10-04T17:00:00.000Z",
     "startDateTime": "2023-10-04T17:30:00.000Z",
     "endDateTime": null,
@@ -1957,6 +2236,21 @@
     "shortText": "undefined brutal death metal, goregrind, pornogrind, slam death metal undefined",
     "longText": "../public/texts/6c0bae64-f267-415e-9bd9-73497d37b463.html",
     "image": "https://metropool.nl//media/36152/cerebral-incubation-plus-epicardiectomy_web_1920x1080.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=133325926610000000",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
+    "doorOpenDateTime": "2023-10-06T18:00:00.000Z",
+    "startDateTime": "2023-10-05T22:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://occii.org/events/charnel-ground-a-night-of-harsh-noise-worship/",
+    "title": "The rita (ca) ",
+    "location": "occii",
+    "price": 20.3,
+    "shortText": " black leather jesus (us)   vomir (fr)   jsh (se)   misère (us/nl) A Night of Harsh Noise Worship",
+    "longText": "../public/texts/9211a00c-7c1f-4e2a-b56b-65044c1ad146.html",
+    "image": "https://occii.org/wp-content/uploads/2023/06/Instagram-6-oktober-BLJ-The-Rita-Vomir-etc-860x1024.jpg",
     "soldOut": false,
     "unavailable": false,
     "corrupted": null
@@ -1988,6 +2282,36 @@
     "image": "https://www.afaslive.nl/files/Agenda/2023/10-Oktober/_agendaitem/Inhaler.jpg",
     "soldOut": true,
     "unavailable": null,
+    "corrupted": null
+  },
+  {
+    "doorOpenDateTime": null,
+    "startDateTime": "2023-10-06T18:30:00.000Z",
+    "endDateTime": "2023-10-06T21:00:00.000Z",
+    "venueEventUrl": "https://www.poppodium-volt.nl/activiteit/imperial-age?show=94",
+    "title": "Imperial Age",
+    "location": "volt",
+    "price": 18.5,
+    "shortText": "Metal",
+    "longText": "../public/texts/7b21e294-acfb-46d2-a310-cc5c843d4450.html",
+    "image": "https://www.poppodium-volt.nl/sites/volt/files/styles/activity_teaser/public/2023-06/Band%20Photo.PNG?h=3c85a597&itok=3Kesw4Mp",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
+    "doorOpenDateTime": "2023-10-06T18:00:00.000Z",
+    "startDateTime": "2023-10-06T19:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://neushoorn.nl/production/hardcore-vrijdag/",
+    "title": "Hardcore Vrijdag",
+    "location": "neushoorn",
+    "price": 5,
+    "shortText": "Je tweemaandelijkse dosis hardcore punk op vrijdag",
+    "longText": "../public/texts/63dc36e9-ab50-4202-a3a8-97bd9a4b200b.html",
+    "image": "https://neushoorn.nl/wp-content/uploads/2023/07/DETAIL-hardcore-vrijdag-b468-3e7a-720x405.jpg",
+    "soldOut": false,
+    "unavailable": false,
     "corrupted": null
   },
   {
@@ -2110,6 +2434,21 @@
     "corrupted": null
   },
   {
+    "doorOpenDateTime": "2023-10-09T17:00:00.000Z",
+    "startDateTime": "2023-10-09T17:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://patronaat.nl/event/this-will-destroy-you-the-ocean-09-10-23/",
+    "title": "This Will Destroy You + The Ocean",
+    "location": "patronaat",
+    "price": 28.5,
+    "shortText": "Co-headline show",
+    "longText": "../public/texts/1046ba05-5a85-498d-8ae3-7f170f1220a2.html",
+    "image": "https://patronaat.nl/app/uploads/2023/06/TWDY-The-Ocean-Square-Patronaat-760x400.jpg",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
     "doorOpenDateTime": "2023-10-11T17:30:00.000Z",
     "startDateTime": "2023-10-11T18:00:00.000Z",
     "endDateTime": null,
@@ -2122,6 +2461,21 @@
     "image": "https://www.doornroosje.nl/app/uploads/2023/07/Cellar-Darling-1934x1088-350x197-c-default.jpg",
     "soldOut": false,
     "unavailable": null,
+    "corrupted": null
+  },
+  {
+    "doorOpenDateTime": "2023-10-11T18:00:00.000Z",
+    "startDateTime": "2023-10-11T18:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://patronaat.nl/event/the-pleasure-dome-11-10-23/",
+    "title": "The Pleasure Dome + Meltheads",
+    "location": "patronaat",
+    "price": 15,
+    "shortText": "Snoeiharde gitaren van explosieve upcoming punkbands",
+    "longText": "../public/texts/1e92fff4-f7a4-40f7-a088-eb0050e7bd9d.html",
+    "image": "https://patronaat.nl/app/uploads/2023/06/TPD-Patronaat-A2-760x400.jpg",
+    "soldOut": false,
+    "unavailable": false,
     "corrupted": null
   },
   {
@@ -2378,6 +2732,21 @@
     "corrupted": null
   },
   {
+    "doorOpenDateTime": "2023-10-14T17:00:00.000Z",
+    "startDateTime": "2023-10-14T19:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://p60.nl/pain",
+    "title": "Pain + ensiferum",
+    "location": "p60",
+    "price": 31.5,
+    "shortText": "EEN ONVERGETELIJKE AVOND VOOR FANS!",
+    "longText": "../public/texts/414a3349-44e4-47c9-b6fe-1482f41574fc.html",
+    "image": "https://p60.nl/sites/default/files/styles/main_banner/public/2023-06/P60_PAIN_Marketing_Website_Banner.jpg",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
     "doorOpenDateTime": "2023-10-15T13:00:00.000Z",
     "startDateTime": "2023-10-15T13:00:00.000Z",
     "endDateTime": null,
@@ -2388,6 +2757,21 @@
     "shortText": " Fatesealer  ",
     "longText": "../public/texts/a4dfd221-2b94-4f0a-925f-7f7dac7e39e1.html",
     "image": "https://static.cpunt.nl/cache/moribund-oblivion-massive-assault-mouflon-fateseal.45945/moribund-oblivion-massive-assault-mouflon-fateseal-s400x400-q80.jpg",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
+    "doorOpenDateTime": "2023-10-15T16:00:00.000Z",
+    "startDateTime": "2023-10-15T16:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/paradise-lost-primordial-harakiri-for-the-sky-omnium-gatherum-15-10-2023/",
+    "title": "Paradise Lost, Primordial, Harakiri For The Sky ",
+    "location": "tivolivredenburg",
+    "price": 37.75,
+    "shortText": "    Omnium Gatherum  Vier keer metal tijdens Ultima Ratio Fest II",
+    "longText": "../public/texts/0a712888-7540-465a-ace6-4677cddf167d.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2023/01/UR23_Tour_2400x2400_2023_ex-e1673874442705.jpg",
     "soldOut": false,
     "unavailable": false,
     "corrupted": null
@@ -2423,6 +2807,21 @@
     "corrupted": null
   },
   {
+    "doorOpenDateTime": "2023-10-18T18:15:00.000Z",
+    "startDateTime": "2023-10-18T18:15:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/high-vis-18-10-2023/",
+    "title": "High Vis",
+    "location": "tivolivredenburg",
+    "price": 24.85,
+    "shortText": "Intense combinatie van hardcore en postpunk",
+    "longText": "../public/texts/9ce50162-8670-4438-8a19-659a9fa2e4f9.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2023/05/HV003_Easy-Resize.com_.jpg",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
     "doorOpenDateTime": "2023-10-18T17:30:00.000Z",
     "startDateTime": "2023-10-18T18:30:00.000Z",
     "endDateTime": null,
@@ -2449,6 +2848,21 @@
     "image": "https://d3gy47dclw6o24.cloudfront.net/styles/320w/s3/2023-06/FB%20Page%20banner@2x(1).png?itok=0HA1PndI",
     "soldOut": false,
     "unavailable": null,
+    "corrupted": null
+  },
+  {
+    "doorOpenDateTime": "2023-10-19T17:45:00.000Z",
+    "startDateTime": "2023-10-19T17:45:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/riverside-19-10-2023/",
+    "title": "Riverside",
+    "location": "tivolivredenburg",
+    "price": 34.75,
+    "shortText": "Progressive rock voor liefhebbers van Marillion en Dream Theater",
+    "longText": "../public/texts/31aa45f8-ca02-4324-86a0-827ba68ca812.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2023/05/Riverside-2023-Photo-2-Radek-Zawadzki_Easy-Resize.com_.jpg",
+    "soldOut": false,
+    "unavailable": false,
     "corrupted": null
   },
   {
@@ -2511,6 +2925,36 @@
     "corrupted": null
   },
   {
+    "doorOpenDateTime": "2023-10-20T18:30:00.000Z",
+    "startDateTime": "2023-10-20T18:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/the-warlocks-20-10-2023/",
+    "title": "The Warlocks",
+    "location": "tivolivredenburg",
+    "price": 15,
+    "shortText": "dB's & TivoliVredenburg present | psychedelische garagerock",
+    "longText": "../public/texts/3501418d-ca7b-4fe6-9d1a-e74caacb3683.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2023/07/the-warlocks-website-380x214.png",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
+    "doorOpenDateTime": "2023-10-20T17:00:00.000Z",
+    "startDateTime": "2023-10-20T19:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://p60.nl/heavy-metal-maniacs-vr",
+    "title": "Heavy Metal Maniacs Festival",
+    "location": "p60",
+    "price": 26.5,
+    "shortText": "DAG 1",
+    "longText": "../public/texts/eead12bb-31de-43e5-95e3-5abd42f02a16.html",
+    "image": "https://test.p60.nl/sites/default/files/styles/main_banner/public/2023-06/P60_Heavy_Metal_Maniacs_Vrijdag_Marketing_Website_Banner_3.jpg",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
     "doorOpenDateTime": null,
     "startDateTime": "2023-10-20T20:00:00.000Z",
     "endDateTime": null,
@@ -2565,6 +3009,21 @@
     "shortText": "MCLX presents Thy Art Is Murder + Whitechapel + Fit For An Autopsy + Spite",
     "longText": "../public/texts/1bb9aa28-e2e9-4064-b5f7-23cd2bd4743e.html",
     "image": "https://kavka.be/wp-content/uploads/2023/05/345588611_1391633738357224_2590268869703317315_n-1200x0-c-default.jpg",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
+    "doorOpenDateTime": "2023-10-21T13:30:00.000Z",
+    "startDateTime": "2023-10-21T16:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://p60.nl/heavy-metal-maniacs-za",
+    "title": "Heavy Metal Maniacs Festival",
+    "location": "p60",
+    "price": 34,
+    "shortText": "DAG 2",
+    "longText": "../public/texts/63d7d6f2-ce48-4195-a0a2-df4a3dcc6de5.html",
+    "image": "https://p60.nl/sites/default/files/styles/main_banner/public/2023-06/P60_Heavy_Metal_Maniacs_Zaterdag_Marketing_Website_Banner_0.jpg",
     "soldOut": false,
     "unavailable": false,
     "corrupted": null
@@ -2630,6 +3089,21 @@
     "corrupted": null
   },
   {
+    "doorOpenDateTime": "2023-10-22T14:00:00.000Z",
+    "startDateTime": "2023-10-22T14:45:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://neushoorn.nl/production/chop-suey-machine-head-uk/",
+    "title": "Chop Suey + Machine Head UK",
+    "location": "neushoorn",
+    "price": 15,
+    "shortText": "All-star System of a Down tribute uit UK met leden van DragonForce, Breed 77 en Anti-Nowhere League",
+    "longText": "../public/texts/46725cef-8756-4436-867e-a3d85b9cb70b.html",
+    "image": "https://neushoorn.nl/wp-content/uploads/2023/03/detail-3-a1ce-691x460.jpg",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
     "doorOpenDateTime": null,
     "startDateTime": "2023-10-23T17:00:00.000Z",
     "endDateTime": null,
@@ -2657,6 +3131,21 @@
     "image": null,
     "soldOut": null,
     "unavailable": null,
+    "corrupted": null
+  },
+  {
+    "doorOpenDateTime": "2023-10-24T17:00:00.000Z",
+    "startDateTime": "2023-10-24T17:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/sonata-arctica-stratovarius-24-10-2023/",
+    "title": "Sonata Arctica + Stratovarius",
+    "location": "tivolivredenburg",
+    "price": 36.75,
+    "shortText": "Nordic Power Metal Titans Tour 2023",
+    "longText": "../public/texts/27342f83-43c8-45bf-a00d-4f40e44d3a7d.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2023/05/231024-Sonata-Arctica-header.jpg",
+    "soldOut": false,
+    "unavailable": false,
     "corrupted": null
   },
   {
@@ -2734,6 +3223,21 @@
     "corrupted": null
   },
   {
+    "doorOpenDateTime": "2023-10-26T18:00:00.000Z",
+    "startDateTime": "2023-10-26T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/doomstad-birds-in-row-26-10-2023/",
+    "title": "Doomstad: Birds in Row",
+    "location": "tivolivredenburg",
+    "price": 18,
+    "shortText": "EKKO, Never Mind The Hype & TivoliVredenburg Present",
+    "longText": "../public/texts/c71c54fd-2624-4662-8d1b-62de9d8931d5.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2023/06/BIR_By-William-Lacalmontie-_IMG5575_HI_Easy-Resize.com_-e1687773550613.jpg",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
     "doorOpenDateTime": "2023-10-26T17:30:00.000Z",
     "startDateTime": "2023-10-26T18:15:00.000Z",
     "endDateTime": null,
@@ -2759,6 +3263,21 @@
     "shortText": "",
     "longText": "../public/texts/03bcea3d-3e54-4acb-84eb-05819f97e4bc.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/64883ee6e36a2.jpg?version=1686650626",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
+    "doorOpenDateTime": "2023-10-27T18:00:00.000Z",
+    "startDateTime": "2023-10-26T22:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://occii.org/events/sex-swing/",
+    "title": "Sex swing (uk) + 1 more tba",
+    "location": "occii",
+    "price": 20.3,
+    "shortText": "",
+    "longText": "../public/texts/13048a4f-ec64-4235-9b9a-d2ae15dc3fef.html",
+    "image": "https://occii.org/wp-content/uploads/2023/07/SEX-SWING-3.1-724x1024.jpg",
     "soldOut": false,
     "unavailable": false,
     "corrupted": null
@@ -2869,6 +3388,36 @@
     "corrupted": null
   },
   {
+    "doorOpenDateTime": "2023-10-27T17:30:00.000Z",
+    "startDateTime": "2023-10-27T19:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://neushoorn.nl/production/feuerengel-a-tribute-to-rammstein-2/",
+    "title": "Feuerengel – a tribute to rammstein",
+    "location": "neushoorn",
+    "price": 33,
+    "shortText": "Een perfecte illusie van het origineel",
+    "longText": "../public/texts/ea5fa955-94ac-48df-87fd-0d847f2b329a.html",
+    "image": "https://neushoorn.nl/wp-content/uploads/2023/07/FEUERENGEL_detail-61da-d2ff-687x460.png",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
+    "doorOpenDateTime": "2023-10-27T21:00:00.000Z",
+    "startDateTime": "2023-10-27T21:00:00.000Z",
+    "endDateTime": "2023-10-27T03:00:00.000Z",
+    "venueEventUrl": "https://patronaat.nl/event/no-barrier-27-10-23/",
+    "title": "No barrier: halloween editie",
+    "location": "patronaat",
+    "price": 16.5,
+    "shortText": "Punk, rock & metalcore nacht met extra enge twist!",
+    "longText": "../public/texts/681b9591-5624-4d71-bbc2-6e9de6d01818.html",
+    "image": "https://patronaat.nl/app/uploads/2023/02/NB-Socials-Profile-760x400.jpg",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
     "doorOpenDateTime": null,
     "startDateTime": "2023-10-28T00:00:00.000Z",
     "endDateTime": null,
@@ -2881,6 +3430,21 @@
     "image": null,
     "soldOut": null,
     "unavailable": null,
+    "corrupted": null
+  },
+  {
+    "doorOpenDateTime": "2023-10-28T02:00:00.000Z",
+    "startDateTime": "2023-10-28T02:00:00.000Z",
+    "endDateTime": "2023-10-28T02:00:00.000Z",
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/emo-night-mainland-xl-halloween-edition-28-10-2023/",
+    "title": "Emo Night Mainland XL Halloween edition",
+    "location": "tivolivredenburg",
+    "price": 13.5,
+    "shortText": "Emo revival met de beste poppunk en meer!",
+    "longText": "../public/texts/e11b7701-6220-4034-9809-51e81a25b39e.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2023/04/20231028-TivoliVredenburg-Square-380x214.png",
+    "soldOut": false,
+    "unavailable": false,
     "corrupted": null
   },
   {
@@ -2959,6 +3523,20 @@
     "corrupted": null
   },
   {
+    "doorOpenDateTime": "2023-10-28T17:30:00.000Z",
+    "startDateTime": "2023-10-28T19:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://neushoorn.nl/production/feuerengel-a-tribute-to-rammstein/",
+    "title": "Feuerengel – a tribute to rammstein",
+    "location": "neushoorn",
+    "shortText": "Een perfecte illusie van het origineel",
+    "longText": "../public/texts/4731bcdb-3f52-40ee-891d-3088b84a9a0c.html",
+    "image": "https://neushoorn.nl/wp-content/uploads/2023/04/FEUERENGEL_detail-687x460.png",
+    "soldOut": true,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
     "doorOpenDateTime": null,
     "startDateTime": "2023-10-29T08:00:00.000Z",
     "endDateTime": "2023-10-29T05:00:00.000Z",
@@ -3000,6 +3578,21 @@
     "longText": "../public/texts/0d6086ba-fad1-4920-8fb0-1d3bfe8d98e3.html",
     "image": "https://iduna.nl/wp-content/uploads/2023/06/Square3.jpg",
     "soldOut": true,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
+    "doorOpenDateTime": "2023-10-29T18:00:00.000Z",
+    "startDateTime": "2023-10-29T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/amorphis-29-10-2023/",
+    "title": "Amorphis",
+    "location": "tivolivredenburg",
+    "price": 36.75,
+    "shortText": "special guest Sólstafir & support Lost Society | Halo Tour 2023",
+    "longText": "../public/texts/8b888f1e-39bc-4886-9a43-1e498012629e.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2023/05/amorphis-2021-03221_credit_Sam-Jamsen.jpg",
+    "soldOut": false,
     "unavailable": false,
     "corrupted": null
   },
@@ -3094,6 +3687,21 @@
     "corrupted": null
   },
   {
+    "doorOpenDateTime": "2023-11-03T19:00:00.000Z",
+    "startDateTime": "2023-11-03T19:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://occii.org/events/out-and-about/",
+    "title": "Lewsberg",
+    "location": "occii",
+    "price": 10,
+    "shortText": "Rock | Rotterdam",
+    "longText": "../public/texts/e2c27ac5-1cd5-4642-9f7c-a1942735f3ef.html",
+    "image": "https://occii.org/wp-content/uploads/2023/06/LEWSBERG-OCCII-2023-1024x1024.jpg",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
     "doorOpenDateTime": "2023-11-03T18:30:00.000Z",
     "startDateTime": "2023-11-03T19:30:00.000Z",
     "endDateTime": null,
@@ -3135,6 +3743,21 @@
     "image": "https://baroeg.nl/wp-content/uploads/2023/04/SadWhisperings-scaled-2-150x150.jpg",
     "soldOut": false,
     "unavailable": null,
+    "corrupted": null
+  },
+  {
+    "doorOpenDateTime": "2023-11-04T18:00:00.000Z",
+    "startDateTime": "2023-11-04T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/waterparks-04-11-2023/",
+    "title": "Waterparks",
+    "location": "tivolivredenburg",
+    "price": 28.85,
+    "shortText": "Hyperactieve poppunkband presenteert nieuw album + Stand Atlantic & more",
+    "longText": "../public/texts/32be3a15-fad3-4129-b4cd-1aee8b99cb6a.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2023/04/5Z2A5065-Edit-2_Easy-Resize.com_.jpg",
+    "soldOut": false,
+    "unavailable": false,
     "corrupted": null
   },
   {
@@ -3228,6 +3851,21 @@
   },
   {
     "doorOpenDateTime": "2023-11-05T18:00:00.000Z",
+    "startDateTime": "2023-11-05T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/deathstars-05-11-2023/",
+    "title": "Deathstars",
+    "location": "tivolivredenburg",
+    "price": 27.35,
+    "shortText": "Everything Destroys Europe Tour 2023",
+    "longText": "../public/texts/c9988d63-7a4f-490d-b3bc-ae7916a322d3.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2023/04/Deatstars_Pic-low-res-380x214.jpeg",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
+    "doorOpenDateTime": "2023-11-05T18:00:00.000Z",
     "startDateTime": "2023-11-05T19:00:00.000Z",
     "endDateTime": null,
     "venueEventUrl": "https://www.013.nl/programma/7558/the-winery-dogs",
@@ -3237,6 +3875,21 @@
     "shortText": "",
     "longText": "../public/texts/76712152-bf14-43d9-a7ce-b463dbbe8d71.html",
     "image": "https://www.013.nl/uploads/cache/event_main_desktop/642d76c13616d.png?version=1680701130",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
+    "doorOpenDateTime": "2023-11-05T18:30:00.000Z",
+    "startDateTime": "2023-11-05T19:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://patronaat.nl/event/deadguy-05-11-23/",
+    "title": "Deadguy",
+    "location": "patronaat",
+    "price": 25,
+    "shortText": "Chaotische, dissonante 90s metalcore",
+    "longText": "../public/texts/3e8044e9-be36-41b2-9aab-b77d188f9ef9.html",
+    "image": "https://patronaat.nl/app/uploads/2023/06/Deadguy-760x400.jpg",
     "soldOut": false,
     "unavailable": false,
     "corrupted": null
@@ -3377,6 +4030,21 @@
     "corrupted": null
   },
   {
+    "doorOpenDateTime": "2023-11-11T13:30:00.000Z",
+    "startDateTime": "2023-11-11T14:15:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://neushoorn.nl/production/fajtfest-fryslan/",
+    "title": "Fajtfest Fryslân",
+    "location": "neushoorn",
+    "price": 19.5,
+    "shortText": "Pestilence, Stellaris, Marina e.v.a.",
+    "longText": "../public/texts/73a4b355-554c-4a87-a81c-3c76d6b77e62.html",
+    "image": "https://neushoorn.nl/wp-content/uploads/2023/05/Pestilence_detail-917c-720x412.png",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
     "doorOpenDateTime": "2023-11-11T18:30:00.000Z",
     "startDateTime": "2023-11-11T19:30:00.000Z",
     "endDateTime": null,
@@ -3506,6 +4174,21 @@
     "shortText": " sylosis   justice for the damned   guilt trip MALEVOLENCE • SYLOSIS • JUSTICE FOR THE DAMNED • GUILT TRIP",
     "longText": "../public/texts/f6b94bef-9442-4274-b37f-d96b5b72f4e9.html",
     "image": "https://kavka.be/wp-content/uploads/2023/05/343419199_560387372649416_729878778588565721_n-1200x0-c-default.jpg",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
+    "doorOpenDateTime": "2023-11-16T18:00:00.000Z",
+    "startDateTime": "2023-11-16T18:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://patronaat.nl/event/death-angel-sacred-reich-angelus-apatrida-16-11-23/",
+    "title": "Sacred Reich + Death Angel + Angelus Apatrida",
+    "location": "patronaat",
+    "price": 34.5,
+    "shortText": "'Night Of The Living Thrash' Co-Headline Tour",
+    "longText": "../public/texts/6dcea6a6-03ad-4a32-a151-fb4796264be7.html",
+    "image": "https://patronaat.nl/app/uploads/2023/05/Death-Angel-Patronaat-Square-760x400.jpg",
     "soldOut": false,
     "unavailable": false,
     "corrupted": null
@@ -3780,6 +4463,21 @@
     "corrupted": null
   },
   {
+    "doorOpenDateTime": "2023-11-26T17:30:00.000Z",
+    "startDateTime": "2023-11-26T17:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/fit-for-a-king-26-11-2023/",
+    "title": "Fit For A King",
+    "location": "tivolivredenburg",
+    "price": 32.75,
+    "shortText": "Emmure + Thrown + Gloom in the Corner | The Hell We Create Tour",
+    "longText": "../public/texts/61dddc60-3eca-4e90-aeac-53faaee75c42.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2023/05/231126-Fit-for-a-King-header.jpg",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
     "doorOpenDateTime": null,
     "startDateTime": "2023-11-27T00:00:00.000Z",
     "endDateTime": null,
@@ -3821,6 +4519,21 @@
     "image": "https://d3gy47dclw6o24.cloudfront.net/styles/320w/s3/2023-06/Club%20Void%20Ufomammut.png?itok=G7povvLl",
     "soldOut": false,
     "unavailable": null,
+    "corrupted": null
+  },
+  {
+    "doorOpenDateTime": "2023-11-29T19:00:00.000Z",
+    "startDateTime": "2023-11-29T19:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://patronaat.nl/event/hulder-29-11-23/",
+    "title": "Hulder",
+    "location": "patronaat",
+    "price": 23.5,
+    "shortText": "\"BESTIAL FORM OF HUMANITY' EUROPE MMXXIII",
+    "longText": "../public/texts/7463eb7d-bae7-49bf-acb1-f08ae29b0a1d.html",
+    "image": "https://patronaat.nl/app/uploads/2023/04/HulderIGPostNoDates-1-760x400.jpg",
+    "soldOut": false,
+    "unavailable": false,
     "corrupted": null
   },
   {
@@ -3970,6 +4683,21 @@
     "image": "https://d3gy47dclw6o24.cloudfront.net/styles/320w/s3/2023-03/EMM%2023%20-%20warm%20up%20-%201920X1080pix.jpg?itok=MOuQQoKE",
     "soldOut": false,
     "unavailable": null,
+    "corrupted": null
+  },
+  {
+    "doorOpenDateTime": "2023-12-07T19:15:00.000Z",
+    "startDateTime": "2023-12-07T19:15:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/atreyu-07-12-2023/",
+    "title": "Atreyu",
+    "location": "tivolivredenburg",
+    "price": 25.85,
+    "shortText": "We Want Your Skulls World Tour 2023",
+    "longText": "../public/texts/6f6a324f-21a4-430d-b965-a1e23a770f5d.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2023/04/Atreyu-2023-Promo-3-ver1.jpg",
+    "soldOut": false,
+    "unavailable": false,
     "corrupted": null
   },
   {
@@ -4272,6 +5000,21 @@
     "corrupted": null
   },
   {
+    "doorOpenDateTime": "2024-01-17T19:15:00.000Z",
+    "startDateTime": "2024-01-17T19:15:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/anneke-van-giersbergen-17-01-2024/",
+    "title": "Anneke van Giersbergen",
+    "location": "tivolivredenburg",
+    "price": 23.85,
+    "shortText": "Première nieuwe theatershow: Heavy Strings",
+    "longText": "../public/texts/d6fc7010-cce3-4619-93ef-776493067db8.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2023/06/Kik-Anneke-van-Giersbergen-Heavy-strings-foto-Bullet-Ray-liggend_Easy-Resize.com-1-1.jpg",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
     "doorOpenDateTime": "2024-01-18T19:00:00.000Z",
     "startDateTime": "2024-01-18T19:30:00.000Z",
     "endDateTime": null,
@@ -4376,6 +5119,21 @@
     "corrupted": null
   },
   {
+    "doorOpenDateTime": null,
+    "startDateTime": "2024-02-03T19:15:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.spotgroningen.nl/programma/her-majesty-5/",
+    "title": "Her Majesty",
+    "location": "oosterpoort",
+    "price": 25,
+    "shortText": "San Francisco City Trip“Samenzang van bijna angstaanjagende perfectie.” (de Volkskrant)",
+    "longText": "../public/texts/8bcd0b8b-d37e-4896-9600-2fc1b2eea828.html",
+    "image": "https://www.spotgroningen.nl/wp-content/uploads/2023/05/Her-20Majesty-20-20San-20Francisco-20City-20Trip-20-28Bob-20Wisselink-29-scaled-e1684315330853-768x444.jpg",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
     "doorOpenDateTime": "2024-02-04T18:00:00.000Z",
     "startDateTime": "2024-02-04T19:00:00.000Z",
     "endDateTime": null,
@@ -4421,6 +5179,21 @@
     "corrupted": null
   },
   {
+    "doorOpenDateTime": null,
+    "startDateTime": "2024-02-06T19:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.spotgroningen.nl/programma/anneke-van-giersbergen-4/",
+    "title": "Anneke van Giersbergen",
+    "location": "oosterpoort",
+    "price": 22,
+    "shortText": "Heavy StringsEen van de veelzijdigste stemmen van Nederland.",
+    "longText": "../public/texts/01feb800-1333-45a0-8a43-5fca4aac166f.html",
+    "image": "https://www.spotgroningen.nl/wp-content/uploads/2023/05/Anneke-van-Giersbergen-Heavy-strings-Mark-Uyl-768x1151.jpg",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
     "doorOpenDateTime": "2024-02-16T18:00:00.000Z",
     "startDateTime": "2024-02-16T18:30:00.000Z",
     "endDateTime": "2024-02-16T22:00:00.000Z",
@@ -4451,6 +5224,21 @@
     "corrupted": null
   },
   {
+    "doorOpenDateTime": "2024-02-18T18:00:00.000Z",
+    "startDateTime": "2024-02-18T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/tesseract-18-02-2024/",
+    "title": "TesseracT",
+    "location": "tivolivredenburg",
+    "price": 32.25,
+    "shortText": "Progressive-metalband met supports Unprocessed + The Callous Daoboys",
+    "longText": "../public/texts/d9aeca90-0c10-4493-8792-1bd0b6d17959.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2023/07/Credit-Andy-Ford_Easy-Resize.com_-1.jpg",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
     "doorOpenDateTime": null,
     "startDateTime": "2024-02-18T21:00:00.000Z",
     "endDateTime": "2024-02-18T02:00:00.000Z",
@@ -4476,6 +5264,21 @@
     "shortText": "undefined alternative metal, alternative rock, grunge, industrial metal, nu metal, post-grunge undefined",
     "longText": "../public/texts/ca4bb7e1-d545-4c11-8f96-7af8c7f67cf6.html",
     "image": "https://metropool.nl//media/35764/filter_web_1920x1080.jpg?anchor=center&mode=crop&width=1920&format=webp&rnd=133301877470000000",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
+    "doorOpenDateTime": "2024-03-29T18:30:00.000Z",
+    "startDateTime": "2024-03-29T18:30:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://patronaat.nl/event/feuerengel-a-tribute-to-rammstein-29-03-24/",
+    "title": "Feuerengel – a tribute to rammstein",
+    "location": "patronaat",
+    "price": 34.5,
+    "shortText": "Een perfecte illusie.",
+    "longText": "../public/texts/bd227afb-d8f0-44c2-9533-361d13e9a415.html",
+    "image": "https://patronaat.nl/app/uploads/2023/07/FEUERENGEL-Pressefoto-Rauch-2019-760x400.jpg",
     "soldOut": false,
     "unavailable": false,
     "corrupted": null
@@ -4538,6 +5341,21 @@
     "image": "https://d3gy47dclw6o24.cloudfront.net/styles/320w/s3/2023-07/WTH_2024_eventheader.png?itok=TRW4S5FO",
     "soldOut": false,
     "unavailable": null,
+    "corrupted": null
+  },
+  {
+    "doorOpenDateTime": "2024-04-19T18:00:00.000Z",
+    "startDateTime": "2024-04-19T18:00:00.000Z",
+    "endDateTime": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/feuerengel-a-tribute-to-rammstein-19-04-2024/",
+    "title": "Feuerengel - a tribute to rammstein",
+    "location": "tivolivredenburg",
+    "price": 34.75,
+    "shortText": "Vurige Rammstein show vol special effects",
+    "longText": "../public/texts/ab68fa41-0982-4c9d-9f41-4b52f556b1c2.html",
+    "image": "https://www.tivolivredenburg.nl/wp-content/uploads/2023/07/Scherm%C2%ADafbeelding-2023-07-10-om-16.35.37-380x214.png",
+    "soldOut": false,
+    "unavailable": false,
     "corrupted": null
   },
   {

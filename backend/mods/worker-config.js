@@ -46,20 +46,20 @@ export const workerConfig = {
   },
   metalfan: {workerCount: 1, CPUReq: "low", workerConcurrent: 1 },
   metropool :{ CPUReq: "high", workerCount: 3, workerConcurrent: 1 },
-  // neushoorn: { workerCount: 1, workerConcurrent: 1 },
-  // occii :{
-  //   workerCount: 2,
-  //   workerConcurrent: 1,
-  // },
-  // oosterpoort: { workerCount: 3, workerConcurrent: 1 },
-  // p60 :{ workerCount: 1, workerConcurrent: 1},  
-  // paradiso: { workerCount: 3, workerConcurrent: 1, CPUReq: 'high', },
-  // patronaat: { workerCount: 3, workerConcurrent: 1 },
-  // tivolivredenburg:{ workerCount: 4, workerConcurrent: 1 },
-  // ticketmaster :{
-  //   workerCount: 2, workerConcurrent: 1
-  // },  
-  // volt: { workerCount: 1, workerConcurrent: 1 },
+  neushoorn: { workerCount: 1, workerConcurrent: 1 },
+  occii :{
+    workerCount: 2,
+    workerConcurrent: 1,
+  },
+  oosterpoort: { workerCount: 3, workerConcurrent: 1 },
+  p60 :{ workerCount: 1, workerConcurrent: 1},  
+  paradiso: { workerCount: 3, workerConcurrent: 1, CPUReq: 'high', },
+  patronaat: { workerCount: 3, workerConcurrent: 1 },
+  tivolivredenburg:{ workerCount: 4, workerConcurrent: 1 },
+  ticketmaster :{
+    workerCount: 2, workerConcurrent: 1
+  },  
+  volt: { workerCount: 1, workerConcurrent: 1 },
 }
 
 
