@@ -35,10 +35,10 @@ export const workerConfig = {
   gebrdenobel: { workerCount: 1, workerConcurrent: 1 },
   groeneengel: { workerCount: 1, workerConcurrent: 1 },
   iduna: { workerCount: 1, workerConcurrent: 1 },
-  // kavka :{
-  //   workerCount: 2,
-  //   workerConcurrent: 1,
-  // },
+  kavka :{
+    workerCount: 2,
+    workerConcurrent: 1,
+  },
   // melkweg :{
   //   workerCount: 4,
   //   CPUReq: "low",
