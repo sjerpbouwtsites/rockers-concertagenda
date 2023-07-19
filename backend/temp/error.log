@@ -1,4 +1,38 @@
 
+  occii-0 Error - 6:30:05 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'includes')
+    at __puppeteer_evaluation_script__:129:20
+    at Array.map (<anonymous>)
+    at __puppeteer_evaluation_script__:126:7
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async occiiScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/occii.js:155:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1000:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:230:5) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'includes')
+    at __puppeteer_evaluation_script__:129:20
+    at Array.map (<anonymous>)
+    at __puppeteer_evaluation_script__:126:7
+  
+  
+  occii-1 Error - 6:30:01 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'includes')
+    at __puppeteer_evaluation_script__:129:20
+    at Array.map (<anonymous>)
+    at __puppeteer_evaluation_script__:126:7
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async occiiScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/occii.js:155:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1000:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:230:5) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'includes')
+    at __puppeteer_evaluation_script__:129:20
+    at Array.map (<anonymous>)
+    at __puppeteer_evaluation_script__:126:7
+  
+  
   metropool-1 Error - 4:58:00 AM
   Error: Evaluation failed: TypeError: textSelector is not a function
     at __puppeteer_evaluation_script__:98:7
