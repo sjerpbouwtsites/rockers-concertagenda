@@ -39,11 +39,11 @@ export const workerConfig = {
     workerCount: 2,
     workerConcurrent: 1,
   },
-  // melkweg :{
-  //   workerCount: 4,
-  //   CPUReq: "low",
-  //   workerConcurrent: 1
-  // },
+  melkweg :{
+    workerCount: 4,
+    CPUReq: "low",
+    workerConcurrent: 1
+  },
   // metalfan: {workerCount: 1, CPUReq: "low", workerConcurrent: 1 },
   // metropool :{ CPUReq: "high", workerCount: 3, workerConcurrent: 1 },
   // neushoorn: { workerCount: 1, workerConcurrent: 1 },

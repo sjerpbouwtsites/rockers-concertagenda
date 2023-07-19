@@ -1,4 +1,108 @@
 
+  melkweg-3 Error - 4:14:57 AM
+  Error: Evaluation failed: DOMException: Failed to execute 'querySelectorAll' on 'Document': '[class*="styles_event-info__text-column"] *, [class*='styles_event-meta-data'] [href*='facebook'], class*='styles_embed__media-container'] iframe *, class*='styles_embed__media-container'] iframe' is not a valid selector.
+    at __puppeteer_evaluation_script__:79:8
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async melkwegScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/melkweg.js:138:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1000:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:230:5) 
+  Evaluation failed: DOMException: Failed to execute 'querySelectorAll' on 'Document': '[class*="styles_event-info__text-column"] *, [class*='styles_event-meta-data'] [href*='facebook'], class*='styles_embed__media-container'] iframe *, class*='styles_embed__media-container'] iframe' is not a valid selector.
+    at __puppeteer_evaluation_script__:79:8
+  
+  
+  melkweg-0 Error - 4:14:57 AM
+  Error: Evaluation failed: DOMException: Failed to execute 'querySelectorAll' on 'Document': '[class*="styles_event-info__text-column"] *, [class*='styles_event-meta-data'] [href*='facebook'], class*='styles_embed__media-container'] iframe *, class*='styles_embed__media-container'] iframe' is not a valid selector.
+    at __puppeteer_evaluation_script__:79:8
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async melkwegScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/melkweg.js:138:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1000:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:230:5) 
+  Evaluation failed: DOMException: Failed to execute 'querySelectorAll' on 'Document': '[class*="styles_event-info__text-column"] *, [class*='styles_event-meta-data'] [href*='facebook'], class*='styles_embed__media-container'] iframe *, class*='styles_embed__media-container'] iframe' is not a valid selector.
+    at __puppeteer_evaluation_script__:79:8
+  
+  
+  melkweg-2 Error - 4:14:57 AM
+  Error: Evaluation failed: DOMException: Failed to execute 'querySelectorAll' on 'Document': '[class*="styles_event-info__text-column"] *, [class*='styles_event-meta-data'] [href*='facebook'], class*='styles_embed__media-container'] iframe *, class*='styles_embed__media-container'] iframe' is not a valid selector.
+    at __puppeteer_evaluation_script__:79:8
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async melkwegScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/melkweg.js:138:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1000:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:230:5) 
+  Evaluation failed: DOMException: Failed to execute 'querySelectorAll' on 'Document': '[class*="styles_event-info__text-column"] *, [class*='styles_event-meta-data'] [href*='facebook'], class*='styles_embed__media-container'] iframe *, class*='styles_embed__media-container'] iframe' is not a valid selector.
+    at __puppeteer_evaluation_script__:79:8
+  
+  
+  melkweg-1 Error - 4:14:56 AM
+  Error: Evaluation failed: DOMException: Failed to execute 'querySelectorAll' on 'Document': '[class*="styles_event-info__text-column"] *, [class*='styles_event-meta-data'] [href*='facebook'], class*='styles_embed__media-container'] iframe *, class*='styles_embed__media-container'] iframe' is not a valid selector.
+    at __puppeteer_evaluation_script__:79:8
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async melkwegScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/melkweg.js:138:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1000:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:230:5) 
+  Evaluation failed: DOMException: Failed to execute 'querySelectorAll' on 'Document': '[class*="styles_event-info__text-column"] *, [class*='styles_event-meta-data'] [href*='facebook'], class*='styles_embed__media-container'] iframe *, class*='styles_embed__media-container'] iframe' is not a valid selector.
+    at __puppeteer_evaluation_script__:79:8
+  
+  
+  melkweg-2 Error - 4:14:04 AM
+  Error: Evaluation failed: DOMException: Failed to execute 'querySelectorAll' on 'Document': 'class*='styles_embed__media-container'] iframe' is not a valid selector.
+    at __puppeteer_evaluation_script__:92:16
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async melkwegScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/melkweg.js:138:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1000:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:230:5) 
+  Evaluation failed: DOMException: Failed to execute 'querySelectorAll' on 'Document': 'class*='styles_embed__media-container'] iframe' is not a valid selector.
+    at __puppeteer_evaluation_script__:92:16
+  
+  
+  melkweg-1 Error - 4:14:03 AM
+  Error: Evaluation failed: DOMException: Failed to execute 'querySelectorAll' on 'Document': 'class*='styles_embed__media-container'] iframe' is not a valid selector.
+    at __puppeteer_evaluation_script__:92:16
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async melkwegScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/melkweg.js:138:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1000:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:230:5) 
+  Evaluation failed: DOMException: Failed to execute 'querySelectorAll' on 'Document': 'class*='styles_embed__media-container'] iframe' is not a valid selector.
+    at __puppeteer_evaluation_script__:92:16
+  
+  
+  melkweg-0 Error - 4:14:03 AM
+  Error: Evaluation failed: DOMException: Failed to execute 'querySelectorAll' on 'Document': 'class*='styles_embed__media-container'] iframe' is not a valid selector.
+    at __puppeteer_evaluation_script__:92:16
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async melkwegScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/melkweg.js:138:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1000:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:230:5) 
+  Evaluation failed: DOMException: Failed to execute 'querySelectorAll' on 'Document': 'class*='styles_embed__media-container'] iframe' is not a valid selector.
+    at __puppeteer_evaluation_script__:92:16
+  
+  
+  melkweg-3 Error - 4:14:02 AM
+  Error: Evaluation failed: DOMException: Failed to execute 'querySelectorAll' on 'Document': 'class*='styles_embed__media-container'] iframe' is not a valid selector.
+    at __puppeteer_evaluation_script__:92:16
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async melkwegScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/melkweg.js:138:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1000:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:230:5) 
+  Evaluation failed: DOMException: Failed to execute 'querySelectorAll' on 'Document': 'class*='styles_embed__media-container'] iframe' is not a valid selector.
+    at __puppeteer_evaluation_script__:92:16
+  
+  
   kavka-1 Error - 3:38:35 AM
   Error: page info ontbreekt.
     at AbstractScraper.getPageInfoEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1158:13)
