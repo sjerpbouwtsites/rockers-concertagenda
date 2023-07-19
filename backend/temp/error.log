@@ -1,4 +1,55 @@
 
+  p60-0 Error - 8:28:40 AM
+  Error: Evaluation failed: DOMException: Failed to execute 'appendChild' on 'Node': Only one element on document allowed.
+    at __puppeteer_evaluation_script__:115:20
+    at Array.map (<anonymous>)
+    at __puppeteer_evaluation_script__:91:9
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async p60Scraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/p60.js:158:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1000:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:230:5) 
+  Evaluation failed: DOMException: Failed to execute 'appendChild' on 'Node': Only one element on document allowed.
+    at __puppeteer_evaluation_script__:115:20
+    at Array.map (<anonymous>)
+    at __puppeteer_evaluation_script__:91:9
+  
+  
+  p60-0 Error - 8:28:00 AM
+  Error: Evaluation failed: DOMException: Failed to execute 'appendChild' on 'Node': Only one element on document allowed.
+    at __puppeteer_evaluation_script__:116:20
+    at Array.map (<anonymous>)
+    at __puppeteer_evaluation_script__:91:9
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async p60Scraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/p60.js:158:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1000:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:230:5) 
+  Evaluation failed: DOMException: Failed to execute 'appendChild' on 'Node': Only one element on document allowed.
+    at __puppeteer_evaluation_script__:116:20
+    at Array.map (<anonymous>)
+    at __puppeteer_evaluation_script__:91:9
+  
+  
+  p60-0 Error - 8:25:37 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of null (reading 'outerHTML')
+    at __puppeteer_evaluation_script__:118:29
+    at Array.map (<anonymous>)
+    at __puppeteer_evaluation_script__:91:9
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async p60Scraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/p60.js:158:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1000:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:230:5) 
+  Evaluation failed: TypeError: Cannot read properties of null (reading 'outerHTML')
+    at __puppeteer_evaluation_script__:118:29
+    at Array.map (<anonymous>)
+    at __puppeteer_evaluation_script__:91:9
+  
+  
   occii-0 Error - 6:30:05 AM
   Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'includes')
     at __puppeteer_evaluation_script__:129:20
