@@ -1,4 +1,48 @@
 
+  tivolivredenburg-2 Error - 11:25:04 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1128:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  tivolivredenburg-1 Error - 11:25:03 AM
+  TypeError: _t.waitFor is not a function
+    at tivoliVredenburgScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/tivolivredenburg.js:145:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1000:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:230:5) 
+  _t.waitFor is not a function
+  
+  
+  tivolivredenburg-3 Error - 11:25:02 AM
+  TypeError: _t.waitFor is not a function
+    at tivoliVredenburgScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/tivolivredenburg.js:145:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1000:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:230:5) 
+  _t.waitFor is not a function
+  
+  
+  tivolivredenburg-0 Error - 11:25:00 AM
+  TypeError: _t.waitFor is not a function
+    at tivoliVredenburgScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/tivolivredenburg.js:145:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1000:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:230:5) 
+  _t.waitFor is not a function
+  
+  
+  tivolivredenburg-2 Error - 11:24:59 AM
+  TypeError: _t.waitFor is not a function
+    at tivoliVredenburgScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/tivolivredenburg.js:145:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1000:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:230:5) 
+  _t.waitFor is not a function
+  
+  
   paradiso-0 Error - 10:37:20 AM
   Error: false
     at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1193:29
