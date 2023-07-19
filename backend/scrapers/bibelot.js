@@ -187,7 +187,7 @@ bibelotScraper.getPageInfo = async function ({ page, event }) {
         res.priceTextcontent = verkoopElAr[0].textContent;
       }
 
-      // #region longHTML
+      // #region [rgba(100, 0, 0, 0.3)] longHTML
 
       const mediaSelector = ['.main-column iframe', 
       ].join(', ');

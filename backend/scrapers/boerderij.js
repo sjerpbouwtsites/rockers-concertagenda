@@ -172,7 +172,7 @@ boerderijScraper.getPageInfo = async function ({ event }) {
     });
   }
 
-  // #region longHTML
+  // #region [rgba(100, 0, 0, 0.3)] longHTML
 
   // media obj maken voordat HTML verdwijnt
   res.mediaForHTML = !ajaxRes?.video ? [] : [{

@@ -1,57 +1,64 @@
 import { workerData } from "worker_threads";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
-import {waitFor} from "../mods/tools.js"
+import { waitFor } from "../mods/tools.js";
 
 // SCRAPER CONFIG
 
-const gebrdenobelScraper = new AbstractScraper(makeScraperConfig({
-  workerData: Object.assign({}, workerData),
-  puppeteerConfig: {
-    mainPage: {
-      timeout: 15000,
-    },
-    singlePage: {
-      timeout: 20000
-    },
-    app: {
+const gebrdenobelScraper = new AbstractScraper(
+  makeScraperConfig({
+    workerData: Object.assign({}, workerData),
+    puppeteerConfig: {
       mainPage: {
-        url: "https://gebrdenobel.nl/programma/",
-        requiredProperties: ['venueEventUrl', 'title']
+        timeout: 15000,
       },
       singlePage: {
-        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
-      }
-    }
-  }
-}));
+        timeout: 20000,
+      },
+      app: {
+        mainPage: {
+          url: "https://gebrdenobel.nl/programma/",
+          requiredProperties: ["venueEventUrl", "title"],
+        },
+        singlePage: {
+          requiredProperties: [
+            "venueEventUrl",
+            "title",
+            "price",
+            "startDateTime",
+          ],
+        },
+      },
+    },
+  })
+);
 
 gebrdenobelScraper.listenToMasterThread();
 
 // ASYNC MERGED CHECK
 
-gebrdenobelScraper.singleMergedEventCheck = async function(event){
+gebrdenobelScraper.singleMergedEventCheck = async function (event) {
+  const workingTitle = this.cleanupEventTitle(event.title);
 
-  const workingTitle = this.cleanupEventTitle(event.title)
+  const isRefused = await this.rockRefuseListCheck(event, workingTitle);
+  if (isRefused.success)
+    return {
+      reason: isRefused.reason,
+      event,
+      success: false,
+    };
 
-  const isRefused = await this.rockRefuseListCheck(event, workingTitle)
-  if (isRefused.success) return {
-    reason: isRefused.reason,
-    event,
-    success: false
-  };
-
-  const isAllowed = await this.rockAllowListCheck(event, workingTitle)
+  const isAllowed = await this.rockAllowListCheck(event, workingTitle);
   if (isAllowed.success) return isAllowed;
 
   const hasForbiddenTerms = await this.hasForbiddenTerms(event);
   if (hasForbiddenTerms.success) {
-    await this.saveRefusedTitle(workingTitle)
+    await this.saveRefusedTitle(workingTitle);
     return {
       reason: hasForbiddenTerms.reason,
       success: false,
-      event
-    }
+      event,
+    };
   }
 
   return {
@@ -59,122 +66,135 @@ gebrdenobelScraper.singleMergedEventCheck = async function(event){
     success: true,
     reason: "nothing found currently",
   };
-  
-}
+};
 
 // MAKE BASE EVENTSx
 
 gebrdenobelScraper.makeBaseEventList = async function () {
-
-  const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
-  if (availableBaseEvents){
-    const thisWorkersEvents = availableBaseEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
+  const availableBaseEvents = await this.checkBaseEventAvailable(
+    workerData.family
+  );
+  if (availableBaseEvents) {
+    const thisWorkersEvents = availableBaseEvents.filter(
+      (eventEl, index) => index % workerData.workerCount === workerData.index
+    );
     return await this.makeBaseEventListEnd({
-      stopFunctie: null, rawEvents: thisWorkersEvents}
-    );    
-  }    
+      stopFunctie: null,
+      rawEvents: thisWorkersEvents,
+    });
+  }
 
-  const {stopFunctie, page} = await this.makeBaseEventListStart()
+  const { stopFunctie, page } = await this.makeBaseEventListStart();
 
-  let punkMetalRawEvents = await page.evaluate(({workerData, unavailabiltyTerms}) => {
-    return Array.from(document.querySelectorAll(".event-item"))
-      .filter((eventEl) => {
-        const tags =
-          eventEl.querySelector(".meta-tag")?.textContent.toLowerCase() ?? "";
-        return (
-          tags.includes("metal") ||
-          tags.includes("punk")
-        );
-      }).map((eventEl) =>{
-        const title = eventEl.querySelector(".media-heading")?.textContent ?? null;
-        const res = {
-          pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
-          errors: [],
-          title
-        };
-        res.venueEventUrl =
+  let punkMetalRawEvents = await page.evaluate(
+    ({ workerData, unavailabiltyTerms }) => {
+      return Array.from(document.querySelectorAll(".event-item"))
+        .filter((eventEl) => {
+          const tags =
+            eventEl.querySelector(".meta-tag")?.textContent.toLowerCase() ?? "";
+          return tags.includes("metal") || tags.includes("punk");
+        })
+        .map((eventEl) => {
+          const title =
+            eventEl.querySelector(".media-heading")?.textContent ?? null;
+          const res = {
+            pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
+            errors: [],
+            title,
+          };
+          res.venueEventUrl =
             eventEl
               .querySelector(".jq-modal-trigger")
               ?.getAttribute("data-url") ?? "";
-        const uaRex = new RegExp(unavailabiltyTerms.join("|"), 'gi');
-        res.unavailable = !!eventEl.textContent.match(uaRex);      
-        res.soldOut = !!eventEl.querySelector('.meta-info')?.textContent.match(/uitverkocht|sold\s?out/i) ?? null;
-        return res;
-      })
-  }, {workerData, unavailabiltyTerms: AbstractScraper.unavailabiltyTerms})
+          const uaRex = new RegExp(unavailabiltyTerms.join("|"), "gi");
+          res.unavailable = !!eventEl.textContent.match(uaRex);
+          res.soldOut =
+            !!eventEl
+              .querySelector(".meta-info")
+              ?.textContent.match(/uitverkocht|sold\s?out/i) ?? null;
+          return res;
+        });
+    },
+    { workerData, unavailabiltyTerms: AbstractScraper.unavailabiltyTerms }
+  );
 
   punkMetalRawEvents = punkMetalRawEvents.map(this.isMusicEventCorruptedMapper);
-  
 
-  let rockRawEvents = await page.evaluate(({workerData}) => {
-    return Array.from(document.querySelectorAll(".event-item"))
-      .filter((eventEl) => {
-        const tags =
-          eventEl.querySelector(".meta-tag")?.textContent.toLowerCase() ?? "";
-        return (
-          tags.includes("rock")
-        );
-      }).map((eventEl) => {
-        const title = eventEl.querySelector(".media-heading")?.textContent ?? null;
-        const res = {
-          pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
-          errors: [],
-          title
-        };
-        res.venueEventUrl =
+  let rockRawEvents = await page.evaluate(
+    ({ workerData }) => {
+      return Array.from(document.querySelectorAll(".event-item"))
+        .filter((eventEl) => {
+          const tags =
+            eventEl.querySelector(".meta-tag")?.textContent.toLowerCase() ?? "";
+          return tags.includes("rock");
+        })
+        .map((eventEl) => {
+          const title =
+            eventEl.querySelector(".media-heading")?.textContent ?? null;
+          const res = {
+            pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
+            errors: [],
+            title,
+          };
+          res.venueEventUrl =
             eventEl
               .querySelector(".jq-modal-trigger")
               ?.getAttribute("data-url") ?? "";
-      
-        res.soldOut = !!(eventEl.querySelector('.meta-info')?.textContent.toLowerCase().includes('uitverkocht') ?? null)
-        return res;
-      })
-  }, {workerData})
+
+          res.soldOut = !!(
+            eventEl
+              .querySelector(".meta-info")
+              ?.textContent.toLowerCase()
+              .includes("uitverkocht") ?? null
+          );
+          return res;
+        });
+    },
+    { workerData }
+  );
 
   rockRawEvents = rockRawEvents.map(this.isMusicEventCorruptedMapper);
 
   const checkedRockEvents = [];
-  while (rockRawEvents.length){
+  while (rockRawEvents.length) {
     const thisRockRawEvent = rockRawEvents.shift();
     const isRockRes = await this.isRock(thisRockRawEvent);
-    if (isRockRes.success){
-      checkedRockEvents.push(thisRockRawEvent)
+    if (isRockRes.success) {
+      checkedRockEvents.push(thisRockRawEvent);
     }
   }
 
-  const rawEvents = punkMetalRawEvents.concat(checkedRockEvents)
+  const rawEvents = punkMetalRawEvents.concat(checkedRockEvents);
 
-  this.saveBaseEventlist(workerData.family, rawEvents)
-  const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
-  return await this.makeBaseEventListEnd({
-    stopFunctie, rawEvents: thisWorkersEvents}
+  this.saveBaseEventlist(workerData.family, rawEvents);
+  const thisWorkersEvents = rawEvents.filter(
+    (eventEl, index) => index % workerData.workerCount === workerData.index
   );
+  return await this.makeBaseEventListEnd({
+    stopFunctie,
+    rawEvents: thisWorkersEvents,
+  });
 };
 
 // GET PAGE INFO
 
 gebrdenobelScraper.getPageInfo = async function ({ page, event }) {
-  
-  const {stopFunctie} =  await this.getPageInfoStart()
- 
-  const cookiesNodig = await page.evaluate(()=>{
-    return document.querySelector('.consent__show');
-  })
+  const { stopFunctie } = await this.getPageInfoStart();
 
-  if (cookiesNodig){
-    this.dirtyTalk('wacht op consent form');
-    await page.waitForSelector('.consent__form__submit', {
+  const cookiesNodig = await page.evaluate(() => {
+    return document.querySelector(".consent__show");
+  });
+
+  if (cookiesNodig) {
+    await page.waitForSelector(".consent__form__submit", {
       timeout: 2000,
-    })
-    this.dirtyTalk('klik');
-    await page.evaluate(()=>{
-      return document.querySelector('.consent__form__submit').click();
-    })
-    this.dirtyTalk('na klik form');
-    await page.waitForSelector('.contentBlocks', {
+    });
+    await page.evaluate(() => {
+      return document.querySelector(".consent__form__submit").click();
+    });
+    await page.waitForSelector(".contentBlocks", {
       timeout: 5000,
-    })
-
+    });
   }
 
   const pageInfo = await page.evaluate(
@@ -230,28 +250,27 @@ gebrdenobelScraper.getPageInfo = async function ({ page, event }) {
       if (priceRow) {
         res.priceTextcontent = priceRow.textContent;
       }
-      res.shortText = 
-        document.querySelector(".hero-cta_left__text p")?.textContent ?? '';
-      if (document.querySelector('#shop-frame')){
-        document.querySelector('#shop-frame').innerHTML = '';
-        document.querySelector('#shop-frame').parentNode.removeChild(document.querySelector('#shop-frame'))
+      res.shortText =
+        document.querySelector(".hero-cta_left__text p")?.textContent ?? "";
+      if (document.querySelector("#shop-frame")) {
+        document.querySelector("#shop-frame").innerHTML = "";
+        document
+          .querySelector("#shop-frame")
+          .parentNode.removeChild(document.querySelector("#shop-frame"));
       }
-      res.longTextHTML = 
-        document.querySelector(".content .contentBlocks")?.innerHTML ?? '';
 
+      // #region [rgba(100, 0, 0, 0.3)] longHTML
 
-      // #region longHTML
-
-      const textSelector = '.contentBlocks .lead, .contentBlocks .text';
+      const textSelector = ".contentBlocks .lead, .contentBlocks .text";
       const mediaSelector = [
         `.contentBlocks .tm_video`,
-        `.contentBlocks iframe[src*='spotify']`
-      ].join(', ');
-      const removeEmptyHTMLFrom = textSelector
+        `.contentBlocks iframe[src*='spotify']`,
+      ].join(", ");
+      const removeEmptyHTMLFrom = textSelector;
       const socialSelector = [
         ".widget--social .btn[href*='facebook']",
         ".widget--social .btn[href*='fb.me']",
-      ].join(', ');
+      ].join(", ");
       const removeSelectors = [
         "[class*='icon-']",
         "[class*='fa-']",
@@ -260,132 +279,157 @@ gebrdenobelScraper.getPageInfo = async function ({ page, event }) {
         ".contentBlocks iframe",
         ".contentBlocks script",
         ".contentBlocks #shop-frame",
-      ].join(', ')
-  
-      const attributesToRemove = ['style', 'hidden', '_target', "frameborder", 'onclick', 'aria-hidden', 'allow', 'allowfullscreen', 'data-deferlazy','width', 'height'];
-      const attributesToRemoveSecondRound = ['class', 'id' ];
-      const removeHTMLWithStrings = ['Om deze content te kunnnen zien'];
+      ].join(", ");
+
+      const attributesToRemove = [
+        "style",
+        "hidden",
+        "_target",
+        "frameborder",
+        "onclick",
+        "aria-hidden",
+        "allow",
+        "allowfullscreen",
+        "data-deferlazy",
+        "width",
+        "height",
+      ];
+      const attributesToRemoveSecondRound = ["class", "id"];
+      const removeHTMLWithStrings = ["Om deze content te kunnnen zien"];
 
       // eerst onzin attributes wegslopen
-      const socAttrRemSelAdd = `${socialSelector ? `, ${socialSelector} *` : ''}`
-      document.querySelectorAll(`${textSelector} *${socAttrRemSelAdd}`)
-        .forEach(elToStrip => {
-          attributesToRemove.forEach(attr => {
-            if (elToStrip.hasAttribute(attr)){
-              elToStrip.removeAttribute(attr)
+      const socAttrRemSelAdd = `${
+        socialSelector ? `, ${socialSelector} *` : ""
+      }`;
+      document
+        .querySelectorAll(`${textSelector} *${socAttrRemSelAdd}`)
+        .forEach((elToStrip) => {
+          attributesToRemove.forEach((attr) => {
+            if (elToStrip.hasAttribute(attr)) {
+              elToStrip.removeAttribute(attr);
             }
-          })
-        })
+          });
+        });
 
       // media obj maken voordat HTML verdwijnt
-      res.mediaForHTML = Array.from(document.querySelectorAll(mediaSelector))
-        .map(bron => {
-          bron.className = ''
-          // custom gebr de nobel
-          if (bron.hasAttribute('data-video-id')){
-            return {
-              outer: null,
-              src: null,
-              id: bron.getAttribute('data-video-id'),
-              type: 'youtube'
-            }
-          } else if(bron.src.includes('spotify')){
-            return {
-              outer: bron.outerHTML,
-              src: bron.src,
-              id: null,
-              type: 'spotify'
-            }
-          }
-          // end custom gebr de nobel
-
-          // terugval???? nog niet bekend met alle opties.
+      res.mediaForHTML = Array.from(
+        document.querySelectorAll(mediaSelector)
+      ).map((bron) => {
+        bron.className = "";
+        // custom gebr de nobel
+        if (bron.hasAttribute("data-video-id")) {
+          return {
+            outer: null,
+            src: null,
+            id: bron.getAttribute("data-video-id"),
+            type: "youtube",
+          };
+        } else if (bron.src.includes("spotify")) {
           return {
             outer: bron.outerHTML,
             src: bron.src,
             id: null,
-            type: bron.src.includes('spotify') 
-              ? 'spotify' 
-              : bron.src.includes('youtube') 
-                ? 'youtube'
-                : 'bandcamp'
-          }
-        })
+            type: "spotify",
+          };
+        }
+        // end custom gebr de nobel
+
+        // terugval???? nog niet bekend met alle opties.
+        return {
+          outer: bron.outerHTML,
+          src: bron.src,
+          id: null,
+          type: bron.src.includes("spotify")
+            ? "spotify"
+            : bron.src.includes("youtube")
+              ? "youtube"
+              : "bandcamp",
+        };
+      });
 
       // socials obj maken voordat HTML verdwijnt
-      res.socialsForHTML = !socialSelector ? '' : Array.from(document.querySelectorAll(socialSelector))
-        .map(el => {
-         
-          el.querySelectorAll('i, svg, img').forEach(rm => rm.parentNode.removeChild(rm))
+      res.socialsForHTML = !socialSelector
+        ? ""
+        : Array.from(document.querySelectorAll(socialSelector)).map((el) => {
+          el.querySelectorAll("i, svg, img").forEach((rm) =>
+            rm.parentNode.removeChild(rm)
+          );
 
-          if (!el.textContent.trim().length){
-            if (el.href.includes('facebook')){
-              el.textContent = 'Facebook';
-            } else if(el.href.includes('twitter')) {
-              el.textContent = 'Tweet';
+          if (!el.textContent.trim().length) {
+            if (el.href.includes("facebook")) {
+              el.textContent = "Facebook";
+            } else if (el.href.includes("twitter")) {
+              el.textContent = "Tweet";
             } else {
-              el.textContent = 'Onbekende social';
+              el.textContent = "Onbekende social";
             }
           }
-          el.className = ''
-          el.target = '_blank';
-          return el.outerHTML
-        })
+          el.className = "";
+          el.target = "_blank";
+          return el.outerHTML;
+        });
 
       // stript HTML tbv text
-      removeSelectors.length && document.querySelectorAll(removeSelectors)
-        .forEach(toRemove => toRemove.parentNode.removeChild(toRemove))
+      removeSelectors.length &&
+        document
+          .querySelectorAll(removeSelectors)
+          .forEach((toRemove) => toRemove.parentNode.removeChild(toRemove));
 
       // verwijder ongewenste paragrafen over bv restaurants
-      Array.from(document.querySelectorAll(`${textSelector} p, ${textSelector} span, ${textSelector} a`))
-        .forEach(verwijder => {
-          const heeftEvilString = !!removeHTMLWithStrings.find(evilString => verwijder.textContent.includes(evilString))
-          if (heeftEvilString) {
-            verwijder.parentNode.removeChild(verwijder)
+      Array.from(
+        document.querySelectorAll(
+          `${textSelector} p, ${textSelector} span, ${textSelector} a`
+        )
+      ).forEach((verwijder) => {
+        const heeftEvilString = !!removeHTMLWithStrings.find((evilString) =>
+          verwijder.textContent.includes(evilString)
+        );
+        if (heeftEvilString) {
+          verwijder.parentNode.removeChild(verwijder);
+        }
+      });
+
+      // lege HTML eruit cq HTML zonder tekst of getallen
+      document
+        .querySelectorAll(`${removeEmptyHTMLFrom} > *`)
+        .forEach((checkForEmpty) => {
+          const leegMatch = checkForEmpty.innerHTML
+            .replace("&nbsp;", "")
+            .match(/[\w\d]/g);
+          if (!Array.isArray(leegMatch)) {
+            checkForEmpty.parentNode.removeChild(checkForEmpty);
           }
         });
 
-      // lege HTML eruit cq HTML zonder tekst of getallen
-      document.querySelectorAll(`${removeEmptyHTMLFrom} > *`)
-        .forEach(checkForEmpty => {
-          const leegMatch = checkForEmpty.innerHTML.replace('&nbsp;','').match(/[\w\d]/g);
-          if (!Array.isArray(leegMatch)){
-            checkForEmpty.parentNode.removeChild(checkForEmpty)
-          }
-        })
-
       // laatste attributen eruit.
-      document.querySelectorAll(`${textSelector} *`)
-        .forEach(elToStrip => {
-          attributesToRemoveSecondRound.forEach(attr => {
-            if (elToStrip.hasAttribute(attr)){
-              elToStrip.removeAttribute(attr)
-            }
-          })
-        })      
+      document.querySelectorAll(`${textSelector} *`).forEach((elToStrip) => {
+        attributesToRemoveSecondRound.forEach((attr) => {
+          if (elToStrip.hasAttribute(attr)) {
+            elToStrip.removeAttribute(attr);
+          }
+        });
+      });
 
       // tekst.
       res.textForHTML = Array.from(document.querySelectorAll(textSelector))
-        .map(el => el.innerHTML)
-        .join('')
+        .map((el) => el.innerHTML)
+        .join("");
 
       // #endregion longHTML
 
-    
-
-
+      // #region [rgba(50, 0, 0, 0.3)] image 
       res.image = document.querySelector(".hero img")?.src ?? null;
-      if (!res.image){
+      if (!res.image) {
         res.errors.push({
-          remarks: `image missing ${res.pageInfo}`
-        })
-      }      
+          remarks: `image missing ${res.pageInfo}`,
+        });
+      }
+      // #endregion 
 
       return res;
     },
-    { months: this.months, event}
+    { months: this.months, event }
   );
 
-  return await this.getPageInfoEnd({pageInfo, stopFunctie, page, event})
-  
+  return await this.getPageInfoEnd({ pageInfo, stopFunctie, page, event });
 };

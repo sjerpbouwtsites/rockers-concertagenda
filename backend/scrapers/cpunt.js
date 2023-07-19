@@ -215,7 +215,7 @@ cpuntScraper.getPageInfo = async function ({ page, event }) {
       document.querySelector(".article-price")?.textContent.trim() ??
       "" ;
 
-    // #region longHTML
+    // #region [rgba(100, 0, 0, 0.3)] longHTML
 
     const mediaSelector = ['.contentblock-Video iframe', 
     ].join(', ');

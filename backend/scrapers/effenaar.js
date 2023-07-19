@@ -176,7 +176,7 @@ effenaarScraper.getPageInfo = async function ({ page, event }) {
       });
     }
 
-    // #region longHTML
+    // #region [rgba(100, 0, 0, 0.3)] longHTML
 
     const textSelector = '#main .blocks .block';
     const mediaSelector = [`#main .blocks iframe` 

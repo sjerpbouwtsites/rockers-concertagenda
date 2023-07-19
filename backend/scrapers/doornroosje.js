@@ -256,7 +256,7 @@ doornroosjeScraper.getPageInfo = async function ({ page, event }) {
       }
 
 
-      // #region longHTML
+      // #region [rgba(100, 0, 0, 0.3)] longHTML
 
       const textSelector = '.s-event__container .c-intro, .s-event__container .s-event__content';
       const mediaSelector = [`.c-embed iframe` 

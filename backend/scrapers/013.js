@@ -174,7 +174,7 @@ nuldertienScraper.getPageInfo = async function ({ page , event}) {
       )?.innerHTML ?? '';
 
 
-    // #region longHTML
+    // #region [rgba(100, 0, 0, 0.3)] longHTML
     const mediaSelector = '.slick-slide:not(.slick-cloned) img';
     const textSelector = '.event-detail__content > *';
     res.mediaForHTML = Array.from(document.querySelectorAll(mediaSelector))

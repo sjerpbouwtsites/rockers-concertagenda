@@ -237,7 +237,7 @@ dynamoScraper.getPageInfo = async function ({ page, event}) {
 
 
 
-      // #region longHTML
+      // #region [rgba(100, 0, 0, 0.3)] longHTML
 
       const textSelector = '.article-block.text-block';
       const mediaSelector = [`.sidebar iframe, .article-block iframe` 

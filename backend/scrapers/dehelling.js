@@ -172,7 +172,7 @@ dehellingScraper.getPageInfo = async function ({ page,event }) {
       }
      
 
-      // #region longHTML
+      // #region [rgba(100, 0, 0, 0.3)] longHTML
 
       const textSelector = '.c-event-content__text';
       const mediaSelector = [`.c-event-content__embeds iframe` 

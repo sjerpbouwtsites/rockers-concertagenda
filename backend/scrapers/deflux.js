@@ -152,7 +152,7 @@ defluxScraper.getPageInfo = async function ({ page, event}) {
 
 
 
-    // #region longHTML
+    // #region [rgba(100, 0, 0, 0.3)] longHTML
 
     const textSelector = '.eventon_desc_in';
     const mediaSelector = [`.eventon_list_event iframe` 

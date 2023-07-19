@@ -173,7 +173,7 @@ dbsScraper.getPageInfo = async function ({ page, event }) {
 
 
 
-    // #region longHTML
+    // #region [rgba(100, 0, 0, 0.3)] longHTML
 
     const textSelector = '.tribe-events-single-event-description';
     const mediaSelector = [`${textSelector} iframe` 
