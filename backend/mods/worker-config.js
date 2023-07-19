@@ -51,7 +51,7 @@ export const workerConfig = {
     workerCount: 2,
     workerConcurrent: 1,
   },
-  oosterpoort: { workerCount: 3, workerConcurrent: 1 },
+  oosterpoort: { workerCount: 1, workerConcurrent: 1 },
   p60 :{ workerCount: 1, workerConcurrent: 1},  
   paradiso: { workerCount: 3, workerConcurrent: 1, CPUReq: 'high', },
   patronaat: { workerCount: 3, workerConcurrent: 1 },

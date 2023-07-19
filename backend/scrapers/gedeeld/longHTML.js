@@ -162,9 +162,7 @@ function tweedeBatchVerwijderen(htmlString){
 
 
 function youtubeSRCToIframe(src){
-  return `<div class='iframe-wrapper-16-9'>
-    <iframe width="380" data-zelfgebouwd height="214" src="${src}" frameborder="0" allowfullscreen></iframe>
-  </div>`
+  return `<iframe width="380" data-zelfgebouwd height="214" src="${src}" frameborder="0" allowfullscreen></iframe>`
 }
 
 function youtubeIDToIframe(id){
