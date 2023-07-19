@@ -3,8 +3,7 @@ import * as _t from "../mods/tools.js";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 
-// SCRAPER CONFIG
-
+//#region [rgba(0, 33, 0, 0.3)]       SCRAPER CONFIG
 const depulScraper = new AbstractScraper(makeScraperConfig({
   maxExecutionTime: 60048,
   workerData: Object.assign({}, workerData),
@@ -26,6 +25,7 @@ const depulScraper = new AbstractScraper(makeScraperConfig({
     }
   }
 }));
+//#endregion                          SCRAPER CONFIG
 
 depulScraper.listenToMasterThread();
 

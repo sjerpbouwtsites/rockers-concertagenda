@@ -2,8 +2,7 @@ import { workerData } from "worker_threads";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 
-// SCRAPER CONFIG
-
+//#region [rgba(0, 33, 0, 0.3)]       SCRAPER CONFIG
 const bibelotScraper = new AbstractScraper(makeScraperConfig({
   maxExecutionTime: 30001,
   workerData: Object.assign({}, workerData),
@@ -27,6 +26,7 @@ const bibelotScraper = new AbstractScraper(makeScraperConfig({
   
   }
 }));
+//#endregion                          SCRAPER CONFIG
 
 bibelotScraper.listenToMasterThread();
 

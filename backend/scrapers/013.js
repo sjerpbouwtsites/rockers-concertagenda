@@ -3,8 +3,7 @@ import { workerData } from "worker_threads";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 
-// SCRAPER CONFIG
-
+//#region [rgba(0, 33, 0, 0.3)]       SCRAPER CONFIG
 const nuldertienScraper = new AbstractScraper(makeScraperConfig({
   workerData: Object.assign({}, workerData),
   hasDecentCategorisation: true,
@@ -21,6 +20,7 @@ const nuldertienScraper = new AbstractScraper(makeScraperConfig({
     }
   }
 }));
+//#endregion                          SCRAPER CONFIG
 
 nuldertienScraper.listenToMasterThread();
 

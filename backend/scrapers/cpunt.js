@@ -3,8 +3,7 @@ import * as _t from "../mods/tools.js";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 
-// SCRAPER CONFIG
-
+//#region [rgba(0, 33, 0, 0.3)]       SCRAPER CONFIG
 const cpuntScraper = new AbstractScraper(makeScraperConfig({
   workerData: Object.assign({}, workerData),
 
@@ -28,6 +27,7 @@ const cpuntScraper = new AbstractScraper(makeScraperConfig({
   }
 }
 ));
+//#endregion                          SCRAPER CONFIG
 
 // SINGLE EVENT CHECK
 

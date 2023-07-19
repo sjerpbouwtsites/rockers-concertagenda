@@ -4,8 +4,7 @@ import makeScraperConfig from "./gedeeld/scraper-config.js";
 import ErrorWrapper from "../mods/error-wrapper.js";
 import * as _t from "../mods/tools.js";
 
-// SCRAPER CONFIG
-
+//#region [rgba(0, 33, 0, 0.3)]       SCRAPER CONFIG
 const patronaatScraper = new AbstractScraper(makeScraperConfig({
   workerData: Object.assign({}, workerData),
   puppeteerConfig: {
@@ -26,6 +25,7 @@ const patronaatScraper = new AbstractScraper(makeScraperConfig({
     }
   },
 }));
+//#endregion                          SCRAPER CONFIG
 
 patronaatScraper.listenToMasterThread();
 

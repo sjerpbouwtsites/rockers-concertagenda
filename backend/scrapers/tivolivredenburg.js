@@ -2,8 +2,8 @@ import { workerData } from "worker_threads";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 import {waitFor} from "../mods/tools.js";
-// SCRAPER CONFIG
 
+//#region [rgba(0, 33, 0, 0.3)]       SCRAPER CONFIG
 const tivoliVredenburgScraper = new AbstractScraper(makeScraperConfig({
   workerData: Object.assign({}, workerData),
   puppeteerConfig: {
@@ -21,6 +21,7 @@ const tivoliVredenburgScraper = new AbstractScraper(makeScraperConfig({
     }    
   }
 }));
+//#endregion                          SCRAPER CONFIG
 
 tivoliVredenburgScraper.listenToMasterThread();
 

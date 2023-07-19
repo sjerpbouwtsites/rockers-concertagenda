@@ -2,8 +2,7 @@ import { workerData } from "worker_threads";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 
-// SCRAPER CONFIG
-
+//#region [rgba(0, 33, 0, 0.3)]       SCRAPER CONFIG
 const dynamoScraper = new AbstractScraper(makeScraperConfig({
   maxExecutionTime: 60059,
   workerData: Object.assign({}, workerData),
@@ -25,6 +24,7 @@ const dynamoScraper = new AbstractScraper(makeScraperConfig({
     }
   }
 }));
+//#endregion                          SCRAPER CONFIG
 
 dynamoScraper.singleMergedEventCheck = async function(event){
 

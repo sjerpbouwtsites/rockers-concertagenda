@@ -4,8 +4,7 @@ import axios from "axios";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 import * as _t from "../mods/tools.js";
 
-// SCRAPER CONFIG
-
+//#region [rgba(0, 33, 0, 0.3)]       SCRAPER CONFIG
 const vandaag = new Date().toISOString().split('T')[0]
 const defluxScraper = new AbstractScraper(makeScraperConfig({
   maxExecutionTime: 30007,
@@ -29,6 +28,7 @@ const defluxScraper = new AbstractScraper(makeScraperConfig({
     }
   }
 }));
+//#endregion                          SCRAPER CONFIG
 
 defluxScraper.listenToMasterThread();
 

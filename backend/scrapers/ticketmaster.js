@@ -4,9 +4,7 @@ import makeScraperConfig from "./gedeeld/scraper-config.js";
 import * as _t from "../mods/tools.js";
 import {workerNames} from "../mods/worker-config.js";
 
-
-// SCRAPER CONFIG
-
+//#region [rgba(0, 33, 0, 0.3)]       SCRAPER CONFIG
 const ticketmasterScraper = new AbstractScraper(makeScraperConfig({
   maxExecutionTime: 75003,
   workerData: Object.assign({}, workerData),
@@ -31,6 +29,7 @@ const ticketmasterScraper = new AbstractScraper(makeScraperConfig({
     }
   }
 }));
+//#endregion                          SCRAPER CONFIG
 
 ticketmasterScraper.listenToMasterThread();
 

@@ -4,9 +4,7 @@ import makeScraperConfig from "./gedeeld/scraper-config.js";
 import * as _t from "../mods/tools.js";
 import ErrorWrapper from "../mods/error-wrapper.js";
 
-
-// SCRAPER CONFIG
-
+//#region [rgba(0, 33, 0, 0.3)]       SCRAPER CONFIG
 const oostpoortScraper = new AbstractScraper(makeScraperConfig({
   maxExecutionTime: 30019,
   workerData: Object.assign({}, workerData),
@@ -27,9 +25,9 @@ const oostpoortScraper = new AbstractScraper(makeScraperConfig({
         requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
       }
     }
-  
   }
 }));
+//#endregion                          SCRAPER CONFIG
 
 oostpoortScraper.listenToMasterThread();
 

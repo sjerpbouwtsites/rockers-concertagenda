@@ -2,10 +2,8 @@ import { workerData } from "worker_threads";
 import * as _t from "../mods/tools.js";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
-import { isArray } from "util";
 
-// SCRAPER CONFIG
-
+//#region [rgba(0, 33, 0, 0.3)]       SCRAPER CONFIG
 const afasliveScraper = new AbstractScraper(makeScraperConfig({
   maxExecutionTime: 40000,
   workerData: Object.assign({}, workerData),
@@ -28,6 +26,7 @@ const afasliveScraper = new AbstractScraper(makeScraperConfig({
     }
   }
 }));
+//#endregion                          SCRAPER CONFIG
 
 // RAW EVENT ASYNC CHECK
 

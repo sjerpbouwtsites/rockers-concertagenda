@@ -3,8 +3,7 @@ import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import axios from "axios";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 
-// SCRAPER CONFIG
-
+//#region [rgba(0, 33, 0, 0.3)]       SCRAPER CONFIG
 const boerderijScraper = new AbstractScraper(makeScraperConfig({
   maxExecutionTime: 30004,
   workerData: Object.assign({}, workerData),
@@ -30,6 +29,7 @@ const boerderijScraper = new AbstractScraper(makeScraperConfig({
     }
   }
 }));
+//#endregion                          SCRAPER CONFIG
 
 boerderijScraper.singleRawEventCheck = async function(event){
 
