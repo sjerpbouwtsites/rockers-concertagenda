@@ -1,4 +1,43 @@
 
+  metropool-1 Error - 4:58:00 AM
+  Error: Evaluation failed: TypeError: textSelector is not a function
+    at __puppeteer_evaluation_script__:98:7
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async metropoolScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/metropool.js:127:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1000:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:230:5) 
+  Evaluation failed: TypeError: textSelector is not a function
+    at __puppeteer_evaluation_script__:98:7
+  
+  
+  metropool-0 Error - 4:57:58 AM
+  Error: Evaluation failed: TypeError: textSelector is not a function
+    at __puppeteer_evaluation_script__:98:7
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async metropoolScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/metropool.js:127:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1000:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:230:5) 
+  Evaluation failed: TypeError: textSelector is not a function
+    at __puppeteer_evaluation_script__:98:7
+  
+  
+  metropool-2 Error - 4:57:56 AM
+  Error: Evaluation failed: TypeError: textSelector is not a function
+    at __puppeteer_evaluation_script__:98:7
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async metropoolScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/metropool.js:127:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1000:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:230:5) 
+  Evaluation failed: TypeError: textSelector is not a function
+    at __puppeteer_evaluation_script__:98:7
+  
+  
   melkweg-3 Error - 4:14:57 AM
   Error: Evaluation failed: DOMException: Failed to execute 'querySelectorAll' on 'Document': '[class*="styles_event-info__text-column"] *, [class*='styles_event-meta-data'] [href*='facebook'], class*='styles_embed__media-container'] iframe *, class*='styles_embed__media-container'] iframe' is not a valid selector.
     at __puppeteer_evaluation_script__:79:8

@@ -133,9 +133,6 @@ melkwegScraper.makeBaseEventList = async function () {
 
 melkwegScraper.getPageInfo = async function ({ page, event }) {
 
- 
-
- 
   const {stopFunctie} =  await this.getPageInfoStart()
   
   const pageInfo = await page.evaluate(({event}) => {
@@ -227,8 +224,7 @@ melkwegScraper.getPageInfo = async function ({ page, event }) {
 
    
     //media obj maken voordat HTML verdwijnt
-    res.mediaForHTML = []
-    !mediaSelector.length ? '' : Array.from(
+    res.mediaForHTML = !mediaSelector.length ? '' : Array.from(
       document.querySelectorAll(mediaSelector)
     ).map((bron) => {
       bron.className = "";
