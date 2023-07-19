@@ -138,17 +138,12 @@ tivoliVredenburgScraper.getPageInfo = async function ({ page, event }) {
   })
 
   if (cookiesNodig){
-    const klikres = await page.evaluate(()=>{
+    await page.evaluate(()=>{
       const label = document.querySelector(".cookie-field:not(.disabled) label");
       const accept = document.querySelector("#cookie-accept")
       label.click()
       accept.click();
-      return {
-        label: !!label,
-        accept: !!accept
-      }
     })
-    this.dirtyDebug(klikres)
     await waitFor(1500)
   }
 
