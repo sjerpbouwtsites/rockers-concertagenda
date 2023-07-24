@@ -1,0 +1,47 @@
+[
+  {
+    "doorOpenDateTime": "2023-09-09T17:30:00.000Z",
+    "startDateTime": "2023-09-09T18:30:00.000Z",
+    "endDateTime": "2023-09-09T20:45:00.000Z",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/programma/stream-of-passion/#spotify-embed",
+    "title": "Stream of Passion",
+    "location": "dynamo",
+    "price": 22,
+    "shortText": "Reunië show",
+    "longText": "../public/texts/82466e02-ba6c-49aa-9f3c-4d615c526f74.html",
+    "image": "https://www.dynamo-eindhoven.nl/wp-content/uploads/2022/11/IMG_0439-2a-1200x1200.jpg",
+    "soldOut": true,
+    "unavailable": null,
+    "corrupted": null
+  },
+  {
+    "doorOpenDateTime": "2023-10-28T17:30:00.000Z",
+    "startDateTime": "2023-10-28T18:15:00.000Z",
+    "endDateTime": "2023-10-28T21:00:00.000Z",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/programma/regressive-hypnosis/",
+    "title": "Regressive Hypnosis",
+    "location": "dynamo",
+    "price": 19,
+    "shortText": "Dream Theater Tribute",
+    "longText": "../public/texts/3b90bdc2-2e53-475a-b38b-bac7ef950836.html",
+    "image": "https://www.dynamo-eindhoven.nl/wp-content/uploads/2023/04/RHfoto-1200x1200.jpg",
+    "soldOut": false,
+    "unavailable": null,
+    "corrupted": null
+  },
+  {
+    "doorOpenDateTime": "2024-02-16T18:00:00.000Z",
+    "startDateTime": "2024-02-16T18:30:00.000Z",
+    "endDateTime": "2024-02-16T22:00:00.000Z",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/programma/citizen-2024/#spotify-embed",
+    "title": "Citizen",
+    "location": "dynamo",
+    "price": 20,
+    "shortText": "Support: Drug Church",
+    "longText": "../public/texts/0f61b20a-2a92-4c44-af97-1bf9d8297207.html",
+    "image": "https://www.dynamo-eindhoven.nl/wp-content/uploads/2023/07/Main-picture-credit-Tracy-Nguyen-1200x1200.jpg",
+    "soldOut": false,
+    "unavailable": null,
+    "corrupted": null
+  }
+]

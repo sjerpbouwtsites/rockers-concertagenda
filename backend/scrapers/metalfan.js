@@ -86,7 +86,8 @@ async function metalFanDoURL(page, url, qwm){
     "ysselsteyn": "ijsselstein",
   }
 
-  const eventData = await page.evaluate(({months, rename}) => {
+  const jaar = url.includes('2024') ? '2024' : '2023'; //TODO FIX
+  const eventData = await page.evaluate(({months, rename, jaar}) => {
     return Array.from(document.querySelectorAll(".calentry")).map(
       (metalfanEvent) => {
         let dateAnchorEl,
@@ -111,11 +112,9 @@ async function metalFanDoURL(page, url, qwm){
             const monthString = caldateTC.match(/[a-z]{3}/)[0].trim();
             const monthNumber = months[monthString];
 
-            const year = url.includes('2024') ? '2024' : '2023' //TODO fix
-
             eventDate =
               monthNumber && dayString
-                ? new Date(`${year}-${monthNumber}-${dayString}`).toISOString()
+                ? new Date(`${jaar}-${monthNumber}-${dayString}`).toISOString()
                 : null;
           }
         }
@@ -149,7 +148,7 @@ async function metalFanDoURL(page, url, qwm){
         };
       }
     );
-  }, {months: getVenueMonths('metalfan'), rename})
+  }, {months: getVenueMonths('metalfan'), jaar, rename})
 
   let musicEvents = eventData
     .map((eventDatum) => {
