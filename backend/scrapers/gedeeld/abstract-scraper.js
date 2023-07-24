@@ -216,7 +216,7 @@ export default class AbstractScraper {
     } else {
       this.browser = 'disabled';
     }
-    const baseMusicEvents = await this.makeBaseEventList().catch(
+    const baseMusicEvents = await this.mainPage().catch(
       this.handleOuterScrapeCatch
     );
     if (!baseMusicEvents) return false;
@@ -249,7 +249,7 @@ export default class AbstractScraper {
   }
 
   // step 1
-  async makeBaseEventList() {
+  async mainPage() {
     throw Error("abstract method used thx ");
   }
 
@@ -313,7 +313,7 @@ export default class AbstractScraper {
    * indien puppeteer niet uitgezet, initieert pagina & navigeert naar main
    * @returns {stopFunctie timeout, page puppeteer.Page}
    */
-  async makeBaseEventListStart(){
+  async mainPageStart(){
 
     // @TODO 3 stopfuncties maken: 1 base events; 1 single; 1 totaal.
     const stopFunctie = setTimeout(() => {
@@ -369,7 +369,7 @@ export default class AbstractScraper {
    * @return {MusicEvent[]}
    * @memberof AbstractScraper
    */
-  async makeBaseEventListEnd({stopFunctie, page, rawEvents}){
+  async mainPageEnd({stopFunctie, page, rawEvents}){
 
     this.isForced && this.debugBaseEvents && this.dirtyLog(rawEvents)
 
@@ -475,7 +475,7 @@ export default class AbstractScraper {
    * Kondigt begin taak aan aan monitor
    * Initeert de generator check op events
    *
-   * @param {[MusicEvents]} baseMusicEvents uitgedraaid door makeBaseEventList
+   * @param {[MusicEvents]} baseMusicEvents uitgedraaid door mainPage
    * @return {checkedEvents [MusicEvent]}  Want geeft werk van rawEventsAsyncCheck door.
    * @memberof AbstractScraper
    *
@@ -746,7 +746,7 @@ export default class AbstractScraper {
       }).catch(metalEncError => {
         _t.wrappedHandleError(new ErrorWrapper({
           error: metalEncError,
-          remarks: `<a href='${event?.venueEventUrl}' class='error-link get-page-info-timeout'>getPageInfo ${workerData.name} metal enc. error</a>`,
+          remarks: `<a href='${event?.venueEventUrl}' class='error-link get-page-info-timeout'>singlePage ${workerData.name} metal enc. error</a>`,
           workerData,
           errorLevel: 'notice',
         }
@@ -994,7 +994,7 @@ export default class AbstractScraper {
     }
 
     // page info ophalen
-    const pageInfo = await this.getPageInfo({
+    const pageInfo = await this.singlePage({
       page: singleEventPage,
       url: singleEvent.venueEventUrl, // @TODO overal weghalen vervangen met event
       event: singleEvent,
@@ -1099,23 +1099,23 @@ export default class AbstractScraper {
   }
 
   // step 3.5
-  async getPageInfo() {
-    // abstract function getPageInfo
-    throw Error("abstact function getPAgeInfo called");
+  async singlePage() {
+    // abstract function singlePage
+    throw Error("abstact function singlePage called");
   }
 
   /**
    * step 3.6
-   * Vervangt generieke code aan begin getPageInfo
+   * Vervangt generieke code aan begin singlePage
    * start stopFunctie op
    * @returns {timeout} stopFunctie
    * @memberof AbstractScraper
    */
-  async getPageInfoStart(event){
+  async singlePageStart(event){
     const stopFunctie = setTimeout(() => {
       _t.wrappedHandleError(new ErrorWrapper({
         error: new Error('Timeout baseEvent'),
-        remarks: `<a href='${event?.venueEventUrl}' class='error-link get-page-info-timeout'>getPageInfo ${workerData.name} overtijd</a>.\nMax: ${this.puppeteerConfig.singlePage.timeout}`,
+        remarks: `<a href='${event?.venueEventUrl}' class='error-link get-page-info-timeout'>singlePage ${workerData.name} overtijd</a>.\nMax: ${this.puppeteerConfig.singlePage.timeout}`,
         workerData,
         errorLevel: 'notice',
       }
@@ -1128,14 +1128,14 @@ export default class AbstractScraper {
 
   /**
    * step 3.9
-   * Vervangt generieke code aan eind getPageInfo
+   * Vervangt generieke code aan eind singlePage
    * stopt stopFunctie
    * verwijderd overbodige witruimte
    * kijkt naar evt fouten in pageInfo.errors
    * @returns {*} pageInfo
    * @memberof AbstractScraper
    */  
-  async getPageInfoEnd({pageInfo, stopFunctie, page, event}){
+  async singlePageEnd({pageInfo, stopFunctie, page, event}){
 
     this.isForced && this.debugPageInfo && this.dirtyLog({
       event,

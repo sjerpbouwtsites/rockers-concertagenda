@@ -44,7 +44,7 @@ export default class ErrorWrapper {
     return true;
   }
   setWorkerData(value){
-    if(!value) return // wordt in base event en getpageinfo in abstract scraper gedaan.
+    if(!value) return // wordt in base event en singlePage in abstract scraper gedaan.
     if (ErrorWrapper.workerDataValid(value)) {
       this.workerData = value;
     } 
