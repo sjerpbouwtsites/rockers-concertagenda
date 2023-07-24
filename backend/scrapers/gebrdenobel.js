@@ -24,7 +24,7 @@ const gebrdenobelScraper = new AbstractScraper(
             "venueEventUrl",
             "title",
             "price",
-            "startDateTime",
+            "start",
           ],
         },
       },
@@ -71,8 +71,8 @@ gebrdenobelScraper.singleMergedEventCheck = async function (event) {
 };
 //#endregion                          SINGLE EVENT CHECK
 
-//#region [rgba(0, 240, 0, 0.3)]      BASE EVENT LIST
-gebrdenobelScraper.makeBaseEventList = async function () {
+//#region [rgba(0, 240, 0, 0.3)]      MAIN PAGE
+gebrdenobelScraper.mainPage = async function () {
   const availableBaseEvents = await this.checkBaseEventAvailable(
     workerData.family
   );
@@ -80,13 +80,13 @@ gebrdenobelScraper.makeBaseEventList = async function () {
     const thisWorkersEvents = availableBaseEvents.filter(
       (eventEl, index) => index % workerData.workerCount === workerData.index
     );
-    return await this.makeBaseEventListEnd({
+    return await this.mainPageEnd({
       stopFunctie: null,
       rawEvents: thisWorkersEvents,
     });
   }
 
-  const { stopFunctie, page } = await this.makeBaseEventListStart();
+  const { stopFunctie, page } = await this.mainPageStart();
 
   let punkMetalRawEvents = await page.evaluate(
     ({ workerData, unavailabiltyTerms }) => {
@@ -183,17 +183,16 @@ gebrdenobelScraper.makeBaseEventList = async function () {
   const thisWorkersEvents = rawEvents.filter(
     (eventEl, index) => index % workerData.workerCount === workerData.index
   );
-  return await this.makeBaseEventListEnd({
+  return await this.mainPageEnd({
     stopFunctie,
     rawEvents: thisWorkersEvents,
   });
 };
-//#endregion                          BASE EVENT LIST
+//#endregion                          MAIN PAGE
 
-// GET PAGE INFO
-
-gebrdenobelScraper.getPageInfo = async function ({ page, event }) {
-  const { stopFunctie } = await this.getPageInfoStart();
+//#region [rgba(120, 0, 0, 0.3)]     SINGLE PAGE
+gebrdenobelScraper.singlePage = async function ({ page, event }) {
+  const { stopFunctie } = await this.singlePageStart();
 
   const cookiesNodig = await page.evaluate(() => {
     return document.querySelector(".consent__show");
@@ -242,17 +241,17 @@ gebrdenobelScraper.getPageInfo = async function ({ page, event }) {
         }
 
         if (!timeRow) {
-          res.startDateTime = new Date(
+          res.start = new Date(
             `${res.startDate}T00:00:00`
           ).toISOString();
         } else {
           const timeMatch = timeRow.textContent.match(/\d\d:\d\d/);
           if (Array.isArray(timeMatch) && timeMatch.length) {
-            res.startDateTime = new Date(
+            res.start = new Date(
               `${res.startDate}T${timeMatch[0]}:00`
             ).toISOString();
           } else {
-            res.startDateTime = new Date(
+            res.start = new Date(
               `${res.startDate}T00:00:00`
             ).toISOString();
           }
@@ -268,14 +267,14 @@ gebrdenobelScraper.getPageInfo = async function ({ page, event }) {
           .parentNode.removeChild(document.querySelector("#shop-frame"));
       }
 
-      // #region [rgba(50, 0, 0, 0.3)] image 
+      
       res.image = document.querySelector(".hero img")?.src ?? null;
       if (!res.image) {
         res.errors.push({
           remarks: `image missing ${res.pageInfo}`,
         });
       }
-      // #endregion 
+      
 
       return res;
     },
@@ -291,11 +290,10 @@ gebrdenobelScraper.getPageInfo = async function ({ page, event }) {
     pageInfo[i] = longTextRes[i]
   }
 
-  return await this.getPageInfoEnd({ pageInfo, stopFunctie, page, event });
-
+  return await this.singlePageEnd({ pageInfo, stopFunctie, page, event });
 
 };
-
+//#endregion                         SINGLE PAGE
 // #region [rgba(60, 0, 0, 0.5)]     LONG HTML
 async function longTextSocialsIframes(page){
 

@@ -20,7 +20,7 @@ const bibelotScraper = new AbstractScraper(makeScraperConfig({
         requiredProperties: ['venueEventUrl', 'title']
       },
       singlePage: {
-        requiredProperties: ['venueEventUrl', 'title', 'startDateTime']
+        requiredProperties: ['venueEventUrl', 'title', 'start']
       }      
     }
   
@@ -44,18 +44,18 @@ bibelotScraper.singleRawEventCheck = async function(event){
 //#region [rgba(0, 180, 0, 0.3)]      SINGLE EVENT CHECK
 //#endregion                          SINGLE EVENT CHECK
 
-//#region [rgba(0, 240, 0, 0.3)]      BASE EVENT LIST
-bibelotScraper.makeBaseEventList = async function () {
+//#region [rgba(0, 240, 0, 0.3)]      MAIN PAGE
+bibelotScraper.mainPage = async function () {
 
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
   if (availableBaseEvents){
     const thisWorkersEvents = availableBaseEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
-    return await this.makeBaseEventListEnd({
+    return await this.mainPageEnd({
       stopFunctie: null, rawEvents: thisWorkersEvents}
     );    
   }   
 
-  const {stopFunctie, page} = await this.makeBaseEventListStart()
+  const {stopFunctie, page} = await this.mainPageStart()
 
   let rawEvents = await page.evaluate(({workerData}) => {
     return Array.from(
@@ -85,19 +85,17 @@ bibelotScraper.makeBaseEventList = async function () {
 
   this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
-  return await this.makeBaseEventListEnd({
+  return await this.mainPageEnd({
     stopFunctie, page, rawEvents: thisWorkersEvents}
   );
   
 };
-//#endregion                          BASE EVENT LIST
+//#endregion                          MAIN PAGE
 
-
-// GET PAGE INFO
-
-bibelotScraper.getPageInfo = async function ({ page, event }) {
+//#region [rgba(120, 0, 0, 0.3)]     SINGLE PAGE
+bibelotScraper.singlePage = async function ({ page, event }) {
   
-  const {stopFunctie} =  await this.getPageInfoStart(event)
+  const {stopFunctie} =  await this.singlePageStart(event)
   
   const pageInfo = await page.evaluate(
     ({ months , event}) => {
@@ -137,7 +135,7 @@ bibelotScraper.getPageInfo = async function ({ page, event }) {
 
       try {
         if (Array.isArray(res.doorTimeMatch) && res.doorTimeMatch.length > 2 && res.baseDate) {
-          res.doorOpenDateTime = new Date(
+          res.door = new Date(
             `${res.baseDate}T${res.doorTimeMatch[2]}:00`
           ).toISOString();
         }
@@ -154,12 +152,12 @@ bibelotScraper.getPageInfo = async function ({ page, event }) {
           res.startTimeMatch.length > 2 &&
           res.baseDate
         ) {
-          res.startDateTime = new Date(
+          res.start = new Date(
             `${res.baseDate}T${res.startTimeMatch[2]}:00`
           ).toISOString();
-        } else if (res.doorOpenDateTime) {
-          res.startDateTime = res.doorOpenDateTime;
-          res.doorOpenDateTime = "";
+        } else if (res.door) {
+          res.start = res.door;
+          res.door = "";
         }
       } catch (errorCaught) {
         res.errors.push({
@@ -170,7 +168,7 @@ bibelotScraper.getPageInfo = async function ({ page, event }) {
       }
       try {
         if (Array.isArray(res.endTimeMatch) && res.endTimeMatch.length > 2 && res.baseDate) {
-          res.endDateTime = new Date(
+          res.end = new Date(
             `${res.baseDate}T${res.endTimeMatch[2]}:00`
           ).toISOString();
         }
@@ -215,10 +213,10 @@ bibelotScraper.getPageInfo = async function ({ page, event }) {
   }
 
 
-  return await this.getPageInfoEnd({pageInfo, stopFunctie, page, event})
+  return await this.singlePageEnd({pageInfo, stopFunctie, page, event})
   
 }
-
+//#endregion                         SINGLE PAGE
 
 
 // #region [rgba(60, 0, 0, 0.5)]     LONG HTML

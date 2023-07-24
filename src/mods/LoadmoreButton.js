@@ -42,18 +42,14 @@ class LoadmoreButton extends React.Component {
     }
 
     if (newState !== oldState){
-      console.log('change')
       this.setState({ inView: newState });
     }
     if (this.state.passedFirstLoad && newState){
-      console.log('JA');
       this.add100ToMaxEventsShown();
       this.setState({ passedFirstLoad: false });
       setTimeout(()=>{
         this.setState({ passedFirstLoad: true });
       }, this.intervalSpeed)
-    } else {
-      console.log(this.state.passedFirstLoad, newState)
     }
   }
 

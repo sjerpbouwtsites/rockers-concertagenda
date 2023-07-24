@@ -16,10 +16,10 @@ const kavkaScraper = new AbstractScraper(
       app: {
         mainPage: {
           url: "https://kavka.be/programma/",
-          requiredProperties: ["venueEventUrl", "title", "startDateTime"],
+          requiredProperties: ["venueEventUrl", "title", "start"],
         },
         singlePage: {
-          requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
+          requiredProperties: ['venueEventUrl', 'title', 'price', 'start']
         }
       },
     },
@@ -55,18 +55,18 @@ kavkaScraper.singleMergedEventCheck = async function (event) {
 };
 //#endregion                          SINGLE EVENT CHECK
 
-//#region [rgba(0, 240, 0, 0.3)]      BASE EVENT LIST
-kavkaScraper.makeBaseEventList = async function () {
+//#region [rgba(0, 240, 0, 0.3)]      MAIN PAGE
+kavkaScraper.mainPage = async function () {
 
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
   if (availableBaseEvents){
     const thisWorkersEvents = availableBaseEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
-    return await this.makeBaseEventListEnd({
+    return await this.mainPageEnd({
       stopFunctie: null, rawEvents: thisWorkersEvents}
     );    
   }  
 
-  const { stopFunctie, page } = await this.makeBaseEventListStart();
+  const { stopFunctie, page } = await this.mainPageStart();
 
   let rawEvents = await page.evaluate(
     ({ months, workerData, unavailabiltyTerms }) => {
@@ -132,7 +132,7 @@ kavkaScraper.makeBaseEventList = async function () {
             } else {
               res.dateStringAttempt = `${startDate}T19:00:00`;
             }
-            res.startDateTime = new Date(res.dateStringAttempt).toISOString();
+            res.start = new Date(res.dateStringAttempt).toISOString();
           } catch (caughtError) {
             res.errors.push({
               error: caughtError,
@@ -148,7 +148,7 @@ kavkaScraper.makeBaseEventList = async function () {
               startTimeM.length > 1
             ) {
               res.dateStringAttempt = `${startDate}T${startTimeM[1]}:00`;
-              res.doorOpenDateTime = new Date(
+              res.door = new Date(
                 res.dateStringAttempt
               ).toISOString();
             }            
@@ -176,14 +176,15 @@ kavkaScraper.makeBaseEventList = async function () {
 
   this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
-  return await this.makeBaseEventListEnd({
+  return await this.mainPageEnd({
     stopFunctie, rawEvents: thisWorkersEvents}
   );
 };
-//#endregion                          BASE EVENT LIST
+//#endregion                          MAIN PAGE
 
-kavkaScraper.getPageInfo = async function ({ page, event }) {
-  const { stopFunctie } = await this.getPageInfoStart();
+//#region [rgba(120, 0, 0, 0.3)]     SINGLE PAGE
+kavkaScraper.singlePage = async function ({ page, event }) {
+  const { stopFunctie } = await this.singlePageStart();
 
   await page.waitForSelector('img[src*="kavka.be/wp-content"].lazyloaded',{
     timeout: 1500,
@@ -240,9 +241,9 @@ kavkaScraper.getPageInfo = async function ({ page, event }) {
     pageInfo[i] = longTextRes[i]
   }
 
-  return await this.getPageInfoEnd({ pageInfo, stopFunctie, page });
+  return await this.singlePageEnd({ pageInfo, stopFunctie, page });
 };
-
+//#endregion                         SINGLE PAGE
 // #region [rgba(60, 0, 0, 0.5)]     LONG HTML
 async function longTextSocialsIframes(page){
 

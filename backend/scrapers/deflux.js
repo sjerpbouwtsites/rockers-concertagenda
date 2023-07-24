@@ -23,7 +23,7 @@ const defluxScraper = new AbstractScraper(makeScraperConfig({
         requiredProperties: ['venueEventUrl', 'title']
       },
       singlePage: {
-        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
+        requiredProperties: ['venueEventUrl', 'title', 'price', 'start']
       }
     }
   }
@@ -61,18 +61,18 @@ defluxScraper.singleMergedEventCheck = async function (event) {
 };
 //#endregion                          SINGLE EVENT CHECK
 
-//#region [rgba(0, 240, 0, 0.3)]      BASE EVENT LIST
-defluxScraper.makeBaseEventList = async function () {
+//#region [rgba(0, 240, 0, 0.3)]      MAIN PAGE
+defluxScraper.mainPage = async function () {
  
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
   if (availableBaseEvents){
     const thisWorkersEvents = availableBaseEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
-    return await this.makeBaseEventListEnd({
+    return await this.mainPageEnd({
       stopFunctie: null, rawEvents: thisWorkersEvents}
     );    
   }   
 
-  const {stopFunctie} = await this.makeBaseEventListStart()
+  const {stopFunctie} = await this.mainPageStart()
 
   const axiosRes = await axios //TODO naar fetch
     .get(this.puppeteerConfig.app.mainPage.url)
@@ -85,33 +85,35 @@ defluxScraper.makeBaseEventList = async function () {
     })
   if (!axiosRes) return;
   const rawEvents = axiosRes.map(axiosResultSingle =>{
-    const title = axiosResultSingle.title.rendered;
+    let title = axiosResultSingle.title.rendered;
     const res = {
       pageInfo: `<a class='pageinfo' href="${this.puppeteerConfig.app.mainPage.url}">${workerData.family} main - ${title}</a>`,
       errors: [],
       venueEventUrl: axiosResultSingle.link,
       id: axiosResultSingle.id,
-      title,
     };    
+    res.soldOut = title.match(/uitverkocht|sold\s?out/i) ?? false;
+    if (title.match(/uitverkocht|sold\s?out/i)) {
+      title = title.replace(/uitverkocht|sold\s?out/i,'').replace(/^:\s+/,'');
+    }
+    res.title = title;    
     return res;
   })
     .map(this.isMusicEventCorruptedMapper);
 
   this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
-  return await this.makeBaseEventListEnd({
+  return await this.mainPageEnd({
     stopFunctie, rawEvents: thisWorkersEvents}
   );
 
 };
-//#endregion                          BASE EVENT LIST
+//#endregion                          MAIN PAGE
 
-
-// GET PAGE INFO
-
-defluxScraper.getPageInfo = async function ({ page, event}) {
+//#region [rgba(120, 0, 0, 0.3)]     SINGLE PAGE
+defluxScraper.singlePage = async function ({ page, event}) {
  
-  const {stopFunctie} =  await this.getPageInfoStart()
+  const {stopFunctie} =  await this.singlePageStart()
 
   const pageInfo = await page.evaluate(({event}) => {
 
@@ -135,7 +137,7 @@ defluxScraper.getPageInfo = async function ({ page, event}) {
     try {
       res.startDate = eventScheme.querySelector('[itemprop="startDate"]')?.getAttribute('content').split('T')[0].split('-').map(dateStuk => dateStuk.padStart(2, '0')).join('-')
       res.startTime = document.querySelector('.evcal_time.evo_tz_time').textContent.match(/\d\d:\d\d/)[0];
-      res.startDateTime = new Date(`${res.startDate}T${res.startTime}:00`).toISOString()
+      res.start = new Date(`${res.startDate}T${res.startTime}:00`).toISOString()
     } catch (caughtError) {
       res.errors.push({error: caughtError, remarks: `starttime match ${res.pageInfo}`})
     }
@@ -143,7 +145,7 @@ defluxScraper.getPageInfo = async function ({ page, event}) {
     if (document.querySelector('.evcal_desc3')?.textContent.toLowerCase().includes('deur open') ?? false) {
       try {
         res.endTime = document.querySelector('.evcal_desc3').textContent.match(/\d\d:\d\d/)[0];
-        res.endDateTime = new Date(`${res.startDate}T${res.endTime}:00`).toISOString();
+        res.end = new Date(`${res.startDate}T${res.endTime}:00`).toISOString();
       } catch (caughtError) {
         res.errors.push({error: caughtError, remarks: `door open starttime match ${res.pageInfo}`,toDebug:res})
       }
@@ -161,9 +163,10 @@ defluxScraper.getPageInfo = async function ({ page, event}) {
     pageInfo[i] = longTextRes[i]
   }
 
-  return await this.getPageInfoEnd({pageInfo, stopFunctie})
+  return await this.singlePageEnd({pageInfo, stopFunctie})
 
 };
+//#endregion                         SINGLE PAGE
 
 // #region [rgba(60, 0, 0, 0.5)]     LONG HTML
 async function longTextSocialsIframes(page){

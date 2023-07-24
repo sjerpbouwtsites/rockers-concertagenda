@@ -882,6 +882,29 @@ margin-top: 50px;
   max-width: 55ch;
 }
 
+.event-block__hide-sold-out {
+  padding: 0.5em 1em 0.5em 1em;
+  background-blend-mode: hard-light;
+  mix-blend-mode: difference;
+  background-color: var(--pink);
+  min-width: 90px;
+  line-height: 1em;
+  border: 0;
+  font-weight: 900;
+  text-align: center;
+  color: white;
+  font-size: .5em;
+  display: inline-block;
+  width: 120px;
+  positioN: absolute;
+  bottom: 20px;
+  left: 20px;
+  opacity: .25;
+}
+.event-block__hide-sold-out:hover{
+  opacity: 1;
+  cursor: pointer;
+}
 /* #endregion MAIN */
 
 /* #region FOOTER */

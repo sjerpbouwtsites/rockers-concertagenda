@@ -24,7 +24,7 @@ const ticketmasterScraper = new AbstractScraper(makeScraperConfig({
       }, 
       singlePage: {
         useCustomScraper: true,
-        requiredProperties:['venueEventUrl', 'title', 'price', 'startDateTime']
+        requiredProperties:['venueEventUrl', 'title', 'price', 'start']
       }
     }
   }
@@ -39,17 +39,17 @@ ticketmasterScraper.listenToMasterThread();
 //#region [rgba(0, 180, 0, 0.3)]      SINGLE EVENT CHECK
 //#endregion                          SINGLE EVENT CHECK
 
-//#region [rgba(0, 240, 0, 0.3)]      BASE EVENT LIST
-ticketmasterScraper.makeBaseEventList = async function() {
+//#region [rgba(0, 240, 0, 0.3)]      MAIN PAGE
+ticketmasterScraper.mainPage = async function() {
 
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.name);
   if (availableBaseEvents){
-    return await this.makeBaseEventListEnd({
+    return await this.mainPageEnd({
       stopFunctie: null, rawEvents: availableBaseEvents}
     );    
   } 
 
-  const {stopFunctie} = await this.makeBaseEventListStart()
+  const {stopFunctie} = await this.mainPageStart()
 
   let rawEvents = await fetch(this.puppeteerConfig.app.mainPage.url)
     .then(result => {
@@ -95,7 +95,7 @@ ticketmasterScraper.makeBaseEventList = async function() {
     });
 
   if (!Array.isArray(rawEvents) || !rawEvents.length) {
-    return await this.makeBaseEventListEnd({
+    return await this.mainPageEnd({
       stopFunctie, rawEvents: []}
     );  
   }
@@ -105,7 +105,7 @@ ticketmasterScraper.makeBaseEventList = async function() {
   let filteredRawEvents = this.filterForMetal(rawEvents)
 
   this.saveBaseEventlist(workerData.name, filteredRawEvents)
-  return await this.makeBaseEventListEnd({
+  return await this.mainPageEnd({
     stopFunctie, rawEvents: filteredRawEvents}
   );
   
@@ -122,12 +122,12 @@ function editAttractionsInRaw(attractions){
   }) ?? [];
   
 }
-//#endregion                          BASE EVENT LIST
+//#endregion                          MAIN PAGE
 
-// GET PAGE INFO
-ticketmasterScraper.getPageInfo = async function ({event}) {
+//#region [rgba(120, 0, 0, 0.3)]     SINGLE PAGE
+ticketmasterScraper.singlePage = async function ({event}) {
  
-  const {stopFunctie} =  await this.getPageInfoStart()
+  const {stopFunctie} =  await this.singlePageStart()
 
   const pageInfo = {
     pageInfo: `<a class='page-info' href='${event.url}'>TM ${event.title}</a>`,
@@ -135,9 +135,9 @@ ticketmasterScraper.getPageInfo = async function ({event}) {
     unavailable: '',
   };
 
-  pageInfo.startDateTime = event.dates?.start?.dateTime;
-  if (pageInfo.startDateTime) {
-    pageInfo.startDateTime = new Date(pageInfo.startDateTime).toISOString();
+  pageInfo.start = event.dates?.start?.dateTime;
+  if (pageInfo.start) {
+    pageInfo.start = new Date(pageInfo.start).toISOString();
   }
   
   pageInfo.location = 'GEENLOCATIEBEKEND';
@@ -181,7 +181,7 @@ ticketmasterScraper.getPageInfo = async function ({event}) {
 
   if (workerNames.includes(pageInfo.location) || pageInfo.location === 'metropoolenschede'){
     pageInfo.unavailable += ` locatie ${pageInfo.location} niet bij TM.`
-    return await this.getPageInfoEnd({pageInfo, stopFunctie})
+    return await this.singlePageEnd({pageInfo, stopFunctie})
   }
 
   pageInfo.title = event.name;
@@ -198,7 +198,7 @@ ticketmasterScraper.getPageInfo = async function ({event}) {
         prijzen: event?.priceRanges
       }
     })    
-    return await this.getPageInfoEnd({pageInfo, stopFunctie})
+    return await this.singlePageEnd({pageInfo, stopFunctie})
   }
 
   if (event.attractions.length > 1) {
@@ -228,7 +228,7 @@ ticketmasterScraper.getPageInfo = async function ({event}) {
     pageInfo.unavailable += ' double event' 
   }
 
-  return await this.getPageInfoEnd({pageInfo, stopFunctie})
+  return await this.singlePageEnd({pageInfo, stopFunctie})
 
 };
 
@@ -260,5 +260,5 @@ ticketmasterScraper.classificationsMetal = function (classifications){
   if (classification?.subGenre.id === `KZazBEonSMnZfZ7v6kl`) return true; // hardrock
   return false;
 }
-
+//#endregion                         SINGLE PAGE
 

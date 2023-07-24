@@ -14,7 +14,7 @@ const nuldertienScraper = new AbstractScraper(makeScraperConfig({
         requiredProperties: ['venueEventUrl', 'title']
       },
       singlePage: {
-        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime'],
+        requiredProperties: ['venueEventUrl', 'title', 'price', 'start'],
         
       }
     }
@@ -58,18 +58,18 @@ nuldertienScraper.singleRawEventCheck = async function(event){
 //#region [rgba(0, 180, 0, 0.3)]      SINGLE EVENT CHECK
 //#endregion                          SINGLE EVENT CHECK
 
-//#region [rgba(0, 240, 0, 0.3)]      BASE EVENT LIST
-nuldertienScraper.makeBaseEventList = async function () {
+//#region [rgba(0, 240, 0, 0.3)]      MAIN PAGE
+nuldertienScraper.mainPage = async function () {
 
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
   if (availableBaseEvents){
     const thisWorkersEvents = availableBaseEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
-    return await this.makeBaseEventListEnd({
+    return await this.mainPageEnd({
       stopFunctie: null, rawEvents: thisWorkersEvents}
     );    
   }   
   
-  const {stopFunctie, page} =  await this.makeBaseEventListStart()
+  const {stopFunctie, page} =  await this.mainPageStart()
 
   let rawEvents = await page.evaluate(({workerData, unavailabiltyTerms}) => {
     return Array.from(document.querySelectorAll(".event-list-item"))
@@ -90,13 +90,13 @@ nuldertienScraper.makeBaseEventList = async function () {
 
         const datumEl = eventEl.querySelector(".event-list-item__date");
         if (datumEl) {
-          res.startDateTime = new Date(
+          res.start = new Date(
             datumEl.getAttribute("datetime")
           ).toISOString();
         } 
-        if (!datumEl || !res.startDateTime){
+        if (!datumEl || !res.start){
           res.errors.push({
-            remarks: `geen datumEl of startDateTime ${res.pageInfo}`,
+            remarks: `geen datumEl of start ${res.pageInfo}`,
             toDebug: {res, datumEl},
           })
         }
@@ -116,17 +116,16 @@ nuldertienScraper.makeBaseEventList = async function () {
 
   this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
-  return await this.makeBaseEventListEnd({
+  return await this.mainPageEnd({
     stopFunctie, page, rawEvents: thisWorkersEvents}
   );
 };
-//#endregion                          BASE EVENT LIST
+//#endregion                          MAIN PAGE
 
-// GET PAGE INFO
-
-nuldertienScraper.getPageInfo = async function ({ page , event}) {
+//#region [rgba(120, 0, 0, 0.3)]     SINGLE PAGE
+nuldertienScraper.singlePage = async function ({ page , event}) {
   
-  const {stopFunctie} =  await this.getPageInfoStart()
+  const {stopFunctie} =  await this.singlePageStart()
 
   const pageInfo = await page.evaluate(({event}) => {
 
@@ -146,7 +145,7 @@ nuldertienScraper.getPageInfo = async function ({ page , event}) {
       if (document.querySelector(
         ".timetable__times dl:first-child time"
       )) {
-        res.doorOpenDateTime = new Date(
+        res.door = new Date(
           document.querySelector(
             ".timetable__times dl:first-child time"
           )?.getAttribute("datetime")
@@ -183,10 +182,10 @@ nuldertienScraper.getPageInfo = async function ({ page , event}) {
     pageInfo[i] = longTextRes[i]
   }
 
-  return await this.getPageInfoEnd({pageInfo, stopFunctie, page, event})
+  return await this.singlePageEnd({pageInfo, stopFunctie, page, event})
 
 };
-
+//#endregion                         SINGLE PAGE
 
 // #region [rgba(60, 0, 0, 0.5)]     LONG HTML
 async function longTextSocialsIframes(page){

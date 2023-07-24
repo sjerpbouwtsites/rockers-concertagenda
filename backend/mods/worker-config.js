@@ -45,7 +45,7 @@ export const workerConfig = {
     workerConcurrent: 1
   },
   metalfan: {workerCount: 1, CPUReq: "low", workerConcurrent: 1 },
-  metropool :{ CPUReq: "high", workerCount: 3, workerConcurrent: 1 },
+  metropool :{ workerCount: 3, workerConcurrent: 2 },
   neushoorn: { workerCount: 1, workerConcurrent: 1 },
   occii :{
     workerCount: 2,

@@ -21,7 +21,7 @@ const metropoolScraper = new AbstractScraper(makeScraperConfig({
         requiredProperties: ['venueEventUrl', 'title']
       },
       singlePage: {
-        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
+        requiredProperties: ['venueEventUrl', 'title', 'price', 'start']
       }
     }
   }
@@ -74,18 +74,18 @@ metropoolScraper.singleRawEventCheck = async function(event){
 //#region [rgba(0, 180, 0, 0.3)]      SINGLE EVENT CHECK
 //#endregion                          SINGLE EVENT CHECK
 
-//#region [rgba(0, 240, 0, 0.3)]      BASE EVENT LIST
-metropoolScraper.makeBaseEventList = async function () {
+//#region [rgba(0, 240, 0, 0.3)]      MAIN PAGE
+metropoolScraper.mainPage = async function () {
 
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
   if (availableBaseEvents){
     const thisWorkersEvents = availableBaseEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
-    return await this.makeBaseEventListEnd({
+    return await this.mainPageEnd({
       stopFunctie: null, rawEvents: thisWorkersEvents}
     );    
   }  
 
-  const {stopFunctie, page} = await this.makeBaseEventListStart()
+  const {stopFunctie, page} = await this.mainPageStart()
 
   await _t.autoScroll(page);
   await _t.autoScroll(page);
@@ -102,7 +102,7 @@ metropoolScraper.makeBaseEventList = async function () {
         }          
         res.venueEventUrl = rawEvent?.href ?? null;
         const genres = rawEvent.dataset?.genres ?? '';
-        const st = rawEvent.querySelector(".card__title card__title--sub")?.textContent;
+        const st = rawEvent.querySelector(".card__title card__title--sub")?.textContent ?? '';
         res.shortText = (st + ' ' + genres).trim();
         const uaRex = new RegExp(unavailabiltyTerms.join("|"), 'gi');
         res.unavailable = !!rawEvent.textContent.match(uaRex);        
@@ -115,24 +115,26 @@ metropoolScraper.makeBaseEventList = async function () {
   
   this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
-  return await this.makeBaseEventListEnd({
+  return await this.mainPageEnd({
     stopFunctie, rawEvents: thisWorkersEvents}
   );
 };
-//#endregion                          BASE EVENT LIST
+//#endregion                          MAIN PAGE
 
-// GET PAGE INFO
+//#region [rgba(120, 0, 0, 0.3)]     SINGLE PAGE
+metropoolScraper.singlePage = async function ({ page, event}) {
 
-metropoolScraper.getPageInfo = async function ({ page, event}) {
-
-  const {stopFunctie} =  await this.getPageInfoStart()
+  const {stopFunctie} =  await this.singlePageStart()
   
   const pageInfo = await page.evaluate(({months, event}) => {
     const res = {
       pageInfo: `<a class='page-info' href='${location.href}'>${event.title}</a>`,
       errors: [],
     };
-    res.shortText = event.shortText + ' ' + document.querySelector('.title-wrap-medium .text-support')?.textContent.trim()
+
+    res.shortText = (event?.shortText ?? '') + ' ' + document.querySelector('.title-wrap-medium .text-support')?.textContent ?? '';
+    res.shortText = res.shortText.replaceAll('undefined', '');
+    res.shortText = res.shortText.trim()
     const startDateRauwMatch = document
       .querySelector(".event-title-wrap")
       ?.innerHTML.match(
@@ -162,7 +164,7 @@ metropoolScraper.getPageInfo = async function ({ page, event}) {
         .querySelector(".beginTime")
         ?.innerHTML.match(/\d\d:\d\d/);
       if (startTimeMatch && startTimeMatch.length) {
-        res.startDateTime = new Date(
+        res.start = new Date(
           `${startDate}:${startTimeMatch[0]}`
         ).toISOString();
       } else {
@@ -181,7 +183,7 @@ metropoolScraper.getPageInfo = async function ({ page, event}) {
         .querySelector(".doorOpen")
         ?.innerHTML.match(/\d\d:\d\d/);
       if (doorTimeMatch && doorTimeMatch.length) {
-        res.doorOpenDateTime = new Date(
+        res.door = new Date(
           `${startDate}:${doorTimeMatch[0]}`
         ).toISOString();
       }
@@ -215,10 +217,10 @@ metropoolScraper.getPageInfo = async function ({ page, event}) {
     pageInfo[i] = longTextRes[i]
   }
 
-  return await this.getPageInfoEnd({pageInfo, stopFunctie, page, event})
+  return await this.singlePageEnd({pageInfo, stopFunctie, page, event})
   
 };
-
+//#endregion                         SINGLE PAGE
 // #region [rgba(60, 0, 0, 0.5)]     LONG HTML
 async function longTextSocialsIframes(page){
 

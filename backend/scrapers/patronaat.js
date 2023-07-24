@@ -20,7 +20,7 @@ const patronaatScraper = new AbstractScraper(makeScraperConfig({
         requiredProperties: ['venueEventUrl', 'title']
       },
       singlePage: {
-        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
+        requiredProperties: ['venueEventUrl', 'title', 'price', 'start']
       }
     }
   },
@@ -74,18 +74,18 @@ patronaatScraper.singleRawEventCheck = async function (event) {
 //#region [rgba(0, 180, 0, 0.3)]      SINGLE EVENT CHECK
 //#endregion                          SINGLE EVENT CHECK
 
-//#region [rgba(0, 240, 0, 0.3)]      BASE EVENT LIST
-patronaatScraper.makeBaseEventList = async function () {
+//#region [rgba(0, 240, 0, 0.3)]      MAIN PAGE
+patronaatScraper.mainPage = async function () {
 
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
   if (availableBaseEvents){
     const thisWorkersEvents = availableBaseEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
-    return await this.makeBaseEventListEnd({
+    return await this.mainPageEnd({
       stopFunctie: null, rawEvents: thisWorkersEvents}
     );    
   } 
 
-  const {stopFunctie, page} = await this.makeBaseEventListStart()
+  const {stopFunctie, page} = await this.mainPageStart()
 
   let rawEvents = await page.evaluate(({workerData, unavailabiltyTerms}) => {
     return Array.from(document.querySelectorAll(".overview__list-item--event"))
@@ -117,17 +117,16 @@ patronaatScraper.makeBaseEventList = async function () {
 
   this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
-  return await this.makeBaseEventListEnd({
+  return await this.mainPageEnd({
     stopFunctie, rawEvents: thisWorkersEvents}
   );
 };
-//#endregion                          BASE EVENT LIST
+//#endregion                          MAIN PAGE
 
-// GET PAGE INFO
-
-patronaatScraper.getPageInfo = async function ({ page, event }) {
+//#region [rgba(120, 0, 0, 0.3)]     SINGLE PAGE
+patronaatScraper.singlePage = async function ({ page, event }) {
  
-  const {stopFunctie} =  await this.getPageInfoStart()
+  const {stopFunctie} =  await this.singlePageStart()
 
   const pageInfo = await page.evaluate(({months, event}) => {
     const res = {
@@ -174,17 +173,17 @@ patronaatScraper.getPageInfo = async function ({ page, event }) {
         }
 
         if (res.doorOpenTime) {
-          res.doorOpenDateTime = new Date(
+          res.door = new Date(
             `${res.startDatum}T${res.doorOpenTime}:00`
           ).toISOString();
         }
         if (res.startTime) {
-          res.startDateTime = new Date(
+          res.start = new Date(
             `${res.startDatum}T${res.startTime}:00`
           ).toISOString();
         }
         if (res.endTime) {
-          res.endDateTime = new Date(
+          res.end = new Date(
             `${res.startDatum}T${res.endTime}:00`
           ).toISOString();
         }
@@ -227,9 +226,10 @@ patronaatScraper.getPageInfo = async function ({ page, event }) {
     pageInfo[i] = longTextRes[i]
   }
 
-  return await this.getPageInfoEnd({pageInfo, stopFunctie, page, event})
+  return await this.singlePageEnd({pageInfo, stopFunctie, page, event})
   
 };
+//#endregion                         SINGLE PAGE
 
 // #region [rgba(60, 0, 0, 0.5)]     LONG HTML
 async function longTextSocialsIframes(page){

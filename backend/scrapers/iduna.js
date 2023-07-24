@@ -19,7 +19,7 @@ const idunaScraper = new AbstractScraper(makeScraperConfig({
         requiredProperties: ['venueEventUrl', 'title']
       },
       singlePage: {
-        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
+        requiredProperties: ['venueEventUrl', 'title', 'price', 'start']
       }
     }
   }
@@ -54,16 +54,16 @@ idunaScraper.singleMergedEventCheck = async function (event) {
 };
 //#endregion                          SINGLE EVENT CHECK
 
-//#region [rgba(0, 240, 0, 0.3)]      BASE EVENT LIST
-idunaScraper.makeBaseEventList = async function () {
+//#region [rgba(0, 240, 0, 0.3)]      MAIN PAGE
+idunaScraper.mainPage = async function () {
 
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
   if (availableBaseEvents){
-    return await this.makeBaseEventListEnd({
+    return await this.mainPageEnd({
       stopFunctie: null, rawEvents: availableBaseEvents}
     );    
   }    
-  const {stopFunctie, page} = await this.makeBaseEventListStart()
+  const {stopFunctie, page} = await this.mainPageStart()
 
   let metalEvents, punkEvents, doomEvents;
   try {
@@ -191,7 +191,7 @@ idunaScraper.makeBaseEventList = async function () {
     _t.handleError(caughtError, workerData, `uiterste catch om pak metalEvents punkEvents iduna main`, 'close-thread',{
       metalEvents, punkEvents
     })
-    return await this.makeBaseEventListEnd({
+    return await this.mainPageEnd({
       stopFunctie, page, rawEvents:[]}
     );    
   }
@@ -203,17 +203,16 @@ idunaScraper.makeBaseEventList = async function () {
   }).map(this.isMusicEventCorruptedMapper);
 
   this.saveBaseEventlist(workerData.family, rawEvents)
-  return await this.makeBaseEventListEnd({
+  return await this.mainPageEnd({
     stopFunctie, rawEvents}
   );
 };
-//#endregion                          BASE EVENT LIST
+//#endregion                          MAIN PAGE
 
-// GET PAGE INFO
-
-idunaScraper.getPageInfo = async function ({ page, event }) {
+//#region [rgba(120, 0, 0, 0.3)]     SINGLE PAGE
+idunaScraper.singlePage = async function ({ page, event }) {
   
-  const {stopFunctie} =  await this.getPageInfoStart()
+  const {stopFunctie} =  await this.singlePageStart()
   
   const pageInfo = await page.evaluate(
     ({ months , event}) => {
@@ -288,24 +287,24 @@ idunaScraper.getPageInfo = async function ({ page, event }) {
 
 
         if (res.startTime) {
-          res.startDateTime = new Date(
+          res.start = new Date(
             `${res.startDate}T${res.startTime}:00`
           ).toISOString();
         } else if (res.doorTime) {
-          res.startDateTime = new Date(
+          res.start = new Date(
             `${res.startDate}T${res.doorTime}:00`
           ).toISOString();
         }
 
         if (res.startTime && res.doorTime) {
-          res.doorOpenDateTime = new Date(
+          res.door = new Date(
             `${res.startDate}T${res.doorTime}:00`
           ).toISOString();
         }
       } catch (caughtError) { //TODO BELACHELJIK GROTE TRY CATCH
         res.errors.push({
           error:caughtError,
-          remarks: `belacheljik grote catch iduna getPageInfo ${res.pageInfo}`,
+          remarks: `belacheljik grote catch iduna singlePage ${res.pageInfo}`,
           toDebug:{
             event
           }
@@ -339,10 +338,10 @@ idunaScraper.getPageInfo = async function ({ page, event }) {
     pageInfo[i] = longTextRes[i]
   }
 
-  return await this.getPageInfoEnd({pageInfo, stopFunctie, page, event})
+  return await this.singlePageEnd({pageInfo, stopFunctie, page, event})
   
 };
-
+//#endregion                         SINGLE PAGE
 // #region [rgba(60, 0, 0, 0.5)]     LONG HTML
 async function longTextSocialsIframes(page){
 

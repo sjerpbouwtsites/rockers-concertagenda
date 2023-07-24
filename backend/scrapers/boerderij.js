@@ -24,7 +24,7 @@ const boerderijScraper = new AbstractScraper(makeScraperConfig({
         requiredProperties: ['venueEventUrl', 'title']
       },
       singlePage: {
-        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
+        requiredProperties: ['venueEventUrl', 'title', 'price', 'start']
       }
     }
   }
@@ -66,18 +66,18 @@ boerderijScraper.singleRawEventCheck = async function(event){
 //#region [rgba(0, 180, 0, 0.3)]      SINGLE EVENT CHECK
 //#endregion                          SINGLE EVENT CHECK
 
-//#region [rgba(0, 240, 0, 0.3)]      BASE EVENT LIST
-boerderijScraper.makeBaseEventList = async function () {
+//#region [rgba(0, 240, 0, 0.3)]      MAIN PAGE
+boerderijScraper.mainPage = async function () {
 
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
   if (availableBaseEvents){
     const thisWorkersEvents = availableBaseEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
-    return await this.makeBaseEventListEnd({
+    return await this.mainPageEnd({
       stopFunctie: null, rawEvents: thisWorkersEvents}
     );    
   }   
 
-  const {stopFunctie} = await this.makeBaseEventListStart()
+  const {stopFunctie} = await this.mainPageStart()
 
   let rawEvents = await axios
     .get(this.puppeteerConfig.app.mainPage.url)
@@ -98,18 +98,16 @@ boerderijScraper.makeBaseEventList = async function () {
 
   this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
-  return await this.makeBaseEventListEnd({
+  return await this.mainPageEnd({
     stopFunctie, rawEvents: thisWorkersEvents}
   );
 };
-//#endregion                          BASE EVENT LIST
+//#endregion                          MAIN PAGE
 
-
-// GET PAGE INFO
-
-boerderijScraper.getPageInfo = async function ({ event }) {
+//#region [rgba(120, 0, 0, 0.3)]     SINGLE PAGE
+boerderijScraper.singlePage = async function ({ event }) {
  
-  const {stopFunctie} =  await this.getPageInfoStart()
+  const {stopFunctie} =  await this.singlePageStart()
 
   const [realEventTitle, realEventId] = event.title.split("&id=");
   event.title = realEventTitle;
@@ -139,7 +137,7 @@ boerderijScraper.getPageInfo = async function ({ event }) {
 
   if (!ajaxRes) {
     res.corrupted += `ajax verzoek faalt naar ${url}`;
-    return await this.getPageInfoEnd({res, stopFunctie})
+    return await this.singlePageEnd({res, stopFunctie})
   }
 
   if (!event.image){
@@ -154,30 +152,27 @@ boerderijScraper.getPageInfo = async function ({ event }) {
   res.price = priceRes.price;
     
   try {
-    res.startDateTime = new Date(
+    res.start = new Date(
       `${ajaxRes.event_date}T${ajaxRes.event_start}`
     ).toISOString();
   } catch (catchedError) {
     res.errors.push({
       error: catchedError,
-      remarks: `startDateTime samenvoeging ${res.pageInfo}`,
+      remarks: `start samenvoeging ${res.pageInfo}`,
       toDebug:res,
     });
   }
   try {
-    res.doorOpenDateTime = new Date(
+    res.door = new Date(
       `${ajaxRes.event_date}T${ajaxRes.event_open}`
     ).toISOString();
   } catch (catchedError) {
     res.errors.push({
       error: catchedError,
-      remarks: `doorOpenDateTime samenvoeging ${res.pageInfo}`,
+      remarks: `door samenvoeging ${res.pageInfo}`,
       toDebug:res,
     });
   }
-
-  // LONG HTML HIER WANT BOERDERIJ VIA AJAX.....
-  // #region [rgba(60, 0, 0, 0.5)]     LONG HTML
 
   // media obj maken voordat HTML verdwijnt
   res.mediaForHTML = !ajaxRes?.video ? [] : [{
@@ -191,14 +186,12 @@ boerderijScraper.getPageInfo = async function ({ event }) {
   // tekst.
   res.textForHTML = ajaxRes.description
 
-  // #endregion                        LONG HTML
-
   res.soldOut = ajaxRes?.label?.title?.toLowerCase().includes('uitverkocht') ?? null
 
-  return await this.getPageInfoEnd({pageInfo: res, stopFunctie})
+  return await this.singlePageEnd({pageInfo: res, stopFunctie})
 
 };
-
+//#endregion                         SINGLE PAGE
 
 boerderijScraper.boerderijCustomPrice = async function (testText, pi, title) {
   let priceRes = {

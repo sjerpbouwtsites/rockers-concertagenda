@@ -18,10 +18,10 @@ const dbsScraper = new AbstractScraper(makeScraperConfig({
     app: {
       mainPage: {
         url: "https://www.dbstudio.nl/agenda/",
-        requiredProperties: ['venueEventUrl', 'title', 'startDateTime']
+        requiredProperties: ['venueEventUrl', 'title', 'start']
       },
       singlePage: {
-        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
+        requiredProperties: ['venueEventUrl', 'title', 'price', 'start']
       }
     }
   }
@@ -36,38 +36,67 @@ dbsScraper.listenToMasterThread();
 //#region [rgba(0, 180, 0, 0.3)]      SINGLE EVENT CHECK
 dbsScraper.singleMergedEventCheck = async function(event){
 
+  const tl = this.cleanupEventTitle(event.title);
+
+  const isRefused = await this.rockRefuseListCheck(event, tl)
+  if (isRefused.success) {
+    return {
+      reason: isRefused.reason,
+      event,
+      success: false
+    }
+  }
+
+  const isAllowed = await this.rockAllowListCheck(event, tl)
+  if (isAllowed.success) {
+    return isAllowed;  
+  }
+
   const hasForbiddenTermsRes = await this.hasForbiddenTerms(event)
   if (hasForbiddenTermsRes.success) {
+    await this.saveRefusedTitle(tl)     
     return {
       event,
       reason: hasForbiddenTermsRes.reason,
       success: !hasForbiddenTermsRes
     }
   }
-  return await this.hasGoodTerms(event);
+  const hasGoodTerms = await this.hasGoodTerms(event);
+  if (hasGoodTerms.success) {
+    await this.saveAllowedTitle(tl)
+    return hasGoodTerms
+  }
+
+  await this.saveAllowedTitle(tl)
+  return {
+    event,
+    reason: 'niets gevonden in refused, allowed',
+    success: true
+  }
+
 }
 //#endregion                          SINGLE EVENT CHECK
 
-//#region [rgba(0, 240, 0, 0.3)]      BASE EVENT LIST
-dbsScraper.makeBaseEventList = async function () {
+//#region [rgba(0, 240, 0, 0.3)]      MAIN PAGE
+dbsScraper.mainPage = async function () {
 
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
   if (availableBaseEvents){
     const thisWorkersEvents = availableBaseEvents.filter((eventEl, index) => {
       return index % workerData.workerCount === workerData.index
     })
-    return await this.makeBaseEventListEnd({
+    return await this.mainPageEnd({
       stopFunctie: null, rawEvents: thisWorkersEvents}
     );    
   }   
 
-  const {stopFunctie, page} = await this.makeBaseEventListStart()
+  const {stopFunctie, page} = await this.mainPageStart()
 
   await page.waitForSelector('.fusion-events-post')
   await _t.waitFor(100)
 
   let rawEvents = await page.evaluate(
-    ({ months,workerData }) => {
+    ({ months,workerData,unavailabiltyTerms }) => {
       return Array.from(document.querySelectorAll(".fusion-events-post"))
         .map((eventEl) => {
           let title = eventEl.querySelector(".fusion-events-meta .url")?.textContent.trim() ?? null;
@@ -80,9 +109,8 @@ dbsScraper.makeBaseEventList = async function () {
             title
           };
 
-          if (title?.toLowerCase().includes('cancelled')){ //TODO 1.algemene check maken 2. uitbreiden.
-            res.unavailable += ' event cancelled'
-          }
+          const uaRex = new RegExp(unavailabiltyTerms.join("|"), "gi");
+          res.unavailable = !!eventEl.textContent.match(uaRex);
 
           res.venueEventUrl = eventEl.querySelector(".fusion-events-meta .url")?.href ?? null;
 
@@ -113,7 +141,7 @@ dbsScraper.makeBaseEventList = async function () {
             } else {
               res.time = timeMatch[0].padStart(5, "0");
               res.startDate = `${res.year}-${res.month}-${res.day}`;
-              res.startDateTime = new Date(
+              res.start = new Date(
                 `${res.startDate}T${res.time}:00Z`
               ).toISOString();
             }
@@ -130,11 +158,11 @@ dbsScraper.makeBaseEventList = async function () {
                   .match(/\d{1,2}:\d\d/);
                 if (Array.isArray(endDateM) && endDateM.length > 0) {
                   res.endTime = endDateM[0].padStart(5, "0");
-                  res.endDateTime = new Date(
+                  res.end = new Date(
                     `${res.startDate}T${res.endTime}:00Z`
                   ).toISOString();
-                  if (res.endDateTime === res.startDateTime) {
-                    res.endDateTime = null;
+                  if (res.end === res.start) {
+                    res.end = null;
                   }
                 }
               }
@@ -147,23 +175,23 @@ dbsScraper.makeBaseEventList = async function () {
           return res;
         });
     },
-    { months: this.months,workerData }
+    { months: this.months,workerData, unavailabiltyTerms: AbstractScraper.unavailabiltyTerms }
   )
   rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
 
   this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
-  return await this.makeBaseEventListEnd({
+  return await this.mainPageEnd({
     stopFunctie, rawEvents: thisWorkersEvents}
   );
   
 };
-//#endregion                          BASE EVENT LIST
+//#endregion                          MAIN PAGE
 
-
-dbsScraper.getPageInfo = async function ({ page, event }) {
+//#region [rgba(120, 0, 0, 0.3)]     SINGLE PAGE
+dbsScraper.singlePage = async function ({ page, event }) {
   
-  const {stopFunctie} =  await this.getPageInfoStart()
+  const {stopFunctie} =  await this.singlePageStart()
   
   const pageInfo = await page.evaluate(({event}) => {
     const res = {
@@ -223,9 +251,10 @@ dbsScraper.getPageInfo = async function ({ page, event }) {
     }
   }
   
-  return await this.getPageInfoEnd({pageInfo, stopFunctie, page, event})
+  return await this.singlePageEnd({pageInfo, stopFunctie, page, event})
   
 };
+//#endregion                         SINGLE PAGE
 
 // #region [rgba(60, 0, 0, 0.5)]     LONG HTML
 async function longTextSocialsIframes(page){

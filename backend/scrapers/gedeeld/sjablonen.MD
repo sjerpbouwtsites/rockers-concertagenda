@@ -2,7 +2,7 @@
 
 ## res obj
 
-### Res obj in makeBaseEventList
+### Res obj in mainPage
 ```js
 const title = doc.balblabl.textContent.etc;
 const res = {
@@ -12,7 +12,7 @@ const res = {
 };
 ```
 
-### Res obj in getPageInfo
+### Res obj in singlePage
 ```js
   // event via params
   const res = {
@@ -41,7 +41,7 @@ new AbstractScraper(makeScraperConfig({
         requiredProperties: ['venueEventUrl', 'title']
       },
       singlePage: {
-        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
+        requiredProperties: ['venueEventUrl', 'title', 'price', 'start']
       }
     }
   }

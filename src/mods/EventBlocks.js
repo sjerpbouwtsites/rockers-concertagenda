@@ -14,12 +14,14 @@ class EventBlocks extends React.Component {
       maxEventsShown: 100,
       eventDataLoading: false,
       eventDataLoaded: false,
+      filterHideSoldOut: false,
     };
     this.currentYear = new Date().getFullYear();
     this.createLocation = this.createLocation.bind(this);
     this.createDates = this.createDates.bind(this);
     this.add100ToMaxEventsShown = this.add100ToMaxEventsShown.bind(this);
     this.escFunction = this.escFunction.bind(this);
+    this.hideSoldOut = this.hideSoldOut.bind(this);
     this.gescrolledBuitenBeeldEnlarged = this.gescrolledBuitenBeeldEnlarged.bind(this);
   }
 
@@ -53,7 +55,9 @@ class EventBlocks extends React.Component {
           .filter(filterEventsDateInPast);
         this.setState({ musicEvents: me2 });
         this.setState({ eventDataLoaded: true });
-        document.getElementById('app-title__events-count').innerHTML = ` - ${musicEvents.length} concerten`;
+        document.querySelectorAll('.app-title__events-count').forEach(countEl=>{
+          countEl.innerHTML = ` - ${musicEvents.length} concerten`;
+        })
       })
       .catch((error) => {
         console.error(error);
@@ -118,11 +122,15 @@ class EventBlocks extends React.Component {
     } else if (document.querySelector('[data-was-enlarged')){
       await this.waitFor(5);
       const wasEnlarged = document.querySelector('[data-was-enlarged');
-      window.scrollTo(0, wasEnlarged.offsetTop + document.getElementById("app-banner").clientHeight - 75);
+      window.scrollTo(0, wasEnlarged.offsetTop + document.getElementById("app-banner-top").clientHeight - 75);
       wasEnlarged.removeAttribute('data-was-enlarged');
     }
     return true;
     
+  }
+
+  hideSoldOut(){
+    this.setState({ filterHideSoldOut: true });
   }
 
   async loadLongerText(musicEventKey) {
@@ -171,7 +179,7 @@ class EventBlocks extends React.Component {
         setTimeout(() => {
           const blockEl = document.getElementById(`event-id-${musicEventKey}`);
           const appBannerHeight =
-            document.getElementById("app-banner").clientHeight;
+            document.getElementById("app-banner-top").clientHeight;
           if (window.innerWidth > 1024){
             console.log(document.body.offsetHeight, thisElement.offsetHeight, initialElementOffsetTop)
             const maxOffset = Math.max(Math.min((document.body.offsetHeight - thisElement.offsetHeight - 150), initialElementOffsetTop - 50), 50);
@@ -227,37 +235,37 @@ class EventBlocks extends React.Component {
    
   createDates(musicEvent) {
     
-    const StartDateTime = new Date(musicEvent.startDateTime);
+    const start = new Date(musicEvent.start);
     const enlargedBEM = musicEvent.enlarged ? 'event-block__dates--enlarged' : '';
-    const startDateText = StartDateTime.toLocaleDateString("nl", {
+    const startDateText = start.toLocaleDateString("nl", {
       weekday: musicEvent.enlarged ? "short" : undefined,
       month: musicEvent.enlarged ? 'long' : '2-digit',
       day: "numeric",
       year: musicEvent.enlarged 
-        ? (StartDateTime.getFullYear() === this.currentYear ? "numeric" : undefined)
+        ? (start.getFullYear() === this.currentYear ? "numeric" : undefined)
         : undefined,
       hour: "2-digit",
       minute: "2-digit",
     });
-    const startDateHTML = `<time className="event-block__dates event-block__dates--start-date ${enlargedBEM}" dateTime="${musicEvent.startDateTime}">${startDateText}</time>`;
+    const startDateHTML = `<time className="event-block__dates event-block__dates--start-date ${enlargedBEM}" dateTime="${musicEvent.start}">${startDateText}</time>`;
     if (!musicEvent.enlarged){
       return startDateHTML;
     }
 
     let openDoorDateHTML = '';
-    if (musicEvent.doorOpenDateTime) {
-      const deurTijd = musicEvent.doorOpenDateTime.match(/T(\d\d:\d\d)/)[1]
-      openDoorDateHTML = `<time className="event-block__dates event-block__dates--door-date ${enlargedBEM}" dateTime="${musicEvent.doorOpenDateTime}">deur: ${deurTijd}</time>`;
+    if (musicEvent.door) {
+      const deurTijd = musicEvent.door.match(/T(\d\d:\d\d)/)[1]
+      openDoorDateHTML = `<time className="event-block__dates event-block__dates--door-date ${enlargedBEM}" dateTime="${musicEvent.door}">deur: ${deurTijd}</time>`;
     }
 
     let endDateHTML = '';
-    if (musicEvent.endDateTime) {
-      // const endDateTimeText = (new Date(musicEvent.doorOpenDateTime)).toLocaleDateString("nl", {
+    if (musicEvent.end) {
+      // const endText = (new Date(musicEvent.door)).toLocaleDateString("nl", {
       //   hour: "2-digit",
       //   minute: "2-digit",
       // });      
-      const eindTijd = musicEvent.endDateTime.match(/T(\d\d:\d\d)/)[1]
-      endDateHTML = `<time className="event-block__dates event-block__dates--end-date ${enlargedBEM}" dateTime="${musicEvent.endDateTime}">eind: ${eindTijd}</time>`;
+      const eindTijd = musicEvent.end.match(/T(\d\d:\d\d)/)[1]
+      endDateHTML = `<time className="event-block__dates event-block__dates--end-date ${enlargedBEM}" dateTime="${musicEvent.end}">eind: ${eindTijd}</time>`;
     }
     
     return `${startDateHTML}${openDoorDateHTML}${endDateHTML}`;
@@ -332,11 +340,20 @@ ${BEMify(`event-block`, [
       main: `${BEMify(`event-block__main contrast-with-dark`, sharedModifiers)}`,
       mainContainerForEnlarged: BEMify(`void-container-for-enlarged`, sharedModifiers),
       footer: `${BEMify(`event-block__footer`, sharedModifiers)} `,
+      hideSoldOutBtn: `${BEMify(`event-block__hide-sold-out`, sharedModifiers)} `,
     }    
   }
 
   someEventIsEnlarged(musicEvents){
     return musicEvents.find(musicEvent => musicEvent.enlarged);
+  }
+
+  createHideSoldOutBtn(musicEvent, selectors){
+    if (!musicEvent.soldOut) return '';
+    if (musicEvent.enlarged) return '';
+    return <button onClick={this.hideSoldOut} className={`${selectors.hideSoldOutBtn}`}>
+      uitverkocht verbergen
+    </button>
   }
 
 
@@ -374,7 +391,7 @@ ${BEMify(`event-block`, [
         const upperRangeTime = new Date(
           this.props.filterSettings.daterange.upper
         ).getTime();
-        const eventTime = new Date(musicEvent.startDateTime).getTime();
+        const eventTime = new Date(musicEvent.start).getTime();
 
         if (lowerRangeTime > eventTime) {
           return false;
@@ -387,8 +404,8 @@ ${BEMify(`event-block`, [
 
     return filtered.map((musicEvent, musicEventIndex) => {
       musicEvent.firstOfMonth = false;
-      const startDateTime = new Date(musicEvent.startDateTime);
-      musicEvent.eventMonth = startDateTime.toLocaleDateString("nl", {
+      const start = new Date(musicEvent.start);
+      musicEvent.eventMonth = start.toLocaleDateString("nl", {
         year: "numeric",
         month: "short",
       });
@@ -409,10 +426,14 @@ ${BEMify(`event-block`, [
       <div className={`event-block__wrapper ` + enlargedClassAddition}>
 
         {musicEvents.map((musicEvent, musicEventKey) => {
+
+          if (musicEvent.soldOut && this.state.filterHideSoldOut) return '';
+
           const sharedModifiers = [musicEvent.location, musicEvent.soldOut ? 'sold-out' : '', musicEvent.enlarged ? 'enlarged': ''];
           const selectors = this.getSelectors(musicEvent,sharedModifiers);
           const priceElement = this.priceElement(musicEvent);
           const datesHTML = this.createDates(musicEvent);
+          const hideSoldOutBtn = this.createHideSoldOutBtn(musicEvent, selectors);
           const numberOfDates = datesHTML.match(/<time/g).length;
           const imageHTML = this.createImageHTML(musicEvent,selectors);
           const articleID = `event-id-${musicEventKey}`;
@@ -459,12 +480,11 @@ ${BEMify(`event-block`, [
               id={articleID}
               key={musicEventKey}
               data-date={musicEvent.eventMonth}
-              onClick={!musicEvent.enlarged ? this.loadLongerText.bind(this, musicEventKey) : null}
               className={selectors.article}
             >
               {firstOfMonthBlock}
               {imageHTML}
-              <header className={selectors.header}>
+              <header onClick={!musicEvent.enlarged ? this.loadLongerText.bind(this, musicEventKey) : null} className={selectors.header}>
                 <h2 className={selectors.headerH2}>
                   <span className={selectors.headerEventTitle} data-short-text={shortestText}>
                     {musicEvent.title}
@@ -482,7 +502,7 @@ ${BEMify(`event-block`, [
                   <img src={closeIcon} width='40' height='40'alt='sluit uitgelicht scherm'/>
                 </button>
               </header>
-              <section className={selectors.main}>
+              <section onClick={!musicEvent.enlarged ? this.loadLongerText.bind(this, musicEventKey) : null} className={selectors.main}>
                 {shortTextHTML}
                 <div
                   className={selectors.mainContainerForEnlarged}
@@ -494,6 +514,7 @@ ${BEMify(`event-block`, [
                   {priceElement}  
                 </footer>
               </section>
+              {hideSoldOutBtn}
             </article>
           );
         }) // article mapper

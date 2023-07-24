@@ -19,10 +19,10 @@ const oostpoortScraper = new AbstractScraper(makeScraperConfig({
     app: {
       mainPage: {
         url: "https://www.spotgroningen.nl/programma/#genres=muziek&subgenres=metal-heavy,pop-rock",
-        requiredProperties: ['venueEventUrl', 'title', 'startDateTime']
+        requiredProperties: ['venueEventUrl', 'title', 'start']
       },
       singlePage: {
-        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
+        requiredProperties: ['venueEventUrl', 'title', 'price', 'start']
       }
     }
   }
@@ -70,18 +70,18 @@ oostpoortScraper.singleRawEventCheck = async function (event) {
 //#region [rgba(0, 180, 0, 0.3)]      SINGLE EVENT CHECK
 //#endregion                          SINGLE EVENT CHECK
 
-//#region [rgba(0, 240, 0, 0.3)]      BASE EVENT LIST
-oostpoortScraper.makeBaseEventList = async function () {
+//#region [rgba(0, 240, 0, 0.3)]      MAIN PAGE
+oostpoortScraper.mainPage = async function () {
 
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
   if (availableBaseEvents){
     const thisWorkersEvents = availableBaseEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
-    return await this.makeBaseEventListEnd({
+    return await this.mainPageEnd({
       stopFunctie: null, rawEvents: thisWorkersEvents}
     );    
   }  
 
-  const {stopFunctie, page} = await this.makeBaseEventListStart()
+  const {stopFunctie, page} = await this.mainPageStart()
 
   await _t.waitFor(50);
 
@@ -122,7 +122,7 @@ oostpoortScraper.makeBaseEventList = async function () {
         };
         
         try {
-          res.startDateTime = new Date(eventEl.querySelector('.program__date')?.getAttribute('datetime') ?? null).toISOString();
+          res.start = new Date(eventEl.querySelector('.program__date')?.getAttribute('datetime') ?? null).toISOString();
         } catch (caughtError) {
           res.errors.push({
             error: caughtError, remarks: `date time faal ${title}.`,        
@@ -145,18 +145,16 @@ oostpoortScraper.makeBaseEventList = async function () {
 
   this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
-  return await this.makeBaseEventListEnd({
+  return await this.mainPageEnd({
     stopFunctie, rawEvents: thisWorkersEvents}
   );
 };
-//#endregion                          BASE EVENT LIST
+//#endregion                          MAIN PAGE
 
-
-// GET PAGE INFO
-
-oostpoortScraper.getPageInfo = async function ({ page, event }) {
+//#region [rgba(120, 0, 0, 0.3)]     SINGLE PAGE
+oostpoortScraper.singlePage = async function ({ page, event }) {
   
-  const {stopFunctie} =  await this.getPageInfoStart()
+  const {stopFunctie} =  await this.singlePageStart()
   
   await _t.waitFor(600);
 
@@ -213,10 +211,10 @@ oostpoortScraper.getPageInfo = async function ({ page, event }) {
     pageInfo[i] = longTextRes[i]
   }
 
-  return await this.getPageInfoEnd({pageInfo, stopFunctie, page, event})
+  return await this.singlePageEnd({pageInfo, stopFunctie, page, event})
     
 }
-
+//#endregion                         SINGLE PAGE
 // #region [rgba(60, 0, 0, 0.5)]     LONG HTML
 async function longTextSocialsIframes(page){
 

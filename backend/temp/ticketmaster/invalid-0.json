@@ -1,8 +1,8 @@
 [
   {
-    "doorOpenDateTime": null,
-    "startDateTime": "2023-08-02T17:30:00.000Z",
-    "endDateTime": null,
+    "door": null,
+    "start": "2023-08-02T17:30:00.000Z",
+    "end": null,
     "venueEventUrl": "https://www.ticketmaster.nl/event/descendents-tickets/292025?language=en-us",
     "title": "Descendents",
     "location": "melkweg",
@@ -133,8 +133,8 @@
             "latitude": "52.36483"
           },
           "upcomingEvents": {
-            "mfx-nl": 256,
-            "_total": 256,
+            "mfx-nl": 255,
+            "_total": 255,
             "_filtered": 0
           },
           "_links": {
@@ -263,8 +263,8 @@
         "latitude": "52.36483"
       },
       "upcomingEvents": {
-        "mfx-nl": 256,
-        "_total": 256,
+        "mfx-nl": 255,
+        "_total": 255,
         "_filtered": 0
       },
       "_links": {
@@ -276,9 +276,9 @@
     "origin": "ticketmaster"
   },
   {
-    "doorOpenDateTime": null,
-    "startDateTime": "2023-08-13T16:30:00.000Z",
-    "endDateTime": null,
+    "door": null,
+    "start": "2023-08-13T16:30:00.000Z",
+    "end": null,
     "venueEventUrl": "https://www.ticketmaster.nl/event/heaven-shall-burn-tickets/291715?language=en-us",
     "title": "Heaven Shall Burn",
     "location": "melkweg",
@@ -415,8 +415,8 @@
             "latitude": "52.36483"
           },
           "upcomingEvents": {
-            "mfx-nl": 256,
-            "_total": 256,
+            "mfx-nl": 255,
+            "_total": 255,
             "_filtered": 0
           },
           "_links": {
@@ -705,8 +705,8 @@
         "latitude": "52.36483"
       },
       "upcomingEvents": {
-        "mfx-nl": 256,
-        "_total": 256,
+        "mfx-nl": 255,
+        "_total": 255,
         "_filtered": 0
       },
       "_links": {
@@ -718,9 +718,9 @@
     "origin": "ticketmaster"
   },
   {
-    "doorOpenDateTime": null,
-    "startDateTime": "2023-08-19T09:30:00.000Z",
-    "endDateTime": null,
+    "door": null,
+    "start": "2023-08-19T09:30:00.000Z",
+    "end": null,
     "venueEventUrl": "https://www.ticketmaster.nl/event/dynamo-metalfest-2023-%7C-vip-saturday-tickets/289331?language=en-us",
     "title": "Dynamo Metalfest 2023 | VIP Saturday",
     "location": "ijssportcentrum",
@@ -976,9 +976,9 @@
     "origin": "ticketmaster"
   },
   {
-    "doorOpenDateTime": null,
-    "startDateTime": "2023-08-20T09:30:00.000Z",
-    "endDateTime": null,
+    "door": null,
+    "start": "2023-08-20T09:30:00.000Z",
+    "end": null,
     "venueEventUrl": "https://www.ticketmaster.nl/event/dynamo-metalfest-2023-%7C-vip-sunday-tickets/289333?language=en-us",
     "title": "Dynamo Metalfest 2023 | VIP Sunday",
     "location": "ijssportcentrum",

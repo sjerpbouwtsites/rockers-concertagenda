@@ -150,24 +150,10 @@ class App extends React.Component {
   //   return this.state.swipeState === 1 ? `👈 Filter` : `Agenda 👉`;
   // }
 
-  appBanner(title) {
+  appBanner(title, locatie = 'top') {
     return (
-      <div id="app-banner" className="app-banner cursive-font">
-        <h1 className="app-title">{title}<span id='app-title__events-count'></span></h1>
-        {/* <span className="app-title-right">
-          <span
-            onClick={this.updateSwipeStateFilter}
-            className="app-title-right-button"
-          >
-            {this.appTitleToFilter()}
-          </span>{" "}
-          <span
-            onClick={this.updateSwipeStateExplainer}
-            className="app-title-right-button"
-          >
-            {this.appTitleToExplainer()}
-          </span>
-        </span> */}
+      <div id={`app-banner-${locatie}`} className="app-banner cursive-font">
+        <h1 className="app-title">{title}<span className="app-title__events-count" id={`app-title__events-count-${locatie}`}></span></h1>
       </div>
     );
   }
@@ -175,7 +161,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        {this.appBanner("Rock Agenda")}
+        {this.appBanner("Rock Agenda", 'top')}
         <OpenScreen
           hidden={this.state.openScreenHidden}
           moving={this.state.openScreenMoving}
@@ -187,8 +173,7 @@ class App extends React.Component {
               locations={this.state.locations}
             />
           </main>
-
-          {this.appBanner("Swipe links voor filter & uitleg.")}
+          {this.appBanner("Rock Agenda", 'onder')}
         </div>
       </div>
     );

@@ -19,7 +19,7 @@ const dynamoScraper = new AbstractScraper(makeScraperConfig({
         requiredProperties: ['venueEventUrl', 'title']
       },
       singlePage: {
-        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
+        requiredProperties: ['venueEventUrl', 'title', 'price', 'start']
       }
     }
   }
@@ -78,18 +78,18 @@ dynamoScraper.singleMergedEventCheck = async function(event){
 }
 //#endregion                          SINGLE EVENT CHECK
 
-//#region [rgba(0, 240, 0, 0.3)]      BASE EVENT LIST
-dynamoScraper.makeBaseEventList = async function () {
+//#region [rgba(0, 240, 0, 0.3)]      MAIN PAGE
+dynamoScraper.mainPage = async function () {
 
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
   if (availableBaseEvents){
     const thisWorkersEvents = availableBaseEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
-    return await this.makeBaseEventListEnd({
+    return await this.mainPageEnd({
       stopFunctie: null, rawEvents: thisWorkersEvents}
     );    
   }    
 
-  const {stopFunctie, page} = await this.makeBaseEventListStart()
+  const {stopFunctie, page} = await this.mainPageStart()
 
   let rawEvents = await page.evaluate(
     ({workerData}) => {
@@ -123,17 +123,16 @@ dynamoScraper.makeBaseEventList = async function () {
 
   this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
-  return await this.makeBaseEventListEnd({
+  return await this.mainPageEnd({
     stopFunctie, rawEvents: thisWorkersEvents}
   );
 };
-//#endregion                          BASE EVENT LIST
+//#endregion                          MAIN PAGE
 
-// GET PAGE INFO
-
-dynamoScraper.getPageInfo = async function ({ page, event}) {
+//#region [rgba(120, 0, 0, 0.3)]     SINGLE PAGE
+dynamoScraper.singlePage = async function ({ page, event}) {
   
-  const {stopFunctie} =  await this.getPageInfoStart()
+  const {stopFunctie} =  await this.singlePageStart()
   
   const pageInfo = await page.evaluate(
     ({ months, event}) => {
@@ -195,7 +194,7 @@ dynamoScraper.getPageInfo = async function ({ page, event}) {
           Array.isArray(res.doorTimeMatch) &&
             res.doorTimeMatch.length === 3
         ) {
-          res.doorOpenDateTime = new Date(
+          res.door = new Date(
             `${baseDate}T${res.doorTimeMatch[2]}:00`
           ).toISOString();
         }
@@ -203,18 +202,18 @@ dynamoScraper.getPageInfo = async function ({ page, event}) {
           Array.isArray(res.startTimeMatch) &&
             res.startTimeMatch.length === 3
         ) {
-          res.startDateTime = new Date(
+          res.start = new Date(
             `${baseDate}T${res.startTimeMatch[2]}:00`
           ).toISOString();
-        } else if (res.doorOpenDateTime) {
-          res.startDateTime = res.doorOpenDateTime;
-          res.doorOpenDateTime = "";
+        } else if (res.door) {
+          res.start = res.door;
+          res.door = "";
         }
         if (
           Array.isArray(res.endTimeMatch) &&
             res.endTimeMatch.length === 3
         ) {
-          res.endDateTime = new Date(
+          res.end = new Date(
             `${baseDate}T${res.endTimeMatch[2]}:00`
           ).toISOString();
         }
@@ -261,10 +260,10 @@ dynamoScraper.getPageInfo = async function ({ page, event}) {
     })
   }
 
-  return await this.getPageInfoEnd({pageInfo, stopFunctie, page, event})
+  return await this.singlePageEnd({pageInfo, stopFunctie, page, event})
   
 };
-
+//#endregion                         SINGLE PAGE
 
 // #region [rgba(60, 0, 0, 0.5)]     LONG HTML
 async function longTextSocialsIframes(page){

@@ -21,7 +21,7 @@ const paradisoScraper = new AbstractScraper(makeScraperConfig({
         requiredProperties: ['venueEventUrl', 'title']
       },
       singlePage: {
-        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
+        requiredProperties: ['venueEventUrl', 'title', 'price', 'start']
       }
     }
   }
@@ -75,18 +75,18 @@ paradisoScraper.singleRawEventCheck = async function (event) {
 //#region [rgba(0, 180, 0, 0.3)]      SINGLE EVENT CHECK
 //#endregion                          SINGLE EVENT CHECK
 
-//#region [rgba(0, 240, 0, 0.3)]      BASE EVENT LIST
-paradisoScraper.makeBaseEventList = async function () {
+//#region [rgba(0, 240, 0, 0.3)]      MAIN PAGE
+paradisoScraper.mainPage = async function () {
 
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
   if (availableBaseEvents){
     const thisWorkersEvents = availableBaseEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
-    return await this.makeBaseEventListEnd({
+    return await this.mainPageEnd({
       stopFunctie: null, rawEvents: thisWorkersEvents}
     );    
   } 
 
-  const {stopFunctie, page} = await this.makeBaseEventListStart()
+  const {stopFunctie, page} = await this.mainPageStart()
   
   const res = await page.evaluate(({workerData}) => {
     return {
@@ -100,20 +100,11 @@ paradisoScraper.makeBaseEventList = async function () {
   bla = await page.evaluate(({workerData}) => {
     return document.querySelector('.css-16y59pb:last-child .chakra-heading').textContent
   }, {workerData});  
-  this.dirtyTalk(`na scroll 1 ${bla}`)
   
   await _t.autoScroll(page);
   bla = await page.evaluate(({workerData}) => {
     return document.querySelector('.css-16y59pb:last-child .chakra-heading').textContent
   }, {workerData});  
-  this.dirtyTalk(`na scroll 2 ${bla}`)
-
-  await _t.autoScroll(page);
-  bla = await page.evaluate(({workerData}) => {
-    return document.querySelector('.css-16y59pb:last-child .chakra-heading').textContent
-  }, {workerData});  
-  this.dirtyTalk(`na scroll 3 ${bla}`)  
-
 
   let rawEvents = await page.evaluate(
     ({resBuiten, unavailabiltyTerms}) => {
@@ -148,18 +139,17 @@ paradisoScraper.makeBaseEventList = async function () {
 
   this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
-  return await this.makeBaseEventListEnd({
+  return await this.mainPageEnd({
     stopFunctie, rawEvents: thisWorkersEvents}
   );
   
 };
-//#endregion                          BASE EVENT LIST
+//#endregion                          MAIN PAGE
 
-// GET PAGE INFO
-
-paradisoScraper.getPageInfo = async function ({ page, event }) {
+//#region [rgba(120, 0, 0, 0.3)]     SINGLE PAGE
+paradisoScraper.singlePage = async function ({ page, event }) {
   
-  const {stopFunctie} =  await this.getPageInfoStart()
+  const {stopFunctie} =  await this.singlePageStart()
 
   const buitenRes = {
     pageInfo: `<a class='page-info' href='${event.venueEventUrl}'>${event.title}</a>`,
@@ -168,7 +158,7 @@ paradisoScraper.getPageInfo = async function ({ page, event }) {
   
   try {
     await page.waitForSelector(".css-tkkldl", {
-      timeout: 10000,
+      timeout: 20000,
     });
   } catch (caughtError) {
     buitenRes.errors.push({
@@ -176,7 +166,7 @@ paradisoScraper.getPageInfo = async function ({ page, event }) {
       remarks: `Paradiso wacht op laden single pagina\n${buitenRes.pageInfo}`,
       errorLevel: 'notice'
     })
-    return await this.getPageInfoEnd({pageInfo: buitenRes, stopFunctie, page})
+    return await this.singlePageEnd({pageInfo: buitenRes, stopFunctie, page})
   }
 
   const editedMonths = {
@@ -307,17 +297,17 @@ paradisoScraper.getPageInfo = async function ({ page, event }) {
       }
 
       if (startTijd){
-        res.startDateTime = new Date(
+        res.start = new Date(
           `${res.startDate}T${startTijd}:00`
         ).toISOString();        
       }
       if (deurTijd){
-        res.doorOpenDateTime = new Date(
+        res.door = new Date(
           `${res.startDate}T${deurTijd}:00`
         ).toISOString();        
       }
       if (eindTijd){
-        res.endDateTime = new Date(
+        res.end = new Date(
           `${res.startDate}T${eindTijd}:00`
         ).toISOString();        
       }      
@@ -348,10 +338,10 @@ paradisoScraper.getPageInfo = async function ({ page, event }) {
     pageInfo[i] = longTextRes[i]
   }
 
-  return await this.getPageInfoEnd({pageInfo, stopFunctie, page, event})
+  return await this.singlePageEnd({pageInfo, stopFunctie, page, event})
 
 };
-
+//#endregion                         SINGLE PAGE
 // #region [rgba(60, 0, 0, 0.5)]     LONG HTML
 async function longTextSocialsIframes(page){
 
