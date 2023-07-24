@@ -53,7 +53,9 @@ class EventBlocks extends React.Component {
           .filter(filterEventsDateInPast);
         this.setState({ musicEvents: me2 });
         this.setState({ eventDataLoaded: true });
-        document.getElementById('app-title__events-count').innerHTML = ` - ${musicEvents.length} concerten`;
+        document.querySelectorAll('.app-title__events-count').forEach(countEl=>{
+          countEl.innerHTML = ` - ${musicEvents.length} concerten`;
+        })
       })
       .catch((error) => {
         console.error(error);
@@ -118,7 +120,7 @@ class EventBlocks extends React.Component {
     } else if (document.querySelector('[data-was-enlarged')){
       await this.waitFor(5);
       const wasEnlarged = document.querySelector('[data-was-enlarged');
-      window.scrollTo(0, wasEnlarged.offsetTop + document.getElementById("app-banner").clientHeight - 75);
+      window.scrollTo(0, wasEnlarged.offsetTop + document.getElementById("app-banner-top").clientHeight - 75);
       wasEnlarged.removeAttribute('data-was-enlarged');
     }
     return true;

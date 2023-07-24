@@ -67,7 +67,7 @@ dbsScraper.makeBaseEventList = async function () {
   await _t.waitFor(100)
 
   let rawEvents = await page.evaluate(
-    ({ months,workerData }) => {
+    ({ months,workerData,unavailabiltyTerms }) => {
       return Array.from(document.querySelectorAll(".fusion-events-post"))
         .map((eventEl) => {
           let title = eventEl.querySelector(".fusion-events-meta .url")?.textContent.trim() ?? null;
@@ -80,9 +80,8 @@ dbsScraper.makeBaseEventList = async function () {
             title
           };
 
-          if (title?.toLowerCase().includes('cancelled')){ //TODO 1.algemene check maken 2. uitbreiden.
-            res.unavailable += ' event cancelled'
-          }
+          const uaRex = new RegExp(unavailabiltyTerms.join("|"), "gi");
+          res.unavailable = !!eventEl.textContent.match(uaRex);
 
           res.venueEventUrl = eventEl.querySelector(".fusion-events-meta .url")?.href ?? null;
 
@@ -147,7 +146,7 @@ dbsScraper.makeBaseEventList = async function () {
           return res;
         });
     },
-    { months: this.months,workerData }
+    { months: this.months,workerData, unavailabiltyTerms: AbstractScraper.unavailabiltyTerms }
   )
   rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
 

@@ -102,7 +102,7 @@ metropoolScraper.makeBaseEventList = async function () {
         }          
         res.venueEventUrl = rawEvent?.href ?? null;
         const genres = rawEvent.dataset?.genres ?? '';
-        const st = rawEvent.querySelector(".card__title card__title--sub")?.textContent;
+        const st = rawEvent.querySelector(".card__title card__title--sub")?.textContent ?? '';
         res.shortText = (st + ' ' + genres).trim();
         const uaRex = new RegExp(unavailabiltyTerms.join("|"), 'gi');
         res.unavailable = !!rawEvent.textContent.match(uaRex);        
@@ -132,7 +132,10 @@ metropoolScraper.getPageInfo = async function ({ page, event}) {
       pageInfo: `<a class='page-info' href='${location.href}'>${event.title}</a>`,
       errors: [],
     };
-    res.shortText = event.shortText + ' ' + document.querySelector('.title-wrap-medium .text-support')?.textContent.trim()
+
+    res.shortText = (event?.shortText ?? '') + ' ' + document.querySelector('.title-wrap-medium .text-support')?.textContent ?? '';
+    res.shortText = res.shortText.replaceAll('undefined', '');
+    res.shortText = res.shortText.trim()
     const startDateRauwMatch = document
       .querySelector(".event-title-wrap")
       ?.innerHTML.match(

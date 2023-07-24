@@ -463,7 +463,6 @@ export default class AbstractScraper {
       const page = !this.completedMainPage ? 'main:' : 'single:';
       const mis = missingProperties.join(', ');
       musicEvent.corrupted = `${page} ${mis}`
-      this.dirtyLog(musicEvent)
     }
    
     return musicEvent;
