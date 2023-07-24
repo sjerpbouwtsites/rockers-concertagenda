@@ -134,10 +134,6 @@ patronaatScraper.getPageInfo = async function ({ page, event }) {
       pageInfo: `<a class='page-info' href='${event.venueEventUrl}'>${event.title}</a>`,
       errors: [],
     };
-    res.priceTextcontent = document
-      .querySelector(".event__info-bar--ticket-price")
-      ?.textContent.toLowerCase()
-      .trim();
 
     try {
       res.startDatumM = document
@@ -220,6 +216,11 @@ patronaatScraper.getPageInfo = async function ({ page, event }) {
       }
     }))
   });
+
+
+  const priceRes = await this.NEWgetPriceFromHTML({page, event, pageInfo, selectors: [".event__info-bar--ticket-price"], });
+  pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
+  pageInfo.price = priceRes.price; 
 
   const longTextRes = await longTextSocialsIframes(page)
   for (let i in longTextRes){

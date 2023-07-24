@@ -197,12 +197,16 @@ occiiScraper.getPageInfo = async function ({ page, event}) {
       return res;
     }
 
-    res.priceTextcontent = document.getElementById('occii-single-event')?.textContent ?? null;
 
     res.genre = Array.from(document.querySelectorAll('.event-categories [href*="events/categories"]')).map(cats => cats.textContent.toLowerCase().trim())
 
     return res;
   }, {months: getVenueMonths('occii'), event}); //TODO is verouderde functie getVenueMonths
+
+  const priceRes = await this.NEWgetPriceFromHTML({page, event, pageInfo, selectors: ['.occii-single-event', '.occii-event-details'], });
+  pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
+  pageInfo.price = priceRes.price;  
+
 
   const longTextRes = await longTextSocialsIframes(page)
   for (let i in longTextRes){

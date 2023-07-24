@@ -149,9 +149,11 @@ boerderijScraper.getPageInfo = async function ({ event }) {
   }
 
   res.boerderijID = ajaxRes.id;
-  res.priceTextcontent = `${ajaxRes?.entrance_price ?? ''} ${ajaxRes?.ticket_price ?? ''} `
-  
-
+  const priceRes = await this.boerderijCustomPrice(`${ajaxRes?.entrance_price ?? ''} ${ajaxRes?.ticket_price ?? ''}`, res.pageInfo, res.title);
+  res.errors = res.errors.concat(priceRes.errors);
+  res.price = priceRes.price;
+  this.dirtyTalk(res.price)
+    
   try {
     res.startDateTime = new Date(
       `${ajaxRes.event_date}T${ajaxRes.event_start}`
@@ -192,7 +194,6 @@ boerderijScraper.getPageInfo = async function ({ event }) {
 
   // #endregion                        LONG HTML
 
-
   res.soldOut = ajaxRes?.label?.title?.toLowerCase().includes('uitverkocht') ?? null
 
   return await this.getPageInfoEnd({pageInfo: res, stopFunctie})
@@ -200,3 +201,106 @@ boerderijScraper.getPageInfo = async function ({ event }) {
 };
 
 
+boerderijScraper.boerderijCustomPrice = async function (testText, pi, title) {
+  let priceRes = {
+    price: null,
+    errors: []
+  };
+  if (!testText) {
+    priceRes.errors.push({
+      remarks: 'geen testText'
+    })
+    return priceRes
+  } 
+
+  if (testText.match(/start/i)) {
+    priceRes.price = null;
+    this.debugPrice && this.dirtyDebug({
+      title: title,
+      price:priceRes.price,
+      type: 'NOG ONBEKEND',
+    })      
+    return priceRes
+  }
+
+  if (testText.match(/gratis|free/i)) {
+    priceRes.price = 0;
+    this.debugPrice && this.dirtyDebug({
+      title: title,
+      price:priceRes.price,
+      type: 'GRATIS',
+    })      
+    return priceRes
+  }
+
+  if (testText.match(/uitverkocht|sold\sout/i)) {
+    priceRes.price = null;
+    this.debugPrice && this.dirtyDebug({
+      title: title,
+      price:priceRes.price,
+      type: 'UITVERKOCHT',
+    })      
+    return priceRes
+  }
+
+  const priceMatch = testText
+    .replaceAll(/[\s\r\t ]/g,'')
+    .match(/(?<euros>\d+)(?<scheiding>[,.]?)(?<centen>\d\d|-)/);
+
+  const priceMatchEuros = testText
+    .replaceAll(/[\s\r\t ]/g,'')
+    .match(/\d+/);
+
+  if (!Array.isArray(priceMatch) && !Array.isArray(priceMatchEuros)) {
+    priceRes.errors.push({
+      remarks: `geen match met ${pi}`, 
+    });
+    return priceRes
+  }
+
+  if (!Array.isArray(priceMatch) && Array.isArray(priceMatchEuros)){
+    priceRes.price = Number(priceMatchEuros[0]);
+    this.checkIsNumber(priceRes, pi)
+    this.debugPrice && this.dirtyDebug({
+      title: title,
+      price:priceRes.price,
+    })      
+    return priceRes;
+  }
+
+  if (priceMatch.groups?.centen && priceMatch.groups?.centen.includes('-')){
+    priceMatch.groups.centen = '00';
+  }
+
+  try {
+    if (priceMatch.groups.scheiding){
+      if (priceMatch.groups.euros && priceMatch.groups.centen){
+        priceRes.price = (Number(priceMatch.groups.euros) * 100 + Number(priceMatch.groups.centen)) / 100;
+      }
+      if (priceMatch.groups.euros){
+        priceRes.price = Number(priceMatch.groups.euros)
+      }
+    } else {
+      priceRes.price = Number(priceMatch.groups.euros)
+    }
+    this.checkIsNumber(priceRes, pi)
+    this.debugPrice && this.dirtyDebug({
+      title: title,
+      price: priceRes.price
+    })      
+    return priceRes;
+
+  } catch (priceCalcErr) {
+    
+    priceRes.push({
+      error: priceCalcErr,
+      remarks: `price calc err ${pi}`, 
+      toDebug: {testText, priceMatch, priceRes}
+    });
+    return priceRes
+    
+  }
+
+  return priceRes;
+
+}  

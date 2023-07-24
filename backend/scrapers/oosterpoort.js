@@ -175,13 +175,7 @@ oostpoortScraper.getPageInfo = async function ({ page, event }) {
           remarks: `image missing ${res.pageInfo}`
         })
       }
-  
-      if (document.querySelector('.event__pricing__costs')){
-        res.priceTextcontent = document.querySelector('.event__pricing__costs')?.textContent ?? null;
-      } else if(document.querySelector('.festival__tickets__toggle')){
-        res.priceTextcontent = document.querySelector('.festival__tickets__toggle')?.textContent ?? null;
-      }
-     
+       
       try {
         if (document.querySelector('.event__cta') && document.querySelector('.event__cta').hasAttribute('disabled')) {
           res.corrupted += ` ${document.querySelector('.event__cta')?.textContent}`;
@@ -208,6 +202,11 @@ oostpoortScraper.getPageInfo = async function ({ page, event }) {
       }
     }))
   });
+
+  const priceRes = await this.NEWgetPriceFromHTML({page, event, pageInfo, selectors: ['.event__pricing__costs', '.festival__tickets__toggle'], });
+  pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
+  pageInfo.price = priceRes.price;  
+
 
   const longTextRes = await longTextSocialsIframes(page)
   for (let i in longTextRes){

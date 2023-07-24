@@ -173,10 +173,6 @@ doornroosjeScraper.getPageInfo = async function ({ page, event }) {
           remarks: `image missing ${res.pageInfo}`
         })
       }
-      res.priceTextcontent = 
-        document.querySelector(".c-btn__price")?.textContent.trim() ?? '';
-
-
 
       // genre verwijderen en naar shorttext
       res.shortText = (event?.shortText ? event.shortText : '') + 
@@ -306,7 +302,12 @@ doornroosjeScraper.getPageInfo = async function ({ page, event }) {
       return res;
     }, {event});
   }
-  
+
+  const priceRes = await this.NEWgetPriceFromHTML({page, event, pageInfo, selectors: [".c-btn__price", ".c-intro__col"], });
+  pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
+  pageInfo.price = priceRes.price;  
+
+
   const longTextRes = await longTextSocialsIframes(page)
   for (let i in longTextRes){
     pageInfo[i] = longTextRes[i]

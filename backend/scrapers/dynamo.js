@@ -226,7 +226,6 @@ dynamoScraper.getPageInfo = async function ({ page, event}) {
         });
       }
 
-      res.priceTextcontent = agendaDatesEls[1].textContent;
 
       res.image =
         document
@@ -245,6 +244,10 @@ dynamoScraper.getPageInfo = async function ({ page, event}) {
     },
     { months: this.months, event }
   );
+
+  const priceRes = await this.NEWgetPriceFromHTML({page, event, pageInfo, selectors: ['.agenda-date'], });
+  pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
+  pageInfo.price = priceRes.price;  
 
   try {
     const longTextRes = await longTextSocialsIframes(page)

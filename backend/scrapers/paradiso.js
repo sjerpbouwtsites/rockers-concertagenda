@@ -153,12 +153,13 @@ paradisoScraper.getPageInfo = async function ({ page, event }) {
   
   try {
     await page.waitForSelector(".css-tkkldl", {
-      timeout: 6000,
+      timeout: 10000,
     });
   } catch (caughtError) {
     buitenRes.errors.push({
       error: caughtError,
       remarks: `Paradiso wacht op laden single pagina\n${buitenRes.pageInfo}`,
+      errorLevel: 'notice'
     })
     return await this.getPageInfoEnd({pageInfo: buitenRes, stopFunctie, page})
   }
@@ -298,10 +299,6 @@ paradisoScraper.getPageInfo = async function ({ page, event }) {
         ).toISOString();        
       }      
 
-      res.priceTextcontent =
-        document.querySelector(".css-1ca1ugg")
-          ?.textContent ?? '';
-
       res.image = document.querySelector('.css-xz41fi source')?.srcset.split(' ')[0] ?? null;
       if (!res.image){
         res.image = document.querySelector('.css-xz41fi source:last-of-type')?.srcset.split(/\s/)[0] ?? null;
@@ -318,7 +315,11 @@ paradisoScraper.getPageInfo = async function ({ page, event }) {
     },
     { months: editedMonths, buitenRes }
   );
-  
+
+  const priceRes = await this.NEWgetPriceFromHTML({page, event, pageInfo, selectors: [".css-f73q4m", '.price', '.chakra-container'], });
+  pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
+  pageInfo.price = priceRes.price;  
+
   const longTextRes = await longTextSocialsIframes(page)
   for (let i in longTextRes){
     pageInfo[i] = longTextRes[i]

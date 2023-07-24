@@ -149,12 +149,12 @@ defluxScraper.getPageInfo = async function ({ page, event}) {
       }
     }
 
-    // TODO sold out flux
-    
-    res.price = eventScheme.querySelector('[itemprop="event-price"]')?.getAttribute('content') ?? '';
-
     return res;
   }, {event});
+
+  const priceRes = await this.NEWgetPriceFromHTML({page, event, pageInfo, selectors: [".desc_trig_outter"], });
+  pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
+  pageInfo.price = priceRes.price;  
 
   const longTextRes = await longTextSocialsIframes(page)
   for (let i in longTextRes){

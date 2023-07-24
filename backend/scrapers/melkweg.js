@@ -162,10 +162,6 @@ melkwegScraper.getPageInfo = async function ({ page, event }) {
       });
     }
 
-    res.priceTextcontent = 
-      document.querySelector('[class*="styles_ticket-prices"]')?.textContent ??
-      '';
-
     res.image =
       document.querySelector('[class*="styles_event-header__figure"] img')
         ?.src ?? null;
@@ -177,6 +173,10 @@ melkwegScraper.getPageInfo = async function ({ page, event }) {
 
     return res;
   }, {event});
+
+  const priceRes = await this.NEWgetPriceFromHTML({page, event, pageInfo, selectors: ['[class*="styles_ticket-prices"]'], });
+  pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
+  pageInfo.price = priceRes.price;  
 
   const longTextRes = await longTextSocialsIframes(page)
   for (let i in longTextRes){

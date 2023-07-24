@@ -255,12 +255,14 @@ afasliveScraper.getPageInfo = async function ({ page, event }) {
         }
       })
 
-      res.priceTextcontent = 
-        document.querySelector("#tickets")?.textContent.trim() ?? '';
       return res;
     },
     { months: this.months,event }
   );
+
+  const priceRes = await this.NEWgetPriceFromHTML({page, event, pageInfo, selectors: ["#tickets"], });
+  pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
+  pageInfo.price = priceRes.price;
 
   const longTextRes = await longTextSocialsIframes(page)
   for (let i in longTextRes){

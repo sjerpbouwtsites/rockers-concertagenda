@@ -202,8 +202,8 @@ groeneEngelScraper.getPageInfo = async function ({ page, event }) {
       })      
     }
     
-    res.priceTextcontent = document.querySelector('.main-ticket-info')?.textContent;
-    
+
+
     res.image = document.querySelector('.img-wrapper img')?.getAttribute('data-lazy-src') ?? null;
     if (!res.image){
       res.errors.push({
@@ -214,11 +214,14 @@ groeneEngelScraper.getPageInfo = async function ({ page, event }) {
     return res;
   }, {event});
 
+  const priceRes = await this.NEWgetPriceFromHTML({page, event, pageInfo, selectors: ['.main-ticket-info'], });
+  pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
+  pageInfo.price = priceRes.price;  
+  
   const longTextRes = await longTextSocialsIframes(page)
   for (let i in longTextRes){
     pageInfo[i] = longTextRes[i]
   }
-
   return await this.getPageInfoEnd({pageInfo, stopFunctie, page, event})
 
 };

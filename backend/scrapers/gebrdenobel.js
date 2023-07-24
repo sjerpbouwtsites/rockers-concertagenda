@@ -217,9 +217,7 @@ gebrdenobelScraper.getPageInfo = async function ({ page, event }) {
           row.textContent.toLowerCase().includes("open") ||
           row.textContent.toLowerCase().includes("aanvang")
       );
-      const priceRow = eventDataRows.find((row) =>
-        row.textContent.toLowerCase().includes("prijs")
-      );
+
       if (dateRow) {
         const startDateMatch = dateRow.textContent.match(
           /(\d+)\s?(\w+)\s?(\d{4})/
@@ -250,9 +248,6 @@ gebrdenobelScraper.getPageInfo = async function ({ page, event }) {
         }
       }
 
-      if (priceRow) {
-        res.priceTextcontent = priceRow.textContent;
-      }
       res.shortText =
         document.querySelector(".hero-cta_left__text p")?.textContent ?? "";
       if (document.querySelector("#shop-frame")) {
@@ -275,6 +270,10 @@ gebrdenobelScraper.getPageInfo = async function ({ page, event }) {
     },
     { months: this.months, event }
   );
+
+  const priceRes = await this.NEWgetPriceFromHTML({page, event, pageInfo, selectors: [".event-table"], });
+  pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
+  pageInfo.price = priceRes.price;  
 
   const longTextRes = await longTextSocialsIframes(page)
   for (let i in longTextRes){

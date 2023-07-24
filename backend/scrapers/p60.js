@@ -176,12 +176,15 @@ p60Scraper.getPageInfo = async function ({ page, event }) {
           }
         })
       } 
-      res.priceTextcontent = document.querySelector('.event-info__price')?.textContent ?? document.querySelector('.content-section__event-info')?.textContent ?? null;
-      // res.ticketURL = document.querySelector('.content-section__event-info [href*="ticketmaster"]')?.href ?? null;
 
       return res;
     }, null
   );
+
+  const priceRes = await this.NEWgetPriceFromHTML({page, event, pageInfo, selectors: ['.event-info__price', '.content-section__event-info'], });
+  pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
+  pageInfo.price = priceRes.price;  
+
 
   const longTextRes = await longTextSocialsIframes(page)
   for (let i in longTextRes){

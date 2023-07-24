@@ -157,10 +157,6 @@ tivoliVredenburgScraper.getPageInfo = async function ({ page, event }) {
       pageInfo: `<a class='page-info' href='${event.venueEventUrl}'>${event.title}</a>`,
       errors: [],
     };
-    res.priceTextcontent =
-      document.querySelector(".btn-group__price")?.textContent.trim() ?? '';
-    res.priceContexttext =
-      document.querySelector(".event-cta")?.textContent.trim() ?? '';
 
     const startDateMatch = location.href.match(/\d\d-\d\d-\d\d\d\d/); //
     res.startDate = "";
@@ -243,6 +239,11 @@ tivoliVredenburgScraper.getPageInfo = async function ({ page, event }) {
 
     return res;
   }, {event});
+
+  const priceRes = await this.NEWgetPriceFromHTML({page, event, pageInfo, selectors: [".btn-group__price", ".event-cta"], });
+  pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
+  pageInfo.price = priceRes.price; 
+
 
   const longTextRes = await longTextSocialsIframes(page)
   for (let i in longTextRes){

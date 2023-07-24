@@ -185,11 +185,6 @@ neushoornScraper.getPageInfo = async function ({ page,event }) {
         ).toISOString();
       }
 
-      res.priceTextcontent =
-        document.querySelector(".prices__item__price")?.textContent ?? null;
-      res.priceContexttext =
-        document.querySelector(".prices")?.textContent ?? null;
-
       try {
         const summaryEl = document.querySelector(".content .summary");
         const longEl = summaryEl.parentNode;
@@ -221,6 +216,10 @@ neushoornScraper.getPageInfo = async function ({ page,event }) {
     },
     { months: neushoornMonths, event }
   );
+
+  const priceRes = await this.NEWgetPriceFromHTML({page, event, pageInfo, selectors: [".prices__item__price", ".prices"], });
+  pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
+  pageInfo.price = priceRes.price;  
 
   const longTextRes = await longTextSocialsIframes(page)
   for (let i in longTextRes){
