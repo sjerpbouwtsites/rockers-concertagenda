@@ -245,7 +245,7 @@ dynamoScraper.getPageInfo = async function ({ page, event}) {
     { months: this.months, event }
   );
 
-  const priceRes = await this.NEWgetPriceFromHTML({page, event, pageInfo, selectors: ['.agenda-date'], });
+  const priceRes = await this.getPriceFromHTML({page, event, pageInfo, selectors: ['.agenda-date'], });
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
   pageInfo.price = priceRes.price;  
 

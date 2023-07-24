@@ -214,7 +214,7 @@ groeneEngelScraper.getPageInfo = async function ({ page, event }) {
     return res;
   }, {event});
 
-  const priceRes = await this.NEWgetPriceFromHTML({page, event, pageInfo, selectors: ['.main-ticket-info'], });
+  const priceRes = await this.getPriceFromHTML({page, event, pageInfo, selectors: ['.main-ticket-info'], });
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
   pageInfo.price = priceRes.price;  
   

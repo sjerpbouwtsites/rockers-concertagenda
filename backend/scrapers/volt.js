@@ -216,7 +216,7 @@ voltScraper.getPageInfo = async function ({ page, url, event}) {
     { months: this.months, url, event}
   );
 
-  const priceRes = await this.NEWgetPriceFromHTML({page, event, pageInfo, selectors: [".activity-price"], });
+  const priceRes = await this.getPriceFromHTML({page, event, pageInfo, selectors: [".activity-price"], });
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
   pageInfo.price = priceRes.price; 
   

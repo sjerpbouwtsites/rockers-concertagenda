@@ -27,7 +27,7 @@ export default class AbstractScraper {
   debugRawEventAsyncCheck = false;
   debugBaseEvents = false;
   debugPageInfo = false;
-  debugPrice = true;
+  debugPrice = false;
 
   static unavailabiltyTerms = [
     'uitgesteld', 'verplaatst', 'locatie gewijzigd', 'besloten', 'afgelast', 'geannuleerd'
@@ -1001,10 +1001,6 @@ export default class AbstractScraper {
       event: singleEvent,
     });
 
-    // LEGACY
-    // // nabewerken page info
-    // pageInfo.price = this.getPrice(pageInfo?.priceTextcontent);
-
     // als single event nog music event moet worden.
     if (!(singleEvent instanceof MusicEvent)) {
       singleEvent = new MusicEvent(singleEvent)
@@ -1101,11 +1097,6 @@ export default class AbstractScraper {
     musicEvent.shortText = musicEvent?.shortText?.replace(/<\/?\w+>/g, "");
 
     return musicEvent
-  }
-
-  getPrice(priceTextcontent) {
-    if (!priceTextcontent) return;
-    return this.getPriceFromHTML(priceTextcontent);
   }
 
   // step 3.5
@@ -1211,67 +1202,13 @@ export default class AbstractScraper {
       }
 
     });
-  
-    if (pageInfo?.priceTextcontent) {
-      pageInfo.priceTextcontent = _t.killWhitespaceExcess(pageInfo.priceTextcontent)
-    }
-  
+    
     page && !page.isClosed() && page.close();
     clearTimeout(stopFunctie);
     return pageInfo;    
   }
 
-  /**
-   * @deprecated
-   * @param {*} testText 
-   * @param {*} contextText 
-   * @returns price
-   */
-  getPriceFromHTML(testText = null, contextText = null) {
-    
-    if (!testText) {
-      return this.getPriceFromHTML(contextText);
-    }
-
-    if (testText.includes("gratis") || testText.includes("free")) {
-      return 0;
-    }
-
-  
-    const priceMatch = testText.match(/((\d{1,3})[,.]+(\d\d|-))/);
-  
-    if (!priceMatch) {
-      return 0;
-    }
-  
-    if (priceMatch && priceMatch.length >= 4) {
-      const integers = Number(priceMatch[2]) * 100;
-      let cents;
-      if (priceMatch[3].includes("-")) {
-        cents = 0;
-      } else {
-        cents = Number(priceMatch[3]);
-      }
-  
-      return (integers + cents) / 100;
-    }
-  
-    const onlyIntegers = testText.match(/\d{1,3}/);
-    if (onlyIntegers && onlyIntegers.length) {
-      return Number(onlyIntegers[0]);
-    }
-  
-    if (contextText) {
-      const searchresultInBroaderContext = this.getPriceFromHTML(contextText);
-      if (searchresultInBroaderContext) {
-        return searchresultInBroaderContext;
-      }
-    }
-  
-    return null;
-  }  
-
-  async NEWgetPriceFromHTML({page, event, pageInfo, selectors}) {
+  async getPriceFromHTML({page, event, pageInfo, selectors}) {
 
     let priceRes = {
       price: null,
@@ -1298,7 +1235,7 @@ export default class AbstractScraper {
     },firstSelector)
 
     if (!testText && selectorsCopy.length){
-      return await this.NEWgetPriceFromHTML({page, event, pageInfo, selectors:selectorsCopy})
+      return await this.getPriceFromHTML({page, event, pageInfo, selectors:selectorsCopy})
     }
 
     if (!testText) {
@@ -1345,7 +1282,7 @@ export default class AbstractScraper {
 
     if (!Array.isArray(priceMatch) && !Array.isArray(priceMatchEuros)) {
       if (selectorsCopy.length){
-        return await this.NEWgetPriceFromHTML({page, event,pageInfo, selectors:selectorsCopy})
+        return await this.getPriceFromHTML({page, event,pageInfo, selectors:selectorsCopy})
       } else {
         if (testText.match(/uitverkocht|sold\sout/i)) {
           priceRes.price = null;
@@ -1400,7 +1337,7 @@ export default class AbstractScraper {
     } catch (priceCalcErr) {
 
       if (selectorsCopy.length) {
-        return await this.NEWgetPriceFromHTML({page, event,pageInfo, selectors:selectorsCopy})
+        return await this.getPriceFromHTML({page, event,pageInfo, selectors:selectorsCopy})
       } else {
 
         if (testText.match(/uitverkocht|sold\sout/i)) {

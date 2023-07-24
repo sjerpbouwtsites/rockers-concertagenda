@@ -198,7 +198,7 @@ dbsScraper.getPageInfo = async function ({ page, event }) {
     this.debugPrice && this.dirtyTalk(`gaan naar url ${pageInfo.ticketURL}`)
     try {
       await page.goto(pageInfo.ticketURL)
-      //const priceRes = await this.NEWgetPriceFromHTML({page, event, pageInfo, selectors: ['[data-testid="ticket-price"]'], });
+      //const priceRes = await this.getPriceFromHTML({page, event, pageInfo, selectors: ['[data-testid="ticket-price"]'], });
       const html = await page.evaluate(()=>{
         return document.querySelector('body').innerHTML;
       }).catch(err => {

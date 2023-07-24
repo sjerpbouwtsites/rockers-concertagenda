@@ -203,7 +203,7 @@ oostpoortScraper.getPageInfo = async function ({ page, event }) {
     }))
   });
 
-  const priceRes = await this.NEWgetPriceFromHTML({page, event, pageInfo, selectors: ['.event__pricing__costs', '.festival__tickets__toggle'], });
+  const priceRes = await this.getPriceFromHTML({page, event, pageInfo, selectors: ['.event__pricing__costs', '.festival__tickets__toggle'], });
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
   pageInfo.price = priceRes.price;  
 
