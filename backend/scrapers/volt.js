@@ -221,6 +221,9 @@ voltScraper.getPageInfo = async function ({ page, url, event}) {
   );
 
   const longTextRes = await longTextSocialsIframes(page)
+
+  this.dirtyLog(longTextRes)
+
   for (let i in longTextRes){
     pageInfo[i] = longTextRes[i]
   }
@@ -238,9 +241,7 @@ async function longTextSocialsIframes(page){
 
     const textSelector = '.activity-content-wrapper > div:first-child';
     const mediaSelector = [
-      `${textSelector} iframe[src*='youtube']`,
-      `${textSelector} iframe[src*='bandcamp']`,
-      `${textSelector} iframe[src*='spotify']`,
+      `iframe`,
     ].join(", ");
     const removeEmptyHTMLFrom = textSelector;
     const socialSelector = [].join(", ");
@@ -315,6 +316,10 @@ async function longTextSocialsIframes(page){
       }
 
       // terugval???? nog niet bekend met alle opties.
+      if (!bron?.src && bron.hasAttribute('data-src')){
+        bron.src = bron.getAttribute('data-src')
+        bron.removeAttribute('data-src')
+      }
       return {
         outer: bron.outerHTML,
         src: bron.src,

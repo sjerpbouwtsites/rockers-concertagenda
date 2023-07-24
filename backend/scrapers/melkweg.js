@@ -137,6 +137,7 @@ melkwegScraper.getPageInfo = async function ({ page, event }) {
 
   const {stopFunctie} =  await this.getPageInfoStart()
   
+  
   const pageInfo = await page.evaluate(({event}) => {
     const res = {
       pageInfo: `<a class='page-info' href='${location.href}'>${event.title}</a>`,
