@@ -231,7 +231,7 @@ kavkaScraper.getPageInfo = async function ({ page, event }) {
     }
   }, {event});
 
-  const priceRes = await this.NEWgetPriceFromHTML({page, event, pageInfo, selectors: [".prijzen"], });
+  const priceRes = await this.getPriceFromHTML({page, event, pageInfo, selectors: [".prijzen"], });
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
   pageInfo.price = priceRes.price;  
 

@@ -152,7 +152,7 @@ defluxScraper.getPageInfo = async function ({ page, event}) {
     return res;
   }, {event});
 
-  const priceRes = await this.NEWgetPriceFromHTML({page, event, pageInfo, selectors: [".desc_trig_outter"], });
+  const priceRes = await this.getPriceFromHTML({page, event, pageInfo, selectors: [".desc_trig_outter"], });
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
   pageInfo.price = priceRes.price;  
 

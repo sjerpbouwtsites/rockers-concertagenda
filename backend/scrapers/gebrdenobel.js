@@ -155,19 +155,30 @@ gebrdenobelScraper.makeBaseEventList = async function () {
     { workerData }
   );
 
+  
   rockRawEvents = rockRawEvents.map(this.isMusicEventCorruptedMapper);
-
+  
   const checkedRockEvents = [];
   while (rockRawEvents.length) {
     const thisRockRawEvent = rockRawEvents.shift();
+    const tl = this.cleanupEventTitle(thisRockRawEvent.title);
+    const isAllowed = await this.rockAllowListCheck(thisRockRawEvent, tl);
+    if (isAllowed.success){
+      checkedRockEvents.push(thisRockRawEvent);
+      continue;
+    }
+    const isRockRefuse = await this.rockRefuseListCheck(thisRockRawEvent, tl);
+    if (isRockRefuse.success){
+      continue;
+    }
+
     const isRockRes = await this.isRock(thisRockRawEvent);
     if (isRockRes.success) {
       checkedRockEvents.push(thisRockRawEvent);
-    }
+    } 
   }
 
   const rawEvents = punkMetalRawEvents.concat(checkedRockEvents);
-
   this.saveBaseEventlist(workerData.family, rawEvents);
   const thisWorkersEvents = rawEvents.filter(
     (eventEl, index) => index % workerData.workerCount === workerData.index
@@ -271,7 +282,7 @@ gebrdenobelScraper.getPageInfo = async function ({ page, event }) {
     { months: this.months, event }
   );
 
-  const priceRes = await this.NEWgetPriceFromHTML({page, event, pageInfo, selectors: [".event-table"], });
+  const priceRes = await this.getPriceFromHTML({page, event, pageInfo, selectors: [".event-table"], });
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
   pageInfo.price = priceRes.price;  
 

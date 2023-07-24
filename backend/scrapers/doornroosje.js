@@ -303,7 +303,7 @@ doornroosjeScraper.getPageInfo = async function ({ page, event }) {
     }, {event});
   }
 
-  const priceRes = await this.NEWgetPriceFromHTML({page, event, pageInfo, selectors: [".c-btn__price", ".c-intro__col"], });
+  const priceRes = await this.getPriceFromHTML({page, event, pageInfo, selectors: [".c-btn__price", ".c-intro__col"], });
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
   pageInfo.price = priceRes.price;  
 

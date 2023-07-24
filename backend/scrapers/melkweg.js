@@ -174,7 +174,7 @@ melkwegScraper.getPageInfo = async function ({ page, event }) {
     return res;
   }, {event});
 
-  const priceRes = await this.NEWgetPriceFromHTML({page, event, pageInfo, selectors: ['[class*="styles_ticket-prices"]'], });
+  const priceRes = await this.getPriceFromHTML({page, event, pageInfo, selectors: ['[class*="styles_ticket-prices"]'], });
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
   pageInfo.price = priceRes.price;  
 

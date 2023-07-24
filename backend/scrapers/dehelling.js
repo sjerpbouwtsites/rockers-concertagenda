@@ -179,7 +179,7 @@ dehellingScraper.getPageInfo = async function ({ page,event }) {
     {event}
   );
 
-  const priceRes = await this.NEWgetPriceFromHTML({page, event, pageInfo, selectors: ['.c-event-meta__table'], });
+  const priceRes = await this.getPriceFromHTML({page, event, pageInfo, selectors: ['.c-event-meta__table'], });
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
   pageInfo.price = priceRes.price;  
 

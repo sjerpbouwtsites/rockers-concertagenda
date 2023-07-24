@@ -151,7 +151,7 @@ dbsScraper.makeBaseEventList = async function () {
   )
   rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
 
-  //this.saveBaseEventlist(workerData.family, rawEvents)
+  this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
   return await this.makeBaseEventListEnd({
     stopFunctie, rawEvents: thisWorkersEvents}
@@ -198,7 +198,7 @@ dbsScraper.getPageInfo = async function ({ page, event }) {
     this.debugPrice && this.dirtyTalk(`gaan naar url ${pageInfo.ticketURL}`)
     try {
       await page.goto(pageInfo.ticketURL)
-      //const priceRes = await this.NEWgetPriceFromHTML({page, event, pageInfo, selectors: ['[data-testid="ticket-price"]'], });
+      //const priceRes = await this.getPriceFromHTML({page, event, pageInfo, selectors: ['[data-testid="ticket-price"]'], });
       const html = await page.evaluate(()=>{
         return document.querySelector('body').innerHTML;
       }).catch(err => {

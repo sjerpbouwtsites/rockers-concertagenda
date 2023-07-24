@@ -94,12 +94,27 @@ paradisoScraper.makeBaseEventList = async function () {
     }
   }, {workerData});
   
+  let bla = '';
+
   await _t.autoScroll(page);
+  bla = await page.evaluate(({workerData}) => {
+    return document.querySelector('.css-16y59pb:last-child .chakra-heading').textContent
+  }, {workerData});  
+  this.dirtyTalk(`na scroll 1 ${bla}`)
+  
   await _t.autoScroll(page);
+  bla = await page.evaluate(({workerData}) => {
+    return document.querySelector('.css-16y59pb:last-child .chakra-heading').textContent
+  }, {workerData});  
+  this.dirtyTalk(`na scroll 2 ${bla}`)
+
   await _t.autoScroll(page);
-  await _t.autoScroll(page);
-  await _t.autoScroll(page);
-  await _t.autoScroll(page);
+  bla = await page.evaluate(({workerData}) => {
+    return document.querySelector('.css-16y59pb:last-child .chakra-heading').textContent
+  }, {workerData});  
+  this.dirtyTalk(`na scroll 3 ${bla}`)  
+
+
   let rawEvents = await page.evaluate(
     ({resBuiten, unavailabiltyTerms}) => {
 
@@ -251,7 +266,15 @@ paradisoScraper.getPageInfo = async function ({ page, event }) {
               toDebug: startDateMatch
             })
           }
-          res.startDate = `2023-${
+
+
+          const curM = new Date().getMonth() + 1;
+          let year = new Date().getFullYear();
+          if (monthName < curM) {
+            year = year + 1;
+          }
+
+          res.startDate = `${year}-${
             monthName
           }-${startDateMatch[1].padStart(2, "0")}`;
         }
@@ -316,7 +339,7 @@ paradisoScraper.getPageInfo = async function ({ page, event }) {
     { months: editedMonths, buitenRes }
   );
 
-  const priceRes = await this.NEWgetPriceFromHTML({page, event, pageInfo, selectors: [".css-f73q4m", '.price', '.chakra-container'], });
+  const priceRes = await this.getPriceFromHTML({page, event, pageInfo, selectors: [".css-f73q4m", '.price', '.chakra-container'], });
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
   pageInfo.price = priceRes.price;  
 

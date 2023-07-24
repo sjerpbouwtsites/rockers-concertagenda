@@ -179,7 +179,7 @@ effenaarScraper.getPageInfo = async function ({ page, event }) {
     return res;
   },{ months: this.months,event});
 
-  const priceRes = await this.NEWgetPriceFromHTML({page, event, pageInfo, selectors: [".tickets-btn", ".tickets-dropdown"], });
+  const priceRes = await this.getPriceFromHTML({page, event, pageInfo, selectors: [".tickets-btn", ".tickets-dropdown"], });
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
   pageInfo.price = priceRes.price;  
 

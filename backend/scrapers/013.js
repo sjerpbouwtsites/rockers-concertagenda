@@ -174,7 +174,7 @@ nuldertienScraper.getPageInfo = async function ({ page , event}) {
     return res;
   }, {event});
 
-  const priceRes = await this.NEWgetPriceFromHTML({page, event, pageInfo, selectors: [".practical-information"], });
+  const priceRes = await this.getPriceFromHTML({page, event, pageInfo, selectors: [".practical-information"], });
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
   pageInfo.price = priceRes.price;
 
