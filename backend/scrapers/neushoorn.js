@@ -152,8 +152,13 @@ neushoornScraper.getPageInfo = async function ({ page,event }) {
       const dateTextMatch = dateTextcontent.match(/\w+\s?(\d+)\s?(\w+)/);
 
       if (dateTextMatch && dateTextMatch.length === 3) {
-        const year = "2023";
+        //
         const month = months[dateTextMatch[2]];
+        const curM = new Date().getMonth() + 1;
+        let year = new Date().getFullYear();
+        if (month < curM) {
+          year = year + 1;
+        }
         const day = dateTextMatch[1].padStart(2, "0");
         res.startDate = `${year}-${month}-${day}`;
       } else {
