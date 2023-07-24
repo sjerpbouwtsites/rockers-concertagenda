@@ -1,3 +1,4 @@
+//#region                                                 IMPORTS
 import { QuickWorkerMessage } from "../../mods/rock-worker.js";
 import {parentPort, workerData} from "worker_threads"
 import puppeteer from "puppeteer";
@@ -9,30 +10,30 @@ import EventsList from "../../mods/events-list.js";
 import MusicEvent from "../../mods/music-event.js";
 import getVenueMonths from "../../mods/months.js";
 import ErrorWrapper from "../../mods/error-wrapper.js";
-import verwerkLongHTML, {makeLongHTMLNewStyle} from "./longHTML.js";
+import makeLongHTML from "./longHTML.js";
+//#endregion                                              IMPORTS
 
-
-/**
- * @method eventGenerator<Generator>
- *
- * @export
- * @class AbstractScraper
- */
 export default class AbstractScraper {
 
   completedMainPage = false
   workingOnSinglePages = false;
+  rockAllowList = '';
+  rockRefuseList = '';  
+
+  static unavailabiltyTerms = [
+    'uitgesteld', 'verplaatst', 'locatie gewijzigd', 'besloten', 'afgelast', 'geannuleerd'
+  ]
+
+  //#region [rgba(0, 0, 30, 0.30)]                            DEBUGSETTINGS
   debugCorruptedUnavailable = false;
   debugSingleMergedEventCheck = false;
   debugRawEventAsyncCheck = false;
   debugBaseEvents = false;
   debugPageInfo = false;
   debugPrice = false;
+  //#endregion                                                DEBUGSETTINGS
 
-  static unavailabiltyTerms = [
-    'uitgesteld', 'verplaatst', 'locatie gewijzigd', 'besloten', 'afgelast', 'geannuleerd'
-  ]
-
+  //#region [rgba(0, 0, 60, 0.30)]                            ISROCKSETTINGS  
   /**
    * Gebruikt in singleRawEventChecks' hasForbiddenTerms
    *
@@ -145,15 +146,23 @@ export default class AbstractScraper {
     `symphonic metal`,
     `thrash`,
   ]
+  //#endregion                                                ISROCKSETTINGS
 
-  rockAllowList = '';
-  rockRefuseList = '';
-
+  //#region [rgba(0, 0, 120, 0.30)]                            CONSTRUCTOR & INSTALL  
   constructor(obj) {
     this.qwm;
     this.browser;
     this.install(obj);
   }
+  install(obj) {
+    this.qwm = new QuickWorkerMessage(workerData);
+    this.maxExecutionTime = obj.maxExecutionTime ?? 30000;
+    this.puppeteerConfig = obj.puppeteerConfig ?? {};
+    this.months = getVenueMonths(workerData.family)
+    this.rockAllowList = fs.readFileSync(fsDirections.isRockAllow, 'utf-8')
+    this.rockRefuseList = fs.readFileSync(fsDirections.isRockRefuse, 'utf-8')
+  }
+  //#endregion                                                CONSTRUCTOR & INSTALL 
 
   /**
    * Checks in workerData if this family is forced.
@@ -166,16 +175,7 @@ export default class AbstractScraper {
     return forced.includes(workerData.family)
   }
 
-  install(obj) {
-    this.qwm = new QuickWorkerMessage(workerData);
-    this.maxExecutionTime = obj.maxExecutionTime ?? 30000;
-    this.puppeteerConfig = obj.puppeteerConfig ?? {};
-    this.months = getVenueMonths(workerData.family)
-    this.rockAllowList = fs.readFileSync(fsDirections.isRockAllow, 'utf-8')
-    this.rockRefuseList = fs.readFileSync(fsDirections.isRockRefuse, 'utf-8')
-
-  }
-
+  //#region [rgba(0, 0, 180, 0.30)]                            DIRTYLOG, TALK, DEBUG
   /**
    * Wrapper om parentPort.postMessage(qwm.toConsole(xx)) heen.
    *
@@ -208,7 +208,9 @@ export default class AbstractScraper {
   dirtyTalk(talkingString) {
     parentPort.postMessage(this.qwm.messageRoll(String(talkingString)));
   }  
-  
+  //#endregion                                                DIRTYLOG, TALK, DEBUG
+
+  //#region [rgba(0, 0, 240, 0.30)]                            SCRAPE INIT & SCRAPE DIE
   async scrapeInit() {
 
     if (!this.puppeteerConfig.app.mainPage.useCustomScraper || !this.puppeteerConfig.app.singlePage.useCustomScraper) {
@@ -247,8 +249,9 @@ export default class AbstractScraper {
     await _t.waitFor(50);
     process.exit()
   }
+  //#endregion                                                 SCRAPE INIT & SCRAPE DIE  
 
-  // step 1
+  //#region [rgba(60, 0, 60, 0.30)]                            MAIN PAGE
   async mainPage() {
     throw Error("abstract method used thx ");
   }
@@ -356,7 +359,6 @@ export default class AbstractScraper {
       page,
     } 
   }
-
   
   /**
    * beeindigt stopFunctie timeout
@@ -418,6 +420,9 @@ export default class AbstractScraper {
       
   }
 
+  //#endregion                                                MAIN PAGE
+
+  //#region [rgba(120, 0, 120, 0.30)]                          MAIN PAGE CHECK AND ANNOUNCE  
   /**
    * verifieert requiredProperties uit puppeteerConfig.app.mainPage.requiredProperties
    * waarschuwt naar monitor wie uitvalt 
@@ -558,12 +563,6 @@ export default class AbstractScraper {
     }
   }
 
-  *eventGenerator(events) {
-    while (events.length) {
-      yield events.shift();
-    }
-  }
-
   /**
    * abstracte methode, te overschrijve in de kindWorkers.
    *
@@ -578,6 +577,317 @@ export default class AbstractScraper {
       success: true,
       reason: null,
     };
+  }
+
+  //#endregion                                                 MAIN PAGE CHECK
+
+  //#region [rgba(60, 0, 60, 0.30)]                            SINGLE PAGE  
+  /**
+   * Process single Music Event
+   * Naait het scrapen aan elkaar
+   * Laat puppeteer pagina maken
+   * Haalt page info op
+   * Doet nabewerking page info: prijs en lange HTML
+   * Laat het muziek event zich registeren
+   *
+   * step 3
+   *
+   * @recursive
+   * @param {checkedEvents MusicEvents[]}
+   * @return {Promise<checkedEvents MusicEvents[]>}
+   * @memberof AbstractScraper
+   */
+  async processSingleMusicEvent(eventsList = []) {
+    // verwerk events 1
+    const useableEventsList = eventsList.map((a) => a);
+    if (useableEventsList.length === 0) return useableEventsList;
+
+    let singleEvent = useableEventsList.shift();
+    
+    parentPort.postMessage(this.qwm.todoNew(useableEventsList.length));
+
+    // maak pagina
+    let singleEventPage
+    if (!this.puppeteerConfig.app.singlePage.useCustomScraper) {
+      singleEventPage = await this.createSinglePage(
+        singleEvent.venueEventUrl
+      );
+      if (!singleEventPage) {
+        singleEvent.corrupted = 'niet gelukt page te maken';
+        return useableEventsList.length
+          ? this.processSingleMusicEvent(useableEventsList)
+          : useableEventsList;
+      }
+    }
+
+    // corruptie check afkomstig nog van baseEvent. niet door naar pageInfo
+    if (singleEvent.corrupted){
+      singleEvent.registerINVALID();
+      parentPort.postMessage(
+        this.qwm.messageRoll(
+          `<a href='${singleEvent.venueEventUrl}'>😵 Corrupted ${singleEvent.title}</a> ${singleEvent.corrupted}`
+        )
+      );
+      return useableEventsList.length
+        ? this.processSingleMusicEvent(useableEventsList)
+        : useableEventsList;      
+    }
+
+    // page info ophalen
+    const pageInfo = await this.singlePage({
+      page: singleEventPage,
+      url: singleEvent.venueEventUrl, // @TODO overal weghalen vervangen met event
+      event: singleEvent,
+    });
+
+    // als single event nog music event moet worden.
+    if (!(singleEvent instanceof MusicEvent)) {
+      singleEvent = new MusicEvent(singleEvent)
+    } 
+
+    // samenvoegen & naar EventsList sturen
+    singleEvent.merge(pageInfo);
+
+    //titel / shortext postfix
+    singleEvent = this.titelShorttextPostfix(singleEvent);
+
+    // check op properties vanuit single page
+    singleEvent = this.isMusicEventCorruptedMapper(singleEvent);
+
+    if (singleEvent.corrupted || singleEvent.unavailable){
+      singleEvent.registerINVALID(this.workerData);
+      if (singleEvent.corrupted) {
+        this.dirtyDebug({
+          title: `💀 ${singleEvent.corrupted}`,
+          event: `<a class='single-event-check-notice single-event-check-notice--failure' href='${singleEvent.venueEventUrl}'>${singleEvent.title}</a> Corr.`,
+        })   
+      }
+      if (singleEvent.unavailable) {
+        this.dirtyDebug({
+          title: `😣 ${singleEvent.unavailable}`,
+          event: `<a class='single-event-check-notice single-event-check-notice--failure' href='${singleEvent.venueEventUrl}'>${singleEvent.title}</a> Unav.`,
+        })   
+      }
+      
+      singleEventPage && !singleEventPage.isClosed() && (await singleEventPage.close());
+      return useableEventsList.length
+        ? this.processSingleMusicEvent(useableEventsList)
+        : useableEventsList;      
+    }
+    
+    singleEvent.longText = this.writeLongTextHTML(singleEvent);
+
+    const mergedEventCheckRes = await this.singleMergedEventCheck(singleEvent, pageInfo);
+    if (mergedEventCheckRes.success) {
+      if (this.debugSingleMergedEventCheck) {
+        this.dirtyDebug({
+          title: 'Merged async check 👍',
+          event: `<a class='single-event-check-notice single-event-check-notice--success' href='${mergedEventCheckRes.event.venueEventUrl}'>${mergedEventCheckRes.event.title}</a>`,
+          reason: mergedEventCheckRes.reason,
+        })      
+      }
+      singleEvent.isValid
+        ? singleEvent.register() // TODO hier lopen dingen echt dwars door elkaar. integreren in soort van singleMergedEventCheckBase en dan anderen reducen erop of weet ik veel wat een gehack vandaag
+        : singleEvent.registerINVALID(this.workerData);
+    } else {
+      if (this.debugSingleMergedEventCheck){
+        this.dirtyDebug({
+          title: 'Merged async check 👎',        
+          event: `<a class='single-event-check-notice single-event-check-notice--failure' href='${mergedEventCheckRes.event.venueEventUrl}'>${mergedEventCheckRes.event.title}</a>`,
+          reason: mergedEventCheckRes.reason,
+        })
+      }
+      singleEvent.registerINVALID(this.workerData);
+    }
+
+    singleEventPage && !singleEventPage.isClosed() && (await singleEventPage.close());
+
+    return useableEventsList.length
+      ? this.processSingleMusicEvent(useableEventsList)
+      : useableEventsList;
+  }
+
+  /**
+   *
+   *
+   * @param {string} url
+   * @return {page} reeds genavigeerde pagina
+   * @memberof AbstractScraper
+   */
+  async createSinglePage(url) {
+    try {
+      const page = await this.browser.newPage();
+      try {
+        await page.goto(url, this.puppeteerConfig.singlePage);
+      } catch (error) {
+        _t.handleError(
+          error,
+          workerData,
+          `Mislukken aanmaken <a class='single-page-failure error-link' href='${url}'>single pagina</a>`,
+          'notice',
+          url
+        );        
+      }
+      
+      // zet ErrorWrapper class in puppeteer document.
+      await page.evaluate(({ErrorWrapperString}) => {
+        const newScriptContent = ErrorWrapperString;
+        const scriptTag = document.createElement('script');
+        scriptTag.id = 'rockagenda-extra-code';
+        scriptTag.innerHTML = newScriptContent;
+        document.body.appendChild(scriptTag);
+      }, {ErrorWrapperString: ErrorWrapper.toString()});      
+      return page;
+    } catch (error) {
+      _t.handleError(
+        error,
+        workerData,
+        `Mislukken aanmaken <a class='single-page-failure error-link' href='${url}'>single pagina</a> wss duurt te lang`,
+        'notice',
+        null,
+      );
+    }
+    
+  }
+
+  titelShorttextPostfix(musicEvent){
+    const titleIsCapsArr = musicEvent.title
+      .split('')
+      .map(char => char === char.toUpperCase());
+    const noOfCapsInTitle = titleIsCapsArr.filter(a => a).length;
+    const toManyCapsInTitle = ((musicEvent.title.length - noOfCapsInTitle) / musicEvent.title.length) < .5;
+    if (toManyCapsInTitle){
+      musicEvent.title = musicEvent.title.substring(0,1).toUpperCase()+musicEvent.title.substring(1,500).toLowerCase()
+    }
+
+    if (musicEvent.title.length > 45){
+      const splittingCandidates = ['+', '&', ':', '>', '•'];
+      let i = 0;
+      do {
+        const splitted = musicEvent.title.split(splittingCandidates[i]);
+        musicEvent.title = splitted[0];
+        const titleRest = splitted.splice(1, 45).join(' ');
+        musicEvent.shortText = titleRest + ' ' + musicEvent.shortText;              
+        i = i + 1;
+      } while (musicEvent.title.length > 45 && i < splittingCandidates.length);
+    }
+
+    // if (musicEvent.title.length > 45){
+    //   musicEvent.title = musicEvent.title.replace(/\(.*\)/,'').replace(/\s{2,25}/,' ');
+    // }    
+
+    musicEvent.shortText = musicEvent?.shortText?.replace(/<\/?\w+>/g, "");
+
+    return musicEvent
+  }
+
+  // step 3.5
+  async singlePage() {
+    // abstract function singlePage
+    throw Error("abstact function singlePage called");
+  }
+
+  /**
+   * step 3.6
+   * Vervangt generieke code aan begin singlePage
+   * start stopFunctie op
+   * @returns {timeout} stopFunctie
+   * @memberof AbstractScraper
+   */
+  async singlePageStart(event){
+    const stopFunctie = setTimeout(() => {
+      _t.wrappedHandleError(new ErrorWrapper({
+        error: new Error('Timeout baseEvent'),
+        remarks: `<a href='${event?.venueEventUrl}' class='error-link get-page-info-timeout'>singlePage ${workerData.name} overtijd</a>.\nMax: ${this.puppeteerConfig.singlePage.timeout}`,
+        workerData,
+        errorLevel: 'notice',
+      }
+      ))
+    }, this.puppeteerConfig.singlePage.timeout);
+    return {
+      stopFunctie
+    }
+  }
+
+  /**
+   * step 3.9
+   * Vervangt generieke code aan eind singlePage
+   * stopt stopFunctie
+   * verwijderd overbodige witruimte
+   * kijkt naar evt fouten in pageInfo.errors
+   * @returns {*} pageInfo
+   * @memberof AbstractScraper
+   */  
+  async singlePageEnd({pageInfo, stopFunctie, page, event}){
+
+    this.isForced && this.debugPageInfo && this.dirtyLog({
+      event,
+      pageInfo
+    })
+
+    if (!pageInfo){
+      page && !page.isClosed() && page.close();
+      throw new Error('page info ontbreekt.')
+    }
+
+    if (!Array.isArray(pageInfo?.errors)) {
+      
+      const wrappedError = new ErrorWrapper({
+        error: new Error(`pageInfo object incompleet; geen errors`),
+        remarks: `pageInfo object incompleet; geen errors`,
+        workerData,
+        errorLevel: 'notice',
+        toDebug: {
+          title: 'failed page info',
+          pageInfoData: pageInfo,
+        }
+      });
+      _t.wrappedHandleError(wrappedError);
+      
+      page && !page.isClosed() && page.close();
+      clearTimeout(stopFunctie);
+      return {
+        corrupted: `Geen resultaat van pageInfo`,
+      };      
+    }
+    
+    
+    pageInfo?.errors?.forEach((errorData) => {
+      try {
+        if (!errorData?.workerData){
+          errorData.workerData = workerData;
+        }
+        if (!errorData?.remarks){
+          errorData.remarks = 'geen remarks';
+        }        
+        if (!errorData.error?.message){
+          const initRemarks = errorData?.remarks ?? '';
+          errorData.error = new Error(!errorData?.remarks);
+          const url = event.venueEventUrl ?? pageInfo.venueEventUrl;
+          const title = event?.title ?? pageInfo.title;
+          errorData.remarks = `Mislukte error van:\n\n${initRemarks}\n<a href='${url}'>${title}</a>`;
+        }
+        const wrappedError = new ErrorWrapper(errorData);
+        _t.wrappedHandleError(wrappedError);        
+      } catch (errorOfErrors) {
+        const cp = {...pageInfo};
+        delete cp.longTextHTML;
+        _t.handleError(
+          errorOfErrors, 
+          workerData,
+          'mislukte error',
+          'close-thread',
+          cp
+        )
+         
+        
+      }
+
+    });
+    
+    page && !page.isClosed() && page.close();
+    clearTimeout(stopFunctie);
+    return pageInfo;    
   }
 
   /**
@@ -595,7 +905,10 @@ export default class AbstractScraper {
       reason: null,
     };
   }  
+  //#endregion                                                 SINGLE PAGE
 
+  //#region [rgba(90, 0, 90, 0.30)]                            ASYNC CHECKERS
+  
   /**
    * Loopt over AbstractScraper.goodCategories en kijkt of ze in 
    * een bepaalde text voorkomen, standaard bestaande uit de titel en de shorttext van 
@@ -862,46 +1175,6 @@ export default class AbstractScraper {
       reason: `wiki catch return`      
     }
   } 
-
-  cleanupEventTitle(workingTitle = ''){
-    try {
-    
-      if (workingTitle.match(/\s?-\s?\d\d:\d\d/)){
-        workingTitle = workingTitle.replace(/\s?-\s?\d\d:\d\d/, '');
-      }
-    
-      if (workingTitle.includes('&')) {
-        workingTitle = workingTitle.replace(/&.*$/,'');
-      }
-
-      if (workingTitle.includes('|')) {
-        workingTitle = workingTitle.replace(/|.*$/,'');
-      }
-
-      if (workingTitle.includes('•')) {
-        workingTitle = workingTitle.replace(/•.*$/,'');
-      }
-
-      if (workingTitle.includes('+')) {
-        workingTitle = workingTitle.replace(/\+.*$/,'');
-      }    
-
-      if (workingTitle.includes(':')) {
-        workingTitle = workingTitle.replace(/^[\w\s]+:/,'');
-      }
-    } catch (error) {
-      _t.wrappedHandleError(new ErrorWrapper({
-        error,
-        workerData,
-        remarks: `fout schoonmaken titel`,
-        errorLevel: 'notice',
-      }));
-      return 'TITEL SCHOONMAKEN MISLUKT';
-    }
-    
-    return workingTitle.toLowerCase().trim()
-  }
-
   /**
    * methode waarmee singleRawEventCheck vervangen kan worden.
    * kijkt naar 'voornaamste titel', dwz de event.title tot aan een '&'.
@@ -942,270 +1215,52 @@ export default class AbstractScraper {
       reason: `<a class='single-event-check-reason wikipedia wikipedia--failure metal-encyclopedie metal-encyclopedie--failure' href='${wikipediaRes.url}'>wikipedia</a> + <a href='${metalEncyclopediaRes.url}'>metal encyclopedia</a> 👎`};
   }
 
-  /**
-   * Process single Music Event
-   * Naait het scrapen aan elkaar
-   * Laat puppeteer pagina maken
-   * Haalt page info op
-   * Doet nabewerking page info: prijs en lange HTML
-   * Laat het muziek event zich registeren
-   *
-   * step 3
-   *
-   * @recursive
-   * @param {checkedEvents MusicEvents[]}
-   * @return {Promise<checkedEvents MusicEvents[]>}
-   * @memberof AbstractScraper
-   */
-  async processSingleMusicEvent(eventsList = []) {
-    // verwerk events 1
-    const useableEventsList = eventsList.map((a) => a);
-    if (useableEventsList.length === 0) return useableEventsList;
-
-    let singleEvent = useableEventsList.shift();
+  cleanupEventTitle(workingTitle = ''){
+    try {
     
-    parentPort.postMessage(this.qwm.todoNew(useableEventsList.length));
-
-    // maak pagina
-    let singleEventPage
-    if (!this.puppeteerConfig.app.singlePage.useCustomScraper) {
-      singleEventPage = await this.createSinglePage(
-        singleEvent.venueEventUrl
-      );
-      if (!singleEventPage) {
-        singleEvent.corrupted = 'niet gelukt page te maken';
-        return useableEventsList.length
-          ? this.processSingleMusicEvent(useableEventsList)
-          : useableEventsList;
+      if (workingTitle.match(/\s?-\s?\d\d:\d\d/)){
+        workingTitle = workingTitle.replace(/\s?-\s?\d\d:\d\d/, '');
       }
-    }
-
-    // corruptie check afkomstig nog van baseEvent. niet door naar pageInfo
-    if (singleEvent.corrupted){
-      singleEvent.registerINVALID();
-      parentPort.postMessage(
-        this.qwm.messageRoll(
-          `<a href='${singleEvent.venueEventUrl}'>😵 Corrupted ${singleEvent.title}</a> ${singleEvent.corrupted}`
-        )
-      );
-      return useableEventsList.length
-        ? this.processSingleMusicEvent(useableEventsList)
-        : useableEventsList;      
-    }
-
-    // page info ophalen
-    const pageInfo = await this.singlePage({
-      page: singleEventPage,
-      url: singleEvent.venueEventUrl, // @TODO overal weghalen vervangen met event
-      event: singleEvent,
-    });
-
-    // als single event nog music event moet worden.
-    if (!(singleEvent instanceof MusicEvent)) {
-      singleEvent = new MusicEvent(singleEvent)
-    } 
-
-    // samenvoegen & naar EventsList sturen
-    singleEvent.merge(pageInfo);
-
-    //titel / shortext postfix
-    singleEvent = this.titelShorttextPostfix(singleEvent);
-
-    // check op properties vanuit single page
-    singleEvent = this.isMusicEventCorruptedMapper(singleEvent);
-
-    if (singleEvent.corrupted || singleEvent.unavailable){
-      singleEvent.registerINVALID(this.workerData);
-      if (singleEvent.corrupted) {
-        this.dirtyDebug({
-          title: `💀 ${singleEvent.corrupted}`,
-          event: `<a class='single-event-check-notice single-event-check-notice--failure' href='${singleEvent.venueEventUrl}'>${singleEvent.title}</a> Corr.`,
-        })   
-      }
-      if (singleEvent.unavailable) {
-        this.dirtyDebug({
-          title: `😣 ${singleEvent.unavailable}`,
-          event: `<a class='single-event-check-notice single-event-check-notice--failure' href='${singleEvent.venueEventUrl}'>${singleEvent.title}</a> Unav.`,
-        })   
-      }
-      
-      singleEventPage && !singleEventPage.isClosed() && (await singleEventPage.close());
-      return useableEventsList.length
-        ? this.processSingleMusicEvent(useableEventsList)
-        : useableEventsList;      
-    }
     
-    singleEvent.longText = this.writeLongTextHTML(singleEvent);
-
-    const mergedEventCheckRes = await this.singleMergedEventCheck(singleEvent, pageInfo);
-    if (mergedEventCheckRes.success) {
-      if (this.debugSingleMergedEventCheck) {
-        this.dirtyDebug({
-          title: 'Merged async check 👍',
-          event: `<a class='single-event-check-notice single-event-check-notice--success' href='${mergedEventCheckRes.event.venueEventUrl}'>${mergedEventCheckRes.event.title}</a>`,
-          reason: mergedEventCheckRes.reason,
-        })      
+      if (workingTitle.includes('&')) {
+        workingTitle = workingTitle.replace(/&.*$/,'');
       }
-      singleEvent.isValid
-        ? singleEvent.register() // TODO hier lopen dingen echt dwars door elkaar. integreren in soort van singleMergedEventCheckBase en dan anderen reducen erop of weet ik veel wat een gehack vandaag
-        : singleEvent.registerINVALID(this.workerData);
-    } else {
-      if (this.debugSingleMergedEventCheck){
-        this.dirtyDebug({
-          title: 'Merged async check 👎',        
-          event: `<a class='single-event-check-notice single-event-check-notice--failure' href='${mergedEventCheckRes.event.venueEventUrl}'>${mergedEventCheckRes.event.title}</a>`,
-          reason: mergedEventCheckRes.reason,
-        })
+
+      if (workingTitle.includes('|')) {
+        workingTitle = workingTitle.replace(/|.*$/,'');
       }
-      singleEvent.registerINVALID(this.workerData);
-    }
 
-    singleEventPage && !singleEventPage.isClosed() && (await singleEventPage.close());
+      if (workingTitle.includes('•')) {
+        workingTitle = workingTitle.replace(/•.*$/,'');
+      }
 
-    return useableEventsList.length
-      ? this.processSingleMusicEvent(useableEventsList)
-      : useableEventsList;
-  }
+      if (workingTitle.includes('+')) {
+        workingTitle = workingTitle.replace(/\+.*$/,'');
+      }    
 
-  titelShorttextPostfix(musicEvent){
-    const titleIsCapsArr = musicEvent.title
-      .split('')
-      .map(char => char === char.toUpperCase());
-    const noOfCapsInTitle = titleIsCapsArr.filter(a => a).length;
-    const toManyCapsInTitle = ((musicEvent.title.length - noOfCapsInTitle) / musicEvent.title.length) < .5;
-    if (toManyCapsInTitle){
-      musicEvent.title = musicEvent.title.substring(0,1).toUpperCase()+musicEvent.title.substring(1,500).toLowerCase()
-    }
-
-    if (musicEvent.title.length > 45){
-      const splittingCandidates = ['+', '&', ':', '>', '•'];
-      let i = 0;
-      do {
-        const splitted = musicEvent.title.split(splittingCandidates[i]);
-        musicEvent.title = splitted[0];
-        const titleRest = splitted.splice(1, 45).join(' ');
-        musicEvent.shortText = titleRest + ' ' + musicEvent.shortText;              
-        i = i + 1;
-      } while (musicEvent.title.length > 45 && i < splittingCandidates.length);
-    }
-
-    // if (musicEvent.title.length > 45){
-    //   musicEvent.title = musicEvent.title.replace(/\(.*\)/,'').replace(/\s{2,25}/,' ');
-    // }    
-
-    musicEvent.shortText = musicEvent?.shortText?.replace(/<\/?\w+>/g, "");
-
-    return musicEvent
-  }
-
-  // step 3.5
-  async singlePage() {
-    // abstract function singlePage
-    throw Error("abstact function singlePage called");
-  }
-
-  /**
-   * step 3.6
-   * Vervangt generieke code aan begin singlePage
-   * start stopFunctie op
-   * @returns {timeout} stopFunctie
-   * @memberof AbstractScraper
-   */
-  async singlePageStart(event){
-    const stopFunctie = setTimeout(() => {
+      if (workingTitle.includes(':')) {
+        workingTitle = workingTitle.replace(/^[\w\s]+:/,'');
+      }
+    } catch (error) {
       _t.wrappedHandleError(new ErrorWrapper({
-        error: new Error('Timeout baseEvent'),
-        remarks: `<a href='${event?.venueEventUrl}' class='error-link get-page-info-timeout'>singlePage ${workerData.name} overtijd</a>.\nMax: ${this.puppeteerConfig.singlePage.timeout}`,
+        error,
         workerData,
+        remarks: `fout schoonmaken titel`,
         errorLevel: 'notice',
-      }
-      ))
-    }, this.puppeteerConfig.singlePage.timeout);
-    return {
-      stopFunctie
+      }));
+      return 'TITEL SCHOONMAKEN MISLUKT';
+    }
+    
+    return workingTitle.toLowerCase().trim()
+  }
+  *eventGenerator(events) {
+    while (events.length) {
+      yield events.shift();
     }
   }
+  //#endregion                                                 ASYNC CHECKERS
 
-  /**
-   * step 3.9
-   * Vervangt generieke code aan eind singlePage
-   * stopt stopFunctie
-   * verwijderd overbodige witruimte
-   * kijkt naar evt fouten in pageInfo.errors
-   * @returns {*} pageInfo
-   * @memberof AbstractScraper
-   */  
-  async singlePageEnd({pageInfo, stopFunctie, page, event}){
-
-    this.isForced && this.debugPageInfo && this.dirtyLog({
-      event,
-      pageInfo
-    })
-
-    if (!pageInfo){
-      page && !page.isClosed() && page.close();
-      throw new Error('page info ontbreekt.')
-    }
-
-    if (!Array.isArray(pageInfo?.errors)) {
-      
-      const wrappedError = new ErrorWrapper({
-        error: new Error(`pageInfo object incompleet; geen errors`),
-        remarks: `pageInfo object incompleet; geen errors`,
-        workerData,
-        errorLevel: 'notice',
-        toDebug: {
-          title: 'failed page info',
-          pageInfoData: pageInfo,
-        }
-      });
-      _t.wrappedHandleError(wrappedError);
-      
-      page && !page.isClosed() && page.close();
-      clearTimeout(stopFunctie);
-      return {
-        corrupted: `Geen resultaat van pageInfo`,
-      };      
-    }
-    
-    
-    pageInfo?.errors?.forEach((errorData) => {
-      try {
-        if (!errorData?.workerData){
-          errorData.workerData = workerData;
-        }
-        if (!errorData?.remarks){
-          errorData.remarks = 'geen remarks';
-        }        
-        if (!errorData.error?.message){
-          const initRemarks = errorData?.remarks ?? '';
-          errorData.error = new Error(!errorData?.remarks);
-          const url = event.venueEventUrl ?? pageInfo.venueEventUrl;
-          const title = event?.title ?? pageInfo.title;
-          errorData.remarks = `Mislukte error van:\n\n${initRemarks}\n<a href='${url}'>${title}</a>`;
-        }
-        const wrappedError = new ErrorWrapper(errorData);
-        _t.wrappedHandleError(wrappedError);        
-      } catch (errorOfErrors) {
-        const cp = {...pageInfo};
-        delete cp.longTextHTML;
-        _t.handleError(
-          errorOfErrors, 
-          workerData,
-          'mislukte error',
-          'close-thread',
-          cp
-        )
-         
-        
-      }
-
-    });
-    
-    page && !page.isClosed() && page.close();
-    clearTimeout(stopFunctie);
-    return pageInfo;    
-  }
+  //#region [rgba(120, 0, 120, 0.30)]                          PRICE
 
   async getPriceFromHTML({page, event, pageInfo, selectors}) {
 
@@ -1373,17 +1428,14 @@ export default class AbstractScraper {
     }
     return true;
   }
+  //#endregion                                                 PRICE  
 
+  //#region [rgba(150, 0, 150, 0.30)]                          LONG HTML  
   writeLongTextHTML(mergedEvent) {
     if (!mergedEvent) return null;
     let uuid = crypto.randomUUID();
-    let toPrint = '';
-    if (this.puppeteerConfig.app.singlePage.longHTMLnewStyle){
-      toPrint = makeLongHTMLNewStyle(mergedEvent)
-    } else{
-      toPrint = verwerkLongHTML(mergedEvent.longTextHTML);
-    }
-
+    const toPrint = makeLongHTML(mergedEvent)
+ 
     try {
       const longTextPath = `${fsDirections.publicTexts}/${uuid}.html`;
       fs.writeFileSync(longTextPath, toPrint, "utf-8");
@@ -1396,6 +1448,8 @@ export default class AbstractScraper {
     }
     return '';
   }
+  //#endregion                                                 LONG HTML
+
 
   // step 4
   async announceToMonitorDone() {
@@ -1420,52 +1474,6 @@ export default class AbstractScraper {
       null
     );
   }
-
-  /**
-   *
-   *
-   * @param {string} url
-   * @return {page} reeds genavigeerde pagina
-   * @memberof AbstractScraper
-   */
-  async createSinglePage(url) {
-    try {
-      const page = await this.browser.newPage();
-      try {
-        await page.goto(url, this.puppeteerConfig.singlePage);
-      } catch (error) {
-        _t.handleError(
-          error,
-          workerData,
-          `Mislukken aanmaken <a class='single-page-failure error-link' href='${url}'>single pagina</a>`,
-          'notice',
-          url
-        );        
-      }
-      
-      // zet ErrorWrapper class in puppeteer document.
-      await page.evaluate(({ErrorWrapperString}) => {
-        const newScriptContent = ErrorWrapperString;
-        const scriptTag = document.createElement('script');
-        scriptTag.id = 'rockagenda-extra-code';
-        scriptTag.innerHTML = newScriptContent;
-        document.body.appendChild(scriptTag);
-      }, {ErrorWrapperString: ErrorWrapper.toString()});      
-      return page;
-    } catch (error) {
-      _t.handleError(
-        error,
-        workerData,
-        `Mislukken aanmaken <a class='single-page-failure error-link' href='${url}'>single pagina</a> wss duurt te lang`,
-        'notice',
-        null,
-      );
-    }
-    
-  }
-
-
-
 
   // step 6
   async saveEvents() {
