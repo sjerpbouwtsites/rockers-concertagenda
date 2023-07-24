@@ -190,11 +190,6 @@ dbsScraper.getPageInfo = async function ({ page, event }) {
   }, {event});
   
   const longTextRes = await longTextSocialsIframes(page)
-  this.dirtyLog({
-    ...longTextRes,
-    url: event.venueEventUrl
-  })
-  
   for (let i in longTextRes){
     pageInfo[i] = longTextRes[i]
   }

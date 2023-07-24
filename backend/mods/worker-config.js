@@ -31,7 +31,7 @@ export const workerConfig = {
   depul: { workerCount: 2, workerConcurrent: 2 },
   doornroosje :{ workerCount: 2, workerConcurrent: 1, CPUReq: 'high',},
   dynamo: { workerCount: 2, workerConcurrent: 1 },
-  effenaar:{ workerCount: 4, workerConcurrent: 1 },
+  effenaar:{ workerCount: 4, workerConcurrent: 2 },
   gebrdenobel: { workerCount: 1, workerConcurrent: 1 },
   groeneengel: { workerCount: 1, workerConcurrent: 1 },
   iduna: { workerCount: 1, workerConcurrent: 1 },

@@ -1,4 +1,102 @@
 
+  dynamo-1 Error - 2:21:52 PM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'textContent')
+    at __puppeteer_evaluation_script__:95:21
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async longTextSocialsIframes (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dynamo.js:269:10)
+    at async dynamoScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dynamo.js:250:25)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:997:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:227:5) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'textContent')
+    at __puppeteer_evaluation_script__:95:21
+  
+  
+  dynamo-1 Error - 2:20:30 PM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'textContent')
+    at __puppeteer_evaluation_script__:96:20
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async longTextSocialsIframes (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dynamo.js:269:10)
+    at async dynamoScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dynamo.js:250:25)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:997:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:227:5) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'textContent')
+    at __puppeteer_evaluation_script__:96:20
+  
+  
+  dynamo-1 Error - 2:19:53 PM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'textContent')
+    at __puppeteer_evaluation_script__:96:20
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async longTextSocialsIframes (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dynamo.js:269:10)
+    at async dynamoScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dynamo.js:250:25)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:997:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:227:5) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'textContent')
+    at __puppeteer_evaluation_script__:96:20
+  
+  
+  dynamo-1 Error - 2:19:11 PM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'textContent')
+    at __puppeteer_evaluation_script__:96:20
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async longTextSocialsIframes (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dynamo.js:269:10)
+    at async dynamoScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dynamo.js:250:25)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:997:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:227:5) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'textContent')
+    at __puppeteer_evaluation_script__:96:20
+  
+  
+  dynamo-1 Error - 2:17:45 PM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'textContent')
+    at __puppeteer_evaluation_script__:96:20
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async longTextSocialsIframes (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dynamo.js:269:10)
+    at async dynamoScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dynamo.js:250:25)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:997:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:227:5) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'textContent')
+    at __puppeteer_evaluation_script__:96:20
+  
+  
+  dynamo-1 Error - 2:16:39 PM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'textContent')
+    at __puppeteer_evaluation_script__:96:20
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async longTextSocialsIframes (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dynamo.js:270:10)
+    at async dynamoScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dynamo.js:250:25)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:997:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:227:5) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'textContent')
+    at __puppeteer_evaluation_script__:96:20
+  
+  
+  dynamo-1 Error - 2:13:37 PM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'textContent')
+    at __puppeteer_evaluation_script__:96:20
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async longTextSocialsIframes (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dynamo.js:262:10)
+    at async dynamoScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/dynamo.js:249:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:997:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:227:5) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'textContent')
+    at __puppeteer_evaluation_script__:96:20
+  
+  
   dynamo-1 Error - 1:02:52 PM
   Error: Timeout baseEvent
     at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1128:16)

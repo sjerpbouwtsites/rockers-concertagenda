@@ -246,9 +246,16 @@ dynamoScraper.getPageInfo = async function ({ page, event}) {
     { months: this.months, event }
   );
 
-  const longTextRes = await longTextSocialsIframes(page)
-  for (let i in longTextRes){
-    pageInfo[i] = longTextRes[i]
+  try {
+    const longTextRes = await longTextSocialsIframes(page)
+    for (let i in longTextRes){
+      pageInfo[i] = longTextRes[i]
+    }    
+  } catch (longTextHTMLErr) {
+    pageInfo.errors.push({
+      error: longTextHTMLErr,
+      remarks: `longText ${pageInfo.pageInfo}`
+    })
   }
 
   return await this.getPageInfoEnd({pageInfo, stopFunctie, page, event})
@@ -352,18 +359,20 @@ async function longTextSocialsIframes(page){
 
     // dynamo custom
     const textBlokken = Array.from(document.querySelectorAll('.article-block.text-block'));
-    const laatsteBlok = textBlokken[textBlokken.length - 1];
-    if (laatsteBlok && laatsteBlok.textContent.includes('voorverkoop') 
-    || laatsteBlok.textContent.includes('sale')
-    || laatsteBlok.querySelector('h6')?.textContent.toLowerCase().includes('info')){
-      laatsteBlok.parentNode.removeChild(laatsteBlok)
+    if (textBlokken.length){
+      const laatsteBlok = textBlokken[textBlokken.length - 1];
+      if (laatsteBlok.textContent.includes('voorverkoop') 
+      || laatsteBlok.textContent.includes('sale')
+      || laatsteBlok.querySelector('h6')?.textContent.toLowerCase().includes('info')){
+        laatsteBlok.parentNode.removeChild(laatsteBlok)
+      }
     }
     // eind dynamo custom
 
     // verwijder ongewenste paragrafen over bv restaurants
     Array.from(document.querySelectorAll(`${textSelector} p, ${textSelector} span, ${textSelector} a`))
       .forEach(verwijder => {
-        const heeftEvilString = !!removeHTMLWithStrings.find(evilString => verwijder.textContent.includes(evilString))
+        const heeftEvilString = !!removeHTMLWithStrings.find(evilString => verwijder?.textContent.includes(evilString))
         if (heeftEvilString) {
           verwijder.parentNode.removeChild(verwijder)
         }
