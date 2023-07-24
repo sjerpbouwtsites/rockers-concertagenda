@@ -107,7 +107,12 @@ occiiScraper.makeBaseEventList = async function () {
   const {stopFunctie, page} = await this.makeBaseEventListStart()
 
   let rawEvents = await page.evaluate(({workerData,unavailabiltyTerms}) => {
-    return Array.from(document.querySelector('.occii-events-display-container').querySelectorAll(".occii-event-display"))
+
+    // al geweest
+    let rm = document.querySelector('h1 ~ h1 + .occii-events-display-container');
+    rm.parentNode.removeChild(rm);
+
+    return Array.from(document.querySelectorAll('.occii-events-display-container .occii-event-display'))
       .map((occiiEvent) => {
         
         const firstAnchor = occiiEvent.querySelector("a");

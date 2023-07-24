@@ -1,4 +1,28 @@
 
+  occii-1 Error - 8:33:32 PM
+  Error: Evaluation failed: TypeError: Failed to execute 'querySelectorAll' on 'Element': 1 argument required, but only 0 present.
+    at __puppeteer_evaluation_script__:7:102
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async occiiScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/occii.js:109:19)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:219:29) 
+  Evaluation failed: TypeError: Failed to execute 'querySelectorAll' on 'Element': 1 argument required, but only 0 present.
+    at __puppeteer_evaluation_script__:7:102
+  
+  
+  occii-1 Error - 8:33:04 PM
+  Error: Evaluation failed: DOMException: Failed to execute 'querySelector' on 'Document': '.occii-events-display-container ".occii-event-display' is not a valid selector.
+    at __puppeteer_evaluation_script__:7:32
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async occiiScraper.makeBaseEventList (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/occii.js:109:19)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:219:29) 
+  Evaluation failed: DOMException: Failed to execute 'querySelector' on 'Document': '.occii-events-display-container ".occii-event-display' is not a valid selector.
+    at __puppeteer_evaluation_script__:7:32
+  
+  
   neushoorn-0 Error - 8:29:24 PM
   Error: false
     at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1183:29
