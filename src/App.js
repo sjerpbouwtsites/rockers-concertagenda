@@ -153,7 +153,7 @@ class App extends React.Component {
   appBanner(title) {
     return (
       <div id="app-banner" className="app-banner cursive-font">
-        <h1 className="app-title">{title}</h1>
+        <h1 className="app-title">{title}<span id='app-title__events-count'></span></h1>
         {/* <span className="app-title-right">
           <span
             onClick={this.updateSwipeStateFilter}
