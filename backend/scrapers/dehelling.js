@@ -160,8 +160,6 @@ dehellingScraper.getPageInfo = async function ({ page,event }) {
         pageInfo: `<a class='page-info' href='${event.venueEventUrl}'>${event.title}</a>`,
         errors: [],
       };
-      res.priceTextcontent = document.querySelector('.c-event-meta__table')?.textContent ?? null;
-
       const lineupEl = document.querySelector('.c-event-content__lineup');
       if (lineupEl){
         const lineup = Array.from(document.querySelectorAll('.u-section__inner.c-event-content__lineup li'))
@@ -180,6 +178,11 @@ dehellingScraper.getPageInfo = async function ({ page,event }) {
     },
     {event}
   );
+
+  const priceRes = await this.NEWgetPriceFromHTML({page, event, pageInfo, selectors: ['.c-event-meta__table'], });
+  pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
+  pageInfo.price = priceRes.price;  
+
 
   const longTextRes = await longTextSocialsIframes(page)
   for (let i in longTextRes){

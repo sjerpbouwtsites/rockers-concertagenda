@@ -210,20 +210,17 @@ voltScraper.getPageInfo = async function ({ page, url, event}) {
         return res;
       
       }
-      res.priceTextcontent =
-        document.querySelector(".activity-price")
-          ?.textContent ?? '' ;
-
 
       return res;
     },
     { months: this.months, url, event}
   );
 
+  const priceRes = await this.NEWgetPriceFromHTML({page, event, pageInfo, selectors: [".activity-price"], });
+  pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
+  pageInfo.price = priceRes.price; 
+  
   const longTextRes = await longTextSocialsIframes(page)
-
-  this.dirtyLog(longTextRes)
-
   for (let i in longTextRes){
     pageInfo[i] = longTextRes[i]
   }

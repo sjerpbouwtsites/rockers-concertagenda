@@ -205,7 +205,7 @@ depulScraper.getPageInfo = async function ({ page, event }) {
       if (!rightHandDataColumn) {
         return res;
       }
-      res.priceTextcontent = rightHandDataColumn.textContent;
+
       rightHandDataColumn
         .querySelectorAll("h1 + ul li")
         ?.forEach((columnRow) => {
@@ -283,6 +283,10 @@ depulScraper.getPageInfo = async function ({ page, event }) {
     },
     { months: this.months , event}
   );
+  const priceRes = await this.NEWgetPriceFromHTML({page, event, pageInfo, selectors: [".column.right"], });
+  pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
+  pageInfo.price = priceRes.price;  
+
 
   const longTextRes = await longTextSocialsIframes(page)
   for (let i in longTextRes){

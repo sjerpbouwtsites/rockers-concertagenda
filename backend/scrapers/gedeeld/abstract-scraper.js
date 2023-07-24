@@ -27,6 +27,7 @@ export default class AbstractScraper {
   debugRawEventAsyncCheck = false;
   debugBaseEvents = false;
   debugPageInfo = false;
+  debugPrice = true;
 
   static unavailabiltyTerms = [
     'uitgesteld', 'verplaatst', 'locatie gewijzigd', 'besloten', 'afgelast', 'geannuleerd'
@@ -1000,8 +1001,9 @@ export default class AbstractScraper {
       event: singleEvent,
     });
 
-    // nabewerken page info
-    pageInfo.price = this.getPrice(pageInfo?.priceTextcontent);
+    // LEGACY
+    // // nabewerken page info
+    // pageInfo.price = this.getPrice(pageInfo?.priceTextcontent);
 
     // als single event nog music event moet worden.
     if (!(singleEvent instanceof MusicEvent)) {
@@ -1022,13 +1024,13 @@ export default class AbstractScraper {
       if (singleEvent.corrupted) {
         this.dirtyDebug({
           title: `💀 ${singleEvent.corrupted}`,
-          event: `<a class='single-event-check-notice single-event-check-notice--failure' href='${singleEvent.venueEventUrl}'>${singleEvent.title} Corr. </a>`,
+          event: `<a class='single-event-check-notice single-event-check-notice--failure' href='${singleEvent.venueEventUrl}'>${singleEvent.title}</a> Corr.`,
         })   
       }
       if (singleEvent.unavailable) {
         this.dirtyDebug({
           title: `😣 ${singleEvent.unavailable}`,
-          event: `<a class='single-event-check-notice single-event-check-notice--failure' href='${singleEvent.venueEventUrl}'>${singleEvent.title} Unav.</a>`,
+          event: `<a class='single-event-check-notice single-event-check-notice--failure' href='${singleEvent.venueEventUrl}'>${singleEvent.title}</a> Unav.`,
         })   
       }
       
@@ -1219,6 +1221,12 @@ export default class AbstractScraper {
     return pageInfo;    
   }
 
+  /**
+   * @deprecated
+   * @param {*} testText 
+   * @param {*} contextText 
+   * @returns price
+   */
   getPriceFromHTML(testText = null, contextText = null) {
     
     if (!testText) {
@@ -1263,18 +1271,172 @@ export default class AbstractScraper {
     return null;
   }  
 
-  // postPageInfoProcessing(pageInfo = null) {
-  //   const pageInfoCopy = { ...pageInfo };
-  //   if (!pageInfo) return {};
+  async NEWgetPriceFromHTML({page, event, pageInfo, selectors}) {
+
+    let priceRes = {
+      price: null,
+      errors: [],
+    };
+    const workingEventObj = {...event, ...pageInfo};
+    const pi = workingEventObj.pageInfo + '';
+
+    if (!page || !workingEventObj || !selectors.length){
+      priceRes.errors.push({
+        remarks: `geen page, workingEventObj, selectors`
+      })
+      this.debugPrice && this.dirtyTalk(`price €${priceRes.price} ${workingEventObj.title + ''}`)      
+      return priceRes;
+    }
+    
+    const selectorsCopy = [...selectors];
+    const firstSelector = selectorsCopy.shift();
+
+    const testText = await page.evaluate((selector)=>{
+      if (!document.querySelector(selector)) return false;
+      return Array.from(document.querySelectorAll(selector)).map(el=>el?.textContent).join('');
+      
+    },firstSelector)
+
+    if (!testText && selectorsCopy.length){
+      return await this.NEWgetPriceFromHTML({page, event, pageInfo, selectors:selectorsCopy})
+    }
+
+    if (!testText) {
+      if(testText === false) {
+        if (workingEventObj.soldOut){
+          priceRes.price = 0;
+          priceRes.errors.push({remarks: `uitverkocht. vergeef geen price ${pi}`});
+        } else {
+          priceRes.errors.push({remarks: `geen el in ${firstSelector} ${pi}`});
+        }
+      } else {
+        priceRes.errors.push({remarks: `lege tc in ${firstSelector} ${pi}`});
+      }
+      return priceRes
+    } 
+
+    if (testText.match(/start/i)) {
+      priceRes.price = null;
+      this.debugPrice && this.dirtyDebug({
+        title: workingEventObj.title + '',
+        price:priceRes.price,
+        type: 'NOG ONBEKEND',
+      })      
+      return priceRes
+    }
+
+    if (testText.match(/gratis|free/i)) {
+      priceRes.price = 0;
+      this.debugPrice && this.dirtyDebug({
+        title: workingEventObj.title + '',
+        price:priceRes.price,
+        type: 'GRATIS',
+      })      
+      return priceRes
+    }
+
+    const priceMatch = testText
+      .replaceAll(/[\s\r\t ]/g,'')
+      .match(/(?<euros>\d+)(?<scheiding>[,.]?)(?<centen>\d\d|-)/);
+
+    const priceMatchEuros = testText
+      .replaceAll(/[\s\r\t ]/g,'')
+      .match(/\d+/);
+
+    if (!Array.isArray(priceMatch) && !Array.isArray(priceMatchEuros)) {
+      if (selectorsCopy.length){
+        return await this.NEWgetPriceFromHTML({page, event,pageInfo, selectors:selectorsCopy})
+      } else {
+        if (testText.match(/uitverkocht|sold\sout/i)) {
+          priceRes.price = null;
+          this.debugPrice && this.dirtyDebug({
+            title: workingEventObj.title + '',
+            price: priceRes.price,
+            type: 'UITVERKOCHT',
+          })      
+          return priceRes
+        } else {
+          priceRes.errors.push({
+            remarks: `geen match met ${firstSelector} ${pi}`, 
+            toDebug: {testText, priceMatch}
+          });
+          return priceRes
+        }
+      }
+    }
+
+    if (!Array.isArray(priceMatch) && Array.isArray(priceMatchEuros)){
+      priceRes.price = Number(priceMatchEuros[0]);
+      this.checkIsNumber(priceRes, pi)
+      this.debugPrice && this.dirtyDebug({
+        title: workingEventObj.title + '',
+        price:priceRes.price,
+      })      
+      return priceRes;
+    }
+
+    if (priceMatch.groups?.centen && priceMatch.groups?.centen.includes('-')){
+      priceMatch.groups.centen = '00';
+    }
+
+    try {
+      if (priceMatch.groups.scheiding){
+        if (priceMatch.groups.euros && priceMatch.groups.centen){
+          priceRes.price = (Number(priceMatch.groups.euros) * 100 + Number(priceMatch.groups.centen)) / 100;
+        }
+        if (priceMatch.groups.euros){
+          priceRes.price = Number(priceMatch.groups.euros)
+        }
+      } else {
+        priceRes.price = Number(priceMatch.groups.euros)
+      }
+      this.checkIsNumber(priceRes, pi)
+      this.debugPrice && this.dirtyDebug({
+        title: workingEventObj.title + '',
+        price: priceRes.price
+      })      
+      return priceRes;
+
+    } catch (priceCalcErr) {
+
+      if (selectorsCopy.length) {
+        return await this.NEWgetPriceFromHTML({page, event,pageInfo, selectors:selectorsCopy})
+      } else {
+
+        if (testText.match(/uitverkocht|sold\sout/i)) {
+          priceRes.price = null;
+          this.debugPrice && this.dirtyDebug({
+            title: workingEventObj.title + '',
+            price: priceRes.price,
+            type: 'UITVERKOCHT',
+          })      
+          return priceRes
+        } else{
+          priceRes.push({
+            error: priceCalcErr,
+            remarks: `price calc err ${pi}`, 
+            toDebug: {testText, priceMatch, priceRes}
+          });
+          return priceRes          
+        }
+
+ 
+      }
+    }
   
-  //   if (pageInfo.priceTextcontent || pageInfo.priceContexttext) {
-  //     const context = pageInfo?.priceContexttext ?? null;
-  //     pageInfoCopy.price = Number(this.getPriceFromHTML(pageInfo.priceTextcontent, context));
-  //   }
-  
-  //   pageInfoCopy.longText = this.writeLongTextHTML(pageInfo);
-  //   return pageInfoCopy;
-  // }  
+    return priceRes;
+
+  }  
+
+  checkIsNumber(priceRes, pi){
+    if (isNaN(priceRes.price)){
+      priceRes.errors.push({
+        remarks: `NaN: ${priceRes.price} ${pi}`, 
+      });
+      return false;
+    }
+    return true;
+  }
 
   writeLongTextHTML(mergedEvent) {
     if (!mergedEvent) return null;

@@ -132,14 +132,7 @@ metropoolScraper.getPageInfo = async function ({ page, event}) {
       pageInfo: `<a class='page-info' href='${location.href}'>${event.title}</a>`,
       errors: [],
     };
-
-    res.priceTextcontent = 
-      document.querySelector(".doorPrice")?.textContent.trim() ?? '';
-
     res.shortText = event.shortText + ' ' + document.querySelector('.title-wrap-medium .text-support')?.textContent.trim()
-
-
-
     const startDateRauwMatch = document
       .querySelector(".event-title-wrap")
       ?.innerHTML.match(
@@ -212,6 +205,10 @@ metropoolScraper.getPageInfo = async function ({ page, event}) {
 
     return res;
   }, {months: this.months, event});
+
+  const priceRes = await this.NEWgetPriceFromHTML({page, event, pageInfo, selectors: [".doorPrice"], });
+  pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
+  pageInfo.price = priceRes.price;  
 
   const longTextRes = await longTextSocialsIframes(page)
   for (let i in longTextRes){

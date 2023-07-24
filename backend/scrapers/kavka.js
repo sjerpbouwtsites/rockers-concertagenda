@@ -220,8 +220,6 @@ kavkaScraper.getPageInfo = async function ({ page, event }) {
         })
       }
 
-      res.priceTextcontent =
-        document.querySelector(".prijzen")?.textContent.trim() ?? "";
 
       return res;
     } catch (caughtError) {
@@ -232,6 +230,10 @@ kavkaScraper.getPageInfo = async function ({ page, event }) {
       });
     }
   }, {event});
+
+  const priceRes = await this.NEWgetPriceFromHTML({page, event, pageInfo, selectors: [".prijzen"], });
+  pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
+  pageInfo.price = priceRes.price;  
 
   const longTextRes = await longTextSocialsIframes(page)
   for (let i in longTextRes){

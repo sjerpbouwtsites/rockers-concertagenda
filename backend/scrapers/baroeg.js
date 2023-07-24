@@ -179,20 +179,22 @@ baroegScraper.getPageInfo = async function ({ page, event }) {
         errors: [],
       };
 
-      res.priceTextcontent =
-        document.querySelector(".wp_theatre_event_tickets")?.textContent ??
-        '';
-
       res.soldOut = !!(document.querySelector('.wp_theatre_event_tickets_status_soldout') ?? null)
 
       return res;
     }, {event}
     
   );
+
+  const priceRes = await this.NEWgetPriceFromHTML({page, event, pageInfo, selectors: [".wp_theatre_event_tickets"], });
+  pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
+  pageInfo.price = priceRes.price;
+
   const longTextRes = await longTextSocialsIframes(page)
   for (let i in longTextRes){
     pageInfo[i] = longTextRes[i]
   }
+
   return await this.getPageInfoEnd({pageInfo, stopFunctie, page, event})
   
 };

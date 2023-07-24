@@ -183,7 +183,7 @@ dbsScraper.getPageInfo = async function ({ page, event }) {
       "";
     res.ticketURL = document.querySelector('.tribe-events-event-url a')?.href ?? null;
     if (!res.ticketURL){
-      res.priceTextcontent = `€0,00`;
+      res.price ='0';
     }
 
     return res;
@@ -195,16 +195,31 @@ dbsScraper.getPageInfo = async function ({ page, event }) {
   }
 
   if (pageInfo.ticketURL && !pageInfo.unavailable) {
+    this.debugPrice && this.dirtyTalk(`gaan naar url ${pageInfo.ticketURL}`)
     try {
       await page.goto(pageInfo.ticketURL)
-      await page.waitForSelector('[data-testid]', {timeout: 6500})
-      await _t.waitFor(250);
-      pageInfo.priceTextcontent = await page.evaluate(()=>{
-        return document.querySelectorAll('[data-testid]')[1]?.textContent ?? null
+      //const priceRes = await this.NEWgetPriceFromHTML({page, event, pageInfo, selectors: ['[data-testid="ticket-price"]'], });
+      const html = await page.evaluate(()=>{
+        return document.querySelector('body').innerHTML;
+      }).catch(err => {
+        this.dirtyDebug({
+          title: 'error ticketURL',
+          err
+        })        
       })
+     
+      const price = Number(html.match(/€\d{1,3}[,.]\d\d/)[0].replace(/€/,'').replace(/[,.]/,'')) / 100
+      pageInfo.price = price
+
+      // pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
+      // pageInfo.price = priceRes.price;
+
     } catch (caughtError) {
       // er is gewoon geen prijs beschikbaar.
-      page.priceTextcontent = 'onbekend';
+      this.dirtyDebug({
+        title: 'error ticketURL',
+        caughtError
+      })
     }
   }
   

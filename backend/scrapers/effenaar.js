@@ -116,9 +116,7 @@ effenaarScraper.getPageInfo = async function ({ page, event }) {
         remarks: `image missing ${res.pageInfo}`
       })
     }  
-    res.priceTextcontent = 
-      document.querySelector(".tickets-btn")?.textContent ?? '';
-
+    
     const dateText =
         document.querySelector(".header-meta-date")?.textContent.trim() ?? "";
     if (!dateText) {
@@ -180,6 +178,10 @@ effenaarScraper.getPageInfo = async function ({ page, event }) {
 
     return res;
   },{ months: this.months,event});
+
+  const priceRes = await this.NEWgetPriceFromHTML({page, event, pageInfo, selectors: [".tickets-btn", ".tickets-dropdown"], });
+  pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
+  pageInfo.price = priceRes.price;  
 
   const longTextRes = await longTextSocialsIframes(page)
   for (let i in longTextRes){

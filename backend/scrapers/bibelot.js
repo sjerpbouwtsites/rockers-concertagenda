@@ -182,15 +182,6 @@ bibelotScraper.getPageInfo = async function ({ page, event }) {
         });
       }
 
-      const verkoopElAr = Array.from(
-        document.querySelectorAll(".meta-info")
-      ).filter((metaInfo) => {
-        return metaInfo?.textContent.toLowerCase().includes("verkoop");
-      });
-
-      if (verkoopElAr && Array.isArray(verkoopElAr) && verkoopElAr.length) {
-        res.priceTextcontent = verkoopElAr[0].textContent;
-      }
       const imageMatch = document
         .querySelector(".achtergrond-afbeelding")
         ?.style.backgroundImage.match(/https.*.png|https.*.jpg|https.*.jpeg/);
@@ -213,6 +204,10 @@ bibelotScraper.getPageInfo = async function ({ page, event }) {
     },
     { months: this.months, event }
   );
+
+  const priceRes = await this.NEWgetPriceFromHTML({page, event, pageInfo, selectors: [".meta-colom"], });
+  pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
+  pageInfo.price = priceRes.price;
 
   const longTextRes = await longTextSocialsIframes(page)
   for (let i in longTextRes){
