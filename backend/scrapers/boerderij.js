@@ -152,7 +152,6 @@ boerderijScraper.getPageInfo = async function ({ event }) {
   const priceRes = await this.boerderijCustomPrice(`${ajaxRes?.entrance_price ?? ''} ${ajaxRes?.ticket_price ?? ''}`, res.pageInfo, res.title);
   res.errors = res.errors.concat(priceRes.errors);
   res.price = priceRes.price;
-  this.dirtyTalk(res.price)
     
   try {
     res.startDateTime = new Date(
