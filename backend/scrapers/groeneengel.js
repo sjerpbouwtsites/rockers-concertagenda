@@ -148,7 +148,7 @@ groeneEngelScraper.makeBaseEventList = async function () {
 
   baseEvents = baseEvents.map(this.isMusicEventCorruptedMapper);
   
-  //this.saveBaseEventlist(workerData.family, baseEvents)
+  this.saveBaseEventlist(workerData.family, baseEvents)
   const thisWorkersEvents = baseEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
   return await this.makeBaseEventListEnd({
     stopFunctie, rawEvents: thisWorkersEvents}

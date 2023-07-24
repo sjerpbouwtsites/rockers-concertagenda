@@ -121,7 +121,7 @@ voltScraper.makeBaseEventList = async function () {
     
   rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
   
-  //this.saveBaseEventlist(workerData.family, rawEvents)
+  this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
   return await this.makeBaseEventListEnd({
     stopFunctie, rawEvents: thisWorkersEvents}

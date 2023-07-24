@@ -110,9 +110,12 @@ async function metalFanDoURL(page, url, qwm){
             const dayString = caldateTC.match(/\d+/)[0].padStart(2, "0");
             const monthString = caldateTC.match(/[a-z]{3}/)[0].trim();
             const monthNumber = months[monthString];
+
+            const year = url.includes('2024') ? '2024' : '2023' //TODO fix
+
             eventDate =
               monthNumber && dayString
-                ? new Date(`2023-${monthNumber}-${dayString}`).toISOString()
+                ? new Date(`${year}-${monthNumber}-${dayString}`).toISOString()
                 : null;
           }
         }
