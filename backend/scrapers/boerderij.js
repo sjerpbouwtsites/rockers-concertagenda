@@ -3,8 +3,7 @@ import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import axios from "axios";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 
-// SCRAPER CONFIG
-
+//#region [rgba(0, 60, 0, 0.3)]       SCRAPER CONFIG
 const boerderijScraper = new AbstractScraper(makeScraperConfig({
   maxExecutionTime: 30004,
   workerData: Object.assign({}, workerData),
@@ -30,9 +29,12 @@ const boerderijScraper = new AbstractScraper(makeScraperConfig({
     }
   }
 }));
+//#endregion                          SCRAPER CONFIG
 
+boerderijScraper.listenToMasterThread();
+
+//#region [rgba(0, 120, 0, 0.3)]      RAW EVENT CHECK
 boerderijScraper.singleRawEventCheck = async function(event){
-
   const isRefused = await this.rockRefuseListCheck(event, event.title)
   if (isRefused.success) return {
     reason: isRefused.reason,
@@ -58,13 +60,13 @@ boerderijScraper.singleRawEventCheck = async function(event){
     event,
     success: true
   }
-  
 }
+//#endregion                          RAW EVENT CHECK
 
-boerderijScraper.listenToMasterThread();
+//#region [rgba(0, 180, 0, 0.3)]      SINGLE EVENT CHECK
+//#endregion                          SINGLE EVENT CHECK
 
-// MAKE BASE EVENTS
-
+//#region [rgba(0, 240, 0, 0.3)]      BASE EVENT LIST
 boerderijScraper.makeBaseEventList = async function () {
 
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
@@ -99,8 +101,9 @@ boerderijScraper.makeBaseEventList = async function () {
   return await this.makeBaseEventListEnd({
     stopFunctie, rawEvents: thisWorkersEvents}
   );
-
 };
+//#endregion                          BASE EVENT LIST
+
 
 // GET PAGE INFO
 
@@ -139,21 +142,6 @@ boerderijScraper.getPageInfo = async function ({ event }) {
     return await this.getPageInfoEnd({res, stopFunctie})
   }
 
-  try {
-    const youtubeVideoIDMatch = ajaxRes?.video ?? ""; //ajaxRes.video.match(/embed\/(\w+)?/);
-    let youtubeIframe;
-    if (youtubeVideoIDMatch && youtubeVideoIDMatch.length) {
-      youtubeIframe = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${youtubeVideoIDMatch[0]}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
-    }
-    res.longTextHTML =`${ajaxRes.description}<br>${youtubeIframe}`;
-  } catch (catchedError) {
-    res.errors.push({
-      error: catchedError,
-      remarks: `Mislukt iframe te knutselen met video ${res.pageInfo}`,
-      toDebug: ajaxRes
-    });
-  }
-
   if (!event.image){
     res.errors.push({
       remarks: `image missing ${res.pageInfo}`
@@ -187,8 +175,28 @@ boerderijScraper.getPageInfo = async function ({ event }) {
     });
   }
 
+  // LONG HTML HIER WANT BOERDERIJ VIA AJAX.....
+  // #region [rgba(60, 0, 0, 0.5)]     LONG HTML
+
+  // media obj maken voordat HTML verdwijnt
+  res.mediaForHTML = !ajaxRes?.video ? [] : [{
+    outer: ajaxRes.video,
+    src: null,
+    id: null,
+    type: 'youtube'
+  }] // socials obj maken voordat HTML verdwijnt
+  res.socialsForHTML = []
+
+  // tekst.
+  res.textForHTML = ajaxRes.description
+
+  // #endregion                        LONG HTML
+
+
   res.soldOut = ajaxRes?.label?.title?.toLowerCase().includes('uitverkocht') ?? null
 
   return await this.getPageInfoEnd({pageInfo: res, stopFunctie})
 
 };
+
+

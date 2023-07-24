@@ -4,8 +4,7 @@ import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import { neushoornMonths } from "../mods/months.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 
-// SCRAPER CONFIG
-
+//#region [rgba(0, 60, 0, 0.3)]       SCRAPER CONFIG
 const neushoornScraper = new AbstractScraper(makeScraperConfig({
   workerData: Object.assign({}, workerData),
   puppeteerConfig: {
@@ -23,11 +22,11 @@ const neushoornScraper = new AbstractScraper(makeScraperConfig({
     }
   }
 }));
+//#endregion                          SCRAPER CONFIG
 
 neushoornScraper.listenToMasterThread();
 
-// SINGLE RAW EVENT CHECK
-
+//#region [rgba(0, 120, 0, 0.3)]      RAW EVENT CHECK
 neushoornScraper.singleRawEventCheck = async function(event){
 
   const workingTitle = this.cleanupEventTitle(event.title);
@@ -73,11 +72,13 @@ neushoornScraper.singleRawEventCheck = async function(event){
   return isRockRes;
 
 }
+//#endregion                          RAW EVENT CHECK
 
-// MAKE BASE EVENTS
+//#region [rgba(0, 180, 0, 0.3)]      SINGLE EVENT CHECK
+//#endregion                          SINGLE EVENT CHECK
 
+//#region [rgba(0, 240, 0, 0.3)]      BASE EVENT LIST
 neushoornScraper.makeBaseEventList = async function () {
-
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
   if (availableBaseEvents){
     const thisWorkersEvents = availableBaseEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
@@ -131,9 +132,9 @@ neushoornScraper.makeBaseEventList = async function () {
     stopFunctie, rawEvents: thisWorkersEvents}
   );
 };
+//#endregion                          BASE EVENT LIST
 
 // GET PAGE INFO
-
 neushoornScraper.getPageInfo = async function ({ page,event }) {
   
   const {stopFunctie} =  await this.getPageInfoStart()
@@ -204,10 +205,6 @@ neushoornScraper.getPageInfo = async function ({ page,event }) {
         });
       }
 
-      res.longTextHTML += Array.from(document.querySelectorAll('.tophits iframe'))
-        .map(frame => frame.outerHTML)
-        .join('')
-
       const imageMatch = document
         .querySelector(".header--theatre")
         ?.style.backgroundImage.match(/https.*.png|https.*.jpg/);
@@ -225,6 +222,174 @@ neushoornScraper.getPageInfo = async function ({ page,event }) {
     { months: neushoornMonths, event }
   );
 
+  const longTextRes = await longTextSocialsIframes(page)
+  for (let i in longTextRes){
+    pageInfo[i] = longTextRes[i]
+  }
+
   return await this.getPageInfoEnd({pageInfo, stopFunctie, page, event})
   
 };
+
+// #region [rgba(60, 0, 0, 0.5)]     LONG HTML
+async function longTextSocialsIframes(page){
+
+  return await page.evaluate(()=>{
+    const res = {}
+
+      
+    const textSelector = 'sidebar + .content';
+    const mediaSelector = [".responsive-embed iframe, .tophits iframe"].join(", ");
+    const removeEmptyHTMLFrom = textSelector;
+    const socialSelector = [
+      ".links-list__link[href*='facebook'][href*='events']"
+    ].join(", ");
+    const removeSelectors = [
+      "[class*='icon-']",
+      "[class*='fa-']",
+      ".fa",
+      `${textSelector} script`,
+      `${textSelector} img`,
+      `${textSelector} .responsive-embed`,
+      `${textSelector} .summary`,
+
+    ].join(", ");
+
+    const attributesToRemove = [
+      "style",
+      "hidden",
+      "_target",
+      "frameborder",
+      "onclick",
+      "aria-hidden",
+      "allow",
+      "allowfullscreen",
+      "data-deferlazy",
+      "width",
+      "height",
+    ];
+    const attributesToRemoveSecondRound = ["class", "id"];
+    const removeHTMLWithStrings = [];
+
+    // eerst onzin attributes wegslopen
+    const socAttrRemSelAdd = `${
+      socialSelector.length ? `, ${socialSelector}` : ""
+    }`;
+    const mediaAttrRemSelAdd = `${
+      mediaSelector.length ? `, ${mediaSelector} *, ${mediaSelector}` : ""
+    }`;      
+    document
+      .querySelectorAll(`${textSelector} *${socAttrRemSelAdd}${mediaAttrRemSelAdd}`)
+      .forEach((elToStrip) => {
+        attributesToRemove.forEach((attr) => {
+          if (elToStrip.hasAttribute(attr)) {
+            elToStrip.removeAttribute(attr);
+          }
+        });
+      });
+
+ 
+    //media obj maken voordat HTML verdwijnt
+    res.mediaForHTML = !mediaSelector.length ? '' : Array.from(
+      document.querySelectorAll(mediaSelector)
+    ).map((bron) => {
+      bron.className = "";
+      
+    
+      if (bron.hasAttribute('src') && bron.getAttribute('src').includes('youtube')) {
+        return {
+          outer: bron.outerHTML,
+          src: bron.src,
+          id: null,
+          type: "youtube",
+        };
+      } 
+      
+
+      // terugval???? nog niet bekend met alle opties.
+      return {
+        outer: bron.outerHTML,
+        src: bron.src,
+        id: null,
+        type: bron.src.includes("spotify")
+          ? "spotify"
+          : bron.src.includes("youtube")
+            ? "youtube"
+            : "bandcamp",
+      };
+    });
+
+    //socials obj maken voordat HTML verdwijnt
+    res.socialsForHTML = !socialSelector
+      ? ""
+      : Array.from(document.querySelectorAll(socialSelector)).map((el) => {
+        el.querySelectorAll("i, svg, img").forEach((rm) =>
+          rm.parentNode.removeChild(rm)
+        );
+
+        if (!el.textContent.trim().length) {
+          if (el.href.includes("facebook")) {
+            el.textContent = "Facebook";
+          } else if (el.href.includes("twitter")) {
+            el.textContent = "Tweet";
+          } else {
+            el.textContent = "Onbekende social";
+          }
+        }
+        el.className = "";
+        el.target = "_blank";
+        return el.outerHTML;
+      });
+
+    // stript HTML tbv text
+    removeSelectors.length &&
+      document
+        .querySelectorAll(removeSelectors)
+        .forEach((toRemove) => toRemove.parentNode.removeChild(toRemove));
+
+    // verwijder ongewenste paragrafen over bv restaurants
+    Array.from(
+      document.querySelectorAll(
+        `${textSelector} p, ${textSelector} span, ${textSelector} a`
+      )
+    ).forEach((verwijder) => {
+      const heeftEvilString = !!removeHTMLWithStrings.find((evilString) =>
+        verwijder.textContent.includes(evilString)
+      );
+      if (heeftEvilString) {
+        verwijder.parentNode.removeChild(verwijder);
+      }
+    });
+
+    // lege HTML eruit cq HTML zonder tekst of getallen
+    document
+      .querySelectorAll(`${removeEmptyHTMLFrom} > *`)
+      .forEach((checkForEmpty) => {
+        const leegMatch = checkForEmpty.innerHTML
+          .replace("&nbsp;", "")
+          .match(/[\w\d]/g);
+        if (!Array.isArray(leegMatch)) {
+          checkForEmpty.parentNode.removeChild(checkForEmpty);
+        }
+      });
+
+    // laatste attributen eruit.
+    document.querySelectorAll(`${textSelector} *`).forEach((elToStrip) => {
+      attributesToRemoveSecondRound.forEach((attr) => {
+        if (elToStrip.hasAttribute(attr)) {
+          elToStrip.removeAttribute(attr);
+        }
+      });
+    });
+
+    // tekst.
+    res.textForHTML = Array.from(document.querySelectorAll(textSelector))
+      .map((el) => el.innerHTML)
+      .join("");
+
+
+    return res;
+  })
+  
+}
+// #endregion                        LONG HTML

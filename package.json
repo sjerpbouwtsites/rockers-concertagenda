@@ -18,6 +18,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "prettier": "prettier -w --loglevel=silent ~/dev/apache/concertagenda/public/texts",
     "backend": "killall -s 9 chrome; cd ~/dev/apache/concertagenda/backend; clear; node index.js force=all; prettier -w --loglevel=silent ~/dev/apache/concertagenda/public/texts;clear; echo 'backend gedaan';"
   },
   "eslintConfig": {

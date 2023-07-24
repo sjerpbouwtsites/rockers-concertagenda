@@ -3,8 +3,7 @@ import getVenueMonths from "../mods/months.js";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 
-// SCRAPER CONFIG
-
+//#region [rgba(0, 60, 0, 0.3)]       SCRAPER CONFIG
 const occiiScraper = new AbstractScraper(makeScraperConfig({
   maxExecutionTime: 120000,
   workerData: Object.assign({}, workerData),
@@ -26,11 +25,11 @@ const occiiScraper = new AbstractScraper(makeScraperConfig({
     }
   }
 }));
+//#endregion                          SCRAPER CONFIG
 
 occiiScraper.listenToMasterThread();
 
-// SINGLE RAW EVENT CHECK
-
+//#region [rgba(0, 120, 0, 0.3)]      RAW EVENT CHECK
 occiiScraper.singleRawEventCheck = async function(event){
   const tl = this.cleanupEventTitle(event.title);
   const isRefused = await this.rockRefuseListCheck(event, tl)
@@ -62,15 +61,12 @@ occiiScraper.singleRawEventCheck = async function(event){
     success: true,
     event
   }  
-
 }
+//#endregion                          RAW EVENT CHECK
 
-// SINGLE MERGED EVENT CHECK
-
+//#region [rgba(0, 180, 0, 0.3)]      SINGLE EVENT CHECK
 occiiScraper.singleMergedEventCheck = async function(event, pageInfo){
-
   const workingTitle = this.cleanupEventTitle(event.title)
-
   const isRefused = await this.rockRefuseListCheck(event, workingTitle)
   if (isRefused.success) {
     return {
@@ -79,12 +75,10 @@ occiiScraper.singleMergedEventCheck = async function(event, pageInfo){
       success: false
     }
   }
-
   const isAllowed = await this.rockAllowListCheck(event, workingTitle)
   if (isAllowed.success) {
     return isAllowed;  
   }  
-
   const ss = !(pageInfo?.genres?.include('electronic') ?? false);
   if (ss) {
     this.saveAllowedTitle(workingTitle)
@@ -96,11 +90,10 @@ occiiScraper.singleMergedEventCheck = async function(event, pageInfo){
     success: ss,
     event
   };
-  
 }
+//#endregion                          SINGLE EVENT CHECK
 
-// MAKE BASE EVENTS
-
+//#region [rgba(0, 240, 0, 0.3)]      BASE EVENT LIST
 occiiScraper.makeBaseEventList = async function () {
 
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
@@ -144,8 +137,9 @@ occiiScraper.makeBaseEventList = async function () {
   return await this.makeBaseEventListEnd({
     stopFunctie, rawEvents: thisWorkersEvents}
   );
-  
 };
+//#endregion                          BASE EVENT LIST
+
 // GET PAGE INFO
 
 occiiScraper.getPageInfo = async function ({ page, event}) {
@@ -207,12 +201,195 @@ occiiScraper.getPageInfo = async function ({ page, event}) {
 
     res.genre = Array.from(document.querySelectorAll('.event-categories [href*="events/categories"]')).map(cats => cats.textContent.toLowerCase().trim())
 
-    document.querySelector(".occii-event-notes h1")?.parentNode.removeChild(document.querySelector(".occii-event-notes h1"))
-    
-    res.longTextHTML = document.querySelector(".occii-event-notes").innerHTML;
     return res;
   }, {months: getVenueMonths('occii'), event}); //TODO is verouderde functie getVenueMonths
+
+  const longTextRes = await longTextSocialsIframes(page)
+  for (let i in longTextRes){
+    pageInfo[i] = longTextRes[i]
+  }
 
   return await this.getPageInfoEnd({pageInfo, stopFunctie, page, event})
   
 };
+
+// #region [rgba(60, 0, 0, 0.5)]     LONG HTML
+async function longTextSocialsIframes(page){
+
+  return await page.evaluate(()=>{
+    const res = {}
+
+
+    const textSelector = '.occii-event-notes';
+    const mediaSelector = [
+      `${textSelector} [itemprop='video']`,
+      `${textSelector} iframe[src*='bandcamp']`,
+    ].join(", ");
+    const removeEmptyHTMLFrom = textSelector;
+    const socialSelector = [
+      `${textSelector} [href*='instagram']`,
+      `${textSelector} [href*='facebook']`,
+      `${textSelector} [href*='fb.me']`,
+      `${textSelector} a[href*='bandcamp.com']`,
+    ].join(", ");
+    const removeSelectors = [
+      "[class*='icon-']",
+      "[class*='fa-']",
+      ".fa",
+      `${textSelector} [href*='instagram']`,
+      `${textSelector} [href*='facebook']`,
+      `${textSelector} [href*='fb.me']`,      
+      `${textSelector} a[href*='bandcamp.com']`,
+      `${textSelector} script`,
+      `${textSelector} noscript`,
+      `${textSelector} style`,
+      `${textSelector} meta`,
+      `${textSelector} h1`,
+      `${textSelector} img`,
+      `${textSelector} [itemprop="video"]`,
+    ].join(", ");
+
+    const attributesToRemove = [
+      "style",
+      "hidden",
+      "_target",
+      "frameborder",
+      "onclick",
+      "aria-hidden",
+      "allow",
+      "allowfullscreen",
+      "data-deferlazy",
+      "width",
+      "height",
+    ];
+    const attributesToRemoveSecondRound = ["class", "id"];
+    const removeHTMLWithStrings = [];
+
+    // eerst onzin attributes wegslopen
+    const socAttrRemSelAdd = `${
+      socialSelector.length ? `, ${socialSelector}` : ""
+    }`;
+    const mediaAttrRemSelAdd = `${
+      mediaSelector.length ? `, ${mediaSelector} *, ${mediaSelector}` : ""
+    }`;      
+    document
+      .querySelectorAll(`${textSelector} *${socAttrRemSelAdd}${mediaAttrRemSelAdd}`)
+      .forEach((elToStrip) => {
+        attributesToRemove.forEach((attr) => {
+          if (elToStrip.hasAttribute(attr)) {
+            elToStrip.removeAttribute(attr);
+          }
+        });
+      });
+
+   
+    //media obj maken voordat HTML verdwijnt
+    res.mediaForHTML = !mediaSelector.length ? '' : Array.from(
+      document.querySelectorAll(mediaSelector)
+    ).map((bron) => {
+      bron.className = "";
+
+      if (bron?.src && bron.src.includes('bandcamp')){
+        return {
+          outer: bron.outerHTML,
+          src: bron.src,
+          id: null,
+          type: 'bandcamp'
+        }
+      }
+        
+      return {
+        outer: null,
+        src: null,
+        id: bron.id.match(/_(.*)/)[1],
+        type: "youtube",
+      };
+ 
+      // terugval???? nog niet bekend met alle opties.
+    //   return {
+    //     outer: bron.outerHTML,
+    //     src: bron.src,
+    //     id: null,
+    //     type: bron.src.includes("spotify")
+    //       ? "spotify"
+    //       : bron.src.includes("youtube")
+    //         ? "youtube"
+    //         : "bandcamp",
+    //   };
+    });
+
+    //socials obj maken voordat HTML verdwijnt
+    res.socialsForHTML = !socialSelector
+      ? ""
+      : Array.from(document.querySelectorAll(socialSelector)).map((el) => {
+        el.querySelectorAll("i, svg, img").forEach((rm) =>
+          rm.parentNode.removeChild(rm)
+        );
+
+        if (!el.textContent.trim().length) {
+          if (el.href.includes("facebook")) {
+            el.textContent = "Facebook";
+          } else if (el.href.includes("twitter")) {
+            el.textContent = "Tweet";
+          } else {
+            el.textContent = "Onbekende social";
+          }
+        }
+        el.className = "";
+        el.target = "_blank";
+        return el.outerHTML;
+      });
+
+    // stript HTML tbv text
+    removeSelectors.length &&
+        document
+          .querySelectorAll(removeSelectors)
+          .forEach((toRemove) => toRemove.parentNode.removeChild(toRemove));
+
+    // verwijder ongewenste paragrafen over bv restaurants
+    Array.from(
+      document.querySelectorAll(
+        `${textSelector} p, ${textSelector} span, ${textSelector} a`
+      )
+    ).forEach((verwijder) => {
+      const heeftEvilString = !!removeHTMLWithStrings.find((evilString) =>
+        verwijder.textContent.includes(evilString)
+      );
+      if (heeftEvilString) {
+        verwijder.parentNode.removeChild(verwijder);
+      }
+    });
+
+    // lege HTML eruit cq HTML zonder tekst of getallen
+    document
+      .querySelectorAll(`${removeEmptyHTMLFrom} > *`)
+      .forEach((checkForEmpty) => {
+        const leegMatch = checkForEmpty.innerHTML
+          .replace("&nbsp;", "")
+          .match(/[\w\d]/g);
+        if (!Array.isArray(leegMatch)) {
+          checkForEmpty.parentNode.removeChild(checkForEmpty);
+        }
+      });
+
+    // laatste attributen eruit.
+    document.querySelectorAll(`${textSelector} *`).forEach((elToStrip) => {
+      attributesToRemoveSecondRound.forEach((attr) => {
+        if (elToStrip.hasAttribute(attr)) {
+          elToStrip.removeAttribute(attr);
+        }
+      });
+    });
+
+    // tekst.
+    res.textForHTML = Array.from(document.querySelectorAll(textSelector))
+      .map((el) => el.innerHTML)
+      .join("");
+
+
+
+    return res;
+  })
+  
+}
+// #endregion                        LONG HTML

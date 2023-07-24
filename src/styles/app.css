@@ -1,7 +1,7 @@
 .app {
   /* display: flex; */
   position: relative;
-  background-color: var(--anthracite);
+  /* background-color: var(--anthracite); */
 }
 .app-view {
   width: 100vw;
@@ -14,4 +14,14 @@
 img {
   max-width: 100%;
   height: auto;
+}
+
+iframe {
+  border: 0;
+}
+
+blockquote{
+  font-size: .75em;
+  font-style: italic;
+  margin: 1em 1.5em;
 }

@@ -18,14 +18,25 @@ class EventBlocks extends React.Component {
     this.createLocation = this.createLocation.bind(this);
     this.createDates = this.createDates.bind(this);
     this.add100ToMaxEventsShown = this.add100ToMaxEventsShown.bind(this);
+    this.escFunction = this.escFunction.bind(this);
+    this.gescrolledBuitenBeeldEnlarged = this.gescrolledBuitenBeeldEnlarged.bind(this);
+    
   }
 
+ 
   componentDidUpdate() {
     if (!this.state.eventDataLoaded && !this.state.eventDataLoading) {
       this.getEventData();
     }
     this.sluitEnlarged = this.sluitEnlarged.bind(this);
   }
+
+  componentDidMount(){
+    document.addEventListener("keydown", this.escFunction, false);
+  }
+  componentWillUnmount(){
+    document.removeEventListener("keydown", this.escFunction, false);
+  }  
 
   //#endregion constructor en life cycle
 
@@ -57,7 +68,30 @@ class EventBlocks extends React.Component {
     });
   }
 
-  sluitEnlarged(){
+  escFunction(event){
+    if (event.key === "Escape") {
+      this.sluitEnlarged()
+    }
+  }
+
+  gescrolledBuitenBeeldEnlarged(minYOffset,maxYOffset ){
+    
+    const workingMinY = minYOffset - 250;
+    const workingMaxY = maxYOffset;
+    setTimeout(()=>{
+      if (window.scrollY > workingMinY && window.scrollY < workingMaxY){
+        if (this.someEventIsEnlarged(this.state.musicEvents)){
+          this.gescrolledBuitenBeeldEnlarged(minYOffset, maxYOffset);
+        }
+        return;
+      } else {
+        this.sluitEnlarged();
+      }
+    }, 100)
+  }
+
+  async sluitEnlarged(){
+    console.log('sluit enlarged');
     let nieuweEventsState = this.state.musicEvents.map(event => {
       event.enlarged = false;
       return event;
@@ -65,13 +99,42 @@ class EventBlocks extends React.Component {
     this.setState({ musicEvents: nieuweEventsState }, ()=>{
       console.log('na set state')
     });    
+    
+    await this.waitFor(10);
+    return this.recursieveStijlEraf();
+    
   }
+
+  async recursieveStijlEraf(){
+    console.log('recursieve stijl eraf')
+    document.querySelectorAll('.event-block[style]').forEach(el => {
+      el.setAttribute('data-was-enlarged', true);
+      el.removeAttribute('style')
+    })
+    if (document.querySelector('.event-block[style]')){
+      await this.waitFor(10);
+      return this.recursieveStijlEraf()
+    } else if (document.querySelector('[data-was-enlarged')){
+      await this.waitFor(5);
+      const wasEnlarged = document.querySelector('[data-was-enlarged');
+      window.scrollTo(0, wasEnlarged.offsetTop + document.getElementById("app-banner").clientHeight - 75);
+      wasEnlarged.removeAttribute('data-was-enlarged');
+    }
+    return true;
+    
+  }
+
   async loadLongerText(musicEventKey) {
 
-    const momenteelEnlarged = !!this.someEventIsEnlarged(this.state.musicEvents);
+
+    const isMomenteelEnlarged = !!this.someEventIsEnlarged(this.state.musicEvents);
+    await this.sluitEnlarged();
+    //document.querySelectorAll('.event-block[style]').forEach(el => el.removeAttribute('style'))
     const thisEvent = this.state.musicEvents[musicEventKey];
+    const thisElement = document.getElementById(`event-id-${musicEventKey}`);
     let readyToLoad = false;
     // alles ontlargen.
+    
     let nieuweEventsState = this.state.musicEvents.map(event => {
       event.enlarged = false;
       return event;
@@ -81,9 +144,7 @@ class EventBlocks extends React.Component {
       readyToLoad = true;
     });
     
-    if (momenteelEnlarged) {
-      console.log('momenteel enlarged');
-      console.log(momenteelEnlarged)
+    if (isMomenteelEnlarged) {
       return; 
     }
 
@@ -91,29 +152,12 @@ class EventBlocks extends React.Component {
       console.log('verdomme wat snel!')
     }
 
-    await this.waitFor(100);
-    
-    if (!readyToLoad){
-      console.log('wacht 1')
-      await this.waitFor(100);
-    } if (!readyToLoad){
-      console.log('wacht 2')
-      await this.waitFor(100);
-    } if (!readyToLoad){
-      console.log('wacht 3')
-      await this.waitFor(100);
-    } if (!readyToLoad){
-      console.log('wacht 4')
-      await this.waitFor(100);
-    } if (!readyToLoad){
-      console.log('wacht 5')
-      await this.waitFor(100);
-    }
-
     if (!thisEvent.longText) {
       console.log('geen longtekst')
       return;
     }
+
+    const initialElementOffsetTop = thisElement.offsetTop;
 
     await fetch(thisEvent.longText.replace("../public/", "/"), {})
       .then((response) => response.text())
@@ -122,12 +166,22 @@ class EventBlocks extends React.Component {
         oldEvents[musicEventKey].enlarged = true;
         oldEvents[musicEventKey].longTextHTML = text;
         this.setState({ musicEvents: [...oldEvents] });
+
         setTimeout(() => {
           const blockEl = document.getElementById(`event-id-${musicEventKey}`);
           const appBannerHeight =
             document.getElementById("app-banner").clientHeight;
-          window.scrollTo(0, blockEl.offsetTop + appBannerHeight);
+          if (window.innerWidth > 1024){
+            console.log(document.body.offsetHeight, thisElement.offsetHeight, initialElementOffsetTop)
+            const maxOffset = Math.max(Math.min((document.body.offsetHeight - thisElement.offsetHeight - 150), initialElementOffsetTop - 50), 50);
+            thisElement.setAttribute('style', `top: ${maxOffset}px`)
+          }            
+          window.scrollTo(0, blockEl.offsetTop + appBannerHeight - 20);
         }, 360);
+        setTimeout(()=>{
+          const blockEl = document.getElementById(`event-id-${musicEventKey}`);
+          this.gescrolledBuitenBeeldEnlarged(blockEl.offsetTop, blockEl.offsetTop + blockEl.scrollHeight)  
+        }, 750)
       })
       .catch((err) => {
         console.warn('ERROR RETRIEVING LONG HTML FOR EVENT')
