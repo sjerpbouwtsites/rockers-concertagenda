@@ -22,11 +22,11 @@ export default class AbstractScraper {
 
   completedMainPage = false
   workingOnSinglePages = false;
-  debugCorruptedUnavailable = true;
+  debugCorruptedUnavailable = false;
   debugSingleMergedEventCheck = false;
   debugRawEventAsyncCheck = false;
-  debugBaseEvents = true;
-  debugPageInfo = true;
+  debugBaseEvents = false;
+  debugPageInfo = false;
 
   static unavailabiltyTerms = [
     'uitgesteld', 'verplaatst', 'locatie gewijzigd', 'besloten', 'afgelast', 'geannuleerd'
@@ -174,9 +174,6 @@ export default class AbstractScraper {
     this.rockRefuseList = fs.readFileSync(fsDirections.isRockRefuse, 'utf-8')
 
   }
-
-
-
 
   /**
    * Wrapper om parentPort.postMessage(qwm.toConsole(xx)) heen.

@@ -53,7 +53,9 @@ dbsScraper.makeBaseEventList = async function () {
 
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
   if (availableBaseEvents){
-    const thisWorkersEvents = availableBaseEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
+    const thisWorkersEvents = availableBaseEvents.filter((eventEl, index) => {
+      return index % workerData.workerCount === workerData.index
+    })
     return await this.makeBaseEventListEnd({
       stopFunctie: null, rawEvents: thisWorkersEvents}
     );    
@@ -149,7 +151,7 @@ dbsScraper.makeBaseEventList = async function () {
   )
   rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
 
-  this.saveBaseEventlist(workerData.family, rawEvents)
+  //this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
   return await this.makeBaseEventListEnd({
     stopFunctie, rawEvents: thisWorkersEvents}
@@ -187,6 +189,16 @@ dbsScraper.getPageInfo = async function ({ page, event }) {
     return res;
   }, {event});
   
+  const longTextRes = await longTextSocialsIframes(page)
+  this.dirtyLog({
+    ...longTextRes,
+    url: event.venueEventUrl
+  })
+  
+  for (let i in longTextRes){
+    pageInfo[i] = longTextRes[i]
+  }
+
   if (pageInfo.ticketURL && !pageInfo.unavailable) {
     try {
       await page.goto(pageInfo.ticketURL)
@@ -199,11 +211,6 @@ dbsScraper.getPageInfo = async function ({ page, event }) {
       // er is gewoon geen prijs beschikbaar.
       page.priceTextcontent = 'onbekend';
     }
-  }
-
-  const longTextRes = await longTextSocialsIframes(page)
-  for (let i in longTextRes){
-    pageInfo[i] = longTextRes[i]
   }
   
   return await this.getPageInfoEnd({pageInfo, stopFunctie, page, event})
@@ -231,18 +238,20 @@ async function longTextSocialsIframes(page){
     const attributesToRemoveSecondRound = ['class', 'id' ];
     const removeHTMLWithStrings = [];
 
-    // eerst onzin attributes wegslopen
-    const socAttrRemSelAdd = `${socialSelector ? `, ${socialSelector} *` : ''}`
-    document.querySelectorAll(`${textSelector} *${socAttrRemSelAdd}`)
-      .forEach(elToStrip => {
-        attributesToRemove.forEach(attr => {
-          if (elToStrip.hasAttribute(attr)){
-            elToStrip.removeAttribute(attr)
-          }
+    //    eerst onzin attributes wegslopen
+    if (socialSelector) {
+      const socAttrRemSelAdd = `${socialSelector ? `, ${socialSelector} *` : ''}`
+      document.querySelectorAll(`${textSelector} *${socAttrRemSelAdd}`)
+        .forEach(elToStrip => {
+          attributesToRemove.forEach(attr => {
+            if (elToStrip.hasAttribute(attr)){
+              elToStrip.removeAttribute(attr)
+            }
+          })
         })
-      })
+    }
 
-    // media obj maken voordat HTML verdwijnt
+    //  media obj maken voordat HTML verdwijnt
     res.mediaForHTML = Array.from(document.querySelectorAll(mediaSelector))
       .map(bron => {
         const src = bron?.src ? bron.src : '';
@@ -258,7 +267,7 @@ async function longTextSocialsIframes(page){
         }
       })
 
-    // socials obj maken voordat HTML verdwijnt
+    //socials obj maken voordat HTML verdwijnt
     res.socialsForHTML = !socialSelector ? '' : Array.from(document.querySelectorAll(socialSelector))
       .map(el => {
 
@@ -314,6 +323,7 @@ async function longTextSocialsIframes(page){
     res.textForHTML = Array.from(document.querySelectorAll(textSelector))
       .map(el => el.innerHTML)
       .join('')
+    return res
   });
   
 }

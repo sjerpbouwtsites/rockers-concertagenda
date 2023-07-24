@@ -170,7 +170,7 @@ function youtubeIDToIframe(id){
 }
 
 export function makeLongHTMLNewStyle(event){
-  
+
   if (!event.textForHTML) event.textForHTML = '';
   if (!event.mediaForHTML) event.mediaForHTML = []
   if (!event.socialsForHTML) event.socialsForHTML = []
