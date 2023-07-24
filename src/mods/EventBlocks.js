@@ -1,6 +1,7 @@
 import React from "react";
 import { BEMify, filterEventsDateInPast } from "./util.js";
 import closeIcon from '../images/close.png';
+import LoadmoreButton from "./LoadmoreButton.js";
 
 class EventBlocks extends React.Component {
 
@@ -10,7 +11,7 @@ class EventBlocks extends React.Component {
     super(props);
     this.state = {
       musicEvents: [],
-      maxEventsShown: 250,
+      maxEventsShown: 100,
       eventDataLoading: false,
       eventDataLoaded: false,
     };
@@ -20,7 +21,6 @@ class EventBlocks extends React.Component {
     this.add100ToMaxEventsShown = this.add100ToMaxEventsShown.bind(this);
     this.escFunction = this.escFunction.bind(this);
     this.gescrolledBuitenBeeldEnlarged = this.gescrolledBuitenBeeldEnlarged.bind(this);
-    
   }
 
  
@@ -338,6 +338,7 @@ ${BEMify(`event-block`, [
     return musicEvents.find(musicEvent => musicEvent.enlarged);
   }
 
+
   //#endregion event-block HTML methods
 
   add100ToMaxEventsShown() {
@@ -403,7 +404,6 @@ ${BEMify(`event-block`, [
   render() {
     const musicEvents = this.musicEventFilters(this.state.musicEvents);
     const enlargedClassAddition = this.someEventIsEnlarged(this.state.musicEvents) ? 'some-event-is-enlarged' : 'nothing-is-enlarged';
-
     return (
       <div className={`event-block__wrapper ` + enlargedClassAddition}>
 
@@ -497,15 +497,13 @@ ${BEMify(`event-block`, [
           );
         }) // article mapper
         }
-        <button
-          className="event-block__more-blocks"
-          onClick={this.add100ToMaxEventsShown}
-        >
-          <span>
-            {this.state.maxEventsShown} van {this.state.musicEvents.length}{" "}
-            geladen. Klik voor meer.
-          </span>
-        </button>
+        <LoadmoreButton 
+          musicEventsLength={this.state.musicEvents.length} 
+          maxEventsShown={this.state.maxEventsShown}
+          eventDataLoaded={this.state.eventDataLoaded}
+          add100ToMaxEventsShown={this.add100ToMaxEventsShown}
+        ></LoadmoreButton>
+
       </div>
     );
   }
