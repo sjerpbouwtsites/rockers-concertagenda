@@ -24,7 +24,7 @@ const ticketmasterScraper = new AbstractScraper(makeScraperConfig({
       }, 
       singlePage: {
         useCustomScraper: true,
-        requiredProperties:['venueEventUrl', 'title', 'price', 'startDateTime']
+        requiredProperties:['venueEventUrl', 'title', 'price', 'start']
       }
     }
   }
@@ -135,9 +135,9 @@ ticketmasterScraper.getPageInfo = async function ({event}) {
     unavailable: '',
   };
 
-  pageInfo.startDateTime = event.dates?.start?.dateTime;
-  if (pageInfo.startDateTime) {
-    pageInfo.startDateTime = new Date(pageInfo.startDateTime).toISOString();
+  pageInfo.start = event.dates?.start?.dateTime;
+  if (pageInfo.start) {
+    pageInfo.start = new Date(pageInfo.start).toISOString();
   }
   
   pageInfo.location = 'GEENLOCATIEBEKEND';

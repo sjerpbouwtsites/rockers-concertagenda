@@ -18,7 +18,7 @@ const effenaarScraper = new AbstractScraper(makeScraperConfig({
         requiredProperties: ['venueEventUrl', 'title']
       },
       singlePage: {
-        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
+        requiredProperties: ['venueEventUrl', 'title', 'price', 'start']
       }
     }
   }
@@ -148,21 +148,21 @@ effenaarScraper.getPageInfo = async function ({ page, event }) {
       if (Array.isArray(doorTimeAr) && doorTimeAr.length) {
         res.doorTime = doorTimeAr[0];
       }
-      res.startDateTimeString = `${res.startDate}T${res.startTime}:00`;
+      res.startString = `${res.startDate}T${res.startTime}:00`;
       res.openDoorDateTimeString = `${res.startDate}T${res.doorTime}:00`;
     }
 
   
     try {
       if (res.doorTime) {
-        res.doorOpenDateTime = new Date(
+        res.door = new Date(
           `${res.openDoorDateTimeString}`
         ).toISOString();
       }
 
       if (res.startTime) {
-        res.startDateTime = new Date(
-          `${res.startDateTimeString}`
+        res.start = new Date(
+          `${res.startString}`
         ).toISOString();
       }
     } catch (caughtError) {

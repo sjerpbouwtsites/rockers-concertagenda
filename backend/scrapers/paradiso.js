@@ -21,7 +21,7 @@ const paradisoScraper = new AbstractScraper(makeScraperConfig({
         requiredProperties: ['venueEventUrl', 'title']
       },
       singlePage: {
-        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
+        requiredProperties: ['venueEventUrl', 'title', 'price', 'start']
       }
     }
   }
@@ -307,17 +307,17 @@ paradisoScraper.getPageInfo = async function ({ page, event }) {
       }
 
       if (startTijd){
-        res.startDateTime = new Date(
+        res.start = new Date(
           `${res.startDate}T${startTijd}:00`
         ).toISOString();        
       }
       if (deurTijd){
-        res.doorOpenDateTime = new Date(
+        res.door = new Date(
           `${res.startDate}T${deurTijd}:00`
         ).toISOString();        
       }
       if (eindTijd){
-        res.endDateTime = new Date(
+        res.end = new Date(
           `${res.startDate}T${eindTijd}:00`
         ).toISOString();        
       }      

@@ -2,9 +2,9 @@ import EventsList from "./events-list.js";
 
 export default class MusicEvent {
   static _ref = new MusicEvent();
-  doorOpenDateTime = null;
-  startDateTime = null;
-  endDateTime = null;
+  door = null;
+  start = null;
+  end = null;
   venueEventUrl = null;
   title = null;
   location = null;
@@ -59,8 +59,8 @@ export default class MusicEvent {
   }
   get isValid() {
     return (
-      this.startDateTime &&
-      /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}/.test(this.startDateTime)
+      this.start &&
+      /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}/.test(this.start)
       && !this.unavailable 
       && !this.corrupted
     );

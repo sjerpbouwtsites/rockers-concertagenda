@@ -14,7 +14,7 @@ const nuldertienScraper = new AbstractScraper(makeScraperConfig({
         requiredProperties: ['venueEventUrl', 'title']
       },
       singlePage: {
-        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime'],
+        requiredProperties: ['venueEventUrl', 'title', 'price', 'start'],
         
       }
     }
@@ -90,13 +90,13 @@ nuldertienScraper.makeBaseEventList = async function () {
 
         const datumEl = eventEl.querySelector(".event-list-item__date");
         if (datumEl) {
-          res.startDateTime = new Date(
+          res.start = new Date(
             datumEl.getAttribute("datetime")
           ).toISOString();
         } 
-        if (!datumEl || !res.startDateTime){
+        if (!datumEl || !res.start){
           res.errors.push({
-            remarks: `geen datumEl of startDateTime ${res.pageInfo}`,
+            remarks: `geen datumEl of start ${res.pageInfo}`,
             toDebug: {res, datumEl},
           })
         }
@@ -146,7 +146,7 @@ nuldertienScraper.getPageInfo = async function ({ page , event}) {
       if (document.querySelector(
         ".timetable__times dl:first-child time"
       )) {
-        res.doorOpenDateTime = new Date(
+        res.door = new Date(
           document.querySelector(
             ".timetable__times dl:first-child time"
           )?.getAttribute("datetime")

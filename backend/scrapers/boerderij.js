@@ -24,7 +24,7 @@ const boerderijScraper = new AbstractScraper(makeScraperConfig({
         requiredProperties: ['venueEventUrl', 'title']
       },
       singlePage: {
-        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
+        requiredProperties: ['venueEventUrl', 'title', 'price', 'start']
       }
     }
   }
@@ -154,24 +154,24 @@ boerderijScraper.getPageInfo = async function ({ event }) {
   res.price = priceRes.price;
     
   try {
-    res.startDateTime = new Date(
+    res.start = new Date(
       `${ajaxRes.event_date}T${ajaxRes.event_start}`
     ).toISOString();
   } catch (catchedError) {
     res.errors.push({
       error: catchedError,
-      remarks: `startDateTime samenvoeging ${res.pageInfo}`,
+      remarks: `start samenvoeging ${res.pageInfo}`,
       toDebug:res,
     });
   }
   try {
-    res.doorOpenDateTime = new Date(
+    res.door = new Date(
       `${ajaxRes.event_date}T${ajaxRes.event_open}`
     ).toISOString();
   } catch (catchedError) {
     res.errors.push({
       error: catchedError,
-      remarks: `doorOpenDateTime samenvoeging ${res.pageInfo}`,
+      remarks: `door samenvoeging ${res.pageInfo}`,
       toDebug:res,
     });
   }

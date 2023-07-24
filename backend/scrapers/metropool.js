@@ -21,7 +21,7 @@ const metropoolScraper = new AbstractScraper(makeScraperConfig({
         requiredProperties: ['venueEventUrl', 'title']
       },
       singlePage: {
-        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
+        requiredProperties: ['venueEventUrl', 'title', 'price', 'start']
       }
     }
   }
@@ -162,7 +162,7 @@ metropoolScraper.getPageInfo = async function ({ page, event}) {
         .querySelector(".beginTime")
         ?.innerHTML.match(/\d\d:\d\d/);
       if (startTimeMatch && startTimeMatch.length) {
-        res.startDateTime = new Date(
+        res.start = new Date(
           `${startDate}:${startTimeMatch[0]}`
         ).toISOString();
       } else {
@@ -181,7 +181,7 @@ metropoolScraper.getPageInfo = async function ({ page, event}) {
         .querySelector(".doorOpen")
         ?.innerHTML.match(/\d\d:\d\d/);
       if (doorTimeMatch && doorTimeMatch.length) {
-        res.doorOpenDateTime = new Date(
+        res.door = new Date(
           `${startDate}:${doorTimeMatch[0]}`
         ).toISOString();
       }

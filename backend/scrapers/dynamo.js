@@ -19,7 +19,7 @@ const dynamoScraper = new AbstractScraper(makeScraperConfig({
         requiredProperties: ['venueEventUrl', 'title']
       },
       singlePage: {
-        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
+        requiredProperties: ['venueEventUrl', 'title', 'price', 'start']
       }
     }
   }
@@ -195,7 +195,7 @@ dynamoScraper.getPageInfo = async function ({ page, event}) {
           Array.isArray(res.doorTimeMatch) &&
             res.doorTimeMatch.length === 3
         ) {
-          res.doorOpenDateTime = new Date(
+          res.door = new Date(
             `${baseDate}T${res.doorTimeMatch[2]}:00`
           ).toISOString();
         }
@@ -203,18 +203,18 @@ dynamoScraper.getPageInfo = async function ({ page, event}) {
           Array.isArray(res.startTimeMatch) &&
             res.startTimeMatch.length === 3
         ) {
-          res.startDateTime = new Date(
+          res.start = new Date(
             `${baseDate}T${res.startTimeMatch[2]}:00`
           ).toISOString();
-        } else if (res.doorOpenDateTime) {
-          res.startDateTime = res.doorOpenDateTime;
-          res.doorOpenDateTime = "";
+        } else if (res.door) {
+          res.start = res.door;
+          res.door = "";
         }
         if (
           Array.isArray(res.endTimeMatch) &&
             res.endTimeMatch.length === 3
         ) {
-          res.endDateTime = new Date(
+          res.end = new Date(
             `${baseDate}T${res.endTimeMatch[2]}:00`
           ).toISOString();
         }

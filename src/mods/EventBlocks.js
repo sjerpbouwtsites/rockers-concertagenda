@@ -227,37 +227,37 @@ class EventBlocks extends React.Component {
    
   createDates(musicEvent) {
     
-    const StartDateTime = new Date(musicEvent.startDateTime);
+    const start = new Date(musicEvent.start);
     const enlargedBEM = musicEvent.enlarged ? 'event-block__dates--enlarged' : '';
-    const startDateText = StartDateTime.toLocaleDateString("nl", {
+    const startDateText = start.toLocaleDateString("nl", {
       weekday: musicEvent.enlarged ? "short" : undefined,
       month: musicEvent.enlarged ? 'long' : '2-digit',
       day: "numeric",
       year: musicEvent.enlarged 
-        ? (StartDateTime.getFullYear() === this.currentYear ? "numeric" : undefined)
+        ? (start.getFullYear() === this.currentYear ? "numeric" : undefined)
         : undefined,
       hour: "2-digit",
       minute: "2-digit",
     });
-    const startDateHTML = `<time className="event-block__dates event-block__dates--start-date ${enlargedBEM}" dateTime="${musicEvent.startDateTime}">${startDateText}</time>`;
+    const startDateHTML = `<time className="event-block__dates event-block__dates--start-date ${enlargedBEM}" dateTime="${musicEvent.start}">${startDateText}</time>`;
     if (!musicEvent.enlarged){
       return startDateHTML;
     }
 
     let openDoorDateHTML = '';
-    if (musicEvent.doorOpenDateTime) {
-      const deurTijd = musicEvent.doorOpenDateTime.match(/T(\d\d:\d\d)/)[1]
-      openDoorDateHTML = `<time className="event-block__dates event-block__dates--door-date ${enlargedBEM}" dateTime="${musicEvent.doorOpenDateTime}">deur: ${deurTijd}</time>`;
+    if (musicEvent.door) {
+      const deurTijd = musicEvent.door.match(/T(\d\d:\d\d)/)[1]
+      openDoorDateHTML = `<time className="event-block__dates event-block__dates--door-date ${enlargedBEM}" dateTime="${musicEvent.door}">deur: ${deurTijd}</time>`;
     }
 
     let endDateHTML = '';
-    if (musicEvent.endDateTime) {
-      // const endDateTimeText = (new Date(musicEvent.doorOpenDateTime)).toLocaleDateString("nl", {
+    if (musicEvent.end) {
+      // const endText = (new Date(musicEvent.door)).toLocaleDateString("nl", {
       //   hour: "2-digit",
       //   minute: "2-digit",
       // });      
-      const eindTijd = musicEvent.endDateTime.match(/T(\d\d:\d\d)/)[1]
-      endDateHTML = `<time className="event-block__dates event-block__dates--end-date ${enlargedBEM}" dateTime="${musicEvent.endDateTime}">eind: ${eindTijd}</time>`;
+      const eindTijd = musicEvent.end.match(/T(\d\d:\d\d)/)[1]
+      endDateHTML = `<time className="event-block__dates event-block__dates--end-date ${enlargedBEM}" dateTime="${musicEvent.end}">eind: ${eindTijd}</time>`;
     }
     
     return `${startDateHTML}${openDoorDateHTML}${endDateHTML}`;
@@ -374,7 +374,7 @@ ${BEMify(`event-block`, [
         const upperRangeTime = new Date(
           this.props.filterSettings.daterange.upper
         ).getTime();
-        const eventTime = new Date(musicEvent.startDateTime).getTime();
+        const eventTime = new Date(musicEvent.start).getTime();
 
         if (lowerRangeTime > eventTime) {
           return false;
@@ -387,8 +387,8 @@ ${BEMify(`event-block`, [
 
     return filtered.map((musicEvent, musicEventIndex) => {
       musicEvent.firstOfMonth = false;
-      const startDateTime = new Date(musicEvent.startDateTime);
-      musicEvent.eventMonth = startDateTime.toLocaleDateString("nl", {
+      const start = new Date(musicEvent.start);
+      musicEvent.eventMonth = start.toLocaleDateString("nl", {
         year: "numeric",
         month: "short",
       });

@@ -20,7 +20,7 @@ const patronaatScraper = new AbstractScraper(makeScraperConfig({
         requiredProperties: ['venueEventUrl', 'title']
       },
       singlePage: {
-        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
+        requiredProperties: ['venueEventUrl', 'title', 'price', 'start']
       }
     }
   },
@@ -174,17 +174,17 @@ patronaatScraper.getPageInfo = async function ({ page, event }) {
         }
 
         if (res.doorOpenTime) {
-          res.doorOpenDateTime = new Date(
+          res.door = new Date(
             `${res.startDatum}T${res.doorOpenTime}:00`
           ).toISOString();
         }
         if (res.startTime) {
-          res.startDateTime = new Date(
+          res.start = new Date(
             `${res.startDatum}T${res.startTime}:00`
           ).toISOString();
         }
         if (res.endTime) {
-          res.endDateTime = new Date(
+          res.end = new Date(
             `${res.startDatum}T${res.endTime}:00`
           ).toISOString();
         }

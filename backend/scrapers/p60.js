@@ -16,10 +16,10 @@ const p60Scraper = new AbstractScraper(makeScraperConfig({
     app: {
       mainPage: {
         url: "https://p60.nl/agenda",
-        requiredProperties: ['venueEventUrl', 'title', 'startDateTime']
+        requiredProperties: ['venueEventUrl', 'title', 'start']
       },
       singlePage: {
-        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
+        requiredProperties: ['venueEventUrl', 'title', 'price', 'start']
       }
     }
   }
@@ -111,22 +111,22 @@ p60Scraper.makeBaseEventList = async function () {
 
         res.venueEventUrl = itemEl.querySelector('.field-group-link')?.href;
 
-        const doorOpenDateTimeB = itemEl.querySelector('.p60-list__item__date time')?.getAttribute('datetime')
+        const doorB = itemEl.querySelector('.p60-list__item__date time')?.getAttribute('datetime')
         try {
-          res.doorOpenDateTime = new Date(doorOpenDateTimeB).toISOString();
+          res.door = new Date(doorB).toISOString();
         } catch (caughtError) {
-          res.errors.push({error: caughtError, remarks: `openDoorDateTime omzetten ${doorOpenDateTimeB}`,         
+          res.errors.push({error: caughtError, remarks: `openDoorDateTime omzetten ${doorB}`,         
           })
         }
 
         const startTime = itemEl.querySelector('.field--name-field-aanvang')?.textContent.trim();
-        let startDateTimeB ;
-        if (res.doorOpenDateTime){
-          startDateTimeB = doorOpenDateTimeB.replace(/T\d\d:\d\d/, `T${startTime}`);
+        let startB ;
+        if (res.door){
+          startB = doorB.replace(/T\d\d:\d\d/, `T${startTime}`);
           try {
-            res.startDateTime = new Date(startDateTimeB).toISOString();
+            res.start = new Date(startB).toISOString();
           } catch (caughtError) {
-            res.errors.push({error: caughtError, remarks: `startDateTime omzetten ${startDateTimeB}` })
+            res.errors.push({error: caughtError, remarks: `start omzetten ${startB}` })
           }
         }
 

@@ -19,7 +19,7 @@ const idunaScraper = new AbstractScraper(makeScraperConfig({
         requiredProperties: ['venueEventUrl', 'title']
       },
       singlePage: {
-        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
+        requiredProperties: ['venueEventUrl', 'title', 'price', 'start']
       }
     }
   }
@@ -288,17 +288,17 @@ idunaScraper.getPageInfo = async function ({ page, event }) {
 
 
         if (res.startTime) {
-          res.startDateTime = new Date(
+          res.start = new Date(
             `${res.startDate}T${res.startTime}:00`
           ).toISOString();
         } else if (res.doorTime) {
-          res.startDateTime = new Date(
+          res.start = new Date(
             `${res.startDate}T${res.doorTime}:00`
           ).toISOString();
         }
 
         if (res.startTime && res.doorTime) {
-          res.doorOpenDateTime = new Date(
+          res.door = new Date(
             `${res.startDate}T${res.doorTime}:00`
           ).toISOString();
         }

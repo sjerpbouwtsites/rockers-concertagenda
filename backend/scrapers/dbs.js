@@ -18,10 +18,10 @@ const dbsScraper = new AbstractScraper(makeScraperConfig({
     app: {
       mainPage: {
         url: "https://www.dbstudio.nl/agenda/",
-        requiredProperties: ['venueEventUrl', 'title', 'startDateTime']
+        requiredProperties: ['venueEventUrl', 'title', 'start']
       },
       singlePage: {
-        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
+        requiredProperties: ['venueEventUrl', 'title', 'price', 'start']
       }
     }
   }
@@ -113,7 +113,7 @@ dbsScraper.makeBaseEventList = async function () {
             } else {
               res.time = timeMatch[0].padStart(5, "0");
               res.startDate = `${res.year}-${res.month}-${res.day}`;
-              res.startDateTime = new Date(
+              res.start = new Date(
                 `${res.startDate}T${res.time}:00Z`
               ).toISOString();
             }
@@ -130,11 +130,11 @@ dbsScraper.makeBaseEventList = async function () {
                   .match(/\d{1,2}:\d\d/);
                 if (Array.isArray(endDateM) && endDateM.length > 0) {
                   res.endTime = endDateM[0].padStart(5, "0");
-                  res.endDateTime = new Date(
+                  res.end = new Date(
                     `${res.startDate}T${res.endTime}:00Z`
                   ).toISOString();
-                  if (res.endDateTime === res.startDateTime) {
-                    res.endDateTime = null;
+                  if (res.end === res.start) {
+                    res.end = null;
                   }
                 }
               }

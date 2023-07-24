@@ -18,7 +18,7 @@ const voltScraper = new AbstractScraper(makeScraperConfig({
         requiredProperties: ['venueEventUrl', 'title']
       },
       singlePage: {
-        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
+        requiredProperties: ['venueEventUrl', 'title', 'price', 'start']
       }
     }    
   }  
@@ -192,13 +192,13 @@ voltScraper.getPageInfo = async function ({ page, url, event}) {
 
       try {
         if (res.startTime) {
-          res.startDateTime = new Date(
+          res.start = new Date(
             `${res.startDate}T${res.startTime}:00`
           ).toISOString();
         }
         
         if (res.endTime) {
-          res.endDateTime = new Date(
+          res.end = new Date(
             `${res.startDate}T${res.endTime}:00`
           ).toISOString();
         }

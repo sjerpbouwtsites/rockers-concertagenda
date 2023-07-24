@@ -19,10 +19,10 @@ const oostpoortScraper = new AbstractScraper(makeScraperConfig({
     app: {
       mainPage: {
         url: "https://www.spotgroningen.nl/programma/#genres=muziek&subgenres=metal-heavy,pop-rock",
-        requiredProperties: ['venueEventUrl', 'title', 'startDateTime']
+        requiredProperties: ['venueEventUrl', 'title', 'start']
       },
       singlePage: {
-        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
+        requiredProperties: ['venueEventUrl', 'title', 'price', 'start']
       }
     }
   }
@@ -122,7 +122,7 @@ oostpoortScraper.makeBaseEventList = async function () {
         };
         
         try {
-          res.startDateTime = new Date(eventEl.querySelector('.program__date')?.getAttribute('datetime') ?? null).toISOString();
+          res.start = new Date(eventEl.querySelector('.program__date')?.getAttribute('datetime') ?? null).toISOString();
         } catch (caughtError) {
           res.errors.push({
             error: caughtError, remarks: `date time faal ${title}.`,        

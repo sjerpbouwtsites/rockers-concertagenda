@@ -20,7 +20,7 @@ const groeneEngelScraper = new AbstractScraper(makeScraperConfig({
         requiredProperties: ['venueEventUrl', 'title' ]
       },
       singlePage: {
-        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
+        requiredProperties: ['venueEventUrl', 'title', 'price', 'start']
       }
     }
   }
@@ -189,8 +189,8 @@ groeneEngelScraper.getPageInfo = async function ({ page, event }) {
     if (Array.isArray(res.deurTijdMatch)) res.deurTijd = res.deurTijdMatch[0]
 
     try {
-      res.startDateTime = new Date(`${event.startDate}T${res.startTijd}:00`).toISOString();
-      res.doorOpenDateTime = !res?.deurTijd ? null : new Date(`${event.startDate}T${res.deurTijd}:00`).toISOString();
+      res.start = new Date(`${event.startDate}T${res.startTijd}:00`).toISOString();
+      res.door = !res?.deurTijd ? null : new Date(`${event.startDate}T${res.deurTijd}:00`).toISOString();
     } catch (error) {
       res.errors.push({
         error,

@@ -142,7 +142,7 @@ async function metalFanDoURL(page, url, qwm){
 
         return {
           title: eventName,
-          startDateTime: eventDate,
+          start: eventDate,
           eventLocationName,
           shortText: shortText,
         };

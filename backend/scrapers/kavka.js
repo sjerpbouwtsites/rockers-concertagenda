@@ -16,10 +16,10 @@ const kavkaScraper = new AbstractScraper(
       app: {
         mainPage: {
           url: "https://kavka.be/programma/",
-          requiredProperties: ["venueEventUrl", "title", "startDateTime"],
+          requiredProperties: ["venueEventUrl", "title", "start"],
         },
         singlePage: {
-          requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
+          requiredProperties: ['venueEventUrl', 'title', 'price', 'start']
         }
       },
     },
@@ -132,7 +132,7 @@ kavkaScraper.makeBaseEventList = async function () {
             } else {
               res.dateStringAttempt = `${startDate}T19:00:00`;
             }
-            res.startDateTime = new Date(res.dateStringAttempt).toISOString();
+            res.start = new Date(res.dateStringAttempt).toISOString();
           } catch (caughtError) {
             res.errors.push({
               error: caughtError,
@@ -148,7 +148,7 @@ kavkaScraper.makeBaseEventList = async function () {
               startTimeM.length > 1
             ) {
               res.dateStringAttempt = `${startDate}T${startTimeM[1]}:00`;
-              res.doorOpenDateTime = new Date(
+              res.door = new Date(
                 res.dateStringAttempt
               ).toISOString();
             }            

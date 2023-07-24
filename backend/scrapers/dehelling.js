@@ -16,10 +16,10 @@ const dehellingScraper = new AbstractScraper(makeScraperConfig({
     app: {
       mainPage: {
         url: "https://dehelling.nl/agenda/?zoeken=&genre%5B%5D=heavy",
-        requiredProperties: ['venueEventUrl', 'title', 'startDateTime']
+        requiredProperties: ['venueEventUrl', 'title', 'start']
       },
       singlePage: {
-        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime'],
+        requiredProperties: ['venueEventUrl', 'title', 'price', 'start'],
         longHTMLnewStyle: true
       }
     }
@@ -95,7 +95,7 @@ dehellingScraper.makeBaseEventList = async function () {
         };      
 
         try {
-          res.endDateTime = new Date(schemaData.endDate.replace(' ','T')).toISOString();
+          res.end = new Date(schemaData.endDate.replace(' ','T')).toISOString();
         } catch (caughtError) {
           res.errors.push({error: caughtError, remarks: `end date time datestring omzetting ${title} ${res.pageInfo}`,toDebug:res})        
         }
@@ -105,7 +105,7 @@ dehellingScraper.makeBaseEventList = async function () {
             remarks: `image missing ${res.pageInfo}`
           })
         }
-        let startDateTimeString;
+        let startString;
         try {
           const metaEl = eventEl.querySelector('.c-event-card__meta') ?? null;
           if (metaEl) {
@@ -114,19 +114,19 @@ dehellingScraper.makeBaseEventList = async function () {
               res.startTime = tijdMatch[0]
               const hours = tijdMatch[1];
               const minutes = tijdMatch[2];
-              startDateTimeString = res.endDateTime.replace(/T.*/, `T${hours.padStart(2, '0')}:${minutes.padStart(2, '0')}:00`);
-              res.startDateTime = new Date(startDateTimeString).toISOString();
+              startString = res.end.replace(/T.*/, `T${hours.padStart(2, '0')}:${minutes.padStart(2, '0')}:00`);
+              res.start = new Date(startString).toISOString();
             }
           }
         } catch (caughtError) {
-          res.errors.push({error: caughtError, remarks: `start date time eruit filteren error \n ${res.endDateTime} \n ${startDateTimeString} ${title} ${res.pageInfo}`,toDebug:res})        
+          res.errors.push({error: caughtError, remarks: `start date time eruit filteren error \n ${res.end} \n ${startString} ${title} ${res.pageInfo}`,toDebug:res})        
         }
 
         res.soldOut = !!eventEl.querySelector('.c-event-card__banner--uitverkocht');
 
-        if (!res.startTime && res.endDateTime) {
-          res.startDateTime = res.endDateTime;
-          res.endDateTime = null;
+        if (!res.startTime && res.end) {
+          res.start = res.end;
+          res.end = null;
         } 
 
         res.venueEventUrl = schemaData.url

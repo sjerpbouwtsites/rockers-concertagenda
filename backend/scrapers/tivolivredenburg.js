@@ -16,7 +16,7 @@ const tivoliVredenburgScraper = new AbstractScraper(makeScraperConfig({
         requiredProperties: ['venueEventUrl', 'title']
       },
       singlePage: {
-        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
+        requiredProperties: ['venueEventUrl', 'title', 'price', 'start']
       }
     }    
   }
@@ -188,7 +188,7 @@ tivoliVredenburgScraper.getPageInfo = async function ({ page, event }) {
     if (Array.isArray(openMatch) && openMatch.length > 1) {
       try {
         res.openDoorTime = openMatch[1];
-        res.doorOpenDateTime = res.startDate
+        res.door = res.startDate
           ? new Date(`${res.startDate}T${res.openDoorTime}:00`).toISOString()
           : null;
       } catch (caughtError) {
@@ -205,7 +205,7 @@ tivoliVredenburgScraper.getPageInfo = async function ({ page, event }) {
     if (Array.isArray(startMatch) && startMatch.length > 1) {
       try {
         res.startTime = startMatch[1];
-        res.startDateTime = res.startDate
+        res.start = res.startDate
           ? new Date(`${res.startDate}T${res.startTime}:00`).toISOString()
           : null;
       } catch (caughtError) {
@@ -222,7 +222,7 @@ tivoliVredenburgScraper.getPageInfo = async function ({ page, event }) {
     if (Array.isArray(endMatch) && endMatch.length > 1) {
       try {
         res.endTime = endMatch[1];
-        res.endDateTime = res.startDate
+        res.end = res.startDate
           ? new Date(`${res.startDate}T${res.endTime}:00`).toISOString()
           : null;
       } catch (caughtError) {

@@ -22,9 +22,9 @@ export default class AbstractScraper {
 
   completedMainPage = false
   workingOnSinglePages = false;
-  debugCorruptedUnavailable = true;
-  debugSingleMergedEventCheck = true;
-  debugRawEventAsyncCheck = true;
+  debugCorruptedUnavailable = false;
+  debugSingleMergedEventCheck = false;
+  debugRawEventAsyncCheck = false;
   debugBaseEvents = false;
   debugPageInfo = false;
   debugPrice = false;
@@ -445,7 +445,7 @@ export default class AbstractScraper {
             return null;
           }
         }
-        if (property === 'startDateTime' || property === 'doorOpenDateTime' || property === 'endDateTime') {
+        if (property === 'start' || property === 'door' || property === 'end') {
           if (musicEvent[property]?.match(/\d\d\d\d-\d\d-\d\dT\d\d:\d\d/)) {
             return null;
           } else {
@@ -1242,7 +1242,7 @@ export default class AbstractScraper {
       if(testText === false) {
         if (workingEventObj.soldOut){
           priceRes.price = 0;
-          priceRes.errors.push({remarks: `uitverkocht. vergeef geen price ${pi}`});
+          if (this.debugPrice) priceRes.errors.push({remarks: `uitverkocht. vergeef geen price ${pi}`});
         } else {
           priceRes.errors.push({remarks: `geen el in ${firstSelector} ${pi}`});
         }

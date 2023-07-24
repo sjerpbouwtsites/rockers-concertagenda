@@ -20,7 +20,7 @@ const bibelotScraper = new AbstractScraper(makeScraperConfig({
         requiredProperties: ['venueEventUrl', 'title']
       },
       singlePage: {
-        requiredProperties: ['venueEventUrl', 'title', 'startDateTime']
+        requiredProperties: ['venueEventUrl', 'title', 'start']
       }      
     }
   
@@ -137,7 +137,7 @@ bibelotScraper.getPageInfo = async function ({ page, event }) {
 
       try {
         if (Array.isArray(res.doorTimeMatch) && res.doorTimeMatch.length > 2 && res.baseDate) {
-          res.doorOpenDateTime = new Date(
+          res.door = new Date(
             `${res.baseDate}T${res.doorTimeMatch[2]}:00`
           ).toISOString();
         }
@@ -154,12 +154,12 @@ bibelotScraper.getPageInfo = async function ({ page, event }) {
           res.startTimeMatch.length > 2 &&
           res.baseDate
         ) {
-          res.startDateTime = new Date(
+          res.start = new Date(
             `${res.baseDate}T${res.startTimeMatch[2]}:00`
           ).toISOString();
-        } else if (res.doorOpenDateTime) {
-          res.startDateTime = res.doorOpenDateTime;
-          res.doorOpenDateTime = "";
+        } else if (res.door) {
+          res.start = res.door;
+          res.door = "";
         }
       } catch (errorCaught) {
         res.errors.push({
@@ -170,7 +170,7 @@ bibelotScraper.getPageInfo = async function ({ page, event }) {
       }
       try {
         if (Array.isArray(res.endTimeMatch) && res.endTimeMatch.length > 2 && res.baseDate) {
-          res.endDateTime = new Date(
+          res.end = new Date(
             `${res.baseDate}T${res.endTimeMatch[2]}:00`
           ).toISOString();
         }

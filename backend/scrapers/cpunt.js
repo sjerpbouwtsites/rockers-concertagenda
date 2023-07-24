@@ -21,7 +21,7 @@ const cpuntScraper = new AbstractScraper(makeScraperConfig({
         requiredProperties: ['venueEventUrl', 'title']
       },
       singlePage: {
-        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
+        requiredProperties: ['venueEventUrl', 'title', 'price', 'start']
       }
     }
   }
@@ -184,7 +184,7 @@ cpuntScraper.getPageInfo = async function ({ page, event }) {
 
     if (deurTijd) {
       try {
-        res.doorOpenDateTime = new Date(`${startDate}T${deurTijd}`).toISOString();          
+        res.door = new Date(`${startDate}T${deurTijd}`).toISOString();          
       } catch (caughtError) {
         res.errors.push(
           {
@@ -199,7 +199,7 @@ cpuntScraper.getPageInfo = async function ({ page, event }) {
     
     if (startTijd) {
       try {
-        res.startDateTime = new Date(`${startDate}T${startTijd}`).toISOString();          
+        res.start = new Date(`${startDate}T${startTijd}`).toISOString();          
       } catch (caughtError) {
         res.errors.push(
           {

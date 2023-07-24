@@ -20,7 +20,7 @@ const depulScraper = new AbstractScraper(makeScraperConfig({
         requiredProperties: ['venueEventUrl', 'title']
       },
       singlePage: {
-        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
+        requiredProperties: ['venueEventUrl', 'title', 'price', 'start']
       }
     }
   }
@@ -241,14 +241,14 @@ depulScraper.getPageInfo = async function ({ page, event }) {
                 Array.isArray(startTimeMatch) &&
                 startTimeMatch.length === 1
               ) {
-                res.startDateTime = new Date(
+                res.start = new Date(
                   `${res.startDate}T${startTimeMatch[0]}:00`
                 ).toISOString();
               }
             } catch (caughtError) {
               res.errors.push({
                 error: caughtError,
-                remarks: `startDateTime en startDate samenvoegen ${res.pageInfo}`,toDebug:res
+                remarks: `start en startDate samenvoegen ${res.pageInfo}`,toDebug:res
               });
             }
           } else if (lowerCaseTextContent.includes("open")) {
@@ -262,7 +262,7 @@ depulScraper.getPageInfo = async function ({ page, event }) {
                 Array.isArray(doorTimeMatch) &&
                 doorTimeMatch.length === 1
               ) {
-                res.doorOpenDateTime = new Date(
+                res.door = new Date(
                   `${res.startDate}T${doorTimeMatch[0]}:00`
                 ).toISOString();
               }
@@ -273,9 +273,9 @@ depulScraper.getPageInfo = async function ({ page, event }) {
               });
             }
           }
-          if (!res.startDateTime && res.doorOpenDateTime) {
-            res.startDateTime = res.doorOpenDateTime;
-            res.doorOpenDateTime = null;
+          if (!res.start && res.door) {
+            res.start = res.door;
+            res.door = null;
           }
         });
 

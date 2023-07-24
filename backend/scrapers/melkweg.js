@@ -20,7 +20,7 @@ const melkwegScraper = new AbstractScraper(makeScraperConfig({
         requiredProperties: ['venueEventUrl', 'title']
       },
       singlePage: {
-        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
+        requiredProperties: ['venueEventUrl', 'title', 'price', 'start']
       }
     }
   }
@@ -144,7 +144,7 @@ melkwegScraper.getPageInfo = async function ({ page, event }) {
       errors: [],
     };
     try {
-      res.startDateTime = new Date(
+      res.start = new Date(
         document
           .querySelector('[class*="styles_event-header"] time')
           ?.getAttribute("datetime") ?? null
@@ -153,7 +153,7 @@ melkwegScraper.getPageInfo = async function ({ page, event }) {
 
       res.errors.push({
         error: caughtError,
-        remarks: `startdatetime faal ${res.pageInfo}`,
+        remarks: `start faal ${res.pageInfo}`,
         toDebug: {
           text: document.querySelector('[class*="styles_event-header"] time')
             ?.outerHTML ?? 'geen time element',

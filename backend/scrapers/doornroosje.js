@@ -21,7 +21,7 @@ const doornroosjeScraper = new AbstractScraper(makeScraperConfig({
         requiredProperties: ['venueEventUrl', 'title']
       },
       singlePage: {
-        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
+        requiredProperties: ['venueEventUrl', 'title', 'price', 'start']
       }
     }
   }
@@ -220,24 +220,24 @@ doornroosjeScraper.getPageInfo = async function ({ page, event }) {
         if (timeMatches && timeMatches.length) {
           try {
             if (timeMatches.length === 3){
-              res.startDateTime = new Date(
+              res.start = new Date(
                 `${startDate}:${timeMatches[1]}`
               ).toISOString();
-              res.doorOpenDateTime = new Date(
+              res.door = new Date(
                 `${startDate}:${timeMatches[0]}`
               ).toISOString();
-              res.endDateTime = new Date(
+              res.end = new Date(
                 `${startDate}:${timeMatches[2]}`
               ).toISOString();                            
             } else if (timeMatches.length == 2) {
-              res.startDateTime = new Date(
+              res.start = new Date(
                 `${startDate}:${timeMatches[1]}`
               ).toISOString();
-              res.doorOpenDateTime = new Date(
+              res.door = new Date(
                 `${startDate}:${timeMatches[0]}`
               ).toISOString();
             } else if (timeMatches.length == 1) {
-              res.startDateTime = new Date(
+              res.start = new Date(
                 `${startDate}:${timeMatches[0]}`
               ).toISOString();
             }
@@ -261,10 +261,10 @@ doornroosjeScraper.getPageInfo = async function ({ page, event }) {
         errors: [],
       };
       if (event.venueEventUrl.includes('soulcrusher')){
-        res.startDateTime = new Date('2023-10-13T18:00:00.000Z').toISOString();
+        res.start = new Date('2023-10-13T18:00:00.000Z').toISOString();
       } else {
         try {
-          res.startDateTime = new Date(`${event?.startDate}T12:00:00`).toISOString();
+          res.start = new Date(`${event?.startDate}T12:00:00`).toISOString();
         } catch (thisError) {
           const errorString = `fout bij tijd/datum festival of datums`; 
           res.errors.push({

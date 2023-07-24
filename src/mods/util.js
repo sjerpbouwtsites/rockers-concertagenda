@@ -24,16 +24,16 @@ export function stripHTML(text) {
 }
 
 /**
-* To be used in filter method. Removes those events that are past or dont have a startDateTime
+* To be used in filter method. Removes those events that are past or dont have a start
 * @param {*} musicEvent 
 * @returns bool
 */
 export function filterEventsDateInPast(musicEvent) {
-  if (!musicEvent.startDateTime) {
+  if (!musicEvent.start) {
     return false;
   }
   const musicEventTime = Number(
-    musicEvent.startDateTime.match(/(.*)T/)[1].replace(/\D/g, "")
+    musicEvent.start.match(/(.*)T/)[1].replace(/\D/g, "")
   );
   const nowDateString = new Date();
   const nowDate = Number(

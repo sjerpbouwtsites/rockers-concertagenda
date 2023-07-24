@@ -24,7 +24,7 @@ const gebrdenobelScraper = new AbstractScraper(
             "venueEventUrl",
             "title",
             "price",
-            "startDateTime",
+            "start",
           ],
         },
       },
@@ -242,17 +242,17 @@ gebrdenobelScraper.getPageInfo = async function ({ page, event }) {
         }
 
         if (!timeRow) {
-          res.startDateTime = new Date(
+          res.start = new Date(
             `${res.startDate}T00:00:00`
           ).toISOString();
         } else {
           const timeMatch = timeRow.textContent.match(/\d\d:\d\d/);
           if (Array.isArray(timeMatch) && timeMatch.length) {
-            res.startDateTime = new Date(
+            res.start = new Date(
               `${res.startDate}T${timeMatch[0]}:00`
             ).toISOString();
           } else {
-            res.startDateTime = new Date(
+            res.start = new Date(
               `${res.startDate}T00:00:00`
             ).toISOString();
           }

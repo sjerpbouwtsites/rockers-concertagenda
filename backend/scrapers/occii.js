@@ -20,7 +20,7 @@ const occiiScraper = new AbstractScraper(makeScraperConfig({
         requiredProperties: ['venueEventUrl']        
       },
       singlePage: {
-        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
+        requiredProperties: ['venueEventUrl', 'title', 'price', 'start']
       }
     }
   }
@@ -178,7 +178,7 @@ occiiScraper.getPageInfo = async function ({ page, event}) {
       const doorsOpen =
         doorsOpenMatch && doorsOpenMatch.length > 1 ? doorsOpenMatch[1] : null;
 
-      res.doorOpenDateTime = doorsOpen
+      res.door = doorsOpen
         ? new Date(`${eventDateString}T${doorsOpen}`).toISOString()
         : new Date(`${eventDateString}T00:00`).toISOString();
 
@@ -188,7 +188,7 @@ occiiScraper.getPageInfo = async function ({ page, event}) {
       const showtime =
         showtimeMatch && showtimeMatch.length > 1 ? doorsOpenMatch[1] : null;
 
-      res.startDateTime = showtime
+      res.start = showtime
         ? new Date(`${eventDateString}T${showtime}`).toISOString()
         : new Date(`${eventDateString}T00:00`).toISOString();
     } catch (caughtError) {

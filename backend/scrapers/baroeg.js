@@ -17,10 +17,10 @@ const baroegScraper = new AbstractScraper(makeScraperConfig({
     app: {
       mainPage: {
         url: "https://baroeg.nl/agenda/",
-        requiredProperties: ['venueEventUrl', 'title', 'startDateTime']
+        requiredProperties: ['venueEventUrl', 'title', 'start']
       },
       singlePage: {
-        requiredProperties: ['venueEventUrl', 'title', 'startDateTime']
+        requiredProperties: ['venueEventUrl', 'title', 'start']
       }      
     }    
   }
@@ -135,7 +135,7 @@ baroegScraper.makeBaseEventList = async function () {
         res.startTime = eventEl.querySelector('.wp_theatre_event_starttime')?.textContent ?? null;
         if (!res.startTime){
           res.errors.push({
-            remarks: 'geen startdatetime',
+            remarks: 'geen start',
             toDebug: {
               startDateText: eventEl.querySelector('.wp_theatre_event_starttime')?.textContent,
               res
@@ -144,7 +144,7 @@ baroegScraper.makeBaseEventList = async function () {
           return res;   
         }
         try{
-          res.startDateTime = new Date(`${res.startDate}T${res.startTime}:00`).toISOString();
+          res.start = new Date(`${res.startDate}T${res.startTime}:00`).toISOString();
         } catch (errorCaught) {
           res.errors.push({
             error: errorCaught,

@@ -23,7 +23,7 @@ const defluxScraper = new AbstractScraper(makeScraperConfig({
         requiredProperties: ['venueEventUrl', 'title']
       },
       singlePage: {
-        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
+        requiredProperties: ['venueEventUrl', 'title', 'price', 'start']
       }
     }
   }
@@ -135,7 +135,7 @@ defluxScraper.getPageInfo = async function ({ page, event}) {
     try {
       res.startDate = eventScheme.querySelector('[itemprop="startDate"]')?.getAttribute('content').split('T')[0].split('-').map(dateStuk => dateStuk.padStart(2, '0')).join('-')
       res.startTime = document.querySelector('.evcal_time.evo_tz_time').textContent.match(/\d\d:\d\d/)[0];
-      res.startDateTime = new Date(`${res.startDate}T${res.startTime}:00`).toISOString()
+      res.start = new Date(`${res.startDate}T${res.startTime}:00`).toISOString()
     } catch (caughtError) {
       res.errors.push({error: caughtError, remarks: `starttime match ${res.pageInfo}`})
     }
@@ -143,7 +143,7 @@ defluxScraper.getPageInfo = async function ({ page, event}) {
     if (document.querySelector('.evcal_desc3')?.textContent.toLowerCase().includes('deur open') ?? false) {
       try {
         res.endTime = document.querySelector('.evcal_desc3').textContent.match(/\d\d:\d\d/)[0];
-        res.endDateTime = new Date(`${res.startDate}T${res.endTime}:00`).toISOString();
+        res.end = new Date(`${res.startDate}T${res.endTime}:00`).toISOString();
       } catch (caughtError) {
         res.errors.push({error: caughtError, remarks: `door open starttime match ${res.pageInfo}`,toDebug:res})
       }

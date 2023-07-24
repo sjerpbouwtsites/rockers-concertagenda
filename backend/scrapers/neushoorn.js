@@ -17,7 +17,7 @@ const neushoornScraper = new AbstractScraper(makeScraperConfig({
         requiredProperties: ['venueEventUrl', 'title']
       },
       singlePage: {
-        requiredProperties: ['venueEventUrl', 'title', 'price', 'startDateTime']
+        requiredProperties: ['venueEventUrl', 'title', 'price', 'start']
       }
     }
   }
@@ -178,14 +178,14 @@ neushoornScraper.getPageInfo = async function ({ page,event }) {
         /(\d{2}:\d{2}).*(\d{2}:\d{2})/
       );
       if (timeTextMatch && timeTextMatch.length === 3 && res.startDate) {
-        res.doorOpenDateTime = new Date(
+        res.door = new Date(
           `${res.startDate}T${timeTextMatch[1]}`
         ).toISOString();
-        res.startDateTime = new Date(
+        res.start = new Date(
           `${res.startDate}T${timeTextMatch[2]}`
         ).toISOString();
       } else {
-        res.startDateTime = new Date(
+        res.start = new Date(
           `${res.startDate}T${timeTextMatch[1]}`
         ).toISOString();
       }
