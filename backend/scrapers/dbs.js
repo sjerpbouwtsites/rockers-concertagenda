@@ -36,15 +36,44 @@ dbsScraper.listenToMasterThread();
 //#region [rgba(0, 180, 0, 0.3)]      SINGLE EVENT CHECK
 dbsScraper.singleMergedEventCheck = async function(event){
 
+  const tl = this.cleanupEventTitle(event.title);
+
+  const isRefused = await this.rockRefuseListCheck(event, tl)
+  if (isRefused.success) {
+    return {
+      reason: isRefused.reason,
+      event,
+      success: false
+    }
+  }
+
+  const isAllowed = await this.rockAllowListCheck(event, tl)
+  if (isAllowed.success) {
+    return isAllowed;  
+  }
+
   const hasForbiddenTermsRes = await this.hasForbiddenTerms(event)
   if (hasForbiddenTermsRes.success) {
+    await this.saveRefusedTitle(tl)     
     return {
       event,
       reason: hasForbiddenTermsRes.reason,
       success: !hasForbiddenTermsRes
     }
   }
-  return await this.hasGoodTerms(event);
+  const hasGoodTerms = await this.hasGoodTerms(event);
+  if (hasGoodTerms.success) {
+    await this.saveAllowedTitle(tl)
+    return hasGoodTerms
+  }
+
+  await this.saveAllowedTitle(tl)
+  return {
+    event,
+    reason: 'niets gevonden in refused, allowed',
+    success: true
+  }
+
 }
 //#endregion                          SINGLE EVENT CHECK
 

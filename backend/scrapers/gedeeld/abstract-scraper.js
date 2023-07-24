@@ -19,21 +19,23 @@ export default class AbstractScraper {
   workingOnSinglePages = false;
   rockAllowList = '';
   rockRefuseList = '';  
+  hasSavedNewRockAllowed = false;
+  hasSavedNewRockRefused = false;
 
   static unavailabiltyTerms = [
     'uitgesteld', 'verplaatst', 'locatie gewijzigd', 'besloten', 'afgelast', 'geannuleerd'
   ]
 
-  //#region [rgba(0, 0, 30, 0.30)]                            DEBUGSETTINGS
+  //#region [rgba(0, 0, 30, 0.30)]                             DEBUGSETTINGS
   debugCorruptedUnavailable = false;
-  debugSingleMergedEventCheck = false;
-  debugRawEventAsyncCheck = false;
+  debugSingleMergedEventCheck = true;
+  debugRawEventAsyncCheck = true;
   debugBaseEvents = false;
   debugPageInfo = false;
   debugPrice = false;
   //#endregion                                                DEBUGSETTINGS
 
-  //#region [rgba(0, 0, 60, 0.30)]                            ISROCKSETTINGS  
+  //#region [rgba(0, 0, 60, 0.30)]                             ISROCKSETTINGS  
   /**
    * Gebruikt in singleRawEventChecks' hasForbiddenTerms
    *
@@ -231,6 +233,7 @@ export default class AbstractScraper {
       this.handleOuterScrapeCatch
     );
 
+    await this.saveRockRefusedAllowedToFile()
 
     await this.announceToMonitorDone();
     if (!this.puppeteerConfig.app.mainPage.useCustomScraper || !this.puppeteerConfig.app.singlePage.useCustomScraper) {
@@ -986,20 +989,33 @@ export default class AbstractScraper {
     };    
   }
 
-  async saveRefusedTitle(title){
+  async saveRefusedTitle(title){ // TODO is dit niet dubbel op cleanup?
     let workingTitle = this.cleanupEventTitle(title)
-    const curForbiddenList = fs.readFileSync(fsDirections.isRockRefuse, 'utf-8');
-    if (!curForbiddenList.includes(workingTitle)) {
-      fs.writeFileSync(fsDirections.isRockRefuse, `${workingTitle}\n${curForbiddenList}`, 'utf-8')
-    }
+    this.rockRefuseList = `${workingTitle}\n${this.rockRefuseList}`;
+    this.hasSavedNewRockRefused = true;
+    // const curForbiddenList = fs.readFileSync(fsDirections.isRockRefuse, 'utf-8');
+    // if (!curForbiddenList.includes(workingTitle)) {
+    //   fs.writeFileSync(fsDirections.isRockRefuse, `${workingTitle}\n${curForbiddenList}`, 'utf-8')
+    // }
   }
 
   async saveAllowedTitle(title){
     let workingTitle = this.cleanupEventTitle(title)
-    const curAllowList = fs.readFileSync(fsDirections.isRockAllow, 'utf-8');
-    if (!curAllowList.includes(workingTitle)) {
-      fs.writeFileSync(fsDirections.isRockAllow, `${workingTitle}\n${curAllowList}`, 'utf-8')
+    this.rockAllowList = `${workingTitle}\n${this.rockAllowList}`;    
+    this.hasSavedNewRockAllowed = true;
+    // const curAllowList = fs.readFileSync(fsDirections.isRockAllow, 'utf-8');
+    // if (!curAllowList.includes(workingTitle)) {
+    //   fs.writeFileSync(fsDirections.isRockAllow, `${workingTitle}\n${curAllowList}`, 'utf-8')
+    // }
+  }
+
+  async saveRockRefusedAllowedToFile(){
+    if (this.hasSavedNewRockAllowed){
+      fs.writeFileSync(fsDirections.isRockAllow, this.rockAllowList, 'utf-8')
     }
+    if (this.hasSavedNewRockRefused){
+      fs.writeFileSync(fsDirections.isRockRefuse, this.rockRefuseList, 'utf-8')
+    }    
   }
 
   async rockAllowListCheck(event, title){

@@ -179,7 +179,7 @@ class EventBlocks extends React.Component {
         setTimeout(() => {
           const blockEl = document.getElementById(`event-id-${musicEventKey}`);
           const appBannerHeight =
-            document.getElementById("app-banner").clientHeight;
+            document.getElementById("app-banner-top").clientHeight;
           if (window.innerWidth > 1024){
             console.log(document.body.offsetHeight, thisElement.offsetHeight, initialElementOffsetTop)
             const maxOffset = Math.max(Math.min((document.body.offsetHeight - thisElement.offsetHeight - 150), initialElementOffsetTop - 50), 50);

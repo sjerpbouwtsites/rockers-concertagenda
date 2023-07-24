@@ -154,20 +154,6 @@ class App extends React.Component {
     return (
       <div id={`app-banner-${locatie}`} className="app-banner cursive-font">
         <h1 className="app-title">{title}<span className="app-title__events-count" id={`app-title__events-count-${locatie}`}></span></h1>
-        {/* <span className="app-title-right">
-          <span
-            onClick={this.updateSwipeStateFilter}
-            className="app-title-right-button"
-          >
-            {this.appTitleToFilter()}
-          </span>{" "}
-          <span
-            onClick={this.updateSwipeStateExplainer}
-            className="app-title-right-button"
-          >
-            {this.appTitleToExplainer()}
-          </span>
-        </span> */}
       </div>
     );
   }
@@ -187,7 +173,6 @@ class App extends React.Component {
               locations={this.state.locations}
             />
           </main>
-
           {this.appBanner("Rock Agenda", 'onder')}
         </div>
       </div>
