@@ -4,7 +4,7 @@ import makeScraperConfig from "./gedeeld/scraper-config.js";
 import * as _t from "../mods/tools.js";
 import {workerNames} from "../mods/worker-config.js";
 
-//#region [rgba(0, 33, 0, 0.3)]       SCRAPER CONFIG
+//#region [rgba(0, 60, 0, 0.3)]       SCRAPER CONFIG
 const ticketmasterScraper = new AbstractScraper(makeScraperConfig({
   maxExecutionTime: 75003,
   workerData: Object.assign({}, workerData),
@@ -33,6 +33,13 @@ const ticketmasterScraper = new AbstractScraper(makeScraperConfig({
 
 ticketmasterScraper.listenToMasterThread();
 
+//#region [rgba(0, 120, 0, 0.3)]      RAW EVENT CHECK
+//#endregion                          RAW EVENT CHECK
+
+//#region [rgba(0, 180, 0, 0.3)]      SINGLE EVENT CHECK
+//#endregion                          SINGLE EVENT CHECK
+
+//#region [rgba(0, 240, 0, 0.3)]      BASE EVENT LIST
 ticketmasterScraper.makeBaseEventList = async function() {
 
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.name);
@@ -103,7 +110,6 @@ ticketmasterScraper.makeBaseEventList = async function() {
   );
   
 }
-
 function editAttractionsInRaw(attractions){
   
   return attractions.map(attr => {
@@ -116,9 +122,9 @@ function editAttractionsInRaw(attractions){
   }) ?? [];
   
 }
+//#endregion                          BASE EVENT LIST
 
 // GET PAGE INFO
-
 ticketmasterScraper.getPageInfo = async function ({event}) {
  
   const {stopFunctie} =  await this.getPageInfoStart()

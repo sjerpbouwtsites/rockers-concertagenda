@@ -3,7 +3,7 @@ import * as _t from "../mods/tools.js";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 
-//#region [rgba(0, 33, 0, 0.3)]       SCRAPER CONFIG
+//#region [rgba(0, 60, 0, 0.3)]       SCRAPER CONFIG
 const dbsScraper = new AbstractScraper(makeScraperConfig({
   maxExecutionTime: 60044,
   workerData: Object.assign({}, workerData),
@@ -30,8 +30,25 @@ const dbsScraper = new AbstractScraper(makeScraperConfig({
 
 dbsScraper.listenToMasterThread();
 
-// MAKE BASE EVENTS
+//#region [rgba(0, 120, 0, 0.3)]      RAW EVENT CHECK
+//#endregion                          RAW EVENT CHECK
 
+//#region [rgba(0, 180, 0, 0.3)]      SINGLE EVENT CHECK
+dbsScraper.singleMergedEventCheck = async function(event){
+
+  const hasForbiddenTermsRes = await this.hasForbiddenTerms(event)
+  if (hasForbiddenTermsRes.success) {
+    return {
+      event,
+      reason: hasForbiddenTermsRes.reason,
+      success: !hasForbiddenTermsRes
+    }
+  }
+  return await this.hasGoodTerms(event);
+}
+//#endregion                          SINGLE EVENT CHECK
+
+//#region [rgba(0, 240, 0, 0.3)]      BASE EVENT LIST
 dbsScraper.makeBaseEventList = async function () {
 
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
@@ -139,8 +156,8 @@ dbsScraper.makeBaseEventList = async function () {
   );
   
 };
+//#endregion                          BASE EVENT LIST
 
-// GET PAGE INFO
 
 dbsScraper.getPageInfo = async function ({ page, event }) {
   
@@ -152,8 +169,6 @@ dbsScraper.getPageInfo = async function ({ page, event }) {
       errors: [],
     };
 
-    
-    
     res.image =
     document.querySelector(".tribe-events-event-image .wp-post-image")?.src ??
     null;
@@ -169,12 +184,37 @@ dbsScraper.getPageInfo = async function ({ page, event }) {
       res.priceTextcontent = `€0,00`;
     }
 
+    return res;
+  }, {event});
+  
+  if (pageInfo.ticketURL && !pageInfo.unavailable) {
+    try {
+      await page.goto(pageInfo.ticketURL)
+      await page.waitForSelector('[data-testid]', {timeout: 6500})
+      await _t.waitFor(250);
+      pageInfo.priceTextcontent = await page.evaluate(()=>{
+        return document.querySelectorAll('[data-testid]')[1]?.textContent ?? null
+      })
+    } catch (caughtError) {
+      // er is gewoon geen prijs beschikbaar.
+      page.priceTextcontent = 'onbekend';
+    }
+  }
 
+  const longTextRes = await longTextSocialsIframes(page)
+  for (let i in longTextRes){
+    pageInfo[i] = longTextRes[i]
+  }
+  
+  return await this.getPageInfoEnd({pageInfo, stopFunctie, page, event})
+  
+};
 
+// #region [rgba(60, 0, 0, 0.5)]     LONG HTML
+async function longTextSocialsIframes(page){
 
-
-    // #region [rgba(100, 0, 0, 0.3)] longHTML
-
+  return await page.evaluate(()=>{
+    const res = {}
     const textSelector = '.tribe-events-single-event-description';
     const mediaSelector = [`${textSelector} iframe` 
     ].join(', ');
@@ -274,44 +314,7 @@ dbsScraper.getPageInfo = async function ({ page, event }) {
     res.textForHTML = Array.from(document.querySelectorAll(textSelector))
       .map(el => el.innerHTML)
       .join('')
-
-    // #endregion longHTML
-
-
-
-
-
-
-    return res;
-  }, {event});
+  });
   
-  if (pageInfo.ticketURL && !pageInfo.unavailable) {
-    try {
-      await page.goto(pageInfo.ticketURL)
-      await page.waitForSelector('[data-testid]', {timeout: 6500})
-      await _t.waitFor(250);
-      pageInfo.priceTextcontent = await page.evaluate(()=>{
-        return document.querySelectorAll('[data-testid]')[1]?.textContent ?? null
-      })
-    } catch (caughtError) {
-      // er is gewoon geen prijs beschikbaar.
-      page.priceTextcontent = 'onbekend';
-    }
-  }
-  
-  return await this.getPageInfoEnd({pageInfo, stopFunctie, page, event})
-  
-};
-
-dbsScraper.singleMergedEventCheck = async function(event){
-
-  const hasForbiddenTermsRes = await this.hasForbiddenTerms(event)
-  if (hasForbiddenTermsRes.success) {
-    return {
-      event,
-      reason: hasForbiddenTermsRes.reason,
-      success: !hasForbiddenTermsRes
-    }
-  }
-  return await this.hasGoodTerms(event);
 }
+// #endregion                        LONG HTML

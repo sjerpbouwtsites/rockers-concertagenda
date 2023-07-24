@@ -4,7 +4,7 @@ import makeScraperConfig from "./gedeeld/scraper-config.js";
 import ErrorWrapper from "../mods/error-wrapper.js";
 import * as _t from "../mods/tools.js";
 
-//#region [rgba(0, 33, 0, 0.3)]       SCRAPER CONFIG
+//#region [rgba(0, 60, 0, 0.3)]       SCRAPER CONFIG
 const patronaatScraper = new AbstractScraper(makeScraperConfig({
   workerData: Object.assign({}, workerData),
   puppeteerConfig: {
@@ -29,8 +29,7 @@ const patronaatScraper = new AbstractScraper(makeScraperConfig({
 
 patronaatScraper.listenToMasterThread();
 
-// SINGLE EVENT CHECK
-
+//#region [rgba(0, 120, 0, 0.3)]      RAW EVENT CHECK
 patronaatScraper.singleRawEventCheck = async function (event) {
 
   const workingTitle = this.cleanupEventTitle(event.title.toLowerCase());
@@ -70,9 +69,12 @@ patronaatScraper.singleRawEventCheck = async function (event) {
   return isRockRes;
   
 };
+//#endregion                          RAW EVENT CHECK
 
-// MAKE BASE EVENTS
+//#region [rgba(0, 180, 0, 0.3)]      SINGLE EVENT CHECK
+//#endregion                          SINGLE EVENT CHECK
 
+//#region [rgba(0, 240, 0, 0.3)]      BASE EVENT LIST
 patronaatScraper.makeBaseEventList = async function () {
 
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
@@ -119,6 +121,7 @@ patronaatScraper.makeBaseEventList = async function () {
     stopFunctie, rawEvents: thisWorkersEvents}
   );
 };
+//#endregion                          BASE EVENT LIST
 
 // GET PAGE INFO
 
@@ -204,8 +207,37 @@ patronaatScraper.getPageInfo = async function ({ page, event }) {
       });
     }
 
-    // #region [rgba(100, 0, 0, 0.3)] longHTML
-      
+    return res;
+  }, {months: this.months, event}).catch(caughtError =>{
+    _t.wrappedHandleError(new ErrorWrapper({
+      error: caughtError,
+      remarks: `page Info catch patronaat`,
+      errorLevel: 'notice',
+      workerData: workerData,
+      toDebug: {
+        event, 
+        pageInfo
+      }
+    }))
+  });
+
+  const longTextRes = await longTextSocialsIframes(page)
+  for (let i in longTextRes){
+    pageInfo[i] = longTextRes[i]
+  }
+
+  return await this.getPageInfoEnd({pageInfo, stopFunctie, page, event})
+  
+};
+
+// #region [rgba(60, 0, 0, 0.5)]     LONG HTML
+async function longTextSocialsIframes(page){
+
+  return await page.evaluate(()=>{
+    const res = {}
+
+
+    
     const textSelector = '.event__content';
     const mediaSelector = [
       `iframe[src*='youtube']`,
@@ -365,22 +397,8 @@ patronaatScraper.getPageInfo = async function ({ page, event }) {
       .map((el) => el.innerHTML)
       .join("");
 
-    // #endregion longHTML
-
     return res;
-  }, {months: this.months, event}).catch(caughtError =>{
-    _t.wrappedHandleError(new ErrorWrapper({
-      error: caughtError,
-      remarks: `page Info catch patronaat`,
-      errorLevel: 'notice',
-      workerData: workerData,
-      toDebug: {
-        event, 
-        pageInfo
-      }
-    }))
-  });
-
-  return await this.getPageInfoEnd({pageInfo, stopFunctie, page, event})
+  })
   
-};
+}
+// #endregion                        LONG HTML

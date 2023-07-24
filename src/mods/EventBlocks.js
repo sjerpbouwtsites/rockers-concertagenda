@@ -173,7 +173,7 @@ class EventBlocks extends React.Component {
             document.getElementById("app-banner").clientHeight;
           if (window.innerWidth > 1024){
             console.log(document.body.offsetHeight, thisElement.offsetHeight, initialElementOffsetTop)
-            const maxOffset = Math.min((document.body.offsetHeight - thisElement.offsetHeight - 150), initialElementOffsetTop - 50);
+            const maxOffset = Math.max(Math.min((document.body.offsetHeight - thisElement.offsetHeight - 150), initialElementOffsetTop - 50), 50);
             thisElement.setAttribute('style', `top: ${maxOffset}px`)
           }            
           window.scrollTo(0, blockEl.offsetTop + appBannerHeight - 20);

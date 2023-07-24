@@ -3,7 +3,7 @@ import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 import {waitFor} from "../mods/tools.js";
 
-//#region [rgba(0, 33, 0, 0.3)]       SCRAPER CONFIG
+//#region [rgba(0, 60, 0, 0.3)]       SCRAPER CONFIG
 const tivoliVredenburgScraper = new AbstractScraper(makeScraperConfig({
   workerData: Object.assign({}, workerData),
   puppeteerConfig: {
@@ -25,8 +25,7 @@ const tivoliVredenburgScraper = new AbstractScraper(makeScraperConfig({
 
 tivoliVredenburgScraper.listenToMasterThread();
 
-// SINGLE EVENT CHECK
-
+//#region [rgba(0, 120, 0, 0.3)]      RAW EVENT CHECK
 tivoliVredenburgScraper.singleRawEventCheck = async function (event) {
 
   const workingTitle = this.cleanupEventTitle(event.title);
@@ -68,9 +67,12 @@ tivoliVredenburgScraper.singleRawEventCheck = async function (event) {
   return isRockRes;
   
 };
+//#endregion                          RAW EVENT CHECK
 
-// MAKE BASE EVENTS
+//#region [rgba(0, 180, 0, 0.3)]      SINGLE EVENT CHECK
+//#endregion                          SINGLE EVENT CHECK
 
+//#region [rgba(0, 240, 0, 0.3)]      BASE EVENT LIST
 tivoliVredenburgScraper.makeBaseEventList = async function () {
   
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
@@ -127,6 +129,8 @@ tivoliVredenburgScraper.makeBaseEventList = async function () {
   );
 
 };
+//#endregion                          BASE EVENT LIST
+
 
 // GET PAGE INFO
 
@@ -237,7 +241,24 @@ tivoliVredenburgScraper.getPageInfo = async function ({ page, event }) {
       }
     }
 
-    // #region [rgba(100, 0, 0, 0.3)] longHTML
+    return res;
+  }, {event});
+
+  const longTextRes = await longTextSocialsIframes(page)
+  for (let i in longTextRes){
+    pageInfo[i] = longTextRes[i]
+  }
+
+  return await this.getPageInfoEnd({pageInfo, stopFunctie, page, event})
+
+};
+
+// #region [rgba(100, 0, 0, 0.3)] longHTML
+async function longTextSocialsIframes(page){
+
+  return await page.evaluate(()=>{
+    const res = {}
+
       
     const textSelector = '.event-flow .event__text';
     const mediaSelector = [
@@ -400,10 +421,9 @@ tivoliVredenburgScraper.getPageInfo = async function ({ page, event }) {
       .map((el) => el.innerHTML)
       .join("");
 
-    // #endregion longHTML
+
     return res;
-  }, {event});
-
-  return await this.getPageInfoEnd({pageInfo, stopFunctie, page, event})
-
-};
+  })
+  
+}
+// #endregion                        LONG HTML

@@ -3,7 +3,7 @@ import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 
 
-//#region [rgba(0, 33, 0, 0.3)]       SCRAPER CONFIG
+//#region [rgba(0, 60, 0, 0.3)]       SCRAPER CONFIG
 const gebrdenobelScraper = new AbstractScraper(
   makeScraperConfig({
     workerData: Object.assign({}, workerData),
@@ -35,8 +35,10 @@ const gebrdenobelScraper = new AbstractScraper(
 
 gebrdenobelScraper.listenToMasterThread();
 
-// ASYNC MERGED CHECK
+//#region [rgba(0, 120, 0, 0.3)]      RAW EVENT CHECK
+//#endregion                          RAW EVENT CHECK
 
+//#region [rgba(0, 180, 0, 0.3)]      SINGLE EVENT CHECK
 gebrdenobelScraper.singleMergedEventCheck = async function (event) {
   const workingTitle = this.cleanupEventTitle(event.title);
 
@@ -67,9 +69,9 @@ gebrdenobelScraper.singleMergedEventCheck = async function (event) {
     reason: "nothing found currently",
   };
 };
+//#endregion                          SINGLE EVENT CHECK
 
-// MAKE BASE EVENTSx
-
+//#region [rgba(0, 240, 0, 0.3)]      BASE EVENT LIST
 gebrdenobelScraper.makeBaseEventList = async function () {
   const availableBaseEvents = await this.checkBaseEventAvailable(
     workerData.family
@@ -175,6 +177,7 @@ gebrdenobelScraper.makeBaseEventList = async function () {
     rawEvents: thisWorkersEvents,
   });
 };
+//#endregion                          BASE EVENT LIST
 
 // GET PAGE INFO
 
@@ -259,164 +262,6 @@ gebrdenobelScraper.getPageInfo = async function ({ page, event }) {
           .parentNode.removeChild(document.querySelector("#shop-frame"));
       }
 
-      // #region [rgba(100, 0, 0, 0.3)] longHTML
-
-      const textSelector = ".contentBlocks .lead, .contentBlocks .text";
-      const mediaSelector = [
-        `.contentBlocks .tm_video`,
-        `.contentBlocks iframe[src*='spotify']`,
-      ].join(", ");
-      const removeEmptyHTMLFrom = textSelector;
-      const socialSelector = [
-        ".widget--social .btn[href*='facebook']",
-        ".widget--social .btn[href*='fb.me']",
-      ].join(", ");
-      const removeSelectors = [
-        "[class*='icon-']",
-        "[class*='fa-']",
-        ".fa",
-        ".contentBlocks .video",
-        ".contentBlocks iframe",
-        ".contentBlocks script",
-        ".contentBlocks #shop-frame",
-      ].join(", ");
-
-      const attributesToRemove = [
-        "style",
-        "hidden",
-        "_target",
-        "frameborder",
-        "onclick",
-        "aria-hidden",
-        "allow",
-        "allowfullscreen",
-        "data-deferlazy",
-        "width",
-        "height",
-      ];
-      const attributesToRemoveSecondRound = ["class", "id"];
-      const removeHTMLWithStrings = ["Om deze content te kunnnen zien"];
-
-      // eerst onzin attributes wegslopen
-      const socAttrRemSelAdd = `${
-        socialSelector ? `, ${socialSelector} *` : ""
-      }`;
-      document
-        .querySelectorAll(`${textSelector} *${socAttrRemSelAdd}`)
-        .forEach((elToStrip) => {
-          attributesToRemove.forEach((attr) => {
-            if (elToStrip.hasAttribute(attr)) {
-              elToStrip.removeAttribute(attr);
-            }
-          });
-        });
-
-      // media obj maken voordat HTML verdwijnt
-      res.mediaForHTML = Array.from(
-        document.querySelectorAll(mediaSelector)
-      ).map((bron) => {
-        bron.className = "";
-        // custom gebr de nobel
-        if (bron.hasAttribute("data-video-id")) {
-          return {
-            outer: null,
-            src: null,
-            id: bron.getAttribute("data-video-id"),
-            type: "youtube",
-          };
-        } else if (bron.src.includes("spotify")) {
-          return {
-            outer: bron.outerHTML,
-            src: bron.src,
-            id: null,
-            type: "spotify",
-          };
-        }
-        // end custom gebr de nobel
-
-        // terugval???? nog niet bekend met alle opties.
-        return {
-          outer: bron.outerHTML,
-          src: bron.src,
-          id: null,
-          type: bron.src.includes("spotify")
-            ? "spotify"
-            : bron.src.includes("youtube")
-              ? "youtube"
-              : "bandcamp",
-        };
-      });
-
-      // socials obj maken voordat HTML verdwijnt
-      res.socialsForHTML = !socialSelector
-        ? ""
-        : Array.from(document.querySelectorAll(socialSelector)).map((el) => {
-          el.querySelectorAll("i, svg, img").forEach((rm) =>
-            rm.parentNode.removeChild(rm)
-          );
-
-          if (!el.textContent.trim().length) {
-            if (el.href.includes("facebook")) {
-              el.textContent = "Facebook";
-            } else if (el.href.includes("twitter")) {
-              el.textContent = "Tweet";
-            } else {
-              el.textContent = "Onbekende social";
-            }
-          }
-          el.className = "";
-          el.target = "_blank";
-          return el.outerHTML;
-        });
-
-      // stript HTML tbv text
-      removeSelectors.length &&
-        document
-          .querySelectorAll(removeSelectors)
-          .forEach((toRemove) => toRemove.parentNode.removeChild(toRemove));
-
-      // verwijder ongewenste paragrafen over bv restaurants
-      Array.from(
-        document.querySelectorAll(
-          `${textSelector} p, ${textSelector} span, ${textSelector} a`
-        )
-      ).forEach((verwijder) => {
-        const heeftEvilString = !!removeHTMLWithStrings.find((evilString) =>
-          verwijder.textContent.includes(evilString)
-        );
-        if (heeftEvilString) {
-          verwijder.parentNode.removeChild(verwijder);
-        }
-      });
-
-      // lege HTML eruit cq HTML zonder tekst of getallen
-      document
-        .querySelectorAll(`${removeEmptyHTMLFrom} > *`)
-        .forEach((checkForEmpty) => {
-          const leegMatch = checkForEmpty.innerHTML
-            .replace("&nbsp;", "")
-            .match(/[\w\d]/g);
-          if (!Array.isArray(leegMatch)) {
-            checkForEmpty.parentNode.removeChild(checkForEmpty);
-          }
-        });
-
-      // laatste attributen eruit.
-      document.querySelectorAll(`${textSelector} *`).forEach((elToStrip) => {
-        attributesToRemoveSecondRound.forEach((attr) => {
-          if (elToStrip.hasAttribute(attr)) {
-            elToStrip.removeAttribute(attr);
-          }
-        });
-      });
-
-      // tekst.
-      res.textForHTML = Array.from(document.querySelectorAll(textSelector))
-        .map((el) => el.innerHTML)
-        .join("");
-
-      // #endregion longHTML
-
       // #region [rgba(50, 0, 0, 0.3)] image 
       res.image = document.querySelector(".hero img")?.src ?? null;
       if (!res.image) {
@@ -431,5 +276,180 @@ gebrdenobelScraper.getPageInfo = async function ({ page, event }) {
     { months: this.months, event }
   );
 
+  const longTextRes = await longTextSocialsIframes(page)
+  for (let i in longTextRes){
+    pageInfo[i] = longTextRes[i]
+  }
+
   return await this.getPageInfoEnd({ pageInfo, stopFunctie, page, event });
+
+
 };
+
+// #region [rgba(60, 0, 0, 0.5)]     LONG HTML
+async function longTextSocialsIframes(page){
+
+  return await page.evaluate(()=>{
+    const res = {}
+
+
+    const textSelector = ".contentBlocks .lead, .contentBlocks .text";
+    const mediaSelector = [
+      `.contentBlocks .tm_video`,
+      `.contentBlocks iframe[src*='spotify']`,
+    ].join(", ");
+    const removeEmptyHTMLFrom = textSelector;
+    const socialSelector = [
+      ".widget--social .btn[href*='facebook']",
+      ".widget--social .btn[href*='fb.me']",
+    ].join(", ");
+    const removeSelectors = [
+      "[class*='icon-']",
+      "[class*='fa-']",
+      ".fa",
+      ".contentBlocks .video",
+      ".contentBlocks iframe",
+      ".contentBlocks script",
+      ".contentBlocks #shop-frame",
+    ].join(", ");
+
+    const attributesToRemove = [
+      "style",
+      "hidden",
+      "_target",
+      "frameborder",
+      "onclick",
+      "aria-hidden",
+      "allow",
+      "allowfullscreen",
+      "data-deferlazy",
+      "width",
+      "height",
+    ];
+    const attributesToRemoveSecondRound = ["class", "id"];
+    const removeHTMLWithStrings = ["Om deze content te kunnnen zien"];
+
+    // eerst onzin attributes wegslopen
+    const socAttrRemSelAdd = `${
+      socialSelector ? `, ${socialSelector} *` : ""
+    }`;
+    document
+      .querySelectorAll(`${textSelector} *${socAttrRemSelAdd}`)
+      .forEach((elToStrip) => {
+        attributesToRemove.forEach((attr) => {
+          if (elToStrip.hasAttribute(attr)) {
+            elToStrip.removeAttribute(attr);
+          }
+        });
+      });
+
+    // media obj maken voordat HTML verdwijnt
+    res.mediaForHTML = Array.from(
+      document.querySelectorAll(mediaSelector)
+    ).map((bron) => {
+      bron.className = "";
+      // custom gebr de nobel
+      if (bron.hasAttribute("data-video-id")) {
+        return {
+          outer: null,
+          src: null,
+          id: bron.getAttribute("data-video-id"),
+          type: "youtube",
+        };
+      } else if (bron.src.includes("spotify")) {
+        return {
+          outer: bron.outerHTML,
+          src: bron.src,
+          id: null,
+          type: "spotify",
+        };
+      }
+      // end custom gebr de nobel
+
+      // terugval???? nog niet bekend met alle opties.
+      return {
+        outer: bron.outerHTML,
+        src: bron.src,
+        id: null,
+        type: bron.src.includes("spotify")
+          ? "spotify"
+          : bron.src.includes("youtube")
+            ? "youtube"
+            : "bandcamp",
+      };
+    });
+
+    // socials obj maken voordat HTML verdwijnt
+    res.socialsForHTML = !socialSelector
+      ? ""
+      : Array.from(document.querySelectorAll(socialSelector)).map((el) => {
+        el.querySelectorAll("i, svg, img").forEach((rm) =>
+          rm.parentNode.removeChild(rm)
+        );
+
+        if (!el.textContent.trim().length) {
+          if (el.href.includes("facebook")) {
+            el.textContent = "Facebook";
+          } else if (el.href.includes("twitter")) {
+            el.textContent = "Tweet";
+          } else {
+            el.textContent = "Onbekende social";
+          }
+        }
+        el.className = "";
+        el.target = "_blank";
+        return el.outerHTML;
+      });
+
+    // stript HTML tbv text
+    removeSelectors.length &&
+      document
+        .querySelectorAll(removeSelectors)
+        .forEach((toRemove) => toRemove.parentNode.removeChild(toRemove));
+
+    // verwijder ongewenste paragrafen over bv restaurants
+    Array.from(
+      document.querySelectorAll(
+        `${textSelector} p, ${textSelector} span, ${textSelector} a`
+      )
+    ).forEach((verwijder) => {
+      const heeftEvilString = !!removeHTMLWithStrings.find((evilString) =>
+        verwijder.textContent.includes(evilString)
+      );
+      if (heeftEvilString) {
+        verwijder.parentNode.removeChild(verwijder);
+      }
+    });
+
+    // lege HTML eruit cq HTML zonder tekst of getallen
+    document
+      .querySelectorAll(`${removeEmptyHTMLFrom} > *`)
+      .forEach((checkForEmpty) => {
+        const leegMatch = checkForEmpty.innerHTML
+          .replace("&nbsp;", "")
+          .match(/[\w\d]/g);
+        if (!Array.isArray(leegMatch)) {
+          checkForEmpty.parentNode.removeChild(checkForEmpty);
+        }
+      });
+
+    // laatste attributen eruit.
+    document.querySelectorAll(`${textSelector} *`).forEach((elToStrip) => {
+      attributesToRemoveSecondRound.forEach((attr) => {
+        if (elToStrip.hasAttribute(attr)) {
+          elToStrip.removeAttribute(attr);
+        }
+      });
+    });
+
+    // tekst.
+    res.textForHTML = Array.from(document.querySelectorAll(textSelector))
+      .map((el) => el.innerHTML)
+      .join("");
+
+
+    return res;
+  })
+  
+}
+// #endregion                        LONG HTML

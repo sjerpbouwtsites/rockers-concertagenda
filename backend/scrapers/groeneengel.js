@@ -2,7 +2,7 @@ import { workerData} from "worker_threads";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 
-//#region [rgba(0, 33, 0, 0.3)]       SCRAPER CONFIG
+//#region [rgba(0, 60, 0, 0.3)]       SCRAPER CONFIG
 const groeneEngelScraper = new AbstractScraper(makeScraperConfig({
   maxExecutionTime: 60075,
   workerData: Object.assign({}, workerData),
@@ -29,8 +29,41 @@ const groeneEngelScraper = new AbstractScraper(makeScraperConfig({
 
 groeneEngelScraper.listenToMasterThread();
 
-// MERGED ASYNC CHECK
+//#region [rgba(0, 120, 0, 0.3)]      RAW EVENT CHECK
+groeneEngelScraper.singleRawEventCheck = async function(event){
 
+  const workingTitle = this.cleanupEventTitle(event.title)
+
+  const isRefused = await this.rockRefuseListCheck(event, workingTitle)
+  if (isRefused.success) return {
+    reason: isRefused.reason,
+    event,
+    success: false
+  };
+
+  const isAllowed = await this.rockAllowListCheck(event, workingTitle)
+  if (isAllowed.success) return isAllowed;
+
+  const hasForbiddenTerms = await this.hasForbiddenTerms(event);
+  if (hasForbiddenTerms.success) {
+    await this.saveRefusedTitle(workingTitle)
+    return {
+      reason: hasForbiddenTerms.reason,
+      success: false,
+      event
+    }
+  }
+
+  return {
+    event,
+    success: true,
+    reason: "nothing found currently",
+  };
+  
+}
+//#endregion                          RAW EVENT CHECK
+
+//#region [rgba(0, 180, 0, 0.3)]      SINGLE EVENT CHECK
 groeneEngelScraper.singleMergedEventCheck = async function (event) {
   const tl = this.cleanupEventTitle(event.title);
   const isRefused = await this.rockRefuseListCheck(event, tl)
@@ -66,47 +99,10 @@ groeneEngelScraper.singleMergedEventCheck = async function (event) {
     await this.saveRefusedTitle(tl)
   }
   return isRockRes;  
-
 };
+//#endregion                          SINGLE EVENT CHECK
 
-
-
-// ASYNC RAW EVENT CHECK
-
-groeneEngelScraper.singleRawEventCheck = async function(event){
-
-  const workingTitle = this.cleanupEventTitle(event.title)
-
-  const isRefused = await this.rockRefuseListCheck(event, workingTitle)
-  if (isRefused.success) return {
-    reason: isRefused.reason,
-    event,
-    success: false
-  };
-
-  const isAllowed = await this.rockAllowListCheck(event, workingTitle)
-  if (isAllowed.success) return isAllowed;
-
-  const hasForbiddenTerms = await this.hasForbiddenTerms(event);
-  if (hasForbiddenTerms.success) {
-    await this.saveRefusedTitle(workingTitle)
-    return {
-      reason: hasForbiddenTerms.reason,
-      success: false,
-      event
-    }
-  }
-
-  return {
-    event,
-    success: true,
-    reason: "nothing found currently",
-  };
-  
-}
-
-// MAKE BASE EVENT LIST
-
+//#region [rgba(0, 240, 0, 0.3)]      BASE EVENT LIST
 groeneEngelScraper.makeBaseEventList = async function () {
 
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
@@ -118,8 +114,6 @@ groeneEngelScraper.makeBaseEventList = async function () {
   }    
 
   const {stopFunctie, page} = await this.makeBaseEventListStart()
-
-
 
   let baseEvents = await page.evaluate(({workerData, unavailabiltyTerms,months}) => 
   {
@@ -160,67 +154,8 @@ groeneEngelScraper.makeBaseEventList = async function () {
     stopFunctie, rawEvents: thisWorkersEvents}
   );
 };
+//#endregion                          BASE EVENT LIST
 
-// MAKE BASE EVENTS
-
-// groeneEngelScraper.makeBaseEventList = async function () {
-
-//   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
-//   if (availableBaseEvents){
-//     const thisWorkersEvents = availableBaseEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
-//     return await this.makeBaseEventListEnd({
-//       stopFunctie: null, rawEvents: thisWorkersEvents}
-//     );    
-//   }    
-
-//   const {stopFunctie, page} = await this.makeBaseEventListStart()
-
-//   let rawEvents = await page.evaluate(({workerData, months, unavailabiltyTerms}) => {
-//     return Array.from(document.querySelectorAll(".collection-wrapper .event-part"))
-//       .filter((eventEl) => {
-//         const titelElText = eventEl
-//           .querySelector('.part-title')?.textContent.toLowerCase() ?? '';
-//         return titelElText.includes('ge heavy');
-//       })
-//       .map((eventEl) => {
-//         const title = eventEl.querySelector('h2')?.textContent ?? "";
-//         const res = {
-  
-//           pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
-//           errors: [],          
-//           title
-//         }   
-//         const uaRex = new RegExp(unavailabiltyTerms.join("|"), 'gi');
-//         res.unavailable = !!eventEl.textContent.match(uaRex);        
-//         res.venueEventUrl = eventEl.querySelector("a")?.href ?? null;
-
-//         try {
-//           const startDateMatch = eventEl.querySelector('.date-label')?.textContent.toLowerCase().match(/(\d+)\s+(\w+)\s+(\d+)/)
-//           if (startDateMatch && startDateMatch.length > 3){
-//             const day = startDateMatch[1].padStart(2, '0');
-//             const month = months[startDateMatch[2]];
-//             const year = startDateMatch[3];
-//             // PAS IN PAGE INFO TIJD AAN.
-//             res.startDateTime = new Date(`${year}-${month}-${day}T12:00:00`).toISOString(); 
-//           }          
-//         } catch (caughtError) {
-//           res.errors.push({
-//             error: caughtError,remarks: `startDate main fout ${res.pageInfo}`,
-//             toDebug: res
-//           })
-//         }
-//         return res;
-//       });
-//   }, {workerData, months: this.months, unavailabiltyTerms: AbstractScraper.unavailabiltyTerms })
-//   rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
-
-//   this.saveBaseEventlist(workerData.family, rawEvents)
-//   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
-//   return await this.makeBaseEventListEnd({
-//     stopFunctie, rawEvents: thisWorkersEvents}
-//   );
-  
-// };
 
 groeneEngelScraper.getPageInfo = async function ({ page, event }) {
 
@@ -276,7 +211,26 @@ groeneEngelScraper.getPageInfo = async function ({ page, event }) {
       })
     } 
 
-    // #region [rgba(100, 0, 0, 0.3)] longHTML
+    return res;
+  }, {event});
+
+  const longTextRes = await longTextSocialsIframes(page)
+  for (let i in longTextRes){
+    pageInfo[i] = longTextRes[i]
+  }
+
+  return await this.getPageInfoEnd({pageInfo, stopFunctie, page, event})
+
+};
+
+
+
+// #region [rgba(60, 0, 0, 0.5)]     LONG HTML
+async function longTextSocialsIframes(page){
+
+  return await page.evaluate(()=>{
+    const res = {}
+
 
     const textSelector = '#main-content .left-side';
     const mediaSelector = [
@@ -403,11 +357,9 @@ groeneEngelScraper.getPageInfo = async function ({ page, event }) {
       .map(el => el.innerHTML)
       .join('')
 
-    // #endregion longHTML
 
     return res;
-  }, {event});
-
-  return await this.getPageInfoEnd({pageInfo, stopFunctie, page, event})
-
-};
+  })
+  
+}
+// #endregion                        LONG HTML

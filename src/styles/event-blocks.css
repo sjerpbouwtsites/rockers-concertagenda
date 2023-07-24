@@ -552,7 +552,7 @@ right: -16px;
 }
 
 .event-block--enlarged .event-block__image {
-  filter: brightness(0.66) blur(1px);
+  filter: brightness(0.33) blur(1px);
 }
 
 @media (max-width: 600px) {
@@ -706,10 +706,10 @@ a.long-html__social-list-link:hover{
   filter: brightness(80%)
 }
 
-.long-html__social-list-link[href*='fb.me']::before,
+/* .long-html__social-list-link[href*='fb.me']::before,
 .long-html__social-list-link[href*='facebook']::before {
   content: 'FB '
-}
+} */
 
 
 .long-html__music-videos {
@@ -807,26 +807,45 @@ margin-top: 50px;
   opacity: 1;
   max-width: 30ch;
 }
-.event-block__main .void-container-for-enlarged > p,
-.event-block__main .void-container-for-enlarged > ul,
-.event-block__main .void-container-for-enlarged > span,
-.event-block__main .void-container-for-enlarged > a {
+.event-block__main .long-html__text p,
+.event-block__main .long-html__text ul,
+.event-block__main .long-html__text span,
+.event-block__main .long-html__text a,
+.event-block__main .long-html__text > div {
   font-size: .8em;
   max-width: 40ch;
   line-height: 1.05em;
 }
-.event-block__main .void-container-for-enlarged > p *,
-.event-block__main .void-container-for-enlarged > ul *,
-.event-block__main .void-container-for-enlarged > span *,
-.event-block__main .void-container-for-enlarged > a *{
-  font-size: inherit;
+.event-block__main .long-html__text p {
+  margin-top: .25em;
+}
+.event-block__main .long-html__text p *,
+.event-block__main .long-html__text ul *,
+.event-block__main .long-html__text span *,
+.event-block__main .long-html__text a *,
+.event-block__main .long-html__text > div *{
+  font-size: inherit !important; /* 4 great justice */
+}
+
+.event-block__main .long-html__text h2,
+.event-block__main .long-html__text h3 {
+  font-size: 1.66rem;
+  margin-bottom: .25em;
+  line-height: 1;
+  font-variant: small-caps
+}
+.event-block__main .long-html__text h4 {
+  font-size: 1.25rem;
+  margin-bottom: .25em;
+  line-height: 1;
+  font-variant: small-caps  
 }
 
 @media (min-width: 1024px){
-  .event-block__main .void-container-for-enlarged > p,
-  .event-block__main .void-container-for-enlarged > ul,
-  .event-block__main .void-container-for-enlarged > span,
-  .event-block__main .void-container-for-enlarged > a {
+  .event-block__main .long-html__text p,
+  .event-block__main .long-html__text ul,
+  .event-block__main .long-html__text span,
+  .event-block__main .long-html__text a {
     font-size: .66em;
     max-width: 50ch;
     line-height: 1.15em;

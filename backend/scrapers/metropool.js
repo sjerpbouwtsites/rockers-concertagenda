@@ -3,7 +3,7 @@ import * as _t from "../mods/tools.js";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 
-//#region [rgba(0, 33, 0, 0.3)]       SCRAPER CONFIG
+//#region [rgba(0, 60, 0, 0.3)]       SCRAPER CONFIG
 const metropoolScraper = new AbstractScraper(makeScraperConfig({
   maxExecutionTime: 120000,
   workerData: Object.assign({}, workerData),
@@ -30,8 +30,7 @@ const metropoolScraper = new AbstractScraper(makeScraperConfig({
 
 metropoolScraper.listenToMasterThread();
 
-// SINGLE RAW EVENT CHECK
-
+//#region [rgba(0, 120, 0, 0.3)]      RAW EVENT CHECK
 metropoolScraper.singleRawEventCheck = async function(event){
 
   const workingTitle = this.cleanupEventTitle(event.title)
@@ -70,9 +69,12 @@ metropoolScraper.singleRawEventCheck = async function(event){
   }
   return isRockRes;
 }
+//#endregion                          RAW EVENT CHECK
 
-// MAKE BASE EVENTS
+//#region [rgba(0, 180, 0, 0.3)]      SINGLE EVENT CHECK
+//#endregion                          SINGLE EVENT CHECK
 
+//#region [rgba(0, 240, 0, 0.3)]      BASE EVENT LIST
 metropoolScraper.makeBaseEventList = async function () {
 
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
@@ -117,6 +119,7 @@ metropoolScraper.makeBaseEventList = async function () {
     stopFunctie, rawEvents: thisWorkersEvents}
   );
 };
+//#endregion                          BASE EVENT LIST
 
 // GET PAGE INFO
 
@@ -207,7 +210,24 @@ metropoolScraper.getPageInfo = async function ({ page, event}) {
       })
     }   
 
-    // #region [rgba(100, 0, 0, 0.3)] longHTML
+    return res;
+  }, {months: this.months, event});
+
+  const longTextRes = await longTextSocialsIframes(page)
+  for (let i in longTextRes){
+    pageInfo[i] = longTextRes[i]
+  }
+
+  return await this.getPageInfoEnd({pageInfo, stopFunctie, page, event})
+  
+};
+
+// #region [rgba(60, 0, 0, 0.5)]     LONG HTML
+async function longTextSocialsIframes(page){
+
+  return await page.evaluate(()=>{
+    const res = {}
+
 
     const textSelector = '.event-title-wrap + div';
     const mediaSelector = [".video-container iframe, .spotify iframe"].join(", ");
@@ -356,12 +376,9 @@ metropoolScraper.getPageInfo = async function ({ page, event}) {
       .map((el) => el.innerHTML)
       .join("");
 
-    // #endregion longHTML
-
 
     return res;
-  }, {months: this.months, event});
-
-  return await this.getPageInfoEnd({pageInfo, stopFunctie, page, event})
+  })
   
-};
+}
+// #endregion                        LONG HTML

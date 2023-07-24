@@ -2,7 +2,7 @@ import { workerData } from "worker_threads";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 
-//#region [rgba(0, 33, 0, 0.3)]       SCRAPER CONFIG
+//#region [rgba(0, 60, 0, 0.3)]       SCRAPER CONFIG
 const dynamoScraper = new AbstractScraper(makeScraperConfig({
   maxExecutionTime: 60059,
   workerData: Object.assign({}, workerData),
@@ -26,6 +26,12 @@ const dynamoScraper = new AbstractScraper(makeScraperConfig({
 }));
 //#endregion                          SCRAPER CONFIG
 
+dynamoScraper.listenToMasterThread();
+
+//#region [rgba(0, 120, 0, 0.3)]      RAW EVENT CHECK
+//#endregion                          RAW EVENT CHECK
+
+//#region [rgba(0, 180, 0, 0.3)]      SINGLE EVENT CHECK
 dynamoScraper.singleMergedEventCheck = async function(event){
 
   let workingTitle = this.cleanupEventTitle(event.title);
@@ -70,11 +76,9 @@ dynamoScraper.singleMergedEventCheck = async function(event){
   }
   
 }
+//#endregion                          SINGLE EVENT CHECK
 
-dynamoScraper.listenToMasterThread();
-
-// MAKE BASE EVENTS
-
+//#region [rgba(0, 240, 0, 0.3)]      BASE EVENT LIST
 dynamoScraper.makeBaseEventList = async function () {
 
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
@@ -122,8 +126,8 @@ dynamoScraper.makeBaseEventList = async function () {
   return await this.makeBaseEventListEnd({
     stopFunctie, rawEvents: thisWorkersEvents}
   );
-
 };
+//#endregion                          BASE EVENT LIST
 
 // GET PAGE INFO
 
@@ -223,155 +227,6 @@ dynamoScraper.getPageInfo = async function ({ page, event}) {
       }
 
       res.priceTextcontent = agendaDatesEls[1].textContent;
-      
-      res.longTextHTML = 
-        (document.querySelector("section.article .article-block")?.innerHTML ??
-        "")+Array.from(
-          document.querySelectorAll('#spike-pattern iframe'))
-          .map(frame => frame.outerHTML)
-          .join('');
-
-
-
-
-
-
-
-      // #region [rgba(100, 0, 0, 0.3)] longHTML
-
-      const textSelector = '.article-block.text-block';
-      const mediaSelector = [`.sidebar iframe, .article-block iframe` 
-      ].join(', ');
-      const removeEmptyHTMLFrom = textSelector
-      const socialSelector = [
-        ".event-content .fb-event a",
-        ".article-block a[href*='facebook']",
-        ".article-block a[href*='instagram']"
-      ].join(', ');
-      const removeSelectors = [
-        "[class*='icon-']",
-        "[class*='fa-']",
-        ".fa",
-        ".iframe-wrapper-tijdelijk",
-        ".article-block a[href*='facebook']",
-        ".article-block a[href*='instagram']"        
-      ].join(', ')
-  
-      const attributesToRemove = ['style', 'hidden', '_target', "frameborder", 'onclick', 'aria-hidden', 'allow', 'allowfullscreen', 'data-deferlazy','width', 'height'];
-      const attributesToRemoveSecondRound = ['class', 'id' ];
-      const removeHTMLWithStrings = [];
-
-      //custom dynamo
-      document.querySelectorAll('.article-block iframe').forEach(
-        iframe=> iframe.parentNode.classList.add('iframe-wrapper-tijdelijk')
-      )
-      //end custom dynamo
-
-      // eerst onzin attributes wegslopen
-      const socAttrRemSelAdd = `${socialSelector ? `, ${socialSelector} *` : ''}`
-      document.querySelectorAll(`${textSelector} *${socAttrRemSelAdd}, iframe`)
-        .forEach(elToStrip => {
-          attributesToRemove.forEach(attr => {
-            if (elToStrip.hasAttribute(attr)){
-              elToStrip.removeAttribute(attr)
-            }
-          })
-        })
-
-      // media obj maken voordat HTML verdwijnt
-      res.mediaForHTML = Array.from(document.querySelectorAll(mediaSelector))
-        .map(bron => {
-
-          if (bron.hasAttribute('data-src-cmplz')){
-            bron.src = bron.getAttribute('data-src-cmplz')
-          }
-          const src = bron?.src ? bron.src : '';
-          if (bron.hasAttribute('data-cmplz-target')) bron.removeAttribute('data-cmplz-target')
-          if (bron.hasAttribute('data-src-cmplz')) bron.removeAttribute('data-src-cmplz')
-          if (bron.hasAttribute('loading')) bron.removeAttribute('loading')
-          bron.className = ''
-          return {
-            outer: bron.outerHTML,
-            src,
-            id: null,
-            type: src.includes('spotify') 
-              ? 'spotify' 
-              : src.includes('youtube') 
-                ? 'youtube'
-                : 'bandcamp'
-          }
-        })
-
-      // socials obj maken voordat HTML verdwijnt
-      res.socialsForHTML = !socialSelector ? '' : Array.from(document.querySelectorAll(socialSelector))
-        .map(el => {
-         
-          el.querySelectorAll('i, svg, img').forEach(rm => rm.parentNode.removeChild(rm))
-
-          if (!el.textContent.trim().length){
-            if (el.href.includes('facebook')){
-              el.textContent = 'Facebook';
-            } else if(el.href.includes('twitter')) {
-              el.textContent = 'Tweet';
-            } else {
-              el.textContent = 'Onbekende social';
-            }
-          }
-          el.className = ''
-          el.target = '_blank';
-          return el.outerHTML
-        })
-
-      // stript HTML tbv text
-      removeSelectors.length && document.querySelectorAll(removeSelectors)
-        .forEach(toRemove => toRemove.parentNode.removeChild(toRemove))
-
-      // dynamo custom
-      const textBlokken = Array.from(document.querySelectorAll('.article-block.text-block'));
-      const laatsteBlok = textBlokken[textBlokken.length - 1];
-      if (laatsteBlok.textContent.includes('voorverkoop') 
-      || laatsteBlok.textContent.includes('sale')
-      || laatsteBlok.querySelector('h6')?.textContent.toLowerCase().includes('info')){
-        laatsteBlok.parentNode.removeChild(laatsteBlok)
-      }
-      // eind dynamo custom
-
-      // verwijder ongewenste paragrafen over bv restaurants
-      Array.from(document.querySelectorAll(`${textSelector} p, ${textSelector} span, ${textSelector} a`))
-        .forEach(verwijder => {
-          const heeftEvilString = !!removeHTMLWithStrings.find(evilString => verwijder.textContent.includes(evilString))
-          if (heeftEvilString) {
-            verwijder.parentNode.removeChild(verwijder)
-          }
-        });
-
-      // lege HTML eruit cq HTML zonder tekst of getallen
-      document.querySelectorAll(`${removeEmptyHTMLFrom} > *`)
-        .forEach(checkForEmpty => {
-          const leegMatch = checkForEmpty.innerHTML.replace('&nbsp;','').match(/[\w\d]/g);
-          if (!Array.isArray(leegMatch)){
-            checkForEmpty.parentNode.removeChild(checkForEmpty)
-          }
-        })
-
-      // laatste attributen eruit.
-      document.querySelectorAll(`${textSelector} *`)
-        .forEach(elToStrip => {
-          attributesToRemoveSecondRound.forEach(attr => {
-            if (elToStrip.hasAttribute(attr)){
-              elToStrip.removeAttribute(attr)
-            }
-          })
-        })      
-
-      // tekst.
-      res.textForHTML = Array.from(document.querySelectorAll(textSelector))
-        .map(el => el.innerHTML)
-        .join('')
-
-      // #endregion longHTML
-
-
 
       res.image =
         document
@@ -391,6 +246,155 @@ dynamoScraper.getPageInfo = async function ({ page, event}) {
     { months: this.months, event }
   );
 
+  const longTextRes = await longTextSocialsIframes(page)
+  for (let i in longTextRes){
+    pageInfo[i] = longTextRes[i]
+  }
+
   return await this.getPageInfoEnd({pageInfo, stopFunctie, page, event})
   
 };
+
+
+// #region [rgba(60, 0, 0, 0.5)]     LONG HTML
+async function longTextSocialsIframes(page){
+
+  return await page.evaluate(()=>{
+    const res = {}
+
+    const textSelector = '.article-block.text-block';
+    const mediaSelector = [`.sidebar iframe, .article-block iframe` 
+    ].join(', ');
+    const removeEmptyHTMLFrom = textSelector
+    const socialSelector = [
+      ".event-content .fb-event a",
+      ".article-block a[href*='facebook']",
+      ".article-block a[href*='instagram']"
+    ].join(', ');
+    const removeSelectors = [
+      "[class*='icon-']",
+      "[class*='fa-']",
+      ".fa",
+      ".iframe-wrapper-tijdelijk",
+      ".article-block a[href*='facebook']",
+      ".article-block a[href*='instagram']"        
+    ].join(', ')
+
+    const attributesToRemove = ['style', 'hidden', '_target', "frameborder", 'onclick', 'aria-hidden', 'allow', 'allowfullscreen', 'data-deferlazy','width', 'height'];
+    const attributesToRemoveSecondRound = ['class', 'id' ];
+    const removeHTMLWithStrings = [];
+
+    //custom dynamo
+    document.querySelectorAll('.article-block iframe').forEach(
+      iframe=> iframe.parentNode.classList.add('iframe-wrapper-tijdelijk')
+    )
+    //end custom dynamo
+
+    // eerst onzin attributes wegslopen
+    const socAttrRemSelAdd = `${socialSelector ? `, ${socialSelector} *` : ''}`
+    document.querySelectorAll(`${textSelector} *${socAttrRemSelAdd}, iframe`)
+      .forEach(elToStrip => {
+        attributesToRemove.forEach(attr => {
+          if (elToStrip.hasAttribute(attr)){
+            elToStrip.removeAttribute(attr)
+          }
+        })
+      })
+
+    // media obj maken voordat HTML verdwijnt
+    res.mediaForHTML = Array.from(document.querySelectorAll(mediaSelector))
+      .map(bron => {
+
+        if (bron.hasAttribute('data-src-cmplz')){
+          bron.src = bron.getAttribute('data-src-cmplz')
+        }
+        const src = bron?.src ? bron.src : '';
+        if (bron.hasAttribute('data-cmplz-target')) bron.removeAttribute('data-cmplz-target')
+        if (bron.hasAttribute('data-src-cmplz')) bron.removeAttribute('data-src-cmplz')
+        if (bron.hasAttribute('loading')) bron.removeAttribute('loading')
+        bron.className = ''
+        return {
+          outer: bron.outerHTML,
+          src,
+          id: null,
+          type: src.includes('spotify') 
+            ? 'spotify' 
+            : src.includes('youtube') 
+              ? 'youtube'
+              : 'bandcamp'
+        }
+      })
+
+    // socials obj maken voordat HTML verdwijnt
+    res.socialsForHTML = !socialSelector ? '' : Array.from(document.querySelectorAll(socialSelector))
+      .map(el => {
+       
+        el.querySelectorAll('i, svg, img').forEach(rm => rm.parentNode.removeChild(rm))
+
+        if (!el.textContent.trim().length){
+          if (el.href.includes('facebook')){
+            el.textContent = 'Facebook';
+          } else if(el.href.includes('twitter')) {
+            el.textContent = 'Tweet';
+          } else {
+            el.textContent = 'Onbekende social';
+          }
+        }
+        el.className = ''
+        el.target = '_blank';
+        return el.outerHTML
+      })
+
+    // stript HTML tbv text
+    removeSelectors.length && document.querySelectorAll(removeSelectors)
+      .forEach(toRemove => toRemove.parentNode.removeChild(toRemove))
+
+    // dynamo custom
+    const textBlokken = Array.from(document.querySelectorAll('.article-block.text-block'));
+    const laatsteBlok = textBlokken[textBlokken.length - 1];
+    if (laatsteBlok.textContent.includes('voorverkoop') 
+    || laatsteBlok.textContent.includes('sale')
+    || laatsteBlok.querySelector('h6')?.textContent.toLowerCase().includes('info')){
+      laatsteBlok.parentNode.removeChild(laatsteBlok)
+    }
+    // eind dynamo custom
+
+    // verwijder ongewenste paragrafen over bv restaurants
+    Array.from(document.querySelectorAll(`${textSelector} p, ${textSelector} span, ${textSelector} a`))
+      .forEach(verwijder => {
+        const heeftEvilString = !!removeHTMLWithStrings.find(evilString => verwijder.textContent.includes(evilString))
+        if (heeftEvilString) {
+          verwijder.parentNode.removeChild(verwijder)
+        }
+      });
+
+    // lege HTML eruit cq HTML zonder tekst of getallen
+    document.querySelectorAll(`${removeEmptyHTMLFrom} > *`)
+      .forEach(checkForEmpty => {
+        const leegMatch = checkForEmpty.innerHTML.replace('&nbsp;','').match(/[\w\d]/g);
+        if (!Array.isArray(leegMatch)){
+          checkForEmpty.parentNode.removeChild(checkForEmpty)
+        }
+      })
+
+    // laatste attributen eruit.
+    document.querySelectorAll(`${textSelector} *`)
+      .forEach(elToStrip => {
+        attributesToRemoveSecondRound.forEach(attr => {
+          if (elToStrip.hasAttribute(attr)){
+            elToStrip.removeAttribute(attr)
+          }
+        })
+      })      
+
+    // tekst.
+    res.textForHTML = Array.from(document.querySelectorAll(textSelector))
+      .map(el => el.innerHTML)
+      .join('')
+
+
+    return res;
+  })
+  
+}
+// #endregion                        LONG HTML

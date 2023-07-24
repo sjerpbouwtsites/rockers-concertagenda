@@ -1,4 +1,17 @@
 
+  deflux-0 Error - 3:39:46 PM
+  Error: Evaluation failed: ReferenceError: longTextSocialsIframes is not defined
+    at __puppeteer_evaluation_script__:41:18
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async defluxScraper.getPageInfo (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/deflux.js:116:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1000:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:230:5) 
+  Evaluation failed: ReferenceError: longTextSocialsIframes is not defined
+    at __puppeteer_evaluation_script__:41:18
+  
+  
   tivolivredenburg-2 Error - 11:25:04 AM
   Error: Timeout baseEvent
     at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1128:16)

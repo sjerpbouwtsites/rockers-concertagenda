@@ -3,7 +3,7 @@ import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import axios from "axios";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 
-//#region [rgba(0, 33, 0, 0.3)]       SCRAPER CONFIG
+//#region [rgba(0, 60, 0, 0.3)]       SCRAPER CONFIG
 const boerderijScraper = new AbstractScraper(makeScraperConfig({
   maxExecutionTime: 30004,
   workerData: Object.assign({}, workerData),
@@ -31,8 +31,10 @@ const boerderijScraper = new AbstractScraper(makeScraperConfig({
 }));
 //#endregion                          SCRAPER CONFIG
 
-boerderijScraper.singleRawEventCheck = async function(event){
+boerderijScraper.listenToMasterThread();
 
+//#region [rgba(0, 120, 0, 0.3)]      RAW EVENT CHECK
+boerderijScraper.singleRawEventCheck = async function(event){
   const isRefused = await this.rockRefuseListCheck(event, event.title)
   if (isRefused.success) return {
     reason: isRefused.reason,
@@ -58,13 +60,13 @@ boerderijScraper.singleRawEventCheck = async function(event){
     event,
     success: true
   }
-  
 }
+//#endregion                          RAW EVENT CHECK
 
-boerderijScraper.listenToMasterThread();
+//#region [rgba(0, 180, 0, 0.3)]      SINGLE EVENT CHECK
+//#endregion                          SINGLE EVENT CHECK
 
-// MAKE BASE EVENTS
-
+//#region [rgba(0, 240, 0, 0.3)]      BASE EVENT LIST
 boerderijScraper.makeBaseEventList = async function () {
 
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
@@ -99,8 +101,9 @@ boerderijScraper.makeBaseEventList = async function () {
   return await this.makeBaseEventListEnd({
     stopFunctie, rawEvents: thisWorkersEvents}
   );
-
 };
+//#endregion                          BASE EVENT LIST
+
 
 // GET PAGE INFO
 
@@ -172,7 +175,8 @@ boerderijScraper.getPageInfo = async function ({ event }) {
     });
   }
 
-  // #region [rgba(100, 0, 0, 0.3)] longHTML
+  // LONG HTML HIER WANT BOERDERIJ VIA AJAX.....
+  // #region [rgba(60, 0, 0, 0.5)]     LONG HTML
 
   // media obj maken voordat HTML verdwijnt
   res.mediaForHTML = !ajaxRes?.video ? [] : [{
@@ -186,7 +190,7 @@ boerderijScraper.getPageInfo = async function ({ event }) {
   // tekst.
   res.textForHTML = ajaxRes.description
 
-  // #endregion longHTML
+  // #endregion                        LONG HTML
 
 
   res.soldOut = ajaxRes?.label?.title?.toLowerCase().includes('uitverkocht') ?? null
@@ -194,3 +198,5 @@ boerderijScraper.getPageInfo = async function ({ event }) {
   return await this.getPageInfoEnd({pageInfo: res, stopFunctie})
 
 };
+
+

@@ -3,7 +3,7 @@ import * as _t from "../mods/tools.js";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 
-//#region [rgba(0, 33, 0, 0.3)]       SCRAPER CONFIG
+//#region [rgba(0, 60, 0, 0.3)]       SCRAPER CONFIG
 const cpuntScraper = new AbstractScraper(makeScraperConfig({
   workerData: Object.assign({}, workerData),
 
@@ -29,10 +29,10 @@ const cpuntScraper = new AbstractScraper(makeScraperConfig({
 ));
 //#endregion                          SCRAPER CONFIG
 
-// SINGLE EVENT CHECK
+cpuntScraper.listenToMasterThread();
 
+//#region [rgba(0, 120, 0, 0.3)]      RAW EVENT CHECK
 cpuntScraper.singleRawEventCheck = async function (event) {
-
   const goodTermsRes = await this.hasGoodTerms(event) 
   if (goodTermsRes.success) return goodTermsRes;
 
@@ -48,14 +48,13 @@ cpuntScraper.singleRawEventCheck = async function (event) {
     success: true,
     reason: `check inconclusive <a href='${event.venueEventUrl}'>${event.title}</a>`
   }
-
 };
+//#endregion                          RAW EVENT CHECK
 
+//#region [rgba(0, 180, 0, 0.3)]      SINGLE EVENT CHECK
+//#endregion                          SINGLE EVENT CHECK
 
-cpuntScraper.listenToMasterThread();
-
-// MAKE BASE EVENTS
-
+//#region [rgba(0, 240, 0, 0.3)]      BASE EVENT LIST
 cpuntScraper.makeBaseEventList = async function () {
 
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
@@ -124,6 +123,8 @@ cpuntScraper.makeBaseEventList = async function () {
   );
   
 };
+//#endregion                          BASE EVENT LIST
+
 // GET PAGE INFO
 
 cpuntScraper.getPageInfo = async function ({ page, event }) {
@@ -215,8 +216,24 @@ cpuntScraper.getPageInfo = async function ({ page, event }) {
       document.querySelector(".article-price")?.textContent.trim() ??
       "" ;
 
-    // #region [rgba(100, 0, 0, 0.3)] longHTML
 
+    return res;
+  }, {months: this.months, event});
+
+  const longTextRes = await longTextSocialsIframes(page)
+  for (let i in longTextRes){
+    pageInfo[i] = longTextRes[i]
+  }
+
+  return await this.getPageInfoEnd({pageInfo, stopFunctie, page, event})
+  
+};
+
+// #region [rgba(60, 0, 0, 0.5)]     LONG HTML
+async function longTextSocialsIframes(page){
+
+  return await page.evaluate(()=>{
+    const res = {}
     const mediaSelector = ['.contentblock-Video iframe', 
     ].join(', ');
     const textSelector = '.contentblock-TextOneColumn .text';
@@ -312,15 +329,8 @@ cpuntScraper.getPageInfo = async function ({ page, event }) {
     res.textForHTML = Array.from(document.querySelectorAll(textSelector))
       .map(el => el.innerHTML)
       .join('')
-
-    // #endregion longHTML
-
-
-
     return res;
-  }, {months: this.months, event});
-
-  return await this.getPageInfoEnd({pageInfo, stopFunctie, page, event})
+  })
   
-};
-
+}
+// #endregion                        LONG HTML

@@ -2,7 +2,7 @@ import { workerData } from "worker_threads";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 
-//#region [rgba(0, 33, 0, 0.3)]       SCRAPER CONFIG
+//#region [rgba(0, 60, 0, 0.3)]       SCRAPER CONFIG
 const effenaarScraper = new AbstractScraper(makeScraperConfig({
   workerData: Object.assign({}, workerData),
   puppeteerConfig: {
@@ -27,10 +27,12 @@ const effenaarScraper = new AbstractScraper(makeScraperConfig({
 
 effenaarScraper.listenToMasterThread();
 
-// MAKE BASE EVENTS
+//#region [rgba(0, 120, 0, 0.3)]      RAW EVENT CHECK
+//#endregion                          RAW EVENT CHECK
 
+//#region [rgba(0, 180, 0, 0.3)]      SINGLE EVENT CHECK
 effenaarScraper.singleMergedEventCheck = async function(event){
-
+ 
   const workingTitle = this.cleanupEventTitle(event.title)
 
   const isRefused = await this.rockRefuseListCheck(event, workingTitle)
@@ -39,22 +41,21 @@ effenaarScraper.singleMergedEventCheck = async function(event){
     event,
     success: false
   };
-
+  
   const isAllowed = await this.rockAllowListCheck(event, workingTitle)
   if (isAllowed.success) return isAllowed;
-
+  
   return {
     event,
     success: true,
     reason: "nothing found currently",
   };
-
+  
 }
+//#endregion                          SINGLE EVENT CHECK
 
-// MERGED ASYNC CHECK
-
+//#region [rgba(0, 240, 0, 0.3)]      BASE EVENT LIST
 effenaarScraper.makeBaseEventList = async function () {
-
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
   if (availableBaseEvents){
     const thisWorkersEvents = availableBaseEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
@@ -92,8 +93,9 @@ effenaarScraper.makeBaseEventList = async function () {
   return await this.makeBaseEventListEnd({
     stopFunctie, rawEvents: thisWorkersEvents}
   );
-  
 };
+//#endregion                          BASE EVENT LIST
+
 
 // GET PAGE INFO
 
@@ -176,7 +178,24 @@ effenaarScraper.getPageInfo = async function ({ page, event }) {
       });
     }
 
-    // #region [rgba(100, 0, 0, 0.3)] longHTML
+    return res;
+  },{ months: this.months,event});
+
+  const longTextRes = await longTextSocialsIframes(page)
+  for (let i in longTextRes){
+    pageInfo[i] = longTextRes[i]
+  }
+
+  return await this.getPageInfoEnd({pageInfo, stopFunctie, page, event})
+  
+};
+
+
+// #region [rgba(60, 0, 0, 0.5)]     LONG HTML
+async function longTextSocialsIframes(page){
+
+  return await page.evaluate(()=>{
+    const res = {}
 
     const textSelector = '#main .blocks .block';
     const mediaSelector = [`#main .blocks iframe` 
@@ -292,15 +311,9 @@ effenaarScraper.getPageInfo = async function ({ page, event }) {
       .map(el => el.innerHTML)
       .join('')
 
-    // #endregion longHTML
-
-    
-
-
 
     return res;
-  },{ months: this.months,event});
-
-  return await this.getPageInfoEnd({pageInfo, stopFunctie, page, event})
+  })
   
-};
+}
+// #endregion                        LONG HTML

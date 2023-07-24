@@ -2,7 +2,7 @@ import { workerData } from "worker_threads";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 
-//#region [rgba(0, 33, 0, 0.3)]       SCRAPER CONFIG
+//#region [rgba(0, 60, 0, 0.3)]       SCRAPER CONFIG
 const bibelotScraper = new AbstractScraper(makeScraperConfig({
   maxExecutionTime: 30001,
   workerData: Object.assign({}, workerData),
@@ -30,6 +30,7 @@ const bibelotScraper = new AbstractScraper(makeScraperConfig({
 
 bibelotScraper.listenToMasterThread();
 
+//#region [rgba(0, 120, 0, 0.3)]      RAW EVENT CHECK
 bibelotScraper.singleRawEventCheck = async function(event){
   const hasForbiddenTermsRes = await bibelotScraper.hasForbiddenTerms(event);
   return {
@@ -37,11 +38,13 @@ bibelotScraper.singleRawEventCheck = async function(event){
     reason: hasForbiddenTermsRes.reason,
     success: !hasForbiddenTermsRes.success,
   }
-  
 }
+//#endregion                          RAW EVENT CHECK
 
-// MAKE BASE EVENTS
+//#region [rgba(0, 180, 0, 0.3)]      SINGLE EVENT CHECK
+//#endregion                          SINGLE EVENT CHECK
 
+//#region [rgba(0, 240, 0, 0.3)]      BASE EVENT LIST
 bibelotScraper.makeBaseEventList = async function () {
 
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
@@ -87,6 +90,8 @@ bibelotScraper.makeBaseEventList = async function () {
   );
   
 };
+//#endregion                          BASE EVENT LIST
+
 
 // GET PAGE INFO
 
@@ -186,114 +191,6 @@ bibelotScraper.getPageInfo = async function ({ page, event }) {
       if (verkoopElAr && Array.isArray(verkoopElAr) && verkoopElAr.length) {
         res.priceTextcontent = verkoopElAr[0].textContent;
       }
-
-      // #region [rgba(100, 0, 0, 0.3)] longHTML
-
-      const mediaSelector = ['.main-column iframe', 
-      ].join(', ');
-      const textSelector = '.main-column';
-      const removeEmptyHTMLFrom = '.main-column'//textSelector;
-      const socialSelector = [
-        ".main-column p a[rel*='noreferrer noopener']"
-      ].join(', ');
-      const removeSelectors = [`.main-column > .content:first-child`, 
-        '.main-column > .achtergrond-afbeelding:first-child',
-        '.main-column > .content + .achtergrond-afbeelding', // onduidelijk welke
-        ".main-column .wp-block-embed",
-        ".main-column p a[rel*='noreferrer noopener']" // embed wrappers
-      ].join(', ')
-      
-      const attributesToRemove = ['style', 'hidden', '_target', "frameborder", 'onclick', 'aria-hidden'];
-      const attributesToRemoveSecondRound = ['class', 'id' ];
-      const removeHTMLWithStrings = ['hapje en een drankje'];
-
-      // eerst onzin attributes wegslopen
-      const socAttrRemSelAdd = `${socialSelector ? `, ${socialSelector} *` : ''}`
-      document.querySelectorAll(`${textSelector} *${socAttrRemSelAdd}`)
-        .forEach(elToStrip => {
-          attributesToRemove.forEach(attr => {
-            if (elToStrip.hasAttribute(attr)){
-              elToStrip.removeAttribute(attr)
-            }
-          })
-        })
-
-      // media obj maken voordat HTML verdwijnt
-      res.mediaForHTML = Array.from(document.querySelectorAll(mediaSelector))
-        .map(bron => {
-          const src = bron?.src ? bron.src : '';
-          return {
-            outer: bron.outerHTML,
-            src,
-            id: null,
-            type: src.includes('spotify') 
-              ? 'spotify' 
-              : src.includes('youtube') 
-                ? 'youtube'
-                : 'bandcamp'
-          }
-        })
-
-      // socials obj maken voordat HTML verdwijnt
-      res.socialsForHTML = !socialSelector ? '' : Array.from(document.querySelectorAll(socialSelector))
-        .map(el => {
-
-          el.querySelectorAll('i, svg, img').forEach(rm => rm.parentNode.removeChild(rm))
-
-          if (!el.textContent.trim().length){
-            if (el.href.includes('facebook')){
-              el.textContent = 'Facebook';
-            } else if(el.href.includes('twitter')) {
-              el.textContent = 'Tweet';
-            } else {
-              el.textContent = 'Onbekende social';
-            }
-          }          
-          el.className = 'long-html__social-list-link'
-          el.target = '_blank'
-          return el.outerHTML
-        })
-
-      // stript HTML tbv text
-      removeSelectors.length && document.querySelectorAll(removeSelectors)
-        .forEach(toRemove => toRemove.parentNode.removeChild(toRemove))
-
-      // verwijder ongewenste paragrafen over bv restaurants
-      Array.from(document.querySelectorAll(`${textSelector} p, ${textSelector} span, ${textSelector} a`))
-        .forEach(verwijder => {
-          const heeftEvilString = !!removeHTMLWithStrings.find(evilString => verwijder.textContent.includes(evilString))
-          if (heeftEvilString) {
-            verwijder.parentNode.removeChild(verwijder)
-          }
-        });
-
-      // lege HTML eruit cq HTML zonder tekst of getallen
-      document.querySelectorAll(`${removeEmptyHTMLFrom} > *`)
-        .forEach(checkForEmpty => {
-          const leegMatch = checkForEmpty.innerHTML.match(/[\w\d]/g);
-          if (!Array.isArray(leegMatch)){
-            checkForEmpty.parentNode.removeChild(checkForEmpty)
-          }
-        })
-
-      // laatste attributen eruit.
-      document.querySelectorAll(`${textSelector} *`)
-        .forEach(elToStrip => {
-          attributesToRemoveSecondRound.forEach(attr => {
-            if (elToStrip.hasAttribute(attr)){
-              elToStrip.removeAttribute(attr)
-            }
-          })
-        })      
-
-      // tekst.
-      res.textForHTML = Array.from(document.querySelectorAll(textSelector))
-        .map(el => el.innerHTML)
-        .join('')
-
-      // #endregion longHTML
-
-
       const imageMatch = document
         .querySelector(".achtergrond-afbeelding")
         ?.style.backgroundImage.match(/https.*.png|https.*.jpg|https.*.jpeg/);
@@ -317,6 +214,127 @@ bibelotScraper.getPageInfo = async function ({ page, event }) {
     { months: this.months, event }
   );
 
+  const longTextRes = await longTextSocialsIframes(page)
+  for (let i in longTextRes){
+    pageInfo[i] = longTextRes[i]
+  }
+
+
   return await this.getPageInfoEnd({pageInfo, stopFunctie, page, event})
   
 }
+
+
+
+// #region [rgba(60, 0, 0, 0.5)]     LONG HTML
+async function longTextSocialsIframes(page){
+
+  return await page.evaluate(()=>{
+    const res = {}
+ 
+    const mediaSelector = ['.main-column iframe', 
+    ].join(', ');
+    const textSelector = '.main-column';
+    const removeEmptyHTMLFrom = '.main-column'//textSelector;
+    const socialSelector = [
+      ".main-column p a[rel*='noreferrer noopener']"
+    ].join(', ');
+    const removeSelectors = [`.main-column > .content:first-child`, 
+      '.main-column > .achtergrond-afbeelding:first-child',
+      '.main-column > .content + .achtergrond-afbeelding', // onduidelijk welke
+      ".main-column .wp-block-embed",
+      ".main-column p a[rel*='noreferrer noopener']" // embed wrappers
+    ].join(', ')
+  
+    const attributesToRemove = ['style', 'hidden', '_target', "frameborder", 'onclick', 'aria-hidden'];
+    const attributesToRemoveSecondRound = ['class', 'id' ];
+    const removeHTMLWithStrings = ['hapje en een drankje'];
+
+    // eerst onzin attributes wegslopen
+    const socAttrRemSelAdd = `${socialSelector ? `, ${socialSelector} *` : ''}`
+    document.querySelectorAll(`${textSelector} *${socAttrRemSelAdd}`)
+      .forEach(elToStrip => {
+        attributesToRemove.forEach(attr => {
+          if (elToStrip.hasAttribute(attr)){
+            elToStrip.removeAttribute(attr)
+          }
+        })
+      })
+
+    // media obj maken voordat HTML verdwijnt
+    res.mediaForHTML = Array.from(document.querySelectorAll(mediaSelector))
+      .map(bron => {
+        const src = bron?.src ? bron.src : '';
+        return {
+          outer: bron.outerHTML,
+          src,
+          id: null,
+          type: src.includes('spotify') 
+            ? 'spotify' 
+            : src.includes('youtube') 
+              ? 'youtube'
+              : 'bandcamp'
+        }
+      })
+
+    // socials obj maken voordat HTML verdwijnt
+    res.socialsForHTML = !socialSelector ? '' : Array.from(document.querySelectorAll(socialSelector))
+      .map(el => {
+
+        el.querySelectorAll('i, svg, img').forEach(rm => rm.parentNode.removeChild(rm))
+
+        if (!el.textContent.trim().length){
+          if (el.href.includes('facebook')){
+            el.textContent = 'Facebook';
+          } else if(el.href.includes('twitter')) {
+            el.textContent = 'Tweet';
+          } else {
+            el.textContent = 'Onbekende social';
+          }
+        }          
+        el.className = 'long-html__social-list-link'
+        el.target = '_blank'
+        return el.outerHTML
+      })
+
+    // stript HTML tbv text
+    removeSelectors.length && document.querySelectorAll(removeSelectors)
+      .forEach(toRemove => toRemove.parentNode.removeChild(toRemove))
+
+    // verwijder ongewenste paragrafen over bv restaurants
+    Array.from(document.querySelectorAll(`${textSelector} p, ${textSelector} span, ${textSelector} a`))
+      .forEach(verwijder => {
+        const heeftEvilString = !!removeHTMLWithStrings.find(evilString => verwijder.textContent.includes(evilString))
+        if (heeftEvilString) {
+          verwijder.parentNode.removeChild(verwijder)
+        }
+      });
+
+    // lege HTML eruit cq HTML zonder tekst of getallen
+    document.querySelectorAll(`${removeEmptyHTMLFrom} > *`)
+      .forEach(checkForEmpty => {
+        const leegMatch = checkForEmpty.innerHTML.match(/[\w\d]/g);
+        if (!Array.isArray(leegMatch)){
+          checkForEmpty.parentNode.removeChild(checkForEmpty)
+        }
+      })
+
+    // laatste attributen eruit.
+    document.querySelectorAll(`${textSelector} *`)
+      .forEach(elToStrip => {
+        attributesToRemoveSecondRound.forEach(attr => {
+          if (elToStrip.hasAttribute(attr)){
+            elToStrip.removeAttribute(attr)
+          }
+        })
+      })      
+
+    // tekst.
+    res.textForHTML = Array.from(document.querySelectorAll(textSelector))
+      .map(el => el.innerHTML)
+      .join('')
+    return res;
+  })
+  
+}
+// #endregion                        LONG HTML

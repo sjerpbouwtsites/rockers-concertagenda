@@ -3,7 +3,7 @@ import { workerData } from "worker_threads";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 
-//#region [rgba(0, 33, 0, 0.3)]       SCRAPER CONFIG
+//#region [rgba(0, 60, 0, 0.3)]       SCRAPER CONFIG
 const nuldertienScraper = new AbstractScraper(makeScraperConfig({
   workerData: Object.assign({}, workerData),
   hasDecentCategorisation: true,
@@ -24,8 +24,7 @@ const nuldertienScraper = new AbstractScraper(makeScraperConfig({
 
 nuldertienScraper.listenToMasterThread();
 
-// SINGLE RAW EVENT CHECK
-
+//#region [rgba(0, 120, 0, 0.3)]      RAW EVENT CHECK
 nuldertienScraper.singleRawEventCheck = async function(event){
 
   const isRefused = await this.rockRefuseListCheck(event, event.title.toLowerCase())
@@ -54,8 +53,12 @@ nuldertienScraper.singleRawEventCheck = async function(event){
     success: true
   }
 }
-// MAKE BASE EVENTS
+//#endregion                          RAW EVENT CHECK
 
+//#region [rgba(0, 180, 0, 0.3)]      SINGLE EVENT CHECK
+//#endregion                          SINGLE EVENT CHECK
+
+//#region [rgba(0, 240, 0, 0.3)]      BASE EVENT LIST
 nuldertienScraper.makeBaseEventList = async function () {
 
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
@@ -117,6 +120,7 @@ nuldertienScraper.makeBaseEventList = async function () {
     stopFunctie, page, rawEvents: thisWorkersEvents}
   );
 };
+//#endregion                          BASE EVENT LIST
 
 // GET PAGE INFO
 
@@ -174,33 +178,25 @@ nuldertienScraper.getPageInfo = async function ({ page , event}) {
       )?.innerHTML ?? '';
 
 
-    // // #region [rgba(100, 0, 0, 0.3)] longHTML
-    // const mediaSelector = '.slick-slide:not(.slick-cloned) img';
-    // const textSelector = '.event-detail__content > *';
-    // res.mediaForHTML = Array.from(document.querySelectorAll(mediaSelector))
-    //   .map(image => {
-    //     return {
-    //       outer: null,
-    //       src: image.src.replace('img.youtube', 'youtube').replace('/vi/', '/embed/').replace('maxresdefault.jpg', ''),
-    //       id: null,
-    //       type: 'youtube'
-    //     }
-    //   })
+    return res;
+  }, {event});
 
-    // const contentHeader = document.querySelector('.event-detail__heading-group');
-    // if (contentHeader){
-    //   contentHeader.parentNode.removeChild(contentHeader)
-    // }
-
-    // res.textForHTML = Array.from(document.querySelectorAll(textSelector))
-    //   .map(el => el.innerHTML)
-    //   .join('')
-
-    // // #endregion longHTML
+  const longTextRes = await longTextSocialsIframes(page)
+  for (let i in longTextRes){
+    pageInfo[i] = longTextRes[i]
+  }
 
 
-    // #region [rgba(100, 0, 0, 0.3)] longHTML
-      
+  return await this.getPageInfoEnd({pageInfo, stopFunctie, page, event})
+
+};
+
+
+// #region [rgba(60, 0, 0, 0.5)]     LONG HTML
+async function longTextSocialsIframes(page){
+
+  return await page.evaluate(()=>{
+    const res = {}
     const textSelector = '.event-detail__content > *';
     const mediaSelector = [
       `.slick-slide:not(.slick-cloned) img`
@@ -335,13 +331,8 @@ nuldertienScraper.getPageInfo = async function ({ page , event}) {
     res.textForHTML = Array.from(document.querySelectorAll(textSelector))
       .map((el) => el.innerHTML)
       .join("");
-
-    // #endregion longHTML
-
-
     return res;
-  }, {event});
-
-  return await this.getPageInfoEnd({pageInfo, stopFunctie, page, event})
-
-};
+  })
+  
+}
+// #endregion                        LONG HTML

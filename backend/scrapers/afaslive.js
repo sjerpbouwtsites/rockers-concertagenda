@@ -3,7 +3,7 @@ import * as _t from "../mods/tools.js";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 
-//#region [rgba(0, 33, 0, 0.3)]       SCRAPER CONFIG
+//#region [rgba(0, 60, 0, 0.3)]       SCRAPER CONFIG
 const afasliveScraper = new AbstractScraper(makeScraperConfig({
   maxExecutionTime: 40000,
   workerData: Object.assign({}, workerData),
@@ -28,8 +28,9 @@ const afasliveScraper = new AbstractScraper(makeScraperConfig({
 }));
 //#endregion                          SCRAPER CONFIG
 
-// RAW EVENT ASYNC CHECK
+afasliveScraper.listenToMasterThread();
 
+//#region [rgba(0, 120, 0, 0.3)]      RAW EVENT CHECK
 afasliveScraper.singleRawEventCheck = async function(event){
 
   const workingTitle = this.cleanupEventTitle(event.title)
@@ -68,11 +69,12 @@ afasliveScraper.singleRawEventCheck = async function(event){
   //   success: true
   // }
 }
+//#endregion                          RAW EVENT CHECK
 
-afasliveScraper.listenToMasterThread();
+//#region [rgba(0, 180, 0, 0.3)]      SINGLE EVENT CHECK
+//#endregion                          SINGLE EVENT CHECK
 
-// MAKE BASE EVENTS
-
+//#region [rgba(0, 240, 0, 0.3)]      BASE EVENT LIST
 afasliveScraper.makeBaseEventList = async function () {
 
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
@@ -128,6 +130,7 @@ afasliveScraper.makeBaseEventList = async function () {
     stopFunctie, page, rawEvents: thisWorkersEvents}
   );
 };
+//#endregion                          BASE EVENT LIST
 
 afasliveScraper.getPageInfo = async function ({ page, event }) {
   
@@ -252,76 +255,6 @@ afasliveScraper.getPageInfo = async function ({ page, event }) {
         }
       })
 
-      // #region [rgba(100, 0, 0, 0.3)] longHTML
-
-      const mediaSelector = '.video iframe, .spotify iframe';
-      const textSelector = 'article .wysiwyg';
-      const removeEmptyHTMLFrom = 'article .wysiwyg';
-      const removeSelectors = []
-      const socialSelector = [];
-      const attributesToRemove = ['style', 'hidden', '_target', "frameborder", 'onclick', 'aria-hidden'];
-      const attributesToRemoveSecondRound = ['class', 'id' ];      
-      const removeHTMLWithStrings = ['Tassenbeleid']
-      res.mediaForHTML = Array.from(document.querySelectorAll(mediaSelector))
-        .map(bron => {
-          return {
-            outer: bron.outerHTML,
-            src: bron.src,
-            id: null,
-            type: bron.src.includes('spotify') ? 'spotify' : 'youtube'
-          }
-        })
-
-      // eerst onzin attributes wegslopen
-      const socAttrRemSelAdd = `${socialSelector ? `, ${socialSelector} *` : ''}`
-      document.querySelectorAll(`${textSelector} *${socAttrRemSelAdd}`)
-        .forEach(elToStrip => {
-          attributesToRemove.forEach(attr => {
-            if (elToStrip.hasAttribute(attr)){
-              elToStrip.removeAttribute(attr)
-            }
-          })
-        })        
-
-      // stript HTML tbv text
-      removeSelectors.length && document.querySelectorAll(removeSelectors)
-        .forEach(toRemove => toRemove.parentNode.removeChild(toRemove))
-
-      // verwijder ongewenste paragrafen over bv restaurants
-      Array.from(document.querySelectorAll(`${textSelector} p, ${textSelector} span, ${textSelector} a`))
-        .forEach(verwijder => {
-          const heeftEvilString = !!removeHTMLWithStrings.find(evilString => verwijder.textContent.includes(evilString))
-          if (heeftEvilString) {
-            verwijder.parentNode.removeChild(verwijder)
-          }
-        });
-
-      // lege HTML eruit cq HTML zonder tekst of getallen
-      document.querySelectorAll(`${removeEmptyHTMLFrom} > *`)
-        .forEach(checkForEmpty => {
-          const leegMatch = checkForEmpty.innerHTML.replace('&nbsp;','').match(/[\w\d]/g);
-          if (!Array.isArray(leegMatch)){
-            checkForEmpty.parentNode.removeChild(checkForEmpty)
-          }
-        })
-
-      // laatste attributen eruit.
-      document.querySelectorAll(`${textSelector} *`)
-        .forEach(elToStrip => {
-          attributesToRemoveSecondRound.forEach(attr => {
-            if (elToStrip.hasAttribute(attr)){
-              elToStrip.removeAttribute(attr)
-            }
-          })
-        })    
-
-      res.textForHTML = Array.from(document.querySelectorAll(textSelector))
-        .map(el => el.innerHTML)
-        .join('')
-
-      // #endregion longHTML
-
-
       res.priceTextcontent = 
         document.querySelector("#tickets")?.textContent.trim() ?? '';
       return res;
@@ -329,5 +262,88 @@ afasliveScraper.getPageInfo = async function ({ page, event }) {
     { months: this.months,event }
   );
 
+  const longTextRes = await longTextSocialsIframes(page)
+  for (let i in longTextRes){
+    pageInfo[i] = longTextRes[i]
+  }
+
   return await this.getPageInfoEnd({pageInfo, stopFunctie, page, event})
 };
+
+
+
+// #region [rgba(60, 0, 0, 0.5)]     LONG HTML
+async function longTextSocialsIframes(page){
+
+  return await page.evaluate(()=>{
+    const res = {}
+
+    const mediaSelector = '.video iframe, .spotify iframe';
+    const textSelector = 'article .wysiwyg';
+    const removeEmptyHTMLFrom = 'article .wysiwyg';
+    const removeSelectors = []
+    const socialSelector = [];
+    const attributesToRemove = ['style', 'hidden', '_target', "frameborder", 'onclick', 'aria-hidden'];
+    const attributesToRemoveSecondRound = ['class', 'id' ];      
+    const removeHTMLWithStrings = ['Tassenbeleid']
+    res.mediaForHTML = Array.from(document.querySelectorAll(mediaSelector))
+      .map(bron => {
+        return {
+          outer: bron.outerHTML,
+          src: bron.src,
+          id: null,
+          type: bron.src.includes('spotify') ? 'spotify' : 'youtube'
+        }
+      })
+
+    // eerst onzin attributes wegslopen
+    const socAttrRemSelAdd = `${socialSelector ? `, ${socialSelector} *` : ''}`
+    document.querySelectorAll(`${textSelector} *${socAttrRemSelAdd}`)
+      .forEach(elToStrip => {
+        attributesToRemove.forEach(attr => {
+          if (elToStrip.hasAttribute(attr)){
+            elToStrip.removeAttribute(attr)
+          }
+        })
+      })        
+
+    // stript HTML tbv text
+    removeSelectors.length && document.querySelectorAll(removeSelectors)
+      .forEach(toRemove => toRemove.parentNode.removeChild(toRemove))
+
+    // verwijder ongewenste paragrafen over bv restaurants
+    Array.from(document.querySelectorAll(`${textSelector} p, ${textSelector} span, ${textSelector} a`))
+      .forEach(verwijder => {
+        const heeftEvilString = !!removeHTMLWithStrings.find(evilString => verwijder.textContent.includes(evilString))
+        if (heeftEvilString) {
+          verwijder.parentNode.removeChild(verwijder)
+        }
+      });
+
+    // lege HTML eruit cq HTML zonder tekst of getallen
+    document.querySelectorAll(`${removeEmptyHTMLFrom} > *`)
+      .forEach(checkForEmpty => {
+        const leegMatch = checkForEmpty.innerHTML.replace('&nbsp;','').match(/[\w\d]/g);
+        if (!Array.isArray(leegMatch)){
+          checkForEmpty.parentNode.removeChild(checkForEmpty)
+        }
+      })
+
+    // laatste attributen eruit.
+    document.querySelectorAll(`${textSelector} *`)
+      .forEach(elToStrip => {
+        attributesToRemoveSecondRound.forEach(attr => {
+          if (elToStrip.hasAttribute(attr)){
+            elToStrip.removeAttribute(attr)
+          }
+        })
+      })    
+
+    res.textForHTML = Array.from(document.querySelectorAll(textSelector))
+      .map(el => el.innerHTML)
+      .join('')
+    return res;
+  })
+  
+}
+// #endregion                        LONG HTML
