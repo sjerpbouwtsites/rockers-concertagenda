@@ -107,7 +107,7 @@ p60Scraper.makeBaseEventList = async function () {
 
         const uaRex = new RegExp(unavailabiltyTerms.join("|"), 'gi');
         res.unavailable = !!itemEl.textContent.match(uaRex);
-        res.soldOut = itemEl?.textContent.match(/uitverkocht|sold\s?out/i) ?? false; // TODO gegokt soldout p60
+        res.soldOut = itemEl?.textContent.match(/uitverkocht|sold\s?out/i) ?? false;
 
         res.venueEventUrl = itemEl.querySelector('.field-group-link')?.href;
 

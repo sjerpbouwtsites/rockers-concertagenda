@@ -4,7 +4,7 @@ import { handleError } from "./tools.js";
 import { QuickWorkerMessage } from "./rock-worker.js";
 import passMessageToMonitor from "../monitor/pass-message-to-monitor.js";
 import { workerConfig } from "./worker-config.js";
-import MusicEvent from "./music-event.js";
+
 
 export default class EventsList {
   static _events = [];

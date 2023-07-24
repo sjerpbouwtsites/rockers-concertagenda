@@ -93,16 +93,17 @@ baroegScraper.makeBaseEventList = async function () {
       .filter(eventData => eventData)
       .map(({eventEl,categorieTeksten,venueEventUrl}) => {
         let title = eventEl.querySelector('.wp_theatre_event_title')?.textContent.trim() ?? null;
-        if (title.match(/uitverkocht|sold\s?out/i)) {
-          title = title.replace(/uitverkocht|sold\s?out/i,'').replace(/^:\s+/,'');
-        }
         const res = {
           pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
           errors: [],
-          title
         };
         
         res.soldOut = title.match(/uitverkocht|sold\s?out/i) ?? false;
+        if (title.match(/uitverkocht|sold\s?out/i)) {
+          title = title.replace(/uitverkocht|sold\s?out/i,'').replace(/^:\s+/,'');
+        }
+        res.title = title;
+        
         res.shortText = eventEl.querySelector('.wp_theatre_prod_excerpt')?.textContent.trim() ?? null;
         res.shortText += categorieTeksten;
         res.image = eventEl.querySelector('.media .attachment-thumbnail')?.src ?? '';

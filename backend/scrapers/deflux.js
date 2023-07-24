@@ -85,14 +85,18 @@ defluxScraper.makeBaseEventList = async function () {
     })
   if (!axiosRes) return;
   const rawEvents = axiosRes.map(axiosResultSingle =>{
-    const title = axiosResultSingle.title.rendered;
+    let title = axiosResultSingle.title.rendered;
     const res = {
       pageInfo: `<a class='pageinfo' href="${this.puppeteerConfig.app.mainPage.url}">${workerData.family} main - ${title}</a>`,
       errors: [],
       venueEventUrl: axiosResultSingle.link,
       id: axiosResultSingle.id,
-      title,
     };    
+    res.soldOut = title.match(/uitverkocht|sold\s?out/i) ?? false;
+    if (title.match(/uitverkocht|sold\s?out/i)) {
+      title = title.replace(/uitverkocht|sold\s?out/i,'').replace(/^:\s+/,'');
+    }
+    res.title = title;    
     return res;
   })
     .map(this.isMusicEventCorruptedMapper);
