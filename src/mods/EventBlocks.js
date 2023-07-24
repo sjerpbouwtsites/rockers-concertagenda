@@ -53,6 +53,7 @@ class EventBlocks extends React.Component {
           .filter(filterEventsDateInPast);
         this.setState({ musicEvents: me2 });
         this.setState({ eventDataLoaded: true });
+        document.getElementById('app-title__events-count').innerHTML = ` - ${musicEvents.length} concerten`;
       })
       .catch((error) => {
         console.error(error);
