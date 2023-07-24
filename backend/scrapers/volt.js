@@ -241,7 +241,10 @@ async function longTextSocialsIframes(page){
 
     const textSelector = '.activity-content-wrapper > div:first-child';
     const mediaSelector = [
-      `iframe`,
+      `iframe[src*='spotify']`,
+      `iframe[src*='bandcamp']`,
+      `iframe[data-src*='spotify']`,
+      `iframe[data-src*='bandcamp']`,
     ].join(", ");
     const removeEmptyHTMLFrom = textSelector;
     const socialSelector = [].join(", ");
