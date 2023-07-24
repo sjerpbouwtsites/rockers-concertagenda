@@ -14,12 +14,14 @@ class EventBlocks extends React.Component {
       maxEventsShown: 100,
       eventDataLoading: false,
       eventDataLoaded: false,
+      filterHideSoldOut: false,
     };
     this.currentYear = new Date().getFullYear();
     this.createLocation = this.createLocation.bind(this);
     this.createDates = this.createDates.bind(this);
     this.add100ToMaxEventsShown = this.add100ToMaxEventsShown.bind(this);
     this.escFunction = this.escFunction.bind(this);
+    this.hideSoldOut = this.hideSoldOut.bind(this);
     this.gescrolledBuitenBeeldEnlarged = this.gescrolledBuitenBeeldEnlarged.bind(this);
   }
 
@@ -125,6 +127,10 @@ class EventBlocks extends React.Component {
     }
     return true;
     
+  }
+
+  hideSoldOut(){
+    this.setState({ filterHideSoldOut: true });
   }
 
   async loadLongerText(musicEventKey) {
@@ -334,11 +340,20 @@ ${BEMify(`event-block`, [
       main: `${BEMify(`event-block__main contrast-with-dark`, sharedModifiers)}`,
       mainContainerForEnlarged: BEMify(`void-container-for-enlarged`, sharedModifiers),
       footer: `${BEMify(`event-block__footer`, sharedModifiers)} `,
+      hideSoldOutBtn: `${BEMify(`event-block__hide-sold-out`, sharedModifiers)} `,
     }    
   }
 
   someEventIsEnlarged(musicEvents){
     return musicEvents.find(musicEvent => musicEvent.enlarged);
+  }
+
+  createHideSoldOutBtn(musicEvent, selectors){
+    if (!musicEvent.soldOut) return '';
+    if (musicEvent.enlarged) return '';
+    return <button onClick={this.hideSoldOut} className={`${selectors.hideSoldOutBtn}`}>
+      uitverkocht verbergen
+    </button>
   }
 
 
@@ -411,10 +426,14 @@ ${BEMify(`event-block`, [
       <div className={`event-block__wrapper ` + enlargedClassAddition}>
 
         {musicEvents.map((musicEvent, musicEventKey) => {
+
+          if (musicEvent.soldOut && this.state.filterHideSoldOut) return '';
+
           const sharedModifiers = [musicEvent.location, musicEvent.soldOut ? 'sold-out' : '', musicEvent.enlarged ? 'enlarged': ''];
           const selectors = this.getSelectors(musicEvent,sharedModifiers);
           const priceElement = this.priceElement(musicEvent);
           const datesHTML = this.createDates(musicEvent);
+          const hideSoldOutBtn = this.createHideSoldOutBtn(musicEvent, selectors);
           const numberOfDates = datesHTML.match(/<time/g).length;
           const imageHTML = this.createImageHTML(musicEvent,selectors);
           const articleID = `event-id-${musicEventKey}`;
@@ -461,12 +480,11 @@ ${BEMify(`event-block`, [
               id={articleID}
               key={musicEventKey}
               data-date={musicEvent.eventMonth}
-              onClick={!musicEvent.enlarged ? this.loadLongerText.bind(this, musicEventKey) : null}
               className={selectors.article}
             >
               {firstOfMonthBlock}
               {imageHTML}
-              <header className={selectors.header}>
+              <header onClick={!musicEvent.enlarged ? this.loadLongerText.bind(this, musicEventKey) : null} className={selectors.header}>
                 <h2 className={selectors.headerH2}>
                   <span className={selectors.headerEventTitle} data-short-text={shortestText}>
                     {musicEvent.title}
@@ -484,7 +502,7 @@ ${BEMify(`event-block`, [
                   <img src={closeIcon} width='40' height='40'alt='sluit uitgelicht scherm'/>
                 </button>
               </header>
-              <section className={selectors.main}>
+              <section onClick={!musicEvent.enlarged ? this.loadLongerText.bind(this, musicEventKey) : null} className={selectors.main}>
                 {shortTextHTML}
                 <div
                   className={selectors.mainContainerForEnlarged}
@@ -496,6 +514,7 @@ ${BEMify(`event-block`, [
                   {priceElement}  
                 </footer>
               </section>
+              {hideSoldOutBtn}
             </article>
           );
         }) // article mapper
