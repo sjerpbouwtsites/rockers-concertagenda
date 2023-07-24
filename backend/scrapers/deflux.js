@@ -179,6 +179,7 @@ async function longTextSocialsIframes(page){
       '.Twitter a'
     ].join(', ');
     const removeSelectors = [
+      `${textSelector} img`,
       '.fa'
     ].join(', ')
     

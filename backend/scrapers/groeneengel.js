@@ -246,6 +246,7 @@ async function longTextSocialsIframes(page){
       "[class*='fa-']",
       ".fa",
       ".production-title-wrapper",
+      `${textSelector} img`,
       ".left-side noscript",
       '.left-side .rll-youtube-player'
     ].join(', ')

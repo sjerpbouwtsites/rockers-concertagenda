@@ -277,7 +277,8 @@ async function longTextSocialsIframes(page){
       ".fa",
       ".iframe-wrapper-tijdelijk",
       ".article-block a[href*='facebook']",
-      ".article-block a[href*='instagram']"        
+      ".article-block a[href*='instagram']",
+      `${textSelector} img`
     ].join(', ')
 
     const attributesToRemove = ['style', 'hidden', '_target', "frameborder", 'onclick', 'aria-hidden', 'allow', 'allowfullscreen', 'data-deferlazy','width', 'height'];
@@ -352,7 +353,7 @@ async function longTextSocialsIframes(page){
     // dynamo custom
     const textBlokken = Array.from(document.querySelectorAll('.article-block.text-block'));
     const laatsteBlok = textBlokken[textBlokken.length - 1];
-    if (laatsteBlok.textContent.includes('voorverkoop') 
+    if (laatsteBlok && laatsteBlok.textContent.includes('voorverkoop') 
     || laatsteBlok.textContent.includes('sale')
     || laatsteBlok.querySelector('h6')?.textContent.toLowerCase().includes('info')){
       laatsteBlok.parentNode.removeChild(laatsteBlok)

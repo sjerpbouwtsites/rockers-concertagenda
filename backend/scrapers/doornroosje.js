@@ -334,6 +334,7 @@ async function longTextSocialsIframes(page){
     const removeSelectors = [
       "[class*='icon-']",
       "[class*='fa-']",
+      `.s-event__container .s-event__content img`,
       ".fa"
     ].join(', ')
  

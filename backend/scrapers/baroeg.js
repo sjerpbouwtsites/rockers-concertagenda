@@ -222,6 +222,7 @@ async function longTextSocialsIframes(page){
       ".post-content h2 a[href*='bandcamp']",
       ".post-content h2 a[href*='spotify']",
       ".post-content .fa",
+      `${textSelector} img`,
       `.post-content .su-button-center`].join(', ')
     const socialSelector = [
       ".post-content .su-button[href*='facebook']", 

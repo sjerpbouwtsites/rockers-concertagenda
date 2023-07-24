@@ -243,7 +243,8 @@ async function longTextSocialsIframes(page){
       '.main-column > .achtergrond-afbeelding:first-child',
       '.main-column > .content + .achtergrond-afbeelding', // onduidelijk welke
       ".main-column .wp-block-embed",
-      ".main-column p a[rel*='noreferrer noopener']" // embed wrappers
+      ".main-column p a[rel*='noreferrer noopener']", // embed wrappers
+      `${textSelector} img`,
     ].join(', ')
   
     const attributesToRemove = ['style', 'hidden', '_target', "frameborder", 'onclick', 'aria-hidden'];

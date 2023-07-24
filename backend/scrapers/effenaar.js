@@ -210,6 +210,7 @@ async function longTextSocialsIframes(page){
       "[class*='fa-']",
       ".fa",
       ".heeft-embed",
+      `${textSelector} img`,
       ".heeft-cta"
     ].join(', ')
   

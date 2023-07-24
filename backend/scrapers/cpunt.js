@@ -242,7 +242,7 @@ async function longTextSocialsIframes(page){
       
     ].join(', ');
     const removeSelectors = [
-
+      `${textSelector} img`,
     ].join(', ')
     
     const attributesToRemove = ['style', 'hidden', '_target', "frameborder", 'onclick', 'aria-hidden'];

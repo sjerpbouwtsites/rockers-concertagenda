@@ -311,6 +311,7 @@ async function longTextSocialsIframes(page){
       ".fa",
       '.video-wrap',
       '.social-content',
+      `${textSelector} img`,
       '.facebook-comments'
     ].join(', ')
  

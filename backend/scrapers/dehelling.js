@@ -202,6 +202,7 @@ async function longTextSocialsIframes(page){
     const removeEmptyHTMLFrom = textSelector
     const socialSelector = [
       '.FacebookShare a',
+      `${textSelector} img`,
       '.Twitter a'
     ].join(', ');
     const removeSelectors = [

@@ -281,7 +281,9 @@ async function longTextSocialsIframes(page){
     const mediaSelector = '.video iframe, .spotify iframe';
     const textSelector = 'article .wysiwyg';
     const removeEmptyHTMLFrom = 'article .wysiwyg';
-    const removeSelectors = []
+    const removeSelectors = [
+      `${textSelector} img`,
+    ]
     const socialSelector = [];
     const attributesToRemove = ['style', 'hidden', '_target', "frameborder", 'onclick', 'aria-hidden'];
     const attributesToRemoveSecondRound = ['class', 'id' ];      

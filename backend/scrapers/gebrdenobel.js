@@ -310,6 +310,7 @@ async function longTextSocialsIframes(page){
       ".contentBlocks .video",
       ".contentBlocks iframe",
       ".contentBlocks script",
+      ".contentBlocks img",
       ".contentBlocks #shop-frame",
     ].join(", ");
 
