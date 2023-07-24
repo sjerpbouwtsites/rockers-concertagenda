@@ -37,8 +37,15 @@ async function scrapeMetalfan() {
 }
 
 async function getBaseMusicEvents(browser, qwm) {
+
   const page = await browser.newPage();
-  await page.goto(`https://www.metalfan.nl/agenda.php`);
+  await metalFanDoURL(page, `https://www.metalfan.nl/agenda.php`, qwm);
+  await metalFanDoURL(page, `https://www.metalfan.nl/agenda.php?year=2024&sw=`, qwm);
+
+}
+
+async function metalFanDoURL(page, url, qwm){
+  await page.goto(url);
   parentPort.postMessage(qwm.workerStarted());
 
   const workerNames = Object.keys(workerConfig);
@@ -105,7 +112,7 @@ async function getBaseMusicEvents(browser, qwm) {
             const monthNumber = months[monthString];
             eventDate =
               monthNumber && dayString
-                ? new Date(`2022-${monthNumber}-${dayString}`).toISOString()
+                ? new Date(`2023-${monthNumber}-${dayString}`).toISOString()
                 : null;
           }
         }
@@ -141,7 +148,7 @@ async function getBaseMusicEvents(browser, qwm) {
     );
   }, {months: getVenueMonths('metalfan'), rename})
 
-  const musicEvents = eventData
+  let musicEvents = eventData
     .map((eventDatum) => {
       const thisMusicEvent = new MusicEvent(eventDatum);
       let locationName = Location.makeLocationSlug(
@@ -165,13 +172,11 @@ async function getBaseMusicEvents(browser, qwm) {
     .filter(musicEvent => {
       return !skipWithMetalfan.includes(musicEvent.location)
     });
-
-  
-
+    
 
   musicEvents.forEach((musicEvent) => {
     musicEvent.register();
   });
 
-  return true;
+  return true;  
 }

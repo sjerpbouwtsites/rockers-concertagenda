@@ -22,9 +22,9 @@ export default class AbstractScraper {
 
   completedMainPage = false
   workingOnSinglePages = false;
-  debugCorruptedUnavailable = false;
-  debugSingleMergedEventCheck = false;
-  debugRawEventAsyncCheck = false;
+  debugCorruptedUnavailable = true;
+  debugSingleMergedEventCheck = true;
+  debugRawEventAsyncCheck = true;
   debugBaseEvents = false;
   debugPageInfo = false;
   debugPrice = false;
