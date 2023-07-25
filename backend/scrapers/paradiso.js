@@ -155,7 +155,7 @@ paradisoScraper.singlePage = async function ({ page, event }) {
   
   try {
     await page.waitForSelector(".css-tkkldl", {
-      timeout: 20000,
+      timeout: 10000,
     });
   } catch (caughtError) {
     buitenRes.errors.push({
