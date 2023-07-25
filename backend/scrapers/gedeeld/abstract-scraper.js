@@ -1583,6 +1583,10 @@ export default class AbstractScraper {
       fs.mkdirSync(`${this.eventImagesFolder}/${workerData.family}`)
     }
 
+    if (image.includes('event-images')) {
+      return true;
+    }
+
     let extension = '';
     try {
       extension = image.match(/.jpg|.jpeg|.png|.webp/)[0];
@@ -1615,62 +1619,6 @@ export default class AbstractScraper {
       }) 
 
     return true;
-
-    // https.get(image, (imageGetRes)=>{
-
-    //   const p1 = new Promise((resolve, reject)=>{
-    //     const stream1 = imageGetRes.pipe(
-    //       sharp()
-    //         .resize(440, 225)
-    //         .webp()
-    //     ).pipe(fs.createWriteStream(`${imagePath}-w440.webp`))
-    //     stream1.on("finish", function() {
-    //       stream1.close(() => {
-    //         resolve(true);
-    //       });
-    //     });
-    //     stream1.on("error", function() {
-    //       stream1.close(() => {
-    //         reject(true);
-    //       });
-    //     });        
-    //   })
-
-    //   const p2 = new Promise((resolve, reject)=>{
-    //     const stream1 = imageGetRes.pipe(
-    //       sharp()
-    //         .resize(750, 360)
-    //         .webp()
-    //     ).pipe(fs.createWriteStream(`${imagePath}-w750.webp`))
-    //     stream1.on("finish", function() {
-    //       stream1.close(() => {
-    //         resolve(true);
-    //       });
-    //     });
-    //     stream1.on("error", function() {
-    //       stream1.close(() => {
-    //         reject(true);
-    //       });
-    //     });        
-    //   })      
-
-    //   const p3 = new Promise((resolve, reject)=>{
-    //     const stream1 = imageGetRes.pipe(
-    //       sharp()
-    //         .webp()
-    //     ).pipe(fs.createWriteStream(`${imagePath}-vol.webp`))
-    //     stream1.on("finish", function() {
-    //       stream1.close(() => {
-    //         resolve(true);
-    //       });
-    //     });
-    //     stream1.on("error", function() {
-    //       stream1.close(() => {
-    //         reject(true);
-    //       });
-    //     });        
-    //   })    
-
 
   }
 

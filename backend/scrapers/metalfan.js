@@ -75,6 +75,7 @@ async function metalFanDoURL(page, url, qwm){
     "kavkaoudaan": "kavka",
     "kavka zappa": "kavka",
     "kavkazappa": "kavka",    
+    "zappa": "kavka",
     "kavkaantwerpen": "kavka",
     "langemunt": "langemunte",
     "merleyn": "doornroosje", // onderdeel doornroosje
