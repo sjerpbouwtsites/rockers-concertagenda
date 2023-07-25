@@ -249,8 +249,8 @@ class EventBlocks extends React.Component {
     const start = new Date(musicEvent.start);
     const enlargedBEM = musicEvent.enlarged ? 'event-block__dates--enlarged' : '';
     const startDateText = start.toLocaleDateString("nl", {
-      weekday: musicEvent.enlarged ? "short" : undefined,
-      month: musicEvent.enlarged ? 'long' : '2-digit',
+      // weekday: musicEvent.enlarged ? "short" : undefined,
+      month: musicEvent.enlarged ? '2-digit' : '2-digit',
       day: "numeric",
       year: musicEvent.enlarged 
         ? (start.getFullYear() === this.currentYear ? "numeric" : undefined)
@@ -348,11 +348,16 @@ ${BEMify(`event-block`, [
     musicEvent.enlarged ? 'enlarged' : '',
     musicEvent.soldOut ? "sold-out" : '',
     musicEvent.firstOfMonth ? 'first-of-month' : '',
-    musicEvent.soldOut ? 'sold-out' : '' 
+    musicEvent.soldOut ? 'sold-out' : '',
+    musicEvent.title.length > 36 ? 'long-title' : 'short-title',
+    musicEvent.title.length < 16 ? 'tiny-title' : '',
+    Math.random() > .8 ? 'random-style': '',
+    Math.random() > .5 ? 'random-style-2': '',
+    Math.random() > .5 ? 'random-style-3': ''
   ])}`,
       header: `${BEMify(`event-block__header contrast-with-dark`, sharedModifiers)}`,
       headerH2: `${BEMify(`contrast-with-dark event-block__title`, sharedModifiers)}`,
-      headerEventTitle: `${BEMify(`event-block__title-showname cursive-font`, sharedModifiers)}`,
+      headerEventTitle: `${BEMify(`event-block__title-showname plain-sans-serif-font`, sharedModifiers)}`,
       headerLocation: `${BEMify(`event-block__title-location color-green green-color event-block__header-text cursive-font`, sharedModifiers)}`,
       sluitEnlargedBtn: `${BEMify(`event-block__sluit-enlarged-btn`, sharedModifiers)}`,
       image: BEMify('event-block__image', sharedModifiers),

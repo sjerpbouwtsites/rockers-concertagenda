@@ -183,7 +183,7 @@ boerderijScraper.singlePage = async function ({ event }) {
 
   // media obj maken voordat HTML verdwijnt
   res.mediaForHTML = !ajaxRes?.video ? [] : [{
-    outer: ajaxRes.video,
+    outer: `<iframe src="${ajaxRes.video}" />` ,
     src: null,
     id: null,
     type: 'youtube'

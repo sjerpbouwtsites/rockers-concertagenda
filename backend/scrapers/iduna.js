@@ -345,7 +345,7 @@ idunaScraper.singlePage = async function ({ page, event }) {
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
   pageInfo.price = priceRes.price;  
 
-  const longTextRes = await longTextSocialsIframes(page)
+  const longTextRes = await longTextSocialsIframes(page, event, pageInfo)
   for (let i in longTextRes){
     pageInfo[i] = longTextRes[i]
   }
@@ -355,9 +355,9 @@ idunaScraper.singlePage = async function ({ page, event }) {
 };
 //#endregion                         SINGLE PAGE
 // #region [rgba(60, 0, 0, 0.5)]     LONG HTML
-async function longTextSocialsIframes(page){
+async function longTextSocialsIframes(page, event, pageInfo){
 
-  return await page.evaluate(()=>{
+  return await page.evaluate(({event})=>{
     const res = {}
 
 
@@ -371,11 +371,16 @@ async function longTextSocialsIframes(page){
       "#sideinfo [href*='facebook']"
     ].join(", ");
     const removeSelectors = [
-      "[class*='icon-']",
-      "[class*='fa-']",
-      ".fa",
-      "#postcontenttext script",
-      "#postcontenttext img"
+      `${textSelector} [class*='icon-']`,
+      `${textSelector} [class*='fa-']`,
+      `${textSelector} .fa`,
+      `${textSelector} script`,
+      `${textSelector} noscript`,
+      `${textSelector} style`,
+      `${textSelector} meta`,
+      `${textSelector} svg`,
+      `${textSelector} form`,
+      `${textSelector} img`
     ].join(", ");
 
     const attributesToRemove = [
@@ -396,10 +401,14 @@ async function longTextSocialsIframes(page){
 
     // eerst onzin attributes wegslopen
     const socAttrRemSelAdd = `${
-      socialSelector ? `, ${socialSelector} *` : ""
+      socialSelector.length ? `, ${socialSelector}` : ""
     }`;
+    const mediaAttrRemSelAdd = `${
+      mediaSelector.length ? `, ${mediaSelector} *, ${mediaSelector}` : ""
+    }`;
+    const textSocEnMedia = `${textSelector} *${socAttrRemSelAdd}${mediaAttrRemSelAdd}`;      
     document
-      .querySelectorAll(`${textSelector} *${socAttrRemSelAdd}`)
+      .querySelectorAll(textSocEnMedia)
       .forEach((elToStrip) => {
         attributesToRemove.forEach((attr) => {
           if (elToStrip.hasAttribute(attr)) {
@@ -461,17 +470,22 @@ async function longTextSocialsIframes(page){
         el.querySelectorAll("i, svg, img").forEach((rm) =>
           rm.parentNode.removeChild(rm)
         );
-
         if (!el.textContent.trim().length) {
-          if (el.href.includes("facebook")) {
-            el.textContent = "Facebook";
+          if (el.href.includes("facebook") || el.href.includes("fb.me")) {
+            if (el.href.includes('facebook.com/events')){
+              el.textContent = `FB event ${event.title}`;
+            } else{
+              el.textContent = `Facebook`;
+            }
           } else if (el.href.includes("twitter")) {
             el.textContent = "Tweet";
+          } else if (el.href.includes('instagram')) {
+            el.textContent = "Insta";
           } else {
-            el.textContent = "Onbekende social";
+            el.textContent = "Social";
           }
         }
-        el.className = "";
+        el.className = "long-html__social-list-link";
         el.target = "_blank";
         return el.outerHTML;
       });
@@ -509,7 +523,7 @@ async function longTextSocialsIframes(page){
       });
 
     // laatste attributen eruit.
-    document.querySelectorAll(`${textSelector} *`).forEach((elToStrip) => {
+    document.querySelectorAll(textSocEnMedia).forEach((elToStrip) => {
       attributesToRemoveSecondRound.forEach((attr) => {
         if (elToStrip.hasAttribute(attr)) {
           elToStrip.removeAttribute(attr);
@@ -521,10 +535,8 @@ async function longTextSocialsIframes(page){
     res.textForHTML = Array.from(document.querySelectorAll(textSelector))
       .map((el) => el.innerHTML)
       .join("");
-
-
     return res;
-  })
+  },{event})
   
 }
 // #endregion                        LONG HTML

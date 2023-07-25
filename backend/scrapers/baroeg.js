@@ -187,7 +187,7 @@ baroegScraper.singlePage = async function ({ page, event }) {
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
   pageInfo.price = priceRes.price;
 
-  const longTextRes = await longTextSocialsIframes(page)
+  const longTextRes = await longTextSocialsIframes(page, event, pageInfo)
   for (let i in longTextRes){
     pageInfo[i] = longTextRes[i]
   }
@@ -198,9 +198,9 @@ baroegScraper.singlePage = async function ({ page, event }) {
 //#endregion                         SINGLE PAGE
 
 // #region [rgba(60, 0, 0, 0.5)]     LONG HTML
-async function longTextSocialsIframes(page){
+async function longTextSocialsIframes(page, event, pageInfo){
 
-  return await page.evaluate(()=>{
+  return await page.evaluate(({event})=>{
     const res = {}
  
     const mediaSelector = ['.su-youtube iframe', 
@@ -211,7 +211,17 @@ async function longTextSocialsIframes(page){
     ].join(', ');
     const textSelector = '.post-content';
     const removeEmptyHTMLFrom = '.post-content';
-    const removeSelectors = [`.post-content h3`, 
+    const removeSelectors = [
+      `${textSelector} [class*='icon-']`,
+      `${textSelector} [class*='fa-']`,
+      `${textSelector} .fa`,
+      `${textSelector} script`,
+      `${textSelector} noscript`,
+      `${textSelector} style`,
+      `${textSelector} meta`,
+      `${textSelector} svg`,
+      `${textSelector} form`,
+      `.post-content h3`, 
       `.post-content .wpt_listing`, 
       `.post-content .su-youtube`, 
       `.post-content .su-spotify`, 
@@ -220,8 +230,6 @@ async function longTextSocialsIframes(page){
       ".post-content h2 a[href*='instagram']",
       ".post-content h2 a[href*='bandcamp']",
       ".post-content h2 a[href*='spotify']",
-      ".post-content .fa",
-      `${textSelector} img`,
       `.post-content .su-button-center`].join(', ')
     const socialSelector = [
       ".post-content .su-button[href*='facebook']", 
@@ -233,14 +241,22 @@ async function longTextSocialsIframes(page){
     const attributesToRemoveSecondRound = ['class', 'id' ];
 
     // eerst onzin attributes wegslopen
-    document.querySelectorAll(`${textSelector} *, ${socialSelector} *`)
-      .forEach(elToStrip => {
-        attributesToRemove.forEach(attr => {
-          if (elToStrip.hasAttribute(attr)){
-            elToStrip.removeAttribute(attr)
+    const socAttrRemSelAdd = `${
+      socialSelector.length ? `, ${socialSelector}` : ""
+    }`;
+    const mediaAttrRemSelAdd = `${
+      mediaSelector.length ? `, ${mediaSelector} *, ${mediaSelector}` : ""
+    }`;
+    const textSocEnMedia = `${textSelector} *${socAttrRemSelAdd}${mediaAttrRemSelAdd}`;      
+    document
+      .querySelectorAll(textSocEnMedia)
+      .forEach((elToStrip) => {
+        attributesToRemove.forEach((attr) => {
+          if (elToStrip.hasAttribute(attr)) {
+            elToStrip.removeAttribute(attr);
           }
-        })
-      })
+        });
+      });
 
     // media obj maken voordat HTML verdwijnt
     res.mediaForHTML = Array.from(document.querySelectorAll(mediaSelector))
@@ -261,21 +277,25 @@ async function longTextSocialsIframes(page){
     // socials obj maken voordat HTML verdwijnt
     res.socialsForHTML = !socialSelector ? '' : Array.from(document.querySelectorAll(socialSelector))
       .map(el => {
-
-        el.querySelectorAll('i, svg, img').forEach(rm => rm.parentNode.removeChild(rm))
-
-        if (!el.textContent.trim().length){
-          if (el.href.includes('facebook')){
-            el.textContent = 'Facebook';
-          } else if(el.href.includes('twitter')) {
-            el.textContent = 'Tweet';
-          } else {
-            el.textContent = 'Onbekende social';
-          }
-        }          
-        el.className = 'long-html__social-list-link'
-        el.target = '_blank'
-        return el.outerHTML
+        el.querySelectorAll("i, svg, img").forEach((rm) =>
+          rm.parentNode.removeChild(rm)
+        );        
+        if (!el.textContent.trim().length) {
+          if (el.href.includes("facebook") || el.href.includes("fb.me")) {
+            if (el.href.includes('facebook.com/events')){
+              el.textContent = `FB event ${event.title}`;
+            } else{
+              el.textContent = `Facebook`;
+            }
+          } else if (el.href.includes("twitter")) {
+            el.textContent = "Tweet";
+          } else if (el.href.includes('instagram')) {
+            el.textContent = "Insta";
+          } 
+        }
+        el.className = "long-html__social-list-link";
+        el.target = "_blank";
+        return el.outerHTML;
       })
 
     // stript HTML tbv text
@@ -292,7 +312,7 @@ async function longTextSocialsIframes(page){
       })
 
     // laatste attributen eruit.
-    document.querySelectorAll(`${textSelector} *`)
+    document.querySelectorAll(textSocEnMedia)
       .forEach(elToStrip => {
         attributesToRemoveSecondRound.forEach(attr => {
           if (elToStrip.hasAttribute(attr)){
@@ -303,10 +323,10 @@ async function longTextSocialsIframes(page){
 
     // tekst.
     res.textForHTML = Array.from(document.querySelectorAll(textSelector))
-      .map(el => el.innerHTML)
-      .join('')
+      .map((el) => el.innerHTML)
+      .join("");
     return res;
-  })
+  }, {event})
   
 }
 // #endregion                        LONG HTML
