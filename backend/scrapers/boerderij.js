@@ -1,5 +1,6 @@
 import { workerData } from "worker_threads";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
+import crypto from "crypto";
 import axios from "axios";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 
@@ -146,6 +147,10 @@ boerderijScraper.singlePage = async function ({ event }) {
     res.errors.push({
       remarks: `image missing ${res.pageInfo}`
     })
+  } else {
+    const imageCrypto = crypto.randomUUID();
+    const imagePath = `${this.eventImagesFolder}/${workerData.family}/${imageCrypto}`;
+    this.downloadImageCompress(event, event.image, imagePath)
   }
 
   res.boerderijID = ajaxRes.id;

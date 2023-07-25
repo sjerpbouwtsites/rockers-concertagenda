@@ -1,4 +1,177 @@
 
+  volt-0 Error - 7:57:55 AM
+  Error: false
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:879:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:869:23)
+    at voltScraper.singlePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/volt.js:235:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:651:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:243:5) 
+  false
+  
+  
+  volt-0 Error - 7:51:53 AM
+  Error: false
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:876:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:866:23)
+    at voltScraper.singlePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/volt.js:235:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:648:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:240:5) 
+  false
+  
+  
+  volt-0 Error - 7:47:44 AM
+  Error: false
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:876:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:866:23)
+    at voltScraper.singlePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/volt.js:235:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:648:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:240:5) 
+  false
+  
+  
+  volt-0 Error - 7:43:40 AM
+  Error: false
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:876:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:866:23)
+    at voltScraper.singlePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/volt.js:235:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:648:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:240:5) 
+  false
+  
+  
+  volt-0 Error - 7:39:09 AM
+  TypeError: Cannot read properties of null (reading '0')
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1549:65)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async voltScraper.singlePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/volt.js:222:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:648:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:240:5) 
+  Cannot read properties of null (reading '0')
+  
+  
+  volt-0 Error - 7:39:08 AM
+  Error: false
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:876:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:866:23)
+    at voltScraper.singlePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/volt.js:235:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:648:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:240:5) 
+  false
+  
+  
+  volt-0 Error - 7:29:49 AM
+  TypeError: Cannot read properties of null (reading '0')
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1548:65)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async voltScraper.singlePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/volt.js:222:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:647:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:239:5) 
+  Cannot read properties of null (reading '0')
+  
+  
+  volt-0 Error - 7:29:48 AM
+  Error: false
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:875:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:865:23)
+    at voltScraper.singlePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/volt.js:235:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:647:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:239:5) 
+  false
+  
+  
+  volt-0 Error - 7:28:29 AM
+  TypeError: Cannot read properties of null (reading '0')
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1541:65)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async voltScraper.singlePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/volt.js:222:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:647:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:239:5) 
+  Cannot read properties of null (reading '0')
+  
+  
+  volt-0 Error - 7:28:28 AM
+  Error: false
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:875:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:865:23)
+    at voltScraper.singlePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/volt.js:235:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:647:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:239:5) 
+  false
+  
+  
+  volt-0 Error - 7:28:07 AM
+  Error: false
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:875:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:865:23)
+    at voltScraper.singlePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/volt.js:235:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:647:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:239:5) 
+  false
+  
+  
+  volt-0 Error - 7:25:29 AM
+  Error: false
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:875:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:865:23)
+    at voltScraper.singlePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/volt.js:235:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:647:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:239:5) 
+  false
+  
+  
+  volt-0 Error - 7:24:50 AM
+  Error: ENOENT: no such file or directory, mkdir 'undefined/volt'
+    at Object.mkdirSync (node:fs:1357:3)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1543:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async voltScraper.singlePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/volt.js:222:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:647:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:239:5) 
+  ENOENT: no such file or directory, mkdir 'undefined/volt'
+  
+  
+  volt-0 Error - 7:23:58 AM
+  Error: false
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:875:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:865:23)
+    at voltScraper.singlePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/volt.js:235:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:647:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:239:5) 
+  false
+  
+  
+  volt-0 Error - 7:22:16 AM
+  Error: false
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:875:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:865:23)
+    at voltScraper.singlePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/volt.js:235:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:647:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:239:5) 
+  false
+  
+  
   volt-0 Error - 7:13:23 AM
   Error: false
     at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:872:29

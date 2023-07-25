@@ -11,6 +11,8 @@ import MusicEvent from "../../mods/music-event.js";
 import getVenueMonths from "../../mods/months.js";
 import ErrorWrapper from "../../mods/error-wrapper.js";
 import makeLongHTML from "./longHTML.js";
+import https from 'https';
+import sharp from 'sharp';
 //#endregion                                              IMPORTS
 
 export default class AbstractScraper {
@@ -21,6 +23,8 @@ export default class AbstractScraper {
   rockRefuseList = '';
   rockAllowListNew = '';
   rockRefuseListNew = '';  
+
+  eventImagesFolder = fsDirections.publicEventImages;
 
   static unavailabiltyTerms = [
     'uitgesteld', 'verplaatst', 'locatie gewijzigd', 'besloten', 'afgelast', 'geannuleerd'
@@ -220,6 +224,9 @@ export default class AbstractScraper {
     } else {
       this.browser = 'disabled';
     }
+
+    this.emptyImageFolder();
+
     const baseMusicEvents = await this.mainPage().catch(
       this.handleOuterScrapeCatch
     );
@@ -1470,6 +1477,19 @@ export default class AbstractScraper {
   //#endregion                                                 LONG HTML
 
   //#region [rgba(180, 0, 180, 0.30)]                          IMAGE    
+
+  async emptyImageFolder(){
+
+    const location = workerData.family;
+
+    if (fs.existsSync(`${this.eventImagesFolder}/${location}`)){
+      fs.rmSync(`${this.eventImagesFolder}/${location}`, { recursive: true, force: true });
+    } 
+    fs.mkdirSync(`${this.eventImagesFolder}/${location}`)
+    return true;
+       
+  }
+
   async getImage({page, event, pageInfo, selectors, mode}){
     
     const res = {
@@ -1533,20 +1553,47 @@ export default class AbstractScraper {
         }, {selector})
       }
     }
-
-    this.dirtyDebug({
-      title,
-      image 
-    })
+    
     if (!image){
       res.errors.push({
         remarks: `image missing ${pi}`
       })
+      return res;
     }
-    res.image = image;
+
+    const imageCrypto = crypto.randomUUID();
+    const imagePath = `${this.eventImagesFolder}/${workerData.family}/${imageCrypto}`;
+    this.downloadImageCompress(event, image, imagePath)
+
+    res.image = imagePath;
     return res;
 
   }
+
+  async downloadImageCompress(event, image, imagePath){
+
+    if (!fs.existsSync(`${this.eventImagesFolder}/${workerData.family}`)){
+      fs.mkdirSync(`${this.eventImagesFolder}/${workerData.family}`)
+    }
+    https.get(image, (res)=>{
+      res.pipe(
+        sharp()
+          .resize(440, 225)
+          .webp()
+      ).pipe(fs.createWriteStream(`${imagePath}-w440.webp`))
+      res.pipe(
+        sharp()
+          .resize(750, 360)
+          .webp()
+      ).pipe(fs.createWriteStream(`${imagePath}-w750.webp`))
+      res.pipe(
+        sharp()
+          .webp()
+      ).pipe(fs.createWriteStream(`${imagePath}-vol.webp`))
+      ;
+    })
+  }
+
   //#endregion                                                 IMAGE
 
 
