@@ -97,15 +97,7 @@ tivoliVredenburgScraper.mainPage = async function () {
           eventEl
             .querySelector(".agenda-list-item__text")
             ?.textContent.trim() ?? '';
-        res.image =
-          eventEl
-            .querySelector(".agenda-list-item__figure img")
-            ?.src.replace(/-\d\d\dx\d\d\d.jpg/, ".jpg") ?? null;
-        if (!res.image){
-          res.errors.push({
-            remarks: `image missing ${res.pageInfo}`
-          })
-        }      
+
         res.venueEventUrl = eventEl.querySelector(
           ".agenda-list-item__title-link"
         ).href;
@@ -234,10 +226,13 @@ tivoliVredenburgScraper.singlePage = async function ({ page, event }) {
     return res;
   }, {event});
 
+  const imageRes = await this.getImage({page, event, pageInfo, selectors: ['.img-container source:last-of-type'], mode: 'image-src' })
+  pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
+  pageInfo.image = imageRes.image;  
+
   const priceRes = await this.getPriceFromHTML({page, event, pageInfo, selectors: [".btn-group__price", ".event-cta"], });
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
   pageInfo.price = priceRes.price; 
-
 
   const longTextRes = await longTextSocialsIframes(page)
   for (let i in longTextRes){

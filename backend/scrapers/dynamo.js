@@ -233,25 +233,15 @@ dynamoScraper.singlePage = async function ({ page, event}) {
           toDebug: res,
         });
       }
-
-
-      res.image =
-        document
-          .querySelector(".dynamic-background-color#intro .color-pick")
-          ?.style.backgroundImage.match(/https.*.jpg|https.*.jpeg|https.*.png|https.*.webp/)
-          ?.at(0)
-          .replace("-500x500x", "") ?? "";
-      if (!res.image){
-        res.errors.push({
-          remarks: `image missing ${res.pageInfo}`
-        })
-      }
-
-
       return res;
     },
     { months: this.months, event }
   );
+
+  const imageRes = await this.getImage({page, event, pageInfo, selectors: [".dynamic-background-color#intro .color-pick"], mode: 'background-src' })
+  pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
+  pageInfo.image = imageRes.image;        
+
 
   const priceRes = await this.getPriceFromHTML({page, event, pageInfo, selectors: ['.agenda-date'], });
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);

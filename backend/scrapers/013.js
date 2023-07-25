@@ -134,13 +134,6 @@ nuldertienScraper.singlePage = async function ({ page , event}) {
       errors: [],
     };
 
-    res.image = document.querySelector(".event-spotlight__image")?.src ?? null;
-    if (!res.image){
-      res.errors.push({
-        remarks: `image missing ${res.pageInfo}`
-      })
-    }
-
     try {
       if (document.querySelector(
         ".timetable__times dl:first-child time"
@@ -172,6 +165,10 @@ nuldertienScraper.singlePage = async function ({ page , event}) {
 
     return res;
   }, {event});
+
+  const imageRes = await this.getImage({page, event, pageInfo, selectors: [".event-spotlight__image"], mode: 'image-src' })
+  pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
+  pageInfo.image = imageRes.image;
 
   const priceRes = await this.getPriceFromHTML({page, event, pageInfo, selectors: [".practical-information"], });
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);

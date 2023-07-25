@@ -2,6 +2,7 @@ import { workerData } from "worker_threads";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 import * as _t from "../mods/tools.js";
+import crypto from "crypto";
 import {workerNames} from "../mods/worker-config.js";
 
 //#region [rgba(0, 60, 0, 0.3)]       SCRAPER CONFIG
@@ -213,6 +214,14 @@ ticketmasterScraper.singlePage = async function ({event}) {
     pageInfo.shortTitle = pageInfo.shortTitle.substring(0, pageInfo.shortTitle.length -2)
   }
   pageInfo.image = event.image;
+  if (event.image){
+    const imageCrypto = crypto.randomUUID();
+    const imagePath = `${this.eventImagesFolder}/${workerData.family}/${imageCrypto}`;
+    this.downloadImageCompress(event, event.image, imagePath)
+  }    
+
+
+
   if (!pageInfo.image){
     pageInfo.errors.push({
       remarks: `image missing ${pageInfo.pageInfo}`

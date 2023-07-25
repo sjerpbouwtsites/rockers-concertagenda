@@ -190,17 +190,12 @@ groeneEngelScraper.singlePage = async function ({ page, event }) {
       })      
     }
     
-
-
-    res.image = document.querySelector('.img-wrapper img')?.getAttribute('data-lazy-src') ?? null;
-    if (!res.image){
-      res.errors.push({
-        remarks: `image missing ${res.pageInfo}`
-      })
-    } 
-
     return res;
   }, {event});
+
+  const imageRes = await this.getImage({page, event, pageInfo, selectors: ['.img-wrapper img'], mode: 'image-src' })
+  pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
+  pageInfo.image = imageRes.image;  
 
   const priceRes = await this.getPriceFromHTML({page, event, pageInfo, selectors: ['.main-ticket-info'], });
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);

@@ -15,9 +15,9 @@ dotenv.config();
 let monitorWebsocketServer = null;
 
 async function init() {
+  await houseKeeping();
   monitorWebsocketServer = await initMonitorBackend();
   WorkerStatus.monitorWebsocketServer = monitorWebsocketServer;
-  houseKeeping();
   WorkerStatus.monitorCPUS();
   const workerConfig = getWorkerConfig();
 
@@ -112,14 +112,21 @@ function addWorkerMessageHandler(thisWorker) {
   });
 }
 
-function houseKeeping() {
+async function houseKeeping() {
   fs.rm(fsDirections.publicTexts, { recursive: true }, () => {
     fs.mkdirSync(fsDirections.publicTexts);
   });
 
-  // fs.rmdirSync(fsDirections.publicTexts, {
-  //   recursive: true
-  // });
+  const pei = fsDirections.publicEventImages;
+  
+  fs.readdirSync(pei, 'utf-8').forEach(location=>{
+    if (fs.existsSync(`${pei}/${location}`)){
+      fs.rmSync(`${pei}/${location}`, { recursive: true, force: true });
+    } 
+    fs.mkdirSync(`${pei}/${location}`)
+  })
+  return true;
+  
 }
 
 init();

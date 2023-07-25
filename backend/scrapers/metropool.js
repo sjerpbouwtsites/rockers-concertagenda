@@ -193,16 +193,12 @@ metropoolScraper.singlePage = async function ({ page, event}) {
       });
     }
 
-    const ofc = document.querySelector(".object-fit-cover");
-    res.image = document.contains(ofc) && `https://metropool.nl/${ofc.srcset}`;
-    if (!res.image){
-      res.errors.push({
-        remarks: `image missing ${res.pageInfo}`
-      })
-    }   
-
     return res;
   }, {months: this.months, event});
+
+  const imageRes = await this.getImage({page, event, pageInfo, selectors: ['.object-fit-cover'], mode: 'image-src' })
+  pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
+  pageInfo.image = imageRes.image;  
 
   const priceRes = await this.getPriceFromHTML({page, event, pageInfo, selectors: [".doorPrice"], });
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);

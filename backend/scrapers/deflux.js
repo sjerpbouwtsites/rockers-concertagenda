@@ -155,12 +155,7 @@ defluxScraper.singlePage = async function ({ page, event}) {
       return res;  
     }
 
-    res.image = eventScheme.querySelector('[itemprop="image"]')?.getAttribute('content') ?? '';
-    if (!res.image){
-      res.errors.push({
-        remarks: `image missing ${res.pageInfo}`
-      })
-    }    
+
     try {
       res.startDate = eventScheme.querySelector('[itemprop="startDate"]')?.getAttribute('content').split('T')[0].split('-').map(dateStuk => dateStuk.padStart(2, '0')).join('-')
       res.startTime = document.querySelector('.evcal_time.evo_tz_time').textContent.match(/\d\d:\d\d/)[0];
@@ -180,6 +175,10 @@ defluxScraper.singlePage = async function ({ page, event}) {
 
     return res;
   }, {event});
+
+  const imageRes = await this.getImage({page, event, pageInfo, selectors: [".evo_event_main_img", ".event_description img"], mode: 'image-src' })
+  pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
+  pageInfo.image = imageRes.image;  
 
   const priceRes = await this.getPriceFromHTML({page, event, pageInfo, selectors: [".desc_trig_outter"], });
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);

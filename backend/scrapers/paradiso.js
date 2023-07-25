@@ -289,22 +289,14 @@ paradisoScraper.singlePage = async function ({ page, event }) {
         ).toISOString();        
       }      
 
-      res.image = document.querySelector('.css-xz41fi source')?.srcset.split(' ')[0] ?? null;
-      if (!res.image){
-        res.image = document.querySelector('.css-xz41fi source:last-of-type')?.srcset.split(/\s/)[0] ?? null;
-      }
-
-      if (!res.image){
-        res.errors.push({
-          remarks: `image missing ${res.pageInfo}`
-        })
-      }
-      
-     
       return res;
     },
     { months: editedMonths, buitenRes }
   );
+
+  const imageRes = await this.getImage({page, event, pageInfo, selectors: ['.css-xz41fi source','.css-xz41fi source:last-of-type'], mode: 'image-src' })
+  pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
+  pageInfo.image = imageRes.image; 
 
   const priceRes = await this.getPriceFromHTML({page, event, pageInfo, selectors: [".css-f73q4m", '.price', '.chakra-container'], });
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);

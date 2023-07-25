@@ -139,12 +139,7 @@ occiiScraper.singlePage = async function ({ page, event}) {
       pageInfo: `<a class='page-info' href='${location.href}'>${event.title}</a>`,
       errors: [],
     };
-    res.image = document.querySelector(".wp-post-image")?.src ?? null;
-    if (!res.image){
-      res.errors.push({
-        remarks: `image missing ${res.pageInfo}`
-      })
-    }    
+
     const eventCategoriesEl = document.querySelector(".occii-event-details");
     try {
       const eventDateEl = document.querySelector(".occii-event-date-highlight");
@@ -185,16 +180,18 @@ occiiScraper.singlePage = async function ({ page, event}) {
       return res;
     }
 
-
     res.genre = Array.from(document.querySelectorAll('.event-categories [href*="events/categories"]')).map(cats => cats.textContent.toLowerCase().trim())
 
     return res;
   }, {months: getVenueMonths('occii'), event}); //TODO is verouderde functie getVenueMonths
 
+  const imageRes = await this.getImage({page, event, pageInfo, selectors: [".wp-post-image"], mode: 'image-src' })
+  pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
+  pageInfo.image = imageRes.image;
+
   const priceRes = await this.getPriceFromHTML({page, event, pageInfo, selectors: ['.occii-single-event', '.occii-event-details'], });
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
   pageInfo.price = priceRes.price;  
-
 
   const longTextRes = await longTextSocialsIframes(page)
   for (let i in longTextRes){

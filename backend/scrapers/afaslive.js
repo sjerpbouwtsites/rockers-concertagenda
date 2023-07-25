@@ -105,7 +105,6 @@ afasliveScraper.mainPage = async function () {
           title
         }
         res.venueEventUrl = agendaBlock.querySelector("a")?.href ?? null;
-        res.image = agendaBlock.querySelector("img")?.src ?? null;
         res.soldOut = !!agendaBlock?.innerHTML.match(/uitverkocht|sold\s?out/i) ?? false;
         return res;
       })
@@ -251,6 +250,10 @@ afasliveScraper.singlePage = async function ({ page, event }) {
     },
     { months: this.months,event }
   );
+
+  const imageRes = await this.getImage({page, event, pageInfo, selectors: [".leftCol figure img"], mode: 'image-src' })
+  pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
+  pageInfo.image = imageRes.image;
 
   const priceRes = await this.getPriceFromHTML({page, event, pageInfo, selectors: ["#tickets"], });
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);

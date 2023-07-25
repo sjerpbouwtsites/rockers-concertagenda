@@ -196,14 +196,6 @@ dbsScraper.singlePage = async function ({ page, event }) {
       errors: [],
     };
 
-    res.image =
-    document.querySelector(".tribe-events-event-image .wp-post-image")?.src ??
-    null;
-    if (!res.image){
-      res.errors.push({
-        remarks: `image missing ${res.pageInfo}`
-      })
-    }    
     res.shortText = document.querySelector(".tribe-events-event-categories")?.textContent.toLowerCase().replace('concert, ', '').replace('concert', '').trim() ??
       "";
     res.ticketURL = document.querySelector('.tribe-events-event-url a')?.href ?? null;
@@ -214,6 +206,10 @@ dbsScraper.singlePage = async function ({ page, event }) {
     return res;
   }, {event});
   
+  const imageRes = await this.getImage({page, event, pageInfo, selectors: [".tribe-events-event-image .wp-post-image"], mode: 'image-src' })
+  pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
+  pageInfo.image = imageRes.image;
+
   const longTextRes = await longTextSocialsIframes(page)
   for (let i in longTextRes){
     pageInfo[i] = longTextRes[i]
@@ -235,9 +231,6 @@ dbsScraper.singlePage = async function ({ page, event }) {
      
       const price = Number(html.match(/€\d{1,3}[,.]\d\d/)[0].replace(/€/,'').replace(/[,.]/,'')) / 100
       pageInfo.price = price
-
-      // pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
-      // pageInfo.price = priceRes.price;
 
     } catch (caughtError) {
       // er is gewoon geen prijs beschikbaar.

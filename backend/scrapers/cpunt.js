@@ -113,12 +113,7 @@ cpuntScraper.mainPage = async function () {
         res.title = title;
         const anchor = rawEvent.querySelector('.absolute-link') ?? null;
         res.venueEventUrl = anchor?.href ?? null;
-        res.image = rawEvent?.querySelector(".bg-image-img")?.src ?? null;
-        if (!res.image){
-          res.errors.push({
-            remarks: `image missing ${res.pageInfo}`
-          })
-        }        
+      
         const parpar = rawEvent.parentNode.parentNode;
         res.startDate = parpar.hasAttribute('data-last-date') ? parpar.getAttribute('data-last-date').split('-').reverse().join('-') : null;
         const artInfoText = rawEvent.querySelector('.article-info')?.textContent.toLowerCase() ?? '';
@@ -231,6 +226,10 @@ cpuntScraper.singlePage = async function ({ page, event }) {
 
     return res;
   }, {months: this.months, event});
+
+  const imageRes = await this.getImage({page, event, pageInfo, selectors: [".bg-image[style*='background']"], mode: 'background-src' })
+  pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
+  pageInfo.image = imageRes.image;
 
   const priceRes = await this.getPriceFromHTML({page, event, pageInfo, selectors: [".article-price"], });
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);

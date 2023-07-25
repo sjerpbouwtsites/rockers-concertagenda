@@ -91,13 +91,7 @@ patronaatScraper.mainPage = async function () {
           errors: [],
           title
         };
-        res.image =
-          eventEl.querySelector(".event-program__image img")?.src ?? null;
-        if (!res.image){
-          res.errors.push({
-            remarks: `image missing ${res.pageInfo}`
-          })
-        }          
+        
         res.venueEventUrl = eventEl.querySelector("a[href]")?.href ?? null;
         res.shortText = eventEl
           .querySelector(".event-program__subtitle")
@@ -211,6 +205,9 @@ patronaatScraper.singlePage = async function ({ page, event }) {
     }))
   });
 
+  const imageRes = await this.getImage({page, event, pageInfo, selectors: ['.event__visual img'], mode: 'image-src' })
+  pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
+  pageInfo.image = imageRes.image; 
 
   const priceRes = await this.getPriceFromHTML({page, event, pageInfo, selectors: [".event__info-bar--ticket-price"], });
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);

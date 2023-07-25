@@ -200,28 +200,14 @@ bibelotScraper.singlePage = async function ({ page, event }) {
         });
       }
 
-      const imageMatch = document
-        .querySelector(".achtergrond-afbeelding")
-        ?.style.backgroundImage.match(/https.*.png|https.*.jpg|https.*.jpeg/);
-      if (imageMatch && imageMatch.length) {
-        res.image = imageMatch[0];
-      }
-
-      if (!res.image){
-        res.errors.push({
-          remarks: `image niet gevonden ${res.pageInfo}`,
-          toDebug:{
-            imageStyle: document
-              .querySelector(".achtergrond-afbeelding")
-              ?.style
-          }
-        })
-      }
-
       return res;
     },
     { months: this.months, event }
   );
+
+  const imageRes = await this.getImage({page, event, pageInfo, selectors: [".achtergrond-afbeelding"], mode: 'background-src' })
+  pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
+  pageInfo.image = imageRes.image;
 
   const priceRes = await this.getPriceFromHTML({page, event, pageInfo, selectors: [".meta-colom"], });
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);

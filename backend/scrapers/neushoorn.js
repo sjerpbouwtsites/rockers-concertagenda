@@ -201,22 +201,14 @@ neushoornScraper.singlePage = async function ({ page,event }) {
         });
       }
 
-      const imageMatch = document
-        .querySelector(".header--theatre")
-        ?.style.backgroundImage.match(/https.*.png|https.*.jpg/);
-      if (imageMatch && imageMatch.length) {
-        res.image = imageMatch[0];
-      }
-      if (!res.image){
-        res.errors.push({
-          remarks: `image missing ${res.pageInfo}`
-        })
-      }      
-
       return res;
     },
     { months: neushoornMonths, event }
   );
+
+  const imageRes = await this.getImage({page, event, pageInfo, selectors: [".header--theatre"], mode: 'background-src' })
+  pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
+  pageInfo.image = imageRes.image;  
 
   const priceRes = await this.getPriceFromHTML({page, event, pageInfo, selectors: [".prices__item__price", ".prices"], });
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);

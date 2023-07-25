@@ -130,26 +130,6 @@ depulScraper.mainPage = async function () {
           }
           res.startDate = `${startYear}-${startMonth}-${startDay}`;
           res.venueEventUrl = rawEvent.querySelector("a")?.href ?? null;
-
-          const imageMatch =
-            rawEvent
-              .querySelector("a")
-              ?.getAttribute("style")
-              .match(/url\('(.*)'\)/) ?? null;
-          if (
-            imageMatch &&
-            Array.isArray(imageMatch) &&
-            imageMatch.length === 2
-          ) {
-            res.image = imageMatch[1];
-          }
-
-          if (!res.image){
-            res.errors.push({
-              remarks: `image missing ${res.pageInfo}`
-            })
-          }
-
           return res;
         });
     },
@@ -176,8 +156,6 @@ depulScraper.singlePage = async function ({ page, event }) {
         pageInfo: `<a class='page-info' href='${location.href}'>${event.title}</a>`,
         errors: [],
       };
-
-      
 
       try {
         const contentBox = document.querySelector("#content-box") ?? null;
@@ -286,10 +264,14 @@ depulScraper.singlePage = async function ({ page, event }) {
     },
     { months: this.months , event}
   );
+
+  const imageRes = await this.getImage({page, event, pageInfo, selectors: ["#content [style*='background']"], mode: 'background-src' })
+  pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
+  pageInfo.image = imageRes.image;
+
   const priceRes = await this.getPriceFromHTML({page, event, pageInfo, selectors: [".column.right"], });
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
   pageInfo.price = priceRes.price;  
-
 
   const longTextRes = await longTextSocialsIframes(page)
   for (let i in longTextRes){
