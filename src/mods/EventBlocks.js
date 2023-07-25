@@ -95,8 +95,12 @@ class EventBlocks extends React.Component {
     }, 100)
   }
 
-  async sluitEnlarged(){
-    console.log('sluit enlarged');
+  async sluitEnlarged(e = null){
+    if (e){
+      e.stopPropagation();
+      e.nativeEvent.stopImmediatePropagation();
+    }
+
     let nieuweEventsState = this.state.musicEvents.map(event => {
       event.enlarged = false;
       return event;
@@ -129,12 +133,15 @@ class EventBlocks extends React.Component {
     
   }
 
-  hideSoldOut(){
+  hideSoldOut(e){
+    e.stopPropagation();
+    e.nativeEvent.stopImmediatePropagation();
     this.setState({ filterHideSoldOut: true });
   }
 
-  async loadLongerText(musicEventKey) {
-
+  async loadLongerText(musicEventKey, e) {
+    e.stopPropagation();
+    e.nativeEvent.stopImmediatePropagation();
 
     const isMomenteelEnlarged = !!this.someEventIsEnlarged(this.state.musicEvents);
     await this.sluitEnlarged();
@@ -481,10 +488,11 @@ ${BEMify(`event-block`, [
               key={musicEventKey}
               data-date={musicEvent.eventMonth}
               className={selectors.article}
+              onClick={!musicEvent.enlarged ? this.loadLongerText.bind(this, musicEventKey) : null}
             >
               {firstOfMonthBlock}
               {imageHTML}
-              <header onClick={!musicEvent.enlarged ? this.loadLongerText.bind(this, musicEventKey) : null} className={selectors.header}>
+              <header className={selectors.header}>
                 <h2 className={selectors.headerH2}>
                   <span className={selectors.headerEventTitle} data-short-text={shortestText}>
                     {musicEvent.title}
@@ -502,7 +510,7 @@ ${BEMify(`event-block`, [
                   <img src={closeIcon} width='40' height='40'alt='sluit uitgelicht scherm'/>
                 </button>
               </header>
-              <section onClick={!musicEvent.enlarged ? this.loadLongerText.bind(this, musicEventKey) : null} className={selectors.main}>
+              <section className={selectors.main}>
                 {shortTextHTML}
                 <div
                   className={selectors.mainContainerForEnlarged}
