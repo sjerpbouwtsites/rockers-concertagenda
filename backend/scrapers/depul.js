@@ -273,7 +273,7 @@ depulScraper.singlePage = async function ({ page, event }) {
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
   pageInfo.price = priceRes.price;  
 
-  const longTextRes = await longTextSocialsIframes(page)
+  const longTextRes = await longTextSocialsIframes(page, event, pageInfo)
   for (let i in longTextRes){
     pageInfo[i] = longTextRes[i]
   }
@@ -284,9 +284,9 @@ depulScraper.singlePage = async function ({ page, event }) {
 //#endregion                         SINGLE PAGE
 
 // #region [rgba(60, 0, 0, 0.5)]     LONG HTML
-async function longTextSocialsIframes(page){
+async function longTextSocialsIframes(page, event, pageInfo){
 
-  return await page.evaluate(()=>{
+  return await page.evaluate(({event})=>{
     const res = {}
 
     const textSelector = '#content-box';
@@ -297,8 +297,15 @@ async function longTextSocialsIframes(page){
       ".social-link[href*='facebook'][href*='events']"
     ].join(', ');
     const removeSelectors = [
-      "[class*='icon-']",
-      ".fa",
+      `${textSelector} [class*='icon-']`,
+      `${textSelector} [class*='fa-']`,
+      `${textSelector} .fa`,
+      `${textSelector} script`,
+      `${textSelector} noscript`,
+      `${textSelector} style`,
+      `${textSelector} meta`,
+      `${textSelector} svg`,
+      `${textSelector} form`,
       '.video-wrap',
       '.social-content',
       `${textSelector} img`,
@@ -310,15 +317,22 @@ async function longTextSocialsIframes(page){
     const removeHTMLWithStrings = [];
 
     // eerst onzin attributes wegslopen
-    const socAttrRemSelAdd = `${socialSelector ? `, ${socialSelector} *` : ''}`
-    document.querySelectorAll(`${textSelector} *${socAttrRemSelAdd}`)
-      .forEach(elToStrip => {
-        attributesToRemove.forEach(attr => {
-          if (elToStrip.hasAttribute(attr)){
-            elToStrip.removeAttribute(attr)
+    const socAttrRemSelAdd = `${
+      socialSelector.length ? `, ${socialSelector}` : ""
+    }`;
+    const mediaAttrRemSelAdd = `${
+      mediaSelector.length ? `, ${mediaSelector} *, ${mediaSelector}` : ""
+    }`;
+    const textSocEnMedia = `${textSelector} *${socAttrRemSelAdd}${mediaAttrRemSelAdd}`;      
+    document
+      .querySelectorAll(textSocEnMedia)
+      .forEach((elToStrip) => {
+        attributesToRemove.forEach((attr) => {
+          if (elToStrip.hasAttribute(attr)) {
+            elToStrip.removeAttribute(attr);
           }
-        })
-      })
+        });
+      });
 
     // media obj maken voordat HTML verdwijnt
     res.mediaForHTML = Array.from(document.querySelectorAll(mediaSelector))
@@ -339,22 +353,27 @@ async function longTextSocialsIframes(page){
     // socials obj maken voordat HTML verdwijnt
     res.socialsForHTML = !socialSelector ? '' : Array.from(document.querySelectorAll(socialSelector))
       .map(el => {
-        
-        el.querySelectorAll('i, svg, img').forEach(rm => rm.parentNode.removeChild(rm))
-
-        if (!el.textContent.trim().length){
-          if (el.href.includes('facebook')){
-            el.textContent = 'Facebook';
-          } else if(el.href.includes('twitter')) {
-            el.textContent = 'Tweet';
+        el.querySelectorAll("i, svg, img").forEach((rm) =>
+          rm.parentNode.removeChild(rm)
+        );
+        if (!el.textContent.trim().length) {
+          if (el.href.includes("facebook") || el.href.includes("fb.me")) {
+            if (el.href.includes('facebook.com/events')){
+              el.textContent = `FB event ${event.title}`;
+            } else{
+              el.textContent = `Facebook`;
+            }
+          } else if (el.href.includes("twitter")) {
+            el.textContent = "Tweet";
+          } else if (el.href.includes('instagram')) {
+            el.textContent = "Insta";
           } else {
-            el.textContent = 'Onbekende social';
+            el.textContent = "Social";
           }
         }
-
-        el.className = 'long-html__social-list-link'
-        el.target = '_blank';
-        return el.outerHTML
+        el.className = "long-html__social-list-link";
+        el.target = "_blank";
+        return el.outerHTML;
       })
 
     // stript HTML tbv text
@@ -380,7 +399,7 @@ async function longTextSocialsIframes(page){
       })
 
     // laatste attributen eruit.
-    document.querySelectorAll(`${textSelector} *`)
+    document.querySelectorAll(textSocEnMedia)
       .forEach(elToStrip => {
         attributesToRemoveSecondRound.forEach(attr => {
           if (elToStrip.hasAttribute(attr)){
@@ -393,10 +412,8 @@ async function longTextSocialsIframes(page){
     res.textForHTML = Array.from(document.querySelectorAll(textSelector))
       .map(el => el.innerHTML)
       .join('')
-
-
     return res;
-  })
+  },{event})
   
 }
 // #endregion                        LONG HTML

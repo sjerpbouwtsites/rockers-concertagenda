@@ -259,7 +259,7 @@ afasliveScraper.singlePage = async function ({ page, event }) {
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
   pageInfo.price = priceRes.price;
 
-  const longTextRes = await longTextSocialsIframes(page)
+  const longTextRes = await longTextSocialsIframes(page, event, pageInfo)
   for (let i in longTextRes){
     pageInfo[i] = longTextRes[i]
   }
@@ -269,15 +269,24 @@ afasliveScraper.singlePage = async function ({ page, event }) {
 //#endregion                         SINGLE PAGE
 
 // #region [rgba(60, 0, 0, 0.5)]     LONG HTML
-async function longTextSocialsIframes(page){
+async function longTextSocialsIframes(page, event, pageInfo){
 
-  return await page.evaluate(()=>{
+  return await page.evaluate(({event})=>{
     const res = {}
 
     const mediaSelector = '.video iframe, .spotify iframe';
     const textSelector = 'article .wysiwyg';
     const removeEmptyHTMLFrom = 'article .wysiwyg';
     const removeSelectors = [
+      `${textSelector} [class*='icon-']`,
+      `${textSelector} [class*='fa-']`,
+      `${textSelector} .fa`,
+      `${textSelector} script`,
+      `${textSelector} noscript`,
+      `${textSelector} style`,
+      `${textSelector} meta`,
+      `${textSelector} svg`,
+      `${textSelector} form`,      
       `${textSelector} img`,
     ]
     const socialSelector = [];
@@ -295,15 +304,22 @@ async function longTextSocialsIframes(page){
       })
 
     // eerst onzin attributes wegslopen
-    const socAttrRemSelAdd = `${socialSelector ? `, ${socialSelector} *` : ''}`
-    document.querySelectorAll(`${textSelector} *${socAttrRemSelAdd}`)
-      .forEach(elToStrip => {
-        attributesToRemove.forEach(attr => {
-          if (elToStrip.hasAttribute(attr)){
-            elToStrip.removeAttribute(attr)
+    const socAttrRemSelAdd = `${
+      socialSelector.length ? `, ${socialSelector}` : ""
+    }`;
+    const mediaAttrRemSelAdd = `${
+      mediaSelector.length ? `, ${mediaSelector} *, ${mediaSelector}` : ""
+    }`;
+    const textSocEnMedia = `${textSelector} *${socAttrRemSelAdd}${mediaAttrRemSelAdd}`;      
+    document
+      .querySelectorAll(textSocEnMedia)
+      .forEach((elToStrip) => {
+        attributesToRemove.forEach((attr) => {
+          if (elToStrip.hasAttribute(attr)) {
+            elToStrip.removeAttribute(attr);
           }
-        })
-      })        
+        });
+      });      
 
     // stript HTML tbv text
     removeSelectors.length && document.querySelectorAll(removeSelectors)
@@ -328,7 +344,7 @@ async function longTextSocialsIframes(page){
       })
 
     // laatste attributen eruit.
-    document.querySelectorAll(`${textSelector} *`)
+    document.querySelectorAll(textSocEnMedia)
       .forEach(elToStrip => {
         attributesToRemoveSecondRound.forEach(attr => {
           if (elToStrip.hasAttribute(attr)){
@@ -338,10 +354,10 @@ async function longTextSocialsIframes(page){
       })    
 
     res.textForHTML = Array.from(document.querySelectorAll(textSelector))
-      .map(el => el.innerHTML)
-      .join('')
+      .map((el) => el.innerHTML)
+      .join("");
     return res;
-  })
+  }, {event})
   
 }
 // #endregion                        LONG HTML
