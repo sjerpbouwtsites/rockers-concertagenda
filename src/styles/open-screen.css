@@ -23,7 +23,7 @@
 .open-screen__title,
 .open-screen__text {
   font-weight: 900;
-  color: #da2066;
+  color: var(--pink)
 }
 
 .open-screen__text {

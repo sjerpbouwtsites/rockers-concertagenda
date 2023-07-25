@@ -1,6 +1,6 @@
 
 .header-menu {
-  background-color: #0f110e;
+  background-color: var(--allmost-black-2);
   color: white;
   padding: 20px;
   padding-top: 0;
@@ -43,16 +43,14 @@
 }
 .app-title {
   margin-bottom: .5em;
-  color: #b3ff4d;
+  color: var(--green);
 }
 @media (max-width: 600px){
   .app-title {
   margin: 0;
   }
 }
-.app-text {
-  color: #ff9bf9
-}
+
 .app-title:first-child {
   margin: 0;
 }
@@ -68,12 +66,11 @@
 
 .navigation-block__list-item {
   list-style-type: none;
-  color: #ff9bf9
+  color: var(--pink)
 }
 
 .app-link-in-text {
-
-color: #b3ff4d;
+color: var(--green);
 font-weight: bold;
 text-decoration: none;
 }

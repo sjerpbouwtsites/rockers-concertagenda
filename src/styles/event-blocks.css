@@ -916,7 +916,7 @@ margin-top: 50px;
 
 .event-block__footer--enlarged {
   text-align: left;
-  background-color: #0a0707;
+  background-color: var(--allmost-black);
   margin-top: 0;
   margin-bottom: 0;
   padding: 40px 20px 80px 20px;
