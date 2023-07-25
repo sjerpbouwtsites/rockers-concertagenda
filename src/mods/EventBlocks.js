@@ -215,15 +215,18 @@ class EventBlocks extends React.Component {
 
   priceElement(musicEvent) {
     const price = 
-    musicEvent.soldOut ? 'Uitverkocht!' : 
-      musicEvent?.price 
-        ? `€ ${Number(musicEvent?.price)
-          .toFixed(2)
-          .toString()
-          .replace(".", ",")}`
-        : musicEvent?.origin === 'ticketmaster' 
-          ? `€?`
-          : 'Gratis'
+    musicEvent.soldOut 
+      ? 'Uitverkocht!' 
+      : musicEvent?.price === null
+        ? '€ ??'
+        : musicEvent?.price 
+          ? `€ ${Number(musicEvent?.price)
+            .toFixed(2)
+            .toString()
+            .replace(".", ",")}`
+          : musicEvent?.origin === 'ticketmaster' 
+            ? `€?`
+            : 'Gratis'
 
     const sharedModifiers = [
       musicEvent.soldOut ? "sold-out" : "",

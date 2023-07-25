@@ -58,18 +58,20 @@
 .event-block--short-title.event-block--tiny-title:not(.event-block--enlarged){
   flex-basis: calc(22%);
 }
-.event-block.event-block--random-style:not(.event-block--enlarged), 
-.event-block.event-block--random-style.event-block--short-title:not(.event-block--enlarged) {
-  flex-basis: calc(19%);
-  transform: rotate(1deg) scale(1.05)
-}
-.event-block.event-block--random-style-2.event-block.event-block--random-style:not(.event-block--enlarged), 
-.event-block.event-block--random-style-2.event-block--short-title.event-block.event-block--random-style:not(.event-block--enlarged) {
-  transform: rotate(-1deg) scale(1.05)
-}
-.event-block.event-block--random-style-3.event-block.event-block--random-style:not(.event-block--enlarged), 
-.event-block.event-block--random-style-3.event-block--short-title.event-block.event-block--random-style:not(.event-block--enlarged) {
-  transform: rotate(0.5deg) scale(1.025)
+@media (min-width: 1024px){
+  .event-block.event-block--random-style:not(.event-block--enlarged), 
+  .event-block.event-block--random-style.event-block--short-title:not(.event-block--enlarged) {
+    flex-basis: calc(19%);
+    transform: rotate(1deg) scale(1.05)
+  }
+  .event-block.event-block--random-style-2.event-block.event-block--random-style:not(.event-block--enlarged), 
+  .event-block.event-block--random-style-2.event-block--short-title.event-block.event-block--random-style:not(.event-block--enlarged) {
+    transform: rotate(-1deg) scale(1.05)
+  }
+  .event-block.event-block--random-style-3.event-block.event-block--random-style:not(.event-block--enlarged), 
+  .event-block.event-block--random-style-3.event-block--short-title.event-block.event-block--random-style:not(.event-block--enlarged) {
+    transform: rotate(0.5deg) scale(1.025)
+  }
 }
 
 .event-block:hover {
@@ -83,6 +85,9 @@
     width: 100%;
     min-width: initial;
     max-width: calc(100% - 2em);
+  }
+  .event-block--sold-out {
+    min-height: 100px;
   }
 }
 @media (min-width: 1024px){
@@ -156,7 +161,8 @@
 }
 
 .event-block__header--sold-out{
-  filter: brightness(50%)
+  filter: brightness(50%);
+  font-size:.66em;
 }
 .event-block__header--sold-out.event-block__header--enlarged{
   filter: brightness(100%);
@@ -413,6 +419,14 @@ right: -16px;
   background-color: var(--pink);
   min-width: 90px;
   line-height: 1.5em;
+}
+.event-block__price--sold-out{
+  padding: 0.33em 2em 0.33em 0.66em;
+}
+
+.event-block__price-link-wrapper--sold-out {
+  font-size: 1em;
+  padding: 1.5em 0.75em;
 }
 
 .event-block__price-link-wrapper--sold-out .ticketemoji {
@@ -949,6 +963,8 @@ margin-top: 50px;
 }
 .event-block__footer--sold-out{
   filter: brightness(0.5);
+  
+font-size: .66em;
 }
 .event-block__footer--enlarged {
   text-align: left;
