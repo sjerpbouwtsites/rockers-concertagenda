@@ -29,6 +29,24 @@ const dynamoScraper = new AbstractScraper(makeScraperConfig({
 dynamoScraper.listenToMasterThread();
 
 //#region [rgba(0, 120, 0, 0.3)]      RAW EVENT CHECK
+dynamoScraper.singleRawEventCheck = async function(event){
+
+  let workingTitle = this.cleanupEventTitle(event.title);
+
+  const isRefused = await this.rockRefuseListCheck(event, workingTitle)
+  if (isRefused.success) {
+    isRefused.success = false;
+    return isRefused;
+  }
+
+  return {
+    event,
+    workingTitle,
+    reason: isRefused.reason,
+    success: true
+  }
+
+}
 //#endregion                          RAW EVENT CHECK
 
 //#region [rgba(0, 180, 0, 0.3)]      SINGLE EVENT CHECK
@@ -36,41 +54,32 @@ dynamoScraper.singleMergedEventCheck = async function(event){
 
   let workingTitle = this.cleanupEventTitle(event.title);
 
-  const isRefused = await this.rockRefuseListCheck(event, workingTitle)
-  if (isRefused.success) return {
-    reason: isRefused.reason,
-    event,
-    success: false
-  };
-
   const isAllowed = await this.rockAllowListCheck(event, workingTitle)
   if (isAllowed.success) return isAllowed;
 
   const hasGoodTermsRes = await this.hasGoodTerms(event);
-  const hasForbiddenTermsRes = await this.hasForbiddenTerms(event);
-  if (hasForbiddenTermsRes.success) {
-    await this.saveRefusedTitle(workingTitle);
-    return {
-      event,
-      reason: hasForbiddenTermsRes.success,
-      success: false,
-    }
-  }
-  
   if (hasGoodTermsRes.success) {
-    await this.saveAllowedTitle(workingTitle);
+    this.saveAllowedTitle(workingTitle);
     return hasGoodTermsRes;
   } 
-
+  const hasForbiddenTermsRes = await this.hasForbiddenTerms(event);
+  if (hasForbiddenTermsRes.success) {
+    this.saveRefusedTitle(workingTitle);
+    hasForbiddenTermsRes.success = false;
+    return hasForbiddenTermsRes;
+    
+  }
+  
   const isRockRes = await this.isRock(event, [workingTitle]);
   if (isRockRes.success) {
-    await this.saveAllowedTitle(workingTitle);
+    this.saveAllowedTitle(workingTitle);
     return isRockRes;
   } 
-  await this.saveRefusedTitle(workingTitle);
+  this.saveRefusedTitle(workingTitle);
   
   return {
     event,
+    workingTitle,
     reason: isRockRes.reason,
     success: false
   }

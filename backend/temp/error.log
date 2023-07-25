@@ -1,4 +1,475 @@
 
+  paradiso-1 Error - 5:30:39 AM
+  TimeoutError: waiting for selector `.css-tkkldl` failed: timeout 20000ms exceeded
+    at new WaitTask (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:528:34)
+    at DOMWorld.waitForSelectorInPage (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:432:26)
+    at internalHandler.waitFor (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/QueryHandler.js:31:77)
+    at DOMWorld.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:323:29)
+    at Frame.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:942:51)
+    at Page.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:2359:33)
+    at paradisoScraper.singlePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/paradiso.js:157:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:644:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:236:5) 
+  waiting for selector `.css-tkkldl` failed: timeout 20000ms exceeded
+  
+  
+  paradiso-1 Error - 5:30:13 AM
+  TimeoutError: waiting for selector `.css-tkkldl` failed: timeout 20000ms exceeded
+    at new WaitTask (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:528:34)
+    at DOMWorld.waitForSelectorInPage (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:432:26)
+    at internalHandler.waitFor (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/QueryHandler.js:31:77)
+    at DOMWorld.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:323:29)
+    at Frame.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:942:51)
+    at Page.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:2359:33)
+    at paradisoScraper.singlePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/paradiso.js:157:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:644:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:236:5) 
+  waiting for selector `.css-tkkldl` failed: timeout 20000ms exceeded
+  
+  
+  paradiso-0 Error - 5:29:33 AM
+  TimeoutError: waiting for selector `.css-tkkldl` failed: timeout 20000ms exceeded
+    at new WaitTask (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:528:34)
+    at DOMWorld.waitForSelectorInPage (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:432:26)
+    at internalHandler.waitFor (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/QueryHandler.js:31:77)
+    at DOMWorld.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:323:29)
+    at Frame.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:942:51)
+    at Page.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:2359:33)
+    at paradisoScraper.singlePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/paradiso.js:157:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:644:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:236:5) 
+  waiting for selector `.css-tkkldl` failed: timeout 20000ms exceeded
+  
+  
+  effenaar-0 Error - 5:28:50 AM
+  Error: false
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:872:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:862:23)
+    at effenaarScraper.singlePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/effenaar.js:212:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:644:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:236:5) 
+  false
+  
+  
+  effenaar-1 Error - 5:28:32 AM
+  Error: false
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:872:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:862:23)
+    at effenaarScraper.singlePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/effenaar.js:212:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:644:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:236:5) 
+  false
+  
+  
+  effenaar-2 Error - 5:28:18 AM
+  Error: false
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:872:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:862:23)
+    at effenaarScraper.singlePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/effenaar.js:212:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:644:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:236:5) 
+  false
+  
+  
+  volt-0 Error - 5:27:57 AM
+  Error: false
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:872:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:862:23)
+    at voltScraper.singlePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/volt.js:236:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:644:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:236:5) 
+  false
+  
+  
+  volt-0 Error - 5:27:00 AM
+  Error: false
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:872:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:862:23)
+    at voltScraper.singlePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/volt.js:236:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:644:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:236:5) 
+  false
+  
+  
+  paradiso-0 Error - 5:23:31 AM
+  TimeoutError: waiting for selector `.css-tkkldl` failed: timeout 20000ms exceeded
+    at new WaitTask (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:528:34)
+    at DOMWorld.waitForSelectorInPage (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:432:26)
+    at internalHandler.waitFor (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/QueryHandler.js:31:77)
+    at DOMWorld.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:323:29)
+    at Frame.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/FrameManager.js:942:51)
+    at Page.waitForSelector (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/Page.js:2359:33)
+    at paradisoScraper.singlePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/paradiso.js:157:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:644:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:236:5) 
+  waiting for selector `.css-tkkldl` failed: timeout 20000ms exceeded
+  
+  
+  paradiso-0 Error - 5:19:55 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:331:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  paradiso-0 Error - 5:17:56 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of null (reading 'textContent')
+    at __puppeteer_evaluation_script__:2:77
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async paradisoScraper.mainPage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/paradiso.js:96:9)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:223:29) 
+  Evaluation failed: TypeError: Cannot read properties of null (reading 'textContent')
+    at __puppeteer_evaluation_script__:2:77
+  
+  
+  effenaar-0 Error - 5:02:00 AM
+  Error: false
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:872:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:862:23)
+    at effenaarScraper.singlePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/effenaar.js:212:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:644:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:236:5) 
+  false
+  
+  
+  effenaar-2 Error - 5:01:49 AM
+  Error: false
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:872:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:862:23)
+    at effenaarScraper.singlePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/effenaar.js:212:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:644:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:236:5) 
+  false
+  
+  
+  effenaar-1 Error - 5:01:47 AM
+  Error: false
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:872:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:862:23)
+    at effenaarScraper.singlePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/effenaar.js:212:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:644:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:236:5) 
+  false
+  
+  
+  depul-1 Error - 4:44:23 AM
+  TypeError: eventsList.map is not a function
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:609:42)
+    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:236:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  eventsList.map is not a function
+  
+  
+  depul-0 Error - 4:44:23 AM
+  TypeError: eventsList.map is not a function
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:609:42)
+    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:236:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  eventsList.map is not a function
+  
+  
+  depul-0 Error - 4:43:05 AM
+  TypeError: eventsList.map is not a function
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:605:42)
+    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:232:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  eventsList.map is not a function
+  
+  
+  depul-1 Error - 4:43:04 AM
+  TypeError: eventsList.map is not a function
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:605:42)
+    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:232:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  eventsList.map is not a function
+  
+  
+  depul-1 Error - 4:42:09 AM
+  TypeError: eventsList.map is not a function
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:605:42)
+    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:232:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  eventsList.map is not a function
+  
+  
+  depul-0 Error - 4:42:09 AM
+  TypeError: eventsList.map is not a function
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:605:42)
+    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:232:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  eventsList.map is not a function
+  
+  
+  depul-1 Error - 4:41:21 AM
+  TypeError: eventsList.map is not a function
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:605:42)
+    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:232:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  eventsList.map is not a function
+  
+  
+  depul-0 Error - 4:41:20 AM
+  TypeError: eventsList.map is not a function
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:605:42)
+    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:232:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  eventsList.map is not a function
+  
+  
+  depul-1 Error - 4:41:02 AM
+  TypeError: eventsList.map is not a function
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:605:42)
+    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:232:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  eventsList.map is not a function
+  
+  
+  depul-0 Error - 4:41:02 AM
+  TypeError: eventsList.map is not a function
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:605:42)
+    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:232:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  eventsList.map is not a function
+  
+  
+  depul-0 Error - 4:38:05 AM
+  TypeError: eventsList.map is not a function
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:605:42)
+    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:232:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  eventsList.map is not a function
+  
+  
+  depul-1 Error - 4:38:04 AM
+  TypeError: eventsList.map is not a function
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:605:42)
+    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:232:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  eventsList.map is not a function
+  
+  
+  dehelling-0 Error - 4:36:38 AM
+  TypeError: eventsList.map is not a function
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:605:42)
+    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:232:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  eventsList.map is not a function
+  
+  
+  dehelling-0 Error - 4:33:07 AM
+  TypeError: eventsList.map is not a function
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:605:42)
+    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:232:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  eventsList.map is not a function
+  
+  
+  dehelling-0 Error - 4:32:02 AM
+  TypeError: eventsList.map is not a function
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:605:42)
+    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:232:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  eventsList.map is not a function
+  
+  
+  dehelling-0 Error - 4:31:11 AM
+  TypeError: eventsList.map is not a function
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:605:42)
+    at AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:232:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  eventsList.map is not a function
+  
+  
+  baroeg-0 Error - 4:17:45 AM
+  TypeError: Cannot read properties of undefined (reading 'join')
+    at AbstractScraper.hasForbiddenTerms (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:994:63)
+    at baroegScraper.singleRawEventCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/baroeg.js:45:40)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.rawEventsAsyncCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:522:27)
+    at async AbstractScraper.announceAndCheck (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:496:12)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:227:27) 
+  Cannot read properties of undefined (reading 'join')
+  
+  
+  afaslive-0 Error - 4:16:00 AM
+  Error: false
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:868:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:858:23)
+    at afasliveScraper.singlePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/afaslive.js:264:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:640:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:232:5) 
+  false
+  
+  
+  afaslive-0 Error - 4:15:44 AM
+  Error: false
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:868:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:858:23)
+    at afasliveScraper.singlePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/afaslive.js:264:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:640:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:232:5) 
+  false
+  
+  
+  afaslive-0 Error - 4:15:43 AM
+  Error: false
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:868:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:858:23)
+    at afasliveScraper.singlePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/afaslive.js:264:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:640:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:232:5) 
+  false
+  
+  
+  afaslive-0 Error - 4:15:41 AM
+  Error: false
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:868:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:858:23)
+    at afasliveScraper.singlePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/afaslive.js:264:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:640:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:232:5) 
+  false
+  
+  
+  afaslive-0 Error - 4:15:40 AM
+  Error: false
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:868:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:858:23)
+    at afasliveScraper.singlePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/afaslive.js:264:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:640:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:232:5) 
+  false
+  
+  
+  afaslive-0 Error - 4:15:38 AM
+  Error: false
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:868:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:858:23)
+    at afasliveScraper.singlePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/afaslive.js:264:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:640:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:232:5) 
+  false
+  
+  
+  afaslive-0 Error - 4:15:37 AM
+  Error: false
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:868:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:858:23)
+    at afasliveScraper.singlePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/afaslive.js:264:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:640:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:232:5) 
+  false
+  
+  
+  afaslive-0 Error - 4:15:30 AM
+  Error: false
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:868:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:858:23)
+    at afasliveScraper.singlePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/afaslive.js:264:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:640:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:232:5) 
+  false
+  
+  
+  afaslive-0 Error - 4:15:16 AM
+  Error: false
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:868:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:858:23)
+    at afasliveScraper.singlePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/afaslive.js:264:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:640:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:232:5) 
+  false
+  
+  
+  afaslive-0 Error - 4:15:14 AM
+  Error: false
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:868:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:858:23)
+    at afasliveScraper.singlePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/afaslive.js:264:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:640:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:232:5) 
+  false
+  
+  
+  afaslive-0 Error - 4:15:14 AM
+  Error: false
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:868:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:858:23)
+    at afasliveScraper.singlePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/afaslive.js:264:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:640:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:232:5) 
+  false
+  
+  
+  afaslive-0 Error - 4:15:10 AM
+  Error: false
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:868:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:858:23)
+    at afasliveScraper.singlePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/afaslive.js:264:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:640:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:232:5) 
+  false
+  
+  
+  afaslive-0 Error - 4:15:10 AM
+  Error: false
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:868:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:858:23)
+    at afasliveScraper.singlePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/afaslive.js:264:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:640:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:232:5) 
+  false
+  
+  
   paradiso-0 Error - 1:22:08 AM
   TimeoutError: waiting for selector `.css-tkkldl` failed: timeout 20000ms exceeded
     at new WaitTask (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/DOMWorld.js:528:34)

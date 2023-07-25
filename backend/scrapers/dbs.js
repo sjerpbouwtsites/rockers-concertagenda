@@ -36,41 +36,38 @@ dbsScraper.listenToMasterThread();
 //#region [rgba(0, 180, 0, 0.3)]      SINGLE EVENT CHECK
 dbsScraper.singleMergedEventCheck = async function(event){
 
-  const tl = this.cleanupEventTitle(event.title);
+  const workingTitle = this.cleanupEventTitle(event.title);
 
-  const isRefused = await this.rockRefuseListCheck(event, tl)
+  const isRefused = await this.rockRefuseListCheck(event, workingTitle)
   if (isRefused.success) {
-    return {
-      reason: isRefused.reason,
-      event,
-      success: false
-    }
+    isRefused.success = false;
+    return isRefused
   }
 
-  const isAllowed = await this.rockAllowListCheck(event, tl)
+  const isAllowed = await this.rockAllowListCheck(event, workingTitle)
   if (isAllowed.success) {
     return isAllowed;  
   }
 
-  const hasForbiddenTermsRes = await this.hasForbiddenTerms(event)
-  if (hasForbiddenTermsRes.success) {
-    await this.saveRefusedTitle(tl)     
-    return {
-      event,
-      reason: hasForbiddenTermsRes.reason,
-      success: !hasForbiddenTermsRes
-    }
+  const hasForbiddenTerms = await this.hasForbiddenTerms(event)
+  if (hasForbiddenTerms.success) {
+    this.saveRefusedTitle(workingTitle)     
+    hasForbiddenTerms.success = false;
+    return hasForbiddenTerms;
   }
+
   const hasGoodTerms = await this.hasGoodTerms(event);
   if (hasGoodTerms.success) {
-    await this.saveAllowedTitle(tl)
+    this.saveAllowedTitle(workingTitle)
     return hasGoodTerms
   }
 
-  await this.saveAllowedTitle(tl)
+  this.saveAllowedTitle(workingTitle)
+  
   return {
+    workingTitle,
     event,
-    reason: 'niets gevonden in refused, allowed',
+    reason: [isRefused.reason, isAllowed.reason, hasForbiddenTerms.reason].join(';'),
     success: true
   }
 

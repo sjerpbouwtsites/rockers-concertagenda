@@ -31,44 +31,49 @@ const doornroosjeScraper = new AbstractScraper(makeScraperConfig({
 doornroosjeScraper.listenToMasterThread();
 
 //#region [rgba(0, 120, 0, 0.3)]      RAW EVENT CHECK
+doornroosjeScraper.singleRawEventCheck = async function (event) {
+  const workingTitle = this.cleanupEventTitle(event.title);
+  const isRefused = await this.rockRefuseListCheck(event, workingTitle)
+  if (isRefused.success) {
+    isRefused.success = false;
+    return isRefused
+    
+  }  
+
+  const isAllowed = await this.rockAllowListCheck(event, workingTitle)
+  if (isAllowed.success) {
+    return isAllowed;
+  }
+
+  return {
+    workingTitle,
+    reason: [isRefused.reason, isAllowed.reason].join(';'),
+    event,
+    success: true
+  }
+
+}
 //#endregion                          RAW EVENT CHECK
 
 //#region [rgba(0, 180, 0, 0.3)]      SINGLE EVENT CHECK
 doornroosjeScraper.singleMergedEventCheck = async function (event) {
-
-  const tl = this.cleanupEventTitle(event.title);
-
-  const isRefused = await this.rockRefuseListCheck(event, tl)
-  if (isRefused.success) {
-    return {
-      reason: isRefused.reason,
-      event,
-      success: false
-    }
-  }
-
-  const isAllowed = await this.rockAllowListCheck(event, tl)
-  if (isAllowed.success) {
-    return isAllowed;  
-  }
+  const workingTitle = this.cleanupEventTitle(event.title);
 
   const hasForbiddenTerms = await this.hasForbiddenTerms(event, ['longTextHTML', 'shortText', 'title'])
   if (hasForbiddenTerms.success){
-    await this.saveRefusedTitle(tl);
-    return {
-      reason: hasForbiddenTerms.reason,
-      event,
-      success: false
-    }
+    this.saveRefusedTitle(workingTitle);
+    hasForbiddenTerms.success = false;
+    return hasForbiddenTerms
   }
 
-  await this.saveAllowedTitle(tl);
+  this.saveAllowedTitle(workingTitle);
 
   return {
+    workingTitle,
+    reason: [hasForbiddenTerms.reason].join(';'),
     event,
-    success: true,
-    reason: "nothing found currently",
-  };
+    success: true
+  }
 };
 //#endregion                          SINGLE EVENT CHECK
 

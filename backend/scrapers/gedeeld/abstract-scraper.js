@@ -18,9 +18,9 @@ export default class AbstractScraper {
   completedMainPage = false
   workingOnSinglePages = false;
   rockAllowList = '';
-  rockRefuseList = '';  
-  hasSavedNewRockAllowed = false;
-  hasSavedNewRockRefused = false;
+  rockRefuseList = '';
+  rockAllowListNew = '';
+  rockRefuseListNew = '';  
 
   static unavailabiltyTerms = [
     'uitgesteld', 'verplaatst', 'locatie gewijzigd', 'besloten', 'afgelast', 'geannuleerd'
@@ -28,8 +28,8 @@ export default class AbstractScraper {
 
   //#region [rgba(0, 0, 30, 0.30)]                             DEBUGSETTINGS
   debugCorruptedUnavailable = false;
-  debugSingleMergedEventCheck = true;
-  debugRawEventAsyncCheck = true;
+  debugSingleMergedEventCheck = false;
+  debugRawEventAsyncCheck = false;
   debugBaseEvents = false;
   debugPageInfo = false;
   debugPrice = false;
@@ -227,6 +227,10 @@ export default class AbstractScraper {
     const checkedEvents = await this.announceAndCheck(baseMusicEvents).catch(
       this.handleOuterScrapeCatch
     );
+    this.dirtyLog({
+      title: 'checkedEvents',
+      checkedEvents
+    })
     this.completedMainPage = true;
     if (!checkedEvents) return false;
     await this.processSingleMusicEvent(checkedEvents).catch(
@@ -520,11 +524,11 @@ export default class AbstractScraper {
 
       const eventToCheck = generatedEvent.value;
       const checkResult = await this.singleRawEventCheck(eventToCheck);
-      let workingTitle= this.cleanupEventTitle(eventToCheck.title);
+      let workingTitle = checkResult.workingTitle || this.cleanupEventTitle(eventToCheck.title);
       if (checkResult.success) {
         useableEventsCheckedArray.push(eventToCheck);
 
-        if (this.debugRawEventAsyncCheck){
+        if (this.debugRawEventAsyncCheck && checkResult.reason){
           parentPort.postMessage(
             this.qwm.debugger(
               {
@@ -682,7 +686,7 @@ export default class AbstractScraper {
 
     const mergedEventCheckRes = await this.singleMergedEventCheck(singleEvent, pageInfo);
     if (mergedEventCheckRes.success) {
-      if (this.debugSingleMergedEventCheck) {
+      if (this.debugSingleMergedEventCheck && mergedEventCheckRes.reason) {
         this.dirtyDebug({
           title: 'Merged async check 👍',
           event: `<a class='single-event-check-notice single-event-check-notice--success' href='${mergedEventCheckRes.event.venueEventUrl}'>${mergedEventCheckRes.event.title}</a>`,
@@ -693,7 +697,7 @@ export default class AbstractScraper {
         ? singleEvent.register() // TODO hier lopen dingen echt dwars door elkaar. integreren in soort van singleMergedEventCheckBase en dan anderen reducen erop of weet ik veel wat een gehack vandaag
         : singleEvent.registerINVALID(this.workerData);
     } else {
-      if (this.debugSingleMergedEventCheck){
+      if (this.debugSingleMergedEventCheck && mergedEventCheckRes.reason){
         this.dirtyDebug({
           title: 'Merged async check 👎',        
           event: `<a class='single-event-check-notice single-event-check-notice--failure' href='${mergedEventCheckRes.event.venueEventUrl}'>${mergedEventCheckRes.event.title}</a>`,
@@ -927,22 +931,25 @@ export default class AbstractScraper {
     let combinedTextToCheck = '';
     for (let i = 0; i < keysToCheck2.length; i++){
       try {
-        combinedTextToCheck += event[keysToCheck2[i]].toLowerCase()
+        let v = event[keysToCheck2[i]];
+        if (v){
+          combinedTextToCheck += v.toLowerCase()
+        }
       } catch (error) {
         this.dirtyDebug({
           fout: `fout maken controle text met keys, key${keysToCheck2[i]}`,
           toDebug: {
-            event,
-            keysToCheck,
-            keysToCheck2
+            event
           }
         }, 'hasGoodTerms')        
       }
     }
 
     const hasGoodTerm = AbstractScraper.goodCategories.find(goodTerm=> combinedTextToCheck.includes(goodTerm))
+    const workingTitle = this.cleanupEventTitle(event.title);
     if (hasGoodTerm) {
       return {
+        workingTitle,
         event,
         success: true,
         reason: `Goed in `+keysToCheck2.join(''),
@@ -950,6 +957,7 @@ export default class AbstractScraper {
     }
     
     return {
+      workingTitle,
       event,
       success: false,
       reason: `Geen bevestiging gekregen uit ${keysToCheck2.join(';')} ${combinedTextToCheck}`,
@@ -967,93 +975,83 @@ export default class AbstractScraper {
    * @memberof AbstractScraper
    */
   async hasForbiddenTerms(event, keysToCheck){
+    const workingTitle = this.cleanupEventTitle(event.title);
     const keysToCheck2 = Array.isArray(keysToCheck) ? keysToCheck : ['title', 'shortText'];
     let combinedTextToCheck = '';
     for (let i = 0; i < keysToCheck2.length; i++){
-      combinedTextToCheck += event[keysToCheck2[i]] + ' ';
+      let v = event[keysToCheck2[i]];
+      if (v){
+        combinedTextToCheck += v + ' ';
+      }
     }
     combinedTextToCheck = combinedTextToCheck.toLowerCase();
     const hasForbiddenTerm = AbstractScraper.forbiddenTerms.find(forbiddenTerm=> combinedTextToCheck.includes(forbiddenTerm))
     if (hasForbiddenTerm) {
       return {
+        workingTitle,
         event,
         success: true,
-        reason: "verboden genres gevonden in title+shortText",
+        reason: `verboden genres gevonden in ${keysToCheck2.join('; ')}`,
       };
     }
     
     return {
+      workingTitle,
       event,
       success: false,
-      reason: "verboden genres niet gevonden.",
+      reason: `verboden genres niet gevonden in ${keysToCheck2.join('; ')}.`,
     };    
   }
 
-  async saveRefusedTitle(title){ // TODO is dit niet dubbel op cleanup?
-    let workingTitle = this.cleanupEventTitle(title)
-    this.rockRefuseList = `${workingTitle}\n${this.rockRefuseList}`;
-    this.hasSavedNewRockRefused = true;
-    // const curForbiddenList = fs.readFileSync(fsDirections.isRockRefuse, 'utf-8');
-    // if (!curForbiddenList.includes(workingTitle)) {
-    //   fs.writeFileSync(fsDirections.isRockRefuse, `${workingTitle}\n${curForbiddenList}`, 'utf-8')
-    // }
+  saveRefusedTitle(title){
+    this.rockRefuseList = `${title}\n${this.rockRefuseList}`;
+    this.rockRefuseListNew = `${title}\n${this.rockRefuseListNew}`;
   }
 
-  async saveAllowedTitle(title){
-    let workingTitle = this.cleanupEventTitle(title)
-    this.rockAllowList = `${workingTitle}\n${this.rockAllowList}`;    
-    this.hasSavedNewRockAllowed = true;
-    // const curAllowList = fs.readFileSync(fsDirections.isRockAllow, 'utf-8');
-    // if (!curAllowList.includes(workingTitle)) {
-    //   fs.writeFileSync(fsDirections.isRockAllow, `${workingTitle}\n${curAllowList}`, 'utf-8')
-    // }
+  saveAllowedTitle(title){
+    this.rockAllowList = `${title}\n${this.rockAllowList}`;    
+    this.rockAllowListNew = `${title}\n${this.rockAllowListNew}`;
   }
 
   async saveRockRefusedAllowedToFile(){
-    if (this.hasSavedNewRockAllowed){
-      fs.writeFileSync(fsDirections.isRockAllow, this.rockAllowList, 'utf-8')
+    if (this.rockAllowListNew){
+      const huiLijst = fs.readFileSync(fsDirections.isRockAllow, 'utf-8');
+      fs.writeFileSync(fsDirections.isRockAllow, `${this.rockAllowListNew}\n${huiLijst}`, 'utf-8')
     }
-    if (this.hasSavedNewRockRefused){
-      fs.writeFileSync(fsDirections.isRockRefuse, this.rockRefuseList, 'utf-8')
+    if (this.rockRefuseListNew){
+      const huiLijst = fs.readFileSync(fsDirections.isRockRefuse, 'utf-8');
+      fs.writeFileSync(fsDirections.isRockRefuse, `${this.rockRefuseListNew}\n${huiLijst}`, 'utf-8')
     }    
+    return true;
   }
 
   async rockAllowListCheck(event, title){
-    if(typeof event?.title !== 'string' || typeof title !== 'string'){
-      this.dirtyDebug(arguments);
-      throw new Error(`argument / argument type error rock allow list check`)
-    }
-    const tt = this.rockAllowList.includes(title);
+    let workingTitle = title || this.cleanupEventTitle(event.title);
+    const tt = this.rockAllowList.includes(workingTitle);
     return {
       event,
       success: tt,
-      reason: `${title} ${tt ? 'in' : 'NOT in'} allowed 🛴 list`,
+      workingTitle,
+      reason: `${workingTitle} ${tt ? 'in' : 'NOT in'} allowed 🛴 list`,
     };
   }
 
   async rockRefuseListCheck(event, title){
-    if(typeof event?.title !== 'string' || typeof title !== 'string'){
-      this.dirtyDebug(arguments);
-      throw new Error(`argument / argument type error rock refuse list check`)
-    }    
-    const tt = this.rockRefuseList.includes(title);
+    let workingTitle = title || this.cleanupEventTitle(event.title);
+    const tt = this.rockRefuseList.includes(workingTitle);
     return {
       event,
       success: tt,
-      reason: `${title} ${tt ? 'in' : 'NOT in'} refuse 🚮 list`,
+      workingTitle,
+      reason: `${workingTitle} ${tt ? 'in' : 'NOT in'} refuse 🚮 list`,
     };
   }
 
   async metalEncyclopedia(event, title){
-    if(typeof event?.title !== 'string' || typeof title !== 'string'){
-      this.dirtyDebug(arguments);
-      throw new Error(`argument / argument type error metal encyclopedia check`)
-    }
 
-    let workingTitle = this.cleanupEventTitle(title)
+    let workingTitle = title || this.cleanupEventTitle(event.title);
 
     const MetalEncFriendlyTitle = workingTitle.replace(/\s/g, "_");
-    this.dirtyTalk(`${workingTitle} asks https://www.metal-archives.com/search/ajax-band-search/?field=name&query=${MetalEncFriendlyTitle}`)
     const metalEncUrl = `https://www.metal-archives.com/search/ajax-band-search/?field=name&query=${MetalEncFriendlyTitle}`;
     const foundInMetalEncyclopedia = await fetch(metalEncUrl)
       .then((result) => result.json())
@@ -1084,6 +1082,7 @@ export default class AbstractScraper {
           event,
           success: false,
           url: metalEncUrl,
+          workingTitle,
           reason: metalEncError.message
         };
       });
@@ -1091,6 +1090,7 @@ export default class AbstractScraper {
       return {
         event,
         success: true,
+        workingTitle,
         url: metalEncUrl,
         reason: `found in <a class='single-event-check-reason metal-encyclopedie metal-encyclopedie--success' href='${metalEncUrl}'>metal encyclopedia</a>`
       };
@@ -1098,17 +1098,15 @@ export default class AbstractScraper {
     return {
       success: false,
       url: metalEncUrl,
+      workingTitle,
       reason: 'no result metal enc',
       event
     };
   }
 
   async wikipedia(event, title){
-    if(typeof event?.title !== 'string' || typeof title !== 'string'){
-      this.dirtyDebug(arguments);
-      throw new Error(`argument / argument type error wikipedia list check`)
-    }    
-    let workingTitle = this.cleanupEventTitle(title)
+
+    let workingTitle = title || this.cleanupEventTitle(event.title);
 
     const page = await this.browser.newPage();
     let wikiPage
@@ -1142,6 +1140,7 @@ export default class AbstractScraper {
       if (!searchPage) {
         return {
           event,
+          workingTitle,
           reason: 'wiki page not found, als no search page',
           success: false,
         }
@@ -1154,6 +1153,7 @@ export default class AbstractScraper {
       if (!matchingResults || !Array.isArray(matchingResults) || !matchingResults.length) {
         return {
           event,
+          workingTitle,
           reason: 'Not found title of event on wiki search page',
           success: false,
         }
@@ -1179,6 +1179,7 @@ export default class AbstractScraper {
     if (wikiRockt) {
       return {
         event,
+        workingTitle,
         success: true,
         url: wikiPage,
         reason: `found on <a class='single-event-check-reason wikipedia wikipedia--success' href='${wikiPage}'>wikipedia</a>`
@@ -1187,6 +1188,7 @@ export default class AbstractScraper {
     !page.isClosed() && page.close();
     return {
       event,
+      workingTitle,
       success: false,
       reason: `wiki catch return`      
     }
@@ -1227,6 +1229,7 @@ export default class AbstractScraper {
 
     return {
       event,
+      workingTitle,
       success: false,
       reason: `<a class='single-event-check-reason wikipedia wikipedia--failure metal-encyclopedie metal-encyclopedie--failure' href='${wikipediaRes.url}'>wikipedia</a> + <a href='${metalEncyclopediaRes.url}'>metal encyclopedia</a> 👎`};
   }

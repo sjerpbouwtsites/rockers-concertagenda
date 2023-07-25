@@ -31,11 +31,10 @@ tivoliVredenburgScraper.singleRawEventCheck = async function (event) {
   const workingTitle = this.cleanupEventTitle(event.title);
 
   const isRefused = await this.rockRefuseListCheck(event, workingTitle)
-  if (isRefused.success) return {
-    reason: isRefused.reason,
-    event,
-    success: false
-  };
+  if (isRefused.success) {
+    isRefused.success = false;
+    return isRefused;
+  }
 
   const isAllowed = await this.rockAllowListCheck(event, workingTitle)
   if (isAllowed.success) {
@@ -44,25 +43,22 @@ tivoliVredenburgScraper.singleRawEventCheck = async function (event) {
 
   const hasForbiddenTerms = await this.hasForbiddenTerms(event);
   if (hasForbiddenTerms.success) {
-    await this.saveRefusedTitle(workingTitle)
-    return {
-      reason: hasForbiddenTerms.reason,
-      success: false,
-      event
-    }
+    this.saveRefusedTitle(workingTitle)
+    hasForbiddenTerms.success = false;
+    return hasForbiddenTerms
   }
 
   const hasGoodTermsRes = await this.hasGoodTerms(event);
   if (hasGoodTermsRes.success) {
-    await this.saveAllowedTitle(workingTitle)
+    this.saveAllowedTitle(workingTitle)
     return hasGoodTermsRes;
   }
 
   const isRockRes = await this.isRock(event, [workingTitle]);
   if (isRockRes.success){
-    await this.saveAllowedTitle(workingTitle)
+    this.saveAllowedTitle(workingTitle)
   } else {
-    await this.saveRefusedTitle(workingTitle)
+    this.saveRefusedTitle(workingTitle)
   }
   return isRockRes;
   

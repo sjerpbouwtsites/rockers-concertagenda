@@ -31,33 +31,27 @@ occiiScraper.listenToMasterThread();
 
 //#region [rgba(0, 120, 0, 0.3)]      RAW EVENT CHECK
 occiiScraper.singleRawEventCheck = async function(event){
-  const tl = this.cleanupEventTitle(event.title);
-  const isRefused = await this.rockRefuseListCheck(event, tl)
+  const workingTitle = this.cleanupEventTitle(event.title);
+
+  const isRefused = await this.rockRefuseListCheck(event, workingTitle)
   if (isRefused.success) {
-    return {
-      reason: isRefused.reason,
-      event,
-      success: false
-    };
+    isRefused.success = false;
+    return isRefused;
   } 
 
-  const isAllowed = await this.rockAllowListCheck(event, tl)
+  const isAllowed = await this.rockAllowListCheck(event, workingTitle)
   if (isAllowed.success) return isAllowed;
 
   const hasForbiddenTerms = await this.hasForbiddenTerms(event);
   if (hasForbiddenTerms.success) {
-    await this.saveRefusedTitle(tl)
-    return {
-      reason: hasForbiddenTerms.reason,
-      success: false,
-      event
-    }
+    this.saveRefusedTitle(workingTitle)
+    hasForbiddenTerms.success = false;
+    return hasForbiddenTerms
   }
 
-  await this.saveAllowedTitle(tl)
-
   return {
-    reason: 'occii rules',
+    workingTitle,
+    reason: ['occii rules', hasForbiddenTerms.reason],
     success: true,
     event
   }  
@@ -67,18 +61,7 @@ occiiScraper.singleRawEventCheck = async function(event){
 //#region [rgba(0, 180, 0, 0.3)]      SINGLE EVENT CHECK
 occiiScraper.singleMergedEventCheck = async function(event, pageInfo){
   const workingTitle = this.cleanupEventTitle(event.title)
-  const isRefused = await this.rockRefuseListCheck(event, workingTitle)
-  if (isRefused.success) {
-    return {
-      reason: isRefused.reason,
-      event,
-      success: false
-    }
-  }
-  const isAllowed = await this.rockAllowListCheck(event, workingTitle)
-  if (isAllowed.success) {
-    return isAllowed;  
-  }  
+
   const ss = !(pageInfo?.genres?.include('electronic') ?? false);
   if (ss) {
     this.saveAllowedTitle(workingTitle)
@@ -86,7 +69,8 @@ occiiScraper.singleMergedEventCheck = async function(event, pageInfo){
     this.saveRefusedTitle(workingTitle)
   }
   return {
-    reason: 'ja genre controle' +ss,
+    workingTitle,
+    reason: 'ja genre controle ' +ss,
     success: ss,
     event
   };

@@ -95,8 +95,13 @@ class EventBlocks extends React.Component {
     }, 100)
   }
 
-  async sluitEnlarged(){
-    console.log('sluit enlarged');
+  async sluitEnlarged(e = null){
+    if (e){
+      e.stopPropagation();
+      e.nativeEvent.stopImmediatePropagation();
+    }
+    // document.querySelectorAll('.void-container-for-enlarged--enlarged')
+    //   .forEach(voidEl=>voidEl.innerHTML = '')
     let nieuweEventsState = this.state.musicEvents.map(event => {
       event.enlarged = false;
       return event;
@@ -116,6 +121,7 @@ class EventBlocks extends React.Component {
       el.setAttribute('data-was-enlarged', true);
       el.removeAttribute('style')
     })
+
     if (document.querySelector('.event-block[style]')){
       await this.waitFor(10);
       return this.recursieveStijlEraf()
@@ -129,18 +135,23 @@ class EventBlocks extends React.Component {
     
   }
 
-  hideSoldOut(){
+  hideSoldOut(e){
+    e.stopPropagation();
+    e.nativeEvent.stopImmediatePropagation();
     this.setState({ filterHideSoldOut: true });
   }
 
-  async loadLongerText(musicEventKey) {
+  async loadLongerText(musicEventKey, e) {
+    e.stopPropagation();
+    e.nativeEvent.stopImmediatePropagation();
 
-
-    const isMomenteelEnlarged = !!this.someEventIsEnlarged(this.state.musicEvents);
+    const isMomenteelEnlargedEl = this.someEventIsEnlarged(this.state.musicEvents);
+    const isMomenteelEnlarged = !!isMomenteelEnlargedEl
     await this.sluitEnlarged();
-    //document.querySelectorAll('.event-block[style]').forEach(el => el.removeAttribute('style'))
+    
     const thisEvent = this.state.musicEvents[musicEventKey];
     const thisElement = document.getElementById(`event-id-${musicEventKey}`);
+
     let readyToLoad = false;
     // alles ontlargen.
     
@@ -481,10 +492,11 @@ ${BEMify(`event-block`, [
               key={musicEventKey}
               data-date={musicEvent.eventMonth}
               className={selectors.article}
+              onClick={!musicEvent.enlarged ? this.loadLongerText.bind(this, musicEventKey) : null}
             >
               {firstOfMonthBlock}
               {imageHTML}
-              <header onClick={!musicEvent.enlarged ? this.loadLongerText.bind(this, musicEventKey) : null} className={selectors.header}>
+              <header className={selectors.header}>
                 <h2 className={selectors.headerH2}>
                   <span className={selectors.headerEventTitle} data-short-text={shortestText}>
                     {musicEvent.title}
@@ -502,12 +514,12 @@ ${BEMify(`event-block`, [
                   <img src={closeIcon} width='40' height='40'alt='sluit uitgelicht scherm'/>
                 </button>
               </header>
-              <section onClick={!musicEvent.enlarged ? this.loadLongerText.bind(this, musicEventKey) : null} className={selectors.main}>
+              <section className={selectors.main}>
                 {shortTextHTML}
                 <div
                   className={selectors.mainContainerForEnlarged}
                   dangerouslySetInnerHTML={{
-                    __html: musicEvent.longTextHTML,
+                    __html: musicEvent.enlarged ? musicEvent.longTextHTML : '',
                   }}
                 ></div>
                 <footer className={selectors.footer}>
