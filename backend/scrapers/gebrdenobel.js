@@ -274,19 +274,14 @@ gebrdenobelScraper.singlePage = async function ({ page, event }) {
           .parentNode.removeChild(document.querySelector("#shop-frame"));
       }
 
-      
-      res.image = document.querySelector(".hero img")?.src ?? null;
-      if (!res.image) {
-        res.errors.push({
-          remarks: `image missing ${res.pageInfo}`,
-        });
-      }
-      
-
       return res;
     },
     { months: this.months, event }
   );
+
+  const imageRes = await this.getImage({page, event, pageInfo, selectors: [".hero img"], mode: 'image-src' })
+  pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
+  pageInfo.image = imageRes.image;  
 
   const priceRes = await this.getPriceFromHTML({page, event, pageInfo, selectors: [".event-table"], });
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);

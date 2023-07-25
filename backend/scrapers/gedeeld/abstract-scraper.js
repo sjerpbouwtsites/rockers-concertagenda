@@ -1469,6 +1469,86 @@ export default class AbstractScraper {
   }
   //#endregion                                                 LONG HTML
 
+  //#region [rgba(180, 0, 180, 0.30)]                          IMAGE    
+  async getImage({page, event, pageInfo, selectors, mode}){
+    
+    const res = {
+      errors: []
+    }
+    const title = event?.title ? event?.title : pageInfo.title 
+    const pi = pageInfo?.pageInfo ? pageInfo?.pageInfo : event?.pageInfo
+    let image = null
+    let selectorsCopy = [...selectors];
+    if (mode === 'image-src'){
+      while (!image && selectorsCopy.length > 0){
+        const selector = selectorsCopy.shift();
+        image = await page.evaluate(({selector})=>{
+          const el = document.querySelector(selector);
+          let src = null;
+          if (!el?.src && el?.hasAttribute('data-src')) {
+            src = el.getAttribute('data-src');
+          } else if (!el?.src && el?.hasAttribute('srcset')){
+            src = el.getAttribute('srcset').split(/\s/)[0];
+          } else {
+            src = el?.src ?? null
+          }
+
+          if (!src.includes('https')){
+            src = document.location.protocol + '//' + document.location.hostname + src
+          }
+          
+          return src;
+        }, {selector})
+      }
+    } else if (mode === 'background-src'){
+      while (!image && selectorsCopy.length > 0){
+        const selector = selectorsCopy.shift();
+        image = await page.evaluate(({selector})=>{
+          const mmm = document.querySelector(selector)?.style.backgroundImage.match(/https.*.jpg|https.*.jpeg|https.*.png|https.*.webp/) ?? null;
+          if (!Array.isArray(mmm)) return null;
+          let src= mmm[0]
+          if (!src.includes('https')){
+            src = document.location.protocol + '//' + document.location.hostname + src
+          }
+          return src;
+        }, {selector})
+      }
+    } else if (mode === 'weird-attr'){
+      while (!image && selectorsCopy.length > 0){
+        const selector = selectorsCopy.shift();
+        image = await page.evaluate(({selector})=>{
+          const el = document.querySelector(selector);
+          let src = null;
+          if (!el?.href && el?.hasAttribute('content')) {
+            src = el.getAttribute('content');
+          } else {
+            src = el?.href ?? null
+          }
+
+          if (!src.includes('https')){
+            src = document.location.protocol + '//' + document.location.hostname + src
+          }
+          
+          return src;
+        }, {selector})
+      }
+    }
+
+    this.dirtyDebug({
+      title,
+      image 
+    })
+    if (!image){
+      res.errors.push({
+        remarks: `image missing ${pi}`
+      })
+    }
+    res.image = image;
+    return res;
+
+  }
+  //#endregion                                                 IMAGE
+
 
   // step 4
   async announceToMonitorDone() {

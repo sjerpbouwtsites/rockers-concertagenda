@@ -332,22 +332,14 @@ idunaScraper.singlePage = async function ({ page, event }) {
         return res;
       }
 
-      const imageMatch = document
-        .getElementById("photoandinfo")
-        .innerHTML.match(/url\('(.*)'\)/);
-      if (imageMatch && Array.isArray(imageMatch) && imageMatch.length === 2) {
-        res.image = imageMatch[1];
-      }
-      if (!res.image){
-        res.errors.push({
-          remarks: `image missing ${res.pageInfo}`
-        })
-      }      
-
       return res;
     },
     { months: this.months, event }
   );
+
+  const imageRes = await this.getImage({page, event, pageInfo, selectors: ["#photoandinfo [style*='background']"], mode: 'background-src' })
+  pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
+  pageInfo.image = imageRes.image;  
 
   const priceRes = await this.getPriceFromHTML({page, event, pageInfo, selectors: ["#sideinfo"], });
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);

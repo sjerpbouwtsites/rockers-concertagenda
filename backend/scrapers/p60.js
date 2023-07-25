@@ -161,28 +161,18 @@ p60Scraper.singlePage = async function ({ page, event }) {
         pageInfo: `<a class='page-info' href='${location.href}'>${document.title}</a>`,
         errors: [],
       };
-      const imageMatch = Array.from(document.querySelectorAll('style')).map(styleEl => styleEl.innerHTML).join(`\n`).match(/topbanner.*background-image.*(https.*\.\w{3,4})/)
-      if (imageMatch){
-        res.image = imageMatch[1]
-      }
-      if (!res.image){
-        res.errors.push({
-          remarks: `image missing ${res.pageInfo}`,
-          toDebug: {
-            styles: Array.from(document.querySelectorAll('style')).map(styleEl => styleEl.innerHTML),
-            match: imageMatch
-          }
-        })
-      } 
 
       return res;
     }, null
   );
 
+  const imageRes = await this.getImage({page, event, pageInfo, selectors: ["[property='og:image']"], mode: 'weird-attr' })
+  pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
+  pageInfo.image = imageRes.image;  
+
   const priceRes = await this.getPriceFromHTML({page, event, pageInfo, selectors: ['.event-info__price', '.content-section__event-info'], });
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
   pageInfo.price = priceRes.price;  
-
 
   const longTextRes = await longTextSocialsIframes(page)
   for (let i in longTextRes){

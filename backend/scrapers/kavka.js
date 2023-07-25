@@ -219,28 +219,6 @@ kavkaScraper.singlePage = async function ({ page, event }) {
       errors: [],
     };
     try {
-      const imageEl =
-        document.querySelector('div.desktop img[src*="kavka.be/wp-content"]') ??
-        null;
-      if (imageEl) { //TODO kan gewoon met selectors
-        if (imageEl.hasAttribute("data-lazy-src")) {
-          res.image = imageEl.getAttribute("data-lazy-src");
-        } else if (imageEl.hasAttribute("src")) {
-          res.image = imageEl.getAttribute("src");
-        }
-      }
-
-      if (!res.image) {
-        res.image =
-          document.querySelector('img[src*="kavka.be/wp-content"]')?.src ?? "";
-      }
-
-      if (!res.image){
-        res.errors.push({
-          remarks: `image missing ${res.pageInfo}`
-        })
-      }
-
 
       return res;
     } catch (caughtError) {
@@ -251,6 +229,10 @@ kavkaScraper.singlePage = async function ({ page, event }) {
       });
     }
   }, {event});
+
+  const imageRes = await this.getImage({page, event, pageInfo, selectors: ['div.desktop img[src*="kavka.be/wp-content"]', 'img[src*="kavka.be/wp-content"]'], mode: 'image-src' })
+  pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
+  pageInfo.image = imageRes.image;
 
   const priceRes = await this.getPriceFromHTML({page, event, pageInfo, selectors: [".prijzen"], });
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);

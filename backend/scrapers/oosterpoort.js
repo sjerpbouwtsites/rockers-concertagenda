@@ -162,13 +162,6 @@ oostpoortScraper.singlePage = async function ({ page, event }) {
         pageInfo: `<a class='page-info' href='${location.href}'>${document.title}</a>`,
         errors: [],
       };
-
-      res.image = document.querySelector('.hero__image')?.src ?? document.querySelector('.festival__header__image')?.src ?? null;
-      if (!res.image){
-        res.errors.push({
-          remarks: `image missing ${res.pageInfo}`
-        })
-      }
        
       try {
         if (document.querySelector('.event__cta') && document.querySelector('.event__cta').hasAttribute('disabled')) {
@@ -197,10 +190,13 @@ oostpoortScraper.singlePage = async function ({ page, event }) {
     }))
   });
 
+  const imageRes = await this.getImage({page, event, pageInfo, selectors: ['.hero__image', '.festival__header__image'], mode: 'image-src' })
+  pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
+  pageInfo.image = imageRes.image;
+
   const priceRes = await this.getPriceFromHTML({page, event, pageInfo, selectors: ['.event__pricing__costs', '.festival__tickets__toggle'], });
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
   pageInfo.price = priceRes.price;  
-
 
   const longTextRes = await longTextSocialsIframes(page)
   for (let i in longTextRes){

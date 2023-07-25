@@ -169,13 +169,6 @@ doornroosjeScraper.singlePage = async function ({ page, event }) {
         pageInfo: `<a class='page-info' href='${event.venueEventUrl}'>${event.title}</a>`,
         errors: [],
       };
-      res.image =
-        document.querySelector(".c-header-event__image img")?.src ?? null;
-      if (!res.image){
-        res.errors.push({
-          remarks: `image missing ${res.pageInfo}`
-        })
-      }
 
       // genre verwijderen en naar shorttext
       res.shortText = (event?.shortText ? event.shortText : '') + 
@@ -276,13 +269,6 @@ doornroosjeScraper.singlePage = async function ({ page, event }) {
           return res;
         }
       }
-      res.image =
-        document.querySelector(".c-festival-header__logo img")?.src ?? null;
-      if (!res.image){
-        res.errors.push({
-          remarks: `image missing ${res.pageInfo}`
-        })
-      }
 
       res.priceTextcontent = 
         document.querySelector(".b-festival-content__container")?.textContent.trim() ?? '';
@@ -305,6 +291,10 @@ doornroosjeScraper.singlePage = async function ({ page, event }) {
       return res;
     }, {event});
   }
+
+  const imageRes = await this.getImage({page, event, pageInfo, selectors: [".c-header-event__image img", "#home img"], mode: 'image-src' })
+  pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
+  pageInfo.image = imageRes.image;  
 
   const priceRes = await this.getPriceFromHTML({page, event, pageInfo, selectors: [".c-btn__price", ".c-intro__col"], });
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);

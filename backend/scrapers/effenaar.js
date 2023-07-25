@@ -131,12 +131,6 @@ effenaarScraper.singlePage = async function ({ page, event }) {
       pageInfo: `<a class='page-info' href='${location.href}'>${event.title}</a>`,
       errors: [],
     };
-    res.image = document.querySelector(".header-image img")?.src ?? null;
-    if (!res.image){
-      res.errors.push({
-        remarks: `image missing ${res.pageInfo}`
-      })
-    }  
     
     const dateText =
         document.querySelector(".header-meta-date")?.textContent.trim() ?? "";
@@ -199,6 +193,10 @@ effenaarScraper.singlePage = async function ({ page, event }) {
 
     return res;
   },{ months: this.months,event});
+
+  const imageRes = await this.getImage({page, event, pageInfo, selectors: [".header-image img"], mode: 'image-src' })
+  pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
+  pageInfo.image = imageRes.image;  
 
   const priceRes = await this.getPriceFromHTML({page, event, pageInfo, selectors: [".tickets-btn", ".tickets-dropdown"], });
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);

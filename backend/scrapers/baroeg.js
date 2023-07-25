@@ -108,15 +108,7 @@ baroegScraper.mainPage = async function () {
         
         res.shortText = eventEl.querySelector('.wp_theatre_prod_excerpt')?.textContent.trim() ?? null;
         res.shortText += categorieTeksten;
-        res.image = eventEl.querySelector('.media .attachment-thumbnail')?.src ?? '';
-        if (!res.image){
-          res.errors.push({
-            remarks: `geen image ${res.pageInfo}`,
-            toDebug: {
-              srcWaarinGezocht: eventEl.querySelector('.media .attachment-thumbnail')?.src
-            }
-          })
-        }
+                
         res.venueEventUrl =venueEventUrl;
         
         res.startDate = eventEl.querySelector('.wp_theatre_event_startdate')?.textContent.trim().substring(3,26).split('/').reverse() ?? null;
@@ -186,6 +178,10 @@ baroegScraper.singlePage = async function ({ page, event }) {
     }, {event}
     
   );
+
+  const imageRes = await this.getImage({page, event, pageInfo, selectors: [".hero-area [style*='background-image']"], mode: 'background-src' })
+  pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
+  pageInfo.image = imageRes.image;
 
   const priceRes = await this.getPriceFromHTML({page, event, pageInfo, selectors: [".wp_theatre_event_tickets"], });
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);

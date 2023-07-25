@@ -157,17 +157,13 @@ melkwegScraper.singlePage = async function ({ page, event }) {
       });
     }
 
-    res.image =
-      document.querySelector('[class*="styles_event-header__figure"] img')
-        ?.src ?? null;
-    if (!res.image){
-      res.errors.push({
-        remarks: `image missing ${res.pageInfo}`
-      })
-    }
-
     return res;
   }, {event});
+
+  const imageRes = await this.getImage({page, event, pageInfo, selectors: ['[class*="styles_event-header__figure"] img'], mode: 'image-src' })
+  pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
+  pageInfo.image = imageRes.image;    
+
 
   const priceRes = await this.getPriceFromHTML({page, event, pageInfo, selectors: ['[class*="styles_ticket-prices"]'], });
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);

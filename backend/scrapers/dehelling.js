@@ -108,12 +108,7 @@ dehellingScraper.mainPage = async function () {
         } catch (caughtError) {
           res.errors.push({error: caughtError, remarks: `end date time datestring omzetting ${title} ${res.pageInfo}`,toDebug:res})        
         }
-        res.image = schemaData?.image ?? null;
-        if (!res.image){
-          res.errors.push({
-            remarks: `image missing ${res.pageInfo}`
-          })
-        }
+
         let startString;
         try {
           const metaEl = eventEl.querySelector('.c-event-card__meta') ?? null;
@@ -185,10 +180,13 @@ dehellingScraper.singlePage = async function ({ page,event }) {
     {event}
   );
 
+  const imageRes = await this.getImage({page, event, pageInfo, selectors: [".img--cover img", ".u-section__inner img"], mode: 'image-src' })
+  pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
+  pageInfo.image = imageRes.image;
+
   const priceRes = await this.getPriceFromHTML({page, event, pageInfo, selectors: ['.c-event-meta__table'], });
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
   pageInfo.price = priceRes.price;  
-
 
   const longTextRes = await longTextSocialsIframes(page)
   for (let i in longTextRes){

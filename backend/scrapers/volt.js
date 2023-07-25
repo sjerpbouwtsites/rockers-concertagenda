@@ -114,13 +114,8 @@ voltScraper.mainPage = async function () {
           title
         };        
         res.venueEventUrl = anchor.hasAttribute("href") ? anchor.href : null;
-        res.image = rawEvent.querySelector(".card-activity__image img")?.src ?? null;
         res.shortText = rawEvent.querySelector('.card-activity__image-badges')?.textContent ?? null;
-        if (!res.image){
-          res.errors.push({
-            remarks: `image missing ${res.pageInfo}`
-          })
-        }        
+    
         const uaRex = new RegExp(unavailabiltyTerms.join("|"), 'gi');
         res.unavailable = !!rawEvent.textContent.match(uaRex);
         res.soldOut = rawEvent?.textContent.match(/uitverkocht|sold\s?out/i) ?? false;
@@ -223,6 +218,10 @@ voltScraper.singlePage = async function ({ page, url, event}) {
     },
     { months: this.months, url, event}
   );
+
+  const imageRes = await this.getImage({page, event, pageInfo, selectors: ['.image-container img'], mode: 'image-src' })
+  pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
+  pageInfo.image = imageRes.image; 
 
   const priceRes = await this.getPriceFromHTML({page, event, pageInfo, selectors: [".activity-price"], });
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
