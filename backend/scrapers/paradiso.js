@@ -204,26 +204,6 @@ paradisoScraper.singlePage = async function ({ page, event }) {
     october: "10",
   }
 
-  // const waitToCreateIframe = await page.evaluate(()=>{
-  //   if (document.querySelector('.chakra-button.css-1svws0x')){
-  //     document.querySelectorAll('.chakra-button.css-1svws0x').forEach(btn=>btn.click())
-  //     return true
-  //   }
-  //   return false
-  // })
-  // if (waitToCreateIframe){
-  //   try {
-  //     await page.waitForSelector('iframe[src*="youtube"]', {
-  //       timeout: 5000
-  //     })
-  //   } catch (wachtOpIframeError) {
-  //     buitenRes.errors.push({
-  //       error: wachtOpIframeError,
-  //       remarks: `Paradiso wacht op iframe na klik\n${buitenRes.pageInfo}`,
-  //     })            
-  //   }
-  // }
-
   await _t.waitFor(500);
 
   const pageInfo = await page.evaluate(
