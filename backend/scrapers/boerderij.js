@@ -104,17 +104,12 @@ boerderijScraper.mainPage = async function () {
   for (let i =0; i < rawEvents.length; i++){
     const imageCrypto = crypto.randomUUID();
     const imagePath = `${this.eventImagesFolder}/boerderij/${imageCrypto}`;
-    this.dirtyDebug({
-      title: rawEvents[i].title,
-      image: rawEvents[i].image,
-      path: imagePath,
-    })
     await this.downloadImageCompress(rawEvents[i], rawEvents[i].image, imagePath)
     await waitFor(100);
     rawEvents[i].image = imagePath;
   }
 
-  //this.saveBaseEventlist(workerData.family, rawEvents)
+  this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
   return await this.mainPageEnd({
     stopFunctie, rawEvents: thisWorkersEvents}

@@ -35,8 +35,8 @@ export default class AbstractScraper {
   debugCorruptedUnavailable = false;
   debugSingleMergedEventCheck = false;
   debugRawEventAsyncCheck = false;
-  debugBaseEvents = true;
-  debugPageInfo = true;
+  debugBaseEvents = false;
+  debugPageInfo = false;
   debugPrice = false;
   //#endregion                                                DEBUGSETTINGS
 
@@ -1337,16 +1337,7 @@ export default class AbstractScraper {
         title: workingEventObj.title + '',
         price:priceRes.price,
         type: 'NOG ONBEKEND',
-      })      
-      return priceRes
-    }
-
-    if (testText.match(/gratis|free/i)) {
-      priceRes.price = 0;
-      this.debugPrice && this.dirtyDebug({
-        title: workingEventObj.title + '',
-        price:priceRes.price,
-        type: 'GRATIS',
+        testText
       })      
       return priceRes
     }
@@ -1358,6 +1349,17 @@ export default class AbstractScraper {
     const priceMatchEuros = testText
       .replaceAll(/[\s\r\t ]/g,'')
       .match(/\d+/);
+
+    if (testText.match(/gratis|free/i) && !Array.isArray(priceMatch) && !Array.isArray(priceMatchEuros)) {
+      priceRes.price = 0;
+      this.debugPrice && this.dirtyDebug({
+        title: workingEventObj.title + '',
+        price:priceRes.price,
+        type: 'GRATIS',
+        testText
+      })      
+      return priceRes
+    }
 
     if (!Array.isArray(priceMatch) && !Array.isArray(priceMatchEuros)) {
       if (selectorsCopy.length){
@@ -1577,10 +1579,17 @@ export default class AbstractScraper {
     });
   }
 
-  async downloadImageCompress(event, image, imagePath){
+  async downloadImageCompress(event, image, imagePath, familyOverSchrijving = ''){
 
-    if (!fs.existsSync(`${this.eventImagesFolder}/${workerData.family}`)){
-      fs.mkdirSync(`${this.eventImagesFolder}/${workerData.family}`)
+    let fam = ''
+    if (familyOverSchrijving){
+      fam = familyOverSchrijving;
+    } else {
+      fam = workerData.family
+    }
+
+    if (!fs.existsSync(`${this.eventImagesFolder}/${fam}`)){
+      fs.mkdirSync(`${this.eventImagesFolder}/${fam}`)
     }
 
     if (image.includes('event-images')) {
