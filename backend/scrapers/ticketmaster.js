@@ -94,7 +94,7 @@ ticketmasterScraper.mainPage = async function() {
         response
       );
     });
-
+  
   if (!Array.isArray(rawEvents) || !rawEvents.length) {
     return await this.mainPageEnd({
       stopFunctie, rawEvents: []}
@@ -213,21 +213,15 @@ ticketmasterScraper.singlePage = async function ({event}) {
     }, 'Met oa: ')
     pageInfo.shortTitle = pageInfo.shortTitle.substring(0, pageInfo.shortTitle.length -2)
   }
-  pageInfo.image = event.image;
-  if (event.image){
-    const imageCrypto = crypto.randomUUID();
-    const imagePath = `${this.eventImagesFolder}/${workerData.family}/${imageCrypto}`;
-    this.downloadImageCompress(event, event.image, imagePath)
-  }    
 
-
-
-  if (!pageInfo.image){
-    pageInfo.errors.push({
-      remarks: `image missing ${pageInfo.pageInfo}`
-    })
-  }
-
+  
+  const imageCrypto = crypto.randomUUID();
+  const imagePath = `${this.eventImagesFolder}/${pageInfo.location}/${imageCrypto}`;
+  await this.downloadImageCompress(event, event.image, imagePath, pageInfo.location)
+  await _t.waitFor(25);
+  event.image = imagePath;
+  pageInfo.image = imagePath;
+  
   if (event.dates?.status?.code === 'rescheduled') {
     pageInfo.unavailable += ' verplaatst';
   }
@@ -236,6 +230,9 @@ ticketmasterScraper.singlePage = async function ({event}) {
   if (tl.includes('|') || (tl.includes('package') || tl.includes('parking'))){
     pageInfo.unavailable += ' double event' 
   }
+
+
+
 
   return await this.singlePageEnd({pageInfo, stopFunctie})
 

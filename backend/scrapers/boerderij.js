@@ -2,6 +2,7 @@ import { workerData } from "worker_threads";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import crypto from "crypto";
 import axios from "axios";
+import {waitFor} from "../mods/tools.js"
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 
 //#region [rgba(0, 60, 0, 0.3)]       SCRAPER CONFIG
@@ -97,6 +98,15 @@ boerderijScraper.mainPage = async function () {
       return event;
     })
       .map(this.isMusicEventCorruptedMapper);
+
+  }
+
+  for (let i =0; i < rawEvents.length; i++){
+    const imageCrypto = crypto.randomUUID();
+    const imagePath = `${this.eventImagesFolder}/boerderij/${imageCrypto}`;
+    await this.downloadImageCompress(rawEvents[i], rawEvents[i].image, imagePath)
+    await waitFor(100);
+    rawEvents[i].image = imagePath;
   }
 
   this.saveBaseEventlist(workerData.family, rawEvents)

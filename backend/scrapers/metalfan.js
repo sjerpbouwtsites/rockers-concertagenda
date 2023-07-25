@@ -56,6 +56,7 @@ async function metalFanDoURL(page, url, qwm){
     "slvesborg", 
     "cultuurpodiumboerderij",
     "royalparklive",
+    "ijssportcentrum",
   ]);
 
   const rename = {
@@ -75,6 +76,7 @@ async function metalFanDoURL(page, url, qwm){
     "kavkaoudaan": "kavka",
     "kavka zappa": "kavka",
     "kavkazappa": "kavka",    
+    "zappa": "kavka",
     "kavkaantwerpen": "kavka",
     "langemunt": "langemunte",
     "merleyn": "doornroosje", // onderdeel doornroosje
@@ -84,6 +86,7 @@ async function metalFanDoURL(page, url, qwm){
     "wackenduitslandmetoaironmaiden": "wacken",
     "evenemententerreinweertnoord":"weertnoord",
     "ysselsteyn": "ijsselstein",
+    "innocent": "metropool"
   }
 
   const jaar = url.includes('2024') ? '2024' : '2023'; //TODO FIX
