@@ -86,7 +86,8 @@ async function metalFanDoURL(page, url, qwm){
     "wackenduitslandmetoaironmaiden": "wacken",
     "evenemententerreinweertnoord":"weertnoord",
     "ysselsteyn": "ijsselstein",
-    "innocent": "metropool"
+    "innocent": "metropool",
+    "bluecollarhotel": "effenaar"
   }
 
   const jaar = url.includes('2024') ? '2024' : '2023'; //TODO FIX

@@ -32,11 +32,11 @@ export default class AbstractScraper {
   ]
 
   //#region [rgba(0, 0, 30, 0.30)]                             DEBUGSETTINGS
-  debugCorruptedUnavailable = false;
-  debugSingleMergedEventCheck = false;
+  debugCorruptedUnavailable = true;
+  debugSingleMergedEventCheck = true;
   debugRawEventAsyncCheck = false;
-  debugBaseEvents = false;
-  debugPageInfo = false;
+  debugBaseEvents = true;
+  debugPageInfo = true;
   debugPrice = false;
   //#endregion                                                DEBUGSETTINGS
 
@@ -51,6 +51,9 @@ export default class AbstractScraper {
     'clubnacht',
     'VERBODENGENRE',
     "alternatieve rock",
+    'dance,dance-alle-dance',
+    'global,pop',
+    'funk-soul,pop',
     "americana",
     "americana",
     "countryrock",
@@ -61,6 +64,7 @@ export default class AbstractScraper {
     "interactieve lezing",
     "karaoke",
     "london calling",
+    'brass',
     "shoegaze",
     `art rock`,
     `blaasrock`,
@@ -122,6 +126,8 @@ export default class AbstractScraper {
   ];
 
   static goodCategories = [
+    'rock-alternative',
+    'punk-emo-hardcore',
     'heavy rock', 
     `death metal`,
     `doom`,
@@ -233,10 +239,6 @@ export default class AbstractScraper {
     const checkedEvents = await this.announceAndCheck(baseMusicEvents).catch(
       this.handleOuterScrapeCatch
     );
-    this.dirtyLog({
-      title: 'checkedEvents',
-      checkedEvents
-    })
     this.completedMainPage = true;
     if (!checkedEvents) return false;
     await this.processSingleMusicEvent(checkedEvents).catch(
@@ -699,6 +701,7 @@ export default class AbstractScraper {
           reason: mergedEventCheckRes.reason,
         })      
       }
+
       singleEvent.isValid
         ? singleEvent.register() // TODO hier lopen dingen echt dwars door elkaar. integreren in soort van singleMergedEventCheckBase en dan anderen reducen erop of weet ik veel wat een gehack vandaag
         : singleEvent.registerINVALID(this.workerData);
