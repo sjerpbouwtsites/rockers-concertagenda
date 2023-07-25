@@ -35,29 +35,26 @@ groeneEngelScraper.singleRawEventCheck = async function(event){
   const workingTitle = this.cleanupEventTitle(event.title)
 
   const isRefused = await this.rockRefuseListCheck(event, workingTitle)
-  if (isRefused.success) return {
-    reason: isRefused.reason,
-    event,
-    success: false
-  };
+  if (isRefused.success) {
+    isRefused.success = false;
+    return isRefused;
+  }
 
   const isAllowed = await this.rockAllowListCheck(event, workingTitle)
   if (isAllowed.success) return isAllowed;
 
   const hasForbiddenTerms = await this.hasForbiddenTerms(event);
   if (hasForbiddenTerms.success) {
-    await this.saveRefusedTitle(workingTitle)
-    return {
-      reason: hasForbiddenTerms.reason,
-      success: false,
-      event
-    }
+    this.saveRefusedTitle(workingTitle)
+    hasForbiddenTerms.success = false;
+    return hasForbiddenTerms
   }
 
   return {
+    workingTitle,
     event,
     success: true,
-    reason: "nothing found currently",
+    reason: [isRefused.reason, isAllowed.reason, hasForbiddenTerms.reason],
   };
   
 }
@@ -65,38 +62,29 @@ groeneEngelScraper.singleRawEventCheck = async function(event){
 
 //#region [rgba(0, 180, 0, 0.3)]      SINGLE EVENT CHECK
 groeneEngelScraper.singleMergedEventCheck = async function (event) {
-  const tl = this.cleanupEventTitle(event.title);
-  const isRefused = await this.rockRefuseListCheck(event, tl)
-  if (isRefused.success) return {
-    reason: isRefused.reason,
-    event,
-    success: false
-  };
+  const workingTitle = this.cleanupEventTitle(event.title)
 
-  const isAllowed = await this.rockAllowListCheck(event, tl)
+  const isAllowed = await this.rockAllowListCheck(event, workingTitle)
   if (isAllowed.success) return isAllowed;
 
   const hasForbiddenTerms = await this.hasForbiddenTerms(event, ['title','textForHTML']);
   if (hasForbiddenTerms.success) {
-    await this.saveRefusedTitle(tl)
-    return {
-      reason: hasForbiddenTerms.reason,
-      success: false,
-      event
-    }
+    this.saveRefusedTitle(workingTitle)
+    hasForbiddenTerms.success = false;
+    return hasForbiddenTerms;
   }
 
   const hasGoodTerms = await this.hasGoodTerms(event, ['title', 'textForHTML']);
   if (hasGoodTerms.success) {
-    await this.saveAllowedTitle(tl)
+    this.saveAllowedTitle(workingTitle)
     return hasGoodTerms;
   }
 
   const isRockRes = await this.isRock(event);
   if (isRockRes.success){
-    await this.saveAllowedTitle(tl)
+    this.saveAllowedTitle(workingTitle)
   } else {
-    await this.saveRefusedTitle(tl)
+    this.saveRefusedTitle(workingTitle)
   }
   return isRockRes;  
 };

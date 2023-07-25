@@ -33,20 +33,38 @@ cpuntScraper.listenToMasterThread();
 
 //#region [rgba(0, 120, 0, 0.3)]      RAW EVENT CHECK
 cpuntScraper.singleRawEventCheck = async function (event) {
+
+  let workingTitle = this.cleanupEventTitle(event.title);
+
+  const isRefused = await this.rockRefuseListCheck(event, workingTitle)
+  if (isRefused.success) {
+    isRefused.success = false;
+    return isRefused;
+  }
+
+  const isAllowed = await this.rockAllowListCheck(event, workingTitle)
+  if (isAllowed.success) return isAllowed;
+
   const goodTermsRes = await this.hasGoodTerms(event) 
-  if (goodTermsRes.success) return goodTermsRes;
+  if (goodTermsRes.success) {
+    this.saveAllowedTitle(workingTitle)
+    return goodTermsRes;
+  }
 
-  const forbiddenTermsRes = await this.hasForbiddenTerms(event);
+  const hasForbiddenTerms = await this.hasForbiddenTerms(event);
+  if (hasForbiddenTerms.success) {
+    this.saveRefusedTitle(workingTitle)
+    hasForbiddenTerms.success = false;
+    return hasForbiddenTerms
+  }
 
-  if (forbiddenTermsRes.success) return {
-    event,
-    success: false,
-    reason: forbiddenTermsRes.reason
-  };
+  this.saveAllowedTitle(workingTitle)
+
   return {
+    workingTitle,
     event,
     success: true,
-    reason: `check inconclusive <a href='${event.venueEventUrl}'>${event.title}</a>`
+    reason: [isRefused.reason, isAllowed.reason, hasForbiddenTerms.reason].join(';'),
   }
 };
 //#endregion                          RAW EVENT CHECK

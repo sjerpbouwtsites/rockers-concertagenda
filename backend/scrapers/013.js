@@ -27,28 +27,28 @@ nuldertienScraper.listenToMasterThread();
 //#region [rgba(0, 120, 0, 0.3)]      RAW EVENT CHECK
 nuldertienScraper.singleRawEventCheck = async function(event){
 
-  const isRefused = await this.rockRefuseListCheck(event, event.title.toLowerCase())
-  if (isRefused.success) return {
-    reason: isRefused.reason,
-    event,
-    success: false
-  };
+  let workingTitle = this.cleanupEventTitle(event.title);
+  const isRefused = await this.rockRefuseListCheck(event, workingTitle)
+  if (isRefused.success) {
+    isRefused.success = false;
+    return isRefused;
+  }
 
-  const isAllowed = await this.rockAllowListCheck(event, event.title.toLowerCase())
+  const isAllowed = await this.rockAllowListCheck(event, workingTitle)
   if (isAllowed.success) return isAllowed;
 
   const hasForbiddenTerms = await this.hasForbiddenTerms(event);
   if (hasForbiddenTerms.success) {
-    await this.saveRefusedTitle(event.title.toLowerCase())
-    return {
-      reason: hasForbiddenTerms.reason,
-      success: false,
-      event
-    }
+    this.saveRefusedTitle(workingTitle)
+    hasForbiddenTerms.success = false;
+    return hasForbiddenTerms
   }
+
+  this.saveAllowedTitle(workingTitle)
 
   return {
     reason: [isRefused.reason, isAllowed.reason, hasForbiddenTerms.reason].join(';'),
+    workingTitle,
     event,
     success: true
   }

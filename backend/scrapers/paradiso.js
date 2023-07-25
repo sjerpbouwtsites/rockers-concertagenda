@@ -36,36 +36,32 @@ paradisoScraper.singleRawEventCheck = async function (event) {
   const workingTitle = this.cleanupEventTitle(event.title);
   
   const isRefused = await this.rockRefuseListCheck(event, workingTitle)
-  if (isRefused.success) return {
-    reason: isRefused.reason,
-    event,
-    success: false
-  };
+  if (isRefused.success) {
+    isRefused.success = false;
+    return isRefused
+  }
 
   const isAllowed = await this.rockAllowListCheck(event, workingTitle)
   if (isAllowed.success) return isAllowed;
 
   const hasForbiddenTerms = await this.hasForbiddenTerms(event);
   if (hasForbiddenTerms.success) {
-    await this.saveRefusedTitle(workingTitle)
-    return {
-      reason: hasForbiddenTerms.reason,
-      success: false,
-      event
-    }
+    hasForbiddenTerms.success = false;
+    this.saveRefusedTitle(workingTitle)
+    return hasForbiddenTerms
   }
 
   const hasGoodTermsRes = await this.hasGoodTerms(event);
   if (hasGoodTermsRes.success) {
-    await this.saveAllowedTitle(workingTitle)
+    this.saveAllowedTitle(workingTitle)
     return hasGoodTermsRes;
   }
 
   const isRockRes = await this.isRock(event);
   if (isRockRes.success){
-    await this.saveAllowedTitle(workingTitle)
+    this.saveAllowedTitle(workingTitle)
   } else {
-    await this.saveRefusedTitle(workingTitle)
+    this.saveRefusedTitle(workingTitle)
   }
   return isRockRes;
   
@@ -93,18 +89,19 @@ paradisoScraper.mainPage = async function () {
       pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${workerData.index}</a>`,
     }
   }, {workerData});
-  
-  let bla = '';
 
+  let bla = '';
   await _t.autoScroll(page);
   bla = await page.evaluate(({workerData}) => {
-    return document.querySelector('.css-16y59pb:last-child .chakra-heading').textContent
-  }, {workerData});  
+    return document.querySelector('.css-16y59pb:last-child .chakra-heading')?.textContent ?? 'geen titel gevonden'
+  }, {workerData});
+  if (this.isForced) this.dirtyTalk(`na scroll 1 ${bla}`)
   
   await _t.autoScroll(page);
   bla = await page.evaluate(({workerData}) => {
-    return document.querySelector('.css-16y59pb:last-child .chakra-heading').textContent
+    return document.querySelector('.css-16y59pb:last-child .chakra-heading')?.textContent ?? 'geen titel gevonden'
   }, {workerData});  
+  if (this.isForced) this.dirtyTalk(`na scroll 2 ${bla}`)
 
   let rawEvents = await page.evaluate(
     ({resBuiten, unavailabiltyTerms}) => {
@@ -126,9 +123,9 @@ paradisoScraper.mainPage = async function () {
               ?.textContent.trim() ?? "";
           
           res.venueEventUrl = rawEvent.href ?? null
-          res.soldOut = !!rawEvent.textContent.match(/uitverkocht|sold\s?out/i);
+          res.soldOut = !!rawEvent?.textContent.match(/uitverkocht|sold\s?out/i);
           const uaRex = new RegExp(unavailabiltyTerms.join("|"), 'gi');
-          res.unavailable = !!rawEvent.textContent.match(uaRex);
+          res.unavailable = !!rawEvent?.textContent.match(uaRex);
           return res;
         });
     },

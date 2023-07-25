@@ -32,8 +32,28 @@ bibelotScraper.listenToMasterThread();
 
 //#region [rgba(0, 120, 0, 0.3)]      RAW EVENT CHECK
 bibelotScraper.singleRawEventCheck = async function(event){
+
+  let workingTitle = this.cleanupEventTitle(event.title);
+  const isRefused = await this.rockRefuseListCheck(event, workingTitle)
+  if (isRefused.success) {
+    isRefused.success = false;
+    return isRefused;
+  }
+
+  const isAllowed = await this.rockAllowListCheck(event, workingTitle)
+  if (isAllowed.success) return isAllowed;
+
   const hasForbiddenTermsRes = await bibelotScraper.hasForbiddenTerms(event);
+  if (hasForbiddenTermsRes.success){
+    hasForbiddenTermsRes.success = false;
+    this.saveRefusedTitle(workingTitle)
+    return hasForbiddenTermsRes;
+  }
+
+  this.saveAllowedTitle(workingTitle)
+
   return {
+    workingTitle,
     event,
     reason: hasForbiddenTermsRes.reason,
     success: !hasForbiddenTermsRes.success,

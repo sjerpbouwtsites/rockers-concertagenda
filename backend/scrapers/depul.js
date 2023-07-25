@@ -30,48 +30,52 @@ const depulScraper = new AbstractScraper(makeScraperConfig({
 depulScraper.listenToMasterThread();
 
 //#region [rgba(0, 120, 0, 0.3)]      RAW EVENT CHECK
+depulScraper.singleRawEventCheck = async function (event){
+  const workingTitle = this.cleanupEventTitle(event.title);
+  const isRefused = await this.rockRefuseListCheck(event, workingTitle)
+  if (isRefused.success) {
+    isRefused.success = false;
+    return isRefused
+  }
+  return {
+    workingTitle,
+    reason: [isRefused.reason].join(';'),
+    event,
+    success: true
+  }  
+}
 //#endregion                          RAW EVENT CHECK
 
 //#region [rgba(0, 180, 0, 0.3)]      SINGLE EVENT CHECK
 depulScraper.singleMergedEventCheck = async function (event) {
-
-  const tl = this.cleanupEventTitle(event.title);
-
-  const isRefused = await this.rockRefuseListCheck(event, tl)
-  if (isRefused.success) {
-    return {
-      reason: isRefused.reason,
-      event,
-      success: false
-    }
-  }
-
-  const isAllowed = await this.rockAllowListCheck(event, tl)
+  const workingTitle = this.cleanupEventTitle(event.title);
+  
+  const isAllowed = await this.rockAllowListCheck(event, workingTitle)
   if (isAllowed.success) {
     return isAllowed;  
   }
 
   const hasGoodTerms = await this.hasGoodTerms(event, ['title','shortText']);
   if (hasGoodTerms.success) {
-    await this.saveAllowedTitle(tl)     
+    this.saveAllowedTitle(workingTitle)     
     return hasGoodTerms;
   }
 
   const isRockRes = await this.isRock(
     event, 
-    [tl]
+    [workingTitle]
   );
   if (isRockRes.success){
-    await this.saveAllowedTitle(tl)     
+    this.saveAllowedTitle(workingTitle)     
     return isRockRes;
   }
-  await this.saveRefusedTitle(tl)    
-
+  this.saveRefusedTitle(workingTitle)    
 
   return {
+    workingTitle,
     event,
     success: false,
-    reason: "genres not in title, shortText, or event URL, or rock",
+    reason: [isAllowed.reason, hasGoodTerms.reason, isRockRes.reason].join(';'),
   };
 };
 //#endregion                          SINGLE EVENT CHECK
@@ -112,11 +116,11 @@ depulScraper.mainPage = async function () {
           
           const startDay =
             rawEvent
-              .querySelector("time .number")
+              .querySelector(".time .number")
               ?.textContent.trim()
               ?.padStart(2, "0") ?? null;
           const startMonthName =
-            rawEvent.querySelector(".time month")?.textContent.trim() ?? null;
+            rawEvent.querySelector(".time .month")?.textContent.trim() ?? null;
           const startMonth = months[startMonthName];
           const startMonthJSNumber = Number(startMonth) - 1;
           const refDate = new Date();

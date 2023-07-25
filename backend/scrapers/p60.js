@@ -30,49 +30,48 @@ p60Scraper.listenToMasterThread();
 
 //#region [rgba(0, 120, 0, 0.3)]      RAW EVENT CHECK
 p60Scraper.singleRawEventCheck = async function (event) {
-
-  if (!event || !event?.title) {
-    return {
-      reason: 'Corrupted event',
-      event,
-      success: false
-    };    
-  }
-
-  const workingTitle = this.cleanupEventTitle(event.title);
-
+  let workingTitle = this.cleanupEventTitle(event.title);
   const isRefused = await this.rockRefuseListCheck(event, workingTitle)
-  if (isRefused.success) return {
-    reason: isRefused.reason,
+  if (isRefused.success) {
+    isRefused.success = false;
+    return isRefused;
+  }
+
+  return {
+    reason: [isRefused.reason].join(';'),
     event,
-    success: false
-  };
-
-  const isAllowed = await this.rockAllowListCheck(event, workingTitle)
-  if (isAllowed.success) return isAllowed;
-
-  const hasForbiddenTerms = await this.hasForbiddenTerms(event);
-  if (hasForbiddenTerms.success) {
-    await this.saveRefusedTitle(workingTitle)
-    return {
-      reason: hasForbiddenTerms.reason,
-      success: false,
-      event
-    }
+    workingTitle,
+    success: true
   }
 
-  const isRockRes = await this.isRock(event);
-  if (isRockRes.success){
-    await this.saveAllowedTitle(workingTitle)
-  } else {
-    await this.saveRefusedTitle(workingTitle)
-  }
-  return isRockRes;  
-
-};
+}
 //#endregion                          RAW EVENT CHECK
 
 //#region [rgba(0, 180, 0, 0.3)]      SINGLE EVENT CHECK
+p60Scraper.singleMergedEventCheck = async function (event) {
+  const workingTitle = this.cleanupEventTitle(event.title);
+  
+  const isAllowed = await this.rockAllowListCheck(event, workingTitle)
+  if (isAllowed.success) {
+    return isAllowed;  
+  }
+
+  const hasForbiddenTerms = await this.hasForbiddenTerms(event);
+  if (hasForbiddenTerms.success) {
+    this.saveRefusedTitle(workingTitle)
+    hasForbiddenTerms.success = false;
+    return hasForbiddenTerms;
+  }
+
+  this.saveAllowedTitle(workingTitle)  
+
+  return {
+    workingTitle,
+    reason: [isAllowed.reason, hasForbiddenTerms.reason].join(';'),
+    event,
+    success: true
+  }
+};
 //#endregion                          SINGLE EVENT CHECK
 
 //#region [rgba(0, 240, 0, 0.3)]      MAIN PAGE

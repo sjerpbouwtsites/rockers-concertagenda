@@ -30,28 +30,48 @@ const kavkaScraper = new AbstractScraper(
 kavkaScraper.listenToMasterThread();
 
 //#region [rgba(0, 120, 0, 0.3)]      RAW EVENT CHECK
+kavkaScraper.singleRawEventCheck = async function (event) {
+  let workingTitle = this.cleanupEventTitle(event.title);
+  const isRefused = await this.rockRefuseListCheck(event, workingTitle)
+  if (isRefused.success) {
+    isRefused.success = false;
+    return isRefused;
+  }
+
+  return {
+    workingTitle,
+    reason: [isRefused.reason].join(';'),
+    event,
+    success: true
+  }
+
+}
 //#endregion                          RAW EVENT CHECK
 
 //#region [rgba(0, 180, 0, 0.3)]      SINGLE EVENT CHECK
 kavkaScraper.singleMergedEventCheck = async function (event) {
-  const tl = this.cleanupEventTitle(event.title);
-  const isRefused = await this.rockRefuseListCheck(event, tl)
-  if (isRefused.success) {
-    return {
-      reason: isRefused.reason,
-      event,
-      success: false
-    }
-  }
-  const isAllowed = await this.rockAllowListCheck(event, tl)
+  const workingTitle = this.cleanupEventTitle(event.title);
+  
+  const isAllowed = await this.rockAllowListCheck(event, workingTitle)
   if (isAllowed.success) {
     return isAllowed;  
   }
+
+  const hasForbiddenTerms = await this.hasForbiddenTerms(event);
+  if (hasForbiddenTerms.success) {
+    this.saveRefusedTitle(workingTitle)
+    hasForbiddenTerms.success = false;
+    return hasForbiddenTerms
+  }
+
+  this.saveAllowedTitle(workingTitle)  
+
   return {
+    reason: [isAllowed.reason, hasForbiddenTerms.reason].join(';'),
+    workingTitle,
     event,
-    success: true,
-    reason: "nothing found currently",
-  };
+    success: true
+  }
 };
 //#endregion                          SINGLE EVENT CHECK
 

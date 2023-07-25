@@ -33,30 +33,57 @@ const defluxScraper = new AbstractScraper(makeScraperConfig({
 defluxScraper.listenToMasterThread();
 
 //#region [rgba(0, 120, 0, 0.3)]      RAW EVENT CHECK
+defluxScraper.singleRawEventCheck = async function (event) {
+
+  let workingTitle = this.cleanupEventTitle(event.title);
+
+  const isRefused = await this.rockRefuseListCheck(event, workingTitle)
+  if (isRefused.success) {
+    isRefused.success = false;
+    return isRefused;
+  }
+
+  const isAllowed = await this.rockAllowListCheck(event, workingTitle)
+  if (isAllowed.success) return isAllowed;
+
+  const goodTermsRes = await this.hasGoodTerms(event) 
+  if (goodTermsRes.success) {
+    this.saveAllowedTitle(workingTitle)
+    return goodTermsRes;
+  }
+
+  const hasForbiddenTerms = await this.hasForbiddenTerms(event);
+  if (hasForbiddenTerms.success) {
+    this.saveRefusedTitle(workingTitle)
+    hasForbiddenTerms.success = false;
+    return hasForbiddenTerms
+  }
+
+  this.saveAllowedTitle(workingTitle)
+
+  return {
+    workingTitle,
+    event,
+    success: true,
+    reason: [isRefused.reason, isAllowed.reason, hasForbiddenTerms.reason].join(';'),
+  }
+};
 //#endregion                          RAW EVENT CHECK
 
 //#region [rgba(0, 180, 0, 0.3)]      SINGLE EVENT CHECK
 defluxScraper.singleMergedEventCheck = async function (event) {
-  const tl = this.cleanupEventTitle(event.title);
+  const workingTitle = this.cleanupEventTitle(event.title);
 
-  const isRefused = await this.rockRefuseListCheck(event, tl)
-  if (isRefused.success) {
-    return {
-      reason: isRefused.reason,
-      event,
-      success: false
-    }
-  }
-
-  const isAllowed = await this.rockAllowListCheck(event, tl)
+  const isAllowed = await this.rockAllowListCheck(event, workingTitle)
   if (isAllowed.success) {
     return isAllowed;  
   }
 
   return {
+    workingTitle,
     event,
     success: true,
-    reason: "nothing found currently",
+    reason: 'weird one',
   };
 };
 //#endregion                          SINGLE EVENT CHECK
