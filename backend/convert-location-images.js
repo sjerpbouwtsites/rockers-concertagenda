@@ -6,9 +6,10 @@ function initLocationImagesConversion(){
   const eventImagesDestFolder = "/home/sjerp/dev/apache/concertagenda/public/location-images/";
   const eventImagesSourceFolder = "/home/sjerp/dev/apache/concertagenda/src/location-images/";
   let files = fs.readdirSync(eventImagesSourceFolder).map(file => {
+    const fileZonder = file.replace(/.jpg|.jpeg|.png|.webp/,'')
     return {
       source: `${eventImagesSourceFolder}${file}`,
-      dest: `${eventImagesDestFolder}${file}`,      
+      dest: `${eventImagesDestFolder}${fileZonder}`,      
     }
   })
   
@@ -45,7 +46,7 @@ async function downloadImageCompress(image, imagePath){
       console.log(`klaar met ${image}`)
     });    
 
-  await waitFor(1000)
+  await waitFor(400)
 }
 
 initLocationImagesConversion()

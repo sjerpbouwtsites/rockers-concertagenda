@@ -13,6 +13,7 @@ import ErrorWrapper from "../../mods/error-wrapper.js";
 import makeLongHTML from "./longHTML.js";
 import https from 'https';
 import sharp from 'sharp';
+
 //#endregion                                              IMPORTS
 
 export default class AbstractScraper {
@@ -224,8 +225,6 @@ export default class AbstractScraper {
     } else {
       this.browser = 'disabled';
     }
-
-    this.emptyImageFolder();
 
     const baseMusicEvents = await this.mainPage().catch(
       this.handleOuterScrapeCatch
@@ -1462,13 +1461,17 @@ export default class AbstractScraper {
     let uuid = crypto.randomUUID();
     const toPrint = makeLongHTML(mergedEvent)
  
+    if (!fs.existsSync(`${fsDirections.publicTexts}/${mergedEvent.location}/`)){
+      fs.mkdirSync(`${fsDirections.publicTexts}/${mergedEvent.location}/`)
+    }
+
     try {
-      const longTextPath = `${fsDirections.publicTexts}/${uuid}.html`;
+      const longTextPath = `${fsDirections.publicTexts}/${mergedEvent.location}/${uuid}.html`;
       fs.writeFileSync(longTextPath, toPrint, "utf-8");
       return longTextPath;
     } catch (err) {
       _t.handleError(err, workerData, `write long text fail`, 'notice', {
-        path: `${fsDirections.publicTexts}/${uuid}.html`,
+        path: `${fsDirections.publicTexts}/${mergedEvent.location}/${uuid}.html`,
         text: toPrint
       });
     }
@@ -1477,19 +1480,6 @@ export default class AbstractScraper {
   //#endregion                                                 LONG HTML
 
   //#region [rgba(180, 0, 180, 0.30)]                          IMAGE    
-
-  async emptyImageFolder(){
-
-    const location = workerData.family;
-
-    if (fs.existsSync(`${this.eventImagesFolder}/${location}`)){
-      fs.rmSync(`${this.eventImagesFolder}/${location}`, { recursive: true, force: true });
-    } 
-    fs.mkdirSync(`${this.eventImagesFolder}/${location}`)
-    return true;
-       
-  }
-
   async getImage({page, event, pageInfo, selectors, mode}){
     
     const res = {
@@ -1513,7 +1503,7 @@ export default class AbstractScraper {
             src = el?.src ?? null
           }
 
-          if (!src.includes('https')){
+          if (src && !src.includes('https')){
             src = document.location.protocol + '//' + document.location.hostname + src
           }
           
@@ -1563,11 +1553,28 @@ export default class AbstractScraper {
 
     const imageCrypto = crypto.randomUUID();
     const imagePath = `${this.eventImagesFolder}/${workerData.family}/${imageCrypto}`;
-    this.downloadImageCompress(event, image, imagePath)
+    await this.downloadImageCompress(event, image, imagePath)
 
     res.image = imagePath;
     return res;
 
+  }
+
+  downloadImage(url, filepath) {
+    return new Promise((resolve, reject) => {
+      https.get(url, (res) => {
+        if (res.statusCode === 200) {
+          res.pipe(fs.createWriteStream(filepath))
+            .on('error', reject)
+            .once('close', () => resolve(filepath));
+        } else {
+          // Consume response data to free up memory
+          res.resume();
+          reject(new Error(`Request Failed With a Status Code: ${res.statusCode}`));
+
+        }
+      });
+    });
   }
 
   async downloadImageCompress(event, image, imagePath){
@@ -1575,23 +1582,96 @@ export default class AbstractScraper {
     if (!fs.existsSync(`${this.eventImagesFolder}/${workerData.family}`)){
       fs.mkdirSync(`${this.eventImagesFolder}/${workerData.family}`)
     }
-    https.get(image, (res)=>{
-      res.pipe(
-        sharp()
-          .resize(440, 225)
-          .webp()
-      ).pipe(fs.createWriteStream(`${imagePath}-w440.webp`))
-      res.pipe(
-        sharp()
-          .resize(750, 360)
-          .webp()
-      ).pipe(fs.createWriteStream(`${imagePath}-w750.webp`))
-      res.pipe(
-        sharp()
-          .webp()
-      ).pipe(fs.createWriteStream(`${imagePath}-vol.webp`))
-      ;
-    })
+
+    let extension = '';
+    try {
+      extension = image.match(/.jpg|.jpeg|.png|.webp/)[0];
+    } catch (error) {
+      this.dirtyDebug(error)
+      const ss = image.split('.');
+      extension = ss[1]
+    }
+
+    await this.downloadImage(image, `${imagePath}-ori${extension}`)
+
+    await sharp(`${imagePath}-ori${extension}`)
+      .resize(440, 225)
+      .webp()
+      .toFile(`${imagePath}-w440.webp`, (err, info) => { 
+        //
+      })
+
+    await sharp(`${imagePath}-ori${extension}`)
+      .resize(750, 360)
+      .webp()
+      .toFile(`${imagePath}-w750.webp`, (err, info) => { 
+        //
+      })
+
+    await sharp(`${imagePath}-ori${extension}`)
+      .webp()
+      .toFile(`${imagePath}-vol.webp`, (err, info) => { 
+        //
+      }) 
+
+    return true;
+
+    // https.get(image, (imageGetRes)=>{
+
+    //   const p1 = new Promise((resolve, reject)=>{
+    //     const stream1 = imageGetRes.pipe(
+    //       sharp()
+    //         .resize(440, 225)
+    //         .webp()
+    //     ).pipe(fs.createWriteStream(`${imagePath}-w440.webp`))
+    //     stream1.on("finish", function() {
+    //       stream1.close(() => {
+    //         resolve(true);
+    //       });
+    //     });
+    //     stream1.on("error", function() {
+    //       stream1.close(() => {
+    //         reject(true);
+    //       });
+    //     });        
+    //   })
+
+    //   const p2 = new Promise((resolve, reject)=>{
+    //     const stream1 = imageGetRes.pipe(
+    //       sharp()
+    //         .resize(750, 360)
+    //         .webp()
+    //     ).pipe(fs.createWriteStream(`${imagePath}-w750.webp`))
+    //     stream1.on("finish", function() {
+    //       stream1.close(() => {
+    //         resolve(true);
+    //       });
+    //     });
+    //     stream1.on("error", function() {
+    //       stream1.close(() => {
+    //         reject(true);
+    //       });
+    //     });        
+    //   })      
+
+    //   const p3 = new Promise((resolve, reject)=>{
+    //     const stream1 = imageGetRes.pipe(
+    //       sharp()
+    //         .webp()
+    //     ).pipe(fs.createWriteStream(`${imagePath}-vol.webp`))
+    //     stream1.on("finish", function() {
+    //       stream1.close(() => {
+    //         resolve(true);
+    //       });
+    //     });
+    //     stream1.on("error", function() {
+    //       stream1.close(() => {
+    //         reject(true);
+    //       });
+    //     });        
+    //   })    
+
+
   }
 
   //#endregion                                                 IMAGE

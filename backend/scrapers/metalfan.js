@@ -139,7 +139,6 @@ async function metalFanDoURL(page, url, qwm){
           eventHTMLrules.length > 1
             ? (eventHTMLrules[eventHTMLrules.length - 1] || "")
             : "";
-
         return {
           title: eventName,
           start: eventDate,
@@ -161,6 +160,9 @@ async function metalFanDoURL(page, url, qwm){
       if (watchForWeirdLocationNames.includes(locationName)){
         locationName = watchForWeirdLocationNames[locationName]
       }
+
+      const image = `../public/location-images/${locationName}`
+      thisMusicEvent.image = image;
 
       if (skipWithMetalfan.includes(locationName)) {
         return;
