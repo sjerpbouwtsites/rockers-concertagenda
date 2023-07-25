@@ -284,14 +284,24 @@ class EventBlocks extends React.Component {
   }
 
   createImageHTML(musicEvent, selectors) {
-    const imgSrc =
-      musicEvent.image ?? `location-images/${musicEvent.location}.jpg`;
+    let imgSrc = musicEvent.image 
+      ? `${musicEvent.image}` 
+      : `/location-images/${musicEvent.location}`
+
+    imgSrc = imgSrc.replace('../public','');
+    
+    const srcset = `${imgSrc}-w440.webp 480w, ${imgSrc}-w750.webp 750w`
+    const sizes="(max-width: 600px) 480px, 750px"
+    const src = `${imgSrc}-w440.webp`;
+  
+
     return imgSrc ? (
       <img
+        srcSet={srcset}
+        src={src}
+        sizes={sizes}
         className={selectors.image}
-        src={imgSrc}
         alt={musicEvent.title}
-        loading="lazy"
       />
     ) : (
       ""

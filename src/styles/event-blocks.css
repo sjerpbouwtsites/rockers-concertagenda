@@ -50,6 +50,7 @@
     min-height: 170px;
     padding: 1em;
     width: 100%;
+    min-width: initial;
     max-width: calc(100% - 2em);
   }
 }
