@@ -100,7 +100,8 @@ class EventBlocks extends React.Component {
       e.stopPropagation();
       e.nativeEvent.stopImmediatePropagation();
     }
-
+    // document.querySelectorAll('.void-container-for-enlarged--enlarged')
+    //   .forEach(voidEl=>voidEl.innerHTML = '')
     let nieuweEventsState = this.state.musicEvents.map(event => {
       event.enlarged = false;
       return event;
@@ -120,6 +121,7 @@ class EventBlocks extends React.Component {
       el.setAttribute('data-was-enlarged', true);
       el.removeAttribute('style')
     })
+
     if (document.querySelector('.event-block[style]')){
       await this.waitFor(10);
       return this.recursieveStijlEraf()
@@ -143,11 +145,13 @@ class EventBlocks extends React.Component {
     e.stopPropagation();
     e.nativeEvent.stopImmediatePropagation();
 
-    const isMomenteelEnlarged = !!this.someEventIsEnlarged(this.state.musicEvents);
+    const isMomenteelEnlargedEl = this.someEventIsEnlarged(this.state.musicEvents);
+    const isMomenteelEnlarged = !!isMomenteelEnlargedEl
     await this.sluitEnlarged();
-    //document.querySelectorAll('.event-block[style]').forEach(el => el.removeAttribute('style'))
+    
     const thisEvent = this.state.musicEvents[musicEventKey];
     const thisElement = document.getElementById(`event-id-${musicEventKey}`);
+
     let readyToLoad = false;
     // alles ontlargen.
     
@@ -515,7 +519,7 @@ ${BEMify(`event-block`, [
                 <div
                   className={selectors.mainContainerForEnlarged}
                   dangerouslySetInnerHTML={{
-                    __html: musicEvent.longTextHTML,
+                    __html: musicEvent.enlarged ? musicEvent.longTextHTML : '',
                   }}
                 ></div>
                 <footer className={selectors.footer}>
