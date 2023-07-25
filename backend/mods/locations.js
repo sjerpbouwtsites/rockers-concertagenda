@@ -38,7 +38,6 @@ const locations = {
   bastardclub: new Location({ name: "Bastardclub", city: "Osnabrueck" }),
   bibelot: new Location({ name: "Bibelot", city: "Dordrecht" }),
   biebob: new Location({ name: "Biebob", city: "Vosselaar" }),
-  bluecollarhotel: new Location({ name: "Blue Collar Hotel", city: "Eindhoven" }),
   boerderij: new Location({ name: "Boerderij", city: "Zoetemeer" }),
   bolwerk: new Location({ name: "Bolwerk", city: "Sneek" }),
   debosuil:  new Location({ name: "De Bosuil", city: "Weert" }),
