@@ -3,6 +3,7 @@ import React from "react";
 class LoadmoreButton extends React.Component {
 
   intervalSpeed = 500;
+  hasLoadedEverything = false
   
   constructor(props) {
     super(props);
@@ -22,14 +23,15 @@ class LoadmoreButton extends React.Component {
   }
 
   componentDidUpdate(){
-    
+    if (this.props.maxEventsShown === this.props.musicEventsLength) {
+      this.hasLoadedEverything = true
+    }    
   }
 
   checkButtonIsInView(){
-    if (this.props.maxEventsShown === this.props.musicEventsLength) {
-      false;
-    }
-    
+
+    if (this.hasLoadedEverything) return
+
     const st = document.documentElement.scrollTop || document.body.scrollTop;
     const ah = screen.availHeight;
     const mh = st + ah;
@@ -55,6 +57,7 @@ class LoadmoreButton extends React.Component {
 
   render() {
     if (!this.props.eventDataLoaded) return '';
+    if (this.hasLoadedEverything) return '';
     if (this.props.maxEventsShown === this.props.musicEventsLength) return '';
     return (
       <button
