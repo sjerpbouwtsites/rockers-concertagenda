@@ -31,7 +31,7 @@ export default class AbstractScraper {
     'uitgesteld', 'verplaatst', 'locatie gewijzigd', 'besloten', 'afgelast', 'geannuleerd'
   ]
 
-  //#region [rgba(0, 0, 30, 0.30)]                             DEBUGSETTINGS
+  //#region [rgba(0, 0, 30, 0.10)]                             DEBUGSETTINGS
   debugCorruptedUnavailable = false;
   debugSingleMergedEventCheck = false;
   debugRawEventAsyncCheck = false;
@@ -40,7 +40,7 @@ export default class AbstractScraper {
   debugPrice = false;
   //#endregion                                                DEBUGSETTINGS
 
-  //#region [rgba(0, 0, 60, 0.30)]                             ISROCKSETTINGS  
+  //#region [rgba(0, 0, 60, 0.10)]                             ISROCKSETTINGS  
   /**
    * Gebruikt in singleRawEventChecks' hasForbiddenTerms
    *
@@ -161,7 +161,7 @@ export default class AbstractScraper {
   ]
   //#endregion                                                ISROCKSETTINGS
 
-  //#region [rgba(0, 0, 120, 0.30)]                            CONSTRUCTOR & INSTALL  
+  //#region [rgba(0, 0, 120, 0.10)]                            CONSTRUCTOR & INSTALL  
   constructor(obj) {
     this.qwm;
     this.browser;
@@ -188,7 +188,7 @@ export default class AbstractScraper {
     return forced.includes(workerData.family)
   }
 
-  //#region [rgba(0, 0, 180, 0.30)]                            DIRTYLOG, TALK, DEBUG
+  //#region [rgba(0, 0, 180, 0.10)]                            DIRTYLOG, TALK, DEBUG
   /**
    * Wrapper om parentPort.postMessage(qwm.toConsole(xx)) heen.
    *
@@ -223,7 +223,7 @@ export default class AbstractScraper {
   }  
   //#endregion                                                DIRTYLOG, TALK, DEBUG
 
-  //#region [rgba(0, 0, 240, 0.30)]                            SCRAPE INIT & SCRAPE DIE
+  //#region [rgba(0, 0, 240, 0.10)]                            SCRAPE INIT & SCRAPE DIE
   async scrapeInit() {
 
     if (!this.puppeteerConfig.app.mainPage.useCustomScraper || !this.puppeteerConfig.app.singlePage.useCustomScraper) {
@@ -266,7 +266,7 @@ export default class AbstractScraper {
   }
   //#endregion                                                 SCRAPE INIT & SCRAPE DIE  
 
-  //#region [rgba(60, 0, 60, 0.30)]                            MAIN PAGE
+  //#region [rgba(60, 0, 60, 0.10)]                            MAIN PAGE
   async mainPage() {
     throw Error("abstract method used thx ");
   }
@@ -437,7 +437,7 @@ export default class AbstractScraper {
 
   //#endregion                                                MAIN PAGE
 
-  //#region [rgba(120, 0, 120, 0.30)]                          MAIN PAGE CHECK AND ANNOUNCE  
+  //#region [rgba(120, 0, 120, 0.10)]                          MAIN PAGE CHECK AND ANNOUNCE  
   /**
    * verifieert requiredProperties uit puppeteerConfig.app.mainPage.requiredProperties
    * waarschuwt naar monitor wie uitvalt 
@@ -596,7 +596,7 @@ export default class AbstractScraper {
 
   //#endregion                                                 MAIN PAGE CHECK
 
-  //#region [rgba(60, 0, 60, 0.30)]                            SINGLE PAGE  
+  //#region [rgba(60, 0, 60, 0.10)]                            SINGLE PAGE  
   /**
    * Process single Music Event
    * Naait het scrapen aan elkaar
@@ -923,7 +923,7 @@ export default class AbstractScraper {
   }  
   //#endregion                                                 SINGLE PAGE
 
-  //#region [rgba(90, 0, 90, 0.30)]                            ASYNC CHECKERS
+  //#region [rgba(90, 0, 90, 0.10)]                            ASYNC CHECKERS
   
   /**
    * Loopt over AbstractScraper.goodCategories en kijkt of ze in 
@@ -1288,7 +1288,7 @@ export default class AbstractScraper {
   }
   //#endregion                                                 ASYNC CHECKERS
 
-  //#region [rgba(120, 0, 120, 0.30)]                          PRICE
+  //#region [rgba(120, 0, 120, 0.10)]                          PRICE
 
   async getPriceFromHTML({page, event, pageInfo, selectors}) {
 
@@ -1460,7 +1460,7 @@ export default class AbstractScraper {
   }
   //#endregion                                                 PRICE  
 
-  //#region [rgba(150, 0, 150, 0.30)]                          LONG HTML  
+  //#region [rgba(150, 0, 150, 0.10)]                          LONG HTML  
   writeLongTextHTML(mergedEvent) {
     if (!mergedEvent) return null;
     let uuid = crypto.randomUUID();
@@ -1484,12 +1484,50 @@ export default class AbstractScraper {
   }
   //#endregion                                                 LONG HTML
 
-  //#region [rgba(180, 0, 180, 0.30)]                          IMAGE    
+  //#region [rgba(180, 0, 180, 0.10)]                          IMAGE    
   async getImage({page, event, pageInfo, selectors, mode}){
     
     const res = {
       errors: []
     }
+
+    try {
+      await page.waitForSelector(selectors[0])
+    } catch (error) {
+      try {
+        if (selectors.length > 1) {
+          await page.waitForSelector(selectors[1])
+        } else {
+          res.errors.push({
+            error,
+            remarks: `geen ${selectors[0]}`
+          })
+          return res;
+        }
+      } catch (error2) {
+        try {
+          if (selectors.length > 2) {
+            await page.waitForSelector(selectors[2])
+          }else {
+            res.errors.push({
+              error,
+              remarks: `geen ${selectors[0]} of ${selectors[1]}`
+            })
+            return res;
+          }
+          
+        } catch (error3) {
+          res.errors.push({
+            error,
+            remarks: `geen ${selectors[0]} of ${selectors[1]} of ${selectors[2]}`
+          })      
+          return res;    
+        }
+      }
+
+    }
+    
+
     const title = event?.title ? event?.title : pageInfo.title 
     const pi = pageInfo?.pageInfo ? pageInfo?.pageInfo : event?.pageInfo
     let image = null
