@@ -31,16 +31,16 @@ export default class AbstractScraper {
     'uitgesteld', 'verplaatst', 'locatie gewijzigd', 'besloten', 'afgelast', 'geannuleerd'
   ]
 
-  //#region [rgba(0, 0, 30, 0.30)]                             DEBUGSETTINGS
+  //#region [rgba(0, 0, 30, 0.10)]                             DEBUGSETTINGS
   debugCorruptedUnavailable = false;
   debugSingleMergedEventCheck = false;
   debugRawEventAsyncCheck = false;
-  debugBaseEvents = false;
-  debugPageInfo = false;
+  debugBaseEvents = true;
+  debugPageInfo = true;
   debugPrice = false;
   //#endregion                                                DEBUGSETTINGS
 
-  //#region [rgba(0, 0, 60, 0.30)]                             ISROCKSETTINGS  
+  //#region [rgba(0, 0, 60, 0.10)]                             ISROCKSETTINGS  
   /**
    * Gebruikt in singleRawEventChecks' hasForbiddenTerms
    *
@@ -161,7 +161,7 @@ export default class AbstractScraper {
   ]
   //#endregion                                                ISROCKSETTINGS
 
-  //#region [rgba(0, 0, 120, 0.30)]                            CONSTRUCTOR & INSTALL  
+  //#region [rgba(0, 0, 120, 0.10)]                            CONSTRUCTOR & INSTALL  
   constructor(obj) {
     this.qwm;
     this.browser;
@@ -188,7 +188,7 @@ export default class AbstractScraper {
     return forced.includes(workerData.family)
   }
 
-  //#region [rgba(0, 0, 180, 0.30)]                            DIRTYLOG, TALK, DEBUG
+  //#region [rgba(0, 0, 180, 0.10)]                            DIRTYLOG, TALK, DEBUG
   /**
    * Wrapper om parentPort.postMessage(qwm.toConsole(xx)) heen.
    *
@@ -223,7 +223,7 @@ export default class AbstractScraper {
   }  
   //#endregion                                                DIRTYLOG, TALK, DEBUG
 
-  //#region [rgba(0, 0, 240, 0.30)]                            SCRAPE INIT & SCRAPE DIE
+  //#region [rgba(0, 0, 240, 0.10)]                            SCRAPE INIT & SCRAPE DIE
   async scrapeInit() {
 
     if (!this.puppeteerConfig.app.mainPage.useCustomScraper || !this.puppeteerConfig.app.singlePage.useCustomScraper) {
@@ -261,12 +261,12 @@ export default class AbstractScraper {
     await this.saveEvents();
     await this.announceToMonitorDone()
     this.dirtyTalk('DEAD')
-    await _t.waitFor(50);
+    await _t.waitTime(50);
     process.exit()
   }
   //#endregion                                                 SCRAPE INIT & SCRAPE DIE  
 
-  //#region [rgba(60, 0, 60, 0.30)]                            MAIN PAGE
+  //#region [rgba(60, 0, 60, 0.10)]                            MAIN PAGE
   async mainPage() {
     throw Error("abstract method used thx ");
   }
@@ -392,8 +392,8 @@ export default class AbstractScraper {
 
     if (stopFunctie) {
       clearTimeout(stopFunctie);
-    }
-    
+    } 
+
     page && !page.isClosed() && page.close();
 
     const eventsWithLongHTMLShortText = rawEvents.map(event => {
@@ -437,7 +437,7 @@ export default class AbstractScraper {
 
   //#endregion                                                MAIN PAGE
 
-  //#region [rgba(120, 0, 120, 0.30)]                          MAIN PAGE CHECK AND ANNOUNCE  
+  //#region [rgba(120, 0, 120, 0.10)]                          MAIN PAGE CHECK AND ANNOUNCE  
   /**
    * verifieert requiredProperties uit puppeteerConfig.app.mainPage.requiredProperties
    * waarschuwt naar monitor wie uitvalt 
@@ -596,7 +596,7 @@ export default class AbstractScraper {
 
   //#endregion                                                 MAIN PAGE CHECK
 
-  //#region [rgba(60, 0, 60, 0.30)]                            SINGLE PAGE  
+  //#region [rgba(60, 0, 60, 0.10)]                            SINGLE PAGE  
   /**
    * Process single Music Event
    * Naait het scrapen aan elkaar
@@ -923,7 +923,7 @@ export default class AbstractScraper {
   }  
   //#endregion                                                 SINGLE PAGE
 
-  //#region [rgba(90, 0, 90, 0.30)]                            ASYNC CHECKERS
+  //#region [rgba(90, 0, 90, 0.10)]                            ASYNC CHECKERS
   
   /**
    * Loopt over AbstractScraper.goodCategories en kijkt of ze in 
@@ -1288,7 +1288,7 @@ export default class AbstractScraper {
   }
   //#endregion                                                 ASYNC CHECKERS
 
-  //#region [rgba(120, 0, 120, 0.30)]                          PRICE
+  //#region [rgba(120, 0, 120, 0.10)]                          PRICE
 
   async getPriceFromHTML({page, event, pageInfo, selectors}) {
 
@@ -1296,6 +1296,7 @@ export default class AbstractScraper {
       price: null,
       errors: [],
     };
+
     const workingEventObj = {...event, ...pageInfo};
     const pi = workingEventObj.pageInfo + '';
 
@@ -1337,29 +1338,66 @@ export default class AbstractScraper {
     if (testText.match(/start/i)) {
       priceRes.price = null;
       this.debugPrice && this.dirtyDebug({
-        title: workingEventObj.title + '',
+        pi,
         price:priceRes.price,
         type: 'NOG ONBEKEND',
-        testText
       })      
       return priceRes
     }
 
     const priceMatch = testText
-      .replaceAll(/[\s\r\t ]/g,'')
-      .match(/(?<euros>\d+)(?<scheiding>[,.]?)(?<centen>\d\d|-)/);
+      .match(/(?<euros>\d{1,3})\s?(?<scheiding>[,.]?)\s?(?<centen>\d+|-)/);
 
     const priceMatchEuros = testText
-      .replaceAll(/[\s\r\t ]/g,'')
       .match(/\d+/);
+
+    const euros = priceMatch?.groups?.euros ?? null;
+    const centen = priceMatch?.groups?.centen ?? null;
+    const scheiding = priceMatch?.groups?.scheiding ?? null;
+    const backupEuros= Array.isArray(priceMatchEuros) ? priceMatchEuros[0] : null ;
+    let priceStringR = null;
+    try {
+      if (testText.includes('€')){
+        const tm = testText.match(/€\d{1,3}\s?[,.]?(\d{1,3}|-)/)
+        priceStringR = tm[0]
+      } 
+    } catch (error) {
+      //      
+    }    
+    if(Array.isArray(priceMatch) && !priceStringR) {
+      priceStringR = priceMatch[0];
+    }else if(!priceStringR){
+      if (euros){
+        priceStringR += euros;
+      }
+      if (scheiding){
+        if (centen){
+          if (centen.includes('-')){
+            priceStringR += '00';  
+          } else{
+            priceStringR += centen;
+          }
+        } else{
+          priceStringR += '00';  
+        }
+      } else{
+        priceStringR += '00';  
+      }
+    }
+    
+    let priceString = priceStringR.replace(',','.').replace('-', '00').replaceAll(/\s/g,'').replace('€','');
+
+    const debugIncl = {euros,centen,scheiding,backupEuros,pi, testText, priceMatchEuros, priceStringR}
+
+    if (this.debugPrice){
+      this.dirtyLog(debugIncl)
+    }
 
     if (testText.match(/gratis|free/i) && !Array.isArray(priceMatch) && !Array.isArray(priceMatchEuros)) {
       priceRes.price = 0;
       this.debugPrice && this.dirtyDebug({
-        title: workingEventObj.title + '',
         price:priceRes.price,
-        type: 'GRATIS',
-        testText
+        type: 'GRATIS'
       })      
       return priceRes
     }
@@ -1371,9 +1409,8 @@ export default class AbstractScraper {
         if (testText.match(/uitverkocht|sold\sout/i)) {
           priceRes.price = null;
           this.debugPrice && this.dirtyDebug({
-            title: workingEventObj.title + '',
             price: priceRes.price,
-            type: 'UITVERKOCHT',
+            type: 'UITVERKOCHT'
           })      
           return priceRes
         } else {
@@ -1390,34 +1427,21 @@ export default class AbstractScraper {
       priceRes.price = Number(priceMatchEuros[0]);
       this.checkIsNumber(priceRes, pi)
       this.debugPrice && this.dirtyDebug({
-        title: workingEventObj.title + '',
         price:priceRes.price,
+        'type':'geen priceMatch wel matchEuros'
       })      
       return priceRes;
     }
 
-    if (priceMatch.groups?.centen && priceMatch.groups?.centen.includes('-')){
-      priceMatch.groups.centen = '00';
-    }
-
+   
     try {
-      if (priceMatch.groups.scheiding){
-        if (priceMatch.groups.euros && priceMatch.groups.centen){
-          priceRes.price = (Number(priceMatch.groups.euros) * 100 + Number(priceMatch.groups.centen)) / 100;
-        }
-        if (priceMatch.groups.euros){
-          priceRes.price = Number(priceMatch.groups.euros)
-        }
-      } else {
-        priceRes.price = Number(priceMatch.groups.euros)
-      }
-      this.checkIsNumber(priceRes, pi)
-      this.debugPrice && this.dirtyDebug({
-        title: workingEventObj.title + '',
-        price: priceRes.price
-      })      
-      return priceRes;
 
+      priceRes.price = Number(priceString)
+      
+      this.checkIsNumber(priceRes, pi)
+      const pii = pi.replace(`</a>`, ` €${priceRes.price.toFixed(2)}</a>`);
+      this.debugPrice && this.dirtyDebug(pii)
+      return priceRes;
     } catch (priceCalcErr) {
 
       if (selectorsCopy.length) {
@@ -1427,21 +1451,19 @@ export default class AbstractScraper {
         if (testText.match(/uitverkocht|sold\sout/i)) {
           priceRes.price = null;
           this.debugPrice && this.dirtyDebug({
-            title: workingEventObj.title + '',
             price: priceRes.price,
             type: 'UITVERKOCHT',
+            ...debugIncl
           })      
           return priceRes
         } else{
           priceRes.push({
             error: priceCalcErr,
             remarks: `price calc err ${pi}`, 
-            toDebug: {testText, priceMatch, priceRes}
+            toDebug: {debugIncl}
           });
           return priceRes          
         }
-
- 
       }
     }
   
@@ -1460,7 +1482,7 @@ export default class AbstractScraper {
   }
   //#endregion                                                 PRICE  
 
-  //#region [rgba(150, 0, 150, 0.30)]                          LONG HTML  
+  //#region [rgba(150, 0, 150, 0.10)]                          LONG HTML  
   writeLongTextHTML(mergedEvent) {
     if (!mergedEvent) return null;
     let uuid = crypto.randomUUID();
@@ -1484,13 +1506,63 @@ export default class AbstractScraper {
   }
   //#endregion                                                 LONG HTML
 
-  //#region [rgba(180, 0, 180, 0.30)]                          IMAGE    
+  //#region [rgba(180, 0, 180, 0.10)]                          IMAGE    
   async getImage({page, event, pageInfo, selectors, mode}){
     
     const res = {
       errors: []
     }
+
+    try {
+      
+      await page.waitForSelector(selectors[0], {
+        timeout: 2500
+      })
+    } catch (error) {
+      
+      try {
+        if (selectors.length > 1) {
+      
+          await page.waitForSelector(selectors[1], {
+            timeout: 250
+          })
+        } else {
+          res.errors.push({
+            error,
+            remarks: `geen ${selectors[0]}`
+          })
+          return res;
+        }
+      } catch (error2) {
+      
+        try {
+          if (selectors.length > 2) {
+      
+            await page.waitForSelector(selectors[2], {
+              timeout: 250
+            })
+          }else {
+            res.errors.push({
+              error,
+              remarks: `geen ${selectors[0]} of ${selectors[1]}`
+            })
+            return res;
+          }
+          
+        } catch (error3) {
+      
+          res.errors.push({
+            error,
+            remarks: `geen ${selectors[0]} of ${selectors[1]} of ${selectors[2]}`
+          })      
+          return res;    
+        }
+      }
+
+    }
+
     const title = event?.title ? event?.title : pageInfo.title 
+
     const pi = pageInfo?.pageInfo ? pageInfo?.pageInfo : event?.pageInfo
     let image = null
     let selectorsCopy = [...selectors];
@@ -1558,7 +1630,11 @@ export default class AbstractScraper {
 
     const imageCrypto = crypto.randomUUID();
     let imagePath = `${this.eventImagesFolder}/${workerData.family}/${imageCrypto}`;
-    if (await this.downloadImageCompress(event, image, imagePath)){
+    const diCompressRes = await this.downloadImageCompress(event, image, imagePath);
+    if (!diCompressRes){
+      this.errors.push({
+        remarks: `download compress ${event.title} ${image} fail`
+      })
       imagePath = '';
     }
 

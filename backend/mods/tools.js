@@ -171,7 +171,7 @@ const def = {
 
 export default def;
 
-export async function waitFor(wait = 500) {
+export async function waitTime(wait = 500) {
   return new Promise((res) => {
     setTimeout(res, wait);
   });

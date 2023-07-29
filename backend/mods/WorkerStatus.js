@@ -171,7 +171,7 @@ export default class WorkerStatus {
         WorkerStatus.mwss.broadcast(serverStoptBoodschap.json);
         WorkerStatus.mwss.broadcast(serverStoptProcess.json);
       }     
-      await _t.waitFor(25);
+      await _t.waitTime(25);
       process.exit()
     } else if (errorLevel === 'close-thread'){
       console.log(`%cSTOPPING THREAD\n of ${name}`, 'color: red; background: yellow; font-weight: bold; font-size: 18px')

@@ -14,7 +14,7 @@ const oostpoortScraper = new AbstractScraper(makeScraperConfig({
     },
     singlePage: {
       timeout: 20018,
-      waitFor: 'load'
+      waitTime: 'load'
     },
     app: {
       mainPage: {
@@ -79,7 +79,7 @@ oostpoortScraper.mainPage = async function () {
 
   const {stopFunctie, page} = await this.mainPageStart()
 
-  await _t.waitFor(50);
+  await _t.waitTime(50);
 
   const cookiesNodig = await page.evaluate(()=>{
     return document.querySelector('html').classList.contains('has-open-cookie')
@@ -90,7 +90,7 @@ oostpoortScraper.mainPage = async function () {
       document.querySelector("[name*='marketing']").click()
       document.querySelector(".cookie__settings .cookie__process").click()
     })    
-    await _t.waitFor(50)
+    await _t.waitTime(50)
   }
 
   await _t.autoScroll(page);
@@ -139,7 +139,7 @@ oostpoortScraper.mainPage = async function () {
 
   rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
 
-  //this.saveBaseEventlist(workerData.family, rawEvents)
+  this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
   return await this.mainPageEnd({
     stopFunctie, rawEvents: thisWorkersEvents}
@@ -163,7 +163,7 @@ oostpoortScraper.singlePage = async function ({ page, event }) {
     })
   }
   
-  await _t.waitFor(5000);
+  await _t.waitTime(5000);
 
   let pageInfo;
  

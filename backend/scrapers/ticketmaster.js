@@ -221,7 +221,7 @@ ticketmasterScraper.singlePage = async function ({event}) {
   const imageCrypto = crypto.randomUUID();
   const imagePath = `${this.eventImagesFolder}/${pageInfo.location}/${imageCrypto}`;
   await this.downloadImageCompress(event, event.image, imagePath, pageInfo.location)
-  await _t.waitFor(25);
+  await _t.waitTime(25);
   event.image = imagePath;
   pageInfo.image = imagePath;
   

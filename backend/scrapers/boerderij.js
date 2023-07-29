@@ -2,10 +2,10 @@ import { workerData } from "worker_threads";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import crypto from "crypto";
 import axios from "axios";
-import {waitFor} from "../mods/tools.js"
+import {waitTime} from "../mods/tools.js"
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 
-//#region [rgba(0, 60, 0, 0.3)]       SCRAPER CONFIG
+//#region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const boerderijScraper = new AbstractScraper(makeScraperConfig({
   maxExecutionTime: 30004,
   workerData: Object.assign({}, workerData),
@@ -35,7 +35,7 @@ const boerderijScraper = new AbstractScraper(makeScraperConfig({
 
 boerderijScraper.listenToMasterThread();
 
-//#region [rgba(0, 120, 0, 0.3)]      RAW EVENT CHECK
+//#region [rgba(0, 120, 0, 0.1)]      RAW EVENT CHECK
 boerderijScraper.singleRawEventCheck = async function(event){
 
   let workingTitle = this.cleanupEventTitle(event.title);
@@ -67,10 +67,10 @@ boerderijScraper.singleRawEventCheck = async function(event){
 }
 //#endregion                          RAW EVENT CHECK
 
-//#region [rgba(0, 180, 0, 0.3)]      SINGLE EVENT CHECK
+//#region [rgba(0, 180, 0, 0.1)]      SINGLE EVENT CHECK
 //#endregion                          SINGLE EVENT CHECK
 
-//#region [rgba(0, 240, 0, 0.3)]      MAIN PAGE
+//#region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
 boerderijScraper.mainPage = async function () {
 
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
@@ -105,7 +105,7 @@ boerderijScraper.mainPage = async function () {
     const imageCrypto = crypto.randomUUID();
     const imagePath = `${this.eventImagesFolder}/boerderij/${imageCrypto}`;
     await this.downloadImageCompress(rawEvents[i], rawEvents[i].image, imagePath)
-    await waitFor(100);
+    await waitTime(100);
     rawEvents[i].image = imagePath;
   }
 
@@ -117,7 +117,7 @@ boerderijScraper.mainPage = async function () {
 };
 //#endregion                          MAIN PAGE
 
-//#region [rgba(120, 0, 0, 0.3)]     SINGLE PAGE
+//#region [rgba(120, 0, 0, 0.1)]     SINGLE PAGE
 boerderijScraper.singlePage = async function ({ event }) {
  
   const {stopFunctie} =  await this.singlePageStart()

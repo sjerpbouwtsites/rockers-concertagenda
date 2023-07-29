@@ -97,7 +97,7 @@ depulScraper.mainPage = async function () {
     loadContent("all", "music"); // eslint-disable-line
   });
 
-  await _t.waitFor(250);
+  await _t.waitTime(250);
 
   let rawEvents = await page.evaluate(
     ({ months,workerData }) => {
@@ -269,7 +269,14 @@ depulScraper.singlePage = async function ({ page, event }) {
   pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
   pageInfo.image = imageRes.image;
 
-  const priceRes = await this.getPriceFromHTML({page, event, pageInfo, selectors: [".column.right"], });
+  await page.evaluate(()=>{
+    document.querySelectorAll('.column.right li').forEach(listItem => {
+      if (listItem.innerHTML.includes('€')){
+        listItem.classList.add('depul-price-certain')
+      }
+    })
+  })
+  const priceRes = await this.getPriceFromHTML({page, event, pageInfo, selectors: [".depul-price-certain",".column.right"], });
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
   pageInfo.price = priceRes.price;  
 

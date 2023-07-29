@@ -2,7 +2,7 @@ import { workerData } from "worker_threads";
 import * as _t from "../mods/tools.js";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
-import {waitFor} from "../mods/tools.js"
+import {waitTime} from "../mods/tools.js"
 
 //#region [rgba(0, 60, 0, 0.3)]       SCRAPER CONFIG
 const voltScraper = new AbstractScraper(makeScraperConfig({
@@ -147,7 +147,7 @@ voltScraper.singlePage = async function ({ page, url, event}) {
     await page.evaluate(()=>{
       document.querySelector('.cookiesjsr-btn.allowAll').click()
     })
-    await waitFor(1500)
+    await waitTime(1500)
   }
 
   const pageInfo = await page.evaluate(

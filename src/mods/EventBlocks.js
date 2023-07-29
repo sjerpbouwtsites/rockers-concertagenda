@@ -10,8 +10,8 @@ class EventBlocks extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      musicEvents: [],
       maxEventsShown: 100,
+      musicEvents: [],
       eventDataLoading: false,
       eventDataLoaded: false,
       filterHideSoldOut: false,
@@ -510,7 +510,8 @@ ${BEMify(`event-block`, [
               key={musicEventKey}
               data-date={musicEvent.eventMonth}
               className={selectors.article}
-              onClick={!musicEvent.enlarged ? this.loadLongerText.bind(this, musicEventKey) : null}
+              onClick={(!musicEvent.enlarged && musicEvent.longText) ? this.loadLongerText.bind(this, musicEventKey) : null}
+              title={musicEvent.longText ? '': `geen verdere info beschikbaar`}
             >
               {firstOfMonthBlock}
               {imageHTML}

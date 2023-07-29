@@ -283,7 +283,14 @@ gebrdenobelScraper.singlePage = async function ({ page, event }) {
   pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
   pageInfo.image = imageRes.image;  
 
-  const priceRes = await this.getPriceFromHTML({page, event, pageInfo, selectors: [".event-table"], });
+  await page.evaluate(()=>{
+    document.querySelectorAll('.event-table tr').forEach(row => {
+      if (row.textContent.includes('€')){
+        row.classList.add('gebrdenobel-price-manual')
+      }
+    })
+  })
+  const priceRes = await this.getPriceFromHTML({page, event, pageInfo, selectors: [".gebrdenobel-price-manual", ".event-table"], });
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
   pageInfo.price = priceRes.price;  
 

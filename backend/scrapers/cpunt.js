@@ -95,7 +95,7 @@ cpuntScraper.mainPage = async function () {
     );
   }
 
-  await _t.waitFor(50);
+  await _t.waitTime(50);
 
   let rawEvents = await page.evaluate(
     ({workerData,unavailabiltyTerms}) => {
@@ -228,6 +228,7 @@ cpuntScraper.singlePage = async function ({ page, event }) {
   }, {months: this.months, event});
 
   const imageRes = await this.getImage({page, event, pageInfo, selectors: [".bg-image[style*='background']"], mode: 'background-src' })
+  
   pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
   pageInfo.image = imageRes.image;
 

@@ -89,7 +89,7 @@ neushoornScraper.mainPage = async function () {
     await page.waitForSelector(".productions__item", {
       timeout: this.singlePageTimeout,
     });
-    await _t.waitFor(50);
+    await _t.waitTime(50);
   } catch (caughtError) {
     _t.handleError(caughtError, workerData, `Laad en klikwachten timeout neushoorn`, 'close-thread', null);
     return await this.mainPageEnd({
