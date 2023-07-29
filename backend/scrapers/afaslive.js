@@ -79,19 +79,19 @@ afasliveScraper.mainPage = async function () {
   const {stopFunctie, page} = await this.mainPageStart()
 
   await _t.autoScroll(page);
-  await _t.waitFor(750);
+  await _t.waitTime(750);
   
   await _t.autoScroll(page);
-  await _t.waitFor(750);
+  await _t.waitTime(750);
 
   await _t.autoScroll(page);
-  await _t.waitFor(750);
+  await _t.waitTime(750);
 
   await _t.autoScroll(page);
-  await _t.waitFor(750);
+  await _t.waitTime(750);
 
   await _t.autoScroll(page);
-  await _t.waitFor(750);
+  await _t.waitTime(750);
   
   await _t.autoScroll(page); // TODO hier wat aan doen. maak er een do while van met een timeout. dit is waardeloos.
 
@@ -127,7 +127,7 @@ afasliveScraper.singlePage = async function ({ page, event }) {
   
   const {stopFunctie} =  await this.singlePageStart()
 
-  await _t.waitFor(250);
+  await _t.waitTime(250);
 
   const pageInfo = await page.evaluate(
     ({ months,event }) => {

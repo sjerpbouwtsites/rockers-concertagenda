@@ -1,7 +1,7 @@
 import { workerData } from "worker_threads";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
-import {waitFor} from "../mods/tools.js";
+import {waitTime} from "../mods/tools.js";
 
 //#region [rgba(0, 60, 0, 0.3)]       SCRAPER CONFIG
 const tivoliVredenburgScraper = new AbstractScraper(makeScraperConfig({
@@ -135,7 +135,7 @@ tivoliVredenburgScraper.singlePage = async function ({ page, event }) {
       label.click()
       accept.click();
     })
-    await waitFor(1500)
+    await waitTime(1500)
   }
 
   const pageInfo = await page.evaluate(({event}) => {

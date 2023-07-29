@@ -261,7 +261,7 @@ export default class AbstractScraper {
     await this.saveEvents();
     await this.announceToMonitorDone()
     this.dirtyTalk('DEAD')
-    await _t.waitFor(50);
+    await _t.waitTime(50);
     process.exit()
   }
   //#endregion                                                 SCRAPE INIT & SCRAPE DIE  

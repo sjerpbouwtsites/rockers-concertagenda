@@ -1,6 +1,6 @@
 import sharp from 'sharp';
 import fs from "fs";
-import {waitFor} from "./mods/tools.js"
+import {waitTime} from "./mods/tools.js"
 
 function initLocationImagesConversion(){
   const eventImagesDestFolder = "/home/sjerp/dev/apache/concertagenda/public/location-images/";
@@ -46,7 +46,7 @@ async function downloadImageCompress(image, imagePath){
       console.log(`klaar met ${image}`)
     });    
 
-  await waitFor(400)
+  await waitTime(400)
 }
 
 initLocationImagesConversion()

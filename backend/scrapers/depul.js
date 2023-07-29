@@ -97,7 +97,7 @@ depulScraper.mainPage = async function () {
     loadContent("all", "music"); // eslint-disable-line
   });
 
-  await _t.waitFor(250);
+  await _t.waitTime(250);
 
   let rawEvents = await page.evaluate(
     ({ months,workerData }) => {

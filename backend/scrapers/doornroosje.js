@@ -90,7 +90,7 @@ doornroosjeScraper.mainPage = async function () {
   const {stopFunctie, page} = await this.mainPageStart()
 
   await page.waitForSelector(".c-program__title");
-  await _t.waitFor(50);
+  await _t.waitTime(50);
 
   let rawEvents = await page.evaluate(({workerData, months}) => {
     return Array.from(document.querySelectorAll(".c-program__item"))

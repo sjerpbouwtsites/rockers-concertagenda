@@ -90,7 +90,7 @@ dbsScraper.mainPage = async function () {
   const {stopFunctie, page} = await this.mainPageStart()
 
   await page.waitForSelector('.fusion-events-post')
-  await _t.waitFor(100)
+  await _t.waitTime(100)
 
   let rawEvents = await page.evaluate(
     ({ months,workerData,unavailabiltyTerms }) => {

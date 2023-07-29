@@ -33,14 +33,14 @@ async function recursiveStartWorkers(workerConfig) {
     console.log("workers op");
     return true;
   }
-  await _t.waitFor(150);
+  await _t.waitTime(150);
   return startWorker(workerConfig);
 }
 
 async function startWorker(workerConfig) {
   const toManyWorkersWorking = WorkerStatus.workersWorking() >= WorkerStatus.maxSimultaneousWorkers;
   if (toManyWorkersWorking) {
-    await _t.waitFor(150);
+    await _t.waitTime(150);
     return recursiveStartWorkers(workerConfig);
   }
 

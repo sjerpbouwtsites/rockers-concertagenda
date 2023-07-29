@@ -95,7 +95,7 @@ cpuntScraper.mainPage = async function () {
     );
   }
 
-  await _t.waitFor(50);
+  await _t.waitTime(50);
 
   let rawEvents = await page.evaluate(
     ({workerData,unavailabiltyTerms}) => {

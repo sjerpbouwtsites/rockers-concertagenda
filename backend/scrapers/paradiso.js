@@ -201,7 +201,7 @@ paradisoScraper.singlePage = async function ({ page, event }) {
     october: "10",
   }
 
-  await _t.waitFor(500);
+  await _t.waitTime(500);
 
   const pageInfo = await page.evaluate(
     ({ months, buitenRes }) => {

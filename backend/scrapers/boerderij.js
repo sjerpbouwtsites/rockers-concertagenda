@@ -2,7 +2,7 @@ import { workerData } from "worker_threads";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import crypto from "crypto";
 import axios from "axios";
-import {waitFor} from "../mods/tools.js"
+import {waitTime} from "../mods/tools.js"
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 
 //#region [rgba(0, 60, 0, 0.3)]       SCRAPER CONFIG
@@ -105,7 +105,7 @@ boerderijScraper.mainPage = async function () {
     const imageCrypto = crypto.randomUUID();
     const imagePath = `${this.eventImagesFolder}/boerderij/${imageCrypto}`;
     await this.downloadImageCompress(rawEvents[i], rawEvents[i].image, imagePath)
-    await waitFor(100);
+    await waitTime(100);
     rawEvents[i].image = imagePath;
   }
 
