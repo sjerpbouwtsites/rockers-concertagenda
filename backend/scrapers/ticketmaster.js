@@ -201,6 +201,9 @@ ticketmasterScraper.singlePage = async function ({event}) {
     })    
     return await this.singlePageEnd({pageInfo, stopFunctie})
   }
+  if (pageInfo.title.toLowerCase().includes("heaven")){
+    this.dirtyLog(event)
+  }
 
   if (event.attractions.length > 1) {
     pageInfo.shortTitle = event.attractions.reduce((prev, next) => {

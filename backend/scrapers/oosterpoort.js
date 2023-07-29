@@ -4,7 +4,7 @@ import makeScraperConfig from "./gedeeld/scraper-config.js";
 import * as _t from "../mods/tools.js";
 import ErrorWrapper from "../mods/error-wrapper.js";
 
-//#region [rgba(0, 60, 0, 0.3)]       SCRAPER CONFIG
+//#region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const oostpoortScraper = new AbstractScraper(makeScraperConfig({
   maxExecutionTime: 30019,
   workerData: Object.assign({}, workerData),
@@ -31,7 +31,7 @@ const oostpoortScraper = new AbstractScraper(makeScraperConfig({
 
 oostpoortScraper.listenToMasterThread();
 
-//#region [rgba(0, 120, 0, 0.3)]      RAW EVENT CHECK
+//#region [rgba(0, 120, 0, 0.1)]      RAW EVENT CHECK
 oostpoortScraper.singleRawEventCheck = async function (event) {
 
   const workingTitle = this.cleanupEventTitle(event.title);
@@ -63,10 +63,10 @@ oostpoortScraper.singleRawEventCheck = async function (event) {
 };
 //#endregion                          RAW EVENT CHECK
 
-//#region [rgba(0, 180, 0, 0.3)]      SINGLE EVENT CHECK
+//#region [rgba(0, 180, 0, 0.1)]      SINGLE EVENT CHECK
 //#endregion                          SINGLE EVENT CHECK
 
-//#region [rgba(0, 240, 0, 0.3)]      MAIN PAGE
+//#region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
 oostpoortScraper.mainPage = async function () {
 
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
@@ -139,7 +139,7 @@ oostpoortScraper.mainPage = async function () {
 
   rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
 
-  this.saveBaseEventlist(workerData.family, rawEvents)
+  //this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
   return await this.mainPageEnd({
     stopFunctie, rawEvents: thisWorkersEvents}
@@ -147,12 +147,23 @@ oostpoortScraper.mainPage = async function () {
 };
 //#endregion                          MAIN PAGE
 
-//#region [rgba(120, 0, 0, 0.3)]     SINGLE PAGE
+//#region [rgba(120, 0, 0, 0.1)]     SINGLE PAGE
 oostpoortScraper.singlePage = async function ({ page, event }) {
   
   const {stopFunctie} =  await this.singlePageStart()
   
-  await _t.waitFor(600);
+  
+  const cookiesReq = await page.evaluate(()=>{
+    document.querySelector('.overlay.cookie');
+  });
+  if (cookiesReq){
+    await page.evaluate(()=>{
+      document.querySelector('[name*=marketing]').click()
+      document.querySelector('.cookie__process.overlay__button').click();
+    })
+  }
+  
+  await _t.waitFor(5000);
 
   let pageInfo;
  

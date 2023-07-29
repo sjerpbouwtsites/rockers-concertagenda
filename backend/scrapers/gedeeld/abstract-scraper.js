@@ -36,7 +36,7 @@ export default class AbstractScraper {
   debugSingleMergedEventCheck = false;
   debugRawEventAsyncCheck = false;
   debugBaseEvents = false;
-  debugPageInfo = true;
+  debugPageInfo = false;
   debugPrice = false;
   //#endregion                                                DEBUGSETTINGS
 
@@ -1557,8 +1557,10 @@ export default class AbstractScraper {
     }
 
     const imageCrypto = crypto.randomUUID();
-    const imagePath = `${this.eventImagesFolder}/${workerData.family}/${imageCrypto}`;
-    await this.downloadImageCompress(event, image, imagePath)
+    let imagePath = `${this.eventImagesFolder}/${workerData.family}/${imageCrypto}`;
+    if (await this.downloadImageCompress(event, image, imagePath)){
+      imagePath = '';
+    }
 
     res.image = imagePath;
     return res;
@@ -1568,20 +1570,20 @@ export default class AbstractScraper {
   downloadImage(url, filepath) {
     
     return new Promise((resolve, reject) => {
-      https.get(url, (res) => {
-        if (res.statusCode === 200) {
-          res.pipe(fs.createWriteStream(filepath))
-            .on('error', reject)
-            .once('close', () => resolve(filepath));
-        } else {
-          res.pipe(fs.createWriteStream(fsDirections.errorLog))
-            .on('error', reject)
-            .once('close', () => resolve(''));
-          res.resume();
-          reject(new Error(`Request Failed With a Status Code: ${res.statusCode}`));
-
-        }
-      });
+      try {
+        https.get(url, (res) => {
+          if (res.statusCode === 200) {
+            res.pipe(fs.createWriteStream(filepath))
+              .on('error', reject)
+              .once('close', () => resolve(filepath));
+          } else {
+            res.resume();
+            reject(new Error(`Request Failed With a Status Code: ${res.statusCode}`));
+          }
+        }); 
+      } catch (error) {
+        reject(error)
+      }
     });
   }
 
@@ -1611,7 +1613,20 @@ export default class AbstractScraper {
       extension = ss[1]
     }
 
-    await this.downloadImage(image, `${imagePath}-ori${extension}`)
+    try {
+      await this.downloadImage(image, `${imagePath}-ori${extension}`)
+    } catch (error) {
+      _t.wrappedHandleError(new ErrorWrapper({
+        error,
+        remarks: `download image`,
+        errorLevel: 'notice',
+        workerData,
+        toDebug: {
+          image, imagePath
+        }
+      }))
+      return false;      
+    }
 
     await sharp(`${imagePath}-ori${extension}`)
       .resize(440, 225)
