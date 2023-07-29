@@ -196,9 +196,15 @@ metropoolScraper.singlePage = async function ({ page, event}) {
     return res;
   }, {months: this.months, event});
 
-  const imageRes = await this.getImage({page, event, pageInfo, selectors: ['.object-fit-cover'], mode: 'image-src' })
-  pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
-  pageInfo.image = imageRes.image;  
+  try {
+    await page.waitForSelector('.object-fit-cover')
+    const imageRes = await this.getImage({page, event, pageInfo, selectors: ['.object-fit-cover'], mode: 'image-src' })
+    pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
+    pageInfo.image = imageRes.image;  
+  } catch (error) {
+    pageInfo.errors.push({error, remarks: 'wachte op afb'})    
+  }
+
 
   const priceRes = await this.getPriceFromHTML({page, event, pageInfo, selectors: [".doorPrice"], });
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
