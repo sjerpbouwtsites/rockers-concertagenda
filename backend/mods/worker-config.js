@@ -56,7 +56,7 @@ export const workerConfig = {
   },
   oosterpoort: { workerCount: 1, workerConcurrent: 1,forceSet: 5, },
   p60: { workerCount: 1, workerConcurrent: 1,forceSet: 5, },
-  paradiso: { workerCount: 2, workerConcurrent: 2, CPUReq: "high", forceSet: 5, },
+  paradiso: { workerCount: 2, workerConcurrent: 1, CPUReq: "high", forceSet: 5, },
   patronaat: { workerCount: 2, workerConcurrent: 2, forceSet: 6, },
   tivolivredenburg: { workerCount: 4, workerConcurrent: 2, forceSet: 6, },
   ticketmaster: {
@@ -88,7 +88,6 @@ class WorkerListConf {
   }
   isForced() {}
   create(config) {
-    console.log(config)
     const forceArg = this.shellArguments?.force ?? "";
     const forceSetNo = this.shellArguments?.forceset ? Number(this.shellArguments?.forceset) : null;
     const forced = forceArg.includes(config.family) || forceArg.includes("all") || config.forceSet === forceSetNo;

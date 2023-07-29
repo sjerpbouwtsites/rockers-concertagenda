@@ -255,7 +255,7 @@ afasliveScraper.singlePage = async function ({ page, event }) {
   pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
   pageInfo.image = imageRes.image;
 
-  const priceRes = await this.getPriceFromHTML({page, event, pageInfo, selectors: ["#tickets"], });
+  const priceRes = await this.getPriceFromHTML({page, event, pageInfo, selectors: ['.jspPane', "#tickets"], });
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
   pageInfo.price = priceRes.price;
 

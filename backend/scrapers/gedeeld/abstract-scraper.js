@@ -1296,6 +1296,7 @@ export default class AbstractScraper {
       price: null,
       errors: [],
     };
+
     const workingEventObj = {...event, ...pageInfo};
     const pi = workingEventObj.pageInfo + '';
 
@@ -1337,29 +1338,66 @@ export default class AbstractScraper {
     if (testText.match(/start/i)) {
       priceRes.price = null;
       this.debugPrice && this.dirtyDebug({
-        title: workingEventObj.title + '',
+        pi,
         price:priceRes.price,
         type: 'NOG ONBEKEND',
-        testText
       })      
       return priceRes
     }
 
     const priceMatch = testText
-      .replaceAll(/[\s\r\t ]/g,'')
-      .match(/(?<euros>\d+)(?<scheiding>[,.]?)(?<centen>\d\d|-)/);
+      .match(/(?<euros>\d{1,3})\s?(?<scheiding>[,.]?)\s?(?<centen>\d+|-)/);
 
     const priceMatchEuros = testText
-      .replaceAll(/[\s\r\t ]/g,'')
       .match(/\d+/);
+
+    const euros = priceMatch?.groups?.euros ?? null;
+    const centen = priceMatch?.groups?.centen ?? null;
+    const scheiding = priceMatch?.groups?.scheiding ?? null;
+    const backupEuros= Array.isArray(priceMatchEuros) ? priceMatchEuros[0] : null ;
+    let priceStringR = null;
+    try {
+      if (testText.includes('€')){
+        const tm = testText.match(/€\d{1,3}\s?[,.]?(\d{1,3}|-)/)
+        priceStringR = tm[0]
+      } 
+    } catch (error) {
+      //      
+    }    
+    if(Array.isArray(priceMatch) && !priceStringR) {
+      priceStringR = priceMatch[0];
+    }else if(!priceStringR){
+      if (euros){
+        priceStringR += euros;
+      }
+      if (scheiding){
+        if (centen){
+          if (centen.includes('-')){
+            priceStringR += '00';  
+          } else{
+            priceStringR += centen;
+          }
+        } else{
+          priceStringR += '00';  
+        }
+      } else{
+        priceStringR += '00';  
+      }
+    }
+    
+    let priceString = priceStringR.replace(',','.').replace('-', '00').replaceAll(/\s/g,'').replace('€','');
+
+    const debugIncl = {euros,centen,scheiding,backupEuros,pi, testText, priceMatchEuros, priceStringR}
+
+    if (this.debugPrice){
+      this.dirtyLog(debugIncl)
+    }
 
     if (testText.match(/gratis|free/i) && !Array.isArray(priceMatch) && !Array.isArray(priceMatchEuros)) {
       priceRes.price = 0;
       this.debugPrice && this.dirtyDebug({
-        title: workingEventObj.title + '',
         price:priceRes.price,
-        type: 'GRATIS',
-        testText
+        type: 'GRATIS'
       })      
       return priceRes
     }
@@ -1371,9 +1409,8 @@ export default class AbstractScraper {
         if (testText.match(/uitverkocht|sold\sout/i)) {
           priceRes.price = null;
           this.debugPrice && this.dirtyDebug({
-            title: workingEventObj.title + '',
             price: priceRes.price,
-            type: 'UITVERKOCHT',
+            type: 'UITVERKOCHT'
           })      
           return priceRes
         } else {
@@ -1390,34 +1427,21 @@ export default class AbstractScraper {
       priceRes.price = Number(priceMatchEuros[0]);
       this.checkIsNumber(priceRes, pi)
       this.debugPrice && this.dirtyDebug({
-        title: workingEventObj.title + '',
         price:priceRes.price,
+        'type':'geen priceMatch wel matchEuros'
       })      
       return priceRes;
     }
 
-    if (priceMatch.groups?.centen && priceMatch.groups?.centen.includes('-')){
-      priceMatch.groups.centen = '00';
-    }
-
+   
     try {
-      if (priceMatch.groups.scheiding){
-        if (priceMatch.groups.euros && priceMatch.groups.centen){
-          priceRes.price = (Number(priceMatch.groups.euros) * 100 + Number(priceMatch.groups.centen)) / 100;
-        }
-        if (priceMatch.groups.euros){
-          priceRes.price = Number(priceMatch.groups.euros)
-        }
-      } else {
-        priceRes.price = Number(priceMatch.groups.euros)
-      }
-      this.checkIsNumber(priceRes, pi)
-      this.debugPrice && this.dirtyDebug({
-        title: workingEventObj.title + '',
-        price: priceRes.price
-      })      
-      return priceRes;
 
+      priceRes.price = Number(priceString)
+      
+      this.checkIsNumber(priceRes, pi)
+      const pii = pi.replace(`</a>`, ` €${priceRes.price.toFixed(2)}</a>`);
+      this.debugPrice && this.dirtyDebug(pii)
+      return priceRes;
     } catch (priceCalcErr) {
 
       if (selectorsCopy.length) {
@@ -1427,21 +1451,19 @@ export default class AbstractScraper {
         if (testText.match(/uitverkocht|sold\sout/i)) {
           priceRes.price = null;
           this.debugPrice && this.dirtyDebug({
-            title: workingEventObj.title + '',
             price: priceRes.price,
             type: 'UITVERKOCHT',
+            ...debugIncl
           })      
           return priceRes
         } else{
           priceRes.push({
             error: priceCalcErr,
             remarks: `price calc err ${pi}`, 
-            toDebug: {testText, priceMatch, priceRes}
+            toDebug: {debugIncl}
           });
           return priceRes          
         }
-
- 
       }
     }
   

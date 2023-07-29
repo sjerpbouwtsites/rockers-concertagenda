@@ -182,6 +182,14 @@ nieuwenorScraper.singlePage = async function ({ page, event }) {
   pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
   pageInfo.image = imageRes.image;  
 
+  await page.evaluate(()=>{
+    const s=  document.querySelector('.sticky');
+    if (!s.textContent.includes('€')){
+      const e = document.createElement('span');
+      e.innerHTML = '€0.00';
+      s.appendChild(e)
+    }
+  })
   const priceRes = await this.getPriceFromHTML({page, event, pageInfo, selectors: ['.sticky']});
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
   pageInfo.price = priceRes.price;  

@@ -190,11 +190,16 @@ occiiScraper.singlePage = async function ({ page, event}) {
   pageInfo.image = imageRes.image;
 
   await page.evaluate(()=>{
-    const priceM = document.querySelector('.occii-single-event, .occii-event-details')?.textContent.match(/€.*/);
+    const t = document.querySelector('.occii-single-event, .occii-event-details')?.textContent ?? '';
+    const priceM = t.match(/€.*/);
     if (priceM){
+      let p = priceM[0];
+      if (!p.match(/\d+,\d/) && p.match(/\d+-\d/)){
+        p = p.replace(/-\d/,'')
+      }
       const priceEl = document.createElement('div');
       priceEl.id = 'occii-temp-price';
-      priceEl.innerHTML = priceM[0];
+      priceEl.innerHTML = p;
       document.body.appendChild(priceEl)
     }
   })

@@ -180,7 +180,7 @@ defluxScraper.singlePage = async function ({ page, event}) {
   pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
   pageInfo.image = imageRes.image;  
 
-  const priceRes = await this.getPriceFromHTML({page, event, pageInfo, selectors: [".desc_trig_outter"], });
+  const priceRes = await this.getPriceFromHTML({page, event, pageInfo, selectors: [".evcal_desc3",".desc_trig_outter"], });
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
   pageInfo.price = priceRes.price;  
 
