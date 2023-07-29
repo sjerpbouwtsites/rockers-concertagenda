@@ -1,4 +1,1614 @@
 
+  kavka-0 Error - 12:40:04 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:816:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  kavka-0 Error - 12:38:59 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:816:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  kavka-0 Error - 12:38:28 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:816:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  kavka-0 Error - 12:37:29 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:816:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  kavka-0 Error - 12:36:20 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1634:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1632:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1677:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1621:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:36:20 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1634:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1632:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1677:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1621:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:36:19 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1634:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1632:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1677:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1621:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:36:19 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1634:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1632:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1677:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1621:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:36:18 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1634:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1632:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1677:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1621:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:36:18 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1634:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1632:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1677:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1621:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:36:17 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1634:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1632:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1677:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1621:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:36:17 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1634:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1632:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1677:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1621:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:36:16 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1634:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1632:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1677:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1621:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:36:16 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1634:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1632:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1677:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1621:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:36:15 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1634:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1632:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1677:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1621:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:36:15 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1634:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1632:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1677:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1621:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:36:14 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1634:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1632:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1677:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1621:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:36:13 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1634:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1632:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1677:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1621:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:36:13 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1634:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1632:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1677:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1621:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:36:12 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1634:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1632:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1677:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1621:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:36:12 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1634:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1632:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1677:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1621:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:36:11 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1634:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1632:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1677:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1621:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:36:11 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1634:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1632:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1677:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1621:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:36:10 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1634:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1632:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1677:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1621:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:36:10 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1634:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1632:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1677:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1621:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:36:10 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1634:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1632:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1677:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1621:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:36:09 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1634:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1632:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1677:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1621:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:36:08 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1634:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1632:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1677:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1621:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:34:30 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1637:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1635:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1680:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1624:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:34:30 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1637:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1635:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1680:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1624:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:34:29 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1637:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1635:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1680:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1624:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:34:29 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1637:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1635:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1680:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1624:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:34:28 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1637:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1635:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1680:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1624:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:34:28 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1637:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1635:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1680:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1624:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:34:27 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1637:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1635:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1680:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1624:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:34:26 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1637:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1635:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1680:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1624:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:34:26 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1637:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1635:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1680:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1624:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:34:25 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1637:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1635:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1680:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1624:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:34:25 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1637:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1635:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1680:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1624:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:34:24 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1637:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1635:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1680:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1624:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:34:24 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1637:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1635:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1680:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1624:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:34:23 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1637:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1635:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1680:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1624:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:34:23 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1637:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1635:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1680:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1624:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:34:22 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1637:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1635:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1680:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1624:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:34:22 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1637:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1635:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1680:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1624:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:34:22 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1637:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1635:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1680:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1624:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:34:21 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1637:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1635:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1680:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1624:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:34:21 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1637:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1635:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1680:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1624:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:34:20 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1637:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1635:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1680:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1624:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:34:20 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1637:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1635:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1680:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1624:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:34:19 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1637:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1635:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1680:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1624:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:34:18 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1637:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1635:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1680:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1624:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:34:13 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1637:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1635:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1680:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1624:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:34:12 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1637:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1635:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1680:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1624:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:34:12 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1637:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1635:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1680:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1624:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:34:11 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1637:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1635:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1680:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1624:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:34:11 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1637:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1635:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1680:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1624:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:34:10 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1637:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1635:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1680:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1624:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:34:10 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1637:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1635:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1680:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1624:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:34:09 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1637:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1635:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1680:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1624:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:34:09 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1637:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1635:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1680:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1624:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:34:08 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1637:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1635:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1680:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1624:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:34:08 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1637:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1635:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1680:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1624:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:34:07 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1637:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1635:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1680:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1624:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:34:07 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1637:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1635:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1680:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1624:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:34:06 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1637:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1635:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1680:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1624:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:34:06 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1637:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1635:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1680:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1624:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:34:05 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1637:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1635:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1680:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1624:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:34:05 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1637:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1635:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1680:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1624:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:34:04 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1637:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1635:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1680:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1624:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:34:04 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1637:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1635:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1680:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1624:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:34:03 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1637:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1635:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1680:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1624:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:34:03 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1637:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1635:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1680:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1624:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:34:02 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1637:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1635:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1680:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1624:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:34:02 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1637:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1635:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1680:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1624:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:34:01 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1637:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1635:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1680:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1624:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:32:19 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1636:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1634:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1679:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1623:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:32:18 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1636:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1634:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1679:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1623:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:32:18 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1636:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1634:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1679:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1623:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:32:17 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1636:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1634:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1679:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1623:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:32:16 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1636:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1634:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1679:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1623:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:32:16 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1636:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1634:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1679:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1623:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:32:15 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1636:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1634:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1679:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1623:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:32:15 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1636:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1634:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1679:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1623:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:32:14 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1636:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1634:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1679:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1623:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:32:14 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1636:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1634:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1679:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1623:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:32:13 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1636:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1634:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1679:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1623:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:32:13 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1636:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1634:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1679:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1623:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:32:12 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1636:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1634:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1679:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1623:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:32:12 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1636:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1634:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1679:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1623:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:32:11 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1636:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1634:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1679:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1623:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:32:11 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1636:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1634:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1679:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1623:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:32:10 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1636:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1634:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1679:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1623:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:32:10 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1636:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1634:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1679:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1623:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:32:10 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1636:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1634:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1679:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1623:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:32:09 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1636:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1634:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1679:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1623:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:32:09 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1636:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1634:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1679:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1623:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:32:08 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1636:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1634:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1679:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1623:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:32:08 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1636:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1634:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1679:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1623:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:32:07 AM
+  TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:377:5)
+    at URL.onParseError (node:internal/url:563:9)
+    at new URL (node:internal/url:643:5)
+    at request (node:https:338:32)
+    at Object.get (node:https:386:15)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1636:15
+    at new Promise (<anonymous>)
+    at AbstractScraper.downloadImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1634:12)
+    at AbstractScraper.downloadImageCompress (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1679:18)
+    at AbstractScraper.getImage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1623:20) 
+  Invalid URL
+  
+  
+  kavka-0 Error - 12:31:43 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:816:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  kavka-0 Error - 12:31:12 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:816:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  kavka-0 Error - 12:30:41 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:816:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  kavka-0 Error - 12:27:18 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:816:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  kavka-0 Error - 12:26:23 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:816:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  kavka-0 Error - 12:25:39 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:821:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  kavka-0 Error - 12:24:07 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:820:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  kavka-0 Error - 12:22:33 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:816:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  kavka-0 Error - 12:22:03 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:816:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  kavka-0 Error - 12:21:22 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:816:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  kavka-0 Error - 12:20:52 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:816:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  kavka-0 Error - 12:20:21 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:816:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  kavka-0 Error - 12:18:11 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:816:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  kavka-1 Error - 12:17:40 AM
+  Error: EEXIST: file already exists, mkdir '../public/texts/kavka/'
+    at Object.mkdirSync (node:fs:1357:3)
+    at AbstractScraper.writeLongTextHTML (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1492:10)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:693:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:244:5) 
+  EEXIST: file already exists, mkdir '../public/texts/kavka/'
+  
+  
+  kavka-0 Error - 12:17:40 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:816:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  kavka-1 Error - 12:16:55 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:816:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  kavka-0 Error - 12:16:55 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:816:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
   kavka-0 Error - 12:15:58 AM
   Error: Timeout baseEvent
     at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:816:16)

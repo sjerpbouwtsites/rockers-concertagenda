@@ -36,8 +36,8 @@ export const workerConfig = {
   groeneengel: { workerCount: 1, workerConcurrent: 1, forceSet: 3, },
   iduna: { workerCount: 1, workerConcurrent: 1, forceSet: 4, },
   kavka: {
-    workerCount: 2,
-    workerConcurrent: 2,
+    workerCount: 1,
+    workerConcurrent: 1,
     forceSet: 4,
   },
   melkweg: {
@@ -56,7 +56,7 @@ export const workerConfig = {
   },
   oosterpoort: { workerCount: 1, workerConcurrent: 1,forceSet: 5, },
   p60: { workerCount: 1, workerConcurrent: 1,forceSet: 5, },
-  paradiso: { workerCount: 2, workerConcurrent: 1, CPUReq: "high", forceSet: 5, },
+  paradiso: { workerCount: 2, workerConcurrent: 2, CPUReq: "high", forceSet: 5, },
   patronaat: { workerCount: 2, workerConcurrent: 2, forceSet: 6, },
   tivolivredenburg: { workerCount: 4, workerConcurrent: 2, forceSet: 6, },
   ticketmaster: {

@@ -35,8 +35,8 @@ export default class AbstractScraper {
   debugCorruptedUnavailable = false;
   debugSingleMergedEventCheck = false;
   debugRawEventAsyncCheck = false;
-  debugBaseEvents = false;
-  debugPageInfo = false;
+  debugBaseEvents = true;
+  debugPageInfo = true;
   debugPrice = false;
   //#endregion                                                DEBUGSETTINGS
 
@@ -392,8 +392,8 @@ export default class AbstractScraper {
 
     if (stopFunctie) {
       clearTimeout(stopFunctie);
-    }
-    
+    } 
+
     page && !page.isClosed() && page.close();
 
     const eventsWithLongHTMLShortText = rawEvents.map(event => {
@@ -1514,11 +1514,18 @@ export default class AbstractScraper {
     }
 
     try {
-      await page.waitForSelector(selectors[0])
+      
+      await page.waitForSelector(selectors[0], {
+        timeout: 1000
+      })
     } catch (error) {
+      
       try {
         if (selectors.length > 1) {
-          await page.waitForSelector(selectors[1])
+      
+          await page.waitForSelector(selectors[1], {
+            timeout: 250
+          })
         } else {
           res.errors.push({
             error,
@@ -1527,9 +1534,13 @@ export default class AbstractScraper {
           return res;
         }
       } catch (error2) {
+      
         try {
           if (selectors.length > 2) {
-            await page.waitForSelector(selectors[2])
+      
+            await page.waitForSelector(selectors[2], {
+              timeout: 250
+            })
           }else {
             res.errors.push({
               error,
@@ -1539,6 +1550,7 @@ export default class AbstractScraper {
           }
           
         } catch (error3) {
+      
           res.errors.push({
             error,
             remarks: `geen ${selectors[0]} of ${selectors[1]} of ${selectors[2]}`
@@ -1548,9 +1560,9 @@ export default class AbstractScraper {
       }
 
     }
-    
 
     const title = event?.title ? event?.title : pageInfo.title 
+
     const pi = pageInfo?.pageInfo ? pageInfo?.pageInfo : event?.pageInfo
     let image = null
     let selectorsCopy = [...selectors];

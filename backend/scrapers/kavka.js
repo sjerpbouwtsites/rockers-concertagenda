@@ -191,10 +191,10 @@ kavkaScraper.mainPage = async function () {
     },
     { months: this.months, workerData, unavailabiltyTerms: AbstractScraper.unavailabiltyTerms }
   )
-  
+
   rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
 
-  this.saveBaseEventlist(workerData.family, rawEvents)
+  //this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
   return await this.mainPageEnd({
     stopFunctie, rawEvents: thisWorkersEvents}
@@ -230,7 +230,7 @@ kavkaScraper.singlePage = async function ({ page, event }) {
     }
   }, {event});
 
-  const imageRes = await this.getImage({page, event, pageInfo, selectors: ['div.desktop img[src*="kavka.be/wp-content"]', 'img[src*="kavka.be/wp-content"]'], mode: 'image-src' })
+  const imageRes = await this.getImage({page, event, pageInfo, selectors: ['img[src*="uploads"][src*="kavka"]', 'img[src*="kavka.be/wp-content"]'], mode: 'image-src' })
   pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
   pageInfo.image = imageRes.image;
 
