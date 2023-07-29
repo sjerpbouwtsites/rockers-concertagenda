@@ -3,7 +3,7 @@ import getVenueMonths from "../mods/months.js";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 
-//#region [rgba(0, 60, 0, 0.3)]       SCRAPER CONFIG
+//#region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const occiiScraper = new AbstractScraper(makeScraperConfig({
   maxExecutionTime: 120000,
   workerData: Object.assign({}, workerData),
@@ -29,7 +29,7 @@ const occiiScraper = new AbstractScraper(makeScraperConfig({
 
 occiiScraper.listenToMasterThread();
 
-//#region [rgba(0, 120, 0, 0.3)]      RAW EVENT CHECK
+//#region [rgba(0, 120, 0, 0.1)]      RAW EVENT CHECK
 occiiScraper.singleRawEventCheck = async function(event){
   const workingTitle = this.cleanupEventTitle(event.title);
 
@@ -58,7 +58,7 @@ occiiScraper.singleRawEventCheck = async function(event){
 }
 //#endregion                          RAW EVENT CHECK
 
-//#region [rgba(0, 180, 0, 0.3)]      SINGLE EVENT CHECK
+//#region [rgba(0, 180, 0, 0.1)]      SINGLE EVENT CHECK
 occiiScraper.singleMergedEventCheck = async function(event, pageInfo){
   const workingTitle = this.cleanupEventTitle(event.title)
 
@@ -77,7 +77,7 @@ occiiScraper.singleMergedEventCheck = async function(event, pageInfo){
 }
 //#endregion                          SINGLE EVENT CHECK
 
-//#region [rgba(0, 240, 0, 0.3)]      MAIN PAGE
+//#region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
 occiiScraper.mainPage = async function () {
 
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
@@ -121,7 +121,7 @@ occiiScraper.mainPage = async function () {
 
   rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
 
-  this.saveBaseEventlist(workerData.family, rawEvents)
+  //this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
   return await this.mainPageEnd({
     stopFunctie, rawEvents: thisWorkersEvents}
@@ -129,7 +129,7 @@ occiiScraper.mainPage = async function () {
 };
 //#endregion                          MAIN PAGE
 
-//#region [rgba(120, 0, 0, 0.3)]     SINGLE PAGE
+//#region [rgba(120, 0, 0, 0.1)]     SINGLE PAGE
 occiiScraper.singlePage = async function ({ page, event}) {
   
   const {stopFunctie} =  await this.singlePageStart()
@@ -189,7 +189,17 @@ occiiScraper.singlePage = async function ({ page, event}) {
   pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
   pageInfo.image = imageRes.image;
 
-  const priceRes = await this.getPriceFromHTML({page, event, pageInfo, selectors: ['.occii-single-event', '.occii-event-details'], });
+  await page.evaluate(()=>{
+    const priceM = document.querySelector('.occii-single-event, .occii-event-details')?.textContent.match(/€.*/);
+    if (priceM){
+      const priceEl = document.createElement('div');
+      priceEl.id = 'occii-temp-price';
+      priceEl.innerHTML = priceM[0];
+      document.body.appendChild(priceEl)
+    }
+  })
+
+  const priceRes = await this.getPriceFromHTML({page, event, pageInfo, selectors: ['#occii-temp-price', '.occii-single-event', '.occii-event-details'], });
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
   pageInfo.price = priceRes.price;  
 
