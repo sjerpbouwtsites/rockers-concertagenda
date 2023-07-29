@@ -1516,7 +1516,7 @@ export default class AbstractScraper {
     try {
       
       await page.waitForSelector(selectors[0], {
-        timeout: 1000
+        timeout: 2500
       })
     } catch (error) {
       
@@ -1630,7 +1630,11 @@ export default class AbstractScraper {
 
     const imageCrypto = crypto.randomUUID();
     let imagePath = `${this.eventImagesFolder}/${workerData.family}/${imageCrypto}`;
-    if (await this.downloadImageCompress(event, image, imagePath)){
+    const diCompressRes = await this.downloadImageCompress(event, image, imagePath);
+    if (!diCompressRes){
+      this.errors.push({
+        remarks: `download compress ${event.title} ${image} fail`
+      })
       imagePath = '';
     }
 

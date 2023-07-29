@@ -228,6 +228,7 @@ cpuntScraper.singlePage = async function ({ page, event }) {
   }, {months: this.months, event});
 
   const imageRes = await this.getImage({page, event, pageInfo, selectors: [".bg-image[style*='background']"], mode: 'background-src' })
+  this.dirtyDebug(imageRes)
   pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
   pageInfo.image = imageRes.image;
 
