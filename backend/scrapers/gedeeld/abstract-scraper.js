@@ -32,10 +32,10 @@ export default class AbstractScraper {
   ]
 
   //#region [rgba(0, 0, 30, 0.30)]                             DEBUGSETTINGS
-  debugCorruptedUnavailable = true;
-  debugSingleMergedEventCheck = true;
+  debugCorruptedUnavailable = false;
+  debugSingleMergedEventCheck = false;
   debugRawEventAsyncCheck = false;
-  debugBaseEvents = true;
+  debugBaseEvents = false;
   debugPageInfo = true;
   debugPrice = false;
   //#endregion                                                DEBUGSETTINGS
@@ -1566,6 +1566,7 @@ export default class AbstractScraper {
   }
 
   downloadImage(url, filepath) {
+    
     return new Promise((resolve, reject) => {
       https.get(url, (res) => {
         if (res.statusCode === 200) {
@@ -1573,7 +1574,9 @@ export default class AbstractScraper {
             .on('error', reject)
             .once('close', () => resolve(filepath));
         } else {
-          // Consume response data to free up memory
+          res.pipe(fs.createWriteStream(fsDirections.errorLog))
+            .on('error', reject)
+            .once('close', () => resolve(''));
           res.resume();
           reject(new Error(`Request Failed With a Status Code: ${res.statusCode}`));
 

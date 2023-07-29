@@ -61,6 +61,7 @@ export const workerConfig = {
     workerCount: 2, workerConcurrent: 1
   },  
   volt: { workerCount: 1, workerConcurrent: 1 },
+  willemeen: { workerCount: 2, workerConcurrent: 2 },
 }
 
 

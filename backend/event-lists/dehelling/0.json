@@ -1,6 +1,21 @@
 [
   {
     "door": null,
+    "start": "2023-09-03T21:00:00.000Z",
+    "end": "2023-09-03T02:00:00.000Z",
+    "venueEventUrl": "https://dehelling.nl/agenda/zeroes-alternative-02-09-2023/",
+    "title": "Zeroes Alternative",
+    "location": "dehelling",
+    "price": 20,
+    "shortText": "I'm just a teenage dirtbag baby",
+    "longText": "../public/texts/dehelling/f9e47425-3a44-4c36-a704-7cd73ab0fa19.html",
+    "image": "../public/event-images/dehelling/68d78d5b-f15f-4eb0-b5af-093e1c9bcc08",
+    "soldOut": false,
+    "unavailable": null,
+    "corrupted": null
+  },
+  {
+    "door": null,
     "start": "2023-09-29T17:00:00.000Z",
     "end": "2023-09-29T21:00:00.000Z",
     "venueEventUrl": "https://dehelling.nl/agenda/heart-of-a-coward-29-09-2023/",
@@ -8,8 +23,8 @@
     "location": "dehelling",
     "price": 20,
     "shortText": "Vernietigende metalcore uit Engeland. Lineup: Ghost Iris, TheCityIsOurs, Heart of a Coward",
-    "longText": "../public/texts/dehelling/fc389d56-0a8f-432b-9a74-ae1f699bc5f8.html",
-    "image": "../public/event-images/dehelling/b3cd4cfb-a54b-4dea-a52d-0a38f663ad3a",
+    "longText": "../public/texts/dehelling/5237d2f1-cf51-4bb7-9ace-0b506b2cbc57.html",
+    "image": "../public/event-images/dehelling/d0f4b345-06b1-4970-bdf9-bd2f7753dbd2",
     "soldOut": false,
     "unavailable": null,
     "corrupted": null
@@ -23,8 +38,8 @@
     "location": "dehelling",
     "price": 20,
     "shortText": "Punk, rock & metalcore party met DJ's en liveband",
-    "longText": "../public/texts/dehelling/1060991e-9f38-4bd1-a431-252d53a7e52f.html",
-    "image": "../public/event-images/dehelling/0fb7dc3a-fb82-4021-b526-07b5242825a8",
+    "longText": "../public/texts/dehelling/8b4d3d01-ad76-4755-85c6-d2ff279024b6.html",
+    "image": "../public/event-images/dehelling/a0e83d2c-0a62-4f8f-a81e-feee1ecd785e",
     "soldOut": false,
     "unavailable": null,
     "corrupted": null
