@@ -75,6 +75,7 @@ const podiumGebruikt = {
   volt: kortNederlands,
   tivolivredenburg: kortNederlands,
   ticketmaster: kortNederlands,
+  willemeen: kortNederlands,
 }
 
 export default function getVenueMonths(venueName){

@@ -15,6 +15,7 @@ const fsDirections = {
   src: path.resolve("../src"),
   publicTexts: path.relative("./", "../public/texts"),
   publicEventImages: path.relative("./", "../public/event-images"),
+  publicLocationImages: path.relative("./", "../public/location-images"),
   scrapers: {},
   scrapersDir: path.resolve("./scrapers"),
   temp: path.resolve("./temp"),
