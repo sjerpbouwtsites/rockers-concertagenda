@@ -2,7 +2,7 @@
   background-color: var(--anthracite);
   background-image: url('../images/friesland-amsterdam-zeer-donker.jpg');
   background-size: cover;
-  background-position: center center;    
+  background-position: center center;
   position: fixed;
   height: 100vh;
   width: 100vw;
@@ -11,19 +11,18 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  transform: translate(0,0);
+  transform: translate(0, 0);
   opacity: 1;
   z-index: 10;
 }
 
-.open-screen__centre{
-
-} 
+.open-screen__centre {
+}
 
 .open-screen__title,
 .open-screen__text {
   font-weight: 900;
-  color: var(--pink)
+  color: var(--pink);
 }
 
 .open-screen__text {
@@ -32,7 +31,7 @@
 
 .open-screen__moving {
   transition: 0.5s ease-out;
-  transform: translate(0,200vh);
+  transform: translate(0, 200vh);
   opacity: 0;
 }
 

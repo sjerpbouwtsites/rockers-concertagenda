@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 class FilterMenu extends React.Component {
   constructor(props) {
@@ -7,17 +7,15 @@ class FilterMenu extends React.Component {
       filterSettings: {
         podia: {},
         daterange: {
-          lower: "2023-06-15",
-          upper: "2025-12-31",
+          lower: '2023-06-15',
+          upper: '2025-12-31',
         },
       },
     };
     this.handleLocationChange = this.handleLocationChange.bind(this);
     this.fillFilter = this.fillFilter.bind(this);
-    this.handleDaterangeLowerChange =
-      this.handleDaterangeLowerChange.bind(this);
-    this.handleDaterangeUpperChange =
-      this.handleDaterangeUpperChange.bind(this);
+    this.handleDaterangeLowerChange = this.handleDaterangeLowerChange.bind(this);
+    this.handleDaterangeUpperChange = this.handleDaterangeUpperChange.bind(this);
   }
 
   componentDidMount() {
@@ -49,10 +47,7 @@ class FilterMenu extends React.Component {
   }
 
   fillFilter() {
-    if (
-      Object.keys(this.props.locations).length < 5 ||
-      this.props.timestampNamen.length < 5
-    ) {
+    if (Object.keys(this.props.locations).length < 5 || this.props.timestampNamen.length < 5) {
       setTimeout(() => {
         this.fillFilter();
       }, 1000);
@@ -77,8 +72,7 @@ class FilterMenu extends React.Component {
   handleLocationChange(element) {
     const inputEl = element.target;
     const newFilterSettings = { ...this.state.filterSettings };
-    newFilterSettings.podia[inputEl.name].checked =
-      !newFilterSettings.podia[inputEl.name].checked;
+    newFilterSettings.podia[inputEl.name].checked = !newFilterSettings.podia[inputEl.name].checked;
     this.setState({
       filterSettings: newFilterSettings,
     });
@@ -94,20 +88,18 @@ class FilterMenu extends React.Component {
           <nav className="navigation-block">
             <ul className="navigation-block__list">
               {Object.entries(this.state.filterSettings.podia).map(
-                ([locationSlug, filterRowData], key) => {
-                  return (
-                    <li className="navigation-block__list-item" key={key}>
-                      <input
-                        id={locationSlug}
-                        type="checkbox"
-                        name={locationSlug}
-                        checked={filterRowData.checked}
-                        onChange={this.handleLocationChange}
-                      ></input>
-                      <label htmlFor={locationSlug}>{filterRowData.name}</label>
-                    </li>
-                  );
-                }
+                ([locationSlug, filterRowData], key) => (
+                  <li className="navigation-block__list-item" key={key}>
+                    <input
+                      id={locationSlug}
+                      type="checkbox"
+                      name={locationSlug}
+                      checked={filterRowData.checked}
+                      onChange={this.handleLocationChange}
+                    />
+                    <label htmlFor={locationSlug}>{filterRowData.name}</label>
+                  </li>
+                ),
               )}
             </ul>
           </nav>
@@ -122,7 +114,7 @@ class FilterMenu extends React.Component {
               value={this.state.filterSettings.daterange.lower}
               min="2022-01-01"
               onChange={this.handleDaterangeLowerChange}
-            ></input>
+            />
           </label>
           <label htmlFor="daterange-upper">
             Tot
@@ -133,7 +125,7 @@ class FilterMenu extends React.Component {
               value={this.state.filterSettings.daterange.upper}
               min="2022-06-01"
               onChange={this.handleDaterangeUpperChange}
-            ></input>
+            />
           </label>
         </div>
       </header>

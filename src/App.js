@@ -1,23 +1,19 @@
-import React from "react";
+import React from 'react';
 
-import "./styles/app.css";
-import "./styles/app-phone.css";
-import "./styles/app-tablet.css";
-import "./styles/app-huge.css";
-import "./styles/colors.css";
-import "./styles/fonts.css";
-import "./styles/banner.css";
-import "./styles/event-blocks.css";
-import "./styles/header-menu.css";
-import "./styles/normalize.css";
-import "./styles/open-screen.css";
-import "./styles/flickety.css";
-import EventBlocks from "./mods/EventBlocks.js";
-
-
-import OpenScreen from "./mods/OpenScreen.js";
-
-
+import './styles/app.css';
+import './styles/app-phone.css';
+import './styles/app-tablet.css';
+import './styles/app-huge.css';
+import './styles/colors.css';
+import './styles/fonts.css';
+import './styles/banner.css';
+import './styles/event-blocks.css';
+import './styles/header-menu.css';
+import './styles/normalize.css';
+import './styles/open-screen.css';
+import './styles/flickety.css';
+import EventBlocks from './mods/EventBlocks.jsx';
+import OpenScreen from './mods/OpenScreen.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -30,8 +26,8 @@ class App extends React.Component {
       filterSettings: {
         podia: {},
         daterange: {
-          lower: "2023-06-19",
-          upper: "2025-12-31",
+          lower: '2023-06-19',
+          upper: '2025-12-31',
         },
       },
     };
@@ -42,10 +38,8 @@ class App extends React.Component {
     this.hasFetchedData = false;
     this.isFetchingData = false;
     this.appProcessFilterChange = this.appProcessFilterChange.bind(this);
-    this.getScraperNamesAndLocations =
-      this.getScraperNamesAndLocations.bind(this);
+    this.getScraperNamesAndLocations = this.getScraperNamesAndLocations.bind(this);
   }
-
 
   appProcessFilterChange(filterSettings) {
     this.setState({
@@ -67,28 +61,24 @@ class App extends React.Component {
   }
 
   componentDidUpdate() {
-    if (!this.hasFetchedData && !this.isFetchingData)
-      this.getScraperNamesAndLocations();
+    if (!this.hasFetchedData && !this.isFetchingData) this.getScraperNamesAndLocations();
   }
+
   async getScraperNamesAndLocations() {
     this.isFetchingData = true;
-    const getTimeStamps = fetch("./timestamps.json", {})
-      .then((response) => {
-        return response.json();
-      })
+    const getTimeStamps = fetch('./timestamps.json', {})
+      .then((response) => response.json())
       .then((timestamps) => {
         this.setState({
-          names: Object.keys(timestamps).filter((key) => key !== "metalfan"),
+          names: Object.keys(timestamps).filter((key) => key !== 'metalfan'),
         });
       });
 
-    const getLocations = fetch("./locations.json", {})
-      .then((response) => {
-        return response.json();
-      })
+    const getLocations = fetch('./locations.json', {})
+      .then((response) => response.json())
       .then((locations) => {
         this.setState({
-          locations: locations,
+          locations,
         });
       });
 
@@ -153,7 +143,10 @@ class App extends React.Component {
   appBanner(title, locatie = 'top') {
     return (
       <div id={`app-banner-${locatie}`} className="app-banner cursive-font">
-        <h1 className="app-title">{title}<span className="app-title__events-count" id={`app-title__events-count-${locatie}`}></span></h1>
+        <h1 className="app-title">
+          {title}
+          <span className="app-title__events-count" id={`app-title__events-count-${locatie}`} />
+        </h1>
       </div>
     );
   }
@@ -161,11 +154,8 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        {this.appBanner("Rock Agenda", 'top')}
-        <OpenScreen
-          hidden={this.state.openScreenHidden}
-          moving={this.state.openScreenMoving}
-        />
+        {this.appBanner('Rock Agenda', 'top')}
+        <OpenScreen hidden={this.state.openScreenHidden} moving={this.state.openScreenMoving} />
         <div className="app">
           <main className="app-main app-view app-view--2">
             <EventBlocks
@@ -173,7 +163,7 @@ class App extends React.Component {
               locations={this.state.locations}
             />
           </main>
-          {this.appBanner("Rock Agenda", 'onder')}
+          {this.appBanner('Rock Agenda', 'onder')}
         </div>
       </div>
     );
