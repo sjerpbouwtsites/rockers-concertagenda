@@ -1,7 +1,7 @@
 import React from 'react';
 
 class LoadmoreButton extends React.Component {
-  intervalSpeed = 500;
+  intervalSpeed = 3000;
 
   hasLoadedEverything = false;
 
@@ -9,21 +9,21 @@ class LoadmoreButton extends React.Component {
     super(props);
     this.state = {
       inView: false,
-      passedFirstLoad: false,
+      hasDoneNewLoad: false,
     };
     this.checkButtonIsInView = this.checkButtonIsInView.bind(this);
-    this.add100ToMaxEventsShown = props.add100ToMaxEventsShown;
   }
 
   componentDidMount() {
     setInterval(this.checkButtonIsInView, this.intervalSpeed);
     setTimeout(() => {
-      this.setState({ passedFirstLoad: true });
-    }, 2500);
+      this.setState({ hasDoneNewLoad: true });
+    }, this.intervalSpeed - 500);
   }
 
   componentDidUpdate() {
-    if (this.props.maxEventsShown === this.props.musicEventsLength) {
+    const { maxEventsShown, musicEventsLength } = this.props;
+    if (maxEventsShown === musicEventsLength) {
       this.hasLoadedEverything = true;
     }
   }
@@ -32,43 +32,47 @@ class LoadmoreButton extends React.Component {
     if (this.hasLoadedEverything) return;
 
     const st = document.documentElement.scrollTop || document.body.scrollTop;
+    // eslint-disable-next-line
     const ah = screen.availHeight;
     const mh = st + ah;
     const oh = document.body.offsetHeight;
     const newState = (mh - oh) / ah > 0;
-    const oldState = this.state.inView;
-
-    if (newState === oldState) {
+    const { inView } = this.state;
+    if (newState === inView) {
       return;
     }
-
-    if (newState !== oldState) {
-      this.setState({ inView: newState });
-    }
-    if (this.state.passedFirstLoad && newState) {
-      this.add100ToMaxEventsShown();
-      this.setState({ passedFirstLoad: false });
+    this.setState({ inView: newState });
+    const { hasDoneNewLoad } = this.state;
+    if (hasDoneNewLoad && newState) {
+      const { add100ToMaxEventsShown } = this.props;
+      add100ToMaxEventsShown();
+      this.setState({ hasDoneNewLoad: false });
       setTimeout(() => {
-        this.setState({ passedFirstLoad: true });
+        this.setState({ hasDoneNewLoad: true });
       }, this.intervalSpeed);
     }
   }
 
   render() {
-    if (!this.props.eventDataLoaded) return '';
+    const {
+      eventDataLoaded, add100ToMaxEventsShown, maxEventsShown, musicEventsLength,
+    } = this.props;
+    if (!eventDataLoaded) return '';
     if (this.hasLoadedEverything) return '';
-    if (this.props.maxEventsShown === this.props.musicEventsLength) return '';
+    if (maxEventsShown === musicEventsLength) return '';
     return (
       <button
+        type="button"
         className="event-block__more-blocks"
-        onClick={this.add100ToMaxEventsShown}
+        onClick={add100ToMaxEventsShown}
         id="load-more-button"
       >
         <span>
-          {this.props.maxEventsShown}
+          {maxEventsShown}
           {' '}
           van
-          {this.props.musicEventsLength}
+          {' '}
+          {musicEventsLength}
           {' '}
           geladen. Klik voor meer.
         </span>

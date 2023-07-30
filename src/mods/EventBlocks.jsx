@@ -53,11 +53,13 @@ class EventBlocks extends React.Component {
       .then((response) => response.json())
       .then((musicEvents) => {
         const me2 = musicEvents
-          .map((musicEvent) => ({
-            ...musicEvent,
-            longTextHTML: null,
-            enlarged: false,
-          }))
+          .map((musicEvent) => {
+            // eslint-disable-next-line
+            musicEvent.longTextHTML = null;
+            // eslint-disable-next-line
+            musicEvent.enlarged = false;
+            return musicEvent;
+          })
           .filter(filterEventsDateInPast);
         this.setState({ musicEvents: me2 });
         this.setState({ eventDataLoaded: true });
@@ -290,7 +292,6 @@ ${BEMify('event-block', [
         musicEvents[musicEventKey].enlarged = true;
         musicEvents[musicEventKey].longTextHTML = text;
         this.setState({ musicEvents: [...musicEvents] });
-
         setTimeout(() => {
           const blockEl = document.getElementById(`event-id-${musicEventKey}`);
           const appBannerHeight = document.getElementById('app-banner-top').clientHeight;
@@ -426,9 +427,11 @@ ${BEMify('event-block', [
   // #endregion event-block HTML methods
 
   add100ToMaxEventsShown() {
-    const { maxEventsShown } = this.state;
-    const posMax = maxEventsShown + 100;
-    const newMax = Math.min(posMax, maxEventsShown.length);
+    const { maxEventsShown, musicEvents } = this.state;
+    let newMax = maxEventsShown + 100;
+    if (newMax > musicEvents.length) {
+      newMax = musicEvents.length;
+    }
     this.setState({
       maxEventsShown: newMax,
     });
