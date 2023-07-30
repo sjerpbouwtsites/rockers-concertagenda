@@ -8,14 +8,21 @@
     "start": "cd ~/dev/apache/concertagenda/; npm run start",
     "build": "cd ~/dev/apache/concertagenda/; npm run build",
     "kill-chrome": "killall -s 9 chrome; ",
-    "backend": "npm run kill-chrome; cd ~/dev/apache/concertagenda/backend; clear; node index.js force=all; clear; echo 'backend gedaan';"
+    "backend": "npm run kill-chrome; cd ~/dev/apache/concertagenda/backend; clear; node index.js force=all; clear; echo 'backend gedaan';",
+    "lint:fix": "eslint --quiet --fix ./**/*.{js,jsx}",
+    "eslint-for-formatting": "npm run lint:fix;",
+    "prettier-for-formatting": "prettier --config .prettierrc './**/*.{js,jsx,css}' --write --silent --;"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "axios": "^1.4.0",
     "dotenv": "^16.3.1",
+    "eslint": "^8.46.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.28.0",
     "os-utils": "^0.0.14",
+    "prettier": "^3.0.0",
     "puppeteer": "^20.9.0",
     "sharp": "^0.32.4",
     "showdown": "^2.1.0"

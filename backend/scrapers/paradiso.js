@@ -1,331 +1,307 @@
-import { workerData } from "worker_threads";
-import * as _t from "../mods/tools.js";
-import AbstractScraper from "./gedeeld/abstract-scraper.js";
-import makeScraperConfig from "./gedeeld/scraper-config.js";
+import { workerData } from 'worker_threads';
+import * as _t from '../mods/tools.js';
+import AbstractScraper from './gedeeld/abstract-scraper.js';
+import makeScraperConfig from './gedeeld/scraper-config.js';
 
-//#region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
+// #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const paradisoScraper = new AbstractScraper(makeScraperConfig({
   maxExecutionTime: 120022,
-  workerData: Object.assign({}, workerData),
+  workerData: { ...workerData },
   puppeteerConfig: {
     mainPage: {
       timeout: 120023,
-      waitUntil: 'load'
+      waitUntil: 'load',
     },
     singlePage: {
-      timeout: 120024
+      timeout: 120024,
     },
     app: {
       mainPage: {
-        url: "https://www.paradiso.nl/",
-        requiredProperties: ['venueEventUrl', 'title']
+        url: 'https://www.paradiso.nl/',
+        requiredProperties: ['venueEventUrl', 'title'],
       },
       singlePage: {
-        requiredProperties: ['venueEventUrl', 'title', 'price', 'start']
-      }
-    }
-  }
+        requiredProperties: ['venueEventUrl', 'title', 'price', 'start'],
+      },
+    },
+  },
 }));
-//#endregion                          SCRAPER CONFIG
+// #endregion                          SCRAPER CONFIG
 
 paradisoScraper.listenToMasterThread();
 
-//#region [rgba(0, 120, 0, 0.1)]      MAIN PAGE EVENT CHECK
+// #region [rgba(0, 120, 0, 0.1)]      MAIN PAGE EVENT CHECK
 paradisoScraper.mainPageAsyncCheck = async function (event) {
-  
   const workingTitle = this.cleanupEventTitle(event.title);
-  
-  const isRefused = await this.rockRefuseListCheck(event, workingTitle)
+
+  const isRefused = await this.rockRefuseListCheck(event, workingTitle);
   if (isRefused.success) {
     isRefused.success = false;
-    return isRefused
+    return isRefused;
   }
 
-  const isAllowed = await this.rockAllowListCheck(event, workingTitle)
+  const isAllowed = await this.rockAllowListCheck(event, workingTitle);
   if (isAllowed.success) return isAllowed;
 
   const hasForbiddenTerms = await this.hasForbiddenTerms(event);
   if (hasForbiddenTerms.success) {
     hasForbiddenTerms.success = false;
-    this.saveRefusedTitle(workingTitle)
-    return hasForbiddenTerms
+    this.saveRefusedTitle(workingTitle);
+    return hasForbiddenTerms;
   }
 
   const hasGoodTermsRes = await this.hasGoodTerms(event);
   if (hasGoodTermsRes.success) {
-    this.saveAllowedTitle(workingTitle)
+    this.saveAllowedTitle(workingTitle);
     return hasGoodTermsRes;
   }
 
   const isRockRes = await this.isRock(event);
-  if (isRockRes.success){
-    this.saveAllowedTitle(workingTitle)
+  if (isRockRes.success) {
+    this.saveAllowedTitle(workingTitle);
   } else {
-    this.saveRefusedTitle(workingTitle)
+    this.saveRefusedTitle(workingTitle);
   }
   return isRockRes;
-  
 };
-//#endregion                          MAIN PAGE EVENT CHECK
+// #endregion                          MAIN PAGE EVENT CHECK
 
-//#region [rgba(0, 180, 0, 0.1)]      SINGLE PAGE EVENT CHECK
-//#endregion                          SINGLE PAGE EVENT CHECK
+// #region [rgba(0, 180, 0, 0.1)]      SINGLE PAGE EVENT CHECK
+// #endregion                          SINGLE PAGE EVENT CHECK
 
-//#region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
+// #region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
 paradisoScraper.mainPage = async function () {
-
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
-  if (availableBaseEvents){
-    const thisWorkersEvents = availableBaseEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
-    return await this.mainPageEnd({
-      stopFunctie: null, rawEvents: thisWorkersEvents}
-    );    
-  } 
+  if (availableBaseEvents) {
+    const thisWorkersEvents = availableBaseEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index);
+    return await this.mainPageEnd({ stopFunctie: null, rawEvents: thisWorkersEvents });
+  }
 
-  const {stopFunctie, page} = await this.mainPageStart()
-  
-  const res = await page.evaluate(({workerData}) => {
-    return {
-      pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${workerData.index}</a>`,
-    }
-  }, {workerData});
+  const { stopFunctie, page } = await this.mainPageStart();
+
+  const res = await page.evaluate(({ workerData }) => ({
+    pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${workerData.index}</a>`,
+  }), { workerData });
 
   let bla = '';
   await _t.autoScroll(page);
-  bla = await page.evaluate(({workerData}) => {
-    return document.querySelector('.css-16y59pb:last-child .chakra-heading')?.textContent ?? 'geen titel gevonden'
-  }, {workerData});
-  if (this.isForced) this.dirtyTalk(`na scroll 1 ${bla}`)
-  
+  bla = await page.evaluate(({ workerData }) => document.querySelector('.css-16y59pb:last-child .chakra-heading')?.textContent ?? 'geen titel gevonden', { workerData });
+  if (this.isForced) this.dirtyTalk(`na scroll 1 ${bla}`);
+
   await _t.autoScroll(page);
-  bla = await page.evaluate(({workerData}) => {
-    return document.querySelector('.css-16y59pb:last-child .chakra-heading')?.textContent ?? 'geen titel gevonden'
-  }, {workerData});  
-  if (this.isForced) this.dirtyTalk(`na scroll 2 ${bla}`)
+  bla = await page.evaluate(({ workerData }) => document.querySelector('.css-16y59pb:last-child .chakra-heading')?.textContent ?? 'geen titel gevonden', { workerData });
+  if (this.isForced) this.dirtyTalk(`na scroll 2 ${bla}`);
 
   let rawEvents = await page.evaluate(
-    ({resBuiten, unavailabiltyTerms}) => {
+    ({ resBuiten, unavailabiltyTerms }) => Array.from(document.querySelectorAll('.css-1agutam'))
 
-      return Array.from(document.querySelectorAll('.css-1agutam'))
+      .map((rawEvent) => {
+        const res = {
+          ...resBuiten,
+          errors: [],
+        };
+        res.title = rawEvent
+          .querySelector('.chakra-heading')
+          ?.textContent.trim() ?? '';
+        res.shortText = rawEvent
+          .querySelector('.css-1ket9pb')
+          ?.textContent.trim() ?? '';
 
-        .map((rawEvent) => {
-          const res = {
-            ...resBuiten,
-            errors: []
-          }          
-          res.title =
-            rawEvent
-              .querySelector(".chakra-heading")
-              ?.textContent.trim() ?? "";
-          res.shortText = 
-            rawEvent
-              .querySelector(".css-1ket9pb")
-              ?.textContent.trim() ?? "";
-          
-          res.venueEventUrl = rawEvent.href ?? null
-          res.soldOut = !!rawEvent?.textContent.match(/uitverkocht|sold\s?out/i);
-          const uaRex = new RegExp(unavailabiltyTerms.join("|"), 'gi');
-          res.unavailable = !!rawEvent?.textContent.match(uaRex);
-          return res;
-        });
-    },
-    {workerData, resBuiten: res,unavailabiltyTerms: AbstractScraper.unavailabiltyTerms}
-  )
-    
+        res.venueEventUrl = rawEvent.href ?? null;
+        res.soldOut = !!rawEvent?.textContent.match(/uitverkocht|sold\s?out/i);
+        const uaRex = new RegExp(unavailabiltyTerms.join('|'), 'gi');
+        res.unavailable = !!rawEvent?.textContent.match(uaRex);
+        return res;
+      }),
+    { workerData, resBuiten: res, unavailabiltyTerms: AbstractScraper.unavailabiltyTerms },
+  );
+
   rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
 
-  this.saveBaseEventlist(workerData.family, rawEvents)
-  const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
-  return await this.mainPageEnd({
-    stopFunctie, rawEvents: thisWorkersEvents}
-  );
-  
+  this.saveBaseEventlist(workerData.family, rawEvents);
+  const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index);
+  return await this.mainPageEnd({ stopFunctie, rawEvents: thisWorkersEvents });
 };
-//#endregion                          MAIN PAGE
+// #endregion                          MAIN PAGE
 
-//#region [rgba(120, 0, 0, 0.1)]     SINGLE PAGE
+// #region [rgba(120, 0, 0, 0.1)]     SINGLE PAGE
 paradisoScraper.singlePage = async function ({ page, event }) {
-  
-  const {stopFunctie} =  await this.singlePageStart()
+  const { stopFunctie } =  await this.singlePageStart();
 
   const buitenRes = {
     pageInfo: `<a class='page-info' href='${event.venueEventUrl}'>${event.title}</a>`,
     errors: [],
-  };  
-  
+  };
+
   try {
-    await page.waitForSelector(".css-tkkldl", {
+    await page.waitForSelector('.css-tkkldl', {
       timeout: 3000,
     });
   } catch (caughtError) {
     buitenRes.errors.push({
       error: caughtError,
       remarks: `Paradiso wacht op laden single pagina\n${buitenRes.pageInfo}`,
-      errorLevel: 'notice'
-    })
-    return await this.singlePageEnd({pageInfo: buitenRes, stopFunctie, page})
+      errorLevel: 'notice',
+    });
+    return await this.singlePageEnd({ pageInfo: buitenRes, stopFunctie, page });
   }
 
   const editedMonths = {
-    jan: "01",
-    feb: "02",
-    mrt: "03",
-    mar: "03",
-    apr: "04",
-    mei: "05",
-    jun: "06",
-    jul: "07",
-    aug: "08",
-    sep: "09",
-    okt: "10",
-    nov: "11",
-    dec: "12",
-    januari: "01",
-    februari: "02",
-    maart: "03",
-    april: "04",
-    juni: "06",
-    juli: "07",
-    augustus: "08",
-    september: "09",
-    oktober: "10",
-    november: "11",
-    december: "12",      
-    january: "01",
-    february: "02",
-    march: "03",
-    may: "05",
-    june: "06",
-    july: "07",
-    august: "08",
-    october: "10",
-  }
+    jan: '01',
+    feb: '02',
+    mrt: '03',
+    mar: '03',
+    apr: '04',
+    mei: '05',
+    jun: '06',
+    jul: '07',
+    aug: '08',
+    sep: '09',
+    okt: '10',
+    nov: '11',
+    dec: '12',
+    januari: '01',
+    februari: '02',
+    maart: '03',
+    april: '04',
+    juni: '06',
+    juli: '07',
+    augustus: '08',
+    september: '09',
+    oktober: '10',
+    november: '11',
+    december: '12',
+    january: '01',
+    february: '02',
+    march: '03',
+    may: '05',
+    june: '06',
+    july: '07',
+    august: '08',
+    october: '10',
+  };
 
   await _t.waitTime(500);
 
   const pageInfo = await page.evaluate(
     ({ months, buitenRes }) => {
-      const res = {...buitenRes};
+      const res = { ...buitenRes };
 
-      const contentBox1 =
-        document.querySelector(".css-1irwsol")?.outerHTML ?? '';
-      const contentBox2 =
-        document.querySelector(".css-gwbug6")?.outerHTML ?? '';
+      const contentBox1 =        document.querySelector('.css-1irwsol')?.outerHTML ?? '';
+      const contentBox2 =        document.querySelector('.css-gwbug6')?.outerHTML ?? '';
       if (!contentBox1 && !contentBox2) {
         res.corrupted = 'geen contentboxes';
       }
-      
+
       try {
         const startDateMatch = document.querySelector('.css-tkkldl')
           ?.textContent.toLowerCase()
           .match(/(\d{1,2})\s+(\w+)/); // TODO paradiso kan nu niet omgaan met jaarrwisselingen.
-        res.match = startDateMatch
+        res.match = startDateMatch;
         if (
-          startDateMatch &&
-          Array.isArray(startDateMatch) &&
-          startDateMatch.length === 3
+          startDateMatch
+          && Array.isArray(startDateMatch)
+          && startDateMatch.length === 3
         ) {
           const monthName = months[startDateMatch[2]];
           if (!monthName) {
             res.errors.push({
 
               remarks: `month not found ${startDateMatch[2]}`,
-              toDebug: startDateMatch
-            })
+              toDebug: startDateMatch,
+            });
           }
-
 
           const curM = new Date().getMonth() + 1;
           let year = new Date().getFullYear();
           if (monthName < curM) {
-            year = year + 1;
+            year += 1;
           }
 
           res.startDate = `${year}-${
             monthName
-          }-${startDateMatch[1].padStart(2, "0")}`;
+          }-${startDateMatch[1].padStart(2, '0')}`;
         }
       } catch (caughtError) {
-        res.errors.push({ 
-          error: caughtError, 
-          remarks: `startDateMatch ${res.pageInfo}`, 
+        res.errors.push({
+          error: caughtError,
+          remarks: `startDateMatch ${res.pageInfo}`,
           toDebug: {
-            event
-          }});
+            event,
+          },
+        });
       }
 
-      let startTijd, deurTijd, eindTijd;
+      let startTijd; let deurTijd; let
+        eindTijd;
       const tijden = document.querySelector('.css-65enbk')
         .textContent.match(/\d\d:\d\d/g);
-      if (tijden.length > 2){
-        eindTijd = tijden[2]
-      } 
-      if (tijden.length > 1){
-        deurTijd = tijden[1]
-        startTijd = tijden[0]
+      if (tijden.length > 2) {
+        eindTijd = tijden[2];
       }
-      if (tijden.length === 1){
-        startTijd = tijden[0]
-      } 
-      if (!tijden.length){
+      if (tijden.length > 1) {
+        deurTijd = tijden[1];
+        startTijd = tijden[0];
+      }
+      if (tijden.length === 1) {
+        startTijd = tijden[0];
+      }
+      if (!tijden.length) {
         res.errors.push({
           remarks: `Geen tijden gevonden ${res.pageInfo}`,
-        });        
+        });
       }
 
-      if (startTijd){
-        res.start = 
-          `${res.startDate}T${startTijd}:00`
-        
+      if (startTijd) {
+        res.start = `${res.startDate}T${startTijd}:00`;
       }
-      if (deurTijd){
-        res.door = 
-          `${res.startDate}T${deurTijd}:00`
-        
+      if (deurTijd) {
+        res.door = `${res.startDate}T${deurTijd}:00`;
       }
-      if (eindTijd){
-        res.end = 
-          `${res.startDate}T${eindTijd}:00`
-        
-      }      
+      if (eindTijd) {
+        res.end = `${res.startDate}T${eindTijd}:00`;
+      }
 
       return res;
     },
-    { months: editedMonths, buitenRes }
+    { months: editedMonths, buitenRes },
   );
 
-  const imageRes = await this.getImage({page, event, pageInfo, selectors: ['.css-xz41fi source','.css-xz41fi source:last-of-type'], mode: 'image-src' })
+  const imageRes = await this.getImage({
+    page, event, pageInfo, selectors: ['.css-xz41fi source', '.css-xz41fi source:last-of-type'], mode: 'image-src',
+  });
   pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
-  pageInfo.image = imageRes.image; 
+  pageInfo.image = imageRes.image;
 
-  const priceRes = await this.getPriceFromHTML({page, event, pageInfo, selectors: [".css-f73q4m", '.price', '.chakra-container'], });
+  const priceRes = await this.getPriceFromHTML({
+    page, event, pageInfo, selectors: ['.css-f73q4m', '.price', '.chakra-container'],
+  });
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
-  pageInfo.price = priceRes.price;  
+  pageInfo.price = priceRes.price;
 
-  const longTextRes = await longTextSocialsIframes(page, event, pageInfo)
-  for (let i in longTextRes){
-    pageInfo[i] = longTextRes[i]
+  const longTextRes = await longTextSocialsIframes(page, event, pageInfo);
+  for (const i in longTextRes) {
+    pageInfo[i] = longTextRes[i];
   }
 
-  return await this.singlePageEnd({pageInfo, stopFunctie, page, event})
-
+  return await this.singlePageEnd({
+    pageInfo, stopFunctie, page, event,
+  });
 };
-//#endregion                         SINGLE PAGE
+// #endregion                         SINGLE PAGE
 // #region [rgba(60, 0, 0, 0.3)]     LONG HTML
-async function longTextSocialsIframes(page, event, pageInfo){
+async function longTextSocialsIframes(page, event, pageInfo) {
+  return await page.evaluate(({ event }) => {
+    const res = {};
 
-  return await page.evaluate(({event})=>{
-    const res = {}
-
- 
     const textSelector = '.chakra-container .css-m8ufwp';
     const mediaSelector = [
-      `iframe[src*='youtube']`,
-      `iframe[src*='bandcamp']`,
-      `iframe[src*='spotify']`,
-    ].join(", ");
+      'iframe[src*=\'youtube\']',
+      'iframe[src*=\'bandcamp\']',
+      'iframe[src*=\'spotify\']',
+    ].join(', ');
     const removeEmptyHTMLFrom = textSelector;
-    const socialSelector = [].join(", ");
+    const socialSelector = [].join(', ');
     const removeSelectors = [
       `${textSelector} [class*='icon-']`,
       `${textSelector} [class*='fa-']`,
@@ -339,32 +315,32 @@ async function longTextSocialsIframes(page, event, pageInfo){
       `${textSelector} h1`,
       `${textSelector} img`,
       `${textSelector} iframe`,
-    ].join(", ");
+    ].join(', ');
 
     const attributesToRemove = [
-      "style",
-      "hidden",
-      "_target",
-      "frameborder",
-      "onclick",
-      "aria-hidden",
-      "allow",
-      "allowfullscreen",
-      "data-deferlazy",
-      "width",
-      "height",
+      'style',
+      'hidden',
+      '_target',
+      'frameborder',
+      'onclick',
+      'aria-hidden',
+      'allow',
+      'allowfullscreen',
+      'data-deferlazy',
+      'width',
+      'height',
     ];
-    const attributesToRemoveSecondRound = ["class", "id"];
+    const attributesToRemoveSecondRound = ['class', 'id'];
     const removeHTMLWithStrings = [];
 
     // eerst onzin attributes wegslopen
     const socAttrRemSelAdd = `${
-      socialSelector.length ? `, ${socialSelector}` : ""
+      socialSelector.length ? `, ${socialSelector}` : ''
     }`;
     const mediaAttrRemSelAdd = `${
-      mediaSelector.length ? `, ${mediaSelector} *, ${mediaSelector}` : ""
+      mediaSelector.length ? `, ${mediaSelector} *, ${mediaSelector}` : ''
     }`;
-    const textSocEnMedia = `${textSelector} *${socAttrRemSelAdd}${mediaAttrRemSelAdd}`;      
+    const textSocEnMedia = `${textSelector} *${socAttrRemSelAdd}${mediaAttrRemSelAdd}`;
     document
       .querySelectorAll(textSocEnMedia)
       .forEach((elToStrip) => {
@@ -375,28 +351,27 @@ async function longTextSocialsIframes(page, event, pageInfo){
         });
       });
 
- 
-    //media obj maken voordat HTML verdwijnt
+    // media obj maken voordat HTML verdwijnt
     res.mediaForHTML = !mediaSelector.length ? '' : Array.from(
-      document.querySelectorAll(mediaSelector)
+      document.querySelectorAll(mediaSelector),
     ).map((bron) => {
-      bron.className = "";
+      bron.className = '';
 
-      if (bron?.src && (bron.src.includes('bandcamp') || bron.src.includes('spotify'))){
+      if (bron?.src && (bron.src.includes('bandcamp') || bron.src.includes('spotify'))) {
         return {
           outer: bron.outerHTML,
           src: bron.src,
           id: null,
-          type: bron.src.includes('bandcamp') ? 'bandcamp' : 'spotify'
-        }
+          type: bron.src.includes('bandcamp') ? 'bandcamp' : 'spotify',
+        };
       }
-      if (bron?.src && bron.src.includes("youtube")){
+      if (bron?.src && bron.src.includes('youtube')) {
         return {
           outer: bron.outerHTML,
           src: bron.src,
           id: null,
-          type: 'youtube'
-        }
+          type: 'youtube',
+        };
       }
 
       // terugval???? nog niet bekend met alle opties.
@@ -404,56 +379,52 @@ async function longTextSocialsIframes(page, event, pageInfo){
         outer: bron.outerHTML,
         src: bron.src,
         id: null,
-        type: bron.src.includes("spotify")
-          ? "spotify"
-          : bron.src.includes("youtube")
-            ? "youtube"
-            : "bandcamp",
+        type: bron.src.includes('spotify')
+          ? 'spotify'
+          : bron.src.includes('youtube')
+            ? 'youtube'
+            : 'bandcamp',
       };
     });
 
-    //socials obj maken voordat HTML verdwijnt
+    // socials obj maken voordat HTML verdwijnt
     res.socialsForHTML = !socialSelector
-      ? ""
+      ? ''
       : Array.from(document.querySelectorAll(socialSelector)).map((el) => {
-        el.querySelectorAll("i, svg, img").forEach((rm) =>
-          rm.parentNode.removeChild(rm)
-        );
+        el.querySelectorAll('i, svg, img').forEach((rm) => rm.parentNode.removeChild(rm));
         if (!el.textContent.trim().length) {
-          if (el.href.includes("facebook") || el.href.includes("fb.me")) {
-            if (el.href.includes('facebook.com/events')){
+          if (el.href.includes('facebook') || el.href.includes('fb.me')) {
+            if (el.href.includes('facebook.com/events')) {
               el.textContent = `FB event ${event.title}`;
-            } else{
-              el.textContent = `Facebook`;
+            } else {
+              el.textContent = 'Facebook';
             }
-          } else if (el.href.includes("twitter")) {
-            el.textContent = "Tweet";
+          } else if (el.href.includes('twitter')) {
+            el.textContent = 'Tweet';
           } else if (el.href.includes('instagram')) {
-            el.textContent = "Insta";
+            el.textContent = 'Insta';
           } else {
-            el.textContent = "Social";
+            el.textContent = 'Social';
           }
         }
-        el.className = "long-html__social-list-link";
-        el.target = "_blank";
+        el.className = 'long-html__social-list-link';
+        el.target = '_blank';
         return el.outerHTML;
       });
 
     // stript HTML tbv text
-    removeSelectors.length &&
-      document
+    removeSelectors.length
+      && document
         .querySelectorAll(removeSelectors)
         .forEach((toRemove) => toRemove.parentNode.removeChild(toRemove));
 
     // verwijder ongewenste paragrafen over bv restaurants
     Array.from(
       document.querySelectorAll(
-        `${textSelector} p, ${textSelector} span, ${textSelector} a`
-      )
+        `${textSelector} p, ${textSelector} span, ${textSelector} a`,
+      ),
     ).forEach((verwijder) => {
-      const heeftEvilString = !!removeHTMLWithStrings.find((evilString) =>
-        verwijder.textContent.includes(evilString)
-      );
+      const heeftEvilString = !!removeHTMLWithStrings.find((evilString) => verwijder.textContent.includes(evilString));
       if (heeftEvilString) {
         verwijder.parentNode.removeChild(verwijder);
       }
@@ -464,7 +435,7 @@ async function longTextSocialsIframes(page, event, pageInfo){
       .querySelectorAll(`${removeEmptyHTMLFrom} > *`)
       .forEach((checkForEmpty) => {
         const leegMatch = checkForEmpty.innerHTML
-          .replace("&nbsp;", "")
+          .replace('&nbsp;', '')
           .match(/[\w\d]/g);
         if (!Array.isArray(leegMatch)) {
           checkForEmpty.parentNode.removeChild(checkForEmpty);
@@ -483,9 +454,8 @@ async function longTextSocialsIframes(page, event, pageInfo){
     // tekst.
     res.textForHTML = Array.from(document.querySelectorAll(textSelector))
       .map((el) => el.innerHTML)
-      .join("");
+      .join('');
     return res;
-  },{event})
-  
+  }, { event });
 }
 // #endregion                        LONG HTML
