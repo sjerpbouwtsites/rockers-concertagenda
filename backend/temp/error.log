@@ -1,4 +1,42 @@
 
+  boerderij-0 Error - 3:37:43 AM
+  Error: Evaluation failed: TypeError: this.dirtyDebug is not a function
+    at __puppeteer_evaluation_script__:64:10
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async longTextSocialsIframes (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/boerderij.js:298:10)
+    at async boerderijScraper.singlePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/boerderij.js:178:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:652:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:244:5) 
+  Evaluation failed: TypeError: this.dirtyDebug is not a function
+    at __puppeteer_evaluation_script__:64:10
+  
+  
+  boerderij-0 Error - 3:35:27 AM
+  TypeError: Cannot read properties of null (reading 'outer')
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/longHTML.js:16:16
+    at Array.map (<anonymous>)
+    at makeLongHTML (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/longHTML.js:15:6)
+    at AbstractScraper.writeLongTextHTML (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1489:21)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:693:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:244:5) 
+  Cannot read properties of null (reading 'outer')
+  
+  
+  boerderij-0 Error - 3:34:00 AM
+  TypeError: Cannot read properties of null (reading 'outer')
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/longHTML.js:16:16
+    at Array.map (<anonymous>)
+    at makeLongHTML (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/longHTML.js:15:6)
+    at AbstractScraper.writeLongTextHTML (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1489:21)
+    at AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:693:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:244:5) 
+  Cannot read properties of null (reading 'outer')
+  
+  
   effenaar-0 Error - 3:11:41 AM
   Error: false
     at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:881:29
