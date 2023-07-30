@@ -1,37 +1,40 @@
 {
-  "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended"
-  ],  
   "env": {
     "browser": true,
-    "jquery": true,
-    "node": true,
-    "mocha": true,
-    "es6": true
+    "es2021": true
   },
-  "ecmaFeatures": {
-    "blockBindings": true,
-    "jsx": true
-  },  
+  "extends": [
+    "eslint:recommended",
+    "airbnb",
+    "plugin:react/recommended"
+  ], 
   "parserOptions": {
-    "ecmaVersion": 2022,
+    "ecmaVersion": "latest",
     "sourceType": "module"
-},  
+  },
+  "ignorePatterns": [
+    "node_modules",
+    "build",
+    "dist",
+    "public"
+  ],    
   "rules": {
     "no-mixed-operators": "off",
     "strict": 0,
-    "indent": [2, 2],
-    "no-useless-escape":"off",
-    "no-multi-spaces": [1, {
-      "exceptions": {
-        "VariableDeclarator": true,
-        "FunctionExpression": true
+    "no-useless-escape": "off",
+    "no-multi-spaces": [
+      1,
+      {
+        "exceptions": {
+          "VariableDeclarator": true,
+          "FunctionExpression": true
+        }
       }
-    }],
-    "key-spacing": [0, {"align": "value"}],
+    ],
+    "key-spacing": [0, { "align": "value" }],
     "no-underscore-dangle": 0,
     "react/jsx-no-target-blank": 0,
-    "react/prop-types":0
+    "react/prop-types": 0
   }
+
 }

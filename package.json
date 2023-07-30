@@ -3,23 +3,25 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.16.2",
-    "@testing-library/react": "^12.1.4",
-    "@testing-library/user-event": "^13.5.0",
-    "flickity": "^2.3.0",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.4.3",
     "react": "^18.2.0",
-    "react-dom": "^17.0.2",
-    "react-flickity-component": "^3.6.3",
-    "react-scripts": "5.0.0",
-    "web-vitals": "^2.1.4"
+    "react-dom": "^18.2.0",
+    "react-scripts": "^5.0.1",
+    "web-vitals": "^3.4.0"
   },
   "scripts": {
+    "init" : "run-when-changed --watch 'src/**/*.js' --exec 'npm run eslint-for-formatting; npm run --silent prettier-formatting'",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "prettier": "prettier -w --loglevel=silent ~/dev/apache/concertagenda/public/texts",
-    "backend": "killall -s 9 chrome; cd ~/dev/apache/concertagenda/backend; clear; node index.js force=all; prettier -w --loglevel=silent ~/dev/apache/concertagenda/public/texts;clear; echo 'backend gedaan';"
+    "lint": "eslint src/**/*.{js,jsx}",
+    "lint:fix": "eslint --quiet --fix src/**/*.{js,jsx}",
+    "eslint-for-formatting": "npm run lint:fix;",
+    "prettier-for-formatting": "prettier --config .prettierrc 'src/**/*.{js,jsx,css}' --write --silent --;",
+    "backend": "killall -s 9 chrome; cd ~/dev/apache/concertagenda/backend; clear; node index.js force=all; clear; echo 'backend gedaan';"
   },
   "eslintConfig": {
     "extends": [
@@ -40,11 +42,17 @@
     ]
   },
   "devDependencies": {
-    "eslint": "^8.29.0",
-    "eslint-plugin-react": "^7.31.11",
-    "node-fetch": "^3.2.4",
-    "open": "^8.4.0",
+    "eslint": "^8.46.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.28.0",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-react": "^7.33.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "node-fetch": "^3.3.2",
+    "open": "^9.1.0",
     "os-utils": "^0.0.14",
+    "prettier": "^3.0.0",
+    "run-when-changed": "^2.1.0",
     "websocket": "^1.0.34"
   },
   "type": "module"

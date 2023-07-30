@@ -14,10 +14,12 @@ class EventBlocks extends React.Component {
       eventDataLoading: false,
       eventDataLoaded: false,
       filterHideSoldOut: false,
+      sendDataUp:false,
     };
     this.currentYear = new Date().getFullYear();
     this.createLocation = this.createLocation.bind(this);
     this.createDates = this.createDates.bind(this);
+    this.getEventData = this.getEventData.bind(this);
     this.add100ToMaxEventsShown = this.add100ToMaxEventsShown.bind(this);
     this.escFunction = this.escFunction.bind(this);
     this.hideSoldOut = this.hideSoldOut.bind(this);
@@ -34,6 +36,7 @@ class EventBlocks extends React.Component {
   }
 
   componentDidUpdate() {
+
   }
 
   componentWillUnmount() {
@@ -58,10 +61,12 @@ class EventBlocks extends React.Component {
           .filter(filterEventsDateInPast);
         this.setState({ musicEvents: me2 });
         this.setState({ eventDataLoaded: true });
-        document.querySelectorAll('.app-title__events-count').forEach((countEl) => {
-          // FIXME vervangen door event die naar parant gaat
-          countEl.innerHTML = ` - ${musicEvents.length} concerten`; // eslint-disable-line
-        });
+        const { sendDataUp } = this.state;
+        if (sendDataUp || !sendDataUp) {
+          const { eventBlocksNaarApp } = this.props;
+          eventBlocksNaarApp(me2);
+          this.setState({ sendDataUp : true });
+        }
       })
       .catch((error) => {
         console.error(error);
