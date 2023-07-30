@@ -34,8 +34,8 @@ const boerderijScraper = new AbstractScraper(makeScraperConfig({
 
 boerderijScraper.listenToMasterThread();
 
-//#region [rgba(0, 120, 0, 0.1)]      RAW EVENT CHECK
-boerderijScraper.singleRawEventCheck = async function(event){
+//#region [rgba(0, 120, 0, 0.1)]      MAIN PAGE EVENT CHECK
+boerderijScraper.mainPageAsyncCheck = async function(event){
 
   let workingTitle = this.cleanupEventTitle(event.title);
   
@@ -64,10 +64,10 @@ boerderijScraper.singleRawEventCheck = async function(event){
     success: true
   }
 }
-//#endregion                          RAW EVENT CHECK
+//#endregion                          MAIN PAGE EVENT CHECK
 
-//#region [rgba(0, 180, 0, 0.1)]      SINGLE EVENT CHECK
-//#endregion                          SINGLE EVENT CHECK
+//#region [rgba(0, 180, 0, 0.1)]      SINGLE PAGE EVENT CHECK
+//#endregion                          SINGLE PAGE EVENT CHECK
 
 //#region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
 boerderijScraper.mainPage = async function () {

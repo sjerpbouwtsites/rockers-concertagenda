@@ -27,8 +27,8 @@ const voltScraper = new AbstractScraper(makeScraperConfig({
 
 voltScraper.listenToMasterThread();
 
-//#region [rgba(0, 120, 0, 0.1)]      RAW EVENT CHECK
-voltScraper.singleRawEventCheck = async function (event) {
+//#region [rgba(0, 120, 0, 0.1)]      MAIN PAGE EVENT CHECK
+voltScraper.mainPageAsyncCheck = async function (event) {
   let workingTitle = this.cleanupEventTitle(event.title);
   const isRefused = await this.rockRefuseListCheck(event, workingTitle)
   if (isRefused.success) {
@@ -44,10 +44,10 @@ voltScraper.singleRawEventCheck = async function (event) {
   }
 
 }
-//#endregion                          RAW EVENT CHECK
+//#endregion                          MAIN PAGE EVENT CHECK
 
-//#region [rgba(0, 180, 0, 0.1)]      SINGLE EVENT CHECK
-voltScraper.singleMergedEventCheck = async function (event) {
+//#region [rgba(0, 180, 0, 0.1)]      SINGLE PAGE EVENT CHECK
+voltScraper.singlePageAsyncCheck = async function (event) {
 
   const workingTitle = this.cleanupEventTitle(event.title);
 
@@ -71,7 +71,7 @@ voltScraper.singleMergedEventCheck = async function (event) {
   }
   
 };
-//#endregion                          SINGLE EVENT CHECK
+//#endregion                          SINGLE PAGE EVENT CHECK
 
 //#region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
 voltScraper.mainPage = async function () {

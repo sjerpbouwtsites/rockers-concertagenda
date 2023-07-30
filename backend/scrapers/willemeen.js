@@ -25,8 +25,8 @@ const willemeeenScraper = new AbstractScraper(makeScraperConfig({
 
 willemeeenScraper.listenToMasterThread();
 
-//#region [rgba(0, 120, 0, 0.1)]      RAW EVENT CHECK
-willemeeenScraper.singleRawEventCheck = async function (event) {
+//#region [rgba(0, 120, 0, 0.1)]      MAIN PAGE EVENT CHECK
+willemeeenScraper.mainPageAsyncCheck = async function (event) {
   let workingTitle = this.cleanupEventTitle(event.title);
 
   const isRefused = await this.rockRefuseListCheck(event, workingTitle)
@@ -61,10 +61,10 @@ willemeeenScraper.singleRawEventCheck = async function (event) {
   }
 
 }
-//#endregion                          RAW EVENT CHECK
+//#endregion                          MAIN PAGE EVENT CHECK
 
-//#region [rgba(0, 180, 0, 0.1)]      SINGLE EVENT CHECK
-//#endregion                          SINGLE EVENT CHECK
+//#region [rgba(0, 180, 0, 0.1)]      SINGLE PAGE EVENT CHECK
+//#endregion                          SINGLE PAGE EVENT CHECK
 
 //#region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
 willemeeenScraper.mainPage = async function () {

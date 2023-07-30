@@ -31,8 +31,8 @@ const cpuntScraper = new AbstractScraper(makeScraperConfig({
 
 cpuntScraper.listenToMasterThread();
 
-//#region [rgba(0, 120, 0, 0.1)]      RAW EVENT CHECK
-cpuntScraper.singleRawEventCheck = async function (event) {
+//#region [rgba(0, 120, 0, 0.1)]      MAIN PAGE EVENT CHECK
+cpuntScraper.mainPageAsyncCheck = async function (event) {
 
   let workingTitle = this.cleanupEventTitle(event.title);
 
@@ -67,10 +67,10 @@ cpuntScraper.singleRawEventCheck = async function (event) {
     reason: [isRefused.reason, isAllowed.reason, hasForbiddenTerms.reason].join(';'),
   }
 };
-//#endregion                          RAW EVENT CHECK
+//#endregion                          MAIN PAGE EVENT CHECK
 
-//#region [rgba(0, 180, 0, 0.1)]      SINGLE EVENT CHECK
-//#endregion                          SINGLE EVENT CHECK
+//#region [rgba(0, 180, 0, 0.1)]      SINGLE PAGE EVENT CHECK
+//#endregion                          SINGLE PAGE EVENT CHECK
 
 //#region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
 cpuntScraper.mainPage = async function () {

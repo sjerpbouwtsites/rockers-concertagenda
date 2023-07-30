@@ -34,11 +34,11 @@ const ticketmasterScraper = new AbstractScraper(makeScraperConfig({
 
 ticketmasterScraper.listenToMasterThread();
 
-//#region [rgba(0, 120, 0, 0.1)]      RAW EVENT CHECK
-//#endregion                          RAW EVENT CHECK
+//#region [rgba(0, 120, 0, 0.1)]      MAIN PAGE EVENT CHECK
+//#endregion                          MAIN PAGE EVENT CHECK
 
-//#region [rgba(0, 180, 0, 0.1)]      SINGLE EVENT CHECK
-//#endregion                          SINGLE EVENT CHECK
+//#region [rgba(0, 180, 0, 0.1)]      SINGLE PAGE EVENT CHECK
+//#endregion                          SINGLE PAGE EVENT CHECK
 
 //#region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
 ticketmasterScraper.mainPage = async function() {

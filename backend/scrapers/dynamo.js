@@ -28,8 +28,8 @@ const dynamoScraper = new AbstractScraper(makeScraperConfig({
 
 dynamoScraper.listenToMasterThread();
 
-//#region [rgba(0, 120, 0, 0.1)]      RAW EVENT CHECK
-dynamoScraper.singleRawEventCheck = async function(event){
+//#region [rgba(0, 120, 0, 0.1)]      MAIN PAGE EVENT CHECK
+dynamoScraper.mainPageAsyncCheck = async function(event){
 
   let workingTitle = this.cleanupEventTitle(event.title);
 
@@ -47,10 +47,10 @@ dynamoScraper.singleRawEventCheck = async function(event){
   }
 
 }
-//#endregion                          RAW EVENT CHECK
+//#endregion                          MAIN PAGE EVENT CHECK
 
-//#region [rgba(0, 180, 0, 0.1)]      SINGLE EVENT CHECK
-dynamoScraper.singleMergedEventCheck = async function(event){
+//#region [rgba(0, 180, 0, 0.1)]      SINGLE PAGE EVENT CHECK
+dynamoScraper.singlePageAsyncCheck = async function(event){
 
   let workingTitle = this.cleanupEventTitle(event.title);
 
@@ -85,7 +85,7 @@ dynamoScraper.singleMergedEventCheck = async function(event){
   }
   
 }
-//#endregion                          SINGLE EVENT CHECK
+//#endregion                          SINGLE PAGE EVENT CHECK
 
 //#region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
 dynamoScraper.mainPage = async function () {

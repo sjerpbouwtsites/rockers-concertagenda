@@ -27,8 +27,8 @@ const nieuwenorScraper = new AbstractScraper(makeScraperConfig({
 
 nieuwenorScraper.listenToMasterThread();
 
-//#region [rgba(0, 120, 0, 0.1)]      RAW EVENT CHECK
-nieuwenorScraper.singleRawEventCheck = async function(event){
+//#region [rgba(0, 120, 0, 0.1)]      MAIN PAGE EVENT CHECK
+nieuwenorScraper.mainPageAsyncCheck = async function(event){
  
   const workingTitle = this.cleanupEventTitle(event.title)
 
@@ -58,10 +58,10 @@ nieuwenorScraper.singleRawEventCheck = async function(event){
   }
 
 }
-//#endregion                          RAW EVENT CHECK
+//#endregion                          MAIN PAGE EVENT CHECK
 
-//#region [rgba(0, 180, 0, 0.1)]      SINGLE EVENT CHECK
-nieuwenorScraper.singleMergedEventCheck = async function(event){
+//#region [rgba(0, 180, 0, 0.1)]      SINGLE PAGE EVENT CHECK
+nieuwenorScraper.singlePageAsyncCheck = async function(event){
  
   const workingTitle = this.cleanupEventTitle(event.title)
   const isAllowed = await this.rockAllowListCheck(event, workingTitle)
@@ -91,7 +91,7 @@ nieuwenorScraper.singleMergedEventCheck = async function(event){
   }
   
 }
-//#endregion                          SINGLE EVENT CHECK
+//#endregion                          SINGLE PAGE EVENT CHECK
 
 //#region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
 nieuwenorScraper.mainPage = async function () {

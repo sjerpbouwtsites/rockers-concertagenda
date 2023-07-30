@@ -30,8 +30,8 @@ const dehellingScraper = new AbstractScraper(makeScraperConfig({
 
 dehellingScraper.listenToMasterThread();
 
-//#region [rgba(0, 120, 0, 0.1)]      RAW EVENT CHECK
-dehellingScraper.singleRawEventCheck = async function (event) {
+//#region [rgba(0, 120, 0, 0.1)]      MAIN PAGE EVENT CHECK
+dehellingScraper.mainPageAsyncCheck = async function (event) {
   
   const workingTitle = this.cleanupEventTitle(event.title);
 
@@ -55,10 +55,10 @@ dehellingScraper.singleRawEventCheck = async function (event) {
     success: true
   }
 };
-//#endregion                          RAW EVENT CHECK
+//#endregion                          MAIN PAGE EVENT CHECK
 
-//#region [rgba(0, 180, 0, 0.1)]      SINGLE EVENT CHECK
-dehellingScraper.singleMergedEventCheck = async function (event) {
+//#region [rgba(0, 180, 0, 0.1)]      SINGLE PAGE EVENT CHECK
+dehellingScraper.singlePageAsyncCheck = async function (event) {
   
   return {
     reason: ['nothing found currently'].join(';'),
@@ -66,7 +66,7 @@ dehellingScraper.singleMergedEventCheck = async function (event) {
     success: true
   }
 };
-//#endregion                          SINGLE EVENT CHECK
+//#endregion                          SINGLE PAGE EVENT CHECK
 
 //#region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
 dehellingScraper.mainPage = async function () { 

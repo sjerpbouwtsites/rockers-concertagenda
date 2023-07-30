@@ -25,8 +25,8 @@ const nuldertienScraper = new AbstractScraper(makeScraperConfig({
 
 nuldertienScraper.listenToMasterThread();
 
-//#region [rgba(0, 120, 0, 0.1)]      RAW EVENT CHECK
-nuldertienScraper.singleRawEventCheck = async function(event){
+//#region [rgba(0, 120, 0, 0.1)]      MAIN PAGE EVENT CHECK
+nuldertienScraper.mainPageAsyncCheck = async function(event){
 
   let workingTitle = this.cleanupEventTitle(event.title);
   const isRefused = await this.rockRefuseListCheck(event, workingTitle)
@@ -54,10 +54,10 @@ nuldertienScraper.singleRawEventCheck = async function(event){
     success: true
   }
 }
-//#endregion                          RAW EVENT CHECK
+//#endregion                          MAIN PAGE EVENT CHECK
 
-//#region [rgba(0, 180, 0, 0.1)]      SINGLE EVENT CHECK
-//#endregion                          SINGLE EVENT CHECK
+//#region [rgba(0, 180, 0, 0.1)]      SINGLE PAGE EVENT CHECK
+//#endregion                          SINGLE PAGE EVENT CHECK
 
 //#region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
 nuldertienScraper.mainPage = async function () {

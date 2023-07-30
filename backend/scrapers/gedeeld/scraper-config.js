@@ -47,7 +47,7 @@ export function MakeScraperConfig(obj){
   this.puppeteerConfig = Object.assign({}, basePuppeteerConfig);
   this.workerData = obj.workerData;
 
-  this.hasDecentCategorisation = obj.workerData || true // of singleRawEventCheck echt moet runnen
+  this.hasDecentCategorisation = obj.workerData || true // of mainPageAsyncCheck echt moet runnen
   
   this.puppeteerConfig.singlePage.timeout = obj?.puppeteerConfig?.singlePage?.timeout ?? this.puppeteerConfig.singlePage.timeout;
   this.puppeteerConfig.singlePage.waitUntil = obj?.puppeteerConfig?.singlePage?.waitUntil ?? this.puppeteerConfig.singlePage.waitUntil;

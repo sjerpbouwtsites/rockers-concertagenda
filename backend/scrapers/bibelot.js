@@ -30,8 +30,8 @@ const bibelotScraper = new AbstractScraper(makeScraperConfig({
 
 bibelotScraper.listenToMasterThread();
 
-//#region [rgba(0, 120, 0, 0.1)]      RAW EVENT CHECK
-bibelotScraper.singleRawEventCheck = async function(event){
+//#region [rgba(0, 120, 0, 0.1)]      MAIN PAGE EVENT CHECK
+bibelotScraper.mainPageAsyncCheck = async function(event){
 
   let workingTitle = this.cleanupEventTitle(event.title);
   const isRefused = await this.rockRefuseListCheck(event, workingTitle)
@@ -59,10 +59,10 @@ bibelotScraper.singleRawEventCheck = async function(event){
     success: !hasForbiddenTermsRes.success,
   }
 }
-//#endregion                          RAW EVENT CHECK
+//#endregion                          MAIN PAGE EVENT CHECK
 
-//#region [rgba(0, 180, 0, 0.1)]      SINGLE EVENT CHECK
-//#endregion                          SINGLE EVENT CHECK
+//#region [rgba(0, 180, 0, 0.1)]      SINGLE PAGE EVENT CHECK
+//#endregion                          SINGLE PAGE EVENT CHECK
 
 //#region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
 bibelotScraper.mainPage = async function () {

@@ -33,7 +33,7 @@ export default class AbstractScraper {
 
   //#region [rgba(0, 0, 30, 0.10)]                             DEBUGSETTINGS
   debugCorruptedUnavailable = false;
-  debugSingleMergedEventCheck = false;
+  debugsinglePageAsyncCheck = false;
   debugRawEventAsyncCheck = false;
   debugBaseEvents = false;
   debugPageInfo = false;
@@ -42,7 +42,7 @@ export default class AbstractScraper {
 
   //#region [rgba(0, 0, 60, 0.10)]                             ISROCKSETTINGS  
   /**
-   * Gebruikt in singleRawEventChecks' hasForbiddenTerms
+   * Gebruikt in mainPageAsyncChecks' hasForbiddenTerms
    *
    * @static
    * @memberof AbstractScraper
@@ -531,7 +531,7 @@ export default class AbstractScraper {
       if (generatedEvent.done) return useableEventsCheckedArray;
 
       const eventToCheck = generatedEvent.value;
-      const checkResult = await this.singleRawEventCheck(eventToCheck);
+      const checkResult = await this.mainPageAsyncCheck(eventToCheck);
       let workingTitle = checkResult.workingTitle || this.cleanupEventTitle(eventToCheck.title);
       if (checkResult.success) {
         useableEventsCheckedArray.push(eventToCheck);
@@ -585,7 +585,7 @@ export default class AbstractScraper {
    * @return {event {MusicEvent, success bool}}
    * @memberof AbstractScraper
    */
-  async singleRawEventCheck(event) {
+  async mainPageAsyncCheck(event) {
     // abstracte methode, over te schrijven
     return {
       event,
@@ -692,9 +692,9 @@ export default class AbstractScraper {
     
     singleEvent.longText = this.writeLongTextHTML(singleEvent);
 
-    const mergedEventCheckRes = await this.singleMergedEventCheck(singleEvent, pageInfo);
+    const mergedEventCheckRes = await this.singlePageAsyncCheck(singleEvent, pageInfo);
     if (mergedEventCheckRes.success) {
-      if (this.debugSingleMergedEventCheck && mergedEventCheckRes.reason) {
+      if (this.debugsinglePageAsyncCheck && mergedEventCheckRes.reason) {
         this.dirtyDebug({
           title: 'Merged async check 👍',
           event: `<a class='single-event-check-notice single-event-check-notice--success' href='${mergedEventCheckRes.event.venueEventUrl}'>${mergedEventCheckRes.event.title}</a>`,
@@ -703,10 +703,10 @@ export default class AbstractScraper {
       }
 
       singleEvent.isValid
-        ? singleEvent.register() // TODO hier lopen dingen echt dwars door elkaar. integreren in soort van singleMergedEventCheckBase en dan anderen reducen erop of weet ik veel wat een gehack vandaag
+        ? singleEvent.register() // TODO hier lopen dingen echt dwars door elkaar. integreren in soort van singlePageAsyncCheckBase en dan anderen reducen erop of weet ik veel wat een gehack vandaag
         : singleEvent.registerINVALID(this.workerData);
     } else {
-      if (this.debugSingleMergedEventCheck && mergedEventCheckRes.reason){
+      if (this.debugsinglePageAsyncCheck && mergedEventCheckRes.reason){
         this.dirtyDebug({
           title: 'Merged async check 👎',        
           event: `<a class='single-event-check-notice single-event-check-notice--failure' href='${mergedEventCheckRes.event.venueEventUrl}'>${mergedEventCheckRes.event.title}</a>`,
@@ -913,7 +913,7 @@ export default class AbstractScraper {
    * @return {event {MusicEvent, success bool}}
    * @memberof AbstractScraper
    */
-  async singleMergedEventCheck(event, pageInfo = null) {
+  async singlePageAsyncCheck(event, pageInfo = null) {
     // abstracte methode, over te schrijven
     return {
       event,
@@ -1203,7 +1203,7 @@ export default class AbstractScraper {
     }
   } 
   /**
-   * methode waarmee singleRawEventCheck vervangen kan worden.
+   * methode waarmee mainPageAsyncCheck vervangen kan worden.
    * kijkt naar 'voornaamste titel', dwz de event.title tot aan een '&'.
    *
    * @param {*} event

@@ -29,8 +29,8 @@ const depulScraper = new AbstractScraper(makeScraperConfig({
 
 depulScraper.listenToMasterThread();
 
-//#region [rgba(0, 120, 0, 0.1)]      RAW EVENT CHECK
-depulScraper.singleRawEventCheck = async function (event){
+//#region [rgba(0, 120, 0, 0.1)]      MAIN PAGE EVENT CHECK
+depulScraper.mainPageAsyncCheck = async function (event){
   const workingTitle = this.cleanupEventTitle(event.title);
   const isRefused = await this.rockRefuseListCheck(event, workingTitle)
   if (isRefused.success) {
@@ -44,10 +44,10 @@ depulScraper.singleRawEventCheck = async function (event){
     success: true
   }  
 }
-//#endregion                          RAW EVENT CHECK
+//#endregion                          MAIN PAGE EVENT CHECK
 
-//#region [rgba(0, 180, 0, 0.1)]      SINGLE EVENT CHECK
-depulScraper.singleMergedEventCheck = async function (event) {
+//#region [rgba(0, 180, 0, 0.1)]      SINGLE PAGE EVENT CHECK
+depulScraper.singlePageAsyncCheck = async function (event) {
   const workingTitle = this.cleanupEventTitle(event.title);
   
   const isAllowed = await this.rockAllowListCheck(event, workingTitle)
@@ -78,7 +78,7 @@ depulScraper.singleMergedEventCheck = async function (event) {
     reason: [isAllowed.reason, hasGoodTerms.reason, isRockRes.reason].join(';'),
   };
 };
-//#endregion                          SINGLE EVENT CHECK
+//#endregion                          SINGLE PAGE EVENT CHECK
 
 //#region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
 depulScraper.mainPage = async function () {

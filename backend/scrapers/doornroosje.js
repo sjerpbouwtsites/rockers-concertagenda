@@ -30,8 +30,8 @@ const doornroosjeScraper = new AbstractScraper(makeScraperConfig({
 
 doornroosjeScraper.listenToMasterThread();
 
-//#region [rgba(0, 120, 0, 0.1)]      RAW EVENT CHECK
-doornroosjeScraper.singleRawEventCheck = async function (event) {
+//#region [rgba(0, 120, 0, 0.1)]      MAIN PAGE EVENT CHECK
+doornroosjeScraper.mainPageAsyncCheck = async function (event) {
   const workingTitle = this.cleanupEventTitle(event.title);
   const isRefused = await this.rockRefuseListCheck(event, workingTitle)
   if (isRefused.success) {
@@ -53,10 +53,10 @@ doornroosjeScraper.singleRawEventCheck = async function (event) {
   }
 
 }
-//#endregion                          RAW EVENT CHECK
+//#endregion                          MAIN PAGE EVENT CHECK
 
-//#region [rgba(0, 180, 0, 0.1)]      SINGLE EVENT CHECK
-doornroosjeScraper.singleMergedEventCheck = async function (event) {
+//#region [rgba(0, 180, 0, 0.1)]      SINGLE PAGE EVENT CHECK
+doornroosjeScraper.singlePageAsyncCheck = async function (event) {
   const workingTitle = this.cleanupEventTitle(event.title);
 
   const hasForbiddenTerms = await this.hasForbiddenTerms(event, ['longTextHTML', 'shortText', 'title'])
@@ -75,7 +75,7 @@ doornroosjeScraper.singleMergedEventCheck = async function (event) {
     success: true
   }
 };
-//#endregion                          SINGLE EVENT CHECK
+//#endregion                          SINGLE PAGE EVENT CHECK
 
 //#region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
 doornroosjeScraper.mainPage = async function () {

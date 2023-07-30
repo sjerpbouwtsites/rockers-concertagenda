@@ -30,8 +30,8 @@ const littledevilScraper = new AbstractScraper(makeScraperConfig({
 
 littledevilScraper.listenToMasterThread();
 
-//#region [rgba(0, 120, 0, 0.1)]      RAW EVENT CHECK
-littledevilScraper.singleRawEventCheck = async function(event){
+//#region [rgba(0, 120, 0, 0.1)]      MAIN PAGE EVENT CHECK
+littledevilScraper.mainPageAsyncCheck = async function(event){
 
   let workingTitle = this.cleanupEventTitle(event.title);
 
@@ -61,10 +61,10 @@ littledevilScraper.singleRawEventCheck = async function(event){
   }
 
 }
-//#endregion                          RAW EVENT CHECK
+//#endregion                          MAIN PAGE EVENT CHECK
 
-//#region [rgba(0, 180, 0, 0.1)]      SINGLE EVENT CHECK
-// littledevilScraper.singleMergedEventCheck = async function(event){
+//#region [rgba(0, 180, 0, 0.1)]      SINGLE PAGE EVENT CHECK
+// littledevilScraper.singlePageAsyncCheck = async function(event){
 //   let workingTitle = this.cleanupEventTitle(event.title);
 
 //   return {
@@ -74,7 +74,7 @@ littledevilScraper.singleRawEventCheck = async function(event){
 //     success: true
 //   }  
 // }
-//#endregion                          SINGLE EVENT CHECK
+//#endregion                          SINGLE PAGE EVENT CHECK
 
 //#region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
 littledevilScraper.mainPage = async function () {

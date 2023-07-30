@@ -28,8 +28,8 @@ const idunaScraper = new AbstractScraper(makeScraperConfig({
 
 idunaScraper.listenToMasterThread();
 
-//#region [rgba(0, 120, 0, 0.1)]      RAW EVENT CHECK
-idunaScraper.singleRawEventCheck = async function (event) {
+//#region [rgba(0, 120, 0, 0.1)]      MAIN PAGE EVENT CHECK
+idunaScraper.mainPageAsyncCheck = async function (event) {
   let workingTitle = this.cleanupEventTitle(event.title);
   const isRefused = await this.rockRefuseListCheck(event, workingTitle)
   if (isRefused.success) {
@@ -45,10 +45,10 @@ idunaScraper.singleRawEventCheck = async function (event) {
   }
 
 }
-//#endregion                          RAW EVENT CHECK
+//#endregion                          MAIN PAGE EVENT CHECK
 
-//#region [rgba(0, 180, 0, 0.1)]      SINGLE EVENT CHECK
-idunaScraper.singleMergedEventCheck = async function (event) {
+//#region [rgba(0, 180, 0, 0.1)]      SINGLE PAGE EVENT CHECK
+idunaScraper.singlePageAsyncCheck = async function (event) {
   const workingTitle = this.cleanupEventTitle(event.title);
   
   const isAllowed = await this.rockAllowListCheck(event, workingTitle)
@@ -72,7 +72,7 @@ idunaScraper.singleMergedEventCheck = async function (event) {
     success: true
   }
 };
-//#endregion                          SINGLE EVENT CHECK
+//#endregion                          SINGLE PAGE EVENT CHECK
 
 //#region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
 idunaScraper.mainPage = async function () {

@@ -27,8 +27,8 @@ const effenaarScraper = new AbstractScraper(makeScraperConfig({
 
 effenaarScraper.listenToMasterThread();
 
-//#region [rgba(0, 120, 0, 0.1)]      RAW EVENT CHECK
-effenaarScraper.singleRawEventCheck = async function(event){
+//#region [rgba(0, 120, 0, 0.1)]      MAIN PAGE EVENT CHECK
+effenaarScraper.mainPageAsyncCheck = async function(event){
  
   const workingTitle = this.cleanupEventTitle(event.title)
 
@@ -46,10 +46,10 @@ effenaarScraper.singleRawEventCheck = async function(event){
   }
 
 }
-//#endregion                          RAW EVENT CHECK
+//#endregion                          MAIN PAGE EVENT CHECK
 
-//#region [rgba(0, 180, 0, 0.1)]      SINGLE EVENT CHECK
-effenaarScraper.singleMergedEventCheck = async function(event){
+//#region [rgba(0, 180, 0, 0.1)]      SINGLE PAGE EVENT CHECK
+effenaarScraper.singlePageAsyncCheck = async function(event){
  
   const workingTitle = this.cleanupEventTitle(event.title)
 
@@ -75,7 +75,7 @@ effenaarScraper.singleMergedEventCheck = async function(event){
   }
   
 }
-//#endregion                          SINGLE EVENT CHECK
+//#endregion                          SINGLE PAGE EVENT CHECK
 
 //#region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
 effenaarScraper.mainPage = async function () {

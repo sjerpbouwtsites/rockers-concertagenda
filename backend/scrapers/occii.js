@@ -29,8 +29,8 @@ const occiiScraper = new AbstractScraper(makeScraperConfig({
 
 occiiScraper.listenToMasterThread();
 
-//#region [rgba(0, 120, 0, 0.1)]      RAW EVENT CHECK
-occiiScraper.singleRawEventCheck = async function(event){
+//#region [rgba(0, 120, 0, 0.1)]      MAIN PAGE EVENT CHECK
+occiiScraper.mainPageAsyncCheck = async function(event){
   const workingTitle = this.cleanupEventTitle(event.title);
 
   const isRefused = await this.rockRefuseListCheck(event, workingTitle)
@@ -56,10 +56,10 @@ occiiScraper.singleRawEventCheck = async function(event){
     event
   }  
 }
-//#endregion                          RAW EVENT CHECK
+//#endregion                          MAIN PAGE EVENT CHECK
 
-//#region [rgba(0, 180, 0, 0.1)]      SINGLE EVENT CHECK
-occiiScraper.singleMergedEventCheck = async function(event, pageInfo){
+//#region [rgba(0, 180, 0, 0.1)]      SINGLE PAGE EVENT CHECK
+occiiScraper.singlePageAsyncCheck = async function(event, pageInfo){
   const workingTitle = this.cleanupEventTitle(event.title)
 
   const ss = !(pageInfo?.genres?.include('electronic') ?? false);
@@ -75,7 +75,7 @@ occiiScraper.singleMergedEventCheck = async function(event, pageInfo){
     event
   };
 }
-//#endregion                          SINGLE EVENT CHECK
+//#endregion                          SINGLE PAGE EVENT CHECK
 
 //#region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
 occiiScraper.mainPage = async function () {

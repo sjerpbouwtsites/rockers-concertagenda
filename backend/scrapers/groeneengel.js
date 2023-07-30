@@ -29,8 +29,8 @@ const groeneEngelScraper = new AbstractScraper(makeScraperConfig({
 
 groeneEngelScraper.listenToMasterThread();
 
-//#region [rgba(0, 120, 0, 0.1)]      RAW EVENT CHECK
-groeneEngelScraper.singleRawEventCheck = async function(event){
+//#region [rgba(0, 120, 0, 0.1)]      MAIN PAGE EVENT CHECK
+groeneEngelScraper.mainPageAsyncCheck = async function(event){
 
   const workingTitle = this.cleanupEventTitle(event.title)
 
@@ -58,10 +58,10 @@ groeneEngelScraper.singleRawEventCheck = async function(event){
   };
   
 }
-//#endregion                          RAW EVENT CHECK
+//#endregion                          MAIN PAGE EVENT CHECK
 
-//#region [rgba(0, 180, 0, 0.1)]      SINGLE EVENT CHECK
-groeneEngelScraper.singleMergedEventCheck = async function (event) {
+//#region [rgba(0, 180, 0, 0.1)]      SINGLE PAGE EVENT CHECK
+groeneEngelScraper.singlePageAsyncCheck = async function (event) {
   const workingTitle = this.cleanupEventTitle(event.title)
 
   const isAllowed = await this.rockAllowListCheck(event, workingTitle)
@@ -88,7 +88,7 @@ groeneEngelScraper.singleMergedEventCheck = async function (event) {
   }
   return isRockRes;  
 };
-//#endregion                          SINGLE EVENT CHECK
+//#endregion                          SINGLE PAGE EVENT CHECK
 
 //#region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
 groeneEngelScraper.mainPage = async function () {

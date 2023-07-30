@@ -29,8 +29,8 @@ const melkwegScraper = new AbstractScraper(makeScraperConfig({
 
 melkwegScraper.listenToMasterThread();
 
-//#region [rgba(0, 120, 0, 0.1)]      RAW EVENT CHECK
-melkwegScraper.singleRawEventCheck = async function(event){
+//#region [rgba(0, 120, 0, 0.1)]      MAIN PAGE EVENT CHECK
+melkwegScraper.mainPageAsyncCheck = async function(event){
 
   const workingTitle = this.cleanupEventTitle(event.title)
 
@@ -64,10 +64,10 @@ melkwegScraper.singleRawEventCheck = async function(event){
   }
   return isRockRes;
 }
-//#endregion                          RAW EVENT CHECK
+//#endregion                          MAIN PAGE EVENT CHECK
 
-//#region [rgba(0, 180, 0, 0.1)]      SINGLE EVENT CHECK
-//#endregion                          SINGLE EVENT CHECK
+//#region [rgba(0, 180, 0, 0.1)]      SINGLE PAGE EVENT CHECK
+//#endregion                          SINGLE PAGE EVENT CHECK
 
 //#region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
 melkwegScraper.mainPage = async function () {
