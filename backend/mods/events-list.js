@@ -90,42 +90,6 @@ export default class EventsList {
     // return true;
   }
 
-  static isOld(name, ignoreAgeForceScrape = false) {
-
-    // @TODO helemaal herschrijven. timestamps onzin eruit halen. 
-
-    if (ignoreAgeForceScrape) {
-      return true;
-    }
-
-    //@ TODO TIJDELIJK;
-    return false;
-
-    // let eventListTimestamps;
-    // if (EventsList.guaranteeTimestampExistence()) {
-    //   try {
-    //     eventListTimestamps = JSON.parse(
-    //       fs.readFileSync(fsDirections.timestampsJson)
-    //     );
-    //   } catch (error) {
-    //     throw new Error(`Kan timestamp niet lezen van naam ${name}.\n<br>
-    //     locatie van timestamps zou moeten zijn ${fsDirections.timestampsJson}.\n<br>
-    //     ${error.message}`);
-    //   }
-    // }
-
-    // const d = new Date();
-    // const currentMilliseconds = d.getTime();
-    // const stored = Object.prototype.hasOwnProperty.call(eventListTimestamps, name)
-    //   ? eventListTimestamps[name]
-    //   : "0";
-    // const ageOfStoredEventList = Number(stored);
-    // const oneDay = 86400000;
-
-    // const notFresh = currentMilliseconds > ageOfStoredEventList + 2 * oneDay;
-    // return notFresh || ageOfStoredEventList == 0;
-  }
-
   static merge(events) {
     events.forEach((event) => {
       EventsList.addEvent(event);

@@ -1,6 +1,7 @@
 import EventsList from "./events-list.js";
 import { getShellArguments } from "./tools.js";
 import fsDirections from "./fs-directions.js";
+import fs from 'fs';
 
 export const AbstractWorkerConfig = {
   CPUReq: "normal",
@@ -74,27 +75,28 @@ class WorkerListConf {
   data = [];
   shellArguments = null;
   static _self = null;
+  curDay = (new Date()).toISOString().split('T')[0].replaceAll(/-/g,'')
   constructor() {
     if (WorkerListConf._self instanceof WorkerListConf) {
       return WorkerListConf._self;
     } else {
       this._self = this;
       this.shellArguments = getShellArguments();
+      this.setBaseEventLists();
       this.run();
     }
+  }
+  setBaseEventLists(){
+    this.baseEventlistsStart = fs.readdirSync(fsDirections.baseEventlists);
   }
   listCopy() {
     return [...this.data];
   }
   isForced() {}
   create(config) {
-    const forceArg = this.shellArguments?.force ?? "";
-    const forceSetNo = this.shellArguments?.forceset ? Number(this.shellArguments?.forceset) : null;
-    const forced = forceArg.includes(config.family) || forceArg.includes("all") || config.forceSet === forceSetNo;
-
-    if (!EventsList.isOld(config.family, forced)) {
-      return false;
-    }
+    // const forceArg = this.shellArguments?.force ?? "";
+    // const forceSetNo = this.shellArguments?.forceset ? Number(this.shellArguments?.forceset) : null;
+    // const forced = forceArg.includes(config.family) || forceArg.includes("all") || config.forceSet === forceSetNo;
 
     const mergedConfig = {
       ...AbstractWorkerConfig,
@@ -126,8 +128,19 @@ class WorkerListConf {
     }
     return this.data;
   }
+  workerNeedsWork(familyName){
+    if (this.shellArguments?.force?.includes('all')) return true;
+    if (this.shellArguments?.force?.includes(familyName)) return true;
+    if (!this.baseEventlistsStart.join('').includes(familyName)) return true;
+    const actueelGevonden = this.baseEventlistsStart.find(baseEventList =>{
+      return baseEventList.includes(familyName) && baseEventList.includes(this.curDay)
+    })
+    if (!actueelGevonden) return true;
+    return false;
+  }
   run() {
     Object.entries(workerConfig).forEach(([familyName, values]) => {
+      if (!this.workerNeedsWork(familyName)) return;
       this.create({ family: familyName, ...values });
     });
 
