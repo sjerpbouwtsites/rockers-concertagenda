@@ -1,8 +1,9 @@
 import { workerData } from "worker_threads";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
+import {combineStartTimeStartDate, mapToStartDate, mapToStartTime} from "./gedeeld/datums.js";
 
-//#region [rgba(0, 60, 0, 0.3)]       SCRAPER CONFIG
+//#region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const baroegScraper = new AbstractScraper(makeScraperConfig({
   maxExecutionTime: 60047,
   workerData: Object.assign({}, workerData),
@@ -29,7 +30,7 @@ const baroegScraper = new AbstractScraper(makeScraperConfig({
 
 baroegScraper.listenToMasterThread();
 
-//#region [rgba(0, 120, 0, 0.3)]      RAW EVENT CHECK
+//#region [rgba(0, 120, 0, 0.1)]      RAW EVENT CHECK
 baroegScraper.singleRawEventCheck = async function(event){
 
   let workingTitle = this.cleanupEventTitle(event.title);
@@ -60,10 +61,10 @@ baroegScraper.singleRawEventCheck = async function(event){
 }
 //#endregion                          RAW EVENT CHECK
 
-//#region [rgba(0, 180, 0, 0.3)]      SINGLE EVENT CHECK
+//#region [rgba(0, 180, 0, 0.1)]      SINGLE EVENT CHECK
 //#endregion                          SINGLE EVENT CHECK
 
-//#region [rgba(0, 240, 0, 0.3)]      MAIN PAGE
+//#region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
 baroegScraper.mainPage = async function () {
 
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
@@ -110,47 +111,21 @@ baroegScraper.mainPage = async function () {
         res.shortText += categorieTeksten;
                 
         res.venueEventUrl =venueEventUrl;
+      
+        res.mapToStartDate = eventEl.querySelector('.wp_theatre_event_startdate')?.textContent.trim().substring(3,26) ?? '';
+        res.mapToStartTime = eventEl.querySelector('.wp_theatre_event_starttime')?.textContent ?? '';
         
-        res.startDate = eventEl.querySelector('.wp_theatre_event_startdate')?.textContent.trim().substring(3,26).split('/').reverse() ?? null;
-        if (!res.startDate) {
-          res.errors.push({
-            remarks: `geen startdate`,
-            toDebug: {
-              startDateText: eventEl.querySelector('.wp_theatre_event_startdate')?.textContent,
-              res
-            }
-          })
-          res.unavailable += 'geen startdate'
-          return res;
-        }
-        const startYear = res.startDate[0].padStart(4, '20');
-        const startMonth = res.startDate[1].padStart(2, '0');
-        const startDay = res.startDate[2].padStart(2, '0');
-        res.startDate = `${startYear}-${startMonth}-${startDay}`;
-        res.startTime = eventEl.querySelector('.wp_theatre_event_starttime')?.textContent ?? null;
-        if (!res.startTime){
-          res.errors.push({
-            remarks: 'geen start',
-            toDebug: {
-              startDateText: eventEl.querySelector('.wp_theatre_event_starttime')?.textContent,
-              res
-            }
-          })
-          return res;   
-        }
-        try{
-          res.start = new Date(`${res.startDate}T${res.startTime}:00`).toISOString();
-        } catch (errorCaught) {
-          res.errors.push({
-            error: errorCaught,
-            remarks: `date omzetting error ${res.pageInfo}`,
-            toDebug: res
-          })
-        }
         return res;
       })
   }, {workerData})
-  rawEvents = rawEvents .map(this.isMusicEventCorruptedMapper);
+
+
+  rawEvents = rawEvents.map((event)=>{
+    return mapToStartDate(event, 'dag-maandNummer-jaar', this.months)
+  }) ;
+  rawEvents = rawEvents.map(mapToStartTime);
+  rawEvents = rawEvents.map(combineStartTimeStartDate);
+  rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
 
   this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
@@ -160,7 +135,7 @@ baroegScraper.mainPage = async function () {
 };
 //#endregion                          MAIN PAGE
 
-//#region [rgba(120, 0, 0, 0.3)]     SINGLE PAGE
+//#region [rgba(120, 0, 0, 0.1)]     SINGLE PAGE
 baroegScraper.singlePage = async function ({ page, event }) {
   
   const {stopFunctie} =  await this.singlePageStart()
@@ -197,7 +172,7 @@ baroegScraper.singlePage = async function ({ page, event }) {
 };
 //#endregion                         SINGLE PAGE
 
-// #region [rgba(60, 0, 0, 0.5)]     LONG HTML
+// #region [rgba(60, 0, 0, 0.3)]     LONG HTML
 async function longTextSocialsIframes(page, event, pageInfo){
 
   return await page.evaluate(({event})=>{

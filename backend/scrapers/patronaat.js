@@ -4,7 +4,7 @@ import makeScraperConfig from "./gedeeld/scraper-config.js";
 import ErrorWrapper from "../mods/error-wrapper.js";
 import * as _t from "../mods/tools.js";
 
-//#region [rgba(0, 60, 0, 0.3)]       SCRAPER CONFIG
+//#region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const patronaatScraper = new AbstractScraper(makeScraperConfig({
   workerData: Object.assign({}, workerData),
   puppeteerConfig: {
@@ -29,7 +29,7 @@ const patronaatScraper = new AbstractScraper(makeScraperConfig({
 
 patronaatScraper.listenToMasterThread();
 
-//#region [rgba(0, 120, 0, 0.3)]      RAW EVENT CHECK
+//#region [rgba(0, 120, 0, 0.1)]      RAW EVENT CHECK
 patronaatScraper.singleRawEventCheck = async function (event) {
   const workingTitle = this.cleanupEventTitle(event.title);
 
@@ -66,10 +66,10 @@ patronaatScraper.singleRawEventCheck = async function (event) {
 };
 //#endregion                          RAW EVENT CHECK
 
-//#region [rgba(0, 180, 0, 0.3)]      SINGLE EVENT CHECK
+//#region [rgba(0, 180, 0, 0.1)]      SINGLE EVENT CHECK
 //#endregion                          SINGLE EVENT CHECK
 
-//#region [rgba(0, 240, 0, 0.3)]      MAIN PAGE
+//#region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
 patronaatScraper.mainPage = async function () {
 
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
@@ -112,7 +112,7 @@ patronaatScraper.mainPage = async function () {
 };
 //#endregion                          MAIN PAGE
 
-//#region [rgba(120, 0, 0, 0.3)]     SINGLE PAGE
+//#region [rgba(120, 0, 0, 0.1)]     SINGLE PAGE
 patronaatScraper.singlePage = async function ({ page, event }) {
  
   const {stopFunctie} =  await this.singlePageStart()
@@ -162,19 +162,19 @@ patronaatScraper.singlePage = async function ({ page, event }) {
         }
 
         if (res.doorOpenTime) {
-          res.door = new Date(
+          res.door = 
             `${res.startDatum}T${res.doorOpenTime}:00`
-          ).toISOString();
+          
         }
         if (res.startTime) {
-          res.start = new Date(
+          res.start = 
             `${res.startDatum}T${res.startTime}:00`
-          ).toISOString();
+          
         }
         if (res.endTime) {
-          res.end = new Date(
+          res.end = 
             `${res.startDatum}T${res.endTime}:00`
-          ).toISOString();
+          
         }
       } else {
         res.errors.push({
@@ -223,7 +223,7 @@ patronaatScraper.singlePage = async function ({ page, event }) {
 };
 //#endregion                         SINGLE PAGE
 
-// #region [rgba(60, 0, 0, 0.5)]     LONG HTML
+// #region [rgba(60, 0, 0, 0.3)]     LONG HTML
 async function longTextSocialsIframes(page, event, pageInfo){
 
   return await page.evaluate(({event})=>{

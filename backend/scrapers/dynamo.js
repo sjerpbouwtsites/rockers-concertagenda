@@ -2,7 +2,7 @@ import { workerData } from "worker_threads";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 
-//#region [rgba(0, 60, 0, 0.3)]       SCRAPER CONFIG
+//#region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const dynamoScraper = new AbstractScraper(makeScraperConfig({
   maxExecutionTime: 60059,
   workerData: Object.assign({}, workerData),
@@ -28,7 +28,7 @@ const dynamoScraper = new AbstractScraper(makeScraperConfig({
 
 dynamoScraper.listenToMasterThread();
 
-//#region [rgba(0, 120, 0, 0.3)]      RAW EVENT CHECK
+//#region [rgba(0, 120, 0, 0.1)]      RAW EVENT CHECK
 dynamoScraper.singleRawEventCheck = async function(event){
 
   let workingTitle = this.cleanupEventTitle(event.title);
@@ -49,7 +49,7 @@ dynamoScraper.singleRawEventCheck = async function(event){
 }
 //#endregion                          RAW EVENT CHECK
 
-//#region [rgba(0, 180, 0, 0.3)]      SINGLE EVENT CHECK
+//#region [rgba(0, 180, 0, 0.1)]      SINGLE EVENT CHECK
 dynamoScraper.singleMergedEventCheck = async function(event){
 
   let workingTitle = this.cleanupEventTitle(event.title);
@@ -87,7 +87,7 @@ dynamoScraper.singleMergedEventCheck = async function(event){
 }
 //#endregion                          SINGLE EVENT CHECK
 
-//#region [rgba(0, 240, 0, 0.3)]      MAIN PAGE
+//#region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
 dynamoScraper.mainPage = async function () {
 
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
@@ -138,7 +138,7 @@ dynamoScraper.mainPage = async function () {
 };
 //#endregion                          MAIN PAGE
 
-//#region [rgba(120, 0, 0, 0.3)]     SINGLE PAGE
+//#region [rgba(120, 0, 0, 0.1)]     SINGLE PAGE
 dynamoScraper.singlePage = async function ({ page, event}) {
   
   const {stopFunctie} =  await this.singlePageStart()
@@ -203,17 +203,16 @@ dynamoScraper.singlePage = async function ({ page, event}) {
           Array.isArray(res.doorTimeMatch) &&
             res.doorTimeMatch.length === 3
         ) {
-          res.door = new Date(
-            `${baseDate}T${res.doorTimeMatch[2]}:00`
-          ).toISOString();
+          res.door = `${baseDate}T${res.doorTimeMatch[2]}:00`
+          
         }
         if (
           Array.isArray(res.startTimeMatch) &&
             res.startTimeMatch.length === 3
         ) {
-          res.start = new Date(
+          res.start =
             `${baseDate}T${res.startTimeMatch[2]}:00`
-          ).toISOString();
+          
         } else if (res.door) {
           res.start = res.door;
           res.door = "";
@@ -222,9 +221,9 @@ dynamoScraper.singlePage = async function ({ page, event}) {
           Array.isArray(res.endTimeMatch) &&
             res.endTimeMatch.length === 3
         ) {
-          res.end = new Date(
+          res.end = 
             `${baseDate}T${res.endTimeMatch[2]}:00`
-          ).toISOString();
+          
         }
       } catch (caughtError) {
         res.errors.push({
@@ -264,7 +263,7 @@ dynamoScraper.singlePage = async function ({ page, event}) {
 };
 //#endregion                         SINGLE PAGE
 
-// #region [rgba(60, 0, 0, 0.5)]     LONG HTML
+// #region [rgba(60, 0, 0, 0.3)]     LONG HTML
 async function longTextSocialsIframes(page, event, pageInfo){
 
   return await page.evaluate(({event})=>{

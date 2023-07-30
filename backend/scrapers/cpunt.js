@@ -3,7 +3,7 @@ import * as _t from "../mods/tools.js";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 
-//#region [rgba(0, 60, 0, 0.3)]       SCRAPER CONFIG
+//#region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const cpuntScraper = new AbstractScraper(makeScraperConfig({
   workerData: Object.assign({}, workerData),
 
@@ -31,7 +31,7 @@ const cpuntScraper = new AbstractScraper(makeScraperConfig({
 
 cpuntScraper.listenToMasterThread();
 
-//#region [rgba(0, 120, 0, 0.3)]      RAW EVENT CHECK
+//#region [rgba(0, 120, 0, 0.1)]      RAW EVENT CHECK
 cpuntScraper.singleRawEventCheck = async function (event) {
 
   let workingTitle = this.cleanupEventTitle(event.title);
@@ -69,10 +69,10 @@ cpuntScraper.singleRawEventCheck = async function (event) {
 };
 //#endregion                          RAW EVENT CHECK
 
-//#region [rgba(0, 180, 0, 0.3)]      SINGLE EVENT CHECK
+//#region [rgba(0, 180, 0, 0.1)]      SINGLE EVENT CHECK
 //#endregion                          SINGLE EVENT CHECK
 
-//#region [rgba(0, 240, 0, 0.3)]      MAIN PAGE
+//#region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
 cpuntScraper.mainPage = async function () {
 
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
@@ -138,7 +138,7 @@ cpuntScraper.mainPage = async function () {
 };
 //#endregion                          MAIN PAGE
 
-//#region [rgba(120, 0, 0, 0.3)]     SINGLE PAGE
+//#region [rgba(120, 0, 0, 0.1)]     SINGLE PAGE
 cpuntScraper.singlePage = async function ({ page, event }) {
   
   const {stopFunctie} =  await this.singlePageStart()
@@ -196,7 +196,7 @@ cpuntScraper.singlePage = async function ({ page, event }) {
 
     if (deurTijd) {
       try {
-        res.door = new Date(`${startDate}T${deurTijd}`).toISOString();          
+        res.door = `${startDate}T${deurTijd}`;          
       } catch (caughtError) {
         res.errors.push(
           {
@@ -211,7 +211,7 @@ cpuntScraper.singlePage = async function ({ page, event }) {
     
     if (startTijd) {
       try {
-        res.start = new Date(`${startDate}T${startTijd}`).toISOString();          
+        res.start = `${startDate}T${startTijd}`
       } catch (caughtError) {
         res.errors.push(
           {
@@ -246,7 +246,7 @@ cpuntScraper.singlePage = async function ({ page, event }) {
 };
 //#endregion                         SINGLE PAGE
 
-// #region [rgba(60, 0, 0, 0.5)]     LONG HTML
+// #region [rgba(60, 0, 0, 0.3)]     LONG HTML
 async function longTextSocialsIframes(page, event, pageInfo){
 
   return await page.evaluate(({event})=>{

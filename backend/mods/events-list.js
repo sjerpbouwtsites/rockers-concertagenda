@@ -154,13 +154,13 @@ export default class EventsList {
     
     const nowDateString = new Date();
     const nowDate = Number(
-      nowDateString.toISOString().match(/(.*)T/)[1].replace(/\D/g, "")
+      nowDateString.toISOString().substring(0,10).replace(/-/g, "")
     );
 
     EventsList._events = EventsList._events
       .filter(event => {
         const musicEventTime = Number(
-          event.start.match(/(.*)T/)[1].replace(/\D/g, "")
+          event.start.substring(0,10).replace(/-/g, "")
         );
         return musicEventTime >= nowDate;
       })

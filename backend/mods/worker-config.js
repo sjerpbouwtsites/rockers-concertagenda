@@ -129,7 +129,14 @@ class WorkerListConf {
     return this.data;
   }
   workerNeedsWork(familyName){
-    if (this.shellArguments?.force?.includes('all')) return true;
+    if (this.shellArguments?.force?.includes('all')) {
+      if (this.shellArguments?.forceSet){
+        return workerConfig[familyName]?.forceSet == this.shellArguments?.forceSet
+      }else{
+        return true;
+      }
+      
+    }
     if (this.shellArguments?.force?.includes(familyName)) return true;
     if (familyName.includes('metalfan')) return false // metalfan alleen bij all of force
     if (!this.baseEventlistsStart.join('').includes(familyName)) return true;

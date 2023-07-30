@@ -2,7 +2,7 @@ import { workerData } from "worker_threads";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 
-//#region [rgba(0, 60, 0, 0.3)]       SCRAPER CONFIG
+//#region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const melkwegScraper = new AbstractScraper(makeScraperConfig({
   maxExecutionTime: 60062,
   workerData: Object.assign({}, workerData),
@@ -29,7 +29,7 @@ const melkwegScraper = new AbstractScraper(makeScraperConfig({
 
 melkwegScraper.listenToMasterThread();
 
-//#region [rgba(0, 120, 0, 0.3)]      RAW EVENT CHECK
+//#region [rgba(0, 120, 0, 0.1)]      RAW EVENT CHECK
 melkwegScraper.singleRawEventCheck = async function(event){
 
   const workingTitle = this.cleanupEventTitle(event.title)
@@ -66,10 +66,10 @@ melkwegScraper.singleRawEventCheck = async function(event){
 }
 //#endregion                          RAW EVENT CHECK
 
-//#region [rgba(0, 180, 0, 0.3)]      SINGLE EVENT CHECK
+//#region [rgba(0, 180, 0, 0.1)]      SINGLE EVENT CHECK
 //#endregion                          SINGLE EVENT CHECK
 
-//#region [rgba(0, 240, 0, 0.3)]      MAIN PAGE
+//#region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
 melkwegScraper.mainPage = async function () {
 
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
@@ -127,7 +127,7 @@ melkwegScraper.mainPage = async function () {
 };
 //#endregion                          MAIN PAGE
 
-//#region [rgba(120, 0, 0, 0.3)]     SINGLE PAGE
+//#region [rgba(120, 0, 0, 0.1)]     SINGLE PAGE
 melkwegScraper.singlePage = async function ({ page, event }) {
 
   const {stopFunctie} =  await this.singlePageStart()
@@ -139,11 +139,11 @@ melkwegScraper.singlePage = async function ({ page, event }) {
       errors: [],
     };
     try {
-      res.start = new Date(
+      res.start = 
         document
           .querySelector('[class*="styles_event-header"] time')
           ?.getAttribute("datetime") ?? null
-      ).toISOString();
+      
     } catch (caughtError) {
 
       res.errors.push({
@@ -178,7 +178,7 @@ melkwegScraper.singlePage = async function ({ page, event }) {
 
 };
 //#endregion                         SINGLE PAGE
-// #region [rgba(60, 0, 0, 0.5)]     LONG HTML
+// #region [rgba(60, 0, 0, 0.3)]     LONG HTML
 async function longTextSocialsIframes(page, event, pageInfo){
 
   return await page.evaluate(({event})=>{

@@ -106,7 +106,7 @@ async function metalFanDoURL(page, url, qwm){
         dateAnchorEl = metalfanEvent.querySelector("a[name]");
         eventDate =
           metalfanEvent.contains(dateAnchorEl) &&
-          new Date(dateAnchorEl.getAttribute("name")).toISOString();
+          dateAnchorEl.getAttribute("name")
         if (!eventDate) {
           const metalfanEventCaldateEl =
             metalfanEvent.querySelector(".caldate");
@@ -118,7 +118,7 @@ async function metalFanDoURL(page, url, qwm){
 
             eventDate =
               monthNumber && dayString
-                ? new Date(`${jaar}-${monthNumber}-${dayString}`).toISOString()
+                ? `${jaar}-${monthNumber}-${dayString}`
                 : null;
           }
         }

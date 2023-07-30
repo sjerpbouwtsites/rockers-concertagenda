@@ -111,7 +111,7 @@ willemeeenScraper.mainPage = async function () {
           if (res.month < curM) {
             res.year = res.year + 1;
           }        
-          res.start = new Date(`${res.year}-${res.month}-${res.day}T${res.startTime}:00`).toISOString();
+          res.start = `${res.year}-${res.month}-${res.day}T${res.startTime}:00`
         }
         
         const uaRex = new RegExp(unavailabiltyTerms.join("|"), 'gi');

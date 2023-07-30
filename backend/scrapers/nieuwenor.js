@@ -2,7 +2,7 @@ import { workerData } from "worker_threads";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 
-//#region [rgba(0, 60, 0, 0.3)]       SCRAPER CONFIG
+//#region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const nieuwenorScraper = new AbstractScraper(makeScraperConfig({
   workerData: Object.assign({}, workerData),
   puppeteerConfig: {
@@ -171,9 +171,9 @@ nieuwenorScraper.singlePage = async function ({ page, event }) {
       } 
     })
     
-    if (res.startTijd) res.start = new Date(`${event.startDate}T${res.startTijd}:00`).toISOString();
-    if (res.deurTijd) res.door = new Date(`${event.startDate}T${res.deurTijd}:00`).toISOString();
-    if (res.eindTijd) res.end = new Date(`${event.startDate}T${res.eindTijd}:00`).toISOString();
+    if (res.startTijd) res.start = `${event.startDate}T${res.startTijd}:00`
+    if (res.deurTijd) res.door = `${event.startDate}T${res.deurTijd}:00`
+    if (res.eindTijd) res.end = `${event.startDate}T${res.eindTijd}:00`
 
     return res;
   },{ months: this.months,event});
@@ -204,7 +204,7 @@ nieuwenorScraper.singlePage = async function ({ page, event }) {
 };
 //#endregion                         SINGLE PAGE
 
-// #region [rgba(60, 0, 0, 0.5)]     LONG HTML
+// #region [rgba(60, 0, 0, 0.3)]     LONG HTML
 async function longTextSocialsIframes(page, event, pageInfo){
 
   return await page.evaluate(({event})=>{

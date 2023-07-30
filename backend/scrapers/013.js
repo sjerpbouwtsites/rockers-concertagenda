@@ -2,8 +2,9 @@
 import { workerData } from "worker_threads";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
+import {mapToStart, mapToDoor} from "./gedeeld/datums.js"
 
-//#region [rgba(0, 60, 0, 0.3)]       SCRAPER CONFIG
+//#region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const nuldertienScraper = new AbstractScraper(makeScraperConfig({
   workerData: Object.assign({}, workerData),
   hasDecentCategorisation: true,
@@ -24,7 +25,7 @@ const nuldertienScraper = new AbstractScraper(makeScraperConfig({
 
 nuldertienScraper.listenToMasterThread();
 
-//#region [rgba(0, 120, 0, 0.3)]      RAW EVENT CHECK
+//#region [rgba(0, 120, 0, 0.1)]      RAW EVENT CHECK
 nuldertienScraper.singleRawEventCheck = async function(event){
 
   let workingTitle = this.cleanupEventTitle(event.title);
@@ -55,10 +56,10 @@ nuldertienScraper.singleRawEventCheck = async function(event){
 }
 //#endregion                          RAW EVENT CHECK
 
-//#region [rgba(0, 180, 0, 0.3)]      SINGLE EVENT CHECK
+//#region [rgba(0, 180, 0, 0.1)]      SINGLE EVENT CHECK
 //#endregion                          SINGLE EVENT CHECK
 
-//#region [rgba(0, 240, 0, 0.3)]      MAIN PAGE
+//#region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
 nuldertienScraper.mainPage = async function () {
 
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
@@ -88,19 +89,7 @@ nuldertienScraper.mainPage = async function () {
           ".event-list-item__link"
         )?.href ?? null;
 
-        const datumEl = eventEl.querySelector(".event-list-item__date");
-        if (datumEl) {
-          res.start = new Date(
-            datumEl.getAttribute("datetime")
-          ).toISOString();
-        } 
-        if (!datumEl || !res.start){
-          res.errors.push({
-            remarks: `geen datumEl of start ${res.pageInfo}`,
-            toDebug: {res, datumEl},
-          })
-        }
-
+        res.mapToStart = eventEl.querySelector(".event-list-item__date")?.getAttribute("datetime") ?? '';
         const uaRex = new RegExp(unavailabiltyTerms.join("|"), 'gi');
         res.unavailable = !!eventEl.textContent.match(uaRex);
         res.soldOut = !!eventEl?.innerHTML.match(/uitverkocht|sold\s?out/i) ?? false;
@@ -112,6 +101,9 @@ nuldertienScraper.mainPage = async function () {
 
       });
   }, {workerData, unavailabiltyTerms: AbstractScraper.unavailabiltyTerms})
+
+  rawEvents = rawEvents.map(mapToStart);
+
   rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
 
   this.saveBaseEventlist(workerData.family, rawEvents)
@@ -122,49 +114,24 @@ nuldertienScraper.mainPage = async function () {
 };
 //#endregion                          MAIN PAGE
 
-//#region [rgba(120, 0, 0, 0.3)]     SINGLE PAGE
+//#region [rgba(120, 0, 0, 0.1)]     SINGLE PAGE
 nuldertienScraper.singlePage = async function ({ page , event}) {
   
   const {stopFunctie} =  await this.singlePageStart()
 
-  const pageInfo = await page.evaluate(({event}) => {
+  let pageInfo = await page.evaluate(({event}) => {
 
     const res = {
       pageInfo: `<a class='page-info' href='${location.href}'>${event.title}</a>`,
       errors: [],
     };
-
-    try {
-      if (document.querySelector(
-        ".timetable__times dl:first-child time"
-      )) {
-        res.door = new Date(
-          document.querySelector(
-            ".timetable__times dl:first-child time"
-          )?.getAttribute("datetime")
-        ).toISOString();
-      }
-    } catch (errorCaught) {
-      res.errors.push({
-        error: errorCaught,
-        remarks: `deur open tijd ${res.pageInfo}`,
-        errorLevel: 'notice',
-        toDebug: document.querySelector(
-          ".timetable__times dl:first-child time"
-        )?.innerHTML ?? 'geen timetable__times first child time',
-      });
-    }
-    
+    res.mapToDoor = document.querySelector(".timetable__times dl:first-child time")?.getAttribute("datetime") ?? '';
     res.soldOut = !!(document.querySelector('.order-tickets button[disabled]') ?? null)
-
-    res.longTextHTML = 
-      document.querySelector(
-        ".event-detail header + div"
-      )?.innerHTML ?? '';
-
 
     return res;
   }, {event});
+
+  pageInfo = mapToDoor(pageInfo);
 
   const imageRes = await this.getImage({page, event, pageInfo, selectors: [".event-spotlight__image"], mode: 'image-src' })
   pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
@@ -184,7 +151,7 @@ nuldertienScraper.singlePage = async function ({ page , event}) {
 };
 //#endregion                         SINGLE PAGE
 
-// #region [rgba(60, 0, 0, 0.5)]     LONG HTML
+// #region [rgba(60, 0, 0, 0.3)]     LONG HTML
 async function longTextSocialsIframes(page, event, pageInfo){
 
   return await page.evaluate(({event})=>{

@@ -153,9 +153,7 @@ boerderijScraper.singlePage = async function ({ event, page}) {
   res.price = priceRes.price;
     
   try {
-    res.start = new Date(
-      `${ajaxRes.event_date}T${ajaxRes.event_start}`
-    ).toISOString();
+    res.start = `${ajaxRes.event_date}T${ajaxRes.event_start}:00`;
   } catch (catchedError) {
     res.errors.push({
       error: catchedError,
@@ -164,9 +162,7 @@ boerderijScraper.singlePage = async function ({ event, page}) {
     });
   }
   try {
-    res.door = new Date(
-      `${ajaxRes.event_date}T${ajaxRes.event_open}`
-    ).toISOString();
+    res.door = `${ajaxRes.event_date}T${ajaxRes.event_open}:00`;
   } catch (catchedError) {
     res.errors.push({
       error: catchedError,
@@ -292,7 +288,7 @@ boerderijScraper.boerderijCustomPrice = async function (testText, pi, title) {
 }  
 
 
-// #region [rgba(60, 0, 0, 0.5)]     LONG HTML
+// #region [rgba(60, 0, 0, 0.3)]     LONG HTML
 async function longTextSocialsIframes(page, event, pageInfo){
 
   return await page.evaluate(({event})=>{
