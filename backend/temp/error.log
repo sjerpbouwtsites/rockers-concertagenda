@@ -1,4 +1,678 @@
 
+  effenaar-0 Error - 7:39:37 AM
+  Error: false
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:881:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:871:23)
+    at effenaarScraper.singlePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/effenaar.js:210:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:652:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:244:5) 
+  false
+  
+  
+  willemeen-0 Error - 7:39:22 AM
+  Error: false
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:881:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:871:23)
+    at willemeeenScraper.singlePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/willemeen.js:171:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:652:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:244:5) 
+  false
+  
+  
+  effenaar-1 Error - 7:39:20 AM
+  Error: false
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:881:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:871:23)
+    at effenaarScraper.singlePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/effenaar.js:210:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:652:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:244:5) 
+  false
+  
+  
+  effenaar-2 Error - 7:37:46 AM
+  Error: false
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:881:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:871:23)
+    at effenaarScraper.singlePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/effenaar.js:210:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:652:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:244:5) 
+  false
+  
+  
+  metropool-1 Error - 7:36:17 AM
+  Error: false
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:881:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:871:23)
+    at metropoolScraper.singlePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/metropool.js:212:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:652:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:244:5) 
+  false
+  
+  
+  volt-0 Error - 7:36:13 AM
+  Error: false
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:881:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:871:23)
+    at voltScraper.singlePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/volt.js:235:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:652:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:244:5) 
+  false
+  
+  
+  littledevil-0 Error - 7:20:40 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:816:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  littledevil-0 Error - 7:18:43 AM
+  Error: price berekening met  <a class='page-info' href='https://www.littledevil.nl/calendar/'>littledevil main - 
+			Kev Riddles’ Baphomet (UK) + Tytan (UK)
+		</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:416:29
+    at Array.forEach (<anonymous>)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:413:17
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.mainPageEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:409:33)
+    at littledevilScraper.mainPage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/littledevil.js:179:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:235:29) 
+  price berekening met  <a class='page-info' href='https://www.littledevil.nl/calendar/'>littledevil main - 
+			Kev Riddles’ Baphomet (UK) + Tytan (UK)
+		</a>
+  
+  
+  littledevil-0 Error - 7:18:43 AM
+  Error: price berekening met  <a class='page-info' href='https://www.littledevil.nl/calendar/'>littledevil main - 
+			Sunburn Surf Fest
+		</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:416:29
+    at Array.forEach (<anonymous>)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:413:17
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.mainPageEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:409:33)
+    at littledevilScraper.mainPage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/littledevil.js:179:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:235:29) 
+  price berekening met  <a class='page-info' href='https://www.littledevil.nl/calendar/'>littledevil main - 
+			Sunburn Surf Fest
+		</a>
+  
+  
+  littledevil-0 Error - 7:18:43 AM
+  Error: price berekening met  <a class='page-info' href='https://www.littledevil.nl/calendar/'>littledevil main - 
+			Gnome + Astrodriver
+		</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:416:29
+    at Array.forEach (<anonymous>)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:413:17
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.mainPageEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:409:33)
+    at littledevilScraper.mainPage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/littledevil.js:179:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:235:29) 
+  price berekening met  <a class='page-info' href='https://www.littledevil.nl/calendar/'>littledevil main - 
+			Gnome + Astrodriver
+		</a>
+  
+  
+  littledevil-0 Error - 7:18:43 AM
+  Error: price berekening met  <a class='page-info' href='https://www.littledevil.nl/calendar/'>littledevil main - 
+			Ye Banished Privateers (SWE)
+		</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:416:29
+    at Array.forEach (<anonymous>)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:413:17
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.mainPageEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:409:33)
+    at littledevilScraper.mainPage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/littledevil.js:179:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:235:29) 
+  price berekening met  <a class='page-info' href='https://www.littledevil.nl/calendar/'>littledevil main - 
+			Ye Banished Privateers (SWE)
+		</a>
+  
+  
+  littledevil-0 Error - 7:18:43 AM
+  Error: price berekening met  <a class='page-info' href='https://www.littledevil.nl/calendar/'>littledevil main - 
+			Changing Tides + XII Thorns + Reformist
+		</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:416:29
+    at Array.forEach (<anonymous>)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:413:17
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.mainPageEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:409:33)
+    at littledevilScraper.mainPage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/littledevil.js:179:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:235:29) 
+  price berekening met  <a class='page-info' href='https://www.littledevil.nl/calendar/'>littledevil main - 
+			Changing Tides + XII Thorns + Reformist
+		</a>
+  
+  
+  littledevil-0 Error - 7:18:43 AM
+  Error: price berekening met  <a class='page-info' href='https://www.littledevil.nl/calendar/'>littledevil main - 
+			Lovell’s Blade + Marquis De Sade (UK)
+		</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:416:29
+    at Array.forEach (<anonymous>)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:413:17
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.mainPageEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:409:33)
+    at littledevilScraper.mainPage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/littledevil.js:179:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:235:29) 
+  price berekening met  <a class='page-info' href='https://www.littledevil.nl/calendar/'>littledevil main - 
+			Lovell’s Blade + Marquis De Sade (UK)
+		</a>
+  
+  
+  littledevil-0 Error - 7:18:43 AM
+  Error: price berekening met  <a class='page-info' href='https://www.littledevil.nl/calendar/'>littledevil main - 
+			Sasquatch (USA)
+		</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:416:29
+    at Array.forEach (<anonymous>)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:413:17
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.mainPageEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:409:33)
+    at littledevilScraper.mainPage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/littledevil.js:179:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:235:29) 
+  price berekening met  <a class='page-info' href='https://www.littledevil.nl/calendar/'>littledevil main - 
+			Sasquatch (USA)
+		</a>
+  
+  
+  littledevil-0 Error - 7:18:43 AM
+  Error: price berekening met  <a class='page-info' href='https://www.littledevil.nl/calendar/'>littledevil main - 
+			Guilty Pleasures & Heavy Treasures #3: De Vermoorde Onschuld
+		</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:416:29
+    at Array.forEach (<anonymous>)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:413:17
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.mainPageEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:409:33)
+    at littledevilScraper.mainPage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/littledevil.js:179:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:235:29) 
+  price berekening met  <a class='page-info' href='https://www.littledevil.nl/calendar/'>littledevil main - 
+			Guilty Pleasures & Heavy Treasures #3: De Vermoorde Onschuld
+		</a>
+  
+  
+  littledevil-0 Error - 7:18:43 AM
+  Error: price berekening met  <a class='page-info' href='https://www.littledevil.nl/calendar/'>littledevil main - 
+			At First + MoD
+		</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:416:29
+    at Array.forEach (<anonymous>)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:413:17
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.mainPageEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:409:33)
+    at littledevilScraper.mainPage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/littledevil.js:179:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:235:29) 
+  price berekening met  <a class='page-info' href='https://www.littledevil.nl/calendar/'>littledevil main - 
+			At First + MoD
+		</a>
+  
+  
+  littledevil-0 Error - 7:18:43 AM
+  Error: price berekening met  <a class='page-info' href='https://www.littledevil.nl/calendar/'>littledevil main - 
+			Hamers (B) + Lintworm (B) + AemkaOne
+		</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:416:29
+    at Array.forEach (<anonymous>)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:413:17
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.mainPageEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:409:33)
+    at littledevilScraper.mainPage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/littledevil.js:179:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:235:29) 
+  price berekening met  <a class='page-info' href='https://www.littledevil.nl/calendar/'>littledevil main - 
+			Hamers (B) + Lintworm (B) + AemkaOne
+		</a>
+  
+  
+  littledevil-0 Error - 7:18:43 AM
+  Error: price berekening met  <a class='page-info' href='https://www.littledevil.nl/calendar/'>littledevil main - 
+			Metal Matinee: Summer of Diabolic Pain and Darkness: Spectral Wound + Afsky
+		</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:416:29
+    at Array.forEach (<anonymous>)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:413:17
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.mainPageEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:409:33)
+    at littledevilScraper.mainPage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/littledevil.js:179:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:235:29) 
+  price berekening met  <a class='page-info' href='https://www.littledevil.nl/calendar/'>littledevil main - 
+			Metal Matinee: Summer of Diabolic Pain and Darkness: Spectral Wound + Afsky
+		</a>
+  
+  
+  littledevil-0 Error - 7:18:43 AM
+  Error: price berekening met  <a class='page-info' href='https://www.littledevil.nl/calendar/'>littledevil main - 
+			Klassiekers uit de Speakers: de Laatste Ronde!
+		</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:416:29
+    at Array.forEach (<anonymous>)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:413:17
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.mainPageEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:409:33)
+    at littledevilScraper.mainPage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/littledevil.js:179:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:235:29) 
+  price berekening met  <a class='page-info' href='https://www.littledevil.nl/calendar/'>littledevil main - 
+			Klassiekers uit de Speakers: de Laatste Ronde!
+		</a>
+  
+  
+  littledevil-0 Error - 7:18:43 AM
+  Error: price berekening met  <a class='page-info' href='https://www.littledevil.nl/calendar/'>littledevil main - 
+			I Built The Sky (AUS) + Proxima Flare
+		</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:416:29
+    at Array.forEach (<anonymous>)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:413:17
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.mainPageEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:409:33)
+    at littledevilScraper.mainPage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/littledevil.js:179:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:235:29) 
+  price berekening met  <a class='page-info' href='https://www.littledevil.nl/calendar/'>littledevil main - 
+			I Built The Sky (AUS) + Proxima Flare
+		</a>
+  
+  
+  littledevil-0 Error - 7:18:43 AM
+  Error: price berekening met  <a class='page-info' href='https://www.littledevil.nl/calendar/'>littledevil main - 
+			Mondo Generator (USA) + Baardvader
+		</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:416:29
+    at Array.forEach (<anonymous>)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:413:17
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.mainPageEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:409:33)
+    at littledevilScraper.mainPage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/littledevil.js:179:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:235:29) 
+  price berekening met  <a class='page-info' href='https://www.littledevil.nl/calendar/'>littledevil main - 
+			Mondo Generator (USA) + Baardvader
+		</a>
+  
+  
+  littledevil-0 Error - 7:18:43 AM
+  Error: price berekening met  <a class='page-info' href='https://www.littledevil.nl/calendar/'>littledevil main - 
+			Sheer Terror (USA)
+		</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:416:29
+    at Array.forEach (<anonymous>)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:413:17
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.mainPageEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:409:33)
+    at littledevilScraper.mainPage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/littledevil.js:179:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:235:29) 
+  price berekening met  <a class='page-info' href='https://www.littledevil.nl/calendar/'>littledevil main - 
+			Sheer Terror (USA)
+		</a>
+  
+  
+  littledevil-0 Error - 7:18:43 AM
+  Error: price berekening met  <a class='page-info' href='https://www.littledevil.nl/calendar/'>littledevil main - 
+			Metal Matinee: The DJ Edition
+		</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:416:29
+    at Array.forEach (<anonymous>)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:413:17
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.mainPageEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:409:33)
+    at littledevilScraper.mainPage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/littledevil.js:179:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:235:29) 
+  price berekening met  <a class='page-info' href='https://www.littledevil.nl/calendar/'>littledevil main - 
+			Metal Matinee: The DJ Edition
+		</a>
+  
+  
+  littledevil-0 Error - 7:18:43 AM
+  Error: price berekening met  <a class='page-info' href='https://www.littledevil.nl/calendar/'>littledevil main - 
+			Prey + The Rats (B) + Woke
+		</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:416:29
+    at Array.forEach (<anonymous>)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:413:17
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.mainPageEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:409:33)
+    at littledevilScraper.mainPage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/littledevil.js:179:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:235:29) 
+  price berekening met  <a class='page-info' href='https://www.littledevil.nl/calendar/'>littledevil main - 
+			Prey + The Rats (B) + Woke
+		</a>
+  
+  
+  littledevil-0 Error - 7:18:43 AM
+  Error: price berekening met  <a class='page-info' href='https://www.littledevil.nl/calendar/'>littledevil main - 
+			Cachemira (ES) + Cuberdon (B)
+		</a>
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:416:29
+    at Array.forEach (<anonymous>)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:413:17
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.mainPageEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:409:33)
+    at littledevilScraper.mainPage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/littledevil.js:179:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:235:29) 
+  price berekening met  <a class='page-info' href='https://www.littledevil.nl/calendar/'>littledevil main - 
+			Cachemira (ES) + Cuberdon (B)
+		</a>
+  
+  
+  littledevil-0 Error - 7:14:17 AM
+  Error: Evaluation failed: ReferenceError: Cannot access 'textSelector' before initialization
+    at __puppeteer_evaluation_script__:4:31
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async longTextSocialsIframes (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/littledevil.js:214:10)
+    at async littledevilScraper.singlePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/littledevil.js:201:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:652:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:244:5) 
+  Evaluation failed: ReferenceError: Cannot access 'textSelector' before initialization
+    at __puppeteer_evaluation_script__:4:31
+  
+  
+  littledevil-0 Error - 7:13:51 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'match')
+    at __puppeteer_evaluation_script__:37:43
+    at Array.map (<anonymous>)
+    at __puppeteer_evaluation_script__:5:8
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async littledevilScraper.mainPage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/littledevil.js:113:19)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:235:29) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'match')
+    at __puppeteer_evaluation_script__:37:43
+    at Array.map (<anonymous>)
+    at __puppeteer_evaluation_script__:5:8
+  
+  
+  littledevil-0 Error - 7:10:34 AM
+  Error: Evaluation failed: ReferenceError: Cannot access 'textSelector' before initialization
+    at __puppeteer_evaluation_script__:4:31
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async longTextSocialsIframes (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/littledevil.js:207:10)
+    at async littledevilScraper.singlePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/littledevil.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:652:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:244:5) 
+  Evaluation failed: ReferenceError: Cannot access 'textSelector' before initialization
+    at __puppeteer_evaluation_script__:4:31
+  
+  
+  littledevil-0 Error - 7:10:32 AM
+  Error: 2023-09-08Tundefined startTime geen isostring
+    at isISOString (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/datums.js:234:13)
+    at _combineTimeDate (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/datums.js:164:9)
+    at combineStartTimeStartDate (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/datums.js:151:10)
+    at Array.map (<anonymous>)
+    at littledevilScraper.mainPage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/littledevil.js:168:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:235:29) 
+  2023-09-08Tundefined startTime geen isostring
+  
+  
+  littledevil-0 Error - 7:10:32 AM
+  Error: mapToStartTime not on event
+    at arrayCheckAndOrToString (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/datums.js:186:13)
+    at _mapToTime (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/datums.js:46:15)
+    at mapToStartTime (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/datums.js:79:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/littledevil.js:166:12
+    at Array.map (<anonymous>)
+    at littledevilScraper.mainPage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/littledevil.js:165:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:235:29) 
+  mapToStartTime not on event
+  
+  
+  littledevil-0 Error - 7:10:02 AM
+  TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Object'
+    |     property 'errors' -> object with constructor 'Array'
+    |     index 0 -> object with constructor 'Object'
+    --- property 'toDebug' closes the circle
+    at JSON.stringify (<anonymous>)
+    at get json [as json] (file:///home/sjerp/dev/apache/concertagenda/backend/mods/rock-worker.js:206:17)
+    at Function.quick (file:///home/sjerp/dev/apache/concertagenda/backend/mods/rock-worker.js:145:24)
+    at QuickWorkerMessage.toConsole (file:///home/sjerp/dev/apache/concertagenda/backend/mods/rock-worker.js:93:26)
+    at AbstractScraper.dirtyLog (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:201:37)
+    at AbstractScraper.mainPageEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:391:51)
+    at littledevilScraper.mainPage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/littledevil.js:173:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:235:29) 
+  Converting circular structure to JSON
+    --> starting at object with constructor 'Object'
+    |     property 'errors' -> object with constructor 'Array'
+    |     index 0 -> object with constructor 'Object'
+    --- property 'toDebug' closes the circle
+  
+  
+  littledevil-0 Error - 7:09:05 AM
+  Error: Evaluation failed: ReferenceError: Cannot access 'textSelector' before initialization
+    at __puppeteer_evaluation_script__:4:31
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async longTextSocialsIframes (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/littledevil.js:207:10)
+    at async littledevilScraper.singlePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/littledevil.js:194:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:652:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:244:5) 
+  Evaluation failed: ReferenceError: Cannot access 'textSelector' before initialization
+    at __puppeteer_evaluation_script__:4:31
+  
+  
+  littledevil-0 Error - 7:09:02 AM
+  Error: 2023-09-08Tundefined startTime geen isostring
+    at isISOString (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/datums.js:234:13)
+    at _combineTimeDate (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/datums.js:164:9)
+    at combineStartTimeStartDate (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/datums.js:151:10)
+    at Array.map (<anonymous>)
+    at littledevilScraper.mainPage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/littledevil.js:168:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:235:29) 
+  2023-09-08Tundefined startTime geen isostring
+  
+  
+  littledevil-0 Error - 7:09:02 AM
+  Error: mapToStartTime not on event
+    at arrayCheckAndOrToString (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/datums.js:186:13)
+    at _mapToTime (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/datums.js:46:15)
+    at mapToStartTime (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/datums.js:79:10)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/littledevil.js:166:12
+    at Array.map (<anonymous>)
+    at littledevilScraper.mainPage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/littledevil.js:165:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:235:29) 
+  mapToStartTime not on event
+  
+  
+  littledevil-0 Error - 7:07:30 AM
+  Error: Evaluation failed: ReferenceError: Cannot access 'textSelector' before initialization
+    at __puppeteer_evaluation_script__:4:31
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async longTextSocialsIframes (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/littledevil.js:205:10)
+    at async littledevilScraper.singlePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/littledevil.js:192:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:652:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:244:5) 
+  Evaluation failed: ReferenceError: Cannot access 'textSelector' before initialization
+    at __puppeteer_evaluation_script__:4:31
+  
+  
+  littledevil-0 Error - 7:07:27 AM
+  Error: 2023-09-08Tundefined startTime geen isostring
+    at isISOString (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/datums.js:234:13)
+    at _combineTimeDate (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/datums.js:164:9)
+    at combineStartTimeStartDate (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/datums.js:151:10)
+    at Array.map (<anonymous>)
+    at littledevilScraper.mainPage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/littledevil.js:166:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:235:29) 
+  2023-09-08Tundefined startTime geen isostring
+  
+  
+  littledevil-0 Error - 7:07:27 AM
+  Error: mapToStartTime not on event
+    at arrayCheckAndOrToString (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/datums.js:186:13)
+    at _mapToTime (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/datums.js:46:15)
+    at mapToStartTime (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/datums.js:79:10)
+    at Array.map (<anonymous>)
+    at littledevilScraper.mainPage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/littledevil.js:165:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:235:29) 
+  mapToStartTime not on event
+  
+  
+  littledevil-0 Error - 7:06:17 AM
+  Error: Evaluation failed: ReferenceError: Cannot access 'textSelector' before initialization
+    at __puppeteer_evaluation_script__:4:31
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async longTextSocialsIframes (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/littledevil.js:205:10)
+    at async littledevilScraper.singlePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/littledevil.js:192:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:652:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:244:5) 
+  Evaluation failed: ReferenceError: Cannot access 'textSelector' before initialization
+    at __puppeteer_evaluation_script__:4:31
+  
+  
+  littledevil-0 Error - 7:06:15 AM
+  Error: 2023-09-08Tundefined startTime geen isostring
+    at isISOString (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/datums.js:234:13)
+    at _combineTimeDate (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/datums.js:164:9)
+    at combineStartTimeStartDate (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/datums.js:151:10)
+    at Array.map (<anonymous>)
+    at littledevilScraper.mainPage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/littledevil.js:166:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:235:29) 
+  2023-09-08Tundefined startTime geen isostring
+  
+  
+  littledevil-0 Error - 7:06:15 AM
+  Error: mapToStartTime not on event
+    at arrayCheckAndOrToString (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/datums.js:186:13)
+    at _mapToTime (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/datums.js:46:15)
+    at mapToStartTime (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/datums.js:79:10)
+    at Array.map (<anonymous>)
+    at littledevilScraper.mainPage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/littledevil.js:165:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:235:29) 
+  mapToStartTime not on event
+  
+  
+  littledevil-0 Error - 7:04:36 AM
+  Error: Evaluation failed: ReferenceError: Cannot access 'textSelector' before initialization
+    at __puppeteer_evaluation_script__:4:31
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async longTextSocialsIframes (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/littledevil.js:205:10)
+    at async littledevilScraper.singlePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/littledevil.js:192:23)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:652:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:244:5) 
+  Evaluation failed: ReferenceError: Cannot access 'textSelector' before initialization
+    at __puppeteer_evaluation_script__:4:31
+  
+  
+  littledevil-0 Error - 7:04:33 AM
+  Error: 2023-09-08Tundefined startTime geen isostring
+    at isISOString (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/datums.js:233:13)
+    at _combineTimeDate (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/datums.js:163:9)
+    at combineStartTimeStartDate (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/datums.js:150:10)
+    at Array.map (<anonymous>)
+    at littledevilScraper.mainPage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/littledevil.js:166:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:235:29) 
+  2023-09-08Tundefined startTime geen isostring
+  
+  
+  littledevil-0 Error - 7:04:33 AM
+  Error: mapToStartTime not on event
+    at arrayCheckAndOrToString (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/datums.js:185:13)
+    at _mapToTime (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/datums.js:46:15)
+    at mapToStartTime (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/datums.js:78:10)
+    at Array.map (<anonymous>)
+    at littledevilScraper.mainPage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/littledevil.js:165:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:235:29) 
+  mapToStartTime not on event
+  
+  
+  littledevil-0 Error - 7:03:02 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:339:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  littledevil-0 Error - 7:02:20 AM
+  Error: 2023-undefined-27 undefined geen date
+    at isDate (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/datums.js:208:11)
+    at mapToStartDate (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/datums.js:110:9)
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/littledevil.js:163:12
+    at Array.map (<anonymous>)
+    at littledevilScraper.mainPage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/littledevil.js:162:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:235:29) 
+  2023-undefined-27 undefined geen date
+  
+  
+  littledevil-0 Error - 7:00:54 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:339:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  littledevil-0 Error - 7:00:12 AM
+  Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'includes')
+    at __puppeteer_evaluation_script__:15:30
+    at Array.map (<anonymous>)
+    at __puppeteer_evaluation_script__:5:8
+    at ExecutionContext._evaluateInternal (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:221:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (/home/sjerp/dev/apache/concertagenda/backend/node_modules/puppeteer/lib/cjs/puppeteer/common/ExecutionContext.js:110:16)
+    at async littledevilScraper.mainPage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/littledevil.js:113:19)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:235:29) 
+  Evaluation failed: TypeError: Cannot read properties of undefined (reading 'includes')
+    at __puppeteer_evaluation_script__:15:30
+    at Array.map (<anonymous>)
+    at __puppeteer_evaluation_script__:5:8
+  
+  
   volt-0 Error - 6:14:15 AM
   Error: false
     at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:881:29
