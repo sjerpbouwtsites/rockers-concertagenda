@@ -23,6 +23,7 @@ export const workerConfig = {
     forceSet: 0,
   },
   baroeg: { workerCount: 2, workerConcurrent: 2, forceSet: 0, },
+  
   bibelot: { workerCount: 1, workerConcurrent: 1, forceSet: 1, },
   boerderij: { workerCount: 1, CPUReq: "low", workerConcurrent: 1, forceSet: 1, },
   cpunt: { workerCount: 1, workerConcurrent: 1, forceSet: 1, },
@@ -41,6 +42,11 @@ export const workerConfig = {
     workerConcurrent: 2,
     forceSet: 4,
   },
+  littledevil: {
+    workerCount: 2,
+    workerConcurrent: 2,
+    forceSet: 4,
+  },  
   melkweg: {
     workerCount: 4,
     CPUReq: "low",
