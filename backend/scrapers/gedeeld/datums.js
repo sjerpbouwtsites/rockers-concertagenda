@@ -57,6 +57,7 @@ function _mapToTime(event, key, required){
         remarks: `isTimeError ${mapKey} ${event.pageInfo}`,
         toDebug: {
           [`${mapKey}`]: event[mapKey],
+          event,
           match
         }
       })
@@ -65,9 +66,9 @@ function _mapToTime(event, key, required){
     event.errors.push({
       error: arrayCheckError,
       remarks: `Array check ${mapKey} ${event.pageInfo}`,
-      toDebug: {
-        [`${mapKey}`]: event[mapKey]
-      }
+      toDebug: 
+        JSON.parse(JSON.stringify(event))
+      
     })
   }
 
@@ -93,8 +94,25 @@ export function mapToStartDate(event, regexMode, months){
     return    
   }
     
-  
-  if (regexMode === 'dag-maandNaam-jaar'){
+  if (regexMode === 'dag-maandNaam'){
+    const dateM = event.mapToStartDate.match(/(\d{1,2})[\/\s]?(\w+)/)
+
+    if (Array.isArray(dateM) && dateM.length < 3){
+      throw new Error (`datematch fail op ${event.mapToStartDate}`)
+    }
+    let jaar = (new Date()).getFullYear();
+    let huiMaandNr = (new Date()).getMonth() + 1;
+    const maandNaam = dateM[2]
+    const maandGetal = months[maandNaam];
+    if (huiMaandNr > maandGetal){
+      jaar += jaar + 1;
+    }
+    const dag = dateM[1].padStart(2, '0')
+    const dateStr = `${jaar}-${maandGetal}-${dag}`;
+    if (isDate(dateStr)){
+      event.startDate = dateStr;
+    }
+  } else if (regexMode === 'dag-maandNaam-jaar'){
     const dateM = event.mapToStartDate.match(/(\d{1,2})[\/\s]?(\w+)[\/\s]?(\d{2,4})/)
     if (Array.isArray(dateM) && dateM.length < 4){
       throw new Error (`datematch fail op ${event.mapToStartDate}`)
