@@ -163,24 +163,35 @@ export default class EventsList {
           event.start.substring(0,10).replace(/-/g, "")
         );
         return musicEventTime >= nowDate;
-      })
-      .sort((eventA, eventB) => {
-        const dataA = eventA.start || "2050-01-01T00:00:00.000Z";
-        const dataB = eventB.start || "2050-01-01T00:00:00.000Z";
-        if (!isIsoDate(dataA)) {
-          return -1;
-        }
-        const startA = new Date(dataA);
-        const startB = new Date(dataB);
-        if (startB > startA) {
-          return -1;
-        } else if (startB < startA) {
-          return 1;
-        } else {
-          return 0;
-        }
       });
+    EventsList._events = EventsList._events.sort((eventA, eventB) => {
+      let dataA
+      try {
+        dataA = Number(
+          eventA.start.substring(0,10).replace(/-/g, "")
+        ); 
+      } catch (error) {
+        dataA = 20501231
+      }
+      let dataB
+      try {
+        dataB = Number(
+          eventB.start.substring(0,10).replace(/-/g, "")
+        ); 
+      } catch (error) {
+        dataB = 20501231
+      }
 
+      if (dataA > dataB) {
+        return -1;
+      } else if (dataA < dataB) {
+        return 1;
+      } else {
+        return 0;
+      }
+    });
+
+    EventsList._events = EventsList._events.reverse();
     
 
     fs.writeFileSync(
