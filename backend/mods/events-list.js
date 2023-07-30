@@ -90,42 +90,6 @@ export default class EventsList {
     // return true;
   }
 
-  static isOld(name, ignoreAgeForceScrape = false) {
-
-    // @TODO helemaal herschrijven. timestamps onzin eruit halen. 
-
-    if (ignoreAgeForceScrape) {
-      return true;
-    }
-
-    //@ TODO TIJDELIJK;
-    return false;
-
-    // let eventListTimestamps;
-    // if (EventsList.guaranteeTimestampExistence()) {
-    //   try {
-    //     eventListTimestamps = JSON.parse(
-    //       fs.readFileSync(fsDirections.timestampsJson)
-    //     );
-    //   } catch (error) {
-    //     throw new Error(`Kan timestamp niet lezen van naam ${name}.\n<br>
-    //     locatie van timestamps zou moeten zijn ${fsDirections.timestampsJson}.\n<br>
-    //     ${error.message}`);
-    //   }
-    // }
-
-    // const d = new Date();
-    // const currentMilliseconds = d.getTime();
-    // const stored = Object.prototype.hasOwnProperty.call(eventListTimestamps, name)
-    //   ? eventListTimestamps[name]
-    //   : "0";
-    // const ageOfStoredEventList = Number(stored);
-    // const oneDay = 86400000;
-
-    // const notFresh = currentMilliseconds > ageOfStoredEventList + 2 * oneDay;
-    // return notFresh || ageOfStoredEventList == 0;
-  }
-
   static merge(events) {
     events.forEach((event) => {
       EventsList.addEvent(event);
@@ -190,33 +154,44 @@ export default class EventsList {
     
     const nowDateString = new Date();
     const nowDate = Number(
-      nowDateString.toISOString().match(/(.*)T/)[1].replace(/\D/g, "")
+      nowDateString.toISOString().substring(0,10).replace(/-/g, "")
     );
 
     EventsList._events = EventsList._events
       .filter(event => {
         const musicEventTime = Number(
-          event.start.match(/(.*)T/)[1].replace(/\D/g, "")
+          event.start.substring(0,10).replace(/-/g, "")
         );
         return musicEventTime >= nowDate;
-      })
-      .sort((eventA, eventB) => {
-        const dataA = eventA.start || "2050-01-01T00:00:00.000Z";
-        const dataB = eventB.start || "2050-01-01T00:00:00.000Z";
-        if (!isIsoDate(dataA)) {
-          return -1;
-        }
-        const startA = new Date(dataA);
-        const startB = new Date(dataB);
-        if (startB > startA) {
-          return -1;
-        } else if (startB < startA) {
-          return 1;
-        } else {
-          return 0;
-        }
       });
+    EventsList._events = EventsList._events.sort((eventA, eventB) => {
+      let dataA
+      try {
+        dataA = Number(
+          eventA.start.substring(0,10).replace(/-/g, "")
+        ); 
+      } catch (error) {
+        dataA = 20501231
+      }
+      let dataB
+      try {
+        dataB = Number(
+          eventB.start.substring(0,10).replace(/-/g, "")
+        ); 
+      } catch (error) {
+        dataB = 20501231
+      }
 
+      if (dataA > dataB) {
+        return -1;
+      } else if (dataA < dataB) {
+        return 1;
+      } else {
+        return 0;
+      }
+    });
+
+    EventsList._events = EventsList._events.reverse();
     
 
     fs.writeFileSync(

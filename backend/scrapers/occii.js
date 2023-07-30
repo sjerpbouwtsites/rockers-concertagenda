@@ -157,8 +157,8 @@ occiiScraper.singlePage = async function ({ page, event}) {
         doorsOpenMatch && doorsOpenMatch.length > 1 ? doorsOpenMatch[1] : null;
 
       res.door = doorsOpen
-        ? new Date(`${eventDateString}T${doorsOpen}`).toISOString()
-        : new Date(`${eventDateString}T00:00`).toISOString();
+        ? `${eventDateString}T${doorsOpen}`
+        : `${eventDateString}T00:00:00`
 
       const showtimeMatch = eventCategoriesEl.textContent.match(
         /Showtime:\s+(\d\d:\d\d)/
@@ -167,8 +167,8 @@ occiiScraper.singlePage = async function ({ page, event}) {
         showtimeMatch && showtimeMatch.length > 1 ? doorsOpenMatch[1] : null;
 
       res.start = showtime
-        ? new Date(`${eventDateString}T${showtime}`).toISOString()
-        : new Date(`${eventDateString}T00:00`).toISOString();
+        ? `${eventDateString}T${showtime}`
+        : `${eventDateString}T00:00:00`
     } catch (caughtError) {
       res.errors.push({
         error: caughtError,
@@ -217,7 +217,7 @@ occiiScraper.singlePage = async function ({ page, event}) {
   
 };
 //#endregion                         SINGLE PAGE
-// #region [rgba(60, 0, 0, 0.5)]     LONG HTML
+// #region [rgba(60, 0, 0, 0.3)]     LONG HTML
 async function longTextSocialsIframes(page, event, pageInfo){
 
   return await page.evaluate(({event})=>{

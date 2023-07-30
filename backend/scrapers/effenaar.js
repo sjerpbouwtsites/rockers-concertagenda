@@ -2,7 +2,7 @@ import { workerData } from "worker_threads";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 
-//#region [rgba(0, 60, 0, 0.3)]       SCRAPER CONFIG
+//#region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const effenaarScraper = new AbstractScraper(makeScraperConfig({
   workerData: Object.assign({}, workerData),
   puppeteerConfig: {
@@ -27,7 +27,7 @@ const effenaarScraper = new AbstractScraper(makeScraperConfig({
 
 effenaarScraper.listenToMasterThread();
 
-//#region [rgba(0, 120, 0, 0.3)]      RAW EVENT CHECK
+//#region [rgba(0, 120, 0, 0.1)]      RAW EVENT CHECK
 effenaarScraper.singleRawEventCheck = async function(event){
  
   const workingTitle = this.cleanupEventTitle(event.title)
@@ -48,7 +48,7 @@ effenaarScraper.singleRawEventCheck = async function(event){
 }
 //#endregion                          RAW EVENT CHECK
 
-//#region [rgba(0, 180, 0, 0.3)]      SINGLE EVENT CHECK
+//#region [rgba(0, 180, 0, 0.1)]      SINGLE EVENT CHECK
 effenaarScraper.singleMergedEventCheck = async function(event){
  
   const workingTitle = this.cleanupEventTitle(event.title)
@@ -77,7 +77,7 @@ effenaarScraper.singleMergedEventCheck = async function(event){
 }
 //#endregion                          SINGLE EVENT CHECK
 
-//#region [rgba(0, 240, 0, 0.3)]      MAIN PAGE
+//#region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
 effenaarScraper.mainPage = async function () {
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
   if (availableBaseEvents){
@@ -119,7 +119,7 @@ effenaarScraper.mainPage = async function () {
 };
 //#endregion                          MAIN PAGE
 
-//#region [rgba(120, 0, 0, 0.3)]     SINGLE PAGE
+//#region [rgba(120, 0, 0, 0.1)]     SINGLE PAGE
 effenaarScraper.singlePage = async function ({ page, event }) {
   
   const {stopFunctie} =  await this.singlePageStart()
@@ -170,15 +170,15 @@ effenaarScraper.singlePage = async function ({ page, event }) {
   
     try {
       if (res.doorTime) {
-        res.door = new Date(
+        res.door =
           `${res.openDoorDateTimeString}`
-        ).toISOString();
+       
       }
 
       if (res.startTime) {
-        res.start = new Date(
+        res.start = 
           `${res.startString}`
-        ).toISOString();
+        
       }
     } catch (caughtError) {
       res.errors.push({
@@ -212,7 +212,7 @@ effenaarScraper.singlePage = async function ({ page, event }) {
 };
 //#endregion                         SINGLE PAGE
 
-// #region [rgba(60, 0, 0, 0.5)]     LONG HTML
+// #region [rgba(60, 0, 0, 0.3)]     LONG HTML
 async function longTextSocialsIframes(page, event, pageInfo){
 
   return await page.evaluate(({event})=>{

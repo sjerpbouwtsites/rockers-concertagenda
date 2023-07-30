@@ -3,7 +3,7 @@ import * as _t from "../mods/tools.js";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 
-//#region [rgba(0, 60, 0, 0.3)]       SCRAPER CONFIG
+//#region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const metropoolScraper = new AbstractScraper(makeScraperConfig({
   maxExecutionTime: 120000,
   workerData: Object.assign({}, workerData),
@@ -30,7 +30,7 @@ const metropoolScraper = new AbstractScraper(makeScraperConfig({
 
 metropoolScraper.listenToMasterThread();
 
-//#region [rgba(0, 120, 0, 0.3)]      RAW EVENT CHECK
+//#region [rgba(0, 120, 0, 0.1)]      RAW EVENT CHECK
 metropoolScraper.singleRawEventCheck = async function(event){
 
   const workingTitle = this.cleanupEventTitle(event.title)
@@ -67,10 +67,10 @@ metropoolScraper.singleRawEventCheck = async function(event){
 }
 //#endregion                          RAW EVENT CHECK
 
-//#region [rgba(0, 180, 0, 0.3)]      SINGLE EVENT CHECK
+//#region [rgba(0, 180, 0, 0.1)]      SINGLE EVENT CHECK
 //#endregion                          SINGLE EVENT CHECK
 
-//#region [rgba(0, 240, 0, 0.3)]      MAIN PAGE
+//#region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
 metropoolScraper.mainPage = async function () {
 
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
@@ -117,7 +117,7 @@ metropoolScraper.mainPage = async function () {
 };
 //#endregion                          MAIN PAGE
 
-//#region [rgba(120, 0, 0, 0.3)]     SINGLE PAGE
+//#region [rgba(120, 0, 0, 0.1)]     SINGLE PAGE
 metropoolScraper.singlePage = async function ({ page, event}) {
 
   const {stopFunctie} =  await this.singlePageStart()
@@ -160,9 +160,9 @@ metropoolScraper.singlePage = async function ({ page, event}) {
         .querySelector(".beginTime")
         ?.innerHTML.match(/\d\d:\d\d/);
       if (startTimeMatch && startTimeMatch.length) {
-        res.start = new Date(
-          `${startDate}:${startTimeMatch[0]}`
-        ).toISOString();
+        res.start = 
+          `${startDate}T${startTimeMatch[0]}:00`
+      
       } else {
         res.errors.push({
           remarks: `wel datum, geen starttijd ${res.pageInfo}`,
@@ -179,9 +179,9 @@ metropoolScraper.singlePage = async function ({ page, event}) {
         .querySelector(".doorOpen")
         ?.innerHTML.match(/\d\d:\d\d/);
       if (doorTimeMatch && doorTimeMatch.length) {
-        res.door = new Date(
-          `${startDate}:${doorTimeMatch[0]}`
-        ).toISOString();
+        res.door = 
+          `${startDate}T${doorTimeMatch[0]}:00`
+      
       }
     } catch (caughtError) {
       res.errors.push({
@@ -213,7 +213,7 @@ metropoolScraper.singlePage = async function ({ page, event}) {
   
 };
 //#endregion                         SINGLE PAGE
-// #region [rgba(60, 0, 0, 0.5)]     LONG HTML
+// #region [rgba(60, 0, 0, 0.3)]     LONG HTML
 async function longTextSocialsIframes(page, event, pageInfo){
 
   return await page.evaluate(({event})=>{

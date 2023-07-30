@@ -5,7 +5,7 @@ import * as _t from "../mods/tools.js";
 import crypto from "crypto";
 import {workerNames} from "../mods/worker-config.js";
 
-//#region [rgba(0, 60, 0, 0.3)]       SCRAPER CONFIG
+//#region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const ticketmasterScraper = new AbstractScraper(makeScraperConfig({
   maxExecutionTime: 75003,
   workerData: Object.assign({}, workerData),
@@ -34,13 +34,13 @@ const ticketmasterScraper = new AbstractScraper(makeScraperConfig({
 
 ticketmasterScraper.listenToMasterThread();
 
-//#region [rgba(0, 120, 0, 0.3)]      RAW EVENT CHECK
+//#region [rgba(0, 120, 0, 0.1)]      RAW EVENT CHECK
 //#endregion                          RAW EVENT CHECK
 
-//#region [rgba(0, 180, 0, 0.3)]      SINGLE EVENT CHECK
+//#region [rgba(0, 180, 0, 0.1)]      SINGLE EVENT CHECK
 //#endregion                          SINGLE EVENT CHECK
 
-//#region [rgba(0, 240, 0, 0.3)]      MAIN PAGE
+//#region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
 ticketmasterScraper.mainPage = async function() {
 
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.name);
@@ -137,9 +137,7 @@ ticketmasterScraper.singlePage = async function ({event}) {
   };
 
   pageInfo.start = event.dates?.start?.dateTime;
-  if (pageInfo.start) {
-    pageInfo.start = new Date(pageInfo.start).toISOString();
-  }
+  
   
   pageInfo.location = 'GEENLOCATIEBEKEND';
   if (event?.venue?.name){

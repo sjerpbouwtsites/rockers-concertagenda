@@ -3,7 +3,7 @@ import * as _t from "../mods/tools.js";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 
-//#region [rgba(0, 60, 0, 0.3)]       SCRAPER CONFIG
+//#region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const paradisoScraper = new AbstractScraper(makeScraperConfig({
   maxExecutionTime: 120022,
   workerData: Object.assign({}, workerData),
@@ -30,7 +30,7 @@ const paradisoScraper = new AbstractScraper(makeScraperConfig({
 
 paradisoScraper.listenToMasterThread();
 
-//#region [rgba(0, 120, 0, 0.3)]      RAW EVENT CHECK
+//#region [rgba(0, 120, 0, 0.1)]      RAW EVENT CHECK
 paradisoScraper.singleRawEventCheck = async function (event) {
   
   const workingTitle = this.cleanupEventTitle(event.title);
@@ -68,10 +68,10 @@ paradisoScraper.singleRawEventCheck = async function (event) {
 };
 //#endregion                          RAW EVENT CHECK
 
-//#region [rgba(0, 180, 0, 0.3)]      SINGLE EVENT CHECK
+//#region [rgba(0, 180, 0, 0.1)]      SINGLE EVENT CHECK
 //#endregion                          SINGLE EVENT CHECK
 
-//#region [rgba(0, 240, 0, 0.3)]      MAIN PAGE
+//#region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
 paradisoScraper.mainPage = async function () {
 
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
@@ -143,7 +143,7 @@ paradisoScraper.mainPage = async function () {
 };
 //#endregion                          MAIN PAGE
 
-//#region [rgba(120, 0, 0, 0.3)]     SINGLE PAGE
+//#region [rgba(120, 0, 0, 0.1)]     SINGLE PAGE
 paradisoScraper.singlePage = async function ({ page, event }) {
   
   const {stopFunctie} =  await this.singlePageStart()
@@ -274,19 +274,19 @@ paradisoScraper.singlePage = async function ({ page, event }) {
       }
 
       if (startTijd){
-        res.start = new Date(
+        res.start = 
           `${res.startDate}T${startTijd}:00`
-        ).toISOString();        
+        
       }
       if (deurTijd){
-        res.door = new Date(
+        res.door = 
           `${res.startDate}T${deurTijd}:00`
-        ).toISOString();        
+        
       }
       if (eindTijd){
-        res.end = new Date(
+        res.end = 
           `${res.startDate}T${eindTijd}:00`
-        ).toISOString();        
+        
       }      
 
       return res;
@@ -311,7 +311,7 @@ paradisoScraper.singlePage = async function ({ page, event }) {
 
 };
 //#endregion                         SINGLE PAGE
-// #region [rgba(60, 0, 0, 0.5)]     LONG HTML
+// #region [rgba(60, 0, 0, 0.3)]     LONG HTML
 async function longTextSocialsIframes(page, event, pageInfo){
 
   return await page.evaluate(({event})=>{

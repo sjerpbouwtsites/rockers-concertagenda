@@ -1,7 +1,5 @@
-import fs from "fs";
 import WorkerStatus from "./mods/WorkerStatus.js";
 import EventsList from "./mods/events-list.js";
-import fsDirections from "./mods/fs-directions.js";
 import * as _t from "./mods/tools.js";
 import passMessageToMonitor from "./monitor/pass-message-to-monitor.js";
 import { printLocationsToPublic } from "./mods/locations.js";
@@ -10,6 +8,7 @@ import RockWorker from "./mods/rock-worker.js";
 import getWorkerConfig from "./mods/worker-config.js";
 import { WorkerMessage } from "./mods/rock-worker.js";
 import * as dotenv from 'dotenv';
+import houseKeeping from "./housekeeping.js";
 dotenv.config();
 
 let monitorWebsocketServer = null;
@@ -20,7 +19,6 @@ async function init() {
   WorkerStatus.monitorWebsocketServer = monitorWebsocketServer;
   WorkerStatus.monitorCPUS();
   const workerConfig = getWorkerConfig();
-
   WorkerStatus.totalWorkers = workerConfig.numberOfWorkers;
   WorkerStatus.registerAllWorkersAsWaiting(workerConfig.listCopy());
   recursiveStartWorkers(workerConfig);
@@ -112,21 +110,6 @@ function addWorkerMessageHandler(thisWorker) {
   });
 }
 
-async function houseKeeping() {
-  fs.rm(fsDirections.publicTexts, { recursive: true }, () => {
-    fs.mkdirSync(fsDirections.publicTexts);
-  });
 
-  const pei = fsDirections.publicEventImages;
-  
-  fs.readdirSync(pei, 'utf-8').forEach(location=>{
-    if (fs.existsSync(`${pei}/${location}`)){
-      fs.rmSync(`${pei}/${location}`, { recursive: true, force: true });
-    } 
-    fs.mkdirSync(`${pei}/${location}`)
-  })
-  return true;
-  
-}
 
 init();

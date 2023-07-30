@@ -4,7 +4,7 @@ import axios from "axios";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 import * as _t from "../mods/tools.js";
 
-//#region [rgba(0, 60, 0, 0.3)]       SCRAPER CONFIG
+//#region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const vandaag = new Date().toISOString().split('T')[0]
 const defluxScraper = new AbstractScraper(makeScraperConfig({
   maxExecutionTime: 30007,
@@ -32,7 +32,7 @@ const defluxScraper = new AbstractScraper(makeScraperConfig({
 
 defluxScraper.listenToMasterThread();
 
-//#region [rgba(0, 120, 0, 0.3)]      RAW EVENT CHECK
+//#region [rgba(0, 120, 0, 0.1)]      RAW EVENT CHECK
 defluxScraper.singleRawEventCheck = async function (event) {
 
   let workingTitle = this.cleanupEventTitle(event.title);
@@ -70,7 +70,7 @@ defluxScraper.singleRawEventCheck = async function (event) {
 };
 //#endregion                          RAW EVENT CHECK
 
-//#region [rgba(0, 180, 0, 0.3)]      SINGLE EVENT CHECK
+//#region [rgba(0, 180, 0, 0.1)]      SINGLE EVENT CHECK
 defluxScraper.singleMergedEventCheck = async function (event) {
   const workingTitle = this.cleanupEventTitle(event.title);
 
@@ -88,7 +88,7 @@ defluxScraper.singleMergedEventCheck = async function (event) {
 };
 //#endregion                          SINGLE EVENT CHECK
 
-//#region [rgba(0, 240, 0, 0.3)]      MAIN PAGE
+//#region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
 defluxScraper.mainPage = async function () {
  
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
@@ -137,7 +137,7 @@ defluxScraper.mainPage = async function () {
 };
 //#endregion                          MAIN PAGE
 
-//#region [rgba(120, 0, 0, 0.3)]     SINGLE PAGE
+//#region [rgba(120, 0, 0, 0.1)]     SINGLE PAGE
 defluxScraper.singlePage = async function ({ page, event}) {
  
   const {stopFunctie} =  await this.singlePageStart()
@@ -159,7 +159,7 @@ defluxScraper.singlePage = async function ({ page, event}) {
     try {
       res.startDate = eventScheme.querySelector('[itemprop="startDate"]')?.getAttribute('content').split('T')[0].split('-').map(dateStuk => dateStuk.padStart(2, '0')).join('-')
       res.startTime = document.querySelector('.evcal_time.evo_tz_time').textContent.match(/\d\d:\d\d/)[0];
-      res.start = new Date(`${res.startDate}T${res.startTime}:00`).toISOString()
+      res.start = `${res.startDate}T${res.startTime}:00`
     } catch (caughtError) {
       res.errors.push({error: caughtError, remarks: `starttime match ${res.pageInfo}`})
     }
@@ -167,7 +167,7 @@ defluxScraper.singlePage = async function ({ page, event}) {
     if (document.querySelector('.evcal_desc3')?.textContent.toLowerCase().includes('deur open') ?? false) {
       try {
         res.endTime = document.querySelector('.evcal_desc3').textContent.match(/\d\d:\d\d/)[0];
-        res.end = new Date(`${res.startDate}T${res.endTime}:00`).toISOString();
+        res.end = `${res.startDate}T${res.endTime}:00`
       } catch (caughtError) {
         res.errors.push({error: caughtError, remarks: `door open starttime match ${res.pageInfo}`,toDebug:res})
       }
@@ -194,7 +194,7 @@ defluxScraper.singlePage = async function ({ page, event}) {
 };
 //#endregion                         SINGLE PAGE
 
-// #region [rgba(60, 0, 0, 0.5)]     LONG HTML
+// #region [rgba(60, 0, 0, 0.3)]     LONG HTML
 async function longTextSocialsIframes(page, event, pageInfo){
 
   return await page.evaluate(({event})=>{

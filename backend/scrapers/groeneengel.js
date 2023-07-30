@@ -2,7 +2,7 @@ import { workerData} from "worker_threads";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 
-//#region [rgba(0, 60, 0, 0.3)]       SCRAPER CONFIG
+//#region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const groeneEngelScraper = new AbstractScraper(makeScraperConfig({
   maxExecutionTime: 60075,
   workerData: Object.assign({}, workerData),
@@ -29,7 +29,7 @@ const groeneEngelScraper = new AbstractScraper(makeScraperConfig({
 
 groeneEngelScraper.listenToMasterThread();
 
-//#region [rgba(0, 120, 0, 0.3)]      RAW EVENT CHECK
+//#region [rgba(0, 120, 0, 0.1)]      RAW EVENT CHECK
 groeneEngelScraper.singleRawEventCheck = async function(event){
 
   const workingTitle = this.cleanupEventTitle(event.title)
@@ -60,7 +60,7 @@ groeneEngelScraper.singleRawEventCheck = async function(event){
 }
 //#endregion                          RAW EVENT CHECK
 
-//#region [rgba(0, 180, 0, 0.3)]      SINGLE EVENT CHECK
+//#region [rgba(0, 180, 0, 0.1)]      SINGLE EVENT CHECK
 groeneEngelScraper.singleMergedEventCheck = async function (event) {
   const workingTitle = this.cleanupEventTitle(event.title)
 
@@ -90,7 +90,7 @@ groeneEngelScraper.singleMergedEventCheck = async function (event) {
 };
 //#endregion                          SINGLE EVENT CHECK
 
-//#region [rgba(0, 240, 0, 0.3)]      MAIN PAGE
+//#region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
 groeneEngelScraper.mainPage = async function () {
 
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
@@ -144,7 +144,7 @@ groeneEngelScraper.mainPage = async function () {
 };
 //#endregion                          MAIN PAGE
 
-//#region [rgba(120, 0, 0, 0.3)]     SINGLE PAGE
+//#region [rgba(120, 0, 0, 0.1)]     SINGLE PAGE
 groeneEngelScraper.singlePage = async function ({ page, event }) {
 
   const {stopFunctie} =  await this.singlePageStart()
@@ -177,8 +177,8 @@ groeneEngelScraper.singlePage = async function ({ page, event }) {
     if (Array.isArray(res.deurTijdMatch)) res.deurTijd = res.deurTijdMatch[0]
 
     try {
-      res.start = new Date(`${event.startDate}T${res.startTijd}:00`).toISOString();
-      res.door = !res?.deurTijd ? null : new Date(`${event.startDate}T${res.deurTijd}:00`).toISOString();
+      res.start = `${event.startDate}T${res.startTijd}:00`
+      res.door = !res?.deurTijd ? null : `${event.startDate}T${res.deurTijd}:00`
     } catch (error) {
       res.errors.push({
         error,
@@ -210,7 +210,7 @@ groeneEngelScraper.singlePage = async function ({ page, event }) {
 };
 //#endregion                         SINGLE PAGE
 
-// #region [rgba(60, 0, 0, 0.5)]     LONG HTML
+// #region [rgba(60, 0, 0, 0.3)]     LONG HTML
 async function longTextSocialsIframes(page, event, pageInfo){
 
   return await page.evaluate(({event})=>{

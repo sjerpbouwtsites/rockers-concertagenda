@@ -3,7 +3,7 @@ import * as _t from "../mods/tools.js";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 
-//#region [rgba(0, 60, 0, 0.3)]       SCRAPER CONFIG
+//#region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const depulScraper = new AbstractScraper(makeScraperConfig({
   maxExecutionTime: 60048,
   workerData: Object.assign({}, workerData),
@@ -29,7 +29,7 @@ const depulScraper = new AbstractScraper(makeScraperConfig({
 
 depulScraper.listenToMasterThread();
 
-//#region [rgba(0, 120, 0, 0.3)]      RAW EVENT CHECK
+//#region [rgba(0, 120, 0, 0.1)]      RAW EVENT CHECK
 depulScraper.singleRawEventCheck = async function (event){
   const workingTitle = this.cleanupEventTitle(event.title);
   const isRefused = await this.rockRefuseListCheck(event, workingTitle)
@@ -46,7 +46,7 @@ depulScraper.singleRawEventCheck = async function (event){
 }
 //#endregion                          RAW EVENT CHECK
 
-//#region [rgba(0, 180, 0, 0.3)]      SINGLE EVENT CHECK
+//#region [rgba(0, 180, 0, 0.1)]      SINGLE EVENT CHECK
 depulScraper.singleMergedEventCheck = async function (event) {
   const workingTitle = this.cleanupEventTitle(event.title);
   
@@ -80,7 +80,7 @@ depulScraper.singleMergedEventCheck = async function (event) {
 };
 //#endregion                          SINGLE EVENT CHECK
 
-//#region [rgba(0, 240, 0, 0.3)]      MAIN PAGE
+//#region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
 depulScraper.mainPage = async function () {
 
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
@@ -145,7 +145,7 @@ depulScraper.mainPage = async function () {
 };
 //#endregion                          MAIN PAGE
 
-//#region [rgba(120, 0, 0, 0.3)]     SINGLE PAGE
+//#region [rgba(120, 0, 0, 0.1)]     SINGLE PAGE
 depulScraper.singlePage = async function ({ page, event }) {
   
   const {stopFunctie} =  await this.singlePageStart()
@@ -222,9 +222,7 @@ depulScraper.singlePage = async function ({ page, event }) {
                 Array.isArray(startTimeMatch) &&
                 startTimeMatch.length === 1
               ) {
-                res.start = new Date(
-                  `${res.startDate}T${startTimeMatch[0]}:00`
-                ).toISOString();
+                res.start = `${res.startDate}T${startTimeMatch[0]}:00`
               }
             } catch (caughtError) {
               res.errors.push({
@@ -243,9 +241,7 @@ depulScraper.singlePage = async function ({ page, event }) {
                 Array.isArray(doorTimeMatch) &&
                 doorTimeMatch.length === 1
               ) {
-                res.door = new Date(
-                  `${res.startDate}T${doorTimeMatch[0]}:00`
-                ).toISOString();
+                res.door = `${res.startDate}T${doorTimeMatch[0]}:00`
               }
             } catch (caughtError) {
               res.errors.push({
@@ -290,7 +286,7 @@ depulScraper.singlePage = async function ({ page, event }) {
 };
 //#endregion                         SINGLE PAGE
 
-// #region [rgba(60, 0, 0, 0.5)]     LONG HTML
+// #region [rgba(60, 0, 0, 0.3)]     LONG HTML
 async function longTextSocialsIframes(page, event, pageInfo){
 
   return await page.evaluate(({event})=>{

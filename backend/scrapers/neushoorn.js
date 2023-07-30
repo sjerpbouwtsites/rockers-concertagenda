@@ -4,7 +4,7 @@ import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import { neushoornMonths } from "../mods/months.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 
-//#region [rgba(0, 60, 0, 0.3)]       SCRAPER CONFIG
+//#region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const neushoornScraper = new AbstractScraper(makeScraperConfig({
   workerData: Object.assign({}, workerData),
   puppeteerConfig: {
@@ -26,7 +26,7 @@ const neushoornScraper = new AbstractScraper(makeScraperConfig({
 
 neushoornScraper.listenToMasterThread();
 
-//#region [rgba(0, 120, 0, 0.3)]      RAW EVENT CHECK
+//#region [rgba(0, 120, 0, 0.1)]      RAW EVENT CHECK
 neushoornScraper.singleRawEventCheck = async function(event){
 
   const workingTitle = this.cleanupEventTitle(event.title);
@@ -70,10 +70,10 @@ neushoornScraper.singleRawEventCheck = async function(event){
 }
 //#endregion                          RAW EVENT CHECK
 
-//#region [rgba(0, 180, 0, 0.3)]      SINGLE EVENT CHECK
+//#region [rgba(0, 180, 0, 0.1)]      SINGLE EVENT CHECK
 //#endregion                          SINGLE EVENT CHECK
 
-//#region [rgba(0, 240, 0, 0.3)]      MAIN PAGE
+//#region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
 neushoornScraper.mainPage = async function () {
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
   if (availableBaseEvents){
@@ -130,7 +130,7 @@ neushoornScraper.mainPage = async function () {
 };
 //#endregion                          MAIN PAGE
 
-//#region [rgba(120, 0, 0, 0.3)]     SINGLE PAGE
+//#region [rgba(120, 0, 0, 0.1)]     SINGLE PAGE
 neushoornScraper.singlePage = async function ({ page,event }) {
   
   const {stopFunctie} =  await this.singlePageStart()
@@ -174,16 +174,16 @@ neushoornScraper.singlePage = async function ({ page,event }) {
         /(\d{2}:\d{2}).*(\d{2}:\d{2})/
       );
       if (timeTextMatch && timeTextMatch.length === 3 && res.startDate) {
-        res.door = new Date(
-          `${res.startDate}T${timeTextMatch[1]}`
-        ).toISOString();
-        res.start = new Date(
-          `${res.startDate}T${timeTextMatch[2]}`
-        ).toISOString();
+        res.door = 
+          `${res.startDate}T${timeTextMatch[1]}:00`
+      
+        res.start = 
+          `${res.startDate}T${timeTextMatch[2]}:00`
+  
       } else {
-        res.start = new Date(
-          `${res.startDate}T${timeTextMatch[1]}`
-        ).toISOString();
+        res.start = 
+          `${res.startDate}T${timeTextMatch[1]}:00`
+     
       }
 
       try {
@@ -223,7 +223,7 @@ neushoornScraper.singlePage = async function ({ page,event }) {
   
 };
 //#endregion                         SINGLE PAGE
-// #region [rgba(60, 0, 0, 0.5)]     LONG HTML
+// #region [rgba(60, 0, 0, 0.3)]     LONG HTML
 async function longTextSocialsIframes(page, event, pageInfo){
 
   return await page.evaluate(({event})=>{

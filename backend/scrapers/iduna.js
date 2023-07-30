@@ -3,7 +3,7 @@ import * as _t from "../mods/tools.js";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 
-//#region [rgba(0, 60, 0, 0.3)]       SCRAPER CONFIG
+//#region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const idunaScraper = new AbstractScraper(makeScraperConfig({
   workerData: Object.assign({}, workerData),
   puppeteerConfig: {
@@ -28,7 +28,7 @@ const idunaScraper = new AbstractScraper(makeScraperConfig({
 
 idunaScraper.listenToMasterThread();
 
-//#region [rgba(0, 120, 0, 0.3)]      RAW EVENT CHECK
+//#region [rgba(0, 120, 0, 0.1)]      RAW EVENT CHECK
 idunaScraper.singleRawEventCheck = async function (event) {
   let workingTitle = this.cleanupEventTitle(event.title);
   const isRefused = await this.rockRefuseListCheck(event, workingTitle)
@@ -47,7 +47,7 @@ idunaScraper.singleRawEventCheck = async function (event) {
 }
 //#endregion                          RAW EVENT CHECK
 
-//#region [rgba(0, 180, 0, 0.3)]      SINGLE EVENT CHECK
+//#region [rgba(0, 180, 0, 0.1)]      SINGLE EVENT CHECK
 idunaScraper.singleMergedEventCheck = async function (event) {
   const workingTitle = this.cleanupEventTitle(event.title);
   
@@ -74,7 +74,7 @@ idunaScraper.singleMergedEventCheck = async function (event) {
 };
 //#endregion                          SINGLE EVENT CHECK
 
-//#region [rgba(0, 240, 0, 0.3)]      MAIN PAGE
+//#region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
 idunaScraper.mainPage = async function () {
 
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
@@ -229,7 +229,7 @@ idunaScraper.mainPage = async function () {
 };
 //#endregion                          MAIN PAGE
 
-//#region [rgba(120, 0, 0, 0.3)]     SINGLE PAGE
+//#region [rgba(120, 0, 0, 0.1)]     SINGLE PAGE
 idunaScraper.singlePage = async function ({ page, event }) {
   
   const {stopFunctie} =  await this.singlePageStart()
@@ -307,19 +307,19 @@ idunaScraper.singlePage = async function ({ page, event }) {
 
 
         if (res.startTime) {
-          res.start = new Date(
+          res.start = 
             `${res.startDate}T${res.startTime}:00`
-          ).toISOString();
+         
         } else if (res.doorTime) {
-          res.start = new Date(
+          res.start =
             `${res.startDate}T${res.doorTime}:00`
-          ).toISOString();
+        
         }
 
         if (res.startTime && res.doorTime) {
-          res.door = new Date(
+          res.door =
             `${res.startDate}T${res.doorTime}:00`
-          ).toISOString();
+          
         }
       } catch (caughtError) { //TODO BELACHELJIK GROTE TRY CATCH
         res.errors.push({
@@ -354,7 +354,7 @@ idunaScraper.singlePage = async function ({ page, event }) {
   
 };
 //#endregion                         SINGLE PAGE
-// #region [rgba(60, 0, 0, 0.5)]     LONG HTML
+// #region [rgba(60, 0, 0, 0.3)]     LONG HTML
 async function longTextSocialsIframes(page, event, pageInfo){
 
   return await page.evaluate(({event})=>{

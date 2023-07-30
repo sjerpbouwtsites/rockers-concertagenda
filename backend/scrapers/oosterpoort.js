@@ -118,7 +118,7 @@ oostpoortScraper.mainPage = async function () {
         };
         
         try {
-          res.start = new Date(eventEl.querySelector('.program__date')?.getAttribute('datetime') ?? null).toISOString();
+          res.start = eventEl.querySelector('.program__date')?.getAttribute('datetime') ?? null
         } catch (caughtError) {
           res.errors.push({
             error: caughtError, remarks: `date time faal ${title}.`,        
@@ -218,7 +218,7 @@ oostpoortScraper.singlePage = async function ({ page, event }) {
     
 }
 //#endregion                         SINGLE PAGE
-// #region [rgba(60, 0, 0, 0.5)]     LONG HTML
+// #region [rgba(60, 0, 0, 0.3)]     LONG HTML
 async function longTextSocialsIframes(page, event, pageInfo){
 
   return await page.evaluate(({event})=>{

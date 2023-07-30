@@ -2,7 +2,7 @@ import { workerData } from "worker_threads";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 
-//#region [rgba(0, 60, 0, 0.3)]       SCRAPER CONFIG
+//#region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const bibelotScraper = new AbstractScraper(makeScraperConfig({
   maxExecutionTime: 30001,
   workerData: Object.assign({}, workerData),
@@ -30,7 +30,7 @@ const bibelotScraper = new AbstractScraper(makeScraperConfig({
 
 bibelotScraper.listenToMasterThread();
 
-//#region [rgba(0, 120, 0, 0.3)]      RAW EVENT CHECK
+//#region [rgba(0, 120, 0, 0.1)]      RAW EVENT CHECK
 bibelotScraper.singleRawEventCheck = async function(event){
 
   let workingTitle = this.cleanupEventTitle(event.title);
@@ -61,10 +61,10 @@ bibelotScraper.singleRawEventCheck = async function(event){
 }
 //#endregion                          RAW EVENT CHECK
 
-//#region [rgba(0, 180, 0, 0.3)]      SINGLE EVENT CHECK
+//#region [rgba(0, 180, 0, 0.1)]      SINGLE EVENT CHECK
 //#endregion                          SINGLE EVENT CHECK
 
-//#region [rgba(0, 240, 0, 0.3)]      MAIN PAGE
+//#region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
 bibelotScraper.mainPage = async function () {
 
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
@@ -112,7 +112,7 @@ bibelotScraper.mainPage = async function () {
 };
 //#endregion                          MAIN PAGE
 
-//#region [rgba(120, 0, 0, 0.3)]     SINGLE PAGE
+//#region [rgba(120, 0, 0, 0.1)]     SINGLE PAGE
 bibelotScraper.singlePage = async function ({ page, event }) {
   
   const {stopFunctie} =  await this.singlePageStart(event)
@@ -155,9 +155,7 @@ bibelotScraper.singlePage = async function ({ page, event }) {
 
       try {
         if (Array.isArray(res.doorTimeMatch) && res.doorTimeMatch.length > 2 && res.baseDate) {
-          res.door = new Date(
-            `${res.baseDate}T${res.doorTimeMatch[2]}:00`
-          ).toISOString();
+          res.door = `${res.baseDate}T${res.doorTimeMatch[2]}:00`;
         }
       } catch (errorCaught) {
         res.errors.push({
@@ -172,9 +170,7 @@ bibelotScraper.singlePage = async function ({ page, event }) {
           res.startTimeMatch.length > 2 &&
           res.baseDate
         ) {
-          res.start = new Date(
-            `${res.baseDate}T${res.startTimeMatch[2]}:00`
-          ).toISOString();
+          res.start = `${res.baseDate}T${res.startTimeMatch[2]}:00`;
         } else if (res.door) {
           res.start = res.door;
           res.door = "";
@@ -188,9 +184,7 @@ bibelotScraper.singlePage = async function ({ page, event }) {
       }
       try {
         if (Array.isArray(res.endTimeMatch) && res.endTimeMatch.length > 2 && res.baseDate) {
-          res.end = new Date(
-            `${res.baseDate}T${res.endTimeMatch[2]}:00`
-          ).toISOString();
+          res.end = `${res.baseDate}T${res.endTimeMatch[2]}:00`;
         }
       } catch (errorCaught) {
         res.errors.push({
@@ -225,7 +219,7 @@ bibelotScraper.singlePage = async function ({ page, event }) {
 //#endregion                         SINGLE PAGE
 
 
-// #region [rgba(60, 0, 0, 0.5)]     LONG HTML
+// #region [rgba(60, 0, 0, 0.3)]     LONG HTML
 async function longTextSocialsIframes(page, event, pageInfo){
 
   return await page.evaluate(({event})=>{

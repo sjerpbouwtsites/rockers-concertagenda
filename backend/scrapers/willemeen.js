@@ -111,7 +111,7 @@ willemeeenScraper.mainPage = async function () {
           if (res.month < curM) {
             res.year = res.year + 1;
           }        
-          res.start = new Date(`${res.year}-${res.month}-${res.day}T${res.startTime}:00`).toISOString();
+          res.start = `${res.year}-${res.month}-${res.day}T${res.startTime}:00`
         }
         
         const uaRex = new RegExp(unavailabiltyTerms.join("|"), 'gi');
@@ -123,7 +123,7 @@ willemeeenScraper.mainPage = async function () {
     
   rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
   
-  // this.saveBaseEventlist(workerData.family, rawEvents)
+  this.saveBaseEventlist(workerData.family, rawEvents)
   const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
   return await this.mainPageEnd({
     stopFunctie, rawEvents: thisWorkersEvents}

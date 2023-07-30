@@ -3,7 +3,7 @@ import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 import {waitTime} from "../mods/tools.js";
 
-//#region [rgba(0, 60, 0, 0.3)]       SCRAPER CONFIG
+//#region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const tivoliVredenburgScraper = new AbstractScraper(makeScraperConfig({
   workerData: Object.assign({}, workerData),
   puppeteerConfig: {
@@ -25,7 +25,7 @@ const tivoliVredenburgScraper = new AbstractScraper(makeScraperConfig({
 
 tivoliVredenburgScraper.listenToMasterThread();
 
-//#region [rgba(0, 120, 0, 0.3)]      RAW EVENT CHECK
+//#region [rgba(0, 120, 0, 0.1)]      RAW EVENT CHECK
 tivoliVredenburgScraper.singleRawEventCheck = async function (event) {
 
   const workingTitle = this.cleanupEventTitle(event.title);
@@ -65,10 +65,10 @@ tivoliVredenburgScraper.singleRawEventCheck = async function (event) {
 };
 //#endregion                          RAW EVENT CHECK
 
-//#region [rgba(0, 180, 0, 0.3)]      SINGLE EVENT CHECK
+//#region [rgba(0, 180, 0, 0.1)]      SINGLE EVENT CHECK
 //#endregion                          SINGLE EVENT CHECK
 
-//#region [rgba(0, 240, 0, 0.3)]      MAIN PAGE
+//#region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
 tivoliVredenburgScraper.mainPage = async function () {
   
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
@@ -119,7 +119,7 @@ tivoliVredenburgScraper.mainPage = async function () {
 };
 //#endregion                          MAIN PAGE
 
-//#region [rgba(120, 0, 0, 0.3)]     SINGLE PAGE
+//#region [rgba(120, 0, 0, 0.1)]     SINGLE PAGE
 tivoliVredenburgScraper.singlePage = async function ({ page, event }) {
  
   const {stopFunctie} =  await this.singlePageStart()
@@ -175,7 +175,7 @@ tivoliVredenburgScraper.singlePage = async function ({ page, event }) {
       try {
         res.openDoorTime = openMatch[1];
         res.door = res.startDate
-          ? new Date(`${res.startDate}T${res.openDoorTime}:00`).toISOString()
+          ? `${res.startDate}T${res.openDoorTime}:00`
           : null;
       } catch (caughtError) {
         res.errors.push({
@@ -192,7 +192,7 @@ tivoliVredenburgScraper.singlePage = async function ({ page, event }) {
       try {
         res.startTime = startMatch[1];
         res.start = res.startDate
-          ? new Date(`${res.startDate}T${res.startTime}:00`).toISOString()
+          ? `${res.startDate}T${res.startTime}:00`
           : null;
       } catch (caughtError) {
         res.errors.push({
@@ -209,7 +209,7 @@ tivoliVredenburgScraper.singlePage = async function ({ page, event }) {
       try {
         res.endTime = endMatch[1];
         res.end = res.startDate
-          ? new Date(`${res.startDate}T${res.endTime}:00`).toISOString()
+          ? `${res.startDate}T${res.endTime}:00`
           : null;
       } catch (caughtError) {
         res.errors.push({

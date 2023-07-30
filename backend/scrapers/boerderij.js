@@ -9,7 +9,6 @@ import makeScraperConfig from "./gedeeld/scraper-config.js";
 const boerderijScraper = new AbstractScraper(makeScraperConfig({
   maxExecutionTime: 30004,
   workerData: Object.assign({}, workerData),
-  hasDecentCategorisation: true,
   puppeteerConfig: {
     mainPage: {
       timeout: 30005,
@@ -91,7 +90,6 @@ boerderijScraper.mainPage = async function () {
 
   if (rawEvents.length) {
     rawEvents = rawEvents.map((event) => {
-      event.image = `https://lift3cdn.nl/image/115/784x476/${event.file}`;
       event.venueEventUrl = `https://poppodiumboerderij.nl/programma/${event.seo_slug}`;
       event.shortText = event.subtitle;
       event.title = event.title + `&id=${event.id}`;
@@ -99,14 +97,6 @@ boerderijScraper.mainPage = async function () {
     })
       .map(this.isMusicEventCorruptedMapper);
 
-  }
-
-  for (let i =0; i < rawEvents.length; i++){
-    const imageCrypto = crypto.randomUUID();
-    const imagePath = `${this.eventImagesFolder}/boerderij/${imageCrypto}`;
-    await this.downloadImageCompress(rawEvents[i], rawEvents[i].image, imagePath)
-    await waitTime(100);
-    rawEvents[i].image = imagePath;
   }
 
   this.saveBaseEventlist(workerData.family, rawEvents)
@@ -118,7 +108,7 @@ boerderijScraper.mainPage = async function () {
 //#endregion                          MAIN PAGE
 
 //#region [rgba(120, 0, 0, 0.1)]     SINGLE PAGE
-boerderijScraper.singlePage = async function ({ event }) {
+boerderijScraper.singlePage = async function ({ event, page}) {
  
   const {stopFunctie} =  await this.singlePageStart()
 
@@ -153,15 +143,9 @@ boerderijScraper.singlePage = async function ({ event }) {
     return await this.singlePageEnd({res, stopFunctie})
   }
 
-  if (!event.image){
-    res.errors.push({
-      remarks: `image missing ${res.pageInfo}`
-    })
-  } else {
-    const imageCrypto = crypto.randomUUID();
-    const imagePath = `${this.eventImagesFolder}/${workerData.family}/${imageCrypto}`;
-    this.downloadImageCompress(event, event.image, imagePath)
-  }
+  const imageRes = await this.getImage({page, event, res, selectors: ['.event-image'], mode: 'image-src' })
+  res.errors = res.errors.concat(imageRes.errors);
+  res.image = imageRes.image;  
 
   res.boerderijID = ajaxRes.id;
   const priceRes = await this.boerderijCustomPrice(`${ajaxRes?.entrance_price ?? ''} ${ajaxRes?.ticket_price ?? ''}`, res.pageInfo, res.title);
@@ -169,9 +153,7 @@ boerderijScraper.singlePage = async function ({ event }) {
   res.price = priceRes.price;
     
   try {
-    res.start = new Date(
-      `${ajaxRes.event_date}T${ajaxRes.event_start}`
-    ).toISOString();
+    res.start = `${ajaxRes.event_date}T${ajaxRes.event_start}:00`;
   } catch (catchedError) {
     res.errors.push({
       error: catchedError,
@@ -180,9 +162,7 @@ boerderijScraper.singlePage = async function ({ event }) {
     });
   }
   try {
-    res.door = new Date(
-      `${ajaxRes.event_date}T${ajaxRes.event_open}`
-    ).toISOString();
+    res.door = `${ajaxRes.event_date}T${ajaxRes.event_open}:00`;
   } catch (catchedError) {
     res.errors.push({
       error: catchedError,
@@ -191,17 +171,10 @@ boerderijScraper.singlePage = async function ({ event }) {
     });
   }
 
-  // media obj maken voordat HTML verdwijnt
-  res.mediaForHTML = !ajaxRes?.video ? [] : [{
-    outer: `<iframe src="${ajaxRes.video}" />` ,
-    src: null,
-    id: null,
-    type: 'youtube'
-  }] // socials obj maken voordat HTML verdwijnt
-  res.socialsForHTML = []
-
-  // tekst.
-  res.textForHTML = ajaxRes.description
+  const longTextRes = await longTextSocialsIframes(page, event, res)
+  for (let i in longTextRes){
+    res[i] = longTextRes[i]
+  }
 
   res.soldOut = ajaxRes?.label?.title?.toLowerCase().includes('uitverkocht') ?? null
 
@@ -313,3 +286,189 @@ boerderijScraper.boerderijCustomPrice = async function (testText, pi, title) {
   return priceRes;
 
 }  
+
+
+// #region [rgba(60, 0, 0, 0.3)]     LONG HTML
+async function longTextSocialsIframes(page, event, pageInfo){
+
+  return await page.evaluate(({event})=>{
+    const res = {}
+
+    const textSelector = '.page-wrapper__main';
+    const mediaSelector = [
+      `${textSelector} iframe`,
+    ].join(", ");
+    const removeEmptyHTMLFrom = textSelector;
+    const socialSelector = [].join(", ");
+    const removeSelectors = [
+      `${textSelector} [class*='icon-']`,
+      `${textSelector} [class*='fa-']`,
+      `${textSelector} .fa`,
+      `${textSelector} script`,
+      `${textSelector} noscript`,
+      `${textSelector} style`,
+      `${textSelector} meta`,
+      `${textSelector} svg`,
+      `${textSelector} form`,
+      `${textSelector} h1`,
+      `${textSelector} img`,
+      `${textSelector} .video__button`,
+      `${textSelector} iframe[src*='bandcamp']`,
+      `${textSelector} iframe[src*='spotify']`,        
+      'svg'
+    ].join(", ");
+
+    const attributesToRemove = [
+      "style",
+      "hidden",
+      "_target",
+      "frameborder",
+      "onclick",
+      "aria-hidden",
+      "allow",
+      "allowfullscreen",
+      "data-deferlazy",
+      "width",
+      "height",
+    ];
+    const attributesToRemoveSecondRound = ["class", "id"];
+    const removeHTMLWithStrings = [];
+
+    // eerst onzin attributes wegslopen
+    const socAttrRemSelAdd = `${
+      socialSelector.length ? `, ${socialSelector}` : ""
+    }`;
+    const mediaAttrRemSelAdd = `${
+      mediaSelector.length ? `, ${mediaSelector} *, ${mediaSelector}` : ""
+    }`;
+    const textSocEnMedia = `${textSelector} *${socAttrRemSelAdd}${mediaAttrRemSelAdd}`;      
+    document
+      .querySelectorAll(textSocEnMedia)
+      .forEach((elToStrip) => {
+        attributesToRemove.forEach((attr) => {
+          if (elToStrip.hasAttribute(attr)) {
+            elToStrip.removeAttribute(attr);
+          }
+        });
+      });
+
+
+    //media obj maken voordat HTML verdwijnt
+    res.mediaForHTML = !mediaSelector.length ? '' : Array.from(
+      document.querySelectorAll(mediaSelector)
+    ).map((bron) => {
+      bron.className = "";
+
+      if (bron?.src && bron.src.includes('bandcamp')){
+        return {
+          outer: bron.outerHTML,
+          src: bron.src,
+          id: null,
+          type: 'bandcamp'
+        }
+      }
+     
+      if (bron?.src && bron.src.includes('spotify')){
+        return {
+          outer: bron.outerHTML,
+          src: bron.src,
+          id: null,
+          type: 'spotify'
+        }
+      }
+
+      if (bron?.src && bron.src.includes('youtube')){
+        return {
+          outer: bron.outerHTML,
+          src: bron.src,
+          id: null,
+          type: 'youtube'
+        }
+      }     
+
+      return {
+        outer: bron.outerHTML,
+        src: null,
+        id: null,
+        type: 'onbekend'
+      }
+
+    });
+
+    //socials obj maken voordat HTML verdwijnt
+    res.socialsForHTML = !socialSelector
+      ? ""
+      : Array.from(document.querySelectorAll(socialSelector)).map((el) => {
+        el.querySelectorAll("i, svg, img").forEach((rm) =>
+          rm.parentNode.removeChild(rm)
+        );
+        if (!el.textContent.trim().length) {
+          if (el.href.includes("facebook") || el.href.includes("fb.me")) {
+            if (el.href.includes('facebook.com/events')){
+              el.textContent = `FB event ${event.title}`;
+            } else{
+              el.textContent = `Facebook`;
+            }
+          } else if (el.href.includes("twitter")) {
+            el.textContent = "Tweet";
+          } else if (el.href.includes('instagram')) {
+            el.textContent = "Insta";
+          } else {
+            el.textContent = "Social";
+          }
+        }
+        el.className = "long-html__social-list-link";
+        el.target = "_blank";
+        return el.outerHTML;
+      });
+
+    // stript HTML tbv text
+    removeSelectors.length &&
+     document
+       .querySelectorAll(removeSelectors)
+       .forEach((toRemove) => toRemove.parentNode.removeChild(toRemove));
+
+    // verwijder ongewenste paragrafen over bv restaurants
+    Array.from(
+      document.querySelectorAll(
+        `${textSelector} p, ${textSelector} span, ${textSelector} a`
+      )
+    ).forEach((verwijder) => {
+      const heeftEvilString = !!removeHTMLWithStrings.find((evilString) =>
+        verwijder.textContent.includes(evilString)
+      );
+      if (heeftEvilString) {
+        verwijder.parentNode.removeChild(verwijder);
+      }
+    });
+
+    // lege HTML eruit cq HTML zonder tekst of getallen
+    document
+      .querySelectorAll(`${removeEmptyHTMLFrom} > *`)
+      .forEach((checkForEmpty) => {
+        const leegMatch = checkForEmpty.innerHTML
+          .replace("&nbsp;", "")
+          .match(/[\w\d]/g);
+        if (!Array.isArray(leegMatch)) {
+          checkForEmpty.parentNode.removeChild(checkForEmpty);
+        }
+      });
+
+    // laatste attributen eruit.
+    document.querySelectorAll(textSocEnMedia).forEach((elToStrip) => {
+      attributesToRemoveSecondRound.forEach((attr) => {
+        if (elToStrip.hasAttribute(attr)) {
+          elToStrip.removeAttribute(attr);
+        }
+      });
+    });
+
+    // tekst.
+    res.textForHTML = Array.from(document.querySelectorAll(textSelector))
+      .map((el) => el.innerHTML)
+      .join("");
+    return res;
+  },{event})
+  
+}
+// #endregion                        LONG HTML

@@ -3,7 +3,7 @@ import * as _t from "../mods/tools.js";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 
-//#region [rgba(0, 60, 0, 0.3)]       SCRAPER CONFIG
+//#region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const dbsScraper = new AbstractScraper(makeScraperConfig({
   maxExecutionTime: 60044,
   workerData: Object.assign({}, workerData),
@@ -30,10 +30,10 @@ const dbsScraper = new AbstractScraper(makeScraperConfig({
 
 dbsScraper.listenToMasterThread();
 
-//#region [rgba(0, 120, 0, 0.3)]      RAW EVENT CHECK
+//#region [rgba(0, 120, 0, 0.1)]      RAW EVENT CHECK
 //#endregion                          RAW EVENT CHECK
 
-//#region [rgba(0, 180, 0, 0.3)]      SINGLE EVENT CHECK
+//#region [rgba(0, 180, 0, 0.1)]      SINGLE EVENT CHECK
 dbsScraper.singleMergedEventCheck = async function(event){
 
   const workingTitle = this.cleanupEventTitle(event.title);
@@ -74,7 +74,7 @@ dbsScraper.singleMergedEventCheck = async function(event){
 }
 //#endregion                          SINGLE EVENT CHECK
 
-//#region [rgba(0, 240, 0, 0.3)]      MAIN PAGE
+//#region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
 dbsScraper.mainPage = async function () {
 
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
@@ -138,9 +138,7 @@ dbsScraper.mainPage = async function () {
             } else {
               res.time = timeMatch[0].padStart(5, "0");
               res.startDate = `${res.year}-${res.month}-${res.day}`;
-              res.start = new Date(
-                `${res.startDate}T${res.time}:00Z`
-              ).toISOString();
+              res.start = `${res.startDate}T${res.time}:00`
             }
           }
           
@@ -155,9 +153,7 @@ dbsScraper.mainPage = async function () {
                   .match(/\d{1,2}:\d\d/);
                 if (Array.isArray(endDateM) && endDateM.length > 0) {
                   res.endTime = endDateM[0].padStart(5, "0");
-                  res.end = new Date(
-                    `${res.startDate}T${res.endTime}:00Z`
-                  ).toISOString();
+                  res.end = `${res.startDate}T${res.endTime}:00`
                   if (res.end === res.start) {
                     res.end = null;
                   }
@@ -185,7 +181,7 @@ dbsScraper.mainPage = async function () {
 };
 //#endregion                          MAIN PAGE
 
-//#region [rgba(120, 0, 0, 0.3)]     SINGLE PAGE
+//#region [rgba(120, 0, 0, 0.1)]     SINGLE PAGE
 dbsScraper.singlePage = async function ({ page, event }) {
   
   const {stopFunctie} =  await this.singlePageStart()
@@ -246,7 +242,7 @@ dbsScraper.singlePage = async function ({ page, event }) {
 };
 //#endregion                         SINGLE PAGE
 
-// #region [rgba(60, 0, 0, 0.5)]     LONG HTML
+// #region [rgba(60, 0, 0, 0.3)]     LONG HTML
 async function longTextSocialsIframes(page, event, pageInfo){
 
   return await page.evaluate(({event})=>{

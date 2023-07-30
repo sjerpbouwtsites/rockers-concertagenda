@@ -2,7 +2,7 @@ import { workerData } from "worker_threads";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 
-//#region [rgba(0, 60, 0, 0.3)]       SCRAPER CONFIG
+//#region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const dehellingScraper = new AbstractScraper(makeScraperConfig({
   maxExecutionTime: 30010,
   workerData: Object.assign({}, workerData),
@@ -30,7 +30,7 @@ const dehellingScraper = new AbstractScraper(makeScraperConfig({
 
 dehellingScraper.listenToMasterThread();
 
-//#region [rgba(0, 120, 0, 0.3)]      RAW EVENT CHECK
+//#region [rgba(0, 120, 0, 0.1)]      RAW EVENT CHECK
 dehellingScraper.singleRawEventCheck = async function (event) {
   
   const workingTitle = this.cleanupEventTitle(event.title);
@@ -57,7 +57,7 @@ dehellingScraper.singleRawEventCheck = async function (event) {
 };
 //#endregion                          RAW EVENT CHECK
 
-//#region [rgba(0, 180, 0, 0.3)]      SINGLE EVENT CHECK
+//#region [rgba(0, 180, 0, 0.1)]      SINGLE EVENT CHECK
 dehellingScraper.singleMergedEventCheck = async function (event) {
   
   return {
@@ -68,7 +68,7 @@ dehellingScraper.singleMergedEventCheck = async function (event) {
 };
 //#endregion                          SINGLE EVENT CHECK
 
-//#region [rgba(0, 240, 0, 0.3)]      MAIN PAGE
+//#region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
 dehellingScraper.mainPage = async function () { 
 
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
@@ -104,7 +104,7 @@ dehellingScraper.mainPage = async function () {
         };      
 
         try {
-          res.end = new Date(schemaData.endDate.replace(' ','T')).toISOString();
+          res.end = schemaData.endDate.replace(' ','T')
         } catch (caughtError) {
           res.errors.push({error: caughtError, remarks: `end date time datestring omzetting ${title} ${res.pageInfo}`,toDebug:res})        
         }
@@ -119,7 +119,7 @@ dehellingScraper.mainPage = async function () {
               const hours = tijdMatch[1];
               const minutes = tijdMatch[2];
               startString = res.end.replace(/T.*/, `T${hours.padStart(2, '0')}:${minutes.padStart(2, '0')}:00`);
-              res.start = new Date(startString).toISOString();
+              res.start = startString
             }
           }
         } catch (caughtError) {
@@ -150,7 +150,7 @@ dehellingScraper.mainPage = async function () {
 };
 //#endregion                          MAIN PAGE
 
-//#region [rgba(120, 0, 0, 0.3)]     SINGLE PAGE
+//#region [rgba(120, 0, 0, 0.1)]     SINGLE PAGE
 dehellingScraper.singlePage = async function ({ page,event }) {
   
   const {stopFunctie} =  await this.singlePageStart()
@@ -198,7 +198,7 @@ dehellingScraper.singlePage = async function ({ page,event }) {
 }
 //#endregion                         SINGLE PAGE
 
-// #region [rgba(60, 0, 0, 0.5)]     LONG HTML
+// #region [rgba(60, 0, 0, 0.3)]     LONG HTML
 async function longTextSocialsIframes(page, event, pageInfo){
 
   return await page.evaluate(({event})=>{

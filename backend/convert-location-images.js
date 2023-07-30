@@ -19,6 +19,7 @@ function initLocationImagesConversion(){
 async function recursiveFileConversion(files){
   while (files.length){
     const thisFile = files.shift();
+    console.log(thisFile)
     await downloadImageCompress(thisFile.source, thisFile.dest);
   }  
 }
@@ -26,25 +27,31 @@ async function recursiveFileConversion(files){
 
 async function downloadImageCompress(image, imagePath){
 
-  sharp(image)
-    .resize(440, 225)
-    .webp()
-    .toFile(`${imagePath}-w440.webp`, (err, info) => { 
-      console.log(`klaar met ${image}`)
-    });
+  if (!fs.existsSync(`${imagePath}-w440.webp`)){
+    sharp(image)
+      .resize(440, 225)
+      .webp()
+      .toFile(`${imagePath}-w440.webp`, (err, info) => { 
+        console.log(`klaar met ${image}`)
+      });
+  }
   
-  sharp(image)
-    .resize(750, 360)
-    .webp()
-    .toFile(`${imagePath}-w750.webp`, (err, info) => { 
-      console.log(`klaar met ${image}`)
-    });
+  if (!fs.existsSync(`${imagePath}-w750.webp`)){
+    sharp(image)
+      .resize(750, 360)
+      .webp()
+      .toFile(`${imagePath}-w750.webp`, (err, info) => { 
+        console.log(`klaar met ${image}`)
+      });
+  }
 
-  sharp(image)
-    .webp()
-    .toFile(`${imagePath}-vol.webp`, (err, info) => { 
-      console.log(`klaar met ${image}`)
-    });    
+  if (!fs.existsSync(`${imagePath}-vol.webp`)){
+    sharp(image)
+      .webp()
+      .toFile(`${imagePath}-vol.webp`, (err, info) => { 
+        console.log(`klaar met ${image}`)
+      });    
+  }
 
   await waitTime(400)
 }

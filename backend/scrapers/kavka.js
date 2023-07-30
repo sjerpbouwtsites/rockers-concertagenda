@@ -2,7 +2,7 @@ import { workerData } from "worker_threads";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 
-//#region [rgba(0, 60, 0, 0.3)]       SCRAPER CONFIG
+//#region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const kavkaScraper = new AbstractScraper(
   makeScraperConfig({
     workerData: Object.assign({}, workerData),
@@ -29,7 +29,7 @@ const kavkaScraper = new AbstractScraper(
 
 kavkaScraper.listenToMasterThread();
 
-//#region [rgba(0, 120, 0, 0.3)]      RAW EVENT CHECK
+//#region [rgba(0, 120, 0, 0.1)]      RAW EVENT CHECK
 kavkaScraper.singleRawEventCheck = async function (event) {
   let workingTitle = this.cleanupEventTitle(event.title);
   const isRefused = await this.rockRefuseListCheck(event, workingTitle)
@@ -48,7 +48,7 @@ kavkaScraper.singleRawEventCheck = async function (event) {
 }
 //#endregion                          RAW EVENT CHECK
 
-//#region [rgba(0, 180, 0, 0.3)]      SINGLE EVENT CHECK
+//#region [rgba(0, 180, 0, 0.1)]      SINGLE EVENT CHECK
 kavkaScraper.singleMergedEventCheck = async function (event) {
   const workingTitle = this.cleanupEventTitle(event.title);
   
@@ -75,7 +75,7 @@ kavkaScraper.singleMergedEventCheck = async function (event) {
 };
 //#endregion                          SINGLE EVENT CHECK
 
-//#region [rgba(0, 240, 0, 0.3)]      MAIN PAGE
+//#region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
 kavkaScraper.mainPage = async function () {
 
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
@@ -152,7 +152,7 @@ kavkaScraper.mainPage = async function () {
             } else {
               res.dateStringAttempt = `${startDate}T19:00:00`;
             }
-            res.start = new Date(res.dateStringAttempt).toISOString();
+            res.start = res.dateStringAttempt
           } catch (caughtError) {
             res.errors.push({
               error: caughtError,
@@ -168,9 +168,9 @@ kavkaScraper.mainPage = async function () {
               startTimeM.length > 1
             ) {
               res.dateStringAttempt = `${startDate}T${startTimeM[1]}:00`;
-              res.door = new Date(
+              res.door = 
                 res.dateStringAttempt
-              ).toISOString();
+              
             }            
           } catch (error) {
             res.errors.push({
@@ -202,7 +202,7 @@ kavkaScraper.mainPage = async function () {
 };
 //#endregion                          MAIN PAGE
 
-//#region [rgba(120, 0, 0, 0.3)]     SINGLE PAGE
+//#region [rgba(120, 0, 0, 0.1)]     SINGLE PAGE
 kavkaScraper.singlePage = async function ({ page, event }) {
   const { stopFunctie } = await this.singlePageStart();
 
@@ -246,7 +246,7 @@ kavkaScraper.singlePage = async function ({ page, event }) {
   return await this.singlePageEnd({ pageInfo, stopFunctie, page });
 };
 //#endregion                         SINGLE PAGE
-// #region [rgba(60, 0, 0, 0.5)]     LONG HTML
+// #region [rgba(60, 0, 0, 0.3)]     LONG HTML
 async function longTextSocialsIframes(page, event, pageInfo){
 
   return await page.evaluate(({event})=>{

@@ -33,12 +33,12 @@ export function filterEventsDateInPast(musicEvent) {
     return false;
   }
   const musicEventTime = Number(
-    musicEvent.start.match(/(.*)T/)[1].replace(/\D/g, "")
+    (new Date(musicEvent.start)).toISOString().substring(0,10).replace(/-/g, "")
   );
-  const nowDateString = new Date();
   const nowDate = Number(
-    nowDateString.toISOString().match(/(.*)T/)[1].replace(/\D/g, "")
+    (new Date()).toISOString().substring(0,10).replace(/-/g, "")
   );
+  console.log(musicEvent.start, (new Date(musicEvent.start)).toISOString().substring(0,10), (new Date()).toISOString().substring(0,10))
   return musicEventTime >= nowDate;
 }
 

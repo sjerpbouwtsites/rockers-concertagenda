@@ -2,8 +2,9 @@ import { workerData } from "worker_threads";
 import * as _t from "../mods/tools.js";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
+import {mapToStartTime, combineDoorTimeStartDate, mapToStartDate, mapToDoorTime, combineStartTimeStartDate} from './gedeeld/datums.js'
 
-//#region [rgba(0, 60, 0, 0.3)]       SCRAPER CONFIG
+//#region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const afasliveScraper = new AbstractScraper(makeScraperConfig({
   maxExecutionTime: 40000,
   workerData: Object.assign({}, workerData),
@@ -30,7 +31,7 @@ const afasliveScraper = new AbstractScraper(makeScraperConfig({
 
 afasliveScraper.listenToMasterThread();
 
-//#region [rgba(0, 120, 0, 0.3)]      RAW EVENT CHECK
+//#region [rgba(0, 120, 0, 0.1)]      RAW EVENT CHECK
 afasliveScraper.singleRawEventCheck = async function(event){
 
   const workingTitle = this.cleanupEventTitle(event.title)
@@ -62,10 +63,10 @@ afasliveScraper.singleRawEventCheck = async function(event){
 }
 //#endregion                          RAW EVENT CHECK
 
-//#region [rgba(0, 180, 0, 0.3)]      SINGLE EVENT CHECK
+//#region [rgba(0, 180, 0, 0.1)]      SINGLE EVENT CHECK
 //#endregion                          SINGLE EVENT CHECK
 
-//#region [rgba(0, 240, 0, 0.3)]      MAIN PAGE
+//#region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
 afasliveScraper.mainPage = async function () {
 
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
@@ -122,119 +123,26 @@ afasliveScraper.mainPage = async function () {
 };
 //#endregion                          MAIN PAGE
 
-//#region [rgba(120, 0, 0, 0.3)]     SINGLE PAGE
+//#region [rgba(120, 0, 0, 0.1)]     SINGLE PAGE
 afasliveScraper.singlePage = async function ({ page, event }) {
   
   const {stopFunctie} =  await this.singlePageStart()
 
   await _t.waitTime(250);
 
-  const pageInfo = await page.evaluate(
-    ({ months,event }) => {
+  let pageInfo = await page.evaluate(
+    ({ event }) => {
       const res = {
         pageInfo: `<a class='page-info' href='${location.href}'>${event.title}</a>`,
         errors: [],
       };
 
-      const timeTableEl = document.querySelector('.timetable')
-      if (timeTableEl){
-        const tijdenMatch = document.querySelector('.timetable')?.textContent.match(/\d\d:\d\d/);
-        if (Array.isArray(tijdenMatch) && tijdenMatch.length){
-          res.startTime = tijdenMatch[0];
-        } 
-      } else {
-        const startEl = document.querySelector(
-          ".eventInfo .tickets ~ p.align-mid ~ p.align-mid"
-        );
-        if (startEl) {
-          const startmatch = startEl.textContent.match(/\d\d:\d\d/);
-          if (startmatch && Array.isArray(startmatch) && startmatch.length) {
-            res.startTime = startmatch[0];
-          } else {
-            res.errors.push({
-              remarks: `Geen start tijd`,
-              toDebug: {
-                startDateText: startEl.textContent
-              }
-            })  
-            return res;          
-          }
-        } else {
-          res.errors.push({
-            remarks: `geen startTime gevonden`,
-            toDebug: {
-              heeftTimeTable: !!document.querySelector('.timetable'),
-              heeftStartEl: !!document.querySelector(
-                ".eventInfo .tickets ~ p.align-mid ~ p.align-mid"
-              )
-            }
-          })     
-        }
-      }
 
-      if (document
-        .querySelector(".eventTitle")
-        ?.parentNode.querySelector("time")
-        ?.textContent.match(/(\d+)\s+(\w+)\s+(\d\d\d\d)/)) {
-        const startDateMatch =
-        document
-          .querySelector(".eventTitle")
-          ?.parentNode.querySelector("time")
-          ?.textContent.match(/(\d+)\s+(\w+)\s+(\d\d\d\d)/) ?? null;
-        if (
-          startDateMatch &&
-        Array.isArray(startDateMatch) &&
-        startDateMatch.length > 3
-        ) {
-          res.startDate = `${startDateMatch[3]}-${months[startDateMatch[2]]}-${
-            startDateMatch[1]
-          }`;
-        } else {
-          res.errors.push({
-            remarks: `geen startdate`,
-            toDebug: {
-              startDateText: document
-                .querySelector(".eventTitle")
-                ?.parentNode.querySelector("time")
-                ?.textContent
-            }
-          })        
-          return res;
-        }
-
-        const doorEl = document.querySelector(
-          ".eventInfo .tickets ~ p.align-mid"
-        );
-        if (doorEl) {
-          const doormatch = doorEl.textContent.match(/\d\d:\d\d/);
-          if (doormatch && Array.isArray(doormatch) && doormatch.length) {
-            res.doorTime = doormatch[0];
-          }
-        }
-      } else {
-        res.heeftEventTitleMatch = false;
-      } // alternatieve mogelijk legacy startDate
-
-      try {
-        if (res.startTime) {
-          res.start = new Date(
-            `${res.startDate}T${res.startTime}:00`
-          ).toISOString();
-        }
-
-        if (res.doorTime) {
-          res.door = new Date(
-            `${res.startDate}T${res.doorTime}:00`
-          ).toISOString();
-        }
-      } catch (errorCaught) {
-        res.errors.push({
-          error: errorCaught,
-          remarks: `merge time date ${res.pageInfo}`,
-          toDebug: {start: res.startTime, date: res.startDate}
-        });
-        return res;
-      }
+      res.mapToStartTime = document.querySelector('.eventInfo, .timetable')?.textContent
+        .replaceAll(/\s/g,' ').replace(/\s+/g,' ').match(/aanvang:.*\d\d:\d\d/i) ?? null;
+      res.mapToDoorTime = document.querySelector('.eventInfo, .timetable')?.textContent
+        .replaceAll(/\s/g,' ').replace(/\s+/g,' ').match(/deuren open:.*\d\d:\d\d/i) ?? null;        
+      res.mapToStartDate = document.querySelector('.eventInfo time, .timetable time')?.textContent;
 
       res.soldOut = !!(document.querySelector('#tickets .soldout') ?? null)
 
@@ -248,8 +156,14 @@ afasliveScraper.singlePage = async function ({ page, event }) {
 
       return res;
     },
-    { months: this.months,event }
+    {event}
   );
+
+  pageInfo = mapToStartTime(pageInfo);
+  pageInfo = mapToDoorTime(pageInfo);
+  pageInfo = mapToStartDate(pageInfo, 'dag-maandNaam-jaar', this.months)
+  pageInfo = combineStartTimeStartDate(pageInfo);
+  pageInfo = combineDoorTimeStartDate(pageInfo);
 
   const imageRes = await this.getImage({page, event, pageInfo, selectors: [".leftCol figure img"], mode: 'image-src' })
   pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
@@ -268,7 +182,7 @@ afasliveScraper.singlePage = async function ({ page, event }) {
 };
 //#endregion                         SINGLE PAGE
 
-// #region [rgba(60, 0, 0, 0.5)]     LONG HTML
+// #region [rgba(60, 0, 0, 0.3)]     LONG HTML
 async function longTextSocialsIframes(page, event, pageInfo){
 
   return await page.evaluate(({event})=>{

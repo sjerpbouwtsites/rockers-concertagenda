@@ -4,7 +4,7 @@ import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 import ErrorWrapper from "../mods/error-wrapper.js";
 
-//#region [rgba(0, 60, 0, 0.3)]       SCRAPER CONFIG
+//#region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const doornroosjeScraper = new AbstractScraper(makeScraperConfig({
   workerData: Object.assign({}, workerData),
   puppeteerConfig: {
@@ -30,7 +30,7 @@ const doornroosjeScraper = new AbstractScraper(makeScraperConfig({
 
 doornroosjeScraper.listenToMasterThread();
 
-//#region [rgba(0, 120, 0, 0.3)]      RAW EVENT CHECK
+//#region [rgba(0, 120, 0, 0.1)]      RAW EVENT CHECK
 doornroosjeScraper.singleRawEventCheck = async function (event) {
   const workingTitle = this.cleanupEventTitle(event.title);
   const isRefused = await this.rockRefuseListCheck(event, workingTitle)
@@ -55,7 +55,7 @@ doornroosjeScraper.singleRawEventCheck = async function (event) {
 }
 //#endregion                          RAW EVENT CHECK
 
-//#region [rgba(0, 180, 0, 0.3)]      SINGLE EVENT CHECK
+//#region [rgba(0, 180, 0, 0.1)]      SINGLE EVENT CHECK
 doornroosjeScraper.singleMergedEventCheck = async function (event) {
   const workingTitle = this.cleanupEventTitle(event.title);
 
@@ -77,7 +77,7 @@ doornroosjeScraper.singleMergedEventCheck = async function (event) {
 };
 //#endregion                          SINGLE EVENT CHECK
 
-//#region [rgba(0, 240, 0, 0.3)]      MAIN PAGE
+//#region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
 doornroosjeScraper.mainPage = async function () {
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
   if (availableBaseEvents){
@@ -157,7 +157,7 @@ doornroosjeScraper.mainPage = async function () {
 };
 //#endregion                          MAIN PAGE
 
-//#region [rgba(120, 0, 0, 0.3)]     SINGLE PAGE
+//#region [rgba(120, 0, 0, 0.1)]     SINGLE PAGE
 doornroosjeScraper.singlePage = async function ({ page, event }) {
   
   const {stopFunctie} =  await this.singlePageStart()
@@ -216,26 +216,14 @@ doornroosjeScraper.singlePage = async function ({ page, event }) {
         if (timeMatches && timeMatches.length) {
           try {
             if (timeMatches.length === 3){
-              res.start = new Date(
-                `${startDate}:${timeMatches[1]}`
-              ).toISOString();
-              res.door = new Date(
-                `${startDate}:${timeMatches[0]}`
-              ).toISOString();
-              res.end = new Date(
-                `${startDate}:${timeMatches[2]}`
-              ).toISOString();                            
+              res.start = `${startDate}T${timeMatches[1]}`
+              res.door = `${startDate}T${timeMatches[0]}`
+              res.end = `${startDate}T${timeMatches[2]}`  
             } else if (timeMatches.length == 2) {
-              res.start = new Date(
-                `${startDate}:${timeMatches[1]}`
-              ).toISOString();
-              res.door = new Date(
-                `${startDate}:${timeMatches[0]}`
-              ).toISOString();
+              res.start = `${startDate}T${timeMatches[1]}`
+              res.door = `${startDate}T${timeMatches[0]}`
             } else if (timeMatches.length == 1) {
-              res.start = new Date(
-                `${startDate}:${timeMatches[0]}`
-              ).toISOString();
+              res.start = `${startDate}T${timeMatches[0]}`
             }
           } catch (caughtError) {
             res.errors.push({
@@ -257,10 +245,10 @@ doornroosjeScraper.singlePage = async function ({ page, event }) {
         errors: [],
       };
       if (event.venueEventUrl.includes('soulcrusher')){
-        res.start = new Date('2023-10-13T18:00:00.000Z').toISOString();
+        res.start = '2023-10-13T18:00:00.000'
       } else {
         try {
-          res.start = new Date(`${event?.startDate}T12:00:00`).toISOString();
+          res.start = `${event?.startDate}T12:00:00`
         } catch (thisError) {
           const errorString = `fout bij tijd/datum festival of datums`; 
           res.errors.push({
@@ -311,7 +299,7 @@ doornroosjeScraper.singlePage = async function ({ page, event }) {
 };
 //#endregion                         SINGLE PAGE
 
-// #region [rgba(60, 0, 0, 0.5)]     LONG HTML
+// #region [rgba(60, 0, 0, 0.3)]     LONG HTML
 async function longTextSocialsIframes(page, event, pageInfo){
 
   return await page.evaluate(({event})=>{

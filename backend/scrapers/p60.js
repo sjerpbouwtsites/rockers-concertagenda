@@ -3,7 +3,7 @@ import * as _t from "../mods/tools.js";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
 import makeScraperConfig from "./gedeeld/scraper-config.js";
 
-//#region [rgba(0, 60, 0, 0.3)]       SCRAPER CONFIG
+//#region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const p60Scraper = new AbstractScraper(makeScraperConfig({
   workerData: Object.assign({}, workerData),
   puppeteerConfig: {
@@ -28,7 +28,7 @@ const p60Scraper = new AbstractScraper(makeScraperConfig({
 
 p60Scraper.listenToMasterThread();
 
-//#region [rgba(0, 120, 0, 0.3)]      RAW EVENT CHECK
+//#region [rgba(0, 120, 0, 0.1)]      RAW EVENT CHECK
 p60Scraper.singleRawEventCheck = async function (event) {
   let workingTitle = this.cleanupEventTitle(event.title);
   const isRefused = await this.rockRefuseListCheck(event, workingTitle)
@@ -47,7 +47,7 @@ p60Scraper.singleRawEventCheck = async function (event) {
 }
 //#endregion                          RAW EVENT CHECK
 
-//#region [rgba(0, 180, 0, 0.3)]      SINGLE EVENT CHECK
+//#region [rgba(0, 180, 0, 0.1)]      SINGLE EVENT CHECK
 p60Scraper.singleMergedEventCheck = async function (event) {
   const workingTitle = this.cleanupEventTitle(event.title);
   
@@ -74,7 +74,7 @@ p60Scraper.singleMergedEventCheck = async function (event) {
 };
 //#endregion                          SINGLE EVENT CHECK
 
-//#region [rgba(0, 240, 0, 0.3)]      MAIN PAGE
+//#region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
 p60Scraper.mainPage = async function () {
 
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
@@ -112,7 +112,7 @@ p60Scraper.mainPage = async function () {
 
         const doorB = itemEl.querySelector('.p60-list__item__date time')?.getAttribute('datetime')
         try {
-          res.door = new Date(doorB).toISOString();
+          res.door = doorB
         } catch (caughtError) {
           res.errors.push({error: caughtError, remarks: `openDoorDateTime omzetten ${doorB}`,         
           })
@@ -123,7 +123,7 @@ p60Scraper.mainPage = async function () {
         if (res.door){
           startB = doorB.replace(/T\d\d:\d\d/, `T${startTime}`);
           try {
-            res.start = new Date(startB).toISOString();
+            res.start = startB
           } catch (caughtError) {
             res.errors.push({error: caughtError, remarks: `start omzetten ${startB}` })
           }
@@ -145,7 +145,7 @@ p60Scraper.mainPage = async function () {
 };
 //#endregion                          MAIN PAGE
 
-//#region [rgba(120, 0, 0, 0.3)]     SINGLE PAGE
+//#region [rgba(120, 0, 0, 0.1)]     SINGLE PAGE
 p60Scraper.singlePage = async function ({ page, event }) {
   
   const {stopFunctie} =  await this.singlePageStart()
@@ -183,7 +183,7 @@ p60Scraper.singlePage = async function ({ page, event }) {
   
 };
 //#endregion                         SINGLE PAGE
-// #region [rgba(60, 0, 0, 0.5)]     LONG HTML
+// #region [rgba(60, 0, 0, 0.3)]     LONG HTML
 async function longTextSocialsIframes(page, event, pageInfo){
 
   return await page.evaluate(({event})=>{
