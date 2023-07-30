@@ -1,4 +1,76 @@
 
+  effenaar-0 Error - 7:39:37 AM
+  Error: false
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:881:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:871:23)
+    at effenaarScraper.singlePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/effenaar.js:210:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:652:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:244:5) 
+  false
+  
+  
+  willemeen-0 Error - 7:39:22 AM
+  Error: false
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:881:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:871:23)
+    at willemeeenScraper.singlePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/willemeen.js:171:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:652:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:244:5) 
+  false
+  
+  
+  effenaar-1 Error - 7:39:20 AM
+  Error: false
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:881:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:871:23)
+    at effenaarScraper.singlePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/effenaar.js:210:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:652:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:244:5) 
+  false
+  
+  
+  effenaar-2 Error - 7:37:46 AM
+  Error: false
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:881:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:871:23)
+    at effenaarScraper.singlePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/effenaar.js:210:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:652:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:244:5) 
+  false
+  
+  
+  metropool-1 Error - 7:36:17 AM
+  Error: false
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:881:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:871:23)
+    at metropoolScraper.singlePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/metropool.js:212:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:652:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:244:5) 
+  false
+  
+  
+  volt-0 Error - 7:36:13 AM
+  Error: false
+    at file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:881:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:871:23)
+    at voltScraper.singlePage (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/volt.js:235:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:652:22)
+    at async AbstractScraper.scrapeInit (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:244:5) 
+  false
+  
+  
   littledevil-0 Error - 7:20:40 AM
   Error: Timeout baseEvent
     at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:816:16)

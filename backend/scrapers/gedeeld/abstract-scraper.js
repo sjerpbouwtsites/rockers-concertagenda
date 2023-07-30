@@ -35,9 +35,9 @@ export default class AbstractScraper {
   debugCorruptedUnavailable = false;
   debugSingleMergedEventCheck = false;
   debugRawEventAsyncCheck = false;
-  debugBaseEvents = true;
-  debugPageInfo = true;
-  debugPrice = true;
+  debugBaseEvents = false;
+  debugPageInfo = false;
+  debugPrice = false;
   //#endregion                                                DEBUGSETTINGS
 
   //#region [rgba(0, 0, 60, 0.10)]                             ISROCKSETTINGS  
