@@ -5,24 +5,23 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prettier": "prettier -w --loglevel=silent ~/dev/apache/concertagenda/public/texts",
     "start": "cd ~/dev/apache/concertagenda/; npm run start",
     "build": "cd ~/dev/apache/concertagenda/; npm run build",
-    "backend": "killall -s 9 chrome; cd ~/dev/apache/concertagenda/backend; clear; node index.js force=all; npm run prettier; clear; echo 'backend gedaan';"
+    "kill-chrome": "killall -s 9 chrome; ",
+    "backend": "npm run kill-chrome; cd ~/dev/apache/concertagenda/backend; clear; node index.js force=all; clear; echo 'backend gedaan';"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "axios": "^0.26.1",
-    "dotenv": "^16.0.3",
+    "axios": "^1.4.0",
+    "dotenv": "^16.3.1",
     "os-utils": "^0.0.14",
-    "puppeteer": "^13.5.1",
+    "puppeteer": "^20.9.0",
     "sharp": "^0.32.4",
     "showdown": "^2.1.0"
   },
   "dependencies": {
-    "open": "^8.4.0",
+    "open": "^9.1.0",
     "websocket": "^1.0.34"
   }
 }
