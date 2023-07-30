@@ -131,6 +131,7 @@ class WorkerListConf {
   workerNeedsWork(familyName){
     if (this.shellArguments?.force?.includes('all')) return true;
     if (this.shellArguments?.force?.includes(familyName)) return true;
+    if (familyName.includes('metalfan')) return false // metalfan alleen bij all of force
     if (!this.baseEventlistsStart.join('').includes(familyName)) return true;
     const actueelGevonden = this.baseEventlistsStart.find(baseEventList =>{
       return baseEventList.includes(familyName) && baseEventList.includes(this.curDay)

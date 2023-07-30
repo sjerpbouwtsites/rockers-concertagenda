@@ -1,4 +1,26 @@
 
+  boerderij-0 Error - 3:46:03 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:816:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  boerderij-0 Error - 3:44:32 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///home/sjerp/dev/apache/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:339:16)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7) 
+  Timeout baseEvent
+  
+  
+  boerderij-0 Error - 3:44:12 AM
+  Error: getaddrinfo EAI_AGAIN poppodiumboerderij.nl
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:83:26) 
+  getaddrinfo EAI_AGAIN poppodiumboerderij.nl
+  
+  
   boerderij-0 Error - 3:37:43 AM
   Error: Evaluation failed: TypeError: this.dirtyDebug is not a function
     at __puppeteer_evaluation_script__:64:10
