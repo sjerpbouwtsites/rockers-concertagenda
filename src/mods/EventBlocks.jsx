@@ -440,7 +440,7 @@ ${BEMify('event-block', [
   musicEventFilters() {
     const { filterSettings } = this.props;
     const { maxEventsShown, musicEvents } = this.state;
-    return musicEvents
+    const filtered = musicEvents
       .filter((musicEvent, musicEventKey) => musicEventKey <= maxEventsShown)
       .filter((musicEvent) => {
         if (!filterSettings?.podia[musicEvent.location]) {
@@ -463,26 +463,29 @@ ${BEMify('event-block', [
           return false;
         }
         return true;
-      }).map((musicEvent) => {
-        // eslint-disable-next-line
-        musicEvent.firstOfMonth = false;
-        const start = new Date(musicEvent.start);
-        // eslint-disable-next-line
-        musicEvent.eventMonth = start.toLocaleDateString('nl', {
-          year: 'numeric',
-          month: 'short',
-        });
-        // FIXME filters verneuken straks wie eerste maand is.
-        // FIXME verander het naar artikel met dan op een data-attr
-        // zijn maand geprint. Dan kan je met css verder fixen.
-        // if (!musicEventIndex || !filtered[musicEventIndex - 1]) {
-        //   musicEvent.firstOfMonth = true;
-        // }
-        // if (musicEvent.eventMonth !== filtered[musicEventIndex - 1]?.eventMonth) {
-        //   musicEvent.firstOfMonth = true;
-        // }
-        return musicEvent;
       });
+    return filtered.map((musicEvent, musicEventIndex) => {
+      // eslint-disable-next-line
+        musicEvent.firstOfMonth = false;
+      const start = new Date(musicEvent.start);
+      // eslint-disable-next-line
+        musicEvent.eventMonth = start.toLocaleDateString('nl', {
+        year: 'numeric',
+        month: 'short',
+      });
+      // FIXME filters verneuken straks wie eerste maand is.
+      // FIXME verander het naar artikel met dan op een data-attr
+      // zijn maand geprint. Dan kan je met css verder fixen.
+      if (!musicEventIndex || !filtered[musicEventIndex - 1]) {
+        // eslint-disable-next-line
+        musicEvent.firstOfMonth = true;
+      }
+      if (musicEvent.eventMonth !== filtered[musicEventIndex - 1]?.eventMonth) {
+        // eslint-disable-next-line
+        musicEvent.firstOfMonth = true;
+      }
+      return musicEvent;
+    });
   }
 
   // eslint-disable-next-line
