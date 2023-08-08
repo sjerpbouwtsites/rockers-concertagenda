@@ -124,6 +124,7 @@ export function mapToDoorTime(event) {
 }
 
 export function mapToStartDate(event, regexMode, months) {
+
   if (Array.isArray(event.mapToStartDate)) {
     event.errors.push({
       remarks: 'mapToStartDate is Array',
@@ -149,7 +150,9 @@ export function mapToStartDate(event, regexMode, months) {
     if (isDate(dateStr)) {
       event.startDate = dateStr;
     }
-  } else if (regexMode === 'dag-maandNaam-jaar') {
+    return event;
+  }
+  if (regexMode === 'dag-maandNaam-jaar') {
     const dateM = event.mapToStartDate.match(/(\d{1,2})[\/\s]?(\w+)[\/\s]?(\d{2,4})/);
     if (Array.isArray(dateM) && dateM.length < 4) {
       throw new Error(`datematch fail op ${event.mapToStartDate}`);
@@ -162,25 +165,41 @@ export function mapToStartDate(event, regexMode, months) {
     if (isDate(dateStr)) {
       event.startDate = dateStr;
     }
-  } else if (regexMode === 'maand-dag-jaar') {
-
+    return event;
+  }
+  if (regexMode === 'maand-dag-jaar') {
     const dateM = event.mapToStartDate.match(/(\w+)\s(\d\d)\s?,?\s?(\d\d\d\d)/im);
     if (Array.isArray(dateM) && dateM.length < 4) {
       throw new Error(`datematch fail op ${event.mapToStartDate}`);
     }
     const maandNaam = dateM[1];
-    const maandGetal = months[maandNaam.toLowerCase()]
+    const maandGetal = months[maandNaam.toLowerCase()];
     const dag = dateM[2].padStart(2, '0');
     const jaar = dateM[3].padStart(4, '20');
     const dateStr = `${jaar}-${maandGetal}-${dag}`;
     if (isDate(dateStr)) {
       event.startDate = dateStr;
     }
-  } else {
-    event.errors.push({
-      remarks: `onbekende regexMode ${regexMode}`,
-    });
+    return event;
   }
+  if (regexMode === 'dag-maandNummer-jaar') {
+    const dateM = event.mapToStartDate.match(/(\d{1,2})[\/\s]?(\d+)[\/\s]?(\d{2,4})/);
+    if (Array.isArray(dateM) && dateM.length < 4) {
+      throw new Error(`datematch fail op ${event.mapToStartDate}`);
+    }
+    const jaar = dateM[3].padStart(4, '20');
+    const maandGetal = dateM[2];
+    const dag = dateM[1].padStart(2, '0');
+    const dateStr = `${jaar}-${maandGetal}-${dag}`;
+    if (isDate(dateStr)) {
+      event.startDate = dateStr;
+    }
+    return event;
+  }
+  event.errors.push({
+    remarks: `onbekende regexMode ${regexMode}`,
+  });
+
   return event;
 }
 
@@ -223,6 +242,5 @@ export function mapToStart(event) {
 export function mapToDoor(event) {
   return _mapToDateString(event, 'door', false);
 }
-
 
 export default {};

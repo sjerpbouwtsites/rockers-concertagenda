@@ -82,7 +82,7 @@ const podiumGebruikt = {
   metalfan: kortNederlands,
   melkweg: kortNederlands,
   metropool: kortNederlands,
-  neushoorn: kortNederlands,
+  neushoorn: voluitNederlands,
   nieuwenor: kortNederlands,
   oosterpoort: kortNederlands,
   paradiso: kortNederlands,

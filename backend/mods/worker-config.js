@@ -109,6 +109,10 @@ class WorkerListConf {
     this.run();
   }
 
+  get highCpuWorkerExists(){
+    return this.data.find(conf=>conf.CPUReq==='high')
+  } 
+
   setBaseEventLists() {
     this.baseEventlistsStart = fs.readdirSync(fsDirections.baseEventlists);
   }

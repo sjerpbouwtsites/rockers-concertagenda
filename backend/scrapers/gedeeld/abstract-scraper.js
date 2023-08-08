@@ -43,9 +43,9 @@ export default class AbstractScraper {
 
   debugRawEventAsyncCheck = false;
 
-  debugBaseEvents = false;
+  debugBaseEvents = true;
 
-  debugPageInfo = false;
+  debugPageInfo = true;
 
   debugPrice = false;
   // #endregion                                                DEBUGSETTINGS
@@ -1696,7 +1696,7 @@ export default class AbstractScraper {
         //
       });
 
-    fs.rmSync(`${imagePath}-ori${extension}`)
+
 
     return true;
   }

@@ -2,6 +2,7 @@ import { workerData } from 'worker_threads';
 import * as _t from '../mods/tools.js';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import makeScraperConfig from './gedeeld/scraper-config.js';
+import { mapToStartDate, combineDoorTimeStartDate, mapToDoorTime, mapToStartTime, combineStartTimeStartDate } from './gedeeld/datums.js';
 
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const neushoornScraper = new AbstractScraper(makeScraperConfig({
@@ -122,69 +123,34 @@ neushoornScraper.mainPage = async function () {
 neushoornScraper.singlePage = async function ({ page, event }) {
   const { stopFunctie } =  await this.singlePageStart();
 
-  const pageInfo = await page.evaluate(
+  let pageInfo = await page.evaluate(
     ({ months, event }) => {
       const res = {
         pageInfo: `<a class='page-info' href='${location.href}'>${event.title}</a>`,
         errors: [],
       };
 
-      const dateTextcontent =        document.querySelector('.summary .summary__item:first-child')
-        ?.textContent ?? '';
-      const dateTextMatch = dateTextcontent.match(/\w+\s?(\d+)\s?(\w+)/);
-
-      if (dateTextMatch && dateTextMatch.length === 3) {
-        //
-        const month = months[dateTextMatch[2]];
-        const curM = new Date().getMonth() + 1;
-        let year = new Date().getFullYear();
-        if (month < curM) {
-          year += 1;
-        }
-        const day = dateTextMatch[1].padStart(2, '0');
-        res.startDate = `${year}-${month}-${day}`;
-      } else {
-        res.errors.push({
-          remarks: `geen startDate ${res.pageInfo}`,
-          toDebug:{
-            text:  document.querySelector('.summary .summary__item:first-child')
-              ?.textContent,
-          },
-        });
+      res.mapToStartDate = document.querySelector('.summary .summary__item:first-child')?.textContent.trim().toLowerCase() ?? '';
+      const tweedeSuIt = document.querySelector('.summary .summary__item + .summary__item');
+      if (tweedeSuIt.textContent.includes('-')) {
+        const s = tweedeSuIt.textContent.split('-');
+        tweedeSuIt.innerHTML = `<span class='deur'>${s[0]}</span><span class='start'>${s[1]}</span>'`;
       }
-
-      const timeTextcontent =        document.querySelector('.summary .summary__item + .summary__item')
-        ?.textContent ?? '';
-      const timeTextMatch = timeTextcontent.match(
-        /(\d{2}:\d{2}).*(\d{2}:\d{2})/,
-      );
-      if (timeTextMatch && timeTextMatch.length === 3 && res.startDate) {
-        res.door = `${res.startDate}T${timeTextMatch[1]}:00`;
-
-        res.start = `${res.startDate}T${timeTextMatch[2]}:00`;
-      } else {
-        res.start = `${res.startDate}T${timeTextMatch[1]}:00`;
-      }
-
-      try {
-        const summaryEl = document.querySelector('.content .summary');
-        const longEl = summaryEl.parentNode;
-        longEl.removeChild(summaryEl);
-        res.longTextHTML = longEl.innerHTML;
-      } catch (caughtError) {
-        res.errors.push({
-          error: caughtError,
-          remarks: `longTextHTML faal ${res.pageInfo}`,
-          toDebug: {
-            event,
-          },
-        });
-      }
+      res.mapToStartTime = document.querySelector('.summary .summary__item .start, .summary .summary__item + .summary__item')?.textContent.trim().toLowerCase() ?? '';
+      res.mapToDoorTime = document.querySelector('.summary .summary__item .deur')?.textContent.trim().toLowerCase() ?? '';
 
       return res;
     },
     { months: this.months, event },
   );
+
+  this.dirtyLog(pageInfo);
+
+  pageInfo = mapToStartDate(pageInfo, 'dag-maandNaam', this.months);
+  pageInfo = mapToStartTime(pageInfo);
+  pageInfo = mapToDoorTime(pageInfo);
+  pageInfo = combineStartTimeStartDate(pageInfo);
+  pageInfo = combineDoorTimeStartDate(pageInfo);
 
   const imageRes = await this.getImage({
     page, event, pageInfo, selectors: ['.header--theatre'], mode: 'background-src',
