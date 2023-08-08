@@ -193,6 +193,10 @@ class WorkerListConf {
     const next = this.data.shift();
     return next;
   }
+  
+  takeBackRejected(reject){
+    this.data.push(reject)
+  }
 
   backIntoLine(completeConfig) {
     this.data.push(completeConfig);

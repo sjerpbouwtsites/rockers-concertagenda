@@ -36,41 +36,78 @@ async function recursiveStartWorkers(workerConfig) {
 }
 
 async function startWorker(workerConfig) {
+  const shellArguments = _t.getShellArguments();
+
   const toManyWorkersWorking = WorkerStatus.workersWorking() >= WorkerStatus.maxSimultaneousWorkers;
   if (toManyWorkersWorking) {
-    await _t.waitTime(150);
+    console.log('to many workers');
+    await _t.waitTime(25);
     return recursiveStartWorkers(workerConfig);
   }
 
   const thisConfig = workerConfig.get();
+  const workingThisFamily = WorkerStatus.workersWorkingOfFamily(
+    thisConfig.family,
+  );
+  // als er veel ruimte is, voorkeur voor hoog cpu
+  if (WorkerStatus.OSHasALotOfSpace && thisConfig.CPUReq === 'high') {
+    console.log('find high user');
+    workerConfig.takeBackRejected(thisConfig);
+    return recursiveStartWorkers(workerConfig);
+  }
 
-  const shellArguments = _t.getShellArguments();
+  // of er momenteel nog een base event list gemaakt word
+  if (!WorkerStatus.familyDoneWithBaseEvents(thisConfig.family) && workingThisFamily) {
+    console.log('base event needs to be finished solo');
+    workerConfig.takeBackRejected(thisConfig);
+    await _t.waitTime(25);
+    return recursiveStartWorkers(workerConfig);
+  }
+
+  // of nog niet alle families al werken
+  if (workingThisFamily > 0 && (WorkerStatus.familyDoneWithBaseEvents.length !== WorkerStatus.numberOfFamilies)) {
+    console.log('nog niet allen werken reeds');
+    workerConfig.takeBackRejected(thisConfig);
+    await _t.waitTime(5);
+    return recursiveStartWorkers(workerConfig);
+  }
+
+  // als er niet veel OS ruimte is maar deze veel nodig heeft
+  if (!WorkerStatus.OSHasALotOfSpace && thisConfig.CPUReq === 'high') {
+    console.log('niet genoeg ruimte voor HIGH cpu');
+    workerConfig.takeBackRejected(thisConfig);
+    await _t.waitTime(50);
+    return recursiveStartWorkers(workerConfig);
+  }
+
+  // als er al teveel van deze familie werken
+
+  if (thisConfig.workerConcurrent <= workingThisFamily) {
+    console.log('te veel van deze family concurrent');
+    workerConfig.takeBackRejected(thisConfig);
+    await _t.waitTime(25);
+    return recursiveStartWorkers(workerConfig);
+  }
+
+  // als er uberhaupt geen ruimte is
+  if (!WorkerStatus.OSHasSpace) {
+    // alleen zuinigen door
+    if (!WorkerStatus.OSHasMinimalSpace && thisConfig.CPUReq === 'low') {
+      console.log('zelfs geen ruimte voor kleine');
+      workerConfig.takeBackRejected(thisConfig);
+      await _t.waitTime(100);
+      return recursiveStartWorkers(workerConfig);
+    }
+    console.log('geen ruimte');
+    workerConfig.takeBackRejected(thisConfig);
+    await _t.waitTime(50);
+    return recursiveStartWorkers(workerConfig);
+  }
 
   thisConfig.masterEnv = {
     TICKETMASTER_CONSUMER_KEY: process.env.TICKETMASTER_CONSUMER_KEY,
     TICKETMASTER_CONSUMER_SECRET: process.env.TICKETMASTER_CONSUMER_SECRET,
   };
-
-  const workingThisFamily = WorkerStatus.workersWorkingOfFamily(
-    thisConfig.family,
-  );
-  const spaceForConcurrant = thisConfig.workerConcurrent > workingThisFamily;
-
-  let startWorkerBool = false;
-  if (thisConfig.CPUReq === 'high') {
-    startWorkerBool = spaceForConcurrant && WorkerStatus.OSHasALotOfSpace;
-  } else if (thisConfig.CPUReq === 'normal') {
-    startWorkerBool = spaceForConcurrant && WorkerStatus.OSHasSpace;
-  } else if (thisConfig.CPUReq === 'low') {
-    startWorkerBool = true;
-  } else {
-    throw new Error('verkeerde CPUReq');
-  }
-
-  if (!startWorkerBool) {
-    workerConfig.firstOneLast(thisConfig);
-    return recursiveStartWorkers(workerConfig);
-  }
 
   const thisWorker = new RockWorker(thisConfig, shellArguments);
   thisWorker.postMessage(WorkerMessage.quick('process', 'command-start'));

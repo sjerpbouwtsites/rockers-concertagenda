@@ -13,6 +13,7 @@ import MusicEvent from '../../mods/music-event.js';
 import getVenueMonths from '../../mods/months.js';
 import ErrorWrapper from '../../mods/error-wrapper.js';
 import makeLongHTML from './longHTML.js';
+import WorkerStatus from '../../mods/WorkerStatus.js';
 
 // #endregion                                              IMPORTS
 
@@ -302,10 +303,12 @@ export default class AbstractScraper {
     if (refDate !== baseEventDate) {
       return false;
     }
+    WorkerStatus.registerFamilyDoneWithBaseEvents(workerData.family);
     return JSON.parse(fs.readFileSync(`${fsDirections.baseEventlists}/${thisBaseEvent}`));
   }
 
   async saveBaseEventlist(key, data) {
+    WorkerStatus.registerFamilyDoneWithBaseEvents(workerData.family);
     if (!data) {
       const err = new Error(`No data in saveBaseEventList ${key}`);
       _t.wrappedHandleError(new ErrorWrapper({

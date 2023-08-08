@@ -1,7 +1,7 @@
 import os from 'os-utils';
 import EventsList from './events-list.js';
 import wsMessage from '../monitor/wsMessage.js';
-import { AbstractWorkerConfig } from './worker-config.js';
+import { AbstractWorkerConfig, workerConfig } from './worker-config.js';
 import { getShellArguments } from './tools.js';
 import * as _t from './tools.js';
 
@@ -19,6 +19,10 @@ export function AbstractWorkerData() {
 
 export default class WorkerStatus {
   static _workers = {};
+
+  static baseWorkerConfigs = workerConfig
+  static numberOfFamilies = Object.keys(workerConfig).length
+  static _familiesDoneWithBaseEvents = [];
 
   static CPUFree = 100;
 
@@ -46,6 +50,14 @@ export default class WorkerStatus {
   static monitorWebsocketServer = null;
 
   static reportingInterval = null;
+
+  static registerFamilyDoneWithBaseEvents(family) {
+    WorkerStatus._familiesDoneWithBaseEvents.push(family);
+  }
+
+  static familyDoneWithBaseEvents(family) {
+    return WorkerStatus._familiesDoneWithBaseEvents.includes(family);
+  }
 
   static registerWorker(rockWorkerInstance) {
     const _w = WorkerStatus._workers[rockWorkerInstance.name];
@@ -103,8 +115,12 @@ export default class WorkerStatus {
     return WorkerStatus.monitorWebsocketServer;
   }
 
+  static get OSHasMinimalSpace() {
+    return WorkerStatus.CPUFree > 17;
+  }
+
   static get OSHasSpace() {
-    return WorkerStatus.CPUFree > 20;
+    return WorkerStatus.CPUFree > 30;
   }
 
   static get OSHasALotOfSpace() {
