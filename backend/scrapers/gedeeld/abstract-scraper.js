@@ -236,7 +236,9 @@ export default class AbstractScraper {
   // #region [rgba(0, 0, 240, 0.10)]                            SCRAPE INIT & SCRAPE DIE
   async scrapeInit() {
     if (!this.puppeteerConfig.app.mainPage.useCustomScraper || !this.puppeteerConfig.app.singlePage.useCustomScraper) {
-      this.browser = await puppeteer.launch();
+      this.browser = await puppeteer.launch({
+
+      });
     } else {
       this.browser = 'disabled';
     }
@@ -1443,8 +1445,6 @@ export default class AbstractScraper {
       });
       return priceRes;
     }
-
-    return priceRes;
   }
 
   checkIsNumber(priceRes, pi) {
@@ -1601,7 +1601,7 @@ export default class AbstractScraper {
     let imagePath = `${this.eventImagesFolder}/${workerData.family}/${imageCrypto}`;
     const diCompressRes = await this.downloadImageCompress(event, image, imagePath);
     if (!diCompressRes) {
-      this.errors.push({
+      res.errors.push({
         remarks: `download compress ${event.title} ${image} fail`,
       });
       imagePath = '';
@@ -1619,9 +1619,12 @@ export default class AbstractScraper {
             res.pipe(fs.createWriteStream(filepath))
               .on('error', reject)
               .once('close', () => resolve(filepath));
+          } else if ((`${res.statusCode}`)[0] === '3') {
+           
+            resolve(`${fsDirections.publicLocationImages}/${workerData.family}-vol.webp`)
           } else {
             res.resume();
-            reject(new Error(`Request Failed With a Status Code: ${res.statusCode}`));
+            reject(new Error(`Request Failed With a Status Code: ${res.statusCode} see <a href='vscode://vscode-remote/wsl+Ubuntu-22.04/home/sjerp/dev/apache/concertagenda/backend/temp/error.log:1:1'>the log</a>`));
           }
         });
       } catch (error) {

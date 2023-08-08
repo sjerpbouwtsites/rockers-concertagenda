@@ -1,9 +1,51 @@
-export function mapToStart(event) {
-  return _mapToDateString(event, 'start', true);
+function arrayCheckAndOrToString(event, key, required = true) {
+  if (!event[key]) {
+    if (required) {
+      throw new Error(`${key} not on event`);
+    } else {
+      return false;
+    }
+  }
+  const src = event[key];
+  if (typeof src === 'string') {
+    return (`${src}`).trim();
+  }
+  if (Array.isArray(src) && typeof src[0] === 'string') {
+    return src[0].trim();
+  }
+
+  throw new Error(`geen array of string. typeof event.${key} ${typeof event[key]}`);
 }
 
-export function mapToDoor(event) {
-  return _mapToDateString(event, 'door', false);
+function isDate(date, str, required = true) {
+  if (/\d{4}-\d\d-\d\d/.test(date)) {
+    return true;
+  }
+  if (required) {
+    throw new Error(`${date} ${str} geen date`);
+  }
+}
+
+function isTime(time, str, required = true) {
+  if (/\d{1,2}\s?:\s?\d\d/.test(time)) {
+    return true;
+  }
+  if (required) {
+    throw new Error(`${time} ${str} geen tijd`);
+  }
+}
+
+function isISOString(date, str = '', required = true) {
+  try {
+    (new Date(date).toISOString());
+  } catch (error) {
+    if (required) {
+      throw new Error(`${date} ${str} geen isostring`);
+    } else {
+      return false;
+    }
+  }
+  return true;
 }
 
 function _mapToDateString(event, key, required) {
@@ -114,20 +156,22 @@ export function mapToStartDate(event, regexMode, months) {
     }
     const jaar = dateM[3].padStart(4, '20');
     const maandNaam = dateM[2];
-    const maandGetal = months[maandNaam];
+    const maandGetal = months[maandNaam.toLowerCase()];
     const dag = dateM[1].padStart(2, '0');
     const dateStr = `${jaar}-${maandGetal}-${dag}`;
     if (isDate(dateStr)) {
       event.startDate = dateStr;
     }
-  } else if (regexMode === 'dag-maandNummer-jaar') {
-    const dateM = event.mapToStartDate.match(/(\d{1,2})[\/\s]?(\d+)[\/\s]?(\d{2,4})/);
+  } else if (regexMode === 'maand-dag-jaar') {
+
+    const dateM = event.mapToStartDate.match(/(\w+)\s(\d\d)\s?,?\s?(\d\d\d\d)/im);
     if (Array.isArray(dateM) && dateM.length < 4) {
       throw new Error(`datematch fail op ${event.mapToStartDate}`);
     }
+    const maandNaam = dateM[1];
+    const maandGetal = months[maandNaam.toLowerCase()]
+    const dag = dateM[2].padStart(2, '0');
     const jaar = dateM[3].padStart(4, '20');
-    const maandGetal = dateM[2];
-    const dag = dateM[1].padStart(2, '0');
     const dateStr = `${jaar}-${maandGetal}-${dag}`;
     if (isDate(dateStr)) {
       event.startDate = dateStr;
@@ -172,58 +216,13 @@ function _combineTimeDate(event, destKey, required) {
   return event;
 }
 
-function arrayCheckAndOrToString(event, key, required = true) {
-  if (!event[key]) {
-    if (required) {
-      throw new Error(`${key} not on event`);
-    } else {
-      return false;
-    }
-  }
-  const src = event[key];
-  if (typeof src === 'string') {
-    return (`${src}`).trim();
-  }
-  if (Array.isArray(src) && typeof src[0] === 'string') {
-    return src[0].trim();
-  }
-
-  throw new Error(`geen array of string. typeof event.${key} ${typeof event[key]}`);
+export function mapToStart(event) {
+  return _mapToDateString(event, 'start', true);
 }
 
-function isDate(date, str, required = true) {
-  if (/\d{4}-\d\d-\d\d/.test(date)) {
-    return true;
-  }
-  if (required) {
-    throw new Error(`${date} ${str} geen date`);
-  } {
-    return false;
-  }
+export function mapToDoor(event) {
+  return _mapToDateString(event, 'door', false);
 }
 
-function isTime(time, str, required = true) {
-  if (/\d{1,2}\s?:\s?\d\d/.test(time)) {
-    return true;
-  }
-  if (required) {
-    throw new Error(`${time} ${str} geen tijd`);
-  } {
-    return false;
-  }
-}
-
-function isISOString(date, str = '', required = true) {
-  try {
-    (new Date(date).toISOString());
-  } catch (error) {
-    if (required) {
-      throw new Error(`${date} ${str} geen isostring`);
-    } else {
-      return false;
-    }
-  }
-  return true;
-}
 
 export default {};

@@ -116,15 +116,14 @@ export default class MonitorField {
     document.getElementById(this.mainFieldName).innerHTML = this.tableUpdatedHTML;
     document.querySelector(
       '#monitorfield-AppOverview .monitorfield__title',
-    ).innerHTML = `AppOverview - CPU vrij: ${
-      Math.round(this.data.CPUFree * 100) / 100
-    }%`;
+    ).innerHTML = `AppOverview - CPU vrij: ${Math.round(this.data.CPUFree * 100) / 100
+      }%`;
   }
 
   get rollUpdatedHTML() {
     const listItems = this.data
       .map((rollRow) => {
-        let t =          rollRow.messageData?.content?.text
+        let t = rollRow.messageData?.content?.text
           ?? rollRow.messageData?.content?.tekst
           ?? rollRow.messageData?.tekst
           ?? rollRow.messageData?.text
@@ -141,15 +140,14 @@ export default class MonitorField {
             )
             : String(
               rollRow.messageData?.content
-                    ?? rollRow.messageData.text
-                    ?? rollRow.messageData,
+              ?? rollRow.messageData.text
+              ?? rollRow.messageData,
             );
         }
 
         return `<li class='monitorfield__list-item'>
-        <span class='monitorfield__list-item-left'>${
-  rollRow.messageData?.workerName ?? rollRow.messageData?.title ?? ''
-}</span>
+        <span class='monitorfield__list-item-left'>${rollRow.messageData?.workerName ?? rollRow.messageData?.title ?? ''
+          }</span>
         <span class='monitorfield__list-item-right'>${t}</span>
       </li>`;
       })
@@ -160,68 +158,95 @@ export default class MonitorField {
 
   get errorUpdateHTML() {
     const errorsPerWorkerCounter = {};
-
+    console.log(this.data)
     const listItems = this.data
       .map((rollRow) => {
-        const titleText = `${rollRow.messageData?.title ?? ''}${
-          rollRow.messageData?.workerName ?? ''
-        }`;
+        try {
+          const titleText = `${rollRow.messageData?.title ?? ''}${rollRow.messageData?.workerName ?? ''
+            }`;
 
-        const bewerkteFoutTekst = rollRow.messageData.content.text
-          .split(/[\r\n]/)
-          .map((errorTextRow, index) => {
-            if (index < 1) return '';
-            if (errorTextRow.includes('node:internal')) return '';
-            let t = errorTextRow;
-            if (errorTextRow.includes('file://')) {
-              let volleFileNaam;
-              try {
-                volleFileNaam = errorTextRow.match(/(file.*)\)/)[1];
-              } catch (error) {
-                volleFileNaam = errorTextRow.match(/(file.*)/)[1];
-                console.error(new Error('SCHEIT'));
+    
+
+          const bewerkteFoutTekst = rollRow.messageData.content.text
+            .split(/[\r\n]/)
+            .filter(a => a)
+            .map((errorTextRow, index) => {
+              if (index < 1) return '';
+              if (errorTextRow.includes('node:internal')) return '';
+              let t = errorTextRow;
+              if (errorTextRow.includes('file://')) {
+                console.log(errorTextRow)
+                let volleFileNaam;
+                try {
+                  volleFileNaam = errorTextRow.match(/(file.*)\)/)[1];
+                } catch (error) {
+                  volleFileNaam = errorTextRow.match(/(file.*)/)[1];
+                  console.log(errorTextRow)
+                  console.error(new Error('SCHEIT'));
+                }
+
+                console.log(errorTextRow)
+
+                const fileLink = errorTextRow
+                  .split('concertagenda')[1]
+                  .replace(')', '');
+                const fileNaamIngekort = fileLink
+                  .split('backend')[1]
+                  .substring(1, fileLink.length - 1);
+                const fileLinkWSL = `vscode://vscode-remote/wsl+Ubuntu-22.04/home/sjerp/dev/apache/concertagenda${fileLink}`;
+                t = t.replace(
+                  volleFileNaam,
+                  `<a class='monitorfield__filelink' href='${fileLinkWSL}'>${fileNaamIngekort}</a>`,
+                );
+                t = t.replace(/[()]/g, '');
               }
 
-              const fileLink = errorTextRow
-                .split('dev/apache')[1]
-                .replace(')', '');
-              const fileNaamIngekort = fileLink
-                .split('backend')[1]
-                .substring(1, fileLink.length - 1);
-              const fileLinkWSL = `vscode://vscode-remote/wsl+Ubuntu/home/sjerp/dev/apache${fileLink}`;
-              t = t.replace(
-                volleFileNaam,
-                `<a class='monitorfield__filelink' href='${fileLinkWSL}'>${fileNaamIngekort}</a>`,
-              );
-              t = t.replace(/[()]/g, '');
-            }
+              t = t.replace(/\sError: /, '');
+              t = `<span class='monitorfield__error-line'>${t}</span>`;
+              return `${t}\r`;
+            })
+            .join('');
 
-            t = t.replace(/\sError: /, '');
-            t = `<span class='monitorfield__error-line'>${t}</span>`;
-            return `${t}\r`;
-          })
-          .join('');
-
-        const hoofdPrintTekst = ` 
+          const hoofdPrintTekst = ` 
           <div class='monitorfield__errortext'>${bewerkteFoutTekst}</div>
-        `;
+            `;
 
-        let currentErrorsForThisWorkerCount = 0;
-        if (!errorsPerWorkerCounter[errorsPerWorkerCounter]) {
-          errorsPerWorkerCounter[errorsPerWorkerCounter] = 0;
-        } else {
-          errorsPerWorkerCounter[errorsPerWorkerCounter] = errorsPerWorkerCounter[errorsPerWorkerCounter] + 1;
-          currentErrorsForThisWorkerCount = errorsPerWorkerCounter[errorsPerWorkerCounter];
-        }
+          let currentErrorsForThisWorkerCount = 0;
+          if (!errorsPerWorkerCounter[errorsPerWorkerCounter]) {
+            errorsPerWorkerCounter[errorsPerWorkerCounter] = 0;
+          } else {
+            errorsPerWorkerCounter[errorsPerWorkerCounter] = errorsPerWorkerCounter[errorsPerWorkerCounter] + 1;
+            currentErrorsForThisWorkerCount = errorsPerWorkerCounter[errorsPerWorkerCounter];
+          }
 
-        return `<li class='monitorfield__list-item' id='error-ref-${rollRow.messageData?.workerName}-${currentErrorsForThisWorkerCount}'>
+          return `<li class='monitorfield__list-item' id='error-ref-${rollRow.messageData?.workerName}-${currentErrorsForThisWorkerCount}'>
+            <header class='monitorfield__error-header'>
+              <span class='monitorfield__error-workername'>${titleText}</span>
+              <span class='monitorfield__error-remarks'>${rollRow.messageData.content.remarks}</span>
+            </header>
+            
+            <div class='monitorfield__list-item-right'>${hoofdPrintTekst}</div>
+          </li>`;
+        } catch (error) {
+
+          let currentErrorsForThisWorkerCount = 0;
+          if (!errorsPerWorkerCounter[errorsPerWorkerCounter]) {
+            errorsPerWorkerCounter[errorsPerWorkerCounter] = 0;
+          } else {
+            errorsPerWorkerCounter[errorsPerWorkerCounter] = errorsPerWorkerCounter[errorsPerWorkerCounter] + 1;
+            currentErrorsForThisWorkerCount = errorsPerWorkerCounter[errorsPerWorkerCounter];
+          }
+
+          return `<li class='monitorfield__list-item' id='error-ref-${rollRow.messageData?.workerName}-${currentErrorsForThisWorkerCount}'>
         <header class='monitorfield__error-header'>
-          <span class='monitorfield__error-workername'>${titleText}</span>
-          <span class='monitorfield__error-remarks'>${rollRow.messageData.content.remarks}</span>
+          <span class='monitorfield__error-workername'>niet standaard error</span>
+          <span class='monitorfield__error-remarks'>${rollRow?.messageData?.content?.remarks}</span>
         </header>
         
-        <div class='monitorfield__list-item-right'>${hoofdPrintTekst}</div>
+        <div class='monitorfield__list-item-right'>${rollRow.toString()}</div>
       </li>`;
+        }
+
       })
       .join('');
     return ` <ul class='monitorfield__list monitorfield__list--error'>${listItems}</ul>`;
@@ -230,13 +255,12 @@ export default class MonitorField {
   get expandedUpdatedHTML() {
     const listItems = this.data
       .map((rollRow) => {
-        const titleText = `${rollRow.messageData?.content?.title ?? rollRow.messageData?.title ?? ''}${
-          rollRow.messageData?.workerName ?? ''
-        }`;
+        const titleText = `${rollRow.messageData?.content?.title ?? rollRow.messageData?.title ?? ''}${rollRow.messageData?.workerName ?? ''
+          }`;
         delete rollRow.messageData?.content?.title;
         delete rollRow.messageData?.title;
 
-        const hoofdPrintTekst =          (rollRow.messageData?.content ?? rollRow.messageData)
+        const hoofdPrintTekst = (rollRow.messageData?.content ?? rollRow.messageData)
           instanceof Object
           ? this.objectNaarTekst(
             rollRow.messageData?.content ?? rollRow.messageData,
@@ -307,42 +331,41 @@ export default class MonitorField {
       <tr>
         <th>${workerFamilyNamesCharsets.join('<br>')}<span class='kutspacer'></span></th>
         ${sortedFamily
-    .map((worker) => {
-      let tdClass = 'worker-data-cell ';
-      tdClass += `worker-status--${worker.status}`;
-      tdClass
-              += ` worker-errors--${
-          worker.errors.length ? 'has-errors' : 'none'}`;
+            .map((worker) => {
+              let tdClass = 'worker-data-cell ';
+              tdClass += `worker-status--${worker.status}`;
+              tdClass
+                += ` worker-errors--${worker.errors.length ? 'has-errors' : 'none'}`;
 
-      const errorsHTML = !worker.errors.length
-        ? ''
-        : `<ol class='worker-cell-inner--errors'>
+              const errorsHTML = !worker.errors.length
+                ? ''
+                : `<ol class='worker-cell-inner--errors'>
               ${worker.errors
-    .map(
-      (error, index) => {
-        const errorLevel = error?.content?.errorLevel ?? 'notice';
-        const emoji = errorLevel === 'notice'
-          ? '🤦‍♂️'
-          : errorLevel === 'close-thread'
-            ? '🫣'
-            : errorLevel === 'close-app'
-              ? '💥'
-              : '❓';
+                  .map(
+                    (error, index) => {
+                      const errorLevel = error?.content?.errorLevel ?? 'notice';
+                      const emoji = errorLevel === 'notice'
+                        ? '🤦‍♂️'
+                        : errorLevel === 'close-thread'
+                          ? '🫣'
+                          : errorLevel === 'close-app'
+                            ? '💥'
+                            : '❓';
 
-        return `<li class='worker-cell-inner-error-item worker-cell-inner-error-item--${errorLevel}'><a class='error-link error-link--${errorLevel}' href='#error-ref-${worker.name}-${index}'>${emoji}</a></li>`;
-      },
-    )
-    .join('')}
+                      return `<li class='worker-cell-inner-error-item worker-cell-inner-error-item--${errorLevel}'><a class='error-link error-link--${errorLevel}' href='#error-ref-${worker.name}-${index}'>${emoji}</a></li>`;
+                    },
+                  )
+                  .join('')}
             </ol>`;
-      const statusHTML = `<td class='${tdClass}' title='${worker.workerNamedIndex}'>`;
-      const numberHTML = Object.prototype.hasOwnProperty.call(this.data, `amountOfEvents-${worker.name}`)
-        ? `<span class='worker-cell-inner worker-cell-inner--done'>${this.data[`amountOfEvents-${worker.name}`]}</span>`
-        : `<span class='worker-cell-inner worker-cell-inner--todo'>${worker.todo}</span>`;
+              const statusHTML = `<td class='${tdClass}' title='${worker.workerNamedIndex}'>`;
+              const numberHTML = Object.prototype.hasOwnProperty.call(this.data, `amountOfEvents-${worker.name}`)
+                ? `<span class='worker-cell-inner worker-cell-inner--done'>${this.data[`amountOfEvents-${worker.name}`]}</span>`
+                : `<span class='worker-cell-inner worker-cell-inner--todo'>${worker.todo}</span>`;
 
-      return `${statusHTML + numberHTML + errorsHTML}</td>`;
-      // TODO vscode link naar JSON bestand in event-lists
-    })
-    .join('')}
+              return `${statusHTML + numberHTML + errorsHTML}</td>`;
+              // TODO vscode link naar JSON bestand in event-lists
+            })
+            .join('')}
       </tr>
       `;
       })

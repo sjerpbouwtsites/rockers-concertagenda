@@ -100,25 +100,3 @@ export default function getVenueMonths(venueName) {
   }
   return podiumGebruikt[venueName];
 }
-
-export const baroegMonths = voluitNederlands;
-export const occiiMonths = voluitEngels;
-
-export const dynamoMonths = kortNederlands;
-
-export const afasliveMonths = baroegMonths;
-export const bibelotMonths = baroegMonths;
-export const dbsMonths = baroegMonths;
-export const depulMonths = dynamoMonths;
-export const doornRoosjeMonths = baroegMonths;
-export const cpuntMonths = dynamoMonths;
-export const effenaarMonths = dynamoMonths;
-export const gebrdenobelMonths = baroegMonths;
-export const idunaMonths = baroegMonths;
-export const kavkaMonths = dynamoMonths;
-export const metalfanMonths = dynamoMonths;
-export const metropoolMonths = dynamoMonths;
-export const neushoornMonths = baroegMonths;
-export const paradisoMonths = baroegMonths;
-export const patronaatMonths = dynamoMonths;
-export const voltMonths = dynamoMonths;

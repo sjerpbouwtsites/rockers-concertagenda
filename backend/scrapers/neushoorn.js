@@ -1,7 +1,6 @@
 import { workerData } from 'worker_threads';
 import * as _t from '../mods/tools.js';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
-import { neushoornMonths } from '../mods/months.js';
 import makeScraperConfig from './gedeeld/scraper-config.js';
 
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
@@ -184,7 +183,7 @@ neushoornScraper.singlePage = async function ({ page, event }) {
 
       return res;
     },
-    { months: neushoornMonths, event },
+    { months: this.months, event },
   );
 
   const imageRes = await this.getImage({

@@ -1,282 +1,6 @@
 [
   {
     "door": null,
-    "start": "2023-08-02T17:30:00Z",
-    "end": null,
-    "venueEventUrl": "https://www.ticketmaster.nl/event/descendents-tickets/292025?language=en-us",
-    "title": "Descendents",
-    "location": "melkweg",
-    "price": null,
-    "longText": null,
-    "image": "https://s1.ticketm.net/dam/a/3ac/1594c4ba-9fa5-49ae-9b9e-9921d994b3ac_1447891_RETINA_PORTRAIT_3_2.jpg",
-    "soldOut": null,
-    "unavailable": " locatie melkweg niet bij TM.",
-    "corrupted": "single: <span class='corrupted-prop'>price: null</span>",
-    "name": "Descendents",
-    "type": "event",
-    "id": "Z698xZbpZ1713ZP",
-    "test": false,
-    "url": "https://www.ticketmaster.nl/event/descendents-tickets/292025?language=en-us",
-    "locale": "en-us",
-    "sales": {
-      "public": {
-        "startDateTime": "2023-03-31T09:00:00Z",
-        "startTBD": false,
-        "startTBA": false,
-        "endDateTime": "2024-01-28T05:00:00Z"
-      }
-    },
-    "dates": {
-      "start": {
-        "localDate": "2023-08-02",
-        "localTime": "19:30:00",
-        "dateTime": "2023-08-02T17:30:00Z",
-        "dateTBD": false,
-        "dateTBA": false,
-        "timeTBA": false,
-        "noSpecificTime": false
-      },
-      "timezone": "Europe/Amsterdam",
-      "status": {
-        "code": "cancelled"
-      },
-      "spanMultipleDays": false
-    },
-    "classifications": [
-      {
-        "primary": true,
-        "segment": {
-          "id": "KZFzniwnSyZfZ7v7nJ",
-          "name": "Music"
-        },
-        "genre": {
-          "id": "KnvZfZ7vAvl",
-          "name": "Other"
-        },
-        "subGenre": {
-          "id": "KZazBEonSMnZfZ7vk1I",
-          "name": "Other"
-        },
-        "family": false
-      }
-    ],
-    "promoter": {
-      "id": "1189",
-      "name": "Melkweg"
-    },
-    "promoters": [
-      {
-        "id": "1189",
-        "name": "Melkweg"
-      }
-    ],
-    "priceRanges": [
-      {
-        "type": "standard",
-        "currency": "EUR",
-        "min": 27,
-        "max": 27
-      },
-      {
-        "type": "standard including fees",
-        "currency": "EUR",
-        "min": 31.05,
-        "max": 31.05
-      }
-    ],
-    "_links": {
-      "self": {
-        "href": "/discovery/v2/events/Z698xZbpZ1713ZP?locale=en-us"
-      },
-      "attractions": [
-        {
-          "href": "/discovery/v2/attractions/K8vZ917CiX0?locale=en-us"
-        }
-      ],
-      "venues": [
-        {
-          "href": "/discovery/v2/venues/Z598xZbpZd6ak?locale=en-us"
-        }
-      ]
-    },
-    "_embedded": {
-      "venues": [
-        {
-          "type": "venue",
-          "id": "Z598xZbpZd6ak",
-          "test": false,
-          "url": "https://www.ticketmaster.nl/venue/melkweg-amsterdam-tickets/melkweg/110",
-          "locale": "en-us",
-          "images": [
-            {
-              "ratio": "16_9",
-              "url": "https://media.ticketmaster.eu/netherlands/20adf24702e87f6263b0020cb434b3a3.png",
-              "width": 205,
-              "height": 115,
-              "fallback": false
-            }
-          ],
-          "postalCode": "1017 PH",
-          "timezone": "Europe/Amsterdam",
-          "city": {
-            "name": "Amsterdam"
-          },
-          "country": {
-            "name": "Netherlands",
-            "countryCode": "NL"
-          },
-          "address": {
-            "line1": "Lijnbaansgracht 234 A"
-          },
-          "location": {
-            "longitude": "4.88127",
-            "latitude": "52.36483"
-          },
-          "upcomingEvents": {
-            "mfx-nl": 253,
-            "_total": 253,
-            "_filtered": 0
-          },
-          "_links": {
-            "self": {
-              "href": "/discovery/v2/venues/Z598xZbpZd6ak?locale=en-us"
-            }
-          }
-        }
-      ],
-      "attractions": [
-        {
-          "name": "Descendents",
-          "type": "attraction",
-          "id": "K8vZ917CiX0",
-          "test": false,
-          "url": "https://www.ticketmaster.com/descendents-tickets/artist/734910",
-          "locale": "en-us",
-          "classifications": [
-            {
-              "primary": true,
-              "segment": {
-                "id": "KZFzniwnSyZfZ7v7nJ",
-                "name": "Music"
-              },
-              "genre": {
-                "id": "KnvZfZ7vAeA",
-                "name": "Rock"
-              },
-              "subGenre": {
-                "id": "KZazBEonSMnZfZ7v6a6",
-                "name": "Punk"
-              },
-              "type": {
-                "id": "KZAyXgnZfZ7v7l1",
-                "name": "Group"
-              },
-              "subType": {
-                "id": "KZFzBErXgnZfZ7vA71",
-                "name": "Band"
-              },
-              "family": false
-            }
-          ],
-          "_links": {
-            "self": {
-              "href": "/discovery/v2/attractions/K8vZ917CiX0?locale=en-us"
-            }
-          },
-          "image": "https://s1.ticketm.net/dam/a/3ac/1594c4ba-9fa5-49ae-9b9e-9921d994b3ac_1447891_RETINA_PORTRAIT_3_2.jpg"
-        }
-      ]
-    },
-    "pageInfo": "<a class='page-info' href='https://www.ticketmaster.nl/event/descendents-tickets/292025?language=en-us'>TM Descendents</a>",
-    "errors": [],
-    "attractions": [
-      {
-        "name": "Descendents",
-        "type": "attraction",
-        "id": "K8vZ917CiX0",
-        "test": false,
-        "url": "https://www.ticketmaster.com/descendents-tickets/artist/734910",
-        "locale": "en-us",
-        "classifications": [
-          {
-            "primary": true,
-            "segment": {
-              "id": "KZFzniwnSyZfZ7v7nJ",
-              "name": "Music"
-            },
-            "genre": {
-              "id": "KnvZfZ7vAeA",
-              "name": "Rock"
-            },
-            "subGenre": {
-              "id": "KZazBEonSMnZfZ7v6a6",
-              "name": "Punk"
-            },
-            "type": {
-              "id": "KZAyXgnZfZ7v7l1",
-              "name": "Group"
-            },
-            "subType": {
-              "id": "KZFzBErXgnZfZ7vA71",
-              "name": "Band"
-            },
-            "family": false
-          }
-        ],
-        "_links": {
-          "self": {
-            "href": "/discovery/v2/attractions/K8vZ917CiX0?locale=en-us"
-          }
-        },
-        "image": "https://s1.ticketm.net/dam/a/3ac/1594c4ba-9fa5-49ae-9b9e-9921d994b3ac_1447891_RETINA_PORTRAIT_3_2.jpg"
-      }
-    ],
-    "venue": {
-      "type": "venue",
-      "id": "Z598xZbpZd6ak",
-      "test": false,
-      "url": "https://www.ticketmaster.nl/venue/melkweg-amsterdam-tickets/melkweg/110",
-      "locale": "en-us",
-      "images": [
-        {
-          "ratio": "16_9",
-          "url": "https://media.ticketmaster.eu/netherlands/20adf24702e87f6263b0020cb434b3a3.png",
-          "width": 205,
-          "height": 115,
-          "fallback": false
-        }
-      ],
-      "postalCode": "1017 PH",
-      "timezone": "Europe/Amsterdam",
-      "city": {
-        "name": "Amsterdam"
-      },
-      "country": {
-        "name": "Netherlands",
-        "countryCode": "NL"
-      },
-      "address": {
-        "line1": "Lijnbaansgracht 234 A"
-      },
-      "location": {
-        "longitude": "4.88127",
-        "latitude": "52.36483"
-      },
-      "upcomingEvents": {
-        "mfx-nl": 253,
-        "_total": 253,
-        "_filtered": 0
-      },
-      "_links": {
-        "self": {
-          "href": "/discovery/v2/venues/Z598xZbpZd6ak?locale=en-us"
-        }
-      }
-    },
-    "origin": "ticketmaster"
-  },
-  {
-    "door": null,
     "start": "2023-08-13T16:30:00Z",
     "end": null,
     "venueEventUrl": "https://www.ticketmaster.nl/event/heaven-shall-burn-tickets/291715?language=en-us",
@@ -415,8 +139,8 @@
             "latitude": "52.36483"
           },
           "upcomingEvents": {
-            "mfx-nl": 253,
-            "_total": 253,
+            "mfx-nl": 240,
+            "_total": 240,
             "_filtered": 0
           },
           "_links": {
@@ -705,8 +429,8 @@
         "latitude": "52.36483"
       },
       "upcomingEvents": {
-        "mfx-nl": 253,
-        "_total": 253,
+        "mfx-nl": 240,
+        "_total": 240,
         "_filtered": 0
       },
       "_links": {
@@ -726,7 +450,7 @@
     "location": "ijssportcentrum",
     "price": 89,
     "longText": null,
-    "image": "../public/event-images/ijssportcentrum/98469592-c410-44e4-b30c-aa4ee000014e",
+    "image": "../public/event-images/ijssportcentrum/ad874dcd-9770-4b55-9d22-5ba34088ee41",
     "soldOut": null,
     "unavailable": " double event",
     "corrupted": null,
@@ -984,7 +708,7 @@
     "location": "ijssportcentrum",
     "price": 89,
     "longText": null,
-    "image": "../public/event-images/ijssportcentrum/ab82c403-7d9c-4c18-9eb1-5b99ca3ddbea",
+    "image": "../public/event-images/ijssportcentrum/bf640da0-7403-4f6b-a8af-d61682961974",
     "soldOut": null,
     "unavailable": " double event",
     "corrupted": null,

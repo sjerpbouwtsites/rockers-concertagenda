@@ -1,7 +1,7 @@
 import { workerData } from 'worker_threads';
-import getVenueMonths from '../mods/months.js';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import makeScraperConfig from './gedeeld/scraper-config.js';
+import { mapToStartDate, mapToStartTime } from './gedeeld/datums.js';
 
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const occiiScraper = new AbstractScraper(makeScraperConfig({
@@ -125,54 +125,25 @@ occiiScraper.mainPage = async function () {
 occiiScraper.singlePage = async function ({ page, event }) {
   const { stopFunctie } =  await this.singlePageStart();
 
-  const pageInfo = await page.evaluate(({ months, event }) => {
+  let pageInfo = await page.evaluate(({ months, event }) => {
     const res = {
       pageInfo: `<a class='page-info' href='${location.href}'>${event.title}</a>`,
       errors: [],
     };
 
-    const eventCategoriesEl = document.querySelector('.occii-event-details');
-    try {
-      const eventDateEl = document.querySelector('.occii-event-date-highlight');
-      const eventDateSplit1 = eventDateEl.textContent.trim().split(',');
-      const eventYear = eventDateSplit1[2].trim();
-      const eventDateSplit2 = eventDateSplit1[1].trim().split(' ');
-      const eventMonthEnglish = eventDateSplit2[0].trim();
-      const eventDay = eventDateSplit2[1].trim();
-      const eventMonth = months[eventMonthEnglish.toLowerCase()];
-      const eventDateString = `${eventYear}-${eventMonth}-${eventDay}`;
-      const doorsOpenMatch = eventCategoriesEl.textContent.match(
-        /Doors\sopen:\s+(\d\d:\d\d)/,
-      );
-      const doorsOpen =        doorsOpenMatch && doorsOpenMatch.length > 1 ? doorsOpenMatch[1] : null;
-
-      res.door = doorsOpen
-        ? `${eventDateString}T${doorsOpen}`
-        : `${eventDateString}T00:00:00`;
-
-      const showtimeMatch = eventCategoriesEl.textContent.match(
-        /Showtime:\s+(\d\d:\d\d)/,
-      );
-      const showtime =        showtimeMatch && showtimeMatch.length > 1 ? doorsOpenMatch[1] : null;
-
-      res.start = showtime
-        ? `${eventDateString}T${showtime}`
-        : `${eventDateString}T00:00:00`;
-    } catch (caughtError) {
-      res.errors.push({
-        error: caughtError,
-        remarks: `date time wrap trycatch drama ${res.pageInfo}`,
-        toDebug: {
-          event,
-        },
-      });
-      return res;
-    }
+    res.mapToStartDate = document.querySelector('.occii-event-date-highlight').textContent.split(' ').splice(1, 4).join(' ');
+    res.mapToStartTime = document.querySelector('.occii-event-details').textContent;
+    
 
     res.genre = Array.from(document.querySelectorAll('.event-categories [href*="events/categories"]')).map((cats) => cats.textContent.toLowerCase().trim());
 
     return res;
-  }, { months: getVenueMonths('occii'), event }); // TODO is verouderde functie getVenueMonths
+  }, { months: this.month, event });
+
+  pageInfo = mapToStartDate(pageInfo, 'maand-dag-jaar', this.months);
+  pageInfo = mapToStartTime(pageInfo);
+  pageInfo.start = pageInfo.startDate + 'T' + pageInfo.startTime
+
 
   const imageRes = await this.getImage({
     page, event, pageInfo, selectors: ['.wp-post-image'], mode: 'image-src',

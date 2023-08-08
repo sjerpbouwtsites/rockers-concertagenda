@@ -1,21 +1,6 @@
 [
   {
     "door": null,
-    "start": "2023-08-04",
-    "end": null,
-    "venueEventUrl": null,
-    "title": "Rammstein",
-    "location": "koningboudewijnstadion",
-    "price": null,
-    "shortText": "Koning Boudewijnstadion, Brussel (België)",
-    "longText": null,
-    "image": "../public/location-images/koningboudewijnstadion",
-    "soldOut": null,
-    "unavailable": null,
-    "corrupted": null
-  },
-  {
-    "door": null,
     "start": "2023-08-08",
     "end": null,
     "venueEventUrl": null,
@@ -670,6 +655,36 @@
     "shortText": "Gebouw-T, Bergen Op Zoom",
     "longText": null,
     "image": "../public/location-images/gebouwt",
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null
+  },
+  {
+    "door": null,
+    "start": "2024-06-07",
+    "end": null,
+    "venueEventUrl": null,
+    "title": "Into The Grave festival",
+    "location": "oldehoofsterkerkhof",
+    "price": null,
+    "shortText": "Oldehoofsterkerkhof, Leeuwarden",
+    "longText": null,
+    "image": "../public/location-images/oldehoofsterkerkhof",
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null
+  },
+  {
+    "door": null,
+    "start": "2024-07-31",
+    "end": null,
+    "venueEventUrl": null,
+    "title": "Wacken Open Air",
+    "location": "wackenduitslandmetscorpions",
+    "price": null,
+    "shortText": "\nMet Scorpions, Amon Amarth, In Extremo e.v.a.",
+    "longText": null,
+    "image": "../public/location-images/wackenduitslandmetscorpions",
     "soldOut": null,
     "unavailable": null,
     "corrupted": null
