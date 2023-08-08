@@ -1,22 +1,27 @@
 /**
  * Wrapper om alle errors heen.
  *
- * @property {*} workerData 
+ * @property {*} workerData
  * @property {string|null} remarks opmerkingen
- * @property {notice|close-thread|close-app|null} errorLevel 
+ * @property {notice|close-thread|close-app|null} errorLevel
  * @property {*|null} toDebug key title wordt hier uit in de titel gezet
  */
 export default class ErrorWrapper {
   remarks = null;
+
   errorLevel = null;
+
   workerData = null;
+
   error = null;
-  toDebug = null;  
-  constructor(instantiationData){
-    this.create(instantiationData)
+
+  toDebug = null;
+
+  constructor(instantiationData) {
+    this.create(instantiationData);
   }
 
-  isValid(){
+  isValid() {
     return true;
   }
   // isValid(){
@@ -26,76 +31,80 @@ export default class ErrorWrapper {
   //   // && ErrorWrapper.toDebugValid(this.toDebug)
   // }
 
-  create({error, workerData, remarks, errorLevel, toDebug}){
+  create({
+    error, workerData, remarks, errorLevel, toDebug,
+  }) {
     this.setError(error);
     this.setWorkerData(workerData);
-    this.setRemarks(remarks)
+    this.setRemarks(remarks);
     this.setErrorLevel(errorLevel);
-    this.setToDebug(toDebug)
+    this.setToDebug(toDebug);
   }
 
-  static workerDataValid(value){
+  static workerDataValid(value) {
     const hasIndex = Object.prototype.hasOwnProperty.call(value, 'index');
     const hasFamily = Object.prototype.hasOwnProperty.call(value, 'family');
-    const hasName = Object.prototype.hasOwnProperty.call(value, 'name');    
+    const hasName = Object.prototype.hasOwnProperty.call(value, 'name');
     if (!hasIndex || !hasFamily || !hasName) {
-      throw new Error(`invalid workerData object. Type ${typeof value}`)
-    } 
+      throw new Error(`invalid workerData object. Type ${typeof value}`);
+    }
     return true;
   }
-  setWorkerData(value){
-    if(!value) return // wordt in base event en singlePage in abstract scraper gedaan.
+
+  setWorkerData(value) {
+    if (!value) return; // wordt in base event en singlePage in abstract scraper gedaan.
     if (ErrorWrapper.workerDataValid(value)) {
       this.workerData = value;
-    } 
-  }  
-
-  static errorValid(value){
-    if (value instanceof Error){
-      return true;
-    } 
-    throw new Error(`typeerror error\nType ${typeof value}\nerror value ${JSON.stringify(value)}`)
+    }
   }
-  setError(error){
-    if (ErrorWrapper.errorValid(error)){
+
+  static errorValid(value) {
+    if (value instanceof Error) {
+      return true;
+    }
+    throw new Error(`typeerror error\nType ${typeof value}\nerror value ${JSON.stringify(value)}`);
+  }
+
+  setError(error) {
+    if (ErrorWrapper.errorValid(error)) {
       this.error = error;
     }
   }
 
-
-  static remarksValid(value){
-    if (typeof value !== 'string'){
-      throw new Error(`typeerror remarks. Type ${typeof value}`)
-    } 
+  static remarksValid(value) {
+    if (typeof value !== 'string') {
+      throw new Error(`typeerror remarks. Type ${typeof value}`);
+    }
     return true;
   }
-  setRemarks(value = ''){
+
+  setRemarks(value = '') {
     if (ErrorWrapper.remarksValid(value)) {
       this.remarks = value;
-    } 
+    }
   }
 
-
-  static errorLevelValid(value){
-    if (!['notice', 'close-thread', 'close-app'].includes(value)){
-      throw new Error(`Unknown errorLevel ${value}`)
+  static errorLevelValid(value) {
+    if (!['notice', 'close-thread', 'close-app'].includes(value)) {
+      throw new Error(`Unknown errorLevel ${value}`);
     }
     return true;
   }
+
   setErrorLevel(value = 'notice') {
     if (ErrorWrapper.errorLevelValid(value)) {
-      this.errorLevel = value
+      this.errorLevel = value;
     }
   }
 
-
-  static toDebugValid(){
+  static toDebugValid() {
     return true;
   }
-  setToDebug(value = null){
+
+  setToDebug(value = null) {
     if (!value) return;
-    if (ErrorWrapper.toDebugValid(value)){
-      this.toDebug = value;        
+    if (ErrorWrapper.toDebugValid(value)) {
+      this.toDebug = value;
     }
   }
 }

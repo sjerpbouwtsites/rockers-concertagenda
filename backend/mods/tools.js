@@ -1,25 +1,22 @@
-import { parentPort, isMainThread } from "worker_threads";
-import fs from "fs";
-import fsDirections from "./fs-directions.js";
-import { WorkerMessage } from "./rock-worker.js";
-import passMessageToMonitor from "../monitor/pass-message-to-monitor.js";
+import { parentPort, isMainThread } from 'worker_threads';
+import fs from 'fs';
+import fsDirections from './fs-directions.js';
+import { WorkerMessage } from './rock-worker.js';
+import passMessageToMonitor from '../monitor/pass-message-to-monitor.js';
 
-export function wrappedHandleError(errorWrapperInst){
-
-  if (errorWrapperInst.isValid()){
+export function wrappedHandleError(errorWrapperInst) {
+  if (errorWrapperInst.isValid()) {
     handleError(
-      errorWrapperInst?.error, 
+      errorWrapperInst?.error,
       errorWrapperInst?.workerData,
       errorWrapperInst?.remarks,
       errorWrapperInst?.errorLevel,
-      errorWrapperInst?.toDebug
-    )
+      errorWrapperInst?.toDebug,
+    );
     return;
   }
 
-  throw Error('geen wrapped error!!')
-
-  
+  throw Error('geen wrapped error!!');
 }
 
 /**
@@ -33,30 +30,29 @@ export function wrappedHandleError(errorWrapperInst){
  * @param {*} toDebug gaat naar debugger.
  */
 export function handleError(error, workerData, remarks = null, errorLevel = 'notify', toDebug = null) {
-
   // TODO link errors aan debugger
-  const updateErrorMsg = WorkerMessage.quick("update", "error", {
+  const updateErrorMsg = WorkerMessage.quick('update', 'error', {
     content: {
-      workerData: workerData,
-      remarks: remarks,
-      status: "error",
+      workerData,
+      remarks,
+      status: 'error',
       errorLevel,
       text: `${error?.message}\n${error?.stack}\nlevel:${errorLevel}`,
     },
   });
-  const clientsLogMsg = WorkerMessage.quick("clients-log", "error", {
+  const clientsLogMsg = WorkerMessage.quick('clients-log', 'error', {
     error,
     workerData,
   });
-  let debuggerMsg
+  let debuggerMsg;
   if (toDebug) {
     debuggerMsg = WorkerMessage.quick('update', 'debugger', {
       remarks,
       content: {
-        workerData: workerData,
+        workerData,
         debug: toDebug,
-      },    
-    })
+      },
+    });
   }
   if (isMainThread) {
     passMessageToMonitor(updateErrorMsg, workerData.name);
@@ -68,7 +64,7 @@ export function handleError(error, workerData, remarks = null, errorLevel = 'not
     toDebug && parentPort.postMessage(debuggerMsg);
   }
   const time = new Date();
-  const curErrorLog = fs.readFileSync(fsDirections.errorLog) || "";
+  const curErrorLog = fs.readFileSync(fsDirections.errorLog) || '';
   const newErrorLog = `
   ${workerData?.name} Error - ${time.toLocaleTimeString()}
   ${error.stack} 
@@ -76,15 +72,14 @@ export function handleError(error, workerData, remarks = null, errorLevel = 'not
   
   ${curErrorLog}`;
 
-  fs.writeFileSync(fsDirections.errorLog, newErrorLog, "utf-8");
+  fs.writeFileSync(fsDirections.errorLog, newErrorLog, 'utf-8');
 }
-
 
 export function failurePromiseAfter(time) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       reject({
-        status: "failure",
+        status: 'failure',
         data: null,
       });
     }, time);
@@ -93,16 +88,16 @@ export function failurePromiseAfter(time) {
 
 export function getShellArguments() {
   const shellArguments = {};
-  process.argv.forEach(function (val, index) {
+  process.argv.forEach((val, index) => {
     if (index < 2) {
       return;
     }
-    if (!val.includes("=")) {
+    if (!val.includes('=')) {
       throw new Error(
-        `Invalid shell arguments passed to node. Please use foo=bar bat=gee.`
+        'Invalid shell arguments passed to node. Please use foo=bar bat=gee.',
       );
     }
-    const [argName, argValue] = val.split("=");
+    const [argName, argValue] = val.split('=');
     shellArguments[argName] = argValue;
   });
 
@@ -118,10 +113,10 @@ export function getShellArguments() {
 export async function autoScroll(page) {
   await page.evaluate(async () => {
     await new Promise((resolve) => {
-      var totalHeight = 0;
-      var distance = 500;
+      let totalHeight = 0;
+      const distance = 500;
       var timer = setInterval(() => {
-        var scrollHeight = document.body.scrollHeight;
+        const { scrollHeight } = document.body;
         window.scrollBy(0, distance);
         totalHeight += distance;
 
@@ -137,32 +132,29 @@ export async function autoScroll(page) {
 export function errorAfterSeconds(time = 10000) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      reject(new Error("REJECTED AFTER " + time));
+      reject(new Error(`REJECTED AFTER ${time}`));
     }, time);
   });
 }
 
-
-export function textContainsForbiddenMusicTerms(text){
-  return text.includes("pop") ||
-  text.includes("indierock") ||
-  text.includes("indiepop") ||
-  text.includes("shoegaze") ||
-  text.includes("swingende soul") ||
-  text.includes("indie-pop") 
+export function textContainsForbiddenMusicTerms(text) {
+  return text.includes('pop')
+  || text.includes('indierock')
+  || text.includes('indiepop')
+  || text.includes('shoegaze')
+  || text.includes('swingende soul')
+  || text.includes('indie-pop');
 }
 
-export function textContainsHeavyMusicTerms(text){
-  return text.includes("metal") ||
-  text.includes("punk") ||
-  text.includes("noise") ||
-  text.includes("doom") ||
-  text.includes("hardcore") ||
-  text.includes("ska") ||
-  text.includes("industrial");  
+export function textContainsHeavyMusicTerms(text) {
+  return text.includes('metal')
+  || text.includes('punk')
+  || text.includes('noise')
+  || text.includes('doom')
+  || text.includes('hardcore')
+  || text.includes('ska')
+  || text.includes('industrial');
 }
-
-
 
 const def = {
   handleError,
@@ -177,6 +169,6 @@ export async function waitTime(wait = 500) {
   });
 }
 
-export function killWhitespaceExcess(text = ''){
-  return text.replace(/\t{2,100}/g, "").replace(/\n{2,100}/g, "\n").replace(/\s{2,100}/g, " ").trim(); 
+export function killWhitespaceExcess(text = '') {
+  return text.replace(/\t{2,100}/g, '').replace(/\n{2,100}/g, '\n').replace(/\s{2,100}/g, ' ').trim();
 }

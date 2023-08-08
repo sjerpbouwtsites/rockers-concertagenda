@@ -1,14 +1,13 @@
-
 :root {
   --green: #b3ff4d;
   --pink: #f325e6;
   --anthracite: #0f110e;
-  --allmost-black:#0a0707;
-  --allmost-black-2:#0f110e;
+  --allmost-black: #0a0707;
+  --allmost-black-2: #0f110e;
   --red: rgba(222, 46, 15, 0.881);
   --blue: #2528f3;
 }
- 
+
 .green-color {
   color: var(--green);
 }

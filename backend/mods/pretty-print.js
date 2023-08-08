@@ -1,4 +1,4 @@
-var seen = [];
+const seen = [];
 /**
  * Check if a value is an object or a function. Keep in mind that array, function, regexp, etc, are objects in JavaScript.
  *
@@ -6,7 +6,7 @@ var seen = [];
  * @return true if the value is an object or a function
  */
 function isObj(value) {
-  var type = typeof value;
+  const type = typeof value;
   return value !== null && (type === 'object' || type === 'function');
 }
 /**
@@ -21,13 +21,9 @@ function isRegexp(value) {
 
 function __spreadArrays() {
   for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
-  for (var r = Array(s), k = 0, i = 0; i < il; i++)
-    for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
-      r[k] = a[j];
+  for (var r = Array(s), k = 0, i = 0; i < il; i++) for (let a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++) r[k] = a[j];
   return r;
 }
-
-
 
 /**
  * Get an array of all of the enumerable symbols for an object.
@@ -35,7 +31,7 @@ function __spreadArrays() {
  * @param object the object to get the enumerable symbols for
  */
 function getOwnEnumPropSymbols(object) {
-  return Object.getOwnPropertySymbols(object).filter(function (keySymbol) { return Object.prototype.propertyIsEnumerable.call(object, keySymbol); });
+  return Object.getOwnPropertySymbols(object).filter((keySymbol) => Object.prototype.propertyIsEnumerable.call(object, keySymbol));
 }
 /**
  * pretty print an object
@@ -47,54 +43,53 @@ function getOwnEnumPropSymbols(object) {
 function prettyPrint(input, options, pad) {
   if (pad === void 0) { pad = ''; }
   // sensible option defaults
-  var defaultOptions = {
+  const defaultOptions = {
     indent: '\t',
-    singleQuotes: true
+    singleQuotes: true,
   };
-  var combinedOptions = Object.assign(defaultOptions, options);
-  var tokens;
+  const combinedOptions = Object.assign(defaultOptions, options);
+  let tokens;
   if (combinedOptions.inlineCharacterLimit === undefined) {
     tokens = {
       newLine: '\n',
       newLineOrSpace: '\n',
-      pad: pad,
-      indent: pad + combinedOptions.indent
+      pad,
+      indent: pad + combinedOptions.indent,
     };
-  }
-  else {
+  } else {
     tokens = {
       newLine: '@@__PRETTY_PRINT_NEW_LINE__@@',
       newLineOrSpace: '@@__PRETTY_PRINT_NEW_LINE_OR_SPACE__@@',
       pad: '@@__PRETTY_PRINT_PAD__@@',
-      indent: '@@__PRETTY_PRINT_INDENT__@@'
+      indent: '@@__PRETTY_PRINT_INDENT__@@',
     };
   }
-  var expandWhiteSpace = function (string) {
+  const expandWhiteSpace = function (string) {
     if (combinedOptions.inlineCharacterLimit === undefined) {
       return string;
     }
-    var oneLined = string
+    const oneLined = string
       .replace(new RegExp(tokens.newLine, 'g'), '')
       .replace(new RegExp(tokens.newLineOrSpace, 'g'), ' ')
-      .replace(new RegExp(tokens.pad + '|' + tokens.indent, 'g'), '');
+      .replace(new RegExp(`${tokens.pad}|${tokens.indent}`, 'g'), '');
     if (oneLined.length <= combinedOptions.inlineCharacterLimit) {
       return oneLined;
     }
     return string
-      .replace(new RegExp(tokens.newLine + '|' + tokens.newLineOrSpace, 'g'), '\n')
+      .replace(new RegExp(`${tokens.newLine}|${tokens.newLineOrSpace}`, 'g'), '\n')
       .replace(new RegExp(tokens.pad, 'g'), pad)
       .replace(new RegExp(tokens.indent, 'g'), pad + combinedOptions.indent);
   };
   if (seen.indexOf(input) !== -1) {
     return '"[Circular]"';
   }
-  if (input === null ||
-        input === undefined ||
-        typeof input === 'number' ||
-        typeof input === 'boolean' ||
-        typeof input === 'function' ||
-        typeof input === 'symbol' ||
-        isRegexp(input)) {
+  if (input === null
+        || input === undefined
+        || typeof input === 'number'
+        || typeof input === 'boolean'
+        || typeof input === 'function'
+        || typeof input === 'symbol'
+        || isRegexp(input)) {
     return String(input);
   }
   if (input instanceof Date) {
@@ -105,46 +100,46 @@ function prettyPrint(input, options, pad) {
       return '[]';
     }
     seen.push(input);
-    var ret = '[' + tokens.newLine + input.map(function (el, i) {
-      var eol = input.length - 1 === i ? tokens.newLine : ',' + tokens.newLineOrSpace;
-      var value = prettyPrint(el, combinedOptions, pad + combinedOptions.indent);
+    var ret = `[${tokens.newLine}${input.map((el, i) => {
+      const eol = input.length - 1 === i ? tokens.newLine : `,${tokens.newLineOrSpace}`;
+      let value = prettyPrint(el, combinedOptions, pad + combinedOptions.indent);
       if (combinedOptions.transform) {
         value = combinedOptions.transform(input, i, value);
       }
       return tokens.indent + value + eol;
-    }).join('') + tokens.pad + ']';
+    }).join('')}${tokens.pad}]`;
     seen.pop();
     return expandWhiteSpace(ret);
   }
   if (isObj(input)) {
     let objKeys_1 = [...Object.keys(input), ...(getOwnEnumPropSymbols(input))];
     if (combinedOptions.filter) {
-      objKeys_1 = objKeys_1.filter(function (el) { return combinedOptions.filter && combinedOptions.filter(input, el); });
+      objKeys_1 = objKeys_1.filter((el) => combinedOptions.filter && combinedOptions.filter(input, el));
     }
     if (objKeys_1.length === 0) {
       return '{}';
     }
     seen.push(input);
-    var ret = '{' + tokens.newLine + objKeys_1.map(function (el, i) {
-      var eol = objKeys_1.length - 1 === i ? tokens.newLine : ',' + tokens.newLineOrSpace;
-      var isSymbol = typeof el === 'symbol';
-      var isClassic = !isSymbol && /^[a-z$_][a-z$_0-9]*$/i.test(el.toString());
-      var key = isSymbol || isClassic ? el : prettyPrint(el, combinedOptions);
-      var value = prettyPrint(input[el], combinedOptions, pad + combinedOptions.indent);
+    var ret = `{${tokens.newLine}${objKeys_1.map((el, i) => {
+      const eol = objKeys_1.length - 1 === i ? tokens.newLine : `,${tokens.newLineOrSpace}`;
+      const isSymbol = typeof el === 'symbol';
+      const isClassic = !isSymbol && /^[a-z$_][a-z$_0-9]*$/i.test(el.toString());
+      const key = isSymbol || isClassic ? el : prettyPrint(el, combinedOptions);
+      let value = prettyPrint(input[el], combinedOptions, pad + combinedOptions.indent);
       if (combinedOptions.transform) {
         value = combinedOptions.transform(input, el, value);
       }
-      return tokens.indent + String(key) + ': ' + value + eol;
-    }).join('') + tokens.pad + '}';
+      return `${tokens.indent + String(key)}: ${value}${eol}`;
+    }).join('')}${tokens.pad}}`;
     seen.pop();
     return expandWhiteSpace(ret);
   }
-  input = String(input).replace(/[\r\n]/g, function (x) { return x === '\n' ? '\\n' : '\\r'; });
+  input = String(input).replace(/[\r\n]/g, (x) => (x === '\n' ? '\\n' : '\\r'));
   if (!combinedOptions.singleQuotes) {
     input = input.replace(/"/g, '\\"');
-    return "\"".concat(input, "\"");
+    return '"'.concat(input, '"');
   }
   input = input.replace(/\\?'/g, '\\\'');
   return "'".concat(input, "'");
 }
-export default prettyPrint
+export default prettyPrint;

@@ -1,14 +1,14 @@
-import { server as webSocketServer } from "websocket";
 import http from 'http';
+import fs from 'fs';
+import { server as webSocketServer } from 'websocket';
 import open from 'open';
+import showdown from 'showdown';
 import wsMessage from './wsMessage.js';
-import showdown from "showdown";
-import fs from "fs";
 
-const monitorURL = 'http://localhost/concertagenda/backend/monitor/'
+const monitorURL = 'http://localhost/concertagenda/backend/monitor/';
 
 /**
- * 
+ *
  * @returns webSocketServer
  */
 function createServerWebsocket() {
@@ -24,8 +24,8 @@ function createClients() {
   // I'm maintaining all active connections in this object
   const clients = {
     setActive(origin, connection) {
-      var userID = this.getUniqueID();
-      const saveOrigin = origin.replace(/[^a-zA-Z]/g, "").toUpperCase();
+      const userID = this.getUniqueID();
+      const saveOrigin = origin.replace(/[^a-zA-Z]/g, '').toUpperCase();
       const clientName = `${saveOrigin}_${userID}`;
       connection.clientName = clientName;
       this.active[clientName] = connection;
@@ -34,7 +34,7 @@ function createClients() {
     setInactive(clientName) {
       if (!this.active.hasOwnProperty(clientName)) {
         throw new Error(
-          "clientname onbekend in actieve verbindingen clients obj backend"
+          'clientname onbekend in actieve verbindingen clients obj backend',
         );
       }
       const connectionCopy = { ...this.active[clientName] };
@@ -44,11 +44,10 @@ function createClients() {
     inactive: {},
     active: {},
     getUniqueID() {
-      const s4 = () =>
-        Math.floor((1 + Math.random()) * 0x10000)
-          .toString(16)
-          .substring(1);
-      return s4() + s4() + "-" + s4();
+      const s4 = () => Math.floor((1 + Math.random()) * 0x10000)
+        .toString(16)
+        .substring(1);
+      return `${s4() + s4()}-${s4()}`;
     },
     logConnected() {
       console.log(`connected ${Object.keys(this.active)}`);
@@ -60,16 +59,16 @@ function createClients() {
 // TODO als client exited
 
 async function initMonitorBackend() {
-  console.log("starting monitor");
+  console.log('starting monitor');
   const clients = createClients();
   const wsServer = createServerWebsocket();
 
   setTimeout(() => {
-    console.log("opened connection");
+    console.log('opened connection');
     open(monitorURL, { wait: true });
   }, 1000);
 
-  wsServer.on("request", function (request) {
+  wsServer.on('request', (request) => {
     const connection = request.accept(null, request.origin);
     const newConnectionID = clients.setActive(request.origin, connection);
     connection.clientName = newConnectionID;
@@ -79,30 +78,30 @@ async function initMonitorBackend() {
 
   let reallyConnected = false;
 
-  wsServer.on("handleUpgrade", function (request, socket, head) {
+  wsServer.on('handleUpgrade', (request, socket, head) => {
     const newConnectionMsg = new wsMessage(
-      "clients-log",
+      'clients-log',
       null,
       `Nieuwe verbinding ${socket.clientName}. Nu ${
         Object.keys(clients.active).length
-      } verbindingen`
+      } verbindingen`,
     );
 
     wsServer.broadcast(newConnectionMsg.json);
     reallyConnected = true;
-    fs.readFile("./README.md", "utf-8", (markdownText) => {
+    fs.readFile('./README.md', 'utf-8', (markdownText) => {
       const marktDownConverter = new showdown.Converter();
       const markDownHTML = marktDownConverter.makeHtml(markdownText);
       const newConnectionMsg = new wsMessage(
-        "clients-html",
-        "#monitor-readme",
-        markDownHTML
+        'clients-html',
+        '#monitor-readme',
+        markDownHTML,
       );
       wsServer.broadcast(newConnectionMsg.json);
     });
   });
-  wsServer.on("close", function (request) {
-    if (request.hasOwnProperty("clientName")) {
+  wsServer.on('close', (request) => {
+    if (request.hasOwnProperty('clientName')) {
       clients.setInactive(request.clientName);
     }
   });
@@ -117,11 +116,8 @@ async function initMonitorBackend() {
 }
 
 export async function closeWebsocketServer(wsServer, closureReason = 'unknown') {
-  const msg = new wsMessage('process', null, `Server closed because of ${closureReason}`)
-  return wsServer.close('web socket closing.', msg.json)
+  const msg = new wsMessage('process', null, `Server closed because of ${closureReason}`);
+  return wsServer.close('web socket closing.', msg.json);
 }
 
 export default initMonitorBackend;
-
-
-

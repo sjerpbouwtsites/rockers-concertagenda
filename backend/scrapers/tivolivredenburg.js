@@ -1,168 +1,154 @@
-import { workerData } from "worker_threads";
-import AbstractScraper from "./gedeeld/abstract-scraper.js";
-import makeScraperConfig from "./gedeeld/scraper-config.js";
-import {waitTime} from "../mods/tools.js";
+import { workerData } from 'worker_threads';
+import AbstractScraper from './gedeeld/abstract-scraper.js';
+import makeScraperConfig from './gedeeld/scraper-config.js';
+import { waitTime } from '../mods/tools.js';
 
-//#region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
+// #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const tivoliVredenburgScraper = new AbstractScraper(makeScraperConfig({
-  workerData: Object.assign({}, workerData),
+  workerData: { ...workerData },
   puppeteerConfig: {
     mainPage: {
-      waitUntil: "load"
+      waitUntil: 'load',
     },
     app: {
       mainPage: {
-        url: "https://www.tivolivredenburg.nl/agenda/?event_category=metal-punk-heavy",
-        requiredProperties: ['venueEventUrl', 'title']
+        url: 'https://www.tivolivredenburg.nl/agenda/?event_category=metal-punk-heavy',
+        requiredProperties: ['venueEventUrl', 'title'],
       },
       singlePage: {
-        requiredProperties: ['venueEventUrl', 'title', 'price', 'start']
-      }
-    }    
-  }
+        requiredProperties: ['venueEventUrl', 'title', 'price', 'start'],
+      },
+    },
+  },
 }));
-//#endregion                          SCRAPER CONFIG
+// #endregion                          SCRAPER CONFIG
 
 tivoliVredenburgScraper.listenToMasterThread();
 
-//#region [rgba(0, 120, 0, 0.1)]      RAW EVENT CHECK
-tivoliVredenburgScraper.singleRawEventCheck = async function (event) {
-
+// #region [rgba(0, 120, 0, 0.1)]      MAIN PAGE EVENT CHECK
+tivoliVredenburgScraper.mainPageAsyncCheck = async function (event) {
   const workingTitle = this.cleanupEventTitle(event.title);
 
-  const isRefused = await this.rockRefuseListCheck(event, workingTitle)
+  const isRefused = await this.rockRefuseListCheck(event, workingTitle);
   if (isRefused.success) {
     isRefused.success = false;
     return isRefused;
   }
 
-  const isAllowed = await this.rockAllowListCheck(event, workingTitle)
+  const isAllowed = await this.rockAllowListCheck(event, workingTitle);
   if (isAllowed.success) {
-    return isAllowed
+    return isAllowed;
   }
 
   const hasForbiddenTerms = await this.hasForbiddenTerms(event);
   if (hasForbiddenTerms.success) {
-    this.saveRefusedTitle(workingTitle)
+    this.saveRefusedTitle(workingTitle);
     hasForbiddenTerms.success = false;
-    return hasForbiddenTerms
+    return hasForbiddenTerms;
   }
 
   const hasGoodTermsRes = await this.hasGoodTerms(event);
   if (hasGoodTermsRes.success) {
-    this.saveAllowedTitle(workingTitle)
+    this.saveAllowedTitle(workingTitle);
     return hasGoodTermsRes;
   }
 
   const isRockRes = await this.isRock(event, [workingTitle]);
-  if (isRockRes.success){
-    this.saveAllowedTitle(workingTitle)
+  if (isRockRes.success) {
+    this.saveAllowedTitle(workingTitle);
   } else {
-    this.saveRefusedTitle(workingTitle)
+    this.saveRefusedTitle(workingTitle);
   }
   return isRockRes;
-  
 };
-//#endregion                          RAW EVENT CHECK
+// #endregion                          MAIN PAGE EVENT CHECK
 
-//#region [rgba(0, 180, 0, 0.1)]      SINGLE EVENT CHECK
-//#endregion                          SINGLE EVENT CHECK
+// #region [rgba(0, 180, 0, 0.1)]      SINGLE PAGE EVENT CHECK
+// #endregion                          SINGLE PAGE EVENT CHECK
 
-//#region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
+// #region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
 tivoliVredenburgScraper.mainPage = async function () {
-  
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
-  if (availableBaseEvents){
-    const thisWorkersEvents = availableBaseEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
-    return await this.mainPageEnd({
-      stopFunctie: null, rawEvents: thisWorkersEvents}
-    );    
-  } 
-
-  const {stopFunctie, page} = await this.mainPageStart()
-
-  let rawEvents = await page.evaluate(({workerData, unavailabiltyTerms}) => {
-    return Array.from(document.querySelectorAll(".agenda-list-item"))
-      .map((eventEl) => {
-        const title =
-          eventEl
-            .querySelector(".agenda-list-item__title")
-            ?.textContent.trim() ?? null;
-        const res = {
-          pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
-          errors: [],
-          title
-        };
-        res.shortText =
-          eventEl
-            .querySelector(".agenda-list-item__text")
-            ?.textContent.trim() ?? '';
-
-        res.venueEventUrl = eventEl.querySelector(
-          ".agenda-list-item__title-link"
-        ).href;
-        const uaRex = new RegExp(unavailabiltyTerms.join("|"), 'gi');
-        res.unavailable = !!eventEl.textContent.match(uaRex);        
-        res.soldOut = !!eventEl.querySelector(".agenda-list-item__label")?.textContent.match(/uitverkocht|sold\s?out/i) ?? false;
-        return res;
-      });
-  }, {workerData, unavailabiltyTerms: AbstractScraper.unavailabiltyTerms})
-  
-  rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
-
-  this.saveBaseEventlist(workerData.family, rawEvents)
-  const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index)
-  return await this.mainPageEnd({
-    stopFunctie, rawEvents: thisWorkersEvents}
-  );
-
-};
-//#endregion                          MAIN PAGE
-
-//#region [rgba(120, 0, 0, 0.1)]     SINGLE PAGE
-tivoliVredenburgScraper.singlePage = async function ({ page, event }) {
- 
-  const {stopFunctie} =  await this.singlePageStart()
-
-  const cookiesNodig = await page.evaluate(()=>{
-    return document.querySelector('#eagerly-tools-cookie')
-  })
-
-  if (cookiesNodig){
-    await page.evaluate(()=>{
-      const label = document.querySelector(".cookie-field:not(.disabled) label");
-      const accept = document.querySelector("#cookie-accept")
-      label.click()
-      accept.click();
-    })
-    await waitTime(1500)
+  if (availableBaseEvents) {
+    const thisWorkersEvents = availableBaseEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index);
+    return await this.mainPageEnd({ stopFunctie: null, rawEvents: thisWorkersEvents });
   }
 
-  const pageInfo = await page.evaluate(({event}) => {
+  const { stopFunctie, page } = await this.mainPageStart();
+
+  let rawEvents = await page.evaluate(({ workerData, unavailabiltyTerms }) => Array.from(document.querySelectorAll('.agenda-list-item'))
+    .map((eventEl) => {
+      const title =          eventEl
+        .querySelector('.agenda-list-item__title')
+        ?.textContent.trim() ?? null;
+      const res = {
+        pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
+        errors: [],
+        title,
+      };
+      res.shortText = eventEl
+        .querySelector('.agenda-list-item__text')
+        ?.textContent.trim() ?? '';
+
+      res.venueEventUrl = eventEl.querySelector(
+        '.agenda-list-item__title-link',
+      ).href;
+      const uaRex = new RegExp(unavailabiltyTerms.join('|'), 'gi');
+      res.unavailable = !!eventEl.textContent.match(uaRex);
+      res.soldOut = !!eventEl.querySelector('.agenda-list-item__label')?.textContent.match(/uitverkocht|sold\s?out/i) ?? false;
+      return res;
+    }), { workerData, unavailabiltyTerms: AbstractScraper.unavailabiltyTerms });
+
+  rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
+
+  this.saveBaseEventlist(workerData.family, rawEvents);
+  const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index);
+  return await this.mainPageEnd({ stopFunctie, rawEvents: thisWorkersEvents });
+};
+// #endregion                          MAIN PAGE
+
+// #region [rgba(120, 0, 0, 0.1)]     SINGLE PAGE
+tivoliVredenburgScraper.singlePage = async function ({ page, event }) {
+  const { stopFunctie } =  await this.singlePageStart();
+
+  const cookiesNodig = await page.evaluate(() => document.querySelector('#eagerly-tools-cookie'));
+
+  if (cookiesNodig) {
+    await page.evaluate(() => {
+      const label = document.querySelector('.cookie-field:not(.disabled) label');
+      const accept = document.querySelector('#cookie-accept');
+      label.click();
+      accept.click();
+    });
+    await waitTime(1500);
+  }
+
+  const pageInfo = await page.evaluate(({ event }) => {
     const res = {
       pageInfo: `<a class='page-info' href='${event.venueEventUrl}'>${event.title}</a>`,
       errors: [],
     };
 
     const startDateMatch = location.href.match(/\d\d-\d\d-\d\d\d\d/); //
-    res.startDate = "";
+    res.startDate = '';
     if (startDateMatch && startDateMatch.length) {
-      res.startDate = startDateMatch[0].split("-").reverse().join("-");
+      res.startDate = startDateMatch[0].split('-').reverse().join('-');
     }
 
     if (!res.startDate || res.startDate.length < 7) {
       res.errors.push({
         remarks: `startdate mis ${res.pageInfo}`,
         toDebug: {
-          text: `niet goed genoeg<br>${startDateMatch.join("; ")}<br>${res.startDate}`,
-          res,event
-        }
+          text: `niet goed genoeg<br>${startDateMatch.join('; ')}<br>${res.startDate}`,
+          res,
+          event,
+        },
       });
       return res;
     }
     const eventInfoDtDDText = document
-      .querySelector(".event__info .description-list")
-      ?.textContent.replace(/[\n\r\s]/g, "")
+      .querySelector('.event__info .description-list')
+      ?.textContent.replace(/[\n\r\s]/g, '')
       .toLowerCase();
     res.startTime = null;
     res.openDoorTime = null;
@@ -183,8 +169,8 @@ tivoliVredenburgScraper.singlePage = async function ({ page, event }) {
           remarks: `Open door ${res.pageInfo}`,
           toDebug:{
             text: eventInfoDtDDText,
-            event
-          }
+            event,
+          },
         });
       }
     }
@@ -199,9 +185,9 @@ tivoliVredenburgScraper.singlePage = async function ({ page, event }) {
           error: caughtError,
           remarks: `startTijd door ${res.pageInfo}`,
           toDebug: {
-            matches:`${startMatch.join("")}`,
-            event
-          }
+            matches:`${startMatch.join('')}`,
+            event,
+          },
         });
       }
     }
@@ -217,50 +203,53 @@ tivoliVredenburgScraper.singlePage = async function ({ page, event }) {
           remarks: `endtijd ${res.pageInfo}`,
           toDebug: {
             text: eventInfoDtDDText,
-            event
-          }
+            event,
+          },
         });
       }
     }
 
     return res;
-  }, {event});
+  }, { event });
 
-  const imageRes = await this.getImage({page, event, pageInfo, selectors: ['.img-container source:last-of-type'], mode: 'image-src' })
+  const imageRes = await this.getImage({
+    page, event, pageInfo, selectors: ['.img-container source:last-of-type'], mode: 'image-src',
+  });
   pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
-  pageInfo.image = imageRes.image;  
+  pageInfo.image = imageRes.image;
 
-  const priceRes = await this.getPriceFromHTML({page, event, pageInfo, selectors: [".btn-group__price", ".event-cta"], });
+  const priceRes = await this.getPriceFromHTML({
+    page, event, pageInfo, selectors: ['.btn-group__price', '.event-cta'],
+  });
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
-  pageInfo.price = priceRes.price; 
+  pageInfo.price = priceRes.price;
 
-  const longTextRes = await longTextSocialsIframes(page, event, pageInfo)
-  for (let i in longTextRes){
-    pageInfo[i] = longTextRes[i]
+  const longTextRes = await longTextSocialsIframes(page, event, pageInfo);
+  for (const i in longTextRes) {
+    pageInfo[i] = longTextRes[i];
   }
 
-  return await this.singlePageEnd({pageInfo, stopFunctie, page, event})
-
+  return await this.singlePageEnd({
+    pageInfo, stopFunctie, page, event,
+  });
 };
-//#endregion                         SINGLE PAGE
+// #endregion                         SINGLE PAGE
 
 // #region [rgba(100, 0, 0, 0.3)] longHTML
-async function longTextSocialsIframes(page, event, pageInfo){
+async function longTextSocialsIframes(page, event, pageInfo) {
+  return await page.evaluate(({ event }) => {
+    const res = {};
 
-  return await page.evaluate(({event})=>{
-    const res = {}
-
-      
     const textSelector = '.event-flow .event__text';
     const mediaSelector = [
       `${textSelector} iframe[src*='youtube']`,
       `${textSelector} iframe[src*='bandcamp']`,
       `${textSelector} iframe[src*='spotify']`,
-    ].join(", ");
+    ].join(', ');
     const removeEmptyHTMLFrom = textSelector;
     const socialSelector = [
-      `.description-list__detail a[href*='facebook'][href*='events']`
-    ].join(", ");
+      '.description-list__detail a[href*=\'facebook\'][href*=\'events\']',
+    ].join(', ');
     const removeSelectors = [
       `${textSelector} [class*='icon-']`,
       `${textSelector} [class*='fa-']`,
@@ -274,32 +263,32 @@ async function longTextSocialsIframes(page, event, pageInfo){
       `${textSelector} h1`,
       `${textSelector} img`,
       `${textSelector} iframe`,
-    ].join(", ");
+    ].join(', ');
 
     const attributesToRemove = [
-      "style",
-      "hidden",
-      "_target",
-      "frameborder",
-      "onclick",
-      "aria-hidden",
-      "allow",
-      "allowfullscreen",
-      "data-deferlazy",
-      "width",
-      "height",
+      'style',
+      'hidden',
+      '_target',
+      'frameborder',
+      'onclick',
+      'aria-hidden',
+      'allow',
+      'allowfullscreen',
+      'data-deferlazy',
+      'width',
+      'height',
     ];
-    const attributesToRemoveSecondRound = ["class", "id"];
+    const attributesToRemoveSecondRound = ['class', 'id'];
     const removeHTMLWithStrings = ['Extra informatie', 'Let op bij het kopen'];
 
     // eerst onzin attributes wegslopen
     const socAttrRemSelAdd = `${
-      socialSelector.length ? `, ${socialSelector}` : ""
+      socialSelector.length ? `, ${socialSelector}` : ''
     }`;
     const mediaAttrRemSelAdd = `${
-      mediaSelector.length ? `, ${mediaSelector} *, ${mediaSelector}` : ""
+      mediaSelector.length ? `, ${mediaSelector} *, ${mediaSelector}` : ''
     }`;
-    const textSocEnMedia = `${textSelector} *${socAttrRemSelAdd}${mediaAttrRemSelAdd}`;      
+    const textSocEnMedia = `${textSelector} *${socAttrRemSelAdd}${mediaAttrRemSelAdd}`;
     document
       .querySelectorAll(textSocEnMedia)
       .forEach((elToStrip) => {
@@ -310,28 +299,27 @@ async function longTextSocialsIframes(page, event, pageInfo){
         });
       });
 
-  
-    //media obj maken voordat HTML verdwijnt
+    // media obj maken voordat HTML verdwijnt
     res.mediaForHTML = !mediaSelector.length ? '' : Array.from(
-      document.querySelectorAll(mediaSelector)
+      document.querySelectorAll(mediaSelector),
     ).map((bron) => {
-      bron.className = "";
+      bron.className = '';
 
-      if (bron?.src && (bron.src.includes('bandcamp') || bron.src.includes('spotify'))){
+      if (bron?.src && (bron.src.includes('bandcamp') || bron.src.includes('spotify'))) {
         return {
           outer: bron.outerHTML,
           src: bron.src,
           id: null,
-          type: bron.src.includes('bandcamp') ? 'bandcamp' : 'spotify'
-        }
+          type: bron.src.includes('bandcamp') ? 'bandcamp' : 'spotify',
+        };
       }
-      if (bron?.src && bron.src.includes("youtube")){
+      if (bron?.src && bron.src.includes('youtube')) {
         return {
           outer: bron.outerHTML,
           src: bron.src,
           id: null,
-          type: 'youtube'
-        }
+          type: 'youtube',
+        };
       }
 
       // terugval???? nog niet bekend met alle opties.
@@ -339,56 +327,52 @@ async function longTextSocialsIframes(page, event, pageInfo){
         outer: bron.outerHTML,
         src: bron.src,
         id: null,
-        type: bron.src.includes("spotify")
-          ? "spotify"
-          : bron.src.includes("youtube")
-            ? "youtube"
-            : "bandcamp",
+        type: bron.src.includes('spotify')
+          ? 'spotify'
+          : bron.src.includes('youtube')
+            ? 'youtube'
+            : 'bandcamp',
       };
     });
 
-    //socials obj maken voordat HTML verdwijnt
+    // socials obj maken voordat HTML verdwijnt
     res.socialsForHTML = !socialSelector
-      ? ""
+      ? ''
       : Array.from(document.querySelectorAll(socialSelector)).map((el) => {
-        el.querySelectorAll("i, svg, img").forEach((rm) =>
-          rm.parentNode.removeChild(rm)
-        );
+        el.querySelectorAll('i, svg, img').forEach((rm) => rm.parentNode.removeChild(rm));
         if (!el.textContent.trim().length) {
-          if (el.href.includes("facebook") || el.href.includes("fb.me")) {
-            if (el.href.includes('facebook.com/events')){
+          if (el.href.includes('facebook') || el.href.includes('fb.me')) {
+            if (el.href.includes('facebook.com/events')) {
               el.textContent = `FB event ${event.title}`;
-            } else{
-              el.textContent = `Facebook`;
+            } else {
+              el.textContent = 'Facebook';
             }
-          } else if (el.href.includes("twitter")) {
-            el.textContent = "Tweet";
+          } else if (el.href.includes('twitter')) {
+            el.textContent = 'Tweet';
           } else if (el.href.includes('instagram')) {
-            el.textContent = "Insta";
+            el.textContent = 'Insta';
           } else {
-            el.textContent = "Social";
+            el.textContent = 'Social';
           }
         }
-        el.className = "long-html__social-list-link";
-        el.target = "_blank";
+        el.className = 'long-html__social-list-link';
+        el.target = '_blank';
         return el.outerHTML;
       });
 
     // stript HTML tbv text
-    removeSelectors.length &&
-       document
+    removeSelectors.length
+       && document
          .querySelectorAll(removeSelectors)
          .forEach((toRemove) => toRemove.parentNode.removeChild(toRemove));
 
     // verwijder ongewenste paragrafen over bv restaurants
     Array.from(
       document.querySelectorAll(
-        `${textSelector} p, ${textSelector} span, ${textSelector} a`
-      )
+        `${textSelector} p, ${textSelector} span, ${textSelector} a`,
+      ),
     ).forEach((verwijder) => {
-      const heeftEvilString = !!removeHTMLWithStrings.find((evilString) =>
-        verwijder.textContent.includes(evilString)
-      );
+      const heeftEvilString = !!removeHTMLWithStrings.find((evilString) => verwijder.textContent.includes(evilString));
       if (heeftEvilString) {
         verwijder.parentNode.removeChild(verwijder);
       }
@@ -399,7 +383,7 @@ async function longTextSocialsIframes(page, event, pageInfo){
       .querySelectorAll(`${removeEmptyHTMLFrom} > *`)
       .forEach((checkForEmpty) => {
         const leegMatch = checkForEmpty.innerHTML
-          .replace("&nbsp;", "")
+          .replace('&nbsp;', '')
           .match(/[\w\d]/g);
         if (!Array.isArray(leegMatch)) {
           checkForEmpty.parentNode.removeChild(checkForEmpty);
@@ -418,9 +402,8 @@ async function longTextSocialsIframes(page, event, pageInfo){
     // tekst.
     res.textForHTML = Array.from(document.querySelectorAll(textSelector))
       .map((el) => el.innerHTML)
-      .join("");
+      .join('');
     return res;
-  },{event})
-  
+  }, { event });
 }
 // #endregion                        LONG HTML

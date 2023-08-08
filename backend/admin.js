@@ -1,9 +1,9 @@
-import fs from "fs";
+import fs from 'fs';
 
-fs.writeFileSync("./temp/error.log", "", "utf-8");
+fs.writeFileSync('./temp/error.log', '', 'utf-8');
 
-Array.from(fs.readdirSync("../public/texts")).forEach((textFile) => {
-  const pathOfFile = "../public/texts/" + textFile;
+Array.from(fs.readdirSync('../public/texts')).forEach((textFile) => {
+  const pathOfFile = `../public/texts/${textFile}`;
 
   const today = new Date();
   const currentAbsTime = today.getTime();

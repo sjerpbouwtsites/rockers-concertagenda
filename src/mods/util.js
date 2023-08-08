@@ -1,45 +1,49 @@
-export function BEMify(selectors = '', modifiers = null){
-
-  if (!modifiers || modifiers.length === 0) return selectors
+export function BEMify(selectors = '', modifiers = null) {
+  if (!modifiers || modifiers.length === 0) return selectors;
   let modAr;
   if (typeof modifiers === 'string') {
     modAr = [modifiers];
   } else {
-    modAr = modifiers
+    modAr = modifiers;
   }
   return selectors
     .split(' ')
-    .map(selector => {
+    .map((selector) => {
       const modified = modAr
-        .filter(modifier => modifier)
-        .map(modifier => `${selector}--${modifier}`)
-        .join(' ')
+        .filter((modifier) => modifier)
+        .map((modifier) => `${selector}--${modifier}`)
+        .join(' ');
       return `${selector} ${modified}`;
-    }).join(' ').trim()
+    })
+    .join(' ')
+    .trim();
 }
 
 export function stripHTML(text) {
-  if (!text) return "";
-  return text.replace(/<\/?\w+>/g, "");
+  if (!text) return '';
+  return text.replace(/<\/?\w+>/g, '');
 }
 
 /**
-* To be used in filter method. Removes those events that are past or dont have a start
-* @param {*} musicEvent 
-* @returns bool
-*/
+ * To be used in filter method. Removes those events that are past or dont have a start
+ * @param {*} musicEvent
+ * @returns bool
+ */
 export function filterEventsDateInPast(musicEvent) {
   if (!musicEvent.start) {
     return false;
   }
   const musicEventTime = Number(
-    (new Date(musicEvent.start)).toISOString().substring(0,10).replace(/-/g, "")
+    new Date(musicEvent.start).toISOString().substring(0, 10).replace(/-/g, ''),
   );
-  const nowDate = Number(
-    (new Date()).toISOString().substring(0,10).replace(/-/g, "")
-  );
-  console.log(musicEvent.start, (new Date(musicEvent.start)).toISOString().substring(0,10), (new Date()).toISOString().substring(0,10))
+  const nowDate = Number(new Date().toISOString().substring(0, 10).replace(/-/g, ''));
   return musicEventTime >= nowDate;
 }
 
-export default {}
+export async function waitFor(wait = 500) {
+  return new Promise((res) => {
+    setTimeout(res, wait);
+  });
+}
+
+export default {};
