@@ -483,7 +483,18 @@
   mix-blend-mode: multiply;
   z-index: -1;
 }
-
+.provide-dark-contrast.provide-dark-contrast--variation-1::before {
+  background: linear-gradient(245deg,
+      rgba(10, 38, 1, 0.33) 5%,
+      rgba(13, 60, 10, 0.6) 15%,
+      rgba(15, 61, 68, 0.85) 80%,
+      rgba(6, 16, 4, 0.85) 100%),
+    linear-gradient(181deg,
+      rgba(8, 16, 4, 0.85) 0%,
+      rgba(15, 68, 40, 0.45) 4%,
+      rgba(20, 68, 15, 0) 6%,
+      transparent 100%);
+}
 .provide-dark-contrast.event-block--sold-out::before {
   background: linear-gradient(
       245deg,

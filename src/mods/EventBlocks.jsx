@@ -80,10 +80,12 @@ class EventBlocks extends React.Component {
   }
 
   // eslint-disable-next-line
-  getSelectors(musicEvent, sharedModifiers) {
+  getSelectors(musicEvent, sharedModifiers, monthEvenOddCounter) {
+    const isEven = monthEvenOddCounter % 2 === 0;
     return {
       article: `
 provide-dark-contrast
+${isEven ? 'provide-dark-contrast--variation-1' : ''}
 ${BEMify('event-block', [
     musicEvent.location,
     musicEvent.enlarged ? 'enlarged' : '',
@@ -473,9 +475,6 @@ ${BEMify('event-block', [
         year: 'numeric',
         month: 'short',
       });
-      // FIXME filters verneuken straks wie eerste maand is.
-      // FIXME verander het naar artikel met dan op een data-attr
-      // zijn maand geprint. Dan kan je met css verder fixen.
       if (!musicEventIndex || !filtered[musicEventIndex - 1]) {
         // eslint-disable-next-line
         musicEvent.firstOfMonth = true;
@@ -519,7 +518,7 @@ ${BEMify('event-block', [
         i += 1;
       } while (res.title.length > 45 && i < splittingCandidates.length);
       shortestText = shortestText[0].toUpperCase()
-        + shortestText.substring(1, 500).toLowerCase();
+        + shortestText.substring(1, 500).toLowerCase(); 
     }
 
     if (res.title.length > 45) {
@@ -527,26 +526,30 @@ ${BEMify('event-block', [
     }
     res.shortestText = shortestText;
     return res;
-  }
+  } 
 
   render() {
     const filteredMusicEvents = this.musicEventFilters();
     const enlargedClassAddition = this.someEventIsEnlarged()
       ? 'some-event-is-enlarged'
       : 'nothing-is-enlarged';
-    const { eventDataLoading, filterHideSoldOut } = this.state;
+    const { eventDataLoading, filterHideSoldOut } = this.state; 
 
     const { musicEvents, maxEventsShown, eventDataLoaded } = this.state;
     const mel = musicEvents.length;
+    let monthEvenOddCounter = 0;
 
     return (
       <div
         className={`event-block__wrapper ${enlargedClassAddition} ${
-          eventDataLoading ? 'is-loaded' : 'not-loading'
-        }`}
+          eventDataLoading ? 'is-loaded' : 'not-loading' 
+        }`} 
       >
         {
           filteredMusicEvents.map((musicEvent, musicEventKey) => {
+            if (musicEvent.firstOfMonth) {
+              monthEvenOddCounter += 1;  
+            }
             if (musicEvent.soldOut && filterHideSoldOut) return '';
 
             const sharedModifiers = [
@@ -554,7 +557,7 @@ ${BEMify('event-block', [
               musicEvent.soldOut ? 'sold-out' : '',
               musicEvent.enlarged ? 'enlarged' : '',
             ];
-            const selectors = this.getSelectors(musicEvent, sharedModifiers);
+            const selectors = this.getSelectors(musicEvent, sharedModifiers, monthEvenOddCounter);
             const priceElement = this.priceElement(musicEvent);
             const datesHTML = this.createDates(musicEvent);
             const hideSoldOutBtn = this.createHideSoldOutBtn(musicEvent, selectors);
