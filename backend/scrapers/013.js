@@ -88,11 +88,11 @@ nuldertienScraper.mainPage = async function () {
       res.unavailable = !!eventEl.textContent.match(uaRex);
       res.soldOut = !!eventEl?.innerHTML.match(/uitverkocht|sold\s?out/i) ?? false;
       res.shortText = eventEl
-        .querySelector('.event-list-item__subtitle')
+        .querySelector('.event-list-item__subtitle') 
         ?.textContent.trim() ?? '';
 
       return res;
-    }), { workerData, unavailabiltyTerms: AbstractScraper.unavailabiltyTerms });
+    }), { workerData, unavailabiltyTerms: AbstractScraper.unavailabiltyTerms }); 
 
   rawEvents = rawEvents.map(mapToStart);
 
