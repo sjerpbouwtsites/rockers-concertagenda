@@ -1677,14 +1677,14 @@ export default class AbstractScraper {
     }
 
     await sharp(`${imagePath}-ori${extension}`)
-      .resize(440, 225)
+      .resize(440, 250)
       .webp()
       .toFile(`${imagePath}-w440.webp`, (err, info) => {
         //
       });
 
     await sharp(`${imagePath}-ori${extension}`)
-      .resize(750, 360)
+      .resize(750, 340)
       .webp()
       .toFile(`${imagePath}-w750.webp`, (err, info) => {
         //
