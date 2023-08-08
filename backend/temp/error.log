@@ -1,4 +1,60 @@
 
+  013-3 Error - 5:11:46 AM
+  Error: ENOENT: no such file or directory, lstat '../public/event-images/013/43b48f85-95ff-4375-9e30-cbb8c764c2c4'
+    at Object.lstatSync (node:fs:1668:3)
+    at __node_internal_ (node:internal/fs/utils:825:8)
+    at Object.rmSync (node:fs:1275:13)
+    at AbstractScraper.downloadImageCompress (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1696:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.getImage (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1602:27)
+    at async nuldertienScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/013.js:124:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:648:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:255:5) 
+  ENOENT: no such file or directory, lstat '../public/event-images/013/43b48f85-95ff-4375-9e30-cbb8c764c2c4'
+  
+  
+  013-2 Error - 5:11:46 AM
+  Error: ENOENT: no such file or directory, lstat '../public/event-images/013/de19f95d-5516-4735-b969-9d48055d6b92'
+    at Object.lstatSync (node:fs:1668:3)
+    at __node_internal_ (node:internal/fs/utils:825:8)
+    at Object.rmSync (node:fs:1275:13)
+    at AbstractScraper.downloadImageCompress (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1696:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.getImage (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1602:27)
+    at async nuldertienScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/013.js:124:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:648:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:255:5) 
+  ENOENT: no such file or directory, lstat '../public/event-images/013/de19f95d-5516-4735-b969-9d48055d6b92'
+  
+  
+  013-0 Error - 5:11:46 AM
+  Error: ENOENT: no such file or directory, lstat '../public/event-images/013/0a784ef3-7256-4b18-bd18-1255e94d0f0c'
+    at Object.lstatSync (node:fs:1668:3)
+    at __node_internal_ (node:internal/fs/utils:825:8)
+    at Object.rmSync (node:fs:1275:13)
+    at AbstractScraper.downloadImageCompress (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1696:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.getImage (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1602:27)
+    at async nuldertienScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/013.js:124:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:648:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:255:5) 
+  ENOENT: no such file or directory, lstat '../public/event-images/013/0a784ef3-7256-4b18-bd18-1255e94d0f0c'
+  
+  
+  013-1 Error - 5:11:45 AM
+  Error: ENOENT: no such file or directory, lstat '../public/event-images/013/b1513371-63c3-4d2e-9547-ea894b2e930f'
+    at Object.lstatSync (node:fs:1668:3)
+    at __node_internal_ (node:internal/fs/utils:825:8)
+    at Object.rmSync (node:fs:1275:13)
+    at AbstractScraper.downloadImageCompress (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1696:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.getImage (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1602:27)
+    at async nuldertienScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/013.js:124:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:648:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:255:5) 
+  ENOENT: no such file or directory, lstat '../public/event-images/013/b1513371-63c3-4d2e-9547-ea894b2e930f'
+  
+  
   patronaat-0 Error - 5:09:22 AM
   TimeoutError: Waiting for selector `.event__visual img` failed: Waiting failed: 2500ms exceeded
     at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)

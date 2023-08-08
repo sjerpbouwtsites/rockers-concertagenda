@@ -1693,6 +1693,8 @@ export default class AbstractScraper {
         //
       });
 
+    fs.rmSync(`${imagePath}-ori${extension}`)
+
     return true;
   }
 
