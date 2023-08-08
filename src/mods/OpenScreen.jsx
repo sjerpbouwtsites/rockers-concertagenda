@@ -1,18 +1,16 @@
 import React from 'react';
 
 class OpenScreen extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   classNameTop() {
-    return `open-screen ${this.props.hidden ? 'open-screen__hidden' : ''} ${
-      this.props.moving ? 'open-screen__moving' : ''
+    const { hidden, moving } = this.props;
+    return `open-screen ${hidden ? 'open-screen__hidden' : ''} ${
+      moving ? 'open-screen__moving' : ''
     }`;
   }
 
   render() {
-    if (this.props.hidden) return '';
+    const { hidden } = this.props;
+    if (hidden) return '';
     return (
       <div className={this.classNameTop()}>
         <div className="open-screen__centre">
