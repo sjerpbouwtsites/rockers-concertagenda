@@ -1,14 +1,28 @@
 [
   {
     "door": null,
+    "start": "2023-08-13T16:30:00Z",
+    "end": null,
+    "venueEventUrl": "https://www.ticketmaster.nl/event/heaven-shall-burn-tickets/291715?language=en-us",
+    "title": "Heaven Shall Burn",
+    "location": "melkweg",
+    "price": 33.35,
+    "longText": "../public/texts/melkweg/f9d7786e-7af5-43b8-8ade-92f56d463442.html",
+    "image": "../public/event-images/melkweg/1ed20468-662f-42bc-89b6-943c413df736",
+    "soldOut": null,
+    "unavailable": "",
+    "corrupted": null
+  },
+  {
+    "door": null,
     "start": "2023-08-19T09:30:00Z",
     "end": null,
     "venueEventUrl": "https://www.ticketmaster.nl/event/dynamo-metalfest-2023-day-ticket-saturday-tickets/284753?language=en-us",
     "title": "Dynamo Metalfest 2023 Day ticket Saturday",
     "location": "ijssportcentrum",
     "price": 59,
-    "longText": "../public/texts/ijssportcentrum/12ca87a2-6078-468a-a9b9-db199145c614.html",
-    "image": "../public/event-images/ijssportcentrum/0556ea6f-ab6d-4346-8f25-c360c337ba28",
+    "longText": "../public/texts/ijssportcentrum/d1e68da7-9bc6-454d-a8dd-602b697b9c55.html",
+    "image": "../public/event-images/ijssportcentrum/02838961-d42f-4073-8222-95616c1d425f",
     "soldOut": null,
     "unavailable": "",
     "corrupted": null
@@ -21,8 +35,8 @@
     "title": "Dynamo Metalfest 2023 Day ticket Sunday",
     "location": "ijssportcentrum",
     "price": 59,
-    "longText": "../public/texts/ijssportcentrum/170e6621-b7e8-43ee-9d8e-f29b98992fce.html",
-    "image": "../public/event-images/ijssportcentrum/bb39df7b-fba0-485b-a866-74b1f638728f",
+    "longText": "../public/texts/ijssportcentrum/1eca7488-68fe-4f55-a596-b0a118de9aea.html",
+    "image": "../public/event-images/ijssportcentrum/a19030c1-92db-4fde-b3dc-220889f05390",
     "soldOut": null,
     "unavailable": "",
     "corrupted": null

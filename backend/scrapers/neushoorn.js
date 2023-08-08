@@ -1,27 +1,31 @@
 import { workerData } from 'worker_threads';
 import * as _t from '../mods/tools.js';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
-import makeScraperConfig from './gedeeld/scraper-config.js';
-import { mapToStartDate, combineDoorTimeStartDate, mapToDoorTime, mapToStartTime, combineStartTimeStartDate } from './gedeeld/datums.js';
+import {
+  mapToStartDate,
+  combineDoorTimeStartDate,
+  mapToDoorTime,
+  mapToStartTime,
+  combineStartTimeStartDate,
+} from './gedeeld/datums.js';
 
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
-const neushoornScraper = new AbstractScraper(makeScraperConfig({
+const neushoornScraper = new AbstractScraper({
   workerData: { ...workerData },
-  puppeteerConfig: {
-    singlePage: {
-      timeout: 20000,
+
+  singlePage: {
+    timeout: 20000,
+  },
+  app: {
+    mainPage: {
+      url: 'https://neushoorn.nl/#/search?category=Heavy',
+      requiredProperties: ['venueEventUrl', 'title'],
     },
-    app: {
-      mainPage: {
-        url: 'https://neushoorn.nl/#/search?category=Heavy',
-        requiredProperties: ['venueEventUrl', 'title'],
-      },
-      singlePage: {
-        requiredProperties: ['venueEventUrl', 'title', 'price', 'start'],
-      },
+    singlePage: {
+      requiredProperties: ['venueEventUrl', 'title', 'price', 'start'],
     },
   },
-}));
+});
 // #endregion                          SCRAPER CONFIG
 
 neushoornScraper.listenToMasterThread();
@@ -75,7 +79,9 @@ neushoornScraper.mainPageAsyncCheck = async function (event) {
 neushoornScraper.mainPage = async function () {
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
   if (availableBaseEvents) {
-    const thisWorkersEvents = availableBaseEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index);
+    const thisWorkersEvents = availableBaseEvents.filter(
+      (eventEl, index) => index % workerData.workerCount === workerData.index,
+    );
     return await this.mainPageEnd({ stopFunctie: null, rawEvents: thisWorkersEvents });
   }
 
@@ -87,13 +93,19 @@ neushoornScraper.mainPage = async function () {
     });
     await _t.waitTime(50);
   } catch (caughtError) {
-    _t.handleError(caughtError, workerData, 'Laad en klikwachten timeout neushoorn', 'close-thread', null);
-    return await this.mainPageEnd({ stopFunctie, page, rawEvents:[] });
+    _t.handleError(
+      caughtError,
+      workerData,
+      'Laad en klikwachten timeout neushoorn',
+      'close-thread',
+      null,
+    );
+    return await this.mainPageEnd({ stopFunctie, page, rawEvents: [] });
   }
 
-  let rawEvents = await page.evaluate(({ workerData, unavailabiltyTerms }) => Array.from(document.querySelectorAll('.productions__item'))
-    .map(
-      (eventEl) => {
+  let rawEvents = await page.evaluate(
+    ({ workerData, unavailabiltyTerms }) =>
+      Array.from(document.querySelectorAll('.productions__item')).map((eventEl) => {
         const title = eventEl.querySelector(
           '.productions__item__content span:first-child',
         ).textContent;
@@ -106,22 +118,26 @@ neushoornScraper.mainPage = async function () {
         res.venueEventUrl = eventEl.href;
         const uaRex = new RegExp(unavailabiltyTerms.join('|'), 'gi');
         res.unavailable = !!eventEl.textContent.match(uaRex);
-        res.soldOut = !!eventEl.querySelector('.chip')?.textContent.match(/uitverkocht|sold\s?out/i) ?? false;
+        res.soldOut =
+          !!eventEl.querySelector('.chip')?.textContent.match(/uitverkocht|sold\s?out/i) ?? false;
         return res;
-      },
-    ), { workerData, unavailabiltyTerms: AbstractScraper.unavailabiltyTerms });
+      }),
+    { workerData, unavailabiltyTerms: AbstractScraper.unavailabiltyTerms },
+  );
 
   rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
 
   this.saveBaseEventlist(workerData.family, rawEvents);
-  const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index);
+  const thisWorkersEvents = rawEvents.filter(
+    (eventEl, index) => index % workerData.workerCount === workerData.index,
+  );
   return await this.mainPageEnd({ stopFunctie, rawEvents: thisWorkersEvents });
 };
 // #endregion                          MAIN PAGE
 
 // #region [rgba(120, 0, 0, 0.1)]     SINGLE PAGE
 neushoornScraper.singlePage = async function ({ page, event }) {
-  const { stopFunctie } =  await this.singlePageStart();
+  const { stopFunctie } = await this.singlePageStart();
 
   let pageInfo = await page.evaluate(
     ({ months, event }) => {
@@ -130,14 +146,24 @@ neushoornScraper.singlePage = async function ({ page, event }) {
         errors: [],
       };
 
-      res.mapToStartDate = document.querySelector('.summary .summary__item:first-child')?.textContent.trim().toLowerCase() ?? '';
+      res.mapToStartDate =
+        document
+          .querySelector('.summary .summary__item:first-child')
+          ?.textContent.trim()
+          .toLowerCase() ?? '';
       const tweedeSuIt = document.querySelector('.summary .summary__item + .summary__item');
       if (tweedeSuIt.textContent.includes('-')) {
         const s = tweedeSuIt.textContent.split('-');
         tweedeSuIt.innerHTML = `<span class='deur'>${s[0]}</span><span class='start'>${s[1]}</span>'`;
       }
-      res.mapToStartTime = document.querySelector('.summary .summary__item .start, .summary .summary__item + .summary__item')?.textContent.trim().toLowerCase() ?? '';
-      res.mapToDoorTime = document.querySelector('.summary .summary__item .deur')?.textContent.trim().toLowerCase() ?? '';
+      res.mapToStartTime =
+        document
+          .querySelector('.summary .summary__item .start, .summary .summary__item + .summary__item')
+          ?.textContent.trim()
+          .toLowerCase() ?? '';
+      res.mapToDoorTime =
+        document.querySelector('.summary .summary__item .deur')?.textContent.trim().toLowerCase() ??
+        '';
 
       return res;
     },
@@ -153,13 +179,20 @@ neushoornScraper.singlePage = async function ({ page, event }) {
   pageInfo = combineDoorTimeStartDate(pageInfo);
 
   const imageRes = await this.getImage({
-    page, event, pageInfo, selectors: ['.header--theatre'], mode: 'background-src',
+    page,
+    event,
+    pageInfo,
+    selectors: ['.header--theatre'],
+    mode: 'background-src',
   });
   pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
   pageInfo.image = imageRes.image;
 
   const priceRes = await this.getPriceFromHTML({
-    page, event, pageInfo, selectors: ['.prices__item__price', '.prices'],
+    page,
+    event,
+    pageInfo,
+    selectors: ['.prices__item__price', '.prices'],
   });
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
   pageInfo.price = priceRes.price;
@@ -170,64 +203,61 @@ neushoornScraper.singlePage = async function ({ page, event }) {
   }
 
   return await this.singlePageEnd({
-    pageInfo, stopFunctie, page, event,
+    pageInfo,
+    stopFunctie,
+    page,
+    event,
   });
 };
 // #endregion                         SINGLE PAGE
 // #region [rgba(60, 0, 0, 0.3)]     LONG HTML
 async function longTextSocialsIframes(page, event, pageInfo) {
-  return await page.evaluate(({ event }) => {
-    const res = {};
+  return await page.evaluate(
+    ({ event }) => {
+      const res = {};
 
-    const textSelector = 'sidebar + .content';
-    const mediaSelector = ['.responsive-embed iframe, .tophits iframe'].join(', ');
-    const removeEmptyHTMLFrom = textSelector;
-    const socialSelector = [
-      ".links-list__link[href*='facebook'][href*='events']",
-    ].join(', ');
-    const removeSelectors = [
-      `${textSelector} [class*='icon-']`,
-      `${textSelector} [class*='fa-']`,
-      `${textSelector} .fa`,
-      `${textSelector} script`,
-      `${textSelector} noscript`,
-      `${textSelector} style`,
-      `${textSelector} meta`,
-      `${textSelector} svg`,
-      `${textSelector} form`,
-      `${textSelector} img`,
-      `${textSelector} .responsive-embed`,
-      `${textSelector} .summary`,
+      const textSelector = 'sidebar + .content';
+      const mediaSelector = ['.responsive-embed iframe, .tophits iframe'].join(', ');
+      const removeEmptyHTMLFrom = textSelector;
+      const socialSelector = [".links-list__link[href*='facebook'][href*='events']"].join(', ');
+      const removeSelectors = [
+        `${textSelector} [class*='icon-']`,
+        `${textSelector} [class*='fa-']`,
+        `${textSelector} .fa`,
+        `${textSelector} script`,
+        `${textSelector} noscript`,
+        `${textSelector} style`,
+        `${textSelector} meta`,
+        `${textSelector} svg`,
+        `${textSelector} form`,
+        `${textSelector} img`,
+        `${textSelector} .responsive-embed`,
+        `${textSelector} .summary`,
+      ].join(', ');
 
-    ].join(', ');
+      const attributesToRemove = [
+        'style',
+        'hidden',
+        '_target',
+        'frameborder',
+        'onclick',
+        'aria-hidden',
+        'allow',
+        'allowfullscreen',
+        'data-deferlazy',
+        'width',
+        'height',
+      ];
+      const attributesToRemoveSecondRound = ['class', 'id'];
+      const removeHTMLWithStrings = [];
 
-    const attributesToRemove = [
-      'style',
-      'hidden',
-      '_target',
-      'frameborder',
-      'onclick',
-      'aria-hidden',
-      'allow',
-      'allowfullscreen',
-      'data-deferlazy',
-      'width',
-      'height',
-    ];
-    const attributesToRemoveSecondRound = ['class', 'id'];
-    const removeHTMLWithStrings = [];
-
-    // eerst onzin attributes wegslopen
-    const socAttrRemSelAdd = `${
-      socialSelector.length ? `, ${socialSelector}` : ''
-    }`;
-    const mediaAttrRemSelAdd = `${
-      mediaSelector.length ? `, ${mediaSelector} *, ${mediaSelector}` : ''
-    }`;
-    const textSocEnMedia = `${textSelector} *${socAttrRemSelAdd}${mediaAttrRemSelAdd}`;
-    document
-      .querySelectorAll(textSocEnMedia)
-      .forEach((elToStrip) => {
+      // eerst onzin attributes wegslopen
+      const socAttrRemSelAdd = `${socialSelector.length ? `, ${socialSelector}` : ''}`;
+      const mediaAttrRemSelAdd = `${
+        mediaSelector.length ? `, ${mediaSelector} *, ${mediaSelector}` : ''
+      }`;
+      const textSocEnMedia = `${textSelector} *${socAttrRemSelAdd}${mediaAttrRemSelAdd}`;
+      document.querySelectorAll(textSocEnMedia).forEach((elToStrip) => {
         attributesToRemove.forEach((attr) => {
           if (elToStrip.hasAttribute(attr)) {
             elToStrip.removeAttribute(attr);
@@ -235,103 +265,101 @@ async function longTextSocialsIframes(page, event, pageInfo) {
         });
       });
 
-    // media obj maken voordat HTML verdwijnt
-    res.mediaForHTML = !mediaSelector.length ? '' : Array.from(
-      document.querySelectorAll(mediaSelector),
-    ).map((bron) => {
-      bron.className = '';
+      // media obj maken voordat HTML verdwijnt
+      res.mediaForHTML = !mediaSelector.length
+        ? ''
+        : Array.from(document.querySelectorAll(mediaSelector)).map((bron) => {
+            bron.className = '';
 
-      if (bron.hasAttribute('src') && bron.getAttribute('src').includes('youtube')) {
-        return {
-          outer: bron.outerHTML,
-          src: bron.src,
-          id: null,
-          type: 'youtube',
-        };
-      }
-
-      // terugval???? nog niet bekend met alle opties.
-      return {
-        outer: bron.outerHTML,
-        src: bron.src,
-        id: null,
-        type: bron.src.includes('spotify')
-          ? 'spotify'
-          : bron.src.includes('youtube')
-            ? 'youtube'
-            : 'bandcamp',
-      };
-    });
-
-    // socials obj maken voordat HTML verdwijnt
-    res.socialsForHTML = !socialSelector
-      ? ''
-      : Array.from(document.querySelectorAll(socialSelector)).map((el) => {
-        el.querySelectorAll('i, svg, img').forEach((rm) => rm.parentNode.removeChild(rm));
-        if (!el.textContent.trim().length) {
-          if (el.href.includes('facebook') || el.href.includes('fb.me')) {
-            if (el.href.includes('facebook.com/events')) {
-              el.textContent = `FB event ${event.title}`;
-            } else {
-              el.textContent = 'Facebook';
+            if (bron.hasAttribute('src') && bron.getAttribute('src').includes('youtube')) {
+              return {
+                outer: bron.outerHTML,
+                src: bron.src,
+                id: null,
+                type: 'youtube',
+              };
             }
-          } else if (el.href.includes('twitter')) {
-            el.textContent = 'Tweet';
-          } else if (el.href.includes('instagram')) {
-            el.textContent = 'Insta';
-          } else {
-            el.textContent = 'Social';
-          }
+
+            // terugval???? nog niet bekend met alle opties.
+            return {
+              outer: bron.outerHTML,
+              src: bron.src,
+              id: null,
+              type: bron.src.includes('spotify')
+                ? 'spotify'
+                : bron.src.includes('youtube')
+                ? 'youtube'
+                : 'bandcamp',
+            };
+          });
+
+      // socials obj maken voordat HTML verdwijnt
+      res.socialsForHTML = !socialSelector
+        ? ''
+        : Array.from(document.querySelectorAll(socialSelector)).map((el) => {
+            el.querySelectorAll('i, svg, img').forEach((rm) => rm.parentNode.removeChild(rm));
+            if (!el.textContent.trim().length) {
+              if (el.href.includes('facebook') || el.href.includes('fb.me')) {
+                if (el.href.includes('facebook.com/events')) {
+                  el.textContent = `FB event ${event.title}`;
+                } else {
+                  el.textContent = 'Facebook';
+                }
+              } else if (el.href.includes('twitter')) {
+                el.textContent = 'Tweet';
+              } else if (el.href.includes('instagram')) {
+                el.textContent = 'Insta';
+              } else {
+                el.textContent = 'Social';
+              }
+            }
+            el.className = 'long-html__social-list-link';
+            el.target = '_blank';
+            return el.outerHTML;
+          });
+
+      // stript HTML tbv text
+      removeSelectors.length &&
+        document
+          .querySelectorAll(removeSelectors)
+          .forEach((toRemove) => toRemove.parentNode.removeChild(toRemove));
+
+      // verwijder ongewenste paragrafen over bv restaurants
+      Array.from(
+        document.querySelectorAll(`${textSelector} p, ${textSelector} span, ${textSelector} a`),
+      ).forEach((verwijder) => {
+        const heeftEvilString = !!removeHTMLWithStrings.find((evilString) =>
+          verwijder.textContent.includes(evilString),
+        );
+        if (heeftEvilString) {
+          verwijder.parentNode.removeChild(verwijder);
         }
-        el.className = 'long-html__social-list-link';
-        el.target = '_blank';
-        return el.outerHTML;
       });
 
-    // stript HTML tbv text
-    removeSelectors.length
-      && document
-        .querySelectorAll(removeSelectors)
-        .forEach((toRemove) => toRemove.parentNode.removeChild(toRemove));
-
-    // verwijder ongewenste paragrafen over bv restaurants
-    Array.from(
-      document.querySelectorAll(
-        `${textSelector} p, ${textSelector} span, ${textSelector} a`,
-      ),
-    ).forEach((verwijder) => {
-      const heeftEvilString = !!removeHTMLWithStrings.find((evilString) => verwijder.textContent.includes(evilString));
-      if (heeftEvilString) {
-        verwijder.parentNode.removeChild(verwijder);
-      }
-    });
-
-    // lege HTML eruit cq HTML zonder tekst of getallen
-    document
-      .querySelectorAll(`${removeEmptyHTMLFrom} > *`)
-      .forEach((checkForEmpty) => {
-        const leegMatch = checkForEmpty.innerHTML
-          .replace('&nbsp;', '')
-          .match(/[\w\d]/g);
+      // lege HTML eruit cq HTML zonder tekst of getallen
+      document.querySelectorAll(`${removeEmptyHTMLFrom} > *`).forEach((checkForEmpty) => {
+        const leegMatch = checkForEmpty.innerHTML.replace('&nbsp;', '').match(/[\w\d]/g);
         if (!Array.isArray(leegMatch)) {
           checkForEmpty.parentNode.removeChild(checkForEmpty);
         }
       });
 
-    // laatste attributen eruit.
-    document.querySelectorAll(textSocEnMedia).forEach((elToStrip) => {
-      attributesToRemoveSecondRound.forEach((attr) => {
-        if (elToStrip.hasAttribute(attr)) {
-          elToStrip.removeAttribute(attr);
-        }
+      // laatste attributen eruit.
+      document.querySelectorAll(textSocEnMedia).forEach((elToStrip) => {
+        attributesToRemoveSecondRound.forEach((attr) => {
+          if (elToStrip.hasAttribute(attr)) {
+            elToStrip.removeAttribute(attr);
+          }
+        });
       });
-    });
 
-    // tekst.
-    res.textForHTML = Array.from(document.querySelectorAll(textSelector))
-      .map((el) => el.innerHTML)
-      .join('');
-    return res;
-  }, { event });
+      // tekst.
+      res.textForHTML = Array.from(document.querySelectorAll(textSelector))
+        .map((el) => el.innerHTML)
+        .join('');
+      return res;
+    },
+    { event },
+  );
 }
 // #endregion                        LONG HTML

@@ -1,7 +1,3 @@
-export default function makeScraperConfig(obj) {
-  return new MakeScraperConfig(obj);
-}
-
 /**
  * TODO
  *
@@ -10,8 +6,8 @@ export default function makeScraperConfig(obj) {
  * @param {*} additional added to this
  * @return
  */
-export function MakeScraperConfig(obj) {
-  const basePuppeteerConfig = {
+export default class ScraperConfig {
+  static baseConfig = {
     singlePage: {
       waitUntil: 'domcontentloaded',
       timeout: 5001,
@@ -19,48 +15,68 @@ export function MakeScraperConfig(obj) {
     mainPage: {
       waitUntil: 'domcontentloaded',
       timeout: 15001,
+      url: null,
     },
-    app: { // in deze eigen app
-      mainPage: { // make base events
-        url: null,
-        useCustomScraper: false, // geen puppeteer, geen page aangemaakt
+    app: {
+      // in deze eigen app
+      mainPage: {
+        // make base events
         requiredProperties: [], // waarop base events worden gecontroleerd
         enforceMusicEventType: true, // geeft MusicEvent opdracht om properties te trimmen
+        useCustomScraper: false, // geen puppeteer, geen page aangemaakt
+        asyncCheck: ['refused', 'allowed', 'forbidden-terms', 'good-terms'],
       },
-      singlePage: { // get page info
+      singlePage: {
+        // get page info
         useCustomScraper: null, // geen puppeteer, geen page aangemaakt
         requiredProperties: [], // waarop page Info word gecontroleerd
         enforceMusicEventType: false, // geeft MusicEvent opdracht om properties te trimmen.
-        longHTMLnewStyle: true,
       },
     },
   };
 
-  if (!Object.prototype.hasOwnProperty.call(obj, 'workerData')) {
-    throw new Error('geen workerData scraperConfig');
+  // SETTINGS.
+  _s = {
+    mainPage: {},
+    singlePage: {},
+    app: {
+      mainPage: {},
+      singlePage: {},
+    },
+    workerData: null,
+  };
+
+  get workerData() {
+    return this._s.workerData;
   }
 
-  this.maxExecutionTime = obj.maxExecutionTime ?? 30001;
+  constructor(obj) {
+    if (!Object.prototype.hasOwnProperty.call(obj, 'workerData')) {
+      throw new Error('geen workerData scraperConfig');
+    }
+    const bc = ScraperConfig.baseConfig;
+    this._s.singlePage = {
+      timeout: obj?.singlePage?.timeout ?? bc.singlePage.timeout,
+      waitUntil: obj?.singlePage?.waitUntil ?? bc.singlePage.waitUntil,
+    };
 
-  // basis
-  this.puppeteerConfig = { ...basePuppeteerConfig };
-  this.workerData = obj.workerData;
+    this._s.mainPage = {
+      timeout: obj?.mainPage?.timeout ?? bc.mainPage.timeout,
+      waitUntil: obj?.mainPage?.waitUntil ?? bc.mainPage.waitUntil,
+      url: obj?.mainPage?.url ?? bc.mainPage.url,
+    };
 
-  this.hasDecentCategorisation = obj.workerData || true; // of mainPageAsyncCheck echt moet runnen
+    this._s.app.mainPage = {
+      useCustomScraper: obj?.app?.mainPage?.useCustomScraper ?? bc.app.mainPage.useCustomScraper,
+      requiredProperties:
+        obj?.app?.mainPage?.requiredProperties ?? bc.app.mainPage.requiredProperties,
+    };
 
-  this.puppeteerConfig.singlePage.timeout = obj?.puppeteerConfig?.singlePage?.timeout ?? this.puppeteerConfig.singlePage.timeout;
-  this.puppeteerConfig.singlePage.waitUntil = obj?.puppeteerConfig?.singlePage?.waitUntil ?? this.puppeteerConfig.singlePage.waitUntil;
-
-  this.puppeteerConfig.mainPage.timeout = obj?.puppeteerConfig?.mainPage?.timeout ?? this.puppeteerConfig.mainPage.timeout;
-  this.puppeteerConfig.mainPage.waitUntil = obj?.puppeteerConfig?.mainPage?.waitUntil ?? this.puppeteerConfig.mainPage.waitUntil;
-
-  this.puppeteerConfig.app.mainPage.url = obj?.puppeteerConfig?.app?.mainPage?.url ?? this.puppeteerConfig.app.mainPage.url;
-  this.puppeteerConfig.app.mainPage.useCustomScraper = obj?.puppeteerConfig?.app?.mainPage?.useCustomScraper ?? this.puppeteerConfig.app.mainPage.useCustomScraper;
-  this.puppeteerConfig.app.mainPage.requiredProperties = obj?.puppeteerConfig?.app?.mainPage?.requiredProperties ?? this.puppeteerConfig.app.mainPage.requiredProperties;
-  this.puppeteerConfig.app.mainPage.enforceMusicEventType = obj?.puppeteerConfig?.app?.mainPage?.enforceMusicEventType ?? this.puppeteerConfig.app.mainPage.enforceMusicEventType;
-
-  this.puppeteerConfig.app.singlePage.useCustomScraper = obj?.puppeteerConfig?.app?.singlePage?.useCustomScraper ?? this.puppeteerConfig.app.singlePage.useCustomScraper;
-  this.puppeteerConfig.app.singlePage.requiredProperties = obj?.puppeteerConfig?.app?.singlePage?.requiredProperties ?? this.puppeteerConfig.app.singlePage.requiredProperties;
-
-  return this;
+    this._s.app.singlePage = {
+      useCustomScraper:
+        obj?.app?.singlePage?.useCustomScraper ?? bc.app.singlePage.useCustomScraper,
+      requiredProperties:
+        obj?.app?.singlePage?.requiredProperties ?? bc.app.singlePage.requiredProperties,
+    };
+  }
 }

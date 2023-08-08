@@ -3,38 +3,42 @@
 ## res obj
 
 ### Res obj in mainPage
+
 ```js
 const title = doc.balblabl.textContent.etc;
 const res = {
   pageInfo: `<a href='${location.href}'>${workerData.family} main - ${title}</a>`,
   errors: [],
-  title
+  title,
 };
 ```
 
 ### Res obj in singlePage
+
 ```js
-  // event via params
-  const res = {
-    pageInfo: `<a class='page-info' href='${location.href}'>${event.title}</a>`,
-    errors: [],
-  };
+// event via params
+const res = {
+  pageInfo: `<a class='page-info' href='${location.href}'>${event.title}</a>`,
+  errors: [],
+};
 ```
 
 ## image error
+
 ```js
-  if (!res.image){
-    res.errors.push({
-      remarks: `image missing ${res.pageInfo}`
-    })
-  }
+if (!res.image) {
+  res.errors.push({
+    remarks: `image missing ${res.pageInfo}`,
+  });
+}
 ```
 
 ## scraperConfig basic
+
 ```js
-new AbstractScraper(makeScraperConfig({
+new AbstractScraper({
   workerData: Object.assign({}, workerData),
-  puppeteerConfig: {
+
     app: {
       mainPage: {
         url: "",
@@ -44,6 +48,6 @@ new AbstractScraper(makeScraperConfig({
         requiredProperties: ['venueEventUrl', 'title', 'price', 'start']
       }
     }
-  }
+
 }));
 ```
