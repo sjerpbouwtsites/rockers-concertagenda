@@ -20,15 +20,15 @@ export function AbstractWorkerData() {
 export default class WorkerStatus {
   static _workers = {};
 
-  static baseWorkerConfigs = workerConfig
-  static numberOfFamilies = Object.keys(workerConfig).length
+  static baseWorkerConfigs = workerConfig;
+  static numberOfFamilies = Object.keys(workerConfig).length;
   static _familiesDoneWithBaseEvents = [];
 
   static CPUFree = 100;
 
   static shellArguments = getShellArguments();
 
-  static _maxSimultaneousWorkers = 4;
+  static _maxSimultaneousWorkers = 3;
 
   static get maxSimultaneousWorkers() {
     if (this.shellArguments?.workers) {
@@ -80,20 +80,21 @@ export default class WorkerStatus {
   }
 
   static workersWorkingOfFamily(family) {
-    const a = Object.values(WorkerStatus._workers).filter((worker) => (
-      !['done', 'waiting'].includes(worker.status) && worker.family === family
-    )).length;
+    const a = Object.values(WorkerStatus._workers).filter(
+      (worker) => !['done', 'waiting'].includes(worker.status) && worker.family === family,
+    ).length;
     return a;
   }
 
   static workersWorking() {
-    return Object.values(WorkerStatus._workers).filter((worker) => !['done', 'waiting'].includes(worker.status)).length;
+    return Object.values(WorkerStatus._workers).filter(
+      (worker) => !['done', 'waiting'].includes(worker.status),
+    ).length;
   }
 
   static isRegisteredWorker(workerName) {
     return (
-      !!WorkerStatus._workers[workerName]
-      && !!(WorkerStatus._workers[workerName]?.status ?? null)
+      !!WorkerStatus._workers[workerName] && !!(WorkerStatus._workers[workerName]?.status ?? null)
     );
   }
 
@@ -133,10 +134,7 @@ export default class WorkerStatus {
   // }
 
   static initializeReporting() {
-    WorkerStatus.reportingInterval = setInterval(
-      WorkerStatus.reportOnActiveWorkers,
-      1000,
-    );
+    WorkerStatus.reportingInterval = setInterval(WorkerStatus.reportOnActiveWorkers, 1000);
   }
 
   static change(name, status, message) {
@@ -164,8 +162,8 @@ export default class WorkerStatus {
     }
 
     if (
-      !statusses.includes('todo')
-      && (WorkerStatus?.shellArguments?.force?.includes(thisWorker.family) ?? null)
+      !statusses.includes('todo') &&
+      (WorkerStatus?.shellArguments?.force?.includes(thisWorker.family) ?? null)
     ) {
       const forcedMessage = new wsMessage('update', 'message-roll', {
         title: 'Status update',
@@ -190,7 +188,10 @@ export default class WorkerStatus {
         content: `Terminale fout in ${name}`,
       });
       // TODO wordt niet goed opgepakt
-      console.log(`%cSTOPPING SERVER\nbecause of ${name}`, 'color: red; background: yellow; font-weight: bold; font-size: 24px');
+      console.log(
+        `%cSTOPPING SERVER\nbecause of ${name}`,
+        'color: red; background: yellow; font-weight: bold; font-size: 24px',
+      );
       const serverStoptProcess = new wsMessage('process', 'closed', {
         content: `SERVER STOPT vanwege fout in ${name}`,
       });
@@ -201,7 +202,10 @@ export default class WorkerStatus {
       await _t.waitTime(25);
       process.exit();
     } else if (errorLevel === 'close-thread') {
-      console.log(`%cSTOPPING THREAD\n of ${name}`, 'color: red; background: yellow; font-weight: bold; font-size: 18px');
+      console.log(
+        `%cSTOPPING THREAD\n of ${name}`,
+        'color: red; background: yellow; font-weight: bold; font-size: 18px',
+      );
       WorkerStatus.change(name, 'done', message);
       WorkerStatus.getWorkerData(name)?.workerRef?.terminate();
     } else {
@@ -240,14 +244,10 @@ export default class WorkerStatus {
     if (WorkerStatus.checkIfAllDone()) {
       clearInterval(WorkerStatus.reportingInterval);
     }
-    const allWorkersStatussenMsg = new wsMessage(
-      'app-overview',
-      'all-workers',
-      {
-        workers: WorkerStatus._workers,
-        CPUFree: WorkerStatus.CPUFree,
-      },
-    );
+    const allWorkersStatussenMsg = new wsMessage('app-overview', 'all-workers', {
+      workers: WorkerStatus._workers,
+      CPUFree: WorkerStatus.CPUFree,
+    });
     if (WorkerStatus.mwss) {
       WorkerStatus.mwss.broadcast(allWorkersStatussenMsg.json);
     }
@@ -273,7 +273,8 @@ export default class WorkerStatus {
       .sort((eventA, eventB) => {
         if (eventB > eventA) {
           return -1;
-        } if (eventB < eventA) {
+        }
+        if (eventB < eventA) {
           return 1;
         }
         return 0;
@@ -284,16 +285,28 @@ export default class WorkerStatus {
     const working = sorted.filter((w) => w.includes('working'));
     const error = sorted.filter((w) => w.includes('error'));
 
-    console.log('%cDONE WORKERS\r', 'color: white; background: black; font-weight: bold; font-size: 18px');
+    console.log(
+      '%cDONE WORKERS\r',
+      'color: white; background: black; font-weight: bold; font-size: 18px',
+    );
     console.log(done.join('\r'));
     console.log('');
-    console.log('%cWAITING WORKERS\r', 'color: grey; background: black; font-weight: bold; font-size: 18px');
+    console.log(
+      '%cWAITING WORKERS\r',
+      'color: grey; background: black; font-weight: bold; font-size: 18px',
+    );
     console.log(waiting.join('\r'));
     console.log('');
-    console.log('%cWORKING WORKERS\r', 'color: gold; background: black; font-weight: bold; font-size: 18px');
+    console.log(
+      '%cWORKING WORKERS\r',
+      'color: gold; background: black; font-weight: bold; font-size: 18px',
+    );
     console.log(working.join('\r'));
     console.log('');
-    console.log('%cERROR WORKERS\r', 'color: red; background: black; font-weight: bold; font-size: 18px');
+    console.log(
+      '%cERROR WORKERS\r',
+      'color: red; background: black; font-weight: bold; font-size: 18px',
+    );
     console.log(error.join('\r'));
     console.log('');
   }

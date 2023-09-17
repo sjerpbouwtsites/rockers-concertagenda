@@ -2,7 +2,7 @@ module.exports = {
 
   root: true,
   env: {
-    browser: true,
+    node: true,
     es2021: true,
   },
   extends: ['eslint:recommended', 'airbnb-base'],
@@ -40,5 +40,6 @@ module.exports = {
     'no-underscore-dangle': 0,
     'react/jsx-no-target-blank': 0,
     'react/prop-types': 0,
+    'no-trailing-spaces': 0,
   },
 };

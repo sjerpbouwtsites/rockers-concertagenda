@@ -1,6 +1,5 @@
 // #region                                                 IMPORTS
 import { parentPort, workerData } from 'worker_threads';
-import crypto from 'crypto';
 import fs from 'fs';
 import https from 'https';
 import puppeteer from 'puppeteer';
@@ -14,10 +13,15 @@ import getVenueMonths from '../../mods/months.js';
 import ErrorWrapper from '../../mods/error-wrapper.js';
 import makeLongHTML from './longHTML.js';
 import WorkerStatus from '../../mods/WorkerStatus.js';
+import ScraperConfig from './scraper-config.js';
 
 // #endregion                                              IMPORTS
 
-export default class AbstractScraper {
+export default class AbstractScraper extends ScraperConfig {
+  qwm;
+
+  browser;
+
   completedMainPage = false;
 
   workingOnSinglePages = false;
@@ -33,7 +37,12 @@ export default class AbstractScraper {
   eventImagesFolder = fsDirections.publicEventImages;
 
   static unavailabiltyTerms = [
-    'uitgesteld', 'verplaatst', 'locatie gewijzigd', 'besloten', 'afgelast', 'geannuleerd',
+    'uitgesteld',
+    'verplaatst',
+    'locatie gewijzigd',
+    'besloten',
+    'afgelast',
+    'geannuleerd',
   ];
 
   // #region [rgba(0, 0, 30, 0.10)]                             DEBUGSETTINGS
@@ -88,7 +97,7 @@ export default class AbstractScraper {
     'poetry',
     'pubquiz',
     'punk-hop',
-    'quiz\'m',
+    "quiz'm",
     'schaakinstuif',
     'afrobeats',
   ];
@@ -132,7 +141,6 @@ export default class AbstractScraper {
     '[href=Progressive_metal]',
     '[href=Sludge_metal]',
     '[href=Viking_metal]',
-
   ];
 
   static goodCategories = [
@@ -147,7 +155,7 @@ export default class AbstractScraper {
     'hardcore',
     'heavy metal',
     'heavy psych',
-    'heavy rock \'n roll',
+    "heavy rock 'n roll",
     'stoner',
     'garage',
     'industrial',
@@ -173,15 +181,13 @@ export default class AbstractScraper {
 
   // #region [rgba(0, 0, 120, 0.10)]                            CONSTRUCTOR & INSTALL
   constructor(obj) {
-    this.qwm;
-    this.browser;
-    this.install(obj);
+    super(obj);
+
+    this.install();
   }
 
-  install(obj) {
+  install() {
     this.qwm = new QuickWorkerMessage(workerData);
-    this.maxExecutionTime = obj.maxExecutionTime ?? 30000;
-    this.puppeteerConfig = obj.puppeteerConfig ?? {};
     this.months = getVenueMonths(workerData.family);
     this.rockAllowList = fs.readFileSync(fsDirections.isRockAllow, 'utf-8');
     this.rockRefuseList = fs.readFileSync(fsDirections.isRockRefuse, 'utf-8');
@@ -236,31 +242,25 @@ export default class AbstractScraper {
 
   // #region [rgba(0, 0, 240, 0.10)]                            SCRAPE INIT & SCRAPE DIE
   async scrapeInit() {
-    if (!this.puppeteerConfig.app.mainPage.useCustomScraper || !this.puppeteerConfig.app.singlePage.useCustomScraper) {
-      this.browser = await puppeteer.launch({
-
-      });
+    if (!this._s.app.mainPage.useCustomScraper || !this._s.app.singlePage.useCustomScraper) {
+      this.browser = await puppeteer.launch({});
     } else {
       this.browser = 'disabled';
     }
 
-    const baseMusicEvents = await this.mainPage().catch(
-      this.handleOuterScrapeCatch,
-    );
+    const baseMusicEvents = await this.mainPage().catch(this.handleOuterScrapeCatch);
     if (!baseMusicEvents) return false;
     const checkedEvents = await this.announceAndCheck(baseMusicEvents).catch(
       this.handleOuterScrapeCatch,
     );
     this.completedMainPage = true;
     if (!checkedEvents) return false;
-    await this.processSingleMusicEvent(checkedEvents).catch(
-      this.handleOuterScrapeCatch,
-    );
+    await this.processSingleMusicEvent(checkedEvents).catch(this.handleOuterScrapeCatch);
 
     await this.saveRockRefusedAllowedToFile();
 
     await this.announceToMonitorDone();
-    if (!this.puppeteerConfig.app.mainPage.useCustomScraper || !this.puppeteerConfig.app.singlePage.useCustomScraper) {
+    if (!this._s.app.mainPage.useCustomScraper || !this._s.app.singlePage.useCustomScraper) {
       await this.closeBrowser();
     }
     await this.saveEvents();
@@ -285,15 +285,15 @@ export default class AbstractScraper {
 
   baseEventDate() {
     const ddd = new Date();
-    const thisMonth = ((new Date()).getMonth() + 1).toString().padStart(2, '0');
-    const thisDay = ((new Date()).getDate()).toString().padStart(2, '0');
+    const thisMonth = (new Date().getMonth() + 1).toString().padStart(2, '0');
+    const thisDay = new Date().getDate().toString().padStart(2, '0');
     return `${ddd.getFullYear()}${thisMonth}${thisDay}`;
   }
 
   async checkBaseEventAvailable(searching) {
     const baseEventFiles = fs.readdirSync(fsDirections.baseEventlists);
     const theseBaseEvents = baseEventFiles.filter((filenames) => filenames.includes(searching));
-    if (!theseBaseEvents || (theseBaseEvents.length < 1)) {
+    if (!theseBaseEvents || theseBaseEvents.length < 1) {
       return false;
     }
     const thisBaseEvent = theseBaseEvents[0];
@@ -311,15 +311,17 @@ export default class AbstractScraper {
     WorkerStatus.registerFamilyDoneWithBaseEvents(workerData.family);
     if (!data) {
       const err = new Error(`No data in saveBaseEventList ${key}`);
-      _t.wrappedHandleError(new ErrorWrapper({
-        error:err,
-        remarks: 'saveBaseEventList',
-        errorLevel: 'close-thread',
-        workerData,
-        // toDebug: {
-        //   //
-        // }
-      }));
+      _t.wrappedHandleError(
+        new ErrorWrapper({
+          error: err,
+          remarks: 'saveBaseEventList',
+          errorLevel: 'close-thread',
+          workerData,
+          // toDebug: {
+          //   //
+          // }
+        }),
+      );
       return;
     }
 
@@ -347,38 +349,44 @@ export default class AbstractScraper {
   async mainPageStart() {
     // @TODO 3 stopfuncties maken: 1 base events; 1 single; 1 totaal.
     const stopFunctie = setTimeout(() => {
-      _t.wrappedHandleError(new ErrorWrapper({
-        error: new Error('Timeout baseEvent'),
-        remarks: `baseEvent ${workerData.name} overtijd. Max: ${this.puppeteerConfig.mainPage.timeout}`,
-        workerData,
-        errorLevel: 'close-thread',
-      }));
-    }, this.puppeteerConfig.mainPage.timeout);
+      _t.wrappedHandleError(
+        new ErrorWrapper({
+          error: new Error('Timeout baseEvent'),
+          remarks: `baseEvent ${workerData.name} overtijd. Max: ${this._s.mainPage.timeout}`,
+          workerData,
+          errorLevel: 'close-thread',
+        }),
+      );
+    }, this._s.mainPage.timeout);
 
-    if (this.puppeteerConfig.app.mainPage.useCustomScraper) {
+    if (this._s.app.mainPage.useCustomScraper) {
       parentPort.postMessage(this.qwm.messageRoll('customScraper'));
       return {
         stopFunctie,
         page: null,
       };
     }
-    if (!this.puppeteerConfig.app.mainPage.url) {
+    if (!this._s.mainPage.url) {
+      this.dirtyDebug(this._s);
       throw new Error('geen app.mainPage.url ingesteld');
     }
-    if (this.puppeteerConfig.app.mainPage.useCustomScraper) {
+    if (this._s.app.mainPage.useCustomScraper) {
       return { stopFunctie };
     }
     const page = await this.browser.newPage();
-    await page.goto(this.puppeteerConfig.app.mainPage.url, this.puppeteerConfig.mainPage);
+    await page.goto(this._s.mainPage.url, this._s.mainPage);
 
     // zet ErrorWrapper class in puppeteer document.
-    await page.evaluate(({ ErrorWrapperString }) => {
-      const newScriptContent = ErrorWrapperString;
-      const scriptTag = document.createElement('script');
-      scriptTag.id = 'rockagenda-extra-code';
-      scriptTag.innerHTML = newScriptContent;
-      document.body.appendChild(scriptTag);
-    }, { ErrorWrapperString: ErrorWrapper.toString() });
+    // await page.evaluate(
+    //   ({ ErrorWrapperString }) => {
+    //     const newScriptContent = ErrorWrapperString;
+    //     const scriptTag = document.createElement('script');
+    //     scriptTag.id = 'rockagenda-extra-code';
+    //     scriptTag.innerHTML = newScriptContent;
+    //     document.body.appendChild(scriptTag);
+    //   },
+    //   { ErrorWrapperString: ErrorWrapper.toString() },
+    // );
     return {
       stopFunctie,
       page,
@@ -416,9 +424,7 @@ export default class AbstractScraper {
     });
 
     eventsWithLongHTMLShortText.forEach((event) => {
-      const errorVerz = Object.prototype.hasOwnProperty.call(event, 'errors')
-        ? event.errors
-        : [];
+      const errorVerz = Object.prototype.hasOwnProperty.call(event, 'errors') ? event.errors : [];
       errorVerz.forEach((errorData) => {
         errorData.workerData = workerData;
         if (!errorData.error) {
@@ -429,13 +435,12 @@ export default class AbstractScraper {
       });
     });
 
-    const r = rawEvents
-      .map((rawEvent) => {
-        rawEvent.location = workerData.family;
-        rawEvent.origin = workerData.family;
-        return rawEvent;
-      });
-    if (this.puppeteerConfig.app.mainPage.enforceMusicEventType) {
+    const r = rawEvents.map((rawEvent) => {
+      rawEvent.location = workerData.family;
+      rawEvent.origin = workerData.family;
+      return rawEvent;
+    });
+    if (this._s.app.mainPage.enforceMusicEventType) {
       return r.map((event) => new MusicEvent(event));
     }
     return r;
@@ -445,7 +450,7 @@ export default class AbstractScraper {
 
   // #region [rgba(120, 0, 120, 0.10)]                          MAIN PAGE CHECK AND ANNOUNCE
   /**
-   * verifieert requiredProperties uit puppeteerConfig.app.mainPage.requiredProperties
+   * verifieert requiredProperties uit app.mainPage.requiredProperties
    * waarschuwt naar monitor wie uitvalt
    * controleert op verboden woorden zoals 'verplaatst' etc.
    *
@@ -457,9 +462,11 @@ export default class AbstractScraper {
    * @memberof AbstractScraper
    */
   isMusicEventCorruptedMapper = (musicEvent) => {
+    const s = this._s;
+    this.dirtyLog(s);
     const requiredProperties = !this.completedMainPage
-      ? this.puppeteerConfig?.app?.mainPage?.requiredProperties
-      : this.puppeteerConfig?.app?.singlePage?.requiredProperties;
+      ? s.app.mainPage?.requiredProperties
+      : s.app.singlePage?.requiredProperties;
 
     const missingProperties = requiredProperties
       .map((property) => {
@@ -479,7 +486,8 @@ export default class AbstractScraper {
           return `<span class='corrupted-prop'>${property}: ${musicEvent[property]}</span>`;
         }
         return null;
-      }).filter((a) => a);
+      })
+      .filter((a) => a);
 
     if (missingProperties.length > 0) {
       const page = !this.completedMainPage ? 'main:' : 'single:';
@@ -539,24 +547,20 @@ export default class AbstractScraper {
 
         if (this.debugRawEventAsyncCheck && checkResult.reason) {
           parentPort.postMessage(
-            this.qwm.debugger(
-              {
-                title: 'Raw event async check',
-                event: `<a class='single-event-check-notice single-event-check-notice--success' href='${eventToCheck.venueEventUrl}'>${workingTitle}<a/>`,
-                reason: checkResult.reason,
-              },
-            ),
+            this.qwm.debugger({
+              title: 'Raw event async check',
+              event: `<a class='single-event-check-notice single-event-check-notice--success' href='${eventToCheck.venueEventUrl}'>${workingTitle}<a/>`,
+              reason: checkResult.reason,
+            }),
           );
         }
       } else if (this.debugRawEventAsyncCheck) {
         parentPort.postMessage(
-          this.qwm.debugger(
-            {
-              title: 'Raw event async check',
-              event: `<a class='single-event-check-notice single-event-check-notice--failure' href='${eventToCheck.venueEventUrl}'>${workingTitle}<a/>`,
-              reason: checkResult.reason,
-            },
-          ),
+          this.qwm.debugger({
+            title: 'Raw event async check',
+            event: `<a class='single-event-check-notice single-event-check-notice--failure' href='${eventToCheck.venueEventUrl}'>${workingTitle}<a/>`,
+            reason: checkResult.reason,
+          }),
         );
       }
 
@@ -622,10 +626,8 @@ export default class AbstractScraper {
 
     // maak pagina
     let singleEventPage;
-    if (!this.puppeteerConfig.app.singlePage.useCustomScraper) {
-      singleEventPage = await this.createSinglePage(
-        singleEvent.venueEventUrl,
-      );
+    if (!this._s.app.singlePage.useCustomScraper) {
+      singleEventPage = await this.createSinglePage(singleEvent.venueEventUrl);
       if (!singleEventPage) {
         singleEvent.corrupted = 'niet gelukt page te maken';
         return useableEventsList.length
@@ -733,7 +735,7 @@ export default class AbstractScraper {
     try {
       const page = await this.browser.newPage();
       try {
-        await page.goto(url, this.puppeteerConfig.singlePage);
+        await page.goto(url, this.singlePage);
       } catch (error) {
         _t.handleError(
           error,
@@ -744,14 +746,17 @@ export default class AbstractScraper {
         );
       }
 
-      // zet ErrorWrapper class in puppeteer document.
-      await page.evaluate(({ ErrorWrapperString }) => {
-        const newScriptContent = ErrorWrapperString;
-        const scriptTag = document.createElement('script');
-        scriptTag.id = 'rockagenda-extra-code';
-        scriptTag.innerHTML = newScriptContent;
-        document.body.appendChild(scriptTag);
-      }, { ErrorWrapperString: ErrorWrapper.toString() });
+      // // zet ErrorWrapper class in puppeteer document.
+      // await page.evaluate(
+      //   ({ ErrorWrapperString }) => {
+      //     const newScriptContent = ErrorWrapperString;
+      //     const scriptTag = document.createElement('script');
+      //     scriptTag.id = 'rockagenda-extra-code';
+      //     scriptTag.innerHTML = newScriptContent;
+      //     document.body.appendChild(scriptTag);
+      //   },
+      //   { ErrorWrapperString: ErrorWrapper.toString() },
+      // );
       return page;
     } catch (error) {
       _t.handleError(
@@ -765,13 +770,14 @@ export default class AbstractScraper {
   }
 
   titelShorttextPostfix(musicEvent) {
-    const titleIsCapsArr = musicEvent.title
-      .split('')
-      .map((char) => char === char.toUpperCase());
+    const titleIsCapsArr = musicEvent.title.split('').map((char) => char === char.toUpperCase());
     const noOfCapsInTitle = titleIsCapsArr.filter((a) => a).length;
-    const toManyCapsInTitle = ((musicEvent.title.length - noOfCapsInTitle) / musicEvent.title.length) < 0.5;
+    const toManyCapsInTitle =
+      (musicEvent.title.length - noOfCapsInTitle) / musicEvent.title.length < 0.5;
     if (toManyCapsInTitle) {
-      musicEvent.title = musicEvent.title.substring(0, 1).toUpperCase() + musicEvent.title.substring(1, 500).toLowerCase();
+      musicEvent.title =
+        musicEvent.title.substring(0, 1).toUpperCase() +
+        musicEvent.title.substring(1, 500).toLowerCase();
     }
 
     if (musicEvent.title.length > 45) {
@@ -810,13 +816,15 @@ export default class AbstractScraper {
    */
   async singlePageStart(event) {
     const stopFunctie = setTimeout(() => {
-      _t.wrappedHandleError(new ErrorWrapper({
-        error: new Error('Timeout baseEvent'),
-        remarks: `<a href='${event?.venueEventUrl}' class='error-link get-page-info-timeout'>singlePage ${workerData.name} overtijd</a>.\nMax: ${this.puppeteerConfig.singlePage.timeout}`,
-        workerData,
-        errorLevel: 'notice',
-      }));
-    }, this.puppeteerConfig.singlePage.timeout);
+      _t.wrappedHandleError(
+        new ErrorWrapper({
+          error: new Error('Timeout baseEvent'),
+          remarks: `<a href='${event?.venueEventUrl}' class='error-link get-page-info-timeout'>singlePage ${workerData.name} overtijd</a>.\nMax: ${this._s.singlePage.timeout}`,
+          workerData,
+          errorLevel: 'notice',
+        }),
+      );
+    }, this._s.singlePage.timeout);
     return {
       stopFunctie,
     };
@@ -831,13 +839,13 @@ export default class AbstractScraper {
    * @returns {*} pageInfo
    * @memberof AbstractScraper
    */
-  async singlePageEnd({
-    pageInfo, stopFunctie, page, event,
-  }) {
-    this.isForced && this.debugPageInfo && this.dirtyLog({
-      event,
-      pageInfo,
-    });
+  async singlePageEnd({ pageInfo, stopFunctie, page, event }) {
+    this.isForced &&
+      this.debugPageInfo &&
+      this.dirtyLog({
+        event,
+        pageInfo,
+      });
 
     if (!pageInfo) {
       page && !page.isClosed() && page.close();
@@ -875,7 +883,7 @@ export default class AbstractScraper {
         if (!errorData.error?.message) {
           const initRemarks = errorData?.remarks ?? '';
           errorData.error = new Error(!errorData?.remarks);
-          const url = event.venueEventUrl ?? pageInfo.venueEventUrl;
+          const url = event?.venueEventUrl ?? pageInfo.venueEventUrl;
           const title = event?.title ?? pageInfo.title;
           errorData.remarks = `Mislukte error van:\n\n${initRemarks}\n<a href='${url}'>${title}</a>`;
         }
@@ -884,13 +892,7 @@ export default class AbstractScraper {
       } catch (errorOfErrors) {
         const cp = { ...pageInfo };
         delete cp.longTextHTML;
-        _t.handleError(
-          errorOfErrors,
-          workerData,
-          'mislukte error',
-          'close-thread',
-          cp,
-        );
+        _t.handleError(errorOfErrors, workerData, 'mislukte error', 'close-thread', cp);
       }
     });
 
@@ -938,16 +940,21 @@ export default class AbstractScraper {
           combinedTextToCheck += v.toLowerCase();
         }
       } catch (error) {
-        this.dirtyDebug({
-          fout: `fout maken controle text met keys, key${keysToCheck2[i]}`,
-          toDebug: {
-            event,
+        this.dirtyDebug(
+          {
+            fout: `fout maken controle text met keys, key${keysToCheck2[i]}`,
+            toDebug: {
+              event,
+            },
           },
-        }, 'hasGoodTerms');
+          'hasGoodTerms',
+        );
       }
     }
 
-    const hasGoodTerm = AbstractScraper.goodCategories.find((goodTerm) => combinedTextToCheck.includes(goodTerm));
+    const hasGoodTerm = AbstractScraper.goodCategories.find((goodTerm) =>
+      combinedTextToCheck.includes(goodTerm),
+    );
     const workingTitle = this.cleanupEventTitle(event.title);
     if (hasGoodTerm) {
       return {
@@ -987,7 +994,9 @@ export default class AbstractScraper {
       }
     }
     combinedTextToCheck = combinedTextToCheck.toLowerCase();
-    const hasForbiddenTerm = AbstractScraper.forbiddenTerms.find((forbiddenTerm) => combinedTextToCheck.includes(forbiddenTerm));
+    const hasForbiddenTerm = AbstractScraper.forbiddenTerms.find((forbiddenTerm) =>
+      combinedTextToCheck.includes(forbiddenTerm),
+    );
     if (hasForbiddenTerm) {
       return {
         workingTitle,
@@ -1022,7 +1031,11 @@ export default class AbstractScraper {
     }
     if (this.rockRefuseListNew) {
       const huiLijst = fs.readFileSync(fsDirections.isRockRefuse, 'utf-8');
-      fs.writeFileSync(fsDirections.isRockRefuse, `${this.rockRefuseListNew}\n${huiLijst}`, 'utf-8');
+      fs.writeFileSync(
+        fsDirections.isRockRefuse,
+        `${this.rockRefuseListNew}\n${huiLijst}`,
+        'utf-8',
+      );
     }
     return true;
   }
@@ -1071,13 +1084,16 @@ export default class AbstractScraper {
           return false;
         });
         return bandNamesAreMainTitle;
-      }).catch((metalEncError) => {
-        _t.wrappedHandleError(new ErrorWrapper({
-          error: metalEncError,
-          remarks: `<a href='${event?.venueEventUrl}' class='error-link get-page-info-timeout'>singlePage ${workerData.name} metal enc. error</a>`,
-          workerData,
-          errorLevel: 'notice',
-        }));
+      })
+      .catch((metalEncError) => {
+        _t.wrappedHandleError(
+          new ErrorWrapper({
+            error: metalEncError,
+            remarks: `<a href='${event?.venueEventUrl}' class='error-link get-page-info-timeout'>singlePage ${workerData.name} metal enc. error</a>`,
+            workerData,
+            errorLevel: 'notice',
+          }),
+        );
         return {
           event,
           success: false,
@@ -1110,25 +1126,31 @@ export default class AbstractScraper {
     const page = await this.browser.newPage();
     let wikiPage;
     try {
-      const wikifiedTitled = workingTitle.split(' ')
+      const wikifiedTitled = workingTitle
+        .split(' ')
         .filter((a) => a)
-        .map((word) => word[0].toUpperCase() + word.substring(1, word.length)).join('_')
+        .map((word) => word[0].toUpperCase() + word.substring(1, word.length))
+        .join('_')
         .replace(/\W/g, '');
       wikiPage = `https://en.wikipedia.org/wiki/${wikifiedTitled}`;
       await page.goto(wikiPage);
     } catch (error) {
-      _t.wrappedHandleError(new ErrorWrapper({
-        error,
-        remarks: `<a href='${event?.venueEventUrl}' class='error-link get-page-info-timeout'>wikititel maken fout ${workerData.name}</a> ${workingTitle}`,
-        workerData,
-        errorLevel: 'notice',
-      }));
+      _t.wrappedHandleError(
+        new ErrorWrapper({
+          error,
+          remarks: `<a href='${event?.venueEventUrl}' class='error-link get-page-info-timeout'>wikititel maken fout ${workerData.name}</a> ${workingTitle}`,
+          workerData,
+          errorLevel: 'notice',
+        }),
+      );
     }
 
     const pageDoesNotExist = await page.evaluate(() => document.getElementById('noarticletext'));
 
     if (pageDoesNotExist) {
-      const searchPage =  await page.evaluate(() => document.getElementById('noarticletext').querySelector('[href*=search]')?.href ?? '');
+      const searchPage = await page.evaluate(
+        () => document.getElementById('noarticletext').querySelector('[href*=search]')?.href ?? '',
+      );
       await page.goto(searchPage);
       if (!searchPage) {
         return {
@@ -1138,9 +1160,13 @@ export default class AbstractScraper {
           success: false,
         };
       }
-      const matchingResults = await page.evaluate(({ title }) => Array.from(document.querySelectorAll('.mw-search-results [href*=wiki]'))
-        .filter((anker) => anker.textContent.toLowerCase().includes(title.toLowerCase()))
-        .map((anker) => anker.href), { title });
+      const matchingResults = await page.evaluate(
+        ({ title }) =>
+          Array.from(document.querySelectorAll('.mw-search-results [href*=wiki]'))
+            .filter((anker) => anker.textContent.toLowerCase().includes(title.toLowerCase()))
+            .map((anker) => anker.href),
+        { title },
+      );
       if (!matchingResults || !Array.isArray(matchingResults) || !matchingResults.length) {
         return {
           event,
@@ -1152,18 +1178,21 @@ export default class AbstractScraper {
       await page.goto(matchingResults[0]);
     }
 
-    const wikiRockt = await page.evaluate(({ wikipediaGoodGenres }) => {
-      let found = false;
-      let i = 0;
-      while (found === false && i < wikipediaGoodGenres.length) {
-        const thisSelector = wikipediaGoodGenres[i];
-        if (document.querySelector(`.infobox ${thisSelector}`)) {
-          found = true;
+    const wikiRockt = await page.evaluate(
+      ({ wikipediaGoodGenres }) => {
+        let found = false;
+        let i = 0;
+        while (found === false && i < wikipediaGoodGenres.length) {
+          const thisSelector = wikipediaGoodGenres[i];
+          if (document.querySelector(`.infobox ${thisSelector}`)) {
+            found = true;
+          }
+          i++;
         }
-        i++;
-      }
-      return found;
-    }, { wikipediaGoodGenres: AbstractScraper.wikipediaGoodGenres });
+        return found;
+      },
+      { wikipediaGoodGenres: AbstractScraper.wikipediaGoodGenres },
+    );
     !page.isClosed() && page.close();
     if (wikiRockt) {
       return {
@@ -1250,19 +1279,21 @@ export default class AbstractScraper {
         workingTitle = workingTitle.replace(/^[\w\s]+:/, '');
       }
     } catch (error) {
-      _t.wrappedHandleError(new ErrorWrapper({
-        error,
-        workerData,
-        remarks: 'fout schoonmaken titel',
-        errorLevel: 'notice',
-      }));
+      _t.wrappedHandleError(
+        new ErrorWrapper({
+          error,
+          workerData,
+          remarks: 'fout schoonmaken titel',
+          errorLevel: 'notice',
+        }),
+      );
       return 'TITEL SCHOONMAKEN MISLUKT';
     }
 
     return workingTitle.toLowerCase().trim();
   }
 
-  * eventGenerator(events) {
+  *eventGenerator(events) {
     while (events.length) {
       yield events.shift();
     }
@@ -1271,9 +1302,7 @@ export default class AbstractScraper {
 
   // #region [rgba(120, 0, 120, 0.10)]                          PRICE
 
-  async getPriceFromHTML({
-    page, event, pageInfo, selectors,
-  }) {
+  async getPriceFromHTML({ page, event, pageInfo, selectors }) {
     const priceRes = {
       price: null,
       errors: [],
@@ -1295,12 +1324,17 @@ export default class AbstractScraper {
 
     const testText = await page.evaluate((selector) => {
       if (!document.querySelector(selector)) return false;
-      return Array.from(document.querySelectorAll(selector)).map((el) => el?.textContent).join('');
+      return Array.from(document.querySelectorAll(selector))
+        .map((el) => el?.textContent)
+        .join('');
     }, firstSelector);
 
     if (!testText && selectorsCopy.length) {
       return await this.getPriceFromHTML({
-        page, event, pageInfo, selectors:selectorsCopy,
+        page,
+        event,
+        pageInfo,
+        selectors: selectorsCopy,
       });
     }
 
@@ -1308,7 +1342,8 @@ export default class AbstractScraper {
       if (testText === false) {
         if (workingEventObj.soldOut) {
           priceRes.price = 0;
-          if (this.debugPrice) priceRes.errors.push({ remarks: `uitverkocht. vergeef geen price ${pi}` });
+          if (this.debugPrice)
+            priceRes.errors.push({ remarks: `uitverkocht. vergeef geen price ${pi}` });
         } else {
           priceRes.errors.push({ remarks: `geen el in ${firstSelector} ${pi}` });
         }
@@ -1320,19 +1355,18 @@ export default class AbstractScraper {
 
     if (testText.match(/start/i)) {
       priceRes.price = null;
-      this.debugPrice && this.dirtyDebug({
-        pi,
-        price:priceRes.price,
-        type: 'NOG ONBEKEND',
-      });
+      this.debugPrice &&
+        this.dirtyDebug({
+          pi,
+          price: priceRes.price,
+          type: 'NOG ONBEKEND',
+        });
       return priceRes;
     }
 
-    const priceMatch = testText
-      .match(/(?<euros>\d{1,3})\s?(?<scheiding>[,.]?)\s?(?<centen>\d+|-)/);
+    const priceMatch = testText.match(/(?<euros>\d{1,3})\s?(?<scheiding>[,.]?)\s?(?<centen>\d+|-)/);
 
-    const priceMatchEuros = testText
-      .match(/\d+/);
+    const priceMatchEuros = testText.match(/\d+/);
 
     const euros = priceMatch?.groups?.euros ?? null;
     const centen = priceMatch?.groups?.centen ?? null;
@@ -1368,37 +1402,57 @@ export default class AbstractScraper {
       }
     }
 
-    const priceString = priceStringR.replace(',', '.').replace('-', '00').replaceAll(/\s/g, '').replace('€', '');
+    const priceString = priceStringR
+      .replace(',', '.')
+      .replace('-', '00')
+      .replaceAll(/\s/g, '')
+      .replace('€', '');
 
     const debugIncl = {
-      euros, centen, scheiding, backupEuros, pi, testText, priceMatchEuros, priceStringR,
+      euros,
+      centen,
+      scheiding,
+      backupEuros,
+      pi,
+      testText,
+      priceMatchEuros,
+      priceStringR,
     };
 
     if (this.debugPrice) {
       this.dirtyLog(debugIncl);
     }
 
-    if (testText.match(/gratis|free/i) && !Array.isArray(priceMatch) && !Array.isArray(priceMatchEuros)) {
+    if (
+      testText.match(/gratis|free/i) &&
+      !Array.isArray(priceMatch) &&
+      !Array.isArray(priceMatchEuros)
+    ) {
       priceRes.price = 0;
-      this.debugPrice && this.dirtyDebug({
-        price:priceRes.price,
-        type: 'GRATIS',
-      });
+      this.debugPrice &&
+        this.dirtyDebug({
+          price: priceRes.price,
+          type: 'GRATIS',
+        });
       return priceRes;
     }
 
     if (!Array.isArray(priceMatch) && !Array.isArray(priceMatchEuros)) {
       if (selectorsCopy.length) {
         return await this.getPriceFromHTML({
-          page, event, pageInfo, selectors:selectorsCopy,
+          page,
+          event,
+          pageInfo,
+          selectors: selectorsCopy,
         });
       }
       if (testText.match(/uitverkocht|sold\sout/i)) {
         priceRes.price = null;
-        this.debugPrice && this.dirtyDebug({
-          price: priceRes.price,
-          type: 'UITVERKOCHT',
-        });
+        this.debugPrice &&
+          this.dirtyDebug({
+            price: priceRes.price,
+            type: 'UITVERKOCHT',
+          });
         return priceRes;
       }
       priceRes.errors.push({
@@ -1411,10 +1465,11 @@ export default class AbstractScraper {
     if (!Array.isArray(priceMatch) && Array.isArray(priceMatchEuros)) {
       priceRes.price = Number(priceMatchEuros[0]);
       this.checkIsNumber(priceRes, pi);
-      this.debugPrice && this.dirtyDebug({
-        price:priceRes.price,
-        type:'geen priceMatch wel matchEuros',
-      });
+      this.debugPrice &&
+        this.dirtyDebug({
+          price: priceRes.price,
+          type: 'geen priceMatch wel matchEuros',
+        });
       return priceRes;
     }
 
@@ -1428,17 +1483,21 @@ export default class AbstractScraper {
     } catch (priceCalcErr) {
       if (selectorsCopy.length) {
         return await this.getPriceFromHTML({
-          page, event, pageInfo, selectors:selectorsCopy,
+          page,
+          event,
+          pageInfo,
+          selectors: selectorsCopy,
         });
       }
 
       if (testText.match(/uitverkocht|sold\sout/i)) {
         priceRes.price = null;
-        this.debugPrice && this.dirtyDebug({
-          price: priceRes.price,
-          type: 'UITVERKOCHT',
-          ...debugIncl,
-        });
+        this.debugPrice &&
+          this.dirtyDebug({
+            price: priceRes.price,
+            type: 'UITVERKOCHT',
+            ...debugIncl,
+          });
         return priceRes;
       }
       priceRes.push({
@@ -1464,7 +1523,12 @@ export default class AbstractScraper {
   // #region [rgba(150, 0, 150, 0.10)]                          LONG HTML
   writeLongTextHTML(mergedEvent) {
     if (!mergedEvent) return null;
-    const uuid = crypto.randomUUID();
+    const base64String = Buffer.from(
+      mergedEvent.venueEventUrl
+        .replace('www.', '')
+        .replace('https://', '')
+        .replace(/\w+\.\w{2,3}/, ''),
+    ).toString('base64');
     const toPrint = makeLongHTML(mergedEvent);
 
     if (!fs.existsSync(`${fsDirections.publicTexts}/${mergedEvent.location}/`)) {
@@ -1472,12 +1536,12 @@ export default class AbstractScraper {
     }
 
     try {
-      const longTextPath = `${fsDirections.publicTexts}/${mergedEvent.location}/${uuid}.html`;
+      const longTextPath = `${fsDirections.publicTexts}/${mergedEvent.location}/${base64String}.html`;
       fs.writeFileSync(longTextPath, toPrint, 'utf-8');
       return longTextPath;
     } catch (err) {
       _t.handleError(err, workerData, 'write long text fail', 'notice', {
-        path: `${fsDirections.publicTexts}/${mergedEvent.location}/${uuid}.html`,
+        path: `${fsDirections.publicTexts}/${mergedEvent.location}/${base64String}.html`,
         text: toPrint,
       });
     }
@@ -1486,9 +1550,7 @@ export default class AbstractScraper {
   // #endregion                                                 LONG HTML
 
   // #region [rgba(180, 0, 180, 0.10)]                          IMAGE
-  async getImage({
-    page, event, pageInfo, selectors, mode,
-  }) {
+  async getImage({ page, event, pageInfo, selectors, mode }) {
     const res = {
       errors: [],
     };
@@ -1541,55 +1603,69 @@ export default class AbstractScraper {
     if (mode === 'image-src') {
       while (!image && selectorsCopy.length > 0) {
         const selector = selectorsCopy.shift();
-        image = await page.evaluate(({ selector }) => {
-          const el = document.querySelector(selector);
-          let src = null;
-          if (!el?.src && el?.hasAttribute('data-src')) {
-            src = el.getAttribute('data-src');
-          } else if (!el?.src && el?.hasAttribute('srcset')) {
-            src = el.getAttribute('srcset').split(/\s/)[0];
-          } else {
-            src = el?.src ?? null;
-          }
+        image = await page.evaluate(
+          ({ selector }) => {
+            const el = document.querySelector(selector);
+            let src = null;
+            if (!el?.src && el?.hasAttribute('data-src')) {
+              src = el.getAttribute('data-src');
+            } else if (!el?.src && el?.hasAttribute('srcset')) {
+              src = el.getAttribute('srcset').split(/\s/)[0];
+            } else {
+              src = el?.src ?? null;
+            }
 
-          if (src && !src.includes('https')) {
-            src = `${document.location.protocol}//${document.location.hostname}${src}`;
-          }
+            if (src && !src.includes('https')) {
+              src = `${document.location.protocol}//${document.location.hostname}${src}`;
+            }
 
-          return src;
-        }, { selector });
+            return src;
+          },
+          { selector },
+        );
       }
     } else if (mode === 'background-src') {
       while (!image && selectorsCopy.length > 0) {
         const selector = selectorsCopy.shift();
-        image = await page.evaluate(({ selector }) => {
-          const mmm = document.querySelector(selector)?.style.backgroundImage.match(/https.*.jpg|https.*.jpeg|https.*.png|https.*.webp/) ?? null;
-          if (!Array.isArray(mmm)) return null;
-          let src = mmm[0];
-          if (!src.includes('https')) {
-            src = `${document.location.protocol}//${document.location.hostname}${src}`;
-          }
-          return src;
-        }, { selector });
+        image = await page.evaluate(
+          ({ selector }) => {
+            const mmm =
+              document
+                .querySelector(selector)
+                ?.style.backgroundImage.match(
+                  /https.*.jpg|https.*.jpeg|https.*.png|https.*.webp/,
+                ) ?? null;
+            if (!Array.isArray(mmm)) return null;
+            let src = mmm[0];
+            if (!src.includes('https')) {
+              src = `${document.location.protocol}//${document.location.hostname}${src}`;
+            }
+            return src;
+          },
+          { selector },
+        );
       }
     } else if (mode === 'weird-attr') {
       while (!image && selectorsCopy.length > 0) {
         const selector = selectorsCopy.shift();
-        image = await page.evaluate(({ selector }) => {
-          const el = document.querySelector(selector);
-          let src = null;
-          if (!el?.href && el?.hasAttribute('content')) {
-            src = el.getAttribute('content');
-          } else {
-            src = el?.href ?? null;
-          }
+        image = await page.evaluate(
+          ({ selector }) => {
+            const el = document.querySelector(selector);
+            let src = null;
+            if (!el?.href && el?.hasAttribute('content')) {
+              src = el.getAttribute('content');
+            } else {
+              src = el?.href ?? null;
+            }
 
-          if (!src.includes('https')) {
-            src = `${document.location.protocol}//${document.location.hostname}${src}`;
-          }
+            if (!src.includes('https')) {
+              src = `${document.location.protocol}//${document.location.hostname}${src}`;
+            }
 
-          return src;
-        }, { selector });
+            return src;
+          },
+          { selector },
+        );
       }
     }
 
@@ -1600,14 +1676,29 @@ export default class AbstractScraper {
       return res;
     }
 
-    const imageCrypto = crypto.randomUUID();
-    let imagePath = `${this.eventImagesFolder}/${workerData.family}/${imageCrypto}`;
-    const diCompressRes = await this.downloadImageCompress(event, image, imagePath);
-    if (!diCompressRes) {
-      res.errors.push({
-        remarks: `download compress ${event.title} ${image} fail`,
-      });
-      imagePath = '';
+    const base64String = Buffer.from(
+      event.venueEventUrl
+        .replace('www.', '')
+        .replace('https://', '')
+        .replace(/\w+\.\w{2,3}/, ''),
+    ).toString('base64');
+    let imagePath = `${this.eventImagesFolder}/${workerData.family}/${base64String}`;
+
+    if (
+      !WorkerStatus?.shellArguments?.keepImages ||
+      WorkerStatus?.shellArguments?.keepImages === 'false'
+    ) {
+      if (fs.existsSync(`${imagePath}-vol.webp`)) {
+        // niets doen!
+      } else {
+        const diCompressRes = await this.downloadImageCompress(event, image, imagePath);
+        if (!diCompressRes) {
+          res.errors.push({
+            remarks: `download compress ${event.title} ${image} fail`,
+          });
+          imagePath = '';
+        }
+      }
     }
 
     res.image = imagePath;
@@ -1619,15 +1710,19 @@ export default class AbstractScraper {
       try {
         https.get(url, (res) => {
           if (res.statusCode === 200) {
-            res.pipe(fs.createWriteStream(filepath))
+            res
+              .pipe(fs.createWriteStream(filepath))
               .on('error', reject)
               .once('close', () => resolve(filepath));
-          } else if ((`${res.statusCode}`)[0] === '3') {
-           
-            resolve(`${fsDirections.publicLocationImages}/${workerData.family}-vol.webp`)
+          } else if (`${res.statusCode}`[0] === '3') {
+            resolve(`${fsDirections.publicLocationImages}/${workerData.family}-vol.webp`);
           } else {
             res.resume();
-            reject(new Error(`Request Failed With a Status Code: ${res.statusCode} see <a href='vscode://vscode-remote/wsl+Ubuntu-22.04/home/sjerp/dev/apache/concertagenda/backend/temp/error.log:1:1'>the log</a>`));
+            reject(
+              new Error(
+                `Request Failed With a Status Code: ${res.statusCode} see <a href='vscode://vscode-remote/wsl+Ubuntu-22.04/home/sjerp/dev/apache/concertagenda/backend/temp/error.log:1:1'>the log</a>`,
+              ),
+            );
           }
         });
       } catch (error) {
@@ -1664,27 +1759,30 @@ export default class AbstractScraper {
     try {
       await this.downloadImage(image, `${imagePath}-ori${extension}`);
     } catch (error) {
-      _t.wrappedHandleError(new ErrorWrapper({
-        error,
-        remarks: 'download image',
-        errorLevel: 'notice',
-        workerData,
-        toDebug: {
-          image, imagePath,
-        },
-      }));
+      _t.wrappedHandleError(
+        new ErrorWrapper({
+          error,
+          remarks: 'download image',
+          errorLevel: 'notice',
+          workerData,
+          toDebug: {
+            image,
+            imagePath,
+          },
+        }),
+      );
       return false;
     }
 
     await sharp(`${imagePath}-ori${extension}`)
-      .resize(440, 225)
+      .resize(440, 250)
       .webp()
       .toFile(`${imagePath}-w440.webp`, (err, info) => {
         //
       });
 
     await sharp(`${imagePath}-ori${extension}`)
-      .resize(750, 360)
+      .resize(750, 340)
       .webp()
       .toFile(`${imagePath}-w750.webp`, (err, info) => {
         //
@@ -1695,8 +1793,6 @@ export default class AbstractScraper {
       .toFile(`${imagePath}-vol.webp`, (err, info) => {
         //
       });
-
-
 
     return true;
   }
@@ -1711,9 +1807,9 @@ export default class AbstractScraper {
 
   // step 4.5
   async closeBrowser() {
-    this.browser
-      && Object.prototype.hasOwnProperty.call(this.browser, 'close')
-      && this.browser.close();
+    this.browser &&
+      Object.prototype.hasOwnProperty.call(this.browser, 'close') &&
+      this.browser.close();
     return true;
   }
 

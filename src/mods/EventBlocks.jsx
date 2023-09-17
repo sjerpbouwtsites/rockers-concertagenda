@@ -174,15 +174,17 @@ ${BEMify('event-block', [
 
     imgSrc = imgSrc.replace('../public', '');
 
-    const srcset = `${imgSrc}-w440.webp 480w, ${imgSrc}-w750.webp 750w`;
-    const sizes = '(max-width: 600px) 480px, 750px';
+    const srcset = `${imgSrc}-w750.webp 750w`;
+    const sizes = '(min-width: 480px) 750px';
     const src = `${imgSrc}-w440.webp`;
-
+    
     return imgSrc ? (
       <img
-        srcSet={srcset}
         src={src}
+        srcSet={srcset}
         sizes={sizes}
+        width="440"
+        height="220"
         className={selectors.image}
         alt={musicEvent.title}
       />

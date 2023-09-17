@@ -34,20 +34,14 @@ export default class EventsList {
       const inbetweenFix = workerIndex !== null ? `${workerIndex}` : '0';
       const pathToEventListFile = `${pathToEventList}/${name}/${inbetweenFix}.json`;
       const pathToINVALIDEventListFile = `${pathToINVALIDEventList}/${name}/invalid-${inbetweenFix}.json`;
-      fs.writeFile(
-        pathToEventListFile,
-        JSON.stringify(EventsList._events, null, '  '),
-        () => {},
-      );
+      fs.writeFile(pathToEventListFile, JSON.stringify(EventsList._events, null, '  '), () => {});
       fs.writeFile(
         pathToINVALIDEventListFile,
         JSON.stringify(EventsList._invalidEvents, null, '  '),
         () => {},
       );
 
-      const eventListTimestamps = JSON.parse(
-        fs.readFileSync(fsDirections.timestampsJson),
-      );
+      const eventListTimestamps = JSON.parse(fs.readFileSync(fsDirections.timestampsJson));
       const d = new Date();
       eventListTimestamps[name] = d.getTime();
 
@@ -66,19 +60,18 @@ export default class EventsList {
           invalidEvents: EventsList._invalidEvent,
           meta: EventsList._meta,
         },
-
       );
       return false;
     }
     return true;
   }
 
-  static guaranteeTimestampExistence() { // TODO LEGACY
+  static guaranteeTimestampExistence() {
+    // TODO LEGACY
     // if (EventsList.timestampsExistenceVerified) return true;
     // if (!fs.existsSync(fsDirections.timestampsJson)) {
     //   fs.writeFileSync(fsDirections.timestampsJson, JSON.stringify({}));
     // } else {
-
     //   try {
     //     JSON.parse(fs.readFileSync(fsDirections.timestampsJson));
     //   } catch (error) {
@@ -153,38 +146,30 @@ export default class EventsList {
     });
 
     const nowDateString = new Date();
-    const nowDate = Number(
-      nowDateString.toISOString().substring(0, 10).replace(/-/g, ''),
-    );
+    const nowDate = Number(nowDateString.toISOString().substring(0, 10).replace(/-/g, ''));
 
-    EventsList._events = EventsList._events
-      .filter((event) => {
-        const musicEventTime = Number(
-          event.start.substring(0, 10).replace(/-/g, ''),
-        );
-        return musicEventTime >= nowDate;
-      });
+    EventsList._events = EventsList._events.filter((event) => {
+      const musicEventTime = Number(event.start.substring(0, 10).replace(/-/g, ''));
+      return musicEventTime >= nowDate;
+    });
     EventsList._events = EventsList._events.sort((eventA, eventB) => {
       let dataA;
       try {
-        dataA = Number(
-          eventA.start.substring(0, 10).replace(/-/g, ''),
-        );
+        dataA = Number(eventA.start.substring(0, 10).replace(/-/g, ''));
       } catch (error) {
         dataA = 20501231;
       }
       let dataB;
       try {
-        dataB = Number(
-          eventB.start.substring(0, 10).replace(/-/g, ''),
-        );
+        dataB = Number(eventB.start.substring(0, 10).replace(/-/g, ''));
       } catch (error) {
         dataB = 20501231;
       }
 
       if (dataA > dataB) {
         return -1;
-      } if (dataA < dataB) {
+      }
+      if (dataA < dataB) {
         return 1;
       }
       return 0;
@@ -192,41 +177,22 @@ export default class EventsList {
 
     EventsList._events = EventsList._events.reverse();
 
-    fs.writeFileSync(
-      fsDirections.metaJson,
-      JSON.stringify(EventsList._meta, null, '  '),
-      'utf-8',
-    );
+    fs.writeFileSync(fsDirections.metaJson, JSON.stringify(EventsList._meta, null, '  '), 'utf-8');
     const qwm = new QuickWorkerMessage(EventsList.workerSignature);
-    passMessageToMonitor(
-      qwm.toConsole(EventsList._meta),
-      EventsList.workerSignature,
-    );
+    passMessageToMonitor(qwm.toConsole(EventsList._meta), EventsList.workerSignature);
 
     fs.writeFileSync(
       fsDirections.eventsListJson,
       JSON.stringify(EventsList._events, null, '  '),
       'utf-8',
     );
-    passMessageToMonitor(
-      qwm.toConsole(EventsList._events),
-      EventsList.workerSignature,
-    );
+    passMessageToMonitor(qwm.toConsole(EventsList._events), EventsList.workerSignature);
 
     fs.copyFileSync(fsDirections.metaJson, fsDirections.metaPublicJson);
 
-    fs.copyFileSync(
-      fsDirections.eventsListJson,
-      fsDirections.eventsListPublicJson,
-    );
-    fs.copyFileSync(
-      fsDirections.timestampsJson,
-      fsDirections.timestampsPublicJson,
-    );
-    console.log(
-      'hier was de events perlocation',
-      'events-list EventsList._events.sort',
-    );
+    fs.copyFileSync(fsDirections.eventsListJson, fsDirections.eventsListPublicJson);
+    fs.copyFileSync(fsDirections.timestampsJson, fsDirections.timestampsPublicJson);
+    console.log('hier was de events perlocation', 'events-list EventsList._events.sort');
     // console.log(" ")
     // console.log("Events per location:")
     // Object.values(EventsList._meta.locations).forEach(locationMeta => {

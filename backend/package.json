@@ -11,7 +11,7 @@
     "backend": "npm run kill-chrome; cd ~/dev/apache/concertagenda/backend; clear; node index.js force=all; clear; echo 'backend gedaan';",
     "lint:fix": "eslint --quiet --fix ./**/*.{js,jsx}",
     "eslint-for-formatting": "npm run lint:fix;",
-    "prettier-for-formatting": "prettier --config .prettierrc './**/*.{js,jsx,css}' --write --silent --;"
+    "prettier-for-formatting": "prettier --config .prettierrc './**/*.{js,jsx,css}' --write;"
   },
   "author": "",
   "license": "ISC",

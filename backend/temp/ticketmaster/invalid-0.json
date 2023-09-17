@@ -1,36 +1,36 @@
 [
   {
     "door": null,
-    "start": "2023-08-13T16:30:00Z",
+    "start": "2023-09-25T18:00:00Z",
     "end": null,
-    "venueEventUrl": "https://www.ticketmaster.nl/event/heaven-shall-burn-tickets/291715?language=en-us",
-    "title": "Heaven Shall Burn",
+    "venueEventUrl": "https://www.ticketmaster.nl/event/jazmin-bean-tickets/295301?language=en-us",
+    "title": "Jazmin Bean",
     "location": "melkweg",
     "price": null,
     "longText": null,
-    "image": "https://s1.ticketm.net/dam/a/268/ae8b5d14-3a16-454b-a019-200d6f59b268_SOURCE",
+    "image": "https://s1.ticketm.net/dam/a/5c1/131cef89-e082-45f5-84b4-59738fe665c1_RETINA_LANDSCAPE_16_9.jpg",
     "soldOut": null,
     "unavailable": " locatie melkweg niet bij TM.",
     "corrupted": "single: <span class='corrupted-prop'>price: null</span>",
-    "name": "Heaven Shall Burn",
+    "name": "Jazmin Bean",
     "type": "event",
-    "id": "Z698xZbpZ171oj4",
+    "id": "Z698xZbpZ1714Gv",
     "test": false,
-    "url": "https://www.ticketmaster.nl/event/heaven-shall-burn-tickets/291715?language=en-us",
+    "url": "https://www.ticketmaster.nl/event/jazmin-bean-tickets/295301?language=en-us",
     "locale": "en-us",
     "sales": {
       "public": {
-        "startDateTime": "2023-03-29T08:00:00Z",
+        "startDateTime": "2023-08-11T08:00:00Z",
         "startTBD": false,
         "startTBA": false,
-        "endDateTime": "2023-08-14T01:00:00Z"
+        "endDateTime": "2023-09-26T01:00:00Z"
       }
     },
     "dates": {
       "start": {
-        "localDate": "2023-08-13",
-        "localTime": "18:30:00",
-        "dateTime": "2023-08-13T16:30:00Z",
+        "localDate": "2023-09-25",
+        "localTime": "20:00:00",
+        "dateTime": "2023-09-25T18:00:00Z",
         "dateTBD": false,
         "dateTBA": false,
         "timeTBA": false,
@@ -74,29 +74,23 @@
       {
         "type": "standard including fees",
         "currency": "EUR",
-        "min": 33.35,
-        "max": 33.35
+        "min": 18.4,
+        "max": 18.4
       },
       {
         "type": "standard",
         "currency": "EUR",
-        "min": 29,
-        "max": 29
+        "min": 16,
+        "max": 16
       }
     ],
     "_links": {
       "self": {
-        "href": "/discovery/v2/events/Z698xZbpZ171oj4?locale=en-us"
+        "href": "/discovery/v2/events/Z698xZbpZ1714Gv?locale=en-us"
       },
       "attractions": [
         {
-          "href": "/discovery/v2/attractions/K8vZ91728ZV?locale=en-us"
-        },
-        {
-          "href": "/discovery/v2/attractions/K8vZ917pqe7?locale=en-us"
-        },
-        {
-          "href": "/discovery/v2/attractions/K8vZ9173W2V?locale=en-us"
+          "href": "/discovery/v2/attractions/K8vZ917hNYV?locale=en-us"
         }
       ],
       "venues": [
@@ -139,8 +133,8 @@
             "latitude": "52.36483"
           },
           "upcomingEvents": {
-            "mfx-nl": 240,
-            "_total": 240,
+            "mfx-nl": 274,
+            "_total": 274,
             "_filtered": 0
           },
           "_links": {
@@ -152,11 +146,11 @@
       ],
       "attractions": [
         {
-          "name": "Heaven Shall Burn",
+          "name": "Jazmin Bean",
           "type": "attraction",
-          "id": "K8vZ91728ZV",
+          "id": "K8vZ917hNYV",
           "test": false,
-          "url": "https://www.ticketmaster.com/heaven-shall-burn-tickets/artist/1190397",
+          "url": "https://www.ticketmaster.com/jazmin-bean-tickets/artist/3043035",
           "locale": "en-us",
           "classifications": [
             {
@@ -170,118 +164,38 @@
                 "name": "Metal"
               },
               "subGenre": {
-                "id": "KZazBEonSMnZfZ7vkFd",
-                "name": "Heavy Metal"
+                "id": "KZazBEonSMnZfZ7vkF6",
+                "name": "Pop Metal"
               },
               "type": {
-                "id": "KZAyXgnZfZ7v7nI",
-                "name": "Undefined"
+                "id": "KZAyXgnZfZ7v7la",
+                "name": "Individual"
               },
               "subType": {
-                "id": "KZFzBErXgnZfZ7v7lJ",
-                "name": "Undefined"
+                "id": "KZFzBErXgnZfZ7vAdn",
+                "name": "Artist"
               },
               "family": false
             }
           ],
           "_links": {
             "self": {
-              "href": "/discovery/v2/attractions/K8vZ91728ZV?locale=en-us"
+              "href": "/discovery/v2/attractions/K8vZ917hNYV?locale=en-us"
             }
           },
-          "image": "https://s1.ticketm.net/dam/a/268/ae8b5d14-3a16-454b-a019-200d6f59b268_SOURCE"
-        },
-        {
-          "name": "Shadow of Intent",
-          "type": "attraction",
-          "id": "K8vZ917pqe7",
-          "test": false,
-          "url": "https://www.ticketmaster.com/shadow-of-intent-tickets/artist/2431457",
-          "locale": "en-us",
-          "classifications": [
-            {
-              "primary": true,
-              "segment": {
-                "id": "KZFzniwnSyZfZ7v7nJ",
-                "name": "Music"
-              },
-              "genre": {
-                "id": "KnvZfZ7vAvt",
-                "name": "Metal"
-              },
-              "subGenre": {
-                "id": "KZazBEonSMnZfZ7vk6t",
-                "name": "Death Metal/Black Metal"
-              },
-              "type": {
-                "id": "KZAyXgnZfZ7v7l1",
-                "name": "Group"
-              },
-              "subType": {
-                "id": "KZFzBErXgnZfZ7vA71",
-                "name": "Band"
-              },
-              "family": false
-            }
-          ],
-          "_links": {
-            "self": {
-              "href": "/discovery/v2/attractions/K8vZ917pqe7?locale=en-us"
-            }
-          },
-          "image": "https://s1.ticketm.net/dam/a/4f0/a86881ba-830d-40fe-b1e9-dd60ba47e4f0_TABLET_LANDSCAPE_LARGE_16_9.jpg"
-        },
-        {
-          "name": "Any Given Day",
-          "type": "attraction",
-          "id": "K8vZ9173W2V",
-          "test": false,
-          "url": "https://www.ticketmaster.com/any-given-day-tickets/artist/2057841",
-          "locale": "en-us",
-          "classifications": [
-            {
-              "primary": true,
-              "segment": {
-                "id": "KZFzniwnSyZfZ7v7nJ",
-                "name": "Music"
-              },
-              "genre": {
-                "id": "KnvZfZ7vAeA",
-                "name": "Rock"
-              },
-              "subGenre": {
-                "id": "KZazBEonSMnZfZ7v6F1",
-                "name": "Pop"
-              },
-              "type": {
-                "id": "KZAyXgnZfZ7v7nI",
-                "name": "Undefined"
-              },
-              "subType": {
-                "id": "KZFzBErXgnZfZ7v7lJ",
-                "name": "Undefined"
-              },
-              "family": false
-            }
-          ],
-          "_links": {
-            "self": {
-              "href": "/discovery/v2/attractions/K8vZ9173W2V?locale=en-us"
-            }
-          },
-          "image": "https://s1.ticketm.net/dam/c/fbc/b293c0ad-c904-4215-bc59-8d7f2414dfbc_106141_RETINA_PORTRAIT_16_9.jpg"
+          "image": "https://s1.ticketm.net/dam/a/5c1/131cef89-e082-45f5-84b4-59738fe665c1_RETINA_LANDSCAPE_16_9.jpg"
         }
       ]
     },
-    "pageInfo": "<a class='page-info' href='https://www.ticketmaster.nl/event/heaven-shall-burn-tickets/291715?language=en-us'>TM Heaven Shall Burn</a>",
+    "pageInfo": "<a class='page-info' href='https://www.ticketmaster.nl/event/jazmin-bean-tickets/295301?language=en-us'>TM Jazmin Bean</a>",
     "errors": [],
     "attractions": [
       {
-        "name": "Heaven Shall Burn",
+        "name": "Jazmin Bean",
         "type": "attraction",
-        "id": "K8vZ91728ZV",
+        "id": "K8vZ917hNYV",
         "test": false,
-        "url": "https://www.ticketmaster.com/heaven-shall-burn-tickets/artist/1190397",
+        "url": "https://www.ticketmaster.com/jazmin-bean-tickets/artist/3043035",
         "locale": "en-us",
         "classifications": [
           {
@@ -295,106 +209,26 @@
               "name": "Metal"
             },
             "subGenre": {
-              "id": "KZazBEonSMnZfZ7vkFd",
-              "name": "Heavy Metal"
+              "id": "KZazBEonSMnZfZ7vkF6",
+              "name": "Pop Metal"
             },
             "type": {
-              "id": "KZAyXgnZfZ7v7nI",
-              "name": "Undefined"
+              "id": "KZAyXgnZfZ7v7la",
+              "name": "Individual"
             },
             "subType": {
-              "id": "KZFzBErXgnZfZ7v7lJ",
-              "name": "Undefined"
+              "id": "KZFzBErXgnZfZ7vAdn",
+              "name": "Artist"
             },
             "family": false
           }
         ],
         "_links": {
           "self": {
-            "href": "/discovery/v2/attractions/K8vZ91728ZV?locale=en-us"
+            "href": "/discovery/v2/attractions/K8vZ917hNYV?locale=en-us"
           }
         },
-        "image": "https://s1.ticketm.net/dam/a/268/ae8b5d14-3a16-454b-a019-200d6f59b268_SOURCE"
-      },
-      {
-        "name": "Shadow of Intent",
-        "type": "attraction",
-        "id": "K8vZ917pqe7",
-        "test": false,
-        "url": "https://www.ticketmaster.com/shadow-of-intent-tickets/artist/2431457",
-        "locale": "en-us",
-        "classifications": [
-          {
-            "primary": true,
-            "segment": {
-              "id": "KZFzniwnSyZfZ7v7nJ",
-              "name": "Music"
-            },
-            "genre": {
-              "id": "KnvZfZ7vAvt",
-              "name": "Metal"
-            },
-            "subGenre": {
-              "id": "KZazBEonSMnZfZ7vk6t",
-              "name": "Death Metal/Black Metal"
-            },
-            "type": {
-              "id": "KZAyXgnZfZ7v7l1",
-              "name": "Group"
-            },
-            "subType": {
-              "id": "KZFzBErXgnZfZ7vA71",
-              "name": "Band"
-            },
-            "family": false
-          }
-        ],
-        "_links": {
-          "self": {
-            "href": "/discovery/v2/attractions/K8vZ917pqe7?locale=en-us"
-          }
-        },
-        "image": "https://s1.ticketm.net/dam/a/4f0/a86881ba-830d-40fe-b1e9-dd60ba47e4f0_TABLET_LANDSCAPE_LARGE_16_9.jpg"
-      },
-      {
-        "name": "Any Given Day",
-        "type": "attraction",
-        "id": "K8vZ9173W2V",
-        "test": false,
-        "url": "https://www.ticketmaster.com/any-given-day-tickets/artist/2057841",
-        "locale": "en-us",
-        "classifications": [
-          {
-            "primary": true,
-            "segment": {
-              "id": "KZFzniwnSyZfZ7v7nJ",
-              "name": "Music"
-            },
-            "genre": {
-              "id": "KnvZfZ7vAeA",
-              "name": "Rock"
-            },
-            "subGenre": {
-              "id": "KZazBEonSMnZfZ7v6F1",
-              "name": "Pop"
-            },
-            "type": {
-              "id": "KZAyXgnZfZ7v7nI",
-              "name": "Undefined"
-            },
-            "subType": {
-              "id": "KZFzBErXgnZfZ7v7lJ",
-              "name": "Undefined"
-            },
-            "family": false
-          }
-        ],
-        "_links": {
-          "self": {
-            "href": "/discovery/v2/attractions/K8vZ9173W2V?locale=en-us"
-          }
-        },
-        "image": "https://s1.ticketm.net/dam/c/fbc/b293c0ad-c904-4215-bc59-8d7f2414dfbc_106141_RETINA_PORTRAIT_16_9.jpg"
+        "image": "https://s1.ticketm.net/dam/a/5c1/131cef89-e082-45f5-84b4-59738fe665c1_RETINA_LANDSCAPE_16_9.jpg"
       }
     ],
     "venue": {
@@ -429,529 +263,13 @@
         "latitude": "52.36483"
       },
       "upcomingEvents": {
-        "mfx-nl": 240,
-        "_total": 240,
+        "mfx-nl": 274,
+        "_total": 274,
         "_filtered": 0
       },
       "_links": {
         "self": {
           "href": "/discovery/v2/venues/Z598xZbpZd6ak?locale=en-us"
-        }
-      }
-    },
-    "origin": "ticketmaster"
-  },
-  {
-    "door": null,
-    "start": "2023-08-19T09:30:00Z",
-    "end": null,
-    "venueEventUrl": "https://www.ticketmaster.nl/event/dynamo-metalfest-2023-%7C-vip-saturday-tickets/289331?language=en-us",
-    "title": "Dynamo Metalfest 2023 | VIP Saturday",
-    "location": "ijssportcentrum",
-    "price": 89,
-    "longText": null,
-    "image": "../public/event-images/ijssportcentrum/f26727c0-a0f9-463b-9859-31c4541ad826",
-    "soldOut": null,
-    "unavailable": " double event",
-    "corrupted": null,
-    "name": "Dynamo Metalfest 2023 | VIP Saturday",
-    "type": "event",
-    "id": "Z698xZbpZ171aGs",
-    "test": false,
-    "url": "https://www.ticketmaster.nl/event/dynamo-metalfest-2023-%7C-vip-saturday-tickets/289331?language=en-us",
-    "locale": "en-us",
-    "sales": {
-      "public": {
-        "startDateTime": "2023-01-27T09:00:00Z",
-        "startTBD": false,
-        "startTBA": false,
-        "endDateTime": "2023-06-20T13:52:00Z"
-      }
-    },
-    "dates": {
-      "start": {
-        "localDate": "2023-08-19",
-        "localTime": "11:30:00",
-        "dateTime": "2023-08-19T09:30:00Z",
-        "dateTBD": false,
-        "dateTBA": false,
-        "timeTBA": false,
-        "noSpecificTime": false
-      },
-      "timezone": "Europe/Amsterdam",
-      "status": {
-        "code": "offsale"
-      },
-      "spanMultipleDays": false
-    },
-    "classifications": [
-      {
-        "primary": true,
-        "segment": {
-          "id": "KZFzniwnSyZfZ7v7nn",
-          "name": "Film"
-        },
-        "genre": {
-          "id": "KnvZfZ7vAkJ",
-          "name": "Music"
-        },
-        "subGenre": {
-          "id": "KZazBEonSMnZfZ7vave",
-          "name": "Music"
-        },
-        "family": false
-      }
-    ],
-    "promoter": {
-      "id": "4049",
-      "name": "Toxic Waltz B.V."
-    },
-    "promoters": [
-      {
-        "id": "4049",
-        "name": "Toxic Waltz B.V."
-      }
-    ],
-    "priceRanges": [
-      {
-        "type": "standard including fees",
-        "currency": "EUR",
-        "min": 89,
-        "max": 89
-      },
-      {
-        "type": "standard",
-        "currency": "EUR",
-        "min": 85.5,
-        "max": 85.5
-      }
-    ],
-    "_links": {
-      "self": {
-        "href": "/discovery/v2/events/Z698xZbpZ171aGs?locale=en-us"
-      },
-      "attractions": [
-        {
-          "href": "/discovery/v2/attractions/K8vZ917fAJ0?locale=en-us"
-        }
-      ],
-      "venues": [
-        {
-          "href": "/discovery/v2/venues/Z598xZbpZ7aak?locale=en-us"
-        }
-      ]
-    },
-    "_embedded": {
-      "venues": [
-        {
-          "type": "venue",
-          "id": "Z598xZbpZ7aak",
-          "test": false,
-          "url": "https://www.ticketmaster.nl/venue/ijssportcentrum-eindhoven-eindhoven-tickets/ijssport/105",
-          "locale": "en-us",
-          "postalCode": "5644RX",
-          "timezone": "Europe/Amsterdam",
-          "city": {
-            "name": "Eindhoven"
-          },
-          "country": {
-            "name": "Netherlands",
-            "countryCode": "NL"
-          },
-          "address": {
-            "line1": "Anton Coolenlaan 3"
-          },
-          "location": {
-            "longitude": "5.47184",
-            "latitude": "51.41569"
-          },
-          "upcomingEvents": {
-            "mfx-nl": 6,
-            "_total": 6,
-            "_filtered": 0
-          },
-          "_links": {
-            "self": {
-              "href": "/discovery/v2/venues/Z598xZbpZ7aak?locale=en-us"
-            }
-          }
-        }
-      ],
-      "attractions": [
-        {
-          "name": "Dynamo Metal Fest",
-          "type": "attraction",
-          "id": "K8vZ917fAJ0",
-          "test": false,
-          "url": "https://www.ticketmaster.com/dynamo-metal-fest-tickets/artist/2137856",
-          "locale": "en-us",
-          "classifications": [
-            {
-              "primary": true,
-              "segment": {
-                "id": "KZFzniwnSyZfZ7v7nJ",
-                "name": "Music"
-              },
-              "genre": {
-                "id": "KnvZfZ7vAvt",
-                "name": "Metal"
-              },
-              "subGenre": {
-                "id": "KZazBEonSMnZfZ7vkFd",
-                "name": "Heavy Metal"
-              },
-              "type": {
-                "id": "KZAyXgnZfZ7v7nI",
-                "name": "Undefined"
-              },
-              "subType": {
-                "id": "KZFzBErXgnZfZ7v7lJ",
-                "name": "Undefined"
-              },
-              "family": false
-            }
-          ],
-          "_links": {
-            "self": {
-              "href": "/discovery/v2/attractions/K8vZ917fAJ0?locale=en-us"
-            }
-          },
-          "image": "https://s1.ticketm.net/dam/a/98c/907a101a-b47e-4b66-81ae-9396b5bb298c_759881_TABLET_LANDSCAPE_16_9.jpg"
-        }
-      ]
-    },
-    "pageInfo": "<a class='page-info' href='https://www.ticketmaster.nl/event/dynamo-metalfest-2023-%7C-vip-saturday-tickets/289331?language=en-us'>TM Dynamo Metalfest 2023 | VIP Saturday</a>",
-    "errors": [],
-    "attractions": [
-      {
-        "name": "Dynamo Metal Fest",
-        "type": "attraction",
-        "id": "K8vZ917fAJ0",
-        "test": false,
-        "url": "https://www.ticketmaster.com/dynamo-metal-fest-tickets/artist/2137856",
-        "locale": "en-us",
-        "classifications": [
-          {
-            "primary": true,
-            "segment": {
-              "id": "KZFzniwnSyZfZ7v7nJ",
-              "name": "Music"
-            },
-            "genre": {
-              "id": "KnvZfZ7vAvt",
-              "name": "Metal"
-            },
-            "subGenre": {
-              "id": "KZazBEonSMnZfZ7vkFd",
-              "name": "Heavy Metal"
-            },
-            "type": {
-              "id": "KZAyXgnZfZ7v7nI",
-              "name": "Undefined"
-            },
-            "subType": {
-              "id": "KZFzBErXgnZfZ7v7lJ",
-              "name": "Undefined"
-            },
-            "family": false
-          }
-        ],
-        "_links": {
-          "self": {
-            "href": "/discovery/v2/attractions/K8vZ917fAJ0?locale=en-us"
-          }
-        },
-        "image": "https://s1.ticketm.net/dam/a/98c/907a101a-b47e-4b66-81ae-9396b5bb298c_759881_TABLET_LANDSCAPE_16_9.jpg"
-      }
-    ],
-    "venue": {
-      "type": "venue",
-      "id": "Z598xZbpZ7aak",
-      "test": false,
-      "url": "https://www.ticketmaster.nl/venue/ijssportcentrum-eindhoven-eindhoven-tickets/ijssport/105",
-      "locale": "en-us",
-      "postalCode": "5644RX",
-      "timezone": "Europe/Amsterdam",
-      "city": {
-        "name": "Eindhoven"
-      },
-      "country": {
-        "name": "Netherlands",
-        "countryCode": "NL"
-      },
-      "address": {
-        "line1": "Anton Coolenlaan 3"
-      },
-      "location": {
-        "longitude": "5.47184",
-        "latitude": "51.41569"
-      },
-      "upcomingEvents": {
-        "mfx-nl": 6,
-        "_total": 6,
-        "_filtered": 0
-      },
-      "_links": {
-        "self": {
-          "href": "/discovery/v2/venues/Z598xZbpZ7aak?locale=en-us"
-        }
-      }
-    },
-    "origin": "ticketmaster"
-  },
-  {
-    "door": null,
-    "start": "2023-08-20T09:30:00Z",
-    "end": null,
-    "venueEventUrl": "https://www.ticketmaster.nl/event/dynamo-metalfest-2023-%7C-vip-sunday-tickets/289333?language=en-us",
-    "title": "Dynamo Metalfest 2023 | VIP Sunday",
-    "location": "ijssportcentrum",
-    "price": 89,
-    "longText": null,
-    "image": "../public/event-images/ijssportcentrum/895fbefc-cc47-4e3f-891c-45a76c37e46a",
-    "soldOut": null,
-    "unavailable": " double event",
-    "corrupted": null,
-    "name": "Dynamo Metalfest 2023 | VIP Sunday",
-    "type": "event",
-    "id": "Z698xZbpZ171aGS",
-    "test": false,
-    "url": "https://www.ticketmaster.nl/event/dynamo-metalfest-2023-%7C-vip-sunday-tickets/289333?language=en-us",
-    "locale": "en-us",
-    "sales": {
-      "public": {
-        "startDateTime": "2023-01-27T09:00:00Z",
-        "startTBD": false,
-        "startTBA": false,
-        "endDateTime": "2023-08-20T21:00:00Z"
-      }
-    },
-    "dates": {
-      "start": {
-        "localDate": "2023-08-20",
-        "localTime": "11:30:00",
-        "dateTime": "2023-08-20T09:30:00Z",
-        "dateTBD": false,
-        "dateTBA": false,
-        "timeTBA": false,
-        "noSpecificTime": false
-      },
-      "timezone": "Europe/Amsterdam",
-      "status": {
-        "code": "onsale"
-      },
-      "spanMultipleDays": false
-    },
-    "classifications": [
-      {
-        "primary": true,
-        "segment": {
-          "id": "KZFzniwnSyZfZ7v7nn",
-          "name": "Film"
-        },
-        "genre": {
-          "id": "KnvZfZ7vAkJ",
-          "name": "Music"
-        },
-        "subGenre": {
-          "id": "KZazBEonSMnZfZ7vave",
-          "name": "Music"
-        },
-        "family": false
-      }
-    ],
-    "promoter": {
-      "id": "4049",
-      "name": "Toxic Waltz B.V."
-    },
-    "promoters": [
-      {
-        "id": "4049",
-        "name": "Toxic Waltz B.V."
-      }
-    ],
-    "priceRanges": [
-      {
-        "type": "standard including fees",
-        "currency": "EUR",
-        "min": 89,
-        "max": 89
-      },
-      {
-        "type": "standard",
-        "currency": "EUR",
-        "min": 85.5,
-        "max": 85.5
-      }
-    ],
-    "_links": {
-      "self": {
-        "href": "/discovery/v2/events/Z698xZbpZ171aGS?locale=en-us"
-      },
-      "attractions": [
-        {
-          "href": "/discovery/v2/attractions/K8vZ917fAJ0?locale=en-us"
-        }
-      ],
-      "venues": [
-        {
-          "href": "/discovery/v2/venues/Z598xZbpZ7aak?locale=en-us"
-        }
-      ]
-    },
-    "_embedded": {
-      "venues": [
-        {
-          "type": "venue",
-          "id": "Z598xZbpZ7aak",
-          "test": false,
-          "url": "https://www.ticketmaster.nl/venue/ijssportcentrum-eindhoven-eindhoven-tickets/ijssport/105",
-          "locale": "en-us",
-          "postalCode": "5644RX",
-          "timezone": "Europe/Amsterdam",
-          "city": {
-            "name": "Eindhoven"
-          },
-          "country": {
-            "name": "Netherlands",
-            "countryCode": "NL"
-          },
-          "address": {
-            "line1": "Anton Coolenlaan 3"
-          },
-          "location": {
-            "longitude": "5.47184",
-            "latitude": "51.41569"
-          },
-          "upcomingEvents": {
-            "mfx-nl": 6,
-            "_total": 6,
-            "_filtered": 0
-          },
-          "_links": {
-            "self": {
-              "href": "/discovery/v2/venues/Z598xZbpZ7aak?locale=en-us"
-            }
-          }
-        }
-      ],
-      "attractions": [
-        {
-          "name": "Dynamo Metal Fest",
-          "type": "attraction",
-          "id": "K8vZ917fAJ0",
-          "test": false,
-          "url": "https://www.ticketmaster.com/dynamo-metal-fest-tickets/artist/2137856",
-          "locale": "en-us",
-          "classifications": [
-            {
-              "primary": true,
-              "segment": {
-                "id": "KZFzniwnSyZfZ7v7nJ",
-                "name": "Music"
-              },
-              "genre": {
-                "id": "KnvZfZ7vAvt",
-                "name": "Metal"
-              },
-              "subGenre": {
-                "id": "KZazBEonSMnZfZ7vkFd",
-                "name": "Heavy Metal"
-              },
-              "type": {
-                "id": "KZAyXgnZfZ7v7nI",
-                "name": "Undefined"
-              },
-              "subType": {
-                "id": "KZFzBErXgnZfZ7v7lJ",
-                "name": "Undefined"
-              },
-              "family": false
-            }
-          ],
-          "_links": {
-            "self": {
-              "href": "/discovery/v2/attractions/K8vZ917fAJ0?locale=en-us"
-            }
-          },
-          "image": "https://s1.ticketm.net/dam/a/98c/907a101a-b47e-4b66-81ae-9396b5bb298c_759881_TABLET_LANDSCAPE_16_9.jpg"
-        }
-      ]
-    },
-    "pageInfo": "<a class='page-info' href='https://www.ticketmaster.nl/event/dynamo-metalfest-2023-%7C-vip-sunday-tickets/289333?language=en-us'>TM Dynamo Metalfest 2023 | VIP Sunday</a>",
-    "errors": [],
-    "attractions": [
-      {
-        "name": "Dynamo Metal Fest",
-        "type": "attraction",
-        "id": "K8vZ917fAJ0",
-        "test": false,
-        "url": "https://www.ticketmaster.com/dynamo-metal-fest-tickets/artist/2137856",
-        "locale": "en-us",
-        "classifications": [
-          {
-            "primary": true,
-            "segment": {
-              "id": "KZFzniwnSyZfZ7v7nJ",
-              "name": "Music"
-            },
-            "genre": {
-              "id": "KnvZfZ7vAvt",
-              "name": "Metal"
-            },
-            "subGenre": {
-              "id": "KZazBEonSMnZfZ7vkFd",
-              "name": "Heavy Metal"
-            },
-            "type": {
-              "id": "KZAyXgnZfZ7v7nI",
-              "name": "Undefined"
-            },
-            "subType": {
-              "id": "KZFzBErXgnZfZ7v7lJ",
-              "name": "Undefined"
-            },
-            "family": false
-          }
-        ],
-        "_links": {
-          "self": {
-            "href": "/discovery/v2/attractions/K8vZ917fAJ0?locale=en-us"
-          }
-        },
-        "image": "https://s1.ticketm.net/dam/a/98c/907a101a-b47e-4b66-81ae-9396b5bb298c_759881_TABLET_LANDSCAPE_16_9.jpg"
-      }
-    ],
-    "venue": {
-      "type": "venue",
-      "id": "Z598xZbpZ7aak",
-      "test": false,
-      "url": "https://www.ticketmaster.nl/venue/ijssportcentrum-eindhoven-eindhoven-tickets/ijssport/105",
-      "locale": "en-us",
-      "postalCode": "5644RX",
-      "timezone": "Europe/Amsterdam",
-      "city": {
-        "name": "Eindhoven"
-      },
-      "country": {
-        "name": "Netherlands",
-        "countryCode": "NL"
-      },
-      "address": {
-        "line1": "Anton Coolenlaan 3"
-      },
-      "location": {
-        "longitude": "5.47184",
-        "latitude": "51.41569"
-      },
-      "upcomingEvents": {
-        "mfx-nl": 6,
-        "_total": 6,
-        "_filtered": 0
-      },
-      "_links": {
-        "self": {
-          "href": "/discovery/v2/venues/Z598xZbpZ7aak?locale=en-us"
         }
       }
     },

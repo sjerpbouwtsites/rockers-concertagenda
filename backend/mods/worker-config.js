@@ -16,7 +16,10 @@ export const AbstractWorkerConfig = {
 
 export const workerConfig = {
   '013': {
-    workerCount: 4, CPUReq: 'low', workerConcurrent: 3, forceSet: 0,
+    workerCount: 4,
+    CPUReq: 'low',
+    workerConcurrent: 3,
+    forceSet: 0,
   },
   afaslive: {
     workerCount: 1,
@@ -25,25 +28,36 @@ export const workerConfig = {
     forceSet: 0,
   },
   baroeg: { workerCount: 2, workerConcurrent: 2, forceSet: 0 },
-
   bibelot: { workerCount: 1, workerConcurrent: 1, forceSet: 1 },
   boerderij: {
-    workerCount: 1, CPUReq: 'low', workerConcurrent: 1, forceSet: 1,
+    workerCount: 1,
+    CPUReq: 'low',
+    workerConcurrent: 1,
+    forceSet: 1,
   },
   cpunt: { workerCount: 1, workerConcurrent: 1, forceSet: 1 },
   dbs: {
-    workerCount: 4, workerConcurrent: 4, CPUReq: 'low', forceSet: 1,
+    workerCount: 4,
+    workerConcurrent: 4,
+    CPUReq: 'low',
+    forceSet: 1,
   },
   deflux: { workerCount: 1, workerConcurrent: 1, forceSet: 2 },
   dehelling: {
-    workerCount: 1, CPUReq: 'low', workerConcurrent: 1, forceSet: 2,
+    workerCount: 1,
+    CPUReq: 'low',
+    workerConcurrent: 1,
+    forceSet: 2,
   },
   depul: { workerCount: 2, workerConcurrent: 2, forceSet: 2 },
   doornroosje: {
-    workerCount: 2, workerConcurrent: 1, CPUReq: 'high', forceSet: 2,
+    workerCount: 2,
+    workerConcurrent: 1,
+    CPUReq: 'high',
+    forceSet: 2,
   },
   dynamo: { workerCount: 2, workerConcurrent: 1, forceSet: 3 },
-  effenaar: { workerCount: 4, workerConcurrent: 2, forceSet:3 },
+  effenaar: { workerCount: 4, workerConcurrent: 2, forceSet: 3 },
   gebrdenobel: { workerCount: 1, workerConcurrent: 1, forceSet: 3 },
   groeneengel: { workerCount: 1, workerConcurrent: 1, forceSet: 3 },
   iduna: { workerCount: 1, workerConcurrent: 1, forceSet: 4 },
@@ -75,7 +89,10 @@ export const workerConfig = {
   oosterpoort: { workerCount: 1, workerConcurrent: 1, forceSet: 5 },
   p60: { workerCount: 1, workerConcurrent: 1, forceSet: 5 },
   paradiso: {
-    workerCount: 2, workerConcurrent: 2, CPUReq: 'high', forceSet: 5,
+    workerCount: 2,
+    workerConcurrent: 2,
+    CPUReq: 'high',
+    forceSet: 5,
   },
   patronaat: { workerCount: 2, workerConcurrent: 2, forceSet: 6 },
   tivolivredenburg: { workerCount: 4, workerConcurrent: 2, forceSet: 6 },
@@ -97,7 +114,7 @@ class WorkerListConf {
 
   static _self = null;
 
-  curDay = (new Date()).toISOString().split('T')[0].replaceAll(/-/g, '');
+  curDay = new Date().toISOString().split('T')[0].replaceAll(/-/g, '');
 
   constructor() {
     if (WorkerListConf._self instanceof WorkerListConf) {
@@ -109,9 +126,9 @@ class WorkerListConf {
     this.run();
   }
 
-  get highCpuWorkerExists(){
-    return this.data.find(conf=>conf.CPUReq==='high')
-  } 
+  get highCpuWorkerExists() {
+    return this.data.find((conf) => conf.CPUReq === 'high');
+  }
 
   setBaseEventLists() {
     this.baseEventlistsStart = fs.readdirSync(fsDirections.baseEventlists);
@@ -171,7 +188,9 @@ class WorkerListConf {
     if (this.shellArguments?.force?.includes(familyName)) return true;
     if (familyName.includes('metalfan')) return false; // metalfan alleen bij all of force
     if (!this.baseEventlistsStart.join('').includes(familyName)) return true;
-    const actueelGevonden = this.baseEventlistsStart.find((baseEventList) => baseEventList.includes(familyName) && baseEventList.includes(this.curDay));
+    const actueelGevonden = this.baseEventlistsStart.find(
+      (baseEventList) => baseEventList.includes(familyName) && baseEventList.includes(this.curDay),
+    );
     if (!actueelGevonden) return true;
     return false;
   }
@@ -197,9 +216,9 @@ class WorkerListConf {
     const next = this.data.shift();
     return next;
   }
-  
-  takeBackRejected(reject){
-    this.data.push(reject)
+
+  takeBackRejected(reject) {
+    this.data.push(reject);
   }
 
   backIntoLine(completeConfig) {

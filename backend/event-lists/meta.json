@@ -2,7 +2,7 @@
   "locations": {
     "013": {
       "name": "013",
-      "count": 32
+      "count": 35
     },
     "afaslive": {
       "name": "afaslive",
@@ -10,31 +10,35 @@
     },
     "baroeg": {
       "name": "baroeg",
-      "count": 17
+      "count": 19
     },
     "bibelot": {
       "name": "bibelot",
-      "count": 7
+      "count": 9
     },
     "boerderij": {
       "name": "boerderij",
-      "count": 10
+      "count": 11
     },
     "cpunt": {
       "name": "cpunt",
-      "count": 5
+      "count": 6
     },
     "dbs": {
       "name": "dbs",
-      "count": 31
+      "count": 22
     },
     "deflux": {
       "name": "deflux",
-      "count": 10
+      "count": 8
+    },
+    "dehelling": {
+      "name": "dehelling",
+      "count": 4
     },
     "depul": {
       "name": "depul",
-      "count": 9
+      "count": 10
     },
     "doornroosje": {
       "name": "doornroosje",
@@ -42,7 +46,7 @@
     },
     "dynamo": {
       "name": "dynamo",
-      "count": 6
+      "count": 5
     },
     "effenaar": {
       "name": "effenaar",
@@ -58,11 +62,11 @@
     },
     "iduna": {
       "name": "iduna",
-      "count": 13
+      "count": 12
     },
     "kavka": {
       "name": "kavka",
-      "count": 25
+      "count": 26
     },
     "littledevil": {
       "name": "littledevil",
@@ -70,50 +74,14 @@
     },
     "melkweg": {
       "name": "melkweg",
-      "count": 21
-    },
-    "turock": {
-      "name": "turock",
-      "count": 1
-    },
-    "langemunte": {
-      "name": "langemunte",
-      "count": 1
-    },
-    "v11": {
-      "name": "v11",
-      "count": 1
-    },
-    "qfactory": {
-      "name": "qfactory",
-      "count": 3
-    },
-    "dvgclub": {
-      "name": "dvgclub",
-      "count": 1
-    },
-    "maassilo": {
-      "name": "maassilo",
-      "count": 1
-    },
-    "foxfarm": {
-      "name": "foxfarm",
-      "count": 1
-    },
-    "hedon": {
-      "name": "hedon",
-      "count": 7
-    },
-    "zuiderpark": {
-      "name": "zuiderpark",
-      "count": 1
-    },
-    "stroomhuis": {
-      "name": "stroomhuis",
-      "count": 2
+      "count": 25
     },
     "resonanzwerk": {
       "name": "resonanzwerk",
+      "count": 1
+    },
+    "b3": {
+      "name": "b3",
       "count": 1
     },
     "musicon": {
@@ -124,13 +92,21 @@
       "name": "muziekgieterij",
       "count": 4
     },
+    "hedon": {
+      "name": "hedon",
+      "count": 6
+    },
     "victorie": {
       "name": "victorie",
       "count": 5
     },
     "halloffame": {
       "name": "halloffame",
-      "count": 2
+      "count": 1
+    },
+    "qfactory": {
+      "name": "qfactory",
+      "count": 1
     },
     "gebouwt": {
       "name": "gebouwt",
@@ -170,43 +146,39 @@
     },
     "metropool": {
       "name": "metropool",
-      "count": 25
+      "count": 22
     },
     "neushoorn": {
       "name": "neushoorn",
-      "count": 11
+      "count": 8
     },
     "nieuwenor": {
       "name": "nieuwenor",
-      "count": 44
+      "count": 23
     },
     "occii": {
       "name": "occii",
-      "count": 14
+      "count": 11
     },
     "oosterpoort": {
       "name": "oosterpoort",
-      "count": 3
+      "count": 5
     },
     "p60": {
       "name": "p60",
-      "count": 5
+      "count": 7
     },
     "paradiso": {
       "name": "paradiso",
-      "count": 28
+      "count": 31
     },
     "patronaat": {
       "name": "patronaat",
-      "count": 17
+      "count": 24
     },
     "tivolivredenburg": {
       "name": "tivolivredenburg",
-      "count": 21
-    },
-    "ijssportcentrum": {
-      "name": "ijssportcentrum",
-      "count": 2
+      "count": 19
     },
     "volt": {
       "name": "volt",
@@ -214,7 +186,7 @@
     },
     "willemeen": {
       "name": "willemeen",
-      "count": 31
+      "count": 16
     }
   }
 }

@@ -62,7 +62,7 @@ async function metalFanDoURL(page, url, qwm) {
     '013enomgeving': '013',
     '013enomgevingn': '013',
     'botanique brussel': 'botanique',
-    decacaofabriek:'cacaofabriek',
+    decacaofabriek: 'cacaofabriek',
     desselbelgimetoaslipknot: 'dessel',
     desselbelgimetoagunsnroses: 'dessel',
     dinkelsbhlmetoapowerwolf: 'dinkel',
@@ -82,75 +82,69 @@ async function metalFanDoURL(page, url, qwm) {
     wackenduitsland: 'wacken',
     wackenduitslandmetoamegadeth: 'wacken',
     wackenduitslandmetoaironmaiden: 'wacken',
-    evenemententerreinweertnoord:'weertnoord',
+    evenemententerreinweertnoord: 'weertnoord',
     ysselsteyn: 'ijsselstein',
     innocent: 'metropool',
     bluecollarhotel: 'effenaar',
   };
 
   const jaar = url.includes('2024') ? '2024' : '2023'; // TODO FIX
-  const eventData = await page.evaluate(({ months, rename, jaar }) => Array.from(document.querySelectorAll('.calentry')).map(
-    (metalfanEvent) => {
-      let dateAnchorEl;
-      let eventDate;
-      let eventNameEl;
-      let eventHTML;
-      let eventName;
-      let eventHTMLrules;
-      let eventLocationName;
-      let shortText;
+  const eventData = await page.evaluate(
+    ({ months, rename, jaar }) =>
+      Array.from(document.querySelectorAll('.calentry')).map((metalfanEvent) => {
+        let dateAnchorEl;
+        let eventDate;
+        let eventNameEl;
+        let eventHTML;
+        let eventName;
+        let eventHTMLrules;
+        let eventLocationName;
+        let shortText;
 
-      dateAnchorEl = metalfanEvent.querySelector('a[name]');
-      eventDate = metalfanEvent.contains(dateAnchorEl)
-          && dateAnchorEl.getAttribute('name');
-      if (!eventDate) {
-        const metalfanEventCaldateEl =            metalfanEvent.querySelector('.caldate');
-        if (metalfanEventCaldateEl) {
-          const caldateTC = metalfanEventCaldateEl.textContent;
-          const dayString = caldateTC.match(/\d+/)[0].padStart(2, '0');
-          const monthString = caldateTC.match(/[a-z]{3}/)[0].trim();
-          const monthNumber = months[monthString];
+        dateAnchorEl = metalfanEvent.querySelector('a[name]');
+        eventDate = metalfanEvent.contains(dateAnchorEl) && dateAnchorEl.getAttribute('name');
+        if (!eventDate) {
+          const metalfanEventCaldateEl = metalfanEvent.querySelector('.caldate');
+          if (metalfanEventCaldateEl) {
+            const caldateTC = metalfanEventCaldateEl.textContent;
+            const dayString = caldateTC.match(/\d+/)[0].padStart(2, '0');
+            const monthString = caldateTC.match(/[a-z]{3}/)[0].trim();
+            const monthNumber = months[monthString];
 
-          eventDate = monthNumber && dayString
-            ? `${jaar}-${monthNumber}-${dayString}`
-            : null;
+            eventDate = monthNumber && dayString ? `${jaar}-${monthNumber}-${dayString}` : null;
+          }
         }
-      }
-      eventNameEl = metalfanEvent.querySelector('.event');
-      eventName = metalfanEvent.contains(eventNameEl)
-        ? eventNameEl.textContent.trim()
-        : 'geen naam!';
+        eventNameEl = metalfanEvent.querySelector('.event');
+        eventName = metalfanEvent.contains(eventNameEl)
+          ? eventNameEl.textContent.trim()
+          : 'geen naam!';
 
-      eventNameEl.parentNode.removeChild(eventNameEl);
-      eventHTML = metalfanEvent.querySelector('.calevent').innerHTML;
-      const eventCommaSplice = metalfanEvent
-        .querySelector('.calevent')
-        .textContent.split(',');
-      eventLocationName = (eventCommaSplice[0] || '').trim().toLowerCase();
+        eventNameEl.parentNode.removeChild(eventNameEl);
+        eventHTML = metalfanEvent.querySelector('.calevent').innerHTML;
+        const eventCommaSplice = metalfanEvent.querySelector('.calevent').textContent.split(',');
+        eventLocationName = (eventCommaSplice[0] || '').trim().toLowerCase();
 
-      if (Object.prototype.hasOwnProperty.call(rename, eventLocationName)) {
-        eventLocationName = rename[eventLocationName];
-      }
+        if (Object.prototype.hasOwnProperty.call(rename, eventLocationName)) {
+          eventLocationName = rename[eventLocationName];
+        }
 
-      eventHTMLrules = eventHTML.split('<br>');
-      shortText = eventHTMLrules.length > 1
-        ? (eventHTMLrules[eventHTMLrules.length - 1] || '')
-        : '';
-      return {
-        title: eventName,
-        start: eventDate,
-        eventLocationName,
-        shortText,
-      };
-    },
-  ), { months: getVenueMonths('metalfan'), jaar, rename });
+        eventHTMLrules = eventHTML.split('<br>');
+        shortText =
+          eventHTMLrules.length > 1 ? eventHTMLrules[eventHTMLrules.length - 1] || '' : '';
+        return {
+          title: eventName,
+          start: eventDate,
+          eventLocationName,
+          shortText,
+        };
+      }),
+    { months: getVenueMonths('metalfan'), jaar, rename },
+  );
 
   const musicEvents = eventData
     .map((eventDatum) => {
       const thisMusicEvent = new MusicEvent(eventDatum);
-      let locationName = Location.makeLocationSlug(
-        eventDatum.eventLocationName,
-      );
+      let locationName = Location.makeLocationSlug(eventDatum.eventLocationName);
 
       const watchForWeirdLocationNames = Object.keys(rename);
       if (watchForWeirdLocationNames.includes(locationName)) {

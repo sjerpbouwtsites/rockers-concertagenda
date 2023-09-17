@@ -5,28 +5,41 @@ import fsDirections from './mods/fs-directions.js';
 export default async function houseKeeping() {
   const shellArguments = getShellArguments();
   const forceAll = shellArguments?.force?.includes('all');
+  const keepBaseEvents = shellArguments?.keepBaseEvents ?? false;
+  const keepImages = shellArguments?.keepImages ?? false;
   const forceTheseB = shellArguments?.force?.split(',') ?? [];
   const forceThese = forceTheseB.map((f) => f.replace('%', ''));
   const wipeBaseList = forceTheseB.filter((a) => a.includes('%')).map((f) => f.replace('%', ''));
-  const curDay = (new Date()).toISOString().split('T')[0].replaceAll(/-/g, '');
+  const curDay = new Date().toISOString().split('T')[0].replaceAll(/-/g, '');
 
-  const removeTextsList = forceAll ? fs.readdirSync(fsDirections.publicTexts, 'utf-8') : forceThese;
-  const removeImagesLocationsList = forceAll ? fs.readdirSync(fsDirections.publicEventImages, 'utf-8') : forceThese;
+  const removeTextsList = keepBaseEvents
+    ? []
+    : forceAll
+    ? fs.readdirSync(fsDirections.publicTexts, 'utf-8')
+    : forceThese;
 
-  fs.readdirSync(fsDirections.baseEventlists)
-    .filter((baseEventList) => !baseEventList.includes(curDay))
-    .map((baseEventList) => baseEventList.split('T')[0])
-    .forEach((toRemove) => {
-      if (!removeTextsList.includes(toRemove)) {
-        removeTextsList.push(toRemove);
-      }
-      if (!removeImagesLocationsList.includes(toRemove)) {
-        removeImagesLocationsList.push(toRemove);
-      }
-    });
+  const removeImagesLocationsList = keepImages
+    ? {}
+    : forceAll
+    ? fs.readdirSync(fsDirections.publicEventImages, 'utf-8')
+    : forceThese;
 
-  removePublicTexts(removeTextsList);
-  removePublicEventImages(removeImagesLocationsList);
+  if (!keepBaseEvents) {
+    fs.readdirSync(fsDirections.baseEventlists)
+      .filter((baseEventList) => !baseEventList.includes(curDay))
+      .map((baseEventList) => baseEventList.split('T')[0])
+      .forEach((toRemove) => {
+        if (!removeTextsList.includes(toRemove)) {
+          removeTextsList.push(toRemove);
+        }
+        if (!removeImagesLocationsList.includes(toRemove)) {
+          removeImagesLocationsList.push(toRemove);
+        }
+      });
+    removePublicTexts(removeTextsList);
+  }
+
+  if (!keepImages) removePublicEventImages(removeImagesLocationsList);
 
   wipeBaseList.forEach((wipe) => {
     fs.readdirSync(fsDirections.baseEventlists).forEach((baseEventList) => {

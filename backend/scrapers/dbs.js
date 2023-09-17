@@ -1,31 +1,28 @@
 import { workerData } from 'worker_threads';
 import * as _t from '../mods/tools.js';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
-import makeScraperConfig from './gedeeld/scraper-config.js';
 
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
-const dbsScraper = new AbstractScraper(makeScraperConfig({
-  maxExecutionTime: 60044,
+const dbsScraper = new AbstractScraper({
   workerData: { ...workerData },
-  puppeteerConfig: {
+
+  mainPage: {
+    timeout: 60045,
+    waitUntil: 'domcontentloaded',
+    url: 'https://www.dbstudio.nl/agenda/',
+  },
+  singlePage: {
+    timeout: 45000,
+  },
+  app: {
     mainPage: {
-      timeout: 60045,
-      waitUntil: 'domcontentloaded',
+      requiredProperties: ['venueEventUrl', 'title', 'start'],
     },
     singlePage: {
-      timeout: 45000,
-    },
-    app: {
-      mainPage: {
-        url: 'https://www.dbstudio.nl/agenda/',
-        requiredProperties: ['venueEventUrl', 'title', 'start'],
-      },
-      singlePage: {
-        requiredProperties: ['venueEventUrl', 'title', 'price', 'start'],
-      },
+      requiredProperties: ['venueEventUrl', 'title', 'price', 'start'],
     },
   },
-}));
+});
 // #endregion                          SCRAPER CONFIG
 
 dbsScraper.listenToMasterThread();
@@ -76,7 +73,9 @@ dbsScraper.singlePageAsyncCheck = async function (event) {
 dbsScraper.mainPage = async function () {
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
   if (availableBaseEvents) {
-    const thisWorkersEvents = availableBaseEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index);
+    const thisWorkersEvents = availableBaseEvents.filter(
+      (eventEl, index) => index % workerData.workerCount === workerData.index,
+    );
     return await this.mainPageEnd({ stopFunctie: null, rawEvents: thisWorkersEvents });
   }
 
@@ -86,8 +85,8 @@ dbsScraper.mainPage = async function () {
   await _t.waitTime(100);
 
   let rawEvents = await page.evaluate(
-    ({ months, workerData, unavailabiltyTerms }) => Array.from(document.querySelectorAll('.fusion-events-post'))
-      .map((eventEl) => {
+    ({ months, workerData, unavailabiltyTerms }) =>
+      Array.from(document.querySelectorAll('.fusion-events-post')).map((eventEl) => {
         let title = eventEl.querySelector('.fusion-events-meta .url')?.textContent.trim() ?? null;
         if (title.match(/sold\s?out|uitverkocht/i)) {
           title = title.replace(/\*?(sold\s?out|uitverkocht)\s?\*?\s?/i, '');
@@ -103,28 +102,27 @@ dbsScraper.mainPage = async function () {
 
         res.venueEventUrl = eventEl.querySelector('.fusion-events-meta .url')?.href ?? null;
 
-        const startDateMatch = eventEl.querySelector('.tribe-event-date-start')?.textContent.match(/(\d+)\s+(\w+)/) ?? null;
+        const startDateMatch =
+          eventEl.querySelector('.tribe-event-date-start')?.textContent.match(/(\d+)\s+(\w+)/) ??
+          null;
         if (startDateMatch) {
           res.day = startDateMatch[1];
           const monthName = startDateMatch[2];
           res.month = months[monthName];
           res.day = res.day.padStart(2, '0');
-          const yearMatch = eventEl.querySelector('.tribe-event-date-start')?.textContent.match(/\d{4}/);
-          if (
-            !yearMatch
-              || !Array.isArray(yearMatch)
-              || yearMatch.length < 1
-          ) {
+          const yearMatch = eventEl
+            .querySelector('.tribe-event-date-start')
+            ?.textContent.match(/\d{4}/);
+          if (!yearMatch || !Array.isArray(yearMatch) || yearMatch.length < 1) {
             res.year = new Date().getFullYear();
           } else {
             res.year = yearMatch[1];
           }
           res.year = res.year || new Date().getFullYear();
-          const timeMatch = eventEl.querySelector('.tribe-event-date-start')?.textContent
-            .match(/\d{1,2}:\d\d/);
-          if (!timeMatch
-              || !Array.isArray(timeMatch)
-              || timeMatch.length < 1) {
+          const timeMatch = eventEl
+            .querySelector('.tribe-event-date-start')
+            ?.textContent.match(/\d{1,2}:\d\d/);
+          if (!timeMatch || !Array.isArray(timeMatch) || timeMatch.length < 1) {
             res.time = '12:00';
           } else {
             res.time = timeMatch[0].padStart(5, '0');
@@ -134,12 +132,10 @@ dbsScraper.mainPage = async function () {
         }
 
         try {
-          const endDateEl =            eventEl.querySelector('.tribe-event-time') ?? null;
+          const endDateEl = eventEl.querySelector('.tribe-event-time') ?? null;
           if (res.startDate && endDateEl) {
             if (endDateEl) {
-              const endDateM = endDateEl.textContent
-                .toLowerCase()
-                .match(/\d{1,2}:\d\d/);
+              const endDateM = endDateEl.textContent.toLowerCase().match(/\d{1,2}:\d\d/);
               if (Array.isArray(endDateM) && endDateM.length > 0) {
                 res.endTime = endDateM[0].padStart(5, '0');
                 res.end = `${res.startDate}T${res.endTime}:00`;
@@ -150,7 +146,11 @@ dbsScraper.mainPage = async function () {
             }
           }
         } catch (caughtError) {
-          res.errors.push({ error: caughtError, remarks: `Wirwar datums e.d. ${title}`, toDebug:res });
+          res.errors.push({
+            error: caughtError,
+            remarks: `Wirwar datums e.d. ${title}`,
+            toDebug: res,
+          });
         }
 
         return res;
@@ -160,33 +160,47 @@ dbsScraper.mainPage = async function () {
   rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
 
   this.saveBaseEventlist(workerData.family, rawEvents);
-  const thisWorkersEvents = rawEvents.filter((eventEl, index) => index % workerData.workerCount === workerData.index);
+  const thisWorkersEvents = rawEvents.filter(
+    (eventEl, index) => index % workerData.workerCount === workerData.index,
+  );
   return await this.mainPageEnd({ stopFunctie, rawEvents: thisWorkersEvents });
 };
 // #endregion                          MAIN PAGE
 
 // #region [rgba(120, 0, 0, 0.1)]     SINGLE PAGE
 dbsScraper.singlePage = async function ({ page, event }) {
-  const { stopFunctie } =  await this.singlePageStart();
+  const { stopFunctie } = await this.singlePageStart();
 
-  const pageInfo = await page.evaluate(({ event }) => {
-    const res = {
-      pageInfo: `<a class='page-info' href='${location.href}'>${document.title}</a>`,
-      errors: [],
-    };
+  const pageInfo = await page.evaluate(
+    ({ event }) => {
+      const res = {
+        pageInfo: `<a class='page-info' href='${location.href}'>${document.title}</a>`,
+        errors: [],
+      };
 
-    res.shortText = document.querySelector('.tribe-events-event-categories')?.textContent.toLowerCase().replace('concert, ', '').replace('concert', '').trim()
-      ?? '';
-    res.ticketURL = document.querySelector('.tribe-events-event-url a')?.href ?? null;
-    if (!res.ticketURL) {
-      res.price = '0';
-    }
+      res.shortText =
+        document
+          .querySelector('.tribe-events-event-categories')
+          ?.textContent.toLowerCase()
+          .replace('concert, ', '')
+          .replace('concert', '')
+          .trim() ?? '';
+      res.ticketURL = document.querySelector('.tribe-events-event-url a')?.href ?? null;
+      if (!res.ticketURL) {
+        res.price = '0';
+      }
 
-    return res;
-  }, { event });
+      return res;
+    },
+    { event },
+  );
 
   const imageRes = await this.getImage({
-    page, event, pageInfo, selectors: ['.tribe-events-event-image .wp-post-image'], mode: 'image-src',
+    page,
+    event,
+    pageInfo,
+    selectors: ['.tribe-events-event-image .wp-post-image'],
+    mode: 'image-src',
   });
   pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
   pageInfo.image = imageRes.image;
@@ -201,14 +215,22 @@ dbsScraper.singlePage = async function ({ page, event }) {
     try {
       await page.goto(pageInfo.ticketURL);
       // const priceRes = await this.getPriceFromHTML({page, event, pageInfo, selectors: ['[data-testid="ticket-price"]'], });
-      const html = await page.evaluate(() => document.querySelector('body').innerHTML).catch((err) => {
-        this.dirtyDebug({
-          title: 'error ticketURL',
-          err,
+      const html = await page
+        .evaluate(() => document.querySelector('body').innerHTML)
+        .catch((err) => {
+          this.dirtyDebug({
+            title: 'error ticketURL',
+            err,
+          });
         });
-      });
 
-      const price = Number(html.match(/€\d{1,3}[,.]\d\d/)[0].replace(/€/, '').replace(/[,.]/, '')) / 100;
+      const price =
+        Number(
+          html
+            .match(/€\d{1,3}[,.]\d\d/)[0]
+            .replace(/€/, '')
+            .replace(/[,.]/, ''),
+        ) / 100;
       pageInfo.price = price;
     } catch (caughtError) {
       // er is gewoon geen prijs beschikbaar.
@@ -220,51 +242,55 @@ dbsScraper.singlePage = async function ({ page, event }) {
   }
 
   return await this.singlePageEnd({
-    pageInfo, stopFunctie, page, event,
+    pageInfo,
+    stopFunctie,
+    page,
+    event,
   });
 };
 // #endregion                         SINGLE PAGE
 
 // #region [rgba(60, 0, 0, 0.3)]     LONG HTML
 async function longTextSocialsIframes(page, event, pageInfo) {
-  return await page.evaluate(({ event }) => {
-    const res = {};
-    const textSelector = '.tribe-events-content';
-    const mediaSelector = [`${textSelector} iframe`,
-    ].join(', ');
-    const removeEmptyHTMLFrom = textSelector;
-    const socialSelector = [
+  return await page.evaluate(
+    ({ event }) => {
+      const res = {};
+      const textSelector = '.tribe-events-content';
+      const mediaSelector = [`${textSelector} iframe`].join(', ');
+      const removeEmptyHTMLFrom = textSelector;
+      const socialSelector = [].join(', ');
+      const removeSelectors = [
+        `${textSelector} [class*='icon-']`,
+        `${textSelector} [class*='fa-']`,
+        `${textSelector} .fa`,
+        `${textSelector} script`,
+        `${textSelector} noscript`,
+        `${textSelector} style`,
+        `${textSelector} meta`,
+        `${textSelector} svg`,
+        `${textSelector} form`,
+        `${textSelector} .video-shortcode`,
+        `${textSelector} img`,
+      ].join(', ');
 
-    ].join(', ');
-    const removeSelectors = [
-      `${textSelector} [class*='icon-']`,
-      `${textSelector} [class*='fa-']`,
-      `${textSelector} .fa`,
-      `${textSelector} script`,
-      `${textSelector} noscript`,
-      `${textSelector} style`,
-      `${textSelector} meta`,
-      `${textSelector} svg`,
-      `${textSelector} form`,
-      `${textSelector} .video-shortcode`,
-      `${textSelector} img`,
-    ].join(', ');
+      const attributesToRemove = [
+        'style',
+        'hidden',
+        '_target',
+        'frameborder',
+        'onclick',
+        'aria-hidden',
+      ];
+      const attributesToRemoveSecondRound = ['class', 'id'];
+      const removeHTMLWithStrings = [];
 
-    const attributesToRemove = ['style', 'hidden', '_target', 'frameborder', 'onclick', 'aria-hidden'];
-    const attributesToRemoveSecondRound = ['class', 'id'];
-    const removeHTMLWithStrings = [];
-
-    // eerst onzin attributes wegslopen
-    const socAttrRemSelAdd = `${
-      socialSelector.length ? `, ${socialSelector}` : ''
-    }`;
-    const mediaAttrRemSelAdd = `${
-      mediaSelector.length ? `, ${mediaSelector} *, ${mediaSelector}` : ''
-    }`;
-    const textSocEnMedia = `${textSelector} *${socAttrRemSelAdd}${mediaAttrRemSelAdd}`;
-    document
-      .querySelectorAll(textSocEnMedia)
-      .forEach((elToStrip) => {
+      // eerst onzin attributes wegslopen
+      const socAttrRemSelAdd = `${socialSelector.length ? `, ${socialSelector}` : ''}`;
+      const mediaAttrRemSelAdd = `${
+        mediaSelector.length ? `, ${mediaSelector} *, ${mediaSelector}` : ''
+      }`;
+      const textSocEnMedia = `${textSelector} *${socAttrRemSelAdd}${mediaAttrRemSelAdd}`;
+      document.querySelectorAll(textSocEnMedia).forEach((elToStrip) => {
         attributesToRemove.forEach((attr) => {
           if (elToStrip.hasAttribute(attr)) {
             elToStrip.removeAttribute(attr);
@@ -272,9 +298,8 @@ async function longTextSocialsIframes(page, event, pageInfo) {
         });
       });
 
-    //  media obj maken voordat HTML verdwijnt
-    res.mediaForHTML = Array.from(document.querySelectorAll(mediaSelector))
-      .map((bron) => {
+      //  media obj maken voordat HTML verdwijnt
+      res.mediaForHTML = Array.from(document.querySelectorAll(mediaSelector)).map((bron) => {
         const src = bron?.src ? bron.src : '';
         return {
           outer: bron.outerHTML,
@@ -283,64 +308,70 @@ async function longTextSocialsIframes(page, event, pageInfo) {
           type: src.includes('spotify')
             ? 'spotify'
             : src.includes('youtube')
-              ? 'youtube'
-              : 'bandcamp',
+            ? 'youtube'
+            : 'bandcamp',
         };
       });
 
-    // socials obj maken voordat HTML verdwijnt
-    res.socialsForHTML = !socialSelector ? '' : Array.from(document.querySelectorAll(socialSelector))
-      .map((el) => {
-        el.querySelectorAll('i, svg, img').forEach((rm) => rm.parentNode.removeChild(rm));
-        if (!el.textContent.trim().length) {
-          if (el.href.includes('facebook') || el.href.includes('fb.me')) {
-            if (el.href.includes('facebook.com/events')) {
-              el.textContent = `FB event ${event.title}`;
-            } else {
-              el.textContent = 'Facebook';
+      // socials obj maken voordat HTML verdwijnt
+      res.socialsForHTML = !socialSelector
+        ? ''
+        : Array.from(document.querySelectorAll(socialSelector)).map((el) => {
+            el.querySelectorAll('i, svg, img').forEach((rm) => rm.parentNode.removeChild(rm));
+            if (!el.textContent.trim().length) {
+              if (el.href.includes('facebook') || el.href.includes('fb.me')) {
+                if (el.href.includes('facebook.com/events')) {
+                  el.textContent = `FB event ${event.title}`;
+                } else {
+                  el.textContent = 'Facebook';
+                }
+              } else if (el.href.includes('twitter')) {
+                el.textContent = 'Tweet';
+              } else if (el.href.includes('instagram')) {
+                el.textContent = 'Insta';
+              } else {
+                el.textContent = 'Social';
+              }
             }
-          } else if (el.href.includes('twitter')) {
-            el.textContent = 'Tweet';
-          } else if (el.href.includes('instagram')) {
-            el.textContent = 'Insta';
-          } else {
-            el.textContent = 'Social';
+            el.className = 'long-html__social-list-link';
+            el.target = '_blank';
+            return el.outerHTML;
+          });
+
+      // stript HTML tbv text
+      removeSelectors.length &&
+        document
+          .querySelectorAll(removeSelectors)
+          .forEach((toRemove) => toRemove.parentNode.removeChild(toRemove));
+
+      // verwijder ongewenste paragrafen over bv restaurants
+      removeHTMLWithStrings.length &&
+        Array.from(
+          document.querySelectorAll(`${textSelector} p, ${textSelector} span, ${textSelector} a`),
+        ).forEach((verwijder) => {
+          const heeftEvilString = !!removeHTMLWithStrings.find((evilString) =>
+            verwijder.textContent.includes(evilString),
+          );
+          if (heeftEvilString) {
+            verwijder.parentNode.removeChild(verwijder);
           }
-        }
-        el.className = 'long-html__social-list-link';
-        el.target = '_blank';
-        return el.outerHTML;
-      });
+        });
 
-    // stript HTML tbv text
-    removeSelectors.length && document.querySelectorAll(removeSelectors)
-      .forEach((toRemove) => toRemove.parentNode.removeChild(toRemove));
+      // lege HTML eruit cq HTML zonder tekst of getallen
+      // document.querySelectorAll(`${removeEmptyHTMLFrom} > *`)
+      //   .forEach(checkForEmpty => {
+      //     const leeg = checkForEmpty?.textContent.replace('&nbsp;','').replaceAll(/[\s\r\t]/g, '').trim() === '';
+      //     if (leeg){
+      //       checkForEmpty.parentNode.removeChild(checkForEmpty)
+      //     }
+      //   })
 
-    // verwijder ongewenste paragrafen over bv restaurants
-    removeHTMLWithStrings.length && Array.from(document.querySelectorAll(`${textSelector} p, ${textSelector} span, ${textSelector} a`))
-      .forEach((verwijder) => {
-        const heeftEvilString = !!removeHTMLWithStrings.find((evilString) => verwijder.textContent.includes(evilString));
-        if (heeftEvilString) {
-          verwijder.parentNode.removeChild(verwijder);
-        }
-      });
+      res.textForHTML = Array.from(document.querySelectorAll(textSelector))
+        .map((el) => el.innerHTML)
+        .join('');
 
-    // lege HTML eruit cq HTML zonder tekst of getallen
-    // document.querySelectorAll(`${removeEmptyHTMLFrom} > *`)
-    //   .forEach(checkForEmpty => {
-    //     const leeg = checkForEmpty?.textContent.replace('&nbsp;','').replaceAll(/[\s\r\t]/g, '').trim() === '';
-    //     if (leeg){
-    //       checkForEmpty.parentNode.removeChild(checkForEmpty)
-    //     }
-    //   })
-
-    res.textForHTML = Array.from(document.querySelectorAll(textSelector))
-      .map((el) => el.innerHTML)
-      .join('');
-
-    // laatste attributen eruit.
-    document.querySelectorAll(textSocEnMedia)
-      .forEach((elToStrip) => {
+      // laatste attributen eruit.
+      document.querySelectorAll(textSocEnMedia).forEach((elToStrip) => {
         attributesToRemoveSecondRound.forEach((attr) => {
           if (elToStrip.hasAttribute(attr)) {
             elToStrip.removeAttribute(attr);
@@ -348,11 +379,13 @@ async function longTextSocialsIframes(page, event, pageInfo) {
         });
       });
 
-    // tekst
-    res.textForHTML = Array.from(document.querySelectorAll(textSelector))
-      .map((el) => el.innerHTML)
-      .join('');
-    return res;
-  }, { event });
+      // tekst
+      res.textForHTML = Array.from(document.querySelectorAll(textSelector))
+        .map((el) => el.innerHTML)
+        .join('');
+      return res;
+    },
+    { event },
+  );
 }
 // #endregion                        LONG HTML
