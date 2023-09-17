@@ -29,6 +29,9 @@ metropoolScraper.listenToMasterThread();
 
 // #region [rgba(0, 120, 0, 0.1)]      MAIN PAGE EVENT CHECK
 metropoolScraper.mainPageAsyncCheck = async function (event) {
+
+  this.dirtyDebug(event);
+
   const workingTitle = this.cleanupEventTitle(event.title);
 
   const isRefused = await this.rockRefuseListCheck(event, workingTitle);
