@@ -8,13 +8,13 @@ const groeneEngelScraper = new AbstractScraper({
   mainPage: {
     timeout: 25076,
     waitUntil: 'load',
+    url: 'https://www.groene-engel.nl/programma/?filter=concert',
   },
   singlePage: {
     timeout: 20077,
   },
   app: {
     mainPage: {
-      url: 'https://www.groene-engel.nl/programma/?filter=concert',
       requiredProperties: ['venueEventUrl', 'title'],
     },
     singlePage: {

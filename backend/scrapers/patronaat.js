@@ -9,13 +9,13 @@ const patronaatScraper = new AbstractScraper({
 
   mainPage: {
     timeout: 30034,
+    url: 'https://patronaat.nl/programma/?type=event&s=&eventtype%5B%5D=178',
   },
   singlePage: {
     timeout: 20036,
   },
   app: {
     mainPage: {
-      url: 'https://patronaat.nl/programma/?type=event&s=&eventtype%5B%5D=178',
       requiredProperties: ['venueEventUrl', 'title'],
     },
     singlePage: {

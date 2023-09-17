@@ -9,13 +9,13 @@ const metropoolScraper = new AbstractScraper({
   mainPage: {
     timeout: 60000,
     waitUntil: 'load',
+    url: 'https://metropool.nl/agenda',
   },
   singlePage: {
     timeout: 45000,
   },
   app: {
     mainPage: {
-      url: 'https://metropool.nl/agenda',
       requiredProperties: ['venueEventUrl', 'title'],
     },
     singlePage: {

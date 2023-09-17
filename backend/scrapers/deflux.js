@@ -10,6 +10,7 @@ const defluxScraper = new AbstractScraper({
 
   mainPage: {
     timeout: 50008,
+    url: `https://www.podiumdeflux.nl/wp-json/wp/v2/ajde_events?event_type=81,87,78,88,80&filter[startdate]=${vandaag}`,
   },
   singlePage: {
     timeout: 20009,
@@ -17,7 +18,6 @@ const defluxScraper = new AbstractScraper({
   app: {
     mainPage: {
       useCustomScraper: true,
-      url: `https://www.podiumdeflux.nl/wp-json/wp/v2/ajde_events?event_type=81,87,78,88,80&filter[startdate]=${vandaag}`,
       requiredProperties: ['venueEventUrl', 'title'],
     },
     singlePage: {
@@ -97,7 +97,7 @@ defluxScraper.mainPage = async function () {
   const { stopFunctie } = await this.mainPageStart();
 
   const axiosRes = await axios // TODO naar fetch
-    .get(this.app.mainPage.url)
+    .get(this._s.mainPage.url)
     .then((response) => response.data)
     .catch((caughtError) => {
       // TODO WRAPPEN
@@ -108,7 +108,7 @@ defluxScraper.mainPage = async function () {
     .map((axiosResultSingle) => {
       let title = axiosResultSingle.title.rendered;
       const res = {
-        pageInfo: `<a class='pageinfo' href="${this.app.mainPage.url}">${workerData.family} main - ${title}</a>`,
+        pageInfo: `<a class='pageinfo' href="${this._s.mainPage.url}">${workerData.family} main - ${title}</a>`,
         errors: [],
         venueEventUrl: axiosResultSingle.link,
         id: axiosResultSingle.id,

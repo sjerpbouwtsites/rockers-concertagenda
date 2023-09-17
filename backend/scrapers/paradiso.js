@@ -9,13 +9,13 @@ const paradisoScraper = new AbstractScraper({
   mainPage: {
     timeout: 120023,
     waitUntil: 'load',
+    url: 'https://www.paradiso.nl/',
   },
   singlePage: {
     timeout: 120024,
   },
   app: {
     mainPage: {
-      url: 'https://www.paradiso.nl/',
       requiredProperties: ['venueEventUrl', 'title'],
     },
     singlePage: {

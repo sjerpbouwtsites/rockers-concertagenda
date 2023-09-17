@@ -7,13 +7,13 @@ const gebrdenobelScraper = new AbstractScraper({
 
   mainPage: {
     timeout: 15000,
+    url: 'https://gebrdenobel.nl/programma/',
   },
   singlePage: {
     timeout: 20000,
   },
   app: {
     mainPage: {
-      url: 'https://gebrdenobel.nl/programma/',
       requiredProperties: ['venueEventUrl', 'title'],
     },
     singlePage: {

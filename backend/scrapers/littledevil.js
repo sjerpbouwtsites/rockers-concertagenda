@@ -7,13 +7,13 @@ const littledevilScraper = new AbstractScraper({
   workerData: { ...workerData },
   mainPage: {
     timeout: 45000,
+    url: 'https://www.littledevil.nl/calendar/',
   },
   singlePage: {
     timeout: 15000,
   },
   app: {
     mainPage: {
-      url: 'https://www.littledevil.nl/calendar/',
       requiredProperties: ['venueEventUrl', 'title', 'start'],
     },
     singlePage: {

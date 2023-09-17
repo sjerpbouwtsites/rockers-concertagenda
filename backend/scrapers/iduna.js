@@ -5,16 +5,15 @@ import AbstractScraper from './gedeeld/abstract-scraper.js';
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const idunaScraper = new AbstractScraper({
   workerData: { ...workerData },
-
+  mainPage: {
+    url: 'https://iduna.nl/',
+    waitUntil: 'load',
+  },
   singlePage: {
     timeout: 20000,
   },
-  mainPage: {
-    waitUntil: 'load',
-  },
   app: {
     mainPage: {
-      url: 'https://iduna.nl/',
       requiredProperties: ['venueEventUrl', 'title'],
     },
     singlePage: {

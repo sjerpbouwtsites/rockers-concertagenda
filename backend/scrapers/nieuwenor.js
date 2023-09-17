@@ -7,13 +7,13 @@ const nieuwenorScraper = new AbstractScraper({
 
   mainPage: {
     timeout: 30053,
+    url: 'https://nieuwenor.nl/programma',
   },
   singlePage: {
     timeout: 15014,
   },
   app: {
     mainPage: {
-      url: 'https://nieuwenor.nl/programma',
       requiredProperties: ['venueEventUrl', 'title', 'shortText'],
     },
     singlePage: {

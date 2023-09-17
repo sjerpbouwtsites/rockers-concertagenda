@@ -8,13 +8,13 @@ const depulScraper = new AbstractScraper({
 
   mainPage: {
     timeout: 35000,
+    url: 'https://www.livepul.com/agenda/',
   },
   singlePage: {
     timeout: 25000,
   },
   app: {
     mainPage: {
-      url: 'https://www.livepul.com/agenda/',
       requiredProperties: ['venueEventUrl', 'title'],
     },
     singlePage: {

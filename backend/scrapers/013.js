@@ -5,10 +5,11 @@ import { mapToStart, mapToDoor } from './gedeeld/datums.js';
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const nuldertienScraper = new AbstractScraper({
   workerData: { ...workerData },
-
+  mainPage: {
+    url: 'https://www.013.nl/programma/heavy',
+  },
   app: {
     mainPage: {
-      url: 'https://www.013.nl/programma/heavy',
       requiredProperties: ['venueEventUrl', 'title'],
     },
     singlePage: {

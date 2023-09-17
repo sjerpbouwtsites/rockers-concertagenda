@@ -9,6 +9,7 @@ const oostpoortScraper = new AbstractScraper({
 
   mainPage: {
     timeout: 60017,
+    url: 'https://www.spotgroningen.nl/programma/#genres=muziek&subgenres=metal-heavy,pop-rock',
   },
   singlePage: {
     timeout: 20018,
@@ -16,7 +17,6 @@ const oostpoortScraper = new AbstractScraper({
   },
   app: {
     mainPage: {
-      url: 'https://www.spotgroningen.nl/programma/#genres=muziek&subgenres=metal-heavy,pop-rock',
       requiredProperties: ['venueEventUrl', 'title', 'start'],
     },
     singlePage: {

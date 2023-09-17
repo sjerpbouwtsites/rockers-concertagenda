@@ -7,13 +7,13 @@ const dynamoScraper = new AbstractScraper({
 
   mainPage: {
     timeout: 35060,
+    url: 'https://www.dynamo-eindhoven.nl/programma/?_sfm_fw%3Aopt%3Astyle=15',
   },
   singlePage: {
     timeout: 25061,
   },
   app: {
     mainPage: {
-      url: 'https://www.dynamo-eindhoven.nl/programma/?_sfm_fw%3Aopt%3Astyle=15',
       requiredProperties: ['venueEventUrl', 'title'],
     },
     singlePage: {

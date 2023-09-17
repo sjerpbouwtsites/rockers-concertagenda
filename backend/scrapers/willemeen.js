@@ -7,10 +7,11 @@ const willemeeenScraper = new AbstractScraper({
 
   mainPage: {
     waitUntil: 'load',
+    url: 'https://www.willemeen.nl/programma/',
   },
+
   app: {
     mainPage: {
-      url: 'https://www.willemeen.nl/programma/',
       requiredProperties: ['venueEventUrl', 'title', 'shortText', 'start'],
     },
     singlePage: {

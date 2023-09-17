@@ -9,6 +9,7 @@ const doornroosjeScraper = new AbstractScraper({
 
   mainPage: {
     timeout: 60000,
+    url: 'https://www.doornroosje.nl/?genre=metal%252Cpunk%252Cpost-hardcore%252Chardcore%252Cnoise-rock',
     waitUntil: 'load',
   },
   singlePage: {
@@ -16,7 +17,6 @@ const doornroosjeScraper = new AbstractScraper({
   },
   app: {
     mainPage: {
-      url: 'https://www.doornroosje.nl/?genre=metal%252Cpunk%252Cpost-hardcore%252Chardcore%252Cnoise-rock',
       requiredProperties: ['venueEventUrl', 'title'],
     },
     singlePage: {

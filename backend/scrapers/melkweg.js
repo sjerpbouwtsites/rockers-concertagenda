@@ -8,13 +8,13 @@ const melkwegScraper = new AbstractScraper({
   mainPage: {
     timeout: 75073,
     waitUntil: 'load',
+    url: 'https://www.melkweg.nl/nl/agenda',
   },
   singlePage: {
     timeout: 20074,
   },
   app: {
     mainPage: {
-      url: 'https://www.melkweg.nl/nl/agenda',
       requiredProperties: ['venueEventUrl', 'title'],
     },
     singlePage: {

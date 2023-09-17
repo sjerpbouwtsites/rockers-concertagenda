@@ -12,13 +12,14 @@ import {
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const neushoornScraper = new AbstractScraper({
   workerData: { ...workerData },
-
+  mainPage: {
+    url: 'https://neushoorn.nl/#/search?category=Heavy',
+  },
   singlePage: {
     timeout: 20000,
   },
   app: {
     mainPage: {
-      url: 'https://neushoorn.nl/#/search?category=Heavy',
       requiredProperties: ['venueEventUrl', 'title'],
     },
     singlePage: {

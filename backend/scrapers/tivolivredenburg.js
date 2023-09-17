@@ -8,10 +8,10 @@ const tivoliVredenburgScraper = new AbstractScraper({
 
   mainPage: {
     waitUntil: 'load',
+    url: 'https://www.tivolivredenburg.nl/agenda/?event_category=metal-punk-heavy',
   },
   app: {
     mainPage: {
-      url: 'https://www.tivolivredenburg.nl/agenda/?event_category=metal-punk-heavy',
       requiredProperties: ['venueEventUrl', 'title'],
     },
     singlePage: {

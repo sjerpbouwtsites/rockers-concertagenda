@@ -8,13 +8,13 @@ const occiiScraper = new AbstractScraper({
 
   mainPage: {
     timeout: 90000,
+    url: 'https://occii.org/events/categories/rock/',
   },
   singlePage: {
     timeout: 45000,
   },
   app: {
     mainPage: {
-      url: 'https://occii.org/events/categories/rock/',
       requiredProperties: ['venueEventUrl'],
     },
     singlePage: {

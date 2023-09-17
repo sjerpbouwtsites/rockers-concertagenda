@@ -7,13 +7,13 @@ const dehellingScraper = new AbstractScraper({
 
   mainPage: {
     timeout: 20011,
+    url: 'https://dehelling.nl/agenda/?zoeken=&genre%5B%5D=heavy',
   },
   singlePage: {
     timeout: 10012,
   },
   app: {
     mainPage: {
-      url: 'https://dehelling.nl/agenda/?zoeken=&genre%5B%5D=heavy',
       requiredProperties: ['venueEventUrl', 'title', 'start'],
     },
     singlePage: {

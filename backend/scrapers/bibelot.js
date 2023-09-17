@@ -6,15 +6,14 @@ const bibelotScraper = new AbstractScraper({
   workerData: { ...workerData },
   mainPage: {
     timeout: 15002,
+    requiredProperties: ['venueEventUrl', 'title'],
+    url: 'https://bibelot.net/',
   },
   singlePage: {
     timeout: 20003,
   },
   app: {
-    mainPage: {
-      url: 'https://bibelot.net/',
-      requiredProperties: ['venueEventUrl', 'title'],
-    },
+    mainPage: {},
     singlePage: {
       requiredProperties: ['venueEventUrl', 'title', 'start'],
     },

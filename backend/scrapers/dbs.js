@@ -9,13 +9,13 @@ const dbsScraper = new AbstractScraper({
   mainPage: {
     timeout: 60045,
     waitUntil: 'domcontentloaded',
+    url: 'https://www.dbstudio.nl/agenda/',
   },
   singlePage: {
     timeout: 45000,
   },
   app: {
     mainPage: {
-      url: 'https://www.dbstudio.nl/agenda/',
       requiredProperties: ['venueEventUrl', 'title', 'start'],
     },
     singlePage: {

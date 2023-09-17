@@ -14,13 +14,13 @@ const afasliveScraper = new AbstractScraper({
   workerData: { ...workerData },
   mainPage: {
     timeout: 60043,
+    url: 'https://www.afaslive.nl/agenda',
   },
   singlePage: {
     timeout: 20000,
   },
   app: {
     mainPage: {
-      url: 'https://www.afaslive.nl/agenda',
       requiredProperties: ['venueEventUrl'],
     },
     singlePage: {

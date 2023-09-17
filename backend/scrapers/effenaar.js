@@ -7,13 +7,13 @@ const effenaarScraper = new AbstractScraper({
 
   mainPage: {
     timeout: 30013,
+    url: 'https://www.effenaar.nl/agenda?genres.title=heavy',
   },
   singlePage: {
     timeout: 15014,
   },
   app: {
     mainPage: {
-      url: 'https://www.effenaar.nl/agenda?genres.title=heavy',
       requiredProperties: ['venueEventUrl', 'title'],
     },
     singlePage: {

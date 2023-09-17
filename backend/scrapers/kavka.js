@@ -7,13 +7,13 @@ const kavkaScraper = new AbstractScraper({
 
   mainPage: {
     timeout: 35015,
+    url: 'https://kavka.be/programma/',
   },
   singlePage: {
     timeout: 30016,
   },
   app: {
     mainPage: {
-      url: 'https://kavka.be/programma/',
       requiredProperties: ['venueEventUrl', 'title', 'start'],
     },
     singlePage: {

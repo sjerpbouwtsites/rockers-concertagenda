@@ -9,10 +9,10 @@ const voltScraper = new AbstractScraper({
 
   mainPage: {
     waitUntil: 'load',
+    url: 'https://www.poppodium-volt.nl/programma?f%5B0%5D=activity_itix_genres%3A9&f%5B1%5D=activity_itix_genres%3A30',
   },
   app: {
     mainPage: {
-      url: 'https://www.poppodium-volt.nl/programma?f%5B0%5D=activity_itix_genres%3A9&f%5B1%5D=activity_itix_genres%3A30',
       requiredProperties: ['venueEventUrl', 'title'],
     },
     singlePage: {

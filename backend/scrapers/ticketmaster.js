@@ -10,6 +10,7 @@ const ticketmasterScraper = new AbstractScraper({
 
   mainPage: {
     timeout: 60007,
+    url: `https://app.ticketmaster.com/discovery/v2/events.json?countryCode=NL&apikey=${workerData.masterEnv.TICKETMASTER_CONSUMER_KEY}&size=199&page=${workerData.index}`,
   },
   singlePage: {
     timeout: 30005,
@@ -17,7 +18,7 @@ const ticketmasterScraper = new AbstractScraper({
   app: {
     mainPage: {
       useCustomScraper: true,
-      url: `https://app.ticketmaster.com/discovery/v2/events.json?countryCode=NL&apikey=${workerData.masterEnv.TICKETMASTER_CONSUMER_KEY}&size=199&page=${workerData.index}`,
+
       requiredProperties: [],
       enforceMusicEventType: false,
     },
@@ -46,7 +47,7 @@ ticketmasterScraper.mainPage = async function () {
 
   const { stopFunctie } = await this.mainPageStart();
 
-  const rawEvents = await fetch(this.app.mainPage.url)
+  const rawEvents = await fetch(this._s.mainPage.url)
     .then((result) => result.json())
     .then((fetchedData) => {
       // fs.writeFile(`${fsDirections.temp + '/ticketmaster/raw'}/${workerData.index}.json`, JSON.stringify(fetchedData), "UTF-8", ()=>{})
@@ -59,7 +60,7 @@ ticketmasterScraper.mainPage = async function () {
       }
 
       const res1 = {
-        pageInfo: `<a class='page-info' href='${this.app.mainPage.url}'>Ticketmaster overview ${workerData.index}</a>`,
+        pageInfo: `<a class='page-info' href='${this._s.mainPage.url}'>Ticketmaster overview ${workerData.index}</a>`,
         errors: [],
       };
 

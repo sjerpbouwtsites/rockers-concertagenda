@@ -8,13 +8,13 @@ const p60Scraper = new AbstractScraper({
 
   mainPage: {
     timeout: 60020,
+    url: 'https://p60.nl/agenda',
   },
   singlePage: {
     timeout: 30021,
   },
   app: {
     mainPage: {
-      url: 'https://p60.nl/agenda',
       requiredProperties: ['venueEventUrl', 'title', 'start'],
     },
     singlePage: {

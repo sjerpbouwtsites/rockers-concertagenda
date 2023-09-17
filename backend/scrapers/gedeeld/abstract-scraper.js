@@ -367,7 +367,8 @@ export default class AbstractScraper extends ScraperConfig {
         page: null,
       };
     }
-    if (!this._s.app.mainPage.url) {
+    if (!this._s.mainPage.url) {
+      this.dirtyDebug(this._s);
       throw new Error('geen app.mainPage.url ingesteld');
     }
     if (this._s.app.mainPage.useCustomScraper) {

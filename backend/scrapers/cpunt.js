@@ -9,13 +9,13 @@ const cpuntScraper = new AbstractScraper({
   mainPage: {
     timeout: 20014,
     waitUntil: 'load',
+    url: 'https://www.cpunt.nl/agenda?q=&genre=metalpunkheavy&StartDate=&EndDate=#filter',
   },
   singlePage: {
     timeout: 20012,
   },
   app: {
     mainPage: {
-      url: 'https://www.cpunt.nl/agenda?q=&genre=metalpunkheavy&StartDate=&EndDate=#filter',
       requiredProperties: ['venueEventUrl', 'title'],
     },
     singlePage: {
