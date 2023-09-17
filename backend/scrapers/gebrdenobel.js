@@ -180,13 +180,22 @@ gebrdenobelScraper.singlePage = async function ({ page, event }) {
   const cookiesNodig = await page.evaluate(() => document.querySelector('.consent__show'));
 
   if (cookiesNodig) {
-    await page.waitForSelector('.consent__form__submit', {
-      timeout: 2000,
-    });
-    await page.evaluate(() => document.querySelector('.consent__form__submit').click());
-    await page.waitForSelector('.contentBlocks', {
-      timeout: 5000,
-    });
+    try {
+      await page.waitForSelector('.consent__form__submit', {
+        timeout: 5000,
+      });
+      await page.evaluate(() => document.querySelector('.consent__form__submit').click());
+      await page.waitForSelector('.contentBlocks', {
+        timeout: 7500,
+      });
+    } catch (error) {
+      return this.singlePageEnd({
+        pageInfo: {},
+        stopFunctie,
+        page,
+        event,
+      });
+    }
   }
 
   const pageInfo = await page.evaluate(

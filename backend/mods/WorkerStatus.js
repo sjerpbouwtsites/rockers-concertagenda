@@ -28,7 +28,7 @@ export default class WorkerStatus {
 
   static shellArguments = getShellArguments();
 
-  static _maxSimultaneousWorkers = 4;
+  static _maxSimultaneousWorkers = 3;
 
   static get maxSimultaneousWorkers() {
     if (this.shellArguments?.workers) {

@@ -1,4 +1,723 @@
 
+  effenaar-1 Error - 3:03:38 PM
+  Error: false
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:885:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:875:23)
+    at effenaarScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/effenaar.js:205:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:653:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  false
+  
+  
+  baroeg-0 Error - 3:03:32 PM
+  Error: false
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:885:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:875:23)
+    at baroegScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/baroeg.js:178:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:653:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  false
+  
+  
+  effenaar-2 Error - 3:03:12 PM
+  Error: false
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:885:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:875:23)
+    at effenaarScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/effenaar.js:205:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:653:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  false
+  
+  
+  kavka-0 Error - 3:03:00 PM
+  Error: false
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:885:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:875:23)
+    at kavkaScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/kavka.js:235:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:653:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  false
+  
+  
+  oosterpoort-0 Error - 3:01:28 PM
+  Error: false
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:885:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:875:23)
+    at oostpoortScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/oosterpoort.js:230:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:653:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  false
+  
+  
+  gebrdenobel-0 Error - 3:01:22 PM
+  Error: pageInfo object incompleet; geen errors
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:857:16)
+    at gebrdenobelScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/gebrdenobel.js:192:19)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:653:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  pageInfo object incompleet; geen errors
+  
+  
+  willemeen-1 Error - 3:01:00 PM
+  Error: false
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:885:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:875:23)
+    at willemeeenScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/willemeen.js:177:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:653:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  false
+  
+  
+  dynamo-0 Error - 2:59:43 PM
+  Error: false
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:885:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:875:23)
+    at dynamoScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/dynamo.js:239:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:653:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  false
+  
+  
+  dynamo-0 Error - 2:59:43 PM
+  TimeoutError: Waiting for selector `.dynamic-background-color#intro .color-pick` failed: Waiting failed: 2500ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Waiting for selector `.dynamic-background-color#intro .color-pick` failed: Waiting failed: 2500ms exceeded
+  
+  
+  dynamo-0 Error - 2:59:43 PM
+  Error: false
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:885:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:875:23)
+    at dynamoScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/dynamo.js:239:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:653:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  false
+  
+  
+  dynamo-0 Error - 2:59:43 PM
+  Error: false
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:885:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:875:23)
+    at dynamoScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/dynamo.js:239:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:653:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  false
+  
+  
+  dynamo-1 Error - 2:59:32 PM
+  Error: false
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:885:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:875:23)
+    at dynamoScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/dynamo.js:239:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:653:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  false
+  
+  
+  dynamo-1 Error - 2:59:32 PM
+  TimeoutError: Waiting for selector `.dynamic-background-color#intro .color-pick` failed: Waiting failed: 2500ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Waiting for selector `.dynamic-background-color#intro .color-pick` failed: Waiting failed: 2500ms exceeded
+  
+  
+  dynamo-1 Error - 2:59:32 PM
+  Error: false
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:885:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:875:23)
+    at dynamoScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/dynamo.js:239:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:653:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  false
+  
+  
+  dynamo-1 Error - 2:59:32 PM
+  Error: false
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:885:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:875:23)
+    at dynamoScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/dynamo.js:239:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:653:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  false
+  
+  
+  gebrdenobel-0 Error - 2:55:36 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:821:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  effenaar-2 Error - 2:55:33 PM
+  Error: false
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:885:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:875:23)
+    at effenaarScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/effenaar.js:205:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:653:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  false
+  
+  
+  gebrdenobel-0 Error - 2:55:21 PM
+  TimeoutError: Waiting for selector `.contentBlocks` failed: Waiting failed: 5000ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Waiting for selector `.contentBlocks` failed: Waiting failed: 5000ms exceeded
+  
+  
+  effenaar-1 Error - 2:54:49 PM
+  Error: false
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:885:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:875:23)
+    at effenaarScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/effenaar.js:205:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:653:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  false
+  
+  
+  dynamo-0 Error - 2:54:47 PM
+  Error: false
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:885:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:875:23)
+    at dynamoScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/dynamo.js:239:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:653:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  false
+  
+  
+  dynamo-0 Error - 2:54:47 PM
+  TimeoutError: Waiting for selector `.dynamic-background-color#intro .color-pick` failed: Waiting failed: 2500ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Waiting for selector `.dynamic-background-color#intro .color-pick` failed: Waiting failed: 2500ms exceeded
+  
+  
+  dynamo-0 Error - 2:54:47 PM
+  Error: false
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:885:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:875:23)
+    at dynamoScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/dynamo.js:239:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:653:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  false
+  
+  
+  dynamo-0 Error - 2:54:47 PM
+  Error: false
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:885:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:875:23)
+    at dynamoScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/dynamo.js:239:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:653:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  false
+  
+  
+  kavka-0 Error - 2:54:26 PM
+  Error: false
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:885:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:875:23)
+    at kavkaScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/kavka.js:235:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:653:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  false
+  
+  
+  baroeg-0 Error - 2:53:53 PM
+  Error: false
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:885:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:875:23)
+    at baroegScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/baroeg.js:178:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:653:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  false
+  
+  
+  dynamo-1 Error - 2:53:44 PM
+  Error: false
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:885:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:875:23)
+    at dynamoScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/dynamo.js:239:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:653:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  false
+  
+  
+  dynamo-1 Error - 2:53:44 PM
+  TimeoutError: Waiting for selector `.dynamic-background-color#intro .color-pick` failed: Waiting failed: 2500ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Waiting for selector `.dynamic-background-color#intro .color-pick` failed: Waiting failed: 2500ms exceeded
+  
+  
+  dynamo-1 Error - 2:53:44 PM
+  Error: false
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:885:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:875:23)
+    at dynamoScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/dynamo.js:239:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:653:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  false
+  
+  
+  dynamo-1 Error - 2:53:44 PM
+  Error: false
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:885:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:875:23)
+    at dynamoScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/dynamo.js:239:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:653:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  false
+  
+  
+  willemeen-1 Error - 2:53:23 PM
+  Error: false
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:885:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:875:23)
+    at willemeeenScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/willemeen.js:177:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:653:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  false
+  
+  
+  effenaar-1 Error - 2:51:11 PM
+  Error: false
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:885:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:875:23)
+    at effenaarScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/effenaar.js:205:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:653:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  false
+  
+  
+  kavka-0 Error - 2:50:55 PM
+  TypeError: Cannot read properties of undefined (reading 'venueEventUrl')
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:886:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:875:23)
+    at kavkaScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/kavka.js:235:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:653:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  Cannot read properties of undefined (reading 'venueEventUrl')
+  
+  
+  dynamo-1 Error - 2:50:26 PM
+  Error: false
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:885:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:875:23)
+    at dynamoScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/dynamo.js:239:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:653:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  false
+  
+  
+  dynamo-1 Error - 2:50:26 PM
+  TimeoutError: Waiting for selector `.dynamic-background-color#intro .color-pick` failed: Waiting failed: 2500ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Waiting for selector `.dynamic-background-color#intro .color-pick` failed: Waiting failed: 2500ms exceeded
+  
+  
+  dynamo-1 Error - 2:50:26 PM
+  Error: false
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:885:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:875:23)
+    at dynamoScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/dynamo.js:239:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:653:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  false
+  
+  
+  dynamo-1 Error - 2:50:26 PM
+  Error: false
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:885:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:875:23)
+    at dynamoScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/dynamo.js:239:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:653:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  false
+  
+  
+  willemeen-0 Error - 2:46:37 PM
+  Error: Execution context was destroyed, most likely because of a navigation.
+    at rewriteError (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:307:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async #evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:247:60)
+    at async ExecutionContext.evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:146:16)
+    at async AbstractScraper.createSinglePage (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:750:7)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:630:25)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  Execution context was destroyed, most likely because of a navigation.
+  
+  
+  willemeen-0 Error - 2:46:18 PM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
+    at listOnTimeout (node:internal/timers:573:17)
+    at process.processTimers (node:internal/timers:514:7) 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  dbs-2 Error - 2:46:02 PM
+  Error: Execution context was destroyed, most likely because of a navigation.
+    at rewriteError (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:307:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async #evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:247:60)
+    at async ExecutionContext.evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:146:16)
+    at async AbstractScraper.createSinglePage (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:750:7)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:630:25)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  Execution context was destroyed, most likely because of a navigation.
+  
+  
+  dbs-2 Error - 2:43:04 PM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
+    at listOnTimeout (node:internal/timers:573:17)
+    at process.processTimers (node:internal/timers:514:7) 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  willemeen-0 Error - 2:43:01 PM
+  Error: Execution context was destroyed, most likely because of a navigation.
+    at rewriteError (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:307:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async #evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:247:60)
+    at async ExecutionContext.evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:146:16)
+    at async AbstractScraper.createSinglePage (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:750:7)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:630:25)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  Execution context was destroyed, most likely because of a navigation.
+  
+  
+  willemeen-0 Error - 2:42:21 PM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
+    at listOnTimeout (node:internal/timers:573:17)
+    at process.processTimers (node:internal/timers:514:7) 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  dbs-2 Error - 2:40:17 PM
+  TypeError: Cannot read properties of null (reading 'appendChild')
+    at evaluate (evaluate at AbstractScraper.createSinglePage (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:750:18), <anonymous>:5:24)
+    at #evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:249:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:146:16)
+    at async AbstractScraper.createSinglePage (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:750:7)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:630:25)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  Cannot read properties of null (reading 'appendChild')
+  
+  
+  dbs-2 Error - 2:39:31 PM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
+    at listOnTimeout (node:internal/timers:573:17)
+    at process.processTimers (node:internal/timers:514:7) 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  willemeen-0 Error - 2:39:24 PM
+  ProtocolError: Runtime.callFunctionOn timed out. Increase the 'protocolTimeout' setting in launch/connect calls for a higher timeout if needed.
+    at <instance_members_initializer> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Connection.js:46:14)
+    at new Callback (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Connection.js:50:16)
+    at CallbackRegistry.create (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Connection.js:89:26)
+    at Connection._rawSend (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Connection.js:202:26)
+    at CDPSessionImpl.send (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Connection.js:409:33)
+    at #evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:231:50)
+    at async ExecutionContext.evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:146:16)
+    at async AbstractScraper.createSinglePage (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:750:7)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:630:25)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  Runtime.callFunctionOn timed out. Increase the 'protocolTimeout' setting in launch/connect calls for a higher timeout if needed.
+  
+  
+  dbs-2 Error - 2:38:55 PM
+  Error: Execution context was destroyed, most likely because of a navigation.
+    at rewriteError (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:307:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async #evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:247:60)
+    at async ExecutionContext.evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:146:16)
+    at async AbstractScraper.createSinglePage (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:750:7)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:630:25)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  Execution context was destroyed, most likely because of a navigation.
+  
+  
+  tivolivredenburg-1 Error - 2:38:53 PM
+  TimeoutError: Waiting for selector `.img-container source:last-of-type` failed: Waiting failed: 2500ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
+    at listOnTimeout (node:internal/timers:573:17)
+    at process.processTimers (node:internal/timers:514:7) 
+  Waiting for selector `.img-container source:last-of-type` failed: Waiting failed: 2500ms exceeded
+  
+  
+  dbs-2 Error - 2:38:30 PM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
+    at listOnTimeout (node:internal/timers:573:17)
+    at process.processTimers (node:internal/timers:514:7) 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  tivolivredenburg-1 Error - 2:37:01 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:821:18)
+    at listOnTimeout (node:internal/timers:573:17)
+    at process.processTimers (node:internal/timers:514:7) 
+  Timeout baseEvent
+  
+  
+  effenaar-1 Error - 2:36:51 PM
+  TimeoutError: Timed out after 30000 ms while waiting for the WS endpoint URL to appear in stdout!
+    at ChromeLauncher.launch (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/node/ProductLauncher.js:123:23)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:246:22) 
+  Timed out after 30000 ms while waiting for the WS endpoint URL to appear in stdout!
+  
+  
+  willemeen-0 Error - 2:36:22 PM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
+    at listOnTimeout (node:internal/timers:573:17)
+    at process.processTimers (node:internal/timers:514:7) 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  gebrdenobel-0 Error - 2:36:14 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:821:18)
+    at listOnTimeout (node:internal/timers:573:17)
+    at process.processTimers (node:internal/timers:514:7) 
+  Timeout baseEvent
+  
+  
+  oosterpoort-0 Error - 2:36:09 PM
+  Error: false
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:885:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:875:23)
+    at oostpoortScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/oosterpoort.js:230:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:653:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  false
+  
+  
+  oosterpoort-0 Error - 2:36:08 PM
+  TimeoutError: Waiting for selector `.hero__image` failed: Waiting failed: 2500ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
+    at listOnTimeout (node:internal/timers:573:17)
+    at process.processTimers (node:internal/timers:514:7) 
+  Waiting for selector `.hero__image` failed: Waiting failed: 2500ms exceeded
+  
+  
+  gebrdenobel-0 Error - 2:35:57 PM
+  TimeoutError: Waiting for selector `.consent__form__submit` failed: Waiting failed: 2000ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
+    at listOnTimeout (node:internal/timers:573:17)
+    at process.processTimers (node:internal/timers:514:7) 
+  Waiting for selector `.consent__form__submit` failed: Waiting failed: 2000ms exceeded
+  
+  
+  dynamo-0 Error - 2:35:01 PM
+  Error: false
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:885:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:875:23)
+    at dynamoScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/dynamo.js:239:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:653:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  false
+  
+  
+  dynamo-0 Error - 2:35:01 PM
+  TimeoutError: Waiting for selector `.dynamic-background-color#intro .color-pick` failed: Waiting failed: 2500ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
+    at listOnTimeout (node:internal/timers:573:17)
+    at process.processTimers (node:internal/timers:514:7) 
+  Waiting for selector `.dynamic-background-color#intro .color-pick` failed: Waiting failed: 2500ms exceeded
+  
+  
+  dynamo-0 Error - 2:35:01 PM
+  Error: false
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:885:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:875:23)
+    at dynamoScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/dynamo.js:239:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:653:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  false
+  
+  
+  dynamo-0 Error - 2:35:01 PM
+  Error: false
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:885:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:875:23)
+    at dynamoScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/dynamo.js:239:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:653:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  false
+  
+  
+  baroeg-0 Error - 2:34:54 PM
+  Error: false
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:885:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:875:23)
+    at baroegScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/baroeg.js:178:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:653:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  false
+  
+  
+  kavka-0 Error - 2:34:54 PM
+  TypeError: Cannot read properties of undefined (reading 'venueEventUrl')
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:886:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:875:23)
+    at kavkaScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/kavka.js:235:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:653:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  Cannot read properties of undefined (reading 'venueEventUrl')
+  
+  
+  willemeen-1 Error - 2:34:26 PM
+  Error: false
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:885:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:875:23)
+    at willemeeenScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/willemeen.js:177:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:653:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  false
+  
+  
+  dynamo-1 Error - 2:33:42 PM
+  Error: false
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:885:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:875:23)
+    at dynamoScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/dynamo.js:239:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:653:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  false
+  
+  
+  dynamo-1 Error - 2:33:42 PM
+  TimeoutError: Waiting for selector `.dynamic-background-color#intro .color-pick` failed: Waiting failed: 2500ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
+    at listOnTimeout (node:internal/timers:573:17)
+    at process.processTimers (node:internal/timers:514:7) 
+  Waiting for selector `.dynamic-background-color#intro .color-pick` failed: Waiting failed: 2500ms exceeded
+  
+  
+  dynamo-1 Error - 2:33:42 PM
+  Error: false
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:885:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:875:23)
+    at dynamoScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/dynamo.js:239:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:653:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  false
+  
+  
+  dynamo-1 Error - 2:33:42 PM
+  Error: false
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:885:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:875:23)
+    at dynamoScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/dynamo.js:239:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:653:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  false
+  
+  
+  effenaar-2 Error - 2:31:53 PM
+  Error: false
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:885:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:875:23)
+    at effenaarScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/effenaar.js:205:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:653:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  false
+  
+  
   baroeg-0 Error - 2:30:08 PM
   Error: false
     at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:885:29
@@ -7125,4 +7844,5 @@ error value {}
     at Readable.push (node:internal/streams/readable:234:10) 
   Request Failed With a Status Code: 307 see <a href='vscode://vscode-remote/wsl+Ubuntu-22.04/home/sjerp/dev/apache/concertagenda/backend/temp/error.log:1:1'>the log</a>
   
+      
     

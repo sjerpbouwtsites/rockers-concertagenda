@@ -377,16 +377,16 @@ export default class AbstractScraper extends ScraperConfig {
     await page.goto(this._s.mainPage.url, this._s.mainPage);
 
     // zet ErrorWrapper class in puppeteer document.
-    await page.evaluate(
-      ({ ErrorWrapperString }) => {
-        const newScriptContent = ErrorWrapperString;
-        const scriptTag = document.createElement('script');
-        scriptTag.id = 'rockagenda-extra-code';
-        scriptTag.innerHTML = newScriptContent;
-        document.body.appendChild(scriptTag);
-      },
-      { ErrorWrapperString: ErrorWrapper.toString() },
-    );
+    // await page.evaluate(
+    //   ({ ErrorWrapperString }) => {
+    //     const newScriptContent = ErrorWrapperString;
+    //     const scriptTag = document.createElement('script');
+    //     scriptTag.id = 'rockagenda-extra-code';
+    //     scriptTag.innerHTML = newScriptContent;
+    //     document.body.appendChild(scriptTag);
+    //   },
+    //   { ErrorWrapperString: ErrorWrapper.toString() },
+    // );
     return {
       stopFunctie,
       page,
@@ -746,17 +746,17 @@ export default class AbstractScraper extends ScraperConfig {
         );
       }
 
-      // zet ErrorWrapper class in puppeteer document.
-      await page.evaluate(
-        ({ ErrorWrapperString }) => {
-          const newScriptContent = ErrorWrapperString;
-          const scriptTag = document.createElement('script');
-          scriptTag.id = 'rockagenda-extra-code';
-          scriptTag.innerHTML = newScriptContent;
-          document.body.appendChild(scriptTag);
-        },
-        { ErrorWrapperString: ErrorWrapper.toString() },
-      );
+      // // zet ErrorWrapper class in puppeteer document.
+      // await page.evaluate(
+      //   ({ ErrorWrapperString }) => {
+      //     const newScriptContent = ErrorWrapperString;
+      //     const scriptTag = document.createElement('script');
+      //     scriptTag.id = 'rockagenda-extra-code';
+      //     scriptTag.innerHTML = newScriptContent;
+      //     document.body.appendChild(scriptTag);
+      //   },
+      //   { ErrorWrapperString: ErrorWrapper.toString() },
+      // );
       return page;
     } catch (error) {
       _t.handleError(
@@ -883,7 +883,7 @@ export default class AbstractScraper extends ScraperConfig {
         if (!errorData.error?.message) {
           const initRemarks = errorData?.remarks ?? '';
           errorData.error = new Error(!errorData?.remarks);
-          const url = event.venueEventUrl ?? pageInfo.venueEventUrl;
+          const url = event?.venueEventUrl ?? pageInfo.venueEventUrl;
           const title = event?.title ?? pageInfo.title;
           errorData.remarks = `Mislukte error van:\n\n${initRemarks}\n<a href='${url}'>${title}</a>`;
         }
@@ -1689,7 +1689,7 @@ export default class AbstractScraper extends ScraperConfig {
       WorkerStatus?.shellArguments?.keepImages === 'false'
     ) {
       if (fs.existsSync(`${imagePath}-vol.webp`)) {
-        this.dirtyTalk(`bestaat al ${imagePath}`);
+        // niets doen!
       } else {
         const diCompressRes = await this.downloadImageCompress(event, image, imagePath);
         if (!diCompressRes) {
