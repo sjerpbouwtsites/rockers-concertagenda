@@ -1,6 +1,5 @@
 // #region                                                 IMPORTS
 import { parentPort, workerData } from 'worker_threads';
-import crypto from 'crypto';
 import fs from 'fs';
 import https from 'https';
 import puppeteer from 'puppeteer';
@@ -1524,7 +1523,12 @@ export default class AbstractScraper extends ScraperConfig {
   // #region [rgba(150, 0, 150, 0.10)]                          LONG HTML
   writeLongTextHTML(mergedEvent) {
     if (!mergedEvent) return null;
-    const uuid = crypto.randomUUID();
+    const base64String = Buffer.from(
+      mergedEvent.venueEventUrl
+        .replace('www.', '')
+        .replace('https://', '')
+        .replace(/\w+\.\w{2,3}/, ''),
+    ).toString('base64');
     const toPrint = makeLongHTML(mergedEvent);
 
     if (!fs.existsSync(`${fsDirections.publicTexts}/${mergedEvent.location}/`)) {
@@ -1532,12 +1536,12 @@ export default class AbstractScraper extends ScraperConfig {
     }
 
     try {
-      const longTextPath = `${fsDirections.publicTexts}/${mergedEvent.location}/${uuid}.html`;
+      const longTextPath = `${fsDirections.publicTexts}/${mergedEvent.location}/${base64String}.html`;
       fs.writeFileSync(longTextPath, toPrint, 'utf-8');
       return longTextPath;
     } catch (err) {
       _t.handleError(err, workerData, 'write long text fail', 'notice', {
-        path: `${fsDirections.publicTexts}/${mergedEvent.location}/${uuid}.html`,
+        path: `${fsDirections.publicTexts}/${mergedEvent.location}/${base64String}.html`,
         text: toPrint,
       });
     }
@@ -1672,14 +1676,29 @@ export default class AbstractScraper extends ScraperConfig {
       return res;
     }
 
-    const imageCrypto = crypto.randomUUID();
-    let imagePath = `${this.eventImagesFolder}/${workerData.family}/${imageCrypto}`;
-    const diCompressRes = await this.downloadImageCompress(event, image, imagePath);
-    if (!diCompressRes) {
-      res.errors.push({
-        remarks: `download compress ${event.title} ${image} fail`,
-      });
-      imagePath = '';
+    const base64String = Buffer.from(
+      event.venueEventUrl
+        .replace('www.', '')
+        .replace('https://', '')
+        .replace(/\w+\.\w{2,3}/, ''),
+    ).toString('base64');
+    let imagePath = `${this.eventImagesFolder}/${workerData.family}/${base64String}`;
+
+    if (
+      !WorkerStatus?.shellArguments?.keepImages ||
+      WorkerStatus?.shellArguments?.keepImages === 'false'
+    ) {
+      if (fs.existsSync(`${imagePath}-vol.webp`)) {
+        this.dirtyTalk(`bestaat al ${imagePath}`);
+      } else {
+        const diCompressRes = await this.downloadImageCompress(event, image, imagePath);
+        if (!diCompressRes) {
+          res.errors.push({
+            remarks: `download compress ${event.title} ${image} fail`,
+          });
+          imagePath = '';
+        }
+      }
     }
 
     res.image = imagePath;

@@ -1,8 +1,6 @@
 import { workerData } from 'worker_threads';
-import crypto from 'crypto';
 import axios from 'axios';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
-import { waitTime } from '../mods/tools.js';
 
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const boerderijScraper = new AbstractScraper({

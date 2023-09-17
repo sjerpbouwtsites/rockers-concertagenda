@@ -1,24 +1,26 @@
-import fs from 'fs';
+// import fs from 'fs';
 
-const locatiesMetalfan = JSON.parse(fs.readFileSync('./event-lists/metalfan/0.json')).map((event) => ({
-  location: event.location,
-  title: event.title,
-}));
+// const locatiesMetalfan = JSON.parse(fs.readFileSync('./event-lists/metalfan/0.json')).map((event) => ({
+//   location: event.location,
+//   title: event.title,
+// }));
 
-const aantalPerLocatie = {};
+// const aantalPerLocatie = {};
 
-locatiesMetalfan.forEach((loc) => {
-  const ll = loc.location;
-  if (!aantalPerLocatie[ll]) {
-    aantalPerLocatie[ll] = {
-      count: 1,
-      names: [],
-    };
-    aantalPerLocatie[ll].names.push(loc.title);
-    return;
-  }
-  aantalPerLocatie[ll].count = aantalPerLocatie[ll].count + 1;
-  aantalPerLocatie[ll].names.push(loc.title);
-});
+// locatiesMetalfan.forEach((loc) => {
+//   const ll = loc.location;
+//   if (!aantalPerLocatie[ll]) {
+//     aantalPerLocatie[ll] = {
+//       count: 1,
+//       names: [],
+//     };
+//     aantalPerLocatie[ll].names.push(loc.title);
+//     return;
+//   }
+//   aantalPerLocatie[ll].count = aantalPerLocatie[ll].count + 1;
+//   aantalPerLocatie[ll].names.push(loc.title);
+// });
 
-console.log(aantalPerLocatie);
+// console.log(aantalPerLocatie);
+
+console.log(Buffer.from('Hello, world!').toString('base64'));

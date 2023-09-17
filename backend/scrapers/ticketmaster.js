@@ -1,5 +1,4 @@
 import { workerData } from 'worker_threads';
-import crypto from 'crypto';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import * as _t from '../mods/tools.js';
 import { workerNames } from '../mods/worker-config.js';
@@ -199,8 +198,13 @@ ticketmasterScraper.singlePage = async function ({ event }) {
     pageInfo.shortTitle = pageInfo.shortTitle.substring(0, pageInfo.shortTitle.length - 2);
   }
 
-  const imageCrypto = crypto.randomUUID();
-  const imagePath = `${this.eventImagesFolder}/${pageInfo.location}/${imageCrypto}`;
+  const imageBase64 = Buffer.from(
+    event.venueEventUrl
+      .replace('www.', '')
+      .replace('https://', '')
+      .replace(/\w+\.\w{2,3}/, ''),
+  ).toString('base64');
+  const imagePath = `${this.eventImagesFolder}/${pageInfo.location}/${imageBase64}`;
   await this.downloadImageCompress(event, event.image, imagePath, pageInfo.location);
   await _t.waitTime(25);
   event.image = imagePath;
