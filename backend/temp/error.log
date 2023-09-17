@@ -1,4 +1,13 @@
 
+  paradiso-1 Error - 11:33:39 AM
+  Error: geen app.mainPage.url ingesteld
+    at AbstractScraper.mainPageStart (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:371:13)
+    at paradisoScraper.mainPage (file:///var/www/html/concertagenda/backend/scrapers/paradiso.js:79:44)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:252:29) 
+  geen app.mainPage.url ingesteld
+  
+  
   willemeen-1 Error - 1:49:46 PM
   Error: false
     at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:885:29
