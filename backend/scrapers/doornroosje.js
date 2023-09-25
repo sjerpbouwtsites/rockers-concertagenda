@@ -108,8 +108,11 @@ doornroosjeScraper.mainPage = async function () {
           title,
         };
         res.shortText =
-          eventEl.querySelector('.c-program__content')?.textContent.trim().replace(res.title, '') ??
-          '';
+          eventEl
+            .querySelector('.c-program__content')
+            ?.textContent.trim()
+            .replace(res.title, '')
+            .replaceAll(/\s{2, 500}/g, ' ') ?? '';
         res.venueEventUrl = eventEl?.href;
         res.soldOut = !!eventEl?.innerHTML.match(/uitverkocht|sold\s?out/i) ?? false;
         const startJaarMatch =
