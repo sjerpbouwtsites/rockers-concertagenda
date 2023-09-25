@@ -1,4 +1,12 @@
 
+  volt-0 Error - 10:41:55 AM
+  TimeoutError: Waiting for selector `.card-activity` failed: Waiting failed: 1250ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Waiting for selector `.card-activity` failed: Waiting failed: 1250ms exceeded
+  
+  
   volt-0 Error - 10:11:28 AM
   TimeoutError: Waiting for selector `.card-activity` failed: Waiting failed: 1250ms exceeded
     at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
