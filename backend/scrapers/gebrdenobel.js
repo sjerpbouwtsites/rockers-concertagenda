@@ -8,11 +8,11 @@ const gebrdenobelScraper = new AbstractScraper({
   workerData: { ...workerData },
 
   mainPage: {
-    timeout: 20000,
+    timeout: 31005,
     url: 'https://gebrdenobel.nl/programma/',
   },
   singlePage: {
-    timeout: 20000,
+    timeout: 28004,
   },
   app: {
     mainPage: {
@@ -177,32 +177,44 @@ gebrdenobelScraper.mainPage = async function () {
 };
 // #endregion                          MAIN PAGE
 
+gebrdenobelScraper.cookiesNodig = async function (page) {
+  const nodig = await page.evaluate(() => document.querySelector('.consent__show'));
+  if (nodig) {
+    await page.waitForSelector('.consent__form__submit', {
+      timeout: 5000,
+    });
+    await page.evaluate(() => document.querySelector('.consent__form__submit').click());
+    await page.waitForSelector('.contentBlocks', {
+      timeout: 7500,
+    });
+  }
+  return true;
+};
+
 // #region [rgba(120, 0, 0, 0.1)]     SINGLE PAGE
 gebrdenobelScraper.singlePage = async function ({ page, event }) {
   this.dirtyTalk(`single ${event.title}`);
 
   const { stopFunctie } = await this.singlePageStart();
 
-  const cookiesNodig = await page.evaluate(() => document.querySelector('.consent__show'));
-
-  if (cookiesNodig) {
-    try {
-      await page.waitForSelector('.consent__form__submit', {
-        timeout: 5000,
-      });
-      await page.evaluate(() => document.querySelector('.consent__form__submit').click());
-      await page.waitForSelector('.contentBlocks', {
-        timeout: 7500,
-      });
-    } catch (error) {
-      return this.singlePageEnd({
-        pageInfo: {},
-        stopFunctie,
-        page,
-        event,
-      });
-    }
-  }
+  // cookies
+  try {
+    await this.cookiesNodig(page, event, stopFunctie);
+  } catch (cookiesError) {
+    return this.singlePageEnd({
+      pageInfo: {
+        errors: [
+          {
+            error: cookiesError,
+            remarks: `cookies handling issue`,
+          },
+        ],
+      },
+      stopFunctie,
+      page,
+      event,
+    });
+  } // eind cookies
 
   const pageInfo = await page.evaluate(
     // eslint-disable-next-line no-shadow

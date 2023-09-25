@@ -227,17 +227,14 @@ dynamoScraper.singlePage = async function ({ page, event }) {
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
   pageInfo.price = priceRes.price;
 
-  try {
-    const longTextRes = await longTextSocialsIframes(page, event, pageInfo);
-    for (const i in longTextRes) {
-      pageInfo[i] = longTextRes[i];
-    }
-  } catch (longTextHTMLErr) {
-    pageInfo.errors.push({
-      error: longTextHTMLErr,
-      remarks: `longText ${pageInfo.pageInfo}`,
-    });
-  }
+  const { mediaForHTML, socialsForHTML, textForHTML } = await longTextSocialsIframes(
+    page,
+    event,
+    pageInfo,
+  );
+  pageInfo.mediaForHTML = mediaForHTML;
+  pageInfo.socialsForHTML = socialsForHTML;
+  pageInfo.textForHTML = textForHTML;
 
   return await this.singlePageEnd({
     pageInfo,
@@ -247,4 +244,3 @@ dynamoScraper.singlePage = async function ({ page, event }) {
   });
 };
 // #endregion                         SINGLE PAGE
-
