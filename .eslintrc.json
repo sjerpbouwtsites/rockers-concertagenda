@@ -22,6 +22,9 @@
     "no-mixed-operators": "off",
     "strict": 0,
     "no-useless-escape": "off",
+    "import/extensions": ["error", "always", 
+      {"ignorePackages": true}
+   ],
     "no-multi-spaces": [
       1,
       {

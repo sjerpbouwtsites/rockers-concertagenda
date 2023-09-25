@@ -1,4 +1,225 @@
 
+  volt-0 Error - 10:11:28 AM
+  TimeoutError: Waiting for selector `.card-activity` failed: Waiting failed: 1250ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Waiting for selector `.card-activity` failed: Waiting failed: 1250ms exceeded
+  
+  
+  ticketmaster-0 Error - 10:09:02 AM
+  Error: ENOENT: no such file or directory, open '../public/texts/melkweg/L2V2ZW50L3NvZW4tdGlja2V0cy8yOTI4NjU/bGFuZ3VhZ2U9ZW4tdXM=.html'
+    at Object.openSync (node:fs:603:3)
+    at Object.writeFileSync (node:fs:2324:35)
+    at AbstractScraper.writeLongTextHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1518:10)
+    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:683:33)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  ENOENT: no such file or directory, open '../public/texts/melkweg/L2V2ZW50L3NvZW4tdGlja2V0cy8yOTI4NjU/bGFuZ3VhZ2U9ZW4tdXM=.html'
+  
+  
+  ticketmaster-0 Error - 10:09:02 AM
+  Error: ENOENT: no such file or directory, open '../public/event-images/melkweg/L2V2ZW50L3NvZW4tdGlja2V0cy8yOTI4NjU/bGFuZ3VhZ2U9ZW4tdXM=-ori.jpg' 
+  ENOENT: no such file or directory, open '../public/event-images/melkweg/L2V2ZW50L3NvZW4tdGlja2V0cy8yOTI4NjU/bGFuZ3VhZ2U9ZW4tdXM=-ori.jpg'
+  
+  
+  volt-0 Error - 10:09:00 AM
+  TimeoutError: Waiting for selector `.card-activity` failed: Waiting failed: 1250ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Waiting for selector `.card-activity` failed: Waiting failed: 1250ms exceeded
+  
+  
+  ticketmaster-1 Error - 10:09:00 AM
+  Error: ENOENT: no such file or directory, open '../public/event-images/brabanthallen/L2V2ZW50L3RoZS1yb2NrLWNpcmN1cy0yMDIzLWxvY2tlci1zdW5kYXktdGlja2V0cy8yOTA4OTM/bGFuZ3VhZ2U9ZW4tdXM=-ori.jpg' 
+  ENOENT: no such file or directory, open '../public/event-images/brabanthallen/L2V2ZW50L3RoZS1yb2NrLWNpcmN1cy0yMDIzLWxvY2tlci1zdW5kYXktdGlja2V0cy8yOTA4OTM/bGFuZ3VhZ2U9ZW4tdXM=-ori.jpg'
+  
+  
+  ticketmaster-1 Error - 10:08:59 AM
+  Error: ENOENT: no such file or directory, open '../public/texts/melkweg/L2V2ZW50L3N0cmF5LWZyb20tdGhlLXBhdGgtdGlja2V0cy8yOTQ0MzM/bGFuZ3VhZ2U9ZW4tdXM=.html'
+    at Object.openSync (node:fs:603:3)
+    at Object.writeFileSync (node:fs:2324:35)
+    at AbstractScraper.writeLongTextHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1518:10)
+    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:683:33)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  ENOENT: no such file or directory, open '../public/texts/melkweg/L2V2ZW50L3N0cmF5LWZyb20tdGhlLXBhdGgtdGlja2V0cy8yOTQ0MzM/bGFuZ3VhZ2U9ZW4tdXM=.html'
+  
+  
+  ticketmaster-1 Error - 10:08:59 AM
+  Error: ENOENT: no such file or directory, open '../public/event-images/melkweg/L2V2ZW50L3N0cmF5LWZyb20tdGhlLXBhdGgtdGlja2V0cy8yOTQ0MzM/bGFuZ3VhZ2U9ZW4tdXM=-ori.jpg' 
+  ENOENT: no such file or directory, open '../public/event-images/melkweg/L2V2ZW50L3N0cmF5LWZyb20tdGhlLXBhdGgtdGlja2V0cy8yOTQ0MzM/bGFuZ3VhZ2U9ZW4tdXM=-ori.jpg'
+  
+  
+  ticketmaster-1 Error - 10:08:59 AM
+  Error: ENOENT: no such file or directory, open '../public/event-images/brabanthallen/L2V2ZW50L3RoZS1yb2NrLWNpcmN1cy0yMDIzLWxvY2tlci1mcmlkYXktdGlja2V0cy8yOTA4ODk/bGFuZ3VhZ2U9ZW4tdXM=-ori.jpg' 
+  ENOENT: no such file or directory, open '../public/event-images/brabanthallen/L2V2ZW50L3RoZS1yb2NrLWNpcmN1cy0yMDIzLWxvY2tlci1mcmlkYXktdGlja2V0cy8yOTA4ODk/bGFuZ3VhZ2U9ZW4tdXM=-ori.jpg'
+  
+  
+  ticketmaster-1 Error - 10:08:59 AM
+  Error: ENOENT: no such file or directory, open '../public/texts/oosterpoort/L2V2ZW50L2xlcHJvdXMtdGlja2V0cy8yOTQzMTc/bGFuZ3VhZ2U9ZW4tdXM=.html'
+    at Object.openSync (node:fs:603:3)
+    at Object.writeFileSync (node:fs:2324:35)
+    at AbstractScraper.writeLongTextHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1518:10)
+    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:683:33)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  ENOENT: no such file or directory, open '../public/texts/oosterpoort/L2V2ZW50L2xlcHJvdXMtdGlja2V0cy8yOTQzMTc/bGFuZ3VhZ2U9ZW4tdXM=.html'
+  
+  
+  ticketmaster-1 Error - 10:08:59 AM
+  Error: ENOENT: no such file or directory, open '../public/event-images/oosterpoort/L2V2ZW50L2xlcHJvdXMtdGlja2V0cy8yOTQzMTc/bGFuZ3VhZ2U9ZW4tdXM=-ori.jpg' 
+  ENOENT: no such file or directory, open '../public/event-images/oosterpoort/L2V2ZW50L2xlcHJvdXMtdGlja2V0cy8yOTQzMTc/bGFuZ3VhZ2U9ZW4tdXM=-ori.jpg'
+  
+  
+  oosterpoort-0 Error - 10:07:42 AM
+  Error: false
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:863:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:853:23)
+    at oostpoortScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/oosterpoort.js:230:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:642:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  false
+  
+  
+  kavka-1 Error - 10:03:52 AM
+  Error: false
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:863:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:853:23)
+    at kavkaScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/kavka.js:235:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:642:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  false
+  
+  
+  gebrdenobel-0 Error - 10:02:45 AM
+  Error: pageInfo object incompleet; geen errors
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:835:16)
+    at gebrdenobelScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/gebrdenobel.js:192:19)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:642:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  pageInfo object incompleet; geen errors
+  
+  
+  doornroosje-1 Error - 10:02:33 AM
+  Error: false
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:863:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:853:23)
+    at doornroosjeScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/doornroosje.js:320:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:642:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  false
+  
+  
+  effenaar-1 Error - 10:02:29 AM
+  Error: false
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:863:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:853:23)
+    at effenaarScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/effenaar.js:205:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:642:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  false
+  
+  
+  effenaar-1 Error - 9:58:04 AM
+  Error: false
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:863:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:853:23)
+    at effenaarScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/effenaar.js:205:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:642:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  false
+  
+  
+  dynamo-0 Error - 9:57:54 AM
+  Error: false
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:863:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:853:23)
+    at dynamoScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/dynamo.js:239:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:642:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  false
+  
+  
+  dynamo-0 Error - 9:57:54 AM
+  TimeoutError: Waiting for selector `.dynamic-background-color#intro .color-pick` failed: Waiting failed: 2500ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Waiting for selector `.dynamic-background-color#intro .color-pick` failed: Waiting failed: 2500ms exceeded
+  
+  
+  dynamo-0 Error - 9:57:54 AM
+  Error: false
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:863:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:853:23)
+    at dynamoScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/dynamo.js:239:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:642:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  false
+  
+  
+  dynamo-0 Error - 9:57:54 AM
+  Error: false
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:863:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:853:23)
+    at dynamoScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/dynamo.js:239:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:642:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  false
+  
+  
+  oosterpoort-0 Error - 9:57:43 AM
+  Error: false
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:863:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:853:23)
+    at oostpoortScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/oosterpoort.js:230:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:642:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  false
+  
+  
+  gebrdenobel-0 Error - 9:56:46 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:799:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  gebrdenobel-0 Error - 9:56:26 AM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  gebrdenobel-0 Error - 9:55:52 AM
+  Error: pageInfo object incompleet; geen errors
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:835:16)
+    at gebrdenobelScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/gebrdenobel.js:192:19)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:642:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  pageInfo object incompleet; geen errors
+  
+  
   doornroosje-1 Error - 9:54:28 AM
   Error: false
     at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:863:29

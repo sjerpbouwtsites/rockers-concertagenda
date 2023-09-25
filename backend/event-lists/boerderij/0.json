@@ -1,20 +1,5 @@
 [
   {
-    "door": "2023-09-17T14:00:00",
-    "start": "2023-09-17T14:30:00",
-    "end": null,
-    "venueEventUrl": "https://poppodiumboerderij.nl/programma/dance-with-dragons-manora",
-    "title": "Dance with Dragons + Manora",
-    "location": "boerderij",
-    "price": 0,
-    "shortText": "Podiumcafé - gratis entree",
-    "longText": "../public/texts/boerderij/L3Byb2dyYW1tYS9kYW5jZS13aXRoLWRyYWdvbnMtbWFub3Jh.html",
-    "image": "../public/event-images/boerderij/L3Byb2dyYW1tYS9kYW5jZS13aXRoLWRyYWdvbnMtbWFub3Jh",
-    "soldOut": null,
-    "unavailable": null,
-    "corrupted": null
-  },
-  {
     "door": "2023-10-13T19:30:00",
     "start": "2023-10-13T20:30:00",
     "end": null,
@@ -40,7 +25,7 @@
     "shortText": "+ Earthside & Cold Night For Alligators",
     "longText": "../public/texts/boerderij/L3Byb2dyYW1tYS92b3lhZ2Vy.html",
     "image": "../public/event-images/boerderij/L3Byb2dyYW1tYS92b3lhZ2Vy",
-    "soldOut": null,
+    "soldOut": false,
     "unavailable": null,
     "corrupted": null
   },
@@ -160,6 +145,21 @@
     "shortText": "Jazz & hardrock",
     "longText": "../public/texts/boerderij/L3Byb2dyYW1tYS9jb3VyYm9pcy1jb3VyYm9pcw==.html",
     "image": "../public/event-images/boerderij/L3Byb2dyYW1tYS9jb3VyYm9pcy1jb3VyYm9pcw==",
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null
+  },
+  {
+    "door": "2024-01-14T19:30:00",
+    "start": "2024-01-14T20:00:00",
+    "end": null,
+    "venueEventUrl": "https://poppodiumboerderij.nl/programma/coreleoni",
+    "title": "CoreLeoni",
+    "location": "boerderij",
+    "price": 27,
+    "shortText": "gitarist Gotthard + Support Modern Day Heroes",
+    "longText": "../public/texts/boerderij/L3Byb2dyYW1tYS9jb3JlbGVvbmk=.html",
+    "image": "../public/event-images/boerderij/L3Byb2dyYW1tYS9jb3JlbGVvbmk=",
     "soldOut": null,
     "unavailable": null,
     "corrupted": null
