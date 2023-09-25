@@ -1,4 +1,4 @@
-import { workerData } from 'worker_threads';
+import { threadId, workerData } from 'worker_threads';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import * as _t from '../mods/tools.js';
 import { workerNames } from '../mods/worker-config.js';
@@ -202,9 +202,20 @@ ticketmasterScraper.singlePage = async function ({ event }) {
     event.venueEventUrl
       .replace('www.', '')
       .replace('https://', '')
+      .replace('/event/', '')
+      .replace(/\?.*/, '')
       .replace(/\w+\.\w{2,3}/, ''),
   ).toString('base64');
   const imagePath = `${this.eventImagesFolder}/${pageInfo.location}/${imageBase64}`;
+  this.dirtyTalk(
+    event.venueEventUrl
+      .replace('www.', '')
+      .replace('https://', '')
+      .replace('/event/', '')
+      .replace(/\?.*/, '')
+      .replace(/\w+\.\w{2,3}/, ''),
+  );
+  this.dirtyTalk(`${this.eventImagesFolder}/${pageInfo.location}/${imageBase64}`);
   await this.downloadImageCompress(event, event.image, imagePath, pageInfo.location);
   await _t.waitTime(25);
   event.image = imagePath;
