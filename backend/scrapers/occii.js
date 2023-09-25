@@ -1,3 +1,4 @@
+/* global document */
 import { workerData } from 'worker_threads';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import { mapToStartDate, mapToStartTime } from './gedeeld/datums.js';

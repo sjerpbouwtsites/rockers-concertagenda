@@ -1,3 +1,4 @@
+/* global document */
 import { workerData } from 'worker_threads';
 import axios from 'axios';
 import AbstractScraper from './gedeeld/abstract-scraper.js';

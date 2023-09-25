@@ -22,6 +22,7 @@ module.exports = {
   },
   rules: {
     'no-mixed-operators': 'off',
+    'implicit-arrow-linebreak': 0,
     'import/extensions': ['error', 'always', { ignorePackages: true }],
     strict: 0,
     'no-useless-escape': 'off',

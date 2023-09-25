@@ -1,3 +1,4 @@
+/* global document */
 import { parentPort, workerData } from 'worker_threads';
 import puppeteer from 'puppeteer';
 import MusicEvent from '../mods/music-event.js';

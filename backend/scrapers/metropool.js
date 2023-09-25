@@ -1,3 +1,4 @@
+/* global document */
 import { workerData } from 'worker_threads';
 import * as _t from '../mods/tools.js';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
@@ -29,7 +30,6 @@ metropoolScraper.listenToMasterThread();
 
 // #region [rgba(0, 120, 0, 0.1)]      MAIN PAGE EVENT CHECK
 metropoolScraper.mainPageAsyncCheck = async function (event) {
-
   const workingTitle = this.cleanupEventTitle(event.title);
 
   const isRefused = await this.rockRefuseListCheck(event, workingTitle);
