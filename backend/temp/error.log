@@ -1,4 +1,13 @@
 
+  gebrdenobel-0 Error - 1:46:49 PM
+  Error: pageInfo object incompleet; geen errors
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:835:16)
+    at gebrdenobelScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/gebrdenobel.js:198:19)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:642:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  pageInfo object incompleet; geen errors
+  
+  
   gebrdenobel-0 Error - 12:37:16 PM
   ProtocolError: Runtime.callFunctionOn timed out. Increase the 'protocolTimeout' setting in launch/connect calls for a higher timeout if needed.
     at <instance_members_initializer> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Connection.js:46:14)
