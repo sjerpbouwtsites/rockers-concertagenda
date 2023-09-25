@@ -46,15 +46,15 @@ export default class AbstractScraper extends ScraperConfig {
   ];
 
   // #region [rgba(0, 0, 30, 0.10)]                             DEBUGSETTINGS
-  debugCorruptedUnavailable = false;
+  debugCorruptedUnavailable = true;
 
-  debugsinglePageAsyncCheck = false;
+  debugsinglePageAsyncCheck = true;
 
   debugRawEventAsyncCheck = false;
 
-  debugBaseEvents = true;
+  debugBaseEvents = false;
 
-  debugPageInfo = true;
+  debugPageInfo = false;
 
   debugPrice = false;
   // #endregion                                                DEBUGSETTINGS

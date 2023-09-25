@@ -1,4 +1,27 @@
 
+  doornroosje-0 Error - 3:21:26 PM
+  TargetCloseError: Protocol error (Runtime.callFunctionOn): Session closed. Most likely the page has been closed.
+    at CDPSessionImpl.send (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Connection.js:405:35)
+    at #evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:231:50)
+    at async ExecutionContext.evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:146:16)
+    at async doornroosjeScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/doornroosje.js:182:16)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:642:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  Protocol error (Runtime.callFunctionOn): Session closed. Most likely the page has been closed.
+  
+  
+  doornroosje-0 Error - 3:21:26 PM
+  Error: Navigation failed because browser has disconnected!
+    at new LifecycleWatcher (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/LifecycleWatcher.js:63:116)
+    at Frame.goto (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Frame.js:63:25)
+    at CDPPage.goto (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Page.js:578:39)
+    at AbstractScraper.createSinglePage (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:727:20)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:619:25)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  Navigation failed because browser has disconnected!
+  
+  
   gebrdenobel-0 Error - 3:10:21 PM
   TimeoutError: Navigation timeout of 30000 ms exceeded
     at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)

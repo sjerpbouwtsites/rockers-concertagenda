@@ -112,7 +112,7 @@ doornroosjeScraper.mainPage = async function () {
             .querySelector('.c-program__content')
             ?.textContent.trim()
             .replace(res.title, '')
-            .replaceAll(/\s{2, 500}/g, ' ') ?? '';
+            .replace(/\s{2, 500}/g) ?? '';
         res.venueEventUrl = eventEl?.href;
         res.soldOut = !!eventEl?.innerHTML.match(/uitverkocht|sold\s?out/i) ?? false;
         const startJaarMatch =
@@ -179,6 +179,7 @@ doornroosjeScraper.singlePage = async function ({ page, event }) {
 
   let pageInfo;
   if (!event.venueEventUrl.includes('soulcrusher') && !event.venueEventUrl.includes('festival')) {
+    this.dirtyTalk('geen festival');
     pageInfo = await page.evaluate(
       // eslint-disable-next-line no-shadow
       ({ months, event }) => {
@@ -232,14 +233,14 @@ doornroosjeScraper.singlePage = async function ({ page, event }) {
           if (timeMatches && timeMatches.length) {
             try {
               if (timeMatches.length === 3) {
-                res.start = `${startDate}T${timeMatches[1]}`;
-                res.door = `${startDate}T${timeMatches[0]}`;
-                res.end = `${startDate}T${timeMatches[2]}`;
+                res.start = `${startDate}T${timeMatches[1]}:00.000`;
+                res.door = `${startDate}T${timeMatches[0]}:00.000`;
+                res.end = `${startDate}T${timeMatches[2]}:00.000`;
               } else if (timeMatches.length === 2) {
-                res.start = `${startDate}T${timeMatches[1]}`;
-                res.door = `${startDate}T${timeMatches[0]}`;
+                res.start = `${startDate}T${timeMatches[1]}:00.000`;
+                res.door = `${startDate}T${timeMatches[0]}:00.000`;
               } else if (timeMatches.length === 1) {
-                res.start = `${startDate}T${timeMatches[0]}`;
+                res.start = `${startDate}T${timeMatches[0]}:00.000`;
               }
             } catch (caughtError) {
               res.errors.push({
