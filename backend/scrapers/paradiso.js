@@ -79,6 +79,7 @@ paradisoScraper.mainPage = async function () {
   const { stopFunctie, page } = await this.mainPageStart();
 
   const res = await page.evaluate(
+    // eslint-disable-next-line no-shadow
     ({ workerData }) => ({
       pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${workerData.index}</a>`,
     }),
@@ -88,7 +89,7 @@ paradisoScraper.mainPage = async function () {
   let bla = '';
   await _t.autoScroll(page);
   bla = await page.evaluate(
-    ({ workerData }) =>
+    () =>
       document.querySelector('.css-16y59pb:last-child .chakra-heading')?.textContent ??
       'geen titel gevonden',
     { workerData },
@@ -97,7 +98,8 @@ paradisoScraper.mainPage = async function () {
 
   await _t.autoScroll(page);
   bla = await page.evaluate(
-    ({ workerData }) =>
+    // eslint-disable-next-line no-shadow
+    () =>
       document.querySelector('.css-16y59pb:last-child .chakra-heading')?.textContent ??
       'geen titel gevonden',
     { workerData },

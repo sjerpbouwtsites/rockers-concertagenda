@@ -98,6 +98,7 @@ groeneEngelScraper.mainPage = async function () {
   const { stopFunctie, page } = await this.mainPageStart();
 
   let baseEvents = await page.evaluate(
+    // eslint-disable-next-line no-shadow
     ({ workerData, unavailabiltyTerms, months }) =>
       Array.from(document.querySelectorAll('.collection-wrapper .event-part')).map((eventEl) => {
         const title = eventEl.querySelector('.part-title')?.textContent ?? null;

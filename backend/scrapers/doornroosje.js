@@ -93,6 +93,7 @@ doornroosjeScraper.mainPage = async function () {
   await _t.waitTime(50);
 
   let rawEvents = await page.evaluate(
+    // eslint-disable-next-line no-shadow
     ({ workerData, months }) =>
       Array.from(document.querySelectorAll('.c-program__item')).map((eventEl) => {
         const title =

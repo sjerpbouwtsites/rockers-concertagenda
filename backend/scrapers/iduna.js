@@ -84,6 +84,7 @@ idunaScraper.mainPage = async function () {
   try {
     doomEvents = await page
       .evaluate(
+        // eslint-disable-next-line no-shadow
         ({ workerData, unavailabiltyTerms }) => {
           loadposts('doom', 1, 50); // eslint-disable-line
           return new Promise((resolve) => {
@@ -125,6 +126,7 @@ idunaScraper.mainPage = async function () {
 
     metalEvents = await page
       .evaluate(
+        // eslint-disable-next-line no-shadow
         ({ workerData, unavailabiltyTerms }) => {
           loadposts('metal', 1, 50); // eslint-disable-line
           return new Promise((resolve) => {
@@ -166,6 +168,7 @@ idunaScraper.mainPage = async function () {
 
     punkEvents = await page
       .evaluate(
+        // eslint-disable-next-line no-shadow
         ({ workerData, unavailabiltyTerms }) => {
           // no-eslint
           // hack VAN DE SITE ZELF

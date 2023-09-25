@@ -91,6 +91,7 @@ oostpoortScraper.mainPage = async function () {
   await _t.autoScroll(page);
 
   let rawEvents = await page.evaluate(
+    // eslint-disable-next-line no-shadow
     ({ workerData, unavailabiltyTerms }) =>
       Array.from(document.querySelectorAll('.program__list .program__item'))
         .filter((eventEl) => !eventEl.classList.contains('is-hidden'))

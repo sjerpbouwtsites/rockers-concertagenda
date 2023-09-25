@@ -100,6 +100,7 @@ cpuntScraper.mainPage = async function () {
   await _t.waitTime(50);
 
   let rawEvents = await page.evaluate(
+    // eslint-disable-next-line no-shadow
     ({ workerData, unavailabiltyTerms }) =>
       Array.from(document.querySelectorAll('#filter .article-wrapper')).map((rawEvent) => {
         const title = rawEvent.querySelector('.article-title')?.textContent ?? null;

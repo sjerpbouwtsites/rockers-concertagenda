@@ -75,6 +75,7 @@ dehellingScraper.mainPage = async function () {
   const { stopFunctie, page } = await this.mainPageStart();
 
   let rawEvents = await page.evaluate(
+    // eslint-disable-next-line no-shadow
     ({ workerData }) =>
       Array.from(document.querySelectorAll('.c-event-card'))
         .filter((eventEl) => {

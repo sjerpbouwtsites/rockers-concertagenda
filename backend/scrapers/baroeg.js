@@ -71,6 +71,7 @@ baroegScraper.mainPage = async function () {
   const { stopFunctie, page } = await this.mainPageStart();
 
   let rawEvents = await page.evaluate(
+    // eslint-disable-next-line no-shadow
     ({ workerData }) =>
       Array.from(document.querySelectorAll('.wpt_listing .wp_theatre_event'))
         .map((eventEl) => {

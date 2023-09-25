@@ -77,6 +77,7 @@ tivoliVredenburgScraper.mainPage = async function () {
   const { stopFunctie, page } = await this.mainPageStart();
 
   let rawEvents = await page.evaluate(
+    // eslint-disable-next-line no-shadow
     ({ workerData, unavailabiltyTerms }) =>
       Array.from(document.querySelectorAll('.agenda-list-item')).map((eventEl) => {
         const title = eventEl.querySelector('.agenda-list-item__title')?.textContent.trim() ?? null;

@@ -86,6 +86,7 @@ p60Scraper.mainPage = async function () {
   await _t.autoScroll(page);
 
   let rawEvents = await page.evaluate(
+    // eslint-disable-next-line no-shadow
     ({ workerData, unavailabiltyTerms }) =>
       Array.from(
         document.querySelectorAll(

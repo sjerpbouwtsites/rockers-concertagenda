@@ -78,7 +78,8 @@ patronaatScraper.mainPage = async function () {
 
   const { stopFunctie, page } = await this.mainPageStart();
 
-  let rawEvents = await page.evaluate(
+  let rawEvents = await page.evaluate(.
+    // eslint-disable-next-line no-shadow
     ({ workerData, unavailabiltyTerms }) =>
       Array.from(document.querySelectorAll('.overview__list-item--event')).map((eventEl) => {
         const title = eventEl.querySelector('.event-program__name')?.textContent.trim();

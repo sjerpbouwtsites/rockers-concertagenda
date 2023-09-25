@@ -6,7 +6,7 @@ const gebrdenobelScraper = new AbstractScraper({
   workerData: { ...workerData },
 
   mainPage: {
-    timeout: 15000,
+    timeout: 20000,
     url: 'https://gebrdenobel.nl/programma/',
   },
   singlePage: {
@@ -75,7 +75,7 @@ gebrdenobelScraper.mainPage = async function () {
     const thisWorkersEvents = availableBaseEvents.filter(
       (eventEl, index) => index % workerData.workerCount === workerData.index,
     );
-    return await this.mainPageEnd({
+    return this.mainPageEnd({
       stopFunctie: null,
       rawEvents: thisWorkersEvents,
     });
@@ -84,6 +84,7 @@ gebrdenobelScraper.mainPage = async function () {
   const { stopFunctie, page } = await this.mainPageStart();
 
   let punkMetalRawEvents = await page.evaluate(
+    // eslint-disable-next-line no-shadow
     ({ workerData, unavailabiltyTerms }) =>
       Array.from(document.querySelectorAll('.event-item'))
         .filter((eventEl) => {
@@ -107,11 +108,12 @@ gebrdenobelScraper.mainPage = async function () {
           return res;
         }),
     { workerData, unavailabiltyTerms: AbstractScraper.unavailabiltyTerms },
-  );
+  ); // page.evaluate
 
   punkMetalRawEvents = punkMetalRawEvents.map(this.isMusicEventCorruptedMapper);
 
   let rockRawEvents = await page.evaluate(
+    // eslint-disable-next-line no-shadow
     ({ workerData }) =>
       Array.from(document.querySelectorAll('.event-item'))
         .filter((eventEl) => {
@@ -175,6 +177,8 @@ gebrdenobelScraper.mainPage = async function () {
 
 // #region [rgba(120, 0, 0, 0.1)]     SINGLE PAGE
 gebrdenobelScraper.singlePage = async function ({ page, event }) {
+  this.dirtyTalk(`single ${event.title}`);
+
   const { stopFunctie } = await this.singlePageStart();
 
   const cookiesNodig = await page.evaluate(() => document.querySelector('.consent__show'));

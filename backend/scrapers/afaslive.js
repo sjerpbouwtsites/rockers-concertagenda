@@ -95,6 +95,7 @@ afasliveScraper.mainPage = async function () {
   await _t.autoScroll(page); // TODO hier wat aan doen. maak er een do while van met een timeout. dit is waardeloos.
 
   let rawEvents = await page.evaluate(
+    // eslint-disable-next-line no-shadow
     ({ workerData }) =>
       Array.from(document.querySelectorAll('.agenda__item__block '))
         .map((agendaBlock) => {

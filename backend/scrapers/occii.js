@@ -87,6 +87,7 @@ occiiScraper.mainPage = async function () {
   const { stopFunctie, page } = await this.mainPageStart();
 
   let rawEvents = await page.evaluate(
+    // eslint-disable-next-line no-shadow
     ({ workerData, unavailabiltyTerms }) => {
       // al geweest
       const rm = document.querySelector('h1 ~ h1 + .occii-events-display-container');

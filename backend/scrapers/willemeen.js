@@ -86,6 +86,7 @@ willemeeenScraper.mainPage = async function () {
   });
 
   let rawEvents = await page.evaluate(
+    // eslint-disable-next-line no-shadow
     ({ workerData, months, unavailabiltyTerms }) =>
       Array.from(document.querySelectorAll('.we__agenda-item')).map((rawEvent) => {
         const title = rawEvent.querySelector('[data-text]')?.getAttribute('data-text') ?? '';
