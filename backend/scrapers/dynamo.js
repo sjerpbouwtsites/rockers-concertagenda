@@ -106,6 +106,9 @@ dynamoScraper.mainPage = async function () {
           };
 
           res.venueEventUrl = baseEvent.querySelector('a')?.href ?? '';
+          if (res.venueEventUrl.includes('metalfest')) {
+            res.corrupted = `is metalfest`;
+          }
 
           const timelineInfoContainerEl = baseEvent.querySelector('.timeline-info-container');
           res.shortText = timelineInfoContainerEl?.querySelector('p')?.textContent ?? '';

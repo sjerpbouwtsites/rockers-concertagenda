@@ -1,4 +1,108 @@
 
+  dynamo-1 Error - 4:03:39 PM
+  TypeError: singleEvent.registerINVALID is not a function
+    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:630:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  singleEvent.registerINVALID is not a function
+  
+  
+  dynamo-0 Error - 4:03:33 PM
+  TypeError: singleEvent.registerINVALID is not a function
+    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:630:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  singleEvent.registerINVALID is not a function
+  
+  
+  dynamo-0 Error - 4:00:53 PM
+  Error: false
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:863:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:853:23)
+    at dynamoScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/dynamo.js:239:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:642:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  false
+  
+  
+  dynamo-0 Error - 4:00:53 PM
+  TimeoutError: Waiting for selector `.dynamic-background-color#intro .color-pick` failed: Waiting failed: 2500ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Waiting for selector `.dynamic-background-color#intro .color-pick` failed: Waiting failed: 2500ms exceeded
+  
+  
+  dynamo-0 Error - 4:00:53 PM
+  Error: false
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:863:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:853:23)
+    at dynamoScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/dynamo.js:239:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:642:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  false
+  
+  
+  dynamo-0 Error - 4:00:53 PM
+  Error: false
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:863:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:853:23)
+    at dynamoScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/dynamo.js:239:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:642:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  false
+  
+  
+  dynamo-1 Error - 4:00:45 PM
+  Error: false
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:863:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:853:23)
+    at dynamoScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/dynamo.js:239:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:642:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  false
+  
+  
+  dynamo-1 Error - 4:00:45 PM
+  TimeoutError: Waiting for selector `.dynamic-background-color#intro .color-pick` failed: Waiting failed: 2500ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Waiting for selector `.dynamic-background-color#intro .color-pick` failed: Waiting failed: 2500ms exceeded
+  
+  
+  dynamo-1 Error - 4:00:45 PM
+  Error: false
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:863:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:853:23)
+    at dynamoScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/dynamo.js:239:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:642:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  false
+  
+  
+  dynamo-1 Error - 4:00:45 PM
+  Error: false
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:863:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:853:23)
+    at dynamoScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/dynamo.js:239:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:642:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  false
+  
+  
   gebrdenobel-0 Error - 3:59:20 PM
   TimeoutError: Navigation timeout of 30000 ms exceeded
     at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)

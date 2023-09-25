@@ -46,11 +46,11 @@ export default class AbstractScraper extends ScraperConfig {
   ];
 
   // #region [rgba(0, 0, 30, 0.10)]                             DEBUGSETTINGS
-  debugCorruptedUnavailable = false;
+  debugCorruptedUnavailable = true;
 
-  debugsinglePageAsyncCheck = false;
+  debugsinglePageAsyncCheck = true;
 
-  debugRawEventAsyncCheck = false;
+  debugRawEventAsyncCheck = true;
 
   debugBaseEvents = false;
 
@@ -627,7 +627,7 @@ export default class AbstractScraper extends ScraperConfig {
 
     // corruptie check afkomstig nog van baseEvent. niet door naar pageInfo
     if (singleEvent.corrupted) {
-      singleEvent.registerINVALID();
+      // singleEvent.registerINVALID(); TODO register invalid
       parentPort.postMessage(
         this.qwm.messageRoll(
           `<a href='${singleEvent.venueEventUrl}'>😵 Corrupted ${singleEvent.title}</a> ${singleEvent.corrupted}`,
