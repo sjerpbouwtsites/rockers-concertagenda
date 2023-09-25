@@ -169,7 +169,7 @@ gebrdenobelScraper.mainPage = async function () {
   const thisWorkersEvents = rawEvents.filter(
     (eventEl, index) => index % workerData.workerCount === workerData.index,
   );
-  return await this.mainPageEnd({
+  return this.mainPageEnd({
     stopFunctie,
     rawEvents: thisWorkersEvents,
   });
@@ -204,7 +204,8 @@ gebrdenobelScraper.singlePage = async function ({ page, event }) {
   }
 
   const pageInfo = await page.evaluate(
-    ({ months, event }) => {
+    // eslint-disable-next-line no-shadow
+    ({ months }) => {
       const res = {
         pageInfo: `<a class='page-info' href='${document.location.href}'>${document.title}</a>`,
         errors: [],
@@ -223,7 +224,6 @@ gebrdenobelScraper.singlePage = async function ({ page, event }) {
           const day = startDateMatch[1].padStart(2, '0');
           const month = months[startDateMatch[2]];
           const year = startDateMatch[3];
-          res.month = startDateMatch[2];
           res.startDate = `${year}-${month}-${day}`;
         }
 
@@ -283,7 +283,7 @@ gebrdenobelScraper.singlePage = async function ({ page, event }) {
     pageInfo[i] = longTextRes[i];
   }
 
-  return await this.singlePageEnd({
+  return this.singlePageEnd({
     pageInfo,
     stopFunctie,
     page,
