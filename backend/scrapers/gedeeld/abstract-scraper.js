@@ -1648,9 +1648,10 @@ export default class AbstractScraper extends ScraperConfig {
     }
 
     if (!image) {
-      res.errors.push({
-        remarks: `image missing ${pi}`,
-      });
+      // res.errors.push({
+      //   remarks: `image missing ${pi}`,
+      // });
+      this.dirtyTalk(`Image missing ${pi}`);
       return res;
     }
 
