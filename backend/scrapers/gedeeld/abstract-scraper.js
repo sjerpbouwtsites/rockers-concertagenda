@@ -261,7 +261,8 @@ export default class AbstractScraper extends ScraperConfig {
    * @memberof AbstractScraper
    */
   async mainPageEnd({ stopFunctie, page, rawEvents }) {
-    if (shell.workerFamilyForced(workerData.family) && debugSettings.debugBaseEvents) {
+    
+    if (shell.force && shell.force.includes(workerData.family)) {
       this.dirtyLog(rawEvents);
     }
 

@@ -159,7 +159,9 @@ export default class WorkerStatus {
       thisWorker.todo = message.todo;
     }
 
-    if (!statusses.includes('todo') && (shell.workerFamilyForced(thisWorker.family) ?? null)) {
+    const wf = shell.force && shell.force.includes(thisWorker.family);
+
+    if (!statusses.includes('todo') && wf) {
       const forcedMessage = new wsMessage('update', 'message-roll', {
         title: 'Status update',
         content: `${name} is nu ${status}`,

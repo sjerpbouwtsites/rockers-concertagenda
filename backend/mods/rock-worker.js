@@ -1,5 +1,5 @@
-import shell from './mods/shell.js';
 import { Worker } from 'worker_threads';
+import shell from './shell.js';
 
 // @TODO
 
