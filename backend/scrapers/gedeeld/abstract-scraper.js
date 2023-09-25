@@ -46,9 +46,9 @@ export default class AbstractScraper extends ScraperConfig {
   ];
 
   // #region [rgba(0, 0, 30, 0.10)]                             DEBUGSETTINGS
-  debugCorruptedUnavailable = true;
+  debugCorruptedUnavailable = false;
 
-  debugsinglePageAsyncCheck = true;
+  debugsinglePageAsyncCheck = false;
 
   debugRawEventAsyncCheck = false;
 
@@ -1427,6 +1427,15 @@ export default class AbstractScraper extends ScraperConfig {
           pageInfo,
           selectors: selectorsCopy,
         });
+      }
+      if (testText.match(/tba/i)) {
+        priceRes.price = 'onbekend';
+        this.debugPrice &&
+          this.dirtyDebug({
+            price: 'onbekend',
+            type: 'PRIJS TBA',
+          });
+        return priceRes;
       }
       if (testText.match(/uitverkocht|sold\sout/i)) {
         priceRes.price = null;

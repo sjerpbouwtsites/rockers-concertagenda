@@ -123,8 +123,14 @@ export default class EventsList {
 
     EventsList._events = allEventListFiles
       .map((eventListFile) => {
-        const parsedEventFile = JSON.parse(fs.readFileSync(eventListFile));
-        return parsedEventFile;
+        try {
+          const parsedEventFile = JSON.parse(fs.readFileSync(eventListFile));
+          return parsedEventFile;
+        } catch (error) {
+          console.log(`json parse error ${eventListFile}`);          
+          console.log(error)
+          return []
+        }
       })
       .flat();
 
