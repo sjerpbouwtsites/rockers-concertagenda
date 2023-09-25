@@ -74,7 +74,7 @@ nuldertienScraper.mainPage = async function () {
         const title = eventEl.querySelector('.event-list-item__title')?.textContent.trim() ?? null;
 
         const res = {
-          pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
+          pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
           errors: [],
           title,
         };
@@ -113,7 +113,7 @@ nuldertienScraper.singlePage = async function ({ page, event }) {
   let pageInfo = await page.evaluate(
     ({ event }) => {
       const res = {
-        pageInfo: `<a class='page-info' href='${location.href}'>${event.title}</a>`,
+        pageInfo: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
         errors: [],
       };
       res.mapToDoor =

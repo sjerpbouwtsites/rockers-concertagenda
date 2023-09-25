@@ -92,7 +92,7 @@ littledevilScraper.mainPage = async function () {
           title,
           errors: [],
           venueEventUrl,
-          pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
+          pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
         };
         const ct = eventEl.querySelector('.contentbericht')?.textContent ?? '';
         const scheiding = ct.includes('/') ? '/' : '|';

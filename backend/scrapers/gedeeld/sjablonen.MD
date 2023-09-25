@@ -7,7 +7,7 @@
 ```js
 const title = doc.balblabl.textContent.etc;
 const res = {
-  pageInfo: `<a href='${location.href}'>${workerData.family} main - ${title}</a>`,
+  pageInfo: `<a href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
   errors: [],
   title,
 };
@@ -18,7 +18,7 @@ const res = {
 ```js
 // event via params
 const res = {
-  pageInfo: `<a class='page-info' href='${location.href}'>${event.title}</a>`,
+  pageInfo: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
   errors: [],
 };
 ```

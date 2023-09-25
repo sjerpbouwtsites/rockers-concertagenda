@@ -99,7 +99,7 @@ dynamoScraper.mainPage = async function () {
         (baseEvent) => {
           const title = baseEvent.querySelector('h4')?.textContent ?? '';
           const res = {
-            pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
+            pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
             errors: [],
             title,
           };
@@ -133,13 +133,13 @@ dynamoScraper.singlePage = async function ({ page, event }) {
   const pageInfo = await page.evaluate(
     ({ months, event }) => {
       const res = {
-        pageInfo: `<a class='page-info' href='${location.href}'>${document.title}</a>`,
+        pageInfo: `<a class='page-info' href='${document.location.href}'>${document.title}</a>`,
         errors: [],
       };
       const agendaDatesEls = document.querySelectorAll('.agenda-date');
       let baseDate = null;
       if (agendaDatesEls && agendaDatesEls.length < 2) {
-        if (location.href.includes('effenaar')) {
+        if (document.location.href.includes('effenaar')) {
           res.corrupted = `Dynamo mixed venue with ${event.venueEventUrl}`;
           return res;
         }

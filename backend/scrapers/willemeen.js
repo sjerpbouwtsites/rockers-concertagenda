@@ -92,7 +92,7 @@ willemeeenScraper.mainPage = async function () {
       Array.from(document.querySelectorAll('.we__agenda-item')).map((rawEvent) => {
         const title = rawEvent.querySelector('[data-text]')?.getAttribute('data-text') ?? '';
         const res = {
-          pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
+          pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
           errors: [],
           title,
         };

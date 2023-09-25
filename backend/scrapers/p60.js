@@ -99,7 +99,7 @@ p60Scraper.mainPage = async function () {
           const title = itemEl.querySelector('.p60-list__item__title')?.textContent.trim() ?? '';
 
           const res = {
-            pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
+            pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
             errors: [],
             title,
           };
@@ -157,7 +157,7 @@ p60Scraper.singlePage = async function ({ page, event }) {
 
   const pageInfo = await page.evaluate(() => {
     const res = {
-      pageInfo: `<a class='page-info' href='${location.href}'>${document.title}</a>`,
+      pageInfo: `<a class='page-info' href='${document.location.href}'>${document.title}</a>`,
       errors: [],
     };
 

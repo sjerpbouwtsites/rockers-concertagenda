@@ -91,7 +91,7 @@ dehellingScraper.mainPage = async function () {
           const title = schemaData?.name;
 
           const res = {
-            pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
+            pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
             errors: [],
             title,
           };

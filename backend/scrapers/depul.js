@@ -98,7 +98,7 @@ depulScraper.mainPage = async function () {
       Array.from(document.querySelectorAll('.agenda-item')).map((rawEvent) => {
         const title = rawEvent.querySelector('h2')?.textContent.trim() ?? '';
         const res = {
-          pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} - main - ${title}</a>`,
+          pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} - main - ${title}</a>`,
           errors: [],
           title,
         };
@@ -139,7 +139,7 @@ depulScraper.singlePage = async function ({ page, event }) {
   const pageInfo = await page.evaluate(
     ({ months, event }) => {
       const res = {
-        pageInfo: `<a class='page-info' href='${location.href}'>${event.title}</a>`,
+        pageInfo: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
         errors: [],
       };
 

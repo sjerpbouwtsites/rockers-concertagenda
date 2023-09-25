@@ -104,7 +104,7 @@ groeneEngelScraper.mainPage = async function () {
       Array.from(document.querySelectorAll('.collection-wrapper .event-part')).map((eventEl) => {
         const title = eventEl.querySelector('.part-title')?.textContent ?? null;
         const res = {
-          pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
+          pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
           errors: [],
           title,
         };
@@ -151,7 +151,7 @@ groeneEngelScraper.singlePage = async function ({ page, event }) {
   const pageInfo = await page.evaluate(
     ({ event }) => {
       const res = {
-        pageInfo: `<a class='page-info' href='${location.href}'>${event.title}</a>`,
+        pageInfo: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
         errors: [],
       };
 

@@ -83,7 +83,7 @@ tivoliVredenburgScraper.mainPage = async function () {
       Array.from(document.querySelectorAll('.agenda-list-item')).map((eventEl) => {
         const title = eventEl.querySelector('.agenda-list-item__title')?.textContent.trim() ?? null;
         const res = {
-          pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
+          pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
           errors: [],
           title,
         };
@@ -134,7 +134,7 @@ tivoliVredenburgScraper.singlePage = async function ({ page, event }) {
         errors: [],
       };
 
-      const startDateMatch = location.href.match(/\d\d-\d\d-\d\d\d\d/); //
+      const startDateMatch = document.location.href.match(/\d\d-\d\d-\d\d\d\d/); //
       res.startDate = '';
       if (startDateMatch && startDateMatch.length) {
         res.startDate = startDateMatch[0].split('-').reverse().join('-');

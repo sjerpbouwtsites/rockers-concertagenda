@@ -138,7 +138,7 @@ defluxScraper.singlePage = async function ({ page, event }) {
   const pageInfo = await page.evaluate(
     ({ event }) => {
       const res = {
-        pageInfo: `<a class='page-info' href='${location.href}'>${document.title}</a>`,
+        pageInfo: `<a class='page-info' href='${document.location.href}'>${document.title}</a>`,
         errors: [],
       };
 

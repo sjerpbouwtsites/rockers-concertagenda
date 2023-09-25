@@ -93,7 +93,7 @@ baroegScraper.mainPage = async function () {
         .map(({ eventEl, categorieTeksten, venueEventUrl }) => {
           let title = eventEl.querySelector('.wp_theatre_event_title')?.textContent.trim() ?? null;
           const res = {
-            pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
+            pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
             errors: [],
           };
 
@@ -142,7 +142,7 @@ baroegScraper.singlePage = async function ({ page, event }) {
   const pageInfo = await page.evaluate(
     ({ event }) => {
       const res = {
-        pageInfo: `<a class='page-info' href='${location.href}'>${event.title}</a>`,
+        pageInfo: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
         errors: [],
       };
 

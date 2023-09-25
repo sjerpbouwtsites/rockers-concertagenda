@@ -102,7 +102,7 @@ doornroosjeScraper.mainPage = async function () {
           eventEl.querySelector('h1,h2,h3')?.textContent.trim() ??
           null;
         const res = {
-          pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} - main - ${title}</a>`,
+          pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} - main - ${title}</a>`,
           errors: [],
           title,
         };

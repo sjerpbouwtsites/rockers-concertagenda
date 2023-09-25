@@ -1,4 +1,4 @@
-/* global document */
+/* global document,location */
 import { workerData } from 'worker_threads';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 
@@ -95,7 +95,7 @@ gebrdenobelScraper.mainPage = async function () {
         .map((eventEl) => {
           const title = eventEl.querySelector('.media-heading')?.textContent ?? null;
           const res = {
-            pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
+            pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
             errors: [],
             title,
           };
@@ -124,7 +124,7 @@ gebrdenobelScraper.mainPage = async function () {
         .map((eventEl) => {
           const title = eventEl.querySelector('.media-heading')?.textContent ?? null;
           const res = {
-            pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
+            pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
             errors: [],
             title,
           };
@@ -206,7 +206,7 @@ gebrdenobelScraper.singlePage = async function ({ page, event }) {
   const pageInfo = await page.evaluate(
     ({ months, event }) => {
       const res = {
-        pageInfo: `<a class='page-info' href='${location.href}'>${document.title}</a>`,
+        pageInfo: `<a class='page-info' href='${document.location.href}'>${document.title}</a>`,
         errors: [],
       };
       const eventDataRows = Array.from(document.querySelectorAll('.event-table tr'));

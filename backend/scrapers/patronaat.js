@@ -85,7 +85,7 @@ patronaatScraper.mainPage = async function () {
       Array.from(document.querySelectorAll('.overview__list-item--event')).map((eventEl) => {
         const title = eventEl.querySelector('.event-program__name')?.textContent.trim();
         const res = {
-          pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
+          pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
           errors: [],
           title,
         };

@@ -110,7 +110,7 @@ nieuwenorScraper.mainPage = async function () {
         const title =
           eventEl.querySelector('figure + div > span:first-child')?.textContent.trim() ?? '';
         const res = {
-          pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
+          pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
           errors: [],
           title,
         };
@@ -148,7 +148,7 @@ nieuwenorScraper.singlePage = async function ({ page, event }) {
   const pageInfo = await page.evaluate(
     ({ months, event }) => {
       const res = {
-        pageInfo: `<a class='page-info' href='${location.href}'>${event.title}</a>`,
+        pageInfo: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
         errors: [],
       };
 

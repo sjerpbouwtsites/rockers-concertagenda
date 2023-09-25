@@ -108,7 +108,7 @@ idunaScraper.mainPage = async function () {
                 }
                 return {
                   unavailable,
-                  pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
+                  pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
                   errors: [],
                   soldOut,
                   venueEventUrl: event?.href ?? null,
@@ -149,7 +149,7 @@ idunaScraper.mainPage = async function () {
                     .trim();
                 }
                 return {
-                  pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
+                  pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
                   errors: [],
                   venueEventUrl: event?.href ?? null,
                   title,
@@ -198,7 +198,7 @@ idunaScraper.mainPage = async function () {
                   title,
                   unavailable,
                   soldOut,
-                  pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
+                  pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
                   errors: [],
                 };
               });
@@ -260,7 +260,7 @@ idunaScraper.singlePage = async function ({ page, event }) {
   const pageInfo = await page.evaluate(
     ({ months, event }) => {
       const res = {
-        pageInfo: `<a class='page-info' href='${location.href}'>${event.title}</a>`,
+        pageInfo: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
         errors: [],
       };
       try {

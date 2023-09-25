@@ -90,7 +90,7 @@ effenaarScraper.mainPage = async function () {
       Array.from(document.querySelectorAll('.search-and-filter .agenda-card')).map((eventEl) => {
         const title = eventEl.querySelector('.card-title')?.textContent.trim();
         const res = {
-          pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
+          pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
           errors: [],
           title,
         };
@@ -123,7 +123,7 @@ effenaarScraper.singlePage = async function ({ page, event }) {
   const pageInfo = await page.evaluate(
     ({ months, event }) => {
       const res = {
-        pageInfo: `<a class='page-info' href='${location.href}'>${event.title}</a>`,
+        pageInfo: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
         errors: [],
       };
 

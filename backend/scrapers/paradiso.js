@@ -82,7 +82,7 @@ paradisoScraper.mainPage = async function () {
   const res = await page.evaluate(
     // eslint-disable-next-line no-shadow
     ({ workerData }) => ({
-      pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${workerData.index}</a>`,
+      pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${workerData.index}</a>`,
     }),
     { workerData },
   );
