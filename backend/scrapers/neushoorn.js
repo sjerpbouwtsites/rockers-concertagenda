@@ -115,7 +115,7 @@ neushoornScraper.mainPage = async function () {
           '.productions__item__content span:first-child',
         ).textContent;
         const res = {
-          pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+          anker: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
           errors: [],
           title,
         };
@@ -147,7 +147,7 @@ neushoornScraper.singlePage = async function ({ page, event }) {
   let pageInfo = await page.evaluate(
     ({ months, event }) => {
       const res = {
-        pageInfo: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
+        anker: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
         errors: [],
       };
 

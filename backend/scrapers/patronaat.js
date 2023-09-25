@@ -87,7 +87,7 @@ patronaatScraper.mainPage = async function () {
       Array.from(document.querySelectorAll('.overview__list-item--event')).map((eventEl) => {
         const title = eventEl.querySelector('.event-program__name')?.textContent.trim();
         const res = {
-          pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+          anker: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
           errors: [],
           title,
         };
@@ -119,7 +119,7 @@ patronaatScraper.singlePage = async function ({ page, event }) {
     .evaluate(
       ({ months, event }) => {
         const res = {
-          pageInfo: `<a class='page-info' href='${event.venueEventUrl}'>${event.title}</a>`,
+          anker: `<a class='page-info' href='${event.venueEventUrl}'>${event.title}</a>`,
           errors: [],
         };
 
@@ -154,7 +154,7 @@ patronaatScraper.singlePage = async function ({ page, event }) {
             }
             if (!res.startTime) {
               res.errors.push({
-                remarks: `geen startTime ${res.pageInfo}`,
+                remarks: `geen startTime ${res.anker}`,
                 toDebug: event,
               });
             }
@@ -170,7 +170,7 @@ patronaatScraper.singlePage = async function ({ page, event }) {
             }
           } else {
             res.errors.push({
-              remarks: `geen startDate ${res.pageInfo}`,
+              remarks: `geen startDate ${res.anker}`,
               toDebug: event,
             });
             return res;
@@ -179,7 +179,7 @@ patronaatScraper.singlePage = async function ({ page, event }) {
           // TODO opsplitsen
           res.errors.push({
             error: caughtError,
-            remarks: `Datum error patronaat ${res.pageInfo}.`,
+            remarks: `Datum error patronaat ${res.anker}.`,
             toDebug: event,
           });
         }

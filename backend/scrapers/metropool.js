@@ -91,7 +91,7 @@ metropoolScraper.mainPage = async function () {
       Array.from(document.querySelectorAll('.card--event')).map((rawEvent) => {
         const title = rawEvent.querySelector('.card__title')?.textContent ?? null;
         const res = {
-          pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+          anker: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
           errors: [],
           title,
         };
@@ -128,7 +128,7 @@ metropoolScraper.singlePage = async function ({ page, event }) {
     // eslint-disable-next-line no-shadow
     ({ months, event }) => {
       const res = {
-        pageInfo: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
+        anker: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
         errors: [],
       };
 
@@ -146,7 +146,7 @@ metropoolScraper.singlePage = async function ({ page, event }) {
 
       if (!Array.isArray(startDateRauwMatch) || !startDateRauwMatch.length) {
         res.errors.push({
-          remarks: `geen match startDate ${res.pageInfo}`,
+          remarks: `geen match startDate ${res.anker}`,
           toDebug: {
             text: document.querySelector('.event-title-wrap')?.innerHTML,
             res,
@@ -166,7 +166,7 @@ metropoolScraper.singlePage = async function ({ page, event }) {
           res.start = `${startDate}T${startTimeMatch[0]}:00`;
         } else {
           res.errors.push({
-            remarks: `wel datum, geen starttijd ${res.pageInfo}`,
+            remarks: `wel datum, geen starttijd ${res.anker}`,
             toDebug: {
               text: document.querySelector('.beginTime')?.innerHTML,
               res,
@@ -181,7 +181,7 @@ metropoolScraper.singlePage = async function ({ page, event }) {
       } catch (caughtError) {
         res.errors.push({
           error: caughtError,
-          remarks: `start deurtijd match en of dateconversie ${res.pageInfo}`,
+          remarks: `start deurtijd match en of dateconversie ${res.anker}`,
           toDebug: {
             event,
           },

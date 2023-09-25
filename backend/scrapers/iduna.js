@@ -110,7 +110,7 @@ idunaScraper.mainPage = async function () {
                 }
                 return {
                   unavailable,
-                  pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+                  anker: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
                   errors: [],
                   soldOut,
                   venueEventUrl: event?.href ?? null,
@@ -151,7 +151,7 @@ idunaScraper.mainPage = async function () {
                     .trim();
                 }
                 return {
-                  pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+                  anker: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
                   errors: [],
                   venueEventUrl: event?.href ?? null,
                   title,
@@ -200,7 +200,7 @@ idunaScraper.mainPage = async function () {
                   title,
                   unavailable,
                   soldOut,
-                  pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+                  anker: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
                   errors: [],
                 };
               });
@@ -262,7 +262,7 @@ idunaScraper.singlePage = async function ({ page, event }) {
   const pageInfo = await page.evaluate(
     ({ months, event }) => {
       const res = {
-        pageInfo: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
+        anker: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
         errors: [],
       };
       try {
@@ -275,7 +275,7 @@ idunaScraper.singlePage = async function ({ page, event }) {
         }
         if (!res.startDate) {
           res.errors.push({
-            remarks: `geen startDate ${res.pageInfo}`,
+            remarks: `geen startDate ${res.anker}`,
             toDebug: {
               event,
               text: document.querySelector('#sideinfo .capitalize')?.textContent,
@@ -308,7 +308,7 @@ idunaScraper.singlePage = async function ({ page, event }) {
           res.doorTime = null;
         } else if (!res.startTime) {
           res.errors.push({
-            remarks: `geen startTime ${res.pageInfo}`,
+            remarks: `geen startTime ${res.anker}`,
             toDebug: {
               event,
             },
@@ -329,7 +329,7 @@ idunaScraper.singlePage = async function ({ page, event }) {
         // TODO BELACHELJIK GROTE TRY CATCH
         res.errors.push({
           error: caughtError,
-          remarks: `belacheljik grote catch iduna singlePage ${res.pageInfo}`,
+          remarks: `belacheljik grote catch iduna singlePage ${res.anker}`,
           toDebug: {
             event,
           },

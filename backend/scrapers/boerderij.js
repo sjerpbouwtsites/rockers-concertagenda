@@ -113,7 +113,7 @@ boerderijScraper.singlePage = async function ({ event, page }) {
   event.title = realEventTitle;
 
   const res = {
-    pageInfo: `<a class='page-info' href='${this._s.mainPage.url}'>${event.title}</a>`,
+    anker: `<a class='page-info' href='${this._s.mainPage.url}'>${event.title}</a>`,
     errors: [],
   };
 
@@ -124,7 +124,7 @@ boerderijScraper.singlePage = async function ({ event, page }) {
     .catch((caughtError) => {
       res.errors.push({
         error: caughtError,
-        remarks: `ajax ${url} faal ${res.pageInfo}`,
+        remarks: `ajax ${url} faal ${res.anker}`,
         errorLevel: 'close-thread',
         toDebug: event,
       });
@@ -150,7 +150,7 @@ boerderijScraper.singlePage = async function ({ event, page }) {
   res.boerderijID = ajaxRes.id;
   const priceRes = await this.boerderijCustomPrice(
     `${ajaxRes?.entrance_price ?? ''} ${ajaxRes?.ticket_price ?? ''}`,
-    res.pageInfo,
+    res.anker,
     res.title,
   );
   res.errors = res.errors.concat(priceRes.errors);
@@ -161,7 +161,7 @@ boerderijScraper.singlePage = async function ({ event, page }) {
   } catch (catchedError) {
     res.errors.push({
       error: catchedError,
-      remarks: `start samenvoeging ${res.pageInfo}`,
+      remarks: `start samenvoeging ${res.anker}`,
       toDebug: res,
     });
   }
@@ -170,7 +170,7 @@ boerderijScraper.singlePage = async function ({ event, page }) {
   } catch (catchedError) {
     res.errors.push({
       error: catchedError,
-      remarks: `door samenvoeging ${res.pageInfo}`,
+      remarks: `door samenvoeging ${res.anker}`,
       toDebug: res,
     });
   }

@@ -85,7 +85,7 @@ tivoliVredenburgScraper.mainPage = async function () {
       Array.from(document.querySelectorAll('.agenda-list-item')).map((eventEl) => {
         const title = eventEl.querySelector('.agenda-list-item__title')?.textContent.trim() ?? null;
         const res = {
-          pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+          anker: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
           errors: [],
           title,
         };
@@ -132,7 +132,7 @@ tivoliVredenburgScraper.singlePage = async function ({ page, event }) {
   const pageInfo = await page.evaluate(
     ({ event }) => {
       const res = {
-        pageInfo: `<a class='page-info' href='${event.venueEventUrl}'>${event.title}</a>`,
+        anker: `<a class='page-info' href='${event.venueEventUrl}'>${event.title}</a>`,
         errors: [],
       };
 
@@ -144,7 +144,7 @@ tivoliVredenburgScraper.singlePage = async function ({ page, event }) {
 
       if (!res.startDate || res.startDate.length < 7) {
         res.errors.push({
-          remarks: `startdate mis ${res.pageInfo}`,
+          remarks: `startdate mis ${res.anker}`,
           toDebug: {
             text: `niet goed genoeg<br>${startDateMatch.join('; ')}<br>${res.startDate}`,
             res,
@@ -171,7 +171,7 @@ tivoliVredenburgScraper.singlePage = async function ({ page, event }) {
         } catch (caughtError) {
           res.errors.push({
             error: caughtError,
-            remarks: `Open door ${res.pageInfo}`,
+            remarks: `Open door ${res.anker}`,
             toDebug: {
               text: eventInfoDtDDText,
               event,
@@ -186,7 +186,7 @@ tivoliVredenburgScraper.singlePage = async function ({ page, event }) {
         } catch (caughtError) {
           res.errors.push({
             error: caughtError,
-            remarks: `startTijd door ${res.pageInfo}`,
+            remarks: `startTijd door ${res.anker}`,
             toDebug: {
               matches: `${startMatch.join('')}`,
               event,
@@ -201,7 +201,7 @@ tivoliVredenburgScraper.singlePage = async function ({ page, event }) {
         } catch (caughtError) {
           res.errors.push({
             error: caughtError,
-            remarks: `endtijd ${res.pageInfo}`,
+            remarks: `endtijd ${res.anker}`,
             toDebug: {
               text: eventInfoDtDDText,
               event,

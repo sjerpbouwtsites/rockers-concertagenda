@@ -81,7 +81,7 @@ bibelotScraper.mainPage = async function () {
       ).map((eventEl) => {
         const title = eventEl.querySelector('h1')?.textContent.trim() ?? null;
         const res = {
-          pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+          anker: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
           errors: [],
           title,
         };
@@ -117,7 +117,7 @@ bibelotScraper.singlePage = async function ({ page, event }) {
     // eslint-disable-next-line no-shadow
     ({ months, event }) => {
       const res = {
-        pageInfo: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
+        anker: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
         errors: [],
       };
 
@@ -148,7 +148,7 @@ bibelotScraper.singlePage = async function ({ page, event }) {
       } catch (errorCaught) {
         res.errors.push({
           error: errorCaught,
-          remarks: `doortime match met basedate ${res.pageInfo}`,
+          remarks: `doortime match met basedate ${res.anker}`,
           toDebug: res,
         });
       }
@@ -162,7 +162,7 @@ bibelotScraper.singlePage = async function ({ page, event }) {
       } catch (errorCaught) {
         res.errors.push({
           error: errorCaught,
-          remarks: `startTime match met basedate ${res.pageInfo}`,
+          remarks: `startTime match met basedate ${res.anker}`,
           toDebug: res,
         });
       }
@@ -173,7 +173,7 @@ bibelotScraper.singlePage = async function ({ page, event }) {
       } catch (errorCaught) {
         res.errors.push({
           error: errorCaught,
-          remarks: `endtime match met basedate ${res.pageInfo}`,
+          remarks: `endtime match met basedate ${res.anker}`,
           toDebug: res,
         });
       }

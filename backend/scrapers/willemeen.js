@@ -94,7 +94,7 @@ willemeeenScraper.mainPage = async function () {
       Array.from(document.querySelectorAll('.we__agenda-item')).map((rawEvent) => {
         const title = rawEvent.querySelector('[data-text]')?.getAttribute('data-text') ?? '';
         const res = {
-          pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+          anker: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
           errors: [],
           title,
         };
@@ -139,7 +139,7 @@ willemeeenScraper.singlePage = async function ({ page, url, event }) {
   const pageInfo = {
     title: event.title,
     unavailable: event.unavailable,
-    pageInfo: `<a class='page-info' class='page-info' href='${event.venueEventUrl}'>${event.title}</a>`,
+    anker: `<a class='page-info' class='page-info' href='${event.venueEventUrl}'>${event.title}</a>`,
     errors: [],
   };
 

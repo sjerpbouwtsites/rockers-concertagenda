@@ -84,7 +84,7 @@ paradisoScraper.mainPage = async function () {
   const res = await page.evaluate(
     // eslint-disable-next-line no-shadow
     ({ workerData }) => ({
-      pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${workerData.index}</a>`,
+      anker: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${workerData.index}</a>`,
     }),
     { workerData },
   );
@@ -98,7 +98,6 @@ paradisoScraper.mainPage = async function () {
     { workerData },
   );
 
-
   await _t.autoScroll(page);
   bla = await page.evaluate(
     // eslint-disable-next-line no-shadow
@@ -107,7 +106,6 @@ paradisoScraper.mainPage = async function () {
       'geen titel gevonden',
     { workerData },
   );
-
 
   let rawEvents = await page.evaluate(
     ({ resBuiten, unavailabiltyTerms }) =>
@@ -143,7 +141,7 @@ paradisoScraper.singlePage = async function ({ page, event }) {
   const { stopFunctie } = await this.singlePageStart();
 
   const buitenRes = {
-    pageInfo: `<a class='page-info' href='${event.venueEventUrl}'>${event.title}</a>`,
+    anker: `<a class='page-info' href='${event.venueEventUrl}'>${event.title}</a>`,
     errors: [],
   };
 
@@ -154,7 +152,7 @@ paradisoScraper.singlePage = async function ({ page, event }) {
   } catch (caughtError) {
     buitenRes.errors.push({
       error: caughtError,
-      remarks: `Paradiso wacht op laden single pagina\n${buitenRes.pageInfo}`,
+      remarks: `Paradiso wacht op laden single pagina\n${buitenres.anker}`,
       errorLevel: 'notice',
     });
     return await this.singlePageEnd({ pageInfo: buitenRes, stopFunctie, page });
@@ -233,7 +231,7 @@ paradisoScraper.singlePage = async function ({ page, event }) {
       } catch (caughtError) {
         res.errors.push({
           error: caughtError,
-          remarks: `startDateMatch ${res.pageInfo}`,
+          remarks: `startDateMatch ${res.anker}`,
           toDebug: {
             event,
           },
@@ -256,7 +254,7 @@ paradisoScraper.singlePage = async function ({ page, event }) {
       }
       if (!tijden.length) {
         res.errors.push({
-          remarks: `Geen tijden gevonden ${res.pageInfo}`,
+          remarks: `Geen tijden gevonden ${res.anker}`,
         });
       }
 

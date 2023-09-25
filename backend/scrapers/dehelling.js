@@ -93,7 +93,7 @@ dehellingScraper.mainPage = async function () {
           const title = schemaData?.name;
 
           const res = {
-            pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+            anker: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
             errors: [],
             title,
           };
@@ -103,7 +103,7 @@ dehellingScraper.mainPage = async function () {
           } catch (caughtError) {
             res.errors.push({
               error: caughtError,
-              remarks: `end date time datestring omzetting ${title} ${res.pageInfo}`,
+              remarks: `end date time datestring omzetting ${title} ${res.anker}`,
               toDebug: res,
             });
           }
@@ -127,7 +127,7 @@ dehellingScraper.mainPage = async function () {
           } catch (caughtError) {
             res.errors.push({
               error: caughtError,
-              remarks: `start date time eruit filteren error \n ${res.end} \n ${startString} ${title} ${res.pageInfo}`,
+              remarks: `start date time eruit filteren error \n ${res.end} \n ${startString} ${title} ${res.anker}`,
               toDebug: res,
             });
           }
@@ -164,7 +164,7 @@ dehellingScraper.singlePage = async function ({ page, event }) {
   const pageInfo = await page.evaluate(
     ({ event }) => {
       const res = {
-        pageInfo: `<a class='page-info' href='${event.venueEventUrl}'>${event.title}</a>`,
+        anker: `<a class='page-info' href='${event.venueEventUrl}'>${event.title}</a>`,
         errors: [],
       };
       const lineupEl = document.querySelector('.c-event-content__lineup');

@@ -92,7 +92,7 @@ effenaarScraper.mainPage = async function () {
       Array.from(document.querySelectorAll('.search-and-filter .agenda-card')).map((eventEl) => {
         const title = eventEl.querySelector('.card-title')?.textContent.trim();
         const res = {
-          pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+          anker: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
           errors: [],
           title,
         };
@@ -125,14 +125,14 @@ effenaarScraper.singlePage = async function ({ page, event }) {
   const pageInfo = await page.evaluate(
     ({ months, event }) => {
       const res = {
-        pageInfo: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
+        anker: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
         errors: [],
       };
 
       const dateText = document.querySelector('.header-meta-date')?.textContent.trim() ?? '';
       if (!dateText) {
         res.errors.push({
-          remarks: `geen datumtext ${res.pageInfo}`,
+          remarks: `geen datumtext ${res.anker}`,
         });
         res.corrupted = 'geen datum tekst';
       } else {
@@ -168,7 +168,7 @@ effenaarScraper.singlePage = async function ({ page, event }) {
       } catch (caughtError) {
         res.errors.push({
           error: caughtError,
-          remarks: `omzetten naar Date iso gaat fout ${res.pageInfo}`,
+          remarks: `omzetten naar Date iso gaat fout ${res.anker}`,
           toDebug: {
             ars: `${startTimeAr.join('')} ${doorTimeAr.join('')}`,
             res,

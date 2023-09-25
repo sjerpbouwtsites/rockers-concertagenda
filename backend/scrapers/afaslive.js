@@ -105,7 +105,7 @@ afasliveScraper.mainPage = async function () {
         .map((agendaBlock) => {
           const title = agendaBlock.querySelector('.eventTitle')?.textContent ?? '';
           const res = {
-            pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+            anker: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
             errors: [],
             title,
           };
@@ -136,7 +136,7 @@ afasliveScraper.singlePage = async function ({ page, event }) {
     // eslint-disable-next-line no-shadow
     ({ event }) => {
       const res = {
-        pageInfo: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
+        anker: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
         errors: [],
       };
 

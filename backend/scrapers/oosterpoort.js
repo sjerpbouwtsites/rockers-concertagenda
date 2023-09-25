@@ -105,7 +105,7 @@ oostpoortScraper.mainPage = async function () {
               ? eventEl.querySelector('h1')?.textContent ?? ''
               : eventEl.querySelector('h1')?.textContent.replace(eersteDeelKorteTekst, '') ?? '';
           const res = {
-            pageInfo: `<a class='page-info' href="${document.location.href}">${workerData.family} - main - ${title}</a>`,
+            anker: `<a class='page-info' href="${document.location.href}">${workerData.family} - main - ${title}</a>`,
             errors: [],
             title,
           };
@@ -169,7 +169,7 @@ oostpoortScraper.singlePage = async function ({ page, event }) {
     .evaluate(
       ({ event }) => {
         const res = {
-          pageInfo: `<a class='page-info' href='${document.location.href}'>${document.title}</a>`,
+          anker: `<a class='page-info' href='${document.location.href}'>${document.title}</a>`,
           errors: [],
         };
 
@@ -183,7 +183,7 @@ oostpoortScraper.singlePage = async function ({ page, event }) {
         } catch (caughtError) {
           res.errors.push({
             error: caughtError,
-            remarks: `check if disabled fail  ${res.pageInfo}`,
+            remarks: `check if disabled fail  ${res.anker}`,
             toDebug: event,
           });
         }

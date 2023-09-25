@@ -108,7 +108,7 @@ cpuntScraper.mainPage = async function () {
       Array.from(document.querySelectorAll('#filter .article-wrapper')).map((rawEvent) => {
         const title = rawEvent.querySelector('.article-title')?.textContent ?? null;
         const res = {
-          pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} - main - ${title}</a>`,
+          anker: `<a class='page-info' href='${document.location.href}'>${workerData.family} - main - ${title}</a>`,
           errors: [],
         };
 
@@ -180,7 +180,7 @@ cpuntScraper.singlePage = async function ({ page, event }) {
       const ticketSection = contentSections[indexOfTicketSection];
 
       const res = {
-        pageInfo: `<a class='page-info' href='${document.location.href}'>${document.title}</a>`,
+        anker: `<a class='page-info' href='${document.location.href}'>${document.title}</a>`,
         errors: [],
       };
 

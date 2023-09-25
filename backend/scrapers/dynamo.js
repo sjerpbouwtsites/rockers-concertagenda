@@ -101,7 +101,7 @@ dynamoScraper.mainPage = async function () {
         (baseEvent) => {
           const title = baseEvent.querySelector('h4')?.textContent ?? '';
           const res = {
-            pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+            anker: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
             errors: [],
             title,
           };
@@ -138,7 +138,7 @@ dynamoScraper.singlePage = async function ({ page, event }) {
   const pageInfo = await page.evaluate(
     ({ months, event }) => {
       const res = {
-        pageInfo: `<a class='page-info' href='${document.location.href}'>${document.title}</a>`,
+        anker: `<a class='page-info' href='${document.location.href}'>${document.title}</a>`,
         errors: [],
       };
       const agendaDatesEls = document.querySelectorAll('.agenda-date');
@@ -150,7 +150,7 @@ dynamoScraper.singlePage = async function ({ page, event }) {
         }
 
         res.errors.push({
-          remarks: `Te weinig 'agendaDataEls' ${res.pageInfo}`,
+          remarks: `Te weinig 'agendaDataEls' ${res.anker}`,
           toDebug: {
             event,
             agendaDatesEls,
@@ -172,7 +172,7 @@ dynamoScraper.singlePage = async function ({ page, event }) {
       } catch (caughtError) {
         res.errors.push({
           error: caughtError,
-          remarks: `datum match faal ${res.pageInfo}`,
+          remarks: `datum match faal ${res.anker}`,
           toDebug: event,
         });
         return res;
@@ -203,7 +203,7 @@ dynamoScraper.singlePage = async function ({ page, event }) {
       } catch (caughtError) {
         res.errors.push({
           error: caughtError,
-          remarks: `tijd matches samen met tijden voegen ${res.pageInfo}`,
+          remarks: `tijd matches samen met tijden voegen ${res.anker}`,
           toDebug: res,
         });
       }

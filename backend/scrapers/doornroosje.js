@@ -104,7 +104,7 @@ doornroosjeScraper.mainPage = async function () {
           eventEl.querySelector('h1,h2,h3')?.textContent.trim() ??
           null;
         const res = {
-          pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} - main - ${title}</a>`,
+          anker: `<a class='page-info' href='${document.location.href}'>${workerData.family} - main - ${title}</a>`,
           errors: [],
           title,
         };
@@ -185,7 +185,7 @@ doornroosjeScraper.singlePage = async function ({ page, event }) {
       // eslint-disable-next-line no-shadow
       ({ months, event }) => {
         const res = {
-          pageInfo: `<a class='page-info' href='${event.venueEventUrl}'>${event.title}</a>`,
+          anker: `<a class='page-info' href='${event.venueEventUrl}'>${event.title}</a>`,
           errors: [],
         };
 
@@ -216,7 +216,7 @@ doornroosjeScraper.singlePage = async function ({ page, event }) {
           startDate = `${year}-${month}-${day}`;
         } else if (!startDate) {
           res.errors.push({
-            remarks: `Geen startdate ${res.pageInfo}`,
+            remarks: `Geen startdate ${res.anker}`,
             toDebug: {
               text: document.querySelector('.c-event-data')?.innerHTML,
             },
@@ -246,7 +246,7 @@ doornroosjeScraper.singlePage = async function ({ page, event }) {
             } catch (caughtError) {
               res.errors.push({
                 error: caughtError,
-                remarks: `fout bij tijd of datums. matches: ${timeMatches} datum: ${startDate} ${res.pageInfo}`,
+                remarks: `fout bij tijd of datums. matches: ${timeMatches} datum: ${startDate} ${res.anker}`,
               });
               return res;
             }
@@ -263,7 +263,7 @@ doornroosjeScraper.singlePage = async function ({ page, event }) {
       // eslint-disable-next-line no-shadow
       ({ event }) => {
         const res = {
-          pageInfo: `<a class='page-info' href='${event.venueEventUrl}'>${event.title}</a>`,
+          anker: `<a class='page-info' href='${event.venueEventUrl}'>${event.title}</a>`,
           errors: [],
         };
         if (event.venueEventUrl.includes('soulcrusher')) {

@@ -106,7 +106,7 @@ voltScraper.mainPage = async function () {
           const anchor = rawEvent.querySelector('.card-activity__title a') ?? null;
           const title = anchor?.textContent.trim() ?? '';
           const res = {
-            pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+            anker: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
             errors: [],
             title,
           };
@@ -152,7 +152,7 @@ voltScraper.singlePage = async function ({ page, url, event }) {
       const res = {};
       res.title = event.title;
       res.unavailable = event.unavailable;
-      res.pageInfo = `<a class='page-info' class='page-info' href='${url}'>${event.title}</a>`;
+      res.anker = `<a class='page-info' class='page-info' href='${url}'>${event.title}</a>`;
       res.errors = [];
 
       const startDateMatch = document
@@ -202,7 +202,7 @@ voltScraper.singlePage = async function ({ page, url, event }) {
       } catch (error) {
         res.errors.push({
           error,
-          remarks: `ongeldige tijden ${res.pageInfo}`,
+          remarks: `ongeldige tijden ${res.anker}`,
         });
         return res;
       }

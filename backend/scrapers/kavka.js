@@ -109,7 +109,7 @@ kavkaScraper.mainPage = async function () {
             rawEvent.querySelector('article h3:first-child')?.textContent.trim() ?? null;
 
           const res = {
-            pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+            anker: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
             errors: [],
             title,
           };
@@ -141,7 +141,7 @@ kavkaScraper.mainPage = async function () {
           } catch (caughtError) {
             res.errors.push({
               error: caughtError,
-              remarks: `kkgrote trycatch baseEventList iduna ${res.pageInfo}.`,
+              remarks: `kkgrote trycatch baseEventList iduna ${res.anker}.`,
               toDebug: res,
             });
           }
@@ -153,7 +153,7 @@ kavkaScraper.mainPage = async function () {
             }
           } catch (error) {
             res.errors.push({
-              remarks: `openDoorDateTime faal ${res.pageInfo}`,
+              remarks: `openDoorDateTime faal ${res.anker}`,
             });
           }
 
@@ -197,7 +197,7 @@ kavkaScraper.singlePage = async function ({ page, event }) {
     // eslint-disable-next-line no-shadow
     ({ event }) => {
       const res = {
-        pageInfo: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
+        anker: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
         errors: [],
       };
       try {
@@ -205,7 +205,7 @@ kavkaScraper.singlePage = async function ({ page, event }) {
       } catch (caughtError) {
         res.errors.push({
           error: caughtError,
-          remarks: `page info top level trycatch ${res.pageInfo}`,
+          remarks: `page info top level trycatch ${res.anker}`,
         });
       }
     },

@@ -60,7 +60,7 @@ ticketmasterScraper.mainPage = async function () {
       }
 
       const res1 = {
-        pageInfo: `<a class='page-info' href='${this._s.mainPage.url}'>Ticketmaster overview ${workerData.index}</a>`,
+        anker: `<a class='page-info' href='${this._s.mainPage.url}'>Ticketmaster overview ${workerData.index}</a>`,
         errors: [],
       };
 
@@ -116,7 +116,7 @@ ticketmasterScraper.singlePage = async function ({ event }) {
   const { stopFunctie } = await this.singlePageStart();
 
   const pageInfo = {
-    pageInfo: `<a class='page-info' href='${event.url}'>TM ${event.title}</a>`,
+    anker: `<a class='page-info' href='${event.url}'>TM ${event.title}</a>`,
     errors: [],
     unavailable: '',
   };

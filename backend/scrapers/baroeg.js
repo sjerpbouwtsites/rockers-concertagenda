@@ -95,7 +95,7 @@ baroegScraper.mainPage = async function () {
         .map(({ eventEl, categorieTeksten, venueEventUrl }) => {
           let title = eventEl.querySelector('.wp_theatre_event_title')?.textContent.trim() ?? null;
           const res = {
-            pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+            anker: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
             errors: [],
           };
 
@@ -145,7 +145,7 @@ baroegScraper.singlePage = async function ({ page, event }) {
     // eslint-disable-next-line no-shadow
     ({ event }) => {
       const res = {
-        pageInfo: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
+        anker: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
         errors: [],
       };
 

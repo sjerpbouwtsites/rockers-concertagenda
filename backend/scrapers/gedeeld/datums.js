@@ -60,7 +60,7 @@ function _mapToDateString(event, key, required) {
     } catch (isISOError) {
       event.errors.push({
         error: isISOError,
-        remarks: `isISOString err ${mapKey} ${event.pageInfo}`,
+        remarks: `isISOString err ${mapKey} ${event.anker}`,
         toDebug: {
           key: `${key}`,
           [`${mapKey}`]: `${event[mapKey]}`,
@@ -70,7 +70,7 @@ function _mapToDateString(event, key, required) {
   } catch (arrayCheckError) {
     event.errors.push({
       error: arrayCheckError,
-      remarks: `Array check ${mapKey} ${event.pageInfo}`,
+      remarks: `Array check ${mapKey} ${event.anker}`,
       [`${mapKey}`]: event[mapKey],
     });
   }
@@ -94,7 +94,7 @@ function _mapToTime(event, key, required) {
     } catch (isTimeError) {
       event.errors.push({
         error: isTimeError,
-        remarks: `isTimeError ${mapKey} ${event.pageInfo}`,
+        remarks: `isTimeError ${mapKey} ${event.anker}`,
         toDebug: {
           [`${mapKey}`]: event[mapKey],
           event,
@@ -105,10 +105,8 @@ function _mapToTime(event, key, required) {
   } catch (arrayCheckError) {
     event.errors.push({
       error: arrayCheckError,
-      remarks: `Array check ${mapKey} ${event.pageInfo}`,
-      toDebug:
-        JSON.parse(JSON.stringify(event)),
-
+      remarks: `Array check ${mapKey} ${event.anker}`,
+      toDebug: JSON.parse(JSON.stringify(event)),
     });
   }
 

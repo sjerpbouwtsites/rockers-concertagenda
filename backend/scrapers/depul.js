@@ -100,7 +100,7 @@ depulScraper.mainPage = async function () {
       Array.from(document.querySelectorAll('.agenda-item')).map((rawEvent) => {
         const title = rawEvent.querySelector('h2')?.textContent.trim() ?? '';
         const res = {
-          pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} - main - ${title}</a>`,
+          anker: `<a class='page-info' href='${document.location.href}'>${workerData.family} - main - ${title}</a>`,
           errors: [],
           title,
         };
@@ -141,7 +141,7 @@ depulScraper.singlePage = async function ({ page, event }) {
   const pageInfo = await page.evaluate(
     ({ months, event }) => {
       const res = {
-        pageInfo: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
+        anker: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
         errors: [],
       };
 
@@ -161,7 +161,7 @@ depulScraper.singlePage = async function ({ page, event }) {
       } catch (caughtError) {
         res.errors.push({
           caughtError,
-          remarks: `longTextHTML ${res.pageInfo}`,
+          remarks: `longTextHTML ${res.anker}`,
           toDebug: res,
         });
       }
@@ -189,7 +189,7 @@ depulScraper.singlePage = async function ({ page, event }) {
           } catch (caughtError) {
             res.errors.push({
               error: caughtError,
-              remarks: `startDate mislukt ${event.title} ${res.pageInfo}`,
+              remarks: `startDate mislukt ${event.title} ${res.anker}`,
               toDebug: res,
             });
           }
@@ -205,7 +205,7 @@ depulScraper.singlePage = async function ({ page, event }) {
           } catch (caughtError) {
             res.errors.push({
               error: caughtError,
-              remarks: `start en startDate samenvoegen ${res.pageInfo}`,
+              remarks: `start en startDate samenvoegen ${res.anker}`,
               toDebug: res,
             });
           }
@@ -221,7 +221,7 @@ depulScraper.singlePage = async function ({ page, event }) {
           } catch (caughtError) {
             res.errors.push({
               error: caughtError,
-              remarks: `doorDateTime en startDate ${res.pageInfo}`,
+              remarks: `doorDateTime en startDate ${res.anker}`,
               toDebug: res,
             });
           }

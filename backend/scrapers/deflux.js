@@ -140,13 +140,13 @@ defluxScraper.singlePage = async function ({ page, event }) {
   const pageInfo = await page.evaluate(
     ({ event }) => {
       const res = {
-        pageInfo: `<a class='page-info' href='${document.location.href}'>${document.title}</a>`,
+        anker: `<a class='page-info' href='${document.location.href}'>${document.title}</a>`,
         errors: [],
       };
 
       const eventScheme = document.querySelector('.evo_event_schema');
       if (!eventScheme) {
-        res.errors.push({ remarks: `geen event scheme gevonden ${res.pageInfo}`, toDebug: res });
+        res.errors.push({ remarks: `geen event scheme gevonden ${res.anker}`, toDebug: res });
         return res;
       }
 
@@ -163,7 +163,7 @@ defluxScraper.singlePage = async function ({ page, event }) {
           .textContent.match(/\d\d:\d\d/)[0];
         res.start = `${res.startDate}T${res.startTime}:00`;
       } catch (caughtError) {
-        res.errors.push({ error: caughtError, remarks: `starttime match ${res.pageInfo}` });
+        res.errors.push({ error: caughtError, remarks: `starttime match ${res.anker}` });
       }
 
       if (
@@ -176,7 +176,7 @@ defluxScraper.singlePage = async function ({ page, event }) {
         } catch (caughtError) {
           res.errors.push({
             error: caughtError,
-            remarks: `door open starttime match ${res.pageInfo}`,
+            remarks: `door open starttime match ${res.anker}`,
             toDebug: res,
           });
         }

@@ -94,7 +94,7 @@ littledevilScraper.mainPage = async function () {
           title,
           errors: [],
           venueEventUrl,
-          pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+          anker: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
         };
         const ct = eventEl.querySelector('.contentbericht')?.textContent ?? '';
         const scheiding = ct.includes('/') ? '/' : '|';
@@ -132,7 +132,7 @@ littledevilScraper.mainPage = async function () {
           } catch (error) {
             res.price = null;
             res.errors.push({
-              remarks: `price berekening met ${s} ${res.pageInfo}`,
+              remarks: `price berekening met ${s} ${res.anker}`,
             });
           }
         }
@@ -175,7 +175,7 @@ littledevilScraper.singlePage = async function ({ page, event }) {
   const pageInfo = {
     title: event.title,
     errors: [],
-    pageInfo: `<a class='page-info' href='${event.title}'>${workerData.family} single - ${event.title}</a>`,
+    anker: `<a class='page-info' href='${event.title}'>${workerData.family} single - ${event.title}</a>`,
   };
 
   const imageRes = await getImage({

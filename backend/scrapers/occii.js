@@ -102,7 +102,7 @@ occiiScraper.mainPage = async function () {
         const firstAnchor = occiiEvent.querySelector('a');
         const { title } = firstAnchor;
         const res = {
-          pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+          anker: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
           errors: [],
           title,
         };
@@ -136,7 +136,7 @@ occiiScraper.singlePage = async function ({ page, event }) {
   let pageInfo = await page.evaluate(
     ({ months, event }) => {
       const res = {
-        pageInfo: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
+        anker: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
         errors: [],
       };
 

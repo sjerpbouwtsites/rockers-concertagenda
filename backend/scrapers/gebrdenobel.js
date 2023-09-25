@@ -98,7 +98,7 @@ gebrdenobelScraper.mainPage = async function () {
         .map((eventEl) => {
           const title = eventEl.querySelector('.media-heading')?.textContent ?? null;
           const res = {
-            pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+            anker: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
             errors: [],
             title,
           };
@@ -127,7 +127,7 @@ gebrdenobelScraper.mainPage = async function () {
         .map((eventEl) => {
           const title = eventEl.querySelector('.media-heading')?.textContent ?? null;
           const res = {
-            pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+            anker: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
             errors: [],
             title,
           };
@@ -237,7 +237,7 @@ gebrdenobelScraper.singlePage = async function ({ page, event }) {
     // eslint-disable-next-line no-shadow
     ({ months }) => {
       const res = {
-        pageInfo: `<a class='page-info' href='${document.location.href}'>${document.title}</a>`,
+        anker: `<a class='page-info' href='${document.location.href}'>${document.title}</a>`,
         errors: [],
       };
       const eventDataRows = Array.from(document.querySelectorAll('.event-table tr'));

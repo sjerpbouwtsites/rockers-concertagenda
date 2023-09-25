@@ -97,7 +97,7 @@ melkwegScraper.mainPage = async function () {
         .map((eventEl) => {
           const title = eventEl.querySelector('h3[class*="title"]')?.textContent ?? '';
           const res = {
-            pageInfo: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+            anker: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
             errors: [],
             title,
           };
@@ -140,7 +140,7 @@ melkwegScraper.singlePage = async function ({ page, event }) {
   const pageInfo = await page.evaluate(
     ({ event }) => {
       const res = {
-        pageInfo: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
+        anker: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
         errors: [],
       };
       try {
@@ -150,7 +150,7 @@ melkwegScraper.singlePage = async function ({ page, event }) {
       } catch (caughtError) {
         res.errors.push({
           error: caughtError,
-          remarks: `start faal ${res.pageInfo}`,
+          remarks: `start faal ${res.anker}`,
           toDebug: {
             text:
               document.querySelector('[class*="styles_event-header"] time')?.outerHTML ??
