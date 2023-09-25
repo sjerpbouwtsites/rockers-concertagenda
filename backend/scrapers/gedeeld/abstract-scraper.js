@@ -376,17 +376,6 @@ export default class AbstractScraper extends ScraperConfig {
     const page = await this.browser.newPage();
     await page.goto(this._s.mainPage.url, this._s.mainPage);
 
-    // zet ErrorWrapper class in puppeteer document.
-    // await page.evaluate(
-    //   ({ ErrorWrapperString }) => {
-    //     const newScriptContent = ErrorWrapperString;
-    //     const scriptTag = document.createElement('script');
-    //     scriptTag.id = 'rockagenda-extra-code';
-    //     scriptTag.innerHTML = newScriptContent;
-    //     document.body.appendChild(scriptTag);
-    //   },
-    //   { ErrorWrapperString: ErrorWrapper.toString() },
-    // );
     return {
       stopFunctie,
       page,
@@ -746,17 +735,6 @@ export default class AbstractScraper extends ScraperConfig {
         );
       }
 
-      // // zet ErrorWrapper class in puppeteer document.
-      // await page.evaluate(
-      //   ({ ErrorWrapperString }) => {
-      //     const newScriptContent = ErrorWrapperString;
-      //     const scriptTag = document.createElement('script');
-      //     scriptTag.id = 'rockagenda-extra-code';
-      //     scriptTag.innerHTML = newScriptContent;
-      //     document.body.appendChild(scriptTag);
-      //   },
-      //   { ErrorWrapperString: ErrorWrapper.toString() },
-      // );
       return page;
     } catch (error) {
       _t.handleError(
