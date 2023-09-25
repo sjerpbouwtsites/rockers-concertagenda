@@ -1,4 +1,4 @@
-import * as dotenv from 'dotenv';
+// import * as dotenv from 'dotenv';
 import WorkerStatus from './mods/WorkerStatus.js';
 import EventsList from './mods/events-list.js';
 import * as _t from './mods/tools.js';
@@ -9,7 +9,7 @@ import RockWorker, { WorkerMessage } from './mods/rock-worker.js';
 import getWorkerConfig from './mods/worker-config.js';
 import houseKeeping from './housekeeping.js';
 
-dotenv.config();
+// dotenv.config();
 
 let monitorWebsocketServer = null;
 
@@ -137,12 +137,7 @@ function addWorkerMessageHandler(thisWorker) {
       // and trigger message propagation to monitor / console
       console.log('OUDE SYSTEEM!!!', 'indexjs addWorkerMessageHandler');
 
-      WorkerStatus.change(
-        thisWorker.name,
-        message?.status,
-        message?.message,
-        thisWorker,
-      );
+      WorkerStatus.change(thisWorker.name, message?.status, message?.message, thisWorker);
 
       // pass worker data to EventsList
       // free Worker thread and memory

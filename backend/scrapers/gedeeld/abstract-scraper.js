@@ -1,6 +1,7 @@
 // #region                                                 IMPORTS
 import { parentPort, workerData } from 'worker_threads';
 import fs from 'fs';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import puppeteer from 'puppeteer';
 import { QuickWorkerMessage } from '../../mods/rock-worker.js';
 import fsDirections from '../../mods/fs-directions.js';
