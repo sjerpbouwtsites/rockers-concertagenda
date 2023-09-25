@@ -31,7 +31,7 @@ oostpoortScraper.listenToMasterThread();
 // #region [rgba(0, 120, 0, 0.1)]      MAIN PAGE EVENT CHECK
 oostpoortScraper.mainPageAsyncCheck = async function (event) {
   const workingTitle = this.cleanupEventTitle(event.title);
-
+  this.dirtyDebug({ t: event.title, wt: workingTitle });
   const isRefused = await this.rockRefuseListCheck(event, workingTitle);
   if (isRefused.success) {
     isRefused.success = false;
@@ -157,7 +157,7 @@ oostpoortScraper.singlePage = async function ({ page, event }) {
     });
   }
 
-  await _t.waitTime(5000);
+  await _t.waitTime(1000);
 
   let pageInfo;
 

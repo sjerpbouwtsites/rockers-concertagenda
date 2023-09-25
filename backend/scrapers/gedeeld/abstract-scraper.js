@@ -1020,23 +1020,27 @@ export default class AbstractScraper extends ScraperConfig {
 
   async rockAllowListCheck(event, title) {
     const workingTitle = title || this.cleanupEventTitle(event.title);
-    const tt = this.rockAllowList.includes(workingTitle);
+    const workingTitleInRockAllowList = this.rockAllowList.includes(workingTitle);
+    const fullTitleInRockAllowList = this.rockAllowList.includes(event.title);
+    const success = workingTitleInRockAllowList || fullTitleInRockAllowList;
     return {
       event,
-      success: tt,
+      success,
       workingTitle,
-      reason: `${workingTitle} ${tt ? 'in' : 'NOT in'} allowed 🛴 list`,
+      reason: `${workingTitle} ${success ? 'in' : 'NOT in'} allowed 🛴 list`,
     };
   }
 
   async rockRefuseListCheck(event, title) {
     const workingTitle = title || this.cleanupEventTitle(event.title);
-    const tt = this.rockRefuseList.includes(workingTitle);
+    const workingTitleInRockRefuseList = this.rockRefuseList.includes(workingTitle);
+    const fullTitleInRockRefuseList = this.rockRefuseList.includes(event.title);
+    const success = workingTitleInRockRefuseList || fullTitleInRockRefuseList;
     return {
       event,
-      success: tt,
+      success,
       workingTitle,
-      reason: `${workingTitle} ${tt ? 'in' : 'NOT in'} refuse 🚮 list`,
+      reason: `${workingTitle} ${success ? 'in' : 'NOT in'} refuse 🚮 list`,
     };
   }
 
