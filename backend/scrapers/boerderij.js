@@ -2,6 +2,7 @@
 import { workerData } from 'worker_threads';
 import axios from 'axios';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
+import longTextSocialsIframes from './longtext/boerderij.js';
 
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const boerderijScraper = new AbstractScraper({

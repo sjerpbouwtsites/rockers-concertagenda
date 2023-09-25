@@ -2,6 +2,7 @@
 import { workerData } from 'worker_threads';
 import * as _t from '../mods/tools.js';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
+import longTextSocialsIframes from './longtext/metropool.js';
 
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const metropoolScraper = new AbstractScraper({
