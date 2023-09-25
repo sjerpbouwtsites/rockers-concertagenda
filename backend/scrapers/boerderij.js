@@ -83,10 +83,13 @@ boerderijScraper.mainPage = async function () {
   if (rawEvents.length) {
     rawEvents = rawEvents
       .map((event) => {
-        event.venueEventUrl = `https://poppodiumboerderij.nl/programma/${event.seo_slug}`;
-        event.shortText = event.subtitle;
-        event.title += `&id=${event.id}`;
-        return event;
+        const m = {
+          venueEventUrl: `https://poppodiumboerderij.nl/programma/${event.seo_slug}`,
+          shortText: event.subtitle,
+          title: `${event.title}&id=${event.id}`,
+        };
+        const e = Object.assign(event, m);
+        return e;
       })
       .map(this.isMusicEventCorruptedMapper);
   }

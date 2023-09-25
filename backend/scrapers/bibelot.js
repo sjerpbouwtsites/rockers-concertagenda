@@ -113,6 +113,7 @@ bibelotScraper.singlePage = async function ({ page, event }) {
   const { stopFunctie } = await this.singlePageStart(event);
 
   const pageInfo = await page.evaluate(
+    // eslint-disable-next-line no-shadow
     ({ months, event }) => {
       const res = {
         pageInfo: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,

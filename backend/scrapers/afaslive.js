@@ -1,6 +1,6 @@
 /* global document */
-import longTextSocialsIframes from './longtext/afaslive.js';
 import { workerData } from 'worker_threads';
+import longTextSocialsIframes from './longtext/afaslive.js';
 import * as _t from '../mods/tools.js';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import {
@@ -94,7 +94,8 @@ afasliveScraper.mainPage = async function () {
   await _t.autoScroll(page);
   await _t.waitTime(750);
 
-  await _t.autoScroll(page); // TODO hier wat aan doen. maak er een do while van met een timeout. dit is waardeloos.
+  // TODO hier wat aan doen. maak er een do while van met een timeout. dit is waardeloos.
+  await _t.autoScroll(page);
 
   let rawEvents = await page.evaluate(
     // eslint-disable-next-line no-shadow
@@ -131,6 +132,7 @@ afasliveScraper.singlePage = async function ({ page, event }) {
   await _t.waitTime(250);
 
   let pageInfo = await page.evaluate(
+    // eslint-disable-next-line no-shadow
     ({ event }) => {
       const res = {
         pageInfo: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
@@ -157,6 +159,7 @@ afasliveScraper.singlePage = async function ({ page, event }) {
         const anker = paragraph.querySelector('a') ?? null;
         if (!anker) return;
         if (anker.href.includes('eten-drinken') || anker.href.includes('Tassenbeleid')) {
+          // eslint-disable-next-line no-param-reassign
           paragraph.innerHTML = '';
         }
       });
