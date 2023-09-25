@@ -1,4 +1,46 @@
 
+  boerderij-0 Error - 6:38:27 PM
+  ReferenceError: pageInfo is not defined
+    at boerderijScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/boerderij.js:141:5)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:512:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:125:5) 
+  pageInfo is not defined
+  
+  
+  boerderij-0 Error - 6:38:15 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:669:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  boerderij-0 Error - 6:37:56 PM
+  ReferenceError: pageInfo is not defined
+    at boerderijScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/boerderij.js:141:5)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:512:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:125:5) 
+  pageInfo is not defined
+  
+  
+  gebrdenobel-0 Error - 6:37:32 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:669:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  gebrdenobel-0 Error - 6:37:17 PM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Navigation timeout of 30000 ms exceeded
+  
+  
   gebrdenobel-0 Error - 5:57:59 PM
   Error: Timeout baseEvent
     at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:676:18)

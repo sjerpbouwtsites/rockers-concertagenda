@@ -4,6 +4,8 @@ import axios from 'axios';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/boerderij.js';
 import getImage from './gedeeld/image.js';
+import debugSettings from './gedeeld/debug-settings.js';
+import checkIsNumber from './gedeeld/debug-settings.js';
 
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const boerderijScraper = new AbstractScraper({
@@ -138,7 +140,7 @@ boerderijScraper.singlePage = async function ({ event, page }) {
     page,
     workerData,
     event,
-    pageInfo,
+    pageInfo: res,
     selectors: ['.event-image'],
     mode: 'image-src',
   });
@@ -202,34 +204,37 @@ boerderijScraper.boerderijCustomPrice = async function (testText, pi, title) {
 
   if (testText.match(/start/i)) {
     priceRes.price = null;
-    this.debugPrice &&
+    if (debugSettings.debugPrice) {
       this.dirtyDebug({
         title,
         price: priceRes.price,
         type: 'NOG ONBEKEND',
       });
+    }
     return priceRes;
   }
 
   if (testText.match(/gratis|free/i)) {
     priceRes.price = 0;
-    this.debugPrice &&
+    if (debugSettings.debugPrice) {
       this.dirtyDebug({
         title,
         price: priceRes.price,
         type: 'GRATIS',
       });
+    }
     return priceRes;
   }
 
   if (testText.match(/uitverkocht|sold\sout/i)) {
     priceRes.price = null;
-    this.debugPrice &&
+    if (debugSettings.debugPrice) {
       this.dirtyDebug({
         title,
         price: priceRes.price,
         type: 'UITVERKOCHT',
       });
+    }
     return priceRes;
   }
 
@@ -248,12 +253,16 @@ boerderijScraper.boerderijCustomPrice = async function (testText, pi, title) {
 
   if (!Array.isArray(priceMatch) && Array.isArray(priceMatchEuros)) {
     priceRes.price = Number(priceMatchEuros[0]);
-    this.checkIsNumber(priceRes, pi);
-    this.debugPrice &&
-      this.dirtyDebug({
-        title,
-        price: priceRes.price,
-      });
+    if (Number.isNaN(priceRes.price)) {
+      if (debugSettings.debugPrice) {
+        this.dirtyDebug({
+          title,
+          price: priceRes.price,
+        });
+      }
+      return false;
+    }
+
     return priceRes;
   }
 
@@ -273,12 +282,17 @@ boerderijScraper.boerderijCustomPrice = async function (testText, pi, title) {
     } else {
       priceRes.price = Number(priceMatch.groups.euros);
     }
-    this.checkIsNumber(priceRes, pi);
-    this.debugPrice &&
-      this.dirtyDebug({
-        title,
-        price: priceRes.price,
-      });
+    priceRes.price = Number(priceMatchEuros[0]);
+    if (Number.isNaN(priceRes.price)) {
+      if (debugSettings.debugPrice) {
+        this.dirtyDebug({
+          title,
+          price: priceRes.price,
+        });
+      }
+      return false;
+    }
+
     return priceRes;
   } catch (priceCalcErr) {
     priceRes.push({

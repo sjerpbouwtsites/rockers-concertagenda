@@ -113,8 +113,8 @@
     "location": "tivolivredenburg",
     "price": 26.85,
     "shortText": "Symfonische metal | The Euphonic Downfall Tour 2023",
-    "longText": "../public/texts/tivolivredenburg/L2FnZW5kYS9ibGFja2JyaWFyLWFkLWluZmluaXR1bS0yOC0wOS0yMDIzLw==.html",
-    "image": "../public/event-images/tivolivredenburg/L2FnZW5kYS9ibGFja2JyaWFyLWFkLWluZmluaXR1bS0yOC0wOS0yMDIzLw==",
+    "longText": "../public/texts/tivolivredenburg/YnJpYXItYWQtaW5maW5pdHVtLTI4LTA5LTIwMjMv.html",
+    "image": "../public/event-images/tivolivredenburg/YnJpYXItYWQtaW5maW5pdHVtLTI4LTA5LTIwMjMv",
     "soldOut": true,
     "unavailable": false,
     "corrupted": null
@@ -293,8 +293,8 @@
     "location": "nieuwenor",
     "price": 24.5,
     "shortText": "metal\nTHE EUP­HO­NIC DOWN­FALL TOUR 2023",
-    "longText": "../public/texts/nieuwenor/L3Byb2dyYW1tYS8yMDIzLzA5LzI5L2hhcmQtaW4taGVlcmxlbi1ibGFja2JyaWFyLWFkLWluZmluaXR1bQ==.html",
-    "image": "../public/event-images/nieuwenor/L3Byb2dyYW1tYS8yMDIzLzA5LzI5L2hhcmQtaW4taGVlcmxlbi1ibGFja2JyaWFyLWFkLWluZmluaXR1bQ==",
+    "longText": "../public/texts/nieuwenor/ZWVybGVuLWJsYWNrYnJpYXItYWQtaW5maW5pdHVt.html",
+    "image": "../public/event-images/nieuwenor/ZWVybGVuLWJsYWNrYnJpYXItYWQtaW5maW5pdHVt",
     "soldOut": null,
     "unavailable": false,
     "corrupted": null
@@ -1385,8 +1385,8 @@
     "location": "tivolivredenburg",
     "price": 34.75,
     "shortText": "Noorse psychedelische rockband",
-    "longText": "../public/texts/tivolivredenburg/L2FnZW5kYS9tb3RvcnBzeWNoby0xMy0xMC0yMDIzLw==.html",
-    "image": "../public/event-images/tivolivredenburg/L2FnZW5kYS9tb3RvcnBzeWNoby0xMy0xMC0yMDIzLw==",
+    "longText": "../public/texts/tivolivredenburg/YWdlbmRhL21vdG9ycHN5Y2hvLTEzLTEwLTIwMjMv.html",
+    "image": "../public/event-images/tivolivredenburg/YWdlbmRhL21vdG9ycHN5Y2hvLTEzLTEwLTIwMjMv",
     "soldOut": false,
     "unavailable": false,
     "corrupted": null
@@ -1493,6 +1493,21 @@
     "longText": "../public/texts/doornroosje/c2plLm5sL2V2ZW50L3NvdWxjcnVzaGVyLTIwMjMv.html",
     "image": "../public/event-images/doornroosje/c2plLm5sL2V2ZW50L3NvdWxjcnVzaGVyLTIwMjMv",
     "soldOut": false,
+    "unavailable": null,
+    "corrupted": null
+  },
+  {
+    "door": "2023-10-13T19:30:00",
+    "start": "2023-10-13T20:30:00",
+    "end": null,
+    "venueEventUrl": "https://poppodiumboerderij.nl/programma/maiden-united-2",
+    "title": "Maiden UniteD",
+    "location": "boerderij",
+    "price": 30,
+    "shortText": "1980 show met Iron Maiden gitarist Dennis Stratton",
+    "longText": "../public/texts/boerderij/ai5ubC9wcm9ncmFtbWEvbWFpZGVuLXVuaXRlZC0y.html",
+    "image": "../public/event-images/boerderij/ai5ubC9wcm9ncmFtbWEvbWFpZGVuLXVuaXRlZC0y",
+    "soldOut": null,
     "unavailable": null,
     "corrupted": null
   },
@@ -1730,8 +1745,8 @@
     "location": "nieuwenor",
     "price": 0,
     "shortText": "festival-2\nsub­cul­tu­ren van Heer­len en omstreken",
-    "longText": "../public/texts/nieuwenor/L3Byb2dyYW1tYS8yMDIzLzEwLzE1L2JvZWtwcmVzZW50YXRpZS10aGUtcG9zdC1pbmR1c3RyaWFscw==.html",
-    "image": "../public/event-images/nieuwenor/L3Byb2dyYW1tYS8yMDIzLzEwLzE1L2JvZWtwcmVzZW50YXRpZS10aGUtcG9zdC1pbmR1c3RyaWFscw==",
+    "longText": "../public/texts/nieuwenor/ZXNlbnRhdGllLXRoZS1wb3N0LWluZHVzdHJpYWxz.html",
+    "image": "../public/event-images/nieuwenor/ZXNlbnRhdGllLXRoZS1wb3N0LWluZHVzdHJpYWxz",
     "soldOut": null,
     "unavailable": false,
     "corrupted": null
@@ -1857,6 +1872,21 @@
     "corrupted": null
   },
   {
+    "door": "2023-10-18T19:30:00",
+    "start": "2023-10-18T19:45:00",
+    "end": null,
+    "venueEventUrl": "https://poppodiumboerderij.nl/programma/voyager",
+    "title": "Voyager",
+    "location": "boerderij",
+    "price": 24,
+    "shortText": "+ Earthside & Cold Night For Alligators",
+    "longText": "../public/texts/boerderij/Ym9lcmRlcmlqLm5sL3Byb2dyYW1tYS92b3lhZ2Vy.html",
+    "image": "../public/event-images/boerderij/Ym9lcmRlcmlqLm5sL3Byb2dyYW1tYS92b3lhZ2Vy",
+    "soldOut": false,
+    "unavailable": null,
+    "corrupted": null
+  },
+  {
     "door": "2023-10-19T19:45:00",
     "start": "2023-10-19T19:45:00",
     "end": null,
@@ -1865,8 +1895,8 @@
     "location": "tivolivredenburg",
     "price": 34.75,
     "shortText": "Progressive rock voor liefhebbers van Marillion en Dream Theater",
-    "longText": "../public/texts/tivolivredenburg/L2FnZW5kYS9yaXZlcnNpZGUtMTktMTAtMjAyMy8=.html",
-    "image": "../public/event-images/tivolivredenburg/L2FnZW5kYS9yaXZlcnNpZGUtMTktMTAtMjAyMy8=",
+    "longText": "../public/texts/tivolivredenburg/bC9hZ2VuZGEvcml2ZXJzaWRlLTE5LTEwLTIwMjMv.html",
+    "image": "../public/event-images/tivolivredenburg/bC9hZ2VuZGEvcml2ZXJzaWRlLTE5LTEwLTIwMjMv",
     "soldOut": false,
     "unavailable": false,
     "corrupted": null
@@ -1985,8 +2015,8 @@
     "location": "nieuwenor",
     "price": 21,
     "shortText": "rock-alternative\nSta­di­on­rock in een nieuw jasje",
-    "longText": "../public/texts/nieuwenor/L3Byb2dyYW1tYS8yMDIzLzEwLzIwL3RoZS1uZXctcm9zZXMtZGU=.html",
-    "image": "../public/event-images/nieuwenor/L3Byb2dyYW1tYS8yMDIzLzEwLzIwL3RoZS1uZXctcm9zZXMtZGU=",
+    "longText": "../public/texts/nieuwenor/bWEvMjAyMy8xMC8yMC90aGUtbmV3LXJvc2VzLWRl.html",
+    "image": "../public/event-images/nieuwenor/bWEvMjAyMy8xMC8yMC90aGUtbmV3LXJvc2VzLWRl",
     "soldOut": null,
     "unavailable": false,
     "corrupted": null
@@ -2232,6 +2262,21 @@
     "corrupted": null
   },
   {
+    "door": "2023-10-22T19:30:00",
+    "start": "2023-10-22T20:30:00",
+    "end": null,
+    "venueEventUrl": "https://poppodiumboerderij.nl/programma/joel-hoekstra-brandon-gibbs",
+    "title": "Joel Hoekstra & Brandon Gibbs",
+    "location": "boerderij",
+    "price": 19,
+    "shortText": "supports: The Spider Accomplice + Marco Pastorino",
+    "longText": "../public/texts/boerderij/bWEvam9lbC1ob2Vrc3RyYS1icmFuZG9uLWdpYmJz.html",
+    "image": "../public/event-images/boerderij/bWEvam9lbC1ob2Vrc3RyYS1icmFuZG9uLWdpYmJz",
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null
+  },
+  {
     "door": null,
     "start": "2023-10-23T19:00:00",
     "end": null,
@@ -2374,8 +2419,8 @@
     "location": "nieuwenor",
     "price": 18,
     "shortText": "punk-emo-hardcore\nAme­ri­kaan­se Oi met Duit­se street­punk support!",
-    "longText": "../public/texts/nieuwenor/L3Byb2dyYW1tYS8yMDIzLzEwLzI2L3Zpb2xlbnQtd2F5.html",
-    "image": "../public/event-images/nieuwenor/L3Byb2dyYW1tYS8yMDIzLzEwLzI2L3Zpb2xlbnQtd2F5",
+    "longText": "../public/texts/nieuwenor/b2dyYW1tYS8yMDIzLzEwLzI2L3Zpb2xlbnQtd2F5.html",
+    "image": "../public/event-images/nieuwenor/b2dyYW1tYS8yMDIzLzEwLzI2L3Zpb2xlbnQtd2F5",
     "soldOut": null,
     "unavailable": false,
     "corrupted": null
@@ -2996,6 +3041,21 @@
     "corrupted": null
   },
   {
+    "door": "2023-11-02T19:00:00",
+    "start": "2023-11-02T19:30:00",
+    "end": null,
+    "venueEventUrl": "https://poppodiumboerderij.nl/programma/gothminister",
+    "title": "Gothminister",
+    "location": "boerderij",
+    "price": 29,
+    "shortText": "+ supports King Satan & Psycholies",
+    "longText": "../public/texts/boerderij/ZXJpai5ubC9wcm9ncmFtbWEvZ290aG1pbmlzdGVy.html",
+    "image": "../public/event-images/boerderij/ZXJpai5ubC9wcm9ncmFtbWEvZ290aG1pbmlzdGVy",
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null
+  },
+  {
     "door": "2023-11-03T19:30:00",
     "start": "2023-11-03T20:30:00",
     "end": null,
@@ -3188,6 +3248,21 @@
     "image": "../public/event-images/dbs/L2V2ZW50L2Ricy10YXAtdGFrZW92ZXItbG9jLWJyZXdlcnkv",
     "soldOut": null,
     "unavailable": false,
+    "corrupted": null
+  },
+  {
+    "door": "2023-11-04T19:30:00",
+    "start": "2023-11-04T20:30:00",
+    "end": null,
+    "venueEventUrl": "https://poppodiumboerderij.nl/programma/damian-wilson-band",
+    "title": "Damian Wilson",
+    "location": "boerderij",
+    "price": 30,
+    "shortText": "One Knight Only",
+    "longText": "../public/texts/boerderij/bC9wcm9ncmFtbWEvZGFtaWFuLXdpbHNvbi1iYW5k.html",
+    "image": "../public/event-images/boerderij/bC9wcm9ncmFtbWEvZGFtaWFuLXdpbHNvbi1iYW5k",
+    "soldOut": null,
+    "unavailable": null,
     "corrupted": null
   },
   {
@@ -3565,6 +3640,21 @@
     "corrupted": null
   },
   {
+    "door": "2023-11-11T19:30:00",
+    "start": "2023-11-11T20:30:00",
+    "end": null,
+    "venueEventUrl": "https://poppodiumboerderij.nl/programma/thedeaddaisies",
+    "title": "The Dead Daisies",
+    "location": "boerderij",
+    "price": 31,
+    "shortText": "A Decade of Daisies + Special Guest Spike",
+    "longText": "../public/texts/boerderij/aWoubmwvcHJvZ3JhbW1hL3RoZWRlYWRkYWlzaWVz.html",
+    "image": "../public/event-images/boerderij/aWoubmwvcHJvZ3JhbW1hL3RoZWRlYWRkYWlzaWVz",
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null
+  },
+  {
     "door": "2023-11-12T19:45:00",
     "start": "2023-11-12T20:15:00",
     "end": null,
@@ -3588,8 +3678,8 @@
     "location": "nieuwenor",
     "price": 24,
     "shortText": "new-wave-ebm,punk-emo-hardcore,metal\nMini­stry of Goth Metal | + King Satan (FIN) + Psy­cho­lies (IT)",
-    "longText": "../public/texts/nieuwenor/L3Byb2dyYW1tYS8yMDIzLzExLzEyL2hhcmQtaW4taGVlcmxlbi1nb3RobWluaXN0ZXIta2luZy1zYXRhbg==.html",
-    "image": "../public/event-images/nieuwenor/L3Byb2dyYW1tYS8yMDIzLzExLzEyL2hhcmQtaW4taGVlcmxlbi1nb3RobWluaXN0ZXIta2luZy1zYXRhbg==",
+    "longText": "../public/texts/nieuwenor/ZWVybGVuLWdvdGhtaW5pc3Rlci1raW5nLXNhdGFu.html",
+    "image": "../public/event-images/nieuwenor/ZWVybGVuLWdvdGhtaW5pc3Rlci1raW5nLXNhdGFu",
     "soldOut": null,
     "unavailable": false,
     "corrupted": null
@@ -3711,6 +3801,21 @@
     "longText": "../public/texts/doornroosje/b29ybnJvb3NqZS5ubC9ldmVudC9vcHVzLWtpbmsv.html",
     "image": "../public/event-images/doornroosje/b29ybnJvb3NqZS5ubC9ldmVudC9vcHVzLWtpbmsv",
     "soldOut": false,
+    "unavailable": null,
+    "corrupted": null
+  },
+  {
+    "door": "2023-11-15T19:30:00",
+    "start": "2023-11-15T20:00:00",
+    "end": null,
+    "venueEventUrl": "https://poppodiumboerderij.nl/programma/animals-as-leaders",
+    "title": "Animals As Leaders",
+    "location": "boerderij",
+    "price": 28,
+    "shortText": "+ support: Allt",
+    "longText": "../public/texts/boerderij/bC9wcm9ncmFtbWEvYW5pbWFscy1hcy1sZWFkZXJz.html",
+    "image": "../public/event-images/boerderij/bC9wcm9ncmFtbWEvYW5pbWFscy1hcy1sZWFkZXJz",
+    "soldOut": true,
     "unavailable": null,
     "corrupted": null
   },
@@ -3862,6 +3967,21 @@
     "image": "../public/event-images/dbs/L2V2ZW50L3Byby1wYWluLXVzLWhhcmRjb3JlLWxlZ2VuZHMtc3VwcG9ydC8=",
     "soldOut": null,
     "unavailable": false,
+    "corrupted": null
+  },
+  {
+    "door": "2023-11-17T19:30:00",
+    "start": "2023-11-17T20:30:00",
+    "end": null,
+    "venueEventUrl": "https://poppodiumboerderij.nl/programma/delain-1",
+    "title": "Delain",
+    "location": "boerderij",
+    "price": 28,
+    "shortText": "Beyond Dark Waters + support Xandria",
+    "longText": "../public/texts/boerderij/b2VyZGVyaWoubmwvcHJvZ3JhbW1hL2RlbGFpbi0x.html",
+    "image": "../public/event-images/boerderij/b2VyZGVyaWoubmwvcHJvZ3JhbW1hL2RlbGFpbi0x",
+    "soldOut": null,
+    "unavailable": null,
     "corrupted": null
   },
   {
@@ -4023,8 +4143,8 @@
     "location": "depul",
     "price": 24.5,
     "shortText": "Metal tribute festival",
-    "longText": "../public/texts/depul/L2FnZW5kYS9tYXN0ZXJzLW9mLW1ldGFsLTMv.html",
-    "image": "../public/event-images/depul/L2FnZW5kYS9tYXN0ZXJzLW9mLW1ldGFsLTMv",
+    "longText": "../public/texts/depul/Y29tL2FnZW5kYS9tYXN0ZXJzLW9mLW1ldGFsLTMv.html",
+    "image": "../public/event-images/depul/Y29tL2FnZW5kYS9tYXN0ZXJzLW9mLW1ldGFsLTMv",
     "soldOut": false,
     "unavailable": null,
     "corrupted": null
@@ -4551,6 +4671,21 @@
     "image": "../public/event-images/nieuwenor/L3Byb2dyYW1tYS8yMDIzLzEyLzAyL2hhcmQtaW4taGVlcmxlbi1wZW5kZWpv",
     "soldOut": null,
     "unavailable": false,
+    "corrupted": null
+  },
+  {
+    "door": "2023-12-02T19:30:00",
+    "start": "2023-12-02T20:30:00",
+    "end": null,
+    "venueEventUrl": "https://poppodiumboerderij.nl/programma/acdc-uk",
+    "title": "Ac/dc uk - 50 years of ac/dc",
+    "location": "boerderij",
+    "price": 26,
+    "shortText": "+ support Diggeth",
+    "longText": "../public/texts/boerderij/Ym9lcmRlcmlqLm5sL3Byb2dyYW1tYS9hY2RjLXVr.html",
+    "image": "../public/event-images/boerderij/Ym9lcmRlcmlqLm5sL3Byb2dyYW1tYS9hY2RjLXVr",
+    "soldOut": null,
+    "unavailable": null,
     "corrupted": null
   },
   {
@@ -5116,8 +5251,8 @@
     "location": "depul",
     "price": 23,
     "shortText": "The Ultimate Motörhead Tribute",
-    "longText": "../public/texts/depul/L2FnZW5kYS9ib21iZXJzLWZlYXQtYWJiYXRoLw==.html",
-    "image": "../public/event-images/depul/L2FnZW5kYS9ib21iZXJzLWZlYXQtYWJiYXRoLw==",
+    "longText": "../public/texts/depul/b20vYWdlbmRhL2JvbWJlcnMtZmVhdC1hYmJhdGgv.html",
+    "image": "../public/event-images/depul/b20vYWdlbmRhL2JvbWJlcnMtZmVhdC1hYmJhdGgv",
     "soldOut": false,
     "unavailable": null,
     "corrupted": null
@@ -5204,8 +5339,8 @@
     "location": "nieuwenor",
     "price": 19.5,
     "shortText": "     rock-alternative,tribute-cover\n#1 Euro­pean Sto­nes Tri­bu­te speelt ​“Strip­ped”",
-    "longText": "../public/texts/nieuwenor/L3Byb2dyYW1tYS8yMDIzLzEyLzI4L3N0b25lcy1zZXNzaW9ucy10aGUtcm9sbGluZy1zdG9uZXMtc3RyaXBwZWQtdG91cg==.html",
-    "image": "../public/event-images/nieuwenor/L3Byb2dyYW1tYS8yMDIzLzEyLzI4L3N0b25lcy1zZXNzaW9ucy10aGUtcm9sbGluZy1zdG9uZXMtc3RyaXBwZWQtdG91cg==",
+    "longText": "../public/texts/nieuwenor/ZS1yb2xsaW5nLXN0b25lcy1zdHJpcHBlZC10b3Vy.html",
+    "image": "../public/event-images/nieuwenor/ZS1yb2xsaW5nLXN0b25lcy1zdHJpcHBlZC10b3Vy",
     "soldOut": null,
     "unavailable": false,
     "corrupted": null
@@ -5256,6 +5391,21 @@
     "corrupted": null
   },
   {
+    "door": "2024-01-07T14:00:00",
+    "start": "2024-01-07T14:30:00",
+    "end": null,
+    "venueEventUrl": "https://poppodiumboerderij.nl/programma/courbois-courbois",
+    "title": "Sir Pierre Courbois & Barend Courbois",
+    "location": "boerderij",
+    "price": 15,
+    "shortText": "Jazz & hardrock",
+    "longText": "../public/texts/boerderij/bmwvcHJvZ3JhbW1hL2NvdXJib2lzLWNvdXJib2lz.html",
+    "image": "../public/event-images/boerderij/bmwvcHJvZ3JhbW1hL2NvdXJib2lzLWNvdXJib2lz",
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null
+  },
+  {
     "door": "2024-01-12T20:00:00",
     "start": "2024-01-12T20:30:00",
     "end": "2024-01-12T23:30:00",
@@ -5264,8 +5414,8 @@
     "location": "nieuwenor",
     "price": 16,
     "shortText": "hiphop,punk-emo-hardcore\n+ sup­port: Klei­ne Crack & Slagter",
-    "longText": "../public/texts/nieuwenor/L3Byb2dyYW1tYS8yMDI0LzAxLzEyL3Bsb2VnZW5kaWVuc3Q=.html",
-    "image": "../public/event-images/nieuwenor/L3Byb2dyYW1tYS8yMDI0LzAxLzEyL3Bsb2VnZW5kaWVuc3Q=",
+    "longText": "../public/texts/nieuwenor/cmFtbWEvMjAyNC8wMS8xMi9wbG9lZ2VuZGllbnN0.html",
+    "image": "../public/event-images/nieuwenor/cmFtbWEvMjAyNC8wMS8xMi9wbG9lZ2VuZGllbnN0",
     "soldOut": null,
     "unavailable": false,
     "corrupted": null
@@ -5316,6 +5466,21 @@
     "corrupted": null
   },
   {
+    "door": "2024-01-14T19:30:00",
+    "start": "2024-01-14T20:00:00",
+    "end": null,
+    "venueEventUrl": "https://poppodiumboerderij.nl/programma/coreleoni",
+    "title": "CoreLeoni",
+    "location": "boerderij",
+    "price": 27,
+    "shortText": "gitarist Gotthard + Support Modern Day Heroes",
+    "longText": "../public/texts/boerderij/ZXJkZXJpai5ubC9wcm9ncmFtbWEvY29yZWxlb25p.html",
+    "image": "../public/event-images/boerderij/ZXJkZXJpai5ubC9wcm9ncmFtbWEvY29yZWxlb25p",
+    "soldOut": null,
+    "unavailable": null,
+    "corrupted": null
+  },
+  {
     "door": "2024-01-14T19:00:00+01:00",
     "start": "2024-01-14T20:00:00+01:00",
     "end": null,
@@ -5339,8 +5504,8 @@
     "location": "tivolivredenburg",
     "price": 23.85,
     "shortText": "Première nieuwe theatershow: Heavy Strings",
-    "longText": "../public/texts/tivolivredenburg/L2FnZW5kYS9hbm5la2UtdmFuLWdpZXJzYmVyZ2VuLTE3LTAxLTIwMjQv.html",
-    "image": "../public/event-images/tivolivredenburg/L2FnZW5kYS9hbm5la2UtdmFuLWdpZXJzYmVyZ2VuLTE3LTAxLTIwMjQv",
+    "longText": "../public/texts/tivolivredenburg/a2UtdmFuLWdpZXJzYmVyZ2VuLTE3LTAxLTIwMjQv.html",
+    "image": "../public/event-images/tivolivredenburg/a2UtdmFuLWdpZXJzYmVyZ2VuLTE3LTAxLTIwMjQv",
     "soldOut": false,
     "unavailable": false,
     "corrupted": null
@@ -5878,8 +6043,8 @@
     "location": "depul",
     "price": 25,
     "shortText": "Package met liefst vier symfo gothic-metalbands",
-    "longText": "../public/texts/depul/L2FnZW5kYS9zZXJlbml0eS8=.html",
-    "image": "../public/event-images/depul/L2FnZW5kYS9zZXJlbml0eS8=",
+    "longText": "../public/texts/depul/dy5saXZlcHVsLmNvbS9hZ2VuZGEvc2VyZW5pdHkv.html",
+    "image": "../public/event-images/depul/dy5saXZlcHVsLmNvbS9hZ2VuZGEvc2VyZW5pdHkv",
     "soldOut": false,
     "unavailable": null,
     "corrupted": null
@@ -5923,8 +6088,8 @@
     "location": "nieuwenor",
     "price": 16.5,
     "shortText": "metal\nDestruc­tie­ve metal uit de hoek van Wiegedood!",
-    "longText": "../public/texts/nieuwenor/L3Byb2dyYW1tYS8yMDI0LzAyLzI5L2hhcmQtaW4taGVlcmxlbi1jcm91Y2g=.html",
-    "image": "../public/event-images/nieuwenor/L3Byb2dyYW1tYS8yMDI0LzAyLzI5L2hhcmQtaW4taGVlcmxlbi1jcm91Y2g=",
+    "longText": "../public/texts/nieuwenor/NC8wMi8yOS9oYXJkLWluLWhlZXJsZW4tY3JvdWNo.html",
+    "image": "../public/event-images/nieuwenor/NC8wMi8yOS9oYXJkLWluLWhlZXJsZW4tY3JvdWNo",
     "soldOut": null,
     "unavailable": false,
     "corrupted": null
@@ -6073,8 +6238,8 @@
     "location": "nieuwenor",
     "price": 20,
     "shortText": "new-wave-ebm\nRepost pre­sen­teert invloed­rij­ke post­punk­band die in 2024 haar veer­tig jarig bestaan viert",
-    "longText": "../public/texts/nieuwenor/L3Byb2dyYW1tYS8yMDI0LzAzLzI0L3RoZS1jYXNzYW5kcmEtY29tcGxleA==.html",
-    "image": "../public/event-images/nieuwenor/L3Byb2dyYW1tYS8yMDI0LzAzLzI0L3RoZS1jYXNzYW5kcmEtY29tcGxleA==",
+    "longText": "../public/texts/nieuwenor/MjQvMDMvMjQvdGhlLWNhc3NhbmRyYS1jb21wbGV4.html",
+    "image": "../public/event-images/nieuwenor/MjQvMDMvMjQvdGhlLWNhc3NhbmRyYS1jb21wbGV4",
     "soldOut": null,
     "unavailable": false,
     "corrupted": null
