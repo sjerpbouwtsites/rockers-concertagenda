@@ -2,7 +2,7 @@ import os from 'os-utils';
 import EventsList from './events-list.js';
 import wsMessage from '../monitor/wsMessage.js';
 import { AbstractWorkerConfig, workerConfig } from './worker-config.js';
-import { getShellArguments } from './tools.js';
+import shell from './shell.js';
 import * as _t from './tools.js';
 
 export function AbstractWorkerData() {
@@ -26,13 +26,11 @@ export default class WorkerStatus {
 
   static CPUFree = 100;
 
-  static shellArguments = getShellArguments();
-
   static _maxSimultaneousWorkers = 3;
 
   static get maxSimultaneousWorkers() {
-    if (this.shellArguments?.workers) {
-      return Number(this.shellArguments?.workers);
+    if (shell.workers) {
+      return Number(shell.workers);
     }
     return WorkerStatus._maxSimultaneousWorkers;
   }
@@ -161,10 +159,7 @@ export default class WorkerStatus {
       thisWorker.todo = message.todo;
     }
 
-    if (
-      !statusses.includes('todo') &&
-      (WorkerStatus?.shellArguments?.force?.includes(thisWorker.family) ?? null)
-    ) {
+    if (!statusses.includes('todo') && (shell.workerFamilyForced(thisWorker.family) ?? null)) {
       const forcedMessage = new wsMessage('update', 'message-roll', {
         title: 'Status update',
         content: `${name} is nu ${status}`,

@@ -86,29 +86,7 @@ export function failurePromiseAfter(time) {
   });
 }
 
-export function getShellArguments() {
-  const shellArguments = {};
-  process.argv.forEach((val, index) => {
-    if (index < 2) {
-      return;
-    }
-    if (!val.includes('=')) {
-      throw new Error(
-        'Invalid shell arguments passed to node. Please use foo=bar bat=gee.',
-      );
-    }
-    const [argName, argValue] = val.split('=');
-    shellArguments[argName] = argValue;
-  });
 
-  // if (shellArguments.force && shellArguments.force.includes("all")) {
-  //   shellArguments.force += Object.keys(
-  //     JSON.parse(fs.readFileSync(fsDirections.timestampsJson))
-  //   ).join(";");
-  // }
-
-  return shellArguments;
-}
 
 export async function autoScroll(page) {
   await page.evaluate(async () => {

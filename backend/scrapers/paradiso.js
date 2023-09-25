@@ -97,7 +97,7 @@ paradisoScraper.mainPage = async function () {
       'geen titel gevonden',
     { workerData },
   );
-  if (this.isForced) this.dirtyTalk(`na scroll 1 ${bla}`);
+
 
   await _t.autoScroll(page);
   bla = await page.evaluate(
@@ -107,7 +107,7 @@ paradisoScraper.mainPage = async function () {
       'geen titel gevonden',
     { workerData },
   );
-  if (this.isForced) this.dirtyTalk(`na scroll 2 ${bla}`);
+
 
   let rawEvents = await page.evaluate(
     ({ resBuiten, unavailabiltyTerms }) =>

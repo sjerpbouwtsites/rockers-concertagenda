@@ -1,5 +1,5 @@
 import fs from 'fs';
-import { getShellArguments } from './mods/tools.js';
+import shell from './mods/shell.js';
 import fsDirections from './mods/fs-directions.js';
 
 function removePublicTexts(removeList) {
@@ -18,58 +18,33 @@ function removePublicEventImages(removeImagesLocationsList) {
   });
 }
 
-function makeRemoveTextsLists(keepBaseEvents, forceAll, forceThese) {
-  if (keepBaseEvents) {
+function makeRemoveTextsLists() {
+  if (shell.keepBaseEvents) {
     return [];
   }
-  if (forceAll) {
+  if (shell.forceAll) {
     return fs.readdirSync(fsDirections.publicTexts, 'utf-8');
   }
-  return forceThese;
+  return shell.forceThese;
 }
 
-function makeRemoveImagesLocationsList(keepImages, forceAll, forceThese) {
-  if (keepImages) {
+function makeRemoveImagesLocationsList() {
+  if (shell.keepImages) {
     return [];
   }
-  if (forceAll) {
+  if (shell.forceAll) {
     return fs.readdirSync(fsDirections.publicEventImages, 'utf-8');
   }
-  return forceThese;
+  return shell.forceThese;
 }
 
 export default async function houseKeeping() {
-  const shellArguments = getShellArguments();
-
-  /**
-   * Als shell force en force=all
-   */
-  const forceAll = shellArguments?.force?.includes('all');
-
-  /**
-   * Als shell keepBaseEvents
-   */
-  const keepBaseEvents = shellArguments?.keepBaseEvents ?? false;
-
-  /**
-   * Als shell keepImages
-   */
-  const keepImages = shellArguments?.keepImages ?? false;
-  /**
-   * Aparte venues in shell force, als force null lege array
-   */
-  const forceThese = (shellArguments?.force?.split(',') ?? []).map((f) => f.replace('%', ''));
-  /**
-   * Welke venues èn force èn baselist moeten verliezen. Als force null lege array
-   */
-  const wipeBaseList = (shellArguments?.force?.split(',') ?? [])
-    .filter((a) => a.includes('%'))
-    .map((f) => f.replace('%', ''));
+  const wipeBaseList = shell.forceAndRemoveBaseEvents;
   const curDay = new Date().toISOString().split('T')[0].replaceAll(/-/g, '');
 
-  const removeImagesLocationsList = makeRemoveImagesLocationsList(keepImages, forceAll, forceThese);
-  const removeTextsList = makeRemoveTextsLists(keepBaseEvents, forceAll, forceThese);
-  if (!keepBaseEvents) {
+  const removeImagesLocationsList = makeRemoveImagesLocationsList();
+  const removeTextsList = makeRemoveTextsLists();
+  if (!shell.keepBaseEvents) {
     fs.readdirSync(fsDirections.baseEventlists)
       .filter((baseEventList) => !baseEventList.includes(curDay))
       .map((baseEventList) => baseEventList.split('T')[0])
@@ -84,10 +59,10 @@ export default async function houseKeeping() {
     removePublicTexts(removeTextsList);
   }
 
-  if (!keepImages) removePublicEventImages(removeImagesLocationsList);
+  if (!shell.keepImages) removePublicEventImages(removeImagesLocationsList);
 
   // als !keepBaseEvents, dan alles al gewist.
-  if (!keepBaseEvents) {
+  if (!shell.keepBaseEvents) {
     wipeBaseList.forEach((wipe) => {
       fs.readdirSync(fsDirections.baseEventlists).forEach((baseEventList) => {
         if (baseEventList.includes(wipe)) {

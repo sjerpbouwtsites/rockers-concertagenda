@@ -1,6 +1,6 @@
 import fs from 'fs';
 import EventsList from './events-list.js';
-import { getShellArguments } from './tools.js';
+import shell from './shell.js';
 import fsDirections from './fs-directions.js';
 
 export const AbstractWorkerConfig = {
@@ -110,8 +110,6 @@ export const workerNames = Object.keys(workerConfig);
 class WorkerListConf {
   data = [];
 
-  shellArguments = null;
-
   static _self = null;
 
   curDay = new Date().toISOString().split('T')[0].replaceAll(/-/g, '');
@@ -121,7 +119,6 @@ class WorkerListConf {
       return WorkerListConf._self;
     }
     this._self = this;
-    this.shellArguments = getShellArguments();
     this.setBaseEventLists();
     this.run();
   }
@@ -137,8 +134,6 @@ class WorkerListConf {
   listCopy() {
     return [...this.data];
   }
-
-  isForced() {}
 
   create(config) {
     // const forceArg = this.shellArguments?.force ?? "";
@@ -179,13 +174,13 @@ class WorkerListConf {
   }
 
   workerNeedsWork(familyName) {
-    if (this.shellArguments?.force?.includes('all')) {
-      if (this.shellArguments?.forceSet) {
-        return workerConfig[familyName]?.forceSet == this.shellArguments?.forceSet;
+    if (shell.forceAll) {
+      if (shell.forceSet) {
+        return workerConfig[familyName]?.forceSet === shell.forceSet;
       }
       return true;
     }
-    if (this.shellArguments?.force?.includes(familyName)) return true;
+    if (shell.force.includes(familyName)) return true;
     if (familyName.includes('metalfan')) return false; // metalfan alleen bij all of force
     if (!this.baseEventlistsStart.join('').includes(familyName)) return true;
     const actueelGevonden = this.baseEventlistsStart.find(

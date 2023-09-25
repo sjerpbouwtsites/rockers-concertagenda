@@ -20,6 +20,7 @@ import {
   goodCategories,
 } from './terms.js';
 import _getPriceFromHTML from './price.js';
+import shell from '../../mods/shell.js';
 
 // #endregion                                              IMPORTS
 
@@ -69,17 +70,6 @@ export default class AbstractScraper extends ScraperConfig {
 
   async getPriceFromHTML({ page, event, pageInfo, selectors }) {
     return _getPriceFromHTML({ _this: this, page, event, pageInfo, selectors });
-  }
-
-  /**
-   * Checks in workerData if this family is forced.
-   *
-   * @readonly
-   * @memberof AbstractScraper
-   */
-  get isForced() {
-    const forced = workerData?.shellArguments?.force ?? '';
-    return forced.includes(workerData.family);
   }
 
   // #region [rgba(0, 0, 180, 0.10)]                            DIRTYLOG, TALK, DEBUG
@@ -271,7 +261,9 @@ export default class AbstractScraper extends ScraperConfig {
    * @memberof AbstractScraper
    */
   async mainPageEnd({ stopFunctie, page, rawEvents }) {
-    this.isForced && debugSettings.debugBaseEvents && this.dirtyLog(rawEvents);
+    if (shell.workerFamilyForced(workerData.family) && debugSettings.debugBaseEvents) {
+      this.dirtyLog(rawEvents);
+    }
 
     if (stopFunctie) {
       clearTimeout(stopFunctie);
