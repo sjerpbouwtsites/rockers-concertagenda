@@ -2,6 +2,7 @@
 import { workerData } from 'worker_threads';
 import longTextSocialsIframes from './longtext/gebrdenobel.js';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
+import { waitTime } from '../mods/tools.js';
 
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const gebrdenobelScraper = new AbstractScraper({
@@ -12,7 +13,7 @@ const gebrdenobelScraper = new AbstractScraper({
     url: 'https://gebrdenobel.nl/programma/',
   },
   singlePage: {
-    timeout: 28004,
+    timeout: 15004,
   },
   app: {
     mainPage: {
@@ -166,6 +167,12 @@ gebrdenobelScraper.mainPage = async function () {
   }
 
   const rawEvents = punkMetalRawEvents.concat(checkedRockEvents);
+
+  // gebr de nobel cookies moet eerste laaten mislukken
+  const eersteCookieEvent = { ...rawEvents[0] };
+  eersteCookieEvent.title = `NEP EVENT VOOR COOKIES`;
+  rawEvents.unshift(eersteCookieEvent);
+
   this.saveBaseEventlist(workerData.family, rawEvents);
   const thisWorkersEvents = rawEvents.filter(
     (eventEl, index) => index % workerData.workerCount === workerData.index,
@@ -179,13 +186,19 @@ gebrdenobelScraper.mainPage = async function () {
 
 gebrdenobelScraper.cookiesNodig = async function (page) {
   const nodig = await page.evaluate(() => document.querySelector('.consent__show'));
+
   if (nodig) {
     await page.waitForSelector('.consent__form__submit', {
       timeout: 5000,
     });
+
     await page.evaluate(() => document.querySelector('.consent__form__submit').click());
-    await page.waitForSelector('.contentBlocks', {
-      timeout: 7500,
+
+    await waitTime(3000);
+    await page.reload();
+
+    await page.waitForSelector('.event-table tr', {
+      timeout: 2500,
     });
   }
   return true;
@@ -198,6 +211,7 @@ gebrdenobelScraper.singlePage = async function ({ page, event }) {
   const { stopFunctie } = await this.singlePageStart();
 
   // cookies
+
   try {
     await this.cookiesNodig(page, event, stopFunctie);
   } catch (cookiesError) {
@@ -206,7 +220,7 @@ gebrdenobelScraper.singlePage = async function ({ page, event }) {
         errors: [
           {
             error: cookiesError,
-            remarks: `cookies handling issue`,
+            remarks: `cookies handling issue <a href='${event.venueEventUrl}'>${event.title}</a>`,
           },
         ],
       },
@@ -215,6 +229,8 @@ gebrdenobelScraper.singlePage = async function ({ page, event }) {
       event,
     });
   } // eind cookies
+
+  this.dirtyTalk('na cookies');
 
   const pageInfo = await page.evaluate(
     // eslint-disable-next-line no-shadow
@@ -265,6 +281,8 @@ gebrdenobelScraper.singlePage = async function ({ page, event }) {
     { months: this.months, event },
   );
 
+  this.dirtyTalk('voor getimage');
+
   const imageRes = await this.getImage({
     page,
     event,
@@ -274,6 +292,7 @@ gebrdenobelScraper.singlePage = async function ({ page, event }) {
   });
   pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
   pageInfo.image = imageRes.image;
+  this.dirtyTalk('na getimage');
 
   await page.evaluate(() => {
     document.querySelectorAll('.event-table tr').forEach((row) => {
@@ -282,6 +301,7 @@ gebrdenobelScraper.singlePage = async function ({ page, event }) {
       }
     });
   });
+  this.dirtyTalk('voor prijsres');
   const priceRes = await this.getPriceFromHTML({
     page,
     event,
@@ -290,7 +310,8 @@ gebrdenobelScraper.singlePage = async function ({ page, event }) {
   });
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
   pageInfo.price = priceRes.price;
-
+  this.dirtyTalk('na prijsres');
+  this.dirtyTalk('voor lonjgtext');
   const { mediaForHTML, socialsForHTML, textForHTML } = await longTextSocialsIframes(
     page,
     event,
@@ -299,6 +320,7 @@ gebrdenobelScraper.singlePage = async function ({ page, event }) {
   pageInfo.mediaForHTML = mediaForHTML;
   pageInfo.socialsForHTML = socialsForHTML;
   pageInfo.textForHTML = textForHTML;
+  this.dirtyTalk('na lonjgtext');
 
   return this.singlePageEnd({
     pageInfo,
