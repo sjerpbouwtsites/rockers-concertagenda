@@ -177,6 +177,7 @@ doornroosjeScraper.singlePage = async function ({ page, event }) {
   let pageInfo;
   if (!event.venueEventUrl.includes('soulcrusher') && !event.venueEventUrl.includes('festival')) {
     pageInfo = await page.evaluate(
+      // eslint-disable-next-line no-shadow
       ({ months, event }) => {
         const res = {
           pageInfo: `<a class='page-info' href='${event.venueEventUrl}'>${event.title}</a>`,
@@ -192,6 +193,7 @@ doornroosjeScraper.singlePage = async function ({ page, event }) {
                 const row = title.parentNode.parentNode;
                 return row.querySelector('.c-event-row__content')?.textContent.toLowerCase().trim();
               }
+              return null;
             })
             .filter((a) => a)
             .join('');
@@ -230,10 +232,10 @@ doornroosjeScraper.singlePage = async function ({ page, event }) {
                 res.start = `${startDate}T${timeMatches[1]}`;
                 res.door = `${startDate}T${timeMatches[0]}`;
                 res.end = `${startDate}T${timeMatches[2]}`;
-              } else if (timeMatches.length == 2) {
+              } else if (timeMatches.length === 2) {
                 res.start = `${startDate}T${timeMatches[1]}`;
                 res.door = `${startDate}T${timeMatches[0]}`;
-              } else if (timeMatches.length == 1) {
+              } else if (timeMatches.length === 1) {
                 res.start = `${startDate}T${timeMatches[0]}`;
               }
             } catch (caughtError) {
@@ -253,6 +255,7 @@ doornroosjeScraper.singlePage = async function ({ page, event }) {
   } else {
     // dus festival
     pageInfo = await page.evaluate(
+      // eslint-disable-next-line no-shadow
       ({ event }) => {
         const res = {
           pageInfo: `<a class='page-info' href='${event.venueEventUrl}'>${event.title}</a>`,
