@@ -1,4 +1,1010 @@
 
+  gebrdenobel-0 Error - 5:57:59 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:676:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  gebrdenobel-0 Error - 5:57:43 PM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  tivolivredenburg-3 Error - 5:48:57 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:676:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  tivolivredenburg-3 Error - 5:48:54 PM
+  TypeError: Cannot read properties of undefined (reading 'match')
+    at evaluate (evaluate at tivoliVredenburgScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/tivolivredenburg.js:132:31), <anonymous>:30:42)
+    at #evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:249:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:146:16)
+    at async tivoliVredenburgScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/tivolivredenburg.js:132:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:519:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:135:5) 
+  Cannot read properties of undefined (reading 'match')
+  
+  
+  boerderij-0 Error - 5:48:13 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:676:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  boerderij-0 Error - 5:47:53 PM
+  ReferenceError: pageInfo is not defined
+    at boerderijScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/boerderij.js:141:5)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:519:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:135:5) 
+  pageInfo is not defined
+  
+  
+  gebrdenobel-0 Error - 5:45:16 PM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  gebrdenobel-0 Error - 5:44:58 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:676:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  gebrdenobel-0 Error - 5:44:03 PM
+  ProtocolError: Runtime.callFunctionOn timed out. Increase the 'protocolTimeout' setting in launch/connect calls for a higher timeout if needed.
+    at <instance_members_initializer> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Connection.js:46:14)
+    at new Callback (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Connection.js:50:16)
+    at CallbackRegistry.create (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Connection.js:89:26)
+    at Connection._rawSend (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Connection.js:202:26)
+    at CDPSessionImpl.send (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Connection.js:409:33)
+    at #evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:231:50)
+    at async ExecutionContext.evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:146:16) 
+  Runtime.callFunctionOn timed out. Increase the 'protocolTimeout' setting in launch/connect calls for a higher timeout if needed.
+  
+  
+  gebrdenobel-0 Error - 5:41:18 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:676:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  gebrdenobel-0 Error - 5:41:03 PM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  013-3 Error - 5:19:09 PM
+  TypeError: _this.checkIsNumber is not a function
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:187:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async nuldertienScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/013.js:142:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:137:5) 
+  _this.checkIsNumber is not a function
+  
+  
+  013-3 Error - 5:19:08 PM
+  TypeError: _this.checkIsNumber is not a function
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:187:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async nuldertienScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/013.js:142:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:137:5) 
+  _this.checkIsNumber is not a function
+  
+  
+  013-3 Error - 5:19:08 PM
+  TypeError: _this.checkIsNumber is not a function
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:187:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async nuldertienScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/013.js:142:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:137:5) 
+  _this.checkIsNumber is not a function
+  
+  
+  013-3 Error - 5:19:07 PM
+  TypeError: _this.checkIsNumber is not a function
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:187:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async nuldertienScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/013.js:142:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:137:5) 
+  _this.checkIsNumber is not a function
+  
+  
+  013-3 Error - 5:19:06 PM
+  TypeError: _this.checkIsNumber is not a function
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:187:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async nuldertienScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/013.js:142:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:137:5) 
+  _this.checkIsNumber is not a function
+  
+  
+  013-0 Error - 5:19:04 PM
+  TypeError: _this.checkIsNumber is not a function
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:187:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async nuldertienScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/013.js:142:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:137:5) 
+  _this.checkIsNumber is not a function
+  
+  
+  013-0 Error - 5:19:03 PM
+  TypeError: _this.checkIsNumber is not a function
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:187:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async nuldertienScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/013.js:142:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:137:5) 
+  _this.checkIsNumber is not a function
+  
+  
+  013-0 Error - 5:19:02 PM
+  TypeError: _this.checkIsNumber is not a function
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:187:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async nuldertienScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/013.js:142:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:137:5) 
+  _this.checkIsNumber is not a function
+  
+  
+  013-0 Error - 5:19:01 PM
+  TypeError: _this.checkIsNumber is not a function
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:187:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async nuldertienScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/013.js:142:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:137:5) 
+  _this.checkIsNumber is not a function
+  
+  
+  013-0 Error - 5:19:00 PM
+  TypeError: _this.checkIsNumber is not a function
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:187:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async nuldertienScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/013.js:142:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:137:5) 
+  _this.checkIsNumber is not a function
+  
+  
+  013-0 Error - 5:18:59 PM
+  TypeError: _this.checkIsNumber is not a function
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:187:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async nuldertienScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/013.js:142:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:137:5) 
+  _this.checkIsNumber is not a function
+  
+  
+  013-0 Error - 5:18:58 PM
+  TypeError: _this.checkIsNumber is not a function
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:187:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async nuldertienScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/013.js:142:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:137:5) 
+  _this.checkIsNumber is not a function
+  
+  
+  013-0 Error - 5:18:58 PM
+  TypeError: _this.checkIsNumber is not a function
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:187:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async nuldertienScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/013.js:142:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:137:5) 
+  _this.checkIsNumber is not a function
+  
+  
+  013-0 Error - 5:18:57 PM
+  TypeError: _this.checkIsNumber is not a function
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:187:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async nuldertienScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/013.js:142:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:137:5) 
+  _this.checkIsNumber is not a function
+  
+  
+  013-2 Error - 5:18:55 PM
+  TypeError: _this.checkIsNumber is not a function
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:187:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async nuldertienScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/013.js:142:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:137:5) 
+  _this.checkIsNumber is not a function
+  
+  
+  013-2 Error - 5:18:54 PM
+  TypeError: _this.checkIsNumber is not a function
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:187:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async nuldertienScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/013.js:142:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:137:5) 
+  _this.checkIsNumber is not a function
+  
+  
+  013-2 Error - 5:18:53 PM
+  TypeError: _this.checkIsNumber is not a function
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:187:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async nuldertienScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/013.js:142:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:137:5) 
+  _this.checkIsNumber is not a function
+  
+  
+  013-2 Error - 5:18:52 PM
+  TypeError: _this.checkIsNumber is not a function
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:187:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async nuldertienScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/013.js:142:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:137:5) 
+  _this.checkIsNumber is not a function
+  
+  
+  013-2 Error - 5:18:51 PM
+  TypeError: _this.checkIsNumber is not a function
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:187:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async nuldertienScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/013.js:142:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:137:5) 
+  _this.checkIsNumber is not a function
+  
+  
+  013-2 Error - 5:18:50 PM
+  TypeError: _this.checkIsNumber is not a function
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:187:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async nuldertienScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/013.js:142:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:137:5) 
+  _this.checkIsNumber is not a function
+  
+  
+  013-2 Error - 5:18:49 PM
+  TypeError: _this.checkIsNumber is not a function
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:187:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async nuldertienScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/013.js:142:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:137:5) 
+  _this.checkIsNumber is not a function
+  
+  
+  013-2 Error - 5:18:48 PM
+  TypeError: _this.checkIsNumber is not a function
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:187:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async nuldertienScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/013.js:142:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:137:5) 
+  _this.checkIsNumber is not a function
+  
+  
+  013-1 Error - 5:18:46 PM
+  TypeError: _this.checkIsNumber is not a function
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:187:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async nuldertienScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/013.js:142:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:137:5) 
+  _this.checkIsNumber is not a function
+  
+  
+  013-1 Error - 5:18:46 PM
+  TypeError: _this.checkIsNumber is not a function
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:187:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async nuldertienScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/013.js:142:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:137:5) 
+  _this.checkIsNumber is not a function
+  
+  
+  013-1 Error - 5:18:44 PM
+  TypeError: _this.checkIsNumber is not a function
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:187:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async nuldertienScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/013.js:142:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:137:5) 
+  _this.checkIsNumber is not a function
+  
+  
+  013-1 Error - 5:18:43 PM
+  TypeError: _this.checkIsNumber is not a function
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:187:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async nuldertienScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/013.js:142:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:137:5) 
+  _this.checkIsNumber is not a function
+  
+  
+  013-1 Error - 5:18:42 PM
+  TypeError: _this.checkIsNumber is not a function
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:187:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async nuldertienScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/013.js:142:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:137:5) 
+  _this.checkIsNumber is not a function
+  
+  
+  013-1 Error - 5:18:42 PM
+  TypeError: _this.checkIsNumber is not a function
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:187:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async nuldertienScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/013.js:142:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:137:5) 
+  _this.checkIsNumber is not a function
+  
+  
+  013-1 Error - 5:18:41 PM
+  TypeError: _this.checkIsNumber is not a function
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:187:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async nuldertienScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/013.js:142:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:137:5) 
+  _this.checkIsNumber is not a function
+  
+  
+  013-1 Error - 5:18:40 PM
+  TypeError: _this.checkIsNumber is not a function
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:187:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async nuldertienScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/013.js:142:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:137:5) 
+  _this.checkIsNumber is not a function
+  
+  
+  013-1 Error - 5:18:39 PM
+  TypeError: _this.checkIsNumber is not a function
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:187:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async nuldertienScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/013.js:142:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:137:5) 
+  _this.checkIsNumber is not a function
+  
+  
+  013-3 Error - 5:17:39 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:678:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  013-0 Error - 5:17:38 PM
+  TypeError: priceRes.push is not a function
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:211:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async nuldertienScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/013.js:142:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:137:5) 
+  priceRes.push is not a function
+  
+  
+  013-1 Error - 5:17:37 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:678:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  013-2 Error - 5:17:36 PM
+  TypeError: priceRes.push is not a function
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:211:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async nuldertienScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/013.js:142:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:137:5) 
+  priceRes.push is not a function
+  
+  
+  013-3 Error - 5:17:34 PM
+  TypeError: priceRes.push is not a function
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:211:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async nuldertienScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/013.js:142:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:137:5) 
+  priceRes.push is not a function
+  
+  
+  013-1 Error - 5:17:32 PM
+  TypeError: priceRes.push is not a function
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:211:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async nuldertienScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/013.js:142:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:521:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:137:5) 
+  priceRes.push is not a function
+  
+  
+  013-2 Error - 5:13:19 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:675:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  013-0 Error - 5:13:18 PM
+  TypeError: priceRes.push is not a function
+    at AbstractScraper.getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:211:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async nuldertienScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/013.js:142:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:518:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:134:5) 
+  priceRes.push is not a function
+  
+  
+  013-3 Error - 5:13:16 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:675:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  013-1 Error - 5:13:16 PM
+  TypeError: priceRes.push is not a function
+    at AbstractScraper.getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:211:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async nuldertienScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/013.js:142:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:518:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:134:5) 
+  priceRes.push is not a function
+  
+  
+  013-2 Error - 5:13:14 PM
+  TypeError: priceRes.push is not a function
+    at AbstractScraper.getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:211:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async nuldertienScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/013.js:142:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:518:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:134:5) 
+  priceRes.push is not a function
+  
+  
+  013-3 Error - 5:13:11 PM
+  TypeError: priceRes.push is not a function
+    at AbstractScraper.getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:211:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async nuldertienScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/013.js:142:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:518:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:134:5) 
+  priceRes.push is not a function
+  
+  
+  gebrdenobel-0 Error - 5:10:08 PM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  effenaar-1 Error - 5:10:06 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:673:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  dynamo-1 Error - 5:10:00 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:673:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  oosterpoort-0 Error - 5:09:57 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:673:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  effenaar-1 Error - 5:09:51 PM
+  TypeError: this.getPriceFromHTML is not a function
+    at effenaarScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/effenaar.js:194:31)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:516:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:132:5) 
+  this.getPriceFromHTML is not a function
+  
+  
+  p60-0 Error - 5:09:47 PM
+  TypeError: this.getPriceFromHTML is not a function
+    at p60Scraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/p60.js:178:31)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:516:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:132:5) 
+  this.getPriceFromHTML is not a function
+  
+  
+  effenaar-3 Error - 5:09:46 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:673:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  melkweg-3 Error - 5:09:45 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:673:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  tivolivredenburg-0 Error - 5:09:42 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:673:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  tivolivredenburg-0 Error - 5:09:40 PM
+  TypeError: this.getPriceFromHTML is not a function
+    at tivoliVredenburgScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/tivolivredenburg.js:227:31)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:516:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:132:5) 
+  this.getPriceFromHTML is not a function
+  
+  
+  oosterpoort-0 Error - 5:09:38 PM
+  TypeError: this.getPriceFromHTML is not a function
+    at oostpoortScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/oosterpoort.js:219:31)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:516:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:132:5) 
+  this.getPriceFromHTML is not a function
+  
+  
+  dynamo-1 Error - 5:09:35 PM
+  TypeError: this.getPriceFromHTML is not a function
+    at dynamoScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/dynamo.js:224:31)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:516:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:132:5) 
+  this.getPriceFromHTML is not a function
+  
+  
+  gebrdenobel-0 Error - 5:09:34 PM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  effenaar-3 Error - 5:09:32 PM
+  TypeError: this.getPriceFromHTML is not a function
+    at effenaarScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/effenaar.js:194:31)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:516:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:132:5) 
+  this.getPriceFromHTML is not a function
+  
+  
+  melkweg-3 Error - 5:09:25 PM
+  TypeError: this.getPriceFromHTML is not a function
+    at melkwegScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/melkweg.js:178:31)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:516:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:132:5) 
+  this.getPriceFromHTML is not a function
+  
+  
+  gebrdenobel-0 Error - 5:09:15 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:673:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  gebrdenobel-0 Error - 5:06:56 PM
+  ProtocolError: Runtime.callFunctionOn timed out. Increase the 'protocolTimeout' setting in launch/connect calls for a higher timeout if needed.
+    at <instance_members_initializer> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Connection.js:46:14)
+    at new Callback (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Connection.js:50:16)
+    at CallbackRegistry.create (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Connection.js:89:26)
+    at Connection._rawSend (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Connection.js:202:26)
+    at CDPSessionImpl.send (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Connection.js:409:33)
+    at #evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:231:50)
+    at async ExecutionContext.evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:146:16) 
+  Runtime.callFunctionOn timed out. Increase the 'protocolTimeout' setting in launch/connect calls for a higher timeout if needed.
+  
+  
+  gebrdenobel-0 Error - 5:04:11 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:673:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  gebrdenobel-0 Error - 5:03:56 PM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  gebrdenobel-0 Error - 4:48:42 PM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  gebrdenobel-0 Error - 4:48:24 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:799:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  gebrdenobel-0 Error - 4:43:06 PM
+  ProtocolError: Runtime.callFunctionOn timed out. Increase the 'protocolTimeout' setting in launch/connect calls for a higher timeout if needed.
+    at <instance_members_initializer> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Connection.js:46:14)
+    at new Callback (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Connection.js:50:16)
+    at CallbackRegistry.create (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Connection.js:89:26)
+    at Connection._rawSend (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Connection.js:202:26)
+    at CDPSessionImpl.send (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Connection.js:409:33)
+    at #evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:231:50)
+    at async ExecutionContext.evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:146:16) 
+  Runtime.callFunctionOn timed out. Increase the 'protocolTimeout' setting in launch/connect calls for a higher timeout if needed.
+  
+  
+  gebrdenobel-0 Error - 4:40:21 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:799:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  gebrdenobel-0 Error - 4:40:06 PM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  iduna-0 Error - 4:38:01 PM
+  TimeoutError: Waiting for selector `#photoandinfo [style*='background']` failed: Waiting failed: 2500ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Waiting for selector `#photoandinfo [style*='background']` failed: Waiting failed: 2500ms exceeded
+  
+  
+  iduna-0 Error - 4:38:00 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:799:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  iduna-0 Error - 4:37:40 PM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  gebrdenobel-0 Error - 4:37:36 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:799:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  willemeen-0 Error - 4:37:34 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:799:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  willemeen-0 Error - 4:37:28 PM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  gebrdenobel-0 Error - 4:37:21 PM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  gebrdenobel-0 Error - 4:36:10 PM
+  ProtocolError: Runtime.callFunctionOn timed out. Increase the 'protocolTimeout' setting in launch/connect calls for a higher timeout if needed.
+    at <instance_members_initializer> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Connection.js:46:14)
+    at new Callback (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Connection.js:50:16)
+    at CallbackRegistry.create (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Connection.js:89:26)
+    at Connection._rawSend (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Connection.js:202:26)
+    at CDPSessionImpl.send (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Connection.js:409:33)
+    at #evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:231:50)
+    at async ExecutionContext.evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:146:16) 
+  Runtime.callFunctionOn timed out. Increase the 'protocolTimeout' setting in launch/connect calls for a higher timeout if needed.
+  
+  
+  gebrdenobel-0 Error - 4:33:25 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:799:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  gebrdenobel-0 Error - 4:33:10 PM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  gebrdenobel-0 Error - 4:32:34 PM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  gebrdenobel-0 Error - 4:32:16 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:799:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  gebrdenobel-0 Error - 4:31:19 PM
+  ProtocolError: Runtime.callFunctionOn timed out. Increase the 'protocolTimeout' setting in launch/connect calls for a higher timeout if needed.
+    at <instance_members_initializer> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Connection.js:46:14)
+    at new Callback (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Connection.js:50:16)
+    at CallbackRegistry.create (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Connection.js:89:26)
+    at Connection._rawSend (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Connection.js:202:26)
+    at CDPSessionImpl.send (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Connection.js:409:33)
+    at #evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:231:50)
+    at async ExecutionContext.evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:146:16) 
+  Runtime.callFunctionOn timed out. Increase the 'protocolTimeout' setting in launch/connect calls for a higher timeout if needed.
+  
+  
+  gebrdenobel-0 Error - 4:28:34 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:799:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  gebrdenobel-0 Error - 4:28:19 PM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  ticketmaster-0 Error - 4:26:37 PM
+  Error: ENOENT: no such file or directory, open '../public/texts/melkweg/L2V2ZW50L3NvZW4tdGlja2V0cy8yOTI4NjU/bGFuZ3VhZ2U9ZW4tdXM=.html'
+    at Object.openSync (node:fs:603:3)
+    at Object.writeFileSync (node:fs:2324:35)
+    at AbstractScraper.writeLongTextHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1531:10)
+    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:683:33)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  ENOENT: no such file or directory, open '../public/texts/melkweg/L2V2ZW50L3NvZW4tdGlja2V0cy8yOTI4NjU/bGFuZ3VhZ2U9ZW4tdXM=.html'
+  
+  
+  ticketmaster-1 Error - 4:26:36 PM
+  Error: ENOENT: no such file or directory, open '../public/texts/melkweg/L2V2ZW50L3N0cmF5LWZyb20tdGhlLXBhdGgtdGlja2V0cy8yOTQ0MzM/bGFuZ3VhZ2U9ZW4tdXM=.html'
+    at Object.openSync (node:fs:603:3)
+    at Object.writeFileSync (node:fs:2324:35)
+    at AbstractScraper.writeLongTextHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1531:10)
+    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:683:33)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  ENOENT: no such file or directory, open '../public/texts/melkweg/L2V2ZW50L3N0cmF5LWZyb20tdGhlLXBhdGgtdGlja2V0cy8yOTQ0MzM/bGFuZ3VhZ2U9ZW4tdXM=.html'
+  
+  
+  ticketmaster-1 Error - 4:26:36 PM
+  Error: ENOENT: no such file or directory, open '../public/texts/oosterpoort/L2V2ZW50L2xlcHJvdXMtdGlja2V0cy8yOTQzMTc/bGFuZ3VhZ2U9ZW4tdXM=.html'
+    at Object.openSync (node:fs:603:3)
+    at Object.writeFileSync (node:fs:2324:35)
+    at AbstractScraper.writeLongTextHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1531:10)
+    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:683:33)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  ENOENT: no such file or directory, open '../public/texts/oosterpoort/L2V2ZW50L2xlcHJvdXMtdGlja2V0cy8yOTQzMTc/bGFuZ3VhZ2U9ZW4tdXM=.html'
+  
+  
+  ticketmaster-0 Error - 4:24:58 PM
+  Error: ENOENT: no such file or directory, open '../public/texts/melkweg/L2V2ZW50L3NvZW4tdGlja2V0cy8yOTI4NjU/bGFuZ3VhZ2U9ZW4tdXM=.html'
+    at Object.openSync (node:fs:603:3)
+    at Object.writeFileSync (node:fs:2324:35)
+    at AbstractScraper.writeLongTextHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1531:10)
+    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:683:33)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  ENOENT: no such file or directory, open '../public/texts/melkweg/L2V2ZW50L3NvZW4tdGlja2V0cy8yOTI4NjU/bGFuZ3VhZ2U9ZW4tdXM=.html'
+  
+  
+  ticketmaster-1 Error - 4:24:57 PM
+  Error: ENOENT: no such file or directory, open '../public/texts/melkweg/L2V2ZW50L3N0cmF5LWZyb20tdGhlLXBhdGgtdGlja2V0cy8yOTQ0MzM/bGFuZ3VhZ2U9ZW4tdXM=.html'
+    at Object.openSync (node:fs:603:3)
+    at Object.writeFileSync (node:fs:2324:35)
+    at AbstractScraper.writeLongTextHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1531:10)
+    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:683:33)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  ENOENT: no such file or directory, open '../public/texts/melkweg/L2V2ZW50L3N0cmF5LWZyb20tdGhlLXBhdGgtdGlja2V0cy8yOTQ0MzM/bGFuZ3VhZ2U9ZW4tdXM=.html'
+  
+  
+  ticketmaster-1 Error - 4:24:56 PM
+  Error: ENOENT: no such file or directory, open '../public/texts/oosterpoort/L2V2ZW50L2xlcHJvdXMtdGlja2V0cy8yOTQzMTc/bGFuZ3VhZ2U9ZW4tdXM=.html'
+    at Object.openSync (node:fs:603:3)
+    at Object.writeFileSync (node:fs:2324:35)
+    at AbstractScraper.writeLongTextHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1531:10)
+    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:683:33)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  ENOENT: no such file or directory, open '../public/texts/oosterpoort/L2V2ZW50L2xlcHJvdXMtdGlja2V0cy8yOTQzMTc/bGFuZ3VhZ2U9ZW4tdXM=.html'
+  
+  
+  ticketmaster-0 Error - 4:24:51 PM
+  Error: ENOENT: no such file or directory, open '../public/texts/melkweg/L2V2ZW50L3NvZW4tdGlja2V0cy8yOTI4NjU/bGFuZ3VhZ2U9ZW4tdXM=.html'
+    at Object.openSync (node:fs:603:3)
+    at Object.writeFileSync (node:fs:2324:35)
+    at AbstractScraper.writeLongTextHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1531:10)
+    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:683:33)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  ENOENT: no such file or directory, open '../public/texts/melkweg/L2V2ZW50L3NvZW4tdGlja2V0cy8yOTI4NjU/bGFuZ3VhZ2U9ZW4tdXM=.html'
+  
+  
+  ticketmaster-1 Error - 4:24:49 PM
+  Error: ENOENT: no such file or directory, open '../public/texts/melkweg/L2V2ZW50L3N0cmF5LWZyb20tdGhlLXBhdGgtdGlja2V0cy8yOTQ0MzM/bGFuZ3VhZ2U9ZW4tdXM=.html'
+    at Object.openSync (node:fs:603:3)
+    at Object.writeFileSync (node:fs:2324:35)
+    at AbstractScraper.writeLongTextHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1531:10)
+    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:683:33)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  ENOENT: no such file or directory, open '../public/texts/melkweg/L2V2ZW50L3N0cmF5LWZyb20tdGhlLXBhdGgtdGlja2V0cy8yOTQ0MzM/bGFuZ3VhZ2U9ZW4tdXM=.html'
+  
+  
+  ticketmaster-1 Error - 4:24:49 PM
+  Error: ENOENT: no such file or directory, open '../public/texts/oosterpoort/L2V2ZW50L2xlcHJvdXMtdGlja2V0cy8yOTQzMTc/bGFuZ3VhZ2U9ZW4tdXM=.html'
+    at Object.openSync (node:fs:603:3)
+    at Object.writeFileSync (node:fs:2324:35)
+    at AbstractScraper.writeLongTextHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1531:10)
+    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:683:33)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  ENOENT: no such file or directory, open '../public/texts/oosterpoort/L2V2ZW50L2xlcHJvdXMtdGlja2V0cy8yOTQzMTc/bGFuZ3VhZ2U9ZW4tdXM=.html'
+  
+  
+  ticketmaster-1 Error - 4:22:33 PM
+  Error: ENOENT: no such file or directory, open '../public/texts/melkweg/L2V2ZW50L3N0cmF5LWZyb20tdGhlLXBhdGgtdGlja2V0cy8yOTQ0MzM/bGFuZ3VhZ2U9ZW4tdXM=.html'
+    at Object.openSync (node:fs:603:3)
+    at Object.writeFileSync (node:fs:2324:35)
+    at AbstractScraper.writeLongTextHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1531:10)
+    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:683:33)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  ENOENT: no such file or directory, open '../public/texts/melkweg/L2V2ZW50L3N0cmF5LWZyb20tdGhlLXBhdGgtdGlja2V0cy8yOTQ0MzM/bGFuZ3VhZ2U9ZW4tdXM=.html'
+  
+  
+  ticketmaster-1 Error - 4:22:33 PM
+  Error: ENOENT: no such file or directory, open '../public/texts/oosterpoort/L2V2ZW50L2xlcHJvdXMtdGlja2V0cy8yOTQzMTc/bGFuZ3VhZ2U9ZW4tdXM=.html'
+    at Object.openSync (node:fs:603:3)
+    at Object.writeFileSync (node:fs:2324:35)
+    at AbstractScraper.writeLongTextHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1531:10)
+    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:683:33)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  ENOENT: no such file or directory, open '../public/texts/oosterpoort/L2V2ZW50L2xlcHJvdXMtdGlja2V0cy8yOTQzMTc/bGFuZ3VhZ2U9ZW4tdXM=.html'
+  
+  
+  ticketmaster-0 Error - 4:22:31 PM
+  Error: ENOENT: no such file or directory, open '../public/texts/melkweg/L2V2ZW50L3NvZW4tdGlja2V0cy8yOTI4NjU/bGFuZ3VhZ2U9ZW4tdXM=.html'
+    at Object.openSync (node:fs:603:3)
+    at Object.writeFileSync (node:fs:2324:35)
+    at AbstractScraper.writeLongTextHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1531:10)
+    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:683:33)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  ENOENT: no such file or directory, open '../public/texts/melkweg/L2V2ZW50L3NvZW4tdGlja2V0cy8yOTI4NjU/bGFuZ3VhZ2U9ZW4tdXM=.html'
+  
+  
+  metropool-1 Error - 4:10:59 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:799:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  metropool-1 Error - 4:10:16 PM
+  TypeError: Cannot read properties of undefined (reading 'errors')
+    at metropoolScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/metropool.js:201:30)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:642:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:258:5) 
+  Cannot read properties of undefined (reading 'errors')
+  
+  
+  gebrdenobel-0 Error - 4:08:52 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:799:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  gebrdenobel-0 Error - 4:08:37 PM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Navigation timeout of 30000 ms exceeded
+  
+  
   dynamo-1 Error - 4:03:39 PM
   TypeError: singleEvent.registerINVALID is not a function
     at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:630:19)

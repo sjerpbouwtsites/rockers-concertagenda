@@ -2,6 +2,7 @@
 import { workerData } from 'worker_threads';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/oosterpoort.js';
+import getImage from './gedeeld/image.js';
 import * as _t from '../mods/tools.js';
 import ErrorWrapper from '../mods/error-wrapper.js';
 
@@ -206,8 +207,10 @@ oostpoortScraper.singlePage = async function ({ page, event }) {
       );
     });
 
-  const imageRes = await this.getImage({
+  const imageRes = await getImage({
+    _this: this,
     page,
+    workerData,
     event,
     pageInfo,
     selectors: ['.hero__image', '.festival__header__image'],

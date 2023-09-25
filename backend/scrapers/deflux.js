@@ -3,6 +3,7 @@ import { workerData } from 'worker_threads';
 import axios from 'axios';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/deflux.js';
+import getImage from './gedeeld/image.js';
 import * as _t from '../mods/tools.js';
 
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
@@ -186,8 +187,10 @@ defluxScraper.singlePage = async function ({ page, event }) {
     { event },
   );
 
-  const imageRes = await this.getImage({
+  const imageRes = await getImage({
+    _this: this,
     page,
+    workerData,
     event,
     pageInfo,
     selectors: ['.evo_event_main_img', '.event_description img'],

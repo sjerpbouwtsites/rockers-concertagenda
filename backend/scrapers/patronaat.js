@@ -2,6 +2,7 @@
 import { workerData } from 'worker_threads';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/patronaat.js';
+import getImage from './gedeeld/image.js';
 import ErrorWrapper from '../mods/error-wrapper.js';
 import * as _t from '../mods/tools.js';
 
@@ -80,7 +81,7 @@ patronaatScraper.mainPage = async function () {
 
   const { stopFunctie, page } = await this.mainPageStart();
 
-  let rawEvents = await page.evaluate(.
+  let rawEvents = await page.evaluate(
     // eslint-disable-next-line no-shadow
     ({ workerData, unavailabiltyTerms }) =>
       Array.from(document.querySelectorAll('.overview__list-item--event')).map((eventEl) => {
@@ -202,8 +203,10 @@ patronaatScraper.singlePage = async function ({ page, event }) {
       );
     });
 
-  const imageRes = await this.getImage({
+  const imageRes = await getImage({
+    _this: this,
     page,
+    workerData,
     event,
     pageInfo,
     selectors: ['.event__visual img'],

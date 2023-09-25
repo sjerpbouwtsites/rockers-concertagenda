@@ -1,8 +1,9 @@
 /* global document */
 import { workerData } from 'worker_threads';
 import longTextSocialsIframes from './longtext/afaslive.js';
-import * as _t from '../mods/tools.js';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
+import getImage from './gedeeld/image.js';
+import * as _t from '../mods/tools.js';
 import {
   mapToStartTime,
   combineDoorTimeStartDate,
@@ -175,13 +176,16 @@ afasliveScraper.singlePage = async function ({ page, event }) {
   pageInfo = combineStartTimeStartDate(pageInfo);
   pageInfo = combineDoorTimeStartDate(pageInfo);
 
-  const imageRes = await this.getImage({
+  const imageRes = await getImage({
+    _this: this,
     page,
+    workerData,
     event,
     pageInfo,
     selectors: ['.leftCol figure img'],
     mode: 'image-src',
   });
+
   pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
   pageInfo.image = imageRes.image;
 

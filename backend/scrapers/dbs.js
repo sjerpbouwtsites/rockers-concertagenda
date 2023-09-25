@@ -3,6 +3,7 @@ import { workerData } from 'worker_threads';
 import * as _t from '../mods/tools.js';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/dbs.js';
+import getImage from './gedeeld/image.js';
 
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const dbsScraper = new AbstractScraper({
@@ -197,8 +198,10 @@ dbsScraper.singlePage = async function ({ page, event }) {
     { event },
   );
 
-  const imageRes = await this.getImage({
+  const imageRes = await getImage({
+    _this: this,
     page,
+    workerData,
     event,
     pageInfo,
     selectors: ['.tribe-events-event-image .wp-post-image'],

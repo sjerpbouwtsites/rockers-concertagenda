@@ -3,6 +3,7 @@ import { workerData } from 'worker_threads';
 import * as _t from '../mods/tools.js';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/metropool.js';
+import getImage from './gedeeld/image.js';
 
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const metropoolScraper = new AbstractScraper({
@@ -124,6 +125,7 @@ metropoolScraper.singlePage = async function ({ page, event }) {
   const { stopFunctie } = await this.singlePageStart();
 
   const pageInfo = await page.evaluate(
+    // eslint-disable-next-line no-shadow
     ({ months, event }) => {
       const res = {
         pageInfo: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
@@ -191,8 +193,10 @@ metropoolScraper.singlePage = async function ({ page, event }) {
     { months: this.months, event },
   );
 
-  const imageRes = await this.getImage({
+  const imageRes = await getImage({
+    _this: this,
     page,
+    workerData,
     event,
     pageInfo,
     selectors: ['.object-fit-cover'],

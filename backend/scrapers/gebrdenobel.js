@@ -2,6 +2,7 @@
 import { workerData } from 'worker_threads';
 import longTextSocialsIframes from './longtext/gebrdenobel.js';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
+import getImage from './gedeeld/image.js';
 import { waitTime } from '../mods/tools.js';
 
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
@@ -283,8 +284,10 @@ gebrdenobelScraper.singlePage = async function ({ page, event }) {
 
   this.dirtyTalk('voor getimage');
 
-  const imageRes = await this.getImage({
+  const imageRes = await getImage({
+    _this: this,
     page,
+    workerData,
     event,
     pageInfo,
     selectors: ['.hero img'],

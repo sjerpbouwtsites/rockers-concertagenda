@@ -2,6 +2,7 @@
 import { workerData } from 'worker_threads';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/baroeg.js';
+import getImage from './gedeeld/image.js';
 import { combineStartTimeStartDate, mapToStartDate, mapToStartTime } from './gedeeld/datums.js';
 
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
@@ -155,8 +156,10 @@ baroegScraper.singlePage = async function ({ page, event }) {
     { event },
   );
 
-  const imageRes = await this.getImage({
+  const imageRes = await getImage({
+    _this: this,
     page,
+    workerData,
     event,
     pageInfo,
     selectors: [".hero-area [style*='background-image']"],

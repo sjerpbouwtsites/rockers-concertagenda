@@ -3,6 +3,7 @@ import { workerData } from 'worker_threads';
 import axios from 'axios';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/boerderij.js';
+import getImage from './gedeeld/image.js';
 
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const boerderijScraper = new AbstractScraper({
@@ -132,10 +133,12 @@ boerderijScraper.singlePage = async function ({ event, page }) {
     return await this.singlePageEnd({ res, stopFunctie });
   }
 
-  const imageRes = await this.getImage({
+  const imageRes = await getImage({
+    _this: this,
     page,
+    workerData,
     event,
-    res,
+    pageInfo,
     selectors: ['.event-image'],
     mode: 'image-src',
   });

@@ -1,9 +1,7 @@
 // #region                                                 IMPORTS
 import { parentPort, workerData } from 'worker_threads';
 import fs from 'fs';
-import https from 'https';
 import puppeteer from 'puppeteer';
-import sharp from 'sharp';
 import { QuickWorkerMessage } from '../../mods/rock-worker.js';
 import fsDirections from '../../mods/fs-directions.js';
 import * as _t from '../../mods/tools.js';
@@ -14,6 +12,14 @@ import ErrorWrapper from '../../mods/error-wrapper.js';
 import makeLongHTML from './longHTML.js';
 import WorkerStatus from '../../mods/WorkerStatus.js';
 import ScraperConfig from './scraper-config.js';
+import debugSettings from './debug-settings.js';
+import {
+  unavailabilityTerms,
+  forbiddenTerms,
+  wikipediaGoodGenres,
+  goodCategories,
+} from './terms.js';
+import _getPriceFromHTML from './price.js';
 
 // #endregion                                              IMPORTS
 
@@ -36,147 +42,14 @@ export default class AbstractScraper extends ScraperConfig {
 
   eventImagesFolder = fsDirections.publicEventImages;
 
-  static unavailabiltyTerms = [
-    'uitgesteld',
-    'verplaatst',
-    'locatie gewijzigd',
-    'besloten',
-    'afgelast',
-    'geannuleerd',
-  ];
-
-  // #region [rgba(0, 0, 30, 0.10)]                             DEBUGSETTINGS
-  debugCorruptedUnavailable = true;
-
-  debugsinglePageAsyncCheck = true;
-
-  debugRawEventAsyncCheck = true;
-
-  debugBaseEvents = false;
-
-  debugPageInfo = false;
-
-  debugPrice = false;
-  // #endregion                                                DEBUGSETTINGS
+  static unavailabilityTerms = unavailabilityTerms;
 
   // #region [rgba(0, 0, 60, 0.10)]                             ISROCKSETTINGS
-  /**
-   * Gebruikt in mainPageAsyncChecks' hasForbiddenTerms
-   *
-   * @static
-   * @memberof AbstractScraper
-   */
-  static forbiddenTerms = [
-    'clubnacht',
-    'VERBODENGENRE',
-    'alternatieve rock',
-    'dance,dance-alle-dance',
-    'global,pop',
-    'funk-soul,pop',
-    'americana',
-    'americana',
-    'countryrock',
-    'dromerig',
-    'fan event',
-    'filmvertoning',
-    'indie',
-    'interactieve lezing',
-    'karaoke',
-    'london calling',
-    'brass',
-    'shoegaze',
-    'art rock',
-    'blaasrock',
-    'dream pop',
-    'Dream Punk',
-    'uptempo',
-    'experi-metal',
-    'folkpunk',
-    'jazz-core',
-    'neofolk',
-    'poetry',
-    'pubquiz',
-    'punk-hop',
-    "quiz'm",
-    'schaakinstuif',
-    'afrobeats',
-  ];
+  static forbiddenTerms = forbiddenTerms;
 
-  static wikipediaGoodGenres = [
-    '[href$=metal]',
-    '[href$=metal_music]',
-    '[href=Hard_rock]',
-    '[href=Acid_rock]',
-    '[href=Death_rock]',
-    '[href=Experimental_rock]',
-    '[href=Garage_rock]',
-    '[href=Hard_rock]',
-    '[href=Post-rock]',
-    '[href=Punk_rock]',
-    '[href=Stoner_rock]',
-    '[href=Hardcore_punk]',
-    '[href=Skate_punk]',
-    '[href=Street_punk]',
-    '[href=Ska_punk]',
-    '[href=Avant-garde_metal]',
-    '[href=Extreme_metal]',
-    '[href=Black_metal]',
-    '[href=Death_metal]',
-    '[href=Doom_metal]',
-    '[href=Speed_metal]',
-    '[href=Thrash_metal]',
-    '[href=Glam_metal]',
-    '[href=Groove_metal]',
-    '[href=Power_metal]',
-    '[href=Symphonic_metal]',
-    '[href=Funk_metal]',
-    '[href=Rap_metal]',
-    '[href=Nu_metal]',
-    '[href=Drone_metal]',
-    '[href=Folk_metal]',
-    '[href=Gothic_metal]',
-    '[href=Post-metal]',
-    '[href=Industrial_metal]',
-    '[href=Neoclassical_metal]',
-    '[href=Progressive_metal]',
-    '[href=Sludge_metal]',
-    '[href=Viking_metal]',
-  ];
+  static wikipediaGoodGenres = wikipediaGoodGenres;
 
-  static goodCategories = [
-    'rock-alternative',
-    'punk-emo-hardcore',
-    'heavy rock',
-    'death metal',
-    'doom',
-    'grindcore',
-    'hard rock',
-    'hardcore punk',
-    'hardcore',
-    'heavy metal',
-    'heavy psych',
-    "heavy rock 'n roll",
-    'stoner',
-    'garage',
-    'industrial',
-    'metal',
-    'math rock',
-    'metalcore',
-    'neue deutsche haerte',
-    'neue deutsche harte',
-    'new wave',
-    'noise',
-    'post-punk',
-    'postpunk',
-    'power metal',
-    'psychobilly',
-    'punk',
-    'punx',
-    'rockabilly, surf',
-    'surfpunkabilly',
-    'symphonic metal',
-    'thrash',
-  ];
+  static goodCategories = goodCategories;
   // #endregion                                                ISROCKSETTINGS
 
   // #region [rgba(0, 0, 120, 0.10)]                            CONSTRUCTOR & INSTALL
@@ -193,6 +66,10 @@ export default class AbstractScraper extends ScraperConfig {
     this.rockRefuseList = fs.readFileSync(fsDirections.isRockRefuse, 'utf-8');
   }
   // #endregion                                                CONSTRUCTOR & INSTALL
+
+  async getPriceFromHTML({ page, event, pageInfo, selectors }) {
+    return _getPriceFromHTML({ _this: this, page, event, pageInfo, selectors });
+  }
 
   /**
    * Checks in workerData if this family is forced.
@@ -394,7 +271,7 @@ export default class AbstractScraper extends ScraperConfig {
    * @memberof AbstractScraper
    */
   async mainPageEnd({ stopFunctie, page, rawEvents }) {
-    this.isForced && this.debugBaseEvents && this.dirtyLog(rawEvents);
+    this.isForced && debugSettings.debugBaseEvents && this.dirtyLog(rawEvents);
 
     if (stopFunctie) {
       clearTimeout(stopFunctie);
@@ -534,7 +411,7 @@ export default class AbstractScraper extends ScraperConfig {
       if (checkResult.success) {
         useableEventsCheckedArray.push(eventToCheck);
 
-        if (this.debugRawEventAsyncCheck && checkResult.reason) {
+        if (debugSettings.debugRawEventAsyncCheck && checkResult.reason) {
           parentPort.postMessage(
             this.qwm.debugger({
               title: 'Raw event async check',
@@ -543,7 +420,7 @@ export default class AbstractScraper extends ScraperConfig {
             }),
           );
         }
-      } else if (this.debugRawEventAsyncCheck) {
+      } else if (debugSettings.debugRawEventAsyncCheck) {
         parentPort.postMessage(
           this.qwm.debugger({
             title: 'Raw event async check',
@@ -684,7 +561,7 @@ export default class AbstractScraper extends ScraperConfig {
 
     const mergedEventCheckRes = await this.singlePageAsyncCheck(singleEvent, pageInfo);
     if (mergedEventCheckRes.success) {
-      if (this.debugsinglePageAsyncCheck && mergedEventCheckRes.reason) {
+      if (debugSettings.debugsinglePageAsyncCheck && mergedEventCheckRes.reason) {
         this.dirtyDebug({
           title: 'Merged async check 👍',
           event: `<a class='single-event-check-notice single-event-check-notice--success' href='${mergedEventCheckRes.event.venueEventUrl}'>${mergedEventCheckRes.event.title}</a>`,
@@ -696,7 +573,7 @@ export default class AbstractScraper extends ScraperConfig {
         ? singleEvent.register() // TODO hier lopen dingen echt dwars door elkaar. integreren in soort van singlePageAsyncCheckBase en dan anderen reducen erop of weet ik veel wat een gehack vandaag
         : singleEvent.registerINVALID(this.workerData);
     } else {
-      if (this.debugsinglePageAsyncCheck && mergedEventCheckRes.reason) {
+      if (debugSettings.debugsinglePageAsyncCheck && mergedEventCheckRes.reason) {
         this.dirtyDebug({
           title: 'Merged async check 👎',
           event: `<a class='single-event-check-notice single-event-check-notice--failure' href='${mergedEventCheckRes.event.venueEventUrl}'>${mergedEventCheckRes.event.title}</a>`,
@@ -819,7 +696,7 @@ export default class AbstractScraper extends ScraperConfig {
    */
   async singlePageEnd({ pageInfo, stopFunctie, page, event }) {
     this.isForced &&
-      this.debugPageInfo &&
+      debugSettings.debugPageInfo &&
       this.dirtyLog({
         event,
         pageInfo,
@@ -1282,243 +1159,14 @@ export default class AbstractScraper extends ScraperConfig {
   }
   // #endregion                                                 ASYNC CHECKERS
 
-  // #region [rgba(120, 0, 120, 0.10)]                          PRICE
-
-  async getPriceFromHTML({ page, event, pageInfo, selectors }) {
-    const priceRes = {
-      price: null,
-      errors: [],
-    };
-
-    const workingEventObj = { ...event, ...pageInfo };
-    const pi = `${workingEventObj.pageInfo}`;
-
-    if (!page || !workingEventObj || !selectors.length) {
-      priceRes.errors.push({
-        remarks: 'geen page, workingEventObj, selectors',
-      });
-      this.debugPrice && this.dirtyTalk(`price €${priceRes.price} ${`${workingEventObj.title}`}`);
-      return priceRes;
-    }
-
-    const selectorsCopy = [...selectors];
-    const firstSelector = selectorsCopy.shift();
-
-    const testText = await page.evaluate((selector) => {
-      if (!document.querySelector(selector)) return false;
-      return Array.from(document.querySelectorAll(selector))
-        .map((el) => el?.textContent)
-        .join('');
-    }, firstSelector);
-
-    if (!testText && selectorsCopy.length) {
-      return await this.getPriceFromHTML({
-        page,
-        event,
-        pageInfo,
-        selectors: selectorsCopy,
-      });
-    }
-
-    if (!testText) {
-      if (testText === false) {
-        if (workingEventObj.soldOut) {
-          priceRes.price = 0;
-          if (this.debugPrice)
-            priceRes.errors.push({ remarks: `uitverkocht. vergeef geen price ${pi}` });
-        } else {
-          priceRes.errors.push({ remarks: `geen el in ${firstSelector} ${pi}` });
-        }
-      } else {
-        priceRes.errors.push({ remarks: `lege tc in ${firstSelector} ${pi}` });
-      }
-      return priceRes;
-    }
-
-    if (testText.match(/start/i)) {
-      priceRes.price = null;
-      this.debugPrice &&
-        this.dirtyDebug({
-          pi,
-          price: priceRes.price,
-          type: 'NOG ONBEKEND',
-        });
-      return priceRes;
-    }
-
-    const priceMatch = testText.match(/(?<euros>\d{1,3})\s?(?<scheiding>[,.]?)\s?(?<centen>\d+|-)/);
-
-    const priceMatchEuros = testText.match(/\d+/);
-
-    const euros = priceMatch?.groups?.euros ?? null;
-    const centen = priceMatch?.groups?.centen ?? null;
-    const scheiding = priceMatch?.groups?.scheiding ?? null;
-    const backupEuros = Array.isArray(priceMatchEuros) ? priceMatchEuros[0] : null;
-    let priceStringR = null;
-    try {
-      if (testText.includes('€')) {
-        const tm = testText.match(/€\d{1,3}\s?[,.]?(\d{1,3}|-)/);
-        priceStringR = tm[0];
-      }
-    } catch (error) {
-      //
-    }
-    if (Array.isArray(priceMatch) && !priceStringR) {
-      priceStringR = priceMatch[0];
-    } else if (!priceStringR) {
-      if (euros) {
-        priceStringR += euros;
-      }
-      if (scheiding) {
-        if (centen) {
-          if (centen.includes('-')) {
-            priceStringR += '00';
-          } else {
-            priceStringR += centen;
-          }
-        } else {
-          priceStringR += '00';
-        }
-      } else {
-        priceStringR += '00';
-      }
-    }
-
-    const priceString = priceStringR
-      .replace(',', '.')
-      .replace('-', '00')
-      .replaceAll(/\s/g, '')
-      .replace('€', '');
-
-    const debugIncl = {
-      euros,
-      centen,
-      scheiding,
-      backupEuros,
-      pi,
-      testText,
-      priceMatchEuros,
-      priceStringR,
-    };
-
-    if (this.debugPrice) {
-      this.dirtyLog(debugIncl);
-    }
-
-    if (
-      testText.match(/gratis|free/i) &&
-      !Array.isArray(priceMatch) &&
-      !Array.isArray(priceMatchEuros)
-    ) {
-      priceRes.price = 0;
-      this.debugPrice &&
-        this.dirtyDebug({
-          price: priceRes.price,
-          type: 'GRATIS',
-        });
-      return priceRes;
-    }
-
-    if (!Array.isArray(priceMatch) && !Array.isArray(priceMatchEuros)) {
-      if (selectorsCopy.length) {
-        return await this.getPriceFromHTML({
-          page,
-          event,
-          pageInfo,
-          selectors: selectorsCopy,
-        });
-      }
-      if (testText.match(/tba/i)) {
-        priceRes.price = 'onbekend';
-        this.debugPrice &&
-          this.dirtyDebug({
-            price: 'onbekend',
-            type: 'PRIJS TBA',
-          });
-        return priceRes;
-      }
-      if (testText.match(/uitverkocht|sold\sout/i)) {
-        priceRes.price = null;
-        this.debugPrice &&
-          this.dirtyDebug({
-            price: priceRes.price,
-            type: 'UITVERKOCHT',
-          });
-        return priceRes;
-      }
-      priceRes.errors.push({
-        remarks: `geen match met ${firstSelector} ${pi}`,
-        toDebug: { testText, priceMatch },
-      });
-      return priceRes;
-    }
-
-    if (!Array.isArray(priceMatch) && Array.isArray(priceMatchEuros)) {
-      priceRes.price = Number(priceMatchEuros[0]);
-      this.checkIsNumber(priceRes, pi);
-      this.debugPrice &&
-        this.dirtyDebug({
-          price: priceRes.price,
-          type: 'geen priceMatch wel matchEuros',
-        });
-      return priceRes;
-    }
-
-    try {
-      priceRes.price = Number(priceString);
-
-      this.checkIsNumber(priceRes, pi);
-      const pii = pi.replace('</a>', ` €${priceRes.price.toFixed(2)}</a>`);
-      this.debugPrice && this.dirtyDebug(pii);
-      return priceRes;
-    } catch (priceCalcErr) {
-      if (selectorsCopy.length) {
-        return await this.getPriceFromHTML({
-          page,
-          event,
-          pageInfo,
-          selectors: selectorsCopy,
-        });
-      }
-
-      if (testText.match(/uitverkocht|sold\sout/i)) {
-        priceRes.price = null;
-        this.debugPrice &&
-          this.dirtyDebug({
-            price: priceRes.price,
-            type: 'UITVERKOCHT',
-            ...debugIncl,
-          });
-        return priceRes;
-      }
-      priceRes.push({
-        error: priceCalcErr,
-        remarks: `price calc err ${pi}`,
-        toDebug: { debugIncl },
-      });
-      return priceRes;
-    }
-  }
-
-  checkIsNumber(priceRes, pi) {
-    if (isNaN(priceRes.price)) {
-      priceRes.errors.push({
-        remarks: `NaN: ${priceRes.price} ${pi}`,
-      });
-      return false;
-    }
-    return true;
-  }
-  // #endregion                                                 PRICE
-
   // #region [rgba(150, 0, 150, 0.10)]                          LONG HTML
   writeLongTextHTML(mergedEvent) {
     if (!mergedEvent) return null;
     const base64String = Buffer.from(
-      mergedEvent.venueEventUrl
-        .replace('www.', '')
-        .replace('https://', '')
-        .replace(/\w+\.\w{2,3}/, ''),
+      mergedEvent.venueEventUrl.substring(
+        mergedEvent.venueEventUrl.length - 30,
+        mergedEvent.venueEventUrl.length,
+      ),
     ).toString('base64');
     const toPrint = makeLongHTML(mergedEvent);
 
@@ -1539,257 +1187,6 @@ export default class AbstractScraper extends ScraperConfig {
     return '';
   }
   // #endregion                                                 LONG HTML
-
-  // #region [rgba(180, 0, 180, 0.10)]                          IMAGE
-  async getImage({ page, event, pageInfo, selectors, mode }) {
-    const res = {
-      errors: [],
-    };
-
-    try {
-      await page.waitForSelector(selectors[0], {
-        timeout: 2500,
-      });
-    } catch (error) {
-      try {
-        if (selectors.length > 1) {
-          await page.waitForSelector(selectors[1], {
-            timeout: 250,
-          });
-        } else {
-          res.errors.push({
-            error,
-            remarks: `geen ${selectors[0]}`,
-          });
-          return res;
-        }
-      } catch (error2) {
-        try {
-          if (selectors.length > 2) {
-            await page.waitForSelector(selectors[2], {
-              timeout: 250,
-            });
-          } else {
-            res.errors.push({
-              error,
-              remarks: `geen ${selectors[0]} of ${selectors[1]}`,
-            });
-            return res;
-          }
-        } catch (error3) {
-          res.errors.push({
-            error,
-            remarks: `geen ${selectors[0]} of ${selectors[1]} of ${selectors[2]}`,
-          });
-          return res;
-        }
-      }
-    }
-
-    const title = event?.title ? event?.title : pageInfo.title;
-
-    const pi = pageInfo?.pageInfo ? pageInfo?.pageInfo : event?.pageInfo;
-    let image = null;
-    const selectorsCopy = [...selectors];
-    if (mode === 'image-src') {
-      while (!image && selectorsCopy.length > 0) {
-        const selector = selectorsCopy.shift();
-        image = await page.evaluate(
-          ({ selector }) => {
-            const el = document.querySelector(selector);
-            let src = null;
-            if (!el?.src && el?.hasAttribute('data-src')) {
-              src = el.getAttribute('data-src');
-            } else if (!el?.src && el?.hasAttribute('srcset')) {
-              src = el.getAttribute('srcset').split(/\s/)[0];
-            } else {
-              src = el?.src ?? null;
-            }
-
-            if (src && !src.includes('https')) {
-              src = `${document.location.protocol}//${document.location.hostname}${src}`;
-            }
-
-            return src;
-          },
-          { selector },
-        );
-      }
-    } else if (mode === 'background-src') {
-      while (!image && selectorsCopy.length > 0) {
-        const selector = selectorsCopy.shift();
-        image = await page.evaluate(
-          ({ selector }) => {
-            const mmm =
-              document
-                .querySelector(selector)
-                ?.style.backgroundImage.match(
-                  /https.*.jpg|https.*.jpeg|https.*.png|https.*.webp/,
-                ) ?? null;
-            if (!Array.isArray(mmm)) return null;
-            let src = mmm[0];
-            if (!src.includes('https')) {
-              src = `${document.location.protocol}//${document.location.hostname}${src}`;
-            }
-            return src;
-          },
-          { selector },
-        );
-      }
-    } else if (mode === 'weird-attr') {
-      while (!image && selectorsCopy.length > 0) {
-        const selector = selectorsCopy.shift();
-        image = await page.evaluate(
-          ({ selector }) => {
-            const el = document.querySelector(selector);
-            let src = null;
-            if (!el?.href && el?.hasAttribute('content')) {
-              src = el.getAttribute('content');
-            } else {
-              src = el?.href ?? null;
-            }
-
-            if (!src.includes('https')) {
-              src = `${document.location.protocol}//${document.location.hostname}${src}`;
-            }
-
-            return src;
-          },
-          { selector },
-        );
-      }
-    }
-
-    if (!image) {
-      // res.errors.push({
-      //   remarks: `image missing ${pi}`,
-      // });
-      this.dirtyTalk(`Image missing ${pi}`);
-      return res;
-    }
-
-    const base64String = Buffer.from(
-      event.venueEventUrl
-        .replace('www.', '')
-        .replace('https://', '')
-        .replace(/\w+\.\w{2,3}/, ''),
-    ).toString('base64');
-    let imagePath = `${this.eventImagesFolder}/${workerData.family}/${base64String}`;
-
-    if (
-      !WorkerStatus?.shellArguments?.keepImages ||
-      WorkerStatus?.shellArguments?.keepImages === 'false'
-    ) {
-      if (fs.existsSync(`${imagePath}-vol.webp`)) {
-        // niets doen!
-      } else {
-        const diCompressRes = await this.downloadImageCompress(event, image, imagePath);
-        if (!diCompressRes) {
-          res.errors.push({
-            remarks: `download compress ${event.title} ${image} fail`,
-          });
-          imagePath = '';
-        }
-      }
-    }
-
-    res.image = imagePath;
-    return res;
-  }
-
-  downloadImage(url, filepath) {
-    return new Promise((resolve, reject) => {
-      try {
-        https.get(url, (res) => {
-          if (res.statusCode === 200) {
-            res
-              .pipe(fs.createWriteStream(filepath))
-              .on('error', reject)
-              .once('close', () => resolve(filepath));
-          } else if (`${res.statusCode}`[0] === '3') {
-            resolve(`${fsDirections.publicLocationImages}/${workerData.family}-vol.webp`);
-          } else {
-            res.resume();
-            reject(
-              new Error(
-                `Request Failed With a Status Code: ${res.statusCode} see <a href='vscode://vscode-remote/wsl+Ubuntu-22.04/home/sjerp/dev/apache/concertagenda/backend/temp/error.log:1:1'>the log</a>`,
-              ),
-            );
-          }
-        });
-      } catch (error) {
-        reject(error);
-      }
-    });
-  }
-
-  async downloadImageCompress(event, image, imagePath, familyOverSchrijving = '') {
-    let fam = '';
-    if (familyOverSchrijving) {
-      fam = familyOverSchrijving;
-    } else {
-      fam = workerData.family;
-    }
-
-    if (!fs.existsSync(`${this.eventImagesFolder}/${fam}`)) {
-      fs.mkdirSync(`${this.eventImagesFolder}/${fam}`);
-    }
-
-    if (image.includes('event-images')) {
-      return true;
-    }
-
-    let extension = '';
-    try {
-      extension = image.match(/.jpg|.jpeg|.png|.webp/)[0];
-    } catch (error) {
-      this.dirtyDebug(error);
-      const ss = image.split('.');
-      extension = ss[1];
-    }
-
-    try {
-      await this.downloadImage(image, `${imagePath}-ori${extension}`);
-    } catch (error) {
-      _t.wrappedHandleError(
-        new ErrorWrapper({
-          error,
-          remarks: 'download image',
-          errorLevel: 'notice',
-          workerData,
-          toDebug: {
-            image,
-            imagePath,
-          },
-        }),
-      );
-      return false;
-    }
-
-    await sharp(`${imagePath}-ori${extension}`)
-      .resize(440, 250)
-      .webp()
-      .toFile(`${imagePath}-w440.webp`, (err, info) => {
-        //
-      });
-
-    await sharp(`${imagePath}-ori${extension}`)
-      .resize(750, 340)
-      .webp()
-      .toFile(`${imagePath}-w750.webp`, (err, info) => {
-        //
-      });
-
-    await sharp(`${imagePath}-ori${extension}`)
-      .webp()
-      .toFile(`${imagePath}-vol.webp`, (err, info) => {
-        //
-      });
-
-    return true;
-  }
-
-  // #endregion                                                 IMAGE
 
   // step 4
   async announceToMonitorDone() {
