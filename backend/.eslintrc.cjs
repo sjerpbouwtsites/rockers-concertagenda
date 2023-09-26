@@ -23,6 +23,7 @@ module.exports = {
   rules: {
     'no-mixed-operators': 'off',
     'implicit-arrow-linebreak': 0,
+    'class-methods-use-this': 0,
     quotes: 0,
     'operator-linebreak': ['error', 'after'],
     'no-continue': 0,
