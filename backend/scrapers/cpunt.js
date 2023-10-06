@@ -78,7 +78,7 @@ cpuntScraper.mainPage = async function () {
     const thisWorkersEvents = availableBaseEvents.filter(
       (eventEl, index) => index % workerData.workerCount === workerData.index,
     );
-    return await this.mainPageEnd({ stopFunctie: null, rawEvents: thisWorkersEvents });
+    return this.mainPageEnd({ stopFunctie: null, rawEvents: thisWorkersEvents });
   }
 
   const { stopFunctie, page } = await this.mainPageStart();
@@ -98,7 +98,7 @@ cpuntScraper.mainPage = async function () {
         );
       }))
   ) {
-    return await this.mainPageEnd({ stopFunctie, page, rawEvents: [] });
+    return this.mainPageEnd({ stopFunctie, page, rawEvents: [] });
   }
 
   await _t.waitTime(50);
@@ -137,7 +137,7 @@ cpuntScraper.mainPage = async function () {
   const thisWorkersEvents = rawEvents.filter(
     (eventEl, index) => index % workerData.workerCount === workerData.index,
   );
-  return await this.mainPageEnd({ stopFunctie, rawEvents: thisWorkersEvents });
+  return this.mainPageEnd({ stopFunctie, rawEvents: thisWorkersEvents });
 };
 // #endregion                          MAIN PAGE
 
@@ -160,8 +160,8 @@ cpuntScraper.singlePage = async function ({ page, event }) {
         );
       }))
   ) {
-    return await this.singlePageEnd({
-      pageInfo,
+    return this.singlePageEnd({
+      pageInfo: event,
       stopFunctie,
       page,
       event,
@@ -169,6 +169,7 @@ cpuntScraper.singlePage = async function ({ page, event }) {
   }
 
   const pageInfo = await page.evaluate(
+    // eslint-disable-next-line no-shadow
     ({ months, event }) => {
       const contentSections = Array.from(document.querySelectorAll('.content-blocks section'));
       let indexOfTicketSection = 0;
@@ -177,7 +178,6 @@ cpuntScraper.singlePage = async function ({ page, event }) {
           indexOfTicketSection = sectionIndex;
         }
       });
-      const textSection = contentSections[indexOfTicketSection - 1];
       const ticketSection = contentSections[indexOfTicketSection];
 
       const res = {
@@ -284,7 +284,7 @@ cpuntScraper.singlePage = async function ({ page, event }) {
   pageInfo.socialsForHTML = socialsForHTML;
   pageInfo.textForHTML = textForHTML;
 
-  return await this.singlePageEnd({
+  return this.singlePageEnd({
     pageInfo,
     stopFunctie,
     page,
