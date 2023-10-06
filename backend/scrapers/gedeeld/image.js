@@ -1,6 +1,7 @@
 /* global document */
 import https from 'https';
 import fs from 'fs';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import sharp from 'sharp';
 import fsDirections from '../../mods/fs-directions.js';
 import { wrappedHandleError } from '../../mods/tools.js';
@@ -77,22 +78,16 @@ async function downloadImageCompress({
   await sharp(`${imagePath}-ori${extension}`)
     .resize(440, 250)
     .webp()
-    .toFile(`${imagePath}-w440.webp`, (err, info) => {
-      //
-    });
+    .toFile(`${imagePath}-w440.webp`, () => {});
 
   await sharp(`${imagePath}-ori${extension}`)
     .resize(750, 340)
     .webp()
-    .toFile(`${imagePath}-w750.webp`, (err, info) => {
-      //
-    });
+    .toFile(`${imagePath}-w750.webp`, () => {});
 
   await sharp(`${imagePath}-ori${extension}`)
     .webp()
-    .toFile(`${imagePath}-vol.webp`, (err, info) => {
-      //
-    });
+    .toFile(`${imagePath}-vol.webp`, () => {});
 
   return true;
 }
@@ -156,6 +151,7 @@ export default async function getImage({
   if (mode === 'image-src') {
     while (!image && selectorsCopy.length > 0) {
       const selector = selectorsCopy.shift();
+      // eslint-disable-next-line no-await-in-loop
       image = await page.evaluate(
         // eslint-disable-next-line no-shadow
         ({ selector }) => {
@@ -181,7 +177,9 @@ export default async function getImage({
   } else if (mode === 'background-src') {
     while (!image && selectorsCopy.length > 0) {
       const selector = selectorsCopy.shift();
+      // eslint-disable-next-line no-await-in-loop
       image = await page.evaluate(
+        // eslint-disable-next-line no-shadow
         ({ selector }) => {
           const mmm =
             document
@@ -201,6 +199,7 @@ export default async function getImage({
   } else if (mode === 'weird-attr') {
     while (!image && selectorsCopy.length > 0) {
       const selector = selectorsCopy.shift();
+      // eslint-disable-next-line no-await-in-loop
       image = await page.evaluate(
         // eslint-disable-next-line no-shadow
         ({ selector }) => {
