@@ -75,7 +75,7 @@ tivoliVredenburgScraper.mainPage = async function () {
     const thisWorkersEvents = availableBaseEvents.filter(
       (eventEl, index) => index % workerData.workerCount === workerData.index,
     );
-    return await this.mainPageEnd({ stopFunctie: null, rawEvents: thisWorkersEvents });
+    await this.mainPageEnd({ stopFunctie: null, rawEvents: thisWorkersEvents });
   }
 
   const { stopFunctie, page } = await this.mainPageStart();
@@ -110,7 +110,7 @@ tivoliVredenburgScraper.mainPage = async function () {
   const thisWorkersEvents = rawEvents.filter(
     (eventEl, index) => index % workerData.workerCount === workerData.index,
   );
-  return await this.mainPageEnd({ stopFunctie, rawEvents: thisWorkersEvents });
+  await this.mainPageEnd({ stopFunctie, rawEvents: thisWorkersEvents });
 };
 // #endregion                          MAIN PAGE
 
@@ -131,6 +131,7 @@ tivoliVredenburgScraper.singlePage = async function ({ page, event }) {
   }
 
   const pageInfo = await page.evaluate(
+    // eslint-disable-next-line no-shadow
     ({ event }) => {
       const res = {
         anker: `<a class='page-info' href='${event.venueEventUrl}'>${event.title}</a>`,
@@ -167,6 +168,7 @@ tivoliVredenburgScraper.singlePage = async function ({ page, event }) {
 
       if (Array.isArray(openMatch) && openMatch.length > 1) {
         try {
+          // eslint-disable-next-line prefer-destructuring
           res.openDoorTime = openMatch[1];
           res.door = res.startDate ? `${res.startDate}T${res.openDoorTime}:00` : null;
         } catch (caughtError) {
@@ -182,6 +184,7 @@ tivoliVredenburgScraper.singlePage = async function ({ page, event }) {
       }
       if (Array.isArray(startMatch) && startMatch.length > 1) {
         try {
+          // eslint-disable-next-line prefer-destructuring
           res.startTime = startMatch[1];
           res.start = res.startDate ? `${res.startDate}T${res.startTime}:00` : null;
         } catch (caughtError) {
@@ -197,6 +200,7 @@ tivoliVredenburgScraper.singlePage = async function ({ page, event }) {
       }
       if (Array.isArray(endMatch) && endMatch.length > 1) {
         try {
+          // eslint-disable-next-line prefer-destructuring
           res.endTime = endMatch[1];
           res.end = res.startDate ? `${res.startDate}T${res.endTime}:00` : null;
         } catch (caughtError) {
@@ -246,7 +250,7 @@ tivoliVredenburgScraper.singlePage = async function ({ page, event }) {
   pageInfo.socialsForHTML = socialsForHTML;
   pageInfo.textForHTML = textForHTML;
 
-  return await this.singlePageEnd({
+  await this.singlePageEnd({
     pageInfo,
     stopFunctie,
     page,
