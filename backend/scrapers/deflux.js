@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 /* global document */
 import { workerData } from 'worker_threads';
 import axios from 'axios';
@@ -94,7 +95,7 @@ defluxScraper.mainPage = async function () {
     const thisWorkersEvents = availableBaseEvents.filter(
       (eventEl, index) => index % workerData.workerCount === workerData.index,
     );
-    return await this.mainPageEnd({ stopFunctie: null, rawEvents: thisWorkersEvents });
+    return this.mainPageEnd({ stopFunctie: null, rawEvents: thisWorkersEvents });
   }
 
   const { stopFunctie } = await this.mainPageStart();
@@ -106,7 +107,7 @@ defluxScraper.mainPage = async function () {
       // TODO WRAPPEN
       _t.handleError(caughtError, workerData, 'main axios fail', 'close-thread', null);
     });
-  if (!axiosRes) return;
+  if (!axiosRes) return false;
   const rawEvents = axiosRes
     .map((axiosResultSingle) => {
       let title = axiosResultSingle.title.rendered;
@@ -129,7 +130,7 @@ defluxScraper.mainPage = async function () {
   const thisWorkersEvents = rawEvents.filter(
     (eventEl, index) => index % workerData.workerCount === workerData.index,
   );
-  return await this.mainPageEnd({ stopFunctie, rawEvents: thisWorkersEvents });
+  return this.mainPageEnd({ stopFunctie, rawEvents: thisWorkersEvents });
 };
 // #endregion                          MAIN PAGE
 
@@ -138,7 +139,7 @@ defluxScraper.singlePage = async function ({ page, event }) {
   const { stopFunctie } = await this.singlePageStart();
 
   const pageInfo = await page.evaluate(
-    ({ event }) => {
+    () => {
       const res = {
         anker: `<a class='page-info' href='${document.location.href}'>${document.title}</a>`,
         errors: [],
@@ -217,6 +218,6 @@ defluxScraper.singlePage = async function ({ page, event }) {
   pageInfo.socialsForHTML = socialsForHTML;
   pageInfo.textForHTML = textForHTML;
 
-  return await this.singlePageEnd({ pageInfo, stopFunctie });
+  return this.singlePageEnd({ pageInfo, stopFunctie });
 };
 // #endregion                         SINGLE PAGE
