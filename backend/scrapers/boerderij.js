@@ -1,11 +1,10 @@
-/* global document */
 import { workerData } from 'worker_threads';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import axios from 'axios';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/boerderij.js';
 import getImage from './gedeeld/image.js';
 import debugSettings from './gedeeld/debug-settings.js';
-import checkIsNumber from './gedeeld/debug-settings.js';
 
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const boerderijScraper = new AbstractScraper({
@@ -76,7 +75,7 @@ boerderijScraper.mainPage = async function () {
     const thisWorkersEvents = availableBaseEvents.filter(
       (eventEl, index) => index % workerData.workerCount === workerData.index,
     );
-    return await this.mainPageEnd({ stopFunctie: null, rawEvents: thisWorkersEvents });
+    return this.mainPageEnd({ stopFunctie: null, rawEvents: thisWorkersEvents });
   }
 
   const { stopFunctie } = await this.mainPageStart();
@@ -101,7 +100,7 @@ boerderijScraper.mainPage = async function () {
   const thisWorkersEvents = rawEvents.filter(
     (eventEl, index) => index % workerData.workerCount === workerData.index,
   );
-  return await this.mainPageEnd({ stopFunctie, rawEvents: thisWorkersEvents });
+  return this.mainPageEnd({ stopFunctie, rawEvents: thisWorkersEvents });
 };
 // #endregion                          MAIN PAGE
 
@@ -110,6 +109,7 @@ boerderijScraper.singlePage = async function ({ event, page }) {
   const { stopFunctie } = await this.singlePageStart();
 
   const [realEventTitle, realEventId] = event.title.split('&id=');
+  // eslint-disable-next-line no-param-reassign
   event.title = realEventTitle;
 
   const res = {
@@ -132,7 +132,7 @@ boerderijScraper.singlePage = async function ({ event, page }) {
 
   if (!ajaxRes) {
     res.corrupted += `ajax verzoek faalt naar ${url}`;
-    return await this.singlePageEnd({ res, stopFunctie });
+    return this.singlePageEnd({ res, stopFunctie });
   }
 
   const imageRes = await getImage({
@@ -186,7 +186,7 @@ boerderijScraper.singlePage = async function ({ event, page }) {
 
   res.soldOut = ajaxRes?.label?.title?.toLowerCase().includes('uitverkocht') ?? null;
 
-  return await this.singlePageEnd({ pageInfo: res, stopFunctie });
+  return this.singlePageEnd({ pageInfo: res, stopFunctie });
 };
 // #endregion                         SINGLE PAGE
 
