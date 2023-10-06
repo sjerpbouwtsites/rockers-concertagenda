@@ -87,7 +87,7 @@ doornroosjeScraper.mainPage = async function () {
     const thisWorkersEvents = availableBaseEvents.filter(
       (eventEl, index) => index % workerData.workerCount === workerData.index,
     );
-    return await this.mainPageEnd({ stopFunctie: null, rawEvents: thisWorkersEvents });
+    return this.mainPageEnd({ stopFunctie: null, rawEvents: thisWorkersEvents });
   }
 
   const { stopFunctie, page } = await this.mainPageStart();
@@ -150,6 +150,7 @@ doornroosjeScraper.mainPage = async function () {
       if (rawEvent.startDate) {
         lastWorkingEventDate = rawEvent.startDate;
       } else {
+        // eslint-disable-next-line no-param-reassign
         rawEvent.startDate = lastWorkingEventDate;
       }
       return rawEvent;
@@ -170,7 +171,7 @@ doornroosjeScraper.mainPage = async function () {
   const thisWorkersEvents = rawEvents.filter(
     (eventEl, index) => index % workerData.workerCount === workerData.index,
   );
-  return await this.mainPageEnd({ stopFunctie, rawEvents: thisWorkersEvents });
+  return this.mainPageEnd({ stopFunctie, rawEvents: thisWorkersEvents });
 };
 // #endregion                          MAIN PAGE
 
@@ -180,7 +181,6 @@ doornroosjeScraper.singlePage = async function ({ page, event }) {
 
   let pageInfo;
   if (!event.venueEventUrl.includes('soulcrusher') && !event.venueEventUrl.includes('festival')) {
-
     pageInfo = await page.evaluate(
       // eslint-disable-next-line no-shadow
       ({ months, event }) => {
@@ -334,7 +334,7 @@ doornroosjeScraper.singlePage = async function ({ page, event }) {
   pageInfo.socialsForHTML = socialsForHTML;
   pageInfo.textForHTML = textForHTML;
 
-  return await this.singlePageEnd({
+  return this.singlePageEnd({
     pageInfo,
     stopFunctie,
     page,
