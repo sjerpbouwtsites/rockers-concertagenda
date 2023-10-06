@@ -74,7 +74,7 @@ willemeeenScraper.mainPage = async function () {
     const thisWorkersEvents = availableBaseEvents.filter(
       (eventEl, index) => index % workerData.workerCount === workerData.index,
     );
-    return await this.mainPageEnd({ stopFunctie: null, rawEvents: thisWorkersEvents });
+    await this.mainPageEnd({ stopFunctie: null, rawEvents: thisWorkersEvents });
   }
 
   const { stopFunctie, page } = await this.mainPageStart();
@@ -107,6 +107,7 @@ willemeeenScraper.mainPage = async function () {
         if (Array.isArray(dateM) && dateM.length === 3) {
           res.month = months[dateM[2]];
           res.year = new Date().getFullYear();
+          // eslint-disable-next-line prefer-destructuring
           res.day = dateM[1];
           const curM = new Date().getMonth() + 1;
           if (res.month < curM) {
@@ -129,12 +130,12 @@ willemeeenScraper.mainPage = async function () {
   const thisWorkersEvents = rawEvents.filter(
     (eventEl, index) => index % workerData.workerCount === workerData.index,
   );
-  return await this.mainPageEnd({ stopFunctie, rawEvents: thisWorkersEvents });
+  await this.mainPageEnd({ stopFunctie, rawEvents: thisWorkersEvents });
 };
 // #endregion                          MAIN PAGE
 
 // #region [rgba(120, 0, 0, 0.1)]      SINGLE PAGE
-willemeeenScraper.singlePage = async function ({ page, url, event }) {
+willemeeenScraper.singlePage = async function ({ page, event }) {
   const { stopFunctie } = await this.singlePageStart();
 
   const pageInfo = {
@@ -150,8 +151,10 @@ willemeeenScraper.singlePage = async function ({ page, url, event }) {
       if (!el.hasAttribute('data-src')) return null;
       const srcM = el.getAttribute('data-src').match(/ret_img\/(.*)/);
       if (srcM) {
+        // eslint-disable-next-line
         el.src = srcM[1];
       }
+      return true;
     });
   });
 
@@ -185,7 +188,7 @@ willemeeenScraper.singlePage = async function ({ page, url, event }) {
   pageInfo.socialsForHTML = socialsForHTML;
   pageInfo.textForHTML = textForHTML;
 
-  return await this.singlePageEnd({
+  await this.singlePageEnd({
     pageInfo,
     stopFunctie,
     page,
