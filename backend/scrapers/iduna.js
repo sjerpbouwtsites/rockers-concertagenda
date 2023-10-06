@@ -78,7 +78,7 @@ idunaScraper.singlePageAsyncCheck = async function (event) {
 idunaScraper.mainPage = async function () {
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
   if (availableBaseEvents) {
-    return await this.mainPageEnd({ stopFunctie: null, rawEvents: availableBaseEvents });
+    await this.mainPageEnd({ stopFunctie: null, rawEvents: availableBaseEvents });
   }
   const { stopFunctie, page } = await this.mainPageStart();
 
@@ -93,7 +93,7 @@ idunaScraper.mainPage = async function () {
           loadposts('doom', 1, 50); // eslint-disable-line
           return new Promise((resolve) => {
             setTimeout(() => {
-              const doomEvents = Array.from(
+              const doomEventsInner = Array.from(
                 document.querySelectorAll('#gridcontent .griditemanchor'),
               ).map((event) => {
                 const title =
@@ -119,13 +119,13 @@ idunaScraper.mainPage = async function () {
                   shortText,
                 };
               });
-              resolve(doomEvents);
+              resolve(doomEventsInner);
             }, 2500);
           });
         },
         { workerData, unavailabiltyTerms: terms.unavailability },
       )
-      .then((doomEvents) => doomEvents);
+      .then((doomEventsInner) => doomEventsInner);
     // TODO catch
 
     metalEvents = await page
@@ -135,7 +135,7 @@ idunaScraper.mainPage = async function () {
           loadposts('metal', 1, 50); // eslint-disable-line
           return new Promise((resolve) => {
             setTimeout(() => {
-              const metalEvents = Array.from(
+              const metalEventsInner = Array.from(
                 document.querySelectorAll('#gridcontent .griditemanchor'),
               ).map((event) => {
                 const title =
@@ -161,13 +161,13 @@ idunaScraper.mainPage = async function () {
                   unavailable,
                 };
               });
-              resolve(metalEvents);
+              resolve(metalEventsInner);
             }, 2500);
           });
         },
         { workerData, unavailabiltyTerms: terms.unavailability },
       )
-      .then((metalEvents) => metalEvents);
+      .then((metalEventsInner) => metalEventsInner);
     // TODO catch
 
     punkEvents = await page
@@ -180,7 +180,7 @@ idunaScraper.mainPage = async function () {
 
           return new Promise((resolve) => {
             setTimeout(() => {
-              const punkEvents = Array.from(
+              const punkEventsInner = Array.from(
                 document.querySelectorAll('#gridcontent .griditemanchor'),
               ).map((event) => {
                 const title =
@@ -205,13 +205,13 @@ idunaScraper.mainPage = async function () {
                   errors: [],
                 };
               });
-              resolve(punkEvents);
+              resolve(punkEventsInner);
             }, 2500);
           });
         },
         { workerData, unavailabiltyTerms: terms.unavailability },
       )
-      .then((punkEvents) => punkEvents);
+      .then((punkEventsInner) => punkEventsInner);
     // TODO catch
 
     let metalEventsTitles = metalEvents.map((event) => event.title);
@@ -240,19 +240,20 @@ idunaScraper.mainPage = async function () {
         punkEvents,
       },
     );
-    return await this.mainPageEnd({ stopFunctie, page, rawEvents: [] });
+    return this.mainPageEnd({ stopFunctie, page, rawEvents: [] });
   }
 
   const rawEvents = metalEvents
     .map((musicEvent) => {
-      musicEvent.title = _t.killWhitespaceExcess(musicEvent.title);
-      musicEvent.pageInfo = _t.killWhitespaceExcess(musicEvent.pageInfo);
-      return musicEvent;
+      const mc = { ...musicEvent };
+      mc.title = _t.killWhitespaceExcess(musicEvent.title);
+      mc.pageInfo = _t.killWhitespaceExcess(musicEvent.pageInfo);
+      return mc;
     })
     .map(this.isMusicEventCorruptedMapper);
 
   this.saveBaseEventlist(workerData.family, rawEvents);
-  return await this.mainPageEnd({ stopFunctie, rawEvents });
+  return this.mainPageEnd({ stopFunctie, rawEvents });
 };
 // #endregion                          MAIN PAGE
 
@@ -261,6 +262,7 @@ idunaScraper.singlePage = async function ({ page, event }) {
   const { stopFunctie } = await this.singlePageStart();
 
   const pageInfo = await page.evaluate(
+    // eslint-disable-next-line no-shadow
     ({ months, event }) => {
       const res = {
         anker: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
@@ -373,7 +375,7 @@ idunaScraper.singlePage = async function ({ page, event }) {
   pageInfo.socialsForHTML = socialsForHTML;
   pageInfo.textForHTML = textForHTML;
 
-  return await this.singlePageEnd({
+  return this.singlePageEnd({
     pageInfo,
     stopFunctie,
     page,
