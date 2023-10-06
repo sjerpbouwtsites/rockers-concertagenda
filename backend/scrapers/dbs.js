@@ -80,7 +80,7 @@ dbsScraper.mainPage = async function () {
     const thisWorkersEvents = availableBaseEvents.filter(
       (eventEl, index) => index % workerData.workerCount === workerData.index,
     );
-    return await this.mainPageEnd({ stopFunctie: null, rawEvents: thisWorkersEvents });
+    return this.mainPageEnd({ stopFunctie: null, rawEvents: thisWorkersEvents });
   }
 
   const { stopFunctie, page } = await this.mainPageStart();
@@ -89,6 +89,7 @@ dbsScraper.mainPage = async function () {
   await _t.waitTime(100);
 
   let rawEvents = await page.evaluate(
+    // eslint-disable-next-line no-shadow
     ({ months, workerData, unavailabiltyTerms }) =>
       Array.from(document.querySelectorAll('.fusion-events-post')).map((eventEl) => {
         let title = eventEl.querySelector('.fusion-events-meta .url')?.textContent.trim() ?? null;
@@ -167,7 +168,7 @@ dbsScraper.mainPage = async function () {
   const thisWorkersEvents = rawEvents.filter(
     (eventEl, index) => index % workerData.workerCount === workerData.index,
   );
-  return await this.mainPageEnd({ stopFunctie, rawEvents: thisWorkersEvents });
+  return this.mainPageEnd({ stopFunctie, rawEvents: thisWorkersEvents });
 };
 // #endregion                          MAIN PAGE
 
@@ -176,7 +177,7 @@ dbsScraper.singlePage = async function ({ page, event }) {
   const { stopFunctie } = await this.singlePageStart();
 
   const pageInfo = await page.evaluate(
-    ({ event }) => {
+    () => {
       const res = {
         anker: `<a class='page-info' href='${document.location.href}'>${document.title}</a>`,
         errors: [],
@@ -221,10 +222,9 @@ dbsScraper.singlePage = async function ({ page, event }) {
   pageInfo.textForHTML = textForHTML;
 
   if (pageInfo.ticketURL && !pageInfo.unavailable) {
-    this.debugPrice && this.dirtyTalk(`gaan naar url ${pageInfo.ticketURL}`);
+    if (this.debugPrice) this.dirtyTalk(`gaan naar url ${pageInfo.ticketURL}`);
     try {
       await page.goto(pageInfo.ticketURL);
-      // const priceRes = await this.getPriceFromHTML({page, event, pageInfo, selectors: ['[data-testid="ticket-price"]'], });
       const html = await page
         .evaluate(() => document.querySelector('body').innerHTML)
         .catch((err) => {
@@ -251,7 +251,7 @@ dbsScraper.singlePage = async function ({ page, event }) {
     }
   }
 
-  return await this.singlePageEnd({
+  return this.singlePageEnd({
     pageInfo,
     stopFunctie,
     page,
