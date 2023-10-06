@@ -22,6 +22,7 @@
     "no-mixed-operators": "off",
     "strict": 0,
     "no-useless-escape": "off",
+    "function-paren-newline": 0,
     "import/extensions": ["error", "always", 
       {"ignorePackages": true}
    ],
