@@ -96,7 +96,7 @@ groeneEngelScraper.mainPage = async function () {
     const thisWorkersEvents = availableBaseEvents.filter(
       (eventEl, index) => index % workerData.workerCount === workerData.index,
     );
-    return await this.mainPageEnd({ stopFunctie: null, rawEvents: thisWorkersEvents });
+    return this.mainPageEnd({ stopFunctie: null, rawEvents: thisWorkersEvents });
   }
 
   const { stopFunctie, page } = await this.mainPageStart();
@@ -122,8 +122,9 @@ groeneEngelScraper.mainPage = async function () {
           eventEl
             .querySelector('.date-label')
             ?.textContent.match(/\s(?<datum>\d{1,2}\s\w+\s\d\d\d\d)/) ?? null;
-        if (res.startDateMatch && res.startDateMatch?.groups)
+        if (res.startDateMatch && res.startDateMatch?.groups) {
           res.startDateRauw = res.startDateMatch.groups.datum;
+        }
 
         res.dag = res.startDateMatch.groups.datum.split(' ')[0].padStart(2, '0');
         res.maand = res.startDateMatch.groups.datum.split(' ')[1];
@@ -143,7 +144,7 @@ groeneEngelScraper.mainPage = async function () {
   const thisWorkersEvents = baseEvents.filter(
     (eventEl, index) => index % workerData.workerCount === workerData.index,
   );
-  return await this.mainPageEnd({ stopFunctie, rawEvents: thisWorkersEvents });
+  return this.mainPageEnd({ stopFunctie, rawEvents: thisWorkersEvents });
 };
 // #endregion                          MAIN PAGE
 
@@ -152,6 +153,7 @@ groeneEngelScraper.singlePage = async function ({ page, event }) {
   const { stopFunctie } = await this.singlePageStart();
 
   const pageInfo = await page.evaluate(
+    // eslint-disable-next-line no-shadow
     ({ event }) => {
       const res = {
         anker: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
@@ -227,7 +229,7 @@ groeneEngelScraper.singlePage = async function ({ page, event }) {
   pageInfo.mediaForHTML = mediaForHTML;
   pageInfo.socialsForHTML = socialsForHTML;
   pageInfo.textForHTML = textForHTML;
-  return await this.singlePageEnd({
+  return this.singlePageEnd({
     pageInfo,
     stopFunctie,
     page,
