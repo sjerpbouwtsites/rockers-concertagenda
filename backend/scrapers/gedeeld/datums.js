@@ -222,7 +222,7 @@ function _combineTimeDate(event, destKey, required) {
       toDebug:{
         startDate: `${event.startDate}`,
         time: `${event[timeString]}`,
-        combi: `${event.startDate}T${event[timeString]}` + '',
+        combi: `${event.startDate}T${event[timeString]}`,
       },
     });
   }
