@@ -1,5 +1,9 @@
-export default async function longTextSocialsIframes(page, event, pageInfo) {
-  return await page.evaluate(
+/* eslint-disable  */
+/* eslint-disable indent */
+/* global document */
+export default async function longTextSocialsIframes(page, event) {
+  return page.evaluate(
+    // eslint-disable-next-line no-shadow
     ({ event }) => {
       const res = {};
       const textSelector = '.event-detail__content > *';
