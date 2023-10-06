@@ -81,7 +81,7 @@ effenaarScraper.mainPage = async function () {
     const thisWorkersEvents = availableBaseEvents.filter(
       (eventEl, index) => index % workerData.workerCount === workerData.index,
     );
-    return await this.mainPageEnd({ stopFunctie: null, rawEvents: thisWorkersEvents });
+    return this.mainPageEnd({ stopFunctie: null, rawEvents: thisWorkersEvents });
   }
 
   const { stopFunctie, page } = await this.mainPageStart();
@@ -112,7 +112,7 @@ effenaarScraper.mainPage = async function () {
   const thisWorkersEvents = rawEvents.filter(
     (eventEl, index) => index % workerData.workerCount === workerData.index,
   );
-  return await this.mainPageEnd({ stopFunctie, rawEvents: thisWorkersEvents });
+  return this.mainPageEnd({ stopFunctie, rawEvents: thisWorkersEvents });
 };
 // #endregion                          MAIN PAGE
 
@@ -123,6 +123,7 @@ effenaarScraper.singlePage = async function ({ page, event }) {
   await page.waitForSelector('.event-bar-inner-row');
 
   const pageInfo = await page.evaluate(
+    // eslint-disable-next-line no-shadow
     ({ months, event }) => {
       const res = {
         anker: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
@@ -212,7 +213,7 @@ effenaarScraper.singlePage = async function ({ page, event }) {
   pageInfo.socialsForHTML = socialsForHTML;
   pageInfo.textForHTML = textForHTML;
 
-  return await this.singlePageEnd({
+  return this.singlePageEnd({
     pageInfo,
     stopFunctie,
     page,
