@@ -77,7 +77,7 @@ patronaatScraper.mainPage = async function () {
     const thisWorkersEvents = availableBaseEvents.filter(
       (eventEl, index) => index % workerData.workerCount === workerData.index,
     );
-    return await this.mainPageEnd({ stopFunctie: null, rawEvents: thisWorkersEvents });
+    await this.mainPageEnd({ stopFunctie: null, rawEvents: thisWorkersEvents });
   }
 
   const { stopFunctie, page } = await this.mainPageStart();
@@ -108,7 +108,7 @@ patronaatScraper.mainPage = async function () {
   const thisWorkersEvents = rawEvents.filter(
     (eventEl, index) => index % workerData.workerCount === workerData.index,
   );
-  return await this.mainPageEnd({ stopFunctie, rawEvents: thisWorkersEvents });
+  await this.mainPageEnd({ stopFunctie, rawEvents: thisWorkersEvents });
 };
 // #endregion                          MAIN PAGE
 
@@ -118,6 +118,7 @@ patronaatScraper.singlePage = async function ({ page, event }) {
 
   const pageInfo = await page
     .evaluate(
+      // eslint-disable-next-line no-shadow
       ({ months, event }) => {
         const res = {
           anker: `<a class='page-info' href='${event.venueEventUrl}'>${event.title}</a>`,
@@ -146,6 +147,7 @@ patronaatScraper.singlePage = async function ({ page, event }) {
 
               const mmm = document.querySelector(selector)?.textContent.match(/\d\d:\d\d/);
               if (Array.isArray(mmm) && mmm.length === 1) {
+                // eslint-disable-next-line prefer-destructuring
                 res[timeName] = mmm[0];
               }
             });
@@ -234,7 +236,7 @@ patronaatScraper.singlePage = async function ({ page, event }) {
   pageInfo.socialsForHTML = socialsForHTML;
   pageInfo.textForHTML = textForHTML;
 
-  return await this.singlePageEnd({
+  await this.singlePageEnd({
     pageInfo,
     stopFunctie,
     page,

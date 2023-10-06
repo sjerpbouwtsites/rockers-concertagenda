@@ -77,7 +77,7 @@ paradisoScraper.mainPage = async function () {
     const thisWorkersEvents = availableBaseEvents.filter(
       (eventEl, index) => index % workerData.workerCount === workerData.index,
     );
-    return await this.mainPageEnd({ stopFunctie: null, rawEvents: thisWorkersEvents });
+    await this.mainPageEnd({ stopFunctie: null, rawEvents: thisWorkersEvents });
   }
 
   const { stopFunctie, page } = await this.mainPageStart();
@@ -90,9 +90,8 @@ paradisoScraper.mainPage = async function () {
     { workerData },
   );
 
-  let bla = '';
   await _t.autoScroll(page);
-  bla = await page.evaluate(
+  await page.evaluate(
     () =>
       document.querySelector('.css-16y59pb:last-child .chakra-heading')?.textContent ??
       'geen titel gevonden',
@@ -100,7 +99,7 @@ paradisoScraper.mainPage = async function () {
   );
 
   await _t.autoScroll(page);
-  bla = await page.evaluate(
+  await page.evaluate(
     // eslint-disable-next-line no-shadow
     () =>
       document.querySelector('.css-16y59pb:last-child .chakra-heading')?.textContent ??
@@ -111,6 +110,7 @@ paradisoScraper.mainPage = async function () {
   let rawEvents = await page.evaluate(
     ({ resBuiten, unavailabiltyTerms }) =>
       Array.from(document.querySelectorAll('.css-1agutam')).map((rawEvent) => {
+        // eslint-disable-next-line no-shadow
         const res = {
           ...resBuiten,
           errors: [],
@@ -133,7 +133,7 @@ paradisoScraper.mainPage = async function () {
   const thisWorkersEvents = rawEvents.filter(
     (eventEl, index) => index % workerData.workerCount === workerData.index,
   );
-  return await this.mainPageEnd({ stopFunctie, rawEvents: thisWorkersEvents });
+  await this.mainPageEnd({ stopFunctie, rawEvents: thisWorkersEvents });
 };
 // #endregion                          MAIN PAGE
 
@@ -153,10 +153,10 @@ paradisoScraper.singlePage = async function ({ page, event }) {
   } catch (caughtError) {
     buitenRes.errors.push({
       error: caughtError,
-      remarks: `Paradiso wacht op laden single pagina\n${buitenres.anker}`,
+      remarks: `Paradiso wacht op laden single pagina\n${buitenRes.anker}`,
       errorLevel: 'notice',
     });
-    return await this.singlePageEnd({ pageInfo: buitenRes, stopFunctie, page });
+    await this.singlePageEnd({ pageInfo: buitenRes, stopFunctie, page });
   }
 
   const editedMonths = {
@@ -197,6 +197,7 @@ paradisoScraper.singlePage = async function ({ page, event }) {
   await _t.waitTime(500);
 
   const pageInfo = await page.evaluate(
+    // eslint-disable-next-line no-shadow
     ({ months, buitenRes }) => {
       const res = { ...buitenRes };
 
@@ -304,7 +305,7 @@ paradisoScraper.singlePage = async function ({ page, event }) {
   pageInfo.socialsForHTML = socialsForHTML;
   pageInfo.textForHTML = textForHTML;
 
-  return await this.singlePageEnd({
+  await this.singlePageEnd({
     pageInfo,
     stopFunctie,
     page,

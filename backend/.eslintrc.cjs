@@ -22,6 +22,7 @@ module.exports = {
   },
   rules: {
     'no-mixed-operators': 'off',
+    'prefer-destructuring': 0,
     'function-paren-newline': 0,
     'implicit-arrow-linebreak': 0,
     'class-methods-use-this': 0,
