@@ -72,7 +72,7 @@ oostpoortScraper.mainPage = async function () {
     const thisWorkersEvents = availableBaseEvents.filter(
       (eventEl, index) => index % workerData.workerCount === workerData.index,
     );
-    return await this.mainPageEnd({ stopFunctie: null, rawEvents: thisWorkersEvents });
+    await this.mainPageEnd({ stopFunctie: null, rawEvents: thisWorkersEvents });
   }
 
   const { stopFunctie, page } = await this.mainPageStart();
@@ -101,10 +101,9 @@ oostpoortScraper.mainPage = async function () {
         .filter((eventEl) => !eventEl.classList.contains('is-hidden'))
         .map((eventEl) => {
           const eersteDeelKorteTekst = eventEl.querySelector('h1 span')?.textContent ?? '';
+          const h1Tc = eventEl.querySelector('h1')?.textContent ?? '';
           const title =
-            eersteDeelKorteTekst.length === 0
-              ? eventEl.querySelector('h1')?.textContent ?? ''
-              : eventEl.querySelector('h1')?.textContent.replace(eersteDeelKorteTekst, '') ?? '';
+            eersteDeelKorteTekst.length === 0 ? h1Tc : h1Tc.replace(eersteDeelKorteTekst, '') ?? '';
           const res = {
             anker: `<a class='page-info' href="${document.location.href}">${workerData.family} - main - ${title}</a>`,
             errors: [],
@@ -144,7 +143,7 @@ oostpoortScraper.mainPage = async function () {
   const thisWorkersEvents = rawEvents.filter(
     (eventEl, index) => index % workerData.workerCount === workerData.index,
   );
-  return await this.mainPageEnd({ stopFunctie, rawEvents: thisWorkersEvents });
+  await this.mainPageEnd({ stopFunctie, rawEvents: thisWorkersEvents });
 };
 // #endregion                          MAIN PAGE
 
@@ -164,10 +163,9 @@ oostpoortScraper.singlePage = async function ({ page, event }) {
 
   await _t.waitTime(1000);
 
-  let pageInfo;
-
-  pageInfo = await page
+  const pageInfo = await page
     .evaluate(
+      // eslint-disable-next-line no-shadow
       ({ event }) => {
         const res = {
           anker: `<a class='page-info' href='${document.location.href}'>${document.title}</a>`,
@@ -238,7 +236,7 @@ oostpoortScraper.singlePage = async function ({ page, event }) {
   pageInfo.socialsForHTML = socialsForHTML;
   pageInfo.textForHTML = textForHTML;
 
-  return await this.singlePageEnd({
+  await this.singlePageEnd({
     pageInfo,
     stopFunctie,
     page,
