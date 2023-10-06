@@ -82,7 +82,7 @@ p60Scraper.mainPage = async function () {
     const thisWorkersEvents = availableBaseEvents.filter(
       (eventEl, index) => index % workerData.workerCount === workerData.index,
     );
-    return await this.mainPageEnd({ stopFunctie: null, rawEvents: thisWorkersEvents });
+    await this.mainPageEnd({ stopFunctie: null, rawEvents: thisWorkersEvents });
   }
 
   const { stopFunctie, page } = await this.mainPageStart();
@@ -146,7 +146,7 @@ p60Scraper.mainPage = async function () {
   const thisWorkersEvents = rawEvents.filter(
     (eventEl, index) => index % workerData.workerCount === workerData.index,
   );
-  return await this.mainPageEnd({ stopFunctie, rawEvents: thisWorkersEvents });
+  await this.mainPageEnd({ stopFunctie, rawEvents: thisWorkersEvents });
 };
 // #endregion                          MAIN PAGE
 
@@ -155,7 +155,7 @@ p60Scraper.singlePage = async function ({ page, event }) {
   const { stopFunctie } = await this.singlePageStart();
 
   if (event.unavailable) {
-    return await this.singlePageEnd({ pageInfo: {}, stopFunctie, page });
+    await this.singlePageEnd({ pageInfo: {}, stopFunctie, page });
   }
 
   const pageInfo = await page.evaluate(() => {
@@ -197,7 +197,7 @@ p60Scraper.singlePage = async function ({ page, event }) {
   pageInfo.socialsForHTML = socialsForHTML;
   pageInfo.textForHTML = textForHTML;
 
-  return await this.singlePageEnd({
+  await this.singlePageEnd({
     pageInfo,
     stopFunctie,
     page,
