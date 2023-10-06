@@ -1,3 +1,4 @@
+/* eslint-disable no-await-in-loop */
 /* global document */
 import { workerData } from 'worker_threads';
 import longTextSocialsIframes from './longtext/gebrdenobel.js';
