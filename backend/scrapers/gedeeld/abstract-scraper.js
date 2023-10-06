@@ -1,3 +1,4 @@
+/* global document */
 // #region                                                 IMPORTS
 import { parentPort, workerData } from 'worker_threads';
 import fs from 'fs';
@@ -54,8 +55,12 @@ export default class AbstractScraper extends ScraperConfig {
   }
   // #endregion                                                CONSTRUCTOR & INSTALL
 
-  async getPriceFromHTML({ page, event, pageInfo, selectors }) {
-    return _getPriceFromHTML({ _this: this, page, event, pageInfo, selectors });
+  async getPriceFromHTML({
+    page, event, pageInfo, selectors,
+  }) {
+    return _getPriceFromHTML({
+      _this: this, page, event, pageInfo, selectors, 
+    });
   }
 
   // #region [rgba(0, 0, 180, 0.10)]                            DIRTYLOG, TALK, DEBUG
@@ -118,6 +123,7 @@ export default class AbstractScraper extends ScraperConfig {
       await this.closeBrowser();
     }
     await this.saveEvents();
+    return true;
     // overige catch in om init heen
   }
 
@@ -176,7 +182,7 @@ export default class AbstractScraper extends ScraperConfig {
           // }
         }),
       );
-      return;
+      return false;
     }
 
     // verwijder oude
@@ -258,13 +264,15 @@ export default class AbstractScraper extends ScraperConfig {
       clearTimeout(stopFunctie);
     }
 
-    page && !page.isClosed() && page.close();
+    if (page && !page.isClosed()) page.close();
 
     const eventsWithLongHTMLShortText = rawEvents.map((event) => {
       if (event.longTextHTML) {
+        // eslint-disable-next-line no-param-reassign
         event.longTextHTML = _t.killWhitespaceExcess(event.longTextHTML);
       }
       if (event.shortText) {
+        // eslint-disable-next-line no-param-reassign
         event.shortText = _t.killWhitespaceExcess(event.shortText);
       }
       return event;
@@ -273,20 +281,19 @@ export default class AbstractScraper extends ScraperConfig {
     eventsWithLongHTMLShortText.forEach((event) => {
       const errorVerz = Object.prototype.hasOwnProperty.call(event, 'errors') ? event.errors : [];
       errorVerz.forEach((errorData) => {
-        errorData.workerData = workerData;
-        if (!errorData.error) {
-          errorData.error = new Error(errorData?.remarks ?? '');
-        }
-        const wrappedError = new ErrorWrapper(errorData);
+        const wrappedError = new ErrorWrapper({
+          ...errorData,
+          workerData,
+        });
         _t.wrappedHandleError(wrappedError);
       });
     });
 
-    const r = rawEvents.map((rawEvent) => {
-      rawEvent.location = workerData.family;
-      rawEvent.origin = workerData.family;
-      return rawEvent;
-    });
+    const r = rawEvents.map((rawEvent) => ({
+      ...rawEvent,
+      location: workerData.family,
+      origin: workerData.family,
+    }));
     if (this._s.app.mainPage.enforceMusicEventType) {
       return r.map((event) => new MusicEvent(event));
     }
@@ -339,6 +346,7 @@ export default class AbstractScraper extends ScraperConfig {
     if (missingProperties.length > 0) {
       const page = !this.completedMainPage ? 'main:' : 'single:';
       const mis = missingProperties.join(', ');
+      // eslint-disable-next-line no-param-reassign
       musicEvent.corrupted = `${page} ${mis}`;
     }
 
@@ -361,7 +369,7 @@ export default class AbstractScraper extends ScraperConfig {
     parentPort.postMessage(this.qwm.workerStarted());
     const eventGen = this.eventGenerator(baseMusicEvents);
     const checkedEvents = [];
-    return await this.rawEventsAsyncCheck({
+    return this.rawEventsAsyncCheck({
       eventGen,
       checkedEvents,
     });
@@ -383,7 +391,7 @@ export default class AbstractScraper extends ScraperConfig {
     try {
       const useableEventsCheckedArray = checkedEvents.map((a) => a);
 
-      const generatedEvent = eventGen.next();
+      generatedEvent = eventGen.next();
       if (generatedEvent.done) return useableEventsCheckedArray;
 
       const eventToCheck = generatedEvent.value;
@@ -426,6 +434,7 @@ export default class AbstractScraper extends ScraperConfig {
         },
       );
     }
+    return true;
   }
 
   /**
@@ -532,7 +541,10 @@ export default class AbstractScraper extends ScraperConfig {
         });
       }
 
-      singleEventPage && !singleEventPage.isClosed() && (await singleEventPage.close());
+      if (singleEventPage && !singleEventPage.isClosed()) {
+        await singleEventPage.close();
+      }
+
       return useableEventsList.length
         ? this.processSingleMusicEvent(useableEventsList)
         : useableEventsList;
@@ -550,9 +562,14 @@ export default class AbstractScraper extends ScraperConfig {
         });
       }
 
-      singleEvent.isValid
-        ? singleEvent.register() // TODO hier lopen dingen echt dwars door elkaar. integreren in soort van singlePageAsyncCheckBase en dan anderen reducen erop of weet ik veel wat een gehack vandaag
-        : singleEvent.registerINVALID(this.workerData);
+      if (singleEvent.isValid) {
+        // TODO hier lopen dingen echt dwars door elkaar. 
+        // integreren in soort van singlePageAsyncCheckBase 
+        // en dan anderen reducen erop of weet ik veel wat een gehack vandaag
+        singleEvent.register(); 
+      } else {
+        singleEvent.registerINVALID(this.workerData);
+      }
     } else {
       if (debugSettings.debugsinglePageAsyncCheck && mergedEventCheckRes.reason) {
         this.dirtyDebug({
@@ -564,7 +581,7 @@ export default class AbstractScraper extends ScraperConfig {
       singleEvent.registerINVALID(this.workerData);
     }
 
-    singleEventPage && !singleEventPage.isClosed() && (await singleEventPage.close());
+    if (singleEventPage && !singleEventPage.isClosed()) await singleEventPage.close();
 
     return useableEventsList.length
       ? this.processSingleMusicEvent(useableEventsList)
@@ -603,38 +620,42 @@ export default class AbstractScraper extends ScraperConfig {
         null,
       );
     }
+    return null;
   }
 
   titelShorttextPostfix(musicEvent) {
-    const titleIsCapsArr = musicEvent.title.split('').map((char) => char === char.toUpperCase());
+    let { title, shortText } = musicEvent;
+    
+    const titleIsCapsArr = title.split('').map((char) => char === char.toUpperCase());
     const noOfCapsInTitle = titleIsCapsArr.filter((a) => a).length;
     const toManyCapsInTitle =
-      (musicEvent.title.length - noOfCapsInTitle) / musicEvent.title.length < 0.5;
+      (title.length - noOfCapsInTitle) / title.length < 0.5;
     if (toManyCapsInTitle) {
-      musicEvent.title =
-        musicEvent.title.substring(0, 1).toUpperCase() +
-        musicEvent.title.substring(1, 500).toLowerCase();
+      // eslint-disable-next-line no-param-reassign
+      title =
+        title.substring(0, 1).toUpperCase() +
+        title.substring(1, 500).toLowerCase();
     }
 
-    if (musicEvent.title.length > 45) {
+    if (title.length > 45) {
       const splittingCandidates = ['+', '&', ':', '>', '•'];
       let i = 0;
       do {
-        const splitted = musicEvent.title.split(splittingCandidates[i]);
-        musicEvent.title = splitted[0];
+        const splitted = title.split(splittingCandidates[i]);
+        title = splitted[0];
         const titleRest = splitted.splice(1, 45).join(' ');
-        musicEvent.shortText = `${titleRest} ${musicEvent.shortText}`;
+        shortText = `${titleRest} ${shortText}`;
         i += 1;
-      } while (musicEvent.title.length > 45 && i < splittingCandidates.length);
+      } while (title.length > 45 && i < splittingCandidates.length);
     }
 
-    // if (musicEvent.title.length > 45){
-    //   musicEvent.title = musicEvent.title.replace(/\(.*\)/,'').replace(/\s{2,25}/,' ');
-    // }
+    if (shortText) shortText = shortText.replace(/<\/?\w+>/g, '');
 
-    musicEvent.shortText = musicEvent?.shortText?.replace(/<\/?\w+>/g, '');
-
-    return musicEvent;
+    return {
+      ...musicEvent,
+      title,
+      shortText,
+    };
   }
 
   // step 3.5
@@ -675,16 +696,18 @@ export default class AbstractScraper extends ScraperConfig {
    * @returns {*} pageInfo
    * @memberof AbstractScraper
    */
-  async singlePageEnd({ pageInfo, stopFunctie, page, event }) {
-    this.isForced &&
-      debugSettings.debugPageInfo &&
+  async singlePageEnd({
+    pageInfo, stopFunctie, page, event, 
+  }) {
+    if (this.isForced && debugSettings.debugPageInfo) {
       this.dirtyLog({
         event,
         pageInfo,
       });
+    } 
 
     if (!pageInfo) {
-      page && !page.isClosed() && page.close();
+      if (page && !page.isClosed()) page.close();
       throw new Error('page info ontbreekt.');
     }
 
@@ -701,7 +724,7 @@ export default class AbstractScraper extends ScraperConfig {
       });
       _t.wrappedHandleError(wrappedError);
 
-      page && !page.isClosed() && page.close();
+      if (page && !page.isClosed()) page.close();
       clearTimeout(stopFunctie);
       return {
         corrupted: 'Geen resultaat van pageInfo',
@@ -709,30 +732,15 @@ export default class AbstractScraper extends ScraperConfig {
     }
 
     pageInfo?.errors?.forEach((errorData) => {
-      try {
-        if (!errorData?.workerData) {
-          errorData.workerData = workerData;
-        }
-        if (!errorData?.remarks) {
-          errorData.remarks = 'geen remarks';
-        }
-        if (!errorData.error?.message) {
-          const initRemarks = errorData?.remarks ?? '';
-          errorData.error = new Error(!errorData?.remarks);
-          const url = event?.venueEventUrl ?? pageInfo.venueEventUrl;
-          const title = event?.title ?? pageInfo.title;
-          errorData.remarks = `Mislukte error van:\n\n${initRemarks}\n<a href='${url}'>${title}</a>`;
-        }
-        const wrappedError = new ErrorWrapper(errorData);
-        _t.wrappedHandleError(wrappedError);
-      } catch (errorOfErrors) {
-        const cp = { ...pageInfo };
-        delete cp.longTextHTML;
-        _t.handleError(errorOfErrors, workerData, 'mislukte error', 'close-thread', cp);
-      }
+      const wrappedError = new ErrorWrapper({
+        ...errorData,
+        workerData: errorData?.workerData || workerData,
+        remarks: errorData?.remarks || 'geen remarks',
+      });
+      _t.wrappedHandleError(wrappedError);
     });
 
-    page && !page.isClosed() && page.close();
+    if (page && !page.isClosed()) page.close();
     clearTimeout(stopFunctie);
     return pageInfo;
   }
@@ -744,7 +752,7 @@ export default class AbstractScraper extends ScraperConfig {
    * @return {event {MusicEvent, success bool}}
    * @memberof AbstractScraper
    */
-  async singlePageAsyncCheck(event, pageInfo = null) {
+  async singlePageAsyncCheck(event) {
     // abstracte methode, over te schrijven
     return {
       event,
@@ -769,7 +777,7 @@ export default class AbstractScraper extends ScraperConfig {
   async hasGoodTerms(event, keysToCheck) {
     const keysToCheck2 = keysToCheck || ['title', 'shortText'];
     let combinedTextToCheck = '';
-    for (let i = 0; i < keysToCheck2.length; i++) {
+    for (let i = 0; i < keysToCheck2.length; i += 1) {
       try {
         const v = event[keysToCheck2[i]];
         if (v) {
@@ -823,7 +831,7 @@ export default class AbstractScraper extends ScraperConfig {
     const workingTitle = this.cleanupEventTitle(event.title);
     const keysToCheck2 = Array.isArray(keysToCheck) ? keysToCheck : ['title', 'shortText'];
     let combinedTextToCheck = '';
-    for (let i = 0; i < keysToCheck2.length; i++) {
+    for (let i = 0; i < keysToCheck2.length; i += 1) {
       const v = event[keysToCheck2[i]];
       if (v) {
         combinedTextToCheck += `${v} `;
@@ -1001,6 +1009,7 @@ export default class AbstractScraper extends ScraperConfig {
         };
       }
       const matchingResults = await page.evaluate(
+        // eslint-disable-next-line no-shadow
         ({ title }) =>
           Array.from(document.querySelectorAll('.mw-search-results [href*=wiki]'))
             .filter((anker) => anker.textContent.toLowerCase().includes(title.toLowerCase()))
@@ -1027,13 +1036,13 @@ export default class AbstractScraper extends ScraperConfig {
           if (document.querySelector(`.infobox ${thisSelector}`)) {
             found = true;
           }
-          i++;
+          i += 1;
         }
         return found;
       },
       { wikipediaGoodGenres: terms.wikipediaGoodGenres },
     );
-    !page.isClosed() && page.close();
+    if (!page.isClosed()) page.close();
     if (wikiRockt) {
       return {
         event,
@@ -1043,7 +1052,7 @@ export default class AbstractScraper extends ScraperConfig {
         reason: `found on <a class='single-event-check-reason wikipedia wikipedia--success' href='${wikiPage}'>wikipedia</a>`,
       };
     }
-    !page.isClosed() && page.close();
+    if (!page.isClosed()) page.close();
     return {
       event,
       workingTitle,
@@ -1081,7 +1090,7 @@ export default class AbstractScraper extends ScraperConfig {
         return extraRes;
       }
       if (overloadTitles.length) {
-        return await this.isRock(event, overloadTitlesCopy);
+        return this.isRock(event, overloadTitlesCopy);
       }
     }
 
@@ -1096,26 +1105,32 @@ export default class AbstractScraper extends ScraperConfig {
   cleanupEventTitle(workingTitle = '') {
     try {
       if (workingTitle.match(/\s?-\s?\d\d:\d\d/)) {
+        // eslint-disable-next-line no-param-reassign
         workingTitle = workingTitle.replace(/\s?-\s?\d\d:\d\d/, '');
       }
 
       if (workingTitle.includes('&')) {
+        // eslint-disable-next-line no-param-reassign
         workingTitle = workingTitle.replace(/&.*$/, '');
       }
 
       if (workingTitle.includes('|')) {
+        // eslint-disable-next-line no-param-reassign
         workingTitle = workingTitle.replace(/|.*$/, '');
       }
 
       if (workingTitle.includes('•')) {
+        // eslint-disable-next-line no-param-reassign
         workingTitle = workingTitle.replace(/•.*$/, '');
       }
 
       if (workingTitle.includes('+')) {
+        // eslint-disable-next-line no-param-reassign
         workingTitle = workingTitle.replace(/\+.*$/, '');
       }
 
       if (workingTitle.includes(':')) {
+        // eslint-disable-next-line no-param-reassign
         workingTitle = workingTitle.replace(/^[\w\s]+:/, '');
       }
     } catch (error) {
@@ -1133,7 +1148,7 @@ export default class AbstractScraper extends ScraperConfig {
     return workingTitle.toLowerCase().trim();
   }
 
-  *eventGenerator(events) {
+  * eventGenerator(events) {
     while (events.length) {
       yield events.shift();
     }
@@ -1177,9 +1192,9 @@ export default class AbstractScraper extends ScraperConfig {
 
   // step 4.5
   async closeBrowser() {
-    this.browser &&
-      Object.prototype.hasOwnProperty.call(this.browser, 'close') &&
+    if (this.browser && Object.prototype.hasOwnProperty.call(this.browser, 'close')) {
       this.browser.close();
+    }
     return true;
   }
 
