@@ -5,6 +5,7 @@ import longTextSocialsIframes from './longtext/oosterpoort.js';
 import getImage from './gedeeld/image.js';
 import * as _t from '../mods/tools.js';
 import ErrorWrapper from '../mods/error-wrapper.js';
+import terms from './gedeeld/terms.js';
 
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const oostpoortScraper = new AbstractScraper({
@@ -133,7 +134,7 @@ oostpoortScraper.mainPage = async function () {
         }),
     {
       workerData,
-      unavailabiltyTerms: AbstractScraper.unavailabiltyTerms,
+      unavailabiltyTerms: terms.unavailability,
     },
   );
 

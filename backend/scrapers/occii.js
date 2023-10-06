@@ -4,6 +4,7 @@ import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/occii.js';
 import getImage from './gedeeld/image.js';
 import { mapToStartDate, mapToStartTime } from './gedeeld/datums.js';
+import terms from './gedeeld/terms.js';
 
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const occiiScraper = new AbstractScraper({
@@ -116,7 +117,7 @@ occiiScraper.mainPage = async function () {
         return res;
       });
     },
-    { workerData, unavailabiltyTerms: AbstractScraper.unavailabiltyTerms },
+    { workerData, unavailabiltyTerms: terms.unavailability },
   );
 
   rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);

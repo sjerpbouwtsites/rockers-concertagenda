@@ -4,6 +4,7 @@ import * as _t from '../mods/tools.js';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/iduna.js';
 import getImage from './gedeeld/image.js';
+import terms from './gedeeld/terms.js';
 
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const idunaScraper = new AbstractScraper({
@@ -122,7 +123,7 @@ idunaScraper.mainPage = async function () {
             }, 2500);
           });
         },
-        { workerData, unavailabiltyTerms: AbstractScraper.unavailabiltyTerms },
+        { workerData, unavailabiltyTerms: terms.unavailability },
       )
       .then((doomEvents) => doomEvents);
     // TODO catch
@@ -164,7 +165,7 @@ idunaScraper.mainPage = async function () {
             }, 2500);
           });
         },
-        { workerData, unavailabiltyTerms: AbstractScraper.unavailabiltyTerms },
+        { workerData, unavailabiltyTerms: terms.unavailability },
       )
       .then((metalEvents) => metalEvents);
     // TODO catch
@@ -208,7 +209,7 @@ idunaScraper.mainPage = async function () {
             }, 2500);
           });
         },
-        { workerData, unavailabiltyTerms: AbstractScraper.unavailabiltyTerms },
+        { workerData, unavailabiltyTerms: terms.unavailability },
       )
       .then((punkEvents) => punkEvents);
     // TODO catch

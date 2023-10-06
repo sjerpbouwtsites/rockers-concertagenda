@@ -4,6 +4,7 @@ import * as _t from '../mods/tools.js';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/metropool.js';
 import getImage from './gedeeld/image.js';
+import terms from './gedeeld/terms.js';
 
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const metropoolScraper = new AbstractScraper({
@@ -107,7 +108,7 @@ metropoolScraper.mainPage = async function () {
             ?.textContent.match(/uitverkocht|sold\s?out/i) ?? null;
         return res;
       }),
-    { workerData, unavailabiltyTerms: AbstractScraper.unavailabiltyTerms },
+    { workerData, unavailabiltyTerms: terms.unavailability },
   );
 
   rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);

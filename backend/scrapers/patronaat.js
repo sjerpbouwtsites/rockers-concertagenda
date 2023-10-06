@@ -5,6 +5,7 @@ import longTextSocialsIframes from './longtext/patronaat.js';
 import getImage from './gedeeld/image.js';
 import ErrorWrapper from '../mods/error-wrapper.js';
 import * as _t from '../mods/tools.js';
+import terms from './gedeeld/terms.js';
 
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const patronaatScraper = new AbstractScraper({
@@ -99,7 +100,7 @@ patronaatScraper.mainPage = async function () {
         res.soldOut = !!(eventEl.querySelector('.event__tags-item--sold-out') ?? null);
         return res;
       }),
-    { workerData, unavailabiltyTerms: AbstractScraper.unavailabiltyTerms },
+    { workerData, unavailabiltyTerms: terms.unavailability },
   );
   rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
 

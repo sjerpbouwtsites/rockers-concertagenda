@@ -3,6 +3,7 @@ import { workerData } from 'worker_threads';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/kavka.js';
 import getImage from './gedeeld/image.js';
+import terms from './gedeeld/terms.js';
 
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const kavkaScraper = new AbstractScraper({
@@ -168,7 +169,7 @@ kavkaScraper.mainPage = async function () {
 
           return res;
         }),
-    { months: this.months, workerData, unavailabiltyTerms: AbstractScraper.unavailabiltyTerms },
+    { months: this.months, workerData, unavailabiltyTerms: terms.unavailability },
   );
 
   rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);

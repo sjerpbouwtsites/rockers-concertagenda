@@ -4,6 +4,7 @@ import longTextSocialsIframes from './longtext/gebrdenobel.js';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import getImage from './gedeeld/image.js';
 import { waitTime } from '../mods/tools.js';
+import terms from './gedeeld/terms.js';
 
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const gebrdenobelScraper = new AbstractScraper({
@@ -75,6 +76,7 @@ gebrdenobelScraper.singlePageAsyncCheck = async function (event) {
 // #region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
 gebrdenobelScraper.mainPage = async function () {
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
+
   if (availableBaseEvents) {
     const thisWorkersEvents = availableBaseEvents.filter(
       (eventEl, index) => index % workerData.workerCount === workerData.index,
@@ -86,6 +88,8 @@ gebrdenobelScraper.mainPage = async function () {
   }
 
   const { stopFunctie, page } = await this.mainPageStart();
+
+  this.dirtyDebug(page);
 
   let punkMetalRawEvents = await page.evaluate(
     // eslint-disable-next-line no-shadow
@@ -111,7 +115,7 @@ gebrdenobelScraper.mainPage = async function () {
             null;
           return res;
         }),
-    { workerData, unavailabiltyTerms: AbstractScraper.unavailabiltyTerms },
+    { workerData, unavailabiltyTerms: terms.unavailability },
   ); // page.evaluate
 
   punkMetalRawEvents = punkMetalRawEvents.map(this.isMusicEventCorruptedMapper);
@@ -207,8 +211,6 @@ gebrdenobelScraper.cookiesNodig = async function (page) {
 
 // #region [rgba(120, 0, 0, 0.1)]     SINGLE PAGE
 gebrdenobelScraper.singlePage = async function ({ page, event }) {
-  this.dirtyTalk(`single ${event.title}`);
-
   const { stopFunctie } = await this.singlePageStart();
 
   // cookies
@@ -230,8 +232,6 @@ gebrdenobelScraper.singlePage = async function ({ page, event }) {
       event,
     });
   } // eind cookies
-
-  this.dirtyTalk('na cookies');
 
   const pageInfo = await page.evaluate(
     // eslint-disable-next-line no-shadow
@@ -282,8 +282,6 @@ gebrdenobelScraper.singlePage = async function ({ page, event }) {
     { months: this.months, event },
   );
 
-  this.dirtyTalk('voor getimage');
-
   const imageRes = await getImage({
     _this: this,
     page,
@@ -295,7 +293,6 @@ gebrdenobelScraper.singlePage = async function ({ page, event }) {
   });
   pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
   pageInfo.image = imageRes.image;
-  this.dirtyTalk('na getimage');
 
   await page.evaluate(() => {
     document.querySelectorAll('.event-table tr').forEach((row) => {
@@ -304,7 +301,7 @@ gebrdenobelScraper.singlePage = async function ({ page, event }) {
       }
     });
   });
-  this.dirtyTalk('voor prijsres');
+
   const priceRes = await this.getPriceFromHTML({
     page,
     event,
@@ -313,8 +310,7 @@ gebrdenobelScraper.singlePage = async function ({ page, event }) {
   });
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
   pageInfo.price = priceRes.price;
-  this.dirtyTalk('na prijsres');
-  this.dirtyTalk('voor lonjgtext');
+
   const { mediaForHTML, socialsForHTML, textForHTML } = await longTextSocialsIframes(
     page,
     event,
@@ -323,7 +319,6 @@ gebrdenobelScraper.singlePage = async function ({ page, event }) {
   pageInfo.mediaForHTML = mediaForHTML;
   pageInfo.socialsForHTML = socialsForHTML;
   pageInfo.textForHTML = textForHTML;
-  this.dirtyTalk('na lonjgtext');
 
   return this.singlePageEnd({
     pageInfo,

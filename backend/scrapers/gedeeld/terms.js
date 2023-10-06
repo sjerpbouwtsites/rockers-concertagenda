@@ -1,4 +1,4 @@
-export const unavailabilityTerms = [
+const unavailabilityTerms = [
   'uitgesteld',
   'verplaatst',
   'locatie gewijzigd',
@@ -7,7 +7,7 @@ export const unavailabilityTerms = [
   'geannuleerd',
 ];
 
-export const forbiddenTerms = [
+const forbiddenTerms = [
   'clubnacht',
   'VERBODENGENRE',
   'alternatieve rock',
@@ -43,7 +43,7 @@ export const forbiddenTerms = [
   'afrobeats',
 ];
 
-export const wikipediaGoodGenres = [
+const wikipediaGoodGenres = [
   '[href$=metal]',
   '[href$=metal_music]',
   '[href=Hard_rock]',
@@ -84,7 +84,7 @@ export const wikipediaGoodGenres = [
   '[href=Viking_metal]',
 ];
 
-export const goodCategories = [
+const goodCategories = [
   'rock-alternative',
   'punk-emo-hardcore',
   'heavy rock',
@@ -119,4 +119,9 @@ export const goodCategories = [
   'thrash',
 ];
 
-export default null;
+export default {
+  unavailability: unavailabilityTerms,
+  forbidden: forbiddenTerms,
+  wikipediaGoodGenres,
+  goodCategories,
+};

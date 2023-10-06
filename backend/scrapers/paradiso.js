@@ -4,6 +4,7 @@ import * as _t from '../mods/tools.js';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/paradiso.js';
 import getImage from './gedeeld/image.js';
+import terms from './gedeeld/terms.js';
 
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const paradisoScraper = new AbstractScraper({
@@ -123,7 +124,7 @@ paradisoScraper.mainPage = async function () {
         res.unavailable = !!rawEvent?.textContent.match(uaRex);
         return res;
       }),
-    { workerData, resBuiten: res, unavailabiltyTerms: AbstractScraper.unavailabiltyTerms },
+    { workerData, resBuiten: res, unavailabiltyTerms: terms.unavailability },
   );
 
   rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);

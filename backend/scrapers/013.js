@@ -4,6 +4,7 @@ import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/013.js';
 import { mapToStart, mapToDoor } from './gedeeld/datums.js';
 import getImage from './gedeeld/image.js';
+import terms from './gedeeld/terms.js';
 
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const nuldertienScraper = new AbstractScraper({
@@ -93,7 +94,7 @@ nuldertienScraper.mainPage = async function () {
 
         return res;
       }),
-    { workerData, unavailabiltyTerms: AbstractScraper.unavailabiltyTerms },
+    { workerData, unavailabiltyTerms: terms.unavailability },
   );
 
   rawEvents = rawEvents.map(mapToStart);

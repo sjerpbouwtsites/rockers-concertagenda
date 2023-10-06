@@ -4,6 +4,7 @@ import * as _t from '../mods/tools.js';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/p60.js';
 import getImage from './gedeeld/image.js';
+import terms from './gedeeld/terms.js';
 
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const p60Scraper = new AbstractScraper({
@@ -136,7 +137,7 @@ p60Scraper.mainPage = async function () {
             itemEl.querySelector('.p60-list__item__description')?.textContent.trim() ?? '';
           return res;
         }),
-    { workerData, unavailabiltyTerms: AbstractScraper.unavailabiltyTerms },
+    { workerData, unavailabiltyTerms: terms.unavailability },
   );
 
   rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);

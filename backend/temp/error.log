@@ -1,4 +1,600 @@
 
+  willemeen-0 Error - 2:17:05 PM
+  ProtocolError: Runtime.callFunctionOn timed out. Increase the 'protocolTimeout' setting in launch/connect calls for a higher timeout if needed.
+    at <instance_members_initializer> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Connection.js:46:14)
+    at new Callback (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Connection.js:50:16)
+    at CallbackRegistry.create (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Connection.js:89:26)
+    at Connection._rawSend (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Connection.js:202:26)
+    at CDPSessionImpl.send (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Connection.js:409:33)
+    at #evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:231:50)
+    at async ExecutionContext.evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:146:16) 
+  Runtime.callFunctionOn timed out. Increase the 'protocolTimeout' setting in launch/connect calls for a higher timeout if needed.
+  
+  
+  baroeg-1 Error - 2:14:10 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:657:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  willemeen-0 Error - 2:14:05 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:657:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  willemeen-0 Error - 2:13:58 PM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  baroeg-1 Error - 2:13:53 PM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  willemeen-0 Error - 2:13:23 PM
+  TimeoutError: Waiting for selector `.main-img` failed: Waiting failed: 2500ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Waiting for selector `.main-img` failed: Waiting failed: 2500ms exceeded
+  
+  
+  baroeg-1 Error - 2:13:11 PM
+  TimeoutError: Waiting for selector `.hero-area [style*='background-image']` failed: Waiting failed: 2500ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Waiting for selector `.hero-area [style*='background-image']` failed: Waiting failed: 2500ms exceeded
+  
+  
+  baroeg-1 Error - 2:11:54 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:657:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  willemeen-0 Error - 2:11:46 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:657:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  willemeen-0 Error - 2:11:40 PM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  baroeg-1 Error - 2:11:37 PM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  willemeen-0 Error - 2:11:03 PM
+  TimeoutError: Waiting for selector `.main-img` failed: Waiting failed: 2500ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Waiting for selector `.main-img` failed: Waiting failed: 2500ms exceeded
+  
+  
+  baroeg-1 Error - 2:10:53 PM
+  TimeoutError: Waiting for selector `.hero-area [style*='background-image']` failed: Waiting failed: 2500ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Waiting for selector `.hero-area [style*='background-image']` failed: Waiting failed: 2500ms exceeded
+  
+  
+  willemeen-0 Error - 2:10:13 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:657:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  willemeen-0 Error - 2:10:07 PM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  baroeg-1 Error - 2:10:02 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:657:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  baroeg-1 Error - 2:09:46 PM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  willemeen-0 Error - 2:09:29 PM
+  TimeoutError: Waiting for selector `.main-img` failed: Waiting failed: 2500ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Waiting for selector `.main-img` failed: Waiting failed: 2500ms exceeded
+  
+  
+  deflux-0 Error - 2:09:16 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:657:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  deflux-0 Error - 2:09:06 PM
+  TypeError: Cannot read properties of undefined (reading 'errors')
+    at defluxScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/deflux.js:199:30)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:500:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:112:5) 
+  Cannot read properties of undefined (reading 'errors')
+  
+  
+  baroeg-1 Error - 2:08:57 PM
+  TimeoutError: Waiting for selector `.hero-area [style*='background-image']` failed: Waiting failed: 2500ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Waiting for selector `.hero-area [style*='background-image']` failed: Waiting failed: 2500ms exceeded
+  
+  
+  deflux-0 Error - 2:08:54 PM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  baroeg-1 Error - 2:08:35 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:657:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  baroeg-1 Error - 2:08:19 PM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  deflux-0 Error - 2:08:09 PM
+  TimeoutError: Waiting for selector `.evo_event_main_img` failed: Waiting failed: 2500ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Waiting for selector `.evo_event_main_img` failed: Waiting failed: 2500ms exceeded
+  
+  
+  deflux-0 Error - 2:07:53 PM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  baroeg-1 Error - 2:07:37 PM
+  TimeoutError: Waiting for selector `.hero-area [style*='background-image']` failed: Waiting failed: 2500ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Waiting for selector `.hero-area [style*='background-image']` failed: Waiting failed: 2500ms exceeded
+  
+  
+  baroeg-1 Error - 2:07:11 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:657:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  willemeen-0 Error - 2:07:00 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:657:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  deflux-0 Error - 2:06:56 PM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  baroeg-1 Error - 2:06:55 PM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  willemeen-0 Error - 2:06:53 PM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  willemeen-0 Error - 2:06:20 PM
+  TimeoutError: Waiting for selector `.main-img` failed: Waiting failed: 2500ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Waiting for selector `.main-img` failed: Waiting failed: 2500ms exceeded
+  
+  
+  dbs-1 Error - 2:05:55 PM
+  TimeoutError: Waiting for selector `.tribe-events-event-image .wp-post-image` failed: Waiting failed: 2500ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Waiting for selector `.tribe-events-event-image .wp-post-image` failed: Waiting failed: 2500ms exceeded
+  
+  
+  dbs-1 Error - 2:05:25 PM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  willemeen-0 Error - 2:05:19 PM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  dbs-1 Error - 2:04:51 PM
+  TimeoutError: Waiting for selector `.tribe-events-event-image .wp-post-image` failed: Waiting failed: 2500ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Waiting for selector `.tribe-events-event-image .wp-post-image` failed: Waiting failed: 2500ms exceeded
+  
+  
+  willemeen-0 Error - 2:04:43 PM
+  TimeoutError: Waiting for selector `.main-img` failed: Waiting failed: 2500ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Waiting for selector `.main-img` failed: Waiting failed: 2500ms exceeded
+  
+  
+  willemeen-0 Error - 2:04:29 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:657:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  dbs-1 Error - 2:04:27 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:657:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  willemeen-0 Error - 2:04:23 PM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  effenaar-0 Error - 2:04:05 PM
+  TimeoutError: Waiting for selector `.event-bar-inner-row` failed: Waiting failed: 30000ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Waiting for selector `.event-bar-inner-row` failed: Waiting failed: 30000ms exceeded
+  
+  
+  effenaar-0 Error - 2:03:50 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:657:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  willemeen-0 Error - 2:03:47 PM
+  TimeoutError: Waiting for selector `.main-img` failed: Waiting failed: 2500ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Waiting for selector `.main-img` failed: Waiting failed: 2500ms exceeded
+  
+  
+  willemeen-0 Error - 2:03:45 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:657:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  dbs-1 Error - 2:03:40 PM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  effenaar-0 Error - 2:03:34 PM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  dbs-1 Error - 2:02:47 PM
+  TimeoutError: Waiting for selector `.tribe-events-event-image .wp-post-image` failed: Waiting failed: 2500ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Waiting for selector `.tribe-events-event-image .wp-post-image` failed: Waiting failed: 2500ms exceeded
+  
+  
+  patronaat-0 Error - 2:00:58 PM
+  Error: false
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:721:29
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:711:23)
+    at patronaatScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/patronaat.js:237:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:500:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:112:5) 
+  false
+  
+  
+  gebrdenobel-0 Error - 12:42:28 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:228:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  gebrdenobel-0 Error - 12:42:00 PM
+  TypeError: Cannot read properties of undefined (reading 'join')
+pptr:evaluate;gebrdenobelScraper.mainPage%20(file%3A%2F%2F%2Fvar%2Fwww%2Fhtml%2Fconcertagenda%2Fbackend%2Fscrapers%2Fgebrdenobel.js%3A94%3A39):16:55
+    at evaluate (evaluate at gebrdenobelScraper.mainPage (file:///var/www/html/concertagenda/backend/scrapers/gebrdenobel.js:94:39), <anonymous>:15:54)
+    at evaluate (evaluate at gebrdenobelScraper.mainPage (file:///var/www/html/concertagenda/backend/scrapers/gebrdenobel.js:94:39), <anonymous>:6:9)
+    at #evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:249:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:146:16)
+    at async gebrdenobelScraper.mainPage (file:///var/www/html/concertagenda/backend/scrapers/gebrdenobel.js:94:28)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:123:29) 
+  Cannot read properties of undefined (reading 'join')
+pptr:evaluate;gebrdenobelScraper.mainPage%20(file%3A%2F%2F%2Fvar%2Fwww%2Fhtml%2Fconcertagenda%2Fbackend%2Fscrapers%2Fgebrdenobel.js%3A94%3A39):16:55
+  
+  
+  gebrdenobel-0 Error - 12:40:07 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:227:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  gebrdenobel-0 Error - 12:39:39 PM
+  TypeError: Cannot read properties of undefined (reading 'join')
+pptr:evaluate;gebrdenobelScraper.mainPage%20(file%3A%2F%2F%2Fvar%2Fwww%2Fhtml%2Fconcertagenda%2Fbackend%2Fscrapers%2Fgebrdenobel.js%3A94%3A39):16:55
+    at evaluate (evaluate at gebrdenobelScraper.mainPage (file:///var/www/html/concertagenda/backend/scrapers/gebrdenobel.js:94:39), <anonymous>:15:54)
+    at evaluate (evaluate at gebrdenobelScraper.mainPage (file:///var/www/html/concertagenda/backend/scrapers/gebrdenobel.js:94:39), <anonymous>:6:9)
+    at #evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:249:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:146:16)
+    at async gebrdenobelScraper.mainPage (file:///var/www/html/concertagenda/backend/scrapers/gebrdenobel.js:94:28)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:123:29) 
+  Cannot read properties of undefined (reading 'join')
+pptr:evaluate;gebrdenobelScraper.mainPage%20(file%3A%2F%2F%2Fvar%2Fwww%2Fhtml%2Fconcertagenda%2Fbackend%2Fscrapers%2Fgebrdenobel.js%3A94%3A39):16:55
+  
+  
+  gebrdenobel-0 Error - 12:35:32 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:224:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  gebrdenobel-0 Error - 12:35:04 PM
+  TypeError: Cannot read properties of undefined (reading 'join')
+pptr:evaluate;gebrdenobelScraper.mainPage%20(file%3A%2F%2F%2Fvar%2Fwww%2Fhtml%2Fconcertagenda%2Fbackend%2Fscrapers%2Fgebrdenobel.js%3A92%3A39):16:55
+    at evaluate (evaluate at gebrdenobelScraper.mainPage (file:///var/www/html/concertagenda/backend/scrapers/gebrdenobel.js:92:39), <anonymous>:15:54)
+    at evaluate (evaluate at gebrdenobelScraper.mainPage (file:///var/www/html/concertagenda/backend/scrapers/gebrdenobel.js:92:39), <anonymous>:6:9)
+    at #evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:249:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:146:16)
+    at async gebrdenobelScraper.mainPage (file:///var/www/html/concertagenda/backend/scrapers/gebrdenobel.js:92:28)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:121:29) 
+  Cannot read properties of undefined (reading 'join')
+pptr:evaluate;gebrdenobelScraper.mainPage%20(file%3A%2F%2F%2Fvar%2Fwww%2Fhtml%2Fconcertagenda%2Fbackend%2Fscrapers%2Fgebrdenobel.js%3A92%3A39):16:55
+  
+  
+  gebrdenobel-0 Error - 12:34:20 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:224:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  gebrdenobel-0 Error - 12:33:51 PM
+  TypeError: Cannot read properties of undefined (reading 'join')
+pptr:evaluate;gebrdenobelScraper.mainPage%20(file%3A%2F%2F%2Fvar%2Fwww%2Fhtml%2Fconcertagenda%2Fbackend%2Fscrapers%2Fgebrdenobel.js%3A92%3A39):16:55
+    at evaluate (evaluate at gebrdenobelScraper.mainPage (file:///var/www/html/concertagenda/backend/scrapers/gebrdenobel.js:92:39), <anonymous>:15:54)
+    at evaluate (evaluate at gebrdenobelScraper.mainPage (file:///var/www/html/concertagenda/backend/scrapers/gebrdenobel.js:92:39), <anonymous>:6:9)
+    at #evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:249:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:146:16)
+    at async gebrdenobelScraper.mainPage (file:///var/www/html/concertagenda/backend/scrapers/gebrdenobel.js:92:28)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:121:29) 
+  Cannot read properties of undefined (reading 'join')
+pptr:evaluate;gebrdenobelScraper.mainPage%20(file%3A%2F%2F%2Fvar%2Fwww%2Fhtml%2Fconcertagenda%2Fbackend%2Fscrapers%2Fgebrdenobel.js%3A92%3A39):16:55
+  
+  
+  gebrdenobel-0 Error - 12:33:21 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:222:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  gebrdenobel-0 Error - 12:32:53 PM
+  TypeError: Cannot read properties of undefined (reading 'join')
+pptr:evaluate;gebrdenobelScraper.mainPage%20(file%3A%2F%2F%2Fvar%2Fwww%2Fhtml%2Fconcertagenda%2Fbackend%2Fscrapers%2Fgebrdenobel.js%3A92%3A39):16:55
+    at evaluate (evaluate at gebrdenobelScraper.mainPage (file:///var/www/html/concertagenda/backend/scrapers/gebrdenobel.js:92:39), <anonymous>:15:54)
+    at evaluate (evaluate at gebrdenobelScraper.mainPage (file:///var/www/html/concertagenda/backend/scrapers/gebrdenobel.js:92:39), <anonymous>:6:9)
+    at #evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:249:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:146:16)
+    at async gebrdenobelScraper.mainPage (file:///var/www/html/concertagenda/backend/scrapers/gebrdenobel.js:92:28)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:29) 
+  Cannot read properties of undefined (reading 'join')
+pptr:evaluate;gebrdenobelScraper.mainPage%20(file%3A%2F%2F%2Fvar%2Fwww%2Fhtml%2Fconcertagenda%2Fbackend%2Fscrapers%2Fgebrdenobel.js%3A92%3A39):16:55
+  
+  
+  gebrdenobel-0 Error - 12:32:19 PM
+  TypeError: Cannot read properties of undefined (reading 'join')
+pptr:evaluate;gebrdenobelScraper.mainPage%20(file%3A%2F%2F%2Fvar%2Fwww%2Fhtml%2Fconcertagenda%2Fbackend%2Fscrapers%2Fgebrdenobel.js%3A90%3A39):16:55
+    at evaluate (evaluate at gebrdenobelScraper.mainPage (file:///var/www/html/concertagenda/backend/scrapers/gebrdenobel.js:90:39), <anonymous>:15:54)
+    at evaluate (evaluate at gebrdenobelScraper.mainPage (file:///var/www/html/concertagenda/backend/scrapers/gebrdenobel.js:90:39), <anonymous>:6:9)
+    at #evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:249:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:146:16)
+    at async gebrdenobelScraper.mainPage (file:///var/www/html/concertagenda/backend/scrapers/gebrdenobel.js:90:28)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:29) 
+  Cannot read properties of undefined (reading 'join')
+pptr:evaluate;gebrdenobelScraper.mainPage%20(file%3A%2F%2F%2Fvar%2Fwww%2Fhtml%2Fconcertagenda%2Fbackend%2Fscrapers%2Fgebrdenobel.js%3A90%3A39):16:55
+  
+  
+  paradiso-1 Error - 12:31:05 PM
+  TypeError: Cannot read properties of undefined (reading 'join')
+pptr:evaluate;paradisoScraper.mainPage%20(file%3A%2F%2F%2Fvar%2Fwww%2Fhtml%2Fconcertagenda%2Fbackend%2Fscrapers%2Fparadiso.js%3A110%3A30):12:53
+    at evaluate (evaluate at paradisoScraper.mainPage (file:///var/www/html/concertagenda/backend/scrapers/paradiso.js:110:30), <anonymous>:11:52)
+    at evaluate (evaluate at paradisoScraper.mainPage (file:///var/www/html/concertagenda/backend/scrapers/paradiso.js:110:30), <anonymous>:1:60)
+    at #evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:249:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:146:16)
+    at async paradisoScraper.mainPage (file:///var/www/html/concertagenda/backend/scrapers/paradiso.js:110:19)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:29) 
+  Cannot read properties of undefined (reading 'join')
+pptr:evaluate;paradisoScraper.mainPage%20(file%3A%2F%2F%2Fvar%2Fwww%2Fhtml%2Fconcertagenda%2Fbackend%2Fscrapers%2Fparadiso.js%3A110%3A30):12:53
+  
+  
+  metropool-2 Error - 12:30:46 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:222:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  gebrdenobel-0 Error - 12:30:17 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:222:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  metropool-2 Error - 12:30:02 PM
+  TypeError: Cannot read properties of undefined (reading 'join')
+pptr:evaluate;metropoolScraper.mainPage%20(file%3A%2F%2F%2Fvar%2Fwww%2Fhtml%2Fconcertagenda%2Fbackend%2Fscrapers%2Fmetropool.js%3A88%3A30):13:53
+    at evaluate (evaluate at metropoolScraper.mainPage (file:///var/www/html/concertagenda/backend/scrapers/metropool.js:88:30), <anonymous>:12:52)
+    at evaluate (evaluate at metropoolScraper.mainPage (file:///var/www/html/concertagenda/backend/scrapers/metropool.js:88:30), <anonymous>:1:60)
+    at #evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:249:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:146:16)
+    at async metropoolScraper.mainPage (file:///var/www/html/concertagenda/backend/scrapers/metropool.js:88:19)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:29) 
+  Cannot read properties of undefined (reading 'join')
+pptr:evaluate;metropoolScraper.mainPage%20(file%3A%2F%2F%2Fvar%2Fwww%2Fhtml%2Fconcertagenda%2Fbackend%2Fscrapers%2Fmetropool.js%3A88%3A30):13:53
+  
+  
+  gebrdenobel-0 Error - 12:29:48 PM
+  TypeError: Cannot read properties of undefined (reading 'join')
+pptr:evaluate;gebrdenobelScraper.mainPage%20(file%3A%2F%2F%2Fvar%2Fwww%2Fhtml%2Fconcertagenda%2Fbackend%2Fscrapers%2Fgebrdenobel.js%3A90%3A39):16:55
+    at evaluate (evaluate at gebrdenobelScraper.mainPage (file:///var/www/html/concertagenda/backend/scrapers/gebrdenobel.js:90:39), <anonymous>:15:54)
+    at evaluate (evaluate at gebrdenobelScraper.mainPage (file:///var/www/html/concertagenda/backend/scrapers/gebrdenobel.js:90:39), <anonymous>:6:9)
+    at #evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:249:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:146:16)
+    at async gebrdenobelScraper.mainPage (file:///var/www/html/concertagenda/backend/scrapers/gebrdenobel.js:90:28)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:29) 
+  Cannot read properties of undefined (reading 'join')
+pptr:evaluate;gebrdenobelScraper.mainPage%20(file%3A%2F%2F%2Fvar%2Fwww%2Fhtml%2Fconcertagenda%2Fbackend%2Fscrapers%2Fgebrdenobel.js%3A90%3A39):16:55
+  
+  
+  gebrdenobel-0 Error - 12:28:19 PM
+  TypeError: Cannot read properties of undefined (reading 'join')
+pptr:evaluate;gebrdenobelScraper.mainPage%20(file%3A%2F%2F%2Fvar%2Fwww%2Fhtml%2Fconcertagenda%2Fbackend%2Fscrapers%2Fgebrdenobel.js%3A90%3A39):16:55
+    at evaluate (evaluate at gebrdenobelScraper.mainPage (file:///var/www/html/concertagenda/backend/scrapers/gebrdenobel.js:90:39), <anonymous>:15:54)
+    at evaluate (evaluate at gebrdenobelScraper.mainPage (file:///var/www/html/concertagenda/backend/scrapers/gebrdenobel.js:90:39), <anonymous>:6:9)
+    at #evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:249:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:146:16)
+    at async gebrdenobelScraper.mainPage (file:///var/www/html/concertagenda/backend/scrapers/gebrdenobel.js:90:28)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:29) 
+  Cannot read properties of undefined (reading 'join')
+pptr:evaluate;gebrdenobelScraper.mainPage%20(file%3A%2F%2F%2Fvar%2Fwww%2Fhtml%2Fconcertagenda%2Fbackend%2Fscrapers%2Fgebrdenobel.js%3A90%3A39):16:55
+  
+  
   gebrdenobel-0 Error - 7:12:17 PM
   Error: Timeout baseEvent
     at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:669:18)

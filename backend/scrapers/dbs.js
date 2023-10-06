@@ -4,6 +4,7 @@ import * as _t from '../mods/tools.js';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/dbs.js';
 import getImage from './gedeeld/image.js';
+import terms from './gedeeld/terms.js';
 
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const dbsScraper = new AbstractScraper({
@@ -158,7 +159,7 @@ dbsScraper.mainPage = async function () {
 
         return res;
       }),
-    { months: this.months, workerData, unavailabiltyTerms: AbstractScraper.unavailabiltyTerms },
+    { months: this.months, workerData, unavailabiltyTerms: terms.unavailability },
   );
   rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
 

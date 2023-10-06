@@ -14,12 +14,7 @@ import makeLongHTML from './longHTML.js';
 import WorkerStatus from '../../mods/WorkerStatus.js';
 import ScraperConfig from './scraper-config.js';
 import debugSettings from './debug-settings.js';
-import {
-  unavailabilityTerms,
-  forbiddenTerms,
-  wikipediaGoodGenres,
-  goodCategories,
-} from './terms.js';
+import terms from './terms.js';
 import _getPriceFromHTML from './price.js';
 import shell from '../../mods/shell.js';
 
@@ -43,16 +38,6 @@ export default class AbstractScraper extends ScraperConfig {
   rockRefuseListNew = '';
 
   eventImagesFolder = fsDirections.publicEventImages;
-
-  static unavailabilityTerms = unavailabilityTerms;
-
-  // #region [rgba(0, 0, 60, 0.10)]                             ISROCKSETTINGS
-  static forbiddenTerms = forbiddenTerms;
-
-  static wikipediaGoodGenres = wikipediaGoodGenres;
-
-  static goodCategories = goodCategories;
-  // #endregion                                                ISROCKSETTINGS
 
   // #region [rgba(0, 0, 120, 0.10)]                            CONSTRUCTOR & INSTALL
   constructor(obj) {
@@ -117,6 +102,7 @@ export default class AbstractScraper extends ScraperConfig {
     }
 
     const baseMusicEvents = await this.mainPage().catch(this.handleOuterScrapeCatch);
+
     if (!baseMusicEvents) return false;
     const checkedEvents = await this.announceAndCheck(baseMusicEvents).catch(
       this.handleOuterScrapeCatch,
@@ -216,6 +202,7 @@ export default class AbstractScraper extends ScraperConfig {
    */
   async mainPageStart() {
     // @TODO 3 stopfuncties maken: 1 base events; 1 single; 1 totaal.
+
     const stopFunctie = setTimeout(() => {
       _t.wrappedHandleError(
         new ErrorWrapper({
@@ -241,6 +228,7 @@ export default class AbstractScraper extends ScraperConfig {
     if (this._s.app.mainPage.useCustomScraper) {
       return { stopFunctie };
     }
+
     const page = await this.browser.newPage();
     await page.goto(this._s.mainPage.url, this._s.mainPage);
 
@@ -262,7 +250,6 @@ export default class AbstractScraper extends ScraperConfig {
    * @memberof AbstractScraper
    */
   async mainPageEnd({ stopFunctie, page, rawEvents }) {
-    
     if (shell.force && shell.force.includes(workerData.family)) {
       this.dirtyLog(rawEvents);
     }
@@ -770,7 +757,7 @@ export default class AbstractScraper extends ScraperConfig {
   // #region [rgba(90, 0, 90, 0.10)]                            ASYNC CHECKERS
 
   /**
-   * Loopt over AbstractScraper.goodCategories en kijkt of ze in
+   * Loopt over terms.goodCategories en kijkt of ze in
    * een bepaalde text voorkomen, standaard bestaande uit de titel en de shorttext van
    * de event.
    *
@@ -801,7 +788,7 @@ export default class AbstractScraper extends ScraperConfig {
       }
     }
 
-    const hasGoodTerm = AbstractScraper.goodCategories.find((goodTerm) =>
+    const hasGoodTerm = terms.goodCategories.find((goodTerm) =>
       combinedTextToCheck.includes(goodTerm),
     );
     const workingTitle = this.cleanupEventTitle(event.title);
@@ -823,7 +810,7 @@ export default class AbstractScraper extends ScraperConfig {
   }
 
   /**
-   * Loopt over AbstractScraper.forbiddenTerms en kijkt of ze in
+   * Loopt over terms.forbiddenTerms en kijkt of ze in
    * een bepaalde text voorkomen, standaard bestaande uit de titel en de shorttext van
    * de event.
    *
@@ -843,7 +830,7 @@ export default class AbstractScraper extends ScraperConfig {
       }
     }
     combinedTextToCheck = combinedTextToCheck.toLowerCase();
-    const hasForbiddenTerm = AbstractScraper.forbiddenTerms.find((forbiddenTerm) =>
+    const hasForbiddenTerm = terms.forbidden.find((forbiddenTerm) =>
       combinedTextToCheck.includes(forbiddenTerm),
     );
     if (hasForbiddenTerm) {
@@ -1044,7 +1031,7 @@ export default class AbstractScraper extends ScraperConfig {
         }
         return found;
       },
-      { wikipediaGoodGenres: AbstractScraper.wikipediaGoodGenres },
+      { wikipediaGoodGenres: terms.wikipediaGoodGenres },
     );
     !page.isClosed() && page.close();
     if (wikiRockt) {

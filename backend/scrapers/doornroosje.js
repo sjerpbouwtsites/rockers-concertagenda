@@ -180,7 +180,7 @@ doornroosjeScraper.singlePage = async function ({ page, event }) {
 
   let pageInfo;
   if (!event.venueEventUrl.includes('soulcrusher') && !event.venueEventUrl.includes('festival')) {
-    this.dirtyTalk('geen festival');
+
     pageInfo = await page.evaluate(
       // eslint-disable-next-line no-shadow
       ({ months, event }) => {

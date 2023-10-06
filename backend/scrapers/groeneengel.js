@@ -3,6 +3,7 @@ import { workerData } from 'worker_threads';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/groeneengel.js';
 import getImage from './gedeeld/image.js';
+import terms from './gedeeld/terms.js';
 
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const groeneEngelScraper = new AbstractScraper({
@@ -133,7 +134,7 @@ groeneEngelScraper.mainPage = async function () {
 
         return res;
       }),
-    { workerData, unavailabiltyTerms: AbstractScraper.unavailabiltyTerms, months: this.months },
+    { workerData, unavailabiltyTerms: terms.unavailability, months: this.months },
   );
 
   baseEvents = baseEvents.map(this.isMusicEventCorruptedMapper);
