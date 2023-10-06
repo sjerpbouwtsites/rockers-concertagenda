@@ -84,7 +84,7 @@ depulScraper.mainPage = async function () {
     const thisWorkersEvents = availableBaseEvents.filter(
       (eventEl, index) => index % workerData.workerCount === workerData.index,
     );
-    return await this.mainPageEnd({ stopFunctie: null, rawEvents: thisWorkersEvents });
+    return this.mainPageEnd({ stopFunctie: null, rawEvents: thisWorkersEvents });
   }
   const { stopFunctie, page } = await this.mainPageStart();
 
@@ -96,6 +96,7 @@ depulScraper.mainPage = async function () {
   await _t.waitTime(250);
 
   let rawEvents = await page.evaluate(
+    // eslint-disable-next-line no-shadow
     ({ months, workerData }) =>
       Array.from(document.querySelectorAll('.agenda-item')).map((rawEvent) => {
         const title = rawEvent.querySelector('h2')?.textContent.trim() ?? '';
@@ -130,7 +131,7 @@ depulScraper.mainPage = async function () {
   const thisWorkersEvents = rawEvents.filter(
     (eventEl, index) => index % workerData.workerCount === workerData.index,
   );
-  return await this.mainPageEnd({ stopFunctie, rawEvents: thisWorkersEvents });
+  return this.mainPageEnd({ stopFunctie, rawEvents: thisWorkersEvents });
 };
 // #endregion                          MAIN PAGE
 
@@ -139,6 +140,7 @@ depulScraper.singlePage = async function ({ page, event }) {
   const { stopFunctie } = await this.singlePageStart();
 
   const pageInfo = await page.evaluate(
+    // eslint-disable-next-line no-shadow
     ({ months, event }) => {
       const res = {
         anker: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
@@ -230,8 +232,8 @@ depulScraper.singlePage = async function ({ page, event }) {
           res.start = res.door;
           res.door = null;
         }
+        return res;
       });
-
       return res;
     },
     { months: this.months, event },
@@ -274,7 +276,7 @@ depulScraper.singlePage = async function ({ page, event }) {
   pageInfo.socialsForHTML = socialsForHTML;
   pageInfo.textForHTML = textForHTML;
 
-  return await this.singlePageEnd({
+  return this.singlePageEnd({
     pageInfo,
     stopFunctie,
     page,
