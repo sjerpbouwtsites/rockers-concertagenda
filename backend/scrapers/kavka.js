@@ -81,12 +81,13 @@ kavkaScraper.mainPage = async function () {
     const thisWorkersEvents = availableBaseEvents.filter(
       (eventEl, index) => index % workerData.workerCount === workerData.index,
     );
-    return await this.mainPageEnd({ stopFunctie: null, rawEvents: thisWorkersEvents });
+    await this.mainPageEnd({ stopFunctie: null, rawEvents: thisWorkersEvents });
   }
 
   const { stopFunctie, page } = await this.mainPageStart();
 
   let rawEvents = await page.evaluate(
+    // eslint-disable-next-line no-shadow
     ({ months, workerData, unavailabiltyTerms }) =>
       Array.from(document.querySelectorAll('.events-list > a'))
         .filter((rawEvent) =>
@@ -178,7 +179,7 @@ kavkaScraper.mainPage = async function () {
   const thisWorkersEvents = rawEvents.filter(
     (eventEl, index) => index % workerData.workerCount === workerData.index,
   );
-  return await this.mainPageEnd({ stopFunctie, rawEvents: thisWorkersEvents });
+  await this.mainPageEnd({ stopFunctie, rawEvents: thisWorkersEvents });
 };
 // #endregion                          MAIN PAGE
 
@@ -190,7 +191,7 @@ kavkaScraper.singlePage = async function ({ page, event }) {
     .waitForSelector('img[src*="kavka.be/wp-content"].lazyloaded', {
       timeout: 1500,
     })
-    .catch((err) => {
+    .catch(() => {
       // niets doen.
     });
 
@@ -209,6 +210,7 @@ kavkaScraper.singlePage = async function ({ page, event }) {
           remarks: `page info top level trycatch ${res.anker}`,
         });
       }
+      return true;
     },
     { event },
   );
@@ -243,6 +245,6 @@ kavkaScraper.singlePage = async function ({ page, event }) {
   pageInfo.socialsForHTML = socialsForHTML;
   pageInfo.textForHTML = textForHTML;
 
-  return await this.singlePageEnd({ pageInfo, stopFunctie, page });
+  await this.singlePageEnd({ pageInfo, stopFunctie, page });
 };
 // #endregion                         SINGLE PAGE
