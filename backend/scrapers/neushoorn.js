@@ -87,7 +87,7 @@ neushoornScraper.mainPage = async function () {
     const thisWorkersEvents = availableBaseEvents.filter(
       (eventEl, index) => index % workerData.workerCount === workerData.index,
     );
-    return await this.mainPageEnd({ stopFunctie: null, rawEvents: thisWorkersEvents });
+    await this.mainPageEnd({ stopFunctie: null, rawEvents: thisWorkersEvents });
   }
 
   const { stopFunctie, page } = await this.mainPageStart();
@@ -105,7 +105,7 @@ neushoornScraper.mainPage = async function () {
       'close-thread',
       null,
     );
-    return await this.mainPageEnd({ stopFunctie, page, rawEvents: [] });
+    await this.mainPageEnd({ stopFunctie, page, rawEvents: [] });
   }
 
   let rawEvents = await page.evaluate(
@@ -146,7 +146,8 @@ neushoornScraper.singlePage = async function ({ page, event }) {
   const { stopFunctie } = await this.singlePageStart();
 
   let pageInfo = await page.evaluate(
-    ({ months, event }) => {
+    // eslint-disable-next-line no-shadow
+    ({ event }) => {
       const res = {
         anker: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
         errors: [],
@@ -214,7 +215,7 @@ neushoornScraper.singlePage = async function ({ page, event }) {
   pageInfo.socialsForHTML = socialsForHTML;
   pageInfo.textForHTML = textForHTML;
 
-  return await this.singlePageEnd({
+  await this.singlePageEnd({
     pageInfo,
     stopFunctie,
     page,
