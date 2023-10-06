@@ -23,11 +23,11 @@ module.exports = {
   rules: {
     'no-mixed-operators': 'off',
     'prefer-destructuring': 0,
+    'operator-linebreak': 0,
     'function-paren-newline': 0,
     'implicit-arrow-linebreak': 0,
     'class-methods-use-this': 0,
     quotes: 0,
-    'operator-linebreak': ['error', 'after'],
     'no-continue': 0,
     'import/extensions': ['error', 'always', { ignorePackages: true }],
     strict: 0,

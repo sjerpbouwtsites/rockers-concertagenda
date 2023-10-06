@@ -23,6 +23,7 @@
     "strict": 0,
     "no-useless-escape": "off",
     "function-paren-newline": 0,
+        "operator-linebreak": 0,
     "prefer-destructuring": 0,
     "import/extensions": ["error", "always", 
       {"ignorePackages": true}

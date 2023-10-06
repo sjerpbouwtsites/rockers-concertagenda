@@ -98,7 +98,7 @@ nieuwenorScraper.mainPage = async function () {
     const thisWorkersEvents = availableBaseEvents.filter(
       (eventEl, index) => index % workerData.workerCount === workerData.index,
     );
-    return await this.mainPageEnd({ stopFunctie: null, rawEvents: thisWorkersEvents });
+    await this.mainPageEnd({ stopFunctie: null, rawEvents: thisWorkersEvents });
   }
 
   const { stopFunctie, page } = await this.mainPageStart();
@@ -140,7 +140,7 @@ nieuwenorScraper.mainPage = async function () {
   const thisWorkersEvents = rawEvents.filter(
     (eventEl, index) => index % workerData.workerCount === workerData.index,
   );
-  return await this.mainPageEnd({ stopFunctie, rawEvents: thisWorkersEvents });
+  await this.mainPageEnd({ stopFunctie, rawEvents: thisWorkersEvents });
 };
 // #endregion                          MAIN PAGE
 
@@ -149,7 +149,8 @@ nieuwenorScraper.singlePage = async function ({ page, event }) {
   const { stopFunctie } = await this.singlePageStart();
 
   const pageInfo = await page.evaluate(
-    ({ months, event }) => {
+    // eslint-disable-next-line no-shadow
+    ({ event }) => {
       const res = {
         anker: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
         errors: [],
@@ -219,7 +220,7 @@ nieuwenorScraper.singlePage = async function ({ page, event }) {
   pageInfo.socialsForHTML = socialsForHTML;
   pageInfo.textForHTML = textForHTML;
 
-  return await this.singlePageEnd({
+  await this.singlePageEnd({
     pageInfo,
     stopFunctie,
     page,
