@@ -1,5 +1,6 @@
 /* global document */
 import { parentPort, workerData } from 'worker_threads';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import puppeteer from 'puppeteer';
 import MusicEvent from '../mods/music-event.js';
 import { Location } from '../mods/locations.js';
@@ -8,40 +9,6 @@ import * as _t from '../mods/tools.js';
 import { QuickWorkerMessage } from '../mods/rock-worker.js';
 import getVenueMonths from '../mods/months.js';
 import { workerConfig } from '../mods/worker-config.js';
-
-parentPort.on('message', (message) => {
-  const pm = JSON.parse(message);
-  if (pm?.type === 'process' && pm?.subtype === 'command-start') {
-    try {
-      scrapeMetalfan(pm?.messageData);
-    } catch (error) {
-      parentPort.postMessage({
-        status: 'error',
-        message: error,
-      });
-    }
-  }
-});
-
-async function scrapeMetalfan() {
-  try {
-    const qwm = new QuickWorkerMessage(workerData);
-    parentPort.postMessage(qwm.workerInitialized());
-    const browser = await puppeteer.launch();
-    await getBaseMusicEvents(browser, qwm);
-    parentPort.postMessage(qwm.workerDone(EventsList.amountOfEvents));
-    EventsList.save('metalfan');
-    browser.close();
-  } catch (error) {
-    _t.handleError(error, workerData, 'metal fan outer catch', 'close-thread', null);
-  }
-}
-
-async function getBaseMusicEvents(browser, qwm) {
-  const page = await browser.newPage();
-  await metalFanDoURL(page, 'https://www.metalfan.nl/agenda.php', qwm);
-  await metalFanDoURL(page, 'https://www.metalfan.nl/agenda.php?year=2024&sw=', qwm);
-}
 
 async function metalFanDoURL(page, url, qwm) {
   await page.goto(url);
@@ -91,18 +58,13 @@ async function metalFanDoURL(page, url, qwm) {
 
   const jaar = url.includes('2024') ? '2024' : '2023'; // TODO FIX
   const eventData = await page.evaluate(
+    // eslint-disable-next-line no-shadow
     ({ months, rename, jaar }) =>
       Array.from(document.querySelectorAll('.calentry')).map((metalfanEvent) => {
-        let dateAnchorEl;
         let eventDate;
-        let eventNameEl;
-        let eventHTML;
-        let eventName;
-        let eventHTMLrules;
         let eventLocationName;
-        let shortText;
 
-        dateAnchorEl = metalfanEvent.querySelector('a[name]');
+        const dateAnchorEl = metalfanEvent.querySelector('a[name]');
         eventDate = metalfanEvent.contains(dateAnchorEl) && dateAnchorEl.getAttribute('name');
         if (!eventDate) {
           const metalfanEventCaldateEl = metalfanEvent.querySelector('.caldate');
@@ -115,13 +77,13 @@ async function metalFanDoURL(page, url, qwm) {
             eventDate = monthNumber && dayString ? `${jaar}-${monthNumber}-${dayString}` : null;
           }
         }
-        eventNameEl = metalfanEvent.querySelector('.event');
-        eventName = metalfanEvent.contains(eventNameEl)
+        const eventNameEl = metalfanEvent.querySelector('.event');
+        const eventName = metalfanEvent.contains(eventNameEl)
           ? eventNameEl.textContent.trim()
           : 'geen naam!';
 
         eventNameEl.parentNode.removeChild(eventNameEl);
-        eventHTML = metalfanEvent.querySelector('.calevent').innerHTML;
+        const eventHTML = metalfanEvent.querySelector('.calevent').innerHTML;
         const eventCommaSplice = metalfanEvent.querySelector('.calevent').textContent.split(',');
         eventLocationName = (eventCommaSplice[0] || '').trim().toLowerCase();
 
@@ -129,8 +91,8 @@ async function metalFanDoURL(page, url, qwm) {
           eventLocationName = rename[eventLocationName];
         }
 
-        eventHTMLrules = eventHTML.split('<br>');
-        shortText =
+        const eventHTMLrules = eventHTML.split('<br>');
+        const shortText =
           eventHTMLrules.length > 1 ? eventHTMLrules[eventHTMLrules.length - 1] || '' : '';
         return {
           title: eventName,
@@ -156,7 +118,7 @@ async function metalFanDoURL(page, url, qwm) {
       thisMusicEvent.image = image;
 
       if (skipWithMetalfan.includes(locationName)) {
-        return;
+        return null;
       }
       thisMusicEvent.location = locationName;
       return thisMusicEvent;
@@ -170,3 +132,36 @@ async function metalFanDoURL(page, url, qwm) {
 
   return true;
 }
+
+async function getBaseMusicEvents(browser, qwm) {
+  const page = await browser.newPage();
+  await metalFanDoURL(page, 'https://www.metalfan.nl/agenda.php', qwm);
+  await metalFanDoURL(page, 'https://www.metalfan.nl/agenda.php?year=2024&sw=', qwm);
+}
+
+async function scrapeMetalfan() {
+  try {
+    const qwm = new QuickWorkerMessage(workerData);
+    parentPort.postMessage(qwm.workerInitialized());
+    const browser = await puppeteer.launch();
+    await getBaseMusicEvents(browser, qwm);
+    parentPort.postMessage(qwm.workerDone(EventsList.amountOfEvents));
+    EventsList.save('metalfan');
+    browser.close();
+  } catch (error) {
+    _t.handleError(error, workerData, 'metal fan outer catch', 'close-thread', null);
+  }
+}
+parentPort.on('message', (message) => {
+  const pm = JSON.parse(message);
+  if (pm?.type === 'process' && pm?.subtype === 'command-start') {
+    try {
+      scrapeMetalfan(pm?.messageData);
+    } catch (error) {
+      parentPort.postMessage({
+        status: 'error',
+        message: error,
+      });
+    }
+  }
+});

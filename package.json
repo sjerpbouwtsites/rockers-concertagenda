@@ -6,11 +6,11 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.3",
+    "os-utils": "^0.0.14",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "^5.0.1",
-    "web-vitals": "^3.4.0",
-    "os-utils": "^0.0.14"
+    "web-vitals": "^3.4.0"
   },
   "scripts": {
     "init": "run-when-changed --watch 'src/**/*.js' --exec 'npm run eslint-for-formatting; npm run --silent prettier-formatting'",
