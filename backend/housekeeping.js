@@ -4,6 +4,9 @@ import fsDirections from './mods/fs-directions.js';
 
 function removePublicTexts(removeList) {
   removeList.forEach((forceVal) => {
+    if (!fs.existsSync(`${fsDirections.publicTexts}/${forceVal}`)) {
+      fs.mkdirSync(`${fsDirections.publicTexts}/${forceVal}`);
+    }
     fs.readdirSync(`${fsDirections.publicTexts}/${forceVal}`).forEach((file) => {
       fs.rmSync(`${fsDirections.publicTexts}/${forceVal}/${file}`);
     });
@@ -12,6 +15,9 @@ function removePublicTexts(removeList) {
 function removePublicEventImages(removeImagesLocationsList) {
   const pei = fsDirections.publicEventImages;
   removeImagesLocationsList.forEach((forced) => {
+    if (!fs.existsSync(`${pei}/${forced}`)) {
+      fs.mkdirSync(`${pei}/${forced}`);
+    }    
     fs.readdirSync(`${pei}/${forced}`).forEach((file) => {
       fs.rmSync(`${pei}/${forced}/${file}`);
     });
