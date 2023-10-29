@@ -56,17 +56,17 @@ export const workerConfig = {
     forceSet: 2,
   },
   dynamo: { workerCount: 2, workerConcurrent: 1, forceSet: 3 },
-  // effenaar: { workerCount: 4, workerConcurrent: 2, forceSet: 3 },
-  // gebrdenobel: {
-  //   workerCount: 1, workerConcurrent: 1, CPUReq: 'high', forceSet: 3, 
-  // },
-  // groeneengel: { workerCount: 1, workerConcurrent: 1, forceSet: 3 },
-  // iduna: { workerCount: 1, workerConcurrent: 1, forceSet: 4 },
-  // kavka: {
-  //   workerCount: 2,
-  //   workerConcurrent: 2,
-  //   forceSet: 4,
-  // },
+  effenaar: { workerCount: 4, workerConcurrent: 2, forceSet: 3 },
+  gebrdenobel: {
+    workerCount: 1, workerConcurrent: 1, CPUReq: 'high', forceSet: 3, 
+  },
+  groeneengel: { workerCount: 1, workerConcurrent: 1, forceSet: 3 },
+  //  iduna: { workerCount: 1, workerConcurrent: 1, forceSet: 4 },
+  kavka: {
+    workerCount: 2,
+    workerConcurrent: 2,
+    forceSet: 4,
+  },
   // littledevil: {
   //   workerCount: 2,
   //   workerConcurrent: 2,
@@ -78,7 +78,7 @@ export const workerConfig = {
   //   workerConcurrent: 1,
   //   forceSet: 4,
   // },
-  // metalfan: { workerCount: 1, CPUReq: 'low', workerConcurrent: 1 },
+  // // metalfan: { workerCount: 1, CPUReq: 'low', workerConcurrent: 1 },
   // metropool: {
   //   workerCount: 3,
   //   workerConcurrent: 1,

@@ -105,36 +105,39 @@ export default class AbstractScraper extends ScraperConfig {
     } else {
       this.browser = 'disabled';
     }
-
+    
     const baseMusicEvents = await this.mainPage().catch(this.handleOuterScrapeCatch);
-    this.dirtyLog(baseMusicEvents, `baseMusicEvents`);
-
-    if (!baseMusicEvents) return false;
+    
+    if (!baseMusicEvents) {
+      throw new Error('geen base music events');
+    }
     const checkedEvents = await this.announceAndCheck(baseMusicEvents).catch(
       this.handleOuterScrapeCatch,
     );
-    this.dirtyLog(checkedEvents, `checkedEvents`);
+    
     this.completedMainPage = true;
     if (!checkedEvents) return false;
     await this.processSingleMusicEvent(checkedEvents).catch(this.handleOuterScrapeCatch);
     
     await this.saveRockRefusedAllowedToFile();
-
+    
     await this.announceToMonitorDone();
+    
     if (!this._s.app.mainPage.useCustomScraper || !this._s.app.singlePage.useCustomScraper) {
       await this.closeBrowser();
     }
+    
     await this.saveEvents();
+    
     return true;
     // overige catch in om init heen
   }
 
   async scrapeDie() {
-    this.dirtyTalk('DIEING!');
     await this.closeBrowser();
     await this.saveEvents();
     await this.announceToMonitorDone();
-    this.dirtyTalk('DEAD');
+    
     await _t.waitTime(50);
     process.exit();
   }
@@ -294,17 +297,17 @@ export default class AbstractScraper extends ScraperConfig {
         _t.wrappedHandleError(wrappedError);
       });
     });
-
-    this.dirtyLog(rawEvents, `mainPageEnd1`);
+    
     const r = rawEvents.map((rawEvent) => ({
       ...rawEvent,
       location: workerData.family,
       origin: workerData.family,
     }));
-    this.dirtyLog(r, `mainPageEnd2`);
+    
     if (this._s.app.mainPage.enforceMusicEventType) {
       return r.map((event) => new MusicEvent(event));
     }
+    
     return r;
   }
 
@@ -377,10 +380,14 @@ export default class AbstractScraper extends ScraperConfig {
     parentPort.postMessage(this.qwm.workerStarted());
     const eventGen = this.eventGenerator(baseMusicEvents);
     const checkedEvents = [];
-    return this.rawEventsAsyncCheck({
-      eventGen,
-      checkedEvents,
-    });
+    try {
+      return this.rawEventsAsyncCheck({
+        eventGen,
+        checkedEvents,
+      });
+    } catch (error) {
+      _t.handleError(error, workerData, 'check error in abstract scraper announce and check', 'close-thread', baseMusicEvents);      
+    }
   }
 
   // step 2.5

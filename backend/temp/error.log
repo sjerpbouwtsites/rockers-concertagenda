@@ -1,4 +1,34 @@
 
+  undefined Error - 6:25:00 PM
+  Error: geen error
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:776:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:774:23)
+    at kavkaScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/kavka.js:255:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:526:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:121:5) 
+  geen error
+  
+  
+  kavka-0 Error - 6:23:46 PM
+  Error: geen base music events
+    at AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:113:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  geen base music events
+  
+  
+  iduna-0 Error - 6:07:22 PM
+  ReferenceError: loadposts is not defined
+    at evaluate (evaluate at idunaScraper.mainPage (file:///var/www/html/concertagenda/backend/scrapers/iduna.js:90:8), <anonymous>:1:10)
+    at #evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:249:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:146:16)
+    at async idunaScraper.mainPage (file:///var/www/html/concertagenda/backend/scrapers/iduna.js:89:18)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:109:29) 
+  loadposts is not defined
+  
+  
   undefined Error - 6:02:16 PM
   Error: not dynamo single
     at dynamoScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/dynamo.js:141:18)

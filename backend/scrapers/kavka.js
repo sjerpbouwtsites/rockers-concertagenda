@@ -4,6 +4,7 @@ import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/kavka.js';
 import getImage from './gedeeld/image.js';
 import terms from './gedeeld/terms.js';
+import { handleError } from '../mods/tools.js';
 
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const kavkaScraper = new AbstractScraper({
@@ -176,10 +177,12 @@ kavkaScraper.mainPage = async function () {
   rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
 
   this.saveBaseEventlist(workerData.family, rawEvents);
+  
   const thisWorkersEvents = rawEvents.filter(
     (eventEl, index) => index % workerData.workerCount === workerData.index,
   );
-  await this.mainPageEnd({ stopFunctie, rawEvents: thisWorkersEvents });
+
+  return this.mainPageEnd({ stopFunctie, rawEvents: thisWorkersEvents });
 };
 // #endregion                          MAIN PAGE
 
@@ -245,6 +248,6 @@ kavkaScraper.singlePage = async function ({ page, event }) {
   pageInfo.socialsForHTML = socialsForHTML;
   pageInfo.textForHTML = textForHTML;
 
-  await this.singlePageEnd({ pageInfo, stopFunctie, page });
+  return this.singlePageEnd({ pageInfo, stopFunctie, page });
 };
 // #endregion                         SINGLE PAGE
