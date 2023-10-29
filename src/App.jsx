@@ -12,8 +12,8 @@ import './styles/header-menu.css';
 import './styles/normalize.css';
 import './styles/open-screen.css';
 import './styles/flickety.css';
-import EventBlocks from './mods/EventBlocks';
-import OpenScreen from './mods/OpenScreen';
+import EventBlocks from './mods/EventBlocks.jsx';
+import OpenScreen from './mods/OpenScreen.jsx';
 
 class App extends React.Component {
   title = 'Rock Agenda';
