@@ -27,7 +27,7 @@ export const workerConfig = {
     forceSet: 0,
   },
   baroeg: { workerCount: 1, workerConcurrent: 2, forceSet: 0 }, // TODO TERUG NAAR 2
-  bibelot: { workerCount: 1, workerConcurrent: 1, forceSet: 1 },
+  // bibelot: { workerCount: 1, workerConcurrent: 1, forceSet: 1 },
   boerderij: {
     workerCount: 1,
     CPUReq: 'low',
@@ -41,21 +41,21 @@ export const workerConfig = {
     CPUReq: 'low',
     forceSet: 1,
   },
-  // deflux: { workerCount: 1, workerConcurrent: 1, forceSet: 2 },
-  // dehelling: {
-  //   workerCount: 1,
-  //   CPUReq: 'low',
-  //   workerConcurrent: 1,
-  //   forceSet: 2,
-  // },
-  // depul: { workerCount: 2, workerConcurrent: 2, forceSet: 2 },
-  // doornroosje: {
-  //   workerCount: 2,
-  //   workerConcurrent: 1,
-  //   CPUReq: 'high',
-  //   forceSet: 2,
-  // },
-  // dynamo: { workerCount: 2, workerConcurrent: 1, forceSet: 3 },
+  deflux: { workerCount: 1, workerConcurrent: 1, forceSet: 2 },
+  dehelling: {
+    workerCount: 1,
+    CPUReq: 'low',
+    workerConcurrent: 1,
+    forceSet: 2,
+  },
+  depul: { workerCount: 2, workerConcurrent: 2, forceSet: 2 },
+  doornroosje: {
+    workerCount: 2,
+    workerConcurrent: 1,
+    CPUReq: 'high',
+    forceSet: 2,
+  },
+  dynamo: { workerCount: 2, workerConcurrent: 1, forceSet: 3 },
   // effenaar: { workerCount: 4, workerConcurrent: 2, forceSet: 3 },
   // gebrdenobel: {
   //   workerCount: 1, workerConcurrent: 1, CPUReq: 'high', forceSet: 3, 

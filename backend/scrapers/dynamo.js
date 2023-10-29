@@ -134,6 +134,19 @@ dynamoScraper.mainPage = async function () {
 // #region [rgba(120, 0, 0, 0.1)]     SINGLE PAGE
 dynamoScraper.singlePage = async function ({ page, event }) {
   const { stopFunctie } = await this.singlePageStart();
+  if (event.venueEventUrl === 'https://www.dynamo-metalfest.nl/') {
+    return this.singlePageEnd({
+      pageInfo: {
+        errors: [{
+          error: new Error('not dynamo single'),
+          remarks: `url is is https://www.dynamo-metalfest.nl/`,
+        }],
+      },
+      stopFunctie,
+      page,
+      event,
+    });  
+  }
 
   const pageInfo = await page.evaluate(
     // eslint-disable-next-line no-shadow

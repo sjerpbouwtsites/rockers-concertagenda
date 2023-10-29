@@ -609,7 +609,7 @@ export default class AbstractScraper extends ScraperConfig {
           reason: mergedEventCheckRes.reason,
         });
       }
-      singleEvent.registerINVALID(this.workerData);
+      // singleEvent.registerINVALID(this.workerData); TODO Opnieuw activeren
     }
 
     if (singleEventPage && !singleEventPage.isClosed()) await singleEventPage.close();
