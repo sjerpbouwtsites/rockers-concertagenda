@@ -19,6 +19,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint src/**/*.{js,jsx}",
+    "kill-chrome": "killall -s 9 chrome; ",
     "lint:fix": "eslint --quiet --fix src/**/*.{js,jsx}",
     "eslint-for-formatting": "npm run lint:fix;",
     "prettier-for-formatting": "prettier --config .prettierrc 'src/**/*.{js,jsx,css}' --write --silent --;",
