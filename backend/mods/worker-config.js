@@ -100,9 +100,9 @@ export const workerConfig = {
     CPUReq: 'high',
     forceSet: 5,
   },
-  // patronaat: { workerCount: 2, workerConcurrent: 2, forceSet: 6 },
-  // tivolivredenburg: { workerCount: 4, workerConcurrent: 2, forceSet: 6 },
-  // volt: { workerCount: 1, workerConcurrent: 1, forceSet: 6 },
+  patronaat: { workerCount: 2, workerConcurrent: 2, forceSet: 6 },
+  tivolivredenburg: { workerCount: 4, workerConcurrent: 2, forceSet: 6 },
+  volt: { workerCount: 1, workerConcurrent: 1, forceSet: 6 },
   // willemeen: { workerCount: 2, workerConcurrent: 2, forceSet: 6 },
 };
 // ticketmaster: {

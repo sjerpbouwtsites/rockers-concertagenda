@@ -1,5 +1,35 @@
 [
   {
+    "door": "2023-10-29T23:00:00",
+    "start": "2023-10-29T23:00:00",
+    "end": "2023-10-29T23:00:00",
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/amorphis-29-10-2023/",
+    "title": "Amorphis",
+    "location": "tivolivredenburg",
+    "price": 36.75,
+    "shortText": "special guest Sólstafir & support Lost Society | Halo Tour 2023",
+    "longText": "../public/texts/tivolivredenburg/bmwvYWdlbmRhL2Ftb3JwaGlzLTI5LTEwLTIwMjMv.html",
+    "image": "../public/event-images/tivolivredenburg/bmwvYWdlbmRhL2Ftb3JwaGlzLTI5LTEwLTIwMjMv",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
+    "door": "2023-10-29T13:10:00",
+    "start": "2023-10-29T12:55:00",
+    "end": null,
+    "venueEventUrl": "https://www.paradiso.nl/programma/brainwash-festival/1064625",
+    "title": "Brainwash Festival 2023",
+    "location": "paradiso",
+    "price": 29.5,
+    "shortText": "Een overvloed aan radicale ideeën, toffe performances en botsende visies.",
+    "longText": "../public/texts/paradiso/bW1hL2JyYWlud2FzaC1mZXN0aXZhbC8xMDY0NjI1.html",
+    "image": "../public/event-images/paradiso/bW1hL2JyYWlud2FzaC1mZXN0aXZhbC8xMDY0NjI1",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
     "door": null,
     "start": "2023-10-29",
     "end": null,
@@ -100,6 +130,21 @@
     "shortText": "hardcore | powerviolence | d-beat",
     "longText": "../public/texts/occii/aWkub3JnL2V2ZW50cy93YWstd29ybGQtcGVhY2Uv.html",
     "image": "../public/event-images/occii/aWkub3JnL2V2ZW50cy93YWstd29ybGQtcGVhY2Uv",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
+    "door": "2023-10-31T19:30:00",
+    "start": "2023-10-31T19:00:00",
+    "end": "2023-10-31T20:30:00",
+    "venueEventUrl": "https://www.paradiso.nl/programma/gus-dapperton/1078148",
+    "title": "Gus Dapperton + Abby Roberts",
+    "location": "paradiso",
+    "price": 19,
+    "shortText": "Zonnige alt-pop met invloeden uit funk en new wave / Tolhuistuin",
+    "longText": "../public/texts/paradiso/cm9ncmFtbWEvZ3VzLWRhcHBlcnRvbi8xMDc4MTQ4.html",
+    "image": "../public/event-images/paradiso/cm9ncmFtbWEvZ3VzLWRhcHBlcnRvbi8xMDc4MTQ4",
     "soldOut": false,
     "unavailable": false,
     "corrupted": null
@@ -570,6 +615,51 @@
     "corrupted": null
   },
   {
+    "door": "2023-11-05T19:00:00",
+    "start": "2023-11-05T19:00:00",
+    "end": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/deathstars-05-11-2023/",
+    "title": "Deathstars",
+    "location": "tivolivredenburg",
+    "price": 27.35,
+    "shortText": "Everything Destroys Europe Tour 2023",
+    "longText": "../public/texts/tivolivredenburg/L2FnZW5kYS9kZWF0aHN0YXJzLTA1LTExLTIwMjMv.html",
+    "image": "../public/event-images/tivolivredenburg/L2FnZW5kYS9kZWF0aHN0YXJzLTA1LTExLTIwMjMv",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
+    "door": "2023-11-05T19:30:00",
+    "start": "2023-11-05T20:00:00",
+    "end": null,
+    "venueEventUrl": "https://patronaat.nl/event/deadguy-05-11-23/",
+    "title": "Deadguy + silverburn",
+    "location": "patronaat",
+    "price": 25,
+    "shortText": "Chaotische, dissonante 90s metalcore",
+    "longText": "../public/texts/patronaat/YWF0Lm5sL2V2ZW50L2RlYWRndXktMDUtMTEtMjMv.html",
+    "image": "../public/event-images/patronaat/YWF0Lm5sL2V2ZW50L2RlYWRndXktMDUtMTEtMjMv",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
+    "door": "2023-11-05T20:30:00",
+    "start": "2023-11-05T19:30:00",
+    "end": null,
+    "venueEventUrl": "https://www.paradiso.nl/programma/chai/1084972",
+    "title": "Chai",
+    "location": "paradiso",
+    "price": 17,
+    "shortText": "Vrolijke dance-punk van Japans viertal / Tolhuistuin",
+    "longText": "../public/texts/paradiso/ZGlzby5ubC9wcm9ncmFtbWEvY2hhaS8xMDg0OTcy.html",
+    "image": "../public/event-images/paradiso/ZGlzby5ubC9wcm9ncmFtbWEvY2hhaS8xMDg0OTcy",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
     "door": null,
     "start": "2023-11-05",
     "end": null,
@@ -900,6 +990,21 @@
     "corrupted": null
   },
   {
+    "door": "2023-11-10T20:30:00",
+    "start": "2023-11-10T19:30:00",
+    "end": null,
+    "venueEventUrl": "https://www.paradiso.nl/programma/cash-savage-the-last-drinks/662262",
+    "title": "Cash Savage & The Last Drinks",
+    "location": "paradiso",
+    "price": 17,
+    "shortText": "Mix van post-punk, folk en donkere blues / Bitterzoet",
+    "longText": "../public/texts/paradiso/LXNhdmFnZS10aGUtbGFzdC1kcmlua3MvNjYyMjYy.html",
+    "image": "../public/event-images/paradiso/LXNhdmFnZS10aGUtbGFzdC1kcmlua3MvNjYyMjYy",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
     "door": null,
     "start": "2023-11-10T20:00:00",
     "end": null,
@@ -1065,6 +1170,36 @@
     "corrupted": null
   },
   {
+    "door": "2023-11-12T19:45:00",
+    "start": "2023-11-12T20:15:00",
+    "end": null,
+    "venueEventUrl": "https://patronaat.nl/event/galactic-empire-12-11-23/",
+    "title": "Galactic Empire + Far Beyond",
+    "location": "patronaat",
+    "price": 25,
+    "shortText": "Ongeëvenaarde instrumentale Star Wars cosplay heavy metal band",
+    "longText": "../public/texts/patronaat/dmVudC9nYWxhY3RpYy1lbXBpcmUtMTItMTEtMjMv.html",
+    "image": "../public/event-images/patronaat/dmVudC9nYWxhY3RpYy1lbXBpcmUtMTItMTEtMjMv",
+    "soldOut": true,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
+    "door": "2023-11-12T22:00:00",
+    "start": "2023-11-12T21:30:00",
+    "end": null,
+    "venueEventUrl": "https://www.paradiso.nl/programma/nourished-by-time/1302802",
+    "title": "Nourished By Time",
+    "location": "paradiso",
+    "price": 16,
+    "shortText": "Singer-songwriter en producer met een unieke mix van new wave, r&b en dance",
+    "longText": "../public/texts/paradiso/YW1tYS9ub3VyaXNoZWQtYnktdGltZS8xMzAyODAy.html",
+    "image": "../public/event-images/paradiso/YW1tYS9ub3VyaXNoZWQtYnktdGltZS8xMzAyODAy",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
     "door": "2023-11-12T19:00:00",
     "start": "2023-11-12T19:30:00",
     "end": "2023-11-12T23:30:00",
@@ -1170,6 +1305,36 @@
     "corrupted": null
   },
   {
+    "door": "2023-11-14T19:30:00",
+    "start": "2023-11-14T19:00:00",
+    "end": "2023-11-14T20:30:00",
+    "venueEventUrl": "https://www.paradiso.nl/programma/cumgirl8/1320280",
+    "title": "cumgirl8 + The Klittens + DJ Sjaak",
+    "location": "paradiso",
+    "price": 16,
+    "shortText": "New Yorks postpunkcollectief maakt electropunk met maatschappijkritische teksten / Toekomstmuziek",
+    "longText": "../public/texts/paradiso/Lm5sL3Byb2dyYW1tYS9jdW1naXJsOC8xMzIwMjgw.html",
+    "image": "../public/event-images/paradiso/Lm5sL3Byb2dyYW1tYS9jdW1naXJsOC8xMzIwMjgw",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
+    "door": "2023-11-14T19:30:00",
+    "start": "2023-11-14T19:00:00",
+    "end": "2023-11-14T20:30:00",
+    "venueEventUrl": "https://www.paradiso.nl/programma/yves-tumor-nation/525776",
+    "title": "Yves Tumor + Nation",
+    "location": "paradiso",
+    "price": 23,
+    "shortText": "Experimentele combinatie van noise, rock, electronica, pop en triphop",
+    "longText": "../public/texts/paradiso/cmFtbWEveXZlcy10dW1vci1uYXRpb24vNTI1Nzc2.html",
+    "image": "../public/event-images/paradiso/cmFtbWEveXZlcy10dW1vci1uYXRpb24vNTI1Nzc2",
+    "soldOut": true,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
     "door": null,
     "start": "2023-11-14T18:30:00.000000Z",
     "end": null,
@@ -1225,6 +1390,21 @@
     "shortText": "",
     "longText": "../public/texts/cpunt/Oi8vd3d3LmNwdW50Lm5sL2FnZW5kYS9ydXRzLWRj.html",
     "image": "../public/event-images/cpunt/Oi8vd3d3LmNwdW50Lm5sL2FnZW5kYS9ydXRzLWRj",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
+    "door": "2023-11-15T19:30:00",
+    "start": "2023-11-15T19:00:00",
+    "end": "2023-11-15T20:30:00",
+    "venueEventUrl": "https://www.paradiso.nl/programma/yves-tumor/1087564",
+    "title": "Yves Tumor + Nation",
+    "location": "paradiso",
+    "price": 23,
+    "shortText": "Experimentele combinatie van noise, rock, electronica, pop en triphop",
+    "longText": "../public/texts/paradiso/bC9wcm9ncmFtbWEveXZlcy10dW1vci8xMDg3NTY0.html",
+    "image": "../public/event-images/paradiso/bC9wcm9ncmFtbWEveXZlcy10dW1vci8xMDg3NTY0",
     "soldOut": false,
     "unavailable": false,
     "corrupted": null
@@ -1316,6 +1496,51 @@
     "longText": "../public/texts/013/Z3JhbW1hLzc2MDIvbWFzdGVyLWJvb3QtcmVjb3Jk.html",
     "image": "../public/event-images/013/Z3JhbW1hLzc2MDIvbWFzdGVyLWJvb3QtcmVjb3Jk",
     "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
+    "door": "2023-11-16T18:30:00",
+    "start": "2023-11-16T19:30:00",
+    "end": null,
+    "venueEventUrl": "https://patronaat.nl/event/death-angel-sacred-reich-angelus-apatrida-16-11-23/",
+    "title": "Sacred Reich + Death Angel + Angelus Apatrida",
+    "location": "patronaat",
+    "price": 34.5,
+    "shortText": "'Night Of The Living Thrash' Co-Headline Tour",
+    "longText": "../public/texts/patronaat/aWNoLWFuZ2VsdXMtYXBhdHJpZGEtMTYtMTEtMjMv.html",
+    "image": "../public/event-images/patronaat/aWNoLWFuZ2VsdXMtYXBhdHJpZGEtMTYtMTEtMjMv",
+    "soldOut": true,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
+    "door": "2023-11-16T20:00:00",
+    "start": "2023-11-16T20:30:00",
+    "end": null,
+    "venueEventUrl": "https://patronaat.nl/event/smudged-magnetic-spacemen-16-11-23/",
+    "title": "Smudged + Magnetic Spacemen",
+    "location": "patronaat",
+    "price": 13,
+    "shortText": "Vunzige DIY-bands drijven de temperatuur tot een kookpunt",
+    "longText": "../public/texts/patronaat/ZWQtbWFnbmV0aWMtc3BhY2VtZW4tMTYtMTEtMjMv.html",
+    "image": "../public/event-images/patronaat/ZWQtbWFnbmV0aWMtc3BhY2VtZW4tMTYtMTEtMjMv",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
+    "door": "2023-11-16T19:30:00",
+    "start": "2023-11-16T19:00:00",
+    "end": "2023-11-16T20:30:00",
+    "venueEventUrl": "https://www.paradiso.nl/programma/glaive/1075391",
+    "title": "Glaive + Yxngxr1, Re6ce",
+    "location": "paradiso",
+    "price": 19,
+    "shortText": "hyperpop met persoonlijke en diepe teksten / Tolhuistuin",
+    "longText": "../public/texts/paradiso/c28ubmwvcHJvZ3JhbW1hL2dsYWl2ZS8xMDc1Mzkx.html",
+    "image": "../public/event-images/paradiso/c28ubmwvcHJvZ3JhbW1hL2dsYWl2ZS8xMDc1Mzkx",
+    "soldOut": true,
     "unavailable": false,
     "corrupted": null
   },
@@ -1785,6 +2010,21 @@
     "corrupted": null
   },
   {
+    "door": "2023-11-22T20:00:00",
+    "start": "2023-11-22T20:30:00",
+    "end": null,
+    "venueEventUrl": "https://patronaat.nl/event/battle-beast-22-11-23/",
+    "title": "Battle Beast + Brymir",
+    "location": "patronaat",
+    "price": 24.5,
+    "shortText": "The circus is coming to town!",
+    "longText": "../public/texts/patronaat/bC9ldmVudC9iYXR0bGUtYmVhc3QtMjItMTEtMjMv.html",
+    "image": "../public/event-images/patronaat/bC9ldmVudC9iYXR0bGUtYmVhc3QtMjItMTEtMjMv",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
     "door": null,
     "start": "2023-11-22",
     "end": null,
@@ -1950,6 +2190,21 @@
     "corrupted": null
   },
   {
+    "door": "2023-11-25T19:00:00",
+    "start": "2023-11-25T19:30:00",
+    "end": null,
+    "venueEventUrl": "https://patronaat.nl/event/carnivore-a-d-iron-walrus-25-11-23/",
+    "title": "Carnivore A.D. + Iron Walrus",
+    "location": "patronaat",
+    "price": 19.5,
+    "shortText": "Crossover van metal en hardcore, doordrenkt met een post-Armageddon neo-barbarische soundscape",
+    "longText": "../public/texts/patronaat/dm9yZS1hLWQtaXJvbi13YWxydXMtMjUtMTEtMjMv.html",
+    "image": "../public/event-images/patronaat/dm9yZS1hLWQtaXJvbi13YWxydXMtMjUtMTEtMjMv",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
     "door": "2023-11-25T21:00:00Z",
     "start": "2023-11-25T22:00:00Z",
     "end": null,
@@ -2036,6 +2291,21 @@
     "longText": "../public/texts/dbs/dHVkaW8ubmwvZXZlbnQvbmV1ay1zdXBwb3J0LTIv.html",
     "image": "../public/event-images/dbs/dHVkaW8ubmwvZXZlbnQvbmV1ay1zdXBwb3J0LTIv",
     "soldOut": null,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
+    "door": "2023-11-26T18:30:00",
+    "start": "2023-11-26T18:30:00",
+    "end": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/fit-for-a-king-26-11-2023/",
+    "title": "Fit For A King",
+    "location": "tivolivredenburg",
+    "price": 32.75,
+    "shortText": "Emmure + thrown + The Gloom In tThe Corner | The Hell We Create Tour",
+    "longText": "../public/texts/tivolivredenburg/bmRhL2ZpdC1mb3ItYS1raW5nLTI2LTExLTIwMjMv.html",
+    "image": "../public/event-images/tivolivredenburg/bmRhL2ZpdC1mb3ItYS1raW5nLTI2LTExLTIwMjMv",
+    "soldOut": true,
     "unavailable": false,
     "corrupted": null
   },
@@ -2160,6 +2430,21 @@
     "corrupted": null
   },
   {
+    "door": "2023-11-29T20:00:00",
+    "start": "2023-11-29T20:30:00",
+    "end": null,
+    "venueEventUrl": "https://patronaat.nl/event/hulder-29-11-23/",
+    "title": "Hulder",
+    "location": "patronaat",
+    "price": 23.5,
+    "shortText": "\"BESTIAL FORM OF HUMANITY' EUROPE MMXXIII",
+    "longText": "../public/texts/patronaat/bmFhdC5ubC9ldmVudC9odWxkZXItMjktMTEtMjMv.html",
+    "image": "../public/event-images/patronaat/bmFhdC5ubC9ldmVudC9odWxkZXItMjktMTEtMjMv",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
     "door": null,
     "start": "2023-11-29",
     "end": null,
@@ -2187,6 +2472,21 @@
     "image": "../public/event-images/doornroosje/cm5yb29zamUubmwvZXZlbnQvZGFyay1kaXZpbmUv",
     "soldOut": false,
     "unavailable": null,
+    "corrupted": null
+  },
+  {
+    "door": "2023-11-30T19:45:00",
+    "start": "2023-11-30T20:15:00",
+    "end": null,
+    "venueEventUrl": "https://patronaat.nl/event/wargasm-30-11-23/",
+    "title": "Wargasm + Belle and The Beats",
+    "location": "patronaat",
+    "price": 22.5,
+    "shortText": "The Venom Tour",
+    "longText": "../public/texts/patronaat/YWF0Lm5sL2V2ZW50L3dhcmdhc20tMzAtMTEtMjMv.html",
+    "image": "../public/event-images/patronaat/YWF0Lm5sL2V2ZW50L3dhcmdhc20tMzAtMTEtMjMv",
+    "soldOut": false,
+    "unavailable": false,
     "corrupted": null
   },
   {
@@ -2415,6 +2715,21 @@
     "corrupted": null
   },
   {
+    "door": "2023-12-04T19:00:00",
+    "start": "2023-12-04T19:00:00",
+    "end": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/stick-to-your-guns-04-12-2023/",
+    "title": "Stick To Your Guns",
+    "location": "tivolivredenburg",
+    "price": 26.85,
+    "shortText": "10 Year Anniversary of Diamond | + Get The Shot, End It & Koyo",
+    "longText": "../public/texts/tivolivredenburg/c3RpY2stdG8teW91ci1ndW5zLTA0LTEyLTIwMjMv.html",
+    "image": "../public/event-images/tivolivredenburg/c3RpY2stdG8teW91ci1ndW5zLTA0LTEyLTIwMjMv",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
     "door": null,
     "start": "2023-12-04",
     "end": null,
@@ -2501,6 +2816,21 @@
     "longText": "../public/texts/013/MTMubmwvcHJvZ3JhbW1hLzc2NTgvY2F0cy1jdWx0.html",
     "image": "../public/event-images/013/MTMubmwvcHJvZ3JhbW1hLzc2NTgvY2F0cy1jdWx0",
     "soldOut": true,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
+    "door": "2023-12-07T20:15:00",
+    "start": "2023-12-07T20:15:00",
+    "end": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/atreyu-07-12-2023/",
+    "title": "Atreyu",
+    "location": "tivolivredenburg",
+    "price": 25.85,
+    "shortText": "We Want Your Skulls World Tour 2023",
+    "longText": "../public/texts/tivolivredenburg/Zy5ubC9hZ2VuZGEvYXRyZXl1LTA3LTEyLTIwMjMv.html",
+    "image": "../public/event-images/tivolivredenburg/Zy5ubC9hZ2VuZGEvYXRyZXl1LTA3LTEyLTIwMjMv",
+    "soldOut": false,
     "unavailable": false,
     "corrupted": null
   },
@@ -3105,6 +3435,21 @@
     "corrupted": null
   },
   {
+    "door": "2023-12-16T19:30:00",
+    "start": "2023-12-16T20:00:00",
+    "end": null,
+    "venueEventUrl": "https://patronaat.nl/event/pharmakon-16-12-23/",
+    "title": "Pharmakon",
+    "location": "patronaat",
+    "price": 16.5,
+    "shortText": "Experimenteel noise project",
+    "longText": "../public/texts/patronaat/dC5ubC9ldmVudC9waGFybWFrb24tMTYtMTItMjMv.html",
+    "image": "../public/event-images/patronaat/dC5ubC9ldmVudC9waGFybWFrb24tMTYtMTItMjMv",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
     "door": null,
     "start": "2023-12-16",
     "end": null,
@@ -3207,6 +3552,21 @@
     "image": "../public/event-images/littledevil/L2NhbGVuZGFyL2R1aXZlbHMtYmllcm1lbnUtMjkv",
     "soldOut": false,
     "unavailable": null,
+    "corrupted": null
+  },
+  {
+    "door": "2023-12-21T19:30:00",
+    "start": "2023-12-21T19:30:00",
+    "end": null,
+    "venueEventUrl": "https://patronaat.nl/event/a-can-of-worms-21-12-23/",
+    "title": "A Can Of Worms",
+    "location": "patronaat",
+    "price": 7,
+    "shortText": "Utrechtse metalband Throwing Bricks presenteert estafetteshow",
+    "longText": "../public/texts/patronaat/ZXZlbnQvYS1jYW4tb2Ytd29ybXMtMjEtMTItMjMv.html",
+    "image": "../public/event-images/patronaat/ZXZlbnQvYS1jYW4tb2Ytd29ybXMtMjEtMTItMjMv",
+    "soldOut": false,
+    "unavailable": false,
     "corrupted": null
   },
   {
@@ -3435,6 +3795,21 @@
     "corrupted": null
   },
   {
+    "door": "2024-01-14T17:30:00",
+    "start": "2024-01-14T18:00:00",
+    "end": null,
+    "venueEventUrl": "https://patronaat.nl/event/cabal-viscera-vexed-lifesick-14-01-24/",
+    "title": "Cabal + Viscera + Vexed + Lifesick",
+    "location": "patronaat",
+    "price": 26.5,
+    "shortText": "Exlusieve NL show tijdens de Great Decay Europe Tour",
+    "longText": "../public/texts/patronaat/c2NlcmEtdmV4ZWQtbGlmZXNpY2stMTQtMDEtMjQv.html",
+    "image": "../public/event-images/patronaat/c2NlcmEtdmV4ZWQtbGlmZXNpY2stMTQtMDEtMjQv",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
     "door": "2024-01-14T19:30:00",
     "start": "2024-01-14T20:00:00",
     "end": null,
@@ -3465,6 +3840,21 @@
     "corrupted": null
   },
   {
+    "door": "2024-01-17T20:15:00",
+    "start": "2024-01-17T20:15:00",
+    "end": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/anneke-van-giersbergen-17-01-2024/",
+    "title": "Anneke van Giersbergen",
+    "location": "tivolivredenburg",
+    "price": 23.85,
+    "shortText": "Première nieuwe theatershow: Heavy Strings",
+    "longText": "../public/texts/tivolivredenburg/a2UtdmFuLWdpZXJzYmVyZ2VuLTE3LTAxLTIwMjQv.html",
+    "image": "../public/event-images/tivolivredenburg/a2UtdmFuLWdpZXJzYmVyZ2VuLTE3LTAxLTIwMjQv",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
     "door": "2024-01-18T20:00:00",
     "start": "2024-01-18T20:30:00",
     "end": null,
@@ -3477,6 +3867,21 @@
     "image": "../public/event-images/effenaar/bC9hZ2VuZGEvcHJlZGF0b3J5LXZvaWQtbW9kZGVy",
     "soldOut": false,
     "unavailable": null,
+    "corrupted": null
+  },
+  {
+    "door": "2024-01-19T19:30:00",
+    "start": "2024-01-19T20:00:00",
+    "end": "2024-01-19T23:00:00",
+    "venueEventUrl": "https://patronaat.nl/event/pene-corrida-19-01-24/",
+    "title": "Pene Corrida",
+    "location": "patronaat",
+    "price": 19,
+    "shortText": "De ultieme party metalband",
+    "longText": "../public/texts/patronaat/bC9ldmVudC9wZW5lLWNvcnJpZGEtMTktMDEtMjQv.html",
+    "image": "../public/event-images/patronaat/bC9ldmVudC9wZW5lLWNvcnJpZGEtMTktMDEtMjQv",
+    "soldOut": false,
+    "unavailable": false,
     "corrupted": null
   },
   {
@@ -3655,6 +4060,21 @@
     "shortText": "The Wildfire European Tour",
     "longText": "../public/texts/013/MTMubmwvcHJvZ3JhbW1hLzc2NDQvcGVyaXBoZXJ5.html",
     "image": "../public/event-images/013/MTMubmwvcHJvZ3JhbW1hLzc2NDQvcGVyaXBoZXJ5",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
+    "door": "2024-02-01T19:30:00",
+    "start": "2024-02-01T19:30:00",
+    "end": null,
+    "venueEventUrl": "https://patronaat.nl/event/skating-polly-01-02-24/",
+    "title": "Skating Polly + support",
+    "location": "patronaat",
+    "price": 18.5,
+    "shortText": "\"Ugly-pop\"",
+    "longText": "../public/texts/patronaat/L2V2ZW50L3NrYXRpbmctcG9sbHktMDEtMDItMjQv.html",
+    "image": "../public/event-images/patronaat/L2V2ZW50L3NrYXRpbmctcG9sbHktMDEtMDItMjQv",
     "soldOut": false,
     "unavailable": false,
     "corrupted": null
@@ -3900,6 +4320,21 @@
     "corrupted": null
   },
   {
+    "door": "2024-02-14T19:30:00",
+    "start": "2024-02-14T20:00:00",
+    "end": null,
+    "venueEventUrl": "https://patronaat.nl/event/normandie-14-02-24/",
+    "title": "Normandie",
+    "location": "patronaat",
+    "price": 23.5,
+    "shortText": "Alternatieve metalcore met catchy melodielijnen, meezingbare teksten en vette riffs",
+    "longText": "../public/texts/patronaat/dC5ubC9ldmVudC9ub3JtYW5kaWUtMTQtMDItMjQv.html",
+    "image": "../public/event-images/patronaat/dC5ubC9ldmVudC9ub3JtYW5kaWUtMTQtMDItMjQv",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
     "door": null,
     "start": "2024-02-14",
     "end": null,
@@ -3960,6 +4395,21 @@
     "corrupted": null
   },
   {
+    "door": "2024-02-18T19:00:00",
+    "start": "2024-02-18T19:00:00",
+    "end": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/tesseract-18-02-2024/",
+    "title": "TesseracT",
+    "location": "tivolivredenburg",
+    "price": 32.25,
+    "shortText": "Progressive-metalband met supports Unprocessed + The Callous Daoboys",
+    "longText": "../public/texts/tivolivredenburg/bC9hZ2VuZGEvdGVzc2VyYWN0LTE4LTAyLTIwMjQv.html",
+    "image": "../public/event-images/tivolivredenburg/bC9hZ2VuZGEvdGVzc2VyYWN0LTE4LTAyLTIwMjQv",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
     "door": null,
     "start": "2024-02-18T22:00:00",
     "end": "2024-02-18T03:00:00",
@@ -4005,6 +4455,21 @@
     "corrupted": null
   },
   {
+    "door": "2024-02-22T19:00:00",
+    "start": "2024-02-22T19:00:00",
+    "end": null,
+    "venueEventUrl": "https://patronaat.nl/event/distant-for-i-am-king-22-02-24/",
+    "title": "Distant + For I Am King",
+    "location": "patronaat",
+    "price": 21,
+    "shortText": "Hyper-dissonante, langzame deathcore en meedogenloze brutale death metal",
+    "longText": "../public/texts/patronaat/aXN0YW50LWZvci1pLWFtLWtpbmctMjItMDItMjQv.html",
+    "image": "../public/event-images/patronaat/aXN0YW50LWZvci1pLWFtLWtpbmctMjItMDItMjQv",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
     "door": null,
     "start": "2024-02-22",
     "end": null,
@@ -4032,6 +4497,21 @@
     "image": "../public/event-images/dehelling/dGFudC1mb3ItaS1hbS1raW5nLTIzLTAyLTIwMjQv",
     "soldOut": false,
     "unavailable": null,
+    "corrupted": null
+  },
+  {
+    "door": "2024-02-24T19:00:00",
+    "start": "2024-02-24T19:30:00",
+    "end": null,
+    "venueEventUrl": "https://patronaat.nl/event/kataklysm-fleshgod-apocalypse-stillbirth-24-02-24/",
+    "title": "Kataklysm + Fleshgod Apocalypse + Stillbirth",
+    "location": "patronaat",
+    "price": 30.5,
+    "shortText": "EUROPE vs. GOLIATH",
+    "longText": "../public/texts/patronaat/cG9jYWx5cHNlLXN0aWxsYmlydGgtMjQtMDItMjQv.html",
+    "image": "../public/event-images/patronaat/cG9jYWx5cHNlLXN0aWxsYmlydGgtMjQtMDItMjQv",
+    "soldOut": false,
+    "unavailable": false,
     "corrupted": null
   },
   {
@@ -4305,6 +4785,21 @@
     "corrupted": null
   },
   {
+    "door": "2024-03-16T21:45:00",
+    "start": "2024-03-16T21:45:00",
+    "end": "2024-03-16T21:45:00",
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/the-gaslight-anthem-16-03-2024/",
+    "title": "The Gaslight Anthem",
+    "location": "tivolivredenburg",
+    "price": 42.75,
+    "shortText": "Gedreven rock met een flinke dosis punk-energie | + support: Emily Wolfe",
+    "longText": "../public/texts/tivolivredenburg/aGUtZ2FzbGlnaHQtYW50aGVtLTE2LTAzLTIwMjQv.html",
+    "image": "../public/event-images/tivolivredenburg/aGUtZ2FzbGlnaHQtYW50aGVtLTE2LTAzLTIwMjQv",
+    "soldOut": true,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
     "door": null,
     "start": "2024-03-16",
     "end": null,
@@ -4395,6 +4890,21 @@
     "corrupted": null
   },
   {
+    "door": "2024-03-29T19:30:00",
+    "start": "2024-03-29T19:30:00",
+    "end": null,
+    "venueEventUrl": "https://patronaat.nl/event/feuerengel-a-tribute-to-rammstein-29-03-24/",
+    "title": "Feuerengel – a tribute to rammstein",
+    "location": "patronaat",
+    "price": 34.5,
+    "shortText": "Een perfecte illusie.",
+    "longText": "../public/texts/patronaat/dHJpYnV0ZS10by1yYW1tc3RlaW4tMjktMDMtMjQv.html",
+    "image": "../public/event-images/patronaat/dHJpYnV0ZS10by1yYW1tc3RlaW4tMjktMDMtMjQv",
+    "soldOut": true,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
     "door": "2024-03-29T20:00:00",
     "start": "2024-03-29T20:30:00",
     "end": "2024-03-29T23:30:00",
@@ -4435,6 +4945,36 @@
     "shortText": "ESPRIT D’AIR, HERVORMD IN 2016, IS EEN JAPANS ELEKTRONIC ROCK/METAL SOLOPROJECT ONDER LEIDING VAN ZANG,…",
     "longText": "../public/texts/kavka/Oi8va2F2a2EuYmUvZXZlbnQvZXNwcml0LWRhaXIv.html",
     "image": "../public/event-images/kavka/Oi8va2F2a2EuYmUvZXZlbnQvZXNwcml0LWRhaXIv",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
+    "door": "2024-04-02T20:15:00",
+    "start": "2024-04-02T20:15:00",
+    "end": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/casey-02-04-2024/",
+    "title": "Casey",
+    "location": "tivolivredenburg",
+    "price": 27.35,
+    "shortText": "Emotionele post-hardcore uit Wales",
+    "longText": "../public/texts/tivolivredenburg/cmcubmwvYWdlbmRhL2Nhc2V5LTAyLTA0LTIwMjQv.html",
+    "image": "../public/event-images/tivolivredenburg/cmcubmwvYWdlbmRhL2Nhc2V5LTAyLTA0LTIwMjQv",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
+    "door": "2024-04-04T19:30:00",
+    "start": "2024-04-04T19:50:00",
+    "end": null,
+    "venueEventUrl": "https://patronaat.nl/event/malphas-bedrangnis-satanic-violence-04-04-24/",
+    "title": "Malphas, Bedrängnis, Satanic Violence",
+    "location": "patronaat",
+    "price": 10,
+    "shortText": "Meedogenloze black metal package",
+    "longText": "../public/texts/patronaat/bmlzLXNhdGFuaWMtdmlvbGVuY2UtMDQtMDQtMjQv.html",
+    "image": "../public/event-images/patronaat/bmlzLXNhdGFuaWMtdmlvbGVuY2UtMDQtMDQtMjQv",
     "soldOut": false,
     "unavailable": false,
     "corrupted": null
@@ -4530,6 +5070,21 @@
     "corrupted": null
   },
   {
+    "door": "2024-04-14T19:00:00",
+    "start": "2024-04-14T19:00:00",
+    "end": null,
+    "venueEventUrl": "https://patronaat.nl/event/beyond-the-black-support-14-04-24/",
+    "title": "Beyond The Black + Ankor",
+    "location": "patronaat",
+    "price": 30,
+    "shortText": "Dancing In The Dark Tour 2024",
+    "longText": "../public/texts/patronaat/bmQtdGhlLWJsYWNrLXN1cHBvcnQtMTQtMDQtMjQv.html",
+    "image": "../public/event-images/patronaat/bmQtdGhlLWJsYWNrLXN1cHBvcnQtMTQtMDQtMjQv",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
     "door": null,
     "start": "2024-04-14",
     "end": null,
@@ -4585,6 +5140,21 @@
     "shortText": "",
     "longText": "../public/texts/013/bWEvNzcxMi9yb2FkYnVybi1mZXN0aXZhbC0yMDI0.html",
     "image": "../public/event-images/013/bWEvNzcxMi9yb2FkYnVybi1mZXN0aXZhbC0yMDI0",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
+    "door": "2024-04-19T20:00:00",
+    "start": "2024-04-19T20:00:00",
+    "end": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/feuerengel-a-tribute-to-rammstein-19-04-2024/",
+    "title": "Feuerengel - a tribute to rammstein",
+    "location": "tivolivredenburg",
+    "price": 34.75,
+    "shortText": "Vurige Rammstein show vol special effects",
+    "longText": "../public/texts/tivolivredenburg/aWJ1dGUtdG8tcmFtbXN0ZWluLTE5LTA0LTIwMjQv.html",
+    "image": "../public/event-images/tivolivredenburg/aWJ1dGUtdG8tcmFtbXN0ZWluLTE5LTA0LTIwMjQv",
     "soldOut": false,
     "unavailable": false,
     "corrupted": null
@@ -4647,6 +5217,21 @@
     "image": "../public/location-images/cacaofabriek",
     "soldOut": null,
     "unavailable": null,
+    "corrupted": null
+  },
+  {
+    "door": "2024-04-28T19:30:00",
+    "start": "2024-04-28T20:00:00",
+    "end": null,
+    "venueEventUrl": "https://patronaat.nl/event/warkings-28-04-24/",
+    "title": "Warkings",
+    "location": "patronaat",
+    "price": 27.5,
+    "shortText": "Pure heavy powermetal",
+    "longText": "../public/texts/patronaat/YXQubmwvZXZlbnQvd2Fya2luZ3MtMjgtMDQtMjQv.html",
+    "image": "../public/event-images/patronaat/YXQubmwvZXZlbnQvd2Fya2luZ3MtMjgtMDQtMjQv",
+    "soldOut": false,
+    "unavailable": false,
     "corrupted": null
   },
   {
@@ -4766,6 +5351,21 @@
     "longText": "../public/texts/nieuwenor/dmFuYWhlaW0teG9hbi1lbmQtb2YtdGhlLWRyZWFt.html",
     "image": "../public/event-images/nieuwenor/dmFuYWhlaW0teG9hbi1lbmQtb2YtdGhlLWRyZWFt",
     "soldOut": null,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
+    "door": "2024-05-25T19:00:00",
+    "start": "2024-05-25T19:00:00",
+    "end": null,
+    "venueEventUrl": "https://patronaat.nl/event/vanaheim-xaon-end-of-the-dream-25-05-24/",
+    "title": "Vanaheim + Xaon + End of the Dream",
+    "location": "patronaat",
+    "price": 19.5,
+    "shortText": "Pagan- en folkmetalpackage gaat op tour door Europa!",
+    "longText": "../public/texts/patronaat/YW9uLWVuZC1vZi10aGUtZHJlYW0tMjUtMDUtMjQv.html",
+    "image": "../public/event-images/patronaat/YW9uLWVuZC1vZi10aGUtZHJlYW0tMjUtMDUtMjQv",
+    "soldOut": false,
     "unavailable": false,
     "corrupted": null
   },
