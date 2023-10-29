@@ -77,7 +77,7 @@ paradisoScraper.mainPage = async function () {
     const thisWorkersEvents = availableBaseEvents.filter(
       (eventEl, index) => index % workerData.workerCount === workerData.index,
     );
-    await this.mainPageEnd({ stopFunctie: null, rawEvents: thisWorkersEvents });
+    return this.mainPageEnd({ stopFunctie: null, rawEvents: thisWorkersEvents });
   }
 
   const { stopFunctie, page } = await this.mainPageStart();
@@ -89,6 +89,8 @@ paradisoScraper.mainPage = async function () {
     }),
     { workerData },
   );
+
+  await page.waitForSelector('.chakra-container');
 
   await _t.autoScroll(page);
   await page.evaluate(
@@ -133,7 +135,7 @@ paradisoScraper.mainPage = async function () {
   const thisWorkersEvents = rawEvents.filter(
     (eventEl, index) => index % workerData.workerCount === workerData.index,
   );
-  await this.mainPageEnd({ stopFunctie, rawEvents: thisWorkersEvents });
+  return this.mainPageEnd({ stopFunctie, rawEvents: thisWorkersEvents });
 };
 // #endregion                          MAIN PAGE
 
@@ -156,7 +158,7 @@ paradisoScraper.singlePage = async function ({ page, event }) {
       remarks: `Paradiso wacht op laden single pagina\n${buitenRes.anker}`,
       errorLevel: 'notice',
     });
-    await this.singlePageEnd({ pageInfo: buitenRes, stopFunctie, page });
+    return this.singlePageEnd({ pageInfo: buitenRes, stopFunctie, page });
   }
 
   const editedMonths = {
@@ -305,7 +307,7 @@ paradisoScraper.singlePage = async function ({ page, event }) {
   pageInfo.socialsForHTML = socialsForHTML;
   pageInfo.textForHTML = textForHTML;
 
-  await this.singlePageEnd({
+  return this.singlePageEnd({
     pageInfo,
     stopFunctie,
     page,

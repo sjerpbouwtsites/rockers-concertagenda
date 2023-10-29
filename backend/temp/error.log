@@ -1,4 +1,58 @@
 
+  undefined Error - 6:34:32 PM
+  Error: geen el price
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:48:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:34:12)
+    at async neushoornScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/neushoorn.js:198:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:120:5) 
+  geen el price
+  
+  
+  undefined Error - 6:34:18 PM
+  Error: geen el price
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:48:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:34:12)
+    at async neushoornScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/neushoorn.js:198:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:120:5) 
+  geen el price
+  
+  
+  iduna-0 Error - 6:32:21 PM
+  ReferenceError: loadposts is not defined
+    at evaluate (evaluate at idunaScraper.mainPage (file:///var/www/html/concertagenda/backend/scrapers/iduna.js:90:8), <anonymous>:1:10)
+    at #evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:249:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:146:16)
+    at async idunaScraper.mainPage (file:///var/www/html/concertagenda/backend/scrapers/iduna.js:89:18)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:109:29) 
+  loadposts is not defined
+  
+  
+  littledevil-1 Error - 6:27:14 PM
+  Error: geen base music events
+    at AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:112:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  geen base music events
+  
+  
+  littledevil-1 Error - 6:26:47 PM
+  Error: geen base music events
+    at AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:112:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  geen base music events
+  
+  
+  melkweg-3 Error - 6:26:46 PM
+  Error: geen base music events
+    at AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:112:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+  geen base music events
+  
+  
   undefined Error - 6:25:00 PM
   Error: geen error
     at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:776:30

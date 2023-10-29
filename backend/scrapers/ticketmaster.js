@@ -55,7 +55,7 @@ ticketmasterScraper.listenToMasterThread();
 ticketmasterScraper.mainPage = async function () {
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.name);
   if (availableBaseEvents) {
-    await this.mainPageEnd({ stopFunctie: null, rawEvents: availableBaseEvents });
+    return this.mainPageEnd({ stopFunctie: null, rawEvents: availableBaseEvents });
   }
 
   const { stopFunctie } = await this.mainPageStart();
@@ -96,13 +96,13 @@ ticketmasterScraper.mainPage = async function () {
     });
 
   if (!Array.isArray(rawEvents) || !rawEvents.length) {
-    await this.mainPageEnd({ stopFunctie, rawEvents: [] });
+    return this.mainPageEnd({ stopFunctie, rawEvents: [] });
   }
 
   const filteredRawEvents = this.filterForMetal(rawEvents);
 
   this.saveBaseEventlist(workerData.name, filteredRawEvents);
-  await this.mainPageEnd({ stopFunctie, rawEvents: filteredRawEvents });
+  return this.mainPageEnd({ stopFunctie, rawEvents: filteredRawEvents });
 };
 
 // #endregion                          MAIN PAGE
@@ -162,7 +162,7 @@ ticketmasterScraper.singlePage = async function ({ event }) {
 
   if (workerNames.includes(pageInfo.location) || pageInfo.location === 'metropoolenschede') {
     pageInfo.unavailable += ` locatie ${pageInfo.location} niet bij TM.`;
-    await this.singlePageEnd({ pageInfo, stopFunctie });
+    return this.singlePageEnd({ pageInfo, stopFunctie });
   }
 
   pageInfo.title = event.name;
@@ -178,7 +178,7 @@ ticketmasterScraper.singlePage = async function ({ event }) {
         prijzen: event?.priceRanges,
       },
     });
-    await this.singlePageEnd({ pageInfo, stopFunctie });
+    return this.singlePageEnd({ pageInfo, stopFunctie });
   }
   if (pageInfo.title.toLowerCase().includes('heaven')) {
     this.dirtyLog(event);
@@ -228,7 +228,7 @@ ticketmasterScraper.singlePage = async function ({ event }) {
     pageInfo.unavailable += ' double event';
   }
 
-  await this.singlePageEnd({ pageInfo, stopFunctie });
+  return this.singlePageEnd({ pageInfo, stopFunctie });
 };
 
 ticketmasterScraper.filterForMetal = function (rawEvents) {

@@ -78,7 +78,7 @@ idunaScraper.singlePageAsyncCheck = async function (event) {
 idunaScraper.mainPage = async function () {
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
   if (availableBaseEvents) {
-    await this.mainPageEnd({ stopFunctie: null, rawEvents: availableBaseEvents });
+    return this.mainPageEnd({ stopFunctie: null, rawEvents: availableBaseEvents });
   }
   const { stopFunctie, page } = await this.mainPageStart();
 

@@ -109,7 +109,7 @@ export default class AbstractScraper extends ScraperConfig {
     const baseMusicEvents = await this.mainPage().catch(this.handleOuterScrapeCatch);
     
     if (!baseMusicEvents) {
-      throw new Error('geen base music events');
+      return false;
     }
     const checkedEvents = await this.announceAndCheck(baseMusicEvents).catch(
       this.handleOuterScrapeCatch,
