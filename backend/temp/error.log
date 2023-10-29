@@ -1,4 +1,225 @@
 
+  doornroosje-0 Error - 11:07:38 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:709:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  doornroosje-0 Error - 11:07:03 AM
+  TypeError: Cannot read properties of undefined (reading 'message')
+    at handleError (file:///var/www/html/concertagenda/backend/mods/tools.js:71:11)
+    at Module.wrappedHandleError (file:///var/www/html/concertagenda/backend/mods/tools.js:9:5)
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:771:10
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:765:23)
+    at doornroosjeScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/doornroosje.js:337:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:517:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
+  Cannot read properties of undefined (reading 'message')
+  
+  
+  doornroosje-0 Error - 9:11:08 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:705:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  doornroosje-0 Error - 9:10:33 AM
+  TypeError: Cannot read properties of undefined (reading 'message')
+    at handleError (file:///var/www/html/concertagenda/backend/mods/tools.js:71:11)
+    at Module.wrappedHandleError (file:///var/www/html/concertagenda/backend/mods/tools.js:9:5)
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:767:10
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:761:23)
+    at doornroosjeScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/doornroosje.js:337:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:513:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
+  Cannot read properties of undefined (reading 'message')
+  
+  
+  doornroosje-0 Error - 9:08:53 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:705:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  doornroosje-0 Error - 9:08:18 AM
+  TypeError: Cannot read properties of undefined (reading 'stack')
+    at handleError (file:///var/www/html/concertagenda/backend/mods/tools.js:70:11)
+    at Module.wrappedHandleError (file:///var/www/html/concertagenda/backend/mods/tools.js:9:5)
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:767:10
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:761:23)
+    at doornroosjeScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/doornroosje.js:337:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:513:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
+  Cannot read properties of undefined (reading 'stack')
+  
+  
+  013-0 Error - 9:04:44 AM
+  TypeError: singleEvent.register is not a function
+    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:598:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
+  singleEvent.register is not a function
+  
+  
+  013-0 Error - 9:00:04 AM
+  TypeError: singleEvent.register is not a function
+    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:582:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
+  singleEvent.register is not a function
+  
+  
+  doornroosje-0 Error - 8:38:39 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:681:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  doornroosje-0 Error - 8:38:04 AM
+  TypeError: Cannot read properties of undefined (reading 'stack')
+    at handleError (file:///var/www/html/concertagenda/backend/mods/tools.js:70:11)
+    at Module.wrappedHandleError (file:///var/www/html/concertagenda/backend/mods/tools.js:9:5)
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:743:10
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:737:23)
+    at doornroosjeScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/doornroosje.js:337:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:510:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:118:5) 
+  Cannot read properties of undefined (reading 'stack')
+  
+  
+  doornroosje-0 Error - 8:30:59 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:680:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  doornroosje-0 Error - 8:30:24 AM
+  TypeError: Cannot read properties of undefined (reading 'stack')
+    at handleError (file:///var/www/html/concertagenda/backend/mods/tools.js:70:11)
+    at Module.wrappedHandleError (file:///var/www/html/concertagenda/backend/mods/tools.js:9:5)
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:742:10
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:736:23)
+    at doornroosjeScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/doornroosje.js:337:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:509:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:117:5) 
+  Cannot read properties of undefined (reading 'stack')
+  
+  
+  doornroosje-0 Error - 8:25:25 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:680:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  doornroosje-0 Error - 8:24:50 AM
+  TypeError: Cannot read properties of undefined (reading 'stack')
+    at handleError (file:///var/www/html/concertagenda/backend/mods/tools.js:70:11)
+    at Module.wrappedHandleError (file:///var/www/html/concertagenda/backend/mods/tools.js:9:5)
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:742:10
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:736:23)
+    at doornroosjeScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/doornroosje.js:337:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:509:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:117:5) 
+  Cannot read properties of undefined (reading 'stack')
+  
+  
+  doornroosje-0 Error - 8:23:45 AM
+  TypeError: Cannot read properties of undefined (reading 'stack')
+    at handleError (file:///var/www/html/concertagenda/backend/mods/tools.js:70:11)
+    at Module.wrappedHandleError (file:///var/www/html/concertagenda/backend/mods/tools.js:9:5)
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:742:10
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:736:23)
+    at doornroosjeScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/doornroosje.js:337:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:509:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:117:5) 
+  Cannot read properties of undefined (reading 'stack')
+  
+  
+  doornroosje-0 Error - 8:21:43 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:680:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  doornroosje-0 Error - 8:21:08 AM
+  Error: typeerror error
+Type undefined
+error value undefined
+    at ErrorWrapper.errorValid (file:///var/www/html/concertagenda/backend/mods/error-wrapper.js:65:11)
+    at ErrorWrapper.setError (file:///var/www/html/concertagenda/backend/mods/error-wrapper.js:69:22)
+    at ErrorWrapper.create (file:///var/www/html/concertagenda/backend/mods/error-wrapper.js:37:10)
+    at new ErrorWrapper (file:///var/www/html/concertagenda/backend/mods/error-wrapper.js:21:10)
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:737:28
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:736:23)
+    at doornroosjeScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/doornroosje.js:337:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:509:22) 
+  typeerror error
+Type undefined
+error value undefined
+  
+  
+  afaslive-0 Error - 8:19:11 AM
+  TypeError: singleEvent.registerINVALID is not a function
+    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:571:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:117:5) 
+  singleEvent.registerINVALID is not a function
+  
+  
+  doornroosje-0 Error - 8:18:49 AM
+  TypeError: singleEvent.registerINVALID is not a function
+    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:571:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:117:5) 
+  singleEvent.registerINVALID is not a function
+  
+  
+  gebrdenobel-0 Error - 8:18:44 AM
+  TypeError: singleEvent.registerINVALID is not a function
+    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:571:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:117:5) 
+  singleEvent.registerINVALID is not a function
+  
+  
+  doornroosje-1 Error - 8:18:29 AM
+  TypeError: singleEvent.registerINVALID is not a function
+    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:571:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:117:5) 
+  singleEvent.registerINVALID is not a function
+  
+  
   willemeen-0 Error - 2:17:05 PM
   ProtocolError: Runtime.callFunctionOn timed out. Increase the 'protocolTimeout' setting in launch/connect calls for a higher timeout if needed.
     at <instance_members_initializer> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Connection.js:46:14)

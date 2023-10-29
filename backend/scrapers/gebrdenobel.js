@@ -90,8 +90,6 @@ gebrdenobelScraper.mainPage = async function () {
 
   const { stopFunctie, page } = await this.mainPageStart();
 
-  this.dirtyDebug(page);
-
   let punkMetalRawEvents = await page.evaluate(
     // eslint-disable-next-line no-shadow
     ({ workerData, unavailabiltyTerms }) =>

@@ -15,7 +15,7 @@ export const AbstractWorkerConfig = {
 
 export const workerConfig = {
   '013': {
-    workerCount: 4,
+    workerCount: 1,
     CPUReq: 'low',
     workerConcurrent: 3,
     forceSet: 0,
@@ -57,7 +57,9 @@ export const workerConfig = {
   },
   dynamo: { workerCount: 2, workerConcurrent: 1, forceSet: 3 },
   effenaar: { workerCount: 4, workerConcurrent: 2, forceSet: 3 },
-  gebrdenobel: { workerCount: 1, workerConcurrent: 1, CPUReq: 'high', forceSet: 3 },
+  gebrdenobel: {
+    workerCount: 1, workerConcurrent: 1, CPUReq: 'high', forceSet: 3, 
+  },
   groeneengel: { workerCount: 1, workerConcurrent: 1, forceSet: 3 },
   iduna: { workerCount: 1, workerConcurrent: 1, forceSet: 4 },
   kavka: {

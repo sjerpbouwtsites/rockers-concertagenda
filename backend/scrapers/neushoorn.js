@@ -177,8 +177,6 @@ neushoornScraper.singlePage = async function ({ page, event }) {
     { months: this.months, event },
   );
 
-  this.dirtyLog(pageInfo);
-
   pageInfo = mapToStartDate(pageInfo, 'dag-maandNaam', this.months);
   pageInfo = mapToStartTime(pageInfo);
   pageInfo = mapToDoorTime(pageInfo);

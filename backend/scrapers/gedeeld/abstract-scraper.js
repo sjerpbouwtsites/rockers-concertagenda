@@ -107,15 +107,17 @@ export default class AbstractScraper extends ScraperConfig {
     }
 
     const baseMusicEvents = await this.mainPage().catch(this.handleOuterScrapeCatch);
+    this.dirtyLog(baseMusicEvents, `baseMusicEvents`);
 
     if (!baseMusicEvents) return false;
     const checkedEvents = await this.announceAndCheck(baseMusicEvents).catch(
       this.handleOuterScrapeCatch,
     );
+    this.dirtyLog(checkedEvents, `checkedEvents`);
     this.completedMainPage = true;
     if (!checkedEvents) return false;
     await this.processSingleMusicEvent(checkedEvents).catch(this.handleOuterScrapeCatch);
-
+    
     await this.saveRockRefusedAllowedToFile();
 
     await this.announceToMonitorDone();
@@ -281,19 +283,25 @@ export default class AbstractScraper extends ScraperConfig {
     eventsWithLongHTMLShortText.forEach((event) => {
       const errorVerz = Object.prototype.hasOwnProperty.call(event, 'errors') ? event.errors : [];
       errorVerz.forEach((errorData) => {
+        const refE = new Error();
         const wrappedError = new ErrorWrapper({
-          ...errorData,
+          // eslint-disable-next-line no-nested-ternary
+          message: (errorData?.message ?? null) ? errorData.message : (errorData?.remarks ?? null) ? errorData.remarks : 'geen message',
+          stack: errorData?.stack ?? refE.stack,
+          remarks: errorData?.remarks ?? 'geen remarks',
           workerData,
         });
         _t.wrappedHandleError(wrappedError);
       });
     });
 
+    this.dirtyLog(rawEvents, `mainPageEnd1`);
     const r = rawEvents.map((rawEvent) => ({
       ...rawEvent,
       location: workerData.family,
       origin: workerData.family,
     }));
+    this.dirtyLog(r, `mainPageEnd2`);
     if (this._s.app.mainPage.enforceMusicEventType) {
       return r.map((event) => new MusicEvent(event));
     }
@@ -552,6 +560,8 @@ export default class AbstractScraper extends ScraperConfig {
 
     singleEvent.longText = this.writeLongTextHTML(singleEvent);
 
+    this.dirtyLog(singleEvent, `singleEventBeforeMergedCheck`);
+
     const mergedEventCheckRes = await this.singlePageAsyncCheck(singleEvent, pageInfo);
     if (mergedEventCheckRes.success) {
       if (debugSettings.debugsinglePageAsyncCheck && mergedEventCheckRes.reason) {
@@ -562,13 +572,34 @@ export default class AbstractScraper extends ScraperConfig {
         });
       }
 
-      if (singleEvent.isValid) {
-        // TODO hier lopen dingen echt dwars door elkaar. 
-        // integreren in soort van singlePageAsyncCheckBase 
-        // en dan anderen reducen erop of weet ik veel wat een gehack vandaag
-        singleEvent.register(); 
+      this.dirtyLog(singleEvent, `singleEventAfterMergedCheckSuccess`);
+      
+      let tryEnforceDate = false;
+      try {
+        tryEnforceDate = new Date(singleEvent.start).toISOString();
+      } catch (error) { /* */ }
+
+      if (tryEnforceDate && !singleEvent.unavailable && !singleEvent.corrupted) {
+        const toRegister = {
+          door: singleEvent.door,
+          start: singleEvent.start,      
+          end: singleEvent.end,      
+          venueEventUrl: singleEvent.venueEventUrl,      
+          title: singleEvent.title,      
+          location: singleEvent.location,      
+          price: singleEvent.price,      
+          shortText: singleEvent.shortText,      
+          longText: singleEvent.longText,      
+          image: singleEvent.image,      
+          soldOut: singleEvent.soldOut,      
+          unavailable: singleEvent.unavailable,
+          corrupted: singleEvent.corrupted,
+          // ...workerData,
+        };
+
+        EventsList.addEvent(toRegister);
       } else {
-        singleEvent.registerINVALID(this.workerData);
+        this.dirtyDebug('invalid maar geen register invalid');
       }
     } else {
       if (debugSettings.debugsinglePageAsyncCheck && mergedEventCheckRes.reason) {
