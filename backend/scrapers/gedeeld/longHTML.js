@@ -7,10 +7,7 @@ function youtubeIDToIframe(id) {
 }
 
 export default function makeLongHTML(event) {
-  if (!event.textForHTML) event.textForHTML = '';
-  if (!event.mediaForHTML) event.mediaForHTML = [];
-  if (!event.socialsForHTML) event.socialsForHTML = [];
-  const mediaHTML = event.mediaForHTML
+  const mediaHTML = !Array.isArray(event.mediaForHTML) ? '' : event.mediaForHTML
     .map((bron) => {
       if (bron.outer && bron.type === 'youtube') {
         return `<div class='iframe-wrapper-16-9'>${bron.outer}</div>`;
@@ -37,7 +34,7 @@ export default function makeLongHTML(event) {
   const mediaSection = mediaHTML
     ? `<section class='long-html__music-videos'>${mediaHTML}</section>`
     : '';
-  const socialsHTML = event.socialsForHTML.map((socialHTML) => `<li class='long-html__social-list-item'>${socialHTML}</li>`).join('');
+  const socialsHTML = !Array.isArray(event.socialsForHTML) ? '' : event.socialsForHTML.map((socialHTML) => `<li class='long-html__social-list-item'>${socialHTML}</li>`).join('');
   const socialsSection = socialsHTML.length
     ? `<nav class="long-html__social">
     <ul class='long-html__social-list'>
@@ -47,13 +44,9 @@ export default function makeLongHTML(event) {
     : '';
 
   // headings omlaag gooien.
-  const thtml = event.textForHTML
-    .replaceAll('h6', 'strong')
-    .replaceAll('h5', 'strong')
-    .replaceAll('h4', 'strong')
-    .replaceAll('h3', 'h4')
+  const thtml = event.textForHTML?.replaceAll('h6', 'strong').replaceAll('h5', 'strong').replaceAll('h4', 'strong').replaceAll('h3', 'h4')
     .replaceAll('h1', 'h2')
-    .replaceAll('h2', 'h3');
+    .replaceAll('h2', 'h3') ?? '';
 
   const reshtml = `
     <div class='long-html'>

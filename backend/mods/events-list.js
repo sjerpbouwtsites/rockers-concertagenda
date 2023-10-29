@@ -1,6 +1,5 @@
 import fs from 'fs';
 import fsDirections from './fs-directions.js';
-import { handleError } from './tools.js';
 import { QuickWorkerMessage } from './rock-worker.js';
 import passMessageToMonitor from '../monitor/pass-message-to-monitor.js';
 import { workerConfig } from './worker-config.js';
@@ -123,8 +122,14 @@ export default class EventsList {
 
     EventsList._events = allEventListFiles
       .map((eventListFile) => {
-        const parsedEventFile = JSON.parse(fs.readFileSync(eventListFile));
-        return parsedEventFile;
+        try {
+          const parsedEventFile = JSON.parse(fs.readFileSync(eventListFile));
+          return parsedEventFile;
+        } catch (error) {
+          console.log(`json parse error ${eventListFile}`);          
+          console.log(error)
+          return []
+        }
       })
       .flat();
 

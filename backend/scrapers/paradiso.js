@@ -1,6 +1,10 @@
+/* global document */
 import { workerData } from 'worker_threads';
 import * as _t from '../mods/tools.js';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
+import longTextSocialsIframes from './longtext/paradiso.js';
+import getImage from './gedeeld/image.js';
+import terms from './gedeeld/terms.js';
 
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const paradisoScraper = new AbstractScraper({
@@ -73,40 +77,42 @@ paradisoScraper.mainPage = async function () {
     const thisWorkersEvents = availableBaseEvents.filter(
       (eventEl, index) => index % workerData.workerCount === workerData.index,
     );
-    return await this.mainPageEnd({ stopFunctie: null, rawEvents: thisWorkersEvents });
+    return this.mainPageEnd({ stopFunctie: null, rawEvents: thisWorkersEvents });
   }
 
   const { stopFunctie, page } = await this.mainPageStart();
 
   const res = await page.evaluate(
+    // eslint-disable-next-line no-shadow
     ({ workerData }) => ({
-      pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${workerData.index}</a>`,
+      anker: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${workerData.index}</a>`,
     }),
     { workerData },
   );
 
-  let bla = '';
-  await _t.autoScroll(page);
-  bla = await page.evaluate(
-    ({ workerData }) =>
-      document.querySelector('.css-16y59pb:last-child .chakra-heading')?.textContent ??
-      'geen titel gevonden',
-    { workerData },
-  );
-  if (this.isForced) this.dirtyTalk(`na scroll 1 ${bla}`);
+  await page.waitForSelector('.chakra-container');
 
   await _t.autoScroll(page);
-  bla = await page.evaluate(
-    ({ workerData }) =>
+  await page.evaluate(
+    () =>
       document.querySelector('.css-16y59pb:last-child .chakra-heading')?.textContent ??
       'geen titel gevonden',
     { workerData },
   );
-  if (this.isForced) this.dirtyTalk(`na scroll 2 ${bla}`);
+
+  await _t.autoScroll(page);
+  await page.evaluate(
+    // eslint-disable-next-line no-shadow
+    () =>
+      document.querySelector('.css-16y59pb:last-child .chakra-heading')?.textContent ??
+      'geen titel gevonden',
+    { workerData },
+  );
 
   let rawEvents = await page.evaluate(
     ({ resBuiten, unavailabiltyTerms }) =>
       Array.from(document.querySelectorAll('.css-1agutam')).map((rawEvent) => {
+        // eslint-disable-next-line no-shadow
         const res = {
           ...resBuiten,
           errors: [],
@@ -120,7 +126,7 @@ paradisoScraper.mainPage = async function () {
         res.unavailable = !!rawEvent?.textContent.match(uaRex);
         return res;
       }),
-    { workerData, resBuiten: res, unavailabiltyTerms: AbstractScraper.unavailabiltyTerms },
+    { workerData, resBuiten: res, unavailabiltyTerms: terms.unavailability },
   );
 
   rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
@@ -129,7 +135,7 @@ paradisoScraper.mainPage = async function () {
   const thisWorkersEvents = rawEvents.filter(
     (eventEl, index) => index % workerData.workerCount === workerData.index,
   );
-  return await this.mainPageEnd({ stopFunctie, rawEvents: thisWorkersEvents });
+  return this.mainPageEnd({ stopFunctie, rawEvents: thisWorkersEvents });
 };
 // #endregion                          MAIN PAGE
 
@@ -138,7 +144,7 @@ paradisoScraper.singlePage = async function ({ page, event }) {
   const { stopFunctie } = await this.singlePageStart();
 
   const buitenRes = {
-    pageInfo: `<a class='page-info' href='${event.venueEventUrl}'>${event.title}</a>`,
+    anker: `<a class='page-info' href='${event.venueEventUrl}'>${event.title}</a>`,
     errors: [],
   };
 
@@ -149,10 +155,10 @@ paradisoScraper.singlePage = async function ({ page, event }) {
   } catch (caughtError) {
     buitenRes.errors.push({
       error: caughtError,
-      remarks: `Paradiso wacht op laden single pagina\n${buitenRes.pageInfo}`,
+      remarks: `Paradiso wacht op laden single pagina\n${buitenRes.anker}`,
       errorLevel: 'notice',
     });
-    return await this.singlePageEnd({ pageInfo: buitenRes, stopFunctie, page });
+    return this.singlePageEnd({ pageInfo: buitenRes, stopFunctie, page });
   }
 
   const editedMonths = {
@@ -193,6 +199,7 @@ paradisoScraper.singlePage = async function ({ page, event }) {
   await _t.waitTime(500);
 
   const pageInfo = await page.evaluate(
+    // eslint-disable-next-line no-shadow
     ({ months, buitenRes }) => {
       const res = { ...buitenRes };
 
@@ -228,7 +235,7 @@ paradisoScraper.singlePage = async function ({ page, event }) {
       } catch (caughtError) {
         res.errors.push({
           error: caughtError,
-          remarks: `startDateMatch ${res.pageInfo}`,
+          remarks: `startDateMatch ${res.anker}`,
           toDebug: {
             event,
           },
@@ -251,7 +258,7 @@ paradisoScraper.singlePage = async function ({ page, event }) {
       }
       if (!tijden.length) {
         res.errors.push({
-          remarks: `Geen tijden gevonden ${res.pageInfo}`,
+          remarks: `Geen tijden gevonden ${res.anker}`,
         });
       }
 
@@ -270,8 +277,10 @@ paradisoScraper.singlePage = async function ({ page, event }) {
     { months: editedMonths, buitenRes },
   );
 
-  const imageRes = await this.getImage({
+  const imageRes = await getImage({
+    _this: this,
     page,
+    workerData,
     event,
     pageInfo,
     selectors: ['.css-xz41fi source', '.css-xz41fi source:last-of-type'],
@@ -289,12 +298,16 @@ paradisoScraper.singlePage = async function ({ page, event }) {
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
   pageInfo.price = priceRes.price;
 
-  const longTextRes = await longTextSocialsIframes(page, event, pageInfo);
-  for (const i in longTextRes) {
-    pageInfo[i] = longTextRes[i];
-  }
+  const { mediaForHTML, socialsForHTML, textForHTML } = await longTextSocialsIframes(
+    page,
+    event,
+    pageInfo,
+  );
+  pageInfo.mediaForHTML = mediaForHTML;
+  pageInfo.socialsForHTML = socialsForHTML;
+  pageInfo.textForHTML = textForHTML;
 
-  return await this.singlePageEnd({
+  return this.singlePageEnd({
     pageInfo,
     stopFunctie,
     page,
@@ -302,168 +315,3 @@ paradisoScraper.singlePage = async function ({ page, event }) {
   });
 };
 // #endregion                         SINGLE PAGE
-// #region [rgba(60, 0, 0, 0.3)]     LONG HTML
-async function longTextSocialsIframes(page, event, pageInfo) {
-  return await page.evaluate(
-    ({ event }) => {
-      const res = {};
-
-      const textSelector = '.chakra-container .css-m8ufwp';
-      const mediaSelector = [
-        "iframe[src*='youtube']",
-        "iframe[src*='bandcamp']",
-        "iframe[src*='spotify']",
-      ].join(', ');
-      const removeEmptyHTMLFrom = textSelector;
-      const socialSelector = [].join(', ');
-      const removeSelectors = [
-        `${textSelector} [class*='icon-']`,
-        `${textSelector} [class*='fa-']`,
-        `${textSelector} .fa`,
-        `${textSelector} script`,
-        `${textSelector} noscript`,
-        `${textSelector} style`,
-        `${textSelector} meta`,
-        `${textSelector} svg`,
-        `${textSelector} form`,
-        `${textSelector} h1`,
-        `${textSelector} img`,
-        `${textSelector} iframe`,
-      ].join(', ');
-
-      const attributesToRemove = [
-        'style',
-        'hidden',
-        '_target',
-        'frameborder',
-        'onclick',
-        'aria-hidden',
-        'allow',
-        'allowfullscreen',
-        'data-deferlazy',
-        'width',
-        'height',
-      ];
-      const attributesToRemoveSecondRound = ['class', 'id'];
-      const removeHTMLWithStrings = [];
-
-      // eerst onzin attributes wegslopen
-      const socAttrRemSelAdd = `${socialSelector.length ? `, ${socialSelector}` : ''}`;
-      const mediaAttrRemSelAdd = `${
-        mediaSelector.length ? `, ${mediaSelector} *, ${mediaSelector}` : ''
-      }`;
-      const textSocEnMedia = `${textSelector} *${socAttrRemSelAdd}${mediaAttrRemSelAdd}`;
-      document.querySelectorAll(textSocEnMedia).forEach((elToStrip) => {
-        attributesToRemove.forEach((attr) => {
-          if (elToStrip.hasAttribute(attr)) {
-            elToStrip.removeAttribute(attr);
-          }
-        });
-      });
-
-      // media obj maken voordat HTML verdwijnt
-      res.mediaForHTML = !mediaSelector.length
-        ? ''
-        : Array.from(document.querySelectorAll(mediaSelector)).map((bron) => {
-            bron.className = '';
-
-            if (bron?.src && (bron.src.includes('bandcamp') || bron.src.includes('spotify'))) {
-              return {
-                outer: bron.outerHTML,
-                src: bron.src,
-                id: null,
-                type: bron.src.includes('bandcamp') ? 'bandcamp' : 'spotify',
-              };
-            }
-            if (bron?.src && bron.src.includes('youtube')) {
-              return {
-                outer: bron.outerHTML,
-                src: bron.src,
-                id: null,
-                type: 'youtube',
-              };
-            }
-
-            // terugval???? nog niet bekend met alle opties.
-            return {
-              outer: bron.outerHTML,
-              src: bron.src,
-              id: null,
-              type: bron.src.includes('spotify')
-                ? 'spotify'
-                : bron.src.includes('youtube')
-                ? 'youtube'
-                : 'bandcamp',
-            };
-          });
-
-      // socials obj maken voordat HTML verdwijnt
-      res.socialsForHTML = !socialSelector
-        ? ''
-        : Array.from(document.querySelectorAll(socialSelector)).map((el) => {
-            el.querySelectorAll('i, svg, img').forEach((rm) => rm.parentNode.removeChild(rm));
-            if (!el.textContent.trim().length) {
-              if (el.href.includes('facebook') || el.href.includes('fb.me')) {
-                if (el.href.includes('facebook.com/events')) {
-                  el.textContent = `FB event ${event.title}`;
-                } else {
-                  el.textContent = 'Facebook';
-                }
-              } else if (el.href.includes('twitter')) {
-                el.textContent = 'Tweet';
-              } else if (el.href.includes('instagram')) {
-                el.textContent = 'Insta';
-              } else {
-                el.textContent = 'Social';
-              }
-            }
-            el.className = 'long-html__social-list-link';
-            el.target = '_blank';
-            return el.outerHTML;
-          });
-
-      // stript HTML tbv text
-      removeSelectors.length &&
-        document
-          .querySelectorAll(removeSelectors)
-          .forEach((toRemove) => toRemove.parentNode.removeChild(toRemove));
-
-      // verwijder ongewenste paragrafen over bv restaurants
-      Array.from(
-        document.querySelectorAll(`${textSelector} p, ${textSelector} span, ${textSelector} a`),
-      ).forEach((verwijder) => {
-        const heeftEvilString = !!removeHTMLWithStrings.find((evilString) =>
-          verwijder.textContent.includes(evilString),
-        );
-        if (heeftEvilString) {
-          verwijder.parentNode.removeChild(verwijder);
-        }
-      });
-
-      // lege HTML eruit cq HTML zonder tekst of getallen
-      document.querySelectorAll(`${removeEmptyHTMLFrom} > *`).forEach((checkForEmpty) => {
-        const leegMatch = checkForEmpty.innerHTML.replace('&nbsp;', '').match(/[\w\d]/g);
-        if (!Array.isArray(leegMatch)) {
-          checkForEmpty.parentNode.removeChild(checkForEmpty);
-        }
-      });
-
-      // laatste attributen eruit.
-      document.querySelectorAll(textSocEnMedia).forEach((elToStrip) => {
-        attributesToRemoveSecondRound.forEach((attr) => {
-          if (elToStrip.hasAttribute(attr)) {
-            elToStrip.removeAttribute(attr);
-          }
-        });
-      });
-
-      // tekst.
-      res.textForHTML = Array.from(document.querySelectorAll(textSelector))
-        .map((el) => el.innerHTML)
-        .join('');
-      return res;
-    },
-    { event },
-  );
-}
-// #endregion                        LONG HTML

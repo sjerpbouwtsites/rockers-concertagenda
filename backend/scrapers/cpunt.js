@@ -1,11 +1,19 @@
+/* global document */
 import { workerData } from 'worker_threads';
+import fs from 'fs';
 import * as _t from '../mods/tools.js';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
+import longTextSocialsIframes from './longtext/cpunt.js';
+import getImage from './gedeeld/image.js';
+import terms from './gedeeld/terms.js';
+import fsDirections from '../mods/fs-directions.js';
 
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const cpuntScraper = new AbstractScraper({
   workerData: { ...workerData },
-
+  launchOptions: {
+    headless: false,
+  },
   mainPage: {
     timeout: 20014,
     waitUntil: 'load',
@@ -74,7 +82,7 @@ cpuntScraper.mainPage = async function () {
     const thisWorkersEvents = availableBaseEvents.filter(
       (eventEl, index) => index % workerData.workerCount === workerData.index,
     );
-    return await this.mainPageEnd({ stopFunctie: null, rawEvents: thisWorkersEvents });
+    return this.mainPageEnd({ stopFunctie: null, rawEvents: thisWorkersEvents });
   }
 
   const { stopFunctie, page } = await this.mainPageStart();
@@ -84,7 +92,13 @@ cpuntScraper.mainPage = async function () {
       .waitForSelector('#filter .article-wrapper', {
         timeout: 2000,
       })
-      .catch((caughtError) => {
+      .catch(async (caughtError) => {
+        const pageHTML = await page.evaluate(() => {
+          console.log("NEE");
+          return `${document.body.outerHTML}`;
+        });
+        this.dirtyLog(pageHTML);
+        fs.writeFileSync(`${fsDirections.temp}/rando-error.txt`, pageHTML, 'utf-8');
         _t.handleError(
           caughtError,
           workerData,
@@ -94,17 +108,18 @@ cpuntScraper.mainPage = async function () {
         );
       }))
   ) {
-    return await this.mainPageEnd({ stopFunctie, page, rawEvents: [] });
+    return this.mainPageEnd({ stopFunctie, page, rawEvents: [] });
   }
 
   await _t.waitTime(50);
 
   let rawEvents = await page.evaluate(
+    // eslint-disable-next-line no-shadow
     ({ workerData, unavailabiltyTerms }) =>
       Array.from(document.querySelectorAll('#filter .article-wrapper')).map((rawEvent) => {
         const title = rawEvent.querySelector('.article-title')?.textContent ?? null;
         const res = {
-          pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} - main - ${title}</a>`,
+          anker: `<a class='page-info' href='${document.location.href}'>${workerData.family} - main - ${title}</a>`,
           errors: [],
         };
 
@@ -124,7 +139,7 @@ cpuntScraper.mainPage = async function () {
         res.shortText = '';
         return res;
       }),
-    { workerData, unavailabiltyTerms: AbstractScraper.unavailabiltyTerms },
+    { workerData, unavailabiltyTerms: terms.unavailability },
   );
   rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
 
@@ -132,7 +147,7 @@ cpuntScraper.mainPage = async function () {
   const thisWorkersEvents = rawEvents.filter(
     (eventEl, index) => index % workerData.workerCount === workerData.index,
   );
-  return await this.mainPageEnd({ stopFunctie, rawEvents: thisWorkersEvents });
+  return this.mainPageEnd({ stopFunctie, rawEvents: thisWorkersEvents });
 };
 // #endregion                          MAIN PAGE
 
@@ -155,8 +170,8 @@ cpuntScraper.singlePage = async function ({ page, event }) {
         );
       }))
   ) {
-    return await this.singlePageEnd({
-      pageInfo,
+    return this.singlePageEnd({
+      pageInfo: event,
       stopFunctie,
       page,
       event,
@@ -164,6 +179,7 @@ cpuntScraper.singlePage = async function ({ page, event }) {
   }
 
   const pageInfo = await page.evaluate(
+    // eslint-disable-next-line no-shadow
     ({ months, event }) => {
       const contentSections = Array.from(document.querySelectorAll('.content-blocks section'));
       let indexOfTicketSection = 0;
@@ -172,11 +188,10 @@ cpuntScraper.singlePage = async function ({ page, event }) {
           indexOfTicketSection = sectionIndex;
         }
       });
-      const textSection = contentSections[indexOfTicketSection - 1];
       const ticketSection = contentSections[indexOfTicketSection];
 
       const res = {
-        pageInfo: `<a class='page-info' href='${location.href}'>${document.title}</a>`,
+        anker: `<a class='page-info' href='${document.location.href}'>${document.title}</a>`,
         errors: [],
       };
 
@@ -248,8 +263,10 @@ cpuntScraper.singlePage = async function ({ page, event }) {
     { months: this.months, event },
   );
 
-  const imageRes = await this.getImage({
+  const imageRes = await getImage({
+    _this: this,
     page,
+    workerData,
     event,
     pageInfo,
     selectors: [".bg-image[style*='background']"],
@@ -268,12 +285,16 @@ cpuntScraper.singlePage = async function ({ page, event }) {
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
   pageInfo.price = priceRes.price;
 
-  const longTextRes = await longTextSocialsIframes(page, event, pageInfo);
-  for (const i in longTextRes) {
-    pageInfo[i] = longTextRes[i];
-  }
+  const { mediaForHTML, socialsForHTML, textForHTML } = await longTextSocialsIframes(
+    page,
+    event,
+    pageInfo,
+  );
+  pageInfo.mediaForHTML = mediaForHTML;
+  pageInfo.socialsForHTML = socialsForHTML;
+  pageInfo.textForHTML = textForHTML;
 
-  return await this.singlePageEnd({
+  return this.singlePageEnd({
     pageInfo,
     stopFunctie,
     page,
@@ -281,136 +302,3 @@ cpuntScraper.singlePage = async function ({ page, event }) {
   });
 };
 // #endregion                         SINGLE PAGE
-
-// #region [rgba(60, 0, 0, 0.3)]     LONG HTML
-async function longTextSocialsIframes(page, event, pageInfo) {
-  return await page.evaluate(
-    ({ event }) => {
-      const res = {};
-      const mediaSelector = ['.contentblock-Video iframe'].join(', ');
-      const textSelector = '.contentblock-TextOneColumn .text';
-      const removeEmptyHTMLFrom = textSelector;
-      const socialSelector = [].join(', ');
-      const removeSelectors = [
-        `${textSelector} [class*='icon-']`,
-        `${textSelector} [class*='fa-']`,
-        `${textSelector} .fa`,
-        `${textSelector} script`,
-        `${textSelector} noscript`,
-        `${textSelector} style`,
-        `${textSelector} meta`,
-        `${textSelector} svg`,
-        `${textSelector} form`,
-        `${textSelector} img`,
-      ].join(', ');
-
-      const attributesToRemove = [
-        'style',
-        'hidden',
-        '_target',
-        'frameborder',
-        'onclick',
-        'aria-hidden',
-      ];
-      const attributesToRemoveSecondRound = ['class', 'id'];
-      const removeHTMLWithStrings = [];
-
-      // eerst onzin attributes wegslopen
-      const socAttrRemSelAdd = `${socialSelector.length ? `, ${socialSelector}` : ''}`;
-      const mediaAttrRemSelAdd = `${
-        mediaSelector.length ? `, ${mediaSelector} *, ${mediaSelector}` : ''
-      }`;
-      const textSocEnMedia = `${textSelector} *${socAttrRemSelAdd}${mediaAttrRemSelAdd}`;
-      document.querySelectorAll(textSocEnMedia).forEach((elToStrip) => {
-        attributesToRemove.forEach((attr) => {
-          if (elToStrip.hasAttribute(attr)) {
-            elToStrip.removeAttribute(attr);
-          }
-        });
-      });
-
-      // media obj maken voordat HTML verdwijnt
-      res.mediaForHTML = Array.from(document.querySelectorAll(mediaSelector)).map((bron) => {
-        const src = bron?.src ? bron.src : '';
-        return {
-          outer: bron.outerHTML,
-          src,
-          id: null,
-          type: src.includes('spotify')
-            ? 'spotify'
-            : src.includes('youtube')
-            ? 'youtube'
-            : 'bandcamp',
-        };
-      });
-
-      // socials obj maken voordat HTML verdwijnt
-      res.socialsForHTML = !socialSelector
-        ? ''
-        : Array.from(document.querySelectorAll(socialSelector)).map((el) => {
-            el.querySelectorAll('i, svg, img').forEach((rm) => rm.parentNode.removeChild(rm));
-            if (!el.textContent.trim().length) {
-              if (el.href.includes('facebook') || el.href.includes('fb.me')) {
-                if (el.href.includes('facebook.com/events')) {
-                  el.textContent = `FB event ${event.title}`;
-                } else {
-                  el.textContent = 'Facebook';
-                }
-              } else if (el.href.includes('twitter')) {
-                el.textContent = 'Tweet';
-              } else if (el.href.includes('instagram')) {
-                el.textContent = 'Insta';
-              } else {
-                el.textContent = 'Social';
-              }
-            }
-            el.className = 'long-html__social-list-link';
-            el.target = '_blank';
-            return el.outerHTML;
-          });
-
-      // stript HTML tbv text
-      removeSelectors.length &&
-        document
-          .querySelectorAll(removeSelectors)
-          .forEach((toRemove) => toRemove.parentNode.removeChild(toRemove));
-
-      // verwijder ongewenste paragrafen over bv restaurants
-      Array.from(
-        document.querySelectorAll(`${textSelector} p, ${textSelector} span, ${textSelector} a`),
-      ).forEach((verwijder) => {
-        const heeftEvilString = !!removeHTMLWithStrings.find((evilString) =>
-          verwijder.textContent.includes(evilString),
-        );
-        if (heeftEvilString) {
-          verwijder.parentNode.removeChild(verwijder);
-        }
-      });
-
-      // lege HTML eruit cq HTML zonder tekst of getallen
-      document.querySelectorAll(`${removeEmptyHTMLFrom} > *`).forEach((checkForEmpty) => {
-        const leegMatch = checkForEmpty.innerHTML.match(/[\w\d]/g);
-        if (!Array.isArray(leegMatch)) {
-          checkForEmpty.parentNode.removeChild(checkForEmpty);
-        }
-      });
-
-      // laatste attributen eruit.
-      document.querySelectorAll(textSocEnMedia).forEach((elToStrip) => {
-        attributesToRemoveSecondRound.forEach((attr) => {
-          if (elToStrip.hasAttribute(attr)) {
-            elToStrip.removeAttribute(attr);
-          }
-        });
-      });
-
-      // tekst.
-      res.textForHTML = Array.from(document.querySelectorAll(textSelector))
-        .map((el) => el.innerHTML)
-        .join('');
-      return res;
-    },
-    { event },
-  );
-}
-// #endregion                        LONG HTML

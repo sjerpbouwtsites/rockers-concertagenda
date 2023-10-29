@@ -1,5 +1,8 @@
+/* global document */
 import { workerData } from 'worker_threads';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
+import longTextSocialsIframes from './longtext/dehelling.js';
+import getImage from './gedeeld/image.js';
 
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const dehellingScraper = new AbstractScraper({
@@ -69,12 +72,13 @@ dehellingScraper.mainPage = async function () {
     const thisWorkersEvents = availableBaseEvents.filter(
       (eventEl, index) => index % workerData.workerCount === workerData.index,
     );
-    return await this.mainPageEnd({ stopFunctie: null, rawEvents: thisWorkersEvents });
+    return this.mainPageEnd({ stopFunctie: null, rawEvents: thisWorkersEvents });
   }
 
   const { stopFunctie, page } = await this.mainPageStart();
 
   let rawEvents = await page.evaluate(
+    // eslint-disable-next-line no-shadow
     ({ workerData }) =>
       Array.from(document.querySelectorAll('.c-event-card'))
         .filter((eventEl) => {
@@ -89,7 +93,7 @@ dehellingScraper.mainPage = async function () {
           const title = schemaData?.name;
 
           const res = {
-            pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
+            anker: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
             errors: [],
             title,
           };
@@ -99,7 +103,7 @@ dehellingScraper.mainPage = async function () {
           } catch (caughtError) {
             res.errors.push({
               error: caughtError,
-              remarks: `end date time datestring omzetting ${title} ${res.pageInfo}`,
+              remarks: `end date time datestring omzetting ${title} ${res.anker}`,
               toDebug: res,
             });
           }
@@ -123,7 +127,7 @@ dehellingScraper.mainPage = async function () {
           } catch (caughtError) {
             res.errors.push({
               error: caughtError,
-              remarks: `start date time eruit filteren error \n ${res.end} \n ${startString} ${title} ${res.pageInfo}`,
+              remarks: `start date time eruit filteren error \n ${res.end} \n ${startString} ${title} ${res.anker}`,
               toDebug: res,
             });
           }
@@ -149,7 +153,7 @@ dehellingScraper.mainPage = async function () {
   const thisWorkersEvents = rawEvents.filter(
     (eventEl, index) => index % workerData.workerCount === workerData.index,
   );
-  return await this.mainPageEnd({ stopFunctie, rawEvents: thisWorkersEvents });
+  return this.mainPageEnd({ stopFunctie, rawEvents: thisWorkersEvents });
 };
 // #endregion                          MAIN PAGE
 
@@ -158,9 +162,10 @@ dehellingScraper.singlePage = async function ({ page, event }) {
   const { stopFunctie } = await this.singlePageStart();
 
   const pageInfo = await page.evaluate(
+    // eslint-disable-next-line no-shadow
     ({ event }) => {
       const res = {
-        pageInfo: `<a class='page-info' href='${event.venueEventUrl}'>${event.title}</a>`,
+        anker: `<a class='page-info' href='${event.venueEventUrl}'>${event.title}</a>`,
         errors: [],
       };
       const lineupEl = document.querySelector('.c-event-content__lineup');
@@ -184,8 +189,10 @@ dehellingScraper.singlePage = async function ({ page, event }) {
     { event },
   );
 
-  const imageRes = await this.getImage({
+  const imageRes = await getImage({
+    _this: this,
     page,
+    workerData,
     event,
     pageInfo,
     selectors: ['.img--cover img', '.u-section__inner img'],
@@ -203,12 +210,16 @@ dehellingScraper.singlePage = async function ({ page, event }) {
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
   pageInfo.price = priceRes.price;
 
-  const longTextRes = await longTextSocialsIframes(page, event, pageInfo);
-  for (const i in longTextRes) {
-    pageInfo[i] = longTextRes[i];
-  }
+  const { mediaForHTML, socialsForHTML, textForHTML } = await longTextSocialsIframes(
+    page,
+    event,
+    pageInfo,
+  );
+  pageInfo.mediaForHTML = mediaForHTML;
+  pageInfo.socialsForHTML = socialsForHTML;
+  pageInfo.textForHTML = textForHTML;
 
-  return await this.singlePageEnd({
+  return this.singlePageEnd({
     pageInfo,
     stopFunctie,
     page,
@@ -216,143 +227,3 @@ dehellingScraper.singlePage = async function ({ page, event }) {
   });
 };
 // #endregion                         SINGLE PAGE
-
-// #region [rgba(60, 0, 0, 0.3)]     LONG HTML
-async function longTextSocialsIframes(page, event, pageInfo) {
-  return await page.evaluate(
-    ({ event }) => {
-      const res = {};
-
-      const textSelector = '.c-event-content__text';
-      const mediaSelector = ['.c-event-content__embeds iframe'].join(', ');
-      const removeEmptyHTMLFrom = textSelector;
-      const socialSelector = ['.FacebookShare a', `${textSelector} img`, '.Twitter a'].join(', ');
-      const removeSelectors = [
-        `${textSelector} [class*='icon-']`,
-        `${textSelector} [class*='fa-']`,
-        `${textSelector} .fa`,
-        `${textSelector} script`,
-        `${textSelector} noscript`,
-        `${textSelector} style`,
-        `${textSelector} meta`,
-        `${textSelector} svg`,
-        `${textSelector} form`,
-      ].join(', ');
-
-      const attributesToRemove = [
-        'style',
-        'hidden',
-        '_target',
-        'frameborder',
-        'onclick',
-        'aria-hidden',
-      ];
-      const attributesToRemoveSecondRound = ['class', 'id'];
-      const removeHTMLWithStrings = [];
-
-      // eerst onzin attributes wegslopen
-      const socAttrRemSelAdd = `${socialSelector.length ? `, ${socialSelector}` : ''}`;
-      const mediaAttrRemSelAdd = `${
-        mediaSelector.length ? `, ${mediaSelector} *, ${mediaSelector}` : ''
-      }`;
-      const textSocEnMedia = `${textSelector} *${socAttrRemSelAdd}${mediaAttrRemSelAdd}`;
-      document.querySelectorAll(textSocEnMedia).forEach((elToStrip) => {
-        attributesToRemove.forEach((attr) => {
-          if (elToStrip.hasAttribute(attr)) {
-            elToStrip.removeAttribute(attr);
-          }
-        });
-      });
-
-      // media obj maken voordat HTML verdwijnt
-      res.mediaForHTML = Array.from(document.querySelectorAll(mediaSelector)).map((bron) => {
-        // custom dehelling
-        if (!bron.hasAttribute('src') && bron.hasAttribute('data-src')) {
-          bron.src = bron.getAttribute('data-src');
-          bron.removeAttribute('data-src');
-        }
-        // endcustom
-
-        const src = bron?.src ? bron.src : '';
-        return {
-          outer: bron.outerHTML,
-          src,
-          id: null,
-          type: src.includes('spotify')
-            ? 'spotify'
-            : src.includes('youtube')
-            ? 'youtube'
-            : 'bandcamp',
-        };
-      });
-
-      // socials obj maken voordat HTML verdwijnt
-      res.socialsForHTML = !socialSelector
-        ? ''
-        : Array.from(document.querySelectorAll(socialSelector)).map((el) => {
-            el.querySelectorAll('i, svg, img').forEach((rm) => rm.parentNode.removeChild(rm));
-            if (!el.textContent.trim().length) {
-              if (el.href.includes('facebook') || el.href.includes('fb.me')) {
-                if (el.href.includes('facebook.com/events')) {
-                  el.textContent = `FB event ${event.title}`;
-                } else {
-                  el.textContent = 'Facebook';
-                }
-              } else if (el.href.includes('twitter')) {
-                el.textContent = 'Tweet';
-              } else if (el.href.includes('instagram')) {
-                el.textContent = 'Insta';
-              } else {
-                el.textContent = 'Social';
-              }
-            }
-            el.className = 'long-html__social-list-link';
-            el.target = '_blank';
-            return el.outerHTML;
-          });
-
-      // stript HTML tbv text
-      removeSelectors.length &&
-        document
-          .querySelectorAll(removeSelectors)
-          .forEach((toRemove) => toRemove.parentNode.removeChild(toRemove));
-
-      // verwijder ongewenste paragrafen over bv restaurants
-      Array.from(
-        document.querySelectorAll(`${textSelector} p, ${textSelector} span, ${textSelector} a`),
-      ).forEach((verwijder) => {
-        const heeftEvilString = !!removeHTMLWithStrings.find((evilString) =>
-          verwijder.textContent.includes(evilString),
-        );
-        if (heeftEvilString) {
-          verwijder.parentNode.removeChild(verwijder);
-        }
-      });
-
-      // lege HTML eruit cq HTML zonder tekst of getallen
-      document.querySelectorAll(`${removeEmptyHTMLFrom} > *`).forEach((checkForEmpty) => {
-        const leegMatch = checkForEmpty.innerHTML.replace('&nbsp;', '').match(/[\w\d]/g);
-        if (!Array.isArray(leegMatch)) {
-          checkForEmpty.parentNode.removeChild(checkForEmpty);
-        }
-      });
-
-      // laatste attributen eruit.
-      document.querySelectorAll(textSocEnMedia).forEach((elToStrip) => {
-        attributesToRemoveSecondRound.forEach((attr) => {
-          if (elToStrip.hasAttribute(attr)) {
-            elToStrip.removeAttribute(attr);
-          }
-        });
-      });
-
-      // tekst.
-      res.textForHTML = Array.from(document.querySelectorAll(textSelector))
-        .map((el) => el.innerHTML)
-        .join('');
-      return res;
-    },
-    { event },
-  );
-}
-// #endregion                        LONG HTML

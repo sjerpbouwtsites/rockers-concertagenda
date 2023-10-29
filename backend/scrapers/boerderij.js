@@ -1,6 +1,10 @@
 import { workerData } from 'worker_threads';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import axios from 'axios';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
+import longTextSocialsIframes from './longtext/boerderij.js';
+import getImage from './gedeeld/image.js';
+import debugSettings from './gedeeld/debug-settings.js';
 
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const boerderijScraper = new AbstractScraper({
@@ -71,7 +75,7 @@ boerderijScraper.mainPage = async function () {
     const thisWorkersEvents = availableBaseEvents.filter(
       (eventEl, index) => index % workerData.workerCount === workerData.index,
     );
-    return await this.mainPageEnd({ stopFunctie: null, rawEvents: thisWorkersEvents });
+    return this.mainPageEnd({ stopFunctie: null, rawEvents: thisWorkersEvents });
   }
 
   const { stopFunctie } = await this.mainPageStart();
@@ -81,10 +85,13 @@ boerderijScraper.mainPage = async function () {
   if (rawEvents.length) {
     rawEvents = rawEvents
       .map((event) => {
-        event.venueEventUrl = `https://poppodiumboerderij.nl/programma/${event.seo_slug}`;
-        event.shortText = event.subtitle;
-        event.title += `&id=${event.id}`;
-        return event;
+        const m = {
+          venueEventUrl: `https://poppodiumboerderij.nl/programma/${event.seo_slug}`,
+          shortText: event.subtitle,
+          title: `${event.title}&id=${event.id}`,
+        };
+        const e = Object.assign(event, m);
+        return e;
       })
       .map(this.isMusicEventCorruptedMapper);
   }
@@ -93,7 +100,7 @@ boerderijScraper.mainPage = async function () {
   const thisWorkersEvents = rawEvents.filter(
     (eventEl, index) => index % workerData.workerCount === workerData.index,
   );
-  return await this.mainPageEnd({ stopFunctie, rawEvents: thisWorkersEvents });
+  return this.mainPageEnd({ stopFunctie, rawEvents: thisWorkersEvents });
 };
 // #endregion                          MAIN PAGE
 
@@ -102,10 +109,11 @@ boerderijScraper.singlePage = async function ({ event, page }) {
   const { stopFunctie } = await this.singlePageStart();
 
   const [realEventTitle, realEventId] = event.title.split('&id=');
+  // eslint-disable-next-line no-param-reassign
   event.title = realEventTitle;
 
   const res = {
-    pageInfo: `<a class='page-info' href='${this._s.mainPage.url}'>${event.title}</a>`,
+    anker: `<a class='page-info' href='${this._s.mainPage.url}'>${event.title}</a>`,
     errors: [],
   };
 
@@ -116,7 +124,7 @@ boerderijScraper.singlePage = async function ({ event, page }) {
     .catch((caughtError) => {
       res.errors.push({
         error: caughtError,
-        remarks: `ajax ${url} faal ${res.pageInfo}`,
+        remarks: `ajax ${url} faal ${res.anker}`,
         errorLevel: 'close-thread',
         toDebug: event,
       });
@@ -124,13 +132,15 @@ boerderijScraper.singlePage = async function ({ event, page }) {
 
   if (!ajaxRes) {
     res.corrupted += `ajax verzoek faalt naar ${url}`;
-    return await this.singlePageEnd({ res, stopFunctie });
+    return this.singlePageEnd({ res, stopFunctie });
   }
 
-  const imageRes = await this.getImage({
+  const imageRes = await getImage({
+    _this: this,
     page,
+    workerData,
     event,
-    res,
+    pageInfo: res,
     selectors: ['.event-image'],
     mode: 'image-src',
   });
@@ -140,7 +150,7 @@ boerderijScraper.singlePage = async function ({ event, page }) {
   res.boerderijID = ajaxRes.id;
   const priceRes = await this.boerderijCustomPrice(
     `${ajaxRes?.entrance_price ?? ''} ${ajaxRes?.ticket_price ?? ''}`,
-    res.pageInfo,
+    res.anker,
     res.title,
   );
   res.errors = res.errors.concat(priceRes.errors);
@@ -151,7 +161,7 @@ boerderijScraper.singlePage = async function ({ event, page }) {
   } catch (catchedError) {
     res.errors.push({
       error: catchedError,
-      remarks: `start samenvoeging ${res.pageInfo}`,
+      remarks: `start samenvoeging ${res.anker}`,
       toDebug: res,
     });
   }
@@ -160,19 +170,23 @@ boerderijScraper.singlePage = async function ({ event, page }) {
   } catch (catchedError) {
     res.errors.push({
       error: catchedError,
-      remarks: `door samenvoeging ${res.pageInfo}`,
+      remarks: `door samenvoeging ${res.anker}`,
       toDebug: res,
     });
   }
 
-  const longTextRes = await longTextSocialsIframes(page, event, res);
-  for (const i in longTextRes) {
-    res[i] = longTextRes[i];
-  }
+  const { mediaForHTML, socialsForHTML, textForHTML } = await longTextSocialsIframes(
+    page,
+    event,
+    res,
+  );
+  res.mediaForHTML = mediaForHTML;
+  res.socialsForHTML = socialsForHTML;
+  res.textForHTML = textForHTML;
 
   res.soldOut = ajaxRes?.label?.title?.toLowerCase().includes('uitverkocht') ?? null;
 
-  return await this.singlePageEnd({ pageInfo: res, stopFunctie });
+  return this.singlePageEnd({ pageInfo: res, stopFunctie });
 };
 // #endregion                         SINGLE PAGE
 
@@ -190,34 +204,37 @@ boerderijScraper.boerderijCustomPrice = async function (testText, pi, title) {
 
   if (testText.match(/start/i)) {
     priceRes.price = null;
-    this.debugPrice &&
+    if (debugSettings.debugPrice) {
       this.dirtyDebug({
         title,
         price: priceRes.price,
         type: 'NOG ONBEKEND',
       });
+    }
     return priceRes;
   }
 
   if (testText.match(/gratis|free/i)) {
     priceRes.price = 0;
-    this.debugPrice &&
+    if (debugSettings.debugPrice) {
       this.dirtyDebug({
         title,
         price: priceRes.price,
         type: 'GRATIS',
       });
+    }
     return priceRes;
   }
 
   if (testText.match(/uitverkocht|sold\sout/i)) {
     priceRes.price = null;
-    this.debugPrice &&
+    if (debugSettings.debugPrice) {
       this.dirtyDebug({
         title,
         price: priceRes.price,
         type: 'UITVERKOCHT',
       });
+    }
     return priceRes;
   }
 
@@ -236,12 +253,16 @@ boerderijScraper.boerderijCustomPrice = async function (testText, pi, title) {
 
   if (!Array.isArray(priceMatch) && Array.isArray(priceMatchEuros)) {
     priceRes.price = Number(priceMatchEuros[0]);
-    this.checkIsNumber(priceRes, pi);
-    this.debugPrice &&
-      this.dirtyDebug({
-        title,
-        price: priceRes.price,
-      });
+    if (Number.isNaN(priceRes.price)) {
+      if (debugSettings.debugPrice) {
+        this.dirtyDebug({
+          title,
+          price: priceRes.price,
+        });
+      }
+      return false;
+    }
+
     return priceRes;
   }
 
@@ -261,12 +282,17 @@ boerderijScraper.boerderijCustomPrice = async function (testText, pi, title) {
     } else {
       priceRes.price = Number(priceMatch.groups.euros);
     }
-    this.checkIsNumber(priceRes, pi);
-    this.debugPrice &&
-      this.dirtyDebug({
-        title,
-        price: priceRes.price,
-      });
+    priceRes.price = Number(priceMatchEuros[0]);
+    if (Number.isNaN(priceRes.price)) {
+      if (debugSettings.debugPrice) {
+        this.dirtyDebug({
+          title,
+          price: priceRes.price,
+        });
+      }
+      return false;
+    }
+
     return priceRes;
   } catch (priceCalcErr) {
     priceRes.push({
@@ -277,173 +303,3 @@ boerderijScraper.boerderijCustomPrice = async function (testText, pi, title) {
     return priceRes;
   }
 };
-
-// #region [rgba(60, 0, 0, 0.3)]     LONG HTML
-async function longTextSocialsIframes(page, event, pageInfo) {
-  return await page.evaluate(
-    ({ event }) => {
-      const res = {};
-
-      const textSelector = '.page-wrapper__main';
-      const mediaSelector = [`${textSelector} iframe`].join(', ');
-      const removeEmptyHTMLFrom = textSelector;
-      const socialSelector = [].join(', ');
-      const removeSelectors = [
-        `${textSelector} [class*='icon-']`,
-        `${textSelector} [class*='fa-']`,
-        `${textSelector} .fa`,
-        `${textSelector} script`,
-        `${textSelector} noscript`,
-        `${textSelector} style`,
-        `${textSelector} meta`,
-        `${textSelector} svg`,
-        `${textSelector} form`,
-        `${textSelector} h1`,
-        `${textSelector} img`,
-        `${textSelector} .video__button`,
-        `${textSelector} iframe[src*='bandcamp']`,
-        `${textSelector} iframe[src*='spotify']`,
-        'svg',
-      ].join(', ');
-
-      const attributesToRemove = [
-        'style',
-        'hidden',
-        '_target',
-        'frameborder',
-        'onclick',
-        'aria-hidden',
-        'allow',
-        'allowfullscreen',
-        'data-deferlazy',
-        'width',
-        'height',
-      ];
-      const attributesToRemoveSecondRound = ['class', 'id'];
-      const removeHTMLWithStrings = [];
-
-      // eerst onzin attributes wegslopen
-      const socAttrRemSelAdd = `${socialSelector.length ? `, ${socialSelector}` : ''}`;
-      const mediaAttrRemSelAdd = `${
-        mediaSelector.length ? `, ${mediaSelector} *, ${mediaSelector}` : ''
-      }`;
-      const textSocEnMedia = `${textSelector} *${socAttrRemSelAdd}${mediaAttrRemSelAdd}`;
-      document.querySelectorAll(textSocEnMedia).forEach((elToStrip) => {
-        attributesToRemove.forEach((attr) => {
-          if (elToStrip.hasAttribute(attr)) {
-            elToStrip.removeAttribute(attr);
-          }
-        });
-      });
-
-      // media obj maken voordat HTML verdwijnt
-      res.mediaForHTML = !mediaSelector.length
-        ? ''
-        : Array.from(document.querySelectorAll(mediaSelector)).map((bron) => {
-            bron.className = '';
-
-            if (bron?.src && bron.src.includes('bandcamp')) {
-              return {
-                outer: bron.outerHTML,
-                src: bron.src,
-                id: null,
-                type: 'bandcamp',
-              };
-            }
-
-            if (bron?.src && bron.src.includes('spotify')) {
-              return {
-                outer: bron.outerHTML,
-                src: bron.src,
-                id: null,
-                type: 'spotify',
-              };
-            }
-
-            if (bron?.src && bron.src.includes('youtube')) {
-              return {
-                outer: bron.outerHTML,
-                src: bron.src,
-                id: null,
-                type: 'youtube',
-              };
-            }
-
-            return {
-              outer: bron.outerHTML,
-              src: null,
-              id: null,
-              type: 'onbekend',
-            };
-          });
-
-      // socials obj maken voordat HTML verdwijnt
-      res.socialsForHTML = !socialSelector
-        ? ''
-        : Array.from(document.querySelectorAll(socialSelector)).map((el) => {
-            el.querySelectorAll('i, svg, img').forEach((rm) => rm.parentNode.removeChild(rm));
-            if (!el.textContent.trim().length) {
-              if (el.href.includes('facebook') || el.href.includes('fb.me')) {
-                if (el.href.includes('facebook.com/events')) {
-                  el.textContent = `FB event ${event.title}`;
-                } else {
-                  el.textContent = 'Facebook';
-                }
-              } else if (el.href.includes('twitter')) {
-                el.textContent = 'Tweet';
-              } else if (el.href.includes('instagram')) {
-                el.textContent = 'Insta';
-              } else {
-                el.textContent = 'Social';
-              }
-            }
-            el.className = 'long-html__social-list-link';
-            el.target = '_blank';
-            return el.outerHTML;
-          });
-
-      // stript HTML tbv text
-      removeSelectors.length &&
-        document
-          .querySelectorAll(removeSelectors)
-          .forEach((toRemove) => toRemove.parentNode.removeChild(toRemove));
-
-      // verwijder ongewenste paragrafen over bv restaurants
-      Array.from(
-        document.querySelectorAll(`${textSelector} p, ${textSelector} span, ${textSelector} a`),
-      ).forEach((verwijder) => {
-        const heeftEvilString = !!removeHTMLWithStrings.find((evilString) =>
-          verwijder.textContent.includes(evilString),
-        );
-        if (heeftEvilString) {
-          verwijder.parentNode.removeChild(verwijder);
-        }
-      });
-
-      // lege HTML eruit cq HTML zonder tekst of getallen
-      document.querySelectorAll(`${removeEmptyHTMLFrom} > *`).forEach((checkForEmpty) => {
-        const leegMatch = checkForEmpty.innerHTML.replace('&nbsp;', '').match(/[\w\d]/g);
-        if (!Array.isArray(leegMatch)) {
-          checkForEmpty.parentNode.removeChild(checkForEmpty);
-        }
-      });
-
-      // laatste attributen eruit.
-      document.querySelectorAll(textSocEnMedia).forEach((elToStrip) => {
-        attributesToRemoveSecondRound.forEach((attr) => {
-          if (elToStrip.hasAttribute(attr)) {
-            elToStrip.removeAttribute(attr);
-          }
-        });
-      });
-
-      // tekst.
-      res.textForHTML = Array.from(document.querySelectorAll(textSelector))
-        .map((el) => el.innerHTML)
-        .join('');
-      return res;
-    },
-    { event },
-  );
-}
-// #endregion                        LONG HTML

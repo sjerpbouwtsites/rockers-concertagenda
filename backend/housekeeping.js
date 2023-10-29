@@ -1,30 +1,56 @@
 import fs from 'fs';
-import { getShellArguments } from './mods/tools.js';
+import shell from './mods/shell.js';
 import fsDirections from './mods/fs-directions.js';
 
+function removePublicTexts(removeList) {
+  removeList.forEach((forceVal) => {
+    if (!fs.existsSync(`${fsDirections.publicTexts}/${forceVal}`)) {
+      fs.mkdirSync(`${fsDirections.publicTexts}/${forceVal}`);
+    }
+    fs.readdirSync(`${fsDirections.publicTexts}/${forceVal}`).forEach((file) => {
+      fs.rmSync(`${fsDirections.publicTexts}/${forceVal}/${file}`);
+    });
+  });
+}
+function removePublicEventImages(removeImagesLocationsList) {
+  const pei = fsDirections.publicEventImages;
+  removeImagesLocationsList.forEach((forced) => {
+    if (!fs.existsSync(`${pei}/${forced}`)) {
+      fs.mkdirSync(`${pei}/${forced}`);
+    }    
+    fs.readdirSync(`${pei}/${forced}`).forEach((file) => {
+      fs.rmSync(`${pei}/${forced}/${file}`);
+    });
+  });
+}
+
+function makeRemoveTextsLists() {
+  if (shell.keepBaseEvents) {
+    return [];
+  }
+  if (shell.forceAll) {
+    return fs.readdirSync(fsDirections.publicTexts, 'utf-8');
+  }
+  return shell.forceThese;
+}
+
+function makeRemoveImagesLocationsList() {
+  if (shell.keepImages) {
+    return [];
+  }
+  if (shell.forceAll) {
+    return fs.readdirSync(fsDirections.publicEventImages, 'utf-8');
+  }
+  return shell.forceThese;
+}
+
 export default async function houseKeeping() {
-  const shellArguments = getShellArguments();
-  const forceAll = shellArguments?.force?.includes('all');
-  const keepBaseEvents = shellArguments?.keepBaseEvents ?? false;
-  const keepImages = shellArguments?.keepImages ?? false;
-  const forceTheseB = shellArguments?.force?.split(',') ?? [];
-  const forceThese = forceTheseB.map((f) => f.replace('%', ''));
-  const wipeBaseList = forceTheseB.filter((a) => a.includes('%')).map((f) => f.replace('%', ''));
+  const wipeBaseList = shell.forceAndRemoveBaseEvents;
   const curDay = new Date().toISOString().split('T')[0].replaceAll(/-/g, '');
 
-  const removeTextsList = keepBaseEvents
-    ? []
-    : forceAll
-    ? fs.readdirSync(fsDirections.publicTexts, 'utf-8')
-    : forceThese;
-
-  const removeImagesLocationsList = keepImages
-    ? {}
-    : forceAll
-    ? fs.readdirSync(fsDirections.publicEventImages, 'utf-8')
-    : forceThese;
-
-  if (!keepBaseEvents) {
+  const removeImagesLocationsList = makeRemoveImagesLocationsList();
+  const removeTextsList = makeRemoveTextsLists();
+  if (!shell.keepBaseEvents) {
     fs.readdirSync(fsDirections.baseEventlists)
       .filter((baseEventList) => !baseEventList.includes(curDay))
       .map((baseEventList) => baseEventList.split('T')[0])
@@ -39,33 +65,20 @@ export default async function houseKeeping() {
     removePublicTexts(removeTextsList);
   }
 
-  if (!keepImages) removePublicEventImages(removeImagesLocationsList);
+  if (!shell.keepImages) removePublicEventImages(removeImagesLocationsList);
 
-  wipeBaseList.forEach((wipe) => {
-    fs.readdirSync(fsDirections.baseEventlists).forEach((baseEventList) => {
-      if (baseEventList.includes(wipe)) {
-        if (fs.existsSync(`${fsDirections.baseEventlists}/${baseEventList}`)) {
-          fs.rmSync(`${fsDirections.baseEventlists}/${baseEventList}`);
+  // als !keepBaseEvents, dan alles al gewist.
+  if (!shell.keepBaseEvents) {
+    wipeBaseList.forEach((wipe) => {
+      fs.readdirSync(fsDirections.baseEventlists).forEach((baseEventList) => {
+        if (baseEventList.includes(wipe)) {
+          if (fs.existsSync(`${fsDirections.baseEventlists}/${baseEventList}`)) {
+            fs.rmSync(`${fsDirections.baseEventlists}/${baseEventList}`);
+          }
         }
-      }
+      });
     });
-  });
+  }
 
   return true;
-}
-
-function removePublicTexts(removeList) {
-  removeList.forEach((forceVal) => {
-    fs.readdirSync(`${fsDirections.publicTexts}/${forceVal}`).forEach((file) => {
-      fs.rmSync(`${fsDirections.publicTexts}/${forceVal}/${file}`);
-    });
-  });
-}
-function removePublicEventImages(removeImagesLocationsList) {
-  const pei = fsDirections.publicEventImages;
-  removeImagesLocationsList.forEach((forced) => {
-    fs.readdirSync(`${pei}/${forced}`).forEach((file) => {
-      fs.rmSync(`${pei}/${forced}/${file}`);
-    });
-  });
 }

@@ -1,5 +1,8 @@
+/* global document */
 import { workerData } from 'worker_threads';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
+import longTextSocialsIframes from './longtext/littledevil.js';
+import getImage from './gedeeld/image.js';
 import { combineStartTimeStartDate, mapToStartDate, mapToStartTime } from './gedeeld/datums.js';
 
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
@@ -76,12 +79,13 @@ littledevilScraper.mainPage = async function () {
     const thisWorkersEvents = availableBaseEvents.filter(
       (eventEl, index) => index % workerData.workerCount === workerData.index,
     );
-    return await this.mainPageEnd({ stopFunctie: null, rawEvents: thisWorkersEvents });
+    return this.mainPageEnd({ stopFunctie: null, rawEvents: thisWorkersEvents });
   }
 
   const { stopFunctie, page } = await this.mainPageStart();
 
   let rawEvents = await page.evaluate(
+    // eslint-disable-next-line no-shadow
     ({ workerData }) =>
       Array.from(document.querySelectorAll('.entry-content .bericht')).map((eventEl) => {
         const venueEventUrl = eventEl.querySelector('.titelbericht a').href ?? '';
@@ -90,7 +94,7 @@ littledevilScraper.mainPage = async function () {
           title,
           errors: [],
           venueEventUrl,
-          pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} main - ${title}</a>`,
+          anker: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
         };
         const ct = eventEl.querySelector('.contentbericht')?.textContent ?? '';
         const scheiding = ct.includes('/') ? '/' : '|';
@@ -128,7 +132,7 @@ littledevilScraper.mainPage = async function () {
           } catch (error) {
             res.price = null;
             res.errors.push({
-              remarks: `price berekening met ${s} ${res.pageInfo}`,
+              remarks: `price berekening met ${s} ${res.anker}`,
             });
           }
         }
@@ -160,7 +164,7 @@ littledevilScraper.mainPage = async function () {
   const thisWorkersEvents = rawEvents.filter(
     (eventEl, index) => index % workerData.workerCount === workerData.index,
   );
-  return await this.mainPageEnd({ stopFunctie, page, rawEvents: thisWorkersEvents });
+  return this.mainPageEnd({ stopFunctie, page, rawEvents: thisWorkersEvents });
 };
 // #endregion                          MAIN PAGE
 
@@ -171,11 +175,13 @@ littledevilScraper.singlePage = async function ({ page, event }) {
   const pageInfo = {
     title: event.title,
     errors: [],
-    pageInfo: `<a class='page-info' href='${event.title}'>${workerData.family} single - ${event.title}</a>`,
+    anker: `<a class='page-info' href='${event.title}'>${workerData.family} single - ${event.title}</a>`,
   };
 
-  const imageRes = await this.getImage({
+  const imageRes = await getImage({
+    _this: this,
     page,
+    workerData,
     event,
     pageInfo,
     selectors: ['.wp-post-image '],
@@ -184,12 +190,16 @@ littledevilScraper.singlePage = async function ({ page, event }) {
   pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
   pageInfo.image = imageRes.image;
 
-  const longTextRes = await longTextSocialsIframes(page, event, pageInfo);
-  for (const i in longTextRes) {
-    pageInfo[i] = longTextRes[i];
-  }
+  const { mediaForHTML, socialsForHTML, textForHTML } = await longTextSocialsIframes(
+    page,
+    event,
+    pageInfo,
+  );
+  pageInfo.mediaForHTML = mediaForHTML;
+  pageInfo.socialsForHTML = socialsForHTML;
+  pageInfo.textForHTML = textForHTML;
 
-  return await this.singlePageEnd({
+  return this.singlePageEnd({
     pageInfo,
     stopFunctie,
     page,
@@ -197,122 +207,3 @@ littledevilScraper.singlePage = async function ({ page, event }) {
   });
 };
 // #endregion                         SINGLE PAGE
-
-// #region [rgba(60, 0, 0, 0.3)]     LONG HTML
-async function longTextSocialsIframes(page, event, pageInfo) {
-  return await page.evaluate(
-    ({ event }) => {
-      const res = {};
-
-      const textSelector = '.entry-content';
-      const mediaSelector = [`${textSelector} iframe`].join(', ');
-      const removeEmptyHTMLFrom = textSelector;
-      const removeSelectors = [
-        `${textSelector} [class*='icon-']`,
-        `${textSelector} [class*='fa-']`,
-        `${textSelector} .fa`,
-        `${textSelector} script`,
-        `${textSelector} noscript`,
-        `${textSelector} style`,
-        `${textSelector} meta`,
-        `${textSelector} svg`,
-        `${textSelector} form`,
-        `${textSelector} .avia-button + p`,
-        `${textSelector} .avia-button`,
-      ].join(', ');
-      const socialSelector = [].join(', ');
-      const attributesToRemove = [
-        'style',
-        'hidden',
-        '_target',
-        'frameborder',
-        'onclick',
-        'aria-hidden',
-      ];
-      const attributesToRemoveSecondRound = ['class', 'id'];
-
-      // eerst onzin attributes wegslopen
-      const socAttrRemSelAdd = `${socialSelector.length ? `, ${socialSelector}` : ''}`;
-      const mediaAttrRemSelAdd = `${
-        mediaSelector.length ? `, ${mediaSelector} *, ${mediaSelector}` : ''
-      }`;
-      const textSocEnMedia = `${textSelector} *${socAttrRemSelAdd}${mediaAttrRemSelAdd}`;
-      document.querySelectorAll(textSocEnMedia).forEach((elToStrip) => {
-        attributesToRemove.forEach((attr) => {
-          if (elToStrip.hasAttribute(attr)) {
-            elToStrip.removeAttribute(attr);
-          }
-        });
-      });
-
-      // media obj maken voordat HTML verdwijnt
-      res.mediaForHTML = Array.from(document.querySelectorAll(mediaSelector)).map((bron) => {
-        const src = bron?.src ? bron.src : '';
-        return {
-          outer: bron.outerHTML,
-          src,
-          id: null,
-          type: src.includes('spotify')
-            ? 'spotify'
-            : src.includes('youtube')
-            ? 'youtube'
-            : 'bandcamp',
-        };
-      });
-
-      // socials obj maken voordat HTML verdwijnt
-      res.socialsForHTML = !socialSelector
-        ? ''
-        : Array.from(document.querySelectorAll(socialSelector)).map((el) => {
-            el.querySelectorAll('i, svg, img').forEach((rm) => rm.parentNode.removeChild(rm));
-            if (!el.textContent.trim().length) {
-              if (el.href.includes('facebook') || el.href.includes('fb.me')) {
-                if (el.href.includes('facebook.com/events')) {
-                  el.textContent = `FB event ${event.title}`;
-                } else {
-                  el.textContent = 'Facebook';
-                }
-              } else if (el.href.includes('twitter')) {
-                el.textContent = 'Tweet';
-              } else if (el.href.includes('instagram')) {
-                el.textContent = 'Insta';
-              }
-            }
-            el.className = 'long-html__social-list-link';
-            el.target = '_blank';
-            return el.outerHTML;
-          });
-
-      // stript HTML tbv text
-      removeSelectors.length &&
-        document
-          .querySelectorAll(removeSelectors)
-          .forEach((toRemove) => toRemove.parentNode.removeChild(toRemove));
-
-      // lege HTML eruit cq HTML zonder tekst of getallen
-      document.querySelectorAll(`${removeEmptyHTMLFrom} > *`).forEach((checkForEmpty) => {
-        const leegMatch = checkForEmpty.innerHTML.match(/[\w\d]/g);
-        if (!Array.isArray(leegMatch)) {
-          checkForEmpty.parentNode.removeChild(checkForEmpty);
-        }
-      });
-
-      // laatste attributen eruit.
-      document.querySelectorAll(textSocEnMedia).forEach((elToStrip) => {
-        attributesToRemoveSecondRound.forEach((attr) => {
-          if (elToStrip.hasAttribute(attr)) {
-            elToStrip.removeAttribute(attr);
-          }
-        });
-      });
-
-      // tekst.
-      res.textForHTML = Array.from(document.querySelectorAll(textSelector))
-        .map((el) => el.innerHTML)
-        .join('');
-      return res;
-    },
-    { event },
-  );
-}
-// #endregion                        LONG HTML

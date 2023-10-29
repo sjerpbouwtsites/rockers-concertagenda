@@ -1,11 +1,12 @@
 import { Worker } from 'worker_threads';
+import shell from './shell.js';
 
 // @TODO
 
 export default class RockWorker extends Worker {
-  constructor(confObject, shellArguments) {
+  constructor(confObject) {
     super(confObject.path, {
-      workerData: { ...confObject, shellArguments },
+      workerData: { ...confObject, shell },
     });
     this.name = confObject.name;
     this.family = confObject.family;
@@ -160,7 +161,11 @@ export class WorkerMessage {
   }
 
   throwSubtypeError() {
-    throw new Error(`subtype ${typeof this.subtype} ${this.subtype.length ? ` lengte ${this.subtype.length}` : ''} ${this.subtype} niet toegestaan bij type ${this.type}`);
+    throw new Error(
+      `subtype ${typeof this.subtype} ${
+        this.subtype.length ? ` lengte ${this.subtype.length}` : ''
+      } ${this.subtype} niet toegestaan bij type ${this.type}`,
+    );
   }
 
   check() {
@@ -180,23 +185,19 @@ export class WorkerMessage {
       case 'process':
         this.subtype
           .split(' ')
-          .map((thisSubtype) => ![
-            'close-client',
-            'closed',
-            'workers-status',
-            'command-start',
-          ].includes(thisSubtype))
+          .map(
+            (thisSubtype) =>
+              !['close-client', 'closed', 'workers-status', 'command-start'].includes(thisSubtype),
+          )
           .find((subtypeFout) => subtypeFout) && this.throwSubtypeError();
         break;
       case 'update':
         this.subtype
           ?.split(' ')
-          .map((thisSubtype) => ![
-            'error',
-            'message-roll',
-            'scraper-results',
-            'debugger',
-          ].includes(thisSubtype))
+          .map(
+            (thisSubtype) =>
+              !['error', 'message-roll', 'scraper-results', 'debugger'].includes(thisSubtype),
+          )
           .find((subtypeFout) => subtypeFout) && this.throwSubtypeError();
         break;
       default:
@@ -210,10 +211,14 @@ export class WorkerMessage {
    * @returns JSON object of {type, subtype, messageData}
    */
   get json() {
-    return JSON.stringify({
-      type: this.type,
-      subtype: this.subtype,
-      messageData: this.messageData,
-    }, null, 2);
+    return JSON.stringify(
+      {
+        type: this.type,
+        subtype: this.subtype,
+        messageData: this.messageData,
+      },
+      null,
+      2,
+    );
   }
 }

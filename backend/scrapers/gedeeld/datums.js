@@ -24,6 +24,7 @@ function isDate(date, str, required = true) {
   if (required) {
     throw new Error(`${date} ${str} geen date`);
   }
+  return false;
 }
 
 function isTime(time, str, required = true) {
@@ -33,6 +34,7 @@ function isTime(time, str, required = true) {
   if (required) {
     throw new Error(`${time} ${str} geen tijd`);
   }
+  return false;
 }
 
 function isISOString(date, str = '', required = true) {
@@ -55,12 +57,13 @@ function _mapToDateString(event, key, required) {
     const str = arrayCheckAndOrToString(event, mapKey, required);
     try {
       if (str && isISOString(str, mapKey)) {
+        // eslint-disable-next-line no-param-reassign
         event[key] = event[mapKey];
       }
     } catch (isISOError) {
       event.errors.push({
         error: isISOError,
-        remarks: `isISOString err ${mapKey} ${event.pageInfo}`,
+        remarks: `isISOString err ${mapKey} ${event.anker}`,
         toDebug: {
           key: `${key}`,
           [`${mapKey}`]: `${event[mapKey]}`,
@@ -70,7 +73,7 @@ function _mapToDateString(event, key, required) {
   } catch (arrayCheckError) {
     event.errors.push({
       error: arrayCheckError,
-      remarks: `Array check ${mapKey} ${event.pageInfo}`,
+      remarks: `Array check ${mapKey} ${event.anker}`,
       [`${mapKey}`]: event[mapKey],
     });
   }
@@ -89,12 +92,13 @@ function _mapToTime(event, key, required) {
       if (isTime(str, mapKey, required)) {
         match = str.match(/(\d\d):(\d\d)/);
         const secs = '00';
+        // eslint-disable-next-line no-param-reassign
         event[timeKey] = `${match[1]}:${match[2]}:${secs}`;
       }
     } catch (isTimeError) {
       event.errors.push({
         error: isTimeError,
-        remarks: `isTimeError ${mapKey} ${event.pageInfo}`,
+        remarks: `isTimeError ${mapKey} ${event.anker}`,
         toDebug: {
           [`${mapKey}`]: event[mapKey],
           event,
@@ -105,10 +109,8 @@ function _mapToTime(event, key, required) {
   } catch (arrayCheckError) {
     event.errors.push({
       error: arrayCheckError,
-      remarks: `Array check ${mapKey} ${event.pageInfo}`,
-      toDebug:
-        JSON.parse(JSON.stringify(event)),
-
+      remarks: `Array check ${mapKey} ${event.anker}`,
+      toDebug: JSON.parse(JSON.stringify(event)),
     });
   }
 
@@ -124,12 +126,11 @@ export function mapToDoorTime(event) {
 }
 
 export function mapToStartDate(event, regexMode, months) {
-
   if (Array.isArray(event.mapToStartDate)) {
     event.errors.push({
       remarks: 'mapToStartDate is Array',
     });
-    return;
+    return null;
   }
 
   if (regexMode === 'dag-maandNaam') {
@@ -148,6 +149,7 @@ export function mapToStartDate(event, regexMode, months) {
     const dag = dateM[1].padStart(2, '0');
     const dateStr = `${jaar}-${maandGetal}-${dag}`;
     if (isDate(dateStr)) {
+      // eslint-disable-next-line no-param-reassign
       event.startDate = dateStr;
     }
     return event;
@@ -163,6 +165,7 @@ export function mapToStartDate(event, regexMode, months) {
     const dag = dateM[1].padStart(2, '0');
     const dateStr = `${jaar}-${maandGetal}-${dag}`;
     if (isDate(dateStr)) {
+      // eslint-disable-next-line no-param-reassign
       event.startDate = dateStr;
     }
     return event;
@@ -178,6 +181,7 @@ export function mapToStartDate(event, regexMode, months) {
     const jaar = dateM[3].padStart(4, '20');
     const dateStr = `${jaar}-${maandGetal}-${dag}`;
     if (isDate(dateStr)) {
+      // eslint-disable-next-line no-param-reassign
       event.startDate = dateStr;
     }
     return event;
@@ -192,6 +196,7 @@ export function mapToStartDate(event, regexMode, months) {
     const dag = dateM[1].padStart(2, '0');
     const dateStr = `${jaar}-${maandGetal}-${dag}`;
     if (isDate(dateStr)) {
+      // eslint-disable-next-line no-param-reassign
       event.startDate = dateStr;
     }
     return event;
@@ -202,22 +207,12 @@ export function mapToStartDate(event, regexMode, months) {
 
   return event;
 }
-
-export function combineStartTimeStartDate(event) {
-  return _combineTimeDate(event, 'start', true);
-}
-export function combineDoorTimeStartDate(event) {
-  return _combineTimeDate(event, 'door', false);
-}
-export function combineEndTimeStartDate(event) {
-  return _combineTimeDate(event, 'end', false);
-}
-
 function _combineTimeDate(event, destKey, required) {
   const timeString = `${destKey}Time`;
   try {
     const str = `${event.startDate}T${event[timeString]}`;
     if (isISOString(str, timeString, required)) {
+      // eslint-disable-next-line no-param-reassign
       event[destKey] = str;
     }
   } catch (combineTimeDateError) {
@@ -227,12 +222,21 @@ function _combineTimeDate(event, destKey, required) {
       toDebug:{
         startDate: `${event.startDate}`,
         time: `${event[timeString]}`,
-        combi: `${event.startDate}T${event[timeString]}` + '',
+        combi: `${event.startDate}T${event[timeString]}`,
       },
     });
   }
 
   return event;
+}
+export function combineStartTimeStartDate(event) {
+  return _combineTimeDate(event, 'start', true);
+}
+export function combineDoorTimeStartDate(event) {
+  return _combineTimeDate(event, 'door', false);
+}
+export function combineEndTimeStartDate(event) {
+  return _combineTimeDate(event, 'end', false);
 }
 
 export function mapToStart(event) {

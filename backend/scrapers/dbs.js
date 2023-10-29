@@ -1,6 +1,10 @@
+/* global document */
 import { workerData } from 'worker_threads';
 import * as _t from '../mods/tools.js';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
+import longTextSocialsIframes from './longtext/dbs.js';
+import getImage from './gedeeld/image.js';
+import terms from './gedeeld/terms.js';
 
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const dbsScraper = new AbstractScraper({
@@ -76,7 +80,7 @@ dbsScraper.mainPage = async function () {
     const thisWorkersEvents = availableBaseEvents.filter(
       (eventEl, index) => index % workerData.workerCount === workerData.index,
     );
-    return await this.mainPageEnd({ stopFunctie: null, rawEvents: thisWorkersEvents });
+    return this.mainPageEnd({ stopFunctie: null, rawEvents: thisWorkersEvents });
   }
 
   const { stopFunctie, page } = await this.mainPageStart();
@@ -85,6 +89,7 @@ dbsScraper.mainPage = async function () {
   await _t.waitTime(100);
 
   let rawEvents = await page.evaluate(
+    // eslint-disable-next-line no-shadow
     ({ months, workerData, unavailabiltyTerms }) =>
       Array.from(document.querySelectorAll('.fusion-events-post')).map((eventEl) => {
         let title = eventEl.querySelector('.fusion-events-meta .url')?.textContent.trim() ?? null;
@@ -92,7 +97,7 @@ dbsScraper.mainPage = async function () {
           title = title.replace(/\*?(sold\s?out|uitverkocht)\s?\*?\s?/i, '');
         }
         const res = {
-          pageInfo: `<a class='page-info' href='${location.href}'>${workerData.family} - main - ${title}</a>`,
+          anker: `<a class='page-info' href='${document.location.href}'>${workerData.family} - main - ${title}</a>`,
           errors: [],
           title,
         };
@@ -155,7 +160,7 @@ dbsScraper.mainPage = async function () {
 
         return res;
       }),
-    { months: this.months, workerData, unavailabiltyTerms: AbstractScraper.unavailabiltyTerms },
+    { months: this.months, workerData, unavailabiltyTerms: terms.unavailability },
   );
   rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
 
@@ -163,7 +168,7 @@ dbsScraper.mainPage = async function () {
   const thisWorkersEvents = rawEvents.filter(
     (eventEl, index) => index % workerData.workerCount === workerData.index,
   );
-  return await this.mainPageEnd({ stopFunctie, rawEvents: thisWorkersEvents });
+  return this.mainPageEnd({ stopFunctie, rawEvents: thisWorkersEvents });
 };
 // #endregion                          MAIN PAGE
 
@@ -172,9 +177,9 @@ dbsScraper.singlePage = async function ({ page, event }) {
   const { stopFunctie } = await this.singlePageStart();
 
   const pageInfo = await page.evaluate(
-    ({ event }) => {
+    () => {
       const res = {
-        pageInfo: `<a class='page-info' href='${location.href}'>${document.title}</a>`,
+        anker: `<a class='page-info' href='${document.location.href}'>${document.title}</a>`,
         errors: [],
       };
 
@@ -195,8 +200,10 @@ dbsScraper.singlePage = async function ({ page, event }) {
     { event },
   );
 
-  const imageRes = await this.getImage({
+  const imageRes = await getImage({
+    _this: this,
     page,
+    workerData,
     event,
     pageInfo,
     selectors: ['.tribe-events-event-image .wp-post-image'],
@@ -205,16 +212,19 @@ dbsScraper.singlePage = async function ({ page, event }) {
   pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
   pageInfo.image = imageRes.image;
 
-  const longTextRes = await longTextSocialsIframes(page, event, pageInfo);
-  for (const i in longTextRes) {
-    pageInfo[i] = longTextRes[i];
-  }
+  const { mediaForHTML, socialsForHTML, textForHTML } = await longTextSocialsIframes(
+    page,
+    event,
+    pageInfo,
+  );
+  pageInfo.mediaForHTML = mediaForHTML;
+  pageInfo.socialsForHTML = socialsForHTML;
+  pageInfo.textForHTML = textForHTML;
 
   if (pageInfo.ticketURL && !pageInfo.unavailable) {
-    this.debugPrice && this.dirtyTalk(`gaan naar url ${pageInfo.ticketURL}`);
+    if (this.debugPrice) this.dirtyTalk(`gaan naar url ${pageInfo.ticketURL}`);
     try {
       await page.goto(pageInfo.ticketURL);
-      // const priceRes = await this.getPriceFromHTML({page, event, pageInfo, selectors: ['[data-testid="ticket-price"]'], });
       const html = await page
         .evaluate(() => document.querySelector('body').innerHTML)
         .catch((err) => {
@@ -241,7 +251,7 @@ dbsScraper.singlePage = async function ({ page, event }) {
     }
   }
 
-  return await this.singlePageEnd({
+  return this.singlePageEnd({
     pageInfo,
     stopFunctie,
     page,
@@ -249,143 +259,3 @@ dbsScraper.singlePage = async function ({ page, event }) {
   });
 };
 // #endregion                         SINGLE PAGE
-
-// #region [rgba(60, 0, 0, 0.3)]     LONG HTML
-async function longTextSocialsIframes(page, event, pageInfo) {
-  return await page.evaluate(
-    ({ event }) => {
-      const res = {};
-      const textSelector = '.tribe-events-content';
-      const mediaSelector = [`${textSelector} iframe`].join(', ');
-      const removeEmptyHTMLFrom = textSelector;
-      const socialSelector = [].join(', ');
-      const removeSelectors = [
-        `${textSelector} [class*='icon-']`,
-        `${textSelector} [class*='fa-']`,
-        `${textSelector} .fa`,
-        `${textSelector} script`,
-        `${textSelector} noscript`,
-        `${textSelector} style`,
-        `${textSelector} meta`,
-        `${textSelector} svg`,
-        `${textSelector} form`,
-        `${textSelector} .video-shortcode`,
-        `${textSelector} img`,
-      ].join(', ');
-
-      const attributesToRemove = [
-        'style',
-        'hidden',
-        '_target',
-        'frameborder',
-        'onclick',
-        'aria-hidden',
-      ];
-      const attributesToRemoveSecondRound = ['class', 'id'];
-      const removeHTMLWithStrings = [];
-
-      // eerst onzin attributes wegslopen
-      const socAttrRemSelAdd = `${socialSelector.length ? `, ${socialSelector}` : ''}`;
-      const mediaAttrRemSelAdd = `${
-        mediaSelector.length ? `, ${mediaSelector} *, ${mediaSelector}` : ''
-      }`;
-      const textSocEnMedia = `${textSelector} *${socAttrRemSelAdd}${mediaAttrRemSelAdd}`;
-      document.querySelectorAll(textSocEnMedia).forEach((elToStrip) => {
-        attributesToRemove.forEach((attr) => {
-          if (elToStrip.hasAttribute(attr)) {
-            elToStrip.removeAttribute(attr);
-          }
-        });
-      });
-
-      //  media obj maken voordat HTML verdwijnt
-      res.mediaForHTML = Array.from(document.querySelectorAll(mediaSelector)).map((bron) => {
-        const src = bron?.src ? bron.src : '';
-        return {
-          outer: bron.outerHTML,
-          src,
-          id: null,
-          type: src.includes('spotify')
-            ? 'spotify'
-            : src.includes('youtube')
-            ? 'youtube'
-            : 'bandcamp',
-        };
-      });
-
-      // socials obj maken voordat HTML verdwijnt
-      res.socialsForHTML = !socialSelector
-        ? ''
-        : Array.from(document.querySelectorAll(socialSelector)).map((el) => {
-            el.querySelectorAll('i, svg, img').forEach((rm) => rm.parentNode.removeChild(rm));
-            if (!el.textContent.trim().length) {
-              if (el.href.includes('facebook') || el.href.includes('fb.me')) {
-                if (el.href.includes('facebook.com/events')) {
-                  el.textContent = `FB event ${event.title}`;
-                } else {
-                  el.textContent = 'Facebook';
-                }
-              } else if (el.href.includes('twitter')) {
-                el.textContent = 'Tweet';
-              } else if (el.href.includes('instagram')) {
-                el.textContent = 'Insta';
-              } else {
-                el.textContent = 'Social';
-              }
-            }
-            el.className = 'long-html__social-list-link';
-            el.target = '_blank';
-            return el.outerHTML;
-          });
-
-      // stript HTML tbv text
-      removeSelectors.length &&
-        document
-          .querySelectorAll(removeSelectors)
-          .forEach((toRemove) => toRemove.parentNode.removeChild(toRemove));
-
-      // verwijder ongewenste paragrafen over bv restaurants
-      removeHTMLWithStrings.length &&
-        Array.from(
-          document.querySelectorAll(`${textSelector} p, ${textSelector} span, ${textSelector} a`),
-        ).forEach((verwijder) => {
-          const heeftEvilString = !!removeHTMLWithStrings.find((evilString) =>
-            verwijder.textContent.includes(evilString),
-          );
-          if (heeftEvilString) {
-            verwijder.parentNode.removeChild(verwijder);
-          }
-        });
-
-      // lege HTML eruit cq HTML zonder tekst of getallen
-      // document.querySelectorAll(`${removeEmptyHTMLFrom} > *`)
-      //   .forEach(checkForEmpty => {
-      //     const leeg = checkForEmpty?.textContent.replace('&nbsp;','').replaceAll(/[\s\r\t]/g, '').trim() === '';
-      //     if (leeg){
-      //       checkForEmpty.parentNode.removeChild(checkForEmpty)
-      //     }
-      //   })
-
-      res.textForHTML = Array.from(document.querySelectorAll(textSelector))
-        .map((el) => el.innerHTML)
-        .join('');
-
-      // laatste attributen eruit.
-      document.querySelectorAll(textSocEnMedia).forEach((elToStrip) => {
-        attributesToRemoveSecondRound.forEach((attr) => {
-          if (elToStrip.hasAttribute(attr)) {
-            elToStrip.removeAttribute(attr);
-          }
-        });
-      });
-
-      // tekst
-      res.textForHTML = Array.from(document.querySelectorAll(textSelector))
-        .map((el) => el.innerHTML)
-        .join('');
-      return res;
-    },
-    { event },
-  );
-}
-// #endregion                        LONG HTML

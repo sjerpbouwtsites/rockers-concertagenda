@@ -1,6 +1,5 @@
 import fs from 'fs';
-import EventsList from './events-list.js';
-import { getShellArguments } from './tools.js';
+import shell from './shell.js';
 import fsDirections from './fs-directions.js';
 
 export const AbstractWorkerConfig = {
@@ -15,8 +14,10 @@ export const AbstractWorkerConfig = {
 };
 
 export const workerConfig = {
+  // bibelot: { workerCount: 1, workerConcurrent: 1, forceSet: 1 },
+  // iduna: { workerCount: 1, workerConcurrent: 1, forceSet: 4 },
   '013': {
-    workerCount: 4,
+    workerCount: 1,
     CPUReq: 'low',
     workerConcurrent: 3,
     forceSet: 0,
@@ -28,7 +29,6 @@ export const workerConfig = {
     forceSet: 0,
   },
   baroeg: { workerCount: 2, workerConcurrent: 2, forceSet: 0 },
-  bibelot: { workerCount: 1, workerConcurrent: 1, forceSet: 1 },
   boerderij: {
     workerCount: 1,
     CPUReq: 'low',
@@ -58,9 +58,10 @@ export const workerConfig = {
   },
   dynamo: { workerCount: 2, workerConcurrent: 1, forceSet: 3 },
   effenaar: { workerCount: 4, workerConcurrent: 2, forceSet: 3 },
-  gebrdenobel: { workerCount: 1, workerConcurrent: 1, forceSet: 3 },
+  gebrdenobel: {
+    workerCount: 1, workerConcurrent: 1, CPUReq: 'high', forceSet: 3, 
+  },
   groeneengel: { workerCount: 1, workerConcurrent: 1, forceSet: 3 },
-  iduna: { workerCount: 1, workerConcurrent: 1, forceSet: 4 },
   kavka: {
     workerCount: 2,
     workerConcurrent: 2,
@@ -78,7 +79,12 @@ export const workerConfig = {
     forceSet: 4,
   },
   metalfan: { workerCount: 1, CPUReq: 'low', workerConcurrent: 1 },
-  metropool: { workerCount: 3, workerConcurrent: 2, forceSet: 4 },
+  metropool: {
+    workerCount: 3,
+    workerConcurrent: 1,
+    CPUReq: 'high',
+    forceSet: 4,
+  },
   neushoorn: { workerCount: 1, workerConcurrent: 1, forceSet: 5 },
   nieuwenor: { workerCount: 4, workerConcurrent: 2, forceSet: 5 },
   occii: {
@@ -96,21 +102,19 @@ export const workerConfig = {
   },
   patronaat: { workerCount: 2, workerConcurrent: 2, forceSet: 6 },
   tivolivredenburg: { workerCount: 4, workerConcurrent: 2, forceSet: 6 },
-  ticketmaster: {
-    workerCount: 2,
-    workerConcurrent: 1,
-    forceSet: 6,
-  },
   volt: { workerCount: 1, workerConcurrent: 1, forceSet: 6 },
   willemeen: { workerCount: 2, workerConcurrent: 2, forceSet: 6 },
 };
+// ticketmaster: {
+//   workerCount: 2,
+//   workerConcurrent: 1,
+//   forceSet: 6,
+// },
 
 export const workerNames = Object.keys(workerConfig);
 
 class WorkerListConf {
   data = [];
-
-  shellArguments = null;
 
   static _self = null;
 
@@ -121,7 +125,6 @@ class WorkerListConf {
       return WorkerListConf._self;
     }
     this._self = this;
-    this.shellArguments = getShellArguments();
     this.setBaseEventLists();
     this.run();
   }
@@ -137,8 +140,6 @@ class WorkerListConf {
   listCopy() {
     return [...this.data];
   }
-
-  isForced() {}
 
   create(config) {
     // const forceArg = this.shellArguments?.force ?? "";
@@ -179,13 +180,13 @@ class WorkerListConf {
   }
 
   workerNeedsWork(familyName) {
-    if (this.shellArguments?.force?.includes('all')) {
-      if (this.shellArguments?.forceSet) {
-        return workerConfig[familyName]?.forceSet == this.shellArguments?.forceSet;
+    if (shell.forceAll) {
+      if (shell.forceSet) {
+        return workerConfig[familyName]?.forceSet === shell.forceSet;
       }
       return true;
     }
-    if (this.shellArguments?.force?.includes(familyName)) return true;
+    if (shell.force.includes(familyName)) return true;
     if (familyName.includes('metalfan')) return false; // metalfan alleen bij all of force
     if (!this.baseEventlistsStart.join('').includes(familyName)) return true;
     const actueelGevonden = this.baseEventlistsStart.find(

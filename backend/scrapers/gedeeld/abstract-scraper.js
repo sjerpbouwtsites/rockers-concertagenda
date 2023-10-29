@@ -1,9 +1,9 @@
+/* global document */
 // #region                                                 IMPORTS
 import { parentPort, workerData } from 'worker_threads';
 import fs from 'fs';
-import https from 'https';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import puppeteer from 'puppeteer';
-import sharp from 'sharp';
 import { QuickWorkerMessage } from '../../mods/rock-worker.js';
 import fsDirections from '../../mods/fs-directions.js';
 import * as _t from '../../mods/tools.js';
@@ -14,6 +14,10 @@ import ErrorWrapper from '../../mods/error-wrapper.js';
 import makeLongHTML from './longHTML.js';
 import WorkerStatus from '../../mods/WorkerStatus.js';
 import ScraperConfig from './scraper-config.js';
+import debugSettings from './debug-settings.js';
+import terms from './terms.js';
+import _getPriceFromHTML from './price.js';
+import shell from '../../mods/shell.js';
 
 // #endregion                                              IMPORTS
 
@@ -36,149 +40,6 @@ export default class AbstractScraper extends ScraperConfig {
 
   eventImagesFolder = fsDirections.publicEventImages;
 
-  static unavailabiltyTerms = [
-    'uitgesteld',
-    'verplaatst',
-    'locatie gewijzigd',
-    'besloten',
-    'afgelast',
-    'geannuleerd',
-  ];
-
-  // #region [rgba(0, 0, 30, 0.10)]                             DEBUGSETTINGS
-  debugCorruptedUnavailable = false;
-
-  debugsinglePageAsyncCheck = false;
-
-  debugRawEventAsyncCheck = false;
-
-  debugBaseEvents = true;
-
-  debugPageInfo = true;
-
-  debugPrice = false;
-  // #endregion                                                DEBUGSETTINGS
-
-  // #region [rgba(0, 0, 60, 0.10)]                             ISROCKSETTINGS
-  /**
-   * Gebruikt in mainPageAsyncChecks' hasForbiddenTerms
-   *
-   * @static
-   * @memberof AbstractScraper
-   */
-  static forbiddenTerms = [
-    'clubnacht',
-    'VERBODENGENRE',
-    'alternatieve rock',
-    'dance,dance-alle-dance',
-    'global,pop',
-    'funk-soul,pop',
-    'americana',
-    'americana',
-    'countryrock',
-    'dromerig',
-    'fan event',
-    'filmvertoning',
-    'indie',
-    'interactieve lezing',
-    'karaoke',
-    'london calling',
-    'brass',
-    'shoegaze',
-    'art rock',
-    'blaasrock',
-    'dream pop',
-    'Dream Punk',
-    'uptempo',
-    'experi-metal',
-    'folkpunk',
-    'jazz-core',
-    'neofolk',
-    'poetry',
-    'pubquiz',
-    'punk-hop',
-    "quiz'm",
-    'schaakinstuif',
-    'afrobeats',
-  ];
-
-  static wikipediaGoodGenres = [
-    '[href$=metal]',
-    '[href$=metal_music]',
-    '[href=Hard_rock]',
-    '[href=Acid_rock]',
-    '[href=Death_rock]',
-    '[href=Experimental_rock]',
-    '[href=Garage_rock]',
-    '[href=Hard_rock]',
-    '[href=Post-rock]',
-    '[href=Punk_rock]',
-    '[href=Stoner_rock]',
-    '[href=Hardcore_punk]',
-    '[href=Skate_punk]',
-    '[href=Street_punk]',
-    '[href=Ska_punk]',
-    '[href=Avant-garde_metal]',
-    '[href=Extreme_metal]',
-    '[href=Black_metal]',
-    '[href=Death_metal]',
-    '[href=Doom_metal]',
-    '[href=Speed_metal]',
-    '[href=Thrash_metal]',
-    '[href=Glam_metal]',
-    '[href=Groove_metal]',
-    '[href=Power_metal]',
-    '[href=Symphonic_metal]',
-    '[href=Funk_metal]',
-    '[href=Rap_metal]',
-    '[href=Nu_metal]',
-    '[href=Drone_metal]',
-    '[href=Folk_metal]',
-    '[href=Gothic_metal]',
-    '[href=Post-metal]',
-    '[href=Industrial_metal]',
-    '[href=Neoclassical_metal]',
-    '[href=Progressive_metal]',
-    '[href=Sludge_metal]',
-    '[href=Viking_metal]',
-  ];
-
-  static goodCategories = [
-    'rock-alternative',
-    'punk-emo-hardcore',
-    'heavy rock',
-    'death metal',
-    'doom',
-    'grindcore',
-    'hard rock',
-    'hardcore punk',
-    'hardcore',
-    'heavy metal',
-    'heavy psych',
-    "heavy rock 'n roll",
-    'stoner',
-    'garage',
-    'industrial',
-    'metal',
-    'math rock',
-    'metalcore',
-    'neue deutsche haerte',
-    'neue deutsche harte',
-    'new wave',
-    'noise',
-    'post-punk',
-    'postpunk',
-    'power metal',
-    'psychobilly',
-    'punk',
-    'punx',
-    'rockabilly, surf',
-    'surfpunkabilly',
-    'symphonic metal',
-    'thrash',
-  ];
-  // #endregion                                                ISROCKSETTINGS
-
   // #region [rgba(0, 0, 120, 0.10)]                            CONSTRUCTOR & INSTALL
   constructor(obj) {
     super(obj);
@@ -194,15 +55,12 @@ export default class AbstractScraper extends ScraperConfig {
   }
   // #endregion                                                CONSTRUCTOR & INSTALL
 
-  /**
-   * Checks in workerData if this family is forced.
-   *
-   * @readonly
-   * @memberof AbstractScraper
-   */
-  get isForced() {
-    const forced = workerData?.shellArguments?.force ?? '';
-    return forced.includes(workerData.family);
+  async getPriceFromHTML({
+    page, event, pageInfo, selectors,
+  }) {
+    return _getPriceFromHTML({
+      _this: this, page, event, pageInfo, selectors, 
+    });
   }
 
   // #region [rgba(0, 0, 180, 0.10)]                            DIRTYLOG, TALK, DEBUG
@@ -243,36 +101,43 @@ export default class AbstractScraper extends ScraperConfig {
   // #region [rgba(0, 0, 240, 0.10)]                            SCRAPE INIT & SCRAPE DIE
   async scrapeInit() {
     if (!this._s.app.mainPage.useCustomScraper || !this._s.app.singlePage.useCustomScraper) {
-      this.browser = await puppeteer.launch({});
+      this.browser = await puppeteer.launch(this._s.launchOptions);
     } else {
       this.browser = 'disabled';
     }
-
+    
     const baseMusicEvents = await this.mainPage().catch(this.handleOuterScrapeCatch);
-    if (!baseMusicEvents) return false;
+    
+    if (!baseMusicEvents) {
+      return false;
+    }
     const checkedEvents = await this.announceAndCheck(baseMusicEvents).catch(
       this.handleOuterScrapeCatch,
     );
+    
     this.completedMainPage = true;
     if (!checkedEvents) return false;
     await this.processSingleMusicEvent(checkedEvents).catch(this.handleOuterScrapeCatch);
-
+    
     await this.saveRockRefusedAllowedToFile();
-
+    
     await this.announceToMonitorDone();
+    
     if (!this._s.app.mainPage.useCustomScraper || !this._s.app.singlePage.useCustomScraper) {
       await this.closeBrowser();
     }
+    
     await this.saveEvents();
+    
+    return true;
     // overige catch in om init heen
   }
 
   async scrapeDie() {
-    this.dirtyTalk('DIEING!');
     await this.closeBrowser();
     await this.saveEvents();
     await this.announceToMonitorDone();
-    this.dirtyTalk('DEAD');
+    
     await _t.waitTime(50);
     process.exit();
   }
@@ -322,7 +187,7 @@ export default class AbstractScraper extends ScraperConfig {
           // }
         }),
       );
-      return;
+      return false;
     }
 
     // verwijder oude
@@ -348,6 +213,7 @@ export default class AbstractScraper extends ScraperConfig {
    */
   async mainPageStart() {
     // @TODO 3 stopfuncties maken: 1 base events; 1 single; 1 totaal.
+
     const stopFunctie = setTimeout(() => {
       _t.wrappedHandleError(
         new ErrorWrapper({
@@ -373,20 +239,10 @@ export default class AbstractScraper extends ScraperConfig {
     if (this._s.app.mainPage.useCustomScraper) {
       return { stopFunctie };
     }
+
     const page = await this.browser.newPage();
     await page.goto(this._s.mainPage.url, this._s.mainPage);
 
-    // zet ErrorWrapper class in puppeteer document.
-    // await page.evaluate(
-    //   ({ ErrorWrapperString }) => {
-    //     const newScriptContent = ErrorWrapperString;
-    //     const scriptTag = document.createElement('script');
-    //     scriptTag.id = 'rockagenda-extra-code';
-    //     scriptTag.innerHTML = newScriptContent;
-    //     document.body.appendChild(scriptTag);
-    //   },
-    //   { ErrorWrapperString: ErrorWrapper.toString() },
-    // );
     return {
       stopFunctie,
       page,
@@ -405,19 +261,23 @@ export default class AbstractScraper extends ScraperConfig {
    * @memberof AbstractScraper
    */
   async mainPageEnd({ stopFunctie, page, rawEvents }) {
-    this.isForced && this.debugBaseEvents && this.dirtyLog(rawEvents);
+    if (shell.force && shell.force.includes(workerData.family)) {
+      this.dirtyLog(rawEvents);
+    }
 
     if (stopFunctie) {
       clearTimeout(stopFunctie);
     }
 
-    page && !page.isClosed() && page.close();
+    if (page && !page.isClosed()) page.close();
 
     const eventsWithLongHTMLShortText = rawEvents.map((event) => {
       if (event.longTextHTML) {
+        // eslint-disable-next-line no-param-reassign
         event.longTextHTML = _t.killWhitespaceExcess(event.longTextHTML);
       }
       if (event.shortText) {
+        // eslint-disable-next-line no-param-reassign
         event.shortText = _t.killWhitespaceExcess(event.shortText);
       }
       return event;
@@ -426,23 +286,28 @@ export default class AbstractScraper extends ScraperConfig {
     eventsWithLongHTMLShortText.forEach((event) => {
       const errorVerz = Object.prototype.hasOwnProperty.call(event, 'errors') ? event.errors : [];
       errorVerz.forEach((errorData) => {
-        errorData.workerData = workerData;
-        if (!errorData.error) {
-          errorData.error = new Error(errorData?.remarks ?? '');
-        }
-        const wrappedError = new ErrorWrapper(errorData);
+        const refE = new Error();
+        const wrappedError = new ErrorWrapper({
+          // eslint-disable-next-line no-nested-ternary
+          message: (errorData?.message ?? null) ? errorData.message : (errorData?.remarks ?? null) ? errorData.remarks : 'geen message',
+          stack: errorData?.stack ?? refE.stack,
+          remarks: errorData?.remarks ?? 'geen remarks',
+          workerData,
+        });
         _t.wrappedHandleError(wrappedError);
       });
     });
-
-    const r = rawEvents.map((rawEvent) => {
-      rawEvent.location = workerData.family;
-      rawEvent.origin = workerData.family;
-      return rawEvent;
-    });
+    
+    const r = rawEvents.map((rawEvent) => ({
+      ...rawEvent,
+      location: workerData.family,
+      origin: workerData.family,
+    }));
+    
     if (this._s.app.mainPage.enforceMusicEventType) {
       return r.map((event) => new MusicEvent(event));
     }
+    
     return r;
   }
 
@@ -492,6 +357,7 @@ export default class AbstractScraper extends ScraperConfig {
     if (missingProperties.length > 0) {
       const page = !this.completedMainPage ? 'main:' : 'single:';
       const mis = missingProperties.join(', ');
+      // eslint-disable-next-line no-param-reassign
       musicEvent.corrupted = `${page} ${mis}`;
     }
 
@@ -514,10 +380,14 @@ export default class AbstractScraper extends ScraperConfig {
     parentPort.postMessage(this.qwm.workerStarted());
     const eventGen = this.eventGenerator(baseMusicEvents);
     const checkedEvents = [];
-    return await this.rawEventsAsyncCheck({
-      eventGen,
-      checkedEvents,
-    });
+    try {
+      return this.rawEventsAsyncCheck({
+        eventGen,
+        checkedEvents,
+      });
+    } catch (error) {
+      _t.handleError(error, workerData, 'check error in abstract scraper announce and check', 'close-thread', baseMusicEvents);      
+    }
   }
 
   // step 2.5
@@ -536,7 +406,7 @@ export default class AbstractScraper extends ScraperConfig {
     try {
       const useableEventsCheckedArray = checkedEvents.map((a) => a);
 
-      const generatedEvent = eventGen.next();
+      generatedEvent = eventGen.next();
       if (generatedEvent.done) return useableEventsCheckedArray;
 
       const eventToCheck = generatedEvent.value;
@@ -545,7 +415,7 @@ export default class AbstractScraper extends ScraperConfig {
       if (checkResult.success) {
         useableEventsCheckedArray.push(eventToCheck);
 
-        if (this.debugRawEventAsyncCheck && checkResult.reason) {
+        if (debugSettings.debugRawEventAsyncCheck && checkResult.reason) {
           parentPort.postMessage(
             this.qwm.debugger({
               title: 'Raw event async check',
@@ -554,7 +424,7 @@ export default class AbstractScraper extends ScraperConfig {
             }),
           );
         }
-      } else if (this.debugRawEventAsyncCheck) {
+      } else if (debugSettings.debugRawEventAsyncCheck) {
         parentPort.postMessage(
           this.qwm.debugger({
             title: 'Raw event async check',
@@ -579,6 +449,7 @@ export default class AbstractScraper extends ScraperConfig {
         },
       );
     }
+    return true;
   }
 
   /**
@@ -638,7 +509,7 @@ export default class AbstractScraper extends ScraperConfig {
 
     // corruptie check afkomstig nog van baseEvent. niet door naar pageInfo
     if (singleEvent.corrupted) {
-      singleEvent.registerINVALID();
+      // singleEvent.registerINVALID(); TODO register invalid
       parentPort.postMessage(
         this.qwm.messageRoll(
           `<a href='${singleEvent.venueEventUrl}'>😵 Corrupted ${singleEvent.title}</a> ${singleEvent.corrupted}`,
@@ -671,7 +542,7 @@ export default class AbstractScraper extends ScraperConfig {
     singleEvent = this.isMusicEventCorruptedMapper(singleEvent);
 
     if (singleEvent.corrupted || singleEvent.unavailable) {
-      singleEvent.registerINVALID(this.workerData);
+      // singleEvent.registerINVALID(this.workerData); TODO HERACTIVIEREN
       if (singleEvent.corrupted) {
         this.dirtyDebug({
           title: `💀 ${singleEvent.corrupted}`,
@@ -685,7 +556,10 @@ export default class AbstractScraper extends ScraperConfig {
         });
       }
 
-      singleEventPage && !singleEventPage.isClosed() && (await singleEventPage.close());
+      if (singleEventPage && !singleEventPage.isClosed()) {
+        await singleEventPage.close();
+      }
+
       return useableEventsList.length
         ? this.processSingleMusicEvent(useableEventsList)
         : useableEventsList;
@@ -693,9 +567,11 @@ export default class AbstractScraper extends ScraperConfig {
 
     singleEvent.longText = this.writeLongTextHTML(singleEvent);
 
+    // this.dirtyLog(singleEvent, `singleEventBeforeMergedCheck`);
+
     const mergedEventCheckRes = await this.singlePageAsyncCheck(singleEvent, pageInfo);
     if (mergedEventCheckRes.success) {
-      if (this.debugsinglePageAsyncCheck && mergedEventCheckRes.reason) {
+      if (debugSettings.debugsinglePageAsyncCheck && mergedEventCheckRes.reason) {
         this.dirtyDebug({
           title: 'Merged async check 👍',
           event: `<a class='single-event-check-notice single-event-check-notice--success' href='${mergedEventCheckRes.event.venueEventUrl}'>${mergedEventCheckRes.event.title}</a>`,
@@ -703,21 +579,47 @@ export default class AbstractScraper extends ScraperConfig {
         });
       }
 
-      singleEvent.isValid
-        ? singleEvent.register() // TODO hier lopen dingen echt dwars door elkaar. integreren in soort van singlePageAsyncCheckBase en dan anderen reducen erop of weet ik veel wat een gehack vandaag
-        : singleEvent.registerINVALID(this.workerData);
+      // this.dirtyLog(singleEvent, `singleEventAfterMergedCheckSuccess`);
+      
+      let tryEnforceDate = false;
+      try {
+        tryEnforceDate = new Date(singleEvent.start).toISOString();
+      } catch (error) { /* */ }
+
+      if (tryEnforceDate && !singleEvent.unavailable && !singleEvent.corrupted) {
+        const toRegister = {
+          door: singleEvent.door,
+          start: singleEvent.start,      
+          end: singleEvent.end,      
+          venueEventUrl: singleEvent.venueEventUrl,      
+          title: singleEvent.title,      
+          location: singleEvent.location,      
+          price: singleEvent.price,      
+          shortText: singleEvent.shortText,      
+          longText: singleEvent.longText,      
+          image: singleEvent.image,      
+          soldOut: singleEvent.soldOut,      
+          unavailable: singleEvent.unavailable,
+          corrupted: singleEvent.corrupted,
+          // ...workerData,
+        };
+
+        EventsList.addEvent(toRegister);
+      } else {
+        this.dirtyDebug('invalid maar geen register invalid');
+      }
     } else {
-      if (this.debugsinglePageAsyncCheck && mergedEventCheckRes.reason) {
+      if (debugSettings.debugsinglePageAsyncCheck && mergedEventCheckRes.reason) {
         this.dirtyDebug({
           title: 'Merged async check 👎',
           event: `<a class='single-event-check-notice single-event-check-notice--failure' href='${mergedEventCheckRes.event.venueEventUrl}'>${mergedEventCheckRes.event.title}</a>`,
           reason: mergedEventCheckRes.reason,
         });
       }
-      singleEvent.registerINVALID(this.workerData);
+      // singleEvent.registerINVALID(this.workerData); TODO Opnieuw activeren
     }
 
-    singleEventPage && !singleEventPage.isClosed() && (await singleEventPage.close());
+    if (singleEventPage && !singleEventPage.isClosed()) await singleEventPage.close();
 
     return useableEventsList.length
       ? this.processSingleMusicEvent(useableEventsList)
@@ -746,17 +648,6 @@ export default class AbstractScraper extends ScraperConfig {
         );
       }
 
-      // // zet ErrorWrapper class in puppeteer document.
-      // await page.evaluate(
-      //   ({ ErrorWrapperString }) => {
-      //     const newScriptContent = ErrorWrapperString;
-      //     const scriptTag = document.createElement('script');
-      //     scriptTag.id = 'rockagenda-extra-code';
-      //     scriptTag.innerHTML = newScriptContent;
-      //     document.body.appendChild(scriptTag);
-      //   },
-      //   { ErrorWrapperString: ErrorWrapper.toString() },
-      // );
       return page;
     } catch (error) {
       _t.handleError(
@@ -767,38 +658,42 @@ export default class AbstractScraper extends ScraperConfig {
         null,
       );
     }
+    return null;
   }
 
   titelShorttextPostfix(musicEvent) {
-    const titleIsCapsArr = musicEvent.title.split('').map((char) => char === char.toUpperCase());
+    let { title, shortText } = musicEvent;
+    
+    const titleIsCapsArr = title.split('').map((char) => char === char.toUpperCase());
     const noOfCapsInTitle = titleIsCapsArr.filter((a) => a).length;
     const toManyCapsInTitle =
-      (musicEvent.title.length - noOfCapsInTitle) / musicEvent.title.length < 0.5;
+      (title.length - noOfCapsInTitle) / title.length < 0.5;
     if (toManyCapsInTitle) {
-      musicEvent.title =
-        musicEvent.title.substring(0, 1).toUpperCase() +
-        musicEvent.title.substring(1, 500).toLowerCase();
+      // eslint-disable-next-line no-param-reassign
+      title =
+        title.substring(0, 1).toUpperCase() +
+        title.substring(1, 500).toLowerCase();
     }
 
-    if (musicEvent.title.length > 45) {
+    if (title.length > 45) {
       const splittingCandidates = ['+', '&', ':', '>', '•'];
       let i = 0;
       do {
-        const splitted = musicEvent.title.split(splittingCandidates[i]);
-        musicEvent.title = splitted[0];
+        const splitted = title.split(splittingCandidates[i]);
+        title = splitted[0];
         const titleRest = splitted.splice(1, 45).join(' ');
-        musicEvent.shortText = `${titleRest} ${musicEvent.shortText}`;
+        shortText = `${titleRest} ${shortText}`;
         i += 1;
-      } while (musicEvent.title.length > 45 && i < splittingCandidates.length);
+      } while (title.length > 45 && i < splittingCandidates.length);
     }
 
-    // if (musicEvent.title.length > 45){
-    //   musicEvent.title = musicEvent.title.replace(/\(.*\)/,'').replace(/\s{2,25}/,' ');
-    // }
+    if (shortText) shortText = shortText.replace(/<\/?\w+>/g, '');
 
-    musicEvent.shortText = musicEvent?.shortText?.replace(/<\/?\w+>/g, '');
-
-    return musicEvent;
+    return {
+      ...musicEvent,
+      title,
+      shortText,
+    };
   }
 
   // step 3.5
@@ -839,16 +734,18 @@ export default class AbstractScraper extends ScraperConfig {
    * @returns {*} pageInfo
    * @memberof AbstractScraper
    */
-  async singlePageEnd({ pageInfo, stopFunctie, page, event }) {
-    this.isForced &&
-      this.debugPageInfo &&
+  async singlePageEnd({
+    pageInfo, stopFunctie, page, event, 
+  }) {
+    if (this.isForced && debugSettings.debugPageInfo) {
       this.dirtyLog({
         event,
         pageInfo,
       });
+    } 
 
     if (!pageInfo) {
-      page && !page.isClosed() && page.close();
+      if (page && !page.isClosed()) page.close();
       throw new Error('page info ontbreekt.');
     }
 
@@ -865,7 +762,7 @@ export default class AbstractScraper extends ScraperConfig {
       });
       _t.wrappedHandleError(wrappedError);
 
-      page && !page.isClosed() && page.close();
+      if (page && !page.isClosed()) page.close();
       clearTimeout(stopFunctie);
       return {
         corrupted: 'Geen resultaat van pageInfo',
@@ -873,30 +770,16 @@ export default class AbstractScraper extends ScraperConfig {
     }
 
     pageInfo?.errors?.forEach((errorData) => {
-      try {
-        if (!errorData?.workerData) {
-          errorData.workerData = workerData;
-        }
-        if (!errorData?.remarks) {
-          errorData.remarks = 'geen remarks';
-        }
-        if (!errorData.error?.message) {
-          const initRemarks = errorData?.remarks ?? '';
-          errorData.error = new Error(!errorData?.remarks);
-          const url = event?.venueEventUrl ?? pageInfo.venueEventUrl;
-          const title = event?.title ?? pageInfo.title;
-          errorData.remarks = `Mislukte error van:\n\n${initRemarks}\n<a href='${url}'>${title}</a>`;
-        }
-        const wrappedError = new ErrorWrapper(errorData);
-        _t.wrappedHandleError(wrappedError);
-      } catch (errorOfErrors) {
-        const cp = { ...pageInfo };
-        delete cp.longTextHTML;
-        _t.handleError(errorOfErrors, workerData, 'mislukte error', 'close-thread', cp);
-      }
+      _t.handleError(
+        errorData?.error ?? (new Error('geen error')), 
+        errorData?.workerData ?? null, 
+        errorData?.remarks ?? 'geen remarks', 
+        errorData?.errorLevel ?? 'notice',
+        errorData?.toDebug ?? null,
+      );
     });
 
-    page && !page.isClosed() && page.close();
+    if (page && !page.isClosed()) page.close();
     clearTimeout(stopFunctie);
     return pageInfo;
   }
@@ -908,7 +791,7 @@ export default class AbstractScraper extends ScraperConfig {
    * @return {event {MusicEvent, success bool}}
    * @memberof AbstractScraper
    */
-  async singlePageAsyncCheck(event, pageInfo = null) {
+  async singlePageAsyncCheck(event) {
     // abstracte methode, over te schrijven
     return {
       event,
@@ -921,7 +804,7 @@ export default class AbstractScraper extends ScraperConfig {
   // #region [rgba(90, 0, 90, 0.10)]                            ASYNC CHECKERS
 
   /**
-   * Loopt over AbstractScraper.goodCategories en kijkt of ze in
+   * Loopt over terms.goodCategories en kijkt of ze in
    * een bepaalde text voorkomen, standaard bestaande uit de titel en de shorttext van
    * de event.
    *
@@ -933,7 +816,7 @@ export default class AbstractScraper extends ScraperConfig {
   async hasGoodTerms(event, keysToCheck) {
     const keysToCheck2 = keysToCheck || ['title', 'shortText'];
     let combinedTextToCheck = '';
-    for (let i = 0; i < keysToCheck2.length; i++) {
+    for (let i = 0; i < keysToCheck2.length; i += 1) {
       try {
         const v = event[keysToCheck2[i]];
         if (v) {
@@ -952,7 +835,7 @@ export default class AbstractScraper extends ScraperConfig {
       }
     }
 
-    const hasGoodTerm = AbstractScraper.goodCategories.find((goodTerm) =>
+    const hasGoodTerm = terms.goodCategories.find((goodTerm) =>
       combinedTextToCheck.includes(goodTerm),
     );
     const workingTitle = this.cleanupEventTitle(event.title);
@@ -974,7 +857,7 @@ export default class AbstractScraper extends ScraperConfig {
   }
 
   /**
-   * Loopt over AbstractScraper.forbiddenTerms en kijkt of ze in
+   * Loopt over terms.forbiddenTerms en kijkt of ze in
    * een bepaalde text voorkomen, standaard bestaande uit de titel en de shorttext van
    * de event.
    *
@@ -987,14 +870,14 @@ export default class AbstractScraper extends ScraperConfig {
     const workingTitle = this.cleanupEventTitle(event.title);
     const keysToCheck2 = Array.isArray(keysToCheck) ? keysToCheck : ['title', 'shortText'];
     let combinedTextToCheck = '';
-    for (let i = 0; i < keysToCheck2.length; i++) {
+    for (let i = 0; i < keysToCheck2.length; i += 1) {
       const v = event[keysToCheck2[i]];
       if (v) {
         combinedTextToCheck += `${v} `;
       }
     }
     combinedTextToCheck = combinedTextToCheck.toLowerCase();
-    const hasForbiddenTerm = AbstractScraper.forbiddenTerms.find((forbiddenTerm) =>
+    const hasForbiddenTerm = terms.forbidden.find((forbiddenTerm) =>
       combinedTextToCheck.includes(forbiddenTerm),
     );
     if (hasForbiddenTerm) {
@@ -1042,23 +925,27 @@ export default class AbstractScraper extends ScraperConfig {
 
   async rockAllowListCheck(event, title) {
     const workingTitle = title || this.cleanupEventTitle(event.title);
-    const tt = this.rockAllowList.includes(workingTitle);
+    const workingTitleInRockAllowList = this.rockAllowList.includes(workingTitle);
+    const fullTitleInRockAllowList = this.rockAllowList.includes(event.title);
+    const success = workingTitleInRockAllowList || fullTitleInRockAllowList;
     return {
       event,
-      success: tt,
+      success,
       workingTitle,
-      reason: `${workingTitle} ${tt ? 'in' : 'NOT in'} allowed 🛴 list`,
+      reason: `${workingTitle} ${success ? 'in' : 'NOT in'} allowed 🛴 list`,
     };
   }
 
   async rockRefuseListCheck(event, title) {
     const workingTitle = title || this.cleanupEventTitle(event.title);
-    const tt = this.rockRefuseList.includes(workingTitle);
+    const workingTitleInRockRefuseList = this.rockRefuseList.includes(workingTitle);
+    const fullTitleInRockRefuseList = this.rockRefuseList.includes(event.title);
+    const success = workingTitleInRockRefuseList || fullTitleInRockRefuseList;
     return {
       event,
-      success: tt,
+      success,
       workingTitle,
-      reason: `${workingTitle} ${tt ? 'in' : 'NOT in'} refuse 🚮 list`,
+      reason: `${workingTitle} ${success ? 'in' : 'NOT in'} refuse 🚮 list`,
     };
   }
 
@@ -1161,6 +1048,7 @@ export default class AbstractScraper extends ScraperConfig {
         };
       }
       const matchingResults = await page.evaluate(
+        // eslint-disable-next-line no-shadow
         ({ title }) =>
           Array.from(document.querySelectorAll('.mw-search-results [href*=wiki]'))
             .filter((anker) => anker.textContent.toLowerCase().includes(title.toLowerCase()))
@@ -1187,13 +1075,13 @@ export default class AbstractScraper extends ScraperConfig {
           if (document.querySelector(`.infobox ${thisSelector}`)) {
             found = true;
           }
-          i++;
+          i += 1;
         }
         return found;
       },
-      { wikipediaGoodGenres: AbstractScraper.wikipediaGoodGenres },
+      { wikipediaGoodGenres: terms.wikipediaGoodGenres },
     );
-    !page.isClosed() && page.close();
+    if (!page.isClosed()) page.close();
     if (wikiRockt) {
       return {
         event,
@@ -1203,7 +1091,7 @@ export default class AbstractScraper extends ScraperConfig {
         reason: `found on <a class='single-event-check-reason wikipedia wikipedia--success' href='${wikiPage}'>wikipedia</a>`,
       };
     }
-    !page.isClosed() && page.close();
+    if (!page.isClosed()) page.close();
     return {
       event,
       workingTitle,
@@ -1241,7 +1129,7 @@ export default class AbstractScraper extends ScraperConfig {
         return extraRes;
       }
       if (overloadTitles.length) {
-        return await this.isRock(event, overloadTitlesCopy);
+        return this.isRock(event, overloadTitlesCopy);
       }
     }
 
@@ -1256,26 +1144,32 @@ export default class AbstractScraper extends ScraperConfig {
   cleanupEventTitle(workingTitle = '') {
     try {
       if (workingTitle.match(/\s?-\s?\d\d:\d\d/)) {
+        // eslint-disable-next-line no-param-reassign
         workingTitle = workingTitle.replace(/\s?-\s?\d\d:\d\d/, '');
       }
 
       if (workingTitle.includes('&')) {
+        // eslint-disable-next-line no-param-reassign
         workingTitle = workingTitle.replace(/&.*$/, '');
       }
 
       if (workingTitle.includes('|')) {
+        // eslint-disable-next-line no-param-reassign
         workingTitle = workingTitle.replace(/|.*$/, '');
       }
 
       if (workingTitle.includes('•')) {
+        // eslint-disable-next-line no-param-reassign
         workingTitle = workingTitle.replace(/•.*$/, '');
       }
 
       if (workingTitle.includes('+')) {
+        // eslint-disable-next-line no-param-reassign
         workingTitle = workingTitle.replace(/\+.*$/, '');
       }
 
       if (workingTitle.includes(':')) {
+        // eslint-disable-next-line no-param-reassign
         workingTitle = workingTitle.replace(/^[\w\s]+:/, '');
       }
     } catch (error) {
@@ -1293,241 +1187,21 @@ export default class AbstractScraper extends ScraperConfig {
     return workingTitle.toLowerCase().trim();
   }
 
-  *eventGenerator(events) {
+  * eventGenerator(events) {
     while (events.length) {
       yield events.shift();
     }
   }
   // #endregion                                                 ASYNC CHECKERS
 
-  // #region [rgba(120, 0, 120, 0.10)]                          PRICE
-
-  async getPriceFromHTML({ page, event, pageInfo, selectors }) {
-    const priceRes = {
-      price: null,
-      errors: [],
-    };
-
-    const workingEventObj = { ...event, ...pageInfo };
-    const pi = `${workingEventObj.pageInfo}`;
-
-    if (!page || !workingEventObj || !selectors.length) {
-      priceRes.errors.push({
-        remarks: 'geen page, workingEventObj, selectors',
-      });
-      this.debugPrice && this.dirtyTalk(`price €${priceRes.price} ${`${workingEventObj.title}`}`);
-      return priceRes;
-    }
-
-    const selectorsCopy = [...selectors];
-    const firstSelector = selectorsCopy.shift();
-
-    const testText = await page.evaluate((selector) => {
-      if (!document.querySelector(selector)) return false;
-      return Array.from(document.querySelectorAll(selector))
-        .map((el) => el?.textContent)
-        .join('');
-    }, firstSelector);
-
-    if (!testText && selectorsCopy.length) {
-      return await this.getPriceFromHTML({
-        page,
-        event,
-        pageInfo,
-        selectors: selectorsCopy,
-      });
-    }
-
-    if (!testText) {
-      if (testText === false) {
-        if (workingEventObj.soldOut) {
-          priceRes.price = 0;
-          if (this.debugPrice)
-            priceRes.errors.push({ remarks: `uitverkocht. vergeef geen price ${pi}` });
-        } else {
-          priceRes.errors.push({ remarks: `geen el in ${firstSelector} ${pi}` });
-        }
-      } else {
-        priceRes.errors.push({ remarks: `lege tc in ${firstSelector} ${pi}` });
-      }
-      return priceRes;
-    }
-
-    if (testText.match(/start/i)) {
-      priceRes.price = null;
-      this.debugPrice &&
-        this.dirtyDebug({
-          pi,
-          price: priceRes.price,
-          type: 'NOG ONBEKEND',
-        });
-      return priceRes;
-    }
-
-    const priceMatch = testText.match(/(?<euros>\d{1,3})\s?(?<scheiding>[,.]?)\s?(?<centen>\d+|-)/);
-
-    const priceMatchEuros = testText.match(/\d+/);
-
-    const euros = priceMatch?.groups?.euros ?? null;
-    const centen = priceMatch?.groups?.centen ?? null;
-    const scheiding = priceMatch?.groups?.scheiding ?? null;
-    const backupEuros = Array.isArray(priceMatchEuros) ? priceMatchEuros[0] : null;
-    let priceStringR = null;
-    try {
-      if (testText.includes('€')) {
-        const tm = testText.match(/€\d{1,3}\s?[,.]?(\d{1,3}|-)/);
-        priceStringR = tm[0];
-      }
-    } catch (error) {
-      //
-    }
-    if (Array.isArray(priceMatch) && !priceStringR) {
-      priceStringR = priceMatch[0];
-    } else if (!priceStringR) {
-      if (euros) {
-        priceStringR += euros;
-      }
-      if (scheiding) {
-        if (centen) {
-          if (centen.includes('-')) {
-            priceStringR += '00';
-          } else {
-            priceStringR += centen;
-          }
-        } else {
-          priceStringR += '00';
-        }
-      } else {
-        priceStringR += '00';
-      }
-    }
-
-    const priceString = priceStringR
-      .replace(',', '.')
-      .replace('-', '00')
-      .replaceAll(/\s/g, '')
-      .replace('€', '');
-
-    const debugIncl = {
-      euros,
-      centen,
-      scheiding,
-      backupEuros,
-      pi,
-      testText,
-      priceMatchEuros,
-      priceStringR,
-    };
-
-    if (this.debugPrice) {
-      this.dirtyLog(debugIncl);
-    }
-
-    if (
-      testText.match(/gratis|free/i) &&
-      !Array.isArray(priceMatch) &&
-      !Array.isArray(priceMatchEuros)
-    ) {
-      priceRes.price = 0;
-      this.debugPrice &&
-        this.dirtyDebug({
-          price: priceRes.price,
-          type: 'GRATIS',
-        });
-      return priceRes;
-    }
-
-    if (!Array.isArray(priceMatch) && !Array.isArray(priceMatchEuros)) {
-      if (selectorsCopy.length) {
-        return await this.getPriceFromHTML({
-          page,
-          event,
-          pageInfo,
-          selectors: selectorsCopy,
-        });
-      }
-      if (testText.match(/uitverkocht|sold\sout/i)) {
-        priceRes.price = null;
-        this.debugPrice &&
-          this.dirtyDebug({
-            price: priceRes.price,
-            type: 'UITVERKOCHT',
-          });
-        return priceRes;
-      }
-      priceRes.errors.push({
-        remarks: `geen match met ${firstSelector} ${pi}`,
-        toDebug: { testText, priceMatch },
-      });
-      return priceRes;
-    }
-
-    if (!Array.isArray(priceMatch) && Array.isArray(priceMatchEuros)) {
-      priceRes.price = Number(priceMatchEuros[0]);
-      this.checkIsNumber(priceRes, pi);
-      this.debugPrice &&
-        this.dirtyDebug({
-          price: priceRes.price,
-          type: 'geen priceMatch wel matchEuros',
-        });
-      return priceRes;
-    }
-
-    try {
-      priceRes.price = Number(priceString);
-
-      this.checkIsNumber(priceRes, pi);
-      const pii = pi.replace('</a>', ` €${priceRes.price.toFixed(2)}</a>`);
-      this.debugPrice && this.dirtyDebug(pii);
-      return priceRes;
-    } catch (priceCalcErr) {
-      if (selectorsCopy.length) {
-        return await this.getPriceFromHTML({
-          page,
-          event,
-          pageInfo,
-          selectors: selectorsCopy,
-        });
-      }
-
-      if (testText.match(/uitverkocht|sold\sout/i)) {
-        priceRes.price = null;
-        this.debugPrice &&
-          this.dirtyDebug({
-            price: priceRes.price,
-            type: 'UITVERKOCHT',
-            ...debugIncl,
-          });
-        return priceRes;
-      }
-      priceRes.push({
-        error: priceCalcErr,
-        remarks: `price calc err ${pi}`,
-        toDebug: { debugIncl },
-      });
-      return priceRes;
-    }
-  }
-
-  checkIsNumber(priceRes, pi) {
-    if (isNaN(priceRes.price)) {
-      priceRes.errors.push({
-        remarks: `NaN: ${priceRes.price} ${pi}`,
-      });
-      return false;
-    }
-    return true;
-  }
-  // #endregion                                                 PRICE
-
   // #region [rgba(150, 0, 150, 0.10)]                          LONG HTML
   writeLongTextHTML(mergedEvent) {
     if (!mergedEvent) return null;
     const base64String = Buffer.from(
-      mergedEvent.venueEventUrl
-        .replace('www.', '')
-        .replace('https://', '')
-        .replace(/\w+\.\w{2,3}/, ''),
+      mergedEvent.venueEventUrl.substring(
+        mergedEvent.venueEventUrl.length - 30,
+        mergedEvent.venueEventUrl.length,
+      ),
     ).toString('base64');
     const toPrint = makeLongHTML(mergedEvent);
 
@@ -1549,256 +1223,6 @@ export default class AbstractScraper extends ScraperConfig {
   }
   // #endregion                                                 LONG HTML
 
-  // #region [rgba(180, 0, 180, 0.10)]                          IMAGE
-  async getImage({ page, event, pageInfo, selectors, mode }) {
-    const res = {
-      errors: [],
-    };
-
-    try {
-      await page.waitForSelector(selectors[0], {
-        timeout: 2500,
-      });
-    } catch (error) {
-      try {
-        if (selectors.length > 1) {
-          await page.waitForSelector(selectors[1], {
-            timeout: 250,
-          });
-        } else {
-          res.errors.push({
-            error,
-            remarks: `geen ${selectors[0]}`,
-          });
-          return res;
-        }
-      } catch (error2) {
-        try {
-          if (selectors.length > 2) {
-            await page.waitForSelector(selectors[2], {
-              timeout: 250,
-            });
-          } else {
-            res.errors.push({
-              error,
-              remarks: `geen ${selectors[0]} of ${selectors[1]}`,
-            });
-            return res;
-          }
-        } catch (error3) {
-          res.errors.push({
-            error,
-            remarks: `geen ${selectors[0]} of ${selectors[1]} of ${selectors[2]}`,
-          });
-          return res;
-        }
-      }
-    }
-
-    const title = event?.title ? event?.title : pageInfo.title;
-
-    const pi = pageInfo?.pageInfo ? pageInfo?.pageInfo : event?.pageInfo;
-    let image = null;
-    const selectorsCopy = [...selectors];
-    if (mode === 'image-src') {
-      while (!image && selectorsCopy.length > 0) {
-        const selector = selectorsCopy.shift();
-        image = await page.evaluate(
-          ({ selector }) => {
-            const el = document.querySelector(selector);
-            let src = null;
-            if (!el?.src && el?.hasAttribute('data-src')) {
-              src = el.getAttribute('data-src');
-            } else if (!el?.src && el?.hasAttribute('srcset')) {
-              src = el.getAttribute('srcset').split(/\s/)[0];
-            } else {
-              src = el?.src ?? null;
-            }
-
-            if (src && !src.includes('https')) {
-              src = `${document.location.protocol}//${document.location.hostname}${src}`;
-            }
-
-            return src;
-          },
-          { selector },
-        );
-      }
-    } else if (mode === 'background-src') {
-      while (!image && selectorsCopy.length > 0) {
-        const selector = selectorsCopy.shift();
-        image = await page.evaluate(
-          ({ selector }) => {
-            const mmm =
-              document
-                .querySelector(selector)
-                ?.style.backgroundImage.match(
-                  /https.*.jpg|https.*.jpeg|https.*.png|https.*.webp/,
-                ) ?? null;
-            if (!Array.isArray(mmm)) return null;
-            let src = mmm[0];
-            if (!src.includes('https')) {
-              src = `${document.location.protocol}//${document.location.hostname}${src}`;
-            }
-            return src;
-          },
-          { selector },
-        );
-      }
-    } else if (mode === 'weird-attr') {
-      while (!image && selectorsCopy.length > 0) {
-        const selector = selectorsCopy.shift();
-        image = await page.evaluate(
-          ({ selector }) => {
-            const el = document.querySelector(selector);
-            let src = null;
-            if (!el?.href && el?.hasAttribute('content')) {
-              src = el.getAttribute('content');
-            } else {
-              src = el?.href ?? null;
-            }
-
-            if (!src.includes('https')) {
-              src = `${document.location.protocol}//${document.location.hostname}${src}`;
-            }
-
-            return src;
-          },
-          { selector },
-        );
-      }
-    }
-
-    if (!image) {
-      res.errors.push({
-        remarks: `image missing ${pi}`,
-      });
-      return res;
-    }
-
-    const base64String = Buffer.from(
-      event.venueEventUrl
-        .replace('www.', '')
-        .replace('https://', '')
-        .replace(/\w+\.\w{2,3}/, ''),
-    ).toString('base64');
-    let imagePath = `${this.eventImagesFolder}/${workerData.family}/${base64String}`;
-
-    if (
-      !WorkerStatus?.shellArguments?.keepImages ||
-      WorkerStatus?.shellArguments?.keepImages === 'false'
-    ) {
-      if (fs.existsSync(`${imagePath}-vol.webp`)) {
-        // niets doen!
-      } else {
-        const diCompressRes = await this.downloadImageCompress(event, image, imagePath);
-        if (!diCompressRes) {
-          res.errors.push({
-            remarks: `download compress ${event.title} ${image} fail`,
-          });
-          imagePath = '';
-        }
-      }
-    }
-
-    res.image = imagePath;
-    return res;
-  }
-
-  downloadImage(url, filepath) {
-    return new Promise((resolve, reject) => {
-      try {
-        https.get(url, (res) => {
-          if (res.statusCode === 200) {
-            res
-              .pipe(fs.createWriteStream(filepath))
-              .on('error', reject)
-              .once('close', () => resolve(filepath));
-          } else if (`${res.statusCode}`[0] === '3') {
-            resolve(`${fsDirections.publicLocationImages}/${workerData.family}-vol.webp`);
-          } else {
-            res.resume();
-            reject(
-              new Error(
-                `Request Failed With a Status Code: ${res.statusCode} see <a href='vscode://vscode-remote/wsl+Ubuntu-22.04/home/sjerp/dev/apache/concertagenda/backend/temp/error.log:1:1'>the log</a>`,
-              ),
-            );
-          }
-        });
-      } catch (error) {
-        reject(error);
-      }
-    });
-  }
-
-  async downloadImageCompress(event, image, imagePath, familyOverSchrijving = '') {
-    let fam = '';
-    if (familyOverSchrijving) {
-      fam = familyOverSchrijving;
-    } else {
-      fam = workerData.family;
-    }
-
-    if (!fs.existsSync(`${this.eventImagesFolder}/${fam}`)) {
-      fs.mkdirSync(`${this.eventImagesFolder}/${fam}`);
-    }
-
-    if (image.includes('event-images')) {
-      return true;
-    }
-
-    let extension = '';
-    try {
-      extension = image.match(/.jpg|.jpeg|.png|.webp/)[0];
-    } catch (error) {
-      this.dirtyDebug(error);
-      const ss = image.split('.');
-      extension = ss[1];
-    }
-
-    try {
-      await this.downloadImage(image, `${imagePath}-ori${extension}`);
-    } catch (error) {
-      _t.wrappedHandleError(
-        new ErrorWrapper({
-          error,
-          remarks: 'download image',
-          errorLevel: 'notice',
-          workerData,
-          toDebug: {
-            image,
-            imagePath,
-          },
-        }),
-      );
-      return false;
-    }
-
-    await sharp(`${imagePath}-ori${extension}`)
-      .resize(440, 250)
-      .webp()
-      .toFile(`${imagePath}-w440.webp`, (err, info) => {
-        //
-      });
-
-    await sharp(`${imagePath}-ori${extension}`)
-      .resize(750, 340)
-      .webp()
-      .toFile(`${imagePath}-w750.webp`, (err, info) => {
-        //
-      });
-
-    await sharp(`${imagePath}-ori${extension}`)
-      .webp()
-      .toFile(`${imagePath}-vol.webp`, (err, info) => {
-        //
-      });
-
-    return true;
-  }
-
-  // #endregion                                                 IMAGE
-
   // step 4
   async announceToMonitorDone() {
     parentPort.postMessage(this.qwm.workerDone(EventsList.amountOfEvents));
@@ -1807,9 +1231,9 @@ export default class AbstractScraper extends ScraperConfig {
 
   // step 4.5
   async closeBrowser() {
-    this.browser &&
-      Object.prototype.hasOwnProperty.call(this.browser, 'close') &&
+    if (this.browser && Object.prototype.hasOwnProperty.call(this.browser, 'close')) {
       this.browser.close();
+    }
     return true;
   }
 

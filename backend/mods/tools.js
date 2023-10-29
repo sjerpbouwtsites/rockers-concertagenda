@@ -67,8 +67,8 @@ export function handleError(error, workerData, remarks = null, errorLevel = 'not
   const curErrorLog = fs.readFileSync(fsDirections.errorLog) || '';
   const newErrorLog = `
   ${workerData?.name} Error - ${time.toLocaleTimeString()}
-  ${error.stack} 
-  ${error.message}
+  ${error?.stack ?? 'geen stack'} 
+  ${error?.message ?? 'geen message'}
   
   ${curErrorLog}`;
 
@@ -84,30 +84,6 @@ export function failurePromiseAfter(time) {
       });
     }, time);
   });
-}
-
-export function getShellArguments() {
-  const shellArguments = {};
-  process.argv.forEach((val, index) => {
-    if (index < 2) {
-      return;
-    }
-    if (!val.includes('=')) {
-      throw new Error(
-        'Invalid shell arguments passed to node. Please use foo=bar bat=gee.',
-      );
-    }
-    const [argName, argValue] = val.split('=');
-    shellArguments[argName] = argValue;
-  });
-
-  // if (shellArguments.force && shellArguments.force.includes("all")) {
-  //   shellArguments.force += Object.keys(
-  //     JSON.parse(fs.readFileSync(fsDirections.timestampsJson))
-  //   ).join(";");
-  // }
-
-  return shellArguments;
 }
 
 export async function autoScroll(page) {

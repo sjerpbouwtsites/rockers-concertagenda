@@ -3,6 +3,20 @@ import AbstractScraper from './gedeeld/abstract-scraper.js';
 import * as _t from '../mods/tools.js';
 import { workerNames } from '../mods/worker-config.js';
 
+function editAttractionsInRaw(attractions) {
+  return (
+    attractions.map((attr) => {
+      const attrC = { ...attr };
+      delete attrC.externalLinks;
+      const image = attr.images[0].url;
+      attrC.image = image;
+      delete attrC.images;
+      delete attrC.upcomingEvents;
+      return attr;
+    }) ?? []
+  );
+}
+
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const ticketmasterScraper = new AbstractScraper({
   workerData: { ...workerData },
@@ -41,7 +55,7 @@ ticketmasterScraper.listenToMasterThread();
 ticketmasterScraper.mainPage = async function () {
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.name);
   if (availableBaseEvents) {
-    return await this.mainPageEnd({ stopFunctie: null, rawEvents: availableBaseEvents });
+    return this.mainPageEnd({ stopFunctie: null, rawEvents: availableBaseEvents });
   }
 
   const { stopFunctie } = await this.mainPageStart();
@@ -49,8 +63,6 @@ ticketmasterScraper.mainPage = async function () {
   const rawEvents = await fetch(this._s.mainPage.url)
     .then((result) => result.json())
     .then((fetchedData) => {
-      // fs.writeFile(`${fsDirections.temp + '/ticketmaster/raw'}/${workerData.index}.json`, JSON.stringify(fetchedData), "UTF-8", ()=>{})
-
       if (fetchedData?.fault) {
         this.dirtyDebug(fetchedData?.fault, 'TM 249');
         throw new Error(
@@ -59,7 +71,7 @@ ticketmasterScraper.mainPage = async function () {
       }
 
       const res1 = {
-        pageInfo: `<a class='page-info' href='${this._s.mainPage.url}'>Ticketmaster overview ${workerData.index}</a>`,
+        anker: `<a class='page-info' href='${this._s.mainPage.url}'>Ticketmaster overview ${workerData.index}</a>`,
         errors: [],
       };
 
@@ -69,11 +81,9 @@ ticketmasterScraper.mainPage = async function () {
         copyEvent.image = copyEvent.images[0].url;
         delete copyEvent.images;
         copyEvent.attractions = editAttractionsInRaw(copyEvent?._embedded?.attractions ?? []);
-        copyEvent.venue =
-          Array.isArray(copyEvent?._embedded?.venues) && copyEvent?._embedded?.venues.length
-            ? copyEvent._embedded.venues[0]
-            : 'geenvenue';
-        copyEvent._embedded;
+        const hasVenues =
+          Array.isArray(copyEvent?._embedded?.venues) && copyEvent?._embedded?.venues.length;
+        copyEvent.venue = hasVenues ? copyEvent._embedded.venues[0] : 'geenvenue';
         copyEvent.venueEventUrl = rawEvent.url;
 
         return copyEvent;
@@ -86,28 +96,15 @@ ticketmasterScraper.mainPage = async function () {
     });
 
   if (!Array.isArray(rawEvents) || !rawEvents.length) {
-    return await this.mainPageEnd({ stopFunctie, rawEvents: [] });
+    return this.mainPageEnd({ stopFunctie, rawEvents: [] });
   }
-
-  // fs.writeFile(`${fsDirections.temp + '/ticketmaster/trimmed'}/${workerData.index}.json`, JSON.stringify(rawEvents), "UTF-8", ()=>{})
 
   const filteredRawEvents = this.filterForMetal(rawEvents);
 
   this.saveBaseEventlist(workerData.name, filteredRawEvents);
-  return await this.mainPageEnd({ stopFunctie, rawEvents: filteredRawEvents });
+  return this.mainPageEnd({ stopFunctie, rawEvents: filteredRawEvents });
 };
-function editAttractionsInRaw(attractions) {
-  return (
-    attractions.map((attr) => {
-      delete attr.externalLinks;
-      const image = attr.images[0].url;
-      attr.image = image;
-      delete attr.images;
-      delete attr.upcomingEvents;
-      return attr;
-    }) ?? []
-  );
-}
+
 // #endregion                          MAIN PAGE
 
 // #region [rgba(120, 0, 0, 0.3)]     SINGLE PAGE
@@ -115,7 +112,7 @@ ticketmasterScraper.singlePage = async function ({ event }) {
   const { stopFunctie } = await this.singlePageStart();
 
   const pageInfo = {
-    pageInfo: `<a class='page-info' href='${event.url}'>TM ${event.title}</a>`,
+    anker: `<a class='page-info' href='${event.url}'>TM ${event.title}</a>`,
     errors: [],
     unavailable: '',
   };
@@ -165,7 +162,7 @@ ticketmasterScraper.singlePage = async function ({ event }) {
 
   if (workerNames.includes(pageInfo.location) || pageInfo.location === 'metropoolenschede') {
     pageInfo.unavailable += ` locatie ${pageInfo.location} niet bij TM.`;
-    return await this.singlePageEnd({ pageInfo, stopFunctie });
+    return this.singlePageEnd({ pageInfo, stopFunctie });
   }
 
   pageInfo.title = event.name;
@@ -181,7 +178,7 @@ ticketmasterScraper.singlePage = async function ({ event }) {
         prijzen: event?.priceRanges,
       },
     });
-    return await this.singlePageEnd({ pageInfo, stopFunctie });
+    return this.singlePageEnd({ pageInfo, stopFunctie });
   }
   if (pageInfo.title.toLowerCase().includes('heaven')) {
     this.dirtyLog(event);
@@ -202,11 +199,23 @@ ticketmasterScraper.singlePage = async function ({ event }) {
     event.venueEventUrl
       .replace('www.', '')
       .replace('https://', '')
+      .replace('/event/', '')
+      .replace(/\?.*/, '')
       .replace(/\w+\.\w{2,3}/, ''),
   ).toString('base64');
   const imagePath = `${this.eventImagesFolder}/${pageInfo.location}/${imageBase64}`;
+  // this.dirtyTalk(
+  //   event.venueEventUrl
+  //     .replace('www.', '')
+  //     .replace('https://', '')
+  //     .replace('/event/', '')
+  //     .replace(/\?.*/, '')
+  //     .replace(/\w+\.\w{2,3}/, ''),
+  // );
+  // this.dirtyTalk(`${this.eventImagesFolder}/${pageInfo.location}/${imageBase64}`);
   await this.downloadImageCompress(event, event.image, imagePath, pageInfo.location);
   await _t.waitTime(25);
+  // eslint-disable-next-line no-param-reassign
   event.image = imagePath;
   pageInfo.image = imagePath;
 
@@ -219,7 +228,7 @@ ticketmasterScraper.singlePage = async function ({ event }) {
     pageInfo.unavailable += ' double event';
   }
 
-  return await this.singlePageEnd({ pageInfo, stopFunctie });
+  return this.singlePageEnd({ pageInfo, stopFunctie });
 };
 
 ticketmasterScraper.filterForMetal = function (rawEvents) {

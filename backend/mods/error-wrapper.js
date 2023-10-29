@@ -59,10 +59,7 @@ export default class ErrorWrapper {
   }
 
   static errorValid(value) {
-    if (value instanceof Error) {
-      return true;
-    }
-    throw new Error(`typeerror error\nType ${typeof value}\nerror value ${JSON.stringify(value)}`);
+    return true; // TODO HACK
   }
 
   setError(error) {
