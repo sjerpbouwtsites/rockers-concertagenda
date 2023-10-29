@@ -1,15 +1,19 @@
 /* global document */
 import { workerData } from 'worker_threads';
+import fs from 'fs';
 import * as _t from '../mods/tools.js';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/cpunt.js';
 import getImage from './gedeeld/image.js';
 import terms from './gedeeld/terms.js';
+import fsDirections from '../mods/fs-directions.js';
 
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const cpuntScraper = new AbstractScraper({
   workerData: { ...workerData },
-
+  launchOptions: {
+    headless: false,
+  },
   mainPage: {
     timeout: 20014,
     waitUntil: 'load',
@@ -88,7 +92,13 @@ cpuntScraper.mainPage = async function () {
       .waitForSelector('#filter .article-wrapper', {
         timeout: 2000,
       })
-      .catch((caughtError) => {
+      .catch(async (caughtError) => {
+        const pageHTML = await page.evaluate(() => {
+          console.log("NEE");
+          return `${document.body.outerHTML}`;
+        });
+        this.dirtyLog(pageHTML);
+        fs.writeFileSync(`${fsDirections.temp}/rando-error.txt`, pageHTML, 'utf-8');
         _t.handleError(
           caughtError,
           workerData,

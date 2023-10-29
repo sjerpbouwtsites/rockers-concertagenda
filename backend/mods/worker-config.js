@@ -14,20 +14,20 @@ export const AbstractWorkerConfig = {
 };
 
 export const workerConfig = {
-  // '013': {
-  //   workerCount: 1,
-  //   CPUReq: 'low',
-  //   workerConcurrent: 3,
-  //   forceSet: 0,
-  // },
-  // afaslive: {
-  //   workerCount: 1,
-  //   CPUReq: 'high',
-  //   workerConcurrent: 1,
-  //   forceSet: 0,
-  // },
-  // baroeg: { workerCount: 1, workerConcurrent: 2, forceSet: 0 }, // TODO TERUG NAAR 2
-  // bibelot: { workerCount: 1, workerConcurrent: 1, forceSet: 1 },
+  '013': {
+    workerCount: 1,
+    CPUReq: 'low',
+    workerConcurrent: 3,
+    forceSet: 0,
+  },
+  afaslive: {
+    workerCount: 1,
+    CPUReq: 'high',
+    workerConcurrent: 1,
+    forceSet: 0,
+  },
+  baroeg: { workerCount: 1, workerConcurrent: 2, forceSet: 0 }, // TODO TERUG NAAR 2
+  bibelot: { workerCount: 1, workerConcurrent: 1, forceSet: 1 },
   boerderij: {
     workerCount: 1,
     CPUReq: 'low',
@@ -35,13 +35,13 @@ export const workerConfig = {
     forceSet: 1,
   },
   cpunt: { workerCount: 1, workerConcurrent: 1, forceSet: 1 },
-  dbs: {
-    workerCount: 4,
-    workerConcurrent: 4,
-    CPUReq: 'low',
-    forceSet: 1,
-  },
-  deflux: { workerCount: 1, workerConcurrent: 1, forceSet: 2 },
+  // dbs: {
+  //   workerCount: 4,
+  //   workerConcurrent: 4,
+  //   CPUReq: 'low',
+  //   forceSet: 1,
+  // },
+  // deflux: { workerCount: 1, workerConcurrent: 1, forceSet: 2 },
   // dehelling: {
   //   workerCount: 1,
   //   CPUReq: 'low',

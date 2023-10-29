@@ -101,7 +101,9 @@ export default class AbstractScraper extends ScraperConfig {
   // #region [rgba(0, 0, 240, 0.10)]                            SCRAPE INIT & SCRAPE DIE
   async scrapeInit() {
     if (!this._s.app.mainPage.useCustomScraper || !this._s.app.singlePage.useCustomScraper) {
-      this.browser = await puppeteer.launch({});
+      this.browser = await puppeteer.launch({
+        headless: false,
+      });
     } else {
       this.browser = 'disabled';
     }
@@ -535,7 +537,7 @@ export default class AbstractScraper extends ScraperConfig {
     singleEvent = this.isMusicEventCorruptedMapper(singleEvent);
 
     if (singleEvent.corrupted || singleEvent.unavailable) {
-      singleEvent.registerINVALID(this.workerData);
+      // singleEvent.registerINVALID(this.workerData); TODO HERACTIVIEREN
       if (singleEvent.corrupted) {
         this.dirtyDebug({
           title: `💀 ${singleEvent.corrupted}`,

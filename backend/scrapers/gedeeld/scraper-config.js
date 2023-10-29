@@ -8,6 +8,7 @@
  */
 export default class ScraperConfig {
   static baseConfig = {
+    launchOptions: {},
     singlePage: {
       waitUntil: 'domcontentloaded',
       timeout: 5001,
@@ -37,6 +38,7 @@ export default class ScraperConfig {
 
   // SETTINGS.
   _s = {
+    launchOptions: {},
     mainPage: {},
     singlePage: {},
     app: {
@@ -55,6 +57,7 @@ export default class ScraperConfig {
       throw new Error('geen workerData scraperConfig');
     }
     const bc = ScraperConfig.baseConfig;
+    this._s.launchOptions = obj?.launchOptions ?? bc.launchOptions;
     this._s.singlePage = {
       timeout: obj?.singlePage?.timeout ?? bc.singlePage.timeout,
       waitUntil: obj?.singlePage?.waitUntil ?? bc.singlePage.waitUntil,
