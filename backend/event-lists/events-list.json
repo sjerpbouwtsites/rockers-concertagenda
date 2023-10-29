@@ -1,6 +1,21 @@
 [
   {
     "door": null,
+    "start": "2023-10-29T08:00:00",
+    "end": "2023-10-29T11:30:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/guitar-wolf-japan-more-tba/",
+    "title": "Guitar wolf (japan) ",
+    "location": "dbs",
+    "price": 14,
+    "shortText": " pizza knife   pablo x (fr) garage, punk, rock 'n roll",
+    "longText": "../public/texts/dbs/bnQvZ3VpdGFyLXdvbGYtamFwYW4tbW9yZS10YmEv.html",
+    "image": "../public/event-images/dbs/bnQvZ3VpdGFyLXdvbGYtamFwYW4tbW9yZS10YmEv",
+    "soldOut": null,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
+    "door": null,
     "start": "2023-10-29T15:00:00",
     "end": null,
     "venueEventUrl": "https://baroeg.nl/productie/wavefest-xi-traitrs-twin-noir-darker/",
@@ -12,6 +27,21 @@
     "image": "../public/event-images/baroeg/dC14aS10cmFpdHJzLXR3aW4tbm9pci1kYXJrZXIv",
     "soldOut": false,
     "unavailable": null,
+    "corrupted": null
+  },
+  {
+    "door": null,
+    "start": "2023-11-01T08:00:00",
+    "end": "2023-11-01T11:00:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/toundra-es-monkey3-ch/",
+    "title": "Monkey3 (ch) + the machine (nl)",
+    "location": "dbs",
+    "price": 15,
+    "shortText": "postrock, progressive, psychedelic, stoner",
+    "longText": "../public/texts/dbs/bC9ldmVudC90b3VuZHJhLWVzLW1vbmtleTMtY2gv.html",
+    "image": "../public/event-images/dbs/bC9ldmVudC90b3VuZHJhLWVzLW1vbmtleTMtY2gv",
+    "soldOut": null,
+    "unavailable": false,
     "corrupted": null
   },
   {
@@ -56,6 +86,21 @@
     "longText": "../public/texts/013/cm9ncmFtbWEvNzUyNC9sb3JkLW9mLXRoZS1sb3N0.html",
     "image": "../public/event-images/013/cm9ncmFtbWEvNzUyNC9sb3JkLW9mLXRoZS1sb3N0",
     "soldOut": true,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
+    "door": null,
+    "start": "2023-11-02T08:00:00",
+    "end": null,
+    "venueEventUrl": "https://www.dbstudio.nl/event/iggys-furious-fifty-fissa/",
+    "title": "Iggy’s Furious Fifty Fissa",
+    "location": "dbs",
+    "price": "0",
+    "shortText": "grunge, metal, stoner",
+    "longText": "../public/texts/dbs/ZW50L2lnZ3lzLWZ1cmlvdXMtZmlmdHktZmlzc2Ev.html",
+    "image": "../public/event-images/dbs/ZW50L2lnZ3lzLWZ1cmlvdXMtZmlmdHktZmlzc2Ev",
+    "soldOut": null,
     "unavailable": false,
     "corrupted": null
   },

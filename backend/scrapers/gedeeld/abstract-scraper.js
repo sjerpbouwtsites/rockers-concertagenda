@@ -101,9 +101,7 @@ export default class AbstractScraper extends ScraperConfig {
   // #region [rgba(0, 0, 240, 0.10)]                            SCRAPE INIT & SCRAPE DIE
   async scrapeInit() {
     if (!this._s.app.mainPage.useCustomScraper || !this._s.app.singlePage.useCustomScraper) {
-      this.browser = await puppeteer.launch({
-        headless: false,
-      });
+      this.browser = await puppeteer.launch(this._s.launchOptions);
     } else {
       this.browser = 'disabled';
     }
