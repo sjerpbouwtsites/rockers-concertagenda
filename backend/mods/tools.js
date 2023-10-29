@@ -67,8 +67,8 @@ export function handleError(error, workerData, remarks = null, errorLevel = 'not
   const curErrorLog = fs.readFileSync(fsDirections.errorLog) || '';
   const newErrorLog = `
   ${workerData?.name} Error - ${time.toLocaleTimeString()}
-  ${error?.stack} 
-  ${error.message}
+  ${error?.stack ?? 'geen stack'} 
+  ${error?.message ?? 'geen message'}
   
   ${curErrorLog}`;
 

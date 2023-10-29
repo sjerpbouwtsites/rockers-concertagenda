@@ -560,7 +560,7 @@ export default class AbstractScraper extends ScraperConfig {
 
     singleEvent.longText = this.writeLongTextHTML(singleEvent);
 
-    this.dirtyLog(singleEvent, `singleEventBeforeMergedCheck`);
+    // this.dirtyLog(singleEvent, `singleEventBeforeMergedCheck`);
 
     const mergedEventCheckRes = await this.singlePageAsyncCheck(singleEvent, pageInfo);
     if (mergedEventCheckRes.success) {
@@ -572,7 +572,7 @@ export default class AbstractScraper extends ScraperConfig {
         });
       }
 
-      this.dirtyLog(singleEvent, `singleEventAfterMergedCheckSuccess`);
+      // this.dirtyLog(singleEvent, `singleEventAfterMergedCheckSuccess`);
       
       let tryEnforceDate = false;
       try {
@@ -763,12 +763,13 @@ export default class AbstractScraper extends ScraperConfig {
     }
 
     pageInfo?.errors?.forEach((errorData) => {
-      const wrappedError = new ErrorWrapper({
-        ...errorData,
-        workerData: errorData?.workerData || workerData,
-        remarks: errorData?.remarks || 'geen remarks',
-      });
-      _t.wrappedHandleError(wrappedError);
+      _t.handleError(
+        errorData?.error ?? (new Error('geen error')), 
+        errorData?.workerData ?? null, 
+        errorData?.remarks ?? 'geen remarks', 
+        errorData?.errorLevel ?? 'notice',
+        errorData?.toDebug ?? null,
+      );
     });
 
     if (page && !page.isClosed()) page.close();

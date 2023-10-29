@@ -1,6 +1,8 @@
 import debugSettings from './debug-settings.js';
 
-async function _getPriceFromHTML({ _this, page, event, pageInfo, selectors }) {
+async function _getPriceFromHTML({
+  _this, page, event, pageInfo, selectors, 
+}) {
   const priceRes = {
     price: null,
     errors: [],
@@ -41,10 +43,10 @@ async function _getPriceFromHTML({ _this, page, event, pageInfo, selectors }) {
     if (testText === false) {
       if (workingEventObj.soldOut) {
         priceRes.price = 0;
-        if (_this.debugPrice)
-          priceRes.errors.push({ remarks: `uitverkocht. vergeef geen price ${pi}` });
+        if (_this.debugPrice) { priceRes.errors.push({ remarks: `uitverkocht. vergeef geen price ${pi}` }); }
       } else {
-        priceRes.errors.push({ remarks: `geen el in ${firstSelector} ${pi}` });
+        const e = new Error(`geen el price`);
+        priceRes.errors.push({ error: e, remarks: `geen el in ${firstSelector} ${pi}`, errorLevel: 'notice' });
       }
     } else {
       priceRes.errors.push({ remarks: `lege tc in ${firstSelector} ${pi}` });

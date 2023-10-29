@@ -1,4 +1,86 @@
 
+  cpunt-0 Error - 5:29:43 PM
+  TimeoutError: Waiting for selector `#filter .article-wrapper` failed: Waiting failed: 2000ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Waiting for selector `#filter .article-wrapper` failed: Waiting failed: 2000ms exceeded
+  
+  
+  undefined Error - 5:28:47 PM
+  Error: geen el price
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:48:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async baroegScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/baroeg.js:171:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:517:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
+  geen el price
+  
+  
+  undefined Error - 5:26:16 PM
+  Error: geen el price
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:48:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async baroegScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/baroeg.js:171:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:517:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
+  geen el price
+  
+  
+  undefined Error - 5:24:33 PM
+  Error: geen error
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:767:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:765:23)
+    at baroegScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/baroeg.js:189:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:517:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
+  geen error
+  
+  
+  baroeg-0 Error - 5:15:06 PM
+  geen stack 
+  geen message
+  
+  
+  baroeg-0 Error - 5:11:01 PM
+  geen stack 
+  geen message
+  
+  
+  baroeg-0 Error - 5:09:12 PM
+  geen stack 
+  geen message
+  
+  
+  baroeg-0 Error - 5:08:11 PM
+  geen stack 
+  geen message
+  
+  
+  baroeg-0 Error - 5:07:14 PM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:709:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  baroeg-0 Error - 5:07:00 PM
+  TypeError: Cannot read properties of undefined (reading 'message')
+    at handleError (file:///var/www/html/concertagenda/backend/mods/tools.js:71:11)
+    at Module.wrappedHandleError (file:///var/www/html/concertagenda/backend/mods/tools.js:9:5)
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:771:10
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:765:23)
+    at baroegScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/baroeg.js:189:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:517:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
+  Cannot read properties of undefined (reading 'message')
+  
+  
   doornroosje-0 Error - 11:07:38 AM
   Error: Timeout baseEvent
     at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:709:18)
