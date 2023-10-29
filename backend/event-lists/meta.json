@@ -10,7 +10,7 @@
     },
     "baroeg": {
       "name": "baroeg",
-      "count": 16
+      "count": 15
     },
     "boerderij": {
       "name": "boerderij",
@@ -22,11 +22,11 @@
     },
     "dbs": {
       "name": "dbs",
-      "count": 10
+      "count": 9
     },
     "deflux": {
       "name": "deflux",
-      "count": 9
+      "count": 6
     },
     "dehelling": {
       "name": "dehelling",
@@ -34,7 +34,7 @@
     },
     "depul": {
       "name": "depul",
-      "count": 9
+      "count": 11
     },
     "doornroosje": {
       "name": "doornroosje",
@@ -58,23 +58,15 @@
     },
     "littledevil": {
       "name": "littledevil",
-      "count": 23
+      "count": 14
     },
     "melkweg": {
       "name": "melkweg",
-      "count": 22
-    },
-    "tivolivredenburg": {
-      "name": "tivolivredenburg",
-      "count": 17
+      "count": 23
     },
     "iduna": {
       "name": "iduna",
       "count": 7
-    },
-    "willemeen": {
-      "name": "willemeen",
-      "count": 4
     },
     "muziekgieterij": {
       "name": "muziekgieterij",
@@ -92,10 +84,6 @@
       "name": "brabanthallen",
       "count": 1
     },
-    "patronaat": {
-      "name": "patronaat",
-      "count": 33
-    },
     "victorie": {
       "name": "victorie",
       "count": 4
@@ -103,18 +91,6 @@
     "hedon": {
       "name": "hedon",
       "count": 4
-    },
-    "nieuwenor": {
-      "name": "nieuwenor",
-      "count": 23
-    },
-    "metropool": {
-      "name": "metropool",
-      "count": 7
-    },
-    "neushoorn": {
-      "name": "neushoorn",
-      "count": 8
     },
     "mfc": {
       "name": "mfc",
@@ -188,9 +164,21 @@
       "name": "ziggodome",
       "count": 1
     },
+    "metropool": {
+      "name": "metropool",
+      "count": 3
+    },
+    "neushoorn": {
+      "name": "neushoorn",
+      "count": 6
+    },
+    "nieuwenor": {
+      "name": "nieuwenor",
+      "count": 17
+    },
     "occii": {
       "name": "occii",
-      "count": 7
+      "count": 5
     },
     "oosterpoort": {
       "name": "oosterpoort",
@@ -198,11 +186,23 @@
     },
     "p60": {
       "name": "p60",
-      "count": 7
+      "count": 5
     },
     "paradiso": {
       "name": "paradiso",
       "count": 9
+    },
+    "patronaat": {
+      "name": "patronaat",
+      "count": 22
+    },
+    "tivolivredenburg": {
+      "name": "tivolivredenburg",
+      "count": 11
+    },
+    "willemeen": {
+      "name": "willemeen",
+      "count": 16
     }
   }
 }
