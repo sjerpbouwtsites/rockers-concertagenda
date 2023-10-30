@@ -4,7 +4,6 @@ import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/kavka.js';
 import getImage from './gedeeld/image.js';
 import terms from './gedeeld/terms.js';
-import { handleError } from '../mods/tools.js';
 
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const kavkaScraper = new AbstractScraper({
@@ -22,7 +21,7 @@ const kavkaScraper = new AbstractScraper({
       requiredProperties: ['venueEventUrl', 'title', 'start'],
     },
     singlePage: {
-      requiredProperties: ['venueEventUrl', 'title', 'price', 'start'],
+      requiredProperties: ['venueEventUrl', 'title', 'start'],
     },
   },
 });
@@ -236,6 +235,7 @@ kavkaScraper.singlePage = async function ({ page, event }) {
     pageInfo,
     selectors: ['.prijzen'],
   });
+
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
   pageInfo.price = priceRes.price;
 
