@@ -20,6 +20,7 @@ export default async function longTextSocialsIframes(page, event) {
         `${textSelector} meta`,
         `${textSelector} svg`,
         `${textSelector} form`,
+        `${textSelector} [aria-label='Videospeler']`,        
         `${textSelector} .video-shortcode`,
         `${textSelector} img`,
       ].join(', ');
