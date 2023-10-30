@@ -127,7 +127,8 @@ idunaScraper.singlePage = async function ({ page, event }) {
           .querySelector('#code_block-154-7')
           ?.textContent.match(/(\d+)\s+(\w+)\s+(\d\d\d\d)/) ?? null;
       if (startDateMatch && Array.isArray(startDateMatch) && startDateMatch.length > 3) {
-        res.startDate = `${startDateMatch[3]}-${months[startDateMatch[2]]}-${startDateMatch[1]}`;
+        const dag = startDateMatch[1].padStart(2, '0');
+        res.startDate = `${startDateMatch[3]}-${months[startDateMatch[2]]}-${dag}`;
       }
       if (!res.startDate) {
         res.errors.push({

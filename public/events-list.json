@@ -360,6 +360,21 @@
     "corrupted": null
   },
   {
+    "door": "2023-11-04T13:00:00",
+    "start": "2023-11-04T13:30:00",
+    "end": null,
+    "venueEventUrl": "https://iduna.nl/agenda/holland-heavy/",
+    "title": "HollandHeavy",
+    "location": "iduna",
+    "price": 13,
+    "shortText": null,
+    "longText": "../public/texts/iduna/aWR1bmEubmwvYWdlbmRhL2hvbGxhbmQtaGVhdnkv.html",
+    "image": "../public/event-images/iduna/aWR1bmEubmwvYWdlbmRhL2hvbGxhbmQtaGVhdnkv",
+    "soldOut": false,
+    "unavailable": null,
+    "corrupted": null
+  },
+  {
     "door": "2023-11-04T20:00:00",
     "start": "2023-11-04T20:30:00",
     "end": null,
@@ -701,6 +716,21 @@
     "longText": null,
     "image": "../public/location-images/hedon",
     "soldOut": null,
+    "unavailable": null,
+    "corrupted": null
+  },
+  {
+    "door": "2023-11-09T20:00:00",
+    "start": "2023-11-09T20:30:00",
+    "end": null,
+    "venueEventUrl": "https://iduna.nl/agenda/escuela-grind/",
+    "title": "EscuelaGrind",
+    "location": "iduna",
+    "price": 20,
+    "shortText": null,
+    "longText": "../public/texts/iduna/aWR1bmEubmwvYWdlbmRhL2VzY3VlbGEtZ3JpbmQv.html",
+    "image": "../public/event-images/iduna/aWR1bmEubmwvYWdlbmRhL2VzY3VlbGEtZ3JpbmQv",
+    "soldOut": false,
     "unavailable": null,
     "corrupted": null
   },
@@ -1107,6 +1137,21 @@
     "image": "../public/event-images/kavka/aWNlLWZvci10aGUtZGFtbmVkLWd1aWx0LXRyaXAv",
     "soldOut": false,
     "unavailable": false,
+    "corrupted": null
+  },
+  {
+    "door": "2023-11-15T19:00:00",
+    "start": "2023-11-15T19:30:00",
+    "end": "2023-11-15T23:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/programma/dog-eat-dog-2023/#spotify-embed",
+    "title": "Dog Eat Dog",
+    "location": "dynamo",
+    "price": 19,
+    "shortText": "Support: Grove Street + Kings Never Die",
+    "longText": "../public/texts/dynamo/b2ctZWF0LWRvZy0yMDIzLyNzcG90aWZ5LWVtYmVk.html",
+    "image": "../public/event-images/dynamo/b2ctZWF0LWRvZy0yMDIzLyNzcG90aWZ5LWVtYmVk",
+    "soldOut": false,
+    "unavailable": null,
     "corrupted": null
   },
   {
@@ -2157,6 +2202,21 @@
     "image": "../public/event-images/melkweg/Z2VuZGEvZmVhci1mYWN0b3J5LTAxLTEyLTIwMjMv",
     "soldOut": false,
     "unavailable": false,
+    "corrupted": null
+  },
+  {
+    "door": "2023-12-01T18:00:00",
+    "start": "2023-12-01T18:30:00",
+    "end": "2023-12-01T01:00:00",
+    "venueEventUrl": "https://iduna.nl/agenda/the-exploited/",
+    "title": "TheExploited",
+    "location": "iduna",
+    "price": 18,
+    "shortText": null,
+    "longText": "../public/texts/iduna/aWR1bmEubmwvYWdlbmRhL3RoZS1leHBsb2l0ZWQv.html",
+    "image": "../public/event-images/iduna/aWR1bmEubmwvYWdlbmRhL3RoZS1leHBsb2l0ZWQv",
+    "soldOut": true,
+    "unavailable": null,
     "corrupted": null
   },
   {
