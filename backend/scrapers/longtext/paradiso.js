@@ -7,14 +7,14 @@ export default async function longTextSocialsIframes(page, event) {
     ({ event }) => {
       const res = {};
 
-      const textSelector = '.chakra-container .css-m8ufwp';
+      const textSelector = '.chakra-container .css-aygysw';
       const mediaSelector = [
         "iframe[src*='youtube']",
         "iframe[src*='bandcamp']",
         "iframe[src*='spotify']",
       ].join(', ');
       const removeEmptyHTMLFrom = textSelector;
-      const socialSelector = [].join(', ');
+      const socialSelector = ['.chakra-link[href*="facebook"]'].join(', ');
       const removeSelectors = [
         `${textSelector} [class*='icon-']`,
         `${textSelector} [class*='fa-']`,
