@@ -1,4 +1,40 @@
 
+  undefined Error - 6:36:38 AM
+  Error: geen error
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:773:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:771:23)
+    at patronaatScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/patronaat.js:244:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
+  geen error
+  
+  
+  undefined Error - 6:36:31 AM
+  Error: geen error
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:773:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:771:23)
+    at patronaatScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/patronaat.js:244:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
+  geen error
+  
+  
+  undefined Error - 6:33:13 AM
+  Error: geen error
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:773:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:771:23)
+    at patronaatScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/patronaat.js:239:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
+  geen error
+  
+  
   undefined Error - 6:23:22 AM
   Error: geen el price
     at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:48:19)

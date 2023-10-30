@@ -27,7 +27,7 @@ const neushoornScraper = new AbstractScraper({
       requiredProperties: ['venueEventUrl', 'title'],
     },
     singlePage: {
-      requiredProperties: ['venueEventUrl', 'title', 'price', 'start'],
+      requiredProperties: ['venueEventUrl', 'title', 'start'],
     },
   },
 });
