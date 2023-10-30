@@ -10,7 +10,7 @@ import terms from './gedeeld/terms.js';
 const idunaScraper = new AbstractScraper({
   workerData: { ...workerData },
   mainPage: {
-    url: 'https://iduna.nl/',
+    url: 'https://iduna.nl/evenementen/',
     waitUntil: 'load',
   },
   singlePage: {
@@ -82,175 +82,28 @@ idunaScraper.mainPage = async function () {
   }
   const { stopFunctie, page } = await this.mainPageStart();
 
-  let metalEvents;
-  let punkEvents;
-  let doomEvents;
-  try {
-    doomEvents = await page
-      .evaluate(
-        // eslint-disable-next-line no-shadow
-        ({ workerData, unavailabiltyTerms }) => {
-          loadposts('doom', 1, 50); // eslint-disable-line
-          return new Promise((resolve) => {
-            setTimeout(() => {
-              const doomEventsInner = Array.from(
-                document.querySelectorAll('#gridcontent .griditemanchor'),
-              ).map((event) => {
-                const title =
-                  event.querySelector('.griditemtitle h2:first-child')?.textContent ?? null;
-                let shortText = event.querySelector('.griditemtitle h2 ~ h2')?.textContent ?? null;
-                let soldOut = false;
-                const uaRex = new RegExp(unavailabiltyTerms.join('|'), 'gi');
-                const unavailable = !!event.textContent.match(uaRex);
-                if (shortText.match(/uitverkocht|sold\sout/i)) {
-                  soldOut = true;
-                  shortText = shortText
-                    .replace(/uitverkocht|sold\sout\]?/i, '')
-                    .replace(/[\[\]]+/i, '')
-                    .trim();
-                }
-                return {
-                  unavailable,
-                  anker: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
-                  errors: [],
-                  soldOut,
-                  venueEventUrl: event?.href ?? null,
-                  title,
-                  shortText,
-                };
-              });
-              resolve(doomEventsInner);
-            }, 2500);
-          });
-        },
-        { workerData, unavailabiltyTerms: terms.unavailability },
-      )
-      .then((doomEventsInner) => doomEventsInner);
-    // TODO catch
-
-    metalEvents = await page
-      .evaluate(
-        // eslint-disable-next-line no-shadow
-        ({ workerData, unavailabiltyTerms }) => {
-          loadposts('metal', 1, 50); // eslint-disable-line
-          return new Promise((resolve) => {
-            setTimeout(() => {
-              const metalEventsInner = Array.from(
-                document.querySelectorAll('#gridcontent .griditemanchor'),
-              ).map((event) => {
-                const title =
-                  event.querySelector('.griditemtitle h2:first-child')?.textContent ?? null;
-                let shortText = event.querySelector('.griditemtitle h2 ~ h2')?.textContent ?? null;
-                let soldOut = false;
-                const uaRex = new RegExp(unavailabiltyTerms.join('|'), 'gi');
-                const unavailable = !!event.textContent.match(uaRex);
-                if (shortText.match(/uitverkocht|sold\soud/i)) {
-                  soldOut = true;
-                  shortText = shortText
-                    .replace(/uitverkocht|sold\sout\]?/i, '')
-                    .replace(/[\[\]]+/i, '')
-                    .trim();
-                }
-                return {
-                  anker: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
-                  errors: [],
-                  venueEventUrl: event?.href ?? null,
-                  title,
-                  soldOut,
-                  shortText,
-                  unavailable,
-                };
-              });
-              resolve(metalEventsInner);
-            }, 2500);
-          });
-        },
-        { workerData, unavailabiltyTerms: terms.unavailability },
-      )
-      .then((metalEventsInner) => metalEventsInner);
-    // TODO catch
-
-    punkEvents = await page
-      .evaluate(
-        // eslint-disable-next-line no-shadow
-        ({ workerData, unavailabiltyTerms }) => {
-          // no-eslint
-          // hack VAN DE SITE ZELF
-          loadposts('punk', 1, 50); // eslint-disable-line
-
-          return new Promise((resolve) => {
-            setTimeout(() => {
-              const punkEventsInner = Array.from(
-                document.querySelectorAll('#gridcontent .griditemanchor'),
-              ).map((event) => {
-                const title =
-                  event.querySelector('.griditemtitle h2:first-child')?.textContent ?? null;
-                let shortText = event.querySelector('.griditemtitle h2 ~ h2')?.textContent ?? null;
-                let soldOut = false;
-                const uaRex = new RegExp(unavailabiltyTerms.join('|'), 'gi');
-                const unavailable = !!event.textContent.match(uaRex);
-                if (shortText.match(/uitverkocht|sold\soud/i)) {
-                  soldOut = true;
-                  shortText = shortText
-                    .replace(/uitverkocht|sold\sout\]?/i, '')
-                    .replace(/[\[\]]+/i, '')
-                    .trim();
-                }
-                return {
-                  venueEventUrl: event?.href ?? null,
-                  title,
-                  unavailable,
-                  soldOut,
-                  anker: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
-                  errors: [],
-                };
-              });
-              resolve(punkEventsInner);
-            }, 2500);
-          });
-        },
-        { workerData, unavailabiltyTerms: terms.unavailability },
-      )
-      .then((punkEventsInner) => punkEventsInner);
-    // TODO catch
-
-    let metalEventsTitles = metalEvents.map((event) => event.title);
-
-    punkEvents.forEach((punkEvent) => {
-      if (!metalEventsTitles.includes(punkEvent)) {
-        metalEvents.push(punkEvent);
-      }
-    });
-    metalEventsTitles = metalEvents.map((event) => event.title);
-    doomEvents.forEach((doomEvent) => {
-      if (!metalEventsTitles.includes(doomEvent)) {
-        metalEvents.push(doomEvent);
-      }
-    });
-  } catch (caughtError) {
-    // belachelijke try catch.
-    // TODO WRAPPER ERRRO
-    _t.handleError(
-      caughtError,
-      workerData,
-      'uiterste catch om pak metalEvents punkEvents iduna main',
-      'close-thread',
-      {
-        metalEvents,
-        punkEvents,
-      },
-    );
-    return this.mainPageEnd({ stopFunctie, page, rawEvents: [] });
-  }
-
-  const rawEvents = metalEvents
-    .map((musicEvent) => {
-      const mc = { ...musicEvent };
-      mc.title = _t.killWhitespaceExcess(musicEvent.title);
-      mc.pageInfo = _t.killWhitespaceExcess(musicEvent.pageInfo);
-      return mc;
-    })
-    .map(this.isMusicEventCorruptedMapper);
+  let rawEvents = await page.evaluate(
+    ({ workerData, unavailabiltyTerms }) => {
+      const events = Array.from(
+        document.querySelectorAll('[data-genre*="metal"], [data-genre*="punk"]'),
+      ).map((rawEvent) => {
+        const title = rawEvent.querySelector('.card-titel-container')?.textContent ?? '';
+        const venueEventUrl = rawEvent.hasAttribute('data-url') ? rawEvent.getAttribute('data-url') : null;
+        const res = {
+          title,
+          venueEventUrl,
+          errors: [],
+        };
+        res.shortText = rawEvent.querySelector('.card-subtitle')?.textContent ?? null;
+        res.soldOut = Array.isArray(rawEvent.textContent.match(/uitverkocht|sold\sout/i));
+        const uaRex = new RegExp(unavailabiltyTerms.join('|'), 'gi');
+        res.unavailable = rawEvent.textContent.match(uaRex);
+        return res;
+      });
+      return events;
+    }, { workerData, unavailabiltyTerms: terms.unavailability });
+  
+  rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
 
   this.saveBaseEventlist(workerData.family, rawEvents);
   return this.mainPageEnd({ stopFunctie, rawEvents });
@@ -268,81 +121,59 @@ idunaScraper.singlePage = async function ({ page, event }) {
         anker: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
         errors: [],
       };
-      try {
-        const startDateMatch =
-          document
-            .querySelector('#sideinfo .capitalize')
-            ?.textContent.match(/(\d+)\s+(\w+)\s+(\d\d\d\d)/) ?? null;
-        if (startDateMatch && Array.isArray(startDateMatch) && startDateMatch.length > 3) {
-          res.startDate = `${startDateMatch[3]}-${months[startDateMatch[2]]}-${startDateMatch[1]}`;
-        }
-        if (!res.startDate) {
-          res.errors.push({
-            remarks: `geen startDate ${res.anker}`,
-            toDebug: {
-              event,
-              text: document.querySelector('#sideinfo .capitalize')?.textContent,
-            },
-          });
-          return res;
-        }
 
-        const doorEl = Array.from(document.querySelectorAll('#sideinfo h2')).find((h2El) =>
-          h2El.textContent.toLowerCase().includes('deur'),
-        );
-        if (doorEl) {
-          const doormatch = doorEl.textContent.match(/\d\d:\d\d/);
-          if (doormatch) {
-            res.doorTime = doormatch[0];
-          }
-        }
-
-        const startEl = Array.from(document.querySelectorAll('#sideinfo h2')).find((h2El) =>
-          h2El.textContent.toLowerCase().includes('aanvang'),
-        );
-        if (startEl) {
-          const startmatch = startEl.textContent.match(/\d\d:\d\d/);
-          if (startmatch) {
-            res.startTime = startmatch[0];
-          }
-        }
-        if (!res.startTime && res.doorTime) {
-          res.startTime = res.doorTime;
-          res.doorTime = null;
-        } else if (!res.startTime) {
-          res.errors.push({
-            remarks: `geen startTime ${res.anker}`,
-            toDebug: {
-              event,
-            },
-          });
-          return res;
-        }
-
-        if (res.startTime) {
-          res.start = `${res.startDate}T${res.startTime}:00`;
-        } else if (res.doorTime) {
-          res.start = `${res.startDate}T${res.doorTime}:00`;
-        }
-
-        if (res.startTime && res.doorTime) {
-          res.door = `${res.startDate}T${res.doorTime}:00`;
-        }
-      } catch (caughtError) {
-        // TODO BELACHELJIK GROTE TRY CATCH
+      const startDateMatch =
+        document
+          .querySelector('#code_block-154-7')
+          ?.textContent.match(/(\d+)\s+(\w+)\s+(\d\d\d\d)/) ?? null;
+      if (startDateMatch && Array.isArray(startDateMatch) && startDateMatch.length > 3) {
+        res.startDate = `${startDateMatch[3]}-${months[startDateMatch[2]]}-${startDateMatch[1]}`;
+      }
+      if (!res.startDate) {
         res.errors.push({
-          error: caughtError,
-          remarks: `belacheljik grote catch iduna singlePage ${res.anker}`,
+          error: new Error(`geen startDate`),
+          remarks: `geen startdate ${res.anker}`,
           toDebug: {
             event,
+            text: document.querySelector('#code_block-154-7')?.textContent ?? 'geen code block met #code_block-154-7',
           },
         });
         return res;
       }
 
+      const tijdenEl = document.getElementById('code_block-92-7');
+      if (!tijdenEl) {
+        res.errors.push({
+          error: new Error('geen tijdenEl'),
+          remarks: '#code_block-92-7 niet gevonden',
+        });
+        return res;
+      }
+      
+      if (tijdenEl.textContent.match(/deur:\s?\d\d:\d\d/i)) {
+        res.doorTime = tijdenEl.textContent.match(/deur:\s?\d\d:\d\d/i)[0].match(/\d\d:\d\d/);
+        res.door = `${res.startDate}T${res.doorTime}:00`;
+      }
+      
+      if (tijdenEl.textContent.match(/aanvang:\s?\d\d:\d\d/i)) {
+        res.startTime = tijdenEl.textContent.match(/aanvang:\s?\d\d:\d\d/i)[0].match(/\d\d:\d\d/);
+      }
+
+      if (tijdenEl.textContent.match(/eindtijd:\s?\d\d:\d\d/i)) {
+        res.endTime = tijdenEl.textContent.match(/eindtijd:\s?\d\d:\d\d/i)[0].match(/\d\d:\d\d/);
+        res.end = `${res.startDate}T${res.endTime}:00`;
+      }
+
+      if (!res.startTime && tijdenEl.textContent.match(/\d\d:\d\d/)) {
+        res.startTime = tijdenEl.textContent.match(/\d\d:\d\d/)[0];
+      }
+
+      if (res.startTime) {
+        res.start = `${res.startDate}T${res.startTime}:00`;
+      }
+      
       return res;
-    },
-    { months: this.months, event },
+    }, { months: this.months, event },
   );
 
   const imageRes = await getImage({
@@ -351,7 +182,7 @@ idunaScraper.singlePage = async function ({ page, event }) {
     workerData,
     event,
     pageInfo,
-    selectors: ["#photoandinfo [style*='background']"],
+    selectors: [".event-page-header-image"],
     mode: 'background-src',
   });
   pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
@@ -361,7 +192,7 @@ idunaScraper.singlePage = async function ({ page, event }) {
     page,
     event,
     pageInfo,
-    selectors: ['#sideinfo'],
+    selectors: ['#code_block-92-7'],
   });
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
   pageInfo.price = priceRes.price;
