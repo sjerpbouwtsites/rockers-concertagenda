@@ -201,8 +201,13 @@ neushoornScraper.singlePage = async function ({ page, event }) {
     pageInfo,
     selectors: ['.prices__item__price', '.prices'],
   });
-  pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
-  pageInfo.price = priceRes.price;
+  const isGratis = await page.evaluate(() => !!document.querySelector('.tickets-button')?.textContent.match(/gratis/i) ?? null);
+  if (pageInfo.errors.length && isGratis) {
+    pageInfo.price = 0;
+  } else {
+    pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
+    pageInfo.price = priceRes.price;
+  }
 
   const { mediaForHTML, socialsForHTML, textForHTML } = await longTextSocialsIframes(
     page,
