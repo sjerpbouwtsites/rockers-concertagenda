@@ -1,5 +1,20 @@
 [
   {
+    "door": "2023-11-03T20:00:00",
+    "start": "2023-11-03T20:00:00",
+    "end": null,
+    "venueEventUrl": "https://www.cpunt.nl/agenda/batmobile",
+    "title": "Batmobile",
+    "location": "cpunt",
+    "price": 19.5,
+    "shortText": "",
+    "longText": "../public/texts/cpunt/L3d3dy5jcHVudC5ubC9hZ2VuZGEvYmF0bW9iaWxl.html",
+    "image": "../public/event-images/cpunt/L3d3dy5jcHVudC5ubC9hZ2VuZGEvYmF0bW9iaWxl",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
     "door": "2023-11-14T20:00:00",
     "start": "2023-11-14T20:00:00",
     "end": null,
@@ -55,6 +70,36 @@
     "shortText": "",
     "longText": "../public/texts/cpunt/YWdlbmRhL2lhbi1wYWljZS1wdXJwZW5kaWN1bGFy.html",
     "image": "../public/event-images/cpunt/YWdlbmRhL2lhbi1wYWljZS1wdXJwZW5kaWN1bGFy",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
+    "door": "2024-04-04T20:00:00",
+    "start": "2024-04-04T20:00:00",
+    "end": null,
+    "venueEventUrl": "https://www.cpunt.nl/agenda/electric-eel-shock",
+    "title": "Electric Eel Shock",
+    "location": "cpunt",
+    "price": 17.5,
+    "shortText": "",
+    "longText": "../public/texts/cpunt/dC5ubC9hZ2VuZGEvZWxlY3RyaWMtZWVsLXNob2Nr.html",
+    "image": "../public/event-images/cpunt/dC5ubC9hZ2VuZGEvZWxlY3RyaWMtZWVsLXNob2Nr",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
+    "door": "2024-04-21T19:00:00",
+    "start": "2024-04-21T19:00:00",
+    "end": null,
+    "venueEventUrl": "https://www.cpunt.nl/agenda/the-exploited",
+    "title": "The Exploited",
+    "location": "cpunt",
+    "price": null,
+    "shortText": "",
+    "longText": "../public/texts/cpunt/LmNwdW50Lm5sL2FnZW5kYS90aGUtZXhwbG9pdGVk.html",
+    "image": "../public/event-images/cpunt/LmNwdW50Lm5sL2FnZW5kYS90aGUtZXhwbG9pdGVk",
     "soldOut": false,
     "unavailable": false,
     "corrupted": null
