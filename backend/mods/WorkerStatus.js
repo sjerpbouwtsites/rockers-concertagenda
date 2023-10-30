@@ -1,3 +1,5 @@
+import { exec } from 'child_process';
+import fs from 'fs';
 import os from 'os-utils';
 import EventsList from './events-list.js';
 import wsMessage from '../monitor/wsMessage.js';
@@ -21,7 +23,9 @@ export default class WorkerStatus {
   static _workers = {};
 
   static baseWorkerConfigs = workerConfig;
+
   static numberOfFamilies = Object.keys(workerConfig).length;
+
   static _familiesDoneWithBaseEvents = [];
 
   static CPUFree = 100;
@@ -258,9 +262,24 @@ export default class WorkerStatus {
       WorkerStatus.mwss.broadcast(wsMsg2.json);
     }
     EventsList.printAllToJSON();
-    setTimeout(() => {
-      process.exit();
-    }, 500);
+
+    if (shell.debugLongHTML && shell.force) {
+      console.log('debug long HTML');
+      setTimeout(() => {
+        shell.forceThese.forEach((forced) => {
+          fs.readdirSync(`../public/texts/${forced}`).forEach((forcedFile) => {
+            exec(`prettier --config .prettierrc ../public/texts/${forced}/${forcedFile} --write; code ../public/texts/${forced}/${forcedFile}`);
+          });      
+        });
+      }, 1000);
+      setTimeout(() => {
+        process.exit();
+      }, 5000);
+    } else {
+      setTimeout(() => {
+        process.exit();
+      }, 500);
+    }
   }
 
   static printWorkersToConsole() {

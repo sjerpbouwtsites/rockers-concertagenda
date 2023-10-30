@@ -27,7 +27,7 @@ const cpuntScraper = new AbstractScraper({
       requiredProperties: ['venueEventUrl', 'title'],
     },
     singlePage: {
-      requiredProperties: ['venueEventUrl', 'title', 'price', 'start'],
+      requiredProperties: ['venueEventUrl', 'title', 'start'],
     },
   },
 });
@@ -276,14 +276,20 @@ cpuntScraper.singlePage = async function ({ page, event }) {
   pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
   pageInfo.image = imageRes.image;
 
-  const priceRes = await this.getPriceFromHTML({
-    page,
-    event,
-    pageInfo,
-    selectors: ['.article-price'],
-  });
-  pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
-  pageInfo.price = priceRes.price;
+  const viaTicketMaster = await page.evaluate(() => !!document.querySelector('.tickets-wrapper a[href*="ticketmaster"]') && !document.querySelector('.price'));
+
+  if (viaTicketMaster) {
+    pageInfo.price = null;
+  } else {
+    const priceRes = await this.getPriceFromHTML({
+      page,
+      event,
+      pageInfo,
+      selectors: ['.article-price'],
+    });
+    pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
+    pageInfo.price = priceRes.price;
+  }
 
   const { mediaForHTML, socialsForHTML, textForHTML } = await longTextSocialsIframes(
     page,

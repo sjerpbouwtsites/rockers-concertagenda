@@ -20,6 +20,7 @@ export default async function longTextSocialsIframes(page, event) {
         `${textSelector} style`,
         `${textSelector} meta`,
         `${textSelector} svg`,
+        `${textSelector} [data-udi]`,
         `${textSelector} form`,
         `${textSelector} img`,
         `${textSelector} .video-container`,

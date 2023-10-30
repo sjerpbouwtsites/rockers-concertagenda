@@ -24,6 +24,7 @@ export default async function longTextSocialsIframes(page, event) {
         `${textSelector} [class*='fa-']`,
         `${textSelector} .fa`,
         `${textSelector} script`,
+        `${textSelector} iframe`,
         `${textSelector} noscript`,
         `${textSelector} style`,
         `${textSelector} meta`,
@@ -67,6 +68,10 @@ export default async function longTextSocialsIframes(page, event) {
           }
         });
       });
+
+      document.querySelectorAll('iframe[src*="data:image"][data-src]').forEach(iframe => {
+        iframe.src = iframe.getAttribute('data-src')
+      })
 
       // media obj maken voordat HTML verdwijnt
       res.mediaForHTML = !mediaSelector.length

@@ -45,6 +45,9 @@ const shell = {
   get keepImages() {
     return this._arguments?.keepImages || false;
   },
+  get debugLongHTML() {
+    return this._arguments?.debugLongHTML || false;
+  },
   get workers() {
     return this._arguments?.workers || null;
   },

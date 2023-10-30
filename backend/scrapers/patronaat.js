@@ -23,7 +23,7 @@ const patronaatScraper = new AbstractScraper({
       requiredProperties: ['venueEventUrl', 'title'],
     },
     singlePage: {
-      requiredProperties: ['venueEventUrl', 'title', 'price', 'start'],
+      requiredProperties: ['venueEventUrl', 'title', 'start'],
     },
   },
 });
@@ -224,8 +224,13 @@ patronaatScraper.singlePage = async function ({ page, event }) {
     pageInfo,
     selectors: ['.event__info-bar--ticket-price'],
   });
-  pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
-  pageInfo.price = priceRes.price;
+  const viaTicketMaster = await page.evaluate(() => !!document.querySelector('a.button--tickets[href*="ticketmaster"]'));
+  if (viaTicketMaster && pageInfo.errors.length) {
+    pageInfo.price = null;
+  } else {
+    pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
+    pageInfo.price = priceRes.price;
+  }
 
   const { mediaForHTML, socialsForHTML, textForHTML } = await longTextSocialsIframes(
     page,

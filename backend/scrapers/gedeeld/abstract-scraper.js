@@ -18,7 +18,6 @@ import debugSettings from './debug-settings.js';
 import terms from './terms.js';
 import _getPriceFromHTML from './price.js';
 import shell from '../../mods/shell.js';
-
 // #endregion                                              IMPORTS
 
 export default class AbstractScraper extends ScraperConfig {
@@ -1204,14 +1203,15 @@ export default class AbstractScraper extends ScraperConfig {
       ),
     ).toString('base64');
     const toPrint = makeLongHTML(mergedEvent);
-
+    
     if (!fs.existsSync(`${fsDirections.publicTexts}/${mergedEvent.location}/`)) {
       fs.mkdirSync(`${fsDirections.publicTexts}/${mergedEvent.location}/`);
     }
-
+    
     try {
       const longTextPath = `${fsDirections.publicTexts}/${mergedEvent.location}/${base64String}.html`;
       fs.writeFileSync(longTextPath, toPrint, 'utf-8');
+
       return longTextPath;
     } catch (err) {
       _t.handleError(err, workerData, 'write long text fail', 'notice', {

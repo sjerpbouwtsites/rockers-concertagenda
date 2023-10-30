@@ -14,6 +14,7 @@ export default async function longTextSocialsIframes(page, event) {
         '.event-content .fb-event a',
         ".article-block a[href*='facebook']",
         ".article-block a[href*='instagram']",
+        ".article-block a[href*='bandcamp']",
       ].join(', ');
       const removeSelectors = [
         `${textSelector} [class*='icon-']`,
@@ -28,6 +29,7 @@ export default async function longTextSocialsIframes(page, event) {
         '.iframe-wrapper-tijdelijk',
         ".article-block a[href*='facebook']",
         ".article-block a[href*='instagram']",
+        ".article-block a[href*='bandcamp']",
         `${textSelector} img`,
       ].join(', ');
 
@@ -108,6 +110,9 @@ export default async function longTextSocialsIframes(page, event) {
               } else {
                 el.textContent = 'Social';
               }
+            }
+            if (el.textContent.includes('https')){
+              el.textContent = el.textContent.replace('https://','').replace('www','')
             }
             el.className = 'long-html__social-list-link';
             el.target = '_blank';

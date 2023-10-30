@@ -13,7 +13,7 @@ const baroegScraper = new AbstractScraper({
     url: 'https://baroeg.nl/agenda/',
   },
   singlePage: {
-    timeout: 15000,
+    timeout: 30000,
   },
   app: {
     mainPage: {

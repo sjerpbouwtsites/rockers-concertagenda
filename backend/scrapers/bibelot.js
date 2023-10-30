@@ -10,7 +10,7 @@ const bibelotScraper = new AbstractScraper({
   mainPage: {
     timeout: 15002,
     requiredProperties: ['venueEventUrl', 'title'],
-    url: 'https://bibelot.net/',
+    url: 'https://bibelot.net/programma/?_categories=punk%2Cmetal%2Cgaragerock%2Cgrunge',
   },
   singlePage: {
     timeout: 20003,
@@ -76,24 +76,19 @@ bibelotScraper.mainPage = async function () {
     ({ workerData }) =>
       Array.from(
         document.querySelectorAll(
-          '.event[class*="metal"], .event[class*="punk"], .event[class*="rock"]',
+          '.card-programma',
         ),
       ).map((eventEl) => {
-        const title = eventEl.querySelector('h1')?.textContent.trim() ?? null;
+        const title = eventEl.querySelector('h3')?.textContent.trim() ?? null;
         const res = {
           anker: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
           errors: [],
           title,
         };
 
-        const shortTextEl = eventEl.querySelector('h1')?.parentNode;
-        const shortTextSplit = eventEl.contains(shortTextEl)
-          ? shortTextEl.textContent.split(res.title)
-          : [null, null];
-        res.shortText = shortTextSplit[1];
-        res.venueEventUrl = eventEl.querySelector('.link')?.href ?? null;
+        res.venueEventUrl = eventEl?.href ?? null;
         res.soldOut =
-          !!eventEl.querySelector('.ticket-button')?.textContent.match(/uitverkocht|sold\s?out/i) ??
+          !!eventEl.querySelector('.categories')?.textContent.match(/uitverkocht|sold\s?out/i) ??
           null;
         return res;
       }),
@@ -121,62 +116,29 @@ bibelotScraper.singlePage = async function ({ page, event }) {
         errors: [],
       };
 
-      const baseDateM =
-        document.querySelector('.main-column h3')?.textContent.match(/(\d+)\s(\w+)\s(\d{4})/) ??
-        null;
-
-      res.baseDate = null;
-      if (!Array.isArray(baseDateM) || baseDateM.length < 4) {
+      const infoElText = document.querySelector('.information')?.textContent.replaceAll(/\s{1,500}/g, ' ') ?? null;
+      if (!infoElText) {
+        res.errors.push({
+          error: new Error('geen infoElText'),
+          toDebug: document.querySelector('.information')?.innerHTML ?? 'geen information el',
+        });
         return res;
       }
-      res.baseDate = `${baseDateM[3]}-${months[baseDateM[2]]}-${baseDateM[1].padStart(2, '0')}`;
+      const datumZonderJaar = Array.isArray(infoElText.match(/datum.*\d{1,2}\s\w{2,4}\s/i)) ? infoElText.match(/datum.*\d{1,2}\s\w{2,4}\s/i)[0].match(/\d{1,2}\s\w+/)[0] : null;
+      const maandNaam = datumZonderJaar.match(/[\D]+/i)[0].trim();
+      const maandNummer = months[maandNaam];
+      const dag = datumZonderJaar.match(/\d+/i)[0].trim().padStart(2, '0');
+      const huiMaandNr = (new Date()).getMonth() + 1;
+      const huiJaar = (new Date()).getFullYear();
+      const jaar = huiMaandNr < Number(maandNummer) ? (huiJaar + 1) : huiJaar;
 
-      res.eventMetaColomText = document.querySelector('.meta-colom')?.textContent.toLowerCase();
-
-      res.startTimeMatch = res.eventMetaColomText.match(
-        /(aanvang\sshow|aanvang|start\sshow|show)\W?\s+(\d\d:\d\d)/,
-      );
-      res.doorTimeMatch = res.eventMetaColomText.match(
-        /(doors|deuren|zaal\sopen)\W?\s+(\d\d:\d\d)/,
-      );
-      res.endTimeMatch = res.eventMetaColomText.match(/(end|eind|einde|curfew)\W?\s+(\d\d:\d\d)/);
-
-      try {
-        if (Array.isArray(res.doorTimeMatch) && res.doorTimeMatch.length > 2 && res.baseDate) {
-          res.door = `${res.baseDate}T${res.doorTimeMatch[2]}:00`;
-        }
-      } catch (errorCaught) {
-        res.errors.push({
-          error: errorCaught,
-          remarks: `doortime match met basedate ${res.anker}`,
-          toDebug: res,
-        });
+      res.baseDate = `${jaar}-${maandNummer}-${dag}`;
+      if (infoElText.match(/deuren.*\d{1,2}:\d\d\s/i)) {
+        res.doorTime = infoElText.match(/deuren.*\d{1,2}:\d\d\s/i)[0].match(/\d\d:\d\d/)[0];
+        res.door = `${jaar}-${huiMaandNr}-${dag}T${res.doorTime}:00`;
       }
-      try {
-        if (Array.isArray(res.startTimeMatch) && res.startTimeMatch.length > 2 && res.baseDate) {
-          res.start = `${res.baseDate}T${res.startTimeMatch[2]}:00`;
-        } else if (res.door) {
-          res.start = res.door;
-          res.door = '';
-        }
-      } catch (errorCaught) {
-        res.errors.push({
-          error: errorCaught,
-          remarks: `startTime match met basedate ${res.anker}`,
-          toDebug: res,
-        });
-      }
-      try {
-        if (Array.isArray(res.endTimeMatch) && res.endTimeMatch.length > 2 && res.baseDate) {
-          res.end = `${res.baseDate}T${res.endTimeMatch[2]}:00`;
-        }
-      } catch (errorCaught) {
-        res.errors.push({
-          error: errorCaught,
-          remarks: `endtime match met basedate ${res.anker}`,
-          toDebug: res,
-        });
-      }
+      res.startTime = infoElText.match(/aanvang.*\d{1,2}:\d\d\s/i)[0].match(/\d\d:\d\d/)[0];
+      res.start = `${jaar}-${huiMaandNr}-${dag}T${res.startTime}:00`;
 
       return res;
     },
@@ -189,20 +151,26 @@ bibelotScraper.singlePage = async function ({ page, event }) {
     workerData,
     event,
     pageInfo,
-    selectors: ['.achtergrond-afbeelding'],
-    mode: 'background-src',
+    selectors: ['.wp-post-image'],
+    mode: 'image-src',
   });
   pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
   pageInfo.image = imageRes.image;
 
-  const priceRes = await this.getPriceFromHTML({
-    page,
-    event,
-    pageInfo,
-    selectors: ['.meta-colom'],
-  });
-  pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
-  pageInfo.price = priceRes.price;
+  const isGratis = await page.evaluate(() => !!Array.from(document.querySelectorAll('.categories .tag-green')).map((a) => a.textContent).join('').match(/gratis/i));
+
+  if (!isGratis) {
+    const priceRes = await this.getPriceFromHTML({
+      page,
+      event,
+      pageInfo,
+      selectors: ['.information'],
+    });
+    pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
+    pageInfo.price = priceRes.price;
+  } else {
+    pageInfo.price = 0;
+  }
 
   const { mediaForHTML, socialsForHTML, textForHTML } = await longTextSocialsIframes(
     page,

@@ -7,10 +7,10 @@ export default async function longTextSocialsIframes(page, event) {
     ({ event }) => {
       const res = {};
 
-      const mediaSelector = ['.main-column iframe'].join(', ');
-      const textSelector = '.main-column';
-      const removeEmptyHTMLFrom = '.main-column'; // textSelector;
-      const socialSelector = [".main-column p a[rel*='noreferrer noopener']"].join(', ');
+      const mediaSelector = ['.vide0-block iframe'].join(', ');
+      const textSelector = '.programmainfo-block .large-order-1.large-5.cell.fade-in';
+      const removeEmptyHTMLFrom = textSelector; // textSelector;
+      const socialSelector = [].join(', ');
       const removeSelectors = [
         `${textSelector} [class*='icon-']`,
         `${textSelector} [class*='fa-']`,
@@ -21,11 +21,6 @@ export default async function longTextSocialsIframes(page, event) {
         `${textSelector} meta`,
         `${textSelector} svg`,
         `${textSelector} form`,
-        '.main-column > .content:first-child',
-        '.main-column > .achtergrond-afbeelding:first-child',
-        '.main-column > .content + .achtergrond-afbeelding', // onduidelijk welke
-        '.main-column .wp-block-embed',
-        ".main-column p a[rel*='noreferrer noopener']", // embed wrappers
         `${textSelector} img`,
       ].join(', ');
 
@@ -54,9 +49,13 @@ export default async function longTextSocialsIframes(page, event) {
         });
       });
 
+      document.querySelectorAll('[data-src]').forEach(el => {
+        el.src = el.getAttribute('data-src')
+      })
+
       // media obj maken voordat HTML verdwijnt
       res.mediaForHTML = Array.from(document.querySelectorAll(mediaSelector)).map((bron) => {
-        const src = bron?.src ? bron.src : '';
+        let src = bron?.src && bron?.src !== '' ? bron.src : ''; 
         return {
           outer: bron.outerHTML,
           src,

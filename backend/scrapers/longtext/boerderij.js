@@ -23,6 +23,7 @@ export default async function longTextSocialsIframes(page, event) {
         `${textSelector} form`,
         `${textSelector} h1`,
         `${textSelector} img`,
+        `${textSelector} iframe`,
         `${textSelector} .video__button`,
         `${textSelector} iframe[src*='bandcamp']`,
         `${textSelector} iframe[src*='spotify']`,

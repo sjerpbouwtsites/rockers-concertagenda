@@ -85,11 +85,12 @@ metropoolScraper.mainPage = async function () {
   await _t.autoScroll(page);
   await _t.autoScroll(page);
   await _t.autoScroll(page);
+  await _t.autoScroll(page);
 
   let rawEvents = await page.evaluate(
     // eslint-disable-next-line no-shadow
     ({ workerData, unavailabiltyTerms }) =>
-      Array.from(document.querySelectorAll('.card--event')).map((rawEvent) => {
+      Array.from(document.querySelectorAll('a.card--event')).map((rawEvent) => {
         const title = rawEvent.querySelector('.card__title')?.textContent ?? null;
         const res = {
           anker: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,

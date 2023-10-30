@@ -8,7 +8,7 @@ export default async function longTextSocialsIframes(page, event) {
       const res = {};
 
       const textSelector = '[class*="styles_event-info__text-column"]';
-      const mediaSelector = ["[class*='styles_embed__media-container'] iframe"].join(', ');
+      const mediaSelector = ["[class*='styles_embed-list__list'] iframe"].join(', ');
       const removeEmptyHTMLFrom = textSelector;
       const socialSelector = ["[class*='styles_event-meta-data'] [href*='facebook']"].join(', ');
       const removeSelectors = [
@@ -19,6 +19,7 @@ export default async function longTextSocialsIframes(page, event) {
         `${textSelector} noscript`,
         `${textSelector} style`,
         `${textSelector} meta`,
+        `${textSelector} iframe`,
         `${textSelector} svg`,
         `${textSelector} form`,
         `${textSelector} img`,

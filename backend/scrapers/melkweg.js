@@ -168,13 +168,24 @@ melkwegScraper.singlePage = async function ({ page, event }) {
     { event },
   );
 
+  const ogImage = await page.evaluate(() => Array.from(document.head.children)
+    .find((child) => child.hasAttribute('property') && child.getAttribute('property').includes('image')));
+  if (ogImage) {
+    await page.evaluate((ogImageSrc) => {
+      const imageNew = document.createElement('img');
+      imageNew.src = ogImageSrc;
+      imageNew.id = 'inserted-image';
+      document.body.appendChild(imageNew);
+    }, ogImage);
+  }
+
   const imageRes = await getImage({
     _this: this,
     page,
     workerData,
     event,
     pageInfo,
-    selectors: ['[class*="styles_event-header__figure"] img'],
+    selectors: ['[class*="styles_event-header__figure"] img', '#inserted-image'],
     mode: 'image-src',
   });
   pageInfo.errors = pageInfo.errors.concat(imageRes.errors);

@@ -19,6 +19,7 @@ export default async function longTextSocialsIframes(page, event) {
         `${textSelector} style`,
         `${textSelector} meta`,
         `${textSelector} svg`,
+        `${textSelector} img`,
         `${textSelector} form`,
         `${textSelector} .avia-button + p`,
         `${textSelector} .avia-button`,

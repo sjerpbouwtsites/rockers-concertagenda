@@ -23,7 +23,7 @@ const doornroosjeScraper = new AbstractScraper({
       requiredProperties: ['venueEventUrl', 'title'],
     },
     singlePage: {
-      requiredProperties: ['venueEventUrl', 'title', 'price', 'start'],
+      requiredProperties: ['venueEventUrl', 'title', 'start'],
     },
   },
 });
@@ -322,8 +322,15 @@ doornroosjeScraper.singlePage = async function ({ page, event }) {
     pageInfo,
     selectors: ['.c-btn__price', '.c-intro__col'],
   });
-  pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
-  pageInfo.price = priceRes.price;
+  const uitverkocht = await page.evaluate(() => !!document.querySelector('.c-sold-out__title'));
+  
+  if (priceRes.errors.length && !uitverkocht) {
+    pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
+    pageInfo.price = priceRes.price;
+  } else {
+    pageInfo.price = null;
+    pageInfo.soldOut = true;
+  }
 
   const { mediaForHTML, socialsForHTML, textForHTML } = await longTextSocialsIframes(
     page,
