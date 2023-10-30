@@ -86,7 +86,7 @@ export const workerConfig = {
     forceSet: 4,
   },
   neushoorn: { workerCount: 1, workerConcurrent: 1, forceSet: 5 },
-  nieuwenor: { workerCount: 4, workerConcurrent: 2, forceSet: 5 },
+  nieuwenor: { workerCount: 2, workerConcurrent: 2, forceSet: 5 },
   occii: {
     workerCount: 2,
     workerConcurrent: 1,

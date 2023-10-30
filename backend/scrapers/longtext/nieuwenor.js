@@ -22,6 +22,7 @@ export default async function longTextSocialsIframes(page, event) {
         `${textSelector} [class*='fa-']`,
         `${textSelector} .fa`,
         `${textSelector} script`,
+        `${textSelector} figure`,
         `${textSelector} noscript`,
         `${textSelector} style`,
         `${textSelector} meta`,
