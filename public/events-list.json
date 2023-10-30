@@ -118,5 +118,35 @@
     "soldOut": false,
     "unavailable": null,
     "corrupted": null
+  },
+  {
+    "door": "2024-10-02T20:30:00",
+    "start": "2024-10-02T21:00:00",
+    "end": null,
+    "venueEventUrl": "https://bibelot.net/programma/magnetica-be-metallica-tribute/",
+    "title": "Magnetica (be) – metallica tribute",
+    "location": "bibelot",
+    "price": 20,
+    "shortText": null,
+    "longText": "../public/texts/bibelot/YWduZXRpY2EtYmUtbWV0YWxsaWNhLXRyaWJ1dGUv.html",
+    "image": "../public/event-images/bibelot/YWduZXRpY2EtYmUtbWV0YWxsaWNhLXRyaWJ1dGUv",
+    "soldOut": false,
+    "unavailable": null,
+    "corrupted": null
+  },
+  {
+    "door": "2024-10-04T20:00:00",
+    "start": "2024-10-04T20:30:00",
+    "end": null,
+    "venueEventUrl": "https://bibelot.net/programma/bibelot-x-door-barno-koevoet-the-duijmschpijkers-be-rats-and-daggers/",
+    "title": "Bibelot X DOOR: Barno Koevoets ",
+    "location": "bibelot",
+    "price": 20,
+    "shortText": " The Duijmschpijkers (BE)   Rats and Daggers null",
+    "longText": "../public/texts/bibelot/Y2hwaWprZXJzLWJlLXJhdHMtYW5kLWRhZ2dlcnMv.html",
+    "image": "../public/event-images/bibelot/Y2hwaWprZXJzLWJlLXJhdHMtYW5kLWRhZ2dlcnMv",
+    "soldOut": false,
+    "unavailable": null,
+    "corrupted": null
   }
 ]

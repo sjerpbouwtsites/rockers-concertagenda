@@ -65,7 +65,7 @@ const podiumGebruikt = {
   dynamo: kortNederlands,
   afaslive: voluitNederlands,
   boerderij: null,
-  bibelot: voluitNederlands,
+  bibelot: kortNederlands,
   dbs: voluitNederlands,
   hatseflats: voluitNederlands,
   depul: kortNederlands,

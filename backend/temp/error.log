@@ -1,4 +1,28 @@
 
+  bibelot-0 Error - 1:59:19 AM
+  TypeError: infoElText.match(...).match is not a function
+    at evaluate (evaluate at bibelotScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/bibelot.js:111:31), <anonymous>:14:141)
+    at #evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:249:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:146:16)
+    at async bibelotScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/bibelot.js:111:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:120:5) 
+  infoElText.match(...).match is not a function
+  
+  
+  bibelot-0 Error - 1:57:02 AM
+  TypeError: infoElText.match(...).match is not a function
+    at evaluate (evaluate at bibelotScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/bibelot.js:111:31), <anonymous>:7:141)
+    at #evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:249:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ExecutionContext.evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:146:16)
+    at async bibelotScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/bibelot.js:111:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:120:5) 
+  infoElText.match(...).match is not a function
+  
+  
   iduna-0 Error - 1:05:27 AM
   Error: Timeout baseEvent
     at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:220:18)

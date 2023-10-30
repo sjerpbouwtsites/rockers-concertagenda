@@ -14,7 +14,6 @@ export const AbstractWorkerConfig = {
 };
 
 export const workerConfig = {
-  // bibelot: { workerCount: 1, workerConcurrent: 1, forceSet: 1 },
   // '013': {
   //   workerCount: 1,
   //   CPUReq: 'low',
@@ -34,6 +33,7 @@ export const workerConfig = {
   //   workerConcurrent: 1,
   //   forceSet: 1,
   // },
+  bibelot: { workerCount: 1, workerConcurrent: 1, forceSet: 1 },
   // cpunt: { workerCount: 1, workerConcurrent: 1, forceSet: 1 },
   // dbs: {
   //   workerCount: 4,
