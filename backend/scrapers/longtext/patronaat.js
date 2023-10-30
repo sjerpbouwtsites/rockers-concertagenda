@@ -7,7 +7,7 @@ export default async function longTextSocialsIframes(page, event) {
     ({ event }) => {
       const res = {};
 
-      const textSelector = '.event__content';
+      const textSelector = '.event__top .event__content';
       const mediaSelector = [
         "iframe[src*='youtube']",
         "iframe[src*='bandcamp']",
