@@ -157,14 +157,20 @@ bibelotScraper.singlePage = async function ({ page, event }) {
   pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
   pageInfo.image = imageRes.image;
 
-  const priceRes = await this.getPriceFromHTML({
-    page,
-    event,
-    pageInfo,
-    selectors: ['.information'],
-  });
-  pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
-  pageInfo.price = priceRes.price;
+  const isGratis = await page.evaluate(() => !!Array.from(document.querySelectorAll('.categories .tag-green')).map((a) => a.textContent).join('').match(/gratis/i));
+
+  if (!isGratis) {
+    const priceRes = await this.getPriceFromHTML({
+      page,
+      event,
+      pageInfo,
+      selectors: ['.information'],
+    });
+    pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
+    pageInfo.price = priceRes.price;
+  } else {
+    pageInfo.price = 0;
+  }
 
   const { mediaForHTML, socialsForHTML, textForHTML } = await longTextSocialsIframes(
     page,
