@@ -843,6 +843,21 @@
     "door": null,
     "start": "2023-11-10T20:00:00",
     "end": null,
+    "venueEventUrl": "https://www.livepul.com/agenda/hideous/",
+    "title": "Hideous (BE)",
+    "location": "depul",
+    "price": 10,
+    "shortText": "Het nieuwste product uit het Belgische gitaarlandschap",
+    "longText": "../public/texts/depul/d3cubGl2ZXB1bC5jb20vYWdlbmRhL2hpZGVvdXMv.html",
+    "image": "../public/event-images/depul/d3cubGl2ZXB1bC5jb20vYWdlbmRhL2hpZGVvdXMv",
+    "soldOut": false,
+    "unavailable": null,
+    "corrupted": null
+  },
+  {
+    "door": null,
+    "start": "2023-11-10T20:00:00",
+    "end": null,
     "venueEventUrl": "https://baroeg.nl/productie/tales-from-the-punx-presents-the-vile-in-baroeg-2/",
     "title": "Tales From The Punx presents: Vitamin X ",
     "location": "baroeg",
@@ -1185,6 +1200,21 @@
     "corrupted": null
   },
   {
+    "door": "2023-11-15T19:30:00",
+    "start": "2023-11-15T20:00:00",
+    "end": null,
+    "venueEventUrl": "https://www.effenaar.nl/agenda/militarie-gun",
+    "title": "Militarie Gun",
+    "location": "effenaar",
+    "price": 17,
+    "shortText": "Amerikaanse post-hardcore | + Gumm + Paracetamøl",
+    "longText": "../public/texts/effenaar/ZmVuYWFyLm5sL2FnZW5kYS9taWxpdGFyaWUtZ3Vu.html",
+    "image": "../public/event-images/effenaar/ZmVuYWFyLm5sL2FnZW5kYS9taWxpdGFyaWUtZ3Vu",
+    "soldOut": false,
+    "unavailable": null,
+    "corrupted": null
+  },
+  {
     "door": "2023-11-15T19:00:00",
     "start": "2023-11-15T19:30:00",
     "end": "2023-11-15T23:00:00",
@@ -1212,21 +1242,6 @@
     "image": "../public/event-images/doornroosje/b29ybnJvb3NqZS5ubC9ldmVudC9vcHVzLWtpbmsv",
     "soldOut": true,
     "unavailable": null,
-    "corrupted": null
-  },
-  {
-    "door": null,
-    "start": "2023-11-15T07:30:00",
-    "end": "2023-11-15T10:30:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/aestrid-coaster-immen/",
-    "title": "Aestrid + coaster + immen",
-    "location": "dbs",
-    "price": 19,
-    "shortText": "indie rock, postrock, shoegaze, singer song writer",
-    "longText": "../public/texts/dbs/bC9ldmVudC9hZXN0cmlkLWNvYXN0ZXItaW1tZW4v.html",
-    "image": "../public/event-images/dbs/bC9ldmVudC9hZXN0cmlkLWNvYXN0ZXItaW1tZW4v",
-    "soldOut": null,
-    "unavailable": false,
     "corrupted": null
   },
   {
@@ -2187,6 +2202,21 @@
     "image": "../public/event-images/patronaat/bmFhdC5ubC9ldmVudC9odWxkZXItMjktMTEtMjMv",
     "soldOut": false,
     "unavailable": false,
+    "corrupted": null
+  },
+  {
+    "door": "2023-11-29T19:30:00",
+    "start": "2023-11-29T20:00:00",
+    "end": null,
+    "venueEventUrl": "https://www.effenaar.nl/agenda/club-void-ufomammut",
+    "title": "Club Void: Ufomammut",
+    "location": "effenaar",
+    "price": 20,
+    "shortText": "Enige Nederlandse clubshow! | + 30,000 Monkies",
+    "longText": "../public/texts/effenaar/Lm5sL2FnZW5kYS9jbHViLXZvaWQtdWZvbWFtbXV0.html",
+    "image": "../public/event-images/effenaar/Lm5sL2FnZW5kYS9jbHViLXZvaWQtdWZvbWFtbXV0",
+    "soldOut": false,
+    "unavailable": null,
     "corrupted": null
   },
   {
@@ -3345,6 +3375,20 @@
     "corrupted": null
   },
   {
+    "door": "2023-12-24T19:30:00",
+    "start": "2023-12-24T19:30:00",
+    "end": null,
+    "venueEventUrl": "https://neushoorn.nl/production/frisian-metal-night/",
+    "title": "Frisian Metal Night",
+    "location": "neushoorn",
+    "price": null,
+    "shortText": "Jouw jaarlijkse kerstdiner nekpijn garantie",
+    "longText": "../public/texts/neushoorn/cm9kdWN0aW9uL2ZyaXNpYW4tbWV0YWwtbmlnaHQv.html",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
     "door": "2023-12-28T20:00:00",
     "start": "2023-12-28T20:30:00",
     "end": "2023-12-28T23:00:00",
@@ -3825,6 +3869,21 @@
     "corrupted": null
   },
   {
+    "door": null,
+    "start": "2024-01-25T19:00:00",
+    "end": null,
+    "venueEventUrl": "https://baroeg.nl/productie/baroeg-tribute-night-the-perfect-tool-2/",
+    "title": "Baroeg Tribute Night: The Perfect Tool",
+    "location": "baroeg",
+    "price": 21,
+    "shortText": "Genieten van Tool-parels uit het complete oeuvre.tribute",
+    "longText": "../public/texts/baroeg/YnV0ZS1uaWdodC10aGUtcGVyZmVjdC10b29sLTIv.html",
+    "image": "../public/event-images/baroeg/YnV0ZS1uaWdodC10aGUtcGVyZmVjdC10b29sLTIv",
+    "soldOut": false,
+    "unavailable": null,
+    "corrupted": null
+  },
+  {
     "door": "2024-01-26T19:00:00",
     "start": "2024-01-26T19:30:00",
     "end": null,
@@ -3850,6 +3909,21 @@
     "shortText": null,
     "longText": "../public/texts/iduna/dHRwczovL2lkdW5hLm5sL2FnZW5kYS9hYmJhdGgv.html",
     "image": "../public/event-images/iduna/dHRwczovL2lkdW5hLm5sL2FnZW5kYS9hYmJhdGgv",
+    "soldOut": false,
+    "unavailable": null,
+    "corrupted": null
+  },
+  {
+    "door": "2024-01-26T19:30:00",
+    "start": "2024-01-26T20:00:00",
+    "end": null,
+    "venueEventUrl": "https://www.effenaar.nl/agenda/skinny-lister",
+    "title": "Skinny Lister",
+    "location": "effenaar",
+    "price": 19.5,
+    "shortText": "Energieke folkpunk band uit Londen",
+    "longText": "../public/texts/effenaar/ZmVuYWFyLm5sL2FnZW5kYS9za2lubnktbGlzdGVy.html",
+    "image": "../public/event-images/effenaar/ZmVuYWFyLm5sL2FnZW5kYS9za2lubnktbGlzdGVy",
     "soldOut": false,
     "unavailable": null,
     "corrupted": null
@@ -4155,6 +4229,21 @@
     "corrupted": null
   },
   {
+    "door": "2024-02-06T19:00:00",
+    "start": "2024-02-06T19:00:00",
+    "end": null,
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/lucifer-angel-witch-06-02-2024/",
+    "title": "Lucifer + Angel Witch",
+    "location": "tivolivredenburg",
+    "price": 23,
+    "shortText": "TivoliVredenburg & De Helling present",
+    "longText": "../public/texts/tivolivredenburg/dWNpZmVyLWFuZ2VsLXdpdGNoLTA2LTAyLTIwMjQv.html",
+    "image": "../public/event-images/tivolivredenburg/dWNpZmVyLWFuZ2VsLXdpdGNoLTA2LTAyLTIwMjQv",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
     "door": null,
     "start": "2024-02-06T20:30:00+01:00",
     "end": null,
@@ -4182,6 +4271,21 @@
     "image": "../public/event-images/kavka/L2thdmthLmJlL2V2ZW50L2FueS1naXZlbi1kYXkv",
     "soldOut": false,
     "unavailable": false,
+    "corrupted": null
+  },
+  {
+    "door": null,
+    "start": "2024-02-06T18:30:00",
+    "end": "2024-02-06T23:00:00",
+    "venueEventUrl": "https://dehelling.nl/agenda/lucifer-angel-witch-06-02-2024/",
+    "title": "Lucifer + Angel Witch",
+    "location": "dehelling",
+    "price": 23,
+    "shortText": "Twee generaties aan furieuze heavy metal. Lineup: Support; The Night Eternal, Angel Witch, Lucifer",
+    "longText": "../public/texts/dehelling/dWNpZmVyLWFuZ2VsLXdpdGNoLTA2LTAyLTIwMjQv.html",
+    "image": "../public/event-images/dehelling/dWNpZmVyLWFuZ2VsLXdpdGNoLTA2LTAyLTIwMjQv",
+    "soldOut": false,
+    "unavailable": null,
     "corrupted": null
   },
   {
@@ -4465,6 +4569,21 @@
     "shortText": "darkwave · goth · rock",
     "longText": "../public/texts/melkweg/ZW5kYS9jbGFuLW9mLXh5bW94LTIyLTAyLTIwMjQv.html",
     "image": "../public/event-images/melkweg/ZW5kYS9jbGFuLW9mLXh5bW94LTIyLTAyLTIwMjQv",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
+    "door": null,
+    "start": "2024-02-23T19:00:00",
+    "end": null,
+    "venueEventUrl": "https://kavka.be/event/currents/",
+    "title": "Currents",
+    "location": "kavka",
+    "price": null,
+    "shortText": "CURRENTS is presenting us their new album THE DEATH WE SEEK live in Antwerp with…",
+    "longText": "../public/texts/kavka/dHBzOi8va2F2a2EuYmUvZXZlbnQvY3VycmVudHMv.html",
+    "image": "../public/event-images/kavka/dHBzOi8va2F2a2EuYmUvZXZlbnQvY3VycmVudHMv",
     "soldOut": false,
     "unavailable": false,
     "corrupted": null
@@ -4950,6 +5069,21 @@
     "corrupted": null
   },
   {
+    "door": "2024-03-19T22:14:00",
+    "start": "2024-03-19T22:14:00",
+    "end": "2024-03-19T22:14:00",
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/slift-19-03-2024/",
+    "title": "Slift",
+    "location": "tivolivredenburg",
+    "price": 28.25,
+    "shortText": "Franse formatie presenteert nieuw album Ilion",
+    "longText": "../public/texts/tivolivredenburg/cmcubmwvYWdlbmRhL3NsaWZ0LTE5LTAzLTIwMjQv.html",
+    "image": "../public/event-images/tivolivredenburg/cmcubmwvYWdlbmRhL3NsaWZ0LTE5LTAzLTIwMjQv",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
     "door": "2024-03-20T20:30:00",
     "start": "2024-03-20T19:00:00",
     "end": null,
@@ -5170,6 +5304,21 @@
     "shortText": "MCLX presents Blind Channel + Ghostkid + Rock Band From Hell",
     "longText": "../public/texts/kavka/L2thdmthLmJlL2V2ZW50L2JsaW5kLWNoYW5uZWwv.html",
     "image": "../public/event-images/kavka/L2thdmthLmJlL2V2ZW50L2JsaW5kLWNoYW5uZWwv",
+    "soldOut": false,
+    "unavailable": false,
+    "corrupted": null
+  },
+  {
+    "door": "2024-04-05T19:30:00",
+    "start": "2024-04-05T20:30:00",
+    "end": null,
+    "venueEventUrl": "https://www.groene-engel.nl/programma/electric-eel-shock-tankzilla/",
+    "title": "Electric Eel Shock + TankZilla",
+    "location": "groeneengel",
+    "price": 17.5,
+    "shortText": null,
+    "longText": "../public/texts/groeneengel/L2VsZWN0cmljLWVlbC1zaG9jay10YW5remlsbGEv.html",
+    "image": "../public/event-images/groeneengel/L2VsZWN0cmljLWVlbC1zaG9jay10YW5remlsbGEv",
     "soldOut": false,
     "unavailable": false,
     "corrupted": null

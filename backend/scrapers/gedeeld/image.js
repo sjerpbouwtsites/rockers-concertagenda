@@ -231,7 +231,10 @@ export default async function getImage({
   }
 
   const base64String = Buffer.from(
-    event.venueEventUrl.substring(event.venueEventUrl.length - 30, event.venueEventUrl.length),
+    event.venueEventUrl.substring(
+      event.venueEventUrl.length - 30,
+      event.venueEventUrl.length,
+    ),
   ).toString('base64');
   let imagePath = `${_this.eventImagesFolder}/${workerData.family}/${base64String}`;
 
