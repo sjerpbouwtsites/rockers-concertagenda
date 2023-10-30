@@ -17,6 +17,7 @@ async function init() {
   await houseKeeping();
   monitorWebsocketServer = await initMonitorBackend();
   WorkerStatus.monitorWebsocketServer = monitorWebsocketServer;
+
   WorkerStatus.monitorCPUS();
   const workerConfig = getWorkerConfig();
   WorkerStatus.totalWorkers = workerConfig.numberOfWorkers;
@@ -29,6 +30,7 @@ async function init() {
 async function recursiveStartWorkers(workerConfig) {
   if (!workerConfig.hasWorkerConfigs) {
     // console.log('workers op');
+    
     return true;
   }
   await _t.waitTime(150);
@@ -37,7 +39,6 @@ async function recursiveStartWorkers(workerConfig) {
 
 async function startWorker(workerConfig) {
   if (!workerConfig.hasWorkerConfigs) {
-    // console.log('workers op');
     return true;
   }
 

@@ -1,4 +1,358 @@
 
+  undefined Error - 2:18:13 AM
+  TimeoutError: Waiting for selector `.img-container source:last-of-type` failed: Waiting failed: 2500ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Waiting for selector `.img-container source:last-of-type` failed: Waiting failed: 2500ms exceeded
+  
+  
+  tivolivredenburg-1 Error - 2:18:02 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:716:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  tivolivredenburg-1 Error - 2:17:57 AM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  undefined Error - 2:17:33 AM
+  TimeoutError: Waiting for selector `.tribe-events-event-image .wp-post-image` failed: Waiting failed: 2500ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Waiting for selector `.tribe-events-event-image .wp-post-image` failed: Waiting failed: 2500ms exceeded
+  
+  
+  dbs-3 Error - 2:17:28 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:716:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  undefined Error - 2:17:23 AM
+  TimeoutError: Waiting for selector `.img-container source:last-of-type` failed: Waiting failed: 2500ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Waiting for selector `.img-container source:last-of-type` failed: Waiting failed: 2500ms exceeded
+  
+  
+  dbs-3 Error - 2:16:43 AM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  tivolivredenburg-1 Error - 2:16:41 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:716:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  tivolivredenburg-1 Error - 2:16:36 AM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  tivolivredenburg-1 Error - 2:15:55 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:716:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  undefined Error - 2:15:33 AM
+  TimeoutError: Waiting for selector `.tribe-events-event-image .wp-post-image` failed: Waiting failed: 2500ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Waiting for selector `.tribe-events-event-image .wp-post-image` failed: Waiting failed: 2500ms exceeded
+  
+  
+  undefined Error - 2:15:29 AM
+  TimeoutError: Waiting for selector `.img-container source:last-of-type` failed: Waiting failed: 2500ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Waiting for selector `.img-container source:last-of-type` failed: Waiting failed: 2500ms exceeded
+  
+  
+  effenaar-3 Error - 2:15:17 AM
+  TimeoutError: Waiting for selector `.event-bar-inner-row` failed: Waiting failed: 30000ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Waiting for selector `.event-bar-inner-row` failed: Waiting failed: 30000ms exceeded
+  
+  
+  tivolivredenburg-1 Error - 2:15:14 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:716:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  tivolivredenburg-1 Error - 2:15:08 AM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  dbs-0 Error - 2:15:06 AM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  effenaar-3 Error - 2:15:02 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:716:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  effenaar-3 Error - 2:14:46 AM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  undefined Error - 2:13:18 AM
+  Error: geen error
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:774:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:772:23)
+    at patronaatScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/patronaat.js:239:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:120:5) 
+  geen error
+  
+  
+  undefined Error - 2:11:23 AM
+  Error: geen el price
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:48:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:34:12)
+    at async neushoornScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/neushoorn.js:198:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:120:5) 
+  geen el price
+  
+  
+  undefined Error - 2:11:06 AM
+  Error: geen error
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:774:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:772:23)
+    at cpuntScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/cpunt.js:297:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:120:5) 
+  geen error
+  
+  
+  undefined Error - 2:10:47 AM
+  Error: geen error
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:774:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:772:23)
+    at kavkaScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/kavka.js:251:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:120:5) 
+  geen error
+  
+  
+  undefined Error - 2:09:39 AM
+  Error: geen error
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:774:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:772:23)
+    at doornroosjeScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/doornroosje.js:337:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:120:5) 
+  geen error
+  
+  
+  undefined Error - 2:08:50 AM
+  TimeoutError: Waiting for selector `.wp-post-image` failed: Waiting failed: 2500ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Waiting for selector `.wp-post-image` failed: Waiting failed: 2500ms exceeded
+  
+  
+  bibelot-0 Error - 2:08:35 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:716:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  baroeg-1 Error - 2:08:27 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:716:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  bibelot-0 Error - 2:08:15 AM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  p60-0 Error - 2:08:11 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:220:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  undefined Error - 2:07:43 AM
+  TimeoutError: Waiting for selector `.wp-post-image` failed: Waiting failed: 2500ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Waiting for selector `.wp-post-image` failed: Waiting failed: 2500ms exceeded
+  
+  
+  bibelot-0 Error - 2:07:39 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:716:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  undefined Error - 2:07:37 AM
+  TimeoutError: Waiting for selector `.hero-area [style*='background-image']` failed: Waiting failed: 2500ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Waiting for selector `.hero-area [style*='background-image']` failed: Waiting failed: 2500ms exceeded
+  
+  
+  bibelot-0 Error - 2:07:18 AM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  patronaat-0 Error - 2:06:58 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:716:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  baroeg-1 Error - 2:06:53 AM
+  Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:716:18)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Timeout baseEvent
+  
+  
+  undefined Error - 2:06:40 AM
+  TimeoutError: Waiting for selector `.wp-post-image` failed: Waiting failed: 2500ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Waiting for selector `.wp-post-image` failed: Waiting failed: 2500ms exceeded
+  
+  
+  patronaat-0 Error - 2:06:37 AM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  undefined Error - 2:04:10 AM
+  Error: geen el price
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:48:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:34:12)
+    at async neushoornScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/neushoorn.js:198:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:120:5) 
+  geen el price
+  
+  
+  undefined Error - 2:03:35 AM
+  Error: geen error
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:774:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:772:23)
+    at kavkaScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/kavka.js:251:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:120:5) 
+  geen error
+  
+  
+  undefined Error - 2:02:55 AM
+  Error: geen error
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:774:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:772:23)
+    at doornroosjeScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/doornroosje.js:337:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:120:5) 
+  geen error
+  
+  
+  undefined Error - 2:01:22 AM
+  Error: geen error
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:774:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:772:23)
+    at doornroosjeScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/doornroosje.js:337:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:120:5) 
+  geen error
+  
+  
   bibelot-0 Error - 1:59:19 AM
   TypeError: infoElText.match(...).match is not a function
     at evaluate (evaluate at bibelotScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/bibelot.js:111:31), <anonymous>:14:141)
