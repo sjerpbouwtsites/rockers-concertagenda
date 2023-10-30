@@ -90,6 +90,7 @@ voltScraper.mainPage = async function () {
   } catch (error) {
     const noShows = await page.evaluate(() => document.querySelector('.view-empty')?.textContent ?? null);
     if (noShows) {
+      this.saveBaseEventlist(workerData.family, []);
       return this.mainPageEnd({ stopFunctie, rawEvents: [] });
     } 
     _t.handleError(error, workerData, 'Volt wacht op laden eventlijst', 'close-thread', null);
