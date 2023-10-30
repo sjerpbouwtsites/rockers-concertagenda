@@ -6,7 +6,7 @@ export default async function longTextSocialsIframes(page, event) {
     () => {
       const res = {};
 
-      const mediaSelector = '.video iframe, .spotify iframe';
+      const mediaSelector = '.hide-for-large .video iframe, .hide-for-large .spotify iframe';
       const textSelector = 'article .wysiwyg';
       const removeEmptyHTMLFrom = 'article .wysiwyg';
       const removeSelectors = [
@@ -38,6 +38,12 @@ export default async function longTextSocialsIframes(page, event) {
         id: null,
         type: bron.src.includes('spotify') ? 'spotify' : 'youtube',
       }));
+
+      // UNIEK AFASLIVE tweede wysiwig weghalen
+      const tweedeWys = document.querySelectorAll(textSelector);
+      if (tweedeWys.length > 1){
+        tweedeWys[1].parentNode.removeChild(tweedeWys[1])
+      }
 
       // eerst onzin attributes wegslopen
       const socAttrRemSelAdd = `${socialSelector.length ? `, ${socialSelector}` : ''}`;
