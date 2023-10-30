@@ -1,6 +1,21 @@
 [
   {
     "door": null,
+    "start": "2023-11-10T20:00:00",
+    "end": null,
+    "venueEventUrl": "https://www.livepul.com/agenda/hideous/",
+    "title": "Hideous (BE)",
+    "location": "depul",
+    "price": 10,
+    "shortText": "Het nieuwste product uit het Belgische gitaarlandschap",
+    "longText": "../public/texts/depul/d3cubGl2ZXB1bC5jb20vYWdlbmRhL2hpZGVvdXMv.html",
+    "image": "../public/event-images/depul/d3cubGl2ZXB1bC5jb20vYWdlbmRhL2hpZGVvdXMv",
+    "soldOut": false,
+    "unavailable": null,
+    "corrupted": null
+  },
+  {
+    "door": null,
     "start": "2023-12-03T18:00:00",
     "end": null,
     "venueEventUrl": "https://www.livepul.com/agenda/gorgoroth/",
