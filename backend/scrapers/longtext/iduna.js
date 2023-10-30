@@ -7,10 +7,10 @@ export default async function longTextSocialsIframes(page, event) {
     ({ event }) => {
       const res = {};
 
-      const textSelector = '#postcontenttext';
-      const mediaSelector = ['.ytembed .vt-a img', '.spotify iframe'].join(', ');
+      const textSelector = '#text_block-53-7';
+      const mediaSelector = ['#code_block-94-7 iframe'].join(', ');
       const removeEmptyHTMLFrom = textSelector;
-      const socialSelector = ["#sideinfo [href*='facebook']"].join(', ');
+      const socialSelector = [".artiesten-items [href*='facebook']"].join(', ');
       const removeSelectors = [
         `${textSelector} [class*='icon-']`,
         `${textSelector} [class*='fa-']`,
