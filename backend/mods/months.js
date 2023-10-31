@@ -76,6 +76,7 @@ const podiumGebruikt = {
   effenaar: kortNederlands,
   gebrdenobel: voluitNederlands,
   groeneengel: voluitNederlands,
+  'gebouw-t':kortNederlands,
   iduna: voluitNederlands,
   kavka: kortNederlands,
   littledevil: kortEngels,

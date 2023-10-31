@@ -255,6 +255,7 @@ export default class WorkerStatus {
   }
 
   static programEnd() {
+    WorkerStatus.printWorkersToConsole();
     console.log('All workers done');
     clearInterval(WorkerStatus.monitorCPUS);
     if (WorkerStatus.mwss) {
@@ -278,7 +279,7 @@ export default class WorkerStatus {
     } else {
       setTimeout(() => {
         process.exit();
-      }, 500);
+      }, 1000);
     }
   }
 

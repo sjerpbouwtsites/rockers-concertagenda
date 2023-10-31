@@ -157,9 +157,23 @@ export function mapToStartDate(event, regexMode, months) {
       });
       return event;
     }
+    let jaar = (new Date()).getFullYear();
+    const huiMaandNr = (new Date()).getMonth() + 1;
+    const maandNaam = dateM[2];
+    const maandGetal = months[maandNaam];
+    if (huiMaandNr > maandGetal) {
+      jaar += jaar + 1;
+    }
+    const dag = dateM[1].padStart(2, '0');
+    const dateStr = `${jaar}-${maandGetal}-${dag}`;
+    if (isDate(dateStr)) {
+      // eslint-disable-next-line no-param-reassign
+      event.startDate = dateStr;
+    }
+    return event;
   }
   if (regexMode === 'dag-maandNaam-jaar') {
-    const dateM = event.mapToStartDate.match(/(\d{1,2})[\/\s]?(\w+)[\/\s]?\'?(\d{2,4})/);
+    const dateM = event.mapToStartDate.match(/(\d{1,2})[\/\s]?(\w+)[\/\s]?(\d{2,4})/);
     if (!Array.isArray(dateM) || (Array.isArray(dateM) && dateM.length < 4)) {
       event.errors.push({
         error: new Error(`datematch dag-maandNaam-jaar mode`),

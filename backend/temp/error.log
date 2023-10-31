@@ -1,40 +1,5 @@
 
-  undefined Error - 7:22:30 AM
-  Error: geen error
-    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:773:30
-    at Array.forEach (<anonymous>)
-    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:771:23)
-    at patronaatScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/patronaat.js:244:15)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
-  geen error
-  
-  
-  undefined Error - 7:22:21 AM
-  Error: geen error
-    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:773:30
-    at Array.forEach (<anonymous>)
-    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:771:23)
-    at patronaatScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/patronaat.js:244:15)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
-  geen error
-  
-  
-  undefined Error - 7:21:06 AM
-  Error: geen el price
-    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:48:19)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:34:12)
-    at async neushoornScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/neushoorn.js:198:20)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
-  geen el price
-  
-  
-  undefined Error - 7:20:57 AM
+  undefined Error - 12:00:23 AM
   Error: geen error
     at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:773:30
     at Array.forEach (<anonymous>)
@@ -46,1473 +11,1261 @@
   geen error
   
   
-  undefined Error - 7:16:44 AM
-  Error: geen el price
-    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:48:19)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:34:12)
-    at async neushoornScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/neushoorn.js:198:20)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
-  geen el price
-  
-  
-  baroeg-0 Error - 7:16:02 AM
-  Error: Execution context was destroyed, most likely because of a navigation.
-    at rewriteError (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:307:15)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async #evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:247:60)
-    at async ExecutionContext.evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:146:16)
-    at async baroegScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/baroeg.js:144:20)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
-  Execution context was destroyed, most likely because of a navigation.
-  
-  
-  baroeg-0 Error - 7:15:49 AM
-  Error: Timeout baseEvent
-    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:715:18)
-    at listOnTimeout (node:internal/timers:569:17)
-    at process.processTimers (node:internal/timers:512:7) 
-  Timeout baseEvent
-  
-  
-  baroeg-0 Error - 7:15:34 AM
-  TimeoutError: Navigation timeout of 30000 ms exceeded
-    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
-    at listOnTimeout (node:internal/timers:569:17)
-    at process.processTimers (node:internal/timers:512:7) 
-  Navigation timeout of 30000 ms exceeded
-  
-  
-  undefined Error - 7:15:21 AM
-  Error: geen error
-    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:773:30
-    at Array.forEach (<anonymous>)
-    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:771:23)
-    at patronaatScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/patronaat.js:244:15)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
-  geen error
-  
-  
-  undefined Error - 7:15:13 AM
-  Error: geen error
-    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:773:30
-    at Array.forEach (<anonymous>)
-    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:771:23)
-    at patronaatScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/patronaat.js:244:15)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
-  geen error
-  
-  
-  undefined Error - 7:14:58 AM
-  Error: geen error
-    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:773:30
-    at Array.forEach (<anonymous>)
-    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:771:23)
-    at kavkaScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/kavka.js:251:15)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
-  geen error
-  
-  
-  undefined Error - 7:06:43 AM
-  TimeoutError: Waiting for selector `.wp-post-image ` failed: Waiting failed: 2500ms exceeded
-    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
-    at listOnTimeout (node:internal/timers:569:17)
-    at process.processTimers (node:internal/timers:512:7) 
-  Waiting for selector `.wp-post-image ` failed: Waiting failed: 2500ms exceeded
-  
-  
-  littledevil-1 Error - 7:06:29 AM
-  Error: Timeout baseEvent
-    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:715:18)
-    at listOnTimeout (node:internal/timers:569:17)
-    at process.processTimers (node:internal/timers:512:7) 
-  Timeout baseEvent
-  
-  
-  littledevil-1 Error - 7:06:13 AM
-  TimeoutError: Navigation timeout of 30000 ms exceeded
-    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
-    at listOnTimeout (node:internal/timers:569:17)
-    at process.processTimers (node:internal/timers:512:7) 
-  Navigation timeout of 30000 ms exceeded
-  
-  
-  dbs-1 Error - 7:06:00 AM
-  Error: Timeout baseEvent
-    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:715:18)
-    at listOnTimeout (node:internal/timers:569:17)
-    at process.processTimers (node:internal/timers:512:7) 
-  Timeout baseEvent
-  
-  
-  dbs-1 Error - 7:05:14 AM
-  TimeoutError: Navigation timeout of 30000 ms exceeded
-    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
-    at listOnTimeout (node:internal/timers:569:17)
-    at process.processTimers (node:internal/timers:512:7) 
-  Navigation timeout of 30000 ms exceeded
-  
-  
-  undefined Error - 7:04:34 AM
-  TimeoutError: Waiting for selector `.tribe-events-event-image .wp-post-image` failed: Waiting failed: 2500ms exceeded
-    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
-    at listOnTimeout (node:internal/timers:569:17)
-    at process.processTimers (node:internal/timers:512:7) 
-  Waiting for selector `.tribe-events-event-image .wp-post-image` failed: Waiting failed: 2500ms exceeded
-  
-  
-  effenaar-0 Error - 7:04:31 AM
-  TimeoutError: Waiting for selector `.event-bar-inner-row` failed: Waiting failed: 30000ms exceeded
-    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
-    at listOnTimeout (node:internal/timers:569:17)
-    at process.processTimers (node:internal/timers:512:7) 
-  Waiting for selector `.event-bar-inner-row` failed: Waiting failed: 30000ms exceeded
-  
-  
-  effenaar-0 Error - 7:04:16 AM
-  Error: Timeout baseEvent
-    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:715:18)
-    at listOnTimeout (node:internal/timers:569:17)
-    at process.processTimers (node:internal/timers:512:7) 
-  Timeout baseEvent
-  
-  
-  effenaar-0 Error - 7:04:00 AM
-  TimeoutError: Navigation timeout of 30000 ms exceeded
-    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
-    at listOnTimeout (node:internal/timers:569:17)
-    at process.processTimers (node:internal/timers:512:7) 
-  Navigation timeout of 30000 ms exceeded
-  
-  
-  nieuwenor-0 Error - 7:03:50 AM
-  Error: Timeout baseEvent
-    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:715:18)
-    at listOnTimeout (node:internal/timers:569:17)
-    at process.processTimers (node:internal/timers:512:7) 
-  Timeout baseEvent
-  
-  
-  nieuwenor-0 Error - 7:03:34 AM
-  TimeoutError: Navigation timeout of 30000 ms exceeded
-    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
-    at listOnTimeout (node:internal/timers:569:17)
-    at process.processTimers (node:internal/timers:512:7) 
-  Navigation timeout of 30000 ms exceeded
-  
-  
-  dbs-1 Error - 7:03:30 AM
-  TimeoutError: Navigation timeout of 30000 ms exceeded
-    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
-    at listOnTimeout (node:internal/timers:569:17)
-    at process.processTimers (node:internal/timers:512:7) 
-  Navigation timeout of 30000 ms exceeded
-  
-  
-  undefined Error - 7:03:03 AM
-  TimeoutError: Waiting for selector `.flickity-slider img` failed: Waiting failed: 2500ms exceeded
-    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
-    at listOnTimeout (node:internal/timers:569:17)
-    at process.processTimers (node:internal/timers:512:7) 
-  Waiting for selector `.flickity-slider img` failed: Waiting failed: 2500ms exceeded
-  
-  
-  nieuwenor-0 Error - 7:02:56 AM
-  TimeoutError: Navigation timeout of 30000 ms exceeded
-    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
-    at listOnTimeout (node:internal/timers:569:17)
-    at process.processTimers (node:internal/timers:512:7) 
-  Navigation timeout of 30000 ms exceeded
-  
-  
-  dbs-1 Error - 7:02:48 AM
-  TimeoutError: Navigation timeout of 30000 ms exceeded
-    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
-    at listOnTimeout (node:internal/timers:569:17)
-    at process.processTimers (node:internal/timers:512:7) 
-  Navigation timeout of 30000 ms exceeded
-  
-  
-  tivolivredenburg-3 Error - 7:02:31 AM
-  Error: Timeout baseEvent
-    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:715:18)
-    at listOnTimeout (node:internal/timers:569:17)
-    at process.processTimers (node:internal/timers:512:7) 
-  Timeout baseEvent
-  
-  
-  tivolivredenburg-3 Error - 7:02:13 AM
-  Error: Timeout baseEvent
-    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:715:18)
-    at listOnTimeout (node:internal/timers:569:17)
-    at process.processTimers (node:internal/timers:512:7) 
-  Timeout baseEvent
-  
-  
-  cpunt-0 Error - 7:01:41 AM
-  ProtocolError: Protocol error (Target.closeTarget): No target with given id found
-    at <instance_members_initializer> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Connection.js:46:14)
-    at new Callback (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Connection.js:50:16)
-    at CallbackRegistry.create (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Connection.js:89:26)
-    at Connection._rawSend (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Connection.js:202:26)
-    at Connection.send (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Connection.js:196:21)
-    at CDPPage.close (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Page.js:887:30)
-    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:621:79)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
-  Protocol error (Target.closeTarget): No target with given id found
-  
-  
-  undefined Error - 7:00:51 AM
-  Error: geen error
-    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:773:30
-    at Array.forEach (<anonymous>)
-    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:771:23)
-    at patronaatScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/patronaat.js:244:15)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
-  geen error
-  
-  
-  undefined Error - 7:00:37 AM
-  Error: geen error
-    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:773:30
-    at Array.forEach (<anonymous>)
-    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:771:23)
-    at patronaatScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/patronaat.js:244:15)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
-  geen error
-  
-  
-  undefined Error - 6:59:10 AM
-  Error: geen el price
-    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:48:19)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:34:12)
-    at async neushoornScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/neushoorn.js:198:20)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
-  geen el price
-  
-  
-  undefined Error - 6:58:36 AM
-  Error: geen error
-    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:773:30
-    at Array.forEach (<anonymous>)
-    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:771:23)
-    at kavkaScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/kavka.js:251:15)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
-  geen error
-  
-  
-  undefined Error - 6:42:40 AM
-  Error: geen error
-    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:773:30
-    at Array.forEach (<anonymous>)
-    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:771:23)
-    at patronaatScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/patronaat.js:244:15)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
-  geen error
-  
-  
-  undefined Error - 6:42:28 AM
-  Error: geen error
-    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:773:30
-    at Array.forEach (<anonymous>)
-    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:771:23)
-    at patronaatScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/patronaat.js:244:15)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
-  geen error
-  
-  
-  undefined Error - 6:42:02 AM
-  Error: geen error
-    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:773:30
-    at Array.forEach (<anonymous>)
-    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:771:23)
-    at kavkaScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/kavka.js:251:15)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
-  geen error
-  
-  
-  undefined Error - 6:41:47 AM
-  Error: geen el price
-    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:48:19)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:34:12)
-    at async neushoornScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/neushoorn.js:198:20)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
-  geen el price
-  
-  
-  undefined Error - 6:36:38 AM
-  Error: geen error
-    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:773:30
-    at Array.forEach (<anonymous>)
-    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:771:23)
-    at patronaatScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/patronaat.js:244:15)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
-  geen error
-  
-  
-  undefined Error - 6:36:31 AM
-  Error: geen error
-    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:773:30
-    at Array.forEach (<anonymous>)
-    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:771:23)
-    at patronaatScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/patronaat.js:244:15)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
-  geen error
-  
-  
-  undefined Error - 6:33:13 AM
-  Error: geen error
-    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:773:30
-    at Array.forEach (<anonymous>)
-    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:771:23)
-    at patronaatScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/patronaat.js:239:15)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
-  geen error
-  
-  
-  undefined Error - 6:23:22 AM
-  Error: geen el price
-    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:48:19)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:34:12)
-    at async neushoornScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/neushoorn.js:198:20)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
-  geen el price
-  
-  
-  undefined Error - 6:21:01 AM
-  Error: geen el price
-    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:48:19)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:34:12)
-    at async neushoornScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/neushoorn.js:198:20)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
-  geen el price
-  
-  
-  undefined Error - 6:07:01 AM
-  Error: geen error
-    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:773:30
-    at Array.forEach (<anonymous>)
-    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:771:23)
-    at kavkaScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/kavka.js:251:15)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
-  geen error
-  
-  
-  undefined Error - 5:53:54 AM
-  Error: geen error
-    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:773:30
-    at Array.forEach (<anonymous>)
-    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:771:23)
-    at doornroosjeScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/doornroosje.js:337:15)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
-  geen error
-  
-  
-  undefined Error - 5:38:42 AM
-  Error: geen error
-    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:773:30
-    at Array.forEach (<anonymous>)
-    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:771:23)
-    at cpuntScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/cpunt.js:297:15)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
-  geen error
-  
-  
-  undefined Error - 5:17:44 AM
-  Error: geen error
-    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:773:30
-    at Array.forEach (<anonymous>)
-    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:771:23)
-    at patronaatScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/patronaat.js:239:15)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
-  geen error
-  
-  
-  undefined Error - 5:13:09 AM
-  Error: geen error
-    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:773:30
-    at Array.forEach (<anonymous>)
-    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:771:23)
-    at patronaatScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/patronaat.js:239:15)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
-  geen error
-  
-  
-  undefined Error - 5:00:50 AM
-  Error: geen el price
-    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:48:19)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:34:12)
-    at async neushoornScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/neushoorn.js:198:20)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
-  geen el price
-  
-  
-  undefined Error - 4:45:47 AM
-  Error: geen error
-    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:773:30
-    at Array.forEach (<anonymous>)
-    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:771:23)
-    at kavkaScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/kavka.js:251:15)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
-  geen error
-  
-  
-  undefined Error - 4:32:08 AM
-  Error: geen error
-    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:773:30
-    at Array.forEach (<anonymous>)
-    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:771:23)
-    at doornroosjeScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/doornroosje.js:337:15)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
-  geen error
-  
-  
-  undefined Error - 4:24:43 AM
-  Error: geen error
-    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:773:30
-    at Array.forEach (<anonymous>)
-    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:771:23)
-    at cpuntScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/cpunt.js:297:15)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
-  geen error
-  
-  
-  undefined Error - 2:18:13 AM
-  TimeoutError: Waiting for selector `.img-container source:last-of-type` failed: Waiting failed: 2500ms exceeded
-    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
-    at listOnTimeout (node:internal/timers:569:17)
-    at process.processTimers (node:internal/timers:512:7) 
-  Waiting for selector `.img-container source:last-of-type` failed: Waiting failed: 2500ms exceeded
-  
-  
-  tivolivredenburg-1 Error - 2:18:02 AM
-  Error: Timeout baseEvent
-    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:716:18)
-    at listOnTimeout (node:internal/timers:569:17)
-    at process.processTimers (node:internal/timers:512:7) 
-  Timeout baseEvent
-  
-  
-  tivolivredenburg-1 Error - 2:17:57 AM
-  TimeoutError: Navigation timeout of 30000 ms exceeded
-    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
-    at listOnTimeout (node:internal/timers:569:17)
-    at process.processTimers (node:internal/timers:512:7) 
-  Navigation timeout of 30000 ms exceeded
-  
-  
-  undefined Error - 2:17:33 AM
-  TimeoutError: Waiting for selector `.tribe-events-event-image .wp-post-image` failed: Waiting failed: 2500ms exceeded
-    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
-    at listOnTimeout (node:internal/timers:569:17)
-    at process.processTimers (node:internal/timers:512:7) 
-  Waiting for selector `.tribe-events-event-image .wp-post-image` failed: Waiting failed: 2500ms exceeded
-  
-  
-  dbs-3 Error - 2:17:28 AM
-  Error: Timeout baseEvent
-    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:716:18)
-    at listOnTimeout (node:internal/timers:569:17)
-    at process.processTimers (node:internal/timers:512:7) 
-  Timeout baseEvent
-  
-  
-  undefined Error - 2:17:23 AM
-  TimeoutError: Waiting for selector `.img-container source:last-of-type` failed: Waiting failed: 2500ms exceeded
-    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
-    at listOnTimeout (node:internal/timers:569:17)
-    at process.processTimers (node:internal/timers:512:7) 
-  Waiting for selector `.img-container source:last-of-type` failed: Waiting failed: 2500ms exceeded
-  
-  
-  dbs-3 Error - 2:16:43 AM
-  TimeoutError: Navigation timeout of 30000 ms exceeded
-    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
-    at listOnTimeout (node:internal/timers:569:17)
-    at process.processTimers (node:internal/timers:512:7) 
-  Navigation timeout of 30000 ms exceeded
-  
-  
-  tivolivredenburg-1 Error - 2:16:41 AM
-  Error: Timeout baseEvent
-    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:716:18)
-    at listOnTimeout (node:internal/timers:569:17)
-    at process.processTimers (node:internal/timers:512:7) 
-  Timeout baseEvent
-  
-  
-  tivolivredenburg-1 Error - 2:16:36 AM
-  TimeoutError: Navigation timeout of 30000 ms exceeded
-    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
-    at listOnTimeout (node:internal/timers:569:17)
-    at process.processTimers (node:internal/timers:512:7) 
-  Navigation timeout of 30000 ms exceeded
-  
-  
-  tivolivredenburg-1 Error - 2:15:55 AM
-  Error: Timeout baseEvent
-    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:716:18)
-    at listOnTimeout (node:internal/timers:569:17)
-    at process.processTimers (node:internal/timers:512:7) 
-  Timeout baseEvent
-  
-  
-  undefined Error - 2:15:33 AM
-  TimeoutError: Waiting for selector `.tribe-events-event-image .wp-post-image` failed: Waiting failed: 2500ms exceeded
-    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
-    at listOnTimeout (node:internal/timers:569:17)
-    at process.processTimers (node:internal/timers:512:7) 
-  Waiting for selector `.tribe-events-event-image .wp-post-image` failed: Waiting failed: 2500ms exceeded
-  
-  
-  undefined Error - 2:15:29 AM
-  TimeoutError: Waiting for selector `.img-container source:last-of-type` failed: Waiting failed: 2500ms exceeded
-    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
-    at listOnTimeout (node:internal/timers:569:17)
-    at process.processTimers (node:internal/timers:512:7) 
-  Waiting for selector `.img-container source:last-of-type` failed: Waiting failed: 2500ms exceeded
-  
-  
-  effenaar-3 Error - 2:15:17 AM
-  TimeoutError: Waiting for selector `.event-bar-inner-row` failed: Waiting failed: 30000ms exceeded
-    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
-    at listOnTimeout (node:internal/timers:569:17)
-    at process.processTimers (node:internal/timers:512:7) 
-  Waiting for selector `.event-bar-inner-row` failed: Waiting failed: 30000ms exceeded
-  
-  
-  tivolivredenburg-1 Error - 2:15:14 AM
-  Error: Timeout baseEvent
-    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:716:18)
-    at listOnTimeout (node:internal/timers:569:17)
-    at process.processTimers (node:internal/timers:512:7) 
-  Timeout baseEvent
-  
-  
-  tivolivredenburg-1 Error - 2:15:08 AM
-  TimeoutError: Navigation timeout of 30000 ms exceeded
-    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
-    at listOnTimeout (node:internal/timers:569:17)
-    at process.processTimers (node:internal/timers:512:7) 
-  Navigation timeout of 30000 ms exceeded
-  
-  
-  dbs-0 Error - 2:15:06 AM
-  TimeoutError: Navigation timeout of 30000 ms exceeded
-    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
-    at listOnTimeout (node:internal/timers:569:17)
-    at process.processTimers (node:internal/timers:512:7) 
-  Navigation timeout of 30000 ms exceeded
-  
-  
-  effenaar-3 Error - 2:15:02 AM
-  Error: Timeout baseEvent
-    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:716:18)
-    at listOnTimeout (node:internal/timers:569:17)
-    at process.processTimers (node:internal/timers:512:7) 
-  Timeout baseEvent
-  
-  
-  effenaar-3 Error - 2:14:46 AM
-  TimeoutError: Navigation timeout of 30000 ms exceeded
-    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
-    at listOnTimeout (node:internal/timers:569:17)
-    at process.processTimers (node:internal/timers:512:7) 
-  Navigation timeout of 30000 ms exceeded
-  
-  
-  undefined Error - 2:13:18 AM
-  Error: geen error
-    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:774:30
-    at Array.forEach (<anonymous>)
-    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:772:23)
-    at patronaatScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/patronaat.js:239:15)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:120:5) 
-  geen error
-  
-  
-  undefined Error - 2:11:23 AM
-  Error: geen el price
-    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:48:19)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:34:12)
-    at async neushoornScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/neushoorn.js:198:20)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:120:5) 
-  geen el price
-  
-  
-  undefined Error - 2:11:06 AM
-  Error: geen error
-    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:774:30
-    at Array.forEach (<anonymous>)
-    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:772:23)
-    at cpuntScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/cpunt.js:297:15)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:120:5) 
-  geen error
-  
-  
-  undefined Error - 2:10:47 AM
-  Error: geen error
-    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:774:30
-    at Array.forEach (<anonymous>)
-    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:772:23)
-    at kavkaScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/kavka.js:251:15)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:120:5) 
-  geen error
-  
-  
-  undefined Error - 2:09:39 AM
-  Error: geen error
-    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:774:30
-    at Array.forEach (<anonymous>)
-    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:772:23)
-    at doornroosjeScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/doornroosje.js:337:15)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:120:5) 
-  geen error
-  
-  
-  undefined Error - 2:08:50 AM
-  TimeoutError: Waiting for selector `.wp-post-image` failed: Waiting failed: 2500ms exceeded
-    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
-    at listOnTimeout (node:internal/timers:569:17)
-    at process.processTimers (node:internal/timers:512:7) 
-  Waiting for selector `.wp-post-image` failed: Waiting failed: 2500ms exceeded
-  
-  
-  bibelot-0 Error - 2:08:35 AM
-  Error: Timeout baseEvent
-    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:716:18)
-    at listOnTimeout (node:internal/timers:569:17)
-    at process.processTimers (node:internal/timers:512:7) 
-  Timeout baseEvent
-  
-  
-  baroeg-1 Error - 2:08:27 AM
-  Error: Timeout baseEvent
-    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:716:18)
-    at listOnTimeout (node:internal/timers:569:17)
-    at process.processTimers (node:internal/timers:512:7) 
-  Timeout baseEvent
-  
-  
-  bibelot-0 Error - 2:08:15 AM
-  TimeoutError: Navigation timeout of 30000 ms exceeded
-    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
-    at listOnTimeout (node:internal/timers:569:17)
-    at process.processTimers (node:internal/timers:512:7) 
-  Navigation timeout of 30000 ms exceeded
-  
-  
-  p60-0 Error - 2:08:11 AM
-  Error: Timeout baseEvent
-    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:220:18)
-    at listOnTimeout (node:internal/timers:569:17)
-    at process.processTimers (node:internal/timers:512:7) 
-  Timeout baseEvent
-  
-  
-  undefined Error - 2:07:43 AM
-  TimeoutError: Waiting for selector `.wp-post-image` failed: Waiting failed: 2500ms exceeded
-    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
-    at listOnTimeout (node:internal/timers:569:17)
-    at process.processTimers (node:internal/timers:512:7) 
-  Waiting for selector `.wp-post-image` failed: Waiting failed: 2500ms exceeded
-  
-  
-  bibelot-0 Error - 2:07:39 AM
-  Error: Timeout baseEvent
-    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:716:18)
-    at listOnTimeout (node:internal/timers:569:17)
-    at process.processTimers (node:internal/timers:512:7) 
-  Timeout baseEvent
-  
-  
-  undefined Error - 2:07:37 AM
-  TimeoutError: Waiting for selector `.hero-area [style*='background-image']` failed: Waiting failed: 2500ms exceeded
-    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
-    at listOnTimeout (node:internal/timers:569:17)
-    at process.processTimers (node:internal/timers:512:7) 
-  Waiting for selector `.hero-area [style*='background-image']` failed: Waiting failed: 2500ms exceeded
-  
-  
-  bibelot-0 Error - 2:07:18 AM
-  TimeoutError: Navigation timeout of 30000 ms exceeded
-    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
-    at listOnTimeout (node:internal/timers:569:17)
-    at process.processTimers (node:internal/timers:512:7) 
-  Navigation timeout of 30000 ms exceeded
-  
-  
-  patronaat-0 Error - 2:06:58 AM
-  Error: Timeout baseEvent
-    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:716:18)
-    at listOnTimeout (node:internal/timers:569:17)
-    at process.processTimers (node:internal/timers:512:7) 
-  Timeout baseEvent
-  
-  
-  baroeg-1 Error - 2:06:53 AM
-  Error: Timeout baseEvent
-    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:716:18)
-    at listOnTimeout (node:internal/timers:569:17)
-    at process.processTimers (node:internal/timers:512:7) 
-  Timeout baseEvent
-  
-  
-  undefined Error - 2:06:40 AM
-  TimeoutError: Waiting for selector `.wp-post-image` failed: Waiting failed: 2500ms exceeded
-    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
-    at listOnTimeout (node:internal/timers:569:17)
-    at process.processTimers (node:internal/timers:512:7) 
-  Waiting for selector `.wp-post-image` failed: Waiting failed: 2500ms exceeded
-  
-  
-  patronaat-0 Error - 2:06:37 AM
-  TimeoutError: Navigation timeout of 30000 ms exceeded
-    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
-    at listOnTimeout (node:internal/timers:569:17)
-    at process.processTimers (node:internal/timers:512:7) 
-  Navigation timeout of 30000 ms exceeded
-  
-  
-  undefined Error - 2:04:10 AM
-  Error: geen el price
-    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:48:19)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:34:12)
-    at async neushoornScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/neushoorn.js:198:20)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:120:5) 
-  geen el price
-  
-  
-  undefined Error - 2:03:35 AM
-  Error: geen error
-    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:774:30
-    at Array.forEach (<anonymous>)
-    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:772:23)
-    at kavkaScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/kavka.js:251:15)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:120:5) 
-  geen error
-  
-  
-  undefined Error - 2:02:55 AM
-  Error: geen error
-    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:774:30
-    at Array.forEach (<anonymous>)
-    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:772:23)
-    at doornroosjeScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/doornroosje.js:337:15)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:120:5) 
-  geen error
-  
-  
-  undefined Error - 2:01:22 AM
-  Error: geen error
-    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:774:30
-    at Array.forEach (<anonymous>)
-    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:772:23)
-    at doornroosjeScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/doornroosje.js:337:15)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:120:5) 
-  geen error
-  
-  
-  bibelot-0 Error - 1:59:19 AM
-  TypeError: infoElText.match(...).match is not a function
-    at evaluate (evaluate at bibelotScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/bibelot.js:111:31), <anonymous>:14:141)
-    at #evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:249:19)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async ExecutionContext.evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:146:16)
-    at async bibelotScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/bibelot.js:111:20)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:120:5) 
-  infoElText.match(...).match is not a function
-  
-  
-  bibelot-0 Error - 1:57:02 AM
-  TypeError: infoElText.match(...).match is not a function
-    at evaluate (evaluate at bibelotScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/bibelot.js:111:31), <anonymous>:7:141)
-    at #evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:249:19)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async ExecutionContext.evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:146:16)
-    at async bibelotScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/bibelot.js:111:20)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:120:5) 
-  infoElText.match(...).match is not a function
-  
-  
-  iduna-0 Error - 1:05:27 AM
-  Error: Timeout baseEvent
-    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:220:18)
-    at listOnTimeout (node:internal/timers:569:17)
-    at process.processTimers (node:internal/timers:512:7) 
-  Timeout baseEvent
-  
-  
-  iduna-0 Error - 1:05:13 AM
-  TypeError: page.evaluate(...).map is not a function
-    at idunaScraper.mainPage (file:///var/www/html/concertagenda/backend/scrapers/iduna.js:105:6)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:109:29) 
-  page.evaluate(...).map is not a function
-  
-  
-  undefined Error - 7:25:34 PM
-  Error: geen error
-    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:774:30
-    at Array.forEach (<anonymous>)
-    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:772:23)
-    at patronaatScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/patronaat.js:239:15)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:120:5) 
-  geen error
-  
-  
-  undefined Error - 7:24:58 PM
-  Error: not dynamo single
-    at dynamoScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/dynamo.js:141:18)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:120:5) 
-  not dynamo single
-  
-  
-  undefined Error - 7:24:42 PM
-  Error: geen error
-    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:774:30
-    at Array.forEach (<anonymous>)
-    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:772:23)
-    at cpuntScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/cpunt.js:297:15)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:120:5) 
-  geen error
-  
-  
-  undefined Error - 7:24:28 PM
-  Error: geen el price
-    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:48:19)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:34:12)
-    at async neushoornScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/neushoorn.js:198:20)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:120:5) 
-  geen el price
-  
-  
-  undefined Error - 7:24:17 PM
-  Error: geen error
-    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:774:30
-    at Array.forEach (<anonymous>)
-    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:772:23)
-    at kavkaScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/kavka.js:251:15)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:120:5) 
-  geen error
-  
-  
-  undefined Error - 7:22:13 PM
-  Error: not dynamo single
-    at dynamoScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/dynamo.js:141:18)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:120:5) 
-  not dynamo single
-  
-  
-  undefined Error - 7:21:37 PM
-  Error: geen el price
-    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:48:19)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async baroegScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/baroeg.js:171:20)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:120:5) 
-  geen el price
-  
-  
-  undefined Error - 7:21:09 PM
-  Error: geen error
-    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:774:30
-    at Array.forEach (<anonymous>)
-    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:772:23)
-    at doornroosjeScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/doornroosje.js:337:15)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:120:5) 
-  geen error
-  
-  
-  undefined Error - 6:57:11 PM
-  Error: geen el price
-    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:48:19)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:34:12)
-    at async neushoornScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/neushoorn.js:198:20)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:120:5) 
-  geen el price
-  
-  
-  undefined Error - 6:56:55 PM
-  Error: geen error
-    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:774:30
-    at Array.forEach (<anonymous>)
-    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:772:23)
-    at cpuntScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/cpunt.js:297:15)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:120:5) 
-  geen error
-  
-  
-  undefined Error - 6:56:38 PM
-  Error: geen el price
-    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:48:19)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async baroegScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/baroeg.js:171:20)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:120:5) 
-  geen el price
-  
-  
-  undefined Error - 6:55:49 PM
-  Error: geen error
-    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:774:30
-    at Array.forEach (<anonymous>)
-    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:772:23)
-    at patronaatScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/patronaat.js:239:15)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:120:5) 
-  geen error
-  
-  
-  undefined Error - 6:54:12 PM
-  Error: not dynamo single
-    at dynamoScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/dynamo.js:141:18)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:120:5) 
-  not dynamo single
-  
-  
-  undefined Error - 6:53:54 PM
-  Error: not dynamo single
-    at dynamoScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/dynamo.js:141:18)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:120:5) 
-  not dynamo single
-  
-  
-  undefined Error - 6:53:39 PM
-  Error: geen error
-    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:774:30
-    at Array.forEach (<anonymous>)
-    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:772:23)
-    at kavkaScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/kavka.js:251:15)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:120:5) 
-  geen error
-  
-  
-  undefined Error - 6:53:33 PM
-  Error: geen error
-    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:774:30
-    at Array.forEach (<anonymous>)
-    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:772:23)
-    at doornroosjeScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/doornroosje.js:337:15)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:120:5) 
-  geen error
-  
-  
-  volt-0 Error - 6:49:10 PM
-  TimeoutError: Waiting for selector `.card-activity` failed: Waiting failed: 1250ms exceeded
-    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
-    at listOnTimeout (node:internal/timers:569:17)
-    at process.processTimers (node:internal/timers:512:7) 
-  Waiting for selector `.card-activity` failed: Waiting failed: 1250ms exceeded
-  
-  
-  undefined Error - 6:46:57 PM
-  Error: geen error
-    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:774:30
-    at Array.forEach (<anonymous>)
-    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:772:23)
-    at patronaatScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/patronaat.js:239:15)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:120:5) 
-  geen error
-  
-  
-  undefined Error - 6:34:32 PM
-  Error: geen el price
-    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:48:19)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:34:12)
-    at async neushoornScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/neushoorn.js:198:20)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:120:5) 
-  geen el price
-  
-  
-  undefined Error - 6:34:18 PM
-  Error: geen el price
-    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:48:19)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:34:12)
-    at async neushoornScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/neushoorn.js:198:20)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:120:5) 
-  geen el price
-  
-  
-  iduna-0 Error - 6:32:21 PM
-  ReferenceError: loadposts is not defined
-    at evaluate (evaluate at idunaScraper.mainPage (file:///var/www/html/concertagenda/backend/scrapers/iduna.js:90:8), <anonymous>:1:10)
-    at #evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:249:19)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async ExecutionContext.evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:146:16)
-    at async idunaScraper.mainPage (file:///var/www/html/concertagenda/backend/scrapers/iduna.js:89:18)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:109:29) 
-  loadposts is not defined
-  
-  
-  littledevil-1 Error - 6:27:14 PM
-  Error: geen base music events
-    at AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:112:13)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
-  geen base music events
-  
-  
-  littledevil-1 Error - 6:26:47 PM
-  Error: geen base music events
-    at AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:112:13)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
-  geen base music events
-  
-  
-  melkweg-3 Error - 6:26:46 PM
-  Error: geen base music events
-    at AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:112:13)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
-  geen base music events
-  
-  
-  undefined Error - 6:25:00 PM
-  Error: geen error
-    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:776:30
-    at Array.forEach (<anonymous>)
-    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:774:23)
-    at kavkaScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/kavka.js:255:15)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:526:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:121:5) 
-  geen error
-  
-  
-  kavka-0 Error - 6:23:46 PM
-  Error: geen base music events
-    at AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:113:13)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
-  geen base music events
-  
-  
-  iduna-0 Error - 6:07:22 PM
-  ReferenceError: loadposts is not defined
-    at evaluate (evaluate at idunaScraper.mainPage (file:///var/www/html/concertagenda/backend/scrapers/iduna.js:90:8), <anonymous>:1:10)
-    at #evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:249:19)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async ExecutionContext.evaluate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/ExecutionContext.js:146:16)
-    at async idunaScraper.mainPage (file:///var/www/html/concertagenda/backend/scrapers/iduna.js:89:18)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:109:29) 
-  loadposts is not defined
-  
-  
-  undefined Error - 6:02:16 PM
-  Error: not dynamo single
-    at dynamoScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/dynamo.js:141:18)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:517:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
-  not dynamo single
-  
-  
-  undefined Error - 6:02:11 PM
-  Error: not dynamo single
-    at dynamoScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/dynamo.js:141:18)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:517:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
-  not dynamo single
-  
-  
-  dynamo-0 Error - 6:01:08 PM
-  Error: pageInfo object incompleet; geen errors
-    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:747:16)
-    at dynamoScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/dynamo.js:138:17)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:517:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
-  pageInfo object incompleet; geen errors
-  
-  
-  dynamo-1 Error - 6:01:01 PM
-  Error: pageInfo object incompleet; geen errors
-    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:747:16)
-    at dynamoScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/dynamo.js:138:17)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:517:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
-  pageInfo object incompleet; geen errors
-  
-  
-  undefined Error - 5:57:24 PM
-  Error: geen el price
-    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:48:19)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async dynamoScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/dynamo.js:228:20)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:517:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
-  geen el price
-  
-  
-  undefined Error - 5:57:24 PM
-  TimeoutError: Waiting for selector `.dynamic-background-color#intro .color-pick` failed: Waiting failed: 2500ms exceeded
-    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
-    at listOnTimeout (node:internal/timers:569:17)
-    at process.processTimers (node:internal/timers:512:7) 
-  Waiting for selector `.dynamic-background-color#intro .color-pick` failed: Waiting failed: 2500ms exceeded
-  
-  
-  undefined Error - 5:57:24 PM
+  littledevil-1 Error - 11:59:41 PM
   geen stack 
   geen message
   
   
-  undefined Error - 5:57:24 PM
-  Error: geen error
-    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:767:30
-    at Array.forEach (<anonymous>)
-    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:765:23)
-    at dynamoScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/dynamo.js:246:15)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:517:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
-  geen error
-  
-  
-  undefined Error - 5:57:18 PM
-  Error: geen el price
-    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:48:19)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async dynamoScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/dynamo.js:228:20)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:517:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
-  geen el price
-  
-  
-  undefined Error - 5:57:18 PM
-  TimeoutError: Waiting for selector `.dynamic-background-color#intro .color-pick` failed: Waiting failed: 2500ms exceeded
-    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
-    at listOnTimeout (node:internal/timers:569:17)
-    at process.processTimers (node:internal/timers:512:7) 
-  Waiting for selector `.dynamic-background-color#intro .color-pick` failed: Waiting failed: 2500ms exceeded
-  
-  
-  undefined Error - 5:57:18 PM
+  littledevil-1 Error - 11:59:41 PM
   geen stack 
   geen message
   
   
-  undefined Error - 5:57:18 PM
+  littledevil-1 Error - 11:59:41 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 11:59:41 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 11:59:41 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 11:59:41 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 11:59:41 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 11:59:41 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 11:59:41 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 11:59:41 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 11:59:41 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 11:59:41 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 11:59:41 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 11:59:41 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 11:59:41 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 11:59:41 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 11:59:41 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 11:59:41 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 11:59:41 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 11:59:41 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 11:59:41 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 11:59:41 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 11:59:41 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 11:59:41 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 11:54:50 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 11:54:50 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 11:54:50 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 11:54:50 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 11:54:50 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 11:54:50 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 11:54:50 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 11:54:50 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 11:54:50 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 11:54:50 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 11:54:50 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 11:54:50 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 11:54:50 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 11:54:50 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 11:54:50 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 11:54:50 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 11:54:50 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 11:54:50 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 11:54:50 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 11:54:50 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 11:54:50 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 11:54:50 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 11:54:50 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 11:54:50 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 11:54:16 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 11:54:16 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 11:54:16 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 11:54:16 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 11:54:16 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 11:54:16 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 11:54:16 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 11:54:16 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 11:54:16 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 11:54:16 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 11:54:16 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 11:54:16 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 11:54:16 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 11:54:16 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 11:54:16 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 11:54:16 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 11:54:16 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 11:54:16 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 11:54:16 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 11:54:16 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 11:54:16 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 11:54:16 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 11:54:16 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 11:54:16 PM
+  geen stack 
+  geen message
+  
+  
+  undefined Error - 11:54:14 PM
   Error: geen error
-    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:767:30
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:773:30
     at Array.forEach (<anonymous>)
-    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:765:23)
-    at dynamoScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/dynamo.js:246:15)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:771:23)
+    at kavkaScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/kavka.js:251:15)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:517:22)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
     at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
   geen error
   
   
-  undefined Error - 5:56:33 PM
+  undefined Error - 7:47:44 PM
   Error: geen error
-    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:767:30
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:773:30
     at Array.forEach (<anonymous>)
-    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:765:23)
-    at doornroosjeScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/doornroosje.js:337:15)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:771:23)
+    at patronaatScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/patronaat.js:244:15)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:517:22)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
     at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
   geen error
   
   
-  dbs-0 Error - 5:52:52 PM
-  TypeError: singleEvent.registerINVALID is not a function
-    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:612:19)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
-  singleEvent.registerINVALID is not a function
-  
-  
-  dbs-1 Error - 5:52:44 PM
-  TypeError: singleEvent.registerINVALID is not a function
-    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:612:19)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
-  singleEvent.registerINVALID is not a function
-  
-  
-  undefined Error - 5:52:05 PM
+  undefined Error - 7:47:30 PM
   Error: geen error
-    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:767:30
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:773:30
     at Array.forEach (<anonymous>)
-    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:765:23)
-    at cpuntScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/cpunt.js:297:15)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:771:23)
+    at patronaatScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/patronaat.js:244:15)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:517:22)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
     at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
   geen error
   
   
-  dbs-3 Error - 5:50:32 PM
-  ProtocolError: Protocol error (Target.closeTarget): No target with given id found
-    at <instance_members_initializer> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Connection.js:46:14)
-    at new Callback (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Connection.js:50:16)
-    at CallbackRegistry.create (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Connection.js:89:26)
-    at Connection._rawSend (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Connection.js:202:26)
-    at Connection.send (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Connection.js:196:21)
-    at CDPPage.close (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Page.js:887:30)
-    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:617:79)
+  undefined Error - 7:47:16 PM
+  Error: undefinedT20:00:00 startTime geen isostring
+    at isISOString (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/datums.js:45:13)
+    at _combineTimeDate (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/datums.js:239:9)
+    at combineStartTimeStartDate (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/datums.js:258:10)
+    at neushoornScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/neushoorn.js:183:14)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:121:5) 
-  Protocol error (Target.closeTarget): No target with given id found
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
+  undefinedT20:00:00 startTime geen isostring
   
   
-  dbs-0 Error - 5:50:28 PM
-  ProtocolError: Protocol error (Target.closeTarget): No target with given id found
-    at <instance_members_initializer> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Connection.js:46:14)
-    at new Callback (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Connection.js:50:16)
-    at CallbackRegistry.create (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Connection.js:89:26)
-    at Connection._rawSend (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Connection.js:202:26)
-    at Connection.send (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Connection.js:196:21)
-    at CDPPage.close (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Page.js:887:30)
-    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:617:79)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:121:5) 
-  Protocol error (Target.closeTarget): No target with given id found
-  
-  
-  dbs-1 Error - 5:50:21 PM
-  TypeError: singleEvent.registerINVALID is not a function
-    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:614:19)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:121:5) 
-  singleEvent.registerINVALID is not a function
-  
-  
-  dbs-2 Error - 5:50:18 PM
-  ProtocolError: Protocol error (Target.closeTarget): No target with given id found
-    at <instance_members_initializer> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Connection.js:46:14)
-    at new Callback (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Connection.js:50:16)
-    at CallbackRegistry.create (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Connection.js:89:26)
-    at Connection._rawSend (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Connection.js:202:26)
-    at Connection.send (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Connection.js:196:21)
-    at CDPPage.close (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Page.js:887:30)
-    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:617:79)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:121:5) 
-  Protocol error (Target.closeTarget): No target with given id found
-  
-  
-  undefined Error - 5:49:36 PM
+  undefined Error - 7:47:16 PM
   Error: geen error
-    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:769:30
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:773:30
     at Array.forEach (<anonymous>)
-    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:767:23)
-    at cpuntScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/cpunt.js:297:15)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:771:23)
+    at neushoornScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/neushoorn.js:221:15)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:519:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:121:5) 
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
   geen error
   
   
-  undefined Error - 5:45:37 PM
-  Error: geen error
-    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:769:30
-    at Array.forEach (<anonymous>)
-    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:767:23)
-    at cpuntScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/cpunt.js:295:15)
+  undefined Error - 7:47:14 PM
+  Error: undefinedT19:30:00 startTime geen isostring
+    at isISOString (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/datums.js:45:13)
+    at _combineTimeDate (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/datums.js:239:9)
+    at combineStartTimeStartDate (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/datums.js:258:10)
+    at neushoornScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/neushoorn.js:183:14)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:519:22)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:121:5) 
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
+  undefinedT19:30:00 startTime geen isostring
+  
+  
+  undefined Error - 7:47:14 PM
+  Error: geen error
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:773:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:771:23)
+    at neushoornScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/neushoorn.js:221:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
   geen error
   
   
-  cpunt-0 Error - 5:44:46 PM
-  TypeError: singleEvent.registerINVALID is not a function
-    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:540:19)
+  undefined Error - 7:47:13 PM
+  Error: undefinedT19:30:00 startTime geen isostring
+    at isISOString (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/datums.js:45:13)
+    at _combineTimeDate (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/datums.js:239:9)
+    at combineStartTimeStartDate (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/datums.js:258:10)
+    at neushoornScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/neushoorn.js:183:14)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:121:5) 
-  singleEvent.registerINVALID is not a function
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
+  undefinedT19:30:00 startTime geen isostring
   
   
-  cpunt-0 Error - 5:39:47 PM
-  TimeoutError: Waiting for selector `#filter .article-wrapper` failed: Waiting failed: 2000ms exceeded
-    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
-    at listOnTimeout (node:internal/timers:569:17)
-    at process.processTimers (node:internal/timers:512:7) 
-  Waiting for selector `#filter .article-wrapper` failed: Waiting failed: 2000ms exceeded
-  
-  
-  cpunt-0 Error - 5:38:39 PM
-  TimeoutError: Waiting for selector `#filter .article-wrapper` failed: Waiting failed: 2000ms exceeded
-    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
-    at listOnTimeout (node:internal/timers:569:17)
-    at process.processTimers (node:internal/timers:512:7) 
-  Waiting for selector `#filter .article-wrapper` failed: Waiting failed: 2000ms exceeded
-  
-  
-  cpunt-0 Error - 5:37:52 PM
-  TimeoutError: Waiting for selector `#filter .article-wrapper` failed: Waiting failed: 2000ms exceeded
-    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
-    at listOnTimeout (node:internal/timers:569:17)
-    at process.processTimers (node:internal/timers:512:7) 
-  Waiting for selector `#filter .article-wrapper` failed: Waiting failed: 2000ms exceeded
-  
-  
-  cpunt-0 Error - 5:37:34 PM
-  Error: Timeout baseEvent
-    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:217:18)
-    at listOnTimeout (node:internal/timers:569:17)
-    at process.processTimers (node:internal/timers:512:7) 
-  Timeout baseEvent
-  
-  
-  cpunt-0 Error - 5:37:16 PM
-  TypeError [ERR_INVALID_ARG_TYPE]: The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received undefined
-    at Object.writeFileSync (node:fs:2314:5)
-    at file:///var/www/html/concertagenda/backend/scrapers/cpunt.js:96:12
+  undefined Error - 7:47:13 PM
+  Error: geen error
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:773:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:771:23)
+    at neushoornScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/neushoorn.js:221:15)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async cpuntScraper.mainPage (file:///var/www/html/concertagenda/backend/scrapers/cpunt.js:89:7)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:109:29) 
-  The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received undefined
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
+  geen error
   
   
-  cpunt-0 Error - 5:36:56 PM
-  TypeError [ERR_INVALID_ARG_TYPE]: The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received undefined
-    at Object.writeFileSync (node:fs:2314:5)
-    at cpuntScraper.mainPage (file:///var/www/html/concertagenda/backend/scrapers/cpunt.js:105:8)
+  undefined Error - 7:47:12 PM
+  Error: undefinedT20:00:00 startTime geen isostring
+    at isISOString (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/datums.js:45:13)
+    at _combineTimeDate (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/datums.js:239:9)
+    at combineStartTimeStartDate (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/datums.js:258:10)
+    at neushoornScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/neushoorn.js:183:14)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:109:29) 
-  The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received undefined
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
+  undefinedT20:00:00 startTime geen isostring
   
   
-  cpunt-0 Error - 5:36:56 PM
-  TimeoutError: Waiting for selector `#filter .article-wrapper` failed: Waiting failed: 2000ms exceeded
-    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
-    at listOnTimeout (node:internal/timers:569:17)
-    at process.processTimers (node:internal/timers:512:7) 
-  Waiting for selector `#filter .article-wrapper` failed: Waiting failed: 2000ms exceeded
-  
-  
-  cpunt-0 Error - 5:36:38 PM
-  Error: Timeout baseEvent
-    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:217:18)
-    at listOnTimeout (node:internal/timers:569:17)
-    at process.processTimers (node:internal/timers:512:7) 
-  Timeout baseEvent
-  
-  
-  cpunt-0 Error - 5:36:23 PM
-  TypeError [ERR_INVALID_ARG_TYPE]: The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received undefined
-    at Object.writeFileSync (node:fs:2314:5)
-    at cpuntScraper.mainPage (file:///var/www/html/concertagenda/backend/scrapers/cpunt.js:104:8)
+  undefined Error - 7:47:12 PM
+  Error: geen error
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:773:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:771:23)
+    at neushoornScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/neushoorn.js:221:15)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:109:29) 
-  The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received undefined
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
+  geen error
   
   
-  cpunt-0 Error - 5:36:23 PM
-  TimeoutError: Waiting for selector `#filter .article-wrapper` failed: Waiting failed: 5000ms exceeded
-    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
+  undefined Error - 7:47:11 PM
+  Error: undefinedT20:00:00 startTime geen isostring
+    at isISOString (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/datums.js:45:13)
+    at _combineTimeDate (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/datums.js:239:9)
+    at combineStartTimeStartDate (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/datums.js:258:10)
+    at neushoornScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/neushoorn.js:183:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
+  undefinedT20:00:00 startTime geen isostring
+  
+  
+  undefined Error - 7:47:11 PM
+  Error: geen error
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:773:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:771:23)
+    at neushoornScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/neushoorn.js:221:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
+  geen error
+  
+  
+  undefined Error - 7:47:10 PM
+  Error: undefinedT19:30:00 startTime geen isostring
+    at isISOString (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/datums.js:45:13)
+    at _combineTimeDate (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/datums.js:239:9)
+    at combineStartTimeStartDate (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/datums.js:258:10)
+    at neushoornScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/neushoorn.js:183:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
+  undefinedT19:30:00 startTime geen isostring
+  
+  
+  undefined Error - 7:47:10 PM
+  Error: geen error
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:773:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:771:23)
+    at neushoornScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/neushoorn.js:221:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
+  geen error
+  
+  
+  undefined Error - 7:47:08 PM
+  Error: undefinedT14:30:00 startTime geen isostring
+    at isISOString (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/datums.js:45:13)
+    at _combineTimeDate (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/datums.js:239:9)
+    at combineStartTimeStartDate (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/datums.js:258:10)
+    at neushoornScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/neushoorn.js:183:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
+  undefinedT14:30:00 startTime geen isostring
+  
+  
+  undefined Error - 7:47:08 PM
+  Error: geen error
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:773:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:771:23)
+    at neushoornScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/neushoorn.js:221:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
+  geen error
+  
+  
+  undefined Error - 7:47:05 PM
+  Error: undefinedT20:00:00 startTime geen isostring
+    at isISOString (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/datums.js:45:13)
+    at _combineTimeDate (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/datums.js:239:9)
+    at combineStartTimeStartDate (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/datums.js:258:10)
+    at neushoornScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/neushoorn.js:183:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
+  undefinedT20:00:00 startTime geen isostring
+  
+  
+  undefined Error - 7:47:05 PM
+  Error: geen error
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:773:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:771:23)
+    at neushoornScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/neushoorn.js:221:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
+  geen error
+  
+  
+  undefined Error - 7:46:14 PM
+  Error: geen error
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:773:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:771:23)
+    at kavkaScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/kavka.js:251:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
+  geen error
+  
+  
+  littledevil-1 Error - 7:46:00 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 7:45:59 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 7:45:59 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 7:45:59 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 7:45:59 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 7:45:59 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 7:45:59 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 7:45:59 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 7:45:59 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 7:45:59 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 7:45:59 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 7:45:59 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 7:45:59 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 7:45:59 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 7:45:59 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 7:45:59 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 7:45:59 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 7:45:59 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 7:45:59 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 7:45:59 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 7:45:59 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 7:45:59 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 7:45:59 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 7:45:59 PM
+  geen stack 
+  geen message
+  
+  
+  paradiso-1 Error - 7:45:28 PM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
     at listOnTimeout (node:internal/timers:569:17)
     at process.processTimers (node:internal/timers:512:7) 
-  Waiting for selector `#filter .article-wrapper` failed: Waiting failed: 5000ms exceeded
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  littledevil-0 Error - 7:45:03 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 7:45:03 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 7:45:03 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 7:45:03 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 7:45:03 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 7:45:03 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 7:45:03 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 7:45:03 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 7:45:03 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 7:45:03 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 7:45:03 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 7:45:03 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 7:45:03 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 7:45:03 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 7:45:03 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 7:45:03 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 7:45:03 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 7:45:03 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 7:45:03 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 7:45:03 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 7:45:03 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 7:45:03 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 7:45:03 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 7:45:03 PM
+  geen stack 
+  geen message
+  
+  
+  undefined Error - 7:40:58 PM
+  Error: geen error
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:773:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:771:23)
+    at kavkaScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/kavka.js:251:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
+  geen error
+  
+  
+  littledevil-1 Error - 7:40:17 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 7:40:17 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 7:40:17 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 7:40:17 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 7:40:17 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 7:40:17 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 7:40:17 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 7:40:17 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 7:40:17 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 7:40:17 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 7:40:17 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 7:40:17 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 7:40:17 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 7:40:17 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 7:40:17 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 7:40:17 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 7:40:17 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 7:40:17 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 7:40:17 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 7:40:17 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 7:40:17 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 7:40:17 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 7:40:17 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-1 Error - 7:40:17 PM
+  geen stack 
+  geen message
+  
+  
+  undefined Error - 7:40:02 PM
+  Error: undefinedT20:00:00 startTime geen isostring
+    at isISOString (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/datums.js:45:13)
+    at _combineTimeDate (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/datums.js:239:9)
+    at combineStartTimeStartDate (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/datums.js:258:10)
+    at neushoornScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/neushoorn.js:183:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
+  undefinedT20:00:00 startTime geen isostring
+  
+  
+  undefined Error - 7:40:02 PM
+  Error: geen error
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:773:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:771:23)
+    at neushoornScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/neushoorn.js:221:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
+  geen error
+  
+  
+  undefined Error - 7:40:01 PM
+  Error: undefinedT19:30:00 startTime geen isostring
+    at isISOString (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/datums.js:45:13)
+    at _combineTimeDate (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/datums.js:239:9)
+    at combineStartTimeStartDate (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/datums.js:258:10)
+    at neushoornScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/neushoorn.js:183:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
+  undefinedT19:30:00 startTime geen isostring
+  
+  
+  undefined Error - 7:40:01 PM
+  Error: geen error
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:773:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:771:23)
+    at neushoornScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/neushoorn.js:221:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
+  geen error
+  
+  
+  undefined Error - 7:40:00 PM
+  Error: undefinedT19:30:00 startTime geen isostring
+    at isISOString (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/datums.js:45:13)
+    at _combineTimeDate (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/datums.js:239:9)
+    at combineStartTimeStartDate (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/datums.js:258:10)
+    at neushoornScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/neushoorn.js:183:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
+  undefinedT19:30:00 startTime geen isostring
+  
+  
+  undefined Error - 7:40:00 PM
+  Error: geen error
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:773:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:771:23)
+    at neushoornScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/neushoorn.js:221:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
+  geen error
+  
+  
+  undefined Error - 7:39:59 PM
+  Error: undefinedT20:00:00 startTime geen isostring
+    at isISOString (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/datums.js:45:13)
+    at _combineTimeDate (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/datums.js:239:9)
+    at combineStartTimeStartDate (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/datums.js:258:10)
+    at neushoornScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/neushoorn.js:183:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
+  undefinedT20:00:00 startTime geen isostring
+  
+  
+  undefined Error - 7:39:59 PM
+  Error: geen error
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:773:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:771:23)
+    at neushoornScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/neushoorn.js:221:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
+  geen error
+  
+  
+  undefined Error - 7:39:58 PM
+  Error: undefinedT20:00:00 startTime geen isostring
+    at isISOString (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/datums.js:45:13)
+    at _combineTimeDate (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/datums.js:239:9)
+    at combineStartTimeStartDate (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/datums.js:258:10)
+    at neushoornScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/neushoorn.js:183:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
+  undefinedT20:00:00 startTime geen isostring
+  
+  
+  undefined Error - 7:39:58 PM
+  Error: geen error
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:773:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:771:23)
+    at neushoornScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/neushoorn.js:221:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
+  geen error
+  
+  
+  undefined Error - 7:39:58 PM
+  Error: undefinedT19:30:00 startTime geen isostring
+    at isISOString (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/datums.js:45:13)
+    at _combineTimeDate (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/datums.js:239:9)
+    at combineStartTimeStartDate (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/datums.js:258:10)
+    at neushoornScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/neushoorn.js:183:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
+  undefinedT19:30:00 startTime geen isostring
+  
+  
+  undefined Error - 7:39:58 PM
+  Error: geen error
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:773:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:771:23)
+    at neushoornScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/neushoorn.js:221:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
+  geen error
+  
+  
+  undefined Error - 7:39:56 PM
+  Error: undefinedT14:30:00 startTime geen isostring
+    at isISOString (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/datums.js:45:13)
+    at _combineTimeDate (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/datums.js:239:9)
+    at combineStartTimeStartDate (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/datums.js:258:10)
+    at neushoornScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/neushoorn.js:183:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
+  undefinedT14:30:00 startTime geen isostring
+  
+  
+  undefined Error - 7:39:56 PM
+  Error: geen error
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:773:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:771:23)
+    at neushoornScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/neushoorn.js:221:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:523:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
+  geen error
+  
+  
+  littledevil-0 Error - 7:39:54 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 7:39:54 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 7:39:54 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 7:39:54 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 7:39:54 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 7:39:54 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 7:39:54 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 7:39:54 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 7:39:54 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 7:39:54 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 7:39:54 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 7:39:54 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 7:39:54 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 7:39:54 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 7:39:54 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 7:39:54 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 7:39:54 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 7:39:54 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 7:39:54 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 7:39:54 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 7:39:54 PM
+  geen stack 
+  geen message
+  
+  
+  littledevil-0 Error - 7:39:54 PM
+  geen stack 
+  geen message
   
   
