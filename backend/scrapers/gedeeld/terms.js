@@ -12,6 +12,7 @@ const forbiddenTerms = [
   'VERBODENGENRE',
   'alternatieve rock',
   'dance,dance-alle-dance',
+  'dance-punk',
   'global,pop',
   'funk-soul,pop',
   'americana',
@@ -41,6 +42,7 @@ const forbiddenTerms = [
   "quiz'm",
   'schaakinstuif',
   'afrobeats',
+  'new wave',
 ];
 
 const wikipediaGoodGenres = [
@@ -105,7 +107,6 @@ const goodCategories = [
   'metalcore',
   'neue deutsche haerte',
   'neue deutsche harte',
-  'new wave',
   'noise',
   'post-punk',
   'postpunk',
