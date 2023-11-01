@@ -4,7 +4,7 @@ import { parentPort, workerData } from 'worker_threads';
 import puppeteer from 'puppeteer';
 import { Location } from '../mods/locations.js';
 import EventsList from '../mods/events-list.js';
-import { QuickWorkerMessage } from '../mods/rock-worker.js';
+import QuickWorkerMessage from '../mods/quick-worker-message.js';
 import getVenueMonths from '../mods/months.js';
 import { workerConfig } from '../mods/worker-config.js';
 

@@ -4,7 +4,8 @@ import EventsList from './mods/events-list.js';
 import passMessageToMonitor from './monitor/pass-message-to-monitor.js';
 import { printLocationsToPublic } from './mods/locations.js';
 import initMonitorBackend from './monitor/backend.js';
-import RockWorker, { WorkerMessage } from './mods/rock-worker.js';
+import RockWorker from './mods/rock-worker.js';
+import WorkerMessage from "./mods/worker-message.js";
 import getWorkerConfig from './mods/worker-config.js';
 import houseKeeping from './housekeeping.js';
 

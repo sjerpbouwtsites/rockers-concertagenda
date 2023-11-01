@@ -1,4 +1,77 @@
 
+    kavka-1 Error - 3:31:15 AM
+    Error: geen match met .prijzen <a class='page-info' href='https://kavka.be/event/currents/'>CURRENTS</a>
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:169:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async kavkaScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/kavka.js:232:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:478:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:118:5) 
+    geen match met .prijzen <a class='page-info' href='https://kavka.be/event/currents/'>CURRENTS</a>
+    
+    
+    tivolivredenburg-2 Error - 3:31:14 AM
+    Error: Timeout baseEvent in single page start
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:658:24)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+    Timeout baseEvent in single page start
+    
+    
+    patronaat-0 Error - 3:30:32 AM
+    Error: geen match met .event__info-bar--ticket-price <a class='page-info' href='https://patronaat.nl/event/modder-11-02-24/'>Modder + Ter Ziele</a>
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:169:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async patronaatScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/patronaat.js:205:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:478:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:118:5) 
+    geen match met .event__info-bar--ticket-price <a class='page-info' href='https://patronaat.nl/event/modder-11-02-24/'>Modder + Ter Ziele</a>
+    
+    
+    patronaat-0 Error - 3:30:19 AM
+    Error: geen match met .event__info-bar--ticket-price <a class='page-info' href='https://patronaat.nl/event/ultrabomb-13-12-23/'>Ultrabomb + support</a>
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:169:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async patronaatScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/patronaat.js:205:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:478:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:118:5) 
+    geen match met .event__info-bar--ticket-price <a class='page-info' href='https://patronaat.nl/event/ultrabomb-13-12-23/'>Ultrabomb + support</a>
+    
+    
+    tivolivredenburg-3 Error - 3:30:02 AM
+    Error: Timeout baseEvent in single page start
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:658:24)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+    Timeout baseEvent in single page start
+    
+    
+    neushoorn-0 Error - 3:29:53 AM
+    Error: geen el price
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:48:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:34:12)
+    at async neushoornScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/neushoorn.js:196:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:478:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:118:5) 
+    geen el price
+    
+    
+    tivolivredenburg-0 Error - 3:29:31 AM
+    Error: Timeout baseEvent in single page start
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:658:24)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+    Timeout baseEvent in single page start
+    
+    
+    tivolivredenburg-1 Error - 3:29:22 AM
+    Error: Timeout baseEvent in single page start
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:658:24)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+    Timeout baseEvent in single page start
+    
+    
     tivolivredenburg-0 Error - 3:06:49 AM
     Error: Timeout baseEvent in single page start
     at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:658:24)

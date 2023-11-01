@@ -1,4 +1,4 @@
-import WorkerMessage from './worker-message.js';
+import WorkerMessage from "./worker-message.js";
 
 /**
  * class om snel berichten te versturen vanuit de worker.
@@ -47,7 +47,25 @@ export default class QuickWorkerMessage {
     return as;
   }
 
+  /**
+   * ATTENTION
+   * @param {Number} numberToDo
+   * @returns {JSONArray} RETURNS TWO JSON OBJECTS FOR TWO CALLS.
+   */ // @ Dit was een array van meuk. Nu is het een kutte API door de app heen. HJerstellen.
   todo(numberToDo) {
+    console.log('LEGACY');
+    return [
+      WorkerMessage.quick('process', 'workers-status', {
+        todo: numberToDo,
+        content: {
+          status: 'todo',
+          workerData: this.workerData,
+        },
+      }),
+    ];
+  }
+
+  todoNew(numberToDo) {
     return WorkerMessage.quick('process', 'workers-status', {
       todo: numberToDo,
       content: {

@@ -7,7 +7,7 @@ import fsDirections from '../../mods/fs-directions.js';
 import passMessageToMonitor from '../../monitor/pass-message-to-monitor.js';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import WorkerMessage from "../../mods/worker-message.js";
-import { QuickWorkerMessage } from '../../mods/rock-worker.js';
+import QuickWorkerMessage from "../../mods/quick-worker-message.js";
 import EventsList from '../../mods/events-list.js';
 import getVenueMonths from '../../mods/months.js';
 import makeLongHTML from './longHTML.js';
