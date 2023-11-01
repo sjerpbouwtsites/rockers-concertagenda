@@ -5,5 +5,6 @@ const debugSettings = {
   debugBaseEvents: false,
   debugPageInfo: false,
   debugPrice: false,
+  debugWithTempFile:false,
 };
 export default debugSettings;

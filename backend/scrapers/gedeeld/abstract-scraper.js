@@ -1183,25 +1183,19 @@ export default class AbstractScraper extends ScraperConfig {
     }
     updateErrorMsg.messageData.workerName = workerData.name;
     clientsLogMsg.messageData.workerName = workerData.name;
-    // if (isMainThread) {
-    //   passMessageToMonitor(updateErrorMsg);
-    //   passMessageToMonitor(clientsLogMsg);
-    //   if (toDebug) passMessageToMonitor(debuggerMsg);
-    // } else {
     parentPort.postMessage(updateErrorMsg);
     parentPort.postMessage(clientsLogMsg);
     if (toDebug) parentPort.postMessage(debuggerMsg);
-    // }
-    const time = new Date();
-    const curErrorLog = fs.readFileSync(fsDirections.errorLog) || '';
-    const newErrorLog = `
-    ${workerData?.name} Error - ${time.toLocaleTimeString()}
-    ${error?.stack ?? 'geen stack'} 
-    ${error?.message ?? 'geen message'}
-    
-    ${curErrorLog}`;
-  
-    fs.writeFileSync(fsDirections.errorLog, newErrorLog, 'utf-8');
+    if (debugSettings.debugWithTempFile) {
+      const time = new Date();
+      const curErrorLog = fs.readFileSync(fsDirections.errorLog) || '';
+      const newErrorLog = `
+      ${workerData?.name} Error - ${time.toLocaleTimeString()}
+      ${error?.stack ?? 'geen stack'} 
+      ${error?.message ?? 'geen message'}
+      ${curErrorLog}`;
+      fs.writeFileSync(fsDirections.errorLog, newErrorLog, 'utf-8');
+    }
   }  
 
   async autoScroll(page) {
@@ -1234,11 +1228,7 @@ export default class AbstractScraper extends ScraperConfig {
       },
     });
 
-    if (isMainThread) {
-      passMessageToMonitor(updateErrorMsg, workerData.name);
-    } else {
-      parentPort.postMessage(updateErrorMsg);
-    }
+    parentPort.postMessage(updateErrorMsg);
 
     // this.handleError(
     //   catchError,
