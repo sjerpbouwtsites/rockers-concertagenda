@@ -1,4 +1,95 @@
 
+  undefined Error - 1:18:55 AM
+  Error: geen match met .event__info-bar--ticket-price <a class='page-info' href='https://patronaat.nl/event/modder-11-02-24/'>Modder + Ter Ziele</a>
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:169:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async patronaatScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/patronaat.js:206:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:511:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:117:5) 
+  geen match met .event__info-bar--ticket-price <a class='page-info' href='https://patronaat.nl/event/modder-11-02-24/'>Modder + Ter Ziele</a>
+  
+  
+  undefined Error - 1:18:44 AM
+  Error: geen match met .event__info-bar--ticket-price <a class='page-info' href='https://patronaat.nl/event/ultrabomb-13-12-23/'>Ultrabomb + support</a>
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:169:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async patronaatScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/patronaat.js:206:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:511:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:117:5) 
+  geen match met .event__info-bar--ticket-price <a class='page-info' href='https://patronaat.nl/event/ultrabomb-13-12-23/'>Ultrabomb + support</a>
+  
+  
+  cpunt-0 Error - 1:18:23 AM
+  ProtocolError: Protocol error (Target.closeTarget): No target with given id found
+    at <instance_members_initializer> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Connection.js:46:14)
+    at new Callback (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Connection.js:50:16)
+    at CallbackRegistry.create (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Connection.js:89:26)
+    at Connection._rawSend (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Connection.js:202:26)
+    at Connection.send (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Connection.js:196:21)
+    at CDPPage.close (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Page.js:887:30)
+    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:546:31)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:118:5) 
+  Protocol error (Target.closeTarget): No target with given id found
+  
+  
+  cpunt-0 Error - 1:18:23 AM
+  TimeoutError: Waiting for selector `#main .content-blocks` failed: Waiting failed: 7500ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Waiting for selector `#main .content-blocks` failed: Waiting failed: 7500ms exceeded
+  
+  
+  cpunt-0 Error - 1:18:15 AM
+  Error: net::ERR_CONNECTION_CLOSED at https://www.cpunt.nl/agenda/little-lilith
+    at navigate (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Frame.js:98:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Deferred.race (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:79:20)
+    at async Frame.goto (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Frame.js:64:21)
+    at async CDPPage.goto (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/Page.js:578:16)
+    at async AbstractScraper.createSinglePage (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:620:9)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:489:25)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:118:5) 
+  net::ERR_CONNECTION_CLOSED at https://www.cpunt.nl/agenda/little-lilith
+  
+  
+  cpunt-0 Error - 1:18:15 AM
+  TimeoutError: Waiting for selector `#main .content-blocks` failed: Waiting failed: 7500ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Waiting for selector `#main .content-blocks` failed: Waiting failed: 7500ms exceeded
+  
+  
+  cpunt-0 Error - 1:18:08 AM
+  TimeoutError: Navigation timeout of 30000 ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+  Navigation timeout of 30000 ms exceeded
+  
+  
+  undefined Error - 1:16:43 AM
+  Error: geen el price
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:48:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:34:12)
+    at async neushoornScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/neushoorn.js:198:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:512:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:118:5) 
+  geen el price
+  
+  
+  undefined Error - 1:14:58 AM
+  Error: geen match met .prijzen <a class='page-info' href='https://kavka.be/event/currents/'>CURRENTS</a>
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:169:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async kavkaScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/kavka.js:232:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:512:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:118:5) 
+  geen match met .prijzen <a class='page-info' href='https://kavka.be/event/currents/'>CURRENTS</a>
+  
+  
   undefined Error - 1:01:01 AM
   Error: geen error
     at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:754:30

@@ -147,7 +147,7 @@ defluxScraper.singlePage = async function ({ page, event }) {
 
       const eventScheme = document.querySelector('.evo_event_schema');
       if (!eventScheme) {
-        res.errors.push({ remarks: `geen event scheme gevonden ${res.anker}`, toDebug: res });
+        res.errors.push({ error: new Error(`geen event scheme gevonden ${res.anker}`), toDebug: res });
         return res;
       }
 

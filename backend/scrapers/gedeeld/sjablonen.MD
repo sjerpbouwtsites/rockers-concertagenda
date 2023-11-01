@@ -28,7 +28,7 @@ const res = {
 ```js
 if (!res.image) {
   res.errors.push({
-    remarks: `image missing ${res.anker}`,
+    error: new Error(`image missing ${res.anker}`),
   });
 }
 ```

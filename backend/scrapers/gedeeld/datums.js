@@ -241,7 +241,7 @@ export function mapToStartDate(event, regexMode, months) {
     return event;
   }
   event.errors.push({
-    remarks: `onbekende regexMode ${regexMode}`,
+    error: new Error(`onbekende regexMode ${regexMode}`),
   });
 
   return event;

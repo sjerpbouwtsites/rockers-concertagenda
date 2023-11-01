@@ -13,7 +13,7 @@ async function _getPriceFromHTML({
 
   if (!page || !workingEventObj || !selectors.length) {
     priceRes.errors.push({
-      remarks: 'geen page, workingEventObj, selectors',
+      error: new Error('geen page, workingEventObj, selectors'),
     });
     debugSettings.debugPrice &&
       _this.dirtyTalk(`price €${priceRes.price} ${`${workingEventObj.title}`}`);
@@ -43,13 +43,13 @@ async function _getPriceFromHTML({
     if (testText === false) {
       if (workingEventObj.soldOut) {
         priceRes.price = 0;
-        if (_this.debugPrice) { priceRes.errors.push({ remarks: `uitverkocht. vergeef geen price ${pi}` }); }
+        if (_this.debugPrice) { priceRes.errors.push({ error: new Error(`uitverkocht. vergeef geen price ${pi}`) }); }
       } else {
         const e = new Error(`geen el price`);
         priceRes.errors.push({ error: e, remarks: `geen el in ${firstSelector} ${pi}`, errorLevel: 'notice' });
       }
     } else {
-      priceRes.errors.push({ remarks: `lege tc in ${firstSelector} ${pi}` });
+      priceRes.errors.push({ error: new Error(`lege tc in ${firstSelector} ${pi}`) });
     }
     return priceRes;
   }
@@ -166,7 +166,7 @@ async function _getPriceFromHTML({
       return priceRes;
     }
     priceRes.errors.push({
-      remarks: `geen match met ${firstSelector} ${pi}`,
+      error: new Error(`geen match met ${firstSelector} ${pi}`),
       toDebug: { testText, priceMatch },
     });
     return priceRes;
@@ -222,7 +222,7 @@ async function _getPriceFromHTML({
 export async function checkIsNumber(priceRes, pi) {
   if (isNaN(priceRes.price)) {
     priceRes.errors.push({
-      remarks: `NaN: ${priceRes.price} ${pi}`,
+      error: new Error(`NaN: ${priceRes.price} ${pi}`),
     });
     return false;
   }

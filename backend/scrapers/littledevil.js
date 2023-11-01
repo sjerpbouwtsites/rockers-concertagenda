@@ -132,7 +132,7 @@ littledevilScraper.mainPage = async function () {
           } catch (error) {
             res.price = null;
             res.errors.push({
-              remarks: `price berekening met ${s} ${res.anker}`,
+              error: new Error(`price berekening met ${s} ${res.anker}`),
             });
           }
         }

@@ -133,7 +133,7 @@ effenaarScraper.singlePage = async function ({ page, event }) {
       const dateText = document.querySelector('.header-meta-date')?.textContent.trim() ?? '';
       if (!dateText) {
         res.errors.push({
-          remarks: `geen datumtext ${res.anker}`,
+          error: new Error(`geen datumtext ${res.anker}`),
         });
         res.corrupted = 'geen datum tekst';
       } else {

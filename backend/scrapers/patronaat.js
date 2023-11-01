@@ -3,7 +3,6 @@ import { workerData } from 'worker_threads';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/patronaat.js';
 import getImage from './gedeeld/image.js';
-import ErrorWrapper from '../mods/error-wrapper.js';
 import * as _t from '../mods/tools.js';
 import terms from './gedeeld/terms.js';
 
@@ -157,7 +156,7 @@ patronaatScraper.singlePage = async function ({ page, event }) {
             }
             if (!res.startTime) {
               res.errors.push({
-                remarks: `geen startTime ${res.anker}`,
+                error: new Error(`geen startTime ${res.anker}`),
                 toDebug: event,
               });
             }
@@ -173,7 +172,7 @@ patronaatScraper.singlePage = async function ({ page, event }) {
             }
           } else {
             res.errors.push({
-              remarks: `geen startDate ${res.anker}`,
+              error: new Error(`geen startDate ${res.anker}`),
               toDebug: event,
             });
             return res;
@@ -190,21 +189,7 @@ patronaatScraper.singlePage = async function ({ page, event }) {
         return res;
       },
       { months: this.months, event },
-    )
-    .catch((caughtError) => {
-      _t.wrappedHandleError(
-        new ErrorWrapper({
-          error: caughtError,
-          remarks: 'page Info catch patronaat',
-          errorLevel: 'notice',
-          workerData,
-          toDebug: {
-            event,
-            pageInfo,
-          },
-        }),
-      );
-    });
+    );
 
   const imageRes = await getImage({
     _this: this,

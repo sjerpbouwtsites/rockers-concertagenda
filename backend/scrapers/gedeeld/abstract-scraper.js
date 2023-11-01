@@ -9,7 +9,6 @@ import fsDirections from '../../mods/fs-directions.js';
 import * as _t from '../../mods/tools.js';
 import EventsList from '../../mods/events-list.js';
 import getVenueMonths from '../../mods/months.js';
-import ErrorWrapper from '../../mods/error-wrapper.js';
 import makeLongHTML from './longHTML.js';
 import WorkerStatus from '../../mods/WorkerStatus.js';
 import ScraperConfig from './scraper-config.js';
@@ -173,18 +172,7 @@ export default class AbstractScraper extends ScraperConfig {
   async saveBaseEventlist(key, data) {
     WorkerStatus.registerFamilyDoneWithBaseEvents(workerData.family);
     if (!data) {
-      const err = new Error(`No data in saveBaseEventList ${key}`);
-      _t.wrappedHandleError(
-        new ErrorWrapper({
-          error: err,
-          remarks: 'saveBaseEventList',
-          errorLevel: 'close-thread',
-          workerData,
-          // toDebug: {
-          //   //
-          // }
-        }),
-      );
+      _t.handleError(new Error(`No data in saveBaseEventList ${key}`), workerData, 'saveBaseEventList', 'close-thread');
       return false;
     }
 
@@ -213,14 +201,7 @@ export default class AbstractScraper extends ScraperConfig {
     // @TODO 3 stopfuncties maken: 1 base events; 1 single; 1 totaal.
 
     const stopFunctie = setTimeout(() => {
-      _t.wrappedHandleError(
-        new ErrorWrapper({
-          error: new Error('Timeout baseEvent'),
-          remarks: `baseEvent ${workerData.name} overtijd. Max: ${this._s.mainPage.timeout}`,
-          workerData,
-          errorLevel: 'close-thread',
-        }),
-      );
+      _t.handleError(new Error('Timeout baseEvent'), workerData, `baseEvent ${workerData.name} overtijd. Max: ${this._s.mainPage.timeout}`, 'close-thread');
     }, this._s.mainPage.timeout);
 
     if (this._s.app.mainPage.useCustomScraper) {
@@ -279,23 +260,8 @@ export default class AbstractScraper extends ScraperConfig {
       }
       return event;
     });
-
-    eventsWithLongHTMLShortText.forEach((event) => {
-      const errorVerz = Object.prototype.hasOwnProperty.call(event, 'errors') ? event.errors : [];
-      errorVerz.forEach((errorData) => {
-        const refE = new Error();
-        const wrappedError = new ErrorWrapper({
-          // eslint-disable-next-line no-nested-ternary
-          message: (errorData?.message ?? null) ? errorData.message : (errorData?.remarks ?? null) ? errorData.remarks : 'geen message',
-          stack: errorData?.stack ?? refE.stack,
-          remarks: errorData?.remarks ?? 'geen remarks',
-          workerData,
-        });
-        _t.wrappedHandleError(wrappedError);
-      });
-    });
-    
-    const r = rawEvents.map((rawEvent) => ({
+   
+    const r = eventsWithLongHTMLShortText.map((rawEvent) => ({
       ...rawEvent,
       location: workerData.family,
       origin: workerData.family,
@@ -691,14 +657,7 @@ export default class AbstractScraper extends ScraperConfig {
    */
   async singlePageStart(event) {
     const stopFunctie = setTimeout(() => {
-      _t.wrappedHandleError(
-        new ErrorWrapper({
-          error: new Error('Timeout baseEvent'),
-          remarks: `<a href='${event?.venueEventUrl}' class='error-link get-page-info-timeout'>singlePage ${workerData.name} overtijd</a>.\nMax: ${this._s.singlePage.timeout}`,
-          workerData,
-          errorLevel: 'notice',
-        }),
-      );
+      _t.handleError(new Error('Timeout baseEvent in single page start'), workerData, `<a href='${event?.venueEventUrl}' class='error-link get-page-info-timeout'>singlePage ${workerData.name} overtijd</a>.\nMax: ${this._s.singlePage.timeout}`, 'close-thread');
     }, this._s.singlePage.timeout);
     return {
       stopFunctie,
@@ -730,28 +689,25 @@ export default class AbstractScraper extends ScraperConfig {
     }
 
     if (!Array.isArray(pageInfo?.errors)) {
-      const wrappedError = new ErrorWrapper({
+      pageInfo.errors = [{
         error: new Error('pageInfo object incompleet; geen errors'),
         remarks: 'pageInfo object incompleet; geen errors',
         workerData,
-        errorLevel: 'notice',
         toDebug: {
           title: 'failed page info',
           pageInfoData: pageInfo,
-        },
-      });
-      _t.wrappedHandleError(wrappedError);
-
-      if (page && !page.isClosed()) page.close();
-      clearTimeout(stopFunctie);
-      return {
-        corrupted: 'Geen resultaat van pageInfo',
-      };
+        },        
+      }];
     }
 
     pageInfo?.errors?.forEach((errorData) => {
+      if (!(errorData?.error instanceof Error)) {
+        _t.handleError(new Error('error slecht gevormd'), workerData, 'error parameter ontbreekt of geen instanceof Error', 'notice', { title: 'slechte errorData', errorData });
+        return;
+      }
+
       _t.handleError(
-        errorData?.error ?? (new Error('geen error')), 
+        errorData.error, 
         errorData?.workerData ?? null, 
         errorData?.remarks ?? 'geen remarks', 
         errorData?.errorLevel ?? 'notice',
@@ -951,14 +907,7 @@ export default class AbstractScraper extends ScraperConfig {
         return bandNamesAreMainTitle;
       })
       .catch((metalEncError) => {
-        _t.wrappedHandleError(
-          new ErrorWrapper({
-            error: metalEncError,
-            remarks: `<a href='${event?.venueEventUrl}' class='error-link get-page-info-timeout'>singlePage ${workerData.name} metal enc. error</a>`,
-            workerData,
-            errorLevel: 'notice',
-          }),
-        );
+        _t.handleError(metalEncError, workerData, `<a href='${event?.venueEventUrl}' class='error-link get-page-info-timeout'>singlePage ${workerData.name} metal enc. error</a>`);
         return {
           event,
           success: false,
@@ -1000,14 +949,7 @@ export default class AbstractScraper extends ScraperConfig {
       wikiPage = `https://en.wikipedia.org/wiki/${wikifiedTitled}`;
       await page.goto(wikiPage);
     } catch (error) {
-      _t.wrappedHandleError(
-        new ErrorWrapper({
-          error,
-          remarks: `<a href='${event?.venueEventUrl}' class='error-link get-page-info-timeout'>wikititel maken fout ${workerData.name}</a> ${workingTitle}`,
-          workerData,
-          errorLevel: 'notice',
-        }),
-      );
+      _t.handleError(error, workerData, `<a href='${event?.venueEventUrl}' class='error-link get-page-info-timeout'>wikititel maken fout ${workerData.name}</a> ${workingTitle}`);
     }
 
     const pageDoesNotExist = await page.evaluate(() => document.getElementById('noarticletext'));
@@ -1150,14 +1092,7 @@ export default class AbstractScraper extends ScraperConfig {
         workingTitle = workingTitle.replace(/^[\w\s]+:/, '');
       }
     } catch (error) {
-      _t.wrappedHandleError(
-        new ErrorWrapper({
-          error,
-          workerData,
-          remarks: 'fout schoonmaken titel',
-          errorLevel: 'notice',
-        }),
-      );
+      _t.handleError(error, workerData, 'fout schoonmaken titel');
       return 'TITEL SCHOONMAKEN MISLUKT';
     }
 

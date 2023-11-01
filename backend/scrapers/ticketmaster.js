@@ -172,7 +172,7 @@ ticketmasterScraper.singlePage = async function ({ event }) {
     pageInfo.price = Object.prototype.hasOwnProperty.call(priceR, 'max') && priceR.max;
   } catch (caughtError) {
     pageInfo.errors.push({
-      remarks: `Geen prijs gevonden ${pageInfo.pageInfo}`,
+      error: new Error(`Geen prijs gevonden ${pageInfo.pageInfo}`),
       debug: {
         prijzen: event?.priceRanges,
       },

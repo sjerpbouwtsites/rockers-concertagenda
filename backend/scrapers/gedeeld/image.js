@@ -4,8 +4,7 @@ import fs from 'fs';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import sharp from 'sharp';
 import fsDirections from '../../mods/fs-directions.js';
-import { wrappedHandleError } from '../../mods/tools.js';
-import ErrorWrapper from '../../mods/error-wrapper.js';
+import { handleError } from '../../mods/tools.js';
 
 function downloadImage(url, filepath, workerData) {
   return new Promise((resolve, reject) => {
@@ -60,18 +59,7 @@ async function downloadImageCompress({
   try {
     await downloadImage(image, `${imagePath}-ori${extension}`, workerData);
   } catch (error) {
-    wrappedHandleError(
-      new ErrorWrapper({
-        error,
-        remarks: 'download image',
-        errorLevel: 'notice',
-        workerData,
-        toDebug: {
-          image,
-          imagePath,
-        },
-      }),
-    );
+    handleError(error, workerData, 'download image', 'notice', { image, imagePath });
     return false;
   }
 
@@ -130,14 +118,14 @@ export default async function getImage({
           });
         } else {
           res.errors.push({
-            error,
+            error: error2,
             remarks: `geen ${selectors[0]} of ${selectors[1]}`,
           });
           return res;
         }
       } catch (error3) {
         res.errors.push({
-          error,
+          error: error3,
           remarks: `geen ${selectors[0]} of ${selectors[1]} of ${selectors[2]}`,
         });
         return res;

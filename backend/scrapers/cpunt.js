@@ -220,7 +220,7 @@ cpuntScraper.singlePage = async function ({ page, event }) {
         }
       } else {
         res.errors.push({
-          remarks: 'geen startTijdMatch res.',
+          error: new Error('geen startTijdMatch res.'),
           toDebug: {
             html: document.querySelector('.article-bottom .article-times')?.innerHTML,
             match: tijdMatches,

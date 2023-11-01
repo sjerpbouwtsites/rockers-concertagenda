@@ -162,7 +162,7 @@ depulScraper.singlePage = async function ({ page, event }) {
         }
       } catch (caughtError) {
         res.errors.push({
-          caughtError,
+          error: caughtError,
           remarks: `longTextHTML ${res.anker}`,
           toDebug: res,
         });

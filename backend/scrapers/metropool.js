@@ -148,7 +148,7 @@ metropoolScraper.singlePage = async function ({ page, event }) {
 
       if (!Array.isArray(startDateRauwMatch) || !startDateRauwMatch.length) {
         res.errors.push({
-          remarks: `geen match startDate ${res.anker}`,
+          error: new Error(`geen match startDate ${res.anker}`),
           toDebug: {
             text: document.querySelector('.event-title-wrap')?.innerHTML,
             res,
@@ -168,7 +168,7 @@ metropoolScraper.singlePage = async function ({ page, event }) {
           res.start = `${startDate}T${startTimeMatch[0]}:00`;
         } else {
           res.errors.push({
-            remarks: `wel datum, geen starttijd ${res.anker}`,
+            error: new Error(`wel datum, geen starttijd ${res.anker}`),
             toDebug: {
               text: document.querySelector('.beginTime')?.innerHTML,
               res,

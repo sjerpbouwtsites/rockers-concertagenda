@@ -197,7 +197,7 @@ boerderijScraper.boerderijCustomPrice = async function (testText, pi, title) {
   };
   if (!testText) {
     priceRes.errors.push({
-      remarks: 'geen testText',
+      error: new Error('geen test text boerderij custom price'),
     });
     return priceRes;
   }
@@ -246,7 +246,7 @@ boerderijScraper.boerderijCustomPrice = async function (testText, pi, title) {
 
   if (!Array.isArray(priceMatch) && !Array.isArray(priceMatchEuros)) {
     priceRes.errors.push({
-      remarks: `geen match met ${pi}`,
+      error: new Error(`geen match met ${pi}`),
     });
     return priceRes;
   }

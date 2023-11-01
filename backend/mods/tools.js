@@ -4,21 +4,6 @@ import fsDirections from './fs-directions.js';
 import { WorkerMessage } from './rock-worker.js';
 import passMessageToMonitor from '../monitor/pass-message-to-monitor.js';
 
-export function wrappedHandleError(errorWrapperInst) {
-  if (errorWrapperInst.isValid()) {
-    handleError(
-      errorWrapperInst?.error,
-      errorWrapperInst?.workerData,
-      errorWrapperInst?.remarks,
-      errorWrapperInst?.errorLevel,
-      errorWrapperInst?.toDebug,
-    );
-    return;
-  }
-
-  throw Error('geen wrapped error!!');
-}
-
 /**
  * handleError, generic error handling for the entire app
  * passes a marked up error to the monitor

@@ -146,7 +146,7 @@ tivoliVredenburgScraper.singlePage = async function ({ page, event }) {
 
       if (!res.startDate || res.startDate.length < 7) {
         res.errors.push({
-          remarks: `startdate mis ${res.anker}`,
+          error: new Error(`startdate mis ${res.anker}`),
           toDebug: {
             text: `niet goed genoeg<br>${startDateMatch.join('; ')}<br>${res.startDate}`,
             res,

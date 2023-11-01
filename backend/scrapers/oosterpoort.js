@@ -4,7 +4,6 @@ import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/oosterpoort.js';
 import getImage from './gedeeld/image.js';
 import * as _t from '../mods/tools.js';
-import ErrorWrapper from '../mods/error-wrapper.js';
 import terms from './gedeeld/terms.js';
 
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
@@ -191,18 +190,10 @@ oostpoortScraper.singlePage = async function ({ page, event }) {
       { event },
     )
     .catch((caughtError) => {
-      _t.wrappedHandleError(
-        new ErrorWrapper({
-          error: caughtError,
-          remarks: 'pageInfo catch',
-          errorLevel: 'notice',
-          workerData,
-          toDebug: {
-            event,
-            pageInfo,
-          },
-        }),
-      );
+      _t.handleError(caughtError, workerData, 'pageInfo catch', 'notice', {
+        event,
+        pageInfo,
+      });
     });
 
   const imageRes = await getImage({

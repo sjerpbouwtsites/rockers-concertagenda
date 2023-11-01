@@ -164,7 +164,7 @@ dynamoScraper.singlePage = async function ({ page, event }) {
         }
 
         res.errors.push({
-          remarks: `Te weinig 'agendaDataEls' ${res.anker}`,
+          error: new Error(`Te weinig 'agendaDataEls' ${res.anker}`),
           toDebug: {
             event,
             agendaDatesEls,

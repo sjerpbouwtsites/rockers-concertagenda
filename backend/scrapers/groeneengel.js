@@ -173,7 +173,7 @@ groeneEngelScraper.singlePage = async function ({ page, event }) {
 
       if (!startEl) {
         res.errors.push({
-          remarks: 'geen tijd el gevonden',
+          error: new Error('geen tijd el gevonden'),
         });
       }
 

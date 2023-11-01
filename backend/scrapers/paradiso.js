@@ -219,7 +219,7 @@ paradisoScraper.singlePage = async function ({ page, event }) {
           const monthName = months[startDateMatch[2]];
           if (!monthName) {
             res.errors.push({
-              remarks: `month not found ${startDateMatch[2]}`,
+              error: new Error(`month not found ${startDateMatch[2]}`),
               toDebug: startDateMatch,
             });
           }
@@ -258,7 +258,7 @@ paradisoScraper.singlePage = async function ({ page, event }) {
       }
       if (!tijden.length) {
         res.errors.push({
-          remarks: `Geen tijden gevonden ${res.anker}`,
+          error: new Error(`Geen tijden gevonden ${res.anker}`),
         });
       }
 

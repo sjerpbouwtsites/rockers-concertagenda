@@ -155,7 +155,7 @@ kavkaScraper.mainPage = async function () {
             }
           } catch (error) {
             res.errors.push({
-              remarks: `openDoorDateTime faal ${res.anker}`,
+              error: new Error(`openDoorDateTime faal ${res.anker}`),
             });
           }
 

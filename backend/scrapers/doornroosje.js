@@ -4,7 +4,6 @@ import * as _t from '../mods/tools.js';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/doornroosje.js';
 import getImage from './gedeeld/image.js';
-import ErrorWrapper from '../mods/error-wrapper.js';
 
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const doornroosjeScraper = new AbstractScraper({
@@ -156,13 +155,7 @@ doornroosjeScraper.mainPage = async function () {
       return rawEvent;
     });
   } catch (dateMapError) {
-    _t.wrappedHandleError(
-      new ErrorWrapper({
-        workerData,
-        error: dateMapError,
-        remarks: 'startDate rawEvents mapper',
-      }),
-    );
+    _t.handleError(dateMapError, workerData, 'startDate rawEvents mapper');
   }
 
   rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
@@ -216,7 +209,7 @@ doornroosjeScraper.singlePage = async function ({ page, event }) {
           startDate = `${year}-${month}-${day}`;
         } else if (!startDate) {
           res.errors.push({
-            remarks: `Geen startdate ${res.anker}`,
+            error: new Error(`Geen startdate ${res.anker}`),
             toDebug: {
               text: document.querySelector('.c-event-data')?.innerHTML,
             },
@@ -272,9 +265,8 @@ doornroosjeScraper.singlePage = async function ({ page, event }) {
           try {
             res.start = `${event?.startDate}T12:00:00`;
           } catch (thisError) {
-            const errorString = 'fout bij tijd/datum festival of datums';
             res.errors.push({
-              remarks: errorString,
+              error: new Error('fout bij tijd/datum festival of datums'),
             });
             return res;
           }
