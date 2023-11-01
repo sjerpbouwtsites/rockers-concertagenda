@@ -28,6 +28,14 @@ bibelotScraper.listenToMasterThread();
 
 // #region [rgba(0, 120, 0, 0.1)]      MAIN PAGE EVENT CHECK
 bibelotScraper.mainPageAsyncCheck = async function (event) {
+  const isRefusedFull = await this.rockRefuseListCheck(event, event.title.toLowerCase());
+  if (isRefusedFull.success) {
+    isRefusedFull.success = false;
+    return isRefusedFull;
+  }
+  const isAllowedFull = await this.rockAllowListCheck(event, event.title.toLowerCase());
+  if (isAllowedFull.success) return isAllowedFull;
+
   const workingTitle = this.cleanupEventTitle(event.title);
   const isRefused = await this.rockRefuseListCheck(event, workingTitle);
   if (isRefused.success) {

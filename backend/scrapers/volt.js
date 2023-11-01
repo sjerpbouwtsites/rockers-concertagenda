@@ -28,6 +28,12 @@ voltScraper.listenToMasterThread();
 
 // #region [rgba(0, 120, 0, 0.1)]      MAIN PAGE EVENT CHECK
 voltScraper.mainPageAsyncCheck = async function (event) {
+  const isRefusedFull = await this.rockRefuseListCheck(event, event.title.toLowerCase());
+  if (isRefusedFull.success) {
+    isRefusedFull.success = false;
+    return isRefusedFull;
+  }
+
   const workingTitle = this.cleanupEventTitle(event.title);
   const isRefused = await this.rockRefuseListCheck(event, workingTitle);
   if (isRefused.success) {
@@ -37,7 +43,7 @@ voltScraper.mainPageAsyncCheck = async function (event) {
 
   return {
     workingTitle,
-    reason: [isRefused.reason].join(';'),
+    reason: [isRefusedFull.reason, isRefused.reason].join(';'),
     event,
     success: true,
   };
@@ -46,8 +52,9 @@ voltScraper.mainPageAsyncCheck = async function (event) {
 
 // #region [rgba(0, 180, 0, 0.1)]      SINGLE PAGE EVENT CHECK
 voltScraper.singlePageAsyncCheck = async function (event) {
+  const isAllowedFull = await this.rockAllowListCheck(event, event.title.toLowerCase());
+  if (isAllowedFull.success) return isAllowedFull;
   const workingTitle = this.cleanupEventTitle(event.title);
-
   const isAllowed = await this.rockAllowListCheck(event, workingTitle);
   if (isAllowed.success) return isAllowed;
 
@@ -62,7 +69,7 @@ voltScraper.singlePageAsyncCheck = async function (event) {
 
   return {
     workingTitle,
-    reason: [isAllowed.reason, hasForbiddenTerms.reason].join(';'),
+    reason: [isAllowedFull.reason, isAllowed.reason, hasForbiddenTerms.reason].join(';'),
     event,
     success: true,
   };

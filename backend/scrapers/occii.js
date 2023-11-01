@@ -32,14 +32,20 @@ occiiScraper.listenToMasterThread();
 
 // #region [rgba(0, 120, 0, 0.1)]      MAIN PAGE EVENT CHECK
 occiiScraper.mainPageAsyncCheck = async function (event) {
-  const workingTitle = this.cleanupEventTitle(event.title);
+  const isRefusedFull = await this.rockRefuseListCheck(event, event.title.toLowerCase());
+  if (isRefusedFull.success) {
+    isRefusedFull.success = false;
+    return isRefusedFull;
+  }
+  const isAllowedFull = await this.rockAllowListCheck(event, event.title.toLowerCase());
+  if (isAllowedFull.success) return isAllowedFull;
 
+  const workingTitle = this.cleanupEventTitle(event.title);
   const isRefused = await this.rockRefuseListCheck(event, workingTitle);
   if (isRefused.success) {
     isRefused.success = false;
     return isRefused;
   }
-
   const isAllowed = await this.rockAllowListCheck(event, workingTitle);
   if (isAllowed.success) return isAllowed;
 
@@ -61,8 +67,22 @@ occiiScraper.mainPageAsyncCheck = async function (event) {
 
 // #region [rgba(0, 180, 0, 0.1)]      SINGLE PAGE EVENT CHECK
 occiiScraper.singlePageAsyncCheck = async function (event, pageInfo) {
-  const workingTitle = this.cleanupEventTitle(event.title);
+  const isRefusedFull = await this.rockRefuseListCheck(event, event.title.toLowerCase());
+  if (isRefusedFull.success) {
+    isRefusedFull.success = false;
+    return isRefusedFull;
+  }
+  const isAllowedFull = await this.rockAllowListCheck(event, event.title.toLowerCase());
+  if (isAllowedFull.success) return isAllowedFull;
 
+  const workingTitle = this.cleanupEventTitle(event.title);
+  const isRefused = await this.rockRefuseListCheck(event, workingTitle);
+  if (isRefused.success) {
+    isRefused.success = false;
+    return isRefused;
+  }
+  const isAllowed = await this.rockAllowListCheck(event, workingTitle);
+  if (isAllowed.success) return isAllowed;
   const ss = !(pageInfo?.genres?.include('electronic') ?? false);
   if (ss) {
     this.saveAllowedTitle(workingTitle);

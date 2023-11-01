@@ -34,14 +34,20 @@ defluxScraper.listenToMasterThread();
 
 // #region [rgba(0, 120, 0, 0.1)]      MAIN PAGE EVENT CHECK
 defluxScraper.mainPageAsyncCheck = async function (event) {
-  const workingTitle = this.cleanupEventTitle(event.title);
+  const isRefusedFull = await this.rockRefuseListCheck(event, event.title.toLowerCase());
+  if (isRefusedFull.success) {
+    isRefusedFull.success = false;
+    return isRefusedFull;
+  }
+  const isAllowedFull = await this.rockAllowListCheck(event, event.title.toLowerCase());
+  if (isAllowedFull.success) return isAllowedFull;
 
+  const workingTitle = this.cleanupEventTitle(event.title);
   const isRefused = await this.rockRefuseListCheck(event, workingTitle);
   if (isRefused.success) {
     isRefused.success = false;
     return isRefused;
   }
-
   const isAllowed = await this.rockAllowListCheck(event, workingTitle);
   if (isAllowed.success) return isAllowed;
 
@@ -70,21 +76,21 @@ defluxScraper.mainPageAsyncCheck = async function (event) {
 // #endregion                          MAIN PAGE EVENT CHECK
 
 // #region [rgba(0, 180, 0, 0.1)]      SINGLE PAGE EVENT CHECK
-defluxScraper.singlePageAsyncCheck = async function (event) {
-  const workingTitle = this.cleanupEventTitle(event.title);
+// defluxScraper.singlePageAsyncCheck = async function (event) {
+//   const workingTitle = this.cleanupEventTitle(event.title);
 
-  const isAllowed = await this.rockAllowListCheck(event, workingTitle);
-  if (isAllowed.success) {
-    return isAllowed;
-  }
+//   const isAllowed = await this.rockAllowListCheck(event, workingTitle);
+//   if (isAllowed.success) {
+//     return isAllowed;
+//   }
 
-  return {
-    workingTitle,
-    event,
-    success: true,
-    reason: 'weird one',
-  };
-};
+//   return {
+//     workingTitle,
+//     event,
+//     success: true,
+//     reason: 'weird one',
+//   };
+// };
 // #endregion                          SINGLE PAGE EVENT CHECK
 
 // #region [rgba(0, 240, 0, 0.1)]      MAIN PAGE

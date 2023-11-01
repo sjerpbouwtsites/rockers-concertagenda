@@ -31,14 +31,20 @@ nieuwenorScraper.listenToMasterThread();
 
 // #region [rgba(0, 120, 0, 0.1)]      MAIN PAGE EVENT CHECK
 nieuwenorScraper.mainPageAsyncCheck = async function (event) {
-  const workingTitle = this.cleanupEventTitle(event.title);
+  const isRefusedFull = await this.rockRefuseListCheck(event, event.title.toLowerCase());
+  if (isRefusedFull.success) {
+    isRefusedFull.success = false;
+    return isRefusedFull;
+  }
+  const isAllowedFull = await this.rockAllowListCheck(event, event.title.toLowerCase());
+  if (isAllowedFull.success) return isAllowedFull;
 
+  const workingTitle = this.cleanupEventTitle(event.title);
   const isRefused = await this.rockRefuseListCheck(event, workingTitle);
   if (isRefused.success) {
     isRefused.success = false;
     return isRefused;
   }
-
   const isAllowed = await this.rockAllowListCheck(event, workingTitle);
   if (isAllowed.success) {
     return isAllowed;
@@ -55,7 +61,7 @@ nieuwenorScraper.mainPageAsyncCheck = async function (event) {
     workingTitle,
     event,
     success: true,
-    reason: [isRefused.reason, isAllowed.reason, hasForbiddenTerms.reason].join(';'),
+    reason: [isRefusedFull.reason, isAllowedFull.reason, isRefused.reason, isAllowed.reason, hasForbiddenTerms.reason].join(';'),
   };
 };
 // #endregion                          MAIN PAGE EVENT CHECK

@@ -31,6 +31,12 @@ doornroosjeScraper.listenToMasterThread();
 
 // #region [rgba(0, 120, 0, 0.1)]      MAIN PAGE EVENT CHECK
 doornroosjeScraper.mainPageAsyncCheck = async function (event) {
+  const isRefusedFull = await this.rockRefuseListCheck(event, event.title.toLowerCase());
+  if (isRefusedFull.success) {
+    isRefusedFull.success = false;
+    return isRefusedFull;
+  }
+
   const workingTitle = this.cleanupEventTitle(event.title);
   const isRefused = await this.rockRefuseListCheck(event, workingTitle);
   if (isRefused.success) {
@@ -38,14 +44,9 @@ doornroosjeScraper.mainPageAsyncCheck = async function (event) {
     return isRefused;
   }
 
-  const isAllowed = await this.rockAllowListCheck(event, workingTitle);
-  if (isAllowed.success) {
-    return isAllowed;
-  }
-
   return {
     workingTitle,
-    reason: [isRefused.reason, isAllowed.reason].join(';'),
+    reason: [isRefusedFull.reason, isRefused.reason].join(';'),
     event,
     success: true,
   };
@@ -55,6 +56,8 @@ doornroosjeScraper.mainPageAsyncCheck = async function (event) {
 // #region [rgba(0, 180, 0, 0.1)]      SINGLE PAGE EVENT CHECK
 doornroosjeScraper.singlePageAsyncCheck = async function (event) {
   const workingTitle = this.cleanupEventTitle(event.title);
+  const isAllowed = await this.rockAllowListCheck(event, workingTitle);
+  if (isAllowed.success) return isAllowed;
 
   const hasForbiddenTerms = await this.hasForbiddenTerms(event, [
     'longTextHTML',

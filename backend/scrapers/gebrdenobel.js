@@ -32,6 +32,12 @@ gebrdenobelScraper.listenToMasterThread();
 
 // #region [rgba(0, 120, 0, 0.1)]      MAIN PAGE EVENT CHECK
 gebrdenobelScraper.mainPageAsyncCheck = async function (event) {
+  const isRefusedFull = await this.rockRefuseListCheck(event, event.title.toLowerCase());
+  if (isRefusedFull.success) {
+    isRefusedFull.success = false;
+    return isRefusedFull;
+  }
+
   const workingTitle = this.cleanupEventTitle(event.title);
   const isRefused = await this.rockRefuseListCheck(event, workingTitle);
   if (isRefused.success) {
@@ -43,15 +49,17 @@ gebrdenobelScraper.mainPageAsyncCheck = async function (event) {
     workingTitle,
     event,
     success: true,
-    reason: isRefused.reason,
+    reason: [isRefusedFull.reason, isRefused.reason].join('; '),
   };
 };
 // #endregion                          MAIN PAGE EVENT CHECK
 
 // #region [rgba(0, 180, 0, 0.1)]      SINGLE PAGE EVENT CHECK
 gebrdenobelScraper.singlePageAsyncCheck = async function (event) {
-  const workingTitle = this.cleanupEventTitle(event.title);
+  const isAllowedFull = await this.rockAllowListCheck(event, event.title.toLowerCase());
+  if (isAllowedFull.success) return isAllowedFull;
 
+  const workingTitle = this.cleanupEventTitle(event.title);
   const isAllowed = await this.rockAllowListCheck(event, workingTitle);
   if (isAllowed.success) return isAllowed;
 

@@ -32,8 +32,15 @@ groeneEngelScraper.listenToMasterThread();
 
 // #region [rgba(0, 120, 0, 0.1)]      MAIN PAGE EVENT CHECK
 groeneEngelScraper.mainPageAsyncCheck = async function (event) {
-  const workingTitle = this.cleanupEventTitle(event.title);
+  const isRefusedFull = await this.rockRefuseListCheck(event, event.title.toLowerCase());
+  if (isRefusedFull.success) {
+    isRefusedFull.success = false;
+    return isRefusedFull;
+  }
+  const isAllowedFull = await this.rockAllowListCheck(event, event.title.toLowerCase());
+  if (isAllowedFull.success) return isAllowedFull;
 
+  const workingTitle = this.cleanupEventTitle(event.title);
   const isRefused = await this.rockRefuseListCheck(event, workingTitle);
   if (isRefused.success) {
     isRefused.success = false;
@@ -54,7 +61,8 @@ groeneEngelScraper.mainPageAsyncCheck = async function (event) {
     workingTitle,
     event,
     success: true,
-    reason: [isRefused.reason, isAllowed.reason, hasForbiddenTerms.reason],
+    reason: [isRefusedFull.reason, isAllowedFull.reason, 
+      isRefused.reason, isAllowed.reason, hasForbiddenTerms.reason],
   };
 };
 // #endregion                          MAIN PAGE EVENT CHECK
@@ -62,7 +70,6 @@ groeneEngelScraper.mainPageAsyncCheck = async function (event) {
 // #region [rgba(0, 180, 0, 0.1)]      SINGLE PAGE EVENT CHECK
 groeneEngelScraper.singlePageAsyncCheck = async function (event) {
   const workingTitle = this.cleanupEventTitle(event.title);
-
   const isAllowed = await this.rockAllowListCheck(event, workingTitle);
   if (isAllowed.success) return isAllowed;
 
