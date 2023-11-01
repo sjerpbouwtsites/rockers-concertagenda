@@ -4,7 +4,6 @@ import { parentPort, workerData, isMainThread } from 'worker_threads';
 import fs from 'fs';
 import puppeteer from 'puppeteer';
 import fsDirections from '../../mods/fs-directions.js';
-import passMessageToMonitor from '../../monitor/pass-message-to-monitor.js';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import WorkerMessage from "../../mods/worker-message.js";
 import QuickWorkerMessage from "../../mods/quick-worker-message.js";
@@ -1180,16 +1179,19 @@ export default class AbstractScraper extends ScraperConfig {
           debug: toDebug,
         },
       });
+      debuggerMsg.messageData.workerName = workerData.name;
     }
-    if (isMainThread) {
-      passMessageToMonitor(updateErrorMsg, workerData.name);
-      passMessageToMonitor(clientsLogMsg, workerData.name);
-      if (toDebug) passMessageToMonitor(debuggerMsg, workerData.name);
-    } else {
-      parentPort.postMessage(updateErrorMsg);
-      parentPort.postMessage(clientsLogMsg);
-      if (toDebug) parentPort.postMessage(debuggerMsg);
-    }
+    updateErrorMsg.messageData.workerName = workerData.name;
+    clientsLogMsg.messageData.workerName = workerData.name;
+    // if (isMainThread) {
+    //   passMessageToMonitor(updateErrorMsg);
+    //   passMessageToMonitor(clientsLogMsg);
+    //   if (toDebug) passMessageToMonitor(debuggerMsg);
+    // } else {
+    parentPort.postMessage(updateErrorMsg);
+    parentPort.postMessage(clientsLogMsg);
+    if (toDebug) parentPort.postMessage(debuggerMsg);
+    // }
     const time = new Date();
     const curErrorLog = fs.readFileSync(fsDirections.errorLog) || '';
     const newErrorLog = `

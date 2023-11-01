@@ -5,7 +5,6 @@ import EventsList from './events-list.js';
 import wsMessage from '../monitor/wsMessage.js';
 import fsDirections from './fs-directions.js';
 import QuickWorkerMessage from "./quick-worker-message.js";
-import passMessageToMonitor from '../monitor/pass-message-to-monitor.js';
 import { AbstractWorkerConfig, workerConfig } from './worker-config.js';
 import shell from './shell.js';
 
@@ -142,8 +141,12 @@ export default class WorkerStatus {
   }
 
   static change(name, status, message) {
-    // console.log("change WorkerStatus");
-    // console.log(name, status, message);
+    console.log("change WorkerStatus");
+    console.log(`name: ${name}`);
+    console.log(`status: ${status}`);
+    console.log(`message: `);
+    console.log(message);
+
     const statusses = status?.split(' ') ?? '';
 
     const thisWorker = WorkerStatus._workers[name];
@@ -180,6 +183,11 @@ export default class WorkerStatus {
   }
 
   static async processError(name, message) {
+    if (!WorkerStatus.isRegisteredWorker(name)) {
+      console.log(message);
+      throw new Error(`Error binnengekomen van onbekende worker ${name}`);
+    }
+
     WorkerStatus._workers[name].errors.push(message);
     WorkerStatus.printWorkersToConsole();
     const content = message?.content ?? null;
@@ -372,7 +380,7 @@ export default class WorkerStatus {
       'utf-8',
     );
     // passMessageToMonitor(qwm.toConsole(consolidatedEvents), workerSignature);
-    passMessageToMonitor(qwm.messageRoll(`saved ${consolidatedEvents.length} events`), workerSignature);
+    console.log(`saved ${consolidatedEvents.length} events`);
 
     fs.copyFileSync(fsDirections.metaJson, fsDirections.metaPublicJson);
     fs.copyFileSync(fsDirections.eventsListJson, fsDirections.eventsListPublicJson);

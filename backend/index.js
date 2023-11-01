@@ -120,7 +120,8 @@ async function recursiveStartWorkers(workerConfig) {
 async function init() {
   await houseKeeping();
   monitorWebsocketServer = await initMonitorBackend();
-  WorkerStatus.monitorWebsocketServer = monitorWebsocketServer;
+  RockWorker.monitorWebsocketServer = monitorWebsocketServer;
+  WorkerStatus.monitorWebsocketServer = monitorWebsocketServer; // TODO WEG
 
   WorkerStatus.monitorCPUS();
   const workerConfig = getWorkerConfig();
