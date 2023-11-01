@@ -1,4 +1,45 @@
 
+  undefined Error - 2:16:18 AM
+  Error: geen el price
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:48:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:34:12)
+    at async neushoornScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/neushoorn.js:198:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:478:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:117:5) 
+  geen el price
+  
+  
+  undefined Error - 2:15:49 AM
+  Error: geen match met .prijzen <a class='page-info' href='https://kavka.be/event/currents/'>CURRENTS</a>
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:169:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async kavkaScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/kavka.js:232:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:478:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:117:5) 
+  geen match met .prijzen <a class='page-info' href='https://kavka.be/event/currents/'>CURRENTS</a>
+  
+  
+  undefined Error - 2:15:21 AM
+  Error: geen match met .event__info-bar--ticket-price <a class='page-info' href='https://patronaat.nl/event/modder-11-02-24/'>Modder + Ter Ziele</a>
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:169:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async patronaatScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/patronaat.js:206:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:478:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:117:5) 
+  geen match met .event__info-bar--ticket-price <a class='page-info' href='https://patronaat.nl/event/modder-11-02-24/'>Modder + Ter Ziele</a>
+  
+  
+  undefined Error - 2:15:12 AM
+  Error: geen match met .event__info-bar--ticket-price <a class='page-info' href='https://patronaat.nl/event/ultrabomb-13-12-23/'>Ultrabomb + support</a>
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:169:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async patronaatScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/patronaat.js:206:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:478:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:117:5) 
+  geen match met .event__info-bar--ticket-price <a class='page-info' href='https://patronaat.nl/event/ultrabomb-13-12-23/'>Ultrabomb + support</a>
+  
+  
   undefined Error - 1:41:10 AM
   Error: geen match met .prijzen <a class='page-info' href='https://kavka.be/event/currents/'>CURRENTS</a>
     at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:169:14)

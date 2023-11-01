@@ -3,6 +3,9 @@ import fs from 'fs';
 import os from 'os-utils';
 import EventsList from './events-list.js';
 import wsMessage from '../monitor/wsMessage.js';
+import fsDirections from './fs-directions.js';
+import QuickWorkerMessage from "./quick-worker-message.js";
+import passMessageToMonitor from '../monitor/pass-message-to-monitor.js';
 import { AbstractWorkerConfig, workerConfig } from './worker-config.js';
 import shell from './shell.js';
 import * as _t from './tools.js';
@@ -262,7 +265,7 @@ export default class WorkerStatus {
       const wsMsg2 = new wsMessage('process', 'closed');
       WorkerStatus.mwss.broadcast(wsMsg2.json);
     }
-    EventsList.printAllToJSON();
+    WorkerStatus.printAllToJSON();
 
     if (shell.debugLongHTML && shell.force) {
       console.log('debug long HTML');
@@ -281,6 +284,98 @@ export default class WorkerStatus {
         process.exit();
       }, 1000);
     }
+  }
+
+  static async printAllToJSON() {
+    //    await waitABit();
+
+    const pathToEventList = fsDirections.eventLists;
+    const consolidatedLocations = {};
+    const nowDateString = new Date();
+    const nowDate = Number(nowDateString.toISOString().substring(0, 10).replace(/-/g, ''));
+    const allEventListFiles = [];
+    const workerSignature = {
+      family: 'workerStatus',
+      index: 0,
+      name: `${'workerStatus-0'}`,
+      scraper: false, 
+    };
+    const qwm = new QuickWorkerMessage(workerSignature);
+
+    Object.entries(workerConfig)
+      .forEach(([familyName, { workerCount }]) => {
+        for (let i = 0; i < workerCount; i++) {
+          const pad = `${pathToEventList}/${familyName}/${i}.json`;
+          if (fs.existsSync(pad)) {
+            allEventListFiles.push(pad);
+          }
+        }
+      });
+
+    let consolidatedEvents = allEventListFiles
+      .map((eventListFile) => {
+        try {
+          const parsedEventFile = JSON.parse(fs.readFileSync(eventListFile));
+          return parsedEventFile;
+        } catch (error) {
+          console.log(`json parse error ${eventListFile}`);          
+          console.log(error);
+          return [];
+        }
+      })
+      .flat()
+      .filter((event) => {
+        const musicEventTime = Number(event.start.substring(0, 10).replace(/-/g, ''));
+        return musicEventTime >= nowDate;
+      })
+      .sort((eventA, eventB) => {
+        let dataA;
+        try {
+          dataA = Number(eventA.start.substring(0, 10).replace(/-/g, ''));
+        } catch (error) {
+          dataA = 20501231;
+        }
+        let dataB;
+        try {
+          dataB = Number(eventB.start.substring(0, 10).replace(/-/g, ''));
+        } catch (error) {
+          dataB = 20501231;
+        }
+  
+        if (dataA > dataB) {
+          return -1;
+        }
+        if (dataA < dataB) {
+          return 1;
+        }
+        return 0;
+      });
+
+    consolidatedEvents = consolidatedEvents.reverse();
+
+    consolidatedEvents.forEach((eventUitLijst) => {
+      const loc = eventUitLijst.location;
+      if (!consolidatedLocations[loc]) {
+        consolidatedLocations[loc] = {};
+        consolidatedLocations[loc].name = loc;
+        consolidatedLocations[loc].count = 0;
+      }
+      consolidatedLocations[loc].count += 1;
+    });
+
+    fs.writeFileSync(fsDirections.metaJson, JSON.stringify(EventsList._meta, null, '  '), 'utf-8');
+
+    fs.writeFileSync(
+      fsDirections.eventsListJson,
+      JSON.stringify(consolidatedEvents, null, '  '),
+      'utf-8',
+    );
+    // passMessageToMonitor(qwm.toConsole(consolidatedEvents), workerSignature);
+    passMessageToMonitor(qwm.messageRoll(`saved ${consolidatedEvents.length} events`), workerSignature);
+
+    fs.copyFileSync(fsDirections.metaJson, fsDirections.metaPublicJson);
+    fs.copyFileSync(fsDirections.eventsListJson, fsDirections.eventsListPublicJson);
+    fs.copyFileSync(fsDirections.timestampsJson, fsDirections.timestampsPublicJson);
   }
 
   static printWorkersToConsole() {
