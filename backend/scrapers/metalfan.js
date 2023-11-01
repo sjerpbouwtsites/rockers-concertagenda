@@ -2,7 +2,6 @@
 import { parentPort, workerData } from 'worker_threads';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import puppeteer from 'puppeteer';
-import MusicEvent from '../mods/music-event.js';
 import { Location } from '../mods/locations.js';
 import EventsList from '../mods/events-list.js';
 import * as _t from '../mods/tools.js';
@@ -106,28 +105,26 @@ async function metalFanDoURL(page, url, qwm) {
 
   const musicEvents = eventData
     .map((eventDatum) => {
-      const thisMusicEvent = new MusicEvent(eventDatum);
       let locationName = Location.makeLocationSlug(eventDatum.eventLocationName);
-
       const watchForWeirdLocationNames = Object.keys(rename);
       if (watchForWeirdLocationNames.includes(locationName)) {
         locationName = watchForWeirdLocationNames[locationName];
       }
 
       const image = `../public/location-images/${locationName}`;
-      thisMusicEvent.image = image;
+      eventDatum.image = image;
 
       if (skipWithMetalfan.includes(locationName)) {
         return null;
       }
-      thisMusicEvent.location = locationName;
-      return thisMusicEvent;
+      eventDatum.location = locationName;
+      return eventDatum;
     })
     .filter((musicEvent) => musicEvent && musicEvent.location)
     .filter((musicEvent) => !skipWithMetalfan.includes(musicEvent.location));
 
   musicEvents.forEach((musicEvent) => {
-    musicEvent.register();
+    EventsList.addEvent(musicEvent);
   });
 
   return true;

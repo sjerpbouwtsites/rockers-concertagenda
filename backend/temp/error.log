@@ -1,4 +1,424 @@
 
+  undefined Error - 1:01:01 AM
+  Error: geen error
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:754:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:752:23)
+    at kavkaScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/kavka.js:251:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:512:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:118:5) 
+  geen error
+  
+  
+  undefined Error - 12:59:46 AM
+  Error: geen error
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:754:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:752:23)
+    at patronaatScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/patronaat.js:244:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:512:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:118:5) 
+  geen error
+  
+  
+  undefined Error - 12:59:36 AM
+  Error: geen el price
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:48:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:34:12)
+    at async neushoornScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/neushoorn.js:198:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:512:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:118:5) 
+  geen el price
+  
+  
+  undefined Error - 12:59:35 AM
+  Error: geen error
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:754:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:752:23)
+    at patronaatScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/patronaat.js:244:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:512:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:118:5) 
+  geen error
+  
+  
+  undefined Error - 12:57:38 AM
+  Error: geen error
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:754:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:752:23)
+    at patronaatScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/patronaat.js:244:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:512:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:118:5) 
+  geen error
+  
+  
+  undefined Error - 12:57:30 AM
+  Error: geen error
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:754:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:752:23)
+    at patronaatScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/patronaat.js:244:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:512:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:118:5) 
+  geen error
+  
+  
+  metalfan-0 Error - 12:57:25 AM
+  TypeError: musicEvent.register is not a function
+    at file:///var/www/html/concertagenda/backend/scrapers/metalfan.js:127:16
+    at Array.forEach (<anonymous>)
+    at metalFanDoURL (file:///var/www/html/concertagenda/backend/scrapers/metalfan.js:126:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getBaseMusicEvents (file:///var/www/html/concertagenda/backend/scrapers/metalfan.js:135:3)
+    at async scrapeMetalfan (file:///var/www/html/concertagenda/backend/scrapers/metalfan.js:144:5) 
+  musicEvent.register is not a function
+  
+  
+  undefined Error - 12:56:19 AM
+  Error: geen el price
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:48:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:34:12)
+    at async neushoornScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/neushoorn.js:198:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:512:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:118:5) 
+  geen el price
+  
+  
+  undefined Error - 12:55:51 AM
+  Error: geen error
+    at file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:754:30
+    at Array.forEach (<anonymous>)
+    at AbstractScraper.singlePageEnd (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:752:23)
+    at kavkaScraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/kavka.js:251:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:512:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:118:5) 
+  geen error
+  
+  
+  melkweg-1 Error - 12:52:23 AM
+  TypeError: Cannot read properties of undefined (reading 'split')
+    at AbstractScraper.titelShorttextPostfix (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:652:34)
+    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:530:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:118:5) 
+  Cannot read properties of undefined (reading 'split')
+  
+  
+  doornroosje-1 Error - 12:52:23 AM
+  TypeError: Cannot read properties of undefined (reading 'split')
+    at AbstractScraper.titelShorttextPostfix (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:652:34)
+    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:530:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:118:5) 
+  Cannot read properties of undefined (reading 'split')
+  
+  
+  metropool-0 Error - 12:52:22 AM
+  TypeError: Cannot read properties of undefined (reading 'split')
+    at AbstractScraper.titelShorttextPostfix (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:652:34)
+    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:530:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:118:5) 
+  Cannot read properties of undefined (reading 'split')
+  
+  
+  paradiso-0 Error - 12:52:21 AM
+  TypeError: Cannot read properties of undefined (reading 'split')
+    at AbstractScraper.titelShorttextPostfix (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:652:34)
+    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:530:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:118:5) 
+  Cannot read properties of undefined (reading 'split')
+  
+  
+  gebouw-t-0 Error - 12:52:19 AM
+  TypeError: Cannot read properties of undefined (reading 'split')
+    at AbstractScraper.titelShorttextPostfix (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:652:34)
+    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:530:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:118:5) 
+  Cannot read properties of undefined (reading 'split')
+  
+  
+  afaslive-0 Error - 12:52:19 AM
+  TypeError: Cannot read properties of undefined (reading 'split')
+    at AbstractScraper.titelShorttextPostfix (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:652:34)
+    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:530:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:118:5) 
+  Cannot read properties of undefined (reading 'split')
+  
+  
+  metropool-2 Error - 12:52:19 AM
+  TypeError: Cannot read properties of undefined (reading 'split')
+    at AbstractScraper.titelShorttextPostfix (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:652:34)
+    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:530:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:118:5) 
+  Cannot read properties of undefined (reading 'split')
+  
+  
+  doornroosje-0 Error - 12:52:16 AM
+  TypeError: Cannot read properties of undefined (reading 'split')
+    at AbstractScraper.titelShorttextPostfix (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:652:34)
+    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:530:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:118:5) 
+  Cannot read properties of undefined (reading 'split')
+  
+  
+  metropool-1 Error - 12:52:15 AM
+  TypeError: Cannot read properties of undefined (reading 'split')
+    at AbstractScraper.titelShorttextPostfix (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:652:34)
+    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:530:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:118:5) 
+  Cannot read properties of undefined (reading 'split')
+  
+  
+  gebrdenobel-0 Error - 12:52:15 AM
+  TypeError: Cannot read properties of undefined (reading 'split')
+    at AbstractScraper.titelShorttextPostfix (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:652:34)
+    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:530:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:118:5) 
+  Cannot read properties of undefined (reading 'split')
+  
+  
+  paradiso-1 Error - 12:52:13 AM
+  TypeError: Cannot read properties of undefined (reading 'split')
+    at AbstractScraper.titelShorttextPostfix (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:652:34)
+    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:530:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:118:5) 
+  Cannot read properties of undefined (reading 'split')
+  
+  
+  doornroosje-1 Error - 12:49:03 AM
+  TypeError: singleEvent.merge is not a function
+    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:118:5) 
+  singleEvent.merge is not a function
+  
+  
+  paradiso-1 Error - 12:49:02 AM
+  TypeError: singleEvent.merge is not a function
+    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:118:5) 
+  singleEvent.merge is not a function
+  
+  
+  metropool-0 Error - 12:49:01 AM
+  TypeError: singleEvent.merge is not a function
+    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:118:5) 
+  singleEvent.merge is not a function
+  
+  
+  gebouw-t-0 Error - 12:49:01 AM
+  TypeError: singleEvent.merge is not a function
+    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:118:5) 
+  singleEvent.merge is not a function
+  
+  
+  gebrdenobel-0 Error - 12:49:00 AM
+  TypeError: singleEvent.merge is not a function
+    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:118:5) 
+  singleEvent.merge is not a function
+  
+  
+  afaslive-0 Error - 12:48:59 AM
+  TypeError: singleEvent.merge is not a function
+    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:118:5) 
+  singleEvent.merge is not a function
+  
+  
+  metropool-2 Error - 12:48:58 AM
+  TypeError: singleEvent.merge is not a function
+    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:118:5) 
+  singleEvent.merge is not a function
+  
+  
+  paradiso-0 Error - 12:48:57 AM
+  TypeError: singleEvent.merge is not a function
+    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:118:5) 
+  singleEvent.merge is not a function
+  
+  
+  dbs-1 Error - 12:48:46 AM
+  ReferenceError: MusicEvent is not defined
+    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:34)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:118:5) 
+  MusicEvent is not defined
+  
+  
+  tivolivredenburg-0 Error - 12:48:45 AM
+  ReferenceError: MusicEvent is not defined
+    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:34)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:118:5) 
+  MusicEvent is not defined
+  
+  
+  dynamo-0 Error - 12:48:43 AM
+  ReferenceError: MusicEvent is not defined
+    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:34)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:118:5) 
+  MusicEvent is not defined
+  
+  
+  p60-0 Error - 12:48:42 AM
+  ReferenceError: MusicEvent is not defined
+    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:34)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:118:5) 
+  MusicEvent is not defined
+  
+  
+  effenaar-0 Error - 12:48:42 AM
+  ReferenceError: MusicEvent is not defined
+    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:34)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:118:5) 
+  MusicEvent is not defined
+  
+  
+  boerderij-0 Error - 12:48:41 AM
+  ReferenceError: MusicEvent is not defined
+    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:34)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:118:5) 
+  MusicEvent is not defined
+  
+  
+  tivolivredenburg-3 Error - 12:48:39 AM
+  ReferenceError: MusicEvent is not defined
+    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:34)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:118:5) 
+  MusicEvent is not defined
+  
+  
+  patronaat-0 Error - 12:48:38 AM
+  ReferenceError: MusicEvent is not defined
+    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:34)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:118:5) 
+  MusicEvent is not defined
+  
+  
+  occii-0 Error - 12:48:37 AM
+  ReferenceError: MusicEvent is not defined
+    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:34)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:118:5) 
+  MusicEvent is not defined
+  
+  
+  metropool-2 Error - 12:48:36 AM
+  ReferenceError: MusicEvent is not defined
+    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:34)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:118:5) 
+  MusicEvent is not defined
+  
+  
+  metropool-1 Error - 12:48:33 AM
+  ReferenceError: MusicEvent is not defined
+    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:34)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:118:5) 
+  MusicEvent is not defined
+  
+  
+  doornroosje-1 Error - 12:48:31 AM
+  ReferenceError: MusicEvent is not defined
+    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:34)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:118:5) 
+  MusicEvent is not defined
+  
+  
+  paradiso-1 Error - 12:48:30 AM
+  ReferenceError: MusicEvent is not defined
+    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:34)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:118:5) 
+  MusicEvent is not defined
+  
+  
+  afaslive-0 Error - 12:48:30 AM
+  ReferenceError: MusicEvent is not defined
+    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:34)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:118:5) 
+  MusicEvent is not defined
+  
+  
+  metropool-0 Error - 12:48:28 AM
+  ReferenceError: MusicEvent is not defined
+    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:34)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:118:5) 
+  MusicEvent is not defined
+  
+  
+  paradiso-0 Error - 12:48:28 AM
+  ReferenceError: MusicEvent is not defined
+    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:34)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:118:5) 
+  MusicEvent is not defined
+  
+  
+  gebouw-t-0 Error - 12:48:26 AM
+  ReferenceError: MusicEvent is not defined
+    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:34)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:118:5) 
+  MusicEvent is not defined
+  
+  
+  gebrdenobel-0 Error - 12:48:26 AM
+  ReferenceError: MusicEvent is not defined
+    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:34)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:118:5) 
+  MusicEvent is not defined
+  
+  
+  doornroosje-0 Error - 12:48:25 AM
+  ReferenceError: MusicEvent is not defined
+    at AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:524:34)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:118:5) 
+  MusicEvent is not defined
+  
+  
   undefined Error - 12:18:31 AM
   Error: geen el price
     at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:48:19)

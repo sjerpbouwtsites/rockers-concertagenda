@@ -1,8 +1,6 @@
 [
   {
-    "door": null,
     "start": "2023-11-02T08:00:00",
-    "end": null,
     "venueEventUrl": "https://www.dbstudio.nl/event/iggys-furious-fifty-fissa/",
     "title": "Iggy’s Furious Fifty Fissa",
     "location": "dbs",
@@ -10,8 +8,17 @@
     "shortText": "grunge, metal, stoner",
     "longText": "../public/texts/dbs/ZW50L2lnZ3lzLWZ1cmlvdXMtZmlmdHktZmlzc2Ev.html",
     "image": "../public/event-images/dbs/ZW50L2lnZ3lzLWZ1cmlvdXMtZmlmdHktZmlzc2Ev",
-    "soldOut": null,
-    "unavailable": false,
-    "corrupted": null
+    "unavailable": false
+  },
+  {
+    "start": "2023-12-09T08:00:00",
+    "end": "2023-12-09T10:00:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/hackedepicciotto/",
+    "title": "Hackedepicciotto",
+    "location": "dbs",
+    "shortText": "db's locatieshow, electronics, experimenteel, folk, krautrock, progressive",
+    "longText": "../public/texts/dbs/ZGlvLm5sL2V2ZW50L2hhY2tlZGVwaWNjaW90dG8v.html",
+    "image": "../public/event-images/dbs/ZGlvLm5sL2V2ZW50L2hhY2tlZGVwaWNjaW90dG8v",
+    "unavailable": false
   }
 ]

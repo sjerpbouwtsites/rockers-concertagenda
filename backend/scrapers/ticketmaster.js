@@ -33,7 +33,6 @@ const ticketmasterScraper = new AbstractScraper({
       useCustomScraper: true,
 
       requiredProperties: [],
-      enforceMusicEventType: false,
     },
     singlePage: {
       useCustomScraper: true,

@@ -23,7 +23,6 @@ export default class ScraperConfig {
       mainPage: {
         // make base events
         requiredProperties: [], // waarop base events worden gecontroleerd
-        enforceMusicEventType: true, // geeft MusicEvent opdracht om properties te trimmen
         useCustomScraper: false, // geen puppeteer, geen page aangemaakt
         asyncCheck: ['refused', 'allowed', 'forbidden-terms', 'good-terms'],
       },
@@ -31,7 +30,6 @@ export default class ScraperConfig {
         // get page info
         useCustomScraper: null, // geen puppeteer, geen page aangemaakt
         requiredProperties: [], // waarop page Info word gecontroleerd
-        enforceMusicEventType: false, // geeft MusicEvent opdracht om properties te trimmen.
       },
     },
   };

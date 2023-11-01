@@ -8,7 +8,6 @@ import { QuickWorkerMessage } from '../../mods/rock-worker.js';
 import fsDirections from '../../mods/fs-directions.js';
 import * as _t from '../../mods/tools.js';
 import EventsList from '../../mods/events-list.js';
-import MusicEvent from '../../mods/music-event.js';
 import getVenueMonths from '../../mods/months.js';
 import ErrorWrapper from '../../mods/error-wrapper.js';
 import makeLongHTML from './longHTML.js';
@@ -256,7 +255,6 @@ export default class AbstractScraper extends ScraperConfig {
    * haalt rawEvents door isMusicEventCorruptedMapper en returned
    *
    * @param {stopFunctie timeout, page Puppeteer.Page, rawEvents {}<>}
-   * @return {MusicEvent[]}
    * @memberof AbstractScraper
    */
   async mainPageEnd({ stopFunctie, page, rawEvents }) {
@@ -303,10 +301,6 @@ export default class AbstractScraper extends ScraperConfig {
       origin: workerData.family,
     }));
     
-    if (this._s.app.mainPage.enforceMusicEventType) {
-      return r.map((event) => new MusicEvent(event));
-    }
-    
     return r;
   }
 
@@ -321,13 +315,11 @@ export default class AbstractScraper extends ScraperConfig {
    * // TODO maak aparte property 'check for afgelastetc'. Bij https://gebrdenobel.nl/programma/nazareth-14-dec-2022/
    * // bv staat 'afgelast' in de soort van titelbalk maar niet helemaal.
    *
-   * @param {MusicEvent} musicEvent
    * @return {boolean}
    * @memberof AbstractScraper
    */
   isMusicEventCorruptedMapper = (musicEvent) => {
     const s = this._s;
-    this.dirtyLog(s);
     const requiredProperties = !this.completedMainPage
       ? s.app.mainPage?.requiredProperties
       : s.app.singlePage?.requiredProperties;
@@ -369,8 +361,7 @@ export default class AbstractScraper extends ScraperConfig {
    * Kondigt begin taak aan aan monitor
    * Initeert de generator check op events
    *
-   * @param {[MusicEvents]} baseMusicEvents uitgedraaid door mainPage
-   * @return {checkedEvents [MusicEvent]}  Want geeft werk van rawEventsAsyncCheck door.
+   * @return {checkedEvents [events]}  Want geeft werk van rawEventsAsyncCheck door.
    * @memberof AbstractScraper
    *
    * checkedEvents
@@ -454,8 +445,8 @@ export default class AbstractScraper extends ScraperConfig {
   /**
    * abstracte methode, te overschrijve in de kindWorkers.
    *
-   * @param {MusicEvent} event om te controleren
-   * @return {event {MusicEvent, success bool}}
+   * @param event om te controleren
+   * @return {event {singes, success bool}}
    * @memberof AbstractScraper
    */
   async mainPageAsyncCheck(event) {
@@ -481,8 +472,6 @@ export default class AbstractScraper extends ScraperConfig {
    * step 3
    *
    * @recursive
-   * @param {checkedEvents MusicEvents[]}
-   * @return {Promise<checkedEvents MusicEvents[]>}
    * @memberof AbstractScraper
    */
   async processSingleMusicEvent(eventsList = []) {
@@ -490,7 +479,7 @@ export default class AbstractScraper extends ScraperConfig {
     const useableEventsList = eventsList.map((a) => a);
     if (useableEventsList.length === 0) return useableEventsList;
 
-    let singleEvent = useableEventsList.shift();
+    const singleEvent = useableEventsList.shift();
 
     parentPort.postMessage(this.qwm.todoNew(useableEventsList.length));
 
@@ -526,32 +515,30 @@ export default class AbstractScraper extends ScraperConfig {
       event: singleEvent,
     });
 
-    // als single event nog music event moet worden.
-    if (!(singleEvent instanceof MusicEvent)) {
-      singleEvent = new MusicEvent(singleEvent);
-    }
-
     // samenvoegen & naar EventsList sturen
-    singleEvent.merge(pageInfo);
+    let mergedEvent = {
+      ...singleEvent,
+      ...pageInfo,
+    };
 
     // titel / shortext postfix
-    singleEvent = this.titelShorttextPostfix(singleEvent);
+    mergedEvent = this.titelShorttextPostfix(mergedEvent);
 
     // check op properties vanuit single page
-    singleEvent = this.isMusicEventCorruptedMapper(singleEvent);
+    mergedEvent = this.isMusicEventCorruptedMapper(mergedEvent);
 
-    if (singleEvent.corrupted || singleEvent.unavailable) {
-      // singleEvent.registerINVALID(this.workerData); TODO HERACTIVIEREN
-      if (singleEvent.corrupted) {
+    if (mergedEvent.corrupted || mergedEvent.unavailable) {
+      // mergedEvent.registerINVALID(this.workerData); TODO HERACTIVIEREN
+      if (mergedEvent.corrupted) {
         this.dirtyDebug({
-          title: `💀 ${singleEvent.corrupted}`,
-          event: `<a class='single-event-check-notice single-event-check-notice--failure' href='${singleEvent.venueEventUrl}'>${singleEvent.title}</a> Corr.`,
+          title: `💀 ${mergedEvent.corrupted}`,
+          event: `<a class='single-event-check-notice single-event-check-notice--failure' href='${mergedEvent.venueEventUrl}'>${mergedEvent.title}</a> Corr.`,
         });
       }
-      if (singleEvent.unavailable) {
+      if (mergedEvent.unavailable) {
         this.dirtyDebug({
-          title: `😣 ${singleEvent.unavailable}`,
-          event: `<a class='single-event-check-notice single-event-check-notice--failure' href='${singleEvent.venueEventUrl}'>${singleEvent.title}</a> Unav.`,
+          title: `😣 ${mergedEvent.unavailable}`,
+          event: `<a class='single-event-check-notice single-event-check-notice--failure' href='${mergedEvent.venueEventUrl}'>${mergedEvent.title}</a> Unav.`,
         });
       }
 
@@ -564,11 +551,9 @@ export default class AbstractScraper extends ScraperConfig {
         : useableEventsList;
     }
 
-    singleEvent.longText = this.writeLongTextHTML(singleEvent);
+    mergedEvent.longText = this.writeLongTextHTML(mergedEvent);
 
-    // this.dirtyLog(singleEvent, `singleEventBeforeMergedCheck`);
-
-    const mergedEventCheckRes = await this.singlePageAsyncCheck(singleEvent, pageInfo);
+    const mergedEventCheckRes = await this.singlePageAsyncCheck(mergedEvent, pageInfo);
     if (mergedEventCheckRes.success) {
       if (debugSettings.debugsinglePageAsyncCheck && mergedEventCheckRes.reason) {
         this.dirtyDebug({
@@ -578,28 +563,26 @@ export default class AbstractScraper extends ScraperConfig {
         });
       }
 
-      // this.dirtyLog(singleEvent, `singleEventAfterMergedCheckSuccess`);
-      
       let tryEnforceDate = false;
       try {
-        tryEnforceDate = new Date(singleEvent.start).toISOString();
+        tryEnforceDate = new Date(mergedEvent.start).toISOString();
       } catch (error) { /* */ }
 
-      if (tryEnforceDate && !singleEvent.unavailable && !singleEvent.corrupted) {
+      if (tryEnforceDate && !mergedEvent.unavailable && !mergedEvent.corrupted) {
         const toRegister = {
-          door: singleEvent.door,
-          start: singleEvent.start,      
-          end: singleEvent.end,      
-          venueEventUrl: singleEvent.venueEventUrl,      
-          title: singleEvent.title,      
-          location: singleEvent.location,      
-          price: singleEvent.price,      
-          shortText: singleEvent.shortText,      
-          longText: singleEvent.longText,      
-          image: singleEvent.image,      
-          soldOut: singleEvent.soldOut,      
-          unavailable: singleEvent.unavailable,
-          corrupted: singleEvent.corrupted,
+          door: mergedEvent.door,
+          start: mergedEvent.start,      
+          end: mergedEvent.end,      
+          venueEventUrl: mergedEvent.venueEventUrl,      
+          title: mergedEvent.title,      
+          location: mergedEvent.location,      
+          price: mergedEvent.price,      
+          shortText: mergedEvent.shortText,      
+          longText: mergedEvent.longText,      
+          image: mergedEvent.image,      
+          soldOut: mergedEvent.soldOut,      
+          unavailable: mergedEvent.unavailable,
+          corrupted: mergedEvent.corrupted,
           // ...workerData,
         };
 
@@ -607,16 +590,14 @@ export default class AbstractScraper extends ScraperConfig {
       } else {
         this.dirtyDebug('invalid maar geen register invalid');
       }
-    } else {
-      if (debugSettings.debugsinglePageAsyncCheck && mergedEventCheckRes.reason) {
-        this.dirtyDebug({
-          title: 'Merged async check 👎',
-          event: `<a class='single-event-check-notice single-event-check-notice--failure' href='${mergedEventCheckRes.event.venueEventUrl}'>${mergedEventCheckRes.event.title}</a>`,
-          reason: mergedEventCheckRes.reason,
-        });
-      }
-      // singleEvent.registerINVALID(this.workerData); TODO Opnieuw activeren
+    } else if (debugSettings.debugsinglePageAsyncCheck && mergedEventCheckRes.reason) {
+      this.dirtyDebug({
+        title: 'Merged async check 👎',
+        event: `<a class='single-event-check-notice single-event-check-notice--failure' href='${mergedEventCheckRes.event.venueEventUrl}'>${mergedEventCheckRes.event.title}</a>`,
+        reason: mergedEventCheckRes.reason,
+      });
     }
+    // singleEvent.registerINVALID(this.workerData); TODO Opnieuw activeren
 
     if (singleEventPage && !singleEventPage.isClosed()) await singleEventPage.close();
 
@@ -786,8 +767,6 @@ export default class AbstractScraper extends ScraperConfig {
   /**
    * abstracte methode, te overschrijve in de kindWorkers.
    *
-   * @param {MusicEvent} event om te controleren
-   * @return {event {MusicEvent, success bool}}
    * @memberof AbstractScraper
    */
   async singlePageAsyncCheck(event) {
@@ -1104,7 +1083,6 @@ export default class AbstractScraper extends ScraperConfig {
    * kijkt naar 'voornaamste titel', dwz de event.title tot aan een '&'.
    *
    * @param {*} event
-   * @return {event: MusicEvent, success: boolean}
    * @memberof AbstractScraper
    */
   async isRock(event, overloadTitles = null, recursiveTitle = null) {
