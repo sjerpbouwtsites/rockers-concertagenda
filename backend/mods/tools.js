@@ -98,25 +98,6 @@ export function errorAfterSeconds(time = 10000) {
   });
 }
 
-export function textContainsForbiddenMusicTerms(text) {
-  return text.includes('pop')
-  || text.includes('indierock')
-  || text.includes('indiepop')
-  || text.includes('shoegaze')
-  || text.includes('swingende soul')
-  || text.includes('indie-pop');
-}
-
-export function textContainsHeavyMusicTerms(text) {
-  return text.includes('metal')
-  || text.includes('punk')
-  || text.includes('noise')
-  || text.includes('doom')
-  || text.includes('hardcore')
-  || text.includes('ska')
-  || text.includes('industrial');
-}
-
 const def = {
   handleError,
   errorAfterSeconds,
