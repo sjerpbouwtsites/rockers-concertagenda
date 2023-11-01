@@ -1,4 +1,6 @@
 import { Worker } from 'worker_threads';
+import passMessageToMonitor from '../monitor/pass-message-to-monitor.js';
+import WorkerMessage from "./worker-message.js";
 import shell from './shell.js';
 
 // @TODO
@@ -13,8 +15,16 @@ export default class RockWorker extends Worker {
     this.index = confObject.index;
   }
 
-  get workerName() {
-    console.warn('OUDE METHODE');
-    return this.name;
+  start() {
+    this.postMessage(WorkerMessage.quick('process', 'command-start'));
+  }
+
+  /**
+ * @param {Worker} thisWorker instantiated worker with path etc
+ */
+  static addWorkerMessageHandler(thisWorker) {
+    thisWorker.on('message', (message) => {
+      passMessageToMonitor(message, thisWorker.name);
+    });
   }
 }

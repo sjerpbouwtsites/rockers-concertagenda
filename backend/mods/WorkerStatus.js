@@ -150,6 +150,7 @@ export default class WorkerStatus {
     if (statusses.includes('done')) {
       thisWorker.status = 'done';
       thisWorker.todo = 0;
+      thisWorker.workerRef.unref();
       WorkerStatus.completedWorkers += 1;
     }
 
