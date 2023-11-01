@@ -32,7 +32,7 @@ export default class WorkerStatus {
 
   static CPUFree = 100;
 
-  static _maxSimultaneousWorkers = 3;
+  static _maxSimultaneousWorkers = 5;
 
   static get maxSimultaneousWorkers() {
     if (shell.workers) {
