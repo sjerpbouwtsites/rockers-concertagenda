@@ -23,15 +23,11 @@ async function startWorker(workerConfig) {
 
   const toManyWorkersWorking = WorkerStatus.workersWorking() >= WorkerStatus.maxSimultaneousWorkers;
   if (toManyWorkersWorking) {
-    //  console.log('to many workers');
     await waitTime(200);
     return startWorker(workerConfig);
   }
 
   const thisConfig = workerConfig.get();
-  if (!thisConfig?.family) {
-    console.log(thisConfig);
-  }
   const workingThisFamily = WorkerStatus.workersWorkingOfFamily(thisConfig.family);
   // als er veel ruimte is, voorkeur voor hoog cpu
   if (

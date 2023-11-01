@@ -1,9 +1,6 @@
 import { Worker } from 'worker_threads';
-import WorkerMessage from "./worker-message.js";
 import shell from './shell.js';
 import WorkerStatus from "./WorkerStatus.js";
-
-// @TODO
 
 export default class RockWorker extends Worker {
   static monitorWebsocketServer;
@@ -22,7 +19,10 @@ export default class RockWorker extends Worker {
   }
 
   start() {
-    this.postMessage(WorkerMessage.quick('process', 'command-start'));
+    this.postMessage(JSON.stringify({
+      type: 'process',
+      subtype: 'command-start',
+    }));
   }
 
   /**
@@ -37,8 +37,15 @@ export default class RockWorker extends Worker {
       // BOODSCHAPPEN VOOR DB
 
       // DE EIGENLIJKE BOODSCHAP NAAR MONITOR
-      const parsedMessage = JSON.parse(message);
-      parsedMessage.messageData.workerName = thisWorker.workerName; // TODO veel te veel bewerking
+      let parsedMessage;
+      try {
+        parsedMessage = JSON.parse(message);
+      } catch (error) {
+        console.log('fout parsen message rockWorker on message');
+        console.log(message);
+        throw error;
+      }
+      
       RockWorker.monitorWebsocketServer.broadcast(JSON.stringify(
         parsedMessage,
         null,

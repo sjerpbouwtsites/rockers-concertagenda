@@ -5,7 +5,6 @@ import fs from 'fs';
 import puppeteer from 'puppeteer';
 import fsDirections from '../../mods/fs-directions.js';
 // eslint-disable-next-line import/no-extraneous-dependencies
-import WorkerMessage from "../../mods/worker-message.js";
 import QuickWorkerMessage from "../../mods/quick-worker-message.js";
 import EventsList from '../../mods/events-list.js';
 import getVenueMonths from '../../mods/months.js';
@@ -1157,35 +1156,40 @@ export default class AbstractScraper extends ScraperConfig {
  */
   handleError(error, remarks = null, errorLevel = 'notify', toDebug = null) {
     // TODO link errors aan debugger
-    const updateErrorMsg = WorkerMessage.quick('update', 'error', {
-      content: {
+    const updateErrorMsg = {
+      type: 'update',
+      subtype: 'error',
+      messageData: {
         workerData,
         remarks,
         status: 'error',
         errorLevel,
         text: `${error?.message}\n${error?.stack}\nlevel:${errorLevel}`,
       },
-    });
-    const clientsLogMsg = WorkerMessage.quick('clients-log', 'error', {
-      error,
-      workerData,
-    });
+    }; 
+    
+    const clientsLogMsg = {
+      type: 'clients-log',
+      subtype: 'error',
+      messageData: { error, workerData },
+    };
     let debuggerMsg;
     if (toDebug) {
-      debuggerMsg = WorkerMessage.quick('update', 'debugger', {
-        remarks,
-        content: {
+      debuggerMsg = {
+        type: 'update',
+        subtype: 'debugger',
+        messageData: {
           workerData,
           debug: toDebug,
         },
-      });
+      };
       debuggerMsg.messageData.workerName = workerData.name;
     }
     updateErrorMsg.messageData.workerName = workerData.name;
     clientsLogMsg.messageData.workerName = workerData.name;
-    parentPort.postMessage(updateErrorMsg);
-    parentPort.postMessage(clientsLogMsg);
-    if (toDebug) parentPort.postMessage(debuggerMsg);
+    parentPort.postMessage(JSON.stringify(updateErrorMsg));
+    parentPort.postMessage(JSON.stringify(clientsLogMsg));
+    if (toDebug) parentPort.postMessage(JSON.stringify(debuggerMsg));
     if (debugSettings.debugWithTempFile) {
       const time = new Date();
       const curErrorLog = fs.readFileSync(fsDirections.errorLog) || '';
@@ -1219,14 +1223,16 @@ export default class AbstractScraper extends ScraperConfig {
   }
 
   handleOuterScrapeCatch(catchError) {
-    const updateErrorMsg = WorkerMessage.quick('update', 'error', {
-      content: {
+    const updateErrorMsg = {
+      type: 'update',
+      subtype: 'error',
+      messageData: {
         workerData,
         status: 'error',
         errorLevel: 'close-thread',
         text: `${catchError?.message}\n${catchError?.stack}\nlevel: close-thread`,
       },
-    });
+    }; 
 
     parentPort.postMessage(updateErrorMsg);
 

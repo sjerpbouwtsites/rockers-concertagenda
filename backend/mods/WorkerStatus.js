@@ -4,7 +4,6 @@ import os from 'os-utils';
 import EventsList from './events-list.js';
 import wsMessage from '../monitor/wsMessage.js';
 import fsDirections from './fs-directions.js';
-import QuickWorkerMessage from "./quick-worker-message.js";
 import { AbstractWorkerConfig, workerConfig } from './worker-config.js';
 import shell from './shell.js';
 
@@ -141,12 +140,6 @@ export default class WorkerStatus {
   }
 
   static change(name, status, message) {
-    console.log("change WorkerStatus");
-    console.log(`name: ${name}`);
-    console.log(`status: ${status}`);
-    console.log(`message: `);
-    console.log(message);
-
     const statusses = status?.split(' ') ?? '';
 
     const thisWorker = WorkerStatus._workers[name];
@@ -303,17 +296,9 @@ export default class WorkerStatus {
     const nowDateString = new Date();
     const nowDate = Number(nowDateString.toISOString().substring(0, 10).replace(/-/g, ''));
     const allEventListFiles = [];
-    const workerSignature = {
-      family: 'workerStatus',
-      index: 0,
-      name: `${'workerStatus-0'}`,
-      scraper: false, 
-    };
-    const qwm = new QuickWorkerMessage(workerSignature);
-
     Object.entries(workerConfig)
       .forEach(([familyName, { workerCount }]) => {
-        for (let i = 0; i < workerCount; i++) {
+        for (let i = 0; i < workerCount; i += 1) {
           const pad = `${pathToEventList}/${familyName}/${i}.json`;
           if (fs.existsSync(pad)) {
             allEventListFiles.push(pad);
