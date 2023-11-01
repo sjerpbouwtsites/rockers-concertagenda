@@ -62,26 +62,6 @@ export default class EventsList {
     return true;
   }
 
-  static guaranteeTimestampExistence() {
-    // TODO LEGACY
-    // if (EventsList.timestampsExistenceVerified) return true;
-    // if (!fs.existsSync(fsDirections.timestampsJson)) {
-    //   fs.writeFileSync(fsDirections.timestampsJson, JSON.stringify({}));
-    // } else {
-    //   try {
-    //     JSON.parse(fs.readFileSync(fsDirections.timestampsJson));
-    //   } catch (error) {
-    //     handleError(
-    //       error,
-    //       EventsList.workerSignature,
-    //       `timestamps konden niet gelezen worden als JSON. nieuwe timestamp json gemaakt`
-    //     );
-    //     fs.writeFileSync(fsDirections.timestampsJson, JSON.stringify({}));
-    //   }
-    // }
-    // return true;
-  }
-
   static merge(events) {
     events.forEach((event) => {
       EventsList.addEvent(event);
@@ -95,18 +75,4 @@ export default class EventsList {
   static addInvalidEvent(invalidEvent) {
     EventsList._invalidEvents.push(invalidEvent);
   }
-}
-
-function isIsoDate(str) {
-  if (!/\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}.\d{3}Z/.test(str)) return false;
-  const d = new Date(str);
-  return d.toISOString() === str;
-}
-
-function waitABit() {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve();
-    }, 500);
-  });
 }

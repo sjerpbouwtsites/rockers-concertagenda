@@ -1,6 +1,5 @@
 /* global document */
 import { workerData } from 'worker_threads';
-import * as _t from '../mods/tools.js';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/neushoorn.js';
 import getImage from './gedeeld/image.js';
@@ -96,11 +95,10 @@ neushoornScraper.mainPage = async function () {
     await page.waitForSelector('.productions__item', {
       timeout: this.singlePageTimeout,
     });
-    await _t.waitTime(50);
+    await this.waitTime(50);
   } catch (caughtError) {
-    _t.handleError(
+    this.handleError(
       caughtError,
-      workerData,
       'Laad en klikwachten timeout neushoorn',
       'close-thread',
       null,

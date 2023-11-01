@@ -3,7 +3,6 @@ import { workerData } from 'worker_threads';
 import longTextSocialsIframes from './longtext/afaslive.js';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import getImage from './gedeeld/image.js';
-import * as _t from '../mods/tools.js';
 import {
   mapToStartTime,
   combineDoorTimeStartDate,
@@ -80,23 +79,23 @@ afasliveScraper.mainPage = async function () {
 
   const { stopFunctie, page } = await this.mainPageStart();
 
-  await _t.autoScroll(page);
-  await _t.waitTime(750);
+  await this.autoScroll(page);
+  await this.waitTime(750);
 
-  await _t.autoScroll(page);
-  await _t.waitTime(750);
+  await this.autoScroll(page);
+  await this.waitTime(750);
 
-  await _t.autoScroll(page);
-  await _t.waitTime(750);
+  await this.autoScroll(page);
+  await this.waitTime(750);
 
-  await _t.autoScroll(page);
-  await _t.waitTime(750);
+  await this.autoScroll(page);
+  await this.waitTime(750);
 
-  await _t.autoScroll(page);
-  await _t.waitTime(750);
+  await this.autoScroll(page);
+  await this.waitTime(750);
 
   // TODO hier wat aan doen. maak er een do while van met een timeout. dit is waardeloos.
-  await _t.autoScroll(page);
+  await this.autoScroll(page);
 
   let rawEvents = await page.evaluate(
     // eslint-disable-next-line no-shadow
@@ -130,7 +129,7 @@ afasliveScraper.mainPage = async function () {
 afasliveScraper.singlePage = async function ({ page, event }) {
   const { stopFunctie } = await this.singlePageStart();
 
-  await _t.waitTime(250);
+  await this.waitTime(250);
 
   let pageInfo = await page.evaluate(
     // eslint-disable-next-line no-shadow

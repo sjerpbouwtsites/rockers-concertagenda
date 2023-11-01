@@ -3,7 +3,6 @@ import { workerData } from 'worker_threads';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/oosterpoort.js';
 import getImage from './gedeeld/image.js';
-import * as _t from '../mods/tools.js';
 import terms from './gedeeld/terms.js';
 
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
@@ -75,7 +74,7 @@ oostpoortScraper.mainPage = async function () {
 
   const { stopFunctie, page } = await this.mainPageStart();
 
-  await _t.waitTime(50);
+  await this.waitTime(50);
 
   const cookiesNodig = await page.evaluate(() =>
     document.querySelector('html').classList.contains('has-open-cookie'),
@@ -86,11 +85,11 @@ oostpoortScraper.mainPage = async function () {
       document.querySelector("[name*='marketing']").click();
       document.querySelector('.cookie__settings .cookie__process').click();
     });
-    await _t.waitTime(50);
+    await this.waitTime(50);
   }
 
-  await _t.autoScroll(page);
-  await _t.autoScroll(page);
+  await this.autoScroll(page);
+  await this.autoScroll(page);
 
   let rawEvents = await page.evaluate(
     // eslint-disable-next-line no-shadow
@@ -159,7 +158,7 @@ oostpoortScraper.singlePage = async function ({ page, event }) {
     });
   }
 
-  await _t.waitTime(1000);
+  await this.waitTime(1000);
 
   const pageInfo = await page
     .evaluate(
@@ -190,7 +189,7 @@ oostpoortScraper.singlePage = async function ({ page, event }) {
       { event },
     )
     .catch((caughtError) => {
-      _t.handleError(caughtError, workerData, 'pageInfo catch', 'notice', {
+      this.handleError(caughtError, 'pageInfo catch', 'notice', {
         event,
         pageInfo,
       });

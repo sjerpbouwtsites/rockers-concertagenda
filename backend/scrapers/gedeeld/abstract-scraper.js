@@ -1,12 +1,13 @@
 /* global document */
 // #region                                                 IMPORTS
-import { parentPort, workerData } from 'worker_threads';
+import { parentPort, workerData, isMainThread } from 'worker_threads';
 import fs from 'fs';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import puppeteer from 'puppeteer';
-import { QuickWorkerMessage } from '../../mods/rock-worker.js';
 import fsDirections from '../../mods/fs-directions.js';
-import * as _t from '../../mods/tools.js';
+import passMessageToMonitor from '../../monitor/pass-message-to-monitor.js';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import WorkerMessage from "../../mods/worker-message.js";
+import { QuickWorkerMessage } from '../../mods/rock-worker.js';
 import EventsList from '../../mods/events-list.js';
 import getVenueMonths from '../../mods/months.js';
 import makeLongHTML from './longHTML.js';
@@ -135,7 +136,7 @@ export default class AbstractScraper extends ScraperConfig {
     await this.saveEvents();
     await this.announceToMonitorDone();
     
-    await _t.waitTime(50);
+    await this.waitTime(50);
     process.exit();
   }
   // #endregion                                                 SCRAPE INIT & SCRAPE DIE
@@ -172,7 +173,7 @@ export default class AbstractScraper extends ScraperConfig {
   async saveBaseEventlist(key, data) {
     WorkerStatus.registerFamilyDoneWithBaseEvents(workerData.family);
     if (!data) {
-      _t.handleError(new Error(`No data in saveBaseEventList ${key}`), workerData, 'saveBaseEventList', 'close-thread');
+      this.handleError(new Error(`No data in saveBaseEventList ${key}`), 'saveBaseEventList', 'close-thread');
       return false;
     }
 
@@ -201,7 +202,7 @@ export default class AbstractScraper extends ScraperConfig {
     // @TODO 3 stopfuncties maken: 1 base events; 1 single; 1 totaal.
 
     const stopFunctie = setTimeout(() => {
-      _t.handleError(new Error('Timeout baseEvent'), workerData, `baseEvent ${workerData.name} overtijd. Max: ${this._s.mainPage.timeout}`, 'close-thread');
+      this.handleError(new Error('Timeout baseEvent'), `baseEvent ${workerData.name} overtijd. Max: ${this._s.mainPage.timeout}`, 'close-thread');
     }, this._s.mainPage.timeout);
 
     if (this._s.app.mainPage.useCustomScraper) {
@@ -252,11 +253,11 @@ export default class AbstractScraper extends ScraperConfig {
     const eventsWithLongHTMLShortText = rawEvents.map((event) => {
       if (event.longTextHTML) {
         // eslint-disable-next-line no-param-reassign
-        event.longTextHTML = _t.killWhitespaceExcess(event.longTextHTML);
+        event.longTextHTML = event.longTextHTML.replace(/\t{2,100}/g, '').replace(/\n{2,100}/g, '\n').replace(/\s{2,100}/g, ' ').trim();
       }
       if (event.shortText) {
         // eslint-disable-next-line no-param-reassign
-        event.shortText = _t.killWhitespaceExcess(event.shortText);
+        event.shortText = event.shortText.replace(/\t{2,100}/g, '').replace(/\n{2,100}/g, '\n').replace(/\s{2,100}/g, ' ').trim();
       }
       return event;
     });
@@ -342,7 +343,7 @@ export default class AbstractScraper extends ScraperConfig {
         checkedEvents,
       });
     } catch (error) {
-      _t.handleError(error, workerData, 'check error in abstract scraper announce and check', 'close-thread', baseMusicEvents);      
+      this.handleError(error, 'check error in abstract scraper announce and check', 'close-thread', baseMusicEvents);      
     }
   }
 
@@ -395,9 +396,8 @@ export default class AbstractScraper extends ScraperConfig {
         checkedEvents: useableEventsCheckedArray,
       });
     } catch (error) {
-      _t.handleError(
+      this.handleError(
         error,
-        workerData,
         `rawEventsAsyncCheck faal met ${generatedEvent?.value?.title}`,
         'close-thread',
         {
@@ -585,9 +585,8 @@ export default class AbstractScraper extends ScraperConfig {
       try {
         await page.goto(url, this.singlePage);
       } catch (error) {
-        _t.handleError(
+        this.handleError(
           error,
-          workerData,
           `Mislukken aanmaken <a class='single-page-failure error-link' href='${url}'>single pagina</a>`,
           'notice',
           url,
@@ -596,9 +595,8 @@ export default class AbstractScraper extends ScraperConfig {
 
       return page;
     } catch (error) {
-      _t.handleError(
+      this.handleError(
         error,
-        workerData,
         `Mislukken aanmaken <a class='single-page-failure error-link' href='${url}'>single pagina</a> wss duurt te lang`,
         'notice',
         null,
@@ -657,7 +655,7 @@ export default class AbstractScraper extends ScraperConfig {
    */
   async singlePageStart(event) {
     const stopFunctie = setTimeout(() => {
-      _t.handleError(new Error('Timeout baseEvent in single page start'), workerData, `<a href='${event?.venueEventUrl}' class='error-link get-page-info-timeout'>singlePage ${workerData.name} overtijd</a>.\nMax: ${this._s.singlePage.timeout}`, 'close-thread');
+      this.handleError(new Error('Timeout baseEvent in single page start'), `<a href='${event?.venueEventUrl}' class='error-link get-page-info-timeout'>singlePage ${workerData.name} overtijd</a>.\nMax: ${this._s.singlePage.timeout}`, 'close-thread');
     }, this._s.singlePage.timeout);
     return {
       stopFunctie,
@@ -702,13 +700,12 @@ export default class AbstractScraper extends ScraperConfig {
 
     pageInfo?.errors?.forEach((errorData) => {
       if (!(errorData?.error instanceof Error)) {
-        _t.handleError(new Error('error slecht gevormd'), workerData, 'error parameter ontbreekt of geen instanceof Error', 'notice', { title: 'slechte errorData', errorData });
+        this.handleError(new Error('error slecht gevormd'), 'error parameter ontbreekt of geen instanceof Error', 'notice', { title: 'slechte errorData', errorData });
         return;
       }
 
-      _t.handleError(
+      this.handleError(
         errorData.error, 
-        errorData?.workerData ?? null, 
         errorData?.remarks ?? 'geen remarks', 
         errorData?.errorLevel ?? 'notice',
         errorData?.toDebug ?? null,
@@ -907,7 +904,7 @@ export default class AbstractScraper extends ScraperConfig {
         return bandNamesAreMainTitle;
       })
       .catch((metalEncError) => {
-        _t.handleError(metalEncError, workerData, `<a href='${event?.venueEventUrl}' class='error-link get-page-info-timeout'>singlePage ${workerData.name} metal enc. error</a>`);
+        this.handleError(metalEncError, `<a href='${event?.venueEventUrl}' class='error-link get-page-info-timeout'>singlePage ${workerData.name} metal enc. error</a>`);
         return {
           event,
           success: false,
@@ -949,7 +946,7 @@ export default class AbstractScraper extends ScraperConfig {
       wikiPage = `https://en.wikipedia.org/wiki/${wikifiedTitled}`;
       await page.goto(wikiPage);
     } catch (error) {
-      _t.handleError(error, workerData, `<a href='${event?.venueEventUrl}' class='error-link get-page-info-timeout'>wikititel maken fout ${workerData.name}</a> ${workingTitle}`);
+      this.handleError(error, `<a href='${event?.venueEventUrl}' class='error-link get-page-info-timeout'>wikititel maken fout ${workerData.name}</a> ${workingTitle}`);
     }
 
     const pageDoesNotExist = await page.evaluate(() => document.getElementById('noarticletext'));
@@ -1092,7 +1089,7 @@ export default class AbstractScraper extends ScraperConfig {
         workingTitle = workingTitle.replace(/^[\w\s]+:/, '');
       }
     } catch (error) {
-      _t.handleError(error, workerData, 'fout schoonmaken titel');
+      this.handleError(error, 'fout schoonmaken titel');
       return 'TITEL SCHOONMAKEN MISLUKT';
     }
 
@@ -1127,7 +1124,7 @@ export default class AbstractScraper extends ScraperConfig {
 
       return longTextPath;
     } catch (err) {
-      _t.handleError(err, workerData, 'write long text fail', 'notice', {
+      this.handleError(err, 'write long text fail', 'notice', {
         path: `${fsDirections.publicTexts}/${mergedEvent.location}/${base64String}.html`,
         text: toPrint,
       });
@@ -1150,14 +1147,109 @@ export default class AbstractScraper extends ScraperConfig {
     return true;
   }
 
-  handleOuterScrapeCatch(catchError) {
-    _t.handleError(
-      catchError,
+  /**
+ * handleError, generic error handling for all scrapers
+ * passes a marked up error to the monitor
+ * adds error to the errorLog in temp.
+ * @param {Error} error
+ * @param {string} remarks Add some remarks to help you find back the origin of the error.
+ * @param {string} errorLevel notify, close-thread, close-app
+ * @param {*} toDebug gaat naar debugger.
+ */
+  handleError(error, remarks = null, errorLevel = 'notify', toDebug = null) {
+    // TODO link errors aan debugger
+    const updateErrorMsg = WorkerMessage.quick('update', 'error', {
+      content: {
+        workerData,
+        remarks,
+        status: 'error',
+        errorLevel,
+        text: `${error?.message}\n${error?.stack}\nlevel:${errorLevel}`,
+      },
+    });
+    const clientsLogMsg = WorkerMessage.quick('clients-log', 'error', {
+      error,
       workerData,
-      `outer catch scrape ${workerData.family}`,
-      'close-thread',
-      null,
-    );
+    });
+    let debuggerMsg;
+    if (toDebug) {
+      debuggerMsg = WorkerMessage.quick('update', 'debugger', {
+        remarks,
+        content: {
+          workerData,
+          debug: toDebug,
+        },
+      });
+    }
+    if (isMainThread) {
+      passMessageToMonitor(updateErrorMsg, workerData.name);
+      passMessageToMonitor(clientsLogMsg, workerData.name);
+      if (toDebug) passMessageToMonitor(debuggerMsg, workerData.name);
+    } else {
+      parentPort.postMessage(updateErrorMsg);
+      parentPort.postMessage(clientsLogMsg);
+      if (toDebug) parentPort.postMessage(debuggerMsg);
+    }
+    const time = new Date();
+    const curErrorLog = fs.readFileSync(fsDirections.errorLog) || '';
+    const newErrorLog = `
+    ${workerData?.name} Error - ${time.toLocaleTimeString()}
+    ${error?.stack ?? 'geen stack'} 
+    ${error?.message ?? 'geen message'}
+    
+    ${curErrorLog}`;
+  
+    fs.writeFileSync(fsDirections.errorLog, newErrorLog, 'utf-8');
+  }  
+
+  async autoScroll(page) {
+    await page.evaluate(async () => {
+      await new Promise((resolve) => {
+        let totalHeight = 0;
+        const distance = 500;
+        const timer = setInterval(() => {
+          const { scrollHeight } = document.body;
+          // eslint-disable-next-line no-undef
+          window.scrollBy(0, distance);
+          totalHeight += distance;
+  
+          if (totalHeight >= scrollHeight) {
+            clearInterval(timer);
+            resolve();
+          }
+        }, 150);
+      });
+    });
+  }
+
+  handleOuterScrapeCatch(catchError) {
+    const updateErrorMsg = WorkerMessage.quick('update', 'error', {
+      content: {
+        workerData,
+        status: 'error',
+        errorLevel: 'close-thread',
+        text: `${catchError?.message}\n${catchError?.stack}\nlevel: close-thread`,
+      },
+    });
+
+    if (isMainThread) {
+      passMessageToMonitor(updateErrorMsg, workerData.name);
+    } else {
+      parentPort.postMessage(updateErrorMsg);
+    }
+
+    // this.handleError(
+    //   catchError,
+    //   `outer catch scrape ${workerData.family}`,
+    //   'close-thread',
+    //   null,
+    // );
+  }
+
+  async waitTime(wait = 500) {
+    return new Promise((res) => {
+      setTimeout(res, wait);
+    });
   }
 
   // step 6

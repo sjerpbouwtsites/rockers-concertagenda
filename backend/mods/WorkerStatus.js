@@ -8,7 +8,6 @@ import QuickWorkerMessage from "./quick-worker-message.js";
 import passMessageToMonitor from '../monitor/pass-message-to-monitor.js';
 import { AbstractWorkerConfig, workerConfig } from './worker-config.js';
 import shell from './shell.js';
-import * as _t from './tools.js';
 
 export function AbstractWorkerData() {
   return {
@@ -203,8 +202,9 @@ export default class WorkerStatus {
         WorkerStatus.mwss.broadcast(serverStoptBoodschap.json);
         WorkerStatus.mwss.broadcast(serverStoptProcess.json);
       }
-      await _t.waitTime(25);
-      process.exit();
+      setTimeout(() => {
+        process.exit();
+      }, 25);
     } else if (errorLevel === 'close-thread') {
       console.log(
         `%cSTOPPING THREAD\n of ${name}`,

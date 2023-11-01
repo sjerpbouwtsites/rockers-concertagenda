@@ -4,7 +4,6 @@ import { parentPort, workerData } from 'worker_threads';
 import puppeteer from 'puppeteer';
 import { Location } from '../mods/locations.js';
 import EventsList from '../mods/events-list.js';
-import * as _t from '../mods/tools.js';
 import { QuickWorkerMessage } from '../mods/rock-worker.js';
 import getVenueMonths from '../mods/months.js';
 import { workerConfig } from '../mods/worker-config.js';
@@ -146,7 +145,7 @@ async function scrapeMetalfan() {
     EventsList.save('metalfan');
     browser.close();
   } catch (error) {
-    _t.handleError(error, workerData, 'metal fan outer catch', 'close-thread', null);
+    this.handleError(error, 'metal fan outer catch', 'close-thread', null);
   }
 }
 parentPort.on('message', (message) => {

@@ -1,10 +1,8 @@
 /* global document */
 import { workerData } from 'worker_threads';
-import * as _t from '../mods/tools.js';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/volt.js';
 import getImage from './gedeeld/image.js';
-import { waitTime } from '../mods/tools.js';
 import terms from './gedeeld/terms.js';
 
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
@@ -93,7 +91,7 @@ voltScraper.mainPage = async function () {
       this.saveBaseEventlist(workerData.family, []);
       return this.mainPageEnd({ stopFunctie, rawEvents: [] });
     } 
-    _t.handleError(error, workerData, 'Volt wacht op laden eventlijst', 'close-thread', null);
+    this.handleError(error, 'Volt wacht op laden eventlijst', 'close-thread', null);
   }
 
   let rawEvents = await page.evaluate(
@@ -150,7 +148,7 @@ voltScraper.singlePage = async function ({ page, url, event }) {
     await page.evaluate(() => {
       document.querySelector('.cookiesjsr-btn.allowAll').click();
     });
-    await waitTime(1500);
+    await this.waitTime(1500);
   }
 
   const pageInfo = await page.evaluate(

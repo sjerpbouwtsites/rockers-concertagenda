@@ -1,6 +1,5 @@
 /* global document */
 import { workerData } from 'worker_threads';
-import * as _t from '../mods/tools.js';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/iduna.js';
 import getImage from './gedeeld/image.js';
@@ -83,7 +82,8 @@ idunaScraper.mainPage = async function () {
   const { stopFunctie, page } = await this.mainPageStart();
 
   let rawEvents = await page.evaluate(
-    ({ workerData, unavailabiltyTerms }) => {
+    // eslint-disable-next-line no-shadow
+    ({ unavailabiltyTerms }) => {
       const events = Array.from(
         document.querySelectorAll('[data-genre*="metal"], [data-genre*="punk"]'),
       ).map((rawEvent) => {

@@ -1,6 +1,5 @@
 /* global document */
 import { workerData } from 'worker_threads';
-import * as _t from '../mods/tools.js';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/doornroosje.js';
 import getImage from './gedeeld/image.js';
@@ -92,7 +91,7 @@ doornroosjeScraper.mainPage = async function () {
   const { stopFunctie, page } = await this.mainPageStart();
 
   await page.waitForSelector('.c-program__title');
-  await _t.waitTime(50);
+  await this.waitTime(50);
 
   let rawEvents = await page.evaluate(
     // eslint-disable-next-line no-shadow
@@ -155,7 +154,7 @@ doornroosjeScraper.mainPage = async function () {
       return rawEvent;
     });
   } catch (dateMapError) {
-    _t.handleError(dateMapError, workerData, 'startDate rawEvents mapper');
+    this.handleError(dateMapError, 'startDate rawEvents mapper');
   }
 
   rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);

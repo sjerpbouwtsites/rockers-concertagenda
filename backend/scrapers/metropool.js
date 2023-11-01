@@ -1,6 +1,5 @@
 /* global document */
 import { workerData } from 'worker_threads';
-import * as _t from '../mods/tools.js';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/metropool.js';
 import getImage from './gedeeld/image.js';
@@ -82,10 +81,10 @@ metropoolScraper.mainPage = async function () {
 
   const { stopFunctie, page } = await this.mainPageStart();
 
-  await _t.autoScroll(page);
-  await _t.autoScroll(page);
-  await _t.autoScroll(page);
-  await _t.autoScroll(page);
+  await this.autoScroll(page);
+  await this.autoScroll(page);
+  await this.autoScroll(page);
+  await this.autoScroll(page);
 
   let rawEvents = await page.evaluate(
     // eslint-disable-next-line no-shadow

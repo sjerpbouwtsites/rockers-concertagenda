@@ -4,7 +4,6 @@ import { workerData } from 'worker_threads';
 import longTextSocialsIframes from './longtext/gebrdenobel.js';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import getImage from './gedeeld/image.js';
-import { waitTime } from '../mods/tools.js';
 import terms from './gedeeld/terms.js';
 
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
@@ -198,7 +197,7 @@ gebrdenobelScraper.cookiesNodig = async function (page) {
 
     await page.evaluate(() => document.querySelector('.consent__form__submit').click());
 
-    await waitTime(3000);
+    await this.waitTime(3000);
     await page.reload();
 
     await page.waitForSelector('.event-table tr', {

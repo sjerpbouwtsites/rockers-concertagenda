@@ -5,7 +5,6 @@ import axios from 'axios';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/deflux.js';
 import getImage from './gedeeld/image.js';
-import * as _t from '../mods/tools.js';
 
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const vandaag = new Date().toISOString().split('T')[0];
@@ -105,7 +104,7 @@ defluxScraper.mainPage = async function () {
     .then((response) => response.data)
     .catch((caughtError) => {
       // TODO WRAPPEN
-      _t.handleError(caughtError, workerData, 'main axios fail', 'close-thread', null);
+      this.handleError(caughtError, 'main axios fail', 'close-thread', null);
     });
   if (!axiosRes) return false;
   const rawEvents = axiosRes

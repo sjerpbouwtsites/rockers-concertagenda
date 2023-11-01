@@ -1,6 +1,5 @@
 /* global document */
 import { workerData } from 'worker_threads';
-import * as _t from '../mods/tools.js';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/depul.js';
 import getImage from './gedeeld/image.js';
@@ -93,7 +92,7 @@ depulScraper.mainPage = async function () {
     loadContent('all', 'music'); // eslint-disable-line
   });
 
-  await _t.waitTime(250);
+  await this.waitTime(250);
 
   let rawEvents = await page.evaluate(
     // eslint-disable-next-line no-shadow

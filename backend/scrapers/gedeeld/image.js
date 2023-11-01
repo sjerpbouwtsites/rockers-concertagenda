@@ -4,7 +4,6 @@ import fs from 'fs';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import sharp from 'sharp';
 import fsDirections from '../../mods/fs-directions.js';
-import { handleError } from '../../mods/tools.js';
 
 function downloadImage(url, filepath, workerData) {
   return new Promise((resolve, reject) => {
@@ -55,13 +54,8 @@ async function downloadImageCompress({
 
   const extMatch = image.match(/.jpg|.jpeg|.png|.webp/);
   const extension = Array.isArray(extMatch) ? extMatch[0] : 'onbekend';
-
-  try {
-    await downloadImage(image, `${imagePath}-ori${extension}`, workerData);
-  } catch (error) {
-    handleError(error, workerData, 'download image', 'notice', { image, imagePath });
-    return false;
-  }
+  
+  await downloadImage(image, `${imagePath}-ori${extension}`, workerData);
 
   await sharp(`${imagePath}-ori${extension}`)
     .resize(440, 250)

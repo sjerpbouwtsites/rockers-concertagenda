@@ -3,7 +3,6 @@ import { workerData } from 'worker_threads';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/tivolivredenburg.js';
 import getImage from './gedeeld/image.js';
-import { waitTime } from '../mods/tools.js';
 import terms from './gedeeld/terms.js';
 
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG

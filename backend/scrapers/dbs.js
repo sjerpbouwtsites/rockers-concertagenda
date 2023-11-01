@@ -1,6 +1,5 @@
 /* global document */
 import { workerData } from 'worker_threads';
-import * as _t from '../mods/tools.js';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/dbs.js';
 import getImage from './gedeeld/image.js';
@@ -86,7 +85,7 @@ dbsScraper.mainPage = async function () {
   const { stopFunctie, page } = await this.mainPageStart();
 
   await page.waitForSelector('.fusion-events-post');
-  await _t.waitTime(100);
+  await this.waitTime(100);
 
   let rawEvents = await page.evaluate(
     // eslint-disable-next-line no-shadow

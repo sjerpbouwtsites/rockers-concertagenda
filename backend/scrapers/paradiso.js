@@ -1,6 +1,5 @@
 /* global document */
 import { workerData } from 'worker_threads';
-import * as _t from '../mods/tools.js';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/paradiso.js';
 import getImage from './gedeeld/image.js';
@@ -92,7 +91,7 @@ paradisoScraper.mainPage = async function () {
 
   await page.waitForSelector('.chakra-container');
 
-  await _t.autoScroll(page);
+  await this.autoScroll(page);
   await page.evaluate(
     () =>
       document.querySelector('.css-16y59pb:last-child .chakra-heading')?.textContent ??
@@ -100,7 +99,7 @@ paradisoScraper.mainPage = async function () {
     { workerData },
   );
 
-  await _t.autoScroll(page);
+  await this.autoScroll(page);
   await page.evaluate(
     // eslint-disable-next-line no-shadow
     () =>
@@ -196,7 +195,7 @@ paradisoScraper.singlePage = async function ({ page, event }) {
     october: '10',
   };
 
-  await _t.waitTime(500);
+  await this.waitTime(500);
 
   const pageInfo = await page.evaluate(
     // eslint-disable-next-line no-shadow

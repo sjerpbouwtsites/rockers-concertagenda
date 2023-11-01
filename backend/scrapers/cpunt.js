@@ -1,7 +1,6 @@
 /* global document */
 import { workerData } from 'worker_threads';
 import fs from 'fs';
-import * as _t from '../mods/tools.js';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/cpunt.js';
 import getImage from './gedeeld/image.js';
@@ -99,9 +98,8 @@ cpuntScraper.mainPage = async function () {
         });
         this.dirtyLog(pageHTML);
         fs.writeFileSync(`${fsDirections.temp}/rando-error.txt`, pageHTML, 'utf-8');
-        _t.handleError(
+        this.handleError(
           caughtError,
-          workerData,
           'Timeout wachten op #filter .article-wrapper Main page',
           'close-thread',
           null,
@@ -111,7 +109,7 @@ cpuntScraper.mainPage = async function () {
     return this.mainPageEnd({ stopFunctie, page, rawEvents: [] });
   }
 
-  await _t.waitTime(50);
+  await this.waitTime(50);
 
   let rawEvents = await page.evaluate(
     // eslint-disable-next-line no-shadow
@@ -161,7 +159,7 @@ cpuntScraper.singlePage = async function ({ page, event }) {
         timeout: 7500,
       })
       .catch((caughtError) => {
-        _t.handleError(
+        this.handleError(
           caughtError,
           workerData,
           `Timeout wachten op #main .content-blocks ${event.title}`,
