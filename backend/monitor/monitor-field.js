@@ -170,7 +170,7 @@ export default class MonitorField {
           const titleText = `${rollRow.messageData?.title ?? ''}${rollRow.messageData?.name ?? ''
           }`;
 
-          const bewerkteFoutTekst = rollRow.messageData.content.text
+          const bewerkteFoutTekst = rollRow.messageData.text
             .split(/[\r\n]/)
             .filter((a) => a)
             .map((errorTextRow, index) => {
@@ -225,7 +225,7 @@ export default class MonitorField {
           return `<li class='monitorfield__list-item' id='error-ref-${rollRow.messageData?.name}-${currentErrorsForThisWorkerCount}'>
             <header class='monitorfield__error-header'>
               <span class='monitorfield__error-workername'>${titleText}</span>
-              <span class='monitorfield__error-remarks'>${rollRow.messageData.content.remarks}</span>
+              <span class='monitorfield__error-remarks'>${rollRow.messageData.remarks}</span>
             </header>
             
             <div class='monitorfield__list-item-right'>${hoofdPrintTekst}</div>
@@ -246,7 +246,7 @@ export default class MonitorField {
           return `<li class='monitorfield__list-item' id='error-ref-${rollRow.messageData?.name}-${currentErrorsForThisWorkerCount}'>
         <header class='monitorfield__error-header'>
           <span class='monitorfield__error-workername'>niet standaard error</span>
-          <span class='monitorfield__error-remarks'>${rollRow?.messageData?.content?.remarks}</span>
+          <span class='monitorfield__error-remarks'>${rollRow?.messageData?.remarks}</span>
         </header>
         
         <div class='monitorfield__list-item-right'>${rollRow.toString()}</div>

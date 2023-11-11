@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import wsMessage from './wsMessage.js';
 import MonitorField from './monitor-field.js';
 
@@ -164,8 +165,9 @@ function eventToWarning(eventMsg) {
 
 function eventToClientsLog(eventMsg, fields) {
   if (eventMsg.subtype === 'error') {
-    console.log(`Error in ${eventMsg.messageData.workerData.name}`);
-    console.error(eventMsg.messageData.error);
+    console.error(eventMsg);
+    // console.log(`Error in ${eventMsg.messageData.workerData.name}`);
+    // console.error(eventMsg.messageData.error);
     return;
   }
   const debug = eventMsg.messageData?.content?.debug ?? null;

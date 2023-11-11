@@ -698,8 +698,8 @@ export default class AbstractScraper extends ScraperConfig {
 
     pageInfo?.errors?.forEach((errorData) => {
       if (!(errorData?.error instanceof Error)) {
-        this.handleError(new Error('error slecht gevormd'), 'error parameter ontbreekt of geen instanceof Error', 'notice', { title: 'slechte errorData', errorData });
-        return;
+        const msg = errorData?.error.message || 'geen message in error';
+        errorData.error = new Error(msg);
       }
 
       this.handleError(

@@ -162,6 +162,7 @@ dynamoScraper.singlePage = async function ({ page, event }) {
         anker: `<a class='page-info' href='${document.location.href}'>${document.title}</a>`,
         errors: [],
       };
+
       const agendaDatesEls = document.querySelectorAll('.agenda-date');
       let baseDate = null;
       if (agendaDatesEls && agendaDatesEls.length < 2) {
