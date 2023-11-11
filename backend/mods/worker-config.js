@@ -100,7 +100,6 @@ export const workerConfig = {
   paradiso: {
     workerCount: 2,
     workerConcurrent: 2,
-    CPUReq: 'high',
     forceSet: 5,
   },
   patronaat: { workerCount: 2, workerConcurrent: 2, forceSet: 6 },
