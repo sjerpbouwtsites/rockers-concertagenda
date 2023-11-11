@@ -1,12 +1,11 @@
 /* global document */
 // #region                                                 IMPORTS
-import { parentPort, workerData, isMainThread } from 'worker_threads';
+import { parentPort, workerData } from 'worker_threads';
 import fs from 'fs';
 import puppeteer from 'puppeteer';
 import fsDirections from '../../mods/fs-directions.js';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import QuickWorkerMessage from "../../mods/quick-worker-message.js";
-import EventsList from '../../mods/events-list.js';
 import getVenueMonths from '../../mods/months.js';
 import makeLongHTML from './longHTML.js';
 import WorkerStatus from '../../mods/WorkerStatus.js';
@@ -35,6 +34,10 @@ export default class AbstractScraper extends ScraperConfig {
   rockRefuseListNew = '';
 
   eventImagesFolder = fsDirections.publicEventImages;
+
+  _events = [];
+
+  _invalidEvents = [];
 
   // #region [rgba(0, 0, 120, 0.10)]                            CONSTRUCTOR & INSTALL
   constructor(obj) {
@@ -549,8 +552,7 @@ export default class AbstractScraper extends ScraperConfig {
           corrupted: mergedEvent.corrupted,
           // ...workerData,
         };
-
-        EventsList.addEvent(toRegister);
+        this._events.push(toRegister);
       } else {
         this.dirtyDebug('invalid maar geen register invalid');
       }
@@ -561,7 +563,23 @@ export default class AbstractScraper extends ScraperConfig {
         reason: mergedEventCheckRes.reason,
       });
     }
-    // singleEvent.registerINVALID(this.workerData); TODO Opnieuw activeren
+    const toRegister = {
+      door: mergedEvent.door,
+      start: mergedEvent.start,      
+      end: mergedEvent.end,      
+      venueEventUrl: mergedEvent.venueEventUrl,      
+      title: mergedEvent.title,      
+      location: mergedEvent.location,      
+      price: mergedEvent.price,      
+      shortText: mergedEvent.shortText,      
+      longText: mergedEvent.longText,      
+      image: mergedEvent.image,      
+      soldOut: mergedEvent.soldOut,      
+      unavailable: mergedEvent.unavailable,
+      corrupted: mergedEvent.corrupted,
+      // ...workerData,
+    };
+    this._invalidEvents.push(toRegister);
 
     if (singleEventPage && !singleEventPage.isClosed()) await singleEventPage.close();
 
@@ -1133,7 +1151,7 @@ export default class AbstractScraper extends ScraperConfig {
 
   // step 4
   async announceToMonitorDone() {
-    parentPort.postMessage(this.qwm.workerDone(EventsList.amountOfEvents));
+    parentPort.postMessage(this.qwm.workerDone(this._events.length));
     return true;
   }
 
@@ -1252,7 +1270,19 @@ export default class AbstractScraper extends ScraperConfig {
 
   // step 6
   async saveEvents() {
-    EventsList.save(workerData.family, workerData.index);
+    const pathToEventList = fsDirections.eventLists;
+    const pathToINVALIDEventList = fsDirections.invalidEventLists;
+    const inbetweenFix = workerData.index !== null ? `${workerData.index}` : '0';
+    const pathToEventListFile = `${pathToEventList}/${workerData.family}/${inbetweenFix}.json`;
+    const pathToINVALIDEventListFile = `${pathToINVALIDEventList}/${workerData.family}/invalid-${inbetweenFix}.json`;
+    fs.writeFile(pathToEventListFile, JSON.stringify(this._events, null, '  '), () => {});
+    fs.writeFile(
+      pathToINVALIDEventListFile,
+      JSON.stringify(this._invalidEvents, null, '  '),
+      () => {},
+    );
+    
+    return true;    
   }
 
   listenToMasterThread() {

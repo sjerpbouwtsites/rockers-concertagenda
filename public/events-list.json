@@ -391,8 +391,7 @@
     "location": "hedon"
   },
   {
-    "door": "2023-11-16T19:00:00.000",
-    "start": "2023-11-16T20:00:00.000",
+    "start": "2023-11-16T19:00:00.000",
     "venueEventUrl": "https://www.doornroosje.nl/event/animals-as-leaders/",
     "title": "Animals As Leaders+ ALLT",
     "location": "doornroosje",
@@ -799,6 +798,18 @@
     "shortText": "  SWINGERS FEST met  DMNG  (album release show)    Kaboutertje Putlucht   Claus   Rotzorg (album release show)   De Stoeptegels punk rock, electro, nederlandstalig",
     "longText": "../public/texts/willemeen/bS1yZWxlYXNlLXNob3ctZGUtc3RvZXB0ZWdlbHMv.html",
     "image": "../public/event-images/willemeen/bS1yZWxlYXNlLXNob3ctZGUtc3RvZXB0ZWdlbHMv",
+    "soldOut": false,
+    "unavailable": false
+  },
+  {
+    "start": "2023-11-24T20:00:00+01:00",
+    "venueEventUrl": "https://www.spotgroningen.nl/programma/the-scratch/",
+    "title": "The Scratch",
+    "location": "oosterpoort",
+    "price": 17.5,
+    "shortText": "+ support: Junior BrotherAkoestische hardrock met de groove en intensiteit van metal",
+    "longText": "../public/texts/oosterpoort/bmdlbi5ubC9wcm9ncmFtbWEvdGhlLXNjcmF0Y2gv.html",
+    "image": "../public/event-images/oosterpoort/bmdlbi5ubC9wcm9ncmFtbWEvdGhlLXNjcmF0Y2gv",
     "soldOut": false,
     "unavailable": false
   },
@@ -3560,6 +3571,18 @@
     "longText": "../public/texts/depul/b20vYWdlbmRhL2ZpcmV3aW5kLW1hc3RlcnBsYW4v.html",
     "image": "../public/event-images/depul/b20vYWdlbmRhL2ZpcmV3aW5kLW1hc3RlcnBsYW4v",
     "soldOut": false
+  },
+  {
+    "start": "2024-03-07T20:00:00+01:00",
+    "venueEventUrl": "https://www.spotgroningen.nl/programma/johan-3/",
+    "title": "Johan",
+    "location": "oosterpoort",
+    "price": 30.6,
+    "shortText": "Indierock van eigen bodem",
+    "longText": "../public/texts/oosterpoort/cm9uaW5nZW4ubmwvcHJvZ3JhbW1hL2pvaGFuLTMv.html",
+    "image": "../public/event-images/oosterpoort/cm9uaW5nZW4ubmwvcHJvZ3JhbW1hL2pvaGFuLTMv",
+    "soldOut": false,
+    "unavailable": false
   },
   {
     "door": "2024-03-07T19:30:00",

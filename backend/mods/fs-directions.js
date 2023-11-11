@@ -8,8 +8,6 @@ const fsDirections = {
   eventsListPublicJson: path.resolve('../public/events-list.json'),
   invalidEventLists: path.resolve('./temp'),
   invalidEventsListJson: path.resolve('./event-lists/invalid.json'),
-  metaJson: path.resolve('./event-lists/meta.json'),
-  metaPublicJson: path.resolve('../public/meta.json'),
   mods: path.resolve('./mods'),
   public: path.resolve('../public'),
   src: path.resolve('../src'),
@@ -22,8 +20,6 @@ const fsDirections = {
   baseEventlists: path.resolve('./temp/baseEventlists'),
   isRockAllow: path.resolve('./temp/isRock/allow.txt'),
   isRockRefuse: path.resolve('./temp/isRock/refuse.txt'),
-  timestampsJson: path.resolve('./event-lists/timestamps.json'),
-  timestampsPublicJson: path.resolve('../public/timestamps.json'),
 };
 
 // OLD

@@ -1,7 +1,7 @@
+/* eslint-disable no-console */
 import { exec } from 'child_process';
 import fs from 'fs';
 import os from 'os-utils';
-import EventsList from './events-list.js';
 import wsMessage from '../monitor/wsMessage.js';
 import fsDirections from './fs-directions.js';
 import { AbstractWorkerConfig, workerConfig } from './worker-config.js';
@@ -357,8 +357,6 @@ export default class WorkerStatus {
       consolidatedLocations[loc].count += 1;
     });
 
-    fs.writeFileSync(fsDirections.metaJson, JSON.stringify(EventsList._meta, null, '  '), 'utf-8');
-
     fs.writeFileSync(
       fsDirections.eventsListJson,
       JSON.stringify(consolidatedEvents, null, '  '),
@@ -367,9 +365,7 @@ export default class WorkerStatus {
     // passMessageToMonitor(qwm.toConsole(consolidatedEvents), workerSignature);
     console.log(`saved ${consolidatedEvents.length} events`);
 
-    fs.copyFileSync(fsDirections.metaJson, fsDirections.metaPublicJson);
     fs.copyFileSync(fsDirections.eventsListJson, fsDirections.eventsListPublicJson);
-    fs.copyFileSync(fsDirections.timestampsJson, fsDirections.timestampsPublicJson);
   }
 
   static printWorkersToConsole() {

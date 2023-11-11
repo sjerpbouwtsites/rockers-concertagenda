@@ -1,12 +1,15 @@
 /* global document */
 import { parentPort, workerData } from 'worker_threads';
+import fs from 'fs';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import puppeteer from 'puppeteer';
 import { Location } from '../mods/locations.js';
-import EventsList from '../mods/events-list.js';
 import QuickWorkerMessage from '../mods/quick-worker-message.js';
 import getVenueMonths from '../mods/months.js';
 import { workerConfig } from '../mods/worker-config.js';
+import fsDirections from "../mods/fs-directions.js";
+
+const eventsList = [];
 
 async function metalFanDoURL(page, url, qwm) {
   await page.goto(url);
@@ -123,7 +126,7 @@ async function metalFanDoURL(page, url, qwm) {
     .filter((musicEvent) => !skipWithMetalfan.includes(musicEvent.location));
 
   musicEvents.forEach((musicEvent) => {
-    EventsList.addEvent(musicEvent);
+    eventsList.push(musicEvent);
   });
 
   return true;
@@ -136,17 +139,18 @@ async function getBaseMusicEvents(browser, qwm) {
 }
 
 async function scrapeMetalfan() {
-  try {
-    const qwm = new QuickWorkerMessage(workerData);
-    parentPort.postMessage(qwm.workerInitialized());
-    const browser = await puppeteer.launch();
-    await getBaseMusicEvents(browser, qwm);
-    parentPort.postMessage(qwm.workerDone(EventsList.amountOfEvents));
-    EventsList.save('metalfan');
-    browser.close();
-  } catch (error) {
-    this.handleError(error, 'metal fan outer catch', 'close-thread', null);
-  }
+  const qwm = new QuickWorkerMessage(workerData);
+  parentPort.postMessage(qwm.workerInitialized());
+  const browser = await puppeteer.launch();
+  await getBaseMusicEvents(browser, qwm);
+  parentPort.postMessage(qwm.workerDone(eventsList.length));
+
+  const pathToEventList = fsDirections.eventLists;
+  const inbetweenFix = workerData.index !== null ? `${workerData.index}` : '0';
+  const pathToEventListFile = `${pathToEventList}/${workerData.family}/${inbetweenFix}.json`;
+  fs.writeFile(pathToEventListFile, JSON.stringify(eventsList, null, '  '), () => {});
+
+  browser.close();
 }
 parentPort.on('message', (message) => {
   const pm = JSON.parse(message);
