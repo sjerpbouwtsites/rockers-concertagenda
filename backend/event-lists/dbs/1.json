@@ -1,24 +1,38 @@
 [
   {
-    "start": "2023-11-02T08:00:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/iggys-furious-fifty-fissa/",
-    "title": "Iggy’s Furious Fifty Fissa",
+    "start": "2023-11-23T08:00:00",
+    "end": "2023-11-23T11:00:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/casper-fest-met-locura-spetterpoep-shortcuts/",
+    "title": "Casper fest met locura ",
     "location": "dbs",
-    "price": "0",
-    "shortText": "grunge, metal, stoner",
-    "longText": "../public/texts/dbs/ZW50L2lnZ3lzLWZ1cmlvdXMtZmlmdHktZmlzc2Ev.html",
-    "image": "../public/event-images/dbs/ZW50L2lnZ3lzLWZ1cmlvdXMtZmlmdHktZmlzc2Ev",
+    "price": 7,
+    "shortText": " spetterpoep   shortcuts crust, d- beat, grind metal, punk",
+    "longText": "../public/texts/dbs/LWxvY3VyYS1zcGV0dGVycG9lcC1zaG9ydGN1dHMv.html",
+    "image": "../public/event-images/dbs/LWxvY3VyYS1zcGV0dGVycG9lcC1zaG9ydGN1dHMv",
     "unavailable": false
   },
   {
-    "start": "2023-12-09T08:00:00",
-    "end": "2023-12-09T10:00:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/hackedepicciotto/",
-    "title": "Hackedepicciotto",
+    "start": "2023-12-06T08:00:00",
+    "end": "2023-12-06T10:30:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/holly-golightly-uk-damaged-goods-the-monroes/",
+    "title": "Holly golightly (uk – damaged goods) ",
     "location": "dbs",
-    "shortText": "db's locatieshow, electronics, experimenteel, folk, krautrock, progressive",
-    "longText": "../public/texts/dbs/ZGlvLm5sL2V2ZW50L2hhY2tlZGVwaWNjaW90dG8v.html",
-    "image": "../public/event-images/dbs/ZGlvLm5sL2V2ZW50L2hhY2tlZGVwaWNjaW90dG8v",
+    "price": 14,
+    "shortText": " the monroes blues, country noir, folk, garage, pop, rock 'n roll",
+    "longText": "../public/texts/dbs/LXVrLWRhbWFnZWQtZ29vZHMtdGhlLW1vbnJvZXMv.html",
+    "image": "../public/event-images/dbs/LXVrLWRhbWFnZWQtZ29vZHMtdGhlLW1vbnJvZXMv",
+    "unavailable": false
+  },
+  {
+    "start": "2023-12-21T08:00:00",
+    "end": "2023-12-21T11:00:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/heavy-metal-x-mas-party-w-adam-bomb-usa-splinter/",
+    "title": "Heavy metal x-mas party w/ adam bomb (usa) ",
+    "location": "dbs",
+    "price": 13,
+    "shortText": " splinter glamrock, hard rock, metal",
+    "longText": "../public/texts/dbs/YXJ0eS13LWFkYW0tYm9tYi11c2Etc3BsaW50ZXIv.html",
+    "image": "../public/event-images/dbs/YXJ0eS13LWFkYW0tYm9tYi11c2Etc3BsaW50ZXIv",
     "unavailable": false
   }
 ]

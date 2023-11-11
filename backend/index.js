@@ -1,11 +1,8 @@
 // import * as dotenv from 'dotenv';
 import WorkerStatus from './mods/WorkerStatus.js';
-import EventsList from './mods/events-list.js';
-import passMessageToMonitor from './monitor/pass-message-to-monitor.js';
 import { printLocationsToPublic } from './mods/locations.js';
 import initMonitorBackend from './monitor/backend.js';
 import RockWorker from './mods/rock-worker.js';
-import WorkerMessage from "./mods/worker-message.js";
 import getWorkerConfig from './mods/worker-config.js';
 import houseKeeping from './housekeeping.js';
 
@@ -13,28 +10,10 @@ import houseKeeping from './housekeeping.js';
 
 let monitorWebsocketServer = null;
 
-async function init() {
-  await houseKeeping();
-  monitorWebsocketServer = await initMonitorBackend();
-  WorkerStatus.monitorWebsocketServer = monitorWebsocketServer;
-
-  WorkerStatus.monitorCPUS();
-  const workerConfig = getWorkerConfig();
-  WorkerStatus.totalWorkers = workerConfig.numberOfWorkers;
-  WorkerStatus.registerAllWorkersAsWaiting(workerConfig.listCopy());
-  recursiveStartWorkers(workerConfig);
-  WorkerStatus.initializeReporting();
-  printLocationsToPublic();
-}
-
-async function recursiveStartWorkers(workerConfig) {
-  if (!workerConfig.hasWorkerConfigs) {
-    // console.log('workers op');
-    
-    return true;
-  }
-  await waitTime(150);
-  return startWorker(workerConfig);
+async function waitTime(wait = 500) {
+  return new Promise((res) => {
+    setTimeout(res, wait);
+  });
 }
 
 async function startWorker(workerConfig) {
@@ -44,15 +23,11 @@ async function startWorker(workerConfig) {
 
   const toManyWorkersWorking = WorkerStatus.workersWorking() >= WorkerStatus.maxSimultaneousWorkers;
   if (toManyWorkersWorking) {
-    //  console.log('to many workers');
-    await waitTime(25);
+    await waitTime(200);
     return startWorker(workerConfig);
   }
 
   const thisConfig = workerConfig.get();
-  if (!thisConfig?.family) {
-    console.log(thisConfig);
-  }
   const workingThisFamily = WorkerStatus.workersWorkingOfFamily(thisConfig.family);
   // als er veel ruimte is, voorkeur voor hoog cpu
   if (
@@ -69,7 +44,7 @@ async function startWorker(workerConfig) {
   if (!WorkerStatus.familyDoneWithBaseEvents(thisConfig.family) && workingThisFamily) {
     // console.log('base event needs to be finished solo');
     workerConfig.takeBackRejected(thisConfig);
-    await waitTime(25);
+    await waitTime(5);
     return startWorker(workerConfig);
   }
 
@@ -88,7 +63,7 @@ async function startWorker(workerConfig) {
   if (!WorkerStatus.OSHasALotOfSpace && thisConfig.CPUReq === 'high') {
     // console.log('niet genoeg ruimte voor HIGH cpu');
     workerConfig.takeBackRejected(thisConfig);
-    await waitTime(50);
+    await waitTime(5);
     return startWorker(workerConfig);
   }
 
@@ -97,7 +72,7 @@ async function startWorker(workerConfig) {
   if (thisConfig.workerConcurrent <= workingThisFamily) {
     // console.log('te veel van deze family concurrent');
     workerConfig.takeBackRejected(thisConfig);
-    await waitTime(25);
+    await waitTime(5);
     return startWorker(workerConfig);
   }
 
@@ -107,12 +82,12 @@ async function startWorker(workerConfig) {
     if (!WorkerStatus.OSHasMinimalSpace && thisConfig.CPUReq === 'low') {
       //  console.log('zelfs geen ruimte voor kleine');
       workerConfig.takeBackRejected(thisConfig);
-      await waitTime(100);
+      await waitTime(5);
       return startWorker(workerConfig);
     }
     //  console.log('geen ruimte');
     workerConfig.takeBackRejected(thisConfig);
-    await waitTime(50);
+    await waitTime(5);
     return startWorker(workerConfig);
   }
 
@@ -122,40 +97,35 @@ async function startWorker(workerConfig) {
   };
 
   const thisWorker = new RockWorker(thisConfig);
-  thisWorker.postMessage(WorkerMessage.quick('process', 'command-start'));
+  RockWorker.addWorkerMessageHandler(thisWorker);
   WorkerStatus.registerWorker(thisWorker);
-  addWorkerMessageHandler(thisWorker);
+  thisWorker.start();
   return startWorker(workerConfig);
 }
 
-/**
- * @param {Worker} thisWorker instantiated worker with path etc
- */
-function addWorkerMessageHandler(thisWorker) {
-  thisWorker.on('message', (message) => {
-    if (message?.status) {
-      // change worker status
-      // and trigger message propagation to monitor / console
-      console.log('OUDE SYSTEEM!!!', 'indexjs addWorkerMessageHandler');
-
-      WorkerStatus.change(thisWorker.name, message?.status, message?.message, thisWorker);
-
-      // pass worker data to EventsList
-      // free Worker thread and memory
-      if (message?.status === 'done') {
-        if (message?.data) {
-          EventsList.merge(message.data);
-        }
-        thisWorker.unref();
-      }
-    }
-
-    passMessageToMonitor(message, thisWorker.name);
-  });
+async function recursiveStartWorkers(workerConfig) {
+  if (!workerConfig.hasWorkerConfigs) {
+    // console.log('workers op');
+    
+    return true;
+  }
+  await waitTime(10);
+  return startWorker(workerConfig);
 }
-async function waitTime(wait = 500) {
-  return new Promise((res) => {
-    setTimeout(res, wait);
-  });
+
+async function init() {
+  await houseKeeping();
+  monitorWebsocketServer = await initMonitorBackend();
+  RockWorker.monitorWebsocketServer = monitorWebsocketServer;
+  WorkerStatus.monitorWebsocketServer = monitorWebsocketServer; // TODO WEG
+
+  WorkerStatus.monitorCPUS();
+  const workerConfig = getWorkerConfig();
+  WorkerStatus.totalWorkers = workerConfig.numberOfWorkers;
+  WorkerStatus.registerAllWorkersAsWaiting(workerConfig.listCopy());
+  recursiveStartWorkers(workerConfig);
+  WorkerStatus.initializeReporting();
+  printLocationsToPublic();
 }
+
 init();

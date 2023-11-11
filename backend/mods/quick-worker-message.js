@@ -1,5 +1,3 @@
-import WorkerMessage from "./worker-message.js";
-
 /**
  * class om snel berichten te versturen vanuit de worker.
  * voegt standaard workerData mee in workerDone, debugger etc.
@@ -10,12 +8,20 @@ export default class QuickWorkerMessage {
     this.workerData = workerData;
   }
 
+  quickMessage(type, subtype, messageData) {
+    return JSON.stringify({
+      type,
+      subtype,
+      messageData,
+    });
+  }
+
   /**
    * @param {Error} error
    * @returns update, error, {content: workerData, status, text}
    */
   error(error) {
-    return WorkerMessage.quick('update', 'error', {
+    return this.quickMessage('update', 'error', {
       content: {
         workerData: this.workerData,
         status: 'error',
@@ -24,8 +30,8 @@ export default class QuickWorkerMessage {
     });
   }
 
-  abstractQuickWorker(statusString = 'registered', moreData) {
-    return WorkerMessage.quick('process', 'workers-status', {
+  abstractQuickWorker(statusString = 'registered', moreData = null) {
+    return this.quickMessage('process', 'workers-status', {
       content: {
         workerData: this.workerData,
         status: statusString,
@@ -55,7 +61,7 @@ export default class QuickWorkerMessage {
   todo(numberToDo) {
     console.log('LEGACY');
     return [
-      WorkerMessage.quick('process', 'workers-status', {
+      this.quickMessage('process', 'workers-status', {
         todo: numberToDo,
         content: {
           status: 'todo',
@@ -66,7 +72,7 @@ export default class QuickWorkerMessage {
   }
 
   todoNew(numberToDo) {
-    return WorkerMessage.quick('process', 'workers-status', {
+    return this.quickMessage('process', 'workers-status', {
       todo: numberToDo,
       content: {
         status: 'todo',
@@ -80,7 +86,7 @@ export default class QuickWorkerMessage {
    * @returns {JSON} update debugger {content: workerData, debug}
    */
   toConsole(toConsole, type = 'dir') {
-    return WorkerMessage.quick('clients-log', type, {
+    return this.quickMessage('clients-log', type, {
       content: {
         workerData: this.workerData,
         debug: toConsole ?? 'debugger heeft null meegekregen.',
@@ -94,7 +100,7 @@ export default class QuickWorkerMessage {
    * @returns {JSON} update debugger {content: workerData, debug}
    */
   debugger(toDebug, title) {
-    return WorkerMessage.quick('update', 'debugger', {
+    return this.quickMessage('update', 'debugger', {
       title,
       content: {
         workerData: this.workerData,
@@ -108,7 +114,7 @@ export default class QuickWorkerMessage {
    * @returns {JSON} update message-roll {content: workerData, text}
    */
   messageRoll(text) {
-    return WorkerMessage.quick('update', 'message-roll', {
+    return this.quickMessage('update', 'message-roll', {
       content: {
         workerData: this.workerData,
         text: String(text),
