@@ -36,12 +36,16 @@
     "soldOut": false
   },
   {
-    "title": "Vandenberg",
-    "start": "2023-11-22",
-    "eventLocationName": "victorie",
-    "shortText": "Victorie, Alkmaar",
-    "image": "../public/location-images/victorie",
-    "location": "victorie"
+    "door": "2023-11-22T19:45:00",
+    "start": "2023-11-22T19:00:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/the-scratch",
+    "title": "The Scratch",
+    "location": "victorie",
+    "price": 21.85,
+    "shortText": "Ierse folk in de mix met rock en metal",
+    "longText": "../public/texts/victorie/dG9yaWUubmwvcHJvZ3JhbW1hL3RoZS1zY3JhdGNo.html",
+    "image": "../public/event-images/victorie/dG9yaWUubmwvcHJvZ3JhbW1hL3RoZS1zY3JhdGNo",
+    "soldOut": false
   },
   {
     "door": "2023-11-23T20:30:00",
@@ -605,6 +609,18 @@
     "soldOut": null
   },
   {
+    "door": "2023-12-03T20:00:00",
+    "start": "2023-12-03T19:30:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/eurydice",
+    "title": "Eurydice",
+    "location": "victorie",
+    "price": 6.95,
+    "shortText": "EP Release",
+    "longText": "../public/texts/victorie/dmljdG9yaWUubmwvcHJvZ3JhbW1hL2V1cnlkaWNl.html",
+    "image": "../public/event-images/victorie/dmljdG9yaWUubmwvcHJvZ3JhbW1hL2V1cnlkaWNl",
+    "soldOut": false
+  },
+  {
     "door": "2023-12-03T20:30:00",
     "start": "2023-12-03T19:30:00",
     "venueEventUrl": "https://www.paradiso.nl/programma/drama/1326029",
@@ -723,6 +739,18 @@
     "unavailable": false
   },
   {
+    "door": "2023-12-07T19:45:00",
+    "start": "2023-12-07T19:00:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/living-colour",
+    "title": "Living Colour",
+    "location": "victorie",
+    "price": 39.2,
+    "shortText": "Legendarische New York rockformatie viert 35 jaar 'Vivid'",
+    "longText": "../public/texts/victorie/cmllLm5sL3Byb2dyYW1tYS9saXZpbmctY29sb3Vy.html",
+    "image": "../public/event-images/victorie/cmllLm5sL3Byb2dyYW1tYS9saXZpbmctY29sb3Vy",
+    "soldOut": true
+  },
+  {
     "door": "2023-12-07T20:15:00",
     "start": "2023-12-07T20:15:00",
     "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/atreyu-07-12-2023/",
@@ -747,14 +775,6 @@
     "image": "../public/event-images/p60/aHR0cHM6Ly9wNjAubmwvcmFkYXItZGVj",
     "soldOut": false,
     "unavailable": false
-  },
-  {
-    "title": "Living Colour",
-    "start": "2023-12-07",
-    "eventLocationName": "victorie",
-    "shortText": "Victorie, Alkmaar",
-    "image": "../public/location-images/victorie",
-    "location": "victorie"
   },
   {
     "start": "2023-12-07T19:30:00",
@@ -803,6 +823,18 @@
     "longText": "../public/texts/dbs/YW1pYy1saWFycy1iLXJhZGVsb29zLXppZWRlbmQv.html",
     "image": "../public/event-images/dbs/YW1pYy1saWFycy1iLXJhZGVsb29zLXppZWRlbmQv",
     "unavailable": false
+  },
+  {
+    "door": "2023-12-08T19:30:00",
+    "start": "2023-12-08T19:00:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/stonerfall",
+    "title": "Stonerfall",
+    "location": "victorie",
+    "price": 24.85,
+    "shortText": "Stonerrock, psychedelische rock ’n roll, sludge en (post-) metal",
+    "longText": "../public/texts/victorie/Y3RvcmllLm5sL3Byb2dyYW1tYS9zdG9uZXJmYWxs.html",
+    "image": "../public/event-images/victorie/Y3RvcmllLm5sL3Byb2dyYW1tYS9zdG9uZXJmYWxs",
+    "soldOut": false
   },
   {
     "door": "2023-12-08T22:00:00",
@@ -1099,14 +1131,6 @@
     "image": "../public/event-images/patronaat/dC5ubC9ldmVudC91bHRyYWJvbWItMTMtMTItMjMv",
     "soldOut": false,
     "unavailable": false
-  },
-  {
-    "title": "Wishbone Ash",
-    "start": "2023-12-13",
-    "eventLocationName": "victorie",
-    "shortText": "Victorie, Alkmaar",
-    "image": "../public/location-images/victorie",
-    "location": "victorie"
   },
   {
     "door": "2023-12-14T20:00:00",
@@ -1514,6 +1538,18 @@
     "unavailable": false
   },
   {
+    "door": "2023-12-29T20:30:00",
+    "start": "2023-12-29T19:30:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/knives-out!-iguana-death-cult,-cloudsurfers,-the-covids",
+    "title": "Knives Out! Iguana Death Cult, Cloudsurfers, The Covids",
+    "location": "victorie",
+    "price": 12,
+    "shortText": "     Avond vol hedendaagse (post)punk",
+    "longText": "../public/texts/victorie/Y3VsdCwtY2xvdWRzdXJmZXJzLC10aGUtY292aWRz.html",
+    "image": "../public/event-images/victorie/Y3VsdCwtY2xvdWRzdXJmZXJzLC10aGUtY292aWRz",
+    "soldOut": false
+  },
+  {
     "door": "2023-12-29T20:00:00",
     "start": "2023-12-29T20:30:00",
     "end": "2023-12-29T23:30:00",
@@ -1611,6 +1647,18 @@
     "longText": "../public/texts/boerderij/bmwvcHJvZ3JhbW1hL2NvdXJib2lzLWNvdXJib2lz.html",
     "image": "../public/event-images/boerderij/bmwvcHJvZ3JhbW1hL2NvdXJib2lzLWNvdXJib2lz",
     "soldOut": null
+  },
+  {
+    "door": "2024-01-11T19:00:00",
+    "start": "2024-01-11T18:30:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/heidevolk",
+    "title": "Heidevolk",
+    "location": "victorie",
+    "price": 31.05,
+    "shortText": "Folkmetalband komt met zevende album 'Wederkeer'",
+    "longText": "../public/texts/victorie/aWN0b3JpZS5ubC9wcm9ncmFtbWEvaGVpZGV2b2xr.html",
+    "image": "../public/event-images/victorie/aWN0b3JpZS5ubC9wcm9ncmFtbWEvaGVpZGV2b2xr",
+    "soldOut": false
   },
   {
     "door": "2024-01-11T18:30:00",
@@ -1942,19 +1990,6 @@
     "shortText": "Avondvullend programma van iconische Maloe Melo-uitbater",
     "longText": "../public/texts/paradiso/LXByZXNlbnRzLW5ld2p1cnNwYXJ0eS8xNDAwMDYy.html",
     "image": "../public/event-images/paradiso/LXByZXNlbnRzLW5ld2p1cnNwYXJ0eS8xNDAwMDYy",
-    "soldOut": false,
-    "unavailable": false
-  },
-  {
-    "door": "2024-01-21T19:00:00Z",
-    "start": "2024-01-21T20:30:00Z",
-    "venueEventUrl": "https://p60.nl/mothership",
-    "title": "Mothership",
-    "location": "p60",
-    "price": 19.002,
-    "shortText": "DE MEEST AUTHENTIEK KLINKENDE LED ZEPPELIN TRIBUTE-BAND",
-    "longText": "../public/texts/p60/aHR0cHM6Ly9wNjAubmwvbW90aGVyc2hpcA==.html",
-    "image": "../public/event-images/p60/aHR0cHM6Ly9wNjAubmwvbW90aGVyc2hpcA==",
     "soldOut": false,
     "unavailable": false
   },
@@ -2398,19 +2433,6 @@
     "unavailable": false
   },
   {
-    "door": "2024-02-06T19:00:00",
-    "start": "2024-02-06T19:00:00",
-    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/lucifer-angel-witch-06-02-2024/",
-    "title": "Lucifer + Angel Witch",
-    "location": "tivolivredenburg",
-    "price": 23,
-    "shortText": "TivoliVredenburg & De Helling present",
-    "longText": "../public/texts/tivolivredenburg/dWNpZmVyLWFuZ2VsLXdpdGNoLTA2LTAyLTIwMjQv.html",
-    "image": "../public/event-images/tivolivredenburg/dWNpZmVyLWFuZ2VsLXdpdGNoLTA2LTAyLTIwMjQv",
-    "soldOut": false,
-    "unavailable": false
-  },
-  {
     "start": "2024-02-06T20:00:00",
     "venueEventUrl": "https://kavka.be/event/any-given-day/",
     "title": "Any given day",
@@ -2421,18 +2443,6 @@
     "image": "../public/event-images/kavka/L2thdmthLmJlL2V2ZW50L2FueS1naXZlbi1kYXkv",
     "soldOut": false,
     "unavailable": false
-  },
-  {
-    "start": "2024-02-06T18:30:00",
-    "end": "2024-02-06T23:00:00",
-    "venueEventUrl": "https://dehelling.nl/agenda/lucifer-angel-witch-06-02-2024/",
-    "title": "Lucifer + Angel Witch",
-    "location": "dehelling",
-    "price": 23,
-    "shortText": "Twee generaties aan furieuze heavy metal. Lineup: Support; The Night Eternal, Angel Witch, Lucifer",
-    "longText": "../public/texts/dehelling/dWNpZmVyLWFuZ2VsLXdpdGNoLTA2LTAyLTIwMjQv.html",
-    "image": "../public/event-images/dehelling/dWNpZmVyLWFuZ2VsLXdpdGNoLTA2LTAyLTIwMjQv",
-    "soldOut": false
   },
   {
     "start": "2024-02-09T20:00:00",
@@ -3760,6 +3770,18 @@
     "shortText": "50 jaar Tim Daeleman/DJ Spud, laatste Downward Spiral in het oude Baroeg pand, ‘legacy’ show van Mesh.electronic",
     "longText": "../public/texts/baroeg/L2Rvd253YXJkLXNwaXJhbC1zcGVjaWFsLW1lc2gv.html",
     "image": "../public/event-images/baroeg/L2Rvd253YXJkLXNwaXJhbC1zcGVjaWFsLW1lc2gv",
+    "soldOut": false
+  },
+  {
+    "door": "2024-04-13T20:00:00",
+    "start": "2024-04-13T19:30:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/tusky-2024",
+    "title": "Tusky",
+    "location": "victorie",
+    "price": 14.95,
+    "shortText": "Luide, snelle en furieuze punkrock",
+    "longText": "../public/texts/victorie/Y3RvcmllLm5sL3Byb2dyYW1tYS90dXNreS0yMDI0.html",
+    "image": "../public/event-images/victorie/Y3RvcmllLm5sL3Byb2dyYW1tYS90dXNreS0yMDI0",
     "soldOut": false
   },
   {

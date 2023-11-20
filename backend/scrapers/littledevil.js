@@ -182,7 +182,7 @@ littledevilScraper.singlePage = async function ({ page, event }) {
   const pageInfo = {
     title: event.title,
     errors: [],
-    anker: `<a class='page-info' href='${event.title}'>${workerData.family} single - ${event.title}</a>`,
+    anker: `<a class='page-info' href='${event.venueEventUrl}'>${workerData.family} single - ${event.title}</a>`,
   };
 
   const imageRes = await getImage({

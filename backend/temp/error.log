@@ -1,0 +1,37 @@
+
+      victorie-0 Error - 11:43:30 AM
+      Error: geen match met .show-info .columns + .columns <a class='page-info' href='Sportgala Alkmaar'>victorie single - Sportgala Alkmaar</a>
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:169:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/victorie.js:158:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:479:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
+      geen match met .show-info .columns + .columns <a class='page-info' href='Sportgala Alkmaar'>victorie single - Sportgala Alkmaar</a>
+      
+      victorie-0 Error - 11:40:36 AM
+      Error: onbekende regexMode undefined
+    at mapToStartDate (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/datums.js:244:12)
+    at scraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/victorie.js:184:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:479:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
+      onbekende regexMode undefined
+      
+      victorie-0 Error - 11:40:35 AM
+      Error: onbekende regexMode undefined
+    at mapToStartDate (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/datums.js:244:12)
+    at scraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/victorie.js:184:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:479:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
+      onbekende regexMode undefined
+      
+      victorie-0 Error - 11:40:31 AM
+      Error: onbekende regexMode undefined
+    at mapToStartDate (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/datums.js:244:12)
+    at scraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/victorie.js:184:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:479:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:119:5) 
+      onbekende regexMode undefined
+      

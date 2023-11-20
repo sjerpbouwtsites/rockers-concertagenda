@@ -103,6 +103,7 @@ export const workerConfig = {
   },
   patronaat: { workerCount: 2, workerConcurrent: 2, forceSet: 6 },
   tivolivredenburg: { workerCount: 4, workerConcurrent: 2, forceSet: 6 },
+  victorie: { workerCount: 1, workerConcurrent: 1, forceSet: 6 },
   volt: { workerCount: 1, workerConcurrent: 1, forceSet: 6 },
   willemeen: { workerCount: 2, workerConcurrent: 2, forceSet: 6 },
 };

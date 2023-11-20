@@ -89,6 +89,7 @@ const podiumGebruikt = {
   paradiso: kortNederlands,
   p60: voluitNederlands,
   patronaat: kortNederlands,
+  victorie: kortNederlands,
   volt: kortNederlands,
   tivolivredenburg: kortNederlands,
   ticketmaster: kortNederlands,
