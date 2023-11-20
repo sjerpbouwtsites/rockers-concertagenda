@@ -1,5 +1,15 @@
 [
   {
+    "start": "2024-02-09T20:00:00",
+    "venueEventUrl": "https://www.podiumdeflux.nl/events/nh-metal-fest-iii/",
+    "title": "Nh metal fest iii",
+    "location": "deflux",
+    "price": 15,
+    "longText": "../public/texts/deflux/eC5ubC9ldmVudHMvbmgtbWV0YWwtZmVzdC1paWkv.html",
+    "image": "../public/event-images/deflux/eC5ubC9ldmVudHMvbmgtbWV0YWwtZmVzdC1paWkv",
+    "soldOut": false
+  },
+  {
     "start": "2024-02-16T20:30:00",
     "venueEventUrl": "https://www.podiumdeflux.nl/events/rave-the-reqviem-blame-me-female-fronted-metal/",
     "title": "Rave the Reqviem ",
@@ -18,6 +28,17 @@
     "price": 7.5,
     "longText": "../public/texts/deflux/dHMvZGF5cy1vZi1zd2F5LXJhdXctZW4tdGVkZXIv.html",
     "image": "../public/event-images/deflux/dHMvZGF5cy1vZi1zd2F5LXJhdXctZW4tdGVkZXIv",
+    "soldOut": false
+  },
+  {
+    "start": "2023-12-10T15:30:00",
+    "venueEventUrl": "https://www.podiumdeflux.nl/events/ruben-hoeke-band-en-vanja-sky/",
+    "title": "Ruben Hoeke Band CD-presentatie en jubileumviering ",
+    "location": "deflux",
+    "price": 17.5,
+    "shortText": "     Vanja Sky undefined",
+    "longText": "../public/texts/deflux/cnViZW4taG9la2UtYmFuZC1lbi12YW5qYS1za3kv.html",
+    "image": "../public/event-images/deflux/cnViZW4taG9la2UtYmFuZC1lbi12YW5qYS1za3kv",
     "soldOut": false
   },
   {
@@ -49,16 +70,6 @@
     "shortText": "     undefined",
     "longText": "../public/texts/deflux/aWtlLXppdG8tYW5kLWFsYmVydC1jYXN0aWdsaWEv.html",
     "image": "../public/event-images/deflux/aWtlLXppdG8tYW5kLWFsYmVydC1jYXN0aWdsaWEv",
-    "soldOut": false
-  },
-  {
-    "start": "2023-12-22T20:30:00",
-    "venueEventUrl": "https://www.podiumdeflux.nl/events/zaanse-metalen/",
-    "title": "Zaanse Metalen",
-    "location": "deflux",
-    "price": 10,
-    "longText": "../public/texts/deflux/Zmx1eC5ubC9ldmVudHMvemFhbnNlLW1ldGFsZW4v.html",
-    "image": "../public/event-images/deflux/Zmx1eC5ubC9ldmVudHMvemFhbnNlLW1ldGFsZW4v",
     "soldOut": false
   }
 ]

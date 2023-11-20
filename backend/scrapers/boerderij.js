@@ -12,9 +12,7 @@ const boerderijScraper = new AbstractScraper({
 
   mainPage: {
     timeout: 30005,
-    url: `https://poppodiumboerderij.nl/includes/ajax/events.php?filters=6,7,8&search=&limit=15&offset=${
-      workerData.index * 15
-    }&lang_id=1&rooms=&month=&year=`,
+    url: `https://poppodiumboerderij.nl/includes/ajax/events.php?filters=6,7,8&search=&limit=69420&offset=0&lang_id=1&rooms=2,1&month=&year=`,
   },
   singlePage: {
     timeout: 20006,

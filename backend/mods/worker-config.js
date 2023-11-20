@@ -28,8 +28,7 @@ export const workerConfig = {
   },
   baroeg: { workerCount: 3, workerConcurrent: 2, forceSet: 0 },
   boerderij: {
-    workerCount: 3,
-    CPUReq: 'low',
+    workerCount: 1,
     workerConcurrent: 1,
     forceSet: 1,
   },

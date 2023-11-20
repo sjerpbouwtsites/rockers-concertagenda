@@ -1,37 +1,5 @@
 [
   {
-    "title": "Sammath, Salacious Gods en Suttungr",
-    "start": "2023-11-11",
-    "eventLocationName": "podium",
-    "shortText": "Podium, Hoogeveen",
-    "image": "../public/location-images/podium",
-    "location": "podium"
-  },
-  {
-    "title": "Danko Jones en Radkey",
-    "start": "2023-11-16",
-    "eventLocationName": "hedon",
-    "shortText": "Hedon, Zwolle",
-    "image": "../public/location-images/hedon",
-    "location": "hedon"
-  },
-  {
-    "title": "Desert Storm",
-    "start": "2023-11-18",
-    "eventLocationName": "mfc",
-    "shortText": "MFC, Coevorden ",
-    "image": "../public/location-images/mfc",
-    "location": "mfc"
-  },
-  {
-    "title": "Helldorado",
-    "start": "2023-11-18",
-    "eventLocationName": "klokgebouw",
-    "shortText": "\nMet Life Of Agony, Death Angel, Sacred Reich, Peter Pan Speedrock e.v.a.",
-    "image": "../public/location-images/klokgebouw",
-    "location": "klokgebouw"
-  },
-  {
     "title": "Vandenberg",
     "start": "2023-11-22",
     "eventLocationName": "victorie",
@@ -86,6 +54,14 @@
     "shortText": "Trix, Antwerpen (België)",
     "image": "../public/location-images/trix",
     "location": "trix"
+  },
+  {
+    "title": "Man As Plague, The Unslain, Burning, Bildtstar en Beyond The Pale",
+    "start": "2023-12-01",
+    "eventLocationName": "rock café sneek",
+    "shortText": "Rock Café Sneek, Sneek",
+    "image": "../public/location-images/rockcafsneek",
+    "location": "rockcafsneek"
   },
   {
     "title": "Babymetal",
@@ -224,6 +200,14 @@
     "location": "cacaofabriek"
   },
   {
+    "title": "Tool en Night Verses",
+    "start": "2024-05-27",
+    "eventLocationName": "ziggo dome",
+    "shortText": "Ziggo Dome, Amsterdam",
+    "image": "../public/location-images/ziggodome",
+    "location": "ziggodome"
+  },
+  {
     "title": "South Of Heaven festival",
     "start": "2024-05-31",
     "eventLocationName": "maastricht",
@@ -267,7 +251,7 @@
     "title": "Graspop Metal Meeting",
     "start": "2024-06-20",
     "eventLocationName": "dessel",
-    "shortText": "Dessel, België",
+    "shortText": "\nmet Tool e.v.a.",
     "image": "../public/location-images/dessel",
     "location": "dessel"
   },

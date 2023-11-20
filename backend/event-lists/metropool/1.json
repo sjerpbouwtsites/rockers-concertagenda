@@ -1,18 +1,5 @@
 [
   {
-    "door": "2023-11-11T19:30:00",
-    "start": "2023-11-11T20:30:00",
-    "venueEventUrl": "https://metropool.nl/agenda/anneke-van-giersbergen-en-band/",
-    "title": "Anneke van Giersbergen & band",
-    "location": "metropool",
-    "price": 32,
-    "shortText": "hel \n                                Support: Ché Aimee Dorval",
-    "longText": "../public/texts/metropool/bm5la2UtdmFuLWdpZXJzYmVyZ2VuLWVuLWJhbmQv.html",
-    "image": "../public/event-images/metropool/bm5la2UtdmFuLWdpZXJzYmVyZ2VuLWVuLWJhbmQv",
-    "soldOut": false,
-    "unavailable": false
-  },
-  {
     "door": "2023-12-17T19:00:00",
     "start": "2023-12-17T20:00:00",
     "venueEventUrl": "https://metropool.nl/agenda/bombers/",
@@ -22,6 +9,19 @@
     "shortText": "",
     "longText": "../public/texts/metropool/Ly9tZXRyb3Bvb2wubmwvYWdlbmRhL2JvbWJlcnMv.html",
     "image": "../public/event-images/metropool/Ly9tZXRyb3Bvb2wubmwvYWdlbmRhL2JvbWJlcnMv",
+    "soldOut": false,
+    "unavailable": false
+  },
+  {
+    "door": "2024-01-14T18:00:00",
+    "start": "2024-01-14T19:00:00",
+    "venueEventUrl": "https://metropool.nl/agenda/heidevolk/",
+    "title": "Heidevolk",
+    "location": "metropool",
+    "price": 32.5,
+    "shortText": "Support: Nytt Land + Jonne",
+    "longText": "../public/texts/metropool/bWV0cm9wb29sLm5sL2FnZW5kYS9oZWlkZXZvbGsv.html",
+    "image": "../public/event-images/metropool/bWV0cm9wb29sLm5sL2FnZW5kYS9oZWlkZXZvbGsv",
     "soldOut": false,
     "unavailable": false
   },
@@ -52,28 +52,28 @@
     "unavailable": false
   },
   {
-    "door": "2024-02-24T20:30:00",
-    "start": "2024-02-24T21:00:00",
-    "venueEventUrl": "https://metropool.nl/agenda/clan-of-xymox/",
-    "title": "Clan Of Xymox",
+    "door": "2024-03-07T20:00:00",
+    "start": "2024-03-07T20:30:00",
+    "venueEventUrl": "https://metropool.nl/agenda/denial-of-life-plus-negative-frame/",
+    "title": "Denial of Life + Negative Frame",
     "location": "metropool",
-    "price": 28,
-    "shortText": "Support: STAKBABBER",
-    "longText": "../public/texts/metropool/b3Bvb2wubmwvYWdlbmRhL2NsYW4tb2YteHltb3gv.html",
-    "image": "../public/event-images/metropool/b3Bvb2wubmwvYWdlbmRhL2NsYW4tb2YteHltb3gv",
+    "price": 17.5,
+    "shortText": "",
+    "longText": "../public/texts/metropool/bC1vZi1saWZlLXBsdXMtbmVnYXRpdmUtZnJhbWUv.html",
+    "image": "../public/event-images/metropool/bC1vZi1saWZlLXBsdXMtbmVnYXRpdmUtZnJhbWUv",
     "soldOut": false,
     "unavailable": false
   },
   {
-    "door": "2024-03-22T18:30:00",
-    "start": "2024-03-22T19:00:00",
-    "venueEventUrl": "https://metropool.nl/agenda/carnifex/",
-    "title": "Carnifex",
+    "door": "2024-05-24T19:30:00",
+    "start": "2024-05-24T20:00:00",
+    "venueEventUrl": "https://metropool.nl/agenda/vanaheim-plus-xaon-plus-end-of-the-dream/",
+    "title": "Vanaheim + Xaon + End of the Dream ",
     "location": "metropool",
-    "price": 28.5,
-    "shortText": "Support: REVOCATION + ABORTED + VEXED",
-    "longText": "../public/texts/metropool/L21ldHJvcG9vbC5ubC9hZ2VuZGEvY2FybmlmZXgv.html",
-    "image": "../public/event-images/metropool/L21ldHJvcG9vbC5ubC9hZ2VuZGEvY2FybmlmZXgv",
+    "price": 22,
+    "shortText": "",
+    "longText": "../public/texts/metropool/dXMteGFvbi1wbHVzLWVuZC1vZi10aGUtZHJlYW0v.html",
+    "image": "../public/event-images/metropool/dXMteGFvbi1wbHVzLWVuZC1vZi10aGUtZHJlYW0v",
     "soldOut": false,
     "unavailable": false
   }
