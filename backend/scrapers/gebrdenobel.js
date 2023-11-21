@@ -177,14 +177,25 @@ scraper.mainPage = async function () {
 
   const { stopFunctie, page } = await this.mainPageStart();
 
-  let punkMetalRawEvents = await page.evaluate(
+  await this.waitTime(50);
+  await page.waitForSelector('[data-genre="heavy"]');
+  await page.evaluate(() => {
+    document.querySelector('[data-genre="heavy"]').click();
+  });
+  await this.waitTime(100);
+
+  await page.evaluate(() => {
+    document.querySelectorAll('.events').forEach((event) => {
+      if (!event.classList.contains('hidden')) {
+        event.classList.add('zichtbaar-dus');
+      }
+    });
+  });
+
+  let punkMetalRockRawEvents = await page.evaluate(
     // eslint-disable-next-line no-shadow
     ({ workerData, unavailabiltyTerms }) =>
-      Array.from(document.querySelectorAll('.event-item'))
-        .filter((eventEl) => {
-          const tags = eventEl.querySelector('.meta-tag')?.textContent.toLowerCase() ?? '';
-          return tags.includes('metal') || tags.includes('punk');
-        })
+      Array.from(document.querySelectorAll('.zichtbaar-dus .event-item'))
         .map((eventEl) => {
           const title = eventEl.querySelector('.media-heading')?.textContent ?? null;
           const res = {
@@ -204,66 +215,19 @@ scraper.mainPage = async function () {
     { workerData, unavailabiltyTerms: terms.unavailability },
   ); // page.evaluate
 
-  punkMetalRawEvents = punkMetalRawEvents.map(this.isMusicEventCorruptedMapper);
+  this.dirtyDebug(punkMetalRockRawEvents);
 
-  let rockRawEvents = await page.evaluate(
-    // eslint-disable-next-line no-shadow
-    ({ workerData }) =>
-      Array.from(document.querySelectorAll('.event-item'))
-        .filter((eventEl) => {
-          const tags = eventEl.querySelector('.meta-tag')?.textContent.toLowerCase() ?? '';
-          return tags.includes('rock');
-        })
-        .map((eventEl) => {
-          const title = eventEl.querySelector('.media-heading')?.textContent ?? null;
-          const res = {
-            anker: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
-            errors: [],
-            title,
-          };
-          res.venueEventUrl =
-            eventEl.querySelector('.jq-modal-trigger')?.getAttribute('data-url') ?? '';
+  punkMetalRockRawEvents = punkMetalRockRawEvents.map(this.isMusicEventCorruptedMapper);
 
-          res.soldOut = !!(
-            eventEl
-              .querySelector('.meta-info')
-              ?.textContent.toLowerCase()
-              .includes('uitverkocht') ?? null
-          );
-          return res;
-        }),
-    { workerData },
-  );
+  this.dirtyDebug(punkMetalRockRawEvents);
 
-  rockRawEvents = rockRawEvents.map(this.isMusicEventCorruptedMapper);
-
-  const checkedRockEvents = [];
-  while (rockRawEvents.length) {
-    const thisRockRawEvent = rockRawEvents.shift();
-    const tl = this.cleanupEventTitle(thisRockRawEvent.title);
-    const isAllowed = await this.rockAllowListCheck(thisRockRawEvent, tl);
-    if (isAllowed.success) {
-      checkedRockEvents.push(thisRockRawEvent);
-      continue;
-    }
-    const isRockRefuse = await this.rockRefuseListCheck(thisRockRawEvent, tl);
-    if (isRockRefuse.success) {
-      continue;
-    }
-
-    const isRockRes = await this.isRock(thisRockRawEvent);
-    if (isRockRes.success) {
-      checkedRockEvents.push(thisRockRawEvent);
-    }
-  }
-
-  const rawEvents = punkMetalRawEvents.concat(checkedRockEvents);
+  const rawEvents = punkMetalRockRawEvents;
 
   // gebr de nobel cookies moet eerste laaten mislukken
-  const eersteCookieEvent = { ...rawEvents[0] };
-  eersteCookieEvent.title = `NEP EVENT VOOR COOKIES`;
+  // const eersteCookieEvent = { ...rawEvents[0] };
+  // eersteCookieEvent.title = `NEP EVENT VOOR COOKIES`;
 
-  rawEvents.unshift(eersteCookieEvent);
+  // rawEvents.unshift(eersteCookieEvent);
 
   const eventGen = this.eventGenerator(rawEvents);
   // eslint-disable-next-line no-unused-vars
