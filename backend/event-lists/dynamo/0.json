@@ -1,15 +1,28 @@
 [
   {
-    "door": "2024-02-29T19:30:00",
-    "start": "2024-02-29T20:00:00",
-    "end": "2024-02-29T23:00:00",
-    "venueEventUrl": "https://www.dynamo-eindhoven.nl/programma/eternal-champion-first-nl-show/",
-    "title": "Eternal Champion",
+    "door": "2024-02-16T19:00:00",
+    "start": "2024-02-16T19:30:00",
+    "end": "2024-02-16T23:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/programma/citizen-2024/#spotify-embed",
+    "title": "Citizen",
     "location": "dynamo",
     "price": 19,
-    "shortText": "Support: Sumerlands",
-    "longText": "../public/texts/dynamo/dGVybmFsLWNoYW1waW9uLWZpcnN0LW5sLXNob3cv.html",
-    "image": "../public/event-images/dynamo/dGVybmFsLWNoYW1waW9uLWZpcnN0LW5sLXNob3cv",
+    "shortText": "Support: Drug Church",
+    "longText": "../public/texts/dynamo/bWEvY2l0aXplbi0yMDI0LyNzcG90aWZ5LWVtYmVk.html",
+    "image": "../public/event-images/dynamo/bWEvY2l0aXplbi0yMDI0LyNzcG90aWZ5LWVtYmVk",
+    "soldOut": false
+  },
+  {
+    "door": "2024-03-07T19:00:00",
+    "start": "2024-03-07T19:30:00",
+    "end": "2024-03-07T23:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/programma/chris-cresswell-northcote/#spotify-embed",
+    "title": "Chris Creswell + Northcote",
+    "location": "dynamo",
+    "price": 19,
+    "shortText": "Plus support",
+    "longText": "../public/texts/dynamo/c3dlbGwtbm9ydGhjb3RlLyNzcG90aWZ5LWVtYmVk.html",
+    "image": "../public/event-images/dynamo/c3dlbGwtbm9ydGhjb3RlLyNzcG90aWZ5LWVtYmVk",
     "soldOut": false
   },
   {

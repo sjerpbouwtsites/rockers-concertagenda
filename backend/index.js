@@ -10,6 +10,7 @@ import Artists from './db/artists.js';
 const ArtistInst = new Artists({
   rockArtistPath: "./db/rock-artists.json",
   refusedPath: "./db/refused.json",
+  rockEventsPath: "./db/rock-events.json",
 });
 
 // dotenv.config();
@@ -96,11 +97,6 @@ async function startWorker(workerConfig) {
     await waitTime(5);
     return startWorker(workerConfig);
   }
-
-  thisConfig.masterEnv = {
-    TICKETMASTER_CONSUMER_KEY: process.env.TICKETMASTER_CONSUMER_KEY,
-    TICKETMASTER_CONSUMER_SECRET: process.env.TICKETMASTER_CONSUMER_SECRET,
-  };
 
   const thisWorker = new RockWorker(thisConfig);
 

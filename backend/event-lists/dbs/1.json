@@ -1,17 +1,5 @@
 [
   {
-    "start": "2023-11-24T08:00:00",
-    "end": "2023-11-24T11:00:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/bowl-album-launch-hoofs-octopus/",
-    "title": "BOWL Album Launch + Hoofs + Octopus",
-    "location": "dbs",
-    "price": 8,
-    "shortText": "garage, post punk",
-    "longText": "../public/texts/dbs/d2wtYWxidW0tbGF1bmNoLWhvb2ZzLW9jdG9wdXMv.html",
-    "image": "../public/event-images/dbs/d2wtYWxidW0tbGF1bmNoLWhvb2ZzLW9jdG9wdXMv",
-    "unavailable": false
-  },
-  {
     "start": "2023-12-06T08:00:00",
     "end": "2023-12-06T10:30:00",
     "venueEventUrl": "https://www.dbstudio.nl/event/holly-golightly-uk-damaged-goods-the-monroes/",
@@ -36,15 +24,27 @@
     "unavailable": false
   },
   {
-    "start": "2023-04-22T08:00:00",
-    "end": "2023-04-22T11:00:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/badasonic-revue-w-the-bandulus-usa-the-utopians-b-djs/",
-    "title": "Badasonic revue w/  the bandulus (usa) ",
+    "start": "2023-02-01T08:00:00",
+    "end": "2023-02-01T10:30:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/gyasi-usa-alive-natural-sounds-support/",
+    "title": "GYASI (USA – Alive Natural Sounds) + support",
     "location": "dbs",
-    "price": 15,
-    "shortText": " the utopians (b)   dj’s reggae, rocksteady, ska",
-    "longText": "../public/texts/dbs/bmR1bHVzLXVzYS10aGUtdXRvcGlhbnMtYi1kanMv.html",
-    "image": "../public/event-images/dbs/bmR1bHVzLXVzYS10aGUtdXRvcGlhbnMtYi1kanMv",
+    "price": 12,
+    "shortText": "glamrock, rock",
+    "longText": "../public/texts/dbs/LWFsaXZlLW5hdHVyYWwtc291bmRzLXN1cHBvcnQv.html",
+    "image": "../public/event-images/dbs/LWFsaXZlLW5hdHVyYWwtc291bmRzLXN1cHBvcnQv",
+    "unavailable": false
+  },
+  {
+    "start": "2023-04-18T08:00:00",
+    "end": "2023-04-18T10:30:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/electric-eel-shock-japan-support/",
+    "title": "Electric eel shock (japan) + support",
+    "location": "dbs",
+    "price": 14,
+    "shortText": "rock, rock 'n roll",
+    "longText": "../public/texts/dbs/Y3RyaWMtZWVsLXNob2NrLWphcGFuLXN1cHBvcnQv.html",
+    "image": "../public/event-images/dbs/Y3RyaWMtZWVsLXNob2NrLWphcGFuLXN1cHBvcnQv",
     "unavailable": false
   }
 ]

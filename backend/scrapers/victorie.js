@@ -49,7 +49,7 @@ scraper.mainPageAsyncCheck = async function (event) {
     this.skipFurtherChecks.push(event.title);
     return {
       event,
-      reason: reasons.join(','),
+      reason: reasons.reverse().join(','),
       success: true,
     };
   }  
@@ -67,7 +67,7 @@ scraper.mainPageAsyncCheck = async function (event) {
     this.skipFurtherChecks.push(event.title);
     return {
       event,
-      reason: reasons.join(','),
+      reason: reasons.reverse().join(','),
       success: true,
     };
   }
@@ -84,7 +84,7 @@ scraper.mainPageAsyncCheck = async function (event) {
   if (this.lastDBAnswer.success) {
     return {
       event,
-      reason: reasons.join(','),
+      reason: reasons.reverse().join(','),
       success: false,
     };
   }
@@ -103,7 +103,7 @@ scraper.mainPageAsyncCheck = async function (event) {
     
     return {
       event,
-      reason: reasons.join(','),
+      reason: reasons.reverse().join(','),
       success: false,
     };
   }
@@ -124,7 +124,7 @@ scraper.singlePageAsyncCheck = async function (event) {
     reasons.push("allready check main");
     return {
       event,
-      reason: reasons.join(','),
+      reason: reasons.reverse().join(','),
       success: true,
     };    
   }
@@ -143,7 +143,7 @@ scraper.singlePageAsyncCheck = async function (event) {
     
     return {
       event,
-      reason: reasons.join(','),
+      reason: reasons.reverse().join(','),
       success: true,
     };
   }
@@ -162,7 +162,7 @@ scraper.singlePageAsyncCheck = async function (event) {
     
     return {
       event,
-      reason: reasons.join(','),
+      reason: reasons.reverse().join(','),
       success: true,
     };
   }
@@ -172,13 +172,13 @@ scraper.singlePageAsyncCheck = async function (event) {
     subtype: 'saveRefusedTitle',
     messageData: {
       string: event.title,
-      reason: reasons.join(','),
+      reason: reasons.reverse().join(','),
     },
   });
   
   return {
     event,
-    reason: reasons.join(','),
+    reason: reasons.reverse().join(','),
     success: false,
   };
 };

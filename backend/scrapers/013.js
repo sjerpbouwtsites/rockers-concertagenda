@@ -28,7 +28,25 @@ scraper.listenToMasterThread();
 // #region [rgba(50, 0, 0, 0.5)]      MAIN PAGE EVENT CHECK
 scraper.mainPageAsyncCheck = async function (event) {
   const reasons = [];
-  
+
+  this.talkToDB({
+    type: 'db-request',
+    subtype: 'isRockEvent',
+    messageData: {
+      string: event.title,
+    },
+  });
+  await this.checkDBhasAnswered();
+  reasons.push(this.lastDBAnswer.reason);
+  if (this.lastDBAnswer.success) {
+    this.skipFurtherChecks.push(event.title);
+    return {
+      event,
+      reason: reasons.reverse().join(','),
+      success: true,
+    };
+  }  
+
   this.talkToDB({
     type: 'db-request',
     subtype: 'isAllowed',
@@ -39,9 +57,10 @@ scraper.mainPageAsyncCheck = async function (event) {
   await this.checkDBhasAnswered();
   reasons.push(this.lastDBAnswer.reason);
   if (this.lastDBAnswer.success) {
+    this.skipFurtherChecks.push(event.title);
     return {
       event,
-      reason: reasons.join(','),
+      reason: reasons.reverse().join(','),
       success: true,
     };
   }
@@ -58,7 +77,7 @@ scraper.mainPageAsyncCheck = async function (event) {
   if (this.lastDBAnswer.success) {
     return {
       event,
-      reason: reasons.join(','),
+      reason: reasons.reverse().join(','),
       success: false,
     };
   }
@@ -77,7 +96,7 @@ scraper.mainPageAsyncCheck = async function (event) {
     
     return {
       event,
-      reason: reasons.join(','),
+      reason: reasons.reverse().join(','),
       success: false,
     };
   }
@@ -136,10 +155,19 @@ scraper.mainPage = async function () {
 
   rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
 
-  this.saveBaseEventlist(workerData.family, rawEvents);
-  const thisWorkersEvents = rawEvents.filter(
+  const eventGen = this.eventGenerator(rawEvents);
+  // eslint-disable-next-line no-unused-vars
+  const checkedEvents = await this.rawEventsAsyncCheck({
+    eventGen,
+    checkedEvents: [],
+  });  
+
+  this.saveBaseEventlist(workerData.family, checkedEvents);
+  
+  const thisWorkersEvents = checkedEvents.filter(
     (eventEl, index) => index % workerData.workerCount === workerData.index,
   );
+  
   return this.mainPageEnd({ stopFunctie, page, rawEvents: thisWorkersEvents });
 };
 // #endregion                          MAIN PAGE

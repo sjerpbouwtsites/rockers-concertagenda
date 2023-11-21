@@ -16,49 +16,54 @@ export default class Artists {
 
   rockEventsAliases = {};
 
-  allRockArtistNamesAndAliases = [];
+  allRockArtistsNamesAndAliases = [];
 
   allRefusedNamesAndAliases = [];
 
-  allRockEventsNamesAndAliases = '';
+  allRockEventsNamesAndAliases = [];
+  
+  allRockArtistsNamesAndAliasesString = '';
+
+  allRockEventsNamesAndAliasesString = '';
+  
+  allRefusedNamesAndAliasesString = '';
 
   constructor(conf) {
     this.conf = conf;
     this.rockArtists = JSON.parse(fs.readFileSync(conf.rockArtistPath));
     this.refused = JSON.parse(fs.readFileSync(conf.refusedPath));
-       
+    this.rockEvents = JSON.parse(fs.readFileSync(conf.rockEventsPath));
+    
     Object.entries(this.rockArtists)
-      .filter(([, artistRecord]) => artistRecord.aliases.length)
       .forEach(([artistName, artistRecord]) => {
+        this.allRockArtistsNamesAndAliases.push(artistName);
         artistRecord.aliases.forEach((alias) => {
           this.rockArtistAliases[alias] = artistName;
+          this.allRockArtistsNamesAndAliases.push(alias);
         });
       });
 
     Object.entries(this.refused)
-      .filter(([, refusedRecord]) => refusedRecord.aliases.length)
       .forEach(([refusedName, refusedRecord]) => {
+        this.allRefusedNamesAndAliases.push(refusedName);
         refusedRecord.aliases.forEach((alias) => {
+          this.allRefusedNamesAndAliases.push(alias);
           this.refusedAliases[alias] = refusedName;
         });
       });
 
     Object.entries(this.rockEvents)
-      .filter(([, rockEventRecord]) => rockEventRecord.aliases.length)
       .forEach(([rockEventName, rockEventRecord]) => {
+        this.allRockEventsNamesAndAliases.push(rockEventName);
         rockEventRecord.aliases.forEach((alias) => {
           this.rockEventsAliases[alias] = rockEventName;
+          this.allRockEventsNamesAndAliases.push(alias);
         });
       });      
 
-    this.allRockArtistNamesAndAliases = Object.keys(this.rockArtists)
-      .concat(Object.keys(this.rockArtistAliases));
-
-    this.allRefusedNamesAndAliases = Object.keys(this.refused)
-      .concat(Object.keys(this.refusedAliases));
-
-    this.allRockEventsNamesAndAliases = Object.keys(this.rockEvents)
-      .concat(Object.keys(this.rockEventsAliases)).join(', ');
+    this.allRockArtistsNamesAndAliasesString = this.allRockArtistsNamesAndAliases.join(', ');
+    this.allRockEventsNamesAndAliasesString = this.allRockEventsNamesAndAliases.join(', ');
+    this.allRefusedNamesAndAliasesString = this.allRefusedNamesAndAliases.join(', ');
   }
 
   parseMessage(message) {
@@ -139,7 +144,7 @@ export default class Artists {
     return this.error(new Error(`request ${message.request} onbekend`));
   }
 
-  cleanArtistName(rawArtistName) {
+  lowerCaseAndTrim(rawArtistName) {
     return rawArtistName.toLowerCase().trim();
   }
 
@@ -152,7 +157,7 @@ export default class Artists {
   }
 
   getStoredArtist(artistName) {
-    let searchForName = this.cleanArtistName(artistName);
+    let searchForName = this.lowerCaseAndTrim(artistName);
     if (!this.getArtistIsStored(searchForName)) {
       if (!this.getArtistAliasIsStored(searchForName)) {
         return this.post({
@@ -172,8 +177,8 @@ export default class Artists {
   }
 
   scanStringForArtists(string) {
-    const lowerString = this.cleanArtistName(string);
-    const found = this.allRockArtistNamesAndAliases
+    const lowerString = this.lowerCaseAndTrim(string);
+    const found = this.allRockArtistsNamesAndAliases
       .filter((nameOrAlias) => lowerString.includes(nameOrAlias));
     if (!found.length) {
       return this.post({
@@ -190,8 +195,8 @@ export default class Artists {
   }
 
   isRockEvent(string) {
-    const lowerString = this.cleanArtistName(string);
-    const isFoundDirectly = this.allRockEventsNamesAndAliases.join(', ').includes(lowerString);
+    const lowerString = this.lowerCaseAndTrim(string);
+    const isFoundDirectly = this.allRockEventsNamesAndAliasesString.includes(lowerString);
     const eventTypeNameFound = Object.keys(this.rockEvents).find((event) => string.includes(event));
       
     if (isFoundDirectly || eventTypeNameFound) {
@@ -209,27 +214,27 @@ export default class Artists {
   }  
 
   isRefused(string) {
-    const lowerString = this.cleanArtistName(string);
-    const found = this.allRefusedNamesAndAliases
-      .find((nameOrAlias) => lowerString.includes(nameOrAlias));
-    if (found) {
+    const lowerString = this.lowerCaseAndTrim(string);
+    const foundDirectly = this.allRefusedNamesAndAliasesString.includes(lowerString);
+      
+    if (foundDirectly) {
       return this.post({
         success: true,
-        data: found,
-        reason: `${found} is refused.`,
+        data: null,
+        reason: `${lowerString} is refused.`,
       });
     }
     return this.post({
       success: false,
       data: null,
-      reason: `nothing refused found in ${string}`,
+      reason: `nothing refused found in ${lowerString}`,
     });
   }
 
   isAllowed(string) {
-    const lowerString = string.toLowerCase.trim();
-    const found = this.allRockArtistNamesAndAliases
-      .find((nameOrAlias) => lowerString.includes(nameOrAlias));
+    const lowerString = this.lowerCaseAndTrim(string);
+    const found = this.allRockArtistsNamesAndAliasesString.includes(lowerString);
+      
     if (found) {
       return this.post({
         success: true,
@@ -245,7 +250,7 @@ export default class Artists {
   }
 
   saveRefusedTitle(string, reason) {
-    const clean = this.cleanArtistName(string);
+    const clean = this.lowerCaseAndTrim(string);
     if (Object.prototype.hasOwnProperty.call(this.refused, clean)) {
       // allready saved, should not be
       return this.post({
@@ -279,7 +284,7 @@ export default class Artists {
   }
 
   saveAllowedTitle(string, reason) {
-    const clean = this.cleanArtistName(string);
+    const clean = this.lowerCaseAndTrim(string);
     if (Object.prototype.hasOwnProperty.call(this.rockArtists, clean)) {
       // allready saved, should not be
       return this.post({
@@ -303,7 +308,7 @@ export default class Artists {
     }
     this.rockArtists[clean] = {
       aliases: [],
-      reason,
+      genres: [],
     };
     return this.post({
       success: true,
@@ -313,22 +318,22 @@ export default class Artists {
   }
 
   persistNewRefusedAndRockArtists() {
-    const orderedRefused = Object.keys(this.refused).sort().reduce(
-      (obj, key) => { 
-        obj[key] = this.refused[key]; 
-        return obj;
-      }, 
-      {},
-    );
-    const rockArtistsOrdered = Object.keys(this.rockArtists).sort().reduce(
-      (obj, key) => { 
-        obj[key] = this.rockArtists[key]; 
-        return obj;
-      }, 
-      {},
-    );
-    fs.writeFileSync(this.conf.refusedPath, JSON.stringify(orderedRefused, null, 2));
-    fs.writeFileSync(this.conf.rockArtistPath, JSON.stringify(rockArtistsOrdered, null, 2));
+    // const orderedRefused = Object.keys(this.refused).sort().reduce(
+    //   (obj, key) => { 
+    //     obj[key] = this.refused[key]; 
+    //     return obj;
+    //   }, 
+    //   {},
+    // );
+    // const rockArtistsOrdered = Object.keys(this.rockArtists).sort().reduce(
+    //   (obj, key) => { 
+    //     obj[key] = this.rockArtists[key]; 
+    //     return obj;
+    //   }, 
+    //   {},
+    // );
+    fs.writeFileSync(this.conf.refusedPath, JSON.stringify(this.refused, null, 2));
+    fs.writeFileSync(this.conf.rockArtistPath, JSON.stringify(this.rockArtists, null, 2));
   }
 
   error(err) {

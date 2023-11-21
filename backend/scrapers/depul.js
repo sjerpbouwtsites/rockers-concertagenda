@@ -5,7 +5,7 @@ import longTextSocialsIframes from './longtext/depul.js';
 import getImage from './gedeeld/image.js';
 
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
-const depulScraper = new AbstractScraper({
+const scraper = new AbstractScraper({
   workerData: { ...workerData },
 
   mainPage: {
@@ -26,66 +26,132 @@ const depulScraper = new AbstractScraper({
 });
 // #endregion                          SCRAPER CONFIG
 
-depulScraper.listenToMasterThread();
+scraper.listenToMasterThread();
 
-// #region [rgba(0, 120, 0, 0.1)]      MAIN PAGE EVENT CHECK
-depulScraper.mainPageAsyncCheck = async function (event) {
-  const isRefusedFull = await this.rockRefuseListCheck(event, event.title.toLowerCase());
-  if (isRefusedFull.success) {
-    isRefusedFull.success = false;
-    return isRefusedFull;
-  }
+// #region [rgba(60, 0, 0, 0.5)]      MAIN PAGE EVENT CHECK
+scraper.mainPageAsyncCheck = async function (event) {
+  const reasons = [];
+
+  this.talkToDB({
+    type: 'db-request',
+    subtype: 'isRockEvent',
+    messageData: {
+      string: event.title,
+    },
+  });
+  await this.checkDBhasAnswered();
+  reasons.push(this.lastDBAnswer.reason);
+  if (this.lastDBAnswer.success) {
+    this.skipFurtherChecks.push(event.title);
+    return {
+      event,
+      reason: reasons.reverse().join(','),
+      success: true,
+    };
+  }  
   
-  const workingTitle = this.cleanupEventTitle(event.title);
-  const isRefused = await this.rockRefuseListCheck(event, workingTitle);
-  if (isRefused.success) {
-    isRefused.success = false;
-    return isRefused;
+  this.talkToDB({
+    type: 'db-request',
+    subtype: 'isAllowed',
+    messageData: {
+      string: event.title,
+    },
+  });
+  await this.checkDBhasAnswered();
+  reasons.push(this.lastDBAnswer.reason);
+  if (this.lastDBAnswer.success) {
+    this.skipFurtherChecks.push(event.title);
+    return {
+      event,
+      reason: reasons.reverse().join(','),
+      success: true,
+    };
   }
+    
+  this.talkToDB({
+    type: 'db-request',
+    subtype: 'isRefused',
+    messageData: {
+      string: event.title,
+    },
+  });
+  await this.checkDBhasAnswered();
+  reasons.push(this.lastDBAnswer.reason);
+  if (this.lastDBAnswer.success) {
+    return {
+      event,
+      reason: reasons.reverse().join(','),
+      success: false,
+    };
+  }
+   
   return {
-    workingTitle,
-    reason: [isRefused.reason].join(';'),
     event,
+    reason: reasons.join(', '),
     success: true,
   };
 };
 // #endregion                          MAIN PAGE EVENT CHECK
 
-// #region [rgba(0, 180, 0, 0.1)]      SINGLE PAGE EVENT CHECK
-depulScraper.singlePageAsyncCheck = async function (event) {
-  const isAllowedFull = await this.rockAllowListCheck(event, event.title.toLowerCase());
-  if (isAllowedFull.success) return isAllowedFull;
+// #region [rgba(0, 60, 0, 0.5)]      SINGLE PAGE EVENT CHECK
+scraper.singlePageAsyncCheck = async function (event) {
+  const reasons = [];
   
-  const workingTitle = this.cleanupEventTitle(event.title);
-  const isAllowed = await this.rockAllowListCheck(event, workingTitle);
-  if (isAllowed.success) {
-    return isAllowed;
+  if (this.skipFurtherChecks.includes(event.title)) {
+    reasons.push("allready check main");
+    return {
+      event,
+      reason: reasons.reverse().join(','),
+      success: true,
+    };    
   }
 
-  const hasGoodTerms = await this.hasGoodTerms(event, ['title', 'shortText']);
-  if (hasGoodTerms.success) {
-    this.saveAllowedTitle(workingTitle);
-    return hasGoodTerms;
-  }
-
-  const isRockRes = await this.isRock(event, [workingTitle]);
+  const goodTermsRes = await this.hasGoodTerms(event);
+  reasons.push(goodTermsRes.reason);
+  if (goodTermsRes.success) {
+    this.skipFurtherChecks.push(event.title);
+    this.talkToDB({
+      type: 'db-request',
+      subtype: 'saveAllowedTitle',
+      messageData: {
+        string: event.title,
+        reason: reasons.join(', '),
+      },
+    });  
+    return goodTermsRes;
+  }  
+  
+  const isRockRes = await this.isRock(event);
   if (isRockRes.success) {
-    this.saveAllowedTitle(workingTitle);
+    this.talkToDB({
+      type: 'db-request',
+      subtype: 'saveAllowedTitle',
+      messageData: {
+        string: event.title,
+        reason: reasons.join(', '),
+      },
+    }); 
     return isRockRes;
   }
-  this.saveRefusedTitle(workingTitle);
+  this.talkToDB({
+    type: 'db-request',
+    subtype: 'saveRefusedTitle',
+    messageData: {
+      string: event.title,
+      reason: reasons.join(', '),
+    },
+  }); 
 
   return {
-    workingTitle,
     event,
     success: false,
-    reason: [isAllowed.reason, hasGoodTerms.reason, isRockRes.reason].join(';'),
+    reason: reasons.join(', '),
   };
 };
 // #endregion                          SINGLE PAGE EVENT CHECK
 
 // #region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
-depulScraper.mainPage = async function () {
+scraper.mainPage = async function () {
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
   if (availableBaseEvents) {
     const thisWorkersEvents = availableBaseEvents.filter(
@@ -95,12 +161,10 @@ depulScraper.mainPage = async function () {
   }
   const { stopFunctie, page } = await this.mainPageStart();
 
-  await page.evaluate(() => {
-    // hack op site
-    loadContent('all', 'music'); // eslint-disable-line
-  });
-
-  await this.waitTime(250);
+  await this.autoScroll(page);
+  await this.waitTime(50);
+  await this.autoScroll(page);
+  await this.waitTime(50);  
 
   let rawEvents = await page.evaluate(
     // eslint-disable-next-line no-shadow
@@ -134,16 +198,25 @@ depulScraper.mainPage = async function () {
   );
   rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
 
-  this.saveBaseEventlist(workerData.family, rawEvents);
-  const thisWorkersEvents = rawEvents.filter(
+  const eventGen = this.eventGenerator(rawEvents);
+  // eslint-disable-next-line no-unused-vars
+  const checkedEvents = await this.rawEventsAsyncCheck({
+    eventGen,
+    checkedEvents: [],
+  });  
+  
+  this.saveBaseEventlist(workerData.family, checkedEvents);
+    
+  const thisWorkersEvents = checkedEvents.filter(
     (eventEl, index) => index % workerData.workerCount === workerData.index,
   );
+    
   return this.mainPageEnd({ stopFunctie, rawEvents: thisWorkersEvents });
 };
 // #endregion                          MAIN PAGE
 
 // #region [rgba(120, 0, 0, 0.1)]     SINGLE PAGE
-depulScraper.singlePage = async function ({ page, event }) {
+scraper.singlePage = async function ({ page, event }) {
   const { stopFunctie } = await this.singlePageStart();
 
   const pageInfo = await page.evaluate(

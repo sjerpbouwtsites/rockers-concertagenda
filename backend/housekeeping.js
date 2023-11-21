@@ -69,6 +69,8 @@ export default async function houseKeeping() {
 
   // als !keepBaseEvents, dan alles al gewist.
   if (!shell.keepBaseEvents) {
+    console.log('jaja');
+    console.log(wipeBaseList);
     wipeBaseList.forEach((wipe) => {
       fs.readdirSync(fsDirections.baseEventlists).forEach((baseEventList) => {
         if (baseEventList.includes(wipe)) {
