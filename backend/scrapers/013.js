@@ -27,11 +27,11 @@ scraper.listenToMasterThread();
 
 // #region [rgba(50, 0, 0, 0.5)]      MAIN PAGE EVENT CHECK
 scraper.mainPageAsyncCheck = async function (event) {
-  const reasons = [];
+  const reasons = [];  
 
   this.talkToDB({
     type: 'db-request',
-    subtype: 'isRockEvent',
+    subtype: 'isAllowed',
     messageData: {
       string: event.title,
     },
@@ -45,11 +45,11 @@ scraper.mainPageAsyncCheck = async function (event) {
       reason: reasons.reverse().join(','),
       success: true,
     };
-  }  
+  }
 
   this.talkToDB({
     type: 'db-request',
-    subtype: 'isAllowed',
+    subtype: 'isRockEvent',
     messageData: {
       string: event.title,
     },
@@ -101,8 +101,17 @@ scraper.mainPageAsyncCheck = async function (event) {
     };
   }
 
+  this.talkToDB({
+    type: 'db-request',
+    subtype: 'saveAllowedTitle',
+    messageData: {
+      string: event.title,
+      reason: reasons.reverse().join(', '),
+    },
+  });
+
   return {
-    reason: reasons.join(', '),
+    reason: reasons.reverse().join(', '),
     event,
     success: true,
   };

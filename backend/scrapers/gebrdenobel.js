@@ -33,24 +33,6 @@ scraper.listenToMasterThread();
 // #region [rgba(60, 0, 0, 0.5)]      MAIN PAGE EVENT CHECK
 scraper.mainPageAsyncCheck = async function (event) {
   const reasons = [];
-
-  this.talkToDB({
-    type: 'db-request',
-    subtype: 'isRockEvent',
-    messageData: {
-      string: event.title,
-    },
-  });
-  await this.checkDBhasAnswered();
-  reasons.push(this.lastDBAnswer.reason);
-  if (this.lastDBAnswer.success) {
-    this.skipFurtherChecks.push(event.title);
-    return {
-      event,
-      reason: reasons.reverse().join(','),
-      success: true,
-    };
-  }  
   
   this.talkToDB({
     type: 'db-request',
@@ -69,6 +51,32 @@ scraper.mainPageAsyncCheck = async function (event) {
       success: true,
     };
   }
+
+  this.talkToDB({
+    type: 'db-request',
+    subtype: 'isRockEvent',
+    messageData: {
+      string: event.title,
+    },
+  });
+  await this.checkDBhasAnswered();
+  reasons.push(this.lastDBAnswer.reason);
+  if (this.lastDBAnswer.success) {
+    this.talkToDB({
+      type: 'db-request',
+      subtype: 'saveAllowedTitle',
+      messageData: {
+        string: event.title,
+        reason: reasons.reverse().join(', '),
+      },
+    }); 
+    this.skipFurtherChecks.push(event.title);
+    return {
+      event,
+      reason: reasons.reverse().join(','),
+      success: true,
+    };
+  }  
     
   this.talkToDB({
     type: 'db-request',
@@ -89,7 +97,7 @@ scraper.mainPageAsyncCheck = async function (event) {
    
   return {
     event,
-    reason: reasons.join(', '),
+    reason: reasons.reverse().join(', '),
     success: true,
   };
 };
@@ -125,7 +133,7 @@ scraper.singlePageAsyncCheck = async function (event) {
       subtype: 'saveRefusedTitle',
       messageData: {
         string: event.title,
-        reason: reasons.join(', '),
+        reason: reasons.reverse().join(', '),
       },
     });    
     
@@ -136,31 +144,19 @@ scraper.singlePageAsyncCheck = async function (event) {
     };
   }
   
-  // const isRockRes = await this.isRock(event);
-  // if (isRockRes.success) {
-  //   this.talkToDB({
-  //     type: 'db-request',
-  //     subtype: 'saveAllowedTitle',
-  //     messageData: {
-  //       string: event.title,
-  //       reason: reasons.join(', '),
-  //     },
-  //   }); 
-  //   return isRockRes;
-  // }
-  // this.talkToDB({
-  //   type: 'db-request',
-  //   subtype: 'saveRefusedTitle',
-  //   messageData: {
-  //     string: event.title,
-  //     reason: reasons.join(', '),
-  //   },
-  // }); 
+  this.talkToDB({
+    type: 'db-request',
+    subtype: 'saveAllowedTitle',
+    messageData: {
+      string: event.title,
+      reason: reasons.reverse().join(', '),
+    },
+  }); 
 
   return {
     event,
     success: true,
-    reason: reasons.join(', '),
+    reason: reasons.reverse().join(', '),
   };
 };
 // #endregion                          SINGLE PAGE EVENT CHECK
@@ -399,11 +395,17 @@ scraper.singlePage = async function ({ page, event }) {
     });
   });
 
+  await page.evaluate(() => {
+    document.querySelectorAll('.event-table tr').forEach((row) => {
+      if (row.textContent.includes('€')) row.classList.add('rij-heeft-prijs');
+    });
+  });
+
   const priceRes = await this.getPriceFromHTML({
     page,
     event,
     pageInfo,
-    selectors: ['.gebrdenobel-price-manual', '.event-table'],
+    selectors: ['.gebrdenobel-price-manual', '.rij-heeft-prijs', '.event-table'],
   });
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
   pageInfo.price = priceRes.price;

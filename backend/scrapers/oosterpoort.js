@@ -36,24 +36,6 @@ scraper.mainPageAsyncCheck = async function (event) {
 
   this.talkToDB({
     type: 'db-request',
-    subtype: 'isRockEvent',
-    messageData: {
-      string: event.title,
-    },
-  });
-  await this.checkDBhasAnswered();
-  reasons.push(this.lastDBAnswer.reason);
-  if (this.lastDBAnswer.success) {
-    this.skipFurtherChecks.push(event.title);
-    return {
-      event,
-      reason: reasons.reverse().join(','),
-      success: true,
-    };
-  }  
-
-  this.talkToDB({
-    type: 'db-request',
     subtype: 'isAllowed',
     messageData: {
       string: event.title,
@@ -69,6 +51,32 @@ scraper.mainPageAsyncCheck = async function (event) {
       success: true,
     };
   }
+
+  this.talkToDB({
+    type: 'db-request',
+    subtype: 'isRockEvent',
+    messageData: {
+      string: event.title,
+    },
+  });
+  await this.checkDBhasAnswered();
+  reasons.push(this.lastDBAnswer.reason);
+  if (this.lastDBAnswer.success) {
+    this.talkToDB({
+      type: 'db-request',
+      subtype: 'saveAllowedTitle',
+      messageData: {
+        string: event.title,
+        reason: reasons.reverse().join(', '),
+      },
+    });      
+    this.skipFurtherChecks.push(event.title);
+    return {
+      event,
+      reason: reasons.reverse().join(','),
+      success: true,
+    };
+  }  
   
   this.talkToDB({
     type: 'db-request',
@@ -95,7 +103,7 @@ scraper.mainPageAsyncCheck = async function (event) {
       subtype: 'saveRefusedTitle',
       messageData: {
         string: event.title,
-        reason: reasons.join(', '),
+        reason: reasons.reverse().join(', '),
       },
     });    
     
@@ -113,24 +121,28 @@ scraper.mainPageAsyncCheck = async function (event) {
       subtype: 'saveAllowedTitle',
       messageData: {
         string: event.title,
-        reason: reasons.join(', '),
+        reason: reasons.reverse().join(', '),
       },
     }); 
-    return isRockRes;
+    return {
+      event,
+      reason: reasons.reverse().join(', '),
+      success: true,
+    };
   }
   this.talkToDB({
     type: 'db-request',
     subtype: 'saveRefusedTitle',
     messageData: {
       string: event.title,
-      reason: reasons.join(', '),
+      reason: reasons.reverse().join(', '),
     },
   });   
 
   return {
     event,
-    reason: reasons.join(', '),
-    success: true,
+    reason: reasons.reverse().join(', '),
+    success: false,
   };
 };
 // #endregion                          MAIN PAGE EVENT CHECK

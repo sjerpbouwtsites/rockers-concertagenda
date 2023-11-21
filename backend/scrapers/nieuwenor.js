@@ -35,24 +35,6 @@ scraper.mainPageAsyncCheck = async function (event) {
 
   this.talkToDB({
     type: 'db-request',
-    subtype: 'isRockEvent',
-    messageData: {
-      string: event.title,
-    },
-  });
-  await this.checkDBhasAnswered();
-  reasons.push(this.lastDBAnswer.reason);
-  if (this.lastDBAnswer.success) {
-    this.skipFurtherChecks.push(event.title);
-    return {
-      event,
-      reason: reasons.reverse().join(','),
-      success: true,
-    };
-  }  
-
-  this.talkToDB({
-    type: 'db-request',
     subtype: 'isAllowed',
     messageData: {
       string: event.title,
@@ -68,6 +50,32 @@ scraper.mainPageAsyncCheck = async function (event) {
       success: true,
     };
   }
+
+  this.talkToDB({
+    type: 'db-request',
+    subtype: 'isRockEvent',
+    messageData: {
+      string: event.title,
+    },
+  });
+  await this.checkDBhasAnswered();
+  reasons.push(this.lastDBAnswer.reason);
+  if (this.lastDBAnswer.success) {
+    this.talkToDB({
+      type: 'db-request',
+      subtype: 'saveAllowedTitle',
+      messageData: {
+        string: event.title,
+        reason: reasons.reverse().join(', '),
+      },
+    }); 
+    this.skipFurtherChecks.push(event.title);
+    return {
+      event,
+      reason: reasons.reverse().join(','),
+      success: true,
+    };
+  }  
   
   this.talkToDB({
     type: 'db-request',
@@ -94,7 +102,7 @@ scraper.mainPageAsyncCheck = async function (event) {
       subtype: 'saveRefusedTitle',
       messageData: {
         string: event.title,
-        reason: reasons.join(', '),
+        reason: reasons.reverse().join(', '),
       },
     });    
     
@@ -107,7 +115,7 @@ scraper.mainPageAsyncCheck = async function (event) {
 
   return {
     event,
-    reason: reasons.join(', '),
+    reason: reasons.reverse().join(', '),
     success: true,
   };
 };
@@ -135,10 +143,14 @@ scraper.singlePageAsyncCheck = async function (event) {
       subtype: 'saveAllowedTitle',
       messageData: {
         string: event.title,
-        reason: reasons.join(', '),
+        reason: reasons.reverse().join(', '),
       },
     });  
-    return goodTermsRes;
+    return {
+      event,
+      success: true,
+      reason: reasons.reverse().join(', '),
+    };
   }  
  
   const isRockRes = await this.isRock(event);
@@ -148,24 +160,28 @@ scraper.singlePageAsyncCheck = async function (event) {
       subtype: 'saveAllowedTitle',
       messageData: {
         string: event.title,
-        reason: reasons.join(', '),
+        reason: reasons.reverse().join(', '),
       },
     }); 
-    return isRockRes;
+    return {
+      event,
+      success: true,
+      reason: reasons.reverse().join(', '),
+    };
   }
   this.talkToDB({
     type: 'db-request',
     subtype: 'saveRefusedTitle',
     messageData: {
       string: event.title,
-      reason: reasons.join(', '),
+      reason: reasons.reverse().join(', '),
     },
   }); 
 
   return {
     event,
-    success: true,
-    reason: reasons.join(', '),
+    success: false,
+    reason: reasons.reverse().join(', '),
   };
 };
 // #endregion                          SINGLE PAGE EVENT CHECK

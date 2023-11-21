@@ -37,24 +37,6 @@ scraper.listenToMasterThread();
 // #region [rgba(60, 0, 0, 0.5)]      MAIN PAGE EVENT CHECK
 scraper.mainPageAsyncCheck = async function (event) {
   const reasons = [];
-
-  this.talkToDB({
-    type: 'db-request',
-    subtype: 'isRockEvent',
-    messageData: {
-      string: event.title,
-    },
-  });
-  await this.checkDBhasAnswered();
-  reasons.push(this.lastDBAnswer.reason);
-  if (this.lastDBAnswer.success) {
-    this.skipFurtherChecks.push(event.title);
-    return {
-      event,
-      reason: reasons.reverse().join(','),
-      success: true,
-    };
-  }  
   
   this.talkToDB({
     type: 'db-request',
@@ -73,6 +55,32 @@ scraper.mainPageAsyncCheck = async function (event) {
       success: true,
     };
   }
+
+  this.talkToDB({
+    type: 'db-request',
+    subtype: 'isRockEvent',
+    messageData: {
+      string: event.title,
+    },
+  });
+  await this.checkDBhasAnswered();
+  reasons.push(this.lastDBAnswer.reason);
+  if (this.lastDBAnswer.success) {
+    this.talkToDB({
+      type: 'db-request',
+      subtype: 'saveAllowedTitle',
+      messageData: {
+        string: event.title,
+        reason: reasons.reverse().join(', '),
+      },
+    }); 
+    this.skipFurtherChecks.push(event.title);
+    return {
+      event,
+      reason: reasons.reverse().join(','),
+      success: true,
+    };
+  }  
     
   this.talkToDB({
     type: 'db-request',
@@ -99,7 +107,7 @@ scraper.mainPageAsyncCheck = async function (event) {
       subtype: 'saveRefusedTitle',
       messageData: {
         string: event.title,
-        reason: reasons.join(', '),
+        reason: reasons.reverse().join(', '),
       },
     });    
     
@@ -109,10 +117,19 @@ scraper.mainPageAsyncCheck = async function (event) {
       success: false,
     };
   }  
+
+  this.talkToDB({
+    type: 'db-request',
+    subtype: 'saveAllowedTitle',
+    messageData: {
+      string: event.title,
+      reason: reasons.reverse().join(', '),
+    },
+  }); 
    
   return {
     event,
-    reason: reasons.join(', '),
+    reason: reasons.reverse().join(', '),
     success: true,
   };
 };
