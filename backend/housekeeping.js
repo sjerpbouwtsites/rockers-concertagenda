@@ -45,7 +45,7 @@ function makeRemoveImagesLocationsList() {
 }
 
 export default async function houseKeeping() {
-  const wipeBaseList = shell.forceAndRemoveBaseEvents;
+  const forcedWipeList = shell.forceAndRemoveBaseEvents;
   const curDay = new Date().toISOString().split('T')[0].replaceAll(/-/g, '');
 
   const removeImagesLocationsList = makeRemoveImagesLocationsList();
@@ -68,17 +68,18 @@ export default async function houseKeeping() {
   if (!shell.keepImages) removePublicEventImages(removeImagesLocationsList);
 
   // als !keepBaseEvents, dan alles al gewist.
+  console.log(shell.keepBaseEvents);
   if (!shell.keepBaseEvents) {
-    console.log('jaja');
-    console.log(wipeBaseList);
-    wipeBaseList.forEach((wipe) => {
-      fs.readdirSync(fsDirections.baseEventlists).forEach((baseEventList) => {
-        if (baseEventList.includes(wipe)) {
-          if (fs.existsSync(`${fsDirections.baseEventlists}/${baseEventList}`)) {
-            fs.rmSync(`${fsDirections.baseEventlists}/${baseEventList}`);
-          }
+    fs.readdirSync(fsDirections.baseEventlists).forEach((baseEventList) => {
+      const magWipen = shell.forceAll 
+        ? true 
+        : forcedWipeList.find((forcedWipe) => baseEventList.includes(forcedWipe));
+      
+      if (magWipen) {
+        if (fs.existsSync(`${fsDirections.baseEventlists}/${baseEventList}`)) {
+          fs.rmSync(`${fsDirections.baseEventlists}/${baseEventList}`);
         }
-      });
+      }
     });
   }
 
