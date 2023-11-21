@@ -39,6 +39,10 @@ export default class AbstractScraper extends ScraperConfig {
 
   _invalidEvents = [];
 
+  lastDBAnswer = null;
+
+  dbAnswered = false;
+
   // #region [rgba(0, 0, 120, 0.10)]                            CONSTRUCTOR & INSTALL
   constructor(obj) {
     super(obj);
@@ -95,6 +99,24 @@ export default class AbstractScraper extends ScraperConfig {
   dirtyTalk(talkingString) {
     parentPort.postMessage(this.qwm.messageRoll(String(talkingString)));
   }
+
+  talkToDB(messageForDB) {
+    this.dbAnswered = false;
+    parentPort.postMessage(JSON.stringify(messageForDB));
+  }
+
+  getAnswerFromDB(parsedMessageFromDB) {
+    this.lastDBAnswer = parsedMessageFromDB;
+    this.dbAnswered = true;
+    return parsedMessageFromDB;
+  }
+
+  async checkDBhasAnswered() {
+    if (this.dbAnswered) return true;
+    await this.waitTime(5);
+    return this.checkDBhasAnswered();
+  }
+
   // #endregion                                                DIRTYLOG, TALK, DEBUG
 
   // #region [rgba(0, 0, 240, 0.10)]                            SCRAPE INIT & SCRAPE DIE
@@ -200,6 +222,8 @@ export default class AbstractScraper extends ScraperConfig {
    * @returns {stopFunctie timeout, page puppeteer.Page}
    */
   async mainPageStart() {
+    this.dirtyLog(debugSettings);
+
     // @TODO 3 stopfuncties maken: 1 base events; 1 single; 1 totaal.
 
     const stopFunctie = setTimeout(() => {
@@ -336,16 +360,17 @@ export default class AbstractScraper extends ScraperConfig {
    */
   async announceAndCheck(baseMusicEvents) {
     parentPort.postMessage(this.qwm.workerStarted());
-    const eventGen = this.eventGenerator(baseMusicEvents);
-    const checkedEvents = [];
-    try {
-      return this.rawEventsAsyncCheck({
-        eventGen,
-        checkedEvents,
-      });
-    } catch (error) {
-      this.handleError(error, 'check error in abstract scraper announce and check', 'close-thread', baseMusicEvents);      
-    }
+    return baseMusicEvents; // TODO was announce en check, nu alleen nog annoucne 
+    // const eventGen = this.eventGenerator(baseMusicEvents);
+    // const checkedEvents = [];
+    // try {
+    //   return this.rawEventsAsyncCheck({
+    //     eventGen,
+    //     checkedEvents,
+    //   });
+    // } catch (error) {
+    //   this.handleError(error, 'check error in abstract scraper announce and check', 'close-thread', baseMusicEvents);      
+    // }
   }
 
   // step 2.5
@@ -369,14 +394,19 @@ export default class AbstractScraper extends ScraperConfig {
 
       const eventToCheck = generatedEvent.value;
       const checkResult = await this.mainPageAsyncCheck(eventToCheck);
-      const workingTitle = checkResult.workingTitle || this.cleanupEventTitle(eventToCheck.title);
+      const workingTitle = this.cleanupEventTitle(eventToCheck.title);
+
+      if (!checkResult.reason) {
+        this.dirtyLog(checkResult, 'geen reason meegegeven');
+      }
+
       if (checkResult.success) {
         useableEventsCheckedArray.push(eventToCheck);
 
         if (debugSettings.debugRawEventAsyncCheck && checkResult.reason) {
           parentPort.postMessage(
             this.qwm.debugger({
-              title: 'Raw event async check',
+              title: 'base check success',
               event: `<a class='single-event-check-notice single-event-check-notice--success' href='${eventToCheck.venueEventUrl}'>${workingTitle}<a/>`,
               reason: checkResult.reason,
             }),
@@ -385,7 +415,7 @@ export default class AbstractScraper extends ScraperConfig {
       } else if (debugSettings.debugRawEventAsyncCheck) {
         parentPort.postMessage(
           this.qwm.debugger({
-            title: 'Raw event async check',
+            title: 'base check fail',
             event: `<a class='single-event-check-notice single-event-check-notice--failure' href='${eventToCheck.venueEventUrl}'>${workingTitle}<a/>`,
             reason: checkResult.reason,
           }),
@@ -785,10 +815,9 @@ export default class AbstractScraper extends ScraperConfig {
     const hasGoodTerm = terms.goodCategories.find((goodTerm) =>
       combinedTextToCheck.includes(goodTerm),
     );
-    const workingTitle = this.cleanupEventTitle(event.title);
+
     if (hasGoodTerm) {
       return {
-        workingTitle,
         event,
         success: true,
         reason: `Goed in ${keysToCheck2.join('')}`,
@@ -796,7 +825,6 @@ export default class AbstractScraper extends ScraperConfig {
     }
 
     return {
-      workingTitle,
       event,
       success: false,
       reason: `Geen bevestiging gekregen uit ${keysToCheck2.join(';')} ${combinedTextToCheck}`,
@@ -814,7 +842,6 @@ export default class AbstractScraper extends ScraperConfig {
    * @memberof AbstractScraper
    */
   async hasForbiddenTerms(event, keysToCheck) {
-    const workingTitle = this.cleanupEventTitle(event.title);
     const keysToCheck2 = Array.isArray(keysToCheck) ? keysToCheck : ['title', 'shortText'];
     let combinedTextToCheck = '';
     for (let i = 0; i < keysToCheck2.length; i += 1) {
@@ -829,7 +856,6 @@ export default class AbstractScraper extends ScraperConfig {
     );
     if (hasForbiddenTerm) {
       return {
-        workingTitle,
         event,
         success: true,
         reason: `verboden genres gevonden in ${keysToCheck2.join('; ')}`,
@@ -837,7 +863,6 @@ export default class AbstractScraper extends ScraperConfig {
     }
 
     return {
-      workingTitle,
       event,
       success: false,
       reason: `verboden genres niet gevonden in ${keysToCheck2.join('; ')}.`,
@@ -878,7 +903,6 @@ export default class AbstractScraper extends ScraperConfig {
     return {
       event,
       success,
-      workingTitle,
       reason: `${workingTitle} ${success ? 'in' : 'NOT in'} allowed 🛴 list`,
     };
   }
@@ -891,7 +915,6 @@ export default class AbstractScraper extends ScraperConfig {
     return {
       event,
       success,
-      workingTitle,
       reason: `${workingTitle} ${success ? 'in' : 'NOT in'} refuse 🚮 list`,
     };
   }
@@ -925,7 +948,6 @@ export default class AbstractScraper extends ScraperConfig {
           event,
           success: false,
           url: metalEncUrl,
-          workingTitle,
           reason: metalEncError.message,
         };
       });
@@ -933,7 +955,6 @@ export default class AbstractScraper extends ScraperConfig {
       return {
         event,
         success: true,
-        workingTitle,
         url: metalEncUrl,
         reason: `found in <a class='single-event-check-reason metal-encyclopedie metal-encyclopedie--success' href='${metalEncUrl}'>metal encyclopedia</a>`,
       };
@@ -941,7 +962,6 @@ export default class AbstractScraper extends ScraperConfig {
     return {
       success: false,
       url: metalEncUrl,
-      workingTitle,
       reason: 'no result metal enc',
       event,
     };
@@ -975,7 +995,6 @@ export default class AbstractScraper extends ScraperConfig {
       if (!searchPage) {
         return {
           event,
-          workingTitle,
           reason: 'wiki page not found, als no search page',
           success: false,
         };
@@ -991,7 +1010,6 @@ export default class AbstractScraper extends ScraperConfig {
       if (!matchingResults || !Array.isArray(matchingResults) || !matchingResults.length) {
         return {
           event,
-          workingTitle,
           reason: 'Not found title of event on wiki search page',
           success: false,
         };
@@ -1018,7 +1036,6 @@ export default class AbstractScraper extends ScraperConfig {
     if (wikiRockt) {
       return {
         event,
-        workingTitle,
         success: true,
         url: wikiPage,
         reason: `found on <a class='single-event-check-reason wikipedia wikipedia--success' href='${wikiPage}'>wikipedia</a>`,
@@ -1027,7 +1044,6 @@ export default class AbstractScraper extends ScraperConfig {
     if (!page.isClosed()) page.close();
     return {
       event,
-      workingTitle,
       success: false,
       reason: 'wiki catch return',
     };
@@ -1067,7 +1083,6 @@ export default class AbstractScraper extends ScraperConfig {
 
     return {
       event,
-      workingTitle,
       success: false,
       reason: `<a class='single-event-check-reason wikipedia wikipedia--failure metal-encyclopedie metal-encyclopedie--failure' href='${wikipediaRes.url}'>wikipedia</a> + <a href='${metalEncyclopediaRes.url}'>metal encyclopedia</a> 👎`,
     };
@@ -1288,6 +1303,9 @@ export default class AbstractScraper extends ScraperConfig {
   listenToMasterThread() {
     parentPort.on('message', (message) => {
       const pm = JSON.parse(message);
+      if (pm?.type === 'db-answer') {
+        this.getAnswerFromDB(pm.messageData);
+      }      
       if (pm?.type === 'process' && pm?.subtype === 'command-start') {
         this.scrapeInit(pm?.messageData).catch(this.handleOuterScrapeCatch);
       }

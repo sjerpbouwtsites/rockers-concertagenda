@@ -1,4 +1,18 @@
 
+      victorie-0 Error - 2:02:10 AM
+      TimeoutError: Navigation timeout of 30000 ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+      Navigation timeout of 30000 ms exceeded
+      
+      victorie-0 Error - 1:39:47 AM
+      TimeoutError: Navigation timeout of 30000 ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+      Navigation timeout of 30000 ms exceeded
+      
       victorie-0 Error - 11:43:30 AM
       Error: geen match met .show-info .columns + .columns <a class='page-info' href='Sportgala Alkmaar'>victorie single - Sportgala Alkmaar</a>
     at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:169:14)

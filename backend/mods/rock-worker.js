@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { Worker } from 'worker_threads';
 import shell from './shell.js';
 import WorkerStatus from "./WorkerStatus.js";
@@ -28,13 +29,11 @@ export default class RockWorker extends Worker {
   /**
  * @param {Worker} thisWorker instantiated worker with path etc
  */
-  static addWorkerMessageHandler(thisWorker) {
+  static addWorkerMessageHandler(thisWorker, ArtistInst) {
     thisWorker.on('message', (message) => {
       if (!RockWorker.monitorWebsocketServer) {
         throw Error('monitor niet klaar!');
       }
-
-      // BOODSCHAPPEN VOOR DB
 
       // DE EIGENLIJKE BOODSCHAP NAAR MONITOR
       let parsedMessage;
@@ -45,13 +44,37 @@ export default class RockWorker extends Worker {
         console.log(message);
         throw error;
       }
-      
+
+      // BOODSCHAPPEN VOOR DB
+      if (parsedMessage.type === 'db-request') {
+        const artistRes = ArtistInst.do({
+          request: parsedMessage?.subtype,
+          data: parsedMessage.messageData,
+        });
+        let par;
+        try {
+          par = JSON.parse(artistRes);
+        } catch (error) {
+          console.log('db message fucked');
+          console.log(parsedMessage);
+          console.log(artistRes);
+          throw error;
+        }
+        
+        thisWorker.postMessage(JSON.stringify({
+          type: 'db-answer',
+          subtype: parsedMessage?.subtype,
+          messageData: par,
+        }));        
+        return;
+      }
+
       RockWorker.monitorWebsocketServer.broadcast(JSON.stringify(
         parsedMessage,
         null,
         2,
       ));
-
+      
       // DIT MOET HELEMAAL NAAR WORKER STATUS.
       if (parsedMessage.type === 'process' && parsedMessage?.subtype === 'workers-status') {
         const statusString = parsedMessage?.messageData?.content?.status ?? null;

@@ -33,34 +33,63 @@ scraper.listenToMasterThread();
 
 // #region [rgba(50, 0, 0, 0.5)]      MAIN PAGE EVENT CHECK
 scraper.mainPageAsyncCheck = async function (event) {
-  const isRefusedFull = await this.rockRefuseListCheck(event, event.title.toLowerCase());
-  if (isRefusedFull.success) {
-    isRefusedFull.success = false;
-    return isRefusedFull;
+  const reasons = [];
+  
+  this.talkToDB({
+    type: 'db-request',
+    subtype: 'isAllowed',
+    messageData: {
+      string: event.title,
+    },
+  });
+  await this.checkDBhasAnswered();
+  reasons.push(this.lastDBAnswer.reason);
+  if (this.lastDBAnswer.success) {
+    return {
+      event,
+      reason: reasons.join(','),
+      success: true,
+    };
   }
-  const isAllowedFull = await this.rockAllowListCheck(event, event.title.toLowerCase());
-  if (isAllowedFull.success) return isAllowedFull;
-
-  const workingTitle = this.cleanupEventTitle(event.title);
-  const isRefused = await this.rockRefuseListCheck(event, workingTitle);
-  if (isRefused.success) {
-    isRefused.success = false;
-    return isRefused;
+  
+  this.talkToDB({
+    type: 'db-request',
+    subtype: 'isRefused',
+    messageData: {
+      string: event.title,
+    },
+  });
+  await this.checkDBhasAnswered();
+  reasons.push(this.lastDBAnswer.reason);
+  if (this.lastDBAnswer.success) {
+    return {
+      event,
+      reason: reasons.join(','),
+      success: false,
+    };
   }
-
-  const isAllowed = await this.rockAllowListCheck(event, workingTitle);
-  if (isAllowed.success) return isAllowed;
 
   const hasForbiddenTerms = await this.hasForbiddenTerms(event);
+  reasons.push(hasForbiddenTerms.reason);
   if (hasForbiddenTerms.success) {
-    this.saveRefusedTitle(workingTitle);
-    hasForbiddenTerms.success = false;
-    return hasForbiddenTerms;
+    this.talkToDB({
+      type: 'db-request',
+      subtype: 'saveRefusedTitle',
+      messageData: {
+        string: event.title,
+        reason: hasForbiddenTerms.reason,
+      },
+    });    
+    
+    return {
+      event,
+      reason: reasons.join(','),
+      success: false,
+    };
   }
 
   return {
-    workingTitle,
-    reason: [isRefusedFull.reason, isRefused.reason, isAllowedFull.reason, isAllowed.reason, hasForbiddenTerms.reason].join(';'),
+    reason: reasons.join(', '),
     event,
     success: true,
   };
@@ -69,26 +98,74 @@ scraper.mainPageAsyncCheck = async function (event) {
 
 // #region [rgba(0, 180, 0, 0.1)]      SINGLE PAGE EVENT CHECK
 scraper.singlePageAsyncCheck = async function (event) {
-  const workingTitle = this.cleanupEventTitle(event.title);
+  const reasons = [];
+  this.talkToDB({
+    type: 'db-request',
+    subtype: 'isAllowed',
+    messageData: {
+      string: event.title,
+    },
+  });
+  await this.checkDBhasAnswered();
+  reasons.push(this.lastDBAnswer.reason);
+  if (this.lastDBAnswer.success) {
+    return {
+      event,
+      reason: reasons.join(','),
+      success: true,
+    };
+  }
 
   const hasGoodTerms = await this.hasGoodTerms(event);
+  reasons.push(hasGoodTerms.reason);
   if (hasGoodTerms.success) {
-    this.saveAllowedTitle(workingTitle);
-    return hasGoodTerms;
+    this.talkToDB({
+      type: 'db-request',
+      subtype: 'saveAllowedTitle',
+      messageData: {
+        string: event.title,
+        reason: hasGoodTerms.reason,
+      },
+    });
+    
+    return {
+      event,
+      reason: reasons.join(','),
+      success: true,
+    };
   }
 
   const isRock = await this.isRock(event);
+  reasons.push(isRock.reason);
   if (isRock.success) {
-    this.saveAllowedTitle(workingTitle);
-    return isRock;
+    this.talkToDB({
+      type: 'db-request',
+      subtype: 'saveAllowedTitle',
+      messageData: {
+        string: event.title,
+        reason: isRock.reason,
+      },
+    });
+    
+    return {
+      event,
+      reason: reasons.join(','),
+      success: true,
+    };
   }
 
-  this.saveRefusedTitle(workingTitle);
-
+  this.talkToDB({
+    type: 'db-request',
+    subtype: 'saveRefusedTitle',
+    messageData: {
+      string: event.title,
+      reason: reasons.join(','),
+    },
+  });
+  
   return {
-    workingTitle,
-    reason: [hasGoodTerms.reason, isRock.reason],
     event,
+    reason: reasons.join(','),
     success: false,
   };
 };
@@ -97,10 +174,12 @@ scraper.singlePageAsyncCheck = async function (event) {
 // #region [rgba(0, 0, 60, 0.5)]      MAIN PAGE
 scraper.mainPage = async function () {
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
+  
   if (availableBaseEvents) {
     const thisWorkersEvents = availableBaseEvents.filter(
       (eventEl, index) => index % workerData.workerCount === workerData.index,
     );
+
     return this.mainPageEnd({ stopFunctie: null, rawEvents: thisWorkersEvents });
   }
 
@@ -125,10 +204,19 @@ scraper.mainPage = async function () {
     { workerData },
   );
 
-  this.saveBaseEventlist(workerData.family, rawEvents);
-  const thisWorkersEvents = rawEvents.filter(
+  const eventGen = this.eventGenerator(rawEvents);
+  // eslint-disable-next-line no-unused-vars
+  const checkedEvents = await this.rawEventsAsyncCheck({
+    eventGen,
+    checkedEvents: [],
+  });  
+
+  this.saveBaseEventlist(workerData.family, checkedEvents);
+  
+  const thisWorkersEvents = checkedEvents.filter(
     (eventEl, index) => index % workerData.workerCount === workerData.index,
   );
+  
   return this.mainPageEnd({ stopFunctie, page, rawEvents: thisWorkersEvents });
 };
 // #endregion                          MAIN PAGE
@@ -143,7 +231,7 @@ scraper.singlePage = async function ({ page, event }) {
     anker: `<a class='page-info' href='${event.venueEventUrl}'>${workerData.family} single - ${event.title}</a>`,
   };
 
-  const blabla = await page.evaluate(() => {
+  await page.evaluate(() => {
     const s = document.querySelector('header[style*="background"]').getAttribute('style').replace("url('/", "url('https://www.podiumvictorie.nl/");
     document.querySelector('header[style*="background"]').setAttribute('style', s);
     return s;
