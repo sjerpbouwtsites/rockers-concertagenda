@@ -32,6 +32,22 @@ scraper.listenToMasterThread();
 scraper.mainPageAsyncCheck = async function (event) {
   const reasons = [];
 
+  if (event.venueEventUrl.includes('dynamo-metalfest') || event.venueEventUrl.includes('headbangers-parade')) {
+    this.talkToDB({
+      type: 'db-request',
+      subtype: 'saveRefusedTitle',
+      messageData: {
+        string: event.title,
+        reason: reasons.join(', '),
+      },
+    });     
+    return {
+      success: false,
+      reason: 'is festival website',
+      event,
+    };
+  }
+
   this.talkToDB({
     type: 'db-request',
     subtype: 'isRockEvent',
@@ -229,20 +245,6 @@ scraper.mainPage = async function () {
 // #region [rgba(120, 0, 0, 0.1)]     SINGLE PAGE
 scraper.singlePage = async function ({ page, event }) {
   const { stopFunctie } = await this.singlePageStart();
-  if (event.venueEventUrl === 'https://www.dynamo-metalfest.nl/') {
-    return this.singlePageEnd({
-      pageInfo: {
-        errors: [{
-          error: new Error('not dynamo single'),
-          remarks: `url is is https://www.dynamo-metalfest.nl/`,
-        }],
-      },
-      stopFunctie,
-      page,
-      event,
-    });  
-  }
-
   const pageInfo = await page.evaluate(
     // eslint-disable-next-line no-shadow
     ({ months, event }) => {

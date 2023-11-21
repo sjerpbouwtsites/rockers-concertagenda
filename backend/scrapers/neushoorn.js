@@ -291,7 +291,7 @@ scraper.singlePage = async function ({ page, event }) {
     page,
     event,
     pageInfo,
-    selectors: ['.prices__item__price', '.prices'],
+    selectors: ['.prices__item__price', '.prices', 'sidebar .tickets-button'],
   });
   const isGratis = await page.evaluate(() => !!document.querySelector('.tickets-button')?.textContent.match(/gratis/i) ?? null);
   if (pageInfo.errors.length && isGratis) {

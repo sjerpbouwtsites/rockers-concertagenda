@@ -19,6 +19,7 @@ const forbiddenTerms = [
   'americana',
   'countryrock',
   'dromerig',
+  'house',
   'fan event',
   'filmvertoning',
   'indie',

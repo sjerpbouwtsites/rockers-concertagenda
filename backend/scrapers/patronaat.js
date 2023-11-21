@@ -301,8 +301,9 @@ scraper.singlePage = async function ({ page, event }) {
     pageInfo,
     selectors: ['.event__info-bar--ticket-price'],
   });
+
   const viaTicketMaster = await page.evaluate(() => !!document.querySelector('a.button--tickets[href*="ticketmaster"]'));
-  if (viaTicketMaster && pageInfo.errors.length) {
+  if (viaTicketMaster && priceRes.errors.length) {
     pageInfo.price = null;
   } else {
     pageInfo.errors = pageInfo.errors.concat(priceRes.errors);

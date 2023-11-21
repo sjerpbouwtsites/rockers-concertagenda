@@ -233,7 +233,6 @@ export default class AbstractScraper extends ScraperConfig {
     }, this._s.mainPage.timeout);
 
     if (this._s.app.mainPage.useCustomScraper) {
-      parentPort.postMessage(this.qwm.messageRoll('customScraper'));
       return {
         stopFunctie,
         page: null,

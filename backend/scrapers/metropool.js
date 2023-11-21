@@ -303,7 +303,7 @@ metropoolScraper.singlePage = async function ({ page, event }) {
     page,
     event,
     pageInfo,
-    selectors: ['.doorPrice'],
+    selectors: ['.doorPrice', '.page-labels'],
   });
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
   pageInfo.price = priceRes.price;

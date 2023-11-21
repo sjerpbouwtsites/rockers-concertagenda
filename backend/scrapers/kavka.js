@@ -317,9 +317,13 @@ scraper.singlePage = async function ({ page, event }) {
     pageInfo,
     selectors: ['.prijzen'],
   });
-
-  pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
-  pageInfo.price = priceRes.price;
+  
+  if (!priceRes.errors) {
+    pageInfo.price = priceRes.price;
+  } else {
+    this.dirtyDebug(priceRes);
+    pageInfo.price = null;
+  }
 
   const { mediaForHTML, socialsForHTML, textForHTML } = await longTextSocialsIframes(
     page,
