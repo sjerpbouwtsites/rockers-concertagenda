@@ -36,20 +36,6 @@
     "soldOut": true
   },
   {
-    "door": "2023-11-23T19:30:00",
-    "start": "2023-11-23T19:00:00",
-    "end": "2023-11-23T20:30:00",
-    "venueEventUrl": "https://www.paradiso.nl/programma/alice-phoebe-lou/525753",
-    "title": "Alice Phoebe Lou + Loving",
-    "location": "paradiso",
-    "price": 21,
-    "shortText": "Folkliedjes van een Zuid-Afrikaanse globetrotter",
-    "longText": "../public/texts/paradiso/Z3JhbW1hL2FsaWNlLXBob2ViZS1sb3UvNTI1NzUz.html",
-    "image": "../public/event-images/paradiso/Z3JhbW1hL2FsaWNlLXBob2ViZS1sb3UvNTI1NzUz",
-    "soldOut": true,
-    "unavailable": false
-  },
-  {
     "door": "2023-11-23T19:00:00Z",
     "start": "2023-11-23T20:30:00Z",
     "venueEventUrl": "https://p60.nl/radar-nov",
@@ -278,18 +264,6 @@
     "unavailable": false
   },
   {
-    "start": "2023-11-25T23:59:00",
-    "venueEventUrl": "https://www.paradiso.nl/programma/descendants/1425289",
-    "title": "Descendants",
-    "location": "paradiso",
-    "price": 17,
-    "shortText": "Afro-elektronische clubnacht / Parallel",
-    "longText": "../public/texts/paradiso/L3Byb2dyYW1tYS9kZXNjZW5kYW50cy8xNDI1Mjg5.html",
-    "image": "../public/event-images/paradiso/L3Byb2dyYW1tYS9kZXNjZW5kYW50cy8xNDI1Mjg5",
-    "soldOut": false,
-    "unavailable": false
-  },
-  {
     "start": "2023-11-25T20:00:00",
     "venueEventUrl": "https://occii.org/events/rog-wak-nuovo-testamento/",
     "title": "Nuovo testamento (it/us) ",
@@ -477,19 +451,6 @@
     "unavailable": false
   },
   {
-    "door": "2023-11-27T19:30:00",
-    "start": "2023-11-27T19:00:00",
-    "venueEventUrl": "https://www.paradiso.nl/programma/paradiso-punkjaren-deel-5/1340279",
-    "title": "Paradiso Punkjaren deel 5",
-    "location": "paradiso",
-    "price": 7.5,
-    "shortText": "Boekpresentatie Paradiso Punkjaren",
-    "longText": "../public/texts/paradiso/YWRpc28tcHVua2phcmVuLWRlZWwtNS8xMzQwMjc5.html",
-    "image": "../public/event-images/paradiso/YWRpc28tcHVua2phcmVuLWRlZWwtNS8xMzQwMjc5",
-    "soldOut": false,
-    "unavailable": false
-  },
-  {
     "title": "Danko Jones en Radkey",
     "start": "2023-11-27",
     "eventLocationName": "luxor live",
@@ -519,20 +480,6 @@
     "longText": "../public/texts/bibelot/YW1lcy1kaW8tdGhlLW1lbW9yaWFsLWNvbmNlcnQv.html",
     "image": "../public/event-images/bibelot/YW1lcy1kaW8tdGhlLW1lbW9yaWFsLWNvbmNlcnQv",
     "soldOut": false
-  },
-  {
-    "door": "2023-11-28T19:30:00",
-    "start": "2023-11-28T19:00:00",
-    "end": "2023-11-28T20:30:00",
-    "venueEventUrl": "https://www.paradiso.nl/programma/devendra-banhart/1077154",
-    "title": "Devendra Banhart + John Moods",
-    "location": "paradiso",
-    "price": 34,
-    "shortText": "Freakfolkartiest is terug met elfde studioalbum",
-    "longText": "../public/texts/paradiso/cmFtbWEvZGV2ZW5kcmEtYmFuaGFydC8xMDc3MTU0.html",
-    "image": "../public/event-images/paradiso/cmFtbWEvZGV2ZW5kcmEtYmFuaGFydC8xMDc3MTU0",
-    "soldOut": false,
-    "unavailable": false
   },
   {
     "start": "2023-11-29T19:00:00",
@@ -618,20 +565,6 @@
     "longText": "../public/texts/patronaat/YWF0Lm5sL2V2ZW50L3dhcmdhc20tMzAtMTEtMjMv.html",
     "image": "../public/event-images/patronaat/YWF0Lm5sL2V2ZW50L3dhcmdhc20tMzAtMTEtMjMv",
     "soldOut": false,
-    "unavailable": false
-  },
-  {
-    "door": "2023-11-30T01:00:00",
-    "start": "2023-11-30T20:00:00",
-    "end": "2023-11-30T20:00:00",
-    "venueEventUrl": "https://www.paradiso.nl/programma/charlotte-adigery-bolis-pupul/1108682",
-    "title": "Charlotte Adigéry & Bolis Pupul",
-    "location": "paradiso",
-    "price": 20,
-    "shortText": "Eigenzinnig elektronisch popduo uit Gent / Parallel",
-    "longText": "../public/texts/paradiso/dGUtYWRpZ2VyeS1ib2xpcy1wdXB1bC8xMTA4Njgy.html",
-    "image": "../public/event-images/paradiso/dGUtYWRpZ2VyeS1ib2xpcy1wdXB1bC8xMTA4Njgy",
-    "soldOut": true,
     "unavailable": false
   },
   {
@@ -818,6 +751,19 @@
     "longText": "../public/texts/boerderij/Ym9lcmRlcmlqLm5sL3Byb2dyYW1tYS9hY2RjLXVr.html",
     "image": "../public/event-images/boerderij/Ym9lcmRlcmlqLm5sL3Byb2dyYW1tYS9hY2RjLXVr",
     "soldOut": null
+  },
+  {
+    "door": "2023-12-03T20:30:00",
+    "start": "2023-12-03T19:30:00",
+    "venueEventUrl": "https://www.paradiso.nl/programma/drama/1326029",
+    "title": "Drama",
+    "location": "paradiso",
+    "price": 24,
+    "shortText": "Producer en zangeres duo verweven house producties met soulvolle klanken / Bitterzoet",
+    "longText": "../public/texts/paradiso/aXNvLm5sL3Byb2dyYW1tYS9kcmFtYS8xMzI2MDI5.html",
+    "image": "../public/event-images/paradiso/aXNvLm5sL3Byb2dyYW1tYS9kcmFtYS8xMzI2MDI5",
+    "soldOut": true,
+    "unavailable": false
   },
   {
     "door": "2023-12-03T19:30:00",
@@ -1152,6 +1098,18 @@
     "longText": "../public/texts/afaslive/ZmFzbGl2ZS5ubC9hZ2VuZGEvZmxvb3ItamFuc2Vu.html",
     "image": "../public/event-images/afaslive/ZmFzbGl2ZS5ubC9hZ2VuZGEvZmxvb3ItamFuc2Vu",
     "soldOut": false
+  },
+  {
+    "start": "2023-12-09T20:00:00+01:00",
+    "venueEventUrl": "https://www.spotgroningen.nl/programma/sera/",
+    "title": "Sera",
+    "location": "oosterpoort",
+    "price": 0,
+    "shortText": "Tiktok-sensatie timmert enorm aan de weg met eigen werk",
+    "longText": "../public/texts/oosterpoort/b3Rncm9uaW5nZW4ubmwvcHJvZ3JhbW1hL3NlcmEv.html",
+    "image": "../public/event-images/oosterpoort/b3Rncm9uaW5nZW4ubmwvcHJvZ3JhbW1hL3NlcmEv",
+    "soldOut": true,
+    "unavailable": false
   },
   {
     "start": "2023-12-09T16:30:00.000000Z",
@@ -1569,6 +1527,20 @@
     "soldOut": true
   },
   {
+    "door": "2023-12-19T19:30:00",
+    "start": "2023-12-19T19:00:00",
+    "end": "2023-12-19T20:30:00",
+    "venueEventUrl": "https://www.paradiso.nl/programma/the-bug-club/1339789",
+    "title": "The Bug Club",
+    "location": "paradiso",
+    "price": 14,
+    "shortText": "Lo-fi rock 'n roll en funky postpunk / Toekomstmuziek",
+    "longText": "../public/texts/paradiso/cHJvZ3JhbW1hL3RoZS1idWctY2x1Yi8xMzM5Nzg5.html",
+    "image": "../public/event-images/paradiso/cHJvZ3JhbW1hL3RoZS1idWctY2x1Yi8xMzM5Nzg5",
+    "soldOut": false,
+    "unavailable": false
+  },
+  {
     "door": "2023-12-21T19:30:00",
     "start": "2023-12-21T19:30:00",
     "venueEventUrl": "https://patronaat.nl/event/a-can-of-worms-21-12-23/",
@@ -1700,6 +1672,19 @@
     "shortText": "Folkmetalband presenteert zevende album Wederkeer",
     "longText": "../public/texts/tivolivredenburg/bC9hZ2VuZGEvaGVpZGV2b2xrLTIzLTEyLTIwMjMv.html",
     "image": "../public/event-images/tivolivredenburg/bC9hZ2VuZGEvaGVpZGV2b2xrLTIzLTEyLTIwMjMv",
+    "soldOut": false,
+    "unavailable": false
+  },
+  {
+    "door": "2023-12-23T06:00:00",
+    "start": "2023-12-23T23:59:00",
+    "venueEventUrl": "https://www.paradiso.nl/programma/salute/1403081",
+    "title": "salute + Vuur + Bastienne",
+    "location": "paradiso",
+    "price": 18,
+    "shortText": "Oostenrijkse dj/producer mixt verschillende UK club sounds / Parallel",
+    "longText": "../public/texts/paradiso/c28ubmwvcHJvZ3JhbW1hL3NhbHV0ZS8xNDAzMDgx.html",
+    "image": "../public/event-images/paradiso/c28ubmwvcHJvZ3JhbW1hL3NhbHV0ZS8xNDAzMDgx",
     "soldOut": false,
     "unavailable": false
   },
@@ -1948,6 +1933,19 @@
     "unavailable": false
   },
   {
+    "door": "2024-01-05T19:30:00",
+    "start": "2024-01-05T19:00:00",
+    "venueEventUrl": "https://www.paradiso.nl/programma/cloudsurfers/525686",
+    "title": "Cloudsurfers",
+    "location": "paradiso",
+    "price": 14,
+    "shortText": "Met fuzz overgoten garageband van eigen bodem",
+    "longText": "../public/texts/paradiso/L3Byb2dyYW1tYS9jbG91ZHN1cmZlcnMvNTI1Njg2.html",
+    "image": "../public/event-images/paradiso/L3Byb2dyYW1tYS9jbG91ZHN1cmZlcnMvNTI1Njg2",
+    "soldOut": false,
+    "unavailable": false
+  },
+  {
     "door": "2024-01-06T20:30:00",
     "start": "2024-01-06T19:30:00",
     "venueEventUrl": "https://www.paradiso.nl/programma/pol/1327242",
@@ -2019,6 +2017,20 @@
     "longText": "../public/texts/victorie/aWN0b3JpZS5ubC9wcm9ncmFtbWEvaGVpZGV2b2xr.html",
     "image": "../public/event-images/victorie/aWN0b3JpZS5ubC9wcm9ncmFtbWEvaGVpZGV2b2xr",
     "soldOut": false
+  },
+  {
+    "door": "2024-01-11T18:30:00",
+    "start": "2024-01-11T18:00:00",
+    "end": "2024-01-11T20:30:00",
+    "venueEventUrl": "https://www.paradiso.nl/programma/amenra/1330815",
+    "title": "Amenra",
+    "location": "paradiso",
+    "price": 31,
+    "shortText": "Belgische metalband met invloeden uit doom, hardcorepunk en sludge",
+    "longText": "../public/texts/paradiso/c28ubmwvcHJvZ3JhbW1hL2FtZW5yYS8xMzMwODE1.html",
+    "image": "../public/event-images/paradiso/c28ubmwvcHJvZ3JhbW1hL2FtZW5yYS8xMzMwODE1",
+    "soldOut": false,
+    "unavailable": false
   },
   {
     "door": "2024-01-11T20:00:00",
@@ -2233,6 +2245,19 @@
     "longText": "../public/texts/tivolivredenburg/a2UtdmFuLWdpZXJzYmVyZ2VuLTE3LTAxLTIwMjQv.html",
     "image": "../public/event-images/tivolivredenburg/a2UtdmFuLWdpZXJzYmVyZ2VuLTE3LTAxLTIwMjQv",
     "soldOut": true,
+    "unavailable": false
+  },
+  {
+    "door": "2024-01-17T22:00:00",
+    "start": "2024-01-17T21:30:00",
+    "venueEventUrl": "https://www.paradiso.nl/programma/thames/1400882",
+    "title": "Thames",
+    "location": "paradiso",
+    "price": 10.5,
+    "shortText": "Postpunkband met moderne sound",
+    "longText": "../public/texts/paradiso/c28ubmwvcHJvZ3JhbW1hL3RoYW1lcy8xNDAwODgy.html",
+    "image": "../public/event-images/paradiso/c28ubmwvcHJvZ3JhbW1hL3RoYW1lcy8xNDAwODgy",
+    "soldOut": false,
     "unavailable": false
   },
   {
@@ -2558,6 +2583,19 @@
     "shortText": " Rapture (GR)    Dead Will Walk   From the Crypt   Written in Blood death metal fest",
     "longText": "../public/texts/willemeen/b20tdGhlLWNyeXB0LXdyaXR0ZW4taW4tYmxvb2Qv.html",
     "image": "../public/event-images/willemeen/b20tdGhlLWNyeXB0LXdyaXR0ZW4taW4tYmxvb2Qv",
+    "soldOut": false,
+    "unavailable": false
+  },
+  {
+    "door": "2024-01-27T22:00:00",
+    "start": "2024-01-27T21:30:00",
+    "venueEventUrl": "https://www.paradiso.nl/programma/wild-child/1311643",
+    "title": "Wild Child",
+    "location": "paradiso",
+    "price": 16,
+    "shortText": "Folkduo uit Austin met aanstekelijke poppy nummers",
+    "longText": "../public/texts/paradiso/bC9wcm9ncmFtbWEvd2lsZC1jaGlsZC8xMzExNjQz.html",
+    "image": "../public/event-images/paradiso/bC9wcm9ncmFtbWEvd2lsZC1jaGlsZC8xMzExNjQz",
     "soldOut": false,
     "unavailable": false
   },
@@ -3341,6 +3379,19 @@
     "unavailable": false
   },
   {
+    "door": "2024-02-24T20:30:00",
+    "start": "2024-02-24T19:30:00",
+    "venueEventUrl": "https://www.paradiso.nl/programma/sprints/1323246",
+    "title": "Sprints",
+    "location": "paradiso",
+    "price": 16,
+    "shortText": "Rauwe garagepunk met openhartige en geestige songteksten / Tolhuistuin",
+    "longText": "../public/texts/paradiso/by5ubC9wcm9ncmFtbWEvc3ByaW50cy8xMzIzMjQ2.html",
+    "image": "../public/event-images/paradiso/by5ubC9wcm9ncmFtbWEvc3ByaW50cy8xMzIzMjQ2",
+    "soldOut": false,
+    "unavailable": false
+  },
+  {
     "door": "2024-02-24T19:30:00",
     "start": "2024-02-24T20:00:00",
     "end": "2024-02-24T23:00:00",
@@ -3603,6 +3654,19 @@
     "longText": "../public/texts/depul/cHVsLmNvbS9hZ2VuZGEvc3VpY2lkZS1hbmdlbHMv.html",
     "image": "../public/event-images/depul/cHVsLmNvbS9hZ2VuZGEvc3VpY2lkZS1hbmdlbHMv",
     "soldOut": false
+  },
+  {
+    "door": "2024-03-06T20:30:00",
+    "start": "2024-03-06T19:30:00",
+    "venueEventUrl": "https://www.paradiso.nl/programma/stone/1394354",
+    "title": "Stone",
+    "location": "paradiso",
+    "price": 20,
+    "shortText": "Opwindende Britrock uit Liverpool / Tolhuistuin",
+    "longText": "../public/texts/paradiso/aXNvLm5sL3Byb2dyYW1tYS9zdG9uZS8xMzk0MzU0.html",
+    "image": "../public/event-images/paradiso/aXNvLm5sL3Byb2dyYW1tYS9zdG9uZS8xMzk0MzU0",
+    "soldOut": true,
+    "unavailable": false
   },
   {
     "start": "2024-03-07T20:00:00+01:00",
@@ -3913,6 +3977,19 @@
     "unavailable": false
   },
   {
+    "door": "2024-03-20T20:30:00",
+    "start": "2024-03-20T19:00:00",
+    "venueEventUrl": "https://www.paradiso.nl/programma/pixies/1075295",
+    "title": "Pixies",
+    "location": "paradiso",
+    "price": 55,
+    "shortText": "Altrockveteranen spelen integraal hun albums 'Bossanova' en 'Trompe Le Monde'",
+    "longText": "../public/texts/paradiso/c28ubmwvcHJvZ3JhbW1hL3BpeGllcy8xMDc1Mjk1.html",
+    "image": "../public/event-images/paradiso/c28ubmwvcHJvZ3JhbW1hL3BpeGllcy8xMDc1Mjk1",
+    "soldOut": true,
+    "unavailable": false
+  },
+  {
     "start": "2024-03-21T19:00:00",
     "venueEventUrl": "https://www.willemeen.nl/programma/grade-2-uk-support/",
     "title": "Grade 2 (uk) + support",
@@ -3948,6 +4025,19 @@
     "longText": "../public/texts/patronaat/YWF0Lm5sL2V2ZW50L2dyYWRlLTItMjItMDMtMjQv.html",
     "image": "../public/event-images/patronaat/YWF0Lm5sL2V2ZW50L2dyYWRlLTItMjItMDMtMjQv",
     "soldOut": false,
+    "unavailable": false
+  },
+  {
+    "door": "2024-03-22T20:30:00",
+    "start": "2024-03-22T19:00:00",
+    "venueEventUrl": "https://www.paradiso.nl/programma/pixies/1075315",
+    "title": "Pixies",
+    "location": "paradiso",
+    "price": 55,
+    "shortText": "Altrockveteranen spelen integraal hun albums 'Bossanova' en 'Trompe Le Monde'",
+    "longText": "../public/texts/paradiso/c28ubmwvcHJvZ3JhbW1hL3BpeGllcy8xMDc1MzE1.html",
+    "image": "../public/event-images/paradiso/c28ubmwvcHJvZ3JhbW1hL3BpeGllcy8xMDc1MzE1",
+    "soldOut": true,
     "unavailable": false
   },
   {
@@ -4186,6 +4276,19 @@
     "unavailable": false
   },
   {
+    "door": "2024-04-04T22:00:00",
+    "start": "2024-04-04T21:30:00",
+    "venueEventUrl": "https://www.paradiso.nl/programma/melenas/1360512",
+    "title": "Melenas",
+    "location": "paradiso",
+    "price": 10.5,
+    "shortText": "Garagepop uit Spanje",
+    "longText": "../public/texts/paradiso/by5ubC9wcm9ncmFtbWEvbWVsZW5hcy8xMzYwNTEy.html",
+    "image": "../public/event-images/paradiso/by5ubC9wcm9ncmFtbWEvbWVsZW5hcy8xMzYwNTEy",
+    "soldOut": false,
+    "unavailable": false
+  },
+  {
     "door": "2024-04-04T20:00:00",
     "start": "2024-04-04T20:00:00",
     "venueEventUrl": "https://www.cpunt.nl/agenda/electric-eel-shock",
@@ -4330,6 +4433,19 @@
     "shortText": "Dancing In The Dark Tour 2024",
     "longText": "../public/texts/patronaat/bmQtdGhlLWJsYWNrLXN1cHBvcnQtMTQtMDQtMjQv.html",
     "image": "../public/event-images/patronaat/bmQtdGhlLWJsYWNrLXN1cHBvcnQtMTQtMDQtMjQv",
+    "soldOut": false,
+    "unavailable": false
+  },
+  {
+    "door": "2024-04-14T19:30:00",
+    "start": "2024-04-14T19:00:00",
+    "venueEventUrl": "https://www.paradiso.nl/programma/the-clockworks/1367176",
+    "title": "The Clockworks",
+    "location": "paradiso",
+    "price": 15,
+    "shortText": "Verhalende postpunk en rock",
+    "longText": "../public/texts/paradiso/b2dyYW1tYS90aGUtY2xvY2t3b3Jrcy8xMzY3MTc2.html",
+    "image": "../public/event-images/paradiso/b2dyYW1tYS90aGUtY2xvY2t3b3Jrcy8xMzY3MTc2",
     "soldOut": false,
     "unavailable": false
   },
@@ -4561,6 +4677,19 @@
     "soldOut": false
   },
   {
+    "door": "2024-04-25T20:30:00",
+    "start": "2024-04-25T19:00:00",
+    "venueEventUrl": "https://www.paradiso.nl/programma/yard-act/1337280",
+    "title": "Yard Act",
+    "location": "paradiso",
+    "price": 24,
+    "shortText": "Vlijmscherpe postpunk uit Leeds",
+    "longText": "../public/texts/paradiso/Lm5sL3Byb2dyYW1tYS95YXJkLWFjdC8xMzM3Mjgw.html",
+    "image": "../public/event-images/paradiso/Lm5sL3Byb2dyYW1tYS95YXJkLWFjdC8xMzM3Mjgw",
+    "soldOut": false,
+    "unavailable": false
+  },
+  {
     "door": "2024-04-25T22:00:00",
     "start": "2024-04-25T21:30:00",
     "venueEventUrl": "https://www.paradiso.nl/programma/folly-group/1340217",
@@ -4603,6 +4732,19 @@
     "shortText": "Pure heavy powermetal",
     "longText": "../public/texts/patronaat/YXQubmwvZXZlbnQvd2Fya2luZ3MtMjgtMDQtMjQv.html",
     "image": "../public/event-images/patronaat/YXQubmwvZXZlbnQvd2Fya2luZ3MtMjgtMDQtMjQv",
+    "soldOut": false,
+    "unavailable": false
+  },
+  {
+    "door": "2024-05-03T20:30:00",
+    "start": "2024-05-03T19:00:00",
+    "venueEventUrl": "https://www.paradiso.nl/programma/johan/1406609",
+    "title": "Johan",
+    "location": "paradiso",
+    "price": 31,
+    "shortText": "Invloedrijke Nederlandse indieband terug van weggeweest",
+    "longText": "../public/texts/paradiso/aXNvLm5sL3Byb2dyYW1tYS9qb2hhbi8xNDA2NjA5.html",
+    "image": "../public/event-images/paradiso/aXNvLm5sL3Byb2dyYW1tYS9qb2hhbi8xNDA2NjA5",
     "soldOut": false,
     "unavailable": false
   },
@@ -4768,6 +4910,19 @@
     "shortText": " the devil wears prada   like moths to flame     Op 17 mei in Kavka Zappa staat LANDMVRKS, een nieuwe generatie Franse metalcore-rebellen, klaar om…",
     "longText": "../public/texts/kavka/YXJzLXByYWRhLWxpa2UtbW90aHMtdG8tZmxhbWUv.html",
     "image": "../public/event-images/kavka/YXJzLXByYWRhLWxpa2UtbW90aHMtdG8tZmxhbWUv",
+    "soldOut": false,
+    "unavailable": false
+  },
+  {
+    "door": "2024-05-18T18:00:00",
+    "start": "2024-05-18T17:30:00",
+    "venueEventUrl": "https://www.paradiso.nl/programma/london-calling-17-18-mei-met-o-a-viji-the-mysterines-mock-media-mary-in-the-junkyard/1437413",
+    "title": "London Calling 17 ",
+    "location": "paradiso",
+    "price": 50,
+    "shortText": " 18 mei met o.a. Viji, The Mysterines, Mock Media   Mary in the Junkyard  Indie / alt / (post)punk festival voor spraakmakende nieuwe bands",
+    "longText": "../public/texts/paradiso/YS1tYXJ5LWluLXRoZS1qdW5reWFyZC8xNDM3NDEz.html",
+    "image": "../public/event-images/paradiso/YS1tYXJ5LWluLXRoZS1qdW5reWFyZC8xNDM3NDEz",
     "soldOut": false,
     "unavailable": false
   },
