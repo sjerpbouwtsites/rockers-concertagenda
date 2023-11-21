@@ -5,6 +5,13 @@ import initMonitorBackend from './monitor/backend.js';
 import RockWorker from './mods/rock-worker.js';
 import getWorkerConfig from './mods/worker-config.js';
 import houseKeeping from './housekeeping.js';
+import Artists from './db/artists.js';
+
+const ArtistInst = new Artists({
+  rockArtistPath: "./db/rock-artists.json",
+  refusedPath: "./db/refused.json",
+  rockEventsPath: "./db/rock-events.json",
+});
 
 // dotenv.config();
 
@@ -91,13 +98,9 @@ async function startWorker(workerConfig) {
     return startWorker(workerConfig);
   }
 
-  thisConfig.masterEnv = {
-    TICKETMASTER_CONSUMER_KEY: process.env.TICKETMASTER_CONSUMER_KEY,
-    TICKETMASTER_CONSUMER_SECRET: process.env.TICKETMASTER_CONSUMER_SECRET,
-  };
-
   const thisWorker = new RockWorker(thisConfig);
-  RockWorker.addWorkerMessageHandler(thisWorker);
+
+  RockWorker.addWorkerMessageHandler(thisWorker, ArtistInst);
   WorkerStatus.registerWorker(thisWorker);
   thisWorker.start();
   return startWorker(workerConfig);
@@ -115,9 +118,11 @@ async function recursiveStartWorkers(workerConfig) {
 
 async function init() {
   await houseKeeping();
+   
   monitorWebsocketServer = await initMonitorBackend();
   RockWorker.monitorWebsocketServer = monitorWebsocketServer;
   WorkerStatus.monitorWebsocketServer = monitorWebsocketServer; // TODO WEG
+  WorkerStatus.ArtistInst = ArtistInst;
 
   WorkerStatus.monitorCPUS();
   const workerConfig = getWorkerConfig();

@@ -6,7 +6,7 @@ import getImage from './gedeeld/image.js';
 import terms from './gedeeld/terms.js';
 
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
-const oostpoortScraper = new AbstractScraper({
+const scraper = new AbstractScraper({
   workerData: { ...workerData },
 
   mainPage: {
@@ -28,41 +28,122 @@ const oostpoortScraper = new AbstractScraper({
 });
 // #endregion                          SCRAPER CONFIG
 
-oostpoortScraper.listenToMasterThread();
+scraper.listenToMasterThread();
 
-// #region [rgba(0, 120, 0, 0.1)]      MAIN PAGE EVENT CHECK
-oostpoortScraper.mainPageAsyncCheck = async function (event) {
-  const isRefusedFull = await this.rockRefuseListCheck(event, event.title.toLowerCase());
-  if (isRefusedFull.success) {
-    isRefusedFull.success = false;
-    return isRefusedFull;
-  }
-  const isAllowedFull = await this.rockAllowListCheck(event, event.title.toLowerCase());
-  if (isAllowedFull.success) return isAllowedFull;
+// #region [rgba(60, 0, 0, 0.5)]      MAIN PAGE EVENT CHECK
+scraper.mainPageAsyncCheck = async function (event) {
+  const reasons = [];
 
-  const workingTitle = this.cleanupEventTitle(event.title);
-  const isRefused = await this.rockRefuseListCheck(event, workingTitle);
-  if (isRefused.success) {
-    isRefused.success = false;
-    return isRefused;
+  this.talkToDB({
+    type: 'db-request',
+    subtype: 'isAllowed',
+    messageData: {
+      string: event.title,
+    },
+  });
+  await this.checkDBhasAnswered();
+  reasons.push(this.lastDBAnswer.reason);
+  if (this.lastDBAnswer.success) {
+    this.skipFurtherChecks.push(event.title);
+    return {
+      event,
+      reason: reasons.reverse().join(','),
+      success: true,
+    };
   }
-  const isAllowed = await this.rockAllowListCheck(event, workingTitle);
-  if (isAllowed.success) return isAllowed;
+
+  this.talkToDB({
+    type: 'db-request',
+    subtype: 'isRockEvent',
+    messageData: {
+      string: event.title,
+    },
+  });
+  await this.checkDBhasAnswered();
+  reasons.push(this.lastDBAnswer.reason);
+  if (this.lastDBAnswer.success) {
+    this.talkToDB({
+      type: 'db-request',
+      subtype: 'saveAllowedTitle',
+      messageData: {
+        string: event.title,
+        reason: reasons.reverse().join(', '),
+      },
+    });      
+    this.skipFurtherChecks.push(event.title);
+    return {
+      event,
+      reason: reasons.reverse().join(','),
+      success: true,
+    };
+  }  
+  
+  this.talkToDB({
+    type: 'db-request',
+    subtype: 'isRefused',
+    messageData: {
+      string: event.title,
+    },
+  });
+  await this.checkDBhasAnswered();
+  reasons.push(this.lastDBAnswer.reason);
+  if (this.lastDBAnswer.success) {
+    return {
+      event,
+      reason: reasons.reverse().join(','),
+      success: false,
+    };
+  }
 
   const hasForbiddenTerms = await this.hasForbiddenTerms(event);
+  reasons.push(hasForbiddenTerms.reason);
   if (hasForbiddenTerms.success) {
-    this.saveRefusedTitle(workingTitle);
-    hasForbiddenTerms.success = false;
-    return hasForbiddenTerms;
+    this.talkToDB({
+      type: 'db-request',
+      subtype: 'saveRefusedTitle',
+      messageData: {
+        string: event.title,
+        reason: reasons.reverse().join(', '),
+      },
+    });    
+    
+    return {
+      event,
+      reason: reasons.reverse().join(','),
+      success: false,
+    };
   }
-
+  
   const isRockRes = await this.isRock(event);
   if (isRockRes.success) {
-    this.saveAllowedTitle(workingTitle);
-  } else {
-    this.saveRefusedTitle(workingTitle);
+    this.talkToDB({
+      type: 'db-request',
+      subtype: 'saveAllowedTitle',
+      messageData: {
+        string: event.title,
+        reason: reasons.reverse().join(', '),
+      },
+    }); 
+    return {
+      event,
+      reason: reasons.reverse().join(', '),
+      success: true,
+    };
   }
-  return isRockRes;
+  this.talkToDB({
+    type: 'db-request',
+    subtype: 'saveRefusedTitle',
+    messageData: {
+      string: event.title,
+      reason: reasons.reverse().join(', '),
+    },
+  });   
+
+  return {
+    event,
+    reason: reasons.reverse().join(', '),
+    success: false,
+  };
 };
 // #endregion                          MAIN PAGE EVENT CHECK
 
@@ -70,7 +151,7 @@ oostpoortScraper.mainPageAsyncCheck = async function (event) {
 // #endregion                          SINGLE PAGE EVENT CHECK
 
 // #region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
-oostpoortScraper.mainPage = async function () {
+scraper.mainPage = async function () {
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
   if (availableBaseEvents) {
     const thisWorkersEvents = availableBaseEvents.filter(
@@ -143,16 +224,25 @@ oostpoortScraper.mainPage = async function () {
 
   rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
 
-  this.saveBaseEventlist(workerData.family, rawEvents);
-  const thisWorkersEvents = rawEvents.filter(
+  const eventGen = this.eventGenerator(rawEvents);
+  // eslint-disable-next-line no-unused-vars
+  const checkedEvents = await this.rawEventsAsyncCheck({
+    eventGen,
+    checkedEvents: [],
+  });  
+  
+  this.saveBaseEventlist(workerData.family, checkedEvents);
+    
+  const thisWorkersEvents = checkedEvents.filter(
     (eventEl, index) => index % workerData.workerCount === workerData.index,
   );
+    
   return this.mainPageEnd({ stopFunctie, rawEvents: thisWorkersEvents });
 };
 // #endregion                          MAIN PAGE
 
 // #region [rgba(120, 0, 0, 0.1)]     SINGLE PAGE
-oostpoortScraper.singlePage = async function ({ page, event }) {
+scraper.singlePage = async function ({ page, event }) {
   const { stopFunctie } = await this.singlePageStart();
 
   const cookiesReq = await page.evaluate(() => {

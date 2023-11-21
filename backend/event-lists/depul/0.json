@@ -1,26 +1,14 @@
 [
   {
     "door": null,
-    "start": "2023-11-18T15:00:00",
-    "venueEventUrl": "https://www.livepul.com/agenda/masters-of-metal-3/",
-    "title": "Masters of Metal",
+    "start": "2023-12-03T19:00:00",
+    "venueEventUrl": "https://www.livepul.com/agenda/gorgoroth/",
+    "title": "Gorgoroth (NOR)",
     "location": "depul",
-    "price": 24.5,
-    "shortText": "Metal tribute festival",
-    "longText": "../public/texts/depul/Y29tL2FnZW5kYS9tYXN0ZXJzLW9mLW1ldGFsLTMv.html",
-    "image": "../public/event-images/depul/Y29tL2FnZW5kYS9tYXN0ZXJzLW9mLW1ldGFsLTMv",
-    "soldOut": false
-  },
-  {
-    "door": null,
-    "start": "2023-12-15T20:30:00",
-    "venueEventUrl": "https://www.livepul.com/agenda/bombers-feat-abbath/",
-    "title": "Bömbers (feat. Abbath) (NOR)",
-    "location": "depul",
-    "price": 23,
-    "shortText": "The Ultimate Motörhead Tribute",
-    "longText": "../public/texts/depul/b20vYWdlbmRhL2JvbWJlcnMtZmVhdC1hYmJhdGgv.html",
-    "image": "../public/event-images/depul/b20vYWdlbmRhL2JvbWJlcnMtZmVhdC1hYmJhdGgv",
+    "price": 25,
+    "shortText": "Oldskool blackmetal uit Scandinavië",
+    "longText": "../public/texts/depul/LmxpdmVwdWwuY29tL2FnZW5kYS9nb3Jnb3JvdGgv.html",
+    "image": "../public/event-images/depul/LmxpdmVwdWwuY29tL2FnZW5kYS9nb3Jnb3JvdGgv",
     "soldOut": false
   },
   {
@@ -37,18 +25,6 @@
   },
   {
     "door": null,
-    "start": "2023-12-22T20:30:00",
-    "venueEventUrl": "https://www.livepul.com/agenda/heidevolk/",
-    "title": "Heidevolk (NL)",
-    "location": "depul",
-    "price": 24,
-    "shortText": "Nederlandstalige folk- en vikingmetal",
-    "longText": "../public/texts/depul/LmxpdmVwdWwuY29tL2FnZW5kYS9oZWlkZXZvbGsv.html",
-    "image": "../public/event-images/depul/LmxpdmVwdWwuY29tL2FnZW5kYS9oZWlkZXZvbGsv",
-    "soldOut": false
-  },
-  {
-    "door": null,
     "start": "2024-01-19T20:15:00",
     "venueEventUrl": "https://www.livepul.com/agenda/delain/",
     "title": "Delain (nl)",
@@ -61,38 +37,14 @@
   },
   {
     "door": null,
-    "start": "2024-01-21T19:00:00",
-    "venueEventUrl": "https://www.livepul.com/agenda/abbath/",
-    "title": "Abbath (no)",
+    "start": "2024-01-26T20:30:00",
+    "venueEventUrl": "https://www.livepul.com/agenda/ronnie-james-dio-memorial/",
+    "title": "Ronnie James Dio - The Memorial Concert",
     "location": "depul",
-    "price": 25,
-    "shortText": "Dread Reaver Europe 2024 (+ Toxic Holocaust  & Hellripper)",
-    "longText": "../public/texts/depul/d3d3LmxpdmVwdWwuY29tL2FnZW5kYS9hYmJhdGgv.html",
-    "image": "../public/event-images/depul/d3d3LmxpdmVwdWwuY29tL2FnZW5kYS9hYmJhdGgv",
-    "soldOut": false
-  },
-  {
-    "door": null,
-    "start": "2024-01-28T20:30:00",
-    "venueEventUrl": "https://www.livepul.com/agenda/the-perfect-tool/",
-    "title": "The Perfect Tool (USA)",
-    "location": "depul",
-    "price": 23,
-    "shortText": "De totaalervaring van een heus Tool-concert zoals dat bedoelt is",
-    "longText": "../public/texts/depul/bC5jb20vYWdlbmRhL3RoZS1wZXJmZWN0LXRvb2wv.html",
-    "image": "../public/event-images/depul/bC5jb20vYWdlbmRhL3RoZS1wZXJmZWN0LXRvb2wv",
-    "soldOut": false
-  },
-  {
-    "door": null,
-    "start": "2024-02-23T20:30:00",
-    "venueEventUrl": "https://www.livepul.com/agenda/led-zeppelin-by-physical-graffiti/",
-    "title": "Led Zeppelin by Physical Graffiti",
-    "location": "depul",
-    "price": 24,
-    "shortText": "A Whole Lotta Led Zeppelin",
-    "longText": "../public/texts/depul/emVwcGVsaW4tYnktcGh5c2ljYWwtZ3JhZmZpdGkv.html",
-    "image": "../public/event-images/depul/emVwcGVsaW4tYnktcGh5c2ljYWwtZ3JhZmZpdGkv",
+    "price": 22,
+    "shortText": "Met medewerking van de top van de Nederlandse  hardrock en metal",
+    "longText": "../public/texts/depul/bmRhL3Jvbm5pZS1qYW1lcy1kaW8tbWVtb3JpYWwv.html",
+    "image": "../public/event-images/depul/bmRhL3Jvbm5pZS1qYW1lcy1kaW8tbWVtb3JpYWwv",
     "soldOut": false
   },
   {
@@ -105,6 +57,18 @@
     "shortText": "Masters of Fire Tour 2024",
     "longText": "../public/texts/depul/b20vYWdlbmRhL2ZpcmV3aW5kLW1hc3RlcnBsYW4v.html",
     "image": "../public/event-images/depul/b20vYWdlbmRhL2ZpcmV3aW5kLW1hc3RlcnBsYW4v",
+    "soldOut": false
+  },
+  {
+    "door": null,
+    "start": "2024-06-14T20:00:00",
+    "venueEventUrl": "https://www.livepul.com/agenda/breuklijn-gbh/",
+    "title": "Breuklijn: gbh (uk)",
+    "location": "depul",
+    "price": 22,
+    "shortText": "Punklegendes uit Birmingham",
+    "longText": "../public/texts/depul/ZXB1bC5jb20vYWdlbmRhL2JyZXVrbGlqbi1nYmgv.html",
+    "image": "../public/event-images/depul/ZXB1bC5jb20vYWdlbmRhL2JyZXVrbGlqbi1nYmgv",
     "soldOut": false
   }
 ]

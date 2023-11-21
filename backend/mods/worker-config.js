@@ -28,8 +28,7 @@ export const workerConfig = {
   },
   baroeg: { workerCount: 3, workerConcurrent: 2, forceSet: 0 },
   boerderij: {
-    workerCount: 3,
-    CPUReq: 'low',
+    workerCount: 1,
     workerConcurrent: 1,
     forceSet: 1,
   },
@@ -44,7 +43,6 @@ export const workerConfig = {
   deflux: { workerCount: 1, workerConcurrent: 1, forceSet: 2 },
   dehelling: {
     workerCount: 1,
-    CPUReq: 'low',
     workerConcurrent: 1,
     forceSet: 2,
   },
@@ -57,7 +55,7 @@ export const workerConfig = {
   },
   dynamo: { workerCount: 2, workerConcurrent: 1, forceSet: 3 },
   effenaar: { workerCount: 2, workerConcurrent: 2, forceSet: 3 },
-  'gebouw-t': {
+  gebouwt: {
     workerCount: 1, workerConcurrent: 1, CPUReq: 'high', forceSet: 3, 
   },  
   gebrdenobel: {
@@ -103,7 +101,10 @@ export const workerConfig = {
     forceSet: 5,
   },
   patronaat: { workerCount: 2, workerConcurrent: 2, forceSet: 6 },
-  tivolivredenburg: { workerCount: 4, workerConcurrent: 2, forceSet: 6 },
+  tivolivredenburg: {
+    workerCount: 2, workerConcurrent: 2, forceSet: 6, CPUReq: 'low', 
+  },
+  victorie: { workerCount: 4, workerConcurrent: 2, forceSet: 6 },
   volt: { workerCount: 1, workerConcurrent: 1, forceSet: 6 },
   willemeen: { workerCount: 2, workerConcurrent: 2, forceSet: 6 },
 };

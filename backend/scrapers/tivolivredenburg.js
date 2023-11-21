@@ -4,9 +4,13 @@ import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/tivolivredenburg.js';
 import getImage from './gedeeld/image.js';
 import terms from './gedeeld/terms.js';
+import {
+  combineStartTimeStartDate, mapToStartDate, mapToStartTime, 
+  mapToDoorTime, combineDoorTimeStartDate, mapToEndTime, combineEndTimeStartDate,
+} from './gedeeld/datums.js';
 
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
-const tivoliVredenburgScraper = new AbstractScraper({
+const scraper = new AbstractScraper({
   workerData: { ...workerData },
 
   mainPage: {
@@ -24,48 +28,133 @@ const tivoliVredenburgScraper = new AbstractScraper({
 });
 // #endregion                          SCRAPER CONFIG
 
-tivoliVredenburgScraper.listenToMasterThread();
+scraper.listenToMasterThread();
 
-// #region [rgba(0, 120, 0, 0.1)]      MAIN PAGE EVENT CHECK
-tivoliVredenburgScraper.mainPageAsyncCheck = async function (event) {
-  const isRefusedFull = await this.rockRefuseListCheck(event, event.title.toLowerCase());
-  if (isRefusedFull.success) {
-    isRefusedFull.success = false;
-    return isRefusedFull;
-  }
-  const isAllowedFull = await this.rockAllowListCheck(event, event.title.toLowerCase());
-  if (isAllowedFull.success) return isAllowedFull;
+// #region [rgba(60, 0, 0, 0.5)]      MAIN PAGE EVENT CHECK
+scraper.mainPageAsyncCheck = async function (event) {
+  const reasons = [];
 
-  const workingTitle = this.cleanupEventTitle(event.title);
-  const isRefused = await this.rockRefuseListCheck(event, workingTitle);
-  if (isRefused.success) {
-    isRefused.success = false;
-    return isRefused;
+  this.talkToDB({
+    type: 'db-request',
+    subtype: 'isAllowed',
+    messageData: {
+      string: event.title,
+    },
+  });
+  await this.checkDBhasAnswered();
+  reasons.push(this.lastDBAnswer.reason);
+  if (this.lastDBAnswer.success) {
+    this.skipFurtherChecks.push(event.title);
+    return {
+      event,
+      reason: reasons.reverse().join(','),
+      success: true,
+    };
   }
-  const isAllowed = await this.rockAllowListCheck(event, workingTitle);
-  if (isAllowed.success) {
-    return isAllowed;
+
+  this.talkToDB({
+    type: 'db-request',
+    subtype: 'isRockEvent',
+    messageData: {
+      string: event.title,
+    },
+  });
+  await this.checkDBhasAnswered();
+  reasons.push(this.lastDBAnswer.reason);
+  if (this.lastDBAnswer.success) {
+    this.talkToDB({
+      type: 'db-request',
+      subtype: 'saveAllowedTitle',
+      messageData: {
+        string: event.title,
+        reason: reasons.reverse().join(', '),
+      },
+    });    
+    this.skipFurtherChecks.push(event.title);
+    return {
+      event,
+      reason: reasons.reverse().join(','),
+      success: true,
+    };
+  }  
+  
+  this.talkToDB({
+    type: 'db-request',
+    subtype: 'isRefused',
+    messageData: {
+      string: event.title,
+    },
+  });
+  await this.checkDBhasAnswered();
+  reasons.push(this.lastDBAnswer.reason);
+  if (this.lastDBAnswer.success) {
+    return {
+      event,
+      reason: reasons.reverse().join(','),
+      success: false,
+    };
   }
+
+  const goodTermsRes = await this.hasGoodTerms(event);
+  reasons.push(goodTermsRes.reason);
+  if (goodTermsRes.success) {
+    this.skipFurtherChecks.push(event.title);
+    this.talkToDB({
+      type: 'db-request',
+      subtype: 'saveAllowedTitle',
+      messageData: {
+        string: event.title,
+        reason: reasons.reverse().join(', '),
+      },
+    });  
+    return goodTermsRes;
+  }  
 
   const hasForbiddenTerms = await this.hasForbiddenTerms(event);
+  reasons.push(hasForbiddenTerms.reason);
   if (hasForbiddenTerms.success) {
-    this.saveRefusedTitle(workingTitle);
-    hasForbiddenTerms.success = false;
-    return hasForbiddenTerms;
+    this.talkToDB({
+      type: 'db-request',
+      subtype: 'saveRefusedTitle',
+      messageData: {
+        string: event.title,
+        reason: reasons.reverse().join(', '),
+      },
+    });    
+    
+    return {
+      event,
+      reason: reasons.reverse().join(','),
+      success: false,
+    };
   }
-  const hasGoodTermsRes = await this.hasGoodTerms(event);
-  if (hasGoodTermsRes.success) {
-    this.saveAllowedTitle(workingTitle);
-    return hasGoodTermsRes;
-  }
-
-  const isRockRes = await this.isRock(event, [workingTitle]);
+  
+  const isRockRes = await this.isRock(event);
   if (isRockRes.success) {
-    this.saveAllowedTitle(workingTitle);
-  } else {
-    this.saveRefusedTitle(workingTitle);
+    this.talkToDB({
+      type: 'db-request',
+      subtype: 'saveAllowedTitle',
+      messageData: {
+        string: event.title,
+        reason: reasons.reverse().join(', '),
+      },
+    }); 
+    return isRockRes;
   }
-  return isRockRes;
+  this.talkToDB({
+    type: 'db-request',
+    subtype: 'saveRefusedTitle',
+    messageData: {
+      string: event.title,
+      reason: reasons.reverse().join(', '),
+    },
+  });   
+
+  return {
+    event,
+    reason: reasons.reverse().join(', '),
+    success: true,
+  };
 };
 // #endregion                          MAIN PAGE EVENT CHECK
 
@@ -73,7 +162,7 @@ tivoliVredenburgScraper.mainPageAsyncCheck = async function (event) {
 // #endregion                          SINGLE PAGE EVENT CHECK
 
 // #region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
-tivoliVredenburgScraper.mainPage = async function () {
+scraper.mainPage = async function () {
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
   if (availableBaseEvents) {
     const thisWorkersEvents = availableBaseEvents.filter(
@@ -110,16 +199,25 @@ tivoliVredenburgScraper.mainPage = async function () {
 
   rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
 
-  this.saveBaseEventlist(workerData.family, rawEvents);
-  const thisWorkersEvents = rawEvents.filter(
+  const eventGen = this.eventGenerator(rawEvents);
+  // eslint-disable-next-line no-unused-vars
+  const checkedEvents = await this.rawEventsAsyncCheck({
+    eventGen,
+    checkedEvents: [],
+  });  
+  
+  this.saveBaseEventlist(workerData.family, checkedEvents);
+    
+  const thisWorkersEvents = checkedEvents.filter(
     (eventEl, index) => index % workerData.workerCount === workerData.index,
   );
+    
   return this.mainPageEnd({ stopFunctie, rawEvents: thisWorkersEvents });
 };
 // #endregion                          MAIN PAGE
 
 // #region [rgba(120, 0, 0, 0.1)]     SINGLE PAGE
-tivoliVredenburgScraper.singlePage = async function ({ page, event }) {
+scraper.singlePage = async function ({ page, event }) {
   const { stopFunctie } = await this.singlePageStart();
 
   const cookiesNodig = await page.evaluate(() => document.querySelector('#eagerly-tools-cookie'));
@@ -134,95 +232,48 @@ tivoliVredenburgScraper.singlePage = async function ({ page, event }) {
     await this.waitTime(1500);
   }
 
-  const pageInfo = await page.evaluate(
-    // eslint-disable-next-line no-shadow
-    ({ event }) => {
-      const res = {
-        anker: `<a class='page-info' href='${event.venueEventUrl}'>${event.title}</a>`,
-        errors: [],
-      };
+  await page.evaluate(() => {
+    Array.from(document.querySelectorAll('.lane--event time')).forEach((t) => {
+      if (t?.parentNode?.previousElementSibling) {
+        const tijdTekst = t.parentNode.previousElementSibling.textContent.toLowerCase();
+        if (tijdTekst.includes('open')) t.classList.add('deur-tijd');
+        if (tijdTekst.includes('aanvang')) t.classList.add('start-tijd');
+        if (tijdTekst.includes('eind')) t.classList.add('eind-tijd');
+      } else if (t.parentNode.classList.contains('event-cta')) {
+        t.classList.add('datum-tijd');  
+      }
+    });
+  });
 
-      const startDateMatch = document.location.href.match(/\d\d-\d\d-\d\d\d\d/); //
-      res.startDate = '';
-      if (startDateMatch && startDateMatch.length) {
-        res.startDate = startDateMatch[0].split('-').reverse().join('-');
-      }
+  let pageInfo = {
+    anker: `<a class='page-info' href='${event.venueEventUrl}'>${event.title}</a>`,
+    errors: [],
+  };
 
-      if (!res.startDate || res.startDate.length < 7) {
-        res.errors.push({
-          error: new Error(`startdate mis ${res.anker}`),
-          toDebug: {
-            text: `niet goed genoeg<br>${startDateMatch.join('; ')}<br>${res.startDate}`,
-            res,
-            event,
-          },
-        });
-        return res;
-      }
-      const eventInfoDtDDText = document
-        .querySelector('.event__info .description-list')
-        ?.textContent.replace(/[\n\r\s]/g, '')
-        .toLowerCase();
-      res.startTime = null;
-      res.openDoorTime = null;
-      res.endTime = null;
-      const openMatch = eventInfoDtDDText.match(/open.*(\d\d:\d\d)/);
-      const startMatch = eventInfoDtDDText.match(/aanvang.*(\d\d:\d\d)/);
-      const endMatch = eventInfoDtDDText.match(/einde.*(\d\d:\d\d)/);
+  pageInfo.mapToStartDate = await page.evaluate(() => document.querySelector('.datum-tijd')?.textContent ?? null);
+  pageInfo.mapToStartTime = await page.evaluate(() => document.querySelector('.start-tijd')?.textContent ?? null);
+  pageInfo.mapToDoorTime = await page.evaluate(() => document.querySelector('.deur-tijd')?.textContent ?? null);
+  pageInfo.mapToEndTime = await page.evaluate(() => document.querySelector('.eind-tijd')?.textContent ?? null);
+  if (!pageInfo.mapToStartTime && pageInfo.mapToDoorTime) {
+    pageInfo.mapToStartTime = pageInfo.mapToDoorTime;
+    pageInfo.mapToDoorTime = null;
+  }
+  if (!pageInfo.mapToStartTime && pageInfo.mapToEndTime) {
+    pageInfo.mapToStartTime = pageInfo.mapToEndTime;
+    pageInfo.mapToEndTime = null;
+  }
 
-      if (Array.isArray(openMatch) && openMatch.length > 1) {
-        try {
-          // eslint-disable-next-line prefer-destructuring
-          res.openDoorTime = openMatch[1];
-          res.door = res.startDate ? `${res.startDate}T${res.openDoorTime}:00` : null;
-        } catch (caughtError) {
-          res.errors.push({
-            error: caughtError,
-            remarks: `Open door ${res.anker}`,
-            toDebug: {
-              text: eventInfoDtDDText,
-              event,
-            },
-          });
-        }
-      }
-      if (Array.isArray(startMatch) && startMatch.length > 1) {
-        try {
-          // eslint-disable-next-line prefer-destructuring
-          res.startTime = startMatch[1];
-          res.start = res.startDate ? `${res.startDate}T${res.startTime}:00` : null;
-        } catch (caughtError) {
-          res.errors.push({
-            error: caughtError,
-            remarks: `startTijd door ${res.anker}`,
-            toDebug: {
-              matches: `${startMatch.join('')}`,
-              event,
-            },
-          });
-        }
-      }
-      if (Array.isArray(endMatch) && endMatch.length > 1) {
-        try {
-          // eslint-disable-next-line prefer-destructuring
-          res.endTime = endMatch[1];
-          res.end = res.startDate ? `${res.startDate}T${res.endTime}:00` : null;
-        } catch (caughtError) {
-          res.errors.push({
-            error: caughtError,
-            remarks: `endtijd ${res.anker}`,
-            toDebug: {
-              text: eventInfoDtDDText,
-              event,
-            },
-          });
-        }
-      }
-
-      return res;
-    },
-    { event },
-  );
+  pageInfo = mapToStartTime(pageInfo);
+  pageInfo = mapToStartDate(pageInfo, 'dag-maandNaam-jaar', this.months);
+  pageInfo = combineStartTimeStartDate(pageInfo);
+  if (pageInfo.mapToDoorTime) {
+    pageInfo = mapToDoorTime(pageInfo);
+    pageInfo = combineDoorTimeStartDate(pageInfo);
+  }
+  if (pageInfo.mapToEndTime) {
+    pageInfo = mapToEndTime(pageInfo);
+    pageInfo = combineEndTimeStartDate(pageInfo);
+  }
 
   const imageRes = await getImage({
     _this: this,

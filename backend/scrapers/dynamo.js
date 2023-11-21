@@ -5,7 +5,7 @@ import longTextSocialsIframes from './longtext/dynamo.js';
 import getImage from './gedeeld/image.js';
 
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
-const dynamoScraper = new AbstractScraper({
+const scraper = new AbstractScraper({
   workerData: { ...workerData },
 
   mainPage: {
@@ -26,71 +26,182 @@ const dynamoScraper = new AbstractScraper({
 });
 // #endregion                          SCRAPER CONFIG
 
-dynamoScraper.listenToMasterThread();
+scraper.listenToMasterThread();
 
-// #region [rgba(0, 120, 0, 0.1)]      MAIN PAGE EVENT CHECK
-dynamoScraper.mainPageAsyncCheck = async function (event) {
-  const isRefusedFull = await this.rockRefuseListCheck(event, event.title.toLowerCase());
-  if (isRefusedFull.success) {
-    isRefusedFull.success = false;
-    return isRefusedFull;
+// #region [rgba(60, 0, 0, 0.5)]      MAIN PAGE EVENT CHECK
+scraper.mainPageAsyncCheck = async function (event) {
+  const reasons = [];
+
+  if (event.venueEventUrl.includes('dynamo-metalfest') || event.venueEventUrl.includes('headbangers-parade')) {
+    this.talkToDB({
+      type: 'db-request',
+      subtype: 'saveRefusedTitle',
+      messageData: {
+        string: event.title,
+        reason: reasons.reverse().join(', '),
+      },
+    });     
+    return {
+      success: false,
+      reason: 'is festival website',
+      event,
+    };
+  }
+  
+  this.talkToDB({
+    type: 'db-request',
+    subtype: 'isAllowed',
+    messageData: {
+      string: event.title,
+    },
+  });
+  await this.checkDBhasAnswered();
+  reasons.push(this.lastDBAnswer.reason);
+  if (this.lastDBAnswer.success) {
+    this.skipFurtherChecks.push(event.title);
+    return {
+      event,
+      reason: reasons.reverse().join(','),
+      success: true,
+    };
   }
 
-  const workingTitle = this.cleanupEventTitle(event.title);
-  const isRefused = await this.rockRefuseListCheck(event, workingTitle);
-  if (isRefused.success) {
-    isRefused.success = false;
-    return isRefused;
+  this.talkToDB({
+    type: 'db-request',
+    subtype: 'isRockEvent',
+    messageData: {
+      string: event.title,
+    },
+  });
+  await this.checkDBhasAnswered();
+  reasons.push(this.lastDBAnswer.reason);
+  if (this.lastDBAnswer.success) {
+    this.talkToDB({
+      type: 'db-request',
+      subtype: 'saveAllowedTitle',
+      messageData: {
+        string: event.title,
+        reason: reasons.reverse().join(', '),
+      },
+    }); 
+    this.skipFurtherChecks.push(event.title);
+    return {
+      event,
+      reason: reasons.reverse().join(','),
+      success: true,
+    };
+  }  
+    
+  this.talkToDB({
+    type: 'db-request',
+    subtype: 'isRefused',
+    messageData: {
+      string: event.title,
+    },
+  });
+  await this.checkDBhasAnswered();
+  reasons.push(this.lastDBAnswer.reason);
+  if (this.lastDBAnswer.success) {
+    return {
+      event,
+      reason: reasons.reverse().join(','),
+      success: false,
+    };
   }
-
+   
   return {
     event,
-    workingTitle,
-    reason: [isRefusedFull.reason, isRefused.reason].join('; '),
+    reason: reasons.reverse().join(', '),
     success: true,
   };
 };
 // #endregion                          MAIN PAGE EVENT CHECK
 
-// #region [rgba(0, 180, 0, 0.1)]      SINGLE PAGE EVENT CHECK
-dynamoScraper.singlePageAsyncCheck = async function (event) {
-  const isAllowedFull = await this.rockAllowListCheck(event, event.title.toLowerCase());
-  if (isAllowedFull.success) return isAllowedFull;
-
-  const workingTitle = this.cleanupEventTitle(event.title);
-  const isAllowed = await this.rockAllowListCheck(event, workingTitle);
-  if (isAllowed.success) return isAllowed;
-
-  const hasGoodTermsRes = await this.hasGoodTerms(event);
-  if (hasGoodTermsRes.success) {
-    this.saveAllowedTitle(workingTitle);
-    return hasGoodTermsRes;
-  }
-  const hasForbiddenTermsRes = await this.hasForbiddenTerms(event);
-  if (hasForbiddenTermsRes.success) {
-    this.saveRefusedTitle(workingTitle);
-    hasForbiddenTermsRes.success = false;
-    return hasForbiddenTermsRes;
+// #region [rgba(0, 60, 0, 0.5)]      SINGLE PAGE EVENT CHECK
+scraper.singlePageAsyncCheck = async function (event) {
+  const reasons = [];
+  
+  if (this.skipFurtherChecks.includes(event.title)) {
+    reasons.push("allready check main");
+    return {
+      event,
+      reason: reasons.reverse().join(','),
+      success: true,
+    };    
   }
 
-  const isRockRes = await this.isRock(event, [workingTitle]);
+  const goodTermsRes = await this.hasGoodTerms(event);
+  reasons.push(goodTermsRes.reason);
+  if (goodTermsRes.success) {
+    this.talkToDB({
+      type: 'db-request',
+      subtype: 'saveAllowedTitle',
+      messageData: {
+        string: event.title,
+        reason: reasons.reverse().join(', '),
+      },
+    });  
+    return {
+      event,
+      reason: reasons.reverse().join(','),
+      success: true,
+    };
+  }  
+
+  const hasForbiddenTerms = await this.hasForbiddenTerms(event);
+  reasons.push(hasForbiddenTerms.reason);
+  if (hasForbiddenTerms.success) {
+    this.talkToDB({
+      type: 'db-request',
+      subtype: 'saveRefusedTitle',
+      messageData: {
+        string: event.title,
+        reason: reasons.reverse().join(', '),
+      },
+    });    
+    
+    return {
+      event,
+      reason: reasons.reverse().join(','),
+      success: false,
+    };
+  }
+  
+  const isRockRes = await this.isRock(event);
   if (isRockRes.success) {
-    this.saveAllowedTitle(workingTitle);
-    return isRockRes;
+    this.talkToDB({
+      type: 'db-request',
+      subtype: 'saveAllowedTitle',
+      messageData: {
+        string: event.title,
+        reason: reasons.reverse().join(', '),
+      },
+    }); 
+    return {
+      event,
+      reason: reasons.reverse().join(','),
+      success: true,
+    };
   }
-  this.saveRefusedTitle(workingTitle);
+  this.talkToDB({
+    type: 'db-request',
+    subtype: 'saveRefusedTitle',
+    messageData: {
+      string: event.title,
+      reason: reasons.reverse().join(', '),
+    },
+  }); 
 
   return {
     event,
-    workingTitle,
-    reason: isRockRes.reason,
-    success: false,
+    success: true,
+    reason: reasons.reverse().join(', '),
   };
 };
 // #endregion                          SINGLE PAGE EVENT CHECK
 
 // #region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
-dynamoScraper.mainPage = async function () {
+scraper.mainPage = async function () {
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
   if (availableBaseEvents) {
     const thisWorkersEvents = availableBaseEvents.filter(
@@ -130,31 +241,26 @@ dynamoScraper.mainPage = async function () {
 
   rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
 
-  this.saveBaseEventlist(workerData.family, rawEvents);
-  const thisWorkersEvents = rawEvents.filter(
+  const eventGen = this.eventGenerator(rawEvents);
+  // eslint-disable-next-line no-unused-vars
+  const checkedEvents = await this.rawEventsAsyncCheck({
+    eventGen,
+    checkedEvents: [],
+  });  
+  
+  this.saveBaseEventlist(workerData.family, checkedEvents);
+    
+  const thisWorkersEvents = checkedEvents.filter(
     (eventEl, index) => index % workerData.workerCount === workerData.index,
   );
+    
   return this.mainPageEnd({ stopFunctie, rawEvents: thisWorkersEvents });
 };
 // #endregion                          MAIN PAGE
 
 // #region [rgba(120, 0, 0, 0.1)]     SINGLE PAGE
-dynamoScraper.singlePage = async function ({ page, event }) {
+scraper.singlePage = async function ({ page, event }) {
   const { stopFunctie } = await this.singlePageStart();
-  if (event.venueEventUrl === 'https://www.dynamo-metalfest.nl/') {
-    return this.singlePageEnd({
-      pageInfo: {
-        errors: [{
-          error: new Error('not dynamo single'),
-          remarks: `url is is https://www.dynamo-metalfest.nl/`,
-        }],
-      },
-      stopFunctie,
-      page,
-      event,
-    });  
-  }
-
   const pageInfo = await page.evaluate(
     // eslint-disable-next-line no-shadow
     ({ months, event }) => {
@@ -162,6 +268,7 @@ dynamoScraper.singlePage = async function ({ page, event }) {
         anker: `<a class='page-info' href='${document.location.href}'>${document.title}</a>`,
         errors: [],
       };
+
       const agendaDatesEls = document.querySelectorAll('.agenda-date');
       let baseDate = null;
       if (agendaDatesEls && agendaDatesEls.length < 2) {

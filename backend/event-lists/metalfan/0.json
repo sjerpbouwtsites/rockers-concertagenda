@@ -1,59 +1,11 @@
 [
   {
-    "title": "Sammath, Salacious Gods en Suttungr",
-    "start": "2023-11-11",
-    "eventLocationName": "podium",
-    "shortText": "Podium, Hoogeveen",
-    "image": "../public/location-images/podium",
-    "location": "podium"
-  },
-  {
-    "title": "Danko Jones en Radkey",
-    "start": "2023-11-16",
-    "eventLocationName": "hedon",
-    "shortText": "Hedon, Zwolle",
-    "image": "../public/location-images/hedon",
-    "location": "hedon"
-  },
-  {
-    "title": "Desert Storm",
-    "start": "2023-11-18",
-    "eventLocationName": "mfc",
-    "shortText": "MFC, Coevorden ",
-    "image": "../public/location-images/mfc",
-    "location": "mfc"
-  },
-  {
-    "title": "Helldorado",
-    "start": "2023-11-18",
-    "eventLocationName": "klokgebouw",
-    "shortText": "\nMet Life Of Agony, Death Angel, Sacred Reich, Peter Pan Speedrock e.v.a.",
-    "image": "../public/location-images/klokgebouw",
-    "location": "klokgebouw"
-  },
-  {
-    "title": "Vandenberg",
-    "start": "2023-11-22",
-    "eventLocationName": "victorie",
-    "shortText": "Victorie, Alkmaar",
-    "image": "../public/location-images/victorie",
-    "location": "victorie"
-  },
-  {
     "title": "Agent Steel en Screamer",
     "start": "2023-11-23",
     "eventLocationName": "podium",
     "shortText": "Podium, Hoogeveen",
     "image": "../public/location-images/podium",
     "location": "podium"
-  },
-  {
-    "title": "Pene Corrida",
-    "start": "2023-11-25",
-    "eventLocationName": "gebouw-t",
-    "shortText": "Gebouw-T, Bergen Op Zoom",
-    "image": "../public/location-images/gebouwt",
-    "location": "gebouwt"
   },
   {
     "title": "Vandenberg",
@@ -88,6 +40,14 @@
     "location": "trix"
   },
   {
+    "title": "Man As Plague, The Unslain, Burning, Bildtstar en Beyond The Pale",
+    "start": "2023-12-01",
+    "eventLocationName": "rock café sneek",
+    "shortText": "Rock Café Sneek, Sneek",
+    "image": "../public/location-images/rockcafsneek",
+    "location": "rockcafsneek"
+  },
+  {
     "title": "Babymetal",
     "start": "2023-12-04",
     "eventLocationName": "ancienne belgique",
@@ -96,36 +56,12 @@
     "location": "anciennebelgique"
   },
   {
-    "title": "Living Colour",
-    "start": "2023-12-07",
-    "eventLocationName": "victorie",
-    "shortText": "Victorie, Alkmaar",
-    "image": "../public/location-images/victorie",
-    "location": "victorie"
-  },
-  {
     "title": "Beyond God",
     "start": "2023-12-08",
     "eventLocationName": "cacaofabriek",
     "shortText": "Cacaofabriek, Helmond",
     "image": "../public/location-images/cacaofabriek",
     "location": "cacaofabriek"
-  },
-  {
-    "title": "Living Colour",
-    "start": "2023-12-08",
-    "eventLocationName": "gebouw-t",
-    "shortText": "Gebouw-T, Bergen Op Zoom",
-    "image": "../public/location-images/gebouwt",
-    "location": "gebouwt"
-  },
-  {
-    "title": "Danko Jones en Radkey",
-    "start": "2023-12-10",
-    "eventLocationName": "gebouw-t",
-    "shortText": "Gebouw-T, Bergen Op Zoom",
-    "image": "../public/location-images/gebouwt",
-    "location": "gebouwt"
   },
   {
     "title": "Till Lindemann",
@@ -144,22 +80,6 @@
     "location": "hedon"
   },
   {
-    "title": "SEGA European Guitar Award: Nuno Bettencourt",
-    "start": "2023-12-13",
-    "eventLocationName": "gebouw-t",
-    "shortText": "Gebouw-T, Bergen Op Zoom",
-    "image": "../public/location-images/gebouwt",
-    "location": "gebouwt"
-  },
-  {
-    "title": "Wishbone Ash",
-    "start": "2023-12-13",
-    "eventLocationName": "victorie",
-    "shortText": "Victorie, Alkmaar",
-    "image": "../public/location-images/victorie",
-    "location": "victorie"
-  },
-  {
     "title": "Till Lindemann",
     "start": "2023-12-14",
     "eventLocationName": "rtm stage",
@@ -169,27 +89,11 @@
   },
   {
     "title": "Wishbone Ash",
-    "start": "2023-12-14",
-    "eventLocationName": "gebouw-t",
-    "shortText": "Gebouw-T, Bergen Op Zoom",
-    "image": "../public/location-images/gebouwt",
-    "location": "gebouwt"
-  },
-  {
-    "title": "Wishbone Ash",
     "start": "2023-12-16",
     "eventLocationName": "cacaofabriek",
     "shortText": "Cacaofabriek, Helmond",
     "image": "../public/location-images/cacaofabriek",
     "location": "cacaofabriek"
-  },
-  {
-    "title": "Ronnie James Dio - The Memorial Concert",
-    "start": "2024-01-19",
-    "eventLocationName": "gebouw-t",
-    "shortText": "Gebouw-T, Bergen Op Zoom",
-    "image": "../public/location-images/gebouwt",
-    "location": "gebouwt"
   },
   {
     "title": "Nothing More, SiM en Siamese",
@@ -222,6 +126,14 @@
     "shortText": "Cacaofabriek, Helmond",
     "image": "../public/location-images/cacaofabriek",
     "location": "cacaofabriek"
+  },
+  {
+    "title": "Tool en Night Verses",
+    "start": "2024-05-27",
+    "eventLocationName": "ziggo dome",
+    "shortText": "Ziggo Dome, Amsterdam",
+    "image": "../public/location-images/ziggodome",
+    "location": "ziggodome"
   },
   {
     "title": "South Of Heaven festival",
@@ -267,7 +179,7 @@
     "title": "Graspop Metal Meeting",
     "start": "2024-06-20",
     "eventLocationName": "dessel",
-    "shortText": "Dessel, België",
+    "shortText": "\nmet Tool e.v.a.",
     "image": "../public/location-images/dessel",
     "location": "dessel"
   },
