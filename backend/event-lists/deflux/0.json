@@ -1,92 +1,75 @@
 [
   {
-    "door": null,
+    "start": "2024-02-09T20:00:00",
+    "venueEventUrl": "https://www.podiumdeflux.nl/events/nh-metal-fest-iii/",
+    "title": "Nh metal fest iii",
+    "location": "deflux",
+    "price": 15,
+    "longText": "../public/texts/deflux/eC5ubC9ldmVudHMvbmgtbWV0YWwtZmVzdC1paWkv.html",
+    "image": "../public/event-images/deflux/eC5ubC9ldmVudHMvbmgtbWV0YWwtZmVzdC1paWkv",
+    "soldOut": false
+  },
+  {
     "start": "2024-02-16T20:30:00",
-    "end": null,
     "venueEventUrl": "https://www.podiumdeflux.nl/events/rave-the-reqviem-blame-me-female-fronted-metal/",
     "title": "Rave the Reqviem ",
     "location": "deflux",
     "price": 17.5,
-    "shortText": "#038; Blame me! (female fronted metal)  null",
+    "shortText": "#038; Blame me! (female fronted metal)  undefined",
     "longText": "../public/texts/deflux/YmxhbWUtbWUtZmVtYWxlLWZyb250ZWQtbWV0YWwv.html",
     "image": "../public/event-images/deflux/YmxhbWUtbWUtZmVtYWxlLWZyb250ZWQtbWV0YWwv",
-    "soldOut": false,
-    "unavailable": null,
-    "corrupted": null
+    "soldOut": false
   },
   {
-    "door": null,
     "start": "2023-11-12T15:30:00",
-    "end": null,
     "venueEventUrl": "https://www.podiumdeflux.nl/events/days-of-sway-rauw-en-teder/",
     "title": "Days of Sway + Rauw en Teder",
     "location": "deflux",
     "price": 7.5,
-    "shortText": null,
     "longText": "../public/texts/deflux/dHMvZGF5cy1vZi1zd2F5LXJhdXctZW4tdGVkZXIv.html",
     "image": "../public/event-images/deflux/dHMvZGF5cy1vZi1zd2F5LXJhdXctZW4tdGVkZXIv",
-    "soldOut": false,
-    "unavailable": null,
-    "corrupted": null
+    "soldOut": false
   },
   {
-    "door": null,
+    "start": "2023-12-10T15:30:00",
+    "venueEventUrl": "https://www.podiumdeflux.nl/events/ruben-hoeke-band-en-vanja-sky/",
+    "title": "Ruben Hoeke Band CD-presentatie en jubileumviering ",
+    "location": "deflux",
+    "price": 17.5,
+    "shortText": "     Vanja Sky undefined",
+    "longText": "../public/texts/deflux/cnViZW4taG9la2UtYmFuZC1lbi12YW5qYS1za3kv.html",
+    "image": "../public/event-images/deflux/cnViZW4taG9la2UtYmFuZC1lbi12YW5qYS1za3kv",
+    "soldOut": false
+  },
+  {
     "start": "2023-12-15T19:00:00",
-    "end": null,
     "venueEventUrl": "https://www.podiumdeflux.nl/events/haltpop-winterfest-2023/",
     "title": "Haltpop Winterfest",
     "location": "deflux",
     "price": 10,
-    "shortText": null,
     "longText": "../public/texts/deflux/dmVudHMvaGFsdHBvcC13aW50ZXJmZXN0LTIwMjMv.html",
     "image": "../public/event-images/deflux/dmVudHMvaGFsdHBvcC13aW50ZXJmZXN0LTIwMjMv",
-    "soldOut": false,
-    "unavailable": null,
-    "corrupted": null
+    "soldOut": false
   },
   {
-    "door": null,
     "start": "2023-11-05T16:00:00",
-    "end": null,
     "venueEventUrl": "https://www.podiumdeflux.nl/events/danny-loef/",
     "title": "Danny Loef",
     "location": "deflux",
     "price": 8,
-    "shortText": null,
     "longText": "../public/texts/deflux/dW1kZWZsdXgubmwvZXZlbnRzL2Rhbm55LWxvZWYv.html",
     "image": "../public/event-images/deflux/dW1kZWZsdXgubmwvZXZlbnRzL2Rhbm55LWxvZWYv",
-    "soldOut": false,
-    "unavailable": null,
-    "corrupted": null
+    "soldOut": false
   },
   {
-    "door": null,
     "start": "2023-10-26T20:30:00",
-    "end": null,
     "venueEventUrl": "https://www.podiumdeflux.nl/events/blood-brothers-ft-mike-zito-and-albert-castiglia/",
     "title": "Blood Brothers ft. Mike Zito and Albert Castiglia",
     "location": "deflux",
     "price": 18,
-    "shortText": "     null",
+    "shortText": "     undefined",
     "longText": "../public/texts/deflux/aWtlLXppdG8tYW5kLWFsYmVydC1jYXN0aWdsaWEv.html",
     "image": "../public/event-images/deflux/aWtlLXppdG8tYW5kLWFsYmVydC1jYXN0aWdsaWEv",
-    "soldOut": false,
-    "unavailable": null,
-    "corrupted": null
-  },
-  {
-    "door": null,
-    "start": "2023-12-22T20:30:00",
-    "end": null,
-    "venueEventUrl": "https://www.podiumdeflux.nl/events/zaanse-metalen/",
-    "title": "Zaanse Metalen",
-    "location": "deflux",
-    "price": 10,
-    "shortText": null,
-    "longText": "../public/texts/deflux/Zmx1eC5ubC9ldmVudHMvemFhbnNlLW1ldGFsZW4v.html",
-    "image": "../public/event-images/deflux/Zmx1eC5ubC9ldmVudHMvemFhbnNlLW1ldGFsZW4v",
-    "soldOut": false,
-    "unavailable": null,
-    "corrupted": null
+    "soldOut": false
   }
 ]

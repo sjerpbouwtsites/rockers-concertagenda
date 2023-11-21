@@ -9,7 +9,7 @@ const dehellingScraper = new AbstractScraper({
   workerData: { ...workerData },
 
   mainPage: {
-    timeout: 20011,
+    timeout: 30011,
     url: 'https://dehelling.nl/agenda/?zoeken=&genre%5B%5D=heavy',
   },
   singlePage: {
@@ -29,40 +29,115 @@ const dehellingScraper = new AbstractScraper({
 
 dehellingScraper.listenToMasterThread();
 
-// #region [rgba(0, 120, 0, 0.1)]      MAIN PAGE EVENT CHECK
+// #region [rgba(60, 0, 0, 0.5)]      MAIN PAGE EVENT CHECK
 dehellingScraper.mainPageAsyncCheck = async function (event) {
-  const workingTitle = this.cleanupEventTitle(event.title);
+  const reasons = [];
 
-  const isRefused = await this.rockRefuseListCheck(event, workingTitle);
-  if (isRefused.success) {
-    isRefused.success = false;
-    return isRefused;
+  this.talkToDB({
+    type: 'db-request',
+    subtype: 'isAllowed',
+    messageData: {
+      string: event.title,
+    },
+  });
+  await this.checkDBhasAnswered();
+  reasons.push(this.lastDBAnswer.reason);
+  if (this.lastDBAnswer.success) {
+    this.skipFurtherChecks.push(event.title);
+    return {
+      event,
+      reason: reasons.reverse().join(','),
+      success: true,
+    };
   }
 
-  const isAllowed = await this.rockAllowListCheck(event, workingTitle);
-  if (isAllowed.success) {
-    return isAllowed;
+  this.talkToDB({
+    type: 'db-request',
+    subtype: 'isRockEvent',
+    messageData: {
+      string: event.title,
+    },
+  });
+  await this.checkDBhasAnswered();
+  reasons.push(this.lastDBAnswer.reason);
+  if (this.lastDBAnswer.success) {
+    this.talkToDB({
+      type: 'db-request',
+      subtype: 'saveAllowedTitle',
+      messageData: {
+        string: event.title,
+        reason: reasons.reverse().join(', '),
+      },
+    }); 
+    this.skipFurtherChecks.push(event.title);
+    return {
+      event,
+      reason: reasons.reverse().join(','),
+      success: true,
+    };
+  }  
+  
+  this.talkToDB({
+    type: 'db-request',
+    subtype: 'isRefused',
+    messageData: {
+      string: event.title,
+    },
+  });
+  await this.checkDBhasAnswered();
+  reasons.push(this.lastDBAnswer.reason);
+  if (this.lastDBAnswer.success) {
+    return {
+      event,
+      reason: reasons.reverse().join(','),
+      success: false,
+    };
   }
 
-  this.saveAllowedTitle(workingTitle);
+  const hasForbiddenTerms = await this.hasForbiddenTerms(event);
+  reasons.push(hasForbiddenTerms.reason);
+  if (hasForbiddenTerms.success) {
+    this.talkToDB({
+      type: 'db-request',
+      subtype: 'saveRefusedTitle',
+      messageData: {
+        string: event.title,
+        reason: reasons.reverse().join(', '),
+      },
+    });    
+    
+    return {
+      event,
+      reason: reasons.reverse().join(','),
+      success: false,
+    };
+  }
+ 
+  this.talkToDB({
+    type: 'db-request',
+    subtype: 'saveAllowedTitle',
+    messageData: {
+      string: event.title,
+      reason: reasons.reverse().join(', '),
+    },
+  }); 
 
   return {
-    workingTitle,
-    reason: [isRefused.reason, isAllowed.reason].join(';'),
     event,
+    reason: reasons.reverse().join(', '),
     success: true,
   };
 };
 // #endregion                          MAIN PAGE EVENT CHECK
 
-// #region [rgba(0, 180, 0, 0.1)]      SINGLE PAGE EVENT CHECK
-dehellingScraper.singlePageAsyncCheck = async function (event) {
-  return {
-    reason: ['nothing found currently'].join(';'),
-    event,
-    success: true,
-  };
-};
+// #region [rgba(0, 60, 0, 0.5)]      SINGLE PAGE EVENT CHECK
+// dehellingScraper.singlePageAsyncCheck = async function (event) {
+//   return {
+//     reason: ['nothing found currently'].join(';'),
+//     event,
+//     success: true,
+//   };
+// };
 // #endregion                          SINGLE PAGE EVENT CHECK
 
 // #region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
@@ -148,11 +223,19 @@ dehellingScraper.mainPage = async function () {
   );
 
   rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
-
-  this.saveBaseEventlist(workerData.family, rawEvents);
-  const thisWorkersEvents = rawEvents.filter(
+  const eventGen = this.eventGenerator(rawEvents);
+  // eslint-disable-next-line no-unused-vars
+  const checkedEvents = await this.rawEventsAsyncCheck({
+    eventGen,
+    checkedEvents: [],
+  });  
+  
+  this.saveBaseEventlist(workerData.family, checkedEvents);
+    
+  const thisWorkersEvents = checkedEvents.filter(
     (eventEl, index) => index % workerData.workerCount === workerData.index,
   );
+    
   return this.mainPageEnd({ stopFunctie, rawEvents: thisWorkersEvents });
 };
 // #endregion                          MAIN PAGE

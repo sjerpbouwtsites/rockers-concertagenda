@@ -124,6 +124,9 @@ export function mapToStartTime(event) {
 export function mapToDoorTime(event) {
   return _mapToTime(event, 'door', false);
 }
+export function mapToEndTime(event) {
+  return _mapToTime(event, 'end', false);
+}
 
 export function mapToStartDate(event, regexMode, months) {
   if (Array.isArray(event.mapToStartDate)) {
@@ -241,7 +244,7 @@ export function mapToStartDate(event, regexMode, months) {
     return event;
   }
   event.errors.push({
-    remarks: `onbekende regexMode ${regexMode}`,
+    error: new Error(`onbekende regexMode ${regexMode}`),
   });
 
   return event;

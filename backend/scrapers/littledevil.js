@@ -6,7 +6,7 @@ import getImage from './gedeeld/image.js';
 import { combineStartTimeStartDate, mapToStartDate, mapToStartTime } from './gedeeld/datums.js';
 
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
-const littledevilScraper = new AbstractScraper({
+const scraper = new AbstractScraper({
   workerData: { ...workerData },
   mainPage: {
     timeout: 45000,
@@ -26,41 +26,103 @@ const littledevilScraper = new AbstractScraper({
 });
 // #endregion                          SCRAPER CONFIG
 
-littledevilScraper.listenToMasterThread();
+scraper.listenToMasterThread();
 
-// #region [rgba(0, 120, 0, 0.1)]      MAIN PAGE EVENT CHECK
-littledevilScraper.mainPageAsyncCheck = async function (event) {
-  const workingTitle = this.cleanupEventTitle(event.title);
+// #region [rgba(60, 0, 0, 0.5)]      MAIN PAGE EVENT CHECK
+scraper.mainPageAsyncCheck = async function (event) {
+  const reasons = [];
 
-  const isRefused = await this.rockRefuseListCheck(event, workingTitle);
-  if (isRefused.success) {
-    isRefused.success = false;
-    return isRefused;
+  this.talkToDB({
+    type: 'db-request',
+    subtype: 'isAllowed',
+    messageData: {
+      string: event.title,
+    },
+  });
+  await this.checkDBhasAnswered();
+  reasons.push(this.lastDBAnswer.reason);
+  if (this.lastDBAnswer.success) {
+    this.skipFurtherChecks.push(event.title);
+    return {
+      event,
+      reason: reasons.reverse().join(','),
+      success: true,
+    };
   }
 
-  const isAllowed = await this.rockAllowListCheck(event, workingTitle);
-  if (isAllowed.success) return isAllowed;
+  this.talkToDB({
+    type: 'db-request',
+    subtype: 'isRockEvent',
+    messageData: {
+      string: event.title,
+    },
+  });
+  await this.checkDBhasAnswered();
+  reasons.push(this.lastDBAnswer.reason);
+  if (this.lastDBAnswer.success) {
+    this.talkToDB({
+      type: 'db-request',
+      subtype: 'saveAllowedTitle',
+      messageData: {
+        string: event.title,
+        reason: reasons.reverse().join(', '),
+      },
+    }); 
+    this.skipFurtherChecks.push(event.title);
+    return {
+      event,
+      reason: reasons.reverse().join(','),
+      success: true,
+    };
+  }  
+  
+  this.talkToDB({
+    type: 'db-request',
+    subtype: 'isRefused',
+    messageData: {
+      string: event.title,
+    },
+  });
+  await this.checkDBhasAnswered();
+  reasons.push(this.lastDBAnswer.reason);
+  if (this.lastDBAnswer.success) {
+    return {
+      event,
+      reason: reasons.reverse().join(','),
+      success: false,
+    };
+  }
 
   const hasForbiddenTerms = await this.hasForbiddenTerms(event);
+  reasons.push(hasForbiddenTerms.reason);
   if (hasForbiddenTerms.success) {
-    this.saveRefusedTitle(workingTitle);
-    hasForbiddenTerms.success = false;
-    return hasForbiddenTerms;
+    this.talkToDB({
+      type: 'db-request',
+      subtype: 'saveRefusedTitle',
+      messageData: {
+        string: event.title,
+        reason: reasons.reverse().join(', '),
+      },
+    });      
   }
-
-  this.saveAllowedTitle(workingTitle);
-
+  this.talkToDB({
+    type: 'db-request',
+    subtype: 'saveAllowedTitle',
+    messageData: {
+      string: event.title,
+      reason: reasons.reverse().join(', '),
+    },
+  }); 
   return {
-    workingTitle,
-    reason: 'Little devil is gewoon cool',
     event,
+    reason: reasons.reverse().join(', '),
     success: true,
   };
 };
 // #endregion                          MAIN PAGE EVENT CHECK
 
 // #region [rgba(0, 180, 0, 0.1)]      SINGLE PAGE EVENT CHECK
-// littledevilScraper.singlePageAsyncCheck = async function(event){
+// scraper.singlePageAsyncCheck = async function(event){
 //   let workingTitle = this.cleanupEventTitle(event.title);
 
 //   return {
@@ -73,7 +135,7 @@ littledevilScraper.mainPageAsyncCheck = async function (event) {
 // #endregion                          SINGLE PAGE EVENT CHECK
 
 // #region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
-littledevilScraper.mainPage = async function () {
+scraper.mainPage = async function () {
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
   if (availableBaseEvents) {
     const thisWorkersEvents = availableBaseEvents.filter(
@@ -132,7 +194,7 @@ littledevilScraper.mainPage = async function () {
           } catch (error) {
             res.price = null;
             res.errors.push({
-              remarks: `price berekening met ${s} ${res.anker}`,
+              error: new Error(`price berekening met ${s} ${res.anker}`),
             });
           }
         }
@@ -160,22 +222,31 @@ littledevilScraper.mainPage = async function () {
   rawEvents = rawEvents.map(combineStartTimeStartDate);
   rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
 
-  this.saveBaseEventlist(workerData.family, rawEvents);
-  const thisWorkersEvents = rawEvents.filter(
+  const eventGen = this.eventGenerator(rawEvents);
+  // eslint-disable-next-line no-unused-vars
+  const checkedEvents = await this.rawEventsAsyncCheck({
+    eventGen,
+    checkedEvents: [],
+  });  
+  
+  this.saveBaseEventlist(workerData.family, checkedEvents);
+    
+  const thisWorkersEvents = checkedEvents.filter(
     (eventEl, index) => index % workerData.workerCount === workerData.index,
   );
-  return this.mainPageEnd({ stopFunctie, page, rawEvents: thisWorkersEvents });
+    
+  return this.mainPageEnd({ stopFunctie, rawEvents: thisWorkersEvents });
 };
 // #endregion                          MAIN PAGE
 
 // #region [rgba(120, 0, 0, 0.1)]     SINGLE PAGE
-littledevilScraper.singlePage = async function ({ page, event }) {
+scraper.singlePage = async function ({ page, event }) {
   const { stopFunctie } = await this.singlePageStart();
 
   const pageInfo = {
     title: event.title,
     errors: [],
-    anker: `<a class='page-info' href='${event.title}'>${workerData.family} single - ${event.title}</a>`,
+    anker: `<a class='page-info' href='${event.venueEventUrl}'>${workerData.family} single - ${event.title}</a>`,
   };
 
   const imageRes = await getImage({

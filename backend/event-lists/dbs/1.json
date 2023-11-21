@@ -1,17 +1,50 @@
 [
   {
-    "door": null,
-    "start": "2023-11-02T08:00:00",
-    "end": null,
-    "venueEventUrl": "https://www.dbstudio.nl/event/iggys-furious-fifty-fissa/",
-    "title": "Iggy’s Furious Fifty Fissa",
+    "start": "2023-12-06T08:00:00",
+    "end": "2023-12-06T10:30:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/holly-golightly-uk-damaged-goods-the-monroes/",
+    "title": "Holly golightly (uk – damaged goods) ",
     "location": "dbs",
-    "price": "0",
-    "shortText": "grunge, metal, stoner",
-    "longText": "../public/texts/dbs/ZW50L2lnZ3lzLWZ1cmlvdXMtZmlmdHktZmlzc2Ev.html",
-    "image": "../public/event-images/dbs/ZW50L2lnZ3lzLWZ1cmlvdXMtZmlmdHktZmlzc2Ev",
-    "soldOut": null,
-    "unavailable": false,
-    "corrupted": null
+    "price": 14,
+    "shortText": " the monroes blues, country noir, folk, garage, pop, rock 'n roll",
+    "longText": "../public/texts/dbs/LXVrLWRhbWFnZWQtZ29vZHMtdGhlLW1vbnJvZXMv.html",
+    "image": "../public/event-images/dbs/LXVrLWRhbWFnZWQtZ29vZHMtdGhlLW1vbnJvZXMv",
+    "unavailable": false
+  },
+  {
+    "start": "2023-01-06T08:00:00",
+    "end": "2023-01-06T10:30:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/asgrauw-lustobject/",
+    "title": "Asgrauw + lustobject",
+    "location": "dbs",
+    "price": 12,
+    "shortText": "black metal,",
+    "longText": "../public/texts/dbs/by5ubC9ldmVudC9hc2dyYXV3LWx1c3RvYmplY3Qv.html",
+    "image": "../public/event-images/dbs/by5ubC9ldmVudC9hc2dyYXV3LWx1c3RvYmplY3Qv",
+    "unavailable": false
+  },
+  {
+    "start": "2023-02-01T08:00:00",
+    "end": "2023-02-01T10:30:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/gyasi-usa-alive-natural-sounds-support/",
+    "title": "GYASI (USA – Alive Natural Sounds) + support",
+    "location": "dbs",
+    "price": 12,
+    "shortText": "glamrock, rock",
+    "longText": "../public/texts/dbs/LWFsaXZlLW5hdHVyYWwtc291bmRzLXN1cHBvcnQv.html",
+    "image": "../public/event-images/dbs/LWFsaXZlLW5hdHVyYWwtc291bmRzLXN1cHBvcnQv",
+    "unavailable": false
+  },
+  {
+    "start": "2023-04-18T08:00:00",
+    "end": "2023-04-18T10:30:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/electric-eel-shock-japan-support/",
+    "title": "Electric eel shock (japan) + support",
+    "location": "dbs",
+    "price": 14,
+    "shortText": "rock, rock 'n roll",
+    "longText": "../public/texts/dbs/Y3RyaWMtZWVsLXNob2NrLWphcGFuLXN1cHBvcnQv.html",
+    "image": "../public/event-images/dbs/Y3RyaWMtZWVsLXNob2NrLWphcGFuLXN1cHBvcnQv",
+    "unavailable": false
   }
 ]

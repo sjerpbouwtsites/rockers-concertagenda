@@ -1,14 +1,12 @@
 /* global document */
 import { workerData } from 'worker_threads';
-import * as _t from '../mods/tools.js';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/volt.js';
 import getImage from './gedeeld/image.js';
-import { waitTime } from '../mods/tools.js';
 import terms from './gedeeld/terms.js';
 
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
-const voltScraper = new AbstractScraper({
+const scraper = new AbstractScraper({
   workerData: { ...workerData },
 
   mainPage: {
@@ -26,53 +24,124 @@ const voltScraper = new AbstractScraper({
 });
 // #endregion                          SCRAPER CONFIG
 
-voltScraper.listenToMasterThread();
+scraper.listenToMasterThread();
 
-// #region [rgba(0, 120, 0, 0.1)]      MAIN PAGE EVENT CHECK
-voltScraper.mainPageAsyncCheck = async function (event) {
-  const workingTitle = this.cleanupEventTitle(event.title);
-  const isRefused = await this.rockRefuseListCheck(event, workingTitle);
-  if (isRefused.success) {
-    isRefused.success = false;
-    return isRefused;
+// #region [rgba(60, 0, 0, 0.5)]      MAIN PAGE EVENT CHECK
+scraper.mainPageAsyncCheck = async function (event) {
+  const reasons = [];  
+
+  this.talkToDB({
+    type: 'db-request',
+    subtype: 'isAllowed',
+    messageData: {
+      string: event.title,
+    },
+  });
+  await this.checkDBhasAnswered();
+  reasons.push(this.lastDBAnswer.reason);
+  if (this.lastDBAnswer.success) {
+    this.skipFurtherChecks.push(event.title);
+    return {
+      event,
+      reason: reasons.reverse().join(','),
+      success: true,
+    };
+  }
+
+  this.talkToDB({
+    type: 'db-request',
+    subtype: 'isRockEvent',
+    messageData: {
+      string: event.title,
+    },
+  });
+  await this.checkDBhasAnswered();
+  reasons.push(this.lastDBAnswer.reason);
+  if (this.lastDBAnswer.success) {
+    this.skipFurtherChecks.push(event.title);
+    return {
+      event,
+      reason: reasons.reverse().join(','),
+      success: true,
+    };
+  }
+  
+  this.talkToDB({
+    type: 'db-request',
+    subtype: 'isRefused',
+    messageData: {
+      string: event.title,
+    },
+  });
+  await this.checkDBhasAnswered();
+  reasons.push(this.lastDBAnswer.reason);
+  if (this.lastDBAnswer.success) {
+    return {
+      event,
+      reason: reasons.reverse().join(','),
+      success: false,
+    };
   }
 
   return {
-    workingTitle,
-    reason: [isRefused.reason].join(';'),
     event,
+    reason: reasons.reverse().join(', '),
     success: true,
   };
 };
 // #endregion                          MAIN PAGE EVENT CHECK
 
-// #region [rgba(0, 180, 0, 0.1)]      SINGLE PAGE EVENT CHECK
-voltScraper.singlePageAsyncCheck = async function (event) {
-  const workingTitle = this.cleanupEventTitle(event.title);
-
-  const isAllowed = await this.rockAllowListCheck(event, workingTitle);
-  if (isAllowed.success) return isAllowed;
-
-  const hasForbiddenTerms = await this.hasForbiddenTerms(event);
-  if (hasForbiddenTerms.success) {
-    this.saveRefusedTitle(workingTitle);
-    hasForbiddenTerms.success = false;
-    return hasForbiddenTerms;
+// #region [rgba(0, 60, 0, 0.5)]      SINGLE PAGE EVENT CHECK
+scraper.singlePageAsyncCheck = async function (event) {
+  const reasons = [];
+  
+  if (this.skipFurtherChecks.includes(event.title)) {
+    reasons.push("allready check main");
+    return {
+      event,
+      reason: reasons.reverse().join(','),
+      success: true,
+    };    
   }
 
-  this.saveAllowedTitle(workingTitle);
+  const hasForbiddenTerms = await this.hasForbiddenTerms(event);
+  reasons.push(hasForbiddenTerms.reason);
+  if (hasForbiddenTerms.success) {
+    this.talkToDB({
+      type: 'db-request',
+      subtype: 'saveRefusedTitle',
+      messageData: {
+        string: event.title,
+        reason: reasons.reverse().join(', '),
+      },
+    });    
+    
+    return {
+      event,
+      reason: reasons.reverse().join(','),
+      success: false,
+    };
+  }
+  
+  this.talkToDB({
+    type: 'db-request',
+    subtype: 'saveAllowedTitle',
+    messageData: {
+      string: event.title,
+      reason: reasons.reverse().join(', '),
+    },
+  });
 
   return {
-    workingTitle,
-    reason: [isAllowed.reason, hasForbiddenTerms.reason].join(';'),
     event,
     success: true,
+    reason: reasons.reverse().join(', '),
   };
 };
 // #endregion                          SINGLE PAGE EVENT CHECK
 
 // #region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
-voltScraper.mainPage = async function () {
+scraper.mainPage = async function () {
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
   if (availableBaseEvents) {
     const thisWorkersEvents = availableBaseEvents.filter(
@@ -93,7 +162,7 @@ voltScraper.mainPage = async function () {
       this.saveBaseEventlist(workerData.family, []);
       return this.mainPageEnd({ stopFunctie, rawEvents: [] });
     } 
-    _t.handleError(error, workerData, 'Volt wacht op laden eventlijst', 'close-thread', null);
+    this.handleError(error, 'Volt wacht op laden eventlijst', 'close-thread', null);
   }
 
   let rawEvents = await page.evaluate(
@@ -129,17 +198,26 @@ voltScraper.mainPage = async function () {
   );
 
   rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
-
-  this.saveBaseEventlist(workerData.family, rawEvents);
-  const thisWorkersEvents = rawEvents.filter(
+  
+  const eventGen = this.eventGenerator(rawEvents);
+  // eslint-disable-next-line no-unused-vars
+  const checkedEvents = await this.rawEventsAsyncCheck({
+    eventGen,
+    checkedEvents: [],
+  });  
+  
+  this.saveBaseEventlist(workerData.family, checkedEvents);
+    
+  const thisWorkersEvents = checkedEvents.filter(
     (eventEl, index) => index % workerData.workerCount === workerData.index,
   );
+    
   return this.mainPageEnd({ stopFunctie, rawEvents: thisWorkersEvents });
 };
 // #endregion                          MAIN PAGE
 
 // #region [rgba(120, 0, 0, 0.1)]      SINGLE PAGE
-voltScraper.singlePage = async function ({ page, url, event }) {
+scraper.singlePage = async function ({ page, url, event }) {
   const { stopFunctie } = await this.singlePageStart();
 
   const cookiesNodig = await page.evaluate(() =>
@@ -150,7 +228,7 @@ voltScraper.singlePage = async function ({ page, url, event }) {
     await page.evaluate(() => {
       document.querySelector('.cookiesjsr-btn.allowAll').click();
     });
-    await waitTime(1500);
+    await this.waitTime(1500);
   }
 
   const pageInfo = await page.evaluate(

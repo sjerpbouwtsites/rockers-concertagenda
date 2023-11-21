@@ -2,15 +2,11 @@
 // #region                                                 IMPORTS
 import { parentPort, workerData } from 'worker_threads';
 import fs from 'fs';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import puppeteer from 'puppeteer';
-import { QuickWorkerMessage } from '../../mods/rock-worker.js';
 import fsDirections from '../../mods/fs-directions.js';
-import * as _t from '../../mods/tools.js';
-import EventsList from '../../mods/events-list.js';
-import MusicEvent from '../../mods/music-event.js';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import QuickWorkerMessage from "../../mods/quick-worker-message.js";
 import getVenueMonths from '../../mods/months.js';
-import ErrorWrapper from '../../mods/error-wrapper.js';
 import makeLongHTML from './longHTML.js';
 import WorkerStatus from '../../mods/WorkerStatus.js';
 import ScraperConfig from './scraper-config.js';
@@ -38,6 +34,16 @@ export default class AbstractScraper extends ScraperConfig {
   rockRefuseListNew = '';
 
   eventImagesFolder = fsDirections.publicEventImages;
+
+  _events = [];
+
+  _invalidEvents = [];
+
+  lastDBAnswer = null;
+
+  dbAnswered = false;
+
+  skipFurtherChecks = [];
 
   // #region [rgba(0, 0, 120, 0.10)]                            CONSTRUCTOR & INSTALL
   constructor(obj) {
@@ -95,6 +101,24 @@ export default class AbstractScraper extends ScraperConfig {
   dirtyTalk(talkingString) {
     parentPort.postMessage(this.qwm.messageRoll(String(talkingString)));
   }
+
+  talkToDB(messageForDB) {
+    this.dbAnswered = false;
+    parentPort.postMessage(JSON.stringify(messageForDB));
+  }
+
+  getAnswerFromDB(parsedMessageFromDB) {
+    this.lastDBAnswer = parsedMessageFromDB;
+    this.dbAnswered = true;
+    return parsedMessageFromDB;
+  }
+
+  async checkDBhasAnswered() {
+    if (this.dbAnswered) return true;
+    await this.waitTime(5);
+    return this.checkDBhasAnswered();
+  }
+
   // #endregion                                                DIRTYLOG, TALK, DEBUG
 
   // #region [rgba(0, 0, 240, 0.10)]                            SCRAPE INIT & SCRAPE DIE
@@ -137,7 +161,7 @@ export default class AbstractScraper extends ScraperConfig {
     await this.saveEvents();
     await this.announceToMonitorDone();
     
-    await _t.waitTime(50);
+    await this.waitTime(50);
     process.exit();
   }
   // #endregion                                                 SCRAPE INIT & SCRAPE DIE
@@ -174,18 +198,7 @@ export default class AbstractScraper extends ScraperConfig {
   async saveBaseEventlist(key, data) {
     WorkerStatus.registerFamilyDoneWithBaseEvents(workerData.family);
     if (!data) {
-      const err = new Error(`No data in saveBaseEventList ${key}`);
-      _t.wrappedHandleError(
-        new ErrorWrapper({
-          error: err,
-          remarks: 'saveBaseEventList',
-          errorLevel: 'close-thread',
-          workerData,
-          // toDebug: {
-          //   //
-          // }
-        }),
-      );
+      this.handleError(new Error(`No data in saveBaseEventList ${key}`), 'saveBaseEventList', 'close-thread');
       return false;
     }
 
@@ -211,21 +224,15 @@ export default class AbstractScraper extends ScraperConfig {
    * @returns {stopFunctie timeout, page puppeteer.Page}
    */
   async mainPageStart() {
+    this.dirtyLog(debugSettings);
+
     // @TODO 3 stopfuncties maken: 1 base events; 1 single; 1 totaal.
 
     const stopFunctie = setTimeout(() => {
-      _t.wrappedHandleError(
-        new ErrorWrapper({
-          error: new Error('Timeout baseEvent'),
-          remarks: `baseEvent ${workerData.name} overtijd. Max: ${this._s.mainPage.timeout}`,
-          workerData,
-          errorLevel: 'close-thread',
-        }),
-      );
+      this.handleError(new Error('Timeout baseEvent'), `baseEvent ${workerData.name} overtijd. Max: ${this._s.mainPage.timeout}`, 'close-thread');
     }, this._s.mainPage.timeout);
 
     if (this._s.app.mainPage.useCustomScraper) {
-      parentPort.postMessage(this.qwm.messageRoll('customScraper'));
       return {
         stopFunctie,
         page: null,
@@ -256,7 +263,6 @@ export default class AbstractScraper extends ScraperConfig {
    * haalt rawEvents door isMusicEventCorruptedMapper en returned
    *
    * @param {stopFunctie timeout, page Puppeteer.Page, rawEvents {}<>}
-   * @return {MusicEvent[]}
    * @memberof AbstractScraper
    */
   async mainPageEnd({ stopFunctie, page, rawEvents }) {
@@ -273,39 +279,20 @@ export default class AbstractScraper extends ScraperConfig {
     const eventsWithLongHTMLShortText = rawEvents.map((event) => {
       if (event.longTextHTML) {
         // eslint-disable-next-line no-param-reassign
-        event.longTextHTML = _t.killWhitespaceExcess(event.longTextHTML);
+        event.longTextHTML = event.longTextHTML.replace(/\t{2,100}/g, '').replace(/\n{2,100}/g, '\n').replace(/\s{2,100}/g, ' ').trim();
       }
       if (event.shortText) {
         // eslint-disable-next-line no-param-reassign
-        event.shortText = _t.killWhitespaceExcess(event.shortText);
+        event.shortText = event.shortText.replace(/\t{2,100}/g, '').replace(/\n{2,100}/g, '\n').replace(/\s{2,100}/g, ' ').trim();
       }
       return event;
     });
-
-    eventsWithLongHTMLShortText.forEach((event) => {
-      const errorVerz = Object.prototype.hasOwnProperty.call(event, 'errors') ? event.errors : [];
-      errorVerz.forEach((errorData) => {
-        const refE = new Error();
-        const wrappedError = new ErrorWrapper({
-          // eslint-disable-next-line no-nested-ternary
-          message: (errorData?.message ?? null) ? errorData.message : (errorData?.remarks ?? null) ? errorData.remarks : 'geen message',
-          stack: errorData?.stack ?? refE.stack,
-          remarks: errorData?.remarks ?? 'geen remarks',
-          workerData,
-        });
-        _t.wrappedHandleError(wrappedError);
-      });
-    });
-    
-    const r = rawEvents.map((rawEvent) => ({
+   
+    const r = eventsWithLongHTMLShortText.map((rawEvent) => ({
       ...rawEvent,
       location: workerData.family,
       origin: workerData.family,
     }));
-    
-    if (this._s.app.mainPage.enforceMusicEventType) {
-      return r.map((event) => new MusicEvent(event));
-    }
     
     return r;
   }
@@ -321,13 +308,11 @@ export default class AbstractScraper extends ScraperConfig {
    * // TODO maak aparte property 'check for afgelastetc'. Bij https://gebrdenobel.nl/programma/nazareth-14-dec-2022/
    * // bv staat 'afgelast' in de soort van titelbalk maar niet helemaal.
    *
-   * @param {MusicEvent} musicEvent
    * @return {boolean}
    * @memberof AbstractScraper
    */
   isMusicEventCorruptedMapper = (musicEvent) => {
     const s = this._s;
-    this.dirtyLog(s);
     const requiredProperties = !this.completedMainPage
       ? s.app.mainPage?.requiredProperties
       : s.app.singlePage?.requiredProperties;
@@ -369,24 +354,24 @@ export default class AbstractScraper extends ScraperConfig {
    * Kondigt begin taak aan aan monitor
    * Initeert de generator check op events
    *
-   * @param {[MusicEvents]} baseMusicEvents uitgedraaid door mainPage
-   * @return {checkedEvents [MusicEvent]}  Want geeft werk van rawEventsAsyncCheck door.
+   * @return {checkedEvents [events]}  Want geeft werk van rawEventsAsyncCheck door.
    * @memberof AbstractScraper
    *
    * checkedEvents
    */
   async announceAndCheck(baseMusicEvents) {
     parentPort.postMessage(this.qwm.workerStarted());
-    const eventGen = this.eventGenerator(baseMusicEvents);
-    const checkedEvents = [];
-    try {
-      return this.rawEventsAsyncCheck({
-        eventGen,
-        checkedEvents,
-      });
-    } catch (error) {
-      _t.handleError(error, workerData, 'check error in abstract scraper announce and check', 'close-thread', baseMusicEvents);      
-    }
+    return baseMusicEvents; // TODO was announce en check, nu alleen nog annoucne 
+    // const eventGen = this.eventGenerator(baseMusicEvents);
+    // const checkedEvents = [];
+    // try {
+    //   return this.rawEventsAsyncCheck({
+    //     eventGen,
+    //     checkedEvents,
+    //   });
+    // } catch (error) {
+    //   this.handleError(error, 'check error in abstract scraper announce and check', 'close-thread', baseMusicEvents);      
+    // }
   }
 
   // step 2.5
@@ -410,14 +395,19 @@ export default class AbstractScraper extends ScraperConfig {
 
       const eventToCheck = generatedEvent.value;
       const checkResult = await this.mainPageAsyncCheck(eventToCheck);
-      const workingTitle = checkResult.workingTitle || this.cleanupEventTitle(eventToCheck.title);
+      const workingTitle = this.cleanupEventTitle(eventToCheck.title);
+
+      if (!checkResult.reason) {
+        this.dirtyLog(checkResult, 'geen reason meegegeven');
+      }
+
       if (checkResult.success) {
         useableEventsCheckedArray.push(eventToCheck);
 
         if (debugSettings.debugRawEventAsyncCheck && checkResult.reason) {
           parentPort.postMessage(
             this.qwm.debugger({
-              title: 'Raw event async check',
+              title: 'base check success',
               event: `<a class='single-event-check-notice single-event-check-notice--success' href='${eventToCheck.venueEventUrl}'>${workingTitle}<a/>`,
               reason: checkResult.reason,
             }),
@@ -426,7 +416,7 @@ export default class AbstractScraper extends ScraperConfig {
       } else if (debugSettings.debugRawEventAsyncCheck) {
         parentPort.postMessage(
           this.qwm.debugger({
-            title: 'Raw event async check',
+            title: 'base check fail',
             event: `<a class='single-event-check-notice single-event-check-notice--failure' href='${eventToCheck.venueEventUrl}'>${workingTitle}<a/>`,
             reason: checkResult.reason,
           }),
@@ -438,9 +428,8 @@ export default class AbstractScraper extends ScraperConfig {
         checkedEvents: useableEventsCheckedArray,
       });
     } catch (error) {
-      _t.handleError(
+      this.handleError(
         error,
-        workerData,
         `rawEventsAsyncCheck faal met ${generatedEvent?.value?.title}`,
         'close-thread',
         {
@@ -454,8 +443,8 @@ export default class AbstractScraper extends ScraperConfig {
   /**
    * abstracte methode, te overschrijve in de kindWorkers.
    *
-   * @param {MusicEvent} event om te controleren
-   * @return {event {MusicEvent, success bool}}
+   * @param event om te controleren
+   * @return {event {singes, success bool}}
    * @memberof AbstractScraper
    */
   async mainPageAsyncCheck(event) {
@@ -481,8 +470,6 @@ export default class AbstractScraper extends ScraperConfig {
    * step 3
    *
    * @recursive
-   * @param {checkedEvents MusicEvents[]}
-   * @return {Promise<checkedEvents MusicEvents[]>}
    * @memberof AbstractScraper
    */
   async processSingleMusicEvent(eventsList = []) {
@@ -490,7 +477,7 @@ export default class AbstractScraper extends ScraperConfig {
     const useableEventsList = eventsList.map((a) => a);
     if (useableEventsList.length === 0) return useableEventsList;
 
-    let singleEvent = useableEventsList.shift();
+    const singleEvent = useableEventsList.shift();
 
     parentPort.postMessage(this.qwm.todoNew(useableEventsList.length));
 
@@ -526,32 +513,30 @@ export default class AbstractScraper extends ScraperConfig {
       event: singleEvent,
     });
 
-    // als single event nog music event moet worden.
-    if (!(singleEvent instanceof MusicEvent)) {
-      singleEvent = new MusicEvent(singleEvent);
-    }
-
     // samenvoegen & naar EventsList sturen
-    singleEvent.merge(pageInfo);
+    let mergedEvent = {
+      ...singleEvent,
+      ...pageInfo,
+    };
 
     // titel / shortext postfix
-    singleEvent = this.titelShorttextPostfix(singleEvent);
+    mergedEvent = this.titelShorttextPostfix(mergedEvent);
 
     // check op properties vanuit single page
-    singleEvent = this.isMusicEventCorruptedMapper(singleEvent);
+    mergedEvent = this.isMusicEventCorruptedMapper(mergedEvent);
 
-    if (singleEvent.corrupted || singleEvent.unavailable) {
-      // singleEvent.registerINVALID(this.workerData); TODO HERACTIVIEREN
-      if (singleEvent.corrupted) {
+    if (mergedEvent.corrupted || mergedEvent.unavailable) {
+      // mergedEvent.registerINVALID(this.workerData); TODO HERACTIVIEREN
+      if (mergedEvent.corrupted) {
         this.dirtyDebug({
-          title: `💀 ${singleEvent.corrupted}`,
-          event: `<a class='single-event-check-notice single-event-check-notice--failure' href='${singleEvent.venueEventUrl}'>${singleEvent.title}</a> Corr.`,
+          title: `💀 ${mergedEvent.corrupted}`,
+          event: `<a class='single-event-check-notice single-event-check-notice--failure' href='${mergedEvent.venueEventUrl}'>${mergedEvent.title}</a> Corr.`,
         });
       }
-      if (singleEvent.unavailable) {
+      if (mergedEvent.unavailable) {
         this.dirtyDebug({
-          title: `😣 ${singleEvent.unavailable}`,
-          event: `<a class='single-event-check-notice single-event-check-notice--failure' href='${singleEvent.venueEventUrl}'>${singleEvent.title}</a> Unav.`,
+          title: `😣 ${mergedEvent.unavailable}`,
+          event: `<a class='single-event-check-notice single-event-check-notice--failure' href='${mergedEvent.venueEventUrl}'>${mergedEvent.title}</a> Unav.`,
         });
       }
 
@@ -564,11 +549,9 @@ export default class AbstractScraper extends ScraperConfig {
         : useableEventsList;
     }
 
-    singleEvent.longText = this.writeLongTextHTML(singleEvent);
+    mergedEvent.longText = this.writeLongTextHTML(mergedEvent);
 
-    // this.dirtyLog(singleEvent, `singleEventBeforeMergedCheck`);
-
-    const mergedEventCheckRes = await this.singlePageAsyncCheck(singleEvent, pageInfo);
+    const mergedEventCheckRes = await this.singlePageAsyncCheck(mergedEvent, pageInfo);
     if (mergedEventCheckRes.success) {
       if (debugSettings.debugsinglePageAsyncCheck && mergedEventCheckRes.reason) {
         this.dirtyDebug({
@@ -578,45 +561,56 @@ export default class AbstractScraper extends ScraperConfig {
         });
       }
 
-      // this.dirtyLog(singleEvent, `singleEventAfterMergedCheckSuccess`);
-      
       let tryEnforceDate = false;
       try {
-        tryEnforceDate = new Date(singleEvent.start).toISOString();
+        tryEnforceDate = new Date(mergedEvent.start).toISOString();
       } catch (error) { /* */ }
 
-      if (tryEnforceDate && !singleEvent.unavailable && !singleEvent.corrupted) {
+      if (tryEnforceDate && !mergedEvent.unavailable && !mergedEvent.corrupted) {
         const toRegister = {
-          door: singleEvent.door,
-          start: singleEvent.start,      
-          end: singleEvent.end,      
-          venueEventUrl: singleEvent.venueEventUrl,      
-          title: singleEvent.title,      
-          location: singleEvent.location,      
-          price: singleEvent.price,      
-          shortText: singleEvent.shortText,      
-          longText: singleEvent.longText,      
-          image: singleEvent.image,      
-          soldOut: singleEvent.soldOut,      
-          unavailable: singleEvent.unavailable,
-          corrupted: singleEvent.corrupted,
+          door: mergedEvent.door,
+          start: mergedEvent.start,      
+          end: mergedEvent.end,      
+          venueEventUrl: mergedEvent.venueEventUrl,      
+          title: mergedEvent.title,      
+          location: mergedEvent.location,      
+          price: mergedEvent.price,      
+          shortText: mergedEvent.shortText,      
+          longText: mergedEvent.longText,      
+          image: mergedEvent.image,      
+          soldOut: mergedEvent.soldOut,      
+          unavailable: mergedEvent.unavailable,
+          corrupted: mergedEvent.corrupted,
           // ...workerData,
         };
-
-        EventsList.addEvent(toRegister);
+        this._events.push(toRegister);
       } else {
         this.dirtyDebug('invalid maar geen register invalid');
       }
-    } else {
-      if (debugSettings.debugsinglePageAsyncCheck && mergedEventCheckRes.reason) {
-        this.dirtyDebug({
-          title: 'Merged async check 👎',
-          event: `<a class='single-event-check-notice single-event-check-notice--failure' href='${mergedEventCheckRes.event.venueEventUrl}'>${mergedEventCheckRes.event.title}</a>`,
-          reason: mergedEventCheckRes.reason,
-        });
-      }
-      // singleEvent.registerINVALID(this.workerData); TODO Opnieuw activeren
+    } else if (debugSettings.debugsinglePageAsyncCheck && mergedEventCheckRes.reason) {
+      this.dirtyDebug({
+        title: 'Merged async check 👎',
+        event: `<a class='single-event-check-notice single-event-check-notice--failure' href='${mergedEventCheckRes.event.venueEventUrl}'>${mergedEventCheckRes.event.title}</a>`,
+        reason: mergedEventCheckRes.reason,
+      });
     }
+    const toRegister = {
+      door: mergedEvent.door,
+      start: mergedEvent.start,      
+      end: mergedEvent.end,      
+      venueEventUrl: mergedEvent.venueEventUrl,      
+      title: mergedEvent.title,      
+      location: mergedEvent.location,      
+      price: mergedEvent.price,      
+      shortText: mergedEvent.shortText,      
+      longText: mergedEvent.longText,      
+      image: mergedEvent.image,      
+      soldOut: mergedEvent.soldOut,      
+      unavailable: mergedEvent.unavailable,
+      corrupted: mergedEvent.corrupted,
+      // ...workerData,
+    };
+    this._invalidEvents.push(toRegister);
 
     if (singleEventPage && !singleEventPage.isClosed()) await singleEventPage.close();
 
@@ -638,9 +632,8 @@ export default class AbstractScraper extends ScraperConfig {
       try {
         await page.goto(url, this.singlePage);
       } catch (error) {
-        _t.handleError(
+        this.handleError(
           error,
-          workerData,
           `Mislukken aanmaken <a class='single-page-failure error-link' href='${url}'>single pagina</a>`,
           'notice',
           url,
@@ -649,9 +642,8 @@ export default class AbstractScraper extends ScraperConfig {
 
       return page;
     } catch (error) {
-      _t.handleError(
+      this.handleError(
         error,
-        workerData,
         `Mislukken aanmaken <a class='single-page-failure error-link' href='${url}'>single pagina</a> wss duurt te lang`,
         'notice',
         null,
@@ -710,14 +702,7 @@ export default class AbstractScraper extends ScraperConfig {
    */
   async singlePageStart(event) {
     const stopFunctie = setTimeout(() => {
-      _t.wrappedHandleError(
-        new ErrorWrapper({
-          error: new Error('Timeout baseEvent'),
-          remarks: `<a href='${event?.venueEventUrl}' class='error-link get-page-info-timeout'>singlePage ${workerData.name} overtijd</a>.\nMax: ${this._s.singlePage.timeout}`,
-          workerData,
-          errorLevel: 'notice',
-        }),
-      );
+      this.handleError(new Error('Timeout baseEvent in single page start'), `<a href='${event?.venueEventUrl}' class='error-link get-page-info-timeout'>singlePage ${workerData.name} overtijd</a>.\nMax: ${this._s.singlePage.timeout}`, 'close-thread');
     }, this._s.singlePage.timeout);
     return {
       stopFunctie,
@@ -749,29 +734,25 @@ export default class AbstractScraper extends ScraperConfig {
     }
 
     if (!Array.isArray(pageInfo?.errors)) {
-      const wrappedError = new ErrorWrapper({
+      pageInfo.errors = [{
         error: new Error('pageInfo object incompleet; geen errors'),
         remarks: 'pageInfo object incompleet; geen errors',
         workerData,
-        errorLevel: 'notice',
         toDebug: {
           title: 'failed page info',
           pageInfoData: pageInfo,
-        },
-      });
-      _t.wrappedHandleError(wrappedError);
-
-      if (page && !page.isClosed()) page.close();
-      clearTimeout(stopFunctie);
-      return {
-        corrupted: 'Geen resultaat van pageInfo',
-      };
+        },        
+      }];
     }
 
     pageInfo?.errors?.forEach((errorData) => {
-      _t.handleError(
-        errorData?.error ?? (new Error('geen error')), 
-        errorData?.workerData ?? null, 
+      if (!(errorData?.error instanceof Error)) {
+        const msg = errorData?.error.message || 'geen message in error';
+        errorData.error = new Error(msg);
+      }
+
+      this.handleError(
+        errorData.error, 
         errorData?.remarks ?? 'geen remarks', 
         errorData?.errorLevel ?? 'notice',
         errorData?.toDebug ?? null,
@@ -786,8 +767,6 @@ export default class AbstractScraper extends ScraperConfig {
   /**
    * abstracte methode, te overschrijve in de kindWorkers.
    *
-   * @param {MusicEvent} event om te controleren
-   * @return {event {MusicEvent, success bool}}
    * @memberof AbstractScraper
    */
   async singlePageAsyncCheck(event) {
@@ -837,10 +816,9 @@ export default class AbstractScraper extends ScraperConfig {
     const hasGoodTerm = terms.goodCategories.find((goodTerm) =>
       combinedTextToCheck.includes(goodTerm),
     );
-    const workingTitle = this.cleanupEventTitle(event.title);
+
     if (hasGoodTerm) {
       return {
-        workingTitle,
         event,
         success: true,
         reason: `Goed in ${keysToCheck2.join('')}`,
@@ -848,7 +826,6 @@ export default class AbstractScraper extends ScraperConfig {
     }
 
     return {
-      workingTitle,
       event,
       success: false,
       reason: `Geen bevestiging gekregen uit ${keysToCheck2.join(';')} ${combinedTextToCheck}`,
@@ -866,7 +843,6 @@ export default class AbstractScraper extends ScraperConfig {
    * @memberof AbstractScraper
    */
   async hasForbiddenTerms(event, keysToCheck) {
-    const workingTitle = this.cleanupEventTitle(event.title);
     const keysToCheck2 = Array.isArray(keysToCheck) ? keysToCheck : ['title', 'shortText'];
     let combinedTextToCheck = '';
     for (let i = 0; i < keysToCheck2.length; i += 1) {
@@ -881,7 +857,6 @@ export default class AbstractScraper extends ScraperConfig {
     );
     if (hasForbiddenTerm) {
       return {
-        workingTitle,
         event,
         success: true,
         reason: `verboden genres gevonden in ${keysToCheck2.join('; ')}`,
@@ -889,7 +864,6 @@ export default class AbstractScraper extends ScraperConfig {
     }
 
     return {
-      workingTitle,
       event,
       success: false,
       reason: `verboden genres niet gevonden in ${keysToCheck2.join('; ')}.`,
@@ -930,7 +904,6 @@ export default class AbstractScraper extends ScraperConfig {
     return {
       event,
       success,
-      workingTitle,
       reason: `${workingTitle} ${success ? 'in' : 'NOT in'} allowed 🛴 list`,
     };
   }
@@ -943,7 +916,6 @@ export default class AbstractScraper extends ScraperConfig {
     return {
       event,
       success,
-      workingTitle,
       reason: `${workingTitle} ${success ? 'in' : 'NOT in'} refuse 🚮 list`,
     };
   }
@@ -972,19 +944,11 @@ export default class AbstractScraper extends ScraperConfig {
         return bandNamesAreMainTitle;
       })
       .catch((metalEncError) => {
-        _t.wrappedHandleError(
-          new ErrorWrapper({
-            error: metalEncError,
-            remarks: `<a href='${event?.venueEventUrl}' class='error-link get-page-info-timeout'>singlePage ${workerData.name} metal enc. error</a>`,
-            workerData,
-            errorLevel: 'notice',
-          }),
-        );
+        this.handleError(metalEncError, `<a href='${event?.venueEventUrl}' class='error-link get-page-info-timeout'>singlePage ${workerData.name} metal enc. error</a>`);
         return {
           event,
           success: false,
           url: metalEncUrl,
-          workingTitle,
           reason: metalEncError.message,
         };
       });
@@ -992,7 +956,6 @@ export default class AbstractScraper extends ScraperConfig {
       return {
         event,
         success: true,
-        workingTitle,
         url: metalEncUrl,
         reason: `found in <a class='single-event-check-reason metal-encyclopedie metal-encyclopedie--success' href='${metalEncUrl}'>metal encyclopedia</a>`,
       };
@@ -1000,7 +963,6 @@ export default class AbstractScraper extends ScraperConfig {
     return {
       success: false,
       url: metalEncUrl,
-      workingTitle,
       reason: 'no result metal enc',
       event,
     };
@@ -1021,14 +983,7 @@ export default class AbstractScraper extends ScraperConfig {
       wikiPage = `https://en.wikipedia.org/wiki/${wikifiedTitled}`;
       await page.goto(wikiPage);
     } catch (error) {
-      _t.wrappedHandleError(
-        new ErrorWrapper({
-          error,
-          remarks: `<a href='${event?.venueEventUrl}' class='error-link get-page-info-timeout'>wikititel maken fout ${workerData.name}</a> ${workingTitle}`,
-          workerData,
-          errorLevel: 'notice',
-        }),
-      );
+      this.handleError(error, `<a href='${event?.venueEventUrl}' class='error-link get-page-info-timeout'>wikititel maken fout ${workerData.name}</a> ${workingTitle}`);
     }
 
     const pageDoesNotExist = await page.evaluate(() => document.getElementById('noarticletext'));
@@ -1041,7 +996,6 @@ export default class AbstractScraper extends ScraperConfig {
       if (!searchPage) {
         return {
           event,
-          workingTitle,
           reason: 'wiki page not found, als no search page',
           success: false,
         };
@@ -1057,7 +1011,6 @@ export default class AbstractScraper extends ScraperConfig {
       if (!matchingResults || !Array.isArray(matchingResults) || !matchingResults.length) {
         return {
           event,
-          workingTitle,
           reason: 'Not found title of event on wiki search page',
           success: false,
         };
@@ -1084,7 +1037,6 @@ export default class AbstractScraper extends ScraperConfig {
     if (wikiRockt) {
       return {
         event,
-        workingTitle,
         success: true,
         url: wikiPage,
         reason: `found on <a class='single-event-check-reason wikipedia wikipedia--success' href='${wikiPage}'>wikipedia</a>`,
@@ -1093,7 +1045,6 @@ export default class AbstractScraper extends ScraperConfig {
     if (!page.isClosed()) page.close();
     return {
       event,
-      workingTitle,
       success: false,
       reason: 'wiki catch return',
     };
@@ -1104,7 +1055,6 @@ export default class AbstractScraper extends ScraperConfig {
    * kijkt naar 'voornaamste titel', dwz de event.title tot aan een '&'.
    *
    * @param {*} event
-   * @return {event: MusicEvent, success: boolean}
    * @memberof AbstractScraper
    */
   async isRock(event, overloadTitles = null, recursiveTitle = null) {
@@ -1134,7 +1084,6 @@ export default class AbstractScraper extends ScraperConfig {
 
     return {
       event,
-      workingTitle,
       success: false,
       reason: `<a class='single-event-check-reason wikipedia wikipedia--failure metal-encyclopedie metal-encyclopedie--failure' href='${wikipediaRes.url}'>wikipedia</a> + <a href='${metalEncyclopediaRes.url}'>metal encyclopedia</a> 👎`,
     };
@@ -1172,14 +1121,7 @@ export default class AbstractScraper extends ScraperConfig {
         workingTitle = workingTitle.replace(/^[\w\s]+:/, '');
       }
     } catch (error) {
-      _t.wrappedHandleError(
-        new ErrorWrapper({
-          error,
-          workerData,
-          remarks: 'fout schoonmaken titel',
-          errorLevel: 'notice',
-        }),
-      );
+      this.handleError(error, 'fout schoonmaken titel');
       return 'TITEL SCHOONMAKEN MISLUKT';
     }
 
@@ -1214,7 +1156,7 @@ export default class AbstractScraper extends ScraperConfig {
 
       return longTextPath;
     } catch (err) {
-      _t.handleError(err, workerData, 'write long text fail', 'notice', {
+      this.handleError(err, 'write long text fail', 'notice', {
         path: `${fsDirections.publicTexts}/${mergedEvent.location}/${base64String}.html`,
         text: toPrint,
       });
@@ -1225,7 +1167,7 @@ export default class AbstractScraper extends ScraperConfig {
 
   // step 4
   async announceToMonitorDone() {
-    parentPort.postMessage(this.qwm.workerDone(EventsList.amountOfEvents));
+    parentPort.postMessage(this.qwm.workerDone(this._events.length));
     return true;
   }
 
@@ -1237,24 +1179,134 @@ export default class AbstractScraper extends ScraperConfig {
     return true;
   }
 
+  /**
+ * handleError, generic error handling for all scrapers
+ * passes a marked up error to the monitor
+ * adds error to the errorLog in temp.
+ * @param {Error} error
+ * @param {string} remarks Add some remarks to help you find back the origin of the error.
+ * @param {string} errorLevel notify, close-thread, close-app
+ * @param {*} toDebug gaat naar debugger.
+ */
+  handleError(error, remarks = null, errorLevel = 'notify', toDebug = null) {
+    // TODO link errors aan debugger
+    const updateErrorMsg = {
+      type: 'update',
+      subtype: 'error',
+      messageData: {
+        workerData,
+        remarks,
+        status: 'error',
+        errorLevel,
+        text: `${error?.message}\n${error?.stack}\nlevel:${errorLevel}`,
+      },
+    }; 
+    
+    const clientsLogMsg = {
+      type: 'clients-log',
+      subtype: 'error',
+      messageData: { error, workerData },
+    };
+    let debuggerMsg;
+    if (toDebug) {
+      debuggerMsg = {
+        type: 'update',
+        subtype: 'debugger',
+        messageData: {
+          workerData,
+          debug: toDebug,
+        },
+      };
+      debuggerMsg.messageData.workerName = workerData.name;
+    }
+    updateErrorMsg.messageData.workerName = workerData.name;
+    clientsLogMsg.messageData.workerName = workerData.name;
+    parentPort.postMessage(JSON.stringify(updateErrorMsg));
+    parentPort.postMessage(JSON.stringify(clientsLogMsg));
+    if (toDebug) parentPort.postMessage(JSON.stringify(debuggerMsg));
+    if (debugSettings.debugWithTempFile) {
+      const time = new Date();
+      const curErrorLog = fs.readFileSync(fsDirections.errorLog) || '';
+      const newErrorLog = `
+      ${workerData?.name} Error - ${time.toLocaleTimeString()}
+      ${error?.stack ?? 'geen stack'} 
+      ${error?.message ?? 'geen message'}
+      ${curErrorLog}`;
+      fs.writeFileSync(fsDirections.errorLog, newErrorLog, 'utf-8');
+    }
+  }  
+
+  async autoScroll(page) {
+    await page.evaluate(async () => {
+      await new Promise((resolve) => {
+        let totalHeight = 0;
+        const distance = 500;
+        const timer = setInterval(() => {
+          const { scrollHeight } = document.body;
+          // eslint-disable-next-line no-undef
+          window.scrollBy(0, distance);
+          totalHeight += distance;
+  
+          if (totalHeight >= scrollHeight) {
+            clearInterval(timer);
+            resolve();
+          }
+        }, 150);
+      });
+    });
+  }
+
   handleOuterScrapeCatch(catchError) {
-    _t.handleError(
-      catchError,
-      workerData,
-      `outer catch scrape ${workerData.family}`,
-      'close-thread',
-      null,
-    );
+    const updateErrorMsg = {
+      type: 'update',
+      subtype: 'error',
+      messageData: {
+        workerData,
+        status: 'error',
+        errorLevel: 'close-thread',
+        text: `${catchError?.message}\n${catchError?.stack}\nlevel: close-thread`,
+      },
+    }; 
+
+    parentPort.postMessage(updateErrorMsg);
+
+    // this.handleError(
+    //   catchError,
+    //   `outer catch scrape ${workerData.family}`,
+    //   'close-thread',
+    //   null,
+    // );
+  }
+
+  async waitTime(wait = 500) {
+    return new Promise((res) => {
+      setTimeout(res, wait);
+    });
   }
 
   // step 6
   async saveEvents() {
-    EventsList.save(workerData.family, workerData.index);
+    const pathToEventList = fsDirections.eventLists;
+    const pathToINVALIDEventList = fsDirections.invalidEventLists;
+    const inbetweenFix = workerData.index !== null ? `${workerData.index}` : '0';
+    const pathToEventListFile = `${pathToEventList}/${workerData.family}/${inbetweenFix}.json`;
+    const pathToINVALIDEventListFile = `${pathToINVALIDEventList}/${workerData.family}/invalid-${inbetweenFix}.json`;
+    fs.writeFile(pathToEventListFile, JSON.stringify(this._events, null, '  '), () => {});
+    fs.writeFile(
+      pathToINVALIDEventListFile,
+      JSON.stringify(this._invalidEvents, null, '  '),
+      () => {},
+    );
+    
+    return true;    
   }
 
   listenToMasterThread() {
     parentPort.on('message', (message) => {
       const pm = JSON.parse(message);
+      if (pm?.type === 'db-answer') {
+        this.getAnswerFromDB(pm.messageData);
+      }      
       if (pm?.type === 'process' && pm?.subtype === 'command-start') {
         this.scrapeInit(pm?.messageData).catch(this.handleOuterScrapeCatch);
       }

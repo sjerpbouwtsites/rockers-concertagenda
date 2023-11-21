@@ -1,17 +1,65 @@
 [
   {
+    "door": "2023-12-16T19:30:00",
+    "start": "2023-12-16T20:30:00",
+    "venueEventUrl": "https://www.groene-engel.nl/programma/the-doors-alive/",
+    "title": "The Doors Alive",
+    "location": "groeneengel",
+    "price": 28,
+    "longText": "../public/texts/groeneengel/Lm5sL3Byb2dyYW1tYS90aGUtZG9vcnMtYWxpdmUv.html",
+    "image": "../public/event-images/groeneengel/Lm5sL3Byb2dyYW1tYS90aGUtZG9vcnMtYWxpdmUv",
+    "soldOut": false,
+    "unavailable": false
+  },
+  {
+    "door": "2024-01-13T19:30:00",
+    "start": "2024-01-13T20:30:00",
+    "venueEventUrl": "https://www.groene-engel.nl/programma/harmonica-blowout-greg-izor-steven-troch-thomas-toussaint/",
+    "title": "Harmonica Blowout: Greg Izor ",
+    "location": "groeneengel",
+    "price": 22,
+    "shortText": " Steven Troch   Thomas Toussaint undefined",
+    "longText": "../public/texts/groeneengel/c3RldmVuLXRyb2NoLXRob21hcy10b3Vzc2FpbnQv.html",
+    "image": "../public/event-images/groeneengel/c3RldmVuLXRyb2NoLXRob21hcy10b3Vzc2FpbnQv",
+    "soldOut": false,
+    "unavailable": false
+  },
+  {
+    "door": "2024-02-02T19:30:00",
+    "start": "2024-02-02T20:30:00",
+    "venueEventUrl": "https://www.groene-engel.nl/programma/bernard-allison-ally-venable-band/",
+    "title": "Bernard Allison ",
+    "location": "groeneengel",
+    "price": 28,
+    "shortText": " Ally Venable / support: Katie Henry undefined",
+    "longText": "../public/texts/groeneengel/YXJkLWFsbGlzb24tYWxseS12ZW5hYmxlLWJhbmQv.html",
+    "image": "../public/event-images/groeneengel/YXJkLWFsbGlzb24tYWxseS12ZW5hYmxlLWJhbmQv",
+    "soldOut": false,
+    "unavailable": false
+  },
+  {
     "door": "2024-04-05T19:30:00",
     "start": "2024-04-05T20:30:00",
-    "end": null,
     "venueEventUrl": "https://www.groene-engel.nl/programma/electric-eel-shock-tankzilla/",
     "title": "Electric Eel Shock + TankZilla",
     "location": "groeneengel",
     "price": 17.5,
-    "shortText": null,
     "longText": "../public/texts/groeneengel/L2VsZWN0cmljLWVlbC1zaG9jay10YW5remlsbGEv.html",
     "image": "../public/event-images/groeneengel/L2VsZWN0cmljLWVlbC1zaG9jay10YW5remlsbGEv",
     "soldOut": false,
-    "unavailable": false,
-    "corrupted": null
+    "unavailable": false
+  },
+  {
+    "door": "2024-05-09T19:30:00",
+    "start": "2024-05-09T20:30:00",
+    "venueEventUrl": "https://www.groene-engel.nl/programma/coldplace-special-guest-sheeran-de-beste-coldplay-tribute-uit-de-uk/",
+    "title": "Coldplace ",
+    "location": "groeneengel",
+    "price": 25,
+    "shortText": " special guest @Sheeran | De beste Coldplay Tribute uit de UK! undefined",
+    "longText": "../public/texts/groeneengel/dGUtY29sZHBsYXktdHJpYnV0ZS11aXQtZGUtdWsv.html",
+    "image": "../public/event-images/groeneengel/dGUtY29sZHBsYXktdHJpYnV0ZS11aXQtZGUtdWsv",
+    "soldOut": false,
+    "unavailable": false
   }
 ]

@@ -103,6 +103,10 @@ export default class MonitorField {
   }
 
   updateError(updateData) {
+    console.log({
+      titel: 'updateError',
+      updateData,
+    });
     this.data.unshift(updateData);
     document.getElementById(this.mainFieldName).innerHTML = this.errorUpdateHTML;
   }
@@ -117,7 +121,7 @@ export default class MonitorField {
     document.querySelector(
       '#monitorfield-AppOverview .monitorfield__title',
     ).innerHTML = `AppOverview - CPU vrij: ${Math.round(this.data.CPUFree * 100) / 100
-      }%`;
+    }%`;
   }
 
   get rollUpdatedHTML() {
@@ -146,8 +150,8 @@ export default class MonitorField {
         }
 
         return `<li class='monitorfield__list-item'>
-        <span class='monitorfield__list-item-left'>${rollRow.messageData?.workerName ?? rollRow.messageData?.title ?? ''
-          }</span>
+        <span class='monitorfield__list-item-left'>${rollRow.messageData?.name ?? rollRow.messageData?.title ?? ''
+}</span>
         <span class='monitorfield__list-item-right'>${t}</span>
       </li>`;
       })
@@ -158,34 +162,33 @@ export default class MonitorField {
 
   get errorUpdateHTML() {
     const errorsPerWorkerCounter = {};
-    console.log(this.data)
+
+    console.log(this.data);
     const listItems = this.data
       .map((rollRow) => {
         try {
-          const titleText = `${rollRow.messageData?.title ?? ''}${rollRow.messageData?.workerName ?? ''
-            }`;
+          const titleText = `${rollRow.messageData?.title ?? ''}${rollRow.messageData?.name ?? ''
+          }`;
 
-    
-
-          const bewerkteFoutTekst = rollRow.messageData.content.text
+          const bewerkteFoutTekst = rollRow.messageData.text
             .split(/[\r\n]/)
-            .filter(a => a)
+            .filter((a) => a)
             .map((errorTextRow, index) => {
               if (index < 1) return '';
               if (errorTextRow.includes('node:internal')) return '';
               let t = errorTextRow;
               if (errorTextRow.includes('file://')) {
-                console.log(errorTextRow)
+                console.log(errorTextRow);
                 let volleFileNaam;
                 try {
                   volleFileNaam = errorTextRow.match(/(file.*)\)/)[1];
                 } catch (error) {
                   volleFileNaam = errorTextRow.match(/(file.*)/)[1];
-                  console.log(errorTextRow)
+                  console.log(errorTextRow);
                   console.error(new Error('SCHEIT'));
                 }
 
-                console.log(errorTextRow)
+                console.log(errorTextRow);
 
                 const fileLink = errorTextRow
                   .split('concertagenda')[1]
@@ -219,16 +222,19 @@ export default class MonitorField {
             currentErrorsForThisWorkerCount = errorsPerWorkerCounter[errorsPerWorkerCounter];
           }
 
-          return `<li class='monitorfield__list-item' id='error-ref-${rollRow.messageData?.workerName}-${currentErrorsForThisWorkerCount}'>
+          return `<li class='monitorfield__list-item' id='error-ref-${rollRow.messageData?.name}-${currentErrorsForThisWorkerCount}'>
             <header class='monitorfield__error-header'>
               <span class='monitorfield__error-workername'>${titleText}</span>
-              <span class='monitorfield__error-remarks'>${rollRow.messageData.content.remarks}</span>
+              <span class='monitorfield__error-remarks'>${rollRow.messageData.remarks}</span>
             </header>
             
             <div class='monitorfield__list-item-right'>${hoofdPrintTekst}</div>
           </li>`;
         } catch (error) {
-
+          console.log({
+            titel: 'error in frontend error reporting',
+            error,
+          });
           let currentErrorsForThisWorkerCount = 0;
           if (!errorsPerWorkerCounter[errorsPerWorkerCounter]) {
             errorsPerWorkerCounter[errorsPerWorkerCounter] = 0;
@@ -237,16 +243,15 @@ export default class MonitorField {
             currentErrorsForThisWorkerCount = errorsPerWorkerCounter[errorsPerWorkerCounter];
           }
 
-          return `<li class='monitorfield__list-item' id='error-ref-${rollRow.messageData?.workerName}-${currentErrorsForThisWorkerCount}'>
+          return `<li class='monitorfield__list-item' id='error-ref-${rollRow.messageData?.name}-${currentErrorsForThisWorkerCount}'>
         <header class='monitorfield__error-header'>
           <span class='monitorfield__error-workername'>niet standaard error</span>
-          <span class='monitorfield__error-remarks'>${rollRow?.messageData?.content?.remarks}</span>
+          <span class='monitorfield__error-remarks'>${rollRow?.messageData?.remarks}</span>
         </header>
         
         <div class='monitorfield__list-item-right'>${rollRow.toString()}</div>
       </li>`;
         }
-
       })
       .join('');
     return ` <ul class='monitorfield__list monitorfield__list--error'>${listItems}</ul>`;
@@ -255,8 +260,8 @@ export default class MonitorField {
   get expandedUpdatedHTML() {
     const listItems = this.data
       .map((rollRow) => {
-        const titleText = `${rollRow.messageData?.content?.title ?? rollRow.messageData?.title ?? ''}${rollRow.messageData?.workerName ?? ''
-          }`;
+        const titleText = `${rollRow.messageData?.content?.title ?? rollRow.messageData?.title ?? ''}${rollRow.messageData?.name ?? ''
+        }`;
         delete rollRow.messageData?.content?.title;
         delete rollRow.messageData?.title;
 
@@ -331,41 +336,41 @@ export default class MonitorField {
       <tr>
         <th>${workerFamilyNamesCharsets.join('<br>')}<span class='kutspacer'></span></th>
         ${sortedFamily
-            .map((worker) => {
-              let tdClass = 'worker-data-cell ';
-              tdClass += `worker-status--${worker.status}`;
-              tdClass
+    .map((worker) => {
+      let tdClass = 'worker-data-cell ';
+      tdClass += `worker-status--${worker.status}`;
+      tdClass
                 += ` worker-errors--${worker.errors.length ? 'has-errors' : 'none'}`;
 
-              const errorsHTML = !worker.errors.length
-                ? ''
-                : `<ol class='worker-cell-inner--errors'>
+      const errorsHTML = !worker.errors.length
+        ? ''
+        : `<ol class='worker-cell-inner--errors'>
               ${worker.errors
-                  .map(
-                    (error, index) => {
-                      const errorLevel = error?.content?.errorLevel ?? 'notice';
-                      const emoji = errorLevel === 'notice'
-                        ? '🤦‍♂️'
-                        : errorLevel === 'close-thread'
-                          ? '🫣'
-                          : errorLevel === 'close-app'
-                            ? '💥'
-                            : '❓';
+    .map(
+      (error, index) => {
+        const errorLevel = error?.content?.errorLevel ?? 'notice';
+        const emoji = errorLevel === 'notice'
+          ? '🤦‍♂️'
+          : errorLevel === 'close-thread'
+            ? '🫣'
+            : errorLevel === 'close-app'
+              ? '💥'
+              : '❓';
 
-                      return `<li class='worker-cell-inner-error-item worker-cell-inner-error-item--${errorLevel}'><a class='error-link error-link--${errorLevel}' href='#error-ref-${worker.name}-${index}'>${emoji}</a></li>`;
-                    },
-                  )
-                  .join('')}
+        return `<li class='worker-cell-inner-error-item worker-cell-inner-error-item--${errorLevel}'><a class='error-link error-link--${errorLevel}' href='#error-ref-${worker.name}-${index}'>${emoji}</a></li>`;
+      },
+    )
+    .join('')}
             </ol>`;
-              const statusHTML = `<td class='${tdClass}' title='${worker.workerNamedIndex}'>`;
-              const numberHTML = Object.prototype.hasOwnProperty.call(this.data, `amountOfEvents-${worker.name}`)
-                ? `<span class='worker-cell-inner worker-cell-inner--done'>${this.data[`amountOfEvents-${worker.name}`]}</span>`
-                : `<span class='worker-cell-inner worker-cell-inner--todo'>${worker.todo}</span>`;
+      const statusHTML = `<td class='${tdClass}' title='${worker.workerNamedIndex}'>`;
+      const numberHTML = Object.prototype.hasOwnProperty.call(this.data, `amountOfEvents-${worker.name}`)
+        ? `<span class='worker-cell-inner worker-cell-inner--done'>${this.data[`amountOfEvents-${worker.name}`]}</span>`
+        : `<span class='worker-cell-inner worker-cell-inner--todo'>${worker.todo}</span>`;
 
-              return `${statusHTML + numberHTML + errorsHTML}</td>`;
-              // TODO vscode link naar JSON bestand in event-lists
-            })
-            .join('')}
+      return `${statusHTML + numberHTML + errorsHTML}</td>`;
+      // TODO vscode link naar JSON bestand in event-lists
+    })
+    .join('')}
       </tr>
       `;
       })

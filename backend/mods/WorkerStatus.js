@@ -1,11 +1,11 @@
+/* eslint-disable no-console */
 import { exec } from 'child_process';
 import fs from 'fs';
 import os from 'os-utils';
-import EventsList from './events-list.js';
 import wsMessage from '../monitor/wsMessage.js';
+import fsDirections from './fs-directions.js';
 import { AbstractWorkerConfig, workerConfig } from './worker-config.js';
 import shell from './shell.js';
-import * as _t from './tools.js';
 
 export function AbstractWorkerData() {
   return {
@@ -30,7 +30,7 @@ export default class WorkerStatus {
 
   static CPUFree = 100;
 
-  static _maxSimultaneousWorkers = 3;
+  static _maxSimultaneousWorkers = 5;
 
   static get maxSimultaneousWorkers() {
     if (shell.workers) {
@@ -140,14 +140,13 @@ export default class WorkerStatus {
   }
 
   static change(name, status, message) {
-    // console.log("change WorkerStatus");
-    // console.log(name, status, message);
     const statusses = status?.split(' ') ?? '';
 
     const thisWorker = WorkerStatus._workers[name];
     if (statusses.includes('done')) {
       thisWorker.status = 'done';
       thisWorker.todo = 0;
+      thisWorker.workerRef.unref();
       WorkerStatus.completedWorkers += 1;
     }
 
@@ -177,6 +176,11 @@ export default class WorkerStatus {
   }
 
   static async processError(name, message) {
+    if (!WorkerStatus.isRegisteredWorker(name)) {
+      console.log(message);
+      throw new Error(`Error binnengekomen van onbekende worker ${name}`);
+    }
+
     WorkerStatus._workers[name].errors.push(message);
     WorkerStatus.printWorkersToConsole();
     const content = message?.content ?? null;
@@ -200,8 +204,9 @@ export default class WorkerStatus {
         WorkerStatus.mwss.broadcast(serverStoptBoodschap.json);
         WorkerStatus.mwss.broadcast(serverStoptProcess.json);
       }
-      await _t.waitTime(25);
-      process.exit();
+      setTimeout(() => {
+        process.exit();
+      }, 25);
     } else if (errorLevel === 'close-thread') {
       console.log(
         `%cSTOPPING THREAD\n of ${name}`,
@@ -235,6 +240,7 @@ export default class WorkerStatus {
   static checkIfAllDone() {
     const notDone = WorkerStatus.currentNotDone;
     if (notDone.length === 0) {
+      WorkerStatus.ArtistInst.persistNewRefusedAndRockArtists();
       WorkerStatus.programEnd();
       return true;
     }
@@ -262,7 +268,7 @@ export default class WorkerStatus {
       const wsMsg2 = new wsMessage('process', 'closed');
       WorkerStatus.mwss.broadcast(wsMsg2.json);
     }
-    EventsList.printAllToJSON();
+    WorkerStatus.printAllToJSON();
 
     if (shell.debugLongHTML && shell.force) {
       console.log('debug long HTML');
@@ -281,6 +287,86 @@ export default class WorkerStatus {
         process.exit();
       }, 1000);
     }
+  }
+
+  static async printAllToJSON() {
+    //    await waitABit();
+
+    const pathToEventList = fsDirections.eventLists;
+    const consolidatedLocations = {};
+    const nowDateString = new Date();
+    const nowDate = Number(nowDateString.toISOString().substring(0, 10).replace(/-/g, ''));
+    const allEventListFiles = [];
+    Object.entries(workerConfig)
+      .forEach(([familyName, { workerCount }]) => {
+        for (let i = 0; i < workerCount; i += 1) {
+          const pad = `${pathToEventList}/${familyName}/${i}.json`;
+          if (fs.existsSync(pad)) {
+            allEventListFiles.push(pad);
+          }
+        }
+      });
+
+    let consolidatedEvents = allEventListFiles
+      .map((eventListFile) => {
+        try {
+          const parsedEventFile = JSON.parse(fs.readFileSync(eventListFile));
+          return parsedEventFile;
+        } catch (error) {
+          console.log(`json parse error ${eventListFile}`);          
+          console.log(error);
+          return [];
+        }
+      })
+      .flat()
+      .filter((event) => {
+        const musicEventTime = Number(event.start.substring(0, 10).replace(/-/g, ''));
+        return musicEventTime >= nowDate;
+      })
+      .sort((eventA, eventB) => {
+        let dataA;
+        try {
+          dataA = Number(eventA.start.substring(0, 10).replace(/-/g, ''));
+        } catch (error) {
+          dataA = 20501231;
+        }
+        let dataB;
+        try {
+          dataB = Number(eventB.start.substring(0, 10).replace(/-/g, ''));
+        } catch (error) {
+          dataB = 20501231;
+        }
+  
+        if (dataA > dataB) {
+          return -1;
+        }
+        if (dataA < dataB) {
+          return 1;
+        }
+        return 0;
+      });
+
+    consolidatedEvents = consolidatedEvents.reverse();
+
+    consolidatedEvents.forEach((eventUitLijst) => {
+      const loc = eventUitLijst.location;
+      if (!consolidatedLocations[loc]) {
+        consolidatedLocations[loc] = {};
+        consolidatedLocations[loc].name = loc;
+        consolidatedLocations[loc].count = 0;
+      }
+      consolidatedLocations[loc].count += 1;
+    });
+
+    fs.writeFileSync(
+      fsDirections.eventsListJson,
+      JSON.stringify(consolidatedEvents, null, '  '),
+      'utf-8',
+    );
+    // passMessageToMonitor(qwm.toConsole(consolidatedEvents), workerSignature);
+    console.log(`saved ${consolidatedEvents.length} events`);
+
+    fs.copyFileSync(fsDirections.eventsListJson, fsDirections.eventsListPublicJson);
   }
 
   static printWorkersToConsole() {

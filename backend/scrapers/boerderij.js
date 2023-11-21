@@ -7,14 +7,12 @@ import getImage from './gedeeld/image.js';
 import debugSettings from './gedeeld/debug-settings.js';
 
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
-const boerderijScraper = new AbstractScraper({
+const scraper = new AbstractScraper({
   workerData: { ...workerData },
 
   mainPage: {
     timeout: 30005,
-    url: `https://poppodiumboerderij.nl/includes/ajax/events.php?filters=6,7,8&search=&limit=15&offset=${
-      workerData.index * 15
-    }&lang_id=1&rooms=&month=&year=`,
+    url: `https://poppodiumboerderij.nl/includes/ajax/events.php?filters=6,7,8&search=&limit=69420&offset=0&lang_id=1&rooms=2,1&month=&year=`,
   },
   singlePage: {
     timeout: 20006,
@@ -32,34 +30,104 @@ const boerderijScraper = new AbstractScraper({
 });
 // #endregion                          SCRAPER CONFIG
 
-boerderijScraper.listenToMasterThread();
+scraper.listenToMasterThread();
 
-// #region [rgba(0, 120, 0, 0.1)]      MAIN PAGE EVENT CHECK
-boerderijScraper.mainPageAsyncCheck = async function (event) {
-  const workingTitle = this.cleanupEventTitle(event.title);
+// #region [rgba(50, 0, 0, 0.5)]      MAIN PAGE EVENT CHECK
+scraper.mainPageAsyncCheck = async function (event) {
+  const reasons = [];
 
-  const isRefused = await this.rockRefuseListCheck(event, workingTitle);
-  if (isRefused.success) {
-    isRefused.success = false;
-    return isRefused;
+  this.talkToDB({
+    type: 'db-request',
+    subtype: 'isAllowed',
+    messageData: {
+      string: event.title,
+    },
+  });
+  await this.checkDBhasAnswered();
+  reasons.push(this.lastDBAnswer.reason);
+  if (this.lastDBAnswer.success) {
+    this.skipFurtherChecks.push(event.title);
+    return {
+      event,
+      reason: reasons.reverse().join(','),
+      success: true,
+    };
   }
 
-  const isAllowed = await this.rockAllowListCheck(event, workingTitle);
-  if (isAllowed.success) return isAllowed;
+  this.talkToDB({
+    type: 'db-request',
+    subtype: 'isRockEvent',
+    messageData: {
+      string: event.title,
+    },
+  });
+  await this.checkDBhasAnswered();
+  reasons.push(this.lastDBAnswer.reason);
+  if (this.lastDBAnswer.success) {
+    this.talkToDB({
+      type: 'db-request',
+      subtype: 'saveAllowedTitle',
+      messageData: {
+        string: event.title,
+        reason: reasons.reverse().join(', '),
+      },
+    });  
+    this.skipFurtherChecks.push(event.title);
+    return {
+      event,
+      reason: reasons.reverse().join(','),
+      success: true,
+    };
+  }  
+  
+  this.talkToDB({
+    type: 'db-request',
+    subtype: 'isRefused',
+    messageData: {
+      string: event.title,
+    },
+  });
+  await this.checkDBhasAnswered();
+  reasons.push(this.lastDBAnswer.reason);
+  if (this.lastDBAnswer.success) {
+    return {
+      event,
+      reason: reasons.reverse().join(','),
+      success: false,
+    };
+  }
 
-  const hasForbiddenTerms = await this.hasForbiddenTerms(event, ['title']);
+  const hasForbiddenTerms = await this.hasForbiddenTerms(event);
+  reasons.push(hasForbiddenTerms.reason);
   if (hasForbiddenTerms.success) {
-    this.saveRefusedTitle(workingTitle);
-    hasForbiddenTerms.success = false;
-    return hasForbiddenTerms;
+    this.talkToDB({
+      type: 'db-request',
+      subtype: 'saveRefusedTitle',
+      messageData: {
+        string: event.title,
+        reason: hasForbiddenTerms.reason,
+      },
+    });    
+    
+    return {
+      event,
+      reason: reasons.reverse().join(','),
+      success: false,
+    };
   }
 
-  this.saveAllowedTitle(workingTitle);
-
+  this.talkToDB({
+    type: 'db-request',
+    subtype: 'saveAllowedTitle',
+    messageData: {
+      string: event.title,
+      reason: reasons.reverse().join(', '),
+    },
+  });  
+  
   return {
-    workingTitle,
-    reason: [isRefused.reason, isAllowed.reason, hasForbiddenTerms.reason].join(';'),
     event,
+    reason: reasons.reverse().join(', '),
     success: true,
   };
 };
@@ -69,7 +137,7 @@ boerderijScraper.mainPageAsyncCheck = async function (event) {
 // #endregion                          SINGLE PAGE EVENT CHECK
 
 // #region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
-boerderijScraper.mainPage = async function () {
+scraper.mainPage = async function () {
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
   if (availableBaseEvents) {
     const thisWorkersEvents = availableBaseEvents.filter(
@@ -96,16 +164,25 @@ boerderijScraper.mainPage = async function () {
       .map(this.isMusicEventCorruptedMapper);
   }
 
-  this.saveBaseEventlist(workerData.family, rawEvents);
-  const thisWorkersEvents = rawEvents.filter(
+  const eventGen = this.eventGenerator(rawEvents);
+  // eslint-disable-next-line no-unused-vars
+  const checkedEvents = await this.rawEventsAsyncCheck({
+    eventGen,
+    checkedEvents: [],
+  });  
+
+  this.saveBaseEventlist(workerData.family, checkedEvents);
+  
+  const thisWorkersEvents = checkedEvents.filter(
     (eventEl, index) => index % workerData.workerCount === workerData.index,
   );
+  
   return this.mainPageEnd({ stopFunctie, rawEvents: thisWorkersEvents });
 };
 // #endregion                          MAIN PAGE
 
 // #region [rgba(120, 0, 0, 0.1)]     SINGLE PAGE
-boerderijScraper.singlePage = async function ({ event, page }) {
+scraper.singlePage = async function ({ event, page }) {
   const { stopFunctie } = await this.singlePageStart();
 
   const [realEventTitle, realEventId] = event.title.split('&id=');
@@ -190,14 +267,14 @@ boerderijScraper.singlePage = async function ({ event, page }) {
 };
 // #endregion                         SINGLE PAGE
 
-boerderijScraper.boerderijCustomPrice = async function (testText, pi, title) {
+scraper.boerderijCustomPrice = async function (testText, pi, title) {
   const priceRes = {
     price: null,
     errors: [],
   };
   if (!testText) {
     priceRes.errors.push({
-      remarks: 'geen testText',
+      error: new Error('geen test text boerderij custom price'),
     });
     return priceRes;
   }
@@ -246,7 +323,7 @@ boerderijScraper.boerderijCustomPrice = async function (testText, pi, title) {
 
   if (!Array.isArray(priceMatch) && !Array.isArray(priceMatchEuros)) {
     priceRes.errors.push({
-      remarks: `geen match met ${pi}`,
+      error: new Error(`geen match met ${pi}`),
     });
     return priceRes;
   }

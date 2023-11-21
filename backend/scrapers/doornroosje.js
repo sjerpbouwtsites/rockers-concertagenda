@@ -1,13 +1,11 @@
 /* global document */
 import { workerData } from 'worker_threads';
-import * as _t from '../mods/tools.js';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/doornroosje.js';
 import getImage from './gedeeld/image.js';
-import ErrorWrapper from '../mods/error-wrapper.js';
 
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
-const doornroosjeScraper = new AbstractScraper({
+const scraper = new AbstractScraper({
   workerData: { ...workerData },
 
   mainPage: {
@@ -29,59 +27,155 @@ const doornroosjeScraper = new AbstractScraper({
 });
 // #endregion                          SCRAPER CONFIG
 
-doornroosjeScraper.listenToMasterThread();
+scraper.listenToMasterThread();
 
-// #region [rgba(0, 120, 0, 0.1)]      MAIN PAGE EVENT CHECK
-doornroosjeScraper.mainPageAsyncCheck = async function (event) {
-  const workingTitle = this.cleanupEventTitle(event.title);
-  const isRefused = await this.rockRefuseListCheck(event, workingTitle);
-  if (isRefused.success) {
-    isRefused.success = false;
-    return isRefused;
+// #region [rgba(60, 0, 0, 0.5)]      MAIN PAGE EVENT CHECK
+scraper.mainPageAsyncCheck = async function (event) {
+  const reasons = [];
+
+  this.talkToDB({
+    type: 'db-request',
+    subtype: 'isAllowed',
+    messageData: {
+      string: event.title,
+    },
+  });
+  await this.checkDBhasAnswered();
+  reasons.push(this.lastDBAnswer.reason);
+  if (this.lastDBAnswer.success) {
+    this.skipFurtherChecks.push(event.title);
+    return {
+      event,
+      reason: reasons.reverse().join(','),
+      success: true,
+    };
   }
 
-  const isAllowed = await this.rockAllowListCheck(event, workingTitle);
-  if (isAllowed.success) {
-    return isAllowed;
+  this.talkToDB({
+    type: 'db-request',
+    subtype: 'isRockEvent',
+    messageData: {
+      string: event.title,
+    },
+  });
+  await this.checkDBhasAnswered();
+  reasons.push(this.lastDBAnswer.reason);
+  if (this.lastDBAnswer.success) {
+    this.talkToDB({
+      type: 'db-request',
+      subtype: 'saveAllowedTitle',
+      messageData: {
+        string: event.title,
+        reason: reasons.reverse().join(', '),
+      },
+    }); 
+    this.skipFurtherChecks.push(event.title);
+    return {
+      event,
+      reason: reasons.reverse().join(','),
+      success: true,
+    };
+  }  
+  
+  this.talkToDB({
+    type: 'db-request',
+    subtype: 'isRefused',
+    messageData: {
+      string: event.title,
+    },
+  });
+  await this.checkDBhasAnswered();
+  reasons.push(this.lastDBAnswer.reason);
+  if (this.lastDBAnswer.success) {
+    return {
+      event,
+      reason: reasons.reverse().join(','),
+      success: false,
+    };
   }
 
   return {
-    workingTitle,
-    reason: [isRefused.reason, isAllowed.reason].join(';'),
     event,
+    reason: reasons.reverse().join(', '),
     success: true,
   };
 };
 // #endregion                          MAIN PAGE EVENT CHECK
 
 // #region [rgba(0, 180, 0, 0.1)]      SINGLE PAGE EVENT CHECK
-doornroosjeScraper.singlePageAsyncCheck = async function (event) {
-  const workingTitle = this.cleanupEventTitle(event.title);
+scraper.singlePageAsyncCheck = async function (event) {
+  const reasons = [];
+  
+  if (this.skipFurtherChecks.includes(event.title)) {
+    reasons.push("allready check main");
+    return {
+      event,
+      reason: reasons.reverse().join(','),
+      success: true,
+    };    
+  }
+
+  const goodTermsRes = await this.hasGoodTerms(event);
+  reasons.push(goodTermsRes.reason);
+  if (goodTermsRes.success) {
+    this.skipFurtherChecks.push(event.title);
+    this.talkToDB({
+      type: 'db-request',
+      subtype: 'saveAllowedTitle',
+      messageData: {
+        string: event.title,
+        reason: reasons.reverse().join(', '),
+      },
+    });  
+    return {
+      event,
+      reason: reasons.reverse().join(','),
+      success: true,
+    };
+  }  
 
   const hasForbiddenTerms = await this.hasForbiddenTerms(event, [
     'longTextHTML',
     'shortText',
     'title',
   ]);
+  reasons.push(hasForbiddenTerms.reason);
   if (hasForbiddenTerms.success) {
-    this.saveRefusedTitle(workingTitle);
-    hasForbiddenTerms.success = false;
-    return hasForbiddenTerms;
+    this.talkToDB({
+      type: 'db-request',
+      subtype: 'saveRefusedTitle',
+      messageData: {
+        string: event.title,
+        reason: reasons.reverse().join(', '),
+      },
+    });    
+    
+    return {
+      event,
+      reason: reasons.reverse().join(','),
+      success: false,
+    };
   }
 
-  this.saveAllowedTitle(workingTitle);
-
+  this.talkToDB({
+    type: 'db-request',
+    subtype: 'saveAllowedTitle',
+    messageData: {
+      string: event.title,
+      reason: reasons.reverse().join(', '),
+    },
+  }); 
+  
   return {
-    workingTitle,
-    reason: [hasForbiddenTerms.reason].join(';'),
     event,
     success: true,
+    reason: reasons.reverse().join(', '),
   };
 };
 // #endregion                          SINGLE PAGE EVENT CHECK
 
 // #region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
-doornroosjeScraper.mainPage = async function () {
+scraper.mainPage = async function () {
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
   if (availableBaseEvents) {
     const thisWorkersEvents = availableBaseEvents.filter(
@@ -93,9 +187,9 @@ doornroosjeScraper.mainPage = async function () {
   const { stopFunctie, page } = await this.mainPageStart();
 
   await page.waitForSelector('.c-program__title');
-  await _t.waitTime(50);
+  await this.waitTime(50);
 
-  let rawEvents = await page.evaluate(
+  const rawEvents = await page.evaluate(
     // eslint-disable-next-line no-shadow
     ({ workerData, months }) =>
       Array.from(document.querySelectorAll('.c-program__item')).map((eventEl) => {
@@ -156,27 +250,28 @@ doornroosjeScraper.mainPage = async function () {
       return rawEvent;
     });
   } catch (dateMapError) {
-    _t.wrappedHandleError(
-      new ErrorWrapper({
-        workerData,
-        error: dateMapError,
-        remarks: 'startDate rawEvents mapper',
-      }),
-    );
+    this.handleError(dateMapError, 'startDate rawEvents mapper');
   }
 
-  rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
-
-  this.saveBaseEventlist(workerData.family, rawEvents);
-  const thisWorkersEvents = rawEvents.filter(
+  const eventGen = this.eventGenerator(rawEvents);
+  // eslint-disable-next-line no-unused-vars
+  const checkedEvents = await this.rawEventsAsyncCheck({
+    eventGen,
+    checkedEvents: [],
+  });  
+  
+  this.saveBaseEventlist(workerData.family, checkedEvents);
+    
+  const thisWorkersEvents = checkedEvents.filter(
     (eventEl, index) => index % workerData.workerCount === workerData.index,
   );
+    
   return this.mainPageEnd({ stopFunctie, rawEvents: thisWorkersEvents });
 };
 // #endregion                          MAIN PAGE
 
 // #region [rgba(120, 0, 0, 0.1)]     SINGLE PAGE
-doornroosjeScraper.singlePage = async function ({ page, event }) {
+scraper.singlePage = async function ({ page, event }) {
   const { stopFunctie } = await this.singlePageStart();
 
   let pageInfo;
@@ -216,7 +311,7 @@ doornroosjeScraper.singlePage = async function ({ page, event }) {
           startDate = `${year}-${month}-${day}`;
         } else if (!startDate) {
           res.errors.push({
-            remarks: `Geen startdate ${res.anker}`,
+            error: new Error(`Geen startdate ${res.anker}`),
             toDebug: {
               text: document.querySelector('.c-event-data')?.innerHTML,
             },
@@ -272,9 +367,8 @@ doornroosjeScraper.singlePage = async function ({ page, event }) {
           try {
             res.start = `${event?.startDate}T12:00:00`;
           } catch (thisError) {
-            const errorString = 'fout bij tijd/datum festival of datums';
             res.errors.push({
-              remarks: errorString,
+              error: new Error('fout bij tijd/datum festival of datums'),
             });
             return res;
           }

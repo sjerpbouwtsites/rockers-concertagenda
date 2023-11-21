@@ -1,9 +1,11 @@
+/* eslint-disable no-console */
 import { Worker } from 'worker_threads';
 import shell from './shell.js';
-
-// @TODO
+import WorkerStatus from "./WorkerStatus.js";
 
 export default class RockWorker extends Worker {
+  static monitorWebsocketServer;
+
   constructor(confObject) {
     super(confObject.path, {
       workerData: { ...confObject, shell },
@@ -14,211 +16,76 @@ export default class RockWorker extends Worker {
   }
 
   get workerName() {
-    console.warn('OUDE METHODE');
-    return this.name;
+    return `${this.family}-${this.index}`;
   }
-}
 
-/**
- * class om snel berichten te versturen vanuit de worker.
- * voegt standaard workerData mee in workerDone, debugger etc.
- * schrijf voor ieder slag bericht een andere methode
+  start() {
+    this.postMessage(JSON.stringify({
+      type: 'process',
+      subtype: 'command-start',
+    }));
+  }
+
+  /**
+ * @param {Worker} thisWorker instantiated worker with path etc
  */
-export class QuickWorkerMessage {
-  constructor(workerData) {
-    this.workerData = workerData;
-  }
+  static addWorkerMessageHandler(thisWorker, ArtistInst) {
+    thisWorker.on('message', (message) => {
+      if (!RockWorker.monitorWebsocketServer) {
+        throw Error('monitor niet klaar!');
+      }
 
-  /**
-   * @param {Error} error
-   * @returns update, error, {content: workerData, status, text}
-   */
-  error(error) {
-    return WorkerMessage.quick('update', 'error', {
-      content: {
-        workerData: this.workerData,
-        status: 'error',
-        text: error.message,
-      },
+      // DE EIGENLIJKE BOODSCHAP NAAR MONITOR
+      let parsedMessage;
+      try {
+        parsedMessage = JSON.parse(message);
+      } catch (error) {
+        console.log('fout parsen message rockWorker on message');
+        console.log(message);
+        throw error;
+      }
+
+      // BOODSCHAPPEN VOOR DB
+      if (parsedMessage.type === 'db-request') {
+        const artistRes = ArtistInst.do({
+          request: parsedMessage?.subtype,
+          data: parsedMessage.messageData,
+        });
+        let par;
+        try {
+          par = JSON.parse(artistRes);
+        } catch (error) {
+          console.log('db message fucked');
+          console.log(parsedMessage);
+          console.log(artistRes);
+          throw error;
+        }
+        
+        thisWorker.postMessage(JSON.stringify({
+          type: 'db-answer',
+          subtype: parsedMessage?.subtype,
+          messageData: par,
+        }));        
+        return;
+      }
+
+      RockWorker.monitorWebsocketServer.broadcast(JSON.stringify(
+        parsedMessage,
+        null,
+        2,
+      ));
+      
+      // DIT MOET HELEMAAL NAAR WORKER STATUS.
+      if (parsedMessage.type === 'process' && parsedMessage?.subtype === 'workers-status') {
+        const statusString = parsedMessage?.messageData?.content?.status ?? null;
+        WorkerStatus.change(thisWorker.workerName, statusString, parsedMessage.messageData);
+      }
+      if (parsedMessage.type === 'update' && parsedMessage?.subtype === 'scraper-results') {
+        WorkerStatus.change(thisWorker.workerName, 'todo', parsedMessage?.messageData?.todo);
+      }
+      if (parsedMessage.type.includes('update') && parsedMessage.subtype.includes('error')) {
+        WorkerStatus.processError(thisWorker.workerName, parsedMessage.messageData);
+      }
     });
-  }
-
-  abstractQuickWorker(statusString = 'registered', moreData) {
-    return WorkerMessage.quick('process', 'workers-status', {
-      content: {
-        workerData: this.workerData,
-        status: statusString,
-      },
-      ...moreData,
-    });
-  }
-
-  workerInitialized() {
-    return this.abstractQuickWorker('init');
-  }
-
-  workerStarted() {
-    return this.abstractQuickWorker('working');
-  }
-
-  workerDone(amountOfEvents) {
-    const as = this.abstractQuickWorker('done', { amountOfEvents });
-    return as;
-  }
-
-  /**
-   * ATTENTION
-   * @param {Number} numberToDo
-   * @returns {JSONArray} RETURNS TWO JSON OBJECTS FOR TWO CALLS.
-   */ // @ Dit was een array van meuk. Nu is het een kutte API door de app heen. HJerstellen.
-  todo(numberToDo) {
-    console.log('LEGACY');
-    return [
-      WorkerMessage.quick('process', 'workers-status', {
-        todo: numberToDo,
-        content: {
-          status: 'todo',
-          workerData: this.workerData,
-        },
-      }),
-    ];
-  }
-
-  todoNew(numberToDo) {
-    return WorkerMessage.quick('process', 'workers-status', {
-      todo: numberToDo,
-      content: {
-        status: 'todo',
-        workerData: this.workerData,
-      },
-    });
-  }
-
-  /**
-   * @param {*} toConsole
-   * @returns {JSON} update debugger {content: workerData, debug}
-   */
-  toConsole(toConsole, type = 'dir') {
-    return WorkerMessage.quick('clients-log', type, {
-      content: {
-        workerData: this.workerData,
-        debug: toConsole ?? 'debugger heeft null meegekregen.',
-      },
-    });
-  }
-
-  /**
-   * @param {*} toDebug
-   * @param {string} title //TODO implementeren voorkant
-   * @returns {JSON} update debugger {content: workerData, debug}
-   */
-  debugger(toDebug, title) {
-    return WorkerMessage.quick('update', 'debugger', {
-      title,
-      content: {
-        workerData: this.workerData,
-        debug: toDebug,
-      },
-    });
-  }
-
-  /**
-   * @param {any} text
-   * @returns {JSON} update message-roll {content: workerData, text}
-   */
-  messageRoll(text) {
-    return WorkerMessage.quick('update', 'message-roll', {
-      content: {
-        workerData: this.workerData,
-        text: String(text),
-      },
-    });
-  }
-}
-
-export class WorkerMessage {
-  type = null;
-
-  subtype = null; // command
-
-  messageData = null;
-
-  constructor(type, subtype, messageData) {
-    this.type = type;
-    this.subtype = subtype;
-    this.messageData = messageData;
-    this.check();
-  }
-
-  /**
-   * Converteer een config in één keer in een wsMessage json object.
-   * @param {*} config as in constructor
-   * @returns {JSON} output of json getter wsMessage.
-   */
-  static quick(...config) {
-    const thisMessage = new WorkerMessage(...config);
-    return thisMessage.json;
-  }
-
-  throwSubtypeError() {
-    throw new Error(
-      `subtype ${typeof this.subtype} ${
-        this.subtype.length ? ` lengte ${this.subtype.length}` : ''
-      } ${this.subtype} niet toegestaan bij type ${this.type}`,
-    );
-  }
-
-  check() {
-    if (typeof this.type !== 'string') {
-      console.log(this);
-      throw new Error('type moet string zijn');
-    }
-
-    if (this.subtype && typeof this.subtype !== 'string') {
-      console.log(this);
-      throw new Error('subtype moet string zijn');
-    }
-
-    switch (this.type) {
-      case 'clients-log':
-        return true;
-      case 'process':
-        this.subtype
-          .split(' ')
-          .map(
-            (thisSubtype) =>
-              !['close-client', 'closed', 'workers-status', 'command-start'].includes(thisSubtype),
-          )
-          .find((subtypeFout) => subtypeFout) && this.throwSubtypeError();
-        break;
-      case 'update':
-        this.subtype
-          ?.split(' ')
-          .map(
-            (thisSubtype) =>
-              !['error', 'message-roll', 'scraper-results', 'debugger'].includes(thisSubtype),
-          )
-          .find((subtypeFout) => subtypeFout) && this.throwSubtypeError();
-        break;
-      default:
-        console.log(this);
-        throw new Error('ONBEKEND TYPE WorkerMessage!');
-    }
-  }
-
-  /**
-   * data is checked by constructor.
-   * @returns JSON object of {type, subtype, messageData}
-   */
-  get json() {
-    return JSON.stringify(
-      {
-        type: this.type,
-        subtype: this.subtype,
-        messageData: this.messageData,
-      },
-      null,
-      2,
-    );
   }
 }

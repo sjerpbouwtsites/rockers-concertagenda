@@ -6,7 +6,7 @@ import getImage from './gedeeld/image.js';
 import terms from './gedeeld/terms.js';
 
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
-const willemeeenScraper = new AbstractScraper({
+const scraper = new AbstractScraper({
   workerData: { ...workerData },
 
   mainPage: {
@@ -25,41 +25,120 @@ const willemeeenScraper = new AbstractScraper({
 });
 // #endregion                          SCRAPER CONFIG
 
-willemeeenScraper.listenToMasterThread();
+scraper.listenToMasterThread();
 
-// #region [rgba(0, 120, 0, 0.1)]      MAIN PAGE EVENT CHECK
-willemeeenScraper.mainPageAsyncCheck = async function (event) {
-  const workingTitle = this.cleanupEventTitle(event.title);
+// #region [rgba(60, 0, 0, 0.5)]      MAIN PAGE EVENT CHECK
+scraper.mainPageAsyncCheck = async function (event) {
+  const reasons = [];
 
-  const isRefused = await this.rockRefuseListCheck(event, workingTitle);
-  if (isRefused.success) {
-    isRefused.success = false;
-    return isRefused;
+  this.talkToDB({
+    type: 'db-request',
+    subtype: 'isAllowed',
+    messageData: {
+      string: event.title,
+    },
+  });
+  await this.checkDBhasAnswered();
+  reasons.push(this.lastDBAnswer.reason);
+  if (this.lastDBAnswer.success) {
+    this.skipFurtherChecks.push(event.title);
+    return {
+      event,
+      reason: reasons.reverse().join(','),
+      success: true,
+    };
   }
 
-  const isAllowed = await this.rockAllowListCheck(event, workingTitle);
-  if (isAllowed.success) {
-    return isAllowed;
+  this.talkToDB({
+    type: 'db-request',
+    subtype: 'isRockEvent',
+    messageData: {
+      string: event.title,
+    },
+  });
+  await this.checkDBhasAnswered();
+  reasons.push(this.lastDBAnswer.reason);
+  if (this.lastDBAnswer.success) {
+    this.talkToDB({
+      type: 'db-request',
+      subtype: 'saveAllowedTitle',
+      messageData: {
+        string: event.title,
+        reason: reasons.reverse().join(', '),
+      },
+    });    
+    this.skipFurtherChecks.push(event.title);
+    return {
+      event,
+      reason: reasons.reverse().join(','),
+      success: true,
+    };
+  }  
+  
+  this.talkToDB({
+    type: 'db-request',
+    subtype: 'isRefused',
+    messageData: {
+      string: event.title,
+    },
+  });
+  await this.checkDBhasAnswered();
+  reasons.push(this.lastDBAnswer.reason);
+  if (this.lastDBAnswer.success) {
+    return {
+      event,
+      reason: reasons.reverse().join(','),
+      success: false,
+    };
   }
 
-  const hasGoodTerms = await this.hasGoodTerms(event);
-  if (hasGoodTerms.success) {
-    this.saveAllowedTitle(workingTitle);
-    return hasGoodTerms;
-  }
+  const goodTermsRes = await this.hasGoodTerms(event);
+  reasons.push(goodTermsRes.reason);
+  if (goodTermsRes.success) {
+    this.skipFurtherChecks.push(event.title);
+    this.talkToDB({
+      type: 'db-request',
+      subtype: 'saveAllowedTitle',
+      messageData: {
+        string: event.title,
+        reason: reasons.reverse().join(', '),
+      },
+    });  
+    return goodTermsRes;
+  }  
 
   const hasForbiddenTerms = await this.hasForbiddenTerms(event);
+  reasons.push(hasForbiddenTerms.reason);
   if (hasForbiddenTerms.success) {
-    this.saveRefusedTitle(workingTitle);
-    hasForbiddenTerms.success = false;
-    return hasForbiddenTerms;
+    this.talkToDB({
+      type: 'db-request',
+      subtype: 'saveRefusedTitle',
+      messageData: {
+        string: event.title,
+        reason: reasons.reverse().join(', '),
+      },
+    });    
+    
+    return {
+      event,
+      reason: reasons.reverse().join(','),
+      success: false,
+    };
   }
 
+  this.talkToDB({
+    type: 'db-request',
+    subtype: 'saveAllowedTitle',
+    messageData: {
+      string: event.title,
+      reason: reasons.reverse().join(', '),
+    },
+  });  
+
   return {
-    workingTitle,
-    reason: 'niets gevonden. Willemeen heeft altijd expliciete genres dus NEE',
     event,
-    success: false,
+    reason: reasons.reverse().join(', '),
+    success: true,
   };
 };
 // #endregion                          MAIN PAGE EVENT CHECK
@@ -68,7 +147,7 @@ willemeeenScraper.mainPageAsyncCheck = async function (event) {
 // #endregion                          SINGLE PAGE EVENT CHECK
 
 // #region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
-willemeeenScraper.mainPage = async function () {
+scraper.mainPage = async function () {
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
   if (availableBaseEvents) {
     const thisWorkersEvents = availableBaseEvents.filter(
@@ -125,17 +204,26 @@ willemeeenScraper.mainPage = async function () {
   );
 
   rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
-
-  this.saveBaseEventlist(workerData.family, rawEvents);
-  const thisWorkersEvents = rawEvents.filter(
+  
+  const eventGen = this.eventGenerator(rawEvents);
+  // eslint-disable-next-line no-unused-vars
+  const checkedEvents = await this.rawEventsAsyncCheck({
+    eventGen,
+    checkedEvents: [],
+  });  
+  
+  this.saveBaseEventlist(workerData.family, checkedEvents);
+    
+  const thisWorkersEvents = checkedEvents.filter(
     (eventEl, index) => index % workerData.workerCount === workerData.index,
   );
+    
   return this.mainPageEnd({ stopFunctie, rawEvents: thisWorkersEvents });
 };
 // #endregion                          MAIN PAGE
 
 // #region [rgba(120, 0, 0, 0.1)]      SINGLE PAGE
-willemeeenScraper.singlePage = async function ({ page, event }) {
+scraper.singlePage = async function ({ page, event }) {
   const { stopFunctie } = await this.singlePageStart();
 
   const pageInfo = {

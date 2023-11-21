@@ -1,6 +1,5 @@
 import { workerData } from 'worker_threads';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
-import * as _t from '../mods/tools.js';
 import { workerNames } from '../mods/worker-config.js';
 
 function editAttractionsInRaw(attractions) {
@@ -33,7 +32,6 @@ const ticketmasterScraper = new AbstractScraper({
       useCustomScraper: true,
 
       requiredProperties: [],
-      enforceMusicEventType: false,
     },
     singlePage: {
       useCustomScraper: true,
@@ -92,7 +90,7 @@ ticketmasterScraper.mainPage = async function () {
       return res;
     })
     .catch((response) => {
-      _t.handleError(response, workerData, 'ticketmaster mainpage fetch', 'close-thread', response);
+      this.handleError(response, 'ticketmaster mainpage fetch', 'close-thread', response);
     });
 
   if (!Array.isArray(rawEvents) || !rawEvents.length) {
@@ -173,7 +171,7 @@ ticketmasterScraper.singlePage = async function ({ event }) {
     pageInfo.price = Object.prototype.hasOwnProperty.call(priceR, 'max') && priceR.max;
   } catch (caughtError) {
     pageInfo.errors.push({
-      remarks: `Geen prijs gevonden ${pageInfo.pageInfo}`,
+      error: new Error(`Geen prijs gevonden ${pageInfo.pageInfo}`),
       debug: {
         prijzen: event?.priceRanges,
       },
@@ -214,7 +212,7 @@ ticketmasterScraper.singlePage = async function ({ event }) {
   // );
   // this.dirtyTalk(`${this.eventImagesFolder}/${pageInfo.location}/${imageBase64}`);
   await this.downloadImageCompress(event, event.image, imagePath, pageInfo.location);
-  await _t.waitTime(25);
+  await this.waitTime(25);
   // eslint-disable-next-line no-param-reassign
   event.image = imagePath;
   pageInfo.image = imagePath;

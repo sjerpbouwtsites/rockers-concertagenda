@@ -1,6 +1,5 @@
 import fs from 'fs';
 import sharp from 'sharp';
-import { waitTime } from './mods/tools.js';
 
 function initLocationImagesConversion() {
   const eventImagesDestFolder = '/home/sjerp/dev/apache/concertagenda/public/location-images/';
@@ -51,7 +50,7 @@ async function downloadImageCompress(image, imagePath) {
       });
   }
 
-  await waitTime(400);
+  // await waitTime(400);
 }
 
 initLocationImagesConversion();
