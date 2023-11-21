@@ -14,24 +14,24 @@ export const AbstractWorkerConfig = {
 };
 
 export const workerConfig = {
-  '013': {
-    workerCount: 3,
-    CPUReq: 'low',
-    workerConcurrent: 3,
-    forceSet: 0,
-  },
-  afaslive: {
-    workerCount: 1,
-    CPUReq: 'high',
-    workerConcurrent: 1,
-    forceSet: 0,
-  },
-  baroeg: { workerCount: 3, workerConcurrent: 2, forceSet: 0 },
-  boerderij: {
-    workerCount: 1,
-    workerConcurrent: 1,
-    forceSet: 1,
-  },
+  // '013': {
+  //   workerCount: 3,
+  //   CPUReq: 'low',
+  //   workerConcurrent: 3,
+  //   forceSet: 0,
+  // },
+  // afaslive: {
+  //   workerCount: 1,
+  //   CPUReq: 'high',
+  //   workerConcurrent: 1,
+  //   forceSet: 0,
+  // },
+  // baroeg: { workerCount: 3, workerConcurrent: 2, forceSet: 0 },
+  // boerderij: {
+  //   workerCount: 1,
+  //   workerConcurrent: 1,
+  //   forceSet: 1,
+  // },
   bibelot: { workerCount: 1, workerConcurrent: 1, forceSet: 1 },
   cpunt: { workerCount: 1, workerConcurrent: 1, forceSet: 1 },
   dbs: {
@@ -43,7 +43,6 @@ export const workerConfig = {
   deflux: { workerCount: 1, workerConcurrent: 1, forceSet: 2 },
   dehelling: {
     workerCount: 1,
-    CPUReq: 'low',
     workerConcurrent: 1,
     forceSet: 2,
   },
@@ -54,58 +53,58 @@ export const workerConfig = {
     CPUReq: 'high',
     forceSet: 2,
   },
-  dynamo: { workerCount: 2, workerConcurrent: 1, forceSet: 3 },
-  effenaar: { workerCount: 2, workerConcurrent: 2, forceSet: 3 },
-  gebouwt: {
-    workerCount: 1, workerConcurrent: 1, CPUReq: 'high', forceSet: 3, 
-  },  
-  gebrdenobel: {
-    workerCount: 1, workerConcurrent: 1, CPUReq: 'high', forceSet: 3, 
-  },
-  groeneengel: { workerCount: 1, workerConcurrent: 1, forceSet: 3 },
-  iduna: { workerCount: 1, workerConcurrent: 1, forceSet: 4 },
-  kavka: {
-    workerCount: 2,
-    workerConcurrent: 2,
-    forceSet: 4,
-  },
-  littledevil: {
-    workerCount: 2,
-    workerConcurrent: 2,
-    forceSet: 4,
-  },
-  melkweg: {
-    workerCount: 4,
-    CPUReq: 'low',
-    workerConcurrent: 1,
-    forceSet: 4,
-  },
-  metalfan: { workerCount: 1, CPUReq: 'low', workerConcurrent: 1 },
-  metropool: {
-    workerCount: 3,
-    workerConcurrent: 1,
-    CPUReq: 'high',
-    forceSet: 4,
-  },
-  neushoorn: { workerCount: 1, workerConcurrent: 1, forceSet: 5 },
-  nieuwenor: { workerCount: 2, workerConcurrent: 2, forceSet: 5 },
-  occii: {
-    workerCount: 2,
-    workerConcurrent: 1,
-    forceSet: 5,
-  },
-  oosterpoort: { workerCount: 1, workerConcurrent: 1, forceSet: 5 },
-  p60: { workerCount: 1, workerConcurrent: 1, forceSet: 5 },
-  paradiso: {
-    workerCount: 2,
-    workerConcurrent: 2,
-    forceSet: 5,
-  },
-  patronaat: { workerCount: 2, workerConcurrent: 2, forceSet: 6 },
-  tivolivredenburg: { workerCount: 4, workerConcurrent: 2, forceSet: 6 },
-  victorie: { workerCount: 4, workerConcurrent: 2, forceSet: 6 },
-  volt: { workerCount: 1, workerConcurrent: 1, forceSet: 6 },
-  willemeen: { workerCount: 2, workerConcurrent: 2, forceSet: 6 },
+  // dynamo: { workerCount: 2, workerConcurrent: 1, forceSet: 3 },
+  // effenaar: { workerCount: 2, workerConcurrent: 2, forceSet: 3 },
+  // gebouwt: {
+  //   workerCount: 1, workerConcurrent: 1, CPUReq: 'high', forceSet: 3, 
+  // },  
+  // gebrdenobel: {
+  //   workerCount: 1, workerConcurrent: 1, CPUReq: 'high', forceSet: 3, 
+  // },
+  // groeneengel: { workerCount: 1, workerConcurrent: 1, forceSet: 3 },
+  // iduna: { workerCount: 1, workerConcurrent: 1, forceSet: 4 },
+  // kavka: {
+  //   workerCount: 2,
+  //   workerConcurrent: 2,
+  //   forceSet: 4,
+  // },
+  // littledevil: {
+  //   workerCount: 2,
+  //   workerConcurrent: 2,
+  //   forceSet: 4,
+  // },
+  // melkweg: {
+  //   workerCount: 4,
+  //   CPUReq: 'low',
+  //   workerConcurrent: 1,
+  //   forceSet: 4,
+  // },
+  // metalfan: { workerCount: 1, CPUReq: 'low', workerConcurrent: 1 },
+  // metropool: {
+  //   workerCount: 3,
+  //   workerConcurrent: 1,
+  //   CPUReq: 'high',
+  //   forceSet: 4,
+  // },
+  // neushoorn: { workerCount: 1, workerConcurrent: 1, forceSet: 5 },
+  // nieuwenor: { workerCount: 2, workerConcurrent: 2, forceSet: 5 },
+  // occii: {
+  //   workerCount: 2,
+  //   workerConcurrent: 1,
+  //   forceSet: 5,
+  // },
+  // oosterpoort: { workerCount: 1, workerConcurrent: 1, forceSet: 5 },
+  // p60: { workerCount: 1, workerConcurrent: 1, forceSet: 5 },
+  // paradiso: {
+  //   workerCount: 2,
+  //   workerConcurrent: 2,
+  //   forceSet: 5,
+  // },
+  // patronaat: { workerCount: 2, workerConcurrent: 2, forceSet: 6 },
+  // tivolivredenburg: { workerCount: 4, workerConcurrent: 2, forceSet: 6 },
+  // victorie: { workerCount: 4, workerConcurrent: 2, forceSet: 6 },
+  // volt: { workerCount: 1, workerConcurrent: 1, forceSet: 6 },
+  // willemeen: { workerCount: 2, workerConcurrent: 2, forceSet: 6 },
 };
 // ticketmaster: {
 //   workerCount: 2,

@@ -68,7 +68,6 @@ export default async function houseKeeping() {
   if (!shell.keepImages) removePublicEventImages(removeImagesLocationsList);
 
   // als !keepBaseEvents, dan alles al gewist.
-  console.log(shell.keepBaseEvents);
   if (!shell.keepBaseEvents) {
     fs.readdirSync(fsDirections.baseEventlists).forEach((baseEventList) => {
       const magWipen = shell.forceAll 

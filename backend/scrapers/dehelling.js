@@ -212,8 +212,14 @@ dehellingScraper.mainPage = async function () {
     eventGen,
     checkedEvents: [],
   });  
-
+  
   this.saveBaseEventlist(workerData.family, checkedEvents);
+    
+  const thisWorkersEvents = checkedEvents.filter(
+    (eventEl, index) => index % workerData.workerCount === workerData.index,
+  );
+    
+  return this.mainPageEnd({ stopFunctie, rawEvents: thisWorkersEvents });
 };
 // #endregion                          MAIN PAGE
 
