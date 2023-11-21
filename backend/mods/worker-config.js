@@ -101,7 +101,9 @@ export const workerConfig = {
     forceSet: 5,
   },
   patronaat: { workerCount: 2, workerConcurrent: 2, forceSet: 6 },
-  tivolivredenburg: { workerCount: 4, workerConcurrent: 2, forceSet: 6 },
+  tivolivredenburg: {
+    workerCount: 2, workerConcurrent: 2, forceSet: 6, CPUReq: 'low', 
+  },
   victorie: { workerCount: 4, workerConcurrent: 2, forceSet: 6 },
   volt: { workerCount: 1, workerConcurrent: 1, forceSet: 6 },
   willemeen: { workerCount: 2, workerConcurrent: 2, forceSet: 6 },
