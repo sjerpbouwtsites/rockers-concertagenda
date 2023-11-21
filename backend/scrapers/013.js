@@ -7,7 +7,7 @@ import getImage from './gedeeld/image.js';
 import terms from './gedeeld/terms.js';
 
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
-const nuldertienScraper = new AbstractScraper({
+const scraper = new AbstractScraper({
   workerData: { ...workerData },
   mainPage: {
     url: 'https://www.013.nl/programma/heavy',
@@ -23,39 +23,67 @@ const nuldertienScraper = new AbstractScraper({
 });
 // #endregion                          SCRAPER CONFIG
 
-nuldertienScraper.listenToMasterThread();
+scraper.listenToMasterThread();
 
-// #region [rgba(0, 120, 0, 0.1)]      MAIN PAGE EVENT CHECK
-nuldertienScraper.mainPageAsyncCheck = async function (event) {
-  const isRefusedFull = await this.rockRefuseListCheck(event, event.title.toLowerCase());
-  if (isRefusedFull.success) {
-    isRefusedFull.success = false;
-    return isRefusedFull;
+// #region [rgba(50, 0, 0, 0.5)]      MAIN PAGE EVENT CHECK
+scraper.mainPageAsyncCheck = async function (event) {
+  const reasons = [];
+  
+  this.talkToDB({
+    type: 'db-request',
+    subtype: 'isAllowed',
+    messageData: {
+      string: event.title,
+    },
+  });
+  await this.checkDBhasAnswered();
+  reasons.push(this.lastDBAnswer.reason);
+  if (this.lastDBAnswer.success) {
+    return {
+      event,
+      reason: reasons.join(','),
+      success: true,
+    };
   }
-  const isAllowedFull = await this.rockAllowListCheck(event, event.title.toLowerCase());
-  if (isAllowedFull.success) return isAllowedFull;
-
-  const workingTitle = this.cleanupEventTitle(event.title);
-  const isRefused = await this.rockRefuseListCheck(event, workingTitle);
-  if (isRefused.success) {
-    isRefused.success = false;
-    return isRefused;
+  
+  this.talkToDB({
+    type: 'db-request',
+    subtype: 'isRefused',
+    messageData: {
+      string: event.title,
+    },
+  });
+  await this.checkDBhasAnswered();
+  reasons.push(this.lastDBAnswer.reason);
+  if (this.lastDBAnswer.success) {
+    return {
+      event,
+      reason: reasons.join(','),
+      success: false,
+    };
   }
-  const isAllowed = await this.rockAllowListCheck(event, workingTitle);
-  if (isAllowed.success) return isAllowed;
 
   const hasForbiddenTerms = await this.hasForbiddenTerms(event);
+  reasons.push(hasForbiddenTerms.reason);
   if (hasForbiddenTerms.success) {
-    this.saveRefusedTitle(workingTitle);
-    hasForbiddenTerms.success = false;
-    return hasForbiddenTerms;
+    this.talkToDB({
+      type: 'db-request',
+      subtype: 'saveRefusedTitle',
+      messageData: {
+        string: event.title,
+        reason: hasForbiddenTerms.reason,
+      },
+    });    
+    
+    return {
+      event,
+      reason: reasons.join(','),
+      success: false,
+    };
   }
 
-  this.saveAllowedTitle(workingTitle);
-
   return {
-    reason: [isRefused.reason, isAllowed.reason, hasForbiddenTerms.reason].join(';'),
-    workingTitle,
+    reason: reasons.join(', '),
     event,
     success: true,
   };
@@ -66,7 +94,7 @@ nuldertienScraper.mainPageAsyncCheck = async function (event) {
 // #endregion                          SINGLE PAGE EVENT CHECK
 
 // #region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
-nuldertienScraper.mainPage = async function () {
+scraper.mainPage = async function () {
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
   if (availableBaseEvents) {
     const thisWorkersEvents = availableBaseEvents.filter(
@@ -117,7 +145,7 @@ nuldertienScraper.mainPage = async function () {
 // #endregion                          MAIN PAGE
 
 // #region [rgba(120, 0, 0, 0.1)]     SINGLE PAGE
-nuldertienScraper.singlePage = async function ({ page, event }) {
+scraper.singlePage = async function ({ page, event }) {
   const { stopFunctie } = await this.singlePageStart();
 
   let pageInfo = await page.evaluate(

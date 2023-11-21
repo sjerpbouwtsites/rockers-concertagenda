@@ -8,21 +8,25 @@ export default class Artists {
 
   refused = null;
 
+  rockEvents = null;
+
   rockArtistAliases = {};
 
   refusedAliases = {}; 
+
+  rockEventsAliases = {};
 
   allRockArtistNamesAndAliases = [];
 
   allRefusedNamesAndAliases = [];
 
+  allRockEventsNamesAndAliases = '';
+
   constructor(conf) {
     this.conf = conf;
     this.rockArtists = JSON.parse(fs.readFileSync(conf.rockArtistPath));
     this.refused = JSON.parse(fs.readFileSync(conf.refusedPath));
-    this.rockArtistAliases = {};
-    this.refusedAliases = {};
-   
+       
     Object.entries(this.rockArtists)
       .filter(([, artistRecord]) => artistRecord.aliases.length)
       .forEach(([artistName, artistRecord]) => {
@@ -39,11 +43,22 @@ export default class Artists {
         });
       });
 
+    Object.entries(this.rockEvents)
+      .filter(([, rockEventRecord]) => rockEventRecord.aliases.length)
+      .forEach(([rockEventName, rockEventRecord]) => {
+        rockEventRecord.aliases.forEach((alias) => {
+          this.rockEventsAliases[alias] = rockEventName;
+        });
+      });      
+
     this.allRockArtistNamesAndAliases = Object.keys(this.rockArtists)
       .concat(Object.keys(this.rockArtistAliases));
 
     this.allRefusedNamesAndAliases = Object.keys(this.refused)
       .concat(Object.keys(this.refusedAliases));
+
+    this.allRockEventsNamesAndAliases = Object.keys(this.rockEvents)
+      .concat(Object.keys(this.rockEventsAliases)).join(', ');
   }
 
   parseMessage(message) {
@@ -95,6 +110,14 @@ export default class Artists {
         return this.error(Error('geen string om te doorzoeken'));
       }
       return this.isAllowed(message.data.string);
+    }
+
+    if (message.request === 'isRockEvent') {
+      const hasString = Object.prototype.hasOwnProperty.call(parsedMessage.data, 'string');
+      if (!hasString) {
+        return this.error(Error('geen string om te doorzoeken'));
+      }
+      return this.isRockEvent(message.data.string);
     }
 
     if (message.request === 'saveRefusedTitle') {
@@ -149,7 +172,7 @@ export default class Artists {
   }
 
   scanStringForArtists(string) {
-    const lowerString = string.toLowerCase();
+    const lowerString = this.cleanArtistName(string);
     const found = this.allRockArtistNamesAndAliases
       .filter((nameOrAlias) => lowerString.includes(nameOrAlias));
     if (!found.length) {
@@ -166,8 +189,27 @@ export default class Artists {
     });
   }
 
+  isRockEvent(string) {
+    const lowerString = this.cleanArtistName(string);
+    const isFoundDirectly = this.allRockEventsNamesAndAliases.join(', ').includes(lowerString);
+    const eventTypeNameFound = Object.keys(this.rockEvents).find((event) => string.includes(event));
+      
+    if (isFoundDirectly || eventTypeNameFound) {
+      return this.post({
+        success: true,
+        data: null,
+        reason: `${string} is found in names and aliases.`,
+      });
+    }
+    return this.post({
+      success: false,
+      data: null,
+      reason: `${string} is not an event.`,
+    });
+  }  
+
   isRefused(string) {
-    const lowerString = string.toLowerCase();
+    const lowerString = this.cleanArtistName(string);
     const found = this.allRefusedNamesAndAliases
       .find((nameOrAlias) => lowerString.includes(nameOrAlias));
     if (found) {
@@ -185,7 +227,7 @@ export default class Artists {
   }
 
   isAllowed(string) {
-    const lowerString = string.toLowerCase();
+    const lowerString = string.toLowerCase.trim();
     const found = this.allRockArtistNamesAndAliases
       .find((nameOrAlias) => lowerString.includes(nameOrAlias));
     if (found) {
@@ -271,8 +313,22 @@ export default class Artists {
   }
 
   persistNewRefusedAndRockArtists() {
-    fs.writeFileSync(this.conf.refusedPath, JSON.stringify(this.refused));
-    fs.writeFileSync(this.conf.rockArtistPath, JSON.stringify(this.rockArtists));
+    const orderedRefused = Object.keys(this.refused).sort().reduce(
+      (obj, key) => { 
+        obj[key] = this.refused[key]; 
+        return obj;
+      }, 
+      {},
+    );
+    const rockArtistsOrdered = Object.keys(this.rockArtists).sort().reduce(
+      (obj, key) => { 
+        obj[key] = this.rockArtists[key]; 
+        return obj;
+      }, 
+      {},
+    );
+    fs.writeFileSync(this.conf.refusedPath, JSON.stringify(orderedRefused, null, 2));
+    fs.writeFileSync(this.conf.rockArtistPath, JSON.stringify(rockArtistsOrdered, null, 2));
   }
 
   error(err) {

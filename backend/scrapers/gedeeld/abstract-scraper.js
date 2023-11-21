@@ -43,6 +43,8 @@ export default class AbstractScraper extends ScraperConfig {
 
   dbAnswered = false;
 
+  skipFurtherChecks = [];
+
   // #region [rgba(0, 0, 120, 0.10)]                            CONSTRUCTOR & INSTALL
   constructor(obj) {
     super(obj);

@@ -1,3 +1,4 @@
+/* eslint-disable func-names */
 /* global document */
 import { workerData } from 'worker_threads';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
@@ -34,7 +35,25 @@ scraper.listenToMasterThread();
 // #region [rgba(50, 0, 0, 0.5)]      MAIN PAGE EVENT CHECK
 scraper.mainPageAsyncCheck = async function (event) {
   const reasons = [];
-  
+
+  this.talkToDB({
+    type: 'db-request',
+    subtype: 'isRockEvent',
+    messageData: {
+      string: event.title,
+    },
+  });
+  await this.checkDBhasAnswered();
+  reasons.push(this.lastDBAnswer.reason);
+  if (this.lastDBAnswer.success) {
+    this.skipFurtherChecks.push(event.title);
+    return {
+      event,
+      reason: reasons.join(','),
+      success: true,
+    };
+  }  
+
   this.talkToDB({
     type: 'db-request',
     subtype: 'isAllowed',
@@ -45,6 +64,7 @@ scraper.mainPageAsyncCheck = async function (event) {
   await this.checkDBhasAnswered();
   reasons.push(this.lastDBAnswer.reason);
   if (this.lastDBAnswer.success) {
+    this.skipFurtherChecks.push(event.title);
     return {
       event,
       reason: reasons.join(','),
@@ -96,24 +116,17 @@ scraper.mainPageAsyncCheck = async function (event) {
 };
 // #endregion                          MAIN PAGE EVENT CHECK
 
-// #region [rgba(0, 180, 0, 0.1)]      SINGLE PAGE EVENT CHECK
+// #region [rgba(0, 60, 0, 0.5)]      SINGLE PAGE EVENT CHECK
 scraper.singlePageAsyncCheck = async function (event) {
   const reasons = [];
-  this.talkToDB({
-    type: 'db-request',
-    subtype: 'isAllowed',
-    messageData: {
-      string: event.title,
-    },
-  });
-  await this.checkDBhasAnswered();
-  reasons.push(this.lastDBAnswer.reason);
-  if (this.lastDBAnswer.success) {
+  
+  if (this.skipFurtherChecks.includes(event.title)) {
+    reasons.push("allready check main");
     return {
       event,
       reason: reasons.join(','),
       success: true,
-    };
+    };    
   }
 
   const hasGoodTerms = await this.hasGoodTerms(event);

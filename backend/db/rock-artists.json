@@ -1,26 +1,3553 @@
 {
-  "tusky": { "aliases": [], "genres": ["punk"] },
-  "heidevolk": { "aliases": [], "genres": ["metal"] },
-  "iguana death cult": { "aliases": [], "genres": ["punk"] },
-  "cloudsurfers": { "aliases": [], "genres": ["punk"] },
-  "the covids": { "aliases": [], "genres": ["punk"] },
-  "stonerfall": { "aliases": [], "genres": ["sludge", "stoner"] },
-  "living colour": { "aliases": [], "genres": ["metal"] },
-  "the scratch": { "aliases": [], "genres": ["metal"] },
+  "bad cop bad cop (usa)": {
+    "aliases": ["bad cop bad cop (usa – fat wreck chords)", "bad cop bad cop (usa)"],
+    "reason": "",
+    "genres": []
+  },
+  "human alert": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "24-7 spyz": {
+    "aliases": ["24-7 spyz (usa)"],
+    "reason": "",
+    "genres": []
+  },
+  "45 years unknown pleasures": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "69 charger": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "ramkot": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "smudged": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "homemade empire": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "l’orchidée cosmique": {
+    "aliases": ["l’orchidée cosmique (fr)", "l’orchidee cosmique"],
+    "reason": "",
+    "genres": []
+  },
+  "thurston moore group (us/uk)": {
+    "aliases": ["thurston moore group (us/uk)"],
+    "reason": "",
+    "genres": []
+  },
+  "warthog": {
+    "aliases": ["warthog (us)"],
+    "reason": "",
+    "genres": []
+  },
+  "a can of worms": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "abbath": {
+    "aliases": ["abbath (no)"],
+    "reason": "",
+    "genres": []
+  },
+  "aborted tortoise": {
+    "aliases": ["aborted tortoise (aus)"],
+    "reason": "",
+    "genres": []
+  },
+  "ac/dc uk": {
+    "aliases": ["ac/dcuk"],
+    "reason": "",
+    "genres": []
+  },
+  "acid king": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "acindc": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "aestrid": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "agrotoxico": {
+    "aliases": ["agrotoxico (bra)"],
+    "reason": "",
+    "genres": []
+  },
+  "ahab": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "akhlys": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "alabama thunderpussy": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "alain johannes": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "alain johan­nes": {
+    "aliases": ["alain johan­nes (usa)"],
+    "reason": "",
+    "genres": []
+  },
+  "alestorm": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "algiers": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "altars": {
+    "aliases": ["altars (au)"],
+    "reason": "",
+    "genres": []
+  },
+  "alternative anthems": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "ama lou": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "amenra": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "amorphis": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "anatomia": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "ancient": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "animals as leaders": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "anneke van giersbergen": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "annisokay": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "anouk van dijk": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "any given day": {
+    "aliases": ["any given day (de)"],
+    "reason": "",
+    "genres": []
+  },
+  
+  "ares": {
+    "aliases": [],
+    "reason": "found in <a class='single-event-check-reason metal-encyclopedie metal-encyclopedie--success' href='https://www.metal-archives.com/search/ajax-band-search/?field=name&query=ares'>metal encyclopedia</a>"
+  },
+  "argwaan": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "as everything unfolds": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "as friends rust": {
+    "aliases": ["as friends rust (usa)"],
+    "reason": "",
+    "genres": []
+  },
+  "asagraum": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "asgrauw": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "asking alexandria": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "astrosaur": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "at first": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "atlas pro wrestling": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "atol atol atol": {
+    "aliases": ["atol atol atol (pl)"],
+    "reason": "",
+    "genres": []
+  },
+  "atreyu": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "attila the stockbroker": {
+    "aliases": ["attila the stockbroker (uk)"],
+    "reason": "",
+    "genres": []
+  },
+  "autarkh": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "ayreon": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "baby's berserk": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "babymetal": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "bad anxiety": {
+    "aliases": ["bad anxiety (us)"],
+    "reason": "",
+    "genres": []
+  },
+  "bad breeding": {
+    "aliases": ["bad breeding (uk)"],
+    "reason": "",
+    "genres": []
+  },
+  "bad omens": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "bards of valor": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "barno koevoets": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "batmobile": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "battle beast": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "beartooth": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "beast in black": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "beaten victoriouses": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+
+  "behemoth": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "bell witch": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "beyond the black": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "bib": {
+    "aliases": ["bib (us)"],
+    "reason": "",
+    "genres": []
+  },
+  "phantom excaliver": {
+    "aliases": ["phantom excaliver (japan)"],
+    "reason": "",
+    "genres": []
+  },
+  "blind illusion": {
+    "aliases": ["blind illusion (usa)"],
+    "reason": "",
+    "genres": []
+  },
+  "birds in row": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "black curse": {
+    "aliases": ["black curse (usa)"],
+    "reason": "",
+    "genres": []
+  },
+
+  "blackbriar": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "blackwater holylight": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "blaine l. reininger": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "bleach": {
+    "aliases": ["bleach (it) – nirvana tribute", "bleach – nirvana tribute", "nirvana by bleach"],
+    "reason": "",
+    "genres": []
+  },
+  "blind channel": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "bloodmoon": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "bob vylan": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "body type": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "bodyfarm": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "bohemian betyars": {
+    "aliases": ["bohemian betyars (hu)"],
+    "reason": "",
+    "genres": []
+  },
+  "born from pain": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "botch": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "crouch": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "brain stain": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "slekt": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "briqueville": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "bruce dickinson": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "brutus": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "psychonaut": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "ronker": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "buckcherry": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "buggin'": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "buggin' out": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "bunkier": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "burial remains": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "burlesque for the wild at heart": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "bömbers": {
+    "aliases": ["bömbers (feat. abbath) (nor)", "bombers", "bömbers – the ultimate motörhead tribute"],
+    "reason": "",
+    "genres": []
+  },
+  "cabal": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "cachemira": {
+    "aliases": ["cachemira (es)"],
+    "reason": "",
+    "genres": []
+  },
+  "call me karizma": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "carnation": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "carnifex": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "carnivore a.d.": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "carnosus": {
+    "aliases": ["carnosus (swe)"],
+    "reason": "",
+    "genres": []
+  },
+  "casey": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "cash savage and the last drinks": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "cat's cult": {
+    "aliases": ["cats cult"],
+    "reason": "",
+    "genres": []
+  },
+  "cattle decapitation": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "cave in": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "cellar darling": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "cerebral incubation": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "changes": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "changing tides": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "charlie & the lesbians": {
+    "aliases": ["charlie and the lesbians"],
+    "reason": "",
+    "genres": []
+  },
+  "cherubs": {
+    "aliases": ["cherubs (usa)"],
+    "reason": "",
+    "genres": []
+  },
+  "chezidek": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "chiyoda ku": {
+    "aliases": ["chiyoda ku (uk)"],
+    "reason": "",
+    "genres": []
+  },
+  "orange swan": {
+    "aliases": ["orange swan (de/irl)"],
+    "reason": "",
+    "genres": []
+  },
+  "psychic graveyard": {
+    "aliases": ["psychic graveyard (us)"],
+    "reason": "",
+    "genres": []
+  },
+  "chop suey": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "machine head uk": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "christina vantzou": {
+    "aliases": ["christina vantzou (gr/us)"],
+    "reason": "",
+    "genres": []
+  },
+  "citizen": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "clan of xymox": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "the covids": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "claw boys claw": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "closet disco queen": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "cloudsurfers": {
+    "aliases": [],
+    "genres": [
+      "punk"
+    ]
+  },
+  "cockney rejects": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "code 13": {
+    "aliases": ["code 13 (us)"],
+    "reason": "",
+    "genres": []
+  },
+  "hez": {
+    "aliases": ["hez (pan)"],
+    "reason": "",
+    "genres": []
+  },
+  "toprot": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "coilguns": {
+    "aliases": ["coilguns (ch)"],
+    "reason": "",
+    "genres": []
+  },
+  "coke bust": {
+    "aliases": ["coke bust (us)"],
+    "reason": "",
+    "genres": []
+  },
+  "converge": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "coreleoni": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "corey taylor": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "crossroad trail": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "cumgirl8": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "currents": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "daikaiju (usa)": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "dalin waldooooo": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "damian wilson": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "danava (usa)": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "dance with dragons": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "danko jones": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "danny loef": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "dark divine": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+
+  "days of sway": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "de kift": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "dead boys": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "dead on sunday": {
+    "aliases": ["dead on sunday (us)"],
+    "reason": "",
+    "genres": []
+  },
+  "dead poet society": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "deadguy": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "deadletter": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "death angel": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  
+  
+
+  "death valley girls": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "deathstars": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "decapitated": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "deez nuts": {
+    "aliases": ["deez nuts (au)", "deez nuts (aus)"],
+    "reason": "",
+    "genres": []
+  },
+  "dekonstrukt": {
+    "aliases": ["dekonstrukt (de)"],
+    "reason": "",
+    "genres": []
+  },
+  "delain": {
+    "aliases": [ "delain (nl)"],
+    "reason": "",
+    "genres": []
+  },
+  "demented are go!": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "demob happy": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "denial of life": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "descartes a kant": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "descendants": {
+    "aliases": ["descendents"],
+    "reason": "",
+    "genres": []
+  },
+  
+  "desolate fields": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "destroy boys": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "destruction": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "deviation": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "die toten hosen": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "disharmonic orchestra": {
+    "aliases": ["disharmonic orchestra (au)"],
+    "reason": "",
+    "genres": []
+  },
+  "distant": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "ditz": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "divide and dissolve": {
+    "aliases": ["divide and dissolve (au)"],
+    "reason": "",
+    "genres": []
+  },
+  
+  
+  "dog eat dog": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "don aman": {
+    "aliases": ["don aman (fr)"],
+    "reason": "",
+    "genres": []
+  },
+  "phlebotomized": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "primitive man": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "downset.": {
+    "aliases": ["downset"],
+    "reason": "",
+    "genres": []
+  },
+  "neuk!": {
+    "aliases": ["neuk"],
+    "reason": "",
+    "genres": []
+  },
+  
+  "dragged under": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "dragonforce": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "drama": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "duel": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "mourning beloveth": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "isole": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  
+  "earth, wind": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "echo": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "ecocide": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "editrix": {
+    "aliases": ["editrix (us)"],
+    "reason": "",
+    "genres": []
+  },
+  "behringer escape plan": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  
+  "electric chair": {
+    "aliases": ["electric chair (us)"],
+    "reason": "",
+    "genres": []
+  },
+  "electric eel shock": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "elegy": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "ellende": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "empire state bastard": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "epica": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "epistulum": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "escuelagrind": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "esprit d’air": {
+    "aliases": ["esprit dair", "esprit d’air (jap)"],
+    "reason": "",
+    "genres": []
+  },
+  "eternal champion": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "eternity": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "evil invaders": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "extreme": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "eyehategod": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "faim": {
+    "aliases": ["faim (us)"],
+    "reason": "",
+    "genres": []
+  },
+  "nø man": {
+    "aliases": ["nø man (us)", "no man"],
+    "reason": "",
+    "genres": []
+  },
+  "oats": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  
+  "fall out boy": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "farida amadou (be)": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "fatigue": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "cesair": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "faun": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "fear factory": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "fearwell": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "feuerengel": {
+    "aliases": ["feuerengel - a tribute to rammstein"],
+    "reason": "",
+    "genres": []
+  },
+  "filter": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "finntroll": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "firewind": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "fit for a king": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "flapjack": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "fleddy melculy": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "flirt": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "floor jansen": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "flotsam and jetsam": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "folly group": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "frank carter": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  
+  "kalaallit nunaat": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "strangeways": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "frog leap": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "frontline despair": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "frozen soul": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "fuego fest": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "galactic empire": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "gang green": {
+    "aliases": ["gang green (usa)"],
+    "reason": "",
+    "genres": []
+  },
+  "los peyotes": {
+    "aliases": [],
+    "reason": "",
+    "genres": ["los peyotes (argentina)"]
+  },
+  "gbh": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "generation sex": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "gestalten": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "ghost": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "giöbia": {
+    "aliases": ["giöbia (it)", "giobia"],
+    "reason": "",
+    "genres": []
+  },
+  "glaive": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "glenn hughes": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "gnome": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "gojira": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "gorgo-roth": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "gorgoroth": {
+    "aliases": ["gorgo-roth", "gorgo-roth (nor)"],
+    "reason": "",
+    "genres": []
+  },
+  
+  "gothminister": {
+    "aliases": ["gothmi­nis­ter (nor)"],
+    "reason": "",
+    "genres": []
+  },
+    "grade 2": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "grafjammer": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "green bay": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "greenleaf": {
+    "aliases": ["greenleaf (swe – napalm records)", "greenleaf (swe)"],
+    "reason": "",
+    "genres": []
+  },
+  "greenstone": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "grift": {
+    "aliases": ["grift (swe)"],
+    "reason": "",
+    "genres": []
+  },
+  "grindead": {
+    "aliases": ["grindead (por)"],
+    "reason": "",
+    "genres": []
+  },
+  
+  "guana batz": {
+    "aliases": ["guana batz (uk)"],
+    "reason": "",
+    "genres": []
+  },
+  "guilty pleasures": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "guitar wolf": {
+    "aliases": ["guitar wolf (japan)"],
+    "reason": "",
+    "genres": []
+  },
+  
+  "gus dapperton": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "h o w r a h": {
+    "aliases": ["howrah"],
+    "reason": "",
+    "genres": []
+  },
+  "h.e.a.t.": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "h.u.t.": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "spons": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "hackedepicciotto": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  
+  "halocene": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  
+  "hamers": {
+    "aliases": ["hamers (b)", "hamers (be)"],
+    "reason": "",
+    "genres": []
+  },
+  "hammok": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "handle": {
+    "aliases": ["handle (uk)"],
+    "reason": "",
+    "genres": []
+  },
+  "hang youth": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "pene corrida": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "black­briar": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "carach angren": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "cof­fin feeder": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+
+  "dis­tant": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  
+  
+  "evil­dead (usa)": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "futu­re pala­ce": {
+    "aliases": ["futu­re pala­ce (de)"],
+    "reason": "",
+    "genres": []
+  },
+  "gothmi­nis­ter": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "xoan": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "vana­heim": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+
+  "hardslag": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "hatesphere": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "heart attack": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "heart of a coward": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "heaven shall burn": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+
+  "adam bomb": {
+    "aliases": ["adam bomb (usa)"],
+    "reason": "",
+    "genres": []
+  },
+  "heidevolk": {
+    "aliases": ["heidevolk (nl)"],
+    "reason": "",
+    "genres": []
+  },
+  
+  "helleruin": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "helms alee": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "her majesty": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "here today": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "here's the thing": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  
+  "hey colossus": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "hideous": {
+    "aliases": ["hideous (be)"],
+    "reason": "",
+    "genres": []
+  },
+  "high command": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "high vis": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "hippie death cult": {
+    "aliases": ["hippie death cult (usa)"],
+    "reason": "",
+    "genres": []
+  },
+
+  "holly golightly": {
+    "aliases": ["holly golightly (uk)"],
+    "reason": "",
+    "genres": []
+  },
+  "hot water music": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "hulder": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "häxenzijrkell": {
+    "aliases": ["haxenzijrkell"],
+    "reason": "",
+    "genres": []
+  },
+  "i am morbid": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "i built the sky": {
+    "aliases": ["i built the sky (aus)"],
+    "reason": "",
+    "genres": []
+  },
+  
+  "i prevail": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "ian paice": {
+    "aliases": ["ian pai­ce (deep pur­ple)"],
+    "reason": "",
+    "genres": []
+  },
+  
+  "ic-red": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "idle thumbs release": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+
+  "iguana death cult": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "imperial age": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "imploders": {
+    "aliases": ["imploders (can)"],
+    "reason": "",
+    "genres": []
+  },
+
+  "inhaler": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "inhalo": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "insomnium": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "bongzilla": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "ter ziele": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "cerebral extinction": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "the troopers": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  
+  "iron jinn": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "it’s not a phase mom…": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  
+  "jag panzer": {
+    "aliases": ["jag panzer (usa)"],
+    "reason": "",
+    "genres": []
+  },
+  "jan modaal": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "janneke van eck": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "jaya the cat": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "jesus piece": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "joel hoekstra": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "john coffey": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "judas priest": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+
+  "kal marks": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "kamchatka": {
+    "aliases": ["kamchatka (sw)"],
+    "reason": "",
+    "genres": []
+  },
+  "kataklysm": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  
+  "keep of kalessin": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "keith mosfet": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "ken mode": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "kev riddles’ baphomet": {
+    "aliases": ["kev riddles’ baphomet (uk)"],
+    "reason": "",
+    "genres": []
+  },
+  "kid kapichi": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "kiefer": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "king buffalo": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "king gizzard": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "king nun": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "knoll": {
+    "aliases": ["knoll (usa)"],
+    "reason": "",
+    "genres": []
+  },
+  "kourosh": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "krisiun": {
+    "aliases": ["krisiun (br)"],
+    "reason": "",
+    "genres": []
+  },
+  "kurws": {
+    "aliases": ["kurws (wroclaw, pl)", "kurws (pl)"],
+    "reason": "",
+    "genres": []
+  },
+  "laibach": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "lamp of murmuur": {
+    "aliases": ["lamp of murmuur (us)"],
+    "reason": "",
+    "genres": []
+  },
+  "invunche": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "faceless entity": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "landmvrks": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "lankum": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  
+  "leprous": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "lewsberg": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "life of agony": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "limehouse lizzy": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "lionheart": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+
+  "little lilith": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "liturgy": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  
+  "living colour": {
+    "aliases": ["livingcolour"],
+    "genres": [
+      "metal"
+    ]
+  },
+  
+  
+  "lizette": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "lord of the lost": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+
+  "love supreme": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "lovell’s blade": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "low life": {
+    "aliases": ["low life (au)"],
+    "reason": "",
+    "genres": []
+  },
+  "lower class brats": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "lqrq": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "lucifer": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  
+  "mad caddies": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "mad sin": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "magnetica": {
+    "aliases": ["magnetica (be) – metallica tribute"],
+    "reason": "",
+    "genres": []
+  },
+  "magoria": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "magustry": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "maid of ace": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "maiden united": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "malevolence": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "malphas": {
+    "aliases": ["malphas (ch)"],
+    "reason": "",
+    "genres": []
+  },
+  
+  "bedrängnis": {
+    "aliases": ["bedraengnis"],
+    "reason": "",
+    "genres": []
+  },
+  "satanic violence": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "mass of the fermenting dregs (jp/ マス オブ ザ ファーメンティング ドレッグス)": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  
+  "master boot record": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "masterpiece": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "masters of metal": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "max": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "me first and the gimme gimmes": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "megadeth": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "melenas": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "melvinator": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "codefendants": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "get dead": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "melvins": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "taipei houston": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "mercenary": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "mesh": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "methedrine": {
+    "aliases": ["methedrine (it)"],
+    "reason": "",
+    "genres": []
+  },
+  "michelle gurevich": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "midnight": {
+    "aliases": ["midnight (usa)"],
+    "reason": "",
+    "genres": []
+  },
+  "mike dawes": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "militarie gun": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "misanthropia": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "mock execution": {
+    "aliases": ["mock execution (us)"],
+    "reason": "",
+    "genres": []
+  },
+  "modder": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "model/actriz": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  
+  "mondo generator": {
+    "aliases": ["mondo generator (usa)"],
+    "reason": "",
+    "genres": []
+  },
+  "monkey3": {
+    "aliases": ["monkey3 (ch)"],
+    "reason": "",
+    "genres": []
+  },
+  "monster magnet": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "moribund oblivion": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "mouflon": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "massive assault": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "motionless in white": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "motorpsycho": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "move": {
+    "aliases": ["move (us)"],
+    "reason": "",
+    "genres": []
+  },
+  "initiate": {
+    "aliases": ["initiate (us)"],
+    "reason": "",
+    "genres": []
+  },
+  
+  "murphy’s law": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "mutoid man": {
+    "aliases": ["mutoid man (usa)"],
+    "reason": "",
+    "genres": []
+  },
+  "mutually assured destruction": {
+    "aliases": ["mutually assured destruction  (us)"],
+    "reason": "",
+    "genres": []
+  },
+  "my turn": {
+    "aliases": ["my turn (gr)"],
+    "reason": "",
+    "genres": []
+  },
+  "mystifier": {
+    "aliases": ["mystifier (br)"],
+    "reason": "",
+    "genres": []
+  },
+  "rattenburcht": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "witchfukker": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  
+  "nape neck": {
+    "aliases": ["nape neck (uk)"],
+    "reason": "",
+    "genres": []
+  },
+  "nattas": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "nebula": {
+    "aliases": ["nebula (usa)"],
+    "reason": "",
+    "genres": []
+  },
+  "neck deep": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  
+  "nervegas": {
+    "aliases": ["nervegas (dk)"],
+    "reason": "",
+    "genres": []
+  },
+  "new model army": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "newski": {
+    "aliases": ["newski (usa)"],
+    "reason": "",
+    "genres": []
+  },
+  
+  "night demon": {
+    "aliases": ["night demon (usa)"],
+    "reason": "",
+    "genres": []
+  },
+  
+  "no barrier": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "noctem": {
+    "aliases": ["noctem (spain)"],
+    "reason": "",
+    "genres": []
+  },
+  "normandie": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "nostromo": {
+    "aliases": ["nostromo (ch)"],
+    "reason": "",
+    "genres": []
+  },
+  
+  
+  "nuovo testamento": {
+    "aliases": ["nuovo testamento (it/us)"],
+    "reason": "",
+    "genres": []
+  },
+  "october tide": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "of feather and bone": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "of mice and men": {
+    "aliases": ["of mice&men", "of mice & men"],
+    "reason": "",
+    "genres": []
+  },
+  "officium triste": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "oh hiro­s­hi­ma": {
+    "aliases": ["oh hiro­s­hi­ma (swe)"],
+    "reason": "",
+    "genres": []
+  },
+
+  "one another (ep launch)": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "one of these days": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "stropstrikkers": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  
+  "opus kink": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "orphaned land": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "otomo yoshihide": {
+    "aliases": ["otomo yoshihide (jp)"],
+    "reason": "",
+    "genres": []
+  },
+  "outcast": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "oxbow": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "pablo honey": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "pain": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "ensiferum": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  
+  "pantera": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "paradise lost": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "primordial": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "harakiri for the sky": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  
+  "pennywise": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "periphery": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "persefone": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "perturbator": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "pest control": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "pestilence": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "peyton parrish": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "pharmakon": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "phiz": {
+    "aliases": ["phiz (de)"],
+    "reason": "",
+    "genres": []
+  },
+    "pidżama porno": {
+    "aliases": ["pidżama porno(pl)"],
+    "reason": "",
+    "genres": []
+  },
+  "pierce the veil": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "pijn": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "pixies": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "plague": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "ploegendienst": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+
+  "plusminus": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "poets of the fall": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "polaris": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "powerwolf": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "predatory void": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "pree tone": {
+    "aliases": ["pree tone (ua)"],
+    "reason": "",
+    "genres": []
+  },
+  "prey": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "pro-pain": {
+    "aliases": ["pro-pain (us)"],
+    "reason": "",
+    "genres": []
+  },
+  "protein": {
+    "aliases": ["protein (pl)"],
+    "reason": "",
+    "genres": []
+  },
+  "protex": {
+    "aliases": ["protex (nie)"],
+    "reason": "",
+    "genres": []
+  },
+  "protomartyr": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "public image ltd.": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+
+  "punque!": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "purpendicular": {
+    "aliases": ["purpendicular feat. ian paice (uk)"],
+    "reason": "",
+    "genres": []
+  },
+  "radar men from the moon": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "radeloos///ziedend": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "randstad rebels": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "rat cage": {
+    "aliases": ["rat cage (uk)"],
+    "reason": "",
+    "genres": []
+  },
+  "rave the reqviem": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "raw brigade": {
+    "aliases": ["raw brigade (col)"],
+    "reason": "",
+    "genres": []
+  },
+  
+  
+  "rise or die": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  
+  "riverside": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "royal blood": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "russian circles": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "ruts dc": {
+    "aliases": ["ruts dc (uk)"],
+    "reason": "",
+    "genres": []
+  },
+  
+  "sacred reich": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "saga": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "samiam": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "sammath": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "sasquatch": {
+    "aliases": ["sasquatch (usa)"],
+    "reason": "",
+    "genres": []
+  },
+  
+  "savageheads": {
+    "aliases": ["savageheads (us)"],
+    "reason": "",
+    "genres": []
+  },
+  "burning kross": {
+    "aliases": ["burning kross (be)"],
+    "reason": "",
+    "genres": []
+  },
+  "appäratus": {
+    "aliases": ["appäratus (ma)", "apparatus (ma)"],
+    "reason": "",
+    "genres": []
+  },
+  
+  "scowl": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "secluded bronte": {
+    "aliases": ["secluded bronte (uk)"],
+    "reason": "",
+    "genres": []
+  },
+  "semblant": {
+    "aliases": ["semblant (br)"],
+    "reason": "",
+    "genres": []
+  },
+  "senyawa": {
+    "aliases": ["senyawa (ind)"],
+    "reason": "",
+    "genres": []
+  },
+  "sereias": {
+    "aliases": ["sereias (pt)"],
+    "reason": "",
+    "genres": []
+  },
+  "52 hertz whale": {
+    "aliases": ["52 hertz whale (sk)"],
+    "reason": "",
+    "genres": []
+  },
+  "serenity": {
+    "aliases": ["serenity (at)"],
+    "reason": "",
+    "genres": []
+  },
+  
+  "seth": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "sex swing": {
+    "aliases": ["sex swing (uk)"],
+    "reason": "",
+    "genres": []
+  },
+  "shake chain": {
+    "aliases": ["shake chain (uk)"],
+    "reason": "",
+    "genres": []
+  },
+  "sham 69": {
+    "aliases": ["sham 69 (uk)"],
+    "reason": "",
+    "genres": []
+  },
+  "sheer terror": {
+    "aliases": ["sheer terror (usa)"],
+    "reason": "",
+    "genres": []
+  },
+  "shellac": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "shelter from the storm": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  
+  
+  "show me the body": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "sir pierre courbois": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "sirenia": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "amberian dawn": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "dark sarah": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "rexoria": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "skating polly": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "skindred": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "skinny lister": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "skálmöld": {
+    "aliases": ["skalmold"],
+    "reason": "",
+    "genres": []
+  },
+  "slaughter to prevail": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "slift": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "slope": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "smash into pieces": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "smells like nirvana": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "soen": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "sol sistere (chili – atmospheric black metal)": {
+    "aliases": ["sol sistere (chili)"],
+    "reason": "",
+    "genres": ["black metal"]
+  },
+
+  "sonata arctica": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "stratovarius": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "sons": {
+    "aliases": ["sons (be)"],
+    "reason": "",
+    "genres": []
+  },
+  "soon": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  
+  "soulfly": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "spidergawd": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "spiritbox": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "invisions": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "unprocessed": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "split system": {
+    "aliases": ["split system (aus)"],
+    "reason": "",
+    "genres": []
+  },
+  "sprints": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "steve von till": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "stick to your guns": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "stonerfall": {
+    "aliases": [],
+    "genres": [
+      "sludge",
+      "stoner"
+    ]
+  },
+  
+  "stray from the path": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "stream of passion": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "subsignal": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "suffocation": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "suicidal angels": {
+    "aliases": [
+      "suicidal angels (gr)"
+    ],
+    "reason": "",
+    "genres": []
+  },
+  "spectral wound": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  
+  
+  "sunburned hand of the man ": {
+    "aliases": ["sunburned hand of the man (us)"],
+    "reason": "",
+    "genres": []
+  },
+  "sunn o)))": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "nadja": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "superbloom": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "surfing stingrays": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  
+  "sxfxcx": {
+    "aliases": ["sxfxcx (peru)"],
+    "reason": "",
+    "genres": []
+  },
+  
+  "taake": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "tankzilla": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  
+  "temple of madness": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  
+  "temples": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "tenebrae": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "ter land ter zee en in den devul": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "terra": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "terzij de horde": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "tesseract": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "the amity affliction": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "the answer lies in the black void": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "the atomic bitchwax": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "the bandulus": {
+    "aliases": [
+      "the bandulus (usa)"
+    ],
+    "reason": "",
+    "genres": []
+  },
+  "the big 4 tribute": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "the blaze": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "the bug club": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "the bøk": {
+    "aliases": [],
+    "reason": "",
+    "genres": [
+      "punk"
+    ]
+  },
+  "the cards": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "the casualties": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "the cas­san­dra complex": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "the chats": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "guantanamo baywatch": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "the chosen": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "the clockworks": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  
+  "the dead c": {
+    "aliases": ["the dead c (nz)"],
+    "reason": "",
+    "genres": []
+  },
+  "roy montgomery": {
+    "aliases": ["roy montgomery (nz)"],
+    "reason": "",
+    "genres": []
+  },
+  "the dead daisies": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "the delta bombers": {
+    "aliases": ["the delta bombers (usa)"],
+    "reason": "",
+    "genres": []
+  },
+  "the dickies": {
+    "aliases": ["the dickies (usa)"],
+    "reason": "",
+    "genres": []
+  },
+  "the exploited": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "the fall of troy": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "the gaslight anthem": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "the godfathers": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "the grand reggae": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "the hic­key under­world": {
+    "aliases": ["the hic­key under­world (be)"],
+    "reason": "",
+    "genres": []
+  },
+  "the homesick": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "the howl": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "the jackets": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "the jackets": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "the lords of altamont": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "the meffs": {
+    "aliases": [
+      "the meffs (uk)"
+    ],
+    "reason": "",
+    "genres": []
+  },
+  "the menzingers": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "the meteors": {
+    "aliases": ["the meteors (uk)"],
+    "reason": "",
+    "genres": []
+  },
+  "the monsters": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "the new roses": {
+    "aliases": ["the new roses (de)"],
+    "reason": "",
+    "genres": []
+  },
+  "the obsessed": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "asunojokei": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "baardvader": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "the partisans": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "the perfect tool": {
+    "aliases": ["the perfect tool (usa)"],
+    "reason": "",
+    "genres": []
+  },
+  
+  "the pleasure dome": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "the raven age": {
+    "aliases": ["the raven age (uk)"],
+    "reason": "",
+    "genres": []
+  },
+  "the rita": {
+    "aliases": ["the rita (ca)"],
+    "reason": "",
+    "genres": []
+  },
+  
+  "the rock orchestra": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "the rumjacks": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "the scratch": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "the sisters of mercy": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "the virginmarys": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "the third (g)rave": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "the toy dolls": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "the waeve": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "the warlocks": {
+    "aliases": ["the warlocks (usa)"],
+    "reason": "",
+    "genres": []
+  },
+  
+  "the winery dogs": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  
+  "the exploited": {
+    "aliases": ["exploited"],
+    "reason": "",
+    "genres": []
+  },
+  "therapy?": {
+    "aliases": ["therapy"],
+    "reason": "",
+    "genres": []
+  },
+  "these new south whales": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "this will destroy you": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "thrice": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "thrown": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "thy art is murder": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "toundra": {
+    "aliases": ["toundra (es)"],
+    "reason": "",
+    "genres": []
+  },
+  "toxic shock": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "traitrs": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "traumahelikopter": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "triggerfinger": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  
+  "peuk": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
   "tristan": {
     "aliases": [],
     "reason": "found in <a class='single-event-check-reason metal-encyclopedie metal-encyclopedie--success' href='https://www.metal-archives.com/search/ajax-band-search/?field=name&query=tristan'>metal encyclopedia</a>"
   },
-  "y&t": {
+  "tropikali after night": {
     "aliases": [],
-    "reason": "found in <a class='single-event-check-reason metal-encyclopedie metal-encyclopedie--success' href='https://www.metal-archives.com/search/ajax-band-search/?field=name&query=y'>metal encyclopedia</a>"
+    "reason": "",
+    "genres": []
+  },
+  "tusky": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "twisted sisters": {
+    "aliases": [
+      "twisted sisters – twisted sister tribute"
+    ],
+    "reason": "",
+    "genres": []
+  },
+  "u.d.o.": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "ufomammut": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  
+  "uk subs": {
+    "aliases": ["uksubs"],
+    "reason": "",
+    "genres": []
+  },
+  "ulrika spacek": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "ultrabomb": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "un automne de plus": {
+    "aliases": ["un automne de plus (fr)"],
+    "reason": "",
+    "genres": []
+  },
+  "we are the harvest": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "ontaard": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "muchlove": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  
+  "uniform": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "up the irons": {
+    "aliases": ["up the irons – iron maiden tribute"],
+    "reason": "",
+    "genres": []
+  },
+
+  "utreg legends": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "vanaheim": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
   },
   "vandenberg": {
     "aliases": [],
     "reason": "found in <a class='single-event-check-reason metal-encyclopedie metal-encyclopedie--success' href='https://www.metal-archives.com/search/ajax-band-search/?field=name&query=vandenberg'>metal encyclopedia</a>"
   },
-  "ares": {
+  "vault": {
     "aliases": [],
-    "reason": "found in <a class='single-event-check-reason metal-encyclopedie metal-encyclopedie--success' href='https://www.metal-archives.com/search/ajax-band-search/?field=name&query=ares'>metal encyclopedia</a>"
+    "reason": "",
+    "genres": []
+  },
+  "verwilderd": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "vile": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "vio­lent way": {
+    "aliases": ["vio­lent way (usa)"],
+    "reason": "",
+    "genres": []
+  },
+  
+  "vitamin x": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  
+  "voyager": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  
+  "warbringer": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "wardruna": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "wargasm": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "warkings": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "waterparks": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "wavecave": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "wc experience": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "welcome to hell": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "while she sleeps": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "clitteband": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "whip": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "whores.": {
+    "aliases": ["whores. (usa)"],
+    "reason": "",
+    "genres": []
+  },
+  
+  "wild child": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "wind rose": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "wodan boys": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "wolfheart": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "wolfmother": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "wonk unit": {
+    "aliases": ["wonk unit (uk)"],
+    "reason": "",
+    "genres": []
+  },
+  "world peace": {
+    "aliases": ["world peace (us)"],
+    "reason": "",
+    "genres": []
+  },
+  "worst": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "wucan": {
+    "aliases": ["wucan (de)", "wucan (d)"],
+    "reason": "",
+    "genres": []
+  },
+  "y&t": {
+    "aliases": [],
+    "reason": "found in <a class='single-event-check-reason metal-encyclopedie metal-encyclopedie--success' href='https://www.metal-archives.com/search/ajax-band-search/?field=name&query=y'>metal encyclopedia</a>"
+  },
+  "yard act": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "yawning man": {
+    "aliases": ["yawning man (usa)"],
+    "reason": "",
+    "genres": []
+  },
+  
+  "years of denial": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "ylisia": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "yves tumor": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "nation": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "zeerow": {
+    "aliases": [],
+    "reason": "",
+    "genres": []
+  },
+  "årabrot": {
+    "aliases": ["arabrot"],
+    "reason": "",
+    "genres": []
+  },
+  "батюшка (pl)": {
+    "aliases": ["батюшка (pl, exclusieve benelux show)", "batushka"],
+    "reason": "",
+    "genres": []
   }
 }
