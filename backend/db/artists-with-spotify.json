@@ -12,17 +12,36 @@
   },
   "joy division": {
     "aliases": [],
-    "genres": []
+    "genres": [
+      "alternative rock",
+      "art rock",
+      "indie rock",
+      "madchester",
+      "new wave",
+      "post-punk",
+      "punk",
+      "rock",
+      "uk post-punk"
+    ],
+    "spotifyUrl": "https://open.spotify.com/artist/432R46LaYsJZV2Gmc4jUV5",
+    "spotifyId": "432R46LaYsJZV2Gmc4jUV5"
   },
   "69 charger": {
     "aliases": [],
-    "genres": ["metal", "punk"],
+    "genres": [
+      "metal",
+      "punk"
+    ],
     "spotifyUrl": "https://api.spotify.com/v1/artists/2sIBOnl0BjR2o5CKfrCEpl",
     "spotifyId": "2sIBOnl0BjR2o5CKfrCEpl"
   },
   "a can of worms": {
     "aliases": [],
-    "genres": ["metal", "thrash metal", "death metal"],
+    "genres": [
+      "metal",
+      "thrash metal",
+      "death metal"
+    ],
     "spotifyUrl": null,
     "spotifyId": null
   },
@@ -35,7 +54,6 @@
       "metal",
       "norwegian black metal",
       "symphonic black metal"
-      
     ],
     "spotifyUrl": "https://api.spotify.com/v1/artists/1epGwdbjU7JSGVBHlqptpx",
     "spotifyId": "1epGwdbjU7JSGVBHlqptpx"
@@ -53,7 +71,9 @@
     "aliases": [
       "ac/dcuk"
     ],
-    "genres": ["hard rock"],
+    "genres": [
+      "hard rock"
+    ],
     "spotifyUrl": null,
     "spotifyId": null
   },
@@ -73,17 +93,20 @@
   },
   "acindc": {
     "aliases": [],
-    "genres": ["hard rock"],
+    "genres": [
+      "hard rock"
+    ],
     "spotifyUrl": null,
     "spotifyId": null
   },
   "adam bomb": {
     "aliases": [],
-    "genres": ["hard rock"],
+    "genres": [
+      "hard rock"
+    ],
     "spotifyUrl": "https://api.spotify.com/v1/artists/7uU91osaIZwPz0jSWsGFhL",
     "spotifyId": "7uU91osaIZwPz0jSWsGFhL"
   },
-  
   "agrotoxico": {
     "aliases": [],
     "genres": [
@@ -155,7 +178,6 @@
     "spotifyUrl": "https://api.spotify.com/v1/artists/3OpqU68JpZlzvjAJj3B2Da",
     "spotifyId": "3OpqU68JpZlzvjAJj3B2Da"
   },
-
   "altars": {
     "aliases": [],
     "genres": [
@@ -167,7 +189,6 @@
     "spotifyUrl": "https://api.spotify.com/v1/artists/7skfjnH1afheixOhd0CnKb",
     "spotifyId": "7skfjnH1afheixOhd0CnKb"
   },
-
   "amberian dawn": {
     "aliases": [],
     "genres": [
@@ -268,7 +289,6 @@
     "spotifyUrl": "https://api.spotify.com/v1/artists/7lAi1Cv19DsukgGjbZQxFg",
     "spotifyId": "7lAi1Cv19DsukgGjbZQxFg"
   },
-
   "any given day": {
     "aliases": [],
     "genres": [
@@ -380,13 +400,17 @@
   },
   "at first": {
     "aliases": [],
-    "genres": ["metal"],
+    "genres": [
+      "metal"
+    ],
     "spotifyUrl": "https://api.spotify.com/v1/artists/0cs2o6Qi9XQqxSoguds9yJ",
     "spotifyId": "0cs2o6Qi9XQqxSoguds9yJ"
   },
   "atlas pro wrestling": {
     "aliases": [],
-    "genres": ["punk", "noise"
+    "genres": [
+      "punk",
+      "noise"
     ],
     "spotifyUrl": null,
     "spotifyId": null
@@ -413,7 +437,10 @@
     "spotifyId": "3LkSiHbjqOHCKCqBfEZOTv"
   },
   "attila the stockbroker": {
-    "aliases": ["punk", "metal"],
+    "aliases": [
+      "punk",
+      "metal"
+    ],
     "genres": [],
     "spotifyUrl": "https://api.spotify.com/v1/artists/6MpFXOAwEfGuJFB4xa9Dl5",
     "spotifyId": "6MpFXOAwEfGuJFB4xa9Dl5"
@@ -448,7 +475,6 @@
     "spotifyUrl": "https://api.spotify.com/v1/artists/4zNAEIh51pXAxSOrGfT5xE",
     "spotifyId": "4zNAEIh51pXAxSOrGfT5xE"
   },
-
   "babymetal": {
     "aliases": [],
     "genres": [
@@ -463,7 +489,9 @@
     "aliases": [
       "bad anxiety (us)"
     ],
-    "genres": ["hardcore punk"],
+    "genres": [
+      "hardcore punk"
+    ],
     "spotifyUrl": null,
     "spotifyId": null
   },
@@ -476,13 +504,13 @@
     "spotifyId": "781vvvQYKgDjg3i90b7vtV"
   },
   "bad cop bad cop": {
-    "aliases": [
-      "bad cop bad cop (usa – fat wreck chords)",
-      "bad cop bad cop (usa)"
+    "aliases": [],
+    "genres": [
+      "power-pop punk",
+      "skate punk"
     ],
-    "genres": [],
-    "spotifyUrl": null,
-    "spotifyId": null
+    "spotifyUrl": "https://open.spotify.com/artist/226ZwHRFmxyMqgXCoEkUbq",
+    "spotifyId": "226ZwHRFmxyMqgXCoEkUbq"
   },
   "bad omens": {
     "aliases": [],
@@ -958,8 +986,6 @@
     "spotifyUrl": "https://api.spotify.com/v1/artists/6lm2Urs3F29cmTREX2LZPO",
     "spotifyId": "6lm2Urs3F29cmTREX2LZPO"
   },
-
-
   "cat's cult": {
     "aliases": [],
     "genres": [],
@@ -1097,7 +1123,6 @@
     "spotifyUrl": "https://api.spotify.com/v1/artists/4CMC2nnStv4EENjKBSDpKR",
     "spotifyId": "4CMC2nnStv4EENjKBSDpKR"
   },
-
   "clan of xymox": {
     "aliases": [],
     "genres": [
@@ -1225,9 +1250,11 @@
   },
   "crouch": {
     "aliases": [],
-    "genres": [],
-    "spotifyUrl": null,
-    "spotifyId": null
+    "genres": [
+      "british choir"
+    ],
+    "spotifyUrl": "https://open.spotify.com/artist/5z1FDKqosEGwr8HrgzNa0q",
+    "spotifyId": "5z1FDKqosEGwr8HrgzNa0q"
   },
   "cumgirl8": {
     "aliases": [],
@@ -1310,7 +1337,6 @@
     "spotifyUrl": "https://api.spotify.com/v1/artists/7nlWkfjA7PR7HpMqcCEmCc",
     "spotifyId": "7nlWkfjA7PR7HpMqcCEmCc"
   },
-
   "dead boys": {
     "aliases": [],
     "genres": [
@@ -1326,7 +1352,6 @@
     "spotifyUrl": "https://api.spotify.com/v1/artists/2y19rzmHIF4YOLHm7AW0pl",
     "spotifyId": "2y19rzmHIF4YOLHm7AW0pl"
   },
-
   "deadguy": {
     "aliases": [],
     "genres": [
@@ -1447,7 +1472,6 @@
     "spotifyUrl": "https://api.spotify.com/v1/artists/00ghcI0p7IwSTw34FGZSKk",
     "spotifyId": "00ghcI0p7IwSTw34FGZSKk"
   },
-
   "descendants": {
     "aliases": [],
     "genres": [
@@ -1462,7 +1486,6 @@
     "spotifyUrl": "https://api.spotify.com/v1/artists/2ROUdClbUSxd9ldkCTnu9n",
     "spotifyId": "2ROUdClbUSxd9ldkCTnu9n"
   },
-
   "destruction": {
     "aliases": [],
     "genres": [
@@ -1596,7 +1619,6 @@
     "spotifyUrl": "https://api.spotify.com/v1/artists/5hlOp4NW5YlUBKWXiJaut1",
     "spotifyId": "5hlOp4NW5YlUBKWXiJaut1"
   },
-
   "echo": {
     "aliases": [],
     "genres": [
@@ -1617,7 +1639,6 @@
     "spotifyUrl": "https://api.spotify.com/v1/artists/3hvm8t0tGXG4W6ftgFThqS",
     "spotifyId": "3hvm8t0tGXG4W6ftgFThqS"
   },
-
   "electric chair": {
     "aliases": [],
     "genres": [
@@ -1798,14 +1819,16 @@
   "farida amadou": {
     "aliases": [],
     "genres": [],
-    "spotifyUrl": null,
-    "spotifyId": null
+    "spotifyUrl": "https://open.spotify.com/artist/6IdqMJDojhXaIaiCziv9IB",
+    "spotifyId": "6IdqMJDojhXaIaiCziv9IB"
   },
   "fatigue": {
     "aliases": [],
-    "genres": [],
-    "spotifyUrl": "",
-    "spotifyId": ""
+    "genres": [
+      "polish black metal"
+    ],
+    "spotifyUrl": "https://open.spotify.com/artist/02CXS4DVMCDYJzopD14smm",
+    "spotifyId": "02CXS4DVMCDYJzopD14smm"
   },
   "faun": {
     "aliases": [],
@@ -2054,7 +2077,6 @@
     "spotifyUrl": "https://api.spotify.com/v1/artists/4pKR1QNX7EW2uRlMWEOMRF",
     "spotifyId": "4pKR1QNX7EW2uRlMWEOMRF"
   },
-
   "glenn hughes": {
     "aliases": [],
     "genres": [
@@ -2085,9 +2107,10 @@
     "spotifyUrl": "https://api.spotify.com/v1/artists/0GDGKpJFhVpcjIGF8N6Ewt",
     "spotifyId": "0GDGKpJFhVpcjIGF8N6Ewt"
   },
-  
   "gorgoroth": {
-    "aliases": ["gorgo-roth"],
+    "aliases": [
+      "gorgo-roth"
+    ],
     "genres": [
       "black metal",
       "metal",
@@ -2108,7 +2131,6 @@
     "spotifyUrl": "https://api.spotify.com/v1/artists/2S3xwpueZpPVUDTTv7Wefx",
     "spotifyId": "2S3xwpueZpPVUDTTv7Wefx"
   },
-
   "grade 2": {
     "aliases": [],
     "genres": [
@@ -2204,7 +2226,6 @@
     "spotifyUrl": "https://api.spotify.com/v1/artists/4iZpg2fbTmpRcjk4qv5nK1",
     "spotifyId": "4iZpg2fbTmpRcjk4qv5nK1"
   },
-
   "h o w r a h": {
     "aliases": [],
     "genres": [
@@ -2458,7 +2479,6 @@
     "spotifyUrl": "https://api.spotify.com/v1/artists/4IZavjyt6nf7m5fq31pjXl",
     "spotifyId": "4IZavjyt6nf7m5fq31pjXl"
   },
-
   "homemade empire": {
     "aliases": [],
     "genres": [],
@@ -2547,7 +2567,6 @@
     "spotifyUrl": null,
     "spotifyId": null
   },
-
   "imperial age": {
     "aliases": [],
     "genres": [
@@ -2710,7 +2729,6 @@
     "spotifyUrl": "https://api.spotify.com/v1/artists/2tRsMl4eGxwoNabM08Dm4I",
     "spotifyId": "2tRsMl4eGxwoNabM08Dm4I"
   },
-
   "kalaallit nunaat": {
     "aliases": [],
     "genres": [],
@@ -2784,7 +2802,6 @@
     "spotifyUrl": null,
     "spotifyId": null
   },
-
   "kiefer": {
     "aliases": [],
     "genres": [],
@@ -2814,7 +2831,6 @@
     "spotifyUrl": "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
     "spotifyId": "6XYvaoDGE0VmRt83Jss9Sn"
   },
-
   "knoll": {
     "aliases": [],
     "genres": [],
@@ -2965,7 +2981,6 @@
     "spotifyUrl": "https://api.spotify.com/v1/artists/6Uhp7WA6sjm5ZL6Xz561de",
     "spotifyId": "6Uhp7WA6sjm5ZL6Xz561de"
   },
-
   "lord of the lost": {
     "aliases": [],
     "genres": [
@@ -3058,11 +3073,9 @@
   },
   "magnetica": {
     "aliases": [],
-    "genres": [
-      "heavy metal"
-    ],
-    "spotifyUrl": "",
-    "spotifyId": ""
+    "genres": [],
+    "spotifyUrl": "https://open.spotify.com/artist/3sE7OEKPuWPqlGg6NeWW6x",
+    "spotifyId": "3sE7OEKPuWPqlGg6NeWW6x"
   },
   "magoria": {
     "aliases": [],
@@ -3138,11 +3151,10 @@
   "masterpiece": {
     "aliases": [],
     "genres": [
-      "amapiano",
-      "heavy metal"
+      "japanese power metal"
     ],
-    "spotifyUrl": "",
-    "spotifyId": ""
+    "spotifyUrl": "https://open.spotify.com/artist/04xIyZvIYt208Jn90c7qLb",
+    "spotifyId": "04xIyZvIYt208Jn90c7qLb"
   },
   "masters of metal": {
     "aliases": [],
@@ -3246,7 +3258,6 @@
     "spotifyUrl": "https://api.spotify.com/v1/artists/7gTho3zNavnRHsJXwoB2sT",
     "spotifyId": "7gTho3zNavnRHsJXwoB2sT"
   },
-
   "militarie gun": {
     "aliases": [],
     "genres": [
@@ -3454,7 +3465,6 @@
     "spotifyUrl": "https://api.spotify.com/v1/artists/5OhutKt3xoauuDTeDuBx55",
     "spotifyId": "5OhutKt3xoauuDTeDuBx55"
   },
-
   "nattas": {
     "aliases": [],
     "genres": [],
@@ -3546,7 +3556,6 @@
     "spotifyUrl": "https://api.spotify.com/v1/artists/4dkUBMSoFykhISgiDEXOB1",
     "spotifyId": "4dkUBMSoFykhISgiDEXOB1"
   },
-
   "nø man": {
     "aliases": [],
     "genres": [
@@ -3557,7 +3566,6 @@
     "spotifyUrl": "https://api.spotify.com/v1/artists/77BO4bYHfvTmVuG63wOuHX",
     "spotifyId": "77BO4bYHfvTmVuG63wOuHX"
   },
-
   "october tide": {
     "aliases": [],
     "genres": [
@@ -3609,9 +3617,11 @@
   },
   "one another": {
     "aliases": [],
-    "genres": [],
-    "spotifyUrl": null,
-    "spotifyId": null
+    "genres": [
+      "finnish hardcore"
+    ],
+    "spotifyUrl": "https://open.spotify.com/artist/4hPmrpjKNzQzez79wwXOBo",
+    "spotifyId": "4hPmrpjKNzQzez79wwXOBo"
   },
   "one of these days": {
     "aliases": [],
@@ -3832,7 +3842,6 @@
     "spotifyUrl": "https://api.spotify.com/v1/artists/1ix1aDOd7GSOeT9iqNh5KO",
     "spotifyId": "1ix1aDOd7GSOeT9iqNh5KO"
   },
-
   "phlebotomized": {
     "aliases": [],
     "genres": [
@@ -3904,7 +3913,6 @@
     "spotifyUrl": "https://api.spotify.com/v1/artists/2aJUvAtem0t0zRKxJsRoea",
     "spotifyId": "2aJUvAtem0t0zRKxJsRoea"
   },
-
   "polaris": {
     "aliases": [],
     "genres": [
@@ -3940,9 +3948,12 @@
   },
   "prey": {
     "aliases": [],
-    "genres": [],
-    "spotifyUrl": "",
-    "spotifyId": ""
+    "genres": [
+      "chill phonk",
+      "gym phonk"
+    ],
+    "spotifyUrl": "https://open.spotify.com/artist/3uA4unR7LBOcqjpbOeCs0Y",
+    "spotifyId": "3uA4unR7LBOcqjpbOeCs0Y"
   },
   "primitive man": {
     "aliases": [],
@@ -4078,7 +4089,6 @@
     "spotifyUrl": "https://api.spotify.com/v1/artists/6l0NXNFYkkn3chX6MW1xcj",
     "spotifyId": "6l0NXNFYkkn3chX6MW1xcj"
   },
-
   "randstad rebels": {
     "aliases": [],
     "genres": [],
@@ -4149,7 +4159,6 @@
     "spotifyUrl": "https://api.spotify.com/v1/artists/2dALGLJwjsKqfueVsXlXYM",
     "spotifyId": "2dALGLJwjsKqfueVsXlXYM"
   },
-
   "royal blood": {
     "aliases": [],
     "genres": [
@@ -4193,7 +4202,6 @@
     "spotifyUrl": "https://api.spotify.com/v1/artists/0UeVJTdCWGEFSSO9Tg9tiH",
     "spotifyId": "0UeVJTdCWGEFSSO9Tg9tiH"
   },
-
   "samiam": {
     "aliases": [],
     "genres": [
@@ -4299,7 +4307,6 @@
     "spotifyUrl": "https://api.spotify.com/v1/artists/3cdasOCLRe8dKjzjowtzNW",
     "spotifyId": "3cdasOCLRe8dKjzjowtzNW"
   },
-
   "sex swing": {
     "aliases": [],
     "genres": [
@@ -4423,7 +4430,6 @@
     "spotifyUrl": "https://api.spotify.com/v1/artists/24Oiw7BlvO1BETecDLJt6m",
     "spotifyId": "24Oiw7BlvO1BETecDLJt6m"
   },
-
   "slift": {
     "aliases": [],
     "genres": [
@@ -4473,14 +4479,13 @@
     "spotifyId": "38uWD5h115pdz278q4rwZW"
   },
   "sol sistere": {
-    "aliases": [
-      "sol sistere (chili)"
-    ],
+    "aliases": [],
     "genres": [
-      "black metal"
+      "chilean black metal",
+      "chilean metal"
     ],
-    "spotifyUrl": null,
-    "spotifyId": null
+    "spotifyUrl": "https://open.spotify.com/artist/6uUaWM6YDaguPIgJZ01rqO",
+    "spotifyId": "6uUaWM6YDaguPIgJZ01rqO"
   },
   "sonata arctica": {
     "aliases": [],
@@ -4495,7 +4500,6 @@
     "spotifyUrl": "https://api.spotify.com/v1/artists/5YeoQ1L71cXDMpSpqxOjfH",
     "spotifyId": "5YeoQ1L71cXDMpSpqxOjfH"
   },
-
   "soon": {
     "aliases": [],
     "genres": [],
@@ -4551,11 +4555,12 @@
   },
   "spons": {
     "aliases": [],
-    "genres": [],
-    "spotifyUrl": "",
-    "spotifyId": ""
+    "genres": [
+      "trap argentino"
+    ],
+    "spotifyUrl": "https://open.spotify.com/artist/5PYNYuJvINkkQZV6ncScjf",
+    "spotifyId": "5PYNYuJvINkkQZV6ncScjf"
   },
-
   "steve von till": {
     "aliases": [],
     "genres": [
@@ -4764,7 +4769,6 @@
     "spotifyUrl": "https://api.spotify.com/v1/artists/56o143X3dehRENOt3ctgnN",
     "spotifyId": "56o143X3dehRENOt3ctgnN"
   },
-
   "ter ziele": {
     "aliases": [],
     "genres": [],
@@ -4824,7 +4828,6 @@
     "spotifyUrl": "https://api.spotify.com/v1/artists/1ZEsJA3COoRrQM2Wz0Yngu",
     "spotifyId": "1ZEsJA3COoRrQM2Wz0Yngu"
   },
-
   "the bøk": {
     "aliases": [],
     "genres": [],
@@ -4867,7 +4870,6 @@
     "spotifyUrl": "https://api.spotify.com/v1/artists/5syWd6fU4rdGIsHox40hMA",
     "spotifyId": "5syWd6fU4rdGIsHox40hMA"
   },
-
   "the covids": {
     "aliases": [],
     "genres": [],
@@ -4912,7 +4914,9 @@
     "spotifyId": "3xWO6nOrnGGL9hfB2vWxLI"
   },
   "the exploited": {
-    "aliases": ["theexploited"],
+    "aliases": [
+      "theexploited"
+    ],
     "genres": [
       "hardcore punk",
       "punk",
@@ -5122,7 +5126,6 @@
     "spotifyUrl": "https://api.spotify.com/v1/artists/0w2KUuMj7dvP8dV4tzoltd",
     "spotifyId": "0w2KUuMj7dvP8dV4tzoltd"
   },
- 
   "the sisters of mercy": {
     "aliases": [],
     "genres": [],
@@ -5147,7 +5150,6 @@
     "spotifyUrl": "https://api.spotify.com/v1/artists/754MJLtzkbA0nNvpB2pUvy",
     "spotifyId": "754MJLtzkbA0nNvpB2pUvy"
   },
-
   "the waeve": {
     "aliases": [],
     "genres": [],
@@ -5369,7 +5371,6 @@
     "spotifyUrl": "https://api.spotify.com/v1/artists/4wsg78KGu80m8Xk37PY2uG",
     "spotifyId": "4wsg78KGu80m8Xk37PY2uG"
   },
-
   "ultrabomb": {
     "aliases": [],
     "genres": [],
@@ -5441,7 +5442,6 @@
     "spotifyUrl": "https://api.spotify.com/v1/artists/3hAv15rFpsTe7zteKhhJTx",
     "spotifyId": "3hAv15rFpsTe7zteKhhJTx"
   },
- 
   "verwilderd": {
     "aliases": [],
     "genres": [],
@@ -5760,7 +5760,6 @@
     "spotifyUrl": "https://api.spotify.com/v1/artists/18E5A1RYyV1wElPAwPlWfl",
     "spotifyId": "18E5A1RYyV1wElPAwPlWfl"
   },
-
   "zeerow": {
     "aliases": [],
     "genres": [],
@@ -5778,14 +5777,15 @@
     "spotifyId": "1vKXAkXBGSbjgGcOPYLI6j"
   },
   "batushka": {
-    "aliases": [
-      "батюшка (pl, exclusieve benelux show)",
-      "batushka",
-      "батюшка"
+    "aliases": [],
+    "genres": [
+      "black metal",
+      "polish black metal",
+      "polish metal",
+      "voidgaze"
     ],
-    "genres": [],
-    "spotifyUrl": null,
-    "spotifyId": null
+    "spotifyUrl": "https://open.spotify.com/artist/15LsRgSmN0t8VLcsUFYW5J",
+    "spotifyId": "15LsRgSmN0t8VLcsUFYW5J"
   },
   "locura": {
     "aliases": [],
@@ -5805,8 +5805,6 @@
     "spotifyUrl": "https://api.spotify.com/v1/artists/2G9XBKin2Ds71V0CfF0Wi8",
     "spotifyId": "2G9XBKin2Ds71V0CfF0Wi8"
   },
-  
-
   "gbh": {
     "aliases": [],
     "genres": [
@@ -5818,7 +5816,6 @@
     "spotifyUrl": "https://api.spotify.com/v1/artists/0yqupKw0GMDWXHpsxCPysY",
     "spotifyId": "0yqupKw0GMDWXHpsxCPysY"
   },
-
   "firewind & masterplan": {
     "aliases": [
       "firewind & masterplan (gr & ger)"
@@ -5850,7 +5847,6 @@
     "spotifyUrl": "https://api.spotify.com/v1/artists/2umfUKK66d4e91qGyVZ5yi",
     "spotifyId": "2umfUKK66d4e91qGyVZ5yi"
   },
-
   "ploe­gen­dienst": {
     "aliases": [],
     "genres": [],
@@ -5932,47 +5928,59 @@
     "spotifyUrl": "https://api.spotify.com/v1/artists/3o4fUiasOIIsbjY8urlqX9",
     "spotifyId": "3o4fUiasOIIsbjY8urlqX9"
   },
-  
-
   "lijkschouwer": {
     "aliases": [],
-    "genres": [],
-    "spotifyUrl": null,
-    "spotifyId": null
+    "genres": [
+      "dutch black metal"
+    ],
+    "spotifyUrl": "https://open.spotify.com/artist/6uAcDzM8g0TpIitJegBJGN",
+    "spotifyId": "6uAcDzM8g0TpIitJegBJGN"
   },
   "splinter": {
     "aliases": [],
-    "genres": [],
-    "spotifyUrl": null,
-    "spotifyId": null
+    "genres": [
+      "british blues"
+    ],
+    "spotifyUrl": "https://open.spotify.com/artist/77aUDqXRIvkDNxARfYwoHC",
+    "spotifyId": "77aUDqXRIvkDNxARfYwoHC"
   },
   "onhou": {
     "aliases": [],
     "genres": [],
-    "spotifyUrl": null,
-    "spotifyId": null
+    "spotifyUrl": "https://open.spotify.com/artist/2fNlKFqDDgWuAOhNWomHbP",
+    "spotifyId": "2fNlKFqDDgWuAOhNWomHbP"
   },
-  
   "metsatöll": {
     "aliases": [],
-    "genres": [],
-    "spotifyUrl": null,
-    "spotifyId": null
+    "genres": [
+      "estonian metal",
+      "estonian rock",
+      "folk metal",
+      "slavic metal",
+      "viking metal"
+    ],
+    "spotifyUrl": "https://open.spotify.com/artist/5LJPlSHiYtJQ7mvVfDPVkT",
+    "spotifyId": "5LJPlSHiYtJQ7mvVfDPVkT"
   },
   "suotana": {
     "aliases": [],
-    "genres": [],
-    "spotifyUrl": null,
-    "spotifyId": null
+    "genres": [
+      "finnish black metal",
+      "finnish melodeath",
+      "lapland metal"
+    ],
+    "spotifyUrl": "https://open.spotify.com/artist/3hGRvDW3UnwxI5OIsfwEGx",
+    "spotifyId": "3hGRvDW3UnwxI5OIsfwEGx"
   },
   "undawn": {
     "aliases": [],
-    "genres": [],
-    "spotifyUrl": null,
-    "spotifyId": null
+    "genres": [
+      "deep metalcore",
+      "melodic groove metal"
+    ],
+    "spotifyUrl": "https://open.spotify.com/artist/1chxqFyOvUe6uNFH1Lz2hO",
+    "spotifyId": "1chxqFyOvUe6uNFH1Lz2hO"
   },
-  
-
   "spullen": {
     "aliases": [],
     "genres": [],
@@ -5985,12 +5993,15 @@
     "spotifyUrl": null,
     "spotifyId": null
   },
-  
   "holly golightly": {
     "aliases": [],
-    "genres": [],
-    "spotifyUrl": null,
-    "spotifyId": null
+    "genres": [
+      "kent indie",
+      "medway sound",
+      "punk blues"
+    ],
+    "spotifyUrl": "https://open.spotify.com/artist/3giOet7O2pgPUYOujF4ifa",
+    "spotifyId": "3giOet7O2pgPUYOujF4ifa"
   },
   "lustobject": {
     "aliases": [],
@@ -5998,13 +6009,11 @@
     "spotifyUrl": null,
     "spotifyId": null
   },
-  
-  
   "asociaal kabaal": {
     "aliases": [],
     "genres": [],
-    "spotifyUrl": null,
-    "spotifyId": null
+    "spotifyUrl": "https://open.spotify.com/artist/4CPhEXJm3obY2YOjK2uLqb",
+    "spotifyId": "4CPhEXJm3obY2YOjK2uLqb"
   },
   "hierrr pak aan!": {
     "aliases": [],
@@ -6012,8 +6021,6 @@
     "spotifyUrl": null,
     "spotifyId": null
   },
-
-
   "king gizzard & the lizard wizard": {
     "aliases": [],
     "genres": [
@@ -6025,78 +6032,82 @@
     "spotifyUrl": "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
     "spotifyId": "6XYvaoDGE0VmRt83Jss9Sn"
   },
-  
   "bullshit generator": {
     "aliases": [],
     "genres": [],
     "spotifyUrl": null,
     "spotifyId": null
   },
-  
-  
   "of virtue": {
     "aliases": [],
-    "genres": [],
-    "spotifyUrl": null,
-    "spotifyId": null
+    "genres": [
+      "american metalcore",
+      "metalcore"
+    ],
+    "spotifyUrl": "https://open.spotify.com/artist/4GnK2zRFtw1gBoiFORWHsA",
+    "spotifyId": "4GnK2zRFtw1gBoiFORWHsA"
   },
-  
   "swell": {
     "aliases": [],
-    "genres": [],
-    "spotifyUrl": null,
-    "spotifyId": null
+    "genres": [
+      "alternative emo",
+      "anthem emo",
+      "easycore",
+      "melodic hardcore",
+      "pop punk",
+      "skate punk"
+    ],
+    "spotifyUrl": "https://open.spotify.com/artist/1xpkFcz84H5OVOgbDGcYxw",
+    "spotifyId": "1xpkFcz84H5OVOgbDGcYxw"
   },
   "no way": {
     "aliases": [],
-    "genres": [],
-    "spotifyUrl": null,
-    "spotifyId": null
+    "genres": [
+      "punk tico"
+    ],
+    "spotifyUrl": "https://open.spotify.com/artist/3TamFqEpNVHzzrNxzBhgaH",
+    "spotifyId": "3TamFqEpNVHzzrNxzBhgaH"
   },
-  
-  
   "andrew paley": {
     "aliases": [],
     "genres": [],
-    "spotifyUrl": null,
-    "spotifyId": null
+    "spotifyUrl": "https://open.spotify.com/artist/17YZc3pOoK9itwBjQKiLvb",
+    "spotifyId": "17YZc3pOoK9itwBjQKiLvb"
   },
-
   "tytan": {
     "aliases": [],
     "genres": [],
-    "spotifyUrl": null,
-    "spotifyId": null
+    "spotifyUrl": "https://open.spotify.com/artist/5fTJwRSBleAeLkLivVLDZ4",
+    "spotifyId": "5fTJwRSBleAeLkLivVLDZ4"
   },
-  
   "bloodcrypt": {
     "aliases": [],
     "genres": [],
-    "spotifyUrl": null,
-    "spotifyId": null
+    "spotifyUrl": "https://open.spotify.com/artist/545y56kmDi0Jcfkl1sEiwZ",
+    "spotifyId": "545y56kmDi0Jcfkl1sEiwZ"
   },
   "dowzer": {
     "aliases": [],
-    "genres": [],
-    "spotifyUrl": null,
-    "spotifyId": null
+    "genres": [
+      "dutch punk rock"
+    ],
+    "spotifyUrl": "https://open.spotify.com/artist/3jEG58eqTEIQNTAVLr7cGx",
+    "spotifyId": "3jEG58eqTEIQNTAVLr7cGx"
   },
   "captain slow": {
     "aliases": [],
     "genres": [],
-    "spotifyUrl": null,
-    "spotifyId": null
+    "spotifyUrl": "https://open.spotify.com/artist/0LKFYsFXjyWAay1diiDj2d",
+    "spotifyId": "0LKFYsFXjyWAay1diiDj2d"
   },
-  
   "becoming a.d. (be)": {
     "aliases": [],
-    "genres": [],
-    "spotifyUrl": null,
-    "spotifyId": null
+    "genres": [
+      "belgian hardcore"
+    ],
+    "spotifyUrl": "https://open.spotify.com/artist/3BT3ovkOiznDSgiP46i7ee",
+    "spotifyId": "3BT3ovkOiznDSgiP46i7ee"
   },
-
-  
-  
   "back to sabbath": {
     "aliases": [],
     "genres": [],
@@ -6105,9 +6116,11 @@
   },
   "violation of trust": {
     "aliases": [],
-    "genres": [],
-    "spotifyUrl": null,
-    "spotifyId": null
+    "genres": [
+      "lowlands hardcore"
+    ],
+    "spotifyUrl": "https://open.spotify.com/artist/1d5bqUciULUFOFz2hhVtdi",
+    "spotifyId": "1d5bqUciULUFOFz2hhVtdi"
   },
   "miners of muzo": {
     "aliases": [],
@@ -6121,31 +6134,36 @@
     "spotifyUrl": null,
     "spotifyId": null
   },
-  
   "barend courbois": {
     "aliases": [],
     "genres": [],
-    "spotifyUrl": null,
-    "spotifyId": null
+    "spotifyUrl": "https://open.spotify.com/artist/39TVvFAraZDNZo5XVlVMav",
+    "spotifyId": "39TVvFAraZDNZo5XVlVMav"
   },
-  
   "hackberry": {
     "aliases": [],
-    "genres": [],
-    "spotifyUrl": null,
-    "spotifyId": null
+    "genres": [
+      "cajun"
+    ],
+    "spotifyUrl": "https://open.spotify.com/artist/0oPTSMKzCzBNXPVqTOhfE1",
+    "spotifyId": "0oPTSMKzCzBNXPVqTOhfE1"
   },
   "the one": {
     "aliases": [],
-    "genres": [],
-    "spotifyUrl": null,
-    "spotifyId": null
+    "genres": [
+      "mod revival",
+      "protopunk",
+      "pub rock",
+      "uk post-punk"
+    ],
+    "spotifyUrl": "https://open.spotify.com/artist/16VudBYGOd9sMpOtA0szfp",
+    "spotifyId": "16VudBYGOd9sMpOtA0szfp"
   },
   "physical graffiti": {
     "aliases": [],
     "genres": [],
-    "spotifyUrl": null,
-    "spotifyId": null
+    "spotifyUrl": "https://open.spotify.com/artist/4YfSWADGI6HbMwFKgRD0LV",
+    "spotifyId": "4YfSWADGI6HbMwFKgRD0LV"
   },
   "the bootleg beatles": {
     "aliases": [],
@@ -6153,50 +6171,70 @@
     "spotifyUrl": null,
     "spotifyId": null
   },
-  
   "mike dawes": {
     "aliases": [],
-    "genres": [],
-    "spotifyUrl": null,
-    "spotifyId": null
+    "genres": [
+      "fingerstyle"
+    ],
+    "spotifyUrl": "https://open.spotify.com/artist/3B83ffT0B4Si3ttxzY9fMz",
+    "spotifyId": "3B83ffT0B4Si3ttxzY9fMz"
   },
   "matt schofield": {
     "aliases": [],
-    "genres": [],
-    "spotifyUrl": null,
-    "spotifyId": null
+    "genres": [
+      "british blues",
+      "modern blues"
+    ],
+    "spotifyUrl": "https://open.spotify.com/artist/2X84rq2QtQimpEoY6Ms7JE",
+    "spotifyId": "2X84rq2QtQimpEoY6Ms7JE"
   },
   "søwt": {
     "aliases": [],
     "genres": [],
-    "spotifyUrl": null,
-    "spotifyId": null
+    "spotifyUrl": "https://open.spotify.com/artist/28QscF8iPOn8bui47pBMwp",
+    "spotifyId": "28QscF8iPOn8bui47pBMwp"
   },
   "lauren babic": {
     "aliases": [],
-    "genres": [],
-    "spotifyUrl": null,
-    "spotifyId": null
+    "genres": [
+      "canadian post-hardcore",
+      "hel"
+    ],
+    "spotifyUrl": "https://open.spotify.com/artist/6nT7RjBCuuggrafnb43vUX",
+    "spotifyId": "6nT7RjBCuuggrafnb43vUX"
   },
   "angel witch": {
     "aliases": [],
-    "genres": [],
-    "spotifyUrl": null,
-    "spotifyId": null
+    "genres": [
+      "metal",
+      "nwobhm",
+      "speed metal",
+      "thrash metal"
+    ],
+    "spotifyUrl": "https://open.spotify.com/artist/6L48AOtGmQL1ELLoKML7cS",
+    "spotifyId": "6L48AOtGmQL1ELLoKML7cS"
   },
   "for i am king": {
     "aliases": [],
-    "genres": [],
-    "spotifyUrl": null,
-    "spotifyId": null
+    "genres": [
+      "dutch death metal",
+      "slayer"
+    ],
+    "spotifyUrl": "https://open.spotify.com/artist/2etNWORcmPZZBKxcyt6dF4",
+    "spotifyId": "2etNWORcmPZZBKxcyt6dF4"
   },
- "emmure": {
+  "emmure": {
     "aliases": [],
-    "genres": [],
-    "spotifyUrl": null,
-    "spotifyId": null
+    "genres": [
+      "deathcore",
+      "melodic metalcore",
+      "metalcore",
+      "nu-metalcore",
+      "rap metal"
+    ],
+    "spotifyUrl": "https://open.spotify.com/artist/1C62FV9Cltn9L4c9jAwCyk",
+    "spotifyId": "1C62FV9Cltn9L4c9jAwCyk"
   },
-  
   "restraining order": {
     "aliases": [],
     "genres": [
@@ -6213,14 +6251,14 @@
   "bazes": {
     "aliases": [],
     "genres": [],
-    "spotifyUrl": null,
-    "spotifyId": null
+    "spotifyUrl": "https://open.spotify.com/artist/6UJByAfdx9XIJb6Xjye61d",
+    "spotifyId": "6UJByAfdx9XIJb6Xjye61d"
   },
   "yellowgreen": {
     "aliases": [],
     "genres": [],
-    "spotifyUrl": null,
-    "spotifyId": null
+    "spotifyUrl": "https://open.spotify.com/artist/62g5ssQ4LoXqoS6w9u1DG1",
+    "spotifyId": "62g5ssQ4LoXqoS6w9u1DG1"
   },
   "p60's radar": {
     "aliases": [],
@@ -6228,7 +6266,6 @@
     "spotifyUrl": null,
     "spotifyId": null
   },
-  
   "knight of the guitar": {
     "aliases": [],
     "genres": [],
@@ -6237,11 +6274,12 @@
   },
   "gyasi": {
     "aliases": [],
-    "genres": [],
-    "spotifyUrl": null,
-    "spotifyId": null
+    "genres": [
+      "ghanaian gospel"
+    ],
+    "spotifyUrl": "https://open.spotify.com/artist/0kzotKn8qEhH6ZJxIpkahg",
+    "spotifyId": "0kzotKn8qEhH6ZJxIpkahg"
   },
- 
   "zero's hard": {
     "aliases": [],
     "genres": [],
@@ -6250,9 +6288,12 @@
   },
   "pox": {
     "aliases": [],
-    "genres": [],
-    "spotifyUrl": null,
-    "spotifyId": null
+    "genres": [
+      "argentine punk",
+      "indie cordoba"
+    ],
+    "spotifyUrl": "https://open.spotify.com/artist/0wf2XJggeZ8KvPFSMvIgfV",
+    "spotifyId": "0wf2XJggeZ8KvPFSMvIgfV"
   },
   "dikasterion": {
     "aliases": [],
