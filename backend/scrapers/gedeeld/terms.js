@@ -120,6 +120,7 @@ const goodCategories = [
   'surfpunkabilly',
   'symphonic metal',
   'thrash',
+  'heavy showcase',
 ];
 
 export default {
