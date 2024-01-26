@@ -17,9 +17,20 @@
     "venueEventUrl": "https://bibelot.net/programma/magnetica-be-metallica-tribute/",
     "title": "Magnetica (be) – metallica tribute",
     "location": "bibelot",
-    "price": 20,
+    "price": 2023,
     "longText": "../public/texts/bibelot/YWduZXRpY2EtYmUtbWV0YWxsaWNhLXRyaWJ1dGUv.html",
     "image": "../public/event-images/bibelot/YWduZXRpY2EtYmUtbWV0YWxsaWNhLXRyaWJ1dGUv",
+    "soldOut": false
+  },
+  {
+    "door": "2023-11-13T21:00:00",
+    "start": "2023-11-13T21:00:00",
+    "venueEventUrl": "https://bibelot.net/programma/dancelot-goes-back-to-1997/",
+    "title": "Dancelot goes back to 1997",
+    "location": "bibelot",
+    "price": 0,
+    "longText": "../public/texts/bibelot/bWEvZGFuY2Vsb3QtZ29lcy1iYWNrLXRvLTE5OTcv.html",
+    "image": "../public/event-images/bibelot/bWEvZGFuY2Vsb3QtZ29lcy1iYWNrLXRvLTE5OTcv",
     "soldOut": false
   },
   {
@@ -39,7 +50,7 @@
     "venueEventUrl": "https://bibelot.net/programma/dordrecht-metal-fest/",
     "title": "Dordrecht Metal Fest",
     "location": "bibelot",
-    "price": 20,
+    "price": 2024,
     "longText": "../public/texts/bibelot/cm9ncmFtbWEvZG9yZHJlY2h0LW1ldGFsLWZlc3Qv.html",
     "image": "../public/event-images/bibelot/cm9ncmFtbWEvZG9yZHJlY2h0LW1ldGFsLWZlc3Qv",
     "soldOut": false
@@ -50,7 +61,7 @@
     "venueEventUrl": "https://bibelot.net/programma/smells-like-nirvana/",
     "title": "Smells Like Nirvana",
     "location": "bibelot",
-    "price": 20,
+    "price": 0,
     "longText": "../public/texts/bibelot/cHJvZ3JhbW1hL3NtZWxscy1saWtlLW5pcnZhbmEv.html",
     "image": "../public/event-images/bibelot/cHJvZ3JhbW1hL3NtZWxscy1saWtlLW5pcnZhbmEv",
     "soldOut": false
@@ -61,7 +72,7 @@
     "venueEventUrl": "https://bibelot.net/programma/pidzama-porno/",
     "title": "Pidżama Porno(PL)",
     "location": "bibelot",
-    "price": 20,
+    "price": 0,
     "longText": "../public/texts/bibelot/dC5uZXQvcHJvZ3JhbW1hL3BpZHphbWEtcG9ybm8v.html",
     "image": "../public/event-images/bibelot/dC5uZXQvcHJvZ3JhbW1hL3BpZHphbWEtcG9ybm8v",
     "soldOut": false

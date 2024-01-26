@@ -24,12 +24,13 @@ export default class ScraperConfig {
         // make base events
         requiredProperties: [], // waarop base events worden gecontroleerd
         useCustomScraper: false, // geen puppeteer, geen page aangemaakt
-        asyncCheck: ['refused', 'allowed', 'forbidden-terms', 'good-terms'],
+        asyncCheckFuncs: [],
       },
       singlePage: {
         // get page info
         useCustomScraper: null, // geen puppeteer, geen page aangemaakt
         requiredProperties: [], // waarop page Info word gecontroleerd
+        asyncCheckFuncs: [],
       },
     },
   };
@@ -71,6 +72,8 @@ export default class ScraperConfig {
       useCustomScraper: obj?.app?.mainPage?.useCustomScraper ?? bc.app.mainPage.useCustomScraper,
       requiredProperties:
         obj?.app?.mainPage?.requiredProperties ?? bc.app.mainPage.requiredProperties,
+      asyncCheckFuncs:
+        obj?.app?.mainPage?.asyncCheckFuncs ?? bc.app.mainPage.asyncCheckFuncs,
     };
 
     this._s.app.singlePage = {
@@ -78,6 +81,8 @@ export default class ScraperConfig {
         obj?.app?.singlePage?.useCustomScraper ?? bc.app.singlePage.useCustomScraper,
       requiredProperties:
         obj?.app?.singlePage?.requiredProperties ?? bc.app.singlePage.requiredProperties,
+      asyncCheckFuncs:
+        obj?.app?.singlePage?.asyncCheckFuncs ?? bc.app.singlePage.asyncCheckFuncs,
     };
   }
 }

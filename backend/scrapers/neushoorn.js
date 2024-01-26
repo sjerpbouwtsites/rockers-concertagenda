@@ -24,115 +24,17 @@ const scraper = new AbstractScraper({
   app: {
     mainPage: {
       requiredProperties: ['venueEventUrl', 'title'],
+      asyncCheckFuncs: ['allowed', 'event', 'refused', 'goodTerms', 'forbiddenTerms', 'custom1', 'saveRefused', 'emptyFailure'],
     },
     singlePage: {
       requiredProperties: ['venueEventUrl', 'title', 'start'],
     },
   },
 });
-// #endregion                          SCRAPER CONFIG
+// #endregion           
 
-scraper.listenToMasterThread();
-
-// #region [rgba(60, 0, 0, 0.5)]      MAIN PAGE EVENT CHECK
-scraper.mainPageAsyncCheck = async function (event) {
-  const reasons = [];
-
-  this.talkToDB({
-    type: 'db-request',
-    subtype: 'isAllowed',
-    messageData: {
-      string: event.title,
-    },
-  });
-  await this.checkDBhasAnswered();
-  reasons.push(this.lastDBAnswer.reason);
-  if (this.lastDBAnswer.success) {
-    this.skipFurtherChecks.push(event.title);
-    return {
-      event,
-      reason: reasons.reverse().join(','),
-      success: true,
-    };
-  }
-
-  this.talkToDB({
-    type: 'db-request',
-    subtype: 'isRockEvent',
-    messageData: {
-      string: event.title,
-    },
-  });
-  await this.checkDBhasAnswered();
-  reasons.push(this.lastDBAnswer.reason);
-  if (this.lastDBAnswer.success) {
-    this.talkToDB({
-      type: 'db-request',
-      subtype: 'saveAllowedTitle',
-      messageData: {
-        string: event.title,
-        reason: reasons.reverse().join(', '),
-      },
-    });     
-    this.skipFurtherChecks.push(event.title);
-    return {
-      event,
-      reason: reasons.reverse().join(','),
-      success: true,
-    };
-  }  
-  
-  this.talkToDB({
-    type: 'db-request',
-    subtype: 'isRefused',
-    messageData: {
-      string: event.title,
-    },
-  });
-  await this.checkDBhasAnswered();
-  reasons.push(this.lastDBAnswer.reason);
-  if (this.lastDBAnswer.success) {
-    return {
-      event,
-      reason: reasons.reverse().join(','),
-      success: false,
-    };
-  }
-
-  const goodTermsRes = await this.hasGoodTerms(event);
-  reasons.push(goodTermsRes.reason);
-  if (goodTermsRes.success) {
-    this.skipFurtherChecks.push(event.title);
-    this.talkToDB({
-      type: 'db-request',
-      subtype: 'saveAllowedTitle',
-      messageData: {
-        string: event.title,
-        reason: reasons.reverse().join(', '),
-      },
-    });  
-    return goodTermsRes;
-  }  
-
-  const hasForbiddenTerms = await this.hasForbiddenTerms(event);
-  reasons.push(hasForbiddenTerms.reason);
-  if (hasForbiddenTerms.success) {
-    this.talkToDB({
-      type: 'db-request',
-      subtype: 'saveRefusedTitle',
-      messageData: {
-        string: event.title,
-        reason: reasons.reverse().join(', '),
-      },
-    });    
-    
-    return {
-      event,
-      reason: reasons.reverse().join(','),
-      success: false,
-    };
-  }
-
+scraper.asyncCustomCheck1 = async function (event, reasons) {
+  const reasonsCopy = Array.isArray(reasons) ? reasons : [];
   let overdinges = null;
   if (event.title.toLowerCase().trim().match(/\s[-–]\s/)) {
     const a = event.title.toLowerCase().trim().replace(/\s[-–]\s.*/, '');
@@ -140,41 +42,33 @@ scraper.mainPageAsyncCheck = async function (event) {
   }
 
   const isRockRes = await this.isRock(event, overdinges);
+  reasonsCopy.push(isRockRes.reason);
   if (isRockRes.success) {
     this.talkToDB({
       type: 'db-request',
       subtype: 'saveAllowedTitle',
       messageData: {
         string: event.title,
-        reason: reasons.reverse().join(', '),
+        reason: reasonsCopy.reverse().join(', '),
       },
     }); 
     return {
       event,
       reason: reasons.reverse().join(','),
+      reasons: reasonsCopy,
+      break: true,
       success: true,
     };
-  }
-  this.talkToDB({
-    type: 'db-request',
-    subtype: 'saveRefusedTitle',
-    messageData: {
-      string: event.title,
-      reason: reasons.reverse().join(', '),
-    },
-  }); 
-
+  }  
   return {
+    break: false,
+    success: null,
     event,
-    reason: reasons.reverse().join(', '),
-    success: true,
-  };
+    reasons: reasonsCopy,
+  };  
 };
 
-// #endregion                          MAIN PAGE EVENT CHECK
-
-// #region [rgba(0, 180, 0, 0.1)]      SINGLE PAGE EVENT CHECK
-// #endregion                          SINGLE PAGE EVENT CHECK
+scraper.listenToMasterThread();
 
 // #region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
 scraper.mainPage = async function () {

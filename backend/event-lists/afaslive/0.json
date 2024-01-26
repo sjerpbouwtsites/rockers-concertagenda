@@ -88,6 +88,17 @@
     "soldOut": false
   },
   {
+    "door": "2024-09-19T20:00:00",
+    "start": "2024-09-19T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/epica-show2",
+    "title": "Epica",
+    "location": "afaslive",
+    "price": 95.2,
+    "longText": "../public/texts/afaslive/YWZhc2xpdmUubmwvYWdlbmRhL2VwaWNhLXNob3cy.html",
+    "image": "../public/event-images/afaslive/YWZhc2xpdmUubmwvYWdlbmRhL2VwaWNhLXNob3cy",
+    "soldOut": false
+  },
+  {
     "door": "2024-09-20T20:00:00",
     "start": "2024-09-20T20:00:00",
     "venueEventUrl": "https://www.afaslive.nl/agenda/epica",
@@ -96,7 +107,7 @@
     "price": 95.2,
     "longText": "../public/texts/afaslive/Ly93d3cuYWZhc2xpdmUubmwvYWdlbmRhL2VwaWNh.html",
     "image": "../public/event-images/afaslive/Ly93d3cuYWZhc2xpdmUubmwvYWdlbmRhL2VwaWNh",
-    "soldOut": false
+    "soldOut": true
   },
   {
     "door": "2024-10-05T18:30:00",

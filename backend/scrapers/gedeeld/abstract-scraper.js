@@ -14,6 +14,7 @@ import debugSettings from './debug-settings.js';
 import terms from './terms.js';
 import _getPriceFromHTML from './price.js';
 import shell from '../../mods/shell.js';
+
 // #endregion                                              IMPORTS
 
 export default class AbstractScraper extends ScraperConfig {
@@ -441,19 +442,14 @@ export default class AbstractScraper extends ScraperConfig {
   }
 
   /**
-   * abstracte methode, te overschrijve in de kindWorkers.
+   * 
    *
    * @param event om te controleren
    * @return {event {singes, success bool}}
    * @memberof AbstractScraper
    */
   async mainPageAsyncCheck(event) {
-    // abstracte methode, over te schrijven
-    return {
-      event,
-      success: true,
-      reason: null,
-    };
+    return this.recursiveAsyncChecker(this._s.app.mainPage.asyncCheckFuncs, event, []);
   }
 
   // #endregion                                                 MAIN PAGE CHECK
@@ -765,17 +761,11 @@ export default class AbstractScraper extends ScraperConfig {
   }
 
   /**
-   * abstracte methode, te overschrijve in de kindWorkers.
    *
    * @memberof AbstractScraper
    */
   async singlePageAsyncCheck(event) {
-    // abstracte methode, over te schrijven
-    return {
-      event,
-      success: true,
-      reason: null,
-    };
+    return this.recursiveAsyncChecker(this._s.app.mainPage.asyncCheckFuncs, event, []);
   }
   // #endregion                                                 SINGLE PAGE
 
@@ -1315,4 +1305,327 @@ export default class AbstractScraper extends ScraperConfig {
       }
     });
   }
+
+  // #region [rgba(255, 0, 0, 0.1)]      MAIN PAGE EVENT CHECK
+  
+  async recursiveAsyncChecker(listOfFuncs, event, reasons = []) {
+    if (!listOfFuncs.length) {
+      return {
+        success: true,
+        break: true,
+        reasons: ['no checks'],
+        reason: 'no checks',  
+        event,
+      }; 
+    }
+    
+    const reasonsCopy = Array.isArray(reasons) ? reasons : [];
+
+    if (this.skipFurtherChecks.includes(event.title)) {
+      reasons.push("allready check main");
+      return {
+        event,
+        reason: reasons.reverse().join(','),
+        reasons: reasonsCopy,
+        break: true,
+        success: true,
+      };    
+    }
+    
+    const funcNamesMap = {
+      allowed: 'asyncCheckIsAllowed',
+      refused: 'asyncCheckIsRefused',
+      emptySuccess: 'asyncCheckEmptySuccess',
+      emptyFailure: 'asyncCheckEmptyFailure',
+      event: 'asyncCheckIsEvent',
+      forbiddenTerms: 'asyncCheckForbiddenTerms',
+      goodTerms: 'asyncCheckGoodTerms',
+      isRock: 'asyncCheckIsRock',
+      saveAllowed: 'asyncSaveAllowed',
+      saveRefused: 'asyncSaveRefused',
+      custom1: 'asyncCustomCheck1',
+      getArtists: 'asyncGetArtists',
+    };
+
+    const listOfFuncsCopy = [...listOfFuncs];
+    const curFunc = listOfFuncsCopy.shift();
+    const curFuncName = funcNamesMap[curFunc];
+
+    const result = await this[curFuncName](event, reasonsCopy);
+    if (result.break) return result;
+    return this.recursiveAsyncChecker(listOfFuncsCopy, event, result.reasons);
+  }
+  
+  async asyncCheckIsAllowed(event, reasons) {
+    const reasonsCopy = Array.isArray(reasons) ? reasons : [];
+    if (event?.artists.length) {
+      reasonsCopy.push(`has ${event.artists.length} rock artists`);
+      return {
+        break: true,
+        success: true,
+        reasons, 
+        reason: reasonsCopy.reverse().join(', '),
+      };
+    }
+    reasonsCopy.push(`no rock artists`);
+    return {
+      break: false,
+      success: false,
+      reasons, 
+      reason: reasonsCopy.reverse().join(', '),
+    };
+    // const reasonsCopy = Array.isArray(reasons) ? reasons : [];
+    // this.talkToDB({
+    //   type: 'db-request',
+    //   subtype: 'isAllowed',
+    //   messageData: {
+    //     string: event.title,
+    //   },
+    // });
+    // await this.checkDBhasAnswered();
+    // reasonsCopy.push(this.lastDBAnswer.reason);
+    // if (this.lastDBAnswer.success) {
+    //   this.skipFurtherChecks.push(event.title);
+    //   return {
+    //     event,
+    //     success: true,
+    //     break: true,
+    //     reasons: reasonsCopy,
+    //     reason: reasonsCopy.reverse().join(', '),
+    //   };
+    // }
+    // return {
+    //   break: false,
+    //   success: null,
+    //   event,
+    //   reasons: reasonsCopy,
+    // };    
+  }
+
+  async asyncCheckIsRefused(event, reasons) {
+    const reasonsCopy = Array.isArray(reasons) ? reasons : [];
+    this.talkToDB({
+      type: 'db-request',
+      subtype: 'isRefused',
+      messageData: {
+        string: event.title,
+      },
+    });
+    await this.checkDBhasAnswered();
+    reasonsCopy.push(this.lastDBAnswer.reason);
+    if (this.lastDBAnswer.success) {
+      return {
+        event,
+        reasons: reasonsCopy,
+        success: false,
+        break: true,
+        reason: reasonsCopy.reverse().join(', '),
+      };
+    }
+    return {
+      break: false,
+      success: null,
+      event,
+      reasons: reasonsCopy,
+    };    
+  }
+
+  async asyncCheckEmptySuccess(event, reasons) {
+    const reasonsCopy = Array.isArray(reasons) ? reasons : [];
+    reasonsCopy.push('empty success');
+    return {
+      break: true,
+      success: true,
+      event,
+      reasons: reasonsCopy,
+      reason: reasonsCopy.reverse().join(', '),
+    };    
+  }
+
+  async asyncCheckEmptyFailure(event, reasons) {
+    const reasonsCopy = Array.isArray(reasons) ? reasons : [];
+    reasonsCopy.push('empty failure');
+    return {
+      break: true,
+      success: false,
+      event,
+      reasons: reasonsCopy,
+      reason: reasonsCopy.reverse().join(', '),
+    };    
+  }
+
+  async asyncCheckForbiddenTerms(event, reasons) {
+    const reasonsCopy = Array.isArray(reasons) ? reasons : [];
+    const hasForbiddenTerms = await this.hasForbiddenTerms(event);
+    reasonsCopy.push(hasForbiddenTerms.reason);
+    if (hasForbiddenTerms.success) {
+      this.talkToDB({
+        type: 'db-request',
+        subtype: 'saveRefusedTitle',
+        messageData: {
+          string: event.title,
+          reason: hasForbiddenTerms.reason,
+        },
+      });    
+      return {
+        event,
+        reasons: reasonsCopy,
+        success: false,
+        break: true,
+        reason: reasonsCopy.reverse().join(', '),
+      };
+    }
+    return {
+      break: false,
+      success: null,
+      event,
+      reasons: reasonsCopy,
+    };    
+  }
+
+  async asyncCheckGoodTerms(event, reasons) {
+    const reasonsCopy = Array.isArray(reasons) ? reasons : [];
+    const goodTermsRes = await this.hasGoodTerms(event);
+    reasonsCopy.push(goodTermsRes.reason);
+    if (goodTermsRes.success) {
+      this.skipFurtherChecks.push(event.title);
+      this.talkToDB({
+        type: 'db-request',
+        subtype: 'saveAllowedTitle',
+        messageData: {
+          string: event.title,
+          reason: reasonsCopy.reverse().join(', '),
+        },
+      });  
+      return {
+        event,
+        reason: reasonsCopy.reverse().join(','),
+        reasons: reasonsCopy,
+        success: true,
+        break: true,
+      };
+    }  
+    return {
+      break: false,
+      success: null,
+      event,
+      reasons: reasonsCopy,
+    };    
+  }
+
+  async asyncCheckIsRock(event, reasons) {
+    const reasonsCopy = Array.isArray(reasons) ? reasons : [];
+    const isRockRes = await this.isRock(event);
+    reasonsCopy.push(isRockRes.reason);
+    if (isRockRes.success) {
+      this.talkToDB({
+        type: 'db-request',
+        subtype: 'saveAllowedTitle',
+        messageData: {
+          string: event.title,
+          reason: reasonsCopy.reverse().join(', '),
+        },
+      });    
+      return {
+        event,
+        break: true,
+        reason: reasonsCopy.reverse().join(','),
+        success: true,
+      };
+    } 
+    return {
+      break: false,
+      success: null,
+      event,
+      reasons: reasonsCopy,
+    };    
+  }
+
+  async asyncCheckIsEvent(event, reasons) {
+    const reasonsCopy = Array.isArray(reasons) ? reasons : [];
+    this.talkToDB({
+      type: 'db-request',
+      subtype: 'isRockEvent',
+      messageData: {
+        string: event.title,
+      },
+    });
+    await this.checkDBhasAnswered();
+    reasonsCopy.push(this.lastDBAnswer.reason);
+    if (this.lastDBAnswer.success) {
+      this.skipFurtherChecks.push(event.title);
+      return {
+        event,
+        reasons: reasonsCopy,
+        success: true,
+        break: true,
+        reason: reasonsCopy.reverse().join(', '),
+      };
+    } 
+    return {
+      break: false,
+      success: null,
+      event,
+      reasons: reasonsCopy,
+    };    
+  }
+
+  async asyncSaveAllowed(event, reasons) {
+    const reasonsCopy = Array.isArray(reasons) ? reasons : [];
+    this.talkToDB({
+      type: 'db-request',
+      subtype: 'saveAllowedTitle',
+      messageData: {
+        string: event.title,      
+      },
+    });    
+    return {
+      break: true,
+      success: true,
+      event,
+      reasons: reasonsCopy,
+      reason: reasonsCopy.reverse().join(', '),
+    };    
+  }
+
+  async asyncSaveRefused(event, reasons) {
+    const reasonsCopy = Array.isArray(reasons) ? reasons : [];
+    this.talkToDB({
+      type: 'db-request',
+      subtype: 'saveRefusedTitle',
+      messageData: {
+        string: event.title,
+        reason: reasons.reverse().join(', '),
+      },
+    });   
+    return {
+      break: true,
+      success: true,
+      event,
+      reasons: reasonsCopy,
+      reason: reasonsCopy.reverse().join(', '),
+    };    
+  }
+
+  async asyncGetArtists(event, reasons) {
+    const eventCopy = { ...event };
+    this.talkToDB({
+      type: 'db-request',
+      subtype: 'getArtistsFromEventTitle',
+      messageData: {
+        string: eventCopy.title,
+      },
+    });
+    await this.checkDBhasAnswered();
+    eventCopy.artists = this.lastDBAnswer.artists;
+    return {
+      event:eventCopy,
+      reasons,
+      success: !!this.lastDBAnswer.success,
+      break: false,
+      reason: reasons.reverse().join(', '),
+    };
+  }
+
+  // #endregion [rgba(255, 0, 0, 0.1)]      MAIN PAGE EVENT CHECK
 }

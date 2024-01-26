@@ -141,6 +141,14 @@ export default class Artists {
       return this.saveAllowedTitle(message.data.string, message.data?.reason);
     }
 
+    if (message.request === 'getArtistsFromEventTitle') {
+      const hasString = Object.prototype.hasOwnProperty.call(parsedMessage.data, 'string');
+      if (!hasString) {
+        return this.error(Error('geen event title string om te controleren!'));
+      }
+      return this.getArtistsFromEventTitle(message.data.string, message.data?.reason);
+    }
+
     return this.error(new Error(`request ${message.request} onbekend`));
   }
 
@@ -174,6 +182,22 @@ export default class Artists {
       data: artistFound,
       reason: `${searchForName} found`,
     });
+  }
+
+  getArtistsFromEventTitle(eventTitle) {
+    const searchForName = this.lowerCaseAndTrim(eventTitle);
+    const foundArtists = Object.entries(this.rockArtists).filter(([artistName, artistData]) => {
+      const nameInEventTitle = searchForName.includes(artistName);
+      if (nameInEventTitle) return nameInEventTitle;
+      const aliasInEventTitle = artistData.aliases
+        .find((alias) => searchForName.includes(alias));
+      return aliasInEventTitle;
+    });
+    return this.post({
+      success: foundArtists.length > 0,
+      data: foundArtists,
+      reason: ``,
+    });    
   }
 
   scanStringForArtists(string) {
@@ -283,9 +307,12 @@ export default class Artists {
     });
   }
 
-  saveAllowedTitle(string, reason) {
+  saveAllowedTitle(string) {
     const clean = this.lowerCaseAndTrim(string);
-    if (Object.prototype.hasOwnProperty.call(this.rockArtists, clean)) {
+    const isKeyVanEvents = Object.prototype.hasOwnProperty.call(this.rockEvents, clean);
+    const isAlInEvents = isKeyVanEvents || this.allRockEventsNamesAndAliases
+      .find((eventOfAlias) => clean.includes(eventOfAlias));
+    if (isAlInEvents) {
       // allready saved, should not be
       return this.post({
         success: false,
@@ -293,28 +320,17 @@ export default class Artists {
         reason: 'allready in rockArtists',
       });
     }
-    if (Object.prototype.hasOwnProperty.call(this.rockArtistAliases, clean)) {
-      const alias = clean;
-      const artistName = this.rockArtistAliases[alias];
-      this.rockArtists[artistName].aliases.push(alias);
-      if (reason) {
-        this.rockArtists[artistName].reason += reason.replace(/class='.*'\s/, '');
-      }
-      return this.post({
-        success: true,
-        data: null,
-        reason: 'save success via alias',
-      });
-    }
-    this.rockArtists[clean] = {
-      aliases: [],
+
+    this.rockEvents[clean] = {
+      aliases: [string],
       genres: [],
     };
+    
     return this.post({
       success: true,
       data: null,
-      reason: 'save success',
-    });    
+      reason: 'save success via alias',
+    });
   }
 
   persistNewRefusedAndRockArtists() {
@@ -334,6 +350,7 @@ export default class Artists {
     // );
     fs.writeFileSync(this.conf.refusedPath, JSON.stringify(this.refused, null, 2));
     fs.writeFileSync(this.conf.rockArtistPath, JSON.stringify(this.rockArtists, null, 2));
+    fs.writeFileSync(this.conf.rockEventsPath, JSON.stringify(this.rockEvents, null, 2));
   }
 
   error(err) {

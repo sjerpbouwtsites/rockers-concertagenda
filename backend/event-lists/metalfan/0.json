@@ -1,35 +1,11 @@
 [
   {
-    "title": "Agent Steel en Screamer",
-    "start": "2023-11-23",
-    "eventLocationName": "podium",
-    "shortText": "Podium, Hoogeveen",
-    "image": "../public/location-images/podium",
-    "location": "podium"
-  },
-  {
-    "title": "Vandenberg",
-    "start": "2023-11-26",
-    "eventLocationName": "hedon",
-    "shortText": "Hedon, Zwolle",
-    "image": "../public/location-images/hedon",
-    "location": "hedon"
-  },
-  {
-    "title": "Wolfheart, Before The Dawn en Hinayana",
-    "start": "2023-11-26",
-    "eventLocationName": "muziekgieterij",
-    "shortText": "Muziekgieterij, Maastricht",
-    "image": "../public/location-images/muziekgieterij",
-    "location": "muziekgieterij"
-  },
-  {
-    "title": "Danko Jones en Radkey",
-    "start": "2023-11-27",
-    "eventLocationName": "luxor live",
-    "shortText": "Luxor Live, Arnhem",
-    "image": "../public/location-images/luxorlive",
-    "location": "luxorlive"
+    "title": "Club Void: Ufomammut",
+    "start": "2023-11-29",
+    "eventLocationName": "effenaar",
+    "shortText": "Effenaar, Eindhoven",
+    "image": "../public/location-images/effenaar",
+    "location": "effenaar"
   },
   {
     "title": "Fear Factory, Butcher Babies en Ignea",
@@ -40,12 +16,68 @@
     "location": "trix"
   },
   {
+    "title": "Gorgoroth, Aeternus, Impalement em Aran Angmar",
+    "start": "2023-11-30",
+    "eventLocationName": "iduna",
+    "shortText": "Iduna, Drachten",
+    "image": "../public/location-images/iduna",
+    "location": "iduna"
+  },
+  {
     "title": "Man As Plague, The Unslain, Burning, Bildtstar en Beyond The Pale",
     "start": "2023-12-01",
     "eventLocationName": "rock café sneek",
     "shortText": "Rock Café Sneek, Sneek",
     "image": "../public/location-images/rockcafsneek",
     "location": "rockcafsneek"
+  },
+  {
+    "title": "Toxic Shock, Utopie, Parasite, World Decay, Sportweekend en Fazed",
+    "start": "2023-12-02",
+    "eventLocationName": "trix",
+    "shortText": "Trix, Antwerpen (België)",
+    "image": "../public/location-images/trix",
+    "location": "trix"
+  },
+  {
+    "title": "Alestorm, Elvenking en Trick Or Treat",
+    "start": "2023-12-03",
+    "eventLocationName": "effenaar",
+    "shortText": "Effenaar, Eindhoven",
+    "image": "../public/location-images/effenaar",
+    "location": "effenaar"
+  },
+  {
+    "title": "Audrey Horne",
+    "start": "2023-12-03",
+    "eventLocationName": "fluor",
+    "shortText": "Fluor, Amersfoort",
+    "image": "../public/location-images/fluor",
+    "location": "fluor"
+  },
+  {
+    "title": "Babymetal",
+    "start": "2023-12-03",
+    "eventLocationName": "013",
+    "shortText": "013, Tilburg",
+    "image": "../public/location-images/013",
+    "location": "013"
+  },
+  {
+    "title": "Gorgortoh, Aeternus, Impalement en Aran Angmar",
+    "start": "2023-12-03",
+    "eventLocationName": "de pul",
+    "shortText": "De Pul, Uden",
+    "image": "../public/location-images/depul",
+    "location": "depul"
+  },
+  {
+    "title": "Thundermother en Lansdowne",
+    "start": "2023-12-03",
+    "eventLocationName": "de helling",
+    "shortText": "De Helling, Utrecht",
+    "image": "../public/location-images/dehelling",
+    "location": "dehelling"
   },
   {
     "title": "Babymetal",
@@ -56,12 +88,100 @@
     "location": "anciennebelgique"
   },
   {
+    "title": "Paul Di'Anno, Nightride, Electric Gypsy en Nocturnall",
+    "start": "2023-12-05",
+    "eventLocationName": "club hell",
+    "shortText": "Club Hell, Diest (België)",
+    "image": "../public/location-images/clubhell",
+    "location": "clubhell"
+  },
+  {
+    "title": "Paul Di'Anno, Nightride, Electric Gypsy en Nocturnall",
+    "start": "2023-12-06",
+    "eventLocationName": "club hell",
+    "shortText": "Club Hell, Diest (België)",
+    "image": "../public/location-images/clubhell",
+    "location": "clubhell"
+  },
+  {
+    "title": "Eindhoven Metal Meeting Warm-up Evening",
+    "start": "2023-12-07",
+    "eventLocationName": "effenaar",
+    "shortText": "Effenaar, Eindhoven",
+    "image": "../public/location-images/effenaar",
+    "location": "effenaar"
+  },
+  {
     "title": "Beyond God",
     "start": "2023-12-08",
     "eventLocationName": "cacaofabriek",
     "shortText": "Cacaofabriek, Helmond",
     "image": "../public/location-images/cacaofabriek",
     "location": "cacaofabriek"
+  },
+  {
+    "title": "Eindhoven Metal Meeting",
+    "start": "2023-12-08",
+    "eventLocationName": "effenaar",
+    "shortText": "Effenaar, Eindhoven",
+    "image": "../public/location-images/effenaar",
+    "location": "effenaar"
+  },
+  {
+    "title": "Floor Jansen en Anneke van Giersbergen",
+    "start": "2023-12-08",
+    "eventLocationName": "afas live",
+    "shortText": "AFAS Live, Amsterdam",
+    "image": "../public/location-images/afaslive",
+    "location": "afaslive"
+  },
+  {
+    "title": "Gorgoroth, Aeternus, Impalement en Aran Angmar",
+    "start": "2023-12-08",
+    "eventLocationName": "fluor",
+    "shortText": "Fluor, Amersfoort",
+    "image": "../public/location-images/fluor",
+    "location": "fluor"
+  },
+  {
+    "title": "Living Colour",
+    "start": "2023-12-08",
+    "eventLocationName": "gebouw-t",
+    "shortText": "Gebouw-T, Bergen Op Zoom",
+    "image": "../public/location-images/gebouwt",
+    "location": "gebouwt"
+  },
+  {
+    "title": "Paul Di'Anno, Noturnall en Electric Gypsy",
+    "start": "2023-12-08",
+    "eventLocationName": "café de engelenbak",
+    "shortText": "Café De Engelenbak, Doetinchem",
+    "image": "../public/location-images/cafdeengelenbak",
+    "location": "cafdeengelenbak"
+  },
+  {
+    "title": "Ye Banished Privateers",
+    "start": "2023-12-09",
+    "eventLocationName": "gebr. de nobel",
+    "shortText": "Gebr. De Nobel, Leiden",
+    "image": "../public/location-images/gebrdenobel",
+    "location": "gebrdenobel"
+  },
+  {
+    "title": "Danko Jones en Radkey",
+    "start": "2023-12-10",
+    "eventLocationName": "gebouw-t",
+    "shortText": "Gebouw-T, Bergen Op Zoom",
+    "image": "../public/location-images/gebouwt",
+    "location": "gebouwt"
+  },
+  {
+    "title": "Living Colour",
+    "start": "2023-12-10",
+    "eventLocationName": "iduna",
+    "shortText": "Iduna, Drachten",
+    "image": "../public/location-images/iduna",
+    "location": "iduna"
   },
   {
     "title": "Till Lindemann",
@@ -80,12 +200,44 @@
     "location": "hedon"
   },
   {
+    "title": "Malevolence",
+    "start": "2023-12-12",
+    "eventLocationName": "013",
+    "shortText": "013, Tilburg",
+    "image": "../public/location-images/013",
+    "location": "013"
+  },
+  {
+    "title": "SEGA European Guitar Award: Nuno Bettencourt",
+    "start": "2023-12-13",
+    "eventLocationName": "gebouw-t",
+    "shortText": "Gebouw-T, Bergen Op Zoom",
+    "image": "../public/location-images/gebouwt",
+    "location": "gebouwt"
+  },
+  {
     "title": "Till Lindemann",
     "start": "2023-12-14",
     "eventLocationName": "rtm stage",
     "shortText": "RTM Stage, Rotterdam",
     "image": "../public/location-images/rtmstage",
     "location": "rtmstage"
+  },
+  {
+    "title": "Wishbone Ash",
+    "start": "2023-12-14",
+    "eventLocationName": "gebouw-t",
+    "shortText": "Gebouw-T, Bergen Op Zoom",
+    "image": "../public/location-images/gebouwt",
+    "location": "gebouwt"
+  },
+  {
+    "title": "Bömbers",
+    "start": "2023-12-15",
+    "eventLocationName": "de pul",
+    "shortText": "De Pul, Uden",
+    "image": "../public/location-images/depul",
+    "location": "depul"
   },
   {
     "title": "Wishbone Ash",
@@ -96,12 +248,172 @@
     "location": "cacaofabriek"
   },
   {
+    "title": "Ronnie James Dio - The Memorial Concert",
+    "start": "2024-01-07",
+    "eventLocationName": "effenaar",
+    "shortText": "Effenaar, Eindhoven",
+    "image": "../public/location-images/effenaar",
+    "location": "effenaar"
+  },
+  {
+    "title": "Ploegendienst",
+    "start": "2024-01-11",
+    "eventLocationName": "de helling",
+    "shortText": "De Helling, Utrecht",
+    "image": "../public/location-images/dehelling",
+    "location": "dehelling"
+  },
+  {
+    "title": "Orphaned Land, Azteca, Royal Rage, Ring Of Gyges en Stråle",
+    "start": "2024-01-12",
+    "eventLocationName": "effenaar",
+    "shortText": "Effenaar, Eindhoven",
+    "image": "../public/location-images/effenaar",
+    "location": "effenaar"
+  },
+  {
+    "title": "Beast In Black en Gloryhammer",
+    "start": "2024-01-14",
+    "eventLocationName": "013",
+    "shortText": "013, Tilburg",
+    "image": "../public/location-images/013",
+    "location": "013"
+  },
+  {
+    "title": "Delain en Illumishade",
+    "start": "2024-01-19",
+    "eventLocationName": "de pul",
+    "shortText": "De Pul, Uden",
+    "image": "../public/location-images/depul",
+    "location": "depul"
+  },
+  {
+    "title": "Ronnie James Dio - The Memorial Concert",
+    "start": "2024-01-19",
+    "eventLocationName": "gebouw-t",
+    "shortText": "Gebouw-T, Bergen Op Zoom",
+    "image": "../public/location-images/gebouwt",
+    "location": "gebouwt"
+  },
+  {
+    "title": "Abbath, Toxic Holocaust en Hellripper",
+    "start": "2024-01-21",
+    "eventLocationName": "de pul",
+    "shortText": "De Pul, Uden",
+    "image": "../public/location-images/depul",
+    "location": "depul"
+  },
+  {
+    "title": "Modder en Onhou",
+    "start": "2024-01-25",
+    "eventLocationName": "doornroosje",
+    "shortText": "Merleyn, Nijmegen",
+    "image": "../public/location-images/doornroosje",
+    "location": "doornroosje"
+  },
+  {
+    "title": "Abbath, Toxic Holocaust en Hellripper",
+    "start": "2024-01-26",
+    "eventLocationName": "iduna",
+    "shortText": "Iduna, Drachten",
+    "image": "../public/location-images/iduna",
+    "location": "iduna"
+  },
+  {
+    "title": "Periphery",
+    "start": "2024-01-31",
+    "eventLocationName": "013",
+    "shortText": "013, Tilburg",
+    "image": "../public/location-images/013",
+    "location": "013"
+  },
+  {
+    "title": "Bad Omens",
+    "start": "2024-02-04",
+    "eventLocationName": "013",
+    "shortText": "013, Tilburg",
+    "image": "../public/location-images/013",
+    "location": "013"
+  },
+  {
+    "title": "Lucifer en Angel Witch",
+    "start": "2024-02-06",
+    "eventLocationName": "de helling",
+    "shortText": "De Helling, Utrecht",
+    "image": "../public/location-images/dehelling",
+    "location": "dehelling"
+  },
+  {
+    "title": "Thrice",
+    "start": "2024-02-17",
+    "eventLocationName": "013",
+    "shortText": "013, Tilburg",
+    "image": "../public/location-images/013",
+    "location": "013"
+  },
+  {
+    "title": "Suffocation, Sanguisagabogg, Enterprise Earth en Organectomy",
+    "start": "2024-02-18",
+    "eventLocationName": "013",
+    "shortText": "013, Tilburg",
+    "image": "../public/location-images/013",
+    "location": "013"
+  },
+  {
+    "title": "Lionheart, Suicide Silence, Kublai Khan Tx en Paleface Swiss",
+    "start": "2024-02-20",
+    "eventLocationName": "013",
+    "shortText": "013, Tilburg",
+    "image": "../public/location-images/013",
+    "location": "013"
+  },
+  {
     "title": "Nothing More, SiM en Siamese",
     "start": "2024-02-22",
     "eventLocationName": "trix",
     "shortText": "Trix, Antwerpen (België)",
     "image": "../public/location-images/trix",
     "location": "trix"
+  },
+  {
+    "title": "Distnat, For I Am King en Torn From Oblivion",
+    "start": "2024-02-23",
+    "eventLocationName": "de helling",
+    "shortText": "De Helling, Utrecht",
+    "image": "../public/location-images/dehelling",
+    "location": "dehelling"
+  },
+  {
+    "title": "Serenity, Temperance en Tulip",
+    "start": "2024-02-24",
+    "eventLocationName": "de pul",
+    "shortText": "De Pul, Uden",
+    "image": "../public/location-images/depul",
+    "location": "depul"
+  },
+  {
+    "title": "Dragonforce, Amaranthe en Infected Rain",
+    "start": "2024-02-25",
+    "eventLocationName": "013",
+    "shortText": "013, Tilburg",
+    "image": "../public/location-images/013",
+    "location": "013"
+  },
+  {
+    "title": "Cattle Decapitation, Signs Of The Swarm, 200 Stab Wounds en Vomit Earth",
+    "start": "2024-03-01",
+    "eventLocationName": "doornroosje",
+    "shortText": "Doornroosje, Nijmegen",
+    "image": "../public/location-images/doornroosje",
+    "location": "doornroosje"
+  },
+  {
+    "title": "Firewind en Masterplan",
+    "start": "2024-03-02",
+    "eventLocationName": "de pul",
+    "shortText": "De Pul, Uden",
+    "image": "../public/location-images/depul",
+    "location": "depul"
   },
   {
     "title": "Headbangers Parade",
@@ -112,12 +424,44 @@
     "location": "klokgebouw"
   },
   {
+    "title": "Cynic, Obscura, Persefone, Hypno5e, Stellar Circuits, Cryptsosis en Lampr3a",
+    "start": "2024-03-10",
+    "eventLocationName": "dynamo",
+    "shortText": "Dynamo, Eindhoven",
+    "image": "../public/location-images/dynamo",
+    "location": "dynamo"
+  },
+  {
     "title": "Häxenzijrkell, Pox en Dikasterion",
     "start": "2024-03-16",
     "eventLocationName": "stroomhuis",
     "shortText": "Stroomhuis, Eindhoven",
     "image": "../public/location-images/stroomhuis",
     "location": "stroomhuis"
+  },
+  {
+    "title": "Suicidal Angels, Fusion Bomb en Crimson Fire",
+    "start": "2024-03-22",
+    "eventLocationName": "fluor",
+    "shortText": "Fluor, Amersfoort",
+    "image": "../public/location-images/fluor",
+    "location": "fluor"
+  },
+  {
+    "title": "Pierce The Veil",
+    "start": "2024-03-30",
+    "eventLocationName": "013",
+    "shortText": "013, Tilburg",
+    "image": "../public/location-images/013",
+    "location": "013"
+  },
+  {
+    "title": "Welcome To Hell",
+    "start": "2024-04-13",
+    "eventLocationName": "effenaar",
+    "shortText": "\nMet Midnight, Gama Bomb e.a.",
+    "image": "../public/location-images/effenaar",
+    "location": "effenaar"
   },
   {
     "title": "Warkings",
@@ -128,12 +472,28 @@
     "location": "cacaofabriek"
   },
   {
+    "title": "VV (Ville Valo) en Zetra",
+    "start": "2024-05-07",
+    "eventLocationName": "013",
+    "shortText": "013, Tilburg",
+    "image": "../public/location-images/013",
+    "location": "013"
+  },
+  {
     "title": "Tool en Night Verses",
     "start": "2024-05-27",
     "eventLocationName": "ziggo dome",
     "shortText": "Ziggo Dome, Amsterdam",
     "image": "../public/location-images/ziggodome",
     "location": "ziggodome"
+  },
+  {
+    "title": "Bruce Dickinson",
+    "start": "2024-05-28",
+    "eventLocationName": "013",
+    "shortText": "013, Tilburg",
+    "image": "../public/location-images/013",
+    "location": "013"
   },
   {
     "title": "South Of Heaven festival",
@@ -150,6 +510,14 @@
     "shortText": "Oldehoofsterkerkhof, Leeuwarden",
     "image": "../public/location-images/oldehoofsterkerkhof",
     "location": "oldehoofsterkerkhof"
+  },
+  {
+    "title": "Judas Priest",
+    "start": "2024-06-10",
+    "eventLocationName": "afas live",
+    "shortText": "AFAS Live, Amsterdam",
+    "image": "../public/location-images/afaslive",
+    "location": "afaslive"
   },
   {
     "title": "Rammstein",
@@ -182,6 +550,14 @@
     "shortText": "\nmet Tool e.v.a.",
     "image": "../public/location-images/dessel",
     "location": "dessel"
+  },
+  {
+    "title": "Megadeth",
+    "start": "2024-06-25",
+    "eventLocationName": "013",
+    "shortText": "013, Tilburg",
+    "image": "../public/location-images/013",
+    "location": "013"
   },
   {
     "title": "Hellfest",
@@ -230,6 +606,22 @@
     "shortText": "Fortress Josefoz, Jaromer (Tsjechië)",
     "image": "../public/location-images/fortressjosefoz",
     "location": "fortressjosefoz"
+  },
+  {
+    "title": "Epica & Orchestra",
+    "start": "2024-09-20",
+    "eventLocationName": "afas live",
+    "shortText": "AFAS Live, Amsterdam",
+    "image": "../public/location-images/afaslive",
+    "location": "afaslive"
+  },
+  {
+    "title": "Powerwolf, Hammerfall en Wind Rose",
+    "start": "2024-10-05",
+    "eventLocationName": "afas live",
+    "shortText": "AFAS Live, Amsterdam",
+    "image": "../public/location-images/afaslive",
+    "location": "afaslive"
   },
   {
     "title": "Within Temptation",
