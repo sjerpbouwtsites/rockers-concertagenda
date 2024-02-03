@@ -46,11 +46,18 @@ export default class RockWorker extends Worker {
       }
 
       // BOODSCHAPPEN VOOR DB
+      // hier praat de worker/scraper, via zijn wrapper rock-worker.js
+      // met de artist-db die in de statische functie als referentie binnenkwam
+
+      // 1.scraper praat rock-worker hoort
       if (parsedMessage.type === 'db-request') {
+        // 2. geeft door aan DB en DB geeft 
+        // meteen antwoord want is geen async functie
         const artistRes = ArtistInst.do({
           request: parsedMessage?.subtype,
           data: parsedMessage.messageData,
         });
+        // 2.5 hier heb je een zooitje van gemaakt
         let par;
         try {
           par = JSON.parse(artistRes);
@@ -60,7 +67,8 @@ export default class RockWorker extends Worker {
           console.log(artistRes);
           throw error;
         }
-        
+        // 3. rock-worker wrapper praat terug naar worker-scraper
+        // met antwoord van DB
         thisWorker.postMessage(JSON.stringify({
           type: 'db-answer',
           subtype: parsedMessage?.subtype,

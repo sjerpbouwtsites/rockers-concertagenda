@@ -3,13 +3,18 @@ import fs from 'fs';
 
 function slugify(str) {
   return String(str)
-    .normalize('NFKD') // split accented characters into their base characters and diacritical marks
-    .replace(/[\u0300-\u036f]/g, '') // remove all the accents, which happen to be all in the \u03xx UNICODE block.
+    .replaceAll(/[ÁÀÂàÂÄÃÅ]/gi, 'a')
+    .replaceAll(/Ç/gi, 'c')
+    .replaceAll(/[ÉÈÊË]/gi, 'e')
+    .replaceAll(/[ÍÌÎÏ]/gi, 'i')
+    .replaceAll(/Ñ/gi, 'n')
+    .replaceAll(/[ÓÒÔÖÕØ]/gi, 'o')
+    .replaceAll(/[ÚÙÛÜ]/gi, 'u')
     .trim() // trim leading or trailing whitespace
     .toLowerCase() // convert to lowercase
-    .replace(/[^a-z0-9 -]/g, '') // remove non-alphanumeric characters
-    .replace(/\s+/g, '') // replace spaces with hyphens
-    .replace(/-+/g, '-'); // remove consecutive hyphens
+    .replace(/[^a-z0-9]/g, '') // remove non-alphanumeric characters
+    .replace(/\s+/g, '') // replace spaces with nothing
+    .replace(/-/g, ''); // remove all hyphens
 }
 
 const oudeEvents = JSON.parse(fs.readFileSync('../store/OUD-rock-events.json'));

@@ -20,6 +20,8 @@ const fsDirections = {
   baseEventlists: path.resolve('./temp/baseEventlists'),
   isRockAllow: path.resolve('./temp/isRock/allow.txt'),
   isRockRefuse: path.resolve('./temp/isRock/refuse.txt'),
+  artistDBModels: path.resolve('./artist-db/models'),
+  artistDBstore: path.resolve('./artist-db/store'),
 };
 
 // OLD
