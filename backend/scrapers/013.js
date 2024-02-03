@@ -13,6 +13,9 @@ const scraper = new AbstractScraper({
     url: 'https://www.013.nl/programma/heavy',
   },
   app: {
+    eventTitleSplitting: {
+      dividerStrings: ['+'],
+    },
     mainPage: {
       requiredProperties: ['venueEventUrl', 'title'],
       asyncCheckFuncs: ['refused', 'getArtists', 'event', 'allowed', 'forbiddenTerms', 'saveAllowed'],

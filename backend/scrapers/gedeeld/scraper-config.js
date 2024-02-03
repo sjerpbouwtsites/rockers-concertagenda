@@ -19,6 +19,10 @@ export default class ScraperConfig {
       url: null,
     },
     app: {
+      eventTitleSplitting: {
+        possiblePrefix: /presenteert\s?:presents\s?:/i,
+        dividerStrings: [],
+      },
       // in deze eigen app
       mainPage: {
         // make base events
@@ -41,6 +45,7 @@ export default class ScraperConfig {
     mainPage: {},
     singlePage: {},
     app: {
+      eventTitleSplitting: {},
       mainPage: {},
       singlePage: {},
     },
@@ -66,6 +71,13 @@ export default class ScraperConfig {
       timeout: obj?.mainPage?.timeout ?? bc.mainPage.timeout,
       waitUntil: obj?.mainPage?.waitUntil ?? bc.mainPage.waitUntil,
       url: obj?.mainPage?.url ?? bc.mainPage.url,
+    };
+
+    this._s.app.eventTitleSplitting = {
+      dividerStrings: obj?.app?.eventTitleSplitting?.dividerStrings 
+        ?? bc.app.eventTitleSplitting.dividerStrings,
+      possiblePrefix: obj?.app?.eventTitleSplitting?.possiblePrefix 
+        ?? bc.app.eventTitleSplitting.possiblePrefix,
     };
 
     this._s.app.mainPage = {

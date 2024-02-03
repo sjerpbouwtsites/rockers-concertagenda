@@ -47,6 +47,7 @@ export default class Artists {
     this.refused = JSON.parse(fs.readFileSync(`${this.storePath}/refused.json`));
     this.allowedArtists = JSON.parse(fs.readFileSync(`${this.storePath}/allowed-artists.json`));
     this.allowedEvents = JSON.parse(fs.readFileSync(`${this.storePath}/allowed-events.json`));
+    this.landcodesMap = JSON.parse(fs.readFileSync(`${this.storePath}/landcodes-map.json`));
   }
 
   /**
@@ -81,7 +82,7 @@ export default class Artists {
    * @param {request:string, data:object} message  
    * @returns {success:boolean|string,reason:string,data:object} -> ALS JSON!
    */
-  do(message) {
+  async do(message) {
     // parse
     const parsedMessage = this.parseMessage(message);
     // check
@@ -123,6 +124,17 @@ export default class Artists {
         return this.error(Error('geen title of slug om te doorzoeken'));
       }
       return this.scanTitleForAllowedArtists(message.data.title, message.data.slug);
+    }
+
+    if (message.request === 'APICallsForGenre') {
+      const hasTitle = Object.prototype.hasOwnProperty.call(parsedMessage.data, 'title');
+      const hasSlug = Object.prototype.hasOwnProperty.call(parsedMessage.data, 'slug');
+      if (!hasTitle || !hasSlug) {
+        console.log('message:');
+        console.log(message);
+        return this.error(Error('geen title of slug om te doorzoeken'));
+      }
+      return this.APICallsForGenre(message.data.title, message.data.slug);
     }
 
     // if (message.request === 'saveRefusedTitle') {
@@ -301,6 +313,68 @@ export default class Artists {
       reason: `${gefilterdeAllowedArtistsKeys.join(', ')} gevonden in scan of allowed artists`,
     });
   } 
+
+  /**
+   * kijkt in refused of daarin letterlijk de artistName/title of slug als key in voorkomen
+   * @param {*} eventNameOfTitle 
+   * @param {*} slug 
+   * @returns successMessage met evt. artistData
+   */
+  async APICallsForGenre(eventNameOfTitle, slug) {
+    // eerst even kijken of ie niet al op zichzelf wel geweigerd was
+    const _a = Object.prototype.hasOwnProperty.call(this.refused, eventNameOfTitle);
+    const _b = Object.prototype.hasOwnProperty.call(this.refused, slug);
+    
+    if (_a || _b) {
+      return this.post({
+        success: false,
+        data: null,
+        reason: `${eventNameOfTitle} or ${slug} in refused`,
+      }); 
+    }
+
+    let titleCopy = `${eventNameOfTitle}`;
+    let metalString = titleCopy.replaceAll(' ', '+');
+    console.log(`titleCopy: ${titleCopy}; metalString: ${metalString}`);
+    const matchLanden = titleCopy.match(/(\(\w{2,3}\))/gi);
+    if (Array.isArray(matchLanden)) {
+      matchLanden.forEach((m) => {
+        let land = m.replace(/\W/g, '').toUpperCase();
+        if (land in this.landcodesMap) {
+          const repl = RegExp(`\\(${land}\\)`, 'gi');
+          
+          titleCopy = titleCopy.replaceAll(repl, '').trim();
+          if (land.length === 3) {
+            land = this.landcodesMap[land];
+          }
+          metalString += `&country[]=${land}`;
+        }
+      });
+    }
+
+    const metalEncycloAjaxURL = `https://www.metal-archives.com/search/ajax-advanced/searching/bands/?bandName=${metalString}&yearCreationFrom=&yearCreationTo=&status[]=1`;
+    console.log(`metal encyclo url ${metalEncycloAjaxURL}`);
+    const meaRes = await fetch(metalEncycloAjaxURL)
+      .then((res) => res.json())
+      .then((r) => {
+        console.log('res');
+        return r;
+      })
+      .catch((err) => {
+        console.log('ERROR IN FETSCH');
+        console.log(err);
+        return this.post({
+          success: false,
+          data: null,
+          reason: `error in fetch: ${err.message}`,
+        });
+      });
+    return this.post({
+      success: true,
+      data: meaRes,
+      reason: `succesvolle fetch`,
+    });
+  }    
 
   // saveRefusedTitle(string, reason) {
   //   const clean = this.lowerCaseAndTrim(string);
