@@ -80,6 +80,7 @@ const podiumGebruikt = {
   iduna: voluitNederlands,
   kavka: kortNederlands,
   littledevil: kortEngels,
+  em2: kortNederlands,
   metalfan: kortNederlands,
   melkweg: kortNederlands,
   metropool: kortNederlands,

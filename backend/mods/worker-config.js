@@ -94,6 +94,7 @@ export const workerConfig = {
     forceSet: 5,
   },
   oosterpoort: { workerCount: 1, workerConcurrent: 1, forceSet: 5 },
+  em2: { workerCount: 1, workerConcurrent: 1, forceSet: 5 },
   p60: { workerCount: 1, workerConcurrent: 1, forceSet: 5 },
   paradiso: {
     workerCount: 2,
