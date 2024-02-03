@@ -1,5 +1,6 @@
 /* eslint-disable no-console */
 import fs from 'fs';
+import puppeteer from 'puppeteer';
 
 export default class Artists {
   /**
@@ -299,7 +300,7 @@ export default class Artists {
       data: gefilterdeAllowedArtists,
       reason: `${gefilterdeAllowedArtistsKeys.join(', ')} gevonden in scan of allowed artists`,
     });
-  }
+  } 
 
   // saveRefusedTitle(string, reason) {
   //   const clean = this.lowerCaseAndTrim(string);
