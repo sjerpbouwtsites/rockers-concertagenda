@@ -9,18 +9,19 @@ function downloadImage(url, filepath, workerData) {
   return new Promise((resolve, reject) => {
     try {
       https.get(url, (res) => {
+        const sc1 = `${res.statusCode}`[0];
         if (res.statusCode === 200) {
           res
             .pipe(fs.createWriteStream(filepath))
             .on('error', reject)
             .once('close', () => resolve(filepath));
-        } else if (`${res.statusCode}`[0] === '3') {
+        } else if (sc1 === '3' || sc1 === '4') {
           resolve(`${fsDirections.publicLocationImages}/${workerData.family}-vol.webp`);
         } else {
           res.resume();
           reject(
             new Error(
-              `Request Failed With a Status Code: ${res.statusCode} see <a href='vscode://vscode-remote/wsl+Ubuntu-22.04/home/sjerp/dev/apache/concertagenda/backend/temp/error.log:1:1'>the log</a>`,
+              `Request for ${url} Failed With a Status Code: ${res.statusCode} see <a href='vscode://vscode-remote/wsl+Ubuntu-22.04/home/sjerp/dev/apache/concertagenda/backend/temp/error.log:1:1'>the log</a>`,
             ),
           );
         }

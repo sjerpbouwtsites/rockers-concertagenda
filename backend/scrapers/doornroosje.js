@@ -406,6 +406,8 @@ scraper.singlePage = async function ({ page, event }) {
     pageInfo,
     selectors: ['.c-header-event__image img', '#home img'],
     mode: 'image-src',
+  }).catch((err) => {
+    this.handleError(err, 'image res err', 'notice');
   });
   pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
   pageInfo.image = imageRes.image;
