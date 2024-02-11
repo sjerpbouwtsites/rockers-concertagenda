@@ -1,4 +1,5 @@
 const debugSettings = {
+  debugDebug: true,
   debugCorruptedUnavailable: true,
   debugsinglePageAsyncCheck: true,
   debugRawEventAsyncCheck: true,
@@ -6,5 +7,6 @@ const debugSettings = {
   debugPageInfo: true,
   debugPrice: true,
   debugWithTempFile:true,
+  
 };
 export default debugSettings;

@@ -225,7 +225,7 @@ export default class AbstractScraper extends ScraperConfig {
    * @returns {stopFunctie timeout, page puppeteer.Page}
    */
   async mainPageStart() {
-    this.dirtyLog(debugSettings);
+    if (debugSettings.debugDebug) this.dirtyLog(debugSettings);
 
     // @TODO 3 stopfuncties maken: 1 base events; 1 single; 1 totaal.
 
