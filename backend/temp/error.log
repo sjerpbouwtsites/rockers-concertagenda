@@ -1,4 +1,209 @@
 
+      baroeg-0 Error - 6:42:24 PM
+      Error: geen match met .wp_theatre_event_tickets <a class='page-info' href='https://baroeg.nl/productie/prspctbaroeg-present-otto-von-schirach-deformer-limewax/'>PRSPCT+Baroeg present: Otto Von Schirach + Deformer + Limewax</a>
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:169:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/baroeg.js:251:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:510:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:143:5) 
+      geen match met .wp_theatre_event_tickets <a class='page-info' href='https://baroeg.nl/productie/prspctbaroeg-present-otto-von-schirach-deformer-limewax/'>PRSPCT+Baroeg present: Otto Von Schirach + Deformer + Limewax</a>
+      
+      willemeen-1 Error - 6:40:35 PM
+      Error: geen match met .ticket-col <a class='page-info' class='page-info' href='https://www.willemeen.nl/programma/unmuted-prepare-for-trouble-make-it-double-day-two/'>Unmuted: Prepare For Trouble Make It Double Day Two</a>
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:169:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/willemeen.js:261:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:510:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:143:5) 
+      geen match met .ticket-col <a class='page-info' class='page-info' href='https://www.willemeen.nl/programma/unmuted-prepare-for-trouble-make-it-double-day-two/'>Unmuted: Prepare For Trouble Make It Double Day Two</a>
+      
+      willemeen-1 Error - 6:40:25 PM
+      Error: geen match met .ticket-col <a class='page-info' class='page-info' href='https://www.willemeen.nl/programma/outcast-invites-speedcore-italia/'>OUTCAST invites Speedcore Italia</a>
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:169:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/willemeen.js:261:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:510:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:143:5) 
+      geen match met .ticket-col <a class='page-info' class='page-info' href='https://www.willemeen.nl/programma/outcast-invites-speedcore-italia/'>OUTCAST invites Speedcore Italia</a>
+      
+      willemeen-1 Error - 6:40:06 PM
+      Error: geen match met .ticket-col <a class='page-info' class='page-info' href='https://www.willemeen.nl/programma/swordsman-night-gza-after-luxorlive/'>Swordsman Night (GZA after @luxorlive)</a>
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:169:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/willemeen.js:261:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:510:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:143:5) 
+      geen match met .ticket-col <a class='page-info' class='page-info' href='https://www.willemeen.nl/programma/swordsman-night-gza-after-luxorlive/'>Swordsman Night (GZA after @luxorlive)</a>
+      
+      willemeen-0 Error - 6:38:36 PM
+      Error: geen match met .ticket-col <a class='page-info' class='page-info' href='https://www.willemeen.nl/programma/metal-battle-halve-finale-2/'>Metal Battle Halve Finale</a>
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:169:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/willemeen.js:261:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:510:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:143:5) 
+      geen match met .ticket-col <a class='page-info' class='page-info' href='https://www.willemeen.nl/programma/metal-battle-halve-finale-2/'>Metal Battle Halve Finale</a>
+      
+      neushoorn-0 Error - 6:36:49 PM
+      Error: geen match met sidebar .tickets-button <a class='page-info' href='https://neushoorn.nl/production/nh-cafe-de-plaag/'>NH Café: De Plaag</a>
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:169:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:34:12)
+    at async _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:34:12)
+    at async scraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/neushoorn.js:303:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:510:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:143:5) 
+      geen match met sidebar .tickets-button <a class='page-info' href='https://neushoorn.nl/production/nh-cafe-de-plaag/'>NH Café: De Plaag</a>
+      
+      melkweg-0 Error - 6:36:44 PM
+      Error: lege tc in [class*="styles_ticket-prices"] <a class='page-info' href='https://www.melkweg.nl/nl/agenda/brant-bjork-trio-28-05-2024/'>Brant Bjork Trio</a>
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:52:37)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:34:12)
+    at async scraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/melkweg.js:303:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:510:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:143:5) 
+      lege tc in [class*="styles_ticket-prices"] <a class='page-info' href='https://www.melkweg.nl/nl/agenda/brant-bjork-trio-28-05-2024/'>Brant Bjork Trio</a>
+      
+      baroeg-2 Error - 6:36:41 PM
+      Error: lege tc in .wp_theatre_event_tickets <a class='page-info' href='https://baroeg.nl/productie/koningsdag-festival-hard-skin/'>Koningsdag festival: Hard Skin + Pigs</a>
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:52:37)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/baroeg.js:251:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:510:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:143:5) 
+      lege tc in .wp_theatre_event_tickets <a class='page-info' href='https://baroeg.nl/productie/koningsdag-festival-hard-skin/'>Koningsdag festival: Hard Skin + Pigs</a>
+      
+      dynamo-1 Error - 6:36:26 PM
+      Error: geen el price
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:48:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/dynamo.js:355:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:510:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:143:5) 
+      geen el price
+      
+      dynamo-1 Error - 6:36:26 PM
+      TimeoutError: Waiting for selector `.dynamic-background-color#intro .color-pick` failed: Waiting failed: 2500ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+      Waiting for selector `.dynamic-background-color#intro .color-pick` failed: Waiting failed: 2500ms exceeded
+      
+      melkweg-0 Error - 6:32:42 PM
+      Error: lege tc in [class*="styles_ticket-prices"] <a class='page-info' href='https://www.melkweg.nl/nl/agenda/brant-bjork-trio-28-05-2024/'>Brant Bjork Trio</a>
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:52:37)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:34:12)
+    at async scraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/melkweg.js:303:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:510:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:143:5) 
+      lege tc in [class*="styles_ticket-prices"] <a class='page-info' href='https://www.melkweg.nl/nl/agenda/brant-bjork-trio-28-05-2024/'>Brant Bjork Trio</a>
+      
+      paradiso-1 Error - 6:32:33 PM
+      Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:232:24)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+      Timeout baseEvent
+      
+      willemeen-0 Error - 6:30:11 PM
+      Error: geen match met .ticket-col <a class='page-info' class='page-info' href='https://www.willemeen.nl/programma/metal-battle-halve-finale-2/'>Metal Battle Halve Finale</a>
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:169:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/willemeen.js:261:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:510:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:143:5) 
+      geen match met .ticket-col <a class='page-info' class='page-info' href='https://www.willemeen.nl/programma/metal-battle-halve-finale-2/'>Metal Battle Halve Finale</a>
+      
+      baroeg-0 Error - 6:28:39 PM
+      Error: geen match met .wp_theatre_event_tickets <a class='page-info' href='https://baroeg.nl/productie/prspctbaroeg-present-otto-von-schirach-deformer-limewax/'>PRSPCT+Baroeg present: Otto Von Schirach + Deformer + Limewax</a>
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:169:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/baroeg.js:251:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:510:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:143:5) 
+      geen match met .wp_theatre_event_tickets <a class='page-info' href='https://baroeg.nl/productie/prspctbaroeg-present-otto-von-schirach-deformer-limewax/'>PRSPCT+Baroeg present: Otto Von Schirach + Deformer + Limewax</a>
+      
+      dynamo-1 Error - 6:27:21 PM
+      Error: geen el price
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:48:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/dynamo.js:355:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:510:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:143:5) 
+      geen el price
+      
+      dynamo-1 Error - 6:27:21 PM
+      TimeoutError: Waiting for selector `.dynamic-background-color#intro .color-pick` failed: Waiting failed: 2500ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+      Waiting for selector `.dynamic-background-color#intro .color-pick` failed: Waiting failed: 2500ms exceeded
+      
+      neushoorn-0 Error - 6:26:07 PM
+      Error: geen match met sidebar .tickets-button <a class='page-info' href='https://neushoorn.nl/production/nh-cafe-de-plaag/'>NH Café: De Plaag</a>
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:169:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:34:12)
+    at async _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:34:12)
+    at async scraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/neushoorn.js:303:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:510:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:143:5) 
+      geen match met sidebar .tickets-button <a class='page-info' href='https://neushoorn.nl/production/nh-cafe-de-plaag/'>NH Café: De Plaag</a>
+      
+      paradiso-1 Error - 6:20:08 PM
+      Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:232:24)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+      Timeout baseEvent
+      
+      willemeen-1 Error - 4:33:34 PM
+      Error: geen match met .ticket-col <a class='page-info' class='page-info' href='https://www.willemeen.nl/programma/unmuted-prepare-for-trouble-make-it-double-day-two/'>Unmuted: Prepare For Trouble Make It Double Day Two</a>
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:169:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/willemeen.js:261:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:510:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:143:5) 
+      geen match met .ticket-col <a class='page-info' class='page-info' href='https://www.willemeen.nl/programma/unmuted-prepare-for-trouble-make-it-double-day-two/'>Unmuted: Prepare For Trouble Make It Double Day Two</a>
+      
+      willemeen-1 Error - 4:33:22 PM
+      Error: geen match met .ticket-col <a class='page-info' class='page-info' href='https://www.willemeen.nl/programma/outcast-invites-speedcore-italia/'>OUTCAST invites Speedcore Italia</a>
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:169:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/willemeen.js:261:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:510:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:143:5) 
+      geen match met .ticket-col <a class='page-info' class='page-info' href='https://www.willemeen.nl/programma/outcast-invites-speedcore-italia/'>OUTCAST invites Speedcore Italia</a>
+      
+      willemeen-1 Error - 4:32:59 PM
+      Error: geen match met .ticket-col <a class='page-info' class='page-info' href='https://www.willemeen.nl/programma/swordsman-night-gza-after-luxorlive/'>Swordsman Night (GZA after @luxorlive)</a>
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:169:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/willemeen.js:261:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:510:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:143:5) 
+      geen match met .ticket-col <a class='page-info' class='page-info' href='https://www.willemeen.nl/programma/swordsman-night-gza-after-luxorlive/'>Swordsman Night (GZA after @luxorlive)</a>
+      
+      willemeen-0 Error - 4:32:19 PM
+      Error: geen match met .ticket-col <a class='page-info' class='page-info' href='https://www.willemeen.nl/programma/metal-battle-halve-finale-2/'>Metal Battle Halve Finale</a>
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:169:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/willemeen.js:261:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:510:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:143:5) 
+      geen match met .ticket-col <a class='page-info' class='page-info' href='https://www.willemeen.nl/programma/metal-battle-halve-finale-2/'>Metal Battle Halve Finale</a>
+      
+      victorie-1 Error - 4:30:54 PM
+      Error: geen match met .show-info .columns + .columns <a class='page-info' href='https://www.podiumvictorie.nl/programma/open-podium-15/02/24'>victorie single - Open Podium</a>
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:169:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/victorie.js:265:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:510:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:143:5) 
+      geen match met .show-info .columns + .columns <a class='page-info' href='https://www.podiumvictorie.nl/programma/open-podium-15/02/24'>victorie single - Open Podium</a>
+      
       oosterpoort-0 Error - 4:01:27 PM
       Error: Timeout baseEvent
     at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:232:24)

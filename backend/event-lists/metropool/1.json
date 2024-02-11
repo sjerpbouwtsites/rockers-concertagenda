@@ -117,15 +117,28 @@
     "unavailable": false
   },
   {
-    "door": "2024-09-27T20:30:00",
-    "start": "2024-09-27T21:00:00",
-    "venueEventUrl": "https://metropool.nl/agenda/the-smiths-presumably/",
-    "title": "The Smiths Presumably",
+    "door": "2024-07-03T19:30:00",
+    "start": "2024-07-03T20:30:00",
+    "venueEventUrl": "https://metropool.nl/agenda/deus/",
+    "title": "Deus",
     "location": "metropool",
-    "price": 24,
+    "price": 41,
     "shortText": "",
-    "longText": "../public/texts/metropool/L2FnZW5kYS90aGUtc21pdGhzLXByZXN1bWFibHkv.html",
-    "image": "../public/event-images/metropool/L2FnZW5kYS90aGUtc21pdGhzLXByZXN1bWFibHkv",
+    "longText": "../public/texts/metropool/cHM6Ly9tZXRyb3Bvb2wubmwvYWdlbmRhL2RldXMv.html",
+    "image": "../public/event-images/metropool/cHM6Ly9tZXRyb3Bvb2wubmwvYWdlbmRhL2RldXMv",
+    "soldOut": false,
+    "unavailable": false
+  },
+  {
+    "door": "2024-12-12T18:30:00",
+    "start": "2024-12-12T19:00:00",
+    "venueEventUrl": "https://metropool.nl/agenda/we-love-dark-music/",
+    "title": "We Love Dark Music",
+    "location": "metropool",
+    "price": 20,
+    "shortText": "Support: DJ Dragnet",
+    "longText": "../public/texts/metropool/Lm5sL2FnZW5kYS93ZS1sb3ZlLWRhcmstbXVzaWMv.html",
+    "image": "../public/event-images/metropool/Lm5sL2FnZW5kYS93ZS1sb3ZlLWRhcmstbXVzaWMv",
     "soldOut": false,
     "unavailable": false
   }

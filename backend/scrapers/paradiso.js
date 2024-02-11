@@ -10,7 +10,7 @@ const scraper = new AbstractScraper({
   workerData: { ...workerData },
 
   mainPage: {
-    timeout: 120023,
+    timeout: 180023,
     waitUntil: 'load',
     url: 'https://www.paradiso.nl/',
   },
@@ -185,14 +185,9 @@ scraper.mainPage = async function () {
     { workerData },
   );
 
-
   await page.waitForSelector('.chakra-container');
 
-
-
   await this.autoScroll(page);
-
-
   
   await page.evaluate(
     () =>
@@ -200,8 +195,6 @@ scraper.mainPage = async function () {
       'geen titel gevonden',
     { workerData },
   );
-
-
 
   // await this.autoScroll(page);
   // await page.evaluate(
