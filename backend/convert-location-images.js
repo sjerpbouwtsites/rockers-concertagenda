@@ -5,7 +5,7 @@ function initLocationImagesConversion() {
   const eventImagesDestFolder = '/home/sjerp/dev/apache/concertagenda/public/location-images/';
   const eventImagesSourceFolder = '/home/sjerp/dev/apache/concertagenda/src/location-images/';
   const files = fs.readdirSync(eventImagesSourceFolder)
-    .filter((file) => file.includes("jpg"))
+    
     .map((file) => {
       const fileZonder = file.replace(/.jpg|.jpeg|.png|.webp/, '');
       return {
