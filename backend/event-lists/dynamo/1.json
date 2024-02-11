@@ -13,8 +13,8 @@
     "soldOut": false
   },
   {
-    "door": "2024-03-15T19:30:00",
-    "start": "2024-03-15T19:45:00",
+    "door": "2024-03-15T19:00:00",
+    "start": "2024-03-15T19:15:00",
     "end": "2024-03-15T23:00:00",
     "venueEventUrl": "https://www.dynamo-eindhoven.nl/programma/cryptopsy-atheist-2024/#spotify-embed",
     "title": "Atheist + Cryptopsy",
@@ -26,30 +26,17 @@
     "soldOut": false
   },
   {
-    "door": "2024-03-29T19:00:00",
-    "start": "2024-03-29T19:30:00",
-    "end": "2024-03-29T23:00:00",
-    "venueEventUrl": "https://www.dynamo-eindhoven.nl/programma/breakdown-of-sanity-2024/#spotify-embed",
-    "title": "Breakdown of Sanity",
+    "door": "2024-04-23T19:30:00",
+    "start": "2024-04-23T20:00:00",
+    "end": "2024-04-23T23:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/programma/dragged-under-2023/#spotify-embed",
+    "title": "Dragged Under",
     "location": "dynamo",
     "price": 19,
-    "shortText": "Plus support",
-    "longText": "../public/texts/dynamo/LW9mLXNhbml0eS0yMDI0LyNzcG90aWZ5LWVtYmVk.html",
-    "image": "../public/event-images/dynamo/LW9mLXNhbml0eS0yMDI0LyNzcG90aWZ5LWVtYmVk",
-    "soldOut": false
-  },
-  {
-    "door": "2024-04-20T20:00:00",
-    "start": "2024-04-20T20:00:00",
-    "end": "2024-04-20T01:00:00",
-    "venueEventUrl": "https://www.dynamo-eindhoven.nl/programma/emo-night-mainland-2024/#spotify-embed",
-    "title": "Emo Night Mainland",
-    "location": "dynamo",
-    "price": 20,
-    "shortText": "Your favorite emo party is back!",
-    "longText": "../public/texts/dynamo/dC1tYWlubGFuZC0yMDI0LyNzcG90aWZ5LWVtYmVk.html",
-    "image": "../public/event-images/dynamo/dC1tYWlubGFuZC0yMDI0LyNzcG90aWZ5LWVtYmVk",
-    "soldOut": false
+    "shortText": "Support: Elwood Stray",
+    "longText": "../public/texts/dynamo/Z2dlZC11bmRlci0yMDIzLyNzcG90aWZ5LWVtYmVk.html",
+    "image": "../public/event-images/dynamo/Z2dlZC11bmRlci0yMDIzLyNzcG90aWZ5LWVtYmVk",
+    "soldOut": true
   },
   {
     "door": "2024-05-22T19:30:00",
@@ -62,6 +49,19 @@
     "shortText": "Support: The Gloom In The Corner + Profiler",
     "longText": "../public/texts/dynamo/bW1hL3ZlbmRlZC0yMDI0LyNzcG90aWZ5LWVtYmVk.html",
     "image": "../public/event-images/dynamo/bW1hL3ZlbmRlZC0yMDI0LyNzcG90aWZ5LWVtYmVk",
+    "soldOut": false
+  },
+  {
+    "door": "2024-06-07T19:30:00",
+    "start": "2024-06-07T20:15:00",
+    "end": "2024-06-07T23:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/programma/downset-2024/#spotify-embed",
+    "title": "Downset",
+    "location": "dynamo",
+    "price": 19,
+    "shortText": "Support: Agitator",
+    "longText": "../public/texts/dynamo/bWEvZG93bnNldC0yMDI0LyNzcG90aWZ5LWVtYmVk.html",
+    "image": "../public/event-images/dynamo/bWEvZG93bnNldC0yMDI0LyNzcG90aWZ5LWVtYmVk",
     "soldOut": false
   }
 ]

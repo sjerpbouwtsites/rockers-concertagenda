@@ -10,7 +10,7 @@ const metropoolScraper = new AbstractScraper({
   workerData: { ...workerData },
 
   mainPage: {
-    timeout: 60000,
+    timeout: 120005,
     waitUntil: 'load',
     url: 'https://metropool.nl/agenda',
   },

@@ -1,16 +1,5 @@
 [
   {
-    "start": "2024-02-09T19:00:00",
-    "venueEventUrl": "https://www.littledevil.nl/calendar/neverus-everything-decays-sapphyr-dodentocht/",
-    "title": "Neverus ",
-    "location": "littledevil",
-    "price": 0,
-    "shortText": " Everything Decays   Sapphyr   Dodentocht metal battle Noord Brabant",
-    "longText": "../public/texts/littledevil/aW5nLWRlY2F5cy1zYXBwaHlyLWRvZGVudG9jaHQv.html",
-    "image": "../public/event-images/littledevil/aW5nLWRlY2F5cy1zYXBwaHlyLWRvZGVudG9jaHQv",
-    "soldOut": false
-  },
-  {
     "start": "2024-02-16T20:00:00",
     "venueEventUrl": "https://www.littledevil.nl/calendar/slope-d-dagger-threat-d-dogma/",
     "title": "Slope (d) + dagger threat (d) + dogma",
@@ -79,9 +68,20 @@
     "soldOut": false
   },
   {
+    "start": "2024-03-17T18:30:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/bloodphemy-hypnos-cz-ex-krabathor-from-the-crypt/",
+    "title": "Bloodphemy ",
+    "location": "littledevil",
+    "price": 0,
+    "shortText": " Hypnos (CZ, ex-Krabathor)   From The Crypt brutal death metal",
+    "longText": "../public/texts/littledevil/ei1leC1rcmFiYXRob3ItZnJvbS10aGUtY3J5cHQv.html",
+    "image": "../public/event-images/littledevil/ei1leC1rcmFiYXRob3ItZnJvbS10aGUtY3J5cHQv",
+    "soldOut": false
+  },
+  {
     "start": "2024-03-23T21:00:00",
     "venueEventUrl": "https://www.littledevil.nl/calendar/van-goth-los/",
-    "title": "Van Goth Los",
+    "title": "Van Goth Los: The Fourth (g)Rave",
     "location": "littledevil",
     "price": 0,
     "shortText": "dansavond - goth - new wave",
@@ -112,14 +112,14 @@
     "soldOut": false
   },
   {
-    "start": "2024-04-27T21:00:00",
-    "venueEventUrl": "https://www.littledevil.nl/calendar/temple-fang-2/",
-    "title": "Temple Fang",
+    "start": "2024-04-13T21:00:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/bat-sabbath/",
+    "title": "Bat Sabbath",
     "location": "littledevil",
-    "price": 12.5,
-    "shortText": "heavy rock",
-    "longText": "../public/texts/littledevil/dmlsLm5sL2NhbGVuZGFyL3RlbXBsZS1mYW5nLTIv.html",
-    "image": "../public/event-images/littledevil/dmlsLm5sL2NhbGVuZGFyL3RlbXBsZS1mYW5nLTIv",
+    "price": null,
+    "shortText": "tribute to Black Sabbath & Ozzy Osbourne",
+    "longText": "../public/texts/littledevil/ZGV2aWwubmwvY2FsZW5kYXIvYmF0LXNhYmJhdGgv.html",
+    "image": "../public/event-images/littledevil/ZGV2aWwubmwvY2FsZW5kYXIvYmF0LXNhYmJhdGgv",
     "soldOut": false
   }
 ]

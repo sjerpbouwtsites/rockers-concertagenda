@@ -1,18 +1,5 @@
 [
   {
-    "door": "2024-02-10T19:00:00Z",
-    "start": "2024-02-10T20:30:00Z",
-    "venueEventUrl": "https://p60.nl/rocket-guy",
-    "title": "Rocket Guy",
-    "location": "p60",
-    "price": 17.502,
-    "shortText": "EEN ELTON JOHN TRIBUTE",
-    "longText": "../public/texts/p60/aHR0cHM6Ly9wNjAubmwvcm9ja2V0LWd1eQ==.html",
-    "image": "../public/event-images/p60/aHR0cHM6Ly9wNjAubmwvcm9ja2V0LWd1eQ==",
-    "soldOut": false,
-    "unavailable": false
-  },
-  {
     "door": "2024-02-16T19:00:00Z",
     "start": "2024-02-16T21:00:00Z",
     "venueEventUrl": "https://p60.nl/abba-rocks",
@@ -65,6 +52,19 @@
     "unavailable": false
   },
   {
+    "door": "2024-03-01T19:00:00Z",
+    "start": "2024-03-01T20:30:00Z",
+    "venueEventUrl": "https://p60.nl/julian-sas",
+    "title": "Julian Sas",
+    "location": "p60",
+    "price": 21.5023,
+    "shortText": "30 JAAR JULIAN SAS BAND - support CROSSROAD TRAIL",
+    "longText": "../public/texts/p60/aHR0cHM6Ly9wNjAubmwvanVsaWFuLXNhcw==.html",
+    "image": "../public/event-images/p60/aHR0cHM6Ly9wNjAubmwvanVsaWFuLXNhcw==",
+    "soldOut": false,
+    "unavailable": false
+  },
+  {
     "door": "2024-03-02T18:30:00Z",
     "start": "2024-03-02T20:00:00Z",
     "venueEventUrl": "https://p60.nl/celtcast2024",
@@ -87,7 +87,9 @@
     "shortText": "FT. WHAMANIA!",
     "longText": "../public/texts/p60/Lm5sL2NsdWItdHJvcGljYW5hLWZ0LXdoYW1hbmlh.html",
     "image": "../public/event-images/p60/Lm5sL2NsdWItdHJvcGljYW5hLWZ0LXdoYW1hbmlh",
-    "soldOut": false,
+    "soldOut": [
+      "uitverkocht"
+    ],
     "unavailable": false
   },
   {
@@ -100,6 +102,32 @@
     "shortText": "BA MAN KHIAL KON TOUR",
     "longText": "../public/texts/p60/aHR0cHM6Ly9wNjAubmwvcGFsbGV0dA==.html",
     "image": "../public/event-images/p60/aHR0cHM6Ly9wNjAubmwvcGFsbGV0dA==",
+    "soldOut": false,
+    "unavailable": false
+  },
+  {
+    "door": "2024-03-23T18:00:00Z",
+    "start": "2024-03-23T19:30:00Z",
+    "venueEventUrl": "https://p60.nl/2024/zware-metalen-presents",
+    "title": "Sinister, The Monolith Deathcult ",
+    "location": "p60",
+    "price": 20.0022,
+    "shortText": " Aran Angmar  ZWARE METALEN PRESENTS",
+    "longText": "../public/texts/p60/bmwvMjAyNC96d2FyZS1tZXRhbGVuLXByZXNlbnRz.html",
+    "image": "../public/event-images/p60/bmwvMjAyNC96d2FyZS1tZXRhbGVuLXByZXNlbnRz",
+    "soldOut": false,
+    "unavailable": false
+  },
+  {
+    "door": "2024-03-24T19:00:00Z",
+    "start": "2024-03-24T21:00:00Z",
+    "venueEventUrl": "https://p60.nl/samory-i",
+    "title": "Samory I & Mortimer",
+    "location": "p60",
+    "price": 26.503,
+    "shortText": "MEETS TIPPY I GRADE",
+    "longText": "../public/texts/p60/aHR0cHM6Ly9wNjAubmwvc2Ftb3J5LWk=.html",
+    "image": "../public/event-images/p60/aHR0cHM6Ly9wNjAubmwvc2Ftb3J5LWk=",
     "soldOut": false,
     "unavailable": false
   }

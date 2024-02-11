@@ -1,4 +1,154 @@
 
+      oosterpoort-0 Error - 4:01:27 PM
+      Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:232:24)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+      Timeout baseEvent
+      
+      oosterpoort-0 Error - 4:01:18 PM
+      SyntaxError: Unexpected token < in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:6662:19)
+    at successSteps (node:internal/deps/undici/undici:6636:27)
+    at node:internal/deps/undici/undici:1236:60
+    at node:internal/process/task_queues:140:7
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at AsyncResource.runMicrotask (node:internal/process/task_queues:137:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+      Unexpected token < in JSON at position 0
+      
+      oosterpoort-0 Error - 4:01:17 PM
+      SyntaxError: Unexpected token < in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:6662:19)
+    at successSteps (node:internal/deps/undici/undici:6636:27)
+    at node:internal/deps/undici/undici:1236:60
+    at node:internal/process/task_queues:140:7
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at AsyncResource.runMicrotask (node:internal/process/task_queues:137:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+      Unexpected token < in JSON at position 0
+      
+      oosterpoort-0 Error - 4:01:16 PM
+      SyntaxError: Unexpected token < in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:6662:19)
+    at successSteps (node:internal/deps/undici/undici:6636:27)
+    at node:internal/deps/undici/undici:1236:60
+    at node:internal/process/task_queues:140:7
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at AsyncResource.runMicrotask (node:internal/process/task_queues:137:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+      Unexpected token < in JSON at position 0
+      
+      oosterpoort-0 Error - 4:01:14 PM
+      SyntaxError: Unexpected token < in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at parseJSONFromBytes (node:internal/deps/undici/undici:6662:19)
+    at successSteps (node:internal/deps/undici/undici:6636:27)
+    at node:internal/deps/undici/undici:1236:60
+    at node:internal/process/task_queues:140:7
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at AsyncResource.runMicrotask (node:internal/process/task_queues:137:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+      Unexpected token < in JSON at position 0
+      
+      neushoorn-0 Error - 3:57:17 PM
+      Error: geen match met sidebar .tickets-button <a class='page-info' href='https://neushoorn.nl/production/nh-cafe-de-plaag/'>NH Café: De Plaag</a>
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:169:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:34:12)
+    at async _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:34:12)
+    at async scraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/neushoorn.js:303:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:510:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:143:5) 
+      geen match met sidebar .tickets-button <a class='page-info' href='https://neushoorn.nl/production/nh-cafe-de-plaag/'>NH Café: De Plaag</a>
+      
+      neushoorn-0 Error - 3:56:40 PM
+      Error: geen match met sidebar .tickets-button <a class='page-info' href='https://neushoorn.nl/production/nh-cafe-de-plaag/'>NH Café: De Plaag</a>
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:169:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:34:12)
+    at async _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:34:12)
+    at async scraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/neushoorn.js:302:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:510:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:143:5) 
+      geen match met sidebar .tickets-button <a class='page-info' href='https://neushoorn.nl/production/nh-cafe-de-plaag/'>NH Café: De Plaag</a>
+      
+      neushoorn-0 Error - 3:56:27 PM
+      Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:232:24)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+      Timeout baseEvent
+      
+      neushoorn-0 Error - 3:55:38 PM
+      Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:232:24)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+      Timeout baseEvent
+      
+      metropool-1 Error - 3:52:24 PM
+      Error: Timeout baseEvent
+    at Timeout._onTimeout (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:232:24)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+      Timeout baseEvent
+      
+      melkweg-1 Error - 3:50:31 PM
+      Error: lege tc in [class*="styles_ticket-prices"] <a class='page-info' href='https://www.melkweg.nl/nl/agenda/brant-bjork-trio-28-05-2024/'>Brant Bjork Trio</a>
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:52:37)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:34:12)
+    at async scraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/melkweg.js:303:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:510:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:143:5) 
+      lege tc in [class*="styles_ticket-prices"] <a class='page-info' href='https://www.melkweg.nl/nl/agenda/brant-bjork-trio-28-05-2024/'>Brant Bjork Trio</a>
+      
+      dynamo-1 Error - 3:42:36 PM
+      Error: geen el price
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:48:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/dynamo.js:355:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:510:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:143:5) 
+      geen el price
+      
+      dynamo-1 Error - 3:42:36 PM
+      TimeoutError: Waiting for selector `.dynamic-background-color#intro .color-pick` failed: Waiting failed: 2500ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+      Waiting for selector `.dynamic-background-color#intro .color-pick` failed: Waiting failed: 2500ms exceeded
+      
+      dynamo-0 Error - 2:39:30 PM
+      Error: geen el price
+    at _getPriceFromHTML (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/price.js:48:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async scraper.singlePage (file:///var/www/html/concertagenda/backend/scrapers/dynamo.js:355:20)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:510:22)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:143:5) 
+      geen el price
+      
+      dynamo-0 Error - 2:39:30 PM
+      TimeoutError: Waiting for selector `.dynamic-background-color#intro .color-pick` failed: Waiting failed: 2500ms exceeded
+    at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/common/WaitTask.js:56:37)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7) 
+      Waiting for selector `.dynamic-background-color#intro .color-pick` failed: Waiting failed: 2500ms exceeded
+      
+      depul-0 Error - 2:36:05 PM
+      TypeError: fetch failed
+    at Object.fetch (node:internal/deps/undici/undici:11576:11)
+    at async AbstractScraper.metalEncyclopedia (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:928:38)
+    at async AbstractScraper.isRock (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1063:34)
+    at async scraper.singlePageAsyncCheck (file:///var/www/html/concertagenda/backend/scrapers/depul.js:136:21)
+    at async AbstractScraper.processSingleMusicEvent (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:554:33)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:143:5) 
+      fetch failed
+      
       victorie-0 Error - 2:02:10 AM
       TimeoutError: Navigation timeout of 30000 ms exceeded
     at Timeout.<anonymous> (file:///var/www/html/concertagenda/backend/node_modules/puppeteer-core/lib/esm/puppeteer/util/Deferred.js:24:33)

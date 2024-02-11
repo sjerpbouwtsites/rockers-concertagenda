@@ -32,7 +32,7 @@ export const workerConfig = {
   //   workerConcurrent: 1,
   //   forceSet: 1,
   // },
-  bibelot: { workerCount: 1, workerConcurrent: 1, forceSet: 1 },
+  // bibelot: { workerCount: 1, workerConcurrent: 1, forceSet: 1 },
   // cpunt: { workerCount: 1, workerConcurrent: 1, forceSet: 1 },
   // dbs: {
   //   workerCount: 4,
@@ -101,7 +101,7 @@ export const workerConfig = {
   //   workerConcurrent: 2,
   //   forceSet: 5,
   // },
-  // patronaat: { workerCount: 2, workerConcurrent: 2, forceSet: 6 },
+  patronaat: { workerCount: 2, workerConcurrent: 2, forceSet: 6 },
   // tivolivredenburg: {
   //   workerCount: 2, workerConcurrent: 2, forceSet: 6, CPUReq: 'low', 
   // },

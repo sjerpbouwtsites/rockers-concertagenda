@@ -17,6 +17,7 @@ const scraper = new AbstractScraper({
   workerData: { ...workerData },
   mainPage: {
     url: 'https://neushoorn.nl/#/search?category=Heavy',
+    timeout: 36001,
   },
   singlePage: {
     timeout: 20000,

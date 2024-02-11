@@ -1,17 +1,5 @@
 [
   {
-    "start": "2024-02-03T19:00:00",
-    "venueEventUrl": "https://nobel.nl/programma/texoprint-sowt-to-adelaide-3-feb-2024/",
-    "title": "Texoprint + SØWT + To Adelaide",
-    "location": "gebrdenobel",
-    "price": 12.5,
-    "shortText": "Een avond vol meeslepende noise, distortion en feedback dat blijft hangen.",
-    "longText": "../public/texts/gebrdenobel/dC1zb3d0LXRvLWFkZWxhaWRlLTMtZmViLTIwMjQv.html",
-    "image": "../public/event-images/gebrdenobel/dC1zb3d0LXRvLWFkZWxhaWRlLTMtZmViLTIwMjQv",
-    "soldOut": false,
-    "unavailable": false
-  },
-  {
     "start": "2024-02-17T19:00:00",
     "venueEventUrl": "https://nobel.nl/programma/fool-circle-presents-fool-metal-jacket-17-feb-2024/",
     "title": "Fool Circle Presents: Fool Metal Jacket",
@@ -85,13 +73,13 @@
   },
   {
     "start": "2024-03-30T16:00:00",
-    "venueEventUrl": "https://nobel.nl/programma/interstellar-solar-fest-ll-30-mar-2024/",
+    "venueEventUrl": "https://nobel.nl/programma/interstellar-solar-fest-ii-30-mar-2024/",
     "title": "Interstellar Solar Fest II",
     "location": "gebrdenobel",
     "price": 32.5,
     "shortText": "Stoner- en alternatief rockfestival met Truckfighters en meer!",
-    "longText": "../public/texts/gebrdenobel/bGFyLXNvbGFyLWZlc3QtbGwtMzAtbWFyLTIwMjQv.html",
-    "image": "../public/event-images/gebrdenobel/bGFyLXNvbGFyLWZlc3QtbGwtMzAtbWFyLTIwMjQv",
+    "longText": "../public/texts/gebrdenobel/bGFyLXNvbGFyLWZlc3QtaWktMzAtbWFyLTIwMjQv.html",
+    "image": "../public/event-images/gebrdenobel/bGFyLXNvbGFyLWZlc3QtaWktMzAtbWFyLTIwMjQv",
     "soldOut": false,
     "unavailable": false
   },
@@ -116,6 +104,18 @@
     "shortText": "Drentse punkrock over bier, auto's, vechten, andermans moeder en natuurlijk hun geliefde provincie",
     "longText": "../public/texts/gebrdenobel/b2dyYW1tYS9za3JvZXRiYWxnLTEtanVuLTIwMjQv.html",
     "image": "../public/event-images/gebrdenobel/b2dyYW1tYS9za3JvZXRiYWxnLTEtanVuLTIwMjQv",
+    "soldOut": false,
+    "unavailable": false
+  },
+  {
+    "start": "2024-06-02T19:00:00",
+    "venueEventUrl": "https://nobel.nl/programma/alien-weaponry-2-jun-2024/",
+    "title": "Alien Weaponry",
+    "location": "gebrdenobel",
+    "price": 20,
+    "shortText": "Thrash metal in origineel Nieuw Zeelands 'Te Reo Maori'",
+    "longText": "../public/texts/gebrdenobel/bW1hL2FsaWVuLXdlYXBvbnJ5LTItanVuLTIwMjQv.html",
+    "image": "../public/event-images/gebrdenobel/bW1hL2FsaWVuLXdlYXBvbnJ5LTItanVuLTIwMjQv",
     "soldOut": false,
     "unavailable": false
   }

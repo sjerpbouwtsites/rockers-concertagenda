@@ -11,7 +11,7 @@ const scraper = new AbstractScraper({
 
   mainPage: {
     timeout: 30034,
-    url: 'https://patronaat.nl/programma/?type=event&s=&eventtype%5B%5D=178',
+    url: 'https://patronaat.nl/programma/?type=event&s=&eventtype%5B%5D=197',
   },
   singlePage: {
     timeout: 20036,

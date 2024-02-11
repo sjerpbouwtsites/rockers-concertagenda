@@ -1,7 +1,7 @@
 [
   {
-    "door": "2024-02-16T19:30:00",
-    "start": "2024-02-16T20:00:00",
+    "door": "",
+    "start": "2024-02-16T19:30:00",
     "end": "2024-02-16T23:00:00",
     "venueEventUrl": "https://www.dynamo-eindhoven.nl/programma/citizen-2024/#spotify-embed",
     "title": "Citizen",
@@ -20,7 +20,7 @@
     "title": "Orbit Culture",
     "location": "dynamo",
     "price": 19,
-    "shortText": "Plus support",
+    "shortText": "Support: Defects",
     "longText": "../public/texts/dynamo/aXQtY3VsdHVyZS0yMDI0LyNzcG90aWZ5LWVtYmVk.html",
     "image": "../public/event-images/dynamo/aXQtY3VsdHVyZS0yMDI0LyNzcG90aWZ5LWVtYmVk",
     "soldOut": true
@@ -39,29 +39,42 @@
     "soldOut": false
   },
   {
-    "door": "2024-04-23T19:30:00",
-    "start": "2024-04-23T20:00:00",
-    "end": "2024-04-23T23:00:00",
-    "venueEventUrl": "https://www.dynamo-eindhoven.nl/programma/dragged-under-2023/#spotify-embed",
-    "title": "Dragged Under",
+    "door": "2024-04-20T20:00:00",
+    "start": "2024-04-20T20:00:00",
+    "end": "2024-04-20T01:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/programma/emo-night-mainland-2024/#spotify-embed",
+    "title": "Emo Night Mainland",
     "location": "dynamo",
-    "price": 19,
-    "shortText": "Support: Elwood Stray",
-    "longText": "../public/texts/dynamo/Z2dlZC11bmRlci0yMDIzLyNzcG90aWZ5LWVtYmVk.html",
-    "image": "../public/event-images/dynamo/Z2dlZC11bmRlci0yMDIzLyNzcG90aWZ5LWVtYmVk",
-    "soldOut": true
+    "price": 20,
+    "shortText": "Your favorite emo party is back!",
+    "longText": "../public/texts/dynamo/dC1tYWlubGFuZC0yMDI0LyNzcG90aWZ5LWVtYmVk.html",
+    "image": "../public/event-images/dynamo/dC1tYWlubGFuZC0yMDI0LyNzcG90aWZ5LWVtYmVk",
+    "soldOut": false
   },
   {
-    "door": "2024-06-07T19:30:00",
-    "start": "2024-06-07T20:15:00",
-    "end": "2024-06-07T23:00:00",
-    "venueEventUrl": "https://www.dynamo-eindhoven.nl/programma/downset-2024/#spotify-embed",
-    "title": "Downset",
+    "door": "2024-05-17T19:30:00",
+    "start": "2024-05-17T20:00:00",
+    "end": "2024-05-17T23:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/programma/party-cannon-2024/#spotify-embed",
+    "title": "Party Cannon",
     "location": "dynamo",
     "price": 19,
-    "shortText": "Support: Agitator",
-    "longText": "../public/texts/dynamo/bWEvZG93bnNldC0yMDI0LyNzcG90aWZ5LWVtYmVk.html",
-    "image": "../public/event-images/dynamo/bWEvZG93bnNldC0yMDI0LyNzcG90aWZ5LWVtYmVk",
+    "shortText": "Support: Cognitive",
+    "longText": "../public/texts/dynamo/cnR5LWNhbm5vbi0yMDI0LyNzcG90aWZ5LWVtYmVk.html",
+    "image": "../public/event-images/dynamo/cnR5LWNhbm5vbi0yMDI0LyNzcG90aWZ5LWVtYmVk",
+    "soldOut": false
+  },
+  {
+    "door": "2024-06-01T19:00:00",
+    "start": "2024-06-01T19:30:00",
+    "end": "2024-06-01T23:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/programma/alien-weaponry-2024/#spotify-embed",
+    "title": "Alien Weaponry",
+    "location": "dynamo",
+    "price": 19,
+    "shortText": "Plus support",
+    "longText": "../public/texts/dynamo/bi13ZWFwb25yeS0yMDI0LyNzcG90aWZ5LWVtYmVk.html",
+    "image": "../public/event-images/dynamo/bi13ZWFwb25yeS0yMDI0LyNzcG90aWZ5LWVtYmVk",
     "soldOut": false
   }
 ]
