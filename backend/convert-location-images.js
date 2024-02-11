@@ -4,13 +4,15 @@ import sharp from 'sharp';
 function initLocationImagesConversion() {
   const eventImagesDestFolder = '/home/sjerp/dev/apache/concertagenda/public/location-images/';
   const eventImagesSourceFolder = '/home/sjerp/dev/apache/concertagenda/src/location-images/';
-  const files = fs.readdirSync(eventImagesSourceFolder).map((file) => {
-    const fileZonder = file.replace(/.jpg|.jpeg|.png|.webp/, '');
-    return {
-      source: `${eventImagesSourceFolder}${file}`,
-      dest: `${eventImagesDestFolder}${fileZonder}`,
-    };
-  });
+  const files = fs.readdirSync(eventImagesSourceFolder)
+    .filter((file) => file.includes("jpg"))
+    .map((file) => {
+      const fileZonder = file.replace(/.jpg|.jpeg|.png|.webp/, '');
+      return {
+        source: `${eventImagesSourceFolder}${file}`,
+        dest: `${eventImagesDestFolder}${fileZonder}`,
+      };
+    });
 
   recursiveFileConversion(files);
 }
@@ -50,7 +52,13 @@ async function downloadImageCompress(image, imagePath) {
       });
   }
 
-  // await waitTime(400);
+  await waitTime(150);
+}
+
+function waitTime(t = 500) {
+  return new Promise((res, rej) => {
+    setTimeout(res, t);
+  });
 }
 
 initLocationImagesConversion();
