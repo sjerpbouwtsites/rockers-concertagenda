@@ -1,14 +1,26 @@
 [
   {
-    "door": "2024-04-13T20:00:00",
-    "start": "2024-04-13T19:30:00",
-    "venueEventUrl": "https://www.podiumvictorie.nl/programma/tusky-2024",
-    "title": "Tusky",
+    "door": "2024-03-27T20:30:00",
+    "start": "2024-03-27T19:30:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/nick-oliveri",
+    "title": "Nick Oliveri",
     "location": "victorie",
-    "price": 14.95,
-    "shortText": "Luide, snelle en furieuze punkrock",
-    "longText": "../public/texts/victorie/Y3RvcmllLm5sL3Byb2dyYW1tYS90dXNreS0yMDI0.html",
-    "image": "../public/event-images/victorie/Y3RvcmllLm5sL3Byb2dyYW1tYS90dXNreS0yMDI0",
+    "price": 20.2,
+    "shortText": "Amerikaanse bassist, bekend van o.a. Kyuss en Queens of the Stone Age",
+    "longText": "../public/texts/victorie/b3JpZS5ubC9wcm9ncmFtbWEvbmljay1vbGl2ZXJp.html",
+    "image": "../public/event-images/victorie/b3JpZS5ubC9wcm9ncmFtbWEvbmljay1vbGl2ZXJp",
+    "soldOut": false
+  },
+  {
+    "door": "2024-04-19T20:00:00",
+    "start": "2024-04-19T19:30:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/electric-eel-shock-2024",
+    "title": "Electric Eel Shock",
+    "location": "victorie",
+    "price": 20.15,
+    "shortText": "Rock 'n roll monster uit Japan + support Dikke Dennis & de Røckers",
+    "longText": "../public/texts/victorie/Z3JhbW1hL2VsZWN0cmljLWVlbC1zaG9jay0yMDI0.html",
+    "image": "../public/event-images/victorie/Z3JhbW1hL2VsZWN0cmljLWVlbC1zaG9jay0yMDI0",
     "soldOut": false
   }
 ]

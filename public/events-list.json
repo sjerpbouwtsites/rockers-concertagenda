@@ -144,6 +144,18 @@
     "unavailable": false
   },
   {
+    "door": "2024-02-15T19:45:00",
+    "start": "2024-02-15T19:15:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/the-toy-dolls",
+    "title": "The Toy Dolls",
+    "location": "victorie",
+    "price": 34.5,
+    "shortText": "Britse punkband viert 40-jarig jubileum",
+    "longText": "../public/texts/victorie/cmllLm5sL3Byb2dyYW1tYS90aGUtdG95LWRvbGxz.html",
+    "image": "../public/event-images/victorie/cmllLm5sL3Byb2dyYW1tYS90aGUtdG95LWRvbGxz",
+    "soldOut": true
+  },
+  {
     "start": "2024-02-15T07:30:00",
     "end": "2024-02-15T11:30:00",
     "venueEventUrl": "https://www.dbstudio.nl/event/clash-of-the-titans-2024-voorronde-7/",
@@ -492,14 +504,6 @@
     "image": "../public/event-images/metropool/czovL21ldHJvcG9vbC5ubC9hZ2VuZGEvc2xvcGUv",
     "soldOut": false,
     "unavailable": false
-  },
-  {
-    "title": "Phrasing, Headless Hunter en Razorblade Messiah",
-    "start": "2024-02-18",
-    "eventLocationName": "nobel",
-    "shortText": "Nobel, Leiden",
-    "image": "../public/location-images/nobel",
-    "location": "nobel"
   },
   {
     "start": "2024-02-18T18:00:00",
@@ -1497,14 +1501,6 @@
     "location": "trix"
   },
   {
-    "title": "Foxy Venus, Razorblade Messiah, Mouflon, Colère en Document 6",
-    "start": "2024-03-02",
-    "eventLocationName": "muziekcafé helmond",
-    "shortText": "Muziekcafé Helmond, Helmond",
-    "image": "../public/location-images/muziekcafhelmond",
-    "location": "muziekcafhelmond"
-  },
-  {
     "door": "2024-03-02T19:30:00",
     "start": "2024-03-02T20:30:00",
     "venueEventUrl": "https://www.groene-engel.nl/programma/julian-sas/",
@@ -2409,14 +2405,6 @@
     "unavailable": false
   },
   {
-    "title": "Leiden Retox",
-    "start": "2024-03-16",
-    "eventLocationName": "nobel",
-    "shortText": "\nMet Fleddy Melculy, Bark, savage Beat e.a.",
-    "image": "../public/location-images/nobel",
-    "location": "nobel"
-  },
-  {
     "title": "Häxenzijrkell, Pox en Dikasterion",
     "start": "2024-03-16",
     "eventLocationName": "stroomhuis",
@@ -3014,6 +3002,18 @@
     "unavailable": false
   },
   {
+    "door": "2024-03-27T20:30:00",
+    "start": "2024-03-27T19:30:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/nick-oliveri",
+    "title": "Nick Oliveri",
+    "location": "victorie",
+    "price": 20.2,
+    "shortText": "Amerikaanse bassist, bekend van o.a. Kyuss en Queens of the Stone Age",
+    "longText": "../public/texts/victorie/b3JpZS5ubC9wcm9ncmFtbWEvbmljay1vbGl2ZXJp.html",
+    "image": "../public/event-images/victorie/b3JpZS5ubC9wcm9ncmFtbWEvbmljay1vbGl2ZXJp",
+    "soldOut": false
+  },
+  {
     "door": "2024-03-28T20:00:00",
     "start": "2024-03-28T19:00:00",
     "venueEventUrl": "https://www.paradiso.nl/programma/marathon/1453156",
@@ -3051,22 +3051,6 @@
     "image": "../public/event-images/nieuwenor/OC9oYXJkLWluLWhlZXJsZW4tZG9vZHNlc2thZGVy",
     "soldOut": null,
     "unavailable": false
-  },
-  {
-    "title": "Blackbriar",
-    "start": "2024-03-28",
-    "eventLocationName": "nobel",
-    "shortText": "Nobel, Leiden",
-    "image": "../public/location-images/nobel",
-    "location": "nobel"
-  },
-  {
-    "title": "Blackbriar",
-    "start": "2024-03-28",
-    "eventLocationName": "nobel",
-    "shortText": "Nobel, Leiden",
-    "image": "../public/location-images/nobel",
-    "location": "nobel"
   },
   {
     "start": "2024-03-28T19:00:00",
@@ -3189,6 +3173,18 @@
     "longText": "../public/texts/willemeen/bmRlcndvcmxkLXJlYWxtLW9mLWxvc3Qtc291bHMv.html",
     "soldOut": false,
     "unavailable": false
+  },
+  {
+    "door": "2024-03-30T21:00:00",
+    "start": "2024-03-30T19:30:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/ares",
+    "title": "Ares",
+    "location": "victorie",
+    "price": 14.45,
+    "shortText": "Rapper uit Oosterhout met eigenzinnige sound",
+    "longText": "../public/texts/victorie/ZGl1bXZpY3RvcmllLm5sL3Byb2dyYW1tYS9hcmVz.html",
+    "image": "../public/event-images/victorie/ZGl1bXZpY3RvcmllLm5sL3Byb2dyYW1tYS9hcmVz",
+    "soldOut": false
   },
   {
     "start": "2024-03-30T20:30:00",
@@ -3888,6 +3884,18 @@
     "unavailable": false
   },
   {
+    "door": "2024-04-10T19:30:00",
+    "start": "2024-04-10T18:30:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/marduk",
+    "title": "Marduk",
+    "location": "victorie",
+    "price": 34.5,
+    "shortText": "Met Origin, Doodswens en Skaphos",
+    "longText": "../public/texts/victorie/dW12aWN0b3JpZS5ubC9wcm9ncmFtbWEvbWFyZHVr.html",
+    "image": "../public/event-images/victorie/dW12aWN0b3JpZS5ubC9wcm9ncmFtbWEvbWFyZHVr",
+    "soldOut": false
+  },
+  {
     "start": "2024-04-10T20:00:00+02:00",
     "venueEventUrl": "https://www.spotgroningen.nl/programma/vandenberg/",
     "title": "Vandenberg",
@@ -3910,22 +3918,6 @@
     "image": "../public/event-images/occii/L29jY2lpLm9yZy9ldmVudHMvd2FrLWtvbHBla2Ev",
     "soldOut": false,
     "unavailable": false
-  },
-  {
-    "title": "Marduk, Origin en Doodswens",
-    "start": "2024-04-10",
-    "eventLocationName": "victorie",
-    "shortText": "Victorie, Alkmaar",
-    "image": "../public/location-images/victorie",
-    "location": "victorie"
-  },
-  {
-    "title": "Marduk, Origin en Doodswens",
-    "start": "2024-04-10",
-    "eventLocationName": "victorie",
-    "shortText": "Victorie, Alkmaar",
-    "image": "../public/location-images/victorie",
-    "location": "victorie"
   },
   {
     "door": "2024-04-11T19:30:00",
@@ -4061,6 +4053,18 @@
     "image": "../public/event-images/willemeen/ZGVhdGgtdmFsbGV5LWdpcmxzLXVzLXN1cHBvcnQv",
     "soldOut": false,
     "unavailable": false
+  },
+  {
+    "door": "2024-04-13T20:00:00",
+    "start": "2024-04-13T19:30:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/tusky-2024",
+    "title": "Tusky",
+    "location": "victorie",
+    "price": 14.95,
+    "shortText": "Luide, snelle en furieuze punkrock",
+    "longText": "../public/texts/victorie/Y3RvcmllLm5sL3Byb2dyYW1tYS90dXNreS0yMDI0.html",
+    "image": "../public/event-images/victorie/Y3RvcmllLm5sL3Byb2dyYW1tYS90dXNreS0yMDI0",
+    "soldOut": false
   },
   {
     "title": "Desert Storm",
@@ -4321,6 +4325,18 @@
     "image": "../public/event-images/willemeen/L3Byb2dyYW1tYS94eF9lbW9mb3JldmVyX3h4LTIv",
     "soldOut": false,
     "unavailable": false
+  },
+  {
+    "door": "2024-04-19T20:00:00",
+    "start": "2024-04-19T19:30:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/electric-eel-shock-2024",
+    "title": "Electric Eel Shock",
+    "location": "victorie",
+    "price": 20.15,
+    "shortText": "Rock 'n roll monster uit Japan + support Dikke Dennis & de Røckers",
+    "longText": "../public/texts/victorie/Z3JhbW1hL2VsZWN0cmljLWVlbC1zaG9jay0yMDI0.html",
+    "image": "../public/event-images/victorie/Z3JhbW1hL2VsZWN0cmljLWVlbC1zaG9jay0yMDI0",
+    "soldOut": false
   },
   {
     "door": "2024-04-19T19:00:00",
@@ -4823,14 +4839,6 @@
     "image": "../public/event-images/occii/b3JnL2V2ZW50cy9oYy1wdW5rLXNpbmctYWxvbmcv",
     "soldOut": false,
     "unavailable": false
-  },
-  {
-    "title": "FemME IX - Female Metal Event",
-    "start": "2024-04-28",
-    "eventLocationName": "muziekcafé helmond",
-    "shortText": "\nMet Phantom Elite, The Prize, Alia Tempora, Beyond God, Psideralica en Attractive Chaos",
-    "image": "../public/location-images/muziekcafhelmond",
-    "location": "muziekcafhelmond"
   },
   {
     "start": "2024-04-28T18:00:00",
@@ -6406,22 +6414,6 @@
     "soldOut": false
   },
   {
-    "title": "Alien Weaponry",
-    "start": "2024-06-02",
-    "eventLocationName": "nobel",
-    "shortText": "Nobel, Leiden",
-    "image": "../public/location-images/nobel",
-    "location": "nobel"
-  },
-  {
-    "title": "Alien Weaponry",
-    "start": "2024-06-02",
-    "eventLocationName": "nobel",
-    "shortText": "Nobel, Leiden",
-    "image": "../public/location-images/nobel",
-    "location": "nobel"
-  },
-  {
     "start": "2024-06-02T19:00:00",
     "venueEventUrl": "https://nobel.nl/programma/alien-weaponry-2-jun-2024/",
     "title": "Alien Weaponry",
@@ -6503,6 +6495,18 @@
     "soldOut": false
   },
   {
+    "start": "2024-06-08T00:00:00",
+    "venueEventUrl": "https://em2groningen.nl/event/rootsriders-tribute2bobmarley/",
+    "title": "Rootsriders ✰ Bob Marley Tribute Night",
+    "location": "em2",
+    "price": 23.5,
+    "shortText": "De door de BBC uitgeroepen als beste Bob Marley tribute van de wereld, de ROOTSRIDERS staan voor de tweede keer bij EM2 op 8 juni 2024!",
+    "longText": "../public/texts/em2/cm9vdHNyaWRlcnMtdHJpYnV0ZTJib2JtYXJsZXkv.html",
+    "image": "../public/event-images/em2/cm9vdHNyaWRlcnMtdHJpYnV0ZTJib2JtYXJsZXkv",
+    "soldOut": false,
+    "unavailable": false
+  },
+  {
     "start": "2024-06-09T16:00:00",
     "venueEventUrl": "https://www.willemeen.nl/programma/bob-wayne-usa-support-matinee-show/",
     "title": "bob Wayne (USA) + Support Matinee show",
@@ -6559,6 +6563,18 @@
     "price": 84,
     "longText": "../public/texts/afaslive/ZmFzbGl2ZS5ubC9hZ2VuZGEvanVkYXMtcHJpZXN0.html",
     "image": "../public/event-images/afaslive/ZmFzbGl2ZS5ubC9hZ2VuZGEvanVkYXMtcHJpZXN0",
+    "soldOut": false
+  },
+  {
+    "door": "2024-06-11T20:30:00",
+    "start": "2024-06-11T19:30:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/richie-kotzen",
+    "title": "Richie Kotzen",
+    "location": "victorie",
+    "price": 32.2,
+    "shortText": "Amerikaanse gitarist, zanger en songwriter",
+    "longText": "../public/texts/victorie/cmllLm5sL3Byb2dyYW1tYS9yaWNoaWUta290emVu.html",
+    "image": "../public/event-images/victorie/cmllLm5sL3Byb2dyYW1tYS9yaWNoaWUta290emVu",
     "soldOut": false
   },
   {
@@ -7703,6 +7719,18 @@
     "image": "../public/event-images/melkweg/ZW5kYS9kZWFkLWJ5LWFwcmlsLTA4LTEwLTIwMjQv",
     "soldOut": false,
     "unavailable": false
+  },
+  {
+    "door": "2024-10-11T20:30:00",
+    "start": "2024-10-11T19:00:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/y-en-t-11/10/24",
+    "title": "Y&t",
+    "location": "victorie",
+    "price": 38.1,
+    "shortText": "Legendarische Amerikaanse rockband bestaat 50 jaar",
+    "longText": "../public/texts/victorie/ZS5ubC9wcm9ncmFtbWEveS1lbi10LTExLzEwLzI0.html",
+    "image": "../public/event-images/victorie/ZS5ubC9wcm9ncmFtbWEveS1lbi10LTExLzEwLzI0",
+    "soldOut": false
   },
   {
     "door": "2024-10-11T20:00:00",
