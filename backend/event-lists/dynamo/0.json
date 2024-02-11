@@ -1,7 +1,7 @@
 [
   {
-    "door": "2024-02-16T19:00:00",
-    "start": "2024-02-16T19:30:00",
+    "door": "2024-02-16T19:30:00",
+    "start": "2024-02-16T20:00:00",
     "end": "2024-02-16T23:00:00",
     "venueEventUrl": "https://www.dynamo-eindhoven.nl/programma/citizen-2024/#spotify-embed",
     "title": "Citizen",
@@ -10,7 +10,20 @@
     "shortText": "Support: Drug Church",
     "longText": "../public/texts/dynamo/bWEvY2l0aXplbi0yMDI0LyNzcG90aWZ5LWVtYmVk.html",
     "image": "../public/event-images/dynamo/bWEvY2l0aXplbi0yMDI0LyNzcG90aWZ5LWVtYmVk",
-    "soldOut": false
+    "soldOut": true
+  },
+  {
+    "door": "2024-03-14T19:30:00",
+    "start": "2024-03-14T20:00:00",
+    "end": "2024-03-14T23:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/programma/orbit-culture-2024/#spotify-embed",
+    "title": "Orbit Culture",
+    "location": "dynamo",
+    "price": 19,
+    "shortText": "Plus support",
+    "longText": "../public/texts/dynamo/aXQtY3VsdHVyZS0yMDI0LyNzcG90aWZ5LWVtYmVk.html",
+    "image": "../public/event-images/dynamo/aXQtY3VsdHVyZS0yMDI0LyNzcG90aWZ5LWVtYmVk",
+    "soldOut": true
   },
   {
     "door": "2024-03-16T15:00:00",
@@ -36,6 +49,19 @@
     "shortText": "Support: Elwood Stray",
     "longText": "../public/texts/dynamo/Z2dlZC11bmRlci0yMDIzLyNzcG90aWZ5LWVtYmVk.html",
     "image": "../public/event-images/dynamo/Z2dlZC11bmRlci0yMDIzLyNzcG90aWZ5LWVtYmVk",
+    "soldOut": true
+  },
+  {
+    "door": "2024-06-07T19:30:00",
+    "start": "2024-06-07T20:15:00",
+    "end": "2024-06-07T23:00:00",
+    "venueEventUrl": "https://www.dynamo-eindhoven.nl/programma/downset-2024/#spotify-embed",
+    "title": "Downset",
+    "location": "dynamo",
+    "price": 19,
+    "shortText": "Support: Agitator",
+    "longText": "../public/texts/dynamo/bWEvZG93bnNldC0yMDI0LyNzcG90aWZ5LWVtYmVk.html",
+    "image": "../public/event-images/dynamo/bWEvZG93bnNldC0yMDI0LyNzcG90aWZ5LWVtYmVk",
     "soldOut": false
   }
 ]

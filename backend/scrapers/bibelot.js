@@ -175,6 +175,8 @@ scraper.mainPage = async function () {
     checkedEvents: [],
   });  
 
+  this.dirtyLog(checkedEvents);
+
   this.saveBaseEventlist(workerData.family, checkedEvents);
   
   const thisWorkersEvents = checkedEvents.filter(
@@ -212,14 +214,15 @@ scraper.singlePage = async function ({ page, event }) {
       const huiMaandNr = (new Date()).getMonth() + 1;
       const huiJaar = (new Date()).getFullYear();
       const jaar = huiMaandNr < Number(maandNummer) ? (huiJaar + 1) : huiJaar;
+      const maandTekst = maandNummer.padStart(2, '0');
 
-      res.baseDate = `${jaar}-${maandNummer}-${dag}`;
+      res.baseDate = `${jaar}-${maandTekst}-${dag}`;
       if (infoElText.match(/deuren.*\d{1,2}:\d\d\s/i)) {
         res.doorTime = infoElText.match(/deuren.*\d{1,2}:\d\d\s/i)[0].match(/\d\d:\d\d/)[0];
-        res.door = `${jaar}-${huiMaandNr}-${dag}T${res.doorTime}:00`;
+        res.door = `${jaar}-${maandTekst}-${dag}T${res.doorTime}:00`;
       }
       res.startTime = infoElText.match(/aanvang.*\d{1,2}:\d\d\s/i)[0].match(/\d\d:\d\d/)[0];
-      res.start = `${jaar}-${huiMaandNr}-${dag}T${res.startTime}:00`;
+      res.start = `${jaar}-${maandTekst}-${dag}T${res.startTime}:00`;
 
       return res;
     },

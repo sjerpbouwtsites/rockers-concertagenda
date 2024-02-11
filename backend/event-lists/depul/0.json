@@ -1,62 +1,14 @@
 [
   {
     "door": null,
-    "start": "2023-12-03T19:00:00",
-    "venueEventUrl": "https://www.livepul.com/agenda/gorgoroth/",
-    "title": "Gorgoroth (NOR)",
+    "start": "2024-03-03T15:30:00",
+    "venueEventUrl": "https://www.livepul.com/agenda/suicide-angels/",
+    "title": "Suicidal Angels (GR)",
     "location": "depul",
-    "price": 25,
-    "shortText": "Oldskool blackmetal uit Scandinavië",
-    "longText": "../public/texts/depul/LmxpdmVwdWwuY29tL2FnZW5kYS9nb3Jnb3JvdGgv.html",
-    "image": "../public/event-images/depul/LmxpdmVwdWwuY29tL2FnZW5kYS9nb3Jnb3JvdGgv",
-    "soldOut": false
-  },
-  {
-    "door": null,
-    "start": "2023-12-16T21:30:00",
-    "venueEventUrl": "https://www.livepul.com/agenda/breuklijn-bunkier-gestas/",
-    "title": "Breuklijn: Bunkier & Gestas (PL)",
-    "location": "depul",
-    "price": 15,
-    "shortText": "Double-bill van twee Poolse hc/punkbands",
-    "longText": "../public/texts/depul/ZW5kYS9icmV1a2xpam4tYnVua2llci1nZXN0YXMv.html",
-    "image": "../public/event-images/depul/ZW5kYS9icmV1a2xpam4tYnVua2llci1nZXN0YXMv",
-    "soldOut": false
-  },
-  {
-    "door": null,
-    "start": "2024-01-19T20:15:00",
-    "venueEventUrl": "https://www.livepul.com/agenda/delain/",
-    "title": "Delain (nl)",
-    "location": "depul",
-    "price": 27,
-    "shortText": "Symfonische metalband is terug in nieuwe bezetting",
-    "longText": "../public/texts/depul/d3d3LmxpdmVwdWwuY29tL2FnZW5kYS9kZWxhaW4v.html",
-    "image": "../public/event-images/depul/d3d3LmxpdmVwdWwuY29tL2FnZW5kYS9kZWxhaW4v",
-    "soldOut": false
-  },
-  {
-    "door": null,
-    "start": "2024-01-26T20:30:00",
-    "venueEventUrl": "https://www.livepul.com/agenda/ronnie-james-dio-memorial/",
-    "title": "Ronnie James Dio - The Memorial Concert",
-    "location": "depul",
-    "price": 22,
-    "shortText": "Met medewerking van de top van de Nederlandse  hardrock en metal",
-    "longText": "../public/texts/depul/bmRhL3Jvbm5pZS1qYW1lcy1kaW8tbWVtb3JpYWwv.html",
-    "image": "../public/event-images/depul/bmRhL3Jvbm5pZS1qYW1lcy1kaW8tbWVtb3JpYWwv",
-    "soldOut": false
-  },
-  {
-    "door": null,
-    "start": "2024-03-02T20:00:00",
-    "venueEventUrl": "https://www.livepul.com/agenda/firewind-masterplan/",
-    "title": "Firewind & Masterplan (GR & GER)",
-    "location": "depul",
-    "price": 2,
-    "shortText": "Masters of Fire Tour 2024",
-    "longText": "../public/texts/depul/b20vYWdlbmRhL2ZpcmV3aW5kLW1hc3RlcnBsYW4v.html",
-    "image": "../public/event-images/depul/b20vYWdlbmRhL2ZpcmV3aW5kLW1hc3RlcnBsYW4v",
+    "price": 20,
+    "shortText": "Thrashmetal matinee op zondag",
+    "longText": "../public/texts/depul/cHVsLmNvbS9hZ2VuZGEvc3VpY2lkZS1hbmdlbHMv.html",
+    "image": "../public/event-images/depul/cHVsLmNvbS9hZ2VuZGEvc3VpY2lkZS1hbmdlbHMv",
     "soldOut": false
   },
   {
@@ -69,6 +21,30 @@
     "shortText": "Punklegendes uit Birmingham",
     "longText": "../public/texts/depul/ZXB1bC5jb20vYWdlbmRhL2JyZXVrbGlqbi1nYmgv.html",
     "image": "../public/event-images/depul/ZXB1bC5jb20vYWdlbmRhL2JyZXVrbGlqbi1nYmgv",
+    "soldOut": false
+  },
+  {
+    "door": null,
+    "start": "2024-09-14T20:15:00",
+    "venueEventUrl": "https://www.livepul.com/agenda/tankard/",
+    "title": "Tankard (DE)",
+    "location": "depul",
+    "price": 20,
+    "shortText": "Extreem dorstige Duitse thrash-metal",
+    "longText": "../public/texts/depul/d3cubGl2ZXB1bC5jb20vYWdlbmRhL3RhbmthcmQv.html",
+    "image": "../public/event-images/depul/d3cubGl2ZXB1bC5jb20vYWdlbmRhL3RhbmthcmQv",
+    "soldOut": false
+  },
+  {
+    "door": null,
+    "start": "2024-10-12T20:00:00",
+    "venueEventUrl": "https://www.livepul.com/agenda/yandt/",
+    "title": "Y&t (usa)",
+    "location": "depul",
+    "price": 12,
+    "shortText": "The band's 50-year anniversary (1974-2024)",
+    "longText": "../public/texts/depul/L3d3dy5saXZlcHVsLmNvbS9hZ2VuZGEveWFuZHQv.html",
+    "image": "../public/event-images/depul/L3d3dy5saXZlcHVsLmNvbS9hZ2VuZGEveWFuZHQv",
     "soldOut": false
   }
 ]

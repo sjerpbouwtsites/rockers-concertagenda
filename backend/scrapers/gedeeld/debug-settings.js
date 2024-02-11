@@ -1,10 +1,10 @@
 const debugSettings = {
-  debugCorruptedUnavailable: false,
-  debugsinglePageAsyncCheck: false,
-  debugRawEventAsyncCheck: false,
-  debugBaseEvents: false,
-  debugPageInfo: false,
-  debugPrice: false,
-  debugWithTempFile:false,
+  debugCorruptedUnavailable: true,
+  debugsinglePageAsyncCheck: true,
+  debugRawEventAsyncCheck: true,
+  debugBaseEvents: true,
+  debugPageInfo: true,
+  debugPrice: true,
+  debugWithTempFile:true,
 };
 export default debugSettings;

@@ -1,31 +1,5 @@
 [
   {
-    "door": "2023-12-01T20:00:00",
-    "start": "2023-12-01T20:00:00",
-    "venueEventUrl": "https://www.cpunt.nl/agenda/the-casualties",
-    "title": "The Casualties ",
-    "location": "cpunt",
-    "price": 22.5,
-    "shortText": "",
-    "longText": "../public/texts/cpunt/Y3B1bnQubmwvYWdlbmRhL3RoZS1jYXN1YWx0aWVz.html",
-    "image": "../public/event-images/cpunt/Y3B1bnQubmwvYWdlbmRhL3RoZS1jYXN1YWx0aWVz",
-    "soldOut": false,
-    "unavailable": false
-  },
-  {
-    "door": "2023-12-08T20:30:00",
-    "start": "2023-12-08T20:30:00",
-    "venueEventUrl": "https://www.cpunt.nl/agenda/frisse-duyck-kalaallit-nunaat-strangeways-boy",
-    "title": "Frisse Duyck - Kalaallit Nunaat, Strangeways ",
-    "location": "cpunt",
-    "price": 7.5,
-    "shortText": " Boycry  ",
-    "longText": "../public/texts/cpunt/bGFhbGxpdC1udW5hYXQtc3RyYW5nZXdheXMtYm95.html",
-    "image": "../public/event-images/cpunt/bGFhbGxpdC1udW5hYXQtc3RyYW5nZXdheXMtYm95",
-    "soldOut": false,
-    "unavailable": false
-  },
-  {
     "door": "2024-02-04T20:00:00",
     "start": "2024-02-04T20:00:00",
     "venueEventUrl": "https://www.cpunt.nl/agenda/ian-paice-purpendicular",
@@ -35,6 +9,32 @@
     "shortText": "",
     "longText": "../public/texts/cpunt/YWdlbmRhL2lhbi1wYWljZS1wdXJwZW5kaWN1bGFy.html",
     "image": "../public/event-images/cpunt/YWdlbmRhL2lhbi1wYWljZS1wdXJwZW5kaWN1bGFy",
+    "soldOut": false,
+    "unavailable": false
+  },
+  {
+    "door": "2024-02-10T20:00:00",
+    "start": "2024-02-10T20:00:00",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/kingfisher-sky-plays-kate-bush",
+    "title": "Kingfisher Sky plays Kate Bush",
+    "location": "cpunt",
+    "price": 18,
+    "shortText": "",
+    "longText": "../public/texts/cpunt/a2luZ2Zpc2hlci1za3ktcGxheXMta2F0ZS1idXNo.html",
+    "image": "../public/event-images/cpunt/a2luZ2Zpc2hlci1za3ktcGxheXMta2F0ZS1idXNo",
+    "soldOut": false,
+    "unavailable": false
+  },
+  {
+    "door": "2024-03-01T19:00:00",
+    "start": "2024-03-01T19:00:00",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/marcelfest",
+    "title": "Marcelfest",
+    "location": "cpunt",
+    "price": 5,
+    "shortText": "",
+    "longText": "../public/texts/cpunt/d3d3LmNwdW50Lm5sL2FnZW5kYS9tYXJjZWxmZXN0.html",
+    "image": "../public/event-images/cpunt/d3d3LmNwdW50Lm5sL2FnZW5kYS9tYXJjZWxmZXN0",
     "soldOut": false,
     "unavailable": false
   },
@@ -65,6 +65,19 @@
     "unavailable": false
   },
   {
+    "door": "2024-04-17T19:30:00",
+    "start": "2024-04-17T19:30:00",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/marc-rizzo-guitar-clinic",
+    "title": "Marc Rizzo",
+    "location": "cpunt",
+    "price": 25,
+    "shortText": "",
+    "longText": "../public/texts/cpunt/Z2VuZGEvbWFyYy1yaXp6by1ndWl0YXItY2xpbmlj.html",
+    "image": "../public/event-images/cpunt/Z2VuZGEvbWFyYy1yaXp6by1ndWl0YXItY2xpbmlj",
+    "soldOut": false,
+    "unavailable": false
+  },
+  {
     "door": "2024-04-21T19:00:00",
     "start": "2024-04-21T19:00:00",
     "venueEventUrl": "https://www.cpunt.nl/agenda/the-exploited",
@@ -74,6 +87,32 @@
     "shortText": "",
     "longText": "../public/texts/cpunt/LmNwdW50Lm5sL2FnZW5kYS90aGUtZXhwbG9pdGVk.html",
     "image": "../public/event-images/cpunt/LmNwdW50Lm5sL2FnZW5kYS90aGUtZXhwbG9pdGVk",
+    "soldOut": false,
+    "unavailable": false
+  },
+  {
+    "door": "2024-05-04T20:10:00",
+    "start": "2024-05-04T20:10:00",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/dope-dod-bizarre",
+    "title": "Dope d.o.d. + bizarre",
+    "location": "cpunt",
+    "price": 22.5,
+    "shortText": "",
+    "longText": "../public/texts/cpunt/dW50Lm5sL2FnZW5kYS9kb3BlLWRvZC1iaXphcnJl.html",
+    "image": "../public/event-images/cpunt/dW50Lm5sL2FnZW5kYS9kb3BlLWRvZC1iaXphcnJl",
+    "soldOut": false,
+    "unavailable": false
+  },
+  {
+    "door": "2024-09-20T20:00:00",
+    "start": "2024-09-20T20:00:00",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/gbh-2024",
+    "title": "Gbh",
+    "location": "cpunt",
+    "price": 15,
+    "shortText": "",
+    "longText": "../public/texts/cpunt/Ly93d3cuY3B1bnQubmwvYWdlbmRhL2diaC0yMDI0.html",
+    "image": "../public/event-images/cpunt/Ly93d3cuY3B1bnQubmwvYWdlbmRhL2diaC0yMDI0",
     "soldOut": false,
     "unavailable": false
   }

@@ -185,9 +185,15 @@ scraper.mainPage = async function () {
     { workerData },
   );
 
+
   await page.waitForSelector('.chakra-container');
 
+
+
   await this.autoScroll(page);
+
+
+  
   await page.evaluate(
     () =>
       document.querySelector('.css-16y59pb:last-child .chakra-heading')?.textContent ??
@@ -195,14 +201,16 @@ scraper.mainPage = async function () {
     { workerData },
   );
 
-  await this.autoScroll(page);
-  await page.evaluate(
-    // eslint-disable-next-line no-shadow
-    () =>
-      document.querySelector('.css-16y59pb:last-child .chakra-heading')?.textContent ??
-      'geen titel gevonden',
-    { workerData },
-  );
+
+
+  // await this.autoScroll(page);
+  // await page.evaluate(
+  //   // eslint-disable-next-line no-shadow
+  //   () =>
+  //     document.querySelector('.css-16y59pb:last-child .chakra-heading')?.textContent ??
+  //     'geen titel gevonden',
+  //   { workerData },
+  // );
 
   let rawEvents = await page.evaluate(
     ({ resBuiten, unavailabiltyTerms }) =>
