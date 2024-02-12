@@ -53,27 +53,32 @@ export default class RockWorker extends Worker {
       if (parsedMessage.type === 'db-request') {
         // 2. geeft door aan DB en DB geeft 
         // meteen antwoord want is geen async functie
-        const artistRes = ArtistInst.do({
+        ArtistInst.do({
           request: parsedMessage?.subtype,
           data: parsedMessage.messageData,
+        }).then((artistRes) => {
+          let par;
+          try {
+            par = JSON.parse(artistRes);
+          } catch (error) {
+            console.log('db message fucked');
+            console.log(parsedMessage);
+            console.log(artistRes);
+            throw error;
+          }
+          // 2.5 hier heb je een zooitje van gemaakt
+          // 3. rock-worker wrapper praat terug naar worker-scraper
+          // met antwoord van DB
+          thisWorker.postMessage(JSON.stringify({
+            type: 'db-answer',
+            subtype: parsedMessage?.subtype,
+            messageData: par,
+          })); 
+        }).catch((err) => {
+          console.log(`artistInst.do error`);
+          console.log(err);
         });
-        // 2.5 hier heb je een zooitje van gemaakt
-        let par;
-        try {
-          par = JSON.parse(artistRes);
-        } catch (error) {
-          console.log('db message fucked');
-          console.log(parsedMessage);
-          console.log(artistRes);
-          throw error;
-        }
-        // 3. rock-worker wrapper praat terug naar worker-scraper
-        // met antwoord van DB
-        thisWorker.postMessage(JSON.stringify({
-          type: 'db-answer',
-          subtype: parsedMessage?.subtype,
-          messageData: par,
-        }));        
+       
         return;
       }
 

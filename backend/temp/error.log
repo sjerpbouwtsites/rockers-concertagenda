@@ -1,4 +1,73 @@
 
+      013-0 Error - 12:01:35 AM
+      TypeError: this[curFuncName] is not a function
+    at AbstractScraper.recursiveAsyncChecker (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1053:43)
+    at AbstractScraper.recursiveAsyncChecker (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1055:17)
+    at async AbstractScraper.rawEventsAsyncCheck (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:401:27)
+    at async scraper.mainPage (file:///var/www/html/concertagenda/backend/scrapers/013.js:80:25)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:135:29) 
+      this[curFuncName] is not a function
+      
+      013-1 Error - 10:57:03 PM
+      TypeError: this[curFuncName] is not a function
+    at AbstractScraper.recursiveAsyncChecker (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1052:43)
+    at AbstractScraper.mainPageAsyncCheck (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:455:17)
+    at AbstractScraper.rawEventsAsyncCheck (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:401:38)
+    at scraper.mainPage (file:///var/www/html/concertagenda/backend/scrapers/013.js:79:36)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:136:29) 
+      this[curFuncName] is not a function
+      
+      013-2 Error - 10:54:53 PM
+      TypeError: this.asyncChecks[curFuncName] is not a function
+    at AbstractScraper.recursiveAsyncChecker (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1055:55)
+    at AbstractScraper.mainPageAsyncCheck (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:458:17)
+    at AbstractScraper.rawEventsAsyncCheck (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:404:38)
+    at scraper.mainPage (file:///var/www/html/concertagenda/backend/scrapers/013.js:79:36)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:139:29) 
+      this.asyncChecks[curFuncName] is not a function
+      
+      013-2 Error - 10:53:38 PM
+      TypeError: this.asyncChecks[curFuncName] is not a function
+    at AbstractScraper.recursiveAsyncChecker (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1053:55)
+    at AbstractScraper.mainPageAsyncCheck (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:456:17)
+    at AbstractScraper.rawEventsAsyncCheck (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:402:38)
+    at scraper.mainPage (file:///var/www/html/concertagenda/backend/scrapers/013.js:79:36)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:137:29) 
+      this.asyncChecks[curFuncName] is not a function
+      
+      013-0 Error - 10:52:56 PM
+      TypeError: this.asyncChecks[curFuncName] is not a function
+    at AbstractScraper.recursiveAsyncChecker (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1052:55)
+    at AbstractScraper.mainPageAsyncCheck (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:455:17)
+    at AbstractScraper.rawEventsAsyncCheck (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:401:38)
+    at scraper.mainPage (file:///var/www/html/concertagenda/backend/scrapers/013.js:79:36)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:136:29) 
+      this.asyncChecks[curFuncName] is not a function
+      
+      013-1 Error - 10:06:58 PM
+      TypeError: this[curFuncName] is not a function
+    at AbstractScraper.recursiveAsyncChecker (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1052:43)
+    at AbstractScraper.mainPageAsyncCheck (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:455:17)
+    at AbstractScraper.rawEventsAsyncCheck (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:401:38)
+    at scraper.mainPage (file:///var/www/html/concertagenda/backend/scrapers/013.js:81:36)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:136:29) 
+      this[curFuncName] is not a function
+      
+      013-2 Error - 10:05:58 PM
+      TypeError: this[curFuncName] is not a function
+    at AbstractScraper.recursiveAsyncChecker (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1052:43)
+    at AbstractScraper.mainPageAsyncCheck (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:455:17)
+    at AbstractScraper.rawEventsAsyncCheck (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:401:38)
+    at scraper.mainPage (file:///var/www/html/concertagenda/backend/scrapers/013.js:81:36)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AbstractScraper.scrapeInit (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:136:29) 
+      this[curFuncName] is not a function
+      
       013-1 Error - 9:01:38 AM
       TypeError: Cannot read properties of undefined (reading 'length')
     at AbstractScraper.asyncCheckIsAllowed (file:///var/www/html/concertagenda/backend/scrapers/gedeeld/abstract-scraper.js:1361:23)

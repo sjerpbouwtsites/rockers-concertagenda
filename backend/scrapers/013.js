@@ -4,7 +4,8 @@ import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/013.js';
 import { mapToStart, mapToDoor } from './gedeeld/datums.js';
 import getImage from './gedeeld/image.js';
-import terms from './gedeeld/terms.js';
+import terms from '../artist-db/store/terms.js';
+import workTitleAndSlug from './gedeeld/slug.js';
 
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const scraper = new AbstractScraper({
@@ -13,15 +14,17 @@ const scraper = new AbstractScraper({
     url: 'https://www.013.nl/programma/heavy',
   },
   app: {
-    eventTitleSplitting: {
-      dividerStrings: ['+'],
+    splitting: {
+      dividers: [`+`, '&'],
+      dividerRex: "[\\+&]",
     },
     mainPage: {
-      requiredProperties: ['venueEventUrl', 'title'],
-      asyncCheckFuncs: ['refused', 'getArtists', 'event', 'allowed', 'forbiddenTerms', 'saveAllowed'],
+      requiredProperties: ['slug', 'venueEventUrl', 'title'],
+      asyncCheckFuncs: ['refused', 'allowedEvent', 'forbiddenTerms'],
     },
     singlePage: {
       requiredProperties: ['venueEventUrl', 'title', 'price', 'start'],
+      asyncCheckFuncs: ['saveAllowedEvent', 'harvestArtists'],
     },
   },
 });
@@ -69,7 +72,9 @@ scraper.mainPage = async function () {
   );
 
   rawEvents = rawEvents
+    .splice(5, 15)
     .map(mapToStart)
+    .map(workTitleAndSlug)
     .map(this.isMusicEventCorruptedMapper);
 
   const eventGen = this.eventGenerator(rawEvents);

@@ -15,7 +15,7 @@ export const AbstractWorkerConfig = {
 
 export const workerConfig = {
   '013': {
-    workerCount: 3,
+    workerCount: 1,
     CPUReq: 'low',
     workerConcurrent: 3,
     forceSet: 0,

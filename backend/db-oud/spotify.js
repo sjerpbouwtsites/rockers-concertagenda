@@ -193,9 +193,9 @@ async function spotifyLoopSearch(accessToken, spotifySettings) {
 
 async function init(spotifySettings) {
   const accessToken = await getSpotifyAccessToken();
-  // getSpotifyArtistById(`4Z8W4fKeB5YxbusRsdQVPb`, accessToken);
-  //   const artistResult = await getSpotifyArtistSearch('abbath', accessToken);
-  //   const rockArtist = searchArtistSearchForMetalOrRock(artistResult);
+  getSpotifyArtistById(`4Z8W4fKeB5YxbusRsdQVPb`, accessToken);
+  const artistResult = await getSpotifyArtistSearch('abbath', accessToken);
+  const rockArtist = searchArtistSearchForMetalOrRock(artistResult);
   
   spotifyLoopSearch(accessToken, spotifySettings);
 }

@@ -11,7 +11,8 @@ const forbiddenTerms = [
   'clubnacht',
   'VERBODENGENRE',
   'alternatieve rock',
-  'dance,dance-alle-dance',
+  'dance',
+  'dance-alle-dance',
   'dance-punk',
   'global,pop',
   'funk-soul,pop',
@@ -32,7 +33,7 @@ const forbiddenTerms = [
   'art rock',
   'blaasrock',
   'dream pop',
-  'Dream Punk',
+  'dream punk',
   'uptempo',
   'experi-metal',
   'folkpunk',
@@ -45,6 +46,14 @@ const forbiddenTerms = [
   'schaakinstuif',
   'afrobeats',
   'new wave',
+];
+
+const globalForbiddenGenres = [
+  'dance',
+  'indie',
+  'dream',
+  'shoegaze',
+  'new-wave',
 ];
 
 const wikipediaGoodGenres = [
@@ -125,6 +134,7 @@ const goodCategories = [
 export default {
   unavailability: unavailabilityTerms,
   forbidden: forbiddenTerms,
+  globalForbiddenGenres,
   wikipediaGoodGenres,
   goodCategories,
 };

@@ -19,9 +19,10 @@ export default class ScraperConfig {
       url: null,
     },
     app: {
-      eventTitleSplitting: {
+      splitting: {
         possiblePrefix: /presenteert\s?:presents\s?:/i,
-        dividerStrings: [],
+        dividers: [],
+        dividerRex: null,
       },
       // in deze eigen app
       mainPage: {
@@ -45,7 +46,7 @@ export default class ScraperConfig {
     mainPage: {},
     singlePage: {},
     app: {
-      eventTitleSplitting: {},
+      splitting: {},
       mainPage: {},
       singlePage: {},
     },
@@ -73,11 +74,13 @@ export default class ScraperConfig {
       url: obj?.mainPage?.url ?? bc.mainPage.url,
     };
 
-    this._s.app.eventTitleSplitting = {
-      dividerStrings: obj?.app?.eventTitleSplitting?.dividerStrings 
-        ?? bc.app.eventTitleSplitting.dividerStrings,
-      possiblePrefix: obj?.app?.eventTitleSplitting?.possiblePrefix 
-        ?? bc.app.eventTitleSplitting.possiblePrefix,
+    this._s.app.splitting = {
+      dividers: obj?.app?.splitting?.dividers 
+        ?? bc.app.splitting.dividers,
+      dividerRex: obj?.app?.splitting?.dividerRex 
+        ?? bc.app.splitting.dividerRex,
+      possiblePrefix: obj?.app?.splitting?.possiblePrefix 
+        ?? bc.app.splitting.possiblePrefix,
     };
 
     this._s.app.mainPage = {
