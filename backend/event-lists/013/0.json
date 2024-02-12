@@ -102,9 +102,9 @@
     "soldOut": true,
     "unavailable": false,
     "artists": {
-      "cat's cult": {
-        "s": "39EasU1lufD34xCTYOTLVU",
-        "l": "cat's%20cult",
+      "thames": {
+        "s": "1R7RKpGGSeqK8pSBK79w7T",
+        "l": "thames",
         "g": []
       }
     }
@@ -121,7 +121,19 @@
     "image": "../public/event-images/013/MTMubmwvcHJvZ3JhbW1hLzc3NDcvc2thbG1vZWxk",
     "soldOut": false,
     "unavailable": false,
-    "artists": null
+    "artists": {
+      "skalmold": {
+        "s": "61OnUq2Pb2GDDGlrHb7I6U",
+        "l": "sk%C3%A1lm%C3%B6ld",
+        "g": [
+          "deep folk metal",
+          "folk metal",
+          "icelandic metal",
+          "icelandic punk",
+          "viking metal"
+        ]
+      }
+    }
   },
   {
     "door": "2024-03-24T20:00:00+01:00",
@@ -136,7 +148,7 @@
     "soldOut": false,
     "unavailable": false,
     "artists": {
-      "lowest creature": {
+      "lowestcreature": {
         "s": "5c9Gljxjd5hYeaq5W0Aq1e",
         "l": "Sweden",
         "g": [
@@ -160,7 +172,7 @@
     "soldOut": true,
     "unavailable": false,
     "artists": {
-      "pierce the veil": {
+      "piercetheveil": {
         "s": "4iJLPqClelZOBCBifm8Fzv",
         "l": "pierce%20the%20veil",
         "g": [
@@ -214,7 +226,7 @@
     "soldOut": true,
     "unavailable": false,
     "artists": {
-      "cat's cult": {
+      "catscult": {
         "s": "39EasU1lufD34xCTYOTLVU",
         "l": "cat's%20cult",
         "g": []

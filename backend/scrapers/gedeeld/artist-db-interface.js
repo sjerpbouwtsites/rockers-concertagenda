@@ -128,13 +128,14 @@ export async function asyncHarvestArtists(event, reasons) {
   return nullAnswerObject(event, reasons);
 }
 
-export async function asyncScanTitleForAllowedArtists(title, slug) {
+export async function asyncScanTitleForAllowedArtists(mergedEvent) {
   this.talkToDB({
     type: 'db-request',
     subtype: 'scanTitleForAllowedArtistsAsync',
     messageData: {
-      title,
-      slug,
+      title: mergedEvent.title,
+      slug: mergedEvent.slug,
+      shortText: mergedEvent.shortText,
       settings: this._s.app.harvest,
     },
   });    

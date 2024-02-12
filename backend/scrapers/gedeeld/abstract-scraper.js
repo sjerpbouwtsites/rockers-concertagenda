@@ -559,8 +559,7 @@ export default class AbstractScraper extends ScraperConfig {
     mergedEvent.longText = this.writeLongTextHTML(mergedEvent);
     const mergedEventCheckRes = await this.singlePageAsyncCheck(mergedEvent, pageInfo);
     if (mergedEventCheckRes.success) {
-      const artistsRes = await this.asyncScanTitleForAllowedArtists(
-        mergedEvent.workTitle, mergedEvent.slug);
+      const artistsRes = await this.asyncScanTitleForAllowedArtists(mergedEvent);
 
       if (debugSettings.debugArtistScan) {
         const goedOfFout = artistsRes.success && artistsRes.success !== 'error' ? `🟩 ` : `🟥 `;

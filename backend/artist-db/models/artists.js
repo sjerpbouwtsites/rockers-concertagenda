@@ -179,11 +179,16 @@ export default class Artists {
       if (this.typeCheckInputFromScrapers) {
         const hasTitle = Object.prototype.hasOwnProperty.call(parsedMessage.data, 'title');
         const hasSlug = Object.prototype.hasOwnProperty.call(parsedMessage.data, 'slug');
+        const hasSettings = Object.prototype.hasOwnProperty.call(parsedMessage.data, 'settings');
         if (!hasTitle || !hasSlug) {
           return this.error(Error('geen title of slug om te doorzoeken'));
         } 
+        if (!hasSettings) {
+          return this.error(Error('geen settings'));
+        } 
       }
-      return this.scanTitleForAllowedArtistsAsync(message.data.title, message.data.slug);
+      return this.scanTitleForAllowedArtistsAsync(
+        message.data.title, message.data.slug, message.data?.shortText, message.data.settings);
     }
     
     if (message.request === 'harvestArtists') {
@@ -559,8 +564,13 @@ export default class Artists {
     return gefilterdeAllowedArtists;
   } 
 
-  async scanTitleForAllowedArtistsAsync(eventNameOfTitle, slug) {
-    const artists = this.scanTitleForAllowedArtists(eventNameOfTitle, slug);
+  async scanTitleForAllowedArtistsAsync(eventNameOfTitle, slug, shortText, settings) {
+    let toScan = eventNameOfTitle; 
+    if (settings.artistsIn.includes('shortText') && shortText) {
+      const s = (shortText ?? '').toLowerCase();
+      toScan = `${toScan} + ${s}`;
+    }    
+    const artists = this.scanTitleForAllowedArtists(toScan, slug);
     const workedArtists = {};
 
     const artistsFound = Object.keys(artists).length;
