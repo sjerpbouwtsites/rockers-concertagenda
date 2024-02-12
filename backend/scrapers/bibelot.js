@@ -24,6 +24,7 @@ const scraper = new AbstractScraper({
       artistsIn: ['title', 'shortText'],
     },
     mainPage: {
+      requiredProperties: ['venueEventUrl', 'title', 'start'],
       asyncCheckFuncs: ['refused', 'allowedEvent', 'forbiddenTerms'],
     },
     singlePage: {
@@ -72,17 +73,16 @@ scraper.mainPage = async function () {
       }),
     { workerData },
   );
-  rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper)
-    .map((re) => workTitleAndSlug(re, this._s.app.harvest.possiblePrefix));
-
-  rawEvents = rawEvents.map((re) => mapToStartDate(re, 'dag-maandNaam', this.months));
-  // TIJDELIJK TIJD TBV async checkers
-  rawEvents = rawEvents.map((re) => {
+  rawEvents = rawEvents
+    .map((re) => mapToStartDate(re, 'dag-maandNaam', this.months))
+    .map((re) => { // TIJDELIJK TIJD TBV async checkers
     // eslint-disable-next-line no-param-reassign
-    re.start = `${re.startDate}T00:00:00`;
-    return re;
-  });    
-
+      re.start = `${re.startDate}T00:00:00`;
+      return re;
+    })
+    .map((re) => workTitleAndSlug(re, this._s.app.harvest.possiblePrefix))
+    .map(this.isMusicEventCorruptedMapper);
+  
   const eventGen = this.eventGenerator(rawEvents);
   // eslint-disable-next-line no-unused-vars
   const checkedEvents = await this.rawEventsAsyncCheck({
@@ -120,23 +120,16 @@ scraper.singlePage = async function ({ page, event }) {
         });
         return res;
       }
-      const datumZonderJaar = Array.isArray(infoElText.match(/datum.*\d{1,2}\s\w{2,4}\s/i)) ? infoElText.match(/datum.*\d{1,2}\s\w{2,4}\s/i)[0].match(/\d{1,2}\s\w+/)[0] : null;
-      const maandNaam = datumZonderJaar.match(/[\D]+/i)[0].trim();
-      const maandNummer = months[maandNaam];
-      const dag = datumZonderJaar.match(/\d+/i)[0].trim().padStart(2, '0');
-      const huiMaandNr = (new Date()).getMonth() + 1;
-      const huiJaar = (new Date()).getFullYear();
-      const jaar = huiMaandNr < Number(maandNummer) ? (huiJaar + 1) : huiJaar;
 
       res.eventGenres = Array.from(document.querySelectorAll('.categories .tag-hollow'))
         .map((tag) => tag.textContent.toLowerCase());
-      res.baseDate = `${jaar}-${maandNummer}-${dag}`;
+      res.baseDate = event.startDate;
       if (infoElText.match(/deuren.*\d{1,2}:\d\d\s/i)) {
         res.doorTime = infoElText.match(/deuren.*\d{1,2}:\d\d\s/i)[0].match(/\d\d:\d\d/)[0];
-        res.door = `${jaar}-${huiMaandNr}-${dag}T${res.doorTime}:00`;
+        res.door = `${res.baseDate}T${res.doorTime}:00`;
       }
       res.startTime = infoElText.match(/aanvang.*\d{1,2}:\d\d\s/i)[0].match(/\d\d:\d\d/)[0];
-      res.start = `${jaar}-${huiMaandNr}-${dag}T${res.startTime}:00`;
+      res.start = `${res.baseDate}T${res.startTime}:00`;
 
       return res;
     },

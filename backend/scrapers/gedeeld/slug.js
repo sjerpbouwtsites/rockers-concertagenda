@@ -25,7 +25,6 @@ export function slugify(eventTitle, possiblePrefix = null) {
   return {
     workTitle,
     slug,
-    HADHARVESTSETTINGS: possiblePrefix,
   };
 }
 export default function workTitleAndSlug(event, possiblePrefix = null) {

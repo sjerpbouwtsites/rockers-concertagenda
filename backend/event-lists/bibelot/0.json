@@ -1,91 +1,241 @@
 [
   {
-    "door": "2024-11-02T20:00:00",
-    "start": "2024-11-02T20:30:00",
-    "venueEventUrl": "https://bibelot.net/programma/bibelot-x-door-those-foreign-kids-the-yummy-mouthsbe/",
-    "title": "Bibelot X DOOR: Those Foreign Kids ",
-    "location": "bibelot",
-    "price": 0,
-    "shortText": " The Yummy Mouths(BE) undefined",
-    "longText": "../public/texts/bibelot/cmVpZ24ta2lkcy10aGUteXVtbXktbW91dGhzYmUv.html",
-    "image": "../public/event-images/bibelot/cmVpZ24ta2lkcy10aGUteXVtbXktbW91dGhzYmUv",
-    "soldOut": false
-  },
-  {
-    "door": "2024-11-02T20:30:00",
-    "start": "2024-11-02T21:00:00",
-    "venueEventUrl": "https://bibelot.net/programma/magnetica-be-metallica-tribute/",
-    "title": "Magnetica (be) – metallica tribute",
-    "location": "bibelot",
-    "price": 2023,
-    "longText": "../public/texts/bibelot/YWduZXRpY2EtYmUtbWV0YWxsaWNhLXRyaWJ1dGUv.html",
-    "image": "../public/event-images/bibelot/YWduZXRpY2EtYmUtbWV0YWxsaWNhLXRyaWJ1dGUv",
-    "soldOut": false
-  },
-  {
-    "door": "2023-11-13T21:00:00",
-    "start": "2023-11-13T21:00:00",
-    "venueEventUrl": "https://bibelot.net/programma/dancelot-goes-back-to-1997/",
-    "title": "Dancelot goes back to 1997",
-    "location": "bibelot",
-    "price": 0,
-    "longText": "../public/texts/bibelot/bWEvZGFuY2Vsb3QtZ29lcy1iYWNrLXRvLTE5OTcv.html",
-    "image": "../public/event-images/bibelot/bWEvZGFuY2Vsb3QtZ29lcy1iYWNrLXRvLTE5OTcv",
-    "soldOut": false
-  },
-  {
-    "door": "2023-11-27T20:00:00",
-    "start": "2023-11-27T20:45:00",
-    "venueEventUrl": "https://bibelot.net/programma/ronnie-james-dio-the-memorial-concert/",
-    "title": "Ronnie James Dio – The Memorial Concert",
-    "location": "bibelot",
-    "price": 27,
-    "longText": "../public/texts/bibelot/YW1lcy1kaW8tdGhlLW1lbW9yaWFsLWNvbmNlcnQv.html",
-    "image": "../public/event-images/bibelot/YW1lcy1kaW8tdGhlLW1lbW9yaWFsLWNvbmNlcnQv",
-    "soldOut": false
-  },
-  {
-    "door": "2023-11-08T20:30:00",
-    "start": "2023-11-08T21:00:00",
+    "door": "2024-03-08T18:30:00",
+    "start": "2024-03-08T19:00:00",
     "venueEventUrl": "https://bibelot.net/programma/dordrecht-metal-fest/",
     "title": "Dordrecht Metal Fest",
     "location": "bibelot",
     "price": 2024,
     "longText": "../public/texts/bibelot/cm9ncmFtbWEvZG9yZHJlY2h0LW1ldGFsLWZlc3Qv.html",
     "image": "../public/event-images/bibelot/cm9ncmFtbWEvZG9yZHJlY2h0LW1ldGFsLWZlc3Qv",
-    "soldOut": false
+    "soldOut": false,
+    "eventGenres": [
+      "metal "
+    ],
+    "artists": null
   },
   {
-    "door": "2023-11-06T20:00:00",
-    "start": "2023-11-06T20:30:00",
+    "door": "2024-03-16T20:00:00",
+    "start": "2024-03-16T20:30:00",
+    "venueEventUrl": "https://bibelot.net/programma/st-patricks-day-bunch-of-bastards-meer/",
+    "title": "St. Patrick’s Day: Bunch of Bastards, Drunken Dolly & The Burning Pubcrawlers",
+    "location": "bibelot",
+    "price": 0,
+    "shortText": " undefined",
+    "longText": "../public/texts/bibelot/a3MtZGF5LWJ1bmNoLW9mLWJhc3RhcmRzLW1lZXIv.html",
+    "image": "../public/event-images/bibelot/a3MtZGF5LWJ1bmNoLW9mLWJhc3RhcmRzLW1lZXIv",
+    "soldOut": false,
+    "eventGenres": [
+      "punk ",
+      "rock "
+    ],
+    "artists": null
+  },
+  {
+    "door": "2024-03-17T19:30:00",
+    "start": "2024-03-17T20:00:00",
+    "venueEventUrl": "https://bibelot.net/programma/nick-oliveri-us-death-acoustic/",
+    "title": "Nick Oliveri (US) – Death Acoustic",
+    "location": "bibelot",
+    "price": 17,
+    "longText": "../public/texts/bibelot/aWNrLW9saXZlcmktdXMtZGVhdGgtYWNvdXN0aWMv.html",
+    "image": "../public/event-images/bibelot/aWNrLW9saXZlcmktdXMtZGVhdGgtYWNvdXN0aWMv",
+    "soldOut": false,
+    "eventGenres": [
+      "metal ",
+      "rock ",
+      "stonerrock "
+    ],
+    "artists": null
+  },
+  {
+    "door": "2024-04-05T18:30:00",
+    "start": "2024-04-05T19:00:00",
+    "venueEventUrl": "https://bibelot.net/programma/spite-us-bodysnatcher-us-boundaries-us/",
+    "title": "Spite (us)",
+    "location": "bibelot",
+    "price": 2024,
+    "longText": "../public/texts/bibelot/Ym9keXNuYXRjaGVyLXVzLWJvdW5kYXJpZXMtdXMv.html",
+    "image": "../public/event-images/bibelot/Ym9keXNuYXRjaGVyLXVzLWJvdW5kYXJpZXMtdXMv",
+    "soldOut": false,
+    "eventGenres": [
+      "metal "
+    ],
+    "artists": null
+  },
+  {
+    "door": "2024-04-06T20:00:00",
+    "start": "2024-04-06T20:30:00",
     "venueEventUrl": "https://bibelot.net/programma/smells-like-nirvana/",
     "title": "Smells Like Nirvana",
     "location": "bibelot",
-    "price": 0,
+    "price": 2024,
     "longText": "../public/texts/bibelot/cHJvZ3JhbW1hL3NtZWxscy1saWtlLW5pcnZhbmEv.html",
     "image": "../public/event-images/bibelot/cHJvZ3JhbW1hL3NtZWxscy1saWtlLW5pcnZhbmEv",
-    "soldOut": false
+    "soldOut": false,
+    "eventGenres": [
+      "grunge ",
+      "rock "
+    ],
+    "artists": {
+      "smellslikenirvana": {
+        "s": null,
+        "l": "smells%20like%20nirvana",
+        "g": []
+      }
+    }
   },
   {
-    "door": "2023-11-20T19:30:00",
-    "start": "2023-11-20T21:00:00",
+    "door": "2024-04-12T20:30:00",
+    "start": "2024-04-12T21:00:00",
+    "venueEventUrl": "https://bibelot.net/programma/system-of-a-down-slipknot-by-victims-of-a-system-psychosocial/",
+    "title": "System of a Down & Slipknot by Victims of a System & Psychosocial",
+    "location": "bibelot",
+    "price": 12,
+    "shortText": " undefined",
+    "longText": "../public/texts/bibelot/dGltcy1vZi1hLXN5c3RlbS1wc3ljaG9zb2NpYWwv.html",
+    "image": "../public/event-images/bibelot/dGltcy1vZi1hLXN5c3RlbS1wc3ljaG9zb2NpYWwv",
+    "soldOut": false,
+    "eventGenres": [
+      "metal "
+    ],
+    "artists": null
+  },
+  {
+    "door": "2024-04-20T19:30:00",
+    "start": "2024-04-20T21:00:00",
     "venueEventUrl": "https://bibelot.net/programma/pidzama-porno/",
-    "title": "Pidżama Porno(PL)",
+    "title": "Pidżama Porno (PL)",
     "location": "bibelot",
     "price": 0,
     "longText": "../public/texts/bibelot/dC5uZXQvcHJvZ3JhbW1hL3BpZHphbWEtcG9ybm8v.html",
     "image": "../public/event-images/bibelot/dC5uZXQvcHJvZ3JhbW1hL3BpZHphbWEtcG9ybm8v",
-    "soldOut": false
+    "soldOut": false,
+    "eventGenres": [
+      "punk ",
+      "rock ",
+      "ska "
+    ],
+    "artists": {
+      "pidamaporno": {
+        "s": "0qibngGI3EFCen6abY5hqY",
+        "l": "pid%C5%BCama%20porno",
+        "g": [
+          "polish punk",
+          "polish reggae",
+          "polish rock"
+        ]
+      }
+    }
   },
   {
-    "door": "2023-11-10T20:30:00",
-    "start": "2023-11-10T21:00:00",
+    "door": "2024-04-27T12:30:00",
+    "start": "2024-04-27T13:00:00",
+    "venueEventUrl": "https://bibelot.net/programma/temper-block-party/",
+    "title": "Temper! block party",
+    "location": "bibelot",
+    "price": 0,
+    "longText": "../public/texts/bibelot/L3Byb2dyYW1tYS90ZW1wZXItYmxvY2stcGFydHkv.html",
+    "image": "../public/event-images/bibelot/L3Byb2dyYW1tYS90ZW1wZXItYmxvY2stcGFydHkv",
+    "soldOut": false,
+    "eventGenres": [
+      "garagerock ",
+      "punk "
+    ],
+    "artists": null
+  },
+  {
+    "door": "2024-05-10T20:30:00",
+    "start": "2024-05-10T21:00:00",
     "venueEventUrl": "https://bibelot.net/programma/bohemian-betyars-hu/",
     "title": "Bohemian Betyars (HU)",
     "location": "bibelot",
     "price": 0,
     "longText": "../public/texts/bibelot/cHJvZ3JhbW1hL2JvaGVtaWFuLWJldHlhcnMtaHUv.html",
     "image": "../public/event-images/bibelot/cHJvZ3JhbW1hL2JvaGVtaWFuLWJldHlhcnMtaHUv",
-    "soldOut": false
+    "soldOut": false,
+    "eventGenres": [
+      "folk ",
+      "punk ",
+      "ska "
+    ],
+    "artists": {
+      "bohemianbetyars": {
+        "s": "2ezYPSKWBfnFTobN9puCow",
+        "l": "bohemian%20betyars",
+        "g": [
+          "gypsy punk",
+          "hungarian folk",
+          "hungarian punk",
+          "hungarian rock",
+          "magyar alternative"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2024-05-11T20:00:00",
+    "start": "2024-05-11T21:00:00",
+    "venueEventUrl": "https://bibelot.net/programma/delain/",
+    "title": "Delain",
+    "location": "bibelot",
+    "price": 11,
+    "longText": "../public/texts/bibelot/L2JpYmVsb3QubmV0L3Byb2dyYW1tYS9kZWxhaW4v.html",
+    "image": "../public/event-images/bibelot/L2JpYmVsb3QubmV0L3Byb2dyYW1tYS9kZWxhaW4v",
+    "soldOut": false,
+    "eventGenres": [
+      "metal "
+    ],
+    "artists": {
+      "delain": {
+        "s": "6pIRdCtSE5hLFfIfcTAicI",
+        "l": "delain",
+        "g": [
+          "dutch metal",
+          "gothic metal",
+          "gothic symphonic metal",
+          "power metal",
+          "symphonic metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2024-05-31T20:30:00",
+    "start": "2024-05-31T21:00:00",
+    "venueEventUrl": "https://bibelot.net/programma/call-it-off/",
+    "title": "Call it Off",
+    "location": "bibelot",
+    "price": 0,
+    "longText": "../public/texts/bibelot/bG90Lm5ldC9wcm9ncmFtbWEvY2FsbC1pdC1vZmYv.html",
+    "image": "../public/event-images/bibelot/bG90Lm5ldC9wcm9ncmFtbWEvY2FsbC1pdC1vZmYv",
+    "soldOut": false,
+    "eventGenres": [
+      "punk "
+    ],
+    "artists": null
+  },
+  {
+    "door": "2024-09-06T19:30:00",
+    "start": "2024-09-06T20:00:00",
+    "venueEventUrl": "https://bibelot.net/programma/black-out-the-smiths-by-the-smiths-presumably-joy-division-by-curtis/",
+    "title": "The Smiths by The Smiths Presumably & Joy Division by Curtis (Black-Out 12th Edition)",
+    "location": "bibelot",
+    "price": 0,
+    "shortText": " undefined",
+    "longText": "../public/texts/bibelot/dW1hYmx5LWpveS1kaXZpc2lvbi1ieS1jdXJ0aXMv.html",
+    "image": "../public/event-images/bibelot/dW1hYmx5LWpveS1kaXZpc2lvbi1ieS1jdXJ0aXMv",
+    "soldOut": false,
+    "eventGenres": [
+      "new wave ",
+      "punk "
+    ],
+    "artists": {
+      "joydivision": {
+        "s": null,
+        "l": "joy%20division",
+        "g": []
+      }
+    }
   }
 ]

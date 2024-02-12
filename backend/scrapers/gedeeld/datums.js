@@ -168,7 +168,8 @@ export function mapToStartDate(event, regexMode, months) {
       jaar += jaar + 1;
     }
     const dag = dateM[1].padStart(2, '0');
-    const dateStr = `${jaar}-${maandGetal}-${dag}`;
+    const maandGetalPadding = maandGetal.padStart(2, '0');
+    const dateStr = `${jaar}-${maandGetalPadding}-${dag}`;
     if (isDate(dateStr)) {
       // eslint-disable-next-line no-param-reassign
       event.startDate = dateStr;

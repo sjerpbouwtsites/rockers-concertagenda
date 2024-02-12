@@ -510,6 +510,10 @@ export default class AbstractScraper extends ScraperConfig {
     // corruptie check afkomstig nog van baseEvent. niet door naar pageInfo
     if (singleEvent.corrupted) {
       // singleEvent.registerINVALID(); TODO register invalid
+      // this.dirtyDebug({
+      //   title:'debug corrupt single event',
+      //   toDebug:singleEvent,
+      // });
       parentPort.postMessage(
         this.qwm.messageRoll(
           `<a href='${singleEvent.venueEventUrl}'>😵 Corrupted ${singleEvent.title}</a> ${singleEvent.corrupted}`,
