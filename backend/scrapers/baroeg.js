@@ -4,6 +4,7 @@ import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/baroeg.js';
 import getImage from './gedeeld/image.js';
 import { combineStartTimeStartDate, mapToStartDate, mapToStartTime } from './gedeeld/datums.js';
+import workTitleAndSlug from './gedeeld/slug.js';
 
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const scraper = new AbstractScraper({
@@ -16,12 +17,17 @@ const scraper = new AbstractScraper({
     timeout: 30000,
   },
   app: {
+    harvest: {
+      dividers: [`+`],
+      dividerRex: "[\\+]",
+      artistsIn: ['title'],
+    },    
     mainPage: {
       requiredProperties: ['venueEventUrl', 'title', 'start'],
-      asyncCheckFuncs: ['allowed', 'event', 'refused', 'forbiddenTerms', 'saveAllowed'],
+      asyncCheckFuncs: ['refused', 'allowedEvent', 'explicitEventGenres'],
     },
     singlePage: {
-      requiredProperties: ['venueEventUrl', 'title', 'start'],
+      asyncCheckFuncs: ['saveAllowedEvent', 'harvestArtists'],
     },
   },
 });
@@ -73,9 +79,11 @@ scraper.mainPage = async function () {
           }
           res.title = title;
 
+          res.eventGenres = Array.from(eventEl.querySelectorAll('.wpt_production_category')).map((c) => c.textContent);
+
           res.shortText =
             eventEl.querySelector('.wp_theatre_prod_excerpt')?.textContent.trim() ?? null;
-          res.shortText += categorieTeksten;
+          // res.shortText += categorieTeksten;
 
           res.venueEventUrl = venueEventUrl;
 
@@ -92,10 +100,12 @@ scraper.mainPage = async function () {
     { workerData },
   );
 
-  rawEvents = rawEvents.map((event) => mapToStartDate(event, 'dag-maandNummer-jaar', this.months));
-  rawEvents = rawEvents.map(mapToStartTime);
-  rawEvents = rawEvents.map(combineStartTimeStartDate);
-  rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
+  rawEvents = rawEvents
+    .map((event) => mapToStartDate(event, 'dag-maandNummer-jaar', this.months))
+    .map(mapToStartTime)
+    .map(combineStartTimeStartDate)
+    .map(this.isMusicEventCorruptedMapper)
+    .map((re) => workTitleAndSlug(re, this._s.app.harvest.possiblePrefix));
 
   const eventGen = this.eventGenerator(rawEvents);
   // eslint-disable-next-line no-unused-vars
@@ -132,7 +142,7 @@ scraper.singlePage = async function ({ page, event }) {
     },
     { event },
   );
-
+  
   const imageRes = await getImage({
     _this: this,
     page,
@@ -142,23 +152,26 @@ scraper.singlePage = async function ({ page, event }) {
     selectors: [".hero-area [style*='background-image']"],
     mode: 'background-src',
   });
+  
   pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
   pageInfo.image = imageRes.image;
-
+  
   const priceRes = await this.getPriceFromHTML({
     page,
     event,
     pageInfo,
     selectors: ['.wp_theatre_event_tickets'],
   });
+  
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
   pageInfo.price = priceRes.price;
-
+  
   const { mediaForHTML, socialsForHTML, textForHTML } = await longTextSocialsIframes(
     page,
     event,
     pageInfo,
   );
+
   pageInfo.mediaForHTML = mediaForHTML;
   pageInfo.socialsForHTML = socialsForHTML;
   pageInfo.textForHTML = textForHTML;

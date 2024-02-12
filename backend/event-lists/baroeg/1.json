@@ -1,36 +1,43 @@
 [
   {
-    "start": "2023-12-15T19:00:00",
-    "venueEventUrl": "https://baroeg.nl/productie/de-kraaien/",
-    "title": "De kraaien + skinc",
-    "location": "baroeg",
-    "price": 16.5,
-    "shortText": "Chaos van een hoog niveau en stilstaan is geen optie.hiphop",
-    "longText": "../public/texts/baroeg/YXJvZWcubmwvcHJvZHVjdGllL2RlLWtyYWFpZW4v.html",
-    "image": "../public/event-images/baroeg/YXJvZWcubmwvcHJvZHVjdGllL2RlLWtyYWFpZW4v",
-    "soldOut": false
-  },
-  {
-    "start": "2024-01-19T20:00:00",
-    "venueEventUrl": "https://baroeg.nl/productie/samiam/",
-    "title": "Samiam + The Real Danger + Mercy Union",
+    "start": "2024-02-24T14:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/tales-from-the-punx-lions-law-tyrant-disturbance-malad-blind-ambition/",
+    "title": "Tales From The Punx: Lion's Law ",
     "location": "baroeg",
     "price": 21,
-    "shortText": "FFO: The Get Up Kids, The Movielife, Hot Water Music.punkrock",
-    "longText": "../public/texts/baroeg/Oi8vYmFyb2VnLm5sL3Byb2R1Y3RpZS9zYW1pYW0v.html",
-    "image": "../public/event-images/baroeg/Oi8vYmFyb2VnLm5sL3Byb2R1Y3RpZS9zYW1pYW0v",
-    "soldOut": false
-  },
-  {
-    "start": "2024-02-10T14:00:00",
-    "venueEventUrl": "https://baroeg.nl/productie/in-the-grip-of-winter-ancient-rites/",
-    "title": "In The Grip Of Winter: Ancient Rites",
-    "location": "baroeg",
-    "price": 21,
-    "shortText": "Het metalfeestje waar alle stijlen aan bod kunnen komen.black",
-    "longText": "../public/texts/baroeg/LWdyaXAtb2Ytd2ludGVyLWFuY2llbnQtcml0ZXMv.html",
-    "image": "../public/event-images/baroeg/LWdyaXAtb2Ytd2ludGVyLWFuY2llbnQtcml0ZXMv",
-    "soldOut": false
+    "shortText": " Tyrant  +  Disturbance  +  Malad  +  Blind Ambition  +  Dead End Generation  +  No Brains Hollands puikste punkfeest gebeurt een tikkie vroeger dit jaar.",
+    "longText": "../public/texts/baroeg/dHVyYmFuY2UtbWFsYWQtYmxpbmQtYW1iaXRpb24v.html",
+    "image": "../public/event-images/baroeg/dHVyYmFuY2UtbWFsYWQtYmxpbmQtYW1iaXRpb24v",
+    "soldOut": false,
+    "eventGenres": [
+      "punk",
+      "street punk"
+    ],
+    "artists": {
+      "lionslaw": {
+        "s": null,
+        "l": "Colombia",
+        "g": [
+          "black/death metal"
+        ]
+      },
+      "tyrant": {
+        "s": "6MAOzAw5tINfNFd07cg3aT",
+        "l": "Australia",
+        "g": [
+          "heavy metal"
+        ]
+      },
+      "disturbance": {
+        "s": "2YomKyw73NZ5n19DYzp0j8",
+        "l": "Spain",
+        "g": [
+          "dutch punk",
+          "lowlands hardcore",
+          "grindcore"
+        ]
+      }
+    }
   },
   {
     "start": "2024-03-09T21:00:00",
@@ -38,20 +45,143 @@
     "title": "Unhinged: Burlesque For The Wild At Heart",
     "location": "baroeg",
     "price": 18.5,
-    "shortText": "Unhinged brengt een speciale en unieke Burlesque show naar Baroeg.burlesque",
+    "shortText": "Unhinged brengt een speciale en unieke Burlesque show naar Baroeg.",
     "longText": "../public/texts/baroeg/cmxlc3F1ZS1mb3ItdGhlLXdpbGQtYXQtaGVhcnQv.html",
     "image": "../public/event-images/baroeg/cmxlc3F1ZS1mb3ItdGhlLXdpbGQtYXQtaGVhcnQv",
-    "soldOut": false
+    "soldOut": false,
+    "eventGenres": [
+      "burlesque"
+    ],
+    "artists": {
+      "burlesqueforthewildatheart": {
+        "s": null,
+        "l": "burlesque%20for%20the%20wild%20at%20heart",
+        "g": []
+      }
+    }
   },
   {
-    "start": "2024-03-31T14:00:00",
-    "venueEventUrl": "https://baroeg.nl/productie/16318/",
-    "title": "Festerfest: Plusminus ",
+    "start": "2024-03-22T18:30:00",
+    "venueEventUrl": "https://baroeg.nl/productie/16340/",
+    "title": "W:O:A: Metal Battle Veldslag West: Inherited ",
     "location": "baroeg",
-    "price": 11,
-    "shortText": " Phlebotomized   Insurrection   Mouser   NOCX   Red Eyed Machine Annual fest to crush the boundaries between different forms of underground music.avantgarde death,industrial cyber techno,melodic death/thrash,punkrock,rockcovers,synthwave",
-    "longText": "../public/texts/baroeg/czovL2Jhcm9lZy5ubC9wcm9kdWN0aWUvMTYzMTgv.html",
-    "image": "../public/event-images/baroeg/czovL2Jhcm9lZy5ubC9wcm9kdWN0aWUvMTYzMTgv",
-    "soldOut": false
+    "price": 5,
+    "shortText": " Serotonia Vandaag strijden de winnaars van de voorrondes om één plaats in de finale.",
+    "longText": "../public/texts/baroeg/czovL2Jhcm9lZy5ubC9wcm9kdWN0aWUvMTYzNDAv.html",
+    "image": "../public/event-images/baroeg/czovL2Jhcm9lZy5ubC9wcm9kdWN0aWUvMTYzNDAv",
+    "soldOut": false,
+    "eventGenres": [
+      "metal"
+    ],
+    "artists": {
+      "inherited": {
+        "s": "74R5DmGt1473Kf2Lg4NDxe",
+        "l": "United States",
+        "g": [
+          "black/death metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2024-04-06T20:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/downward-spiral-special-mesh/",
+    "title": "Downward Spiral special: Mesh + Dead Lights",
+    "location": "baroeg",
+    "price": 25,
+    "shortText": "50 jaar Tim Daeleman/DJ Spud, laatste Downward Spiral in het oude Baroeg pand, ‘legacy’ show van Mesh.",
+    "longText": "../public/texts/baroeg/L2Rvd253YXJkLXNwaXJhbC1zcGVjaWFsLW1lc2gv.html",
+    "image": "../public/event-images/baroeg/L2Rvd253YXJkLXNwaXJhbC1zcGVjaWFsLW1lc2gv",
+    "soldOut": false,
+    "eventGenres": [
+      "electronic"
+    ],
+    "artists": {
+      "mesh": {
+        "s": "3ggwAqZD3lyT2sbovlmfQY",
+        "l": "mesh",
+        "g": [
+          "alternative metal",
+          "djent",
+          "groove metal",
+          "metal",
+          "nu metal",
+          "progressive groove metal",
+          "swedish metal",
+          "technical groove metal",
+          "technical thrash"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2024-04-13T14:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/submit-fest/",
+    "title": "Submit Fest: Hippotraktor ",
+    "location": "baroeg",
+    "price": 21,
+    "shortText": " Confessions Of A Traitor  +  Changing Tides Submit Fest is het indoor festival met de beste ‘up and coming’ en ‘breaking through’ metal acts van regionale, nationale en internationale bodem.",
+    "longText": "../public/texts/baroeg/cm9lZy5ubC9wcm9kdWN0aWUvc3VibWl0LWZlc3Qv.html",
+    "image": "../public/event-images/baroeg/cm9lZy5ubC9wcm9kdWN0aWUvc3VibWl0LWZlc3Qv",
+    "soldOut": false,
+    "eventGenres": [
+      "metalcore",
+      "progressive"
+    ],
+    "artists": {
+      "changingtides": {
+        "s": "4FDVjqH3XqrmfVpB4N5Hqu",
+        "l": "changing%20tides",
+        "g": []
+      },
+      "confessionsofatraitor": {
+        "s": "3XxTiLhFGMsWvVfpZ7KlF9",
+        "l": null,
+        "g": [
+          "uk metalcore"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2024-04-27T14:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/koningsdag-festival-hard-skin/",
+    "title": "Koningsdag festival: Hard Skin + Pigs",
+    "location": "baroeg",
+    "price": null,
+    "shortText": "Gratis tot het laat is.",
+    "longText": "../public/texts/baroeg/a29uaW5nc2RhZy1mZXN0aXZhbC1oYXJkLXNraW4v.html",
+    "image": "../public/event-images/baroeg/a29uaW5nc2RhZy1mZXN0aXZhbC1oYXJkLXNraW4v",
+    "soldOut": false,
+    "eventGenres": [
+      "crossover",
+      "street punk",
+      "thrash metal"
+    ],
+    "artists": {
+      "pigs": {
+        "s": null,
+        "l": "United Kingdom",
+        "g": [
+          "stoner metal/hard rock"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2024-07-02T19:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-maassilo-vader-bio-cancer-warside/",
+    "title": "Baroeg On Tour @Maassilo: Vader ",
+    "location": "baroeg",
+    "price": 26,
+    "shortText": " Bio-Cancer  +  Warside Vader In 2023 bestond de Poolse death metal legende 40 jaar. Dat werd uitgebreid gevierd…",
+    "longText": "../public/texts/baroeg/c2lsby12YWRlci1iaW8tY2FuY2VyLXdhcnNpZGUv.html",
+    "image": "../public/event-images/baroeg/c2lsby12YWRlci1iaW8tY2FuY2VyLXdhcnNpZGUv",
+    "soldOut": false,
+    "eventGenres": [
+      "death metal",
+      "thrash metal"
+    ],
+    "artists": null
   }
 ]

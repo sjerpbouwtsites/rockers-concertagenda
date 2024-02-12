@@ -166,6 +166,16 @@ export default class Artists {
       }
       return this.hasForbidden(message.data.string);
     }
+    
+    if (message.request === 'checkExplicitEventCategories') {
+      if (this.typeCheckInputFromScrapers) {
+        const hasGenres = Object.prototype.hasOwnProperty.call(parsedMessage.data, 'genres');
+        if (!hasGenres) {
+          return this.error(Error('geen genres om te doorzoeken'));
+        } 
+      }
+      return this.checkExplicitEventCategories(message.data.genres);
+    }
 
     if (message.request === 'getSpotifyForbiddenTerms') {
       if (this.typeCheckInputFromScrapers) {
@@ -227,7 +237,7 @@ export default class Artists {
       }
       const d = message.data;
       return this.harvestArtists(
-        d.title, d.slug, d?.shortText, d.settings, d.eventDate);
+        d.title, d.slug, d?.shortText, d.settings, d.eventDate, d?.eventGenres);
     }
 
     if (message.request === 'APICallsForGenre') {
@@ -296,11 +306,15 @@ export default class Artists {
     const _b = Object.prototype.hasOwnProperty.call(this.allowedArtists, slug);
     
     if (!_a && !_b) {
-      return this.post({
-        success: false,
-        data: null,
-        reason: `${artistName} and ${slug} not in allowedArtists`,
-      }); 
+      const __a = Object.prototype.hasOwnProperty.call(this.allowedArtistsTemp, artistName);
+      const __b = Object.prototype.hasOwnProperty.call(this.allowedArtistsTemp, slug);      
+      if (!__a && !__b) {
+        return this.post({
+          success: false,
+          data: null,
+          reason: `${artistName} and ${slug} not in allowedArtists`,
+        }); 
+      }
     }
 
     const artistData = _a ? this.allowedArtists[artistName] : this.allowedArtists[slug];
@@ -322,11 +336,15 @@ export default class Artists {
     const _b = Object.prototype.hasOwnProperty.call(this.allowedEvents, slug);
     
     if (!_a && !_b) {
-      return this.post({
-        success: false,
-        data: null,
-        reason: `🟥 ${eventName} and ${slug} not allowed event`,
-      }); 
+      const __a = Object.prototype.hasOwnProperty.call(this.allowedEventTemp, eventName);
+      const __b = Object.prototype.hasOwnProperty.call(this.allowedEventTemp, slug);
+      if (!__a && !__b) {
+        return this.post({
+          success: false,
+          data: null,
+          reason: `🟥 ${eventName} and ${slug} not allowed event`,
+        }); 
+      }
     }
 
     const eventData = _a ? this.allowedEvents[eventName] : this.allowedEvents[slug];
@@ -351,11 +369,15 @@ export default class Artists {
     const _b = Object.prototype.hasOwnProperty.call(this.refused, ss);
     
     if (!_a && !_b) {
-      return this.post({
-        success: false,
-        data: null,
-        reason: `🟩 ${tt} and ${ss} not refused`,
-      }); 
+      const __a = Object.prototype.hasOwnProperty.call(this.refusedTemp, tt);
+      const __b = Object.prototype.hasOwnProperty.call(this.refusedTemp, ss);
+      if (!__a && !__b) {
+        return this.post({
+          success: false,
+          data: null,
+          reason: `🟩 ${tt} and ${ss} not refused`,
+        }); 
+      }
     }
 
     const eventOfArtistData = _a ? this.refused[tt] : this.refused[ss];
@@ -389,15 +411,83 @@ export default class Artists {
     });
   }  
 
+  /**
+   * vergelijkt string (title, slug, shorttext) met terms.goodCategories
+   * @param {string} titleslugshorttext 
+   * @returns successMessage met evt. artistData
+   */
+  hasGood(stringtitleslugshorttext) {
+    const isGood = this.terms.goodCategories
+      .find((goodCat) => stringtitleslugshorttext.includes(goodCat));
+    
+    if (isGood) {
+      return this.post({
+        success: !!isGood,
+        data: isGood,
+        reason: `🟥 ${isGood} is good term`,
+      });
+    }
+    return this.post({
+      success: !!isGood,
+      data: isGood,
+      reason: `🟩 no good term`,
+    });
+  }    
+
+  /**
+   * vergelijkt genre array met terms.goodCategories en terms.forbiddenTerms
+   */
+  checkExplicitEventCategories(genres) {
+    const joinedGenres = genres.join(', ');
+
+    let isGood;
+
+    isGood = this.terms.globalGoodCategories
+      .find((goodCat) => joinedGenres.includes(goodCat));
+
+    if (!isGood) {
+      isGood = this.terms.goodCategories
+        .find((goodCat) => joinedGenres.includes(goodCat));
+    }
+
+    if (isGood) {
+      return this.post({
+        success: true,
+        data: isGood,
+        reason: `🟩 ${isGood} good in expl. cats.`,
+      });      
+    }
+    
+    let isBad;
+
+    isBad = this.terms.globalForbiddenGenres
+      .find((badCat) => joinedGenres.includes(badCat));
+
+    if (!isBad) {
+      isBad = this.terms.forbidden
+        .find((badCat) => joinedGenres.includes(badCat));
+    }
+    if (isBad) {
+      return this.post({
+        success: false,
+        data: isBad,
+        reason: `🟥 ${isBad} bad in expl. cats.`,
+      });      
+    }
+
+    return this.post({
+      success: null,
+      data: null,
+      reason: `🟥🟩 No matches.`,
+    });
+  }    
+
   async getSpotifyForbiddenTerms(title, slug, eventDate) {
     if (!this.spotifyAccessToken) {
       await this.getSpotifyAccessToken();
     }
     
     const spotRes = await this.getSpotifyArtistSearch(title);
-
-    console.log(spotRes);
-    process.exit();
     
     if (!spotRes) {
       return this.post({
@@ -408,8 +498,7 @@ export default class Artists {
     }
 
     const spotifyGenres = spotRes?.genres ?? [];
-    console.log(`genres voor ${title}`);
-    console.log(spotifyGenres);
+    
     const heeftVerbodenTermen = this.terms.forbidden
       .find((ft) => spotifyGenres.find((sg) => sg.includes(ft) || ft.includes(sg)));
     
@@ -424,16 +513,7 @@ export default class Artists {
         });
       }
 
-      this.saveRefusedTemp(title, slug, spotify, null, eventDate) {
-        const tt = title.length < 10 ? title + eventDate : title;
-        const ss = slug.length < 10 ? slug + eventDate : slug;
-        this.refusedTemp[tt] = [0, spotify, metalEnc, eventDate, this.today];
-        if (tt !== ss) {
-          this.refusedTemp[ss] = [1, spotify, metalEnc, eventDate, this.today]; 
-        }
-        return true;
-      }  
-
+      this.saveRefusedTemp(title, slug, spotRes?.id, null, eventDate);
       return this.post({
         success: true,
         data: heeftVerbodenTermen,
@@ -447,7 +527,7 @@ export default class Artists {
     });  
   }
 
-  async harvestArtists(title, slug, shortText, settings, eventDate) {
+  async harvestArtists(title, slug, shortText, settings, eventDate, eventGenres = []) {
     const reg = new RegExp(settings.dividerRex, 'i');
     let toScan = title; 
     if (settings.artistsIn.includes('shortText') && shortText) {
@@ -477,14 +557,21 @@ export default class Artists {
             const sGenres = na.resultaten?.spotRes?.genres ?? [];
             const heeftMetalEnc = Array.isArray(na.resultaten?.metalEnc);
             const mGenres = heeftMetalEnc ? na.resultaten?.metalEnc[1].split(';').map((a) => a.replace(/\(.*\)/, '').trim().toLowerCase()) ?? [] : [];
-            const genres = [...sGenres, ...mGenres];
+            const genres = [...sGenres, ...mGenres, ...eventGenres];
             const land = heeftMetalEnc ? na.resultaten?.metalEnc[2] ?? null : null;
   
             const eerstGefilterdeGenres = genres
               .filter((g) => !this.terms.globalForbiddenGenres.find((gfg) => g.includes(gfg)));
             const tweedeGefilterdeGenres = eerstGefilterdeGenres
               .filter((g) => !this.terms.forbidden.includes(g));
-            if (tweedeGefilterdeGenres.length) {
+            const heeftHeelGoedGenre = genres
+              .filter((g) => !this.terms.globalGoodCategories.find((gfg) => g.includes(gfg)));
+            const heeftGoedeGenres = genres
+              .filter((g) => !this.terms.goodCategories.find((gfg) => g.includes(gfg)));
+
+            if (tweedeGefilterdeGenres.length || heeftHeelGoedGenre) {
+              this.saveAllowedTemp(na.title, na.slug, spotify, land, genres, eventDate);
+            } else if (heeftGoedeGenres.length > tweedeGefilterdeGenres) {
               this.saveAllowedTemp(na.title, na.slug, spotify, land, genres, eventDate);
             } else {
               this.saveRefusedTemp(na.title, na.slug, spotify, land, eventDate);
@@ -712,6 +799,13 @@ export default class Artists {
   }
 
   persistNewRefusedAndRockArtists() {
+    console.log(`new artists`);
+    console.log(Object.keys(this.allowedArtistsTemp));
+    console.log(`new events`);
+    console.log(Object.keys(this.allowedEventTemp));
+    console.log(`new refused`);
+    console.log(Object.keys(this.refusedTemp));
+
     Object.entries(this.allowedArtistsTemp).forEach(([key, values]) => {
       if (this.allowedArtists[key]) {
         const nieuweRecord = [...this.allowedArtists[key]];

@@ -20,7 +20,7 @@ export default class ScraperConfig {
     },
     app: {
       harvest: {
-        possiblePrefix: "presenteert\\s?:presents\\s",
+        possiblePrefix: ".*:",
         dividers: [],
         dividerRex: null,
         artistsIn: ['title'],

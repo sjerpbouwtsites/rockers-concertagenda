@@ -100,6 +100,76 @@ export async function asyncForbiddenTerms(event, reasons) {
   return successAnswerObject(event, reasonsCopy);
 }
 
+export async function asyncGoodTerms(event, reasons) {
+  const reasonsCopy = Array.isArray(reasons) ? reasons : [];
+  this.talkToDB({
+    type: 'db-request', 
+    subtype: 'hasGoodTerms',
+    messageData: {
+      string: event.workTitle + event.slug + (event?.shortText ?? '').toLowerCase(),
+    },
+  });
+  await this.checkDBhasAnswered();
+  reasonsCopy.push(this.lastDBAnswer.reason);
+  if (this.lastDBAnswer.success) {
+    this.talkToDB({
+      type: 'db-request',
+      subtype: 'saveAllowedEventTemp',
+      messageData: {
+        title: event.workTitle,
+        slug: event.slug,
+        eventDate: dateNaarShortDate(event.start),
+      },
+    }); 
+  
+    return successAnswerObject(event, reasonsCopy, true);
+  }
+  return nullAnswerObject(event, reasons);
+}
+
+export async function asyncExplicitEventCategories(event, reasons) {
+  const reasonsCopy = Array.isArray(reasons) ? reasons : [];
+
+  if (!event.eventGenres || event.eventGenres < 1) {
+    return nullAnswerObject(event, reasonsCopy);  
+  }
+
+  this.talkToDB({
+    type: 'db-request', 
+    subtype: 'checkExplicitEventCategories',
+    messageData: {
+      genres: event.eventGenres,
+    },
+  });
+  await this.checkDBhasAnswered();
+  reasonsCopy.push(this.lastDBAnswer.reason);
+  if (this.lastDBAnswer.success) {
+    this.talkToDB({
+      type: 'db-request',
+      subtype: 'saveAllowedEventTemp',
+      messageData: {
+        title: event.workTitle,
+        slug: event.slug,
+        eventDate: dateNaarShortDate(event.start),
+      },
+    }); 
+    return successAnswerObject(event, reasonsCopy, true);
+  }
+  if (this.lastDBAnswer.success === false) {
+    this.talkToDB({
+      type: 'db-request',
+      subtype: 'saveRefusedTemp',
+      messageData: {
+        title: event.workTitle,
+        slug: event.slug,
+        eventDate: dateNaarShortDate(event.start),
+      },
+    }); 
+    return failureAnswerObject(event, reasonsCopy, true);
+  }  
+  return nullAnswerObject(event, reasonsCopy);
+}
+
 export async function asyncSpotifyForbiddenTerms(event, reasons) {
   const reasonsCopy = Array.isArray(reasons) ? reasons : [];
   
@@ -153,6 +223,7 @@ export async function asyncHarvestArtists(event, reasons) {
       shortText: event.shortText,
       settings: this._s.app.harvest,
       eventDate: dateNaarShortDate(event.start),
+      eventGenres: event?.eventGenres ?? [],
     },
   });    
   return nullAnswerObject(event, reasons);
@@ -196,36 +267,6 @@ export default null;
 //       event,
 //       reasons: reasonsCopy,
 //       reason: reasonsCopy.reverse().join(', '),
-//     };    
-//   },
-
-//   async asyncCheckGoodTerms(event, reasons) {
-//     const reasonsCopy = Array.isArray(reasons) ? reasons : [];
-//     const goodTermsRes = await this.hasGoodTerms(event);
-//     reasonsCopy.push(goodTermsRes.reason);
-//     if (goodTermsRes.success) {
-//       this.skipFurtherChecks.push(event.title);
-//       this.talkToDB({
-//         type: 'db-request',
-//         subtype: 'saveAllowedTitle',
-//         messageData: {
-//           string: event.title,
-//           reason: reasonsCopy.reverse().join(', '),
-//         },
-//       });  
-//       return {
-//         event,
-//         reason: reasonsCopy.reverse().join(','),
-//         reasons: reasonsCopy,
-//         success: true,
-//         break: true,
-//       };
-//     }  
-//     return {
-//       break: false,
-//       success: null,
-//       event,
-//       reasons: reasonsCopy,
 //     };    
 //   },
     

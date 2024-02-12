@@ -3,8 +3,11 @@
    * @param {string} eventTitle rauwe titel van event. 
    * @returns {workTitle: string, slug: string}
    */
-export function slugify(eventTitle) {
-  const workTitle = eventTitle.trim().toLowerCase();
+export function slugify(eventTitle, possiblePrefix = null) {
+  const workTitle = ((possiblePrefix && possiblePrefix.length)
+    ? eventTitle.replace(new RegExp(possiblePrefix), '') 
+    : eventTitle)
+    .trim().toLowerCase();
   const slug = String(workTitle)
     .replaceAll(/[ÁÀÂàÂÄÃÅ]/gi, 'a')
     .replaceAll(/Ç/gi, 'c')
@@ -22,10 +25,11 @@ export function slugify(eventTitle) {
   return {
     workTitle,
     slug,
+    HADHARVESTSETTINGS: possiblePrefix,
   };
 }
-export default function workTitleAndSlug(event) {
-  const s = slugify(event.title);
+export default function workTitleAndSlug(event, possiblePrefix = null) {
+  const s = slugify(event.title, possiblePrefix);
   // eslint-disable-next-line no-param-reassign
   return Object.assign(event, s);
 }

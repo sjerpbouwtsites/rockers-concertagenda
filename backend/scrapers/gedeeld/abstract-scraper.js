@@ -16,7 +16,7 @@ import shell from '../../mods/shell.js';
 import {
   asyncIsAllowedEvent, asyncIsRefused, asyncForbiddenTerms, 
   asyncSaveAllowedEvent, asyncHarvestArtists, asyncScanTitleForAllowedArtists,
-  asyncSpotifyForbiddenTerms,
+  asyncSpotifyForbiddenTerms, asyncGoodTerms, asyncExplicitEventCategories,
 } from './artist-db-interface.js';
 
 // #endregion                                              IMPORTS
@@ -74,6 +74,10 @@ export default class AbstractScraper extends ScraperConfig {
     this.asyncScanTitleForAllowedArtists.bind(this);
     this.asyncSpotifyForbiddenTerms = asyncSpotifyForbiddenTerms;
     this.asyncSpotifyForbiddenTerms.bind(this);
+    this.asyncGoodTerms = asyncGoodTerms;
+    this.asyncGoodTerms.bind(this);
+    this.asyncExplicitEventCategories = asyncExplicitEventCategories;
+    this.asyncExplicitEventCategories.bind(this);
   }
   // #endregion                                                CONSTRUCTOR & INSTALL
 
@@ -606,6 +610,7 @@ export default class AbstractScraper extends ScraperConfig {
           soldOut: mergedEvent.soldOut,      
           unavailable: mergedEvent.unavailable,
           corrupted: mergedEvent.corrupted,
+          eventGenres: mergedEvent?.eventGenres ?? null,
           artists: mergedEvent.artists,
           // ...workerData,
         };
@@ -693,12 +698,12 @@ export default class AbstractScraper extends ScraperConfig {
     }
 
     if (title.length > 45) {
-      const splittingCandidates = ['+', '&', ':', '>', '•'];
+      const splittingCandidates = this._s.app.harvest.dividers;
       let i = 0;
       do {
         const splitted = title.split(splittingCandidates[i]);
         title = splitted[0];
-        const titleRest = splitted.splice(1, 45).join(' ');
+        const titleRest = splitted.splice(1, 45).join(` ${splittingCandidates[i]} `);
         shortText = `${titleRest} ${shortText}`;
         i += 1;
       } while (title.length > 45 && i < splittingCandidates.length);
@@ -1058,9 +1063,11 @@ export default class AbstractScraper extends ScraperConfig {
       allowedEvent: 'asyncIsAllowedEvent',
       refused: 'asyncIsRefused',
       forbiddenTerms: 'asyncForbiddenTerms',
+      hasGoodTerms: 'asyncGoodTerms',
       saveAllowedEvent: 'asyncSaveAllowedEvent',
       harvestArtists: 'asyncHarvestArtists',
       spotifyForbiddenTerms: 'asyncSpotifyForbiddenTerms',
+      explicitEventGenres: 'asyncExplicitEventCategories',
       // refused: 'asyncCheckIsRefused',
       // emptySuccess: 'asyncCheckEmptySuccess',
       // emptyFailure: 'asyncCheckEmptyFailure',

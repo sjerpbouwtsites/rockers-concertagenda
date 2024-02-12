@@ -1,57 +1,196 @@
 [
   {
-    "start": "2023-12-16T21:00:00",
-    "venueEventUrl": "https://baroeg.nl/productie/wavefest-presents-modern-victims-dance-night-baroeg/",
-    "title": "Wavefest Presents: Modern Victims Dance Night",
+    "start": "2024-03-02T19:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/16299/",
+    "title": "Art Stage Promotion presents: Flapjack ",
     "location": "baroeg",
-    "price": 7,
-    "shortText": "Wave-Postpunk-Electro hosted by Wavefest.alternative,new wave / electro / industrial,post-punk",
-    "longText": "../public/texts/baroeg/cm4tdmljdGltcy1kYW5jZS1uaWdodC1iYXJvZWcv.html",
-    "image": "../public/event-images/baroeg/cm4tdmljdGltcy1kYW5jZS1uaWdodC1iYXJvZWcv",
-    "soldOut": false
+    "price": 41,
+    "shortText": "  Sztigar Bonko FFO: Suicidal Tendencies, Acid Drinkers, Luxtorpeda.",
+    "longText": "../public/texts/baroeg/czovL2Jhcm9lZy5ubC9wcm9kdWN0aWUvMTYyOTkv.html",
+    "image": "../public/event-images/baroeg/czovL2Jhcm9lZy5ubC9wcm9kdWN0aWUvMTYyOTkv",
+    "soldOut": false,
+    "eventGenres": [
+      "alternative"
+    ],
+    "artists": {
+      "flapjack": {
+        "s": "1mXhM9SmB8qZFonbfELPbk",
+        "l": "flapjack",
+        "g": []
+      }
+    }
   },
   {
-    "start": "2024-01-25T19:00:00",
-    "venueEventUrl": "https://baroeg.nl/productie/baroeg-tribute-night-the-perfect-tool-2/",
-    "title": "Baroeg Tribute Night: The Perfect Tool",
+    "start": "2024-03-10T15:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/terzij-de-horde-laster/",
+    "title": "Terzij De Horde ",
     "location": "baroeg",
-    "price": 21,
-    "shortText": "Genieten van Tool-parels uit het complete oeuvre.tribute",
-    "longText": "../public/texts/baroeg/YnV0ZS1uaWdodC10aGUtcGVyZmVjdC10b29sLTIv.html",
-    "image": "../public/event-images/baroeg/YnV0ZS1uaWdodC10aGUtcGVyZmVjdC10b29sLTIv",
-    "soldOut": false
+    "price": 16,
+    "shortText": " Laster  +  Räum  +  Radeloos///Ziedend  +  Lijkschouwer Laat je verrassen door de muzikale schijnbewegingen van Terzij De Horde en Laster.",
+    "longText": "../public/texts/baroeg/ZHVjdGllL3Rlcnppai1kZS1ob3JkZS1sYXN0ZXIv.html",
+    "image": "../public/event-images/baroeg/ZHVjdGllL3Rlcnppai1kZS1ob3JkZS1sYXN0ZXIv",
+    "soldOut": false,
+    "eventGenres": [
+      "post-black"
+    ],
+    "artists": {
+      "radeloosziedend": {
+        "s": "6l0NXNFYkkn3chX6MW1xcj",
+        "l": "radeloos///ziedend",
+        "g": []
+      },
+      "terzijdehorde": {
+        "s": "41G9cPXKxphLtBQXD0g30o",
+        "l": "terzij%20de%20horde",
+        "g": [
+          "blackgaze",
+          "dutch black metal",
+          "post-black metal"
+        ]
+      },
+      "lijkschouwer": {
+        "s": null,
+        "l": "lijkschouwer",
+        "g": []
+      },
+      "laster": {
+        "s": "67p4YunK4HWNnF2gcTLVaV",
+        "l": "Netherlands",
+        "g": [
+          "dutch black metal",
+          "experimental/atmospheric post-black metal"
+        ]
+      },
+      "raum": {
+        "s": null,
+        "l": "Belgium",
+        "g": [
+          "black metal"
+        ]
+      }
+    }
   },
   {
-    "start": "2024-02-16T19:00:00",
-    "venueEventUrl": "https://baroeg.nl/productie/woa-metal-battle-voorronde-zuid-holland/",
-    "title": "W:O:A: Metal Battle Voorronde Zuid-Holland",
+    "start": "2024-03-28T19:30:00",
+    "venueEventUrl": "https://baroeg.nl/productie/gruizig-kill-your-boyfriend-death-by-audio-soundville/",
+    "title": "Gruizig: Kill Your Boyfriend ",
     "location": "baroeg",
-    "price": 5,
-    "shortText": "Kortom een uitgelezen moment om te zien welke talentvolle bands op het punt van doorbreken staan.metal",
-    "longText": "../public/texts/baroeg/YmF0dGxlLXZvb3Jyb25kZS16dWlkLWhvbGxhbmQv.html",
-    "image": "../public/event-images/baroeg/YmF0dGxlLXZvb3Jyb25kZS16dWlkLWhvbGxhbmQv",
-    "soldOut": false
+    "price": 14,
+    "shortText": " Death By Audio @SoundVille Gruizig is een nieuwe clubavond waar gitaarstijlen als postpunk, shoegaze, noise etc. centraal staan.",
+    "longText": "../public/texts/baroeg/ZW5kLWRlYXRoLWJ5LWF1ZGlvLXNvdW5kdmlsbGUv.html",
+    "image": "../public/event-images/baroeg/ZW5kLWRlYXRoLWJ5LWF1ZGlvLXNvdW5kdmlsbGUv",
+    "soldOut": false,
+    "eventGenres": [
+      "dark ambient",
+      "post-punk"
+    ],
+    "artists": {
+      "killyourboyfriend": {
+        "s": "6zFAJz4tL7ORH19hJJRsJi",
+        "l": null,
+        "g": [
+          "indie veneto",
+          "italogaze"
+        ]
+      }
+    }
   },
   {
-    "start": "2024-03-22T18:30:00",
-    "venueEventUrl": "https://baroeg.nl/productie/16340/",
-    "title": "W:O:A: Metal Battle Veldslag West",
+    "start": "2024-04-11T21:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/baroeg-presents-v11-officium-triste-asphodelus/",
+    "title": "Baroeg presents @V11: Officium Triste ",
     "location": "baroeg",
-    "price": 5,
-    "shortText": "Vandaag strijden de winnaars van de voorrondes om één plaats in de finale.metal",
-    "longText": "../public/texts/baroeg/czovL2Jhcm9lZy5ubC9wcm9kdWN0aWUvMTYzNDAv.html",
-    "image": "../public/event-images/baroeg/czovL2Jhcm9lZy5ubC9wcm9kdWN0aWUvMTYzNDAv",
-    "soldOut": false
+    "price": 14,
+    "shortText": " Asphodelus In 2024 bestaat Officium Triste 30 jaar. Om dat een klein beetje te vieren, staan ze op de V11.",
+    "longText": "../public/texts/baroeg/MTEtb2ZmaWNpdW0tdHJpc3RlLWFzcGhvZGVsdXMv.html",
+    "image": "../public/event-images/baroeg/MTEtb2ZmaWNpdW0tdHJpc3RlLWFzcGhvZGVsdXMv",
+    "soldOut": false,
+    "eventGenres": [
+      "death metal",
+      "doom"
+    ],
+    "artists": {
+      "asphodelus": {
+        "s": "4hnffjj1d6SAq0qaVymVbL",
+        "l": "Finland",
+        "g": [
+          "finnish death metal",
+          "doom/death metal"
+        ]
+      }
+    }
   },
   {
-    "start": "2024-04-06T20:00:00",
-    "venueEventUrl": "https://baroeg.nl/productie/downward-spiral-special-mesh/",
-    "title": "Downward Spiral special: Mesh + Dead Lights",
+    "start": "2024-04-20T14:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/everyone-rocks-2/",
+    "title": "Everyone Rocks",
     "location": "baroeg",
-    "price": 25,
-    "shortText": "50 jaar Tim Daeleman/DJ Spud, laatste Downward Spiral in het oude Baroeg pand, ‘legacy’ show van Mesh.electronic",
-    "longText": "../public/texts/baroeg/L2Rvd253YXJkLXNwaXJhbC1zcGVjaWFsLW1lc2gv.html",
-    "image": "../public/event-images/baroeg/L2Rvd253YXJkLXNwaXJhbC1zcGVjaWFsLW1lc2gv",
-    "soldOut": false
+    "price": 9,
+    "shortText": "Voelt jouw beperking als een belemmering? Nu niet meer!",
+    "longText": "../public/texts/baroeg/bmwvcHJvZHVjdGllL2V2ZXJ5b25lLXJvY2tzLTIv.html",
+    "image": "../public/event-images/baroeg/bmwvcHJvZHVjdGllL2V2ZXJ5b25lLXJvY2tzLTIv",
+    "soldOut": false,
+    "eventGenres": [
+      "rock-alternative"
+    ],
+    "artists": null
+  },
+  {
+    "start": "2024-04-28T18:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/veneration-of-the-dead-part-x-blasphemy-wrok/",
+    "title": "Veneration Of The Dead part X: Blasphemy ",
+    "location": "baroeg",
+    "price": 24,
+    "shortText": " Wrok  +  Kerberos Een zeldzame kans om Blasphemy te zien.",
+    "longText": "../public/texts/baroeg/aGUtZGVhZC1wYXJ0LXgtYmxhc3BoZW15LXdyb2sv.html",
+    "image": "../public/event-images/baroeg/aGUtZGVhZC1wYXJ0LXgtYmxhc3BoZW15LXdyb2sv",
+    "soldOut": false,
+    "eventGenres": [
+      "black"
+    ],
+    "artists": {
+      "blasphemy": {
+        "s": "6LjCtCPlOe8GkYz09XeQH5",
+        "l": "Canada",
+        "g": [
+          "black death",
+          "black metal",
+          "black thrash",
+          "black/death metal"
+        ]
+      },
+      "wrok": {
+        "s": "5ratcXOB2DgvmCcXqxRBBt",
+        "l": "Netherlands",
+        "g": [
+          "black metal"
+        ]
+      },
+      "kerberos": {
+        "s": "6PN3ScMSwcOXPIImBVdMid",
+        "l": "Switzerland",
+        "g": [
+          "symphonic death metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2024-09-14T12:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/baroeg-open-air-2024/",
+    "title": "Baroeg Open Air 2024",
+    "location": "baroeg",
+    "price": 9.99,
+    "shortText": "Zaterdag 14 september 2024 vindt de vijftiende editie van Baroeg Open Air plaats in het Rotterdamse Zuiderpark.",
+    "longText": "../public/texts/baroeg/cm9kdWN0aWUvYmFyb2VnLW9wZW4tYWlyLTIwMjQv.html",
+    "image": "../public/event-images/baroeg/cm9kdWN0aWUvYmFyb2VnLW9wZW4tYWlyLTIwMjQv",
+    "soldOut": false,
+    "eventGenres": [
+      "alternative",
+      "electronic",
+      "metal",
+      "punk"
+    ],
+    "artists": null
   }
 ]

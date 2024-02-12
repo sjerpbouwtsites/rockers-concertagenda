@@ -45,6 +45,7 @@ const forbiddenTerms = [
   'dream punk',
   'uptempo',
   'experi-metal',
+  "pov: indie",
   'folkpunk',
   'jazz-core',
   'neofolk',
@@ -53,9 +54,12 @@ const forbiddenTerms = [
   'punk-hop',
   'new french touch',
   "quiz'm",
+  "australian hip hop",
+  "dutch rap pop",
   'schaakinstuif',
   'afrobeats',
   'new wave',
+  "modern alternative rock",
 ];
 
 const globalForbiddenGenres = [
@@ -65,6 +69,10 @@ const globalForbiddenGenres = [
   'dream',
   'shoegaze',
   'new-wave',
+];
+
+const globalGoodCategories = [
+  'metal',
 ];
 
 const wikipediaGoodGenres = [
@@ -113,6 +121,7 @@ const goodCategories = [
   'punk-emo-hardcore',
   'heavy rock',
   'death metal',
+  'post-black',
   'doom',
   'grindcore',
   'hard rock',
@@ -148,4 +157,5 @@ export default {
   globalForbiddenGenres,
   wikipediaGoodGenres,
   goodCategories,
+  globalGoodCategories,
 };

@@ -23,11 +23,11 @@ const scraper = new AbstractScraper({
     timeout: 20000,
   },
   app: {
-    // harvest: {
-    //   dividers: [`+`],
-    //   dividerRex: "[\\+&]",
-    //   artistsIn: ['title'],
-    // },
+    harvest: {
+      dividers: [`+`, '&'],
+      dividerRex: "[\\+&]",
+      artistsIn: ['title'],
+    },
     mainPage: {
       requiredProperties: ['venueEventUrl'],
       asyncCheckFuncs: ['refused', 'allowedEvent', 'forbiddenTerms', 'spotifyForbiddenTerms'],
