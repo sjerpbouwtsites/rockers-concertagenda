@@ -7,6 +7,7 @@ const debugSettings = {
   debugPageInfo: false,
   debugPrice: false,
   debugWithTempFile:false,
+  debugArtistScan:true,
   
 };
 export default debugSettings;

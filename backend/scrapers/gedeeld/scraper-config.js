@@ -19,10 +19,11 @@ export default class ScraperConfig {
       url: null,
     },
     app: {
-      splitting: {
-        possiblePrefix: /presenteert\s?:presents\s?:/i,
+      harvest: {
+        possiblePrefix: "presenteert\\s?:presents\\s",
         dividers: [],
         dividerRex: null,
+        artistsIn: ['title'],
       },
       // in deze eigen app
       mainPage: {
@@ -74,13 +75,15 @@ export default class ScraperConfig {
       url: obj?.mainPage?.url ?? bc.mainPage.url,
     };
 
-    this._s.app.splitting = {
-      dividers: obj?.app?.splitting?.dividers 
-        ?? bc.app.splitting.dividers,
-      dividerRex: obj?.app?.splitting?.dividerRex 
-        ?? bc.app.splitting.dividerRex,
-      possiblePrefix: obj?.app?.splitting?.possiblePrefix 
-        ?? bc.app.splitting.possiblePrefix,
+    this._s.app.harvest = {
+      dividers: obj?.app?.harvest?.dividers 
+        ?? bc.app.harvest.dividers,
+      dividerRex: obj?.app?.harvest?.dividerRex 
+        ?? bc.app.harvest.dividerRex,
+      possiblePrefix: obj?.app?.harvest?.possiblePrefix 
+        ?? bc.app.harvest.possiblePrefix,
+      artistsIn: obj?.app?.harvest?.artistsIn 
+        ?? bc.app.harvest.artistsIn,
     };
 
     this._s.app.mainPage = {

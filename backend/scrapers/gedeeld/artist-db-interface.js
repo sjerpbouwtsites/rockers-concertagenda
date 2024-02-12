@@ -1,20 +1,22 @@
-function dateNaarShortDate(date) {
+function dateNaarShortDate(date) { // todo naar abstract scraper en dan op event object.
   if (date.length < 10) {
     throw new Error(`${date} is geen isostring`);
   }
   return date.substring(2, 10).replaceAll('-', '');
 }
 function talkTitleAndSlug(subtype, event) {
+  const s = dateNaarShortDate(event.start);
   return {
     type: 'db-request', 
     subtype,
     messageData: {
       title: event.workTitle.length < 10 
-        ? event.workTitle + dateNaarShortDate(event.start) 
+        ? event.workTitle + s
         : event.workTitle,
       slug: event.slug.length < 10 
-        ? event.slug + dateNaarShortDate(event.start) 
+        ? event.slug + s 
         : event.slug,
+      eventDate: s,
     },
   };
 }
@@ -118,11 +120,26 @@ export async function asyncHarvestArtists(event, reasons) {
     messageData: {
       title: event.workTitle,
       slug: event.slug,
-      settings: this._s.app.splitting,
+      shortText: event.shortText,
+      settings: this._s.app.harvest,
       eventDate: dateNaarShortDate(event.start),
     },
   });    
   return nullAnswerObject(event, reasons);
+}
+
+export async function asyncScanTitleForAllowedArtists(title, slug) {
+  this.talkToDB({
+    type: 'db-request',
+    subtype: 'scanTitleForAllowedArtistsAsync',
+    messageData: {
+      title,
+      slug,
+      settings: this._s.app.harvest,
+    },
+  });    
+  await this.checkDBhasAnswered();
+  return { ...this.lastDBAnswer };
 }
 
 export default null;

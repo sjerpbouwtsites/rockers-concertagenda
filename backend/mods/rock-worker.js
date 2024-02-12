@@ -69,6 +69,12 @@ export default class RockWorker extends Worker {
           // 2.5 hier heb je een zooitje van gemaakt
           // 3. rock-worker wrapper praat terug naar worker-scraper
           // met antwoord van DB
+
+          if (parsedMessage?.success === 'error') {
+            console.log('error message uit db!');
+            console.log(parsedMessage);
+          }
+
           thisWorker.postMessage(JSON.stringify({
             type: 'db-answer',
             subtype: parsedMessage?.subtype,

@@ -15,7 +15,7 @@ import _getPriceFromHTML from './price.js';
 import shell from '../../mods/shell.js';
 import {
   asyncIsAllowedEvent, asyncIsRefused, asyncForbiddenTerms, 
-  asyncSaveAllowedEvent, asyncHarvestArtists,
+  asyncSaveAllowedEvent, asyncHarvestArtists, asyncScanTitleForAllowedArtists,
 } from './artist-db-interface.js';
 
 // #endregion                                              IMPORTS
@@ -69,6 +69,8 @@ export default class AbstractScraper extends ScraperConfig {
     this.asyncSaveAllowedEvent.bind(this);
     this.asyncHarvestArtists = asyncHarvestArtists;
     this.asyncHarvestArtists.bind(this);
+    this.asyncScanTitleForAllowedArtists = asyncScanTitleForAllowedArtists;
+    this.asyncScanTitleForAllowedArtists.bind(this);
   }
   // #endregion                                                CONSTRUCTOR & INSTALL
 
@@ -153,9 +155,6 @@ export default class AbstractScraper extends ScraperConfig {
     this.completedMainPage = true;
     if (!checkedEvents) return false;
     await this.processSingleMusicEvent(checkedEvents).catch(this.handleOuterScrapeCatch);
-    
-    console.log('UITGECOMMEERTARIEERD abtract scraper 150 this.saveRockRefusedAllowedToFile');
-    // await this.saveRockRefusedAllowedToFile();
     
     await this.announceToMonitorDone();
     
@@ -560,6 +559,23 @@ export default class AbstractScraper extends ScraperConfig {
     mergedEvent.longText = this.writeLongTextHTML(mergedEvent);
     const mergedEventCheckRes = await this.singlePageAsyncCheck(mergedEvent, pageInfo);
     if (mergedEventCheckRes.success) {
+      const artistsRes = await this.asyncScanTitleForAllowedArtists(
+        mergedEvent.workTitle, mergedEvent.slug);
+
+      if (debugSettings.debugArtistScan) {
+        const goedOfFout = artistsRes.success && artistsRes.success !== 'error' ? `🟩 ` : `🟥 `;
+        this.dirtyDebug({
+          title: `${goedOfFout} artist scan`,
+          event: `<a class='single-event-check-notice single-event-check-notice--success' href='${mergedEventCheckRes.event.venueEventUrl}'>${mergedEventCheckRes.event.title}</a>`,
+          reason: artistsRes.reason,
+        });
+      }
+      if (artistsRes.success) {
+        mergedEvent.artists = artistsRes.data;
+      } else {
+        mergedEvent.artists = null;
+      }
+
       if (debugSettings.debugsinglePageAsyncCheck && mergedEventCheckRes.reason) {
         this.dirtyDebug({
           title: 'Merged async check 👍',
@@ -588,6 +604,7 @@ export default class AbstractScraper extends ScraperConfig {
           soldOut: mergedEvent.soldOut,      
           unavailable: mergedEvent.unavailable,
           corrupted: mergedEvent.corrupted,
+          artists: mergedEvent.artists,
           // ...workerData,
         };
         this._events.push(toRegister);

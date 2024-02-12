@@ -14,9 +14,10 @@ const scraper = new AbstractScraper({
     url: 'https://www.013.nl/programma/heavy',
   },
   app: {
-    splitting: {
+    harvest: {
       dividers: [`+`, '&'],
       dividerRex: "[\\+&]",
+      artistsIn: ['title', 'shortText'],
     },
     mainPage: {
       requiredProperties: ['slug', 'venueEventUrl', 'title'],

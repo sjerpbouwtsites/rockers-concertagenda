@@ -10,7 +10,25 @@
     "longText": "../public/texts/013/LjAxMy5ubC9wcm9ncmFtbWEvNzc5Ny90aGVyaW9u.html",
     "image": "../public/event-images/013/LjAxMy5ubC9wcm9ncmFtbWEvNzc5Ny90aGVyaW9u",
     "soldOut": false,
-    "unavailable": false
+    "unavailable": false,
+    "artists": {
+      "therion": {
+        "s": "5c8Cw62ZYj9XO6iDLRDEsi",
+        "l": "Sweden",
+        "g": [
+          "gothic metal",
+          "gothic symphonic metal",
+          "opera metal",
+          "power metal",
+          "swedish metal",
+          "symphonic black metal",
+          "symphonic death metal",
+          "symphonic metal",
+          "death metal",
+          "symphonic/operatic metal"
+        ]
+      }
+    }
   },
   {
     "door": "2024-02-25T18:00:00+01:00",
@@ -23,7 +41,29 @@
     "longText": "../public/texts/013/bW1hLzc2OTIvZHJhZ29uZm9yY2UtYW1hcmFudGhl.html",
     "image": "../public/event-images/013/bW1hLzc2OTIvZHJhZ29uZm9yY2UtYW1hcmFudGhl",
     "soldOut": true,
-    "unavailable": false
+    "unavailable": false,
+    "artists": {
+      "dragonforce": {
+        "s": "2pH3wEn4eYlMMIIQyKPbVR",
+        "l": "dragonforce",
+        "g": [
+          "british power metal",
+          "fantasy metal",
+          "metal",
+          "power metal",
+          "speed metal"
+        ]
+      },
+      "amaranthe": {
+        "s": "2KaW48xlLnXC2v8tvyhWsa",
+        "l": null,
+        "g": [
+          "gothic symphonic metal",
+          "power metal",
+          "symphonic metal"
+        ]
+      }
+    }
   },
   {
     "door": "2024-03-01T20:00:00+01:00",
@@ -36,20 +76,19 @@
     "longText": "../public/texts/013/d3d3LjAxMy5ubC9wcm9ncmFtbWEvNzc1NS9waWpu.html",
     "image": "../public/event-images/013/d3d3LjAxMy5ubC9wcm9ncmFtbWEvNzc1NS9waWpu",
     "soldOut": false,
-    "unavailable": false
-  },
-  {
-    "door": "2024-03-03T19:30:00+01:00",
-    "start": "2024-03-03T20:30:00+01:00",
-    "venueEventUrl": "https://www.013.nl/programma/7689/gallus",
-    "title": "Gallus",
-    "location": "013",
-    "price": 16.3,
-    "shortText": "",
-    "longText": "../public/texts/013/dy4wMTMubmwvcHJvZ3JhbW1hLzc2ODkvZ2FsbHVz.html",
-    "image": "../public/event-images/013/dy4wMTMubmwvcHJvZ3JhbW1hLzc2ODkvZ2FsbHVz",
-    "soldOut": false,
-    "unavailable": false
+    "unavailable": false,
+    "artists": {
+      "pijn": {
+        "s": "088AzItIc1cw6IsZWCyLvw",
+        "l": "pijn",
+        "g": [
+          "atmospheric post-metal",
+          "british post-rock",
+          "post-doom metal",
+          "post-metal"
+        ]
+      }
+    }
   },
   {
     "start": "2024-03-06T21:00:00+01:00",
@@ -61,7 +100,14 @@
     "longText": "../public/texts/013/MTMubmwvcHJvZ3JhbW1hLzc3ODAvY2F0cy1jdWx0.html",
     "image": "../public/event-images/013/MTMubmwvcHJvZ3JhbW1hLzc3ODAvY2F0cy1jdWx0",
     "soldOut": true,
-    "unavailable": false
+    "unavailable": false,
+    "artists": {
+      "cat's cult": {
+        "s": "39EasU1lufD34xCTYOTLVU",
+        "l": "cat's%20cult",
+        "g": []
+      }
+    }
   },
   {
     "door": "2024-03-14T19:00:00+01:00",
@@ -74,7 +120,8 @@
     "longText": "../public/texts/013/MTMubmwvcHJvZ3JhbW1hLzc3NDcvc2thbG1vZWxk.html",
     "image": "../public/event-images/013/MTMubmwvcHJvZ3JhbW1hLzc3NDcvc2thbG1vZWxk",
     "soldOut": false,
-    "unavailable": false
+    "unavailable": false,
+    "artists": null
   },
   {
     "door": "2024-03-24T20:00:00+01:00",
@@ -87,20 +134,18 @@
     "longText": "../public/texts/013/cHJvZ3JhbW1hLzc3OTMvbG93ZXN0LWNyZWF0dXJl.html",
     "image": "../public/event-images/013/cHJvZ3JhbW1hLzc3OTMvbG93ZXN0LWNyZWF0dXJl",
     "soldOut": false,
-    "unavailable": false
-  },
-  {
-    "door": "2024-03-28T20:00:00+01:00",
-    "start": "2024-03-28T20:30:00+01:00",
-    "venueEventUrl": "https://www.013.nl/programma/7735/king-nun",
-    "title": "King Nun",
-    "location": "013",
-    "price": 15.3,
-    "shortText": "",
-    "longText": "../public/texts/013/MDEzLm5sL3Byb2dyYW1tYS83NzM1L2tpbmctbnVu.html",
-    "image": "../public/event-images/013/MDEzLm5sL3Byb2dyYW1tYS83NzM1L2tpbmctbnVu",
-    "soldOut": false,
-    "unavailable": false
+    "unavailable": false,
+    "artists": {
+      "lowest creature": {
+        "s": "5c9Gljxjd5hYeaq5W0Aq1e",
+        "l": "Sweden",
+        "g": [
+          "crossover thrash",
+          "new wave of thrash metal",
+          "thrash metal/crossover"
+        ]
+      }
+    }
   },
   {
     "door": "2024-03-30T19:00:00+01:00",
@@ -113,7 +158,17 @@
     "longText": "../public/texts/013/cHJvZ3JhbW1hLzc0ODYvcGllcmNlLXRoZS12ZWls.html",
     "image": "../public/event-images/013/cHJvZ3JhbW1hLzc0ODYvcGllcmNlLXRoZS12ZWls",
     "soldOut": true,
-    "unavailable": false
+    "unavailable": false,
+    "artists": {
+      "pierce the veil": {
+        "s": "4iJLPqClelZOBCBifm8Fzv",
+        "l": "pierce%20the%20veil",
+        "g": [
+          "pop punk",
+          "screamo"
+        ]
+      }
+    }
   },
   {
     "door": "2024-04-01T19:00:00+02:00",
@@ -126,7 +181,26 @@
     "longText": "../public/texts/013/bmwvcHJvZ3JhbW1hLzc4MjUvdGVycm9yLW5hc3R5.html",
     "image": "../public/event-images/013/bmwvcHJvZ3JhbW1hLzc4MjUvdGVycm9yLW5hc3R5",
     "soldOut": false,
-    "unavailable": false
+    "unavailable": false,
+    "artists": {
+      "terror": {
+        "s": "1GVRgPtEC6sZFqvItIk3eg",
+        "l": "Colombia",
+        "g": [
+          "hardcore",
+          "la hardcore",
+          "thrash metal"
+        ]
+      },
+      "nasty": {
+        "s": "7GnX7pGXdWtLObs16B1mFB",
+        "l": "France",
+        "g": [
+          "beatdown",
+          "death/thrash metal"
+        ]
+      }
+    }
   },
   {
     "start": "2024-04-03T21:00:00+02:00",
@@ -138,20 +212,14 @@
     "longText": "../public/texts/013/MTMubmwvcHJvZ3JhbW1hLzc3ODEvY2F0cy1jdWx0.html",
     "image": "../public/event-images/013/MTMubmwvcHJvZ3JhbW1hLzc3ODEvY2F0cy1jdWx0",
     "soldOut": true,
-    "unavailable": false
-  },
-  {
-    "door": "2024-04-17T19:00:00+02:00",
-    "start": "2024-04-17T19:45:00+02:00",
-    "venueEventUrl": "https://www.013.nl/programma/7852/the-spark",
-    "title": "The Spark",
-    "location": "013",
-    "price": 17,
-    "shortText": "Roadburn Pre-Party",
-    "longText": "../public/texts/013/MTMubmwvcHJvZ3JhbW1hLzc4NTIvdGhlLXNwYXJr.html",
-    "image": "../public/event-images/013/MTMubmwvcHJvZ3JhbW1hLzc4NTIvdGhlLXNwYXJr",
-    "soldOut": true,
-    "unavailable": false
+    "unavailable": false,
+    "artists": {
+      "cat's cult": {
+        "s": "39EasU1lufD34xCTYOTLVU",
+        "l": "cat's%20cult",
+        "g": []
+      }
+    }
   },
   {
     "door": "2024-04-18T13:00:00+02:00",
@@ -164,7 +232,8 @@
     "longText": "../public/texts/013/bWEvNzcxMi9yb2FkYnVybi1mZXN0aXZhbC0yMDI0.html",
     "image": "../public/event-images/013/bWEvNzcxMi9yb2FkYnVybi1mZXN0aXZhbC0yMDI0",
     "soldOut": false,
-    "unavailable": false
+    "unavailable": false,
+    "artists": null
   },
   {
     "door": "2024-04-19T13:00:00+02:00",
@@ -177,6 +246,7 @@
     "longText": "../public/texts/013/bWEvNzcxMy9yb2FkYnVybi1mZXN0aXZhbC0yMDI0.html",
     "image": "../public/event-images/013/bWEvNzcxMy9yb2FkYnVybi1mZXN0aXZhbC0yMDI0",
     "soldOut": false,
-    "unavailable": false
+    "unavailable": false,
+    "artists": null
   }
 ]
