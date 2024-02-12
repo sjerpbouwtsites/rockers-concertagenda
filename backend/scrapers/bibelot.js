@@ -4,6 +4,7 @@ import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/bibelot.js';
 import getImage from './gedeeld/image.js';
 import workTitleAndSlug from './gedeeld/slug.js';
+import { mapToStartDate } from './gedeeld/datums.js';
 
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const scraper = new AbstractScraper({
@@ -61,6 +62,7 @@ scraper.mainPage = async function () {
           errors: [],
           title,
         };
+        res.mapToStartDate = eventEl.querySelector('.h6')?.textContent ?? '';
 
         res.venueEventUrl = eventEl?.href ?? null;
         res.soldOut =
@@ -72,6 +74,14 @@ scraper.mainPage = async function () {
   );
   rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper)
     .map((re) => workTitleAndSlug(re, this._s.app.harvest.possiblePrefix));
+
+  rawEvents = rawEvents.map((re) => mapToStartDate(re, 'dag-maandNaam', this.months));
+  // TIJDELIJK TIJD TBV async checkers
+  rawEvents = rawEvents.map((re) => {
+    // eslint-disable-next-line no-param-reassign
+    re.start = `${re.startDate}T00:00:00`;
+    return re;
+  });    
 
   const eventGen = this.eventGenerator(rawEvents);
   // eslint-disable-next-line no-unused-vars
