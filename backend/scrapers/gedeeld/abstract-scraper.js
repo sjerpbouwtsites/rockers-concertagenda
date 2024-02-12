@@ -412,7 +412,7 @@ export default class AbstractScraper extends ScraperConfig {
       const checkResult = await this.mainPageAsyncCheck(eventToCheck);
       const workingTitle = this.cleanupEventTitle(eventToCheck.title);
 
-      if (!checkResult.reason) {
+      if (!checkResult.reason && debugSettings.debugRawEventAsyncCheck) {
         this.dirtyLog(checkResult, 'geen reason meegegeven');
       }
 

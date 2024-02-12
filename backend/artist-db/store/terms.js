@@ -20,6 +20,7 @@ const forbiddenTerms = [
   'americana',
   'countryrock',
   'dromerig',
+  'electropop',
   'workshop',
   'house',
   'fan event',
