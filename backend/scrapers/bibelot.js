@@ -3,6 +3,7 @@ import { workerData } from 'worker_threads';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/bibelot.js';
 import getImage from './gedeeld/image.js';
+import workTitleAndSlug from './gedeeld/slug.js';
 
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const scraper = new AbstractScraper({
@@ -16,11 +17,17 @@ const scraper = new AbstractScraper({
     timeout: 20003,
   },
   app: {
+    harvest: {
+      dividers: [`+`],
+      dividerRex: "[\\+]", 
+      artistsIn: ['title', 'shortText'],
+    },
     mainPage: {
-      asyncCheckFuncs: ['allowed', 'event', 'refused', 'forbiddenTerms', 'saveAllowed'],
+      asyncCheckFuncs: ['refused', 'allowedEvent', 'forbiddenTerms'],
     },
     singlePage: {
       requiredProperties: ['venueEventUrl', 'title', 'start'],
+      asyncCheckFuncs: ['explicitEventGenres', 'saveAllowedEvent', 'harvestArtists'],
     },
   },
 });
@@ -63,7 +70,8 @@ scraper.mainPage = async function () {
       }),
     { workerData },
   );
-  rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
+  rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper)
+    .map((re) => workTitleAndSlug(re, this._s.app.harvest.possiblePrefix));
 
   const eventGen = this.eventGenerator(rawEvents);
   // eslint-disable-next-line no-unused-vars
@@ -110,6 +118,8 @@ scraper.singlePage = async function ({ page, event }) {
       const huiJaar = (new Date()).getFullYear();
       const jaar = huiMaandNr < Number(maandNummer) ? (huiJaar + 1) : huiJaar;
 
+      res.eventGenres = Array.from(document.querySelectorAll('.categories .tag-hollow'))
+        .map((tag) => tag.textContent.toLowerCase());
       res.baseDate = `${jaar}-${maandNummer}-${dag}`;
       if (infoElText.match(/deuren.*\d{1,2}:\d\d\s/i)) {
         res.doorTime = infoElText.match(/deuren.*\d{1,2}:\d\d\s/i)[0].match(/\d\d:\d\d/)[0];
