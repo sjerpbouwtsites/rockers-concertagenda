@@ -56,6 +56,26 @@ export async function asyncIsAllowedEvent(event, reasons) {
   }
   return nullAnswerObject(event, reasons);
 }
+
+export async function asyncIfNotAllowedRefuse(event, reasons) {
+  const reasonsCopy = Array.isArray(reasons) ? reasons : [];
+  
+  const isAllowed = await this.asyncIsAllowedEvent(event, reasons);
+  if (!isAllowed.success) {
+    this.talkToDB({
+      type: 'db-request',
+      subtype: 'saveRefusedTemp',
+      messageData: {
+        title: event.workTitle,
+        slug: event.slug,
+        eventDate: event.shortDate,
+      },
+    }); 
+    return failureAnswerObject(event, reasonsCopy, true);
+  }
+  return successAnswerObject(event, reasonsCopy, true);
+}
+
 export async function asyncIsRefused(event, reasons) {
   const reasonsCopy = Array.isArray(reasons) ? reasons : [];
   this.talkToDB(talkTitleAndSlug('getRefused', event));
@@ -105,6 +125,7 @@ export async function asyncGoodTerms(event, reasons) {
   });
   await this.checkDBhasAnswered();
   reasonsCopy.push(this.lastDBAnswer.reason);
+  this.skipFurtherChecks.push(event.workTitle);
   if (this.lastDBAnswer.success) {
     this.talkToDB({
       type: 'db-request',
@@ -138,6 +159,7 @@ export async function asyncExplicitEventCategories(event, reasons) {
   await this.checkDBhasAnswered();
   reasonsCopy.push(this.lastDBAnswer.reason);
   if (this.lastDBAnswer.success) {
+    this.skipFurtherChecks.push(event.workTitle);
     this.talkToDB({
       type: 'db-request',
       subtype: 'saveAllowedEventTemp',
@@ -164,12 +186,12 @@ export async function asyncExplicitEventCategories(event, reasons) {
   return nullAnswerObject(event, reasonsCopy);
 }
 
-export async function asyncSpotifyForbiddenTerms(event, reasons) {
+export async function asyncSpotifyConfirmation(event, reasons) {
   const reasonsCopy = Array.isArray(reasons) ? reasons : [];
   
   this.talkToDB({
     type: 'db-request', 
-    subtype: 'getSpotifyForbiddenTerms',
+    subtype: 'getSpotifyConfirmation',
     messageData: {
       title: event.workTitle,
       slug: event.slug,
@@ -180,9 +202,53 @@ export async function asyncSpotifyForbiddenTerms(event, reasons) {
   reasonsCopy.push(this.lastDBAnswer.reason);
  
   if (this.lastDBAnswer.success) {
+    this.skipFurtherChecks.push(event.workTitle);
+    this.talkToDB({
+      type: 'db-request',
+      subtype: 'saveAllowedTemp',
+      messageData: {
+        title: event.workTitle,
+        slug: event.slug,
+        eventDate: event.shortDate,
+      },
+    }); 
+    return successAnswerObject(event, reasonsCopy, true);
+  }
+ 
+  if (this.lastDBAnswer.success === false) {
     this.talkToDB({
       type: 'db-request',
       subtype: 'saveRefusedTemp',
+      messageData: {
+        title: event.workTitle,
+        slug: event.slug,
+        eventDate: event.shortDate,
+      },
+    }); 
+    return successAnswerObject(event, reasonsCopy, true);
+  }
+
+  return nullAnswerObject(event, reasonsCopy);
+}
+
+export async function asyncMetalEncyclopediaConfirmation(event, reasons) {
+  const reasonsCopy = Array.isArray(reasons) ? reasons : [];
+  
+  this.talkToDB({
+    type: 'db-request', 
+    subtype: 'getMetalEncyclopediaConfirmation',
+    messageData: {
+      title: event.workTitle,
+    },
+  });
+  await this.checkDBhasAnswered();
+  reasonsCopy.push(this.lastDBAnswer.reason);
+
+  if (this.lastDBAnswer.success) {
+    this.skipFurtherChecks.push(event.workTitle);
+    this.talkToDB({
+      type: 'db-request',
+      subtype: 'saveAllowedTemp',
       messageData: {
         title: event.workTitle,
         slug: event.slug,

@@ -31,7 +31,7 @@ const scraper = new AbstractScraper({
     },
     mainPage: {
       requiredProperties: ['venueEventUrl'],
-      asyncCheckFuncs: ['refused', 'allowedEvent', 'forbiddenTerms', 'spotifyForbiddenTerms'],
+      asyncCheckFuncs: ['refused', 'allowedEvent', 'forbiddenTerms', 'spotifyConfirmation'],
     },
     singlePage: {
       requiredProperties: ['venueEventUrl', 'title', 'start'],
@@ -77,13 +77,15 @@ scraper.mainPage = async function () {
           res.venueEventUrl = agendaBlock.querySelector('a')?.href ?? null;
           const wegMetSpans = agendaBlock.querySelectorAll('time span');
           wegMetSpans.forEach((span) => span.parentNode.removeChild(span));
-          res.mapToStartDate = document.querySelector('time')?.textContent;
+          res.mapToStartDate = agendaBlock.querySelector('time')?.textContent;
           res.soldOut = !!agendaBlock?.innerHTML.match(/uitverkocht|sold\s?out/i) ?? false;
           return res;
         })
         .filter((event) => !event.title.toLowerCase().includes('productiedag')),
     { workerData },
   );
+
+  this.dirtyLog(rawEvents);
 
   rawEvents = rawEvents
     .map(workTitleAndSlug)

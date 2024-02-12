@@ -68,6 +68,11 @@ export default class Artists {
 
   spotifyAccessToken = null;
 
+  /**
+   * of in die persistentie functie fs write file
+   */
+  nietSchrijven = true;
+
   constructor(conf) {
     this.modelPath = conf.modelPath;
     this.storePath = conf.storePath;
@@ -177,7 +182,7 @@ export default class Artists {
       return this.checkExplicitEventCategories(message.data.genres);
     }
 
-    if (message.request === 'getSpotifyForbiddenTerms') {
+    if (message.request === 'getSpotifyConfirmation') {
       if (this.typeCheckInputFromScrapers) {
         const hasTitle = Object.prototype.hasOwnProperty.call(parsedMessage.data, 'title');
         const hasSlug = Object.prototype.hasOwnProperty.call(parsedMessage.data, 'slug');
@@ -189,7 +194,18 @@ export default class Artists {
           return this.error(Error('geen event date'));
         } 
       }
-      return this.getSpotifyForbiddenTerms(message.data.title, message.data.slug, message.data.eventDate);
+      const d = message.data;
+      return this.getSpotifyConfirmation(d.title, d.slug, d.eventDate);
+    }
+
+    if (message.request === 'getMetalEncyclopediaConfirmation') {
+      if (this.typeCheckInputFromScrapers) {
+        const hasTitle = Object.prototype.hasOwnProperty.call(parsedMessage.data, 'title');
+        if (!hasTitle) {
+          return this.error(Error('geen title om te doorzoeken'));
+        }  
+      }
+      return this.getMetalEncyclopediaConfirmation(message.data.title);
     }
 
     if (message.request === 'scanTitleForAllowedArtists') {
@@ -482,7 +498,7 @@ export default class Artists {
     });
   }    
 
-  async getSpotifyForbiddenTerms(title, slug, eventDate) {
+  async getSpotifyConfirmation(title, slug, eventDate) {
     if (!this.spotifyAccessToken) {
       await this.getSpotifyAccessToken();
     }
@@ -502,29 +518,76 @@ export default class Artists {
     const heeftVerbodenTermen = this.terms.forbidden
       .find((ft) => spotifyGenres.find((sg) => sg.includes(ft) || ft.includes(sg)));
     
+    const heeftGoedeTermen = this.terms.goodCategories
+      .find((ft) => spotifyGenres.find((sg) => sg.includes(ft) || ft.includes(sg)));
+        
     if (heeftVerbodenTermen) {
-      const heeftGoedeTermen = this.terms.goodCategories
-        .find((ft) => spotifyGenres.find((sg) => sg.includes(ft) || ft.includes(sg)));
       if (heeftGoedeTermen) {
         return this.post({
-          success: false,
-          data: heeftVerbodenTermen,
-          reason: `🟥 spotify verboden genre ${heeftVerbodenTermen} ook goede term ${heeftGoedeTermen}`,
+          success: true,
+          data: heeftGoedeTermen,
+          reason: `🟩 spotify verboden genre ${heeftVerbodenTermen} ook goede term ${heeftGoedeTermen}`,
         });
       }
-
-      this.saveRefusedTemp(title, slug, spotRes?.id, null, eventDate);
+ 
       return this.post({
-        success: true,
+        success: false,
         data: heeftVerbodenTermen,
-        reason: `🟩 spotify verboden genre ${heeftVerbodenTermen} maar geen goede termen`,
+        reason: `🟥 spotify verboden genre ${heeftVerbodenTermen} maar geen goede termen`,
       });    
     }
+    
     return this.post({
-      success: false,
+      success: true,
+      data: heeftGoedeTermen,
+      reason: `🟩 spotify verboden genre ${heeftVerbodenTermen} maar geen goede termen`,
+    });    
+  }
+
+  async getMetalEncyclopediaConfirmation(title) {
+    let titleCopy = `${title}`;
+    let metalString = titleCopy.replaceAll(' ', '+');
+    const matchLanden = titleCopy.match(/(\(\w{2,3}\))/gi);
+    if (Array.isArray(matchLanden)) {
+      matchLanden.forEach((m) => {
+        let land = m.replace(/\W/g, '').toUpperCase();
+        if (land in this.landcodesMap) {
+          const repl = RegExp(`\\(${land}\\)`, 'gi');
+          
+          titleCopy = titleCopy.replaceAll(repl, '').trim();
+          if (land.length === 3) {
+            land = this.landcodesMap[land];
+          }
+          metalString += `&country[]=${land}`;
+        }
+      });
+    }
+
+    const metalEncycloAjaxURL = `https://www.metal-archives.com/search/ajax-advanced/searching/bands/?bandName=${metalString}&yearCreationFrom=&yearCreationTo=&status[]=1`;
+    
+    const meaRes = await fetch(metalEncycloAjaxURL)
+      .then((res) => res.json())
+      .then((r) => {
+        if (!r?.iTotalRecords) return null;
+        return r?.aaData[0]; // TODO zomaar de eerste pakken slap
+      })
+      .catch((err) => {
+        console.log('ERROR IN FETSCH');
+        console.log(err);
+      });
+
+    if (!meaRes) {
+      return this.post({
+        success: false,
+        data: null,
+        reason: `🟥 metal enc niet gevonden.`,
+      });        
+    }
+    return this.post({
+      success: true,
       data: null,
-      reason: `🟥 spotify geen verboden genres`,
-    });  
+      reason: `🟩 metal enc gevonden`,
+    });
   }
 
   async harvestArtists(title, slug, shortText, settings, eventDate, eventGenres = []) {
@@ -805,6 +868,8 @@ export default class Artists {
     console.log(Object.keys(this.allowedEventTemp));
     console.log(`new refused`);
     console.log(Object.keys(this.refusedTemp));
+
+    if (this.nietSchrijven) return;
 
     Object.entries(this.allowedArtistsTemp).forEach(([key, values]) => {
       if (this.allowedArtists[key]) {

@@ -16,7 +16,8 @@ import shell from '../../mods/shell.js';
 import {
   asyncIsAllowedEvent, asyncIsRefused, asyncForbiddenTerms, 
   asyncSaveAllowedEvent, asyncHarvestArtists, asyncScanTitleForAllowedArtists,
-  asyncSpotifyForbiddenTerms, asyncGoodTerms, asyncExplicitEventCategories,
+  asyncSpotifyConfirmation, asyncGoodTerms, asyncExplicitEventCategories,
+  asyncMetalEncyclopediaConfirmation, asyncIfNotAllowedRefuse,
 } from './artist-db-interface.js';
 
 // #endregion                                              IMPORTS
@@ -72,12 +73,16 @@ export default class AbstractScraper extends ScraperConfig {
     this.asyncHarvestArtists.bind(this);
     this.asyncScanTitleForAllowedArtists = asyncScanTitleForAllowedArtists;
     this.asyncScanTitleForAllowedArtists.bind(this);
-    this.asyncSpotifyForbiddenTerms = asyncSpotifyForbiddenTerms;
-    this.asyncSpotifyForbiddenTerms.bind(this);
+    this.asyncSpotifyConfirmation = asyncSpotifyConfirmation;
+    this.asyncSpotifyConfirmation.bind(this);
     this.asyncGoodTerms = asyncGoodTerms;
     this.asyncGoodTerms.bind(this);
     this.asyncExplicitEventCategories = asyncExplicitEventCategories;
     this.asyncExplicitEventCategories.bind(this);
+    this.asyncMetalEncyclopediaConfirmation = asyncMetalEncyclopediaConfirmation;
+    this.asyncMetalEncyclopediaConfirmation.bind(this);
+    this.asyncIfNotAllowedRefuse = asyncIfNotAllowedRefuse;
+    this.asyncIfNotAllowedRefuse.bind(this);
   }
   // #endregion                                                CONSTRUCTOR & INSTALL
 
@@ -151,6 +156,10 @@ export default class AbstractScraper extends ScraperConfig {
     }
     
     const baseMusicEvents = await this.mainPage().catch(this.handleOuterScrapeCatch);
+
+    if (debugSettings.debugBaseEvents) {
+      this.dirtyLog(baseMusicEvents);
+    }
     
     if (!baseMusicEvents) {
       return false;
@@ -1064,13 +1073,15 @@ export default class AbstractScraper extends ScraperConfig {
     }
     
     const funcNamesMap = {
+      ifNotAllowedRefuse: 'asyncIfNotAllowedRefuse',
       allowedEvent: 'asyncIsAllowedEvent',
       refused: 'asyncIsRefused',
       forbiddenTerms: 'asyncForbiddenTerms',
       hasGoodTerms: 'asyncGoodTerms',
       saveAllowedEvent: 'asyncSaveAllowedEvent',
       harvestArtists: 'asyncHarvestArtists',
-      spotifyForbiddenTerms: 'asyncSpotifyForbiddenTerms',
+      spotifyConfirmation: 'asyncSpotifyConfirmation', 
+      metalEncyclopediaConfirmation: 'asyncMetalEncyclopediaConfirmation', 
       explicitEventGenres: 'asyncExplicitEventCategories',
       // refused: 'asyncCheckIsRefused',
       // emptySuccess: 'asyncCheckEmptySuccess',
