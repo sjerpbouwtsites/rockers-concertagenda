@@ -108,6 +108,8 @@ export async function asyncSpotifyForbiddenTerms(event, reasons) {
     subtype: 'getSpotifyForbiddenTerms',
     messageData: {
       title: event.workTitle,
+      slug: event.slug,
+      eventDate: dateNaarShortDate(event.start),
     },
   });
   await this.checkDBhasAnswered();

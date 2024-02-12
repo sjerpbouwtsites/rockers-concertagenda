@@ -169,12 +169,17 @@ export default class Artists {
 
     if (message.request === 'getSpotifyForbiddenTerms') {
       if (this.typeCheckInputFromScrapers) {
-        const hasString = Object.prototype.hasOwnProperty.call(parsedMessage.data, 'title');
-        if (!hasString) {
-          return this.error(Error('geen title om te doorzoeken'));
+        const hasTitle = Object.prototype.hasOwnProperty.call(parsedMessage.data, 'title');
+        const hasSlug = Object.prototype.hasOwnProperty.call(parsedMessage.data, 'slug');
+        const hasEventDate = Object.prototype.hasOwnProperty.call(parsedMessage.data, 'eventDate');
+        if (!hasTitle || !hasSlug) {
+          return this.error(Error('geen title of slug om te doorzoeken'));
+        }  
+        if (!hasEventDate) {
+          return this.error(Error('geen event date'));
         } 
       }
-      return this.getSpotifyForbiddenTerms(message.data.title);
+      return this.getSpotifyForbiddenTerms(message.data.title, message.data.slug, message.data.eventDate);
     }
 
     if (message.request === 'scanTitleForAllowedArtists') {
@@ -384,12 +389,15 @@ export default class Artists {
     });
   }  
 
-  async getSpotifyForbiddenTerms(title) {
+  async getSpotifyForbiddenTerms(title, slug, eventDate) {
     if (!this.spotifyAccessToken) {
       await this.getSpotifyAccessToken();
     }
     
     const spotRes = await this.getSpotifyArtistSearch(title);
+
+    console.log(spotRes);
+    process.exit();
     
     if (!spotRes) {
       return this.post({
@@ -415,6 +423,16 @@ export default class Artists {
           reason: `🟥 spotify verboden genre ${heeftVerbodenTermen} ook goede term ${heeftGoedeTermen}`,
         });
       }
+
+      this.saveRefusedTemp(title, slug, spotify, null, eventDate) {
+        const tt = title.length < 10 ? title + eventDate : title;
+        const ss = slug.length < 10 ? slug + eventDate : slug;
+        this.refusedTemp[tt] = [0, spotify, metalEnc, eventDate, this.today];
+        if (tt !== ss) {
+          this.refusedTemp[ss] = [1, spotify, metalEnc, eventDate, this.today]; 
+        }
+        return true;
+      }  
 
       return this.post({
         success: true,
