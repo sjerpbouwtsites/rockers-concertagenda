@@ -2,7 +2,7 @@
 import { workerData } from 'worker_threads';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/013.js';
-import { mapToStart, mapToDoor } from './gedeeld/datums.js';
+import { mapToStart, mapToDoor, mapToShortDate } from './gedeeld/datums.js';
 import getImage from './gedeeld/image.js';
 import terms from '../artist-db/store/terms.js';
 import workTitleAndSlug from './gedeeld/slug.js';
@@ -74,6 +74,7 @@ scraper.mainPage = async function () {
 
   rawEvents = rawEvents
     .map(mapToStart)
+    .map(mapToShortDate)
     .map(workTitleAndSlug)
     .map(this.isMusicEventCorruptedMapper);
 

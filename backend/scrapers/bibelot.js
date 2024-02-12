@@ -4,7 +4,7 @@ import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/bibelot.js';
 import getImage from './gedeeld/image.js';
 import workTitleAndSlug from './gedeeld/slug.js';
-import { mapToStartDate } from './gedeeld/datums.js';
+import { mapToShortDate, mapToStartDate } from './gedeeld/datums.js';
 
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const scraper = new AbstractScraper({
@@ -24,7 +24,7 @@ const scraper = new AbstractScraper({
       artistsIn: ['title', 'shortText'],
     },
     mainPage: {
-      requiredProperties: ['venueEventUrl', 'title', 'start'],
+      requiredProperties: ['venueEventUrl', 'title'],
       asyncCheckFuncs: ['refused', 'allowedEvent', 'forbiddenTerms'],
     },
     singlePage: {
@@ -75,11 +75,7 @@ scraper.mainPage = async function () {
   );
   rawEvents = rawEvents
     .map((re) => mapToStartDate(re, 'dag-maandNaam', this.months))
-    .map((re) => { // TIJDELIJK TIJD TBV async checkers
-    // eslint-disable-next-line no-param-reassign
-      re.start = `${re.startDate}T00:00:00`;
-      return re;
-    })
+    .map(mapToShortDate)
     .map((re) => workTitleAndSlug(re, this._s.app.harvest.possiblePrefix))
     .map(this.isMusicEventCorruptedMapper);
   

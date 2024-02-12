@@ -1,241 +1,401 @@
 [
   {
-    "door": "2024-03-08T18:30:00",
-    "start": "2024-03-08T19:00:00",
-    "venueEventUrl": "https://bibelot.net/programma/dordrecht-metal-fest/",
-    "title": "Dordrecht Metal Fest",
-    "location": "bibelot",
-    "price": 2024,
-    "longText": "../public/texts/bibelot/cm9ncmFtbWEvZG9yZHJlY2h0LW1ldGFsLWZlc3Qv.html",
-    "image": "../public/event-images/bibelot/cm9ncmFtbWEvZG9yZHJlY2h0LW1ldGFsLWZlc3Qv",
-    "soldOut": false,
-    "eventGenres": [
-      "metal "
-    ],
-    "artists": null
-  },
-  {
-    "door": "2024-03-16T20:00:00",
-    "start": "2024-03-16T20:30:00",
-    "venueEventUrl": "https://bibelot.net/programma/st-patricks-day-bunch-of-bastards-meer/",
-    "title": "St. Patrick’s Day: Bunch of Bastards, Drunken Dolly & The Burning Pubcrawlers",
-    "location": "bibelot",
-    "price": 0,
-    "shortText": " undefined",
-    "longText": "../public/texts/bibelot/a3MtZGF5LWJ1bmNoLW9mLWJhc3RhcmRzLW1lZXIv.html",
-    "image": "../public/event-images/bibelot/a3MtZGF5LWJ1bmNoLW9mLWJhc3RhcmRzLW1lZXIv",
-    "soldOut": false,
-    "eventGenres": [
-      "punk ",
-      "rock "
-    ],
-    "artists": null
-  },
-  {
-    "door": "2024-03-17T19:30:00",
-    "start": "2024-03-17T20:00:00",
-    "venueEventUrl": "https://bibelot.net/programma/nick-oliveri-us-death-acoustic/",
-    "title": "Nick Oliveri (US) – Death Acoustic",
-    "location": "bibelot",
-    "price": 17,
-    "longText": "../public/texts/bibelot/aWNrLW9saXZlcmktdXMtZGVhdGgtYWNvdXN0aWMv.html",
-    "image": "../public/event-images/bibelot/aWNrLW9saXZlcmktdXMtZGVhdGgtYWNvdXN0aWMv",
-    "soldOut": false,
-    "eventGenres": [
-      "metal ",
-      "rock ",
-      "stonerrock "
-    ],
-    "artists": null
-  },
-  {
-    "door": "2024-04-05T18:30:00",
-    "start": "2024-04-05T19:00:00",
-    "venueEventUrl": "https://bibelot.net/programma/spite-us-bodysnatcher-us-boundaries-us/",
-    "title": "Spite (us)",
-    "location": "bibelot",
-    "price": 2024,
-    "longText": "../public/texts/bibelot/Ym9keXNuYXRjaGVyLXVzLWJvdW5kYXJpZXMtdXMv.html",
-    "image": "../public/event-images/bibelot/Ym9keXNuYXRjaGVyLXVzLWJvdW5kYXJpZXMtdXMv",
-    "soldOut": false,
-    "eventGenres": [
-      "metal "
-    ],
-    "artists": null
-  },
-  {
-    "door": "2024-04-06T20:00:00",
-    "start": "2024-04-06T20:30:00",
-    "venueEventUrl": "https://bibelot.net/programma/smells-like-nirvana/",
-    "title": "Smells Like Nirvana",
-    "location": "bibelot",
-    "price": 2024,
-    "longText": "../public/texts/bibelot/cHJvZ3JhbW1hL3NtZWxscy1saWtlLW5pcnZhbmEv.html",
-    "image": "../public/event-images/bibelot/cHJvZ3JhbW1hL3NtZWxscy1saWtlLW5pcnZhbmEv",
-    "soldOut": false,
-    "eventGenres": [
-      "grunge ",
-      "rock "
-    ],
+    "door": "2024-02-16T19:30:00",
+    "start": "2024-02-16T20:30:00",
+    "venueEventUrl": "https://poppodiumboerderij.nl/programma/the-bootleg-beatles",
+    "title": "The Bootleg Beatles",
+    "location": "boerderij",
+    "price": 33,
+    "shortText": "All the hits and more!",
+    "longText": "../public/texts/boerderij/L3Byb2dyYW1tYS90aGUtYm9vdGxlZy1iZWF0bGVz.html",
+    "image": "../public/event-images/boerderij/L3Byb2dyYW1tYS90aGUtYm9vdGxlZy1iZWF0bGVz",
+    "soldOut": true,
+    "eventGenres": null,
     "artists": {
-      "smellslikenirvana": {
+      "thebootlegbeatles": {
         "s": null,
-        "l": "smells%20like%20nirvana",
+        "l": "the%20bootleg%20beatles",
         "g": []
       }
     }
   },
   {
-    "door": "2024-04-12T20:30:00",
-    "start": "2024-04-12T21:00:00",
-    "venueEventUrl": "https://bibelot.net/programma/system-of-a-down-slipknot-by-victims-of-a-system-psychosocial/",
-    "title": "System of a Down & Slipknot by Victims of a System & Psychosocial",
-    "location": "bibelot",
-    "price": 12,
-    "shortText": " undefined",
-    "longText": "../public/texts/bibelot/dGltcy1vZi1hLXN5c3RlbS1wc3ljaG9zb2NpYWwv.html",
-    "image": "../public/event-images/bibelot/dGltcy1vZi1hLXN5c3RlbS1wc3ljaG9zb2NpYWwv",
+    "door": "2024-02-17T19:30:00",
+    "start": "2024-02-17T20:00:00",
+    "venueEventUrl": "https://poppodiumboerderij.nl/programma/buckcherry",
+    "title": "Buckcherry",
+    "location": "boerderij",
+    "price": 31,
+    "shortText": "+ support FASTEST LAND ANIMAL",
+    "longText": "../public/texts/boerderij/cmRlcmlqLm5sL3Byb2dyYW1tYS9idWNrY2hlcnJ5.html",
+    "image": "../public/event-images/boerderij/cmRlcmlqLm5sL3Byb2dyYW1tYS9idWNrY2hlcnJ5",
     "soldOut": false,
-    "eventGenres": [
-      "metal "
-    ],
-    "artists": null
-  },
-  {
-    "door": "2024-04-20T19:30:00",
-    "start": "2024-04-20T21:00:00",
-    "venueEventUrl": "https://bibelot.net/programma/pidzama-porno/",
-    "title": "Pidżama Porno (PL)",
-    "location": "bibelot",
-    "price": 0,
-    "longText": "../public/texts/bibelot/dC5uZXQvcHJvZ3JhbW1hL3BpZHphbWEtcG9ybm8v.html",
-    "image": "../public/event-images/bibelot/dC5uZXQvcHJvZ3JhbW1hL3BpZHphbWEtcG9ybm8v",
-    "soldOut": false,
-    "eventGenres": [
-      "punk ",
-      "rock ",
-      "ska "
-    ],
+    "eventGenres": null,
     "artists": {
-      "pidamaporno": {
-        "s": "0qibngGI3EFCen6abY5hqY",
-        "l": "pid%C5%BCama%20porno",
+      "buckcherry": {
+        "s": "0yN7xI1blow9nYIK0R8nM7",
+        "l": "buckcherry",
         "g": [
-          "polish punk",
-          "polish reggae",
-          "polish rock"
+          "alternative metal",
+          "glam metal",
+          "hard rock",
+          "nu metal",
+          "post-grunge",
+          "sleaze rock"
         ]
       }
     }
   },
   {
-    "door": "2024-04-27T12:30:00",
-    "start": "2024-04-27T13:00:00",
-    "venueEventUrl": "https://bibelot.net/programma/temper-block-party/",
-    "title": "Temper! block party",
-    "location": "bibelot",
-    "price": 0,
-    "longText": "../public/texts/bibelot/L3Byb2dyYW1tYS90ZW1wZXItYmxvY2stcGFydHkv.html",
-    "image": "../public/event-images/bibelot/L3Byb2dyYW1tYS90ZW1wZXItYmxvY2stcGFydHkv",
-    "soldOut": false,
-    "eventGenres": [
-      "garagerock ",
-      "punk "
-    ],
-    "artists": null
-  },
-  {
-    "door": "2024-05-10T20:30:00",
-    "start": "2024-05-10T21:00:00",
-    "venueEventUrl": "https://bibelot.net/programma/bohemian-betyars-hu/",
-    "title": "Bohemian Betyars (HU)",
-    "location": "bibelot",
-    "price": 0,
-    "longText": "../public/texts/bibelot/cHJvZ3JhbW1hL2JvaGVtaWFuLWJldHlhcnMtaHUv.html",
-    "image": "../public/event-images/bibelot/cHJvZ3JhbW1hL2JvaGVtaWFuLWJldHlhcnMtaHUv",
-    "soldOut": false,
-    "eventGenres": [
-      "folk ",
-      "punk ",
-      "ska "
-    ],
+    "door": "2024-02-18T19:30:00",
+    "start": "2024-02-18T20:30:00",
+    "venueEventUrl": "https://poppodiumboerderij.nl/programma/mike-dawes",
+    "title": "Mike Dawes",
+    "location": "boerderij",
+    "price": 29,
+    "shortText": "Fingerstyle gitarist",
+    "longText": "../public/texts/boerderij/cmRlcmlqLm5sL3Byb2dyYW1tYS9taWtlLWRhd2Vz.html",
+    "image": "../public/event-images/boerderij/cmRlcmlqLm5sL3Byb2dyYW1tYS9taWtlLWRhd2Vz",
+    "soldOut": null,
+    "eventGenres": null,
     "artists": {
-      "bohemianbetyars": {
-        "s": "2ezYPSKWBfnFTobN9puCow",
-        "l": "bohemian%20betyars",
-        "g": [
-          "gypsy punk",
-          "hungarian folk",
-          "hungarian punk",
-          "hungarian rock",
-          "magyar alternative"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-05-11T20:00:00",
-    "start": "2024-05-11T21:00:00",
-    "venueEventUrl": "https://bibelot.net/programma/delain/",
-    "title": "Delain",
-    "location": "bibelot",
-    "price": 11,
-    "longText": "../public/texts/bibelot/L2JpYmVsb3QubmV0L3Byb2dyYW1tYS9kZWxhaW4v.html",
-    "image": "../public/event-images/bibelot/L2JpYmVsb3QubmV0L3Byb2dyYW1tYS9kZWxhaW4v",
-    "soldOut": false,
-    "eventGenres": [
-      "metal "
-    ],
-    "artists": {
-      "delain": {
-        "s": "6pIRdCtSE5hLFfIfcTAicI",
-        "l": "delain",
-        "g": [
-          "dutch metal",
-          "gothic metal",
-          "gothic symphonic metal",
-          "power metal",
-          "symphonic metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-05-31T20:30:00",
-    "start": "2024-05-31T21:00:00",
-    "venueEventUrl": "https://bibelot.net/programma/call-it-off/",
-    "title": "Call it Off",
-    "location": "bibelot",
-    "price": 0,
-    "longText": "../public/texts/bibelot/bG90Lm5ldC9wcm9ncmFtbWEvY2FsbC1pdC1vZmYv.html",
-    "image": "../public/event-images/bibelot/bG90Lm5ldC9wcm9ncmFtbWEvY2FsbC1pdC1vZmYv",
-    "soldOut": false,
-    "eventGenres": [
-      "punk "
-    ],
-    "artists": null
-  },
-  {
-    "door": "2024-09-06T19:30:00",
-    "start": "2024-09-06T20:00:00",
-    "venueEventUrl": "https://bibelot.net/programma/black-out-the-smiths-by-the-smiths-presumably-joy-division-by-curtis/",
-    "title": "The Smiths by The Smiths Presumably & Joy Division by Curtis (Black-Out 12th Edition)",
-    "location": "bibelot",
-    "price": 0,
-    "shortText": " undefined",
-    "longText": "../public/texts/bibelot/dW1hYmx5LWpveS1kaXZpc2lvbi1ieS1jdXJ0aXMv.html",
-    "image": "../public/event-images/bibelot/dW1hYmx5LWpveS1kaXZpc2lvbi1ieS1jdXJ0aXMv",
-    "soldOut": false,
-    "eventGenres": [
-      "new wave ",
-      "punk "
-    ],
-    "artists": {
-      "joydivision": {
+      "mikedawes": {
         "s": null,
-        "l": "joy%20division",
+        "l": "mike%20dawes",
         "g": []
       }
     }
+  },
+  {
+    "door": "2024-02-25T14:00:00",
+    "start": "2024-02-25T14:30:00",
+    "venueEventUrl": "https://poppodiumboerderij.nl/programma/feral-grounds",
+    "title": "Feral Grounds",
+    "location": "boerderij",
+    "price": 0,
+    "shortText": "Podiumcafé - gratis entree",
+    "longText": "../public/texts/boerderij/cmlqLm5sL3Byb2dyYW1tYS9mZXJhbC1ncm91bmRz.html",
+    "image": "../public/event-images/boerderij/cmlqLm5sL3Byb2dyYW1tYS9mZXJhbC1ncm91bmRz",
+    "soldOut": null,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2024-03-14T19:30:00",
+    "start": "2024-03-14T20:30:00",
+    "venueEventUrl": "https://poppodiumboerderij.nl/programma/nili-brosh-band",
+    "title": "Nili Brosh Band",
+    "location": "boerderij",
+    "price": 29,
+    "shortText": "Too Real To Fake Tour",
+    "longText": "../public/texts/boerderij/ai5ubC9wcm9ncmFtbWEvbmlsaS1icm9zaC1iYW5k.html",
+    "image": "../public/event-images/boerderij/ai5ubC9wcm9ncmFtbWEvbmlsaS1icm9zaC1iYW5k",
+    "soldOut": null,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2024-03-22T19:30:00",
+    "start": "2024-03-22T20:30:00",
+    "venueEventUrl": "https://poppodiumboerderij.nl/programma/valentines-tribute-to-queen",
+    "title": "Valentine's tribute to queen",
+    "location": "boerderij",
+    "price": 25,
+    "shortText": "Robby Valentine & band",
+    "longText": "../public/texts/boerderij/bWEvdmFsZW50aW5lcy10cmlidXRlLXRvLXF1ZWVu.html",
+    "image": "../public/event-images/boerderij/bWEvdmFsZW50aW5lcy10cmlidXRlLXRvLXF1ZWVu",
+    "soldOut": null,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2024-03-29T19:30:00",
+    "start": "2024-03-29T20:30:00",
+    "venueEventUrl": "https://poppodiumboerderij.nl/programma/fucking-foos",
+    "title": "The Fucking Foos - Foo Fighters Tribute Band",
+    "location": "boerderij",
+    "price": 0,
+    "shortText": "Gratis entree",
+    "longText": "../public/texts/boerderij/ZXJpai5ubC9wcm9ncmFtbWEvZnVja2luZy1mb29z.html",
+    "image": "../public/event-images/boerderij/ZXJpai5ubC9wcm9ncmFtbWEvZnVja2luZy1mb29z",
+    "soldOut": null,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2024-04-25T19:30:00",
+    "start": "2024-04-25T20:30:00",
+    "venueEventUrl": "https://poppodiumboerderij.nl/programma/thesewickedrivers",
+    "title": "These Wicked Rivers",
+    "location": "boerderij",
+    "price": 22,
+    "shortText": "Voor fans van: Black Stone Cherry & Rival Sons",
+    "longText": "../public/texts/boerderij/bmwvcHJvZ3JhbW1hL3RoZXNld2lja2Vkcml2ZXJz.html",
+    "image": "../public/event-images/boerderij/bmwvcHJvZ3JhbW1hL3RoZXNld2lja2Vkcml2ZXJz",
+    "soldOut": null,
+    "eventGenres": null,
+    "artists": {
+      "stone": {
+        "s": "22bE4uQ6baNwSHPVcDxLCe",
+        "l": "stone",
+        "g": [
+          "album rock",
+          "british invasion",
+          "classic rock",
+          "rock"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2024-05-10T19:30:00",
+    "start": "2024-05-10T20:30:00",
+    "venueEventUrl": "https://poppodiumboerderij.nl/programma/matt-schofield-1",
+    "title": "Matt Schofield",
+    "location": "boerderij",
+    "price": 29,
+    "shortText": "Top Bluesgitarist met band",
+    "longText": "../public/texts/boerderij/Lm5sL3Byb2dyYW1tYS9tYXR0LXNjaG9maWVsZC0x.html",
+    "image": "../public/event-images/boerderij/Lm5sL3Byb2dyYW1tYS9tYXR0LXNjaG9maWVsZC0x",
+    "soldOut": null,
+    "eventGenres": null,
+    "artists": {
+      "mattschofield": {
+        "s": null,
+        "l": "matt%20schofield",
+        "g": []
+      }
+    }
+  },
+  {
+    "door": "2024-05-12T19:30:00",
+    "start": "2024-05-12T20:00:00",
+    "venueEventUrl": "https://poppodiumboerderij.nl/programma/tyketto",
+    "title": "Tyketto",
+    "location": "boerderij",
+    "price": 32,
+    "shortText": "Hardrock iconen met Danny Vaughn",
+    "longText": "../public/texts/boerderij/Ym9lcmRlcmlqLm5sL3Byb2dyYW1tYS90eWtldHRv.html",
+    "image": "../public/event-images/boerderij/Ym9lcmRlcmlqLm5sL3Byb2dyYW1tYS90eWtldHRv",
+    "soldOut": null,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2024-05-15T19:30:00",
+    "start": "2024-05-15T20:30:00",
+    "venueEventUrl": "https://poppodiumboerderij.nl/programma/glenn-hughes",
+    "title": "Glenn Hughes",
+    "location": "boerderij",
+    "price": 40,
+    "shortText": "50 Years Burn Album Tour 2024",
+    "longText": "../public/texts/boerderij/ZXJpai5ubC9wcm9ncmFtbWEvZ2xlbm4taHVnaGVz.html",
+    "image": "../public/event-images/boerderij/ZXJpai5ubC9wcm9ncmFtbWEvZ2xlbm4taHVnaGVz",
+    "soldOut": null,
+    "eventGenres": null,
+    "artists": {
+      "glennhughes": {
+        "s": "50FDiYHYqGJkaCuK4JhAYw",
+        "l": "glenn%20hughes",
+        "g": [
+          "hard rock"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2024-05-24T19:30:00",
+    "start": "2024-05-24T20:30:00",
+    "venueEventUrl": "https://poppodiumboerderij.nl/programma/caligulashorse",
+    "title": "Caligula's Horse",
+    "location": "boerderij",
+    "price": 24,
+    "shortText": "Voor fans van: Dream Theater, Haken & Karnivool",
+    "longText": "../public/texts/boerderij/aWoubmwvcHJvZ3JhbW1hL2NhbGlndWxhc2hvcnNl.html",
+    "image": "../public/event-images/boerderij/aWoubmwvcHJvZ3JhbW1hL2NhbGlndWxhc2hvcnNl",
+    "soldOut": null,
+    "eventGenres": null,
+    "artists": {
+      "heat": {
+        "s": "7A9yZMTrFZcgEWAX2kBfK6",
+        "l": "h.e.a.t.",
+        "g": [
+          "album rock",
+          "classic rock",
+          "hard rock",
+          "mellow gold",
+          "new romantic",
+          "new wave pop",
+          "rock",
+          "singer-songwriter",
+          "soft rock"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2024-05-26T19:30:00",
+    "start": "2024-05-26T20:30:00",
+    "venueEventUrl": "https://poppodiumboerderij.nl/programma/thequill-diggeth",
+    "title": "The Quill & Diggeth ",
+    "location": "boerderij",
+    "price": 24,
+    "shortText": "Voor fans van Led Zeppelin, Monster Magnet & Black Sabbath",
+    "longText": "../public/texts/boerderij/Lm5sL3Byb2dyYW1tYS90aGVxdWlsbC1kaWdnZXRo.html",
+    "image": "../public/event-images/boerderij/Lm5sL3Byb2dyYW1tYS90aGVxdWlsbC1kaWdnZXRo",
+    "soldOut": null,
+    "eventGenres": null,
+    "artists": {
+      "abbath": {
+        "s": "1epGwdbjU7JSGVBHlqptpx",
+        "l": "abbath",
+        "g": [
+          "black 'n' roll",
+          "black metal",
+          "death metal",
+          "metal",
+          "norwegian black metal",
+          "symphonic black metal"
+        ]
+      },
+      "monster magnet": {
+        "s": "4hvwEwrCmGj22uURGVET7Q",
+        "l": "monster%20magnet",
+        "g": [
+          "southern metal",
+          "stoner metal",
+          "stoner rock"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2024-06-14T19:30:00",
+    "start": "2024-06-14T20:30:00",
+    "venueEventUrl": "https://poppodiumboerderij.nl/programma/karnataka",
+    "title": "Karnataka",
+    "location": "boerderij",
+    "price": 27,
+    "shortText": "Requiem For A Dream + support The Blackheart Orchestra",
+    "longText": "../public/texts/boerderij/ZXJkZXJpai5ubC9wcm9ncmFtbWEva2FybmF0YWth.html",
+    "image": "../public/event-images/boerderij/ZXJkZXJpai5ubC9wcm9ncmFtbWEva2FybmF0YWth",
+    "soldOut": null,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2024-09-20T19:30:00",
+    "start": "2024-09-20T20:30:00",
+    "venueEventUrl": "https://poppodiumboerderij.nl/programma/regressivehypnosis",
+    "title": "Regressive Hypnosis - Dream Theater Tribute",
+    "location": "boerderij",
+    "price": 24,
+    "shortText": "An evening with 'Images and Words' and more",
+    "longText": "../public/texts/boerderij/bC9wcm9ncmFtbWEvcmVncmVzc2l2ZWh5cG5vc2lz.html",
+    "image": "../public/event-images/boerderij/bC9wcm9ncmFtbWEvcmVncmVzc2l2ZWh5cG5vc2lz",
+    "soldOut": null,
+    "eventGenres": null,
+    "artists": {
+      "heat": {
+        "s": "7A9yZMTrFZcgEWAX2kBfK6",
+        "l": "h.e.a.t.",
+        "g": [
+          "album rock",
+          "classic rock",
+          "hard rock",
+          "mellow gold",
+          "new romantic",
+          "new wave pop",
+          "rock",
+          "singer-songwriter",
+          "soft rock"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2024-10-05T19:30:00",
+    "start": "2024-10-05T20:30:00",
+    "venueEventUrl": "https://poppodiumboerderij.nl/programma/gonow",
+    "title": "Go now!",
+    "location": "boerderij",
+    "price": 30,
+    "shortText": "The Music of The Moody Blues - super group met Gordy Marshall",
+    "longText": "../public/texts/boerderij/dW1ib2VyZGVyaWoubmwvcHJvZ3JhbW1hL2dvbm93.html",
+    "image": "../public/event-images/boerderij/dW1ib2VyZGVyaWoubmwvcHJvZ3JhbW1hL2dvbm93",
+    "soldOut": null,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2024-10-18T19:30:00",
+    "start": "2024-10-18T20:00:00",
+    "venueEventUrl": "https://poppodiumboerderij.nl/programma/voyager",
+    "title": "Voyager",
+    "location": "boerderij",
+    "price": 24,
+    "shortText": "The fearless in love tour + supports",
+    "longText": "../public/texts/boerderij/Ym9lcmRlcmlqLm5sL3Byb2dyYW1tYS92b3lhZ2Vy.html",
+    "image": "../public/event-images/boerderij/Ym9lcmRlcmlqLm5sL3Byb2dyYW1tYS92b3lhZ2Vy",
+    "soldOut": null,
+    "eventGenres": null,
+    "artists": {
+      "voyager": {
+        "s": "16fltNcwTM5V9rnxIlcha4",
+        "l": "voyager",
+        "g": [
+          "australian metal",
+          "prog metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2024-11-19T19:30:00",
+    "start": "2024-11-19T20:30:00",
+    "venueEventUrl": "https://poppodiumboerderij.nl/programma/theperfecttool",
+    "title": "The Perfect Tool",
+    "location": "boerderij",
+    "price": 27,
+    "shortText": "Tool Tribute Band (USA) - The Pneuma Tour 2024",
+    "longText": "../public/texts/boerderij/aWoubmwvcHJvZ3JhbW1hL3RoZXBlcmZlY3R0b29s.html",
+    "image": "../public/event-images/boerderij/aWoubmwvcHJvZ3JhbW1hL3RoZXBlcmZlY3R0b29s",
+    "soldOut": null,
+    "eventGenres": null,
+    "artists": {
+      "theperfecttool": {
+        "s": null,
+        "l": "the%20perfect%20tool",
+        "g": []
+      }
+    }
+  },
+  {
+    "door": "2025-01-31T19:30:00",
+    "start": "2025-01-31T20:30:00",
+    "venueEventUrl": "https://poppodiumboerderij.nl/programma/rockpartyoftheyear2025-friday",
+    "title": "Rock Party Of The Year 2025 - Friday",
+    "location": "boerderij",
+    "price": 32,
+    "shortText": "70's & 80's rock - Friday",
+    "longText": "../public/texts/boerderij/L3JvY2twYXJ0eW9mdGhleWVhcjIwMjUtZnJpZGF5.html",
+    "image": "../public/event-images/boerderij/L3JvY2twYXJ0eW9mdGhleWVhcjIwMjUtZnJpZGF5",
+    "soldOut": null,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2025-02-01T19:30:00",
+    "start": "2025-02-01T20:30:00",
+    "venueEventUrl": "https://poppodiumboerderij.nl/programma/rockpartyoftheyear2025-saturday",
+    "title": "Rock party of the year 2025",
+    "location": "boerderij",
+    "price": 32,
+    "shortText": "70's & 80's rock - Saturday",
+    "longText": "../public/texts/boerderij/b2NrcGFydHlvZnRoZXllYXIyMDI1LXNhdHVyZGF5.html",
+    "image": "../public/event-images/boerderij/b2NrcGFydHlvZnRoZXllYXIyMDI1LXNhdHVyZGF5",
+    "soldOut": null,
+    "eventGenres": null,
+    "artists": null
   }
 ]

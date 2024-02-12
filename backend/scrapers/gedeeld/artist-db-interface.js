@@ -1,11 +1,5 @@
-function dateNaarShortDate(date) { // todo naar abstract scraper en dan op event object.
-  if (date.length < 10) {
-    throw new Error(`${date} is geen isostring`);
-  }
-  return date.substring(2, 10).replaceAll('-', '');
-}
 function talkTitleAndSlug(subtype, event) {
-  const s = dateNaarShortDate(event.start);
+  const s = event.shortDate;
   return {
     type: 'db-request', 
     subtype,
@@ -91,7 +85,7 @@ export async function asyncForbiddenTerms(event, reasons) {
       messageData: {
         title: event.workTitle,
         slug: event.slug,
-        eventDate: dateNaarShortDate(event.start),
+        eventDate: event.shortDate,
       },
     }); 
 
@@ -118,7 +112,7 @@ export async function asyncGoodTerms(event, reasons) {
       messageData: {
         title: event.workTitle,
         slug: event.slug,
-        eventDate: dateNaarShortDate(event.start),
+        eventDate: event.shortDate,
       },
     }); 
   
@@ -150,7 +144,7 @@ export async function asyncExplicitEventCategories(event, reasons) {
       messageData: {
         title: event.workTitle,
         slug: event.slug,
-        eventDate: dateNaarShortDate(event.start),
+        eventDate: event.shortDate,
       },
     }); 
     return successAnswerObject(event, reasonsCopy, true);
@@ -162,7 +156,7 @@ export async function asyncExplicitEventCategories(event, reasons) {
       messageData: {
         title: event.workTitle,
         slug: event.slug,
-        eventDate: dateNaarShortDate(event.start),
+        eventDate: event.shortDate,
       },
     }); 
     return failureAnswerObject(event, reasonsCopy, true);
@@ -179,7 +173,7 @@ export async function asyncSpotifyForbiddenTerms(event, reasons) {
     messageData: {
       title: event.workTitle,
       slug: event.slug,
-      eventDate: dateNaarShortDate(event.start),
+      eventDate: event.shortDate,
     },
   });
   await this.checkDBhasAnswered();
@@ -192,7 +186,7 @@ export async function asyncSpotifyForbiddenTerms(event, reasons) {
       messageData: {
         title: event.workTitle,
         slug: event.slug,
-        eventDate: dateNaarShortDate(event.start),
+        eventDate: event.shortDate,
       },
     }); 
     return failureAnswerObject(event, reasonsCopy, true);
@@ -207,7 +201,7 @@ export async function asyncSaveAllowedEvent(event, reasons) {
     messageData: {
       title: event.workTitle.toLowerCase(), // todo ???
       slug: event.slug,
-      eventDate: dateNaarShortDate(event.start),
+      eventDate: event.shortDate,
     },
   });    
   return nullAnswerObject(event, reasons);
@@ -222,7 +216,7 @@ export async function asyncHarvestArtists(event, reasons) {
       slug: event.slug,
       shortText: event.shortText,
       settings: this._s.app.harvest,
-      eventDate: dateNaarShortDate(event.start),
+      eventDate: event.shortDate,
       eventGenres: event?.eventGenres ?? [],
     },
   });    
@@ -326,44 +320,7 @@ export default null;
 //       reasons: reasonsCopy,
 //     };    
 //   },
-    
-//   async asyncSaveAllowed(event, reasons) {
-//     const reasonsCopy = Array.isArray(reasons) ? reasons : [];
-//     this.talkToDB({
-//       type: 'db-request',
-//       subtype: 'saveAllowedTitle',
-//       messageData: {
-//         string: event.title,      
-//       },
-//     });    
-//     return {
-//       break: true,
-//       success: true,
-//       event,
-//       reasons: reasonsCopy,
-//       reason: reasonsCopy.reverse().join(', '),
-//     };    
-//   },
-    
-//   async asyncSaveRefused(event, reasons) {
-//     const reasonsCopy = Array.isArray(reasons) ? reasons : [];
-//     this.talkToDB({
-//       type: 'db-request',
-//       subtype: 'saveRefusedTitle',
-//       messageData: {
-//         string: event.title,
-//         reason: reasons.reverse().join(', '),
-//       },
-//     });   
-//     return {
-//       break: true,
-//       success: true,
-//       event,
-//       reasons: reasonsCopy,
-//       reason: reasonsCopy.reverse().join(', '),
-//     };    
-//   },
-    
+        
 //   async asyncGetArtists(event, reasons) {
 //     const eventCopy = { ...event };
 //     this.talkToDB({

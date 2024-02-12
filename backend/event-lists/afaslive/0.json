@@ -1,7 +1,7 @@
 [
   {
-    "door": "2024-02-10T18:30:00",
-    "start": "2024-02-10T20:00:00",
+    "door": "2024-02-14T18:30:00",
+    "start": "2024-02-14T20:00:00",
     "venueEventUrl": "https://www.afaslive.nl/agenda/omd",
     "title": "Omd",
     "location": "afaslive",
@@ -9,11 +9,25 @@
     "longText": "../public/texts/afaslive/czovL3d3dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvb21k.html",
     "image": "../public/event-images/afaslive/czovL3d3dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvb21k",
     "soldOut": false,
+    "eventGenres": null,
     "artists": null
   },
   {
-    "door": "2024-02-10T18:30:00",
-    "start": "2024-02-10T20:00:00",
+    "door": "2024-02-14T18:30:00",
+    "start": "2024-02-14T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/the-1975",
+    "title": "The 1975",
+    "location": "afaslive",
+    "price": 60.5,
+    "longText": "../public/texts/afaslive/d3cuYWZhc2xpdmUubmwvYWdlbmRhL3RoZS0xOTc1.html",
+    "image": "../public/event-images/afaslive/d3cuYWZhc2xpdmUubmwvYWdlbmRhL3RoZS0xOTc1",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2024-02-14T18:30:00",
+    "start": "2024-02-14T20:00:00",
     "venueEventUrl": "https://www.afaslive.nl/agenda/the-smile",
     "title": "The Smile",
     "location": "afaslive",
@@ -21,11 +35,38 @@
     "longText": "../public/texts/afaslive/dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvdGhlLXNtaWxl.html",
     "image": "../public/event-images/afaslive/dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvdGhlLXNtaWxl",
     "soldOut": true,
+    "eventGenres": null,
     "artists": null
   },
   {
-    "door": "2024-02-10T20:00:00",
-    "start": "2024-02-10T20:00:00",
+    "door": "2024-02-14T20:00:00",
+    "start": "2024-02-14T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/tom-odell",
+    "title": "Tom Odell",
+    "location": "afaslive",
+    "price": 44.8,
+    "longText": "../public/texts/afaslive/dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvdG9tLW9kZWxs.html",
+    "image": "../public/event-images/afaslive/dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvdG9tLW9kZWxs",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2024-02-14T18:30:00",
+    "start": "2024-02-14T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/the-1975-1",
+    "title": "The 1975",
+    "location": "afaslive",
+    "price": 60.5,
+    "longText": "../public/texts/afaslive/LmFmYXNsaXZlLm5sL2FnZW5kYS90aGUtMTk3NS0x.html",
+    "image": "../public/event-images/afaslive/LmFmYXNsaXZlLm5sL2FnZW5kYS90aGUtMTk3NS0x",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2024-02-14T20:00:00",
+    "start": "2024-02-14T20:00:00",
     "venueEventUrl": "https://www.afaslive.nl/agenda/iprevail",
     "title": "I Prevail",
     "location": "afaslive",
@@ -33,6 +74,7 @@
     "longText": "../public/texts/afaslive/d3cuYWZhc2xpdmUubmwvYWdlbmRhL2lwcmV2YWls.html",
     "image": "../public/event-images/afaslive/d3cuYWZhc2xpdmUubmwvYWdlbmRhL2lwcmV2YWls",
     "soldOut": false,
+    "eventGenres": null,
     "artists": {
       "iprevail": {
         "s": "3Uobr6LgQpBbk6k4QGAb3V",
@@ -45,8 +87,8 @@
     }
   },
   {
-    "door": "2024-02-10T20:00:00",
-    "start": "2024-02-10T20:00:00",
+    "door": "2024-02-14T20:00:00",
+    "start": "2024-02-14T20:00:00",
     "venueEventUrl": "https://www.afaslive.nl/agenda/king-gizzard-the-lizard-wizard",
     "title": "King Gizzard & The Lizard Wizard",
     "location": "afaslive",
@@ -54,6 +96,7 @@
     "longText": "../public/texts/afaslive/a2luZy1naXp6YXJkLXRoZS1saXphcmQtd2l6YXJk.html",
     "image": "../public/event-images/afaslive/a2luZy1naXp6YXJkLXRoZS1saXphcmQtd2l6YXJk",
     "soldOut": false,
+    "eventGenres": null,
     "artists": {
       "kinggizzard": {
         "s": "6XYvaoDGE0VmRt83Jss9Sn",
@@ -85,8 +128,8 @@
     }
   },
   {
-    "door": "2024-02-10T20:00:00",
-    "start": "2024-02-10T20:00:00",
+    "door": "2024-02-14T20:00:00",
+    "start": "2024-02-14T20:00:00",
     "venueEventUrl": "https://www.afaslive.nl/agenda/judas-priest",
     "title": "Judas Priest",
     "location": "afaslive",
@@ -94,6 +137,7 @@
     "longText": "../public/texts/afaslive/ZmFzbGl2ZS5ubC9hZ2VuZGEvanVkYXMtcHJpZXN0.html",
     "image": "../public/event-images/afaslive/ZmFzbGl2ZS5ubC9hZ2VuZGEvanVkYXMtcHJpZXN0",
     "soldOut": false,
+    "eventGenres": null,
     "artists": {
       "judaspriest": {
         "s": "2tRsMl4eGxwoNabM08Dm4I",
@@ -112,8 +156,8 @@
     }
   },
   {
-    "door": "2024-02-10T20:00:00",
-    "start": "2024-02-10T20:00:00",
+    "door": "2024-02-14T20:00:00",
+    "start": "2024-02-14T20:00:00",
     "venueEventUrl": "https://www.afaslive.nl/agenda/five-finger-death-punch",
     "title": "Five Finger Death Punch",
     "location": "afaslive",
@@ -121,6 +165,7 @@
     "longText": "../public/texts/afaslive/YWdlbmRhL2ZpdmUtZmluZ2VyLWRlYXRoLXB1bmNo.html",
     "image": "../public/event-images/afaslive/YWdlbmRhL2ZpdmUtZmluZ2VyLWRlYXRoLXB1bmNo",
     "soldOut": false,
+    "eventGenres": null,
     "artists": {
       "fivefingerdeathpunch": {
         "s": "5t28BP42x2axFnqOOMg3CM",
@@ -134,8 +179,8 @@
     }
   },
   {
-    "door": "2024-02-10T20:00:00",
-    "start": "2024-02-10T20:00:00",
+    "door": "2024-02-14T20:00:00",
+    "start": "2024-02-14T20:00:00",
     "venueEventUrl": "https://www.afaslive.nl/agenda/zz-top",
     "title": "Zz top",
     "location": "afaslive",
@@ -143,6 +188,7 @@
     "longText": "../public/texts/afaslive/L3d3dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvenotdG9w.html",
     "image": "../public/event-images/afaslive/L3d3dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvenotdG9w",
     "soldOut": false,
+    "eventGenres": null,
     "artists": {
       "zztop": {
         "s": "2AM4ilv6UzW0uMRuqKtDgN",
@@ -158,8 +204,8 @@
     }
   },
   {
-    "door": "2024-02-10T20:00:00",
-    "start": "2024-02-10T20:00:00",
+    "door": "2024-02-14T20:00:00",
+    "start": "2024-02-14T20:00:00",
     "venueEventUrl": "https://www.afaslive.nl/agenda/korn",
     "title": "Korn",
     "location": "afaslive",
@@ -167,6 +213,7 @@
     "longText": "../public/texts/afaslive/Oi8vd3d3LmFmYXNsaXZlLm5sL2FnZW5kYS9rb3Ju.html",
     "image": "../public/event-images/afaslive/Oi8vd3d3LmFmYXNsaXZlLm5sL2FnZW5kYS9rb3Ju",
     "soldOut": false,
+    "eventGenres": null,
     "artists": {
       "korn": {
         "s": "3RNrq3jvMZxD9ZyoOZbQOD",
@@ -184,8 +231,8 @@
     }
   },
   {
-    "door": "2024-02-10T20:00:00",
-    "start": "2024-02-10T20:00:00",
+    "door": "2024-02-14T20:00:00",
+    "start": "2024-02-14T20:00:00",
     "venueEventUrl": "https://www.afaslive.nl/agenda/epica-show2",
     "title": "Epica",
     "location": "afaslive",
@@ -193,6 +240,7 @@
     "longText": "../public/texts/afaslive/YWZhc2xpdmUubmwvYWdlbmRhL2VwaWNhLXNob3cy.html",
     "image": "../public/event-images/afaslive/YWZhc2xpdmUubmwvYWdlbmRhL2VwaWNhLXNob3cy",
     "soldOut": false,
+    "eventGenres": null,
     "artists": {
       "epica": {
         "s": "5HA5aLY3jJV7eimXWkRBBp",
@@ -209,8 +257,8 @@
     }
   },
   {
-    "door": "2024-02-10T20:00:00",
-    "start": "2024-02-10T20:00:00",
+    "door": "2024-02-14T20:00:00",
+    "start": "2024-02-14T20:00:00",
     "venueEventUrl": "https://www.afaslive.nl/agenda/epica",
     "title": "Epica",
     "location": "afaslive",
@@ -218,6 +266,7 @@
     "longText": "../public/texts/afaslive/Ly93d3cuYWZhc2xpdmUubmwvYWdlbmRhL2VwaWNh.html",
     "image": "../public/event-images/afaslive/Ly93d3cuYWZhc2xpdmUubmwvYWdlbmRhL2VwaWNh",
     "soldOut": true,
+    "eventGenres": null,
     "artists": {
       "epica": {
         "s": "5HA5aLY3jJV7eimXWkRBBp",
@@ -234,8 +283,8 @@
     }
   },
   {
-    "door": "2024-02-10T20:00:00",
-    "start": "2024-02-10T20:00:00",
+    "door": "2024-02-14T20:00:00",
+    "start": "2024-02-14T20:00:00",
     "venueEventUrl": "https://www.afaslive.nl/agenda/heilung",
     "title": "Heilung",
     "location": "afaslive",
@@ -243,6 +292,7 @@
     "longText": "../public/texts/afaslive/d3d3LmFmYXNsaXZlLm5sL2FnZW5kYS9oZWlsdW5n.html",
     "image": "../public/event-images/afaslive/d3d3LmFmYXNsaXZlLm5sL2FnZW5kYS9oZWlsdW5n",
     "soldOut": true,
+    "eventGenres": null,
     "artists": {
       "heilung": {
         "s": "7sTKZr30LqC928DZ5P9mNQ",
@@ -256,8 +306,8 @@
     }
   },
   {
-    "door": "2024-02-10T18:30:00",
-    "start": "2024-02-10T18:30:00",
+    "door": "2024-02-14T18:30:00",
+    "start": "2024-02-14T18:30:00",
     "venueEventUrl": "https://www.afaslive.nl/agenda/powerwolf",
     "title": "Powerwolf",
     "location": "afaslive",
@@ -265,6 +315,7 @@
     "longText": "../public/texts/afaslive/dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvcG93ZXJ3b2xm.html",
     "image": "../public/event-images/afaslive/dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvcG93ZXJ3b2xm",
     "soldOut": false,
+    "eventGenres": null,
     "artists": {
       "powerwolf": {
         "s": "5HFkc3t0HYETL4JeEbDB1v",

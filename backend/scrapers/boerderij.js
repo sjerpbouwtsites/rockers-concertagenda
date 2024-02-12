@@ -5,6 +5,8 @@ import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/boerderij.js';
 import getImage from './gedeeld/image.js';
 import debugSettings from './gedeeld/debug-settings.js';
+import workTitleAndSlug from './gedeeld/slug.js';
+import { mapToShortDate } from './gedeeld/datums.js';
 
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const scraper = new AbstractScraper({
@@ -18,13 +20,18 @@ const scraper = new AbstractScraper({
     timeout: 20006,
   },
   app: {
+    harvest: {
+      dividers: [`&`],
+      dividerRex: "[&]", 
+      artistsIn: ['title', 'shortText'],
+    },
     mainPage: {
-      useCustomScraper: true,
-      asyncCheckFuncs: ['allowed', 'event', 'refused', 'forbiddenTerms', 'saveAllowed'],
       requiredProperties: ['venueEventUrl', 'title'],
+      asyncCheckFuncs: ['refused', 'allowedEvent', 'forbiddenTerms', 'spotifyForbiddenTerms'],
     },
     singlePage: {
-      requiredProperties: ['venueEventUrl', 'title', 'price', 'start'],
+      requiredProperties: ['venueEventUrl', 'title', 'start'],
+      asyncCheckFuncs: ['refused', 'saveAllowedEvent', 'harvestArtists'],
     },
   },
 });
@@ -54,9 +61,14 @@ scraper.mainPage = async function () {
           shortText: event.subtitle,
           title: `${event.title}&id=${event.id}`,
         };
+        // tijdelijk ivm date in async
+        m.startDate = event.event_date;
+        m.startDateTime = `${m.startDate}T00:00:00`;
         const e = Object.assign(event, m);
         return e;
       })
+      .map(mapToShortDate)
+      .map((re) => workTitleAndSlug(re, this._s.app.harvest.possiblePrefix))
       .map(this.isMusicEventCorruptedMapper);
   }
 

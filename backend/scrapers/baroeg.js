@@ -3,7 +3,9 @@ import { workerData } from 'worker_threads';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/baroeg.js';
 import getImage from './gedeeld/image.js';
-import { combineStartTimeStartDate, mapToStartDate, mapToStartTime } from './gedeeld/datums.js';
+import {
+  mapToShortDate, combineStartTimeStartDate, mapToStartDate, mapToStartTime, 
+} from './gedeeld/datums.js';
 import workTitleAndSlug from './gedeeld/slug.js';
 
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
@@ -103,6 +105,7 @@ scraper.mainPage = async function () {
   rawEvents = rawEvents
     .map((event) => mapToStartDate(event, 'dag-maandNummer-jaar', this.months))
     .map(mapToStartTime)
+    .map(mapToShortDate)
     .map(combineStartTimeStartDate)
     .map(this.isMusicEventCorruptedMapper)
     .map((re) => workTitleAndSlug(re, this._s.app.harvest.possiblePrefix));

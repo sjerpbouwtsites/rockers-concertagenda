@@ -7,6 +7,7 @@ import {
   mapToStartTime,
   combineDoorTimeStartDate,
   mapToStartDate,
+  mapToShortDate,
   mapToDoorTime,
   combineStartTimeStartDate,
 } from './gedeeld/datums.js';
@@ -84,16 +85,10 @@ scraper.mainPage = async function () {
     { workerData },
   );
 
-  rawEvents = rawEvents.map((re) => mapToStartDate(re, 'dag-maandNaam-jaar', this.months));
-  // TIJDELIJK TIJD TBV async checkers
-  rawEvents = rawEvents.map((re) => {
-    // eslint-disable-next-line no-param-reassign
-    re.start = `${re.startDate}T00:00:00`;
-    return re;
-  });
-
   rawEvents = rawEvents
     .map(workTitleAndSlug)
+    .map((event) => mapToStartDate(event, 'dag-maandNaam-jaar', this.months))
+    .map(mapToShortDate)
     .map(this.isMusicEventCorruptedMapper);
 
   const eventGen = this.eventGenerator(rawEvents);

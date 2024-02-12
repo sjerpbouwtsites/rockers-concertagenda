@@ -286,6 +286,13 @@ export function mapToStart(event) {
   return _mapToDateString(event, 'start', true);
 }
 
+export function mapToShortDate(event) {
+  const b = event?.start ? event.start : event.startDate;
+  // eslint-disable-next-line no-param-reassign
+  event.shortDate = b.substring(2, 10).replaceAll('-', '');
+  return event;
+}
+
 export function mapToDoor(event) {
   return _mapToDateString(event, 'door', false);
 }
