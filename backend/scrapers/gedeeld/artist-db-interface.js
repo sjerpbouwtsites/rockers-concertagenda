@@ -79,7 +79,7 @@ export async function asyncForbiddenTerms(event, reasons) {
     type: 'db-request', 
     subtype: 'hasForbidden',
     messageData: {
-      string: event.workTitle + event.slug + event.shortText.toLowerCase(),
+      string: event.workTitle + event.slug + (event?.shortText ?? '').toLowerCase(),
     },
   });
   await this.checkDBhasAnswered();
@@ -95,6 +95,34 @@ export async function asyncForbiddenTerms(event, reasons) {
       },
     }); 
 
+    return failureAnswerObject(event, reasonsCopy, true);
+  }
+  return successAnswerObject(event, reasonsCopy);
+}
+
+export async function asyncSpotifyForbiddenTerms(event, reasons) {
+  const reasonsCopy = Array.isArray(reasons) ? reasons : [];
+  
+  this.talkToDB({
+    type: 'db-request', 
+    subtype: 'getSpotifyForbiddenTerms',
+    messageData: {
+      title: event.workTitle,
+    },
+  });
+  await this.checkDBhasAnswered();
+  reasonsCopy.push(this.lastDBAnswer.reason);
+ 
+  if (this.lastDBAnswer.success) {
+    this.talkToDB({
+      type: 'db-request',
+      subtype: 'saveRefusedTemp',
+      messageData: {
+        title: event.workTitle,
+        slug: event.slug,
+        eventDate: dateNaarShortDate(event.start),
+      },
+    }); 
     return failureAnswerObject(event, reasonsCopy, true);
   }
   return successAnswerObject(event, reasonsCopy);

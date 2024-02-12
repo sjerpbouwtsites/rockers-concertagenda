@@ -4,6 +4,9 @@ import util from 'util';
 import terms from '../store/terms.js';
 import { slugify } from "../../scrapers/gedeeld/slug.js";
 
+// console.log(util.inspect(na, 
+//   { showHidden: false, depth: null, colors: true })); 
+
 export default class Artists {
   typeCheckInputFromScrapers = true;
 
@@ -162,6 +165,16 @@ export default class Artists {
         } 
       }
       return this.hasForbidden(message.data.string);
+    }
+
+    if (message.request === 'getSpotifyForbiddenTerms') {
+      if (this.typeCheckInputFromScrapers) {
+        const hasString = Object.prototype.hasOwnProperty.call(parsedMessage.data, 'title');
+        if (!hasString) {
+          return this.error(Error('geen title om te doorzoeken'));
+        } 
+      }
+      return this.getSpotifyForbiddenTerms(message.data.title);
     }
 
     if (message.request === 'scanTitleForAllowedArtists') {
@@ -371,6 +384,51 @@ export default class Artists {
     });
   }  
 
+  async getSpotifyForbiddenTerms(title) {
+    if (!this.spotifyAccessToken) {
+      await this.getSpotifyAccessToken();
+    }
+    
+    const spotRes = await this.getSpotifyArtistSearch(title);
+    
+    if (!spotRes) {
+      return this.post({
+        success: false,
+        data: null,
+        reason: `🟥 no artists found`,
+      });  
+    }
+
+    const spotifyGenres = spotRes?.genres ?? [];
+    console.log(`genres voor ${title}`);
+    console.log(spotifyGenres);
+    const heeftVerbodenTermen = this.terms.forbidden
+      .find((ft) => spotifyGenres.find((sg) => sg.includes(ft) || ft.includes(sg)));
+    
+    if (heeftVerbodenTermen) {
+      const heeftGoedeTermen = this.terms.goodCategories
+        .find((ft) => spotifyGenres.find((sg) => sg.includes(ft) || ft.includes(sg)));
+      if (heeftGoedeTermen) {
+        return this.post({
+          success: false,
+          data: heeftVerbodenTermen,
+          reason: `🟥 spotify verboden genre ${heeftVerbodenTermen} ook goede term ${heeftGoedeTermen}`,
+        });
+      }
+
+      return this.post({
+        success: true,
+        data: heeftVerbodenTermen,
+        reason: `🟩 spotify verboden genre ${heeftVerbodenTermen} maar geen goede termen`,
+      });    
+    }
+    return this.post({
+      success: false,
+      data: null,
+      reason: `🟥 spotify geen verboden genres`,
+    });  
+  }
+
   async harvestArtists(title, slug, shortText, settings, eventDate) {
     const reg = new RegExp(settings.dividerRex, 'i');
     let toScan = title; 
@@ -397,8 +455,6 @@ export default class Artists {
         nieuweArtiesten
           .filter((a) => (a.resultaten?.spotRes ?? null) || (a.resultaten?.metalEnc ?? null))
           .forEach((na) => {
-            // console.log(util.inspect(na, 
-            //   { showHidden: false, depth: null, colors: true }));          
             const spotify = na.resultaten?.spotRes?.id ?? null;
             const sGenres = na.resultaten?.spotRes?.genres ?? [];
             const heeftMetalEnc = Array.isArray(na.resultaten?.metalEnc);
@@ -448,6 +504,10 @@ export default class Artists {
    * @returns successMessage met evt. artistData
    */
   async APICallsForGenre(eventNameOfTitle, slug) {
+    if (!this.spotifyAccessToken) {
+      await this.getSpotifyAccessToken();
+    }
+
     // eerst even kijken of ie niet al op zichzelf wel geweigerd was
     const _a = Object.prototype.hasOwnProperty.call(this.refused, eventNameOfTitle);
     const _b = Object.prototype.hasOwnProperty.call(this.refused, slug);
@@ -694,7 +754,7 @@ export default class Artists {
 
     const uriComponent = encodeURIComponent(`artist:${artist}`);
     const url = `https://api.spotify.com/v1/search?q=${uriComponent}&type=artist&offset=0&limit=20&market=NL`;
-    // console.log(url);
+   
     const fetchResult = 
       await fetch(url, 
         {
@@ -705,11 +765,14 @@ export default class Artists {
           }, 
         }).then((response) => response.json())
         .catch((err) => console.error(err));
+        
     if (fetchResult?.artists?.items && fetchResult?.artists?.items.length) {
-      return fetchResult?.artists?.items.filter((hit) => hit.name.toLowerCase() === artist)[0]; 
+      const eersteHitCorrecteNaam = fetchResult?.artists?.items
+        .filter((hit) => hit.name.toLowerCase() === artist)[0];
+      return eersteHitCorrecteNaam; 
       // todo eerste teruggeven is slordig
     } if (fetchResult?.artists) {
-      return null;
+      return fetchResult?.artists?.items[0];
     }
     console.log(`geen resultaat uberhaupt voor ${artist}`);
     return null;

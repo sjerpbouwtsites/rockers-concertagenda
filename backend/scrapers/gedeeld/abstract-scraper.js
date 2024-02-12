@@ -16,6 +16,7 @@ import shell from '../../mods/shell.js';
 import {
   asyncIsAllowedEvent, asyncIsRefused, asyncForbiddenTerms, 
   asyncSaveAllowedEvent, asyncHarvestArtists, asyncScanTitleForAllowedArtists,
+  asyncSpotifyForbiddenTerms,
 } from './artist-db-interface.js';
 
 // #endregion                                              IMPORTS
@@ -71,6 +72,8 @@ export default class AbstractScraper extends ScraperConfig {
     this.asyncHarvestArtists.bind(this);
     this.asyncScanTitleForAllowedArtists = asyncScanTitleForAllowedArtists;
     this.asyncScanTitleForAllowedArtists.bind(this);
+    this.asyncSpotifyForbiddenTerms = asyncSpotifyForbiddenTerms;
+    this.asyncSpotifyForbiddenTerms.bind(this);
   }
   // #endregion                                                CONSTRUCTOR & INSTALL
 
@@ -1057,6 +1060,7 @@ export default class AbstractScraper extends ScraperConfig {
       forbiddenTerms: 'asyncForbiddenTerms',
       saveAllowedEvent: 'asyncSaveAllowedEvent',
       harvestArtists: 'asyncHarvestArtists',
+      spotifyForbiddenTerms: 'asyncSpotifyForbiddenTerms',
       // refused: 'asyncCheckIsRefused',
       // emptySuccess: 'asyncCheckEmptySuccess',
       // emptyFailure: 'asyncCheckEmptyFailure',
@@ -1075,9 +1079,13 @@ export default class AbstractScraper extends ScraperConfig {
     const curFunc = listOfFuncsCopy.shift();
     const curFuncName = funcNamesMap[curFunc];
 
-    const result = await this[curFuncName](event, reasonsCopy);
-    if (result?.break) return result;
-    return this.recursiveAsyncChecker(listOfFuncsCopy, event, result.reasons);
+    if (typeof this[curFuncName] !== 'undefined') {
+      const result = await this[curFuncName](event, reasonsCopy);
+      if (result?.break) return result;
+      return this.recursiveAsyncChecker(listOfFuncsCopy, event, result.reasons);
+    } 
+    this.handleError(new Error(`${curFuncName} niet in funcnames`), null, 'close-thread', funcNamesMap);
+    return this.recursiveAsyncChecker(listOfFuncsCopy, event, ['failure']);
   }
 
   // #endregion [rgba(255, 0, 0, 0.1)]      MAIN PAGE EVENT CHECK

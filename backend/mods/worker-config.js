@@ -14,18 +14,18 @@ export const AbstractWorkerConfig = {
 };
 
 export const workerConfig = {
-  '013': {
-    workerCount: 1,
-    CPUReq: 'low',
-    workerConcurrent: 3,
-    forceSet: 0,
-  },
-  // afaslive: {
+  // '013': {
   //   workerCount: 1,
-  //   CPUReq: 'high',
-  //   workerConcurrent: 1,
+  //   CPUReq: 'low',
+  //   workerConcurrent: 3,
   //   forceSet: 0,
   // },
+  afaslive: {
+    workerCount: 1,
+    CPUReq: 'high',
+    workerConcurrent: 1,
+    forceSet: 0,
+  },
   // baroeg: { workerCount: 3, workerConcurrent: 2, forceSet: 0 },
   // boerderij: {
   //   workerCount: 1,

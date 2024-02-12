@@ -16,8 +16,8 @@ const scraper = new AbstractScraper({
   app: {
     harvest: {
       dividers: [`+`, '&'],
-      dividerRex: "[\\+&]",
-      artistsIn: ['title', 'shortText'],
+      dividerRex: "[\\+&]", // todo nog niet duidelijk 24/2/12
+      artistsIn: ['title'],
     },
     mainPage: {
       requiredProperties: ['slug', 'venueEventUrl', 'title'],
@@ -73,7 +73,6 @@ scraper.mainPage = async function () {
   );
 
   rawEvents = rawEvents
-    .splice(5, 15)
     .map(mapToStart)
     .map(workTitleAndSlug)
     .map(this.isMusicEventCorruptedMapper);

@@ -10,6 +10,7 @@ import {
   mapToDoorTime,
   combineStartTimeStartDate,
 } from './gedeeld/datums.js';
+import workTitleAndSlug from './gedeeld/slug.js';
 
 // #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
 const scraper = new AbstractScraper({
@@ -22,9 +23,14 @@ const scraper = new AbstractScraper({
     timeout: 20000,
   },
   app: {
+    // harvest: {
+    //   dividers: [`+`],
+    //   dividerRex: "[\\+&]",
+    //   artistsIn: ['title'],
+    // },
     mainPage: {
       requiredProperties: ['venueEventUrl'],
-      asyncCheckFuncs: ['allowed', 'event', 'refused', 'forbiddenTerms', 'isRock', 'saveRefused'],
+      asyncCheckFuncs: ['refused', 'allowedEvent', 'forbiddenTerms', 'spotifyForbiddenTerms'],
     },
     singlePage: {
       requiredProperties: ['venueEventUrl', 'title', 'start'],
@@ -54,12 +60,6 @@ scraper.mainPage = async function () {
   await this.autoScroll(page);
   await this.waitTime(750);
   await this.autoScroll(page);
-  await this.waitTime(750);
-  await this.autoScroll(page);
-  await this.waitTime(750);
-
-  // TODO hier wat aan doen. maak er een do while van met een timeout. dit is waardeloos.
-  await this.autoScroll(page);
 
   let rawEvents = await page.evaluate(
     // eslint-disable-next-line no-shadow
@@ -73,6 +73,9 @@ scraper.mainPage = async function () {
             title,
           };
           res.venueEventUrl = agendaBlock.querySelector('a')?.href ?? null;
+          const wegMetSpans = agendaBlock.querySelectorAll('time span');
+          wegMetSpans.forEach((span) => span.parentNode.removeChild(span));
+          res.mapToStartDate = document.querySelector('time')?.textContent;
           res.soldOut = !!agendaBlock?.innerHTML.match(/uitverkocht|sold\s?out/i) ?? false;
           return res;
         })
@@ -80,7 +83,17 @@ scraper.mainPage = async function () {
     { workerData },
   );
 
-  rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
+  rawEvents = rawEvents.map((re) => mapToStartDate(re, 'dag-maandNaam-jaar', this.months));
+  // TIJDELIJK TIJD TBV async checkers
+  rawEvents = rawEvents.map((re) => {
+    // eslint-disable-next-line no-param-reassign
+    re.start = `${re.startDate}T00:00:00`;
+    return re;
+  });
+
+  rawEvents = rawEvents
+    .map(workTitleAndSlug)
+    .map(this.isMusicEventCorruptedMapper);
 
   const eventGen = this.eventGenerator(rawEvents);
   // eslint-disable-next-line no-unused-vars
@@ -125,7 +138,6 @@ scraper.singlePage = async function ({ page, event }) {
           ?.textContent.replaceAll(/\s/g, ' ')
           .replace(/\s+/g, ' ')
           .match(/deuren open:.*\d\d:\d\d/i) ?? null;
-      res.mapToStartDate = document.querySelector('.eventInfo time, .timetable time')?.textContent;
 
       res.soldOut = !!(document.querySelector('#tickets .soldout') ?? null);
 
@@ -143,9 +155,10 @@ scraper.singlePage = async function ({ page, event }) {
     { event },
   );
 
+  pageInfo.startDate = event.startDate;
   pageInfo = mapToStartTime(pageInfo);
   pageInfo = mapToDoorTime(pageInfo);
-  pageInfo = mapToStartDate(pageInfo, 'dag-maandNaam-jaar', this.months);
+  
   pageInfo = combineStartTimeStartDate(pageInfo);
   pageInfo = combineDoorTimeStartDate(pageInfo);
 
