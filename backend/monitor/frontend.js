@@ -100,8 +100,6 @@ function openClientWebsocket(fields) {
 function eventToUpdates(eventMsg, fields) {
   if (eventMsg.subtype.includes('debugger')) {
     const debugTitle = eventMsg?.messageData?.content?.debug?.title ?? '';
-    // console.log(`event to update 101`);
-    // console.log(debugTitle);
     if (debugTitle.includes('base check')) { // TODO RECHT ZETTEN NIET VIA DEBUGGER
       fields.baseEventField.updateBaseEventCheckList(eventMsg);
       return;

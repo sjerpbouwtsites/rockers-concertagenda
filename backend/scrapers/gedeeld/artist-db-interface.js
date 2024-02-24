@@ -49,11 +49,13 @@ export async function asyncIsAllowedEvent(event, reasons) {
   const reasonsCopy = Array.isArray(reasons) ? reasons : [];
   this.talkToDB(talkTitleAndSlug('getAllowedEvent', event));
   await this.checkDBhasAnswered();
-  reasonsCopy.push(this.lastDBAnswer.reason);
   if (this.lastDBAnswer.success) {
+    reasonsCopy.push(this.lastDBAnswer.reason);
     this.skipFurtherChecks.push(event.workTitle);
     return successAnswerObject(event, reasonsCopy, true);
   }
+  const nulledReason = this.lastDBAnswer.reason.replace('🟥', '⬜').replace('🟩', '⬜');
+  reasonsCopy.push(nulledReason);
   return nullAnswerObject(event, reasonsCopy);
 }
 
@@ -61,7 +63,9 @@ export async function asyncIfNotAllowedRefuse(event, reasons) {
   const reasonsCopy = Array.isArray(reasons) ? reasons : [];
   
   const isAllowed = await this.asyncIsAllowedEvent(event, reasons);
+  reasonsCopy.push(this.lastDBAnswer.reason);
   if (!isAllowed.success) {
+    reasonsCopy.push(`🟥 because not present in allowed: ifNotAllowedRefuse`);
     this.talkToDB({
       type: 'db-request',
       subtype: 'saveRefusedTemp',
@@ -71,6 +75,7 @@ export async function asyncIfNotAllowedRefuse(event, reasons) {
         eventDate: event.shortDate,
       },
     }); 
+    reasonsCopy.push(`🟧 saved in refused temp`);
     return failureAnswerObject(event, reasonsCopy, true);
   }
   return successAnswerObject(event, reasonsCopy, true);
@@ -80,10 +85,12 @@ export async function asyncIsRefused(event, reasons) {
   const reasonsCopy = Array.isArray(reasons) ? reasons : [];
   this.talkToDB(talkTitleAndSlug('getRefused', event));
   await this.checkDBhasAnswered();
-  reasonsCopy.push(this.lastDBAnswer.reason);
   if (this.lastDBAnswer.success) {
+    reasonsCopy.push(this.lastDBAnswer.reason);
     return failureAnswerObject(event, reasonsCopy, true);
   }
+  const nulledReason = this.lastDBAnswer.reason.replace('🟥', '⬜').replace('🟩', '⬜');
+  reasonsCopy.push(nulledReason);
   return nullAnswerObject(event, reasonsCopy);
 }
 
@@ -108,7 +115,7 @@ export async function asyncForbiddenTerms(event, reasons) {
         eventDate: event.shortDate,
       },
     }); 
-
+    reasonsCopy.push(`🟧 saved in refused temp`);
     return failureAnswerObject(event, reasonsCopy, true);
   }
   return successAnswerObject(event, reasonsCopy);
@@ -124,9 +131,9 @@ export async function asyncGoodTerms(event, reasons) {
     },
   });
   await this.checkDBhasAnswered();
-  reasonsCopy.push(this.lastDBAnswer.reason);
   this.skipFurtherChecks.push(event.workTitle);
   if (this.lastDBAnswer.success) {
+    reasonsCopy.push(this.lastDBAnswer.reason);
     this.talkToDB({
       type: 'db-request',
       subtype: 'saveAllowedEventTemp',
@@ -136,9 +143,11 @@ export async function asyncGoodTerms(event, reasons) {
         eventDate: event.shortDate,
       },
     }); 
-  
+    reasonsCopy.push(`🟧 saved in allowed event temp`);
     return successAnswerObject(event, reasonsCopy, true);
   }
+  const nulledReason = this.lastDBAnswer.reason.replace('🟥', '⬜').replace('🟩', '⬜');
+  reasonsCopy.push(nulledReason);
   return nullAnswerObject(event, reasonsCopy);
 }
 
@@ -146,6 +155,7 @@ export async function asyncExplicitEventCategories(event, reasons) {
   const reasonsCopy = Array.isArray(reasons) ? reasons : [];
 
   if (!event.eventGenres || event.eventGenres < 1) {
+    reasonsCopy.push(`⬜ no eventGenres to check expl. ev. cats`);
     return nullAnswerObject(event, reasonsCopy);  
   }
 
@@ -157,8 +167,8 @@ export async function asyncExplicitEventCategories(event, reasons) {
     },
   });
   await this.checkDBhasAnswered();
-  reasonsCopy.push(this.lastDBAnswer.reason);
   if (this.lastDBAnswer.success) {
+    reasonsCopy.push(this.lastDBAnswer.reason);
     this.skipFurtherChecks.push(event.workTitle);
     this.talkToDB({
       type: 'db-request',
@@ -169,9 +179,11 @@ export async function asyncExplicitEventCategories(event, reasons) {
         eventDate: event.shortDate,
       },
     }); 
+    reasonsCopy.push(`🟧 saved in allowed event temp`);
     return successAnswerObject(event, reasonsCopy, true);
   }
   if (this.lastDBAnswer.success === false) {
+    reasonsCopy.push(this.lastDBAnswer.reason);
     this.talkToDB({
       type: 'db-request',
       subtype: 'saveRefusedTemp',
@@ -181,8 +193,11 @@ export async function asyncExplicitEventCategories(event, reasons) {
         eventDate: event.shortDate,
       },
     }); 
+    reasonsCopy.push(`🟧 saved in refused temp`);
     return failureAnswerObject(event, reasonsCopy, true);
   }  
+  const nulledReason = this.lastDBAnswer.reason.replace('🟥', '⬜').replace('🟩', '⬜');
+  reasonsCopy.push(nulledReason);
   return nullAnswerObject(event, reasonsCopy);
 }
 
@@ -199,9 +214,9 @@ export async function asyncSpotifyConfirmation(event, reasons) {
     },
   });
   await this.checkDBhasAnswered();
-  reasonsCopy.push(this.lastDBAnswer.reason);
  
   if (this.lastDBAnswer.success) {
+    reasonsCopy.push(this.lastDBAnswer.reason);
     this.skipFurtherChecks.push(event.workTitle);
     this.talkToDB({
       type: 'db-request',
@@ -212,10 +227,12 @@ export async function asyncSpotifyConfirmation(event, reasons) {
         eventDate: event.shortDate,
       },
     }); 
+    reasonsCopy.push(`🟧 saved in allowed event temp`);
     return successAnswerObject(event, reasonsCopy, true);
   }
  
   if (this.lastDBAnswer.success === false) {
+    reasonsCopy.push(this.lastDBAnswer.reason);
     this.talkToDB({
       type: 'db-request',
       subtype: 'saveRefusedTemp',
@@ -225,9 +242,11 @@ export async function asyncSpotifyConfirmation(event, reasons) {
         eventDate: event.shortDate,
       },
     }); 
+    reasonsCopy.push(`🟧 saved in refused event temp`);
     return failureAnswerObject(event, reasonsCopy, true);
   }
-
+  const nulledReason = this.lastDBAnswer.reason.replace('🟥', '⬜').replace('🟩', '⬜');
+  reasonsCopy.push(nulledReason);
   return nullAnswerObject(event, reasonsCopy);
 }
 
@@ -255,12 +274,14 @@ export async function asyncMetalEncyclopediaConfirmation(event, reasons) {
         eventDate: event.shortDate,
       },
     }); 
+    reasonsCopy.push(`🟧 saved in allowed event temp`);
     return failureAnswerObject(event, reasonsCopy, true);
   }
   return successAnswerObject(event, reasonsCopy);
 }
 
 export async function asyncSaveAllowedEvent(event, reasons) {
+  const reasonsCopy = Array.isArray(reasons) ? reasons : [];
   this.talkToDB({
     type: 'db-request',
     subtype: 'saveAllowedEventTemp',
@@ -270,10 +291,12 @@ export async function asyncSaveAllowedEvent(event, reasons) {
       eventDate: event.shortDate,
     },
   });    
-  return nullAnswerObject(event, reasons);
+  reasonsCopy.push(`🟧 saved in allowed event temp`);
+  return nullAnswerObject(event, reasonsCopy);
 }
 
 export async function asyncHarvestArtists(event, reasons) {
+  const reasonsCopy = Array.isArray(reasons) ? reasons : [];
   this.talkToDB({
     type: 'db-request',
     subtype: 'harvestArtists',
@@ -286,6 +309,8 @@ export async function asyncHarvestArtists(event, reasons) {
       eventGenres: event?.eventGenres ?? [],
     },
   });    
+  await this.checkDBhasAnswered();
+  reasonsCopy.push(`⬜${this.lastDBAnswer.reason}`);
   return nullAnswerObject(event, reasons);
 }
 

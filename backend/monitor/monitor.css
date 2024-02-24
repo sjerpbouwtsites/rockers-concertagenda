@@ -310,11 +310,13 @@ table th.worker-data-cell {
 .single-event-check-notice--failure {
   color: red;
 }
-.monitorfield__outer--base-event-check {
+.monitorfield__outer--base-event-check,
+.monitorfield--single-event-check-list {
   flex-basis: 500px;
   font-size: 0.8em;
 }
-.monitorfield__outer--base-event-check strong {
+.monitorfield__outer--base-event-check strong,
+.monitorfield--single-event-check-list strong {
   font-size: 1.3em;
   font-weight: 900;
   margin-bottom: .25em;

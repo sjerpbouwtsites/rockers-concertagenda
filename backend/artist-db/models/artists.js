@@ -10,6 +10,10 @@ import { slugify } from "../../scrapers/gedeeld/slug.js";
 export default class Artists {
   typeCheckInputFromScrapers = true;
 
+  minLengthLang = 7;
+
+  minLengthKort = 4;
+
   /**
    * dir path van artist-db models
    */
@@ -80,7 +84,7 @@ export default class Artists {
     this.allowedArtists = JSON.parse(fs.readFileSync(`${this.storePath}/allowed-artists.json`));
     this.allowedEvents = JSON.parse(fs.readFileSync(`${this.storePath}/allowed-events.json`));
     this.landcodesMap = JSON.parse(fs.readFileSync(`${this.storePath}/landcodes-map.json`));
-    this.today = (new Date()).toISOString().substring(2, 10).replaceAll('-', '');
+    this.today = (new Date()).toISOString().substring(2, this.minLengthLang).replaceAll('-', '');
     this.getSpotifyAccessToken();
   }
 
@@ -378,8 +382,8 @@ export default class Artists {
    * @returns successMessage met evt. artistData
    */
   getRefused(eventNameOfTitle, slug, eventDate) {
-    const tt = eventNameOfTitle.length < 10 ? eventNameOfTitle + eventDate : eventNameOfTitle;
-    const ss = slug.length < 10 ? slug + eventDate : slug;
+    const tt = eventNameOfTitle.length < this.minLengthLang ? eventNameOfTitle + eventDate : eventNameOfTitle;
+    const ss = slug.length < this.minLengthLang ? slug + eventDate : slug;
     
     const _a = Object.prototype.hasOwnProperty.call(this.refused, tt);
     const _b = Object.prototype.hasOwnProperty.call(this.refused, ss);
@@ -515,11 +519,14 @@ export default class Artists {
 
     const spotifyGenres = spotRes?.genres ?? [];
     
-    const heeftVerbodenTermen = this.terms.forbidden
+    const heeftVerbodenTermen1 = this.terms.forbidden
       .find((ft) => spotifyGenres.find((sg) => sg.includes(ft) || ft.includes(sg)));
+    const heeftVerbodenTermen = heeftVerbodenTermen1 && (heeftVerbodenTermen1 !== 'undefined' && typeof heeftVerbodenTermen1 !== 'undefined');
     
-    const heeftGoedeTermen = this.terms.goodCategories
+    const heeftGoedeTermen1 = this.terms.goodCategories
       .find((ft) => spotifyGenres.find((sg) => sg.includes(ft) || ft.includes(sg)));
+
+    const heeftGoedeTermen = heeftGoedeTermen1 && (heeftGoedeTermen1 !== 'undefined' && typeof heeftGoedeTermen1 !== 'undefined');
         
     if (heeftVerbodenTermen) {
       if (heeftGoedeTermen) {
@@ -633,7 +640,7 @@ export default class Artists {
               .filter((g) => !this.terms.goodCategories.find((gfg) => g.includes(gfg)));
 
             if (tweedeGefilterdeGenres.length || heeftHeelGoedGenre) {
-              this.saveAllowedTemp(na.title, na.slug, spotify, land, genres, eventDate);
+              this.saveAllowedTemp(na.title, na.slug, spotify, land, genres, eventDate); // TODO GAAT DIT DE GOEDE KANT OP?
             } else if (heeftGoedeGenres.length > tweedeGefilterdeGenres) {
               this.saveAllowedTemp(na.title, na.slug, spotify, land, genres, eventDate);
             } else {
@@ -822,8 +829,8 @@ export default class Artists {
   }
 
   saveRefusedEventTemp(title, slug, eventDate) {
-    const tt = title.length < 10 ? title + eventDate : title;
-    const ss = slug.length < 10 ? slug + eventDate : slug;
+    const tt = title.length < this.minLengthLang ? title + eventDate : title;
+    const ss = slug.length < this.minLengthLang ? slug + eventDate : slug;
     this.refusedTemp[tt] = [0, null, null, eventDate, this.today];
     if (tt !== ss) {
       this.refusedTemp[ss] = [1, null, null, eventDate, this.today]; 
@@ -832,8 +839,8 @@ export default class Artists {
   }
 
   saveRefusedTemp(title, slug, spotify, metalEnc, eventDate) {
-    const tt = title.length < 10 ? title + eventDate : title;
-    const ss = slug.length < 10 ? slug + eventDate : slug;
+    const tt = title.length < this.minLengthLang ? title + eventDate : title;
+    const ss = slug.length < this.minLengthLang ? slug + eventDate : slug;
     this.refusedTemp[tt] = [0, spotify, metalEnc, eventDate, this.today];
     if (tt !== ss) {
       this.refusedTemp[ss] = [1, spotify, metalEnc, eventDate, this.today]; 
@@ -842,8 +849,8 @@ export default class Artists {
   }  
 
   saveAllowedEventTemp(title, slug, eventDate) {
-    const tt = title.length < 10 ? title + eventDate : title;
-    const ss = slug.length < 10 ? slug + eventDate : slug;
+    const tt = title.length < this.minLengthLang ? title + eventDate : title;
+    const ss = slug.length < this.minLengthLang ? slug + eventDate : slug;
     this.allowedEventTemp[tt] = [0, eventDate, this.today];
     if (tt !== ss) {
       this.allowedEventTemp[ss] = [1, eventDate, this.today]; 
@@ -852,8 +859,8 @@ export default class Artists {
   }
 
   saveAllowedTemp(title, slug, spotify, metalEnc, genres, eventDate) {
-    const tt = title.length < 4 ? title + eventDate : title;
-    const ss = slug.length < 4 ? slug + eventDate : slug;
+    const tt = title.length < this.minLengthKort ? title + eventDate : title;
+    const ss = slug.length < this.minLengthKort ? slug + eventDate : slug;
     this.allowedArtistsTemp[tt] = [0, spotify, metalEnc, genres, eventDate, this.today];
     if (tt !== ss) {
       this.allowedArtistsTemp[ss] = [1, spotify, metalEnc, genres, eventDate, this.today];
@@ -919,9 +926,9 @@ export default class Artists {
       this.allowedEvents[key] = values;
     });
     
-    fs.writeFileSync(`${this.storePath}/refused.json`, JSON.stringify(this.refused), 'utf-8');
-    fs.writeFileSync(`${this.storePath}/allowed-artists.json`, JSON.stringify(this.allowedArtists), 'utf-8');
-    fs.writeFileSync(`${this.storePath}/allowed-events.json`, JSON.stringify(this.allowedEvents), 'utf-8');
+    fs.writeFileSync(`${this.storePath}/refused.json`, JSON.stringify(this.refused, null, 2), 'utf-8');
+    fs.writeFileSync(`${this.storePath}/allowed-artists.json`, JSON.stringify(this.allowedArtists, null, 2), 'utf-8');
+    fs.writeFileSync(`${this.storePath}/allowed-events.json`, JSON.stringify(this.allowedEvents, null, 2), 'utf-8');
   }
 
   async getSpotifyArtistSearch(artist) {

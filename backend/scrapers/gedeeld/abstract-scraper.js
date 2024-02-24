@@ -578,6 +578,10 @@ export default class AbstractScraper extends ScraperConfig {
 
     mergedEvent.longText = this.writeLongTextHTML(mergedEvent);
     const mergedEventCheckRes = await this.singlePageAsyncCheck(mergedEvent, pageInfo);
+    // this.dirtyLog({
+    //   dirtyLog: 'mergedEventCheckRes',
+    //   mergedEventCheckRes,
+    // });
     if (mergedEventCheckRes.success) {
       const artistsRes = await this.asyncScanTitleForAllowedArtists(mergedEvent);
 
@@ -593,24 +597,6 @@ export default class AbstractScraper extends ScraperConfig {
         mergedEvent.artists = artistsRes.data;
       } else {
         mergedEvent.artists = null;
-      }
-
-      if (debugSettings.debugsinglePageAsyncCheck && mergedEventCheckRes.reason) {
-        const s = `${mergedEventCheckRes.success ? 'success' : 'failure'}`;
-        parentPort.postMessage(
-          this.qwm.debugger({
-            title: `single check ${s}`,
-            event: `<a class='single-event-check-notice single-event-check-notice--${s}' href='${mergedEventCheckRes.event.venueEventUrl}'>${mergedEventCheckRes.event.title}</a>`,
-            reason: mergedEventCheckRes.reason,
-          }),
-        );
-        // this.dirtyDebug({
-        //   title: 'Merged async check 👍',
-        //   event: `<a class='single-event-check-notice single-event-check-notice--success' href='${mergedEventCheckRes.event.venueEventUrl}'>${mergedEventCheckRes.event.title}</a>`,
-        //   reason: mergedEventCheckRes.reason,
-        // });
-      } else if (debugSettings.debugsinglePageAsyncCheck) {
-        this.dirtyLog(mergedEventCheckRes);
       }
 
       let tryEnforceDate = false;
@@ -640,13 +626,17 @@ export default class AbstractScraper extends ScraperConfig {
         this._events.push(toRegister);
       } else {
         this.dirtyDebug('invalid maar geen register invalid');
-      }
-    } else if (debugSettings.debugsinglePageAsyncCheck && mergedEventCheckRes.reason) {
-      this.dirtyDebug({
-        title: 'Merged async check 👎',
-        event: `<a class='single-event-check-notice single-event-check-notice--failure' href='${mergedEventCheckRes.event.venueEventUrl}'>${mergedEventCheckRes.event.title}</a>`,
-        reason: mergedEventCheckRes.reason,
-      });
+      } // eind mergedEventCheckRes.success
+    } 
+    if (debugSettings.debugsinglePageAsyncCheck) {
+      const s = `${mergedEventCheckRes.success ? 'success' : 'failure'}`;
+      parentPort.postMessage(
+        this.qwm.debugger({
+          title: `single check ${s}`,
+          event: `<a class='single-event-check-notice single-event-check-notice--${s}' href='${mergedEventCheckRes.event.venueEventUrl}'>${mergedEventCheckRes.event.title}</a>`,
+          reasons: mergedEventCheckRes.event?.reasonsSingle, // HACK HIER
+        }),
+      );
     }
     const toRegister = {
       door: mergedEvent.door,
@@ -1058,7 +1048,7 @@ export default class AbstractScraper extends ScraperConfig {
 
   // #region [rgba(255, 0, 0, 0.1)]      MAIN PAGE EVENT CHECK
   
-  async recursiveAsyncChecker(listOfFuncs, event, reasons = []) {
+  async recursiveAsyncChecker(listOfFuncs, event, reasons) {
     if (!listOfFuncs.length) {
       return {
         success: true,
@@ -1068,7 +1058,7 @@ export default class AbstractScraper extends ScraperConfig {
         event,
       }; 
     }
-    
+       
     const reasonsCopy = Array.isArray(reasons) ? reasons : [];
 
     if (this.skipFurtherChecks.includes(event.title)) {
@@ -1113,8 +1103,17 @@ export default class AbstractScraper extends ScraperConfig {
 
     if (typeof this[curFuncName] !== 'undefined') {
       const result = await this[curFuncName](event, reasonsCopy);
-      if (result?.break) return result;
-      return this.recursiveAsyncChecker(listOfFuncsCopy, event, result.reasons);
+      if (result?.break) {
+        // this.dirtyLog({
+        //   title: `async break voor ${event.title}`,
+        //   result,
+        // });
+        return result;
+      }
+      // eslint-disable-next-line no-param-reassign
+      event.reasonsSingle = [...result.reasons]; // TODO DIT IS EEN HACK WANT OM EEN OF ANDERE REDEN VALLEN ANDERS DE REASONS ERAF
+      // this.dirtyLog(`reasons Ar: ${(result?.reasons ?? 'geen reasons').join('; ')}`);
+      return this.recursiveAsyncChecker(listOfFuncsCopy, event, [...result.reasons]);
     } 
     this.handleError(new Error(`${curFuncName} niet in funcnames`), null, 'close-thread', funcNamesMap);
     return this.recursiveAsyncChecker(listOfFuncsCopy, event, ['failure']);

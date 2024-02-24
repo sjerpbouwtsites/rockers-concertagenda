@@ -96,15 +96,18 @@ export default class MonitorField {
   }
     
   updateSingleEventCheckList(updateData) {
-    console.log(`update single event check list`);
+    console.log({
+      updateData1: 'ja',
+      updateData,
+    });
     const debug = updateData.messageData.content.debug ?? null;
     if (!debug) throw new Error('geen debug info');
     const newDiv = document.createElement('div');
     newDiv.innerHTML = `
       <strong>${debug.event}</strong>
-      ${debug.reason.split(', ').join('<br>')}
+      ${debug?.reasons.join('<br>')} 
       <hr>
-    `;
+    `;// TODO HACK en singel en base gaan totaal anders. belachelijk
     document.getElementById(this.mainFieldName).prepend(newDiv);
   }
    
