@@ -596,11 +596,21 @@ export default class AbstractScraper extends ScraperConfig {
       }
 
       if (debugSettings.debugsinglePageAsyncCheck && mergedEventCheckRes.reason) {
-        this.dirtyDebug({
-          title: 'Merged async check 👍',
-          event: `<a class='single-event-check-notice single-event-check-notice--success' href='${mergedEventCheckRes.event.venueEventUrl}'>${mergedEventCheckRes.event.title}</a>`,
-          reason: mergedEventCheckRes.reason,
-        });
+        const s = `${mergedEventCheckRes.success ? 'success' : 'failure'}`;
+        parentPort.postMessage(
+          this.qwm.debugger({
+            title: `single check ${s}`,
+            event: `<a class='single-event-check-notice single-event-check-notice--${s}' href='${mergedEventCheckRes.event.venueEventUrl}'>${mergedEventCheckRes.event.title}</a>`,
+            reason: mergedEventCheckRes.reason,
+          }),
+        );
+        // this.dirtyDebug({
+        //   title: 'Merged async check 👍',
+        //   event: `<a class='single-event-check-notice single-event-check-notice--success' href='${mergedEventCheckRes.event.venueEventUrl}'>${mergedEventCheckRes.event.title}</a>`,
+        //   reason: mergedEventCheckRes.reason,
+        // });
+      } else if (debugSettings.debugsinglePageAsyncCheck) {
+        this.dirtyLog(mergedEventCheckRes);
       }
 
       let tryEnforceDate = false;

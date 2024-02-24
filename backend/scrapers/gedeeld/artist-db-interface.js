@@ -54,7 +54,7 @@ export async function asyncIsAllowedEvent(event, reasons) {
     this.skipFurtherChecks.push(event.workTitle);
     return successAnswerObject(event, reasonsCopy, true);
   }
-  return nullAnswerObject(event, reasons);
+  return nullAnswerObject(event, reasonsCopy);
 }
 
 export async function asyncIfNotAllowedRefuse(event, reasons) {
@@ -84,7 +84,7 @@ export async function asyncIsRefused(event, reasons) {
   if (this.lastDBAnswer.success) {
     return failureAnswerObject(event, reasonsCopy, true);
   }
-  return nullAnswerObject(event, reasons);
+  return nullAnswerObject(event, reasonsCopy);
 }
 
 export async function asyncForbiddenTerms(event, reasons) {
@@ -139,7 +139,7 @@ export async function asyncGoodTerms(event, reasons) {
   
     return successAnswerObject(event, reasonsCopy, true);
   }
-  return nullAnswerObject(event, reasons);
+  return nullAnswerObject(event, reasonsCopy);
 }
 
 export async function asyncExplicitEventCategories(event, reasons) {
@@ -225,7 +225,7 @@ export async function asyncSpotifyConfirmation(event, reasons) {
         eventDate: event.shortDate,
       },
     }); 
-    return successAnswerObject(event, reasonsCopy, true);
+    return failureAnswerObject(event, reasonsCopy, true);
   }
 
   return nullAnswerObject(event, reasonsCopy);

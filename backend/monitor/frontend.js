@@ -11,12 +11,28 @@ function createFields() {
   updateField.initialize();
   const errorField = new MonitorField('Fouten', 'error-field-target', 'error');
   errorField.initialize();
+
   const debuggerField = new MonitorField(
     'Debugger',
     'debugger-field-target',
     'expanded',
   );
   debuggerField.initialize();
+
+  const baseEventField = new MonitorField(
+    'Base-event-check',
+    'base-event-check-field-target',
+    'base-event-check-list',
+  );
+  baseEventField.initialize();
+
+  const singleEventField = new MonitorField(
+    'Single-event-check',
+    'single-event-check-field-target',
+    'single-event-check-list',
+  );
+  singleEventField.initialize();
+
   const appOverviewField = new MonitorField(
     'AppOverview',
     'app-overview-field-target',
@@ -25,7 +41,7 @@ function createFields() {
 
   appOverviewField.initialize();
   return {
-    updateField, errorField, debuggerField, appOverviewField,
+    updateField, errorField, debuggerField, appOverviewField, baseEventField, singleEventField,
   };
 }
 
@@ -82,14 +98,26 @@ function openClientWebsocket(fields) {
 }
 
 function eventToUpdates(eventMsg, fields) {
+  if (eventMsg.subtype.includes('debugger')) {
+    const debugTitle = eventMsg?.messageData?.content?.debug?.title ?? '';
+    // console.log(`event to update 101`);
+    // console.log(debugTitle);
+    if (debugTitle.includes('base check')) { // TODO RECHT ZETTEN NIET VIA DEBUGGER
+      fields.baseEventField.updateBaseEventCheckList(eventMsg);
+      return;
+    } 
+    if (debugTitle.includes('single check')) { // TODO RECHT ZETTEN NIET VIA DEBUGGER
+      fields.singleEventField.updateSingleEventCheckList(eventMsg);
+      return;
+    }  
+    fields.debuggerField.updateConsole(eventMsg); // HIER
+  }
+  
   if (eventMsg.subtype.includes('message-roll')) {
     fields.updateField.update(eventMsg);
   }
   if (eventMsg.subtype === 'error') {
     fields.errorField.updateError(eventMsg);
-  }
-  if (eventMsg.subtype.includes('debugger')) {
-    fields.debuggerField.updateConsole(eventMsg); // HIER
   }
 
   if (eventMsg.subtype.includes('terminal-error')) {

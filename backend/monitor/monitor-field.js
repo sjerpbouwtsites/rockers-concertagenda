@@ -83,6 +83,31 @@ export default class MonitorField {
     this.update(updateData);
   }
 
+  updateBaseEventCheckList(updateData) {
+    const debug = updateData.messageData.content.debug ?? null;
+    if (!debug) throw new Error('geen debug info');
+    const newDiv = document.createElement('div');
+    newDiv.innerHTML = `
+    <strong>${debug.event}</strong>
+      ${debug.reason.split(', ').join('<br>')}
+      <hr>
+      `;
+    document.getElementById(this.mainFieldName).prepend(newDiv);
+  }
+    
+  updateSingleEventCheckList(updateData) {
+    console.log(`update single event check list`);
+    const debug = updateData.messageData.content.debug ?? null;
+    if (!debug) throw new Error('geen debug info');
+    const newDiv = document.createElement('div');
+    newDiv.innerHTML = `
+      <strong>${debug.event}</strong>
+      ${debug.reason.split(', ').join('<br>')}
+      <hr>
+    `;
+    document.getElementById(this.mainFieldName).prepend(newDiv);
+  }
+   
   update(updateData) {
     this.data.splice(100);
     this.data.unshift(updateData);
@@ -96,6 +121,7 @@ export default class MonitorField {
       case 'expanded':
         mainFieldEl.innerHTML = this.expandedUpdatedHTML;
         break;
+    
       default:
         mainFieldEl.innerHTML = this.rollUpdatedHTML;
         break;

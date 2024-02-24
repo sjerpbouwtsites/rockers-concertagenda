@@ -1,156 +1,204 @@
 [
   {
-    "door": "2024-02-14T18:30:00",
-    "start": "2024-02-14T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/omd",
-    "title": "Omd",
+    "door": "2024-03-02T18:30:00",
+    "start": "2024-03-02T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/the-1975",
+    "title": "The 1975",
     "location": "afaslive",
-    "price": 56,
-    "longText": "../public/texts/afaslive/czovL3d3dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvb21k.html",
-    "image": "../public/event-images/afaslive/czovL3d3dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvb21k",
+    "price": 60.5,
+    "longText": "../public/texts/afaslive/d3cuYWZhc2xpdmUubmwvYWdlbmRhL3RoZS0xOTc1.html",
+    "image": "../public/event-images/afaslive/d3cuYWZhc2xpdmUubmwvYWdlbmRhL3RoZS0xOTc1",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2024-03-08T20:00:00",
+    "start": "2024-03-08T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/idles",
+    "title": "Idles",
+    "location": "afaslive",
+    "price": 44.8,
+    "longText": "../public/texts/afaslive/Ly93d3cuYWZhc2xpdmUubmwvYWdlbmRhL2lkbGVz.html",
+    "image": "../public/event-images/afaslive/Ly93d3cuYWZhc2xpdmUubmwvYWdlbmRhL2lkbGVz",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2024-03-24T18:30:00",
+    "start": "2024-03-24T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/the-1975-1",
+    "title": "The 1975",
+    "location": "afaslive",
+    "price": 60.5,
+    "longText": "../public/texts/afaslive/LmFmYXNsaXZlLm5sL2FnZW5kYS90aGUtMTk3NS0x.html",
+    "image": "../public/event-images/afaslive/LmFmYXNsaXZlLm5sL2FnZW5kYS90aGUtMTk3NS0x",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2024-04-17T20:00:00",
+    "start": "2024-04-17T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/the-blaze",
+    "title": "The Blaze",
+    "location": "afaslive",
+    "price": 43.68,
+    "longText": "../public/texts/afaslive/dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvdGhlLWJsYXpl.html",
+    "image": "../public/event-images/afaslive/dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvdGhlLWJsYXpl",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2024-05-01T20:00:00",
+    "start": "2024-05-01T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/itzy",
+    "title": "Itzy",
+    "location": "afaslive",
+    "price": 196,
+    "longText": "../public/texts/afaslive/Oi8vd3d3LmFmYXNsaXZlLm5sL2FnZW5kYS9pdHp5.html",
+    "image": "../public/event-images/afaslive/Oi8vd3d3LmFmYXNsaXZlLm5sL2FnZW5kYS9pdHp5",
     "soldOut": false,
     "eventGenres": null,
     "artists": null
   },
   {
-    "door": "2024-02-14T20:00:00",
-    "start": "2024-02-14T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/editors-show2",
-    "title": "Editors",
+    "door": "2024-05-23T20:00:00",
+    "start": "2024-05-23T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/king-gizzard-the-lizard-wizard",
+    "title": "King Gizzard & The Lizard Wizard",
     "location": "afaslive",
-    "price": 54.88,
-    "longText": "../public/texts/afaslive/YXNsaXZlLm5sL2FnZW5kYS9lZGl0b3JzLXNob3cy.html",
-    "image": "../public/event-images/afaslive/YXNsaXZlLm5sL2FnZW5kYS9lZGl0b3JzLXNob3cy",
-    "soldOut": true,
+    "price": 50.4,
+    "longText": "../public/texts/afaslive/a2luZy1naXp6YXJkLXRoZS1saXphcmQtd2l6YXJk.html",
+    "image": "../public/event-images/afaslive/a2luZy1naXp6YXJkLXRoZS1saXphcmQtd2l6YXJk",
+    "soldOut": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "kinggizzard": {
+        "s": "6XYvaoDGE0VmRt83Jss9Sn",
+        "l": "king%20gizzard",
+        "g": [
+          "australian psych",
+          "double drumming",
+          "microtonal",
+          "neo-psychedelic"
+        ]
+      },
+      "kinggizzardthelizardwizard": {
+        "s": "6XYvaoDGE0VmRt83Jss9Sn",
+        "l": "king%20gizzard%20&%20the%20lizard%20wizard",
+        "g": [
+          "australian psych",
+          "double drumming",
+          "microtonal",
+          "neo-psychedelic"
+        ]
+      },
+      "thelizardwizard": {
+        "s": null,
+        "l": "Czechia",
+        "g": [
+          "progressive death metal/grindcore"
+        ]
+      }
+    }
   },
   {
-    "door": "2024-02-14T18:30:00",
-    "start": "2024-02-14T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/the-smile",
-    "title": "The Smile",
+    "door": "2024-06-19T20:00:00",
+    "start": "2024-06-19T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/five-finger-death-punch",
+    "title": "Five Finger Death Punch",
     "location": "afaslive",
-    "price": 75.04,
-    "longText": "../public/texts/afaslive/dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvdGhlLXNtaWxl.html",
-    "image": "../public/event-images/afaslive/dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvdGhlLXNtaWxl",
-    "soldOut": true,
+    "price": 78.4,
+    "longText": "../public/texts/afaslive/YWdlbmRhL2ZpdmUtZmluZ2VyLWRlYXRoLXB1bmNo.html",
+    "image": "../public/event-images/afaslive/YWdlbmRhL2ZpdmUtZmluZ2VyLWRlYXRoLXB1bmNo",
+    "soldOut": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "fivefingerdeathpunch": {
+        "s": "5t28BP42x2axFnqOOMg3CM",
+        "l": null,
+        "g": [
+          "alternative metal",
+          "groove metal",
+          "nu metal"
+        ]
+      }
+    }
   },
   {
-    "door": "2024-02-14T20:00:00",
-    "start": "2024-02-14T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/the-rose",
-    "title": "The Rose",
+    "door": "2024-09-19T20:00:00",
+    "start": "2024-09-19T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/epica-show2",
+    "title": "Epica",
+    "location": "afaslive",
+    "price": 95.2,
+    "longText": "../public/texts/afaslive/YWZhc2xpdmUubmwvYWdlbmRhL2VwaWNhLXNob3cy.html",
+    "image": "../public/event-images/afaslive/YWZhc2xpdmUubmwvYWdlbmRhL2VwaWNhLXNob3cy",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "epica": {
+        "s": "5HA5aLY3jJV7eimXWkRBBp",
+        "l": "epica",
+        "g": [
+          "dutch metal",
+          "gothic metal",
+          "gothic symphonic metal",
+          "opera metal",
+          "power metal",
+          "symphonic metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2024-10-05T18:30:00",
+    "start": "2024-10-05T18:30:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/powerwolf",
+    "title": "Powerwolf",
     "location": "afaslive",
     "price": 72.8,
-    "longText": "../public/texts/afaslive/d3cuYWZhc2xpdmUubmwvYWdlbmRhL3RoZS1yb3Nl.html",
-    "image": "../public/event-images/afaslive/d3cuYWZhc2xpdmUubmwvYWdlbmRhL3RoZS1yb3Nl",
+    "longText": "../public/texts/afaslive/dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvcG93ZXJ3b2xm.html",
+    "image": "../public/event-images/afaslive/dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvcG93ZXJ3b2xm",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "powerwolf": {
+        "s": "5HFkc3t0HYETL4JeEbDB1v",
+        "l": "powerwolf",
+        "g": [
+          "german metal",
+          "german power metal",
+          "power metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2024-10-23T20:00:00",
+    "start": "2024-10-23T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/jayh",
+    "title": "Jayh",
+    "location": "afaslive",
+    "price": 49.4,
+    "longText": "../public/texts/afaslive/Oi8vd3d3LmFmYXNsaXZlLm5sL2FnZW5kYS9qYXlo.html",
+    "image": "../public/event-images/afaslive/Oi8vd3d3LmFmYXNsaXZlLm5sL2FnZW5kYS9qYXlo",
     "soldOut": false,
     "eventGenres": null,
     "artists": null
   },
   {
-    "door": "2024-02-14T20:00:00",
-    "start": "2024-02-14T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/keane",
-    "title": "Keane",
+    "door": "2024-11-21T20:00:00",
+    "start": "2024-11-21T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/froukje",
+    "title": "Froukje",
     "location": "afaslive",
-    "price": 53.76,
-    "longText": "../public/texts/afaslive/Ly93d3cuYWZhc2xpdmUubmwvYWdlbmRhL2tlYW5l.html",
-    "image": "../public/event-images/afaslive/Ly93d3cuYWZhc2xpdmUubmwvYWdlbmRhL2tlYW5l",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
-    "door": "2024-02-14T20:00:00",
-    "start": "2024-02-14T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/judas-priest",
-    "title": "Judas Priest",
-    "location": "afaslive",
-    "price": 84,
-    "longText": "../public/texts/afaslive/ZmFzbGl2ZS5ubC9hZ2VuZGEvanVkYXMtcHJpZXN0.html",
-    "image": "../public/event-images/afaslive/ZmFzbGl2ZS5ubC9hZ2VuZGEvanVkYXMtcHJpZXN0",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "judaspriest": {
-        "s": "2tRsMl4eGxwoNabM08Dm4I",
-        "l": "judas%20priest",
-        "g": [
-          "album rock",
-          "alternative metal",
-          "birmingham metal",
-          "glam metal",
-          "hard rock",
-          "heavy metal",
-          "metal",
-          "rock"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-02-14T20:00:00",
-    "start": "2024-02-14T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/korn",
-    "title": "Korn",
-    "location": "afaslive",
-    "price": 88.48,
-    "longText": "../public/texts/afaslive/Oi8vd3d3LmFmYXNsaXZlLm5sL2FnZW5kYS9rb3Ju.html",
-    "image": "../public/event-images/afaslive/Oi8vd3d3LmFmYXNsaXZlLm5sL2FnZW5kYS9rb3Ju",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "korn": {
-        "s": "3RNrq3jvMZxD9ZyoOZbQOD",
-        "l": null,
-        "g": [
-          "alternative metal",
-          "funk metal",
-          "hard rock",
-          "nu metal",
-          "post-grunge",
-          "rap metal",
-          "rock"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-02-14T20:00:00",
-    "start": "2024-02-14T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/heilung",
-    "title": "Heilung",
-    "location": "afaslive",
-    "price": 58.8,
-    "longText": "../public/texts/afaslive/d3d3LmFmYXNsaXZlLm5sL2FnZW5kYS9oZWlsdW5n.html",
-    "image": "../public/event-images/afaslive/d3d3LmFmYXNsaXZlLm5sL2FnZW5kYS9oZWlsdW5n",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "heilung": {
-        "s": "7sTKZr30LqC928DZ5P9mNQ",
-        "l": null,
-        "g": [
-          "dark folk",
-          "rune folk",
-          "viking folk"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-02-14T20:00:00",
-    "start": "2024-02-14T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/gavin-degraw",
-    "title": "Gavin Degraw",
-    "location": "afaslive",
-    "price": 54.88,
-    "longText": "../public/texts/afaslive/ZmFzbGl2ZS5ubC9hZ2VuZGEvZ2F2aW4tZGVncmF3.html",
-    "image": "../public/event-images/afaslive/ZmFzbGl2ZS5ubC9hZ2VuZGEvZ2F2aW4tZGVncmF3",
+    "price": 40.32,
+    "longText": "../public/texts/afaslive/d3d3LmFmYXNsaXZlLm5sL2FnZW5kYS9mcm91a2pl.html",
+    "image": "../public/event-images/afaslive/d3d3LmFmYXNsaXZlLm5sL2FnZW5kYS9mcm91a2pl",
     "soldOut": false,
     "eventGenres": null,
     "artists": null

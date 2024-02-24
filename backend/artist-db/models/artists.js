@@ -71,7 +71,7 @@ export default class Artists {
   /**
    * of in die persistentie functie fs write file
    */
-  nietSchrijven = true;
+  nietSchrijven = false;
 
   constructor(conf) {
     this.modelPath = conf.modelPath;

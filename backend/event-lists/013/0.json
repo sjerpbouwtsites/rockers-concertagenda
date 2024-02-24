@@ -1,51 +1,5 @@
 [
   {
-    "start": "2024-02-13T19:00:00+01:00",
-    "venueEventUrl": "https://www.013.nl/programma/7710/currents",
-    "title": "Currents",
-    "location": "013",
-    "price": 28.3,
-    "shortText": "",
-    "longText": "../public/texts/013/MDEzLm5sL3Byb2dyYW1tYS83NzEwL2N1cnJlbnRz.html",
-    "image": "../public/event-images/013/MDEzLm5sL3Byb2dyYW1tYS83NzEwL2N1cnJlbnRz",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "currents": {
-        "s": "5pqvAI85RMxL9K0xHvSwGu",
-        "l": "currents",
-        "g": [
-          "melodic metalcore",
-          "metalcore",
-          "progressive deathcore"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-02-20T18:00:00+01:00",
-    "start": "2024-02-20T19:00:00+01:00",
-    "venueEventUrl": "https://www.013.nl/programma/7802/life-of-agony",
-    "title": "Life of Agony",
-    "location": "013",
-    "price": 80.8,
-    "shortText": "Up Close & Unplugged - Acoustic Show (seated)",
-    "longText": "../public/texts/013/bC9wcm9ncmFtbWEvNzgwMi9saWZlLW9mLWFnb255.html",
-    "image": "../public/event-images/013/bC9wcm9ncmFtbWEvNzgwMi9saWZlLW9mLWFnb255",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "lifeofagony": {
-        "s": "4gyzQpfG5YQZJt2jj0IkEl",
-        "l": "life%20of%20agony",
-        "g": []
-      }
-    }
-  },
-  {
-    "door": "2024-02-25T18:00:00+01:00",
     "start": "2024-02-25T18:40:00+01:00",
     "venueEventUrl": "https://www.013.nl/programma/7692/dragonforce-amaranthe",
     "title": "DragonForce & Amaranthe",
@@ -188,7 +142,15 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "lysistrata": {
+        "s": "04bDp8VBNHzbTdujiMUuCb",
+        "l": null,
+        "g": [
+          "rock alternatif francais"
+        ]
+      }
+    }
   },
   {
     "door": "2024-05-11T20:00:00+02:00",
@@ -203,7 +165,20 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "dvne": {
+        "s": "1isrot4GGRmnqFT2vMAa5q",
+        "l": "United Kingdom",
+        "g": [
+          "edinburgh metal",
+          "post-metal",
+          "progressive sludge",
+          "sci-fi metal",
+          "scottish metal",
+          "progressive sludge/post-metal"
+        ]
+      }
+    }
   },
   {
     "door": "2024-05-22T20:00:00+02:00",
@@ -218,7 +193,18 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "apesofthestate": {
+        "s": "4HemfSCDgnPiHQh8Z6iyd6",
+        "l": null,
+        "g": [
+          "acoustic punk",
+          "folk punk",
+          "lancaster pa indie",
+          "pittsburgh indie"
+        ]
+      }
+    }
   },
   {
     "door": "2024-06-02T20:00:00+02:00",
@@ -233,35 +219,75 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "tricklebolt": {
+        "s": "1ZAx1trsNb2poWyQOgrw8w",
+        "l": null,
+        "g": [
+          "dutch rock",
+          "dutch stoner rock"
+        ]
+      },
+      "money": {
+        "s": null,
+        "l": "United Kingdom",
+        "g": [
+          "sludge metal/post-hardcore"
+        ]
+      },
+      "theman": {
+        "s": null,
+        "l": "Australia",
+        "g": [
+          "progressive/post-metal"
+        ]
+      }
+    }
   },
   {
-    "door": "2024-06-25T19:00:00+02:00",
-    "start": "2024-06-25T20:00:00+02:00",
-    "venueEventUrl": "https://www.013.nl/programma/7766/megadeth",
-    "title": "Megadeth",
+    "door": "2024-06-24T19:00:00+02:00",
+    "start": "2024-06-24T20:00:00+02:00",
+    "venueEventUrl": "https://www.013.nl/programma/7808/mr-bungle",
+    "title": "Mr. Bungle",
     "location": "013",
-    "price": 60.8,
-    "shortText": "Crush The World Tour",
-    "longText": "../public/texts/013/MDEzLm5sL3Byb2dyYW1tYS83NzY2L21lZ2FkZXRo.html",
-    "image": "../public/event-images/013/MDEzLm5sL3Byb2dyYW1tYS83NzY2L21lZ2FkZXRo",
-    "soldOut": true,
+    "price": 57.8,
+    "shortText": "Ipecac Geek Show",
+    "longText": "../public/texts/013/MTMubmwvcHJvZ3JhbW1hLzc4MDgvbXItYnVuZ2xl.html",
+    "image": "../public/event-images/013/MTMubmwvcHJvZ3JhbW1hLzc4MDgvbXItYnVuZ2xl",
+    "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "megadeth": {
-        "s": "1Yox196W7bzVNZI7RBaPnf",
-        "l": "megadeth",
+      "mrbungle": {
+        "s": "2zq0uqN9Wq12tqrQQt1ozw",
+        "l": "United States",
         "g": [
-          "alternative metal",
-          "hard rock",
-          "melodic thrash",
-          "metal",
-          "old school thrash",
-          "rock",
-          "speed metal",
-          "thrash metal"
+          "funk metal",
+          "funk rock",
+          "death/thrash metal",
+          "avant-garde metal/fusion/experimental"
         ]
+      }
+    }
+  },
+  {
+    "door": "2024-09-12T19:00:00+02:00",
+    "start": "2024-09-12T19:30:00+02:00",
+    "venueEventUrl": "https://www.013.nl/programma/7777/the-plot-in-you",
+    "title": "The Plot In You",
+    "location": "013",
+    "price": 29.3,
+    "shortText": "",
+    "longText": "../public/texts/013/cHJvZ3JhbW1hLzc3NzcvdGhlLXBsb3QtaW4teW91.html",
+    "image": "../public/event-images/013/cHJvZ3JhbW1hLzc3NzcvdGhlLXBsb3QtaW4teW91",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "theplotinyou": {
+        "s": null,
+        "l": "the%20plot%20in%20you",
+        "g": []
       }
     }
   },
@@ -278,7 +304,20 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "visionsofatlantis": {
+        "s": "5kanN1nKzrkW1m2gZmo82x",
+        "l": "Austria",
+        "g": [
+          "austrian metal",
+          "gothic metal",
+          "gothic symphonic metal",
+          "power metal",
+          "symphonic metal",
+          "melodic/symphonic power metal"
+        ]
+      }
+    }
   },
   {
     "door": "2024-11-01T18:00:00+01:00",

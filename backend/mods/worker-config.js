@@ -20,13 +20,13 @@ export const workerConfig = {
     workerConcurrent: 3,
     forceSet: 0,
   },
-  afaslive: {
-    workerCount: 3,
-    workerConcurrent: 2,
-    forceSet: 0,
-  },
-  baroeg: { workerCount: 3, workerConcurrent: 2, forceSet: 0 },
-  bibelot: { workerCount: 1, workerConcurrent: 1, forceSet: 1 },
+  // afaslive: {
+  //   workerCount: 3,
+  //   workerConcurrent: 2,
+  //   forceSet: 0,
+  // },
+  // baroeg: { workerCount: 3, workerConcurrent: 2, forceSet: 0 },
+  // bibelot: { workerCount: 1, workerConcurrent: 1, forceSet: 1 },
 
   // cpunt: { workerCount: 1, workerConcurrent: 1, forceSet: 1 },
   // dbs: {
