@@ -9,7 +9,14 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  /* transform: scale(0.8) translate(-12.5%, -12.5%); */
+}
+@media (max-width: 1200px){
+  .monitorfields__container {
+    transform: scale(0.75) translate(-15%, -16%);
+  }
+  .monitorfields__container {
+    width: 133%;
+  }
 }
 .monitorfield__outer {
   flex-basis: 430px;
