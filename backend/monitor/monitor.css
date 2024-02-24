@@ -323,9 +323,9 @@ table th.worker-data-cell {
 
 @media (max-width: 1200px){
   body {
-    transform: scale(0.75) translate(-15%, -16%);
+   transform: scale(0.66) translate(-25%, -25%)
   }
   .monitorfields__container {
-    width: 133%;
+    width: 150%;
   }
 }
