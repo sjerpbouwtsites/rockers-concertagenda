@@ -245,12 +245,39 @@ export function mapToStartDate(event, regexMode, months) {
     }
     return event;
   }
+  if (regexMode === 'dag-maandNummer') {
+    const dateM = event.mapToStartDate.match(/(\d{1,2})[\/\s]?(\d+)/);
+    if (!Array.isArray(dateM) || (Array.isArray(dateM) && dateM.length < 3)) {
+      event.errors.push({
+        error: new Error(`datematch dag-maandNummer`),
+        toDebug: {
+          string: event.mapToStartDate,
+          res: dateM,
+        },
+      });
+      return event;
+    }
+    let jaar = (new Date()).getFullYear();
+    const huiMaandNr = (new Date()).getMonth() + 1;
+    const maandGetal = dateM[2];
+    if (huiMaandNr > maandGetal) {
+      jaar += jaar + 1;
+    }
+    const dag = dateM[1].padStart(2, '0');
+    const dateStr = `${jaar}-${maandGetal}-${dag}`;
+    if (isDate(dateStr)) {
+      // eslint-disable-next-line no-param-reassign
+      event.startDate = dateStr;
+    }
+    return event;
+  }
   event.errors.push({
     error: new Error(`onbekende regexMode ${regexMode}`),
   });
 
   return event;
 }
+
 function _combineTimeDate(event, destKey, required) {
   const timeString = `${destKey}Time`;
   try {
