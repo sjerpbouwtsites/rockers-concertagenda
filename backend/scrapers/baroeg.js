@@ -26,6 +26,7 @@ const scraper = new AbstractScraper({
     },    
     mainPage: {
       requiredProperties: ['venueEventUrl', 'title', 'start'],
+      // baroeg heeft een betrouwbare eigen categorisering
       asyncCheckFuncs: ['refused', 'allowedEvent', 'explicitEventGenres'],
     },
     singlePage: {

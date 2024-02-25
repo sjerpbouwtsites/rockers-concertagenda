@@ -65,7 +65,7 @@ export async function asyncIfNotAllowedRefuse(event, reasons) {
   const isAllowed = await this.asyncIsAllowedEvent(event, reasons);
   reasonsCopy.push(this.lastDBAnswer.reason);
   if (!isAllowed.success) {
-    reasonsCopy.push(`🟥 because not present in allowed: ifNotAllowedRefuse`);
+    reasonsCopy.push(`🟥 because not present in allowed: ifNotAllowedRefuse sa1`);
     this.talkToDB({
       type: 'db-request',
       subtype: 'saveRefusedTemp',
@@ -75,7 +75,7 @@ export async function asyncIfNotAllowedRefuse(event, reasons) {
         eventDate: event.shortDate,
       },
     }); 
-    reasonsCopy.push(`🟧 saved in refused temp`);
+    reasonsCopy.push(`🟧 saved in refused temp sa2`);
     return failureAnswerObject(event, reasonsCopy, true);
   }
   return successAnswerObject(event, reasonsCopy, true);
@@ -115,7 +115,7 @@ export async function asyncForbiddenTerms(event, reasons) {
         eventDate: event.shortDate,
       },
     }); 
-    reasonsCopy.push(`🟧 saved in refused temp`);
+    reasonsCopy.push(`🟧 saved in refused temp sa3`);
     return failureAnswerObject(event, reasonsCopy, true);
   }
   return successAnswerObject(event, reasonsCopy);
@@ -143,7 +143,7 @@ export async function asyncGoodTerms(event, reasons) {
         eventDate: event.shortDate,
       },
     }); 
-    reasonsCopy.push(`🟧 saved in allowed event temp`);
+    reasonsCopy.push(`🟧 saved in allowed event temp sa4`);
     return successAnswerObject(event, reasonsCopy, true);
   }
   const nulledReason = this.lastDBAnswer.reason.replace('🟥', '⬜').replace('🟩', '⬜');
@@ -155,7 +155,7 @@ export async function asyncExplicitEventCategories(event, reasons) {
   const reasonsCopy = Array.isArray(reasons) ? reasons : [];
 
   if (!event.eventGenres || event.eventGenres < 1) {
-    reasonsCopy.push(`⬜ no eventGenres to check expl. ev. cats`);
+    reasonsCopy.push(`⬜ no eventGenres to check expl. ev. cats sa5`);
     return nullAnswerObject(event, reasonsCopy);  
   }
 
@@ -168,6 +168,10 @@ export async function asyncExplicitEventCategories(event, reasons) {
   });
   await this.checkDBhasAnswered();
   if (this.lastDBAnswer.success) {
+    // this.dirtyLog({
+    //   'last db answer check explicit genres':'rue',
+    //   lastDBAnswer: this.lastDBAnswer,
+    // });
     reasonsCopy.push(this.lastDBAnswer.reason);
     this.skipFurtherChecks.push(event.workTitle);
     this.talkToDB({
@@ -179,7 +183,7 @@ export async function asyncExplicitEventCategories(event, reasons) {
         eventDate: event.shortDate,
       },
     }); 
-    reasonsCopy.push(`🟧 saved in allowed event temp`);
+    reasonsCopy.push(`🟧 saved in allowed event temp sa6`);
     return successAnswerObject(event, reasonsCopy, true);
   }
   if (this.lastDBAnswer.success === false) {
@@ -193,7 +197,7 @@ export async function asyncExplicitEventCategories(event, reasons) {
         eventDate: event.shortDate,
       },
     }); 
-    reasonsCopy.push(`🟧 saved in refused temp`);
+    reasonsCopy.push(`🟧 saved in refused temp sa7`);
     return failureAnswerObject(event, reasonsCopy, true);
   }  
   const nulledReason = this.lastDBAnswer.reason.replace('🟥', '⬜').replace('🟩', '⬜');
@@ -227,7 +231,7 @@ export async function asyncSpotifyConfirmation(event, reasons) {
         eventDate: event.shortDate,
       },
     }); 
-    reasonsCopy.push(`🟧 saved in allowed event temp`);
+    reasonsCopy.push(`🟧 saved in allowed event temp sa8`);
     return successAnswerObject(event, reasonsCopy, true);
   }
  
@@ -242,7 +246,7 @@ export async function asyncSpotifyConfirmation(event, reasons) {
         eventDate: event.shortDate,
       },
     }); 
-    reasonsCopy.push(`🟧 saved in refused event temp`);
+    reasonsCopy.push(`🟧 saved in refused event temp sa9`);
     return failureAnswerObject(event, reasonsCopy, true);
   }
   const nulledReason = this.lastDBAnswer.reason.replace('🟥', '⬜').replace('🟩', '⬜');
@@ -274,7 +278,7 @@ export async function asyncMetalEncyclopediaConfirmation(event, reasons) {
         eventDate: event.shortDate,
       },
     }); 
-    reasonsCopy.push(`🟧 saved in allowed event temp`);
+    reasonsCopy.push(`🟧 saved in allowed event temp sb1`);
     return failureAnswerObject(event, reasonsCopy, true);
   }
   return successAnswerObject(event, reasonsCopy);
@@ -291,7 +295,7 @@ export async function asyncSaveAllowedEvent(event, reasons) {
       eventDate: event.shortDate,
     },
   });    
-  reasonsCopy.push(`🟧 saved in allowed event temp`);
+  reasonsCopy.push(`🟧 saved in allowed event temp sb2`);
   return nullAnswerObject(event, reasonsCopy);
 }
 
@@ -309,8 +313,10 @@ export async function asyncHarvestArtists(event, reasons) {
       eventGenres: event?.eventGenres ?? [],
     },
   });    
-  await this.checkDBhasAnswered();
-  reasonsCopy.push(`⬜${this.lastDBAnswer.reason}`);
+  // await this.checkDBhasAnswered(); // TODO HIER IS EEN RACE CONDITION ONTSTAAN
+  // reasonsCopy.push(`⬜${this.lastDBAnswer.reason} sb3`);
+  // return nullAnswerObject(event, reasons);
+  reasonsCopy.push(`⬜ harvest gaande sb3`);
   return nullAnswerObject(event, reasons);
 }
 

@@ -332,7 +332,7 @@ export default class Artists {
         return this.post({
           success: false,
           data: null,
-          reason: `${artistName} and ${slug} not in allowedArtists`,
+          reason: `${artistName} and ${slug} not in allowedArtists aa1`,
         }); 
       }
     }
@@ -341,7 +341,7 @@ export default class Artists {
     return this.post({
       success: true,
       data: artistData,
-      reason: `${_a ? `artistName ${artistName}` : `slug ${slug}`} found`,
+      reason: `${_a ? `artistName ${artistName}` : `slug ${slug}`} found aa2`,
     });
   }
 
@@ -362,7 +362,7 @@ export default class Artists {
         return this.post({
           success: false,
           data: null,
-          reason: `🟥 ${eventName} and ${slug} not allowed event`,
+          reason: `🟥 ${eventName} and ${slug} not allowed event aa3`,
         }); 
       }
     }
@@ -371,7 +371,7 @@ export default class Artists {
     return this.post({
       success: true,
       data: eventData,
-      reason: `🟩 ${_a ? `eventName ${eventName}` : `slug ${slug}`} allowed event`,
+      reason: `🟩 ${_a ? `eventName ${eventName}` : `slug ${slug}`} allowed event aa4`,
     });
   }  
 
@@ -395,7 +395,7 @@ export default class Artists {
         return this.post({
           success: false,
           data: null,
-          reason: `🟩 ${tt} and ${ss} not refused`,
+          reason: `🟩 ${tt} and ${ss} not refused aa5`,
         }); 
       }
     }
@@ -404,7 +404,7 @@ export default class Artists {
     return this.post({
       success: true,
       data: eventOfArtistData,
-      reason: `🟥 ${_a ? `eventNameOfTitle ${tt}` : `slug ${ss}`} refused`,
+      reason: `🟥 ${_a ? `eventNameOfTitle ${tt}` : `slug ${ss}`} refused aa6`,
     });
   }  
 
@@ -421,13 +421,13 @@ export default class Artists {
       return this.post({
         success: !!isForbidden,
         data: isForbidden,
-        reason: `🟥 ${isForbidden} is forbidden term`,
+        reason: `🟥 ${isForbidden} is forbidden term aa7`,
       });
     }
     return this.post({
       success: !!isForbidden,
       data: isForbidden,
-      reason: `🟩 no forbidden term`,
+      reason: `🟩 no forbidden term aa8`,
     });
   }  
 
@@ -444,13 +444,13 @@ export default class Artists {
       return this.post({
         success: !!isGood,
         data: isGood,
-        reason: `🟥 ${isGood} is good term`,
+        reason: `🟥 ${isGood} is good term aa9`,
       });
     }
     return this.post({
       success: !!isGood,
       data: isGood,
-      reason: `🟩 no good term`,
+      reason: `🟩 no good term ab1`,
     });
   }    
 
@@ -462,6 +462,8 @@ export default class Artists {
 
     let isGood;
 
+    console.log('expliciet genres');
+
     isGood = this.terms.globalGoodCategories
       .find((goodCat) => joinedGenres.includes(goodCat));
 
@@ -471,10 +473,13 @@ export default class Artists {
     }
 
     if (isGood) {
+      console.log('is goed expliciet genres');
+      const r = `🟩 ${isGood} good in expl. cats. ab2`;
       return this.post({
         success: true,
         data: isGood,
-        reason: `🟩 ${isGood} good in expl. cats.`,
+        reason: r,
+        reasons:[r],
       });      
     }
     
@@ -488,17 +493,22 @@ export default class Artists {
         .find((badCat) => joinedGenres.includes(badCat));
     }
     if (isBad) {
+      console.log('is SLECHT expliciet genres');
+      const r = `🟥 ${isBad} bad in expl. cats. ab3`;
       return this.post({
         success: false,
         data: isBad,
-        reason: `🟥 ${isBad} bad in expl. cats.`,
+        reason: r,
+        reasons: [r],
       });      
     }
-
+    console.log('niet gevonden expliciete genres');
+    const r = `⬜ No matches. ab4`;
     return this.post({
       success: null,
       data: null,
-      reason: `🟥🟩 No matches.`,
+      reason: r,
+      reasons:[r],
     });
   }    
 
@@ -513,7 +523,7 @@ export default class Artists {
       return this.post({
         success: false,
         data: null,
-        reason: `🟥 no artists found`,
+        reason: `🟥 no artists found ab5`,
       });  
     }
 
@@ -533,21 +543,21 @@ export default class Artists {
         return this.post({
           success: true,
           data: heeftGoedeTermen,
-          reason: `🟩 spotify verboden genre ${heeftVerbodenTermen} ook goede term ${heeftGoedeTermen}`,
+          reason: `🟩 spotify verboden genre ${heeftVerbodenTermen} ook goede term ${heeftGoedeTermen} ab6`,
         });
       }
  
       return this.post({
         success: false,
         data: heeftVerbodenTermen,
-        reason: `🟥 spotify verboden genre ${heeftVerbodenTermen} maar geen goede termen`,
+        reason: `🟥 spotify verboden genre ${heeftVerbodenTermen} maar geen goede termen ab7`,
       });    
     }
     
     return this.post({
       success: true,
       data: heeftGoedeTermen,
-      reason: `🟩 spotify verboden genre ${heeftVerbodenTermen} maar geen goede termen`,
+      reason: `🟩 spotify verboden genre ${heeftVerbodenTermen} maar geen goede termen ab8`,
     });    
   }
 
@@ -587,13 +597,13 @@ export default class Artists {
       return this.post({
         success: false,
         data: null,
-        reason: `🟥 metal enc niet gevonden.`,
+        reason: `🟥 metal enc niet gevonden. ab9`,
       });        
     }
     return this.post({
       success: true,
       data: null,
-      reason: `🟩 metal enc gevonden`,
+      reason: `🟩 metal enc gevonden ac1`,
     });
   }
 
@@ -650,10 +660,12 @@ export default class Artists {
       }
     }
 
+    console.log('harvest klaar');
+
     return this.post({
       success: true,
       data: 'niets',
-      reason: `succesvolle harvest`,
+      reason: `succesvolle harvest ac2`,
     });
   }
 
@@ -823,8 +835,8 @@ export default class Artists {
       success: artistsFound > 0,
       data: workedArtists,
       reason: artistsFound > 0 
-        ? `🟩 ${artistsFound} artists found` 
-        : `🟥 no artists found`,
+        ? `🟩 ${artistsFound} artists found ac3` 
+        : `🟥 no artists found ac4`,
     });
   }
 
@@ -869,12 +881,12 @@ export default class Artists {
   }
 
   persistNewRefusedAndRockArtists() {
-    console.log(`new artists`);
-    console.log(Object.keys(this.allowedArtistsTemp));
-    console.log(`new events`);
-    console.log(Object.keys(this.allowedEventTemp));
-    console.log(`new refused`);
-    console.log(Object.keys(this.refusedTemp));
+    // console.log(`new artists`);
+    // console.log(Object.keys(this.allowedArtistsTemp));
+    // console.log(`new events`);
+    // console.log(Object.keys(this.allowedEventTemp));
+    // console.log(`new refused`);
+    // console.log(Object.keys(this.refusedTemp));
 
     if (this.nietSchrijven) return;
 

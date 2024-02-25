@@ -1,582 +1,606 @@
 [
   {
-    "door": "2024-03-02T18:30:00",
-    "start": "2024-03-02T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/the-1975",
-    "title": "The 1975",
-    "location": "afaslive",
-    "price": 60.5,
-    "longText": "../public/texts/afaslive/d3cuYWZhc2xpdmUubmwvYWdlbmRhL3RoZS0xOTc1.html",
-    "image": "../public/event-images/afaslive/d3cuYWZhc2xpdmUubmwvYWdlbmRhL3RoZS0xOTc1",
-    "soldOut": true,
-    "eventGenres": null,
+    "start": "2024-02-27T13:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/stichting-fratsen-presenteert-sjeu-rocio-bolanos-del-pozo-fred-hoogsteder/",
+    "title": "Stichting Fratsen presenteert Sjeu: Rocío Bolaños del Pozo ",
+    "location": "baroeg",
+    "price": 0,
+    "shortText": " Fred Hoogsteder Ontdek nieuwe muziek van jong talent, haal herinneringen op én ontmoet je buurtgenoten!",
+    "longText": "../public/texts/baroeg/YW5vcy1kZWwtcG96by1mcmVkLWhvb2dzdGVkZXIv.html",
+    "image": "../public/event-images/baroeg/YW5vcy1kZWwtcG96by1mcmVkLWhvb2dzdGVkZXIv",
+    "soldOut": false,
+    "eventGenres": [
+      "Wijkactiviteit"
+    ],
     "artists": null
   },
   {
-    "door": "2024-03-05T20:00:00",
-    "start": "2024-03-05T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/editors-show2",
-    "title": "Editors",
-    "location": "afaslive",
-    "price": 54.88,
-    "longText": "../public/texts/afaslive/YXNsaXZlLm5sL2FnZW5kYS9lZGl0b3JzLXNob3cy.html",
-    "image": "../public/event-images/afaslive/YXNsaXZlLm5sL2FnZW5kYS9lZGl0b3JzLXNob3cy",
-    "soldOut": true,
-    "eventGenres": null,
+    "start": "2024-03-02T19:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/16299/",
+    "title": "CANCELLED: Art Stage Promotion presents: Flapjack ",
+    "location": "baroeg",
+    "price": null,
+    "shortText": "  Sztigar Bonko FFO: Suicidal Tendencies, Acid Drinkers, Luxtorpeda.",
+    "longText": "../public/texts/baroeg/czovL2Jhcm9lZy5ubC9wcm9kdWN0aWUvMTYyOTkv.html",
+    "image": "../public/event-images/baroeg/czovL2Jhcm9lZy5ubC9wcm9kdWN0aWUvMTYyOTkv",
+    "soldOut": false,
+    "eventGenres": [
+      "alternative"
+    ],
     "artists": {
-      "editors": {
-        "s": "6e9wIFWhBPHLE9bXK8gtBI",
+      "flapjack": {
+        "s": "1mXhM9SmB8qZFonbfELPbk",
+        "l": "flapjack",
+        "g": []
+      }
+    }
+  },
+  {
+    "start": "2024-03-08T19:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/come-on-bring-in-the-night-brighter-death-now-deutsch-nepal-raison-detre/",
+    "title": "Come On, Bring In The Night: Brighter Death Now ",
+    "location": "baroeg",
+    "price": 16,
+    "shortText": " Desiderii Marginis  +  Raison d’Etre Bezwerende klanken van dark ambient en industrial.",
+    "longText": "../public/texts/baroeg/b3ctZGV1dHNjaC1uZXBhbC1yYWlzb24tZGV0cmUv.html",
+    "image": "../public/event-images/baroeg/b3ctZGV1dHNjaC1uZXBhbC1yYWlzb24tZGV0cmUv",
+    "soldOut": false,
+    "eventGenres": [
+      "dark ambient",
+      "industrial"
+    ],
+    "artists": {
+      "brighterdeathnow": {
+        "s": "6nwscCkgFKgB3X8OaMabvr",
         "l": null,
         "g": [
-          "british indie rock",
-          "indie rock",
-          "modern rock",
-          "new rave"
+          "ambient industrial",
+          "death industrial",
+          "martial industrial",
+          "noise",
+          "power electronics",
+          "swedish experimental"
         ]
       }
     }
   },
   {
-    "door": "2024-03-08T20:00:00",
-    "start": "2024-03-08T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/idles",
-    "title": "Idles",
-    "location": "afaslive",
-    "price": 44.8,
-    "longText": "../public/texts/afaslive/Ly93d3cuYWZhc2xpdmUubmwvYWdlbmRhL2lkbGVz.html",
-    "image": "../public/event-images/afaslive/Ly93d3cuYWZhc2xpdmUubmwvYWdlbmRhL2lkbGVz",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "idles": {
-        "s": "75mafsNqNE1WSEVxIKuY5C",
-        "l": null,
-        "g": [
-          "bristol indie",
-          "crank wave",
-          "indie rock",
-          "modern rock"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-03-16T18:30:00",
-    "start": "2024-03-16T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/the-smile",
-    "title": "The Smile",
-    "location": "afaslive",
-    "price": 75.04,
-    "longText": "../public/texts/afaslive/dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvdGhlLXNtaWxl.html",
-    "image": "../public/event-images/afaslive/dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvdGhlLXNtaWxl",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
-    "door": "2024-03-23T20:00:00",
-    "start": "2024-03-23T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/tom-odell",
-    "title": "Tom Odell",
-    "location": "afaslive",
-    "price": 44.8,
-    "longText": "../public/texts/afaslive/dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvdG9tLW9kZWxs.html",
-    "image": "../public/event-images/afaslive/dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvdG9tLW9kZWxs",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
-    "door": "2024-03-24T18:30:00",
-    "start": "2024-03-24T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/the-1975-1",
-    "title": "The 1975",
-    "location": "afaslive",
-    "price": 60.5,
-    "longText": "../public/texts/afaslive/LmFmYXNsaXZlLm5sL2FnZW5kYS90aGUtMTk3NS0x.html",
-    "image": "../public/event-images/afaslive/LmFmYXNsaXZlLm5sL2FnZW5kYS90aGUtMTk3NS0x",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
-    "door": "2024-03-28T20:00:00",
-    "start": "2024-03-28T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/the-rose",
-    "title": "The Rose",
-    "location": "afaslive",
-    "price": 72.8,
-    "longText": "../public/texts/afaslive/d3cuYWZhc2xpdmUubmwvYWdlbmRhL3RoZS1yb3Nl.html",
-    "image": "../public/event-images/afaslive/d3cuYWZhc2xpdmUubmwvYWdlbmRhL3RoZS1yb3Nl",
+    "start": "2024-03-09T21:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/unhinged-burlesque-for-the-wild-at-heart/",
+    "title": "Unhinged: Burlesque For The Wild At Heart",
+    "location": "baroeg",
+    "price": 18.5,
+    "shortText": "Unhinged brengt een speciale en unieke Burlesque show naar Baroeg.",
+    "longText": "../public/texts/baroeg/cmxlc3F1ZS1mb3ItdGhlLXdpbGQtYXQtaGVhcnQv.html",
+    "image": "../public/event-images/baroeg/cmxlc3F1ZS1mb3ItdGhlLXdpbGQtYXQtaGVhcnQv",
     "soldOut": false,
-    "eventGenres": null,
+    "eventGenres": [
+      "burlesque"
+    ],
     "artists": {
-      "therose": {
-        "s": "5na1LmEmK2VzNLje9snJYW",
-        "l": "United States",
-        "g": [
-          "k-pop",
-          "k-pop boy group",
-          "symphonic/gothic metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-04-17T20:00:00",
-    "start": "2024-04-17T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/the-blaze",
-    "title": "The Blaze",
-    "location": "afaslive",
-    "price": 43.68,
-    "longText": "../public/texts/afaslive/dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvdGhlLWJsYXpl.html",
-    "image": "../public/event-images/afaslive/dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvdGhlLWJsYXpl",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "theblaze": {
-        "s": "1Dt1UKLtrJIW1xxRBejjos",
-        "l": "United States",
-        "g": [
-          "new french touch",
-          "heavy metal/punk"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-04-19T20:00:00",
-    "start": "2024-04-19T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/keane",
-    "title": "Keane",
-    "location": "afaslive",
-    "price": 53.76,
-    "longText": "../public/texts/afaslive/Ly93d3cuYWZhc2xpdmUubmwvYWdlbmRhL2tlYW5l.html",
-    "image": "../public/event-images/afaslive/Ly93d3cuYWZhc2xpdmUubmwvYWdlbmRhL2tlYW5l",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "keane": {
-        "s": "53A0W3U0s8diEn9RhXQhVz",
-        "l": null,
-        "g": [
-          "neo mellow",
-          "piano rock",
-          "pop rock"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-04-26T22:00:00",
-    "start": "2024-04-26T22:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/anotr-presents-expo-amsterdam",
-    "title": "ANOTR Presents: EXPO Amsterdam",
-    "location": "afaslive",
-    "price": 26,
-    "longText": "../public/texts/afaslive/L2Fub3RyLXByZXNlbnRzLWV4cG8tYW1zdGVyZGFt.html",
-    "image": "../public/event-images/afaslive/L2Fub3RyLXByZXNlbnRzLWV4cG8tYW1zdGVyZGFt",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
-    "door": "2024-05-01T20:00:00",
-    "start": "2024-05-01T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/itzy",
-    "title": "Itzy",
-    "location": "afaslive",
-    "price": 196,
-    "longText": "../public/texts/afaslive/Oi8vd3d3LmFmYXNsaXZlLm5sL2FnZW5kYS9pdHp5.html",
-    "image": "../public/event-images/afaslive/Oi8vd3d3LmFmYXNsaXZlLm5sL2FnZW5kYS9pdHp5",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "itzy": {
-        "s": "2KC9Qb60EaY0kW4eH68vr3",
-        "l": null,
-        "g": [
-          "k-pop",
-          "k-pop girl group"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-05-03T20:00:00",
-    "start": "2024-05-03T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/tekno",
-    "title": "Tekno",
-    "location": "afaslive",
-    "price": 52.5,
-    "longText": "../public/texts/afaslive/Ly93d3cuYWZhc2xpdmUubmwvYWdlbmRhL3Rla25v.html",
-    "image": "../public/event-images/afaslive/Ly93d3cuYWZhc2xpdmUubmwvYWdlbmRhL3Rla25v",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "tekno": {
-        "s": "6IhG3Yxm3UW98jhyBvrIut",
-        "l": null,
-        "g": [
-          "afrobeats",
-          "afropop",
-          "nigerian hip hop",
-          "nigerian pop"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-05-09T19:00:00",
-    "start": "2024-05-09T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/rotimi",
-    "title": "Rotimi",
-    "location": "afaslive",
-    "price": 38,
-    "longText": "../public/texts/afaslive/L3d3dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvcm90aW1p.html",
-    "image": "../public/event-images/afaslive/L3d3dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvcm90aW1p",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "rotimi": {
-        "s": "1xBARhKI09ZTmeePVDWMCf",
-        "l": null,
-        "g": [
-          "pop r&b"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-05-17T19:00:00",
-    "start": "2024-05-17T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/racoon",
-    "title": "Racoon",
-    "location": "afaslive",
-    "price": 52,
-    "longText": "../public/texts/afaslive/L3d3dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvcmFjb29u.html",
-    "image": "../public/event-images/afaslive/L3d3dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvcmFjb29u",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "racoon": {
-        "s": "30mNTnmvPn3HwXA5dW1Iza",
-        "l": null,
-        "g": [
-          "dutch indie",
-          "dutch pop",
-          "dutch rock"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-05-19T20:00:00",
-    "start": "2024-05-19T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/iprevail",
-    "title": "I Prevail",
-    "location": "afaslive",
-    "price": 42,
-    "longText": "../public/texts/afaslive/d3cuYWZhc2xpdmUubmwvYWdlbmRhL2lwcmV2YWls.html",
-    "image": "../public/event-images/afaslive/d3cuYWZhc2xpdmUubmwvYWdlbmRhL2lwcmV2YWls",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "iprevail": {
-        "s": "3Uobr6LgQpBbk6k4QGAb3V",
-        "l": "i%20prevail",
-        "g": [
-          "alternative metal",
-          "nu-metalcore"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-05-23T20:00:00",
-    "start": "2024-05-23T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/king-gizzard-the-lizard-wizard",
-    "title": "King Gizzard & The Lizard Wizard",
-    "location": "afaslive",
-    "price": 50.4,
-    "longText": "../public/texts/afaslive/a2luZy1naXp6YXJkLXRoZS1saXphcmQtd2l6YXJk.html",
-    "image": "../public/event-images/afaslive/a2luZy1naXp6YXJkLXRoZS1saXphcmQtd2l6YXJk",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "kinggizzard": {
-        "s": "6XYvaoDGE0VmRt83Jss9Sn",
-        "l": "king%20gizzard",
-        "g": [
-          "australian psych",
-          "double drumming",
-          "microtonal",
-          "neo-psychedelic"
-        ]
-      },
-      "kinggizzardthelizardwizard": {
-        "s": "6XYvaoDGE0VmRt83Jss9Sn",
-        "l": "king%20gizzard%20&%20the%20lizard%20wizard",
-        "g": [
-          "australian psych",
-          "double drumming",
-          "microtonal",
-          "neo-psychedelic"
-        ]
-      },
-      "thelizardwizard": {
+      "burlesqueforthewildatheart": {
         "s": null,
-        "l": "Czechia",
+        "l": "burlesque%20for%20the%20wild%20at%20heart",
+        "g": []
+      }
+    }
+  },
+  {
+    "start": "2024-03-10T15:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/terzij-de-horde-laster/",
+    "title": "Terzij De Horde ",
+    "location": "baroeg",
+    "price": 16,
+    "shortText": " Laster  +  Räum  +  Radeloos///Ziedend  +  Lijkschouwer Laat je verrassen door de muzikale schijnbewegingen van Terzij De Horde en Laster.",
+    "longText": "../public/texts/baroeg/ZHVjdGllL3Rlcnppai1kZS1ob3JkZS1sYXN0ZXIv.html",
+    "image": "../public/event-images/baroeg/ZHVjdGllL3Rlcnppai1kZS1ob3JkZS1sYXN0ZXIv",
+    "soldOut": false,
+    "eventGenres": [
+      "post-black"
+    ],
+    "artists": {
+      "radeloosziedend": {
+        "s": "6l0NXNFYkkn3chX6MW1xcj",
+        "l": "radeloos///ziedend",
+        "g": []
+      },
+      "terzijdehorde": {
+        "s": "41G9cPXKxphLtBQXD0g30o",
+        "l": "terzij%20de%20horde",
         "g": [
-          "progressive death metal/grindcore"
+          "blackgaze",
+          "dutch black metal",
+          "post-black metal"
+        ]
+      },
+      "lijkschouwer": {
+        "s": null,
+        "l": "lijkschouwer",
+        "g": []
+      },
+      "laster": {
+        "s": "67p4YunK4HWNnF2gcTLVaV",
+        "l": "Netherlands",
+        "g": [
+          "dutch black metal",
+          "experimental/atmospheric post-black metal"
+        ]
+      },
+      "raum": {
+        "s": null,
+        "l": "Belgium",
+        "g": [
+          "black metal"
         ]
       }
     }
   },
   {
-    "door": "2024-06-10T20:00:00",
-    "start": "2024-06-10T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/judas-priest",
-    "title": "Judas Priest",
-    "location": "afaslive",
-    "price": 84,
-    "longText": "../public/texts/afaslive/ZmFzbGl2ZS5ubC9hZ2VuZGEvanVkYXMtcHJpZXN0.html",
-    "image": "../public/event-images/afaslive/ZmFzbGl2ZS5ubC9hZ2VuZGEvanVkYXMtcHJpZXN0",
+    "start": "2024-03-17T15:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/prspctbaroeg-present-otto-von-schirach-deformer-limewax/",
+    "title": "PRSPCT",
+    "location": "baroeg",
+    "price": null,
+    "shortText": "Baroeg present: Otto Von Schirach  +  Deformer  +  Limewax Oozing Bass Spasms galore!",
+    "longText": "../public/texts/baroeg/dm9uLXNjaGlyYWNoLWRlZm9ybWVyLWxpbWV3YXgv.html",
+    "image": "../public/event-images/baroeg/dm9uLXNjaGlyYWNoLWRlZm9ybWVyLWxpbWV3YXgv",
     "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "judaspriest": {
-        "s": "2tRsMl4eGxwoNabM08Dm4I",
-        "l": "judas%20priest",
-        "g": [
-          "album rock",
-          "alternative metal",
-          "birmingham metal",
-          "glam metal",
-          "hard rock",
-          "heavy metal",
-          "metal",
-          "rock"
-        ]
-      }
-    }
+    "eventGenres": [
+      "breakcore",
+      "darkset",
+      "drum 'n bass",
+      "IDM",
+      "metal"
+    ],
+    "artists": null
   },
   {
-    "door": "2024-06-12T20:00:00",
-    "start": "2024-06-12T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/babymetal",
-    "title": "Babymetal",
-    "location": "afaslive",
-    "price": 60.48,
-    "longText": "../public/texts/afaslive/dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvYmFieW1ldGFs.html",
-    "image": "../public/event-images/afaslive/dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvYmFieW1ldGFs",
+    "start": "2024-03-22T18:30:00",
+    "venueEventUrl": "https://baroeg.nl/productie/16340/",
+    "title": "W:O:A: Metal Battle Veldslag West: Goldwölff ",
+    "location": "baroeg",
+    "price": 5,
+    "shortText": " Inherited  +  Serotonia  +  Neverus  +  Obstruktor Vandaag strijden de winnaars van de voorrondes om één plaats in de finale.",
+    "longText": "../public/texts/baroeg/czovL2Jhcm9lZy5ubC9wcm9kdWN0aWUvMTYzNDAv.html",
+    "image": "../public/event-images/baroeg/czovL2Jhcm9lZy5ubC9wcm9kdWN0aWUvMTYzNDAv",
     "soldOut": false,
-    "eventGenres": null,
+    "eventGenres": [
+      "metal"
+    ],
     "artists": {
-      "babymetal": {
-        "s": "630wzNP2OL7fl4Xl0GnMWq",
-        "l": "babymetal",
+      "inherited": {
+        "s": "74R5DmGt1473Kf2Lg4NDxe",
+        "l": "United States",
         "g": [
-          "idol rock",
-          "j-metal",
-          "kawaii metal"
+          "black/death metal"
         ]
-      }
-    }
-  },
-  {
-    "door": "2024-06-19T20:00:00",
-    "start": "2024-06-19T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/five-finger-death-punch",
-    "title": "Five Finger Death Punch",
-    "location": "afaslive",
-    "price": 78.4,
-    "longText": "../public/texts/afaslive/YWdlbmRhL2ZpdmUtZmluZ2VyLWRlYXRoLXB1bmNo.html",
-    "image": "../public/event-images/afaslive/YWdlbmRhL2ZpdmUtZmluZ2VyLWRlYXRoLXB1bmNo",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "fivefingerdeathpunch": {
-        "s": "5t28BP42x2axFnqOOMg3CM",
+      },
+      "goldwolff": {
+        "s": "2jwyLoOyrJz0OM0FICfOGT",
         "l": null,
         "g": [
+          "metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2024-03-28T19:30:00",
+    "venueEventUrl": "https://baroeg.nl/productie/gruizig-kill-your-boyfriend-death-by-audio-soundville/",
+    "title": "Gruizig: Kill Your Boyfriend ",
+    "location": "baroeg",
+    "price": 14,
+    "shortText": " Death By Audio @SoundVille Gruizig is een nieuwe clubavond waar gitaarstijlen als postpunk, shoegaze, noise etc. centraal staan.",
+    "longText": "../public/texts/baroeg/ZW5kLWRlYXRoLWJ5LWF1ZGlvLXNvdW5kdmlsbGUv.html",
+    "image": "../public/event-images/baroeg/ZW5kLWRlYXRoLWJ5LWF1ZGlvLXNvdW5kdmlsbGUv",
+    "soldOut": false,
+    "eventGenres": [
+      "dark ambient",
+      "post-punk"
+    ],
+    "artists": null
+  },
+  {
+    "start": "2024-03-31T14:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/festerfest-2/",
+    "title": "Festerfest: Plusminus ",
+    "location": "baroeg",
+    "price": 11,
+    "shortText": " Phlebotomized  +  Tower Crane Towers  +  Insurrection  +  Fred Händl  +  Neroth  +  Luuk Geers  +  Mouser  +  Whispering Dunes  +  NOCX  +  Red Eyed Machine  +  DJ's Zot & Rot Annual fest to crush the boundaries between different forms of underground music.",
+    "longText": "../public/texts/baroeg/b2VnLm5sL3Byb2R1Y3RpZS9mZXN0ZXJmZXN0LTIv.html",
+    "image": "../public/event-images/baroeg/b2VnLm5sL3Byb2R1Y3RpZS9mZXN0ZXJmZXN0LTIv",
+    "soldOut": false,
+    "eventGenres": [
+      "avantgarde death",
+      "industrial cyber techno",
+      "melodic death/thrash",
+      "punkrock",
+      "rockcovers",
+      "synthwave"
+    ],
+    "artists": {
+      "phlebotomized": {
+        "s": "49XKAaDQYXRPAZ1yrXJlLd",
+        "l": "phlebotomized",
+        "g": [
+          "dutch death metal",
+          "dutch metal"
+        ]
+      },
+      "insurrection": {
+        "s": "0WMbayNr7EC94NmNRhfcmB",
+        "l": "Colombia",
+        "g": [
+          "speed/thrash metal"
+        ]
+      },
+      "neroth": {
+        "s": "58E0u5tlo9WuKPg7enSBWB",
+        "l": "Netherlands",
+        "g": [
+          "black metal"
+        ]
+      },
+      "plusminus": {
+        "s": "7mtnt6NzGQuNN8LdJtIGLn",
+        "l": null,
+        "g": [
+          "avantgarde death",
+          "industrial cyber techno",
+          "melodic death/thrash",
+          "punkrock",
+          "rockcovers",
+          "synthwave"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2024-04-06T20:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/downward-spiral-special-mesh/",
+    "title": "Downward Spiral special: Mesh + Dead Lights",
+    "location": "baroeg",
+    "price": 25,
+    "shortText": "50 jaar Tim Daeleman/DJ Spud, laatste Downward Spiral in het oude Baroeg pand, ‘legacy’ show van Mesh.",
+    "longText": "../public/texts/baroeg/L2Rvd253YXJkLXNwaXJhbC1zcGVjaWFsLW1lc2gv.html",
+    "image": "../public/event-images/baroeg/L2Rvd253YXJkLXNwaXJhbC1zcGVjaWFsLW1lc2gv",
+    "soldOut": false,
+    "eventGenres": [
+      "electronic"
+    ],
+    "artists": {
+      "mesh": {
+        "s": "3ggwAqZD3lyT2sbovlmfQY",
+        "l": "mesh",
+        "g": [
           "alternative metal",
+          "djent",
           "groove metal",
-          "nu metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-07-08T20:00:00",
-    "start": "2024-07-08T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/zz-top",
-    "title": "Zz top",
-    "location": "afaslive",
-    "price": 85.12,
-    "longText": "../public/texts/afaslive/L3d3dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvenotdG9w.html",
-    "image": "../public/event-images/afaslive/L3d3dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvenotdG9w",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "zztop": {
-        "s": "2AM4ilv6UzW0uMRuqKtDgN",
-        "l": null,
-        "g": [
-          "album rock",
-          "blues rock",
-          "classic rock",
-          "hard rock",
-          "rock"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-08-04T20:00:00",
-    "start": "2024-08-04T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/korn",
-    "title": "Korn",
-    "location": "afaslive",
-    "price": 88.48,
-    "longText": "../public/texts/afaslive/Oi8vd3d3LmFmYXNsaXZlLm5sL2FnZW5kYS9rb3Ju.html",
-    "image": "../public/event-images/afaslive/Oi8vd3d3LmFmYXNsaXZlLm5sL2FnZW5kYS9rb3Ju",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "korn": {
-        "s": "3RNrq3jvMZxD9ZyoOZbQOD",
-        "l": null,
-        "g": [
-          "alternative metal",
-          "funk metal",
-          "hard rock",
+          "metal",
           "nu metal",
-          "post-grunge",
-          "rap metal",
-          "rock"
+          "progressive groove metal",
+          "swedish metal",
+          "technical groove metal",
+          "technical thrash"
         ]
       }
     }
   },
   {
-    "door": "2024-09-19T20:00:00",
-    "start": "2024-09-19T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/epica-show2",
-    "title": "Epica",
-    "location": "afaslive",
-    "price": 95.2,
-    "longText": "../public/texts/afaslive/YWZhc2xpdmUubmwvYWdlbmRhL2VwaWNhLXNob3cy.html",
-    "image": "../public/event-images/afaslive/YWZhc2xpdmUubmwvYWdlbmRhL2VwaWNhLXNob3cy",
+    "start": "2024-04-11T21:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/baroeg-presents-v11-officium-triste-asphodelus/",
+    "title": "Baroeg presents @V11: Officium Triste ",
+    "location": "baroeg",
+    "price": 14,
+    "shortText": " Asphodelus In 2024 bestaat Officium Triste 30 jaar. Om dat een klein beetje te vieren, staan ze op de V11.",
+    "longText": "../public/texts/baroeg/MTEtb2ZmaWNpdW0tdHJpc3RlLWFzcGhvZGVsdXMv.html",
+    "image": "../public/event-images/baroeg/MTEtb2ZmaWNpdW0tdHJpc3RlLWFzcGhvZGVsdXMv",
     "soldOut": false,
-    "eventGenres": null,
+    "eventGenres": [
+      "death metal",
+      "doom"
+    ],
     "artists": {
-      "epica": {
-        "s": "5HA5aLY3jJV7eimXWkRBBp",
-        "l": "epica",
+      "asphodelus": {
+        "s": "4hnffjj1d6SAq0qaVymVbL",
+        "l": "Finland",
         "g": [
-          "dutch metal",
-          "gothic metal",
-          "gothic symphonic metal",
-          "opera metal",
-          "power metal",
-          "symphonic metal"
+          "finnish death metal",
+          "doom/death metal"
         ]
       }
     }
   },
   {
-    "door": "2024-09-20T20:00:00",
-    "start": "2024-09-20T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/epica",
-    "title": "Epica",
-    "location": "afaslive",
-    "price": 95.2,
-    "longText": "../public/texts/afaslive/Ly93d3cuYWZhc2xpdmUubmwvYWdlbmRhL2VwaWNh.html",
-    "image": "../public/event-images/afaslive/Ly93d3cuYWZhc2xpdmUubmwvYWdlbmRhL2VwaWNh",
-    "soldOut": true,
-    "eventGenres": null,
+    "start": "2024-04-12T19:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/mortiis/",
+    "title": "Mortiis + Nortfalke + Blot + In Days Of Old",
+    "location": "baroeg",
+    "price": 19,
+    "shortText": "Mortiis speelt debuutalbum Født Til å Herske.",
+    "longText": "../public/texts/baroeg/Ly9iYXJvZWcubmwvcHJvZHVjdGllL21vcnRpaXMv.html",
+    "image": "../public/event-images/baroeg/Ly9iYXJvZWcubmwvcHJvZHVjdGllL21vcnRpaXMv",
+    "soldOut": false,
+    "eventGenres": [
+      "dungeon synth"
+    ],
     "artists": {
-      "epica": {
-        "s": "5HA5aLY3jJV7eimXWkRBBp",
-        "l": "epica",
+      "mortiis": {
+        "s": "4jlxvaggBp7wVV02U6YYRQ",
+        "l": "Norway",
         "g": [
-          "dutch metal",
-          "gothic metal",
-          "gothic symphonic metal",
-          "opera metal",
-          "power metal",
-          "symphonic metal"
+          "autonomous black metal",
+          "dark ambient",
+          "dungeon synth",
+          "darkwave/dungeon synth, electronic/industrial rock"
         ]
-      }
-    }
-  },
-  {
-    "door": "2024-09-21T20:00:00",
-    "start": "2024-09-21T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/heilung",
-    "title": "Heilung",
-    "location": "afaslive",
-    "price": 58.8,
-    "longText": "../public/texts/afaslive/d3d3LmFmYXNsaXZlLm5sL2FnZW5kYS9oZWlsdW5n.html",
-    "image": "../public/event-images/afaslive/d3d3LmFmYXNsaXZlLm5sL2FnZW5kYS9oZWlsdW5n",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "heilung": {
-        "s": "7sTKZr30LqC928DZ5P9mNQ",
+      },
+      "nortfalke": {
+        "s": "6IiKIJCxAqzqPldid08P9B",
         "l": null,
         "g": [
-          "dark folk",
-          "rune folk",
-          "viking folk"
+          "dungeon synth"
         ]
       }
     }
   },
   {
-    "door": "2024-10-05T18:30:00",
-    "start": "2024-10-05T18:30:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/powerwolf",
-    "title": "Powerwolf",
-    "location": "afaslive",
-    "price": 72.8,
-    "longText": "../public/texts/afaslive/dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvcG93ZXJ3b2xm.html",
-    "image": "../public/event-images/afaslive/dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvcG93ZXJ3b2xm",
+    "start": "2024-04-13T14:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/submit-fest/",
+    "title": "Submit Fest: Hippotraktor ",
+    "location": "baroeg",
+    "price": 21,
+    "shortText": " Half Me  +  Confessions Of A Traitor  +  Forlorn  +  Changing Tides  +  3 Eyed Kids  +  Sugar Spine Submit Fest is het indoor festival met de beste ‘up and coming’ en ‘breaking through’ metal acts van regionale, nationale en internationale bodem.",
+    "longText": "../public/texts/baroeg/cm9lZy5ubC9wcm9kdWN0aWUvc3VibWl0LWZlc3Qv.html",
+    "image": "../public/event-images/baroeg/cm9lZy5ubC9wcm9kdWN0aWUvc3VibWl0LWZlc3Qv",
     "soldOut": false,
-    "eventGenres": null,
+    "eventGenres": [
+      "metalcore",
+      "progressive"
+    ],
     "artists": {
-      "powerwolf": {
-        "s": "5HFkc3t0HYETL4JeEbDB1v",
-        "l": "powerwolf",
-        "g": [
-          "german metal",
-          "german power metal",
-          "power metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-10-28T20:00:00",
-    "start": "2024-10-28T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/gavin-degraw",
-    "title": "Gavin DeGraw",
-    "location": "afaslive",
-    "price": 54.88,
-    "longText": "../public/texts/afaslive/ZmFzbGl2ZS5ubC9hZ2VuZGEvZ2F2aW4tZGVncmF3.html",
-    "image": "../public/event-images/afaslive/ZmFzbGl2ZS5ubC9hZ2VuZGEvZ2F2aW4tZGVncmF3",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "gavindegraw": {
-        "s": "5DYAABs8rkY9VhwtENoQCz",
+      "changingtides": {
+        "s": "4FDVjqH3XqrmfVpB4N5Hqu",
+        "l": "changing%20tides",
+        "g": []
+      },
+      "confessionsofatraitor": {
+        "s": "3XxTiLhFGMsWvVfpZ7KlF9",
         "l": null,
         "g": [
-          "neo mellow",
-          "pop rock"
+          "uk metalcore"
         ]
       }
     }
+  },
+  {
+    "start": "2024-04-20T14:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/everyone-rocks-2/",
+    "title": "Everyone Rocks: Scream Tonight ",
+    "location": "baroeg",
+    "price": 9,
+    "shortText": " Niemand Minder Sessieband  +  Iconic World (Misiconi) karaoke  +  BBQ Voelt jouw beperking als een belemmering? Nu niet meer!",
+    "longText": "../public/texts/baroeg/bmwvcHJvZHVjdGllL2V2ZXJ5b25lLXJvY2tzLTIv.html",
+    "image": "../public/event-images/baroeg/bmwvcHJvZHVjdGllL2V2ZXJ5b25lLXJvY2tzLTIv",
+    "soldOut": false,
+    "eventGenres": [
+      "rock-alternative"
+    ],
+    "artists": null
+  },
+  {
+    "start": "2024-04-21T15:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/live-hard-or-die-fest-born-from-pain/",
+    "title": "Live Hard Or Die Fest: Born From Pain ",
+    "location": "baroeg",
+    "price": 2100,
+    "shortText": " Angel Crew  +  Lies!  +  Becoming A.D  +  Get Some  +  From The Heart Zware core met zes bands voor pitbeesten.",
+    "longText": "../public/texts/baroeg/cmQtb3ItZGllLWZlc3QtYm9ybi1mcm9tLXBhaW4v.html",
+    "image": "../public/event-images/baroeg/cmQtb3ItZGllLWZlc3QtYm9ybi1mcm9tLXBhaW4v",
+    "soldOut": false,
+    "eventGenres": [
+      "hardcore"
+    ],
+    "artists": {
+      "bornfrompain": {
+        "s": "29BUhhygenDpPj5pat2oOR",
+        "l": "born%20from%20pain",
+        "g": [
+          "beatdown",
+          "hardcore",
+          "lowlands hardcore"
+        ]
+      },
+      "pain": {
+        "s": "0AuW7OCyKfFrsMbtHrYgIV",
+        "l": "pain",
+        "g": [
+          "gangster rap",
+          "hip hop",
+          "rap rock",
+          "west coast rap"
+        ]
+      },
+      "becomingad": {
+        "s": null,
+        "l": "Belgium",
+        "g": [
+          "death/thrash metal/hardcore",
+          "hardcore"
+        ]
+      },
+      "getsome": {
+        "s": "0aOu4FuWEaa3sO42vjPOSt",
+        "l": null,
+        "g": [
+          "norwegian hip hop"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2024-04-27T14:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/koningsdag-festival-hard-skin/",
+    "title": "Koningsdag festival: Soet and the Suits ",
+    "location": "baroeg",
+    "price": null,
+    "shortText": " Hard Skin  +  Subrockers  +  Pigs Gratis tot het laat is.",
+    "longText": "../public/texts/baroeg/a29uaW5nc2RhZy1mZXN0aXZhbC1oYXJkLXNraW4v.html",
+    "image": "../public/event-images/baroeg/a29uaW5nc2RhZy1mZXN0aXZhbC1oYXJkLXNraW4v",
+    "soldOut": false,
+    "eventGenres": [
+      "crossover",
+      "street punk",
+      "thrash metal"
+    ],
+    "artists": {
+      "pigs": {
+        "s": null,
+        "l": "United Kingdom",
+        "g": [
+          "stoner metal/hard rock"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2024-04-28T18:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/veneration-of-the-dead-part-x-blasphemy-wrok/",
+    "title": "Veneration Of The Dead part X: Blasphemy ",
+    "location": "baroeg",
+    "price": 24,
+    "shortText": " Wrok  +  Kerberos Een zeldzame kans om Blasphemy te zien.",
+    "longText": "../public/texts/baroeg/aGUtZGVhZC1wYXJ0LXgtYmxhc3BoZW15LXdyb2sv.html",
+    "image": "../public/event-images/baroeg/aGUtZGVhZC1wYXJ0LXgtYmxhc3BoZW15LXdyb2sv",
+    "soldOut": false,
+    "eventGenres": [
+      "black"
+    ],
+    "artists": {
+      "blasphemy": {
+        "s": "6LjCtCPlOe8GkYz09XeQH5",
+        "l": "Canada",
+        "g": [
+          "black death",
+          "black metal",
+          "black thrash",
+          "black/death metal"
+        ]
+      },
+      "wrok": {
+        "s": "5ratcXOB2DgvmCcXqxRBBt",
+        "l": "Netherlands",
+        "g": [
+          "black metal"
+        ]
+      },
+      "kerberos": {
+        "s": "6PN3ScMSwcOXPIImBVdMid",
+        "l": "Switzerland",
+        "g": [
+          "symphonic death metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2024-05-12T15:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-soundville-riffsniffer-presents-godsleep-nectarfish/",
+    "title": "Baroeg On Tour @SoundVille: Riffsniffer presents: Godsleep ",
+    "location": "baroeg",
+    "price": 14,
+    "shortText": " Nectarfish Baroeg On Tour @SoundVille.",
+    "longText": "../public/texts/baroeg/LXByZXNlbnRzLWdvZHNsZWVwLW5lY3RhcmZpc2gv.html",
+    "image": "../public/event-images/baroeg/LXByZXNlbnRzLWdvZHNsZWVwLW5lY3RhcmZpc2gv",
+    "soldOut": false,
+    "eventGenres": [
+      "stoner"
+    ],
+    "artists": null
+  },
+  {
+    "start": "2024-05-25T19:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-grounds-ufomammut-the-machine/",
+    "title": "Baroeg On Tour @Grounds: Ufomammut ",
+    "location": "baroeg",
+    "price": 19,
+    "shortText": " The Machine Baroeg On Tour.",
+    "longText": "../public/texts/baroeg/Z3JvdW5kcy11Zm9tYW1tdXQtdGhlLW1hY2hpbmUv.html",
+    "image": "../public/event-images/baroeg/Z3JvdW5kcy11Zm9tYW1tdXQtdGhlLW1hY2hpbmUv",
+    "soldOut": false,
+    "eventGenres": [
+      "doom",
+      "psychedelic",
+      "stoner"
+    ],
+    "artists": {
+      "ufomammut": {
+        "s": "105vC0oJ985P5G3g36EosL",
+        "l": "ufomammut",
+        "g": [
+          "doom metal",
+          "drone metal",
+          "italian doom metal",
+          "italian metal",
+          "italian stoner rock",
+          "post-doom metal",
+          "post-metal",
+          "sludge metal",
+          "space rock",
+          "stoner metal",
+          "stoner rock"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2024-06-01T20:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-80s-more-soundville/",
+    "title": "Baroeg On Tour: 80’s ",
+    "location": "baroeg",
+    "price": 12.5,
+    "shortText": " More! @SoundVille: Smithsonics Nieuwe Nederlandse The Smiths tributeband.",
+    "longText": "../public/texts/baroeg/Zy1vbi10b3VyLTgwcy1tb3JlLXNvdW5kdmlsbGUv.html",
+    "image": "../public/event-images/baroeg/Zy1vbi10b3VyLTgwcy1tb3JlLXNvdW5kdmlsbGUv",
+    "soldOut": false,
+    "eventGenres": [
+      "alternative",
+      "tribute"
+    ],
+    "artists": null
+  },
+  {
+    "start": "2024-07-02T19:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-maassilo-vader-bio-cancer-warside/",
+    "title": "Baroeg On Tour @Maassilo: Vader ",
+    "location": "baroeg",
+    "price": 26,
+    "shortText": " Bio-Cancer  +  Warside Vader In 2023 bestond de Poolse death metal legende 40 jaar. Dat werd uitgebreid gevierd…",
+    "longText": "../public/texts/baroeg/c2lsby12YWRlci1iaW8tY2FuY2VyLXdhcnNpZGUv.html",
+    "image": "../public/event-images/baroeg/c2lsby12YWRlci1iaW8tY2FuY2VyLXdhcnNpZGUv",
+    "soldOut": false,
+    "eventGenres": [
+      "death metal",
+      "thrash metal"
+    ],
+    "artists": null
+  },
+  {
+    "start": "2024-09-14T12:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/baroeg-open-air-2024/",
+    "title": "Baroeg Open Air 2024",
+    "location": "baroeg",
+    "price": 9.99,
+    "shortText": "Zaterdag 14 september 2024 vindt de vijftiende editie van Baroeg Open Air plaats in het Rotterdamse Zuiderpark.",
+    "longText": "../public/texts/baroeg/cm9kdWN0aWUvYmFyb2VnLW9wZW4tYWlyLTIwMjQv.html",
+    "image": "../public/event-images/baroeg/cm9kdWN0aWUvYmFyb2VnLW9wZW4tYWlyLTIwMjQv",
+    "soldOut": false,
+    "eventGenres": [
+      "alternative",
+      "electronic",
+      "metal",
+      "punk"
+    ],
+    "artists": null
   }
 ]
