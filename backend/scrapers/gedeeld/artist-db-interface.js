@@ -45,10 +45,26 @@ function nullAnswerObject(eventA, reasons) {
   };    
 }
 
+function errorAnswerObject(eventA, reasons, dbAnswer) {
+  const reasonsCopy = Array.isArray(reasons) ? reasons : [];
+  reasonsCopy.push(dbAnswer.reason);
+  return {
+    event: eventA,
+    success: false,
+    break: null,
+    reasons,
+    reason: reasons.reverse().join(', '),
+  };
+}
+
 export async function asyncIsAllowedEvent(event, reasons) {
   const reasonsCopy = Array.isArray(reasons) ? reasons : [];
   this.talkToDB(talkTitleAndSlug('getAllowedEvent', event));
   await this.checkDBhasAnswered();
+  if (this.lastDBAnswer.success === 'error') {
+    this.handleError(this.lastDBAnswer?.data?.error, this.lastDBAnswer.reason, 'close-thread');
+    return errorAnswerObject(event, reasons, this.lastDBAnswer);
+  }
   if (this.lastDBAnswer.success) {
     reasonsCopy.push(this.lastDBAnswer.reason);
     this.skipFurtherChecks.push(event.workTitle);
@@ -63,6 +79,10 @@ export async function asyncIfNotAllowedRefuse(event, reasons) {
   const reasonsCopy = Array.isArray(reasons) ? reasons : [];
   
   const isAllowed = await this.asyncIsAllowedEvent(event, reasons);
+  if (this.lastDBAnswer.success === 'error') {
+    this.handleError(this.lastDBAnswer?.data?.error, this.lastDBAnswer.reason, 'close-thread');
+    return errorAnswerObject(event, reasons, this.lastDBAnswer);
+  }  
   reasonsCopy.push(this.lastDBAnswer.reason);
   if (!isAllowed.success) {
     reasonsCopy.push(`🟥 because not present in allowed: ifNotAllowedRefuse sa1`);
@@ -85,6 +105,10 @@ export async function asyncIsRefused(event, reasons) {
   const reasonsCopy = Array.isArray(reasons) ? reasons : [];
   this.talkToDB(talkTitleAndSlug('getRefused', event));
   await this.checkDBhasAnswered();
+  if (this.lastDBAnswer.success === 'error') {
+    this.handleError(this.lastDBAnswer?.data?.error, this.lastDBAnswer.reason, 'close-thread');
+    return errorAnswerObject(event, reasons, this.lastDBAnswer);
+  }
   if (this.lastDBAnswer.success) {
     reasonsCopy.push(this.lastDBAnswer.reason);
     return failureAnswerObject(event, reasonsCopy, true);
@@ -105,6 +129,10 @@ export async function asyncForbiddenTerms(event, reasons) {
   });
   await this.checkDBhasAnswered();
   reasonsCopy.push(this.lastDBAnswer.reason);
+  if (this.lastDBAnswer.success === 'error') {
+    this.handleError(this.lastDBAnswer?.data?.error, this.lastDBAnswer.reason, 'close-thread');
+    return errorAnswerObject(event, reasons, this.lastDBAnswer);
+  }
   if (this.lastDBAnswer.success) {
     this.talkToDB({
       type: 'db-request',
@@ -132,6 +160,10 @@ export async function asyncGoodTerms(event, reasons) {
   });
   await this.checkDBhasAnswered();
   this.skipFurtherChecks.push(event.workTitle);
+  if (this.lastDBAnswer.success === 'error') {
+    this.handleError(this.lastDBAnswer?.data?.error, this.lastDBAnswer.reason, 'close-thread');
+    return errorAnswerObject(event, reasons, this.lastDBAnswer);
+  }
   if (this.lastDBAnswer.success) {
     reasonsCopy.push(this.lastDBAnswer.reason);
     this.talkToDB({
@@ -167,6 +199,10 @@ export async function asyncExplicitEventCategories(event, reasons) {
     },
   });
   await this.checkDBhasAnswered();
+  if (this.lastDBAnswer.success === 'error') {
+    this.handleError(this.lastDBAnswer?.data?.error, this.lastDBAnswer.reason, 'close-thread');
+    return errorAnswerObject(event, reasons, this.lastDBAnswer);
+  }
   if (this.lastDBAnswer.success) {
     // this.dirtyLog({
     //   'last db answer check explicit genres':'rue',
@@ -218,7 +254,10 @@ export async function asyncSpotifyConfirmation(event, reasons) {
     },
   });
   await this.checkDBhasAnswered();
- 
+  if (this.lastDBAnswer.success === 'error') {
+    this.handleError(this.lastDBAnswer?.data?.error, this.lastDBAnswer.reason, 'close-thread');
+    return errorAnswerObject(event, reasons, this.lastDBAnswer);
+  }
   if (this.lastDBAnswer.success) {
     reasonsCopy.push(this.lastDBAnswer.reason);
     this.skipFurtherChecks.push(event.workTitle);
@@ -265,6 +304,10 @@ export async function asyncMetalEncyclopediaConfirmation(event, reasons) {
     },
   });
   await this.checkDBhasAnswered();
+  if (this.lastDBAnswer.success === 'error') {
+    this.handleError(this.lastDBAnswer?.data?.error, this.lastDBAnswer.reason, 'close-thread');
+    return errorAnswerObject(event, reasons, this.lastDBAnswer);
+  }
   reasonsCopy.push(this.lastDBAnswer.reason);
 
   if (this.lastDBAnswer.success) {
@@ -319,7 +362,12 @@ export async function asyncHarvestArtists(event, reasons) {
   reasonsCopy.push(`⬜ harvest gaande sb3`);
   return nullAnswerObject(event, reasons);
 }
-
+/**
+ * Zoek niet alleen maar geeft het ook terug.
+ * Niet direct geschikt voor async checkers
+ * @param {*} mergedEvent 
+ * @returns 
+ */
 export async function asyncScanTitleForAllowedArtists(mergedEvent) {
   this.talkToDB({
     type: 'db-request',
@@ -332,34 +380,30 @@ export async function asyncScanTitleForAllowedArtists(mergedEvent) {
     },
   });    
   await this.checkDBhasAnswered();
+  if (this.lastDBAnswer.success === 'error') {
+    this.handleError(this.lastDBAnswer?.data?.error, this.lastDBAnswer.reason, 'close-thread');
+    return errorAnswerObject(mergedEvent, [], this.lastDBAnswer);
+  }
   return { ...this.lastDBAnswer };
 }
 
+export async function asyncHasAllowedArtist(event, reasons) {
+  const reasonsCopy = Array.isArray(reasons) ? reasons : [];
+  await this.asyncScanTitleForAllowedArtists(event);
+  await this.checkDBhasAnswered();
+  this.skipFurtherChecks.push(event.workTitle);
+  reasonsCopy.push(this.lastDBAnswer.reason);
+  if (this.lastDBAnswer.success === 'error') {
+    this.handleError(this.lastDBAnswer?.data?.error, this.lastDBAnswer.reason, 'close-thread');
+    return errorAnswerObject(event, reasons, this.lastDBAnswer);
+  }
+  if (this.lastDBAnswer.success) {
+    return successAnswerObject(event, reasonsCopy, true);
+  }
+  return nullAnswerObject(event, reasonsCopy);
+}
+
 export default null;
-    
-//   async asyncCheckEmptySuccess(event, reasons) {
-//     const reasonsCopy = Array.isArray(reasons) ? reasons : [];
-//     reasonsCopy.push('empty success');
-//     return {
-//       break: true,
-//       success: true,
-//       event,
-//       reasons: reasonsCopy,
-//       reason: reasonsCopy.reverse().join(', '),
-//     };    
-//   },
-    
-//   async asyncCheckEmptyFailure(event, reasons) {
-//     const reasonsCopy = Array.isArray(reasons) ? reasons : [];
-//     reasonsCopy.push('empty failure');
-//     return {
-//       break: true,
-//       success: false,
-//       event,
-//       reasons: reasonsCopy,
-//       reason: reasonsCopy.reverse().join(', '),
-//     };    
-//   },
     
 //   async asyncCheckIsRock(event, reasons) {
 //     const reasonsCopy = Array.isArray(reasons) ? reasons : [];
@@ -388,243 +432,6 @@ export default null;
 //       reasons: reasonsCopy,
 //     };    
 //   },
-    
-//   async asyncCheckIsEvent(event, reasons) {
-//     const reasonsCopy = Array.isArray(reasons) ? reasons : [];
-//     this.talkToDB({
-//       type: 'db-request',
-//       subtype: 'isRockEvent',
-//       messageData: {
-//         string: event.title,
-//       },
-//     });
-//     await this.checkDBhasAnswered();
-//     reasonsCopy.push(this.lastDBAnswer.reason);
-//     if (this.lastDBAnswer.success) {
-//       this.skipFurtherChecks.push(event.title);
-//       return {
-//         event,
-//         reasons: reasonsCopy,
-//         success: true,
-//         break: true,
-//         reason: reasonsCopy.reverse().join(', '),
-//       };
-//     } 
-//     return {
-//       break: false,
-//       success: null,
-//       event,
-//       reasons: reasonsCopy,
-//     };    
-//   },
-        
-//   async asyncGetArtists(event, reasons) {
-//     const eventCopy = { ...event };
-//     this.talkToDB({
-//       type: 'db-request',
-//       subtype: 'getArtistsFromEventTitle',
-//       messageData: {
-//         string: eventCopy.title,
-//       },
-//     });
-//     await this.checkDBhasAnswered();
-//     eventCopy.artists = this.lastDBAnswer.artists;
-//     return {
-//       event:eventCopy,
-//       reasons,
-//       success: !!this.lastDBAnswer.success,
-//       break: false,
-//       reason: reasons.reverse().join(', '),
-//     };
-//   },
-// };
-
-//   /**
-//    * Loopt over terms.goodCategories en kijkt of ze in
-//    * een bepaalde text voorkomen, standaard bestaande uit de titel en de shorttext van
-//    * de event.
-//    *
-//    * @param {*} event
-//    * @param {string} [keysToCheck=['title', 'shortText']]
-//    * @return {event, {bool} succes, {string} reason}
-//    * @memberof AbstractScraper
-//    */
-//   async hasGoodTerms(event, keysToCheck) {
-//     const keysToCheck2 = keysToCheck || ['title', 'shortText'];
-//     let combinedTextToCheck = '';
-//     for (let i = 0; i < keysToCheck2.length; i += 1) {
-//       try {
-//         const v = event[keysToCheck2[i]];
-//         if (v) {
-//           combinedTextToCheck += v.toLowerCase();
-//         }
-//       } catch (error) {
-//         this.dirtyDebug(
-//           {
-//             fout: `fout maken controle text met keys, key${keysToCheck2[i]}`,
-//             toDebug: {
-//               event,
-//             },
-//           },
-//           'hasGoodTerms',
-//         );
-//       }
-//     }
-
-//     const hasGoodTerm = terms.goodCategories.find((goodTerm) =>
-//       combinedTextToCheck.includes(goodTerm),
-//     );
-
-//     if (hasGoodTerm) {
-//       return {
-//         event,
-//         success: true,
-//         reason: `Goed in ${keysToCheck2.join('')}`,
-//       };
-//     }
-
-//     return {
-//       event,
-//       success: false,
-//       reason: `Geen bevestiging gekregen uit ${keysToCheck2.join(';')} ${combinedTextToCheck}`,
-//     };
-//   }
-
-//   /**
-//    * Loopt over terms.forbiddenTerms en kijkt of ze in
-//    * een bepaalde text voorkomen, standaard bestaande uit de titel en de shorttext van
-//    * de event.
-//    *
-//    * @param {*} event
-//    * @param {string} [keysToCheck=['title', 'shortText']]
-//    * @return {event, {bool} succes, {string} reason}
-//    * @memberof AbstractScraper
-//    */
-//   async hasForbiddenTerms(event, keysToCheck) {
-//     const keysToCheck2 = Array.isArray(keysToCheck) ? keysToCheck : ['title', 'shortText'];
-//     let combinedTextToCheck = '';
-//     for (let i = 0; i < keysToCheck2.length; i += 1) {
-//       const v = event[keysToCheck2[i]];
-//       if (v) {
-//         combinedTextToCheck += `${v} `;
-//       }
-//     }
-//     combinedTextToCheck = combinedTextToCheck.toLowerCase();
-//     const hasForbiddenTerm = terms.forbidden.find((forbiddenTerm) =>
-//       combinedTextToCheck.includes(forbiddenTerm),
-//     );
-//     if (hasForbiddenTerm) {
-//       return {
-//         event,
-//         success: true,
-//         reason: `verboden genres gevonden in ${keysToCheck2.join('; ')}`,
-//       };
-//     }
-
-//     return {
-//       event,
-//       success: false,
-//       reason: `verboden genres niet gevonden in ${keysToCheck2.join('; ')}.`,
-//     };
-//   }
-
-//   saveRefusedTitle(title) {
-//     this.rockRefuseList = `${title}\n${this.rockRefuseList}`;
-//     this.rockRefuseListNew = `${title}\n${this.rockRefuseListNew}`;
-//   }
-
-//   saveAllowedTitle(title) {
-//     this.rockAllowList = `${title}\n${this.rockAllowList}`;
-//     this.rockAllowListNew = `${title}\n${this.rockAllowListNew}`;
-//   }
-
-//   async saveRockRefusedAllowedToFile() {
-//     if (this.rockAllowListNew) {
-//       const huiLijst = fs.readFileSync(fsDirections.isRockAllow, 'utf-8');
-//       fs.writeFileSync(fsDirections.isRockAllow, `${this.rockAllowListNew}\n${huiLijst}`, 'utf-8');
-//     }
-//     if (this.rockRefuseListNew) {
-//       const huiLijst = fs.readFileSync(fsDirections.isRockRefuse, 'utf-8');
-//       fs.writeFileSync(
-//         fsDirections.isRockRefuse,
-//         `${this.rockRefuseListNew}\n${huiLijst}`,
-//         'utf-8',
-//       );
-//     }
-//     return true;
-//   }
-
-//   async rockAllowListCheck(event, title) {
-//     const workingTitle = title || this.cleanupEventTitle(event.title);
-//     const workingTitleInRockAllowList = this.rockAllowList.includes(workingTitle);
-//     const fullTitleInRockAllowList = this.rockAllowList.includes(event.title);
-//     const success = workingTitleInRockAllowList || fullTitleInRockAllowList;
-//     return {
-//       event,
-//       success,
-//       reason: `${workingTitle} ${success ? 'in' : 'NOT in'} allowed 🛴 list`,
-//     };
-//   }
-
-//   async rockRefuseListCheck(event, title) {
-//     const workingTitle = title || this.cleanupEventTitle(event.title);
-//     const workingTitleInRockRefuseList = this.rockRefuseList.includes(workingTitle);
-//     const fullTitleInRockRefuseList = this.rockRefuseList.includes(event.title);
-//     const success = workingTitleInRockRefuseList || fullTitleInRockRefuseList;
-//     return {
-//       event,
-//       success,
-//       reason: `${workingTitle} ${success ? 'in' : 'NOT in'} refuse 🚮 list`,
-//     };
-//   }
-
-//   async metalEncyclopedia(event, title) {
-//     const workingTitle = title || this.cleanupEventTitle(event.title);
-
-//     const MetalEncFriendlyTitle = workingTitle.replace(/\s/g, '_');
-//     const metalEncUrl = `https://www.metal-archives.com/search/ajax-band-search/?field=name&query=${MetalEncFriendlyTitle}`;
-//     const foundInMetalEncyclopedia = await fetch(metalEncUrl)
-//       .then((result) => result.json())
-//       .then((parsedJson) => {
-//         if (parsedJson.iTotalRecords < 1) return false;
-//         const bandNamesAreMainTitle = parsedJson.aaData.some((bandData) => {
-//           let match;
-//           try {
-//             match = bandData[0].match(/>(.*)<\//);
-//             if (Array.isArray(match) && match.length > 1) {
-//               return match[1].toLowerCase() === workingTitle;
-//             }
-//           } catch (error) {
-//             return false;
-//           }
-//           return false;
-//         });
-//         return bandNamesAreMainTitle;
-//       })
-//       .catch((metalEncError) => {
-//         this.handleError(metalEncError, `<a href='${event?.venueEventUrl}' class='error-link get-page-info-timeout'>singlePage ${workerData.name} metal enc. error</a>`);
-//         return {
-//           event,
-//           success: false,
-//           url: metalEncUrl,
-//           reason: metalEncError.message,
-//         };
-//       });
-//     if (foundInMetalEncyclopedia) {
-//       return {
-//         event,
-//         success: true,
-//         url: metalEncUrl,
-//         reason: `found in <a class='single-event-check-reason metal-encyclopedie metal-encyclopedie--success' href='${metalEncUrl}'>metal encyclopedia</a>`,
-//       };
-//     }
-//     return {
-//       success: false,
-//       url: metalEncUrl,
-//       reason: 'no result metal enc',
-//       event,
-//     };
-//   }
 
 //   async wikipedia(event, title) {
 //     const workingTitle = title || this.cleanupEventTitle(event.title);
