@@ -75,7 +75,7 @@ export default class Artists {
   /**
    * of in die persistentie functie fs write file
    */
-  nietSchrijven = false;
+  nietSchrijven = true;
 
   constructor(conf) {
     this.modelPath = conf.modelPath;
@@ -174,6 +174,16 @@ export default class Artists {
         } 
       }
       return this.hasForbidden(message.data.string);
+    }
+
+    if (message.request === 'hasGood') {
+      if (this.typeCheckInputFromScrapers) {
+        const hasString = Object.prototype.hasOwnProperty.call(parsedMessage.data, 'string');
+        if (!hasString) {
+          return this.error(Error('geen string om te doorzoeken'));
+        } 
+      }
+      return this.hasGood(message.data.string);
     }
     
     if (message.request === 'checkExplicitEventCategories') {
@@ -425,9 +435,9 @@ export default class Artists {
       });
     }
     return this.post({
-      success: !!isForbidden,
+      success: null,
       data: isForbidden,
-      reason: `🟩 no forbidden term aa8`,
+      reason: `⬜ no forbidden term aa8`,
     });
   }  
 
@@ -444,13 +454,13 @@ export default class Artists {
       return this.post({
         success: !!isGood,
         data: isGood,
-        reason: `🟥 ${isGood} is good term aa9`,
+        reason: `🟩 ${isGood} is good term aa9`,
       });
     }
     return this.post({
-      success: !!isGood,
+      success: null,
       data: isGood,
-      reason: `🟩 no good term ab1`,
+      reason: `⬜ no good term ab1`,
     });
   }    
 

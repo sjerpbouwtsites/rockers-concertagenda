@@ -50,7 +50,7 @@ function errorAnswerObject(eventA, reasons, dbAnswer) {
   reasonsCopy.push(dbAnswer.reason);
   return {
     event: eventA,
-    success: false,
+    success: 'error',
     break: null,
     reasons,
     reason: reasons.reverse().join(', '),
