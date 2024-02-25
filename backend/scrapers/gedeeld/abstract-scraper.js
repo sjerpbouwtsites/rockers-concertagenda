@@ -17,7 +17,7 @@ import {
   asyncIsAllowedEvent, asyncIsRefused, asyncForbiddenTerms, 
   asyncSaveAllowedEvent, asyncHarvestArtists, asyncScanTitleForAllowedArtists,
   asyncSpotifyConfirmation, asyncGoodTerms, asyncExplicitEventCategories,
-  asyncMetalEncyclopediaConfirmation, asyncIfNotAllowedRefuse,
+  asyncMetalEncyclopediaConfirmation, asyncIfNotAllowedRefuse, asyncHasAllowedArtist,
 } from './artist-db-interface.js';
 
 // #endregion                                              IMPORTS
@@ -83,6 +83,8 @@ export default class AbstractScraper extends ScraperConfig {
     this.asyncMetalEncyclopediaConfirmation.bind(this);
     this.asyncIfNotAllowedRefuse = asyncIfNotAllowedRefuse;
     this.asyncIfNotAllowedRefuse.bind(this);
+    this.asyncHasAllowedArtist = asyncHasAllowedArtist;
+    this.asyncHasAllowedArtist.bind(this);
   }
   // #endregion                                                CONSTRUCTOR & INSTALL
 
@@ -425,8 +427,9 @@ export default class AbstractScraper extends ScraperConfig {
       const checkResult = await this.mainPageAsyncCheck(eventToCheck);
       const workingTitle = this.cleanupEventTitle(eventToCheck.title);
 
-      if (!checkResult.reason && debugSettings.debugRawEventAsyncCheck) {
-        this.dirtyLog(checkResult, 'geen reason meegegeven');
+      if (checkResult.success === 'error') {
+        // artist-db-interface gooit al de thread dicht
+        // maar dat je weet dat success ook error kan zijn.
       }
 
       if (checkResult.success) {
@@ -460,9 +463,6 @@ export default class AbstractScraper extends ScraperConfig {
         error,
         `rawEventsAsyncCheck faal met ${generatedEvent?.value?.title}`,
         'close-thread',
-        {
-          generatedEvent,
-        },
       );
     }
     return true;
@@ -1087,6 +1087,7 @@ export default class AbstractScraper extends ScraperConfig {
       spotifyConfirmation: 'asyncSpotifyConfirmation', 
       metalEncyclopediaConfirmation: 'asyncMetalEncyclopediaConfirmation', 
       explicitEventGenres: 'asyncExplicitEventCategories',
+      hasAllowedArtist: 'asyncHasAllowedArtist',
       // refused: 'asyncCheckIsRefused',
       // emptySuccess: 'asyncCheckEmptySuccess',
       // emptyFailure: 'asyncCheckEmptyFailure',
