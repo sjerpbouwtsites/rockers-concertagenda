@@ -96,10 +96,6 @@ export default class MonitorField {
   }
     
   updateSingleEventCheckList(updateData) {
-    console.log({
-      updateData1: 'ja',
-      updateData,
-    });
     const debug = updateData.messageData.content.debug ?? null;
     if (!debug) throw new Error('geen debug info');
     const newDiv = document.createElement('div');
