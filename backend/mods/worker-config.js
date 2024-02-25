@@ -29,18 +29,17 @@ export const workerConfig = {
   // bibelot: { workerCount: 1, workerConcurrent: 1, forceSet: 1 },
 
   // cpunt: { workerCount: 1, workerConcurrent: 1, forceSet: 1 },
-  dbs: {
-    workerCount: 4,
-    workerConcurrent: 4,
-    CPUReq: 'low',
-    forceSet: 1,
-  },
-  // deflux: { workerCount: 1, workerConcurrent: 1, forceSet: 2 },
-  // dehelling: {
-  //   workerCount: 1,
-  //   workerConcurrent: 1,
-  //   forceSet: 2,
+  // dbs: {
+  //   workerCount: 4,
+  //   workerConcurrent: 4,
+  //   CPUReq: 'low',
+  //   forceSet: 1,
   // },
+  dehelling: {
+    workerCount: 1,
+    workerConcurrent: 1,
+    forceSet: 2,
+  },
   // depul: { workerCount: 2, workerConcurrent: 2, forceSet: 2 },
   // doornroosje: {
   //   workerCount: 2,
@@ -103,19 +102,20 @@ export const workerConfig = {
   // volt: { workerCount: 1, workerConcurrent: 1, forceSet: 6 },
   // willemeen: { workerCount: 2, workerConcurrent: 2, forceSet: 6 },
 };
+// deflux: { workerCount: 1, workerConcurrent: 1, forceSet: 2 },
 // boerderij: {
 //   workerCount: 1,
 //   workerConcurrent: 1,
 //   forceSet: 1,
 // },
 // ticketmaster: {
-//   workerCount: 2,
-//   workerConcurrent: 1,
-//   forceSet: 6,
-// },
-
+  //   workerCount: 2,
+  //   workerConcurrent: 1,
+  //   forceSet: 6,
+  // },
+  
 export const workerNames = Object.keys(workerConfig);
-
+  
 class WorkerListConf {
   data = [];
 
