@@ -290,6 +290,12 @@ export function mapToStart(event) {
 
 export function mapToShortDate(event) {
   const b = event?.start ? event.start : event.startDate;
+  if (!b) {
+    event.errors.push({
+      error: new Error(`geen start of startDate beschikbaar in mapToShortDate`),
+    });
+    return event;
+  }
   // eslint-disable-next-line no-param-reassign
   event.shortDate = b.substring(2, 10).replaceAll('-', '');
   return event;
