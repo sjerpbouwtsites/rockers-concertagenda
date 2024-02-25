@@ -656,7 +656,11 @@ export default class AbstractScraper extends ScraperConfig {
     };
     this._invalidEvents.push(toRegister);
 
-    if (singleEventPage && !singleEventPage.isClosed()) await singleEventPage.close();
+    if (this._s?.launchOptions?.headless) {
+      if (singleEventPage && !singleEventPage.isClosed()) await singleEventPage.close();
+    } else if (this._s?.launchOptions?.headless === false && useableEventsList.length) {
+      this.closeBrowser();
+    }
 
     return useableEventsList.length
       ? this.processSingleMusicEvent(useableEventsList)
