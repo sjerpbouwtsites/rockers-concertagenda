@@ -100,8 +100,8 @@ function _mapToTime(event, key, required) {
         error: isTimeError,
         remarks: `isTimeError ${mapKey} ${event.anker}`,
         toDebug: {
-          [`${mapKey}`]: event[mapKey],
-          event,
+          [`${mapKey}`]: `${event[mapKey]}`,
+          event: { ...event },
           match,
         },
       });
@@ -110,7 +110,9 @@ function _mapToTime(event, key, required) {
     event.errors.push({
       error: arrayCheckError,
       remarks: `Array check ${mapKey} ${event.anker}`,
-      toDebug: JSON.parse(JSON.stringify(event)),
+      toDebug: {
+        [`${mapKey}`]: `${event[mapKey]}`,
+      },
     });
   }
 
@@ -142,7 +144,7 @@ export function mapToStartDate(event, regexMode, months) {
     event.errors.push({
       error: new Error('map to start date falsy'),
       remarks: 'mapToStartDate is falsy',
-      toDebug: event.mapToStartDate,
+      toDebug: `${event.mapToStartDate}`,
     });
     return event;
   }
@@ -154,7 +156,7 @@ export function mapToStartDate(event, regexMode, months) {
       event.errors.push({
         error: new Error(`datematch dag-maandNaam mode`),
         toDebug: {
-          string: event.mapToStartDate,
+          string: `${event.mapToStartDate}`,
           res: dateM,
         },
       });
