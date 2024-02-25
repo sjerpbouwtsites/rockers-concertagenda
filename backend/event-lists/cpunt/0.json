@@ -1,93 +1,150 @@
 [
   {
-    "door": "2023-12-01T20:00:00",
-    "start": "2023-12-01T20:00:00",
-    "venueEventUrl": "https://www.cpunt.nl/agenda/the-casualties",
-    "title": "The Casualties ",
+    "door": "2024-03-01T19:00:00",
+    "start": "2024-03-01T19:30:00",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/marcelfest",
+    "title": "Marcelfest",
     "location": "cpunt",
-    "price": 22.5,
-    "shortText": "",
-    "longText": "../public/texts/cpunt/Y3B1bnQubmwvYWdlbmRhL3RoZS1jYXN1YWx0aWVz.html",
-    "image": "../public/event-images/cpunt/Y3B1bnQubmwvYWdlbmRhL3RoZS1jYXN1YWx0aWVz",
+    "price": 5,
+    "shortText": "Ramage Inc., Tiberius, Golden Caves en Dreamwalkers Inc.",
+    "longText": "../public/texts/cpunt/d3d3LmNwdW50Lm5sL2FnZW5kYS9tYXJjZWxmZXN0.html",
+    "image": "../public/event-images/cpunt/d3d3LmNwdW50Lm5sL2FnZW5kYS9tYXJjZWxmZXN0",
     "soldOut": false,
-    "unavailable": false
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
   },
   {
-    "door": "2023-12-08T20:30:00",
-    "start": "2023-12-08T20:30:00",
-    "venueEventUrl": "https://www.cpunt.nl/agenda/frisse-duyck-kalaallit-nunaat-strangeways-boy",
-    "title": "Frisse Duyck - Kalaallit Nunaat, Strangeways ",
+    "door": "2024-03-16T20:00:00",
+    "start": "2024-03-16T20:30:00",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/bittersweethearts-joy-killed-the-duke-oxblood",
+    "title": "Bittersweethearts",
     "location": "cpunt",
-    "price": 7.5,
-    "shortText": " Boycry  ",
-    "longText": "../public/texts/cpunt/bGFhbGxpdC1udW5hYXQtc3RyYW5nZXdheXMtYm95.html",
-    "image": "../public/event-images/cpunt/bGFhbGxpdC1udW5hYXQtc3RyYW5nZXdheXMtYm95",
+    "price": 8.5,
+    "shortText": "Support: Joy Killed The Duke & OXBLOOD",
+    "longText": "../public/texts/cpunt/dHMtam95LWtpbGxlZC10aGUtZHVrZS1veGJsb29k.html",
+    "image": "../public/event-images/cpunt/dHMtam95LWtpbGxlZC10aGUtZHVrZS1veGJsb29k",
     "soldOut": false,
-    "unavailable": false
-  },
-  {
-    "door": "2024-01-25T15:00:00",
-    "start": "2024-01-25T15:00:00",
-    "venueEventUrl": "https://www.cpunt.nl/agenda/bier-bands-tonebusters",
-    "title": "Bier & Bands ",
-    "location": "cpunt",
-    "price": 0,
-    "shortText": "",
-    "longText": "../public/texts/cpunt/L2FnZW5kYS9iaWVyLWJhbmRzLXRvbmVidXN0ZXJz.html",
-    "image": "../public/event-images/cpunt/L2FnZW5kYS9iaWVyLWJhbmRzLXRvbmVidXN0ZXJz",
-    "soldOut": false,
-    "unavailable": false
-  },
-  {
-    "door": "2024-02-04T20:00:00",
-    "start": "2024-02-04T20:00:00",
-    "venueEventUrl": "https://www.cpunt.nl/agenda/ian-paice-purpendicular",
-    "title": "Ian Paice & Purpendicular",
-    "location": "cpunt",
-    "price": 38.5,
-    "shortText": "",
-    "longText": "../public/texts/cpunt/YWdlbmRhL2lhbi1wYWljZS1wdXJwZW5kaWN1bGFy.html",
-    "image": "../public/event-images/cpunt/YWdlbmRhL2lhbi1wYWljZS1wdXJwZW5kaWN1bGFy",
-    "soldOut": false,
-    "unavailable": false
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
   },
   {
     "door": "2024-04-04T20:00:00",
-    "start": "2024-04-04T20:00:00",
+    "start": "2024-04-04T20:30:00",
     "venueEventUrl": "https://www.cpunt.nl/agenda/electric-eel-shock",
     "title": "Electric Eel Shock",
     "location": "cpunt",
     "price": 17.5,
-    "shortText": "",
+    "shortText": "Support: Dikke Dennis & de Røckers",
     "longText": "../public/texts/cpunt/dC5ubC9hZ2VuZGEvZWxlY3RyaWMtZWVsLXNob2Nr.html",
     "image": "../public/event-images/cpunt/dC5ubC9hZ2VuZGEvZWxlY3RyaWMtZWVsLXNob2Nr",
     "soldOut": false,
-    "unavailable": false
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "electriceelshock": {
+        "s": "1lLY6EogC1Ph2Y6ZRjnkCY",
+        "l": "electric%20eel%20shock",
+        "g": [
+          "j-metal",
+          "japanese garage rock"
+        ]
+      }
+    }
   },
   {
     "door": "2024-04-06T19:00:00",
-    "start": "2024-04-06T19:00:00",
+    "start": "2024-04-06T19:30:00",
     "venueEventUrl": "https://www.cpunt.nl/agenda/oi-in-hoofddorp",
     "title": "Oi! in Hoofddorp",
     "location": "cpunt",
     "price": 17.5,
-    "shortText": "",
+    "shortText": "Crown Court, Savage Beat en Bent Out Of Shape",
     "longText": "../public/texts/cpunt/cHVudC5ubC9hZ2VuZGEvb2ktaW4taG9vZmRkb3Jw.html",
     "image": "../public/event-images/cpunt/cHVudC5ubC9hZ2VuZGEvb2ktaW4taG9vZmRkb3Jw",
     "soldOut": false,
-    "unavailable": false
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
   },
   {
     "door": "2024-04-21T19:00:00",
-    "start": "2024-04-21T19:00:00",
+    "start": "2024-04-21T20:30:00",
     "venueEventUrl": "https://www.cpunt.nl/agenda/the-exploited",
     "title": "The Exploited",
     "location": "cpunt",
     "price": null,
-    "shortText": "",
+    "shortText": "Support: Disturbance & Complaint",
     "longText": "../public/texts/cpunt/LmNwdW50Lm5sL2FnZW5kYS90aGUtZXhwbG9pdGVk.html",
     "image": "../public/event-images/cpunt/LmNwdW50Lm5sL2FnZW5kYS90aGUtZXhwbG9pdGVk",
     "soldOut": false,
-    "unavailable": false
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "disturbance": {
+        "s": "2YomKyw73NZ5n19DYzp0j8",
+        "l": "Spain",
+        "g": [
+          "dutch punk",
+          "lowlands hardcore",
+          "grindcore"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2024-05-04T20:10:00",
+    "start": "2024-05-04T20:45:00",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/dope-dod-bizarre",
+    "title": "Dope d.o.d. + bizarre",
+    "location": "cpunt",
+    "price": 22.5,
+    "shortText": "Trigger Treat Tour",
+    "longText": "../public/texts/cpunt/dW50Lm5sL2FnZW5kYS9kb3BlLWRvZC1iaXphcnJl.html",
+    "image": "../public/event-images/cpunt/dW50Lm5sL2FnZW5kYS9kb3BlLWRvZC1iaXphcnJl",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2024-09-07T15:00:00",
+    "start": "2024-09-07T16:00:00",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/oi-in-hoofddorp-festival",
+    "title": "Oi! in Hoofddorp Festival",
+    "location": "cpunt",
+    "price": 40,
+    "shortText": "Cockney Rejects, Crim, The Reapers en veel meer!",
+    "longText": "../public/texts/cpunt/Z2VuZGEvb2ktaW4taG9vZmRkb3JwLWZlc3RpdmFs.html",
+    "image": "../public/event-images/cpunt/Z2VuZGEvb2ktaW4taG9vZmRkb3JwLWZlc3RpdmFs",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "cockney rejects": {
+        "s": "4EfSXeVFbCEYIde3E9k4wr",
+        "l": "cockney%20rejects",
+        "g": [
+          "oi",
+          "punk"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2024-09-20T20:00:00",
+    "start": "2024-09-20T20:30:00",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/gbh-2024",
+    "title": "Gbh",
+    "location": "cpunt",
+    "price": 15,
+    "shortText": "Legendarische Britse punk uit Birmingham",
+    "longText": "../public/texts/cpunt/Ly93d3cuY3B1bnQubmwvYWdlbmRhL2diaC0yMDI0.html",
+    "image": "../public/event-images/cpunt/Ly93d3cuY3B1bnQubmwvYWdlbmRhL2diaC0yMDI0",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
   }
 ]

@@ -1,606 +1,150 @@
 [
   {
-    "start": "2024-02-27T13:00:00",
-    "venueEventUrl": "https://baroeg.nl/productie/stichting-fratsen-presenteert-sjeu-rocio-bolanos-del-pozo-fred-hoogsteder/",
-    "title": "Stichting Fratsen presenteert Sjeu: Rocío Bolaños del Pozo ",
-    "location": "baroeg",
-    "price": 0,
-    "shortText": " Fred Hoogsteder Ontdek nieuwe muziek van jong talent, haal herinneringen op én ontmoet je buurtgenoten!",
-    "longText": "../public/texts/baroeg/YW5vcy1kZWwtcG96by1mcmVkLWhvb2dzdGVkZXIv.html",
-    "image": "../public/event-images/baroeg/YW5vcy1kZWwtcG96by1mcmVkLWhvb2dzdGVkZXIv",
-    "soldOut": false,
-    "eventGenres": [
-      "Wijkactiviteit"
-    ],
-    "artists": null
-  },
-  {
-    "start": "2024-03-02T19:00:00",
-    "venueEventUrl": "https://baroeg.nl/productie/16299/",
-    "title": "CANCELLED: Art Stage Promotion presents: Flapjack ",
-    "location": "baroeg",
-    "price": null,
-    "shortText": "  Sztigar Bonko FFO: Suicidal Tendencies, Acid Drinkers, Luxtorpeda.",
-    "longText": "../public/texts/baroeg/czovL2Jhcm9lZy5ubC9wcm9kdWN0aWUvMTYyOTkv.html",
-    "image": "../public/event-images/baroeg/czovL2Jhcm9lZy5ubC9wcm9kdWN0aWUvMTYyOTkv",
-    "soldOut": false,
-    "eventGenres": [
-      "alternative"
-    ],
-    "artists": {
-      "flapjack": {
-        "s": "1mXhM9SmB8qZFonbfELPbk",
-        "l": "flapjack",
-        "g": []
-      }
-    }
-  },
-  {
-    "start": "2024-03-08T19:00:00",
-    "venueEventUrl": "https://baroeg.nl/productie/come-on-bring-in-the-night-brighter-death-now-deutsch-nepal-raison-detre/",
-    "title": "Come On, Bring In The Night: Brighter Death Now ",
-    "location": "baroeg",
-    "price": 16,
-    "shortText": " Desiderii Marginis  +  Raison d’Etre Bezwerende klanken van dark ambient en industrial.",
-    "longText": "../public/texts/baroeg/b3ctZGV1dHNjaC1uZXBhbC1yYWlzb24tZGV0cmUv.html",
-    "image": "../public/event-images/baroeg/b3ctZGV1dHNjaC1uZXBhbC1yYWlzb24tZGV0cmUv",
-    "soldOut": false,
-    "eventGenres": [
-      "dark ambient",
-      "industrial"
-    ],
-    "artists": {
-      "brighterdeathnow": {
-        "s": "6nwscCkgFKgB3X8OaMabvr",
-        "l": null,
-        "g": [
-          "ambient industrial",
-          "death industrial",
-          "martial industrial",
-          "noise",
-          "power electronics",
-          "swedish experimental"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2024-03-09T21:00:00",
-    "venueEventUrl": "https://baroeg.nl/productie/unhinged-burlesque-for-the-wild-at-heart/",
-    "title": "Unhinged: Burlesque For The Wild At Heart",
-    "location": "baroeg",
-    "price": 18.5,
-    "shortText": "Unhinged brengt een speciale en unieke Burlesque show naar Baroeg.",
-    "longText": "../public/texts/baroeg/cmxlc3F1ZS1mb3ItdGhlLXdpbGQtYXQtaGVhcnQv.html",
-    "image": "../public/event-images/baroeg/cmxlc3F1ZS1mb3ItdGhlLXdpbGQtYXQtaGVhcnQv",
-    "soldOut": false,
-    "eventGenres": [
-      "burlesque"
-    ],
-    "artists": {
-      "burlesqueforthewildatheart": {
-        "s": null,
-        "l": "burlesque%20for%20the%20wild%20at%20heart",
-        "g": []
-      }
-    }
-  },
-  {
-    "start": "2024-03-10T15:00:00",
-    "venueEventUrl": "https://baroeg.nl/productie/terzij-de-horde-laster/",
-    "title": "Terzij De Horde ",
-    "location": "baroeg",
-    "price": 16,
-    "shortText": " Laster  +  Räum  +  Radeloos///Ziedend  +  Lijkschouwer Laat je verrassen door de muzikale schijnbewegingen van Terzij De Horde en Laster.",
-    "longText": "../public/texts/baroeg/ZHVjdGllL3Rlcnppai1kZS1ob3JkZS1sYXN0ZXIv.html",
-    "image": "../public/event-images/baroeg/ZHVjdGllL3Rlcnppai1kZS1ob3JkZS1sYXN0ZXIv",
-    "soldOut": false,
-    "eventGenres": [
-      "post-black"
-    ],
-    "artists": {
-      "radeloosziedend": {
-        "s": "6l0NXNFYkkn3chX6MW1xcj",
-        "l": "radeloos///ziedend",
-        "g": []
-      },
-      "terzijdehorde": {
-        "s": "41G9cPXKxphLtBQXD0g30o",
-        "l": "terzij%20de%20horde",
-        "g": [
-          "blackgaze",
-          "dutch black metal",
-          "post-black metal"
-        ]
-      },
-      "lijkschouwer": {
-        "s": null,
-        "l": "lijkschouwer",
-        "g": []
-      },
-      "laster": {
-        "s": "67p4YunK4HWNnF2gcTLVaV",
-        "l": "Netherlands",
-        "g": [
-          "dutch black metal",
-          "experimental/atmospheric post-black metal"
-        ]
-      },
-      "raum": {
-        "s": null,
-        "l": "Belgium",
-        "g": [
-          "black metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2024-03-17T15:00:00",
-    "venueEventUrl": "https://baroeg.nl/productie/prspctbaroeg-present-otto-von-schirach-deformer-limewax/",
-    "title": "PRSPCT",
-    "location": "baroeg",
-    "price": null,
-    "shortText": "Baroeg present: Otto Von Schirach  +  Deformer  +  Limewax Oozing Bass Spasms galore!",
-    "longText": "../public/texts/baroeg/dm9uLXNjaGlyYWNoLWRlZm9ybWVyLWxpbWV3YXgv.html",
-    "image": "../public/event-images/baroeg/dm9uLXNjaGlyYWNoLWRlZm9ybWVyLWxpbWV3YXgv",
-    "soldOut": false,
-    "eventGenres": [
-      "breakcore",
-      "darkset",
-      "drum 'n bass",
-      "IDM",
-      "metal"
-    ],
-    "artists": null
-  },
-  {
-    "start": "2024-03-22T18:30:00",
-    "venueEventUrl": "https://baroeg.nl/productie/16340/",
-    "title": "W:O:A: Metal Battle Veldslag West: Goldwölff ",
-    "location": "baroeg",
+    "door": "2024-03-01T19:00:00",
+    "start": "2024-03-01T19:30:00",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/marcelfest",
+    "title": "Marcelfest",
+    "location": "cpunt",
     "price": 5,
-    "shortText": " Inherited  +  Serotonia  +  Neverus  +  Obstruktor Vandaag strijden de winnaars van de voorrondes om één plaats in de finale.",
-    "longText": "../public/texts/baroeg/czovL2Jhcm9lZy5ubC9wcm9kdWN0aWUvMTYzNDAv.html",
-    "image": "../public/event-images/baroeg/czovL2Jhcm9lZy5ubC9wcm9kdWN0aWUvMTYzNDAv",
+    "shortText": "Ramage Inc., Tiberius, Golden Caves en Dreamwalkers Inc.",
+    "longText": "../public/texts/cpunt/d3d3LmNwdW50Lm5sL2FnZW5kYS9tYXJjZWxmZXN0.html",
+    "image": "../public/event-images/cpunt/d3d3LmNwdW50Lm5sL2FnZW5kYS9tYXJjZWxmZXN0",
     "soldOut": false,
-    "eventGenres": [
-      "metal"
-    ],
-    "artists": {
-      "inherited": {
-        "s": "74R5DmGt1473Kf2Lg4NDxe",
-        "l": "United States",
-        "g": [
-          "black/death metal"
-        ]
-      },
-      "goldwolff": {
-        "s": "2jwyLoOyrJz0OM0FICfOGT",
-        "l": null,
-        "g": [
-          "metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2024-03-28T19:30:00",
-    "venueEventUrl": "https://baroeg.nl/productie/gruizig-kill-your-boyfriend-death-by-audio-soundville/",
-    "title": "Gruizig: Kill Your Boyfriend ",
-    "location": "baroeg",
-    "price": 14,
-    "shortText": " Death By Audio @SoundVille Gruizig is een nieuwe clubavond waar gitaarstijlen als postpunk, shoegaze, noise etc. centraal staan.",
-    "longText": "../public/texts/baroeg/ZW5kLWRlYXRoLWJ5LWF1ZGlvLXNvdW5kdmlsbGUv.html",
-    "image": "../public/event-images/baroeg/ZW5kLWRlYXRoLWJ5LWF1ZGlvLXNvdW5kdmlsbGUv",
-    "soldOut": false,
-    "eventGenres": [
-      "dark ambient",
-      "post-punk"
-    ],
+    "unavailable": false,
+    "eventGenres": null,
     "artists": null
   },
   {
-    "start": "2024-03-31T14:00:00",
-    "venueEventUrl": "https://baroeg.nl/productie/festerfest-2/",
-    "title": "Festerfest: Plusminus ",
-    "location": "baroeg",
-    "price": 11,
-    "shortText": " Phlebotomized  +  Tower Crane Towers  +  Insurrection  +  Fred Händl  +  Neroth  +  Luuk Geers  +  Mouser  +  Whispering Dunes  +  NOCX  +  Red Eyed Machine  +  DJ's Zot & Rot Annual fest to crush the boundaries between different forms of underground music.",
-    "longText": "../public/texts/baroeg/b2VnLm5sL3Byb2R1Y3RpZS9mZXN0ZXJmZXN0LTIv.html",
-    "image": "../public/event-images/baroeg/b2VnLm5sL3Byb2R1Y3RpZS9mZXN0ZXJmZXN0LTIv",
+    "door": "2024-03-16T20:00:00",
+    "start": "2024-03-16T20:30:00",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/bittersweethearts-joy-killed-the-duke-oxblood",
+    "title": "Bittersweethearts",
+    "location": "cpunt",
+    "price": 8.5,
+    "shortText": "Support: Joy Killed The Duke & OXBLOOD",
+    "longText": "../public/texts/cpunt/dHMtam95LWtpbGxlZC10aGUtZHVrZS1veGJsb29k.html",
+    "image": "../public/event-images/cpunt/dHMtam95LWtpbGxlZC10aGUtZHVrZS1veGJsb29k",
     "soldOut": false,
-    "eventGenres": [
-      "avantgarde death",
-      "industrial cyber techno",
-      "melodic death/thrash",
-      "punkrock",
-      "rockcovers",
-      "synthwave"
-    ],
-    "artists": {
-      "phlebotomized": {
-        "s": "49XKAaDQYXRPAZ1yrXJlLd",
-        "l": "phlebotomized",
-        "g": [
-          "dutch death metal",
-          "dutch metal"
-        ]
-      },
-      "insurrection": {
-        "s": "0WMbayNr7EC94NmNRhfcmB",
-        "l": "Colombia",
-        "g": [
-          "speed/thrash metal"
-        ]
-      },
-      "neroth": {
-        "s": "58E0u5tlo9WuKPg7enSBWB",
-        "l": "Netherlands",
-        "g": [
-          "black metal"
-        ]
-      },
-      "plusminus": {
-        "s": "7mtnt6NzGQuNN8LdJtIGLn",
-        "l": null,
-        "g": [
-          "avantgarde death",
-          "industrial cyber techno",
-          "melodic death/thrash",
-          "punkrock",
-          "rockcovers",
-          "synthwave"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2024-04-06T20:00:00",
-    "venueEventUrl": "https://baroeg.nl/productie/downward-spiral-special-mesh/",
-    "title": "Downward Spiral special: Mesh + Dead Lights",
-    "location": "baroeg",
-    "price": 25,
-    "shortText": "50 jaar Tim Daeleman/DJ Spud, laatste Downward Spiral in het oude Baroeg pand, ‘legacy’ show van Mesh.",
-    "longText": "../public/texts/baroeg/L2Rvd253YXJkLXNwaXJhbC1zcGVjaWFsLW1lc2gv.html",
-    "image": "../public/event-images/baroeg/L2Rvd253YXJkLXNwaXJhbC1zcGVjaWFsLW1lc2gv",
-    "soldOut": false,
-    "eventGenres": [
-      "electronic"
-    ],
-    "artists": {
-      "mesh": {
-        "s": "3ggwAqZD3lyT2sbovlmfQY",
-        "l": "mesh",
-        "g": [
-          "alternative metal",
-          "djent",
-          "groove metal",
-          "metal",
-          "nu metal",
-          "progressive groove metal",
-          "swedish metal",
-          "technical groove metal",
-          "technical thrash"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2024-04-11T21:00:00",
-    "venueEventUrl": "https://baroeg.nl/productie/baroeg-presents-v11-officium-triste-asphodelus/",
-    "title": "Baroeg presents @V11: Officium Triste ",
-    "location": "baroeg",
-    "price": 14,
-    "shortText": " Asphodelus In 2024 bestaat Officium Triste 30 jaar. Om dat een klein beetje te vieren, staan ze op de V11.",
-    "longText": "../public/texts/baroeg/MTEtb2ZmaWNpdW0tdHJpc3RlLWFzcGhvZGVsdXMv.html",
-    "image": "../public/event-images/baroeg/MTEtb2ZmaWNpdW0tdHJpc3RlLWFzcGhvZGVsdXMv",
-    "soldOut": false,
-    "eventGenres": [
-      "death metal",
-      "doom"
-    ],
-    "artists": {
-      "asphodelus": {
-        "s": "4hnffjj1d6SAq0qaVymVbL",
-        "l": "Finland",
-        "g": [
-          "finnish death metal",
-          "doom/death metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2024-04-12T19:00:00",
-    "venueEventUrl": "https://baroeg.nl/productie/mortiis/",
-    "title": "Mortiis + Nortfalke + Blot + In Days Of Old",
-    "location": "baroeg",
-    "price": 19,
-    "shortText": "Mortiis speelt debuutalbum Født Til å Herske.",
-    "longText": "../public/texts/baroeg/Ly9iYXJvZWcubmwvcHJvZHVjdGllL21vcnRpaXMv.html",
-    "image": "../public/event-images/baroeg/Ly9iYXJvZWcubmwvcHJvZHVjdGllL21vcnRpaXMv",
-    "soldOut": false,
-    "eventGenres": [
-      "dungeon synth"
-    ],
-    "artists": {
-      "mortiis": {
-        "s": "4jlxvaggBp7wVV02U6YYRQ",
-        "l": "Norway",
-        "g": [
-          "autonomous black metal",
-          "dark ambient",
-          "dungeon synth",
-          "darkwave/dungeon synth, electronic/industrial rock"
-        ]
-      },
-      "nortfalke": {
-        "s": "6IiKIJCxAqzqPldid08P9B",
-        "l": null,
-        "g": [
-          "dungeon synth"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2024-04-13T14:00:00",
-    "venueEventUrl": "https://baroeg.nl/productie/submit-fest/",
-    "title": "Submit Fest: Hippotraktor ",
-    "location": "baroeg",
-    "price": 21,
-    "shortText": " Half Me  +  Confessions Of A Traitor  +  Forlorn  +  Changing Tides  +  3 Eyed Kids  +  Sugar Spine Submit Fest is het indoor festival met de beste ‘up and coming’ en ‘breaking through’ metal acts van regionale, nationale en internationale bodem.",
-    "longText": "../public/texts/baroeg/cm9lZy5ubC9wcm9kdWN0aWUvc3VibWl0LWZlc3Qv.html",
-    "image": "../public/event-images/baroeg/cm9lZy5ubC9wcm9kdWN0aWUvc3VibWl0LWZlc3Qv",
-    "soldOut": false,
-    "eventGenres": [
-      "metalcore",
-      "progressive"
-    ],
-    "artists": {
-      "changingtides": {
-        "s": "4FDVjqH3XqrmfVpB4N5Hqu",
-        "l": "changing%20tides",
-        "g": []
-      },
-      "confessionsofatraitor": {
-        "s": "3XxTiLhFGMsWvVfpZ7KlF9",
-        "l": null,
-        "g": [
-          "uk metalcore"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2024-04-20T14:00:00",
-    "venueEventUrl": "https://baroeg.nl/productie/everyone-rocks-2/",
-    "title": "Everyone Rocks: Scream Tonight ",
-    "location": "baroeg",
-    "price": 9,
-    "shortText": " Niemand Minder Sessieband  +  Iconic World (Misiconi) karaoke  +  BBQ Voelt jouw beperking als een belemmering? Nu niet meer!",
-    "longText": "../public/texts/baroeg/bmwvcHJvZHVjdGllL2V2ZXJ5b25lLXJvY2tzLTIv.html",
-    "image": "../public/event-images/baroeg/bmwvcHJvZHVjdGllL2V2ZXJ5b25lLXJvY2tzLTIv",
-    "soldOut": false,
-    "eventGenres": [
-      "rock-alternative"
-    ],
+    "unavailable": false,
+    "eventGenres": null,
     "artists": null
   },
   {
-    "start": "2024-04-21T15:00:00",
-    "venueEventUrl": "https://baroeg.nl/productie/live-hard-or-die-fest-born-from-pain/",
-    "title": "Live Hard Or Die Fest: Born From Pain ",
-    "location": "baroeg",
-    "price": 2100,
-    "shortText": " Angel Crew  +  Lies!  +  Becoming A.D  +  Get Some  +  From The Heart Zware core met zes bands voor pitbeesten.",
-    "longText": "../public/texts/baroeg/cmQtb3ItZGllLWZlc3QtYm9ybi1mcm9tLXBhaW4v.html",
-    "image": "../public/event-images/baroeg/cmQtb3ItZGllLWZlc3QtYm9ybi1mcm9tLXBhaW4v",
+    "door": "2024-04-04T20:00:00",
+    "start": "2024-04-04T20:30:00",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/electric-eel-shock",
+    "title": "Electric Eel Shock",
+    "location": "cpunt",
+    "price": 17.5,
+    "shortText": "Support: Dikke Dennis & de Røckers",
+    "longText": "../public/texts/cpunt/dC5ubC9hZ2VuZGEvZWxlY3RyaWMtZWVsLXNob2Nr.html",
+    "image": "../public/event-images/cpunt/dC5ubC9hZ2VuZGEvZWxlY3RyaWMtZWVsLXNob2Nr",
     "soldOut": false,
-    "eventGenres": [
-      "hardcore"
-    ],
+    "unavailable": false,
+    "eventGenres": null,
     "artists": {
-      "bornfrompain": {
-        "s": "29BUhhygenDpPj5pat2oOR",
-        "l": "born%20from%20pain",
+      "electriceelshock": {
+        "s": "1lLY6EogC1Ph2Y6ZRjnkCY",
+        "l": "electric%20eel%20shock",
         "g": [
-          "beatdown",
-          "hardcore",
-          "lowlands hardcore"
-        ]
-      },
-      "pain": {
-        "s": "0AuW7OCyKfFrsMbtHrYgIV",
-        "l": "pain",
-        "g": [
-          "gangster rap",
-          "hip hop",
-          "rap rock",
-          "west coast rap"
-        ]
-      },
-      "becomingad": {
-        "s": null,
-        "l": "Belgium",
-        "g": [
-          "death/thrash metal/hardcore",
-          "hardcore"
-        ]
-      },
-      "getsome": {
-        "s": "0aOu4FuWEaa3sO42vjPOSt",
-        "l": null,
-        "g": [
-          "norwegian hip hop"
+          "j-metal",
+          "japanese garage rock"
         ]
       }
     }
   },
   {
-    "start": "2024-04-27T14:00:00",
-    "venueEventUrl": "https://baroeg.nl/productie/koningsdag-festival-hard-skin/",
-    "title": "Koningsdag festival: Soet and the Suits ",
-    "location": "baroeg",
+    "door": "2024-04-06T19:00:00",
+    "start": "2024-04-06T19:30:00",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/oi-in-hoofddorp",
+    "title": "Oi! in Hoofddorp",
+    "location": "cpunt",
+    "price": 17.5,
+    "shortText": "Crown Court, Savage Beat en Bent Out Of Shape",
+    "longText": "../public/texts/cpunt/cHVudC5ubC9hZ2VuZGEvb2ktaW4taG9vZmRkb3Jw.html",
+    "image": "../public/event-images/cpunt/cHVudC5ubC9hZ2VuZGEvb2ktaW4taG9vZmRkb3Jw",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2024-04-21T19:00:00",
+    "start": "2024-04-21T20:30:00",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/the-exploited",
+    "title": "The Exploited",
+    "location": "cpunt",
     "price": null,
-    "shortText": " Hard Skin  +  Subrockers  +  Pigs Gratis tot het laat is.",
-    "longText": "../public/texts/baroeg/a29uaW5nc2RhZy1mZXN0aXZhbC1oYXJkLXNraW4v.html",
-    "image": "../public/event-images/baroeg/a29uaW5nc2RhZy1mZXN0aXZhbC1oYXJkLXNraW4v",
+    "shortText": "Support: Disturbance & Complaint",
+    "longText": "../public/texts/cpunt/LmNwdW50Lm5sL2FnZW5kYS90aGUtZXhwbG9pdGVk.html",
+    "image": "../public/event-images/cpunt/LmNwdW50Lm5sL2FnZW5kYS90aGUtZXhwbG9pdGVk",
     "soldOut": false,
-    "eventGenres": [
-      "crossover",
-      "street punk",
-      "thrash metal"
-    ],
+    "unavailable": false,
+    "eventGenres": null,
     "artists": {
-      "pigs": {
-        "s": null,
-        "l": "United Kingdom",
+      "disturbance": {
+        "s": "2YomKyw73NZ5n19DYzp0j8",
+        "l": "Spain",
         "g": [
-          "stoner metal/hard rock"
+          "dutch punk",
+          "lowlands hardcore",
+          "grindcore"
         ]
       }
     }
   },
   {
-    "start": "2024-04-28T18:00:00",
-    "venueEventUrl": "https://baroeg.nl/productie/veneration-of-the-dead-part-x-blasphemy-wrok/",
-    "title": "Veneration Of The Dead part X: Blasphemy ",
-    "location": "baroeg",
-    "price": 24,
-    "shortText": " Wrok  +  Kerberos Een zeldzame kans om Blasphemy te zien.",
-    "longText": "../public/texts/baroeg/aGUtZGVhZC1wYXJ0LXgtYmxhc3BoZW15LXdyb2sv.html",
-    "image": "../public/event-images/baroeg/aGUtZGVhZC1wYXJ0LXgtYmxhc3BoZW15LXdyb2sv",
+    "door": "2024-05-04T20:10:00",
+    "start": "2024-05-04T20:45:00",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/dope-dod-bizarre",
+    "title": "Dope d.o.d. + bizarre",
+    "location": "cpunt",
+    "price": 22.5,
+    "shortText": "Trigger Treat Tour",
+    "longText": "../public/texts/cpunt/dW50Lm5sL2FnZW5kYS9kb3BlLWRvZC1iaXphcnJl.html",
+    "image": "../public/event-images/cpunt/dW50Lm5sL2FnZW5kYS9kb3BlLWRvZC1iaXphcnJl",
     "soldOut": false,
-    "eventGenres": [
-      "black"
-    ],
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2024-09-07T15:00:00",
+    "start": "2024-09-07T16:00:00",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/oi-in-hoofddorp-festival",
+    "title": "Oi! in Hoofddorp Festival",
+    "location": "cpunt",
+    "price": 40,
+    "shortText": "Cockney Rejects, Crim, The Reapers en veel meer!",
+    "longText": "../public/texts/cpunt/Z2VuZGEvb2ktaW4taG9vZmRkb3JwLWZlc3RpdmFs.html",
+    "image": "../public/event-images/cpunt/Z2VuZGEvb2ktaW4taG9vZmRkb3JwLWZlc3RpdmFs",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
     "artists": {
-      "blasphemy": {
-        "s": "6LjCtCPlOe8GkYz09XeQH5",
-        "l": "Canada",
+      "cockney rejects": {
+        "s": "4EfSXeVFbCEYIde3E9k4wr",
+        "l": "cockney%20rejects",
         "g": [
-          "black death",
-          "black metal",
-          "black thrash",
-          "black/death metal"
-        ]
-      },
-      "wrok": {
-        "s": "5ratcXOB2DgvmCcXqxRBBt",
-        "l": "Netherlands",
-        "g": [
-          "black metal"
-        ]
-      },
-      "kerberos": {
-        "s": "6PN3ScMSwcOXPIImBVdMid",
-        "l": "Switzerland",
-        "g": [
-          "symphonic death metal"
+          "oi",
+          "punk"
         ]
       }
     }
   },
   {
-    "start": "2024-05-12T15:00:00",
-    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-soundville-riffsniffer-presents-godsleep-nectarfish/",
-    "title": "Baroeg On Tour @SoundVille: Riffsniffer presents: Godsleep ",
-    "location": "baroeg",
-    "price": 14,
-    "shortText": " Nectarfish Baroeg On Tour @SoundVille.",
-    "longText": "../public/texts/baroeg/LXByZXNlbnRzLWdvZHNsZWVwLW5lY3RhcmZpc2gv.html",
-    "image": "../public/event-images/baroeg/LXByZXNlbnRzLWdvZHNsZWVwLW5lY3RhcmZpc2gv",
+    "door": "2024-09-20T20:00:00",
+    "start": "2024-09-20T20:30:00",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/gbh-2024",
+    "title": "Gbh",
+    "location": "cpunt",
+    "price": 15,
+    "shortText": "Legendarische Britse punk uit Birmingham",
+    "longText": "../public/texts/cpunt/Ly93d3cuY3B1bnQubmwvYWdlbmRhL2diaC0yMDI0.html",
+    "image": "../public/event-images/cpunt/Ly93d3cuY3B1bnQubmwvYWdlbmRhL2diaC0yMDI0",
     "soldOut": false,
-    "eventGenres": [
-      "stoner"
-    ],
-    "artists": null
-  },
-  {
-    "start": "2024-05-25T19:00:00",
-    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-grounds-ufomammut-the-machine/",
-    "title": "Baroeg On Tour @Grounds: Ufomammut ",
-    "location": "baroeg",
-    "price": 19,
-    "shortText": " The Machine Baroeg On Tour.",
-    "longText": "../public/texts/baroeg/Z3JvdW5kcy11Zm9tYW1tdXQtdGhlLW1hY2hpbmUv.html",
-    "image": "../public/event-images/baroeg/Z3JvdW5kcy11Zm9tYW1tdXQtdGhlLW1hY2hpbmUv",
-    "soldOut": false,
-    "eventGenres": [
-      "doom",
-      "psychedelic",
-      "stoner"
-    ],
-    "artists": {
-      "ufomammut": {
-        "s": "105vC0oJ985P5G3g36EosL",
-        "l": "ufomammut",
-        "g": [
-          "doom metal",
-          "drone metal",
-          "italian doom metal",
-          "italian metal",
-          "italian stoner rock",
-          "post-doom metal",
-          "post-metal",
-          "sludge metal",
-          "space rock",
-          "stoner metal",
-          "stoner rock"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2024-06-01T20:00:00",
-    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-80s-more-soundville/",
-    "title": "Baroeg On Tour: 80’s ",
-    "location": "baroeg",
-    "price": 12.5,
-    "shortText": " More! @SoundVille: Smithsonics Nieuwe Nederlandse The Smiths tributeband.",
-    "longText": "../public/texts/baroeg/Zy1vbi10b3VyLTgwcy1tb3JlLXNvdW5kdmlsbGUv.html",
-    "image": "../public/event-images/baroeg/Zy1vbi10b3VyLTgwcy1tb3JlLXNvdW5kdmlsbGUv",
-    "soldOut": false,
-    "eventGenres": [
-      "alternative",
-      "tribute"
-    ],
-    "artists": null
-  },
-  {
-    "start": "2024-07-02T19:00:00",
-    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-maassilo-vader-bio-cancer-warside/",
-    "title": "Baroeg On Tour @Maassilo: Vader ",
-    "location": "baroeg",
-    "price": 26,
-    "shortText": " Bio-Cancer  +  Warside Vader In 2023 bestond de Poolse death metal legende 40 jaar. Dat werd uitgebreid gevierd…",
-    "longText": "../public/texts/baroeg/c2lsby12YWRlci1iaW8tY2FuY2VyLXdhcnNpZGUv.html",
-    "image": "../public/event-images/baroeg/c2lsby12YWRlci1iaW8tY2FuY2VyLXdhcnNpZGUv",
-    "soldOut": false,
-    "eventGenres": [
-      "death metal",
-      "thrash metal"
-    ],
-    "artists": null
-  },
-  {
-    "start": "2024-09-14T12:00:00",
-    "venueEventUrl": "https://baroeg.nl/productie/baroeg-open-air-2024/",
-    "title": "Baroeg Open Air 2024",
-    "location": "baroeg",
-    "price": 9.99,
-    "shortText": "Zaterdag 14 september 2024 vindt de vijftiende editie van Baroeg Open Air plaats in het Rotterdamse Zuiderpark.",
-    "longText": "../public/texts/baroeg/cm9kdWN0aWUvYmFyb2VnLW9wZW4tYWlyLTIwMjQv.html",
-    "image": "../public/event-images/baroeg/cm9kdWN0aWUvYmFyb2VnLW9wZW4tYWlyLTIwMjQv",
-    "soldOut": false,
-    "eventGenres": [
-      "alternative",
-      "electronic",
-      "metal",
-      "punk"
-    ],
+    "unavailable": false,
+    "eventGenres": null,
     "artists": null
   }
 ]

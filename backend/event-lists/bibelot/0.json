@@ -37,7 +37,7 @@
     "venueEventUrl": "https://bibelot.net/programma/nick-oliveri-us-death-acoustic/",
     "title": "Nick Oliveri (US) – Death Acoustic",
     "location": "bibelot",
-    "price": 17,
+    "price": 0,
     "longText": "../public/texts/bibelot/aWNrLW9saXZlcmktdXMtZGVhdGgtYWNvdXN0aWMv.html",
     "image": "../public/event-images/bibelot/aWNrLW9saXZlcmktdXMtZGVhdGgtYWNvdXN0aWMv",
     "soldOut": false,
@@ -69,7 +69,7 @@
     "venueEventUrl": "https://bibelot.net/programma/smells-like-nirvana/",
     "title": "Smells Like Nirvana",
     "location": "bibelot",
-    "price": 2024,
+    "price": 0,
     "longText": "../public/texts/bibelot/cHJvZ3JhbW1hL3NtZWxscy1saWtlLW5pcnZhbmEv.html",
     "image": "../public/event-images/bibelot/cHJvZ3JhbW1hL3NtZWxscy1saWtlLW5pcnZhbmEv",
     "soldOut": false,
@@ -140,7 +140,8 @@
     "soldOut": false,
     "eventGenres": [
       "garagerock ",
-      "punk "
+      "punk ",
+      "rock "
     ],
     "artists": null
   },
