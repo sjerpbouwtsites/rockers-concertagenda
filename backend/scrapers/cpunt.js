@@ -1,12 +1,12 @@
 /* global document */
-import { threadId, workerData } from 'worker_threads';
+import { workerData } from 'worker_threads';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/cpunt.js';
 import getImage from './gedeeld/image.js';
 import terms from '../artist-db/store/terms.js';
-import fsDirections from '../mods/fs-directions.js';
 import {
-  mapToDoorTime, combineStartTimeStartDate, mapToStartTime, mapToShortDate, mapToStartDate, combineDoorTimeStartDate, 
+  mapToDoorTime, combineStartTimeStartDate, mapToStartTime, 
+  mapToShortDate, mapToStartDate, combineDoorTimeStartDate, 
 } from './gedeeld/datums.js';
 import workTitleAndSlug from './gedeeld/slug.js';
 
