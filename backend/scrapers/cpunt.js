@@ -56,29 +56,6 @@ scraper.mainPage = async function () {
 
   const { stopFunctie, page } = await this.mainPageStart();
 
-  // if (
-  //   !(await page
-  //     .waitForSelector('#filter .article-wrapper', {
-  //       timeout: 2000,
-  //     })
-  //     .catch(async (caughtError) => {
-  //       const pageHTML = await page.evaluate(() => {
-  //         console.log("NEE");
-  //         return `${document.body.outerHTML}`;
-  //       });
-  //       this.dirtyLog(pageHTML);
-  //       fs.writeFileSync(`${fsDirections.temp}/rando-error.txt`, pageHTML, 'utf-8'); // TODO WTF IS DIT
-  //       this.handleError(
-  //         caughtError,
-  //         'Timeout wachten op #filter .article-wrapper Main page',
-  //         'close-thread',
-  //         null,
-  //       );
-  //     }))
-  // ) {
-  //   return this.mainPageEnd({ stopFunctie, page, rawEvents: [] });
-  // }
-
   let rawEvents = await page.evaluate(
     // eslint-disable-next-line no-shadow
     ({ workerData, unavailabiltyTerms }) =>
