@@ -90,10 +90,10 @@ function _mapToTime(event, key, required) {
     let match;
     try {
       if (isTime(str, mapKey, required)) {
-        match = str.match(/(\d\d):(\d\d)/);
+        match = str.match(/(\d{1,2}):(\d\d)/);
         const secs = '00';
         // eslint-disable-next-line no-param-reassign
-        event[timeKey] = `${match[1]}:${match[2]}:${secs}`;
+        event[timeKey] = `${match[1].padStart(2, '0')}:${match[2]}:${secs}`;
       }
     } catch (isTimeError) {
       event.errors.push({
@@ -101,7 +101,6 @@ function _mapToTime(event, key, required) {
         remarks: `isTimeError ${mapKey} ${event.anker}`,
         toDebug: {
           [`${mapKey}`]: `${event[mapKey]}`,
-          event: { ...event },
           match,
         },
       });

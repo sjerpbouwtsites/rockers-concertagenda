@@ -84,7 +84,7 @@ export async function asyncIfNotAllowedRefuse(event, reasons) {
     return errorAnswerObject(event, reasons, this.lastDBAnswer);
   }  
   reasonsCopy.push(this.lastDBAnswer.reason);
-  if (!isAllowed.success) {
+  if (isAllowed.success === false || isAllowed.success === null) {
     reasonsCopy.push(`🟥 because not present in allowed: ifNotAllowedRefuse sa1`);
     this.talkToDB({
       type: 'db-request',
@@ -153,7 +153,7 @@ export async function asyncGoodTerms(event, reasons) {
   const reasonsCopy = Array.isArray(reasons) ? reasons : [];
   this.talkToDB({
     type: 'db-request', 
-    subtype: 'hasGoodTerms',
+    subtype: 'hasGood',
     messageData: {
       string: event.workTitle + event.slug + (event?.shortText ?? '').toLowerCase(),
     },
@@ -391,7 +391,6 @@ export async function asyncHasAllowedArtist(event, reasons) {
   const reasonsCopy = Array.isArray(reasons) ? reasons : [];
   await this.asyncScanTitleForAllowedArtists(event);
   await this.checkDBhasAnswered();
-  this.skipFurtherChecks.push(event.workTitle);
   reasonsCopy.push(this.lastDBAnswer.reason);
   if (this.lastDBAnswer.success === 'error') {
     this.handleError(this.lastDBAnswer?.data?.error, this.lastDBAnswer.reason, 'close-thread');

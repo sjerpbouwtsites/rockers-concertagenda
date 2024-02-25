@@ -1,86 +1,151 @@
 [
   {
-    "start": "2023-11-30T08:00:00",
-    "end": "2023-11-30T11:30:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/club-3voor12-utrecht-8/",
-    "title": "Club 3voor12 / Utrecht",
+    "start": "2024-03-23T08:00:00",
+    "end": "2024-03-23T11:00:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/tankzilla-support/",
+    "title": "Tankzilla + rhinorino + the getdowns",
     "location": "dbs",
-    "price": 4,
-    "shortText": "club 3voor 12 / utrecht,",
-    "longText": "../public/texts/dbs/L2V2ZW50L2NsdWItM3Zvb3IxMi11dHJlY2h0LTgv.html",
-    "image": "../public/event-images/dbs/L2V2ZW50L2NsdWItM3Zvb3IxMi11dHJlY2h0LTgv",
-    "unavailable": false
+    "price": 13.5,
+    "shortText": "Make way for the Godspeed Rock Monster TANKZILLA from Eindje!!",
+    "longText": "../public/texts/dbs/aW8ubmwvZXZlbnQvdGFua3ppbGxhLXN1cHBvcnQv.html",
+    "image": "../public/event-images/dbs/aW8ubmwvZXZlbnQvdGFua3ppbGxhLXN1cHBvcnQv",
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "tankzilla": {
+        "s": "5aWg3TVcPK6gLuONSry3No",
+        "l": "tankzilla",
+        "g": [
+          "dutch stoner rock"
+        ]
+      }
+    }
   },
   {
-    "start": "2023-12-06T08:00:00",
-    "end": "2023-12-06T10:30:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/holly-golightly-uk-damaged-goods-the-monroes/",
-    "title": "Holly golightly (uk – damaged goods) ",
+    "start": "2024-04-01T08:00:00",
+    "end": "2024-04-01T10:30:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/widowspeak-usa-captured-tracks-support-2/",
+    "title": "Widowspeak (usa – captured tracks) + laena myers (usa)",
+    "location": "dbs",
+    "price": 13.5,
+    "shortText": " Widowspeak & dB’s hebben een liefdevolle band. Op elke EU tour die de band tot nu toe deed (de eerste in november 2011), mochten we Widowspeak ook hier verwelkomen. En ja, ook deze nieuwe tour slaan ze dB’s niet over.\nMooi om te merken dat Widowspeak blijft groeien en op weg is een gevestigde naam te worden. Volkomen terecht want de prachtige liedjes van Widowspeak waar echo’s van zowel Mazzy Star als Chris Isaac in doorklinken zijn werkelijk om door een ringetje te halen. Voeg daarbij hun fenomenale liveshows en je weet dat Widowspeak een absolute must see is.\nVijf studioalbums heeft de band nu op haar naam staan waarvan The Jacket de laatste is. Het prachtige kwaliteitslabel Captured Tracks tekent voor alle releases van de band en dat zou de kenner genoeg moeten zeggen. Op naar de grote doorbraak, deze band verdient het.\nEn nu zeker voor de laatste keer in de oude dB’s en op een volgende tour hopelijk in de nieuwe..",
+    "longText": "../public/texts/dbs/dXNhLWNhcHR1cmVkLXRyYWNrcy1zdXBwb3J0LTIv.html",
+    "image": "../public/event-images/dbs/dXNhLWNhcHR1cmVkLXRyYWNrcy1zdXBwb3J0LTIv",
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "echo": {
+        "s": "0fgYKF9Avljex0L9Wt5b8Z",
+        "l": "echo",
+        "g": [
+          "alternative rock",
+          "new romantic",
+          "new wave",
+          "permanent wave"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2024-04-18T08:00:00",
+    "end": "2024-04-18T10:30:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/electric-eel-shock-japan-support/",
+    "title": "Electric eel shock (japan) + support",
     "location": "dbs",
     "price": 14,
-    "shortText": " the monroes blues, country noir, folk, garage, pop, rock 'n roll",
-    "longText": "../public/texts/dbs/LXVrLWRhbWFnZWQtZ29vZHMtdGhlLW1vbnJvZXMv.html",
-    "image": "../public/event-images/dbs/LXVrLWRhbWFnZWQtZ29vZHMtdGhlLW1vbnJvZXMv",
-    "unavailable": false
+    "shortText": "Japan en Rock n Roll is een gouden combinatie en ELECTRIC EEL SHOCK is daar een treffend voorbeeld.",
+    "longText": "../public/texts/dbs/Y3RyaWMtZWVsLXNob2NrLWphcGFuLXN1cHBvcnQv.html",
+    "image": "../public/event-images/dbs/Y3RyaWMtZWVsLXNob2NrLWphcGFuLXN1cHBvcnQv",
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "electric eel shock": {
+        "s": "1lLY6EogC1Ph2Y6ZRjnkCY",
+        "l": "electric%20eel%20shock",
+        "g": [
+          "j-metal",
+          "japanese garage rock"
+        ]
+      }
+    }
   },
   {
-    "start": "2023-12-09T08:00:00",
-    "end": "2023-12-09T11:00:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/queens-pleasure-magnetic-spacemen-fit/",
-    "title": "Queen’s pleasure + magnetic spacemen + fit",
-    "location": "dbs",
-    "price": 11,
-    "shortText": "garage, indierock, post punk, punk, rock 'n roll",
-    "longText": "../public/texts/dbs/bGVhc3VyZS1tYWduZXRpYy1zcGFjZW1lbi1maXQv.html",
-    "image": "../public/event-images/dbs/bGVhc3VyZS1tYWduZXRpYy1zcGFjZW1lbi1maXQv",
-    "unavailable": false
-  },
-  {
-    "start": "2023-12-29T08:00:00",
-    "end": "2023-12-29T10:30:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/spasmodique-nachtwaker/",
-    "title": "Spasmodique + nachtwaker",
-    "location": "dbs",
-    "price": 13,
-    "shortText": "cold wave, no wave, post punk, rock, shoegaze",
-    "longText": "../public/texts/dbs/L2V2ZW50L3NwYXNtb2RpcXVlLW5hY2h0d2FrZXIv.html",
-    "image": "../public/event-images/dbs/L2V2ZW50L3NwYXNtb2RpcXVlLW5hY2h0d2FrZXIv",
-    "unavailable": false
-  },
-  {
-    "start": "2023-01-27T08:00:00",
-    "end": "2023-01-27T11:00:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/bloodphemy-release-party-support/",
-    "title": "BLOODPHEMY release party + support",
-    "location": "dbs",
-    "price": 10,
-    "shortText": "death metal, metal",
-    "longText": "../public/texts/dbs/b2RwaGVteS1yZWxlYXNlLXBhcnR5LXN1cHBvcnQv.html",
-    "image": "../public/event-images/dbs/b2RwaGVteS1yZWxlYXNlLXBhcnR5LXN1cHBvcnQv",
-    "unavailable": false
-  },
-  {
-    "start": "2023-03-01T08:00:00",
-    "end": "2023-03-01T11:00:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/timesbold-usa-the-fire-harvest/",
-    "title": "Timesbold (usa) + the fire harvest",
-    "location": "dbs",
-    "price": 12,
-    "shortText": "americana, country noir, slowcore",
-    "longText": "../public/texts/dbs/aW1lc2JvbGQtdXNhLXRoZS1maXJlLWhhcnZlc3Qv.html",
-    "image": "../public/event-images/dbs/aW1lc2JvbGQtdXNhLXRoZS1maXJlLWhhcnZlc3Qv",
-    "unavailable": false
-  },
-  {
-    "start": "2023-04-22T08:00:00",
-    "end": "2023-04-22T11:00:00",
+    "start": "2024-04-22T08:00:00",
+    "end": "2024-04-22T11:00:00",
     "venueEventUrl": "https://www.dbstudio.nl/event/badasonic-revue-w-the-bandulus-usa-the-utopians-b-djs/",
-    "title": "Badasonic revue w/  the bandulus (usa) ",
+    "title": "Badasonic revue w/  the bandulus (usa) + the utopians (b) + dj’s",
     "location": "dbs",
     "price": 15,
-    "shortText": " the utopians (b)   dj’s reggae, rocksteady, ska",
+    "shortText": " BADASONIC is het platenlabel voor ska en rocksteady van drummer Nico Leonard (Moon Invaders/RWW/Utopians) met fijne releases van onder andere The Aggrolites en The Slackers.\nDeze maandag waarop de lente begonnen is, en we ons klaarmaken voor de laatste optredens op deze legendarische locatie (nu echt, 1 mei moeten we weg zijn), presenteren wij ism Badasonic een heuse rocksteady revue met de Amerikaanse band THE BANDULUS & het Belgische The Utopians.\nThe Bandulus werd opgericht door Jeremy Pena als opvolger van Los Skarnales en Trenchtown Texans, en speelt belachelijk swingende Ska, Reggae en Soul. The Bandulus steelt je hart en geeft je daarvoor een smile terug die je de hele week niet van je gezicht gaat krijgen. Een van de topbands in het ska/rocksteady genre.\nThe Utopians uit Belgie is een nieuwe band met bekende gezichten. Big early reggae, ska en rocksteady!\nBeide bands staan ook op het grote Freedom Sounds Festival in Keulen maar dus ook hier!",
     "longText": "../public/texts/dbs/bmR1bHVzLXVzYS10aGUtdXRvcGlhbnMtYi1kanMv.html",
     "image": "../public/event-images/dbs/bmR1bHVzLXVzYS10aGUtdXRvcGlhbnMtYi1kanMv",
-    "unavailable": false
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "the bandulus": {
+        "s": "1ZEsJA3COoRrQM2Wz0Yngu",
+        "l": "the%20bandulus",
+        "g": [
+          "ska revival",
+          "traditional ska"
+        ]
+      },
+      "vader": {
+        "s": "2s5DSt9VBNzAn2TbtDHzFZ",
+        "l": "Poland",
+        "g": [
+          "black metal",
+          "brutal death metal",
+          "death metal",
+          "deathgrind",
+          "deathrash",
+          "melodic death metal",
+          "metal",
+          "polish death metal",
+          "polish metal",
+          "polish thrash metal",
+          "speed metal",
+          "technical death metal",
+          "death/thrash metal",
+          "death metal",
+          "thrash metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2024-07-20T08:00:00",
+    "end": "2024-07-20T11:00:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/pro-pain-usa-hardcore-legends-support/",
+    "title": "Pro- pain (usa hardcore legends) + support",
+    "location": "dbs",
+    "price": 20,
+    "shortText": "YES, we gaan vlammen op de Vlampijpstraat met een van onze all time faves PRO-PAIN!!!",
+    "longText": "../public/texts/dbs/LXVzYS1oYXJkY29yZS1sZWdlbmRzLXN1cHBvcnQv.html",
+    "image": "../public/event-images/dbs/LXVzYS1oYXJkY29yZS1sZWdlbmRzLXN1cHBvcnQv",
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "pain": {
+        "s": "0AuW7OCyKfFrsMbtHrYgIV",
+        "l": "pain",
+        "g": [
+          "gangster rap",
+          "hip hop",
+          "rap rock",
+          "west coast rap"
+        ]
+      },
+      "pro-pain": {
+        "s": "56F64pmwSSCcmS1CxAnPk8",
+        "l": "pro-pain",
+        "g": [
+          "groove metal",
+          "old school thrash",
+          "thrash metal",
+          "southern metal"
+        ]
+      }
+    }
   }
 ]

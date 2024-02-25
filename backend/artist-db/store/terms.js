@@ -60,6 +60,7 @@ const forbiddenTerms = [
   'afrobeats',
   'new wave',
   "modern alternative rock",
+  "open dag",
 ];
 
 const globalForbiddenGenres = [

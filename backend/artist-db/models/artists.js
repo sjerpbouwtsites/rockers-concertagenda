@@ -75,7 +75,7 @@ export default class Artists {
   /**
    * of in die persistentie functie fs write file
    */
-  nietSchrijven = true;
+  nietSchrijven = false;
 
   constructor(conf) {
     this.modelPath = conf.modelPath;
@@ -808,6 +808,7 @@ export default class Artists {
     const metalEncycloKeys = [];
     const gefilterdeAllowedArtistsKeys = [];
     gevondenKeys.forEach((key) => {
+      if (!allowedArtists[key][2]) return;
       if (metalEncycloKeys.includes(allowedArtists[key][2])) return;
       metalEncycloKeys.push(allowedArtists[key][2]);
       gefilterdeAllowedArtistsKeys.push(key);
@@ -842,11 +843,11 @@ export default class Artists {
     }
 
     return this.post({
-      success: artistsFound > 0,
+      success: artistsFound > 0 ? true : null,
       data: workedArtists,
       reason: artistsFound > 0 
         ? `🟩 ${artistsFound} artists found ac3` 
-        : `🟥 no artists found ac4`,
+        : `⬜ no artists found ac4`,
     });
   }
 
