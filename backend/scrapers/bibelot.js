@@ -29,7 +29,7 @@ const scraper = new AbstractScraper({
     },
     singlePage: {
       requiredProperties: ['venueEventUrl', 'title', 'start'],
-      asyncCheckFuncs: ['explicitEventGenres', 'saveAllowedEvent', 'harvestArtists'],
+      asyncCheckFuncs: ['explicitEventGenres'],
     },
   },
 });
@@ -78,7 +78,7 @@ scraper.mainPage = async function () {
     .map(mapToShortDate)
     .map((re) => workTitleAndSlug(re, this._s.app.harvest.possiblePrefix))
     .map(this.isMusicEventCorruptedMapper);
-  
+
   const eventGen = this.eventGenerator(rawEvents);
   // eslint-disable-next-line no-unused-vars
   const checkedEvents = await this.rawEventsAsyncCheck({
@@ -131,6 +131,12 @@ scraper.singlePage = async function ({ page, event }) {
     },
     { months: this.months, event },
   );
+
+  this.dirtyDebug({
+    title: `pageinfo en event debug`,
+    pageInfo,
+    event,
+  });
 
   const imageRes = await getImage({
     _this: this,

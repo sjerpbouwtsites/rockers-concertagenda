@@ -482,9 +482,6 @@ export default class Artists {
     const joinedGenres = genres.join(', ');
 
     let isGood;
-
-    console.log('expliciet genres');
-
     isGood = this.terms.globalGoodCategories
       .find((goodCat) => joinedGenres.includes(goodCat));
 
@@ -494,7 +491,6 @@ export default class Artists {
     }
 
     if (isGood) {
-      console.log('is goed expliciet genres');
       const r = `🟩 ${isGood} good in expl. cats. ab2`;
       return this.post({
         success: true,
