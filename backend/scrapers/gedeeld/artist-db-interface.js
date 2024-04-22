@@ -1,3 +1,17 @@
+import DbInterFaceToScraper from './db-interface-to-scraper.js';
+
+// ifNotAllowedRefuse: 'asyncIfNotAllowedRefuse',
+// allowedEvent: 'asyncIsAllowedEvent',
+// refused: 'asyncIsRefused',
+// forbiddenTerms: 'asyncForbiddenTerms',
+// hasGoodTerms: 'asyncGoodTerms',
+// saveAllowedEvent: 'asyncSaveAllowedEvent',
+// harvestArtists: 'asyncHarvestArtists',
+// spotifyConfirmation: 'asyncSpotifyConfirmation', 
+// metalEncyclopediaConfirmation: 'asyncMetalEncyclopediaConfirmation', 
+// explicitEventGenres: 'asyncExplicitEventCategories',
+// hasAllowedArtist: 'asyncHasAllowedArtist',
+
 function talkTitleAndSlug(subtype, event) {
   const s = event.shortDate;
   return {
@@ -15,64 +29,31 @@ function talkTitleAndSlug(subtype, event) {
   };
 }
 
-function successAnswerObject(eventA, reasons, breakA = false) {
-  return {
-    event: eventA,
-    success: true,
-    break: breakA,
-    reasons,
-    reason: reasons.reverse().join(', '),
-  };
-}
-
-function failureAnswerObject(eventA, reasons, breakA = false) {
-  return {
-    event: eventA,
-    success: false,
-    break: breakA,
-    reasons,
-    reason: reasons.reverse().join(', '),
-  };
-}
-
-function nullAnswerObject(eventA, reasons) {
-  return {
-    event: eventA,
-    success: null,
-    break: false,
-    reasons,
-    reason: reasons.reverse().join(', '),
-  };    
-}
-
-function errorAnswerObject(eventA, reasons, dbAnswer) {
-  const reasonsCopy = Array.isArray(reasons) ? reasons : [];
-  reasonsCopy.push(dbAnswer.reason);
-  return {
-    event: eventA,
-    success: 'error',
-    break: null,
-    reasons,
-    reason: reasons.reverse().join(', '),
-  };
-}
-
-export async function asyncIsAllowedEvent(event, reasons) {
-  const reasonsCopy = Array.isArray(reasons) ? reasons : [];
+export async function asyncIsAllowedEvent(event, olderReasons) {
   this.talkToDB(talkTitleAndSlug('getAllowedEvent', event));
-  await this.checkDBhasAnswered();
-  if (this.lastDBAnswer.success === 'error') {
-    this.handleError(this.lastDBAnswer?.data?.error, this.lastDBAnswer.reason, 'close-thread');
-    return errorAnswerObject(event, reasons, this.lastDBAnswer);
-  }
-  if (this.lastDBAnswer.success) {
-    reasonsCopy.push(this.lastDBAnswer.reason);
-    this.skipFurtherChecks.push(event.workTitle);
-    return successAnswerObject(event, reasonsCopy, true);
-  }
-  const nulledReason = this.lastDBAnswer.reason.replace('🟥', '⬜').replace('🟩', '⬜');
-  reasonsCopy.push(nulledReason);
-  return nullAnswerObject(event, reasonsCopy);
+  const dbAnswer = await this.checkDBhasAnswered();
+  
+  const DBToScraper = new DbInterFaceToScraper(dbAnswer, olderReasons, 'async is allowed event');
+  
+  if (DBToScraper.isSuccess) DBToScraper.setBreak(true);
+  DBToScraper.setReason();
+  if (!DBToScraper.isError) return DBToScraper;
+  
+  this.handleError(DBToScraper?.data?.error, DBToScraper.lastReason, 'close-thread');
+  DBToScraper.setBreak(true);
+  return DBToScraper;
+}
+
+export async function asyncSaveRefused(event) {
+  this.talkToDB({
+    type: 'db-request',
+    subtype: 'saveRefusedTemp',
+    messageData: {
+      title: event.workTitle,
+      slug: event.slug,
+      eventDate: event.shortDate,
+    },
+  });   
 }
 
 export async function asyncIfNotAllowedRefuse(event, reasons) {
@@ -101,25 +82,21 @@ export async function asyncIfNotAllowedRefuse(event, reasons) {
   return successAnswerObject(event, reasonsCopy, true);
 }
 
-export async function asyncIsRefused(event, reasons) {
-  const reasonsCopy = Array.isArray(reasons) ? reasons : [];
+export async function asyncIsRefused(event, olderReasons) {
   this.talkToDB(talkTitleAndSlug('getRefused', event));
-  await this.checkDBhasAnswered();
-  if (this.lastDBAnswer.success === 'error') {
-    this.handleError(this.lastDBAnswer?.data?.error, this.lastDBAnswer.reason, 'close-thread');
-    return errorAnswerObject(event, reasons, this.lastDBAnswer);
-  }
-  if (this.lastDBAnswer.success) {
-    reasonsCopy.push(this.lastDBAnswer.reason);
-    return failureAnswerObject(event, reasonsCopy, true);
-  }
-  const nulledReason = this.lastDBAnswer.reason.replace('🟥', '⬜').replace('🟩', '⬜');
-  reasonsCopy.push(nulledReason);
-  return nullAnswerObject(event, reasonsCopy);
+  const dbAnswer = await this.checkDBhasAnswered();
+  const DBToScraper = new DbInterFaceToScraper(dbAnswer, olderReasons, 'async is refused');
+  DBToScraper.reverseSuccessLogic().setReason();
+
+  if (DBToScraper.isFailed) DBToScraper.setBreak(true);
+  if (!DBToScraper.isError) return DBToScraper;
+  
+  this.handleError(DBToScraper?.data?.error, DBToScraper.lastReason, 'close-thread');
+  DBToScraper.setBreak(true);
+  return DBToScraper;
 }
 
-export async function asyncForbiddenTerms(event, reasons) {
-  const reasonsCopy = Array.isArray(reasons) ? reasons : [];
+export async function asyncForbiddenTerms(event, olderReasons) {
   this.talkToDB({
     type: 'db-request', 
     subtype: 'hasForbidden',
@@ -127,26 +104,16 @@ export async function asyncForbiddenTerms(event, reasons) {
       string: event.workTitle + event.slug + (event?.shortText ?? '').toLowerCase(),
     },
   });
-  await this.checkDBhasAnswered();
-  reasonsCopy.push(this.lastDBAnswer.reason);
-  if (this.lastDBAnswer.success === 'error') {
-    this.handleError(this.lastDBAnswer?.data?.error, this.lastDBAnswer.reason, 'close-thread');
-    return errorAnswerObject(event, reasons, this.lastDBAnswer);
-  }
-  if (this.lastDBAnswer.success) {
-    this.talkToDB({
-      type: 'db-request',
-      subtype: 'saveRefusedTemp',
-      messageData: {
-        title: event.workTitle,
-        slug: event.slug,
-        eventDate: event.shortDate,
-      },
-    }); 
-    reasonsCopy.push(`🟧 saved in refused temp sa3`);
-    return failureAnswerObject(event, reasonsCopy, true);
-  }
-  return successAnswerObject(event, reasonsCopy);
+  const dbAnswer = await this.checkDBhasAnswered();
+  const DBToScraper = new DbInterFaceToScraper(dbAnswer, olderReasons, 'async forbidden terms');
+  DBToScraper.reverseSuccessLogic();  
+
+  if (DBToScraper.isFailed) DBToScraper.setBreak(true);
+  if (!DBToScraper.isError) return DBToScraper;
+
+  this.handleError(DBToScraper?.data?.error, DBToScraper.lastReason, 'close-thread');
+  DBToScraper.setBreak(true);
+  return DBToScraper;
 }
 
 export async function asyncGoodTerms(event, reasons) {
@@ -327,8 +294,7 @@ export async function asyncMetalEncyclopediaConfirmation(event, reasons) {
   return successAnswerObject(event, reasonsCopy);
 }
 
-export async function asyncSaveAllowedEvent(event, reasons) {
-  const reasonsCopy = Array.isArray(reasons) ? reasons : [];
+export async function asyncSaveAllowedEvent(event) {
   this.talkToDB({
     type: 'db-request',
     subtype: 'saveAllowedEventTemp',
@@ -337,13 +303,10 @@ export async function asyncSaveAllowedEvent(event, reasons) {
       slug: event.slug,
       eventDate: event.shortDate,
     },
-  });    
-  reasonsCopy.push(`🟧 saved in allowed event temp sb2`);
-  return nullAnswerObject(event, reasonsCopy);
+  });
 }
 
-export async function asyncHarvestArtists(event, reasons) {
-  const reasonsCopy = Array.isArray(reasons) ? reasons : [];
+export async function asyncHarvestArtists(event) {
   this.talkToDB({
     type: 'db-request',
     subtype: 'harvestArtists',
@@ -356,11 +319,9 @@ export async function asyncHarvestArtists(event, reasons) {
       eventGenres: event?.eventGenres ?? [],
     },
   });    
-  // await this.checkDBhasAnswered(); // TODO HIER IS EEN RACE CONDITION ONTSTAAN
-  // reasonsCopy.push(`⬜${this.lastDBAnswer.reason} sb3`);
-  // return nullAnswerObject(event, reasons);
-  reasonsCopy.push(`⬜ harvest gaande sb3`);
-  return nullAnswerObject(event, reasons);
+  const dbans = await this.checkDBhasAnswered();
+  const DBToScraper = new DbInterFaceToScraper(dbans, [], 'async harvest artists');
+  return DBToScraper;
 }
 /**
  * Zoek niet alleen maar geeft het ook terug.

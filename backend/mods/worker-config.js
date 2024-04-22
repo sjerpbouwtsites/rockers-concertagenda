@@ -14,12 +14,12 @@ export const AbstractWorkerConfig = {
 };
 
 export const workerConfig = {
-  // '013': {
-  //   workerCount: 3,
-  //   CPUReq: 'low',
-  //   workerConcurrent: 3,
-  //   forceSet: 0,
-  // },
+  '013': {
+    workerCount: 1,
+    CPUReq: 'low',
+    workerConcurrent: 3,
+    forceSet: 0,
+  },
   // afaslive: {
   //   workerCount: 3,
   //   workerConcurrent: 2,
@@ -35,11 +35,11 @@ export const workerConfig = {
   //   CPUReq: 'low',
   //   forceSet: 1,
   // },
-  dehelling: {
-    workerCount: 1,
-    workerConcurrent: 1,
-    forceSet: 2,
-  },
+  // dehelling: {
+  //   workerCount: 1,
+  //   workerConcurrent: 1,
+  //   forceSet: 2,
+  // },
   // depul: { workerCount: 2, workerConcurrent: 2, forceSet: 2 },
   // doornroosje: {
   //   workerCount: 2,

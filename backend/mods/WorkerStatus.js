@@ -240,8 +240,13 @@ export default class WorkerStatus {
   static checkIfAllDone() {
     const notDone = WorkerStatus.currentNotDone;
     if (notDone.length === 0) {
-      WorkerStatus.ArtistInst.persistNewRefusedAndRockArtists();
-      WorkerStatus.programEnd();
+      // TODO hier zou ergens iets gemeten moeten worden oid.
+      setTimeout(() => {
+        WorkerStatus.ArtistInst.persistNewRefusedAndRockArtists();
+      }, 1000);
+      setTimeout(() => {
+        WorkerStatus.programEnd();
+      }, 5000);
       return true;
     }
     return false;

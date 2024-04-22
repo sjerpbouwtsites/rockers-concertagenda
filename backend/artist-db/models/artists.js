@@ -1,6 +1,5 @@
 /* eslint-disable no-console */
 import fs from 'fs';
-import util from 'util';
 import terms from '../store/terms.js';
 import { slugify } from "../../scrapers/gedeeld/slug.js";
 
@@ -114,13 +113,25 @@ export default class Artists {
   }
 
   /**
+   * wrapper van do tbv erroring
+   */  
+  async do(message) {
+    try {
+      return this._do(message);
+    } catch (error) {
+      console.log('error de perorr');
+      return this.error(error);      
+    }
+  }
+
+  /**
    * Voorman van de class. message.request heeft de naam van een functie hier
    * 'do' stuurt die functie aan en returned het resultaat. Controleert ook of 
    * message.data wel de voor die functie vereiste 'type' heeft.
    * @param {request:string, data:object} message  
    * @returns {success:boolean|string,reason:string,data:object} -> ALS JSON!
    */
-  async do(message) {
+  async _do(message) {
     // parse
     
     const parsedMessage = this.parseMessage(message);
@@ -370,9 +381,9 @@ export default class Artists {
       const __b = Object.prototype.hasOwnProperty.call(this.allowedEventTemp, slug);
       if (!__a && !__b) {
         return this.post({
-          success: false,
+          success: null,
           data: null,
-          reason: `🟥 ${eventName} and ${slug} not allowed event aa3`,
+          reason: `${eventName} and ${slug} not allowed event aa3`,
         }); 
       }
     }
@@ -403,9 +414,9 @@ export default class Artists {
       const __b = Object.prototype.hasOwnProperty.call(this.refusedTemp, ss);
       if (!__a && !__b) {
         return this.post({
-          success: false,
+          success: null,
           data: null,
-          reason: `🟩 ${tt} and ${ss} not refused aa5`,
+          reason: `⬜ ${tt} and ${ss} not refused aa5`,
         }); 
       }
     }
@@ -744,8 +755,9 @@ export default class Artists {
         return r?.aaData[0]; // TODO zomaar de eerste pakken slap
       })
       .catch((err) => {
-        console.log('ERROR IN FETSCH');
-        console.log(err);
+        console.log(`probleem met metal enc. fetch voor ${eventNameOfTitle} naar \n${metalEncycloAjaxURL}`);
+        console.log(meaRes);
+        return this.error(err);
       });
 
     genreRes.metalEnc = meaRes;
@@ -858,17 +870,29 @@ export default class Artists {
     if (tt !== ss) {
       this.refusedTemp[ss] = [1, null, null, eventDate, this.today]; 
     }
-    return true;
+    return this.post({
+      success: true,
+      data: null,
+      reason: `🟩 save worked`,
+    });
   }
 
   saveRefusedTemp(title, slug, spotify, metalEnc, eventDate) {
+    console.log(`save refused temp met ${title}`);
     const tt = title.length < this.minLengthLang ? title + eventDate : title;
     const ss = slug.length < this.minLengthLang ? slug + eventDate : slug;
     this.refusedTemp[tt] = [0, spotify, metalEnc, eventDate, this.today];
     if (tt !== ss) {
+      console.log(`${title} nieuw op de lijst`);
       this.refusedTemp[ss] = [1, spotify, metalEnc, eventDate, this.today]; 
+    } else {
+      console.log(`${title} NIET de lijst`);
     }
-    return true;
+    return this.post({
+      success: true,
+      data: null,
+      reason: `🟩 save worked`,
+    });
   }  
 
   saveAllowedEventTemp(title, slug, eventDate) {
@@ -878,7 +902,11 @@ export default class Artists {
     if (tt !== ss) {
       this.allowedEventTemp[ss] = [1, eventDate, this.today]; 
     }
-    return true;
+    return this.post({
+      success: true,
+      data: null,
+      reason: `🟩 save worked`,
+    });
   }
 
   saveAllowedTemp(title, slug, spotify, metalEnc, genres, eventDate) {
@@ -888,18 +916,30 @@ export default class Artists {
     if (tt !== ss) {
       this.allowedArtistsTemp[ss] = [1, spotify, metalEnc, genres, eventDate, this.today];
     }
-    return true;
+    return this.post({
+      success: true,
+      data: null,
+      reason: `🟩 save worked`,
+    });
   }
 
   persistNewRefusedAndRockArtists() {
-    // console.log(`new artists`);
-    // console.log(Object.keys(this.allowedArtistsTemp));
-    // console.log(`new events`);
-    // console.log(Object.keys(this.allowedEventTemp));
-    // console.log(`new refused`);
-    // console.log(Object.keys(this.refusedTemp));
+    console.log(`new artists`);
+    console.log(Object.keys(this.allowedArtistsTemp));
+    console.log(`new events`);
+    console.log(Object.keys(this.allowedEventTemp));
+    console.log(`new refused`);
+    console.log(Object.keys(this.refusedTemp));
 
-    if (this.nietSchrijven) return;
+    if (this.nietSchrijven) {
+      console.log('\x1b[33m%s\x1b[0m', '//////////////////');
+      console.log('----------------------');
+      console.log('\x1b[36m%s\x1b[0m', 'LET OP');
+      console.log('\x1b[36m%s\x1b[0m', 'de artiesten DB schrijft nog niet');
+      console.log('---------------------------');
+      console.log('\x1b[33m%s\x1b[0m', '//////////////////');
+      return;
+    }
 
     Object.entries(this.allowedArtistsTemp).forEach(([key, values]) => {
       if (this.allowedArtists[key]) {

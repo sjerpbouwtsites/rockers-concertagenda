@@ -21,11 +21,12 @@ const scraper = new AbstractScraper({
     },
     mainPage: {
       requiredProperties: ['slug', 'venueEventUrl', 'title'],
-      asyncCheckFuncs: ['refused', 'allowedEvent', 'forbiddenTerms'],
+      asyncCheckFuncs: ['allowedEvent', 'refused', 'forbiddenTerms'],
     },
     singlePage: {
       requiredProperties: ['venueEventUrl', 'title', 'price', 'start'],
-      asyncCheckFuncs: ['saveAllowedEvent', 'harvestArtists'],
+      asyncCheckFuncs: [],
+      //      asyncCheckFuncs: ['saveAllowedEvent', 'harvestArtists'],
     },
   },
 });
@@ -48,8 +49,8 @@ scraper.mainPage = async function () {
   let rawEvents = await page.evaluate(
     // eslint-disable-next-line no-shadow
     ({ workerData, unavailabiltyTerms }) =>
-      Array.from(document.querySelectorAll('.event-list-item')).map((eventEl) => {
-        const title = eventEl.querySelector('.event-list-item__title')?.textContent.trim() ?? null;
+      Array.from(document.querySelectorAll('#skewEl article')).map((eventEl) => {
+        const title = eventEl.querySelector('h2')?.textContent.trim() ?? null;
 
         const res = {
           anker: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
@@ -57,15 +58,15 @@ scraper.mainPage = async function () {
           title,
         };
 
-        res.venueEventUrl = eventEl.querySelector('.event-list-item__link')?.href ?? null;
+        res.venueEventUrl = eventEl.querySelector('a')?.href ?? null;
 
         res.mapToStart =
-          eventEl.querySelector('.event-list-item__date')?.getAttribute('datetime') ?? '';
+          eventEl.querySelector('time')?.getAttribute('datetime') ?? '';
         const uaRex = new RegExp(unavailabiltyTerms.join('|'), 'gi');
         res.unavailable = !!eventEl.textContent.match(uaRex);
         res.soldOut = !!eventEl?.innerHTML.match(/uitverkocht|sold\s?out/i) ?? false;
         res.shortText =
-          eventEl.querySelector('.event-list-item__subtitle')?.textContent.trim() ?? '';
+          eventEl.querySelector('h3')?.textContent.trim() ?? '';
 
         return res;
       }),
@@ -73,6 +74,7 @@ scraper.mainPage = async function () {
   );
 
   rawEvents = rawEvents
+    // .filter((e, i) => i >= 10 && i < 15)
     .map(mapToStart)
     .map(mapToShortDate)
     .map(workTitleAndSlug)
@@ -106,10 +108,16 @@ scraper.singlePage = async function ({ page, event }) {
         anker: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
         errors: [],
       };
+
+      document.querySelectorAll('.side_wrapper time').forEach((timeEl, index) => {
+        const j = index + 1;
+        // eslint-disable-next-line no-param-reassign
+        timeEl.id = `time-el-${j}`;
+      });
+
       res.mapToDoor =
-        document.querySelector('.timetable__times dl:first-child time')?.getAttribute('datetime') ??
+        document.querySelector('#time-el-2')?.getAttribute('datetime') ??
         '';
-      res.soldOut = !!(document.querySelector('.order-tickets button[disabled]') ?? null);
 
       return res;
     },
@@ -124,7 +132,7 @@ scraper.singlePage = async function ({ page, event }) {
     workerData,
     event,
     pageInfo,
-    selectors: ['.event-spotlight__image'],
+    selectors: ["[x-ref='event_image'] img"],
     mode: 'image-src',
   });
   pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
@@ -134,7 +142,7 @@ scraper.singlePage = async function ({ page, event }) {
     page,
     event,
     pageInfo,
-    selectors: ['.practical-information'],
+    selectors: ['.price_table'],
   });
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
   pageInfo.price = priceRes.price;

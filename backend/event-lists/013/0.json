@@ -1,136 +1,51 @@
 [
   {
-    "start": "2024-02-25T18:40:00+01:00",
-    "venueEventUrl": "https://www.013.nl/programma/7692/dragonforce-amaranthe",
-    "title": "DragonForce & Amaranthe",
+    "door": "2024-05-01T21:00:00+02:00",
+    "start": "2024-05-01T21:00:00+02:00",
+    "venueEventUrl": "https://www.013.nl/programma/7782/cats-cult",
+    "title": "Cat's Cult",
     "location": "013",
-    "price": 37.3,
-    "shortText": "",
-    "longText": "../public/texts/013/bW1hLzc2OTIvZHJhZ29uZm9yY2UtYW1hcmFudGhl.html",
-    "image": "../public/event-images/013/bW1hLzc2OTIvZHJhZ29uZm9yY2UtYW1hcmFudGhl",
-    "soldOut": true,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "dragonforce": {
-        "s": "2pH3wEn4eYlMMIIQyKPbVR",
-        "l": "dragonforce",
-        "g": [
-          "british power metal",
-          "fantasy metal",
-          "metal",
-          "power metal",
-          "speed metal"
-        ]
-      },
-      "amaranthe": {
-        "s": "2KaW48xlLnXC2v8tvyhWsa",
-        "l": null,
-        "g": [
-          "gothic symphonic metal",
-          "power metal",
-          "symphonic metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-03-14T19:00:00+01:00",
-    "start": "2024-03-14T19:30:00+01:00",
-    "venueEventUrl": "https://www.013.nl/programma/7747/skalmoeld",
-    "title": "Skálmöld",
-    "location": "013",
-    "price": 24.3,
-    "shortText": "ÝDALIR TOUR 2024",
-    "longText": "../public/texts/013/MTMubmwvcHJvZ3JhbW1hLzc3NDcvc2thbG1vZWxk.html",
-    "image": "../public/event-images/013/MTMubmwvcHJvZ3JhbW1hLzc3NDcvc2thbG1vZWxk",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "skalmold": {
-        "s": "61OnUq2Pb2GDDGlrHb7I6U",
-        "l": "sk%C3%A1lm%C3%B6ld",
-        "g": [
-          "deep folk metal",
-          "folk metal",
-          "icelandic metal",
-          "icelandic punk",
-          "viking metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-04-01T19:00:00+02:00",
-    "start": "2024-04-01T20:00:00+02:00",
-    "venueEventUrl": "https://www.013.nl/programma/7825/terror-nasty",
-    "title": "Terror + Nasty",
-    "location": "013",
-    "price": 28.3,
-    "shortText": "",
-    "longText": "../public/texts/013/bmwvcHJvZ3JhbW1hLzc4MjUvdGVycm9yLW5hc3R5.html",
-    "image": "../public/event-images/013/bmwvcHJvZ3JhbW1hLzc4MjUvdGVycm9yLW5hc3R5",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "terror": {
-        "s": "1GVRgPtEC6sZFqvItIk3eg",
-        "l": "Colombia",
-        "g": [
-          "hardcore",
-          "la hardcore",
-          "thrash metal"
-        ]
-      },
-      "nasty": {
-        "s": "7GnX7pGXdWtLObs16B1mFB",
-        "l": "France",
-        "g": [
-          "beatdown",
-          "death/thrash metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-04-19T13:00:00+02:00",
-    "start": "2024-04-19T13:00:00+02:00",
-    "venueEventUrl": "https://www.013.nl/programma/7713/roadburn-festival-2024",
-    "title": "Roadburn Festival 2024",
-    "location": "013",
-    "price": 2594,
-    "shortText": "",
-    "longText": "../public/texts/013/bWEvNzcxMy9yb2FkYnVybi1mZXN0aXZhbC0yMDI0.html",
-    "image": "../public/event-images/013/bWEvNzcxMy9yb2FkYnVybi1mZXN0aXZhbC0yMDI0",
+    "price": 0,
+    "shortText": "kboy en de goedzo jongens + Snackbar",
+    "longText": "../public/texts/013/MTMubmwvcHJvZ3JhbW1hLzc3ODIvY2F0cy1jdWx0.html",
+    "image": "../public/event-images/013/MTMubmwvcHJvZ3JhbW1hLzc3ODIvY2F0cy1jdWx0",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": null
   },
   {
-    "start": "2024-05-01T21:00:00+02:00",
-    "venueEventUrl": "https://www.013.nl/programma/7782/cats-cult",
-    "title": "Cat's Cult",
+    "door": "2024-05-02T20:00:00+02:00",
+    "start": "2024-05-02T20:00:00+02:00",
+    "venueEventUrl": "https://www.013.nl/programma/7807/fun-lovin-criminals-rudeboy-plays-uds",
+    "title": "Fun Lovin' Criminals + Rudeboy plays UDS",
     "location": "013",
-    "price": 1,
-    "shortText": "kboy en de goedzo jongens + Snackbar",
-    "longText": "../public/texts/013/MTMubmwvcHJvZ3JhbW1hLzc3ODIvY2F0cy1jdWx0.html",
-    "image": "../public/event-images/013/MTMubmwvcHJvZ3JhbW1hLzc3ODIvY2F0cy1jdWx0",
-    "soldOut": true,
+    "price": 44.8,
+    "shortText": "",
+    "longText": "../public/texts/013/aW4tY3JpbWluYWxzLXJ1ZGVib3ktcGxheXMtdWRz.html",
+    "image": "../public/event-images/013/aW4tY3JpbWluYWxzLXJ1ZGVib3ktcGxheXMtdWRz",
+    "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": {
-      "catscult": {
-        "s": "39EasU1lufD34xCTYOTLVU",
-        "l": "cat's%20cult",
-        "g": []
-      }
-    }
+    "artists": null
   },
   {
-    "door": "2024-05-04T20:00:00+02:00",
+    "door": "2024-05-03T20:30:00+02:00",
+    "start": "2024-05-03T20:30:00+02:00",
+    "venueEventUrl": "https://www.013.nl/programma/7763/tusky",
+    "title": "Tusky",
+    "location": "013",
+    "price": 17.3,
+    "shortText": "The Shit Hits The Van Tour",
+    "longText": "../public/texts/013/d3cuMDEzLm5sL3Byb2dyYW1tYS83NzYzL3R1c2t5.html",
+    "image": "../public/event-images/013/d3cuMDEzLm5sL3Byb2dyYW1tYS83NzYzL3R1c2t5",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2024-05-04T20:30:00+02:00",
     "start": "2024-05-04T20:30:00+02:00",
     "venueEventUrl": "https://www.013.nl/programma/7749/lysistrata",
     "title": "Lysistrata",
@@ -142,18 +57,55 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": {
-      "lysistrata": {
-        "s": "04bDp8VBNHzbTdujiMUuCb",
-        "l": null,
-        "g": [
-          "rock alternatif francais"
-        ]
-      }
-    }
+    "artists": null
   },
   {
-    "door": "2024-05-11T20:00:00+02:00",
+    "door": "2024-03-25T20:00:00+01:00",
+    "start": "2024-05-07T20:00:00+02:00",
+    "venueEventUrl": "https://www.013.nl/programma/7682/vv",
+    "title": "Vv",
+    "location": "013",
+    "price": 39.8,
+    "shortText": "",
+    "longText": "../public/texts/013/Ly93d3cuMDEzLm5sL3Byb2dyYW1tYS83NjgyL3Z2.html",
+    "image": "../public/event-images/013/Ly93d3cuMDEzLm5sL3Byb2dyYW1tYS83NjgyL3Z2",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2024-05-09T20:30:00+02:00",
+    "start": "2024-05-09T20:30:00+02:00",
+    "venueEventUrl": "https://www.013.nl/programma/7740/the-cards",
+    "title": "The Cards",
+    "location": "013",
+    "price": 20.3,
+    "shortText": "",
+    "longText": "../public/texts/013/MTMubmwvcHJvZ3JhbW1hLzc3NDAvdGhlLWNhcmRz.html",
+    "image": "../public/event-images/013/MTMubmwvcHJvZ3JhbW1hLzc3NDAvdGhlLWNhcmRz",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2024-05-11T18:30:00+02:00",
+    "start": "2024-05-11T18:30:00+02:00",
+    "venueEventUrl": "https://www.013.nl/programma/7705/landmvrks",
+    "title": "Landmvrks",
+    "location": "013",
+    "price": 28.3,
+    "shortText": "Creature Tour",
+    "longText": "../public/texts/013/MTMubmwvcHJvZ3JhbW1hLzc3MDUvbGFuZG12cmtz.html",
+    "image": "../public/event-images/013/MTMubmwvcHJvZ3JhbW1hLzc3MDUvbGFuZG12cmtz",
+    "soldOut": true,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2024-05-11T20:30:00+02:00",
     "start": "2024-05-11T20:30:00+02:00",
     "venueEventUrl": "https://www.013.nl/programma/7787/dvne-conjurer",
     "title": "Dvne + conjurer",
@@ -165,23 +117,25 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": {
-      "dvne": {
-        "s": "1isrot4GGRmnqFT2vMAa5q",
-        "l": "United Kingdom",
-        "g": [
-          "edinburgh metal",
-          "post-metal",
-          "progressive sludge",
-          "sci-fi metal",
-          "scottish metal",
-          "progressive sludge/post-metal"
-        ]
-      }
-    }
+    "artists": null
   },
   {
-    "door": "2024-05-22T20:00:00+02:00",
+    "door": "2024-05-21T18:30:00+02:00",
+    "start": "2024-05-21T18:30:00+02:00",
+    "venueEventUrl": "https://www.013.nl/programma/7729/landmvrks",
+    "title": "Landmvrks",
+    "location": "013",
+    "price": 28.3,
+    "shortText": "Creature Tour | Extra Show",
+    "longText": "../public/texts/013/MTMubmwvcHJvZ3JhbW1hLzc3MjkvbGFuZG12cmtz.html",
+    "image": "../public/event-images/013/MTMubmwvcHJvZ3JhbW1hLzc3MjkvbGFuZG12cmtz",
+    "soldOut": true,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2024-05-22T21:00:00+02:00",
     "start": "2024-05-22T21:00:00+02:00",
     "venueEventUrl": "https://www.013.nl/programma/7820/apes-of-the-state",
     "title": "Apes of the State",
@@ -193,21 +147,40 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": {
-      "apesofthestate": {
-        "s": "4HemfSCDgnPiHQh8Z6iyd6",
-        "l": null,
-        "g": [
-          "acoustic punk",
-          "folk punk",
-          "lancaster pa indie",
-          "pittsburgh indie"
-        ]
-      }
-    }
+    "artists": null
   },
   {
-    "door": "2024-06-02T20:00:00+02:00",
+    "door": "2024-05-26T20:00:00+02:00",
+    "start": "2024-05-26T20:00:00+02:00",
+    "venueEventUrl": "https://www.013.nl/programma/7805/blind-guardian",
+    "title": "Blind Guardian",
+    "location": "013",
+    "price": 34.8,
+    "shortText": "The God Machine Tour 2024",
+    "longText": "../public/texts/013/L3Byb2dyYW1tYS83ODA1L2JsaW5kLWd1YXJkaWFu.html",
+    "image": "../public/event-images/013/L3Byb2dyYW1tYS83ODA1L2JsaW5kLWd1YXJkaWFu",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2024-05-28T20:00:00+02:00",
+    "start": "2024-05-28T20:00:00+02:00",
+    "venueEventUrl": "https://www.013.nl/programma/7745/bruce-dickinson",
+    "title": "Bruce Dickinson",
+    "location": "013",
+    "price": 54.8,
+    "shortText": "",
+    "longText": "../public/texts/013/cHJvZ3JhbW1hLzc3NDUvYnJ1Y2UtZGlja2luc29u.html",
+    "image": "../public/event-images/013/cHJvZ3JhbW1hLzc3NDUvYnJ1Y2UtZGlja2luc29u",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2024-06-02T20:30:00+02:00",
     "start": "2024-06-02T20:30:00+02:00",
     "venueEventUrl": "https://www.013.nl/programma/7839/tricklebolt-money-the-man",
     "title": "Tricklebolt + Money & The Man",
@@ -219,33 +192,40 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": {
-      "tricklebolt": {
-        "s": "1ZAx1trsNb2poWyQOgrw8w",
-        "l": null,
-        "g": [
-          "dutch rock",
-          "dutch stoner rock"
-        ]
-      },
-      "money": {
-        "s": null,
-        "l": "United Kingdom",
-        "g": [
-          "sludge metal/post-hardcore"
-        ]
-      },
-      "theman": {
-        "s": null,
-        "l": "Australia",
-        "g": [
-          "progressive/post-metal"
-        ]
-      }
-    }
+    "artists": null
   },
   {
-    "door": "2024-06-24T19:00:00+02:00",
+    "door": "2024-06-05T21:00:00+02:00",
+    "start": "2024-06-05T21:00:00+02:00",
+    "venueEventUrl": "https://www.013.nl/programma/7783/cats-cult",
+    "title": "Cat's Cult",
+    "location": "013",
+    "price": 0,
+    "shortText": "L.A. Sagne + No Brains",
+    "longText": "../public/texts/013/MTMubmwvcHJvZ3JhbW1hLzc3ODMvY2F0cy1jdWx0.html",
+    "image": "../public/event-images/013/MTMubmwvcHJvZ3JhbW1hLzc3ODMvY2F0cy1jdWx0",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2024-06-08T20:30:00+02:00",
+    "start": "2024-06-08T20:30:00+02:00",
+    "venueEventUrl": "https://www.013.nl/programma/7821/doodseskader",
+    "title": "Doodseskader",
+    "location": "013",
+    "price": 16.3,
+    "shortText": "",
+    "longText": "../public/texts/013/bmwvcHJvZ3JhbW1hLzc4MjEvZG9vZHNlc2thZGVy.html",
+    "image": "../public/event-images/013/bmwvcHJvZ3JhbW1hLzc4MjEvZG9vZHNlc2thZGVy",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2024-06-24T20:00:00+02:00",
     "start": "2024-06-24T20:00:00+02:00",
     "venueEventUrl": "https://www.013.nl/programma/7808/mr-bungle",
     "title": "Mr. Bungle",
@@ -257,21 +237,40 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": {
-      "mrbungle": {
-        "s": "2zq0uqN9Wq12tqrQQt1ozw",
-        "l": "United States",
-        "g": [
-          "funk metal",
-          "funk rock",
-          "death/thrash metal",
-          "avant-garde metal/fusion/experimental"
-        ]
-      }
-    }
+    "artists": null
   },
   {
-    "door": "2024-09-12T19:00:00+02:00",
+    "door": "2024-06-25T20:00:00+02:00",
+    "start": "2024-06-25T20:00:00+02:00",
+    "venueEventUrl": "https://www.013.nl/programma/7766/megadeth",
+    "title": "Megadeth",
+    "location": "013",
+    "price": 60.8,
+    "shortText": "Crush The World Tour",
+    "longText": "../public/texts/013/MDEzLm5sL3Byb2dyYW1tYS83NzY2L21lZ2FkZXRo.html",
+    "image": "../public/event-images/013/MDEzLm5sL3Byb2dyYW1tYS83NzY2L21lZ2FkZXRo",
+    "soldOut": true,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2024-08-07T20:00:00+02:00",
+    "start": "2024-08-07T20:00:00+02:00",
+    "venueEventUrl": "https://www.013.nl/programma/7818/opeth",
+    "title": "Opeth",
+    "location": "013",
+    "price": 44.8,
+    "shortText": "",
+    "longText": "../public/texts/013/d3cuMDEzLm5sL3Byb2dyYW1tYS83ODE4L29wZXRo.html",
+    "image": "../public/event-images/013/d3cuMDEzLm5sL3Byb2dyYW1tYS83ODE4L29wZXRo",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2024-09-12T19:30:00+02:00",
     "start": "2024-09-12T19:30:00+02:00",
     "venueEventUrl": "https://www.013.nl/programma/7777/the-plot-in-you",
     "title": "The Plot In You",
@@ -283,16 +282,40 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": {
-      "theplotinyou": {
-        "s": null,
-        "l": "the%20plot%20in%20you",
-        "g": []
-      }
-    }
+    "artists": null
   },
   {
-    "door": "2024-10-02T19:00:00+02:00",
+    "door": "2024-09-22T19:30:00+02:00",
+    "start": "2024-09-22T19:30:00+02:00",
+    "venueEventUrl": "https://www.013.nl/programma/7864/our-last-night",
+    "title": "Our Last Night",
+    "location": "013",
+    "price": 30.3,
+    "shortText": "You’re Up Europe - Tour 2024",
+    "longText": "../public/texts/013/L3Byb2dyYW1tYS83ODY0L291ci1sYXN0LW5pZ2h0.html",
+    "image": "../public/event-images/013/L3Byb2dyYW1tYS83ODY0L291ci1sYXN0LW5pZ2h0",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2024-09-27T20:00:00+02:00",
+    "start": "2024-09-27T20:00:00+02:00",
+    "venueEventUrl": "https://www.013.nl/programma/7878/apocalyptica",
+    "title": "Apocalyptica",
+    "location": "013",
+    "price": 54.8,
+    "shortText": "PLAYS METALLICA VOL. 2 TOUR 2024",
+    "longText": "../public/texts/013/bmwvcHJvZ3JhbW1hLzc4NzgvYXBvY2FseXB0aWNh.html",
+    "image": "../public/event-images/013/bmwvcHJvZ3JhbW1hLzc4NzgvYXBvY2FseXB0aWNh",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2024-10-02T19:30:00+02:00",
     "start": "2024-10-02T19:30:00+02:00",
     "venueEventUrl": "https://www.013.nl/programma/7813/visions-of-atlantis",
     "title": "Visions of Atlantis",
@@ -304,23 +327,25 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": {
-      "visionsofatlantis": {
-        "s": "5kanN1nKzrkW1m2gZmo82x",
-        "l": "Austria",
-        "g": [
-          "austrian metal",
-          "gothic metal",
-          "gothic symphonic metal",
-          "power metal",
-          "symphonic metal",
-          "melodic/symphonic power metal"
-        ]
-      }
-    }
+    "artists": null
   },
   {
-    "door": "2024-11-01T18:00:00+01:00",
+    "door": "2024-10-31T19:00:00+01:00",
+    "start": "2024-10-31T19:00:00+01:00",
+    "venueEventUrl": "https://www.013.nl/programma/7702/beartooth",
+    "title": "Beartooth",
+    "location": "013",
+    "price": 42.8,
+    "shortText": "Show #1",
+    "longText": "../public/texts/013/MTMubmwvcHJvZ3JhbW1hLzc3MDIvYmVhcnRvb3Ro.html",
+    "image": "../public/event-images/013/MTMubmwvcHJvZ3JhbW1hLzc3MDIvYmVhcnRvb3Ro",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2024-11-01T19:00:00+01:00",
     "start": "2024-11-01T19:00:00+01:00",
     "venueEventUrl": "https://www.013.nl/programma/7703/beartooth",
     "title": "Beartooth",
@@ -332,16 +357,21 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": {
-      "beartooth": {
-        "s": "6vwjIs0tbIiseJMR3pqwiL",
-        "l": "beartooth",
-        "g": [
-          "melodic metalcore",
-          "metalcore",
-          "pop punk"
-        ]
-      }
-    }
+    "artists": null
+  },
+  {
+    "door": "2024-11-08T22:00:00+01:00",
+    "start": "2024-11-08T22:00:00+01:00",
+    "venueEventUrl": "https://www.013.nl/programma/7869/no-barrier",
+    "title": "No barrier",
+    "location": "013",
+    "price": 17.3,
+    "shortText": "Punk, Rock & Metalcore!",
+    "longText": "../public/texts/013/My5ubC9wcm9ncmFtbWEvNzg2OS9uby1iYXJyaWVy.html",
+    "image": "../public/event-images/013/My5ubC9wcm9ncmFtbWEvNzg2OS9uby1iYXJyaWVy",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
   }
 ]

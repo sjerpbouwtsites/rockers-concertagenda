@@ -89,7 +89,7 @@ export default class MonitorField {
     const newDiv = document.createElement('div');
     newDiv.innerHTML = `
     <strong>${debug.event}</strong>
-      ${debug.reason.split(', ').join('<br>')}
+      ${debug?.reason.replaceAll(/,/g, '<br>')}
       <hr>
       `;
     document.getElementById(this.mainFieldName).prepend(newDiv);
@@ -99,11 +99,17 @@ export default class MonitorField {
     const debug = updateData.messageData.content.debug ?? null;
     if (!debug) throw new Error('geen debug info');
     const newDiv = document.createElement('div');
-    newDiv.innerHTML = `
-      <strong>${debug.event}</strong>
-      ${debug?.reasons.join('<br>')} 
-      <hr>
-    `;// TODO HACK en singel en base gaan totaal anders. belachelijk
+    
+    try {
+      newDiv.innerHTML = `
+        <strong>${debug.event}</strong>
+        ${debug?.reason.replaceAll(/,/g, '<br>')}
+        <hr>
+      `;// TODO HACK en singel en base gaan totaal anders. belachelijk
+    } catch (error) {
+      console.error(error);
+      console.log(debug);      
+    }
     document.getElementById(this.mainFieldName).prepend(newDiv);
   }
    

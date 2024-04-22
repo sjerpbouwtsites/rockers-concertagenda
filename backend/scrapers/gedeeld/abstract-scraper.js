@@ -15,10 +15,11 @@ import _getPriceFromHTML from './price.js';
 import shell from '../../mods/shell.js';
 import {
   asyncIsAllowedEvent, asyncIsRefused, asyncForbiddenTerms, 
-  asyncSaveAllowedEvent, asyncHarvestArtists, asyncScanTitleForAllowedArtists,
+  asyncSaveAllowedEvent, asyncSaveRefused, asyncHarvestArtists, asyncScanTitleForAllowedArtists, 
   asyncSpotifyConfirmation, asyncGoodTerms, asyncExplicitEventCategories,
   asyncMetalEncyclopediaConfirmation, asyncIfNotAllowedRefuse, asyncHasAllowedArtist,
 } from './artist-db-interface.js';
+import DbInterFaceToScraper from './db-interface-to-scraper.js';
 
 // #endregion                                              IMPORTS
 
@@ -61,30 +62,45 @@ export default class AbstractScraper extends ScraperConfig {
   install() {
     this.qwm = new QuickWorkerMessage(workerData);
     this.months = getVenueMonths(workerData.family);
+
     this.asyncIsAllowedEvent = asyncIsAllowedEvent;
     this.asyncIsAllowedEvent.bind(this);
+
     this.asyncIsRefused = asyncIsRefused;
     this.asyncIsRefused.bind(this);
+
     this.asyncForbiddenTerms = asyncForbiddenTerms;
     this.asyncForbiddenTerms.bind(this);
+
     this.asyncSaveAllowedEvent = asyncSaveAllowedEvent;
     this.asyncSaveAllowedEvent.bind(this);
-    this.asyncHarvestArtists = asyncHarvestArtists;
-    this.asyncHarvestArtists.bind(this);
+
+    this.asyncSaveRefused = asyncSaveRefused;
+    this.asyncSaveRefused.bind(this);
+
     this.asyncScanTitleForAllowedArtists = asyncScanTitleForAllowedArtists;
     this.asyncScanTitleForAllowedArtists.bind(this);
+
     this.asyncSpotifyConfirmation = asyncSpotifyConfirmation;
     this.asyncSpotifyConfirmation.bind(this);
+
     this.asyncGoodTerms = asyncGoodTerms;
     this.asyncGoodTerms.bind(this);
+
     this.asyncExplicitEventCategories = asyncExplicitEventCategories;
     this.asyncExplicitEventCategories.bind(this);
+
     this.asyncMetalEncyclopediaConfirmation = asyncMetalEncyclopediaConfirmation;
     this.asyncMetalEncyclopediaConfirmation.bind(this);
+
     this.asyncIfNotAllowedRefuse = asyncIfNotAllowedRefuse;
     this.asyncIfNotAllowedRefuse.bind(this);
+    
     this.asyncHasAllowedArtist = asyncHasAllowedArtist;
     this.asyncHasAllowedArtist.bind(this);
+
+    this.asyncHarvestArtists = asyncHarvestArtists;
+    this.asyncHarvestArtists.bind(this);
   }
   // #endregion                                                CONSTRUCTOR & INSTALL
 
@@ -142,8 +158,11 @@ export default class AbstractScraper extends ScraperConfig {
   }
 
   async checkDBhasAnswered() {
-    if (this.dbAnswered) return true;
-    await this.waitTime(5);
+    if (this.dbAnswered) {
+      this.dbAnswered = false;
+      return this.lastDBAnswer;
+    }
+    await this.waitTime(10);
     return this.checkDBhasAnswered();
   }
 
@@ -406,6 +425,10 @@ export default class AbstractScraper extends ScraperConfig {
 
   // step 2.5
 
+  // RAW EVENTS
+  // ASYNC
+  // CHECK
+
   /**
    * Event Async Check controleert of events bv. wel metal zijn.
    * In navolging van generators loopt deze een extra rondje; de uiteindelijke
@@ -421,37 +444,29 @@ export default class AbstractScraper extends ScraperConfig {
       const useableEventsCheckedArray = checkedEvents.map((a) => a);
 
       generatedEvent = eventGen.next();
+      
       if (generatedEvent.done) return useableEventsCheckedArray;
 
       const eventToCheck = generatedEvent.value;
       const checkResult = await this.mainPageAsyncCheck(eventToCheck);
-      const workingTitle = this.cleanupEventTitle(eventToCheck.title);
+      eventToCheck.mainPageReasons = checkResult.reasons;
 
-      if (checkResult.success === 'error') {
-        // artist-db-interface gooit al de thread dicht
-        // maar dat je weet dat success ook error kan zijn.
+      if (debugSettings.debugRawEventAsyncCheck) {
+        this.rawEventAsyncCheckDebugger(checkResult, eventToCheck);
       }
 
-      if (checkResult.success) {
-        useableEventsCheckedArray.push(eventToCheck);
+      if (checkResult.isError) {
+        // artist-db-interface gooit al de thread dicht
+        // maar dat je weet dat success ook error kan zijn.
+        this.handleError(new Error('hier zou geen error moeten zijn?'), 'error te veel in raw events async check', 'close-thread');
+      }
 
-        if (debugSettings.debugRawEventAsyncCheck && checkResult.reason) {
-          parentPort.postMessage(
-            this.qwm.debugger({
-              title: 'base check success',
-              event: `<a class='single-event-check-notice single-event-check-notice--success' href='${eventToCheck.venueEventUrl}'>${workingTitle}<a/>`,
-              reason: checkResult.reason,
-            }),
-          );
-        }
-      } else if (debugSettings.debugRawEventAsyncCheck) {
-        parentPort.postMessage(
-          this.qwm.debugger({
-            title: 'base check fail',
-            event: `<a class='single-event-check-notice single-event-check-notice--failure' href='${eventToCheck.venueEventUrl}'>${workingTitle}<a/>`,
-            reason: checkResult.reason,
-          }),
-        );
+      if (checkResult.isSuccess) {
+        useableEventsCheckedArray.push(eventToCheck);
+      }
+
+      if (checkResult.isFailed) {
+        this.asyncSaveRefused(eventToCheck);
       }
 
       return await this.rawEventsAsyncCheck({
@@ -468,6 +483,27 @@ export default class AbstractScraper extends ScraperConfig {
     return true;
   }
 
+  rawEventAsyncCheckDebugger(checkResult, eventToCheck) {
+    const workingTitle = this.cleanupEventTitle(eventToCheck.title);
+    if (!checkResult.isFailed) {
+      parentPort.postMessage(
+        this.qwm.debugger({
+          title: 'base check success',
+          event: `<a class='single-event-check-notice single-event-check-notice--success' href='${eventToCheck.venueEventUrl}'>${workingTitle}<a/>`,
+          reason: checkResult.reason,
+        }),
+      );
+      return;
+    }
+    parentPort.postMessage(
+      this.qwm.debugger({
+        title: 'base check fail',
+        event: `<a class='single-event-check-notice single-event-check-notice--failure' href='${eventToCheck.venueEventUrl}'>${workingTitle}<a/>`,
+        reason: checkResult.reason,
+      }),
+    );
+  }
+
   /**
    * 
    *
@@ -476,7 +512,10 @@ export default class AbstractScraper extends ScraperConfig {
    * @memberof AbstractScraper
    */
   async mainPageAsyncCheck(event) {
-    return this.recursiveAsyncChecker(this._s.app.mainPage.asyncCheckFuncs, event, []);
+    const a = await this.recursiveAsyncChecker(this._s.app.mainPage.asyncCheckFuncs, event, []);
+    a.event.mainPageReasons = a.reasons;
+    a.event.mainPageReason = a.reason;
+    return a;
   }
 
   // #endregion                                                 MAIN PAGE CHECK
@@ -577,68 +616,70 @@ export default class AbstractScraper extends ScraperConfig {
     }
 
     mergedEvent.longText = this.writeLongTextHTML(mergedEvent);
-    const mergedEventCheckRes = await this.singlePageAsyncCheck(mergedEvent, pageInfo);
-    // this.dirtyLog({
-    //   dirtyLog: 'mergedEventCheckRes',
-    //   mergedEventCheckRes,
-    // });
-    if (mergedEventCheckRes.success) {
-      const artistsRes = await this.asyncScanTitleForAllowedArtists(mergedEvent);
 
-      if (debugSettings.debugArtistScan) {
-        const goedOfFout = artistsRes.success && artistsRes.success !== 'error' ? `🟩 ` : `🟥 `;
-        this.dirtyDebug({
-          title: `${goedOfFout} artist scan`,
-          event: `<a class='single-event-check-notice single-event-check-notice--success' href='${mergedEventCheckRes.event.venueEventUrl}'>${mergedEventCheckRes.event.title}</a>`,
-          reason: artistsRes.reason,
-        });
-      }
-      if (artistsRes.success) {
+    // AFHANKELING
+    // SINGLE PAGE
+    // ASYNC CHECK
+
+    const mergedEventCheckRes = await this.singlePageAsyncCheck(mergedEvent);
+    
+    if (!this.harvesterWaarschuwinggegeven) {
+      this.handleError(new Error('harvest artist uitgeschakeld'), 'harvester moet nog vernieuwd worden', 'notice');
+      this.harvesterWaarschuwinggegeven = true;
+    } 
+    // await this.asyncHarvestArtists(mergedEvent);
+
+    this.singlePageAsyncCheckDebugger(mergedEventCheckRes);
+
+    if (mergedEventCheckRes.isError) {
+      this.handleError(mergedEventCheckRes?.data?.error, mergedEventCheckRes?.reason, 'notice');
+      await this.closePageAfterSingle(singleEventPage, useableEventsList.length > 0);
+      return useableEventsList.length
+        ? this.processSingleMusicEvent(useableEventsList)
+        : useableEventsList;
+    } 
+    
+    if (!mergedEventCheckRes.isFailed) {
+      const artistsRes = await this.asyncScanTitleForAllowedArtists(mergedEvent);
+      this.artistScanDebugger(mergedEventCheckRes, artistsRes);
+
+      if (artistsRes.isSuccess) {
         mergedEvent.artists = artistsRes.data;
       } else {
         mergedEvent.artists = null;
       }
-
-      let tryEnforceDate = false;
-      try {
-        tryEnforceDate = new Date(mergedEvent.start).toISOString();
-      } catch (error) { /* */ }
-
-      if (tryEnforceDate && !mergedEvent.unavailable && !mergedEvent.corrupted) {
-        const toRegister = {
-          door: mergedEvent.door,
-          start: mergedEvent.start,      
-          end: mergedEvent.end,      
-          venueEventUrl: mergedEvent.venueEventUrl,      
-          title: mergedEvent.title,      
-          location: mergedEvent.location,      
-          price: mergedEvent.price,      
-          shortText: mergedEvent.shortText,      
-          longText: mergedEvent.longText,      
-          image: mergedEvent.image,      
-          soldOut: mergedEvent.soldOut,      
-          unavailable: mergedEvent.unavailable,
-          corrupted: mergedEvent.corrupted,
-          eventGenres: mergedEvent?.eventGenres ?? null,
-          artists: mergedEvent.artists,
-          // ...workerData,
-        };
-        this._events.push(toRegister);
-      } else {
-        this.dirtyDebug('invalid maar geen register invalid');
-      } // eind mergedEventCheckRes.success
     } 
-    if (debugSettings.debugsinglePageAsyncCheck) {
-      const s = `${mergedEventCheckRes.success ? 'success' : 'failure'}`;
-      parentPort.postMessage(
-        this.qwm.debugger({
-          title: `single check ${s}`,
-          event: `<a class='single-event-check-notice single-event-check-notice--${s}' href='${mergedEventCheckRes.event.venueEventUrl}'>${mergedEventCheckRes.event.title}</a>`,
-          reasons: mergedEventCheckRes.event?.reasonsSingle, // HACK HIER
-        }),
-      );
+    
+    const toRegister = this.makeRegisterObj(mergedEvent);
+
+    if (!mergedEventCheckRes.isFailed && !mergedEvent.unavailable && !mergedEvent.corrupted) {
+      toRegister.artists = mergedEvent.artists;
+      this._events.push(toRegister);
+      this.asyncSaveAllowedEvent(mergedEvent);
+    } else if (mergedEventCheckRes.isFailed || mergedEvent.corrupted) {
+      this.asyncSaveRefused(mergedEvent);
+      this._invalidEvents.push(toRegister);
+    } else if (mergedEvent.unavailable) {
+      this._invalidEvents.push(toRegister);
     }
-    const toRegister = {
+
+    await this.closePageAfterSingle(singleEventPage, useableEventsList.length > 0);
+
+    return useableEventsList.length
+      ? this.processSingleMusicEvent(useableEventsList)
+      : useableEventsList;
+  }
+
+  async closePageAfterSingle(singleEventPage, nogEventsOver) {
+    if (this._s?.launchOptions?.headless) {
+      if (singleEventPage && !singleEventPage.isClosed()) await singleEventPage.close();
+    } else if (this._s?.launchOptions?.headless === false && nogEventsOver) {
+      this.closeBrowser();
+    }
+  }
+
+  makeRegisterObj(mergedEvent) {
+    return {
       door: mergedEvent.door,
       start: mergedEvent.start,      
       end: mergedEvent.end,      
@@ -652,19 +693,31 @@ export default class AbstractScraper extends ScraperConfig {
       soldOut: mergedEvent.soldOut,      
       unavailable: mergedEvent.unavailable,
       corrupted: mergedEvent.corrupted,
-      // ...workerData,
-    };
-    this._invalidEvents.push(toRegister);
+      eventGenres: mergedEvent?.eventGenres ?? null,
+    };    
+  }
 
-    if (this._s?.launchOptions?.headless) {
-      if (singleEventPage && !singleEventPage.isClosed()) await singleEventPage.close();
-    } else if (this._s?.launchOptions?.headless === false && useableEventsList.length) {
-      this.closeBrowser();
-    }
+  artistScanDebugger(mergedEventCheckRes, artistsRes) {
+    if (!debugSettings.debugArtistScan) return;
+    this.dirtyDebug({
+      title: `🟩  artist scan`,
+      event: `<a class='single-event-check-notice single-event-check-notice--success' href='${mergedEventCheckRes.event.venueEventUrl}'>${mergedEventCheckRes.event.title}</a>`,
+      reason: artistsRes.reason,
+    });
+  }
 
-    return useableEventsList.length
-      ? this.processSingleMusicEvent(useableEventsList)
-      : useableEventsList;
+  singlePageAsyncCheckDebugger(mergedEventCheckRes) {
+    if (!debugSettings.debugsinglePageAsyncCheck) return;
+    
+    const s = !mergedEventCheckRes.isFailed ? `success` : `failure`;
+    parentPort.postMessage(
+      this.qwm.debugger({
+        title: `single check ${s}`,
+        event: `<a class='single-event-check-notice single-event-check-notice--${s}' href='${mergedEventCheckRes.event.venueEventUrl}'>${mergedEventCheckRes.event.title}</a>`,
+        reason: mergedEventCheckRes.reason,
+        // reason: mergedEventCheckRes.reasonevent?.reasonsSingle, // HACK HIER
+      }),
+    );
   }
 
   /**
@@ -817,7 +870,11 @@ export default class AbstractScraper extends ScraperConfig {
    * @memberof AbstractScraper
    */
   async singlePageAsyncCheck(event) {
-    return this.recursiveAsyncChecker(this._s.app.singlePage.asyncCheckFuncs, event, []);
+    return this.recursiveAsyncChecker(
+      this._s.app.singlePage.asyncCheckFuncs, 
+      event, 
+      event.mainPageReasons,
+    );
   }
   // #endregion                                                 SINGLE PAGE
 
@@ -1052,30 +1109,19 @@ export default class AbstractScraper extends ScraperConfig {
 
   // #region [rgba(255, 0, 0, 0.1)]      MAIN PAGE EVENT CHECK
   
-  async recursiveAsyncChecker(listOfFuncs, event, reasons) {
+  async recursiveAsyncChecker(listOfFuncs, event, olderReasons = []) {
     if (!listOfFuncs.length) {
-      return {
-        success: true,
-        break: true,
-        // reasons: ['no checks'],
-        // reason: 'no checks',  
+      const or = [...olderReasons];
+      const r = new DbInterFaceToScraper({
+        success: null,
+        reason: '⬜ geen check funcs',
+        reasons: [...olderReasons, '⬜ geen check funcs'],
         event,
-      }; 
+      }, or, 'geen recursieve funcs'); 
+      r.setBreak(true).setReason();
+      return r;
     }
-       
-    const reasonsCopy = Array.isArray(reasons) ? reasons : [];
-
-    if (this.skipFurtherChecks.includes(event.title)) {
-      reasons.push("allready check main");
-      return {
-        event,
-        reason: reasons.reverse().join(','),
-        reasons: reasonsCopy,
-        break: true,
-        success: true,
-      };    
-    }
-    
+  
     const funcNamesMap = {
       ifNotAllowedRefuse: 'asyncIfNotAllowedRefuse',
       allowedEvent: 'asyncIsAllowedEvent',
@@ -1107,21 +1153,17 @@ export default class AbstractScraper extends ScraperConfig {
     const curFuncName = funcNamesMap[curFunc];
 
     if (typeof this[curFuncName] !== 'undefined') {
-      const result = await this[curFuncName](event, reasonsCopy);
-      if (result?.break) {
-        // this.dirtyLog({
-        //   title: `async break voor ${event.title}`,
-        //   result,
-        // });
-        return result;
-      }
+      const result = await this[curFuncName](event, olderReasons);
+     
+      if (result?.break) return result;
+      
       // eslint-disable-next-line no-param-reassign
-      event.reasonsSingle = [...result.reasons]; // TODO DIT IS EEN HACK WANT OM EEN OF ANDERE REDEN VALLEN ANDERS DE REASONS ERAF
+      // event.reasonsSingle = [...result.reasons]; // TODO DIT IS EEN HACK WANT OM EEN OF ANDERE REDEN VALLEN ANDERS DE REASONS ERAF
       // this.dirtyLog(`reasons Ar: ${(result?.reasons ?? 'geen reasons').join('; ')}`);
       return this.recursiveAsyncChecker(listOfFuncsCopy, event, [...result.reasons]);
     } 
     this.handleError(new Error(`${curFuncName} niet in funcnames`), null, 'close-thread', funcNamesMap);
-    return this.recursiveAsyncChecker(listOfFuncsCopy, event, ['failure']);
+    return this.recursiveAsyncChecker(listOfFuncsCopy, event, ['error failure']);
   }
 
   // #endregion [rgba(255, 0, 0, 0.1)]      MAIN PAGE EVENT CHECK

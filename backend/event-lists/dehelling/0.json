@@ -34,7 +34,19 @@
     "image": "../public/event-images/dehelling/Zy1kaXN0YW5jZS1jYWxsaW5nLTExLTA1LTIwMjQv",
     "soldOut": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "longdistancecalling": {
+        "s": "3SiCxhceGZgzusCLHd4Zz6",
+        "l": null,
+        "g": [
+          "atmospheric post-metal",
+          "german post-rock",
+          "instrumental post-rock",
+          "post-metal",
+          "post-rock"
+        ]
+      }
+    }
   },
   {
     "start": "2024-05-25T18:00:00",
@@ -48,16 +60,20 @@
     "image": "../public/event-images/dehelling/aGlsbC1hY3Jlcy1oYWxmLW1lLTI1LTA1LTIwMjQv",
     "soldOut": false,
     "eventGenres": null,
-    "artists": {
-      "halfme": {
-        "s": "4LNvQot1CDYC3kWGW144XC",
-        "l": null,
-        "g": [
-          "german metalcore",
-          "metalcore",
-          "progressive"
-        ]
-      }
-    }
+    "artists": null
+  },
+  {
+    "start": "2024-06-22T20:00:00",
+    "end": "2024-06-22T03:00:00",
+    "venueEventUrl": "https://dehelling.nl/agenda/momentum-nnhnm-selofan-dead-lights-22-06-2024/",
+    "title": "Momentum – nnhnm + selofan + dead lights",
+    "location": "dehelling",
+    "price": 22.2,
+    "shortText": "Mini electro/wave/postpunk-festival met NNHNMN, Selofan en dancenight",
+    "longText": "../public/texts/dehelling/ZWxvZmFuLWRlYWQtbGlnaHRzLTIyLTA2LTIwMjQv.html",
+    "image": "../public/event-images/dehelling/ZWxvZmFuLWRlYWQtbGlnaHRzLTIyLTA2LTIwMjQv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": null
   }
 ]
