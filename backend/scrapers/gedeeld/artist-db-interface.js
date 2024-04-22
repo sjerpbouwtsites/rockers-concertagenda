@@ -40,7 +40,6 @@ export async function asyncIsAllowedEvent(event, olderReasons) {
   if (!DBToScraper.isError) return DBToScraper;
   
   this.handleError(DBToScraper?.data?.error, DBToScraper.lastReason, 'close-thread');
-  DBToScraper.setBreak(true);
   return DBToScraper;
 }
 
@@ -92,7 +91,6 @@ export async function asyncIsRefused(event, olderReasons) {
   if (!DBToScraper.isError) return DBToScraper;
   
   this.handleError(DBToScraper?.data?.error, DBToScraper.lastReason, 'close-thread');
-  DBToScraper.setBreak(true);
   return DBToScraper;
 }
 
@@ -112,7 +110,6 @@ export async function asyncForbiddenTerms(event, olderReasons) {
   if (!DBToScraper.isError) return DBToScraper;
 
   this.handleError(DBToScraper?.data?.error, DBToScraper.lastReason, 'close-thread');
-  DBToScraper.setBreak(true);
   return DBToScraper;
 }
 
@@ -150,14 +147,17 @@ export async function asyncGoodTerms(event, reasons) {
   return nullAnswerObject(event, reasonsCopy);
 }
 
-export async function asyncExplicitEventCategories(event, reasons) {
-  const reasonsCopy = Array.isArray(reasons) ? reasons : [];
-
-  if (!event.eventGenres || event.eventGenres < 1) {
-    reasonsCopy.push(`⬜ no eventGenres to check expl. ev. cats sa5`);
-    return nullAnswerObject(event, reasonsCopy);  
+export async function asyncExplicitEventCategories(event, olderReasons) {
+  if (!event?.eventGenres || event.eventGenres < 1) {
+    const DBToScraper = new DbInterFaceToScraper({
+      success: null,
+      data: null,
+      reason: `geen genres op event ${event.workTitle}`,
+      reasons: [`geen genres op event ${event.workTitle}`],
+    }, olderReasons, 'async explicit event categories');
+    return DBToScraper;
   }
-
+  
   this.talkToDB({
     type: 'db-request', 
     subtype: 'checkExplicitEventCategories',
@@ -165,47 +165,15 @@ export async function asyncExplicitEventCategories(event, reasons) {
       genres: event.eventGenres,
     },
   });
-  await this.checkDBhasAnswered();
-  if (this.lastDBAnswer.success === 'error') {
-    this.handleError(this.lastDBAnswer?.data?.error, this.lastDBAnswer.reason, 'close-thread');
-    return errorAnswerObject(event, reasons, this.lastDBAnswer);
-  }
-  if (this.lastDBAnswer.success) {
-    // this.dirtyLog({
-    //   'last db answer check explicit genres':'rue',
-    //   lastDBAnswer: this.lastDBAnswer,
-    // });
-    reasonsCopy.push(this.lastDBAnswer.reason);
-    this.skipFurtherChecks.push(event.workTitle);
-    this.talkToDB({
-      type: 'db-request',
-      subtype: 'saveAllowedEventTemp',
-      messageData: {
-        title: event.workTitle,
-        slug: event.slug,
-        eventDate: event.shortDate,
-      },
-    }); 
-    reasonsCopy.push(`🟧 saved in allowed event temp sa6`);
-    return successAnswerObject(event, reasonsCopy, true);
-  }
-  if (this.lastDBAnswer.success === false) {
-    reasonsCopy.push(this.lastDBAnswer.reason);
-    this.talkToDB({
-      type: 'db-request',
-      subtype: 'saveRefusedTemp',
-      messageData: {
-        title: event.workTitle,
-        slug: event.slug,
-        eventDate: event.shortDate,
-      },
-    }); 
-    reasonsCopy.push(`🟧 saved in refused temp sa7`);
-    return failureAnswerObject(event, reasonsCopy, true);
-  }  
-  const nulledReason = this.lastDBAnswer.reason.replace('🟥', '⬜').replace('🟩', '⬜');
-  reasonsCopy.push(nulledReason);
-  return nullAnswerObject(event, reasonsCopy);
+  
+  const dbAnswer = await this.checkDBhasAnswered();
+  const DBToScraper = new DbInterFaceToScraper(dbAnswer, olderReasons, 'async explicit event categories');
+
+  if (DBToScraper.isSuccess) DBToScraper.setBreak(true);
+  if (!DBToScraper.isError) return DBToScraper;
+  
+  this.handleError(DBToScraper?.data?.error, DBToScraper.lastReason, 'close-thread');
+  return DBToScraper;
 }
 
 export async function asyncSpotifyConfirmation(event, olderReasons) {
@@ -224,7 +192,6 @@ export async function asyncSpotifyConfirmation(event, olderReasons) {
   if (!DBToScraper.isError) return DBToScraper;
   
   this.handleError(DBToScraper?.data?.error, DBToScraper.lastReason, 'close-thread');
-  DBToScraper.setBreak(true);
   return DBToScraper;
 }
 

@@ -30,7 +30,7 @@ const scraper = new AbstractScraper({
       asyncCheckFuncs: ['refused', 'allowedEvent', 'explicitEventGenres'],
     },
     singlePage: {
-      asyncCheckFuncs: ['saveAllowedEvent', 'harvestArtists'],
+      asyncCheckFuncs: [],
     },
   },
 });
