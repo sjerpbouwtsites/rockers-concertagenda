@@ -208,9 +208,7 @@ export async function asyncExplicitEventCategories(event, reasons) {
   return nullAnswerObject(event, reasonsCopy);
 }
 
-export async function asyncSpotifyConfirmation(event, reasons) {
-  const reasonsCopy = Array.isArray(reasons) ? reasons : [];
-  
+export async function asyncSpotifyConfirmation(event, olderReasons) {
   this.talkToDB({
     type: 'db-request', 
     subtype: 'getSpotifyConfirmation',
@@ -220,44 +218,14 @@ export async function asyncSpotifyConfirmation(event, reasons) {
       eventDate: event.shortDate,
     },
   });
-  await this.checkDBhasAnswered();
-  if (this.lastDBAnswer.success === 'error') {
-    this.handleError(this.lastDBAnswer?.data?.error, this.lastDBAnswer.reason, 'close-thread');
-    return errorAnswerObject(event, reasons, this.lastDBAnswer);
-  }
-  if (this.lastDBAnswer.success) {
-    reasonsCopy.push(this.lastDBAnswer.reason);
-    this.skipFurtherChecks.push(event.workTitle);
-    this.talkToDB({
-      type: 'db-request',
-      subtype: 'saveAllowedTemp',
-      messageData: {
-        title: event.workTitle,
-        slug: event.slug,
-        eventDate: event.shortDate,
-      },
-    }); 
-    reasonsCopy.push(`🟧 saved in allowed event temp sa8`);
-    return successAnswerObject(event, reasonsCopy, true);
-  }
- 
-  if (this.lastDBAnswer.success === false) {
-    reasonsCopy.push(this.lastDBAnswer.reason);
-    this.talkToDB({
-      type: 'db-request',
-      subtype: 'saveRefusedTemp',
-      messageData: {
-        title: event.workTitle,
-        slug: event.slug,
-        eventDate: event.shortDate,
-      },
-    }); 
-    reasonsCopy.push(`🟧 saved in refused event temp sa9`);
-    return failureAnswerObject(event, reasonsCopy, true);
-  }
-  const nulledReason = this.lastDBAnswer.reason.replace('🟥', '⬜').replace('🟩', '⬜');
-  reasonsCopy.push(nulledReason);
-  return nullAnswerObject(event, reasonsCopy);
+  const dbAnswer = await this.checkDBhasAnswered();
+  const DBToScraper = new DbInterFaceToScraper(dbAnswer, olderReasons, 'async spotify confirmation');
+  if (DBToScraper.isSuccess || DBToScraper.isFailed) DBToScraper.setBreak(true);
+  if (!DBToScraper.isError) return DBToScraper;
+  
+  this.handleError(DBToScraper?.data?.error, DBToScraper.lastReason, 'close-thread');
+  DBToScraper.setBreak(true);
+  return DBToScraper;
 }
 
 export async function asyncMetalEncyclopediaConfirmation(event, reasons) {

@@ -1,88 +1,5 @@
 [
   {
-    "door": "2024-03-02T18:30:00",
-    "start": "2024-03-02T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/the-1975",
-    "title": "The 1975",
-    "location": "afaslive",
-    "price": 60.5,
-    "longText": "../public/texts/afaslive/d3cuYWZhc2xpdmUubmwvYWdlbmRhL3RoZS0xOTc1.html",
-    "image": "../public/event-images/afaslive/d3cuYWZhc2xpdmUubmwvYWdlbmRhL3RoZS0xOTc1",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
-    "door": "2024-03-16T18:30:00",
-    "start": "2024-03-16T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/the-smile",
-    "title": "The Smile",
-    "location": "afaslive",
-    "price": 75.04,
-    "longText": "../public/texts/afaslive/dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvdGhlLXNtaWxl.html",
-    "image": "../public/event-images/afaslive/dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvdGhlLXNtaWxl",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
-    "door": "2024-03-28T20:00:00",
-    "start": "2024-03-28T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/the-rose",
-    "title": "The Rose",
-    "location": "afaslive",
-    "price": 72.8,
-    "longText": "../public/texts/afaslive/d3cuYWZhc2xpdmUubmwvYWdlbmRhL3RoZS1yb3Nl.html",
-    "image": "../public/event-images/afaslive/d3cuYWZhc2xpdmUubmwvYWdlbmRhL3RoZS1yb3Nl",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "therose": {
-        "s": "5na1LmEmK2VzNLje9snJYW",
-        "l": "United States",
-        "g": [
-          "k-pop",
-          "k-pop boy group",
-          "symphonic/gothic metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-04-26T22:00:00",
-    "start": "2024-04-26T22:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/anotr-presents-expo-amsterdam",
-    "title": "ANOTR Presents: EXPO Amsterdam",
-    "location": "afaslive",
-    "price": 26,
-    "longText": "../public/texts/afaslive/L2Fub3RyLXByZXNlbnRzLWV4cG8tYW1zdGVyZGFt.html",
-    "image": "../public/event-images/afaslive/L2Fub3RyLXByZXNlbnRzLWV4cG8tYW1zdGVyZGFt",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
-    "door": "2024-05-09T19:00:00",
-    "start": "2024-05-09T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/rotimi",
-    "title": "Rotimi",
-    "location": "afaslive",
-    "price": 38,
-    "longText": "../public/texts/afaslive/L3d3dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvcm90aW1p.html",
-    "image": "../public/event-images/afaslive/L3d3dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvcm90aW1p",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "rotimi": {
-        "s": "1xBARhKI09ZTmeePVDWMCf",
-        "l": null,
-        "g": [
-          "pop r&b"
-        ]
-      }
-    }
-  },
-  {
     "door": "2024-05-19T20:00:00",
     "start": "2024-05-19T20:00:00",
     "venueEventUrl": "https://www.afaslive.nl/agenda/iprevail",
@@ -93,16 +10,7 @@
     "image": "../public/event-images/afaslive/d3cuYWZhc2xpdmUubmwvYWdlbmRhL2lwcmV2YWls",
     "soldOut": false,
     "eventGenres": null,
-    "artists": {
-      "iprevail": {
-        "s": "3Uobr6LgQpBbk6k4QGAb3V",
-        "l": "i%20prevail",
-        "g": [
-          "alternative metal",
-          "nu-metalcore"
-        ]
-      }
-    }
+    "artists": null
   },
   {
     "door": "2024-06-12T20:00:00",
@@ -115,17 +23,7 @@
     "image": "../public/event-images/afaslive/dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvYmFieW1ldGFs",
     "soldOut": false,
     "eventGenres": null,
-    "artists": {
-      "babymetal": {
-        "s": "630wzNP2OL7fl4Xl0GnMWq",
-        "l": "babymetal",
-        "g": [
-          "idol rock",
-          "j-metal",
-          "kawaii metal"
-        ]
-      }
-    }
+    "artists": null
   },
   {
     "door": "2024-08-04T20:00:00",
@@ -138,21 +36,7 @@
     "image": "../public/event-images/afaslive/Oi8vd3d3LmFmYXNsaXZlLm5sL2FnZW5kYS9rb3Ju",
     "soldOut": true,
     "eventGenres": null,
-    "artists": {
-      "korn": {
-        "s": "3RNrq3jvMZxD9ZyoOZbQOD",
-        "l": null,
-        "g": [
-          "alternative metal",
-          "funk metal",
-          "hard rock",
-          "nu metal",
-          "post-grunge",
-          "rap metal",
-          "rock"
-        ]
-      }
-    }
+    "artists": null
   },
   {
     "door": "2024-09-21T20:00:00",
@@ -165,16 +49,19 @@
     "image": "../public/event-images/afaslive/d3d3LmFmYXNsaXZlLm5sL2FnZW5kYS9oZWlsdW5n",
     "soldOut": true,
     "eventGenres": null,
-    "artists": {
-      "heilung": {
-        "s": "7sTKZr30LqC928DZ5P9mNQ",
-        "l": null,
-        "g": [
-          "dark folk",
-          "rune folk",
-          "viking folk"
-        ]
-      }
-    }
+    "artists": null
+  },
+  {
+    "door": "2024-11-24T20:00:00",
+    "start": "2024-11-24T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/dream-theater",
+    "title": "Dream Theater",
+    "location": "afaslive",
+    "price": 112,
+    "longText": "../public/texts/afaslive/YXNsaXZlLm5sL2FnZW5kYS9kcmVhbS10aGVhdGVy.html",
+    "image": "../public/event-images/afaslive/YXNsaXZlLm5sL2FnZW5kYS9kcmVhbS10aGVhdGVy",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": null
   }
 ]

@@ -1,112 +1,5 @@
 [
   {
-    "door": "2024-03-08T20:00:00",
-    "start": "2024-03-08T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/idles",
-    "title": "Idles",
-    "location": "afaslive",
-    "price": 44.8,
-    "longText": "../public/texts/afaslive/Ly93d3cuYWZhc2xpdmUubmwvYWdlbmRhL2lkbGVz.html",
-    "image": "../public/event-images/afaslive/Ly93d3cuYWZhc2xpdmUubmwvYWdlbmRhL2lkbGVz",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "idles": {
-        "s": "75mafsNqNE1WSEVxIKuY5C",
-        "l": null,
-        "g": [
-          "bristol indie",
-          "crank wave",
-          "indie rock",
-          "modern rock"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-03-24T18:30:00",
-    "start": "2024-03-24T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/the-1975-1",
-    "title": "The 1975",
-    "location": "afaslive",
-    "price": 60.5,
-    "longText": "../public/texts/afaslive/LmFmYXNsaXZlLm5sL2FnZW5kYS90aGUtMTk3NS0x.html",
-    "image": "../public/event-images/afaslive/LmFmYXNsaXZlLm5sL2FnZW5kYS90aGUtMTk3NS0x",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
-    "door": "2024-04-19T20:00:00",
-    "start": "2024-04-19T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/keane",
-    "title": "Keane",
-    "location": "afaslive",
-    "price": 53.76,
-    "longText": "../public/texts/afaslive/Ly93d3cuYWZhc2xpdmUubmwvYWdlbmRhL2tlYW5l.html",
-    "image": "../public/event-images/afaslive/Ly93d3cuYWZhc2xpdmUubmwvYWdlbmRhL2tlYW5l",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "keane": {
-        "s": "53A0W3U0s8diEn9RhXQhVz",
-        "l": null,
-        "g": [
-          "neo mellow",
-          "piano rock",
-          "pop rock"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-05-03T20:00:00",
-    "start": "2024-05-03T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/tekno",
-    "title": "Tekno",
-    "location": "afaslive",
-    "price": 52.5,
-    "longText": "../public/texts/afaslive/Ly93d3cuYWZhc2xpdmUubmwvYWdlbmRhL3Rla25v.html",
-    "image": "../public/event-images/afaslive/Ly93d3cuYWZhc2xpdmUubmwvYWdlbmRhL3Rla25v",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "tekno": {
-        "s": "6IhG3Yxm3UW98jhyBvrIut",
-        "l": null,
-        "g": [
-          "afrobeats",
-          "afropop",
-          "nigerian hip hop",
-          "nigerian pop"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-05-17T19:00:00",
-    "start": "2024-05-17T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/racoon",
-    "title": "Racoon",
-    "location": "afaslive",
-    "price": 52,
-    "longText": "../public/texts/afaslive/L3d3dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvcmFjb29u.html",
-    "image": "../public/event-images/afaslive/L3d3dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvcmFjb29u",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "racoon": {
-        "s": "30mNTnmvPn3HwXA5dW1Iza",
-        "l": null,
-        "g": [
-          "dutch indie",
-          "dutch pop",
-          "dutch rock"
-        ]
-      }
-    }
-  },
-  {
     "door": "2024-06-10T20:00:00",
     "start": "2024-06-10T20:00:00",
     "venueEventUrl": "https://www.afaslive.nl/agenda/judas-priest",
@@ -117,22 +10,7 @@
     "image": "../public/event-images/afaslive/ZmFzbGl2ZS5ubC9hZ2VuZGEvanVkYXMtcHJpZXN0",
     "soldOut": false,
     "eventGenres": null,
-    "artists": {
-      "judaspriest": {
-        "s": "2tRsMl4eGxwoNabM08Dm4I",
-        "l": "judas%20priest",
-        "g": [
-          "album rock",
-          "alternative metal",
-          "birmingham metal",
-          "glam metal",
-          "hard rock",
-          "heavy metal",
-          "metal",
-          "rock"
-        ]
-      }
-    }
+    "artists": null
   },
   {
     "door": "2024-07-08T20:00:00",
@@ -145,19 +23,7 @@
     "image": "../public/event-images/afaslive/L3d3dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvenotdG9w",
     "soldOut": false,
     "eventGenres": null,
-    "artists": {
-      "zztop": {
-        "s": "2AM4ilv6UzW0uMRuqKtDgN",
-        "l": null,
-        "g": [
-          "album rock",
-          "blues rock",
-          "classic rock",
-          "hard rock",
-          "rock"
-        ]
-      }
-    }
+    "artists": null
   },
   {
     "door": "2024-09-20T20:00:00",
@@ -170,41 +36,19 @@
     "image": "../public/event-images/afaslive/Ly93d3cuYWZhc2xpdmUubmwvYWdlbmRhL2VwaWNh",
     "soldOut": true,
     "eventGenres": null,
-    "artists": {
-      "epica": {
-        "s": "5HA5aLY3jJV7eimXWkRBBp",
-        "l": "epica",
-        "g": [
-          "dutch metal",
-          "gothic metal",
-          "gothic symphonic metal",
-          "opera metal",
-          "power metal",
-          "symphonic metal"
-        ]
-      }
-    }
+    "artists": null
   },
   {
-    "door": "2024-10-28T20:00:00",
-    "start": "2024-10-28T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/gavin-degraw",
-    "title": "Gavin DeGraw",
+    "door": "2024-11-05T20:00:00",
+    "start": "2024-11-05T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/nas",
+    "title": "Nas",
     "location": "afaslive",
-    "price": 54.88,
-    "longText": "../public/texts/afaslive/ZmFzbGl2ZS5ubC9hZ2VuZGEvZ2F2aW4tZGVncmF3.html",
-    "image": "../public/event-images/afaslive/ZmFzbGl2ZS5ubC9hZ2VuZGEvZ2F2aW4tZGVncmF3",
+    "price": 61.6,
+    "longText": "../public/texts/afaslive/czovL3d3dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvbmFz.html",
+    "image": "../public/event-images/afaslive/czovL3d3dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvbmFz",
     "soldOut": false,
     "eventGenres": null,
-    "artists": {
-      "gavindegraw": {
-        "s": "5DYAABs8rkY9VhwtENoQCz",
-        "l": null,
-        "g": [
-          "neo mellow",
-          "pop rock"
-        ]
-      }
-    }
+    "artists": null
   }
 ]

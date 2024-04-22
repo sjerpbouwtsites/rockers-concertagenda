@@ -542,9 +542,9 @@ export default class Artists {
     
     if (!spotRes) {
       return this.post({
-        success: false,
+        success: null,
         data: null,
-        reason: `🟥 no artists found ab5`,
+        reason: `⬜ no artists found ab5`,
       });  
     }
 
@@ -576,9 +576,9 @@ export default class Artists {
     }
     
     return this.post({
-      success: true,
+      success: null,
       data: heeftGoedeTermen,
-      reason: `🟩 spotify verboden genre ${heeftVerbodenTermen} maar geen goede termen ab8`,
+      reason: `⬜ geen spotify verboden of goede genres ab8`,
     });    
   }
 

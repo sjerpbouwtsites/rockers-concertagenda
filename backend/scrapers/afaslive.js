@@ -35,7 +35,7 @@ const scraper = new AbstractScraper({
     },
     singlePage: {
       requiredProperties: ['venueEventUrl', 'title', 'start'],
-      asyncCheckFuncs: ['refused', 'saveAllowedEvent', 'harvestArtists'],
+      asyncCheckFuncs: ['refused'],
     },
   },
 });
