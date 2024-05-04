@@ -132,12 +132,6 @@ scraper.singlePage = async function ({ page, event }) {
     { months: this.months, event },
   );
 
-  this.dirtyDebug({
-    title: `pageinfo en event debug`,
-    pageInfo,
-    event,
-  });
-
   const imageRes = await getImage({
     _this: this,
     page,

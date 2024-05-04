@@ -12,7 +12,7 @@ import DbInterFaceToScraper from './db-interface-to-scraper.js';
 // explicitEventGenres: 'asyncExplicitEventCategories',
 // hasAllowedArtist: 'asyncHasAllowedArtist',
 
-function talkTitleAndSlug(subtype, event) {
+function talkTitleAndSlug(subtype, event, extraData = {}) {
   const s = event.shortDate;
   return {
     type: 'db-request', 
@@ -25,6 +25,7 @@ function talkTitleAndSlug(subtype, event) {
         ? event.slug + s 
         : event.slug,
       eventDate: s,
+      ...extraData,
     },
   };
 }
@@ -113,42 +114,56 @@ export async function asyncForbiddenTerms(event, olderReasons) {
   return DBToScraper;
 }
 
-export async function asyncGoodTerms(event, reasons) {
-  const reasonsCopy = Array.isArray(reasons) ? reasons : [];
-  this.talkToDB({
-    type: 'db-request', 
-    subtype: 'hasGood',
-    messageData: {
-      string: event.workTitle + event.slug + (event?.shortText ?? '').toLowerCase(),
-    },
-  });
-  await this.checkDBhasAnswered();
-  this.skipFurtherChecks.push(event.workTitle);
-  if (this.lastDBAnswer.success === 'error') {
-    this.handleError(this.lastDBAnswer?.data?.error, this.lastDBAnswer.reason, 'close-thread');
-    return errorAnswerObject(event, reasons, this.lastDBAnswer);
+export async function asyncGoodTerms(event, olderReasons) {
+  this.talkToDB(talkTitleAndSlug('hasGood', event, {
+    string: event.workTitle + event.slug + (event?.shortText ?? '').toLowerCase(),
+  }));
+  const dbAnswer = await this.checkDBhasAnswered();
+  const DBToScraper = new DbInterFaceToScraper(dbAnswer, olderReasons, 'async good terms');
+  DBToScraper.setReason();
+
+  if (DBToScraper.isSuccess) {
+    DBToScraper.setBreak(true);
+    return DBToScraper;
   }
-  if (this.lastDBAnswer.success) {
-    reasonsCopy.push(this.lastDBAnswer.reason);
-    this.talkToDB({
-      type: 'db-request',
-      subtype: 'saveAllowedEventTemp',
-      messageData: {
-        title: event.workTitle,
-        slug: event.slug,
-        eventDate: event.shortDate,
-      },
-    }); 
-    reasonsCopy.push(`🟧 saved in allowed event temp sa4`);
-    return successAnswerObject(event, reasonsCopy, true);
-  }
-  const nulledReason = this.lastDBAnswer.reason.replace('🟥', '⬜').replace('🟩', '⬜');
-  reasonsCopy.push(nulledReason);
-  return nullAnswerObject(event, reasonsCopy);
+  if (!DBToScraper.isError) return DBToScraper;
+  
+  this.handleError(DBToScraper?.data?.error, DBToScraper.lastReason, 'close-thread');
+  return DBToScraper;
+  // this.talkToDB({
+  //   type: 'db-request', 
+  //   subtype: 'hasGood',
+  //   messageData: {
+  //     string: event.workTitle + event.slug + (event?.shortText ?? '').toLowerCase(),
+  //   },
+  // });
+  // await this.checkDBhasAnswered();
+  // this.skipFurtherChecks.push(event.workTitle);
+  // if (this.lastDBAnswer.success === 'error') {
+  //   this.handleError(this.lastDBAnswer?.data?.error, this.lastDBAnswer.reason, 'close-thread');
+  //   return errorAnswerObject(event, reasons, this.lastDBAnswer);
+  // }
+  // if (this.lastDBAnswer.success) {
+  //   reasonsCopy.push(this.lastDBAnswer.reason);
+  //   this.talkToDB({
+  //     type: 'db-request',
+  //     subtype: 'saveAllowedEventTemp',
+  //     messageData: {
+  //       title: event.workTitle,
+  //       slug: event.slug,
+  //       eventDate: event.shortDate,
+  //     },
+  //   }); 
+  //   reasonsCopy.push(`🟧 saved in allowed event temp sa4`);
+  //   return successAnswerObject(event, reasonsCopy, true);
+  // }
+  // const nulledReason = this.lastDBAnswer.reason.replace('🟥', '⬜').replace('🟩', '⬜');
+  // reasonsCopy.push(nulledReason);
+  // return nullAnswerObject(event, reasonsCopy);
 }
 
 export async function asyncExplicitEventCategories(event, olderReasons) {
-  if (!event?.eventGenres || event.eventGenres < 1) {
+  if (!(event?.eventGenres ?? null) || event?.eventGenres.length < 1) {
     const DBToScraper = new DbInterFaceToScraper({
       success: null,
       data: null,
@@ -157,17 +172,16 @@ export async function asyncExplicitEventCategories(event, olderReasons) {
     }, olderReasons, 'async explicit event categories');
     return DBToScraper;
   }
-  
-  this.talkToDB({
-    type: 'db-request', 
-    subtype: 'checkExplicitEventCategories',
-    messageData: {
-      genres: event.eventGenres,
-    },
+
+  const talkTitleAndSlugObj = talkTitleAndSlug('checkExplicitEventCategories', event, {
+    genres: event?.eventGenres ?? [],
   });
+
+  this.talkToDB(talkTitleAndSlugObj);
   
   const dbAnswer = await this.checkDBhasAnswered();
   const DBToScraper = new DbInterFaceToScraper(dbAnswer, olderReasons, 'async explicit event categories');
+  DBToScraper.setReason();
 
   if (DBToScraper.isSuccess) DBToScraper.setBreak(true);
   if (!DBToScraper.isError) return DBToScraper;
@@ -264,38 +278,33 @@ export async function asyncHarvestArtists(event) {
  * @param {*} mergedEvent 
  * @returns 
  */
-export async function asyncScanTitleForAllowedArtists(mergedEvent) {
-  this.talkToDB({
-    type: 'db-request',
-    subtype: 'scanTitleForAllowedArtistsAsync',
-    messageData: {
-      title: mergedEvent.title,
-      slug: mergedEvent.slug,
-      shortText: mergedEvent.shortText,
-      settings: this._s.app.harvest,
-    },
-  });    
-  await this.checkDBhasAnswered();
-  if (this.lastDBAnswer.success === 'error') {
-    this.handleError(this.lastDBAnswer?.data?.error, this.lastDBAnswer.reason, 'close-thread');
-    return errorAnswerObject(mergedEvent, [], this.lastDBAnswer);
-  }
-  return { ...this.lastDBAnswer };
+export async function asyncScanTitleForAllowedArtists(mergedEvent, olderReasons = []) {
+  this.talkToDB(talkTitleAndSlug('scanTitleForAllowedArtistsAsync', mergedEvent, {
+    shortText: mergedEvent.shortText,
+    settings: this._s.app.harvest,
+  }));    
+
+  const dbAnswer = await this.checkDBhasAnswered();
+  const DBToScraper = new DbInterFaceToScraper(dbAnswer, olderReasons, 'async scan title for allowed artists');
+  DBToScraper.setReason();
+  if (!DBToScraper.isError) return DBToScraper;
+  
+  this.handleError(DBToScraper?.data?.error, DBToScraper.lastReason, 'close-thread');
+  return DBToScraper;
 }
 
-export async function asyncHasAllowedArtist(event, reasons) {
-  const reasonsCopy = Array.isArray(reasons) ? reasons : [];
-  await this.asyncScanTitleForAllowedArtists(event);
-  await this.checkDBhasAnswered();
-  reasonsCopy.push(this.lastDBAnswer.reason);
-  if (this.lastDBAnswer.success === 'error') {
-    this.handleError(this.lastDBAnswer?.data?.error, this.lastDBAnswer.reason, 'close-thread');
-    return errorAnswerObject(event, reasons, this.lastDBAnswer);
+export async function asyncHasAllowedArtist(event, olderReasons) {
+  const getScanDBScraper = 
+    await this.asyncScanTitleForAllowedArtists(event, olderReasons);
+
+  if (getScanDBScraper.isSuccess) {
+    getScanDBScraper.setBreak(true);
+    return getScanDBScraper;
   }
-  if (this.lastDBAnswer.success) {
-    return successAnswerObject(event, reasonsCopy, true);
-  }
-  return nullAnswerObject(event, reasonsCopy);
+  if (!getScanDBScraper.isError) return getScanDBScraper;
+  
+  this.handleError(getScanDBScraper?.data?.error, getScanDBScraper.lastReason, 'close-thread');
+  return getScanDBScraper;
 }
 
 export default null;

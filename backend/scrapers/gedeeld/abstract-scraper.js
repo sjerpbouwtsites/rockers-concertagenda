@@ -461,7 +461,7 @@ export default class AbstractScraper extends ScraperConfig {
         this.handleError(new Error('hier zou geen error moeten zijn?'), 'error te veel in raw events async check', 'close-thread');
       }
 
-      if (checkResult.isSuccess) {
+      if (checkResult.isSuccess || checkResult.isNull) {
         useableEventsCheckedArray.push(eventToCheck);
       }
 
@@ -622,6 +622,7 @@ export default class AbstractScraper extends ScraperConfig {
     // ASYNC CHECK
 
     const mergedEventCheckRes = await this.singlePageAsyncCheck(mergedEvent);
+    mergedEventCheckRes.event = mergedEvent;
     
     if (!this.harvesterWaarschuwinggegeven) {
       this.handleError(new Error('harvest artist uitgeschakeld'), 'harvester moet nog vernieuwd worden', 'notice');
@@ -652,7 +653,7 @@ export default class AbstractScraper extends ScraperConfig {
     
     const toRegister = this.makeRegisterObj(mergedEvent);
 
-    if (!mergedEventCheckRes.isFailed && !mergedEvent.unavailable && !mergedEvent.corrupted) {
+    if (mergedEventCheckRes.isSuccess && !mergedEvent.unavailable && !mergedEvent.corrupted) {
       toRegister.artists = mergedEvent.artists;
       this._events.push(toRegister);
       this.asyncSaveAllowedEvent(mergedEvent);
@@ -710,14 +711,13 @@ export default class AbstractScraper extends ScraperConfig {
     if (!debugSettings.debugsinglePageAsyncCheck) return;
     
     const s = !mergedEventCheckRes.isFailed ? `success` : `failure`;
-    parentPort.postMessage(
-      this.qwm.debugger({
-        title: `single check ${s}`,
-        event: `<a class='single-event-check-notice single-event-check-notice--${s}' href='${mergedEventCheckRes.event.venueEventUrl}'>${mergedEventCheckRes.event.title}</a>`,
-        reason: mergedEventCheckRes.reason,
-        // reason: mergedEventCheckRes.reasonevent?.reasonsSingle, // HACK HIER
-      }),
-    );
+
+    this.dirtyDebug({
+      title: `single check ${s}`,
+      event: `<a class='single-event-check-notice single-event-check-notice--${s}' href='${mergedEventCheckRes.event.venueEventUrl}'>${mergedEventCheckRes.event.title}</a>`,
+      reason: mergedEventCheckRes.reason,
+
+    });
   }
 
   /**
@@ -1111,16 +1111,16 @@ export default class AbstractScraper extends ScraperConfig {
   
   async recursiveAsyncChecker(listOfFuncs, event, olderReasons = []) {
     if (!listOfFuncs.length) {
-      const or = [...olderReasons];
+      const g = '⬜ geen check funcs';
       const r = new DbInterFaceToScraper({
         success: null,
-        reason: '⬜ geen check funcs',
-        reasons: [...olderReasons, '⬜ geen check funcs'],
+        reason: g,
+        reasons: [g],
         event,
-      }, or, 'geen recursieve funcs'); 
+      }, [g], 'geen recursieve funcs'); 
       r.setBreak(true).setReason();
       return r;
-    }
+    } 
   
     const funcNamesMap = {
       ifNotAllowedRefuse: 'asyncIfNotAllowedRefuse',
@@ -1155,7 +1155,7 @@ export default class AbstractScraper extends ScraperConfig {
     if (typeof this[curFuncName] !== 'undefined') {
       const result = await this[curFuncName](event, olderReasons);
      
-      if (result?.break) return result;
+      if (result?.break || listOfFuncsCopy.length < 1) return result;
       
       // eslint-disable-next-line no-param-reassign
       // event.reasonsSingle = [...result.reasons]; // TODO DIT IS EEN HACK WANT OM EEN OF ANDERE REDEN VALLEN ANDERS DE REASONS ERAF

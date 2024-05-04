@@ -34,7 +34,8 @@ const dbsScraper = new AbstractScraper({
     },
     singlePage: {
       requiredProperties: ['venueEventUrl', 'title', 'price', 'start'],
-      asyncCheckFuncs: ['hasAllowedArtist', 'hasGoodTerms', 'forbiddenTerms', 'ifNotAllowedRefuse', 'saveAllowedEvent', 'harvestArtists'],
+      // asyncCheckFuncs: ['hasAllowedArtist', 'hasGoodTerms', 'forbiddenTerms', 'ifNotAllowedRefuse', 'saveAllowedEvent', 'harvestArtists'],
+      asyncCheckFuncs: ['hasAllowedArtist', 'hasGoodTerms', 'forbiddenTerms'],
     },
   },
 });

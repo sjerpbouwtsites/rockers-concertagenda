@@ -383,7 +383,7 @@ export default class Artists {
         return this.post({
           success: null,
           data: null,
-          reason: `${eventName} and ${slug} not allowed event aa3`,
+          reason: `⬜ ${eventName} and ${slug} not allowed event aa3`,
         }); 
       }
     }

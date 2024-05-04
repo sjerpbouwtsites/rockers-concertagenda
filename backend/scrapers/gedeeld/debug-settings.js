@@ -1,5 +1,5 @@
 const debugSettings = {
-  debugDebug: false,
+  debugDebug: true,
   debugCorruptedUnavailable: true,
   debugsinglePageAsyncCheck: true,
   debugRawEventAsyncCheck: true,
@@ -7,7 +7,7 @@ const debugSettings = {
   debugPageInfo: true,
   debugPrice: false,
   debugWithTempFile:false,
-  debugArtistScan:true,
+  debugArtistScan:false,
   
 };
 export default debugSettings;
