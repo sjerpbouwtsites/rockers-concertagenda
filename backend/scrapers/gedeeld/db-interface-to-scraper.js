@@ -81,7 +81,7 @@ export default class DbInterfaceToScraper {
   }
 
   setReason() {
-    const r = [...this.reasons];
+    const r = [...this.reasons.filter((re) => re)];
     this.reason = r.join(`, `);
     return this;
   }

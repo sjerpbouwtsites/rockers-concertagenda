@@ -450,6 +450,7 @@ export default class AbstractScraper extends ScraperConfig {
       const eventToCheck = generatedEvent.value;
       const checkResult = await this.mainPageAsyncCheck(eventToCheck);
       eventToCheck.mainPageReasons = checkResult.reasons;
+      eventToCheck.reasons = checkResult.reasons;
 
       if (debugSettings.debugRawEventAsyncCheck) {
         this.rawEventAsyncCheckDebugger(checkResult, eventToCheck);
@@ -630,7 +631,7 @@ export default class AbstractScraper extends ScraperConfig {
     } 
     // await this.asyncHarvestArtists(mergedEvent);
 
-    this.singlePageAsyncCheckDebugger(mergedEventCheckRes);
+    // this.singlePageAsyncCheckDebugger(mergedEventCheckRes);
 
     if (mergedEventCheckRes.isError) {
       this.handleError(mergedEventCheckRes?.data?.error, mergedEventCheckRes?.reason, 'notice');
@@ -707,18 +708,17 @@ export default class AbstractScraper extends ScraperConfig {
     });
   }
 
-  singlePageAsyncCheckDebugger(mergedEventCheckRes) {
-    if (!debugSettings.debugsinglePageAsyncCheck) return;
+  // singlePageAsyncCheckDebugger(mergedEventCheckRes) {
+  //   if (!debugSettings.debugsinglePageAsyncCheck) return;
     
-    const s = !mergedEventCheckRes.isFailed ? `success` : `failure`;
+  //   const s = !mergedEventCheckRes.isFailed ? `success` : `failure`;
 
-    this.dirtyDebug({
-      title: `single check ${s}`,
-      event: `<a class='single-event-check-notice single-event-check-notice--${s}' href='${mergedEventCheckRes.event.venueEventUrl}'>${mergedEventCheckRes.event.title}</a>`,
-      reason: mergedEventCheckRes.reason,
-
-    });
-  }
+  //   this.dirtyDebug({
+  //     title: `single check ${s}`,
+  //     event: `<a class='single-event-check-notice single-event-check-notice--${s}' href='${mergedEventCheckRes.event.venueEventUrl}'>${mergedEventCheckRes.event.title}</a>`,
+  //     reason: mergedEventCheckRes.reason,
+  //   });
+  // }
 
   /**
    *
@@ -870,11 +870,22 @@ export default class AbstractScraper extends ScraperConfig {
    * @memberof AbstractScraper
    */
   async singlePageAsyncCheck(event) {
-    return this.recursiveAsyncChecker(
+    const rr = await this.recursiveAsyncChecker(
       this._s.app.singlePage.asyncCheckFuncs, 
       event, 
       event.mainPageReasons,
     );
+    if (debugSettings.debugsinglePageAsyncCheck) {
+      const s = !rr.isFailed ? `success` : `failure`;
+      this.dirtyDebug({
+        title: `single check ${s}`,
+        event: `<a class='single-event-check-notice single-event-check-notice--${s}' href='${event.venueEventUrl}'>${event.title}</a>`,
+        reason: rr.reason,
+      });
+      this.dirtyLog(rr, `single page async check`);
+      this.dirtyLog(event);
+    }
+    return rr;
   }
   // #endregion                                                 SINGLE PAGE
 
@@ -1111,13 +1122,12 @@ export default class AbstractScraper extends ScraperConfig {
   
   async recursiveAsyncChecker(listOfFuncs, event, olderReasons = []) {
     if (!listOfFuncs.length) {
-      const g = '⬜ geen check funcs';
       const r = new DbInterFaceToScraper({
         success: null,
-        reason: g,
-        reasons: [g],
+        reason: '⬜ geen check funcs',
+        reasons: [...olderReasons],
         event,
-      }, [g], 'geen recursieve funcs'); 
+      }, [...olderReasons], 'geen recursieve funcs'); 
       r.setBreak(true).setReason();
       return r;
     } 
@@ -1155,7 +1165,10 @@ export default class AbstractScraper extends ScraperConfig {
     if (typeof this[curFuncName] !== 'undefined') {
       const result = await this[curFuncName](event, olderReasons);
      
-      if (result?.break || listOfFuncsCopy.length < 1) return result;
+      if (result?.break) return result;
+
+      if (listOfFuncsCopy.length < 1) return result;
+      this.dirtyTalk(`${event.title} ${listOfFuncsCopy.length}`);
       
       // eslint-disable-next-line no-param-reassign
       // event.reasonsSingle = [...result.reasons]; // TODO DIT IS EEN HACK WANT OM EEN OF ANDERE REDEN VALLEN ANDERS DE REASONS ERAF

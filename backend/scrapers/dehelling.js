@@ -32,7 +32,7 @@ const dehellingScraper = new AbstractScraper({
     },
     singlePage: {
       requiredProperties: ['venueEventUrl', 'title', 'price', 'start'],
-      asyncCheckFuncs: ['saveAllowedEvent', 'harvestArtists'],
+      asyncCheckFuncs: ['refused', 'allowedEvent'],
       
     },
   },
