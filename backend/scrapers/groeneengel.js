@@ -4,12 +4,7 @@ import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/groeneengel.js';
 import getImage from './gedeeld/image.js';
 import {
-  mapToStartDate,
-  combineDoorTimeStartDate,
-  mapToDoorTime,
   mapToShortDate,
-  mapToStartTime,
-  combineStartTimeStartDate,
 } from './gedeeld/datums.js';
 import workTitleAndSlug from './gedeeld/slug.js';
 import terms from '../artist-db/store/terms.js';

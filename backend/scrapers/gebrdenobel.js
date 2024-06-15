@@ -7,11 +7,7 @@ import getImage from './gedeeld/image.js';
 import terms from '../artist-db/store/terms.js';
 import {
   mapToStartDate,
-  combineDoorTimeStartDate,
-  mapToDoorTime,
   mapToShortDate,
-  mapToStartTime,
-  combineStartTimeStartDate,
 } from './gedeeld/datums.js';
 import workTitleAndSlug from './gedeeld/slug.js';
 
