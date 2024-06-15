@@ -3,7 +3,10 @@ import { workerData } from 'worker_threads';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/dynamo.js';
 import getImage from './gedeeld/image.js';
-import { mapToShortDate } from './gedeeld/datums.js';
+import {
+  mapToShortDate, combineStartTimeStartDate, combineDoorTimeStartDate, 
+  combineEndTimeStartDate, mapToStartDate, mapToStartTime, mapToDoorTime, mapToEndTime,
+} from './gedeeld/datums.js';
 import workTitleAndSlug from './gedeeld/slug.js';
 
 // #region        SCRAPER CONFIG
@@ -25,12 +28,11 @@ const scraper = new AbstractScraper({
     },  
     mainPage: {
       requiredProperties: ['venueEventUrl', 'title'],
-      asyncCheckFuncs: ['refused', 'allowedEvent'],
-      // asyncCheckFuncs: ['custom1', 'allowed', 'event', 'refused', 'emptySuccess'],
+      asyncCheckFuncs: ['refused', 'allowedEvent', 'forbiddenTerms', 'hasGoodTerms', 'hasAllowedArtist'],
     },
     singlePage: {
       requiredProperties: ['venueEventUrl', 'title', 'price', 'start'],
-      asyncCheckFuncs: ['success'],
+      asyncCheckFuncs: ['spotifyConfirmation', 'success'],
       // asyncCheckFuncs: ['goodTerms', 'forbiddenTerms', 'isRock', 'saveRefused', 'emptyFailure'],
     },
   },
@@ -38,32 +40,6 @@ const scraper = new AbstractScraper({
 // #endregion                          SCRAPER CONFIG
 
 scraper.listenToMasterThread();
-
-scraper.asyncCustomCheck1 = async function (event, reasons) {
-  const reasonsCopy = Array.isArray(reasons) ? reasons : [];
-  if (event.venueEventUrl.includes('dynamo-metalfest') || event.venueEventUrl.includes('headbangers-parade')) {
-    this.talkToDB({
-      type: 'db-request',
-      subtype: 'saveRefusedTitle',
-      messageData: {
-        string: event.title,
-        reason: reasons.reverse().join(', '),
-      },
-    });     
-    return {
-      success: false,
-      break: true,
-      reason: 'is festival website',
-      event,
-    };
-  }
-  return {
-    break: false,
-    success: null,
-    event,
-    reasons: reasonsCopy,
-  };  
-};
 
 // #region       MAIN PAGE
 scraper.mainPage = async function () {
@@ -80,32 +56,39 @@ scraper.mainPage = async function () {
   let rawEvents = await page.evaluate(
     // eslint-disable-next-line no-shadow
     ({ workerData }) =>
-      Array.from(document.querySelectorAll('.search-filter-results .timeline-article')).map(
-        (baseEvent) => {
-          const title = baseEvent.querySelector('h4')?.textContent ?? '';
-          const res = {
-            anker: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
-            errors: [],
-            title,
-          };
+      Array.from(document.querySelectorAll('a[href*="https://dynamo-eindhoven.nl"].image-border-element'))
+        .map((el) => el.parentNode)    
+        .map(
+          (baseEvent) => {
+            const title = baseEvent.querySelector('h3')?.textContent ?? '';
+            const res = {
+              anker: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+              errors: [],
+              title,
+            };
 
-          res.venueEventUrl = baseEvent.querySelector('a')?.href ?? '';
-          if (res.venueEventUrl.includes('metalfest')) {
-            res.corrupted = `is metalfest`;
-          }
+            res.venueEventUrl = baseEvent.querySelector('a')?.href ?? '';
+            if (res.venueEventUrl.includes('metalfest')) {
+              res.corrupted = `is metalfest`;
+            }
 
-          const timelineInfoContainerEl = baseEvent.querySelector('.timeline-info-container');
-          res.shortText = timelineInfoContainerEl?.querySelector('p')?.textContent ?? '';
+            res.mapToStartDate = baseEvent.querySelector('a + a')?.textContent.replaceAll(/-/g, ' ').replaceAll(/\s\s/g, ' ') ?? '';
+            
+            res.shortText = baseEvent.querySelector('a + a div:last-child')?.textContent ?? '';
 
-          res.soldOut = !!(baseEvent.querySelector('.sold-out') ?? null);
-          return res;
-        },
-      ),
+            res.soldOut = (baseEvent.querySelector('a + a')?.textContent ?? '').toLowerCase().includes('uitverkocht');
+            return res;
+          },
+        ),
     { workerData },
   );
 
-  rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
-
+  rawEvents = rawEvents
+    .map((event) => mapToStartDate(event, 'dag-maandNaam-jaar', this.months))
+    .map(mapToShortDate)
+    .map(this.isMusicEventCorruptedMapper)
+    .map((re) => workTitleAndSlug(re, this._s.app.harvest.possiblePrefix));
+  
   const eventGen = this.eventGenerator(rawEvents);
   // eslint-disable-next-line no-unused-vars
   const checkedEvents = await this.rawEventsAsyncCheck({
@@ -126,84 +109,61 @@ scraper.mainPage = async function () {
 // #region      SINGLE PAGE
 scraper.singlePage = async function ({ page, event }) {
   const { stopFunctie } = await this.singlePageStart();
-  const pageInfo = await page.evaluate(
+  let pageInfo = await page.evaluate(
     // eslint-disable-next-line no-shadow
-    ({ months, event }) => {
+    ({ event }) => {
       const res = {
         anker: `<a class='page-info' href='${document.location.href}'>${document.title}</a>`,
         errors: [],
       };
-
-      const agendaDatesEls = document.querySelectorAll('.agenda-date');
-      let baseDate = null;
-      if (agendaDatesEls && agendaDatesEls.length < 2) {
-        if (document.location.href.includes('effenaar')) {
-          res.corrupted = `Dynamo mixed venue with ${event.venueEventUrl}`;
-          return res;
+      
+      const tijdenRijTekst = document.querySelector('div[href] .flex.items-center.gap-4 + div')?.textContent.toLowerCase() ?? '';
+      
+      res.startDate = event.startDate;
+      
+      if (tijdenRijTekst.includes('doors')) {
+        const m = tijdenRijTekst.match(/doors.*(\d\d:\d\d)/);
+        if (Array.isArray(m)) {
+          res.mapToDoorTime = m[1];
         }
-
-        res.errors.push({
-          error: new Error(`Te weinig 'agendaDataEls' ${res.anker}`),
-          toDebug: {
-            event,
-            agendaDatesEls,
-          },
-        });
-        res.corrupted = "Te weinig 'agendaDataEls'";
-      }
-      try {
-        const dateMatch = document
-          .querySelector('.event-content')
-          ?.textContent.toLowerCase()
-          .match(/(\d+)\s+\/\s+(\w+)\s+\/\s+(\d+)/);
-        if (Array.isArray(dateMatch) && dateMatch.length === 4) {
-          baseDate = `${dateMatch[3]}-${months[dateMatch[2]]}-${dateMatch[1]}`;
-        }
-        if (!baseDate) {
-          throw Error('geen base date');
-        }
-      } catch (caughtError) {
-        res.errors.push({
-          error: caughtError,
-          remarks: `datum match faal ${res.anker}`,
-          toDebug: event,
-        });
-        return res;
       }
 
-      if (agendaDatesEls) {
-        const agendaTimeContext = agendaDatesEls[0].textContent.toLowerCase();
-        res.startTimeMatch = agendaTimeContext.match(
-          /(aanvang\sshow|aanvang|start\sshow|show)\W?\s+(\d\d:\d\d)/,
-        );
-        res.doorTimeMatch = agendaTimeContext.match(/(doors|deuren|zaal\sopen)\W?\s+(\d\d:\d\d)/);
-        res.endTimeMatch = agendaTimeContext.match(/(end|eind|einde|curfew)\W?\s+(\d\d:\d\d)/);
+      if (tijdenRijTekst.includes('show')) {
+        const m = tijdenRijTekst.match(/show.*(\d\d:\d\d)/);
+        if (Array.isArray(m)) {
+          res.mapToStartTime = m[1];
+        }
+      } else {
+        res.corrupt = true;
       }
 
-      try {
-        if (Array.isArray(res.doorTimeMatch) && res.doorTimeMatch.length === 3) {
-          res.door = `${baseDate}T${res.doorTimeMatch[2]}:00`;
+      if (tijdenRijTekst.includes('curfew')) {
+        const m = tijdenRijTekst.match(/curfew.*(\d\d:\d\d)/);
+        if (Array.isArray(m)) {
+          res.mapToEndTime = m[1];
         }
-        if (Array.isArray(res.startTimeMatch) && res.startTimeMatch.length === 3) {
-          res.start = `${baseDate}T${res.startTimeMatch[2]}:00`;
-        } else if (res.door) {
-          res.start = res.door;
-          res.door = '';
-        }
-        if (Array.isArray(res.endTimeMatch) && res.endTimeMatch.length === 3) {
-          res.end = `${baseDate}T${res.endTimeMatch[2]}:00`;
-        }
-      } catch (caughtError) {
-        res.errors.push({
-          error: caughtError,
-          remarks: `tijd matches samen met tijden voegen ${res.anker}`,
-          toDebug: res,
-        });
       }
+
       return res;
     },
-    { months: this.months, event },
+    { event },
   );
+
+  if (pageInfo.corrupt) {
+    return this.singlePageEnd({
+      pageInfo,
+      stopFunctie,
+      page,
+      event,
+    });
+  }
+
+  pageInfo = mapToStartTime(pageInfo);
+  pageInfo = mapToDoorTime(pageInfo);
+  pageInfo = mapToEndTime(pageInfo);
+  pageInfo = combineStartTimeStartDate(pageInfo);
+  pageInfo = combineDoorTimeStartDate(pageInfo);  
+  pageInfo = combineEndTimeStartDate(pageInfo);  
 
   const imageRes = await getImage({
     _this: this,
@@ -211,8 +171,8 @@ scraper.singlePage = async function ({ page, event }) {
     workerData,
     event,
     pageInfo,
-    selectors: ['.dynamic-background-color#intro .color-pick'],
-    mode: 'background-src',
+    selectors: ['.wp-block-cover__image-background'],
+    mode: 'image-src',
   });
   pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
   pageInfo.image = imageRes.image;
@@ -221,7 +181,7 @@ scraper.singlePage = async function ({ page, event }) {
     page,
     event,
     pageInfo,
-    selectors: ['.agenda-date'],
+    selectors: ['div[href] .gap-4 + .gap-4 + .gap-4', 'div[href]'],
   });
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
   pageInfo.price = priceRes.price;
