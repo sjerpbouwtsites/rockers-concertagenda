@@ -4,7 +4,16 @@ import { workerData } from 'worker_threads';
 import longTextSocialsIframes from './longtext/gebrdenobel.js';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import getImage from './gedeeld/image.js';
-import terms from './gedeeld/terms.js';
+import terms from '../artist-db/store/terms.js';
+import {
+  mapToStartDate,
+  combineDoorTimeStartDate,
+  mapToDoorTime,
+  mapToShortDate,
+  mapToStartTime,
+  combineStartTimeStartDate,
+} from './gedeeld/datums.js';
+import workTitleAndSlug from './gedeeld/slug.js';
 
 // #region        SCRAPER CONFIG
 const scraper = new AbstractScraper({
@@ -18,39 +27,24 @@ const scraper = new AbstractScraper({
     timeout: 15004,
   },
   app: {
+    harvest: {
+      dividers: [`+`],
+      dividerRex: "[\\+]",
+      artistsIn: ['title'],
+    }, 
     mainPage: {
       requiredProperties: ['venueEventUrl', 'title'],
-      asyncCheckFuncs: ['allowed', 'event', 'refused', 'emptySuccess'],
+      asyncCheckFuncs: ['refused', 'allowedEvent', 'forbiddenTerms'],
     },
     singlePage: {
       requiredProperties: ['venueEventUrl', 'title', 'price', 'start'],
-      asyncCheckFuncs: ['custom1', 'forbiddenTerms', 'saveAllowed', 'emptySuccess'],
+      asyncCheckFuncs: ['spotifyConfirmation', 'success'],
     },
   },
 });
 // #endregion                          SCRAPER CONFIG
 
 scraper.listenToMasterThread();
-
-scraper.asyncCustomCheck1 = async function (event, reasons) {
-  const reasonsCopy = Array.isArray(reasons) ? reasons : [];
-  if (event.title.toLowerCase().includes("nep event")) {
-    reasonsCopy.push("NEP EVENT");
-    return {
-      event,
-      reason: reasonsCopy.reverse().join(','),
-      reasons:reasonsCopy,
-      success: false,
-      break: true,
-    };        
-  }
-  return {
-    break: false,
-    success: null,
-    event,
-    reasons: reasonsCopy,
-  };  
-};
 
 // #region       MAIN PAGE
 scraper.mainPage = async function () {
@@ -83,9 +77,18 @@ scraper.mainPage = async function () {
     });
   });
 
-  let punkMetalRockRawEvents = await page.evaluate(
+  await page.evaluate(() => {
+    document.querySelectorAll('.events').forEach((eventList) => {
+      if (!eventList.querySelector('.event-item')) return;
+      const timeV = eventList.querySelector('time').textContent.trim();
+      eventList.querySelector('.event-item').setAttribute('data-date', timeV);
+    });
+  });
+
+  let rawEvents = await page.evaluate(
     // eslint-disable-next-line no-shadow
     ({ workerData, unavailabiltyTerms }) =>
+      
       Array.from(document.querySelectorAll('.zichtbaar-dus .event-item'))
         .map((eventEl) => {
           const title = eventEl.querySelector('.media-heading')?.textContent ?? null;
@@ -94,8 +97,11 @@ scraper.mainPage = async function () {
             errors: [],
             title,
           };
-          res.venueEventUrl =
-            eventEl.querySelector('.jq-modal-trigger')?.getAttribute('data-url') ?? '';
+
+          res.mapToStartDate = eventEl.getAttribute('data-date');
+          
+          res.venueEventUrl = eventEl.querySelector('.jq-modal-trigger')?.getAttribute('data-url') ?? '';
+
           const uaRex = new RegExp(unavailabiltyTerms.join('|'), 'gi');
           res.unavailable = !!eventEl.textContent.match(uaRex);
           res.soldOut =
@@ -106,13 +112,11 @@ scraper.mainPage = async function () {
     { workerData, unavailabiltyTerms: terms.unavailability },
   ); // page.evaluate
 
-  this.dirtyDebug(punkMetalRockRawEvents);
-
-  punkMetalRockRawEvents = punkMetalRockRawEvents.map(this.isMusicEventCorruptedMapper);
-
-  this.dirtyDebug(punkMetalRockRawEvents);
-
-  const rawEvents = punkMetalRockRawEvents;
+  rawEvents = rawEvents
+    .map((event) => mapToStartDate(event, 'dag-maandNaam', this.months))
+    .map(mapToShortDate)
+    .map(this.isMusicEventCorruptedMapper)
+    .map((re) => workTitleAndSlug(re, this._s.app.harvest.possiblePrefix));
 
   // gebr de nobel cookies moet eerste laaten mislukken
   // const eersteCookieEvent = { ...rawEvents[0] };

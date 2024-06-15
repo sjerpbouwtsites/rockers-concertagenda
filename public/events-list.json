@@ -1,147 +1,150 @@
 [
   {
-    "door": "2024-06-29T21:00:00",
-    "start": "2024-06-29T20:30:00",
-    "venueEventUrl": "https://gebouw-t.nl/evenementen/the-exploited/",
-    "title": "The Exploited",
-    "location": "gebouwt",
-    "price": 30,
-    "shortText": "Legendarisch stel relschoppers uit Edinburgh",
-    "longText": "../public/texts/gebouwt/Lm5sL2V2ZW5lbWVudGVuL3RoZS1leHBsb2l0ZWQv.html",
-    "image": "../public/event-images/gebouwt/Lm5sL2V2ZW5lbWVudGVuL3RoZS1leHBsb2l0ZWQv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "the exploited": {
-        "s": "6NB4b8lltHCjOhW7vQZkAy",
-        "l": "the%20exploited",
-        "g": [
-          "hardcore punk",
-          "punk",
-          "uk82"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-06-29T20:30:00",
-    "start": "2024-06-29T20:00:00",
-    "venueEventUrl": "https://gebouw-t.nl/evenementen/sloper-2/",
-    "title": "Sloper",
-    "location": "gebouwt",
-    "price": 25.25,
-    "shortText": "Supergroep met Cesar Zuiderwijk (Golden Earring) en Mario Goossens (Triggerfinger)",
-    "longText": "../public/texts/gebouwt/b3V3LXQubmwvZXZlbmVtZW50ZW4vc2xvcGVyLTIv.html",
-    "image": "../public/event-images/gebouwt/b3V3LXQubmwvZXZlbmVtZW50ZW4vc2xvcGVyLTIv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "slope": {
-        "s": "35fxvnr5oanOFB1JNB2Ber",
-        "l": "slope",
-        "g": [
-          "dutch rock"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-06-29T21:00:00",
-    "start": "2024-06-29T20:00:00",
-    "venueEventUrl": "https://gebouw-t.nl/evenementen/feuerengel-a-tribute-to-rammstein-2/",
-    "title": "Feuerengel – a tribute to rammstein",
-    "location": "gebouwt",
-    "price": 35.25,
-    "shortText": "a tribute to rammstein",
-    "longText": "../public/texts/gebouwt/bmdlbC1hLXRyaWJ1dGUtdG8tcmFtbXN0ZWluLTIv.html",
-    "image": "../public/event-images/gebouwt/bmdlbC1hLXRyaWJ1dGUtdG8tcmFtbXN0ZWluLTIv",
+    "start": "2024-08-13T18:00:00",
+    "venueEventUrl": "https://nobel.nl/programma/exodus-13-aug-2024/",
+    "title": "Exodus",
+    "location": "gebrdenobel",
+    "price": 25,
+    "shortText": "Thrash metal titanen uit San Francisco",
+    "longText": "../public/texts/gebrdenobel/L3Byb2dyYW1tYS9leG9kdXMtMTMtYXVnLTIwMjQv.html",
+    "image": "../public/event-images/gebrdenobel/L3Byb2dyYW1tYS9leG9kdXMtMTMtYXVnLTIwMjQv",
     "soldOut": true,
     "unavailable": false,
     "eventGenres": null,
+    "artists": null
+  },
+  {
+    "start": "2024-09-20T19:00:00",
+    "venueEventUrl": "https://nobel.nl/programma/pungent-stench-bodyfarm-20-sep-2024/",
+    "title": "Schirenc plays Pungent Stench + Bodyfarm",
+    "location": "gebrdenobel",
+    "price": 20,
+    "shortText": "'Schirenc' en 'Bodyfarm' spelen Old school Death Metal",
+    "longText": "../public/texts/gebrdenobel/dC1zdGVuY2gtYm9keWZhcm0tMjAtc2VwLTIwMjQv.html",
+    "image": "../public/event-images/gebrdenobel/dC1zdGVuY2gtYm9keWZhcm0tMjAtc2VwLTIwMjQv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
     "artists": {
-      "feuerengel": {
-        "s": null,
-        "l": "feuerengel",
-        "g": []
+      "bodyfarm": {
+        "s": "2OFRvZ32VVIW3UxVl36A0h",
+        "l": "bodyfarm",
+        "g": [
+          "dutch death metal",
+          "grisly death metal"
+        ]
       }
     }
   },
   {
-    "door": "2024-06-29T20:30:00",
-    "start": "2024-06-29T20:00:00",
-    "venueEventUrl": "https://gebouw-t.nl/evenementen/sister-may-gomer-pyle/",
-    "title": "Gomer Pyle + Sister May",
-    "location": "gebouwt",
-    "price": 17.25,
-    "shortText": "industriële progrock van Sister May en psychedelische stoner rock van Gomer Pyle",
-    "longText": "../public/texts/gebouwt/ZW1lbnRlbi9zaXN0ZXItbWF5LWdvbWVyLXB5bGUv.html",
-    "image": "../public/event-images/gebouwt/ZW1lbnRlbi9zaXN0ZXItbWF5LWdvbWVyLXB5bGUv",
+    "start": "2024-09-27T19:00:00",
+    "venueEventUrl": "https://nobel.nl/programma/release-the-river-albumpresentatie-27-sep-2024/",
+    "title": "Release The River - album release",
+    "location": "gebrdenobel",
+    "price": 12.5,
+    "shortText": "Duistere grooves, snoeiharde riffs en Nederlandse metal van de bovenste plank",
+    "longText": "../public/texts/gebrdenobel/LWFsYnVtcHJlc2VudGF0aWUtMjctc2VwLTIwMjQv.html",
+    "image": "../public/event-images/gebrdenobel/LWFsYnVtcHJlc2VudGF0aWUtMjctc2VwLTIwMjQv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": null
   },
   {
-    "door": "2024-06-29T21:00:00",
-    "start": "2024-06-29T20:30:00",
-    "venueEventUrl": "https://gebouw-t.nl/evenementen/throwing-bricks-ontaard/",
-    "title": "Throwing Bricks + Ontaard",
-    "location": "gebouwt",
-    "price": 17.25,
-    "shortText": "Een avond vol metal",
-    "longText": "../public/texts/gebouwt/ZW50ZW4vdGhyb3dpbmctYnJpY2tzLW9udGFhcmQv.html",
-    "image": "../public/event-images/gebouwt/ZW50ZW4vdGhyb3dpbmctYnJpY2tzLW9udGFhcmQv",
+    "start": "2024-10-19T19:00:00",
+    "venueEventUrl": "https://nobel.nl/programma/monster-magnet-19-oct-2024/",
+    "title": "Monster Magnet",
+    "location": "gebrdenobel",
+    "price": 32.5,
+    "shortText": "Pioneers van de stoner rock vieren 35-jarig jubileum",
+    "longText": "../public/texts/gebrdenobel/bWEvbW9uc3Rlci1tYWduZXQtMTktb2N0LTIwMjQv.html",
+    "image": "../public/event-images/gebrdenobel/bWEvbW9uc3Rlci1tYWduZXQtMTktb2N0LTIwMjQv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "ontaard": {
-        "s": "2Ek8RuzywWzQEKjBnUcC8c",
-        "l": "ontaard",
-        "g": []
-      }
-    }
-  },
-  {
-    "door": "2024-06-29T20:30:00",
-    "start": "2024-06-29T20:00:00",
-    "venueEventUrl": "https://gebouw-t.nl/evenementen/soulfly/",
-    "title": "Soulfly",
-    "location": "gebouwt",
-    "price": 31.25,
-    "shortText": "Braziliaanse thrashmetalband rond Max Cavalera",
-    "longText": "../public/texts/gebouwt/Ym91dy10Lm5sL2V2ZW5lbWVudGVuL3NvdWxmbHkv.html",
-    "image": "../public/event-images/gebouwt/Ym91dy10Lm5sL2V2ZW5lbWVudGVuL3NvdWxmbHkv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "soulfly": {
-        "s": "6159IBm5gLPwG4BcJXseXc",
-        "l": "soulfly",
+      "monster magnet": {
+        "s": "4hvwEwrCmGj22uURGVET7Q",
+        "l": "monster%20magnet",
         "g": [
-          "alternative metal",
-          "groove metal",
-          "industrial metal",
-          "metal",
-          "nu metal",
-          "rap metal"
+          "southern metal",
+          "stoner metal",
+          "stoner rock"
         ]
       }
     }
   },
   {
-    "door": "2024-06-29T21:15:00",
-    "start": "2024-06-29T20:00:00",
-    "venueEventUrl": "https://gebouw-t.nl/evenementen/tom-morello-sena-european-guitar-award/",
-    "title": "Tom Morello – Sena European Guitar Award",
-    "location": "gebouwt",
-    "price": 35,
-    "shortText": "Gitarist van o.a. Rage Against The Machine wint prestigieuze gitaarprijs",
-    "longText": "../public/texts/gebouwt/bG8tc2VuYS1ldXJvcGVhbi1ndWl0YXItYXdhcmQv.html",
-    "image": "../public/event-images/gebouwt/bG8tc2VuYS1ldXJvcGVhbi1ndWl0YXItYXdhcmQv",
+    "start": "2024-11-07T18:30:00",
+    "venueEventUrl": "https://nobel.nl/programma/alien-ant-farm-cky-7-nov-2024/",
+    "title": "Alien ant farm + cky",
+    "location": "gebrdenobel",
+    "price": 30,
+    "shortText": "High-energy rock-'n-roll van twee legendarische zeroes-bands",
+    "longText": "../public/texts/gebrdenobel/YWxpZW4tYW50LWZhcm0tY2t5LTctbm92LTIwMjQv.html",
+    "image": "../public/event-images/gebrdenobel/YWxpZW4tYW50LWZhcm0tY2t5LTctbm92LTIwMjQv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "start": "2024-11-30T19:00:00",
+    "venueEventUrl": "https://nobel.nl/programma/peter-pan-speedrock-30-nov-2024/",
+    "title": "Peter Pan Speedrock",
+    "location": "gebrdenobel",
+    "price": 32.5,
+    "shortText": "Vier 10 jaar Nobel met de grondleggers van Speedrock!",
+    "longText": "../public/texts/gebrdenobel/dGVyLXBhbi1zcGVlZHJvY2stMzAtbm92LTIwMjQv.html",
+    "image": "../public/event-images/gebrdenobel/dGVyLXBhbi1zcGVlZHJvY2stMzAtbm92LTIwMjQv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "start": "2024-12-20T19:00:00",
+    "venueEventUrl": "https://nobel.nl/programma/pene-corrida-20-dec-2024/",
+    "title": "Pene Corrida",
+    "location": "gebrdenobel",
+    "price": 17.5,
+    "shortText": "Meedogenloze Party-Metal vol popmuziek op steroïden",
+    "longText": "../public/texts/gebrdenobel/YW1tYS9wZW5lLWNvcnJpZGEtMjAtZGVjLTIwMjQv.html",
+    "image": "../public/event-images/gebrdenobel/YW1tYS9wZW5lLWNvcnJpZGEtMjAtZGVjLTIwMjQv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "pene corrida": {
+        "s": "1Hw2YwIpnSOWbtb8FlZcCa",
+        "l": "pene%20corrida",
+        "g": []
+      }
+    }
+  },
+  {
+    "start": "2024-12-21T19:00:00",
+    "venueEventUrl": "https://nobel.nl/programma/dool-21-dec-2024/",
+    "title": "Dool",
+    "location": "gebrdenobel",
+    "price": 22.5,
+    "shortText": "Dynamische metalband met Raven van Dorst als lead vocalist",
+    "longText": "../public/texts/gebrdenobel/bmwvcHJvZ3JhbW1hL2Rvb2wtMjEtZGVjLTIwMjQv.html",
+    "image": "../public/event-images/gebrdenobel/bmwvcHJvZ3JhbW1hL2Rvb2wtMjEtZGVjLTIwMjQv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "start": "2025-03-29T17:00:00",
+    "venueEventUrl": "https://nobel.nl/programma/interstellar-solar-fest-29-mar-2025/",
+    "title": "Interstellar Solar Fest",
+    "location": "gebrdenobel",
+    "price": 27.5,
+    "shortText": "Stoner- en alternatief rockfestival",
+    "longText": "../public/texts/gebrdenobel/dGVsbGFyLXNvbGFyLWZlc3QtMjktbWFyLTIwMjUv.html",
+    "image": "../public/event-images/gebrdenobel/dGVsbGFyLXNvbGFyLWZlc3QtMjktbWFyLTIwMjUv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
