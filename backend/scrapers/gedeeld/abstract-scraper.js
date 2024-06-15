@@ -1172,7 +1172,6 @@ export default class AbstractScraper extends ScraperConfig {
       if (result?.break) return result;
 
       if (listOfFuncsCopy.length < 1) return result;
-      this.dirtyTalk(`${event.title} ${listOfFuncsCopy.length}`);
       
       // eslint-disable-next-line no-param-reassign
       // event.reasonsSingle = [...result.reasons]; // TODO DIT IS EEN HACK WANT OM EEN OF ANDERE REDEN VALLEN ANDERS DE REASONS ERAF

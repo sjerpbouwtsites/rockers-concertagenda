@@ -3,7 +3,9 @@ import { workerData } from 'worker_threads';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/kavka.js';
 import getImage from './gedeeld/image.js';
-import terms from './gedeeld/terms.js';
+import { mapToShortDate } from './gedeeld/datums.js';
+import workTitleAndSlug from './gedeeld/slug.js';
+import terms from '../artist-db/store/terms.js';
 
 // #region        SCRAPER CONFIG
 const scraper = new AbstractScraper({
@@ -17,13 +19,18 @@ const scraper = new AbstractScraper({
     timeout: 30016,
   },
   app: {
+    harvest: {
+      dividers: [`+`],
+      dividerRex: "[\\+]",
+      artistsIn: ['title'],
+    }, 
     mainPage: {
       requiredProperties: ['venueEventUrl', 'title', 'start'],
-      asyncCheckFuncs: ['allowed', 'event', 'refused', 'emptySuccess'],
+      asyncCheckFuncs: ['refused', 'allowedEvent', 'forbiddenTerms', 'hasGoodTerms', 'hasAllowedArtist'],
     },
     singlePage: {
       requiredProperties: ['venueEventUrl', 'title', 'start'],
-      asyncCheckFuncs: ['goodTerms', 'forbiddenTerms', 'saveAllowed', 'emptySuccess'],
+      asyncCheckFuncs: ['success'],
     },
   },
 });
@@ -130,7 +137,10 @@ scraper.mainPage = async function () {
     { months: this.months, workerData, unavailabiltyTerms: terms.unavailability },
   );
 
-  rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
+  rawEvents = rawEvents
+    .map(mapToShortDate)
+    .map(this.isMusicEventCorruptedMapper)
+    .map((re) => workTitleAndSlug(re, this._s.app.harvest.possiblePrefix));
 
   const eventGen = this.eventGenerator(rawEvents);
   // eslint-disable-next-line no-unused-vars
@@ -203,7 +213,6 @@ scraper.singlePage = async function ({ page, event }) {
   if (!priceRes.errors) {
     pageInfo.price = priceRes.price;
   } else {
-    this.dirtyDebug(priceRes);
     pageInfo.price = null;
   }
 
