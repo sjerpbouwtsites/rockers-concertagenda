@@ -3,7 +3,12 @@ import { workerData } from 'worker_threads';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/iduna.js';
 import getImage from './gedeeld/image.js';
-import terms from './gedeeld/terms.js';
+import {
+  mapToStartDate,
+  mapToShortDate,
+} from './gedeeld/datums.js';
+import workTitleAndSlug from './gedeeld/slug.js';
+import terms from '../artist-db/store/terms.js';
 
 // #region        SCRAPER CONFIG
 const scraper = new AbstractScraper({
@@ -16,13 +21,18 @@ const scraper = new AbstractScraper({
     timeout: 20000,
   },
   app: {
+    harvest: {
+      dividers: [`+`, `•`],
+      dividerRex: "[\\+•]",
+      artistsIn: ['title'],
+    },     
     mainPage: {
       requiredProperties: ['venueEventUrl', 'title'],
-      asyncCheckFuncs: ['allowed', 'event', 'refused', 'forbiddenTerms', 'emptySuccess'],
+      asyncCheckFuncs: ['refused', 'allowedEvent', 'forbiddenTerms', 'hasGoodTerms', 'hasAllowedArtist'],
     },
     singlePage: {
       requiredProperties: ['venueEventUrl', 'title', 'price', 'start'],
-      asyncCheckFuncs: ['goodTerms', 'forbiddenTerms', 'saveAllowed', 'emptySuccess'],
+      asyncCheckFuncs: ['success'],
     },
   },
 });
@@ -51,6 +61,7 @@ scraper.mainPage = async function () {
           venueEventUrl,
           errors: [],
         };
+        res.mapToStartDate = rawEvent.querySelector('.card-footer > div:last-child')?.textContent.trim().toLowerCase() ?? '';
         res.shortText = rawEvent.querySelector('.card-subtitle')?.textContent ?? null;
         res.soldOut = Array.isArray(rawEvent.textContent.match(/uitverkocht|sold\sout/i));
         const uaRex = new RegExp(unavailabiltyTerms.join('|'), 'gi');
@@ -60,7 +71,11 @@ scraper.mainPage = async function () {
       return events;
     }, { workerData, unavailabiltyTerms: terms.unavailability });
   
-  rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
+  rawEvents = rawEvents
+    .map((event) => mapToStartDate(event, 'dag-maandNaam', this.months))
+    .map(mapToShortDate)
+    .map(this.isMusicEventCorruptedMapper)
+    .map((re) => workTitleAndSlug(re, this._s.app.harvest.possiblePrefix));
 
   const eventGen = this.eventGenerator(rawEvents);
   // eslint-disable-next-line no-unused-vars
@@ -85,31 +100,33 @@ scraper.singlePage = async function ({ page, event }) {
 
   const pageInfo = await page.evaluate(
     // eslint-disable-next-line no-shadow
-    ({ months, event }) => {
+    ({ event }) => {
       const res = {
         anker: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
         errors: [],
       };
 
-      const startDateMatch =
-        document
-          .querySelector('#code_block-154-7')
-          ?.textContent.match(/(\d+)\s+(\w+)\s+(\d\d\d\d)/) ?? null;
-      if (startDateMatch && Array.isArray(startDateMatch) && startDateMatch.length > 3) {
-        const dag = startDateMatch[1].padStart(2, '0');
-        res.startDate = `${startDateMatch[3]}-${months[startDateMatch[2]]}-${dag}`;
-      }
-      if (!res.startDate) {
-        res.errors.push({
-          error: new Error(`geen startDate`),
-          remarks: `geen startdate ${res.anker}`,
-          toDebug: {
-            event,
-            text: document.querySelector('#code_block-154-7')?.textContent ?? 'geen code block met #code_block-154-7',
-          },
-        });
-        return res;
-      }
+      res.startDate = event.startDate;
+
+      // const startDateMatch =
+      //   document
+      //     .querySelector('#code_block-154-7')
+      //     ?.textContent.match(/(\d+)\s+(\w+)\s+(\d\d\d\d)/) ?? null;
+      // if (startDateMatch && Array.isArray(startDateMatch) && startDateMatch.length > 3) {
+      //   const dag = startDateMatch[1].padStart(2, '0');
+      //   res.startDate = `${startDateMatch[3]}-${months[startDateMatch[2]]}-${dag}`;
+      // }
+      // if (!res.startDate) {
+      //   res.errors.push({
+      //     error: new Error(`geen startDate`),
+      //     remarks: `geen startdate ${res.anker}`,
+      //     toDebug: {
+      //       event,
+      //       text: document.querySelector('#code_block-154-7')?.textContent ?? 'geen code block met #code_block-154-7',
+      //     },
+      //   });
+      //   return res;
+      // }
 
       const tijdenEl = document.getElementById('code_block-92-7');
       if (!tijdenEl) {
@@ -143,7 +160,7 @@ scraper.singlePage = async function ({ page, event }) {
       }
       
       return res;
-    }, { months: this.months, event },
+    }, { event },
   );
 
   const imageRes = await getImage({
