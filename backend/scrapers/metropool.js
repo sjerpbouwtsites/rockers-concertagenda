@@ -5,7 +5,7 @@ import longTextSocialsIframes from './longtext/metropool.js';
 import getImage from './gedeeld/image.js';
 import terms from './gedeeld/terms.js';
 
-// #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
+// #region        SCRAPER CONFIG
 const metropoolScraper = new AbstractScraper({
   workerData: { ...workerData },
 
@@ -31,7 +31,7 @@ const metropoolScraper = new AbstractScraper({
 
 metropoolScraper.listenToMasterThread();
 
-// #region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
+// #region       MAIN PAGE
 metropoolScraper.mainPage = async function () {
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
   if (availableBaseEvents) {
@@ -92,7 +92,7 @@ metropoolScraper.mainPage = async function () {
 };
 // #endregion                          MAIN PAGE
 
-// #region [rgba(120, 0, 0, 0.1)]     SINGLE PAGE
+// #region      SINGLE PAGE
 metropoolScraper.singlePage = async function ({ page, event }) {
   const { stopFunctie } = await this.singlePageStart();
 

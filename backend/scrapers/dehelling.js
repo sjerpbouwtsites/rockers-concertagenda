@@ -9,7 +9,7 @@ import {
 } from './gedeeld/datums.js';
 import workTitleAndSlug from './gedeeld/slug.js';
 
-// #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
+// #region        SCRAPER CONFIG
 const dehellingScraper = new AbstractScraper({
   workerData: { ...workerData },
 
@@ -41,7 +41,7 @@ const dehellingScraper = new AbstractScraper({
 
 dehellingScraper.listenToMasterThread();
 
-// #region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
+// #region       MAIN PAGE
 dehellingScraper.mainPage = async function () {
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
   if (availableBaseEvents) {
@@ -112,7 +112,7 @@ dehellingScraper.mainPage = async function () {
 };
 // #endregion                          MAIN PAGE
 
-// #region [rgba(120, 0, 0, 0.1)]     SINGLE PAGE
+// #region      SINGLE PAGE
 dehellingScraper.singlePage = async function ({ page, event }) {
   const { stopFunctie } = await this.singlePageStart();
 

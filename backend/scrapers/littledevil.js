@@ -5,7 +5,7 @@ import longTextSocialsIframes from './longtext/littledevil.js';
 import getImage from './gedeeld/image.js';
 import { combineStartTimeStartDate, mapToStartDate, mapToStartTime } from './gedeeld/datums.js';
 
-// #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
+// #region        SCRAPER CONFIG
 const scraper = new AbstractScraper({
   workerData: { ...workerData },
   mainPage: {
@@ -29,7 +29,7 @@ const scraper = new AbstractScraper({
 
 scraper.listenToMasterThread();
 
-// #region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
+// #region       MAIN PAGE
 scraper.mainPage = async function () {
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
   if (availableBaseEvents) {
@@ -134,7 +134,7 @@ scraper.mainPage = async function () {
 };
 // #endregion                          MAIN PAGE
 
-// #region [rgba(120, 0, 0, 0.1)]     SINGLE PAGE
+// #region      SINGLE PAGE
 scraper.singlePage = async function ({ page, event }) {
   const { stopFunctie } = await this.singlePageStart();
 

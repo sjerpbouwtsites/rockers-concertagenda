@@ -6,7 +6,7 @@ import AbstractScraper from './gedeeld/abstract-scraper.js';
 import getImage from './gedeeld/image.js';
 import terms from './gedeeld/terms.js';
 
-// #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
+// #region        SCRAPER CONFIG
 const scraper = new AbstractScraper({
   workerData: { ...workerData },
 
@@ -52,7 +52,7 @@ scraper.asyncCustomCheck1 = async function (event, reasons) {
   };  
 };
 
-// #region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
+// #region       MAIN PAGE
 scraper.mainPage = async function () {
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
 
@@ -157,7 +157,7 @@ scraper.cookiesNodig = async function (page) {
   return true;
 };
 
-// #region [rgba(120, 0, 0, 0.1)]     SINGLE PAGE
+// #region      SINGLE PAGE
 scraper.singlePage = async function ({ page, event }) {
   const { stopFunctie } = await this.singlePageStart();
 

@@ -52,7 +52,7 @@ export default class AbstractScraper extends ScraperConfig {
 
   skipFurtherChecks = [];
 
-  // #region [rgba(0, 0, 120, 0.10)]                            CONSTRUCTOR & INSTALL
+  // #region                             CONSTRUCTOR & INSTALL
   constructor(obj) {
     super(obj);
 
@@ -112,7 +112,7 @@ export default class AbstractScraper extends ScraperConfig {
     });
   }
 
-  // #region [rgba(0, 0, 180, 0.10)]                            DIRTYLOG, TALK, DEBUG
+  // #region                             DIRTYLOG, TALK, DEBUG
   /**
    * Wrapper om parentPort.postMessage(qwm.toConsole(xx)) heen.
    *
@@ -168,7 +168,7 @@ export default class AbstractScraper extends ScraperConfig {
 
   // #endregion                                                DIRTYLOG, TALK, DEBUG
 
-  // #region [rgba(0, 0, 240, 0.10)]                            SCRAPE INIT & SCRAPE DIE
+  // #region                             SCRAPE INIT & SCRAPE DIE
   async scrapeInit() {
     if (!this._s.app.mainPage.useCustomScraper || !this._s.app.singlePage.useCustomScraper) {
       this.browser = await puppeteer.launch(this._s.launchOptions);
@@ -215,7 +215,7 @@ export default class AbstractScraper extends ScraperConfig {
   }
   // #endregion                                                 SCRAPE INIT & SCRAPE DIE
 
-  // #region [rgba(60, 0, 60, 0.10)]                            MAIN PAGE
+  // #region                             MAIN PAGE
   async mainPage() {
     throw Error('abstract method used thx ');
   }
@@ -348,7 +348,7 @@ export default class AbstractScraper extends ScraperConfig {
 
   // #endregion                                                MAIN PAGE
 
-  // #region [rgba(120, 0, 120, 0.10)]                          MAIN PAGE CHECK AND ANNOUNCE
+  // #region                           MAIN PAGE CHECK AND ANNOUNCE
   /**
    * verifieert requiredProperties uit app.mainPage.requiredProperties
    * waarschuwt naar monitor wie uitvalt
@@ -521,7 +521,7 @@ export default class AbstractScraper extends ScraperConfig {
 
   // #endregion                                                 MAIN PAGE CHECK
 
-  // #region [rgba(60, 0, 60, 0.10)]                            SINGLE PAGE
+  // #region                             SINGLE PAGE
   /**
    * Process single Music Event
    * Naait het scrapen aan elkaar
@@ -889,7 +889,7 @@ export default class AbstractScraper extends ScraperConfig {
   }
   // #endregion                                                 SINGLE PAGE
 
-  // #region [rgba(90, 0, 90, 0.10)]                            ASYNC CHECKERS
+  // #region                             ASYNC CHECKERS
 
   cleanupEventTitle(workingTitle = '') {
     try {
@@ -937,7 +937,7 @@ export default class AbstractScraper extends ScraperConfig {
   }
   // #endregion                                                 ASYNC CHECKERS
 
-  // #region [rgba(150, 0, 150, 0.10)]                          LONG HTML
+  // #region                           LONG HTML
   writeLongTextHTML(mergedEvent) {
     if (!mergedEvent) return null;
     const base64String = Buffer.from(
@@ -1118,7 +1118,7 @@ export default class AbstractScraper extends ScraperConfig {
     });
   }
 
-  // #region [rgba(255, 0, 0, 0.1)]      MAIN PAGE EVENT CHECK
+  // #region       MAIN PAGE EVENT CHECK
   
   async recursiveAsyncChecker(listOfFuncs, event, olderReasons = []) {
     if (!listOfFuncs.length) {
@@ -1179,5 +1179,5 @@ export default class AbstractScraper extends ScraperConfig {
     return this.recursiveAsyncChecker(listOfFuncsCopy, event, ['error failure']);
   }
 
-  // #endregion [rgba(255, 0, 0, 0.1)]      MAIN PAGE EVENT CHECK
+  // #endregion       MAIN PAGE EVENT CHECK
 }
