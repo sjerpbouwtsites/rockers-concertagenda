@@ -4,8 +4,7 @@ import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/effenaar.js';
 import getImage from './gedeeld/image.js';
 import {
-  mapToShortDate, combineStartTimeStartDate, combineDoorTimeStartDate, 
-  combineEndTimeStartDate, mapToStartDate, mapToStartTime, mapToDoorTime, mapToEndTime,
+  mapToShortDate, mapToStartDate, 
 } from './gedeeld/datums.js';
 import workTitleAndSlug from './gedeeld/slug.js';
 
