@@ -1,50 +1,172 @@
 [
   {
-    "start": "2023-12-09T16:30:00.000000Z",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/the-amity-affliction-09-12-2023/",
-    "title": "The Amity Affliction",
+    "door": "2024-06-21T19:00:00",
+    "start": "2024-06-21T19:30:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/heavy-is-the-night-21-06-2024/",
+    "title": "Heavy is The Night",
     "location": "melkweg",
-    "price": 32.2,
-    "shortText": "metalcore · hardcore",
-    "longText": "../public/texts/melkweg/ZS1hbWl0eS1hZmZsaWN0aW9uLTA5LTEyLTIwMjMv.html",
-    "image": "../public/event-images/melkweg/ZS1hbWl0eS1hZmZsaWN0aW9uLTA5LTEyLTIwMjMv",
+    "price": 10.35,
+    "shortText": "goth · electronic · duister",
+    "longText": "../public/texts/melkweg/aGVhdnktaXMtdGhlLW5pZ2h0LTIxLTA2LTIwMjQv.html",
+    "image": "../public/event-images/melkweg/aGVhdnktaXMtdGhlLW5pZ2h0LTIxLTA2LTIwMjQv",
     "soldOut": false,
-    "unavailable": false
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
   },
   {
-    "start": "2023-12-23T18:00:00.000000Z",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/emo-night-mainland-23-12-2023/",
-    "title": "Emo Night Mainland",
+    "start": "2024-07-30T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/mr-big-30-07-2024/",
+    "title": "Mr. big",
     "location": "melkweg",
-    "price": 14.4,
-    "shortText": "emo · poppunk",
-    "longText": "../public/texts/melkweg/ZW1vLW5pZ2h0LW1haW5sYW5kLTIzLTEyLTIwMjMv.html",
-    "image": "../public/event-images/melkweg/ZW1vLW5pZ2h0LW1haW5sYW5kLTIzLTEyLTIwMjMv",
+    "price": 34.5,
+    "shortText": "hardrock",
+    "longText": "../public/texts/melkweg/bC9ubC9hZ2VuZGEvbXItYmlnLTMwLTA3LTIwMjQv.html",
+    "image": "../public/event-images/melkweg/bC9ubC9hZ2VuZGEvbXItYmlnLTMwLTA3LTIwMjQv",
     "soldOut": false,
-    "unavailable": false
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
   },
   {
-    "start": "2024-02-22T18:30:00.000000Z",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/clan-of-xymox-22-02-2024/",
-    "title": "Clan Of Xymox",
+    "start": "2024-08-05T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/the-warning-05-08-2024/",
+    "title": "The Warning",
+    "location": "melkweg",
+    "price": 31.05,
+    "shortText": "hardrock",
+    "longText": "../public/texts/melkweg/YWdlbmRhL3RoZS13YXJuaW5nLTA1LTA4LTIwMjQv.html",
+    "image": "../public/event-images/melkweg/YWdlbmRhL3RoZS13YXJuaW5nLTA1LTA4LTIwMjQv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "the warning": {
+        "s": "2SmW1lFlBJn4IfBzBZDlSh",
+        "l": "the%20warning",
+        "g": [
+          "mexican metal",
+          "monterrey indie"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2024-08-29T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/home-front-29-08-2024/",
+    "title": "Home Front",
+    "location": "melkweg",
+    "price": 19,
+    "shortText": "postpunk · hardcore punk · synth",
+    "longText": "../public/texts/melkweg/L2FnZW5kYS9ob21lLWZyb250LTI5LTA4LTIwMjQv.html",
+    "image": "../public/event-images/melkweg/L2FnZW5kYS9ob21lLWZyb250LTI5LTA4LTIwMjQv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "start": "2024-09-18T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/mothica-18-09-2024/",
+    "title": "Mothica",
+    "location": "melkweg",
+    "price": 23,
+    "shortText": "rock · emo · dreampop",
+    "longText": "../public/texts/melkweg/L25sL2FnZW5kYS9tb3RoaWNhLTE4LTA5LTIwMjQv.html",
+    "image": "../public/event-images/melkweg/L25sL2FnZW5kYS9tb3RoaWNhLTE4LTA5LTIwMjQv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "start": "2024-10-03T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/montreal-sondaschule-03-10-2024/",
+    "title": "Montreal / Sondaschule",
+    "location": "melkweg",
+    "price": 40.25,
+    "shortText": "punk · duits",
+    "longText": "../public/texts/melkweg/bnRyZWFsLXNvbmRhc2NodWxlLTAzLTEwLTIwMjQv.html",
+    "image": "../public/event-images/melkweg/bnRyZWFsLXNvbmRhc2NodWxlLTAzLTEwLTIwMjQv",
+    "soldOut": true,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "start": "2024-10-31T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/master-boot-record-31-10-2024/",
+    "title": "Master Boot Record",
+    "location": "melkweg",
+    "price": 18.4,
+    "shortText": "avant-garde · heavy metal · synthwave",
+    "longText": "../public/texts/melkweg/bWFzdGVyLWJvb3QtcmVjb3JkLTMxLTEwLTIwMjQv.html",
+    "image": "../public/event-images/melkweg/bWFzdGVyLWJvb3QtcmVjb3JkLTMxLTEwLTIwMjQv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "master boot record": {
+        "s": "77s5NAGQbxu8oLstaqSwHE",
+        "l": "master%20boot%20record",
+        "g": [
+          "darksynth",
+          "metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2024-12-04T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/dayseeker-04-12-2024/",
+    "title": "Dayseeker",
     "location": "melkweg",
     "price": 25.3,
-    "shortText": "darkwave · goth · rock",
-    "longText": "../public/texts/melkweg/ZW5kYS9jbGFuLW9mLXh5bW94LTIyLTAyLTIwMjQv.html",
-    "image": "../public/event-images/melkweg/ZW5kYS9jbGFuLW9mLXh5bW94LTIyLTAyLTIwMjQv",
+    "shortText": "metalcore · posthardcore",
+    "longText": "../public/texts/melkweg/bC9hZ2VuZGEvZGF5c2Vla2VyLTA0LTEyLTIwMjQv.html",
+    "image": "../public/event-images/melkweg/bC9hZ2VuZGEvZGF5c2Vla2VyLTA0LTEyLTIwMjQv",
     "soldOut": false,
-    "unavailable": false
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
   },
   {
-    "start": "2024-04-14T17:30:00.000000Z",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/vandenberg-14-04-2024/",
-    "title": "Vandenberg",
+    "start": "2024-12-11T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/as-i-lay-dying-11-12-2024/",
+    "title": "As I Lay Dying",
     "location": "melkweg",
-    "price": 37.4,
-    "shortText": "gitarist · hardrock · metal Tour of Sin - Reprise",
-    "longText": "../public/texts/melkweg/L2FnZW5kYS92YW5kZW5iZXJnLTE0LTA0LTIwMjQv.html",
-    "image": "../public/event-images/melkweg/L2FnZW5kYS92YW5kZW5iZXJnLTE0LTA0LTIwMjQv",
+    "price": 41.4,
+    "shortText": "metalcore · deathcore · heavy THROUGH STORMS AHEAD EUROPE 2024",
+    "longText": "../public/texts/melkweg/bmRhL2FzLWktbGF5LWR5aW5nLTExLTEyLTIwMjQv.html",
+    "image": "../public/event-images/melkweg/bmRhL2FzLWktbGF5LWR5aW5nLTExLTEyLTIwMjQv",
     "soldOut": false,
-    "unavailable": false
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "start": "2025-01-22T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/slift-22-01-2025/",
+    "title": "Slift",
+    "location": "melkweg",
+    "price": 28.75,
+    "shortText": "psychedelisch · stonerrock · space",
+    "longText": "../public/texts/melkweg/bmwvbmwvYWdlbmRhL3NsaWZ0LTIyLTAxLTIwMjUv.html",
+    "image": "../public/event-images/melkweg/bmwvbmwvYWdlbmRhL3NsaWZ0LTIyLTAxLTIwMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "slift": {
+        "s": "0x9HCT7ZZlOEfLSVCDi5SO",
+        "l": "slift",
+        "g": [
+          "french garage rock",
+          "french stoner rock",
+          "neo-psychedelic",
+          "rock alternatif francais"
+        ]
+      }
+    }
   }
 ]

@@ -208,7 +208,7 @@ export default class MonitorField {
               if (errorTextRow.includes('node:internal')) return '';
               let t = errorTextRow;
               if (errorTextRow.includes('file://')) {
-                console.log(errorTextRow);
+                // console.log(errorTextRow);
                 let volleFileNaam;
                 try {
                   volleFileNaam = errorTextRow.match(/(file.*)\)/)[1];
@@ -218,7 +218,7 @@ export default class MonitorField {
                   console.error(new Error('SCHEIT'));
                 }
 
-                console.log(errorTextRow);
+                // console.log(errorTextRow);
 
                 const fileLink = errorTextRow
                   .split('concertagenda')[1]
