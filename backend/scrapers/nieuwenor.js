@@ -3,7 +3,9 @@ import { workerData } from 'worker_threads';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/nieuwenor.js';
 import getImage from './gedeeld/image.js';
-import terms from './gedeeld/terms.js';
+import { mapToShortDate } from './gedeeld/datums.js';
+import workTitleAndSlug from './gedeeld/slug.js';
+import terms from '../artist-db/store/terms.js';
 
 // #region        SCRAPER CONFIG
 const scraper = new AbstractScraper({
@@ -17,13 +19,19 @@ const scraper = new AbstractScraper({
     timeout: 15014,
   },
   app: {
+    harvest: {
+      dividers: [`+`],
+      dividerRex: "[\\+]",
+      artistsIn: ['title'],
+    },  
     mainPage: {
       requiredProperties: ['venueEventUrl', 'title', 'shortText'],
-      asyncCheckFuncs: ['allowed', 'event', 'refused', 'forbiddenTerms', 'emptySuccess'],
+      asyncCheckFuncs: ['refused', 'allowedEvent', 'forbiddenTerms', 'hasGoodTerms', 'hasAllowedArtist', 'spotifyConfirmation', 'failure'],
+      // asyncCheckFuncs: ['allowed', 'event', 'refused', 'forbiddenTerms', 'emptySuccess'],
     },
     singlePage: {
       requiredProperties: ['start'],
-      asyncCheckFuncs: ['goodTerms', 'isRock', 'saveRefused', 'emptyFailure'],
+      asyncCheckFuncs: ['success'],
     },
   },
 });
@@ -74,7 +82,10 @@ scraper.mainPage = async function () {
       }),
     { workerData, unavailabiltyTerms: terms.unavailability },
   );
-  rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
+  rawEvents = rawEvents
+    .map(mapToShortDate)
+    .map(this.isMusicEventCorruptedMapper)
+    .map((re) => workTitleAndSlug(re, this._s.app.harvest.possiblePrefix));
 
   const eventGen = this.eventGenerator(rawEvents);
   // eslint-disable-next-line no-unused-vars
