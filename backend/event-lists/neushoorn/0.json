@@ -1,92 +1,231 @@
 [
   {
-    "door": "2023-12-08T20:00:00",
-    "start": "2023-12-08T20:00:00",
-    "venueEventUrl": "https://neushoorn.nl/production/hardcore-vrijdag/",
-    "title": "Hardcore Vrijdag",
+    "start": "2024-06-23T19:00:00",
+    "venueEventUrl": "https://neushoorn.nl/production/cradle-of-filth/",
+    "title": "Cradle of Filth",
     "location": "neushoorn",
-    "price": 5,
-    "shortText": "Je tweemaandelijkse dosis hardcore punk op vrijdag",
-    "longText": "../public/texts/neushoorn/bC9wcm9kdWN0aW9uL2hhcmRjb3JlLXZyaWpkYWcv.html",
-    "image": "../public/event-images/neushoorn/bC9wcm9kdWN0aW9uL2hhcmRjb3JlLXZyaWpkYWcv",
+    "price": 31,
+    "shortText": "Gothic black metal legends",
+    "longText": "../public/texts/neushoorn/bmwvcHJvZHVjdGlvbi9jcmFkbGUtb2YtZmlsdGgv.html",
+    "image": "../public/event-images/neushoorn/bmwvcHJvZHVjdGlvbi9jcmFkbGUtb2YtZmlsdGgv",
     "soldOut": false,
-    "unavailable": false
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
   },
   {
-    "door": "2023-12-24T19:30:00",
-    "start": "2023-12-24T19:30:00",
-    "venueEventUrl": "https://neushoorn.nl/production/frisian-metal-night/",
-    "title": "Frisian Metal Night",
+    "start": "2024-07-12T20:00:00",
+    "venueEventUrl": "https://neushoorn.nl/production/abysmal-grief-salacious-gods-the-chosen/",
+    "title": "Abysmal Grief + Salacious Gods + The Chösen",
     "location": "neushoorn",
-    "price": 0,
-    "shortText": "Jouw jaarlijkse kerstdiner met nekpijn garantie",
-    "longText": "../public/texts/neushoorn/cm9kdWN0aW9uL2ZyaXNpYW4tbWV0YWwtbmlnaHQv.html",
+    "price": 18,
+    "shortText": "Cult doorspekt met doom en black",
+    "longText": "../public/texts/neushoorn/aWVmLXNhbGFjaW91cy1nb2RzLXRoZS1jaG9zZW4v.html",
+    "image": "../public/event-images/neushoorn/aWVmLXNhbGFjaW91cy1nb2RzLXRoZS1jaG9zZW4v",
     "soldOut": false,
-    "unavailable": false
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "echo": {
+        "s": "0fgYKF9Avljex0L9Wt5b8Z",
+        "l": "echo",
+        "g": [
+          "alternative rock",
+          "new romantic",
+          "new wave",
+          "permanent wave"
+        ]
+      }
+    }
   },
   {
-    "door": "4047-01-12T19:30:00",
-    "start": "4047-01-12T19:30:00",
-    "venueEventUrl": "https://neushoorn.nl/production/ronnie-james-dio-the-memorial-concert/",
-    "title": "Ronnie James Dio – The Memorial Concert",
+    "start": "2024-07-17T20:00:00",
+    "venueEventUrl": "https://neushoorn.nl/production/nervana/",
+    "title": "Nervana",
     "location": "neushoorn",
-    "price": 21.95,
-    "shortText": "Long Live Rock 'n Roll",
-    "longText": "../public/texts/neushoorn/YW1lcy1kaW8tdGhlLW1lbW9yaWFsLWNvbmNlcnQv.html",
-    "image": "../public/event-images/neushoorn/YW1lcy1kaW8tdGhlLW1lbW9yaWFsLWNvbmNlcnQv",
-    "soldOut": false,
-    "unavailable": false
+    "price": null,
+    "shortText": "The American Nirvana tribute Laatste kaarten",
+    "longText": "../public/texts/neushoorn/dXNob29ybi5ubC9wcm9kdWN0aW9uL25lcnZhbmEv.html",
+    "image": "../public/event-images/neushoorn/dXNob29ybi5ubC9wcm9kdWN0aW9uL25lcnZhbmEv",
+    "soldOut": true,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "nervana": {
+        "s": null,
+        "l": null,
+        "g": [
+          "grunge"
+        ]
+      }
+    }
   },
   {
-    "door": "4047-03-16T20:00:00",
-    "start": "4047-03-16T20:00:00",
-    "venueEventUrl": "https://neushoorn.nl/production/regressive-hypnosis-a-tribute-to-dream-theater/",
-    "title": "Regressive Hypnosis",
-    "location": "neushoorn",
-    "price": 15,
-    "shortText": " A tribute to Dream Theater   Nederlands eerste tribute aan de koningen van prog metal",
-    "longText": "../public/texts/neushoorn/aXMtYS10cmlidXRlLXRvLWRyZWFtLXRoZWF0ZXIv.html",
-    "image": "../public/event-images/neushoorn/aXMtYS10cmlidXRlLXRvLWRyZWFtLXRoZWF0ZXIv",
-    "soldOut": false,
-    "unavailable": false
-  },
-  {
-    "door": "4047-04-07T19:30:00",
-    "start": "4047-04-07T19:30:00",
-    "venueEventUrl": "https://neushoorn.nl/production/vandenberg/",
-    "title": "Vandenberg",
-    "location": "neushoorn",
-    "price": 34.5,
-    "shortText": "Stoelriemen vast; Vandenberg is back!",
-    "longText": "../public/texts/neushoorn/b29ybi5ubC9wcm9kdWN0aW9uL3ZhbmRlbmJlcmcv.html",
-    "image": "../public/event-images/neushoorn/b29ybi5ubC9wcm9kdWN0aW9uL3ZhbmRlbmJlcmcv",
-    "soldOut": false,
-    "unavailable": false
-  },
-  {
-    "door": "4047-06-29T20:00:00",
-    "start": "4047-06-29T20:00:00",
-    "venueEventUrl": "https://neushoorn.nl/production/moving-pictures-rush-tribute/",
-    "title": "Moving Pictures – Rush Tribute",
-    "location": "neushoorn",
-    "price": 17,
-    "shortText": "Een ode aan prog-rock legendes",
-    "longText": "../public/texts/neushoorn/L21vdmluZy1waWN0dXJlcy1ydXNoLXRyaWJ1dGUv.html",
-    "image": "../public/event-images/neushoorn/L21vdmluZy1waWN0dXJlcy1ydXNoLXRyaWJ1dGUv",
-    "soldOut": false,
-    "unavailable": false
-  },
-  {
-    "door": "4047-09-27T19:30:00",
-    "start": "4047-09-27T19:30:00",
-    "venueEventUrl": "https://neushoorn.nl/production/british-invasion-musest-reeditors-scummy-men/",
-    "title": "British Invasion: Musest ",
+    "start": "2024-08-14T19:30:00",
+    "venueEventUrl": "https://neushoorn.nl/production/whitechapel/",
+    "title": "Whitechapel",
     "location": "neushoorn",
     "price": 22,
-    "shortText": " reEDITORS   Scummy Men Tribute to Muse, Editors & Arctic Monkeys",
-    "longText": "../public/texts/neushoorn/bi1tdXNlc3QtcmVlZGl0b3JzLXNjdW1teS1tZW4v.html",
-    "image": "../public/event-images/neushoorn/bi1tdXNlc3QtcmVlZGl0b3JzLXNjdW1teS1tZW4v",
+    "shortText": "More than just deathcore...",
+    "longText": "../public/texts/neushoorn/b3JuLm5sL3Byb2R1Y3Rpb24vd2hpdGVjaGFwZWwv.html",
+    "image": "../public/event-images/neushoorn/b3JuLm5sL3Byb2R1Y3Rpb24vd2hpdGVjaGFwZWwv",
     "soldOut": false,
-    "unavailable": false
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "start": "2024-09-22T19:00:00",
+    "venueEventUrl": "https://neushoorn.nl/production/nh-cafe-father-befouled-bra-fossilization-usa-stoflik-omskot-frl/",
+    "title": "NH Café: Fossilization (BRA) ",
+    "location": "neushoorn",
+    "price": null,
+    "shortText": " Father Befouled (USA)  +  Stoflik Omskot (FRL) Underground death metal meesters",
+    "longText": "../public/texts/neushoorn/emF0aW9uLXVzYS1zdG9mbGlrLW9tc2tvdC1mcmwv.html",
+    "image": "../public/event-images/neushoorn/emF0aW9uLXVzYS1zdG9mbGlrLW9tc2tvdC1mcmwv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "start": "2024-09-26T19:30:00",
+    "venueEventUrl": "https://neushoorn.nl/production/orphaned-land/",
+    "title": "Orphaned Land",
+    "location": "neushoorn",
+    "price": 24,
+    "shortText": "De pioniers van Oosterse metal",
+    "longText": "../public/texts/neushoorn/bi5ubC9wcm9kdWN0aW9uL29ycGhhbmVkLWxhbmQv.html",
+    "image": "../public/event-images/neushoorn/bi5ubC9wcm9kdWN0aW9uL29ycGhhbmVkLWxhbmQv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "orphaned land": {
+        "s": "7xTMxqAmbtE0Nce5lz7t0h",
+        "l": "orphaned%20land",
+        "g": [
+          "christian power metal",
+          "folk metal",
+          "israeli metal",
+          "oriental metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2024-10-05T13:00:00",
+    "venueEventUrl": "https://neushoorn.nl/production/into-the-void/",
+    "title": "Into The Void",
+    "location": "neushoorn",
+    "price": 49,
+    "shortText": "Internationaal stoner-, sludge- en doomfestival",
+    "longText": "../public/texts/neushoorn/bi5ubC9wcm9kdWN0aW9uL2ludG8tdGhlLXZvaWQv.html",
+    "image": "../public/event-images/neushoorn/bi5ubC9wcm9kdWN0aW9uL2ludG8tdGhlLXZvaWQv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "start": "2024-10-26T14:30:00",
+    "venueEventUrl": "https://neushoorn.nl/production/fajtfest-fryslan/",
+    "title": "Fajtfest Fryslân",
+    "location": "neushoorn",
+    "price": null,
+    "shortText": "Hang Youth e.v.a.",
+    "longText": "../public/texts/neushoorn/bC9wcm9kdWN0aW9uL2ZhanRmZXN0LWZyeXNsYW4v.html",
+    "image": "../public/event-images/neushoorn/bC9wcm9kdWN0aW9uL2ZhanRmZXN0LWZyeXNsYW4v",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "start": "2024-11-03T20:00:00",
+    "venueEventUrl": "https://neushoorn.nl/production/master-boot-record/",
+    "title": "Master boot record",
+    "location": "neushoorn",
+    "price": 18,
+    "shortText": "Zware metal riffs en elektronische beats met de retroklanken van vintage computers en chiptune muziek",
+    "longText": "../public/texts/neushoorn/cHJvZHVjdGlvbi9tYXN0ZXItYm9vdC1yZWNvcmQv.html",
+    "image": "../public/event-images/neushoorn/cHJvZHVjdGlvbi9tYXN0ZXItYm9vdC1yZWNvcmQv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "master boot record": {
+        "s": "77s5NAGQbxu8oLstaqSwHE",
+        "l": "master%20boot%20record",
+        "g": [
+          "darksynth",
+          "metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2024-11-15T20:00:00",
+    "venueEventUrl": "https://neushoorn.nl/production/acindc-twisted-sisters/",
+    "title": "ACinDC + Twisted Sisters",
+    "location": "neushoorn",
+    "price": 19,
+    "shortText": "pure rock 'n roll op de planken",
+    "longText": "../public/texts/neushoorn/dWN0aW9uL2FjaW5kYy10d2lzdGVkLXNpc3RlcnMv.html",
+    "image": "../public/event-images/neushoorn/dWN0aW9uL2FjaW5kYy10d2lzdGVkLXNpc3RlcnMv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "acindc": {
+        "s": null,
+        "l": "acindc",
+        "g": [
+          "hard rock"
+        ]
+      },
+      "twisted sisters": {
+        "s": "2PmPXmoXfMnbuX4YDjz4gq",
+        "l": "twisted%20sisters",
+        "g": []
+      }
+    }
+  },
+  {
+    "start": "2024-12-01T19:00:00",
+    "venueEventUrl": "https://neushoorn.nl/production/nh-cafe-civerous-crematory-stench-deadspeak/",
+    "title": "NH Café: Civerous ",
+    "location": "neushoorn",
+    "price": 12,
+    "shortText": " Crematory Stench  +  Deadspeak Smerige onheilspellende death metal",
+    "longText": "../public/texts/neushoorn/dXMtY3JlbWF0b3J5LXN0ZW5jaC1kZWFkc3BlYWsv.html",
+    "image": "../public/event-images/neushoorn/dXMtY3JlbWF0b3J5LXN0ZW5jaC1kZWFkc3BlYWsv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "start": "2024-12-12T20:00:00",
+    "venueEventUrl": "https://neushoorn.nl/production/tusky/",
+    "title": "Tusky",
+    "location": "neushoorn",
+    "price": 17,
+    "shortText": "The Trashtastic Tour",
+    "longText": "../public/texts/neushoorn/bmV1c2hvb3JuLm5sL3Byb2R1Y3Rpb24vdHVza3kv.html",
+    "image": "../public/event-images/neushoorn/bmV1c2hvb3JuLm5sL3Byb2R1Y3Rpb24vdHVza3kv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "tusky": {
+        "s": "6XbZ8G0cFqSgUL4FmtiSPr",
+        "l": "tusky",
+        "g": [
+          "dutch punk",
+          "dutch rock"
+        ]
+      }
+    }
   }
 ]

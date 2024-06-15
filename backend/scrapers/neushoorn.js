@@ -7,10 +7,12 @@ import {
   mapToStartDate,
   combineDoorTimeStartDate,
   mapToDoorTime,
+  mapToShortDate,
   mapToStartTime,
   combineStartTimeStartDate,
 } from './gedeeld/datums.js';
-import terms from './gedeeld/terms.js';
+import workTitleAndSlug from './gedeeld/slug.js';
+import terms from '../artist-db/store/terms.js';
 
 // #region        SCRAPER CONFIG
 const scraper = new AbstractScraper({
@@ -22,51 +24,22 @@ const scraper = new AbstractScraper({
     timeout: 20000,
   },
   app: {
+    harvest: {
+      dividers: [`+`],
+      dividerRex: "[\\+]",
+      artistsIn: ['title'],
+    },        
     mainPage: {
       requiredProperties: ['venueEventUrl', 'title'],
-      asyncCheckFuncs: ['allowed', 'event', 'refused', 'goodTerms', 'forbiddenTerms', 'custom1', 'saveRefused', 'emptyFailure'],
+      asyncCheckFuncs: ['refused', 'allowedEvent', 'forbiddenTerms', 'hasGoodTerms', 'hasAllowedArtist', 'spotifyConfirmation', 'failure'],
     },
     singlePage: {
       requiredProperties: ['venueEventUrl', 'title', 'start'],
+      asyncCheckFuncs: ['success'],
     },
   },
 });
 // #endregion           
-
-scraper.asyncCustomCheck1 = async function (event, reasons) {
-  const reasonsCopy = Array.isArray(reasons) ? reasons : [];
-  let overdinges = null;
-  if (event.title.toLowerCase().trim().match(/\s[-–]\s/)) {
-    const a = event.title.toLowerCase().trim().replace(/\s[-–]\s.*/, '');
-    overdinges = [a];
-  }
-
-  const isRockRes = await this.isRock(event, overdinges);
-  reasonsCopy.push(isRockRes.reason);
-  if (isRockRes.success) {
-    this.talkToDB({
-      type: 'db-request',
-      subtype: 'saveAllowedTitle',
-      messageData: {
-        string: event.title,
-        reason: reasonsCopy.reverse().join(', '),
-      },
-    }); 
-    return {
-      event,
-      reason: reasons.reverse().join(','),
-      reasons: reasonsCopy,
-      break: true,
-      success: true,
-    };
-  }  
-  return {
-    break: false,
-    success: null,
-    event,
-    reasons: reasonsCopy,
-  };  
-};
 
 scraper.listenToMasterThread();
 
@@ -112,6 +85,7 @@ scraper.mainPage = async function () {
         res.shortText = eventEl.querySelector('.productions__item__subtitle')?.textContent ?? '';
         res.venueEventUrl = eventEl.href;
         const uaRex = new RegExp(unavailabiltyTerms.join('|'), 'gi');
+        res.mapToStartDate = eventEl.querySelector('.date-label__day-month')?.textContent.trim().toLowerCase().replace('-', ' ') ?? '';
         res.unavailable = !!eventEl.textContent.match(uaRex);
         res.soldOut =
           !!eventEl.querySelector('.chip')?.textContent.match(/uitverkocht|sold\s?out/i) ?? false;
@@ -120,7 +94,11 @@ scraper.mainPage = async function () {
     { workerData, unavailabiltyTerms: terms.unavailability },
   );
 
-  rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
+  rawEvents = rawEvents
+    .map((event) => mapToStartDate(event, 'dag-maandNummer', this.months))
+    .map(mapToShortDate)
+    .map(this.isMusicEventCorruptedMapper)
+    .map((re) => workTitleAndSlug(re, this._s.app.harvest.possiblePrefix));
 
   const eventGen = this.eventGenerator(rawEvents);
   // eslint-disable-next-line no-unused-vars
@@ -151,16 +129,7 @@ scraper.singlePage = async function ({ page, event }) {
         errors: [],
       };
 
-      res.mapToStartDate =
-        document
-          .querySelector('.summary .summary__item:first-child')
-          ?.textContent.trim()
-          .toLowerCase() ?? '';
-      const tweedeSuIt = document.querySelector('.summary .summary__item + .summary__item');
-      if (tweedeSuIt.textContent.includes('-')) {
-        const s = tweedeSuIt.textContent.split('-');
-        tweedeSuIt.innerHTML = `<span class='deur'>${s[0]}</span><span class='start'>${s[1]}</span>'`;
-      }
+      res.startDate = event.startDate;
       res.mapToStartTime =
         document
           .querySelector('.summary .summary__item .start, .summary .summary__item + .summary__item')
@@ -174,8 +143,7 @@ scraper.singlePage = async function ({ page, event }) {
     },
     { months: this.months, event },
   );
-
-  pageInfo = mapToStartDate(pageInfo, 'dag-maandNaam', this.months);
+  
   pageInfo = mapToStartTime(pageInfo);
   pageInfo = mapToDoorTime(pageInfo);
   pageInfo = combineStartTimeStartDate(pageInfo);

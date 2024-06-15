@@ -1,239 +1,229 @@
 [
   {
-    "door": "2024-06-23T20:30:00",
-    "start": "2024-06-23T21:00:00",
-    "venueEventUrl": "https://metropool.nl/agenda/the-gories/",
-    "title": "The Gories",
-    "location": "metropool",
-    "price": 25.5,
-    "shortText": "",
-    "longText": "../public/texts/metropool/ZXRyb3Bvb2wubmwvYWdlbmRhL3RoZS1nb3JpZXMv.html",
-    "image": "../public/event-images/metropool/ZXRyb3Bvb2wubmwvYWdlbmRhL3RoZS1nb3JpZXMv",
+    "start": "2024-06-23T19:00:00",
+    "venueEventUrl": "https://neushoorn.nl/production/cradle-of-filth/",
+    "title": "Cradle of Filth",
+    "location": "neushoorn",
+    "price": 31,
+    "shortText": "Gothic black metal legends",
+    "longText": "../public/texts/neushoorn/bmwvcHJvZHVjdGlvbi9jcmFkbGUtb2YtZmlsdGgv.html",
+    "image": "../public/event-images/neushoorn/bmwvcHJvZHVjdGlvbi9jcmFkbGUtb2YtZmlsdGgv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": null
   },
   {
-    "door": "2024-06-27T20:30:00",
-    "start": "2024-06-27T21:00:00",
-    "venueEventUrl": "https://metropool.nl/agenda/norose-ep-release/",
-    "title": "NoRose - EP release",
-    "location": "metropool",
-    "price": 10,
-    "shortText": "Support: Jongeman",
-    "longText": "../public/texts/metropool/bC5ubC9hZ2VuZGEvbm9yb3NlLWVwLXJlbGVhc2Uv.html",
-    "image": "../public/event-images/metropool/bC5ubC9hZ2VuZGEvbm9yb3NlLWVwLXJlbGVhc2Uv",
+    "start": "2024-07-12T20:00:00",
+    "venueEventUrl": "https://neushoorn.nl/production/abysmal-grief-salacious-gods-the-chosen/",
+    "title": "Abysmal Grief + Salacious Gods + The Chösen",
+    "location": "neushoorn",
+    "price": 18,
+    "shortText": "Cult doorspekt met doom en black",
+    "longText": "../public/texts/neushoorn/aWVmLXNhbGFjaW91cy1nb2RzLXRoZS1jaG9zZW4v.html",
+    "image": "../public/event-images/neushoorn/aWVmLXNhbGFjaW91cy1nb2RzLXRoZS1jaG9zZW4v",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "norose": {
+      "echo": {
+        "s": "0fgYKF9Avljex0L9Wt5b8Z",
+        "l": "echo",
+        "g": [
+          "alternative rock",
+          "new romantic",
+          "new wave",
+          "permanent wave"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2024-07-17T20:00:00",
+    "venueEventUrl": "https://neushoorn.nl/production/nervana/",
+    "title": "Nervana",
+    "location": "neushoorn",
+    "price": null,
+    "shortText": "The American Nirvana tribute Laatste kaarten",
+    "longText": "../public/texts/neushoorn/dXNob29ybi5ubC9wcm9kdWN0aW9uL25lcnZhbmEv.html",
+    "image": "../public/event-images/neushoorn/dXNob29ybi5ubC9wcm9kdWN0aW9uL25lcnZhbmEv",
+    "soldOut": true,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "nervana": {
         "s": null,
         "l": null,
         "g": [
-          "punk",
-          "opera punk"
+          "grunge"
         ]
       }
     }
   },
   {
-    "door": "2024-10-06T19:00:00",
-    "start": "2024-10-06T20:00:00",
-    "venueEventUrl": "https://metropool.nl/agenda/septicflesh/",
-    "title": "Septicflesh",
-    "location": "metropool",
-    "price": 40,
-    "shortText": "Support: Oceans + Scar of the Sun",
-    "longText": "../public/texts/metropool/dHJvcG9vbC5ubC9hZ2VuZGEvc2VwdGljZmxlc2gv.html",
-    "image": "../public/event-images/metropool/dHJvcG9vbC5ubC9hZ2VuZGEvc2VwdGljZmxlc2gv",
+    "start": "2024-08-14T19:30:00",
+    "venueEventUrl": "https://neushoorn.nl/production/whitechapel/",
+    "title": "Whitechapel",
+    "location": "neushoorn",
+    "price": 22,
+    "shortText": "More than just deathcore...",
+    "longText": "../public/texts/neushoorn/b3JuLm5sL3Byb2R1Y3Rpb24vd2hpdGVjaGFwZWwv.html",
+    "image": "../public/event-images/neushoorn/b3JuLm5sL3Byb2R1Y3Rpb24vd2hpdGVjaGFwZWwv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": null
   },
   {
-    "door": "2024-10-26T14:00:00",
-    "start": "2024-10-26T15:00:00",
-    "venueEventUrl": "https://metropool.nl/agenda/beerland-festival-2024/",
-    "title": "Beerland Festival",
-    "location": "metropool",
-    "price": 42.5,
-    "shortText": "",
-    "longText": "../public/texts/metropool/YWdlbmRhL2JlZXJsYW5kLWZlc3RpdmFsLTIwMjQv.html",
-    "image": "../public/event-images/metropool/YWdlbmRhL2JlZXJsYW5kLWZlc3RpdmFsLTIwMjQv",
+    "start": "2024-09-22T19:00:00",
+    "venueEventUrl": "https://neushoorn.nl/production/nh-cafe-father-befouled-bra-fossilization-usa-stoflik-omskot-frl/",
+    "title": "NH Café: Fossilization (BRA) ",
+    "location": "neushoorn",
+    "price": null,
+    "shortText": " Father Befouled (USA)  +  Stoflik Omskot (FRL) Underground death metal meesters",
+    "longText": "../public/texts/neushoorn/emF0aW9uLXVzYS1zdG9mbGlrLW9tc2tvdC1mcmwv.html",
+    "image": "../public/event-images/neushoorn/emF0aW9uLXVzYS1zdG9mbGlrLW9tc2tvdC1mcmwv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": null
   },
   {
-    "door": "2024-10-27T19:00:00",
-    "start": "2024-10-27T19:30:00",
-    "venueEventUrl": "https://metropool.nl/agenda/kissin-dynamite-enschede/",
-    "title": "Kissin' Dynamite",
-    "location": "metropool",
-    "price": 30.5,
-    "shortText": "Support: Massive Wagons en Airstrike",
-    "longText": "../public/texts/metropool/ZW5kYS9raXNzaW4tZHluYW1pdGUtZW5zY2hlZGUv.html",
-    "image": "../public/event-images/metropool/ZW5kYS9raXNzaW4tZHluYW1pdGUtZW5zY2hlZGUv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
-    "door": "2024-11-01T19:30:00",
-    "start": "2024-11-01T20:30:00",
-    "venueEventUrl": "https://metropool.nl/agenda/the-dead-daisies-enschede/",
-    "title": "The Dead Daisies",
-    "location": "metropool",
-    "price": 41,
-    "shortText": "Support: Beasto Blanco + Mike Tramp",
-    "longText": "../public/texts/metropool/bmRhL3RoZS1kZWFkLWRhaXNpZXMtZW5zY2hlZGUv.html",
-    "image": "../public/event-images/metropool/bmRhL3RoZS1kZWFkLWRhaXNpZXMtZW5zY2hlZGUv",
+    "start": "2024-09-26T19:30:00",
+    "venueEventUrl": "https://neushoorn.nl/production/orphaned-land/",
+    "title": "Orphaned Land",
+    "location": "neushoorn",
+    "price": 24,
+    "shortText": "De pioniers van Oosterse metal",
+    "longText": "../public/texts/neushoorn/bi5ubC9wcm9kdWN0aW9uL29ycGhhbmVkLWxhbmQv.html",
+    "image": "../public/event-images/neushoorn/bi5ubC9wcm9kdWN0aW9uL29ycGhhbmVkLWxhbmQv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "the dead daisies": {
-        "s": "6VDAPUov4yNDHyQlPqrpNH",
-        "l": "the%20dead%20daisies",
+      "orphaned land": {
+        "s": "7xTMxqAmbtE0Nce5lz7t0h",
+        "l": "orphaned%20land",
         "g": [
-          "modern hard rock",
-          "nwocr"
+          "christian power metal",
+          "folk metal",
+          "israeli metal",
+          "oriental metal"
         ]
       }
     }
   },
   {
-    "door": "2024-11-08T19:30:00",
-    "start": "2024-11-08T20:30:00",
-    "venueEventUrl": "https://metropool.nl/agenda/the-iron-maidens/",
-    "title": "The iron maidens",
-    "location": "metropool",
-    "price": 34,
-    "shortText": "",
-    "longText": "../public/texts/metropool/b2wubmwvYWdlbmRhL3RoZS1pcm9uLW1haWRlbnMv.html",
-    "image": "../public/event-images/metropool/b2wubmwvYWdlbmRhL3RoZS1pcm9uLW1haWRlbnMv",
+    "start": "2024-10-05T13:00:00",
+    "venueEventUrl": "https://neushoorn.nl/production/into-the-void/",
+    "title": "Into The Void",
+    "location": "neushoorn",
+    "price": 49,
+    "shortText": "Internationaal stoner-, sludge- en doomfestival",
+    "longText": "../public/texts/neushoorn/bi5ubC9wcm9kdWN0aW9uL2ludG8tdGhlLXZvaWQv.html",
+    "image": "../public/event-images/neushoorn/bi5ubC9wcm9kdWN0aW9uL2ludG8tdGhlLXZvaWQv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "start": "2024-10-26T14:30:00",
+    "venueEventUrl": "https://neushoorn.nl/production/fajtfest-fryslan/",
+    "title": "Fajtfest Fryslân",
+    "location": "neushoorn",
+    "price": null,
+    "shortText": "Hang Youth e.v.a.",
+    "longText": "../public/texts/neushoorn/bC9wcm9kdWN0aW9uL2ZhanRmZXN0LWZyeXNsYW4v.html",
+    "image": "../public/event-images/neushoorn/bC9wcm9kdWN0aW9uL2ZhanRmZXN0LWZyeXNsYW4v",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "start": "2024-11-03T20:00:00",
+    "venueEventUrl": "https://neushoorn.nl/production/master-boot-record/",
+    "title": "Master boot record",
+    "location": "neushoorn",
+    "price": 18,
+    "shortText": "Zware metal riffs en elektronische beats met de retroklanken van vintage computers en chiptune muziek",
+    "longText": "../public/texts/neushoorn/cHJvZHVjdGlvbi9tYXN0ZXItYm9vdC1yZWNvcmQv.html",
+    "image": "../public/event-images/neushoorn/cHJvZHVjdGlvbi9tYXN0ZXItYm9vdC1yZWNvcmQv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "the iron maidens": {
+      "master boot record": {
+        "s": "77s5NAGQbxu8oLstaqSwHE",
+        "l": "master%20boot%20record",
+        "g": [
+          "darksynth",
+          "metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2024-11-15T20:00:00",
+    "venueEventUrl": "https://neushoorn.nl/production/acindc-twisted-sisters/",
+    "title": "ACinDC + Twisted Sisters",
+    "location": "neushoorn",
+    "price": 19,
+    "shortText": "pure rock 'n roll op de planken",
+    "longText": "../public/texts/neushoorn/dWN0aW9uL2FjaW5kYy10d2lzdGVkLXNpc3RlcnMv.html",
+    "image": "../public/event-images/neushoorn/dWN0aW9uL2FjaW5kYy10d2lzdGVkLXNpc3RlcnMv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "acindc": {
         "s": null,
-        "l": null,
+        "l": "acindc",
         "g": [
-          "heavy metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-11-15T19:30:00",
-    "start": "2024-11-15T20:30:00",
-    "venueEventUrl": "https://metropool.nl/agenda/fuzz-top-zz-top-tribute/",
-    "title": "Fuzz top - zz top tribute",
-    "location": "metropool",
-    "price": 27.5,
-    "shortText": "",
-    "longText": "../public/texts/metropool/Z2VuZGEvZnV6ei10b3AtenotdG9wLXRyaWJ1dGUv.html",
-    "image": "../public/event-images/metropool/Z2VuZGEvZnV6ei10b3AtenotdG9wLXRyaWJ1dGUv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "zz top": {
-        "s": "2AM4ilv6UzW0uMRuqKtDgN",
-        "l": null,
-        "g": [
-          "album rock",
-          "blues rock",
-          "classic rock",
-          "hard rock",
-          "rock"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-11-27T19:00:00",
-    "start": "2024-11-27T20:00:00",
-    "venueEventUrl": "https://metropool.nl/agenda/gorgoroth/",
-    "title": "Gorgoroth",
-    "location": "metropool",
-    "price": 30.5,
-    "shortText": "Support: Mortiis + Hats Barn + Aran Angmar",
-    "longText": "../public/texts/metropool/bWV0cm9wb29sLm5sL2FnZW5kYS9nb3Jnb3JvdGgv.html",
-    "image": "../public/event-images/metropool/bWV0cm9wb29sLm5sL2FnZW5kYS9nb3Jnb3JvdGgv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "gorgoroth": {
-        "s": "1Dt7cfRzxM8qPVa82jX9y5",
-        "l": "gorgoroth",
-        "g": [
-          "black metal",
-          "metal",
-          "norwegian black metal",
-          "norwegian metal",
-          "tolkien metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-12-04T19:30:00",
-    "start": "2024-12-04T20:30:00",
-    "venueEventUrl": "https://metropool.nl/agenda/ian-paice-feat-purpendicular/",
-    "title": "Ian Paice feat. Purpendicular",
-    "location": "metropool",
-    "price": 41,
-    "shortText": "",
-    "longText": "../public/texts/metropool/L2lhbi1wYWljZS1mZWF0LXB1cnBlbmRpY3VsYXIv.html",
-    "image": "../public/event-images/metropool/L2lhbi1wYWljZS1mZWF0LXB1cnBlbmRpY3VsYXIv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "ian paice": {
-        "s": "2gNdXbhyIbXHWvurrlrUAq",
-        "l": "ian%20paice",
-        "g": [
-          "rock drums",
-          "heavy metal"
+          "hard rock"
         ]
       },
-      "purpendicular": {
-        "s": "7dtYKVbh2QXKICAzbxtrkF",
-        "l": "purpendicular",
+      "twisted sisters": {
+        "s": "2PmPXmoXfMnbuX4YDjz4gq",
+        "l": "twisted%20sisters",
         "g": []
       }
     }
   },
   {
-    "door": "2024-12-13T19:30:00",
-    "start": "2024-12-13T20:30:00",
-    "venueEventUrl": "https://metropool.nl/agenda/john-coffey/",
-    "title": "John Coffey",
-    "location": "metropool",
-    "price": 29.5,
-    "shortText": "",
-    "longText": "../public/texts/metropool/dHJvcG9vbC5ubC9hZ2VuZGEvam9obi1jb2ZmZXkv.html",
-    "image": "../public/event-images/metropool/dHJvcG9vbC5ubC9hZ2VuZGEvam9obi1jb2ZmZXkv",
+    "start": "2024-12-01T19:00:00",
+    "venueEventUrl": "https://neushoorn.nl/production/nh-cafe-civerous-crematory-stench-deadspeak/",
+    "title": "NH Café: Civerous ",
+    "location": "neushoorn",
+    "price": 12,
+    "shortText": " Crematory Stench  +  Deadspeak Smerige onheilspellende death metal",
+    "longText": "../public/texts/neushoorn/dXMtY3JlbWF0b3J5LXN0ZW5jaC1kZWFkc3BlYWsv.html",
+    "image": "../public/event-images/neushoorn/dXMtY3JlbWF0b3J5LXN0ZW5jaC1kZWFkc3BlYWsv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "start": "2024-12-12T20:00:00",
+    "venueEventUrl": "https://neushoorn.nl/production/tusky/",
+    "title": "Tusky",
+    "location": "neushoorn",
+    "price": 17,
+    "shortText": "The Trashtastic Tour",
+    "longText": "../public/texts/neushoorn/bmV1c2hvb3JuLm5sL3Byb2R1Y3Rpb24vdHVza3kv.html",
+    "image": "../public/event-images/neushoorn/bmV1c2hvb3JuLm5sL3Byb2R1Y3Rpb24vdHVza3kv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "john coffey": {
-        "s": "4kffVdSOMGP0BOiBXVgeyA",
-        "l": "john%20coffey",
+      "tusky": {
+        "s": "6XbZ8G0cFqSgUL4FmtiSPr",
+        "l": "tusky",
         "g": [
-          "dutch indie",
-          "dutch rock",
-          "hardcore punk"
+          "dutch punk",
+          "dutch rock"
         ]
       }
     }

@@ -1026,6 +1026,9 @@ export default class Artists {
       await this.getSpotifyAccessToken();
     }
 
+    // console.log();
+    // console.log('--------------');
+
     const uriComponent = encodeURIComponent(`artist:${artist}`);
     const url = `https://api.spotify.com/v1/search?q=${uriComponent}&type=artist&offset=0&limit=20&market=NL`;
    
@@ -1041,14 +1044,18 @@ export default class Artists {
         .catch((err) => console.error(err));
         
     if (fetchResult?.artists?.items && fetchResult?.artists?.items.length) {
+      // console.log(`meerdere items voor ${artist}, dit is de eerste item: `);
+      // console.log(fetchResult?.artists?.items[0]);
       const eersteHitCorrecteNaam = fetchResult?.artists?.items
         .filter((hit) => hit.name.toLowerCase() === artist)[0];
       return eersteHitCorrecteNaam; 
       // todo eerste teruggeven is slordig
     } if (fetchResult?.artists) {
+      // console.log(`geen meerdere items maar wel resultaat voor artist ${artist}`);
+      // console.log(fetchResult?.artists);
       return fetchResult?.artists?.items[0];
     }
-    console.log(`geen resultaat uberhaupt voor ${artist}`);
+    // console.log(`geen resultaat uberhaupt voor ${artist}`);
     return null;
   }
 
