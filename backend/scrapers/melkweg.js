@@ -4,11 +4,8 @@ import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/melkweg.js';
 import getImage from './gedeeld/image.js';
 import {
-  mapToStartDate,
   combineDoorTimeStartDate,
-  mapToDoorTime,
   mapToShortDate,
-  mapToStartTime,
   combineStartTimeStartDate,
 } from './gedeeld/datums.js';
 import workTitleAndSlug from './gedeeld/slug.js';
@@ -35,7 +32,6 @@ const scraper = new AbstractScraper({
     mainPage: {
       requiredProperties: ['venueEventUrl', 'title'],
       asyncCheckFuncs: ['refused', 'allowedEvent', 'forbiddenTerms', 'hasGoodTerms', 'hasAllowedArtist', 'spotifyConfirmation'],
-      // asyncCheckFuncs: ['allowed', 'event', 'refused', 'goodTerms', 'forbiddenTerms', 'isRock', 'saveRefused', 'emptyFailure'],
     },
     singlePage: {
       requiredProperties: ['venueEventUrl', 'title', 'price', 'start'],
