@@ -74,7 +74,7 @@ export default class Artists {
   /**
    * of in die persistentie functie fs write file
    */
-  nietSchrijven = false;
+  nietSchrijven = true;
 
   constructor(conf) {
     this.modelPath = conf.modelPath;
@@ -332,6 +332,14 @@ export default class Artists {
         message.data.slug,
         message.data.eventDate);
     }    
+
+    if (message.request === 'makeSuccess') {
+      return this.post({
+        success: true,
+        data: null,
+        reason: `🟩 Gen. success`,
+      });
+    }
 
     return this.error(new Error(`request ${message.request} onbekend`));
   }
@@ -935,7 +943,8 @@ export default class Artists {
       console.log('---------------------------');
       console.log('\x1b[33m%s\x1b[0m', '//////////////////');
       return;
-    }
+    } 
+    console.log(`artiesten worden opgeslagen`);
 
     Object.entries(this.allowedArtistsTemp).forEach(([key, values]) => {
       if (this.allowedArtists[key]) {

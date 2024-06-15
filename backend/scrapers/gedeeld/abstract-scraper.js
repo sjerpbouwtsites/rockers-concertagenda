@@ -17,7 +17,7 @@ import {
   asyncIsAllowedEvent, asyncIsRefused, asyncForbiddenTerms, 
   asyncSaveAllowedEvent, asyncSaveRefused, asyncHarvestArtists, asyncScanTitleForAllowedArtists, 
   asyncSpotifyConfirmation, asyncGoodTerms, asyncExplicitEventCategories,
-  asyncMetalEncyclopediaConfirmation, asyncIfNotAllowedRefuse, asyncHasAllowedArtist,
+  asyncMetalEncyclopediaConfirmation, asyncIfNotAllowedRefuse, asyncHasAllowedArtist, asyncSuccess,
 } from './artist-db-interface.js';
 import DbInterFaceToScraper from './db-interface-to-scraper.js';
 
@@ -101,6 +101,9 @@ export default class AbstractScraper extends ScraperConfig {
 
     this.asyncHarvestArtists = asyncHarvestArtists;
     this.asyncHarvestArtists.bind(this);
+
+    this.asyncSuccess = asyncSuccess;
+    this.asyncSuccess.bind(this);
   }
   // #endregion                                                CONSTRUCTOR & INSTALL
 
@@ -1144,6 +1147,7 @@ export default class AbstractScraper extends ScraperConfig {
       metalEncyclopediaConfirmation: 'asyncMetalEncyclopediaConfirmation', 
       explicitEventGenres: 'asyncExplicitEventCategories',
       hasAllowedArtist: 'asyncHasAllowedArtist',
+      success: 'asyncSuccess',
       // refused: 'asyncCheckIsRefused',
       // emptySuccess: 'asyncCheckEmptySuccess',
       // emptyFailure: 'asyncCheckEmptyFailure',

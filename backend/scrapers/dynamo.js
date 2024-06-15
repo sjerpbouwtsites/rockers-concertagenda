@@ -3,6 +3,8 @@ import { workerData } from 'worker_threads';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/dynamo.js';
 import getImage from './gedeeld/image.js';
+import { mapToShortDate } from './gedeeld/datums.js';
+import workTitleAndSlug from './gedeeld/slug.js';
 
 // #region        SCRAPER CONFIG
 const scraper = new AbstractScraper({
@@ -16,13 +18,20 @@ const scraper = new AbstractScraper({
     timeout: 25061,
   },
   app: {
+    harvest: {
+      dividers: [`+`],
+      dividerRex: "[\\+]",
+      artistsIn: ['title'],
+    },  
     mainPage: {
       requiredProperties: ['venueEventUrl', 'title'],
-      asyncCheckFuncs: ['custom1', 'allowed', 'event', 'refused', 'emptySuccess'],
+      asyncCheckFuncs: ['refused', 'allowedEvent'],
+      // asyncCheckFuncs: ['custom1', 'allowed', 'event', 'refused', 'emptySuccess'],
     },
     singlePage: {
       requiredProperties: ['venueEventUrl', 'title', 'price', 'start'],
-      asyncCheckFuncs: ['goodTerms', 'forbiddenTerms', 'isRock', 'saveRefused', 'emptyFailure'],
+      asyncCheckFuncs: ['success'],
+      // asyncCheckFuncs: ['goodTerms', 'forbiddenTerms', 'isRock', 'saveRefused', 'emptyFailure'],
     },
   },
 });

@@ -30,7 +30,7 @@ const scraper = new AbstractScraper({
     },
     singlePage: {
       requiredProperties: ['venueEventUrl', 'title', 'start'],
-      asyncCheckFuncs: [],
+      asyncCheckFuncs: ['success'],
     },
   },
 });
@@ -119,7 +119,7 @@ scraper.mainPage = async function () {
 
   rawEvents = rawEvents
     .map(mapToShortDate)
-    .map(this.isMusicEventCorruptedMapper) // uitgezet want geen tijd op doornroosje.
+    .map(this.isMusicEventCorruptedMapper)
     .map((re) => workTitleAndSlug(re, this._s.app.harvest.possiblePrefix));
 
   const eventGen = this.eventGenerator(rawEvents);

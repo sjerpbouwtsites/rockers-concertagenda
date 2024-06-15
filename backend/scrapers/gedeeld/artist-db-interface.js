@@ -11,6 +11,7 @@ import DbInterFaceToScraper from './db-interface-to-scraper.js';
 // metalEncyclopediaConfirmation: 'asyncMetalEncyclopediaConfirmation', 
 // explicitEventGenres: 'asyncExplicitEventCategories',
 // hasAllowedArtist: 'asyncHasAllowedArtist',
+// success: 'asyncSuccess',
 
 function talkTitleAndSlug(subtype, event, extraData = {}) {
   const s = event.shortDate;
@@ -112,6 +113,18 @@ export async function asyncForbiddenTerms(event, olderReasons) {
   if (!DBToScraper.isError) return DBToScraper;
 
   this.handleError(DBToScraper?.data?.error, DBToScraper.lastReason, 'close-thread');
+  return DBToScraper;
+}
+
+export async function asyncSuccess(event, olderReasons) {
+  this.talkToDB(talkTitleAndSlug('makeSuccess', event, {
+    string: event.workTitle + event.slug + (event?.shortText ?? '').toLowerCase(),
+  }));
+  const dbAnswer = await this.checkDBhasAnswered();
+  const DBToScraper = new DbInterFaceToScraper(dbAnswer, olderReasons, 'async success');
+  DBToScraper.setReason();
+  
+  DBToScraper.setBreak(true);
   return DBToScraper;
 }
 
