@@ -3,7 +3,9 @@ import { workerData } from 'worker_threads';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/p60.js';
 import getImage from './gedeeld/image.js';
-import terms from './gedeeld/terms.js';
+import { mapToShortDate } from './gedeeld/datums.js';
+import workTitleAndSlug from './gedeeld/slug.js';
+import terms from '../artist-db/store/terms.js';
 
 // #region        SCRAPER CONFIG
 const scraper = new AbstractScraper({
@@ -17,13 +19,18 @@ const scraper = new AbstractScraper({
     timeout: 30021,
   },
   app: {
+    harvest: {
+      dividers: [`,`, `&`],
+      dividerRex: "[,&]",
+      artistsIn: ['title', 'shortText'],
+    },     
     mainPage: {
       requiredProperties: ['venueEventUrl', 'title', 'start'],
-      asyncCheckFuncs: ['allowed', 'event', 'refused', 'emptySuccess'],
+      asyncCheckFuncs: ['refused', 'allowedEvent', 'forbiddenTerms', 'hasGoodTerms', 'hasAllowedArtist', 'spotifyConfirmation', 'failure'],
     },
     singlePage: {
       requiredProperties: ['venueEventUrl', 'title', 'price', 'start'],
-      asyncCheckFuncs: ['goodTerms', 'forbiddenTerms', 'saveAllowed', 'emptySuccess'],
+      asyncCheckFuncs: ['success'],
     },
   },
 });
@@ -88,6 +95,7 @@ scraper.mainPage = async function () {
               res.errors.push({ error: caughtError, remarks: `start omzetten ${startB}` });
             }
           }
+          res.startDate = res.start.split('T')[0];
 
           res.shortText =
             itemEl.querySelector('.p60-list__item__description')?.textContent.trim() ?? '';
@@ -96,7 +104,10 @@ scraper.mainPage = async function () {
     { workerData, unavailabiltyTerms: terms.unavailability },
   );
 
-  rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
+  rawEvents = rawEvents
+    .map(mapToShortDate)
+    .map(this.isMusicEventCorruptedMapper)
+    .map((re) => workTitleAndSlug(re, this._s.app.harvest.possiblePrefix));
 
   const eventGen = this.eventGenerator(rawEvents);
   // eslint-disable-next-line no-unused-vars

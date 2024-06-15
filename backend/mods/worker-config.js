@@ -88,8 +88,8 @@ export const workerConfig = {
   //   workerConcurrent: 1,
   //   forceSet: 5,
   // },
-  oosterpoort: { workerCount: 3, workerConcurrent: 1, forceSet: 5 },
-  // p60: { workerCount: 1, workerConcurrent: 1, forceSet: 5 },
+  // oosterpoort: { workerCount: 3, workerConcurrent: 1, forceSet: 5 },
+  p60: { workerCount: 1, workerConcurrent: 1, forceSet: 5 },
   // paradiso: {
   //   workerCount: 2,
   //   workerConcurrent: 2,

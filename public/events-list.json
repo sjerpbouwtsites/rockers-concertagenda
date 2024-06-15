@@ -1,180 +1,94 @@
 [
   {
-    "start": "2024-06-23T20:00:00+02:00",
-    "venueEventUrl": "https://www.spotgroningen.nl/programma/steel-panther-2/",
-    "title": "Steel Panther",
-    "location": "oosterpoort",
-    "price": 48.6,
-    "shortText": "On The Prowl World Tour 2024Amerikaanse glam metal met een flinke laag humor",
-    "longText": "../public/texts/oosterpoort/Lm5sL3Byb2dyYW1tYS9zdGVlbC1wYW50aGVyLTIv.html",
-    "image": "../public/event-images/oosterpoort/Lm5sL3Byb2dyYW1tYS9zdGVlbC1wYW50aGVyLTIv",
+    "door": "2024-06-15T18:00:00Z",
+    "start": "2024-06-15T20:30:00Z",
+    "venueEventUrl": "https://p60.nl/2024/kamijo",
+    "title": "Kamijo",
+    "location": "p60",
+    "price": 15,
+    "shortText": "EUROPE TOUR 2024",
+    "longText": "../public/texts/p60/aHR0cHM6Ly9wNjAubmwvMjAyNC9rYW1pam8=.html",
+    "image": "../public/event-images/p60/aHR0cHM6Ly9wNjAubmwvMjAyNC9rYW1pam8=",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": null
   },
   {
-    "start": "2024-10-30T20:00:00+01:00",
-    "venueEventUrl": "https://www.spotgroningen.nl/programma/matthew-and-the-atlas-2/",
-    "title": "Matthew and the Atlas",
-    "location": "oosterpoort",
-    "price": 19.5,
-    "shortText": "Warme, akoestische folknummers over levenservaringen",
-    "longText": "../public/texts/oosterpoort/cmFtbWEvbWF0dGhldy1hbmQtdGhlLWF0bGFzLTIv.html",
-    "image": "../public/event-images/oosterpoort/cmFtbWEvbWF0dGhldy1hbmQtdGhlLWF0bGFzLTIv",
+    "door": "2024-06-27T18:00:00Z",
+    "start": "2024-06-27T20:30:00Z",
+    "venueEventUrl": "https://p60.nl/2024/radar-jun",
+    "title": "Yellowgreen, Bazes, KASETO & The Kruuk",
+    "location": "p60",
+    "price": 6.508,
+    "shortText": "IN P60'S RADAR XL",
+    "longText": "../public/texts/p60/aHR0cHM6Ly9wNjAubmwvMjAyNC9yYWRhci1qdW4=.html",
+    "image": "../public/event-images/p60/aHR0cHM6Ly9wNjAubmwvMjAyNC9yYWRhci1qdW4=",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "heat": {
-        "s": "7A9yZMTrFZcgEWAX2kBfK6",
-        "l": "h.e.a.t.",
-        "g": [
-          "album rock",
-          "classic rock",
-          "hard rock",
-          "mellow gold",
-          "new romantic",
-          "new wave pop",
-          "rock",
-          "singer-songwriter",
-          "soft rock"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2024-11-29T20:00:00+01:00",
-    "venueEventUrl": "https://www.spotgroningen.nl/programma/smash-into-pieces/",
-    "title": "Smash Into Pieces",
-    "location": "oosterpoort",
-    "price": 26.1,
-    "shortText": "Zweedse cinematografische rocksensatie",
-    "longText": "../public/texts/oosterpoort/bC9wcm9ncmFtbWEvc21hc2gtaW50by1waWVjZXMv.html",
-    "image": "../public/event-images/oosterpoort/bC9wcm9ncmFtbWEvc21hc2gtaW50by1waWVjZXMv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "smash into pieces": {
-        "s": "2vhrwzjf9H3icunkVFi9tq",
-        "l": "smash%20into%20pieces",
-        "g": [
-          "swedish alternative rock"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2024-12-02T20:00:00+01:00",
-    "venueEventUrl": "https://www.spotgroningen.nl/programma/ian-paice-feat-purpendicular/",
-    "title": "Ian Paice feat. Purpendicular",
-    "location": "oosterpoort",
-    "price": 39.6,
-    "shortText": "Performing Classic Deep PurpleLegendarische drummer en oprichter van Deep Purple",
-    "longText": "../public/texts/oosterpoort/L2lhbi1wYWljZS1mZWF0LXB1cnBlbmRpY3VsYXIv.html",
-    "image": "../public/event-images/oosterpoort/L2lhbi1wYWljZS1mZWF0LXB1cnBlbmRpY3VsYXIv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "ian paice": {
-        "s": "2gNdXbhyIbXHWvurrlrUAq",
-        "l": "ian%20paice",
-        "g": [
-          "rock drums",
-          "heavy metal"
-        ]
-      },
-      "purpendicular": {
-        "s": "7dtYKVbh2QXKICAzbxtrkF",
-        "l": "purpendicular",
-        "g": []
-      }
-    }
-  },
-  {
-    "start": "2024-12-05T20:00:00+01:00",
-    "venueEventUrl": "https://www.spotgroningen.nl/programma/sloper/",
-    "title": "Sloper",
-    "location": "oosterpoort",
-    "price": 26.1,
-    "shortText": "Band opgezet door bekende drummers met ROCK als stevige basis",
-    "longText": "../public/texts/oosterpoort/Z3JvbmluZ2VuLm5sL3Byb2dyYW1tYS9zbG9wZXIv.html",
-    "image": "../public/event-images/oosterpoort/Z3JvbmluZ2VuLm5sL3Byb2dyYW1tYS9zbG9wZXIv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "slope": {
-        "s": "35fxvnr5oanOFB1JNB2Ber",
-        "l": "slope",
-        "g": [
-          "dutch rock"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2024-12-14T20:00:00+01:00",
-    "venueEventUrl": "https://www.spotgroningen.nl/programma/dool/",
-    "title": "Dool",
-    "location": "oosterpoort",
-    "price": 25.1,
-    "shortText": "Meeslepende mix van progressieve rock, metal en post-rock",
-    "longText": "../public/texts/oosterpoort/b3Rncm9uaW5nZW4ubmwvcHJvZ3JhbW1hL2Rvb2wv.html",
-    "image": "../public/event-images/oosterpoort/b3Rncm9uaW5nZW4ubmwvcHJvZ3JhbW1hL2Rvb2wv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
-    "start": "2025-02-01T20:00:00+01:00",
-    "venueEventUrl": "https://www.spotgroningen.nl/programma/feuerengel-a-tribute-to-rammstein/",
-    "title": "Feuerengel",
-    "location": "oosterpoort",
-    "price": 33.6,
-    "shortText": "A TRIBUTE TO RAMMSTEINRAMMMMMMMSTEIN!!!",
-    "longText": "../public/texts/oosterpoort/cmVuZ2VsLWEtdHJpYnV0ZS10by1yYW1tc3RlaW4v.html",
-    "image": "../public/event-images/oosterpoort/cmVuZ2VsLWEtdHJpYnV0ZS10by1yYW1tc3RlaW4v",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "feuerengel": {
+      "bazes": {
         "s": null,
-        "l": "feuerengel",
+        "l": "bazes",
+        "g": []
+      },
+      "yellowgreen": {
+        "s": null,
+        "l": "yellowgreen",
+        "g": []
+      },
+      "p60's radar": {
+        "s": null,
+        "l": "p60's%20radar",
         "g": []
       }
     }
   },
   {
-    "start": "2025-03-27T21:00:00+01:00",
-    "venueEventUrl": "https://www.spotgroningen.nl/programma/theater-utrecht-nederlands-kamerkoor-en-holland-festival/",
-    "title": "Theater Utrecht, Nederlands Kamerkoor en Holland Festival",
-    "location": "oosterpoort",
-    "price": 25.5,
-    "shortText": "  HardkoorEen stream of self-consciousness op techno, triphop en koormuziek",
-    "longText": "../public/texts/oosterpoort/a2FtZXJrb29yLWVuLWhvbGxhbmQtZmVzdGl2YWwv.html",
-    "image": "../public/event-images/oosterpoort/a2FtZXJrb29yLWVuLWhvbGxhbmQtZmVzdGl2YWwv",
+    "door": "2024-08-16T18:00:00Z",
+    "start": "2024-08-16T20:00:00Z",
+    "venueEventUrl": "https://p60.nl/2024/ignite",
+    "title": "Ignite",
+    "location": "p60",
+    "price": 19.502,
+    "shortText": "SUPPORT: CURSELIFTER & SWELL",
+    "longText": "../public/texts/p60/aHR0cHM6Ly9wNjAubmwvMjAyNC9pZ25pdGU=.html",
+    "image": "../public/event-images/p60/aHR0cHM6Ly9wNjAubmwvMjAyNC9pZ25pdGU=",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "heat": {
-        "s": "7A9yZMTrFZcgEWAX2kBfK6",
-        "l": "h.e.a.t.",
+      "swell": {
+        "s": null,
+        "l": "swell",
+        "g": []
+      }
+    }
+  },
+  {
+    "door": "2024-09-04T17:00:00Z",
+    "start": "2024-09-04T19:15:00Z",
+    "venueEventUrl": "https://p60.nl/2024/nile",
+    "title": "Nile",
+    "location": "p60",
+    "price": 22.5023,
+    "shortText": "+ HIDEOUS DIVINTY, INTREPID & PESTIFER",
+    "longText": "../public/texts/p60/aHR0cHM6Ly9wNjAubmwvMjAyNC9uaWxl.html",
+    "image": "../public/event-images/p60/aHR0cHM6Ly9wNjAubmwvMjAyNC9uaWxl",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "hideous": {
+        "s": "4XOpU6j3NQ37JfIaWA4ySH",
+        "l": "hideous",
         "g": [
-          "album rock",
-          "classic rock",
-          "hard rock",
-          "mellow gold",
-          "new romantic",
-          "new wave pop",
-          "rock",
-          "singer-songwriter",
-          "soft rock"
+          "brutal death metal",
+          "deathgrind",
+          "italian death metal",
+          "technical brutal death metal",
+          "technical death metal"
         ]
       }
     }
