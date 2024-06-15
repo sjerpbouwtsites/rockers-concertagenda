@@ -3,7 +3,12 @@ import { workerData } from 'worker_threads';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/paradiso.js';
 import getImage from './gedeeld/image.js';
-import terms from './gedeeld/terms.js';
+import {
+  mapToStartDate,
+  mapToShortDate,
+} from './gedeeld/datums.js';
+import workTitleAndSlug from './gedeeld/slug.js';
+import terms from '../artist-db/store/terms.js';
 
 // #region        SCRAPER CONFIG
 const scraper = new AbstractScraper({
@@ -18,12 +23,18 @@ const scraper = new AbstractScraper({
     timeout: 120024,
   },
   app: {
+    harvest: {
+      dividers: [`+`],
+      dividerRex: "[\\+]",
+      artistsIn: ['title'],
+    },  
     mainPage: {
       requiredProperties: ['venueEventUrl', 'title'],
-      asyncCheckFuncs: ['allowed', 'event', 'refused', 'goodTerms', 'forbiddenTerms', 'isRock', 'saveRefused', 'emptyFailure'],
+      asyncCheckFuncs: ['refused', 'allowedEvent', 'forbiddenTerms', 'hasGoodTerms', 'hasAllowedArtist', 'spotifyConfirmation', 'failure'],
     },
     singlePage: {
       requiredProperties: ['venueEventUrl', 'title', 'price', 'start'],
+      asyncCheckFuncs: ['success'],
     },
   },
 });
@@ -54,13 +65,21 @@ scraper.mainPage = async function () {
   await page.waitForSelector('.chakra-container');
 
   await this.autoScroll(page);
+  await this.autoScroll(page);
   await page.evaluate(
     () =>
       document.querySelector('.css-16y59pb:last-child .chakra-heading')?.textContent ??
-      'geen titel gevonden',
+    'geen titel gevonden',
     { workerData },
   );
-
+  
+  await this.autoScroll(page);
+  await this.autoScroll(page);
+  await this.autoScroll(page);
+  await this.autoScroll(page);
+  await this.autoScroll(page);
+  await this.autoScroll(page);
+  await this.autoScroll(page);
   await this.autoScroll(page);
   await page.evaluate(
     // eslint-disable-next-line no-shadow
@@ -69,9 +88,21 @@ scraper.mainPage = async function () {
       'geen titel gevonden',
     { workerData },
   );
+ 
+  // DIT IS EEN VOLSLAGEN BIZARRE HACK EN IK HEB GEEN IDEE WAAROM DIT ZO MOET
+  const datumRijMap = await page.evaluate(() => {
+    const datumIdMap = {};
+    document.querySelectorAll('.css-16y59pb').forEach((datumRij, index) => {
+      // eslint-disable-next-line no-param-reassign
+      datumRij.id = `${datumRij.className}-${index}`;
+      const datumR = datumRij.textContent.trim().toLowerCase().substring(3, 10).trim() ?? '';
+      datumIdMap[datumRij.id] = datumR;
+    });
+    return datumIdMap;
+  });
 
   let rawEvents = await page.evaluate(
-    ({ resBuiten, unavailabiltyTerms }) =>
+    ({ resBuiten, unavailabiltyTerms, datumRijMap1 }) =>
       Array.from(document.querySelectorAll('.css-1agutam')).map((rawEvent) => {
         // eslint-disable-next-line no-shadow
         const res = {
@@ -80,6 +111,17 @@ scraper.mainPage = async function () {
         };
         res.title = rawEvent.querySelector('.chakra-heading')?.textContent.trim() ?? '';
         res.shortText = rawEvent.querySelector('.css-1ket9pb')?.textContent.trim() ?? '';
+        
+        const datumRij = rawEvent.parentNode.parentNode;
+        res.datumRijClassNAme = datumRij.className;
+        res.datumRijId = datumRij.id;
+        res.datumRijDate = datumRijMap1[datumRij.id];
+        res.mapToStartDate = datumRijMap1[datumRij.id];
+ 
+        // if (!rawEvent.hasAttribute('data-date')) {
+        //   res.XDATUMFAAL = 'hitler';
+        // }
+        // res.mapToStartDate = rawEvent.getAttribute('data-date');
 
         res.venueEventUrl = rawEvent.href ?? null;
         res.soldOut = !!rawEvent?.textContent.match(/uitverkocht|sold\s?out/i);
@@ -87,10 +129,22 @@ scraper.mainPage = async function () {
         res.unavailable = !!rawEvent?.textContent.match(uaRex);
         return res;
       }),
-    { workerData, resBuiten: res, unavailabiltyTerms: terms.unavailability },
+    {
+      workerData,
+      resBuiten: res, 
+      unavailabiltyTerms: terms.unavailability,
+      datumRijMap1: datumRijMap, 
+    },
   );
 
-  rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
+  rawEvents = rawEvents
+    .map((event) => {
+      this.dirtyLog(event);
+      return mapToStartDate(event, 'dag-maandNaam', this.months);
+    })
+    .map(mapToShortDate)
+    .map(this.isMusicEventCorruptedMapper)
+    .map((re) => workTitleAndSlug(re, this._s.app.harvest.possiblePrefix));
 
   const eventGen = this.eventGenerator(rawEvents);
   // eslint-disable-next-line no-unused-vars
@@ -131,47 +185,14 @@ scraper.singlePage = async function ({ page, event }) {
     return this.singlePageEnd({ pageInfo: buitenRes, stopFunctie, page });
   }
 
-  const editedMonths = {
-    jan: '01',
-    feb: '02',
-    mrt: '03',
-    mar: '03',
-    apr: '04',
-    mei: '05',
-    jun: '06',
-    jul: '07',
-    aug: '08',
-    sep: '09',
-    okt: '10',
-    nov: '11',
-    dec: '12',
-    januari: '01',
-    februari: '02',
-    maart: '03',
-    april: '04',
-    juni: '06',
-    juli: '07',
-    augustus: '08',
-    september: '09',
-    oktober: '10',
-    november: '11',
-    december: '12',
-    january: '01',
-    february: '02',
-    march: '03',
-    may: '05',
-    june: '06',
-    july: '07',
-    august: '08',
-    october: '10',
-  };
-
   await this.waitTime(500);
 
   const pageInfo = await page.evaluate(
     // eslint-disable-next-line no-shadow
-    ({ months, buitenRes }) => {
+    ({ buitenRes, event }) => {
       const res = { ...buitenRes };
+
+      res.startDate = event.startDate;
 
       const contentBox1 = document.querySelector('.css-1irwsol')?.outerHTML ?? '';
       const contentBox2 = document.querySelector('.css-gwbug6')?.outerHTML ?? '';
@@ -179,38 +200,38 @@ scraper.singlePage = async function ({ page, event }) {
         res.corrupted = 'geen contentboxes';
       }
 
-      try {
-        const startDateMatch = document
-          .querySelector('.css-tkkldl')
-          ?.textContent.toLowerCase()
-          .match(/(\d{1,2})\s+(\w+)/); // TODO paradiso kan nu niet omgaan met jaarrwisselingen.
-        res.match = startDateMatch;
-        if (startDateMatch && Array.isArray(startDateMatch) && startDateMatch.length === 3) {
-          const monthName = months[startDateMatch[2]];
-          if (!monthName) {
-            res.errors.push({
-              error: new Error(`month not found ${startDateMatch[2]}`),
-              toDebug: startDateMatch,
-            });
-          }
+      // try {
+      //   const startDateMatch = document
+      //     .querySelector('.css-tkkldl')
+      //     ?.textContent.toLowerCase()
+      //     .match(/(\d{1,2})\s+(\w+)/); // TODO paradiso kan nu niet omgaan met jaarrwisselingen.
+      //   res.match = startDateMatch;
+      //   if (startDateMatch && Array.isArray(startDateMatch) && startDateMatch.length === 3) {
+      //     const monthName = months[startDateMatch[2]];
+      //     if (!monthName) {
+      //       res.errors.push({
+      //         error: new Error(`month not found ${startDateMatch[2]}`),
+      //         toDebug: startDateMatch,
+      //       });
+      //     }
 
-          const curM = new Date().getMonth() + 1;
-          let year = new Date().getFullYear();
-          if (monthName < curM) {
-            year += 1;
-          }
+      //     const curM = new Date().getMonth() + 1;
+      //     let year = new Date().getFullYear();
+      //     if (monthName < curM) {
+      //       year += 1;
+      //     }
 
-          res.startDate = `${year}-${monthName}-${startDateMatch[1].padStart(2, '0')}`;
-        }
-      } catch (caughtError) {
-        res.errors.push({
-          error: caughtError,
-          remarks: `startDateMatch ${res.anker}`,
-          toDebug: {
-            event,
-          },
-        });
-      }
+      //     res.startDate = `${year}-${monthName}-${startDateMatch[1].padStart(2, '0')}`;
+      //   }
+      // } catch (caughtError) {
+      //   res.errors.push({
+      //     error: caughtError,
+      //     remarks: `startDateMatch ${res.anker}`,
+      //     toDebug: {
+      //       event,
+      //     },
+      //   });
+      // }
 
       let startTijd;
       let deurTijd;
@@ -244,7 +265,7 @@ scraper.singlePage = async function ({ page, event }) {
 
       return res;
     },
-    { months: editedMonths, buitenRes },
+    { buitenRes, event },
   );
 
   const imageRes = await getImage({
