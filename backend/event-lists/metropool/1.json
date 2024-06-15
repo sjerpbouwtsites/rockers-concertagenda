@@ -1,158 +1,93 @@
 [
   {
-    "door": "2023-12-17T19:00:00",
-    "start": "2023-12-17T20:00:00",
-    "venueEventUrl": "https://metropool.nl/agenda/bombers/",
-    "title": "BÖMBERS – The Ultimate Motörhead Tribute ",
+    "door": "2024-06-27T20:30:00",
+    "start": "2024-06-27T21:00:00",
+    "venueEventUrl": "https://metropool.nl/agenda/norose-ep-release/",
+    "title": "NoRose - EP release",
     "location": "metropool",
-    "price": 26,
-    "shortText": "",
-    "longText": "../public/texts/metropool/Ly9tZXRyb3Bvb2wubmwvYWdlbmRhL2JvbWJlcnMv.html",
-    "image": "../public/event-images/metropool/Ly9tZXRyb3Bvb2wubmwvYWdlbmRhL2JvbWJlcnMv",
+    "price": 10,
+    "shortText": "Support: Jongeman",
+    "longText": "../public/texts/metropool/bC5ubC9hZ2VuZGEvbm9yb3NlLWVwLXJlbGVhc2Uv.html",
+    "image": "../public/event-images/metropool/bC5ubC9hZ2VuZGEvbm9yb3NlLWVwLXJlbGVhc2Uv",
     "soldOut": false,
-    "unavailable": false
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "norose": {
+        "s": null,
+        "l": null,
+        "g": [
+          "punk",
+          "opera punk"
+        ]
+      }
+    }
   },
   {
-    "door": "2024-01-12T20:00:00",
-    "start": "2024-01-12T20:00:00",
-    "venueEventUrl": "https://metropool.nl/agenda/qmusic-the-party-4-uur-fout/",
-    "title": "QMusic The Party - 4 uur Fout",
-    "location": "metropool",
-    "price": 25,
-    "shortText": "",
-    "longText": "../public/texts/metropool/YS9xbXVzaWMtdGhlLXBhcnR5LTQtdXVyLWZvdXQv.html",
-    "image": "../public/event-images/metropool/YS9xbXVzaWMtdGhlLXBhcnR5LTQtdXVyLWZvdXQv",
-    "soldOut": false,
-    "unavailable": false
-  },
-  {
-    "door": "2024-01-20T19:30:00",
-    "start": "2024-01-20T20:30:00",
-    "venueEventUrl": "https://metropool.nl/agenda/roberto-jacketti-the-scooters/",
-    "title": "Roberto Jacketti & The Scooters",
-    "location": "metropool",
-    "price": 30,
-    "shortText": "",
-    "longText": "../public/texts/metropool/cm9iZXJ0by1qYWNrZXR0aS10aGUtc2Nvb3RlcnMv.html",
-    "image": "../public/event-images/metropool/cm9iZXJ0by1qYWNrZXR0aS10aGUtc2Nvb3RlcnMv",
-    "soldOut": false,
-    "unavailable": false
-  },
-  {
-    "door": "2024-02-09T19:30:00",
-    "start": "2024-02-09T20:30:00",
-    "venueEventUrl": "https://metropool.nl/agenda/starman-david-bowie-tribute/",
-    "title": "Starman - David Bowie Tribute",
+    "door": "2024-10-27T19:00:00",
+    "start": "2024-10-27T19:30:00",
+    "venueEventUrl": "https://metropool.nl/agenda/kissin-dynamite-enschede/",
+    "title": "Kissin' Dynamite",
     "location": "metropool",
     "price": 30.5,
-    "shortText": "",
-    "longText": "../public/texts/metropool/YS9zdGFybWFuLWRhdmlkLWJvd2llLXRyaWJ1dGUv.html",
-    "image": "../public/event-images/metropool/YS9zdGFybWFuLWRhdmlkLWJvd2llLXRyaWJ1dGUv",
+    "shortText": "Support: Massive Wagons en Airstrike",
+    "longText": "../public/texts/metropool/ZW5kYS9raXNzaW4tZHluYW1pdGUtZW5zY2hlZGUv.html",
+    "image": "../public/event-images/metropool/ZW5kYS9raXNzaW4tZHluYW1pdGUtZW5zY2hlZGUv",
     "soldOut": false,
-    "unavailable": false
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
   },
   {
-    "door": "2024-02-14T20:00:00",
-    "start": "2024-02-14T20:30:00",
-    "venueEventUrl": "https://metropool.nl/agenda/mercenary-plus-hatesphere/",
-    "title": "Mercenary & HateSphere",
-    "location": "metropool",
-    "price": 25,
-    "shortText": "",
-    "longText": "../public/texts/metropool/bmRhL21lcmNlbmFyeS1wbHVzLWhhdGVzcGhlcmUv.html",
-    "image": "../public/event-images/metropool/bmRhL21lcmNlbmFyeS1wbHVzLWhhdGVzcGhlcmUv",
-    "soldOut": false,
-    "unavailable": false
-  },
-  {
-    "door": "2024-02-17T19:30:00",
-    "start": "2024-02-17T20:30:00",
-    "venueEventUrl": "https://metropool.nl/agenda/the-toy-dolls/",
-    "title": "The Toy Dolls",
-    "location": "metropool",
-    "price": 36,
-    "shortText": "",
-    "longText": "../public/texts/metropool/b3Bvb2wubmwvYWdlbmRhL3RoZS10b3ktZG9sbHMv.html",
-    "image": "../public/event-images/metropool/b3Bvb2wubmwvYWdlbmRhL3RoZS10b3ktZG9sbHMv",
-    "soldOut": false,
-    "unavailable": false
-  },
-  {
-    "door": "2024-02-24T20:30:00",
-    "start": "2024-02-24T21:00:00",
-    "venueEventUrl": "https://metropool.nl/agenda/clan-of-xymox/",
-    "title": "Clan Of Xymox",
-    "location": "metropool",
-    "price": 28,
-    "shortText": "Support: STAKBABBER",
-    "longText": "../public/texts/metropool/b3Bvb2wubmwvYWdlbmRhL2NsYW4tb2YteHltb3gv.html",
-    "image": "../public/event-images/metropool/b3Bvb2wubmwvYWdlbmRhL2NsYW4tb2YteHltb3gv",
-    "soldOut": false,
-    "unavailable": false
-  },
-  {
-    "door": "2024-03-08T20:30:00",
-    "start": "2024-03-08T21:00:00",
-    "venueEventUrl": "https://metropool.nl/agenda/filter/",
-    "title": "Filter",
-    "location": "metropool",
-    "price": 30,
-    "shortText": "alternative metal, alternative rock, grunge, industrial metal, nu metal, post-grunge",
-    "longText": "../public/texts/metropool/Oi8vbWV0cm9wb29sLm5sL2FnZW5kYS9maWx0ZXIv.html",
-    "image": "../public/event-images/metropool/Oi8vbWV0cm9wb29sLm5sL2FnZW5kYS9maWx0ZXIv",
-    "soldOut": false,
-    "unavailable": false
-  },
-  {
-    "door": "2024-03-23T19:30:00",
-    "start": "2024-03-23T20:30:00",
-    "venueEventUrl": "https://metropool.nl/agenda/shout/",
-    "title": "Shout!",
-    "location": "metropool",
-    "price": 27,
-    "shortText": "",
-    "longText": "../public/texts/metropool/czovL21ldHJvcG9vbC5ubC9hZ2VuZGEvc2hvdXQv.html",
-    "image": "../public/event-images/metropool/czovL21ldHJvcG9vbC5ubC9hZ2VuZGEvc2hvdXQv",
-    "soldOut": false,
-    "unavailable": false
-  },
-  {
-    "door": "2024-04-05T19:30:00",
-    "start": "2024-04-05T20:30:00",
-    "venueEventUrl": "https://metropool.nl/agenda/snelle-de-lieve-jongens-band/",
-    "title": "Snelle & De Lieve Jongens Band",
-    "location": "metropool",
-    "price": 5,
-    "shortText": "",
-    "longText": "../public/texts/metropool/L3NuZWxsZS1kZS1saWV2ZS1qb25nZW5zLWJhbmQv.html",
-    "image": "../public/event-images/metropool/L3NuZWxsZS1kZS1saWV2ZS1qb25nZW5zLWJhbmQv",
-    "soldOut": true,
-    "unavailable": false
-  },
-  {
-    "door": "2024-04-19T20:30:00",
-    "start": "2024-04-19T21:00:00",
-    "venueEventUrl": "https://metropool.nl/agenda/subsignal/",
-    "title": "Subsignal",
+    "door": "2024-11-15T19:30:00",
+    "start": "2024-11-15T20:30:00",
+    "venueEventUrl": "https://metropool.nl/agenda/fuzz-top-zz-top-tribute/",
+    "title": "Fuzz top - zz top tribute",
     "location": "metropool",
     "price": 27.5,
-    "shortText": "german prog, progressive metal \n                                Support: Powerized",
-    "longText": "../public/texts/metropool/bWV0cm9wb29sLm5sL2FnZW5kYS9zdWJzaWduYWwv.html",
-    "image": "../public/event-images/metropool/bWV0cm9wb29sLm5sL2FnZW5kYS9zdWJzaWduYWwv",
+    "shortText": "",
+    "longText": "../public/texts/metropool/Z2VuZGEvZnV6ei10b3AtenotdG9wLXRyaWJ1dGUv.html",
+    "image": "../public/event-images/metropool/Z2VuZGEvZnV6ei10b3AtenotdG9wLXRyaWJ1dGUv",
     "soldOut": false,
-    "unavailable": false
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "zz top": {
+        "s": "2AM4ilv6UzW0uMRuqKtDgN",
+        "l": null,
+        "g": [
+          "album rock",
+          "blues rock",
+          "classic rock",
+          "hard rock",
+          "rock"
+        ]
+      }
+    }
   },
   {
-    "door": "2024-05-24T19:30:00",
-    "start": "2024-05-24T20:00:00",
-    "venueEventUrl": "https://metropool.nl/agenda/vanaheim-plus-xaon-plus-end-of-the-dream/",
-    "title": "Vanaheim + Xaon + End of the Dream ",
+    "door": "2024-12-13T19:30:00",
+    "start": "2024-12-13T20:30:00",
+    "venueEventUrl": "https://metropool.nl/agenda/john-coffey/",
+    "title": "John Coffey",
     "location": "metropool",
-    "price": 22,
+    "price": 29.5,
     "shortText": "",
-    "longText": "../public/texts/metropool/dXMteGFvbi1wbHVzLWVuZC1vZi10aGUtZHJlYW0v.html",
-    "image": "../public/event-images/metropool/dXMteGFvbi1wbHVzLWVuZC1vZi10aGUtZHJlYW0v",
+    "longText": "../public/texts/metropool/dHJvcG9vbC5ubC9hZ2VuZGEvam9obi1jb2ZmZXkv.html",
+    "image": "../public/event-images/metropool/dHJvcG9vbC5ubC9hZ2VuZGEvam9obi1jb2ZmZXkv",
     "soldOut": false,
-    "unavailable": false
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "john coffey": {
+        "s": "4kffVdSOMGP0BOiBXVgeyA",
+        "l": "john%20coffey",
+        "g": [
+          "dutch indie",
+          "dutch rock",
+          "hardcore punk"
+        ]
+      }
+    }
   }
 ]

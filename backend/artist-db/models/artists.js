@@ -341,6 +341,14 @@ export default class Artists {
       });
     }
 
+    if (message.request === 'makeFailure') {
+      return this.post({
+        success: false,
+        data: null,
+        reason: `🟥 Gen. failure`,
+      });
+    }
+
     return this.error(new Error(`request ${message.request} onbekend`));
   }
 
@@ -779,9 +787,15 @@ export default class Artists {
    */
   scanTitleForAllowedArtists(eventNameOfTitle, slug) {
     const haystack = Object.keys(this.allowedArtists);
+    // console.log();
+    // console.log('-----------------');
+    // console.log('eventNameOfTitle, slug');
+    console.log(eventNameOfTitle, slug);
     
     const gevondenKeys = haystack
       .filter((hay) => eventNameOfTitle.includes(hay) || slug.includes(hay));
+    // console.log('gevondenKeys');
+    // console.log(gevondenKeys);
     
     if (!gevondenKeys || !gevondenKeys.length) {
       return {};
@@ -790,6 +804,10 @@ export default class Artists {
     if (gevondenKeys.length === 1) {
       const k = gevondenKeys[0];
       const artist = this.allowedArtists[k];
+      // console.log('een key gevonden. return:');
+      // console.log({
+      //   [`${k}`]: artist,
+      // });
       return {
         [`${k}`]: artist,
       };
@@ -814,6 +832,10 @@ export default class Artists {
           winKey = key1;
         }
         const winnaar = allowedArtists[winKey];
+        // console.log('twee keys gevonden waarvan één slug. return:');
+        // console.log({
+        //   [`${winKey}`]: winnaar,
+        // });
         return {
           [`${winKey}`]: winnaar,
         };

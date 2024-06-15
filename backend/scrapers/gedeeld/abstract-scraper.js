@@ -17,7 +17,7 @@ import {
   asyncIsAllowedEvent, asyncIsRefused, asyncForbiddenTerms, 
   asyncSaveAllowedEvent, asyncSaveRefused, asyncHarvestArtists, asyncScanTitleForAllowedArtists, 
   asyncSpotifyConfirmation, asyncGoodTerms, asyncExplicitEventCategories,
-  asyncMetalEncyclopediaConfirmation, asyncIfNotAllowedRefuse, asyncHasAllowedArtist, asyncSuccess,
+  asyncMetalEncyclopediaConfirmation, asyncIfNotAllowedRefuse, asyncHasAllowedArtist, asyncSuccess, asyncFailure,
 } from './artist-db-interface.js';
 import DbInterFaceToScraper from './db-interface-to-scraper.js';
 
@@ -104,6 +104,9 @@ export default class AbstractScraper extends ScraperConfig {
 
     this.asyncSuccess = asyncSuccess;
     this.asyncSuccess.bind(this);
+
+    this.asyncFailure = asyncFailure;
+    this.asyncFailure.bind(this);
   }
   // #endregion                                                CONSTRUCTOR & INSTALL
 
@@ -1148,6 +1151,7 @@ export default class AbstractScraper extends ScraperConfig {
       explicitEventGenres: 'asyncExplicitEventCategories',
       hasAllowedArtist: 'asyncHasAllowedArtist',
       success: 'asyncSuccess',
+      failure: 'asyncFailure',
       // refused: 'asyncCheckIsRefused',
       // emptySuccess: 'asyncCheckEmptySuccess',
       // emptyFailure: 'asyncCheckEmptyFailure',
@@ -1178,7 +1182,7 @@ export default class AbstractScraper extends ScraperConfig {
       // this.dirtyLog(`reasons Ar: ${(result?.reasons ?? 'geen reasons').join('; ')}`);
       return this.recursiveAsyncChecker(listOfFuncsCopy, event, [...result.reasons]);
     } 
-    this.handleError(new Error(`${curFuncName} niet in funcnames`), null, 'close-thread', funcNamesMap);
+    this.handleError(new Error(`${curFunc} niet in funcnames`), null, 'close-thread', funcNamesMap);
     return this.recursiveAsyncChecker(listOfFuncsCopy, event, ['error failure']);
   }
 

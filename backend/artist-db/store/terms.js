@@ -43,6 +43,7 @@ const forbiddenTerms = [
   'trap',
   'modern blues',
   'r&b',
+  'pop',
   'k-pop',
   'viral pop',
   'dream punk',

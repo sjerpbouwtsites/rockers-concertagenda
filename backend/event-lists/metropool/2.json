@@ -1,158 +1,68 @@
 [
   {
-    "door": "2024-01-11T20:30:00",
-    "start": "2024-01-11T21:00:00",
-    "venueEventUrl": "https://metropool.nl/agenda/droom-dit-plus-morpheus/",
-    "title": "Droom Dit + Morpheus",
+    "door": "2024-10-06T19:00:00",
+    "start": "2024-10-06T20:00:00",
+    "venueEventUrl": "https://metropool.nl/agenda/septicflesh/",
+    "title": "Septicflesh",
     "location": "metropool",
-    "price": 12.5,
-    "shortText": "",
-    "longText": "../public/texts/metropool/Z2VuZGEvZHJvb20tZGl0LXBsdXMtbW9ycGhldXMv.html",
-    "image": "../public/event-images/metropool/Z2VuZGEvZHJvb20tZGl0LXBsdXMtbW9ycGhldXMv",
+    "price": 40,
+    "shortText": "Support: Oceans + Scar of the Sun",
+    "longText": "../public/texts/metropool/dHJvcG9vbC5ubC9hZ2VuZGEvc2VwdGljZmxlc2gv.html",
+    "image": "../public/event-images/metropool/dHJvcG9vbC5ubC9hZ2VuZGEvc2VwdGljZmxlc2gv",
     "soldOut": false,
-    "unavailable": false
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
   },
   {
-    "door": "2024-01-14T18:00:00",
-    "start": "2024-01-14T19:00:00",
-    "venueEventUrl": "https://metropool.nl/agenda/heidevolk/",
-    "title": "Heidevolk",
-    "location": "metropool",
-    "price": 32.5,
-    "shortText": "Support: Nytt Land + Jonne",
-    "longText": "../public/texts/metropool/bWV0cm9wb29sLm5sL2FnZW5kYS9oZWlkZXZvbGsv.html",
-    "image": "../public/event-images/metropool/bWV0cm9wb29sLm5sL2FnZW5kYS9oZWlkZXZvbGsv",
-    "soldOut": false,
-    "unavailable": false
-  },
-  {
-    "door": "2024-01-26T19:00:00",
-    "start": "2024-01-26T19:30:00",
-    "venueEventUrl": "https://metropool.nl/agenda/vault-plus-the-black-fall-plus-xeno/",
-    "title": "Vault + The Black Fall + Xeno",
-    "location": "metropool",
-    "price": 15.5,
-    "shortText": "",
-    "longText": "../public/texts/metropool/cGx1cy10aGUtYmxhY2stZmFsbC1wbHVzLXhlbm8v.html",
-    "image": "../public/event-images/metropool/cGx1cy10aGUtYmxhY2stZmFsbC1wbHVzLXhlbm8v",
-    "soldOut": false,
-    "unavailable": false
-  },
-  {
-    "door": "2024-02-09T21:00:00",
-    "start": "2024-02-09T21:00:00",
-    "venueEventUrl": "https://metropool.nl/agenda/emo-night-mainland-9-feb/",
-    "title": "Emo Night Mainland",
-    "location": "metropool",
-    "price": 14.5,
-    "shortText": "",
-    "longText": "../public/texts/metropool/ZW5kYS9lbW8tbmlnaHQtbWFpbmxhbmQtOS1mZWIv.html",
-    "image": "../public/event-images/metropool/ZW5kYS9lbW8tbmlnaHQtbWFpbmxhbmQtOS1mZWIv",
-    "soldOut": false,
-    "unavailable": false
-  },
-  {
-    "door": "2024-02-16T19:30:00",
-    "start": "2024-02-16T20:30:00",
-    "venueEventUrl": "https://metropool.nl/agenda/physical-graffiti-hengelo/",
-    "title": "Physical Graffiti",
-    "location": "metropool",
-    "price": 27,
-    "shortText": "",
-    "longText": "../public/texts/metropool/bmRhL3BoeXNpY2FsLWdyYWZmaXRpLWhlbmdlbG8v.html",
-    "image": "../public/event-images/metropool/bmRhL3BoeXNpY2FsLWdyYWZmaXRpLWhlbmdlbG8v",
-    "soldOut": false,
-    "unavailable": false
-  },
-  {
-    "door": "2024-02-18T18:30:00",
-    "start": "2024-02-18T19:00:00",
-    "venueEventUrl": "https://metropool.nl/agenda/slope/",
-    "title": "Slope",
-    "location": "metropool",
-    "price": 18.5,
-    "shortText": "",
-    "longText": "../public/texts/metropool/czovL21ldHJvcG9vbC5ubC9hZ2VuZGEvc2xvcGUv.html",
-    "image": "../public/event-images/metropool/czovL21ldHJvcG9vbC5ubC9hZ2VuZGEvc2xvcGUv",
-    "soldOut": false,
-    "unavailable": false
-  },
-  {
-    "door": "2024-03-01T20:00:00",
-    "start": "2024-03-01T20:30:00",
-    "venueEventUrl": "https://metropool.nl/agenda/ares/",
-    "title": "Ares",
-    "location": "metropool",
-    "price": 1,
-    "shortText": "",
-    "longText": "../public/texts/metropool/cHM6Ly9tZXRyb3Bvb2wubmwvYWdlbmRhL2FyZXMv.html",
-    "image": "../public/event-images/metropool/cHM6Ly9tZXRyb3Bvb2wubmwvYWdlbmRhL2FyZXMv",
-    "soldOut": true,
-    "unavailable": false
-  },
-  {
-    "door": "2024-03-15T20:30:00",
-    "start": "2024-03-15T21:00:00",
-    "venueEventUrl": "https://metropool.nl/agenda/ian-siegal-band/",
-    "title": "Ian Siegal & Band",
-    "location": "metropool",
-    "price": 22,
-    "shortText": "",
-    "longText": "../public/texts/metropool/b29sLm5sL2FnZW5kYS9pYW4tc2llZ2FsLWJhbmQv.html",
-    "image": "../public/event-images/metropool/b29sLm5sL2FnZW5kYS9pYW4tc2llZ2FsLWJhbmQv",
-    "soldOut": false,
-    "unavailable": false
-  },
-  {
-    "door": "2024-03-28T19:15:00",
-    "start": "2024-03-28T20:30:00",
-    "venueEventUrl": "https://metropool.nl/agenda/suzan-freek-28-mrt-2024/",
-    "title": "Suzan & Freek",
-    "location": "metropool",
-    "price": 28,
-    "shortText": "",
-    "longText": "../public/texts/metropool/Z2VuZGEvc3V6YW4tZnJlZWstMjgtbXJ0LTIwMjQv.html",
-    "image": "../public/event-images/metropool/Z2VuZGEvc3V6YW4tZnJlZWstMjgtbXJ0LTIwMjQv",
-    "soldOut": true,
-    "unavailable": false
-  },
-  {
-    "door": "2024-04-18T19:30:00",
-    "start": "2024-04-18T20:30:00",
-    "venueEventUrl": "https://metropool.nl/agenda/the-elvis-concert/",
-    "title": "The Elvis Concert",
+    "door": "2024-11-01T19:30:00",
+    "start": "2024-11-01T20:30:00",
+    "venueEventUrl": "https://metropool.nl/agenda/the-dead-daisies-enschede/",
+    "title": "The Dead Daisies",
     "location": "metropool",
     "price": 41,
-    "shortText": "",
-    "longText": "../public/texts/metropool/bC5ubC9hZ2VuZGEvdGhlLWVsdmlzLWNvbmNlcnQv.html",
-    "image": "../public/event-images/metropool/bC5ubC9hZ2VuZGEvdGhlLWVsdmlzLWNvbmNlcnQv",
+    "shortText": "Support: Beasto Blanco + Mike Tramp",
+    "longText": "../public/texts/metropool/bmRhL3RoZS1kZWFkLWRhaXNpZXMtZW5zY2hlZGUv.html",
+    "image": "../public/event-images/metropool/bmRhL3RoZS1kZWFkLWRhaXNpZXMtZW5zY2hlZGUv",
     "soldOut": false,
-    "unavailable": false
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "the dead daisies": {
+        "s": "6VDAPUov4yNDHyQlPqrpNH",
+        "l": "the%20dead%20daisies",
+        "g": [
+          "modern hard rock",
+          "nwocr"
+        ]
+      }
+    }
   },
   {
-    "door": "2024-05-03T20:30:00",
-    "start": "2024-05-03T21:00:00",
-    "venueEventUrl": "https://metropool.nl/agenda/pene-corrida/",
-    "title": "Pene Corrida",
+    "door": "2024-11-27T19:00:00",
+    "start": "2024-11-27T20:00:00",
+    "venueEventUrl": "https://metropool.nl/agenda/gorgoroth/",
+    "title": "Gorgoroth",
     "location": "metropool",
-    "price": 21,
-    "shortText": "",
-    "longText": "../public/texts/metropool/cm9wb29sLm5sL2FnZW5kYS9wZW5lLWNvcnJpZGEv.html",
-    "image": "../public/event-images/metropool/cm9wb29sLm5sL2FnZW5kYS9wZW5lLWNvcnJpZGEv",
+    "price": 30.5,
+    "shortText": "Support: Mortiis + Hats Barn + Aran Angmar",
+    "longText": "../public/texts/metropool/bWV0cm9wb29sLm5sL2FnZW5kYS9nb3Jnb3JvdGgv.html",
+    "image": "../public/event-images/metropool/bWV0cm9wb29sLm5sL2FnZW5kYS9nb3Jnb3JvdGgv",
     "soldOut": false,
-    "unavailable": false
-  },
-  {
-    "door": "2024-06-06T19:30:00",
-    "start": "2024-06-06T20:30:00",
-    "venueEventUrl": "https://metropool.nl/agenda/china-crisis-enschede/",
-    "title": "China Crisis",
-    "location": "metropool",
-    "price": 32.5,
-    "shortText": "",
-    "longText": "../public/texts/metropool/L2FnZW5kYS9jaGluYS1jcmlzaXMtZW5zY2hlZGUv.html",
-    "image": "../public/event-images/metropool/L2FnZW5kYS9jaGluYS1jcmlzaXMtZW5zY2hlZGUv",
-    "soldOut": false,
-    "unavailable": false
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "gorgoroth": {
+        "s": "1Dt7cfRzxM8qPVa82jX9y5",
+        "l": "gorgoroth",
+        "g": [
+          "black metal",
+          "metal",
+          "norwegian black metal",
+          "norwegian metal",
+          "tolkien metal"
+        ]
+      }
+    }
   }
 ]

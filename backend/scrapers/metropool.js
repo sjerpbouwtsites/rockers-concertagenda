@@ -3,7 +3,12 @@ import { workerData } from 'worker_threads';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/metropool.js';
 import getImage from './gedeeld/image.js';
-import terms from './gedeeld/terms.js';
+import {
+  mapToStartDate,
+  mapToShortDate,
+} from './gedeeld/datums.js';
+import workTitleAndSlug from './gedeeld/slug.js';
+import terms from '../artist-db/store/terms.js';
 
 // #region        SCRAPER CONFIG
 const metropoolScraper = new AbstractScraper({
@@ -18,12 +23,18 @@ const metropoolScraper = new AbstractScraper({
     timeout: 45000,
   },
   app: {
+    harvest: {
+      dividers: [`+`],
+      dividerRex: "[\\+]",
+      artistsIn: ['title'],
+    },     
     mainPage: {
       requiredProperties: ['venueEventUrl', 'title'],
-      asyncCheckFuncs: ['allowed', 'event', 'refused', 'goodTerms', 'forbiddenTerms', 'isRock', 'saveRefused', 'emptyFailure'],
+      asyncCheckFuncs: ['refused', 'allowedEvent', 'forbiddenTerms', 'hasGoodTerms', 'hasAllowedArtist', 'spotifyConfirmation', 'failure'],
     },
     singlePage: {
       requiredProperties: ['venueEventUrl', 'title', 'price', 'start'],
+      asyncCheckFuncs: ['success'],
     },
   },
 });
@@ -48,32 +59,47 @@ metropoolScraper.mainPage = async function () {
   await this.autoScroll(page);
   await this.autoScroll(page);
 
+  await page.evaluate(() => {
+    document.querySelectorAll('.card__date--day span:first-child').forEach((dagSpan) => {
+      dagSpan.parentNode.removeChild(dagSpan);
+    });
+  });
+
   let rawEvents = await page.evaluate(
     // eslint-disable-next-line no-shadow
     ({ workerData, unavailabiltyTerms }) =>
-      Array.from(document.querySelectorAll('a.card--event')).map((rawEvent) => {
-        const title = rawEvent.querySelector('.card__title')?.textContent ?? null;
-        const res = {
-          anker: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
-          errors: [],
-          title,
-        };
-        res.venueEventUrl = rawEvent?.href ?? null;
-        const genres = rawEvent.dataset?.genres ?? '';
-        const st = rawEvent.querySelector('.card__title card__title--sub')?.textContent ?? '';
-        res.shortText = `${st} ${genres}`.trim();
-        const uaRex = new RegExp(unavailabiltyTerms.join('|'), 'gi');
-        res.unavailable = !!rawEvent.textContent.match(uaRex);
-        res.soldOut =
+      Array.from(document.querySelectorAll('a.card--event'))
+        .map((rawEvent) => {
+          const title = rawEvent.querySelector('.card__title')?.textContent ?? null;
+          const res = {
+            anker: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+            errors: [],
+            title,
+          };
+          res.venueEventUrl = rawEvent?.href ?? null;
+
+          res.genres = rawEvent.querySelector("svg[src*='genre']")?.parentNode.textContent.trim().toLowerCase() ?? '';
+          const st = rawEvent.querySelector('.card__title card__title--sub')?.textContent ?? '';
+          res.shortText = `${st} ${res.genres}`.trim();
+          const uaRex = new RegExp(unavailabiltyTerms.join('|'), 'gi');
+          res.unavailable = !!rawEvent.textContent.match(uaRex);
+
+          res.mapToStartDate = rawEvent.querySelector('.card__date')?.textContent.trim().toLowerCase().replaceAll(/\s{2,100}/g, ' ') ?? '';
+
+          res.soldOut =
           !!rawEvent
             .querySelector('.card__title--label')
             ?.textContent.match(/uitverkocht|sold\s?out/i) ?? null;
-        return res;
-      }),
+          return res;
+        }),
     { workerData, unavailabiltyTerms: terms.unavailability },
   );
 
-  rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
+  rawEvents = rawEvents
+    .map((event) => mapToStartDate(event, 'dag-maandNaam', this.months))
+    .map(mapToShortDate)
+    .map(this.isMusicEventCorruptedMapper)
+    .map((re) => workTitleAndSlug(re, this._s.app.harvest.possiblePrefix));
 
   const eventGen = this.eventGenerator(rawEvents);
   // eslint-disable-next-line no-unused-vars
@@ -110,27 +136,8 @@ metropoolScraper.singlePage = async function ({ page, event }) {
         }` ?? '';
       res.shortText = res.shortText.replaceAll('undefined', '');
       res.shortText = res.shortText.trim();
-      const startDateRauwMatch = document
-        .querySelector('.event-title-wrap')
-        ?.innerHTML.match(
-          /(\d{1,2})\s*(jan|feb|mrt|apr|mei|jun|jul|aug|sep|okt|nov|dec)\s*(\d{4})/,
-        );
-
-      if (!Array.isArray(startDateRauwMatch) || !startDateRauwMatch.length) {
-        res.errors.push({
-          error: new Error(`geen match startDate ${res.anker}`),
-          toDebug: {
-            text: document.querySelector('.event-title-wrap')?.innerHTML,
-            res,
-          },
-        });
-        return res;
-      }
-
-      const day = startDateRauwMatch[1];
-      const month = months[startDateRauwMatch[2]];
-      const year = startDateRauwMatch[3];
-      const startDate = `${year}-${month}-${day}`;
+     
+      const startDate = event.startDate;
 
       try {
         const startTimeMatch = document.querySelector('.beginTime')?.innerHTML.match(/\d\d:\d\d/);

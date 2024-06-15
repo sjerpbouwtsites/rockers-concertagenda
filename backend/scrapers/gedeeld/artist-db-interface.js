@@ -12,6 +12,7 @@ import DbInterFaceToScraper from './db-interface-to-scraper.js';
 // explicitEventGenres: 'asyncExplicitEventCategories',
 // hasAllowedArtist: 'asyncHasAllowedArtist',
 // success: 'asyncSuccess',
+// failure: 'asyncFailure',
 
 function talkTitleAndSlug(subtype, event, extraData = {}) {
   const s = event.shortDate;
@@ -101,7 +102,7 @@ export async function asyncForbiddenTerms(event, olderReasons) {
     type: 'db-request', 
     subtype: 'hasForbidden',
     messageData: {
-      string: event.workTitle + event.slug + (event?.shortText ?? '').toLowerCase(),
+      string: event.title + event.slug + (event?.shortText ?? '').toLowerCase() + (event?.genres ?? ''),
     },
   });
   const dbAnswer = await this.checkDBhasAnswered();
@@ -127,9 +128,21 @@ export async function asyncSuccess(event, olderReasons) {
   return DBToScraper;
 }
 
+export async function asyncFailure(event, olderReasons) {
+  this.talkToDB(talkTitleAndSlug('makeFailure', event, {
+    string: event.workTitle + event.slug + (event?.shortText ?? '').toLowerCase(),
+  }));
+  const dbAnswer = await this.checkDBhasAnswered();
+  const DBToScraper = new DbInterFaceToScraper(dbAnswer, olderReasons, 'async failure');
+  DBToScraper.setReason();
+  
+  DBToScraper.setBreak(true);
+  return DBToScraper;
+}
+
 export async function asyncGoodTerms(event, olderReasons) {
   this.talkToDB(talkTitleAndSlug('hasGood', event, {
-    string: event.workTitle + event.slug + (event?.shortText ?? '').toLowerCase(),
+    string: event.workTitle + event.slug + (event?.shortText ?? '').toLowerCase() + (event?.genres ?? ''),
   }));
   const dbAnswer = await this.checkDBhasAnswered();
   const DBToScraper = new DbInterFaceToScraper(dbAnswer, olderReasons, 'async good terms');
