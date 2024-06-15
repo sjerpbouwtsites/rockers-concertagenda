@@ -3,7 +3,9 @@ import { workerData } from 'worker_threads';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/oosterpoort.js';
 import getImage from './gedeeld/image.js';
-import terms from './gedeeld/terms.js';
+import { mapToShortDate } from './gedeeld/datums.js';
+import workTitleAndSlug from './gedeeld/slug.js';
+import terms from '../artist-db/store/terms.js';
 
 // #region        SCRAPER CONFIG
 const scraper = new AbstractScraper({
@@ -18,12 +20,19 @@ const scraper = new AbstractScraper({
     waitTime: 'load',
   },
   app: {
+    harvest: {
+      dividers: [`+`, `&`],
+      dividerRex: "[\\+&]",
+      artistsIn: ['title'],
+    },    
     mainPage: {
       requiredProperties: ['venueEventUrl', 'title', 'start'],
-      asyncCheckFuncs: ['allowed', 'event', 'refused', 'forbiddenTerms', 'isRock', 'saveRefused', 'emptyFailure'],
+      asyncCheckFuncs: ['refused', 'allowedEvent', 'forbiddenTerms', 'hasGoodTerms', 'hasAllowedArtist', 'spotifyConfirmation', 'failure'],
+      // asyncCheckFuncs: ['allowed', 'event', 'refused', 'forbiddenTerms', 'isRock', 'saveRefused', 'emptyFailure'],
     },
     singlePage: {
-      requiredProperties: ['venueEventUrl', 'title', 'price', 'start'],
+      requiredProperties: ['venueEventUrl', 'title', 'start'],
+      asyncCheckFuncs: ['success'],
     },
   },
 });
@@ -78,6 +87,7 @@ scraper.mainPage = async function () {
 
           try {
             res.start = eventEl.querySelector('.program__date')?.getAttribute('datetime') ?? null;
+            res.startDate = res.start.split('T')[0];
           } catch (caughtError) {
             res.errors.push({
               error: caughtError,
@@ -103,7 +113,10 @@ scraper.mainPage = async function () {
     },
   );
 
-  rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
+  rawEvents = rawEvents
+    .map(mapToShortDate)
+    .map(this.isMusicEventCorruptedMapper)
+    .map((re) => workTitleAndSlug(re, this._s.app.harvest.possiblePrefix));
 
   const eventGen = this.eventGenerator(rawEvents);
   // eslint-disable-next-line no-unused-vars
@@ -152,7 +165,7 @@ scraper.singlePage = async function ({ page, event }) {
             document.querySelector('.event__cta') &&
             document.querySelector('.event__cta').hasAttribute('disabled')
           ) {
-            res.corrupted += ` ${document.querySelector('.event__cta')?.textContent}`;
+            res.soldOut += true;
           }
         } catch (caughtError) {
           res.errors.push({

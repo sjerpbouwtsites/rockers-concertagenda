@@ -561,37 +561,59 @@ export default class Artists {
     }
 
     const spotifyGenres = spotRes?.genres ?? [];
-    
-    const heeftVerbodenTermen1 = this.terms.forbidden
-      .find((ft) => spotifyGenres.find((sg) => sg.includes(ft) || ft.includes(sg)));
-    const heeftVerbodenTermen = heeftVerbodenTermen1 && (heeftVerbodenTermen1 !== 'undefined' && typeof heeftVerbodenTermen1 !== 'undefined');
-    
-    const heeftGoedeTermen1 = this.terms.goodCategories
-      .find((ft) => spotifyGenres.find((sg) => sg.includes(ft) || ft.includes(sg)));
+    console.log();
+    console.log(`--------------`);
+    console.log(`gevonden genres om te controleren voor ${title}`);
+    console.log(spotifyGenres);
 
-    const heeftGoedeTermen = heeftGoedeTermen1 && (heeftGoedeTermen1 !== 'undefined' && typeof heeftGoedeTermen1 !== 'undefined');
-        
-    if (heeftVerbodenTermen) {
-      if (heeftGoedeTermen) {
-        return this.post({
-          success: true,
-          data: heeftGoedeTermen,
-          reason: `🟩 spotify verboden genre ${heeftVerbodenTermen} ook goede term ${heeftGoedeTermen} ab6`,
-        });
-      }
- 
+    const spotifyGenresInForbidden = spotifyGenres.find((sg) => this.terms.forbidden.includes(sg));
+
+    if (spotifyGenresInForbidden) {
       return this.post({
         success: false,
-        data: heeftVerbodenTermen,
-        reason: `🟥 spotify verboden genre ${heeftVerbodenTermen} maar geen goede termen ab7`,
-      });    
+        data: spotifyGenresInForbidden,
+        reason: `🟥 spotify vond verboden genre ${spotifyGenresInForbidden} ab10`,
+      });        
     }
+
+    const spotifyGenresInGoodCategories = spotifyGenres
+      .find((sg) => this.terms.goodCategories.includes(sg));
     
+    if (spotifyGenresInGoodCategories) {
+      return this.post({
+        success: true,
+        data: spotifyGenresInGoodCategories,
+        reason: `🟩 spotify vond goed genre ${spotifyGenresInGoodCategories} ab11`,
+      });        
+    }
+
+    // losser zoeken.
+    const ietsHardstDan = spotifyGenres.find((sg) => sg.includes('metal'));
+
+    if (ietsHardstDan) {
+      return this.post({
+        success: true,
+        data: ietsHardstDan,
+        reason: `🟩 spotify vond niet direct iets maar wel match met metal: ${ietsHardstDan} ab12`,
+      });        
+    }
+
+    const ietsKutsDan = spotifyGenres
+      .find((sg) => this.terms.forbidden.find((forbiddenTerm) => sg.includes(forbiddenTerm)));
+
+    if (ietsKutsDan) {
+      return this.post({
+        success: false,
+        data: ietsKutsDan,
+        reason: `🟥 spotify vond niet direct iets maar wel iets kuts: ${ietsKutsDan} ab13`,
+      });        
+    }    
+        
     return this.post({
       success: null,
-      data: heeftGoedeTermen,
-      reason: `⬜ geen spotify verboden of goede genres ab8`,
-    });    
+      data: null,
+      reason: `◻️ niets gevonden met spotify ab12`,
+    }); 
   }
 
   async getMetalEncyclopediaConfirmation(title) {
@@ -884,7 +906,7 @@ export default class Artists {
       success: artistsFound > 0 ? true : null,
       data: workedArtists,
       reason: artistsFound > 0 
-        ? `🟩 ${artistsFound} artists found ac3` 
+        ? `🟩 ${artistsFound} artists found: ${Object.keys(artists).join(', ')} ac3` 
         : `⬜ no artists found ac4`,
     });
   }

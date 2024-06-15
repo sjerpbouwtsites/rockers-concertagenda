@@ -1,58 +1,182 @@
 [
   {
-    "start": "2024-07-05T19:00:00",
-    "venueEventUrl": "https://occii.org/events/sweet-57/",
-    "title": "Slan (se) ",
-    "location": "occii",
-    "price": 12.5,
-    "shortText": " lärm  +  tense reaction  +  azijnpisser HC/PUNK MINI FESTIVAL DAY I",
-    "longText": "../public/texts/occii/czovL29jY2lpLm9yZy9ldmVudHMvc3dlZXQtNTcv.html",
-    "image": "../public/event-images/occii/czovL29jY2lpLm9yZy9ldmVudHMvc3dlZXQtNTcv",
+    "start": "2024-06-23T20:00:00+02:00",
+    "venueEventUrl": "https://www.spotgroningen.nl/programma/steel-panther-2/",
+    "title": "Steel Panther",
+    "location": "oosterpoort",
+    "price": 48.6,
+    "shortText": "On The Prowl World Tour 2024Amerikaanse glam metal met een flinke laag humor",
+    "longText": "../public/texts/oosterpoort/Lm5sL3Byb2dyYW1tYS9zdGVlbC1wYW50aGVyLTIv.html",
+    "image": "../public/event-images/oosterpoort/Lm5sL3Byb2dyYW1tYS9zdGVlbC1wYW50aGVyLTIv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": null
   },
   {
-    "start": "2024-07-06T19:00:00",
-    "venueEventUrl": "https://occii.org/events/sweet-60/",
-    "title": "[sold out] e-150 (es) ",
-    "location": "occii",
-    "price": 12.5,
-    "shortText": " antidote  +  seein red  +  oust  +  citizens patrol HC/PUNK MINI FESTIVAL DAY II",
-    "longText": "../public/texts/occii/czovL29jY2lpLm9yZy9ldmVudHMvc3dlZXQtNjAv.html",
-    "image": "../public/event-images/occii/czovL29jY2lpLm9yZy9ldmVudHMvc3dlZXQtNjAv",
-    "soldOut": true,
+    "start": "2024-10-30T20:00:00+01:00",
+    "venueEventUrl": "https://www.spotgroningen.nl/programma/matthew-and-the-atlas-2/",
+    "title": "Matthew and the Atlas",
+    "location": "oosterpoort",
+    "price": 19.5,
+    "shortText": "Warme, akoestische folknummers over levenservaringen",
+    "longText": "../public/texts/oosterpoort/cmFtbWEvbWF0dGhldy1hbmQtdGhlLWF0bGFzLTIv.html",
+    "image": "../public/event-images/oosterpoort/cmFtbWEvbWF0dGhldy1hbmQtdGhlLWF0bGFzLTIv",
+    "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "heat": {
+        "s": "7A9yZMTrFZcgEWAX2kBfK6",
+        "l": "h.e.a.t.",
+        "g": [
+          "album rock",
+          "classic rock",
+          "hard rock",
+          "mellow gold",
+          "new romantic",
+          "new wave pop",
+          "rock",
+          "singer-songwriter",
+          "soft rock"
+        ]
+      }
+    }
   },
   {
-    "start": "2024-08-02T20:00:00",
-    "venueEventUrl": "https://occii.org/events/nyhc/",
-    "title": "Urban waste (us) + pressure pact + the breed",
-    "location": "occii",
-    "price": 10,
-    "shortText": "NYHC Pioneers",
-    "longText": "../public/texts/occii/aHR0cHM6Ly9vY2NpaS5vcmcvZXZlbnRzL255aGMv.html",
-    "image": "../public/event-images/occii/aHR0cHM6Ly9vY2NpaS5vcmcvZXZlbnRzL255aGMv",
+    "start": "2024-11-29T20:00:00+01:00",
+    "venueEventUrl": "https://www.spotgroningen.nl/programma/smash-into-pieces/",
+    "title": "Smash Into Pieces",
+    "location": "oosterpoort",
+    "price": 26.1,
+    "shortText": "Zweedse cinematografische rocksensatie",
+    "longText": "../public/texts/oosterpoort/bC9wcm9ncmFtbWEvc21hc2gtaW50by1waWVjZXMv.html",
+    "image": "../public/event-images/oosterpoort/bC9wcm9ncmFtbWEvc21hc2gtaW50by1waWVjZXMv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "smash into pieces": {
+        "s": "2vhrwzjf9H3icunkVFi9tq",
+        "l": "smash%20into%20pieces",
+        "g": [
+          "swedish alternative rock"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2024-12-02T20:00:00+01:00",
+    "venueEventUrl": "https://www.spotgroningen.nl/programma/ian-paice-feat-purpendicular/",
+    "title": "Ian Paice feat. Purpendicular",
+    "location": "oosterpoort",
+    "price": 39.6,
+    "shortText": "Performing Classic Deep PurpleLegendarische drummer en oprichter van Deep Purple",
+    "longText": "../public/texts/oosterpoort/L2lhbi1wYWljZS1mZWF0LXB1cnBlbmRpY3VsYXIv.html",
+    "image": "../public/event-images/oosterpoort/L2lhbi1wYWljZS1mZWF0LXB1cnBlbmRpY3VsYXIv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "ian paice": {
+        "s": "2gNdXbhyIbXHWvurrlrUAq",
+        "l": "ian%20paice",
+        "g": [
+          "rock drums",
+          "heavy metal"
+        ]
+      },
+      "purpendicular": {
+        "s": "7dtYKVbh2QXKICAzbxtrkF",
+        "l": "purpendicular",
+        "g": []
+      }
+    }
+  },
+  {
+    "start": "2024-12-05T20:00:00+01:00",
+    "venueEventUrl": "https://www.spotgroningen.nl/programma/sloper/",
+    "title": "Sloper",
+    "location": "oosterpoort",
+    "price": 26.1,
+    "shortText": "Band opgezet door bekende drummers met ROCK als stevige basis",
+    "longText": "../public/texts/oosterpoort/Z3JvbmluZ2VuLm5sL3Byb2dyYW1tYS9zbG9wZXIv.html",
+    "image": "../public/event-images/oosterpoort/Z3JvbmluZ2VuLm5sL3Byb2dyYW1tYS9zbG9wZXIv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "slope": {
+        "s": "35fxvnr5oanOFB1JNB2Ber",
+        "l": "slope",
+        "g": [
+          "dutch rock"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2024-12-14T20:00:00+01:00",
+    "venueEventUrl": "https://www.spotgroningen.nl/programma/dool/",
+    "title": "Dool",
+    "location": "oosterpoort",
+    "price": 25.1,
+    "shortText": "Meeslepende mix van progressieve rock, metal en post-rock",
+    "longText": "../public/texts/oosterpoort/b3Rncm9uaW5nZW4ubmwvcHJvZ3JhbW1hL2Rvb2wv.html",
+    "image": "../public/event-images/oosterpoort/b3Rncm9uaW5nZW4ubmwvcHJvZ3JhbW1hL2Rvb2wv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": null
   },
   {
-    "start": "2024-10-02T20:00:00",
-    "venueEventUrl": "https://occii.org/events/hellshock-us-seein-red/",
-    "title": "Hellshock (us) + seein red",
-    "location": "occii",
-    "price": 10,
-    "shortText": "Rolling crust riffage | Neck aching tempos | sheer brutality",
-    "longText": "../public/texts/occii/ZXZlbnRzL2hlbGxzaG9jay11cy1zZWVpbi1yZWQv.html",
-    "image": "../public/event-images/occii/ZXZlbnRzL2hlbGxzaG9jay11cy1zZWVpbi1yZWQv",
+    "start": "2025-02-01T20:00:00+01:00",
+    "venueEventUrl": "https://www.spotgroningen.nl/programma/feuerengel-a-tribute-to-rammstein/",
+    "title": "Feuerengel",
+    "location": "oosterpoort",
+    "price": 33.6,
+    "shortText": "A TRIBUTE TO RAMMSTEINRAMMMMMMMSTEIN!!!",
+    "longText": "../public/texts/oosterpoort/cmVuZ2VsLWEtdHJpYnV0ZS10by1yYW1tc3RlaW4v.html",
+    "image": "../public/event-images/oosterpoort/cmVuZ2VsLWEtdHJpYnV0ZS10by1yYW1tc3RlaW4v",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "feuerengel": {
+        "s": null,
+        "l": "feuerengel",
+        "g": []
+      }
+    }
+  },
+  {
+    "start": "2025-03-27T21:00:00+01:00",
+    "venueEventUrl": "https://www.spotgroningen.nl/programma/theater-utrecht-nederlands-kamerkoor-en-holland-festival/",
+    "title": "Theater Utrecht, Nederlands Kamerkoor en Holland Festival",
+    "location": "oosterpoort",
+    "price": 25.5,
+    "shortText": "  HardkoorEen stream of self-consciousness op techno, triphop en koormuziek",
+    "longText": "../public/texts/oosterpoort/a2FtZXJrb29yLWVuLWhvbGxhbmQtZmVzdGl2YWwv.html",
+    "image": "../public/event-images/oosterpoort/a2FtZXJrb29yLWVuLWhvbGxhbmQtZmVzdGl2YWwv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "heat": {
+        "s": "7A9yZMTrFZcgEWAX2kBfK6",
+        "l": "h.e.a.t.",
+        "g": [
+          "album rock",
+          "classic rock",
+          "hard rock",
+          "mellow gold",
+          "new romantic",
+          "new wave pop",
+          "rock",
+          "singer-songwriter",
+          "soft rock"
+        ]
+      }
+    }
   }
 ]

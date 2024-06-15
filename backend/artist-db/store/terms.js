@@ -42,9 +42,11 @@ const forbiddenTerms = [
   'karaoke',
   'ldsports',
   'london calling',
+  'mellow gold',
   'modern blues',
   'neofolk',
   'new french touch',
+  'new romantic',
   'new wave',
   'piano rock',
   'poetry',
@@ -55,6 +57,8 @@ const forbiddenTerms = [
   'rock-alternative',
   'schaakinstuif',
   'shoegaze',
+  'singer-songwriter',
+  'sophisti-pop',
   'trap',
   'uptempo',
   'VERBODENGENRE',
@@ -123,6 +127,10 @@ const wikipediaGoodGenres = [
 ];
 
 const goodCategories = [
+  'dutch metal',
+  'gothic metal',
+  'gothic symphonic metal',
+  'symphonic metal',
   'death metal',
   'deathcore',
   'doom',
