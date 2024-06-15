@@ -3,7 +3,16 @@ import { workerData } from 'worker_threads';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/littledevil.js';
 import getImage from './gedeeld/image.js';
-import { combineStartTimeStartDate, mapToStartDate, mapToStartTime } from './gedeeld/datums.js';
+import {
+  mapToStartDate,
+  combineDoorTimeStartDate,
+  mapToDoorTime,
+  mapToShortDate,
+  mapToStartTime,
+  combineStartTimeStartDate,
+} from './gedeeld/datums.js';
+import workTitleAndSlug from './gedeeld/slug.js';
+import terms from '../artist-db/store/terms.js';
 
 // #region        SCRAPER CONFIG
 const scraper = new AbstractScraper({
@@ -16,12 +25,18 @@ const scraper = new AbstractScraper({
     timeout: 15000,
   },
   app: {
+    harvest: {
+      dividers: [`+`],
+      dividerRex: "[\\+]",
+      artistsIn: ['title'],
+    }, 
     mainPage: {
       requiredProperties: ['venueEventUrl', 'title', 'start'],
-      asyncCheckFuncs: ['allowed', 'event', 'refused', 'forbiddenTerms', 'saveAllowed', 'emptySuccess'],
+      asyncCheckFuncs: ['refused', 'allowedEvent', 'forbiddenTerms', 'hasGoodTerms'],
     },
     singlePage: {
       requiredProperties: ['venueEventUrl', 'title'],
+      asyncCheckFuncs: ['success'],
     },
   },
 });
@@ -112,10 +127,13 @@ scraper.mainPage = async function () {
     { workerData },
   );
 
-  rawEvents = rawEvents.map((event) => mapToStartDate(event, 'dag-maandNaam', this.months));
-  rawEvents = rawEvents.map((event) => mapToStartTime(event));
-  rawEvents = rawEvents.map(combineStartTimeStartDate);
-  rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
+  rawEvents = rawEvents
+    .map((event) => mapToStartDate(event, 'dag-maandNaam', this.months))
+    .map((event) => mapToStartTime(event))
+    .map(mapToShortDate)
+    .map(combineStartTimeStartDate)
+    .map(this.isMusicEventCorruptedMapper)
+    .map((re) => workTitleAndSlug(re, this._s.app.harvest.possiblePrefix));
 
   const eventGen = this.eventGenerator(rawEvents);
   // eslint-disable-next-line no-unused-vars
