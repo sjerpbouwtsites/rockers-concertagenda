@@ -134,10 +134,10 @@ export default class MonitorField {
   }
 
   updateError(updateData) {
-    console.log({
-      titel: 'updateError',
-      updateData,
-    });
+    // console.log({
+    //   titel: 'updateError',
+    //   updateData,
+    // });
     this.data.unshift(updateData);
     document.getElementById(this.mainFieldName).innerHTML = this.errorUpdateHTML;
   }
@@ -193,8 +193,7 @@ export default class MonitorField {
 
   get errorUpdateHTML() {
     const errorsPerWorkerCounter = {};
-
-    console.log(this.data);
+    
     const listItems = this.data
       .map((rollRow) => {
         try {

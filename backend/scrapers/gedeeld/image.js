@@ -18,9 +18,10 @@ function downloadImage(url, filepath, workerData) {
           resolve(`${fsDirections.publicLocationImages}/${workerData.family}-vol.webp`);
         } else {
           res.resume();
+          console.log(res);
           reject(
             new Error(
-              `Request Failed With a Status Code: ${res.statusCode} see <a href='vscode://vscode-remote/wsl+Ubuntu-22.04/home/sjerp/dev/apache/concertagenda/backend/temp/error.log:1:1'>the log</a>`,
+              `Request for ${url} Failed With a Status Code: ${res.statusCode} see <a href='vscode://vscode-remote/wsl+Ubuntu-22.04/home/sjerp/dev/apache/concertagenda/backend/temp/error.log:1:1'>the log</a>`,
             ),
           );
         }

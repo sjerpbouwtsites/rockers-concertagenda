@@ -191,7 +191,7 @@ function eventToWarning(eventMsg) {
 
 function eventToClientsLog(eventMsg, fields) {
   if (eventMsg.subtype === 'error') {
-    console.error(eventMsg);
+    // console.error(eventMsg);
     // console.log(`Error in ${eventMsg.messageData.workerData.name}`);
     // console.error(eventMsg.messageData.error);
     return;

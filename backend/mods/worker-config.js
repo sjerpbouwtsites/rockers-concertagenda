@@ -42,18 +42,12 @@ export const workerConfig = {
   //   workerConcurrent: 1,
   //   forceSet: 2,
   // },
-  depul: { 
-    //      workerCount: 2, 
-    workerCount: 1, 
-    workerConcurrent: 2, 
-    forceSet: 2, 
+  doornroosje: {
+    workerCount: 3,
+    workerConcurrent: 1,
+    CPUReq: 'high',
+    forceSet: 2,
   },
-  // doornroosje: {
-  //   workerCount: 2,
-  //   workerConcurrent: 1,
-  //   CPUReq: 'high',
-  //   forceSet: 2,
-  // },
   // dynamo: { workerCount: 2, workerConcurrent: 1, forceSet: 3 },
   // effenaar: { workerCount: 2, workerConcurrent: 2, forceSet: 3 },
   // gebouwt: {
@@ -109,18 +103,24 @@ export const workerConfig = {
   // volt: { workerCount: 1, workerConcurrent: 1, forceSet: 6 },
   // willemeen: { workerCount: 2, workerConcurrent: 2, forceSet: 6 },
 };
+// depul: { 
+//   workerCount: 2, 
+//   workerCount: 1, 
+//   workerConcurrent: 2, 
+//   forceSet: 2, 
+// },
 // deflux: { workerCount: 1, workerConcurrent: 1, forceSet: 2 },
 // boerderij: {
-//   workerCount: 1,
-//   workerConcurrent: 1,
-//   forceSet: 1,
-// },
-// ticketmaster: {
-  //   workerCount: 2,
+  //   workerCount: 1,
   //   workerConcurrent: 1,
-  //   forceSet: 6,
+  //   forceSet: 1,
   // },
-  
+  // ticketmaster: {
+//   workerCount: 2,
+//   workerConcurrent: 1,
+//   forceSet: 6,
+// },
+    
 export const workerNames = Object.keys(workerConfig);
   
 class WorkerListConf {
@@ -129,7 +129,7 @@ class WorkerListConf {
   static _self = null;
 
   curDay = new Date().toISOString().split('T')[0].replaceAll(/-/g, '');
-
+  
   constructor() {
     if (WorkerListConf._self instanceof WorkerListConf) {
       return WorkerListConf._self;
@@ -138,7 +138,7 @@ class WorkerListConf {
     this.setBaseEventLists();
     this.run();
   }
-
+  
   get highCpuWorkerExists() {
     return this.data.find((conf) => conf.CPUReq === 'high');
   }
