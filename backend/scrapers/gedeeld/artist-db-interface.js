@@ -86,7 +86,6 @@ export async function asyncIfNotAllowedRefuse(event, reasons) {
 export async function asyncIsRefused(event, olderReasons = []) {
   this.talkToDB(talkTitleAndSlug('getRefused', event));
   const dbAnswer = await this.checkDBhasAnswered();
-  this.dirtyDebug(dbAnswer);
   const DBToScraper = new DbInterFaceToScraper(dbAnswer, olderReasons, 'async is refused');
   DBToScraper.reverseSuccessLogic().setReason();
 
@@ -107,7 +106,7 @@ export async function asyncForbiddenTerms(event, olderReasons) {
   });
   const dbAnswer = await this.checkDBhasAnswered();
   const DBToScraper = new DbInterFaceToScraper(dbAnswer, olderReasons, 'async forbidden terms');
-  DBToScraper.reverseSuccessLogic();  
+  DBToScraper.reverseSuccessLogic().setReason();  
 
   if (DBToScraper.isFailed) DBToScraper.setBreak(true);
   if (!DBToScraper.isError) return DBToScraper;

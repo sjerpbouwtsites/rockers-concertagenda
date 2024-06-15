@@ -3,6 +3,11 @@ import { workerData } from 'worker_threads';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/effenaar.js';
 import getImage from './gedeeld/image.js';
+import {
+  mapToShortDate, combineStartTimeStartDate, combineDoorTimeStartDate, 
+  combineEndTimeStartDate, mapToStartDate, mapToStartTime, mapToDoorTime, mapToEndTime,
+} from './gedeeld/datums.js';
+import workTitleAndSlug from './gedeeld/slug.js';
 
 // #region        SCRAPER CONFIG
 const scraper = new AbstractScraper({
@@ -16,13 +21,18 @@ const scraper = new AbstractScraper({
     timeout: 15014,
   },
   app: {
+    harvest: {
+      dividers: [`+`, ':', ',', '&'],
+      dividerRex: "[\\+:\,&]",
+      artistsIn: ['title', 'shortText'],
+    },      
     mainPage: {
       requiredProperties: ['venueEventUrl', 'title'],
-      asyncCheckFuncs: ['allowed', 'event', 'refused', 'emptySuccess'],
+      asyncCheckFuncs: ['refused', 'allowedEvent', 'forbiddenTerms'],
     },
     singlePage: {
       requiredProperties: ['venueEventUrl', 'title', 'price', 'start'],
-      asyncCheckFuncs: ['forbiddenTerms', 'saveAllowed', 'emptySuccess'],
+      asyncCheckFuncs: ['success'],
     },
   },
 });
@@ -54,6 +64,7 @@ scraper.mainPage = async function () {
         };
         res.shortText = eventEl.querySelector('.card-subtitle')?.textContent ?? '';
         res.venueEventUrl = eventEl?.href ?? null;
+        res.mapToStartDate = eventEl.querySelector('.card-info-date')?.textContent ?? '';
         res.soldOut =
           !!eventEl
             .querySelector('.card-content .card-status')
@@ -62,7 +73,11 @@ scraper.mainPage = async function () {
       }),
     { workerData },
   );
-  rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
+  rawEvents = rawEvents
+    .map((event) => mapToStartDate(event, 'dag-maandNaam-jaar', this.months))
+    .map(mapToShortDate)  
+    .map(this.isMusicEventCorruptedMapper)
+    .map((re) => workTitleAndSlug(re, this._s.app.harvest.possiblePrefix));
 
   const eventGen = this.eventGenerator(rawEvents);
   // eslint-disable-next-line no-unused-vars
