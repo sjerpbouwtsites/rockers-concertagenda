@@ -7,10 +7,12 @@ import {
   mapToStartDate,
   combineDoorTimeStartDate,
   mapToDoorTime,
+  mapToShortDate,
   mapToStartTime,
   combineStartTimeStartDate,
 } from './gedeeld/datums.js';
-import terms from './gedeeld/terms.js';
+import workTitleAndSlug from './gedeeld/slug.js';
+import terms from '../artist-db/store/terms.js';
 
 // #region        SCRAPER CONFIG
 const scraper = new AbstractScraper({
@@ -22,12 +24,18 @@ const scraper = new AbstractScraper({
     timeout: 20000,
   },
   app: {
+    harvest: {
+      dividers: [`+`],
+      dividerRex: "[\\+]",
+      artistsIn: ['title'],
+    }, 
     mainPage: {
       requiredProperties: ['venueEventUrl', 'title'],
-      asyncCheckFuncs: ['allowed', 'event', 'refused', 'forbiddenTerms', 'emptySuccess'],
+      asyncCheckFuncs: ['refused', 'allowedEvent', 'forbiddenTerms', 'hasGoodTerms', 'hasAllowedArtist'],
     },
     singlePage: {
       requiredProperties: ['venueEventUrl', 'title', 'start'],
+      asyncCheckFuncs: ['spotifyConfirmation', 'success'],
     },
   },
 });
@@ -60,6 +68,12 @@ scraper.mainPage = async function () {
           title,
         };
         
+        res.mapToStartDate =
+      document
+        .querySelector('time.date')
+        ?.textContent.trim()
+        .toLowerCase().replace("'", ' ') ?? '';
+
         res.venueEventUrl = eventEl.href;
         const uaRex = new RegExp(unavailabiltyTerms.join('|'), 'gi');
         res.unavailable = !!eventEl.textContent.match(uaRex);
@@ -71,7 +85,11 @@ scraper.mainPage = async function () {
     { workerData, unavailabiltyTerms: terms.unavailability },
   );
 
-  rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
+  rawEvents = rawEvents
+    .map((event) => mapToStartDate(event, 'dag-maandNaam-jaar', this.months))
+    .map(mapToShortDate)
+    .map(this.isMusicEventCorruptedMapper)
+    .map((re) => workTitleAndSlug(re, this._s.app.harvest.possiblePrefix));
 
   const eventGen = this.eventGenerator(rawEvents);
   // eslint-disable-next-line no-unused-vars
@@ -101,13 +119,6 @@ scraper.singlePage = async function ({ page, event }) {
         anker: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
         errors: [],
       };
-
-      res.mapToStartDate =
-        document
-          .querySelector('.event-info .base-info .info-line + .info-line .value')
-          ?.textContent.trim()
-          .replace("'", ' ')
-          .toLowerCase() ?? '';
       
       res.mapToStartTime =
         document
@@ -122,8 +133,7 @@ scraper.singlePage = async function ({ page, event }) {
     },
     { months: this.months, event },
   );
-
-  pageInfo = mapToStartDate(pageInfo, 'dag-maandNaam-jaar', this.months);
+  pageInfo.startDate = event.startDate;
   pageInfo = mapToStartTime(pageInfo);
   pageInfo = mapToDoorTime(pageInfo);
   pageInfo = combineStartTimeStartDate(pageInfo);

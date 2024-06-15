@@ -49,10 +49,10 @@ export const workerConfig = {
   //   forceSet: 2,
   // },
   // dynamo: { workerCount: 2, workerConcurrent: 1, forceSet: 3 },
-  effenaar: { workerCount: 1, workerConcurrent: 2, forceSet: 3 },
-  // gebouwt: {
-  //   workerCount: 1, workerConcurrent: 1, CPUReq: 'high', forceSet: 3, 
-  // },  
+  // effenaar: { workerCount: 2, workerConcurrent: 2, forceSet: 3 },
+  gebouwt: {
+    workerCount: 1, workerConcurrent: 1, CPUReq: 'high', forceSet: 3, 
+  },  
   // gebrdenobel: {
   //   workerCount: 1, workerConcurrent: 1, CPUReq: 'high', forceSet: 3, 
   // },

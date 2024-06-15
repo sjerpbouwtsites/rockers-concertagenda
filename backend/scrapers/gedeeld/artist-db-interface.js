@@ -185,6 +185,7 @@ export async function asyncSpotifyConfirmation(event, olderReasons) {
   });
   const dbAnswer = await this.checkDBhasAnswered();
   const DBToScraper = new DbInterFaceToScraper(dbAnswer, olderReasons, 'async spotify confirmation');
+  DBToScraper.setReason();
   if (DBToScraper.isSuccess || DBToScraper.isFailed) DBToScraper.setBreak(true);
   if (!DBToScraper.isError) return DBToScraper;
   
