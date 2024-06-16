@@ -90,7 +90,7 @@ const podiumGebruikt = {
   p60: voluitNederlands,
   patronaat: kortNederlands,
   victorie: kortNederlands,
-  volt: kortNederlands,
+  volt: voluitNederlands,
   tivolivredenburg: kortNederlands,
   ticketmaster: kortNederlands,
   willemeen: kortNederlands,
