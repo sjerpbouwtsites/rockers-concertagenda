@@ -1,49 +1,37 @@
 [
   {
-    "start": "2024-12-02T20:00:00+01:00",
-    "venueEventUrl": "https://www.spotgroningen.nl/programma/ian-paice-feat-purpendicular/",
-    "title": "Ian Paice feat. Purpendicular",
+    "start": "2024-09-22T20:30:00+02:00",
+    "venueEventUrl": "https://www.spotgroningen.nl/programma/within-temptation-2/",
+    "title": "Within Temptation",
     "location": "oosterpoort",
-    "price": 39.6,
-    "shortText": "Performing Classic Deep PurpleLegendarische drummer en oprichter van Deep Purple",
-    "longText": "../public/texts/oosterpoort/L2lhbi1wYWljZS1mZWF0LXB1cnBlbmRpY3VsYXIv.html",
-    "image": "../public/event-images/oosterpoort/L2lhbi1wYWljZS1mZWF0LXB1cnBlbmRpY3VsYXIv",
-    "soldOut": false,
+    "price": null,
+    "shortText": "Bleed Out 2024 Tour + support: Green LizardHet grootste rock-exportproduct dat Nederland ooit gekend heeft",
+    "longText": "../public/texts/oosterpoort/cHJvZ3JhbW1hL3dpdGhpbi10ZW1wdGF0aW9uLTIv.html",
+    "image": "../public/event-images/oosterpoort/cHJvZ3JhbW1hL3dpdGhpbi10ZW1wdGF0aW9uLTIv",
+    "soldOut": null,
     "unavailable": false,
     "eventGenres": null,
-    "artists": {
-      "ian paice": {
-        "s": "2gNdXbhyIbXHWvurrlrUAq",
-        "l": "ian%20paice",
-        "g": [
-          "rock drums",
-          "heavy metal"
-        ]
-      },
-      "purpendicular": {
-        "s": "7dtYKVbh2QXKICAzbxtrkF",
-        "l": "purpendicular",
-        "g": []
-      }
-    }
+    "artists": null
   },
   {
-    "start": "2025-02-01T20:00:00+01:00",
-    "venueEventUrl": "https://www.spotgroningen.nl/programma/feuerengel-a-tribute-to-rammstein/",
-    "title": "Feuerengel",
+    "start": "2024-12-05T20:00:00+01:00",
+    "venueEventUrl": "https://www.spotgroningen.nl/programma/sloper/",
+    "title": "Sloper",
     "location": "oosterpoort",
-    "price": 33.6,
-    "shortText": "A TRIBUTE TO RAMMSTEINRAMMMMMMMSTEIN!!!",
-    "longText": "../public/texts/oosterpoort/cmVuZ2VsLWEtdHJpYnV0ZS10by1yYW1tc3RlaW4v.html",
-    "image": "../public/event-images/oosterpoort/cmVuZ2VsLWEtdHJpYnV0ZS10by1yYW1tc3RlaW4v",
+    "price": 26.1,
+    "shortText": "Band opgezet door bekende drummers met ROCK als stevige basis",
+    "longText": "../public/texts/oosterpoort/Z3JvbmluZ2VuLm5sL3Byb2dyYW1tYS9zbG9wZXIv.html",
+    "image": "../public/event-images/oosterpoort/Z3JvbmluZ2VuLm5sL3Byb2dyYW1tYS9zbG9wZXIv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "feuerengel": {
-        "s": null,
-        "l": "feuerengel",
-        "g": []
+      "slope": {
+        "s": "35fxvnr5oanOFB1JNB2Ber",
+        "l": "slope",
+        "g": [
+          "dutch rock"
+        ]
       }
     }
   }
