@@ -1,158 +1,245 @@
 [
   {
-    "door": "2023-12-03T18:00:00",
-    "start": "2023-12-03T18:30:00",
-    "venueEventUrl": "https://www.effenaar.nl/agenda/alestorm",
-    "title": "Alestorm",
+    "door": "2024-08-08T20:45:00",
+    "start": "2024-08-08T20:30:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/frailbody-throwingbricks",
+    "title": "Frail Body + Throwing Bricks",
     "location": "effenaar",
-    "price": 32.5,
-    "shortText": "Schotse pirate metal",
-    "longText": "../public/texts/effenaar/d3cuZWZmZW5hYXIubmwvYWdlbmRhL2FsZXN0b3Jt.html",
-    "image": "../public/event-images/effenaar/d3cuZWZmZW5hYXIubmwvYWdlbmRhL2FsZXN0b3Jt",
-    "soldOut": true
+    "price": 16,
+    "shortText": "Screamo, post-rock en invloeden van black-metal.",
+    "longText": "../public/texts/effenaar/Z2VuZGEvZnJhaWxib2R5LXRocm93aW5nYnJpY2tz.html",
+    "image": "../public/event-images/effenaar/Z2VuZGEvZnJhaWxib2R5LXRocm93aW5nYnJpY2tz",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": null
   },
   {
-    "door": "2023-12-08T19:30:00",
-    "start": "2023-12-08T20:00:00",
-    "venueEventUrl": "https://www.effenaar.nl/agenda/tnsw",
-    "title": "These New South Whales",
+    "door": "2024-08-28T19:30:00",
+    "start": "2024-08-28T20:00:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/liturgy",
+    "title": "Liturgy",
     "location": "effenaar",
-    "price": 17,
-    "shortText": "Australische punkers met eigen comedy serie | + STiCKFiGS + Docile Bodies",
-    "longText": "../public/texts/effenaar/Oi8vd3d3LmVmZmVuYWFyLm5sL2FnZW5kYS90bnN3.html",
-    "image": "../public/event-images/effenaar/Oi8vd3d3LmVmZmVuYWFyLm5sL2FnZW5kYS90bnN3",
-    "soldOut": false
+    "price": 24.5,
+    "shortText": "Diep-filosofische avant-gardistische metal",
+    "longText": "../public/texts/effenaar/d3d3LmVmZmVuYWFyLm5sL2FnZW5kYS9saXR1cmd5.html",
+    "image": "../public/event-images/effenaar/d3d3LmVmZmVuYWFyLm5sL2FnZW5kYS9saXR1cmd5",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "liturgy": {
+        "s": "5PIuMlRY9PSLUSFzs6lQu1",
+        "l": "liturgy",
+        "g": [
+          "experimental black metal",
+          "noise rock",
+          "nyc metal",
+          "technical black metal",
+          "totalism",
+          "usbm"
+        ]
+      }
+    }
   },
   {
-    "door": "2023-12-09T15:00:00",
-    "start": "2023-12-09T15:30:00",
-    "venueEventUrl": "https://www.effenaar.nl/agenda/eindhoven-metal-meeting-2023-0",
-    "title": "Eindhoven metal meeting 2023",
+    "door": "2024-09-17T19:30:00",
+    "start": "2024-09-17T20:15:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/haken",
+    "title": "Haken",
     "location": "effenaar",
-    "price": 120,
-    "shortText": "",
-    "longText": "../public/texts/effenaar/ZWluZGhvdmVuLW1ldGFsLW1lZXRpbmctMjAyMy0w.html",
-    "image": "../public/event-images/effenaar/ZWluZGhvdmVuLW1ldGFsLW1lZXRpbmctMjAyMy0w",
-    "soldOut": false
+    "price": 38,
+    "shortText": "Invloedrijke progrockband uit Engeland",
+    "longText": "../public/texts/effenaar/Ly93d3cuZWZmZW5hYXIubmwvYWdlbmRhL2hha2Vu.html",
+    "image": "../public/event-images/effenaar/Ly93d3cuZWZmZW5hYXIubmwvYWdlbmRhL2hha2Vu",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": null
   },
   {
-    "door": "2024-01-06T19:30:00",
-    "start": "2024-01-06T20:00:00",
-    "venueEventUrl": "https://www.effenaar.nl/agenda/charlie-lesbians",
-    "title": "Charlie & The Lesbians",
+    "door": "2024-09-21T20:00:00",
+    "start": "2024-09-21T20:30:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/agriculture",
+    "title": "Agriculture",
     "location": "effenaar",
-    "price": 11.5,
-    "shortText": "Afscheidsshow | + The Sweet Release of Death + Smudged",
-    "longText": "../public/texts/effenaar/YWFyLm5sL2FnZW5kYS9jaGFybGllLWxlc2JpYW5z.html",
-    "image": "../public/event-images/effenaar/YWFyLm5sL2FnZW5kYS9jaGFybGllLWxlc2JpYW5z",
-    "soldOut": false
+    "price": 20.5,
+    "shortText": "Black metal voor fans van Deafheaven, Liturgy, Wolves in the Throne Room en Panopticon",
+    "longText": "../public/texts/effenaar/ZWZmZW5hYXIubmwvYWdlbmRhL2FncmljdWx0dXJl.html",
+    "image": "../public/event-images/effenaar/ZWZmZW5hYXIubmwvYWdlbmRhL2FncmljdWx0dXJl",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "liturgy": {
+        "s": "5PIuMlRY9PSLUSFzs6lQu1",
+        "l": "liturgy",
+        "g": [
+          "experimental black metal",
+          "noise rock",
+          "nyc metal",
+          "technical black metal",
+          "totalism",
+          "usbm"
+        ]
+      }
+    }
   },
   {
-    "door": "2024-01-07T15:00:00",
-    "start": "2024-01-07T16:00:00",
-    "venueEventUrl": "https://www.effenaar.nl/agenda/ronnie-james-dio-memorial-concert",
-    "title": "Ronnie James Dio Memorial Concert",
+    "door": "2024-10-05T15:30:00",
+    "start": "2024-10-05T16:00:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/caya2024",
+    "title": "Come As You Are",
     "location": "effenaar",
-    "price": 28.5,
-    "shortText": "De crème de la crème van de Nederlandse hardrock en metal",
-    "longText": "../public/texts/effenaar/bmllLWphbWVzLWRpby1tZW1vcmlhbC1jb25jZXJ0.html",
-    "image": "../public/event-images/effenaar/bmllLWphbWVzLWRpby1tZW1vcmlhbC1jb25jZXJ0",
-    "soldOut": false
+    "price": 48,
+    "shortText": " o.a. STONE, Buffalo Tom & Personal Trainer  Het beste van drie decennia gitaarmuziek",
+    "longText": "../public/texts/effenaar/d3cuZWZmZW5hYXIubmwvYWdlbmRhL2NheWEyMDI0.html",
+    "image": "../public/event-images/effenaar/d3cuZWZmZW5hYXIubmwvYWdlbmRhL2NheWEyMDI0",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": {
+      "stone": {
+        "s": "22bE4uQ6baNwSHPVcDxLCe",
+        "l": "stone",
+        "g": [
+          "album rock",
+          "british invasion",
+          "classic rock",
+          "rock"
+        ]
+      }
+    }
   },
   {
-    "door": "2024-01-13T21:30:00",
-    "start": "2024-01-13T21:30:00",
-    "venueEventUrl": "https://www.effenaar.nl/agenda/snaren-90-green-bay",
-    "title": "Snaren 90: Green Bay",
-    "location": "effenaar",
-    "price": 11.5,
-    "shortText": "Dé alternatieve dansavond | poppunk editie",
-    "longText": "../public/texts/effenaar/Lm5sL2FnZW5kYS9zbmFyZW4tOTAtZ3JlZW4tYmF5.html",
-    "image": "../public/event-images/effenaar/Lm5sL2FnZW5kYS9zbmFyZW4tOTAtZ3JlZW4tYmF5",
-    "soldOut": false
-  },
-  {
-    "door": "2024-01-20T20:00:00",
-    "start": "2024-01-20T20:30:00",
-    "venueEventUrl": "https://www.effenaar.nl/agenda/restraining-order",
-    "title": "Restraining Order",
-    "location": "effenaar",
-    "price": 14.5,
-    "shortText": "Hardcore punk voor fans van Minor Threat, Turnstile en Militarie Gun",
-    "longText": "../public/texts/effenaar/YXIubmwvYWdlbmRhL3Jlc3RyYWluaW5nLW9yZGVy.html",
-    "image": "../public/event-images/effenaar/YXIubmwvYWdlbmRhL3Jlc3RyYWluaW5nLW9yZGVy",
-    "soldOut": false
-  },
-  {
-    "door": "2024-02-02T20:00:00",
-    "start": "2024-02-02T20:30:00",
-    "venueEventUrl": "https://www.effenaar.nl/agenda/skating-polly",
-    "title": "Skating Polly",
-    "location": "effenaar",
-    "price": 15,
-    "shortText": "Eclectische mix van riot grrrl, grunge, punkrock en indiepop | + Death Sells",
-    "longText": "../public/texts/effenaar/ZmVuYWFyLm5sL2FnZW5kYS9za2F0aW5nLXBvbGx5.html",
-    "image": "../public/event-images/effenaar/ZmVuYWFyLm5sL2FnZW5kYS9za2F0aW5nLXBvbGx5",
-    "soldOut": false
-  },
-  {
-    "door": "2024-02-25T19:30:00",
-    "start": "2024-02-25T20:00:00",
-    "venueEventUrl": "https://www.effenaar.nl/agenda/dead-boys",
-    "title": "Dead Boys",
+    "door": "2024-10-30T19:30:00",
+    "start": "2024-10-30T20:00:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/master-boot-record",
+    "title": "Master Boot Record",
     "location": "effenaar",
     "price": 22.5,
-    "shortText": "Exclusieve NL show! | + The Spades + Lipstick Vibrators",
-    "longText": "../public/texts/effenaar/dy5lZmZlbmFhci5ubC9hZ2VuZGEvZGVhZC1ib3lz.html",
-    "image": "../public/event-images/effenaar/dy5lZmZlbmFhci5ubC9hZ2VuZGEvZGVhZC1ib3lz",
-    "soldOut": false
+    "shortText": "Unieke fusie van heavy metal, elektronische beats en chiptune",
+    "longText": "../public/texts/effenaar/ci5ubC9hZ2VuZGEvbWFzdGVyLWJvb3QtcmVjb3Jk.html",
+    "image": "../public/event-images/effenaar/ci5ubC9hZ2VuZGEvbWFzdGVyLWJvb3QtcmVjb3Jk",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "master boot record": {
+        "s": "77s5NAGQbxu8oLstaqSwHE",
+        "l": "master%20boot%20record",
+        "g": [
+          "darksynth",
+          "metal"
+        ]
+      }
+    }
   },
   {
-    "door": "2024-03-15T19:30:00",
-    "start": "2024-03-15T20:00:00",
-    "venueEventUrl": "https://www.effenaar.nl/agenda/pene-corrida",
-    "title": "Pene Corrida",
+    "door": "2024-11-07T19:30:00",
+    "start": "2024-11-07T20:15:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/smash-into-pieces",
+    "title": "Smash Into Pieces",
+    "location": "effenaar",
+    "price": 26.5,
+    "shortText": "Cinematische, alternatieve rocksensatie uit Zweden",
+    "longText": "../public/texts/effenaar/YXIubmwvYWdlbmRhL3NtYXNoLWludG8tcGllY2Vz.html",
+    "image": "../public/event-images/effenaar/YXIubmwvYWdlbmRhL3NtYXNoLWludG8tcGllY2Vz",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "smash into pieces": {
+        "s": "2vhrwzjf9H3icunkVFi9tq",
+        "l": "smash%20into%20pieces",
+        "g": [
+          "swedish alternative rock"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2024-11-28T19:30:00",
+    "start": "2024-11-28T20:15:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/vola",
+    "title": "Vola",
+    "location": "effenaar",
+    "price": 24.5,
+    "shortText": "Progressieve rock, elektronica en metal | + Charlotte Wessels",
+    "longText": "../public/texts/effenaar/Oi8vd3d3LmVmZmVuYWFyLm5sL2FnZW5kYS92b2xh.html",
+    "image": "../public/event-images/effenaar/Oi8vd3d3LmVmZmVuYWFyLm5sL2FnZW5kYS92b2xh",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2024-11-30T19:30:00",
+    "start": "2024-11-30T20:00:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/tusky",
+    "title": "Tusky",
     "location": "effenaar",
     "price": 17,
-    "shortText": "Genadeloze pop-metal party show",
-    "longText": "../public/texts/effenaar/ZmZlbmFhci5ubC9hZ2VuZGEvcGVuZS1jb3JyaWRh.html",
-    "image": "../public/event-images/effenaar/ZmZlbmFhci5ubC9hZ2VuZGEvcGVuZS1jb3JyaWRh",
-    "soldOut": false
+    "shortText": "Een ware ode aan de punkcultuur. Dat betekent: de plinten van de muur!",
+    "longText": "../public/texts/effenaar/Ly93d3cuZWZmZW5hYXIubmwvYWdlbmRhL3R1c2t5.html",
+    "image": "../public/event-images/effenaar/Ly93d3cuZWZmZW5hYXIubmwvYWdlbmRhL3R1c2t5",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "tusky": {
+        "s": "6XbZ8G0cFqSgUL4FmtiSPr",
+        "l": "tusky",
+        "g": [
+          "dutch punk",
+          "dutch rock"
+        ]
+      }
+    }
   },
   {
-    "door": "2024-03-24T20:00:00",
-    "start": "2024-03-24T19:30:00",
-    "venueEventUrl": "https://www.effenaar.nl/agenda/taake",
-    "title": "Taake",
+    "door": "2024-12-12T19:00:00",
+    "start": "2024-12-12T19:30:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/eindhoven-metal-meeting-warm-evening",
+    "title": "Eindhoven Metal Meeting Warm-Up Evening",
     "location": "effenaar",
     "price": 22.5,
-    "shortText": "+ Nordjevel + Theotoxin",
-    "longText": "../public/texts/effenaar/Ly93d3cuZWZmZW5hYXIubmwvYWdlbmRhL3RhYWtl.html",
-    "image": "../public/event-images/effenaar/Ly93d3cuZWZmZW5hYXIubmwvYWdlbmRhL3RhYWtl",
-    "soldOut": false
+    "shortText": "Dead Head + The Omega Swarm & more TBA",
+    "longText": "../public/texts/effenaar/dmVuLW1ldGFsLW1lZXRpbmctd2FybS1ldmVuaW5n.html",
+    "image": "../public/event-images/effenaar/dmVuLW1ldGFsLW1lZXRpbmctd2FybS1ldmVuaW5n",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": null
   },
   {
-    "door": "2024-04-13T14:30:00",
-    "start": "2024-04-13T15:00:00",
-    "venueEventUrl": "https://www.effenaar.nl/agenda/welcome-hell",
-    "title": "Welcome To Hell",
+    "door": "2024-12-14T16:00:00",
+    "start": "2024-12-14T16:00:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/eindhoven-metal-meeting-2024-0",
+    "title": "Eindhoven Metal Meeting 2024",
     "location": "effenaar",
-    "price": 39,
-    "shortText": "Old-school metal vagevuur festival",
-    "longText": "../public/texts/effenaar/ZmZlbmFhci5ubC9hZ2VuZGEvd2VsY29tZS1oZWxs.html",
-    "image": "../public/event-images/effenaar/ZmZlbmFhci5ubC9hZ2VuZGEvd2VsY29tZS1oZWxs",
-    "soldOut": false
+    "price": 125,
+    "shortText": "met o.a. KATATONIA, THE KOVENANT, AGENT STEEL, SCHAMMASCH, AKHLYS",
+    "longText": "../public/texts/effenaar/ZWluZGhvdmVuLW1ldGFsLW1lZXRpbmctMjAyNC0w.html",
+    "image": "../public/event-images/effenaar/ZWluZGhvdmVuLW1ldGFsLW1lZXRpbmctMjAyNC0w",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "akhlys": {
+        "s": "7swiuMho0UMNYbZqcO0dho",
+        "l": "akhlys",
+        "g": [
+          "atmospheric black metal",
+          "autonomous black metal",
+          "black metal",
+          "metal",
+          "voidgaze"
+        ]
+      }
+    }
   },
   {
-    "door": "2024-05-09T15:00:00",
-    "start": "2024-05-09T15:30:00",
-    "venueEventUrl": "https://www.effenaar.nl/agenda/temple-rock-festival",
-    "title": "Temple of Rock festival",
+    "door": "2024-12-28T16:00:00",
+    "start": "2024-12-28T16:20:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/legendsofrock-xl",
+    "title": "Legends of rock tribute festival xl",
     "location": "effenaar",
-    "price": 27.5,
-    "shortText": "Met tributes aan o.a. Rage Against The Machine en Foo Fighters.",
-    "longText": "../public/texts/effenaar/bmwvYWdlbmRhL3RlbXBsZS1yb2NrLWZlc3RpdmFs.html",
-    "image": "../public/event-images/effenaar/bmwvYWdlbmRhL3RlbXBsZS1yb2NrLWZlc3RpdmFs",
-    "soldOut": false
+    "price": 33.5,
+    "shortText": "met tributes aan AC/DC, Bon Jovi, Metallica, Guns N’ Roses en Deep Purple",
+    "longText": "../public/texts/effenaar/YWFyLm5sL2FnZW5kYS9sZWdlbmRzb2Zyb2NrLXhs.html",
+    "image": "../public/event-images/effenaar/YWFyLm5sL2FnZW5kYS9sZWdlbmRzb2Zyb2NrLXhs",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": null
   }
 ]
