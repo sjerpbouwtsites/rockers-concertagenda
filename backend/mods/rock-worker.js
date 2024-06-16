@@ -32,7 +32,7 @@ export default class RockWorker extends Worker {
         type: 'process',
         subtype: 'command-die',
       }));
-    }, 5000);
+    }, 3000);
   }
 
   /**

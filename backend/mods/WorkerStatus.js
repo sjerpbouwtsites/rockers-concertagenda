@@ -119,15 +119,15 @@ export default class WorkerStatus {
   }
 
   static get OSHasMinimalSpace() {
-    return WorkerStatus.CPUFree > 30;
+    return WorkerStatus.CPUFree > 35;
   }
 
   static get OSHasSpace() {
-    return WorkerStatus.CPUFree > 40;
+    return WorkerStatus.CPUFree > 50;
   }
 
   static get OSHasALotOfSpace() {
-    return WorkerStatus.CPUFree > 60;
+    return WorkerStatus.CPUFree > 66;
   }
 
   // @TODO CREEER: tbv niet één familie meerdere tegelijk
@@ -368,13 +368,25 @@ export default class WorkerStatus {
       consolidatedLocations[loc].count += 1;
     });
 
+    console.group('worker status double events');
+    console.log('FUCKING HACK');
+    console.groupEnd();
+    const noDoubleEvents = consolidatedEvents.filter((ev, index) => {
+      if (index === 0) return ev;
+      const laatste = noDoubleEvents[index - 1];
+      const laatsteNaamDatum = laatste.title + laatste.start;
+      const dezeNaamDatum = ev.title + ev.start;
+      if (laatsteNaamDatum === dezeNaamDatum) return false;
+      return ev;
+    });
+
     fs.writeFileSync(
       fsDirections.eventsListJson,
-      JSON.stringify(consolidatedEvents, null, '  '),
+      JSON.stringify(noDoubleEvents, null, '  '),
       'utf-8',
     );
     // passMessageToMonitor(qwm.toConsole(consolidatedEvents), workerSignature);
-    console.log(`saved ${consolidatedEvents.length} events`);
+    console.log(`saved ${noDoubleEvents.length} events`);
 
     fs.copyFileSync(fsDirections.eventsListJson, fsDirections.eventsListPublicJson);
   }
