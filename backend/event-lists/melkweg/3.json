@@ -52,110 +52,108 @@
     }
   },
   {
-    "start": "2024-09-13T20:00:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/magic-tom-yuri-13-09-2024/",
-    "title": "Magic Tom & Yuri",
+    "start": "2024-09-14T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/no-barrier-14-09-2024/",
+    "title": "No Barrier",
     "location": "melkweg",
-    "price": 18.4,
-    "shortText": "punk · magisch Magic Tom & Yuri ZIJN Cool",
-    "longText": "../public/texts/melkweg/bmRhL21hZ2ljLXRvbS15dXJpLTEzLTA5LTIwMjQv.html",
-    "image": "../public/event-images/melkweg/bmRhL21hZ2ljLXRvbS15dXJpLTEzLTA5LTIwMjQv",
+    "price": 15.55,
+    "shortText": "punk · rock · metalcore Punk, rock & metalcore party met DJ's en liveband",
+    "longText": "../public/texts/melkweg/L2FnZW5kYS9uby1iYXJyaWVyLTE0LTA5LTIwMjQv.html",
+    "image": "../public/event-images/melkweg/L2FnZW5kYS9uby1iYXJyaWVyLTE0LTA5LTIwMjQv",
     "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "no barrier": {
+        "s": "2am0pROxk0wcIVgL5rZA3A",
+        "l": "no%20barrier",
+        "g": []
+      }
+    }
+  },
+  {
+    "start": "2024-10-03T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/montreal-sondaschule-03-10-2024/",
+    "title": "Montreal / Sondaschule",
+    "location": "melkweg",
+    "price": 40.25,
+    "shortText": "punk · duits",
+    "longText": "../public/texts/melkweg/bnRyZWFsLXNvbmRhc2NodWxlLTAzLTEwLTIwMjQv.html",
+    "image": "../public/event-images/melkweg/bnRyZWFsLXNvbmRhc2NodWxlLTAzLTEwLTIwMjQv",
+    "soldOut": true,
     "unavailable": false,
     "eventGenres": null,
     "artists": null
   },
   {
-    "start": "2024-09-27T20:00:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/tusky-27-09-2024/",
-    "title": "Tusky",
+    "start": "2024-10-31T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/master-boot-record-31-10-2024/",
+    "title": "Master Boot Record",
     "location": "melkweg",
-    "price": 17.25,
-    "shortText": "punk · anarchistisch",
-    "longText": "../public/texts/melkweg/bmwvbmwvYWdlbmRhL3R1c2t5LTI3LTA5LTIwMjQv.html",
-    "image": "../public/event-images/melkweg/bmwvbmwvYWdlbmRhL3R1c2t5LTI3LTA5LTIwMjQv",
+    "price": 18.4,
+    "shortText": "avant-garde · heavy metal · synthwave",
+    "longText": "../public/texts/melkweg/bWFzdGVyLWJvb3QtcmVjb3JkLTMxLTEwLTIwMjQv.html",
+    "image": "../public/event-images/melkweg/bWFzdGVyLWJvb3QtcmVjb3JkLTMxLTEwLTIwMjQv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "tusky": {
-        "s": "6XbZ8G0cFqSgUL4FmtiSPr",
-        "l": "tusky",
+      "master boot record": {
+        "s": "77s5NAGQbxu8oLstaqSwHE",
+        "l": "master%20boot%20record",
         "g": [
-          "dutch punk",
-          "dutch rock"
+          "darksynth",
+          "metal"
         ]
       }
     }
   },
   {
-    "start": "2024-10-08T20:00:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/dead-by-april-08-10-2024/",
-    "title": "Dead By April",
+    "start": "2024-11-17T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/zeke-17-11-2024/",
+    "title": "Zeke",
     "location": "melkweg",
-    "price": 25.9,
-    "shortText": "metalcore · electronic · rock",
-    "longText": "../public/texts/melkweg/ZW5kYS9kZWFkLWJ5LWFwcmlsLTA4LTEwLTIwMjQv.html",
-    "image": "../public/event-images/melkweg/ZW5kYS9kZWFkLWJ5LWFwcmlsLTA4LTEwLTIwMjQv",
+    "price": 20.7,
+    "shortText": "hardcore punk",
+    "longText": "../public/texts/melkweg/Lm5sL25sL2FnZW5kYS96ZWtlLTE3LTExLTIwMjQv.html",
+    "image": "../public/event-images/melkweg/Lm5sL25sL2FnZW5kYS96ZWtlLTE3LTExLTIwMjQv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": null
   },
   {
-    "start": "2024-11-08T20:00:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/the-story-so-far-08-11-2024/",
-    "title": "The Story So Far",
+    "start": "2024-12-05T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/letz-zep-05-12-2024/",
+    "title": "Letz Zep",
     "location": "melkweg",
-    "price": 25.3,
-    "shortText": "poppunk · melodic · hardcore",
-    "longText": "../public/texts/melkweg/YS90aGUtc3Rvcnktc28tZmFyLTA4LTExLTIwMjQv.html",
-    "image": "../public/event-images/melkweg/YS90aGUtc3Rvcnktc28tZmFyLTA4LTExLTIwMjQv",
+    "price": 23,
+    "shortText": "heavy",
+    "longText": "../public/texts/melkweg/bmwvYWdlbmRhL2xldHotemVwLTA1LTEyLTIwMjQv.html",
+    "image": "../public/event-images/melkweg/bmwvYWdlbmRhL2xldHotemVwLTA1LTEyLTIwMjQv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": null
   },
   {
-    "start": "2024-11-24T20:00:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/hardcore-superstar-wednesday-13-24-11-2024/",
-    "title": "Hardcore Superstar / Wednesday 13",
+    "start": "2024-12-15T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/new-model-army-15-12-2024/",
+    "title": "New Model Army",
     "location": "melkweg",
     "price": 31.05,
-    "shortText": "glamrock · metal · horror",
-    "longText": "../public/texts/melkweg/cnN0YXItd2VkbmVzZGF5LTEzLTI0LTExLTIwMjQv.html",
-    "image": "../public/event-images/melkweg/cnN0YXItd2VkbmVzZGF5LTEzLTI0LTExLTIwMjQv",
+    "shortText": "rock · postpunk",
+    "longText": "../public/texts/melkweg/bmRhL25ldy1tb2RlbC1hcm15LTE1LTEyLTIwMjQv.html",
+    "image": "../public/event-images/melkweg/bmRhL25ldy1tb2RlbC1hcm15LTE1LTEyLTIwMjQv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": null
-  },
-  {
-    "start": "2024-12-06T20:00:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/royal-republic-06-12-2024/",
-    "title": "Royal Republic",
-    "location": "melkweg",
-    "price": 34.5,
-    "shortText": "hardrock · disco · rock-‘n-roll",
-    "longText": "../public/texts/melkweg/bmRhL3JveWFsLXJlcHVibGljLTA2LTEyLTIwMjQv.html",
-    "image": "../public/event-images/melkweg/bmRhL3JveWFsLXJlcHVibGljLTA2LTEyLTIwMjQv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
-    "start": "2024-12-19T20:00:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/dool-19-12-2024/",
-    "title": "Dool",
-    "location": "melkweg",
-    "price": 25.3,
-    "shortText": "progressieve rock · metal · postrock",
-    "longText": "../public/texts/melkweg/Lm5sL25sL2FnZW5kYS9kb29sLTE5LTEyLTIwMjQv.html",
-    "image": "../public/event-images/melkweg/Lm5sL25sL2FnZW5kYS9kb29sLTE5LTEyLTIwMjQv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": null
+    "artists": {
+      "new model army": {
+        "s": "7n1EM42Fseebd9H2p8eWWS",
+        "l": "new%20model%20army",
+        "g": []
+      }
+    }
   }
 ]

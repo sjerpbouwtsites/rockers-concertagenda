@@ -58,23 +58,23 @@ export const workerConfig = {
   //   workerCount: 1, workerConcurrent: 1, CPUReq: 'high', forceSet: 3, 
   // },
   // groeneengel: { workerCount: 1, workerConcurrent: 1, forceSet: 3 },
-  iduna: { workerCount: 1, workerConcurrent: 1, forceSet: 4 },
+  // iduna: { workerCount: 1, workerConcurrent: 1, forceSet: 4 },
   // kavka: {
   //   workerCount: 2,
   //   workerConcurrent: 2,
   //   forceSet: 4,
   // },
-  // melkweg: {
-  //   workerCount: 4,
-  //   CPUReq: 'low',
-  //   workerConcurrent: 1,
-  //   forceSet: 4,
-  // },
-  // littledevil: {
-  //   workerCount: 1,
-  //   workerConcurrent: 2,
-  //   forceSet: 4,
-  // },
+  melkweg: {
+    workerCount: 4,
+    CPUReq: 'low',
+    workerConcurrent: 1,
+    forceSet: 4,
+  },
+  littledevil: {
+    workerCount: 1,
+    workerConcurrent: 2,
+    forceSet: 4,
+  },
   // metalfan: { workerCount: 1, CPUReq: 'low', workerConcurrent: 1 },
   // metropool: {
   //   workerCount: 3,
