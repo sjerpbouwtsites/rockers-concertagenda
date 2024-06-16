@@ -6,8 +6,10 @@ import longTextSocialsIframes from './longtext/littledevil.js';
 import getImage from './gedeeld/image.js';
 import {
   combineStartTimeStartDate, mapToStartDate, mapToStartTime, 
-  mapToDoorTime, combineDoorTimeStartDate,
+  mapToDoorTime, combineDoorTimeStartDate, mapToShortDate,
 } from './gedeeld/datums.js';
+import workTitleAndSlug from './gedeeld/slug.js';
+import terms from '../artist-db/store/terms.js';
 
 // #region        SCRAPER CONFIG
 const scraper = new AbstractScraper({
@@ -20,13 +22,20 @@ const scraper = new AbstractScraper({
     timeout: 15000,
   },
   app: {
+    harvest: {
+      dividers: [`,`, ` en`],
+      dividerRex: "[\\,]",
+      artistsIn: ['title'],
+    },    
     mainPage: {
       requiredProperties: ['venueEventUrl', 'title'],
-      asyncCheckFuncs: ['allowed', 'event', 'refused', 'forbiddenTerms', 'emptySuccess'],
+      asyncCheckFuncs: ['refused', 'allowedEvent', 'forbiddenTerms', 'hasGoodTerms', 'hasAllowedArtist', 'spotifyConfirmation', 'failure'],
+      // asyncCheckFuncs: ['allowed', 'event', 'refused', 'forbiddenTerms', 'emptySuccess'],
     },
     singlePage: {
       requiredProperties: ['venueEventUrl', 'title', 'start'],
-      asyncCheckFuncs: ['goodTerms', 'isRock', 'saveRefused', 'emptyFailure'],
+      asyncCheckFuncs: ['success'],
+      // asyncCheckFuncs: ['goodTerms', 'isRock', 'saveRefused', 'emptyFailure'],
     },
   },
 });
@@ -48,7 +57,7 @@ scraper.mainPage = async function () {
 
   const { stopFunctie, page } = await this.mainPageStart();
 
-  const rawEvents = await page.evaluate(
+  let rawEvents = await page.evaluate(
     // eslint-disable-next-line no-shadow
     ({ workerData }) =>
       Array.from(document.querySelectorAll('.program.row[data-genre*="live"]')).map((eventEl) => {
@@ -62,10 +71,20 @@ scraper.mainPage = async function () {
         };
         res.shortText = eventEl.querySelector('h4 + p')?.textContent.trim() ?? '';
         res.soldOut = !!eventEl.querySelector('.uitverkocht');
+        res.mapToStartDate = eventEl.querySelector('.program-date h4')
+          ?.innerHTML.replaceAll("<br>", ' ').replaceAll(/\s{2,500}/g, ' ').trim();
         return res;
       }),   
     { workerData },
   );
+
+  this.dirtyLog(rawEvents);
+
+  rawEvents = rawEvents
+    .map((event) => mapToStartDate(event, 'dag-maandNaam', this.months))
+    .map(mapToShortDate)
+    .map(this.isMusicEventCorruptedMapper)
+    .map((re) => workTitleAndSlug(re, this._s.app.harvest.possiblePrefix));  
 
   const eventGen = this.eventGenerator(rawEvents);
   // eslint-disable-next-line no-unused-vars
@@ -116,10 +135,14 @@ scraper.singlePage = async function ({ page, event }) {
     page,
     event,
     pageInfo,
-    selectors: ['.show-info .columns + .columns'],
+    selectors: ['.show-info .columns + .columns', '.sidebar'],
   });
   
-  const isGratis = await page.evaluate(() => !document.querySelector('.show-info .columns + .columns')?.textContent.match(/€/i) ?? null);
+  const isGratis = await page.evaluate(() => {
+    const heeftEuros = !document.querySelector('.show-info .columns + .columns')?.textContent.match(/€/i) ?? null;
+    const heeftGratis = document.querySelector('.sidebar')?.textContent.includes('gratis');
+    return !heeftEuros || heeftGratis;
+  });
   if (pageInfo.errors.length && isGratis) {
     pageInfo.price = 0;
   } else {
@@ -127,20 +150,19 @@ scraper.singlePage = async function ({ page, event }) {
     pageInfo.price = priceRes.price;
   }
 
-  pageInfo.mapToStartDate = await page.evaluate(() => document.querySelector('.show-info')?.textContent ?? null);
+  pageInfo.startDate = event.startDate;
   pageInfo.mapToStartTime = await page.evaluate(() => {
-    const r = document.querySelector('.show-info')?.textContent.match(/deur.*/i);
+    const r = document.querySelector('.show-info')?.textContent.match(/aanvang.*/i);
     if (Array.isArray(r)) return r[0].replace('.', ':');
     return null;
   });
   pageInfo.mapToDoorTime = await page.evaluate(() => {
-    const r = document.querySelector('.show-info')?.textContent.match(/aanvang.*/i);
+    const r = document.querySelector('.show-info')?.textContent.match(/deur.*/i);
     if (Array.isArray(r)) return r[0].replace('.', ':');
     return null;
   });
   pageInfo = mapToStartTime(pageInfo);
   pageInfo = mapToDoorTime(pageInfo);
-  pageInfo = mapToStartDate(pageInfo, 'dag-maandNaam-jaar', this.months);
   pageInfo = combineStartTimeStartDate(pageInfo);
   pageInfo = combineDoorTimeStartDate(pageInfo);
 

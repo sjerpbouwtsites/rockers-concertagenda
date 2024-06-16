@@ -1,178 +1,105 @@
 [
   {
-    "start": "2024-06-18T22:45:00",
-    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/37490577/%e2%80%a0%e2%80%a0%e2%80%a0-crosses-18-06-2024",
-    "title": "††† (crosses)",
-    "location": "tivolivredenburg",
-    "price": 37.75,
-    "shortText": "Met Deftones-frontman Chino Moreno en Far-gitarist Shaun Lopez",
-    "longText": "../public/texts/tivolivredenburg/YTAlZTIlODAlYTAtY3Jvc3Nlcy0xOC0wNi0yMDI0.html",
-    "image": "../public/event-images/tivolivredenburg/YTAlZTIlODAlYTAtY3Jvc3Nlcy0xOC0wNi0yMDI0",
+    "start": "2024-07-05T18:00:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/move-the-city-5/07/24",
+    "title": "Move The City",
+    "location": "victorie",
+    "price": 2024,
+    "shortText": "Gratis cultureel festival in de Alkmaarse wijk Overdie",
+    "longText": "../public/texts/victorie/cm9ncmFtbWEvbW92ZS10aGUtY2l0eS01LzA3LzI0.html",
+    "image": "../public/event-images/victorie/cm9ncmFtbWEvbW92ZS10aGUtY2l0eS01LzA3LzI0",
     "soldOut": false,
-    "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "††† (crosses)": {
+      "move": {
+        "s": "3SUI6pbPumjijbLHHY6vss",
+        "l": "move",
+        "g": [
+          "alternative roots rock",
+          "modern blues rock",
+          "modern hard rock"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2024-07-06T13:00:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/move-the-city-6/07/24",
+    "title": "Move The City",
+    "location": "victorie",
+    "price": 2024,
+    "shortText": "Gratis cultureel festival in de Alkmaarse wijk Overdie",
+    "longText": "../public/texts/victorie/cm9ncmFtbWEvbW92ZS10aGUtY2l0eS02LzA3LzI0.html",
+    "image": "../public/event-images/victorie/cm9ncmFtbWEvbW92ZS10aGUtY2l0eS02LzA3LzI0",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "move": {
+        "s": "3SUI6pbPumjijbLHHY6vss",
+        "l": "move",
+        "g": [
+          "alternative roots rock",
+          "modern blues rock",
+          "modern hard rock"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2024-07-07T11:00:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/move-the-city-7/07/24",
+    "title": "Move The City",
+    "location": "victorie",
+    "price": 2024,
+    "shortText": "Gratis cultureel festival in de Alkmaarse wijk Overdie",
+    "longText": "../public/texts/victorie/cm9ncmFtbWEvbW92ZS10aGUtY2l0eS03LzA3LzI0.html",
+    "image": "../public/event-images/victorie/cm9ncmFtbWEvbW92ZS10aGUtY2l0eS03LzA3LzI0",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "move": {
+        "s": "3SUI6pbPumjijbLHHY6vss",
+        "l": "move",
+        "g": [
+          "alternative roots rock",
+          "modern blues rock",
+          "modern hard rock"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2024-07-12T19:30:00",
+    "start": "2024-07-12T20:30:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/knives-out!-juli",
+    "title": "Knives Out! ft. Library Card",
+    "location": "victorie",
+    "price": 11.5,
+    "shortText": " Marathon en Femme Fugazi (Post)punkavond met moshpitwaardig boeket",
+    "longText": "../public/texts/victorie/Lm5sL3Byb2dyYW1tYS9rbml2ZXMtb3V0IS1qdWxp.html",
+    "image": "../public/event-images/victorie/Lm5sL3Byb2dyYW1tYS9rbml2ZXMtb3V0IS1qdWxp",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2024-10-11T19:00:00",
+    "start": "2024-10-11T20:30:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/y-en-t-11/10/24",
+    "title": "Y&t",
+    "location": "victorie",
+    "price": 38.1,
+    "shortText": "Legendarische Amerikaanse rockband bestaat 50 jaar",
+    "longText": "../public/texts/victorie/ZS5ubC9wcm9ncmFtbWEveS1lbi10LTExLzEwLzI0.html",
+    "image": "../public/event-images/victorie/ZS5ubC9wcm9ncmFtbWEveS1lbi10LTExLzEwLzI0",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "y&t": {
         "s": null,
         "l": null,
         "g": [
-          "metal",
-          "alternative metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2024-06-20T22:40:00",
-    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/16612354/abbath-performs-immortal-20-06-2024",
-    "title": "Abbath performs Immortal",
-    "location": "tivolivredenburg",
-    "price": 34.75,
-    "shortText": "Bijzondere setlist met louter Immortal-klassiekers.",
-    "longText": "../public/texts/tivolivredenburg/aC1wZXJmb3Jtcy1pbW1vcnRhbC0yMC0wNi0yMDI0.html",
-    "image": "../public/event-images/tivolivredenburg/aC1wZXJmb3Jtcy1pbW1vcnRhbC0yMC0wNi0yMDI0",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "abbath": {
-        "s": "1epGwdbjU7JSGVBHlqptpx",
-        "l": "abbath",
-        "g": [
-          "black 'n' roll",
-          "black metal",
-          "death metal",
-          "metal",
-          "norwegian black metal",
-          "symphonic black metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2024-06-25T19:45:00",
-    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/48145257/cradle-of-filth-25-06-2024",
-    "title": "Cradle of Filth",
-    "location": "tivolivredenburg",
-    "price": 33.75,
-    "shortText": "Engels metal-instituut voor het eerst in Utrecht",
-    "longText": "../public/texts/tivolivredenburg/MjU3L2NyYWRsZS1vZi1maWx0aC0yNS0wNi0yMDI0.html",
-    "image": "../public/event-images/tivolivredenburg/MjU3L2NyYWRsZS1vZi1maWx0aC0yNS0wNi0yMDI0",
-    "soldOut": true,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
-    "door": "2024-07-01T20:00:00",
-    "start": "2024-07-01T22:30:00",
-    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/41654929/julie-christmas-01-07-2024",
-    "title": "Julie Christmas",
-    "location": "tivolivredenburg",
-    "price": 30.75,
-    "shortText": "Eigenzinnige zangeres presenteert nieuw soloalbum",
-    "longText": "../public/texts/tivolivredenburg/OTI5L2p1bGllLWNocmlzdG1hcy0wMS0wNy0yMDI0.html",
-    "image": "../public/event-images/tivolivredenburg/OTI5L2p1bGllLWNocmlzdG1hcy0wMS0wNy0yMDI0",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
-    "start": "2024-08-20T20:15:00",
-    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/88984943/destroy-boys-20-08-2024",
-    "title": "Destroy Boys",
-    "location": "tivolivredenburg",
-    "price": 24.35,
-    "shortText": "San Francisco punk",
-    "longText": "../public/texts/tivolivredenburg/OTg0OTQzL2Rlc3Ryb3ktYm95cy0yMC0wOC0yMDI0.html",
-    "image": "../public/event-images/tivolivredenburg/OTg0OTQzL2Rlc3Ryb3ktYm95cy0yMC0wOC0yMDI0",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
-    "door": "2024-08-24T13:30:00",
-    "start": "2024-08-24T22:00:00",
-    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/16980142/loose-ends-festival-24-08-2024",
-    "title": "Loose Ends Festival",
-    "location": "tivolivredenburg",
-    "price": 42.5,
-    "shortText": "TivoliVredenburg & Friendly Fire presents",
-    "longText": "../public/texts/tivolivredenburg/bG9vc2UtZW5kcy1mZXN0aXZhbC0yNC0wOC0yMDI0.html",
-    "image": "../public/event-images/tivolivredenburg/bG9vc2UtZW5kcy1mZXN0aXZhbC0yNC0wOC0yMDI0",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
-    "start": "2024-08-24T18:00:00",
-    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/95332552/amon-amarth-24-08-2024",
-    "title": "Amon Amarth",
-    "location": "tivolivredenburg",
-    "price": 46.5,
-    "shortText": "Met supports Insomnium & Kanonenfieber",
-    "longText": "../public/texts/tivolivredenburg/NTMzMjU1Mi9hbW9uLWFtYXJ0aC0yNC0wOC0yMDI0.html",
-    "image": "../public/event-images/tivolivredenburg/NTMzMjU1Mi9hbW9uLWFtYXJ0aC0yNC0wOC0yMDI0",
-    "soldOut": true,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
-    "start": "2024-08-28T20:00:00",
-    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/13354225/infected-rain-28-08-2024",
-    "title": "Infected Rain",
-    "location": "tivolivredenburg",
-    "price": 24.85,
-    "shortText": "Moldavische metalcore band",
-    "longText": "../public/texts/tivolivredenburg/NTQyMjUvaW5mZWN0ZWQtcmFpbi0yOC0wOC0yMDI0.html",
-    "image": "../public/event-images/tivolivredenburg/NTQyMjUvaW5mZWN0ZWQtcmFpbi0yOC0wOC0yMDI0",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
-    "start": "2024-09-18T20:00:00",
-    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/40997376/haken-18-09-2024",
-    "title": "Haken",
-    "location": "tivolivredenburg",
-    "price": 33.75,
-    "shortText": "featuring Fauna in full and a whole lot more!",
-    "longText": "../public/texts/tivolivredenburg/ZW5kYS80MDk5NzM3Ni9oYWtlbi0xOC0wOS0yMDI0.html",
-    "image": "../public/event-images/tivolivredenburg/ZW5kYS80MDk5NzM3Ni9oYWtlbi0xOC0wOS0yMDI0",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
-    "door": "2024-09-24T19:00:00",
-    "start": "2024-09-24T22:44:00",
-    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/64680918/sonata-arctica-24-09-2024",
-    "title": "Sonata Arctica",
-    "location": "tivolivredenburg",
-    "price": 36.75,
-    "shortText": "Finse powermetalband met supports Firewind & Serious Black",
-    "longText": "../public/texts/tivolivredenburg/MDkxOC9zb25hdGEtYXJjdGljYS0yNC0wOS0yMDI0.html",
-    "image": "../public/event-images/tivolivredenburg/MDkxOC9zb25hdGEtYXJjdGljYS0yNC0wOS0yMDI0",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "sonata arctica": {
-        "s": "5YeoQ1L71cXDMpSpqxOjfH",
-        "l": "sonata%20arctica",
-        "g": [
-          "finnish power metal",
-          "lapland metal",
-          "metal",
-          "power metal",
-          "progressive metal",
-          "symphonic metal"
+          "symfonische rock"
         ]
       }
     }

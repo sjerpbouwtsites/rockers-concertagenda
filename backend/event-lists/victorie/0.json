@@ -1,55 +1,114 @@
 [
   {
-    "door": "2023-12-07T19:45:00",
-    "start": "2023-12-07T19:00:00",
-    "venueEventUrl": "https://www.podiumvictorie.nl/programma/living-colour",
-    "title": "Living Colour",
+    "door": "2024-06-15T19:00:00",
+    "start": "2024-06-15T19:40:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/terzij-de-horde",
+    "title": "Terzij de Horde",
     "location": "victorie",
-    "price": 39.2,
-    "shortText": "Legendarische New York rockformatie viert 35 jaar 'Vivid'",
-    "longText": "../public/texts/victorie/cmllLm5sL3Byb2dyYW1tYS9saXZpbmctY29sb3Vy.html",
-    "image": "../public/event-images/victorie/cmllLm5sL3Byb2dyYW1tYS9saXZpbmctY29sb3Vy",
-    "soldOut": true
+    "price": 19,
+    "shortText": "met Dead Neanderthals en Salutingrome",
+    "longText": "../public/texts/victorie/ZS5ubC9wcm9ncmFtbWEvdGVyemlqLWRlLWhvcmRl.html",
+    "image": "../public/event-images/victorie/ZS5ubC9wcm9ncmFtbWEvdGVyemlqLWRlLWhvcmRl",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "terzij de horde": {
+        "s": "41G9cPXKxphLtBQXD0g30o",
+        "l": "terzij%20de%20horde",
+        "g": [
+          "blackgaze",
+          "dutch black metal",
+          "post-black metal"
+        ]
+      }
+    }
   },
   {
-    "door": "2023-12-29T20:30:00",
-    "start": "2023-12-29T19:30:00",
-    "venueEventUrl": "https://www.podiumvictorie.nl/programma/knives-out!-iguana-death-cult,-cloudsurfers,-the-covids",
-    "title": "Knives Out! Iguana Death Cult, Cloudsurfers, The Covids",
+    "start": "2024-07-05T18:00:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/move-the-city-5/07/24",
+    "title": "Move The City",
     "location": "victorie",
-    "price": 12,
-    "shortText": "     Avond vol hedendaagse (post)punk",
-    "longText": "../public/texts/victorie/Y3VsdCwtY2xvdWRzdXJmZXJzLC10aGUtY292aWRz.html",
-    "image": "../public/event-images/victorie/Y3VsdCwtY2xvdWRzdXJmZXJzLC10aGUtY292aWRz",
-    "soldOut": false
+    "price": 2024,
+    "shortText": "Gratis cultureel festival in de Alkmaarse wijk Overdie",
+    "longText": "../public/texts/victorie/cm9ncmFtbWEvbW92ZS10aGUtY2l0eS01LzA3LzI0.html",
+    "image": "../public/event-images/victorie/cm9ncmFtbWEvbW92ZS10aGUtY2l0eS01LzA3LzI0",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "move": {
+        "s": "3SUI6pbPumjijbLHHY6vss",
+        "l": "move",
+        "g": [
+          "alternative roots rock",
+          "modern blues rock",
+          "modern hard rock"
+        ]
+      }
+    }
   },
   {
-    "door": "2024-02-15T20:30:00",
-    "start": "2024-02-15T19:15:00",
-    "venueEventUrl": "https://www.podiumvictorie.nl/programma/the-toy-dolls",
-    "title": "The Toy Dolls",
+    "start": "2024-07-06T13:00:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/move-the-city-6/07/24",
+    "title": "Move The City",
     "location": "victorie",
-    "price": 34.5,
-    "shortText": "Britse punkband viert 40-jarig jubileum",
-    "longText": "../public/texts/victorie/cmllLm5sL3Byb2dyYW1tYS90aGUtdG95LWRvbGxz.html",
-    "image": "../public/event-images/victorie/cmllLm5sL3Byb2dyYW1tYS90aGUtdG95LWRvbGxz",
-    "soldOut": false
+    "price": 2024,
+    "shortText": "Gratis cultureel festival in de Alkmaarse wijk Overdie",
+    "longText": "../public/texts/victorie/cm9ncmFtbWEvbW92ZS10aGUtY2l0eS02LzA3LzI0.html",
+    "image": "../public/event-images/victorie/cm9ncmFtbWEvbW92ZS10aGUtY2l0eS02LzA3LzI0",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "move": {
+        "s": "3SUI6pbPumjijbLHHY6vss",
+        "l": "move",
+        "g": [
+          "alternative roots rock",
+          "modern blues rock",
+          "modern hard rock"
+        ]
+      }
+    }
   },
   {
-    "door": "2024-05-08T20:30:00",
-    "start": "2024-05-08T19:30:00",
-    "venueEventUrl": "https://www.podiumvictorie.nl/programma/aynsley-lister",
-    "title": "Aynsley Lister",
+    "start": "2024-07-07T11:00:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/move-the-city-7/07/24",
+    "title": "Move The City",
     "location": "victorie",
-    "price": 23,
-    "shortText": "Britse bluesgitarist",
-    "longText": "../public/texts/victorie/aWUubmwvcHJvZ3JhbW1hL2F5bnNsZXktbGlzdGVy.html",
-    "image": "../public/event-images/victorie/aWUubmwvcHJvZ3JhbW1hL2F5bnNsZXktbGlzdGVy",
-    "soldOut": false
+    "price": 2024,
+    "shortText": "Gratis cultureel festival in de Alkmaarse wijk Overdie",
+    "longText": "../public/texts/victorie/cm9ncmFtbWEvbW92ZS10aGUtY2l0eS03LzA3LzI0.html",
+    "image": "../public/event-images/victorie/cm9ncmFtbWEvbW92ZS10aGUtY2l0eS03LzA3LzI0",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "move": {
+        "s": "3SUI6pbPumjijbLHHY6vss",
+        "l": "move",
+        "g": [
+          "alternative roots rock",
+          "modern blues rock",
+          "modern hard rock"
+        ]
+      }
+    }
   },
   {
-    "door": "2024-10-11T20:30:00",
-    "start": "2024-10-11T19:00:00",
+    "door": "2024-07-12T19:30:00",
+    "start": "2024-07-12T20:30:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/knives-out!-juli",
+    "title": "Knives Out! ft. Library Card",
+    "location": "victorie",
+    "price": 11.5,
+    "shortText": " Marathon en Femme Fugazi (Post)punkavond met moshpitwaardig boeket",
+    "longText": "../public/texts/victorie/Lm5sL3Byb2dyYW1tYS9rbml2ZXMtb3V0IS1qdWxp.html",
+    "image": "../public/event-images/victorie/Lm5sL3Byb2dyYW1tYS9rbml2ZXMtb3V0IS1qdWxp",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2024-10-11T19:00:00",
+    "start": "2024-10-11T20:30:00",
     "venueEventUrl": "https://www.podiumvictorie.nl/programma/y-en-t-11/10/24",
     "title": "Y&t",
     "location": "victorie",
@@ -57,6 +116,16 @@
     "shortText": "Legendarische Amerikaanse rockband bestaat 50 jaar",
     "longText": "../public/texts/victorie/ZS5ubC9wcm9ncmFtbWEveS1lbi10LTExLzEwLzI0.html",
     "image": "../public/event-images/victorie/ZS5ubC9wcm9ncmFtbWEveS1lbi10LTExLzEwLzI0",
-    "soldOut": false
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "y&t": {
+        "s": null,
+        "l": null,
+        "g": [
+          "symfonische rock"
+        ]
+      }
+    }
   }
 ]
