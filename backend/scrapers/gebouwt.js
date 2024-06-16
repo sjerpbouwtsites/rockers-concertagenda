@@ -7,12 +7,14 @@ import {
   mapToStartDate,
   combineDoorTimeStartDate,
   mapToDoorTime,
+  mapToShortDate,
   mapToStartTime,
   combineStartTimeStartDate,
 } from './gedeeld/datums.js';
-import terms from './gedeeld/terms.js';
+import workTitleAndSlug from './gedeeld/slug.js';
+import terms from '../artist-db/store/terms.js';
 
-// #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
+// #region        SCRAPER CONFIG
 const scraper = new AbstractScraper({
   workerData: { ...workerData },
   mainPage: {
@@ -22,11 +24,18 @@ const scraper = new AbstractScraper({
     timeout: 20000,
   },
   app: {
+    harvest: {
+      dividers: [`+`],
+      dividerRex: "[\\+]",
+      artistsIn: ['title'],
+    }, 
     mainPage: {
       requiredProperties: ['venueEventUrl', 'title'],
+      asyncCheckFuncs: ['refused', 'allowedEvent', 'forbiddenTerms', 'hasGoodTerms', 'hasAllowedArtist', 'spotifyConfirmation'],
     },
     singlePage: {
       requiredProperties: ['venueEventUrl', 'title', 'start'],
+      asyncCheckFuncs: ['success'],
     },
   },
 });
@@ -34,111 +43,7 @@ const scraper = new AbstractScraper({
 
 scraper.listenToMasterThread();
 
-// #region [rgba(60, 0, 0, 0.5)]      MAIN PAGE EVENT CHECK
-scraper.mainPageAsyncCheck = async function (event) {
-  const reasons = [];
-  
-  this.talkToDB({
-    type: 'db-request',
-    subtype: 'isAllowed',
-    messageData: {
-      string: event.title,
-    },
-  });
-  await this.checkDBhasAnswered();
-  reasons.push(this.lastDBAnswer.reason);
-  if (this.lastDBAnswer.success) {
-    this.skipFurtherChecks.push(event.title);
-    return {
-      event,
-      reason: reasons.reverse().join(','),
-      success: true,
-    };
-  }
-
-  this.talkToDB({
-    type: 'db-request',
-    subtype: 'isRockEvent',
-    messageData: {
-      string: event.title,
-    },
-  });
-  await this.checkDBhasAnswered();
-  reasons.push(this.lastDBAnswer.reason);
-  if (this.lastDBAnswer.success) {
-    this.talkToDB({
-      type: 'db-request',
-      subtype: 'saveAllowedTitle',
-      messageData: {
-        string: event.title,
-        reason: reasons.reverse().join(', '),
-      },
-    }); 
-    this.skipFurtherChecks.push(event.title);
-    return {
-      event,
-      reason: reasons.reverse().join(','),
-      success: true,
-    };
-  }  
-    
-  this.talkToDB({
-    type: 'db-request',
-    subtype: 'isRefused',
-    messageData: {
-      string: event.title,
-    },
-  });
-  await this.checkDBhasAnswered();
-  reasons.push(this.lastDBAnswer.reason);
-  if (this.lastDBAnswer.success) {
-    return {
-      event,
-      reason: reasons.reverse().join(','),
-      success: false,
-    };
-  }
-
-  const hasForbiddenTerms = await this.hasForbiddenTerms(event);
-  reasons.push(hasForbiddenTerms.reason);
-  if (hasForbiddenTerms.success) {
-    this.talkToDB({
-      type: 'db-request',
-      subtype: 'saveRefusedTitle',
-      messageData: {
-        string: event.title,
-        reason: reasons.reverse().join(', '),
-      },
-    });    
-    
-    return {
-      event,
-      reason: reasons.reverse().join(','),
-      success: false,
-    };
-  }  
-
-  this.talkToDB({
-    type: 'db-request',
-    subtype: 'saveAllowedTitle',
-    messageData: {
-      string: event.title,
-      reason: reasons.reverse().join(', '),
-    },
-  }); 
-   
-  return {
-    event,
-    reason: reasons.reverse().join(', '),
-    success: true,
-  };
-};
-// #endregion                          MAIN PAGE EVENT CHECK
-
-// #region [rgba(0, 180, 0, 0.1)]      SINGLE PAGE EVENT CHECK
-// #endregion                          SINGLE PAGE EVENT CHECK
-
-// #region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
+// #region       MAIN PAGE
 scraper.mainPage = async function () {
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
   if (availableBaseEvents) {
@@ -163,6 +68,12 @@ scraper.mainPage = async function () {
           title,
         };
         
+        res.mapToStartDate =
+      document
+        .querySelector('time.date')
+        ?.textContent.trim()
+        .toLowerCase().replace("'", ' ') ?? '';
+
         res.venueEventUrl = eventEl.href;
         const uaRex = new RegExp(unavailabiltyTerms.join('|'), 'gi');
         res.unavailable = !!eventEl.textContent.match(uaRex);
@@ -174,7 +85,11 @@ scraper.mainPage = async function () {
     { workerData, unavailabiltyTerms: terms.unavailability },
   );
 
-  rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
+  rawEvents = rawEvents
+    .map((event) => mapToStartDate(event, 'dag-maandNaam-jaar', this.months))
+    .map(mapToShortDate)
+    .map(this.isMusicEventCorruptedMapper)
+    .map((re) => workTitleAndSlug(re, this._s.app.harvest.possiblePrefix));
 
   const eventGen = this.eventGenerator(rawEvents);
   // eslint-disable-next-line no-unused-vars
@@ -193,7 +108,7 @@ scraper.mainPage = async function () {
 };
 // #endregion                          MAIN PAGE
 
-// #region [rgba(120, 0, 0, 0.1)]     SINGLE PAGE
+// #region      SINGLE PAGE
 scraper.singlePage = async function ({ page, event }) {
   const { stopFunctie } = await this.singlePageStart();
 
@@ -204,13 +119,6 @@ scraper.singlePage = async function ({ page, event }) {
         anker: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
         errors: [],
       };
-
-      res.mapToStartDate =
-        document
-          .querySelector('.event-info .base-info .info-line + .info-line .value')
-          ?.textContent.trim()
-          .replace("'", ' ')
-          .toLowerCase() ?? '';
       
       res.mapToStartTime =
         document
@@ -225,8 +133,7 @@ scraper.singlePage = async function ({ page, event }) {
     },
     { months: this.months, event },
   );
-
-  pageInfo = mapToStartDate(pageInfo, 'dag-maandNaam-jaar', this.months);
+  pageInfo.startDate = event.startDate;
   pageInfo = mapToStartTime(pageInfo);
   pageInfo = mapToDoorTime(pageInfo);
   pageInfo = combineStartTimeStartDate(pageInfo);

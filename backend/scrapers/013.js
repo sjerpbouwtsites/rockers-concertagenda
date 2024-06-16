@@ -2,22 +2,30 @@
 import { workerData } from 'worker_threads';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/013.js';
-import { mapToStart, mapToDoor } from './gedeeld/datums.js';
+import { mapToStart, mapToDoor, mapToShortDate } from './gedeeld/datums.js';
 import getImage from './gedeeld/image.js';
-import terms from './gedeeld/terms.js';
+import terms from '../artist-db/store/terms.js';
+import workTitleAndSlug from './gedeeld/slug.js';
 
-// #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
+// #region        SCRAPER CONFIG
 const scraper = new AbstractScraper({
   workerData: { ...workerData },
   mainPage: {
     url: 'https://www.013.nl/programma/heavy',
   },
   app: {
+    harvest: {
+      dividers: [`+`, '&'],
+      dividerRex: "[\\+&]", // todo nog niet duidelijk 24/2/12
+      artistsIn: ['title', 'shortText'],
+    },
     mainPage: {
-      requiredProperties: ['venueEventUrl', 'title'],
+      requiredProperties: ['slug', 'venueEventUrl', 'title'],
+      asyncCheckFuncs: ['allowedEvent', 'refused', 'forbiddenTerms', 'hasAllowedArtist', 'spotifyConfirmation'],
     },
     singlePage: {
       requiredProperties: ['venueEventUrl', 'title', 'price', 'start'],
+      asyncCheckFuncs: ['success'],
     },
   },
 });
@@ -25,103 +33,7 @@ const scraper = new AbstractScraper({
 
 scraper.listenToMasterThread();
 
-// #region [rgba(50, 0, 0, 0.5)]      MAIN PAGE EVENT CHECK
-scraper.mainPageAsyncCheck = async function (event) {
-  const reasons = [];  
-
-  this.talkToDB({
-    type: 'db-request',
-    subtype: 'isAllowed',
-    messageData: {
-      string: event.title,
-    },
-  });
-  await this.checkDBhasAnswered();
-  reasons.push(this.lastDBAnswer.reason);
-  if (this.lastDBAnswer.success) {
-    this.skipFurtherChecks.push(event.title);
-    return {
-      event,
-      reason: reasons.reverse().join(','),
-      success: true,
-    };
-  }
-
-  this.talkToDB({
-    type: 'db-request',
-    subtype: 'isRockEvent',
-    messageData: {
-      string: event.title,
-    },
-  });
-  await this.checkDBhasAnswered();
-  reasons.push(this.lastDBAnswer.reason);
-  if (this.lastDBAnswer.success) {
-    this.skipFurtherChecks.push(event.title);
-    return {
-      event,
-      reason: reasons.reverse().join(','),
-      success: true,
-    };
-  }
-  
-  this.talkToDB({
-    type: 'db-request',
-    subtype: 'isRefused',
-    messageData: {
-      string: event.title,
-    },
-  });
-  await this.checkDBhasAnswered();
-  reasons.push(this.lastDBAnswer.reason);
-  if (this.lastDBAnswer.success) {
-    return {
-      event,
-      reason: reasons.reverse().join(','),
-      success: false,
-    };
-  }
-
-  const hasForbiddenTerms = await this.hasForbiddenTerms(event);
-  reasons.push(hasForbiddenTerms.reason);
-  if (hasForbiddenTerms.success) {
-    this.talkToDB({
-      type: 'db-request',
-      subtype: 'saveRefusedTitle',
-      messageData: {
-        string: event.title,
-        reason: hasForbiddenTerms.reason,
-      },
-    });    
-    
-    return {
-      event,
-      reason: reasons.reverse().join(','),
-      success: false,
-    };
-  }
-
-  this.talkToDB({
-    type: 'db-request',
-    subtype: 'saveAllowedTitle',
-    messageData: {
-      string: event.title,
-      reason: reasons.reverse().join(', '),
-    },
-  });
-
-  return {
-    reason: reasons.reverse().join(', '),
-    event,
-    success: true,
-  };
-};
-// #endregion                          MAIN PAGE EVENT CHECK
-
-// #region [rgba(0, 180, 0, 0.1)]      SINGLE PAGE EVENT CHECK
-// #endregion                          SINGLE PAGE EVENT CHECK
-
-// #region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
+// #region       MAIN PAGE
 scraper.mainPage = async function () {
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
   if (availableBaseEvents) {
@@ -136,8 +48,8 @@ scraper.mainPage = async function () {
   let rawEvents = await page.evaluate(
     // eslint-disable-next-line no-shadow
     ({ workerData, unavailabiltyTerms }) =>
-      Array.from(document.querySelectorAll('.event-list-item')).map((eventEl) => {
-        const title = eventEl.querySelector('.event-list-item__title')?.textContent.trim() ?? null;
+      Array.from(document.querySelectorAll('#skewEl article')).map((eventEl) => {
+        const title = eventEl.querySelector('h2')?.textContent.trim() ?? null;
 
         const res = {
           anker: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
@@ -145,24 +57,27 @@ scraper.mainPage = async function () {
           title,
         };
 
-        res.venueEventUrl = eventEl.querySelector('.event-list-item__link')?.href ?? null;
+        res.venueEventUrl = eventEl.querySelector('a')?.href ?? null;
 
         res.mapToStart =
-          eventEl.querySelector('.event-list-item__date')?.getAttribute('datetime') ?? '';
+          eventEl.querySelector('time')?.getAttribute('datetime') ?? '';
         const uaRex = new RegExp(unavailabiltyTerms.join('|'), 'gi');
         res.unavailable = !!eventEl.textContent.match(uaRex);
         res.soldOut = !!eventEl?.innerHTML.match(/uitverkocht|sold\s?out/i) ?? false;
         res.shortText =
-          eventEl.querySelector('.event-list-item__subtitle')?.textContent.trim() ?? '';
+          eventEl.querySelector('h3')?.textContent.trim() ?? '';
 
         return res;
       }),
     { workerData, unavailabiltyTerms: terms.unavailability },
   );
 
-  rawEvents = rawEvents.map(mapToStart);
-
-  rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
+  rawEvents = rawEvents
+    // .filter((e, i) => i >= 10 && i < 15)
+    .map(mapToStart)
+    .map(mapToShortDate)
+    .map(workTitleAndSlug)
+    .map(this.isMusicEventCorruptedMapper);
 
   const eventGen = this.eventGenerator(rawEvents);
   // eslint-disable-next-line no-unused-vars
@@ -181,7 +96,7 @@ scraper.mainPage = async function () {
 };
 // #endregion                          MAIN PAGE
 
-// #region [rgba(120, 0, 0, 0.1)]     SINGLE PAGE
+// #region      SINGLE PAGE
 scraper.singlePage = async function ({ page, event }) {
   const { stopFunctie } = await this.singlePageStart();
 
@@ -192,10 +107,16 @@ scraper.singlePage = async function ({ page, event }) {
         anker: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
         errors: [],
       };
+
+      document.querySelectorAll('.side_wrapper time').forEach((timeEl, index) => {
+        const j = index + 1;
+        // eslint-disable-next-line no-param-reassign
+        timeEl.id = `time-el-${j}`;
+      });
+
       res.mapToDoor =
-        document.querySelector('.timetable__times dl:first-child time')?.getAttribute('datetime') ??
+        document.querySelector('#time-el-2')?.getAttribute('datetime') ??
         '';
-      res.soldOut = !!(document.querySelector('.order-tickets button[disabled]') ?? null);
 
       return res;
     },
@@ -210,7 +131,7 @@ scraper.singlePage = async function ({ page, event }) {
     workerData,
     event,
     pageInfo,
-    selectors: ['.event-spotlight__image'],
+    selectors: ["[x-ref='event_image'] img"],
     mode: 'image-src',
   });
   pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
@@ -220,7 +141,7 @@ scraper.singlePage = async function ({ page, event }) {
     page,
     event,
     pageInfo,
-    selectors: ['.practical-information'],
+    selectors: ['.price_table'],
   });
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
   pageInfo.price = priceRes.price;
@@ -243,6 +164,6 @@ scraper.singlePage = async function ({ page, event }) {
 };
 // #endregion                         SINGLE PAGE
 
-// #region [rgba(60, 0, 0, 0.3)]     LONG HTML
+// #region      LONG HTML
 
 // #endregion                        LONG HTML

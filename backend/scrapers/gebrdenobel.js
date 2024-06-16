@@ -4,9 +4,14 @@ import { workerData } from 'worker_threads';
 import longTextSocialsIframes from './longtext/gebrdenobel.js';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import getImage from './gedeeld/image.js';
-import terms from './gedeeld/terms.js';
+import terms from '../artist-db/store/terms.js';
+import {
+  mapToStartDate,
+  mapToShortDate,
+} from './gedeeld/datums.js';
+import workTitleAndSlug from './gedeeld/slug.js';
 
-// #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
+// #region        SCRAPER CONFIG
 const scraper = new AbstractScraper({
   workerData: { ...workerData },
 
@@ -18,11 +23,18 @@ const scraper = new AbstractScraper({
     timeout: 15004,
   },
   app: {
+    harvest: {
+      dividers: [`+`],
+      dividerRex: "[\\+]",
+      artistsIn: ['title'],
+    }, 
     mainPage: {
       requiredProperties: ['venueEventUrl', 'title'],
+      asyncCheckFuncs: ['refused', 'allowedEvent', 'forbiddenTerms', 'spotifyConfirmation'],
     },
     singlePage: {
       requiredProperties: ['venueEventUrl', 'title', 'price', 'start'],
+      asyncCheckFuncs: ['success'],
     },
   },
 });
@@ -30,138 +42,7 @@ const scraper = new AbstractScraper({
 
 scraper.listenToMasterThread();
 
-// #region [rgba(60, 0, 0, 0.5)]      MAIN PAGE EVENT CHECK
-scraper.mainPageAsyncCheck = async function (event) {
-  const reasons = [];
-  
-  this.talkToDB({
-    type: 'db-request',
-    subtype: 'isAllowed',
-    messageData: {
-      string: event.title,
-    },
-  });
-  await this.checkDBhasAnswered();
-  reasons.push(this.lastDBAnswer.reason);
-  if (this.lastDBAnswer.success) {
-    this.skipFurtherChecks.push(event.title);
-    return {
-      event,
-      reason: reasons.reverse().join(','),
-      success: true,
-    };
-  }
-
-  this.talkToDB({
-    type: 'db-request',
-    subtype: 'isRockEvent',
-    messageData: {
-      string: event.title,
-    },
-  });
-  await this.checkDBhasAnswered();
-  reasons.push(this.lastDBAnswer.reason);
-  if (this.lastDBAnswer.success) {
-    this.talkToDB({
-      type: 'db-request',
-      subtype: 'saveAllowedTitle',
-      messageData: {
-        string: event.title,
-        reason: reasons.reverse().join(', '),
-      },
-    }); 
-    this.skipFurtherChecks.push(event.title);
-    return {
-      event,
-      reason: reasons.reverse().join(','),
-      success: true,
-    };
-  }  
-    
-  this.talkToDB({
-    type: 'db-request',
-    subtype: 'isRefused',
-    messageData: {
-      string: event.title,
-    },
-  });
-  await this.checkDBhasAnswered();
-  reasons.push(this.lastDBAnswer.reason);
-  if (this.lastDBAnswer.success) {
-    return {
-      event,
-      reason: reasons.reverse().join(','),
-      success: false,
-    };
-  }
-   
-  return {
-    event,
-    reason: reasons.reverse().join(', '),
-    success: true,
-  };
-};
-// #endregion                          MAIN PAGE EVENT CHECK
-
-// #region [rgba(0, 60, 0, 0.5)]      SINGLE PAGE EVENT CHECK
-scraper.singlePageAsyncCheck = async function (event) {
-  const reasons = [];
-  
-  if (event.title.toLowerCase().includes("nep event")) {
-    reasons.push("NEP EVENT");
-    return {
-      event,
-      reason: reasons.reverse().join(','),
-      success: false,
-    };        
-  }
-
-  if (this.skipFurtherChecks.includes(event.title)) {
-    reasons.push("allready check main");
-    return {
-      event,
-      reason: reasons.reverse().join(','),
-      success: true,
-    };    
-  }
-
-  const hasForbiddenTerms = await this.hasForbiddenTerms(event);
-  reasons.push(hasForbiddenTerms.reason);
-  if (hasForbiddenTerms.success) {
-    this.talkToDB({
-      type: 'db-request',
-      subtype: 'saveRefusedTitle',
-      messageData: {
-        string: event.title,
-        reason: reasons.reverse().join(', '),
-      },
-    });    
-    
-    return {
-      event,
-      reason: reasons.reverse().join(','),
-      success: false,
-    };
-  }
-  
-  this.talkToDB({
-    type: 'db-request',
-    subtype: 'saveAllowedTitle',
-    messageData: {
-      string: event.title,
-      reason: reasons.reverse().join(', '),
-    },
-  }); 
-
-  return {
-    event,
-    success: true,
-    reason: reasons.reverse().join(', '),
-  };
-};
-// #endregion                          SINGLE PAGE EVENT CHECK
-
-// #region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
+// #region       MAIN PAGE
 scraper.mainPage = async function () {
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
 
@@ -192,9 +73,18 @@ scraper.mainPage = async function () {
     });
   });
 
-  let punkMetalRockRawEvents = await page.evaluate(
+  await page.evaluate(() => {
+    document.querySelectorAll('.events').forEach((eventList) => {
+      if (!eventList.querySelector('.event-item')) return;
+      const timeV = eventList.querySelector('time').textContent.trim();
+      eventList.querySelector('.event-item').setAttribute('data-date', timeV);
+    });
+  });
+
+  let rawEvents = await page.evaluate(
     // eslint-disable-next-line no-shadow
     ({ workerData, unavailabiltyTerms }) =>
+      
       Array.from(document.querySelectorAll('.zichtbaar-dus .event-item'))
         .map((eventEl) => {
           const title = eventEl.querySelector('.media-heading')?.textContent ?? null;
@@ -203,8 +93,11 @@ scraper.mainPage = async function () {
             errors: [],
             title,
           };
-          res.venueEventUrl =
-            eventEl.querySelector('.jq-modal-trigger')?.getAttribute('data-url') ?? '';
+
+          res.mapToStartDate = eventEl.getAttribute('data-date');
+          
+          res.venueEventUrl = eventEl.querySelector('.jq-modal-trigger')?.getAttribute('data-url') ?? '';
+
           const uaRex = new RegExp(unavailabiltyTerms.join('|'), 'gi');
           res.unavailable = !!eventEl.textContent.match(uaRex);
           res.soldOut =
@@ -215,13 +108,11 @@ scraper.mainPage = async function () {
     { workerData, unavailabiltyTerms: terms.unavailability },
   ); // page.evaluate
 
-  this.dirtyDebug(punkMetalRockRawEvents);
-
-  punkMetalRockRawEvents = punkMetalRockRawEvents.map(this.isMusicEventCorruptedMapper);
-
-  this.dirtyDebug(punkMetalRockRawEvents);
-
-  const rawEvents = punkMetalRockRawEvents;
+  rawEvents = rawEvents
+    .map((event) => mapToStartDate(event, 'dag-maandNaam', this.months))
+    .map(mapToShortDate)
+    .map(this.isMusicEventCorruptedMapper)
+    .map((re) => workTitleAndSlug(re, this._s.app.harvest.possiblePrefix));
 
   // gebr de nobel cookies moet eerste laaten mislukken
   // const eersteCookieEvent = { ...rawEvents[0] };
@@ -266,7 +157,7 @@ scraper.cookiesNodig = async function (page) {
   return true;
 };
 
-// #region [rgba(120, 0, 0, 0.1)]     SINGLE PAGE
+// #region      SINGLE PAGE
 scraper.singlePage = async function ({ page, event }) {
   const { stopFunctie } = await this.singlePageStart();
 

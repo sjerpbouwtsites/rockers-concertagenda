@@ -5,13 +5,15 @@ import initMonitorBackend from './monitor/backend.js';
 import RockWorker from './mods/rock-worker.js';
 import getWorkerConfig from './mods/worker-config.js';
 import houseKeeping from './housekeeping.js';
-import Artists from './db/artists.js';
+import Artists from './artist-db/models/artists.js';
+import fsDirections from './mods/fs-directions.js';
 
-const ArtistInst = new Artists({
-  rockArtistPath: "./db/rock-artists.json",
-  refusedPath: "./db/refused.json",
-  rockEventsPath: "./db/rock-events.json",
-});
+const ArtistInst = new Artists(
+  {
+    modelPath: fsDirections.artistDBModels, 
+    storePath: fsDirections.artistDBstore, 
+  },
+);
 
 // dotenv.config();
 

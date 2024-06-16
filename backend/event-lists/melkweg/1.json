@@ -1,62 +1,173 @@
 [
   {
-    "start": "2023-11-26T18:30:00.000000Z",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/of-mice-men-26-11-2023/",
-    "title": "Of mice & men",
+    "door": "2024-06-21T19:00:00",
+    "start": "2024-06-21T19:30:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/heavy-is-the-night-21-06-2024/",
+    "title": "Heavy is The Night",
     "location": "melkweg",
-    "price": 28.75,
-    "shortText": "metalcore",
-    "longText": "../public/texts/melkweg/YWdlbmRhL29mLW1pY2UtbWVuLTI2LTExLTIwMjMv.html",
-    "image": "../public/event-images/melkweg/YWdlbmRhL29mLW1pY2UtbWVuLTI2LTExLTIwMjMv",
-    "soldOut": true,
-    "unavailable": false
-  },
-  {
-    "start": "2023-12-15T17:30:00.000000Z",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/skindred-15-12-2023/",
-    "title": "Skindred",
-    "location": "melkweg",
-    "price": 26.45,
-    "shortText": "metal · punk · reggae",
-    "longText": "../public/texts/melkweg/bmwvYWdlbmRhL3NraW5kcmVkLTE1LTEyLTIwMjMv.html",
-    "image": "../public/event-images/melkweg/bmwvYWdlbmRhL3NraW5kcmVkLTE1LTEyLTIwMjMv",
+    "price": 10.35,
+    "shortText": "goth · electronic · duister",
+    "longText": "../public/texts/melkweg/aGVhdnktaXMtdGhlLW5pZ2h0LTIxLTA2LTIwMjQv.html",
+    "image": "../public/event-images/melkweg/aGVhdnktaXMtdGhlLW5pZ2h0LTIxLTA2LTIwMjQv",
     "soldOut": false,
-    "unavailable": false
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
   },
   {
-    "start": "2024-01-24T18:30:00.000000Z",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/the-menzingers-24-01-2024/",
-    "title": "The Menzingers",
-    "location": "melkweg",
-    "price": 28.75,
-    "shortText": "punk",
-    "longText": "../public/texts/melkweg/bmRhL3RoZS1tZW56aW5nZXJzLTI0LTAxLTIwMjQv.html",
-    "image": "../public/event-images/melkweg/bmRhL3RoZS1tZW56aW5nZXJzLTI0LTAxLTIwMjQv",
-    "soldOut": false,
-    "unavailable": false
-  },
-  {
-    "start": "2024-03-09T17:00:00.000000Z",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/polaris-09-03-2024/",
-    "title": "Polaris",
+    "start": "2024-07-30T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/mr-big-30-07-2024/",
+    "title": "Mr. big",
     "location": "melkweg",
     "price": 34.5,
-    "shortText": "metalcore · postrock",
-    "longText": "../public/texts/melkweg/L25sL2FnZW5kYS9wb2xhcmlzLTA5LTAzLTIwMjQv.html",
-    "image": "../public/event-images/melkweg/L25sL2FnZW5kYS9wb2xhcmlzLTA5LTAzLTIwMjQv",
+    "shortText": "hardrock",
+    "longText": "../public/texts/melkweg/bC9ubC9hZ2VuZGEvbXItYmlnLTMwLTA3LTIwMjQv.html",
+    "image": "../public/event-images/melkweg/bC9ubC9hZ2VuZGEvbXItYmlnLTMwLTA3LTIwMjQv",
     "soldOut": false,
-    "unavailable": false
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
   },
   {
-    "start": "2024-05-27T17:30:00.000000Z",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/uk-subs-27-05-2024/",
-    "title": "Uk subs",
+    "start": "2024-08-05T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/the-warning-05-08-2024/",
+    "title": "The Warning",
     "location": "melkweg",
-    "price": 25,
-    "shortText": "punk Charlie Harper's 80th Birthday Show",
-    "longText": "../public/texts/melkweg/L25sL2FnZW5kYS91ay1zdWJzLTI3LTA1LTIwMjQv.html",
-    "image": "../public/event-images/melkweg/L25sL2FnZW5kYS91ay1zdWJzLTI3LTA1LTIwMjQv",
+    "price": 31.05,
+    "shortText": "hardrock",
+    "longText": "../public/texts/melkweg/YWdlbmRhL3RoZS13YXJuaW5nLTA1LTA4LTIwMjQv.html",
+    "image": "../public/event-images/melkweg/YWdlbmRhL3RoZS13YXJuaW5nLTA1LTA4LTIwMjQv",
     "soldOut": false,
-    "unavailable": false
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "the warning": {
+        "s": "2SmW1lFlBJn4IfBzBZDlSh",
+        "l": "the%20warning",
+        "g": [
+          "mexican metal",
+          "monterrey indie"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2024-08-29T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/home-front-29-08-2024/",
+    "title": "Home Front",
+    "location": "melkweg",
+    "price": 19,
+    "shortText": "postpunk · hardcore punk · synth",
+    "longText": "../public/texts/melkweg/L2FnZW5kYS9ob21lLWZyb250LTI5LTA4LTIwMjQv.html",
+    "image": "../public/event-images/melkweg/L2FnZW5kYS9ob21lLWZyb250LTI5LTA4LTIwMjQv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "start": "2024-09-27T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/tusky-27-09-2024/",
+    "title": "Tusky",
+    "location": "melkweg",
+    "price": 17.25,
+    "shortText": "punk · anarchistisch",
+    "longText": "../public/texts/melkweg/bmwvbmwvYWdlbmRhL3R1c2t5LTI3LTA5LTIwMjQv.html",
+    "image": "../public/event-images/melkweg/bmwvbmwvYWdlbmRhL3R1c2t5LTI3LTA5LTIwMjQv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "tusky": {
+        "s": "6XbZ8G0cFqSgUL4FmtiSPr",
+        "l": "tusky",
+        "g": [
+          "dutch punk",
+          "dutch rock"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2024-10-08T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/dead-by-april-08-10-2024/",
+    "title": "Dead By April",
+    "location": "melkweg",
+    "price": 25.9,
+    "shortText": "metalcore · electronic · rock",
+    "longText": "../public/texts/melkweg/ZW5kYS9kZWFkLWJ5LWFwcmlsLTA4LTEwLTIwMjQv.html",
+    "image": "../public/event-images/melkweg/ZW5kYS9kZWFkLWJ5LWFwcmlsLTA4LTEwLTIwMjQv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "start": "2024-11-09T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/hot-water-music-09-11-2024/",
+    "title": "Hot Water Music",
+    "location": "melkweg",
+    "price": 28.75,
+    "shortText": "posthardcore · punk 30-year anniversary",
+    "longText": "../public/texts/melkweg/ZGEvaG90LXdhdGVyLW11c2ljLTA5LTExLTIwMjQv.html",
+    "image": "../public/event-images/melkweg/ZGEvaG90LXdhdGVyLW11c2ljLTA5LTExLTIwMjQv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "hot water music": {
+        "s": "4dmaYARGTCpChLhHBdr3ff",
+        "l": "hot%20water%20music",
+        "g": [
+          "emo",
+          "folk punk",
+          "melodic hardcore",
+          "orgcore",
+          "skate punk"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2024-11-26T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/the-damned-26-11-2024/",
+    "title": "The Damned",
+    "location": "melkweg",
+    "price": 35.65,
+    "shortText": "punkrock · 80's",
+    "longText": "../public/texts/melkweg/L2FnZW5kYS90aGUtZGFtbmVkLTI2LTExLTIwMjQv.html",
+    "image": "../public/event-images/melkweg/L2FnZW5kYS90aGUtZGFtbmVkLTI2LTExLTIwMjQv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "start": "2024-12-07T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/royal-republic-07-12-2024/",
+    "title": "Royal Republic",
+    "location": "melkweg",
+    "price": 34.5,
+    "shortText": "hardrock · disco · rock-‘n-roll",
+    "longText": "../public/texts/melkweg/bmRhL3JveWFsLXJlcHVibGljLTA3LTEyLTIwMjQv.html",
+    "image": "../public/event-images/melkweg/bmRhL3JveWFsLXJlcHVibGljLTA3LTEyLTIwMjQv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "start": "2024-12-21T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/green-lizard-30th-anniversary-21-12-2024/",
+    "title": "Green Lizard",
+    "location": "melkweg",
+    "price": 18.4,
+    "shortText": "alternative rock · grunge · 90's 30th Anniversary",
+    "longText": "../public/texts/melkweg/ZC0zMHRoLWFubml2ZXJzYXJ5LTIxLTEyLTIwMjQv.html",
+    "image": "../public/event-images/melkweg/ZC0zMHRoLWFubml2ZXJzYXJ5LTIxLTEyLTIwMjQv",
+    "soldOut": true,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
   }
 ]

@@ -1,147 +1,137 @@
 [
   {
-    "start": "2023-11-23T20:00:00+01:00",
-    "venueEventUrl": "https://www.013.nl/programma/7553/punk-rock-factory",
-    "title": "Punk Rock Factory",
+    "door": "2024-06-22T20:30:00+02:00",
+    "start": "2024-06-22T20:30:00+02:00",
+    "venueEventUrl": "https://www.013.nl/programma/78856/meth",
+    "title": "Meth",
+    "location": "013",
+    "price": 17.3,
+    "shortText": "",
+    "longText": "../public/texts/013/d3cuMDEzLm5sL3Byb2dyYW1tYS83ODg1Ni9tZXRo.html",
+    "image": "../public/event-images/013/d3cuMDEzLm5sL3Byb2dyYW1tYS83ODg1Ni9tZXRo",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2024-07-07T19:00:00+02:00",
+    "start": "2024-07-07T19:00:00+02:00",
+    "venueEventUrl": "https://www.013.nl/programma/75125/angel-du-t-gouge-away-teenage-wrist",
+    "title": "Angel Du$t + Gouge Away + Teenage Wrist",
+    "location": "013",
+    "price": 24.8,
+    "shortText": "",
+    "longText": "../public/texts/013/LWR1LXQtZ291Z2UtYXdheS10ZWVuYWdlLXdyaXN0.html",
+    "image": "../public/event-images/013/LWR1LXQtZ291Z2UtYXdheS10ZWVuYWdlLXdyaXN0",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "angel du$t": {
+        "s": null,
+        "l": "United States",
+        "g": [
+          "hardcore punk"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2024-08-08T20:00:00+02:00",
+    "start": "2024-08-08T20:00:00+02:00",
+    "venueEventUrl": "https://www.013.nl/programma/79800/the-dillinger-escape-plan",
+    "title": "The Dillinger Escape Plan",
+    "location": "013",
+    "price": 47.3,
+    "shortText": "Calculating Infinity 25th Anniversary Show",
+    "longText": "../public/texts/013/OTgwMC90aGUtZGlsbGluZ2VyLWVzY2FwZS1wbGFu.html",
+    "image": "../public/event-images/013/OTgwMC90aGUtZGlsbGluZ2VyLWVzY2FwZS1wbGFu",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2024-09-12T20:30:00+02:00",
+    "start": "2024-09-12T20:30:00+02:00",
+    "venueEventUrl": "https://www.013.nl/programma/80277/bokassa",
+    "title": "Bokassa",
     "location": "013",
     "price": 18.3,
     "shortText": "",
-    "longText": "../public/texts/013/b2dyYW1tYS83NTUzL3B1bmstcm9jay1mYWN0b3J5.html",
-    "image": "../public/event-images/013/b2dyYW1tYS83NTUzL3B1bmstcm9jay1mYWN0b3J5",
-    "soldOut": true,
-    "unavailable": false
-  },
-  {
-    "start": "2023-12-06T21:00:00+01:00",
-    "venueEventUrl": "https://www.013.nl/programma/7658/cats-cult",
-    "title": "Cat's Cult",
-    "location": "013",
-    "price": 6,
-    "shortText": "Library Card + Mantra",
-    "longText": "../public/texts/013/MTMubmwvcHJvZ3JhbW1hLzc2NTgvY2F0cy1jdWx0.html",
-    "image": "../public/event-images/013/MTMubmwvcHJvZ3JhbW1hLzc2NTgvY2F0cy1jdWx0",
-    "soldOut": true,
-    "unavailable": false
-  },
-  {
-    "door": "2024-01-31T19:00:00+01:00",
-    "start": "2024-01-31T19:30:00+01:00",
-    "venueEventUrl": "https://www.013.nl/programma/7644/periphery",
-    "title": "Periphery",
-    "location": "013",
-    "price": 29.3,
-    "shortText": "The Wildfire European Tour",
-    "longText": "../public/texts/013/MTMubmwvcHJvZ3JhbW1hLzc2NDQvcGVyaXBoZXJ5.html",
-    "image": "../public/event-images/013/MTMubmwvcHJvZ3JhbW1hLzc2NDQvcGVyaXBoZXJ5",
+    "longText": "../public/texts/013/MDEzLm5sL3Byb2dyYW1tYS84MDI3Ny9ib2thc3Nh.html",
+    "image": "../public/event-images/013/MDEzLm5sL3Byb2dyYW1tYS84MDI3Ny9ib2thc3Nh",
     "soldOut": false,
-    "unavailable": false
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
   },
   {
-    "door": "2024-02-04T19:00:00+01:00",
-    "start": "2024-02-04T20:00:00+01:00",
-    "venueEventUrl": "https://www.013.nl/programma/7609/bad-omens",
-    "title": "Bad Omens",
+    "door": "2024-09-22T19:30:00+02:00",
+    "start": "2024-09-22T19:30:00+02:00",
+    "venueEventUrl": "https://www.013.nl/programma/7864/our-last-night",
+    "title": "Our Last Night",
     "location": "013",
-    "price": 36.8,
-    "shortText": "",
-    "longText": "../public/texts/013/MTMubmwvcHJvZ3JhbW1hLzc2MDkvYmFkLW9tZW5z.html",
-    "image": "../public/event-images/013/MTMubmwvcHJvZ3JhbW1hLzc2MDkvYmFkLW9tZW5z",
-    "soldOut": true,
-    "unavailable": false
-  },
-  {
-    "door": "2024-02-18T18:00:00+01:00",
-    "start": "2024-02-18T18:30:00+01:00",
-    "venueEventUrl": "https://www.013.nl/programma/7684/suffocation",
-    "title": "Suffocation",
-    "location": "013",
-    "price": 28.3,
-    "shortText": "Hymns From The Apocrypha European Tour",
-    "longText": "../public/texts/013/Lm5sL3Byb2dyYW1tYS83Njg0L3N1ZmZvY2F0aW9u.html",
-    "image": "../public/event-images/013/Lm5sL3Byb2dyYW1tYS83Njg0L3N1ZmZvY2F0aW9u",
+    "price": 30.3,
+    "shortText": "You’re Up Europe - Tour 2024",
+    "longText": "../public/texts/013/L3Byb2dyYW1tYS83ODY0L291ci1sYXN0LW5pZ2h0.html",
+    "image": "../public/event-images/013/L3Byb2dyYW1tYS83ODY0L291ci1sYXN0LW5pZ2h0",
     "soldOut": false,
-    "unavailable": false
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "our last night": {
+        "s": "00YTqRClk82aMchQQpYMd5",
+        "l": null,
+        "g": [
+          "american metalcore"
+        ]
+      }
+    }
   },
   {
-    "door": "2024-02-27T19:00:00+01:00",
-    "start": "2024-02-27T20:00:00+01:00",
-    "venueEventUrl": "https://www.013.nl/programma/7698/frank-carter-the-rattlesnakes",
-    "title": "Frank Carter & The Rattlesnakes",
+    "door": "2024-09-27T20:00:00+02:00",
+    "start": "2024-09-27T20:00:00+02:00",
+    "venueEventUrl": "https://www.013.nl/programma/7878/apocalyptica",
+    "title": "Apocalyptica",
     "location": "013",
-    "price": 37.3,
-    "shortText": "",
-    "longText": "../public/texts/013/L2ZyYW5rLWNhcnRlci10aGUtcmF0dGxlc25ha2Vz.html",
-    "image": "../public/event-images/013/L2ZyYW5rLWNhcnRlci10aGUtcmF0dGxlc25ha2Vz",
+    "price": 54.8,
+    "shortText": "PLAYS METALLICA VOL. 2 TOUR 2024",
+    "longText": "../public/texts/013/bmwvcHJvZ3JhbW1hLzc4NzgvYXBvY2FseXB0aWNh.html",
+    "image": "../public/event-images/013/bmwvcHJvZ3JhbW1hLzc4NzgvYXBvY2FseXB0aWNh",
     "soldOut": false,
-    "unavailable": false
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "apocalyptica": {
+        "s": "4Lm0pUvmisUHMdoky5ch2I",
+        "l": "Finland",
+        "g": [
+          "cello",
+          "finnish metal",
+          "symphonic heavy metal/rock"
+        ]
+      }
+    }
   },
   {
-    "door": "2024-03-28T20:00:00+01:00",
-    "start": "2024-03-28T20:30:00+01:00",
-    "venueEventUrl": "https://www.013.nl/programma/7735/king-nun",
-    "title": "King Nun",
-    "location": "013",
-    "price": 15.3,
-    "shortText": "",
-    "longText": "../public/texts/013/MDEzLm5sL3Byb2dyYW1tYS83NzM1L2tpbmctbnVu.html",
-    "image": "../public/event-images/013/MDEzLm5sL3Byb2dyYW1tYS83NzM1L2tpbmctbnVu",
-    "soldOut": false,
-    "unavailable": false
-  },
-  {
-    "door": "2024-04-19T13:00:00+02:00",
-    "start": "2024-04-19T13:00:00+02:00",
-    "venueEventUrl": "https://www.013.nl/programma/7713/roadburn-festival-2024",
-    "title": "Roadburn Festival 2024",
-    "location": "013",
-    "price": 2594,
-    "shortText": "",
-    "longText": "../public/texts/013/bWEvNzcxMy9yb2FkYnVybi1mZXN0aXZhbC0yMDI0.html",
-    "image": "../public/event-images/013/bWEvNzcxMy9yb2FkYnVybi1mZXN0aXZhbC0yMDI0",
-    "soldOut": false,
-    "unavailable": false
-  },
-  {
-    "door": "2024-05-03T20:00:00+02:00",
-    "start": "2024-05-03T20:30:00+02:00",
-    "venueEventUrl": "https://www.013.nl/programma/7763/tusky",
-    "title": "Tusky",
-    "location": "013",
-    "price": 17.3,
-    "shortText": "The Shit Hits The Van Tour",
-    "longText": "../public/texts/013/d3cuMDEzLm5sL3Byb2dyYW1tYS83NzYzL3R1c2t5.html",
-    "image": "../public/event-images/013/d3cuMDEzLm5sL3Byb2dyYW1tYS83NzYzL3R1c2t5",
-    "soldOut": false,
-    "unavailable": false
-  },
-  {
-    "door": "2024-05-11T18:00:00+02:00",
-    "start": "2024-05-11T18:30:00+02:00",
-    "venueEventUrl": "https://www.013.nl/programma/7705/landmvrks",
-    "title": "Landmvrks",
+    "door": "2024-10-05T19:15:00+02:00",
+    "start": "2024-10-05T19:15:00+02:00",
+    "venueEventUrl": "https://www.013.nl/programma/84206/pure-reason-revolution-lesoir",
+    "title": "Pure Reason Revolution + Lesoir",
     "location": "013",
     "price": 28.3,
     "shortText": "",
-    "longText": "../public/texts/013/MTMubmwvcHJvZ3JhbW1hLzc3MDUvbGFuZG12cmtz.html",
-    "image": "../public/event-images/013/MTMubmwvcHJvZ3JhbW1hLzc3MDUvbGFuZG12cmtz",
-    "soldOut": true,
-    "unavailable": false
-  },
-  {
-    "door": "2024-06-25T19:00:00+02:00",
-    "start": "2024-06-25T20:00:00+02:00",
-    "venueEventUrl": "https://www.013.nl/programma/7766/megadeth",
-    "title": "Megadeth",
-    "location": "013",
-    "price": 60.8,
-    "shortText": "Crush The World Tour",
-    "longText": "../public/texts/013/MDEzLm5sL3Byb2dyYW1tYS83NzY2L21lZ2FkZXRo.html",
-    "image": "../public/event-images/013/MDEzLm5sL3Byb2dyYW1tYS83NzY2L21lZ2FkZXRo",
+    "longText": "../public/texts/013/L3B1cmUtcmVhc29uLXJldm9sdXRpb24tbGVzb2ly.html",
+    "image": "../public/event-images/013/L3B1cmUtcmVhc29uLXJldm9sdXRpb24tbGVzb2ly",
     "soldOut": false,
-    "unavailable": false
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
   },
   {
-    "door": "2024-11-01T18:00:00+01:00",
+    "door": "2024-11-01T19:00:00+01:00",
     "start": "2024-11-01T19:00:00+01:00",
     "venueEventUrl": "https://www.013.nl/programma/7703/beartooth",
     "title": "Beartooth",
@@ -151,6 +141,93 @@
     "longText": "../public/texts/013/MTMubmwvcHJvZ3JhbW1hLzc3MDMvYmVhcnRvb3Ro.html",
     "image": "../public/event-images/013/MTMubmwvcHJvZ3JhbW1hLzc3MDMvYmVhcnRvb3Ro",
     "soldOut": false,
-    "unavailable": false
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "beartooth": {
+        "s": "6vwjIs0tbIiseJMR3pqwiL",
+        "l": "beartooth",
+        "g": [
+          "melodic metalcore",
+          "metalcore",
+          "pop punk"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2024-11-17T20:00:00+01:00",
+    "start": "2024-11-17T20:00:00+01:00",
+    "venueEventUrl": "https://www.013.nl/programma/7891/wheel",
+    "title": "Wheel",
+    "location": "013",
+    "price": 23.3,
+    "shortText": "",
+    "longText": "../public/texts/013/d3cuMDEzLm5sL3Byb2dyYW1tYS83ODkxL3doZWVs.html",
+    "image": "../public/event-images/013/d3cuMDEzLm5sL3Byb2dyYW1tYS83ODkxL3doZWVs",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2024-11-27T20:00:00+01:00",
+    "start": "2024-11-27T20:00:00+01:00",
+    "venueEventUrl": "https://www.013.nl/programma/78453/benighted-baest",
+    "title": "Benighted + Baest",
+    "location": "013",
+    "price": 22.3,
+    "shortText": "",
+    "longText": "../public/texts/013/cm9ncmFtbWEvNzg0NTMvYmVuaWdodGVkLWJhZXN0.html",
+    "image": "../public/event-images/013/cm9ncmFtbWEvNzg0NTMvYmVuaWdodGVkLWJhZXN0",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2024-12-22T20:00:00+01:00",
+    "start": "2024-12-22T20:00:00+01:00",
+    "venueEventUrl": "https://www.013.nl/programma/80690/dool",
+    "title": "Dool",
+    "location": "013",
+    "price": 25.3,
+    "shortText": "",
+    "longText": "../public/texts/013/d3cuMDEzLm5sL3Byb2dyYW1tYS84MDY5MC9kb29s.html",
+    "image": "../public/event-images/013/d3cuMDEzLm5sL3Byb2dyYW1tYS84MDY5MC9kb29s",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2025-02-08T20:30:00+01:00",
+    "start": "2025-02-08T20:30:00+01:00",
+    "venueEventUrl": "https://www.013.nl/programma/82767/ronnie-james-dio-the-memorial-concert",
+    "title": "Ronnie James Dio",
+    "location": "013",
+    "price": 28.3,
+    "shortText": "The Memorial Concert",
+    "longText": "../public/texts/013/amFtZXMtZGlvLXRoZS1tZW1vcmlhbC1jb25jZXJ0.html",
+    "image": "../public/event-images/013/amFtZXMtZGlvLXRoZS1tZW1vcmlhbC1jb25jZXJ0",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2025-02-21T18:15:00+01:00",
+    "start": "2025-02-21T18:15:00+01:00",
+    "venueEventUrl": "https://www.013.nl/programma/85373/paleface-swiss",
+    "title": "Paleface Swiss",
+    "location": "013",
+    "price": 28.3,
+    "shortText": "",
+    "longText": "../public/texts/013/cHJvZ3JhbW1hLzg1MzczL3BhbGVmYWNlLXN3aXNz.html",
+    "image": "../public/event-images/013/cHJvZ3JhbW1hLzg1MzczL3BhbGVmYWNlLXN3aXNz",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
   }
 ]

@@ -1,13 +1,16 @@
 /* global document */
 import { workerData } from 'worker_threads';
-import fs from 'fs';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/cpunt.js';
 import getImage from './gedeeld/image.js';
-import terms from './gedeeld/terms.js';
-import fsDirections from '../mods/fs-directions.js';
+import terms from '../artist-db/store/terms.js';
+import {
+  mapToDoorTime, combineStartTimeStartDate, mapToStartTime, 
+  mapToShortDate, mapToStartDate, combineDoorTimeStartDate, 
+} from './gedeeld/datums.js';
+import workTitleAndSlug from './gedeeld/slug.js';
 
-// #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
+// #region        SCRAPER CONFIG
 const scraper = new AbstractScraper({
   workerData: { ...workerData },
   launchOptions: {
@@ -22,11 +25,18 @@ const scraper = new AbstractScraper({
     timeout: 30012,
   },
   app: {
+    harvest: {
+      dividers: [`&`],
+      dividerRex: "[&]", 
+      artistsIn: ['title', 'shortText'],
+    },
     mainPage: {
       requiredProperties: ['venueEventUrl', 'title'],
+      asyncCheckFuncs: ['refused', 'allowedEvent', 'forbiddenTerms'],
     },
     singlePage: {
       requiredProperties: ['venueEventUrl', 'title', 'start'],
+      asyncCheckFuncs: ['success'],
     },
   },
 });
@@ -34,130 +44,7 @@ const scraper = new AbstractScraper({
 
 scraper.listenToMasterThread();
 
-// #region [rgba(50, 0, 0, 0.5)]      MAIN PAGE EVENT CHECK
-scraper.mainPageAsyncCheck = async function (event) {
-  const reasons = [];
-
-  this.talkToDB({
-    type: 'db-request',
-    subtype: 'isAllowed',
-    messageData: {
-      string: event.title,
-    },
-  });
-  await this.checkDBhasAnswered();
-  reasons.push(this.lastDBAnswer.reason);
-  if (this.lastDBAnswer.success) {
-    this.skipFurtherChecks.push(event.title);
-    return {
-      event,
-      reason: reasons.reverse().join(','),
-      success: true,
-    };
-  }
-
-  this.talkToDB({
-    type: 'db-request',
-    subtype: 'isRockEvent',
-    messageData: {
-      string: event.title,
-    },
-  });
-  await this.checkDBhasAnswered();
-  reasons.push(this.lastDBAnswer.reason);
-  if (this.lastDBAnswer.success) {
-    this.talkToDB({
-      type: 'db-request',
-      subtype: 'saveAllowedTitle',
-      messageData: {
-        string: event.title,
-        reason: reasons.reverse().join(', '),
-      },
-    });  
-    this.skipFurtherChecks.push(event.title);
-    return {
-      event,
-      reason: reasons.reverse().join(','),
-      success: true,
-    };
-  }  
-  
-  this.talkToDB({
-    type: 'db-request',
-    subtype: 'isRefused',
-    messageData: {
-      string: event.title,
-    },
-  });
-  await this.checkDBhasAnswered();
-  reasons.push(this.lastDBAnswer.reason);
-  if (this.lastDBAnswer.success) {
-    return {
-      event,
-      reason: reasons.reverse().join(','),
-      success: false,
-    };
-  }
-
-  const goodTermsRes = await this.hasGoodTerms(event);
-  reasons.push(goodTermsRes.reason);
-  if (goodTermsRes.success) {
-    this.skipFurtherChecks.push(event.title);
-    this.talkToDB({
-      type: 'db-request',
-      subtype: 'saveAllowedTitle',
-      messageData: {
-        string: event.title,
-        reason: reasons.reverse().join(', '),
-      },
-    });  
-    return {
-      event,
-      reason: reasons.reverse().join(','),
-      success: true,
-    };
-  }  
-
-  const hasForbiddenTerms = await this.hasForbiddenTerms(event);
-  reasons.push(hasForbiddenTerms.reason);
-  if (hasForbiddenTerms.success) {
-    this.talkToDB({
-      type: 'db-request',
-      subtype: 'saveRefusedTitle',
-      messageData: {
-        string: event.title,
-        reason: reasons.reverse().join(', '),
-      },
-    });    
-    
-    return {
-      event,
-      reason: reasons.reverse().join(','),
-      success: false,
-    };
-  }
-
-  this.talkToDB({
-    type: 'db-request',
-    subtype: 'saveAllowedTitle',
-    messageData: {
-      string: event.title,
-      reason: reasons.reverse().join(', '),
-    },
-  });    
- 
-  return {
-    event,
-    reason: reasons.reverse().join(', '),
-    success: true,
-  };
-};
-// #endregion                          MAIN PAGE EVENT CHECK
-
-// #region [rgba(0, 180, 0, 0.1)]      SINGLE PAGE EVENT CHECK
-// #endregion                          SINGLE PAGE EVENT CHECK
-
-// #region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
+// #region       MAIN PAGE
 scraper.mainPage = async function () {
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
   if (availableBaseEvents) {
@@ -168,31 +55,6 @@ scraper.mainPage = async function () {
   }
 
   const { stopFunctie, page } = await this.mainPageStart();
-
-  if (
-    !(await page
-      .waitForSelector('#filter .article-wrapper', {
-        timeout: 2000,
-      })
-      .catch(async (caughtError) => {
-        const pageHTML = await page.evaluate(() => {
-          console.log("NEE");
-          return `${document.body.outerHTML}`;
-        });
-        this.dirtyLog(pageHTML);
-        fs.writeFileSync(`${fsDirections.temp}/rando-error.txt`, pageHTML, 'utf-8');
-        this.handleError(
-          caughtError,
-          'Timeout wachten op #filter .article-wrapper Main page',
-          'close-thread',
-          null,
-        );
-      }))
-  ) {
-    return this.mainPageEnd({ stopFunctie, page, rawEvents: [] });
-  }
-
-  await this.waitTime(50);
 
   let rawEvents = await page.evaluate(
     // eslint-disable-next-line no-shadow
@@ -207,22 +69,27 @@ scraper.mainPage = async function () {
         res.title = title;
         const anchor = rawEvent.querySelector('.absolute-link') ?? null;
         res.venueEventUrl = anchor?.href ?? null;
-
-        const parpar = rawEvent.parentNode.parentNode;
-        res.startDate = parpar.hasAttribute('data-last-date')
-          ? parpar.getAttribute('data-last-date').split('-').reverse().join('-')
-          : null;
+        
+        res.mapToStartDate = rawEvent.querySelector('.article-info .article-date')?.textContent.trim() ?? '';
+        res.mapToStartTime = rawEvent.querySelector('.article-info .article-time')?.textContent.trim().replace('.', ":") ?? '';
         const artInfoText =
           rawEvent.querySelector('.article-info')?.textContent.toLowerCase() ?? '';
         const uaRex = new RegExp(unavailabiltyTerms.join('|'), 'gi');
         res.unavailable = !!rawEvent.textContent.match(uaRex);
         res.soldOut = !!artInfoText.match(/wachtlijst|uitverkocht/i);
-        res.shortText = '';
+        res.shortText = rawEvent.querySelector('.article-content .article-category')?.textContent.trim() ?? '';
         return res;
       }),
     { workerData, unavailabiltyTerms: terms.unavailability },
   );
-  rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
+  
+  rawEvents = rawEvents
+    .map((re) => mapToStartDate(re, 'dag-maandNaam-jaar', this.months))
+    .map(mapToShortDate)
+    .map(mapToStartTime)
+    .map(combineStartTimeStartDate)
+    .map((re) => workTitleAndSlug(re, this._s.app.harvest.possiblePrefix))
+    .map(this.isMusicEventCorruptedMapper);
 
   const eventGen = this.eventGenerator(rawEvents);
   // eslint-disable-next-line no-unused-vars
@@ -241,117 +108,34 @@ scraper.mainPage = async function () {
 };
 // #endregion                          MAIN PAGE
 
-// #region [rgba(120, 0, 0, 0.1)]     SINGLE PAGE
+// #region      SINGLE PAGE
 scraper.singlePage = async function ({ page, event }) {
   const { stopFunctie } = await this.singlePageStart();
 
-  if (
-    !(await page
-      .waitForSelector('#main .content-blocks', {
-        timeout: 7500,
-      })
-      .catch((caughtError) => {
-        this.handleError(
-          caughtError,
-          workerData,
-          `Timeout wachten op #main .content-blocks ${event.title}`,
-          'close-thread',
-          event,
-        );
-      }))
-  ) {
-    return this.singlePageEnd({
-      pageInfo: event,
-      stopFunctie,
-      page,
-      event,
+  await page
+    .waitForSelector('#main .content-blocks', {
+      timeout: 7500,
     });
-  }
 
-  const pageInfo = await page.evaluate(
+  let pageInfo = await page.evaluate(
     // eslint-disable-next-line no-shadow
     ({ months, event }) => {
-      const contentSections = Array.from(document.querySelectorAll('.content-blocks section'));
-      let indexOfTicketSection = 0;
-      contentSections.forEach((section, sectionIndex) => {
-        if (section.className.includes('Tickets')) {
-          indexOfTicketSection = sectionIndex;
-        }
-      });
-      const ticketSection = contentSections[indexOfTicketSection];
-
       const res = {
         anker: `<a class='page-info' href='${document.location.href}'>${document.title}</a>`,
         errors: [],
       };
 
-      const [, shortDay, monthName, year] = ticketSection
-        .querySelector('.article-date')
-        ?.textContent.match(/(\d+)\s+(\w+)\s+(\d\d\d\d)/) ?? [null, null, null, null];
-      const day = shortDay.padStart(2, '0');
-      const month = months[monthName.toLowerCase()];
-      const startDate = `${year}-${month}-${day}`;
-
-      let deurTijd;
-      let startTijd;
-      const tijdMatches =
-        document
-          .querySelector('.article-bottom .article-times')
-          ?.innerHTML.match(/(\d\d[:.]\d\d)/)
-          .map((strings) => strings.replace('.', ':')) ?? null;
-
-      res.tijdMatches = tijdMatches;
-      if (Array.isArray(tijdMatches) && tijdMatches.length) {
-        if (tijdMatches.length >= 2) {
-          startTijd = `${tijdMatches[1]}:00`;
-          deurTijd = `${tijdMatches[0]}:00`;
-        } else {
-          startTijd = `${tijdMatches[0]}:00`;
-        }
-      } else {
-        res.errors.push({
-          error: new Error('geen startTijdMatch res.'),
-          toDebug: {
-            html: document.querySelector('.article-bottom .article-times')?.innerHTML,
-            match: tijdMatches,
-          },
-        });
-      }
-
-      if (deurTijd) {
-        try {
-          res.door = `${startDate}T${deurTijd}`;
-        } catch (caughtError) {
-          res.errors.push({
-            error: caughtError,
-            remarks: `deurtijd door date error ${event.title} ${startDate}`,
-            toDebug: {
-              timeTried: `${startDate}T${deurTijd}`,
-              event,
-            },
-          });
-        }
-      }
-
-      if (startTijd) {
-        try {
-          res.start = `${startDate}T${startTijd}`;
-        } catch (caughtError) {
-          res.errors.push({
-            error: caughtError,
-            remarks: `starttijd door date error ${event.title} ${startDate}`,
-            toDebug: {
-              timeTried: `${startDate}T${startTijd}`,
-              event,
-            },
-          });
-        }
-      }
+      const dd = document.querySelector('.article-time .icon-deuren-open');
+      res.mapToDoorTime = dd ? dd.parentNode?.textContent.trim().replace('.', ':') : null;
 
       return res;
     },
     { months: this.months, event },
   );
+  
+  pageInfo = mapToDoorTime(pageInfo);
+  pageInfo.startDate = event.startDate;
+  pageInfo = combineDoorTimeStartDate(pageInfo);
 
   const imageRes = await getImage({
     _this: this,

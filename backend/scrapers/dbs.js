@@ -3,9 +3,14 @@ import { workerData } from 'worker_threads';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/dbs.js';
 import getImage from './gedeeld/image.js';
-import terms from './gedeeld/terms.js';
+import terms from '../artist-db/store/terms.js';
+import {
+  combineStartTimeStartDate, mapToStartTime, mapToEndTime,
+  mapToShortDate, mapToStartDate, combineEndTimeStartDate, 
+} from './gedeeld/datums.js';
+import workTitleAndSlug from './gedeeld/slug.js';
 
-// #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
+// #region        SCRAPER CONFIG
 const dbsScraper = new AbstractScraper({
   workerData: { ...workerData },
 
@@ -18,11 +23,18 @@ const dbsScraper = new AbstractScraper({
     timeout: 45000,
   },
   app: {
+    harvest: {
+      dividers: [`&`],
+      dividerRex: "[&]", 
+      artistsIn: ['title', 'shortText'],
+    },
     mainPage: {
       requiredProperties: ['venueEventUrl', 'title', 'start'],
+      asyncCheckFuncs: ['refused', 'allowedEvent'],
     },
     singlePage: {
       requiredProperties: ['venueEventUrl', 'title', 'price', 'start'],
+      asyncCheckFuncs: ['hasAllowedArtist', 'spotifyConfirmation', 'hasGoodTerms', 'forbiddenTerms', 'failure'],
     },
   },
 });
@@ -30,130 +42,7 @@ const dbsScraper = new AbstractScraper({
 
 dbsScraper.listenToMasterThread();
 
-// #region [rgba(60, 0, 0, 0.5)]      MAIN PAGE EVENT CHECK
-// #endregion                          MAIN PAGE EVENT CHECK
-
-// #region [rgba(0, 60, 0, 0.5)]      SINGLE PAGE EVENT CHECK
-dbsScraper.singlePageAsyncCheck = async function (event) {
-  const reasons = [];
-
-  this.talkToDB({
-    type: 'db-request',
-    subtype: 'isAllowed',
-    messageData: {
-      string: event.title,
-    },
-  });
-  await this.checkDBhasAnswered();
-  reasons.push(this.lastDBAnswer.reason);
-  if (this.lastDBAnswer.success) {
-    this.skipFurtherChecks.push(event.title);
-    return {
-      event,
-      reason: reasons.reverse().join(','),
-      success: true,
-    };
-  }
-
-  this.talkToDB({
-    type: 'db-request',
-    subtype: 'isRockEvent',
-    messageData: {
-      string: event.title,
-    },
-  });
-  await this.checkDBhasAnswered();
-  reasons.push(this.lastDBAnswer.reason);
-  if (this.lastDBAnswer.success) {
-    this.talkToDB({
-      type: 'db-request',
-      subtype: 'saveAllowedTitle',
-      messageData: {
-        string: event.title,
-        reason: reasons.reverse().join(', '),
-      },
-    });  
-    this.skipFurtherChecks.push(event.title);
-    return {
-      event,
-      reason: reasons.reverse().join(','),
-      success: true,
-    };
-  }  
-  
-  this.talkToDB({
-    type: 'db-request',
-    subtype: 'isRefused',
-    messageData: {
-      string: event.title,
-    },
-  });
-  await this.checkDBhasAnswered();
-  reasons.push(this.lastDBAnswer.reason);
-  if (this.lastDBAnswer.success) {
-    return {
-      event,
-      reason: reasons.reverse().join(','),
-      success: false,
-    };
-  }
-
-  const goodTermsRes = await this.hasGoodTerms(event);
-  reasons.push(goodTermsRes.reason);
-  if (goodTermsRes.success) {
-    this.skipFurtherChecks.push(event.title);
-    this.talkToDB({
-      type: 'db-request',
-      subtype: 'saveAllowedTitle',
-      messageData: {
-        string: event.title,
-        reason: reasons.reverse().join(', '),
-      },
-    });  
-    return {
-      event,
-      reason: reasons.reverse().join(','),
-      success: true,
-    };
-  }  
-
-  const hasForbiddenTerms = await this.hasForbiddenTerms(event);
-  reasons.push(hasForbiddenTerms.reason);
-  if (hasForbiddenTerms.success) {
-    this.talkToDB({
-      type: 'db-request',
-      subtype: 'saveRefusedTitle',
-      messageData: {
-        string: event.title,
-        reason: reasons.reverse().join(', '),
-      },
-    });    
-    
-    return {
-      event,
-      reason: reasons.reverse().join(','),
-      success: false,
-    };
-  }
-
-  this.talkToDB({
-    type: 'db-request',
-    subtype: 'saveAllowedTitle',
-    messageData: {
-      string: event.title,
-      reason: reasons.reverse().join(', '),
-    },
-  });  
- 
-  return {
-    event,
-    reason: reasons.reverse().join(', '),
-    success: true,
-  };
-};
-// #endregion                          SINGLE PAGE EVENT CHECK
-
-// #region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
+// #region       MAIN PAGE
 dbsScraper.mainPage = async function () {
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
   if (availableBaseEvents) {
@@ -166,16 +55,17 @@ dbsScraper.mainPage = async function () {
   const { stopFunctie, page } = await this.mainPageStart();
 
   await page.waitForSelector('.fusion-events-post');
-  await this.waitTime(100);
+  await this.waitTime(500);
 
   let rawEvents = await page.evaluate(
     // eslint-disable-next-line no-shadow
-    ({ months, workerData, unavailabiltyTerms }) =>
+    ({ workerData, unavailabiltyTerms }) =>
       Array.from(document.querySelectorAll('.fusion-events-post')).map((eventEl) => {
         let title = eventEl.querySelector('.fusion-events-meta .url')?.textContent.trim() ?? null;
         if (title.match(/sold\s?out|uitverkocht/i)) {
           title = title.replace(/\*?(sold\s?out|uitverkocht)\s?\*?\s?/i, '');
         }
+        
         const res = {
           anker: `<a class='page-info' href='${document.location.href}'>${workerData.family} - main - ${title}</a>`,
           errors: [],
@@ -187,62 +77,27 @@ dbsScraper.mainPage = async function () {
 
         res.venueEventUrl = eventEl.querySelector('.fusion-events-meta .url')?.href ?? null;
 
-        const startDateMatch =
-          eventEl.querySelector('.tribe-event-date-start')?.textContent.match(/(\d+)\s+(\w+)/) ??
-          null;
-        if (startDateMatch) {
-          res.day = startDateMatch[1];
-          const monthName = startDateMatch[2];
-          res.month = months[monthName];
-          res.day = res.day.padStart(2, '0');
-          const yearMatch = eventEl
-            .querySelector('.tribe-event-date-start')
-            ?.textContent.match(/\d{4}/);
-          if (!yearMatch || !Array.isArray(yearMatch) || yearMatch.length < 1) {
-            res.year = new Date().getFullYear();
-          } else {
-            res.year = yearMatch[1];
-          }
-          res.year = res.year || new Date().getFullYear();
-          const timeMatch = eventEl
-            .querySelector('.tribe-event-date-start')
-            ?.textContent.match(/\d{1,2}:\d\d/);
-          if (!timeMatch || !Array.isArray(timeMatch) || timeMatch.length < 1) {
-            res.time = '12:00';
-          } else {
-            res.time = timeMatch[0].padStart(5, '0');
-            res.startDate = `${res.year}-${res.month}-${res.day}`;
-            res.start = `${res.startDate}T${res.time}:00`;
-          }
-        }
-
-        try {
-          const endDateEl = eventEl.querySelector('.tribe-event-time') ?? null;
-          if (res.startDate && endDateEl) {
-            if (endDateEl) {
-              const endDateM = endDateEl.textContent.toLowerCase().match(/\d{1,2}:\d\d/);
-              if (Array.isArray(endDateM) && endDateM.length > 0) {
-                res.endTime = endDateM[0].padStart(5, '0');
-                res.end = `${res.startDate}T${res.endTime}:00`;
-                if (res.end === res.start) {
-                  res.end = null;
-                }
-              }
-            }
-          }
-        } catch (caughtError) {
-          res.errors.push({
-            error: caughtError,
-            remarks: `Wirwar datums e.d. ${title}`,
-            toDebug: res,
-          });
-        }
+        const datumTijdSplit = (eventEl.querySelector('.tribe-event-date-start')?.textContent.trim() ?? '').split('@');
+        res.mapToStartDate = datumTijdSplit[0].trim();
+        res.mapToStartTime = datumTijdSplit.length > 1 ? datumTijdSplit[1].trim() : '20:00';
+        res.mapToEndTime = eventEl.querySelector('.tribe-event-time')?.textContent.trim() ?? '';
 
         return res;
       }),
-    { months: this.months, workerData, unavailabiltyTerms: terms.unavailability },
+    { workerData, unavailabiltyTerms: terms.unavailability },
   );
-  rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
+  
+  rawEvents = rawEvents
+    .map((re) => mapToStartDate(re, 'dag-maandNaam', this.months))
+    .map(mapToShortDate)
+    .map(mapToStartTime)
+    .map(mapToEndTime)
+    .map(combineStartTimeStartDate)
+    .map(combineEndTimeStartDate)
+    .map((re) => workTitleAndSlug(re, this._s.app.harvest.possiblePrefix))
+    .map(this.isMusicEventCorruptedMapper);
+
+  this.dirtyLog(rawEvents);
 
   const eventGen = this.eventGenerator(rawEvents);
   // eslint-disable-next-line no-unused-vars
@@ -261,7 +116,7 @@ dbsScraper.mainPage = async function () {
 };
 // #endregion                          MAIN PAGE
 
-// #region [rgba(120, 0, 0, 0.1)]     SINGLE PAGE
+// #region      SINGLE PAGE
 dbsScraper.singlePage = async function ({ page, event }) {
   const { stopFunctie } = await this.singlePageStart();
 
@@ -274,11 +129,8 @@ dbsScraper.singlePage = async function ({ page, event }) {
 
       res.shortText =
         document
-          .querySelector('.tribe-events-event-categories')
-          ?.textContent.toLowerCase()
-          .replace('concert, ', '')
-          .replace('concert', '')
-          .trim() ?? '';
+          .querySelector('.tribe-events-single-event-description > p, .tribe-events-single-event-description *:first-child')
+          ?.textContent.trim() ?? '';
       res.ticketURL = document.querySelector('.tribe-events-event-url a')?.href ?? null;
       if (!res.ticketURL) {
         res.price = '0';

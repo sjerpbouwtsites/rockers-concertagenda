@@ -3,9 +3,12 @@ import { workerData } from 'worker_threads';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/baroeg.js';
 import getImage from './gedeeld/image.js';
-import { combineStartTimeStartDate, mapToStartDate, mapToStartTime } from './gedeeld/datums.js';
+import {
+  mapToShortDate, combineStartTimeStartDate, mapToStartDate, mapToStartTime, 
+} from './gedeeld/datums.js';
+import workTitleAndSlug from './gedeeld/slug.js';
 
-// #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
+// #region        SCRAPER CONFIG
 const scraper = new AbstractScraper({
   workerData: { ...workerData },
   mainPage: {
@@ -16,11 +19,18 @@ const scraper = new AbstractScraper({
     timeout: 30000,
   },
   app: {
+    harvest: {
+      dividers: [`+`],
+      dividerRex: "[\\+]",
+      artistsIn: ['title'],
+    },    
     mainPage: {
       requiredProperties: ['venueEventUrl', 'title', 'start'],
+      // baroeg heeft een betrouwbare eigen categorisering
+      asyncCheckFuncs: ['refused', 'allowedEvent', 'explicitEventGenres', 'hasAllowedArtist', 'spotifyConfirmation', 'failure'],
     },
     singlePage: {
-      requiredProperties: ['venueEventUrl', 'title', 'start'],
+      asyncCheckFuncs: ['success'],
     },
   },
 });
@@ -28,111 +38,7 @@ const scraper = new AbstractScraper({
 
 scraper.listenToMasterThread();
 
-// #region [rgba(50, 0, 0, 0.5)]      MAIN PAGE EVENT CHECK
-scraper.mainPageAsyncCheck = async function (event) {
-  const reasons = [];
-
-  this.talkToDB({
-    type: 'db-request',
-    subtype: 'isAllowed',
-    messageData: {
-      string: event.title,
-    },
-  });
-  await this.checkDBhasAnswered();
-  reasons.push(this.lastDBAnswer.reason);
-  if (this.lastDBAnswer.success) {
-    this.skipFurtherChecks.push(event.title);
-    return {
-      event,
-      reason: reasons.reverse().join(','),
-      success: true,
-    };
-  }
-
-  this.talkToDB({
-    type: 'db-request',
-    subtype: 'isRockEvent',
-    messageData: {
-      string: event.title,
-    },
-  });
-  await this.checkDBhasAnswered();
-  reasons.push(this.lastDBAnswer.reason);
-  if (this.lastDBAnswer.success) {
-    this.talkToDB({
-      type: 'db-request',
-      subtype: 'saveAllowedTitle',
-      messageData: {
-        string: event.title,
-        reason: reasons.reverse().join(', '),
-      },
-    });  
-    this.skipFurtherChecks.push(event.title);
-    return {
-      event,
-      reason: reasons.reverse().join(','),
-      success: true,
-    };
-  }  
-  
-  this.talkToDB({
-    type: 'db-request',
-    subtype: 'isRefused',
-    messageData: {
-      string: event.title,
-    },
-  });
-  await this.checkDBhasAnswered();
-  reasons.push(this.lastDBAnswer.reason);
-  if (this.lastDBAnswer.success) {
-    return {
-      event,
-      reason: reasons.reverse().join(','),
-      success: false,
-    };
-  }
-
-  const hasForbiddenTerms = await this.hasForbiddenTerms(event);
-  reasons.push(hasForbiddenTerms.reason);
-  if (hasForbiddenTerms.success) {
-    this.talkToDB({
-      type: 'db-request',
-      subtype: 'saveRefusedTitle',
-      messageData: {
-        string: event.title,
-        reason: hasForbiddenTerms.reason,
-      },
-    });    
-    
-    return {
-      event,
-      reason: reasons.reverse().join(','),
-      success: false,
-    };
-  }
-
-  this.talkToDB({
-    type: 'db-request',
-    subtype: 'saveAllowedTitle',
-    messageData: {
-      string: event.title,
-      reason: reasons.reverse().join(', '),
-    },
-  });  
-  
-  return {
-    event,
-    reason: reasons.reverse().join(', '),
-    success: true,
-  };
-};
-// #endregion                          MAIN PAGE EVENT CHECK
-
-// #region [rgba(0, 180, 0, 0.1)]      SINGLE PAGE EVENT CHECK
-// #endregion                          SINGLE PAGE EVENT CHECK
-
-// #region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
+// #region       MAIN PAGE
 scraper.mainPage = async function () {
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
   if (availableBaseEvents) {
@@ -176,9 +82,11 @@ scraper.mainPage = async function () {
           }
           res.title = title;
 
+          res.eventGenres = Array.from(eventEl.querySelectorAll('.wpt_production_category')).map((c) => c.textContent);
+
           res.shortText =
             eventEl.querySelector('.wp_theatre_prod_excerpt')?.textContent.trim() ?? null;
-          res.shortText += categorieTeksten;
+          // res.shortText += categorieTeksten;
 
           res.venueEventUrl = venueEventUrl;
 
@@ -195,10 +103,13 @@ scraper.mainPage = async function () {
     { workerData },
   );
 
-  rawEvents = rawEvents.map((event) => mapToStartDate(event, 'dag-maandNummer-jaar', this.months));
-  rawEvents = rawEvents.map(mapToStartTime);
-  rawEvents = rawEvents.map(combineStartTimeStartDate);
-  rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
+  rawEvents = rawEvents
+    .map((event) => mapToStartDate(event, 'dag-maandNummer-jaar', this.months))
+    .map(mapToStartTime)
+    .map(mapToShortDate)
+    .map(combineStartTimeStartDate)
+    .map(this.isMusicEventCorruptedMapper)
+    .map((re) => workTitleAndSlug(re, this._s.app.harvest.possiblePrefix));
 
   const eventGen = this.eventGenerator(rawEvents);
   // eslint-disable-next-line no-unused-vars
@@ -217,7 +128,7 @@ scraper.mainPage = async function () {
 };
 // #endregion                          MAIN PAGE
 
-// #region [rgba(120, 0, 0, 0.1)]     SINGLE PAGE
+// #region      SINGLE PAGE
 scraper.singlePage = async function ({ page, event }) {
   const { stopFunctie } = await this.singlePageStart();
 
@@ -235,7 +146,7 @@ scraper.singlePage = async function ({ page, event }) {
     },
     { event },
   );
-
+  
   const imageRes = await getImage({
     _this: this,
     page,
@@ -245,23 +156,26 @@ scraper.singlePage = async function ({ page, event }) {
     selectors: [".hero-area [style*='background-image']"],
     mode: 'background-src',
   });
+  
   pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
   pageInfo.image = imageRes.image;
-
+  
   const priceRes = await this.getPriceFromHTML({
     page,
     event,
     pageInfo,
     selectors: ['.wp_theatre_event_tickets'],
   });
+  
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
   pageInfo.price = priceRes.price;
-
+  
   const { mediaForHTML, socialsForHTML, textForHTML } = await longTextSocialsIframes(
     page,
     event,
     pageInfo,
   );
+
   pageInfo.mediaForHTML = mediaForHTML;
   pageInfo.socialsForHTML = socialsForHTML;
   pageInfo.textForHTML = textForHTML;

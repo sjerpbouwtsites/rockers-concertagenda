@@ -90,18 +90,17 @@ function _mapToTime(event, key, required) {
     let match;
     try {
       if (isTime(str, mapKey, required)) {
-        match = str.match(/(\d\d):(\d\d)/);
+        match = str.match(/(\d{1,2}):(\d\d)/);
         const secs = '00';
         // eslint-disable-next-line no-param-reassign
-        event[timeKey] = `${match[1]}:${match[2]}:${secs}`;
+        event[timeKey] = `${match[1].padStart(2, '0')}:${match[2]}:${secs}`;
       }
     } catch (isTimeError) {
       event.errors.push({
         error: isTimeError,
         remarks: `isTimeError ${mapKey} ${event.anker}`,
         toDebug: {
-          [`${mapKey}`]: event[mapKey],
-          event,
+          [`${mapKey}`]: `${event[mapKey]}`,
           match,
         },
       });
@@ -110,7 +109,9 @@ function _mapToTime(event, key, required) {
     event.errors.push({
       error: arrayCheckError,
       remarks: `Array check ${mapKey} ${event.anker}`,
-      toDebug: JSON.parse(JSON.stringify(event)),
+      toDebug: {
+        [`${mapKey}`]: `${event[mapKey]}`,
+      },
     });
   }
 
@@ -140,10 +141,13 @@ export function mapToStartDate(event, regexMode, months) {
 
   if (!event.mapToStartDate) {
     event.errors.push({
-      error: new Error('map to start date falsy'),
-      remarks: 'mapToStartDate is falsy',
-      toDebug: event.mapToStartDate,
-    });
+      error: new Error(`map to start date falsy`),
+      remarks: `mapToStartDate is falsy <a href='${event.venueEventUrl}'>${event.title}</a>`,
+      toDebug: {
+        falsyMapToStartDate: JSON.parse(JSON.stringify(event)),
+      }, 
+    },
+    );
     return event;
   }
 
@@ -154,7 +158,7 @@ export function mapToStartDate(event, regexMode, months) {
       event.errors.push({
         error: new Error(`datematch dag-maandNaam mode`),
         toDebug: {
-          string: event.mapToStartDate,
+          string: `${event.mapToStartDate}`,
           res: dateM,
         },
       });
@@ -168,7 +172,8 @@ export function mapToStartDate(event, regexMode, months) {
       jaar += jaar + 1;
     }
     const dag = dateM[1].padStart(2, '0');
-    const dateStr = `${jaar}-${maandGetal}-${dag}`;
+    const maandGetalPadding = maandGetal.padStart(2, '0');
+    const dateStr = `${jaar}-${maandGetalPadding}-${dag}`;
     if (isDate(dateStr)) {
       // eslint-disable-next-line no-param-reassign
       event.startDate = dateStr;
@@ -243,12 +248,39 @@ export function mapToStartDate(event, regexMode, months) {
     }
     return event;
   }
+  if (regexMode === 'dag-maandNummer') {
+    const dateM = event.mapToStartDate.match(/(\d{1,2})[\/\s]?(\d+)/);
+    if (!Array.isArray(dateM) || (Array.isArray(dateM) && dateM.length < 3)) {
+      event.errors.push({
+        error: new Error(`datematch dag-maandNummer`),
+        toDebug: {
+          string: event.mapToStartDate,
+          res: dateM,
+        },
+      });
+      return event;
+    }
+    let jaar = (new Date()).getFullYear();
+    const huiMaandNr = (new Date()).getMonth() + 1;
+    const maandGetal = dateM[2];
+    if (huiMaandNr > maandGetal) {
+      jaar += jaar + 1;
+    }
+    const dag = dateM[1].padStart(2, '0');
+    const dateStr = `${jaar}-${maandGetal}-${dag}`;
+    if (isDate(dateStr)) {
+      // eslint-disable-next-line no-param-reassign
+      event.startDate = dateStr;
+    }
+    return event;
+  }
   event.errors.push({
     error: new Error(`onbekende regexMode ${regexMode}`),
   });
 
   return event;
 }
+
 function _combineTimeDate(event, destKey, required) {
   const timeString = `${destKey}Time`;
   try {
@@ -283,6 +315,19 @@ export function combineEndTimeStartDate(event) {
 
 export function mapToStart(event) {
   return _mapToDateString(event, 'start', true);
+}
+
+export function mapToShortDate(event) {
+  const b = event?.start ? event.start : event.startDate;
+  if (!b) {
+    event.errors.push({
+      error: new Error(`geen start of startDate beschikbaar in mapToShortDate`),
+    });
+    return event;
+  }
+  // eslint-disable-next-line no-param-reassign
+  event.shortDate = b.substring(2, 10).replaceAll('-', '');
+  return event;
 }
 
 export function mapToDoor(event) {

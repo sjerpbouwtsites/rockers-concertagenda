@@ -1,50 +1,153 @@
 [
   {
-    "start": "2023-11-25T19:00:00",
-    "venueEventUrl": "https://nobel.nl/programma/randstad-rebels-25-nov-2023/",
-    "title": "Randstad Rebels",
+    "start": "2024-08-13T18:00:00",
+    "venueEventUrl": "https://nobel.nl/programma/exodus-13-aug-2024/",
+    "title": "Exodus",
     "location": "gebrdenobel",
-    "price": 10,
-    "shortText": "Een avond vol lokale bands en heavy muziek, deel twee!",
-    "longText": "../public/texts/gebrdenobel/YS9yYW5kc3RhZC1yZWJlbHMtMjUtbm92LTIwMjMv.html",
-    "image": "../public/event-images/gebrdenobel/YS9yYW5kc3RhZC1yZWJlbHMtMjUtbm92LTIwMjMv",
-    "soldOut": false,
-    "unavailable": false
+    "price": 25,
+    "shortText": "Thrash metal titanen uit San Francisco",
+    "longText": "../public/texts/gebrdenobel/L3Byb2dyYW1tYS9leG9kdXMtMTMtYXVnLTIwMjQv.html",
+    "image": "../public/event-images/gebrdenobel/L3Byb2dyYW1tYS9leG9kdXMtMTMtYXVnLTIwMjQv",
+    "soldOut": true,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
   },
   {
-    "start": "2024-02-03T19:00:00",
-    "venueEventUrl": "https://nobel.nl/programma/kalaallit-nunaat-sowt-to-adelaide-3-feb-2024/",
-    "title": "Kalaallit Nunaat + SØWT + To Adelaide",
+    "start": "2024-09-20T19:00:00",
+    "venueEventUrl": "https://nobel.nl/programma/pungent-stench-bodyfarm-20-sep-2024/",
+    "title": "Schirenc plays Pungent Stench + Bodyfarm",
+    "location": "gebrdenobel",
+    "price": 20,
+    "shortText": "'Schirenc' en 'Bodyfarm' spelen Old school Death Metal",
+    "longText": "../public/texts/gebrdenobel/dC1zdGVuY2gtYm9keWZhcm0tMjAtc2VwLTIwMjQv.html",
+    "image": "../public/event-images/gebrdenobel/dC1zdGVuY2gtYm9keWZhcm0tMjAtc2VwLTIwMjQv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "bodyfarm": {
+        "s": "2OFRvZ32VVIW3UxVl36A0h",
+        "l": "bodyfarm",
+        "g": [
+          "dutch death metal",
+          "grisly death metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2024-09-27T19:00:00",
+    "venueEventUrl": "https://nobel.nl/programma/release-the-river-albumpresentatie-27-sep-2024/",
+    "title": "Release The River - album release",
     "location": "gebrdenobel",
     "price": 12.5,
-    "shortText": "Een avond vol meeslepende noise, distortion en feedback die blijft hangen.",
-    "longText": "../public/texts/gebrdenobel/dC1zb3d0LXRvLWFkZWxhaWRlLTMtZmViLTIwMjQv.html",
-    "image": "../public/event-images/gebrdenobel/dC1zb3d0LXRvLWFkZWxhaWRlLTMtZmViLTIwMjQv",
+    "shortText": "Duistere grooves, snoeiharde riffs en Nederlandse metal van de bovenste plank",
+    "longText": "../public/texts/gebrdenobel/LWFsYnVtcHJlc2VudGF0aWUtMjctc2VwLTIwMjQv.html",
+    "image": "../public/event-images/gebrdenobel/LWFsYnVtcHJlc2VudGF0aWUtMjctc2VwLTIwMjQv",
     "soldOut": false,
-    "unavailable": false
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
   },
   {
-    "start": "2024-03-16T19:00:00",
-    "venueEventUrl": "https://nobel.nl/programma/leiden-retox-16-mar-2024/",
-    "title": "Leiden Retox",
-    "location": "gebrdenobel",
-    "price": 27.5,
-    "shortText": "Met Fleddy Melculy, Bark, Savage Beat, SantinaRunaway, Pizza Knife en Destroy Oh Boy",
-    "longText": "../public/texts/gebrdenobel/YW1tYS9sZWlkZW4tcmV0b3gtMTYtbWFyLTIwMjQv.html",
-    "image": "../public/event-images/gebrdenobel/YW1tYS9sZWlkZW4tcmV0b3gtMTYtbWFyLTIwMjQv",
-    "soldOut": false,
-    "unavailable": false
-  },
-  {
-    "start": "2024-03-30T00:00:00",
-    "venueEventUrl": "https://nobel.nl/programma/interstellar-solar-fest-ll-30-mar-2024/",
-    "title": "Interstellar Solar Fest II",
+    "start": "2024-10-19T19:00:00",
+    "venueEventUrl": "https://nobel.nl/programma/monster-magnet-19-oct-2024/",
+    "title": "Monster Magnet",
     "location": "gebrdenobel",
     "price": 32.5,
-    "shortText": "Stoner- en alternatief rockfestival met Truckfighters en meer!",
-    "longText": "../public/texts/gebrdenobel/bGFyLXNvbGFyLWZlc3QtbGwtMzAtbWFyLTIwMjQv.html",
-    "image": "../public/event-images/gebrdenobel/bGFyLXNvbGFyLWZlc3QtbGwtMzAtbWFyLTIwMjQv",
+    "shortText": "Pioneers van de stoner rock vieren 35-jarig jubileum",
+    "longText": "../public/texts/gebrdenobel/bWEvbW9uc3Rlci1tYWduZXQtMTktb2N0LTIwMjQv.html",
+    "image": "../public/event-images/gebrdenobel/bWEvbW9uc3Rlci1tYWduZXQtMTktb2N0LTIwMjQv",
     "soldOut": false,
-    "unavailable": false
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "monster magnet": {
+        "s": "4hvwEwrCmGj22uURGVET7Q",
+        "l": "monster%20magnet",
+        "g": [
+          "southern metal",
+          "stoner metal",
+          "stoner rock"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2024-11-07T18:30:00",
+    "venueEventUrl": "https://nobel.nl/programma/alien-ant-farm-cky-7-nov-2024/",
+    "title": "Alien ant farm + cky",
+    "location": "gebrdenobel",
+    "price": 30,
+    "shortText": "High-energy rock-'n-roll van twee legendarische zeroes-bands",
+    "longText": "../public/texts/gebrdenobel/YWxpZW4tYW50LWZhcm0tY2t5LTctbm92LTIwMjQv.html",
+    "image": "../public/event-images/gebrdenobel/YWxpZW4tYW50LWZhcm0tY2t5LTctbm92LTIwMjQv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "start": "2024-11-30T19:00:00",
+    "venueEventUrl": "https://nobel.nl/programma/peter-pan-speedrock-30-nov-2024/",
+    "title": "Peter Pan Speedrock",
+    "location": "gebrdenobel",
+    "price": 32.5,
+    "shortText": "Vier 10 jaar Nobel met de grondleggers van Speedrock!",
+    "longText": "../public/texts/gebrdenobel/dGVyLXBhbi1zcGVlZHJvY2stMzAtbm92LTIwMjQv.html",
+    "image": "../public/event-images/gebrdenobel/dGVyLXBhbi1zcGVlZHJvY2stMzAtbm92LTIwMjQv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "start": "2024-12-20T19:00:00",
+    "venueEventUrl": "https://nobel.nl/programma/pene-corrida-20-dec-2024/",
+    "title": "Pene Corrida",
+    "location": "gebrdenobel",
+    "price": 17.5,
+    "shortText": "Meedogenloze Party-Metal vol popmuziek op steroïden",
+    "longText": "../public/texts/gebrdenobel/YW1tYS9wZW5lLWNvcnJpZGEtMjAtZGVjLTIwMjQv.html",
+    "image": "../public/event-images/gebrdenobel/YW1tYS9wZW5lLWNvcnJpZGEtMjAtZGVjLTIwMjQv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "pene corrida": {
+        "s": "1Hw2YwIpnSOWbtb8FlZcCa",
+        "l": "pene%20corrida",
+        "g": []
+      }
+    }
+  },
+  {
+    "start": "2024-12-21T19:00:00",
+    "venueEventUrl": "https://nobel.nl/programma/dool-21-dec-2024/",
+    "title": "Dool",
+    "location": "gebrdenobel",
+    "price": 22.5,
+    "shortText": "Dynamische metalband met Raven van Dorst als lead vocalist",
+    "longText": "../public/texts/gebrdenobel/bmwvcHJvZ3JhbW1hL2Rvb2wtMjEtZGVjLTIwMjQv.html",
+    "image": "../public/event-images/gebrdenobel/bmwvcHJvZ3JhbW1hL2Rvb2wtMjEtZGVjLTIwMjQv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "start": "2025-03-29T17:00:00",
+    "venueEventUrl": "https://nobel.nl/programma/interstellar-solar-fest-29-mar-2025/",
+    "title": "Interstellar Solar Fest",
+    "location": "gebrdenobel",
+    "price": 27.5,
+    "shortText": "Stoner- en alternatief rockfestival",
+    "longText": "../public/texts/gebrdenobel/dGVsbGFyLXNvbGFyLWZlc3QtMjktbWFyLTIwMjUv.html",
+    "image": "../public/event-images/gebrdenobel/dGVsbGFyLXNvbGFyLWZlc3QtMjktbWFyLTIwMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
   }
 ]

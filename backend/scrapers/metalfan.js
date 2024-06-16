@@ -37,18 +37,25 @@ async function metalFanDoURL(page, url, qwm) {
     dinkelsbhlmetoapowerwolf: 'dinkel',
     'dynamo eindhoven': 'dynamo',
     dynamoeindhoven: 'dynamo',
+    clissonfrankrijkmetfoofighters: 'hellfest',
+    weert: 'bospop',
+    surhuizummetoathehaunted: 'surhuzumopenair',
+    emmenmethatebreed: 'pitfest',
     kopenhagendenemarkenmetmtleycre: 'kopenhagen',
     'kavka antwerpen': 'kavka',
     'kavka oudaan': 'kavka',
     kavkaoudaan: 'kavka',
     'kavka zappa': 'kavka',
+    festivalparkstenehei: 'graspopmetalmeeting',
     kavkazappa: 'kavka',
+    nobel: 'gebrnobel',
     zappa: 'kavka',
     kavkaantwerpen: 'kavka',
     langemunt: 'langemunte',
     merleyn: 'doornroosje', // onderdeel doornroosje
     'oilsjt omploft': 'sintannazaal',
     wackenduitsland: 'wacken',
+    wackenduitslandmetscorpions: 'wacken',
     wackenduitslandmetoamegadeth: 'wacken',
     wackenduitslandmetoaironmaiden: 'wacken',
     evenemententerreinweertnoord: 'weertnoord',
@@ -154,6 +161,9 @@ async function scrapeMetalfan() {
 }
 parentPort.on('message', (message) => {
   const pm = JSON.parse(message);
+  if (pm?.type === 'process' && pm?.subtype === 'command-die') {
+    process.exit();
+  }
   if (pm?.type === 'process' && pm?.subtype === 'command-start') {
     try {
       scrapeMetalfan(pm?.messageData);

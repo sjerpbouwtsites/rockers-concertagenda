@@ -9,8 +9,8 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  transform: scale(0.8) translate(-12.5%, -12.5%);
 }
+
 .monitorfield__outer {
   flex-basis: 430px;
   flex-shrink: 0;
@@ -23,7 +23,7 @@ body {
 }
 .monitorfield {
   background-color: #eee;
-  height: 300px;
+  height: 600px;
   overflow-y: scroll;
   border-radius: 1px;
   margin: 20px;
@@ -309,4 +309,25 @@ table th.worker-data-cell {
 
 .single-event-check-notice--failure {
   color: red;
+}
+.monitorfield__outer--base-event-check,
+.monitorfield--single-event-check-list {
+  flex-basis: 500px;
+  font-size: 0.8em;
+}
+.monitorfield__outer--base-event-check strong,
+.monitorfield--single-event-check-list strong {
+  font-size: 1.3em;
+  font-weight: 900;
+  margin-bottom: .25em;
+  display: block;
+}
+
+@media (max-width: 1200px){
+  body {
+   transform: scale(0.66) translate(-25%, -25%)
+  }
+  .monitorfields__container {
+    width: 150%;
+  }
 }

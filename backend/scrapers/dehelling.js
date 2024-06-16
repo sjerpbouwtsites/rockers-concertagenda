@@ -3,8 +3,13 @@ import { workerData } from 'worker_threads';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/dehelling.js';
 import getImage from './gedeeld/image.js';
+import {
+  combineStartTimeStartDate, mapToStartTime, mapToEndTime,
+  mapToShortDate, mapToStartDate, combineEndTimeStartDate, 
+} from './gedeeld/datums.js';
+import workTitleAndSlug from './gedeeld/slug.js';
 
-// #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
+// #region        SCRAPER CONFIG
 const dehellingScraper = new AbstractScraper({
   workerData: { ...workerData },
 
@@ -16,12 +21,19 @@ const dehellingScraper = new AbstractScraper({
     timeout: 10012,
   },
   app: {
+    harvest: {
+      dividers: [`\\+`],
+      dividerRex: "[+]", 
+      artistsIn: ['title', 'shortText'],
+    },
     mainPage: {
       requiredProperties: ['venueEventUrl', 'title', 'start'],
+      asyncCheckFuncs: ['refused', 'allowedEvent', 'forbiddenTerms', 'hasGoodTerms', 'hasAllowedArtist', 'spotifyConfirmation', 'failure'],
     },
     singlePage: {
       requiredProperties: ['venueEventUrl', 'title', 'price', 'start'],
-      longHTMLnewStyle: true,
+      asyncCheckFuncs: ['success'],
+      
     },
   },
 });
@@ -29,118 +41,7 @@ const dehellingScraper = new AbstractScraper({
 
 dehellingScraper.listenToMasterThread();
 
-// #region [rgba(60, 0, 0, 0.5)]      MAIN PAGE EVENT CHECK
-dehellingScraper.mainPageAsyncCheck = async function (event) {
-  const reasons = [];
-
-  this.talkToDB({
-    type: 'db-request',
-    subtype: 'isAllowed',
-    messageData: {
-      string: event.title,
-    },
-  });
-  await this.checkDBhasAnswered();
-  reasons.push(this.lastDBAnswer.reason);
-  if (this.lastDBAnswer.success) {
-    this.skipFurtherChecks.push(event.title);
-    return {
-      event,
-      reason: reasons.reverse().join(','),
-      success: true,
-    };
-  }
-
-  this.talkToDB({
-    type: 'db-request',
-    subtype: 'isRockEvent',
-    messageData: {
-      string: event.title,
-    },
-  });
-  await this.checkDBhasAnswered();
-  reasons.push(this.lastDBAnswer.reason);
-  if (this.lastDBAnswer.success) {
-    this.talkToDB({
-      type: 'db-request',
-      subtype: 'saveAllowedTitle',
-      messageData: {
-        string: event.title,
-        reason: reasons.reverse().join(', '),
-      },
-    }); 
-    this.skipFurtherChecks.push(event.title);
-    return {
-      event,
-      reason: reasons.reverse().join(','),
-      success: true,
-    };
-  }  
-  
-  this.talkToDB({
-    type: 'db-request',
-    subtype: 'isRefused',
-    messageData: {
-      string: event.title,
-    },
-  });
-  await this.checkDBhasAnswered();
-  reasons.push(this.lastDBAnswer.reason);
-  if (this.lastDBAnswer.success) {
-    return {
-      event,
-      reason: reasons.reverse().join(','),
-      success: false,
-    };
-  }
-
-  const hasForbiddenTerms = await this.hasForbiddenTerms(event);
-  reasons.push(hasForbiddenTerms.reason);
-  if (hasForbiddenTerms.success) {
-    this.talkToDB({
-      type: 'db-request',
-      subtype: 'saveRefusedTitle',
-      messageData: {
-        string: event.title,
-        reason: reasons.reverse().join(', '),
-      },
-    });    
-    
-    return {
-      event,
-      reason: reasons.reverse().join(','),
-      success: false,
-    };
-  }
- 
-  this.talkToDB({
-    type: 'db-request',
-    subtype: 'saveAllowedTitle',
-    messageData: {
-      string: event.title,
-      reason: reasons.reverse().join(', '),
-    },
-  }); 
-
-  return {
-    event,
-    reason: reasons.reverse().join(', '),
-    success: true,
-  };
-};
-// #endregion                          MAIN PAGE EVENT CHECK
-
-// #region [rgba(0, 60, 0, 0.5)]      SINGLE PAGE EVENT CHECK
-// dehellingScraper.singlePageAsyncCheck = async function (event) {
-//   return {
-//     reason: ['nothing found currently'].join(';'),
-//     event,
-//     success: true,
-//   };
-// };
-// #endregion                          SINGLE PAGE EVENT CHECK
-
-// #region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
+// #region       MAIN PAGE
 dehellingScraper.mainPage = async function () {
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
   if (availableBaseEvents) {
@@ -156,73 +57,44 @@ dehellingScraper.mainPage = async function () {
     // eslint-disable-next-line no-shadow
     ({ workerData }) =>
       Array.from(document.querySelectorAll('.c-event-card'))
-        .filter((eventEl) => {
-          // TODO naar fatsoenlijke async check
-          const tc = eventEl.querySelector('.c-event-card__meta')?.textContent.toLowerCase() ?? '';
-          return !tc.includes('experimental') && !tc.includes('hiphop');
-        })
         .map((eventEl) => {
-          const schemaData = JSON.parse(
-            eventEl.querySelector('[type="application/ld+json"]').innerHTML,
-          );
-          const title = schemaData?.name;
-
+          const title = eventEl.querySelector('.c-event-card__title')?.textContent.trim() ?? '';
           const res = {
             anker: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
             errors: [],
             title,
           };
 
-          try {
-            res.end = schemaData.endDate.replace(' ', 'T');
-          } catch (caughtError) {
-            res.errors.push({
-              error: caughtError,
-              remarks: `end date time datestring omzetting ${title} ${res.anker}`,
-              toDebug: res,
-            });
+          const metaText = eventEl.querySelector('.c-event-card__meta')?.textContent.trim() ?? '';
+          const dateMatch = metaText.match(/\d\d\/\d\d/);
+          const dateFound = Array.isArray(dateMatch) ? dateMatch[0] : ''; 
+          const dateRepl = dateFound.replace('/', ' ');
+          res.mapToStartDate = dateRepl;
+          const tijden = metaText.match(/\d\d:\d\d/g);
+          if (tijden.length === 2) {
+            res.mapToEndTime = tijden[1];
           }
-
-          let startString;
-          try {
-            const metaEl = eventEl.querySelector('.c-event-card__meta') ?? null;
-            if (metaEl) {
-              const tijdMatch = metaEl.textContent.match(/(\d\d):(\d\d)/);
-              if (tijdMatch && tijdMatch.length > 2) {
-                res.startTime = tijdMatch[0];
-                const hours = tijdMatch[1];
-                const minutes = tijdMatch[2];
-                startString = res.end.replace(
-                  /T.*/,
-                  `T${hours.padStart(2, '0')}:${minutes.padStart(2, '0')}:00`,
-                );
-                res.start = startString;
-              }
-            }
-          } catch (caughtError) {
-            res.errors.push({
-              error: caughtError,
-              remarks: `start date time eruit filteren error \n ${res.end} \n ${startString} ${title} ${res.anker}`,
-              toDebug: res,
-            });
-          }
+          res.mapToStartTime = tijden[0];
 
           res.soldOut = !!eventEl.querySelector('.c-event-card__banner--uitverkocht');
 
-          if (!res.startTime && res.end) {
-            res.start = res.end;
-            res.end = null;
-          }
-
-          res.venueEventUrl = schemaData.url;
-          res.shortText = schemaData?.description ?? null;
+          res.venueEventUrl = eventEl.href;
+          res.shortText = eventEl.querySelector('.c-event-card__subtitle')?.textContent.trim() ?? '';
 
           return res;
         }),
     { workerData },
   );
 
-  rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
+  rawEvents = rawEvents
+    .map((re) => mapToStartDate(re, 'dag-maandNummer', this.months))
+    .map(mapToShortDate)
+    .map(mapToStartTime)
+    .map(mapToEndTime)
+    .map(combineStartTimeStartDate)
+    .map(combineEndTimeStartDate)
+    .map((re) => workTitleAndSlug(re, this._s.app.harvest.possiblePrefix))
+    .map(this.isMusicEventCorruptedMapper);
   const eventGen = this.eventGenerator(rawEvents);
   // eslint-disable-next-line no-unused-vars
   const checkedEvents = await this.rawEventsAsyncCheck({
@@ -240,7 +112,7 @@ dehellingScraper.mainPage = async function () {
 };
 // #endregion                          MAIN PAGE
 
-// #region [rgba(120, 0, 0, 0.1)]     SINGLE PAGE
+// #region      SINGLE PAGE
 dehellingScraper.singlePage = async function ({ page, event }) {
   const { stopFunctie } = await this.singlePageStart();
 
@@ -251,18 +123,8 @@ dehellingScraper.singlePage = async function ({ page, event }) {
         anker: `<a class='page-info' href='${event.venueEventUrl}'>${event.title}</a>`,
         errors: [],
       };
-      const lineupEl = document.querySelector('.c-event-content__lineup');
-      if (lineupEl) {
-        const lineup = Array.from(
-          document.querySelectorAll('.u-section__inner.c-event-content__lineup li'),
-        )
-          .map((li) => li.textContent)
-          .join(', ');
 
-        res.shortText = `${event.shortText}. Lineup: ${lineup}`;
-        lineupEl.parentNode.removeChild(lineupEl);
-      }
-      const shareEl = document.querySelector('.c-event-content__sharer');
+      const shareEl = document.querySelector('.c-event-content__sharer'); // TODO is dit legacy?
       if (shareEl) {
         shareEl.parentNode.removeChild(shareEl);
       }

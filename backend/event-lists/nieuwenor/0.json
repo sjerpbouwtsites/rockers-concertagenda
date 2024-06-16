@@ -1,128 +1,145 @@
 [
   {
-    "door": "2023-12-14T20:00:00",
-    "start": "2023-12-14T20:30:00",
-    "end": "2023-12-14T23:30:00",
-    "venueEventUrl": "https://nieuwenor.nl/programma/2023/12/14/oh-hiroshima-swe-t%C3%B6rzs-hu",
-    "title": "Oh hiro­s­hi­ma (swe) & törzs (hu)",
+    "door": "2024-10-05T13:00:00",
+    "start": "2024-10-05T14:00:00",
+    "end": "2024-10-05T23:50:00",
+    "venueEventUrl": "https://nieuwenor.nl/programma/2024/10/05/rise-or-die",
+    "title": "Rise or die ft. mad­ball ",
     "location": "nieuwenor",
-    "price": 18.5,
-    "shortText": "rock-alternative\nAtmos­fe­ri­sche post-rock",
-    "longText": "../public/texts/nieuwenor/b2gtaGlyb3NoaW1hLXN3ZS10JUMzJUI2cnpzLWh1.html",
-    "image": "../public/event-images/nieuwenor/b2gtaGlyb3NoaW1hLXN3ZS10JUMzJUI2cnpzLWh1",
+    "price": 33.5,
+    "shortText": " nasty  +  born from pain  +  mind­war  +  lies!  +  swell  +  more! punk-emo-hardcore\nMet o.a. MAD­BALL, Nasty, Born From Pain, Mind­war, Lies!, Hater, Tem­pers Fray en Cold Grip! More TBA.",
+    "longText": "../public/texts/nieuwenor/b2dyYW1tYS8yMDI0LzEwLzA1L3Jpc2Utb3ItZGll.html",
+    "image": "../public/event-images/nieuwenor/b2dyYW1tYS8yMDI0LzEwLzA1L3Jpc2Utb3ItZGll",
     "soldOut": null,
-    "unavailable": false
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "born from pain": {
+        "s": "29BUhhygenDpPj5pat2oOR",
+        "l": "born%20from%20pain",
+        "g": [
+          "beatdown",
+          "hardcore",
+          "lowlands hardcore"
+        ]
+      },
+      "pain": {
+        "s": "0AuW7OCyKfFrsMbtHrYgIV",
+        "l": "pain",
+        "g": [
+          "gangster rap",
+          "hip hop",
+          "rap rock",
+          "west coast rap"
+        ]
+      },
+      "rise or die": {
+        "s": "07KRFteGKgay4JXHEcSZPY",
+        "l": "rise%20or%20die",
+        "g": []
+      },
+      "swell": {
+        "s": null,
+        "l": "swell",
+        "g": []
+      },
+      "nasty": {
+        "s": "7GnX7pGXdWtLObs16B1mFB",
+        "l": "France",
+        "g": [
+          "beatdown",
+          "death/thrash metal"
+        ]
+      },
+      "lies!": {
+        "s": null,
+        "l": "United Kingdom",
+        "g": [
+          "thrash/groove metal",
+          "hardcore"
+        ]
+      }
+    }
   },
   {
-    "door": "2023-12-29T20:00:00",
-    "start": "2023-12-29T20:30:00",
-    "end": "2023-12-29T23:30:00",
-    "venueEventUrl": "https://nieuwenor.nl/programma/2023/12/29/hard-in-heerlen-eindmosh-pene-corrida",
-    "title": "Hard in Heer­len Eind­mosh: Pene Corrida",
+    "door": "2024-11-17T20:00:00",
+    "start": "2024-11-17T20:30:00",
+    "end": "2024-11-17T23:00:00",
+    "venueEventUrl": "https://nieuwenor.nl/programma/2024/11/17/rhapsody-of-fire-freedom-call",
+    "title": "Rhap­so­dy Of Fire + Free­dom Call",
     "location": "nieuwenor",
-    "price": 16.5,
-    "shortText": "metal\nPop­mu­sic on Steroids!",
-    "longText": "../public/texts/nieuwenor/LWhlZXJsZW4tZWluZG1vc2gtcGVuZS1jb3JyaWRh.html",
-    "image": "../public/event-images/nieuwenor/LWhlZXJsZW4tZWluZG1vc2gtcGVuZS1jb3JyaWRh",
+    "price": 27.5,
+    "shortText": "metal\nEpi­sche Power Metal!",
+    "longText": "../public/texts/nieuwenor/L3JoYXBzb2R5LW9mLWZpcmUtZnJlZWRvbS1jYWxs.html",
+    "image": "../public/event-images/nieuwenor/L3JoYXBzb2R5LW9mLWZpcmUtZnJlZWRvbS1jYWxs",
     "soldOut": null,
-    "unavailable": false
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
   },
   {
-    "door": "2024-01-11T20:00:00",
-    "start": "2024-01-11T20:30:00",
-    "end": "2024-01-11T23:00:00",
-    "venueEventUrl": "https://nieuwenor.nl/programma/2024/01/11/hard-in-heerlen-coffin-feeder",
-    "title": "Hard in Heer­len: Cof­fin Feeder",
+    "door": "2024-11-22T19:30:00",
+    "start": "2024-11-22T20:30:00",
+    "end": "2024-11-22T01:00:00",
+    "venueEventUrl": "https://nieuwenor.nl/programma/2024/11/22/brothers-of-metal",
+    "title": "Bro­thers of Metal",
     "location": "nieuwenor",
-    "price": 19.5,
-    "shortText": "metal\nWAAR­SCHU­WING: DEZE SHOW BEZOEK JE OP EIGEN RISICO!",
-    "longText": "../public/texts/nieuwenor/L2hhcmQtaW4taGVlcmxlbi1jb2ZmaW4tZmVlZGVy.html",
-    "image": "../public/event-images/nieuwenor/L2hhcmQtaW4taGVlcmxlbi1jb2ZmaW4tZmVlZGVy",
+    "price": 25,
+    "shortText": "metal\nFIM­BUL­WIN­TOUR 2024",
+    "longText": "../public/texts/nieuwenor/YS8yMDI0LzExLzIyL2Jyb3RoZXJzLW9mLW1ldGFs.html",
+    "image": "../public/event-images/nieuwenor/YS8yMDI0LzExLzIyL2Jyb3RoZXJzLW9mLW1ldGFs",
     "soldOut": null,
-    "unavailable": false
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
   },
   {
-    "door": "2024-01-12T20:00:00",
-    "start": "2024-01-12T20:30:00",
-    "end": "2024-01-12T23:30:00",
-    "venueEventUrl": "https://nieuwenor.nl/programma/2024/01/12/ploegendienst",
-    "title": "Ploe­gen­dienst",
+    "door": "2025-04-03T20:00:00",
+    "start": "2025-04-03T20:30:00",
+    "end": "2025-04-03T01:00:00",
+    "venueEventUrl": "https://nieuwenor.nl/programma/2025/04/03/clan-of-xymox",
+    "title": "Clan Of Xymox",
     "location": "nieuwenor",
-    "price": 16,
-    "shortText": "hiphop,punk-emo-hardcore\n+ sup­port: Klei­ne Crack & Slagter",
-    "longText": "../public/texts/nieuwenor/cmFtbWEvMjAyNC8wMS8xMi9wbG9lZ2VuZGllbnN0.html",
-    "image": "../public/event-images/nieuwenor/cmFtbWEvMjAyNC8wMS8xMi9wbG9lZ2VuZGllbnN0",
+    "price": 25,
+    "shortText": "new-wave-ebm\nRePost! pre­sen­teert pio­niers van de darkwave",
+    "longText": "../public/texts/nieuwenor/cmFtbWEvMjAyNS8wNC8wMy9jbGFuLW9mLXh5bW94.html",
+    "image": "../public/event-images/nieuwenor/cmFtbWEvMjAyNS8wNC8wMy9jbGFuLW9mLXh5bW94",
     "soldOut": null,
-    "unavailable": false
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "clanofxymox": {
+        "s": "1wHmR7I0UlF58WFQexCPha",
+        "l": "clan%20of%20xymox",
+        "g": [
+          "dark wave",
+          "dream pop",
+          "ethereal wave",
+          "gothic rock"
+        ]
+      }
+    }
   },
   {
-    "door": "2024-02-16T20:00:00",
-    "start": "2024-02-16T20:30:00",
-    "end": "2024-02-16T23:00:00",
-    "venueEventUrl": "https://nieuwenor.nl/programma/2024/02/16/hard-in-heerlen-hatesphere-mercenary",
-    "title": "Hard in Heer­len: Hate­sp­he­re + Mercenary",
+    "door": "2025-05-24T20:00:00",
+    "start": "2025-05-24T20:30:00",
+    "end": "2025-05-24T23:00:00",
+    "venueEventUrl": "https://nieuwenor.nl/programma/2025/05/24/joy-division-undercover",
+    "title": "Joy Divi­si­on Undercover",
     "location": "nieuwenor",
-    "price": 22.5,
-    "shortText": "metal\nSound­track of Hate Tour 2024",
-    "longText": "../public/texts/nieuwenor/bi1oZWVybGVuLWhhdGVzcGhlcmUtbWVyY2VuYXJ5.html",
-    "image": "../public/event-images/nieuwenor/bi1oZWVybGVuLWhhdGVzcGhlcmUtbWVyY2VuYXJ5",
+    "price": 23.5,
+    "shortText": "new-wave-ebm,tribute-cover\nClo­ser to Cur­tis Tour 2025",
+    "longText": "../public/texts/nieuwenor/LzA1LzI0L2pveS1kaXZpc2lvbi11bmRlcmNvdmVy.html",
+    "image": "../public/event-images/nieuwenor/LzA1LzI0L2pveS1kaXZpc2lvbi11bmRlcmNvdmVy",
     "soldOut": null,
-    "unavailable": false
-  },
-  {
-    "door": "2024-02-29T20:00:00",
-    "start": "2024-02-29T20:30:00",
-    "end": "2024-02-29T23:30:00",
-    "venueEventUrl": "https://nieuwenor.nl/programma/2024/02/29/hard-in-heerlen-crouch",
-    "title": "Hard in Heer­len: Crouch",
-    "location": "nieuwenor",
-    "price": 16.5,
-    "shortText": "metal\nDestruc­tie­ve metal uit de hoek van Wiegedood!",
-    "longText": "../public/texts/nieuwenor/NC8wMi8yOS9oYXJkLWluLWhlZXJsZW4tY3JvdWNo.html",
-    "image": "../public/event-images/nieuwenor/NC8wMi8yOS9oYXJkLWluLWhlZXJsZW4tY3JvdWNo",
-    "soldOut": null,
-    "unavailable": false
-  },
-  {
-    "door": "2024-03-14T20:00:00",
-    "start": "2024-03-14T20:30:00",
-    "end": "2024-03-14T23:00:00",
-    "venueEventUrl": "https://nieuwenor.nl/programma/2024/03/14/hard-in-heerlen-elegy",
-    "title": "Hard in Heer­len: Elegy",
-    "location": "nieuwenor",
-    "price": 19.5,
-    "shortText": "metal\nELE­GY REU­NION 2024",
-    "longText": "../public/texts/nieuwenor/MjQvMDMvMTQvaGFyZC1pbi1oZWVybGVuLWVsZWd5.html",
-    "image": "../public/event-images/nieuwenor/MjQvMDMvMTQvaGFyZC1pbi1oZWVybGVuLWVsZWd5",
-    "soldOut": null,
-    "unavailable": false
-  },
-  {
-    "door": "2024-03-29T20:00:00",
-    "start": "2024-03-29T20:30:00",
-    "end": "2024-03-29T23:30:00",
-    "venueEventUrl": "https://nieuwenor.nl/programma/2024/03/29/esprit-dair-jap",
-    "title": "Esprit d’air (jap)",
-    "location": "nieuwenor",
-    "price": 21.5,
-    "shortText": "metal\nRevo­lu­ti­o­nair J‑metal pro­ject speelt eni­ge Neder­land­se show!",
-    "longText": "../public/texts/nieuwenor/bW1hLzIwMjQvMDMvMjkvZXNwcml0LWRhaXItamFw.html",
-    "image": "../public/event-images/nieuwenor/bW1hLzIwMjQvMDMvMjkvZXNwcml0LWRhaXItamFw",
-    "soldOut": null,
-    "unavailable": false
-  },
-  {
-    "door": "2024-10-11T20:00:00",
-    "start": "2024-10-11T20:30:00",
-    "end": "2024-10-11T23:00:00",
-    "venueEventUrl": "https://nieuwenor.nl/programma/2024/10/11/acindc",
-    "title": "Acindc",
-    "location": "nieuwenor",
-    "price": 18.5,
-    "shortText": "rock-alternative,tribute-cover,metal\nFif­ty Years of Rock ​’n Roll",
-    "longText": "../public/texts/nieuwenor/bmwvcHJvZ3JhbW1hLzIwMjQvMTAvMTEvYWNpbmRj.html",
-    "image": "../public/event-images/nieuwenor/bmwvcHJvZ3JhbW1hLzIwMjQvMTAvMTEvYWNpbmRj",
-    "soldOut": null,
-    "unavailable": false
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "joydivision": {
+        "s": null,
+        "l": "joy%20division",
+        "g": []
+      }
+    }
   }
 ]

@@ -1,63 +1,41 @@
 [
   {
     "door": null,
-    "start": "2023-12-03T19:00:00",
-    "venueEventUrl": "https://www.livepul.com/agenda/gorgoroth/",
-    "title": "Gorgoroth (NOR)",
-    "location": "depul",
-    "price": 25,
-    "shortText": "Oldskool blackmetal uit Scandinavië",
-    "longText": "../public/texts/depul/LmxpdmVwdWwuY29tL2FnZW5kYS9nb3Jnb3JvdGgv.html",
-    "image": "../public/event-images/depul/LmxpdmVwdWwuY29tL2FnZW5kYS9nb3Jnb3JvdGgv",
-    "soldOut": false
-  },
-  {
-    "door": null,
-    "start": "2023-12-16T21:30:00",
-    "venueEventUrl": "https://www.livepul.com/agenda/breuklijn-bunkier-gestas/",
-    "title": "Breuklijn: Bunkier & Gestas (PL)",
+    "start": "2024-05-22T19:30:00",
+    "venueEventUrl": "https://www.livepul.com/agenda/jesse-ahern/",
+    "title": "Southern Nights presents: Jesse Ahern (USA)",
     "location": "depul",
     "price": 15,
-    "shortText": "Double-bill van twee Poolse hc/punkbands",
-    "longText": "../public/texts/depul/ZW5kYS9icmV1a2xpam4tYnVua2llci1nZXN0YXMv.html",
-    "image": "../public/event-images/depul/ZW5kYS9icmV1a2xpam4tYnVua2llci1nZXN0YXMv",
-    "soldOut": false
+    "shortText": "Rootsrock met een punky attitude",
+    "longText": "../public/texts/depul/aXZlcHVsLmNvbS9hZ2VuZGEvamVzc2UtYWhlcm4v.html",
+    "image": "../public/event-images/depul/aXZlcHVsLmNvbS9hZ2VuZGEvamVzc2UtYWhlcm4v",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": null
   },
   {
     "door": null,
-    "start": "2024-01-19T20:15:00",
-    "venueEventUrl": "https://www.livepul.com/agenda/delain/",
-    "title": "Delain (nl)",
+    "start": "2024-06-01T20:30:00",
+    "venueEventUrl": "https://www.livepul.com/agenda/terzij-de-horde/",
+    "title": "Terzij de Horde (NL)",
     "location": "depul",
-    "price": 27,
-    "shortText": "Symfonische metalband is terug in nieuwe bezetting",
-    "longText": "../public/texts/depul/d3d3LmxpdmVwdWwuY29tL2FnZW5kYS9kZWxhaW4v.html",
-    "image": "../public/event-images/depul/d3d3LmxpdmVwdWwuY29tL2FnZW5kYS9kZWxhaW4v",
-    "soldOut": false
-  },
-  {
-    "door": null,
-    "start": "2024-01-26T20:30:00",
-    "venueEventUrl": "https://www.livepul.com/agenda/ronnie-james-dio-memorial/",
-    "title": "Ronnie James Dio - The Memorial Concert",
-    "location": "depul",
-    "price": 22,
-    "shortText": "Met medewerking van de top van de Nederlandse  hardrock en metal",
-    "longText": "../public/texts/depul/bmRhL3Jvbm5pZS1qYW1lcy1kaW8tbWVtb3JpYWwv.html",
-    "image": "../public/event-images/depul/bmRhL3Jvbm5pZS1qYW1lcy1kaW8tbWVtb3JpYWwv",
-    "soldOut": false
-  },
-  {
-    "door": null,
-    "start": "2024-03-02T20:00:00",
-    "venueEventUrl": "https://www.livepul.com/agenda/firewind-masterplan/",
-    "title": "Firewind & Masterplan (GR & GER)",
-    "location": "depul",
-    "price": 2,
-    "shortText": "Masters of Fire Tour 2024",
-    "longText": "../public/texts/depul/b20vYWdlbmRhL2ZpcmV3aW5kLW1hc3RlcnBsYW4v.html",
-    "image": "../public/event-images/depul/b20vYWdlbmRhL2ZpcmV3aW5kLW1hc3RlcnBsYW4v",
-    "soldOut": false
+    "price": 15,
+    "shortText": "Grensverleggende black metal",
+    "longText": "../public/texts/depul/dWwuY29tL2FnZW5kYS90ZXJ6aWotZGUtaG9yZGUv.html",
+    "image": "../public/event-images/depul/dWwuY29tL2FnZW5kYS90ZXJ6aWotZGUtaG9yZGUv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "terzij de horde": {
+        "s": "41G9cPXKxphLtBQXD0g30o",
+        "l": "terzij%20de%20horde",
+        "g": [
+          "blackgaze",
+          "dutch black metal",
+          "post-black metal"
+        ]
+      }
+    }
   },
   {
     "door": null,
@@ -69,6 +47,99 @@
     "shortText": "Punklegendes uit Birmingham",
     "longText": "../public/texts/depul/ZXB1bC5jb20vYWdlbmRhL2JyZXVrbGlqbi1nYmgv.html",
     "image": "../public/event-images/depul/ZXB1bC5jb20vYWdlbmRhL2JyZXVrbGlqbi1nYmgv",
-    "soldOut": false
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": null,
+    "start": "2024-06-21T19:00:00",
+    "venueEventUrl": "https://www.livepul.com/agenda/antillectual/",
+    "title": "Antillectual (NL)",
+    "location": "depul",
+    "price": 12,
+    "shortText": "Punkrock uit Nijmegen met een sociaal-kritische boodschap",
+    "longText": "../public/texts/depul/dmVwdWwuY29tL2FnZW5kYS9hbnRpbGxlY3R1YWwv.html",
+    "image": "../public/event-images/depul/dmVwdWwuY29tL2FnZW5kYS9hbnRpbGxlY3R1YWwv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": null,
+    "start": "2024-06-23T19:00:00",
+    "venueEventUrl": "https://www.livepul.com/agenda/wormrot-morne/",
+    "title": "Wormrot + morne + burgerkill (sg & usa)",
+    "location": "depul",
+    "price": 23,
+    "shortText": "Explosieve grindcore uit Singapore in combinatie met duistere, Amerikaanse sludge",
+    "longText": "../public/texts/depul/ZXB1bC5jb20vYWdlbmRhL3dvcm1yb3QtbW9ybmUv.html",
+    "image": "../public/event-images/depul/ZXB1bC5jb20vYWdlbmRhL3dvcm1yb3QtbW9ybmUv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": null,
+    "start": "2024-09-14T20:15:00",
+    "venueEventUrl": "https://www.livepul.com/agenda/tankard/",
+    "title": "Tankard (DE)",
+    "location": "depul",
+    "price": 20,
+    "shortText": "Extreem dorstige Duitse thrash-metal",
+    "longText": "../public/texts/depul/d3cubGl2ZXB1bC5jb20vYWdlbmRhL3RhbmthcmQv.html",
+    "image": "../public/event-images/depul/d3cubGl2ZXB1bC5jb20vYWdlbmRhL3RhbmthcmQv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": null,
+    "start": "2024-10-04T19:00:00",
+    "venueEventUrl": "https://www.livepul.com/agenda/battle-beast/",
+    "title": "Battle Beast (FI)",
+    "location": "depul",
+    "price": 4,
+    "shortText": "Vaandeldragers van de party-powermetal",
+    "longText": "../public/texts/depul/dmVwdWwuY29tL2FnZW5kYS9iYXR0bGUtYmVhc3Qv.html",
+    "image": "../public/event-images/depul/dmVwdWwuY29tL2FnZW5kYS9iYXR0bGUtYmVhc3Qv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "battle beast": {
+        "s": "7k5jeohQCF20a8foBD9ize",
+        "l": "battle%20beast",
+        "g": [
+          "finnish heavy metal",
+          "finnish power metal",
+          "gothic symphonic metal",
+          "power metal",
+          "symphonic metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": null,
+    "start": "2024-11-01T20:00:00",
+    "venueEventUrl": "https://www.livepul.com/agenda/asgrauw-hellevaerder-zwart/",
+    "title": "Asgrauw + Hellevaerder + Zwart (NL)",
+    "location": "depul",
+    "price": 1,
+    "shortText": "Gitzwarte black metal package met album release van Asgrauw",
+    "longText": "../public/texts/depul/ZGEvYXNncmF1dy1oZWxsZXZhZXJkZXItendhcnQv.html",
+    "image": "../public/event-images/depul/ZGEvYXNncmF1dy1oZWxsZXZhZXJkZXItendhcnQv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "asgrauw": {
+        "s": "6Y8fpNzKbqsJzwjJoePzNe",
+        "l": "asgrauw",
+        "g": [
+          "dutch black metal",
+          "dutch metal"
+        ]
+      }
+    }
   }
 ]

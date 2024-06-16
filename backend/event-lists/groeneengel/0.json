@@ -1,65 +1,147 @@
 [
   {
-    "door": "2023-12-16T19:30:00",
-    "start": "2023-12-16T20:30:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/the-doors-alive/",
-    "title": "The Doors Alive",
+    "door": "2024-08-06T19:15:00",
+    "start": "2024-08-06T20:15:00",
+    "venueEventUrl": "https://www.groene-engel.nl/programma/soulfly/",
+    "title": "Soulfly",
     "location": "groeneengel",
-    "price": 28,
-    "longText": "../public/texts/groeneengel/Lm5sL3Byb2dyYW1tYS90aGUtZG9vcnMtYWxpdmUv.html",
-    "image": "../public/event-images/groeneengel/Lm5sL3Byb2dyYW1tYS90aGUtZG9vcnMtYWxpdmUv",
+    "price": 36,
+    "longText": "../public/texts/groeneengel/bmUtZW5nZWwubmwvcHJvZ3JhbW1hL3NvdWxmbHkv.html",
+    "image": "../public/event-images/groeneengel/bmUtZW5nZWwubmwvcHJvZ3JhbW1hL3NvdWxmbHkv",
     "soldOut": false,
-    "unavailable": false
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "soulfly": {
+        "s": "6159IBm5gLPwG4BcJXseXc",
+        "l": "soulfly",
+        "g": [
+          "alternative metal",
+          "groove metal",
+          "industrial metal",
+          "metal",
+          "nu metal",
+          "rap metal"
+        ]
+      }
+    }
   },
   {
-    "door": "2024-01-13T19:30:00",
-    "start": "2024-01-13T20:30:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/harmonica-blowout-greg-izor-steven-troch-thomas-toussaint/",
-    "title": "Harmonica Blowout: Greg Izor ",
+    "door": "2024-10-24T19:30:00",
+    "start": "2024-10-24T20:00:00",
+    "venueEventUrl": "https://www.groene-engel.nl/programma/witch-club-satan/",
+    "title": "Witch Club Satan",
     "location": "groeneengel",
-    "price": 22,
-    "shortText": " Steven Troch   Thomas Toussaint undefined",
-    "longText": "../public/texts/groeneengel/c3RldmVuLXRyb2NoLXRob21hcy10b3Vzc2FpbnQv.html",
-    "image": "../public/event-images/groeneengel/c3RldmVuLXRyb2NoLXRob21hcy10b3Vzc2FpbnQv",
+    "price": 14,
+    "longText": "../public/texts/groeneengel/bmwvcHJvZ3JhbW1hL3dpdGNoLWNsdWItc2F0YW4v.html",
+    "image": "../public/event-images/groeneengel/bmwvcHJvZ3JhbW1hL3dpdGNoLWNsdWItc2F0YW4v",
     "soldOut": false,
-    "unavailable": false
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
   },
   {
-    "door": "2024-02-02T19:30:00",
-    "start": "2024-02-02T20:30:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/bernard-allison-ally-venable-band/",
-    "title": "Bernard Allison ",
+    "door": "2024-12-13T19:30:00",
+    "start": "2024-12-13T20:30:00",
+    "venueEventUrl": "https://www.groene-engel.nl/programma/the-fortunate-sons-tribute-to-creedence-clearwater-revival/",
+    "title": "The Fortunate Sons – Tribute To Creedence Clearwater Revival",
     "location": "groeneengel",
-    "price": 28,
-    "shortText": " Ally Venable / support: Katie Henry undefined",
-    "longText": "../public/texts/groeneengel/YXJkLWFsbGlzb24tYWxseS12ZW5hYmxlLWJhbmQv.html",
-    "image": "../public/event-images/groeneengel/YXJkLWFsbGlzb24tYWxseS12ZW5hYmxlLWJhbmQv",
-    "soldOut": false,
-    "unavailable": false
+    "price": 27,
+    "shortText": " undefined",
+    "longText": "../public/texts/groeneengel/LWNyZWVkZW5jZS1jbGVhcndhdGVyLXJldml2YWwv.html",
+    "image": "../public/event-images/groeneengel/LWNyZWVkZW5jZS1jbGVhcndhdGVyLXJldml2YWwv",
+    "soldOut": true,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
   },
   {
-    "door": "2024-04-05T19:30:00",
-    "start": "2024-04-05T20:30:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/electric-eel-shock-tankzilla/",
-    "title": "Electric Eel Shock + TankZilla",
+    "door": "2024-12-14T19:15:00",
+    "start": "2024-12-14T20:00:00",
+    "venueEventUrl": "https://www.groene-engel.nl/programma/ac-dc-uk-highway-to-hell-tour-special-guest-meatallica/",
+    "title": "AC/DC UK – Highway To Hell Tour ",
     "location": "groeneengel",
-    "price": 17.5,
-    "longText": "../public/texts/groeneengel/L2VsZWN0cmljLWVlbC1zaG9jay10YW5remlsbGEv.html",
-    "image": "../public/event-images/groeneengel/L2VsZWN0cmljLWVlbC1zaG9jay10YW5remlsbGEv",
+    "price": 29,
+    "shortText": " Special Guest: Meatallica undefined",
+    "longText": "../public/texts/groeneengel/dG91ci1zcGVjaWFsLWd1ZXN0LW1lYXRhbGxpY2Ev.html",
+    "image": "../public/event-images/groeneengel/dG91ci1zcGVjaWFsLWd1ZXN0LW1lYXRhbGxpY2Ev",
     "soldOut": false,
-    "unavailable": false
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
   },
   {
-    "door": "2024-05-09T19:30:00",
-    "start": "2024-05-09T20:30:00",
-    "venueEventUrl": "https://www.groene-engel.nl/programma/coldplace-special-guest-sheeran-de-beste-coldplay-tribute-uit-de-uk/",
-    "title": "Coldplace ",
+    "door": "2025-01-04T19:30:00",
+    "start": "2025-01-04T20:30:00",
+    "venueEventUrl": "https://www.groene-engel.nl/programma/camp-4-hideous-videocall/",
+    "title": "Camp 4 : Hideous + Videocall",
     "location": "groeneengel",
-    "price": 25,
-    "shortText": " special guest @Sheeran | De beste Coldplay Tribute uit de UK! undefined",
-    "longText": "../public/texts/groeneengel/dGUtY29sZHBsYXktdHJpYnV0ZS11aXQtZGUtdWsv.html",
-    "image": "../public/event-images/groeneengel/dGUtY29sZHBsYXktdHJpYnV0ZS11aXQtZGUtdWsv",
+    "price": 10,
+    "longText": "../public/texts/groeneengel/YW1tYS9jYW1wLTQtaGlkZW91cy12aWRlb2NhbGwv.html",
+    "image": "../public/event-images/groeneengel/YW1tYS9jYW1wLTQtaGlkZW91cy12aWRlb2NhbGwv",
     "soldOut": false,
-    "unavailable": false
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "hideous": {
+        "s": "4XOpU6j3NQ37JfIaWA4ySH",
+        "l": "hideous",
+        "g": [
+          "brutal death metal",
+          "deathgrind",
+          "italian death metal",
+          "technical brutal death metal",
+          "technical death metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-01-17T19:30:00",
+    "start": "2025-01-17T20:30:00",
+    "venueEventUrl": "https://www.groene-engel.nl/programma/ronnie-james-dio-the-memorial-concert/",
+    "title": "Ronnie James DIO – The Memorial Concert",
+    "location": "groeneengel",
+    "price": 24,
+    "longText": "../public/texts/groeneengel/YW1lcy1kaW8tdGhlLW1lbW9yaWFsLWNvbmNlcnQv.html",
+    "image": "../public/event-images/groeneengel/YW1lcy1kaW8tdGhlLW1lbW9yaWFsLWNvbmNlcnQv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2025-01-31T19:30:00",
+    "start": "2025-01-31T20:00:00",
+    "venueEventUrl": "https://www.groene-engel.nl/programma/wild-romance-herman-broods-originele-band/",
+    "title": "Wild Romance – Herman Brood’s originele band",
+    "location": "groeneengel",
+    "price": 23,
+    "longText": "../public/texts/groeneengel/LWhlcm1hbi1icm9vZHMtb3JpZ2luZWxlLWJhbmQv.html",
+    "image": "../public/event-images/groeneengel/LWhlcm1hbi1icm9vZHMtb3JpZ2luZWxlLWJhbmQv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2025-05-09T19:30:00",
+    "start": "2025-05-09T20:30:00",
+    "venueEventUrl": "https://www.groene-engel.nl/programma/joy-division-undercover-closer-to-curtis/",
+    "title": "Joy Division Undercover – Closer To Curtis",
+    "location": "groeneengel",
+    "price": 18.5,
+    "longText": "../public/texts/groeneengel/bi11bmRlcmNvdmVyLWNsb3Nlci10by1jdXJ0aXMv.html",
+    "image": "../public/event-images/groeneengel/bi11bmRlcmNvdmVyLWNsb3Nlci10by1jdXJ0aXMv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "joy division": {
+        "s": null,
+        "l": "joy%20division",
+        "g": []
+      }
+    }
   }
 ]

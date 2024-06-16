@@ -1,93 +1,83 @@
 [
   {
-    "door": "2023-12-17T19:00:00",
-    "start": "2023-12-17T20:00:00",
-    "venueEventUrl": "https://metropool.nl/agenda/bombers/",
-    "title": "BÖMBERS – The Ultimate Motörhead Tribute ",
+    "door": "2024-10-06T19:00:00",
+    "start": "2024-10-06T20:00:00",
+    "venueEventUrl": "https://metropool.nl/agenda/septicflesh/",
+    "title": "Septicflesh",
     "location": "metropool",
-    "price": 26,
-    "shortText": "",
-    "longText": "../public/texts/metropool/Ly9tZXRyb3Bvb2wubmwvYWdlbmRhL2JvbWJlcnMv.html",
-    "image": "../public/event-images/metropool/Ly9tZXRyb3Bvb2wubmwvYWdlbmRhL2JvbWJlcnMv",
+    "price": 40,
+    "shortText": "Support: Oceans + Scar of the Sun",
+    "longText": "../public/texts/metropool/dHJvcG9vbC5ubC9hZ2VuZGEvc2VwdGljZmxlc2gv.html",
+    "image": "../public/event-images/metropool/dHJvcG9vbC5ubC9hZ2VuZGEvc2VwdGljZmxlc2gv",
     "soldOut": false,
-    "unavailable": false
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
   },
   {
-    "door": "2024-01-20T18:30:00",
-    "start": "2024-01-20T19:00:00",
-    "venueEventUrl": "https://metropool.nl/agenda/the-big-4-tribute-2024/",
-    "title": "The Big 4 Tribute",
+    "door": "2024-11-01T19:30:00",
+    "start": "2024-11-01T20:30:00",
+    "venueEventUrl": "https://metropool.nl/agenda/the-dead-daisies-enschede/",
+    "title": "The Dead Daisies",
     "location": "metropool",
-    "price": 22,
-    "shortText": "",
-    "longText": "../public/texts/metropool/YWdlbmRhL3RoZS1iaWctNC10cmlidXRlLTIwMjQv.html",
-    "image": "../public/event-images/metropool/YWdlbmRhL3RoZS1iaWctNC10cmlidXRlLTIwMjQv",
+    "price": 41,
+    "shortText": "Support: Beasto Blanco + Mike Tramp",
+    "longText": "../public/texts/metropool/bmRhL3RoZS1kZWFkLWRhaXNpZXMtZW5zY2hlZGUv.html",
+    "image": "../public/event-images/metropool/bmRhL3RoZS1kZWFkLWRhaXNpZXMtZW5zY2hlZGUv",
     "soldOut": false,
-    "unavailable": false
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "the dead daisies": {
+        "s": "6VDAPUov4yNDHyQlPqrpNH",
+        "l": "the%20dead%20daisies",
+        "g": [
+          "modern hard rock",
+          "nwocr"
+        ]
+      }
+    }
   },
   {
-    "door": "2024-02-10T20:30:00",
-    "start": "2024-02-10T21:00:00",
-    "venueEventUrl": "https://metropool.nl/agenda/persefone/",
-    "title": "Persefone",
+    "door": "2024-11-15T19:30:00",
+    "start": "2024-11-15T20:30:00",
+    "venueEventUrl": "https://metropool.nl/agenda/fuzz-top-zz-top-tribute/",
+    "title": "Fuzz top - zz top tribute",
     "location": "metropool",
-    "price": 25,
+    "price": 27.5,
     "shortText": "",
-    "longText": "../public/texts/metropool/bWV0cm9wb29sLm5sL2FnZW5kYS9wZXJzZWZvbmUv.html",
-    "image": "../public/event-images/metropool/bWV0cm9wb29sLm5sL2FnZW5kYS9wZXJzZWZvbmUv",
+    "longText": "../public/texts/metropool/Z2VuZGEvZnV6ei10b3AtenotdG9wLXRyaWJ1dGUv.html",
+    "image": "../public/event-images/metropool/Z2VuZGEvZnV6ei10b3AtenotdG9wLXRyaWJ1dGUv",
     "soldOut": false,
-    "unavailable": false
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "zz top": {
+        "s": "2AM4ilv6UzW0uMRuqKtDgN",
+        "l": null,
+        "g": [
+          "album rock",
+          "blues rock",
+          "classic rock",
+          "hard rock",
+          "rock"
+        ]
+      }
+    }
   },
   {
-    "door": "2024-02-18T18:30:00",
-    "start": "2024-02-18T19:00:00",
-    "venueEventUrl": "https://metropool.nl/agenda/slope/",
-    "title": "Slope",
+    "door": "2024-11-29T19:00:00",
+    "start": "2024-11-29T19:30:00",
+    "venueEventUrl": "https://metropool.nl/agenda/mystic-prophecy/",
+    "title": "Mystic Prophecy",
     "location": "metropool",
-    "price": 18.5,
-    "shortText": "",
-    "longText": "../public/texts/metropool/czovL21ldHJvcG9vbC5ubC9hZ2VuZGEvc2xvcGUv.html",
-    "image": "../public/event-images/metropool/czovL21ldHJvcG9vbC5ubC9hZ2VuZGEvc2xvcGUv",
+    "price": 23,
+    "shortText": "Support: Iron Savior + Mad Max",
+    "longText": "../public/texts/metropool/b29sLm5sL2FnZW5kYS9teXN0aWMtcHJvcGhlY3kv.html",
+    "image": "../public/event-images/metropool/b29sLm5sL2FnZW5kYS9teXN0aWMtcHJvcGhlY3kv",
     "soldOut": false,
-    "unavailable": false
-  },
-  {
-    "door": "2024-03-01T20:00:00",
-    "start": "2024-03-01T20:30:00",
-    "venueEventUrl": "https://metropool.nl/agenda/ares/",
-    "title": "Ares",
-    "location": "metropool",
-    "price": 1,
-    "shortText": "",
-    "longText": "../public/texts/metropool/cHM6Ly9tZXRyb3Bvb2wubmwvYWdlbmRhL2FyZXMv.html",
-    "image": "../public/event-images/metropool/cHM6Ly9tZXRyb3Bvb2wubmwvYWdlbmRhL2FyZXMv",
-    "soldOut": true,
-    "unavailable": false
-  },
-  {
-    "door": "2024-03-08T20:30:00",
-    "start": "2024-03-08T21:00:00",
-    "venueEventUrl": "https://metropool.nl/agenda/filter/",
-    "title": "Filter",
-    "location": "metropool",
-    "price": 30,
-    "shortText": "alternative metal, alternative rock, grunge, industrial metal, nu metal, post-grunge",
-    "longText": "../public/texts/metropool/Oi8vbWV0cm9wb29sLm5sL2FnZW5kYS9maWx0ZXIv.html",
-    "image": "../public/event-images/metropool/Oi8vbWV0cm9wb29sLm5sL2FnZW5kYS9maWx0ZXIv",
-    "soldOut": false,
-    "unavailable": false
-  },
-  {
-    "door": "2024-05-03T20:30:00",
-    "start": "2024-05-03T21:00:00",
-    "venueEventUrl": "https://metropool.nl/agenda/pene-corrida/",
-    "title": "Pene Corrida",
-    "location": "metropool",
-    "price": 21,
-    "shortText": "",
-    "longText": "../public/texts/metropool/cm9wb29sLm5sL2FnZW5kYS9wZW5lLWNvcnJpZGEv.html",
-    "image": "../public/event-images/metropool/cm9wb29sLm5sL2FnZW5kYS9wZW5lLWNvcnJpZGEv",
-    "soldOut": false,
-    "unavailable": false
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
   }
 ]

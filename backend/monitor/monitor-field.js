@@ -83,6 +83,36 @@ export default class MonitorField {
     this.update(updateData);
   }
 
+  updateBaseEventCheckList(updateData) {
+    const debug = updateData.messageData.content.debug ?? null;
+    if (!debug) throw new Error('geen debug info');
+    const newDiv = document.createElement('div');
+    newDiv.innerHTML = `
+    <strong>${debug.event}</strong>
+      ${debug?.reason.replaceAll(/,/g, '<br>')}
+      <hr>
+      `;
+    document.getElementById(this.mainFieldName).prepend(newDiv);
+  }
+    
+  updateSingleEventCheckList(updateData) {
+    const debug = updateData.messageData.content.debug ?? null;
+    if (!debug) throw new Error('geen debug info');
+    const newDiv = document.createElement('div');
+    
+    try {
+      newDiv.innerHTML = `
+        <strong>${debug.event}</strong>
+        ${debug?.reason.replaceAll(/,/g, '<br>')}
+        <hr>
+      `;// TODO HACK en singel en base gaan totaal anders. belachelijk
+    } catch (error) {
+      console.error(error);
+      console.log(debug);      
+    }
+    document.getElementById(this.mainFieldName).prepend(newDiv);
+  }
+   
   update(updateData) {
     this.data.splice(100);
     this.data.unshift(updateData);
@@ -96,6 +126,7 @@ export default class MonitorField {
       case 'expanded':
         mainFieldEl.innerHTML = this.expandedUpdatedHTML;
         break;
+    
       default:
         mainFieldEl.innerHTML = this.rollUpdatedHTML;
         break;
@@ -103,10 +134,10 @@ export default class MonitorField {
   }
 
   updateError(updateData) {
-    console.log({
-      titel: 'updateError',
-      updateData,
-    });
+    // console.log({
+    //   titel: 'updateError',
+    //   updateData,
+    // });
     this.data.unshift(updateData);
     document.getElementById(this.mainFieldName).innerHTML = this.errorUpdateHTML;
   }
@@ -162,8 +193,7 @@ export default class MonitorField {
 
   get errorUpdateHTML() {
     const errorsPerWorkerCounter = {};
-
-    console.log(this.data);
+    
     const listItems = this.data
       .map((rollRow) => {
         try {
@@ -178,7 +208,7 @@ export default class MonitorField {
               if (errorTextRow.includes('node:internal')) return '';
               let t = errorTextRow;
               if (errorTextRow.includes('file://')) {
-                console.log(errorTextRow);
+                // console.log(errorTextRow);
                 let volleFileNaam;
                 try {
                   volleFileNaam = errorTextRow.match(/(file.*)\)/)[1];
@@ -188,7 +218,7 @@ export default class MonitorField {
                   console.error(new Error('SCHEIT'));
                 }
 
-                console.log(errorTextRow);
+                // console.log(errorTextRow);
 
                 const fileLink = errorTextRow
                   .split('concertagenda')[1]

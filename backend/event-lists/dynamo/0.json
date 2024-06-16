@@ -1,41 +1,85 @@
 [
   {
-    "door": "2024-02-16T19:00:00",
-    "start": "2024-02-16T19:30:00",
-    "end": "2024-02-16T23:00:00",
-    "venueEventUrl": "https://www.dynamo-eindhoven.nl/programma/citizen-2024/#spotify-embed",
-    "title": "Citizen",
+    "door": "2024-09-07T19:30:00",
+    "start": "2024-09-07T20:00:00",
+    "end": "2024-09-07T23:00:00",
+    "venueEventUrl": "https://dynamo-eindhoven.nl/evenement/terradown-2024/",
+    "title": "TerraDown",
     "location": "dynamo",
-    "price": 19,
-    "shortText": "Support: Drug Church",
-    "longText": "../public/texts/dynamo/bWEvY2l0aXplbi0yMDI0LyNzcG90aWZ5LWVtYmVk.html",
-    "image": "../public/event-images/dynamo/bWEvY2l0aXplbi0yMDI0LyNzcG90aWZ5LWVtYmVk",
-    "soldOut": false
+    "price": 11.5,
+    "shortText": "support: Neverus",
+    "longText": "../public/texts/dynamo/bi5ubC9ldmVuZW1lbnQvdGVycmFkb3duLTIwMjQv.html",
+    "image": "../public/event-images/dynamo/bi5ubC9ldmVuZW1lbnQvdGVycmFkb3duLTIwMjQv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "neverus": {
+        "s": "1cl0DInafS63FEVxhApjFb",
+        "l": "Netherlands",
+        "g": [
+          "symphonic melodic death metal",
+          "melodic death metal",
+          "metal"
+        ]
+      }
+    }
   },
   {
-    "door": "2024-03-16T15:00:00",
-    "start": "2024-03-16T15:30:00",
-    "end": "2024-03-16T01:00:00",
-    "venueEventUrl": "https://www.dynamo-eindhoven.nl/programma/grindhoven-xi/",
-    "title": "Grindhoven XI",
+    "door": "2024-10-04T19:30:00",
+    "start": "2024-10-04T20:00:00",
+    "end": "2024-10-04T22:30:00",
+    "venueEventUrl": "https://dynamo-eindhoven.nl/evenement/slope-2024/",
+    "title": "Slope",
+    "location": "dynamo",
+    "price": 17.5,
+    "shortText": "Locatie: Stroomhuis",
+    "longText": "../public/texts/dynamo/aG92ZW4ubmwvZXZlbmVtZW50L3Nsb3BlLTIwMjQv.html",
+    "image": "../public/event-images/dynamo/aG92ZW4ubmwvZXZlbmVtZW50L3Nsb3BlLTIwMjQv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "slope": {
+        "s": "35fxvnr5oanOFB1JNB2Ber",
+        "l": "slope",
+        "g": [
+          "dutch rock"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2024-11-23T19:30:00",
+    "start": "2024-11-23T20:15:00",
+    "venueEventUrl": "https://dynamo-eindhoven.nl/evenement/overruled-defazer-2024/",
+    "title": "Overruled + Defazer",
+    "location": "dynamo",
+    "price": 11.5,
+    "shortText": "co-headline show",
+    "longText": "../public/texts/dynamo/bmVtZW50L292ZXJydWxlZC1kZWZhemVyLTIwMjQv.html",
+    "image": "../public/event-images/dynamo/bmVtZW50L292ZXJydWxlZC1kZWZhemVyLTIwMjQv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2024-12-14T20:00:00",
+    "start": "2024-12-14T20:00:00",
+    "end": "2024-12-14T01:00:00",
+    "venueEventUrl": "https://dynamo-eindhoven.nl/evenement/no-barrier-2024/",
+    "title": "No barrier",
     "location": "dynamo",
     "price": 15,
-    "shortText": "W/ Macabre + Undergang + Otto von Schirach and more",
-    "longText": "../public/texts/dynamo/ZW4ubmwvcHJvZ3JhbW1hL2dyaW5kaG92ZW4teGkv.html",
-    "image": "../public/event-images/dynamo/ZW4ubmwvcHJvZ3JhbW1hL2dyaW5kaG92ZW4teGkv",
-    "soldOut": false
-  },
-  {
-    "door": "2024-04-23T19:30:00",
-    "start": "2024-04-23T20:00:00",
-    "end": "2024-04-23T23:00:00",
-    "venueEventUrl": "https://www.dynamo-eindhoven.nl/programma/dragged-under-2023/#spotify-embed",
-    "title": "Dragged Under",
-    "location": "dynamo",
-    "price": 19,
-    "shortText": "Support: Elwood Stray",
-    "longText": "../public/texts/dynamo/Z2dlZC11bmRlci0yMDIzLyNzcG90aWZ5LWVtYmVk.html",
-    "image": "../public/event-images/dynamo/Z2dlZC11bmRlci0yMDIzLyNzcG90aWZ5LWVtYmVk",
-    "soldOut": false
+    "shortText": "Dé clubnacht voor al je tofste punk, beste rock en hardste metalcore!",
+    "longText": "../public/texts/dynamo/Lm5sL2V2ZW5lbWVudC9uby1iYXJyaWVyLTIwMjQv.html",
+    "image": "../public/event-images/dynamo/Lm5sL2V2ZW5lbWVudC9uby1iYXJyaWVyLTIwMjQv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "no barrier": {
+        "s": "2am0pROxk0wcIVgL5rZA3A",
+        "l": "no%20barrier",
+        "g": []
+      }
+    }
   }
 ]

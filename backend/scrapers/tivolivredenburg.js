@@ -3,13 +3,14 @@ import { workerData } from 'worker_threads';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/tivolivredenburg.js';
 import getImage from './gedeeld/image.js';
-import terms from './gedeeld/terms.js';
+import terms from '../artist-db/store/terms.js';
 import {
-  combineStartTimeStartDate, mapToStartDate, mapToStartTime, 
+  combineStartTimeStartDate, mapToStartDate, mapToStartTime, mapToShortDate,
   mapToDoorTime, combineDoorTimeStartDate, mapToEndTime, combineEndTimeStartDate,
 } from './gedeeld/datums.js';
+import workTitleAndSlug from './gedeeld/slug.js';
 
-// #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
+// #region        SCRAPER CONFIG
 const scraper = new AbstractScraper({
   workerData: { ...workerData },
 
@@ -18,11 +19,18 @@ const scraper = new AbstractScraper({
     url: 'https://www.tivolivredenburg.nl/agenda/?event_category=metal-punk-heavy',
   },
   app: {
+    harvest: {
+      dividers: [`+`],
+      dividerRex: "[\\+]",
+      artistsIn: ['title'],
+    },  
     mainPage: {
       requiredProperties: ['venueEventUrl', 'title'],
+      asyncCheckFuncs: ['refused', 'allowedEvent', 'forbiddenTerms', 'hasGoodTerms', 'hasAllowedArtist', 'spotifyConfirmation', 'failure'],
     },
     singlePage: {
       requiredProperties: ['venueEventUrl', 'title', 'price', 'start'],
+      asyncCheckFuncs: ['success'],
     },
   },
 });
@@ -30,138 +38,7 @@ const scraper = new AbstractScraper({
 
 scraper.listenToMasterThread();
 
-// #region [rgba(60, 0, 0, 0.5)]      MAIN PAGE EVENT CHECK
-scraper.mainPageAsyncCheck = async function (event) {
-  const reasons = [];
-
-  this.talkToDB({
-    type: 'db-request',
-    subtype: 'isAllowed',
-    messageData: {
-      string: event.title,
-    },
-  });
-  await this.checkDBhasAnswered();
-  reasons.push(this.lastDBAnswer.reason);
-  if (this.lastDBAnswer.success) {
-    this.skipFurtherChecks.push(event.title);
-    return {
-      event,
-      reason: reasons.reverse().join(','),
-      success: true,
-    };
-  }
-
-  this.talkToDB({
-    type: 'db-request',
-    subtype: 'isRockEvent',
-    messageData: {
-      string: event.title,
-    },
-  });
-  await this.checkDBhasAnswered();
-  reasons.push(this.lastDBAnswer.reason);
-  if (this.lastDBAnswer.success) {
-    this.talkToDB({
-      type: 'db-request',
-      subtype: 'saveAllowedTitle',
-      messageData: {
-        string: event.title,
-        reason: reasons.reverse().join(', '),
-      },
-    });    
-    this.skipFurtherChecks.push(event.title);
-    return {
-      event,
-      reason: reasons.reverse().join(','),
-      success: true,
-    };
-  }  
-  
-  this.talkToDB({
-    type: 'db-request',
-    subtype: 'isRefused',
-    messageData: {
-      string: event.title,
-    },
-  });
-  await this.checkDBhasAnswered();
-  reasons.push(this.lastDBAnswer.reason);
-  if (this.lastDBAnswer.success) {
-    return {
-      event,
-      reason: reasons.reverse().join(','),
-      success: false,
-    };
-  }
-
-  const goodTermsRes = await this.hasGoodTerms(event);
-  reasons.push(goodTermsRes.reason);
-  if (goodTermsRes.success) {
-    this.skipFurtherChecks.push(event.title);
-    this.talkToDB({
-      type: 'db-request',
-      subtype: 'saveAllowedTitle',
-      messageData: {
-        string: event.title,
-        reason: reasons.reverse().join(', '),
-      },
-    });  
-    return goodTermsRes;
-  }  
-
-  const hasForbiddenTerms = await this.hasForbiddenTerms(event);
-  reasons.push(hasForbiddenTerms.reason);
-  if (hasForbiddenTerms.success) {
-    this.talkToDB({
-      type: 'db-request',
-      subtype: 'saveRefusedTitle',
-      messageData: {
-        string: event.title,
-        reason: reasons.reverse().join(', '),
-      },
-    });    
-    
-    return {
-      event,
-      reason: reasons.reverse().join(','),
-      success: false,
-    };
-  }
-  
-  const isRockRes = await this.isRock(event);
-  if (isRockRes.success) {
-    this.talkToDB({
-      type: 'db-request',
-      subtype: 'saveAllowedTitle',
-      messageData: {
-        string: event.title,
-        reason: reasons.reverse().join(', '),
-      },
-    }); 
-    return isRockRes;
-  }
-  this.talkToDB({
-    type: 'db-request',
-    subtype: 'saveRefusedTitle',
-    messageData: {
-      string: event.title,
-      reason: reasons.reverse().join(', '),
-    },
-  });   
-
-  return {
-    event,
-    reason: reasons.reverse().join(', '),
-    success: true,
-  };
-};
-// #endregion                          MAIN PAGE EVENT CHECK
-
-// #region [rgba(0, 180, 0, 0.1)]      SINGLE PAGE EVENT CHECK
-// #endregion                          SINGLE PAGE EVENT CHECK
-
-// #region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
+// #region       MAIN PAGE
 scraper.mainPage = async function () {
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
   if (availableBaseEvents) {
@@ -188,6 +65,8 @@ scraper.mainPage = async function () {
         res.venueEventUrl = eventEl.querySelector('.agenda-list-item__title-link').href;
         const uaRex = new RegExp(unavailabiltyTerms.join('|'), 'gi');
         res.unavailable = !!eventEl.textContent.match(uaRex);
+        res.mapToStartDate = eventEl.querySelector('.agenda-list-item__time')
+          ?.textContent.trim().toLowerCase() ?? '';
         res.soldOut =
           !!eventEl
             .querySelector('.agenda-list-item__label')
@@ -197,7 +76,13 @@ scraper.mainPage = async function () {
     { workerData, unavailabiltyTerms: terms.unavailability },
   );
 
-  rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
+  this.dirtyLog(rawEvents);
+
+  rawEvents = rawEvents
+    .map((event) => mapToStartDate(event, 'dag-maandNaam-jaar', this.months))
+    .map(mapToShortDate)
+    .map(this.isMusicEventCorruptedMapper)
+    .map((re) => workTitleAndSlug(re, this._s.app.harvest.possiblePrefix));
 
   const eventGen = this.eventGenerator(rawEvents);
   // eslint-disable-next-line no-unused-vars
@@ -216,7 +101,7 @@ scraper.mainPage = async function () {
 };
 // #endregion                          MAIN PAGE
 
-// #region [rgba(120, 0, 0, 0.1)]     SINGLE PAGE
+// #region      SINGLE PAGE
 scraper.singlePage = async function ({ page, event }) {
   const { stopFunctie } = await this.singlePageStart();
 
@@ -250,7 +135,7 @@ scraper.singlePage = async function ({ page, event }) {
     errors: [],
   };
 
-  pageInfo.mapToStartDate = await page.evaluate(() => document.querySelector('.datum-tijd')?.textContent ?? null);
+  pageInfo.startDate = event.startDate;
   pageInfo.mapToStartTime = await page.evaluate(() => document.querySelector('.start-tijd')?.textContent ?? null);
   pageInfo.mapToDoorTime = await page.evaluate(() => document.querySelector('.deur-tijd')?.textContent ?? null);
   pageInfo.mapToEndTime = await page.evaluate(() => document.querySelector('.eind-tijd')?.textContent ?? null);
@@ -264,7 +149,6 @@ scraper.singlePage = async function ({ page, event }) {
   }
 
   pageInfo = mapToStartTime(pageInfo);
-  pageInfo = mapToStartDate(pageInfo, 'dag-maandNaam-jaar', this.months);
   pageInfo = combineStartTimeStartDate(pageInfo);
   if (pageInfo.mapToDoorTime) {
     pageInfo = mapToDoorTime(pageInfo);

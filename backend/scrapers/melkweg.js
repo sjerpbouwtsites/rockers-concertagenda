@@ -3,9 +3,15 @@ import { workerData } from 'worker_threads';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/melkweg.js';
 import getImage from './gedeeld/image.js';
-import terms from './gedeeld/terms.js';
+import {
+  combineDoorTimeStartDate,
+  mapToShortDate,
+  combineStartTimeStartDate,
+} from './gedeeld/datums.js';
+import workTitleAndSlug from './gedeeld/slug.js';
+import terms from '../artist-db/store/terms.js';
 
-// #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
+// #region        SCRAPER CONFIG
 const scraper = new AbstractScraper({
   workerData: { ...workerData },
 
@@ -18,11 +24,18 @@ const scraper = new AbstractScraper({
     timeout: 20074,
   },
   app: {
+    harvest: {
+      dividers: [`+`],
+      dividerRex: "[\\+]",
+      artistsIn: ['title'],
+    }, 
     mainPage: {
       requiredProperties: ['venueEventUrl', 'title'],
+      asyncCheckFuncs: ['refused', 'allowedEvent', 'forbiddenTerms', 'hasGoodTerms', 'hasAllowedArtist', 'spotifyConfirmation'],
     },
     singlePage: {
       requiredProperties: ['venueEventUrl', 'title', 'price', 'start'],
+      asyncCheckFuncs: ['success'],
     },
   },
 });
@@ -30,146 +43,7 @@ const scraper = new AbstractScraper({
 
 scraper.listenToMasterThread();
 
-// #region [rgba(60, 0, 0, 0.5)]      MAIN PAGE EVENT CHECK
-scraper.mainPageAsyncCheck = async function (event) {
-  const reasons = [];
-
-  this.talkToDB({
-    type: 'db-request',
-    subtype: 'isAllowed',
-    messageData: {
-      string: event.title,
-    },
-  });
-  await this.checkDBhasAnswered();
-  reasons.push(this.lastDBAnswer.reason);
-  if (this.lastDBAnswer.success) {
-    this.skipFurtherChecks.push(event.title);
-    return {
-      event,
-      reason: reasons.reverse().join(','),
-      success: true,
-    };
-  }
-
-  this.talkToDB({
-    type: 'db-request',
-    subtype: 'isRockEvent',
-    messageData: {
-      string: event.title,
-    },
-  });
-  await this.checkDBhasAnswered();
-  reasons.push(this.lastDBAnswer.reason);
-  if (this.lastDBAnswer.success) {
-    this.talkToDB({
-      type: 'db-request',
-      subtype: 'saveAllowedTitle',
-      messageData: {
-        string: event.title,
-        reason: reasons.reverse().join(', '),
-      },
-    });      
-    this.skipFurtherChecks.push(event.title);
-    return {
-      event,
-      reason: reasons.reverse().join(','),
-      success: true,
-    };
-  }  
-  
-  this.talkToDB({
-    type: 'db-request',
-    subtype: 'isRefused',
-    messageData: {
-      string: event.title,
-    },
-  });
-  await this.checkDBhasAnswered();
-  reasons.push(this.lastDBAnswer.reason);
-  if (this.lastDBAnswer.success) {
-    return {
-      event,
-      reason: reasons.reverse().join(','),
-      success: false,
-    };
-  }
-
-  const goodTermsRes = await this.hasGoodTerms(event);
-  reasons.push(goodTermsRes.reason);
-  if (goodTermsRes.success) {
-    this.skipFurtherChecks.push(event.title);
-    this.talkToDB({
-      type: 'db-request',
-      subtype: 'saveAllowedTitle',
-      messageData: {
-        string: event.title,
-        reason: reasons.reverse().join(', '),
-      },
-    });  
-    return {
-      event,
-      reason: reasons.reverse().join(','),
-      success: true,
-    };
-  }  
-
-  const hasForbiddenTerms = await this.hasForbiddenTerms(event);
-  reasons.push(hasForbiddenTerms.reason);
-  if (hasForbiddenTerms.success) {
-    this.talkToDB({
-      type: 'db-request',
-      subtype: 'saveRefusedTitle',
-      messageData: {
-        string: event.title,
-        reason: reasons.reverse().join(', '),
-      },
-    });    
-    
-    return {
-      event,
-      reason: reasons.reverse().join(','),
-      success: false,
-    };
-  }
-  
-  const isRockRes = await this.isRock(event);
-  if (isRockRes.success) {
-    this.talkToDB({
-      type: 'db-request',
-      subtype: 'saveAllowedTitle',
-      messageData: {
-        string: event.title,
-        reason: reasons.reverse().join(', '),
-      },
-    }); 
-    return {
-      event,
-      reason: reasons.reverse().join(','),
-      success: true,
-    };
-  }
-  this.talkToDB({
-    type: 'db-request',
-    subtype: 'saveRefusedTitle',
-    messageData: {
-      string: event.title,
-      reason: reasons.reverse().join(', '),
-    },
-  }); 
-
-  return {
-    event,
-    reason: reasons.reverse().join(', '),
-    success: false,
-  };
-};
-// #endregion                          MAIN PAGE EVENT CHECK
-
-// #region [rgba(0, 180, 0, 0.1)]      SINGLE PAGE EVENT CHECK
-// #endregion                          SINGLE PAGE EVENT CHECK
-
-// #region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
+// #region       MAIN PAGE
 scraper.mainPage = async function () {
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
   if (availableBaseEvents) {
@@ -180,6 +54,17 @@ scraper.mainPage = async function () {
   }
 
   const { stopFunctie, page } = await this.mainPageStart();
+
+  await page.evaluate(() => {
+    document.querySelectorAll("[class*='styles_date']").forEach((dateEl) => {
+      if (!dateEl.hasAttribute('datetime')) return;
+      const dateW = dateEl.getAttribute('datetime')
+        .split('T')[0];
+      dateEl.parentNode.parentNode
+        .querySelectorAll("[class*='styles_event-list-day__list-item'] a")
+        .forEach((dagItem) => dagItem.setAttribute('data-date', dateW));
+    });
+  });
 
   let rawEvents = await page.evaluate(
     // eslint-disable-next-line no-shadow
@@ -209,6 +94,10 @@ scraper.mainPage = async function () {
               .split(' . ')
               .join(' - ') ?? '';
           const anchor = eventEl.querySelector('a');
+
+          res.mapToStartDate = anchor.getAttribute('data-date');
+          res.startDate = anchor.getAttribute('data-date');
+
           let shortTitle = eventEl.querySelector('[class*="subtitle"]')?.textContent ?? '';
           shortTitle = shortTitle ? `<br>${shortTitle}` : '';
           res.shortText = `${tags} ${shortTitle}`;
@@ -223,9 +112,13 @@ scraper.mainPage = async function () {
         }),
     { workerData, unavailabiltyTerms: terms.unavailability },
   );
-
-  rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
-
+  
+  rawEvents = rawEvents
+    // .map((event) => mapToStartDate(event, 'dag-maandNummer-jaar', this.months))
+    .map(mapToShortDate)
+    .map(this.isMusicEventCorruptedMapper)
+    .map((re) => workTitleAndSlug(re, this._s.app.harvest.possiblePrefix));
+  
   const eventGen = this.eventGenerator(rawEvents);
   // eslint-disable-next-line no-unused-vars
   const checkedEvents = await this.rawEventsAsyncCheck({
@@ -243,39 +136,36 @@ scraper.mainPage = async function () {
 };
 // #endregion                          MAIN PAGE
 
-// #region [rgba(120, 0, 0, 0.1)]     SINGLE PAGE
+// #region      SINGLE PAGE
 scraper.singlePage = async function ({ page, event }) {
   const { stopFunctie } = await this.singlePageStart();
 
-  const pageInfo = await page.evaluate(
+  let pageInfo = await page.evaluate(
     // eslint-disable-next-line no-shadow
     ({ event }) => {
       const res = {
         anker: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
         errors: [],
       };
-      try {
-        res.start =
-          document.querySelector('[class*="styles_event-header"] time')?.getAttribute('datetime') ??
-          null;
-      } catch (caughtError) {
-        res.errors.push({
-          error: caughtError,
-          remarks: `start faal ${res.anker}`,
-          toDebug: {
-            text:
-              document.querySelector('[class*="styles_event-header"] time')?.outerHTML ??
-              'geen time element',
-            res,
-            event,
-          },
-        });
+      
+      const timeTable = document.querySelector('.styles_event-header__time-table__C_q7g')?.textContent.trim().toLowerCase() ?? '';
+      const times = timeTable.match(/\d\d:\d\d/g);
+      if (Array.isArray(times) && times.length > 1) {
+        res.doorTime = `${times[0]}:00`;
+        res.startTime = `${times[1]}:00`;
+      } else if (!Array.isArray(times)) {
+        res.startTime = '20:00:00';
+      } else {
+        res.startTime = `${times[0]}:00`; 
       }
-
       return res;
     },
     { event },
   );
+
+  pageInfo.startDate = event.startDate;
+  pageInfo = combineStartTimeStartDate(pageInfo);
+  pageInfo = combineDoorTimeStartDate(pageInfo);
 
   const ogImage = await page.evaluate(() => Array.from(document.head.children)
     .find((child) => child.hasAttribute('property') && child.getAttribute('property').includes('image')));

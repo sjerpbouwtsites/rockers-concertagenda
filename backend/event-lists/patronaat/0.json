@@ -1,158 +1,222 @@
 [
   {
-    "door": "2023-11-25T19:00:00",
-    "start": "2023-11-25T19:30:00",
-    "venueEventUrl": "https://patronaat.nl/event/carnivore-a-d-iron-walrus-25-11-23/",
-    "title": "Carnivore A.D. + Iron Walrus",
+    "door": "2024-06-22T20:00:00",
+    "start": "2024-06-22T20:00:00",
+    "venueEventUrl": "https://patronaat.nl/event/kliko-fest-2024-22-06-24-2/",
+    "title": "Kliko fest 2024",
     "location": "patronaat",
-    "price": 19.5,
-    "shortText": "Crossover van metal en hardcore, doordrenkt met een post-Armageddon neo-barbarische soundscape",
-    "longText": "../public/texts/patronaat/dm9yZS1hLWQtaXJvbi13YWxydXMtMjUtMTEtMjMv.html",
-    "image": "../public/event-images/patronaat/dm9yZS1hLWQtaXJvbi13YWxydXMtMjUtMTEtMjMv",
+    "price": null,
+    "shortText": "Patronaats festival voor liefhebbers van garage, punk, rock ‘n roll, trash, blues, surf, noise, beat en meer",
+    "longText": "../public/texts/patronaat/bnQva2xpa28tZmVzdC0yMDI0LTIyLTA2LTI0LTIv.html",
+    "image": "../public/event-images/patronaat/bnQva2xpa28tZmVzdC0yMDI0LTIyLTA2LTI0LTIv",
     "soldOut": false,
-    "unavailable": false
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
   },
   {
-    "door": "2023-11-30T19:45:00",
-    "start": "2023-11-30T20:15:00",
-    "venueEventUrl": "https://patronaat.nl/event/wargasm-30-11-23/",
-    "title": "Wargasm + Belle and The Beats",
+    "door": "2024-08-14T19:00:00",
+    "start": "2024-08-14T19:30:00",
+    "venueEventUrl": "https://patronaat.nl/event/mushroomhead-support-14-08-24/",
+    "title": "Mushroomhead + Dymytry + Silenzer",
     "location": "patronaat",
-    "price": 22.5,
-    "shortText": "The Venom Tour",
-    "longText": "../public/texts/patronaat/YWF0Lm5sL2V2ZW50L3dhcmdhc20tMzAtMTEtMjMv.html",
-    "image": "../public/event-images/patronaat/YWF0Lm5sL2V2ZW50L3dhcmdhc20tMzAtMTEtMjMv",
+    "price": 28,
+    "shortText": "Gemaskerde metalband keert terug!",
+    "longText": "../public/texts/patronaat/bXVzaHJvb21oZWFkLXN1cHBvcnQtMTQtMDgtMjQv.html",
+    "image": "../public/event-images/patronaat/bXVzaHJvb21oZWFkLXN1cHBvcnQtMTQtMDgtMjQv",
     "soldOut": false,
-    "unavailable": false
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
   },
   {
-    "door": "2023-12-21T19:30:00",
-    "start": "2023-12-21T19:30:00",
-    "venueEventUrl": "https://patronaat.nl/event/a-can-of-worms-21-12-23/",
-    "title": "A Can Of Worms",
+    "door": "2024-08-27T19:30:00",
+    "start": "2024-08-27T20:00:00",
+    "venueEventUrl": "https://patronaat.nl/event/born-of-osiris-distant-support-27-08-24/",
+    "title": "Born of Osiris + Distant + Gallamesh",
+    "location": "patronaat",
+    "price": null,
+    "shortText": "Technische metalcore en deathcore",
+    "longText": "../public/texts/patronaat/aXJpcy1kaXN0YW50LXN1cHBvcnQtMjctMDgtMjQv.html",
+    "image": "../public/event-images/patronaat/aXJpcy1kaXN0YW50LXN1cHBvcnQtMjctMDgtMjQv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "distant": {
+        "s": "6CDM8i1eI2OkPmruOwwQV6",
+        "l": "distant",
+        "g": [
+          "instrumental post-rock",
+          "polish post-rock"
+        ]
+      },
+      "mesh": {
+        "s": "3ggwAqZD3lyT2sbovlmfQY",
+        "l": "mesh",
+        "g": [
+          "alternative metal",
+          "djent",
+          "groove metal",
+          "metal",
+          "nu metal",
+          "progressive groove metal",
+          "swedish metal",
+          "technical groove metal",
+          "technical thrash"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2024-09-24T20:00:00",
+    "start": "2024-09-24T20:30:00",
+    "venueEventUrl": "https://patronaat.nl/event/battle-beast-support-24-09-24/",
+    "title": "Battle Beast + Brymir",
+    "location": "patronaat",
+    "price": 24.5,
+    "shortText": "The circus is coming to town!",
+    "longText": "../public/texts/patronaat/YmF0dGxlLWJlYXN0LXN1cHBvcnQtMjQtMDktMjQv.html",
+    "image": "../public/event-images/patronaat/YmF0dGxlLWJlYXN0LXN1cHBvcnQtMjQtMDktMjQv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "battle beast": {
+        "s": "7k5jeohQCF20a8foBD9ize",
+        "l": "battle%20beast",
+        "g": [
+          "finnish heavy metal",
+          "finnish power metal",
+          "gothic symphonic metal",
+          "power metal",
+          "symphonic metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2024-10-11T19:30:00",
+    "start": "2024-10-11T20:00:00",
+    "venueEventUrl": "https://patronaat.nl/event/ohm-radar-men-from-the-moon-feedy-11-10-24/",
+    "title": "OHM: Radar Men From The Moon + Feedy",
     "location": "patronaat",
     "price": 7,
-    "shortText": "Utrechtse metalband Throwing Bricks presenteert estafetteshow",
-    "longText": "../public/texts/patronaat/ZXZlbnQvYS1jYW4tb2Ytd29ybXMtMjEtMTItMjMv.html",
-    "image": "../public/event-images/patronaat/ZXZlbnQvYS1jYW4tb2Ytd29ybXMtMjEtMTItMjMv",
+    "shortText": "Gepresenteerd door OHM Bookings",
+    "longText": "../public/texts/patronaat/LWZyb20tdGhlLW1vb24tZmVlZHktMTEtMTAtMjQv.html",
+    "image": "../public/event-images/patronaat/LWZyb20tdGhlLW1vb24tZmVlZHktMTEtMTAtMjQv",
     "soldOut": false,
-    "unavailable": false
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "radar men from the moon": {
+        "s": "610D1HfspKBoGWwdebPiR0",
+        "l": "radar%20men%20from%20the%20moon",
+        "g": [
+          "dutch stoner rock",
+          "neo-kraut",
+          "psychedelic space rock",
+          "space rock"
+        ]
+      }
+    }
   },
   {
-    "door": "2024-01-19T19:00:00",
-    "start": "2024-01-19T19:30:00",
-    "venueEventUrl": "https://patronaat.nl/event/restraining-order-19-01-24/",
-    "title": "Restraining Order",
+    "door": "2024-10-25T19:30:00",
+    "start": "2024-10-25T20:15:00",
+    "venueEventUrl": "https://patronaat.nl/event/witch-club-satan-25-10-24/",
+    "title": "Witch Club Satan",
     "location": "patronaat",
-    "price": 15.5,
-    "shortText": "'82-stijl hardcore met net genoeg '77 punkhouding en garage rock-hooks",
-    "longText": "../public/texts/patronaat/bnQvcmVzdHJhaW5pbmctb3JkZXItMTktMDEtMjQv.html",
-    "image": "../public/event-images/patronaat/bnQvcmVzdHJhaW5pbmctb3JkZXItMTktMDEtMjQv",
+    "price": 17.5,
+    "shortText": "Feministische black metal uit Noorwegen",
+    "longText": "../public/texts/patronaat/ZW50L3dpdGNoLWNsdWItc2F0YW4tMjUtMTAtMjQv.html",
+    "image": "../public/event-images/patronaat/ZW50L3dpdGNoLWNsdWItc2F0YW4tMjUtMTAtMjQv",
     "soldOut": false,
-    "unavailable": false
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
   },
   {
-    "door": "2024-01-25T19:30:00",
-    "start": "2024-01-25T19:30:00",
-    "venueEventUrl": "https://patronaat.nl/event/skinny-lister-support-25-01-24/",
-    "title": "Skinny Lister + support",
-    "location": "patronaat",
-    "price": 20,
-    "shortText": "Energieke shanty folkpunk",
-    "longText": "../public/texts/patronaat/a2lubnktbGlzdGVyLXN1cHBvcnQtMjUtMDEtMjQv.html",
-    "image": "../public/event-images/patronaat/a2lubnktbGlzdGVyLXN1cHBvcnQtMjUtMDEtMjQv",
-    "soldOut": false,
-    "unavailable": false
-  },
-  {
-    "door": "2024-02-11T19:30:00",
-    "start": "2024-02-11T20:00:00",
-    "venueEventUrl": "https://patronaat.nl/event/modder-11-02-24/",
-    "title": "Modder + Ter Ziele",
-    "location": "patronaat",
-    "price": null,
-    "shortText": "Vijfkoppige doom sludge formatie",
-    "longText": "../public/texts/patronaat/bmFhdC5ubC9ldmVudC9tb2RkZXItMTEtMDItMjQv.html",
-    "image": "../public/event-images/patronaat/bmFhdC5ubC9ldmVudC9tb2RkZXItMTEtMDItMjQv",
-    "soldOut": false,
-    "unavailable": false
-  },
-  {
-    "door": "2024-02-14T19:30:00",
-    "start": "2024-02-14T20:00:00",
-    "venueEventUrl": "https://patronaat.nl/event/normandie-14-02-24/",
-    "title": "Normandie",
-    "location": "patronaat",
-    "price": 23.5,
-    "shortText": "Alternatieve metalcore met catchy melodielijnen, meezingbare teksten en vette riffs",
-    "longText": "../public/texts/patronaat/dC5ubC9ldmVudC9ub3JtYW5kaWUtMTQtMDItMjQv.html",
-    "image": "../public/event-images/patronaat/dC5ubC9ldmVudC9ub3JtYW5kaWUtMTQtMDItMjQv",
-    "soldOut": false,
-    "unavailable": false
-  },
-  {
-    "door": "2024-02-24T19:00:00",
-    "start": "2024-02-24T19:30:00",
-    "venueEventUrl": "https://patronaat.nl/event/kataklysm-fleshgod-apocalypse-stillbirth-24-02-24/",
-    "title": "Kataklysm + Fleshgod Apocalypse + Stillbirth",
-    "location": "patronaat",
-    "price": 30.5,
-    "shortText": "EUROPE vs. GOLIATH",
-    "longText": "../public/texts/patronaat/cG9jYWx5cHNlLXN0aWxsYmlydGgtMjQtMDItMjQv.html",
-    "image": "../public/event-images/patronaat/cG9jYWx5cHNlLXN0aWxsYmlydGgtMjQtMDItMjQv",
-    "soldOut": false,
-    "unavailable": false
-  },
-  {
-    "door": "2024-03-22T19:00:00",
-    "start": "2024-03-22T19:30:00",
-    "venueEventUrl": "https://patronaat.nl/event/grade-2-22-03-24/",
-    "title": "Grade 2",
-    "location": "patronaat",
-    "price": 13,
-    "shortText": "Old school punk voor de nieuwe generatie",
-    "longText": "../public/texts/patronaat/YWF0Lm5sL2V2ZW50L2dyYWRlLTItMjItMDMtMjQv.html",
-    "image": "../public/event-images/patronaat/YWF0Lm5sL2V2ZW50L2dyYWRlLTItMjItMDMtMjQv",
-    "soldOut": false,
-    "unavailable": false
-  },
-  {
-    "door": "2024-04-05T19:30:00",
-    "start": "2024-04-05T20:00:00",
-    "venueEventUrl": "https://patronaat.nl/event/projector-support-05-04-24/",
-    "title": "Projector + support",
-    "location": "patronaat",
-    "price": null,
-    "shortText": "Pakkende alternatieve rock en frenetieke post-punk",
-    "longText": "../public/texts/patronaat/bnQvcHJvamVjdG9yLXN1cHBvcnQtMDUtMDQtMjQv.html",
-    "image": "../public/event-images/patronaat/bnQvcHJvamVjdG9yLXN1cHBvcnQtMDUtMDQtMjQv",
-    "soldOut": false,
-    "unavailable": false
-  },
-  {
-    "door": "2024-04-19T19:30:00",
-    "start": "2024-04-19T20:00:00",
-    "venueEventUrl": "https://patronaat.nl/event/the-warning-19-04-24/",
-    "title": "The Warning",
-    "location": "patronaat",
-    "price": 28.5,
-    "shortText": "Rockmuziek met een dosis adrenaline",
-    "longText": "../public/texts/patronaat/bmwvZXZlbnQvdGhlLXdhcm5pbmctMTktMDQtMjQv.html",
-    "image": "../public/event-images/patronaat/bmwvZXZlbnQvdGhlLXdhcm5pbmctMTktMDQtMjQv",
-    "soldOut": false,
-    "unavailable": false
-  },
-  {
-    "door": "2024-05-25T19:00:00",
-    "start": "2024-05-25T19:00:00",
-    "venueEventUrl": "https://patronaat.nl/event/vanaheim-xaon-end-of-the-dream-25-05-24/",
-    "title": "Vanaheim + Xaon + End of the Dream",
+    "door": "2024-11-07T19:30:00",
+    "start": "2024-11-07T20:00:00",
+    "venueEventUrl": "https://patronaat.nl/event/superbloom-dear-seattle-07-11-24/",
+    "title": "Superbloom + Dear Seattle",
     "location": "patronaat",
     "price": 19.5,
-    "shortText": "Pagan- en folkmetalpackage gaat op tour door Europa!",
-    "longText": "../public/texts/patronaat/YW9uLWVuZC1vZi10aGUtZHJlYW0tMjUtMDUtMjQv.html",
-    "image": "../public/event-images/patronaat/YW9uLWVuZC1vZi10aGUtZHJlYW0tMjUtMDUtMjQv",
+    "shortText": "Grungy en groovy indierock",
+    "longText": "../public/texts/patronaat/ZXJibG9vbS1kZWFyLXNlYXR0bGUtMDctMTEtMjQv.html",
+    "image": "../public/event-images/patronaat/ZXJibG9vbS1kZWFyLXNlYXR0bGUtMDctMTEtMjQv",
     "soldOut": false,
-    "unavailable": false
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "superbloom": {
+        "s": "3xdggitmc1vFAChxAwhIIL",
+        "l": "superbloom",
+        "g": [
+          "grungegaze"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2024-11-21T19:30:00",
+    "start": "2024-11-21T20:00:00",
+    "venueEventUrl": "https://patronaat.nl/event/bella-the-bizarre-support-21-11-24/",
+    "title": "Bella and The Bizarre + support",
+    "location": "patronaat",
+    "price": 16,
+    "shortText": "Een wilde fusie van garagepunk, sixties rock 'n roll en een vleugje soul!",
+    "longText": "../public/texts/patronaat/LXRoZS1iaXphcnJlLXN1cHBvcnQtMjEtMTEtMjQv.html",
+    "image": "../public/event-images/patronaat/LXRoZS1iaXphcnJlLXN1cHBvcnQtMjEtMTEtMjQv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2024-11-28T18:30:00",
+    "start": "2024-11-28T18:30:00",
+    "venueEventUrl": "https://patronaat.nl/event/feuerschwanz-orden-ogan-dominum-28-11-24/",
+    "title": "Feuerschwanz + Orden Ogan + Dominum",
+    "location": "patronaat",
+    "price": null,
+    "shortText": "Van komische middeleeuwse folk tot serieuze heavy metal",
+    "longText": "../public/texts/patronaat/ei1vcmRlbi1vZ2FuLWRvbWludW0tMjgtMTEtMjQv.html",
+    "image": "../public/event-images/patronaat/ei1vcmRlbi1vZ2FuLWRvbWludW0tMjgtMTEtMjQv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2025-01-11T19:30:00",
+    "start": "2025-01-11T20:00:00",
+    "venueEventUrl": "https://patronaat.nl/event/ramones-alive-ode-to-50-years-ramones-11-01-25/",
+    "title": "Ramones Alive – ode to 50 years Ramones",
+    "location": "patronaat",
+    "price": 21,
+    "shortText": "Ode to 50 years Ramones",
+    "longText": "../public/texts/patronaat/LXRvLTUwLXllYXJzLXJhbW9uZXMtMTEtMDEtMjUv.html",
+    "image": "../public/event-images/patronaat/LXRvLTUwLXllYXJzLXJhbW9uZXMtMTEtMDEtMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2025-02-20T19:30:00",
+    "start": "2025-02-20T20:00:00",
+    "venueEventUrl": "https://patronaat.nl/event/the-optimist-in-me-20-02-25/",
+    "title": "The Optimist In Me",
+    "location": "patronaat",
+    "price": 13,
+    "shortText": "Moderne metal en hardrock met een optimistische twist",
+    "longText": "../public/texts/patronaat/dC90aGUtb3B0aW1pc3QtaW4tbWUtMjAtMDItMjUv.html",
+    "image": "../public/event-images/patronaat/dC90aGUtb3B0aW1pc3QtaW4tbWUtMjAtMDItMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
   }
 ]

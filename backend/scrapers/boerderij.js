@@ -5,8 +5,10 @@ import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/boerderij.js';
 import getImage from './gedeeld/image.js';
 import debugSettings from './gedeeld/debug-settings.js';
+import workTitleAndSlug from './gedeeld/slug.js';
+import { mapToShortDate } from './gedeeld/datums.js';
 
-// #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
+// #region        SCRAPER CONFIG
 const scraper = new AbstractScraper({
   workerData: { ...workerData },
 
@@ -18,13 +20,18 @@ const scraper = new AbstractScraper({
     timeout: 20006,
   },
   app: {
+    harvest: {
+      dividers: [`&`],
+      dividerRex: "[&]", 
+      artistsIn: ['title', 'shortText'],
+    },
     mainPage: {
-      useCustomScraper: true,
-
       requiredProperties: ['venueEventUrl', 'title'],
+      asyncCheckFuncs: ['refused', 'allowedEvent', 'forbiddenTerms', 'spotifyConfirmation', 'metalEncyclopediaConfirmation'],
     },
     singlePage: {
-      requiredProperties: ['venueEventUrl', 'title', 'price', 'start'],
+      requiredProperties: ['venueEventUrl', 'title', 'start'],
+      asyncCheckFuncs: ['ifNotAllowedRefuse', 'refused', 'saveAllowedEvent', 'harvestArtists'],
     },
   },
 });
@@ -32,111 +39,7 @@ const scraper = new AbstractScraper({
 
 scraper.listenToMasterThread();
 
-// #region [rgba(50, 0, 0, 0.5)]      MAIN PAGE EVENT CHECK
-scraper.mainPageAsyncCheck = async function (event) {
-  const reasons = [];
-
-  this.talkToDB({
-    type: 'db-request',
-    subtype: 'isAllowed',
-    messageData: {
-      string: event.title,
-    },
-  });
-  await this.checkDBhasAnswered();
-  reasons.push(this.lastDBAnswer.reason);
-  if (this.lastDBAnswer.success) {
-    this.skipFurtherChecks.push(event.title);
-    return {
-      event,
-      reason: reasons.reverse().join(','),
-      success: true,
-    };
-  }
-
-  this.talkToDB({
-    type: 'db-request',
-    subtype: 'isRockEvent',
-    messageData: {
-      string: event.title,
-    },
-  });
-  await this.checkDBhasAnswered();
-  reasons.push(this.lastDBAnswer.reason);
-  if (this.lastDBAnswer.success) {
-    this.talkToDB({
-      type: 'db-request',
-      subtype: 'saveAllowedTitle',
-      messageData: {
-        string: event.title,
-        reason: reasons.reverse().join(', '),
-      },
-    });  
-    this.skipFurtherChecks.push(event.title);
-    return {
-      event,
-      reason: reasons.reverse().join(','),
-      success: true,
-    };
-  }  
-  
-  this.talkToDB({
-    type: 'db-request',
-    subtype: 'isRefused',
-    messageData: {
-      string: event.title,
-    },
-  });
-  await this.checkDBhasAnswered();
-  reasons.push(this.lastDBAnswer.reason);
-  if (this.lastDBAnswer.success) {
-    return {
-      event,
-      reason: reasons.reverse().join(','),
-      success: false,
-    };
-  }
-
-  const hasForbiddenTerms = await this.hasForbiddenTerms(event);
-  reasons.push(hasForbiddenTerms.reason);
-  if (hasForbiddenTerms.success) {
-    this.talkToDB({
-      type: 'db-request',
-      subtype: 'saveRefusedTitle',
-      messageData: {
-        string: event.title,
-        reason: hasForbiddenTerms.reason,
-      },
-    });    
-    
-    return {
-      event,
-      reason: reasons.reverse().join(','),
-      success: false,
-    };
-  }
-
-  this.talkToDB({
-    type: 'db-request',
-    subtype: 'saveAllowedTitle',
-    messageData: {
-      string: event.title,
-      reason: reasons.reverse().join(', '),
-    },
-  });  
-  
-  return {
-    event,
-    reason: reasons.reverse().join(', '),
-    success: true,
-  };
-};
-// #endregion                          MAIN PAGE EVENT CHECK
-
-// #region [rgba(0, 180, 0, 0.1)]      SINGLE PAGE EVENT CHECK
-// #endregion                          SINGLE PAGE EVENT CHECK
-
-// #region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
+// #region       MAIN PAGE
 scraper.mainPage = async function () {
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
   if (availableBaseEvents) {
@@ -156,11 +59,17 @@ scraper.mainPage = async function () {
         const m = {
           venueEventUrl: `https://poppodiumboerderij.nl/programma/${event.seo_slug}`,
           shortText: event.subtitle,
-          title: `${event.title}&id=${event.id}`,
+          title: `${event.title}`,
+          eventId: event.id,
         };
+        // tijdelijk ivm date in async
+        m.startDate = event.event_date;
+        m.startDateTime = `${m.startDate}T00:00:00`;
         const e = Object.assign(event, m);
         return e;
       })
+      .map(mapToShortDate)
+      .map((re) => workTitleAndSlug(re, this._s.app.harvest.possiblePrefix))
       .map(this.isMusicEventCorruptedMapper);
   }
 
@@ -178,92 +87,6 @@ scraper.mainPage = async function () {
   );
   
   return this.mainPageEnd({ stopFunctie, rawEvents: thisWorkersEvents });
-};
-// #endregion                          MAIN PAGE
-
-// #region [rgba(120, 0, 0, 0.1)]     SINGLE PAGE
-scraper.singlePage = async function ({ event, page }) {
-  const { stopFunctie } = await this.singlePageStart();
-
-  const [realEventTitle, realEventId] = event.title.split('&id=');
-  // eslint-disable-next-line no-param-reassign
-  event.title = realEventTitle;
-
-  const res = {
-    anker: `<a class='page-info' href='${this._s.mainPage.url}'>${event.title}</a>`,
-    errors: [],
-  };
-
-  const url = `https://poppodiumboerderij.nl/includes/ajax.inc.php?id=${realEventId}&action=getEvent&lang_id=1`;
-  const ajaxRes = await axios
-    .get(url)
-    .then((response) => response.data)
-    .catch((caughtError) => {
-      res.errors.push({
-        error: caughtError,
-        remarks: `ajax ${url} faal ${res.anker}`,
-        errorLevel: 'close-thread',
-        toDebug: event,
-      });
-    });
-
-  if (!ajaxRes) {
-    res.corrupted += `ajax verzoek faalt naar ${url}`;
-    return this.singlePageEnd({ res, stopFunctie });
-  }
-
-  const imageRes = await getImage({
-    _this: this,
-    page,
-    workerData,
-    event,
-    pageInfo: res,
-    selectors: ['.event-image'],
-    mode: 'image-src',
-  });
-  res.errors = res.errors.concat(imageRes.errors);
-  res.image = imageRes.image;
-
-  res.boerderijID = ajaxRes.id;
-  const priceRes = await this.boerderijCustomPrice(
-    `${ajaxRes?.entrance_price ?? ''} ${ajaxRes?.ticket_price ?? ''}`,
-    res.anker,
-    res.title,
-  );
-  res.errors = res.errors.concat(priceRes.errors);
-  res.price = priceRes.price;
-
-  try {
-    res.start = `${ajaxRes.event_date}T${ajaxRes.event_start}:00`;
-  } catch (catchedError) {
-    res.errors.push({
-      error: catchedError,
-      remarks: `start samenvoeging ${res.anker}`,
-      toDebug: res,
-    });
-  }
-  try {
-    res.door = `${ajaxRes.event_date}T${ajaxRes.event_open}:00`;
-  } catch (catchedError) {
-    res.errors.push({
-      error: catchedError,
-      remarks: `door samenvoeging ${res.anker}`,
-      toDebug: res,
-    });
-  }
-
-  const { mediaForHTML, socialsForHTML, textForHTML } = await longTextSocialsIframes(
-    page,
-    event,
-    res,
-  );
-  res.mediaForHTML = mediaForHTML;
-  res.socialsForHTML = socialsForHTML;
-  res.textForHTML = textForHTML;
-
-  res.soldOut = ajaxRes?.label?.title?.toLowerCase().includes('uitverkocht') ?? null;
-
-  return this.singlePageEnd({ pageInfo: res, stopFunctie });
 };
 // #endregion                         SINGLE PAGE
 

@@ -1,106 +1,104 @@
 [
   {
-    "door": "2023-11-23T20:30:00",
-    "start": "2023-11-23T21:00:00",
-    "venueEventUrl": "https://metropool.nl/agenda/the-scratch/",
-    "title": "The Scratch",
+    "door": "2024-06-27T20:30:00",
+    "start": "2024-06-27T21:00:00",
+    "venueEventUrl": "https://metropool.nl/agenda/norose-ep-release/",
+    "title": "NoRose - EP release",
     "location": "metropool",
-    "price": 22,
-    "shortText": "Support: Junior Brother",
-    "longText": "../public/texts/metropool/dHJvcG9vbC5ubC9hZ2VuZGEvdGhlLXNjcmF0Y2gv.html",
-    "image": "../public/event-images/metropool/dHJvcG9vbC5ubC9hZ2VuZGEvdGhlLXNjcmF0Y2gv",
+    "price": 10,
+    "shortText": "Support: Jongeman",
+    "longText": "../public/texts/metropool/bC5ubC9hZ2VuZGEvbm9yb3NlLWVwLXJlbGVhc2Uv.html",
+    "image": "../public/event-images/metropool/bC5ubC9hZ2VuZGEvbm9yb3NlLWVwLXJlbGVhc2Uv",
     "soldOut": false,
-    "unavailable": false
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "norose": {
+        "s": null,
+        "l": null,
+        "g": [
+          "punk",
+          "opera punk"
+        ]
+      }
+    }
   },
   {
-    "door": "2024-01-14T18:00:00",
-    "start": "2024-01-14T19:00:00",
-    "venueEventUrl": "https://metropool.nl/agenda/heidevolk/",
-    "title": "Heidevolk",
+    "door": "2024-10-27T19:00:00",
+    "start": "2024-10-27T19:30:00",
+    "venueEventUrl": "https://metropool.nl/agenda/kissin-dynamite-enschede/",
+    "title": "Kissin' Dynamite",
     "location": "metropool",
-    "price": 32.5,
-    "shortText": "Support: Nytt Land + Jonne",
-    "longText": "../public/texts/metropool/bWV0cm9wb29sLm5sL2FnZW5kYS9oZWlkZXZvbGsv.html",
-    "image": "../public/event-images/metropool/bWV0cm9wb29sLm5sL2FnZW5kYS9oZWlkZXZvbGsv",
+    "price": 30.5,
+    "shortText": "Support: Massive Wagons en Airstrike",
+    "longText": "../public/texts/metropool/ZW5kYS9raXNzaW4tZHluYW1pdGUtZW5zY2hlZGUv.html",
+    "image": "../public/event-images/metropool/ZW5kYS9raXNzaW4tZHluYW1pdGUtZW5zY2hlZGUv",
     "soldOut": false,
-    "unavailable": false
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
   },
   {
-    "door": "2024-02-09T21:00:00",
-    "start": "2024-02-09T21:00:00",
-    "venueEventUrl": "https://metropool.nl/agenda/emo-night-mainland-9-feb/",
-    "title": "Emo Night Mainland",
+    "door": "2024-11-08T19:30:00",
+    "start": "2024-11-08T20:30:00",
+    "venueEventUrl": "https://metropool.nl/agenda/the-iron-maidens/",
+    "title": "The iron maidens",
     "location": "metropool",
-    "price": 14.5,
+    "price": 34,
     "shortText": "",
-    "longText": "../public/texts/metropool/ZW5kYS9lbW8tbmlnaHQtbWFpbmxhbmQtOS1mZWIv.html",
-    "image": "../public/event-images/metropool/ZW5kYS9lbW8tbmlnaHQtbWFpbmxhbmQtOS1mZWIv",
+    "longText": "../public/texts/metropool/b2wubmwvYWdlbmRhL3RoZS1pcm9uLW1haWRlbnMv.html",
+    "image": "../public/event-images/metropool/b2wubmwvYWdlbmRhL3RoZS1pcm9uLW1haWRlbnMv",
     "soldOut": false,
-    "unavailable": false
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "the iron maidens": {
+        "s": null,
+        "l": null,
+        "g": [
+          "heavy metal"
+        ]
+      }
+    }
   },
   {
-    "door": "2024-02-16T19:30:00",
-    "start": "2024-02-16T20:30:00",
-    "venueEventUrl": "https://metropool.nl/agenda/physical-graffiti-hengelo/",
-    "title": "Physical Graffiti",
+    "door": "2024-11-28T19:30:00",
+    "start": "2024-11-28T20:00:00",
+    "venueEventUrl": "https://metropool.nl/agenda/benighted-plus-baest/",
+    "title": "Benighted + baest",
     "location": "metropool",
-    "price": 27,
+    "price": 23,
+    "shortText": "Support: Coffin Feeder",
+    "longText": "../public/texts/metropool/bC9hZ2VuZGEvYmVuaWdodGVkLXBsdXMtYmFlc3Qv.html",
+    "image": "../public/event-images/metropool/bC9hZ2VuZGEvYmVuaWdodGVkLXBsdXMtYmFlc3Qv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2024-12-13T19:30:00",
+    "start": "2024-12-13T20:30:00",
+    "venueEventUrl": "https://metropool.nl/agenda/john-coffey/",
+    "title": "John Coffey",
+    "location": "metropool",
+    "price": 29.5,
     "shortText": "",
-    "longText": "../public/texts/metropool/bmRhL3BoeXNpY2FsLWdyYWZmaXRpLWhlbmdlbG8v.html",
-    "image": "../public/event-images/metropool/bmRhL3BoeXNpY2FsLWdyYWZmaXRpLWhlbmdlbG8v",
+    "longText": "../public/texts/metropool/dHJvcG9vbC5ubC9hZ2VuZGEvam9obi1jb2ZmZXkv.html",
+    "image": "../public/event-images/metropool/dHJvcG9vbC5ubC9hZ2VuZGEvam9obi1jb2ZmZXkv",
     "soldOut": false,
-    "unavailable": false
-  },
-  {
-    "door": "2024-02-24T20:30:00",
-    "start": "2024-02-24T21:00:00",
-    "venueEventUrl": "https://metropool.nl/agenda/clan-of-xymox/",
-    "title": "Clan Of Xymox",
-    "location": "metropool",
-    "price": 28,
-    "shortText": "Support: STAKBABBER",
-    "longText": "../public/texts/metropool/b3Bvb2wubmwvYWdlbmRhL2NsYW4tb2YteHltb3gv.html",
-    "image": "../public/event-images/metropool/b3Bvb2wubmwvYWdlbmRhL2NsYW4tb2YteHltb3gv",
-    "soldOut": false,
-    "unavailable": false
-  },
-  {
-    "door": "2024-03-07T20:00:00",
-    "start": "2024-03-07T20:30:00",
-    "venueEventUrl": "https://metropool.nl/agenda/denial-of-life-plus-negative-frame/",
-    "title": "Denial of Life + Negative Frame",
-    "location": "metropool",
-    "price": 17.5,
-    "shortText": "",
-    "longText": "../public/texts/metropool/bC1vZi1saWZlLXBsdXMtbmVnYXRpdmUtZnJhbWUv.html",
-    "image": "../public/event-images/metropool/bC1vZi1saWZlLXBsdXMtbmVnYXRpdmUtZnJhbWUv",
-    "soldOut": false,
-    "unavailable": false
-  },
-  {
-    "door": "2024-04-19T20:30:00",
-    "start": "2024-04-19T21:00:00",
-    "venueEventUrl": "https://metropool.nl/agenda/subsignal/",
-    "title": "Subsignal",
-    "location": "metropool",
-    "price": 27.5,
-    "shortText": "german prog, progressive metal \n                                Support: Powerized",
-    "longText": "../public/texts/metropool/bWV0cm9wb29sLm5sL2FnZW5kYS9zdWJzaWduYWwv.html",
-    "image": "../public/event-images/metropool/bWV0cm9wb29sLm5sL2FnZW5kYS9zdWJzaWduYWwv",
-    "soldOut": false,
-    "unavailable": false
-  },
-  {
-    "door": "2024-05-24T19:30:00",
-    "start": "2024-05-24T20:00:00",
-    "venueEventUrl": "https://metropool.nl/agenda/vanaheim-plus-xaon-plus-end-of-the-dream/",
-    "title": "Vanaheim + Xaon + End of the Dream ",
-    "location": "metropool",
-    "price": 22,
-    "shortText": "",
-    "longText": "../public/texts/metropool/dXMteGFvbi1wbHVzLWVuZC1vZi10aGUtZHJlYW0v.html",
-    "image": "../public/event-images/metropool/dXMteGFvbi1wbHVzLWVuZC1vZi10aGUtZHJlYW0v",
-    "soldOut": false,
-    "unavailable": false
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "john coffey": {
+        "s": "4kffVdSOMGP0BOiBXVgeyA",
+        "l": "john%20coffey",
+        "g": [
+          "dutch indie",
+          "dutch rock",
+          "hardcore punk"
+        ]
+      }
+    }
   }
 ]

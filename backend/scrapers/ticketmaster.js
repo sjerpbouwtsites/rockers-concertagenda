@@ -16,7 +16,7 @@ function editAttractionsInRaw(attractions) {
   );
 }
 
-// #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
+// #region        SCRAPER CONFIG
 const ticketmasterScraper = new AbstractScraper({
   workerData: { ...workerData },
 
@@ -43,13 +43,13 @@ const ticketmasterScraper = new AbstractScraper({
 
 ticketmasterScraper.listenToMasterThread();
 
-// #region [rgba(0, 120, 0, 0.1)]      MAIN PAGE EVENT CHECK
+// #region       MAIN PAGE EVENT CHECK
 // #endregion                          MAIN PAGE EVENT CHECK
 
-// #region [rgba(0, 180, 0, 0.1)]      SINGLE PAGE EVENT CHECK
+// #region       SINGLE PAGE EVENT CHECK
 // #endregion                          SINGLE PAGE EVENT CHECK
 
-// #region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
+// #region       MAIN PAGE
 ticketmasterScraper.mainPage = async function () {
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.name);
   if (availableBaseEvents) {
@@ -105,7 +105,7 @@ ticketmasterScraper.mainPage = async function () {
 
 // #endregion                          MAIN PAGE
 
-// #region [rgba(120, 0, 0, 0.3)]     SINGLE PAGE
+// #region      SINGLE PAGE
 ticketmasterScraper.singlePage = async function ({ event }) {
   const { stopFunctie } = await this.singlePageStart();
 

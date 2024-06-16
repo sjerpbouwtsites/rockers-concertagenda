@@ -21,34 +21,29 @@ export const workerConfig = {
     forceSet: 0,
   },
   afaslive: {
-    workerCount: 1,
-    CPUReq: 'high',
-    workerConcurrent: 1,
+    workerCount: 3,
+    workerConcurrent: 2,
     forceSet: 0,
   },
+  
   baroeg: { workerCount: 3, workerConcurrent: 2, forceSet: 0 },
-  boerderij: {
-    workerCount: 1,
-    workerConcurrent: 1,
-    forceSet: 1,
-  },
   bibelot: { workerCount: 1, workerConcurrent: 1, forceSet: 1 },
+
   cpunt: { workerCount: 1, workerConcurrent: 1, forceSet: 1 },
   dbs: {
     workerCount: 4,
     workerConcurrent: 4,
-    CPUReq: 'low',
+    CPUReq: 'high',
     forceSet: 1,
   },
-  deflux: { workerCount: 1, workerConcurrent: 1, forceSet: 2 },
+  
   dehelling: {
     workerCount: 1,
     workerConcurrent: 1,
     forceSet: 2,
   },
-  depul: { workerCount: 2, workerConcurrent: 2, forceSet: 2 },
   doornroosje: {
-    workerCount: 2,
+    workerCount: 3,
     workerConcurrent: 1,
     CPUReq: 'high',
     forceSet: 2,
@@ -68,15 +63,15 @@ export const workerConfig = {
     workerConcurrent: 2,
     forceSet: 4,
   },
-  littledevil: {
-    workerCount: 2,
-    workerConcurrent: 2,
-    forceSet: 4,
-  },
   melkweg: {
     workerCount: 4,
-    CPUReq: 'low',
+    CPUReq: 'high',
     workerConcurrent: 1,
+    forceSet: 4,
+  },
+  littledevil: {
+    workerCount: 1,
+    workerConcurrent: 2,
     forceSet: 4,
   },
   metalfan: { workerCount: 1, CPUReq: 'low', workerConcurrent: 1 },
@@ -86,43 +81,53 @@ export const workerConfig = {
     CPUReq: 'high',
     forceSet: 4,
   },
-  neushoorn: { workerCount: 1, workerConcurrent: 1, forceSet: 5 },
-  nieuwenor: { workerCount: 2, workerConcurrent: 2, forceSet: 5 },
+  neushoorn: { workerCount: 2, workerConcurrent: 1, forceSet: 5 },
+  nieuwenor: { workerCount: 1, workerConcurrent: 2, forceSet: 5 },
   occii: {
-    workerCount: 2,
+    workerCount: 1,
     workerConcurrent: 1,
     forceSet: 5,
   },
-  oosterpoort: { workerCount: 1, workerConcurrent: 1, forceSet: 5 },
+  oosterpoort: { workerCount: 3, workerConcurrent: 1, forceSet: 5 },
   p60: { workerCount: 1, workerConcurrent: 1, forceSet: 5 },
   paradiso: {
-    workerCount: 2,
+    workerCount: 4,
     workerConcurrent: 2,
     forceSet: 5,
+    CPUReq: 'high',
   },
-  patronaat: { workerCount: 2, workerConcurrent: 2, forceSet: 6 },
+  patronaat: {
+    workerCount: 3, workerConcurrent: 1, forceSet: 6, CPUReq: 'high', 
+  },
   tivolivredenburg: {
     workerCount: 2, workerConcurrent: 2, forceSet: 6, CPUReq: 'low', 
   },
-  victorie: { workerCount: 4, workerConcurrent: 2, forceSet: 6 },
+  victorie: { workerCount: 1, workerConcurrent: 2, forceSet: 6 },
   volt: { workerCount: 1, workerConcurrent: 1, forceSet: 6 },
   willemeen: { workerCount: 2, workerConcurrent: 2, forceSet: 6 },
 };
+
+// deflux: { workerCount: 1, workerConcurrent: 1, forceSet: 2 },
+// boerderij: {
+//   workerCount: 1,
+//   workerConcurrent: 1,
+//   forceSet: 1,
+// },
 // ticketmaster: {
 //   workerCount: 2,
 //   workerConcurrent: 1,
 //   forceSet: 6,
 // },
-
+    
 export const workerNames = Object.keys(workerConfig);
-
+  
 class WorkerListConf {
   data = [];
 
   static _self = null;
 
   curDay = new Date().toISOString().split('T')[0].replaceAll(/-/g, '');
-
+  
   constructor() {
     if (WorkerListConf._self instanceof WorkerListConf) {
       return WorkerListConf._self;
@@ -131,7 +136,7 @@ class WorkerListConf {
     this.setBaseEventLists();
     this.run();
   }
-
+  
   get highCpuWorkerExists() {
     return this.data.find((conf) => conf.CPUReq === 'high');
   }

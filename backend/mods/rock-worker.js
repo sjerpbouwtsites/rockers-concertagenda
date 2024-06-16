@@ -26,6 +26,15 @@ export default class RockWorker extends Worker {
     }));
   }
 
+  end() {
+    setTimeout(() => {
+      this.postMessage(JSON.stringify({
+        type: 'process',
+        subtype: 'command-die',
+      }));
+    }, 3000);
+  }
+
   /**
  * @param {Worker} thisWorker instantiated worker with path etc
  */
@@ -46,26 +55,45 @@ export default class RockWorker extends Worker {
       }
 
       // BOODSCHAPPEN VOOR DB
+      // hier praat de worker/scraper, via zijn wrapper rock-worker.js
+      // met de artist-db die in de statische functie als referentie binnenkwam
+
+      // 1.scraper praat rock-worker hoort
       if (parsedMessage.type === 'db-request') {
-        const artistRes = ArtistInst.do({
+        // 2. geeft door aan DB en DB geeft 
+        // meteen antwoord want is geen async functie
+        ArtistInst.do({
           request: parsedMessage?.subtype,
           data: parsedMessage.messageData,
+        }).then((artistRes) => {
+          let par;
+          try {
+            par = JSON.parse(artistRes);
+          } catch (error) {
+            console.log('db message fucked');
+            console.log(parsedMessage);
+            console.log(artistRes);
+            throw error;
+          }
+          // 2.5 hier heb je een zooitje van gemaakt
+          // 3. rock-worker wrapper praat terug naar worker-scraper
+          // met antwoord van DB
+
+          if (parsedMessage?.success === 'error') {
+            console.log('error message uit db!');
+            console.log(parsedMessage);
+          }
+
+          thisWorker.postMessage(JSON.stringify({
+            type: 'db-answer',
+            subtype: parsedMessage?.subtype,
+            messageData: par,
+          })); 
+        }).catch((err) => {
+          console.log(`artistInst.do error`);
+          console.log(err);
         });
-        let par;
-        try {
-          par = JSON.parse(artistRes);
-        } catch (error) {
-          console.log('db message fucked');
-          console.log(parsedMessage);
-          console.log(artistRes);
-          throw error;
-        }
-        
-        thisWorker.postMessage(JSON.stringify({
-          type: 'db-answer',
-          subtype: parsedMessage?.subtype,
-          messageData: par,
-        }));        
+       
         return;
       }
 

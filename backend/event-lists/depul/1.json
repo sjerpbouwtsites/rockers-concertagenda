@@ -1,50 +1,52 @@
 [
   {
     "door": null,
-    "start": "2023-12-22T20:30:00",
-    "venueEventUrl": "https://www.livepul.com/agenda/heidevolk/",
-    "title": "Heidevolk (NL)",
+    "start": "2024-06-08T20:00:00",
+    "venueEventUrl": "https://www.livepul.com/agenda/vicious-rumors-1/",
+    "title": "Vicious Rumors (USA)",
     "location": "depul",
-    "price": 24,
-    "shortText": "Nederlandstalige folk- en vikingmetal",
-    "longText": "../public/texts/depul/LmxpdmVwdWwuY29tL2FnZW5kYS9oZWlkZXZvbGsv.html",
-    "image": "../public/event-images/depul/LmxpdmVwdWwuY29tL2FnZW5kYS9oZWlkZXZvbGsv",
-    "soldOut": false
+    "price": 19,
+    "shortText": "Oldskool powermetalband",
+    "longText": "../public/texts/depul/bC5jb20vYWdlbmRhL3ZpY2lvdXMtcnVtb3JzLTEv.html",
+    "image": "../public/event-images/depul/bC5jb20vYWdlbmRhL3ZpY2lvdXMtcnVtb3JzLTEv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "start": "2024-11-16T20:15:00",
+    "venueEventUrl": "https://www.livepul.com/agenda/rhapsody-of-fire/",
+    "title": "Rhapsody of Fire (IT)",
+    "location": "depul",
+    "price": 16,
+    "shortText": "Symfonische powermetal giganten",
+    "longText": "../public/texts/depul/bC5jb20vYWdlbmRhL3JoYXBzb2R5LW9mLWZpcmUv.html",
+    "image": "../public/event-images/depul/bC5jb20vYWdlbmRhL3JoYXBzb2R5LW9mLWZpcmUv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": null
   },
   {
     "door": null,
-    "start": "2024-02-24T19:30:00",
-    "venueEventUrl": "https://www.livepul.com/agenda/serenity/",
-    "title": "Serenity (AT)",
+    "start": "2024-12-20T20:30:00",
+    "venueEventUrl": "https://www.livepul.com/agenda/doodseskader/",
+    "title": "Doodseskader (BE)",
     "location": "depul",
-    "price": 25,
-    "shortText": "Package met liefst vier symfo gothic-metalbands",
-    "longText": "../public/texts/depul/dy5saXZlcHVsLmNvbS9hZ2VuZGEvc2VyZW5pdHkv.html",
-    "image": "../public/event-images/depul/dy5saXZlcHVsLmNvbS9hZ2VuZGEvc2VyZW5pdHkv",
-    "soldOut": false
-  },
-  {
-    "door": null,
-    "start": "2024-03-03T15:30:00",
-    "venueEventUrl": "https://www.livepul.com/agenda/suicide-angels/",
-    "title": "Suicidal Angels (GR)",
-    "location": "depul",
-    "price": 20,
-    "shortText": "Thrashmetal matinee op zondag",
-    "longText": "../public/texts/depul/cHVsLmNvbS9hZ2VuZGEvc3VpY2lkZS1hbmdlbHMv.html",
-    "image": "../public/event-images/depul/cHVsLmNvbS9hZ2VuZGEvc3VpY2lkZS1hbmdlbHMv",
-    "soldOut": false
-  },
-  {
-    "door": null,
-    "start": "2024-10-12T20:00:00",
-    "venueEventUrl": "https://www.livepul.com/agenda/yandt/",
-    "title": "Y&t (usa)",
-    "location": "depul",
-    "price": 12,
-    "shortText": "The band's 50-year anniversary (1974-2024)",
-    "longText": "../public/texts/depul/L3d3dy5saXZlcHVsLmNvbS9hZ2VuZGEveWFuZHQv.html",
-    "image": "../public/event-images/depul/L3d3dy5saXZlcHVsLmNvbS9hZ2VuZGEveWFuZHQv",
-    "soldOut": false
+    "price": 17.5,
+    "shortText": "Tweemansband combineert heavy metal, hardcore punk, 90’s grunge en rauwe hiphop",
+    "longText": "../public/texts/depul/dmVwdWwuY29tL2FnZW5kYS9kb29kc2Vza2FkZXIv.html",
+    "image": "../public/event-images/depul/dmVwdWwuY29tL2FnZW5kYS9kb29kc2Vza2FkZXIv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "doodseskader": {
+        "s": "3NFvorn4wvIOqrDLJbXroK",
+        "l": "Belgium",
+        "g": [
+          "sludgecore",
+          "experimental sludge/post-metal"
+        ]
+      }
+    }
   }
 ]

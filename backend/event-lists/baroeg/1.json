@@ -1,57 +1,106 @@
 [
   {
-    "start": "2023-12-14T19:00:00",
-    "venueEventUrl": "https://baroeg.nl/productie/rock-central-showcase-7/",
-    "title": "Rock Central Showcase: Fatigue ",
+    "start": "2024-07-02T19:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-maassilo-vader-bio-cancer-warside/",
+    "title": "Baroeg On Tour @Maassilo: Vader ",
     "location": "baroeg",
-    "price": 0,
-    "shortText": " Red Night   Fade To Black   Wendigo   Sister Morphine Een samenwerking tussen de SKVR en Baroeg.rock central showcase",
-    "longText": "../public/texts/baroeg/dWN0aWUvcm9jay1jZW50cmFsLXNob3djYXNlLTcv.html",
-    "image": "../public/event-images/baroeg/dWN0aWUvcm9jay1jZW50cmFsLXNob3djYXNlLTcv",
-    "soldOut": false
+    "price": 26,
+    "shortText": " Bio-Cancer  +  Warside 20e keer dat Vader op een door Baroeg georganiseerd evenement staat.",
+    "longText": "../public/texts/baroeg/c2lsby12YWRlci1iaW8tY2FuY2VyLXdhcnNpZGUv.html",
+    "image": "../public/event-images/baroeg/c2lsby12YWRlci1iaW8tY2FuY2VyLXdhcnNpZGUv",
+    "soldOut": false,
+    "eventGenres": [
+      "death metal",
+      "thrash metal"
+    ],
+    "artists": {
+      "vader": {
+        "s": "2s5DSt9VBNzAn2TbtDHzFZ",
+        "l": "Poland",
+        "g": [
+          "black metal",
+          "brutal death metal",
+          "death metal",
+          "deathgrind",
+          "deathrash",
+          "melodic death metal",
+          "metal",
+          "polish death metal",
+          "polish metal",
+          "polish thrash metal",
+          "speed metal",
+          "technical death metal",
+          "death/thrash metal",
+          "death metal",
+          "thrash metal"
+        ]
+      },
+      "bio-cancer": {
+        "s": "7N0YKBOylzJvN7PevzJg2G",
+        "l": "Greece",
+        "g": [
+          "crossover thrash",
+          "greek metal",
+          "new wave of thrash metal",
+          "thrash metal",
+          "death metal",
+          "thrash metal"
+        ]
+      },
+      "warside": {
+        "s": "0InPsKrw3SLGw9QfpsSsec",
+        "l": "Brazil",
+        "g": [
+          "heavy metal",
+          "death metal",
+          "thrash metal"
+        ]
+      }
+    }
   },
   {
-    "start": "2024-01-13T20:00:00",
-    "venueEventUrl": "https://baroeg.nl/productie/80s-more-dancenight-1984-simple-minds-tribute-curtis-in-baroeg/",
-    "title": "80’s & more! dancenight ",
+    "start": "2024-08-03T19:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-de-beuk-this-is-hell/",
+    "title": "Baroeg On Tour @De Beuk: This Is Hell",
     "location": "baroeg",
-    "price": 19,
-    "shortText": " 1984 simple minds tribute   curtis Nostalgische trip door de jaren 80.dance night,tribute",
-    "longText": "../public/texts/baroeg/aW5kcy10cmlidXRlLWN1cnRpcy1pbi1iYXJvZWcv.html",
-    "image": "../public/event-images/baroeg/aW5kcy10cmlidXRlLWN1cnRpcy1pbi1iYXJvZWcv",
-    "soldOut": false
+    "price": 14,
+    "shortText": "FFO: American Nightmare, VERSE, Ensign.",
+    "longText": "../public/texts/baroeg/LW9uLXRvdXItZGUtYmV1ay10aGlzLWlzLWhlbGwv.html",
+    "image": "../public/event-images/baroeg/LW9uLXRvdXItZGUtYmV1ay10aGlzLWlzLWhlbGwv",
+    "soldOut": false,
+    "eventGenres": [
+      "hardcore punk"
+    ],
+    "artists": null
   },
   {
-    "start": "2024-01-28T15:00:00",
-    "venueEventUrl": "https://baroeg.nl/productie/orphaned-land-azteca-ring-of-gyges-royal-rage/",
-    "title": "Orphaned Land ",
+    "start": "2024-10-05T19:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-de-beuk-sear-bliss-rivers-ablaze/",
+    "title": "Baroeg On Tour @De Beuk: Sear Bliss ",
     "location": "baroeg",
-    "price": 22.5,
-    "shortText": " Azteca   Ring Of Gyges   Royal Rage Uniek, zowel qua sound als de onderwerpen in hun teksten.metal,power metal,progressive,thrash,thrash metal",
-    "longText": "../public/texts/baroeg/dGVjYS1yaW5nLW9mLWd5Z2VzLXJveWFsLXJhZ2Uv.html",
-    "image": "../public/event-images/baroeg/dGVjYS1yaW5nLW9mLWd5Z2VzLXJveWFsLXJhZ2Uv",
-    "soldOut": false
+    "price": 14,
+    "shortText": " Rivers Ablaze Black metal met koperblazers.",
+    "longText": "../public/texts/baroeg/YmV1ay1zZWFyLWJsaXNzLXJpdmVycy1hYmxhemUv.html",
+    "image": "../public/event-images/baroeg/YmV1ay1zZWFyLWJsaXNzLXJpdmVycy1hYmxhemUv",
+    "soldOut": false,
+    "eventGenres": [
+      "black"
+    ],
+    "artists": null
   },
   {
-    "start": "2024-03-09T21:00:00",
-    "venueEventUrl": "https://baroeg.nl/productie/unhinged-burlesque-for-the-wild-at-heart/",
-    "title": "Unhinged: Burlesque For The Wild At Heart",
+    "start": "2024-11-30T19:30:00",
+    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-soundville-wavefest-presents-vision-video/",
+    "title": "Baroeg On Tour @SoundVille: Wavefest presents: Vision Video ",
     "location": "baroeg",
-    "price": 18.5,
-    "shortText": "Unhinged brengt een speciale en unieke Burlesque show naar Baroeg.burlesque",
-    "longText": "../public/texts/baroeg/cmxlc3F1ZS1mb3ItdGhlLXdpbGQtYXQtaGVhcnQv.html",
-    "image": "../public/event-images/baroeg/cmxlc3F1ZS1mb3ItdGhlLXdpbGQtYXQtaGVhcnQv",
-    "soldOut": false
-  },
-  {
-    "start": "2024-03-31T14:00:00",
-    "venueEventUrl": "https://baroeg.nl/productie/16318/",
-    "title": "Festerfest: Plusminus ",
-    "location": "baroeg",
-    "price": 11,
-    "shortText": " Phlebotomized   Insurrection   Mouser   NOCX   Red Eyed Machine Annual fest to crush the boundaries between different forms of underground music.avantgarde death,industrial cyber techno,melodic death/thrash,punkrock,rockcovers,synthwave",
-    "longText": "../public/texts/baroeg/czovL2Jhcm9lZy5ubC9wcm9kdWN0aWUvMTYzMTgv.html",
-    "image": "../public/event-images/baroeg/czovL2Jhcm9lZy5ubC9wcm9kdWN0aWUvMTYzMTgv",
-    "soldOut": false
+    "price": 14,
+    "shortText": " Lifeless Past Creëert een verfrissend en modern geluid binnen het postpunk genre.",
+    "longText": "../public/texts/baroeg/YXZlZmVzdC1wcmVzZW50cy12aXNpb24tdmlkZW8v.html",
+    "image": "../public/event-images/baroeg/YXZlZmVzdC1wcmVzZW50cy12aXNpb24tdmlkZW8v",
+    "soldOut": false,
+    "eventGenres": [
+      "post-punk"
+    ],
+    "artists": null
   }
 ]

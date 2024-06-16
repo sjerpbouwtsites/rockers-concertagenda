@@ -119,15 +119,15 @@ export default class WorkerStatus {
   }
 
   static get OSHasMinimalSpace() {
-    return WorkerStatus.CPUFree > 17;
+    return WorkerStatus.CPUFree > 35;
   }
 
   static get OSHasSpace() {
-    return WorkerStatus.CPUFree > 30;
+    return WorkerStatus.CPUFree > 50;
   }
 
   static get OSHasALotOfSpace() {
-    return WorkerStatus.CPUFree > 50;
+    return WorkerStatus.CPUFree > 66;
   }
 
   // @TODO CREEER: tbv niet één familie meerdere tegelijk
@@ -146,7 +146,12 @@ export default class WorkerStatus {
     if (statusses.includes('done')) {
       thisWorker.status = 'done';
       thisWorker.todo = 0;
-      thisWorker.workerRef.unref();
+      // console.group('worker status change');
+      // console.log(thisWorker);
+      // console.log(typeof thisWorker);
+      // console.groupEnd();
+      thisWorker.workerRef.end();
+        
       WorkerStatus.completedWorkers += 1;
     }
 
@@ -240,8 +245,13 @@ export default class WorkerStatus {
   static checkIfAllDone() {
     const notDone = WorkerStatus.currentNotDone;
     if (notDone.length === 0) {
-      WorkerStatus.ArtistInst.persistNewRefusedAndRockArtists();
-      WorkerStatus.programEnd();
+      // TODO hier zou ergens iets gemeten moeten worden oid.
+      setTimeout(() => {
+        WorkerStatus.ArtistInst.persistNewRefusedAndRockArtists();
+      }, 1000);
+      setTimeout(() => {
+        WorkerStatus.programEnd();
+      }, 5000);
       return true;
     }
     return false;
@@ -358,13 +368,25 @@ export default class WorkerStatus {
       consolidatedLocations[loc].count += 1;
     });
 
+    console.group('worker status double events');
+    console.log('FUCKING HACK');
+    console.groupEnd();
+    const noDoubleEvents = consolidatedEvents.map((ev, index) => {
+      if (index === 0) return ev;
+      const laatste = consolidatedEvents[index - 1];
+      const laatsteNaamDatum = laatste.title + laatste.start;
+      const dezeNaamDatum = ev.title + ev.start;
+      if (laatsteNaamDatum === dezeNaamDatum) return false;
+      return ev;
+    }).filter((a) => a);
+
     fs.writeFileSync(
       fsDirections.eventsListJson,
-      JSON.stringify(consolidatedEvents, null, '  '),
+      JSON.stringify(noDoubleEvents, null, '  '),
       'utf-8',
     );
     // passMessageToMonitor(qwm.toConsole(consolidatedEvents), workerSignature);
-    console.log(`saved ${consolidatedEvents.length} events`);
+    console.log(`saved ${noDoubleEvents.length} events`);
 
     fs.copyFileSync(fsDirections.eventsListJson, fsDirections.eventsListPublicJson);
   }

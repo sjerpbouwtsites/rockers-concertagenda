@@ -1,93 +1,88 @@
 [
   {
-    "door": "2023-12-21T19:30:00",
-    "start": "2023-12-21T20:30:00",
-    "venueEventUrl": "https://metropool.nl/agenda/the-doors-alive-1/",
-    "title": "The Doors Alive",
+    "door": "2024-10-26T14:00:00",
+    "start": "2024-10-26T15:00:00",
+    "venueEventUrl": "https://metropool.nl/agenda/beerland-festival-2024/",
+    "title": "Beerland Festival",
     "location": "metropool",
-    "price": 31,
+    "price": 42.5,
     "shortText": "",
-    "longText": "../public/texts/metropool/bC5ubC9hZ2VuZGEvdGhlLWRvb3JzLWFsaXZlLTEv.html",
-    "image": "../public/event-images/metropool/bC5ubC9hZ2VuZGEvdGhlLWRvb3JzLWFsaXZlLTEv",
+    "longText": "../public/texts/metropool/YWdlbmRhL2JlZXJsYW5kLWZlc3RpdmFsLTIwMjQv.html",
+    "image": "../public/event-images/metropool/YWdlbmRhL2JlZXJsYW5kLWZlc3RpdmFsLTIwMjQv",
     "soldOut": false,
-    "unavailable": false
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
   },
   {
-    "door": "2024-01-26T19:00:00",
-    "start": "2024-01-26T19:30:00",
-    "venueEventUrl": "https://metropool.nl/agenda/vault-plus-the-black-fall-plus-xeno/",
-    "title": "Vault + The Black Fall + Xeno",
+    "door": "2024-11-08T19:30:00",
+    "start": "2024-11-08T20:00:00",
+    "venueEventUrl": "https://metropool.nl/agenda/draconian-enschede/",
+    "title": "Draconian",
     "location": "metropool",
-    "price": 15.5,
-    "shortText": "",
-    "longText": "../public/texts/metropool/cGx1cy10aGUtYmxhY2stZmFsbC1wbHVzLXhlbm8v.html",
-    "image": "../public/event-images/metropool/cGx1cy10aGUtYmxhY2stZmFsbC1wbHVzLXhlbm8v",
+    "price": 30.5,
+    "shortText": "Support: Nailed To Obscurity + Fragment Soul",
+    "longText": "../public/texts/metropool/Lm5sL2FnZW5kYS9kcmFjb25pYW4tZW5zY2hlZGUv.html",
+    "image": "../public/event-images/metropool/Lm5sL2FnZW5kYS9kcmFjb25pYW4tZW5zY2hlZGUv",
     "soldOut": false,
-    "unavailable": false
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
   },
   {
-    "door": "2024-02-14T20:00:00",
-    "start": "2024-02-14T20:30:00",
-    "venueEventUrl": "https://metropool.nl/agenda/mercenary-plus-hatesphere/",
-    "title": "Mercenary & HateSphere",
+    "door": "2024-11-27T19:00:00",
+    "start": "2024-11-27T20:00:00",
+    "venueEventUrl": "https://metropool.nl/agenda/gorgoroth/",
+    "title": "Gorgoroth",
     "location": "metropool",
-    "price": 25,
-    "shortText": "",
-    "longText": "../public/texts/metropool/bmRhL21lcmNlbmFyeS1wbHVzLWhhdGVzcGhlcmUv.html",
-    "image": "../public/event-images/metropool/bmRhL21lcmNlbmFyeS1wbHVzLWhhdGVzcGhlcmUv",
+    "price": 30.5,
+    "shortText": "Support: Mortiis + Hats Barn + Aran Angmar",
+    "longText": "../public/texts/metropool/bWV0cm9wb29sLm5sL2FnZW5kYS9nb3Jnb3JvdGgv.html",
+    "image": "../public/event-images/metropool/bWV0cm9wb29sLm5sL2FnZW5kYS9nb3Jnb3JvdGgv",
     "soldOut": false,
-    "unavailable": false
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "gorgoroth": {
+        "s": "1Dt7cfRzxM8qPVa82jX9y5",
+        "l": "gorgoroth",
+        "g": [
+          "black metal",
+          "metal",
+          "norwegian black metal",
+          "norwegian metal",
+          "tolkien metal"
+        ]
+      }
+    }
   },
   {
-    "door": "2024-02-22T18:30:00",
-    "start": "2024-02-22T19:00:00",
-    "venueEventUrl": "https://metropool.nl/agenda/serenity-22-feb/",
-    "title": "Serenity",
+    "door": "2024-12-04T19:30:00",
+    "start": "2024-12-04T20:30:00",
+    "venueEventUrl": "https://metropool.nl/agenda/ian-paice-feat-purpendicular/",
+    "title": "Ian Paice feat. Purpendicular",
     "location": "metropool",
-    "price": 27.5,
+    "price": 41,
     "shortText": "",
-    "longText": "../public/texts/metropool/b29sLm5sL2FnZW5kYS9zZXJlbml0eS0yMi1mZWIv.html",
-    "image": "../public/event-images/metropool/b29sLm5sL2FnZW5kYS9zZXJlbml0eS0yMi1mZWIv",
+    "longText": "../public/texts/metropool/L2lhbi1wYWljZS1mZWF0LXB1cnBlbmRpY3VsYXIv.html",
+    "image": "../public/event-images/metropool/L2lhbi1wYWljZS1mZWF0LXB1cnBlbmRpY3VsYXIv",
     "soldOut": false,
-    "unavailable": false
-  },
-  {
-    "door": "2024-03-07T19:30:00",
-    "start": "2024-03-07T20:30:00",
-    "venueEventUrl": "https://metropool.nl/agenda/saga-enschede/",
-    "title": "Saga",
-    "location": "metropool",
-    "price": 44,
-    "shortText": "",
-    "longText": "../public/texts/metropool/b3Bvb2wubmwvYWdlbmRhL3NhZ2EtZW5zY2hlZGUv.html",
-    "image": "../public/event-images/metropool/b3Bvb2wubmwvYWdlbmRhL3NhZ2EtZW5zY2hlZGUv",
-    "soldOut": false,
-    "unavailable": false
-  },
-  {
-    "door": "2024-03-22T18:30:00",
-    "start": "2024-03-22T19:00:00",
-    "venueEventUrl": "https://metropool.nl/agenda/carnifex/",
-    "title": "Carnifex",
-    "location": "metropool",
-    "price": 28.5,
-    "shortText": "Support: REVOCATION + ABORTED + VEXED",
-    "longText": "../public/texts/metropool/L21ldHJvcG9vbC5ubC9hZ2VuZGEvY2FybmlmZXgv.html",
-    "image": "../public/event-images/metropool/L21ldHJvcG9vbC5ubC9hZ2VuZGEvY2FybmlmZXgv",
-    "soldOut": false,
-    "unavailable": false
-  },
-  {
-    "door": "2024-05-16T19:30:00",
-    "start": "2024-05-16T20:30:00",
-    "venueEventUrl": "https://metropool.nl/agenda/limehouse-lizzy/",
-    "title": "Limehouse Lizzy",
-    "location": "metropool",
-    "price": 31,
-    "shortText": "",
-    "longText": "../public/texts/metropool/b29sLm5sL2FnZW5kYS9saW1laG91c2UtbGl6enkv.html",
-    "image": "../public/event-images/metropool/b29sLm5sL2FnZW5kYS9saW1laG91c2UtbGl6enkv",
-    "soldOut": false,
-    "unavailable": false
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "ian paice": {
+        "s": "2gNdXbhyIbXHWvurrlrUAq",
+        "l": "ian%20paice",
+        "g": [
+          "rock drums",
+          "heavy metal"
+        ]
+      },
+      "purpendicular": {
+        "s": "7dtYKVbh2QXKICAzbxtrkF",
+        "l": "purpendicular",
+        "g": []
+      }
+    }
   }
 ]

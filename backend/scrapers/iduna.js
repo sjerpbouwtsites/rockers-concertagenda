@@ -3,9 +3,14 @@ import { workerData } from 'worker_threads';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/iduna.js';
 import getImage from './gedeeld/image.js';
-import terms from './gedeeld/terms.js';
+import {
+  mapToStartDate,
+  mapToShortDate,
+} from './gedeeld/datums.js';
+import workTitleAndSlug from './gedeeld/slug.js';
+import terms from '../artist-db/store/terms.js';
 
-// #region [rgba(0, 60, 0, 0.1)]       SCRAPER CONFIG
+// #region        SCRAPER CONFIG
 const scraper = new AbstractScraper({
   workerData: { ...workerData },
   mainPage: {
@@ -16,11 +21,18 @@ const scraper = new AbstractScraper({
     timeout: 20000,
   },
   app: {
+    harvest: {
+      dividers: [`+`, `•`],
+      dividerRex: "[\\+•]",
+      artistsIn: ['title', 'shortText'],
+    },     
     mainPage: {
       requiredProperties: ['venueEventUrl', 'title'],
+      asyncCheckFuncs: ['refused', 'allowedEvent', 'forbiddenTerms', 'hasGoodTerms', 'hasAllowedArtist'],
     },
     singlePage: {
       requiredProperties: ['venueEventUrl', 'title', 'price', 'start'],
+      asyncCheckFuncs: ['success'],
     },
   },
 });
@@ -28,144 +40,7 @@ const scraper = new AbstractScraper({
 
 scraper.listenToMasterThread();
 
-// #region [rgba(60, 0, 0, 0.5)]      MAIN PAGE EVENT CHECK
-scraper.mainPageAsyncCheck = async function (event) {
-  const reasons = [];
-
-  this.talkToDB({
-    type: 'db-request',
-    subtype: 'isAllowed',
-    messageData: {
-      string: event.title,
-    },
-  });
-  await this.checkDBhasAnswered();
-  reasons.push(this.lastDBAnswer.reason);
-  if (this.lastDBAnswer.success) {
-    this.skipFurtherChecks.push(event.title);
-    return {
-      event,
-      reason: reasons.reverse().join(','),
-      success: true,
-    };
-  }
-
-  this.talkToDB({
-    type: 'db-request',
-    subtype: 'isRockEvent',
-    messageData: {
-      string: event.title,
-    },
-  });
-  await this.checkDBhasAnswered();
-  reasons.push(this.lastDBAnswer.reason);
-  if (this.lastDBAnswer.success) {
-    this.talkToDB({
-      type: 'db-request',
-      subtype: 'saveAllowedTitle',
-      messageData: {
-        string: event.title,
-        reason: reasons.reverse().join(', '),
-      },
-    }); 
-    this.skipFurtherChecks.push(event.title);
-    return {
-      event,
-      reason: reasons.reverse().join(','),
-      success: true,
-    };
-  }  
-  
-  this.talkToDB({
-    type: 'db-request',
-    subtype: 'isRefused',
-    messageData: {
-      string: event.title,
-    },
-  });
-  await this.checkDBhasAnswered();
-  reasons.push(this.lastDBAnswer.reason);
-  if (this.lastDBAnswer.success) {
-    return {
-      event,
-      reason: reasons.reverse().join(','),
-      success: false,
-    };
-  }
-
-  return {
-    event,
-    reason: reasons.reverse().join(', '),
-    success: true,
-  };
-};
-// #endregion                          MAIN PAGE EVENT CHECK
-
-// #region [rgba(0, 60, 0, 0.5)]      SINGLE PAGE EVENT CHECK
-scraper.singlePageAsyncCheck = async function (event) {
-  const reasons = [];
-  
-  if (this.skipFurtherChecks.includes(event.title)) {
-    reasons.push("allready check main");
-    return {
-      event,
-      reason: reasons.reverse().join(','),
-      success: true,
-    };    
-  }
-
-  const goodTermsRes = await this.hasGoodTerms(event);
-  reasons.push(goodTermsRes.reason);
-  if (goodTermsRes.success) {
-    this.skipFurtherChecks.push(event.title);
-    this.talkToDB({
-      type: 'db-request',
-      subtype: 'saveAllowedTitle',
-      messageData: {
-        string: event.title,
-        reason: reasons.reverse().join(', '),
-      },
-    });  
-    return goodTermsRes;
-  }  
-
-  const hasForbiddenTerms = await this.hasForbiddenTerms(event);
-  reasons.push(hasForbiddenTerms.reason);
-  if (hasForbiddenTerms.success) {
-    this.talkToDB({
-      type: 'db-request',
-      subtype: 'saveRefusedTitle',
-      messageData: {
-        string: event.title,
-        reason: reasons.reverse().join(', '),
-      },
-    });    
-    
-    return {
-      event,
-      reason: reasons.reverse().join(','),
-      success: false,
-    };
-  }
-  
-  this.talkToDB({
-    type: 'db-request',
-    subtype: 'saveAllowedTitle',
-    messageData: {
-      string: event.title,
-      reason: reasons.reverse().join(', '),
-    },
-  }); 
-  
-  return {
-    event,
-    success: true,
-    reason: reasons.reverse().join(', '),
-  };
-};
-// #endregion                          SINGLE PAGE EVENT CHECK
-
-// #region [rgba(0, 240, 0, 0.1)]      MAIN PAGE
+// #region       MAIN PAGE
 scraper.mainPage = async function () {
   const availableBaseEvents = await this.checkBaseEventAvailable(workerData.family);
   if (availableBaseEvents) {
@@ -186,6 +61,7 @@ scraper.mainPage = async function () {
           venueEventUrl,
           errors: [],
         };
+        res.mapToStartDate = rawEvent.querySelector('.card-footer > div:last-child')?.textContent.trim().toLowerCase() ?? '';
         res.shortText = rawEvent.querySelector('.card-subtitle')?.textContent ?? null;
         res.soldOut = Array.isArray(rawEvent.textContent.match(/uitverkocht|sold\sout/i));
         const uaRex = new RegExp(unavailabiltyTerms.join('|'), 'gi');
@@ -195,7 +71,11 @@ scraper.mainPage = async function () {
       return events;
     }, { workerData, unavailabiltyTerms: terms.unavailability });
   
-  rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
+  rawEvents = rawEvents
+    .map((event) => mapToStartDate(event, 'dag-maandNaam', this.months))
+    .map(mapToShortDate)
+    .map(this.isMusicEventCorruptedMapper)
+    .map((re) => workTitleAndSlug(re, this._s.app.harvest.possiblePrefix));
 
   const eventGen = this.eventGenerator(rawEvents);
   // eslint-disable-next-line no-unused-vars
@@ -214,37 +94,39 @@ scraper.mainPage = async function () {
 };
 // #endregion                          MAIN PAGE
 
-// #region [rgba(120, 0, 0, 0.1)]     SINGLE PAGE
+// #region      SINGLE PAGE
 scraper.singlePage = async function ({ page, event }) {
   const { stopFunctie } = await this.singlePageStart();
 
   const pageInfo = await page.evaluate(
     // eslint-disable-next-line no-shadow
-    ({ months, event }) => {
+    ({ event }) => {
       const res = {
         anker: `<a class='page-info' href='${document.location.href}'>${event.title}</a>`,
         errors: [],
       };
 
-      const startDateMatch =
-        document
-          .querySelector('#code_block-154-7')
-          ?.textContent.match(/(\d+)\s+(\w+)\s+(\d\d\d\d)/) ?? null;
-      if (startDateMatch && Array.isArray(startDateMatch) && startDateMatch.length > 3) {
-        const dag = startDateMatch[1].padStart(2, '0');
-        res.startDate = `${startDateMatch[3]}-${months[startDateMatch[2]]}-${dag}`;
-      }
-      if (!res.startDate) {
-        res.errors.push({
-          error: new Error(`geen startDate`),
-          remarks: `geen startdate ${res.anker}`,
-          toDebug: {
-            event,
-            text: document.querySelector('#code_block-154-7')?.textContent ?? 'geen code block met #code_block-154-7',
-          },
-        });
-        return res;
-      }
+      res.startDate = event.startDate;
+
+      // const startDateMatch =
+      //   document
+      //     .querySelector('#code_block-154-7')
+      //     ?.textContent.match(/(\d+)\s+(\w+)\s+(\d\d\d\d)/) ?? null;
+      // if (startDateMatch && Array.isArray(startDateMatch) && startDateMatch.length > 3) {
+      //   const dag = startDateMatch[1].padStart(2, '0');
+      //   res.startDate = `${startDateMatch[3]}-${months[startDateMatch[2]]}-${dag}`;
+      // }
+      // if (!res.startDate) {
+      //   res.errors.push({
+      //     error: new Error(`geen startDate`),
+      //     remarks: `geen startdate ${res.anker}`,
+      //     toDebug: {
+      //       event,
+      //       text: document.querySelector('#code_block-154-7')?.textContent ?? 'geen code block met #code_block-154-7',
+      //     },
+      //   });
+      //   return res;
+      // }
 
       const tijdenEl = document.getElementById('code_block-92-7');
       if (!tijdenEl) {
@@ -278,7 +160,7 @@ scraper.singlePage = async function ({ page, event }) {
       }
       
       return res;
-    }, { months: this.months, event },
+    }, { event },
   );
 
   const imageRes = await getImage({

@@ -1,80 +1,96 @@
 [
   {
-    "door": "2023-11-23T19:00:00Z",
-    "start": "2023-11-23T20:30:00Z",
-    "venueEventUrl": "https://p60.nl/radar-nov",
-    "title": "Bazes & yellowgreen",
+    "door": "2024-06-15T18:00:00Z",
+    "start": "2024-06-15T20:30:00Z",
+    "venueEventUrl": "https://p60.nl/2024/kamijo",
+    "title": "Kamijo",
     "location": "p60",
-    "price": 6.508,
-    "shortText": "@ P60'S RADAR",
-    "longText": "../public/texts/p60/aHR0cHM6Ly9wNjAubmwvcmFkYXItbm92.html",
-    "image": "../public/event-images/p60/aHR0cHM6Ly9wNjAubmwvcmFkYXItbm92",
+    "price": 15,
+    "shortText": "EUROPE TOUR 2024",
+    "longText": "../public/texts/p60/aHR0cHM6Ly9wNjAubmwvMjAyNC9rYW1pam8=.html",
+    "image": "../public/event-images/p60/aHR0cHM6Ly9wNjAubmwvMjAyNC9rYW1pam8=",
     "soldOut": false,
-    "unavailable": false
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
   },
   {
-    "door": "2023-12-07T19:00:00Z",
-    "start": "2023-12-07T20:30:00Z",
-    "venueEventUrl": "https://p60.nl/radar-dec",
-    "title": "P60's radar",
+    "door": "2024-06-27T18:00:00Z",
+    "start": "2024-06-27T20:30:00Z",
+    "venueEventUrl": "https://p60.nl/2024/radar-jun",
+    "title": "Yellowgreen, Bazes, KASETO & The Kruuk",
     "location": "p60",
     "price": 6.508,
-    "shortText": "BACON BISCUIT, HET VERBONDT, LIFEBLOOD, MERAKI & SIXTY-P",
-    "longText": "../public/texts/p60/aHR0cHM6Ly9wNjAubmwvcmFkYXItZGVj.html",
-    "image": "../public/event-images/p60/aHR0cHM6Ly9wNjAubmwvcmFkYXItZGVj",
+    "shortText": "IN P60'S RADAR XL",
+    "longText": "../public/texts/p60/aHR0cHM6Ly9wNjAubmwvMjAyNC9yYWRhci1qdW4=.html",
+    "image": "../public/event-images/p60/aHR0cHM6Ly9wNjAubmwvMjAyNC9yYWRhci1qdW4=",
     "soldOut": false,
-    "unavailable": false
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "bazes": {
+        "s": null,
+        "l": "bazes",
+        "g": []
+      },
+      "yellowgreen": {
+        "s": null,
+        "l": "yellowgreen",
+        "g": []
+      },
+      "p60's radar": {
+        "s": null,
+        "l": "p60's%20radar",
+        "g": []
+      }
+    }
   },
   {
-    "door": "2023-12-15T19:00:00Z",
-    "start": "2023-12-15T21:00:00Z",
-    "venueEventUrl": "https://p60.nl/ronnie-james-dio",
-    "title": "Ronnie James Dio - The Memorial Concert",
+    "door": "2024-08-16T18:00:00Z",
+    "start": "2024-08-16T20:00:00Z",
+    "venueEventUrl": "https://p60.nl/2024/ignite",
+    "title": "Ignite",
+    "location": "p60",
+    "price": 19.502,
+    "shortText": "SUPPORT: CURSELIFTER & SWELL",
+    "longText": "../public/texts/p60/aHR0cHM6Ly9wNjAubmwvMjAyNC9pZ25pdGU=.html",
+    "image": "../public/event-images/p60/aHR0cHM6Ly9wNjAubmwvMjAyNC9pZ25pdGU=",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "swell": {
+        "s": null,
+        "l": "swell",
+        "g": []
+      }
+    }
+  },
+  {
+    "door": "2024-09-04T17:00:00Z",
+    "start": "2024-09-04T19:15:00Z",
+    "venueEventUrl": "https://p60.nl/2024/nile",
+    "title": "Nile",
     "location": "p60",
     "price": 22.5023,
-    "shortText": "MET DE TOP VAN NEDERLANDSE HARDROCK EN METAL",
-    "longText": "../public/texts/p60/dHRwczovL3A2MC5ubC9yb25uaWUtamFtZXMtZGlv.html",
-    "image": "../public/event-images/p60/dHRwczovL3A2MC5ubC9yb25uaWUtamFtZXMtZGlv",
+    "shortText": "+ HIDEOUS DIVINTY, INTREPID & PESTIFER",
+    "longText": "../public/texts/p60/aHR0cHM6Ly9wNjAubmwvMjAyNC9uaWxl.html",
+    "image": "../public/event-images/p60/aHR0cHM6Ly9wNjAubmwvMjAyNC9uaWxl",
     "soldOut": false,
-    "unavailable": false
-  },
-  {
-    "door": "2024-01-13T19:00:00Z",
-    "start": "2024-01-13T21:00:00Z",
-    "venueEventUrl": "https://p60.nl/prof-nomad-sessions",
-    "title": "Prof. Nomad Sessions",
-    "location": "p60",
-    "price": 17.502,
-    "shortText": "EEN DAVID BOWIE TRIBUTE",
-    "longText": "../public/texts/p60/czovL3A2MC5ubC9wcm9mLW5vbWFkLXNlc3Npb25z.html",
-    "image": "../public/event-images/p60/czovL3A2MC5ubC9wcm9mLW5vbWFkLXNlc3Npb25z",
-    "soldOut": false,
-    "unavailable": false
-  },
-  {
-    "door": "2024-01-19T19:00:00Z",
-    "start": "2024-01-19T21:00:00Z",
-    "venueEventUrl": "https://p60.nl/knight-of-the-guitar",
-    "title": "Knight Of The Guitar",
-    "location": "p60",
-    "price": 25.0026,
-    "shortText": "MEESTERS IN HUN EIGEN GENRES, MAAR OOK GRENSVERLEGGENDE ARTIESTEN",
-    "longText": "../public/texts/p60/Oi8vcDYwLm5sL2tuaWdodC1vZi10aGUtZ3VpdGFy.html",
-    "image": "../public/event-images/p60/Oi8vcDYwLm5sL2tuaWdodC1vZi10aGUtZ3VpdGFy",
-    "soldOut": false,
-    "unavailable": false
-  },
-  {
-    "door": "2024-01-20T19:00:00Z",
-    "start": "2024-01-20T20:30:00Z",
-    "venueEventUrl": "https://p60.nl/delain",
-    "title": "Delain",
-    "location": "p60",
-    "price": 27.5027,
-    "shortText": "MET HET ZEVENDE STUDIOALBUM DARK WATERS",
-    "longText": "../public/texts/p60/aHR0cHM6Ly9wNjAubmwvZGVsYWlu.html",
-    "image": "../public/event-images/p60/aHR0cHM6Ly9wNjAubmwvZGVsYWlu",
-    "soldOut": false,
-    "unavailable": false
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "hideous": {
+        "s": "4XOpU6j3NQ37JfIaWA4ySH",
+        "l": "hideous",
+        "g": [
+          "brutal death metal",
+          "deathgrind",
+          "italian death metal",
+          "technical brutal death metal",
+          "technical death metal"
+        ]
+      }
+    }
   }
 ]
