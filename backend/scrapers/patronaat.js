@@ -3,7 +3,12 @@ import { workerData } from 'worker_threads';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/patronaat.js';
 import getImage from './gedeeld/image.js';
-import terms from './gedeeld/terms.js';
+import {
+  mapToStartDate,
+  mapToShortDate,
+} from './gedeeld/datums.js';
+import workTitleAndSlug from './gedeeld/slug.js';
+import terms from '../artist-db/store/terms.js';
 
 // #region        SCRAPER CONFIG
 const scraper = new AbstractScraper({
@@ -11,18 +16,24 @@ const scraper = new AbstractScraper({
 
   mainPage: {
     timeout: 30034,
-    url: 'https://patronaat.nl/programma/?type=event&s=&eventtype%5B%5D=178',
+    url: 'https://patronaat.nl/programma/?type=event&s=&eventtype%5B%5D=197',
   },
   singlePage: {
     timeout: 20036,
   },
   app: {
+    harvest: {
+      dividers: [`+`],
+      dividerRex: "[\\+]",
+      artistsIn: ['title'],
+    },  
     mainPage: {
       requiredProperties: ['venueEventUrl', 'title'],
-      asyncCheckFuncs: ['allowed', 'event', 'refused', 'goodTerms', 'forbiddenTerms', 'isRock', 'saveRefused', 'emptyFailure'],
+      asyncCheckFuncs: ['refused', 'allowedEvent', 'forbiddenTerms', 'hasGoodTerms', 'hasAllowedArtist', 'spotifyConfirmation', 'failure'],
     },
     singlePage: {
       requiredProperties: ['venueEventUrl', 'title', 'start'],
+      asyncCheckFuncs: ['success'],
     },
   },
 });
@@ -55,14 +66,20 @@ scraper.mainPage = async function () {
 
         res.venueEventUrl = eventEl.querySelector('a[href]')?.href ?? null;
         res.shortText = eventEl.querySelector('.event-program__subtitle')?.textContent.trim() ?? '';
+        res.mapToStartDate = eventEl.querySelector('.event-program__date').textContent.trim().toLowerCase() ?? '';
         const uaRex = new RegExp(unavailabiltyTerms.join('|'), 'gi');
         res.unavailable = !!eventEl.textContent.match(uaRex);
         res.soldOut = !!(eventEl.querySelector('.event__tags-item--sold-out') ?? null);
+
         return res;
       }),
     { workerData, unavailabiltyTerms: terms.unavailability },
   );
-  rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
+  rawEvents = rawEvents
+    .map((event) => mapToStartDate(event, 'dag-maandNaam-jaar', this.months))
+    .map(mapToShortDate)
+    .map(this.isMusicEventCorruptedMapper)
+    .map((re) => workTitleAndSlug(re, this._s.app.harvest.possiblePrefix));
 
   const eventGen = this.eventGenerator(rawEvents);
   // eslint-disable-next-line no-unused-vars
@@ -95,16 +112,17 @@ scraper.singlePage = async function ({ page, event }) {
         };
 
         try {
-          res.startDatumM = document
-            .querySelector('.event__info-bar--star-date')
-            ?.textContent.toLowerCase()
-            .match(/(\d{1,2})\s+(\w{3,4})\s+(\d\d\d\d)/);
-          if (Array.isArray(res.startDatumM) && res.startDatumM.length >= 4) {
-            const day = res.startDatumM[1].padStart(2, '0');
-            const month = months[res.startDatumM[2]];
-            const year = res.startDatumM[3];
-            res.startDatum = `${year}-${month}-${day}`;
-          }
+          res.startDatum = event.startDate;
+          // res.startDatumM = document
+          //   .querySelector('.event__info-bar--star-date')
+          //   ?.textContent.toLowerCase()
+          //   .match(/(\d{1,2})\s+(\w{3,4})\s+(\d\d\d\d)/);
+          // if (Array.isArray(res.startDatumM) && res.startDatumM.length >= 4) {
+          //   const day = res.startDatumM[1].padStart(2, '0');
+          //   const month = months[res.startDatumM[2]];
+          //   const year = res.startDatumM[3];
+          //   res.startDatum = `${year}-${month}-${day}`;
+          // }
 
           if (res.startDatum) {
             [

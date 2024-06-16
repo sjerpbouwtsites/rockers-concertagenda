@@ -90,12 +90,12 @@ export const workerConfig = {
   // },
   // oosterpoort: { workerCount: 3, workerConcurrent: 1, forceSet: 5 },
   // p60: { workerCount: 1, workerConcurrent: 1, forceSet: 5 },
-  paradiso: {
-    workerCount: 1,
-    workerConcurrent: 2,
-    forceSet: 5,
-  },
-  // patronaat: { workerCount: 2, workerConcurrent: 2, forceSet: 6 },
+  // paradiso: {
+  //   workerCount: 4,
+  //   workerConcurrent: 2,
+  //   forceSet: 5,
+  // },
+  patronaat: { workerCount: 1, workerConcurrent: 2, forceSet: 6 },
   // tivolivredenburg: {
   //   workerCount: 2, workerConcurrent: 2, forceSet: 6, CPUReq: 'low', 
   // },
