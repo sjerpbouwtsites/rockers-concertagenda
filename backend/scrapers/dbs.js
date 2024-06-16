@@ -24,8 +24,8 @@ const dbsScraper = new AbstractScraper({
   },
   app: {
     harvest: {
-      // dividers: [`&`],
-      // dividerRex: "[&]", 
+      dividers: [`&`],
+      dividerRex: "[&]", 
       artistsIn: ['title', 'shortText'],
     },
     mainPage: {
@@ -34,8 +34,7 @@ const dbsScraper = new AbstractScraper({
     },
     singlePage: {
       requiredProperties: ['venueEventUrl', 'title', 'price', 'start'],
-      // asyncCheckFuncs: ['hasAllowedArtist', 'hasGoodTerms', 'forbiddenTerms', 'ifNotAllowedRefuse', 'saveAllowedEvent', 'harvestArtists'],
-      asyncCheckFuncs: ['hasAllowedArtist', 'hasGoodTerms', 'forbiddenTerms'],
+      asyncCheckFuncs: ['hasAllowedArtist', 'spotifyConfirmation', 'hasGoodTerms', 'forbiddenTerms', 'failure'],
     },
   },
 });
