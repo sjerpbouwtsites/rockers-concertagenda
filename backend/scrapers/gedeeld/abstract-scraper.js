@@ -216,7 +216,7 @@ export default class AbstractScraper extends ScraperConfig {
     await this.saveEvents();
     await this.announceToMonitorDone();
     
-    await this.waitTime(50);
+    await this.waitTime(250);
     process.exit();
   }
   // #endregion                                                 SCRAPE INIT & SCRAPE DIE

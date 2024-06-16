@@ -119,15 +119,15 @@ export default class WorkerStatus {
   }
 
   static get OSHasMinimalSpace() {
-    return WorkerStatus.CPUFree > 17;
-  }
-
-  static get OSHasSpace() {
     return WorkerStatus.CPUFree > 30;
   }
 
+  static get OSHasSpace() {
+    return WorkerStatus.CPUFree > 40;
+  }
+
   static get OSHasALotOfSpace() {
-    return WorkerStatus.CPUFree > 50;
+    return WorkerStatus.CPUFree > 60;
   }
 
   // @TODO CREEER: tbv niet één familie meerdere tegelijk
@@ -146,7 +146,12 @@ export default class WorkerStatus {
     if (statusses.includes('done')) {
       thisWorker.status = 'done';
       thisWorker.todo = 0;
-      thisWorker.workerRef.unref();
+      // console.group('worker status change');
+      // console.log(thisWorker);
+      // console.log(typeof thisWorker);
+      // console.groupEnd();
+      thisWorker.workerRef.end();
+        
       WorkerStatus.completedWorkers += 1;
     }
 

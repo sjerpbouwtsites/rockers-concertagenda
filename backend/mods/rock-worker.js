@@ -26,6 +26,15 @@ export default class RockWorker extends Worker {
     }));
   }
 
+  end() {
+    setTimeout(() => {
+      this.postMessage(JSON.stringify({
+        type: 'process',
+        subtype: 'command-die',
+      }));
+    }, 5000);
+  }
+
   /**
  * @param {Worker} thisWorker instantiated worker with path etc
  */

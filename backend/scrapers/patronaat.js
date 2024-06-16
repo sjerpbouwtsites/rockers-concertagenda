@@ -15,11 +15,11 @@ const scraper = new AbstractScraper({
   workerData: { ...workerData },
 
   mainPage: {
-    timeout: 30034,
+    timeout: 60034,
     url: 'https://patronaat.nl/programma/?type=event&s=&eventtype%5B%5D=197',
   },
   singlePage: {
-    timeout: 20036,
+    timeout: 45036,
   },
   app: {
     harvest: {
