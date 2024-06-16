@@ -1,42 +1,33 @@
 [
   {
-    "door": "2024-10-06T19:00:00",
-    "start": "2024-10-06T20:00:00",
-    "venueEventUrl": "https://metropool.nl/agenda/septicflesh/",
-    "title": "Septicflesh",
+    "door": "2024-10-26T14:00:00",
+    "start": "2024-10-26T15:00:00",
+    "venueEventUrl": "https://metropool.nl/agenda/beerland-festival-2024/",
+    "title": "Beerland Festival",
     "location": "metropool",
-    "price": 40,
-    "shortText": "Support: Oceans + Scar of the Sun",
-    "longText": "../public/texts/metropool/dHJvcG9vbC5ubC9hZ2VuZGEvc2VwdGljZmxlc2gv.html",
-    "image": "../public/event-images/metropool/dHJvcG9vbC5ubC9hZ2VuZGEvc2VwdGljZmxlc2gv",
+    "price": 42.5,
+    "shortText": "",
+    "longText": "../public/texts/metropool/YWdlbmRhL2JlZXJsYW5kLWZlc3RpdmFsLTIwMjQv.html",
+    "image": "../public/event-images/metropool/YWdlbmRhL2JlZXJsYW5kLWZlc3RpdmFsLTIwMjQv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": null
   },
   {
-    "door": "2024-11-01T19:30:00",
-    "start": "2024-11-01T20:30:00",
-    "venueEventUrl": "https://metropool.nl/agenda/the-dead-daisies-enschede/",
-    "title": "The Dead Daisies",
+    "door": "2024-11-08T19:30:00",
+    "start": "2024-11-08T20:00:00",
+    "venueEventUrl": "https://metropool.nl/agenda/draconian-enschede/",
+    "title": "Draconian",
     "location": "metropool",
-    "price": 41,
-    "shortText": "Support: Beasto Blanco + Mike Tramp",
-    "longText": "../public/texts/metropool/bmRhL3RoZS1kZWFkLWRhaXNpZXMtZW5zY2hlZGUv.html",
-    "image": "../public/event-images/metropool/bmRhL3RoZS1kZWFkLWRhaXNpZXMtZW5zY2hlZGUv",
+    "price": 30.5,
+    "shortText": "Support: Nailed To Obscurity + Fragment Soul",
+    "longText": "../public/texts/metropool/Lm5sL2FnZW5kYS9kcmFjb25pYW4tZW5zY2hlZGUv.html",
+    "image": "../public/event-images/metropool/Lm5sL2FnZW5kYS9kcmFjb25pYW4tZW5zY2hlZGUv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": {
-      "the dead daisies": {
-        "s": "6VDAPUov4yNDHyQlPqrpNH",
-        "l": "the%20dead%20daisies",
-        "g": [
-          "modern hard rock",
-          "nwocr"
-        ]
-      }
-    }
+    "artists": null
   },
   {
     "door": "2024-11-27T19:00:00",
@@ -62,6 +53,35 @@
           "norwegian metal",
           "tolkien metal"
         ]
+      }
+    }
+  },
+  {
+    "door": "2024-12-04T19:30:00",
+    "start": "2024-12-04T20:30:00",
+    "venueEventUrl": "https://metropool.nl/agenda/ian-paice-feat-purpendicular/",
+    "title": "Ian Paice feat. Purpendicular",
+    "location": "metropool",
+    "price": 41,
+    "shortText": "",
+    "longText": "../public/texts/metropool/L2lhbi1wYWljZS1mZWF0LXB1cnBlbmRpY3VsYXIv.html",
+    "image": "../public/event-images/metropool/L2lhbi1wYWljZS1mZWF0LXB1cnBlbmRpY3VsYXIv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "ian paice": {
+        "s": "2gNdXbhyIbXHWvurrlrUAq",
+        "l": "ian%20paice",
+        "g": [
+          "rock drums",
+          "heavy metal"
+        ]
+      },
+      "purpendicular": {
+        "s": "7dtYKVbh2QXKICAzbxtrkF",
+        "l": "purpendicular",
+        "g": []
       }
     }
   }

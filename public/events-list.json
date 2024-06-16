@@ -1,471 +1,2032 @@
 [
   {
-    "start": "2024-06-17T20:00:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/underoath-17-06-2024/",
-    "title": "Underoath",
-    "location": "melkweg",
-    "price": 31.65,
-    "shortText": "posthardcore · metalcore 'They're Only Chasing Safety' - 20th Anniversary tour",
-    "longText": "../public/texts/melkweg/bC9hZ2VuZGEvdW5kZXJvYXRoLTE3LTA2LTIwMjQv.html",
-    "image": "../public/event-images/melkweg/bC9hZ2VuZGEvdW5kZXJvYXRoLTE3LTA2LTIwMjQv",
+    "title": "Denim & Lightning Festival met The Dirty Denims, WildHeart, Small Jackets e.a.",
+    "start": "2024-06-16",
+    "eventLocationName": "ragnarok",
+    "shortText": "Ragnarok, Bree (België)",
+    "image": "../public/location-images/ragnarok",
+    "location": "ragnarok"
+  },
+  {
+    "title": "Denim & Lightning Festival met The Dirty Denims, WildHeart, Small Jackets e.a.",
+    "start": "2024-06-16",
+    "eventLocationName": "ragnarok",
+    "shortText": "Ragnarok, Bree (België)",
+    "image": "../public/location-images/ragnarok",
+    "location": "ragnarok"
+  },
+  {
+    "title": "Tom Morello",
+    "start": "2024-06-18",
+    "eventLocationName": "013",
+    "shortText": "013, Tilburg",
+    "image": "../public/location-images/013",
+    "location": "013"
+  },
+  {
+    "title": "Rammstein",
+    "start": "2024-06-18",
+    "eventLocationName": "goffertpark",
+    "shortText": "Goffertpark, Nijmegen",
+    "image": "../public/location-images/goffertpark",
+    "location": "goffertpark"
+  },
+  {
+    "title": "Dying Fetus, Sanguisugabogg en Changing Tides",
+    "start": "2024-06-18",
+    "eventLocationName": "de helling",
+    "shortText": "De Helling, Utrecht",
+    "image": "../public/location-images/dehelling",
+    "location": "dehelling"
+  },
+  {
+    "title": "Brand Of Sacrifice",
+    "start": "2024-06-18",
+    "eventLocationName": "perla palace",
+    "shortText": "Perla Palace, Utrecht",
+    "image": "../public/location-images/perlapalace",
+    "location": "perlapalace"
+  },
+  {
+    "title": "Brand Of Sacrifice",
+    "start": "2024-06-18",
+    "eventLocationName": "perla palace",
+    "shortText": "Perla Palace, Utrecht",
+    "image": "../public/location-images/perlapalace",
+    "location": "perlapalace"
+  },
+  {
+    "title": "Rammstein",
+    "start": "2024-06-19",
+    "eventLocationName": "goffertpark",
+    "shortText": "Goffertpark, Nijmegen",
+    "image": "../public/location-images/goffertpark",
+    "location": "goffertpark"
+  },
+  {
+    "title": "Five Finger Death Punch, Ice Nine Kills en Malevolence",
+    "start": "2024-06-19",
+    "eventLocationName": "afas live",
+    "shortText": "AFAS Live, Amsterdam",
+    "image": "../public/location-images/afaslive",
+    "location": "afaslive"
+  },
+  {
+    "title": "Copenhell",
+    "start": "2024-06-19",
+    "eventLocationName": "kopenhagen",
+    "shortText": "\nMet Dropkick Murphys, Machine Head e.v.a.",
+    "image": "../public/location-images/kopenhagen",
+    "location": "kopenhagen"
+  },
+  {
+    "title": "Copenhell",
+    "start": "2024-06-19",
+    "eventLocationName": "kopenhagen",
+    "shortText": "\nMet Dropkick Murphys, Machine Head e.v.a.",
+    "image": "../public/location-images/kopenhagen",
+    "location": "kopenhagen"
+  },
+  {
+    "title": "Graspop Metal Meeting",
+    "start": "2024-06-20",
+    "eventLocationName": "dessel",
+    "shortText": "\nmet Tool e.v.a.",
+    "image": "../public/location-images/dessel",
+    "location": "dessel"
+  },
+  {
+    "title": "Abbath (performs Immortal), Kampfar, Vltimas, Hulder",
+    "start": "2024-06-20",
+    "eventLocationName": "tivolivredenburg",
+    "shortText": "TivoliVredenburg, Utrecht",
+    "image": "../public/location-images/tivolivredenburg",
+    "location": "tivolivredenburg"
+  },
+  {
+    "title": "Abbath (performs Immortal), Kampfar, Vltimas, Hulder",
+    "start": "2024-06-20",
+    "eventLocationName": "tivolivredenburg",
+    "shortText": "TivoliVredenburg, Utrecht",
+    "image": "../public/location-images/tivolivredenburg",
+    "location": "tivolivredenburg"
+  },
+  {
+    "title": "Obstruktor, KFFR en FilthyMcNasty",
+    "start": "2024-06-22",
+    "eventLocationName": "de drom",
+    "shortText": "De Drom, Enkhuizen",
+    "image": "../public/location-images/dedrom",
+    "location": "dedrom"
+  },
+  {
+    "title": "Obstruktor, KFFR en FilthyMcNasty",
+    "start": "2024-06-22",
+    "eventLocationName": "de drom",
+    "shortText": "De Drom, Enkhuizen",
+    "image": "../public/location-images/dedrom",
+    "location": "dedrom"
+  },
+  {
+    "start": "2024-06-23T19:00:00",
+    "venueEventUrl": "https://neushoorn.nl/production/cradle-of-filth/",
+    "title": "Cradle of Filth",
+    "location": "neushoorn",
+    "price": 31,
+    "shortText": "Gothic black metal legends",
+    "longText": "../public/texts/neushoorn/bmwvcHJvZHVjdGlvbi9jcmFkbGUtb2YtZmlsdGgv.html",
+    "image": "../public/event-images/neushoorn/bmwvcHJvZHVjdGlvbi9jcmFkbGUtb2YtZmlsdGgv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": null
   },
   {
-    "door": "2024-06-21T20:45:00",
-    "start": "2024-06-21T21:15:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/ghost-rite-here-rite-now-2024-21-06-2024/",
-    "title": "Ghost: rite here rite now (2024)",
-    "location": "melkweg",
-    "price": 14.5,
-    "shortText": "concertfilm · heavy metal · doom · hardrock",
-    "longText": "../public/texts/melkweg/aGVyZS1yaXRlLW5vdy0yMDI0LTIxLTA2LTIwMjQv.html",
-    "image": "../public/event-images/melkweg/aGVyZS1yaXRlLW5vdy0yMDI0LTIxLTA2LTIwMjQv",
-    "soldOut": true,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": null
+    "title": "Steel Panther",
+    "start": "2024-06-23",
+    "eventLocationName": "oosterpoort",
+    "shortText": "Oosterpoort, Groningen",
+    "image": "../public/location-images/oosterpoort",
+    "location": "oosterpoort"
   },
   {
-    "door": "2024-06-21T19:00:00",
-    "start": "2024-06-21T19:30:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/heavy-is-the-night-21-06-2024/",
-    "title": "Heavy is The Night",
-    "location": "melkweg",
-    "price": 10.35,
-    "shortText": "goth · electronic · duister",
-    "longText": "../public/texts/melkweg/aGVhdnktaXMtdGhlLW5pZ2h0LTIxLTA2LTIwMjQv.html",
-    "image": "../public/event-images/melkweg/aGVhdnktaXMtdGhlLW5pZ2h0LTIxLTA2LTIwMjQv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": null
+    "title": "311",
+    "start": "2024-06-23",
+    "eventLocationName": "melkweg",
+    "shortText": "Melkweg, Amsterdam",
+    "image": "../public/location-images/melkweg",
+    "location": "melkweg"
   },
   {
-    "start": "2024-06-22T20:00:00",
-    "venueEventUrl": "https://www.littledevil.nl/calendar/meth/",
-    "title": "Meth",
-    "location": "littledevil",
-    "price": 15,
-    "shortText": "hardcore",
-    "longText": "../public/texts/littledevil/LmxpdHRsZWRldmlsLm5sL2NhbGVuZGFyL21ldGgv.html",
-    "image": "../public/event-images/littledevil/LmxpdHRsZWRldmlsLm5sL2NhbGVuZGFyL21ldGgv",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": null
+    "title": "311",
+    "start": "2024-06-23",
+    "eventLocationName": "melkweg",
+    "shortText": "Melkweg, Amsterdam",
+    "image": "../public/location-images/melkweg",
+    "location": "melkweg"
   },
   {
-    "door": "2024-06-22T18:00:00",
-    "start": "2024-06-22T18:30:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/ghost-rite-here-rite-now-2024-22-06-2024-1/",
-    "title": "Ghost: rite here rite now (2024)",
-    "location": "melkweg",
-    "price": 14.5,
-    "shortText": "concertfilm · heavy metal · doom · hardrock",
-    "longText": "../public/texts/melkweg/cmUtcml0ZS1ub3ctMjAyNC0yMi0wNi0yMDI0LTEv.html",
-    "image": "../public/event-images/melkweg/cmUtcml0ZS1ub3ctMjAyNC0yMi0wNi0yMDI0LTEv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": null
+    "title": "Mr. Bungle, Spotlights en Oxbow",
+    "start": "2024-06-24",
+    "eventLocationName": "013",
+    "shortText": "013, Tilburg",
+    "image": "../public/location-images/013",
+    "location": "013"
   },
   {
-    "door": "2024-06-22T20:45:00",
-    "start": "2024-06-22T21:15:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/ghost-rite-here-rite-now-2024-22-06-2024/",
-    "title": "Ghost: rite here rite now (2024)",
-    "location": "melkweg",
-    "price": 14.5,
-    "shortText": "concertfilm · heavy metal · doom · hardrock",
-    "longText": "../public/texts/melkweg/aGVyZS1yaXRlLW5vdy0yMDI0LTIyLTA2LTIwMjQv.html",
-    "image": "../public/event-images/melkweg/aGVyZS1yaXRlLW5vdy0yMDI0LTIyLTA2LTIwMjQv",
-    "soldOut": true,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": null
+    "title": "Avenged Sevenfold en Polyphia",
+    "start": "2024-06-24",
+    "eventLocationName": "ziggo dome",
+    "shortText": "Ziggo Dome, Amsterdam",
+    "image": "../public/location-images/ziggodome",
+    "location": "ziggodome"
   },
   {
-    "start": "2024-07-14T15:00:00",
-    "venueEventUrl": "https://www.littledevil.nl/calendar/zak-perry-and-the-beautiful-things-usa-grammylou-acoustic/",
-    "title": "Zak Perry and the Beautiful Things (USA) ",
-    "location": "littledevil",
-    "price": 7.5,
-    "shortText": " Grammylou acoustic southern rock",
-    "longText": "../public/texts/littledevil/dGhpbmdzLXVzYS1ncmFtbXlsb3UtYWNvdXN0aWMv.html",
-    "image": "../public/event-images/littledevil/dGhpbmdzLXVzYS1ncmFtbXlsb3UtYWNvdXN0aWMv",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": null
+    "title": "Avenged Sevenfold en Polyphia",
+    "start": "2024-06-24",
+    "eventLocationName": "ziggo dome",
+    "shortText": "Ziggo Dome, Amsterdam",
+    "image": "../public/location-images/ziggodome",
+    "location": "ziggodome"
   },
   {
-    "start": "2024-07-20T20:00:00",
-    "venueEventUrl": "https://www.littledevil.nl/calendar/asomvel-uk/",
-    "title": "Asomvel (UK)",
-    "location": "littledevil",
-    "price": 12.5,
-    "shortText": "hard rock",
-    "longText": "../public/texts/littledevil/ZWRldmlsLm5sL2NhbGVuZGFyL2Fzb212ZWwtdWsv.html",
-    "image": "../public/event-images/littledevil/ZWRldmlsLm5sL2NhbGVuZGFyL2Fzb212ZWwtdWsv",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": null
+    "title": "Megadeth",
+    "start": "2024-06-25",
+    "eventLocationName": "013",
+    "shortText": "013, Tilburg",
+    "image": "../public/location-images/013",
+    "location": "013"
   },
   {
-    "start": "2024-07-30T20:00:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/mr-big-30-07-2024/",
-    "title": "Mr. big",
-    "location": "melkweg",
-    "price": 34.5,
-    "shortText": "hardrock",
-    "longText": "../public/texts/melkweg/bC9ubC9hZ2VuZGEvbXItYmlnLTMwLTA3LTIwMjQv.html",
-    "image": "../public/event-images/melkweg/bC9ubC9hZ2VuZGEvbXItYmlnLTMwLTA3LTIwMjQv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": null
+    "title": "Cradle Of Filth en Mimi Barks",
+    "start": "2024-06-25",
+    "eventLocationName": "tivolivredenburg",
+    "shortText": "TivoliVredenburg, Utrecht",
+    "image": "../public/location-images/tivolivredenburg",
+    "location": "tivolivredenburg"
   },
   {
-    "start": "2024-07-31T20:00:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/descendents-31-07-2024/",
-    "title": "Descendents",
-    "location": "melkweg",
-    "price": 31.05,
-    "shortText": "punk",
-    "longText": "../public/texts/melkweg/YWdlbmRhL2Rlc2NlbmRlbnRzLTMxLTA3LTIwMjQv.html",
-    "image": "../public/event-images/melkweg/YWdlbmRhL2Rlc2NlbmRlbnRzLTMxLTA3LTIwMjQv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": null
+    "title": "Cradle Of Filth en Mimi Barks",
+    "start": "2024-06-25",
+    "eventLocationName": "tivolivredenburg",
+    "shortText": "TivoliVredenburg, Utrecht",
+    "image": "../public/location-images/tivolivredenburg",
+    "location": "tivolivredenburg"
   },
   {
-    "start": "2024-08-01T20:00:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/wine-lips-01-08-2024/",
-    "title": "Wine Lips",
-    "location": "melkweg",
-    "price": 20.15,
-    "shortText": "punk · garagerock · fuzz",
-    "longText": "../public/texts/melkweg/bC9hZ2VuZGEvd2luZS1saXBzLTAxLTA4LTIwMjQv.html",
-    "image": "../public/event-images/melkweg/bC9hZ2VuZGEvd2luZS1saXBzLTAxLTA4LTIwMjQv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": null
+    "title": "Body Count",
+    "start": "2024-06-26",
+    "eventLocationName": "paradiso",
+    "shortText": "Paradiso, Amsterdam",
+    "image": "../public/location-images/paradiso",
+    "location": "paradiso"
   },
   {
-    "start": "2024-08-02T20:30:00",
-    "venueEventUrl": "https://www.littledevil.nl/calendar/beasto-blanco-usa-johnny-tupolev-d/",
-    "title": "Beastö Blancö (USA) + Johnny Tupolev (D)",
-    "location": "littledevil",
+    "title": "Body Count",
+    "start": "2024-06-26",
+    "eventLocationName": "paradiso",
+    "shortText": "Paradiso, Amsterdam",
+    "image": "../public/location-images/paradiso",
+    "location": "paradiso"
+  },
+  {
+    "door": "2024-06-27T20:30:00",
+    "start": "2024-06-27T21:00:00",
+    "venueEventUrl": "https://metropool.nl/agenda/norose-ep-release/",
+    "title": "NoRose - EP release",
+    "location": "metropool",
     "price": 10,
-    "shortText": "powerful - rock & roll - theatrical live experience",
-    "longText": "../public/texts/littledevil/by1ibGFuY28tdXNhLWpvaG5ueS10dXBvbGV2LWQv.html",
-    "image": "../public/event-images/littledevil/by1ibGFuY28tdXNhLWpvaG5ueS10dXBvbGV2LWQv",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
-    "start": "2024-08-04T16:00:00",
-    "venueEventUrl": "https://www.littledevil.nl/calendar/raven-uk/",
-    "title": "Raven (uk)",
-    "location": "littledevil",
-    "price": 17.5,
-    "shortText": "nwobhm - trash - speed metal",
-    "longText": "../public/texts/littledevil/dGxlZGV2aWwubmwvY2FsZW5kYXIvcmF2ZW4tdWsv.html",
-    "image": "../public/event-images/littledevil/dGxlZGV2aWwubmwvY2FsZW5kYXIvcmF2ZW4tdWsv",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
-    "start": "2024-08-04T20:00:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/dragonforce-04-08-2024/",
-    "title": "DragonForce",
-    "location": "melkweg",
-    "price": 33.35,
-    "shortText": "powermetal · bombastisch",
-    "longText": "../public/texts/melkweg/YWdlbmRhL2RyYWdvbmZvcmNlLTA0LTA4LTIwMjQv.html",
-    "image": "../public/event-images/melkweg/YWdlbmRhL2RyYWdvbmZvcmNlLTA0LTA4LTIwMjQv",
+    "shortText": "Support: Jongeman",
+    "longText": "../public/texts/metropool/bC5ubC9hZ2VuZGEvbm9yb3NlLWVwLXJlbGVhc2Uv.html",
+    "image": "../public/event-images/metropool/bC5ubC9hZ2VuZGEvbm9yb3NlLWVwLXJlbGVhc2Uv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "dragonforce": {
-        "s": "2pH3wEn4eYlMMIIQyKPbVR",
-        "l": "dragonforce",
+      "norose": {
+        "s": null,
+        "l": null,
         "g": [
-          "british power metal",
-          "fantasy metal",
-          "metal",
-          "power metal",
-          "speed metal"
+          "punk",
+          "opera punk"
         ]
       }
     }
   },
   {
-    "start": "2024-08-05T20:00:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/the-warning-05-08-2024/",
-    "title": "The Warning",
-    "location": "melkweg",
-    "price": 31.05,
-    "shortText": "hardrock",
-    "longText": "../public/texts/melkweg/YWdlbmRhL3RoZS13YXJuaW5nLTA1LTA4LTIwMjQv.html",
-    "image": "../public/event-images/melkweg/YWdlbmRhL3RoZS13YXJuaW5nLTA1LTA4LTIwMjQv",
+    "title": "Rammstein",
+    "start": "2024-06-27",
+    "eventLocationName": "park nieuwe koers",
+    "shortText": "Park Nieuwe Koers, Oostende (België)",
+    "image": "../public/location-images/parknieuwekoers",
+    "location": "parknieuwekoers"
+  },
+  {
+    "title": "Jera On Air",
+    "start": "2024-06-27",
+    "eventLocationName": "festivalterrein",
+    "shortText": "\nMet Electric Callboy, Dropkick Murphys, Bad Religion, Sum 41, Biohazard e.v.a.",
+    "image": "../public/location-images/festivalterrein",
+    "location": "festivalterrein"
+  },
+  {
+    "title": "Hellfest",
+    "start": "2024-06-27",
+    "eventLocationName": "clisson (frankrijk)\nmet foo fighters",
+    "shortText": "\nMet Foo Fighters, Megadeth, Queens Of The Stone Age e.v.a.",
+    "image": "../public/location-images/clissonfrankrijkmetfoofighters",
+    "location": "clissonfrankrijkmetfoofighters"
+  },
+  {
+    "title": "Hellfest",
+    "start": "2024-06-27",
+    "eventLocationName": "clisson (frankrijk)\nmet foo fighters",
+    "shortText": "\nMet Foo Fighters, Megadeth, Queens Of The Stone Age e.v.a.",
+    "image": "../public/location-images/clissonfrankrijkmetfoofighters",
+    "location": "clissonfrankrijkmetfoofighters"
+  },
+  {
+    "title": "Rammstein",
+    "start": "2024-06-28",
+    "eventLocationName": "park nieuwe koers",
+    "shortText": "Park Nieuwe Koers, Oostende (België)",
+    "image": "../public/location-images/parknieuwekoers",
+    "location": "parknieuwekoers"
+  },
+  {
+    "title": "Rammstein",
+    "start": "2024-06-28",
+    "eventLocationName": "park nieuwe koers",
+    "shortText": "Park Nieuwe Koers, Oostende (België)",
+    "image": "../public/location-images/parknieuwekoers",
+    "location": "parknieuwekoers"
+  },
+  {
+    "title": "Vader, Bio-Cander en Warside",
+    "start": "2024-06-30",
+    "eventLocationName": "iduna",
+    "shortText": "Iduna, Drachten",
+    "image": "../public/location-images/iduna",
+    "location": "iduna"
+  },
+  {
+    "title": "Vader, Bio-Cander en Warside",
+    "start": "2024-06-30",
+    "eventLocationName": "iduna",
+    "shortText": "Iduna, Drachten",
+    "image": "../public/location-images/iduna",
+    "location": "iduna"
+  },
+  {
+    "title": "Skroetbalg",
+    "start": "2024-07-01",
+    "eventLocationName": "gebr. de nobel",
+    "shortText": "Gebr. de Nobel, Leiden",
+    "image": "../public/location-images/gebrdenobel",
+    "location": "gebrdenobel"
+  },
+  {
+    "title": "Jane's Addiction",
+    "start": "2024-07-01",
+    "eventLocationName": "paradiso",
+    "shortText": "Paradiso, Amsterdam",
+    "image": "../public/location-images/paradiso",
+    "location": "paradiso"
+  },
+  {
+    "title": "Jane's Addiction",
+    "start": "2024-07-01",
+    "eventLocationName": "paradiso",
+    "shortText": "Paradiso, Amsterdam",
+    "image": "../public/location-images/paradiso",
+    "location": "paradiso"
+  },
+  {
+    "title": "Vader, Bio-Cancer en Warside",
+    "start": "2024-07-02",
+    "eventLocationName": "maassilo",
+    "shortText": "Maassilo, Rotterdam",
+    "image": "../public/location-images/maassilo",
+    "location": "maassilo"
+  },
+  {
+    "title": "Steve Hackett",
+    "start": "2024-07-02",
+    "eventLocationName": "ancienne belgique",
+    "shortText": "Ancienne Belgique, Brussel (België)",
+    "image": "../public/location-images/anciennebelgique",
+    "location": "anciennebelgique"
+  },
+  {
+    "title": "Steve Hackett",
+    "start": "2024-07-02",
+    "eventLocationName": "ancienne belgique",
+    "shortText": "Ancienne Belgique, Brussel (België)",
+    "image": "../public/location-images/anciennebelgique",
+    "location": "anciennebelgique"
+  },
+  {
+    "title": "Greta Van Fleet",
+    "start": "2024-07-03",
+    "eventLocationName": "kunst!rasen",
+    "shortText": "Kunst!Rasen, Bonn (Duitsland)",
+    "image": "../public/location-images/kunstrasen",
+    "location": "kunstrasen"
+  },
+  {
+    "title": "Greta Van Fleet",
+    "start": "2024-07-03",
+    "eventLocationName": "kunst!rasen",
+    "shortText": "Kunst!Rasen, Bonn (Duitsland)",
+    "image": "../public/location-images/kunstrasen",
+    "location": "kunstrasen"
+  },
+  {
+    "title": "Pitfest",
+    "start": "2024-07-04",
+    "eventLocationName": "emmen\nmet hatebreed",
+    "shortText": "\nMet Hatebreed, Heideroosjes, Amenra, Sick Of Itall, Immolation, Agnostic Front e.v.a.",
+    "image": "../public/location-images/emmenmethatebreed",
+    "location": "emmenmethatebreed"
+  },
+  {
+    "title": "Floor Jansen",
+    "start": "2024-07-04",
+    "eventLocationName": "paleis soestdijk. baarn",
+    "shortText": "Paleis Soestdijk. Baarn",
+    "image": "../public/location-images/paleissoestdijkbaarn",
+    "location": "paleissoestdijkbaarn"
+  },
+  {
+    "title": "Floor Jansen",
+    "start": "2024-07-04",
+    "eventLocationName": "paleis soestdijk. baarn",
+    "shortText": "Paleis Soestdijk. Baarn",
+    "image": "../public/location-images/paleissoestdijkbaarn",
+    "location": "paleissoestdijkbaarn"
+  },
+  {
+    "title": "ZZ Top",
+    "start": "2024-07-05",
+    "eventLocationName": "kunst!rasen",
+    "shortText": "Kunst!Rasen, Bonn (Duitsland)",
+    "image": "../public/location-images/kunstrasen",
+    "location": "kunstrasen"
+  },
+  {
+    "title": "Steve Hackett",
+    "start": "2024-07-05",
+    "eventLocationName": "boerderij",
+    "shortText": "Boerderij, Zoetermeer",
+    "image": "../public/location-images/boerderij",
+    "location": "boerderij"
+  },
+  {
+    "title": "Steve Hackett",
+    "start": "2024-07-05",
+    "eventLocationName": "boerderij",
+    "shortText": "Boerderij, Zoetermeer",
+    "image": "../public/location-images/boerderij",
+    "location": "boerderij"
+  },
+  {
+    "title": "Vader, Bio-Cancer en Warside",
+    "start": "2024-07-06",
+    "eventLocationName": "doornroosje",
+    "shortText": "Doornroosje, Nijmegen",
+    "image": "../public/location-images/doornroosje",
+    "location": "doornroosje"
+  },
+  {
+    "title": "Steve Hackett",
+    "start": "2024-07-06",
+    "eventLocationName": "boerderij",
+    "shortText": "Boerderij, Zoetermeer",
+    "image": "../public/location-images/boerderij",
+    "location": "boerderij"
+  },
+  {
+    "title": "Steve Hackett",
+    "start": "2024-07-06",
+    "eventLocationName": "boerderij",
+    "shortText": "Boerderij, Zoetermeer",
+    "image": "../public/location-images/boerderij",
+    "location": "boerderij"
+  },
+  {
+    "title": "Steve Hackett",
+    "start": "2024-07-07",
+    "eventLocationName": "boerderij",
+    "shortText": "Boerderij, Zoetermeer",
+    "image": "../public/location-images/boerderij",
+    "location": "boerderij"
+  },
+  {
+    "title": "Steve Hackett",
+    "start": "2024-07-07",
+    "eventLocationName": "boerderij",
+    "shortText": "Boerderij, Zoetermeer",
+    "image": "../public/location-images/boerderij",
+    "location": "boerderij"
+  },
+  {
+    "title": "ZZ Top",
+    "start": "2024-07-08",
+    "eventLocationName": "afas live",
+    "shortText": "AFAS Live, Amsterdam",
+    "image": "../public/location-images/afaslive",
+    "location": "afaslive"
+  },
+  {
+    "title": "ZZ Top",
+    "start": "2024-07-08",
+    "eventLocationName": "afas live",
+    "shortText": "AFAS Live, Amsterdam",
+    "image": "../public/location-images/afaslive",
+    "location": "afaslive"
+  },
+  {
+    "title": "Abysmal Grief en Viihb",
+    "start": "2024-07-10",
+    "eventLocationName": "musicon",
+    "shortText": "Musicon, Den Haag",
+    "image": "../public/location-images/musicon",
+    "location": "musicon"
+  },
+  {
+    "title": "Abysmal Grief en Viihb",
+    "start": "2024-07-10",
+    "eventLocationName": "musicon",
+    "shortText": "Musicon, Den Haag",
+    "image": "../public/location-images/musicon",
+    "location": "musicon"
+  },
+  {
+    "start": "2024-07-12T20:00:00",
+    "venueEventUrl": "https://neushoorn.nl/production/abysmal-grief-salacious-gods-the-chosen/",
+    "title": "Abysmal Grief + Salacious Gods + The Chösen",
+    "location": "neushoorn",
+    "price": 18,
+    "shortText": "Cult doorspekt met doom en black",
+    "longText": "../public/texts/neushoorn/aWVmLXNhbGFjaW91cy1nb2RzLXRoZS1jaG9zZW4v.html",
+    "image": "../public/event-images/neushoorn/aWVmLXNhbGFjaW91cy1nb2RzLXRoZS1jaG9zZW4v",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "the warning": {
-        "s": "2SmW1lFlBJn4IfBzBZDlSh",
-        "l": "the%20warning",
+      "echo": {
+        "s": "0fgYKF9Avljex0L9Wt5b8Z",
+        "l": "echo",
         "g": [
-          "mexican metal",
-          "monterrey indie"
+          "alternative rock",
+          "new romantic",
+          "new wave",
+          "permanent wave"
         ]
       }
     }
   },
   {
-    "start": "2024-08-09T20:00:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/armored-saint-09-08-2024/",
+    "title": "Life Of Agony",
+    "start": "2024-07-12",
+    "eventLocationName": "bolwerk",
+    "shortText": "Bolwerk, Sneek",
+    "image": "../public/location-images/bolwerk",
+    "location": "bolwerk"
+  },
+  {
+    "title": "Bospop festival",
+    "start": "2024-07-12",
+    "eventLocationName": "weert",
+    "shortText": "Weert",
+    "image": "../public/location-images/weert",
+    "location": "weert"
+  },
+  {
+    "title": "Surhuzum Open Air",
+    "start": "2024-07-13",
+    "eventLocationName": "surhuizum\nmet o.a. the haunted",
+    "shortText": "\nMet o.a. The Haunted, For I Am King, Tygers Pan Tang, Up The Irons e.a.",
+    "image": "../public/location-images/surhuizummetoathehaunted",
+    "location": "surhuizummetoathehaunted"
+  },
+  {
+    "title": "Hellmond Open Air",
+    "start": "2024-07-13",
+    "eventLocationName": "cacaofabriek",
+    "shortText": "\nmet o.a. Life Of Agony, Living Colour, Destruction, Dog Eat Dog",
+    "image": "../public/location-images/cacaofabriek",
+    "location": "cacaofabriek"
+  },
+  {
+    "title": "Hellmond Open Air",
+    "start": "2024-07-13",
+    "eventLocationName": "cacaofabriek",
+    "shortText": "\nmet o.a. Life Of Agony, Living Colour, Destruction, Dog Eat Dog",
+    "image": "../public/location-images/cacaofabriek",
+    "location": "cacaofabriek"
+  },
+  {
+    "title": "Tygers Of Pan Tang, Fearwell en Razorblade Messiah",
+    "start": "2024-07-14",
+    "eventLocationName": "musicon",
+    "shortText": "Musicon, Den Haag",
+    "image": "../public/location-images/musicon",
+    "location": "musicon"
+  },
+  {
+    "title": "Pirate Metal Party",
+    "start": "2024-07-14",
+    "eventLocationName": "cacaofabriek",
+    "shortText": "\nMet Alestorm e.a.",
+    "image": "../public/location-images/cacaofabriek",
+    "location": "cacaofabriek"
+  },
+  {
+    "title": "Pirate Metal Party",
+    "start": "2024-07-14",
+    "eventLocationName": "cacaofabriek",
+    "shortText": "\nMet Alestorm e.a.",
+    "image": "../public/location-images/cacaofabriek",
+    "location": "cacaofabriek"
+  },
+  {
+    "start": "2024-07-17T20:00:00",
+    "venueEventUrl": "https://neushoorn.nl/production/nervana/",
+    "title": "Nervana",
+    "location": "neushoorn",
+    "price": null,
+    "shortText": "The American Nirvana tribute Laatste kaarten",
+    "longText": "../public/texts/neushoorn/dXNob29ybi5ubC9wcm9kdWN0aW9uL25lcnZhbmEv.html",
+    "image": "../public/event-images/neushoorn/dXNob29ybi5ubC9wcm9kdWN0aW9uL25lcnZhbmEv",
+    "soldOut": true,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "nervana": {
+        "s": null,
+        "l": null,
+        "g": [
+          "grunge"
+        ]
+      }
+    }
+  },
+  {
+    "title": "Hellripper, Cloak en High Command",
+    "start": "2024-07-26",
+    "eventLocationName": "013",
+    "shortText": "013, Tilburg",
+    "image": "../public/location-images/013",
+    "location": "013"
+  },
+  {
+    "title": "Hellripper, Cloak en High Command",
+    "start": "2024-07-26",
+    "eventLocationName": "013",
+    "shortText": "013, Tilburg",
+    "image": "../public/location-images/013",
+    "location": "013"
+  },
+  {
+    "title": "Soulfly",
+    "start": "2024-07-28",
+    "eventLocationName": "gebouw-t",
+    "shortText": "Gebouw-T, Bergen Op Zoom",
+    "image": "../public/location-images/gebouwt",
+    "location": "gebouwt"
+  },
+  {
+    "title": "Soulfly",
+    "start": "2024-07-28",
+    "eventLocationName": "gebouw-t",
+    "shortText": "Gebouw-T, Bergen Op Zoom",
+    "image": "../public/location-images/gebouwt",
+    "location": "gebouwt"
+  },
+  {
+    "title": "Mr. Big",
+    "start": "2024-07-30",
+    "eventLocationName": "melkweg",
+    "shortText": "Melkweg, Amsterdam",
+    "image": "../public/location-images/melkweg",
+    "location": "melkweg"
+  },
+  {
+    "title": "Mr. Big",
+    "start": "2024-07-30",
+    "eventLocationName": "melkweg",
+    "shortText": "Melkweg, Amsterdam",
+    "image": "../public/location-images/melkweg",
+    "location": "melkweg"
+  },
+  {
+    "title": "Wacken Open Air",
+    "start": "2024-07-31",
+    "eventLocationName": "wacken (duitsland)\nmet scorpions",
+    "shortText": "\nMet Scorpions, Amon Amarth, In Extremo e.v.a.",
+    "image": "../public/location-images/wackenduitslandmetscorpions",
+    "location": "wackenduitslandmetscorpions"
+  },
+  {
+    "title": "Loud & Heavy Fest",
+    "start": "2024-07-31",
+    "eventLocationName": "musicon",
+    "shortText": "\nMet Anatomy Of I, Terra Builder, Scream Bloody Death",
+    "image": "../public/location-images/musicon",
+    "location": "musicon"
+  },
+  {
+    "title": "Cherie Currie en Shameless",
+    "start": "2024-07-31",
+    "eventLocationName": "musicon",
+    "shortText": "Musicon, Den Haag",
+    "image": "../public/location-images/musicon",
+    "location": "musicon"
+  },
+  {
+    "title": "AC/DC en The Pretty Reckless",
+    "start": "2024-07-31",
+    "eventLocationName": "messe",
+    "shortText": "Messe, Hannover (Duitsland)",
+    "image": "../public/location-images/messe",
+    "location": "messe"
+  },
+  {
+    "title": "AC/DC en The Pretty Reckless",
+    "start": "2024-07-31",
+    "eventLocationName": "messe",
+    "shortText": "Messe, Hannover (Duitsland)",
+    "image": "../public/location-images/messe",
+    "location": "messe"
+  },
+  {
+    "title": "Soil",
+    "start": "2024-08-04",
+    "eventLocationName": "effenaar",
+    "shortText": "Effenaar, Eindhoven",
+    "image": "../public/location-images/effenaar",
+    "location": "effenaar"
+  },
+  {
+    "title": "Korn en Spiritbox",
+    "start": "2024-08-04",
+    "eventLocationName": "afas live",
+    "shortText": "AFAS Live, Amsterdam",
+    "image": "../public/location-images/afaslive",
+    "location": "afaslive"
+  },
+  {
+    "title": "Gene Simmons Band",
+    "start": "2024-08-04",
+    "eventLocationName": "tivolivredenburg",
+    "shortText": "TivoliVredenburg, Utrecht",
+    "image": "../public/location-images/tivolivredenburg",
+    "location": "tivolivredenburg"
+  },
+  {
+    "title": "Dragonforce en Nekrogoblikon",
+    "start": "2024-08-04",
+    "eventLocationName": "melkweg",
+    "shortText": "Melkweg, Amsterdam",
+    "image": "../public/location-images/melkweg",
+    "location": "melkweg"
+  },
+  {
+    "title": "Dragonforce en Nekrogoblikon",
+    "start": "2024-08-04",
+    "eventLocationName": "melkweg",
+    "shortText": "Melkweg, Amsterdam",
+    "image": "../public/location-images/melkweg",
+    "location": "melkweg"
+  },
+  {
+    "title": "Soulfly",
+    "start": "2024-08-06",
+    "eventLocationName": "groene engel",
+    "shortText": "Groene Engel, Oss",
+    "image": "../public/location-images/groeneengel",
+    "location": "groeneengel"
+  },
+  {
+    "title": "Soulfly",
+    "start": "2024-08-06",
+    "eventLocationName": "groene engel",
+    "shortText": "Groene Engel, Oss",
+    "image": "../public/location-images/groeneengel",
+    "location": "groeneengel"
+  },
+  {
+    "title": "Soulfly",
+    "start": "2024-08-07",
+    "eventLocationName": "volt",
+    "shortText": "Volt, Sittard",
+    "image": "../public/location-images/volt",
+    "location": "volt"
+  },
+  {
+    "title": "Opeth",
+    "start": "2024-08-07",
+    "eventLocationName": "013",
+    "shortText": "013, Tilburg",
+    "image": "../public/location-images/013",
+    "location": "013"
+  },
+  {
+    "title": "Ignite",
+    "start": "2024-08-07",
+    "eventLocationName": "bolwerk",
+    "shortText": "Bolwerk, Sneek",
+    "image": "../public/location-images/bolwerk",
+    "location": "bolwerk"
+  },
+  {
+    "title": "Brutal Assault",
+    "start": "2024-08-07",
+    "eventLocationName": "fortress josefoz",
+    "shortText": "Fortress Josefoz, Jaromer (Tsjechië)",
+    "image": "../public/location-images/fortressjosefoz",
+    "location": "fortressjosefoz"
+  },
+  {
+    "title": "Brutal Assault",
+    "start": "2024-08-07",
+    "eventLocationName": "fortress josefoz",
+    "shortText": "Fortress Josefoz, Jaromer (Tsjechië)",
+    "image": "../public/location-images/fortressjosefoz",
+    "location": "fortressjosefoz"
+  },
+  {
+    "title": "The Dillinger Escape Plan",
+    "start": "2024-08-08",
+    "eventLocationName": "013",
+    "shortText": "013, Tilburg",
+    "image": "../public/location-images/013",
+    "location": "013"
+  },
+  {
+    "title": "Soulfly",
+    "start": "2024-08-08",
+    "eventLocationName": "refraktor",
+    "shortText": "Refraktor, Luik (België)",
+    "image": "../public/location-images/refraktor",
+    "location": "refraktor"
+  },
+  {
+    "title": "Soulfly",
+    "start": "2024-08-08",
+    "eventLocationName": "refraktor",
+    "shortText": "Refraktor, Luik (België)",
+    "image": "../public/location-images/refraktor",
+    "location": "refraktor"
+  },
+  {
     "title": "Armored Saint",
-    "location": "melkweg",
-    "price": 28.75,
-    "shortText": "heavy metal",
-    "longText": "../public/texts/melkweg/ZW5kYS9hcm1vcmVkLXNhaW50LTA5LTA4LTIwMjQv.html",
-    "image": "../public/event-images/melkweg/ZW5kYS9hcm1vcmVkLXNhaW50LTA5LTA4LTIwMjQv",
+    "start": "2024-08-09",
+    "eventLocationName": "melkweg",
+    "shortText": "Melkweg, Amsterdam",
+    "image": "../public/location-images/melkweg",
+    "location": "melkweg"
+  },
+  {
+    "title": "AC/DC en The Pretty Reckless",
+    "start": "2024-08-09",
+    "eventLocationName": "festivalpark stenehei",
+    "shortText": "Festivalpark Stenehei, Dessel (België)",
+    "image": "../public/location-images/festivalparkstenehei",
+    "location": "festivalparkstenehei"
+  },
+  {
+    "title": "AC/DC en The Pretty Reckless",
+    "start": "2024-08-09",
+    "eventLocationName": "festivalpark stenehei",
+    "shortText": "Festivalpark Stenehei, Dessel (België)",
+    "image": "../public/location-images/festivalparkstenehei",
+    "location": "festivalparkstenehei"
+  },
+  {
+    "title": "Butcher Babies",
+    "start": "2024-08-11",
+    "eventLocationName": "effenaar",
+    "shortText": "Effenaar, Eindhoven",
+    "image": "../public/location-images/effenaar",
+    "location": "effenaar"
+  },
+  {
+    "title": "Butcher Babies",
+    "start": "2024-08-11",
+    "eventLocationName": "effenaar",
+    "shortText": "Effenaar, Eindhoven",
+    "image": "../public/location-images/effenaar",
+    "location": "effenaar"
+  },
+  {
+    "title": "Havok, Skeletal Remains en Dust Bolt",
+    "start": "2024-08-12",
+    "eventLocationName": "doornroosje",
+    "shortText": "Doornroosje, Nijmegen",
+    "image": "../public/location-images/doornroosje",
+    "location": "doornroosje"
+  },
+  {
+    "title": "Havok, Skeletal Remains en Dust Bolt",
+    "start": "2024-08-12",
+    "eventLocationName": "doornroosje",
+    "shortText": "Doornroosje, Nijmegen",
+    "image": "../public/location-images/doornroosje",
+    "location": "doornroosje"
+  },
+  {
+    "title": "Exodus, Evil Invaders en Skeletal Remains",
+    "start": "2024-08-13",
+    "eventLocationName": "nobel",
+    "shortText": "Nobel, Leiden",
+    "image": "../public/location-images/nobel",
+    "location": "nobel"
+  },
+  {
+    "title": "Baroness",
+    "start": "2024-08-13",
+    "eventLocationName": "doornroosje",
+    "shortText": "Doornroosje, Nijmegen",
+    "image": "../public/location-images/doornroosje",
+    "location": "doornroosje"
+  },
+  {
+    "title": "Baroness",
+    "start": "2024-08-13",
+    "eventLocationName": "doornroosje",
+    "shortText": "Doornroosje, Nijmegen",
+    "image": "../public/location-images/doornroosje",
+    "location": "doornroosje"
+  },
+  {
+    "start": "2024-08-14T19:30:00",
+    "venueEventUrl": "https://neushoorn.nl/production/whitechapel/",
+    "title": "Whitechapel",
+    "location": "neushoorn",
+    "price": 22,
+    "shortText": "More than just deathcore...",
+    "longText": "../public/texts/neushoorn/b3JuLm5sL3Byb2R1Y3Rpb24vd2hpdGVjaGFwZWwv.html",
+    "image": "../public/event-images/neushoorn/b3JuLm5sL3Byb2R1Y3Rpb24vd2hpdGVjaGFwZWwv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": null
   },
   {
-    "start": "2024-08-12T20:00:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/motionless-in-white-extra-show-12-08-2024/",
-    "title": "Motionless In White",
-    "location": "melkweg",
-    "price": 25.3,
-    "shortText": "horror · industrial · metalcore Extra Show",
-    "longText": "../public/texts/melkweg/bi13aGl0ZS1leHRyYS1zaG93LTEyLTA4LTIwMjQv.html",
-    "image": "../public/event-images/melkweg/bi13aGl0ZS1leHRyYS1zaG93LTEyLTA4LTIwMjQv",
-    "soldOut": true,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "motionless in white": {
-        "s": "6MwPCCR936cYfM1dLsGVnl",
-        "l": "motionless%20in%20white",
-        "g": [
-          "alternative metal",
-          "metalcore"
-        ]
-      }
-    }
+    "title": "The Omnific",
+    "start": "2024-08-14",
+    "eventLocationName": "doornroosje",
+    "shortText": "Merleyn, Nijmegen",
+    "image": "../public/location-images/doornroosje",
+    "location": "doornroosje"
   },
   {
-    "start": "2024-08-13T20:00:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/motionless-in-white-13-08-2024/",
-    "title": "Motionless In White",
-    "location": "melkweg",
-    "price": 25.3,
-    "shortText": "metalcore · horror · industrial",
-    "longText": "../public/texts/melkweg/b3Rpb25sZXNzLWluLXdoaXRlLTEzLTA4LTIwMjQv.html",
-    "image": "../public/event-images/melkweg/b3Rpb25sZXNzLWluLXdoaXRlLTEzLTA4LTIwMjQv",
-    "soldOut": true,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "motionless in white": {
-        "s": "6MwPCCR936cYfM1dLsGVnl",
-        "l": "motionless%20in%20white",
-        "g": [
-          "alternative metal",
-          "metalcore"
-        ]
-      }
-    }
+    "title": "Mushroomhead, Dymytry en Silenzer",
+    "start": "2024-08-14",
+    "eventLocationName": "patronaat",
+    "shortText": "Patronaat, Haarlem",
+    "image": "../public/location-images/patronaat",
+    "location": "patronaat"
   },
   {
-    "start": "2024-08-29T20:00:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/home-front-29-08-2024/",
-    "title": "Home Front",
-    "location": "melkweg",
-    "price": 19,
-    "shortText": "postpunk · hardcore punk · synth",
-    "longText": "../public/texts/melkweg/L2FnZW5kYS9ob21lLWZyb250LTI5LTA4LTIwMjQv.html",
-    "image": "../public/event-images/melkweg/L2FnZW5kYS9ob21lLWZyb250LTI5LTA4LTIwMjQv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": null
+    "title": "Mushroomhead, Dymytry en Silenzer",
+    "start": "2024-08-14",
+    "eventLocationName": "patronaat",
+    "shortText": "Patronaat, Haarlem",
+    "image": "../public/location-images/patronaat",
+    "location": "patronaat"
   },
   {
-    "start": "2024-09-12T20:00:00",
-    "venueEventUrl": "https://www.littledevil.nl/calendar/bokassa/",
+    "title": "Complexity Fest",
+    "start": "2024-08-17",
+    "eventLocationName": "patronaat",
+    "shortText": "\nMet Plini, Night Verses, Frail Body e.a.",
+    "image": "../public/location-images/patronaat",
+    "location": "patronaat"
+  },
+  {
+    "title": "Complexity Fest",
+    "start": "2024-08-17",
+    "eventLocationName": "patronaat",
+    "shortText": "\nMet Plini, Night Verses, Frail Body e.a.",
+    "image": "../public/location-images/patronaat",
+    "location": "patronaat"
+  },
+  {
+    "title": "Korn",
+    "start": "2024-08-19",
+    "eventLocationName": "kunst!rasen",
+    "shortText": "Kunst!Rasen, Bonn (Duitsland)",
+    "image": "../public/location-images/kunstrasen",
+    "location": "kunstrasen"
+  },
+  {
+    "title": "Korn",
+    "start": "2024-08-19",
+    "eventLocationName": "kunst!rasen",
+    "shortText": "Kunst!Rasen, Bonn (Duitsland)",
+    "image": "../public/location-images/kunstrasen",
+    "location": "kunstrasen"
+  },
+  {
+    "title": "Alien Ant Farm en CKY",
+    "start": "2024-08-22",
+    "eventLocationName": "effenaar",
+    "shortText": "Effenaar, Eindhoven",
+    "image": "../public/location-images/effenaar",
+    "location": "effenaar"
+  },
+  {
+    "title": "Alien Ant Farm en CKY",
+    "start": "2024-08-22",
+    "eventLocationName": "effenaar",
+    "shortText": "Effenaar, Eindhoven",
+    "image": "../public/location-images/effenaar",
+    "location": "effenaar"
+  },
+  {
+    "title": "Pelagic Fest",
+    "start": "2024-08-24",
+    "eventLocationName": "muziekgieterij",
+    "shortText": "\nmet The Ocean, Ihsahn, And So I Watch You From Afar, Oh Hiroshima, A Swarm of The Sun, Psychonaut e.v.a.",
+    "image": "../public/location-images/muziekgieterij",
+    "location": "muziekgieterij"
+  },
+  {
+    "title": "Amon Amarth, Insomnium en Kanonenfieber",
+    "start": "2024-08-24",
+    "eventLocationName": "tivolivredenburg",
+    "shortText": "TivoliVredenburg, Utrecht",
+    "image": "../public/location-images/tivolivredenburg",
+    "location": "tivolivredenburg"
+  },
+  {
+    "title": "Amon Amarth, Insomnium en Kanonenfieber",
+    "start": "2024-08-24",
+    "eventLocationName": "tivolivredenburg",
+    "shortText": "TivoliVredenburg, Utrecht",
+    "image": "../public/location-images/tivolivredenburg",
+    "location": "tivolivredenburg"
+  },
+  {
+    "title": "Liturgy",
+    "start": "2024-08-28",
+    "eventLocationName": "effenaar",
+    "shortText": "Effenaar, Eindhoven",
+    "image": "../public/location-images/effenaar",
+    "location": "effenaar"
+  },
+  {
+    "title": "Infected Rain",
+    "start": "2024-08-28",
+    "eventLocationName": "tivolivredenburg",
+    "shortText": "TivoliVredenburg, Utrecht",
+    "image": "../public/location-images/tivolivredenburg",
+    "location": "tivolivredenburg"
+  },
+  {
+    "title": "Infected Rain",
+    "start": "2024-08-28",
+    "eventLocationName": "tivolivredenburg",
+    "shortText": "TivoliVredenburg, Utrecht",
+    "image": "../public/location-images/tivolivredenburg",
+    "location": "tivolivredenburg"
+  },
+  {
+    "title": "Roosendaal Open Air",
+    "start": "2024-08-31",
+    "eventLocationName": "the loods",
+    "shortText": "\nMet Distant, Asagraum, Brutal Sphincter, Carnation e.a.",
+    "image": "../public/location-images/theloods",
+    "location": "theloods"
+  },
+  {
+    "title": "Roosendaal Open Air",
+    "start": "2024-08-31",
+    "eventLocationName": "the loods",
+    "shortText": "\nMet Distant, Asagraum, Brutal Sphincter, Carnation e.a.",
+    "image": "../public/location-images/theloods",
+    "location": "theloods"
+  },
+  {
+    "title": "Geoff Tate",
+    "start": "2024-09-01",
+    "eventLocationName": "boerderij",
+    "shortText": "Boerderij, Zoetermeer",
+    "image": "../public/location-images/boerderij",
+    "location": "boerderij"
+  },
+  {
+    "title": "Geoff Tate",
+    "start": "2024-09-01",
+    "eventLocationName": "boerderij",
+    "shortText": "Boerderij, Zoetermeer",
+    "image": "../public/location-images/boerderij",
+    "location": "boerderij"
+  },
+  {
+    "title": "Geoff Tate",
+    "start": "2024-09-03",
+    "eventLocationName": "cacaofabriek",
+    "shortText": "Cacaofabriek, Helmond",
+    "image": "../public/location-images/cacaofabriek",
+    "location": "cacaofabriek"
+  },
+  {
+    "title": "Geoff Tate",
+    "start": "2024-09-03",
+    "eventLocationName": "cacaofabriek",
+    "shortText": "Cacaofabriek, Helmond",
+    "image": "../public/location-images/cacaofabriek",
+    "location": "cacaofabriek"
+  },
+  {
+    "title": "Nile, Hideous Divinity, Pestifer en Intrepid",
+    "start": "2024-09-04",
+    "eventLocationName": "p60",
+    "shortText": "P60, Amstelveen",
+    "image": "../public/location-images/p60",
+    "location": "p60"
+  },
+  {
+    "title": "Nile, Hideous Divinity, Pestifer en Intrepid",
+    "start": "2024-09-04",
+    "eventLocationName": "p60",
+    "shortText": "P60, Amstelveen",
+    "image": "../public/location-images/p60",
+    "location": "p60"
+  },
+  {
+    "title": "Metal Babes festival",
+    "start": "2024-09-06",
+    "eventLocationName": "ragnarok",
+    "shortText": "Ragnarok, Bree (België)",
+    "image": "../public/location-images/ragnarok",
+    "location": "ragnarok"
+  },
+  {
+    "title": "Metal Babes festival",
+    "start": "2024-09-06",
+    "eventLocationName": "ragnarok",
+    "shortText": "Ragnarok, Bree (België)",
+    "image": "../public/location-images/ragnarok",
+    "location": "ragnarok"
+  },
+  {
+    "title": "Nile, Hideous Divinity, Pestifer en Intrepid",
+    "start": "2024-09-12",
+    "eventLocationName": "iduna",
+    "shortText": "Iduna, Drachten",
+    "image": "../public/location-images/iduna",
+    "location": "iduna"
+  },
+  {
     "title": "Bokassa",
-    "location": "littledevil",
-    "price": 15,
-    "shortText": "stoner - punk - hardcore - metal",
-    "longText": "../public/texts/littledevil/dHRsZWRldmlsLm5sL2NhbGVuZGFyL2Jva2Fzc2Ev.html",
-    "image": "../public/event-images/littledevil/dHRsZWRldmlsLm5sL2NhbGVuZGFyL2Jva2Fzc2Ev",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": null
+    "start": "2024-09-12",
+    "eventLocationName": "little devil",
+    "shortText": "Little Devil, Tilburg",
+    "image": "../public/location-images/littledevil",
+    "location": "littledevil"
   },
   {
-    "start": "2024-09-13T20:00:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/magic-tom-yuri-13-09-2024/",
-    "title": "Magic Tom & Yuri",
-    "location": "melkweg",
-    "price": 18.4,
-    "shortText": "punk · magisch Magic Tom & Yuri ZIJN Cool",
-    "longText": "../public/texts/melkweg/bmRhL21hZ2ljLXRvbS15dXJpLTEzLTA5LTIwMjQv.html",
-    "image": "../public/event-images/melkweg/bmRhL21hZ2ljLXRvbS15dXJpLTEzLTA5LTIwMjQv",
+    "title": "Bokassa",
+    "start": "2024-09-12",
+    "eventLocationName": "little devil",
+    "shortText": "Little Devil, Tilburg",
+    "image": "../public/location-images/littledevil",
+    "location": "littledevil"
+  },
+  {
+    "title": "Primordial",
+    "start": "2024-09-13",
+    "eventLocationName": "willemeen",
+    "shortText": "Willemeen, Arnhem",
+    "image": "../public/location-images/willemeen",
+    "location": "willemeen"
+  },
+  {
+    "title": "Nile, Hideous Divinity, Pestifer en Intrepid",
+    "start": "2024-09-13",
+    "eventLocationName": "de pul",
+    "shortText": "De Pul, Uden",
+    "image": "../public/location-images/depul",
+    "location": "depul"
+  },
+  {
+    "title": "Bokassa",
+    "start": "2024-09-13",
+    "eventLocationName": "luxor live",
+    "shortText": "Luxor Live, Arnhem",
+    "image": "../public/location-images/luxorlive",
+    "location": "luxorlive"
+  },
+  {
+    "title": "Bokassa",
+    "start": "2024-09-13",
+    "eventLocationName": "luxor live",
+    "shortText": "Luxor Live, Arnhem",
+    "image": "../public/location-images/luxorlive",
+    "location": "luxorlive"
+  },
+  {
+    "title": "Tankard en Headless Hunter",
+    "start": "2024-09-14",
+    "eventLocationName": "de pul",
+    "shortText": "De Pul, Uden",
+    "image": "../public/location-images/depul",
+    "location": "depul"
+  },
+  {
+    "title": "Nile, Hideous Divinity, Pestifer en Intrepid",
+    "start": "2024-09-14",
+    "eventLocationName": "het entrepot",
+    "shortText": "Het Entrepot, Brugge (België)",
+    "image": "../public/location-images/hetentrepot",
+    "location": "hetentrepot"
+  },
+  {
+    "title": "Bloodfest V",
+    "start": "2024-09-14",
+    "eventLocationName": "fort 33",
+    "shortText": "\nMet Bodyfarm, Bloodphemy, Codex Mortis, Doomas e.a.",
+    "image": "../public/location-images/fort33",
+    "location": "fort33"
+  },
+  {
+    "title": "Baroeg Open Air",
+    "start": "2024-09-14",
+    "eventLocationName": "zuiderpark",
+    "shortText": "\nMet Dool, Primordial, Gutalax e.a.",
+    "image": "../public/location-images/zuiderpark",
+    "location": "zuiderpark"
+  },
+  {
+    "title": "Baroeg Open Air",
+    "start": "2024-09-14",
+    "eventLocationName": "zuiderpark",
+    "shortText": "\nMet Dool, Primordial, Gutalax e.a.",
+    "image": "../public/location-images/zuiderpark",
+    "location": "zuiderpark"
+  },
+  {
+    "title": "Heilung en Zeal & Ardor",
+    "start": "2024-09-15",
+    "eventLocationName": "lotto arena",
+    "shortText": "Lotto Arena, Antwerpen (België)",
+    "image": "../public/location-images/lottoarena",
+    "location": "lottoarena"
+  },
+  {
+    "title": "Heilung en Zeal & Ardor",
+    "start": "2024-09-15",
+    "eventLocationName": "lotto arena",
+    "shortText": "Lotto Arena, Antwerpen (België)",
+    "image": "../public/location-images/lottoarena",
+    "location": "lottoarena"
+  },
+  {
+    "title": "Tarja, Marko Hietala en Chaoseum",
+    "start": "2024-09-16",
+    "eventLocationName": "oosterpoort",
+    "shortText": "Oosterpoort, Groningen",
+    "image": "../public/location-images/oosterpoort",
+    "location": "oosterpoort"
+  },
+  {
+    "title": "Tarja, Marko Hietala en Chaoseum",
+    "start": "2024-09-16",
+    "eventLocationName": "oosterpoort",
+    "shortText": "Oosterpoort, Groningen",
+    "image": "../public/location-images/oosterpoort",
+    "location": "oosterpoort"
+  },
+  {
+    "title": "Tarja, Marko Hietala en Chaoseum",
+    "start": "2024-09-17",
+    "eventLocationName": "tivolivredenburg",
+    "shortText": "TivoliVredenburg, Utrecht",
+    "image": "../public/location-images/tivolivredenburg",
+    "location": "tivolivredenburg"
+  },
+  {
+    "title": "Haken",
+    "start": "2024-09-17",
+    "eventLocationName": "muziekgebouw",
+    "shortText": "Muziekgebouw, Eindhoven",
+    "image": "../public/location-images/muziekgebouw",
+    "location": "muziekgebouw"
+  },
+  {
+    "title": "Haken",
+    "start": "2024-09-17",
+    "eventLocationName": "muziekgebouw",
+    "shortText": "Muziekgebouw, Eindhoven",
+    "image": "../public/location-images/muziekgebouw",
+    "location": "muziekgebouw"
+  },
+  {
+    "title": "Epica & Orchestra",
+    "start": "2024-09-19",
+    "eventLocationName": "afas live",
+    "shortText": "AFAS Live, Amsterdam",
+    "image": "../public/location-images/afaslive",
+    "location": "afaslive"
+  },
+  {
+    "title": "Epica & Orchestra",
+    "start": "2024-09-19",
+    "eventLocationName": "afas live",
+    "shortText": "AFAS Live, Amsterdam",
+    "image": "../public/location-images/afaslive",
+    "location": "afaslive"
+  },
+  {
+    "title": "Schirenc Plays Pungent Stench en Bodyfarm",
+    "start": "2024-09-20",
+    "eventLocationName": "nobel",
+    "shortText": "Nobel, Leiden",
+    "image": "../public/location-images/nobel",
+    "location": "nobel"
+  },
+  {
+    "title": "Epica & Orchestra",
+    "start": "2024-09-20",
+    "eventLocationName": "afas live",
+    "shortText": "AFAS Live, Amsterdam",
+    "image": "../public/location-images/afaslive",
+    "location": "afaslive"
+  },
+  {
+    "title": "Epica & Orchestra",
+    "start": "2024-09-20",
+    "eventLocationName": "afas live",
+    "shortText": "AFAS Live, Amsterdam",
+    "image": "../public/location-images/afaslive",
+    "location": "afaslive"
+  },
+  {
+    "title": "Within Temptation",
+    "start": "2024-09-21",
+    "eventLocationName": "013",
+    "shortText": "013, Tilburg",
+    "image": "../public/location-images/013",
+    "location": "013"
+  },
+  {
+    "title": "Schirenc Plays Pungent Stench, Bodyfarm, Haliphron en Dead Man's Walk",
+    "start": "2024-09-21",
+    "eventLocationName": "willemeen",
+    "shortText": "Willemeen, Arnhem",
+    "image": "../public/location-images/willemeen",
+    "location": "willemeen"
+  },
+  {
+    "title": "Heilung en Zeal & Ardor",
+    "start": "2024-09-21",
+    "eventLocationName": "afas live",
+    "shortText": "AFAS Live, Amsterdam",
+    "image": "../public/location-images/afaslive",
+    "location": "afaslive"
+  },
+  {
+    "title": "Cannibal Corpse, Municipal Waste, Immolation en Schizophrenia",
+    "start": "2024-09-21",
+    "eventLocationName": "doornroosje",
+    "shortText": "Doornroosje, Nijmegen",
+    "image": "../public/location-images/doornroosje",
+    "location": "doornroosje"
+  },
+  {
+    "title": "Agriculture",
+    "start": "2024-09-21",
+    "eventLocationName": "stroomhuis",
+    "shortText": "Stroomhuis, Eindhoven",
+    "image": "../public/location-images/stroomhuis",
+    "location": "stroomhuis"
+  },
+  {
+    "title": "Agriculture",
+    "start": "2024-09-21",
+    "eventLocationName": "stroomhuis",
+    "shortText": "Stroomhuis, Eindhoven",
+    "image": "../public/location-images/stroomhuis",
+    "location": "stroomhuis"
+  },
+  {
+    "start": "2024-09-22T19:00:00",
+    "venueEventUrl": "https://neushoorn.nl/production/nh-cafe-father-befouled-bra-fossilization-usa-stoflik-omskot-frl/",
+    "title": "NH Café: Fossilization (BRA) ",
+    "location": "neushoorn",
+    "price": null,
+    "shortText": " Father Befouled (USA)  +  Stoflik Omskot (FRL) Underground death metal meesters",
+    "longText": "../public/texts/neushoorn/emF0aW9uLXVzYS1zdG9mbGlrLW9tc2tvdC1mcmwv.html",
+    "image": "../public/event-images/neushoorn/emF0aW9uLXVzYS1zdG9mbGlrLW9tc2tvdC1mcmwv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": null
   },
   {
-    "start": "2024-09-14T20:00:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/no-barrier-14-09-2024/",
-    "title": "No Barrier",
-    "location": "melkweg",
-    "price": 15.55,
-    "shortText": "punk · rock · metalcore Punk, rock & metalcore party met DJ's en liveband",
-    "longText": "../public/texts/melkweg/L2FnZW5kYS9uby1iYXJyaWVyLTE0LTA5LTIwMjQv.html",
-    "image": "../public/event-images/melkweg/L2FnZW5kYS9uby1iYXJyaWVyLTE0LTA5LTIwMjQv",
+    "title": "Within Temptation en Green Lizard",
+    "start": "2024-09-22",
+    "eventLocationName": "oosterpoort",
+    "shortText": "Oosterpoort, Groningen",
+    "image": "../public/location-images/oosterpoort",
+    "location": "oosterpoort"
+  },
+  {
+    "title": "Veil Of Maya, Signs Of The Swarm, Varials en To The Grave",
+    "start": "2024-09-22",
+    "eventLocationName": "013",
+    "shortText": "013, Tilburg",
+    "image": "../public/location-images/013",
+    "location": "013"
+  },
+  {
+    "title": "One Last Night",
+    "start": "2024-09-22",
+    "eventLocationName": "013",
+    "shortText": "013, Tilburg",
+    "image": "../public/location-images/013",
+    "location": "013"
+  },
+  {
+    "title": "One Last Night",
+    "start": "2024-09-22",
+    "eventLocationName": "013",
+    "shortText": "013, Tilburg",
+    "image": "../public/location-images/013",
+    "location": "013"
+  },
+  {
+    "title": "Sonata Arctica, Firewind en Serious Black",
+    "start": "2024-09-24",
+    "eventLocationName": "tivolivredenburg",
+    "shortText": "TivoliVredenburg, Utrecht",
+    "image": "../public/location-images/tivolivredenburg",
+    "location": "tivolivredenburg"
+  },
+  {
+    "title": "Battle Beast",
+    "start": "2024-09-24",
+    "eventLocationName": "patronaat",
+    "shortText": "Patronaat, Haarlem",
+    "image": "../public/location-images/patronaat",
+    "location": "patronaat"
+  },
+  {
+    "title": "Battle Beast",
+    "start": "2024-09-24",
+    "eventLocationName": "patronaat",
+    "shortText": "Patronaat, Haarlem",
+    "image": "../public/location-images/patronaat",
+    "location": "patronaat"
+  },
+  {
+    "title": "Sonata Arctica, Firewind en Serious Black",
+    "start": "2024-09-25",
+    "eventLocationName": "013",
+    "shortText": "013, Tilburg",
+    "image": "../public/location-images/013",
+    "location": "013"
+  },
+  {
+    "title": "Sonata Arctica, Firewind en Serious Black",
+    "start": "2024-09-25",
+    "eventLocationName": "013",
+    "shortText": "013, Tilburg",
+    "image": "../public/location-images/013",
+    "location": "013"
+  },
+  {
+    "start": "2024-09-26T19:30:00",
+    "venueEventUrl": "https://neushoorn.nl/production/orphaned-land/",
+    "title": "Orphaned Land",
+    "location": "neushoorn",
+    "price": 24,
+    "shortText": "De pioniers van Oosterse metal",
+    "longText": "../public/texts/neushoorn/bi5ubC9wcm9kdWN0aW9uL29ycGhhbmVkLWxhbmQv.html",
+    "image": "../public/event-images/neushoorn/bi5ubC9wcm9kdWN0aW9uL29ycGhhbmVkLWxhbmQv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "no barrier": {
-        "s": "2am0pROxk0wcIVgL5rZA3A",
-        "l": "no%20barrier",
-        "g": []
-      }
-    }
-  },
-  {
-    "start": "2024-09-21T20:00:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/cobra-the-impaler-21-09-2024/",
-    "title": "Cobra the impaler",
-    "location": "melkweg",
-    "price": 17.25,
-    "shortText": "metal · progressieve metal · heavy metal",
-    "longText": "../public/texts/melkweg/L2NvYnJhLXRoZS1pbXBhbGVyLTIxLTA5LTIwMjQv.html",
-    "image": "../public/event-images/melkweg/L2NvYnJhLXRoZS1pbXBhbGVyLTIxLTA5LTIwMjQv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
-    "start": "2024-09-27T20:00:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/tusky-27-09-2024/",
-    "title": "Tusky",
-    "location": "melkweg",
-    "price": 17.25,
-    "shortText": "punk · anarchistisch",
-    "longText": "../public/texts/melkweg/bmwvbmwvYWdlbmRhL3R1c2t5LTI3LTA5LTIwMjQv.html",
-    "image": "../public/event-images/melkweg/bmwvbmwvYWdlbmRhL3R1c2t5LTI3LTA5LTIwMjQv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "tusky": {
-        "s": "6XbZ8G0cFqSgUL4FmtiSPr",
-        "l": "tusky",
+      "orphaned land": {
+        "s": "7xTMxqAmbtE0Nce5lz7t0h",
+        "l": "orphaned%20land",
         "g": [
-          "dutch punk",
-          "dutch rock"
+          "christian power metal",
+          "folk metal",
+          "israeli metal",
+          "oriental metal"
         ]
       }
     }
   },
   {
-    "start": "2024-09-29T20:00:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/boysetsfire-29-09-2024/",
-    "title": "Boysetsfire",
-    "location": "melkweg",
-    "price": 23,
-    "shortText": "posthardcore · emo · punk · rock",
-    "longText": "../public/texts/melkweg/YWdlbmRhL2JveXNldHNmaXJlLTI5LTA5LTIwMjQv.html",
-    "image": "../public/event-images/melkweg/YWdlbmRhL2JveXNldHNmaXJlLTI5LTA5LTIwMjQv",
+    "title": "Apocalyptica",
+    "start": "2024-09-27",
+    "eventLocationName": "013",
+    "shortText": "013, Tilburg",
+    "image": "../public/location-images/013",
+    "location": "013"
+  },
+  {
+    "title": "Apocalyptica",
+    "start": "2024-09-27",
+    "eventLocationName": "013",
+    "shortText": "013, Tilburg",
+    "image": "../public/location-images/013",
+    "location": "013"
+  },
+  {
+    "title": "Guano Apes",
+    "start": "2024-09-28",
+    "eventLocationName": "tivolivredenburg",
+    "shortText": "TivoliVredenburg, Utrecht",
+    "image": "../public/location-images/tivolivredenburg",
+    "location": "tivolivredenburg"
+  },
+  {
+    "title": "Guano Apes",
+    "start": "2024-09-28",
+    "eventLocationName": "tivolivredenburg",
+    "shortText": "TivoliVredenburg, Utrecht",
+    "image": "../public/location-images/tivolivredenburg",
+    "location": "tivolivredenburg"
+  },
+  {
+    "title": "Boysetsfire en Strike Anywhere",
+    "start": "2024-09-29",
+    "eventLocationName": "melkweg",
+    "shortText": "Melkweg, Amsterdam",
+    "image": "../public/location-images/melkweg",
+    "location": "melkweg"
+  },
+  {
+    "title": "Boysetsfire en Strike Anywhere",
+    "start": "2024-09-29",
+    "eventLocationName": "melkweg",
+    "shortText": "Melkweg, Amsterdam",
+    "image": "../public/location-images/melkweg",
+    "location": "melkweg"
+  },
+  {
+    "title": "Visions Of Atlantis",
+    "start": "2024-10-01",
+    "eventLocationName": "patronaat",
+    "shortText": "Patronaat, Haarlem",
+    "image": "../public/location-images/patronaat",
+    "location": "patronaat"
+  },
+  {
+    "title": "Visions Of Atlantis",
+    "start": "2024-10-01",
+    "eventLocationName": "patronaat",
+    "shortText": "Patronaat, Haarlem",
+    "image": "../public/location-images/patronaat",
+    "location": "patronaat"
+  },
+  {
+    "title": "Visions Of Atlantis",
+    "start": "2024-10-02",
+    "eventLocationName": "013",
+    "shortText": "013, Tilburg",
+    "image": "../public/location-images/013",
+    "location": "013"
+  },
+  {
+    "title": "Visions Of Atlantis",
+    "start": "2024-10-02",
+    "eventLocationName": "013",
+    "shortText": "013, Tilburg",
+    "image": "../public/location-images/013",
+    "location": "013"
+  },
+  {
+    "title": "Within Temptation",
+    "start": "2024-10-04",
+    "eventLocationName": "lotto arena",
+    "shortText": "Lotto Arena, Antwerpen (België)",
+    "image": "../public/location-images/lottoarena",
+    "location": "lottoarena"
+  },
+  {
+    "title": "Soen",
+    "start": "2024-10-04",
+    "eventLocationName": "doornroosje",
+    "shortText": "Doornroosje, Nijmegen",
+    "image": "../public/location-images/doornroosje",
+    "location": "doornroosje"
+  },
+  {
+    "title": "Battle Beast, Serenity en Brymir",
+    "start": "2024-10-04",
+    "eventLocationName": "de pul",
+    "shortText": "De Pul, Uden",
+    "image": "../public/location-images/depul",
+    "location": "depul"
+  },
+  {
+    "title": "Battle Beast, Serenity en Brymir",
+    "start": "2024-10-04",
+    "eventLocationName": "de pul",
+    "shortText": "De Pul, Uden",
+    "image": "../public/location-images/depul",
+    "location": "depul"
+  },
+  {
+    "start": "2024-10-05T13:00:00",
+    "venueEventUrl": "https://neushoorn.nl/production/into-the-void/",
+    "title": "Into The Void",
+    "location": "neushoorn",
+    "price": 49,
+    "shortText": "Internationaal stoner-, sludge- en doomfestival",
+    "longText": "../public/texts/neushoorn/bi5ubC9wcm9kdWN0aW9uL2ludG8tdGhlLXZvaWQv.html",
+    "image": "../public/event-images/neushoorn/bi5ubC9wcm9kdWN0aW9uL2ludG8tdGhlLXZvaWQv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": null
   },
   {
-    "start": "2024-10-03T20:00:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/montreal-sondaschule-03-10-2024/",
-    "title": "Montreal / Sondaschule",
-    "location": "melkweg",
-    "price": 40.25,
-    "shortText": "punk · duits",
-    "longText": "../public/texts/melkweg/bnRyZWFsLXNvbmRhc2NodWxlLTAzLTEwLTIwMjQv.html",
-    "image": "../public/event-images/melkweg/bnRyZWFsLXNvbmRhc2NodWxlLTAzLTEwLTIwMjQv",
-    "soldOut": true,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": null
+    "title": "Within Temptation",
+    "start": "2024-10-05",
+    "eventLocationName": "lotto arena",
+    "shortText": "Lotto Arena, Antwerpen (België)",
+    "image": "../public/location-images/lottoarena",
+    "location": "lottoarena"
   },
   {
-    "start": "2024-10-05T20:00:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/imminence-05-10-2024/",
-    "title": "Imminence",
-    "location": "melkweg",
-    "price": 26.45,
-    "shortText": "metalcore The Black Tour",
-    "longText": "../public/texts/melkweg/bC9hZ2VuZGEvaW1taW5lbmNlLTA1LTEwLTIwMjQv.html",
-    "image": "../public/event-images/melkweg/bC9hZ2VuZGEvaW1taW5lbmNlLTA1LTEwLTIwMjQv",
+    "title": "Rise Or Die fest",
+    "start": "2024-10-05",
+    "eventLocationName": "nieuwe nor",
+    "shortText": "\nMet Born From Pain, Mindwar, Lies!, Hater, e.a.",
+    "image": "../public/location-images/nieuwenor",
+    "location": "nieuwenor"
+  },
+  {
+    "title": "Powerwolf, Hammerfall en Wind Rose",
+    "start": "2024-10-05",
+    "eventLocationName": "afas live",
+    "shortText": "AFAS Live, Amsterdam",
+    "image": "../public/location-images/afaslive",
+    "location": "afaslive"
+  },
+  {
+    "title": "Boysetsfire en Strike Anywhere",
+    "start": "2024-10-05",
+    "eventLocationName": "palladium",
+    "shortText": "Palladium, Keulen (Duitsland)",
+    "image": "../public/location-images/palladium",
+    "location": "palladium"
+  },
+  {
+    "title": "Boysetsfire en Strike Anywhere",
+    "start": "2024-10-05",
+    "eventLocationName": "palladium",
+    "shortText": "Palladium, Keulen (Duitsland)",
+    "image": "../public/location-images/palladium",
+    "location": "palladium"
+  },
+  {
+    "door": "2024-10-06T19:00:00",
+    "start": "2024-10-06T20:00:00",
+    "venueEventUrl": "https://metropool.nl/agenda/septicflesh/",
+    "title": "Septicflesh",
+    "location": "metropool",
+    "price": 40,
+    "shortText": "Support: Oceans + Scar of the Sun",
+    "longText": "../public/texts/metropool/dHJvcG9vbC5ubC9hZ2VuZGEvc2VwdGljZmxlc2gv.html",
+    "image": "../public/event-images/metropool/dHJvcG9vbC5ubC9hZ2VuZGEvc2VwdGljZmxlc2gv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": null
   },
   {
-    "start": "2024-10-08T20:00:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/dead-by-april-08-10-2024/",
-    "title": "Dead By April",
-    "location": "melkweg",
-    "price": 25.9,
-    "shortText": "metalcore · electronic · rock",
-    "longText": "../public/texts/melkweg/ZW5kYS9kZWFkLWJ5LWFwcmlsLTA4LTEwLTIwMjQv.html",
-    "image": "../public/event-images/melkweg/ZW5kYS9kZWFkLWJ5LWFwcmlsLTA4LTEwLTIwMjQv",
+    "title": "Powerwolf, Hammerfall en Wind Rose",
+    "start": "2024-10-06",
+    "eventLocationName": "lotto arena",
+    "shortText": "Lotto Arena, Antwerpen (België)",
+    "image": "../public/location-images/lottoarena",
+    "location": "lottoarena"
+  },
+  {
+    "title": "Powerwolf, Hammerfall en Wind Rose",
+    "start": "2024-10-06",
+    "eventLocationName": "lotto arena",
+    "shortText": "Lotto Arena, Antwerpen (België)",
+    "image": "../public/location-images/lottoarena",
+    "location": "lottoarena"
+  },
+  {
+    "title": "Ellende, Groza en Servant",
+    "start": "2024-10-07",
+    "eventLocationName": "willemeen",
+    "shortText": "Willemeen, Arnhem",
+    "image": "../public/location-images/willemeen",
+    "location": "willemeen"
+  },
+  {
+    "title": "Ellende, Groza en Servant",
+    "start": "2024-10-07",
+    "eventLocationName": "willemeen",
+    "shortText": "Willemeen, Arnhem",
+    "image": "../public/location-images/willemeen",
+    "location": "willemeen"
+  },
+  {
+    "title": "Rotting Christ, Borknagar en Seth",
+    "start": "2024-10-09",
+    "eventLocationName": "tivolivredenburg",
+    "shortText": "TivoliVredenburg, Utrecht",
+    "image": "../public/location-images/tivolivredenburg",
+    "location": "tivolivredenburg"
+  },
+  {
+    "title": "Rotting Christ, Borknagar en Seth",
+    "start": "2024-10-09",
+    "eventLocationName": "tivolivredenburg",
+    "shortText": "TivoliVredenburg, Utrecht",
+    "image": "../public/location-images/tivolivredenburg",
+    "location": "tivolivredenburg"
+  },
+  {
+    "title": "Kamelot, Charlotte Wessels en Ad Infinitum",
+    "start": "2024-10-11",
+    "eventLocationName": "iduna",
+    "shortText": "Iduna, Drachten",
+    "image": "../public/location-images/iduna",
+    "location": "iduna"
+  },
+  {
+    "title": "Kamelot, Charlotte Wessels en Ad Infinitum",
+    "start": "2024-10-11",
+    "eventLocationName": "iduna",
+    "shortText": "Iduna, Drachten",
+    "image": "../public/location-images/iduna",
+    "location": "iduna"
+  },
+  {
+    "title": "Kamelot, Ad Infinitum, Blackbriar en Frozen Crown",
+    "start": "2024-10-12",
+    "eventLocationName": "tivolivredenburg",
+    "shortText": "TivoliVredenburg, Utrecht",
+    "image": "../public/location-images/tivolivredenburg",
+    "location": "tivolivredenburg"
+  },
+  {
+    "title": "Kamelot, Ad Infinitum, Blackbriar en Frozen Crown",
+    "start": "2024-10-12",
+    "eventLocationName": "tivolivredenburg",
+    "shortText": "TivoliVredenburg, Utrecht",
+    "image": "../public/location-images/tivolivredenburg",
+    "location": "tivolivredenburg"
+  },
+  {
+    "title": "Morgarten en Neverus",
+    "start": "2024-10-13",
+    "eventLocationName": "patronaat",
+    "shortText": "Patronaat, Haarlem",
+    "image": "../public/location-images/patronaat",
+    "location": "patronaat"
+  },
+  {
+    "title": "Arch Enemy, In Flames en Soilwork",
+    "start": "2024-10-13",
+    "eventLocationName": "mainstage",
+    "shortText": "Mainstage, Den Bosch",
+    "image": "../public/location-images/mainstage",
+    "location": "mainstage"
+  },
+  {
+    "title": "Arch Enemy, In Flames en Soilwork",
+    "start": "2024-10-13",
+    "eventLocationName": "mainstage",
+    "shortText": "Mainstage, Den Bosch",
+    "image": "../public/location-images/mainstage",
+    "location": "mainstage"
+  },
+  {
+    "title": "Y&T",
+    "start": "2024-10-15",
+    "eventLocationName": "nieuwe nor",
+    "shortText": "Nieuwe Nor, Heerlen",
+    "image": "../public/location-images/nieuwenor",
+    "location": "nieuwenor"
+  },
+  {
+    "title": "Godspeed You! Black Emperor",
+    "start": "2024-10-15",
+    "eventLocationName": "paradiso",
+    "shortText": "Paradiso, Amsterdam",
+    "image": "../public/location-images/paradiso",
+    "location": "paradiso"
+  },
+  {
+    "title": "Eleine",
+    "start": "2024-10-15",
+    "eventLocationName": "dvg",
+    "shortText": "DVG, Kortrijk (België)",
+    "image": "../public/location-images/dvg",
+    "location": "dvg"
+  },
+  {
+    "title": "Eleine",
+    "start": "2024-10-15",
+    "eventLocationName": "dvg",
+    "shortText": "DVG, Kortrijk (België)",
+    "image": "../public/location-images/dvg",
+    "location": "dvg"
+  },
+  {
+    "title": "Eleine",
+    "start": "2024-10-17",
+    "eventLocationName": "iduna",
+    "shortText": "Iduna, Drachten",
+    "image": "../public/location-images/iduna",
+    "location": "iduna"
+  },
+  {
+    "title": "Eleine",
+    "start": "2024-10-17",
+    "eventLocationName": "iduna",
+    "shortText": "Iduna, Drachten",
+    "image": "../public/location-images/iduna",
+    "location": "iduna"
+  },
+  {
+    "title": "Voyager",
+    "start": "2024-10-18",
+    "eventLocationName": "boerderij",
+    "shortText": "Boerderij, Zoetermeer",
+    "image": "../public/location-images/boerderij",
+    "location": "boerderij"
+  },
+  {
+    "title": "Monster Magnet",
+    "start": "2024-10-18",
+    "eventLocationName": "doornroosje",
+    "shortText": "Doornroosje, Nijmegen",
+    "image": "../public/location-images/doornroosje",
+    "location": "doornroosje"
+  },
+  {
+    "title": "Heavy Metal Maniacs festival",
+    "start": "2024-10-18",
+    "eventLocationName": "p60",
+    "shortText": "P60, Amstelveen",
+    "image": "../public/location-images/p60",
+    "location": "p60"
+  },
+  {
+    "title": "Heavy Metal Maniacs festival",
+    "start": "2024-10-18",
+    "eventLocationName": "p60",
+    "shortText": "P60, Amstelveen",
+    "image": "../public/location-images/p60",
+    "location": "p60"
+  },
+  {
+    "title": "Voyager",
+    "start": "2024-10-19",
+    "eventLocationName": "013",
+    "shortText": "013, Tilburg",
+    "image": "../public/location-images/013",
+    "location": "013"
+  },
+  {
+    "title": "Threshold",
+    "start": "2024-10-19",
+    "eventLocationName": "cacaofabriek",
+    "shortText": "Cacaofabriek, Helmond",
+    "image": "../public/location-images/cacaofabriek",
+    "location": "cacaofabriek"
+  },
+  {
+    "title": "The Gems",
+    "start": "2024-10-19",
+    "eventLocationName": "de pul",
+    "shortText": "De Pul, Uden",
+    "image": "../public/location-images/depul",
+    "location": "depul"
+  },
+  {
+    "title": "The Gems",
+    "start": "2024-10-19",
+    "eventLocationName": "de pul",
+    "shortText": "De Pul, Uden",
+    "image": "../public/location-images/depul",
+    "location": "depul"
+  },
+  {
+    "start": "2024-10-26T14:30:00",
+    "venueEventUrl": "https://neushoorn.nl/production/fajtfest-fryslan/",
+    "title": "Fajtfest Fryslân",
+    "location": "neushoorn",
+    "price": null,
+    "shortText": "Hang Youth e.v.a.",
+    "longText": "../public/texts/neushoorn/bC9wcm9kdWN0aW9uL2ZhanRmZXN0LWZyeXNsYW4v.html",
+    "image": "../public/event-images/neushoorn/bC9wcm9kdWN0aW9uL2ZhanRmZXN0LWZyeXNsYW4v",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": null
   },
   {
-    "start": "2024-10-24T20:00:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/starset-24-10-2024/",
-    "title": "Starset",
-    "location": "melkweg",
-    "price": 28.75,
-    "shortText": "alternative rock · electronic · hardrock Immersion - The Final Chapter",
-    "longText": "../public/texts/melkweg/L25sL2FnZW5kYS9zdGFyc2V0LTI0LTEwLTIwMjQv.html",
-    "image": "../public/event-images/melkweg/L25sL2FnZW5kYS9zdGFyc2V0LTI0LTEwLTIwMjQv",
+    "door": "2024-10-26T14:00:00",
+    "start": "2024-10-26T15:00:00",
+    "venueEventUrl": "https://metropool.nl/agenda/beerland-festival-2024/",
+    "title": "Beerland Festival",
+    "location": "metropool",
+    "price": 42.5,
+    "shortText": "",
+    "longText": "../public/texts/metropool/YWdlbmRhL2JlZXJsYW5kLWZlc3RpdmFsLTIwMjQv.html",
+    "image": "../public/event-images/metropool/YWdlbmRhL2JlZXJsYW5kLWZlc3RpdmFsLTIwMjQv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": null
   },
   {
-    "start": "2024-10-31T20:00:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/master-boot-record-31-10-2024/",
-    "title": "Master Boot Record",
-    "location": "melkweg",
-    "price": 18.4,
-    "shortText": "avant-garde · heavy metal · synthwave",
-    "longText": "../public/texts/melkweg/bWFzdGVyLWJvb3QtcmVjb3JkLTMxLTEwLTIwMjQv.html",
-    "image": "../public/event-images/melkweg/bWFzdGVyLWJvb3QtcmVjb3JkLTMxLTEwLTIwMjQv",
+    "title": "Samhain festival",
+    "start": "2024-10-26",
+    "eventLocationName": "muziekgieterij",
+    "shortText": "\nMet Amenra, Cult Of Fire, Uada e.v.a.",
+    "image": "../public/location-images/muziekgieterij",
+    "location": "muziekgieterij"
+  },
+  {
+    "title": "Lazuli",
+    "start": "2024-10-26",
+    "eventLocationName": "boerderij",
+    "shortText": "Boerderij, Zoetermeer",
+    "image": "../public/location-images/boerderij",
+    "location": "boerderij"
+  },
+  {
+    "title": "Lazuli",
+    "start": "2024-10-26",
+    "eventLocationName": "boerderij",
+    "shortText": "Boerderij, Zoetermeer",
+    "image": "../public/location-images/boerderij",
+    "location": "boerderij"
+  },
+  {
+    "door": "2024-10-27T19:00:00",
+    "start": "2024-10-27T19:30:00",
+    "venueEventUrl": "https://metropool.nl/agenda/kissin-dynamite-enschede/",
+    "title": "Kissin' Dynamite",
+    "location": "metropool",
+    "price": 30.5,
+    "shortText": "Support: Massive Wagons en Airstrike",
+    "longText": "../public/texts/metropool/ZW5kYS9raXNzaW4tZHluYW1pdGUtZW5zY2hlZGUv.html",
+    "image": "../public/event-images/metropool/ZW5kYS9raXNzaW4tZHluYW1pdGUtZW5zY2hlZGUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "title": "Kamelot, Ad Infinitum, Blackbriar en Frozen Crown",
+    "start": "2024-10-30",
+    "eventLocationName": "trix",
+    "shortText": "Trix, Antwerpen (België)",
+    "image": "../public/location-images/trix",
+    "location": "trix"
+  },
+  {
+    "title": "Kamelot, Ad Infinitum, Blackbriar en Frozen Crown",
+    "start": "2024-10-30",
+    "eventLocationName": "trix",
+    "shortText": "Trix, Antwerpen (België)",
+    "image": "../public/location-images/trix",
+    "location": "trix"
+  },
+  {
+    "title": "Beartooth",
+    "start": "2024-10-31",
+    "eventLocationName": "013",
+    "shortText": "013, Tilburg",
+    "image": "../public/location-images/013",
+    "location": "013"
+  },
+  {
+    "title": "Beartooth",
+    "start": "2024-10-31",
+    "eventLocationName": "013",
+    "shortText": "013, Tilburg",
+    "image": "../public/location-images/013",
+    "location": "013"
+  },
+  {
+    "door": "2024-11-01T19:30:00",
+    "start": "2024-11-01T20:30:00",
+    "venueEventUrl": "https://metropool.nl/agenda/the-dead-daisies-enschede/",
+    "title": "The Dead Daisies",
+    "location": "metropool",
+    "price": 41,
+    "shortText": "Support: Beasto Blanco + Mike Tramp",
+    "longText": "../public/texts/metropool/bmRhL3RoZS1kZWFkLWRhaXNpZXMtZW5zY2hlZGUv.html",
+    "image": "../public/event-images/metropool/bmRhL3RoZS1kZWFkLWRhaXNpZXMtZW5zY2hlZGUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "the dead daisies": {
+        "s": "6VDAPUov4yNDHyQlPqrpNH",
+        "l": "the%20dead%20daisies",
+        "g": [
+          "modern hard rock",
+          "nwocr"
+        ]
+      }
+    }
+  },
+  {
+    "title": "Kissin' Dynamite",
+    "start": "2024-11-01",
+    "eventLocationName": "trix",
+    "shortText": "Trix, Antwerpen (België)",
+    "image": "../public/location-images/trix",
+    "location": "trix"
+  },
+  {
+    "title": "Brainstorm festival",
+    "start": "2024-11-01",
+    "eventLocationName": "gigant",
+    "shortText": "\nMet Evergrey, Theocracy e.a.",
+    "image": "../public/location-images/gigant",
+    "location": "gigant"
+  },
+  {
+    "title": "Beartooth",
+    "start": "2024-11-01",
+    "eventLocationName": "013",
+    "shortText": "013, Tilburg",
+    "image": "../public/location-images/013",
+    "location": "013"
+  },
+  {
+    "title": "Beartooth",
+    "start": "2024-11-01",
+    "eventLocationName": "013",
+    "shortText": "013, Tilburg",
+    "image": "../public/location-images/013",
+    "location": "013"
+  },
+  {
+    "start": "2024-11-03T20:00:00",
+    "venueEventUrl": "https://neushoorn.nl/production/master-boot-record/",
+    "title": "Master boot record",
+    "location": "neushoorn",
+    "price": 18,
+    "shortText": "Zware metal riffs en elektronische beats met de retroklanken van vintage computers en chiptune muziek",
+    "longText": "../public/texts/neushoorn/cHJvZHVjdGlvbi9tYXN0ZXItYm9vdC1yZWNvcmQv.html",
+    "image": "../public/event-images/neushoorn/cHJvZHVjdGlvbi9tYXN0ZXItYm9vdC1yZWNvcmQv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
@@ -481,269 +2042,798 @@
     }
   },
   {
-    "start": "2024-11-06T20:00:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/smash-into-pieces-06-11-2024/",
+    "title": "Sepulfest",
+    "start": "2024-11-03",
+    "eventLocationName": "mainstage",
+    "shortText": "\nMet Sepultura, Jinjer, Obituary e.a.",
+    "image": "../public/location-images/mainstage",
+    "location": "mainstage"
+  },
+  {
+    "title": "Sepulfest",
+    "start": "2024-11-03",
+    "eventLocationName": "mainstage",
+    "shortText": "\nMet Sepultura, Jinjer, Obituary e.a.",
+    "image": "../public/location-images/mainstage",
+    "location": "mainstage"
+  },
+  {
     "title": "Smash Into Pieces",
-    "location": "melkweg",
-    "price": 26.45,
-    "shortText": "alternative rock · metal",
-    "longText": "../public/texts/melkweg/L3NtYXNoLWludG8tcGllY2VzLTA2LTExLTIwMjQv.html",
-    "image": "../public/event-images/melkweg/L3NtYXNoLWludG8tcGllY2VzLTA2LTExLTIwMjQv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "smash into pieces": {
-        "s": "2vhrwzjf9H3icunkVFi9tq",
-        "l": "smash%20into%20pieces",
-        "g": [
-          "swedish alternative rock"
-        ]
-      }
-    }
+    "start": "2024-11-06",
+    "eventLocationName": "melkweg",
+    "shortText": "Melkweg, Amsterdam ",
+    "image": "../public/location-images/melkweg",
+    "location": "melkweg"
   },
   {
+    "title": "Dark Tranquillity, Moonspell, Wolfheart en Hiraes",
+    "start": "2024-11-06",
+    "eventLocationName": "effenaar",
+    "shortText": "Effenaar, Eindhoven",
+    "image": "../public/location-images/effenaar",
+    "location": "effenaar"
+  },
+  {
+    "title": "Dark Tranquillity, Moonspell, Wolfheart en Hiraes",
+    "start": "2024-11-06",
+    "eventLocationName": "effenaar",
+    "shortText": "Effenaar, Eindhoven",
+    "image": "../public/location-images/effenaar",
+    "location": "effenaar"
+  },
+  {
+    "title": "Smash into Pieces",
+    "start": "2024-11-07",
+    "eventLocationName": "effenaar",
+    "shortText": "Effenaar, Eindhoven",
+    "image": "../public/location-images/effenaar",
+    "location": "effenaar"
+  },
+  {
+    "title": "Smash into Pieces",
+    "start": "2024-11-07",
+    "eventLocationName": "effenaar",
+    "shortText": "Effenaar, Eindhoven",
+    "image": "../public/location-images/effenaar",
+    "location": "effenaar"
+  },
+  {
+    "door": "2024-11-08T19:30:00",
     "start": "2024-11-08T20:00:00",
-    "venueEventUrl": "https://www.littledevil.nl/calendar/superbloom-dear-seattle/",
-    "title": "Superbloom + Dear Seattle",
-    "location": "littledevil",
-    "price": 16.5,
-    "shortText": "rock - grunge",
-    "longText": "../public/texts/littledevil/ZW5kYXIvc3VwZXJibG9vbS1kZWFyLXNlYXR0bGUv.html",
-    "image": "../public/event-images/littledevil/ZW5kYXIvc3VwZXJibG9vbS1kZWFyLXNlYXR0bGUv",
+    "venueEventUrl": "https://metropool.nl/agenda/draconian-enschede/",
+    "title": "Draconian",
+    "location": "metropool",
+    "price": 30.5,
+    "shortText": "Support: Nailed To Obscurity + Fragment Soul",
+    "longText": "../public/texts/metropool/Lm5sL2FnZW5kYS9kcmFjb25pYW4tZW5zY2hlZGUv.html",
+    "image": "../public/event-images/metropool/Lm5sL2FnZW5kYS9kcmFjb25pYW4tZW5zY2hlZGUv",
     "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2024-11-08T19:30:00",
+    "start": "2024-11-08T20:30:00",
+    "venueEventUrl": "https://metropool.nl/agenda/the-iron-maidens/",
+    "title": "The iron maidens",
+    "location": "metropool",
+    "price": 34,
+    "shortText": "",
+    "longText": "../public/texts/metropool/b2wubmwvYWdlbmRhL3RoZS1pcm9uLW1haWRlbnMv.html",
+    "image": "../public/event-images/metropool/b2wubmwvYWdlbmRhL3RoZS1pcm9uLW1haWRlbnMv",
+    "soldOut": false,
+    "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "superbloom": {
-        "s": "3xdggitmc1vFAChxAwhIIL",
-        "l": "superbloom",
+      "the iron maidens": {
+        "s": null,
+        "l": null,
         "g": [
-          "grungegaze"
+          "heavy metal"
         ]
       }
     }
   },
   {
-    "start": "2024-11-09T20:00:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/hot-water-music-09-11-2024/",
-    "title": "Hot Water Music",
-    "location": "melkweg",
-    "price": 28.75,
-    "shortText": "posthardcore · punk 30-year anniversary",
-    "longText": "../public/texts/melkweg/ZGEvaG90LXdhdGVyLW11c2ljLTA5LTExLTIwMjQv.html",
-    "image": "../public/event-images/melkweg/ZGEvaG90LXdhdGVyLW11c2ljLTA5LTExLTIwMjQv",
+    "title": "Guilt Trip, Foreign Hands en sorcerer",
+    "start": "2024-11-08",
+    "eventLocationName": "hall of fame",
+    "shortText": "Hall Of Fame, Tilburg",
+    "image": "../public/location-images/halloffame",
+    "location": "halloffame"
+  },
+  {
+    "title": "Guilt Trip, Foreign Hands en sorcerer",
+    "start": "2024-11-08",
+    "eventLocationName": "hall of fame",
+    "shortText": "Hall Of Fame, Tilburg",
+    "image": "../public/location-images/halloffame",
+    "location": "halloffame"
+  },
+  {
+    "title": "Hell's Balls festival",
+    "start": "2024-11-09",
+    "eventLocationName": "xpo",
+    "shortText": "\nmet Dark Tranquillity, Moonspell, e.a.",
+    "image": "../public/location-images/xpo",
+    "location": "xpo"
+  },
+  {
+    "title": "Hell's Balls festival",
+    "start": "2024-11-09",
+    "eventLocationName": "xpo",
+    "shortText": "\nmet Dark Tranquillity, Moonspell, e.a.",
+    "image": "../public/location-images/xpo",
+    "location": "xpo"
+  },
+  {
+    "title": "Sólstafir, Oranssi Pazuzu en Hamferð",
+    "start": "2024-11-13",
+    "eventLocationName": "oosterpoort",
+    "shortText": "Oosterpoort, Groningen",
+    "image": "../public/location-images/oosterpoort",
+    "location": "oosterpoort"
+  },
+  {
+    "title": "Sólstafir, Oranssi Pazuzu en Hamferð",
+    "start": "2024-11-13",
+    "eventLocationName": "oosterpoort",
+    "shortText": "Oosterpoort, Groningen",
+    "image": "../public/location-images/oosterpoort",
+    "location": "oosterpoort"
+  },
+  {
+    "title": "Sólstafir, Oranssi Pazuzu en Hamferð",
+    "start": "2024-11-14",
+    "eventLocationName": "doornroosje",
+    "shortText": "Doornroosje, Nijmegen",
+    "image": "../public/location-images/doornroosje",
+    "location": "doornroosje"
+  },
+  {
+    "title": "Sólstafir, Oranssi Pazuzu en Hamferð",
+    "start": "2024-11-14",
+    "eventLocationName": "doornroosje",
+    "shortText": "Doornroosje, Nijmegen",
+    "image": "../public/location-images/doornroosje",
+    "location": "doornroosje"
+  },
+  {
+    "start": "2024-11-15T20:00:00",
+    "venueEventUrl": "https://neushoorn.nl/production/acindc-twisted-sisters/",
+    "title": "ACinDC + Twisted Sisters",
+    "location": "neushoorn",
+    "price": 19,
+    "shortText": "pure rock 'n roll op de planken",
+    "longText": "../public/texts/neushoorn/dWN0aW9uL2FjaW5kYy10d2lzdGVkLXNpc3RlcnMv.html",
+    "image": "../public/event-images/neushoorn/dWN0aW9uL2FjaW5kYy10d2lzdGVkLXNpc3RlcnMv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "hot water music": {
-        "s": "4dmaYARGTCpChLhHBdr3ff",
-        "l": "hot%20water%20music",
+      "acindc": {
+        "s": null,
+        "l": "acindc",
         "g": [
-          "emo",
-          "folk punk",
-          "melodic hardcore",
-          "orgcore",
-          "skate punk"
+          "hard rock"
         ]
-      }
-    }
-  },
-  {
-    "start": "2024-11-17T20:00:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/zeke-17-11-2024/",
-    "title": "Zeke",
-    "location": "melkweg",
-    "price": 20.7,
-    "shortText": "hardcore punk",
-    "longText": "../public/texts/melkweg/Lm5sL25sL2FnZW5kYS96ZWtlLTE3LTExLTIwMjQv.html",
-    "image": "../public/event-images/melkweg/Lm5sL25sL2FnZW5kYS96ZWtlLTE3LTExLTIwMjQv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
-    "start": "2024-11-24T20:00:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/hardcore-superstar-wednesday-13-24-11-2024/",
-    "title": "Hardcore Superstar / Wednesday 13",
-    "location": "melkweg",
-    "price": 31.05,
-    "shortText": "glamrock · metal · horror",
-    "longText": "../public/texts/melkweg/cnN0YXItd2VkbmVzZGF5LTEzLTI0LTExLTIwMjQv.html",
-    "image": "../public/event-images/melkweg/cnN0YXItd2VkbmVzZGF5LTEzLTI0LTExLTIwMjQv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
-    "start": "2024-11-26T20:00:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/the-damned-26-11-2024/",
-    "title": "The Damned",
-    "location": "melkweg",
-    "price": 35.65,
-    "shortText": "punkrock · 80's",
-    "longText": "../public/texts/melkweg/L2FnZW5kYS90aGUtZGFtbmVkLTI2LTExLTIwMjQv.html",
-    "image": "../public/event-images/melkweg/L2FnZW5kYS90aGUtZGFtbmVkLTI2LTExLTIwMjQv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
-    "start": "2024-12-04T20:00:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/dayseeker-04-12-2024/",
-    "title": "Dayseeker",
-    "location": "melkweg",
-    "price": 25.3,
-    "shortText": "metalcore · posthardcore",
-    "longText": "../public/texts/melkweg/bC9hZ2VuZGEvZGF5c2Vla2VyLTA0LTEyLTIwMjQv.html",
-    "image": "../public/event-images/melkweg/bC9hZ2VuZGEvZGF5c2Vla2VyLTA0LTEyLTIwMjQv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
-    "start": "2024-12-05T20:00:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/letz-zep-05-12-2024/",
-    "title": "Letz Zep",
-    "location": "melkweg",
-    "price": 23,
-    "shortText": "heavy",
-    "longText": "../public/texts/melkweg/bmwvYWdlbmRhL2xldHotemVwLTA1LTEyLTIwMjQv.html",
-    "image": "../public/event-images/melkweg/bmwvYWdlbmRhL2xldHotemVwLTA1LTEyLTIwMjQv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
-    "start": "2024-12-06T20:00:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/royal-republic-06-12-2024/",
-    "title": "Royal Republic",
-    "location": "melkweg",
-    "price": 34.5,
-    "shortText": "hardrock · disco · rock-‘n-roll",
-    "longText": "../public/texts/melkweg/bmRhL3JveWFsLXJlcHVibGljLTA2LTEyLTIwMjQv.html",
-    "image": "../public/event-images/melkweg/bmRhL3JveWFsLXJlcHVibGljLTA2LTEyLTIwMjQv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
-    "start": "2024-12-07T20:00:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/royal-republic-07-12-2024/",
-    "title": "Royal Republic",
-    "location": "melkweg",
-    "price": 34.5,
-    "shortText": "hardrock · disco · rock-‘n-roll",
-    "longText": "../public/texts/melkweg/bmRhL3JveWFsLXJlcHVibGljLTA3LTEyLTIwMjQv.html",
-    "image": "../public/event-images/melkweg/bmRhL3JveWFsLXJlcHVibGljLTA3LTEyLTIwMjQv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
-    "start": "2024-12-11T20:00:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/as-i-lay-dying-11-12-2024/",
-    "title": "As I Lay Dying",
-    "location": "melkweg",
-    "price": 41.4,
-    "shortText": "metalcore · deathcore · heavy THROUGH STORMS AHEAD EUROPE 2024",
-    "longText": "../public/texts/melkweg/bmRhL2FzLWktbGF5LWR5aW5nLTExLTEyLTIwMjQv.html",
-    "image": "../public/event-images/melkweg/bmRhL2FzLWktbGF5LWR5aW5nLTExLTEyLTIwMjQv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
-    "start": "2024-12-15T20:00:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/new-model-army-15-12-2024/",
-    "title": "New Model Army",
-    "location": "melkweg",
-    "price": 31.05,
-    "shortText": "rock · postpunk",
-    "longText": "../public/texts/melkweg/bmRhL25ldy1tb2RlbC1hcm15LTE1LTEyLTIwMjQv.html",
-    "image": "../public/event-images/melkweg/bmRhL25ldy1tb2RlbC1hcm15LTE1LTEyLTIwMjQv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "new model army": {
-        "s": "7n1EM42Fseebd9H2p8eWWS",
-        "l": "new%20model%20army",
+      },
+      "twisted sisters": {
+        "s": "2PmPXmoXfMnbuX4YDjz4gq",
+        "l": "twisted%20sisters",
         "g": []
       }
     }
   },
   {
-    "start": "2024-12-19T20:00:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/dool-19-12-2024/",
-    "title": "Dool",
-    "location": "melkweg",
-    "price": 25.3,
-    "shortText": "progressieve rock · metal · postrock",
-    "longText": "../public/texts/melkweg/Lm5sL25sL2FnZW5kYS9kb29sLTE5LTEyLTIwMjQv.html",
-    "image": "../public/event-images/melkweg/Lm5sL25sL2FnZW5kYS9kb29sLTE5LTEyLTIwMjQv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
-    "start": "2024-12-21T20:00:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/green-lizard-30th-anniversary-21-12-2024/",
-    "title": "Green Lizard",
-    "location": "melkweg",
-    "price": 18.4,
-    "shortText": "alternative rock · grunge · 90's 30th Anniversary",
-    "longText": "../public/texts/melkweg/ZC0zMHRoLWFubml2ZXJzYXJ5LTIxLTEyLTIwMjQv.html",
-    "image": "../public/event-images/melkweg/ZC0zMHRoLWFubml2ZXJzYXJ5LTIxLTEyLTIwMjQv",
-    "soldOut": true,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
-    "start": "2025-01-22T20:00:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/slift-22-01-2025/",
-    "title": "Slift",
-    "location": "melkweg",
-    "price": 28.75,
-    "shortText": "psychedelisch · stonerrock · space",
-    "longText": "../public/texts/melkweg/bmwvbmwvYWdlbmRhL3NsaWZ0LTIyLTAxLTIwMjUv.html",
-    "image": "../public/event-images/melkweg/bmwvbmwvYWdlbmRhL3NsaWZ0LTIyLTAxLTIwMjUv",
+    "door": "2024-11-15T19:30:00",
+    "start": "2024-11-15T20:30:00",
+    "venueEventUrl": "https://metropool.nl/agenda/fuzz-top-zz-top-tribute/",
+    "title": "Fuzz top - zz top tribute",
+    "location": "metropool",
+    "price": 27.5,
+    "shortText": "",
+    "longText": "../public/texts/metropool/Z2VuZGEvZnV6ei10b3AtenotdG9wLXRyaWJ1dGUv.html",
+    "image": "../public/event-images/metropool/Z2VuZGEvZnV6ei10b3AtenotdG9wLXRyaWJ1dGUv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "slift": {
-        "s": "0x9HCT7ZZlOEfLSVCDi5SO",
-        "l": "slift",
+      "zz top": {
+        "s": "2AM4ilv6UzW0uMRuqKtDgN",
+        "l": null,
         "g": [
-          "french garage rock",
-          "french stoner rock",
-          "neo-psychedelic",
-          "rock alternatif francais"
+          "album rock",
+          "blues rock",
+          "classic rock",
+          "hard rock",
+          "rock"
         ]
       }
     }
   },
   {
-    "start": "4049-01-24T20:30:00",
-    "venueEventUrl": "https://www.littledevil.nl/calendar/the-optimist-in-me/",
-    "title": "The Optimist In Me",
-    "location": "littledevil",
-    "price": 10,
-    "shortText": "rock",
-    "longText": "../public/texts/littledevil/bC9jYWxlbmRhci90aGUtb3B0aW1pc3QtaW4tbWUv.html",
-    "image": "../public/event-images/littledevil/bC9jYWxlbmRhci90aGUtb3B0aW1pc3QtaW4tbWUv",
+    "title": "Sólstafir, Oranssi Pazuzu en Hamferð",
+    "start": "2024-11-15",
+    "eventLocationName": "muziekgieterij",
+    "shortText": "Muziekgieterij, Maastricht",
+    "image": "../public/location-images/muziekgieterij",
+    "location": "muziekgieterij"
+  },
+  {
+    "title": "Sólstafir, Oranssi Pazuzu en Hamferð",
+    "start": "2024-11-15",
+    "eventLocationName": "muziekgieterij",
+    "shortText": "Muziekgieterij, Maastricht",
+    "image": "../public/location-images/muziekgieterij",
+    "location": "muziekgieterij"
+  },
+  {
+    "title": "Sólstafir, Oranssi Pazuzu en Hamferð",
+    "start": "2024-11-16",
+    "eventLocationName": "botanique",
+    "shortText": "Botanique, Brussel (België)",
+    "image": "../public/location-images/botanique",
+    "location": "botanique"
+  },
+  {
+    "title": "Lucassen & Soeterboek's Plan Nine",
+    "start": "2024-11-16",
+    "eventLocationName": "'t beest",
+    "shortText": "'t Beest, Goes",
+    "image": "../public/location-images/tbeest",
+    "location": "tbeest"
+  },
+  {
+    "title": "Helldorado",
+    "start": "2024-11-16",
+    "eventLocationName": "klokgebouw",
+    "shortText": "Klokgebouw, Eindhoven",
+    "image": "../public/location-images/klokgebouw",
+    "location": "klokgebouw"
+  },
+  {
+    "title": "Helldorado",
+    "start": "2024-11-16",
+    "eventLocationName": "klokgebouw",
+    "shortText": "Klokgebouw, Eindhoven",
+    "image": "../public/location-images/klokgebouw",
+    "location": "klokgebouw"
+  },
+  {
+    "title": "Sleep Token en Bilmuri",
+    "start": "2024-11-18",
+    "eventLocationName": "afas live",
+    "shortText": "AFAS Live, Amsterdam",
+    "image": "../public/location-images/afaslive",
+    "location": "afaslive"
+  },
+  {
+    "title": "Sleep Token en Bilmuri",
+    "start": "2024-11-18",
+    "eventLocationName": "vorst nationaal",
+    "shortText": "Vorst Nationaal, Brussel (België)",
+    "image": "../public/location-images/vorstnationaal",
+    "location": "vorstnationaal"
+  },
+  {
+    "title": "Sleep Token en Bilmuri",
+    "start": "2024-11-18",
+    "eventLocationName": "vorst nationaal",
+    "shortText": "Vorst Nationaal, Brussel (België)",
+    "image": "../public/location-images/vorstnationaal",
+    "location": "vorstnationaal"
+  },
+  {
+    "title": "Wardruna",
+    "start": "2024-11-19",
+    "eventLocationName": "cirque royal",
+    "shortText": "Cirque Royal, Brussel (België)",
+    "image": "../public/location-images/cirqueroyal",
+    "location": "cirqueroyal"
+  },
+  {
+    "title": "Wardruna",
+    "start": "2024-11-19",
+    "eventLocationName": "cirque royal",
+    "shortText": "Cirque Royal, Brussel (België)",
+    "image": "../public/location-images/cirqueroyal",
+    "location": "cirqueroyal"
+  },
+  {
+    "title": "Brothers Of Metal en Grailknights",
+    "start": "2024-11-21",
+    "eventLocationName": "013",
+    "shortText": "013, Tilburg",
+    "image": "../public/location-images/013",
+    "location": "013"
+  },
+  {
+    "title": "Brothers Of Metal en Grailknights",
+    "start": "2024-11-21",
+    "eventLocationName": "013",
+    "shortText": "013, Tilburg",
+    "image": "../public/location-images/013",
+    "location": "013"
+  },
+  {
+    "title": "Wardruna",
+    "start": "2024-11-24",
+    "eventLocationName": "tivolivredenburg",
+    "shortText": "TivoliVredenburg, Utrecht",
+    "image": "../public/location-images/tivolivredenburg",
+    "location": "tivolivredenburg"
+  },
+  {
+    "title": "Dream Theater",
+    "start": "2024-11-24",
+    "eventLocationName": "afas live",
+    "shortText": "AFAS Live, Amsterdam",
+    "image": "../public/location-images/afaslive",
+    "location": "afaslive"
+  },
+  {
+    "title": "Dream Theater",
+    "start": "2024-11-24",
+    "eventLocationName": "afas live",
+    "shortText": "AFAS Live, Amsterdam",
+    "image": "../public/location-images/afaslive",
+    "location": "afaslive"
+  },
+  {
+    "door": "2024-11-27T19:00:00",
+    "start": "2024-11-27T20:00:00",
+    "venueEventUrl": "https://metropool.nl/agenda/gorgoroth/",
+    "title": "Gorgoroth",
+    "location": "metropool",
+    "price": 30.5,
+    "shortText": "Support: Mortiis + Hats Barn + Aran Angmar",
+    "longText": "../public/texts/metropool/bWV0cm9wb29sLm5sL2FnZW5kYS9nb3Jnb3JvdGgv.html",
+    "image": "../public/event-images/metropool/bWV0cm9wb29sLm5sL2FnZW5kYS9nb3Jnb3JvdGgv",
     "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "gorgoroth": {
+        "s": "1Dt7cfRzxM8qPVa82jX9y5",
+        "l": "gorgoroth",
+        "g": [
+          "black metal",
+          "metal",
+          "norwegian black metal",
+          "norwegian metal",
+          "tolkien metal"
+        ]
+      }
+    }
+  },
+  {
+    "title": "Feuerschwanz, Orden Ogan en Dominum",
+    "start": "2024-11-27",
+    "eventLocationName": "effenaar",
+    "shortText": "Effenaar, Eindhoven",
+    "image": "../public/location-images/effenaar",
+    "location": "effenaar"
+  },
+  {
+    "title": "Benighted, Baest en Coffin Feeder",
+    "start": "2024-11-27",
+    "eventLocationName": "013",
+    "shortText": "013, Tilburg",
+    "image": "../public/location-images/013",
+    "location": "013"
+  },
+  {
+    "title": "Benighted, Baest en Coffin Feeder",
+    "start": "2024-11-27",
+    "eventLocationName": "013",
+    "shortText": "013, Tilburg",
+    "image": "../public/location-images/013",
+    "location": "013"
+  },
+  {
+    "door": "2024-11-28T19:30:00",
+    "start": "2024-11-28T20:00:00",
+    "venueEventUrl": "https://metropool.nl/agenda/benighted-plus-baest/",
+    "title": "Benighted + baest",
+    "location": "metropool",
+    "price": 23,
+    "shortText": "Support: Coffin Feeder",
+    "longText": "../public/texts/metropool/bC9hZ2VuZGEvYmVuaWdodGVkLXBsdXMtYmFlc3Qv.html",
+    "image": "../public/event-images/metropool/bC9hZ2VuZGEvYmVuaWdodGVkLXBsdXMtYmFlc3Qv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "title": "Vola en Charlotte Wessels",
+    "start": "2024-11-28",
+    "eventLocationName": "effenaar",
+    "shortText": "Effenaar, Eindhoven",
+    "image": "../public/location-images/effenaar",
+    "location": "effenaar"
+  },
+  {
+    "title": "Orphaned Land, Azteca, Royal Rage, Ring Of Gyges en Strale",
+    "start": "2024-11-28",
+    "eventLocationName": "effenaar",
+    "shortText": "Effenaar, Eindhoven",
+    "image": "../public/location-images/effenaar",
+    "location": "effenaar"
+  },
+  {
+    "title": "Feuerschwanz, Orden Ogan en Dominum",
+    "start": "2024-11-28",
+    "eventLocationName": "patronaat",
+    "shortText": "Patronaat, Haarlem",
+    "image": "../public/location-images/patronaat",
+    "location": "patronaat"
+  },
+  {
+    "title": "Feuerschwanz, Orden Ogan en Dominum",
+    "start": "2024-11-28",
+    "eventLocationName": "patronaat",
+    "shortText": "Patronaat, Haarlem",
+    "image": "../public/location-images/patronaat",
+    "location": "patronaat"
+  },
+  {
+    "door": "2024-11-29T19:00:00",
+    "start": "2024-11-29T19:30:00",
+    "venueEventUrl": "https://metropool.nl/agenda/mystic-prophecy/",
+    "title": "Mystic Prophecy",
+    "location": "metropool",
+    "price": 23,
+    "shortText": "Support: Iron Savior + Mad Max",
+    "longText": "../public/texts/metropool/b29sLm5sL2FnZW5kYS9teXN0aWMtcHJvcGhlY3kv.html",
+    "image": "../public/event-images/metropool/b29sLm5sL2FnZW5kYS9teXN0aWMtcHJvcGhlY3kv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "title": "Smash Into Pieces",
+    "start": "2024-11-29",
+    "eventLocationName": "oosterpoort",
+    "shortText": "Oosterpoort, Groningen",
+    "image": "../public/location-images/oosterpoort",
+    "location": "oosterpoort"
+  },
+  {
+    "title": "Peter Pan Speedrock",
+    "start": "2024-11-30",
+    "eventLocationName": "nobel",
+    "shortText": "Nobel, Leiden",
+    "image": "../public/location-images/nobel",
+    "location": "nobel"
+  },
+  {
+    "title": "Mystic Prophecy, Iron Savior en Mad Max",
+    "start": "2024-11-30",
+    "eventLocationName": "paard",
+    "shortText": "Paard, Den Haag",
+    "image": "../public/location-images/paard",
+    "location": "paard"
+  },
+  {
+    "title": "Herrie Festival",
+    "start": "2024-11-30",
+    "eventLocationName": "hal 25",
+    "shortText": "\nMet Benighted, Baest, Hideous Divinity, Coffin Feeder e.a.",
+    "image": "../public/location-images/hal25",
+    "location": "hal25"
+  },
+  {
+    "title": "Herrie Festival",
+    "start": "2024-11-30",
+    "eventLocationName": "hal 25",
+    "shortText": "\nMet Benighted, Baest, Hideous Divinity, Coffin Feeder e.a.",
+    "image": "../public/location-images/hal25",
+    "location": "hal25"
+  },
+  {
+    "start": "2024-12-01T19:00:00",
+    "venueEventUrl": "https://neushoorn.nl/production/nh-cafe-civerous-crematory-stench-deadspeak/",
+    "title": "NH Café: Civerous ",
+    "location": "neushoorn",
+    "price": 12,
+    "shortText": " Crematory Stench  +  Deadspeak Smerige onheilspellende death metal",
+    "longText": "../public/texts/neushoorn/dXMtY3JlbWF0b3J5LXN0ZW5jaC1kZWFkc3BlYWsv.html",
+    "image": "../public/event-images/neushoorn/dXMtY3JlbWF0b3J5LXN0ZW5jaC1kZWFkc3BlYWsv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2024-12-04T19:30:00",
+    "start": "2024-12-04T20:30:00",
+    "venueEventUrl": "https://metropool.nl/agenda/ian-paice-feat-purpendicular/",
+    "title": "Ian Paice feat. Purpendicular",
+    "location": "metropool",
+    "price": 41,
+    "shortText": "",
+    "longText": "../public/texts/metropool/L2lhbi1wYWljZS1mZWF0LXB1cnBlbmRpY3VsYXIv.html",
+    "image": "../public/event-images/metropool/L2lhbi1wYWljZS1mZWF0LXB1cnBlbmRpY3VsYXIv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "ian paice": {
+        "s": "2gNdXbhyIbXHWvurrlrUAq",
+        "l": "ian%20paice",
+        "g": [
+          "rock drums",
+          "heavy metal"
+        ]
+      },
+      "purpendicular": {
+        "s": "7dtYKVbh2QXKICAzbxtrkF",
+        "l": "purpendicular",
+        "g": []
+      }
+    }
+  },
+  {
+    "title": "Alcest",
+    "start": "2024-12-04",
+    "eventLocationName": "paradiso",
+    "shortText": "Paradiso, Amsterdam",
+    "image": "../public/location-images/paradiso",
+    "location": "paradiso"
+  },
+  {
+    "title": "Alcest",
+    "start": "2024-12-04",
+    "eventLocationName": "paradiso",
+    "shortText": "Paradiso, Amsterdam",
+    "image": "../public/location-images/paradiso",
+    "location": "paradiso"
+  },
+  {
+    "title": "Sloper",
+    "start": "2024-12-05",
+    "eventLocationName": "oosterpoort",
+    "shortText": "Oosterpoort, Groningen",
+    "image": "../public/location-images/oosterpoort",
+    "location": "oosterpoort"
+  },
+  {
+    "title": "Slipknot en Bleed From Within",
+    "start": "2024-12-05",
+    "eventLocationName": "ziggo dome",
+    "shortText": "Ziggo Dome, Amsterdam",
+    "image": "../public/location-images/ziggodome",
+    "location": "ziggodome"
+  },
+  {
+    "title": "Alcest",
+    "start": "2024-12-05",
+    "eventLocationName": "ancienne belgique",
+    "shortText": "Ancienne Belgique, Brussel (België)",
+    "image": "../public/location-images/anciennebelgique",
+    "location": "anciennebelgique"
+  },
+  {
+    "title": "Alcest",
+    "start": "2024-12-05",
+    "eventLocationName": "ancienne belgique",
+    "shortText": "Ancienne Belgique, Brussel (België)",
+    "image": "../public/location-images/anciennebelgique",
+    "location": "anciennebelgique"
+  },
+  {
+    "title": "Within Temptation",
+    "start": "2024-12-06",
+    "eventLocationName": "ziggo dome",
+    "shortText": "Ziggo Dome, Amsterdam",
+    "image": "../public/location-images/ziggodome",
+    "location": "ziggodome"
+  },
+  {
+    "title": "Slipknot en Bleed From Within",
+    "start": "2024-12-06",
+    "eventLocationName": "westfalenhalle",
+    "shortText": "Westfalenhalle, Dortmund (Duitsland)",
+    "image": "../public/location-images/westfalenhalle",
+    "location": "westfalenhalle"
+  },
+  {
+    "title": "Slipknot en Bleed From Within",
+    "start": "2024-12-06",
+    "eventLocationName": "westfalenhalle",
+    "shortText": "Westfalenhalle, Dortmund (Duitsland)",
+    "image": "../public/location-images/westfalenhalle",
+    "location": "westfalenhalle"
+  },
+  {
+    "title": "As I Lay Dying, Decapitated, Caliban en Left To Suffer",
+    "start": "2024-12-10",
+    "eventLocationName": "ancienne belgique",
+    "shortText": "Ancienne Belgique, Brussel (België)",
+    "image": "../public/location-images/anciennebelgique",
+    "location": "anciennebelgique"
+  },
+  {
+    "title": "As I Lay Dying, Decapitated, Caliban en Left To Suffer",
+    "start": "2024-12-10",
+    "eventLocationName": "ancienne belgique",
+    "shortText": "Ancienne Belgique, Brussel (België)",
+    "image": "../public/location-images/anciennebelgique",
+    "location": "anciennebelgique"
+  },
+  {
+    "title": "As I Lay Dying, Decapitated, Caliban en Left To Suffer",
+    "start": "2024-12-11",
+    "eventLocationName": "melkweg",
+    "shortText": "Melkweg, Amsterdam",
+    "image": "../public/location-images/melkweg",
+    "location": "melkweg"
+  },
+  {
+    "title": "As I Lay Dying, Decapitated, Caliban en Left To Suffer",
+    "start": "2024-12-11",
+    "eventLocationName": "melkweg",
+    "shortText": "Melkweg, Amsterdam",
+    "image": "../public/location-images/melkweg",
+    "location": "melkweg"
+  },
+  {
+    "start": "2024-12-12T20:00:00",
+    "venueEventUrl": "https://neushoorn.nl/production/tusky/",
+    "title": "Tusky",
+    "location": "neushoorn",
+    "price": 17,
+    "shortText": "The Trashtastic Tour",
+    "longText": "../public/texts/neushoorn/bmV1c2hvb3JuLm5sL3Byb2R1Y3Rpb24vdHVza3kv.html",
+    "image": "../public/event-images/neushoorn/bmV1c2hvb3JuLm5sL3Byb2R1Y3Rpb24vdHVza3kv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "tusky": {
+        "s": "6XbZ8G0cFqSgUL4FmtiSPr",
+        "l": "tusky",
+        "g": [
+          "dutch punk",
+          "dutch rock"
+        ]
+      }
+    }
+  },
+  {
+    "title": "Eindhoven Metal Meeting Warm-Up Evening",
+    "start": "2024-12-12",
+    "eventLocationName": "effenaar",
+    "shortText": "\nMet Dead Head, The Omega Swarm e.a.",
+    "image": "../public/location-images/effenaar",
+    "location": "effenaar"
+  },
+  {
+    "title": "Eindhoven Metal Meeting Warm-Up Evening",
+    "start": "2024-12-12",
+    "eventLocationName": "effenaar",
+    "shortText": "\nMet Dead Head, The Omega Swarm e.a.",
+    "image": "../public/location-images/effenaar",
+    "location": "effenaar"
+  },
+  {
+    "door": "2024-12-13T19:30:00",
+    "start": "2024-12-13T20:30:00",
+    "venueEventUrl": "https://metropool.nl/agenda/john-coffey/",
+    "title": "John Coffey",
+    "location": "metropool",
+    "price": 29.5,
+    "shortText": "",
+    "longText": "../public/texts/metropool/dHJvcG9vbC5ubC9hZ2VuZGEvam9obi1jb2ZmZXkv.html",
+    "image": "../public/event-images/metropool/dHJvcG9vbC5ubC9hZ2VuZGEvam9obi1jb2ZmZXkv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "john coffey": {
+        "s": "4kffVdSOMGP0BOiBXVgeyA",
+        "l": "john%20coffey",
+        "g": [
+          "dutch indie",
+          "dutch rock",
+          "hardcore punk"
+        ]
+      }
+    }
+  },
+  {
+    "title": "Eindhoven Metal Meeting",
+    "start": "2024-12-13",
+    "eventLocationName": "effenaar",
+    "shortText": "\nMet Asphyx, Anaal Nathrakh, Impaled Nazarene e.v.a.",
+    "image": "../public/location-images/effenaar",
+    "location": "effenaar"
+  },
+  {
+    "title": "Eindhoven Metal Meeting",
+    "start": "2024-12-13",
+    "eventLocationName": "effenaar",
+    "shortText": "\nMet Asphyx, Anaal Nathrakh, Impaled Nazarene e.v.a.",
+    "image": "../public/location-images/effenaar",
+    "location": "effenaar"
+  },
+  {
+    "title": "Dool",
+    "start": "2024-12-14",
+    "eventLocationName": "oosterpoort",
+    "shortText": "Oosterpoort, Groningen",
+    "image": "../public/location-images/oosterpoort",
+    "location": "oosterpoort"
+  },
+  {
+    "title": "Dool",
+    "start": "2024-12-14",
+    "eventLocationName": "oosterpoort",
+    "shortText": "Oosterpoort, Groningen",
+    "image": "../public/location-images/oosterpoort",
+    "location": "oosterpoort"
+  },
+  {
+    "title": "Kreator, Anthrax en Testament",
+    "start": "2024-12-15",
+    "eventLocationName": "mainstage",
+    "shortText": "Mainstage, Den Bosch",
+    "image": "../public/location-images/mainstage",
+    "location": "mainstage"
+  },
+  {
+    "title": "Kreator, Anthrax en Testament",
+    "start": "2024-12-15",
+    "eventLocationName": "mainstage",
+    "shortText": "Mainstage, Den Bosch",
+    "image": "../public/location-images/mainstage",
+    "location": "mainstage"
+  },
+  {
+    "title": "Evergrey en Klogr",
+    "start": "2024-12-22",
+    "eventLocationName": "cacaofabriek",
+    "shortText": "Cacaofabriek, Helmond",
+    "image": "../public/location-images/cacaofabriek",
+    "location": "cacaofabriek"
+  },
+  {
+    "title": "Evergrey en Klogr",
+    "start": "2024-12-22",
+    "eventLocationName": "cacaofabriek",
+    "shortText": "Cacaofabriek, Helmond",
+    "image": "../public/location-images/cacaofabriek",
+    "location": "cacaofabriek"
+  },
+  {
+    "start": "4049-01-17T19:30:00",
+    "venueEventUrl": "https://neushoorn.nl/production/ramones-alive-ode-to-50-years-ramones/",
+    "title": "Ramones Alive – Ode to 50 years Ramones",
+    "location": "neushoorn",
+    "price": 19.5,
+    "shortText": "Veteranen uit de Nederlandse rockscene bundelen de krachten samen",
+    "longText": "../public/texts/neushoorn/YWxpdmUtb2RlLXRvLTUwLXllYXJzLXJhbW9uZXMv.html",
+    "image": "../public/event-images/neushoorn/YWxpdmUtb2RlLXRvLTUwLXllYXJzLXJhbW9uZXMv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "start": "4049-02-21T20:00:00",
+    "venueEventUrl": "https://neushoorn.nl/production/nh-cafe-the-optimist-in-me/",
+    "title": "NH Café: The Optimist In Me",
+    "location": "neushoorn",
+    "price": 5,
+    "shortText": "Rock jezelf de positiviteit in met The Optimist In Me",
+    "longText": "../public/texts/neushoorn/b24vbmgtY2FmZS10aGUtb3B0aW1pc3QtaW4tbWUv.html",
+    "image": "../public/event-images/neushoorn/b24vbmgtY2FmZS10aGUtb3B0aW1pc3QtaW4tbWUv",
+    "soldOut": false,
+    "unavailable": false,
     "eventGenres": null,
     "artists": null
   }

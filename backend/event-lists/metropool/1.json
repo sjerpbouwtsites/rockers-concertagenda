@@ -1,42 +1,42 @@
 [
   {
-    "door": "2024-06-27T20:30:00",
-    "start": "2024-06-27T21:00:00",
-    "venueEventUrl": "https://metropool.nl/agenda/norose-ep-release/",
-    "title": "NoRose - EP release",
+    "door": "2024-10-06T19:00:00",
+    "start": "2024-10-06T20:00:00",
+    "venueEventUrl": "https://metropool.nl/agenda/septicflesh/",
+    "title": "Septicflesh",
     "location": "metropool",
-    "price": 10,
-    "shortText": "Support: Jongeman",
-    "longText": "../public/texts/metropool/bC5ubC9hZ2VuZGEvbm9yb3NlLWVwLXJlbGVhc2Uv.html",
-    "image": "../public/event-images/metropool/bC5ubC9hZ2VuZGEvbm9yb3NlLWVwLXJlbGVhc2Uv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "norose": {
-        "s": null,
-        "l": null,
-        "g": [
-          "punk",
-          "opera punk"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-10-27T19:00:00",
-    "start": "2024-10-27T19:30:00",
-    "venueEventUrl": "https://metropool.nl/agenda/kissin-dynamite-enschede/",
-    "title": "Kissin' Dynamite",
-    "location": "metropool",
-    "price": 30.5,
-    "shortText": "Support: Massive Wagons en Airstrike",
-    "longText": "../public/texts/metropool/ZW5kYS9raXNzaW4tZHluYW1pdGUtZW5zY2hlZGUv.html",
-    "image": "../public/event-images/metropool/ZW5kYS9raXNzaW4tZHluYW1pdGUtZW5zY2hlZGUv",
+    "price": 40,
+    "shortText": "Support: Oceans + Scar of the Sun",
+    "longText": "../public/texts/metropool/dHJvcG9vbC5ubC9hZ2VuZGEvc2VwdGljZmxlc2gv.html",
+    "image": "../public/event-images/metropool/dHJvcG9vbC5ubC9hZ2VuZGEvc2VwdGljZmxlc2gv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": null
+  },
+  {
+    "door": "2024-11-01T19:30:00",
+    "start": "2024-11-01T20:30:00",
+    "venueEventUrl": "https://metropool.nl/agenda/the-dead-daisies-enschede/",
+    "title": "The Dead Daisies",
+    "location": "metropool",
+    "price": 41,
+    "shortText": "Support: Beasto Blanco + Mike Tramp",
+    "longText": "../public/texts/metropool/bmRhL3RoZS1kZWFkLWRhaXNpZXMtZW5zY2hlZGUv.html",
+    "image": "../public/event-images/metropool/bmRhL3RoZS1kZWFkLWRhaXNpZXMtZW5zY2hlZGUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "the dead daisies": {
+        "s": "6VDAPUov4yNDHyQlPqrpNH",
+        "l": "the%20dead%20daisies",
+        "g": [
+          "modern hard rock",
+          "nwocr"
+        ]
+      }
+    }
   },
   {
     "door": "2024-11-15T19:30:00",
@@ -66,28 +66,18 @@
     }
   },
   {
-    "door": "2024-12-13T19:30:00",
-    "start": "2024-12-13T20:30:00",
-    "venueEventUrl": "https://metropool.nl/agenda/john-coffey/",
-    "title": "John Coffey",
+    "door": "2024-11-29T19:00:00",
+    "start": "2024-11-29T19:30:00",
+    "venueEventUrl": "https://metropool.nl/agenda/mystic-prophecy/",
+    "title": "Mystic Prophecy",
     "location": "metropool",
-    "price": 29.5,
-    "shortText": "",
-    "longText": "../public/texts/metropool/dHJvcG9vbC5ubC9hZ2VuZGEvam9obi1jb2ZmZXkv.html",
-    "image": "../public/event-images/metropool/dHJvcG9vbC5ubC9hZ2VuZGEvam9obi1jb2ZmZXkv",
+    "price": 23,
+    "shortText": "Support: Iron Savior + Mad Max",
+    "longText": "../public/texts/metropool/b29sLm5sL2FnZW5kYS9teXN0aWMtcHJvcGhlY3kv.html",
+    "image": "../public/event-images/metropool/b29sLm5sL2FnZW5kYS9teXN0aWMtcHJvcGhlY3kv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": {
-      "john coffey": {
-        "s": "4kffVdSOMGP0BOiBXVgeyA",
-        "l": "john%20coffey",
-        "g": [
-          "dutch indie",
-          "dutch rock",
-          "hardcore punk"
-        ]
-      }
-    }
+    "artists": null
   }
 ]

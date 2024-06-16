@@ -64,25 +64,25 @@ export const workerConfig = {
   //   workerConcurrent: 2,
   //   forceSet: 4,
   // },
-  melkweg: {
-    workerCount: 4,
-    CPUReq: 'low',
-    workerConcurrent: 1,
-    forceSet: 4,
-  },
-  littledevil: {
-    workerCount: 1,
-    workerConcurrent: 2,
-    forceSet: 4,
-  },
-  // metalfan: { workerCount: 1, CPUReq: 'low', workerConcurrent: 1 },
-  // metropool: {
-  //   workerCount: 3,
+  // melkweg: {
+  //   workerCount: 4,
+  //   CPUReq: 'low',
   //   workerConcurrent: 1,
-  //   CPUReq: 'high',
   //   forceSet: 4,
   // },
-  // neushoorn: { workerCount: 2, workerConcurrent: 1, forceSet: 5 },
+  // littledevil: {
+  //   workerCount: 1,
+  //   workerConcurrent: 2,
+  //   forceSet: 4,
+  // },
+  metalfan: { workerCount: 1, CPUReq: 'low', workerConcurrent: 1 },
+  metropool: {
+    workerCount: 3,
+    workerConcurrent: 1,
+    CPUReq: 'high',
+    forceSet: 4,
+  },
+  neushoorn: { workerCount: 2, workerConcurrent: 1, forceSet: 5 },
   // nieuwenor: { workerCount: 1, workerConcurrent: 2, forceSet: 5 },
   // occii: {
   //   workerCount: 1,
