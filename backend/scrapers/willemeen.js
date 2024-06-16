@@ -3,7 +3,9 @@ import { workerData } from 'worker_threads';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/willemeen.js';
 import getImage from './gedeeld/image.js';
-import terms from './gedeeld/terms.js';
+import { mapToShortDate } from './gedeeld/datums.js';
+import workTitleAndSlug from './gedeeld/slug.js';
+import terms from '../artist-db/store/terms.js';
 
 // #region        SCRAPER CONFIG
 const scraper = new AbstractScraper({
@@ -15,12 +17,18 @@ const scraper = new AbstractScraper({
   },
 
   app: {
+    harvest: {
+      dividers: [`+`],
+      dividerRex: "[\\+]",
+      artistsIn: ['title'],
+    },  
     mainPage: {
       requiredProperties: ['venueEventUrl', 'title', 'shortText', 'start'],
-      asyncCheckFuncs: ['allowed', 'event', 'refused', 'goodTerms', 'forbiddenTerms', 'saveAllowed', 'emptySuccess'],
+      asyncCheckFuncs: ['refused', 'allowedEvent', 'forbiddenTerms', 'hasGoodTerms', 'hasAllowedArtist', 'spotifyConfirmation', 'failure'],
     },
     singlePage: {
-      requiredProperties: ['price'],
+      requiredProperties: [],
+      asyncCheckFuncs: ['success'],
     },
   },
 });
@@ -74,7 +82,8 @@ scraper.mainPage = async function () {
           if (res.month < curM) {
             res.year += 1;
           }
-          res.start = `${res.year}-${res.month}-${res.day}T${res.startTime}:00`;
+          res.startDate = `${res.year}-${res.month}-${res.day}`;
+          res.start = `${res.startDate}T${res.startTime}:00`;
         }
 
         const uaRex = new RegExp(unavailabiltyTerms.join('|'), 'gi');
@@ -85,7 +94,10 @@ scraper.mainPage = async function () {
     { workerData, months: this.months, unavailabiltyTerms: terms.unavailability },
   );
 
-  rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
+  rawEvents = rawEvents
+    .map(mapToShortDate)
+    .map(this.isMusicEventCorruptedMapper)
+    .map((re) => workTitleAndSlug(re, this._s.app.harvest.possiblePrefix));
   
   const eventGen = this.eventGenerator(rawEvents);
   // eslint-disable-next-line no-unused-vars

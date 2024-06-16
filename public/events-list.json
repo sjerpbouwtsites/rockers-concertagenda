@@ -1,69 +1,400 @@
 [
   {
-    "start": "2024-08-07T19:00:00",
-    "end": "2024-08-07T23:30:00",
-    "venueEventUrl": "https://www.poppodium-volt.nl/activiteit/soulfly-br-support?show=294",
-    "title": "Soulfly (BR) + support",
-    "location": "volt",
-    "price": 32.5,
-    "shortText": "Metal",
-    "longText": "../public/texts/volt/aXQvc291bGZseS1ici1zdXBwb3J0P3Nob3c9Mjk0.html",
-    "image": "../public/event-images/volt/aXQvc291bGZseS1ici1zdXBwb3J0P3Nob3c9Mjk0",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "soulfly": {
-        "s": "6159IBm5gLPwG4BcJXseXc",
-        "l": "soulfly",
-        "g": [
-          "alternative metal",
-          "groove metal",
-          "industrial metal",
-          "metal",
-          "nu metal",
-          "rap metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2024-11-01T20:00:00",
-    "end": "2024-11-01T23:00:00",
-    "venueEventUrl": "https://www.poppodium-volt.nl/activiteit/doodseskader-be-support?show=246",
-    "title": "Doodseskader (BE) + support",
-    "location": "volt",
+    "start": "2024-06-16T16:00:00",
+    "venueEventUrl": "https://www.willemeen.nl/programma/the-casualties-us-support/",
+    "title": "The casualties (us) + kezus krijst + vulgar",
+    "location": "willemeen",
     "price": 20,
-    "shortText": "Metal",
-    "longText": "../public/texts/volt/b2RzZXNrYWRlci1iZS1zdXBwb3J0P3Nob3c9MjQ2.html",
-    "image": "../public/event-images/volt/b2RzZXNrYWRlci1iZS1zdXBwb3J0P3Nob3c9MjQ2",
+    "shortText": "punk",
+    "longText": "../public/texts/willemeen/bW1hL3RoZS1jYXN1YWx0aWVzLXVzLXN1cHBvcnQv.html",
+    "image": "../public/event-images/willemeen/bW1hL3RoZS1jYXN1YWx0aWVzLXVzLXN1cHBvcnQv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "doodseskader": {
-        "s": "3NFvorn4wvIOqrDLJbXroK",
-        "l": "Belgium",
+      "the casualties": {
+        "s": "5uMNhVG30JzeZ5xtPb1tqR",
+        "l": "the%20casualties",
         "g": [
-          "sludgecore",
-          "experimental sludge/post-metal"
+          "hardcore punk",
+          "punk"
         ]
       }
     }
   },
   {
-    "start": "2024-11-01T20:00:00",
-    "end": "2024-11-01T00:00:00",
-    "venueEventUrl": "https://www.poppodium-volt.nl/activiteit/one-morning-left-fin-support?show=289",
-    "title": "One Morning Left (FIN) + support",
-    "location": "volt",
-    "price": 15,
-    "shortText": "Metal",
-    "longText": "../public/texts/volt/bmluZy1sZWZ0LWZpbi1zdXBwb3J0P3Nob3c9Mjg5.html",
-    "image": "../public/event-images/volt/bmluZy1sZWZ0LWZpbi1zdXBwb3J0P3Nob3c9Mjg5",
+    "start": "2024-06-26T19:00:00",
+    "venueEventUrl": "https://www.willemeen.nl/programma/w1-cafe-novelization-obnoxious/",
+    "title": "W1 Cafe: Utilize The Remains (NZ) ",
+    "location": "willemeen",
+    "price": 0,
+    "shortText": " Novelization  +  Obnoxious slam, thrash, & black metal",
+    "longText": "../public/texts/willemeen/MS1jYWZlLW5vdmVsaXphdGlvbi1vYm5veGlvdXMv.html",
+    "image": "../public/event-images/willemeen/MS1jYWZlLW5vdmVsaXphdGlvbi1vYm5veGlvdXMv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": null
+  },
+  {
+    "start": "2024-06-29T19:30:00",
+    "venueEventUrl": "https://www.willemeen.nl/programma/deletere-can-ossuaire-can-bezwering/",
+    "title": "Délétère CAN) + Ossuaire (CAN) + Bezwering",
+    "location": "willemeen",
+    "price": 10,
+    "shortText": "black metal",
+    "longText": "../public/texts/willemeen/cmUtY2FuLW9zc3VhaXJlLWNhbi1iZXp3ZXJpbmcv.html",
+    "image": "../public/event-images/willemeen/cmUtY2FuLW9zc3VhaXJlLWNhbi1iZXp3ZXJpbmcv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "start": "2024-07-07T15:00:00",
+    "venueEventUrl": "https://www.willemeen.nl/programma/hallways-de-vain-louie-speed-bumb-de/",
+    "title": "Hallways (DE) ",
+    "location": "willemeen",
+    "price": 7.5,
+    "shortText": " Vain Louie  +  Speed Bump (DE) Hardcore Matinee Show hardcore",
+    "longText": "../public/texts/willemeen/cy1kZS12YWluLWxvdWllLXNwZWVkLWJ1bWItZGUv.html",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "start": "2024-07-13T23:59:00",
+    "venueEventUrl": "https://www.willemeen.nl/programma/underworld-invites-no-new-style/",
+    "title": "Underworld invites: no new style !!!",
+    "location": "willemeen",
+    "price": 12.5,
+    "shortText": "early hardcore, early terror",
+    "longText": "../public/texts/willemeen/ZGVyd29ybGQtaW52aXRlcy1uby1uZXctc3R5bGUv.html",
+    "image": "../public/event-images/willemeen/ZGVyd29ybGQtaW52aXRlcy1uby1uZXctc3R5bGUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "start": "2024-07-28T19:00:00",
+    "venueEventUrl": "https://www.willemeen.nl/programma/dead-on-sunday-us-andrew-paley-support/",
+    "title": "Dead On Sunday (US) + Andrew Paley + support",
+    "location": "willemeen",
+    "price": 11.5,
+    "shortText": "Darkwave Rock, Post Punk",
+    "longText": "../public/texts/willemeen/dW5kYXktdXMtYW5kcmV3LXBhbGV5LXN1cHBvcnQv.html",
+    "image": "../public/event-images/willemeen/dW5kYXktdXMtYW5kcmV3LXBhbGV5LXN1cHBvcnQv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "dead on sunday": {
+        "s": "2y19rzmHIF4YOLHm7AW0pl",
+        "l": "dead%20on%20sunday",
+        "g": []
+      },
+      "andrew paley": {
+        "s": null,
+        "l": "andrew%20paley",
+        "g": []
+      }
+    }
+  },
+  {
+    "start": "2024-08-22T19:00:00",
+    "venueEventUrl": "https://www.willemeen.nl/programma/1914-ua-necrotesque-1/",
+    "title": "1914 (ua)  + nakkeknaekker (dk) + necrotesque",
+    "location": "willemeen",
+    "price": 17,
+    "shortText": "doom, sludge, Blackened shrapnel metal/ trenchcore",
+    "longText": "../public/texts/willemeen/b2dyYW1tYS8xOTE0LXVhLW5lY3JvdGVzcXVlLTEv.html",
+    "image": "../public/event-images/willemeen/b2dyYW1tYS8xOTE0LXVhLW5lY3JvdGVzcXVlLTEv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "1914": {
+        "s": null,
+        "l": "Ukraine",
+        "g": [
+          "death metal",
+          "blackened death metal",
+          "sludge",
+          "doom metal",
+          "doom"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2024-09-13T19:00:00",
+    "venueEventUrl": "https://www.willemeen.nl/programma/primordial-ie-support/",
+    "title": "Primordial (IE) + support",
+    "location": "willemeen",
+    "price": 22.5,
+    "shortText": "celtic black",
+    "longText": "../public/texts/willemeen/b2dyYW1tYS9wcmltb3JkaWFsLWllLXN1cHBvcnQv.html",
+    "image": "../public/event-images/willemeen/b2dyYW1tYS9wcmltb3JkaWFsLWllLXN1cHBvcnQv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "primordial": {
+        "s": "0BZr6WHaejNA63uhZZZZek",
+        "l": "primordial",
+        "g": [
+          "black metal",
+          "celtic metal",
+          "doom metal",
+          "folk black metal",
+          "folk metal",
+          "irish black metal",
+          "irish metal",
+          "pagan black metal",
+          "symphonic black metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2024-09-21T18:30:00",
+    "venueEventUrl": "https://www.willemeen.nl/programma/schirenc-plays-pungent-stench-at-bodyfarm-haliphron-dead-mans-walk/",
+    "title": "Schirenc plays Pungent Stench (AT) ",
+    "location": "willemeen",
+    "price": 18,
+    "shortText": " Bodyfarm  +  Haliphron  +  Dead Man’s Walk death metal, symphonic death metal",
+    "longText": "../public/texts/willemeen/ZmFybS1oYWxpcGhyb24tZGVhZC1tYW5zLXdhbGsv.html",
+    "image": "../public/event-images/willemeen/ZmFybS1oYWxpcGhyb24tZGVhZC1tYW5zLXdhbGsv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "bodyfarm": {
+        "s": "2OFRvZ32VVIW3UxVl36A0h",
+        "l": "bodyfarm",
+        "g": [
+          "dutch death metal",
+          "grisly death metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2024-09-28T18:30:00",
+    "venueEventUrl": "https://www.willemeen.nl/programma/cesair-album-release-show-seed/",
+    "title": "Cesair (album release show) + SeeD",
+    "location": "willemeen",
+    "price": 13,
+    "shortText": "Epic Folk & Mythic Music, pagan folk",
+    "longText": "../public/texts/willemeen/ZXNhaXItYWxidW0tcmVsZWFzZS1zaG93LXNlZWQv.html",
+    "image": "../public/event-images/willemeen/ZXNhaXItYWxidW0tcmVsZWFzZS1zaG93LXNlZWQv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "cesair": {
+        "s": "0msvJjxkGNMVwsPkv5Dfu3",
+        "l": "cesair",
+        "g": [
+          "rune folk"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2024-10-07T19:00:00",
+    "venueEventUrl": "https://www.willemeen.nl/programma/ellende-at-groza-de-servant-de/",
+    "title": "Ellende (at) + groza (de) + servant (de)",
+    "location": "willemeen",
+    "price": 22,
+    "shortText": "black metal",
+    "longText": "../public/texts/willemeen/bGxlbmRlLWF0LWdyb3phLWRlLXNlcnZhbnQtZGUv.html",
+    "image": "../public/event-images/willemeen/bGxlbmRlLWF0LWdyb3phLWRlLXNlcnZhbnQtZGUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "ellende": {
+        "s": "1iLdVM2KFAHUbpaC5wpMbO",
+        "l": "ellende",
+        "g": [
+          "atmospheric black metal",
+          "austrian black metal",
+          "austrian metal",
+          "black metal",
+          "voidgaze"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2024-10-12T19:00:00",
+    "venueEventUrl": "https://www.willemeen.nl/programma/tankard-de-support-excl-nl-show/",
+    "title": "Tankard (DE) + Obnoxious",
+    "location": "willemeen",
+    "price": 22.5,
+    "shortText": "beerbarian speed & thrash metal",
+    "longText": "../public/texts/willemeen/bmthcmQtZGUtc3VwcG9ydC1leGNsLW5sLXNob3cv.html",
+    "image": "../public/event-images/willemeen/bmthcmQtZGUtc3VwcG9ydC1leGNsLW5sLXNob3cv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "start": "2024-10-14T19:00:00",
+    "venueEventUrl": "https://www.willemeen.nl/programma/stoned-jesus-ua-mondo-drag-usa-the-abbey-fi/",
+    "title": "Stoned jesus (ua) ",
+    "location": "willemeen",
+    "price": 20,
+    "shortText": " mondo drag (usa)  +  the abbey  (fi) psychedelic, space rock, doom",
+    "longText": "../public/texts/willemeen/YS1tb25kby1kcmFnLXVzYS10aGUtYWJiZXktZmkv.html",
+    "image": "../public/event-images/willemeen/YS1tb25kby1kcmFnLXVzYS10aGUtYWJiZXktZmkv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "stone": {
+        "s": "22bE4uQ6baNwSHPVcDxLCe",
+        "l": "stone",
+        "g": [
+          "album rock",
+          "british invasion",
+          "classic rock",
+          "rock"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2024-10-15T20:00:00",
+    "venueEventUrl": "https://www.willemeen.nl/programma/liberty-justice-us-bullshit-detector-us-support/",
+    "title": "Liberty & Justice (US) ",
+    "location": "willemeen",
+    "price": 10,
+    "shortText": " Bullshit Detectör (US)  +  support Oi, punk",
+    "longText": "../public/texts/willemeen/LWJ1bGxzaGl0LWRldGVjdG9yLXVzLXN1cHBvcnQv.html",
+    "image": "../public/event-images/willemeen/LWJ1bGxzaGl0LWRldGVjdG9yLXVzLXN1cHBvcnQv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "start": "2024-10-16T20:00:00",
+    "venueEventUrl": "https://www.willemeen.nl/programma/laibach-in-luxor-live/",
+    "title": "Laibach – in Luxor Live",
+    "location": "willemeen",
+    "price": null,
+    "shortText": "",
+    "longText": "../public/texts/willemeen/b2dyYW1tYS9sYWliYWNoLWluLWx1eG9yLWxpdmUv.html",
+    "image": "../public/event-images/willemeen/b2dyYW1tYS9sYWliYWNoLWluLWx1eG9yLWxpdmUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "laibach": {
+        "s": "7l4LQfvN4yz8zbK4WY0AAg",
+        "l": "laibach",
+        "g": [
+          "balkan post-punk",
+          "ebm",
+          "industrial",
+          "industrial metal",
+          "industrial rock",
+          "martial industrial",
+          "neofolk",
+          "slovenian indie",
+          "slovenian rock"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2024-10-16T19:00:00",
+    "venueEventUrl": "https://www.willemeen.nl/programma/eleine-swe-support-astrant-ede/",
+    "title": "Eleine (SWE) + Support @ Astrant Ede",
+    "location": "willemeen",
+    "price": null,
+    "shortText": "dark symphonic metal",
+    "longText": "../public/texts/willemeen/bGVpbmUtc3dlLXN1cHBvcnQtYXN0cmFudC1lZGUv.html",
+    "image": "../public/event-images/willemeen/bGVpbmUtc3dlLXN1cHBvcnQtYXN0cmFudC1lZGUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "start": "2024-10-18T19:00:00",
+    "venueEventUrl": "https://www.willemeen.nl/programma/satanic-surfers-se-venerea-se-drunktank/",
+    "title": "Satanic Surfers (SE) ",
+    "location": "willemeen",
+    "price": 17.5,
+    "shortText": " Venerea (SE)  +  Drunktank punkrock",
+    "longText": "../public/texts/willemeen/cmZlcnMtc2UtdmVuZXJlYS1zZS1kcnVua3Rhbmsv.html",
+    "image": "../public/event-images/willemeen/cmZlcnMtc2UtdmVuZXJlYS1zZS1kcnVua3Rhbmsv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "start": "2024-10-26T16:30:00",
+    "venueEventUrl": "https://www.willemeen.nl/programma/one-in-the-jungle-met-machine-head-uk-uk-ten-ton-john-megaseth-the-covernant/",
+    "title": "One in the jungle met: machine head uk (uk) ",
+    "location": "willemeen",
+    "price": 22.5,
+    "shortText": " ten ton john  +  megaseth  +  the covernant tribute night",
+    "longText": "../public/texts/willemeen/bi1qb2huLW1lZ2FzZXRoLXRoZS1jb3Zlcm5hbnQv.html",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "machine head uk": {
+        "s": null,
+        "l": "machine%20head%20uk",
+        "g": []
+      }
+    }
+  },
+  {
+    "start": "2024-11-15T19:00:00",
+    "venueEventUrl": "https://www.willemeen.nl/programma/zeke-us-support/",
+    "title": "Zeke (us) + support",
+    "location": "willemeen",
+    "price": 15,
+    "shortText": "bluesy speedrawk punk",
+    "longText": "../public/texts/willemeen/Lm5sL3Byb2dyYW1tYS96ZWtlLXVzLXN1cHBvcnQv.html",
+    "image": "../public/event-images/willemeen/Lm5sL3Byb2dyYW1tYS96ZWtlLXVzLXN1cHBvcnQv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "start": "2024-12-13T19:00:00",
+    "venueEventUrl": "https://www.willemeen.nl/programma/chezidek-the-tuffsoundband/",
+    "title": "Chezidek & The Tuffsoundband ",
+    "location": "willemeen",
+    "price": 24,
+    "shortText": " Supernatural Selection roots reggae",
+    "longText": "../public/texts/willemeen/bWEvY2hlemlkZWstdGhlLXR1ZmZzb3VuZGJhbmQv.html",
+    "image": "../public/event-images/willemeen/bWEvY2hlemlkZWstdGhlLXR1ZmZzb3VuZGJhbmQv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "chezidek": {
+        "s": "5HePAITZSCxQ0H9PEKZ5DH",
+        "l": "chezidek",
+        "g": [
+          "modern reggae",
+          "reggae",
+          "roots reggae"
+        ]
+      }
+    }
   }
 ]

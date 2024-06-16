@@ -100,8 +100,8 @@ export const workerConfig = {
   //   workerCount: 2, workerConcurrent: 2, forceSet: 6, CPUReq: 'low', 
   // },
   // victorie: { workerCount: 1, workerConcurrent: 2, forceSet: 6 },
-  volt: { workerCount: 1, workerConcurrent: 1, forceSet: 6 },
-  // willemeen: { workerCount: 2, workerConcurrent: 2, forceSet: 6 },
+  // volt: { workerCount: 1, workerConcurrent: 1, forceSet: 6 },
+  willemeen: { workerCount: 2, workerConcurrent: 2, forceSet: 6 },
 };
 // depul: { 
 //   workerCount: 2, 
