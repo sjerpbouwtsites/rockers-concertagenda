@@ -1,14 +1,55 @@
 [
   {
-    "door": "2024-06-01T20:00:00",
-    "start": "2024-06-01T20:30:00",
-    "venueEventUrl": "https://www.cpunt.nl/agenda/oi-in-hoofddorp-drowns",
-    "title": "Oi! in Hoofddorp",
+    "door": "2024-07-06T20:00:00",
+    "start": "2024-07-06T20:30:00",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/fear",
+    "title": "Fear",
     "location": "cpunt",
-    "price": 15,
-    "shortText": "The Drowns, Hunting Lions & Day Drinker",
-    "longText": "../public/texts/cpunt/L2FnZW5kYS9vaS1pbi1ob29mZGRvcnAtZHJvd25z.html",
-    "image": "../public/event-images/cpunt/L2FnZW5kYS9vaS1pbi1ob29mZGRvcnAtZHJvd25z",
+    "price": 25,
+    "shortText": "",
+    "longText": "../public/texts/cpunt/dHBzOi8vd3d3LmNwdW50Lm5sL2FnZW5kYS9mZWFy.html",
+    "image": "../public/event-images/cpunt/dHBzOi8vd3d3LmNwdW50Lm5sL2FnZW5kYS9mZWFy",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2024-07-19T20:00:00",
+    "start": "2024-07-19T20:30:00",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/vexation-metalbats-painkiller",
+    "title": "Vexation, Metalbats & Painkiller",
+    "location": "cpunt",
+    "price": 11,
+    "shortText": "Album Release Party",
+    "longText": "../public/texts/cpunt/L3ZleGF0aW9uLW1ldGFsYmF0cy1wYWlua2lsbGVy.html",
+    "image": "../public/event-images/cpunt/L3ZleGF0aW9uLW1ldGFsYmF0cy1wYWlua2lsbGVy",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "pain": {
+        "s": "0AuW7OCyKfFrsMbtHrYgIV",
+        "l": "pain",
+        "g": [
+          "gangster rap",
+          "hip hop",
+          "rap rock",
+          "west coast rap"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2024-08-03T19:30:00",
+    "start": "2024-08-03T20:00:00",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/soil",
+    "title": "Soil",
+    "location": "cpunt",
+    "price": 23.5,
+    "shortText": "Dé Chicago Heavy Rock-band",
+    "longText": "../public/texts/cpunt/dHBzOi8vd3d3LmNwdW50Lm5sL2FnZW5kYS9zb2ls.html",
+    "image": "../public/event-images/cpunt/dHBzOi8vd3d3LmNwdW50Lm5sL2FnZW5kYS9zb2ls",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
@@ -27,18 +68,42 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
+    "artists": {
+      "cockney rejects": {
+        "s": "4EfSXeVFbCEYIde3E9k4wr",
+        "l": "cockney%20rejects",
+        "g": [
+          "oi",
+          "punk"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2024-09-25T19:30:00",
+    "start": "2024-09-25T20:00:00",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/illdisposed-defacing-god",
+    "title": "Illdisposed + Defacing God",
+    "location": "cpunt",
+    "price": 15,
+    "shortText": "In Chambers of Europe Tour 2024",
+    "longText": "../public/texts/cpunt/Z2VuZGEvaWxsZGlzcG9zZWQtZGVmYWNpbmctZ29k.html",
+    "image": "../public/event-images/cpunt/Z2VuZGEvaWxsZGlzcG9zZWQtZGVmYWNpbmctZ29k",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
     "artists": null
   },
   {
-    "door": "2024-09-20T20:00:00",
-    "start": "2024-09-20T20:30:00",
-    "venueEventUrl": "https://www.cpunt.nl/agenda/gbh-2024",
-    "title": "Gbh",
+    "door": "2024-12-07T20:00:00",
+    "start": "2024-12-07T20:20:00",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/dope-dod-bizarre",
+    "title": "Dope d.o.d.",
     "location": "cpunt",
-    "price": 15,
-    "shortText": "Legendarische Britse punk uit Birmingham",
-    "longText": "../public/texts/cpunt/Ly93d3cuY3B1bnQubmwvYWdlbmRhL2diaC0yMDI0.html",
-    "image": "../public/event-images/cpunt/Ly93d3cuY3B1bnQubmwvYWdlbmRhL2diaC0yMDI0",
+    "price": 22.5,
+    "shortText": "European Tour 2024",
+    "longText": "../public/texts/cpunt/dW50Lm5sL2FnZW5kYS9kb3BlLWRvZC1iaXphcnJl.html",
+    "image": "../public/event-images/cpunt/dW50Lm5sL2FnZW5kYS9kb3BlLWRvZC1iaXphcnJl",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,

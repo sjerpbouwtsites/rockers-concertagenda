@@ -1,178 +1,112 @@
 [
   {
-    "door": "2024-06-29T20:30:00",
-    "start": "2024-06-29T21:30:00",
-    "venueEventUrl": "https://bibelot.net/programma/bach-festival-bach-meets-metal-by-florian-magnaus-maier-alkaloid/",
-    "title": "Bach out of Bounds",
-    "location": "bibelot",
-    "price": 29,
-    "longText": "../public/texts/bibelot/bG9yaWFuLW1hZ25hdXMtbWFpZXItYWxrYWxvaWQv.html",
-    "image": "../public/event-images/bibelot/bG9yaWFuLW1hZ25hdXMtbWFpZXItYWxrYWxvaWQv",
+    "door": "2024-07-06T20:00:00",
+    "start": "2024-07-06T20:30:00",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/fear",
+    "title": "Fear",
+    "location": "cpunt",
+    "price": 25,
+    "shortText": "",
+    "longText": "../public/texts/cpunt/dHBzOi8vd3d3LmNwdW50Lm5sL2FnZW5kYS9mZWFy.html",
+    "image": "../public/event-images/cpunt/dHBzOi8vd3d3LmNwdW50Lm5sL2FnZW5kYS9mZWFy",
     "soldOut": false,
-    "eventGenres": [
-      "metal "
-    ],
+    "unavailable": false,
+    "eventGenres": null,
     "artists": null
   },
   {
-    "door": "2024-08-30T20:00:00",
-    "start": "2024-08-30T20:00:00",
-    "venueEventUrl": "https://bibelot.net/programma/its-not-a-phase-mom-limp-business/",
-    "title": "It’s Not A Phase, Mom – Limp Business",
-    "location": "bibelot",
-    "price": 0,
-    "longText": "../public/texts/bibelot/bm90LWEtcGhhc2UtbW9tLWxpbXAtYnVzaW5lc3Mv.html",
-    "image": "../public/event-images/bibelot/bm90LWEtcGhhc2UtbW9tLWxpbXAtYnVzaW5lc3Mv",
+    "door": "2024-07-19T20:00:00",
+    "start": "2024-07-19T20:30:00",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/vexation-metalbats-painkiller",
+    "title": "Vexation, Metalbats & Painkiller",
+    "location": "cpunt",
+    "price": 11,
+    "shortText": "Album Release Party",
+    "longText": "../public/texts/cpunt/L3ZleGF0aW9uLW1ldGFsYmF0cy1wYWlua2lsbGVy.html",
+    "image": "../public/event-images/cpunt/L3ZleGF0aW9uLW1ldGFsYmF0cy1wYWlua2lsbGVy",
     "soldOut": false,
-    "eventGenres": [
-      "metal ",
-      "rock "
-    ],
+    "unavailable": false,
+    "eventGenres": null,
     "artists": {
-      "itsnotaphasemom": {
-        "s": null,
-        "l": "it's%20not%20a%20phase%20mom%E2%80%A6",
-        "g": []
-      }
-    }
-  },
-  {
-    "door": "2024-09-06T19:30:00",
-    "start": "2024-09-06T20:00:00",
-    "venueEventUrl": "https://bibelot.net/programma/black-out-the-smiths-by-the-smiths-presumably-joy-division-by-curtis/",
-    "title": "The Smiths by The Smiths Presumably & Joy Division by Curtis (Black-Out 12th Edition)",
-    "location": "bibelot",
-    "price": 2024,
-    "shortText": " undefined",
-    "longText": "../public/texts/bibelot/dW1hYmx5LWpveS1kaXZpc2lvbi1ieS1jdXJ0aXMv.html",
-    "image": "../public/event-images/bibelot/dW1hYmx5LWpveS1kaXZpc2lvbi1ieS1jdXJ0aXMv",
-    "soldOut": false,
-    "eventGenres": [
-      "new wave ",
-      "punk "
-    ],
-    "artists": {
-      "joy division": {
-        "s": null,
-        "l": "joy%20division",
-        "g": []
-      }
-    }
-  },
-  {
-    "door": "2024-10-19T20:30:00",
-    "start": "2024-10-19T21:00:00",
-    "venueEventUrl": "https://bibelot.net/programma/dordrecht-metal-fest-2/",
-    "title": "Dordrecht Metal Fest",
-    "location": "bibelot",
-    "price": 19,
-    "longText": "../public/texts/bibelot/Z3JhbW1hL2RvcmRyZWNodC1tZXRhbC1mZXN0LTIv.html",
-    "image": "../public/event-images/bibelot/Z3JhbW1hL2RvcmRyZWNodC1tZXRhbC1mZXN0LTIv",
-    "soldOut": false,
-    "eventGenres": [
-      "metal "
-    ],
-    "artists": null
-  },
-  {
-    "door": "2024-12-13T20:30:00",
-    "start": "2024-12-13T21:00:00",
-    "venueEventUrl": "https://bibelot.net/programma/tusky/",
-    "title": "Tusky",
-    "location": "bibelot",
-    "price": 13,
-    "longText": "../public/texts/bibelot/Ly9iaWJlbG90Lm5ldC9wcm9ncmFtbWEvdHVza3kv.html",
-    "image": "../public/event-images/bibelot/Ly9iaWJlbG90Lm5ldC9wcm9ncmFtbWEvdHVza3kv",
-    "soldOut": false,
-    "eventGenres": [
-      "punk "
-    ],
-    "artists": {
-      "tusky": {
-        "s": "6XbZ8G0cFqSgUL4FmtiSPr",
-        "l": "tusky",
+      "pain": {
+        "s": "0AuW7OCyKfFrsMbtHrYgIV",
+        "l": "pain",
         "g": [
-          "dutch punk",
-          "dutch rock"
+          "gangster rap",
+          "hip hop",
+          "rap rock",
+          "west coast rap"
         ]
       }
     }
   },
   {
-    "door": "2024-12-14T19:00:00",
-    "start": "2024-12-14T19:30:00",
-    "venueEventUrl": "https://bibelot.net/programma/the-luka-state-uk/",
-    "title": "The luka state (uk)",
-    "location": "bibelot",
-    "price": 0,
-    "longText": "../public/texts/bibelot/dC9wcm9ncmFtbWEvdGhlLWx1a2Etc3RhdGUtdWsv.html",
-    "image": "../public/event-images/bibelot/dC9wcm9ncmFtbWEvdGhlLWx1a2Etc3RhdGUtdWsv",
+    "door": "2024-08-03T19:30:00",
+    "start": "2024-08-03T20:00:00",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/soil",
+    "title": "Soil",
+    "location": "cpunt",
+    "price": 23.5,
+    "shortText": "Dé Chicago Heavy Rock-band",
+    "longText": "../public/texts/cpunt/dHBzOi8vd3d3LmNwdW50Lm5sL2FnZW5kYS9zb2ls.html",
+    "image": "../public/event-images/cpunt/dHBzOi8vd3d3LmNwdW50Lm5sL2FnZW5kYS9zb2ls",
     "soldOut": false,
-    "eventGenres": [
-      "garagerock ",
-      "rock "
-    ],
+    "unavailable": false,
+    "eventGenres": null,
     "artists": null
   },
   {
-    "door": "2024-12-28T20:30:00",
-    "start": "2024-12-28T21:00:00",
-    "venueEventUrl": "https://bibelot.net/programma/pestilence-magnacult-release-show/",
-    "title": "Pestilence + MagnaCult (release show)",
-    "location": "bibelot",
-    "price": 28,
-    "longText": "../public/texts/bibelot/aWxlbmNlLW1hZ25hY3VsdC1yZWxlYXNlLXNob3cv.html",
-    "image": "../public/event-images/bibelot/aWxlbmNlLW1hZ25hY3VsdC1yZWxlYXNlLXNob3cv",
+    "door": "2024-09-07T15:00:00",
+    "start": "2024-09-07T16:00:00",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/oi-in-hoofddorp-festival",
+    "title": "Oi! in Hoofddorp Festival",
+    "location": "cpunt",
+    "price": 40,
+    "shortText": "Cockney Rejects, Crim, The Reapers en veel meer!",
+    "longText": "../public/texts/cpunt/Z2VuZGEvb2ktaW4taG9vZmRkb3JwLWZlc3RpdmFs.html",
+    "image": "../public/event-images/cpunt/Z2VuZGEvb2ktaW4taG9vZmRkb3JwLWZlc3RpdmFs",
     "soldOut": false,
-    "eventGenres": [
-      "metal "
-    ],
+    "unavailable": false,
+    "eventGenres": null,
     "artists": {
-      "pestilence": {
-        "s": "6JcFn4PlXFuXmhRXpOpsan",
-        "l": "pestilence",
+      "cockney rejects": {
+        "s": "4EfSXeVFbCEYIde3E9k4wr",
+        "l": "cockney%20rejects",
         "g": [
-          "black metal",
-          "brutal death metal",
-          "death metal",
-          "deathrash",
-          "dutch death metal",
-          "dutch metal",
-          "old school thrash",
-          "technical death metal"
+          "oi",
+          "punk"
         ]
       }
     }
   },
   {
-    "door": "4049-01-10T20:30:00",
-    "start": "4049-01-10T21:00:00",
-    "venueEventUrl": "https://bibelot.net/programma/regressive-hypnosis-dream-theater-tribute/",
-    "title": "Regressive Hypnosis (Dream Theater Tribute)",
-    "location": "bibelot",
-    "price": 10,
-    "longText": "../public/texts/bibelot/eXBub3Npcy1kcmVhbS10aGVhdGVyLXRyaWJ1dGUv.html",
-    "image": "../public/event-images/bibelot/eXBub3Npcy1kcmVhbS10aGVhdGVyLXRyaWJ1dGUv",
+    "door": "2024-09-25T19:30:00",
+    "start": "2024-09-25T20:00:00",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/illdisposed-defacing-god",
+    "title": "Illdisposed + Defacing God",
+    "location": "cpunt",
+    "price": 15,
+    "shortText": "In Chambers of Europe Tour 2024",
+    "longText": "../public/texts/cpunt/Z2VuZGEvaWxsZGlzcG9zZWQtZGVmYWNpbmctZ29k.html",
+    "image": "../public/event-images/cpunt/Z2VuZGEvaWxsZGlzcG9zZWQtZGVmYWNpbmctZ29k",
     "soldOut": false,
-    "eventGenres": [
-      "metal "
-    ],
+    "unavailable": false,
+    "eventGenres": null,
     "artists": null
   },
   {
-    "door": "4049-02-14T20:30:00",
-    "start": "4049-02-14T21:00:00",
-    "venueEventUrl": "https://bibelot.net/programma/radio-clash-be-a-tribute-to-the-clash/",
-    "title": "Radio Clash (BE) – A Tribute to The Clash",
-    "location": "bibelot",
-    "price": 0,
-    "longText": "../public/texts/bibelot/YXNoLWJlLWEtdHJpYnV0ZS10by10aGUtY2xhc2gv.html",
-    "image": "../public/event-images/bibelot/YXNoLWJlLWEtdHJpYnV0ZS10by10aGUtY2xhc2gv",
+    "door": "2024-12-07T20:00:00",
+    "start": "2024-12-07T20:20:00",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/dope-dod-bizarre",
+    "title": "Dope d.o.d.",
+    "location": "cpunt",
+    "price": 22.5,
+    "shortText": "European Tour 2024",
+    "longText": "../public/texts/cpunt/dW50Lm5sL2FnZW5kYS9kb3BlLWRvZC1iaXphcnJl.html",
+    "image": "../public/event-images/cpunt/dW50Lm5sL2FnZW5kYS9kb3BlLWRvZC1iaXphcnJl",
     "soldOut": false,
-    "eventGenres": [
-      "punk ",
-      "rock "
-    ],
+    "unavailable": false,
+    "eventGenres": null,
     "artists": null
   }
 ]
