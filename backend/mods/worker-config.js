@@ -27,7 +27,7 @@ export const workerConfig = {
   // },
   
   // baroeg: { workerCount: 3, workerConcurrent: 2, forceSet: 0 },
-  // bibelot: { workerCount: 1, workerConcurrent: 1, forceSet: 1 },
+  bibelot: { workerCount: 1, workerConcurrent: 1, forceSet: 1 },
 
   // cpunt: { workerCount: 1, workerConcurrent: 1, forceSet: 1 },
   // dbs: {
@@ -37,6 +37,7 @@ export const workerConfig = {
   //   CPUReq: 'low',
   //   forceSet: 1,
   // },
+  
   // dehelling: {
   //   workerCount: 1,
   //   workerConcurrent: 1,
@@ -101,21 +102,16 @@ export const workerConfig = {
   // },
   // victorie: { workerCount: 1, workerConcurrent: 2, forceSet: 6 },
   // volt: { workerCount: 1, workerConcurrent: 1, forceSet: 6 },
-  willemeen: { workerCount: 2, workerConcurrent: 2, forceSet: 6 },
+  // willemeen: { workerCount: 2, workerConcurrent: 2, forceSet: 6 },
 };
-// depul: { 
-//   workerCount: 2, 
-//   workerCount: 1, 
-//   workerConcurrent: 2, 
-//   forceSet: 2, 
-// },
+
 // deflux: { workerCount: 1, workerConcurrent: 1, forceSet: 2 },
 // boerderij: {
-  //   workerCount: 1,
-  //   workerConcurrent: 1,
-  //   forceSet: 1,
-  // },
-  // ticketmaster: {
+//   workerCount: 1,
+//   workerConcurrent: 1,
+//   forceSet: 1,
+// },
+// ticketmaster: {
 //   workerCount: 2,
 //   workerConcurrent: 1,
 //   forceSet: 6,

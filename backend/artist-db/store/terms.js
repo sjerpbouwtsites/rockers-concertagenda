@@ -83,6 +83,9 @@ const globalForbiddenGenres = [
 
 const globalGoodCategories = [
   'metal',
+  'black',
+  'crossover',
+  'doom',
 ];
 
 const wikipediaGoodGenres = [

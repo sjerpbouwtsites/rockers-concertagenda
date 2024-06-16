@@ -74,7 +74,7 @@ export default class Artists {
   /**
    * of in die persistentie functie fs write file
    */
-  nietSchrijven = true;
+  nietSchrijven = false;
 
   constructor(conf) {
     this.modelPath = conf.modelPath;
@@ -309,7 +309,8 @@ export default class Artists {
           return this.error(Error('geen eventDate om op te slaan'));
         } 
       }
-      return this.saveRefusedEventTemp(message.data.string, message.data.eventDate);
+      return this.saveRefusedEventTemp(
+        message.data.string, message.data.slug, message.data.eventDate);
     }    
 
     if (message.request === 'saveAllowedEventTemp') {
@@ -348,6 +349,11 @@ export default class Artists {
         reason: `🟥 Gen. failure`,
       });
     }
+
+    console.group(`artist db request error`);
+    console.log('onbekende request. message:');
+    console.log(message);
+    console.groupEnd();
 
     return this.error(new Error(`request ${message.request} onbekend`));
   }
@@ -419,7 +425,8 @@ export default class Artists {
    * @returns successMessage met evt. artistData
    */
   getRefused(eventNameOfTitle, slug, eventDate) {
-    const tt = eventNameOfTitle.length < this.minLengthLang ? eventNameOfTitle + eventDate : eventNameOfTitle;
+    const tt = eventNameOfTitle.length < this.minLengthLang 
+      ? eventNameOfTitle + eventDate : eventNameOfTitle;
     const ss = slug.length < this.minLengthLang ? slug + eventDate : slug;
     
     const _a = Object.prototype.hasOwnProperty.call(this.refused, tt);
@@ -561,10 +568,10 @@ export default class Artists {
     }
 
     const spotifyGenres = spotRes?.genres ?? [];
-    console.log();
-    console.log(`--------------`);
-    console.log(`gevonden genres om te controleren voor ${title}`);
-    console.log(spotifyGenres);
+    // console.log();
+    // console.log(`--------------`);
+    // console.log(`gevonden genres om te controleren voor ${title}`);
+    // console.log(spotifyGenres);
 
     const spotifyGenresInForbidden = spotifyGenres.find((sg) => this.terms.forbidden.includes(sg));
 
@@ -709,7 +716,7 @@ export default class Artists {
             } else if (heeftGoedeGenres.length > tweedeGefilterdeGenres) {
               this.saveAllowedTemp(na.title, na.slug, spotify, land, genres, eventDate);
             } else {
-              this.saveRefusedTemp(na.title, na.slug, spotify, land, eventDate);
+              this.saveRefusedEventTemp(na.title, na.slug, eventDate);
             }
           });
       }
@@ -812,7 +819,6 @@ export default class Artists {
     // console.log();
     // console.log('-----------------');
     // console.log('eventNameOfTitle, slug');
-    console.log(eventNameOfTitle, slug);
     
     const gevondenKeys = haystack
       .filter((hay) => eventNameOfTitle.includes(hay) || slug.includes(hay));
@@ -914,9 +920,9 @@ export default class Artists {
   saveRefusedEventTemp(title, slug, eventDate) {
     const tt = title.length < this.minLengthLang ? title + eventDate : title;
     const ss = slug.length < this.minLengthLang ? slug + eventDate : slug;
-    this.refusedTemp[tt] = [0, null, null, eventDate, this.today];
+    this.refusedTemp[tt] = [0, eventDate, this.today];
     if (tt !== ss) {
-      this.refusedTemp[ss] = [1, null, null, eventDate, this.today]; 
+      this.refusedTemp[ss] = [1, eventDate, this.today]; 
     }
     return this.post({
       success: true,
@@ -924,24 +930,6 @@ export default class Artists {
       reason: `🟩 save worked`,
     });
   }
-
-  saveRefusedTemp(title, slug, spotify, metalEnc, eventDate) {
-    console.log(`save refused temp met ${title}`);
-    const tt = title.length < this.minLengthLang ? title + eventDate : title;
-    const ss = slug.length < this.minLengthLang ? slug + eventDate : slug;
-    this.refusedTemp[tt] = [0, spotify, metalEnc, eventDate, this.today];
-    if (tt !== ss) {
-      console.log(`${title} nieuw op de lijst`);
-      this.refusedTemp[ss] = [1, spotify, metalEnc, eventDate, this.today]; 
-    } else {
-      console.log(`${title} NIET de lijst`);
-    }
-    return this.post({
-      success: true,
-      data: null,
-      reason: `🟩 save worked`,
-    });
-  }  
 
   saveAllowedEventTemp(title, slug, eventDate) {
     const tt = title.length < this.minLengthLang ? title + eventDate : title;
@@ -972,11 +960,11 @@ export default class Artists {
   }
 
   persistNewRefusedAndRockArtists() {
-    console.log(`new artists`);
+    console.log(`artists`);
     console.log(Object.keys(this.allowedArtistsTemp));
-    console.log(`new events`);
+    console.log(`events`);
     console.log(Object.keys(this.allowedEventTemp));
-    console.log(`new refused`);
+    console.log(`refused`);
     console.log(Object.keys(this.refusedTemp));
 
     if (this.nietSchrijven) {

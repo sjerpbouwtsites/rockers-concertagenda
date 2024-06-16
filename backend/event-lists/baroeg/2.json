@@ -1,1 +1,88 @@
-[]
+[
+  {
+    "start": "2024-07-03T21:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-v11-slimelord-cryptworm/",
+    "title": "Baroeg On Tour @V11: Slimelord + Cryptworm",
+    "location": "baroeg",
+    "price": 15,
+    "shortText": "Vies, vuig en vunzig.",
+    "longText": "../public/texts/baroeg/LXRvdXItdjExLXNsaW1lbG9yZC1jcnlwdHdvcm0v.html",
+    "image": "../public/event-images/baroeg/LXRvdXItdjExLXNsaW1lbG9yZC1jcnlwdHdvcm0v",
+    "soldOut": false,
+    "eventGenres": [
+      "death metal"
+    ],
+    "artists": null
+  },
+  {
+    "start": "2024-08-11T15:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-maassilo-tales-from-tftp-xl-d-r-i-demented-are-go/",
+    "title": "Baroeg On Tour @Maassilo: Tales From The Punx XL: D.R.I. ",
+    "location": "baroeg",
+    "price": 30,
+    "shortText": " GBH  +  Demented Are Go  +  The Young Ones  +  Escalpo  +  Traumatizer Hollands puikste punkfeest pakt het ditmaal groot aan.",
+    "longText": "../public/texts/baroeg/dGZ0cC14bC1kLXItaS1kZW1lbnRlZC1hcmUtZ28v.html",
+    "image": "../public/event-images/baroeg/dGZ0cC14bC1kLXItaS1kZW1lbnRlZC1hcmUtZ28v",
+    "soldOut": false,
+    "eventGenres": [
+      "crossover",
+      "hardcore",
+      "psychobilly",
+      "punk",
+      "thrash"
+    ],
+    "artists": {
+      "dementedarego": {
+        "s": "7fvToIpjDfwtLhAoZdVF5W",
+        "l": "demented%20are%20go!",
+        "g": [
+          "deathgrass",
+          "psychobilly"
+        ]
+      },
+      "raum": {
+        "s": null,
+        "l": "Belgium",
+        "g": [
+          "black metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2024-10-15T19:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-bibelot-laibach/",
+    "title": "Baroeg On Tour @Bibelot: Laibach",
+    "location": "baroeg",
+    "price": 30,
+    "shortText": "Baroeg en Bibelot voor het eerst hun handen ineen geslagen om Laibach naar Dordrecht te halen.",
+    "longText": "../public/texts/baroeg/YXJvZWctb24tdG91ci1iaWJlbG90LWxhaWJhY2gv.html",
+    "image": "../public/event-images/baroeg/YXJvZWctb24tdG91ci1iaWJlbG90LWxhaWJhY2gv",
+    "soldOut": false,
+    "eventGenres": [
+      "avant-garde",
+      "Baroeg on tour",
+      "electronic",
+      "industrial",
+      "neo-classical",
+      "new wave"
+    ],
+    "artists": {
+      "laibach": {
+        "s": "7l4LQfvN4yz8zbK4WY0AAg",
+        "l": "laibach",
+        "g": [
+          "balkan post-punk",
+          "ebm",
+          "industrial",
+          "industrial metal",
+          "industrial rock",
+          "martial industrial",
+          "neofolk",
+          "slovenian indie",
+          "slovenian rock"
+        ]
+      }
+    }
+  }
+]

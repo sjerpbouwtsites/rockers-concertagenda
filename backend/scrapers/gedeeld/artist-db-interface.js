@@ -46,18 +46,6 @@ export async function asyncIsAllowedEvent(event, olderReasons) {
   return DBToScraper;
 }
 
-export async function asyncSaveRefused(event) {
-  this.talkToDB({
-    type: 'db-request',
-    subtype: 'saveRefusedTemp',
-    messageData: {
-      title: event.workTitle,
-      slug: event.slug,
-      eventDate: event.shortDate,
-    },
-  });   
-}
-
 export async function asyncIfNotAllowedRefuse(event, reasons) {
   const reasonsCopy = Array.isArray(reasons) ? reasons : [];
   
@@ -238,6 +226,18 @@ export async function asyncMetalEncyclopediaConfirmation(event, reasons) {
     return failureAnswerObject(event, reasonsCopy, true);
   }
   return successAnswerObject(event, reasonsCopy);
+}
+
+export async function asyncSaveRefused(event) {
+  this.talkToDB({
+    type: 'db-request',
+    subtype: 'saveRefusedEventTemp',
+    messageData: {
+      string: event.workTitle.toLowerCase(),
+      slug: event.slug,
+      eventDate: event.shortDate,
+    },
+  });   
 }
 
 export async function asyncSaveAllowedEvent(event) {

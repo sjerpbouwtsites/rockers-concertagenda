@@ -27,10 +27,10 @@ const scraper = new AbstractScraper({
     mainPage: {
       requiredProperties: ['venueEventUrl', 'title', 'start'],
       // baroeg heeft een betrouwbare eigen categorisering
-      asyncCheckFuncs: ['refused', 'allowedEvent', 'explicitEventGenres'],
+      asyncCheckFuncs: ['refused', 'allowedEvent', 'explicitEventGenres', 'hasAllowedArtist', 'spotifyConfirmation', 'failure'],
     },
     singlePage: {
-      asyncCheckFuncs: [],
+      asyncCheckFuncs: ['success'],
     },
   },
 });

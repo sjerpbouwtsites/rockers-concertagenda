@@ -17,16 +17,15 @@ const scraper = new AbstractScraper({
     harvest: {
       dividers: [`+`, '&'],
       dividerRex: "[\\+&]", // todo nog niet duidelijk 24/2/12
-      artistsIn: ['title'],
+      artistsIn: ['title', 'shortText'],
     },
     mainPage: {
       requiredProperties: ['slug', 'venueEventUrl', 'title'],
-      asyncCheckFuncs: ['allowedEvent', 'refused', 'forbiddenTerms'],
+      asyncCheckFuncs: ['allowedEvent', 'refused', 'forbiddenTerms', 'hasAllowedArtist', 'spotifyConfirmation'],
     },
     singlePage: {
       requiredProperties: ['venueEventUrl', 'title', 'price', 'start'],
-      asyncCheckFuncs: [],
-      //      asyncCheckFuncs: ['saveAllowedEvent', 'harvestArtists'],
+      asyncCheckFuncs: ['success'],
     },
   },
 });

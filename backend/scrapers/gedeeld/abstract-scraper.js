@@ -473,6 +473,10 @@ export default class AbstractScraper extends ScraperConfig {
       }
 
       if (checkResult.isFailed) {
+        // this.dirtyDebug({
+        //   title: `abstract is failed refuse opslaan. moet hebben: string, slug, eventDate`,
+        //   eventToCheck,
+        // });
         this.asyncSaveRefused(eventToCheck);
       }
 
@@ -1112,13 +1116,19 @@ export default class AbstractScraper extends ScraperConfig {
   listenToMasterThread() {
     parentPort.on('message', (message) => {
       const pm = JSON.parse(message);
-      if (pm?.type === 'db-answer') {
+      const pmt = pm?.type ?? '';
+      if (pmt !== 'db-answer' && pmt !== 'process') {
+        console.log('ERROR IN COMMUNICATIE UIT DB IN ROCKWORKER');
+        console.log(workerData);
+        console.log(pm);
+      }
+      if (pmt === 'db-answer') {
         this.getAnswerFromDB(pm.messageData);
       }      
-      if (pm?.type === 'process' && pm?.subtype === 'command-start') {
+      if (pmt === 'process' && pm?.subtype === 'command-start') {
         this.scrapeInit(pm?.messageData).catch(this.handleOuterScrapeCatch);
       }
-      if (pm?.type === 'process' && pm?.subtype === 'command-die') {
+      if (pmt === 'process' && pm?.subtype === 'command-die') {
         this.scrapeDie(pm?.messageData).catch(this.handleOuterScrapeCatch);
       }
     });

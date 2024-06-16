@@ -1,9 +1,25 @@
 {
-  "y&t" : [
+  "1914": [
+    0,
+    null,
+    "Ukraine",
+    [
+      "death metal",
+      "blackened death metal",
+      "sludge",
+      "doom metal",
+      "doom"
+    ],
+    240821,
+    240616
+  ],
+  "y&t": [
     0,
     null,
     null,
-    ["symfonische rock"],
+    [
+      "symfonische rock"
+    ],
     "241115",
     "2402"
   ],
@@ -22,12 +38,13 @@
     null,
     null,
     [
-      "death metal", "sludge", "industrial sludge"
+      "death metal",
+      "sludge",
+      "industrial sludge"
     ],
     "241019",
     "2402"
   ],
-
   "nervana": [
     0,
     null,
@@ -47,7 +64,6 @@
     ],
     "240615",
     "2402"
-  
   ],
   "theironmaidens": [
     1,
@@ -6262,7 +6278,6 @@
     null,
     240203
   ],
-  
   "muchlove": [
     0,
     "3azL2gPmp2NpBeRgqOSEe0",
@@ -9996,7 +10011,6 @@
     null,
     240203
   ],
- 
   "ufomammut": [
     0,
     "105vC0oJ985P5G3g36EosL",
@@ -13232,15 +13246,24 @@
     "240316",
     "2402"
   ],
-  
-  "1914": [
+  "angel du$t": [
     0,
     null,
-    "Ukraine",
+    "United States",
     [
-      "death metal", "blackened death metal", "sludge", "doom metal", "doom"
+      "hardcore punk"
     ],
-    240821,
+    240724,
+    240616
+  ],
+  "angeldut": [
+    1,
+    null,
+    "United States",
+    [
+      "hardcore punk"
+    ],
+    240724,
     240616
   ],
   "slower": [
@@ -13248,7 +13271,10 @@
     null,
     "United States",
     [
-      "doom", "stoner", "stoner metal", "sludge"
+      "doom",
+      "stoner",
+      "stoner metal",
+      "sludge"
     ],
     241115,
     240616
@@ -13258,7 +13284,9 @@
     null,
     "Sweden",
     [
-      "heavy metal", "glam metal", "pop metal"
+      "heavy metal",
+      "glam metal",
+      "pop metal"
     ],
     241031,
     240616
@@ -13268,7 +13296,8 @@
     null,
     "Denmark",
     [
-      "death metal", "old school death metal"
+      "death metal",
+      "old school death metal"
     ],
     210821,
     240616
@@ -13418,10 +13447,10 @@
     null,
     null,
     [
-      "punk", "opera punk"
+      "punk",
+      "opera punk"
     ],
     "240525",
     "2402"
-  
   ]
 }
