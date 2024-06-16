@@ -371,14 +371,14 @@ export default class WorkerStatus {
     console.group('worker status double events');
     console.log('FUCKING HACK');
     console.groupEnd();
-    const noDoubleEvents = consolidatedEvents.filter((ev, index) => {
+    const noDoubleEvents = consolidatedEvents.map((ev, index) => {
       if (index === 0) return ev;
-      const laatste = noDoubleEvents[index - 1];
+      const laatste = consolidatedEvents[index - 1];
       const laatsteNaamDatum = laatste.title + laatste.start;
       const dezeNaamDatum = ev.title + ev.start;
       if (laatsteNaamDatum === dezeNaamDatum) return false;
       return ev;
-    });
+    }).filter((a) => a);
 
     fs.writeFileSync(
       fsDirections.eventsListJson,
