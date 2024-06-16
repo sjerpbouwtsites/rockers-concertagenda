@@ -1,116 +1,149 @@
 [
   {
-    "start": "2024-06-18T19:00:00",
-    "end": "2024-06-18T23:00:00",
-    "venueEventUrl": "https://dehelling.nl/agenda/dying-fetus-18-06-2024/",
-    "title": "Dying Fetus",
-    "location": "dehelling",
-    "price": 28.7,
-    "shortText": "US Deathmetal-godfathers van het eerste uur",
-    "longText": "../public/texts/dehelling/YWdlbmRhL2R5aW5nLWZldHVzLTE4LTA2LTIwMjQv.html",
-    "image": "../public/event-images/dehelling/YWdlbmRhL2R5aW5nLWZldHVzLTE4LTA2LTIwMjQv",
-    "soldOut": true,
+    "door": "2024-08-03T19:30:00",
+    "start": "2024-08-03T20:15:00",
+    "end": "2024-08-03T23:00:00",
+    "venueEventUrl": "https://dynamo-eindhoven.nl/evenement/rages-of-sin-velozza-2024/",
+    "title": "Rages of Sin + Velozza",
+    "location": "dynamo",
+    "price": 11.5,
+    "shortText": "co-headline show",
+    "longText": "../public/texts/dynamo/ZW50L3JhZ2VzLW9mLXNpbi12ZWxvenphLTIwMjQv.html",
+    "image": "../public/event-images/dynamo/ZW50L3JhZ2VzLW9mLXNpbi12ZWxvenphLTIwMjQv",
+    "soldOut": false,
     "eventGenres": null,
     "artists": null
   },
   {
-    "start": "2024-09-06T19:00:00",
-    "end": "2024-09-06T23:00:00",
-    "venueEventUrl": "https://dehelling.nl/agenda/bring-me-the-horizon-fanparty-ii-06-09-2024/",
-    "title": "Bring Me The Horizon Fanparty II",
-    "location": "dehelling",
-    "price": 10,
-    "shortText": "Vier uur lang alleen maar BMTH hosted by No Barrier",
-    "longText": "../public/texts/dehelling/b3Jpem9uLWZhbnBhcnR5LWlpLTA2LTA5LTIwMjQv.html",
-    "image": "../public/event-images/dehelling/b3Jpem9uLWZhbnBhcnR5LWlpLTA2LTA5LTIwMjQv",
+    "door": "2024-09-07T19:30:00",
+    "start": "2024-09-07T20:00:00",
+    "end": "2024-09-07T23:00:00",
+    "venueEventUrl": "https://dynamo-eindhoven.nl/evenement/terradown-2024/",
+    "title": "TerraDown",
+    "location": "dynamo",
+    "price": 11.5,
+    "shortText": "support: Neverus",
+    "longText": "../public/texts/dynamo/bi5ubC9ldmVuZW1lbnQvdGVycmFkb3duLTIwMjQv.html",
+    "image": "../public/event-images/dynamo/bi5ubC9ldmVuZW1lbnQvdGVycmFkb3duLTIwMjQv",
     "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "no barrier": {
-        "s": "2am0pROxk0wcIVgL5rZA3A",
-        "l": "no%20barrier",
+      "neverus": {
+        "s": "1cl0DInafS63FEVxhApjFb",
+        "l": "Netherlands",
+        "g": [
+          "symphonic melodic death metal",
+          "melodic death metal",
+          "metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2024-09-20T18:30:00",
+    "start": "2024-09-20T19:00:00",
+    "end": "2024-09-20T23:00:00",
+    "venueEventUrl": "https://dynamo-eindhoven.nl/evenement/senses-fail-saves-the-day-2024/",
+    "title": "Senses Fail + Saves The Day",
+    "location": "dynamo",
+    "price": 22.5,
+    "shortText": "Special guest: Youth Fountain",
+    "longText": "../public/texts/dynamo/ZW5zZXMtZmFpbC1zYXZlcy10aGUtZGF5LTIwMjQv.html",
+    "image": "../public/event-images/dynamo/ZW5zZXMtZmFpbC1zYXZlcy10aGUtZGF5LTIwMjQv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2024-10-04T19:30:00",
+    "start": "2024-10-04T20:00:00",
+    "end": "2024-10-04T22:30:00",
+    "venueEventUrl": "https://dynamo-eindhoven.nl/evenement/slope-2024/",
+    "title": "Slope",
+    "location": "dynamo",
+    "price": 17.5,
+    "shortText": "Locatie: Stroomhuis",
+    "longText": "../public/texts/dynamo/aG92ZW4ubmwvZXZlbmVtZW50L3Nsb3BlLTIwMjQv.html",
+    "image": "../public/event-images/dynamo/aG92ZW4ubmwvZXZlbmVtZW50L3Nsb3BlLTIwMjQv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "slope": {
+        "s": "35fxvnr5oanOFB1JNB2Ber",
+        "l": "slope",
+        "g": [
+          "dutch rock"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2024-11-22T20:00:00",
+    "start": "2024-11-22T20:30:00",
+    "end": "2024-11-22T23:00:00",
+    "venueEventUrl": "https://dynamo-eindhoven.nl/evenement/ronker-2024/",
+    "title": "Ronker",
+    "location": "dynamo",
+    "price": 11,
+    "shortText": "locatie: Strooomhuis",
+    "longText": "../public/texts/dynamo/b3Zlbi5ubC9ldmVuZW1lbnQvcm9ua2VyLTIwMjQv.html",
+    "image": "../public/event-images/dynamo/b3Zlbi5ubC9ldmVuZW1lbnQvcm9ua2VyLTIwMjQv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "ronker": {
+        "s": "2dALGLJwjsKqfueVsXlXYM",
+        "l": "ronker",
         "g": []
       }
     }
   },
   {
-    "start": "2024-09-27T22:00:00",
-    "end": "2024-09-27T03:00:00",
-    "venueEventUrl": "https://dehelling.nl/agenda/no-barrier-27-09-2024/",
-    "title": "No barrier",
-    "location": "dehelling",
-    "price": 15.7,
-    "shortText": "NO BARRIER: Punk, Rock & Metalcore",
-    "longText": "../public/texts/dehelling/L2FnZW5kYS9uby1iYXJyaWVyLTI3LTA5LTIwMjQv.html",
-    "image": "../public/event-images/dehelling/L2FnZW5kYS9uby1iYXJyaWVyLTI3LTA5LTIwMjQv",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "no barrier": {
-        "s": "2am0pROxk0wcIVgL5rZA3A",
-        "l": "no%20barrier",
-        "g": []
-      }
-    }
-  },
-  {
-    "start": "2024-10-26T20:00:00",
-    "end": "2024-10-26T02:00:00",
-    "venueEventUrl": "https://dehelling.nl/agenda/a-hella-mean-halloween-26-10-2024/",
-    "title": "A Hella Mean Halloween",
-    "location": "dehelling",
-    "price": 20,
-    "shortText": "Punk-verkleedpartijtje met Bony Macaroni, Bowl, Rats and Daggers en POM",
-    "longText": "../public/texts/dehelling/bGxhLW1lYW4taGFsbG93ZWVuLTI2LTEwLTIwMjQv.html",
-    "image": "../public/event-images/dehelling/bGxhLW1lYW4taGFsbG93ZWVuLTI2LTEwLTIwMjQv",
+    "door": "2024-11-23T19:30:00",
+    "start": "2024-11-23T20:15:00",
+    "venueEventUrl": "https://dynamo-eindhoven.nl/evenement/overruled-defazer-2024/",
+    "title": "Overruled + Defazer",
+    "location": "dynamo",
+    "price": 11.5,
+    "shortText": "co-headline show",
+    "longText": "../public/texts/dynamo/bmVtZW50L292ZXJydWxlZC1kZWZhemVyLTIwMjQv.html",
+    "image": "../public/event-images/dynamo/bmVtZW50L292ZXJydWxlZC1kZWZhemVyLTIwMjQv",
     "soldOut": false,
     "eventGenres": null,
     "artists": null
   },
   {
-    "start": "2024-11-24T19:30:00",
-    "end": "2024-11-24T23:00:00",
-    "venueEventUrl": "https://dehelling.nl/agenda/kanonenfieber-24-11-2024/",
-    "title": "Kanonenfieber",
-    "location": "dehelling",
-    "price": 25.2,
-    "shortText": "Duitstalig deathmetalproject vertelt het verhaal van de Eerste Wereldoorlog",
-    "longText": "../public/texts/dehelling/ZW5kYS9rYW5vbmVuZmllYmVyLTI0LTExLTIwMjQv.html",
-    "image": "../public/event-images/dehelling/ZW5kYS9rYW5vbmVuZmllYmVyLTI0LTExLTIwMjQv",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
-    "start": "2024-12-07T19:00:00",
+    "door": "2024-12-07T19:30:00",
+    "start": "2024-12-07T20:00:00",
     "end": "2024-12-07T23:00:00",
-    "venueEventUrl": "https://dehelling.nl/agenda/pene-corrida-07-12-2024/",
-    "title": "Pene Corrida",
-    "location": "dehelling",
-    "price": 22.2,
-    "shortText": "Party-metalband besmeert de grootste hits met een dikke laag gitaargeweld",
-    "longText": "../public/texts/dehelling/Z2VuZGEvcGVuZS1jb3JyaWRhLTA3LTEyLTIwMjQv.html",
-    "image": "../public/event-images/dehelling/Z2VuZGEvcGVuZS1jb3JyaWRhLTA3LTEyLTIwMjQv",
+    "venueEventUrl": "https://dynamo-eindhoven.nl/evenement/ter-ziele/",
+    "title": "Ter Ziele",
+    "location": "dynamo",
+    "price": 14,
+    "shortText": "Support: Oltas + Dodentocht",
+    "longText": "../public/texts/dynamo/ZGhvdmVuLm5sL2V2ZW5lbWVudC90ZXItemllbGUv.html",
+    "image": "../public/event-images/dynamo/ZGhvdmVuLm5sL2V2ZW5lbWVudC90ZXItemllbGUv",
     "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "pene corrida": {
-        "s": "1Hw2YwIpnSOWbtb8FlZcCa",
-        "l": "pene%20corrida",
+      "ter ziele": {
+        "s": "4ZaAeASRKr1RdqtcDlUi6G",
+        "l": "ter%20ziele",
         "g": []
       }
     }
   },
   {
-    "start": "2024-12-22T20:00:00",
-    "end": "2024-12-22T01:00:00",
-    "venueEventUrl": "https://dehelling.nl/agenda/no-barrier-christmas-special-22-12-2024/",
-    "title": "No barrier christmas special",
-    "location": "dehelling",
-    "price": 14.7,
-    "shortText": "A very moshing Christmas!",
-    "longText": "../public/texts/dehelling/LWNocmlzdG1hcy1zcGVjaWFsLTIyLTEyLTIwMjQv.html",
-    "image": "../public/event-images/dehelling/LWNocmlzdG1hcy1zcGVjaWFsLTIyLTEyLTIwMjQv",
+    "door": "2024-12-14T20:00:00",
+    "start": "2024-12-14T20:00:00",
+    "end": "2024-12-14T01:00:00",
+    "venueEventUrl": "https://dynamo-eindhoven.nl/evenement/no-barrier-2024/",
+    "title": "No barrier",
+    "location": "dynamo",
+    "price": 15,
+    "shortText": "Dé clubnacht voor al je tofste punk, beste rock en hardste metalcore!",
+    "longText": "../public/texts/dynamo/Lm5sL2V2ZW5lbWVudC9uby1iYXJyaWVyLTIwMjQv.html",
+    "image": "../public/event-images/dynamo/Lm5sL2V2ZW5lbWVudC9uby1iYXJyaWVyLTIwMjQv",
     "soldOut": false,
     "eventGenres": null,
     "artists": {
@@ -122,15 +155,16 @@
     }
   },
   {
-    "start": "4049-03-21T19:30:00",
-    "end": "4049-03-21T23:00:00",
-    "venueEventUrl": "https://dehelling.nl/agenda/enemy-inside-21-03-2025/",
-    "title": "Enemy Inside",
-    "location": "dehelling",
-    "price": 20.2,
-    "shortText": "Moderne metal met oorwurmen van refreinen",
-    "longText": "../public/texts/dehelling/Z2VuZGEvZW5lbXktaW5zaWRlLTIxLTAzLTIwMjUv.html",
-    "image": "../public/event-images/dehelling/Z2VuZGEvZW5lbXktaW5zaWRlLTIxLTAzLTIwMjUv",
+    "door": "2024-12-21T19:30:00",
+    "start": "2024-12-21T20:00:00",
+    "end": "2024-12-21T23:00:00",
+    "venueEventUrl": "https://dynamo-eindhoven.nl/evenement/dynamo-nachtmis/",
+    "title": "Dynamo Nachtmis MMXXV",
+    "location": "dynamo",
+    "price": 17.5,
+    "shortText": "w/ Cirith Gorgor + Infinity",
+    "longText": "../public/texts/dynamo/Lm5sL2V2ZW5lbWVudC9keW5hbW8tbmFjaHRtaXMv.html",
+    "image": "../public/event-images/dynamo/Lm5sL2V2ZW5lbWVudC9keW5hbW8tbmFjaHRtaXMv",
     "soldOut": false,
     "eventGenres": null,
     "artists": null

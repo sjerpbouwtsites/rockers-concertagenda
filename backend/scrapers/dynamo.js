@@ -24,15 +24,15 @@ const scraper = new AbstractScraper({
     harvest: {
       dividers: [`+`],
       dividerRex: "[\\+]",
-      artistsIn: ['title'],
+      artistsIn: ['title', 'shortText'],
     },  
     mainPage: {
       requiredProperties: ['venueEventUrl', 'title'],
-      asyncCheckFuncs: ['refused', 'allowedEvent', 'forbiddenTerms', 'hasGoodTerms', 'hasAllowedArtist'],
+      asyncCheckFuncs: ['refused', 'allowedEvent', 'forbiddenTerms', 'hasGoodTerms', 'hasAllowedArtist', 'spotifyConfirmation'],
     },
     singlePage: {
       requiredProperties: ['venueEventUrl', 'title', 'price', 'start'],
-      asyncCheckFuncs: ['spotifyConfirmation', 'success'],
+      asyncCheckFuncs: ['success'],
       // asyncCheckFuncs: ['goodTerms', 'forbiddenTerms', 'isRock', 'saveRefused', 'emptyFailure'],
     },
   },

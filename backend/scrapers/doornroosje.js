@@ -26,7 +26,7 @@ const scraper = new AbstractScraper({
     },    
     mainPage: {
       requiredProperties: ['venueEventUrl', 'title'],
-      asyncCheckFuncs: ['refused', 'allowedEvent'],
+      asyncCheckFuncs: ['refused', 'allowedEvent', 'explicitEventGenres', 'hasAllowedArtist', 'hasGoodTerms', 'forbiddenTerms', 'spotifyConfirmation'],
     },
     singlePage: {
       requiredProperties: ['venueEventUrl', 'title', 'start'],

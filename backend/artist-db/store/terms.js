@@ -130,6 +130,8 @@ const wikipediaGoodGenres = [
 ];
 
 const goodCategories = [
+  "dark rock",
+  "dark metal",
   'dutch metal',
   'gothic metal',
   'gothic symphonic metal',
