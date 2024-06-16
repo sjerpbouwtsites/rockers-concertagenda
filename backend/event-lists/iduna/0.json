@@ -235,7 +235,15 @@
     "soldOut": false,
     "unavailable": null,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "the iron maidens": {
+        "s": null,
+        "l": null,
+        "g": [
+          "heavy metal"
+        ]
+      }
+    }
   },
   {
     "door": "2024-12-01T15:00:00",
