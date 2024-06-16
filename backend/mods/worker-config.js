@@ -95,10 +95,10 @@ export const workerConfig = {
   //   workerConcurrent: 2,
   //   forceSet: 5,
   // },
-  patronaat: { workerCount: 1, workerConcurrent: 2, forceSet: 6 },
-  // tivolivredenburg: {
-  //   workerCount: 2, workerConcurrent: 2, forceSet: 6, CPUReq: 'low', 
-  // },
+  // patronaat: { workerCount: 3, workerConcurrent: 2, forceSet: 6 },
+  tivolivredenburg: {
+    workerCount: 2, workerConcurrent: 2, forceSet: 6, CPUReq: 'low', 
+  },
   // victorie: { workerCount: 4, workerConcurrent: 2, forceSet: 6 },
   // volt: { workerCount: 1, workerConcurrent: 1, forceSet: 6 },
   // willemeen: { workerCount: 2, workerConcurrent: 2, forceSet: 6 },

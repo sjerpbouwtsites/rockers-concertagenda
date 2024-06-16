@@ -3,11 +3,12 @@ import { workerData } from 'worker_threads';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/tivolivredenburg.js';
 import getImage from './gedeeld/image.js';
-import terms from './gedeeld/terms.js';
+import terms from '../artist-db/store/terms.js';
 import {
-  combineStartTimeStartDate, mapToStartDate, mapToStartTime, 
+  combineStartTimeStartDate, mapToStartDate, mapToStartTime, mapToShortDate,
   mapToDoorTime, combineDoorTimeStartDate, mapToEndTime, combineEndTimeStartDate,
 } from './gedeeld/datums.js';
+import workTitleAndSlug from './gedeeld/slug.js';
 
 // #region        SCRAPER CONFIG
 const scraper = new AbstractScraper({
@@ -18,12 +19,18 @@ const scraper = new AbstractScraper({
     url: 'https://www.tivolivredenburg.nl/agenda/?event_category=metal-punk-heavy',
   },
   app: {
+    harvest: {
+      dividers: [`+`],
+      dividerRex: "[\\+]",
+      artistsIn: ['title'],
+    },  
     mainPage: {
       requiredProperties: ['venueEventUrl', 'title'],
-      asyncCheckFuncs: ['allowed', 'event', 'refused', 'goodTerms', 'forbiddenTerms', 'isRock', 'saveRefused', 'emptyFailure'],
+      asyncCheckFuncs: ['refused', 'allowedEvent', 'forbiddenTerms', 'hasGoodTerms', 'hasAllowedArtist', 'spotifyConfirmation', 'failure'],
     },
     singlePage: {
       requiredProperties: ['venueEventUrl', 'title', 'price', 'start'],
+      asyncCheckFuncs: ['success'],
     },
   },
 });
@@ -58,6 +65,8 @@ scraper.mainPage = async function () {
         res.venueEventUrl = eventEl.querySelector('.agenda-list-item__title-link').href;
         const uaRex = new RegExp(unavailabiltyTerms.join('|'), 'gi');
         res.unavailable = !!eventEl.textContent.match(uaRex);
+        res.mapToStartDate = eventEl.querySelector('.agenda-list-item__time')
+          ?.textContent.trim().toLowerCase() ?? '';
         res.soldOut =
           !!eventEl
             .querySelector('.agenda-list-item__label')
@@ -67,7 +76,13 @@ scraper.mainPage = async function () {
     { workerData, unavailabiltyTerms: terms.unavailability },
   );
 
-  rawEvents = rawEvents.map(this.isMusicEventCorruptedMapper);
+  this.dirtyLog(rawEvents);
+
+  rawEvents = rawEvents
+    .map((event) => mapToStartDate(event, 'dag-maandNaam-jaar', this.months))
+    .map(mapToShortDate)
+    .map(this.isMusicEventCorruptedMapper)
+    .map((re) => workTitleAndSlug(re, this._s.app.harvest.possiblePrefix));
 
   const eventGen = this.eventGenerator(rawEvents);
   // eslint-disable-next-line no-unused-vars
@@ -120,7 +135,7 @@ scraper.singlePage = async function ({ page, event }) {
     errors: [],
   };
 
-  pageInfo.mapToStartDate = await page.evaluate(() => document.querySelector('.datum-tijd')?.textContent ?? null);
+  pageInfo.startDate = event.startDate;
   pageInfo.mapToStartTime = await page.evaluate(() => document.querySelector('.start-tijd')?.textContent ?? null);
   pageInfo.mapToDoorTime = await page.evaluate(() => document.querySelector('.deur-tijd')?.textContent ?? null);
   pageInfo.mapToEndTime = await page.evaluate(() => document.querySelector('.eind-tijd')?.textContent ?? null);
@@ -134,7 +149,6 @@ scraper.singlePage = async function ({ page, event }) {
   }
 
   pageInfo = mapToStartTime(pageInfo);
-  pageInfo = mapToStartDate(pageInfo, 'dag-maandNaam-jaar', this.months);
   pageInfo = combineStartTimeStartDate(pageInfo);
   if (pageInfo.mapToDoorTime) {
     pageInfo = mapToDoorTime(pageInfo);

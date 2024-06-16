@@ -141,10 +141,13 @@ export function mapToStartDate(event, regexMode, months) {
 
   if (!event.mapToStartDate) {
     event.errors.push({
-      error: new Error('map to start date falsy'),
-      remarks: 'mapToStartDate is falsy',
-      toDebug: `${event.mapToStartDate}`,
-    });
+      error: new Error(`map to start date falsy`),
+      remarks: `mapToStartDate is falsy <a href='${event.venueEventUrl}'>${event.title}</a>`,
+      toDebug: {
+        falsyMapToStartDate: JSON.parse(JSON.stringify(event)),
+      }, 
+    },
+    );
     return event;
   }
 
