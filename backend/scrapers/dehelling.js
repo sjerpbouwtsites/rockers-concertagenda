@@ -24,15 +24,15 @@ const dehellingScraper = new AbstractScraper({
     harvest: {
       dividers: [`\\+`],
       dividerRex: "[+]", 
-      artistsIn: ['title'],
+      artistsIn: ['title', 'shortText'],
     },
     mainPage: {
       requiredProperties: ['venueEventUrl', 'title', 'start'],
-      asyncCheckFuncs: ['refused', 'allowedEvent', 'forbiddenTerms'],
+      asyncCheckFuncs: ['refused', 'allowedEvent', 'forbiddenTerms', 'hasGoodTerms', 'hasAllowedArtist', 'spotifyConfirmation', 'failure'],
     },
     singlePage: {
       requiredProperties: ['venueEventUrl', 'title', 'price', 'start'],
-      asyncCheckFuncs: ['refused', 'allowedEvent'],
+      asyncCheckFuncs: ['success'],
       
     },
   },
