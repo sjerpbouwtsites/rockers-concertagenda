@@ -6,8 +6,8 @@ export default async function longTextSocialsIframes(page, event) {
     // eslint-disable-next-line no-shadow
     ({ event }) => {
       const res = {};
-      const textSelector = '.event-detail__content > *';
-      const mediaSelector = ['.slick-slide:not(.slick-cloned) img'].join(', ');
+      const textSelector = 'main > article article p';
+      const mediaSelector = [].join(', ');
       const removeEmptyHTMLFrom = textSelector;
       const socialSelector = [].join(', ');
       const removeSelectors = [
@@ -60,15 +60,19 @@ export default async function longTextSocialsIframes(page, event) {
         ? ''
         : Array.from(document.querySelectorAll(mediaSelector)).map((bron) => {
             bron.className = '';
-            return {
-              outer: null,
-              src: bron.src
-                .replace('img.youtube', 'youtube')
-                .replace('/vi/', '/embed/')
-                .replace('maxresdefault.jpg', ''),
-              id: null,
-              type: 'youtube',
-            };
+            
+            const idm = bron.href.match(/\/embed\/(.*)\?/);
+            if (Array.isArray(idm)){
+              return {
+                outer: null,
+                src: null,
+                id: idm[1],
+                type: 'youtube',
+              };
+            }
+            return null
+              
+            
           });
 
       // socials obj maken voordat HTML verdwijnt

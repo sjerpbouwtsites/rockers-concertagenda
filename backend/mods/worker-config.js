@@ -14,12 +14,12 @@ export const AbstractWorkerConfig = {
 };
 
 export const workerConfig = {
-  // '013': {
-  //   workerCount: 3,
-  //   CPUReq: 'low',
-  //   workerConcurrent: 3,
-  //   forceSet: 0,
-  // },
+  '013': {
+    workerCount: 3,
+    CPUReq: 'low',
+    workerConcurrent: 3,
+    forceSet: 0,
+  },
   // afaslive: {
   //   workerCount: 3,
   //   workerConcurrent: 2,
@@ -83,26 +83,26 @@ export const workerConfig = {
   //   forceSet: 4,
   // },
   // neushoorn: { workerCount: 2, workerConcurrent: 1, forceSet: 5 },
-  nieuwenor: { workerCount: 1, workerConcurrent: 2, forceSet: 5 },
-  occii: {
-    workerCount: 1,
-    workerConcurrent: 1,
-    forceSet: 5,
-  },
-  oosterpoort: { workerCount: 3, workerConcurrent: 1, forceSet: 5 },
-  p60: { workerCount: 1, workerConcurrent: 1, forceSet: 5 },
-  paradiso: {
-    workerCount: 4,
-    workerConcurrent: 2,
-    forceSet: 5,
-  },
-  patronaat: { workerCount: 3, workerConcurrent: 2, forceSet: 6 },
-  tivolivredenburg: {
-    workerCount: 2, workerConcurrent: 2, forceSet: 6, CPUReq: 'low', 
-  },
-  victorie: { workerCount: 1, workerConcurrent: 2, forceSet: 6 },
-  volt: { workerCount: 1, workerConcurrent: 1, forceSet: 6 },
-  willemeen: { workerCount: 2, workerConcurrent: 2, forceSet: 6 },
+  // nieuwenor: { workerCount: 1, workerConcurrent: 2, forceSet: 5 },
+  // occii: {
+  //   workerCount: 1,
+  //   workerConcurrent: 1,
+  //   forceSet: 5,
+  // },
+  // oosterpoort: { workerCount: 3, workerConcurrent: 1, forceSet: 5 },
+  // p60: { workerCount: 1, workerConcurrent: 1, forceSet: 5 },
+  // paradiso: {
+  //   workerCount: 4,
+  //   workerConcurrent: 2,
+  //   forceSet: 5,
+  // },
+  // patronaat: { workerCount: 3, workerConcurrent: 2, forceSet: 6 },
+  // tivolivredenburg: {
+  //   workerCount: 2, workerConcurrent: 2, forceSet: 6, CPUReq: 'low', 
+  // },
+  // victorie: { workerCount: 1, workerConcurrent: 2, forceSet: 6 },
+  // volt: { workerCount: 1, workerConcurrent: 1, forceSet: 6 },
+  // willemeen: { workerCount: 2, workerConcurrent: 2, forceSet: 6 },
 };
 
 // deflux: { workerCount: 1, workerConcurrent: 1, forceSet: 2 },
