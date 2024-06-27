@@ -26,8 +26,8 @@ const scraper = new AbstractScraper({
   },
   app: {
     harvest: {
-      dividers: [`&`],
-      dividerRex: "[&]", 
+      dividers: [`&`, `,`],
+      dividerRex: "[&,]", 
       artistsIn: ['title', 'shortText'],
     },
     mainPage: {

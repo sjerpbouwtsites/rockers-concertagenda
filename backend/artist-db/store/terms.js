@@ -9,6 +9,16 @@ const unavailabilityTerms = [
 
 const eventMetaTerms = [
   'show',
+  `support:`,
+  `support`,
+  'album release party',
+  'album releas',
+  'european tour',
+  'world tour',
+  '2024',
+  '2025',
+  'en veel meer!',
+  'en veel meer',
 ];
 
 const forbiddenTerms = [

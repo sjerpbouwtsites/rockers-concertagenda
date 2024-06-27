@@ -795,13 +795,24 @@ export default class Artists {
   async harvestArtists(title, slug, shortText, settings, eventDate, eventGenres = []) {
     const reg = new RegExp(settings.dividerRex, 'i');
     
-    const toScan = [title]; 
+    let toScan = [title]; 
     if (settings.artistsIn.includes('shortText') && shortText) {
       const s = (shortText ?? '').toLowerCase().trim();
       toScan.push(s);
     }
 
+    toScan = toScan.map((scan) => scan.replaceAll(/\(.*\)/g, '').trim());
+
     const reedsGevonden = toScan.map((scan) => this.scanTextForAllowedArtists(scan, '')).filter((a) => Object.keys(a).length);
+
+    // TODO HACK
+    let reedsGevondenHACK = {};
+    Object.values(reedsGevonden).forEach((r) => {
+      reedsGevondenHACK = Object.assign(reedsGevondenHACK, r);
+    });
+
+    this.consoleGroup(`reeds gevonden object ha12`, reedsGevonden, `harvestArtists`);
+
     const reedsGevondenNamen = reedsGevonden.map((g) => Object.keys(g)).flat(); 
     
     this.consoleGroup(`harvestArtist hA1`, {
@@ -824,8 +835,8 @@ export default class Artists {
         title,
       }, 'harvestArtists');      
       return this.post({
-        success: null,
-        data: {},
+        success: true,
+        data: reedsGevondenHACK,
         reason: `niets gevonden dat er niet reeds was qq1`,
       });      
     }
@@ -853,8 +864,8 @@ export default class Artists {
     if (!potentieeleOverigeTitels.length) {
       this.consoleGroup(`NIET verder scannen hA4`, { 'pot. titels': potentieeleOverigeTitels, verderScannen, title }, 'harvestArtists');
       return this.post({
-        success: null,
-        data: {},
+        success: true,
+        data: reedsGevondenHACK,
         reason: `niets gevonden dat er niet reeds was qq2`,
       });      
     }
@@ -873,19 +884,19 @@ export default class Artists {
       const metalGenres = (ga?.resultaten?.metalEnc?.[1] ?? '').split(';').map((a) => a.trim());
       const dezeGenres = [...spotifyGenres, ...metalGenres, ...eventGenres].filter((a) => a);
       
-      this.allowedArtistsTemp[title] = [
+      this.allowedArtistsTemp[ga.title] = [
         0,
         ga.resultaten?.spotRes?.id,
-        encodeURI(title),
+        encodeURI(ga.title),
         dezeGenres,
         eventDate,
         this.today,
       ];
       if (title !== slug) {
-        this.allowedArtistsTemp[slug] = [
+        this.allowedArtistsTemp[ga.slug] = [
           1,
           ga.resultaten?.spotRes?.id,
-          encodeURI(title),
+          encodeURI(ga.title),
           dezeGenres,
           eventDate,
           this.today,
@@ -893,7 +904,7 @@ export default class Artists {
       }
     });
 
-    const artiestenInEvent = [...reedsGevonden, ...gevondenArtiesten].flat();
+    const artiestenInEvent = { ...reedsGevondenHACK, ...gevondenArtiesten };
 
     return this.post({
       success: true,
@@ -1044,7 +1055,11 @@ export default class Artists {
     const _a = Object.prototype.hasOwnProperty.call(this.refused, eventNameOfTitle);
     const _b = Object.prototype.hasOwnProperty.call(this.refused, slug);
 
-    const genreRes = {};
+    const genreRes = {
+      title: eventNameOfTitle,
+      slug,
+      land: null,
+    };
     
     if (_a || _b) {
       return {
@@ -1065,6 +1080,7 @@ export default class Artists {
           if (land.length === 3) {
             land = this.landcodesMap[land];
           }
+          genreRes.land = land;
           metalString += `&country[]=${land}`;
         }
       });
@@ -1087,7 +1103,12 @@ export default class Artists {
     genreRes.metalEnc = meaRes;
 
     genreRes.spotRes = await this.getSpotifyArtistSearch(eventNameOfTitle);
-    
+    if (genreRes?.spotRes?.external_urls) delete genreRes.spotRes.external_urls;
+    if (genreRes?.spotRes?.followers) delete genreRes.spotRes.followers;
+    if (genreRes?.spotRes?.images) delete genreRes.spotRes.images;
+    if (genreRes?.spotRes?.popularity) delete genreRes.spotRes.popularity;
+    if (genreRes?.spotRes?.type) delete genreRes.spotRes.type;
+
     return genreRes;
   }
   // #endregion
@@ -1147,9 +1168,9 @@ export default class Artists {
     console.log(`artiesten worden opgeslagen`);
     
     this.consoleGroup(`artists, events, refused pNRARA1`, {
-      artists: Object.keys(this.allowedArtistsTemp).map(this.fromArrayToFourColumnRows).join(''),
-      events: Object.keys(this.allowedEventTemp).map(this.fromArrayToFourColumnRows).join(''),
-      refused: Object.keys(this.refusedTemp).map(this.fromArrayToFourColumnRows).join(''),
+      artists: Object.keys(this.allowedArtistsTemp).map(this.fromArrayToFourColumnRows).join(' '),
+      events: Object.keys(this.allowedEventTemp).map(this.fromArrayToFourColumnRows).join(' '),
+      refused: Object.keys(this.refusedTemp).map(this.fromArrayToFourColumnRows).join(' '),
     }, 'persistNewRefusedAndRockArtists');
     
     this.consoleGroup('new artists data pNRARA2', this.allowedArtistsTemp, 'persistNewRefusedAndRockArtists');

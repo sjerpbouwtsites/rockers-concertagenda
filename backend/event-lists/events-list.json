@@ -778,7 +778,22 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "fear": {
+        "s": "0hPU1czS0JdstuT8VRtBPS",
+        "l": "fear",
+        "g": [
+          "hardcore punk",
+          "punk",
+          "Death/Thrash Metal"
+        ]
+      },
+      "open wounds": {
+        "s": "2UnYGo6MpDsaDRiPzDgKmD",
+        "l": "open%20wounds",
+        "g": []
+      }
+    }
   },
   {
     "start": "2024-07-07T15:00:00",
@@ -1321,6 +1336,25 @@
           "rap rock",
           "west coast rap"
         ]
+      },
+      "killer": {
+        "s": null,
+        "l": "killer",
+        "g": [
+          "Heavy/Speed Metal"
+        ]
+      },
+      "vexation": {
+        "s": "3IK7FZwX5BqAFDBqjFWuyX",
+        "l": "vexation",
+        "g": [
+          "Death/Thrash Metal"
+        ]
+      },
+      "metalbats": {
+        "s": null,
+        "l": "metalbats",
+        "g": []
       }
     }
   },
@@ -1358,6 +1392,16 @@
           "hip hop",
           "rap rock",
           "west coast rap"
+        ]
+      },
+      "pro- pain": {
+        "s": "56F64pmwSSCcmS1CxAnPk8",
+        "l": "pro-pain",
+        "g": [
+          "groove metal",
+          "old school thrash",
+          "thrash metal",
+          "southern metal"
         ]
       }
     }
@@ -1587,7 +1631,15 @@
     "image": "../public/event-images/dbs/LWMtcy11c2EtcmFkaWNhbC1yZXRhcmQtaHJmc3Qv",
     "unavailable": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "radical retard": {
+        "s": "0XyL938devAjT3EBg3vTvi",
+        "l": null,
+        "g": [
+          "lowlands hardcore"
+        ]
+      }
+    }
   },
   {
     "door": "2024-08-03T19:30:00",
@@ -1617,7 +1669,23 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "soil": {
+        "s": "4PoYwGOztIrPpBfRIlMSxP",
+        "l": "soil",
+        "g": [
+          "alternative metal",
+          "industrial metal",
+          "nu metal",
+          "Black Metal"
+        ]
+      },
+      "dé chicago heavy rock-band": {
+        "s": null,
+        "l": "d%C3%A9%20chicago%20heavy%20rock-band",
+        "g": []
+      }
+    }
   },
   {
     "start": "2024-08-03T19:00:00",
@@ -2327,7 +2395,13 @@
     "image": "../public/event-images/dbs/dXNhLXRlZS1wZWUtcmVjb3Jkcy1sYXJyaWtpbm8v",
     "unavailable": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "larrikino": {
+        "s": "4n8zt9Q2sbWz3eZMlJIO5Z",
+        "l": null,
+        "g": []
+      }
+    }
   },
   {
     "start": "2024-08-15T08:00:00",
@@ -2341,7 +2415,16 @@
     "image": "../public/event-images/dbs/LXRyaXVtcGhhbnQtdXNhLWNlbnR1cnktbWVkaWEv",
     "unavailable": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "grey aura": {
+        "s": "5zlsiIekribvslzGzaqBJi",
+        "l": "Netherlands",
+        "g": [
+          "dutch black metal",
+          "avant-garde/atmospheric/post-black metal"
+        ]
+      }
+    }
   },
   {
     "door": "2024-08-16T18:00:00Z",
@@ -3027,6 +3110,26 @@
           "oi",
           "punk"
         ]
+      },
+      "oi! in hoofddorp festival": {
+        "s": null,
+        "l": "oi!%20in%20hoofddorp%20festival",
+        "g": []
+      },
+      "crim": {
+        "s": null,
+        "l": "crim",
+        "g": [
+          "Melodic Death Metal/Metalcore"
+        ]
+      },
+      "the reapers": {
+        "s": null,
+        "l": "the%20reapers%20!",
+        "g": [
+          "oi",
+          "punk"
+        ]
       }
     }
   },
@@ -3071,7 +3174,17 @@
     "image": "../public/event-images/dbs/YS1wcm9mb3VuZC1sb3JlLWFzY2VuZGVkLWRlYWQv",
     "unavailable": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "ascended dead": {
+        "s": "5eAE0zR4YcmlcfyNeAVyEP",
+        "l": "United States",
+        "g": [
+          "new wave of osdm",
+          "voidgrind",
+          "death metal"
+        ]
+      }
+    }
   },
   {
     "door": "2024-09-12T19:00:00",
@@ -3750,7 +3863,15 @@
     "image": "../public/event-images/dbs/cy1idXJuaW5nLW5laWdoYm91cnMtc3VwcG9ydHMv",
     "unavailable": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "neighbours burning neighbours": {
+        "s": "4GQw6nVpgVMHCgUnEdUslh",
+        "l": null,
+        "g": [
+          "dutch post-punk"
+        ]
+      }
+    }
   },
   {
     "door": "2024-09-21T20:00:00",
@@ -7787,7 +7908,15 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "dope d.o.d.": {
+        "s": "64UHlFDUkT8Hx3RCtDUieN",
+        "l": "dope%20d.o.d.",
+        "g": [
+          "dutch hip hop"
+        ]
+      }
+    }
   },
   {
     "door": "2024-12-08T20:30:00+01:00",
@@ -8892,7 +9021,17 @@
     "eventGenres": [
       "metal "
     ],
-    "artists": null
+    "artists": {
+      "dreamtheater": {
+        "s": "2aaLAng2L2aWD2FClzwiep",
+        "l": "dream%20theater",
+        "g": [
+          "metal",
+          "progressive metal",
+          "Progressive Metal"
+        ]
+      }
+    }
   },
   {
     "door": "4049-01-15T19:30:00",

@@ -104,33 +104,15 @@
     "start": "2024-06-28T08:00:00",
     "end": "2024-06-28T11:00:00",
     "venueEventUrl": "https://www.dbstudio.nl/event/dan-green-the-mystery-machine-coaster-droomboter/",
-    "title": "DAN GREEN ",
+    "title": "DAN GREEN & The Mystery Machine ",
     "location": "dbs",
     "price": 10,
-    "shortText": " The Mystery Machine + Coaster + Droomboter Een avond met drie fraaie Utrechtse bands. Middelpunt en aanstichter van het geheel is Dan Green & the Mystery Machine, een psychedelische rockband die hun release Descendant komt presenteren. Eerder zagen we de band al als support voor de Zweedse bluesrockers Kamchatka en raakten onder de indruk van hun gelaagde combinatie van shoegaze, garagerock en psychedelica met een goed gevoel voor groove. Voor fans van King Gizzard en early Pink FLoyd.",
+    "shortText": " Coaster  +  Droomboter Een avond met drie fraaie Utrechtse bands. Middelpunt en aanstichter van het geheel is Dan Green & the Mystery Machine, een psychedelische rockband die hun release Descendant komt presenteren. Eerder zagen we de band al als support voor de Zweedse bluesrockers Kamchatka en raakten onder de indruk van hun gelaagde combinatie van shoegaze, garagerock en psychedelica met een goed gevoel voor groove. Voor fans van King Gizzard en early Pink FLoyd.",
     "longText": "../public/texts/dbs/cnktbWFjaGluZS1jb2FzdGVyLWRyb29tYm90ZXIv.html",
     "image": "../public/event-images/dbs/cnktbWFjaGluZS1jb2FzdGVyLWRyb29tYm90ZXIv",
     "unavailable": false,
     "eventGenres": null,
-    "artists": {
-      "kamchatka": {
-        "s": "1AfAAexyytmcIJTaVZpn8p",
-        "l": "kamchatka",
-        "g": [
-          "swedish stoner rock"
-        ]
-      },
-      "king gizzard": {
-        "s": "6XYvaoDGE0VmRt83Jss9Sn",
-        "l": "king%20gizzard",
-        "g": [
-          "australian psych",
-          "double drumming",
-          "microtonal",
-          "neo-psychedelic"
-        ]
-      }
-    }
+    "artists": null
   },
   {
     "start": "2024-06-29T19:30:00",
@@ -796,7 +778,22 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "fear": {
+        "s": "0hPU1czS0JdstuT8VRtBPS",
+        "l": "fear",
+        "g": [
+          "hardcore punk",
+          "punk",
+          "Death/Thrash Metal"
+        ]
+      },
+      "open wounds": {
+        "s": "2UnYGo6MpDsaDRiPzDgKmD",
+        "l": "open%20wounds",
+        "g": []
+      }
+    }
   },
   {
     "start": "2024-07-07T15:00:00",
@@ -865,7 +862,7 @@
     "artists": {
       "zz top": {
         "s": "2AM4ilv6UzW0uMRuqKtDgN",
-        "l": null,
+        "l": "zz%20top",
         "g": [
           "album rock",
           "blues rock",
@@ -1127,10 +1124,10 @@
     "start": "2024-07-13T01:00:00",
     "end": "2024-07-13T11:00:00",
     "venueEventUrl": "https://www.dbstudio.nl/event/dbs-buitenfestival-weekender/",
-    "title": "Db’s buitenfestival weekender met hang youth + spinvis + hallo venray",
+    "title": "Db’s buitenfestival weekender met hang youth ",
     "location": "dbs",
     "price": 35,
-    "shortText": " We zijn er nog niet maar willen je alvast kennis laten maken met de nieuwe dB’s door een Buitenfestival te organiseren. Zaterdag 13 en zondag 14 juli veranderen we de bouwplaats in een festivalterrein waar bands die ons nauw aan het hart liggen komen optreden.",
+    "shortText": " spinvis  +  hallo venray We zijn er nog niet maar willen je alvast kennis laten maken met de nieuwe dB’s door een Buitenfestival te organiseren. Zaterdag 13 en zondag 14 juli veranderen we de bouwplaats in een festivalterrein waar bands die ons nauw aan het hart liggen komen optreden.",
     "longText": "../public/texts/dbs/L2Ricy1idWl0ZW5mZXN0aXZhbC13ZWVrZW5kZXIv.html",
     "image": "../public/event-images/dbs/L2Ricy1idWl0ZW5mZXN0aXZhbC13ZWVrZW5kZXIv",
     "unavailable": false,
@@ -1339,6 +1336,25 @@
           "rap rock",
           "west coast rap"
         ]
+      },
+      "killer": {
+        "s": null,
+        "l": "killer",
+        "g": [
+          "Heavy/Speed Metal"
+        ]
+      },
+      "vexation": {
+        "s": "3IK7FZwX5BqAFDBqjFWuyX",
+        "l": "vexation",
+        "g": [
+          "Death/Thrash Metal"
+        ]
+      },
+      "metalbats": {
+        "s": null,
+        "l": "metalbats",
+        "g": []
       }
     }
   },
@@ -1378,7 +1394,7 @@
           "west coast rap"
         ]
       },
-      "pro-pain": {
+      "pro- pain": {
         "s": "56F64pmwSSCcmS1CxAnPk8",
         "l": "pro-pain",
         "g": [
@@ -1508,16 +1524,6 @@
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "destruction": {
-        "s": "1kAX4yFdmR0hJe2tPu1785",
-        "l": "destruction",
-        "g": [
-          "deathcore",
-          "melodic metalcore",
-          "slamming deathcore",
-          "slovenian metal"
-        ]
-      },
       "escuelagrind": {
         "s": null,
         "l": "escuelagrind",
@@ -1617,15 +1623,23 @@
     "start": "2024-08-02T08:00:00",
     "end": "2024-08-02T11:00:00",
     "venueEventUrl": "https://www.dbstudio.nl/event/the-turbo-a-c-s-usa-radical-retard-hrfst/",
-    "title": "The turbo a.c.’s (usa) + radical retard + hrfst",
+    "title": "The turbo a.c.’s (usa) ",
     "location": "dbs",
     "price": 15,
-    "shortText": " De New Yorkse street rawk ‘n roll punkers van The Turbo A.C.’s zijn terug! Hun klassieke album Automatic heeft een fraaie deluxe heruitgave gekregen en frontman Kevin Cole heeft zijn manschappen weer op de rit voor een heuse EU tour. 100% in-your-face overdrive rock’n rollsongs en een onverwoestbare livereputatie moeten genoeg zijn om de Vlampijp in de fik te zetten.",
+    "shortText": " radical retard  +  hrfst De New Yorkse street rawk ‘n roll punkers van The Turbo A.C.’s zijn terug! Hun klassieke album Automatic heeft een fraaie deluxe heruitgave gekregen en frontman Kevin Cole heeft zijn manschappen weer op de rit voor een heuse EU tour. 100% in-your-face overdrive rock’n rollsongs en een onverwoestbare livereputatie moeten genoeg zijn om de Vlampijp in de fik te zetten.",
     "longText": "../public/texts/dbs/LWMtcy11c2EtcmFkaWNhbC1yZXRhcmQtaHJmc3Qv.html",
     "image": "../public/event-images/dbs/LWMtcy11c2EtcmFkaWNhbC1yZXRhcmQtaHJmc3Qv",
     "unavailable": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "radical retard": {
+        "s": "0XyL938devAjT3EBg3vTvi",
+        "l": null,
+        "g": [
+          "lowlands hardcore"
+        ]
+      }
+    }
   },
   {
     "door": "2024-08-03T19:30:00",
@@ -1655,7 +1669,23 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "soil": {
+        "s": "4PoYwGOztIrPpBfRIlMSxP",
+        "l": "soil",
+        "g": [
+          "alternative metal",
+          "industrial metal",
+          "nu metal",
+          "Black Metal"
+        ]
+      },
+      "dé chicago heavy rock-band": {
+        "s": null,
+        "l": "d%C3%A9%20chicago%20heavy%20rock-band",
+        "g": []
+      }
+    }
   },
   {
     "start": "2024-08-03T19:00:00",
@@ -1786,7 +1816,7 @@
     "artists": {
       "korn": {
         "s": "3RNrq3jvMZxD9ZyoOZbQOD",
-        "l": null,
+        "l": "korn",
         "g": [
           "alternative metal",
           "funk metal",
@@ -1986,28 +2016,6 @@
     "soldOut": false,
     "eventGenres": null,
     "artists": null
-  },
-  {
-    "start": "2024-08-08T08:00:00",
-    "end": "2024-08-08T11:30:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/11774/",
-    "title": "Ulthar (us) + succumb (us)",
-    "location": "dbs",
-    "price": 14,
-    "shortText": "",
-    "longText": "../public/texts/dbs/Ly93d3cuZGJzdHVkaW8ubmwvZXZlbnQvMTE3NzQv.html",
-    "image": "../public/event-images/dbs/Ly93d3cuZGJzdHVkaW8ubmwvZXZlbnQvMTE3NzQv",
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "ulthar (us)": {
-        "s": null,
-        "l": null,
-        "g": [
-          "black metal"
-        ]
-      }
-    }
   },
   {
     "door": "2024-08-08T20:00:00+02:00",
@@ -2379,22 +2387,19 @@
     "start": "2024-08-14T08:00:00",
     "end": "2024-08-14T10:30:00",
     "venueEventUrl": "https://www.dbstudio.nl/event/sacri-monti-usa-tee-pee-records-larrikino/",
-    "title": "Sacri monti (usa – tee pee records) + larrikino",
+    "title": "Sacri monti (usa – tee pee records) ",
     "location": "dbs",
     "price": 14,
-    "shortText": " Het uit San Diego afkomstige Sacri Monti was al eerder te gast in de oude dB’s en ook op onze nieuwe locatie aan de Vlampijpstraat verwelkomen we deze Califonische psycherockers met open armen. Het recept is niet vernieuwend maar daarom niet minder smakelijk. Mix gelijke delen heavy psych, blues en prog en laat het spelen door een vijftal virtuoze muzikanten die hun sporen al lang en breed verdiend hebben in bands als Radio Moscow en JOY.\nDe band brengt hun materiaal uit op het fraaie Tee Pee Records label waarop vorig jaar als laatste wapenfeit een liveregistratie verscheen van hun optreden op het Nijmeegse SOnic WHip festival van 2022.  26 juli aanstaande komt Sacri Monti met hun nieuwe plaat Retrieval, de tour staat dan ook in het teken van deze gloednieuwe release.",
+    "shortText": " larrikino Het uit San Diego afkomstige Sacri Monti was al eerder te gast in de oude dB’s en ook op onze nieuwe locatie aan de Vlampijpstraat verwelkomen we deze Califonische psycherockers met open armen. Het recept is niet vernieuwend maar daarom niet minder smakelijk. Mix gelijke delen heavy psych, blues en prog en laat het spelen door een vijftal virtuoze muzikanten die hun sporen al lang en breed verdiend hebben in bands als Radio Moscow en JOY.\nDe band brengt hun materiaal uit op het fraaie Tee Pee Records label waarop vorig jaar als laatste wapenfeit een liveregistratie verscheen van hun optreden op het Nijmeegse SOnic WHip festival van 2022.  26 juli aanstaande komt Sacri Monti met hun nieuwe plaat Retrieval, de tour staat dan ook in het teken van deze gloednieuwe release.",
     "longText": "../public/texts/dbs/dXNhLXRlZS1wZWUtcmVjb3Jkcy1sYXJyaWtpbm8v.html",
     "image": "../public/event-images/dbs/dXNhLXRlZS1wZWUtcmVjb3Jkcy1sYXJyaWtpbm8v",
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "whip": {
-        "s": "3oadMDBL4Wv7F5lkVwRWy2",
-        "l": "whip",
-        "g": [
-          "irish post-punk",
-          "irish rock"
-        ]
+      "larrikino": {
+        "s": "4n8zt9Q2sbWz3eZMlJIO5Z",
+        "l": null,
+        "g": []
       }
     }
   },
@@ -2402,22 +2407,21 @@
     "start": "2024-08-15T08:00:00",
     "end": "2024-08-15T10:30:00",
     "venueEventUrl": "https://www.dbstudio.nl/event/imperial-triumphant-usa-century-media/",
-    "title": "Imperial triumphant (usa – century media) + grey aura",
+    "title": "Imperial triumphant (usa – century media) ",
     "location": "dbs",
     "price": 16,
-    "shortText": " De kunstzinnige experimentele metalband Imperial Triumphant hult zich graag in nevelen. Dit excentrieke trio dat steevast verborgen achter gouden maskers en gekleed in lange gewaden optreedt, maakt een onwerkelijke mix van technische blackdeath, avant-garde free jazz dissonantie, en progressieve filharmonische extreme metal. Stap in de wonderlijke wereld van overdaad, bombast, decadentie en teringharde en schijnbaar chaotische metal. Maar deze heren weten dondersgoed wat ze doen en ze doen het goed.",
+    "shortText": " grey aura De kunstzinnige experimentele metalband Imperial Triumphant hult zich graag in nevelen. Dit excentrieke trio dat steevast verborgen achter gouden maskers en gekleed in lange gewaden optreedt, maakt een onwerkelijke mix van technische blackdeath, avant-garde free jazz dissonantie, en progressieve filharmonische extreme metal. Stap in de wonderlijke wereld van overdaad, bombast, decadentie en teringharde en schijnbaar chaotische metal. Maar deze heren weten dondersgoed wat ze doen en ze doen het goed.",
     "longText": "../public/texts/dbs/LXRyaXVtcGhhbnQtdXNhLWNlbnR1cnktbWVkaWEv.html",
     "image": "../public/event-images/dbs/LXRyaXVtcGhhbnQtdXNhLWNlbnR1cnktbWVkaWEv",
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "extreme": {
-        "s": "6w7j5wQ5AI5OQYlcM15s2L",
-        "l": "extreme",
+      "grey aura": {
+        "s": "5zlsiIekribvslzGzaqBJi",
+        "l": "Netherlands",
         "g": [
-          "funk metal",
-          "glam metal",
-          "hard rock"
+          "dutch black metal",
+          "avant-garde/atmospheric/post-black metal"
         ]
       }
     }
@@ -2845,10 +2849,10 @@
     "start": "2024-08-28T08:00:00",
     "end": "2024-08-28T10:30:00",
     "venueEventUrl": "https://www.dbstudio.nl/event/gnod-uk/",
-    "title": "Gnod (uk) + the cosmic dead (uk)) + sunset images (mx)",
+    "title": "Gnod (uk) ",
     "location": "dbs",
     "price": 17,
-    "shortText": " GNOD behoort zo langzamerhand tot een van de meest epische bands van de laatste 15 jaar. En het mooie is dat de band zich steeds weer weet te vernieuwen. Van knalharde postpunk noise kan het zomaar naar rave beats en vervreemdende ambient noise gaan maar de rode draad in het verhaal van GNOD is de onverwoestbare DIY attitude die de band onversaagd blijft aanhangen. Geen fratsen, just GNOD en daar hebben we meer dan genoeg aan. Al vaak te gast op onze oude locatie aan CAB Rondom en nu kan GNOD voor de eerste keer onze nieuwe locatie aan VLP 63 aan gruzelementen spelen. Siked as always.",
+    "shortText": " the cosmic dead (uk))  +  sunset images (mx) GNOD behoort zo langzamerhand tot een van de meest epische bands van de laatste 15 jaar. En het mooie is dat de band zich steeds weer weet te vernieuwen. Van knalharde postpunk noise kan het zomaar naar rave beats en vervreemdende ambient noise gaan maar de rode draad in het verhaal van GNOD is de onverwoestbare DIY attitude die de band onversaagd blijft aanhangen. Geen fratsen, just GNOD en daar hebben we meer dan genoeg aan. Al vaak te gast op onze oude locatie aan CAB Rondom en nu kan GNOD voor de eerste keer onze nieuwe locatie aan VLP 63 aan gruzelementen spelen. Siked as always.",
     "longText": "../public/texts/dbs/d3d3LmRic3R1ZGlvLm5sL2V2ZW50L2dub2QtdWsv.html",
     "image": "../public/event-images/dbs/d3d3LmRic3R1ZGlvLm5sL2V2ZW50L2dub2QtdWsv",
     "unavailable": false,
@@ -3106,6 +3110,26 @@
           "oi",
           "punk"
         ]
+      },
+      "oi! in hoofddorp festival": {
+        "s": null,
+        "l": "oi!%20in%20hoofddorp%20festival",
+        "g": []
+      },
+      "crim": {
+        "s": null,
+        "l": "crim",
+        "g": [
+          "Melodic Death Metal/Metalcore"
+        ]
+      },
+      "the reapers": {
+        "s": null,
+        "l": "the%20reapers%20!",
+        "g": [
+          "oi",
+          "punk"
+        ]
       }
     }
   },
@@ -3142,22 +3166,22 @@
     "start": "2024-09-11T08:00:00",
     "end": "2024-09-11T10:30:00",
     "venueEventUrl": "https://www.dbstudio.nl/event/antichrist-siege-machine-usa-profound-lore-ascended-dead/",
-    "title": "Antichrist siege machine (usa – profound lore)  + ascended dead",
+    "title": "Antichrist siege machine (usa – profound lore)  ",
     "location": "dbs",
     "price": 14.5,
-    "shortText": " Het Amerikaanse duo Antichrist Siege Machine uit Richmond Virginia maakte op Roadburn 2023 een onuitwisbare indruk met hun teringharde mix van black metal en grindcore die ook wel gelabelled wordt als war metal. Met hun nieuwe plaat Vengeance of Eternal Fire die in april uitkwam op Profound Lore records gaat dit hardste duo op oorlogspad en de Vlampijpstraat moet eraan geloven. Niet voor tere zielen, wel voor liefhebbers van extreme black metal en grindcore!\nIn het kielzog van ASM komt Ascended Dead, extreme death metal uit San Diego met een duidelijk herkenbare Morbid Angel. Technische hoogstandjes, harde death grunts en dat alles in een moordend tempo.\nBe prepared voor een allesverzengend harde avond!",
+    "shortText": " ascended dead Het Amerikaanse duo Antichrist Siege Machine uit Richmond Virginia maakte op Roadburn 2023 een onuitwisbare indruk met hun teringharde mix van black metal en grindcore die ook wel gelabelled wordt als war metal. Met hun nieuwe plaat Vengeance of Eternal Fire die in april uitkwam op Profound Lore records gaat dit hardste duo op oorlogspad en de Vlampijpstraat moet eraan geloven. Niet voor tere zielen, wel voor liefhebbers van extreme black metal en grindcore!\nIn het kielzog van ASM komt Ascended Dead, extreme death metal uit San Diego met een duidelijk herkenbare Morbid Angel. Technische hoogstandjes, harde death grunts en dat alles in een moordend tempo.\nBe prepared voor een allesverzengend harde avond!",
     "longText": "../public/texts/dbs/YS1wcm9mb3VuZC1sb3JlLWFzY2VuZGVkLWRlYWQv.html",
     "image": "../public/event-images/dbs/YS1wcm9mb3VuZC1sb3JlLWFzY2VuZGVkLWRlYWQv",
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "extreme": {
-        "s": "6w7j5wQ5AI5OQYlcM15s2L",
-        "l": "extreme",
+      "ascended dead": {
+        "s": "5eAE0zR4YcmlcfyNeAVyEP",
+        "l": "United States",
         "g": [
-          "funk metal",
-          "glam metal",
-          "hard rock"
+          "new wave of osdm",
+          "voidgrind",
+          "death metal"
         ]
       }
     }
@@ -3403,10 +3427,10 @@
     "start": "2024-09-14T08:00:00",
     "end": "2024-09-14T11:00:00",
     "venueEventUrl": "https://www.dbstudio.nl/event/kid-congo-powers-the-pink-monkey-birds-usa-in-the-red-support/",
-    "title": "Kid congo powers ",
+    "title": "Kid congo powers & the pink monkey birds (usa – in the red) ",
     "location": "dbs",
     "price": 16,
-    "shortText": " the pink monkey birds (usa – in the red) + support Een levende legende als Kid Congo Powers, gitarist bij zowel The Gun Club, The Cramps als The Bad Seeds in hun hoogtijdagen, moet je op handen dragen.\nEn dat gaan we doen deze zaterdagavond als deze heerser op de gitaar, die tevens auteur en queer dandy stijlicoon is, langskomt in de nieuwe dB’s. Een hele eer!\nKid Congo opereert tegenwoordig als trio met Pink Monkey Birds Mark Cisneros (The Make Up & Medications) en Ron Miller op respectievelijk 2e gitaar en drums.\nNieuwe plaat “That Delicious Vice” is net uit op -wederom- In The Red en borduurt voort op de Kid Congo succesformule van garagerock en punk met hier en daar een snufje exotische latino-invloeden die Kid COngo als 2e generatie Mexican American zijn ingebakken.\nJoin us for an epic nigh featuring a living legend.",
+    "shortText": " support Een levende legende als Kid Congo Powers, gitarist bij zowel The Gun Club, The Cramps als The Bad Seeds in hun hoogtijdagen, moet je op handen dragen.\nEn dat gaan we doen deze zaterdagavond als deze heerser op de gitaar, die tevens auteur en queer dandy stijlicoon is, langskomt in de nieuwe dB’s. Een hele eer!\nKid Congo opereert tegenwoordig als trio met Pink Monkey Birds Mark Cisneros (The Make Up & Medications) en Ron Miller op respectievelijk 2e gitaar en drums.\nNieuwe plaat “That Delicious Vice” is net uit op -wederom- In The Red en borduurt voort op de Kid Congo succesformule van garagerock en punk met hier en daar een snufje exotische latino-invloeden die Kid COngo als 2e generatie Mexican American zijn ingebakken.\nJoin us for an epic nigh featuring a living legend.",
     "longText": "../public/texts/dbs/LWJpcmRzLXVzYS1pbi10aGUtcmVkLXN1cHBvcnQv.html",
     "image": "../public/event-images/dbs/LWJpcmRzLXVzYS1pbi10aGUtcmVkLXN1cHBvcnQv",
     "unavailable": false,
@@ -3839,7 +3863,15 @@
     "image": "../public/event-images/dbs/cy1idXJuaW5nLW5laWdoYm91cnMtc3VwcG9ydHMv",
     "unavailable": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "neighbours burning neighbours": {
+        "s": "4GQw6nVpgVMHCgUnEdUslh",
+        "l": null,
+        "g": [
+          "dutch post-punk"
+        ]
+      }
+    }
   },
   {
     "door": "2024-09-21T20:00:00",
@@ -3855,7 +3887,7 @@
     "artists": {
       "heilung": {
         "s": "7sTKZr30LqC928DZ5P9mNQ",
-        "l": null,
+        "l": "heilung",
         "g": [
           "dark folk",
           "rune folk",
@@ -6868,7 +6900,15 @@
     "image": "../public/event-images/afaslive/YWZhc2xpdmUubmwvYWdlbmRhL3NsZWVwLXRva2Vu",
     "soldOut": true,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "sleep token": {
+        "s": "2n2RSaZqBuUUukhbLlpnE6",
+        "l": "sleep%20token",
+        "g": [
+          "prog metal"
+        ]
+      }
+    }
   },
   {
     "door": "2024-11-19T20:00:00",
@@ -7097,7 +7137,17 @@
     "image": "../public/event-images/afaslive/YXNsaXZlLm5sL2FnZW5kYS9kcmVhbS10aGVhdGVy",
     "soldOut": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "dream theater": {
+        "s": "2aaLAng2L2aWD2FClzwiep",
+        "l": "dream%20theater",
+        "g": [
+          "metal",
+          "progressive metal",
+          "Progressive Metal"
+        ]
+      }
+    }
   },
   {
     "start": "2024-11-26T20:00:00",
@@ -7858,7 +7908,15 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "dope d.o.d.": {
+        "s": "64UHlFDUkT8Hx3RCtDUieN",
+        "l": "dope%20d.o.d.",
+        "g": [
+          "dutch hip hop"
+        ]
+      }
+    }
   },
   {
     "door": "2024-12-08T20:30:00+01:00",
@@ -8917,7 +8975,16 @@
     "image": "../public/event-images/afaslive/YXNsaXZlLm5sL2FnZW5kYS9zdGV2ZW4td2lsc29u",
     "soldOut": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "steven wilson": {
+        "s": "4X42BfuhWCAZ2swiVze9O0",
+        "l": "steven%20wilson",
+        "g": [
+          "progressive metal",
+          "progressive rock"
+        ]
+      }
+    }
   },
   {
     "door": "2025-05-24T20:00:00",
@@ -8954,7 +9021,17 @@
     "eventGenres": [
       "metal "
     ],
-    "artists": null
+    "artists": {
+      "dreamtheater": {
+        "s": "2aaLAng2L2aWD2FClzwiep",
+        "l": "dream%20theater",
+        "g": [
+          "metal",
+          "progressive metal",
+          "Progressive Metal"
+        ]
+      }
+    }
   },
   {
     "door": "4049-01-15T19:30:00",

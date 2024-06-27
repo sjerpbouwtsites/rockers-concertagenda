@@ -12,7 +12,22 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "fear": {
+        "s": "0hPU1czS0JdstuT8VRtBPS",
+        "l": "fear",
+        "g": [
+          "hardcore punk",
+          "punk",
+          "Death/Thrash Metal"
+        ]
+      },
+      "open wounds": {
+        "s": "2UnYGo6MpDsaDRiPzDgKmD",
+        "l": "open%20wounds",
+        "g": []
+      }
+    }
   },
   {
     "door": "2024-07-19T20:00:00",
@@ -37,6 +52,25 @@
           "rap rock",
           "west coast rap"
         ]
+      },
+      "killer": {
+        "s": null,
+        "l": "killer",
+        "g": [
+          "Heavy/Speed Metal"
+        ]
+      },
+      "vexation": {
+        "s": "3IK7FZwX5BqAFDBqjFWuyX",
+        "l": "vexation",
+        "g": [
+          "Death/Thrash Metal"
+        ]
+      },
+      "metalbats": {
+        "s": null,
+        "l": "metalbats",
+        "g": []
       }
     }
   },
@@ -53,7 +87,23 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "soil": {
+        "s": "4PoYwGOztIrPpBfRIlMSxP",
+        "l": "soil",
+        "g": [
+          "alternative metal",
+          "industrial metal",
+          "nu metal",
+          "Black Metal"
+        ]
+      },
+      "dé chicago heavy rock-band": {
+        "s": null,
+        "l": "d%C3%A9%20chicago%20heavy%20rock-band",
+        "g": []
+      }
+    }
   },
   {
     "door": "2024-09-07T15:00:00",
@@ -76,6 +126,26 @@
           "oi",
           "punk"
         ]
+      },
+      "oi! in hoofddorp festival": {
+        "s": null,
+        "l": "oi!%20in%20hoofddorp%20festival",
+        "g": []
+      },
+      "crim": {
+        "s": null,
+        "l": "crim",
+        "g": [
+          "Melodic Death Metal/Metalcore"
+        ]
+      },
+      "the reapers": {
+        "s": null,
+        "l": "the%20reapers%20!",
+        "g": [
+          "oi",
+          "punk"
+        ]
       }
     }
   },
@@ -92,6 +162,14 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "dope d.o.d.": {
+        "s": "64UHlFDUkT8Hx3RCtDUieN",
+        "l": "dope%20d.o.d.",
+        "g": [
+          "dutch hip hop"
+        ]
+      }
+    }
   }
 ]
