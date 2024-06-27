@@ -20,7 +20,7 @@
     "venueEventUrl": "https://bibelot.net/programma/its-not-a-phase-mom-limp-business/",
     "title": "It’s Not A Phase, Mom – Limp Business",
     "location": "bibelot",
-    "price": 0,
+    "price": 30,
     "longText": "../public/texts/bibelot/bm90LWEtcGhhc2UtbW9tLWxpbXAtYnVzaW5lc3Mv.html",
     "image": "../public/event-images/bibelot/bm90LWEtcGhhc2UtbW9tLWxpbXAtYnVzaW5lc3Mv",
     "soldOut": false,
@@ -75,6 +75,22 @@
     "artists": null
   },
   {
+    "door": "2024-10-25T20:30:00",
+    "start": "2024-10-25T21:00:00",
+    "venueEventUrl": "https://bibelot.net/programma/speedmobile/",
+    "title": "Speedmobile",
+    "location": "bibelot",
+    "price": 0,
+    "longText": "../public/texts/bibelot/bG90Lm5ldC9wcm9ncmFtbWEvc3BlZWRtb2JpbGUv.html",
+    "image": "../public/event-images/bibelot/bG90Lm5ldC9wcm9ncmFtbWEvc3BlZWRtb2JpbGUv",
+    "soldOut": false,
+    "eventGenres": [
+      "punk ",
+      "rock "
+    ],
+    "artists": null
+  },
+  {
     "door": "2024-12-13T20:30:00",
     "start": "2024-12-13T21:00:00",
     "venueEventUrl": "https://bibelot.net/programma/tusky/",
@@ -110,6 +126,22 @@
     "soldOut": false,
     "eventGenres": [
       "garagerock ",
+      "rock "
+    ],
+    "artists": null
+  },
+  {
+    "door": "2024-12-27T20:00:00",
+    "start": "2024-12-27T20:45:00",
+    "venueEventUrl": "https://bibelot.net/programma/the-metal-studs/",
+    "title": "The Metal Studs",
+    "location": "bibelot",
+    "price": 0,
+    "longText": "../public/texts/bibelot/bmV0L3Byb2dyYW1tYS90aGUtbWV0YWwtc3R1ZHMv.html",
+    "image": "../public/event-images/bibelot/bmV0L3Byb2dyYW1tYS90aGUtbWV0YWwtc3R1ZHMv",
+    "soldOut": false,
+    "eventGenres": [
+      "metal ",
       "rock "
     ],
     "artists": null

@@ -194,7 +194,7 @@ class WorkerListConf {
       }
       return true;
     }
-    if (shell.force.includes(familyName)) return true;
+    if (shell.force?.includes(familyName) ?? null) return true;
     if (familyName.includes('metalfan')) return false; // metalfan alleen bij all of force
     if (!this.baseEventlistsStart.join('').includes(familyName)) return true;
     const actueelGevonden = this.baseEventlistsStart.find(

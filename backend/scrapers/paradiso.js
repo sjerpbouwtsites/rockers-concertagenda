@@ -173,7 +173,7 @@ scraper.singlePage = async function ({ page, event }) {
   };
 
   try {
-    await page.waitForSelector('.css-tkkldl', {
+    await page.waitForSelector('.css-65enbk', {
       timeout: 3000,
     });
   } catch (caughtError) {
@@ -182,6 +182,7 @@ scraper.singlePage = async function ({ page, event }) {
       remarks: `Paradiso wacht op laden single pagina\n${buitenRes.anker}`,
       errorLevel: 'notice',
     });
+    buitenRes.corrupt = 'single niet  correcte geladen';
     return this.singlePageEnd({ pageInfo: buitenRes, stopFunctie, page });
   }
 
@@ -199,39 +200,6 @@ scraper.singlePage = async function ({ page, event }) {
       if (!contentBox1 && !contentBox2) {
         res.corrupted = 'geen contentboxes';
       }
-
-      // try {
-      //   const startDateMatch = document
-      //     .querySelector('.css-tkkldl')
-      //     ?.textContent.toLowerCase()
-      //     .match(/(\d{1,2})\s+(\w+)/); // TODO paradiso kan nu niet omgaan met jaarrwisselingen.
-      //   res.match = startDateMatch;
-      //   if (startDateMatch && Array.isArray(startDateMatch) && startDateMatch.length === 3) {
-      //     const monthName = months[startDateMatch[2]];
-      //     if (!monthName) {
-      //       res.errors.push({
-      //         error: new Error(`month not found ${startDateMatch[2]}`),
-      //         toDebug: startDateMatch,
-      //       });
-      //     }
-
-      //     const curM = new Date().getMonth() + 1;
-      //     let year = new Date().getFullYear();
-      //     if (monthName < curM) {
-      //       year += 1;
-      //     }
-
-      //     res.startDate = `${year}-${monthName}-${startDateMatch[1].padStart(2, '0')}`;
-      //   }
-      // } catch (caughtError) {
-      //   res.errors.push({
-      //     error: caughtError,
-      //     remarks: `startDateMatch ${res.anker}`,
-      //     toDebug: {
-      //       event,
-      //     },
-      //   });
-      // }
 
       let startTijd;
       let deurTijd;

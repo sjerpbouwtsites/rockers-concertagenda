@@ -1,20 +1,5 @@
 [
   {
-    "door": "2024-06-22T20:30:00+02:00",
-    "start": "2024-06-22T20:30:00+02:00",
-    "venueEventUrl": "https://www.013.nl/programma/78856/meth",
-    "title": "Meth",
-    "location": "013",
-    "price": 17.3,
-    "shortText": "",
-    "longText": "../public/texts/013/d3cuMDEzLm5sL3Byb2dyYW1tYS83ODg1Ni9tZXRo.html",
-    "image": "../public/event-images/013/d3cuMDEzLm5sL3Byb2dyYW1tYS83ODg1Ni9tZXRo",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
     "door": "2024-07-07T19:00:00+02:00",
     "start": "2024-07-07T19:00:00+02:00",
     "venueEventUrl": "https://www.013.nl/programma/75125/angel-du-t-gouge-away-teenage-wrist",
@@ -131,15 +116,15 @@
     "artists": null
   },
   {
-    "door": "2024-11-01T19:00:00+01:00",
-    "start": "2024-11-01T19:00:00+01:00",
-    "venueEventUrl": "https://www.013.nl/programma/7703/beartooth",
+    "door": "2024-10-31T19:00:00+01:00",
+    "start": "2024-10-31T19:00:00+01:00",
+    "venueEventUrl": "https://www.013.nl/programma/7702/beartooth",
     "title": "Beartooth",
     "location": "013",
     "price": 42.8,
-    "shortText": "Show #2",
-    "longText": "../public/texts/013/MTMubmwvcHJvZ3JhbW1hLzc3MDMvYmVhcnRvb3Ro.html",
-    "image": "../public/event-images/013/MTMubmwvcHJvZ3JhbW1hLzc3MDMvYmVhcnRvb3Ro",
+    "shortText": "Show #1",
+    "longText": "../public/texts/013/MTMubmwvcHJvZ3JhbW1hLzc3MDIvYmVhcnRvb3Ro.html",
+    "image": "../public/event-images/013/MTMubmwvcHJvZ3JhbW1hLzc3MDIvYmVhcnRvb3Ro",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
@@ -156,45 +141,76 @@
     }
   },
   {
-    "door": "2024-11-17T20:00:00+01:00",
-    "start": "2024-11-17T20:00:00+01:00",
-    "venueEventUrl": "https://www.013.nl/programma/7891/wheel",
-    "title": "Wheel",
+    "door": "2024-11-08T22:00:00+01:00",
+    "start": "2024-11-08T22:00:00+01:00",
+    "venueEventUrl": "https://www.013.nl/programma/7869/no-barrier",
+    "title": "No barrier",
     "location": "013",
-    "price": 23.3,
-    "shortText": "",
-    "longText": "../public/texts/013/d3cuMDEzLm5sL3Byb2dyYW1tYS83ODkxL3doZWVs.html",
-    "image": "../public/event-images/013/d3cuMDEzLm5sL3Byb2dyYW1tYS83ODkxL3doZWVs",
+    "price": 17.3,
+    "shortText": "Punk, Rock & Metalcore!",
+    "longText": "../public/texts/013/My5ubC9wcm9ncmFtbWEvNzg2OS9uby1iYXJyaWVy.html",
+    "image": "../public/event-images/013/My5ubC9wcm9ncmFtbWEvNzg2OS9uby1iYXJyaWVy",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "no barrier": {
+        "s": "2am0pROxk0wcIVgL5rZA3A",
+        "l": "no%20barrier",
+        "g": []
+      }
+    }
+  },
+  {
+    "door": "2024-11-22T19:00:00+01:00",
+    "start": "2024-11-22T19:00:00+01:00",
+    "venueEventUrl": "https://www.013.nl/programma/81021/avocado-booking-presents-pins-knuckles-faces-of-death-tour-2024",
+    "title": "Pins & Knuckles Faces Of Death Tour",
+    "location": "013",
+    "price": 27.3,
+    "shortText": "Veil Of Maya + Signs Of The Swarm + Varials + To The Grave",
+    "longText": "../public/texts/013/Y2tsZXMtZmFjZXMtb2YtZGVhdGgtdG91ci0yMDI0.html",
+    "image": "../public/event-images/013/Y2tsZXMtZmFjZXMtb2YtZGVhdGgtdG91ci0yMDI0",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": null
   },
   {
-    "door": "2024-11-27T20:00:00+01:00",
-    "start": "2024-11-27T20:00:00+01:00",
-    "venueEventUrl": "https://www.013.nl/programma/78453/benighted-baest",
-    "title": "Benighted + Baest",
+    "door": "2024-12-20T20:00:00+01:00",
+    "start": "2024-12-20T20:00:00+01:00",
+    "venueEventUrl": "https://www.013.nl/programma/7906/john-coffey",
+    "title": "John Coffey",
     "location": "013",
-    "price": 22.3,
+    "price": 27.3,
     "shortText": "",
-    "longText": "../public/texts/013/cm9ncmFtbWEvNzg0NTMvYmVuaWdodGVkLWJhZXN0.html",
-    "image": "../public/event-images/013/cm9ncmFtbWEvNzg0NTMvYmVuaWdodGVkLWJhZXN0",
+    "longText": "../public/texts/013/Lm5sL3Byb2dyYW1tYS83OTA2L2pvaG4tY29mZmV5.html",
+    "image": "../public/event-images/013/Lm5sL3Byb2dyYW1tYS83OTA2L2pvaG4tY29mZmV5",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "john coffey": {
+        "s": "4kffVdSOMGP0BOiBXVgeyA",
+        "l": "john%20coffey",
+        "g": [
+          "dutch indie",
+          "dutch rock",
+          "hardcore punk"
+        ]
+      }
+    }
   },
   {
-    "door": "2024-12-22T20:00:00+01:00",
-    "start": "2024-12-22T20:00:00+01:00",
-    "venueEventUrl": "https://www.013.nl/programma/80690/dool",
-    "title": "Dool",
+    "door": "2025-01-24T21:00:00+01:00",
+    "start": "2025-01-24T21:00:00+01:00",
+    "venueEventUrl": "https://www.013.nl/programma/7737/the-optimist-in-me",
+    "title": "The Optimist In Me",
     "location": "013",
-    "price": 25.3,
+    "price": 11.7,
     "shortText": "",
-    "longText": "../public/texts/013/d3cuMDEzLm5sL3Byb2dyYW1tYS84MDY5MC9kb29s.html",
-    "image": "../public/event-images/013/d3cuMDEzLm5sL3Byb2dyYW1tYS84MDY5MC9kb29s",
+    "longText": "../public/texts/013/Z3JhbW1hLzc3MzcvdGhlLW9wdGltaXN0LWluLW1l.html",
+    "image": "../public/event-images/013/Z3JhbW1hLzc3MzcvdGhlLW9wdGltaXN0LWluLW1l",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,

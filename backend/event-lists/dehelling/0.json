@@ -1,21 +1,7 @@
 [
   {
-    "start": "2024-06-18T19:00:00",
-    "end": "2024-06-18T23:00:00",
-    "venueEventUrl": "https://dehelling.nl/agenda/dying-fetus-18-06-2024/",
-    "title": "Dying Fetus",
-    "location": "dehelling",
-    "price": 28.7,
-    "shortText": "US Deathmetal-godfathers van het eerste uur",
-    "longText": "../public/texts/dehelling/YWdlbmRhL2R5aW5nLWZldHVzLTE4LTA2LTIwMjQv.html",
-    "image": "../public/event-images/dehelling/YWdlbmRhL2R5aW5nLWZldHVzLTE4LTA2LTIwMjQv",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
     "start": "2024-09-06T19:00:00",
-    "end": "2024-09-06T23:00:00",
+    "end": "2024-09-06T22:30:00",
     "venueEventUrl": "https://dehelling.nl/agenda/bring-me-the-horizon-fanparty-ii-06-09-2024/",
     "title": "Bring Me The Horizon Fanparty II",
     "location": "dehelling",
@@ -54,6 +40,41 @@
     }
   },
   {
+    "start": "2024-10-06T19:30:00",
+    "end": "2024-10-06T23:00:00",
+    "venueEventUrl": "https://dehelling.nl/agenda/bad-breeding-uniform-06-10-2024/",
+    "title": "Bad Breeding + Uniform",
+    "location": "dehelling",
+    "price": 20.7,
+    "shortText": "Twee hardcorepunk-sloopmachines op oorlogspad",
+    "longText": "../public/texts/dehelling/ZC1icmVlZGluZy11bmlmb3JtLTA2LTEwLTIwMjQv.html",
+    "image": "../public/event-images/dehelling/ZC1icmVlZGluZy11bmlmb3JtLTA2LTEwLTIwMjQv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "bad breeding": {
+        "s": "781vvvQYKgDjg3i90b7vtV",
+        "l": "bad%20breeding",
+        "g": [
+          "uk noise rock"
+        ]
+      },
+      "uniform": {
+        "s": "3TaLdYu9rA6H364ROYMmvF",
+        "l": "uniform",
+        "g": [
+          "drone metal",
+          "dub metal",
+          "noise",
+          "noise punk",
+          "noise rock",
+          "nyc metal",
+          "post-doom metal"
+        ]
+      }
+    }
+  },
+  {
     "start": "2024-10-26T20:00:00",
     "end": "2024-10-26T02:00:00",
     "venueEventUrl": "https://dehelling.nl/agenda/a-hella-mean-halloween-26-10-2024/",
@@ -63,6 +84,20 @@
     "shortText": "Punk-verkleedpartijtje met Bony Macaroni, Bowl, Rats and Daggers en POM",
     "longText": "../public/texts/dehelling/bGxhLW1lYW4taGFsbG93ZWVuLTI2LTEwLTIwMjQv.html",
     "image": "../public/event-images/dehelling/bGxhLW1lYW4taGFsbG93ZWVuLTI2LTEwLTIwMjQv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "start": "2024-11-06T19:30:00",
+    "end": "2024-11-06T23:00:00",
+    "venueEventUrl": "https://dehelling.nl/agenda/dream-state-06-11-2024/",
+    "title": "Dream State",
+    "location": "dehelling",
+    "price": 20.2,
+    "shortText": "Herboren post-hardcoregiganten uit Wales",
+    "longText": "../public/texts/dehelling/YWdlbmRhL2RyZWFtLXN0YXRlLTA2LTExLTIwMjQv.html",
+    "image": "../public/event-images/dehelling/YWdlbmRhL2RyZWFtLXN0YXRlLTA2LTExLTIwMjQv",
     "soldOut": false,
     "eventGenres": null,
     "artists": null

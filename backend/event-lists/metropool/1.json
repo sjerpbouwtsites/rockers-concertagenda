@@ -79,5 +79,26 @@
     "unavailable": false,
     "eventGenres": null,
     "artists": null
+  },
+  {
+    "door": "4049-04-12T20:30:00",
+    "start": "4049-04-12T21:00:00",
+    "venueEventUrl": "https://metropool.nl/agenda/joy-division-undercover-enschede/",
+    "title": "Joy Division Undercover",
+    "location": "metropool",
+    "price": 23,
+    "shortText": "",
+    "longText": "../public/texts/metropool/LWRpdmlzaW9uLXVuZGVyY292ZXItZW5zY2hlZGUv.html",
+    "image": "../public/event-images/metropool/LWRpdmlzaW9uLXVuZGVyY292ZXItZW5zY2hlZGUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "joy division": {
+        "s": null,
+        "l": "joy%20division",
+        "g": []
+      }
+    }
   }
 ]

@@ -1,35 +1,5 @@
 [
   {
-    "door": "2024-06-25T20:00:00+02:00",
-    "start": "2024-06-25T20:00:00+02:00",
-    "venueEventUrl": "https://www.013.nl/programma/7766/megadeth",
-    "title": "Megadeth",
-    "location": "013",
-    "price": 60.8,
-    "shortText": "Crush The World Tour",
-    "longText": "../public/texts/013/MDEzLm5sL3Byb2dyYW1tYS83NzY2L21lZ2FkZXRo.html",
-    "image": "../public/event-images/013/MDEzLm5sL3Byb2dyYW1tYS83NzY2L21lZ2FkZXRo",
-    "soldOut": true,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "megadeth": {
-        "s": "1Yox196W7bzVNZI7RBaPnf",
-        "l": "megadeth",
-        "g": [
-          "alternative metal",
-          "hard rock",
-          "melodic thrash",
-          "metal",
-          "old school thrash",
-          "rock",
-          "speed metal",
-          "thrash metal"
-        ]
-      }
-    }
-  },
-  {
     "door": "2024-08-07T20:00:00+02:00",
     "start": "2024-08-07T20:00:00+02:00",
     "venueEventUrl": "https://www.013.nl/programma/7818/opeth",
@@ -125,105 +95,124 @@
     "artists": null
   },
   {
-    "door": "2024-10-31T19:00:00+01:00",
-    "start": "2024-10-31T19:00:00+01:00",
-    "venueEventUrl": "https://www.013.nl/programma/7702/beartooth",
-    "title": "Beartooth",
+    "door": "2024-10-27T19:30:00+01:00",
+    "start": "2024-10-27T19:30:00+01:00",
+    "venueEventUrl": "https://www.013.nl/programma/79375/the-ghost-inside",
+    "title": "The Ghost Inside",
     "location": "013",
-    "price": 42.8,
-    "shortText": "Show #1",
-    "longText": "../public/texts/013/MTMubmwvcHJvZ3JhbW1hLzc3MDIvYmVhcnRvb3Ro.html",
-    "image": "../public/event-images/013/MTMubmwvcHJvZ3JhbW1hLzc3MDIvYmVhcnRvb3Ro",
+    "price": 38.8,
+    "shortText": "Searching For Solace Tour",
+    "longText": "../public/texts/013/b2dyYW1tYS83OTM3NS90aGUtZ2hvc3QtaW5zaWRl.html",
+    "image": "../public/event-images/013/b2dyYW1tYS83OTM3NS90aGUtZ2hvc3QtaW5zaWRl",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "beartooth": {
-        "s": "6vwjIs0tbIiseJMR3pqwiL",
-        "l": "beartooth",
+      "ghost": {
+        "s": "1Qp56T7n950O3EGMsSl81D",
+        "l": "ghost",
         "g": [
-          "melodic metalcore",
-          "metalcore",
-          "pop punk"
+          "hard rock",
+          "metal"
         ]
       }
     }
   },
   {
-    "door": "2024-11-08T22:00:00+01:00",
-    "start": "2024-11-08T22:00:00+01:00",
-    "venueEventUrl": "https://www.013.nl/programma/7869/no-barrier",
-    "title": "No barrier",
+    "door": "2024-11-08T20:00:00+01:00",
+    "start": "2024-11-08T20:00:00+01:00",
+    "venueEventUrl": "https://www.013.nl/programma/81918/guilt-trip",
+    "title": "Guilt Trip",
     "location": "013",
-    "price": 17.3,
-    "shortText": "Punk, Rock & Metalcore!",
-    "longText": "../public/texts/013/My5ubC9wcm9ncmFtbWEvNzg2OS9uby1iYXJyaWVy.html",
-    "image": "../public/event-images/013/My5ubC9wcm9ncmFtbWEvNzg2OS9uby1iYXJyaWVy",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "no barrier": {
-        "s": "2am0pROxk0wcIVgL5rZA3A",
-        "l": "no%20barrier",
-        "g": []
-      }
-    }
-  },
-  {
-    "door": "2024-11-22T19:00:00+01:00",
-    "start": "2024-11-22T19:00:00+01:00",
-    "venueEventUrl": "https://www.013.nl/programma/81021/avocado-booking-presents-pins-knuckles-faces-of-death-tour-2024",
-    "title": "Pins & Knuckles Faces Of Death Tour",
-    "location": "013",
-    "price": 27.3,
-    "shortText": "Veil Of Maya + Signs Of The Swarm + Varials + To The Grave",
-    "longText": "../public/texts/013/Y2tsZXMtZmFjZXMtb2YtZGVhdGgtdG91ci0yMDI0.html",
-    "image": "../public/event-images/013/Y2tsZXMtZmFjZXMtb2YtZGVhdGgtdG91ci0yMDI0",
+    "price": 19.8,
+    "shortText": "",
+    "longText": "../public/texts/013/Lm5sL3Byb2dyYW1tYS84MTkxOC9ndWlsdC10cmlw.html",
+    "image": "../public/event-images/013/Lm5sL3Byb2dyYW1tYS84MTkxOC9ndWlsdC10cmlw",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": null
   },
   {
-    "door": "2024-12-20T20:00:00+01:00",
-    "start": "2024-12-20T20:00:00+01:00",
-    "venueEventUrl": "https://www.013.nl/programma/7906/john-coffey",
-    "title": "John Coffey",
+    "door": "2024-11-21T20:00:00+01:00",
+    "start": "2024-11-21T20:00:00+01:00",
+    "venueEventUrl": "https://www.013.nl/programma/77846/brothers-of-metal",
+    "title": "Brothers Of Metal",
     "location": "013",
-    "price": 27.3,
+    "price": 24.3,
+    "shortText": "FimbulwinTour 2024",
+    "longText": "../public/texts/013/Z3JhbW1hLzc3ODQ2L2Jyb3RoZXJzLW9mLW1ldGFs.html",
+    "image": "../public/event-images/013/Z3JhbW1hLzc3ODQ2L2Jyb3RoZXJzLW9mLW1ldGFs",
+    "soldOut": true,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2024-12-08T20:30:00+01:00",
+    "start": "2024-12-08T20:30:00+01:00",
+    "venueEventUrl": "https://www.013.nl/programma/7859/hang-youth",
+    "title": "Hang Youth",
+    "location": "013",
+    "price": 23.3,
     "shortText": "",
-    "longText": "../public/texts/013/Lm5sL3Byb2dyYW1tYS83OTA2L2pvaG4tY29mZmV5.html",
-    "image": "../public/event-images/013/Lm5sL3Byb2dyYW1tYS83OTA2L2pvaG4tY29mZmV5",
+    "longText": "../public/texts/013/My5ubC9wcm9ncmFtbWEvNzg1OS9oYW5nLXlvdXRo.html",
+    "image": "../public/event-images/013/My5ubC9wcm9ncmFtbWEvNzg1OS9oYW5nLXlvdXRo",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "john coffey": {
-        "s": "4kffVdSOMGP0BOiBXVgeyA",
-        "l": "john%20coffey",
+      "hang youth": {
+        "s": "33s4eablBmnrPlE3y6CZFR",
+        "l": "hang%20youth",
         "g": [
           "dutch indie",
           "dutch rock",
+          "lowlands hardcore",
           "hardcore punk"
         ]
       }
     }
   },
   {
-    "door": "2025-01-24T21:00:00+01:00",
-    "start": "2025-01-24T21:00:00+01:00",
-    "venueEventUrl": "https://www.013.nl/programma/7737/the-optimist-in-me",
-    "title": "The Optimist In Me",
+    "door": "2024-12-22T20:30:00+01:00",
+    "start": "2024-12-22T20:30:00+01:00",
+    "venueEventUrl": "https://www.013.nl/programma/7907/green-lizard",
+    "title": "Green Lizard",
     "location": "013",
-    "price": 11.7,
-    "shortText": "",
-    "longText": "../public/texts/013/Z3JhbW1hLzc3MzcvdGhlLW9wdGltaXN0LWluLW1l.html",
-    "image": "../public/event-images/013/Z3JhbW1hLzc3MzcvdGhlLW9wdGltaXN0LWluLW1l",
-    "soldOut": false,
+    "price": 19.8,
+    "shortText": "30th Anniversary Tour",
+    "longText": "../public/texts/013/bmwvcHJvZ3JhbW1hLzc5MDcvZ3JlZW4tbGl6YXJk.html",
+    "image": "../public/event-images/013/bmwvcHJvZ3JhbW1hLzc5MDcvZ3JlZW4tbGl6YXJk",
+    "soldOut": true,
     "unavailable": false,
     "eventGenres": null,
     "artists": null
+  },
+  {
+    "door": "2025-02-07T20:00:00+01:00",
+    "start": "2025-02-07T20:00:00+01:00",
+    "venueEventUrl": "https://www.013.nl/programma/85967/leprous",
+    "title": "Leprous",
+    "location": "013",
+    "price": 37.3,
+    "shortText": "",
+    "longText": "../public/texts/013/MDEzLm5sL3Byb2dyYW1tYS84NTk2Ny9sZXByb3Vz.html",
+    "image": "../public/event-images/013/MDEzLm5sL3Byb2dyYW1tYS84NTk2Ny9sZXByb3Vz",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "leprous": {
+        "s": "4lgrzShsg2FLA89UM2fdO5",
+        "l": "leprous",
+        "g": [
+          "norwegian metal",
+          "prog metal",
+          "progressive metal"
+        ]
+      }
+    }
   },
   {
     "door": "2025-02-16T19:00:00+01:00",

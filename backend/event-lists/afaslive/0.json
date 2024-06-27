@@ -1,37 +1,39 @@
 [
   {
-    "door": "2024-06-19T18:30:00",
-    "start": "2024-06-19T19:30:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/five-finger-death-punch",
-    "title": "Five Finger Death Punch",
+    "door": "2024-07-08T20:00:00",
+    "start": "2024-07-08T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/zz-top",
+    "title": "Zz top",
     "location": "afaslive",
-    "price": 78.4,
-    "longText": "../public/texts/afaslive/YWdlbmRhL2ZpdmUtZmluZ2VyLWRlYXRoLXB1bmNo.html",
-    "image": "../public/event-images/afaslive/YWdlbmRhL2ZpdmUtZmluZ2VyLWRlYXRoLXB1bmNo",
-    "soldOut": false,
+    "price": 85.12,
+    "longText": "../public/texts/afaslive/L3d3dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvenotdG9w.html",
+    "image": "../public/event-images/afaslive/L3d3dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvenotdG9w",
+    "soldOut": true,
     "eventGenres": null,
     "artists": {
-      "five finger death punch": {
-        "s": "5t28BP42x2axFnqOOMg3CM",
+      "zz top": {
+        "s": "2AM4ilv6UzW0uMRuqKtDgN",
         "l": null,
         "g": [
-          "alternative metal",
-          "groove metal",
-          "nu metal"
+          "album rock",
+          "blues rock",
+          "classic rock",
+          "hard rock",
+          "rock"
         ]
       }
     }
   },
   {
-    "door": "2024-09-19T20:00:00",
-    "start": "2024-09-19T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/epica-show2",
+    "door": "2024-09-20T20:00:00",
+    "start": "2024-09-20T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/epica",
     "title": "Epica",
     "location": "afaslive",
     "price": 95.2,
-    "longText": "../public/texts/afaslive/YWZhc2xpdmUubmwvYWdlbmRhL2VwaWNhLXNob3cy.html",
-    "image": "../public/event-images/afaslive/YWZhc2xpdmUubmwvYWdlbmRhL2VwaWNhLXNob3cy",
-    "soldOut": false,
+    "longText": "../public/texts/afaslive/Ly93d3cuYWZhc2xpdmUubmwvYWdlbmRhL2VwaWNh.html",
+    "image": "../public/event-images/afaslive/Ly93d3cuYWZhc2xpdmUubmwvYWdlbmRhL2VwaWNh",
+    "soldOut": true,
     "eventGenres": null,
     "artists": {
       "epica": {
@@ -49,26 +51,29 @@
     }
   },
   {
-    "door": "2024-10-05T18:30:00",
-    "start": "2024-10-05T18:30:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/powerwolf",
-    "title": "Powerwolf",
+    "door": "2024-11-18T20:00:00",
+    "start": "2024-11-18T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/sleep-token",
+    "title": "Sleep Token",
+    "location": "afaslive",
+    "price": 59.36,
+    "longText": "../public/texts/afaslive/YWZhc2xpdmUubmwvYWdlbmRhL3NsZWVwLXRva2Vu.html",
+    "image": "../public/event-images/afaslive/YWZhc2xpdmUubmwvYWdlbmRhL3NsZWVwLXRva2Vu",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2025-05-22T20:00:00",
+    "start": "2025-05-22T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/steven-wilson",
+    "title": "Steven Wilson",
     "location": "afaslive",
     "price": 72.8,
-    "longText": "../public/texts/afaslive/dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvcG93ZXJ3b2xm.html",
-    "image": "../public/event-images/afaslive/dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvcG93ZXJ3b2xm",
+    "longText": "../public/texts/afaslive/YXNsaXZlLm5sL2FnZW5kYS9zdGV2ZW4td2lsc29u.html",
+    "image": "../public/event-images/afaslive/YXNsaXZlLm5sL2FnZW5kYS9zdGV2ZW4td2lsc29u",
     "soldOut": false,
     "eventGenres": null,
-    "artists": {
-      "powerwolf": {
-        "s": "5HFkc3t0HYETL4JeEbDB1v",
-        "l": "powerwolf",
-        "g": [
-          "german metal",
-          "german power metal",
-          "power metal"
-        ]
-      }
-    }
+    "artists": null
   }
 ]

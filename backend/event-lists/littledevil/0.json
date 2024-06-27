@@ -1,13 +1,13 @@
 [
   {
-    "start": "2024-06-22T20:00:00",
-    "venueEventUrl": "https://www.littledevil.nl/calendar/meth/",
-    "title": "Meth",
+    "start": "2024-06-30T15:00:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/ldsports-formula-1-austria/",
+    "title": "LDsports: Formula 1 – Austria",
     "location": "littledevil",
-    "price": 15,
-    "shortText": "hardcore",
-    "longText": "../public/texts/littledevil/LmxpdHRsZWRldmlsLm5sL2NhbGVuZGFyL21ldGgv.html",
-    "image": "../public/event-images/littledevil/LmxpdHRsZWRldmlsLm5sL2NhbGVuZGFyL21ldGgv",
+    "price": 0,
+    "shortText": "live race kijken op groot scherm in ons café",
+    "longText": "../public/texts/littledevil/YXIvbGRzcG9ydHMtZm9ybXVsYS0xLWF1c3RyaWEv.html",
+    "image": "../public/event-images/littledevil/YXIvbGRzcG9ydHMtZm9ybXVsYS0xLWF1c3RyaWEv",
     "soldOut": false,
     "eventGenres": null,
     "artists": null
@@ -39,19 +39,6 @@
     "artists": null
   },
   {
-    "start": "2024-08-02T20:30:00",
-    "venueEventUrl": "https://www.littledevil.nl/calendar/beasto-blanco-usa-johnny-tupolev-d/",
-    "title": "Beastö Blancö (USA) + Johnny Tupolev (D)",
-    "location": "littledevil",
-    "price": 10,
-    "shortText": "powerful - rock & roll - theatrical live experience",
-    "longText": "../public/texts/littledevil/by1ibGFuY28tdXNhLWpvaG5ueS10dXBvbGV2LWQv.html",
-    "image": "../public/event-images/littledevil/by1ibGFuY28tdXNhLWpvaG5ueS10dXBvbGV2LWQv",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
     "start": "2024-08-04T16:00:00",
     "venueEventUrl": "https://www.littledevil.nl/calendar/raven-uk/",
     "title": "Raven (uk)",
@@ -73,6 +60,19 @@
     "shortText": "stoner - punk - hardcore - metal",
     "longText": "../public/texts/littledevil/dHRsZWRldmlsLm5sL2NhbGVuZGFyL2Jva2Fzc2Ev.html",
     "image": "../public/event-images/littledevil/dHRsZWRldmlsLm5sL2NhbGVuZGFyL2Jva2Fzc2Ev",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "start": "2024-10-31T20:30:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/beasto-blanco-usa-johnny-tupolev-d/",
+    "title": "Beastö Blancö (USA) + Johnny Tupolev (D)",
+    "location": "littledevil",
+    "price": 10,
+    "shortText": "powerful - rock & roll - theatrical live experience",
+    "longText": "../public/texts/littledevil/by1ibGFuY28tdXNhLWpvaG5ueS10dXBvbGV2LWQv.html",
+    "image": "../public/event-images/littledevil/by1ibGFuY28tdXNhLWpvaG5ueS10dXBvbGV2LWQv",
     "soldOut": false,
     "eventGenres": null,
     "artists": null
