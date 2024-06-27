@@ -78,7 +78,7 @@ export default class Artists {
   /**
    * of in die persistentie functie fs write file
    */
-  nietSchrijven = false;
+  nietSchrijven = true;
 
   funcsToDebug = {
     harvestArtists: true,

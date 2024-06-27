@@ -19,6 +19,7 @@ const eventMetaTerms = [
   '2025',
   'en veel meer!',
   'en veel meer',
+  'fanparty',
 ];
 
 const forbiddenTerms = [
@@ -84,6 +85,7 @@ const forbiddenTerms = [
   "open dag",
   "pov: indie",
   "quiz'm",
+  "fanparty",
 ];
 
 const globalForbiddenGenres = [
