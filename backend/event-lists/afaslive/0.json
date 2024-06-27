@@ -13,7 +13,7 @@
     "artists": {
       "zz top": {
         "s": "2AM4ilv6UzW0uMRuqKtDgN",
-        "l": null,
+        "l": "zz%20top",
         "g": [
           "album rock",
           "blues rock",
@@ -61,7 +61,15 @@
     "image": "../public/event-images/afaslive/YWZhc2xpdmUubmwvYWdlbmRhL3NsZWVwLXRva2Vu",
     "soldOut": true,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "sleep token": {
+        "s": "2n2RSaZqBuUUukhbLlpnE6",
+        "l": "sleep%20token",
+        "g": [
+          "prog metal"
+        ]
+      }
+    }
   },
   {
     "door": "2025-05-22T20:00:00",
@@ -74,6 +82,15 @@
     "image": "../public/event-images/afaslive/YXNsaXZlLm5sL2FnZW5kYS9zdGV2ZW4td2lsc29u",
     "soldOut": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "steven wilson": {
+        "s": "4X42BfuhWCAZ2swiVze9O0",
+        "l": "steven%20wilson",
+        "g": [
+          "progressive metal",
+          "progressive rock"
+        ]
+      }
+    }
   }
 ]

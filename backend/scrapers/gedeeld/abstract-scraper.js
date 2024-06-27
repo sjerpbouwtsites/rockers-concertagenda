@@ -637,7 +637,19 @@ export default class AbstractScraper extends ScraperConfig {
     const mergedEventCheckRes = await this.singlePageAsyncCheck(mergedEvent);
     mergedEventCheckRes.event = mergedEvent;
     
-    await this.asyncHarvestArtists(mergedEvent);
+    const harvestedArtists = await this.asyncHarvestArtists(mergedEvent);
+    if (harvestedArtists && harvestedArtists.success === true) {
+      const harvestedArtistsNames = Object.keys(harvestedArtists.data);
+      const currentEventArtistNames = Object.keys(mergedEvent.artists);
+      harvestedArtistsNames.forEach((han) => {
+        if (currentEventArtistNames.includes(harvestedArtistsNames)) return;
+        mergedEvent.artists[han] = {
+          s: harvestedArtists.data[han][1],
+          l: han,
+          g: harvestedArtists.data[han][3],
+        };
+      });
+    }
 
     // this.singlePageAsyncCheckDebugger(mergedEventCheckRes);
 

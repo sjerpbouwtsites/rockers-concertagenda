@@ -13,7 +13,7 @@
     "artists": {
       "korn": {
         "s": "3RNrq3jvMZxD9ZyoOZbQOD",
-        "l": null,
+        "l": "korn",
         "g": [
           "alternative metal",
           "funk metal",
@@ -40,7 +40,7 @@
     "artists": {
       "heilung": {
         "s": "7sTKZr30LqC928DZ5P9mNQ",
-        "l": null,
+        "l": "heilung",
         "g": [
           "dark folk",
           "rune folk",
@@ -60,6 +60,16 @@
     "image": "../public/event-images/afaslive/YXNsaXZlLm5sL2FnZW5kYS9kcmVhbS10aGVhdGVy",
     "soldOut": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "dream theater": {
+        "s": "2aaLAng2L2aWD2FClzwiep",
+        "l": "dream%20theater",
+        "g": [
+          "metal",
+          "progressive metal",
+          "Progressive Metal"
+        ]
+      }
+    }
   }
 ]

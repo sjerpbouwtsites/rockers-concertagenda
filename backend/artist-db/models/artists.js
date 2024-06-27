@@ -802,7 +802,7 @@ export default class Artists {
     }
 
     const reedsGevonden = toScan.map((scan) => this.scanTextForAllowedArtists(scan, '')).filter((a) => Object.keys(a).length);
-    const reedsGevondenNamen = reedsGevonden.map((g) => Object.keys(g)).flat();
+    const reedsGevondenNamen = reedsGevonden.map((g) => Object.keys(g)).flat(); 
     
     this.consoleGroup(`harvestArtist hA1`, {
       toScan, reedsGevondenNamen, title,
@@ -825,17 +825,21 @@ export default class Artists {
       }, 'harvestArtists');      
       return this.post({
         success: null,
-        data: reedsGevonden,
+        data: {},
         reason: `niets gevonden dat er niet reeds was qq1`,
       });      
     }
     
     const potentieeleOverigeTitels = verderScannen
-      .map((scan) => scan
-        .split(reg)
-        .map((a) => a.trim())
-        .filter((b) => b),
-      ).flat()
+      .map((scan) => {
+        if (Array.isArray(scan.match(reg))) {
+          return scan
+            .split(reg)
+            .map((a) => a.trim())
+            .filter((b) => b);
+        }
+        return scan;
+      }).flat()
       .map((potTitel) => {
         let t = potTitel;
         terms.eventMetaTerms.forEach((emt) => {
@@ -843,14 +847,14 @@ export default class Artists {
         });
         return t;
       })
-      .filter((potTitel) => potTitel.length > 6)
+      .filter((potTitel) => potTitel.length > 3)
       .map(slugify);
       
     if (!potentieeleOverigeTitels.length) {
       this.consoleGroup(`NIET verder scannen hA4`, { 'pot. titels': potentieeleOverigeTitels, verderScannen, title }, 'harvestArtists');
       return this.post({
         success: null,
-        data: reedsGevonden,
+        data: {},
         reason: `niets gevonden dat er niet reeds was qq2`,
       });      
     }
@@ -889,40 +893,7 @@ export default class Artists {
       }
     });
 
-    // #region OUDE MEUK
-    // if (overigeTitels.length) {
-    //   const nieuweArtiesten = await this.recursiveAPICallForGenre(overigeTitels, []);
-    //   nieuweArtiesten
-    //     .filter((a) => (a.resultaten?.spotRes ?? null) || (a.resultaten?.metalEnc ?? null))
-    //     .forEach((na) => {
-    //       const spotify = na.resultaten?.spotRes?.id ?? null;
-    //       const sGenres = na.resultaten?.spotRes?.genres ?? [];
-    //       const heeftMetalEnc = Array.isArray(na.resultaten?.metalEnc);
-    //       const mGenres = heeftMetalEnc ? na.resultaten?.metalEnc[1].split(';').map((a) => a.replace(/\(.*\)/, '').trim().toLowerCase()) ?? [] : [];
-    //       const genres = [...sGenres, ...mGenres, ...eventGenres];
-    //       const land = heeftMetalEnc ? na.resultaten?.metalEnc[2] ?? null : null;
-  
-    //       const eerstGefilterdeGenres = genres
-    //         .filter((g) => !this.terms.globalForbiddenGenres.find((gfg) => g.includes(gfg)));
-    //       const tweedeGefilterdeGenres = eerstGefilterdeGenres
-    //         .filter((g) => !this.terms.forbidden.includes(g));
-    //       const heeftHeelGoedGenre = genres
-    //         .filter((g) => !this.terms.globalGoodCategories.find((gfg) => g.includes(gfg)));
-    //       const heeftGoedeGenres = genres
-    //         .filter((g) => !this.terms.goodCategories.find((gfg) => g.includes(gfg)));
-
-    //       if (tweedeGefilterdeGenres.length || heeftHeelGoedGenre) {
-    //         this.saveAllowedTemp(na.title, na.slug, spotify, land, genres, eventDate); // TODO GAAT DIT DE GOEDE KANT OP?
-    //       } else if (heeftGoedeGenres.length > tweedeGefilterdeGenres) {
-    //         this.saveAllowedTemp(na.title, na.slug, spotify, land, genres, eventDate);
-    //       } else {
-    //         this.saveRefusedEventTemp(na.title, na.slug, eventDate);
-    //       }
-    //     });
-    // }
-    // #endregion OUDE MEUK
-
-    const artiestenInEvent = [...reedsGevonden, ...gevondenArtiesten];
+    const artiestenInEvent = [...reedsGevonden, ...gevondenArtiesten].flat();
 
     return this.post({
       success: true,
