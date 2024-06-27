@@ -24,9 +24,9 @@ const dbsScraper = new AbstractScraper({
   },
   app: {
     harvest: {
-      dividers: [`&`],
-      dividerRex: "[&]", 
-      artistsIn: ['title', 'shortText'],
+      dividers: [`+`],
+      dividerRex: "[+]", 
+      artistsIn: ['title'],
     },
     mainPage: {
       requiredProperties: ['venueEventUrl', 'title', 'start'],
