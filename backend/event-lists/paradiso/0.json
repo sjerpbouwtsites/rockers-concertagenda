@@ -1,29 +1,5 @@
 [
   {
-    "door": "2024-06-26T20:00:00",
-    "start": "2024-06-26T19:00:00",
-    "end": "2024-06-26T21:00:00",
-    "venueEventUrl": "https://www.paradiso.nl/en/program/body-count/1594461",
-    "title": "Body Count + Slope",
-    "location": "paradiso",
-    "price": 50.4,
-    "shortText": "Heavy metal and hip hop expressing social critique through lyrics",
-    "longText": "../public/texts/paradiso/L2VuL3Byb2dyYW0vYm9keS1jb3VudC8xNTk0NDYx.html",
-    "image": "../public/event-images/paradiso/L2VuL3Byb2dyYW0vYm9keS1jb3VudC8xNTk0NDYx",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "slope": {
-        "s": "35fxvnr5oanOFB1JNB2Ber",
-        "l": "slope",
-        "g": [
-          "dutch rock"
-        ]
-      }
-    }
-  },
-  {
     "door": "2024-07-09T20:30:00",
     "start": "2024-07-09T19:00:00",
     "venueEventUrl": "https://www.paradiso.nl/en/program/patti-smith/1488102",
@@ -56,101 +32,131 @@
   {
     "door": "2024-08-14T19:30:00",
     "start": "2024-08-14T19:00:00",
-    "venueEventUrl": "https://www.paradiso.nl/en/program/mannequin-pussy/2113843",
-    "title": "Mannequin Pussy",
+    "end": "2024-08-14T20:30:00",
+    "venueEventUrl": "https://www.paradiso.nl/en/program/ty-segall-solo-acoustic/1796110",
+    "title": "Ty Segall (solo acoustic) + Ben Boye",
     "location": "paradiso",
-    "price": 20.7,
-    "shortText": "Feminist punk rock",
-    "longText": "../public/texts/paradiso/cm9ncmFtL21hbm5lcXVpbi1wdXNzeS8yMTEzODQz.html",
-    "image": "../public/event-images/paradiso/cm9ncmFtL21hbm5lcXVpbi1wdXNzeS8yMTEzODQz",
+    "price": 28.2,
+    "shortText": "American garage rock hero returns with an intimate solo show",
+    "longText": "../public/texts/paradiso/eS1zZWdhbGwtc29sby1hY291c3RpYy8xNzk2MTEw.html",
+    "image": "../public/event-images/paradiso/eS1zZWdhbGwtc29sby1hY291c3RpYy8xNzk2MTEw",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": null
   },
   {
-    "door": "2024-09-23T20:30:00",
-    "start": "2024-09-23T19:30:00",
-    "venueEventUrl": "https://www.paradiso.nl/en/program/kid-congo-and-the-pink-monkey-birds/2094928",
-    "title": "Kid Congo and the Pink Monkey Birds",
+    "door": "2024-09-17T20:30:00",
+    "start": "2024-09-17T19:30:00",
+    "venueEventUrl": "https://www.paradiso.nl/en/program/crack-cloud/2132904",
+    "title": "Crack Cloud",
     "location": "paradiso",
-    "price": 21.2,
-    "shortText": "American underground band fusing punk, rock, and Mexican music / Toekomstmuziek",
-    "longText": "../public/texts/paradiso/LXRoZS1waW5rLW1vbmtleS1iaXJkcy8yMDk0OTI4.html",
-    "image": "../public/event-images/paradiso/LXRoZS1waW5rLW1vbmtleS1iaXJkcy8yMDk0OTI4",
+    "price": 21.7,
+    "shortText": "Eccentric post-punk collective / Tolhuistuin",
+    "longText": "../public/texts/paradiso/ZW4vcHJvZ3JhbS9jcmFjay1jbG91ZC8yMTMyOTA0.html",
+    "image": "../public/event-images/paradiso/ZW4vcHJvZ3JhbS9jcmFjay1jbG91ZC8yMTMyOTA0",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": null
   },
   {
-    "door": "2024-10-02T19:30:00",
-    "start": "2024-10-02T19:00:00",
-    "end": "2024-10-02T21:00:00",
-    "venueEventUrl": "https://www.paradiso.nl/en/program/tramhaus/2036333",
-    "title": "Tramhaus",
+    "door": "2024-09-27T19:30:00",
+    "start": "2024-09-27T19:00:00",
+    "end": "2024-09-27T20:30:00",
+    "venueEventUrl": "https://www.paradiso.nl/en/program/ares/1933549",
+    "title": "Ares",
     "location": "paradiso",
-    "price": 20.2,
-    "shortText": "Hypnotising homegrown post-punk",
-    "longText": "../public/texts/paradiso/bmwvZW4vcHJvZ3JhbS90cmFtaGF1cy8yMDM2MzMz.html",
-    "image": "../public/event-images/paradiso/bmwvZW4vcHJvZ3JhbS90cmFtaGF1cy8yMDM2MzMz",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
-    "door": "2024-11-04T19:30:00",
-    "start": "2024-11-04T19:00:00",
-    "end": "2024-11-04T20:30:00",
-    "venueEventUrl": "https://www.paradiso.nl/en/program/deadletter/2039097",
-    "title": "Deadletter",
-    "location": "paradiso",
-    "price": 19.7,
-    "shortText": "London post-punk sensation / Tolhuistuin",
-    "longText": "../public/texts/paradiso/L2VuL3Byb2dyYW0vZGVhZGxldHRlci8yMDM5MDk3.html",
-    "image": "../public/event-images/paradiso/L2VuL3Byb2dyYW0vZGVhZGxldHRlci8yMDM5MDk3",
+    "price": 28.2,
+    "shortText": "Multi-talented artist creates hip-hop with influences of soul, jazz and synthesizers",
+    "longText": "../public/texts/paradiso/aXNvLm5sL2VuL3Byb2dyYW0vYXJlcy8xOTMzNTQ5.html",
+    "image": "../public/event-images/paradiso/aXNvLm5sL2VuL3Byb2dyYW0vYXJlcy8xOTMzNTQ5",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "deadletter": {
-        "s": "4MfUQ99z2kgMnl9hAwffBx",
-        "l": "deadletter",
+      "ares": {
+        "s": "1yNLeUMAzOBA4q3Zki0hjz",
+        "l": "ares",
         "g": [
-          "crank wave",
-          "uk post-punk revival"
+          "neo-trad metal"
         ]
       }
     }
   },
   {
-    "door": "2024-11-19T20:00:00",
-    "start": "2024-11-19T19:30:00",
-    "end": "2024-11-19T20:45:00",
-    "venueEventUrl": "https://www.paradiso.nl/en/program/joey-valence-brae/2259737",
-    "title": "Joey Valence & Brae",
+    "door": "2024-10-14T19:15:00",
+    "start": "2024-10-14T19:00:00",
+    "end": "2024-10-14T20:30:00",
+    "venueEventUrl": "https://www.paradiso.nl/en/program/call-me-karizma/2051347",
+    "title": "Call Me Karizma + Jady + Stain The Canvas",
     "location": "paradiso",
-    "price": 20.7,
-    "shortText": "Alternative punk/rap with influences from the nineties / Tolhuistuin",
-    "longText": "../public/texts/paradiso/Z3JhbS9qb2V5LXZhbGVuY2UtYnJhZS8yMjU5NzM3.html",
-    "image": "../public/event-images/paradiso/Z3JhbS9qb2V5LXZhbGVuY2UtYnJhZS8yMjU5NzM3",
+    "price": 23.7,
+    "shortText": "American rapper blends hip-hop, emo and rock / Tolhuistuin",
+    "longText": "../public/texts/paradiso/cm9ncmFtL2NhbGwtbWUta2FyaXptYS8yMDUxMzQ3.html",
+    "image": "../public/event-images/paradiso/cm9ncmFtL2NhbGwtbWUta2FyaXptYS8yMDUxMzQ3",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "call me karizma": {
+        "s": "5fENlrINIVP0gJOtKxvORt",
+        "l": "call%20me%20karizma",
+        "g": [
+          "minnesota hip hop"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2024-11-18T19:30:00",
+    "start": "2024-11-18T19:00:00",
+    "end": "2024-11-18T20:30:00",
+    "venueEventUrl": "https://www.paradiso.nl/en/program/ist-ist/2132212",
+    "title": "Ist ist",
+    "location": "paradiso",
+    "price": 23.2,
+    "shortText": "Post punk from Manchester",
+    "longText": "../public/texts/paradiso/Lm5sL2VuL3Byb2dyYW0vaXN0LWlzdC8yMTMyMjEy.html",
+    "image": "../public/event-images/paradiso/Lm5sL2VuL3Byb2dyYW0vaXN0LWlzdC8yMTMyMjEy",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": null
   },
   {
-    "door": "4049-01-15T19:30:00",
-    "start": "4049-01-15T19:00:00",
-    "end": "4049-01-15T20:30:00",
-    "venueEventUrl": "https://www.paradiso.nl/en/program/hellmut-lotti-goes-metal/2030712",
-    "title": "Hellmut Lotti Goes Metal",
+    "door": "2024-12-02T19:30:00",
+    "start": "2024-12-02T19:00:00",
+    "venueEventUrl": "https://www.paradiso.nl/en/program/peuk/2313361",
+    "title": "Peuk",
     "location": "paradiso",
-    "price": 31.3,
-    "shortText": "World-famous Flemish tenor sings his favorite rock classics",
-    "longText": "../public/texts/paradiso/bGxtdXQtbG90dGktZ29lcy1tZXRhbC8yMDMwNzEy.html",
-    "image": "../public/event-images/paradiso/bGxtdXQtbG90dGktZ29lcy1tZXRhbC8yMDMwNzEy",
+    "price": 10.5,
+    "shortText": "Limburg trio makes unpolished grunge",
+    "longText": "../public/texts/paradiso/aXNvLm5sL2VuL3Byb2dyYW0vcGV1ay8yMzEzMzYx.html",
+    "image": "../public/event-images/paradiso/aXNvLm5sL2VuL3Byb2dyYW0vcGV1ay8yMzEzMzYx",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "peuk": {
+        "s": "48azeKbyYsulW0ikJbXpto",
+        "l": "peuk",
+        "g": [
+          "belgian indie rock"
+        ]
+      }
+    }
+  },
+  {
+    "door": "4049-02-28T20:30:00",
+    "start": "4049-02-28T19:00:00",
+    "venueEventUrl": "https://www.paradiso.nl/en/program/dubioza-kolektiv/2259538",
+    "title": "Dubioza Kolektiv",
+    "location": "paradiso",
+    "price": 27.2,
+    "shortText": "Highly energetic ska band from Bosnia",
+    "longText": "../public/texts/paradiso/b2dyYW0vZHViaW96YS1rb2xla3Rpdi8yMjU5NTM4.html",
+    "image": "../public/event-images/paradiso/b2dyYW0vZHViaW96YS1rb2xla3Rpdi8yMjU5NTM4",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,

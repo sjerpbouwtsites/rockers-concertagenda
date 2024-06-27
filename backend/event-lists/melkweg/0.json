@@ -1,128 +1,114 @@
 [
   {
-    "start": "2024-06-17T20:00:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/underoath-17-06-2024/",
-    "title": "Underoath",
+    "start": "2024-07-30T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/mr-big-30-07-2024/",
+    "title": "Mr. big",
     "location": "melkweg",
-    "price": 31.65,
-    "shortText": "posthardcore · metalcore 'They're Only Chasing Safety' - 20th Anniversary tour",
-    "longText": "../public/texts/melkweg/bC9hZ2VuZGEvdW5kZXJvYXRoLTE3LTA2LTIwMjQv.html",
-    "image": "../public/event-images/melkweg/bC9hZ2VuZGEvdW5kZXJvYXRoLTE3LTA2LTIwMjQv",
+    "price": 34.5,
+    "shortText": "hardrock",
+    "longText": "../public/texts/melkweg/bC9ubC9hZ2VuZGEvbXItYmlnLTMwLTA3LTIwMjQv.html",
+    "image": "../public/event-images/melkweg/bC9ubC9hZ2VuZGEvbXItYmlnLTMwLTA3LTIwMjQv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": null
   },
   {
-    "door": "2024-06-22T20:45:00",
-    "start": "2024-06-22T21:15:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/ghost-rite-here-rite-now-2024-22-06-2024/",
-    "title": "Ghost: rite here rite now (2024)",
+    "start": "2024-08-05T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/the-warning-05-08-2024/",
+    "title": "The Warning",
     "location": "melkweg",
-    "price": 14.5,
-    "shortText": "concertfilm · heavy metal · doom · hardrock",
-    "longText": "../public/texts/melkweg/aGVyZS1yaXRlLW5vdy0yMDI0LTIyLTA2LTIwMjQv.html",
-    "image": "../public/event-images/melkweg/aGVyZS1yaXRlLW5vdy0yMDI0LTIyLTA2LTIwMjQv",
-    "soldOut": true,
+    "price": 31.05,
+    "shortText": "hardrock",
+    "longText": "../public/texts/melkweg/YWdlbmRhL3RoZS13YXJuaW5nLTA1LTA4LTIwMjQv.html",
+    "image": "../public/event-images/melkweg/YWdlbmRhL3RoZS13YXJuaW5nLTA1LTA4LTIwMjQv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "the warning": {
+        "s": "2SmW1lFlBJn4IfBzBZDlSh",
+        "l": "the%20warning",
+        "g": [
+          "mexican metal",
+          "monterrey indie"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2024-08-29T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/home-front-29-08-2024/",
+    "title": "Home Front",
+    "location": "melkweg",
+    "price": 19,
+    "shortText": "postpunk · hardcore punk · synth",
+    "longText": "../public/texts/melkweg/L2FnZW5kYS9ob21lLWZyb250LTI5LTA4LTIwMjQv.html",
+    "image": "../public/event-images/melkweg/L2FnZW5kYS9ob21lLWZyb250LTI5LTA4LTIwMjQv",
+    "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": null
   },
   {
-    "start": "2024-08-04T20:00:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/dragonforce-04-08-2024/",
-    "title": "DragonForce",
-    "location": "melkweg",
-    "price": 33.35,
-    "shortText": "powermetal · bombastisch",
-    "longText": "../public/texts/melkweg/YWdlbmRhL2RyYWdvbmZvcmNlLTA0LTA4LTIwMjQv.html",
-    "image": "../public/event-images/melkweg/YWdlbmRhL2RyYWdvbmZvcmNlLTA0LTA4LTIwMjQv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "dragonforce": {
-        "s": "2pH3wEn4eYlMMIIQyKPbVR",
-        "l": "dragonforce",
-        "g": [
-          "british power metal",
-          "fantasy metal",
-          "metal",
-          "power metal",
-          "speed metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2024-08-13T20:00:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/motionless-in-white-13-08-2024/",
-    "title": "Motionless In White",
-    "location": "melkweg",
-    "price": 25.3,
-    "shortText": "metalcore · horror · industrial",
-    "longText": "../public/texts/melkweg/b3Rpb25sZXNzLWluLXdoaXRlLTEzLTA4LTIwMjQv.html",
-    "image": "../public/event-images/melkweg/b3Rpb25sZXNzLWluLXdoaXRlLTEzLTA4LTIwMjQv",
-    "soldOut": true,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "motionless in white": {
-        "s": "6MwPCCR936cYfM1dLsGVnl",
-        "l": "motionless%20in%20white",
-        "g": [
-          "alternative metal",
-          "metalcore"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2024-09-21T20:00:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/cobra-the-impaler-21-09-2024/",
-    "title": "Cobra the impaler",
+    "start": "2024-09-27T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/tusky-27-09-2024/",
+    "title": "Tusky",
     "location": "melkweg",
     "price": 17.25,
-    "shortText": "metal · progressieve metal · heavy metal",
-    "longText": "../public/texts/melkweg/L2NvYnJhLXRoZS1pbXBhbGVyLTIxLTA5LTIwMjQv.html",
-    "image": "../public/event-images/melkweg/L2NvYnJhLXRoZS1pbXBhbGVyLTIxLTA5LTIwMjQv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
-    "start": "2024-10-05T20:00:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/imminence-05-10-2024/",
-    "title": "Imminence",
-    "location": "melkweg",
-    "price": 26.45,
-    "shortText": "metalcore The Black Tour",
-    "longText": "../public/texts/melkweg/bC9hZ2VuZGEvaW1taW5lbmNlLTA1LTEwLTIwMjQv.html",
-    "image": "../public/event-images/melkweg/bC9hZ2VuZGEvaW1taW5lbmNlLTA1LTEwLTIwMjQv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
-    "start": "2024-11-06T20:00:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/smash-into-pieces-06-11-2024/",
-    "title": "Smash Into Pieces",
-    "location": "melkweg",
-    "price": 26.45,
-    "shortText": "alternative rock · metal",
-    "longText": "../public/texts/melkweg/L3NtYXNoLWludG8tcGllY2VzLTA2LTExLTIwMjQv.html",
-    "image": "../public/event-images/melkweg/L3NtYXNoLWludG8tcGllY2VzLTA2LTExLTIwMjQv",
+    "shortText": "punk · anarchistisch",
+    "longText": "../public/texts/melkweg/bmwvbmwvYWdlbmRhL3R1c2t5LTI3LTA5LTIwMjQv.html",
+    "image": "../public/event-images/melkweg/bmwvbmwvYWdlbmRhL3R1c2t5LTI3LTA5LTIwMjQv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "smash into pieces": {
-        "s": "2vhrwzjf9H3icunkVFi9tq",
-        "l": "smash%20into%20pieces",
+      "tusky": {
+        "s": "6XbZ8G0cFqSgUL4FmtiSPr",
+        "l": "tusky",
         "g": [
-          "swedish alternative rock"
+          "dutch punk",
+          "dutch rock"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2024-10-08T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/dead-by-april-08-10-2024/",
+    "title": "Dead By April",
+    "location": "melkweg",
+    "price": 25.9,
+    "shortText": "metalcore · electronic · rock",
+    "longText": "../public/texts/melkweg/ZW5kYS9kZWFkLWJ5LWFwcmlsLTA4LTEwLTIwMjQv.html",
+    "image": "../public/event-images/melkweg/ZW5kYS9kZWFkLWJ5LWFwcmlsLTA4LTEwLTIwMjQv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "start": "2024-11-09T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/hot-water-music-09-11-2024/",
+    "title": "Hot Water Music",
+    "location": "melkweg",
+    "price": 28.75,
+    "shortText": "posthardcore · punk 30-year anniversary",
+    "longText": "../public/texts/melkweg/ZGEvaG90LXdhdGVyLW11c2ljLTA5LTExLTIwMjQv.html",
+    "image": "../public/event-images/melkweg/ZGEvaG90LXdhdGVyLW11c2ljLTA5LTExLTIwMjQv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "hot water music": {
+        "s": "4dmaYARGTCpChLhHBdr3ff",
+        "l": "hot%20water%20music",
+        "g": [
+          "emo",
+          "folk punk",
+          "melodic hardcore",
+          "orgcore",
+          "skate punk"
         ]
       }
     }
@@ -142,31 +128,37 @@
     "artists": null
   },
   {
-    "start": "2024-12-06T20:00:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/royal-republic-06-12-2024/",
-    "title": "Royal Republic",
+    "start": "2024-12-05T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/letz-zep-05-12-2024/",
+    "title": "Letz Zep",
     "location": "melkweg",
-    "price": 34.5,
-    "shortText": "hardrock · disco · rock-‘n-roll",
-    "longText": "../public/texts/melkweg/bmRhL3JveWFsLXJlcHVibGljLTA2LTEyLTIwMjQv.html",
-    "image": "../public/event-images/melkweg/bmRhL3JveWFsLXJlcHVibGljLTA2LTEyLTIwMjQv",
+    "price": 23,
+    "shortText": "heavy",
+    "longText": "../public/texts/melkweg/bmwvYWdlbmRhL2xldHotemVwLTA1LTEyLTIwMjQv.html",
+    "image": "../public/event-images/melkweg/bmwvYWdlbmRhL2xldHotemVwLTA1LTEyLTIwMjQv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": null
   },
   {
-    "start": "2024-12-19T20:00:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/dool-19-12-2024/",
-    "title": "Dool",
+    "start": "2024-12-15T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/new-model-army-15-12-2024/",
+    "title": "New Model Army",
     "location": "melkweg",
-    "price": 25.3,
-    "shortText": "progressieve rock · metal · postrock",
-    "longText": "../public/texts/melkweg/Lm5sL25sL2FnZW5kYS9kb29sLTE5LTEyLTIwMjQv.html",
-    "image": "../public/event-images/melkweg/Lm5sL25sL2FnZW5kYS9kb29sLTE5LTEyLTIwMjQv",
+    "price": 31.05,
+    "shortText": "rock · postpunk",
+    "longText": "../public/texts/melkweg/bmRhL25ldy1tb2RlbC1hcm15LTE1LTEyLTIwMjQv.html",
+    "image": "../public/event-images/melkweg/bmRhL25ldy1tb2RlbC1hcm15LTE1LTEyLTIwMjQv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "new model army": {
+        "s": "7n1EM42Fseebd9H2p8eWWS",
+        "l": "new%20model%20army",
+        "g": []
+      }
+    }
   }
 ]

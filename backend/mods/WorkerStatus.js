@@ -251,7 +251,7 @@ export default class WorkerStatus {
       }, 1000);
       setTimeout(() => {
         WorkerStatus.programEnd();
-      }, 5000);
+      }, 9000);
       return true;
     }
     return false;

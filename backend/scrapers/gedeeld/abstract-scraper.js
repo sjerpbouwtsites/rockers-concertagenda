@@ -52,6 +52,8 @@ export default class AbstractScraper extends ScraperConfig {
 
   skipFurtherChecks = [];
 
+  timesScrolled = 0;
+
   // #region                             CONSTRUCTOR & INSTALL
   constructor(obj) {
     super(obj);
@@ -1049,6 +1051,9 @@ export default class AbstractScraper extends ScraperConfig {
   }  
 
   async autoScroll(page) {
+    this.timesScrolled += 1;
+    this.dirtyTalk(`${workerData.family} ${workerData.index} scroll #${this.timesScrolled}`);
+
     await page.evaluate(async () => {
       await new Promise((resolve) => {
         let totalHeight = 0;
@@ -1091,6 +1096,10 @@ export default class AbstractScraper extends ScraperConfig {
   }
 
   async waitTime(wait = 500) {
+    if (wait > 100) {
+      this.dirtyTalk(`${workerData.family} ${workerData.index} waiting ${wait}`);
+    }
+
     return new Promise((res) => {
       setTimeout(res, wait);
     });
