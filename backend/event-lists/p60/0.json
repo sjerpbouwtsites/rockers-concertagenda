@@ -1,20 +1,5 @@
 [
   {
-    "door": "2024-06-15T18:00:00Z",
-    "start": "2024-06-15T20:30:00Z",
-    "venueEventUrl": "https://p60.nl/2024/kamijo",
-    "title": "Kamijo",
-    "location": "p60",
-    "price": 15,
-    "shortText": "EUROPE TOUR 2024",
-    "longText": "../public/texts/p60/aHR0cHM6Ly9wNjAubmwvMjAyNC9rYW1pam8=.html",
-    "image": "../public/event-images/p60/aHR0cHM6Ly9wNjAubmwvMjAyNC9rYW1pam8=",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
     "door": "2024-06-27T18:00:00Z",
     "start": "2024-06-27T20:30:00Z",
     "venueEventUrl": "https://p60.nl/2024/radar-jun",
@@ -92,5 +77,44 @@
         ]
       }
     }
+  },
+  {
+    "door": "2024-10-18T18:00:00Z",
+    "start": "2024-10-18T21:00:00Z",
+    "venueEventUrl": "https://p60.nl/2024/heavy-metal-maniacs-vr",
+    "title": "Heavy Metal Maniacs Festival",
+    "location": "p60",
+    "price": 26.503,
+    "shortText": "DAG 1: MOTÖRHEADACHE, OBSTRUKTOR & SATAN'S FALL",
+    "longText": "../public/texts/p60/bmwvMjAyNC9oZWF2eS1tZXRhbC1tYW5pYWNzLXZy.html",
+    "image": "../public/event-images/p60/bmwvMjAyNC9oZWF2eS1tZXRhbC1tYW5pYWNzLXZy",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "obstruktor": {
+        "s": "6ROyEbI1PoGfKEFyLnvShP",
+        "l": "Netherlands",
+        "g": [
+          "speed/thrash metal",
+          "metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2024-10-19T18:00:00Z",
+    "start": "2024-10-19T21:00:00Z",
+    "venueEventUrl": "https://p60.nl/2024/heavy-metal-maniacs-za",
+    "title": "Heavy Metal Maniacs Festival",
+    "location": "p60",
+    "price": 34.0037,
+    "shortText": "DAG 2: ANVIL, HITTEN, FINGERNAILS & MEER",
+    "longText": "../public/texts/p60/bmwvMjAyNC9oZWF2eS1tZXRhbC1tYW5pYWNzLXph.html",
+    "image": "../public/event-images/p60/bmwvMjAyNC9oZWF2eS1tZXRhbC1tYW5pYWNzLXph",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
   }
 ]

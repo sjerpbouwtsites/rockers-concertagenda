@@ -56,21 +56,26 @@ async function downloadImageCompress({
   const extMatch = image.match(/.jpg|.jpeg|.png|.webp/);
   const extension = Array.isArray(extMatch) ? extMatch[0] : 'onbekend';
   
-  await downloadImage(image, `${imagePath}-ori${extension}`, workerData);
+  await downloadImage(image, `${imagePath}-ori${extension}`, workerData)
+    .then(() => {
+      sharp(`${imagePath}-ori${extension}`)
+        .resize(440, 250)
+        .webp()
+        .toFile(`${imagePath}-w440.webp`, () => {});
 
-  await sharp(`${imagePath}-ori${extension}`)
-    .resize(440, 250)
-    .webp()
-    .toFile(`${imagePath}-w440.webp`, () => {});
+      sharp(`${imagePath}-ori${extension}`)
+        .resize(750, 340)
+        .webp()
+        .toFile(`${imagePath}-w750.webp`, () => {});
 
-  await sharp(`${imagePath}-ori${extension}`)
-    .resize(750, 340)
-    .webp()
-    .toFile(`${imagePath}-w750.webp`, () => {});
-
-  await sharp(`${imagePath}-ori${extension}`)
-    .webp()
-    .toFile(`${imagePath}-vol.webp`, () => {});
+      sharp(`${imagePath}-ori${extension}`)
+        .webp()
+        .toFile(`${imagePath}-vol.webp`, () => {});
+    })
+  
+    .catch((err) => {
+    // TODO error handling
+    });
 
   return true;
 }

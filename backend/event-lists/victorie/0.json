@@ -34,5 +34,30 @@
         ]
       }
     }
+  },
+  {
+    "door": "4049-04-04T19:30:00",
+    "start": "4049-04-04T20:00:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/clan-of-xymox",
+    "title": "Clan of Xymox",
+    "location": "victorie",
+    "price": 23,
+    "shortText": "Dark wave formatie is terug met nieuw album 'Exodus'",
+    "longText": "../public/texts/victorie/cmllLm5sL3Byb2dyYW1tYS9jbGFuLW9mLXh5bW94.html",
+    "image": "../public/event-images/victorie/cmllLm5sL3Byb2dyYW1tYS9jbGFuLW9mLXh5bW94",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "clan of xymox": {
+        "s": "1wHmR7I0UlF58WFQexCPha",
+        "l": "clan%20of%20xymox",
+        "g": [
+          "dark wave",
+          "dream pop",
+          "ethereal wave",
+          "gothic rock"
+        ]
+      }
+    }
   }
 ]

@@ -1,31 +1,5 @@
 [
   {
-    "door": "2024-06-24T20:00:00+02:00",
-    "start": "2024-06-24T20:00:00+02:00",
-    "venueEventUrl": "https://www.013.nl/programma/7808/mr-bungle",
-    "title": "Mr. Bungle",
-    "location": "013",
-    "price": 57.8,
-    "shortText": "Ipecac Geek Show",
-    "longText": "../public/texts/013/MTMubmwvcHJvZ3JhbW1hLzc4MDgvbXItYnVuZ2xl.html",
-    "image": "../public/event-images/013/MTMubmwvcHJvZ3JhbW1hLzc4MDgvbXItYnVuZ2xl",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "mr. bungle": {
-        "s": "2zq0uqN9Wq12tqrQQt1ozw",
-        "l": "United States",
-        "g": [
-          "funk metal",
-          "funk rock",
-          "death/thrash metal",
-          "avant-garde metal/fusion/experimental"
-        ]
-      }
-    }
-  },
-  {
     "door": "2024-07-26T19:15:00+02:00",
     "start": "2024-07-26T19:15:00+02:00",
     "venueEventUrl": "https://www.013.nl/programma/77876/hellripper",
@@ -137,99 +111,110 @@
     }
   },
   {
-    "door": "2024-10-27T19:30:00+01:00",
-    "start": "2024-10-27T19:30:00+01:00",
-    "venueEventUrl": "https://www.013.nl/programma/79375/the-ghost-inside",
-    "title": "The Ghost Inside",
+    "door": "2024-10-11T21:00:00+02:00",
+    "start": "2024-10-11T21:00:00+02:00",
+    "venueEventUrl": "https://www.013.nl/programma/86026/foreseen",
+    "title": "Foreseen",
     "location": "013",
-    "price": 38.8,
-    "shortText": "Searching For Solace Tour",
-    "longText": "../public/texts/013/b2dyYW1tYS83OTM3NS90aGUtZ2hvc3QtaW5zaWRl.html",
-    "image": "../public/event-images/013/b2dyYW1tYS83OTM3NS90aGUtZ2hvc3QtaW5zaWRl",
+    "price": 17.3,
+    "shortText": "",
+    "longText": "../public/texts/013/MTMubmwvcHJvZ3JhbW1hLzg2MDI2L2ZvcmVzZWVu.html",
+    "image": "../public/event-images/013/MTMubmwvcHJvZ3JhbW1hLzg2MDI2L2ZvcmVzZWVu",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2024-11-01T19:00:00+01:00",
+    "start": "2024-11-01T19:00:00+01:00",
+    "venueEventUrl": "https://www.013.nl/programma/7703/beartooth",
+    "title": "Beartooth",
+    "location": "013",
+    "price": 42.8,
+    "shortText": "Show #2",
+    "longText": "../public/texts/013/MTMubmwvcHJvZ3JhbW1hLzc3MDMvYmVhcnRvb3Ro.html",
+    "image": "../public/event-images/013/MTMubmwvcHJvZ3JhbW1hLzc3MDMvYmVhcnRvb3Ro",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "ghost": {
-        "s": "1Qp56T7n950O3EGMsSl81D",
-        "l": "ghost",
+      "beartooth": {
+        "s": "6vwjIs0tbIiseJMR3pqwiL",
+        "l": "beartooth",
         "g": [
-          "hard rock",
-          "metal"
+          "melodic metalcore",
+          "metalcore",
+          "pop punk"
         ]
       }
     }
   },
   {
-    "door": "2024-11-08T20:00:00+01:00",
-    "start": "2024-11-08T20:00:00+01:00",
-    "venueEventUrl": "https://www.013.nl/programma/81918/guilt-trip",
-    "title": "Guilt Trip",
-    "location": "013",
-    "price": 19.8,
-    "shortText": "",
-    "longText": "../public/texts/013/Lm5sL3Byb2dyYW1tYS84MTkxOC9ndWlsdC10cmlw.html",
-    "image": "../public/event-images/013/Lm5sL3Byb2dyYW1tYS84MTkxOC9ndWlsdC10cmlw",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
-    "door": "2024-11-21T20:00:00+01:00",
-    "start": "2024-11-21T20:00:00+01:00",
-    "venueEventUrl": "https://www.013.nl/programma/77846/brothers-of-metal",
-    "title": "Brothers Of Metal",
-    "location": "013",
-    "price": 24.3,
-    "shortText": "FimbulwinTour 2024",
-    "longText": "../public/texts/013/Z3JhbW1hLzc3ODQ2L2Jyb3RoZXJzLW9mLW1ldGFs.html",
-    "image": "../public/event-images/013/Z3JhbW1hLzc3ODQ2L2Jyb3RoZXJzLW9mLW1ldGFs",
-    "soldOut": true,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
-    "door": "2024-12-08T20:30:00+01:00",
-    "start": "2024-12-08T20:30:00+01:00",
-    "venueEventUrl": "https://www.013.nl/programma/7859/hang-youth",
-    "title": "Hang Youth",
+    "door": "2024-11-17T20:00:00+01:00",
+    "start": "2024-11-17T20:00:00+01:00",
+    "venueEventUrl": "https://www.013.nl/programma/7891/wheel",
+    "title": "Wheel",
     "location": "013",
     "price": 23.3,
     "shortText": "",
-    "longText": "../public/texts/013/My5ubC9wcm9ncmFtbWEvNzg1OS9oYW5nLXlvdXRo.html",
-    "image": "../public/event-images/013/My5ubC9wcm9ncmFtbWEvNzg1OS9oYW5nLXlvdXRo",
+    "longText": "../public/texts/013/d3cuMDEzLm5sL3Byb2dyYW1tYS83ODkxL3doZWVs.html",
+    "image": "../public/event-images/013/d3cuMDEzLm5sL3Byb2dyYW1tYS83ODkxL3doZWVs",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2024-11-27T20:00:00+01:00",
+    "start": "2024-11-27T20:00:00+01:00",
+    "venueEventUrl": "https://www.013.nl/programma/78453/benighted-baest",
+    "title": "Benighted + Baest",
+    "location": "013",
+    "price": 22.3,
+    "shortText": "",
+    "longText": "../public/texts/013/cm9ncmFtbWEvNzg0NTMvYmVuaWdodGVkLWJhZXN0.html",
+    "image": "../public/event-images/013/cm9ncmFtbWEvNzg0NTMvYmVuaWdodGVkLWJhZXN0",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2024-12-22T20:00:00+01:00",
+    "start": "2024-12-22T20:00:00+01:00",
+    "venueEventUrl": "https://www.013.nl/programma/80690/dool",
+    "title": "Dool",
+    "location": "013",
+    "price": 25.3,
+    "shortText": "",
+    "longText": "../public/texts/013/d3cuMDEzLm5sL3Byb2dyYW1tYS84MDY5MC9kb29s.html",
+    "image": "../public/event-images/013/d3cuMDEzLm5sL3Byb2dyYW1tYS84MDY5MC9kb29s",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2025-01-31T20:30:00+01:00",
+    "start": "2025-01-31T20:30:00+01:00",
+    "venueEventUrl": "https://www.013.nl/programma/86023/feuerengel",
+    "title": "Feuerengel",
+    "location": "013",
+    "price": 35.8,
+    "shortText": "A Tribute To Rammstein",
+    "longText": "../public/texts/013/Lm5sL3Byb2dyYW1tYS84NjAyMy9mZXVlcmVuZ2Vs.html",
+    "image": "../public/event-images/013/Lm5sL3Byb2dyYW1tYS84NjAyMy9mZXVlcmVuZ2Vs",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "hang youth": {
-        "s": "33s4eablBmnrPlE3y6CZFR",
-        "l": "hang%20youth",
-        "g": [
-          "dutch indie",
-          "dutch rock",
-          "lowlands hardcore",
-          "hardcore punk"
-        ]
+      "feuerengel": {
+        "s": null,
+        "l": "feuerengel",
+        "g": []
       }
     }
-  },
-  {
-    "door": "2024-12-22T20:30:00+01:00",
-    "start": "2024-12-22T20:30:00+01:00",
-    "venueEventUrl": "https://www.013.nl/programma/7907/green-lizard",
-    "title": "Green Lizard",
-    "location": "013",
-    "price": 19.8,
-    "shortText": "30th Anniversary Tour",
-    "longText": "../public/texts/013/bmwvcHJvZ3JhbW1hLzc5MDcvZ3JlZW4tbGl6YXJk.html",
-    "image": "../public/event-images/013/bmwvcHJvZ3JhbW1hLzc5MDcvZ3JlZW4tbGl6YXJk",
-    "soldOut": true,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": null
   },
   {
     "door": "2025-02-14T19:00:00+01:00",

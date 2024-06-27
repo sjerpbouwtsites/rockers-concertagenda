@@ -1,6 +1,6 @@
 [
   {
-    "door": "2024-06-29T21:15:00",
+    "door": "2024-06-29T20:45:00",
     "start": "2024-06-29T20:00:00",
     "venueEventUrl": "https://gebouw-t.nl/evenementen/tom-morello-sena-european-guitar-award/",
     "title": "Tom Morello – Sena European Guitar Award",
@@ -9,6 +9,36 @@
     "shortText": "Gitarist van o.a. Rage Against The Machine wint prestigieuze gitaarprijs",
     "longText": "../public/texts/gebouwt/bG8tc2VuYS1ldXJvcGVhbi1ndWl0YXItYXdhcmQv.html",
     "image": "../public/event-images/gebouwt/bG8tc2VuYS1ldXJvcGVhbi1ndWl0YXItYXdhcmQv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2024-06-29T21:30:00",
+    "start": "2024-06-29T21:30:00",
+    "venueEventUrl": "https://gebouw-t.nl/evenementen/afterparty-parkies-memories-of-earth-fire/",
+    "title": "Afterparty Parkies: Memories of Earth & Fire",
+    "location": "gebouwt",
+    "price": null,
+    "shortText": "",
+    "longText": "../public/texts/gebouwt/YXJraWVzLW1lbW9yaWVzLW9mLWVhcnRoLWZpcmUv.html",
+    "image": "../public/event-images/gebouwt/YXJraWVzLW1lbW9yaWVzLW9mLWVhcnRoLWZpcmUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2024-06-29T21:30:00",
+    "start": "2024-06-29T21:30:00",
+    "venueEventUrl": "https://gebouw-t.nl/evenementen/afterparty-parkies-bunker/",
+    "title": "Afterparty Parkies: Bunker",
+    "location": "gebouwt",
+    "price": null,
+    "shortText": "",
+    "longText": "../public/texts/gebouwt/dGVuL2FmdGVycGFydHktcGFya2llcy1idW5rZXIv.html",
+    "image": "../public/event-images/gebouwt/dGVuL2FmdGVycGFydHktcGFya2llcy1idW5rZXIv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
@@ -38,6 +68,29 @@
           "metal",
           "nu metal",
           "rap metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2024-06-29T20:00:00",
+    "start": "2024-06-29T19:30:00",
+    "venueEventUrl": "https://gebouw-t.nl/evenementen/anneke-van-giersbergen/",
+    "title": "Anneke van Giersbergen",
+    "location": "gebouwt",
+    "price": 16,
+    "shortText": "Heavy strings",
+    "longText": "../public/texts/gebouwt/bWVudGVuL2FubmVrZS12YW4tZ2llcnNiZXJnZW4v.html",
+    "image": "../public/event-images/gebouwt/bWVudGVuL2FubmVrZS12YW4tZ2llcnNiZXJnZW4v",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "anneke van giersbergen": {
+        "s": "6TZqJnkAytY8HFQBEdDF8v",
+        "l": "anneke%20van%20giersbergen",
+        "g": [
+          "metal"
         ]
       }
     }
