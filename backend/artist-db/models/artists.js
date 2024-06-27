@@ -7,6 +7,7 @@ import { slugify } from "../../scrapers/gedeeld/slug.js";
 //   { showHidden: false, depth: null, colors: true })); 
 
 export default class Artists {
+  // #region PROPERTIES
   typeCheckInputFromScrapers = true;
 
   minLengthLang = 7;
@@ -67,6 +68,9 @@ export default class Artists {
 
   terms = terms;
 
+  /**
+   * datum vandaag kort YYMMDD
+   */
   today = null;
 
   spotifyAccessToken = null;
@@ -76,6 +80,15 @@ export default class Artists {
    */
   nietSchrijven = false;
 
+  funcsToDebug = {
+    harvestArtists: true,
+    scanTextForAllowedArtists: false,
+    getSpotifyArtistSearch: false,
+    persistNewRefusedAndRockArtists: true,
+  };
+
+  // #endregion
+
   constructor(conf) {
     this.modelPath = conf.modelPath;
     this.storePath = conf.storePath;
@@ -83,9 +96,12 @@ export default class Artists {
     this.allowedArtists = JSON.parse(fs.readFileSync(`${this.storePath}/allowed-artists.json`));
     this.allowedEvents = JSON.parse(fs.readFileSync(`${this.storePath}/allowed-events.json`));
     this.landcodesMap = JSON.parse(fs.readFileSync(`${this.storePath}/landcodes-map.json`));
-    this.today = (new Date()).toISOString().substring(2, this.minLengthLang).replaceAll('-', '');
+    this.today = (new Date()).toISOString().replaceAll('-', '').substring(2, 8);
+
     this.getSpotifyAccessToken();
   }
+
+  // #region MESSAGING
 
   /**
    * Hack functie. Indien de 'message' een string is, wordt die geJSONparsed en komt object terug.
@@ -112,6 +128,8 @@ export default class Artists {
     return hasRequest && hasData;
   }
 
+  // #endregion
+
   /**
    * wrapper van do tbv erroring
    */  
@@ -123,6 +141,8 @@ export default class Artists {
       return this.error(error);      
     }
   }
+
+  // #region DO (VOORMAN)
 
   /**
    * Voorman van de class. message.request heeft de naam van een functie hier
@@ -233,7 +253,7 @@ export default class Artists {
       return this.getMetalEncyclopediaConfirmation(message.data.title);
     }
 
-    if (message.request === 'scanTitleForAllowedArtists') {
+    if (message.request === 'scanTextForAllowedArtists') {
       if (this.typeCheckInputFromScrapers) {
         const hasTitle = Object.prototype.hasOwnProperty.call(parsedMessage.data, 'title');
         const hasSlug = Object.prototype.hasOwnProperty.call(parsedMessage.data, 'slug');
@@ -241,10 +261,10 @@ export default class Artists {
           return this.error(Error('geen title of slug om te doorzoeken'));
         } 
       }
-      return this.scanTitleForAllowedArtists(message.data.title, message.data.slug);
+      return this.scanTextForAllowedArtists(message.data.title, message.data.slug);
     }
 
-    if (message.request === 'scanTitleForAllowedArtistsAsync') {
+    if (message.request === 'scanEventForAllowedArtistsAsync') {
       if (this.typeCheckInputFromScrapers) {
         const hasTitle = Object.prototype.hasOwnProperty.call(parsedMessage.data, 'title');
         const hasSlug = Object.prototype.hasOwnProperty.call(parsedMessage.data, 'slug');
@@ -256,7 +276,7 @@ export default class Artists {
           return this.error(Error('geen settings'));
         } 
       }
-      return this.scanTitleForAllowedArtistsAsync(
+      return this.scanEventForAllowedArtistsAsync(
         message.data.title, message.data.slug, message.data?.shortText, message.data.settings);
     }
     
@@ -357,7 +377,9 @@ export default class Artists {
 
     return this.error(new Error(`request ${message.request} onbekend`));
   }
+  // #endregion
 
+  // #region GET STORED ARTIST
   /**
    * Kijkt in allowed-artists of daarin letterlijk de artistName of slug als key in voorkomen.
    * @param {*} artistName 
@@ -387,7 +409,9 @@ export default class Artists {
       reason: `${_a ? `artistName ${artistName}` : `slug ${slug}`} found aa2`,
     });
   }
+  // #endregion
 
+  // #region GET ALLOWED EVENT
   /**
    * kijkt in allowed-events of daarin letterlijk de artistName of slug als key in voorkomen
    * @param {*} eventName 
@@ -417,7 +441,9 @@ export default class Artists {
       reason: `🟩 ${_a ? `eventName ${eventName}` : `slug ${slug}`} allowed event aa4`,
     });
   }  
+  // #endregion
 
+  // #region GET REFUSED
   /**
    * kijkt in refused of daarin letterlijk de artistName/title of slug als key in voorkomen
    * @param {*} eventNameOfTitle 
@@ -451,7 +477,9 @@ export default class Artists {
       reason: `🟥 ${_a ? `eventNameOfTitle ${tt}` : `slug ${ss}`} refused aa6`,
     });
   }  
+  // #endregion
 
+  // #region HAS FORBIDDEN
   /**
    * vergelijkt string (title, slug, shorttext) met terms.forbidden
    * @param {string} titleslugshorttext 
@@ -474,7 +502,9 @@ export default class Artists {
       reason: `⬜ no forbidden term aa8`,
     });
   }  
+  // #endregion
 
+  // #region HAS GOOD
   /**
    * vergelijkt string (title, slug, shorttext) met terms.goodCategories
    * @param {string} titleslugshorttext 
@@ -497,7 +527,9 @@ export default class Artists {
       reason: `⬜ no good term ab1`,
     });
   }    
+  // #endregion
 
+  // #region CHECK EXPL. EV. CATS
   /**
    * vergelijkt genre array met terms.goodCategories en terms.forbiddenTerms
    */
@@ -551,7 +583,9 @@ export default class Artists {
       reasons:[r],
     });
   }    
+  // #endregion
 
+  // #region SPOTIFY
   async getSpotifyConfirmation(title, slug, eventDate) {
     if (!this.spotifyAccessToken) {
       await this.getSpotifyAccessToken();
@@ -623,6 +657,55 @@ export default class Artists {
     }); 
   }
 
+  async getSpotifyArtistSearch(artist) {
+    if (!this.spotifyAccessToken) {
+      await this.getSpotifyAccessToken();
+    }
+
+    const uriComponent = encodeURIComponent(`artist:${artist}`);
+    const url = `https://api.spotify.com/v1/search?q=${uriComponent}&type=artist&offset=0&limit=20&market=NL`;
+   
+    const fetchResult = 
+      await fetch(url, 
+        {
+          headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',            
+            Authorization: `Bearer ${this.spotifyAccessToken}`,
+          }, 
+        }).then((response) => response.json())
+        .catch((err) => console.error(err));
+        
+    if (fetchResult?.artists?.items && fetchResult?.artists?.items.length) {
+      this.consoleGroup(`meerdere items voor ${artist} gSAS1`, {
+        alleArtistItems: fetchResult?.artists?.items,
+      }, `getSpotifyArtistSearch`);
+
+      const eersteHitCorrecteNaam = fetchResult?.artists?.items
+        .filter((hit) => hit.name.toLowerCase() === artist)
+        .filter((hit) => {
+          const g = hit.genres.join('; ');
+          const isGood = this.terms.goodCategories
+            .find((goodCat) => g.includes(goodCat));
+          const isBad = this.terms.forbidden
+            .find((badCat) => g.includes(badCat));
+          if (isBad && isGood) return true;
+          if (!isBad && !isGood) return true;
+          if (isBad && !isGood) return false;
+          return true;
+        })[0];
+      return eersteHitCorrecteNaam; 
+      // todo eerste teruggeven is slordig
+    } 
+    this.consoleGroup(`geen resultaat voor ${artist} gSAS2`, {
+      fetchRes: fetchResult,
+    }, `getSpotifyArtistSearch`);      
+    
+    return null;
+  }
+  // #endregion
+
+  // #region GET METAL ENC CONF
   async getMetalEncyclopediaConfirmation(title) {
     let titleCopy = `${title}`;
     let metalString = titleCopy.replaceAll(' ', '+');
@@ -669,68 +752,297 @@ export default class Artists {
     });
   }
 
+  createFormBody(requestBodyObject) {
+    let formBody = [];
+    // eslint-disable-next-line no-restricted-syntax, guard-for-in
+    for (const property in requestBodyObject) {
+      const encodedKey = encodeURIComponent(property);
+      const encodedValue = encodeURIComponent(requestBodyObject[property]);
+      formBody.push(`${encodedKey}=${encodedValue}`);
+    }
+    formBody = formBody.join("&");
+    return formBody;
+  }
+
+  async getSpotifyAccessToken() {
+    const requestBody = this.createFormBody({
+      grant_type: `client_credentials`,
+      client_id: `11bf5090af7b42848c20124d8c83fda3`,
+      client_secret: `55f3635cd31d4d97a47af46c51f20443`,
+    });
+  
+    const fetchResult = await fetch("https://accounts.spotify.com/api/token", {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
+      },
+      body: requestBody,
+    }).then((response) => response.json())
+      .catch((err) => console.error(err));
+  
+    if (fetchResult?.access_token) {
+      this.spotifyAccessToken = fetchResult.access_token;
+      return true;
+    } 
+    console.log(`err fetching access token!`);
+    console.log(fetchResult);
+    throw Error(`fetch result no access token`);
+  }
+
+  // #endregion
+
+  // #region HARVEST ARTISTS
   async harvestArtists(title, slug, shortText, settings, eventDate, eventGenres = []) {
     const reg = new RegExp(settings.dividerRex, 'i');
-    let toScan = title; 
+    
+    const toScan = [title]; 
     if (settings.artistsIn.includes('shortText') && shortText) {
-      const s = (shortText ?? '').toLowerCase();
-      toScan = `${toScan} + ${s}`;
+      const s = (shortText ?? '').toLowerCase().trim();
+      toScan.push(s);
     }
-    const reedsGevonden = this.scanTitleForAllowedArtists(toScan, slug);
 
-    let verderScannen = toScan;
-    Object.keys(reedsGevonden).forEach((rg) => {
-      verderScannen = verderScannen.replace(rg, '');
+    const reedsGevonden = toScan.map((scan) => this.scanTextForAllowedArtists(scan, '')).filter((a) => Object.keys(a).length);
+    const reedsGevondenNamen = reedsGevonden.map((g) => Object.keys(g)).flat();
+    
+    this.consoleGroup(`harvestArtist hA1`, {
+      toScan, reedsGevondenNamen, title,
+    }, 'harvestArtists');
+
+    const verderScannen = toScan.map((scan) => {
+      let _scan = scan;
+      reedsGevondenNamen.forEach((rg) => {
+        _scan = _scan.replace(rg, '').trim();
+      });
+      return _scan;  
+    })
+      .filter((a) => a);
+
+    if (!verderScannen.length) {
+      this.consoleGroup(`niet verder scannen hA2`, {
+        info: `verderScannen.length is 0`,
+        eerdereToScan: toScan,
+        title,
+      }, 'harvestArtists');      
+      return this.post({
+        success: null,
+        data: reedsGevonden,
+        reason: `niets gevonden dat er niet reeds was qq1`,
+      });      
+    }
+    
+    const potentieeleOverigeTitels = verderScannen
+      .map((scan) => scan
+        .split(reg)
+        .map((a) => a.trim())
+        .filter((b) => b),
+      ).flat()
+      .map((potTitel) => {
+        let t = potTitel;
+        terms.eventMetaTerms.forEach((emt) => {
+          t = t.replace(emt, '').replaceAll(/\s{2,500}/g, ' ').trim();
+        });
+        return t;
+      })
+      .filter((potTitel) => potTitel.length > 6)
+      .map(slugify);
+      
+    if (!potentieeleOverigeTitels.length) {
+      this.consoleGroup(`NIET verder scannen hA4`, { 'pot. titels': potentieeleOverigeTitels, verderScannen, title }, 'harvestArtists');
+      return this.post({
+        success: null,
+        data: reedsGevonden,
+        reason: `niets gevonden dat er niet reeds was qq2`,
+      });      
+    }
+    this.consoleGroup(`verder scannen hA3`, { 'pot. titels': potentieeleOverigeTitels, title }, 'harvestArtists');
+
+    const gevondenArtiesten = await this.recursiveAPICallForGenre(potentieeleOverigeTitels);
+    
+    const naarConsole = { title };
+    gevondenArtiesten.forEach((ga) => {
+      naarConsole[ga.title] = ga.resultaten;
     });
-    verderScannen = verderScannen.trim();
-    let overigeTitels = [];
-    if (verderScannen) {
-      overigeTitels = verderScannen.split(reg)
-        .map((t) => t.trim())
-        .filter((a) => a)
-        .map((t) => slugify(t));
+    this.consoleGroup(`gevonden artiesten hA5`, naarConsole, `harvestArtists`);
 
-      if (overigeTitels.length) {
-        const nieuweArtiesten = await this.recursiveAPICallForGenre(overigeTitels, []);
-        nieuweArtiesten
-          .filter((a) => (a.resultaten?.spotRes ?? null) || (a.resultaten?.metalEnc ?? null))
-          .forEach((na) => {
-            const spotify = na.resultaten?.spotRes?.id ?? null;
-            const sGenres = na.resultaten?.spotRes?.genres ?? [];
-            const heeftMetalEnc = Array.isArray(na.resultaten?.metalEnc);
-            const mGenres = heeftMetalEnc ? na.resultaten?.metalEnc[1].split(';').map((a) => a.replace(/\(.*\)/, '').trim().toLowerCase()) ?? [] : [];
-            const genres = [...sGenres, ...mGenres, ...eventGenres];
-            const land = heeftMetalEnc ? na.resultaten?.metalEnc[2] ?? null : null;
-  
-            const eerstGefilterdeGenres = genres
-              .filter((g) => !this.terms.globalForbiddenGenres.find((gfg) => g.includes(gfg)));
-            const tweedeGefilterdeGenres = eerstGefilterdeGenres
-              .filter((g) => !this.terms.forbidden.includes(g));
-            const heeftHeelGoedGenre = genres
-              .filter((g) => !this.terms.globalGoodCategories.find((gfg) => g.includes(gfg)));
-            const heeftGoedeGenres = genres
-              .filter((g) => !this.terms.goodCategories.find((gfg) => g.includes(gfg)));
-
-            if (tweedeGefilterdeGenres.length || heeftHeelGoedGenre) {
-              this.saveAllowedTemp(na.title, na.slug, spotify, land, genres, eventDate); // TODO GAAT DIT DE GOEDE KANT OP?
-            } else if (heeftGoedeGenres.length > tweedeGefilterdeGenres) {
-              this.saveAllowedTemp(na.title, na.slug, spotify, land, genres, eventDate);
-            } else {
-              this.saveRefusedEventTemp(na.title, na.slug, eventDate);
-            }
-          });
+    gevondenArtiesten.forEach((ga) => {
+      const spotifyGenres = ga?.resultaten?.spotRes?.genres ?? [];
+      const metalGenres = (ga?.resultaten?.metalEnc?.[1] ?? '').split(';').map((a) => a.trim());
+      const dezeGenres = [...spotifyGenres, ...metalGenres, ...eventGenres].filter((a) => a);
+      
+      this.allowedArtistsTemp[title] = [
+        0,
+        ga.resultaten?.spotRes?.id,
+        encodeURI(title),
+        dezeGenres,
+        eventDate,
+        this.today,
+      ];
+      if (title !== slug) {
+        this.allowedArtistsTemp[slug] = [
+          1,
+          ga.resultaten?.spotRes?.id,
+          encodeURI(title),
+          dezeGenres,
+          eventDate,
+          this.today,
+        ];        
       }
-    }
+    });
 
-    console.log('harvest klaar');
+    // #region OUDE MEUK
+    // if (overigeTitels.length) {
+    //   const nieuweArtiesten = await this.recursiveAPICallForGenre(overigeTitels, []);
+    //   nieuweArtiesten
+    //     .filter((a) => (a.resultaten?.spotRes ?? null) || (a.resultaten?.metalEnc ?? null))
+    //     .forEach((na) => {
+    //       const spotify = na.resultaten?.spotRes?.id ?? null;
+    //       const sGenres = na.resultaten?.spotRes?.genres ?? [];
+    //       const heeftMetalEnc = Array.isArray(na.resultaten?.metalEnc);
+    //       const mGenres = heeftMetalEnc ? na.resultaten?.metalEnc[1].split(';').map((a) => a.replace(/\(.*\)/, '').trim().toLowerCase()) ?? [] : [];
+    //       const genres = [...sGenres, ...mGenres, ...eventGenres];
+    //       const land = heeftMetalEnc ? na.resultaten?.metalEnc[2] ?? null : null;
+  
+    //       const eerstGefilterdeGenres = genres
+    //         .filter((g) => !this.terms.globalForbiddenGenres.find((gfg) => g.includes(gfg)));
+    //       const tweedeGefilterdeGenres = eerstGefilterdeGenres
+    //         .filter((g) => !this.terms.forbidden.includes(g));
+    //       const heeftHeelGoedGenre = genres
+    //         .filter((g) => !this.terms.globalGoodCategories.find((gfg) => g.includes(gfg)));
+    //       const heeftGoedeGenres = genres
+    //         .filter((g) => !this.terms.goodCategories.find((gfg) => g.includes(gfg)));
+
+    //       if (tweedeGefilterdeGenres.length || heeftHeelGoedGenre) {
+    //         this.saveAllowedTemp(na.title, na.slug, spotify, land, genres, eventDate); // TODO GAAT DIT DE GOEDE KANT OP?
+    //       } else if (heeftGoedeGenres.length > tweedeGefilterdeGenres) {
+    //         this.saveAllowedTemp(na.title, na.slug, spotify, land, genres, eventDate);
+    //       } else {
+    //         this.saveRefusedEventTemp(na.title, na.slug, eventDate);
+    //       }
+    //     });
+    // }
+    // #endregion OUDE MEUK
+
+    const artiestenInEvent = [...reedsGevonden, ...gevondenArtiesten];
 
     return this.post({
       success: true,
-      data: 'niets',
-      reason: `succesvolle harvest ac2`,
+      data: artiestenInEvent,
+      reason: `succesvolle harvest hA6`,
     });
   }
+  // #endregion HARVEST ARTISTS
+    
+  // #region SCAN FOR OK ARTISTS
+  /**
+   * scant eventNameOfTitle en slug op match met allowed artists
+   * @param {*} eventNameOfTitle 
+   * @param {*} slug 
+   * @returns array met key:artiest
+   */
+  scanTextForAllowedArtists(eventNameOfTitle, slug) {
+    const toScan = eventNameOfTitle.replaceAll(/\(.*\)/g, ''); // (usa etc eruit);
+    const haystack = Object.keys(this.allowedArtists);
+    
+    this.consoleGroup(`\nscanTextForAllowedArtists 1`, {
+      toScan,
+      slug,
+      
+    }, 'scanTextForAllowedArtists');
+    
+    const gevondenKeys = haystack
+      .filter((hay) => toScan.includes(hay) || slug.includes(hay));
+    
+    this.consoleGroup(`scanTextForAllowedArtists gevonden keys`, { gevondenKeys }, 'scanTextForAllowedArtists');
+    
+    if (!gevondenKeys || !gevondenKeys.length) {
+      return {};
+    }
 
+    const allowedArtists = {};
+    gevondenKeys.forEach((key) => {
+      allowedArtists[key] = this.allowedArtists[key];
+    });
+
+    if (gevondenKeys.length === 2) {
+      const key1 = gevondenKeys[0];
+      const key2 = gevondenKeys[1];
+      const isSlug1 = allowedArtists[key1][0];
+      const isSlug2 = allowedArtists[key2][0];
+      const eenSlugAnderNiet = isSlug1 + isSlug2 === 1;
+      if (eenSlugAnderNiet) {
+        let winKey;
+        if (isSlug1) {
+          winKey = key2;
+        } else {
+          winKey = key1;
+        }
+        const winnaar = allowedArtists[winKey];
+        const r = {
+          [`${winKey}`]: winnaar,
+        };
+    
+        this.consoleGroup(`\nscanTextForAllowedArtists twee keys gevonden waarvan één slug. return:`, 
+          { gevonden: r }, 
+          'scanTextForAllowedArtists');
+        
+        return r;
+      }
+    }
+
+    // metalEncyclo is gelijk bij title & slug
+    const metalEncycloKeys = [];
+    const gefilterdeAllowedArtistsKeys = [];
+    gevondenKeys.forEach((key) => {
+      if (!allowedArtists[key][2]) return;
+      if (metalEncycloKeys.includes(allowedArtists[key][2])) return;
+      metalEncycloKeys.push(allowedArtists[key][2]);
+      gefilterdeAllowedArtistsKeys.push(key);
+    });
+
+    const gefilterdeAllowedArtists = {};
+    gefilterdeAllowedArtistsKeys.forEach((key) => {
+      gefilterdeAllowedArtists[key] = allowedArtists[key];
+    });
+    
+    this.consoleGroup(`\nscanTextForAllowedArtists na metal Enc; ret gefilderdeAllowedArtists:`, 
+      { gefilterdeAllowedArtists }, 
+      'scanTextForAllowedArtists');
+    
+    return gefilterdeAllowedArtists;
+  }
+ 
+  async scanEventForAllowedArtistsAsync(eventNameOfTitle, slug, shortText, settings) {
+    let toScan = eventNameOfTitle; 
+    if (settings.artistsIn.includes('shortText') && shortText) {
+      const s = (shortText ?? '').toLowerCase();
+      toScan = `${toScan}
+      ${s}`;
+    }    
+    const artists = this.scanTextForAllowedArtists(toScan, slug);
+    const workedArtists = {};
+
+    const artistsFound = Object.keys(artists).length;
+    if (artistsFound) {
+      Object.entries(artists).forEach(([key, values]) => {
+        workedArtists[key] = {
+          s: values[1],
+          l: values[2],
+          g: values[3],
+        };
+      });
+    }
+
+    return this.post({
+      success: artistsFound > 0 ? true : null,
+      data: workedArtists,
+      reason: artistsFound > 0 
+        ? `🟩 ${artistsFound} artists found: ${Object.keys(artists).join(', ')} ac3` 
+        : `⬜ no artists found ac4`,
+    });
+  }
+  // #endregion 
+
+  // #region API CALL FOR GENRE
   async recursiveAPICallForGenre(lijst, resultaten = []) {
     const deze = lijst.shift();
     const APICallsRes = await this.APICallsForGenre(deze.workTitle, deze.slug);
@@ -745,7 +1057,7 @@ export default class Artists {
     }
     return resultaten;
   }  
-
+  
   /**
    * kijkt in refused of daarin letterlijk de artistName/title of slug als key in voorkomen
    * @param {*} eventNameOfTitle 
@@ -807,115 +1119,9 @@ export default class Artists {
     
     return genreRes;
   }
-    
-  /**
-   * scant eventNameOfTitle en slug op match met allowed artists
-   * @param {*} eventNameOfTitle 
-   * @param {*} slug 
-   * @returns array met key:artiest
-   */
-  scanTitleForAllowedArtists(eventNameOfTitle, slug) {
-    const haystack = Object.keys(this.allowedArtists);
-    // console.log();
-    // console.log('-----------------');
-    // console.log('eventNameOfTitle, slug');
-    
-    const gevondenKeys = haystack
-      .filter((hay) => eventNameOfTitle.includes(hay) || slug.includes(hay));
-    // console.log('gevondenKeys');
-    // console.log(gevondenKeys);
-    
-    if (!gevondenKeys || !gevondenKeys.length) {
-      return {};
-    }
-    
-    if (gevondenKeys.length === 1) {
-      const k = gevondenKeys[0];
-      const artist = this.allowedArtists[k];
-      // console.log('een key gevonden. return:');
-      // console.log({
-      //   [`${k}`]: artist,
-      // });
-      return {
-        [`${k}`]: artist,
-      };
-    }
+  // #endregion
 
-    const allowedArtists = {};
-    gevondenKeys.forEach((key) => {
-      allowedArtists[key] = this.allowedArtists[key];
-    });
-
-    if (gevondenKeys.length === 2) {
-      const key1 = gevondenKeys[0];
-      const key2 = gevondenKeys[1];
-      const isSlug1 = allowedArtists[key1][0];
-      const isSlug2 = allowedArtists[key2][0];
-      const eenSlugAnderNiet = isSlug1 + isSlug2 === 1;
-      if (eenSlugAnderNiet) {
-        let winKey;
-        if (isSlug1) {
-          winKey = key2;
-        } else {
-          winKey = key1;
-        }
-        const winnaar = allowedArtists[winKey];
-        // console.log('twee keys gevonden waarvan één slug. return:');
-        // console.log({
-        //   [`${winKey}`]: winnaar,
-        // });
-        return {
-          [`${winKey}`]: winnaar,
-        };
-      }
-    }
-
-    // metalEncyclo is gelijk bij title & slug
-    const metalEncycloKeys = [];
-    const gefilterdeAllowedArtistsKeys = [];
-    gevondenKeys.forEach((key) => {
-      if (!allowedArtists[key][2]) return;
-      if (metalEncycloKeys.includes(allowedArtists[key][2])) return;
-      metalEncycloKeys.push(allowedArtists[key][2]);
-      gefilterdeAllowedArtistsKeys.push(key);
-    });
-
-    const gefilterdeAllowedArtists = {};
-    gefilterdeAllowedArtistsKeys.forEach((key) => {
-      gefilterdeAllowedArtists[key] = allowedArtists[key];
-    });
-    
-    return gefilterdeAllowedArtists;
-  } 
-
-  async scanTitleForAllowedArtistsAsync(eventNameOfTitle, slug, shortText, settings) {
-    let toScan = eventNameOfTitle; 
-    if (settings.artistsIn.includes('shortText') && shortText) {
-      const s = (shortText ?? '').toLowerCase();
-      toScan = `${toScan} + ${s}`;
-    }    
-    const artists = this.scanTitleForAllowedArtists(toScan, slug);
-    const workedArtists = {};
-
-    const artistsFound = Object.keys(artists).length;
-    if (artistsFound) {
-      Object.entries(artists).forEach(([key, values]) => {
-        workedArtists[key] = {
-          s: values[1],
-          l: values[2],
-          g: values[3],
-        };
-      });
-    }
-
-    return this.post({
-      success: artistsFound > 0 ? true : null,
-      data: workedArtists,
-      reason: artistsFound > 0 
-        ? `🟩 ${artistsFound} artists found: ${Object.keys(artists).join(', ')} ac3` 
-        : `⬜ no artists found ac4`,
-    });
-  }
+  // #region SAVE REFUSED ALLOWED EVENTS
 
   saveRefusedEventTemp(title, slug, eventDate) {
     const tt = title.length < this.minLengthLang ? title + eventDate : title;
@@ -959,15 +1165,25 @@ export default class Artists {
     });
   }
 
-  persistNewRefusedAndRockArtists() {
-    console.log(`artists`);
-    console.log(Object.keys(this.allowedArtistsTemp));
-    console.log(`events`);
-    console.log(Object.keys(this.allowedEventTemp));
-    console.log(`refused`);
-    console.log(Object.keys(this.refusedTemp));
+  fromArrayToFourColumnRows(a, i) {
+    if (i % 4 === 0 && i > 0) {
+      return `${a}\n`;
+    }
+    return a;
+  }
 
-    if (this.nietSchrijven) {
+  persistNewRefusedAndRockArtists() {
+    console.log(`artiesten worden opgeslagen`);
+    
+    this.consoleGroup(`artists, events, refused pNRARA1`, {
+      artists: Object.keys(this.allowedArtistsTemp).map(this.fromArrayToFourColumnRows).join(''),
+      events: Object.keys(this.allowedEventTemp).map(this.fromArrayToFourColumnRows).join(''),
+      refused: Object.keys(this.refusedTemp).map(this.fromArrayToFourColumnRows).join(''),
+    }, 'persistNewRefusedAndRockArtists');
+    
+    this.consoleGroup('new artists data pNRARA2', this.allowedArtistsTemp, 'persistNewRefusedAndRockArtists');
+    
+    if (this.nietSchrijven && this.funcsToDebug.persistNewRefusedAndRockArtists) {
       console.log('\x1b[33m%s\x1b[0m', '//////////////////');
       console.log('----------------------');
       console.log('\x1b[36m%s\x1b[0m', 'LET OP');
@@ -976,8 +1192,6 @@ export default class Artists {
       console.log('\x1b[33m%s\x1b[0m', '//////////////////');
       return;
     } 
-    console.log(`artiesten worden opgeslagen`);
-
     Object.entries(this.allowedArtistsTemp).forEach(([key, values]) => {
       if (this.allowedArtists[key]) {
         const nieuweRecord = [...this.allowedArtists[key]];
@@ -993,7 +1207,6 @@ export default class Artists {
         if (values[4]) {
           nieuweRecord[4] = values[4];
         }
-        nieuweRecord[5] = this.today;
         this.allowedArtists[key] = nieuweRecord;
         return;
       } 
@@ -1031,81 +1244,9 @@ export default class Artists {
     fs.writeFileSync(`${this.storePath}/allowed-events.json`, JSON.stringify(this.allowedEvents, null, 2), 'utf-8');
   }
 
-  async getSpotifyArtistSearch(artist) {
-    if (!this.spotifyAccessToken) {
-      await this.getSpotifyAccessToken();
-    }
+  // #endregion
 
-    // console.log();
-    // console.log('--------------');
-
-    const uriComponent = encodeURIComponent(`artist:${artist}`);
-    const url = `https://api.spotify.com/v1/search?q=${uriComponent}&type=artist&offset=0&limit=20&market=NL`;
-   
-    const fetchResult = 
-      await fetch(url, 
-        {
-          headers: {
-            Accept: 'application/json',
-            'Content-Type': 'application/json',            
-            Authorization: `Bearer ${this.spotifyAccessToken}`,
-          }, 
-        }).then((response) => response.json())
-        .catch((err) => console.error(err));
-        
-    if (fetchResult?.artists?.items && fetchResult?.artists?.items.length) {
-      // console.log(`meerdere items voor ${artist}, dit is de eerste item: `);
-      // console.log(fetchResult?.artists?.items[0]);
-      const eersteHitCorrecteNaam = fetchResult?.artists?.items
-        .filter((hit) => hit.name.toLowerCase() === artist)[0];
-      return eersteHitCorrecteNaam; 
-      // todo eerste teruggeven is slordig
-    } if (fetchResult?.artists) {
-      // console.log(`geen meerdere items maar wel resultaat voor artist ${artist}`);
-      // console.log(fetchResult?.artists);
-      return fetchResult?.artists?.items[0];
-    }
-    // console.log(`geen resultaat uberhaupt voor ${artist}`);
-    return null;
-  }
-
-  createFormBody(requestBodyObject) {
-    let formBody = [];
-    // eslint-disable-next-line no-restricted-syntax, guard-for-in
-    for (const property in requestBodyObject) {
-      const encodedKey = encodeURIComponent(property);
-      const encodedValue = encodeURIComponent(requestBodyObject[property]);
-      formBody.push(`${encodedKey}=${encodedValue}`);
-    }
-    formBody = formBody.join("&");
-    return formBody;
-  }
-
-  async getSpotifyAccessToken() {
-    const requestBody = this.createFormBody({
-      grant_type: `client_credentials`,
-      client_id: `11bf5090af7b42848c20124d8c83fda3`,
-      client_secret: `55f3635cd31d4d97a47af46c51f20443`,
-    });
-  
-    const fetchResult = await fetch("https://accounts.spotify.com/api/token", {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
-      },
-      body: requestBody,
-    }).then((response) => response.json())
-      .catch((err) => console.error(err));
-  
-    if (fetchResult?.access_token) {
-      this.spotifyAccessToken = fetchResult.access_token;
-      return true;
-    } 
-    console.log(`err fetching access token!`);
-    console.log(fetchResult);
-    throw Error(`fetch result no access token`);
-  }
-
+  // #region ERR, POST, CONSGROUP
   /**
    * Verpakt een error in het 'type' van de messages.
    * @param {Error} err 
@@ -1134,4 +1275,26 @@ export default class Artists {
     console.log(message);
     throw Error('message corrupt');
   }
+
+  consoleGroup(title, toConsole, funcNaam = '') {
+    if (!this.funcsToDebug[funcNaam]) return;
+    console.log();
+    console.log('\x1b[36m%s\x1b[0m', `${funcNaam.padStart(80, '* ')}`);
+    console.group(`${title.padStart(80, ' ')}`);
+    if (toConsole !== null && typeof toConsole === 'object') {
+      const keys = Object.keys(toConsole);
+      // eslint-disable-next-line no-plusplus
+      for (let i = 0; i < keys.length; i++) {
+        const k = keys[i];
+        if (typeof toConsole[k] === 'string') {
+          console.log('\x1b[33m%s\x1b[0m', `${k}: ${toConsole[k]}`);
+        } else {
+          console.log('\x1b[33m%s\x1b[0m', k);
+          console.log(toConsole[k]);
+        }
+      }
+    }
+    console.groupEnd();
+  }
+  // #endregion
 }

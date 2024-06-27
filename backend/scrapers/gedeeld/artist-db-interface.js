@@ -275,8 +275,8 @@ export async function asyncHarvestArtists(event) {
  * @param {*} mergedEvent 
  * @returns 
  */
-export async function asyncScanTitleForAllowedArtists(mergedEvent, olderReasons = []) {
-  this.talkToDB(talkTitleAndSlug('scanTitleForAllowedArtistsAsync', mergedEvent, {
+export async function asyncScanEventForAllowedArtists(mergedEvent, olderReasons = []) {
+  this.talkToDB(talkTitleAndSlug('scanEventForAllowedArtistsAsync', mergedEvent, {
     shortText: mergedEvent.shortText,
     settings: this._s.app.harvest,
   }));    
@@ -292,7 +292,7 @@ export async function asyncScanTitleForAllowedArtists(mergedEvent, olderReasons 
 
 export async function asyncHasAllowedArtist(event, olderReasons) {
   const getScanDBScraper = 
-    await this.asyncScanTitleForAllowedArtists(event, olderReasons);
+    await this.asyncScanEventForAllowedArtists(event, olderReasons);
 
   if (getScanDBScraper.isSuccess) {
     getScanDBScraper.setBreak(true);

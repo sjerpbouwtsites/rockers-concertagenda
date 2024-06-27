@@ -15,7 +15,7 @@ import _getPriceFromHTML from './price.js';
 import shell from '../../mods/shell.js';
 import {
   asyncIsAllowedEvent, asyncIsRefused, asyncForbiddenTerms, 
-  asyncSaveAllowedEvent, asyncSaveRefused, asyncHarvestArtists, asyncScanTitleForAllowedArtists, 
+  asyncSaveAllowedEvent, asyncSaveRefused, asyncHarvestArtists, asyncScanEventForAllowedArtists, 
   asyncSpotifyConfirmation, asyncGoodTerms, asyncExplicitEventCategories,
   asyncMetalEncyclopediaConfirmation, asyncIfNotAllowedRefuse, asyncHasAllowedArtist, asyncSuccess, asyncFailure,
 } from './artist-db-interface.js';
@@ -80,8 +80,8 @@ export default class AbstractScraper extends ScraperConfig {
     this.asyncSaveRefused = asyncSaveRefused;
     this.asyncSaveRefused.bind(this);
 
-    this.asyncScanTitleForAllowedArtists = asyncScanTitleForAllowedArtists;
-    this.asyncScanTitleForAllowedArtists.bind(this);
+    this.asyncScanEventForAllowedArtists = asyncScanEventForAllowedArtists;
+    this.asyncScanEventForAllowedArtists.bind(this);
 
     this.asyncSpotifyConfirmation = asyncSpotifyConfirmation;
     this.asyncSpotifyConfirmation.bind(this);
@@ -637,11 +637,7 @@ export default class AbstractScraper extends ScraperConfig {
     const mergedEventCheckRes = await this.singlePageAsyncCheck(mergedEvent);
     mergedEventCheckRes.event = mergedEvent;
     
-    if (!this.harvesterWaarschuwinggegeven) {
-      this.handleError(new Error('harvest artist uitgeschakeld'), 'harvester moet nog vernieuwd worden', 'notice');
-      this.harvesterWaarschuwinggegeven = true;
-    } 
-    // await this.asyncHarvestArtists(mergedEvent);
+    await this.asyncHarvestArtists(mergedEvent);
 
     // this.singlePageAsyncCheckDebugger(mergedEventCheckRes);
 
@@ -654,7 +650,7 @@ export default class AbstractScraper extends ScraperConfig {
     } 
     
     if (!mergedEventCheckRes.isFailed) {
-      const artistsRes = await this.asyncScanTitleForAllowedArtists(mergedEvent);
+      const artistsRes = await this.asyncScanEventForAllowedArtists(mergedEvent);
       this.artistScanDebugger(mergedEventCheckRes, artistsRes);
 
       if (artistsRes.isSuccess) {

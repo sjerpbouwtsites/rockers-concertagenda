@@ -48,27 +48,29 @@ scraper.mainPage = async function () {
   let rawEvents = await page.evaluate(
     // eslint-disable-next-line no-shadow
     ({ workerData, unavailabiltyTerms }) =>
-      Array.from(document.querySelectorAll('#skewEl article')).map((eventEl) => {
-        const title = eventEl.querySelector('h2')?.textContent.trim() ?? null;
+      Array.from(document.querySelectorAll('#skewEl article'))
+        .filter((a, i) => i < 5)
+        .map((eventEl) => {
+          const title = eventEl.querySelector('h2')?.textContent.trim() ?? null;
 
-        const res = {
-          anker: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
-          errors: [],
-          title,
-        };
+          const res = {
+            anker: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+            errors: [],
+            title,
+          };
 
-        res.venueEventUrl = eventEl.querySelector('a')?.href ?? null;
+          res.venueEventUrl = eventEl.querySelector('a')?.href ?? null;
 
-        res.mapToStart =
+          res.mapToStart =
           eventEl.querySelector('time')?.getAttribute('datetime') ?? '';
-        const uaRex = new RegExp(unavailabiltyTerms.join('|'), 'gi');
-        res.unavailable = !!eventEl.textContent.match(uaRex);
-        res.soldOut = !!eventEl?.innerHTML.match(/uitverkocht|sold\s?out/i) ?? false;
-        res.shortText =
+          const uaRex = new RegExp(unavailabiltyTerms.join('|'), 'gi');
+          res.unavailable = !!eventEl.textContent.match(uaRex);
+          res.soldOut = !!eventEl?.innerHTML.match(/uitverkocht|sold\s?out/i) ?? false;
+          res.shortText =
           eventEl.querySelector('h3')?.textContent.trim() ?? '';
 
-        return res;
-      }),
+          return res;
+        }),
     { workerData, unavailabiltyTerms: terms.unavailability },
   );
 

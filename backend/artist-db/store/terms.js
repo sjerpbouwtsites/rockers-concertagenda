@@ -7,6 +7,10 @@ const unavailabilityTerms = [
   'geannuleerd',
 ];
 
+const eventMetaTerms = [
+  'show',
+];
+
 const forbiddenTerms = [
   'afrobeats',
   'alternatieve rock',
@@ -180,4 +184,5 @@ export default {
   wikipediaGoodGenres,
   goodCategories,
   globalGoodCategories,
+  eventMetaTerms,
 };
