@@ -1091,6 +1091,10 @@ export default class AbstractScraper extends ScraperConfig {
   }
 
   async waitTime(wait = 500) {
+    if (wait > 100) {
+      this.dirtyTalk(`${workerData.family} ${workerData.index} waiting ${wait}`);
+    }
+
     return new Promise((res) => {
       setTimeout(res, wait);
     });
