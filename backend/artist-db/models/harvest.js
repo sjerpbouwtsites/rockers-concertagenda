@@ -14,10 +14,13 @@ function makeToScan(title, settings, shortText) {
 // #endregion MAKE TO SCAN
 
 // #region MAKE VERDER SCANNEN
-function makeVerderScannen(toScan, reedsGevondenNamen) {
+function makeVerderScannen(toScan, reedsGevondenNamen, reedsGevondenRefusedNamen) {
   return toScan.map((scan) => {
     let _scan = scan;
     reedsGevondenNamen.forEach((rg) => {
+      _scan = _scan.replace(rg, '').trim();
+    });
+    reedsGevondenRefusedNamen.forEach((rg) => {
       _scan = _scan.replace(rg, '').trim();
     });
     return _scan;  
@@ -52,17 +55,18 @@ function makePotentieeleOverigeTitels(settings, verderScannen) {
 // #endregion
 
 // #region MAKE REFUSED VAR
-function makeRefusedVar(isSlug, _eventDate, today) {
+function makeRefusedVar(isSlug, _eventDate, today, venueEventUrl) {
   return [
     isSlug ? 1 : 0,
     _eventDate,
     today,
+    venueEventUrl,
   ];
 }
 // #endregion MAKE REFUSED VAR
 
 // #region MAKE VOL ARTIST VAR
-function makeVolArtistVar(isSlug, spotifyID, gevondenArtiest, _eventDate, today) {
+function makeVolArtistVar(isSlug, spotifyID, gevondenArtiest, _eventDate, today, venueEventUrl) {
   return [
     isSlug ? 1 : 0,
     spotifyID,
@@ -70,6 +74,7 @@ function makeVolArtistVar(isSlug, spotifyID, gevondenArtiest, _eventDate, today)
     gevondenArtiest.genres,
     _eventDate,
     today,
+    venueEventUrl,
   ];    
 }
 // #endregion MAKE VOL ARTIST VAR
@@ -87,23 +92,25 @@ function genreAPIRespMap1(ga) {
 
 // #region GENRE API RESP MAP 2
 function genreAPIRespMap2(ga) {
+  const id = ga.resultaten?.spotRes?.id ?? null;
   this._gevondenArtiesten[ga.title] = makeVolArtistVar(
-    false, ga.resultaten?.spotRes?.id ?? null, ga, this._eventDate, this._today);
+    false, id, ga, this._eventDate, this._today, this._venueEventUrl);
     
   this._allowedArtistsTemp[ga.title] = makeVolArtistVar(
-    false, ga.resultaten?.spotRes?.id ?? null, ga, this._eventDate, this._today);
+    false, id ?? null, ga, this._eventDate, this._today, this._venueEventUrl);
   if (ga.title !== ga.slug) {
     this._allowedArtistsTemp[ga.slug] = makeVolArtistVar(
-      true, ga.resultaten?.spotRes?.id ?? null, ga, this._eventDate, this._today);        
+      true, id ?? null, ga, this._eventDate, this._today, this._venueEventUrl);        
   }
   return ga;
 }
 // #endregion GENRE API RESP MAP 2
 
 export async function harvestArtists(
-  title, slug, shortText, settings, eventDate, eventGenres = []) {
+  title, slug, shortText, settings, eventDate, venueEventUrl, eventGenres = []) {
   const toScan = makeToScan(title, settings, shortText);
   const reedsGevonden = toScan.map((scan) => this.scanTextForAllowedArtists(scan, '')).filter((a) => Object.keys(a).length);
+  const reedsGevondenRefused = toScan.map((scan) => this.scanTextForRefusedArtists(scan, '')).filter((a) => Object.keys(a).length);
 
   // #region REEDS GEVONDEN
   let reedsGevondenHACK = {}; // TODO HACK
@@ -111,10 +118,11 @@ export async function harvestArtists(
     reedsGevondenHACK = Object.assign(reedsGevondenHACK, r);
   });
   const reedsGevondenNamen = reedsGevonden.map((g) => Object.keys(g)).flat(); 
+  const reedsGevondenRefusedNamen = reedsGevondenRefused.map((g) => Object.keys(g)).flat(); 
   // #endregion REEDS GEVONDEN
 
   // #region VERDER SCANNEN
-  const verderScannen = makeVerderScannen(toScan, reedsGevondenNamen);
+  const verderScannen = makeVerderScannen(toScan, reedsGevondenNamen, reedsGevondenRefusedNamen);
 
   if (!verderScannen.length) {
     this.consoleGroup(`Niets te vinden dat reeds bekende namen in hA2`, { title, bronTekst: toScan, reedsGevondenNamen }, 'harvestArtists', 'fgred');      
@@ -151,17 +159,17 @@ export async function harvestArtists(
       if (explGenreCheckRes.success) {
         return true;
       } if (explGenreCheckRes.success === false) {
-        this.refusedTemp[ga.title] = makeRefusedVar(false, eventDate, this.today);
+        this.refusedTemp[ga.title] = makeRefusedVar(false, eventDate, this.today, venueEventUrl);
         if (ga.title !== ga.slug) {
-          this.refusedTemp[ga.slug] = makeRefusedVar(true, eventDate, this.today);
+          this.refusedTemp[ga.slug] = makeRefusedVar(true, eventDate, this.today, venueEventUrl);
         }
         return false;
       } 
       this.unclearArtistsTemp[ga.title] = makeVolArtistVar(
-        false, ga.resultaten?.spotRes?.id ?? null, ga, eventDate, this.today);
+        false, ga.resultaten?.spotRes?.id ?? null, ga, eventDate, this.today, venueEventUrl);
       if (ga.title !== ga.slug) {
         this.unclearArtistsTemp[ga.slug] = makeVolArtistVar(
-          true, ga.resultaten?.spotRes?.id ?? null, ga, eventDate, this.today);
+          true, ga.resultaten?.spotRes?.id ?? null, ga, eventDate, this.today, venueEventUrl);
       }
       return false;
     })
@@ -170,6 +178,7 @@ export async function harvestArtists(
       _eventDate: eventDate,
       _today: this.today,
       _allowedArtistsTemp: this.allowedArtistsTemp,
+      _venueEventUrl: venueEventUrl,
     }); 
 
   const artiestenInEvent = { ...reedsGevondenHACK, ...gevondenArtiesten };

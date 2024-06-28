@@ -1,45 +1,5 @@
 [
   {
-    "door": "2024-06-29T20:45:00",
-    "start": "2024-06-29T20:00:00",
-    "venueEventUrl": "https://gebouw-t.nl/evenementen/tom-morello-sena-european-guitar-award/",
-    "title": "Tom Morello – Sena European Guitar Award",
-    "location": "gebouwt",
-    "price": 35,
-    "shortText": "Gitarist van o.a. Rage Against The Machine wint prestigieuze gitaarprijs",
-    "longText": "../public/texts/gebouwt/bG8tc2VuYS1ldXJvcGVhbi1ndWl0YXItYXdhcmQv.html",
-    "image": "../public/event-images/gebouwt/bG8tc2VuYS1ldXJvcGVhbi1ndWl0YXItYXdhcmQv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
-    "door": "2024-06-29T21:30:00",
-    "start": "2024-06-29T21:30:00",
-    "venueEventUrl": "https://gebouw-t.nl/evenementen/afterparty-parkies-memories-of-earth-fire/",
-    "title": "Afterparty Parkies: Memories of Earth & Fire",
-    "location": "gebouwt",
-    "price": null,
-    "shortText": "",
-    "longText": "../public/texts/gebouwt/YXJraWVzLW1lbW9yaWVzLW9mLWVhcnRoLWZpcmUv.html",
-    "image": "../public/event-images/gebouwt/YXJraWVzLW1lbW9yaWVzLW9mLWVhcnRoLWZpcmUv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "fear": {
-        "s": "0hpu1czs0jdstut8vrtbps",
-        "l": "fear",
-        "g": [
-          "hardcore punk",
-          "punk",
-          "death/thrash metal"
-        ]
-      }
-    }
-  },
-  {
     "door": "2024-06-29T21:30:00",
     "start": "2024-06-29T21:30:00",
     "venueEventUrl": "https://gebouw-t.nl/evenementen/afterparty-parkies-bunker/",
@@ -52,7 +12,16 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "bunker": {
+        "s": "27MZEmocg3FyOzBbfulsu5",
+        "l": "bunker",
+        "g": [
+          "melodic heavy metal",
+          "hard rock"
+        ]
+      }
+    }
   },
   {
     "door": "2024-06-29T20:30:00",
@@ -150,7 +119,18 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "gomer pyle": {
+        "s": "55IhkaO47bI9MsOuITMx9S",
+        "l": "gomer%20pyle",
+        "g": [
+          "dutch stoner rock",
+          "psychedelic doom",
+          "retro metal",
+          "space rock"
+        ]
+      }
+    }
   },
   {
     "door": "2024-06-29T21:00:00",

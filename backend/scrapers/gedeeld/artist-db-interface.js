@@ -265,6 +265,7 @@ export async function asyncHarvestArtists(event) {
       settings: this._s.app.harvest,
       eventDate: event.shortDate,
       eventGenres: event?.eventGenres ?? [],
+      venueEventUrl: event.venueEventUrl,
     },
   });    
   const dbans = await this.checkDBhasAnswered();

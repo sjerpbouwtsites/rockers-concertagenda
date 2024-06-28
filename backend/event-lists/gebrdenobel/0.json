@@ -27,7 +27,7 @@
     "eventGenres": null,
     "artists": {
       "bodyfarm": {
-        "s": "2OFRvZ32VVIW3UxVl36A0h",
+        "s": "2ofrvz32vviw3uxvl36a0h",
         "l": "bodyfarm",
         "g": [
           "dutch death metal",
@@ -64,7 +64,7 @@
     "eventGenres": null,
     "artists": {
       "monster magnet": {
-        "s": "4hvwEwrCmGj22uURGVET7Q",
+        "s": "4hvwewrcmgj22uurgvet7q",
         "l": "monster%20magnet",
         "g": [
           "southern metal",
@@ -100,7 +100,18 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "alien ant farm": {
+        "s": "6TZdvF1kFzwnQLgHQynzsO",
+        "l": "alien%20ant%20farm",
+        "g": [
+          "alternative metal",
+          "funk metal",
+          "nu metal",
+          "post-grunge"
+        ]
+      }
+    }
   },
   {
     "start": "2024-11-30T19:00:00",
@@ -114,7 +125,17 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "peter pan speedrock": {
+        "s": "3zkYKQsUkS8nnGDL9ZhHQR",
+        "l": "peter%20pan%20speedrock",
+        "g": [
+          "dutch punk",
+          "dutch rock",
+          "punk 'n' roll"
+        ]
+      }
+    }
   },
   {
     "start": "2024-12-20T19:00:00",
@@ -130,7 +151,7 @@
     "eventGenres": null,
     "artists": {
       "pene corrida": {
-        "s": "1Hw2YwIpnSOWbtb8FlZcCa",
+        "s": "1hw2ywipnsowbtb8flzcca",
         "l": "pene%20corrida",
         "g": []
       }
@@ -148,7 +169,15 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "dool": {
+        "s": "101hsr6jtjqe3dbh6rb8kz",
+        "l": "dool",
+        "g": [
+          "dutch rock"
+        ]
+      }
+    }
   },
   {
     "start": "2025-03-29T17:00:00",

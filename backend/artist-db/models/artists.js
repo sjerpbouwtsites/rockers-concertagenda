@@ -307,6 +307,7 @@ export default class Artists {
         const hasTitle = Object.prototype.hasOwnProperty.call(parsedMessage.data, 'title');
         const hasSlug = Object.prototype.hasOwnProperty.call(parsedMessage.data, 'slug');
         const hasSettings = Object.prototype.hasOwnProperty.call(parsedMessage.data, 'settings');
+        const hasURL = Object.prototype.hasOwnProperty.call(parsedMessage.data, 'venueEventUrl');
         const hasEventDate = Object.prototype.hasOwnProperty.call(parsedMessage.data, 'eventDate');
         if (!hasTitle || !hasSlug) {
           return this.error(Error('geen title of slug om te doorzoeken'));
@@ -317,10 +318,13 @@ export default class Artists {
         if (!hasEventDate) {
           return this.error(Error('geen event date'));
         } 
+        if (!hasURL) {
+          return this.error(Error('geen event url'));
+        } 
       }
       const d = message.data;
       return this.harvestArtists(
-        d.title, d.slug, d?.shortText, d.settings, d.eventDate, d?.eventGenres);
+        d.title, d.slug, d?.shortText, d.settings, d.eventDate, d.venueEventUrl, d?.eventGenres);
     }
 
     if (message.request === 'APICallsForGenre') {
@@ -1076,7 +1080,6 @@ export default class Artists {
   }
 
   persistNewRefusedAndRockArtists() {
-    console.log(`artiesten worden opgeslagen`);
     const artistKeys = Object
       .entries(this.allowedArtistsTemp)
       .map(([key, value]) => {
@@ -1108,7 +1111,7 @@ export default class Artists {
       unclearArtists: `${unclearArtistsKeys.map(this.fromArrayToTwoColumnRows).join(' ')}\n`,
     }, 'persistNewRefusedAndRockArtists', 'fggreen');
     
-    this.consoleGroup('new artists data pNRARA2', this.allowedArtistsTemp, 'persistNewRefusedAndRockArtists');
+    this.consoleGroup('new artists data pNRARA2', this.allowedArtistsTemp, 'persistNewRefusedAndRockArtists', 'fggreen');
     
     if (!this.storeWritePermission) {
       if (this.funcsToDebug.persistNewRefusedAndRockArtists) {
@@ -1136,6 +1139,9 @@ export default class Artists {
         if (values[4]) {
           nieuweRecord[4] = values[4];
         }
+        if (values[5]) {
+          nieuweRecord[5] = values[5];
+        }
         this.allowedArtists[key] = nieuweRecord;
         return;
       } 
@@ -1148,7 +1154,13 @@ export default class Artists {
         if (values[1]) {
           nieuweRecord[1] = values[1];
         }
-        nieuweRecord[2] = this.today;
+        if (values[2]) {
+          nieuweRecord[2] = values[2];
+        }
+        if (values[3]) {
+          nieuweRecord[3] = values[3];
+        }
+        
         this.refused[key] = nieuweRecord;
         return;
       } 
@@ -1161,7 +1173,13 @@ export default class Artists {
         if (values[1]) {
           nieuweRecord[1] = values[1];
         }
-        nieuweRecord[2] = this.today;
+        if (values[2]) {
+          nieuweRecord[2] = values[2];
+        }
+        if (values[3]) {
+          nieuweRecord[3] = values[3];
+        }
+        
         this.allowedEvents[key] = nieuweRecord;
         return;
       } 
@@ -1174,7 +1192,13 @@ export default class Artists {
         if (values[1]) {
           nieuweRecord[1] = values[1];
         }
-        nieuweRecord[2] = this.today;
+        if (values[2]) {
+          nieuweRecord[2] = values[2];
+        }
+        if (values[3]) {
+          nieuweRecord[3] = values[3];
+        }
+        
         this.unclearArtists[key] = nieuweRecord;
         return;
       } 
