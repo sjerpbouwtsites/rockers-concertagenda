@@ -44,6 +44,13 @@ export default class Artists {
    * @see README.md
    */  
   refused;
+  
+  /**
+   * een store voor onduidelijke genre artiesiten..
+   * @external Object ../store/unclear-artists.json
+   * @see README.md
+   */  
+  unclearArtists;
 
   /**
    * tijdelijke houder om later mogelijk in refused op te slaan.
@@ -61,6 +68,11 @@ export default class Artists {
   allowedArtistsTemp = {};
 
   /**
+   * tijdelijke houder om later mogelijk in unclearArtists op te slaan.
+   */
+  unclearArtistsTemp = {};
+
+  /**
    * Twee weg referentie zoals {USA: US, US: USA}
    * tbv country info uit titels halen
    */
@@ -75,11 +87,6 @@ export default class Artists {
 
   spotifyAccessToken = null;
 
-  /**
-   * of in die persistentie functie fs write file
-   */
-  nietSchrijven = true;
-
   funcsToDebug = {
     harvestArtists: true,
     scanTextForAllowedArtists: false,
@@ -88,6 +95,10 @@ export default class Artists {
   };
 
   // #endregion
+  /**
+   * of in die persistentie functie fs write file
+   */
+  nietSchrijven = false;
 
   constructor(conf) {
     this.modelPath = conf.modelPath;
@@ -95,6 +106,7 @@ export default class Artists {
     this.refused = JSON.parse(fs.readFileSync(`${this.storePath}/refused.json`));
     this.allowedArtists = JSON.parse(fs.readFileSync(`${this.storePath}/allowed-artists.json`));
     this.allowedEvents = JSON.parse(fs.readFileSync(`${this.storePath}/allowed-events.json`));
+    this.unclearArtists = JSON.parse(fs.readFileSync(`${this.storePath}/unclear-artists.json`));
     this.landcodesMap = JSON.parse(fs.readFileSync(`${this.storePath}/landcodes-map.json`));
     this.today = (new Date()).toISOString().replaceAll('-', '').substring(2, 8);
 
@@ -879,30 +891,70 @@ export default class Artists {
     });
     this.consoleGroup(`gevonden artiesten hA5`, naarConsole, `harvestArtists`);
 
-    gevondenArtiesten.forEach((ga) => {
-      const spotifyGenres = ga?.resultaten?.spotRes?.genres ?? [];
-      const metalGenres = (ga?.resultaten?.metalEnc?.[1] ?? '').split(';').map((a) => a.trim());
-      const dezeGenres = [...spotifyGenres, ...metalGenres, ...eventGenres].filter((a) => a);
-      
-      this.allowedArtistsTemp[ga.title] = [
-        0,
-        ga.resultaten?.spotRes?.id,
-        encodeURI(ga.title),
-        dezeGenres,
-        eventDate,
-        this.today,
-      ];
-      if (title !== slug) {
-        this.allowedArtistsTemp[ga.slug] = [
+    gevondenArtiesten
+      .map((ga) => {
+        const spotifyGenres = ga?.resultaten?.spotRes?.genres ?? [];
+        const metalGenres = (ga?.resultaten?.metalEnc?.[1] ?? '').split(';').map((a) => a.trim());
+        // eslint-disable-next-line no-param-reassign
+        ga.genres = [...spotifyGenres, ...metalGenres, ...eventGenres].filter((a) => a);
+        return ga;      
+      })
+      .filter((ga) => {
+        const explGenreCheckRes = JSON.parse(this.checkExplicitEventCategories(ga.genres));
+        this.consoleGroup(`check of genres 'goed' van artiest hA891`, { artiest: ga.title, res: explGenreCheckRes, genres: ga.genres }, 'harvestArtists');
+        if (explGenreCheckRes.success) {
+          return true;
+        } if (explGenreCheckRes.success === false) {
+          this.refusedTemp[ga.title] = [
+            0,
+            eventDate,
+            this.today,
+          ];
+          this.refusedTemp[ga.slug] = [
+            1,
+            eventDate,
+            this.today,
+          ];
+          return false;
+        } 
+        this.unclearArtistsTemp[ga.title] = [
+          0,
+          ga.resultaten?.spotRes?.id,
+          encodeURI(ga.title),
+          ga.genres,
+          eventDate,
+          this.today,
+        ];
+        this.unclearArtistsTemp[ga.slug] = [
           1,
           ga.resultaten?.spotRes?.id,
           encodeURI(ga.title),
-          dezeGenres,
+          ga.genres,
           eventDate,
           this.today,
-        ];        
-      }
-    });
+        ];
+        return false;
+      })
+      .forEach((ga) => {
+        this.allowedArtistsTemp[ga.title] = [
+          0,
+          ga.resultaten?.spotRes?.id,
+          encodeURI(ga.title),
+          ga.genres,
+          eventDate,
+          this.today,
+        ];
+        if (title !== slug) {
+          this.allowedArtistsTemp[ga.slug] = [
+            1,
+            ga.resultaten?.spotRes?.id,
+            encodeURI(ga.title),
+            ga.genres,
+            eventDate,
+            this.today,
+          ];        
+        }
+      });
 
     const artiestenInEvent = { ...reedsGevondenHACK, ...gevondenArtiesten };
 
@@ -1088,19 +1140,24 @@ export default class Artists {
 
     const metalEncycloAjaxURL = `https://www.metal-archives.com/search/ajax-advanced/searching/bands/?bandName=${metalString}&yearCreationFrom=&yearCreationTo=&status[]=1`;
     
-    const meaRes = await fetch(metalEncycloAjaxURL)
+    genreRes.metalEnc = await fetch(metalEncycloAjaxURL)
       .then((res) => res.json())
       .then((r) => {
         if (!r?.iTotalRecords) return null;
-        return r?.aaData[0]; // TODO zomaar de eerste pakken slap
+
+        const correcteRij = (r?.aaData ?? []).find((rij) => {
+          const rijNaam = rij[0].toLowerCase().replaceAll(/_/g, ' ');
+          return rijNaam.includes(eventNameOfTitle) || rijNaam.includes(eventNameOfTitle);
+        });
+        correcteRij[1] = correcteRij[1].toLowerCase().split(/[;\/]/);
+
+        return correcteRij;
       })
       .catch((err) => {
         console.log(`probleem met metal enc. fetch voor ${eventNameOfTitle} naar \n${metalEncycloAjaxURL}`);
-        console.log(meaRes);
+        console.log(genreRes);
         return this.error(err);
       });
-
-    genreRes.metalEnc = meaRes;
 
     genreRes.spotRes = await this.getSpotifyArtistSearch(eventNameOfTitle);
     if (genreRes?.spotRes?.external_urls) delete genreRes.spotRes.external_urls;
@@ -1168,9 +1225,10 @@ export default class Artists {
     console.log(`artiesten worden opgeslagen`);
     
     this.consoleGroup(`artists, events, refused pNRARA1`, {
-      artists: Object.keys(this.allowedArtistsTemp).map(this.fromArrayToFourColumnRows).join(' '),
-      events: Object.keys(this.allowedEventTemp).map(this.fromArrayToFourColumnRows).join(' '),
-      refused: Object.keys(this.refusedTemp).map(this.fromArrayToFourColumnRows).join(' '),
+      artists: `${Object.keys(this.allowedArtistsTemp).map(this.fromArrayToFourColumnRows).join(' ')}\r`,
+      events: `${Object.keys(this.allowedEventTemp).map(this.fromArrayToFourColumnRows).join(' ')}\r`,
+      refused: `${Object.keys(this.refusedTemp).map(this.fromArrayToFourColumnRows).join(' ')}\r`,
+      unclearArtists: `${Object.keys(this.unclearArtistsTemp).map(this.fromArrayToFourColumnRows).join(' ')}\r`,
     }, 'persistNewRefusedAndRockArtists');
     
     this.consoleGroup('new artists data pNRARA2', this.allowedArtistsTemp, 'persistNewRefusedAndRockArtists');
@@ -1230,10 +1288,24 @@ export default class Artists {
       } 
       this.allowedEvents[key] = values;
     });
+
+    Object.entries(this.unclearArtistsTemp).forEach(([key, values]) => {
+      if (this.unclearArtists[key]) {
+        const nieuweRecord = [...this.unclearArtists[key]];
+        if (values[1]) {
+          nieuweRecord[1] = values[1];
+        }
+        nieuweRecord[2] = this.today;
+        this.unclearArtists[key] = nieuweRecord;
+        return;
+      } 
+      this.unclearArtists[key] = values;
+    });
     
     fs.writeFileSync(`${this.storePath}/refused.json`, JSON.stringify(this.refused, null, 2), 'utf-8');
     fs.writeFileSync(`${this.storePath}/allowed-artists.json`, JSON.stringify(this.allowedArtists, null, 2), 'utf-8');
     fs.writeFileSync(`${this.storePath}/allowed-events.json`, JSON.stringify(this.allowedEvents, null, 2), 'utf-8');
+    fs.writeFileSync(`${this.storePath}/unclear-artists.json`, JSON.stringify(this.unclearArtists, null, 2), 'utf-8');
   }
 
   // #endregion

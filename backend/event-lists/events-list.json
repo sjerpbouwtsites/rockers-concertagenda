@@ -421,10 +421,10 @@
     "door": "2024-06-30T19:30:00.000",
     "start": "2024-06-30T20:15:00.000",
     "venueEventUrl": "https://www.doornroosje.nl/event/mammoth-wvh/",
-    "title": "Mammoth WVH+ Kris Barras Band",
+    "title": "Mammoth WVH",
     "location": "doornroosje",
     "price": null,
-    "shortText": "Hard rockende Van Halen zoon naar Nijmegenrock, hard rock, metal",
+    "shortText": "+ Kris Barras Bandrock, hard rock, metal",
     "longText": "../public/texts/doornroosje/cm5yb29zamUubmwvZXZlbnQvbWFtbW90aC13dmgv.html",
     "soldOut": true,
     "eventGenres": null,
@@ -713,10 +713,10 @@
     "door": "2024-07-06T19:00:00.000",
     "start": "2024-07-06T19:30:00.000",
     "venueEventUrl": "https://www.doornroosje.nl/event/vader-2/",
-    "title": "Vader+ Bio-Cancer + Warside",
+    "title": "Vader",
     "location": "doornroosje",
     "price": null,
-    "shortText": "40 jarig jubileum van een death metal instituutmetal, death metal, doornroosjepas",
+    "shortText": "+ Bio-Cancer + Warsidemetal, death metal, doornroosjepas",
     "longText": "../public/texts/doornroosje/LmRvb3Jucm9vc2plLm5sL2V2ZW50L3ZhZGVyLTIv.html",
     "soldOut": true,
     "eventGenres": null,
@@ -738,27 +738,6 @@
           "speed metal",
           "technical death metal",
           "death/thrash metal",
-          "death metal",
-          "thrash metal"
-        ]
-      },
-      "bio-cancer": {
-        "s": "7N0YKBOylzJvN7PevzJg2G",
-        "l": "Greece",
-        "g": [
-          "crossover thrash",
-          "greek metal",
-          "new wave of thrash metal",
-          "thrash metal",
-          "death metal",
-          "thrash metal"
-        ]
-      },
-      "warside": {
-        "s": "0InPsKrw3SLGw9QfpsSsec",
-        "l": "Brazil",
-        "g": [
-          "heavy metal",
           "death metal",
           "thrash metal"
         ]
@@ -1093,34 +1072,6 @@
     "location": "cacaofabriek"
   },
   {
-    "start": "2024-07-13T12:00:00",
-    "venueEventUrl": "https://www.doornroosje.nl/event/valkhof-festival-16/",
-    "title": "Valkhof FestivalPloegendienst ",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": " Will Butler  +  Sister Squares +  Ada Oda  +  Droom Dit  +  meer Valkhofpark Gratis ontdekkingsfestival tijdens de Vierdaagsefeesten",
-    "longText": "../public/texts/doornroosje/Lm5sL2V2ZW50L3ZhbGtob2YtZmVzdGl2YWwtMTYv.html",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "ares": {
-        "s": "1yNLeUMAzOBA4q3Zki0hjz",
-        "l": "ares",
-        "g": [
-          "neo-trad metal"
-        ]
-      },
-      "ploegendienst": {
-        "s": "2aJUvAtem0t0zRKxJsRoea",
-        "l": "ploegendienst",
-        "g": [
-          "dutch indie rock",
-          "dutch punk"
-        ]
-      }
-    }
-  },
-  {
     "start": "2024-07-13T01:00:00",
     "end": "2024-07-13T11:00:00",
     "venueEventUrl": "https://www.dbstudio.nl/event/dbs-buitenfestival-weekender/",
@@ -1191,33 +1142,6 @@
     "artists": null
   },
   {
-    "start": "2024-07-15T12:00:00",
-    "venueEventUrl": "https://www.doornroosje.nl/event/valkhof-festival-18/",
-    "title": "Valkhof FestivalWodan Boys ",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": " Maria Iskariot  +  Slope  +  CLAMM  +  WTF  +  meer Valkhofpark Gratis ontdekkingsfestival tijdens de Vierdaagsefeesten",
-    "longText": "../public/texts/doornroosje/Lm5sL2V2ZW50L3ZhbGtob2YtZmVzdGl2YWwtMTgv.html",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "slope": {
-        "s": "35fxvnr5oanOFB1JNB2Ber",
-        "l": "slope",
-        "g": [
-          "dutch rock"
-        ]
-      },
-      "wodan boys": {
-        "s": "0kmKbibEVmQ4luQqUAHDMr",
-        "l": "wodan%20boys",
-        "g": [
-          "dutch rock"
-        ]
-      }
-    }
-  },
-  {
     "door": "2024-07-16T19:30:00",
     "start": "2024-07-16T19:00:00",
     "venueEventUrl": "https://www.paradiso.nl/en/program/press-club-clamm/2071791",
@@ -1229,18 +1153,6 @@
     "image": "../public/event-images/paradiso/b2dyYW0vcHJlc3MtY2x1Yi1jbGFtbS8yMDcxNzkx",
     "soldOut": false,
     "unavailable": false,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
-    "start": "2024-07-16T12:00:00",
-    "venueEventUrl": "https://www.doornroosje.nl/event/valkhof-festival-19/",
-    "title": "Valkhof FestivalAna Frango Elétrico ",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": " Angélica Garcia  +  ROLROLROL  +  Planet Rose  +  meer Valkhofpark Gratis ontdekkingsfestival tijdens de Vierdaagsefeesten",
-    "longText": "../public/texts/doornroosje/Lm5sL2V2ZW50L3ZhbGtob2YtZmVzdGl2YWwtMTkv.html",
-    "soldOut": false,
     "eventGenres": null,
     "artists": null
   },
@@ -1265,53 +1177,6 @@
         ]
       }
     }
-  },
-  {
-    "start": "2024-07-17T12:00:00",
-    "venueEventUrl": "https://www.doornroosje.nl/event/valkhof-festival-20/",
-    "title": "Valkhof FestivalYunè Pinku ",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": " Julia Sabaté   +  X IT  +  Off The Grid  +  meer Valkhofpark Gratis ontdekkingsfestival tijdens de Vierdaagsefeesten",
-    "longText": "../public/texts/doornroosje/Lm5sL2V2ZW50L3ZhbGtob2YtZmVzdGl2YWwtMjAv.html",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
-    "start": "2024-07-18T12:00:00",
-    "venueEventUrl": "https://www.doornroosje.nl/event/valkhof-festival-21/",
-    "title": "Valkhof FestivalLoverman ",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": " Liam Bailey  +  Joe Unknown  +  Housepainters  +  Diskodip  +  meer Valkhofpark Gratis ontdekkingsfestival tijdens de Vierdaagsefeesten",
-    "longText": "../public/texts/doornroosje/Lm5sL2V2ZW50L3ZhbGtob2YtZmVzdGl2YWwtMjEv.html",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "pain": {
-        "s": "0AuW7OCyKfFrsMbtHrYgIV",
-        "l": "pain",
-        "g": [
-          "gangster rap",
-          "hip hop",
-          "rap rock",
-          "west coast rap"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2024-07-19T12:00:00",
-    "venueEventUrl": "https://www.doornroosje.nl/event/valkhof-festival-22/",
-    "title": "Valkhof FestivalGurriers ",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": " Meltheads  +  Talk Show  +  The Hubschrauber  +  Planet Rose  +  meer Valkhofpark Gratis ontdekkingsfestival tijdens de Vierdaagsefeesten",
-    "longText": "../public/texts/doornroosje/Lm5sL2V2ZW50L3ZhbGtob2YtZmVzdGl2YWwtMjIv.html",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": null
   },
   {
     "door": "2024-07-19T20:00:00",
@@ -2058,31 +1923,14 @@
     "door": "2024-08-10T19:30:00.000",
     "start": "2024-08-10T20:30:00.000",
     "venueEventUrl": "https://www.doornroosje.nl/event/author-punisher-ken-mode/",
-    "title": "Author & Punisher+ KEN mode",
+    "title": "Author & Punisher",
     "location": "doornroosje",
     "price": null,
-    "shortText": "Intense industrial en noisemetal, industrial, noise, doornroosjepas",
+    "shortText": "+ KEN modemetal, industrial, noise, doornroosjepas",
     "longText": "../public/texts/doornroosje/dmVudC9hdXRob3ItcHVuaXNoZXIta2VuLW1vZGUv.html",
     "soldOut": true,
     "eventGenres": null,
-    "artists": {
-      "ken mode": {
-        "s": "3I33pakU01BuYZ5UyQ2A0i",
-        "l": "ken%20mode",
-        "g": [
-          "canadian hardcore",
-          "canadian post-hardcore",
-          "chaotic hardcore",
-          "drone metal",
-          "mathcore",
-          "noise rock",
-          "post-doom metal",
-          "post-metal",
-          "sludge metal",
-          "sludgecore"
-        ]
-      }
-    }
+    "artists": null
   },
   {
     "title": "Butcher Babies",
@@ -2179,7 +2027,7 @@
     "title": "Havok + Skeletal Remains + Dust Bolt",
     "location": "doornroosje",
     "price": null,
-    "shortText": "Thrash metal bonanza!metal, thrash metal",
+    "shortText": "metal, thrash metal",
     "longText": "../public/texts/doornroosje/d3cuZG9vcm5yb29zamUubmwvZXZlbnQvaGF2b2sv.html",
     "soldOut": true,
     "eventGenres": null,
@@ -2258,10 +2106,10 @@
     "door": "2024-08-13T19:00:00.000",
     "start": "2024-08-13T19:30:00.000",
     "venueEventUrl": "https://www.doornroosje.nl/event/baroness/",
-    "title": "Baroness+ Pupil Slicer",
+    "title": "Baroness",
     "location": "doornroosje",
     "price": null,
-    "shortText": "Sublieme stoner rock met sludge metal & 70s hardrockrock, metal, doornroosjepas",
+    "shortText": "+ Pupil Slicerrock, metal, doornroosjepas",
     "longText": "../public/texts/doornroosje/ZG9vcm5yb29zamUubmwvZXZlbnQvYmFyb25lc3Mv.html",
     "soldOut": true,
     "eventGenres": null,
@@ -2271,10 +2119,10 @@
     "door": "2024-08-13T20:00:00.000",
     "start": "2024-08-13T20:30:00.000",
     "venueEventUrl": "https://www.doornroosje.nl/event/dopethrone/",
-    "title": "Dopethrone+ Karavan",
+    "title": "Dopethrone",
     "location": "doornroosje",
     "price": null,
-    "shortText": "Merleyn Vepletterende sludge metal uit Canadametal, sludge metal",
+    "shortText": "+ Karavanmetal, sludge metal",
     "longText": "../public/texts/doornroosje/b3Jucm9vc2plLm5sL2V2ZW50L2RvcGV0aHJvbmUv.html",
     "soldOut": true,
     "eventGenres": null,
@@ -2377,7 +2225,7 @@
     "title": "The Omnific",
     "location": "doornroosje",
     "price": null,
-    "shortText": "Merleyn Instrumentale Australische progressieve rock/metal met twee bassisten en een drummermetal, progressieve metal",
+    "shortText": "metal, progressieve metal",
     "longText": "../public/texts/doornroosje/cm5yb29zamUubmwvZXZlbnQvdGhlLW9tbmlmaWMv.html",
     "soldOut": true,
     "eventGenres": null,
@@ -2470,7 +2318,7 @@
     "title": "Poison Ruïn",
     "location": "doornroosje",
     "price": null,
-    "shortText": "Merleyn Gruizige goth post-punk met killer hooksrock, punk, post punk, proto-metal",
+    "shortText": "rock, punk, post punk, proto-metal",
     "longText": "../public/texts/doornroosje/cm9vc2plLm5sL2V2ZW50L3BvaXNvbi1ydWluLTIv.html",
     "soldOut": true,
     "eventGenres": null,
@@ -2497,7 +2345,7 @@
     "title": "Sextile",
     "location": "doornroosje",
     "price": null,
-    "shortText": "Merleyn Rauwe band met 70’s punk, postpunk, synthwave en andere elementen uit de jaren ’80 en ‘90.kraut rock, punk, wave, synth",
+    "shortText": "kraut rock, punk, wave, synth",
     "longText": "../public/texts/doornroosje/LmRvb3Jucm9vc2plLm5sL2V2ZW50L3NleHRpbGUv.html",
     "soldOut": true,
     "eventGenres": null,
@@ -2812,10 +2660,10 @@
     "door": "2024-08-28T19:00:00.000",
     "start": "2024-08-28T19:30:00.000",
     "venueEventUrl": "https://www.doornroosje.nl/event/born-of-osiris/",
-    "title": "Born Of Osiris + Distant+ Gallamesh",
+    "title": "Born Of Osiris + Distant",
     "location": "doornroosje",
     "price": null,
-    "shortText": "Brute progressieve death/metalcoremetal, metalcore, deathcore",
+    "shortText": "+ Gallameshmetal, metalcore, deathcore",
     "longText": "../public/texts/doornroosje/b29zamUubmwvZXZlbnQvYm9ybi1vZi1vc2lyaXMv.html",
     "soldOut": true,
     "eventGenres": null,
@@ -2826,21 +2674,6 @@
         "g": [
           "instrumental post-rock",
           "polish post-rock"
-        ]
-      },
-      "mesh": {
-        "s": "3ggwAqZD3lyT2sbovlmfQY",
-        "l": "mesh",
-        "g": [
-          "alternative metal",
-          "djent",
-          "groove metal",
-          "metal",
-          "nu metal",
-          "progressive groove metal",
-          "swedish metal",
-          "technical groove metal",
-          "technical thrash"
         ]
       }
     }
@@ -2877,14 +2710,24 @@
     "door": "2024-08-29T20:00:00.000",
     "start": "2024-08-29T20:30:00.000",
     "venueEventUrl": "https://www.doornroosje.nl/event/gnod/",
-    "title": "Gnod+ the gluts",
+    "title": "Gnod",
     "location": "doornroosje",
     "price": null,
-    "shortText": "Rauwe industriële noise met een twist uit de UKrock, psychedelische rock, noise rock, doornroosjepas",
+    "shortText": "+ The Glutsrock, psychedelische rock, noise rock, doornroosjepas",
     "longText": "../public/texts/doornroosje/d3d3LmRvb3Jucm9vc2plLm5sL2V2ZW50L2dub2Qv.html",
     "soldOut": true,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "gnod": {
+        "s": "0M7HBnNJoTfTWouL5O7FtO",
+        "l": "gnod",
+        "g": [
+          "double drumming",
+          "noise rock",
+          "uk noise rock"
+        ]
+      }
+    }
   },
   {
     "door": "2024-08-29T21:00:00.000",
@@ -2893,7 +2736,7 @@
     "title": "Snõõper",
     "location": "doornroosje",
     "price": null,
-    "shortText": "Merleyn Wilde & excentrieke garagepunkgarage rock, punk, noise, electronic",
+    "shortText": "garage rock, punk, noise, electronic",
     "longText": "../public/texts/doornroosje/LmRvb3Jucm9vc2plLm5sL2V2ZW50L3Nub29wZXIv.html",
     "soldOut": true,
     "eventGenres": null,
@@ -2920,7 +2763,7 @@
     "title": "Lodyne",
     "location": "doornroosje",
     "price": null,
-    "shortText": "Merleyn Album presentatierock, punk",
+    "shortText": "rock, punk",
     "longText": "../public/texts/doornroosje/dy5kb29ybnJvb3NqZS5ubC9ldmVudC9sb2R5bmUv.html",
     "soldOut": true,
     "eventGenres": null,
@@ -3236,14 +3079,25 @@
     "door": "2024-09-12T21:00:00.000",
     "start": "2024-09-12T22:00:00.000",
     "venueEventUrl": "https://www.doornroosje.nl/event/antichrist-siegemachine/",
-    "title": "Antichrist Siege Machine+ Ascended Dead",
+    "title": "Antichrist Siege Machine",
     "location": "doornroosje",
     "price": null,
-    "shortText": "Merleyn Genadeloos harde black en death metal uit de USAmetal, black metal, death metal",
+    "shortText": "+ Ascended Deadmetal, black metal, death metal",
     "longText": "../public/texts/doornroosje/ZXZlbnQvYW50aWNocmlzdC1zaWVnZW1hY2hpbmUv.html",
     "soldOut": true,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "antichrist siege machine": {
+        "s": "0g132bsggkLIMT0pW9aa7s",
+        "l": "antichrist%20siege%20machine",
+        "g": [
+          "black death",
+          "virginia metal",
+          "war metal",
+          "Black/Death Metal"
+        ]
+      }
+    }
   },
   {
     "door": "2024-09-12T19:30:00+02:00",
@@ -3464,7 +3318,7 @@
     "title": "Lip Critic",
     "location": "doornroosje",
     "price": null,
-    "shortText": "Merleyn Dance, punk, digitale hardcore, hiphop en noise, vermorzeld en vermalen en gecombineerd met improvisatiepunk, hip hop, electronic, dance, hardcore",
+    "shortText": "punk, hip hop, electronic, dance, hardcore",
     "longText": "../public/texts/doornroosje/b3Jucm9vc2plLm5sL2V2ZW50L2xpcC1jcml0aWMv.html",
     "soldOut": true,
     "eventGenres": null,
@@ -3839,7 +3693,7 @@
     "title": "Cannibal Corpse",
     "location": "doornroosje",
     "price": null,
-    "shortText": " Municipal Waste  +  Immolation  +  Schizophrenia UitverkochtAmerikaanse death metal legendesmetal, death metal, thrash metal",
+    "shortText": "+ Municipal Waste + Immolation + Schizophreniametal, death metal, thrash metal",
     "longText": "../public/texts/doornroosje/b3NqZS5ubC9ldmVudC9jYW5uaWJhbC1jb3Jwc2Uv.html",
     "soldOut": true,
     "eventGenres": null,
@@ -4964,7 +4818,7 @@
     "title": "Fat Dog",
     "location": "doornroosje",
     "price": null,
-    "shortText": "Manische mix van krautrock, punk en rock 'n rollrock, punk, garage",
+    "shortText": "rock, punk, garage",
     "longText": "../public/texts/doornroosje/LmRvb3Jucm9vc2plLm5sL2V2ZW50L2ZhdC1kb2cv.html",
     "soldOut": true,
     "eventGenres": null,
@@ -5842,6 +5696,19 @@
     }
   },
   {
+    "door": "2024-10-29T20:00:00.000",
+    "start": "2024-10-29T21:00:00.000",
+    "venueEventUrl": "https://www.doornroosje.nl/event/country-westerns/",
+    "title": "Country Westerns",
+    "location": "doornroosje",
+    "price": null,
+    "shortText": "rock, rock & roll, punk, roots",
+    "longText": "../public/texts/doornroosje/c2plLm5sL2V2ZW50L2NvdW50cnktd2VzdGVybnMv.html",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
     "door": "2024-10-30T19:00:00",
     "start": "2024-10-30T20:00:00",
     "venueEventUrl": "https://patronaat.nl/event/unprocessed-support-30-10-24/",
@@ -6218,7 +6085,7 @@
     "title": "Bad Nerves",
     "location": "doornroosje",
     "price": null,
-    "shortText": "Messcherpe garage rock & rollrock, punk, garage",
+    "shortText": "rock, punk, garage",
     "longText": "../public/texts/doornroosje/b3Jucm9vc2plLm5sL2V2ZW50L2JhZC1uZXJ2ZXMv.html",
     "soldOut": true,
     "eventGenres": null,
@@ -6376,7 +6243,7 @@
     "title": "Celeste",
     "location": "doornroosje",
     "price": null,
-    "shortText": "Verschroeiende Franse metal hybridemetal, post metal, sludge metal, doornroosjepas",
+    "shortText": "metal, post metal, sludge metal, doornroosjepas",
     "longText": "../public/texts/doornroosje/LmRvb3Jucm9vc2plLm5sL2V2ZW50L2NlbGVzdGUv.html",
     "soldOut": true,
     "eventGenres": null,
@@ -6597,10 +6464,10 @@
     "door": "2024-11-14T18:30:00.000",
     "start": "2024-11-14T19:00:00.000",
     "venueEventUrl": "https://www.doornroosje.nl/event/solstafir-2/",
-    "title": "Sólstafir + Oranssi Pazuzu+ Hamferð",
+    "title": "Sólstafir + Oranssi Pazuzu",
     "location": "doornroosje",
     "price": null,
-    "shortText": "Spannende, creatieve Scandinavische rock en metal op zijn bestrock, post rock, metal, post metal",
+    "shortText": "+ Hamferðrock, post rock, metal, post metal",
     "longText": "../public/texts/doornroosje/cm5yb29zamUubmwvZXZlbnQvc29sc3RhZmlyLTIv.html",
     "soldOut": true,
     "eventGenres": null,
@@ -7445,13 +7312,13 @@
     }
   },
   {
-    "door": "2024-11-30T18:00:00.000",
-    "start": "2024-11-30T18:45:00.000",
+    "door": "2024-11-30T18:30:00.000",
+    "start": "2024-11-30T19:00:00.000",
     "venueEventUrl": "https://www.doornroosje.nl/event/fit-for-an-autopsy/",
     "title": "Fit For An Autopsy",
     "location": "doornroosje",
     "price": null,
-    "shortText": " Sylosis  +  Darkest Hour  +  Heriot Ultieme progressieve metal- en deathcoremetal, metalcore, deathcore",
+    "shortText": "+ Sylosis + Darkest Hour + Heriotmetal, metalcore, deathcore",
     "longText": "../public/texts/doornroosje/ZS5ubC9ldmVudC9maXQtZm9yLWFuLWF1dG9wc3kv.html",
     "soldOut": true,
     "eventGenres": null,
@@ -7733,7 +7600,7 @@
     "title": "Lizzard",
     "location": "doornroosje",
     "price": null,
-    "shortText": "Merleyn Progressieve rock/metal uit Frankrijkrock, metal, progressive metal",
+    "shortText": "rock, metal, progressive metal",
     "longText": "../public/texts/doornroosje/LmRvb3Jucm9vc2plLm5sL2V2ZW50L2xpenphcmQv.html",
     "soldOut": true,
     "eventGenres": null,
@@ -8001,7 +7868,7 @@
     "title": "Hang Youth",
     "location": "doornroosje",
     "price": null,
-    "shortText": "Ergens tussen kunstproject en een bloedserieuze punkbandrock, punk",
+    "shortText": "rock, punk",
     "longText": "../public/texts/doornroosje/bnJvb3NqZS5ubC9ldmVudC9oYW5nLXlvdXRoLTUv.html",
     "soldOut": true,
     "eventGenres": null,
@@ -8137,7 +8004,7 @@
     "title": "Dool",
     "location": "doornroosje",
     "price": null,
-    "shortText": "Fenomenale dark rockrock, metal",
+    "shortText": "rock, metal",
     "longText": "../public/texts/doornroosje/dy5kb29ybnJvb3NqZS5ubC9ldmVudC9kb29sLTIv.html",
     "soldOut": true,
     "eventGenres": null,
@@ -8613,7 +8480,7 @@
     "title": "Delain",
     "location": "doornroosje",
     "price": null,
-    "shortText": "Symfonische metal van de bovenste plankmetal, symfonische metal",
+    "shortText": "metal, symfonische metal",
     "longText": "../public/texts/doornroosje/ZG9vcm5yb29zamUubmwvZXZlbnQvZGVsYWluLTIv.html",
     "soldOut": true,
     "eventGenres": null,
@@ -8854,7 +8721,7 @@
     "title": "Dubioza Kolektiv",
     "location": "doornroosje",
     "price": null,
-    "shortText": "Een smeltkroes van hiphop, reggae, ska, rock, elektronica en Bosnische folklorerock, punk, hip hop, ska, electronic, dub, balkan",
+    "shortText": "rock, punk, hip hop, ska, electronic, dub, balkan",
     "longText": "../public/texts/doornroosje/ZS5ubC9ldmVudC9kdWJpb3phLWtvbGVrdGl2LTMv.html",
     "soldOut": true,
     "eventGenres": null,

@@ -20,9 +20,17 @@ const eventMetaTerms = [
   'en veel meer!',
   'en veel meer',
   'fanparty',
+  ' meer', // TODO dit wordt een probleem voor de band "MEERtalige henkies"
 ];
 
+/**
+ * TODO om event types uit te kunnen sluiten moet nu forbidden terms gebruikt worden
+ * moet eigen json met refusedEventTypes worden. 
+ */
+// const tempListOfForbiddenEventTypes = ['valkhof festival']; // TODO is hack https://github.com/sjerpbouwtsites/rockers-concertagenda/issues/265
+
 const forbiddenTerms = [
+//  ...tempListOfForbiddenEventTypes,
   'afrobeats',
   'alternatieve rock',
   'americana',
@@ -187,6 +195,9 @@ const goodCategories = [
   'symphonic metal',
   'thrash',
   "heavy rock 'n roll",
+  "black/thrash metal",
+  "groove metal/metalcore",
+  "djent",
 ];
 
 export default {
