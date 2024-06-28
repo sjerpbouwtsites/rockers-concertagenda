@@ -912,11 +912,13 @@ export default class Artists {
             eventDate,
             this.today,
           ];
-          this.refusedTemp[ga.slug] = [
-            1,
-            eventDate,
-            this.today,
-          ];
+          if (ga.title !== ga.slug) {
+            this.refusedTemp[ga.slug] = [
+              1,
+              eventDate,
+              this.today,
+            ];
+          }
           return false;
         } 
         this.unclearArtistsTemp[ga.title] = [
@@ -927,14 +929,16 @@ export default class Artists {
           eventDate,
           this.today,
         ];
-        this.unclearArtistsTemp[ga.slug] = [
-          1,
-          ga.resultaten?.spotRes?.id,
-          encodeURI(ga.title),
-          ga.genres,
-          eventDate,
-          this.today,
-        ];
+        if (ga.title !== ga.slug) {
+          this.unclearArtistsTemp[ga.slug] = [
+            1,
+            ga.resultaten?.spotRes?.id,
+            encodeURI(ga.title),
+            ga.genres,
+            eventDate,
+            this.today,
+          ];
+        }
         return false;
       })
       .forEach((ga) => {
@@ -952,7 +956,7 @@ export default class Artists {
         gevondenArtiesten[ga.title] = titleVariant;
 
         this.allowedArtistsTemp[ga.title] = titleVariant;
-        if (title !== slug) {
+        if (ga.title !== ga.slug) {
           this.allowedArtistsTemp[ga.slug] = slugVariant;        
         }
       });
@@ -1215,21 +1219,47 @@ export default class Artists {
     });
   }
 
-  fromArrayToFourColumnRows(a, i) {
-    if (i % 4 === 0 && i > 0) {
-      return `${a}\n`;
+  fromArrayToTreeColumnRows(a, i) {
+    const b = a.length > 15 
+      ? `${a.substring(0, 9)}..${a.substring(a.length - 2, a.length)}`
+      : a;
+    if (i % 3 === 0 && i > 0) {
+      return `${b}\n`;
     }
-    return a;
+    return b;
   }
 
   persistNewRefusedAndRockArtists() {
     console.log(`artiesten worden opgeslagen`);
-    
+    const artistKeys = Object
+      .entries(this.allowedArtistsTemp)
+      .map(([key, value]) => {
+        if (value[0] === 1) return key;
+        return false;
+      }).filter((a) => a);
+    const eventsKeys = Object
+      .entries(this.allowedEventTemp)
+      .map(([key, value]) => {
+        if (value[0] === 1) return key;
+        return false;
+      }).filter((a) => a);
+    const refusedKeys = Object
+      .entries(this.refusedTemp)
+      .map(([key, value]) => {
+        if (value[0] === 1) return key;
+        return false;
+      }).filter((a) => a);
+    const unclearArtistsKeys = Object
+      .entries(this.unclearArtistsTemp)
+      .map(([key, value]) => {
+        if (value[0] === 1) return key;
+        return false;
+      }).filter((a) => a);
     this.consoleGroup(`artists, events, refused pNRARA1`, {
-      artists: `${Object.keys(this.allowedArtistsTemp).map(this.fromArrayToFourColumnRows).join(' ')}\r`,
-      events: `${Object.keys(this.allowedEventTemp).map(this.fromArrayToFourColumnRows).join(' ')}\r`,
-      refused: `${Object.keys(this.refusedTemp).map(this.fromArrayToFourColumnRows).join(' ')}\r`,
-      unclearArtists: `${Object.keys(this.unclearArtistsTemp).map(this.fromArrayToFourColumnRows).join(' ')}\r`,
+      artists: `${artistKeys.map(this.fromArrayToTreeColumnRows).join(' ')}\n`,
+      events: `${eventsKeys.map(this.fromArrayToTreeColumnRows).join(' ')}\n`,
+      refused: `${refusedKeys.map(this.fromArrayToTreeColumnRows).join(' ')}\n`,
+      unclearArtists: `${unclearArtistsKeys.map(this.fromArrayToTreeColumnRows).join(' ')}\n`,
     }, 'persistNewRefusedAndRockArtists');
     
     this.consoleGroup('new artists data pNRARA2', this.allowedArtistsTemp, 'persistNewRefusedAndRockArtists');
