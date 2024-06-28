@@ -2,6 +2,7 @@
 import fs from 'fs';
 import terms from '../store/terms.js';
 import { slugify } from "../../scrapers/gedeeld/slug.js";
+import shell from '../../mods/shell.js';
 
 // console.log(util.inspect(na, 
 //   { showHidden: false, depth: null, colors: true })); 
@@ -98,7 +99,7 @@ export default class Artists {
   /**
    * of in die persistentie functie fs write file
    */
-  nietSchrijven = false;
+  storeWritePermission = false || shell.artistDBWrite;
 
   constructor(conf) {
     this.modelPath = conf.modelPath;
@@ -894,7 +895,7 @@ export default class Artists {
     gevondenArtiesten
       .map((ga) => {
         const spotifyGenres = ga?.resultaten?.spotRes?.genres ?? [];
-        const metalGenres = (ga?.resultaten?.metalEnc?.[1] ?? '').split(';').map((a) => a.trim());
+        const metalGenres = (ga?.resultaten?.metalEnc?.[1] ?? []);
         // eslint-disable-next-line no-param-reassign
         ga.genres = [...spotifyGenres, ...metalGenres, ...eventGenres].filter((a) => a);
         return ga;      
@@ -1233,13 +1234,15 @@ export default class Artists {
     
     this.consoleGroup('new artists data pNRARA2', this.allowedArtistsTemp, 'persistNewRefusedAndRockArtists');
     
-    if (this.nietSchrijven && this.funcsToDebug.persistNewRefusedAndRockArtists) {
-      console.log('\x1b[33m%s\x1b[0m', '//////////////////');
-      console.log('----------------------');
-      console.log('\x1b[36m%s\x1b[0m', 'LET OP');
-      console.log('\x1b[36m%s\x1b[0m', 'de artiesten DB schrijft nog niet');
-      console.log('---------------------------');
-      console.log('\x1b[33m%s\x1b[0m', '//////////////////');
+    if (!this.storeWritePermission) {
+      if (this.funcsToDebug.persistNewRefusedAndRockArtists) {
+        console.log('\x1b[33m%s\x1b[0m', '//////////////////');
+        console.log('----------------------');
+        console.log('\x1b[36m%s\x1b[0m', 'LET OP');
+        console.log('\x1b[36m%s\x1b[0m', 'de artiesten DB schrijft nog niet');
+        console.log('---------------------------');
+        console.log('\x1b[33m%s\x1b[0m', '//////////////////');
+      }
       return;
     } 
     Object.entries(this.allowedArtistsTemp).forEach(([key, values]) => {

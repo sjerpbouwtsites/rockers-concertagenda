@@ -15258,12 +15258,13 @@
   ],
   "drone": [
     1,
-    "4g3ke7ybvpqmgxg2zhxzxb",
+    "4g3KE7YbVpqmgxg2zhxzXb",
     "drone",
     [
       "binaural",
       "sleep",
-      "groove metal/metalcore"
+      "groove metal",
+      "metalcore"
     ],
     "240813",
     "240627"
@@ -15273,7 +15274,8 @@
     "4dljephxbw7qihx4iwmnee",
     "fat%20dog",
     [
-      "crank wave", "punk"
+      "crank wave",
+      "punk"
     ],
     "241008",
     "240627"
@@ -15283,7 +15285,8 @@
     "4dljephxbw7qihx4iwmnee",
     "fat%20dog",
     [
-      "crank wave", "punk"
+      "crank wave",
+      "punk"
     ],
     "241008",
     "240627"
@@ -15573,7 +15576,9 @@
     "celeste",
     [
       "british soul",
-      "black", "sludge metal", "post-hardcore"
+      "black",
+      "sludge metal",
+      "post-hardcore"
     ],
     "241107",
     "240627"
@@ -15584,16 +15589,21 @@
     "lizzard",
     [
       "deep progressive rock",
-      "stoner", "doom", "sludge metal"
+      "stoner",
+      "doom",
+      "sludge metal"
     ],
     "241205",
     "240627"
-  ],   
+  ],
   "lodyne": [
     1,
     "7CfDAdNhPhMhDRz5gOCPxV",
     "lodyne",
-    ["emo", "punk"],
+    [
+      "emo",
+      "punk"
+    ],
     "240830",
     "240627"
   ],
@@ -15601,7 +15611,13 @@
     0,
     null,
     "born%20of%20osiris",
-    ["metalcore", "progressive metal", "djent", "deathcore", "progressive metalcore"],
+    [
+      "metalcore",
+      "progressive metal",
+      "djent",
+      "deathcore",
+      "progressive metalcore"
+    ],
     "240828",
     "240627"
   ],
@@ -15609,7 +15625,13 @@
     1,
     null,
     "born%20of%20osiris",
-    ["metalcore", "progressive metal", "djent", "deathcore", "progressive metalcore"],
+    [
+      "metalcore",
+      "progressive metal",
+      "djent",
+      "deathcore",
+      "progressive metalcore"
+    ],
     "240828",
     "240627"
   ],
