@@ -286,6 +286,17 @@ export default class Artists {
       return this.scanTextForAllowedArtists(message.data.title, message.data.slug);
     }
 
+    if (message.request === 'scanTextForRefusedArtists') {
+      if (this.typeCheckInputFromScrapers) {
+        const hasTitle = Object.prototype.hasOwnProperty.call(parsedMessage.data, 'title');
+        const hasSlug = Object.prototype.hasOwnProperty.call(parsedMessage.data, 'slug');
+        if (!hasTitle || !hasSlug) {
+          return this.error(Error('geen title of slug om te doorzoeken'));
+        } 
+      }
+      return this.scanTextForRefusedArtists(message.data.title, message.data.slug);
+    }
+
     if (message.request === 'scanEventForAllowedArtistsAsync') {
       if (this.typeCheckInputFromScrapers) {
         const hasTitle = Object.prototype.hasOwnProperty.call(parsedMessage.data, 'title');
@@ -817,27 +828,27 @@ export default class Artists {
 
   // #endregion
     
-  // #region SCAN FOR OK ARTISTS
   /**
-   * scant eventNameOfTitle en slug op match met allowed artists
+   * abstracte functie gedeeld door scanTextForAllowedArtists en zn broer
    * @param {*} eventNameOfTitle 
    * @param {*} slug 
-   * @returns array met key:artiest
+   * @param {*} artistList 
+   * @returns 
    */
-  scanTextForAllowedArtists(eventNameOfTitle, slug) {
+  scanTextForSomeArtistList(eventNameOfTitle, slug, artistList) {
     const toScan = eventNameOfTitle.replaceAll(/\(.*\)/g, ''); // (usa etc eruit);
-    const haystack = Object.keys(this.allowedArtists);
+    const haystack = Object.keys(artistList);
     
     this.consoleGroup(`\nscanTextForAllowedArtists 1`, {
       toScan,
       slug,
       
-    }, 'scanTextForAllowedArtists');
+    }, 'scanTextForSomeArtistList');
     
     const gevondenKeys = haystack
       .filter((hay) => toScan.includes(hay) || slug.includes(hay));
     
-    this.consoleGroup(`scanTextForAllowedArtists gevonden keys`, { gevondenKeys }, 'scanTextForAllowedArtists');
+    this.consoleGroup(`scanTextForSomeArtistList gevonden keys`, { gevondenKeys }, 'scanTextForSomeArtistList');
     
     if (!gevondenKeys || !gevondenKeys.length) {
       return {};
@@ -866,9 +877,9 @@ export default class Artists {
           [`${winKey}`]: winnaar,
         };
     
-        this.consoleGroup(`\nscanTextForAllowedArtists twee keys gevonden waarvan één slug. return:`, 
+        this.consoleGroup(`\nscanTextForSomeArtistList twee keys gevonden waarvan één slug. return:`, 
           { gevonden: r }, 
-          'scanTextForAllowedArtists');
+          'scanTextForSomeArtistList');
         
         return r;
       }
@@ -894,6 +905,28 @@ export default class Artists {
       'scanTextForAllowedArtists');
     
     return gefilterdeAllowedArtists;
+  }
+
+  // #region SCAN FOR OK ARTISTS
+  /**
+   * scant eventNameOfTitle en slug op match met allowed artists
+   * @param {*} eventNameOfTitle 
+   * @param {*} slug 
+   * @returns array met key:artiest
+   */
+  scanTextForAllowedArtists(eventNameOfTitle, slug) {
+    return this.scanTextForSomeArtistList(eventNameOfTitle, slug, this.allowedArtistsTemp);
+  }
+
+  // #region SCAN FOR OK ARTISTS
+  /**
+   * scant eventNameOfTitle en slug op match met allowed artists
+   * @param {*} eventNameOfTitle 
+   * @param {*} slug 
+   * @returns array met key:artiest
+   */
+  scanTextForRefusedArtists(eventNameOfTitle, slug) {
+    return this.scanTextForSomeArtistList(eventNameOfTitle, slug, this.refusedTemp);
   }
  
   async scanEventForAllowedArtistsAsync(eventNameOfTitle, slug, shortText, settings) {
@@ -921,8 +954,38 @@ export default class Artists {
       success: artistsFound > 0 ? true : null,
       data: workedArtists,
       reason: artistsFound > 0 
-        ? `🟩 ${artistsFound} artists found: ${Object.keys(artists).join(', ')} ac3` 
+        ? `🟩 ${artistsFound} allowed artists found: ${Object.keys(artists).join(', ')} ac3` 
         : `⬜ no artists found ac4`,
+    });
+  }
+
+  async scanEventForRefusedArtistsAsync(eventNameOfTitle, slug, shortText, settings) {
+    let toScan = eventNameOfTitle; 
+    if (settings.artistsIn.includes('shortText') && shortText) {
+      const s = (shortText ?? '').toLowerCase();
+      toScan = `${toScan}
+      ${s}`;
+    }    
+    const artists = this.scanTextForRefusedArtists(toScan, slug);
+    const workedArtists = {};
+
+    const artistsFound = Object.keys(artists).length;
+    if (artistsFound) {
+      Object.entries(artists).forEach(([key, values]) => {
+        workedArtists[key] = {
+          s: values[1],
+          l: values[2],
+          g: values[3],
+        };
+      });
+    }
+
+    return this.post({
+      success: artistsFound > 0 ? true : null,
+      data: workedArtists,
+      reason: artistsFound > 0 
+        ? `🟩 ${artistsFound} refused artists found: ${Object.keys(artists).join(', ')} aqwe3` 
+        : `⬜ no artists found aqwe4`,
     });
   }
   // #endregion 
