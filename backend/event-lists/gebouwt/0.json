@@ -27,7 +27,17 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "fear": {
+        "s": "0hpu1czs0jdstut8vrtbps",
+        "l": "fear",
+        "g": [
+          "hardcore punk",
+          "punk",
+          "death/thrash metal"
+        ]
+      }
+    }
   },
   {
     "door": "2024-06-29T21:30:00",
@@ -59,7 +69,7 @@
     "eventGenres": null,
     "artists": {
       "soulfly": {
-        "s": "6159IBm5gLPwG4BcJXseXc",
+        "s": "6159ibm5glpwg4bcjxsexc",
         "l": "soulfly",
         "g": [
           "alternative metal",
@@ -87,7 +97,7 @@
     "eventGenres": null,
     "artists": {
       "anneke van giersbergen": {
-        "s": "6TZqJnkAytY8HFQBEdDF8v",
+        "s": "6tzqjnkayty8hfqbeddf8v",
         "l": "anneke%20van%20giersbergen",
         "g": [
           "metal"
@@ -110,9 +120,20 @@
     "eventGenres": null,
     "artists": {
       "ontaard": {
-        "s": "2Ek8RuzywWzQEKjBnUcC8c",
+        "s": "2ek8ruzywwzqekjbnucc8c",
         "l": "ontaard",
         "g": []
+      },
+      "throwing bricks": {
+        "s": "05jSnBtEkxDJ7TIR4KVjSr",
+        "l": "throwing%20bricks",
+        "g": [
+          "dutch black metal",
+          "hardcore punk (early)",
+          " sludge",
+          "post-metal",
+          "hardcore (later)"
+        ]
       }
     }
   },
@@ -167,7 +188,7 @@
     "eventGenres": null,
     "artists": {
       "slope": {
-        "s": "35fxvnr5oanOFB1JNB2Ber",
+        "s": "35fxvnr5oanofb1jnb2ber",
         "l": "slope",
         "g": [
           "dutch rock"
@@ -190,13 +211,18 @@
     "eventGenres": null,
     "artists": {
       "the exploited": {
-        "s": "6NB4b8lltHCjOhW7vQZkAy",
+        "s": "6nb4b8llthcjohw7vqzkay",
         "l": "the%20exploited",
         "g": [
           "hardcore punk",
           "punk",
           "uk82"
         ]
+      },
+      "the ex": {
+        "s": null,
+        "l": "the%20ex",
+        "g": []
       }
     }
   }

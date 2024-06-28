@@ -3,6 +3,7 @@ import fs from 'fs';
 import terms from '../store/terms.js';
 import { slugify } from "../../scrapers/gedeeld/slug.js";
 import shell from '../../mods/shell.js';
+import { harvestArtists } from './harvest.js';
 
 // console.log(util.inspect(na, 
 //   { showHidden: false, depth: null, colors: true })); 
@@ -93,6 +94,7 @@ export default class Artists {
     scanTextForAllowedArtists: false,
     getSpotifyArtistSearch: false,
     persistNewRefusedAndRockArtists: true,
+    checkExplicitEventCategories: false,
   };
 
   // #endregion
@@ -112,6 +114,12 @@ export default class Artists {
     this.today = (new Date()).toISOString().replaceAll('-', '').substring(2, 8);
 
     this.getSpotifyAccessToken();
+    this.installDeps();
+  }
+
+  installDeps() {
+    this.harvestArtists = harvestArtists;
+    this.harvestArtists.bind(this);
   }
 
   // #region MESSAGING
@@ -549,51 +557,51 @@ export default class Artists {
   checkExplicitEventCategories(genres) {
     const joinedGenres = genres.join(', ');
 
-    let isGood;
-    isGood = this.terms.globalGoodCategories
+    let isGoodFound;
+    isGoodFound = this.terms.globalGoodCategories
       .find((goodCat) => joinedGenres.includes(goodCat));
 
-    if (!isGood) {
-      isGood = this.terms.goodCategories
+    if (!isGoodFound) {
+      isGoodFound = this.terms.goodCategories
         .find((goodCat) => joinedGenres.includes(goodCat));
     }
 
-    if (isGood) {
-      const r = `🟩 ${isGood} good in expl. cats. ab2`;
+    if (isGoodFound) {
+      const r = `🟩 ${isGoodFound} good in expl. cats. ab2`;
       return this.post({
         success: true,
-        data: isGood,
+        data: isGoodFound,
         reason: r,
         reasons:[r],
       });      
     }
     
-    let isBad;
+    let isBadFound;
 
-    isBad = this.terms.globalForbiddenGenres
+    isBadFound = this.terms.globalForbiddenGenres
       .find((badCat) => joinedGenres.includes(badCat));
 
-    if (!isBad) {
-      isBad = this.terms.forbidden
+    if (!isBadFound) {
+      isBadFound = this.terms.forbidden
         .find((badCat) => joinedGenres.includes(badCat));
     }
-    if (isBad) {
-      console.log('is SLECHT expliciet genres');
-      const r = `🟥 ${isBad} bad in expl. cats. ab3`;
+    if (isBadFound) {
+      this.consoleGroup('SLECHT expliciet genres', { genres, isGoodFound, isBadFound }, `checkExplicitEventCategories`);
+
       return this.post({
         success: false,
-        data: isBad,
-        reason: r,
-        reasons: [r],
+        data: isBadFound,
+        reason: `🟥 ${isBadFound} bad in expl. cats. ab3`,
+        reasons: [`🟥 ${isBadFound} bad in expl. cats. ab3`],
       });      
     }
-    console.log('niet gevonden expliciete genres');
-    const r = `⬜ No matches. ab4`;
+    this.consoleGroup('niet gevonden expliciete genres', { genres, isGoodFound, isBadFound }, `checkExplicitEventCategories`);
+
     return this.post({
       success: null,
       data: null,
-      reason: r,
-      reasons:[r],
+      reason: `⬜ No matches. ab4`,
+      reasons:[`⬜ No matches. ab4`],
     });
   }    
   // #endregion
@@ -803,173 +811,6 @@ export default class Artists {
   }
 
   // #endregion
-
-  // #region HARVEST ARTISTS
-  async harvestArtists(title, slug, shortText, settings, eventDate, eventGenres = []) {
-    const reg = new RegExp(settings.dividerRex, 'i');
-    
-    let toScan = [title]; 
-    if (settings.artistsIn.includes('shortText') && shortText) {
-      const s = (shortText ?? '').toLowerCase().trim();
-      toScan.push(s);
-    }
-
-    toScan = toScan.map((scan) => scan.replaceAll(/\(.*\)/g, '').trim());
-
-    const reedsGevonden = toScan.map((scan) => this.scanTextForAllowedArtists(scan, '')).filter((a) => Object.keys(a).length);
-
-    // TODO HACK
-    let reedsGevondenHACK = {};
-    Object.values(reedsGevonden).forEach((r) => {
-      reedsGevondenHACK = Object.assign(reedsGevondenHACK, r);
-    });
-
-    this.consoleGroup(`reeds gevonden object ha12`, reedsGevonden, `harvestArtists`);
-
-    const reedsGevondenNamen = reedsGevonden.map((g) => Object.keys(g)).flat(); 
-    
-    this.consoleGroup(`harvestArtist hA1`, {
-      toScan, reedsGevondenNamen, title,
-    }, 'harvestArtists');
-
-    const verderScannen = toScan.map((scan) => {
-      let _scan = scan;
-      reedsGevondenNamen.forEach((rg) => {
-        _scan = _scan.replace(rg, '').trim();
-      });
-      return _scan;  
-    })
-      .filter((a) => a);
-
-    if (!verderScannen.length) {
-      this.consoleGroup(`niet verder scannen hA2`, {
-        info: `verderScannen.length is 0`,
-        eerdereToScan: toScan,
-        title,
-      }, 'harvestArtists');      
-      return this.post({
-        success: true,
-        data: reedsGevondenHACK,
-        reason: `niets gevonden dat er niet reeds was qq1`,
-      });      
-    }
-    
-    const potentieeleOverigeTitels = verderScannen
-      .map((scan) => {
-        if (Array.isArray(scan.match(reg))) {
-          return scan
-            .split(reg)
-            .map((a) => a.trim())
-            .filter((b) => b);
-        }
-        return scan;
-      }).flat()
-      .map((potTitel) => {
-        let t = potTitel;
-        terms.eventMetaTerms.forEach((emt) => {
-          t = t.replace(emt, '').replaceAll(/\s{2,500}/g, ' ').trim();
-        });
-        return t;
-      })
-      .filter((potTitel) => potTitel.length > 3)
-      .map(slugify);
-      
-    if (!potentieeleOverigeTitels.length) {
-      this.consoleGroup(`NIET verder scannen hA4`, { 'pot. titels': potentieeleOverigeTitels, verderScannen, title }, 'harvestArtists');
-      return this.post({
-        success: true,
-        data: reedsGevondenHACK,
-        reason: `niets gevonden dat er niet reeds was qq2`,
-      });      
-    }
-    this.consoleGroup(`verder scannen hA3`, { 'pot. titels': potentieeleOverigeTitels, title }, 'harvestArtists');
-
-    const genreAPIResp = await this.recursiveAPICallForGenre(potentieeleOverigeTitels);
-    
-    const naarConsole = { title };
-    genreAPIResp.forEach((ga) => {
-      naarConsole[ga.title] = ga.resultaten;
-    });
-    this.consoleGroup(`gevonden artiesten hA5`, naarConsole, `harvestArtists`);
-    
-    const gevondenArtiesten = {};
-    genreAPIResp
-      .map((ga) => {
-        const spotifyGenres = ga?.resultaten?.spotRes?.genres ?? [];
-        const metalGenres = (ga?.resultaten?.metalEnc?.[1] ?? []);
-        // eslint-disable-next-line no-param-reassign
-        ga.genres = [...spotifyGenres, ...metalGenres, ...eventGenres].filter((a) => a);
-        return ga;      
-      })
-      .filter((ga) => {
-        const explGenreCheckRes = JSON.parse(this.checkExplicitEventCategories(ga.genres));
-        this.consoleGroup(`check of genres 'goed' van artiest hA891`, { artiest: ga.title, res: explGenreCheckRes, genres: ga.genres }, 'harvestArtists');
-        if (explGenreCheckRes.success) {
-          return true;
-        } if (explGenreCheckRes.success === false) {
-          this.refusedTemp[ga.title] = [
-            0,
-            eventDate,
-            this.today,
-          ];
-          if (ga.title !== ga.slug) {
-            this.refusedTemp[ga.slug] = [
-              1,
-              eventDate,
-              this.today,
-            ];
-          }
-          return false;
-        } 
-        this.unclearArtistsTemp[ga.title] = [
-          0,
-          ga.resultaten?.spotRes?.id,
-          encodeURI(ga.title),
-          ga.genres,
-          eventDate,
-          this.today,
-        ];
-        if (ga.title !== ga.slug) {
-          this.unclearArtistsTemp[ga.slug] = [
-            1,
-            ga.resultaten?.spotRes?.id,
-            encodeURI(ga.title),
-            ga.genres,
-            eventDate,
-            this.today,
-          ];
-        }
-        return false;
-      })
-      .forEach((ga) => {
-        const titleVariant = [
-          0,
-          ga.resultaten?.spotRes?.id,
-          encodeURI(ga.title),
-          ga.genres,
-          eventDate,
-          this.today,
-        ];
-        const slugVariant = [...titleVariant];
-        slugVariant[0] = 0;
-
-        gevondenArtiesten[ga.title] = titleVariant;
-
-        this.allowedArtistsTemp[ga.title] = titleVariant;
-        if (ga.title !== ga.slug) {
-          this.allowedArtistsTemp[ga.slug] = slugVariant;        
-        }
-      });
-
-    const artiestenInEvent = { ...reedsGevondenHACK, ...gevondenArtiesten };
-
-    return this.post({
-      success: true,
-      data: artiestenInEvent,
-      reason: `succesvolle harvest hA6`,
-    });
-  }
-  // #endregion HARVEST ARTISTS
     
   // #region SCAN FOR OK ARTISTS
   /**
@@ -1223,7 +1064,7 @@ export default class Artists {
     let b = a.length > 20 
       ? `${a.substring(0, 14)}..${a.substring(a.length - 4, a.length)}`
       : a;
-    b = b.padEnd(30, ' ');
+    b = b.padEnd(24, ' ');
     if (i % 3 === 0 && i > 0) {
       return `${b}\n`;
     }

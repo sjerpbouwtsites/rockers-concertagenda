@@ -17,7 +17,8 @@ import {
   asyncIsAllowedEvent, asyncIsRefused, asyncForbiddenTerms, 
   asyncSaveAllowedEvent, asyncSaveRefused, asyncHarvestArtists, asyncScanEventForAllowedArtists, 
   asyncSpotifyConfirmation, asyncGoodTerms, asyncExplicitEventCategories,
-  asyncMetalEncyclopediaConfirmation, asyncIfNotAllowedRefuse, asyncHasAllowedArtist, asyncSuccess, asyncFailure,
+  asyncMetalEncyclopediaConfirmation, asyncIfNotAllowedRefuse, asyncHasAllowedArtist, 
+  asyncSuccess, asyncFailure,
 } from './artist-db-interface.js';
 import DbInterFaceToScraper from './db-interface-to-scraper.js';
 
