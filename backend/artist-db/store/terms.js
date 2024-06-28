@@ -9,6 +9,8 @@ const unavailabilityTerms = [
 
 const tempFestivalNamesHACKDontHarvest = [
   "soulcrusher",
+  "dynamo nachtmis",
+  "home grown sessions",
 ];
 
 const eventMetaTerms = [
@@ -17,12 +19,18 @@ const eventMetaTerms = [
   `support`,
   "album release party",
   "album releas",
+  "special guest:",
+  "special guest",
   "european tour",
   "world tour",
   "2024",
   "2025",
+  "mmxxiv",
+  "w/",
+  "mmxxv",
   "en veel meer!",
   "en veel meer",
+  "and more",
   "fanparty",
   " meer", // TODO dit wordt een probleem voor de band "MEERtalige henkies"
   ...tempFestivalNamesHACKDontHarvest,
@@ -99,6 +107,7 @@ const forbiddenTerms = [
   "pov: indie",
   "quiz'm",
   "fanparty",
+  "home grown sessions",
 ];
 
 const globalForbiddenGenres = [

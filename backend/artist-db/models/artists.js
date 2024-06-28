@@ -884,15 +884,16 @@ export default class Artists {
     }
     this.consoleGroup(`verder scannen hA3`, { 'pot. titels': potentieeleOverigeTitels, title }, 'harvestArtists');
 
-    const gevondenArtiesten = await this.recursiveAPICallForGenre(potentieeleOverigeTitels);
+    const genreAPIResp = await this.recursiveAPICallForGenre(potentieeleOverigeTitels);
     
     const naarConsole = { title };
-    gevondenArtiesten.forEach((ga) => {
+    genreAPIResp.forEach((ga) => {
       naarConsole[ga.title] = ga.resultaten;
     });
     this.consoleGroup(`gevonden artiesten hA5`, naarConsole, `harvestArtists`);
-
-    gevondenArtiesten
+    
+    const gevondenArtiesten = {};
+    genreAPIResp
       .map((ga) => {
         const spotifyGenres = ga?.resultaten?.spotRes?.genres ?? [];
         const metalGenres = (ga?.resultaten?.metalEnc?.[1] ?? []);
@@ -937,7 +938,7 @@ export default class Artists {
         return false;
       })
       .forEach((ga) => {
-        this.allowedArtistsTemp[ga.title] = [
+        const titleVariant = [
           0,
           ga.resultaten?.spotRes?.id,
           encodeURI(ga.title),
@@ -945,15 +946,14 @@ export default class Artists {
           eventDate,
           this.today,
         ];
+        const slugVariant = [...titleVariant];
+        slugVariant[0] = 0;
+
+        gevondenArtiesten[ga.title] = titleVariant;
+
+        this.allowedArtistsTemp[ga.title] = titleVariant;
         if (title !== slug) {
-          this.allowedArtistsTemp[ga.slug] = [
-            1,
-            ga.resultaten?.spotRes?.id,
-            encodeURI(ga.title),
-            ga.genres,
-            eventDate,
-            this.today,
-          ];        
+          this.allowedArtistsTemp[ga.slug] = slugVariant;        
         }
       });
 

@@ -195,37 +195,39 @@ export async function asyncSpotifyConfirmation(event, olderReasons) {
 }
 
 export async function asyncMetalEncyclopediaConfirmation(event, reasons) {
-  const reasonsCopy = Array.isArray(reasons) ? reasons : [];
-  
-  this.talkToDB({
-    type: 'db-request', 
-    subtype: 'getMetalEncyclopediaConfirmation',
-    messageData: {
-      title: event.workTitle,
-    },
-  });
-  await this.checkDBhasAnswered();
-  if (this.lastDBAnswer.success === 'error') {
-    this.handleError(this.lastDBAnswer?.data?.error, this.lastDBAnswer.reason, 'close-thread');
-    return errorAnswerObject(event, reasons, this.lastDBAnswer);
-  }
-  reasonsCopy.push(this.lastDBAnswer.reason);
+  throw Error('asyncMetalEncyclopediaConfirmation is NIET GEUPDATE');
 
-  if (this.lastDBAnswer.success) {
-    this.skipFurtherChecks.push(event.workTitle);
-    this.talkToDB({
-      type: 'db-request',
-      subtype: 'saveAllowedTemp',
-      messageData: {
-        title: event.workTitle,
-        slug: event.slug,
-        eventDate: event.shortDate,
-      },
-    }); 
-    reasonsCopy.push(`🟧 saved in allowed event temp sb1`);
-    return failureAnswerObject(event, reasonsCopy, true);
-  }
-  return successAnswerObject(event, reasonsCopy);
+  // const reasonsCopy = Array.isArray(reasons) ? reasons : [];
+  
+  // this.talkToDB({
+  //   type: 'db-request', 
+  //   subtype: 'getMetalEncyclopediaConfirmation',
+  //   messageData: {
+  //     title: event.workTitle,
+  //   },
+  // });
+  // await this.checkDBhasAnswered();
+  // if (this.lastDBAnswer.success === 'error') {
+  //   this.handleError(this.lastDBAnswer?.data?.error, this.lastDBAnswer.reason, 'close-thread');
+  //   return errorAnswerObject(event, reasons, this.lastDBAnswer);
+  // }
+  // reasonsCopy.push(this.lastDBAnswer.reason);
+
+  // if (this.lastDBAnswer.success) {
+  //   this.skipFurtherChecks.push(event.workTitle);
+  //   this.talkToDB({
+  //     type: 'db-request',
+  //     subtype: 'saveAllowedTemp',
+  //     messageData: {
+  //       title: event.workTitle,
+  //       slug: event.slug,
+  //       eventDate: event.shortDate,
+  //     },
+  //   }); 
+  //   reasonsCopy.push(`🟧 saved in allowed event temp sb1`);
+  //   return failureAnswerObject(event, reasonsCopy, true);
+  // }
+  // return successAnswerObject(event, reasonsCopy);
 }
 
 export async function asyncSaveRefused(event) {
@@ -305,34 +307,6 @@ export async function asyncHasAllowedArtist(event, olderReasons) {
 }
 
 export default null;
-    
-//   async asyncCheckIsRock(event, reasons) {
-//     const reasonsCopy = Array.isArray(reasons) ? reasons : [];
-//     const isRockRes = await this.isRock(event);
-//     reasonsCopy.push(isRockRes.reason);
-//     if (isRockRes.success) {
-//       this.talkToDB({
-//         type: 'db-request',
-//         subtype: 'saveAllowedTitle',
-//         messageData: {
-//           string: event.title,
-//           reason: reasonsCopy.reverse().join(', '),
-//         },
-//       });    
-//       return {
-//         event,
-//         break: true,
-//         reason: reasonsCopy.reverse().join(','),
-//         success: true,
-//       };
-//     } 
-//     return {
-//       break: false,
-//       success: null,
-//       event,
-//       reasons: reasonsCopy,
-//     };    
-//   },
 
 //   async wikipedia(event, title) {
 //     const workingTitle = title || this.cleanupEventTitle(event.title);
@@ -413,44 +387,5 @@ export default null;
 //       event,
 //       success: false,
 //       reason: 'wiki catch return',
-//     };
-//   }
-
-//   /**
-//    * methode waarmee mainPageAsyncCheck vervangen kan worden.
-//    * kijkt naar 'voornaamste titel', dwz de event.title tot aan een '&'.
-//    *
-//    * @param {*} event
-//    * @memberof AbstractScraper
-//    */
-//   async isRock(event, overloadTitles = null, recursiveTitle = null) {
-//     const workingTitle = recursiveTitle || this.cleanupEventTitle(event.title);
-
-//     const metalEncyclopediaRes = await this.metalEncyclopedia(event, workingTitle);
-//     if (metalEncyclopediaRes.success) {
-//       return metalEncyclopediaRes;
-//     }
-
-//     const wikipediaRes = await this.wikipedia(event, workingTitle);
-//     if (wikipediaRes.success) {
-//       return wikipediaRes;
-//     }
-
-//     if (Array.isArray(overloadTitles)) {
-//       const overloadTitlesCopy = [...overloadTitles];
-//       const thisOverloadTitle = overloadTitlesCopy.shift();
-//       const extraRes = await this.isRock(event, null, thisOverloadTitle);
-//       if (extraRes.success) {
-//         return extraRes;
-//       }
-//       if (overloadTitles.length) {
-//         return this.isRock(event, overloadTitlesCopy);
-//       }
-//     }
-
-//     return {
-//       event,
-//       success: false,
-//       reason: `<a class='single-event-check-reason wikipedia wikipedia--failure metal-encyclopedie metal-encyclopedie--failure' href='${wikipediaRes.url}'>wikipedia</a> + <a href='${metalEncyclopediaRes.url}'>metal encyclopedia</a> 👎`,
 //     };
 //   }

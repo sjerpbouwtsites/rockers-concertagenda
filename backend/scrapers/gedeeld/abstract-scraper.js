@@ -639,7 +639,7 @@ export default class AbstractScraper extends ScraperConfig {
 
     if ((!mergedEvent?.artists || typeof mergedEvent?.artists !== 'object' || mergedEvent.artists === null)) mergedEvent.artists = {};
     const harvestedArtists = await this.asyncHarvestArtists(mergedEvent);
-    this.dirtyLog({ title:  `harvested artists res`, harvestedArtists });
+    this.dirtyLog({ title:  `harvested artists res voor ${mergedEvent.title}`, harvestedArtists });
     if (harvestedArtists && harvestedArtists.success) {
       const harvestedArtistsNames = Object.keys(harvestedArtists.data);
       const currentEventArtistNames = Object.keys(mergedEvent?.artists ?? {});

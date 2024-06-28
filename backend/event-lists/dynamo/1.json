@@ -12,7 +12,22 @@
     "image": "../public/event-images/dynamo/ZW50L3JhZ2VzLW9mLXNpbi12ZWxvenphLTIwMjQv",
     "soldOut": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "rages of sin": {
+        "s": "4TDzSBuxjNhf6Yykg2cQJ1",
+        "l": "rages%20of%20sin",
+        "g": [
+          "melodic death metal"
+        ]
+      },
+      "velozza": {
+        "s": "1jnRNkkxVD5IHcPbOa3u0W",
+        "l": "velozza",
+        "g": [
+          "thrash metal"
+        ]
+      }
+    }
   },
   {
     "door": "2024-09-20T18:30:00",
@@ -27,7 +42,43 @@
     "image": "../public/event-images/dynamo/ZW5zZXMtZmFpbC1zYXZlcy10aGUtZGF5LTIwMjQv",
     "soldOut": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "senses fail": {
+        "s": "591yCCsZCLXvaJ0Rg38vLZ",
+        "l": "senses%20fail",
+        "g": [
+          "emo",
+          "metalcore",
+          "neon pop punk",
+          "pop punk",
+          "post-hardcore",
+          "screamo"
+        ]
+      },
+      "saves the day": {
+        "s": "5gWhlJBlLQGLOgYWO8lwCU",
+        "l": "saves%20the%20day",
+        "g": [
+          "emo",
+          "new jersey hardcore",
+          "pop punk",
+          "post-hardcore"
+        ]
+      },
+      "youth fountain": {
+        "s": "5e9SnnT1mabuWwjwu6FrZD",
+        "l": "youth%20fountain",
+        "g": [
+          "anthem emo",
+          "canadian pop punk",
+          "easycore",
+          "kelowna bc indie",
+          "pop punk",
+          "vancouver punk",
+          "\""
+        ]
+      }
+    }
   },
   {
     "door": "2024-11-22T20:00:00",
@@ -44,7 +95,7 @@
     "eventGenres": null,
     "artists": {
       "ronker": {
-        "s": "2dALGLJwjsKqfueVsXlXYM",
+        "s": "2dalgljwjskqfuevsxlxym",
         "l": "ronker",
         "g": []
       }
@@ -65,9 +116,26 @@
     "eventGenres": null,
     "artists": {
       "ter ziele": {
-        "s": "4ZaAeASRKr1RdqtcDlUi6G",
+        "s": "4zaaeasrkr1rdqtcdlui6g",
         "l": "ter%20ziele",
         "g": []
+      },
+      "oltas": {
+        "s": "1vXOgdgPzetuJTXlbHi6Qi",
+        "l": "oltas",
+        "g": [
+          "doom",
+          "death metal"
+        ]
+      },
+      "dodentocht": {
+        "s": "1viPziG5G19z4NCY8gus89",
+        "l": "dodentocht",
+        "g": [
+          "death",
+          "doom",
+          "sludge metal"
+        ]
       }
     }
   },
@@ -84,6 +152,18 @@
     "image": "../public/event-images/dynamo/Lm5sL2V2ZW5lbWVudC9keW5hbW8tbmFjaHRtaXMv",
     "soldOut": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "cirith gorgor": {
+        "s": "6Yjsn8lFNxxjFjY53CCQV9",
+        "l": "cirith%20gorgor",
+        "g": [
+          "dark black metal",
+          "dutch black metal",
+          "melodic black metal",
+          "tolkien metal",
+          "black metal"
+        ]
+      }
+    }
   }
 ]
