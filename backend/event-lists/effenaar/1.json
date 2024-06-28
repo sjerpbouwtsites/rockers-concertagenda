@@ -27,7 +27,7 @@
     "eventGenres": null,
     "artists": {
       "liturgy": {
-        "s": "5PIuMlRY9PSLUSFzs6lQu1",
+        "s": "5piumlry9pslusfzs6lqu1",
         "l": "liturgy",
         "g": [
           "experimental black metal",
@@ -88,7 +88,7 @@
     "eventGenres": null,
     "artists": {
       "frog leap": {
-        "s": "6mJmqM0UHax5NIdmDvFbF0",
+        "s": "6mjmqm0uhax5nidmdvfbf0",
         "l": "frog%20leap",
         "g": []
       }
@@ -106,7 +106,16 @@
     "image": "../public/event-images/effenaar/ZWZmZW5hYXIubmwvYWdlbmRhL3NwZWVkbW9iaWxl",
     "soldOut": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "speedmobile": {
+        "s": "15qfmszeuulckcpcwt5p05",
+        "l": "speedmobile",
+        "g": [
+          "punk ",
+          "rock "
+        ]
+      }
+    }
   },
   {
     "door": "2024-10-22T18:30:00",
@@ -134,7 +143,15 @@
     "image": "../public/event-images/effenaar/bmFhci5ubC9hZ2VuZGEvbmUtb2JsaXZpc2Nhcmlz",
     "soldOut": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "pro": {
+        "s": null,
+        "l": "pro-",
+        "g": [
+          "death metal/grindcore"
+        ]
+      }
+    }
   },
   {
     "door": "2024-11-06T19:30:00",
@@ -150,7 +167,7 @@
     "eventGenres": null,
     "artists": {
       "wolfheart": {
-        "s": "11EAP8MX0cfrW9lzkK424H",
+        "s": "11eap8mx0cfrw9lzkk424h",
         "l": "wolfheart",
         "g": [
           "finnish death metal",
@@ -189,7 +206,7 @@
     "eventGenres": null,
     "artists": {
       "orphaned land": {
-        "s": "7xTMxqAmbtE0Nce5lz7t0h",
+        "s": "7xtmxqambte0nce5lz7t0h",
         "l": "orphaned%20land",
         "g": [
           "christian power metal",
@@ -242,7 +259,7 @@
     "eventGenres": null,
     "artists": {
       "iron jinn": {
-        "s": "001YdslVwyeUys5gFRXWg6",
+        "s": "001ydslvwyeuys5gfrxwg6",
         "l": "iron%20jinn",
         "g": []
       }

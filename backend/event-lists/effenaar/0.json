@@ -11,7 +11,18 @@
     "image": "../public/event-images/effenaar/Oi8vd3d3LmVmZmVuYWFyLm5sL2FnZW5kYS9zb2ls",
     "soldOut": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "soil": {
+        "s": "4poywgoztirppbfrilmsxp",
+        "l": "soil",
+        "g": [
+          "alternative metal",
+          "industrial metal",
+          "nu metal",
+          "black metal"
+        ]
+      }
+    }
   },
   {
     "door": "2024-08-11T19:30:00",
@@ -41,14 +52,14 @@
     "eventGenres": null,
     "artists": {
       "high vis": {
-        "s": "4Gmrt82h2vjGjnp67SG5Nw",
+        "s": "4gmrt82h2vjgjnp67sg5nw",
         "l": "high%20vis",
         "g": [
           "uk post-punk revival"
         ]
       },
       "militarie gun": {
-        "s": "4us4NMG5wuqdUZvthZrj0Q",
+        "s": "4us4nmg5wuqduzvthzrj0q",
         "l": "militarie%20gun",
         "g": [
           "5th wave emo",
@@ -57,7 +68,7 @@
         ]
       },
       "scowl": {
-        "s": "6hW33nVHPElaXuG2hQ0QOp",
+        "s": "6hw33nvhpelaxug2hq0qop",
         "l": "scowl",
         "g": [
           "california hardcore",
@@ -78,7 +89,33 @@
     "image": "../public/event-images/effenaar/Ly93d3cuZWZmZW5hYXIubmwvYWdlbmRhL2hha2Vu",
     "soldOut": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "dri": {
+        "s": "6ekzdvhhjgmtcaorvexctv",
+        "l": "d.r.i.",
+        "g": [
+          "crossover thrash",
+          "hardcore punk",
+          "old school thrash",
+          "punk",
+          "thrash core",
+          "thrash metal",
+          "hardcore punk, thrash metal/crossover",
+          "crossover",
+          "hardcore",
+          "psychobilly",
+          "punk",
+          "thrash"
+        ]
+      },
+      "pro": {
+        "s": null,
+        "l": "pro-",
+        "g": [
+          "death metal/grindcore"
+        ]
+      }
+    }
   },
   {
     "door": "2024-09-21T20:00:00",
@@ -94,7 +131,7 @@
     "eventGenres": null,
     "artists": {
       "liturgy": {
-        "s": "5PIuMlRY9PSLUSFzs6lQu1",
+        "s": "5piumlry9pslusfzs6lqu1",
         "l": "liturgy",
         "g": [
           "experimental black metal",
@@ -121,7 +158,7 @@
     "eventGenres": null,
     "artists": {
       "stone": {
-        "s": "22bE4uQ6baNwSHPVcDxLCe",
+        "s": "22be4uq6banwshpvcdxlce",
         "l": "stone",
         "g": [
           "album rock",
@@ -160,7 +197,7 @@
     "eventGenres": null,
     "artists": {
       "master boot record": {
-        "s": "77s5NAGQbxu8oLstaqSwHE",
+        "s": "77s5nagqbxu8olstaqswhe",
         "l": "master%20boot%20record",
         "g": [
           "darksynth",
@@ -183,7 +220,7 @@
     "eventGenres": null,
     "artists": {
       "stone": {
-        "s": "22bE4uQ6baNwSHPVcDxLCe",
+        "s": "22be4uq6banwshpvcdxlce",
         "l": "stone",
         "g": [
           "album rock",
@@ -208,7 +245,7 @@
     "eventGenres": null,
     "artists": {
       "smash into pieces": {
-        "s": "2vhrwzjf9H3icunkVFi9tq",
+        "s": "2vhrwzjf9h3icunkvfi9tq",
         "l": "smash%20into%20pieces",
         "g": [
           "swedish alternative rock"
@@ -228,7 +265,15 @@
     "image": "../public/event-images/effenaar/Oi8vd3d3LmVmZmVuYWFyLm5sL2FnZW5kYS92b2xh",
     "soldOut": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "pro": {
+        "s": null,
+        "l": "pro-",
+        "g": [
+          "death metal/grindcore"
+        ]
+      }
+    }
   },
   {
     "door": "2024-11-30T19:30:00",
@@ -244,7 +289,7 @@
     "eventGenres": null,
     "artists": {
       "tusky": {
-        "s": "6XbZ8G0cFqSgUL4FmtiSPr",
+        "s": "6xbz8g0cfqsgul4fmtispr",
         "l": "tusky",
         "g": [
           "dutch punk",
@@ -267,7 +312,7 @@
     "eventGenres": null,
     "artists": {
       "mouflon": {
-        "s": "75S0L1sMv9ynU2paKaPu1l",
+        "s": "75s0l1smv9ynu2pakapu1l",
         "l": "mouflon",
         "g": [
           "dutch death metal",
@@ -290,7 +335,7 @@
     "eventGenres": null,
     "artists": {
       "akhlys": {
-        "s": "7swiuMho0UMNYbZqcO0dho",
+        "s": "7swiumho0umnybzqco0dho",
         "l": "akhlys",
         "g": [
           "atmospheric black metal",

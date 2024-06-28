@@ -1219,12 +1219,16 @@ export default class Artists {
     });
   }
 
-  fromArrayToTreeColumnRows(a, i) {
-    const b = a.length > 15 
-      ? `${a.substring(0, 9)}..${a.substring(a.length - 2, a.length)}`
+  fromArrayToTwoColumnRows(a, i) {
+    let b = a.length > 20 
+      ? `${a.substring(0, 14)}..${a.substring(a.length - 4, a.length)}`
       : a;
+    b = b.padEnd(30, ' ');
     if (i % 3 === 0 && i > 0) {
       return `${b}\n`;
+    }
+    if (i === 0) {
+      return `\n${b}`;
     }
     return b;
   }
@@ -1256,10 +1260,10 @@ export default class Artists {
         return false;
       }).filter((a) => a);
     this.consoleGroup(`artists, events, refused pNRARA1`, {
-      artists: `${artistKeys.map(this.fromArrayToTreeColumnRows).join(' ')}\n`,
-      events: `${eventsKeys.map(this.fromArrayToTreeColumnRows).join(' ')}\n`,
-      refused: `${refusedKeys.map(this.fromArrayToTreeColumnRows).join(' ')}\n`,
-      unclearArtists: `${unclearArtistsKeys.map(this.fromArrayToTreeColumnRows).join(' ')}\n`,
+      artists: `${artistKeys.map(this.fromArrayToTwoColumnRows).join(' ')}\n`,
+      events: `${eventsKeys.map(this.fromArrayToTwoColumnRows).join(' ')}\n`,
+      refused: `${refusedKeys.map(this.fromArrayToTwoColumnRows).join(' ')}\n`,
+      unclearArtists: `${unclearArtistsKeys.map(this.fromArrayToTwoColumnRows).join(' ')}\n`,
     }, 'persistNewRefusedAndRockArtists');
     
     this.consoleGroup('new artists data pNRARA2', this.allowedArtistsTemp, 'persistNewRefusedAndRockArtists');
