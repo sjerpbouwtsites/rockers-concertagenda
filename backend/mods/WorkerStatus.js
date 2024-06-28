@@ -53,6 +53,8 @@ export default class WorkerStatus {
 
   static reportingInterval = null;
 
+  debug = false;
+
   static registerFamilyDoneWithBaseEvents(family) {
     WorkerStatus._familiesDoneWithBaseEvents.push(family);
   }
@@ -187,7 +189,9 @@ export default class WorkerStatus {
     }
 
     WorkerStatus._workers[name].errors.push(message);
-    WorkerStatus.printWorkersToConsole();
+    if (this.debug) {
+      WorkerStatus.printWorkersToConsole();
+    }
     const content = message?.content ?? null;
     const errorLevel = content?.level ?? null;
     if (!content || !errorLevel) return;
@@ -271,7 +275,9 @@ export default class WorkerStatus {
   }
 
   static programEnd() {
-    WorkerStatus.printWorkersToConsole();
+    if (this.debug) {
+      WorkerStatus.printWorkersToConsole();
+    }
     console.log('All workers done');
     clearInterval(WorkerStatus.monitorCPUS);
     if (WorkerStatus.mwss) {
@@ -409,7 +415,7 @@ export default class WorkerStatus {
     const waiting = sorted.filter((w) => w.includes('waiting'));
     const working = sorted.filter((w) => w.includes('working'));
     const error = sorted.filter((w) => w.includes('error'));
-
+    
     console.log(
       '%cDONE WORKERS\r',
       'color: white; background: black; font-weight: bold; font-size: 18px',

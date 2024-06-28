@@ -117,7 +117,7 @@ export async function harvestArtists(
   const verderScannen = makeVerderScannen(toScan, reedsGevondenNamen);
 
   if (!verderScannen.length) {
-    this.consoleGroup(`Niets te vinden dat reeds bekende namen in hA2\n${title}`, { bronTekst: toScan, reedsGevondenNamen }, 'harvestArtists');      
+    this.consoleGroup(`Niets te vinden dat reeds bekende namen in hA2`, { title, bronTekst: toScan, reedsGevondenNamen }, 'harvestArtists', 'fgred');      
     return this.post({
       success: true,
       data: reedsGevondenHACK,
@@ -130,7 +130,7 @@ export async function harvestArtists(
   const potentieeleOverigeTitels = makePotentieeleOverigeTitels(settings, verderScannen);
       
   if (!potentieeleOverigeTitels.length) {
-    this.consoleGroup(`Na tweede bew. niets verder gevonden om te onderzoeken ${title} hA3`, { bronTekst: toScan, naVerwijderenBekendeNamen: verderScannen }, 'harvestArtists');      
+    this.consoleGroup(`Na tweede bew. niets verder gevonden om te onderzoeken hA3`, { title, bronTekst: toScan, naVerwijderenBekendeNamen: verderScannen }, 'harvestArtists', 'fgmagenta');      
     return this.post({
       success: true,
       data: reedsGevondenHACK,
@@ -182,7 +182,7 @@ export async function harvestArtists(
     naVerwBekendeArtists: verderScannen,
     naSplitsenOpruimenBron: potentieeleOverigeTitels,
     APIResponseArtists: genreAPIResp,
-  }, 'harvestArtist');
+  }, 'harvestArtist', 'fggreen');
 
   return this.post({
     success: true,

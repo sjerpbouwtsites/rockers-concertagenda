@@ -4,6 +4,7 @@ import terms from '../store/terms.js';
 import { slugify } from "../../scrapers/gedeeld/slug.js";
 import shell from '../../mods/shell.js';
 import { harvestArtists } from './harvest.js';
+import consoleKleuren from "../../mods/consoleKleurenRef.js";
 
 // console.log(util.inspect(na, 
 //   { showHidden: false, depth: null, colors: true })); 
@@ -1066,7 +1067,7 @@ export default class Artists {
       : a;
     b = b.padEnd(24, ' ');
     if (i % 3 === 0 && i > 0) {
-      return `${b}\n`;
+      return `${b}\r`;
     }
     if (i === 0) {
       return `\n${b}`;
@@ -1105,7 +1106,7 @@ export default class Artists {
       events: `${eventsKeys.map(this.fromArrayToTwoColumnRows).join(' ')}\n`,
       refused: `${refusedKeys.map(this.fromArrayToTwoColumnRows).join(' ')}\n`,
       unclearArtists: `${unclearArtistsKeys.map(this.fromArrayToTwoColumnRows).join(' ')}\n`,
-    }, 'persistNewRefusedAndRockArtists');
+    }, 'persistNewRefusedAndRockArtists', 'fggreen');
     
     this.consoleGroup('new artists data pNRARA2', this.allowedArtistsTemp, 'persistNewRefusedAndRockArtists');
     
@@ -1218,11 +1219,10 @@ export default class Artists {
     throw Error('message corrupt');
   }
 
-  consoleGroup(title, toConsole, funcNaam = '') {
+  consoleGroup(title, toConsole, funcNaam = '', kleur = 'fgwhite') {
     if (!this.funcsToDebug[funcNaam]) return;
-    console.log();
-    console.log('\x1b[36m%s\x1b[0m', `${funcNaam.padStart(80, '* ')}`);
-    console.group(`${title.padStart(80, ' ')}`);
+    const titelKleur = consoleKleuren[kleur];
+    console.group(titelKleur, `\n${title} ${funcNaam.padStart(80 - title.length, ' * ')}`);
     if (toConsole !== null && typeof toConsole === 'object') {
       const keys = Object.keys(toConsole);
       // eslint-disable-next-line no-plusplus
