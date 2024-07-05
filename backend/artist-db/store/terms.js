@@ -11,6 +11,7 @@ const tempFestivalNamesHACKDontHarvest = [
   "soulcrusher",
   "dynamo nachtmis",
   "home grown sessions",
+  "calculating infinity 25th anniversary show",
 ];
 
 const eventMetaTerms = [

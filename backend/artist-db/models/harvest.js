@@ -2,6 +2,13 @@ import { slugify } from "../../scrapers/gedeeld/slug.js";
 import terms from "../store/terms.js";
 
 // #region MAKE TO SCAN
+/**
+ * Creates a text to scan. Will not produce a slug. Because a slug of a title and shortText doesn't make any sense.
+ * @param {*} title 
+ * @param {*} settings 
+ * @param {*} shortText 
+ * @returns 
+ */
 function makeToScan(title, settings, shortText) {
   const toScan = [title]; 
   if (settings.artistsIn.includes('shortText') && shortText) {
@@ -96,10 +103,10 @@ function genreAPIRespMap2(ga) {
   this._gevondenArtiesten[ga.title] = makeVolArtistVar(
     false, id, ga, this._eventDate, this._today, this._venueEventUrl);
     
-  this._allowedArtistsTemp[ga.title] = makeVolArtistVar(
+  this._allowedArtists[ga.title] = makeVolArtistVar(
     false, id ?? null, ga, this._eventDate, this._today, this._venueEventUrl);
   if (ga.title !== ga.slug) {
-    this._allowedArtistsTemp[ga.slug] = makeVolArtistVar(
+    this._allowedArtists[ga.slug] = makeVolArtistVar(
       true, id ?? null, ga, this._eventDate, this._today, this._venueEventUrl);        
   }
   return ga;
@@ -109,6 +116,8 @@ function genreAPIRespMap2(ga) {
 export async function harvestArtists(
   title, slug, shortText, settings, eventDate, venueEventUrl, eventGenres = []) {
   const toScan = makeToScan(title, settings, shortText);
+  // geen slug want het is een lap tekst en een slug is dan raar gebrabbel.
+  // als er een artiest gevonden wordt dan moet dat op titel.
   const reedsGevonden = toScan.map((scan) => this.scanTextForAllowedArtists(scan, '')).filter((a) => Object.keys(a).length);
   const reedsGevondenRefused = toScan.map((scan) => this.scanTextForRefusedArtists(scan, '')).filter((a) => Object.keys(a).length);
 
@@ -125,7 +134,10 @@ export async function harvestArtists(
   const verderScannen = makeVerderScannen(toScan, reedsGevondenNamen, reedsGevondenRefusedNamen);
 
   if (!verderScannen.length) {
-    this.consoleGroup(`Niets te vinden dat reeds bekende namen in hA2`, { title, bronTekst: toScan, reedsGevondenNamen }, 'harvestArtists', 'fgred');      
+    this.consoleGroup(`Niets te vinden dat reeds bekende namen in hA2`, 
+      { title, bronTekst: toScan, reedsGevondenNamen }, 
+      'harvestArtists',
+      'fgred');      
     return this.post({
       success: true,
       data: reedsGevondenHACK,
@@ -159,16 +171,16 @@ export async function harvestArtists(
       if (explGenreCheckRes.success) {
         return true;
       } if (explGenreCheckRes.success === false) {
-        this.refusedTemp[ga.title] = makeRefusedVar(false, eventDate, this.today, venueEventUrl);
+        this.refused[ga.title] = makeRefusedVar(false, eventDate, this.today, venueEventUrl);
         if (ga.title !== ga.slug) {
-          this.refusedTemp[ga.slug] = makeRefusedVar(true, eventDate, this.today, venueEventUrl);
+          this.refused[ga.slug] = makeRefusedVar(true, eventDate, this.today, venueEventUrl);
         }
         return false;
       } 
-      this.unclearArtistsTemp[ga.title] = makeVolArtistVar(
+      this.unclearArtists[ga.title] = makeVolArtistVar(
         false, ga.resultaten?.spotRes?.id ?? null, ga, eventDate, this.today, venueEventUrl);
       if (ga.title !== ga.slug) {
-        this.unclearArtistsTemp[ga.slug] = makeVolArtistVar(
+        this.unclearArtists[ga.slug] = makeVolArtistVar(
           true, ga.resultaten?.spotRes?.id ?? null, ga, eventDate, this.today, venueEventUrl);
       }
       return false;
@@ -177,7 +189,7 @@ export async function harvestArtists(
       _gevondenArtiesten: gevondenArtiesten,
       _eventDate: eventDate,
       _today: this.today,
-      _allowedArtistsTemp: this.allowedArtistsTemp,
+      _allowedArtists: this.allowedArtists,
       _venueEventUrl: venueEventUrl,
     }); 
 
@@ -185,13 +197,13 @@ export async function harvestArtists(
 
   this.consoleGroup(`harvest artist debug bundel hA99`, {
     eventTitle: title,
-    alBekendeArtists: reedsGevonden,
+    // alBekendeArtists: reedsGevonden,
     namenAlBekendeArtists: reedsGevondenNamen,
     rawTextToScan: toScan,
     naVerwBekendeArtists: verderScannen,
     naSplitsenOpruimenBron: potentieeleOverigeTitels,
     APIResponseArtists: genreAPIResp,
-  }, 'harvestArtist', 'fggreen');
+  }, 'harvestArtists', 'fggreen');
 
   return this.post({
     success: true,

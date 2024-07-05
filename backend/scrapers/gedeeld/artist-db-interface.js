@@ -1,29 +1,22 @@
 import DbInterFaceToScraper from './db-interface-to-scraper.js';
 
-// ifNotAllowedRefuse: 'asyncIfNotAllowedRefuse',
-// allowedEvent: 'asyncIsAllowedEvent',
-// refused: 'asyncIsRefused',
-// forbiddenTerms: 'asyncForbiddenTerms',
-// hasGoodTerms: 'asyncGoodTerms',
-// saveAllowedEvent: 'asyncSaveAllowedEvent',
-// harvestArtists: 'asyncHarvestArtists',
-// spotifyConfirmation: 'asyncSpotifyConfirmation', 
-// metalEncyclopediaConfirmation: 'asyncMetalEncyclopediaConfirmation', 
-// explicitEventGenres: 'asyncExplicitEventCategories',
-// hasAllowedArtist: 'asyncHasAllowedArtist',
-// success: 'asyncSuccess',
-// failure: 'asyncFailure',
-
+/**
+ * Klein helper functietje
+ * @param {*} subtype 
+ * @param {*} event 
+ * @param {*} extraData 
+ * @returns 
+ */
 function talkTitleAndSlug(subtype, event, extraData = {}) {
   const s = event.shortDate;
   return {
     type: 'db-request', 
     subtype,
     messageData: {
-      title: event.workTitle.length < 10 
+      title: event.workTitle.length < 7 
         ? event.workTitle + s
         : event.workTitle,
-      slug: event.slug.length < 10 
+      slug: event.slug.length < 7 
         ? event.slug + s 
         : event.slug,
       eventDate: s,
@@ -32,6 +25,29 @@ function talkTitleAndSlug(subtype, event, extraData = {}) {
   };
 }
 
+// #region SCR.NAMEN & DBNAMEN
+// ifNotAllowedRefuse: 'asyncIfNotAllowedRefuse',
+// allowedEvent: 'asyncIsAllowedEvent',
+// refused: 'asyncIsRefused',
+// forbiddenTerms: 'asyncForgetAllowedEventbiddenTerms',
+// hasGoodTerms: 'asyncGoodTerms',
+// harvestArtists: 'asyncHarvestArtists',
+// spotifyConfirmation: 'asyncSpotifyConfirmation', 
+// metalEncyclopediaConfirmation: 'asyncMetalEncyclopediaConfirmation', 
+// explicitEventGenres: 'asyncExplicitEventCategories',
+// hasAllowedArtist: 'asyncHasAllowedArtist',
+
+// saveAllowedEvent: 'asyncSaveAllowedEvent',
+// saveRefusedEvent: 'asyncSaveRefused',
+// saveRefused: 'asyncSaveRefused',
+// saveAllowedArtist: 'asyncSaveAllowedArtist',
+// saveUnclearArtist: 'asyncSaveUnclearArtist',
+
+// success: 'asyncSuccess',
+// failure: 'asyncFailure',
+// #endregion SCR.NAMEN & DBNAMEN
+
+// #region AS. IS ALLOWED EVENT
 export async function asyncIsAllowedEvent(event, olderReasons) {
   this.talkToDB(talkTitleAndSlug('getAllowedEvent', event));
   const dbAnswer = await this.checkDBhasAnswered();
@@ -45,7 +61,9 @@ export async function asyncIsAllowedEvent(event, olderReasons) {
   this.handleError(DBToScraper?.data?.error, DBToScraper.lastReason, 'close-thread');
   return DBToScraper;
 }
+// #endregion AS. IS ALLOWED EVENT
 
+// #region AS. IF NOTALLOW REFUSE
 export async function asyncIfNotAllowedRefuse(event, reasons) {
   const reasonsCopy = Array.isArray(reasons) ? reasons : [];
   
@@ -71,7 +89,9 @@ export async function asyncIfNotAllowedRefuse(event, reasons) {
   }
   return successAnswerObject(event, reasonsCopy, true);
 }
+// #endregion AS. IF NOTALLOW REFUSE
 
+// #region AS. IS REFUSED
 export async function asyncIsRefused(event, olderReasons = []) {
   this.talkToDB(talkTitleAndSlug('getRefused', event));
   const dbAnswer = await this.checkDBhasAnswered();
@@ -84,7 +104,9 @@ export async function asyncIsRefused(event, olderReasons = []) {
   this.handleError(DBToScraper?.data?.error, DBToScraper.lastReason, 'close-thread');
   return DBToScraper;
 }
+// #endregion AS. IS REFUSED
 
+// #region AS. FORBIDDEN TERMS
 export async function asyncForbiddenTerms(event, olderReasons) {
   this.talkToDB({
     type: 'db-request', 
@@ -103,7 +125,9 @@ export async function asyncForbiddenTerms(event, olderReasons) {
   this.handleError(DBToScraper?.data?.error, DBToScraper.lastReason, 'close-thread');
   return DBToScraper;
 }
+// #endregion AS. FORBIDDEN TERMS
 
+// #region AS. SUCCESS
 export async function asyncSuccess(event, olderReasons) {
   this.talkToDB(talkTitleAndSlug('makeSuccess', event, {
     string: event.workTitle + event.slug + (event?.shortText ?? '').toLowerCase(),
@@ -115,7 +139,9 @@ export async function asyncSuccess(event, olderReasons) {
   DBToScraper.setBreak(true);
   return DBToScraper;
 }
+// #endregion AS. SUCCESS
 
+// #region AS. FAILURE
 export async function asyncFailure(event, olderReasons) {
   this.talkToDB(talkTitleAndSlug('makeFailure', event, {
     string: event.workTitle + event.slug + (event?.shortText ?? '').toLowerCase(),
@@ -127,7 +153,9 @@ export async function asyncFailure(event, olderReasons) {
   DBToScraper.setBreak(true);
   return DBToScraper;
 }
+// #endregion AS. FAILURE
 
+// #region AS. GOOD TERMS
 export async function asyncGoodTerms(event, olderReasons) {
   this.talkToDB(talkTitleAndSlug('hasGood', event, {
     string: event.workTitle + event.slug + (event?.shortText ?? '').toLowerCase() + (event?.genres ?? ''),
@@ -145,7 +173,9 @@ export async function asyncGoodTerms(event, olderReasons) {
   this.handleError(DBToScraper?.data?.error, DBToScraper.lastReason, 'close-thread');
   return DBToScraper;
 }
+// #endregion AS. GOOD TERMS
 
+// #region AS. EXPL EVENT CATS
 export async function asyncExplicitEventCategories(event, olderReasons) {
   if (!(event?.eventGenres ?? null) || event?.eventGenres.length < 1) {
     const DBToScraper = new DbInterFaceToScraper({
@@ -173,7 +203,9 @@ export async function asyncExplicitEventCategories(event, olderReasons) {
   this.handleError(DBToScraper?.data?.error, DBToScraper.lastReason, 'close-thread');
   return DBToScraper;
 }
+// #endregion AS. EXPL EV CATS
 
+// #region AS. SPOTIFY CONF
 export async function asyncSpotifyConfirmation(event, olderReasons) {
   this.talkToDB({
     type: 'db-request', 
@@ -193,7 +225,9 @@ export async function asyncSpotifyConfirmation(event, olderReasons) {
   this.handleError(DBToScraper?.data?.error, DBToScraper.lastReason, 'close-thread');
   return DBToScraper;
 }
+// #endregion AS. SPOTIFY CONF
 
+// #region AS. METAL ENC CONF
 export async function asyncMetalEncyclopediaConfirmation(event, reasons) {
   throw Error('asyncMetalEncyclopediaConfirmation is NIET GEUPDATE');
 
@@ -217,7 +251,7 @@ export async function asyncMetalEncyclopediaConfirmation(event, reasons) {
   //   this.skipFurtherChecks.push(event.workTitle);
   //   this.talkToDB({
   //     type: 'db-request',
-  //     subtype: 'saveAllowedTemp',
+  //     subtype: 'saveAllowedArtist',
   //     messageData: {
   //       title: event.workTitle,
   //       slug: event.slug,
@@ -229,11 +263,13 @@ export async function asyncMetalEncyclopediaConfirmation(event, reasons) {
   // }
   // return successAnswerObject(event, reasonsCopy);
 }
+// #endregion AS. METAL ENC CONFIRMATION
 
+// #region AS. SAVE REFUSED
 export async function asyncSaveRefused(event) {
   this.talkToDB({
     type: 'db-request',
-    subtype: 'saveRefusedEventTemp',
+    subtype: 'saveRefusedEvent',
     messageData: {
       string: event.workTitle.toLowerCase(),
       slug: event.slug,
@@ -241,25 +277,69 @@ export async function asyncSaveRefused(event) {
     },
   });   
 }
+// #endregion AS. SAVE REFUSED
 
+// #region AS. SAVE ALLOWEDEVENT
 export async function asyncSaveAllowedEvent(event) {
   this.talkToDB({
     type: 'db-request',
-    subtype: 'saveAllowedEventTemp',
+    subtype: 'saveAllowedEvent',
     messageData: {
-      title: event.workTitle.toLowerCase(), // todo ???
+      string: event.workTitle.toLowerCase(), // todo ???
       slug: event.slug,
       eventDate: event.shortDate,
     },
   });
+  const dbAnswer = await this.checkDBhasAnswered();
+  const DBToScraper = new DbInterFaceToScraper(dbAnswer, event.reasons, 'async save allowed event');
+  DBToScraper.setReason();
+  if (!DBToScraper.isError) return DBToScraper;
+  
+  this.handleError(DBToScraper?.data?.error, DBToScraper.lastReason, 'close-thread');
+  return DBToScraper;
 }
+// #endregion AS. SAVE ALLOWED EVENT
 
+// #region AS. SAVE ALLOWED ARTI
+export async function asyncSaveAllowedArtist(event) {
+  this.talkToDB({
+    type: 'db-request',
+    subtype: 'saveAllowedArtist',
+    messageData: {
+      string: event.workTitle.toLowerCase(),
+      slug: event.slug,
+      spotify: event?.spotify ?? null,
+      metalEnc: event?.metalEnc ?? null,
+      eventDate: event.shortDate,
+    },
+  });   
+}
+// #endregion AS. SAVE ALLOWED ARTIST
+
+// #region AS. SAVE UNCLEAR ARTI
+export async function asyncSaveUnclearArtist(event) {
+  this.talkToDB({
+    type: 'db-request',
+    subtype: 'saveUnclearArtist',
+    messageData: {
+      string: event.workTitle.toLowerCase(),
+      slug: event.slug,
+      spotify: event?.spotify ?? null,
+      metalEnc: event?.metalEnc ?? null,
+      eventDate: event.shortDate,
+    },
+  });   
+}
+// #endregion AS. SAVE UNCLEAR ARTIST
+
+// #region AS. HARVEST ARTISTS
 export async function asyncHarvestArtists(event) {
   this.talkToDB({
     type: 'db-request',
     subtype: 'harvestArtists',
     messageData: {
       title: event.workTitle,
+      string: event.workTitle,
       slug: event.slug,
       shortText: event.shortText,
       settings: this._s.app.harvest,
@@ -272,12 +352,14 @@ export async function asyncHarvestArtists(event) {
   const DBToScraper = new DbInterFaceToScraper(dbans, [], 'async harvest artists');
   return DBToScraper;
 }
+// #endregion AS. HARVEST ARTISTS
+
 /**
  * Zoek niet alleen maar geeft het ook terug.
  * Niet direct geschikt voor async checkers
  * @param {*} mergedEvent 
  * @returns 
- */
+ */// #region AS. SCAN EVENT FOR ALLOWED ARTISTS
 export async function asyncScanEventForAllowedArtists(mergedEvent, olderReasons = []) {
   this.talkToDB(talkTitleAndSlug('scanEventForAllowedArtistsAsync', mergedEvent, {
     shortText: mergedEvent.shortText,
@@ -292,7 +374,9 @@ export async function asyncScanEventForAllowedArtists(mergedEvent, olderReasons 
   this.handleError(DBToScraper?.data?.error, DBToScraper.lastReason, 'close-thread');
   return DBToScraper;
 }
+// #endregion AS. SCAN EVENT FOR ALLOWED ARTISTS
 
+// #region AS. HAS ALLOWED ARTI
 export async function asyncHasAllowedArtist(event, olderReasons) {
   const getScanDBScraper = 
     await this.asyncScanEventForAllowedArtists(event, olderReasons);
@@ -306,6 +390,7 @@ export async function asyncHasAllowedArtist(event, olderReasons) {
   this.handleError(getScanDBScraper?.data?.error, getScanDBScraper.lastReason, 'close-thread');
   return getScanDBScraper;
 }
+// #endregion AS. HAS ALLOWED ARTI
 
 export default null;
 

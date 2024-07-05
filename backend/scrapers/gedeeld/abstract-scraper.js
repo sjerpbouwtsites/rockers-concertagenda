@@ -24,7 +24,12 @@ import DbInterFaceToScraper from './db-interface-to-scraper.js';
 
 // #endregion                                              IMPORTS
 
+// DEZE FUNCTIES ZIJN BESCHIKBAAR VANUIT ARTIST-DB-INTERFACE MAAR WORDEN NU NOG NIET GEBRUIKT
+// saveAllowedArtist: 'asyncSaveAllowedArtist',
+// saveUnclearArtist: 'asyncSaveUnclearArtist',
+
 export default class AbstractScraper extends ScraperConfig {
+  // #region                              PROPERTIES
   qwm;
 
   browser;
@@ -54,11 +59,12 @@ export default class AbstractScraper extends ScraperConfig {
   skipFurtherChecks = [];
 
   timesScrolled = 0;
+  
+  // #endregion                           PROPERTIES
 
-  // #region                             CONSTRUCTOR & INSTALL
+  // #region                              CONSTR & INSTALL
   constructor(obj) {
     super(obj);
-
     this.install();
   }
 
@@ -111,7 +117,7 @@ export default class AbstractScraper extends ScraperConfig {
     this.asyncFailure = asyncFailure;
     this.asyncFailure.bind(this);
   }
-  // #endregion                                                CONSTRUCTOR & INSTALL
+  // #endregion                           CONSTR & INSTALL
 
   async getPriceFromHTML({
     page, event, pageInfo, selectors,
@@ -237,6 +243,10 @@ export default class AbstractScraper extends ScraperConfig {
   }
 
   async checkBaseEventAvailable(searching) {
+    if (!shell?.keepBaseEvents) {
+      return false;
+    } 
+    
     const baseEventFiles = fs.readdirSync(fsDirections.baseEventlists);
     const theseBaseEvents = baseEventFiles.filter((filenames) => filenames.includes(searching));
     if (!theseBaseEvents || theseBaseEvents.length < 1) {
@@ -549,6 +559,10 @@ export default class AbstractScraper extends ScraperConfig {
    * @memberof AbstractScraper
    */
   async processSingleMusicEvent(eventsList = []) {
+    if (debugSettings.vertraagScraper) {
+      await this.waitTime(250);
+    }
+
     // verwerk events 1
     const useableEventsList = eventsList.map((a) => a);
     if (useableEventsList.length === 0) return useableEventsList;
@@ -581,6 +595,7 @@ export default class AbstractScraper extends ScraperConfig {
           `<a href='${singleEvent.venueEventUrl}'>😵 Corrupted ${singleEvent.title}</a> ${singleEvent.corrupted}`,
         ),
       );
+      this.asyncSaveRefused(singleEvent);
       return useableEventsList.length
         ? this.processSingleMusicEvent(useableEventsList)
         : useableEventsList;
@@ -612,6 +627,7 @@ export default class AbstractScraper extends ScraperConfig {
           title: `💀 ${mergedEvent.corrupted}`,
           event: `<a class='single-event-check-notice single-event-check-notice--failure' href='${mergedEvent.venueEventUrl}'>${mergedEvent.title}</a> Corr.`,
         });
+        this.asyncSaveRefused(mergedEvent);
       }
       if (mergedEvent.unavailable) {
         this.dirtyDebug({
@@ -681,12 +697,11 @@ export default class AbstractScraper extends ScraperConfig {
     if (mergedEventCheckRes.isSuccess && !mergedEvent.unavailable && !mergedEvent.corrupted) {
       toRegister.artists = mergedEvent.artists;
       this._events.push(toRegister);
-      this.asyncSaveAllowedEvent(mergedEvent);
+      this.asyncSaveAllowedEvent(mergedEvent, mergedEvent);
     } else if (mergedEventCheckRes.isFailed || mergedEvent.corrupted) {
       this.asyncSaveRefused(mergedEvent);
-      this._invalidEvents.push(toRegister);
     } else if (mergedEvent.unavailable) {
-      this._invalidEvents.push(toRegister);
+      this.asyncSaveAllowedEvent(mergedEvent, mergedEvent);
     }
 
     await this.closePageAfterSingle(singleEventPage, useableEventsList.length > 0);

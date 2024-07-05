@@ -1,7 +1,6 @@
 /* eslint-disable no-console */
 import fs from 'fs';
 import terms from '../store/terms.js';
-import { slugify } from "../../scrapers/gedeeld/slug.js";
 import shell from '../../mods/shell.js';
 import { harvestArtists } from './harvest.js';
 import consoleKleuren from "../../mods/consoleKleurenRef.js";
@@ -56,26 +55,6 @@ export default class Artists {
   unclearArtists;
 
   /**
-   * tijdelijke houder om later mogelijk in refused op te slaan.
-   */
-  refusedTemp = {};
-  
-  /**
-   * tijdelijke houder om later mogelijk in allowedEvents op te slaan.
-   */
-  allowedEventTemp = {};
-
-  /**
-   * tijdelijke houder om later mogelijk in allowedArtists op te slaan.
-   */
-  allowedArtistsTemp = {};
-
-  /**
-   * tijdelijke houder om later mogelijk in unclearArtists op te slaan.
-   */
-  unclearArtistsTemp = {};
-
-  /**
    * Twee weg referentie zoals {USA: US, US: USA}
    * tbv country info uit titels halen
    */
@@ -90,12 +69,16 @@ export default class Artists {
 
   spotifyAccessToken = null;
 
-  funcsToDebug = {
+  static funcsToDebug = {
     harvestArtists: true,
     scanTextForAllowedArtists: false,
     getSpotifyArtistSearch: false,
-    persistNewRefusedAndRockArtists: true,
+    persistNewRefusedAndRockArtists: false,
     checkExplicitEventCategories: false,
+    saveAllowedEvent: false,
+    scanTextForSomeArtistList: false,
+    _do: false,
+    APICallsForGenre: true,
   };
 
   // #endregion
@@ -104,6 +87,18 @@ export default class Artists {
    */
   storeWritePermission = false || shell.artistDBWrite;
 
+  /**
+   * of oude jsons voor nieuwe schrijven gekopieerd worden naar bv allowed-events-20230101202020
+   * schrijft geen backups zonder storeWritePermission
+   */
+  storeSaveBackup = true;
+
+  /**
+   * Creates an instance of Artists.
+   *
+   * @constructor
+   * @param {*} conf
+   */
   constructor(conf) {
     this.modelPath = conf.modelPath;
     this.storePath = conf.storePath;
@@ -170,8 +165,8 @@ export default class Artists {
    * Voorman van de class. message.request heeft de naam van een functie hier
    * 'do' stuurt die functie aan en returned het resultaat. Controleert ook of 
    * message.data wel de voor die functie vereiste 'type' heeft.
-   * @param {request:string, data:object} message  
-   * @returns {success:boolean|string,reason:string,data:object} -> ALS JSON!
+   * @param {object} message request:string, data:object
+   * @returns {string} als JSON: success:boolean|string,reason:string,data:object
    */
   async _do(message) {
     // parse
@@ -202,10 +197,12 @@ export default class Artists {
           return this.error(Error('geen title of slug om te doorzoeken'));
         } 
       }
+      this.consoleGroup('getAllowedEvent do27', message.data, '_do', 'rood');
       return this.getAllowedEvent(message.data.title, message.data.slug);
     }
 
     if (message.request === 'getRefused') {
+      this.consoleGroup('getRefusedEvent do28', message.data, '_do', 'rood');
       if (this.typeCheckInputFromScrapers) {
         const hasTitle = Object.prototype.hasOwnProperty.call(parsedMessage.data, 'title');
         const hasSlug = Object.prototype.hasOwnProperty.call(parsedMessage.data, 'slug');
@@ -275,7 +272,7 @@ export default class Artists {
       return this.getMetalEncyclopediaConfirmation(message.data.title);
     }
 
-    if (['scanTextForAllowedArtists', 'scanTextForRefusedArtists', 'scanTextForUnclearArtists'].message.request) {
+    if (['scanTextForAllowedArtists', 'scanTextForRefusedArtists', 'scanTextForUnclearArtists'].includes(message.request)) {
       if (this.typeCheckInputFromScrapers) {
         const hasTitle = Object.prototype.hasOwnProperty.call(parsedMessage.data, 'title');
         const hasSlug = Object.prototype.hasOwnProperty.call(parsedMessage.data, 'slug');
@@ -331,8 +328,14 @@ export default class Artists {
         } 
       }
       const d = message.data;
+      const t = d.title; const s = d.slug; 
+      const st = d?.shortText;
+      const set = d.settings;
+      const ed = d.eventDate;
+      const url = d.venueEventUrl;
+      const eg = d?.eventGenres;
       return this.harvestArtists(
-        d.title, d.slug, d?.shortText, d.settings, d.eventDate, d.venueEventUrl, d?.eventGenres);
+        t, s, st, set, ed, url, eg);
     }
 
     if (message.request === 'APICallsForGenre') {
@@ -348,7 +351,7 @@ export default class Artists {
       return this.APICallsForGenre(message.data.title, message.data.slug);
     }
 
-    if (message.request === 'saveRefusedEventTemp') {
+    if (['saveRefusedEvent', 'saveAllowedEvent', 'saveRefused', 'saveUnclearArtist', 'saveAllowedArtist'].includes(message.request)) {
       if (this.typeCheckInputFromScrapers) {
         const hasString = Object.prototype.hasOwnProperty.call(parsedMessage.data, 'string');
         const hasSlug = Object.prototype.hasOwnProperty.call(parsedMessage.data, 'slug');
@@ -363,44 +366,40 @@ export default class Artists {
           return this.error(Error('geen eventDate om op te slaan'));
         } 
       }
-      return this.saveRefusedEventTemp(
-        message.data.string, message.data.slug, message.data.eventDate);
-    }    
-
-    if (message.request === 'saveAllowedEventTemp') {
-      if (this.typeCheckInputFromScrapers) {
-        const hasTitle = Object.prototype.hasOwnProperty.call(parsedMessage.data, 'title');
-        const hasSlug = Object.prototype.hasOwnProperty.call(parsedMessage.data, 'slug');
-        const hasEventDate = Object.prototype.hasOwnProperty.call(parsedMessage.data, 'eventDate');
-        if (!hasTitle) {
-          return this.error(Error('geen title om op te slaan'));
-        }
-        if (!hasSlug) {
-          return this.error(Error('geen slug om op te slaan'));
-        }
-        if (!hasEventDate) {
-          return this.error(Error('geen eventDate om op te slaan'));
-        } 
+      if (['saveRefusedEvent', 'saveRefused'].includes(message.request)) {
+        return this.saveRefusedEvent(
+          message.data.string, message.data.slug, message.data.eventDate);
       }
-      
-      return this.saveAllowedEventTemp(message.data.title,
-        message.data.slug,
-        message.data.eventDate);
-    }    
+      if (message.request === 'saveAllowedEvent') {
+        return this.saveAllowedEvent(message.data.string,
+          message.data.slug,
+          message.data.eventDate);
+      }
+      if (message.request === 'saveAllowedArtist') {
+        return this.saveAllowedArtist(message.data.string,
+          message.data.slug,
+          message.data?.spotify ?? '',
+          message.data?.metalEnc ?? '',
+          message.data?.genres ?? [],
+          message.data.eventDate,
+        );
+      }
+      if (message.request === 'saveUnclearArtist') {
+        return this.saveUnclearArtist(message.data.string,
+          message.data.slug,
+          message.data?.spotify ?? '',
+          message.data?.metalEnc ?? '',
+          message.data?.genres ?? [],
+          message.data.eventDate,
+        );
+      }
+    } // ['saveRefusedEvent', 'saveAllowedEvent', ETC 'saveAllowedArtist'].includes(message.request)
 
     if (message.request === 'makeSuccess') {
       return this.post({
         success: true,
         data: null,
         reason: `🟩 Gen. success`,
-      });
-    }
-
-    if (message.request === 'makeFailure') {
-      return this.post({
-        success: false,
-        data: null,
-        reason: `🟥 Gen. failure`,
       });
     }
 
@@ -425,15 +424,11 @@ export default class Artists {
     const _b = Object.prototype.hasOwnProperty.call(this.allowedArtists, slug);
     
     if (!_a && !_b) {
-      const __a = Object.prototype.hasOwnProperty.call(this.allowedArtistsTemp, artistName);
-      const __b = Object.prototype.hasOwnProperty.call(this.allowedArtistsTemp, slug);      
-      if (!__a && !__b) {
-        return this.post({
-          success: false,
-          data: null,
-          reason: `${artistName} and ${slug} not in allowedArtists aa1`,
-        }); 
-      }
+      return this.post({
+        success: false,
+        data: null,
+        reason: `${artistName} and ${slug} not in allowedArtists aa1`,
+      });
     }
 
     const artistData = _a ? this.allowedArtists[artistName] : this.allowedArtists[slug];
@@ -457,15 +452,11 @@ export default class Artists {
     const _b = Object.prototype.hasOwnProperty.call(this.allowedEvents, slug);
     
     if (!_a && !_b) {
-      const __a = Object.prototype.hasOwnProperty.call(this.allowedEventTemp, eventName);
-      const __b = Object.prototype.hasOwnProperty.call(this.allowedEventTemp, slug);
-      if (!__a && !__b) {
-        return this.post({
-          success: null,
-          data: null,
-          reason: `⬜ ${eventName} and ${slug} not allowed event aa3`,
-        }); 
-      }
+      return this.post({
+        success: null,
+        data: null,
+        reason: `⬜ ${eventName} and ${slug} not allowed event aa3`,
+      });
     }
 
     const eventData = _a ? this.allowedEvents[eventName] : this.allowedEvents[slug];
@@ -493,15 +484,11 @@ export default class Artists {
     const _b = Object.prototype.hasOwnProperty.call(this.refused, ss);
     
     if (!_a && !_b) {
-      const __a = Object.prototype.hasOwnProperty.call(this.refusedTemp, tt);
-      const __b = Object.prototype.hasOwnProperty.call(this.refusedTemp, ss);
-      if (!__a && !__b) {
-        return this.post({
-          success: null,
-          data: null,
-          reason: `⬜ ${tt} and ${ss} not refused aa5`,
-        }); 
-      }
+      return this.post({
+        success: null,
+        data: null,
+        reason: `⬜ ${tt} and ${ss} not refused aa5`,
+      });
     }
 
     const eventOfArtistData = _a ? this.refused[tt] : this.refused[ss];
@@ -512,6 +499,41 @@ export default class Artists {
     });
   }  
   // #endregion
+
+  // #region GET RECORDS OF TODAY
+  /**
+   * filtered this.allowedArtists, this.allowedEvents, this.refused op 
+   * 1. niet slug 2. date is today.
+   * @param {string} recordType unclear|artists|allowedEvents|refused;
+   * @returns list of records
+   */
+  getRecordsOfToday(recordType) {
+    const r = {};
+    if (recordType === 'artists' || recordType === 'unclear') {
+      Object.entries(recordType === 'artists' ? this.allowedArtists : this.unclearArtists)
+        .forEach(([artistKey, artist]) => {
+          if (artist[5] === this.today && artist[0] === 1) {
+            r[artistKey] = artist;
+          }
+        });      
+    }
+
+    if (recordType === 'allowedEvents' || recordType === 'refused') {    
+      Object.entries(recordType === 'allowedEvents' ? this.allowedEvents : this.refused)
+        .forEach(([eventKey, event]) => {
+          if (event[2] === this.today && event[0] === 1) {
+            r[eventKey] = event;
+          }
+        });
+    }
+    
+    if (['artists', 'unclear', 'allowedEvents', 'refused'].includes(recordType)) {
+      return r;
+    }
+    throw new Error(`onbekende record ${recordType} in getRecordsOfToday`);
+  }
+
+  // #endregion GET RECORDS OF TODAY
 
   // #region HAS FORBIDDEN
   /**
@@ -620,6 +642,17 @@ export default class Artists {
   // #endregion
 
   // #region SPOTIFY
+  /**
+   * Searches spotify for title; 
+   * if no results, returns success null
+   * if results, checks if result has forbidden genres (returns success false)
+   * if results checks if result has good genres (returns success true)
+   * TODO: depends on getSpotifyArtistSearch, but that also filters for good genres
+   * @param {*} title 
+   * @param {*} slug 
+   * @param {*} eventDate 
+   * @returns {JSON} post object met success, data, reason
+   */
   async getSpotifyConfirmation(title, slug, eventDate) {
     if (!this.spotifyAccessToken) {
       await this.getSpotifyAccessToken();
@@ -691,6 +724,14 @@ export default class Artists {
     }); 
   }
 
+  /**
+   * Queries spotify; if results
+   * tries to find the first hit on this name that is 'metal'
+   * TODO: if filtering here, use bonus for rockgenres and malus voor shitgenres
+   * and sort the result accordingly, then give the first.
+   * @param {*} artist 
+   * @returns {*} spotifyArtistItem OR null
+   */
   async getSpotifyArtistSearch(artist) {
     if (!this.spotifyAccessToken) {
       await this.getSpotifyAccessToken();
@@ -737,9 +778,53 @@ export default class Artists {
     
     return null;
   }
+  
+  /**
+   * Create spotify access token with spotify API
+   * sets the spotify access token on Artist
+   * @returns {boolean} true is successfull
+   */
+  async getSpotifyAccessToken() {
+    let requestBody = [];
+    const rbConf = {
+      grant_type: `client_credentials`,
+      client_id: `11bf5090af7b42848c20124d8c83fda3`,
+      client_secret: `55f3635cd31d4d97a47af46c51f20443`,
+    };
+    
+    // eslint-disable-next-line guard-for-in, no-restricted-syntax
+    for (const property in rbConf) {
+      const encodedKey = encodeURIComponent(property);
+      const encodedValue = encodeURIComponent(rbConf[property]);
+      requestBody.push(`${encodedKey}=${encodedValue}`);
+    }
+    requestBody = requestBody.join("&");
+  
+    const fetchResult = await fetch("https://accounts.spotify.com/api/token", {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
+      },
+      body: requestBody,
+    }).then((response) => response.json())
+      .catch((err) => console.error(err));
+  
+    if (fetchResult?.access_token) {
+      this.spotifyAccessToken = fetchResult.access_token;
+      return true;
+    } 
+    console.log(`err fetching access token!`);
+    console.log(fetchResult);
+    throw Error(`fetch result no access token`);
+  }
   // #endregion
 
   // #region GET METAL ENC CONF
+  /**
+   * ONDUIDELIJKE FUNCTIE MOGELIJK NIET AFGEMAAKT. GEEFT OOK GEEN DATA TERUG VAN METAL ENC.
+   * @param {*} title 
+   * @returns {JSON} post object met success, data, reason
+   */
   async getMetalEncyclopediaConfirmation(title) {
     let titleCopy = `${title}`;
     let metalString = titleCopy.replaceAll(' ', '+');
@@ -786,66 +871,33 @@ export default class Artists {
     });
   }
 
-  createFormBody(requestBodyObject) {
-    let formBody = [];
-    // eslint-disable-next-line no-restricted-syntax, guard-for-in
-    for (const property in requestBodyObject) {
-      const encodedKey = encodeURIComponent(property);
-      const encodedValue = encodeURIComponent(requestBodyObject[property]);
-      formBody.push(`${encodedKey}=${encodedValue}`);
-    }
-    formBody = formBody.join("&");
-    return formBody;
-  }
-
-  async getSpotifyAccessToken() {
-    const requestBody = this.createFormBody({
-      grant_type: `client_credentials`,
-      client_id: `11bf5090af7b42848c20124d8c83fda3`,
-      client_secret: `55f3635cd31d4d97a47af46c51f20443`,
-    });
+  // #endregion GET METAL ENC CONF
   
-    const fetchResult = await fetch("https://accounts.spotify.com/api/token", {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
-      },
-      body: requestBody,
-    }).then((response) => response.json())
-      .catch((err) => console.error(err));
-  
-    if (fetchResult?.access_token) {
-      this.spotifyAccessToken = fetchResult.access_token;
-      return true;
-    } 
-    console.log(`err fetching access token!`);
-    console.log(fetchResult);
-    throw Error(`fetch result no access token`);
-  }
-
-  // #endregion
-    
+  // #region SCAN FOR ARTILIST
   /**
    * abstracte functie gedeeld door scanTextForAllowedArtists en zn broer
    * @param {*} eventNameOfTitle 
    * @param {*} slug 
    * @param {*} artistList 
-   * @returns 
+   * @param {string} scanningFor name of list being looked through. 
+   * @returns {object} key: artists, één of meer of nul
    */
-  scanTextForSomeArtistList(eventNameOfTitle, slug, artistList) {
+  scanTextForSomeArtistList(eventNameOfTitle, slug, artistList, scanningFor) {
     const toScan = eventNameOfTitle.replaceAll(/\(.*\)/g, ''); // (usa etc eruit);
     const haystack = Object.keys(artistList);
     
-    this.consoleGroup(`\nscanTextForAllowedArtists 1`, {
+    Artists._consoleGroup(`\nscanTextForAllowedArtists 1`, {  
       toScan,
       slug,
-      
+      typeofSlug: typeof slug,
+      lengthOfSlug: slug.length,
+      scanningFor,
     }, 'scanTextForSomeArtistList');
     
     const gevondenKeys = haystack
       .filter((hay) => toScan.includes(hay) || slug.includes(hay));
     
-    this.consoleGroup(`scanTextForSomeArtistList gevonden keys`, { gevondenKeys }, 'scanTextForSomeArtistList');
+    Artists._consoleGroup(`scanTextForSomeArtistList gevonden keys`, { gevondenKeys }, 'scanTextForSomeArtistList');
     
     if (!gevondenKeys || !gevondenKeys.length) {
       return {};
@@ -874,7 +926,7 @@ export default class Artists {
           [`${winKey}`]: winnaar,
         };
     
-        this.consoleGroup(`\nscanTextForSomeArtistList twee keys gevonden waarvan één slug. return:`, 
+        Artists._consoleGroup(`\nscanTextForSomeArtistList twee keys gevonden waarvan één slug. return:`, 
           { gevonden: r }, 
           'scanTextForSomeArtistList');
         
@@ -886,9 +938,18 @@ export default class Artists {
     const metalEncycloKeys = [];
     const gefilterdeAllowedArtistsKeys = [];
     gevondenKeys.forEach((key) => {
-      if (!allowedArtists[key][2]) return;
-      if (metalEncycloKeys.includes(allowedArtists[key][2])) return;
-      metalEncycloKeys.push(allowedArtists[key][2]);
+      const artist = allowedArtists[key];
+      if (!artist || artist.length < 3) {
+        console.group(`zet metal enc key op allowedArtist sTFSAL2`, {
+          key,
+          allowedArtist: artist,
+        }, `scanTextForSomeArtistList`);
+        return;
+      }
+      if (metalEncycloKeys.includes(artist[2])) {
+        return;
+      }
+      metalEncycloKeys.push(artist[2]);
       gefilterdeAllowedArtistsKeys.push(key);
     });
 
@@ -897,12 +958,17 @@ export default class Artists {
       gefilterdeAllowedArtists[key] = allowedArtists[key];
     });
     
-    this.consoleGroup(`\nscanTextForAllowedArtists na metal Enc; ret gefilderdeAllowedArtists:`, 
-      { gefilterdeAllowedArtists }, 
-      'scanTextForAllowedArtists');
+    Artists._consoleGroup(`\nscan 4 all.arts sTFSMAL43`, 
+      {
+        titel: eventNameOfTitle, 
+        gefilterdeAllowedArtists: { ...gefilterdeAllowedArtists }, 
+      }, 
+      'scanTextForAllowedArtists',
+      'magenta');
     
     return gefilterdeAllowedArtists;
   }
+  // #endregion SCAN FOR OK ARTISTS
 
   // #region SCAN FOR OK ARTISTS
   /**
@@ -912,11 +978,11 @@ export default class Artists {
    * @returns array met key:artiest
    */
   scanTextForAllowedArtists(eventNameOfTitle, slug) {
-    return this.scanTextForSomeArtistList(eventNameOfTitle, slug, this.allowedArtistsTemp);
+    return this.scanTextForSomeArtistList(eventNameOfTitle, slug, this.allowedArtists, 'allowed artists');
   }
   // #endregion SCAN FOR OK ARTISTS
 
-  // #region SCAN FOR REFUSED ARTISTS
+  // #region SCAN FOR REF.D ARTISTS
   /**
    * scant eventNameOfTitle en slug op match met allowed artists
    * @param {*} eventNameOfTitle 
@@ -924,12 +990,12 @@ export default class Artists {
    * @returns array met key:artiest
    */
   scanTextForRefusedArtists(eventNameOfTitle, slug) {
-    return this.scanTextForSomeArtistList(eventNameOfTitle, slug, this.refusedTemp);
+    return this.scanTextForSomeArtistList(eventNameOfTitle, slug, this.refused, 'refused');
   }
 
-  // #endregion SCAN FOR REFUSED ARTISTS
+  // #endregion SCAN FOR REF.D ARTISTS
 
-  // #region SCAN FOR UNCLEAR ARTISTS
+  // #region SCAN FOR UNCL ARTISTS
   /**
    * scant eventNameOfTitle en slug op match met allowed artists
    * @param {*} eventNameOfTitle 
@@ -937,10 +1003,12 @@ export default class Artists {
    * @returns array met key:artiest
    */
   scanTextForUnclearArtists(eventNameOfTitle, slug) {
-    return this.scanTextForSomeArtistList(eventNameOfTitle, slug, this.unclearArtistsTemp);
+    return this.scanTextForSomeArtistList(eventNameOfTitle, slug, this.unclearArtists, 'unclear artists');
   }
-  // #endregion SCAN FOR UNCLEAR ARTISTS
+
+  // #endregion SCAN FOR UNCL. ARTIS
  
+  // #region SC EV F ALLOW ARTISTS  
   async scanEventForAllowedArtistsAsync(eventNameOfTitle, slug, shortText, settings) {
     let toScan = eventNameOfTitle; 
     if (settings.artistsIn.includes('shortText') && shortText) {
@@ -970,7 +1038,9 @@ export default class Artists {
         : `⬜ no artists found ac4`,
     });
   }
+  // #endregion SC EV F ALLOW ARTISTS  
 
+  // #region SC EV F REF.D ARTISTS  
   async scanEventForRefusedArtistsAsync(eventNameOfTitle, slug, shortText, settings) {
     let toScan = eventNameOfTitle; 
     if (settings.artistsIn.includes('shortText') && shortText) {
@@ -1000,11 +1070,13 @@ export default class Artists {
         : `⬜ no artists found aqwe4`,
     });
   }
-  // #endregion 
+
+  // #endregion SC EV F REF.D ARTISTS  
 
   // #region API CALL FOR GENRE
   async recursiveAPICallForGenre(lijst, resultaten = []) {
-    const deze = lijst.shift();
+    const lijstCP = [...lijst];
+    const deze = lijstCP.shift();
     const APICallsRes = await this.APICallsForGenre(deze.workTitle, deze.slug);
     resultaten.push({
       title: deze.workTitle,
@@ -1012,8 +1084,8 @@ export default class Artists {
       resultaten: APICallsRes,
     });
     
-    if (lijst.length) {
-      return this.recursiveAPICallForGenre(lijst, resultaten);
+    if (lijstCP.length) {
+      return this.recursiveAPICallForGenre(lijstCP, resultaten);
     }
     return resultaten;
   }  
@@ -1065,19 +1137,21 @@ export default class Artists {
     }
 
     const metalEncycloAjaxURL = `https://www.metal-archives.com/search/ajax-advanced/searching/bands/?bandName=${metalString}&yearCreationFrom=&yearCreationTo=&status[]=1`;
-    
+    let metalEncaaData = null;
     genreRes.metalEnc = await fetch(metalEncycloAjaxURL)
       .then((res) => res.json())
       .then((r) => {
         if (!r?.iTotalRecords) return null;
-
+        metalEncaaData = r?.aaData;
         const correcteRij = (r?.aaData ?? []).find((rij) => {
           const rijNaam = rij[0].toLowerCase().replaceAll(/_/g, ' ');
-          return rijNaam.includes(eventNameOfTitle) || rijNaam.includes(eventNameOfTitle);
+          return rijNaam.includes(eventNameOfTitle);
         });
-        correcteRij[1] = correcteRij[1].toLowerCase().split(/[;\/]/);
-
-        return correcteRij;
+        if (correcteRij && correcteRij.length) {
+          correcteRij[1] = correcteRij[1].toLowerCase().split(/[;\/]/);
+          return correcteRij;
+        }
+        return null;
       })
       .catch((err) => {
         console.log(`probleem met metal enc. fetch voor ${eventNameOfTitle} naar \n${metalEncycloAjaxURL}`);
@@ -1092,53 +1166,169 @@ export default class Artists {
     if (genreRes?.spotRes?.popularity) delete genreRes.spotRes.popularity;
     if (genreRes?.spotRes?.type) delete genreRes.spotRes.type;
 
+    this.consoleGroup(`APICallsForGenre - spotify, metalenc 23`, {
+      eventNameOfTitle, 
+      slug,
+      metalString,
+      metalEncaaData,
+      spotifyRes: genreRes.spotRes,
+    });
+
     return genreRes;
   }
   // #endregion
 
-  // #region SAVE REFUSED ALLOWED EVENTS
+  // #region SAVE REFUSED EVENTS
 
-  saveRefusedEventTemp(title, slug, eventDate) {
+  saveRefusedEvent(title, slug, eventDate) {
     const tt = title.length < this.minLengthLang ? title + eventDate : title;
     const ss = slug.length < this.minLengthLang ? slug + eventDate : slug;
-    this.refusedTemp[tt] = [0, eventDate, this.today];
+
+    const titleAlRefused = Object.hasOwn(this.refused, tt);
+    if (titleAlRefused) {
+      this.refused[tt][1] = eventDate; // TODO check welke datum nieuwer
+      this.refused[tt][2] = this.today;
+    } else {
+      this.refusedTemp[tt] = [0, eventDate, this.today];  
+    }
+
     if (tt !== ss) {
-      this.refusedTemp[ss] = [1, eventDate, this.today]; 
+      const slugAlRefused = Object.hasOwn(this.refused, ss);
+      if (slugAlRefused) {
+        this.refused[ss][1] = eventDate; // TODO check welke datum nieuwer
+        this.refused[ss][2] = this.today;
+      } else {
+        this.refusedTemp[ss] = [1, eventDate, this.today];  
+      }
     }
     return this.post({
       success: true,
       data: null,
-      reason: `🟩 save worked`,
+      reason: `🟩 save refused worked`,
     });
   }
+  // #endregion SAVE REFUSED EVENTS
 
-  saveAllowedEventTemp(title, slug, eventDate) {
+  // #region SAVE ALLOWED EVENTS
+  saveAllowedEvent(title, slug, eventDate) {
+    this.consoleGroup(`saving allowed event sAE1`, { title, slug, eventDate }, 'saveAllowedEvent', 'bright');
+
     const tt = title.length < this.minLengthLang ? title + eventDate : title;
     const ss = slug.length < this.minLengthLang ? slug + eventDate : slug;
-    this.allowedEventTemp[tt] = [0, eventDate, this.today];
+
+    const titleAlAllowed = Object.hasOwn(this.allowedEvents, tt);
+    if (titleAlAllowed) {
+      this.allowedEvents[tt][1] = eventDate; // TODO check welke datum nieuwer
+      this.allowedEvents[tt][2] = this.today;
+    } else {
+      this.allowedEvents[tt] = [0, eventDate, this.today];  
+    }
+
     if (tt !== ss) {
-      this.allowedEventTemp[ss] = [1, eventDate, this.today]; 
+      const slugAlAllowed = Object.hasOwn(this.refused, ss);
+      if (slugAlAllowed) {
+        this.allowedEvents[ss][1] = eventDate; // TODO check welke datum nieuwer
+        this.allowedEvents[ss][2] = this.today;
+      } else {
+        this.allowedEvents[ss] = [1, eventDate, this.today];  
+      }
     }
     return this.post({
       success: true,
       data: null,
-      reason: `🟩 save worked`,
+      reason: `🟩 save allowed worked`,
     });
   }
 
-  saveAllowedTemp(title, slug, spotify, metalEnc, genres, eventDate) {
+  // #endregion SAVE ALLOWED EVENTS
+
+  // #region SAVE ALLOWED ARTIST
+  saveAllowedArtist(title, slug, spotify, metalEnc, genres, eventDate) {
     const tt = title.length < this.minLengthKort ? title + eventDate : title;
     const ss = slug.length < this.minLengthKort ? slug + eventDate : slug;
-    this.allowedArtistsTemp[tt] = [0, spotify, metalEnc, genres, eventDate, this.today];
-    if (tt !== ss) {
-      this.allowedArtistsTemp[ss] = [1, spotify, metalEnc, genres, eventDate, this.today];
+
+    const titleAlInArtists = Object.hasOwn(this.allowedArtists, tt);
+    if (titleAlInArtists) {
+      const oudeRecordCopy = [...this.allowedArtists[tt]];
+      if (!oudeRecordCopy[1]) {
+        oudeRecordCopy[1] = spotify;
+      }
+      if (!oudeRecordCopy[2]) {
+        oudeRecordCopy[2] = metalEnc;
+      }
+      genres.forEach((gNieuw) => {
+        if (!oudeRecordCopy[3].includes(gNieuw)) {
+          oudeRecordCopy[3].push(gNieuw);
+        }
+      });
+      oudeRecordCopy[4] = eventDate; // TODO event dates vergelijken
+      oudeRecordCopy[5] = this.today;
+      this.allowedArtists[tt] = oudeRecordCopy;
+      if (tt !== ss) {
+        const slugCopy = [
+          1,
+          oudeRecordCopy[1],
+          oudeRecordCopy[2],
+          [...oudeRecordCopy[3]],
+          oudeRecordCopy[4],
+          oudeRecordCopy[5],
+        ];
+        this.allowedArtists[ss] = slugCopy;
+      }
     }
+    
     return this.post({
       success: true,
       data: null,
-      reason: `🟩 save worked`,
+      reason: `🟩 save allowed artist worked`,
     });
   }
+  // #endregion SAVE ALLOWED ARTIST
+
+  // #region SAVE UNCLEAR ARTIST 
+  saveUnclearArtist(title, slug, spotify, metalEnc, genres, eventDate) {
+    const tt = title.length < this.minLengthKort ? title + eventDate : title;
+    const ss = slug.length < this.minLengthKort ? slug + eventDate : slug;
+
+    const titleAlInUnclear = Object.hasOwn(this.unclearArtists, tt);
+    if (titleAlInUnclear) {
+      const oudeRecordCopy = [...this.unclearArtists[tt]];
+      if (!oudeRecordCopy[1]) {
+        oudeRecordCopy[1] = spotify;
+      }
+      if (!oudeRecordCopy[2]) {
+        oudeRecordCopy[2] = metalEnc;
+      }
+      genres.forEach((gNieuw) => {
+        if (!oudeRecordCopy[3].includes(gNieuw)) {
+          oudeRecordCopy[3].push(gNieuw);
+        }
+      });
+      oudeRecordCopy[4] = eventDate; // TODO event dates vergelijken
+      oudeRecordCopy[5] = this.today;
+      this.unclearArtists[tt] = oudeRecordCopy;
+      if (tt !== ss) {
+        const slugCopy = [
+          1,
+          oudeRecordCopy[1],
+          oudeRecordCopy[2],
+          [...oudeRecordCopy[3]],
+          oudeRecordCopy[4],
+          oudeRecordCopy[5],
+        ];
+        this.unclearArtists[ss] = slugCopy;
+      }
+    }
+    
+    return this.post({
+      success: true,
+      data: null,
+      reason: `🟩 save unclear artist worked`,
+    });
+  }
+  // #endregion SAVE UNCLEAR ARTIST
+
+  // #region PERSISTING
 
   fromArrayToTwoColumnRows(a, i) {
     let b = a.length > 20 
@@ -1154,136 +1344,74 @@ export default class Artists {
     return b;
   }
 
+  /**
+   * Description placeholder
+   *
+   * @returns {*}
+   */
   persistNewRefusedAndRockArtists() {
+    const todaysArtists = this.getRecordsOfToday('artists');
     const artistKeys = Object
-      .entries(this.allowedArtistsTemp)
-      .map(([key, value]) => {
-        if (value[0] === 1) return key;
-        return false;
-      }).filter((a) => a);
+      .keys(todaysArtists);
     const eventsKeys = Object
-      .entries(this.allowedEventTemp)
-      .map(([key, value]) => {
-        if (value[0] === 1) return key;
-        return false;
-      }).filter((a) => a);
+      .keys(this.getRecordsOfToday('allowedEvents'));
     const refusedKeys = Object
-      .entries(this.refusedTemp)
-      .map(([key, value]) => {
-        if (value[0] === 1) return key;
-        return false;
-      }).filter((a) => a);
+      .keys(this.getRecordsOfToday('refused'));
     const unclearArtistsKeys = Object
-      .entries(this.unclearArtistsTemp)
-      .map(([key, value]) => {
-        if (value[0] === 1) return key;
-        return false;
-      }).filter((a) => a);
-    this.consoleGroup(`artists, events, refused pNRARA1`, {
+      .keys(this.getRecordsOfToday('unclear'));
+
+    this.consoleGroup(`artists, allowedEvents, refused, unclear pNRARA1`, {
       artists: `${artistKeys.map(this.fromArrayToTwoColumnRows).join(' ')}\n`,
       events: `${eventsKeys.map(this.fromArrayToTwoColumnRows).join(' ')}\n`,
       refused: `${refusedKeys.map(this.fromArrayToTwoColumnRows).join(' ')}\n`,
       unclearArtists: `${unclearArtistsKeys.map(this.fromArrayToTwoColumnRows).join(' ')}\n`,
     }, 'persistNewRefusedAndRockArtists', 'fggreen');
     
-    this.consoleGroup('new artists data pNRARA2', this.allowedArtistsTemp, 'persistNewRefusedAndRockArtists', 'fggreen');
+    // this.consoleGroup('new artists data pNRARA2', todaysArtists, 'persistNewRefusedAndRockArtists', 'fggreen');
     
     if (!this.storeWritePermission) {
-      if (this.funcsToDebug.persistNewRefusedAndRockArtists) {
-        console.log('\x1b[33m%s\x1b[0m', '//////////////////');
-        console.log('----------------------');
-        console.log('\x1b[36m%s\x1b[0m', 'LET OP');
-        console.log('\x1b[36m%s\x1b[0m', 'de artiesten DB schrijft nog niet');
-        console.log('---------------------------');
-        console.log('\x1b[33m%s\x1b[0m', '//////////////////');
+      if (Artists.funcsToDebug.persistNewRefusedAndRockArtists) {
+        this.consoleGroup('////////////////// pNRARA3', {
+          title: 'LET OP',
+          onder: 'de artiesten DB schrijft nog niet',
+        }, 'persistNewRefusedAndRockArtists', 'fgyellow');
       }
-      return;
+      return this.post({
+        success: null,
+        data: null,
+        reason: `⬜ persisting blocked by setting "storeWritePermission"`,
+      });
     } 
-    Object.entries(this.allowedArtistsTemp).forEach(([key, values]) => {
-      if (this.allowedArtists[key]) {
-        const nieuweRecord = [...this.allowedArtists[key]];
-        // eslint-disable-next-line no-plusplus
-        for (let i = 0; i < values.length; i++) {
-          if (values[i]) {
-            nieuweRecord[i] = values[i];
-          }
-        }
-        this.allowedArtists[key] = nieuweRecord;
-        return;
-      } 
-      this.allowedArtists[key] = values;
-    });    
+    if (this.storeSaveBackup) {
+      const timeStamp = (new Date()).toISOString().replaceAll(/[:T-]/g, '').substring(0, 14);
+      fs.cpSync(`${this.storePath}/refused.json`, `${this.storePath}/refused-${timeStamp}.json`);
+      fs.cpSync(`${this.storePath}/allowed-artists.json`, `${this.storePath}/allowed-artists-${timeStamp}.json`);
+      fs.cpSync(`${this.storePath}/allowed-events.json`, `${this.storePath}/allowed-events-${timeStamp}.json`);
+      fs.cpSync(`${this.storePath}/unclear-artists.json`, `${this.storePath}/unclear-artists-${timeStamp}.json`);
+      this.consoleGroup('Oude jsons backup pNRARA4', {
+        title: `Oude JSON gebackupt onder timestamp ${timeStamp}`,
+      }, 'persistNewRefusedAndRockArtists', 'fgwhite');
+    }
 
-    Object.entries(this.refusedTemp).forEach(([key, values]) => {
-      if (this.refused[key]) {
-        const nieuweRecord = [...this.refused[key]];
-        if (values[1]) {
-          nieuweRecord[1] = values[1];
-        }
-        if (values[2]) {
-          nieuweRecord[2] = values[2];
-        }
-        if (values[3]) {
-          nieuweRecord[3] = values[3];
-        }
-        
-        this.refused[key] = nieuweRecord;
-        return;
-      } 
-      this.refused[key] = values;
-    });
-
-    Object.entries(this.allowedEventTemp).forEach(([key, values]) => {
-      if (this.allowedEvents[key]) {
-        const nieuweRecord = [...this.allowedEvents[key]];
-        if (values[1]) {
-          nieuweRecord[1] = values[1];
-        }
-        if (values[2]) {
-          nieuweRecord[2] = values[2];
-        }
-        if (values[3]) {
-          nieuweRecord[3] = values[3];
-        }
-        
-        this.allowedEvents[key] = nieuweRecord;
-        return;
-      } 
-      this.allowedEvents[key] = values;
-    });
-
-    Object.entries(this.unclearArtistsTemp).forEach(([key, values]) => {
-      if (this.unclearArtists[key]) {
-        const nieuweRecord = [...this.unclearArtists[key]];
-        if (values[1]) {
-          nieuweRecord[1] = values[1];
-        }
-        if (values[2]) {
-          nieuweRecord[2] = values[2];
-        }
-        if (values[3]) {
-          nieuweRecord[3] = values[3];
-        }
-        
-        this.unclearArtists[key] = nieuweRecord;
-        return;
-      } 
-      this.unclearArtists[key] = values;
-    });
-    
     fs.writeFileSync(`${this.storePath}/refused.json`, JSON.stringify(this.refused, null, 2), 'utf-8');
     fs.writeFileSync(`${this.storePath}/allowed-artists.json`, JSON.stringify(this.allowedArtists, null, 2), 'utf-8');
     fs.writeFileSync(`${this.storePath}/allowed-events.json`, JSON.stringify(this.allowedEvents, null, 2), 'utf-8');
     fs.writeFileSync(`${this.storePath}/unclear-artists.json`, JSON.stringify(this.unclearArtists, null, 2), 'utf-8');
+
+    return this.post({
+      success: true,
+      data: null,
+      reason: `🟩 persisting success`,
+    });
   }
 
-  // #endregion
+  // #endregion PERSISTING
 
   // #region ERR, POST, CONSGROUP
   /**
    * Verpakt een error in het 'type' van de messages.
    * @param {Error} err 
-   * @returns {success:string,data:object,reason:string}
+   * @returns {JSON} success:string,data:object,reason:string
    */
   error(err) {
     return this.post({
@@ -1295,6 +1423,13 @@ export default class Artists {
     });
   }
 
+  /**
+   * Description placeholder
+   *
+   * @param {*} message
+   * @param {boolean} [consoleMessage=false]
+   * @returns {*}
+   */
   post(message, consoleMessage = false) {
     const hasSuccess = Object.prototype.hasOwnProperty.call(message, 'success');
     const hasData = Object.prototype.hasOwnProperty.call(message, 'data');
@@ -1309,8 +1444,20 @@ export default class Artists {
     throw Error('message corrupt');
   }
 
+  /**
+   * Description placeholder
+   *
+   * @param {*} title
+   * @param {*} toConsole
+   * @param {string} [funcNaam='']
+   * @param {string} [kleur='fgwhite']
+   */
   consoleGroup(title, toConsole, funcNaam = '', kleur = 'fgwhite') {
-    if (!this.funcsToDebug[funcNaam]) return;
+    return Artists._consoleGroup(title, toConsole, funcNaam, kleur);
+  }
+
+  static _consoleGroup(title, toConsole, funcNaam = '', kleur = 'fgwhite') {
+    if (!Artists.funcsToDebug[funcNaam]) return;
     const titelKleur = consoleKleuren[kleur];
     console.group(titelKleur, `\n${title} ${funcNaam.padStart(80 - title.length, ' * ')}`);
     if (toConsole !== null && typeof toConsole === 'object') {
@@ -1320,9 +1467,27 @@ export default class Artists {
         const k = keys[i];
         if (typeof toConsole[k] === 'string') {
           console.log('\x1b[33m%s\x1b[0m', `${k}: ${toConsole[k]}`);
-        } else {
+        } else if (typeof toConsole[k] === 'undefined') {
+          console.log('\x1b[33m%s\x1b[0m', `${k}: UNDEFINED`);
+        } else if (Array.isArray(toConsole[k])) {
           console.log('\x1b[33m%s\x1b[0m', k);
           console.log(toConsole[k]);
+        } else if (typeof toConsole[k] === 'object' && toConsole[k] !== null) {
+          console.log('\x1b[33m%s\x1b[0m', {
+            _naamVanGelogdeVariabele1: k,
+            ...toConsole[k],
+          });          
+        } else {
+          console.log({
+            _naamGelogdeVariabele2: k,
+            waarde: toConsole[k],
+            typeOf: typeof toConsole[k],
+          });
+          console.log('\x1b[33m%s\x1b[0m', {
+            _naamGelogdeVariabele3: k,
+            waarde: toConsole[k],
+            typeOf: typeof toConsole[k],
+          });
         }
       }
     }

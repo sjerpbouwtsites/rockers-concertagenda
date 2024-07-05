@@ -49,7 +49,6 @@ scraper.mainPage = async function () {
     // eslint-disable-next-line no-shadow
     ({ workerData, unavailabiltyTerms }) =>
       Array.from(document.querySelectorAll('#skewEl article'))
-        .filter((a, i) => i < 5)
         .map((eventEl) => {
           const title = eventEl.querySelector('h2')?.textContent.trim() ?? null;
 
@@ -75,7 +74,6 @@ scraper.mainPage = async function () {
   );
 
   rawEvents = rawEvents
-    // .filter((e, i) => i >= 10 && i < 15)
     .map(mapToStart)
     .map(mapToShortDate)
     .map(workTitleAndSlug)
