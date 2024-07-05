@@ -1,207 +1,469 @@
 [
   {
-    "door": "2024-07-08T18:00:00",
-    "start": "2024-07-08T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/zz-top",
-    "title": "Zz top",
-    "location": "afaslive",
-    "price": 85.12,
-    "longText": "../public/texts/afaslive/L3d3dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvenotdG9w.html",
-    "image": "../public/event-images/afaslive/L3d3dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvenotdG9w",
-    "soldOut": true,
-    "eventGenres": null,
+    "start": "2024-07-10T21:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-v11-merrimack-gevurah/",
+    "title": "Baroeg On Tour @V11: Merrimack + Gevurah",
+    "location": "baroeg",
+    "price": 14,
+    "shortText": "Zesde album in 2024.",
+    "longText": "../public/texts/baroeg/b24tdG91ci12MTEtbWVycmltYWNrLWdldnVyYWgv.html",
+    "image": "../public/event-images/baroeg/b24tdG91ci12MTEtbWVycmltYWNrLWdldnVyYWgv",
+    "soldOut": false,
+    "eventGenres": [
+      "black"
+    ],
     "artists": {
-      "zz top": {
-        "s": "2AM4ilv6UzW0uMRuqKtDgN",
-        "l": "zz%20top",
+      "merrimack": {
+        "s": "3XWKabUW6Y9pm9vyNGlrhV",
+        "l": "merrimack",
         "g": [
-          "album rock",
-          "blues rock",
-          "classic rock",
-          "hard rock",
-          "rock"
+          "black metal",
+          "french black metal",
+          "black metal",
+          "black"
+        ]
+      },
+      "gevurah": {
+        "s": "02V1Su6xHUb5qN7fKcUkgh",
+        "l": "gevurah",
+        "g": [
+          "metal noir quebecois",
+          "voidgaze",
+          "black metal",
+          "black"
+        ]
+      },
+      "zesde album in .": {
+        "s": null,
+        "l": "zesde album in .",
+        "g": [
+          "black"
         ]
       }
     }
   },
   {
-    "door": "2024-08-04T20:00:00",
-    "start": "2024-08-04T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/korn",
-    "title": "Korn",
-    "location": "afaslive",
-    "price": 88.48,
-    "longText": "../public/texts/afaslive/Oi8vd3d3LmFmYXNsaXZlLm5sL2FnZW5kYS9rb3Ju.html",
-    "image": "../public/event-images/afaslive/Oi8vd3d3LmFmYXNsaXZlLm5sL2FnZW5kYS9rb3Ju",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
-    "door": "2024-09-19T20:00:00",
-    "start": "2024-09-19T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/epica-show2",
-    "title": "Epica",
-    "location": "afaslive",
-    "price": 95.2,
-    "longText": "../public/texts/afaslive/YWZhc2xpdmUubmwvYWdlbmRhL2VwaWNhLXNob3cy.html",
-    "image": "../public/event-images/afaslive/YWZhc2xpdmUubmwvYWdlbmRhL2VwaWNhLXNob3cy",
+    "start": "2024-07-18T16:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/eendracht-festival-rotown-thrilled-provisional-lui-surreal-the-gatekeepers-m-u-g-cheapo-cheapo/",
+    "title": "Eendracht Festival @Rotown: Thrilled ",
+    "location": "baroeg",
+    "price": 0,
+    "shortText": " Provisional  +  Lui Surreal & The Gatekeepers  +  M.U.G  +  Cheapo Cheapo Dertiende editie van Eendracht Festival.",
+    "longText": "../public/texts/baroeg/dGVrZWVwZXJzLW0tdS1nLWNoZWFwby1jaGVhcG8v.html",
+    "image": "../public/event-images/baroeg/dGVrZWVwZXJzLW0tdS1nLWNoZWFwby1jaGVhcG8v",
     "soldOut": false,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
-    "door": "2024-09-20T20:00:00",
-    "start": "2024-09-20T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/epica",
-    "title": "Epica",
-    "location": "afaslive",
-    "price": 95.2,
-    "longText": "../public/texts/afaslive/Ly93d3cuYWZhc2xpdmUubmwvYWdlbmRhL2VwaWNh.html",
-    "image": "../public/event-images/afaslive/Ly93d3cuYWZhc2xpdmUubmwvYWdlbmRhL2VwaWNh",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
-    "door": "2024-09-21T20:00:00",
-    "start": "2024-09-21T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/heilung",
-    "title": "Heilung",
-    "location": "afaslive",
-    "price": 58.8,
-    "longText": "../public/texts/afaslive/d3d3LmFmYXNsaXZlLm5sL2FnZW5kYS9oZWlsdW5n.html",
-    "image": "../public/event-images/afaslive/d3d3LmFmYXNsaXZlLm5sL2FnZW5kYS9oZWlsdW5n",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
-    "door": "2024-10-05T18:30:00",
-    "start": "2024-10-05T18:30:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/powerwolf",
-    "title": "Powerwolf",
-    "location": "afaslive",
-    "price": 72.8,
-    "longText": "../public/texts/afaslive/dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvcG93ZXJ3b2xm.html",
-    "image": "../public/event-images/afaslive/dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvcG93ZXJ3b2xm",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
-    "door": "2024-11-18T20:00:00",
-    "start": "2024-11-18T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/sleep-token",
-    "title": "Sleep Token",
-    "location": "afaslive",
-    "price": 59.36,
-    "longText": "../public/texts/afaslive/YWZhc2xpdmUubmwvYWdlbmRhL3NsZWVwLXRva2Vu.html",
-    "image": "../public/event-images/afaslive/YWZhc2xpdmUubmwvYWdlbmRhL3NsZWVwLXRva2Vu",
-    "soldOut": true,
-    "eventGenres": null,
+    "eventGenres": [
+      "hardcore punk",
+      "indie",
+      "metal",
+      "post-punk",
+      "punk",
+      "shoegaze"
+    ],
     "artists": {
-      "sleep token": {
-        "s": "2n2RSaZqBuUUukhbLlpnE6",
-        "l": "sleep%20token",
+      "thrilled": {
+        "s": "2e3Cc5D8y3I0GOvitjshw1",
+        "l": "thrilled",
         "g": [
-          "prog metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-11-24T20:00:00",
-    "start": "2024-11-24T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/dream-theater",
-    "title": "Dream Theater",
-    "location": "afaslive",
-    "price": 112,
-    "longText": "../public/texts/afaslive/YXNsaXZlLm5sL2FnZW5kYS9kcmVhbS10aGVhdGVy.html",
-    "image": "../public/event-images/afaslive/YXNsaXZlLm5sL2FnZW5kYS9kcmVhbS10aGVhdGVy",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "dream theater": {
-        "s": "2aaLAng2L2aWD2FClzwiep",
-        "l": "dream%20theater",
-        "g": [
+          "hardcore punk",
+          "indie",
           "metal",
-          "progressive metal",
-          "progressive metal"
+          "post-punk",
+          "punk",
+          "shoegaze"
+        ]
+      },
+      "provisional": {
+        "s": "3PqU57mJ5Snc2g4vLOXK68",
+        "l": "provisional",
+        "g": [
+          "hardcore punk",
+          "indie",
+          "metal",
+          "post-punk",
+          "punk",
+          "shoegaze"
+        ]
+      },
+      "lui surreal & the gatekeepers": {
+        "s": null,
+        "l": "lui surreal & the gatekeepers",
+        "g": [
+          "hardcore punk",
+          "indie",
+          "metal",
+          "post-punk",
+          "punk",
+          "shoegaze"
+        ]
+      },
+      "m.u.g": {
+        "s": null,
+        "l": "m.u.g",
+        "g": [
+          "grindcore",
+          "death metal",
+          "hardcore punk",
+          "indie",
+          "metal",
+          "post-punk",
+          "punk",
+          "shoegaze"
+        ]
+      },
+      "cheapo cheapo": {
+        "s": null,
+        "l": "cheapo cheapo",
+        "g": [
+          "hardcore punk",
+          "indie",
+          "metal",
+          "post-punk",
+          "punk",
+          "shoegaze"
+        ]
+      },
+      "cheapo cheapo dertiende editie van eendracht festival.": {
+        "s": null,
+        "l": "cheapo cheapo dertiende editie van eendracht festival.",
+        "g": [
+          "hardcore punk",
+          "indie",
+          "metal",
+          "post-punk",
+          "punk",
+          "shoegaze"
         ]
       }
     }
   },
   {
-    "door": "2025-01-28T20:00:00",
-    "start": "2025-01-28T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/pantera",
-    "title": "Pantera",
-    "location": "afaslive",
-    "price": 100.8,
-    "longText": "../public/texts/afaslive/d3d3LmFmYXNsaXZlLm5sL2FnZW5kYS9wYW50ZXJh.html",
-    "image": "../public/event-images/afaslive/d3d3LmFmYXNsaXZlLm5sL2FnZW5kYS9wYW50ZXJh",
+    "start": "2024-08-03T19:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-de-beuk-this-is-hell/",
+    "title": "Baroeg On Tour @De Beuk: This Is Hell",
+    "location": "baroeg",
+    "price": 14,
+    "shortText": "FFO: American Nightmare, VERSE, Ensign.",
+    "longText": "../public/texts/baroeg/LW9uLXRvdXItZGUtYmV1ay10aGlzLWlzLWhlbGwv.html",
+    "image": "../public/event-images/baroeg/LW9uLXRvdXItZGUtYmV1ay10aGlzLWlzLWhlbGwv",
     "soldOut": false,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
-    "door": "2025-02-04T20:00:00",
-    "start": "2025-02-04T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/papa-roach",
-    "title": "Papa Roach",
-    "location": "afaslive",
-    "price": 58.24,
-    "longText": "../public/texts/afaslive/LmFmYXNsaXZlLm5sL2FnZW5kYS9wYXBhLXJvYWNo.html",
-    "image": "../public/event-images/afaslive/LmFmYXNsaXZlLm5sL2FnZW5kYS9wYXBhLXJvYWNo",
-    "soldOut": false,
-    "eventGenres": null,
+    "eventGenres": [
+      "hardcore punk"
+    ],
     "artists": {
-      "papa roach": {
-        "s": "4RddZ3iHvSpGV4dvATac9X",
-        "l": "papa%20roach",
+      "this is hell": {
+        "s": "50M1gONaoebB1DFYi2Ws9o",
+        "l": "this is hell",
         "g": [
-          "alternative metal",
-          "nu metal",
-          "rap metal",
-          "rap rock",
-          "rock"
+          "chaotic hardcore",
+          "long island punk",
+          "melodic hardcore",
+          "nyhc",
+          "thrash metal",
+          "crossover",
+          "hardcore",
+          "hardcore punk"
+        ]
+      },
+      "ffo: american nightmare, verse, ensign.": {
+        "s": null,
+        "l": "ffo: american nightmare, verse, ensign.",
+        "g": [
+          "hardcore punk"
         ]
       }
     }
   },
   {
-    "door": "2025-02-11T20:00:00",
-    "start": "2025-02-11T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/bullet-for-my-valentine-trivium",
-    "title": "Bullet For My Valentine & Trivium",
-    "location": "afaslive",
-    "price": 88.48,
-    "longText": "../public/texts/afaslive/dWxsZXQtZm9yLW15LXZhbGVudGluZS10cml2aXVt.html",
-    "image": "../public/event-images/afaslive/dWxsZXQtZm9yLW15LXZhbGVudGluZS10cml2aXVt",
+    "start": "2024-08-11T15:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-maassilo-tales-from-tftp-xl-d-r-i-demented-are-go/",
+    "title": "Baroeg On Tour @Maassilo: Tales From The Punx XL: D.R.I. ",
+    "location": "baroeg",
+    "price": 32.5,
+    "shortText": " GBH  +  Demented Are Go  +  The Young Ones  +  Escalpo  +  Traumatizer Hollands puikste punkfeest pakt het ditmaal groot aan.",
+    "longText": "../public/texts/baroeg/dGZ0cC14bC1kLXItaS1kZW1lbnRlZC1hcmUtZ28v.html",
+    "image": "../public/event-images/baroeg/dGZ0cC14bC1kLXItaS1kZW1lbnRlZC1hcmUtZ28v",
     "soldOut": false,
-    "eventGenres": null,
-    "artists": null
+    "eventGenres": [
+      "crossover",
+      "hardcore",
+      "psychobilly",
+      "punk",
+      "thrash"
+    ],
+    "artists": {
+      "d.r.i.": {
+        "s": "6eKzDvHhJgMtcaOrvEXCTv",
+        "l": "d.r.i.",
+        "g": [
+          "crossover thrash",
+          "hardcore punk",
+          "old school thrash",
+          "punk",
+          "thrash core",
+          "thrash metal",
+          "hardcore punk, thrash metal",
+          "crossover",
+          "crossover",
+          "hardcore",
+          "psychobilly",
+          "punk",
+          "thrash"
+        ]
+      },
+      "demented are go": {
+        "s": "7fvToIpjDfwtLhAoZdVF5W",
+        "l": "demented are go",
+        "g": [
+          "deathgrass",
+          "psychobilly",
+          "crossover",
+          "hardcore",
+          "psychobilly",
+          "punk",
+          "thrash"
+        ]
+      },
+      "the young ones": {
+        "s": "4H33gMULrlY7pIWJnwYTpy",
+        "l": "the young ones",
+        "g": [
+          "crossover",
+          "hardcore",
+          "psychobilly",
+          "punk",
+          "thrash"
+        ]
+      },
+      "escalpo": {
+        "s": "63FLvDmVnydhi1839ZRuc2",
+        "l": "escalpo",
+        "g": [
+          "death metal",
+          "punk",
+          "crossover",
+          "hardcore",
+          "psychobilly",
+          "punk",
+          "thrash"
+        ]
+      },
+      "traumatizer": {
+        "s": "7zjBOWru8RBRZ1dQQk0B4g",
+        "l": "traumatizer",
+        "g": [
+          "lowlands hardcore",
+          "crossover",
+          "hardcore",
+          "psychobilly",
+          "punk",
+          "thrash"
+        ]
+      },
+      "traumatizer hollands puikste punkfeest pakt het ditmaal groot aan.": {
+        "s": null,
+        "l": "traumatizer hollands puikste punkfeest pakt het ditmaal groot aan.",
+        "g": [
+          "crossover",
+          "hardcore",
+          "psychobilly",
+          "punk",
+          "thrash"
+        ]
+      }
+    }
   },
   {
-    "door": "2025-05-22T20:00:00",
-    "start": "2025-05-22T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/steven-wilson",
-    "title": "Steven Wilson",
-    "location": "afaslive",
-    "price": 72.8,
-    "longText": "../public/texts/afaslive/YXNsaXZlLm5sL2FnZW5kYS9zdGV2ZW4td2lsc29u.html",
-    "image": "../public/event-images/afaslive/YXNsaXZlLm5sL2FnZW5kYS9zdGV2ZW4td2lsc29u",
+    "start": "2024-09-14T12:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/baroeg-open-air-2024/",
+    "title": "Baroeg Open Air 2024",
+    "location": "baroeg",
+    "price": 9.99,
+    "shortText": "Zaterdag 14 september 2024 vindt de vijftiende editie van Baroeg Open Air plaats in het Rotterdamse Zuiderpark.",
+    "longText": "../public/texts/baroeg/cm9kdWN0aWUvYmFyb2VnLW9wZW4tYWlyLTIwMjQv.html",
+    "image": "../public/event-images/baroeg/cm9kdWN0aWUvYmFyb2VnLW9wZW4tYWlyLTIwMjQv",
     "soldOut": false,
-    "eventGenres": null,
+    "eventGenres": [
+      "alternative",
+      "electronic",
+      "metal",
+      "punk"
+    ],
     "artists": {
-      "steven wilson": {
-        "s": "4X42BfuhWCAZ2swiVze9O0",
-        "l": "steven%20wilson",
+      "baroeg open air": {
+        "s": null,
+        "l": "baroeg open air",
         "g": [
-          "progressive metal",
-          "progressive rock"
+          "alternative",
+          "electronic",
+          "metal",
+          "punk"
+        ]
+      },
+      "zaterdag 14 september vindt de vijftiende editie van baroeg open air plaats in het rotterdamse zuiderpark.": {
+        "s": null,
+        "l": "zaterdag 14 september vindt de vijftiende editie van baroeg open air plaats in het rotterdamse zuiderpark.",
+        "g": [
+          "alternative",
+          "electronic",
+          "metal",
+          "punk"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2024-10-05T19:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-de-beuk-sear-bliss-rivers-ablaze/",
+    "title": "Baroeg On Tour @De Beuk: Sear Bliss ",
+    "location": "baroeg",
+    "price": 14,
+    "shortText": " Rivers Ablaze Black metal met koperblazers.",
+    "longText": "../public/texts/baroeg/YmV1ay1zZWFyLWJsaXNzLXJpdmVycy1hYmxhemUv.html",
+    "image": "../public/event-images/baroeg/YmV1ay1zZWFyLWJsaXNzLXJpdmVycy1hYmxhemUv",
+    "soldOut": false,
+    "eventGenres": [
+      "black"
+    ],
+    "artists": {
+      "sear bliss": {
+        "s": "5h1vktUNKEYPDaQUUaOKAA",
+        "l": "sear bliss",
+        "g": [
+          "atmospheric black metal",
+          "black metal",
+          "hungarian black metal",
+          "hungarian metal",
+          "slavic metal",
+          "symphonic black metal",
+          "atmospheric black metal",
+          "black"
+        ]
+      },
+      "rivers ablaze": {
+        "s": "0DZSYoZluja08JRF1GN1Wj",
+        "l": "rivers ablaze",
+        "g": [
+          "progressive black",
+          "death metal",
+          "black"
+        ]
+      },
+      "rivers ablaze black metal met koperblazers.": {
+        "s": null,
+        "l": "rivers ablaze black metal met koperblazers.",
+        "g": [
+          "black"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2024-11-16T19:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-grounds-dutch-doom-days-presents-draconian-nailed-to-obscurity-fragment-soul/",
+    "title": "Baroeg On Tour @Grounds Dutch Doom Days presents: Draconian ",
+    "location": "baroeg",
+    "price": 26,
+    "shortText": " Nailed To Obscurity  +  Fragment Soul Draconian bestaat 30 jaar.",
+    "longText": "../public/texts/baroeg/ZWQtdG8tb2JzY3VyaXR5LWZyYWdtZW50LXNvdWwv.html",
+    "image": "../public/event-images/baroeg/ZWQtdG8tb2JzY3VyaXR5LWZyYWdtZW50LXNvdWwv",
+    "soldOut": false,
+    "eventGenres": [
+      "doom",
+      "gothic metal",
+      "metal",
+      "progressive"
+    ],
+    "artists": {
+      "draconian": {
+        "s": "1TX9g1uSl0B0DQIE9lBqmU",
+        "l": "draconian",
+        "g": [
+          "doom metal",
+          "gothic metal",
+          "gothic symphonic metal",
+          "swedish doom metal",
+          "swedish metal",
+          "gothic",
+          "doom",
+          "death metal",
+          "doom",
+          "gothic metal",
+          "metal",
+          "progressive"
+        ]
+      },
+      "nailed to obscurity": {
+        "s": "3VKWvDnlwWaBI2uzMTjuSJ",
+        "l": "nailed to obscurity",
+        "g": [
+          "finnish metal",
+          "melodic death metal",
+          "melodic doom",
+          "death metal",
+          "doom",
+          "gothic metal",
+          "metal",
+          "progressive"
+        ]
+      },
+      "fragment soul": {
+        "s": "2VsKiASSkRwzniSx3o6vL4",
+        "l": "fragment soul",
+        "g": [
+          "gothic doom",
+          "doom",
+          "gothic metal",
+          "metal",
+          "progressive"
+        ]
+      },
+      "fragment soul draconian bestaat 30 jaar.": {
+        "s": null,
+        "l": "fragment soul draconian bestaat 30 jaar.",
+        "g": [
+          "doom",
+          "gothic metal",
+          "metal",
+          "progressive"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2024-11-30T19:30:00",
+    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-soundville-wavefest-presents-vision-video/",
+    "title": "Baroeg On Tour @SoundVille: Wavefest presents: Vision Video ",
+    "location": "baroeg",
+    "price": 14,
+    "shortText": " Lifeless Past Creëert een verfrissend en modern geluid binnen het postpunk genre.",
+    "longText": "../public/texts/baroeg/YXZlZmVzdC1wcmVzZW50cy12aXNpb24tdmlkZW8v.html",
+    "image": "../public/event-images/baroeg/YXZlZmVzdC1wcmVzZW50cy12aXNpb24tdmlkZW8v",
+    "soldOut": false,
+    "eventGenres": [
+      "post-punk"
+    ],
+    "artists": {
+      "vision video": {
+        "s": null,
+        "l": "vision video",
+        "g": [
+          "post-punk"
+        ]
+      },
+      "lifeless past": {
+        "s": "1RlqgEBCNfaHMav4mzI4O7",
+        "l": "lifeless past",
+        "g": [
+          "dutch post-punk",
+          "post-punk"
+        ]
+      },
+      "lifeless past creëert een verfrissend en modern geluid binnen het postpunk genre.": {
+        "s": null,
+        "l": "lifeless past creëert een verfrissend en modern geluid binnen het postpunk genre.",
+        "g": [
+          "post-punk"
         ]
       }
     }

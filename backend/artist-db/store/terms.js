@@ -182,7 +182,9 @@ const wikipediaGoodGenres = [
 
 const goodCategories = [
   "black death",
+  "metal noir",
   "black/death metal",
+  "voidgaze",
   "black/thrash metal",
   "blackened screamo",
   "brutal deathcore",

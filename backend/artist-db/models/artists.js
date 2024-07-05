@@ -70,18 +70,18 @@ export default class Artists {
   spotifyAccessToken = null;
 
   static funcsToDebug = {
-    harvestArtists: false,
+    harvestArtists: true,
     scanTextForAllowedArtists: false,
     getSpotifyArtistSearch: false,
     persistNewRefusedAndRockArtists: false,
     checkExplicitEventCategories: false,
     saveAllowedEvent: false,
-    scanTextForSomeArtistList: true,
+    scanTextForSomeArtistList: false,
     getRefused: false,
     _do: false,
     APICallsForGenre: false,
     getMetalEncyclopediaConfirmation: false,
-    getSpotifyConfirmation: true,
+    getSpotifyConfirmation: false,
   };
 
   // #endregion
@@ -94,7 +94,7 @@ export default class Artists {
    * of oude jsons voor nieuwe schrijven gekopieerd worden naar bv allowed-events-20230101202020
    * schrijft geen backups zonder storeWritePermission
    */
-  storeSaveBackup = true;
+  storeSaveBackup = false;
 
   /**
    * Creates an instance of Artists.
@@ -997,18 +997,15 @@ export default class Artists {
     const artistListCopy = { ...artistList };
     const haystack = Object.keys(artistListCopy);
     
-    this.consoleGroup(`\nscanTextForAllowedArtists atFSAL22`, {  
-      toScan,
-      slug,
-      typeofSlug: typeof slug,
-      lengthOfSlug: slug.length,
-      scanningFor,
-    }, 'scanTextForSomeArtistList', 'blauw');
-    
     const gevondenKeys = haystack
       .filter((hay) => toScan.includes(hay) || slug.includes(hay));
     
-    this.consoleGroup(`scanTextForSomeArtistList gevonden keys atFSAL23`, { gevondenKeys }, 'scanTextForSomeArtistList', 'blauw');
+    this.consoleGroup(`\nscanTextForAllowedArtists atFSAL22`, {  
+      toScan,
+      slug,
+      scanningFor,
+      gevondenKeys,
+    }, 'scanTextForSomeArtistList', 'blauw');
     
     if (!gevondenKeys || !gevondenKeys.length) {
       return {};
@@ -1042,26 +1039,26 @@ export default class Artists {
         return r;
       }
     }
-
-    // metalEncyclo is gelijk bij title & slug
-    const metalEncycloKeys = [];
     const gefilterdeFoundArtistsKeys = [];
-    gevondenKeys.forEach((key) => {
-      if (!Object.hasOwn(key, artistListCopy)) {
-        this.consoleGroup(`zet metal enc key op allowedArtist TODO sTFSAL24`, {
-          key,
-          todo: "TODO GEEN IDEE WAT DIT WAS!",
-          scanningFor,
-        }, 'scanTextForSomeArtistList', 'blauw');
-        return;
-      }
-      const artist = artistListCopy[key];
-      if (metalEncycloKeys.includes(artist[2])) {
-        return;
-      }
-      metalEncycloKeys.push(artist[2]);
-      gefilterdeFoundArtistsKeys.push(key);
-    });
+
+    // // metalEncyclo is gelijk bij title & slug
+    // const metalEncycloKeys = [];
+    // gevondenKeys.forEach((key) => {
+    //   if (!Object.hasOwn(key, artistListCopy)) {
+    //     this.consoleGroup(`zet metal enc key op allowedArtist TODO sTFSAL24`, {
+    //       key,
+    //       todo: "TODO GEEN IDEE WAT DIT WAS!",
+    //       scanningFor,
+    //     }, 'scanTextForSomeArtistList', 'blauw');
+    //     return;
+    //   }
+    //   const artist = artistListCopy[key];
+    //   if (metalEncycloKeys.includes(artist[2])) {
+    //     return;
+    //   }
+    //   metalEncycloKeys.push(artist[2]);
+    //   gefilterdeFoundArtistsKeys.push(key);
+    // });
 
     const gefilterdeFoundArtists = {};
     gefilterdeFoundArtistsKeys.forEach((key) => {
@@ -1072,7 +1069,7 @@ export default class Artists {
       titel: eventNameOfTitle, 
       gefilterdeFoundArtists: { ...gefilterdeFoundArtists }, 
       scanningFor,
-    }, 'scanTextForSomeArtistList', 'blue');
+    }, 'scanTextForSomeArtistList', 'blauw');
     
     return gefilterdeFoundArtists;
   }

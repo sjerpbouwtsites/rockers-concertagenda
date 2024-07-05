@@ -1,79 +1,5 @@
 [
   {
-    "start": "2024-07-02T19:00:00",
-    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-maassilo-vader-bio-cancer-warside/",
-    "title": "Baroeg On Tour @Maassilo: Vader ",
-    "location": "baroeg",
-    "price": 26,
-    "shortText": " Bio-Cancer  +  Warside 20e keer dat Vader op een door Baroeg georganiseerd evenement staat.",
-    "longText": "../public/texts/baroeg/c2lsby12YWRlci1iaW8tY2FuY2VyLXdhcnNpZGUv.html",
-    "image": "../public/event-images/baroeg/c2lsby12YWRlci1iaW8tY2FuY2VyLXdhcnNpZGUv",
-    "soldOut": false,
-    "eventGenres": [
-      "death metal",
-      "thrash metal"
-    ],
-    "artists": {
-      "vader": {
-        "s": "2s5DSt9VBNzAn2TbtDHzFZ",
-        "l": "Poland",
-        "g": [
-          "black metal",
-          "brutal death metal",
-          "death metal",
-          "deathgrind",
-          "deathrash",
-          "melodic death metal",
-          "metal",
-          "polish death metal",
-          "polish metal",
-          "polish thrash metal",
-          "speed metal",
-          "technical death metal",
-          "death/thrash metal",
-          "death metal",
-          "thrash metal"
-        ]
-      },
-      "bio-cancer": {
-        "s": "7N0YKBOylzJvN7PevzJg2G",
-        "l": "Greece",
-        "g": [
-          "crossover thrash",
-          "greek metal",
-          "new wave of thrash metal",
-          "thrash metal",
-          "death metal",
-          "thrash metal"
-        ]
-      },
-      "warside": {
-        "s": "0InPsKrw3SLGw9QfpsSsec",
-        "l": "Brazil",
-        "g": [
-          "heavy metal",
-          "death metal",
-          "thrash metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2024-07-03T21:00:00",
-    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-v11-slimelord-cryptworm/",
-    "title": "Baroeg On Tour @V11: Slimelord + Cryptworm",
-    "location": "baroeg",
-    "price": 15,
-    "shortText": "Vies, vuig en vunzig.",
-    "longText": "../public/texts/baroeg/LXRvdXItdjExLXNsaW1lbG9yZC1jcnlwdHdvcm0v.html",
-    "image": "../public/event-images/baroeg/LXRvdXItdjExLXNsaW1lbG9yZC1jcnlwdHdvcm0v",
-    "soldOut": false,
-    "eventGenres": [
-      "death metal"
-    ],
-    "artists": null
-  },
-  {
     "start": "2024-07-10T21:00:00",
     "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-v11-merrimack-gevurah/",
     "title": "Baroeg On Tour @V11: Merrimack + Gevurah",
@@ -86,10 +12,38 @@
     "eventGenres": [
       "black"
     ],
-    "artists": null
+    "artists": {
+      "merrimack": {
+        "s": "3XWKabUW6Y9pm9vyNGlrhV",
+        "l": "merrimack",
+        "g": [
+          "black metal",
+          "french black metal",
+          "black metal",
+          "black"
+        ]
+      },
+      "gevurah": {
+        "s": "02V1Su6xHUb5qN7fKcUkgh",
+        "l": "gevurah",
+        "g": [
+          "metal noir quebecois",
+          "voidgaze",
+          "black metal",
+          "black"
+        ]
+      },
+      "zesde album in .": {
+        "s": null,
+        "l": "zesde album in .",
+        "g": [
+          "black"
+        ]
+      }
+    }
   },
   {
-    "start": "2024-07-27T19:00:00",
+    "start": "2024-07-18T16:00:00",
     "venueEventUrl": "https://baroeg.nl/productie/eendracht-festival-rotown-thrilled-provisional-lui-surreal-the-gatekeepers-m-u-g-cheapo-cheapo/",
     "title": "Eendracht Festival @Rotown: Thrilled ",
     "location": "baroeg",
@@ -106,7 +60,82 @@
       "punk",
       "shoegaze"
     ],
-    "artists": null
+    "artists": {
+      "thrilled": {
+        "s": "2e3Cc5D8y3I0GOvitjshw1",
+        "l": "thrilled",
+        "g": [
+          "hardcore punk",
+          "indie",
+          "metal",
+          "post-punk",
+          "punk",
+          "shoegaze"
+        ]
+      },
+      "provisional": {
+        "s": "3PqU57mJ5Snc2g4vLOXK68",
+        "l": "provisional",
+        "g": [
+          "hardcore punk",
+          "indie",
+          "metal",
+          "post-punk",
+          "punk",
+          "shoegaze"
+        ]
+      },
+      "lui surreal & the gatekeepers": {
+        "s": null,
+        "l": "lui surreal & the gatekeepers",
+        "g": [
+          "hardcore punk",
+          "indie",
+          "metal",
+          "post-punk",
+          "punk",
+          "shoegaze"
+        ]
+      },
+      "m.u.g": {
+        "s": null,
+        "l": "m.u.g",
+        "g": [
+          "grindcore",
+          "death metal",
+          "hardcore punk",
+          "indie",
+          "metal",
+          "post-punk",
+          "punk",
+          "shoegaze"
+        ]
+      },
+      "cheapo cheapo": {
+        "s": null,
+        "l": "cheapo cheapo",
+        "g": [
+          "hardcore punk",
+          "indie",
+          "metal",
+          "post-punk",
+          "punk",
+          "shoegaze"
+        ]
+      },
+      "cheapo cheapo dertiende editie van eendracht festival.": {
+        "s": null,
+        "l": "cheapo cheapo dertiende editie van eendracht festival.",
+        "g": [
+          "hardcore punk",
+          "indie",
+          "metal",
+          "post-punk",
+          "punk",
+          "shoegaze"
+        ]
+      }
+    }
   },
   {
     "start": "2024-08-03T19:00:00",
@@ -121,7 +150,29 @@
     "eventGenres": [
       "hardcore punk"
     ],
-    "artists": null
+    "artists": {
+      "this is hell": {
+        "s": "50M1gONaoebB1DFYi2Ws9o",
+        "l": "this is hell",
+        "g": [
+          "chaotic hardcore",
+          "long island punk",
+          "melodic hardcore",
+          "nyhc",
+          "thrash metal",
+          "crossover",
+          "hardcore",
+          "hardcore punk"
+        ]
+      },
+      "ffo: american nightmare, verse, ensign.": {
+        "s": null,
+        "l": "ffo: american nightmare, verse, ensign.",
+        "g": [
+          "hardcore punk"
+        ]
+      }
+    }
   },
   {
     "start": "2024-08-11T15:00:00",
@@ -141,19 +192,83 @@
       "thrash"
     ],
     "artists": {
-      "dementedarego": {
-        "s": "7fvToIpjDfwtLhAoZdVF5W",
-        "l": "demented%20are%20go!",
+      "d.r.i.": {
+        "s": "6eKzDvHhJgMtcaOrvEXCTv",
+        "l": "d.r.i.",
         "g": [
-          "deathgrass",
-          "psychobilly"
+          "crossover thrash",
+          "hardcore punk",
+          "old school thrash",
+          "punk",
+          "thrash core",
+          "thrash metal",
+          "hardcore punk, thrash metal",
+          "crossover",
+          "crossover",
+          "hardcore",
+          "psychobilly",
+          "punk",
+          "thrash"
         ]
       },
-      "raum": {
-        "s": null,
-        "l": "Belgium",
+      "demented are go": {
+        "s": "7fvToIpjDfwtLhAoZdVF5W",
+        "l": "demented are go",
         "g": [
-          "black metal"
+          "deathgrass",
+          "psychobilly",
+          "crossover",
+          "hardcore",
+          "psychobilly",
+          "punk",
+          "thrash"
+        ]
+      },
+      "the young ones": {
+        "s": "4H33gMULrlY7pIWJnwYTpy",
+        "l": "the young ones",
+        "g": [
+          "crossover",
+          "hardcore",
+          "psychobilly",
+          "punk",
+          "thrash"
+        ]
+      },
+      "escalpo": {
+        "s": "63FLvDmVnydhi1839ZRuc2",
+        "l": "escalpo",
+        "g": [
+          "death metal",
+          "punk",
+          "crossover",
+          "hardcore",
+          "psychobilly",
+          "punk",
+          "thrash"
+        ]
+      },
+      "traumatizer": {
+        "s": "7zjBOWru8RBRZ1dQQk0B4g",
+        "l": "traumatizer",
+        "g": [
+          "lowlands hardcore",
+          "crossover",
+          "hardcore",
+          "psychobilly",
+          "punk",
+          "thrash"
+        ]
+      },
+      "traumatizer hollands puikste punkfeest pakt het ditmaal groot aan.": {
+        "s": null,
+        "l": "traumatizer hollands puikste punkfeest pakt het ditmaal groot aan.",
+        "g": [
+          "crossover",
+          "hardcore",
+          "psychobilly",
+          "punk",
+          "thrash"
         ]
       }
     }
@@ -174,7 +289,28 @@
       "metal",
       "punk"
     ],
-    "artists": null
+    "artists": {
+      "baroeg open air": {
+        "s": null,
+        "l": "baroeg open air",
+        "g": [
+          "alternative",
+          "electronic",
+          "metal",
+          "punk"
+        ]
+      },
+      "zaterdag 14 september vindt de vijftiende editie van baroeg open air plaats in het rotterdamse zuiderpark.": {
+        "s": null,
+        "l": "zaterdag 14 september vindt de vijftiende editie van baroeg open air plaats in het rotterdamse zuiderpark.",
+        "g": [
+          "alternative",
+          "electronic",
+          "metal",
+          "punk"
+        ]
+      }
+    }
   },
   {
     "start": "2024-10-05T19:00:00",
@@ -189,40 +325,35 @@
     "eventGenres": [
       "black"
     ],
-    "artists": null
-  },
-  {
-    "start": "2024-10-15T19:00:00",
-    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-bibelot-laibach/",
-    "title": "Baroeg On Tour @Bibelot: Laibach",
-    "location": "baroeg",
-    "price": 30,
-    "shortText": "Baroeg en Bibelot voor het eerst hun handen ineen geslagen om Laibach naar Dordrecht te halen.",
-    "longText": "../public/texts/baroeg/YXJvZWctb24tdG91ci1iaWJlbG90LWxhaWJhY2gv.html",
-    "image": "../public/event-images/baroeg/YXJvZWctb24tdG91ci1iaWJlbG90LWxhaWJhY2gv",
-    "soldOut": false,
-    "eventGenres": [
-      "avant-garde",
-      "Baroeg on tour",
-      "electronic",
-      "industrial",
-      "neo-classical",
-      "new wave"
-    ],
     "artists": {
-      "laibach": {
-        "s": "7l4LQfvN4yz8zbK4WY0AAg",
-        "l": "laibach",
+      "sear bliss": {
+        "s": "5h1vktUNKEYPDaQUUaOKAA",
+        "l": "sear bliss",
         "g": [
-          "balkan post-punk",
-          "ebm",
-          "industrial",
-          "industrial metal",
-          "industrial rock",
-          "martial industrial",
-          "neofolk",
-          "slovenian indie",
-          "slovenian rock"
+          "atmospheric black metal",
+          "black metal",
+          "hungarian black metal",
+          "hungarian metal",
+          "slavic metal",
+          "symphonic black metal",
+          "atmospheric black metal",
+          "black"
+        ]
+      },
+      "rivers ablaze": {
+        "s": "0DZSYoZluja08JRF1GN1Wj",
+        "l": "rivers ablaze",
+        "g": [
+          "progressive black",
+          "death metal",
+          "black"
+        ]
+      },
+      "rivers ablaze black metal met koperblazers.": {
+        "s": null,
+        "l": "rivers ablaze black metal met koperblazers.",
+        "g": [
+          "black"
         ]
       }
     }
@@ -243,7 +374,61 @@
       "metal",
       "progressive"
     ],
-    "artists": null
+    "artists": {
+      "draconian": {
+        "s": "1TX9g1uSl0B0DQIE9lBqmU",
+        "l": "draconian",
+        "g": [
+          "doom metal",
+          "gothic metal",
+          "gothic symphonic metal",
+          "swedish doom metal",
+          "swedish metal",
+          "gothic",
+          "doom",
+          "death metal",
+          "doom",
+          "gothic metal",
+          "metal",
+          "progressive"
+        ]
+      },
+      "nailed to obscurity": {
+        "s": "3VKWvDnlwWaBI2uzMTjuSJ",
+        "l": "nailed to obscurity",
+        "g": [
+          "finnish metal",
+          "melodic death metal",
+          "melodic doom",
+          "death metal",
+          "doom",
+          "gothic metal",
+          "metal",
+          "progressive"
+        ]
+      },
+      "fragment soul": {
+        "s": "2VsKiASSkRwzniSx3o6vL4",
+        "l": "fragment soul",
+        "g": [
+          "gothic doom",
+          "doom",
+          "gothic metal",
+          "metal",
+          "progressive"
+        ]
+      },
+      "fragment soul draconian bestaat 30 jaar.": {
+        "s": null,
+        "l": "fragment soul draconian bestaat 30 jaar.",
+        "g": [
+          "doom",
+          "gothic metal",
+          "metal",
+          "progressive"
+        ]
+      }
+    }
   },
   {
     "start": "2024-11-30T19:30:00",
@@ -258,6 +443,29 @@
     "eventGenres": [
       "post-punk"
     ],
-    "artists": null
+    "artists": {
+      "vision video": {
+        "s": null,
+        "l": "vision video",
+        "g": [
+          "post-punk"
+        ]
+      },
+      "lifeless past": {
+        "s": "1RlqgEBCNfaHMav4mzI4O7",
+        "l": "lifeless past",
+        "g": [
+          "dutch post-punk",
+          "post-punk"
+        ]
+      },
+      "lifeless past creëert een verfrissend en modern geluid binnen het postpunk genre.": {
+        "s": null,
+        "l": "lifeless past creëert een verfrissend en modern geluid binnen het postpunk genre.",
+        "g": [
+          "post-punk"
+        ]
+      }
+    }
   }
 ]

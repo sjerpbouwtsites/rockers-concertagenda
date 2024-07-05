@@ -660,11 +660,19 @@ export default class AbstractScraper extends ScraperConfig {
 
     if ((!mergedEvent?.artists || typeof mergedEvent?.artists !== 'object' || mergedEvent.artists === null)) mergedEvent.artists = {};
     const harvestedArtists = await this.asyncHarvestArtists(mergedEvent);
-    this.dirtyLog({ title:  `harvested artists res voor ${mergedEvent.title}`, harvestedArtists });
+
+    if (debugSettings.debugHarvestIntegratie) {
+      this.dirtyLog({ title:  `harvested artists res voor ${mergedEvent.title}`, harvestedArtists });
+    }
+
     if (harvestedArtists && harvestedArtists.success) {
       const harvestedArtistsNames = Object.keys(harvestedArtists.data);
       const currentEventArtistNames = Object.keys(mergedEvent?.artists ?? {});
-      this.dirtyLog({ title: `harvested artists data sp23`, data: harvestedArtists.data });
+      if (debugSettings.debugHarvestIntegratie) {
+        this.dirtyLog({
+          title: `harvested artists data sp23`, data: harvestedArtists.data, harvestedArtistsNames, currentEventArtistNames, 
+        });
+      }
       harvestedArtistsNames.forEach((han) => {
         if (currentEventArtistNames.includes(harvestedArtistsNames)) return;
         mergedEvent.artists[han] = {
@@ -690,9 +698,9 @@ export default class AbstractScraper extends ScraperConfig {
       this.artistScanDebugger(mergedEventCheckRes, artistsRes);
 
       if (artistsRes.isSuccess) {
-        mergedEvent.artists = artistsRes.data;
-      } else {
-        mergedEvent.artists = null;
+        mergedEvent.artists = Object.assign(mergedEvent.artists, artistsRes.data);
+      } else if (artistsRes.isError) {
+        this.handleError(artistsRes.data.error, `artist scan abs scraper single page post check err${mergedEvent.title}`, 'notice', artistsRes);
       }
     } 
     

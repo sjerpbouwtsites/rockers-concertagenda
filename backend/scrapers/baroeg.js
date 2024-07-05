@@ -22,7 +22,7 @@ const scraper = new AbstractScraper({
     harvest: {
       dividers: [`+`],
       dividerRex: "[\\+]",
-      artistsIn: ['title'],
+      artistsIn: ['title', 'shortText'],
     },    
     mainPage: {
       requiredProperties: ['venueEventUrl', 'title', 'start'],
