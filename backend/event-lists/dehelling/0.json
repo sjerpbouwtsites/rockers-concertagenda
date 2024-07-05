@@ -1,19 +1,5 @@
 [
   {
-    "start": "2024-09-06T19:00:00",
-    "end": "2024-09-06T22:30:00",
-    "venueEventUrl": "https://dehelling.nl/agenda/bring-me-the-horizon-fanparty-ii-06-09-2024/",
-    "title": "Bring Me The Horizon Fanparty II",
-    "location": "dehelling",
-    "price": 10,
-    "shortText": "Vier uur lang alleen maar BMTH hosted by No Barrier",
-    "longText": "../public/texts/dehelling/b3Jpem9uLWZhbnBhcnR5LWlpLTA2LTA5LTIwMjQv.html",
-    "image": "../public/event-images/dehelling/b3Jpem9uLWZhbnBhcnR5LWlpLTA2LTA5LTIwMjQv",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
     "start": "2024-09-27T22:00:00",
     "end": "2024-09-27T03:00:00",
     "venueEventUrl": "https://dehelling.nl/agenda/no-barrier-27-09-2024/",
@@ -27,7 +13,7 @@
     "eventGenres": null,
     "artists": {
       "no barrier": {
-        "s": "2am0pROxk0wcIVgL5rZA3A",
+        "s": "2am0proxk0wcivgl5rza3a",
         "l": "no%20barrier",
         "g": []
       }
@@ -48,7 +34,7 @@
     "artists": {
       "bad breeding": {
         "s": "781vvvQYKgDjg3i90b7vtV",
-        "l": "bad%20breeding",
+        "l": "bad breeding",
         "g": [
           "uk noise rock"
         ]
@@ -59,7 +45,7 @@
         "g": [
           "drone metal",
           "dub metal",
-          "noise",
+          "modern noise rock",
           "noise punk",
           "noise rock",
           "nyc metal",
@@ -80,7 +66,17 @@
     "image": "../public/event-images/dehelling/ZW5kYS9rYW5vbmVuZmllYmVyLTI0LTExLTIwMjQv",
     "soldOut": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "kanonenfieber": {
+        "s": "5VI8SBEX7uSvoHsdI5xNVJ",
+        "l": "kanonenfieber",
+        "g": [
+          "german black metal",
+          "melodic black",
+          "death metal"
+        ]
+      }
+    }
   },
   {
     "start": "2024-12-07T19:00:00",
@@ -96,28 +92,8 @@
     "eventGenres": null,
     "artists": {
       "pene corrida": {
-        "s": "1Hw2YwIpnSOWbtb8FlZcCa",
+        "s": "1hw2ywipnsowbtb8flzcca",
         "l": "pene%20corrida",
-        "g": []
-      }
-    }
-  },
-  {
-    "start": "2024-12-22T20:00:00",
-    "end": "2024-12-22T01:00:00",
-    "venueEventUrl": "https://dehelling.nl/agenda/no-barrier-christmas-special-22-12-2024/",
-    "title": "No barrier christmas special",
-    "location": "dehelling",
-    "price": 14.7,
-    "shortText": "A very moshing Christmas!",
-    "longText": "../public/texts/dehelling/LWNocmlzdG1hcy1zcGVjaWFsLTIyLTEyLTIwMjQv.html",
-    "image": "../public/event-images/dehelling/LWNocmlzdG1hcy1zcGVjaWFsLTIyLTEyLTIwMjQv",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "no barrier": {
-        "s": "2am0pROxk0wcIVgL5rZA3A",
-        "l": "no%20barrier",
         "g": []
       }
     }
@@ -134,6 +110,17 @@
     "image": "../public/event-images/dehelling/Z2VuZGEvZW5lbXktaW5zaWRlLTIxLTAzLTIwMjUv",
     "soldOut": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "enemy inside": {
+        "s": "4DX0ctdZRMWec9KCiigIXy",
+        "l": "enemy%20inside",
+        "g": [
+          "dark rock",
+          "gothic symphonic metal",
+          "slayer",
+          "thrash metal"
+        ]
+      }
+    }
   }
 ]
