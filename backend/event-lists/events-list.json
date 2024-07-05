@@ -366,27 +366,6 @@
   {
     "door": "2024-10-03T20:00:00+02:00",
     "start": "2024-10-03T20:00:00+02:00",
-    "venueEventUrl": "https://www.013.nl/programma/81901/delilah-bon",
-    "title": "Delilah Bon",
-    "location": "013",
-    "price": 20.8,
-    "shortText": "EVIL, HATE FILLED FEMALE EUROPE / UK TOUR",
-    "longText": "../public/texts/013/bmwvcHJvZ3JhbW1hLzgxOTAxL2RlbGlsYWgtYm9u.html",
-    "image": "../public/event-images/013/bmwvcHJvZ3JhbW1hLzgxOTAxL2RlbGlsYWgtYm9u",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "delilah bon": {
-        "s": null,
-        "l": "delilah%20bon",
-        "g": []
-      }
-    }
-  },
-  {
-    "door": "2024-10-03T20:00:00+02:00",
-    "start": "2024-10-03T20:00:00+02:00",
     "venueEventUrl": "https://www.013.nl/programma/86507/dog-eat-dog",
     "title": "Dog Eat Dog",
     "location": "013",
@@ -404,6 +383,27 @@
         "g": [
           "funk metal"
         ]
+      }
+    }
+  },
+  {
+    "door": "2024-10-03T20:00:00+02:00",
+    "start": "2024-10-03T20:00:00+02:00",
+    "venueEventUrl": "https://www.013.nl/programma/81901/delilah-bon",
+    "title": "Delilah Bon",
+    "location": "013",
+    "price": 20.8,
+    "shortText": "EVIL, HATE FILLED FEMALE EUROPE / UK TOUR",
+    "longText": "../public/texts/013/bmwvcHJvZ3JhbW1hLzgxOTAxL2RlbGlsYWgtYm9u.html",
+    "image": "../public/event-images/013/bmwvcHJvZ3JhbW1hLzgxOTAxL2RlbGlsYWgtYm9u",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "delilah bon": {
+        "s": null,
+        "l": "delilah%20bon",
+        "g": []
       }
     }
   },
