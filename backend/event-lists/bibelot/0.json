@@ -1,20 +1,5 @@
 [
   {
-    "door": "2024-06-29T20:30:00",
-    "start": "2024-06-29T21:30:00",
-    "venueEventUrl": "https://bibelot.net/programma/bach-festival-bach-meets-metal-by-florian-magnaus-maier-alkaloid/",
-    "title": "Bach out of Bounds",
-    "location": "bibelot",
-    "price": 29,
-    "longText": "../public/texts/bibelot/bG9yaWFuLW1hZ25hdXMtbWFpZXItYWxrYWxvaWQv.html",
-    "image": "../public/event-images/bibelot/bG9yaWFuLW1hZ25hdXMtbWFpZXItYWxrYWxvaWQv",
-    "soldOut": false,
-    "eventGenres": [
-      "metal "
-    ],
-    "artists": null
-  },
-  {
     "door": "2024-08-30T20:00:00",
     "start": "2024-08-30T20:00:00",
     "venueEventUrl": "https://bibelot.net/programma/its-not-a-phase-mom-limp-business/",
@@ -29,10 +14,13 @@
       "rock "
     ],
     "artists": {
-      "itsnotaphasemom": {
+      "it’s not a phase, mom – limp business": {
         "s": null,
-        "l": "it's%20not%20a%20phase%20mom%E2%80%A6",
-        "g": []
+        "l": "it’s not a phase, mom – limp business",
+        "g": [
+          "metal ",
+          "rock "
+        ]
       }
     }
   },
@@ -52,10 +40,22 @@
       "punk "
     ],
     "artists": {
-      "joy division": {
+      "the smiths by the smiths presumably & joy division by curtis": {
         "s": null,
-        "l": "joy%20division",
-        "g": []
+        "l": "the smiths by the smiths presumably & joy division by curtis",
+        "g": [
+          "new wave ",
+          "punk "
+        ]
+      },
+      "undefined": {
+        "s": "6NMVL5NGYZKTl6AZuxybbV",
+        "l": "undefined",
+        "g": [
+          "metalcore",
+          "new wave ",
+          "punk "
+        ]
       }
     }
   },
@@ -72,7 +72,15 @@
     "eventGenres": [
       "metal "
     ],
-    "artists": null
+    "artists": {
+      "dordrecht metal fest": {
+        "s": null,
+        "l": "dordrecht metal fest",
+        "g": [
+          "metal "
+        ]
+      }
+    }
   },
   {
     "door": "2024-10-25T20:30:00",
@@ -88,7 +96,16 @@
       "punk ",
       "rock "
     ],
-    "artists": null
+    "artists": {
+      "speedmobile": {
+        "s": "15qfmszEuUlcKcPcwt5P05",
+        "l": "speedmobile",
+        "g": [
+          "punk ",
+          "rock "
+        ]
+      }
+    }
   },
   {
     "door": "2024-12-13T20:30:00",
@@ -109,7 +126,8 @@
         "l": "tusky",
         "g": [
           "dutch punk",
-          "dutch rock"
+          "dutch rock",
+          "punk "
         ]
       }
     }
@@ -128,7 +146,16 @@
       "garagerock ",
       "rock "
     ],
-    "artists": null
+    "artists": {
+      "the luka state": {
+        "s": null,
+        "l": "the%20luka%20state",
+        "g": [
+          "garagerock ",
+          "rock "
+        ]
+      }
+    }
   },
   {
     "door": "2024-12-27T20:00:00",
@@ -144,7 +171,16 @@
       "metal ",
       "rock "
     ],
-    "artists": null
+    "artists": {
+      "the metal studs": {
+        "s": null,
+        "l": "the metal studs",
+        "g": [
+          "metal ",
+          "rock "
+        ]
+      }
+    }
   },
   {
     "door": "2024-12-28T20:30:00",
@@ -161,7 +197,7 @@
     ],
     "artists": {
       "pestilence": {
-        "s": "6JcFn4PlXFuXmhRXpOpsan",
+        "s": "6jcfn4plxfuxmhrxpopsan",
         "l": "pestilence",
         "g": [
           "black metal",
@@ -173,12 +209,22 @@
           "old school thrash",
           "technical death metal"
         ]
+      },
+      "magnacult": {
+        "s": "4xtRDmUYn7ASxHTWq9x40S",
+        "l": "magnacult",
+        "g": [
+          "death",
+          "groove metal",
+          "metalcore",
+          "metal "
+        ]
       }
     }
   },
   {
-    "door": "4049-01-10T20:30:00",
-    "start": "4049-01-10T21:00:00",
+    "door": "2025-01-10T20:30:00",
+    "start": "2025-01-10T21:00:00",
     "venueEventUrl": "https://bibelot.net/programma/regressive-hypnosis-dream-theater-tribute/",
     "title": "Regressive Hypnosis (Dream Theater Tribute)",
     "location": "bibelot",
@@ -190,31 +236,13 @@
       "metal "
     ],
     "artists": {
-      "dreamtheater": {
-        "s": "2aaLAng2L2aWD2FClzwiep",
-        "l": "dream%20theater",
+      "regressive hypnosis": {
+        "s": null,
+        "l": "regressive hypnosis",
         "g": [
-          "metal",
-          "progressive metal",
-          "Progressive Metal"
+          "metal "
         ]
       }
     }
-  },
-  {
-    "door": "4049-02-14T20:30:00",
-    "start": "4049-02-14T21:00:00",
-    "venueEventUrl": "https://bibelot.net/programma/radio-clash-be-a-tribute-to-the-clash/",
-    "title": "Radio Clash (BE) – A Tribute to The Clash",
-    "location": "bibelot",
-    "price": 0,
-    "longText": "../public/texts/bibelot/YXNoLWJlLWEtdHJpYnV0ZS10by10aGUtY2xhc2gv.html",
-    "image": "../public/event-images/bibelot/YXNoLWJlLWEtdHJpYnV0ZS10by10aGUtY2xhc2gv",
-    "soldOut": false,
-    "eventGenres": [
-      "punk ",
-      "rock "
-    ],
-    "artists": null
   }
 ]

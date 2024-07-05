@@ -73,7 +73,7 @@ export default class Artists {
     harvestArtists: true,
     scanTextForAllowedArtists: false,
     getSpotifyArtistSearch: false,
-    persistNewRefusedAndRockArtists: false,
+    persistNewRefusedAndRockArtists: true,
     checkExplicitEventCategories: false,
     saveAllowedEvent: false,
     scanTextForSomeArtistList: false,
