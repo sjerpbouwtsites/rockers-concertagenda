@@ -1,6 +1,6 @@
 [
   {
-    "door": "2024-07-08T20:00:00",
+    "door": "2024-07-08T18:00:00",
     "start": "2024-07-08T20:00:00",
     "venueEventUrl": "https://www.afaslive.nl/agenda/zz-top",
     "title": "Zz top",
@@ -12,7 +12,7 @@
     "eventGenres": null,
     "artists": {
       "zz top": {
-        "s": "2AM4ilv6UzW0uMRuqKtDgN",
+        "s": "2am4ilv6uzw0umruqktdgn",
         "l": "zz%20top",
         "g": [
           "album rock",
@@ -37,7 +37,7 @@
     "eventGenres": null,
     "artists": {
       "epica": {
-        "s": "5HA5aLY3jJV7eimXWkRBBp",
+        "s": "5ha5aly3jjv7eimxwkrbbp",
         "l": "epica",
         "g": [
           "dutch metal",
@@ -63,7 +63,7 @@
     "eventGenres": null,
     "artists": {
       "sleep token": {
-        "s": "2n2RSaZqBuUUukhbLlpnE6",
+        "s": "2n2rsazqbuuuukhbllpne6",
         "l": "sleep%20token",
         "g": [
           "prog metal"
@@ -72,23 +72,26 @@
     }
   },
   {
-    "door": "2025-05-22T20:00:00",
-    "start": "2025-05-22T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/steven-wilson",
-    "title": "Steven Wilson",
+    "door": "2025-02-04T20:00:00",
+    "start": "2025-02-04T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/papa-roach",
+    "title": "Papa Roach",
     "location": "afaslive",
-    "price": 72.8,
-    "longText": "../public/texts/afaslive/YXNsaXZlLm5sL2FnZW5kYS9zdGV2ZW4td2lsc29u.html",
-    "image": "../public/event-images/afaslive/YXNsaXZlLm5sL2FnZW5kYS9zdGV2ZW4td2lsc29u",
+    "price": 58.24,
+    "longText": "../public/texts/afaslive/LmFmYXNsaXZlLm5sL2FnZW5kYS9wYXBhLXJvYWNo.html",
+    "image": "../public/event-images/afaslive/LmFmYXNsaXZlLm5sL2FnZW5kYS9wYXBhLXJvYWNo",
     "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "steven wilson": {
-        "s": "4X42BfuhWCAZ2swiVze9O0",
-        "l": "steven%20wilson",
+      "papa roach": {
+        "s": "4RddZ3iHvSpGV4dvATac9X",
+        "l": "papa%20roach",
         "g": [
-          "progressive metal",
-          "progressive rock"
+          "alternative metal",
+          "nu metal",
+          "rap metal",
+          "rap rock",
+          "rock"
         ]
       }
     }

@@ -21,23 +21,52 @@ function makeToScan(title, settings, shortText) {
 // #endregion MAKE TO SCAN
 
 // #region MAKE VERDER SCANNEN
-function makeVerderScannen(toScan, reedsGevondenNamen, reedsGevondenRefusedNamen) {
+/**
+ * Haalt reedsGevondenNamen en reedsGevondenRefusedNamen uit de te scannen textArray toScan
+ * en haalt gelijk per verwijderde naam een divider weg obv settings.
+ * @param {*} toScan [tekst, tekst]
+ * @param {*} reedsGevondenNamen Object.keys(this.allowedArtists)
+ * @param {*} reedsGevondenRefusedNamen Object.keys(this.refused)
+ * @param {*} settings app.harvest
+ * @returns [tekst, tekst]
+ */
+export function makeVerderScannen(toScan, reedsGevondenNamen, reedsGevondenRefusedNamen, settings) {
+  const reg = new RegExp(settings.dividerRex, 'i');
   return toScan.map((scan) => {
     let _scan = scan;
     reedsGevondenNamen.forEach((rg) => {
-      _scan = _scan.replace(rg, '').trim();
+      if (_scan.includes(rg)) {
+        _scan = _scan
+          .replace(rg, '')
+          .replace(reg, '')
+          .trim();
+      }
     });
     reedsGevondenRefusedNamen.forEach((rg) => {
-      _scan = _scan.replace(rg, '').trim();
+      if (_scan.includes(rg)) {
+        _scan = _scan
+          .replace(rg, '')
+          .replace(reg, '')
+          .trim();
+      }
     });
-    return _scan;  
-  })
+    return _scan; 
+  })  
     .filter((a) => a);
 }
 // #endregion
 
 // #region MAKE POTENT. OVERIGE TITELS
-function makePotentieeleOverigeTitels(settings, verderScannen) {
+/**
+ * gaat over tekst array heen en splitst (en flattened) de teksten mbt
+ * de dividerRex uit app.harvest (metallica + harrysmarry + bla => [metallica, harrysmarry, bla])
+ * de terms.eventMetaTerms worden per stuk eruit gehaald
+ * en vervolgens wordt het door slugify heen gehaald.
+ * @param {*} settings app.harvest
+ * @param {Array} verderScannen [tekst, tekst]
+ * @returns [tekst, tekst]
+ */
+export function makePotentieeleOverigeTitels(settings, verderScannen) {
   const reg = new RegExp(settings.dividerRex, 'i');
   return verderScannen
     .map((scan) => {
@@ -131,7 +160,11 @@ export async function harvestArtists(
   // #endregion REEDS GEVONDEN
 
   // #region VERDER SCANNEN
-  const verderScannen = makeVerderScannen(toScan, reedsGevondenNamen, reedsGevondenRefusedNamen);
+  // reedsGevondenNamen
+  const rgn = reedsGevondenNamen;
+  // reedsGevondenRefusedNamen
+  const rgfn = reedsGevondenRefusedNamen;
+  const verderScannen = makeVerderScannen(toScan, rgn, rgfn, settings);
 
   if (!verderScannen.length) {
     this.consoleGroup(`Niets te vinden dat reeds bekende namen in hA2`, 

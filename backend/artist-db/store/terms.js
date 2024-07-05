@@ -35,7 +35,6 @@ const eventMetaTerms = [
   "met o.a.",
   "met oa",
   "fanparty",
-  "o.a.",
   " meer", // TODO dit wordt een probleem voor de band "MEERtalige henkies"
   ...tempFestivalNamesHACKDontHarvest,
 ];

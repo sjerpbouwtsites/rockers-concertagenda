@@ -12,7 +12,7 @@
     "eventGenres": null,
     "artists": {
       "epica": {
-        "s": "5HA5aLY3jJV7eimXWkRBBp",
+        "s": "5ha5aly3jjv7eimxwkrbbp",
         "l": "epica",
         "g": [
           "dutch metal",
@@ -34,11 +34,11 @@
     "price": 72.8,
     "longText": "../public/texts/afaslive/dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvcG93ZXJ3b2xm.html",
     "image": "../public/event-images/afaslive/dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvcG93ZXJ3b2xm",
-    "soldOut": false,
+    "soldOut": true,
     "eventGenres": null,
     "artists": {
       "powerwolf": {
-        "s": "5HFkc3t0HYETL4JeEbDB1v",
+        "s": "5hfkc3t0hyetl4jeebdb1v",
         "l": "powerwolf",
         "g": [
           "german metal",
@@ -61,7 +61,7 @@
     "eventGenres": null,
     "artists": {
       "pantera": {
-        "s": "14pVkFUHDL207LzLHtSA18",
+        "s": "14pvkfuhdl207lzlhtsa18",
         "l": "pantera",
         "g": [
           "alternative metal",
@@ -72,6 +72,28 @@
           "old school thrash",
           "rock",
           "texas metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-05-22T20:00:00",
+    "start": "2025-05-22T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/steven-wilson",
+    "title": "Steven Wilson",
+    "location": "afaslive",
+    "price": 72.8,
+    "longText": "../public/texts/afaslive/YXNsaXZlLm5sL2FnZW5kYS9zdGV2ZW4td2lsc29u.html",
+    "image": "../public/event-images/afaslive/YXNsaXZlLm5sL2FnZW5kYS9zdGV2ZW4td2lsc29u",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "steven wilson": {
+        "s": "4x42bfuhwcaz2swivze9o0",
+        "l": "steven%20wilson",
+        "g": [
+          "progressive metal",
+          "progressive rock"
         ]
       }
     }

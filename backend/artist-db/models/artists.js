@@ -2,7 +2,7 @@
 import fs from 'fs';
 import terms from '../store/terms.js';
 import shell from '../../mods/shell.js';
-import { harvestArtists } from './harvest.js';
+import { harvestArtists, makeVerderScannen, makePotentieeleOverigeTitels } from './harvest.js';
 import consoleKleuren from "../../mods/consoleKleurenRef.js";
 
 // console.log(util.inspect(na, 
@@ -70,15 +70,17 @@ export default class Artists {
   spotifyAccessToken = null;
 
   static funcsToDebug = {
-    harvestArtists: true,
+    harvestArtists: false,
     scanTextForAllowedArtists: false,
     getSpotifyArtistSearch: false,
     persistNewRefusedAndRockArtists: false,
     checkExplicitEventCategories: false,
     saveAllowedEvent: false,
     scanTextForSomeArtistList: false,
+    getRefused: false,
     _do: false,
-    APICallsForGenre: true,
+    APICallsForGenre: false,
+    getMetalEncyclopediaConfirmation: true,
   };
 
   // #endregion
@@ -268,8 +270,12 @@ export default class Artists {
         if (!hasTitle) {
           return this.error(Error('geen title om te doorzoeken'));
         }  
+        const hasSettings = Object.prototype.hasOwnProperty.call(parsedMessage.data, 'settings');
+        if (!hasSettings) {
+          return this.error(Error('geen settings meegegeven'));
+        }  
       }
-      return this.getMetalEncyclopediaConfirmation(message.data.title);
+      return this.getMetalEncyclopediaConfirmation(message.data.title, message.data.settings);
     }
 
     if (['scanTextForAllowedArtists', 'scanTextForRefusedArtists', 'scanTextForUnclearArtists'].includes(message.request)) {
@@ -403,6 +409,14 @@ export default class Artists {
       });
     }
 
+    if (message.request === 'makeFailure') {
+      return this.post({
+        success: false,
+        data: null,
+        reason: `🟥 Gen. failure`,
+      });
+    }
+
     console.group(`artist db request error`);
     console.log('onbekende request. message:');
     console.log(message);
@@ -479,23 +493,34 @@ export default class Artists {
     const tt = eventNameOfTitle.length < this.minLengthLang 
       ? eventNameOfTitle + eventDate : eventNameOfTitle;
     const ss = slug.length < this.minLengthLang ? slug + eventDate : slug;
+
+    const _a = Object.hasOwn(this.refused, tt);
+    const _b = Object.hasOwn(this.refused, ss);
     
-    const _a = Object.prototype.hasOwnProperty.call(this.refused, tt);
-    const _b = Object.prototype.hasOwnProperty.call(this.refused, ss);
-    
-    if (!_a && !_b) {
+    this.consoleGroup('getRefused zoekt', {
+      eventNameOfTitle, 
+      slug,
+      zoektMetTitleDate: tt,
+      zoektMetSlugDate: ss,
+      titleInRefused: _a,
+      slugInRefused: _b,
+      // eslint-disable-next-line no-nested-ternary
+      gevondenRefused: _a ? this.refused[tt] : _b ? this.refused[ss] : null,
+    }, 'getRefused', 'rood');
+
+    if (_a || _b) {
+      const eventOfArtistData = _a ? this.refused[tt] : this.refused[ss];
       return this.post({
-        success: null,
-        data: null,
-        reason: `⬜ ${tt} and ${ss} not refused aa5`,
+        success: true,
+        data: eventOfArtistData,
+        reason: `🟥 ${_a ? `eventNameOfTitle ${tt}` : `slug ${ss}`} refused aa6`,
       });
     }
 
-    const eventOfArtistData = _a ? this.refused[tt] : this.refused[ss];
     return this.post({
-      success: true,
-      data: eventOfArtistData,
-      reason: `🟥 ${_a ? `eventNameOfTitle ${tt}` : `slug ${ss}`} refused aa6`,
+      success: null,
+      data: null,
+      reason: `⬜ ${tt} and ${ss} not refused aa5`,
     });
   }  
   // #endregion
@@ -517,7 +542,6 @@ export default class Artists {
           }
         });      
     }
-
     if (recordType === 'allowedEvents' || recordType === 'refused') {    
       Object.entries(recordType === 'allowedEvents' ? this.allowedEvents : this.refused)
         .forEach(([eventKey, event]) => {
@@ -825,7 +849,58 @@ export default class Artists {
    * @param {*} title 
    * @returns {JSON} post object met success, data, reason
    */
-  async getMetalEncyclopediaConfirmation(title) {
+  async getMetalEncyclopediaConfirmation(title, settings) {
+    const teScannen = [title];
+
+    // reedsGevondenNamen
+    const rgn = Object.keys(this.allowedArtists);
+    // reedsGevondenRefusedNamen
+    const rgrn = Object.keys(this.refused);
+    const teScannenZonderBekendeNamen = makeVerderScannen(teScannen, rgn, rgrn, settings);
+    this.consoleGroup(`te scannen zonder BN gMEC32`, {
+      teScannenZonderBekendeNamen,
+    }, 'getMetalEncyclopediaConfirmation', 'blauw');
+
+    const scanbareTitels = makePotentieeleOverigeTitels(settings, teScannenZonderBekendeNamen);
+
+    const metalPromises = scanbareTitels
+      .map((scanbaar) => scanbaar.workTitle)
+      .map((scanbaar) => this.metalEncSingle(scanbaar));
+    const metalResultaat = await this.verwerkArrayPromises(metalPromises);
+    // metal enc recur
+    
+    const gevonden = metalResultaat.filter((a) => a.success === true);
+
+    this.consoleGroup(`metal Enc Confirm gMEC23`, {
+      title, 
+      scanbareTitels,
+      heeftGevonden: !!gevonden.length,
+      gevonden: gevonden.map((a) => a.titleCopy),
+    }, `getMetalEncyclopediaConfirmation`, 'magenta');
+
+    if (!gevonden.length) {
+      return this.post({
+        success: null,
+        data: gevonden,
+        reason: `⬜ geen resultaat metal enc. ab9`,
+      });        
+    }
+
+    return this.post({
+      success: true,
+      data: gevonden,
+      reason: `🟩 metal enc gevonden ac1`,
+    });
+  }
+
+  verwerkArrayPromises(promiseArray) {
+    return Promise.all(promiseArray).then((res) => res).catch((err) => {
+      console.log(`fout in metal enc confirmation promises gMEC232`);
+      console.log(err);
+    });
+  }
+
+  async metalEncSingle(title) {
     let titleCopy = `${title}`;
     let metalString = titleCopy.replaceAll(' ', '+');
     const matchLanden = titleCopy.match(/(\(\w{2,3}\))/gi);
@@ -845,30 +920,38 @@ export default class Artists {
     }
 
     const metalEncycloAjaxURL = `https://www.metal-archives.com/search/ajax-advanced/searching/bands/?bandName=${metalString}&yearCreationFrom=&yearCreationTo=&status[]=1`;
-    
-    const meaRes = await fetch(metalEncycloAjaxURL)
+    const metalRes = {
+      titleCopy,
+      metalString,
+      metalEncycloAjaxURL,
+      success: null,
+    };
+
+    return fetch(metalEncycloAjaxURL)
       .then((res) => res.json())
       .then((r) => {
-        if (!r?.iTotalRecords) return null;
-        return r?.aaData[0]; // TODO zomaar de eerste pakken slap
+        if (!r?.iTotalRecords) return metalRes;
+        metalRes.fetchRes = r?.aaData;
+        const correcteRij = (r?.aaData ?? []).find((rij) => {
+          const rijNaam = rij[0].toLowerCase().replaceAll(/_/g, ' ');
+          return rijNaam.includes(titleCopy);
+        });
+        if (correcteRij && correcteRij.length) {
+          correcteRij[1] = correcteRij[1].toLowerCase().split(/[;\/]/);
+          metalRes.success = true;
+          metalRes.data = correcteRij;
+        } else {
+          metalRes.success = null;
+          metalRes.data = null;          
+        }
+        return metalRes;
       })
       .catch((err) => {
-        console.log('ERROR IN FETSCH');
-        console.log(err);
+        console.log(`in getMetalEncyclopediaConfirmation probleem met metal enc. fetch voor ${titleCopy} naar \n${metalEncycloAjaxURL}`);
+        metalRes.success = 'error';
+        metalRes.data = err;
+        return metalRes;
       });
-
-    if (!meaRes) {
-      return this.post({
-        success: false,
-        data: null,
-        reason: `🟥 metal enc niet gevonden. ab9`,
-      });        
-    }
-    return this.post({
-      success: true,
-      data: null,
-      reason: `🟩 metal enc gevonden ac1`,
-    });
   }
 
   // #endregion GET METAL ENC CONF
@@ -1172,7 +1255,7 @@ export default class Artists {
       metalString,
       metalEncaaData,
       spotifyRes: genreRes.spotRes,
-    });
+    }, 'APICallsForGenre', 'blauw');
 
     return genreRes;
   }
@@ -1189,7 +1272,7 @@ export default class Artists {
       this.refused[tt][1] = eventDate; // TODO check welke datum nieuwer
       this.refused[tt][2] = this.today;
     } else {
-      this.refusedTemp[tt] = [0, eventDate, this.today];  
+      this.refused[tt] = [0, eventDate, this.today];  
     }
 
     if (tt !== ss) {
@@ -1198,7 +1281,7 @@ export default class Artists {
         this.refused[ss][1] = eventDate; // TODO check welke datum nieuwer
         this.refused[ss][2] = this.today;
       } else {
-        this.refusedTemp[ss] = [1, eventDate, this.today];  
+        this.refused[ss] = [1, eventDate, this.today];  
       }
     }
     return this.post({
@@ -1478,19 +1561,12 @@ export default class Artists {
             ...toConsole[k],
           });          
         } else {
-          console.log({
-            _naamGelogdeVariabele2: k,
-            waarde: toConsole[k],
-            typeOf: typeof toConsole[k],
-          });
-          console.log('\x1b[33m%s\x1b[0m', {
-            _naamGelogdeVariabele3: k,
-            waarde: toConsole[k],
-            typeOf: typeof toConsole[k],
-          });
+          const str = `varName: ${k}; val: ${toConsole[k]}; typeof: ${typeof toConsole[k]}`;
+          console.log('\x1b[33m%s\x1b[0m', str);
         }
       }
     }
+    console.log(titelKleur, `${(`${funcNaam} `).padStart(78, '-')}`);
     console.groupEnd();
   }
   // #endregion

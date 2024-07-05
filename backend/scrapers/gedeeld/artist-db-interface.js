@@ -228,40 +228,23 @@ export async function asyncSpotifyConfirmation(event, olderReasons) {
 // #endregion AS. SPOTIFY CONF
 
 // #region AS. METAL ENC CONF
-export async function asyncMetalEncyclopediaConfirmation(event, reasons) {
-  throw Error('asyncMetalEncyclopediaConfirmation is NIET GEUPDATE');
-
-  // const reasonsCopy = Array.isArray(reasons) ? reasons : [];
+export async function asyncMetalEncyclopediaConfirmation(event, olderReasons) {
+  this.talkToDB({
+    type: 'db-request', 
+    subtype: 'getMetalEncyclopediaConfirmation',
+    messageData: {
+      title: event.workTitle,
+      settings: this._s.app.harvest,
+    },
+  });
+  const dbAnswer = await this.checkDBhasAnswered();
+  const DBToScraper = new DbInterFaceToScraper(dbAnswer, olderReasons, 'async metal enc confirmation');
+  DBToScraper.setReason();
+  if (DBToScraper.isSuccess || DBToScraper.isFailed) DBToScraper.setBreak(true);
+  if (!DBToScraper.isError) return DBToScraper;
   
-  // this.talkToDB({
-  //   type: 'db-request', 
-  //   subtype: 'getMetalEncyclopediaConfirmation',
-  //   messageData: {
-  //     title: event.workTitle,
-  //   },
-  // });
-  // await this.checkDBhasAnswered();
-  // if (this.lastDBAnswer.success === 'error') {
-  //   this.handleError(this.lastDBAnswer?.data?.error, this.lastDBAnswer.reason, 'close-thread');
-  //   return errorAnswerObject(event, reasons, this.lastDBAnswer);
-  // }
-  // reasonsCopy.push(this.lastDBAnswer.reason);
-
-  // if (this.lastDBAnswer.success) {
-  //   this.skipFurtherChecks.push(event.workTitle);
-  //   this.talkToDB({
-  //     type: 'db-request',
-  //     subtype: 'saveAllowedArtist',
-  //     messageData: {
-  //       title: event.workTitle,
-  //       slug: event.slug,
-  //       eventDate: event.shortDate,
-  //     },
-  //   }); 
-  //   reasonsCopy.push(`🟧 saved in allowed event temp sb1`);
-  //   return failureAnswerObject(event, reasonsCopy, true);
-  // }
-  // return successAnswerObject(event, reasonsCopy);
+  this.handleError(DBToScraper?.data?.error, DBToScraper.lastReason, 'close-thread');
+  return DBToScraper;
 }
 // #endregion AS. METAL ENC CONFIRMATION
 

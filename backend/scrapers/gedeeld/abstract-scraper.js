@@ -478,6 +478,10 @@ export default class AbstractScraper extends ScraperConfig {
       if (checkResult.isError) {
         // artist-db-interface gooit al de thread dicht
         // maar dat je weet dat success ook error kan zijn.
+        this.dirtyDebug({
+          title: 'rawEventsAsyncCheck checkresult isError',
+          checkResult,
+        });
         this.handleError(new Error('hier zou geen error moeten zijn?'), 'error te veel in raw events async check', 'close-thread');
       }
 
@@ -1193,11 +1197,12 @@ export default class AbstractScraper extends ScraperConfig {
       saveAllowedEvent: 'asyncSaveAllowedEvent',
       harvestArtists: 'asyncHarvestArtists',
       spotifyConfirmation: 'asyncSpotifyConfirmation', 
-      metalEncyclopediaConfirmation: 'asyncMetalEncyclopediaConfirmation', 
+      getMetalEncyclopediaConfirmation: 'asyncMetalEncyclopediaConfirmation', 
       explicitEventGenres: 'asyncExplicitEventCategories',
       hasAllowedArtist: 'asyncHasAllowedArtist',
       success: 'asyncSuccess',
       failure: 'asyncFailure',
+
       // refused: 'asyncCheckIsRefused',
       // emptySuccess: 'asyncCheckEmptySuccess',
       // emptyFailure: 'asyncCheckEmptyFailure',

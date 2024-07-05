@@ -12,7 +12,7 @@
     "eventGenres": null,
     "artists": {
       "korn": {
-        "s": "3RNrq3jvMZxD9ZyoOZbQOD",
+        "s": "3rnrq3jvmzxd9zyoozbqod",
         "l": "korn",
         "g": [
           "alternative metal",
@@ -39,7 +39,7 @@
     "eventGenres": null,
     "artists": {
       "heilung": {
-        "s": "7sTKZr30LqC928DZ5P9mNQ",
+        "s": "7stkzr30lqc928dz5p9mnq",
         "l": "heilung",
         "g": [
           "dark folk",
@@ -62,12 +62,54 @@
     "eventGenres": null,
     "artists": {
       "dream theater": {
-        "s": "2aaLAng2L2aWD2FClzwiep",
+        "s": "2aalang2l2awd2fclzwiep",
         "l": "dream%20theater",
         "g": [
           "metal",
           "progressive metal",
-          "Progressive Metal"
+          "progressive metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-02-11T20:00:00",
+    "start": "2025-02-11T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/bullet-for-my-valentine-trivium",
+    "title": "Bullet For My Valentine & Trivium",
+    "location": "afaslive",
+    "price": 88.48,
+    "longText": "../public/texts/afaslive/dWxsZXQtZm9yLW15LXZhbGVudGluZS10cml2aXVt.html",
+    "image": "../public/event-images/afaslive/dWxsZXQtZm9yLW15LXZhbGVudGluZS10cml2aXVt",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "bullet for my valentine": {
+        "s": "7iWiAD5LLKyiox2grgfmUT",
+        "l": "bullet%20for%20my%20valentine",
+        "g": [
+          "alternative metal",
+          "melodic metalcore",
+          "nu metal",
+          "post-grunge",
+          "uk metalcore",
+          "welsh metal"
+        ]
+      },
+      "trivium": {
+        "s": "278ZYwGhdK6QTzE3MFePnP",
+        "l": "trivium",
+        "g": [
+          "alternative metal",
+          "groove metal",
+          "melodic metalcore",
+          "melodic thrash",
+          "metal",
+          "metalcore",
+          "nu metal",
+          "post-grunge",
+          "metalcore, thrash",
+          "heavy metal"
         ]
       }
     }
