@@ -1,1104 +1,207 @@
 [
   {
-    "door": "2024-07-26T19:15:00+02:00",
-    "start": "2024-07-26T19:15:00+02:00",
-    "venueEventUrl": "https://www.013.nl/programma/77876/hellripper",
-    "title": "Hellripper",
-    "location": "013",
-    "price": 24.8,
-    "shortText": "",
-    "longText": "../public/texts/013/Lm5sL3Byb2dyYW1tYS83Nzg3Ni9oZWxscmlwcGVy.html",
-    "image": "../public/event-images/013/Lm5sL3Byb2dyYW1tYS83Nzg3Ni9oZWxscmlwcGVy",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "hellripper": {
-        "s": "6FfZaHz07OsknWNdtdan5R",
-        "l": "hellripper",
-        "g": [
-          "black speed metal",
-          "black thrash",
-          "british black metal",
-          "new wave of speed metal",
-          "black",
-          "speed metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-07-03T20:00:00+02:00",
-    "start": "2024-08-07T20:00:00+02:00",
-    "venueEventUrl": "https://www.013.nl/programma/7818/opeth",
-    "title": "Opeth",
-    "location": "013",
-    "price": 44.8,
-    "shortText": "",
-    "longText": "../public/texts/013/d3cuMDEzLm5sL3Byb2dyYW1tYS83ODE4L29wZXRo.html",
-    "image": "../public/event-images/013/d3cuMDEzLm5sL3Byb2dyYW1tYS83ODE4L29wZXRo",
+    "door": "2024-07-08T18:00:00",
+    "start": "2024-07-08T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/zz-top",
+    "title": "Zz top",
+    "location": "afaslive",
+    "price": 85.12,
+    "longText": "../public/texts/afaslive/L3d3dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvenotdG9w.html",
+    "image": "../public/event-images/afaslive/L3d3dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvenotdG9w",
     "soldOut": true,
-    "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "opeth": {
-        "s": "0ybFZ2Ab08V8hueghSXm6E",
-        "l": "opeth",
+      "zz top": {
+        "s": "2AM4ilv6UzW0uMRuqKtDgN",
+        "l": "zz%20top",
         "g": [
-          "alternative metal",
-          "metal",
-          "progressive death metal",
-          "progressive metal",
-          "swedish metal",
-          "swedish progressive metal",
-          "progressive death metal, progressive rock"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-08-08T20:00:00+02:00",
-    "start": "2024-08-08T20:00:00+02:00",
-    "venueEventUrl": "https://www.013.nl/programma/79800/the-dillinger-escape-plan",
-    "title": "The Dillinger Escape Plan",
-    "location": "013",
-    "price": 47.3,
-    "shortText": "Calculating Infinity 25th Anniversary Show",
-    "longText": "../public/texts/013/OTgwMC90aGUtZGlsbGluZ2VyLWVzY2FwZS1wbGFu.html",
-    "image": "../public/event-images/013/OTgwMC90aGUtZGlsbGluZ2VyLWVzY2FwZS1wbGFu",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "the dillinger escape plan": {
-        "s": "7IGcjaMGAtsvKBLQX26W4i",
-        "l": "the%20dillinger%20escape%20plan",
-        "g": [
-          "american metalcore",
-          "mathcore",
-          "new jersey hardcore",
-          "new jersey punk",
-          "post-hardcore"
-        ]
-      },
-      "infinity": {
-        "s": "39pFLfaKyWV8AO7BlpaoTQ",
-        "l": "infinity",
-        "g": [
-          "melodic death",
-          "thrash metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-08-21T20:00:00+02:00",
-    "start": "2024-08-21T20:00:00+02:00",
-    "venueEventUrl": "https://www.013.nl/programma/80340/the-amity-affliction",
-    "title": "The Amity Affliction",
-    "location": "013",
-    "price": 34.8,
-    "shortText": "PERFORMING LET THE OCEAN TAKE ME IN FULL",
-    "longText": "../public/texts/013/bW1hLzgwMzQwL3RoZS1hbWl0eS1hZmZsaWN0aW9u.html",
-    "image": "../public/event-images/013/bW1hLzgwMzQwL3RoZS1hbWl0eS1hZmZsaWN0aW9u",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "the amity affliction": {
-        "s": "6kNKUYGn6VNGsRoXmyoDPK",
-        "l": "the%20amity%20affliction",
-        "g": [
-          "australian metalcore",
-          "melodic metalcore",
-          "metalcore"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-09-12T20:30:00+02:00",
-    "start": "2024-09-12T20:30:00+02:00",
-    "venueEventUrl": "https://www.013.nl/programma/80277/bokassa",
-    "title": "Bokassa",
-    "location": "013",
-    "price": 18.3,
-    "shortText": "",
-    "longText": "../public/texts/013/MDEzLm5sL3Byb2dyYW1tYS84MDI3Ny9ib2thc3Nh.html",
-    "image": "../public/event-images/013/MDEzLm5sL3Byb2dyYW1tYS84MDI3Ny9ib2thc3Nh",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "bokassa": {
-        "s": "3QgBKy7myJIAIMe1A1y7uq",
-        "l": "bokassa",
-        "g": [
-          "norwegian hardcore",
-          "norwegian punk rock",
-          "norwegian rock"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-09-12T19:30:00+02:00",
-    "start": "2024-09-12T19:30:00+02:00",
-    "venueEventUrl": "https://www.013.nl/programma/7777/the-plot-in-you",
-    "title": "The Plot In You",
-    "location": "013",
-    "price": 29.3,
-    "shortText": "",
-    "longText": "../public/texts/013/cHJvZ3JhbW1hLzc3NzcvdGhlLXBsb3QtaW4teW91.html",
-    "image": "../public/event-images/013/cHJvZ3JhbW1hLzc3NzcvdGhlLXBsb3QtaW4teW91",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "the plot in you": {
-        "s": "1cJ5tVoeAEFcZBAwSZ0CtF",
-        "l": "the%20plot%20in%20you",
-        "g": [
-          "metalcore"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-09-16T20:00:00+02:00",
-    "start": "2024-09-16T20:00:00+02:00",
-    "venueEventUrl": "https://www.013.nl/programma/81206/symphony-x",
-    "title": "Symphony X",
-    "location": "013",
-    "price": 35.8,
-    "shortText": "",
-    "longText": "../public/texts/013/Lm5sL3Byb2dyYW1tYS84MTIwNi9zeW1waG9ueS14.html",
-    "image": "../public/event-images/013/Lm5sL3Byb2dyYW1tYS84MTIwNi9zeW1waG9ueS14",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "symphony x": {
-        "s": "4MnZkh4dpNmTMPxkl4Ev5L",
-        "l": "symphony%20x",
-        "g": [
-          "neo classical metal",
-          "power metal",
-          "progressive metal",
-          "progressive power metal",
-          "progressive power metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-09-21T20:00:00+02:00",
-    "start": "2024-09-21T20:00:00+02:00",
-    "venueEventUrl": "https://www.013.nl/programma/7889/within-temptation",
-    "title": "Within Temptation",
-    "location": "013",
-    "price": 55.8,
-    "shortText": "",
-    "longText": "../public/texts/013/b2dyYW1tYS83ODg5L3dpdGhpbi10ZW1wdGF0aW9u.html",
-    "image": "../public/event-images/013/b2dyYW1tYS83ODg5L3dpdGhpbi10ZW1wdGF0aW9u",
-    "soldOut": true,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "within temptation": {
-        "s": "3hE8S8ohRErocpkY7uJW4a",
-        "l": "within%20temptation",
-        "g": [
-          "dutch metal",
-          "gothic metal",
-          "gothic symphonic metal",
-          "symphonic metal",
-          "symphonic metal (early)",
-          " symphonic",
-          "alternative rock (later)"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-09-22T19:30:00+02:00",
-    "start": "2024-09-22T19:30:00+02:00",
-    "venueEventUrl": "https://www.013.nl/programma/7864/our-last-night",
-    "title": "Our Last Night",
-    "location": "013",
-    "price": 30.3,
-    "shortText": "You’re Up Europe - Tour 2024",
-    "longText": "../public/texts/013/L3Byb2dyYW1tYS83ODY0L291ci1sYXN0LW5pZ2h0.html",
-    "image": "../public/event-images/013/L3Byb2dyYW1tYS83ODY0L291ci1sYXN0LW5pZ2h0",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "our last night": {
-        "s": "00YTqRClk82aMchQQpYMd5",
-        "l": "our%20last%20night",
-        "g": [
-          "american metalcore"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-09-25T19:30:00+02:00",
-    "start": "2024-09-25T19:30:00+02:00",
-    "venueEventUrl": "https://www.013.nl/programma/78078/sonata-arctica",
-    "title": "Sonata Arctica",
-    "location": "013",
-    "price": 36.8,
-    "shortText": "",
-    "longText": "../public/texts/013/cHJvZ3JhbW1hLzc4MDc4L3NvbmF0YS1hcmN0aWNh.html",
-    "image": "../public/event-images/013/cHJvZ3JhbW1hLzc4MDc4L3NvbmF0YS1hcmN0aWNh",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "sonata arctica": {
-        "s": "5YeoQ1L71cXDMpSpqxOjfH",
-        "l": "sonata%20arctica",
-        "g": [
-          "finnish power metal",
-          "gothic symphonic metal",
-          "lapland metal",
-          "metal",
-          "power metal",
-          "progressive metal",
-          "symphonic metal",
-          "power metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-09-26T20:00:00+02:00",
-    "start": "2024-09-26T20:00:00+02:00",
-    "venueEventUrl": "https://www.013.nl/programma/78060/northlane",
-    "title": "Northlane",
-    "location": "013",
-    "price": 28.3,
-    "shortText": "",
-    "longText": "../public/texts/013/My5ubC9wcm9ncmFtbWEvNzgwNjAvbm9ydGhsYW5l.html",
-    "image": "../public/event-images/013/My5ubC9wcm9ncmFtbWEvNzgwNjAvbm9ydGhsYW5l",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "northlane": {
-        "s": "3qyg72RGnGdF521zMU02u9",
-        "l": "northlane",
-        "g": [
-          "australian metalcore",
-          "djent",
-          "melodic metalcore",
-          "metalcore",
-          "nu-metalcore",
-          "progressive metalcore"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-09-27T20:00:00+02:00",
-    "start": "2024-09-27T20:00:00+02:00",
-    "venueEventUrl": "https://www.013.nl/programma/7878/apocalyptica",
-    "title": "Apocalyptica",
-    "location": "013",
-    "price": 54.8,
-    "shortText": "PLAYS METALLICA VOL. 2 TOUR 2024",
-    "longText": "../public/texts/013/bmwvcHJvZ3JhbW1hLzc4NzgvYXBvY2FseXB0aWNh.html",
-    "image": "../public/event-images/013/bmwvcHJvZ3JhbW1hLzc4NzgvYXBvY2FseXB0aWNh",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "apocalyptica": {
-        "s": "4Lm0pUvmisUHMdoky5ch2I",
-        "l": "apocalyptica",
-        "g": [
-          "cello",
-          "finnish metal",
-          "symphonic heavy metal",
+          "album rock",
+          "blues rock",
+          "classic rock",
+          "hard rock",
           "rock"
         ]
-      },
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
       }
     }
   },
   {
-    "door": "2024-10-02T19:30:00+02:00",
-    "start": "2024-10-02T19:30:00+02:00",
-    "venueEventUrl": "https://www.013.nl/programma/7813/visions-of-atlantis",
-    "title": "Visions of Atlantis",
-    "location": "013",
-    "price": 28.3,
-    "shortText": "Armada Tour",
-    "longText": "../public/texts/013/cmFtbWEvNzgxMy92aXNpb25zLW9mLWF0bGFudGlz.html",
-    "image": "../public/event-images/013/cmFtbWEvNzgxMy92aXNpb25zLW9mLWF0bGFudGlz",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "visions of atlantis": {
-        "s": "5kanN1nKzrkW1m2gZmo82x",
-        "l": "visions%20of%20atlantis",
-        "g": [
-          "austrian metal",
-          "gothic metal",
-          "gothic symphonic metal",
-          "power metal",
-          "symphonic metal",
-          "melodic",
-          "symphonic power metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-10-03T20:00:00+02:00",
-    "start": "2024-10-03T20:00:00+02:00",
-    "venueEventUrl": "https://www.013.nl/programma/81901/delilah-bon",
-    "title": "Delilah Bon",
-    "location": "013",
-    "price": 20.8,
-    "shortText": "EVIL, HATE FILLED FEMALE EUROPE / UK TOUR",
-    "longText": "../public/texts/013/bmwvcHJvZ3JhbW1hLzgxOTAxL2RlbGlsYWgtYm9u.html",
-    "image": "../public/event-images/013/bmwvcHJvZ3JhbW1hLzgxOTAxL2RlbGlsYWgtYm9u",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "delilah bon": {
-        "s": null,
-        "l": "delilah%20bon",
-        "g": []
-      }
-    }
-  },
-  {
-    "door": "2024-10-03T20:00:00+02:00",
-    "start": "2024-10-03T20:00:00+02:00",
-    "venueEventUrl": "https://www.013.nl/programma/86507/dog-eat-dog",
-    "title": "Dog Eat Dog",
-    "location": "013",
-    "price": 27.3,
-    "shortText": "30 Years All Boro Kings",
-    "longText": "../public/texts/013/bmwvcHJvZ3JhbW1hLzg2NTA3L2RvZy1lYXQtZG9n.html",
-    "image": "../public/event-images/013/bmwvcHJvZ3JhbW1hLzg2NTA3L2RvZy1lYXQtZG9n",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "dog eat dog": {
-        "s": "3k6giioktry1twaojlhmgx",
-        "l": "dog%20eat%20dog",
-        "g": [
-          "funk metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-10-05T19:15:00+02:00",
-    "start": "2024-10-05T19:15:00+02:00",
-    "venueEventUrl": "https://www.013.nl/programma/84206/pure-reason-revolution-lesoir",
-    "title": "Pure Reason Revolution + Lesoir",
-    "location": "013",
-    "price": 28.3,
-    "shortText": "",
-    "longText": "../public/texts/013/L3B1cmUtcmVhc29uLXJldm9sdXRpb24tbGVzb2ly.html",
-    "image": "../public/event-images/013/L3B1cmUtcmVhc29uLXJldm9sdXRpb24tbGVzb2ly",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "pure reason revolution + lesoir": {
-        "s": "0dauhvrie8spgwxw0yinj3",
-        "l": "pure%20reason%20revolution%20+%20lesoir",
-        "g": [
-          "progressive metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-10-11T21:00:00+02:00",
-    "start": "2024-10-11T21:00:00+02:00",
-    "venueEventUrl": "https://www.013.nl/programma/86026/foreseen",
-    "title": "Foreseen",
-    "location": "013",
-    "price": 17.3,
-    "shortText": "",
-    "longText": "../public/texts/013/MTMubmwvcHJvZ3JhbW1hLzg2MDI2L2ZvcmVzZWVu.html",
-    "image": "../public/event-images/013/MTMubmwvcHJvZ3JhbW1hLzg2MDI2L2ZvcmVzZWVu",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "foreseen": {
-        "s": "0GQRDxksaf79O8JDgxp91g",
-        "l": "foreseen",
-        "g": [
-          "crossover thrash",
-          "new wave of thrash metal",
-          "thrash metal",
-          "crossover"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-10-27T19:30:00+01:00",
-    "start": "2024-10-27T19:30:00+01:00",
-    "venueEventUrl": "https://www.013.nl/programma/79375/the-ghost-inside",
-    "title": "The Ghost Inside",
-    "location": "013",
-    "price": 38.8,
-    "shortText": "Searching For Solace Tour",
-    "longText": "../public/texts/013/b2dyYW1tYS83OTM3NS90aGUtZ2hvc3QtaW5zaWRl.html",
-    "image": "../public/event-images/013/b2dyYW1tYS83OTM3NS90aGUtZ2hvc3QtaW5zaWRl",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "ghost": {
-        "s": "1qp56t7n950o3egmssl81d",
-        "l": "ghost",
-        "g": [
-          "hard rock",
-          "metal"
-        ]
-      },
-      "the ghost inside": {
-        "s": "6kQB2RN7WwryMdJ1MoQh1E",
-        "l": "the%20ghost%20inside",
-        "g": [
-          "melodic metalcore",
-          "metalcore"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-10-31T19:00:00+01:00",
-    "start": "2024-10-31T19:00:00+01:00",
-    "venueEventUrl": "https://www.013.nl/programma/7702/beartooth",
-    "title": "Beartooth",
-    "location": "013",
-    "price": 42.8,
-    "shortText": "Show #1",
-    "longText": "../public/texts/013/MTMubmwvcHJvZ3JhbW1hLzc3MDIvYmVhcnRvb3Ro.html",
-    "image": "../public/event-images/013/MTMubmwvcHJvZ3JhbW1hLzc3MDIvYmVhcnRvb3Ro",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "beartooth": {
-        "s": "6vwjIs0tbIiseJMR3pqwiL",
-        "l": "beartooth",
-        "g": [
-          "melodic metalcore",
-          "metalcore",
-          "pop punk"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-11-01T19:00:00+01:00",
-    "start": "2024-11-01T19:00:00+01:00",
-    "venueEventUrl": "https://www.013.nl/programma/7703/beartooth",
-    "title": "Beartooth",
-    "location": "013",
-    "price": 42.8,
-    "shortText": "Show #2",
-    "longText": "../public/texts/013/MTMubmwvcHJvZ3JhbW1hLzc3MDMvYmVhcnRvb3Ro.html",
-    "image": "../public/event-images/013/MTMubmwvcHJvZ3JhbW1hLzc3MDMvYmVhcnRvb3Ro",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "beartooth": {
-        "s": "6vwjIs0tbIiseJMR3pqwiL",
-        "l": "beartooth",
-        "g": [
-          "melodic metalcore",
-          "metalcore",
-          "pop punk"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-11-08T20:00:00+01:00",
-    "start": "2024-11-08T20:00:00+01:00",
-    "venueEventUrl": "https://www.013.nl/programma/81918/guilt-trip",
-    "title": "Guilt Trip",
-    "location": "013",
-    "price": 19.8,
-    "shortText": "",
-    "longText": "../public/texts/013/Lm5sL3Byb2dyYW1tYS84MTkxOC9ndWlsdC10cmlw.html",
-    "image": "../public/event-images/013/Lm5sL3Byb2dyYW1tYS84MTkxOC9ndWlsdC10cmlw",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "guilt trip": {
-        "s": "07mhrucogu6njvrnvzqoxu",
-        "l": "guilt%20trip",
-        "g": [
-          "uk beatdown",
-          "ukhc"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-11-08T22:00:00+01:00",
-    "start": "2024-11-08T22:00:00+01:00",
-    "venueEventUrl": "https://www.013.nl/programma/7869/no-barrier",
-    "title": "No barrier",
-    "location": "013",
-    "price": 17.3,
-    "shortText": "Punk, Rock & Metalcore!",
-    "longText": "../public/texts/013/My5ubC9wcm9ncmFtbWEvNzg2OS9uby1iYXJyaWVy.html",
-    "image": "../public/event-images/013/My5ubC9wcm9ncmFtbWEvNzg2OS9uby1iYXJyaWVy",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "no barrier": {
-        "s": "2am0proxk0wcivgl5rza3a",
-        "l": "no%20barrier",
-        "g": []
-      },
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-11-17T20:00:00+01:00",
-    "start": "2024-11-17T20:00:00+01:00",
-    "venueEventUrl": "https://www.013.nl/programma/7891/wheel",
-    "title": "Wheel",
-    "location": "013",
-    "price": 23.3,
-    "shortText": "",
-    "longText": "../public/texts/013/d3cuMDEzLm5sL3Byb2dyYW1tYS83ODkxL3doZWVs.html",
-    "image": "../public/event-images/013/d3cuMDEzLm5sL3Byb2dyYW1tYS83ODkxL3doZWVs",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "wheel": {
-        "s": "4msm1QtpV7zMReePhbEQ6H",
-        "l": "wheel",
-        "g": [
-          "finnish progressive rock",
-          "modern progressive rock",
-          "progressive metal",
-          "doom metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-11-21T20:00:00+01:00",
-    "start": "2024-11-21T20:00:00+01:00",
-    "venueEventUrl": "https://www.013.nl/programma/77846/brothers-of-metal",
-    "title": "Brothers Of Metal",
-    "location": "013",
-    "price": 24.3,
-    "shortText": "FimbulwinTour 2024",
-    "longText": "../public/texts/013/Z3JhbW1hLzc3ODQ2L2Jyb3RoZXJzLW9mLW1ldGFs.html",
-    "image": "../public/event-images/013/Z3JhbW1hLzc3ODQ2L2Jyb3RoZXJzLW9mLW1ldGFs",
+    "door": "2024-08-04T20:00:00",
+    "start": "2024-08-04T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/korn",
+    "title": "Korn",
+    "location": "afaslive",
+    "price": 88.48,
+    "longText": "../public/texts/afaslive/Oi8vd3d3LmFmYXNsaXZlLm5sL2FnZW5kYS9rb3Ju.html",
+    "image": "../public/event-images/afaslive/Oi8vd3d3LmFmYXNsaXZlLm5sL2FnZW5kYS9rb3Ju",
     "soldOut": true,
-    "unavailable": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2024-09-19T20:00:00",
+    "start": "2024-09-19T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/epica-show2",
+    "title": "Epica",
+    "location": "afaslive",
+    "price": 95.2,
+    "longText": "../public/texts/afaslive/YWZhc2xpdmUubmwvYWdlbmRhL2VwaWNhLXNob3cy.html",
+    "image": "../public/event-images/afaslive/YWZhc2xpdmUubmwvYWdlbmRhL2VwaWNhLXNob3cy",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2024-09-20T20:00:00",
+    "start": "2024-09-20T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/epica",
+    "title": "Epica",
+    "location": "afaslive",
+    "price": 95.2,
+    "longText": "../public/texts/afaslive/Ly93d3cuYWZhc2xpdmUubmwvYWdlbmRhL2VwaWNh.html",
+    "image": "../public/event-images/afaslive/Ly93d3cuYWZhc2xpdmUubmwvYWdlbmRhL2VwaWNh",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2024-09-21T20:00:00",
+    "start": "2024-09-21T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/heilung",
+    "title": "Heilung",
+    "location": "afaslive",
+    "price": 58.8,
+    "longText": "../public/texts/afaslive/d3d3LmFmYXNsaXZlLm5sL2FnZW5kYS9oZWlsdW5n.html",
+    "image": "../public/event-images/afaslive/d3d3LmFmYXNsaXZlLm5sL2FnZW5kYS9oZWlsdW5n",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2024-10-05T18:30:00",
+    "start": "2024-10-05T18:30:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/powerwolf",
+    "title": "Powerwolf",
+    "location": "afaslive",
+    "price": 72.8,
+    "longText": "../public/texts/afaslive/dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvcG93ZXJ3b2xm.html",
+    "image": "../public/event-images/afaslive/dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvcG93ZXJ3b2xm",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": null
+  },
+  {
+    "door": "2024-11-18T20:00:00",
+    "start": "2024-11-18T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/sleep-token",
+    "title": "Sleep Token",
+    "location": "afaslive",
+    "price": 59.36,
+    "longText": "../public/texts/afaslive/YWZhc2xpdmUubmwvYWdlbmRhL3NsZWVwLXRva2Vu.html",
+    "image": "../public/event-images/afaslive/YWZhc2xpdmUubmwvYWdlbmRhL3NsZWVwLXRva2Vu",
+    "soldOut": true,
     "eventGenres": null,
     "artists": {
-      "brothers of metal": {
-        "s": "0WPCPYm5IDNtQjuJOGNPcy",
-        "l": "brothers%20of%20metal",
+      "sleep token": {
+        "s": "2n2RSaZqBuUUukhbLlpnE6",
+        "l": "sleep%20token",
         "g": [
-          "melodic metal",
-          "power metal",
-          "swedish heavy metal",
-          "heavy",
-          "power metal"
-        ]
-      },
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
+          "prog metal"
         ]
       }
     }
   },
   {
-    "door": "2024-11-22T19:00:00+01:00",
-    "start": "2024-11-22T19:00:00+01:00",
-    "venueEventUrl": "https://www.013.nl/programma/81021/avocado-booking-presents-pins-knuckles-faces-of-death-tour-2024",
-    "title": "Pins & Knuckles Faces Of Death Tour",
-    "location": "013",
-    "price": 27.3,
-    "shortText": "Veil Of Maya + Signs Of The Swarm + Varials + To The Grave",
-    "longText": "../public/texts/013/Y2tsZXMtZmFjZXMtb2YtZGVhdGgtdG91ci0yMDI0.html",
-    "image": "../public/event-images/013/Y2tsZXMtZmFjZXMtb2YtZGVhdGgtdG91ci0yMDI0",
+    "door": "2024-11-24T20:00:00",
+    "start": "2024-11-24T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/dream-theater",
+    "title": "Dream Theater",
+    "location": "afaslive",
+    "price": 112,
+    "longText": "../public/texts/afaslive/YXNsaXZlLm5sL2FnZW5kYS9kcmVhbS10aGVhdGVy.html",
+    "image": "../public/event-images/afaslive/YXNsaXZlLm5sL2FnZW5kYS9kcmVhbS10aGVhdGVy",
     "soldOut": false,
-    "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "pins & knuckles faces of death tour": {
-        "s": "3jr9qskwqjf3imnq3rwvdq",
-        "l": "pins%20&%20knuckles%20faces%20of%20death%20tour",
+      "dream theater": {
+        "s": "2aaLAng2L2aWD2FClzwiep",
+        "l": "dream%20theater",
         "g": [
-          "blackened deathcore",
-          "deathcore",
-          "melodic metalcore",
-          "progressive deathcore",
-          "slamming deathcore",
-          "thrash metal/crossover"
-        ]
-      },
-      "veil of maya": {
-        "s": "2i7CQcVBh2K6uOR3CH09M1",
-        "l": "veil%20of%20maya",
-        "g": [
-          "deathcore",
-          "djent",
-          "melodic metalcore",
-          "metalcore",
-          "technical deathcore",
-          "technical deathcore (early)",
-          " djent",
-          "technical metalcore (later)"
-        ]
-      },
-      "signs of the swarm": {
-        "s": "0yxJx8OEyDfd7dzLsFuNrS",
-        "l": "signs%20of%20the%20swarm",
-        "g": [
-          "deathcore",
-          "melodic metalcore",
-          "pittsburgh metal",
-          "progressive deathcore",
-          "slamming deathcore",
-          "deathcore"
-        ]
-      },
-      "varials": {
-        "s": "6EFV3PmaXblKwNbvpkGv9l",
-        "l": "varials",
-        "g": [
-          "deathcore",
-          "metallic hardcore",
-          "pennsylvania hardcore",
-          "progressive deathcore"
-        ]
-      },
-      "to the grave": {
-        "s": "3jr9qsKWQjf3iMNQ3rWVDQ",
-        "l": "to%20the%20grave",
-        "g": [
-          "blackened deathcore",
-          "deathcore",
-          "melodic metalcore",
-          "progressive deathcore",
-          "slamming deathcore",
-          "thrash metal",
-          "crossover"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-11-27T20:00:00+01:00",
-    "start": "2024-11-27T20:00:00+01:00",
-    "venueEventUrl": "https://www.013.nl/programma/78453/benighted-baest",
-    "title": "Benighted + Baest",
-    "location": "013",
-    "price": 22.3,
-    "shortText": "",
-    "longText": "../public/texts/013/cm9ncmFtbWEvNzg0NTMvYmVuaWdodGVkLWJhZXN0.html",
-    "image": "../public/event-images/013/cm9ncmFtbWEvNzg0NTMvYmVuaWdodGVkLWJhZXN0",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "benighted": {
-        "s": "0duwiwapc6uukkcztaaf7j",
-        "l": "benighted",
-        "g": [
-          "brutal death metal",
-          "death metal",
-          "deathgrind",
-          "french death metal",
-          "french metal",
-          "technical death metal",
-          "black metal (early)",
-          "brutal death metal/grindcore (later)"
-        ]
-      },
-      "baest": {
-        "s": "4UtjZRQc6qXhAd1kqyLvqp",
-        "l": "baest",
-        "g": [
-          "danish death metal",
-          "danish metal",
-          "death metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-12-08T19:00:00+01:00",
-    "start": "2024-12-08T19:00:00+01:00",
-    "venueEventUrl": "https://www.013.nl/programma/86265/cradle-of-filth",
-    "title": "Cradle Of Filth",
-    "location": "013",
-    "price": 34.8,
-    "shortText": "",
-    "longText": "../public/texts/013/cm9ncmFtbWEvODYyNjUvY3JhZGxlLW9mLWZpbHRo.html",
-    "image": "../public/event-images/013/cm9ncmFtbWEvODYyNjUvY3JhZGxlLW9mLWZpbHRo",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "cradle of filth": {
-        "s": "0NTSMFFapnyZfvmCwzcYPd",
-        "l": "cradle%20of%20filth",
-        "g": [
-          "black metal",
-          "british black metal",
-          "gothic black metal",
-          "gothic metal",
           "metal",
-          "symphonic black metal",
-          "symphonic metal",
-          "vampiric black metal",
-          "death metal (early)",
-          " symphonic black metal (mid)",
-          " extreme gothic metal (later)"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-12-08T20:30:00+01:00",
-    "start": "2024-12-08T20:30:00+01:00",
-    "venueEventUrl": "https://www.013.nl/programma/7859/hang-youth",
-    "title": "Hang Youth",
-    "location": "013",
-    "price": 23.3,
-    "shortText": "",
-    "longText": "../public/texts/013/My5ubC9wcm9ncmFtbWEvNzg1OS9oYW5nLXlvdXRo.html",
-    "image": "../public/event-images/013/My5ubC9wcm9ncmFtbWEvNzg1OS9oYW5nLXlvdXRo",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "hang youth": {
-        "s": "33s4eablBmnrPlE3y6CZFR",
-        "l": "hang%20youth",
-        "g": [
-          "dutch indie",
-          "lowlands hardcore"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-12-20T20:00:00+01:00",
-    "start": "2024-12-20T20:00:00+01:00",
-    "venueEventUrl": "https://www.013.nl/programma/7906/john-coffey",
-    "title": "John Coffey",
-    "location": "013",
-    "price": 27.3,
-    "shortText": "",
-    "longText": "../public/texts/013/Lm5sL3Byb2dyYW1tYS83OTA2L2pvaG4tY29mZmV5.html",
-    "image": "../public/event-images/013/Lm5sL3Byb2dyYW1tYS83OTA2L2pvaG4tY29mZmV5",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "john coffey": {
-        "s": "4kffvdsomgp0boibxvgeya",
-        "l": "john%20coffey",
-        "g": [
-          "dutch indie",
-          "dutch rock",
-          "hardcore punk"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-12-22T20:00:00+01:00",
-    "start": "2024-12-22T20:00:00+01:00",
-    "venueEventUrl": "https://www.013.nl/programma/80690/dool",
-    "title": "Dool",
-    "location": "013",
-    "price": 25.3,
-    "shortText": "",
-    "longText": "../public/texts/013/d3cuMDEzLm5sL3Byb2dyYW1tYS84MDY5MC9kb29s.html",
-    "image": "../public/event-images/013/d3cuMDEzLm5sL3Byb2dyYW1tYS84MDY5MC9kb29s",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "dool": {
-        "s": "101hsr6jtjqe3dbh6rb8kz",
-        "l": "dool",
-        "g": [
-          "dutch rock"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-12-22T20:30:00+01:00",
-    "start": "2024-12-22T20:30:00+01:00",
-    "venueEventUrl": "https://www.013.nl/programma/7907/green-lizard",
-    "title": "Green Lizard",
-    "location": "013",
-    "price": 19.8,
-    "shortText": "30th Anniversary Tour",
-    "longText": "../public/texts/013/bmwvcHJvZ3JhbW1hLzc5MDcvZ3JlZW4tbGl6YXJk.html",
-    "image": "../public/event-images/013/bmwvcHJvZ3JhbW1hLzc5MDcvZ3JlZW4tbGl6YXJk",
-    "soldOut": true,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "green lizard": {
-        "s": "05ZicXUsA6xxL2jxDN9q76",
-        "l": "green%20lizard",
-        "g": [
-          "dutch punk",
-          "dutch rock"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-01-17T18:00:00+01:00",
-    "start": "2025-01-17T18:00:00+01:00",
-    "venueEventUrl": "https://www.013.nl/programma/86484/kublai-khan-tx",
-    "title": "Kublai Khan TX",
-    "location": "013",
-    "price": 30.3,
-    "shortText": "",
-    "longText": "../public/texts/013/cHJvZ3JhbW1hLzg2NDg0L2t1YmxhaS1raGFuLXR4.html",
-    "image": "../public/event-images/013/cHJvZ3JhbW1hLzg2NDg0L2t1YmxhaS1raGFuLXR4",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "kublai khan tx": {
-        "s": "5BIOo2mCAokFcLHXO2Llb4",
-        "l": "kublai%20khan%20tx",
-        "g": [
-          "metallic hardcore",
-          "texas hardcore",
-          "texas metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-01-24T21:00:00+01:00",
-    "start": "2025-01-24T21:00:00+01:00",
-    "venueEventUrl": "https://www.013.nl/programma/7737/the-optimist-in-me",
-    "title": "The Optimist In Me",
-    "location": "013",
-    "price": 11.7,
-    "shortText": "",
-    "longText": "../public/texts/013/Z3JhbW1hLzc3MzcvdGhlLW9wdGltaXN0LWluLW1l.html",
-    "image": "../public/event-images/013/Z3JhbW1hLzc3MzcvdGhlLW9wdGltaXN0LWluLW1l",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "the optimist in me": {
-        "s": "3qmkrrjqjtixsbgjgwwmmu",
-        "l": "the%20optimist%20in%20me",
-        "g": []
-      }
-    }
-  },
-  {
-    "door": "2025-01-31T20:30:00+01:00",
-    "start": "2025-01-31T20:30:00+01:00",
-    "venueEventUrl": "https://www.013.nl/programma/86023/feuerengel",
-    "title": "Feuerengel",
-    "location": "013",
-    "price": 35.8,
-    "shortText": "A Tribute To Rammstein",
-    "longText": "../public/texts/013/Lm5sL3Byb2dyYW1tYS84NjAyMy9mZXVlcmVuZ2Vs.html",
-    "image": "../public/event-images/013/Lm5sL3Byb2dyYW1tYS84NjAyMy9mZXVlcmVuZ2Vs",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "feuerengel": {
-        "s": null,
-        "l": "feuerengel",
-        "g": []
-      }
-    }
-  },
-  {
-    "door": "2025-02-07T20:00:00+01:00",
-    "start": "2025-02-07T20:00:00+01:00",
-    "venueEventUrl": "https://www.013.nl/programma/85967/leprous",
-    "title": "Leprous",
-    "location": "013",
-    "price": 37.3,
-    "shortText": "",
-    "longText": "../public/texts/013/MDEzLm5sL3Byb2dyYW1tYS84NTk2Ny9sZXByb3Vz.html",
-    "image": "../public/event-images/013/MDEzLm5sL3Byb2dyYW1tYS84NTk2Ny9sZXByb3Vz",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "leprous": {
-        "s": "4lgrzshsg2fla89um2fdo5",
-        "l": "leprous",
-        "g": [
-          "norwegian metal",
-          "prog metal",
+          "progressive metal",
           "progressive metal"
         ]
       }
     }
   },
   {
-    "door": "2025-02-08T20:30:00+01:00",
-    "start": "2025-02-08T20:30:00+01:00",
-    "venueEventUrl": "https://www.013.nl/programma/82767/ronnie-james-dio-the-memorial-concert",
-    "title": "Ronnie James Dio",
-    "location": "013",
-    "price": 28.3,
-    "shortText": "The Memorial Concert",
-    "longText": "../public/texts/013/amFtZXMtZGlvLXRoZS1tZW1vcmlhbC1jb25jZXJ0.html",
-    "image": "../public/event-images/013/amFtZXMtZGlvLXRoZS1tZW1vcmlhbC1jb25jZXJ0",
+    "door": "2025-01-28T20:00:00",
+    "start": "2025-01-28T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/pantera",
+    "title": "Pantera",
+    "location": "afaslive",
+    "price": 100.8,
+    "longText": "../public/texts/afaslive/d3d3LmFmYXNsaXZlLm5sL2FnZW5kYS9wYW50ZXJh.html",
+    "image": "../public/event-images/afaslive/d3d3LmFmYXNsaXZlLm5sL2FnZW5kYS9wYW50ZXJh",
     "soldOut": false,
-    "unavailable": false,
     "eventGenres": null,
-    "artists": {
-      "ronnie james dio": {
-        "s": "4M3c7tg4BzLQ5pIOupZL65",
-        "l": "ronnie%20james%20dio",
-        "g": [
-          "hard rock"
-        ]
-      }
-    }
+    "artists": null
   },
   {
-    "door": "2025-02-14T19:00:00+01:00",
-    "start": "2025-02-14T19:00:00+01:00",
-    "venueEventUrl": "https://www.013.nl/programma/80019/motionless-in-white",
-    "title": "Motionless in White",
-    "location": "013",
-    "price": 36.8,
-    "shortText": "",
-    "longText": "../public/texts/013/YW1tYS84MDAxOS9tb3Rpb25sZXNzLWluLXdoaXRl.html",
-    "image": "../public/event-images/013/YW1tYS84MDAxOS9tb3Rpb25sZXNzLWluLXdoaXRl",
-    "soldOut": true,
-    "unavailable": false,
+    "door": "2025-02-04T20:00:00",
+    "start": "2025-02-04T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/papa-roach",
+    "title": "Papa Roach",
+    "location": "afaslive",
+    "price": 58.24,
+    "longText": "../public/texts/afaslive/LmFmYXNsaXZlLm5sL2FnZW5kYS9wYXBhLXJvYWNo.html",
+    "image": "../public/event-images/afaslive/LmFmYXNsaXZlLm5sL2FnZW5kYS9wYXBhLXJvYWNo",
+    "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "motionless in white": {
-        "s": "6MwPCCR936cYfM1dLsGVnl",
-        "l": "motionless%20in%20white",
+      "papa roach": {
+        "s": "4RddZ3iHvSpGV4dvATac9X",
+        "l": "papa%20roach",
         "g": [
           "alternative metal",
-          "metalcore"
+          "nu metal",
+          "rap metal",
+          "rap rock",
+          "rock"
         ]
       }
     }
   },
   {
-    "door": "2025-02-16T19:00:00+01:00",
-    "start": "2025-02-16T19:00:00+01:00",
-    "venueEventUrl": "https://www.013.nl/programma/84793/spiritbox",
-    "title": "Spiritbox",
-    "location": "013",
-    "price": 44.3,
-    "shortText": "",
-    "longText": "../public/texts/013/My5ubC9wcm9ncmFtbWEvODQ3OTMvc3Bpcml0Ym94.html",
-    "image": "../public/event-images/013/My5ubC9wcm9ncmFtbWEvODQ3OTMvc3Bpcml0Ym94",
+    "door": "2025-02-11T20:00:00",
+    "start": "2025-02-11T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/bullet-for-my-valentine-trivium",
+    "title": "Bullet For My Valentine & Trivium",
+    "location": "afaslive",
+    "price": 88.48,
+    "longText": "../public/texts/afaslive/dWxsZXQtZm9yLW15LXZhbGVudGluZS10cml2aXVt.html",
+    "image": "../public/event-images/afaslive/dWxsZXQtZm9yLW15LXZhbGVudGluZS10cml2aXVt",
     "soldOut": false,
-    "unavailable": false,
     "eventGenres": null,
-    "artists": {
-      "spiritbox": {
-        "s": "4MzJMcHQBl9SIYSjwWn8QW",
-        "l": "spiritbox",
-        "g": [
-          "canadian metalcore"
-        ]
-      }
-    }
+    "artists": null
   },
   {
-    "door": "2025-02-21T18:15:00+01:00",
-    "start": "2025-02-21T18:15:00+01:00",
-    "venueEventUrl": "https://www.013.nl/programma/85373/paleface-swiss",
-    "title": "Paleface Swiss",
-    "location": "013",
-    "price": 28.3,
-    "shortText": "",
-    "longText": "../public/texts/013/cHJvZ3JhbW1hLzg1MzczL3BhbGVmYWNlLXN3aXNz.html",
-    "image": "../public/event-images/013/cHJvZ3JhbW1hLzg1MzczL3BhbGVmYWNlLXN3aXNz",
+    "door": "2025-05-22T20:00:00",
+    "start": "2025-05-22T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/steven-wilson",
+    "title": "Steven Wilson",
+    "location": "afaslive",
+    "price": 72.8,
+    "longText": "../public/texts/afaslive/YXNsaXZlLm5sL2FnZW5kYS9zdGV2ZW4td2lsc29u.html",
+    "image": "../public/event-images/afaslive/YXNsaXZlLm5sL2FnZW5kYS9zdGV2ZW4td2lsc29u",
     "soldOut": false,
-    "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "paleface swiss": {
-        "s": "467M2s2YxXdlL2ZpDUNL3A",
-        "l": "paleface%20swiss",
+      "steven wilson": {
+        "s": "4X42BfuhWCAZ2swiVze9O0",
+        "l": "steven%20wilson",
         "g": [
-          "slamming deathcore"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-03-16T19:30:00+01:00",
-    "start": "2025-03-16T19:30:00+01:00",
-    "venueEventUrl": "https://www.013.nl/programma/81196/punk-rock-factory",
-    "title": "Punk Rock Factory",
-    "location": "013",
-    "price": 24.3,
-    "shortText": "Stick To The Covers Tour",
-    "longText": "../public/texts/013/Z3JhbW1hLzgxMTk2L3B1bmstcm9jay1mYWN0b3J5.html",
-    "image": "../public/event-images/013/Z3JhbW1hLzgxMTk2L3B1bmstcm9jay1mYWN0b3J5",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "punk rock factory": {
-        "s": "1doeW0oJMkO8kEq5g9kFNR",
-        "l": "punk%20rock%20factory",
-        "g": [
-          "punk cover"
+          "progressive metal",
+          "progressive rock"
         ]
       }
     }

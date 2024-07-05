@@ -76,11 +76,12 @@ export default class Artists {
     persistNewRefusedAndRockArtists: false,
     checkExplicitEventCategories: false,
     saveAllowedEvent: false,
-    scanTextForSomeArtistList: false,
+    scanTextForSomeArtistList: true,
     getRefused: false,
     _do: false,
     APICallsForGenre: false,
-    getMetalEncyclopediaConfirmation: true,
+    getMetalEncyclopediaConfirmation: false,
+    getSpotifyConfirmation: true,
   };
 
   // #endregion
@@ -693,14 +694,16 @@ export default class Artists {
     }
 
     const spotifyGenres = spotRes?.genres ?? [];
-    // console.log();
-    // console.log(`--------------`);
-    // console.log(`gevonden genres om te controleren voor ${title}`);
-    // console.log(spotifyGenres);
-
+    
     const spotifyGenresInForbidden = spotifyGenres.find((sg) => this.terms.forbidden.includes(sg));
-
+    
     if (spotifyGenresInForbidden) {
+      this.consoleGroup(`spotify confirmation gSC23`, {
+        title,
+        success: '🟥 verboden spotify genres gevonden',
+        spotifyGenres,
+        spotifyGenresInForbidden,
+      }, `getSpotifyConfirmation`, 'magenta');
       return this.post({
         success: false,
         data: spotifyGenresInForbidden,
@@ -712,6 +715,12 @@ export default class Artists {
       .find((sg) => this.terms.goodCategories.includes(sg));
     
     if (spotifyGenresInGoodCategories) {
+      this.consoleGroup(`spotify confirmation gSC24`, {
+        title,
+        success: '🟩 goede spotify genres gevonden',
+        spotifyGenres,
+        spotifyGenresInGoodCategories,
+      }, `getSpotifyConfirmation`, 'magenta');      
       return this.post({
         success: true,
         data: spotifyGenresInGoodCategories,
@@ -723,6 +732,12 @@ export default class Artists {
     const ietsHardstDan = spotifyGenres.find((sg) => sg.includes('metal'));
 
     if (ietsHardstDan) {
+      this.consoleGroup(`spotify confirmation gSC25`, {
+        title,
+        success: '🟩 iets van metal gevonden in spotify genres',
+        spotifyGenres,
+        ietsHardstDan,
+      }, `getSpotifyConfirmation`, 'magenta');            
       return this.post({
         success: true,
         data: ietsHardstDan,
@@ -734,6 +749,12 @@ export default class Artists {
       .find((sg) => this.terms.forbidden.find((forbiddenTerm) => sg.includes(forbiddenTerm)));
 
     if (ietsKutsDan) {
+      this.consoleGroup(`spotify confirmation gSC26`, {
+        title,
+        success: '🟥 een slecht genre in spotify genres',
+        spotifyGenres,
+        ietsKutsDan,
+      }, `getSpotifyConfirmation`, 'magenta');                  
       return this.post({
         success: false,
         data: ietsKutsDan,
@@ -741,6 +762,12 @@ export default class Artists {
       });        
     }    
         
+    this.consoleGroup(`spotify confirmation gSC27`, {
+      title,
+      success: '⬜ niet relevants gevonden in spotify genres',
+      spotifyGenres,
+    }, `getSpotifyConfirmation`, 'magenta');            
+
     return this.post({
       success: null,
       data: null,
@@ -967,35 +994,36 @@ export default class Artists {
    */
   scanTextForSomeArtistList(eventNameOfTitle, slug, artistList, scanningFor) {
     const toScan = eventNameOfTitle.replaceAll(/\(.*\)/g, ''); // (usa etc eruit);
-    const haystack = Object.keys(artistList);
+    const artistListCopy = { ...artistList };
+    const haystack = Object.keys(artistListCopy);
     
-    Artists._consoleGroup(`\nscanTextForAllowedArtists 1`, {  
+    this.consoleGroup(`\nscanTextForAllowedArtists atFSAL22`, {  
       toScan,
       slug,
       typeofSlug: typeof slug,
       lengthOfSlug: slug.length,
       scanningFor,
-    }, 'scanTextForSomeArtistList');
+    }, 'scanTextForSomeArtistList', 'blauw');
     
     const gevondenKeys = haystack
       .filter((hay) => toScan.includes(hay) || slug.includes(hay));
     
-    Artists._consoleGroup(`scanTextForSomeArtistList gevonden keys`, { gevondenKeys }, 'scanTextForSomeArtistList');
+    this.consoleGroup(`scanTextForSomeArtistList gevonden keys atFSAL23`, { gevondenKeys }, 'scanTextForSomeArtistList', 'blauw');
     
     if (!gevondenKeys || !gevondenKeys.length) {
       return {};
     }
 
-    const allowedArtists = {};
+    const foundArtists = {};
     gevondenKeys.forEach((key) => {
-      allowedArtists[key] = this.allowedArtists[key];
+      foundArtists[key] = artistListCopy[key];
     });
 
     if (gevondenKeys.length === 2) {
       const key1 = gevondenKeys[0];
       const key2 = gevondenKeys[1];
-      const isSlug1 = allowedArtists[key1][0];
-      const isSlug2 = allowedArtists[key2][0];
+      const isSlug1 = artistListCopy[key1][0];
+      const isSlug2 = artistListCopy[key2][0];
       const eenSlugAnderNiet = isSlug1 + isSlug2 === 1;
       if (eenSlugAnderNiet) {
         let winKey;
@@ -1004,52 +1032,49 @@ export default class Artists {
         } else {
           winKey = key1;
         }
-        const winnaar = allowedArtists[winKey];
+        const winnaar = artistListCopy[winKey];
         const r = {
           [`${winKey}`]: winnaar,
         };
     
-        Artists._consoleGroup(`\nscanTextForSomeArtistList twee keys gevonden waarvan één slug. return:`, 
-          { gevonden: r }, 
-          'scanTextForSomeArtistList');
-        
+        this.consoleGroup(`scanTextForSomeArtistList twee keys gevonden waarvan één slug; return atFSAL23`, { gevonden: r }, 'scanTextForSomeArtistList', 'blauw');
+       
         return r;
       }
     }
 
     // metalEncyclo is gelijk bij title & slug
     const metalEncycloKeys = [];
-    const gefilterdeAllowedArtistsKeys = [];
+    const gefilterdeFoundArtistsKeys = [];
     gevondenKeys.forEach((key) => {
-      const artist = allowedArtists[key];
-      if (!artist || artist.length < 3) {
-        console.group(`zet metal enc key op allowedArtist sTFSAL2`, {
+      if (!Object.hasOwn(key, artistListCopy)) {
+        this.consoleGroup(`zet metal enc key op allowedArtist TODO sTFSAL24`, {
           key,
-          allowedArtist: artist,
-        }, `scanTextForSomeArtistList`);
+          todo: "TODO GEEN IDEE WAT DIT WAS!",
+          scanningFor,
+        }, 'scanTextForSomeArtistList', 'blauw');
         return;
       }
+      const artist = artistListCopy[key];
       if (metalEncycloKeys.includes(artist[2])) {
         return;
       }
       metalEncycloKeys.push(artist[2]);
-      gefilterdeAllowedArtistsKeys.push(key);
+      gefilterdeFoundArtistsKeys.push(key);
     });
 
-    const gefilterdeAllowedArtists = {};
-    gefilterdeAllowedArtistsKeys.forEach((key) => {
-      gefilterdeAllowedArtists[key] = allowedArtists[key];
+    const gefilterdeFoundArtists = {};
+    gefilterdeFoundArtistsKeys.forEach((key) => {
+      gefilterdeFoundArtists[key] = artistListCopy[key];
     });
     
-    Artists._consoleGroup(`\nscan 4 all.arts sTFSMAL43`, 
-      {
-        titel: eventNameOfTitle, 
-        gefilterdeAllowedArtists: { ...gefilterdeAllowedArtists }, 
-      }, 
-      'scanTextForAllowedArtists',
-      'magenta');
+    this.consoleGroup(`scan 4 all.arts sTFSMAL43`, {
+      titel: eventNameOfTitle, 
+      gefilterdeFoundArtists: { ...gefilterdeFoundArtists }, 
+      scanningFor,
+    }, 'scanTextForSomeArtistList', 'blue');
     
-    return gefilterdeAllowedArtists;
+    return gefilterdeFoundArtists;
   }
   // #endregion SCAN FOR OK ARTISTS
 
@@ -1308,7 +1333,7 @@ export default class Artists {
     }
 
     if (tt !== ss) {
-      const slugAlAllowed = Object.hasOwn(this.refused, ss);
+      const slugAlAllowed = Object.hasOwn(this.allowedEvents, ss);
       if (slugAlAllowed) {
         this.allowedEvents[ss][1] = eventDate; // TODO check welke datum nieuwer
         this.allowedEvents[ss][2] = this.today;
