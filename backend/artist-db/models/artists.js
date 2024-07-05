@@ -275,7 +275,7 @@ export default class Artists {
       return this.getMetalEncyclopediaConfirmation(message.data.title);
     }
 
-    if (message.request === 'scanTextForAllowedArtists') {
+    if (['scanTextForAllowedArtists', 'scanTextForRefusedArtists', 'scanTextForUnclearArtists'].message.request) {
       if (this.typeCheckInputFromScrapers) {
         const hasTitle = Object.prototype.hasOwnProperty.call(parsedMessage.data, 'title');
         const hasSlug = Object.prototype.hasOwnProperty.call(parsedMessage.data, 'slug');
@@ -283,18 +283,15 @@ export default class Artists {
           return this.error(Error('geen title of slug om te doorzoeken'));
         } 
       }
-      return this.scanTextForAllowedArtists(message.data.title, message.data.slug);
-    }
-
-    if (message.request === 'scanTextForRefusedArtists') {
-      if (this.typeCheckInputFromScrapers) {
-        const hasTitle = Object.prototype.hasOwnProperty.call(parsedMessage.data, 'title');
-        const hasSlug = Object.prototype.hasOwnProperty.call(parsedMessage.data, 'slug');
-        if (!hasTitle || !hasSlug) {
-          return this.error(Error('geen title of slug om te doorzoeken'));
-        } 
+      if (message.request === 'scanTextForAllowedArtists') {
+        return this.scanTextForAllowedArtists(message.data.title, message.data.slug);
+      } 
+      if (message.request === 'scanTextForRefusedArtists') {
+        return this.scanTextForRefusedArtists(message.data.title, message.data.slug);
       }
-      return this.scanTextForRefusedArtists(message.data.title, message.data.slug);
+      if (message.request === 'scanTextForUnclearArtists') {
+        return this.scanTextForUnclearArtists(message.data.title, message.data.slug);
+      }
     }
 
     if (message.request === 'scanEventForAllowedArtistsAsync') {
@@ -917,8 +914,9 @@ export default class Artists {
   scanTextForAllowedArtists(eventNameOfTitle, slug) {
     return this.scanTextForSomeArtistList(eventNameOfTitle, slug, this.allowedArtistsTemp);
   }
+  // #endregion SCAN FOR OK ARTISTS
 
-  // #region SCAN FOR OK ARTISTS
+  // #region SCAN FOR REFUSED ARTISTS
   /**
    * scant eventNameOfTitle en slug op match met allowed artists
    * @param {*} eventNameOfTitle 
@@ -928,6 +926,20 @@ export default class Artists {
   scanTextForRefusedArtists(eventNameOfTitle, slug) {
     return this.scanTextForSomeArtistList(eventNameOfTitle, slug, this.refusedTemp);
   }
+
+  // #endregion SCAN FOR REFUSED ARTISTS
+
+  // #region SCAN FOR UNCLEAR ARTISTS
+  /**
+   * scant eventNameOfTitle en slug op match met allowed artists
+   * @param {*} eventNameOfTitle 
+   * @param {*} slug 
+   * @returns array met key:artiest
+   */
+  scanTextForUnclearArtists(eventNameOfTitle, slug) {
+    return this.scanTextForSomeArtistList(eventNameOfTitle, slug, this.unclearArtistsTemp);
+  }
+  // #endregion SCAN FOR UNCLEAR ARTISTS
  
   async scanEventForAllowedArtistsAsync(eventNameOfTitle, slug, shortText, settings) {
     let toScan = eventNameOfTitle; 
@@ -1190,20 +1202,11 @@ export default class Artists {
     Object.entries(this.allowedArtistsTemp).forEach(([key, values]) => {
       if (this.allowedArtists[key]) {
         const nieuweRecord = [...this.allowedArtists[key]];
-        if (values[1]) {
-          nieuweRecord[1] = values[1];
-        }
-        if (values[2]) {
-          nieuweRecord[2] = values[2];
-        }
-        if (values[3]) {
-          nieuweRecord[3] = values[3];
-        }
-        if (values[4]) {
-          nieuweRecord[4] = values[4];
-        }
-        if (values[5]) {
-          nieuweRecord[5] = values[5];
+        // eslint-disable-next-line no-plusplus
+        for (let i = 0; i < values.length; i++) {
+          if (values[i]) {
+            nieuweRecord[i] = values[i];
+          }
         }
         this.allowedArtists[key] = nieuweRecord;
         return;

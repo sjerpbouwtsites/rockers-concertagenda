@@ -11,7 +11,21 @@
     "soldOut": true,
     "unavailable": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "exodus": {
+        "s": "76S65NHJHrNy4JTrXHP2BH",
+        "l": "exodus",
+        "g": [
+          "death metal",
+          "hard rock",
+          "metal",
+          "old school thrash",
+          "speed metal",
+          "thrash metal",
+          "thrash metal"
+        ]
+      }
+    }
   },
   {
     "start": "2024-09-20T19:00:00",
@@ -149,13 +163,7 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": {
-      "pene corrida": {
-        "s": "1hw2ywipnsowbtb8flzcca",
-        "l": "pene%20corrida",
-        "g": []
-      }
-    }
+    "artists": null
   },
   {
     "start": "2024-12-21T19:00:00",
@@ -169,15 +177,7 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": {
-      "dool": {
-        "s": "101hsr6jtjqe3dbh6rb8kz",
-        "l": "dool",
-        "g": [
-          "dutch rock"
-        ]
-      }
-    }
+    "artists": null
   },
   {
     "start": "2025-03-29T17:00:00",
