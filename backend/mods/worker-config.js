@@ -60,17 +60,17 @@ export const workerConfig = {
   // },
   // groeneengel: { workerCount: 1, workerConcurrent: 1, forceSet: 3 },
   // iduna: { workerCount: 1, workerConcurrent: 1, forceSet: 4 },
-  kavka: {
-    workerCount: 1,
-    workerConcurrent: 2,
-    forceSet: 4,
-  },
-  // melkweg: {
-  //   workerCount: 4,
-  //   CPUReq: 'high',
-  //   workerConcurrent: 1,
+  // kavka: {
+  //   workerCount: 1,
+  //   workerConcurrent: 2,
   //   forceSet: 4,
   // },
+  melkweg: {
+    workerCount: 2,
+    CPUReq: 'high',
+    workerConcurrent: 1,
+    forceSet: 4,
+  },
   // littledevil: {
   //   workerCount: 1,
   //   workerConcurrent: 2,
