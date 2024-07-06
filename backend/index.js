@@ -7,6 +7,7 @@ import getWorkerConfig from './mods/worker-config.js';
 import houseKeeping from './housekeeping.js';
 import Artists from './artist-db/models/artists.js';
 import fsDirections from './mods/fs-directions.js';
+import doeOnderhoudAanArtistDB from './artist-db/models/onderhoud.js';
 
 const ArtistInst = new Artists(
   {
@@ -133,6 +134,7 @@ async function init() {
   recursiveStartWorkers(workerConfig);
   WorkerStatus.initializeReporting();
   printLocationsToPublic();
+  doeOnderhoudAanArtistDB();
 }
 
 init();
