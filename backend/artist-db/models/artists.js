@@ -76,7 +76,7 @@ export default class Artists {
     persistNewRefusedAndRockArtists: true,
     checkExplicitEventCategories: false,
     saveAllowedEvent: false,
-    scanTextForSomeArtistList: false,
+    scanTextForSomeArtistList: true,
     getRefused: false,
     _do: false,
     APICallsForGenre: false,
@@ -994,84 +994,43 @@ export default class Artists {
    */
   scanTextForSomeArtistList(eventNameOfTitle, slug, artistList, scanningFor) {
     const toScan = eventNameOfTitle.replaceAll(/\(.*\)/g, ''); // (usa etc eruit);
-    const artistListCopy = { ...artistList };
-    const haystack = Object.keys(artistListCopy);
+
+    const slugLozeArtiList = {};
+    Object
+      .entries(artistList)
+      .filter(([, artist]) => artist[0] === 0)
+      .forEach(([key, artist]) => {
+        slugLozeArtiList[key] = artist;
+      });
+
+    const haystack = Object.keys(slugLozeArtiList);
     
     const gevondenKeys = haystack
+      // .filter((hay) => toScan.includes(hay) || slug.includes(hay));
       .filter((hay) => toScan.includes(hay) || slug.includes(hay));
     
-    this.consoleGroup(`\nscanTextForAllowedArtists atFSAL22`, {  
-      toScan,
-      slug,
-      scanningFor,
-      gevondenKeys,
-    }, 'scanTextForSomeArtistList', 'blauw');
-    
     if (!gevondenKeys || !gevondenKeys.length) {
+      this.consoleGroup(`\n niets gevonden in scanTextForAllowedArtists atFSAL22`, {  
+        toScan,
+        slug,
+        scanningFor,
+      }, 'scanTextForSomeArtistList', 'blauw');      
       return {};
     }
 
-    const foundArtists = {};
+    const gevondenArtiesten = {};
     gevondenKeys.forEach((key) => {
-      foundArtists[key] = artistListCopy[key];
-    });
-
-    if (gevondenKeys.length === 2) {
-      const key1 = gevondenKeys[0];
-      const key2 = gevondenKeys[1];
-      const isSlug1 = artistListCopy[key1][0];
-      const isSlug2 = artistListCopy[key2][0];
-      const eenSlugAnderNiet = isSlug1 + isSlug2 === 1;
-      if (eenSlugAnderNiet) {
-        let winKey;
-        if (isSlug1) {
-          winKey = key2;
-        } else {
-          winKey = key1;
-        }
-        const winnaar = artistListCopy[winKey];
-        const r = {
-          [`${winKey}`]: winnaar,
-        };
-    
-        this.consoleGroup(`scanTextForSomeArtistList twee keys gevonden waarvan één slug; return atFSAL23`, { gevonden: r }, 'scanTextForSomeArtistList', 'blauw');
-       
-        return r;
-      }
-    }
-    const gefilterdeFoundArtistsKeys = [];
-
-    // // metalEncyclo is gelijk bij title & slug
-    // const metalEncycloKeys = [];
-    // gevondenKeys.forEach((key) => {
-    //   if (!Object.hasOwn(key, artistListCopy)) {
-    //     this.consoleGroup(`zet metal enc key op allowedArtist TODO sTFSAL24`, {
-    //       key,
-    //       todo: "TODO GEEN IDEE WAT DIT WAS!",
-    //       scanningFor,
-    //     }, 'scanTextForSomeArtistList', 'blauw');
-    //     return;
-    //   }
-    //   const artist = artistListCopy[key];
-    //   if (metalEncycloKeys.includes(artist[2])) {
-    //     return;
-    //   }
-    //   metalEncycloKeys.push(artist[2]);
-    //   gefilterdeFoundArtistsKeys.push(key);
-    // });
-
-    const gefilterdeFoundArtists = {};
-    gefilterdeFoundArtistsKeys.forEach((key) => {
-      gefilterdeFoundArtists[key] = artistListCopy[key];
+      gevondenArtiesten[key] = slugLozeArtiList[key];
     });
     
     this.consoleGroup(`scan 4 all.arts sTFSMAL43`, {
+      slug,
       titel: eventNameOfTitle, 
-      gefilterdeFoundArtists: { ...gefilterdeFoundArtists }, 
+      gevondenArtiesten, 
       scanningFor,
     }, 'scanTextForSomeArtistList', 'blauw');
     
-    return gefilterdeFoundArtists;
+    return gevondenArtiesten;
   }
   // #endregion SCAN FOR OK ARTISTS
 
@@ -1562,7 +1521,7 @@ export default class Artists {
   static _consoleGroup(title, toConsole, funcNaam = '', kleur = 'fgwhite') {
     if (!Artists.funcsToDebug[funcNaam]) return;
     const titelKleur = consoleKleuren[kleur];
-    console.group(titelKleur, `\n%c${title} ${funcNaam.padStart(80 - title.length, ' * ')}`);
+    console.group(titelKleur, `\n${title} ${funcNaam.padStart(80 - title.length, ' * ')}`);
     if (toConsole !== null && typeof toConsole === 'object') {
       const keys = Object.keys(toConsole);
       // eslint-disable-next-line no-plusplus

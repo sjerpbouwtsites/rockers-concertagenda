@@ -4,7 +4,7 @@ const debugSettings = {
   debugsinglePageAsyncCheck: true,
   debugRawEventAsyncCheck: true,
   debugBaseEvents: true,
-  debugPageInfo: true,
+  debugPageInfo: false,
   debugPrice: false,
   debugWithTempFile:false,
   debugHarvestIntegratie:true,

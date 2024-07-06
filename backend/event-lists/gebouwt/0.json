@@ -1,31 +1,7 @@
 [
   {
-    "door": "2024-06-29T21:30:00",
-    "start": "2024-06-29T21:30:00",
-    "venueEventUrl": "https://gebouw-t.nl/evenementen/afterparty-parkies-bunker/",
-    "title": "Afterparty Parkies: Bunker",
-    "location": "gebouwt",
-    "price": null,
-    "shortText": "",
-    "longText": "../public/texts/gebouwt/dGVuL2FmdGVycGFydHktcGFya2llcy1idW5rZXIv.html",
-    "image": "../public/event-images/gebouwt/dGVuL2FmdGVycGFydHktcGFya2llcy1idW5rZXIv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "bunker": {
-        "s": "27MZEmocg3FyOzBbfulsu5",
-        "l": "bunker",
-        "g": [
-          "melodic heavy metal",
-          "hard rock"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-06-29T20:30:00",
-    "start": "2024-06-29T20:00:00",
+    "door": "2024-07-11T20:30:00",
+    "start": "2024-07-11T20:00:00",
     "venueEventUrl": "https://gebouw-t.nl/evenementen/soulfly/",
     "title": "Soulfly",
     "location": "gebouwt",
@@ -38,7 +14,7 @@
     "eventGenres": null,
     "artists": {
       "soulfly": {
-        "s": "6159ibm5glpwg4bcjxsexc",
+        "s": "6159IBm5gLPwG4BcJXseXc",
         "l": "soulfly",
         "g": [
           "alternative metal",
@@ -46,14 +22,18 @@
           "industrial metal",
           "metal",
           "nu metal",
-          "rap metal"
+          "rap metal",
+          "nu-metal with folk influences (early)",
+          " groove",
+          "thrash",
+          "death metal (later)"
         ]
       }
     }
   },
   {
-    "door": "2024-06-29T20:00:00",
-    "start": "2024-06-29T19:30:00",
+    "door": "2024-07-11T20:00:00",
+    "start": "2024-07-11T19:30:00",
     "venueEventUrl": "https://gebouw-t.nl/evenementen/anneke-van-giersbergen/",
     "title": "Anneke van Giersbergen",
     "location": "gebouwt",
@@ -75,8 +55,8 @@
     }
   },
   {
-    "door": "2024-06-29T21:00:00",
-    "start": "2024-06-29T20:30:00",
+    "door": "2024-07-11T21:00:00",
+    "start": "2024-07-11T20:30:00",
     "venueEventUrl": "https://gebouw-t.nl/evenementen/throwing-bricks-ontaard/",
     "title": "Throwing Bricks + Ontaard",
     "location": "gebouwt",
@@ -107,8 +87,8 @@
     }
   },
   {
-    "door": "2024-06-29T20:30:00",
-    "start": "2024-06-29T20:00:00",
+    "door": "2024-07-11T20:30:00",
+    "start": "2024-07-11T20:00:00",
     "venueEventUrl": "https://gebouw-t.nl/evenementen/sister-may-gomer-pyle/",
     "title": "Gomer Pyle + Sister May",
     "location": "gebouwt",
@@ -125,7 +105,6 @@
         "l": "gomer%20pyle",
         "g": [
           "dutch stoner rock",
-          "psychedelic doom",
           "retro metal",
           "space rock"
         ]
@@ -133,8 +112,8 @@
     }
   },
   {
-    "door": "2024-06-29T21:00:00",
-    "start": "2024-06-29T20:00:00",
+    "door": "2024-07-11T21:00:00",
+    "start": "2024-07-11T20:00:00",
     "venueEventUrl": "https://gebouw-t.nl/evenementen/feuerengel-a-tribute-to-rammstein-2/",
     "title": "Feuerengel – a tribute to rammstein",
     "location": "gebouwt",
@@ -149,13 +128,18 @@
       "feuerengel": {
         "s": null,
         "l": "feuerengel",
-        "g": []
+        "g": [
+          "neue deutsche haerte",
+          "tanzmetal",
+          "industrial",
+          "industrial metal"
+        ]
       }
     }
   },
   {
-    "door": "2024-06-29T20:30:00",
-    "start": "2024-06-29T20:00:00",
+    "door": "2024-07-11T20:30:00",
+    "start": "2024-07-11T20:00:00",
     "venueEventUrl": "https://gebouw-t.nl/evenementen/sloper-2/",
     "title": "Sloper",
     "location": "gebouwt",
@@ -168,17 +152,17 @@
     "eventGenres": null,
     "artists": {
       "slope": {
-        "s": "35fxvnr5oanofb1jnb2ber",
+        "s": "24ExnkYwR4QoLamXGi4sOR",
         "l": "slope",
         "g": [
-          "dutch rock"
+          "german hardcore"
         ]
       }
     }
   },
   {
-    "door": "2024-06-29T21:00:00",
-    "start": "2024-06-29T20:30:00",
+    "door": "2024-07-11T21:00:00",
+    "start": "2024-07-11T20:30:00",
     "venueEventUrl": "https://gebouw-t.nl/evenementen/the-exploited/",
     "title": "The Exploited",
     "location": "gebouwt",
@@ -191,12 +175,15 @@
     "eventGenres": null,
     "artists": {
       "the exploited": {
-        "s": "6nb4b8llthcjohw7vqzkay",
+        "s": "6NB4b8lltHCjOhW7vQZkAy",
         "l": "the%20exploited",
         "g": [
           "hardcore punk",
           "punk",
-          "uk82"
+          "uk82",
+          "hardcore punk (early)",
+          " thrash metal",
+          "crossover (later)"
         ]
       },
       "the ex": {

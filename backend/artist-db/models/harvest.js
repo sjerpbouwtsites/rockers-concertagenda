@@ -229,13 +229,14 @@ export async function harvestArtists(
   const artiestenInEvent = { ...reedsGevondenHACK, ...gevondenArtiesten };
 
   this.consoleGroup(`harvest artist debug bundel hA99`, {
-    eventTitle: title,
+    eventTitle: `${title}       weggelaten: rawTextToScan, naVerwBekendeArtists, APIResponsArtists`,
     // alBekendeArtists: reedsGevonden,
     namenAlBekendeArtists: reedsGevondenNamen,
-    rawTextToScan: toScan,
-    naVerwBekendeArtists: verderScannen,
+    // rawTextToScan: toScan,
+    // naVerwBekendeArtists: verderScannen,
     naSplitsenOpruimenBron: potentieeleOverigeTitels,
-    APIResponseArtists: genreAPIResp,
+    // APIResponseArtists: genreAPIResp,
+    // APIResponseArtists: 'WEGGELATEN',
   }, 'harvestArtists', 'fggreen');
 
   return this.post({
