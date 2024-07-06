@@ -1,19 +1,5 @@
 [
   {
-    "start": "2024-06-27T19:00:00",
-    "venueEventUrl": "https://kavka.be/event/of-mice-men/",
-    "title": "Of mice & men + defects",
-    "location": "kavka",
-    "price": null,
-    "shortText": "19h00 – DOORS 19h45 – DEFECTS 21h00 – OF MICE & MEN ———- OF MICE…",
-    "longText": "../public/texts/kavka/Oi8va2F2a2EuYmUvZXZlbnQvb2YtbWljZS1tZW4v.html",
-    "image": "../public/event-images/kavka/Oi8va2F2a2EuYmUvZXZlbnQvb2YtbWljZS1tZW4v",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
     "start": "2024-07-11T19:30:00",
     "venueEventUrl": "https://kavka.be/event/brain-tourniquet-deliriant-nerve-traumatizer/",
     "title": "Brain tourniquet ",
@@ -26,11 +12,38 @@
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "raum": {
-        "s": null,
-        "l": "Belgium",
+      "traumatizer": {
+        "s": "7zjBOWru8RBRZ1dQQk0B4g",
+        "l": "traumatizer",
         "g": [
-          "black metal"
+          "lowlands hardcore",
+          "crossover",
+          "hardcore",
+          "psychobilly",
+          "punk",
+          "thrash"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2024-08-30T19:00:00",
+    "venueEventUrl": "https://kavka.be/event/home-front-rickie-dagger-vaag/",
+    "title": "Home front + richie dagger + vaag",
+    "location": "kavka",
+    "price": null,
+    "shortText": "HOME FRONT (can) Enormous full length debut, Game Of Power, from Home Front who have…",
+    "longText": "../public/texts/kavka/aG9tZS1mcm9udC1yaWNraWUtZGFnZ2VyLXZhYWcv.html",
+    "image": "../public/event-images/kavka/aG9tZS1mcm9udC1yaWNraWUtZGFnZ2VyLXZhYWcv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "home front": {
+        "s": "0CyB1ZUexbBDoyHb15UJrU",
+        "l": "home%20front",
+        "g": [
+          "egg punk"
         ]
       }
     }
@@ -47,7 +60,21 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {}
+  },
+  {
+    "start": "2024-09-22T19:00:00",
+    "venueEventUrl": "https://kavka.be/event/stand-atlantic-slowly-slowly/",
+    "title": "Stand Atlantic + Slowly Slowly",
+    "location": "kavka",
+    "price": null,
+    "shortText": "Stand Atlantic Stand Atlantic crushed all expectations with their last album, f.e.a.r. Buoyed by the…",
+    "longText": "../public/texts/kavka/L3N0YW5kLWF0bGFudGljLXNsb3dseS1zbG93bHkv.html",
+    "image": "../public/event-images/kavka/L3N0YW5kLWF0bGFudGljLXNsb3dseS1zbG93bHkv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
   },
   {
     "start": "2024-09-24T19:00:00",
@@ -64,9 +91,35 @@
     "artists": {
       "our last night": {
         "s": "00YTqRClk82aMchQQpYMd5",
-        "l": null,
+        "l": "our%20last%20night",
         "g": [
           "american metalcore"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2024-09-25T19:00:00",
+    "venueEventUrl": "https://kavka.be/event/battle-beast/",
+    "title": "Battle Beast",
+    "location": "kavka",
+    "price": null,
+    "shortText": "NEW DATE: 25 SEPTEMBER 2024 All bought tickets for the November 2023 show remain valid…",
+    "longText": "../public/texts/kavka/Ly9rYXZrYS5iZS9ldmVudC9iYXR0bGUtYmVhc3Qv.html",
+    "image": "../public/event-images/kavka/Ly9rYXZrYS5iZS9ldmVudC9iYXR0bGUtYmVhc3Qv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "battle beast": {
+        "s": "7k5jeohqcf20a8fobd9ize",
+        "l": "battle%20beast",
+        "g": [
+          "finnish heavy metal",
+          "finnish power metal",
+          "gothic symphonic metal",
+          "power metal",
+          "symphonic metal"
         ]
       }
     }
@@ -83,7 +136,32 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "your highness": {
+        "s": "6Cbs0xetz57bCUhG7wyCt7",
+        "l": "your%20highness",
+        "g": [
+          "belgian metal",
+          "belgian stoner rock",
+          "sludge",
+          "stoner metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2024-11-12T19:00:00",
+    "venueEventUrl": "https://kavka.be/event/dopelord-red-sun-atacama/",
+    "title": "Dopelord • Red Sun Atacama",
+    "location": "kavka",
+    "price": null,
+    "shortText": "Dopelord: Hailing from Poland, Dopelord brings a heavy blend of stoner and doom metal, characterized…",
+    "longText": "../public/texts/kavka/dmVudC9kb3BlbG9yZC1yZWQtc3VuLWF0YWNhbWEv.html",
+    "image": "../public/event-images/kavka/dmVudC9kb3BlbG9yZC1yZWQtc3VuLWF0YWNhbWEv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
   },
   {
     "start": "2024-11-24T19:00:00",
@@ -97,7 +175,64 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "gatecreeper": {
+        "s": "0eCB2pwtPnLywA4rxe4i4N",
+        "l": "gatecreeper",
+        "g": [
+          "death metal",
+          "deathgrind",
+          "new wave of osdm",
+          "sludge metal",
+          "death metal"
+        ]
+      },
+      "200 stab wounds": {
+        "s": "6DH6xC3RoN7L7sGlJ60LKv",
+        "l": "200%20stab%20wounds",
+        "g": [
+          "cavernous death metal",
+          "death metal"
+        ]
+      },
+      "enforced": {
+        "s": "7vZV2UPiXQMVesiAxQmvBp",
+        "l": "enforced",
+        "g": [
+          "crossover thrash",
+          "new wave of thrash metal",
+          "virginia metal",
+          "thrash",
+          "heavy metal",
+          "crossover"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2024-11-26T19:00:00",
+    "venueEventUrl": "https://kavka.be/event/wheel/",
+    "title": "Wheel + molybaron",
+    "location": "kavka",
+    "price": null,
+    "shortText": "WHEEL + MOLYBARON WHEEL Charismatic leaders. These are the dictators, demagogues and false idols who,…",
+    "longText": "../public/texts/kavka/aHR0cHM6Ly9rYXZrYS5iZS9ldmVudC93aGVlbC8=.html",
+    "image": "../public/event-images/kavka/aHR0cHM6Ly9rYXZrYS5iZS9ldmVudC93aGVlbC8=",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "wheel": {
+        "s": "4msm1QtpV7zMReePhbEQ6H",
+        "l": "wheel",
+        "g": [
+          "finnish progressive rock",
+          "modern progressive rock",
+          "progressive metal",
+          "doom metal"
+        ]
+      }
+    }
   },
   {
     "start": "2024-12-01T19:00:00",
@@ -111,7 +246,62 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "fit for an autopsy": {
+        "s": "0qJpY7K8p7g6sacvaGNt6i",
+        "l": "fit%20for%20an%20autopsy",
+        "g": [
+          "brutal deathcore",
+          "deathcore",
+          "melodic metalcore",
+          "metalcore"
+        ]
+      },
+      "sylosis": {
+        "s": "2RiGIRDi4GoJpDbjDnPVJl",
+        "l": "sylosis",
+        "g": [
+          "groove metal",
+          "melodic death metal",
+          "melodic metalcore",
+          "melodic thrash",
+          "death metal",
+          "metalcore"
+        ]
+      },
+      "darkest hour": {
+        "s": "4dso1lISV1Atdo3O6qbhqq",
+        "l": "darkest%20hour",
+        "g": [
+          "melodic metalcore",
+          "metalcore",
+          "melodic death metal",
+          "metalcore"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2024-12-05T19:00:00",
+    "venueEventUrl": "https://kavka.be/event/dayseeker-rain-city-drive-heart-of-gold/",
+    "title": "Dayseeker + rain city drive + heart of gold",
+    "location": "kavka",
+    "price": null,
+    "shortText": "DAYSEEKER + Rain City Drive + Heart of Gold After a run as main support…",
+    "longText": "../public/texts/kavka/cmFpbi1jaXR5LWRyaXZlLWhlYXJ0LW9mLWdvbGQv.html",
+    "image": "../public/event-images/kavka/cmFpbi1jaXR5LWRyaXZlLWhlYXJ0LW9mLWdvbGQv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "dayseeker": {
+        "s": "5FjQVp1Lb0kltmwIuu5kfj",
+        "l": "dayseeker",
+        "g": [
+          "metalcore"
+        ]
+      }
+    }
   },
   {
     "start": "2024-12-13T19:00:00",
@@ -127,9 +317,31 @@
     "eventGenres": null,
     "artists": {
       "pene corrida": {
-        "s": "1Hw2YwIpnSOWbtb8FlZcCa",
+        "s": "1hw2ywipnsowbtb8flzcca",
         "l": "pene%20corrida",
         "g": []
+      }
+    }
+  },
+  {
+    "start": "2025-04-06T19:00:00",
+    "venueEventUrl": "https://kavka.be/event/catch-your-breath/",
+    "title": "Catch your breath",
+    "location": "kavka",
+    "price": null,
+    "shortText": "Catch Your Breath is thrilled to announce their ‘The SAVAGES Tour’in April 2025, featuring support from Until I Wake and Of Virtue.",
+    "longText": "../public/texts/kavka/a2EuYmUvZXZlbnQvY2F0Y2gteW91ci1icmVhdGgv.html",
+    "image": "../public/event-images/kavka/a2EuYmUvZXZlbnQvY2F0Y2gteW91ci1icmVhdGgv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "catch your breath": {
+        "s": "2fqPOGxG12nEERj8YG7p22",
+        "l": "catch%20your%20breath",
+        "g": [
+          "american metalcore"
+        ]
       }
     }
   }
