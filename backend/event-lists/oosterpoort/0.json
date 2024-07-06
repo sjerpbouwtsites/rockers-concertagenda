@@ -28,6 +28,28 @@
     }
   },
   {
+    "start": "2024-11-29T20:00:00+01:00",
+    "venueEventUrl": "https://www.spotgroningen.nl/programma/smash-into-pieces/",
+    "title": "Smash Into Pieces",
+    "location": "oosterpoort",
+    "price": 26.1,
+    "shortText": "Zweedse cinematografische rocksensatie",
+    "longText": "../public/texts/oosterpoort/bC9wcm9ncmFtbWEvc21hc2gtaW50by1waWVjZXMv.html",
+    "image": "../public/event-images/oosterpoort/bC9wcm9ncmFtbWEvc21hc2gtaW50by1waWVjZXMv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "smash into pieces": {
+        "s": "2vhrwzjf9h3icunkvfi9tq",
+        "l": "smash%20into%20pieces",
+        "g": [
+          "swedish alternative rock"
+        ]
+      }
+    }
+  },
+  {
     "start": "2024-12-02T20:00:00+01:00",
     "venueEventUrl": "https://www.spotgroningen.nl/programma/ian-paice-feat-purpendicular/",
     "title": "Ian Paice feat. Purpendicular",
@@ -64,6 +86,28 @@
     }
   },
   {
+    "start": "2024-12-05T20:00:00+01:00",
+    "venueEventUrl": "https://www.spotgroningen.nl/programma/sloper/",
+    "title": "Sloper",
+    "location": "oosterpoort",
+    "price": 26.1,
+    "shortText": "Band opgezet door bekende drummers met ROCK als stevige basis",
+    "longText": "../public/texts/oosterpoort/Z3JvbmluZ2VuLm5sL3Byb2dyYW1tYS9zbG9wZXIv.html",
+    "image": "../public/event-images/oosterpoort/Z3JvbmluZ2VuLm5sL3Byb2dyYW1tYS9zbG9wZXIv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "slope": {
+        "s": "24ExnkYwR4QoLamXGi4sOR",
+        "l": "slope",
+        "g": [
+          "german hardcore"
+        ]
+      }
+    }
+  },
+  {
     "start": "2024-12-14T20:00:00+01:00",
     "venueEventUrl": "https://www.spotgroningen.nl/programma/dool/",
     "title": "Dool",
@@ -76,5 +120,30 @@
     "unavailable": false,
     "eventGenres": null,
     "artists": {}
+  },
+  {
+    "start": "2025-02-01T20:00:00+01:00",
+    "venueEventUrl": "https://www.spotgroningen.nl/programma/feuerengel-a-tribute-to-rammstein/",
+    "title": "Feuerengel",
+    "location": "oosterpoort",
+    "price": 33.6,
+    "shortText": "A TRIBUTE TO RAMMSTEINRAMMMMMMMSTEIN!!!",
+    "longText": "../public/texts/oosterpoort/cmVuZ2VsLWEtdHJpYnV0ZS10by1yYW1tc3RlaW4v.html",
+    "image": "../public/event-images/oosterpoort/cmVuZ2VsLWEtdHJpYnV0ZS10by1yYW1tc3RlaW4v",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "feuerengel": {
+        "s": null,
+        "l": "feuerengel",
+        "g": [
+          "neue deutsche haerte",
+          "tanzmetal",
+          "industrial",
+          "industrial metal"
+        ]
+      }
+    }
   }
 ]

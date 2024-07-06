@@ -1147,16 +1147,9 @@ export default class AbstractScraper extends ScraperConfig {
   // step 6
   async saveEvents() {
     const pathToEventList = fsDirections.eventLists;
-    const pathToINVALIDEventList = fsDirections.invalidEventLists;
     const inbetweenFix = workerData.index !== null ? `${workerData.index}` : '0';
     const pathToEventListFile = `${pathToEventList}/${workerData.family}/${inbetweenFix}.json`;
-    const pathToINVALIDEventListFile = `${pathToINVALIDEventList}/${workerData.family}/invalid-${inbetweenFix}.json`;
     fs.writeFile(pathToEventListFile, JSON.stringify(this._events, null, '  '), () => {});
-    fs.writeFile(
-      pathToINVALIDEventListFile,
-      JSON.stringify(this._invalidEvents, null, '  '),
-      () => {},
-    );
     
     return true;    
   }
