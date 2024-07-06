@@ -82,6 +82,7 @@ export default class Artists {
     APICallsForGenre: false,
     getMetalEncyclopediaConfirmation: false,
     getSpotifyConfirmation: false,
+    hasForbidden: true,
   };
 
   // #endregion
@@ -567,8 +568,13 @@ export default class Artists {
    * @returns successMessage met evt. artistData
    */
   hasForbidden(stringtitleslugshorttext) {
+    const rommelig = stringtitleslugshorttext.toLowerCase();
     const isForbidden = this.terms.forbidden
-      .find((forbidden) => stringtitleslugshorttext.includes(forbidden));
+      .find((forbidden) => rommelig.includes(forbidden));
+    this.consoleGroup(`hasForbidden hF1`, {
+      toScan: stringtitleslugshorttext,
+      isForbidden,
+    }, 'hasForbidden', 'wit');
     
     if (isForbidden) {
       return this.post({

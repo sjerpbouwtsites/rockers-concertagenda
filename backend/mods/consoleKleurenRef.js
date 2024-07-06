@@ -22,7 +22,7 @@ const consoleKleuren = {
   blauw : "\x1b[34m",
   magenta : "\x1b[35m",
   cyan : "\x1b[36m",
-  white : "\x1b[37m",
+  wit : "\x1b[37m",
   grijs : "\x1b[90m",
   bgblack : "\x1b[40m",
   bgred : "\x1b[41m",

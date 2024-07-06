@@ -76,6 +76,7 @@ const forbiddenTerms = [
   "christian alternative rock",
   "dromerig",
   "electropop",
+  "formula 1",
   "experi-metal",
   "conscious hip hop",
   "east coast hip hop",
