@@ -1,43 +1,5 @@
 [
   {
-    "door": "2024-06-30T15:00:00",
-    "start": "2024-06-30T15:30:00",
-    "end": "2024-06-30T19:30:00",
-    "venueEventUrl": "https://iduna.nl/agenda/vader/",
-    "title": "Vader",
-    "location": "iduna",
-    "price": 15,
-    "shortText": null,
-    "longText": "../public/texts/iduna/aHR0cHM6Ly9pZHVuYS5ubC9hZ2VuZGEvdmFkZXIv.html",
-    "image": "../public/event-images/iduna/aHR0cHM6Ly9pZHVuYS5ubC9hZ2VuZGEvdmFkZXIv",
-    "soldOut": false,
-    "unavailable": null,
-    "eventGenres": null,
-    "artists": {
-      "vader": {
-        "s": "2s5DSt9VBNzAn2TbtDHzFZ",
-        "l": "Poland",
-        "g": [
-          "black metal",
-          "brutal death metal",
-          "death metal",
-          "deathgrind",
-          "deathrash",
-          "melodic death metal",
-          "metal",
-          "polish death metal",
-          "polish metal",
-          "polish thrash metal",
-          "speed metal",
-          "technical death metal",
-          "death/thrash metal",
-          "death metal",
-          "thrash metal"
-        ]
-      }
-    }
-  },
-  {
     "door": "2024-07-12T20:00:00",
     "start": "2024-07-12T20:30:00",
     "end": "2024-07-12T23:00:00",
@@ -51,14 +13,24 @@
     "soldOut": false,
     "unavailable": null,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "the varukers": {
+        "s": "18YrNiGuaS0l5F9OfQocdy",
+        "l": "the%20varukers",
+        "g": [
+          "anarcho-punk",
+          "d-beat",
+          "uk82"
+        ]
+      }
+    }
   },
   {
     "door": "2024-07-14T15:00:00",
     "start": "2024-07-14T15:30:00",
     "end": "2024-07-14T18:15:00",
     "venueEventUrl": "https://iduna.nl/agenda/slimelord/",
-    "title": "Slimelord •Cryptworm",
+    "title": "Slimelord • • Cryptworm",
     "location": "iduna",
     "price": 15,
     "shortText": null,
@@ -67,7 +39,25 @@
     "soldOut": false,
     "unavailable": null,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "slimelord": {
+        "s": "1xy6wgaYzFudJPtaNESVKg",
+        "l": "slimelord",
+        "g": [
+          "british death metal",
+          "death",
+          "doom metal"
+        ]
+      },
+      "cryptworm": {
+        "s": "2cwtmb9FzKbuDfkG0mKaa6",
+        "l": "cryptworm",
+        "g": [
+          "new wave of osdm",
+          "death metal"
+        ]
+      }
+    }
   },
   {
     "door": "2024-09-12T18:00:00",
@@ -83,7 +73,23 @@
     "soldOut": false,
     "unavailable": null,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "nile": {
+        "s": "3v3VSKylQE69ztn5TUVlFE",
+        "l": "nile",
+        "g": [
+          "brutal death metal",
+          "death metal",
+          "metal",
+          "oriental metal",
+          "south carolina metal",
+          "technical death metal",
+          "thrash metal",
+          "brutal",
+          "technical death metal"
+        ]
+      }
+    }
   },
   {
     "door": "2024-09-14T16:00:00",
@@ -99,7 +105,7 @@
     "soldOut": false,
     "unavailable": null,
     "eventGenres": null,
-    "artists": null
+    "artists": {}
   },
   {
     "door": "2024-10-05T19:00:00",
@@ -115,14 +121,30 @@
     "soldOut": false,
     "unavailable": null,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "septicflesh": {
+        "s": "5MlEt7qqXqNSReeX76xK6b",
+        "l": "septicflesh",
+        "g": [
+          "death metal",
+          "greek metal",
+          "melodic death metal",
+          "metal",
+          "symphonic black metal",
+          "symphonic death metal",
+          "symphonic metal",
+          "atmospheric",
+          "symphonic death metal"
+        ]
+      }
+    }
   },
   {
     "door": "2024-10-11T19:30:00",
     "start": "2024-10-11T20:00:00",
-    "end": "2024-10-11T23:00:00",
+    "end": "2024-10-11T21:15:00",
     "venueEventUrl": "https://iduna.nl/agenda/slope/",
-    "title": "SlopeGrove Street • Lifecrusher ",
+    "title": "Slope • Grove Street • Lifecrusher ",
     "location": "iduna",
     "price": 19,
     "shortText": null,
@@ -133,10 +155,27 @@
     "eventGenres": null,
     "artists": {
       "slope": {
-        "s": "35fxvnr5oanOFB1JNB2Ber",
+        "s": "24ExnkYwR4QoLamXGi4sOR",
         "l": "slope",
         "g": [
-          "dutch rock"
+          "german hardcore"
+        ]
+      },
+      "grove street": {
+        "s": "41hQlpi3r8ljXeRYbHbUBD",
+        "l": "grove%20street",
+        "g": [
+          "ukhc",
+          "metalcore",
+          "crossover"
+        ]
+      },
+      "lifecrusher": {
+        "s": "3guA3snbgUnE0uFtbD3NmZ",
+        "l": "lifecrusher",
+        "g": [
+          "modern hardcore",
+          "swiss punk"
         ]
       }
     }
@@ -146,16 +185,29 @@
     "start": "2024-10-11T19:00:00",
     "end": "2024-10-11T23:00:00",
     "venueEventUrl": "https://iduna.nl/agenda/kamelot/",
-    "title": "KamelotCharlotte • Ad Infinitum",
+    "title": "Kamelot • Charlotte • Ad Infinitum",
     "location": "iduna",
     "price": 18,
     "shortText": null,
     "longText": "../public/texts/iduna/dHBzOi8vaWR1bmEubmwvYWdlbmRhL2thbWVsb3Qv.html",
     "image": "../public/event-images/iduna/dHBzOi8vaWR1bmEubmwvYWdlbmRhL2thbWVsb3Qv",
-    "soldOut": false,
+    "soldOut": true,
     "unavailable": null,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "ad infinitum": {
+        "s": "2X3qFQFHkm1sOGo5ppIoSD",
+        "l": "ad%20infinitum",
+        "g": [
+          "gothic symphonic metal",
+          "melodic metal",
+          "slayer",
+          "symphonic metal",
+          "symphonic metal",
+          "rock"
+        ]
+      }
+    }
   },
   {
     "door": "2024-10-17T20:00:00",
@@ -171,7 +223,18 @@
     "soldOut": false,
     "unavailable": null,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "eleine": {
+        "s": "2L2rV1gDa17HwFcFCWBIAx",
+        "l": "eleine",
+        "g": [
+          "gothic symphonic metal",
+          "slayer",
+          "symphonic metal",
+          "symphonic metal"
+        ]
+      }
+    }
   },
   {
     "door": "2024-10-26T14:00:00",
@@ -187,7 +250,7 @@
     "soldOut": false,
     "unavailable": null,
     "eventGenres": null,
-    "artists": null
+    "artists": {}
   },
   {
     "door": "2024-10-26T20:00:00",
@@ -203,7 +266,7 @@
     "soldOut": true,
     "unavailable": null,
     "eventGenres": null,
-    "artists": null
+    "artists": {}
   },
   {
     "door": "2024-11-09T20:00:00",
@@ -245,7 +308,7 @@
     "eventGenres": null,
     "artists": {
       "pain": {
-        "s": "0AuW7OCyKfFrsMbtHrYgIV",
+        "s": "0auw7ocykffrsmbthrygiv",
         "l": "pain",
         "g": [
           "gangster rap",
@@ -255,13 +318,20 @@
         ]
       },
       "pro-pain": {
-        "s": "56F64pmwSSCcmS1CxAnPk8",
+        "s": "56f64pmwssccms1cxanpk8",
         "l": "pro-pain",
         "g": [
           "groove metal",
           "old school thrash",
           "thrash metal",
           "southern metal"
+        ]
+      },
+      "pro-": {
+        "s": null,
+        "l": "pro-",
+        "g": [
+          "death metal/grindcore"
         ]
       }
     }
