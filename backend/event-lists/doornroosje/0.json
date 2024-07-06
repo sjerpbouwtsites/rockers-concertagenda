@@ -70,18 +70,18 @@
     "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "slope": {
-        "s": "24ExnkYwR4QoLamXGi4sOR",
-        "l": "slope",
-        "g": [
-          "german hardcore"
-        ]
-      },
       "wodan boys": {
         "s": "0kmkbibevmq4luqquahdmr",
         "l": "wodan%20boys",
         "g": [
           "dutch rock"
+        ]
+      },
+      "slope": {
+        "s": "24ExnkYwR4QoLamXGi4sOR",
+        "l": "slope",
+        "g": [
+          "german hardcore"
         ]
       },
       "clamm": {
@@ -128,19 +128,6 @@
     "soldOut": true,
     "eventGenres": null,
     "artists": {
-      "havok": {
-        "s": "2jw4wgixxa20jls9N3Bdpq",
-        "l": "havok",
-        "g": [
-          "crossover thrash",
-          "death metal",
-          "denver metal",
-          "metal",
-          "speed metal",
-          "thrash metal",
-          "death metal"
-        ]
-      },
       "skeletal remains": {
         "s": "4Rh3NPxVMADeaSIduAsykN",
         "l": "skeletal%20remains",
@@ -162,6 +149,19 @@
           "german thrash metal",
           "new wave of thrash metal",
           "thrash metal"
+        ]
+      },
+      "havok": {
+        "s": "2jw4wgixxa20jls9N3Bdpq",
+        "l": "havok",
+        "g": [
+          "crossover thrash",
+          "death metal",
+          "denver metal",
+          "metal",
+          "speed metal",
+          "thrash metal",
+          "death metal"
         ]
       },
       "metal": {
@@ -214,6 +214,17 @@
     "soldOut": true,
     "eventGenres": null,
     "artists": {
+      "born of osiris": {
+        "s": null,
+        "l": "born%20of%20osiris",
+        "g": [
+          "metalcore",
+          "progressive metal",
+          "djent",
+          "deathcore",
+          "progressive metalcore"
+        ]
+      },
       "distant": {
         "s": "7dfpBi0QvO9FmlhBK6XHwJ",
         "l": "distant",
@@ -224,15 +235,18 @@
           "groove metal"
         ]
       },
-      "born of osiris": {
+      "metal": {
         "s": null,
-        "l": "born%20of%20osiris",
+        "l": "metal",
         "g": [
-          "metalcore",
-          "progressive metal",
-          "djent",
-          "deathcore",
-          "progressive metalcore"
+          "death metal"
+        ]
+      },
+      "galla": {
+        "s": null,
+        "l": "galla",
+        "g": [
+          "black metal"
         ]
       },
       "mesh": {
@@ -248,20 +262,6 @@
           "swedish metal",
           "technical groove metal",
           "technical thrash"
-        ]
-      },
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      },
-      "galla": {
-        "s": null,
-        "l": "galla",
-        "g": [
-          "black metal"
         ]
       }
     }
@@ -321,13 +321,6 @@
           "death metal"
         ]
       },
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      },
       "municipal waste": {
         "s": "2Ah9OuOj7B57gPD1cbwiaE",
         "l": "municipal%20waste",
@@ -356,6 +349,13 @@
           "new york death metal",
           "technical death metal",
           "thrash metal",
+          "death metal"
+        ]
+      },
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
           "death metal"
         ]
       }
@@ -395,23 +395,6 @@
     "soldOut": true,
     "eventGenres": null,
     "artists": {
-      "sólstafir": {
-        "s": "721C5U5rM8J0jjq6IQuSBK",
-        "l": "s%C3%B3lstafir",
-        "g": [
-          "blackened screamo",
-          "icelandic black metal",
-          "icelandic metal",
-          "icelandic pop",
-          "pagan black metal",
-          "post-metal",
-          "viking black metal",
-          "viking",
-          "black metal (early)",
-          " post-metal",
-          "rock (later)"
-        ]
-      },
       "oranssi pazuzu": {
         "s": "3XFQRe2FsSOjrODygK4caW",
         "l": "oranssi%20pazuzu",
@@ -428,6 +411,23 @@
           "sci-fi metal",
           "voidgaze",
           "psychedelic black metal"
+        ]
+      },
+      "sólstafir": {
+        "s": "721C5U5rM8J0jjq6IQuSBK",
+        "l": "s%C3%B3lstafir",
+        "g": [
+          "blackened screamo",
+          "icelandic black metal",
+          "icelandic metal",
+          "icelandic pop",
+          "pagan black metal",
+          "post-metal",
+          "viking black metal",
+          "viking",
+          "black metal (early)",
+          " post-metal",
+          "rock (later)"
         ]
       },
       "metal": {

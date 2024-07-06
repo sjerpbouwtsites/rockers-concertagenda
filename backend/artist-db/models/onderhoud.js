@@ -2,12 +2,12 @@ import fs from 'fs';
 
 /**
  * Gaat door allowed-artists.json, allowed-events.json, refused.json, unclear-artists.json
- * in ../store en sorteert de JSON op lengte van de keys
+ * in ${fsDirections.artistDBstore} en sorteert de JSON op lengte van de keys
  */
-function sorteerStoreOpLengteVanKeys() {
+function sorteerStoreOpLengteVanKeys(fsDirections) {
   const storeFiles = ['allowed-artists.json', 'allowed-events.json', 'refused.json', 'unclear-artists.json'];
   storeFiles.forEach((store) => {
-    const file = JSON.parse(fs.readFileSync(`../store/${store}`, 'utf-8'));
+    const file = JSON.parse(fs.readFileSync(`${fsDirections.artistDBstore}/${store}`, 'utf-8'));
     const fileKeys = Object.keys(file);
     const sortedKeys = fileKeys.sort((a, b) => {
       if (a.length > b.length) return -1;
@@ -18,20 +18,20 @@ function sorteerStoreOpLengteVanKeys() {
     sortedKeys.forEach((key) => {
       nieuweFile[key] = file[key];
     });
-    fs.writeFileSync(`../store/${store}`, JSON.stringify(nieuweFile, null, 2), 'utf-8');
+    fs.writeFileSync(`${fsDirections.artistDBstore}/${store}`, JSON.stringify(nieuweFile, null, 2), 'utf-8');
   });
 }
 
 /**
  * Alle allowed events met een eventDate verder dan een maand in het verleden weg.
  */
-function gooiOudeEventsWegUitAllowedEvents() {
+function gooiOudeEventsWegUitAllowedEvents(fsDirections) {
   const vorigeMaand = new Date();
   vorigeMaand.setMonth(vorigeMaand.getMonth() - 2); 
   const v = vorigeMaand.toISOString();
   const korteVorigeMaand = Number(v.substring(2, 4) + v.substring(5, 7) + v.substring(8, 10));
 
-  const allowedEvents = JSON.parse(fs.readFileSync('../store/allowed-events.json', 'utf-8'));
+  const allowedEvents = JSON.parse(fs.readFileSync(`${fsDirections.artistDBstore}/allowed-events.json`, 'utf-8'));
   const relevanteEvents = Object.entries(allowedEvents).filter(([key, ev]) => {
     if (!ev[1]) return false;
     const eventDatum = Number(ev[1]);
@@ -43,7 +43,7 @@ function gooiOudeEventsWegUitAllowedEvents() {
     relevanteFile[key] = event;
   });
 
-  fs.writeFileSync(`../store/allowed-events.json`, JSON.stringify(relevanteFile, null, 2), 'utf-8');
+  fs.writeFileSync(`${fsDirections.artistDBstore}/allowed-events.json`, JSON.stringify(relevanteFile, null, 2), 'utf-8');
 }
 
 /**
@@ -52,7 +52,7 @@ function gooiOudeEventsWegUitAllowedEvents() {
  *  2. een eventDate verder dan een maand in het verleden of
  *  3. een aanmaakDatum verder dan een jaar in het verleden weg
  */
-function gooiOudeRefusedWeg() {
+function gooiOudeRefusedWeg(fsDirections) {
   const vorigeMaand = new Date();
   vorigeMaand.setMonth(vorigeMaand.getMonth() - 2); 
   const v = vorigeMaand.toISOString();
@@ -63,7 +63,7 @@ function gooiOudeRefusedWeg() {
   const d = vorigJaar.toISOString();
   const korteVorigJaar = Number(d.substring(2, 4) + d.substring(5, 7) + d.substring(8, 10));
 
-  const refusedEvents = JSON.parse(fs.readFileSync('../store/refused.json', 'utf-8'));
+  const refusedEvents = JSON.parse(fs.readFileSync(`${fsDirections.artistDBstore}/refused.json`, 'utf-8'));
   const relevanteEvents = Object.entries(refusedEvents).filter(([key, ev]) => {
     if (key.length < 17) return true;
 
@@ -93,16 +93,16 @@ function gooiOudeRefusedWeg() {
     relevanteFile[key] = event;
   });
 
-  fs.writeFileSync(`../store/refused.json`, JSON.stringify(relevanteFile, null, 2), 'utf-8');
+  fs.writeFileSync(`${fsDirections.artistDBstore}/refused.json`, JSON.stringify(relevanteFile, null, 2), 'utf-8');
 }
 
 /**
  * Wrapper voor onderhoud functies om te exporteren.
  */
-export default function doeOnderhoudAanArtistDB() {
-  gooiOudeRefusedWeg();
+export default function doeOnderhoudAanArtistDB(fsDirections) {
+  gooiOudeRefusedWeg(fsDirections);
     
-  gooiOudeEventsWegUitAllowedEvents();
+  gooiOudeEventsWegUitAllowedEvents(fsDirections);
     
-  sorteerStoreOpLengteVanKeys();
+  sorteerStoreOpLengteVanKeys(fsDirections);
 }

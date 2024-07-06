@@ -134,7 +134,7 @@ async function init() {
   recursiveStartWorkers(workerConfig);
   WorkerStatus.initializeReporting();
   printLocationsToPublic();
-  doeOnderhoudAanArtistDB();
+  doeOnderhoudAanArtistDB(fsDirections);
 }
 
 init();
