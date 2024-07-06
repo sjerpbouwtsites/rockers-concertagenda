@@ -2,7 +2,6 @@
 import { workerData } from 'worker_threads';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/doornroosje.js';
-import getImage from './gedeeld/image.js';
 import workTitleAndSlug from './gedeeld/slug.js';
 import { mapToShortDate } from './gedeeld/datums.js';
 
@@ -22,7 +21,7 @@ const scraper = new AbstractScraper({
     harvest: {
       dividers: [`+`],
       dividerRex: "[\\+]",
-      artistsIn: ['title'],
+      artistsIn: ['title', 'shortText'],
     },    
     mainPage: {
       requiredProperties: ['venueEventUrl', 'title'],

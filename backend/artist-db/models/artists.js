@@ -1472,8 +1472,6 @@ export default class Artists {
       unclearArtists: `${unclearArtistsKeys.map(this.fromArrayToTwoColumnRows).join(' ')}\n`,
     }, 'persistNewRefusedAndRockArtists', 'fggreen');
     
-    // this.consoleGroup('new artists data pNRARA2', todaysArtists, 'persistNewRefusedAndRockArtists', 'fggreen');
-    
     if (!this.storeWritePermission) {
       if (Artists.funcsToDebug.persistNewRefusedAndRockArtists) {
         this.consoleGroup('////////////////// pNRARA3', {
@@ -1564,27 +1562,27 @@ export default class Artists {
   static _consoleGroup(title, toConsole, funcNaam = '', kleur = 'fgwhite') {
     if (!Artists.funcsToDebug[funcNaam]) return;
     const titelKleur = consoleKleuren[kleur];
-    console.group(titelKleur, `\n${title} ${funcNaam.padStart(80 - title.length, ' * ')}`);
+    console.group(titelKleur, `\n%c${title} ${funcNaam.padStart(80 - title.length, ' * ')}`);
     if (toConsole !== null && typeof toConsole === 'object') {
       const keys = Object.keys(toConsole);
       // eslint-disable-next-line no-plusplus
       for (let i = 0; i < keys.length; i++) {
         const k = keys[i];
         if (typeof toConsole[k] === 'string') {
-          console.log('\x1b[33m%s\x1b[0m', `${k}: ${toConsole[k]}`);
+          console.log(consoleKleuren.fgyellow, `${k}: ${toConsole[k]}`);
         } else if (typeof toConsole[k] === 'undefined') {
-          console.log('\x1b[33m%s\x1b[0m', `${k}: UNDEFINED`);
+          console.log(consoleKleuren.fgyellow, `${k}: UNDEFINED`);
         } else if (Array.isArray(toConsole[k])) {
-          console.log('\x1b[33m%s\x1b[0m', k);
+          console.log(consoleKleuren.fgyellow, k);
           console.log(toConsole[k]);
         } else if (typeof toConsole[k] === 'object' && toConsole[k] !== null) {
-          console.log('\x1b[33m%s\x1b[0m', {
+          console.log(consoleKleuren.fgyellow, {
             _naamVanGelogdeVariabele1: k,
             ...toConsole[k],
           });          
         } else {
           const str = `varName: ${k}; val: ${toConsole[k]}; typeof: ${typeof toConsole[k]}`;
-          console.log('\x1b[33m%s\x1b[0m', str);
+          console.log(consoleKleuren.fgyellow, str);
         }
       }
     }

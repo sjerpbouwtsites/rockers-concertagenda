@@ -1,293 +1,263 @@
 [
   {
-    "door": "2024-07-06T19:00:00.000",
-    "start": "2024-07-06T19:30:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/vader-2/",
-    "title": "Vader",
+    "start": "2024-07-13T12:00:00",
+    "venueEventUrl": "https://www.doornroosje.nl/event/valkhof-festival-16/",
+    "title": "Valkhof Festival",
     "location": "doornroosje",
     "price": null,
-    "shortText": "+ Bio-Cancer + Warsidemetal, death metal, doornroosjepas",
-    "longText": "../public/texts/doornroosje/LmRvb3Jucm9vc2plLm5sL2V2ZW50L3ZhZGVyLTIv.html",
-    "soldOut": true,
+    "shortText": "Ploegendienst + Will Butler + Sister Squares+ Ada Oda + Droom Dit + meer",
+    "longText": "../public/texts/doornroosje/Lm5sL2V2ZW50L3ZhbGtob2YtZmVzdGl2YWwtMTYv.html",
+    "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "vader": {
-        "s": "2s5dst9vbnzan2tbtdhzfz",
-        "l": "poland",
+      "ploegendienst": {
+        "s": "2aJUvAtem0t0zRKxJsRoea",
+        "l": "ploegendienst",
         "g": [
-          "black metal",
-          "brutal death metal",
-          "death metal",
-          "deathgrind",
-          "deathrash",
-          "melodic death metal",
-          "metal",
-          "polish death metal",
-          "polish metal",
-          "polish thrash metal",
-          "speed metal",
-          "technical death metal",
-          "death/thrash metal",
-          "death metal",
-          "thrash metal"
+          "dutch indie rock",
+          "dutch punk"
         ]
       }
     }
   },
   {
-    "door": "2024-08-12T19:00:00.000",
-    "start": "2024-08-12T19:30:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/havok/",
-    "title": "Havok + Skeletal Remains + Dust Bolt",
+    "start": "2024-07-16T12:00:00",
+    "venueEventUrl": "https://www.doornroosje.nl/event/valkhof-festival-19/",
+    "title": "Valkhof Festival",
     "location": "doornroosje",
     "price": null,
-    "shortText": "metal, thrash metal",
-    "longText": "../public/texts/doornroosje/d3cuZG9vcm5yb29zamUubmwvZXZlbnQvaGF2b2sv.html",
-    "soldOut": true,
+    "shortText": "Ana Frango Elétrico + Angélica Garcia + ROLROLROL + Planet Rose + meer",
+    "longText": "../public/texts/doornroosje/Lm5sL2V2ZW50L3ZhbGtob2YtZmVzdGl2YWwtMTkv.html",
+    "soldOut": false,
     "eventGenres": null,
-    "artists": {
-      "havok": {
-        "s": "2jw4wgixxa20jls9n3bdpq",
-        "l": "havok",
-        "g": [
-          "crossover thrash",
-          "death metal",
-          "denver metal",
-          "metal",
-          "speed metal",
-          "thrash metal",
-          "death metal"
-        ]
-      },
-      "skeletal remains": {
-        "s": "4rh3npxvmadeasiduasykn",
-        "l": "skeletal%20remains",
-        "g": [
-          "brutal death metal",
-          "death metal",
-          "deathgrind",
-          "grisly death metal",
-          "new wave of osdm",
-          "technical death metal",
-          "death metal"
-        ]
-      },
-      "dust bolt": {
-        "s": "4ytvf2l3v9pgqz1qbufg2q",
-        "l": "dust%20bolt",
-        "g": [
-          "german metal",
-          "german thrash metal",
-          "new wave of thrash metal",
-          "thrash metal"
-        ]
-      }
-    }
+    "artists": {}
   },
   {
-    "door": "2024-08-14T21:00:00.000",
-    "start": "2024-08-14T22:00:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/the-omnific/",
-    "title": "The Omnific",
+    "start": "2024-07-19T12:00:00",
+    "venueEventUrl": "https://www.doornroosje.nl/event/valkhof-festival-22/",
+    "title": "Valkhof Festival",
     "location": "doornroosje",
     "price": null,
-    "shortText": "metal, progressieve metal",
-    "longText": "../public/texts/doornroosje/cm5yb29zamUubmwvZXZlbnQvdGhlLW9tbmlmaWMv.html",
-    "soldOut": true,
+    "shortText": "Gurriers + Meltheads + Talk Show + The Hubschrauber + Planet Rose + meer",
+    "longText": "../public/texts/doornroosje/Lm5sL2V2ZW50L3ZhbGtob2YtZmVzdGl2YWwtMjIv.html",
+    "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "the omnific": {
-        "s": "5yn8jrJH5Z5PaGFStNUvgR",
-        "l": "the%20omnific",
+      "gurriers": {
+        "s": "0bPAi2zCrxUrPBREWdetZ5",
+        "l": "gurriers",
         "g": [
-          "djent",
-          "progressive jazz fusion"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-08-28T19:00:00.000",
-    "start": "2024-08-28T19:30:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/born-of-osiris/",
-    "title": "Born Of Osiris + Distant",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "+ Gallameshmetal, metalcore, deathcore",
-    "longText": "../public/texts/doornroosje/b29zamUubmwvZXZlbnQvYm9ybi1vZi1vc2lyaXMv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "distant": {
-        "s": "6cdm8i1ei2okpmruowwqv6",
-        "l": "distant",
-        "g": [
-          "instrumental post-rock",
-          "polish post-rock"
+          "crank wave",
+          "irish post-punk",
+          "irish shoegaze"
         ]
       },
-      "born of osiris": {
+      "talk": {
         "s": null,
-        "l": "born%20of%20osiris",
+        "l": "talk",
         "g": [
-          "metalcore",
-          "progressive metal",
-          "djent",
-          "deathcore",
-          "progressive metalcore"
+          "crossover",
+          "hardcore",
+          "thrash metal"
         ]
       }
     }
   },
   {
-    "door": "2024-08-30T21:00:00.000",
-    "start": "2024-08-30T22:00:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/lodyne/",
-    "title": "Lodyne",
+    "door": "2024-08-13T20:00:00.000",
+    "start": "2024-08-13T20:30:00.000",
+    "venueEventUrl": "https://www.doornroosje.nl/event/dopethrone/",
+    "title": "Dopethrone",
     "location": "doornroosje",
     "price": null,
-    "shortText": "rock, punk",
-    "longText": "../public/texts/doornroosje/dy5kb29ybnJvb3NqZS5ubC9ldmVudC9sb2R5bmUv.html",
+    "shortText": "+ Karavanmetal, sludge metal",
+    "longText": "../public/texts/doornroosje/b3Jucm9vc2plLm5sL2V2ZW50L2RvcGV0aHJvbmUv.html",
     "soldOut": true,
     "eventGenres": null,
     "artists": {
-      "lodyne": {
-        "s": "7CfDAdNhPhMhDRz5gOCPxV",
-        "l": "lodyne",
+      "dopethrone": {
+        "s": null,
+        "l": "dopethrone",
         "g": [
-          "emo",
+          "doom",
+          "sludge",
+          "stoner metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2024-08-19T20:00:00.000",
+    "start": "2024-08-19T20:30:00.000",
+    "venueEventUrl": "https://www.doornroosje.nl/event/poison-ruin-2/",
+    "title": "Poison Ruïn",
+    "location": "doornroosje",
+    "price": null,
+    "shortText": "rock, punk, post punk, proto-metal",
+    "longText": "../public/texts/doornroosje/cm9vc2plLm5sL2V2ZW50L3BvaXNvbi1ydWluLTIv.html",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": {
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
+        ]
+      },
+      "poison ruïn": {
+        "s": "0WHVA5E3ZEY5mxGkMYqPuB",
+        "l": "poison ruïn",
+        "g": [
+          "american post-punk"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2024-08-29T21:00:00.000",
+    "start": "2024-08-29T22:00:00.000",
+    "venueEventUrl": "https://www.doornroosje.nl/event/snooper/",
+    "title": "Snõõper",
+    "location": "doornroosje",
+    "price": null,
+    "shortText": "garage rock, punk, noise, electronic",
+    "longText": "../public/texts/doornroosje/LmRvb3Jucm9vc2plLm5sL2V2ZW50L3Nub29wZXIv.html",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": {
+      "snõõper": {
+        "s": "197lTCdMFPariBJ2Xd1xNb",
+        "l": "sn%C3%B5%C3%B5per",
+        "g": [
+          "egg punk"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2024-09-12T21:00:00.000",
+    "start": "2024-09-12T22:00:00.000",
+    "venueEventUrl": "https://www.doornroosje.nl/event/antichrist-siegemachine/",
+    "title": "Antichrist Siege Machine",
+    "location": "doornroosje",
+    "price": null,
+    "shortText": "+ Ascended Deadmetal, black metal, death metal",
+    "longText": "../public/texts/doornroosje/ZXZlbnQvYW50aWNocmlzdC1zaWVnZW1hY2hpbmUv.html",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": {
+      "antichrist siege machine": {
+        "s": "0g132bsggkLIMT0pW9aa7s",
+        "l": "antichrist siege machine",
+        "g": [
+          "black death",
+          "virginia metal",
+          "war metal",
+          "black",
+          "death metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2024-10-08T20:00:00.000",
+    "start": "2024-10-08T20:30:00.000",
+    "venueEventUrl": "https://www.doornroosje.nl/event/fat-dog/",
+    "title": "Fat Dog",
+    "location": "doornroosje",
+    "price": null,
+    "shortText": "rock, punk, garage",
+    "longText": "../public/texts/doornroosje/LmRvb3Jucm9vc2plLm5sL2V2ZW50L2ZhdC1kb2cv.html",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": {
+      "fat dog": {
+        "s": "4dljephxbw7qihx4iwmnee",
+        "l": "fat%20dog",
+        "g": [
+          "crank wave",
           "punk"
         ]
       }
     }
   },
   {
-    "door": "2024-09-21T18:30:00.000",
-    "start": "2024-09-21T19:00:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/cannibal-corpse/",
-    "title": "Cannibal Corpse",
+    "door": "2024-11-05T19:30:00.000",
+    "start": "2024-11-05T20:15:00.000",
+    "venueEventUrl": "https://www.doornroosje.nl/event/bad-nerves/",
+    "title": "Bad Nerves",
     "location": "doornroosje",
     "price": null,
-    "shortText": "+ Municipal Waste + Immolation + Schizophreniametal, death metal, thrash metal",
-    "longText": "../public/texts/doornroosje/b3NqZS5ubC9ldmVudC9jYW5uaWJhbC1jb3Jwc2Uv.html",
+    "shortText": "rock, punk, garage",
+    "longText": "../public/texts/doornroosje/b3Jucm9vc2plLm5sL2V2ZW50L2JhZC1uZXJ2ZXMv.html",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "door": "2024-11-30T18:30:00.000",
+    "start": "2024-11-30T19:00:00.000",
+    "venueEventUrl": "https://www.doornroosje.nl/event/fit-for-an-autopsy/",
+    "title": "Fit For An Autopsy",
+    "location": "doornroosje",
+    "price": null,
+    "shortText": "+ Sylosis + Darkest Hour + Heriotmetal, metalcore, deathcore",
+    "longText": "../public/texts/doornroosje/ZS5ubC9ldmVudC9maXQtZm9yLWFuLWF1dG9wc3kv.html",
     "soldOut": true,
     "eventGenres": null,
     "artists": {
-      "cannibal corpse": {
-        "s": "0ylwgbqibqhxovmtfh2a7n",
-        "l": "cannibal%20corpse",
+      "fit for an autopsy": {
+        "s": "0qJpY7K8p7g6sacvaGNt6i",
+        "l": "fit for an autopsy",
         "g": [
-          "alternative metal",
-          "brutal death metal",
-          "buffalo ny metal",
-          "death metal",
-          "metal",
-          "death metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2023-10-13T18:00:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/soulcrusher-2024/",
-    "title": "Soulcrusher 2024",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "undefined Met oa: Zeal & Ardor (swi), HEALTH (usa), Blackbraid (usa), Ulcerate (nzl), Inter Arma (usa), Mizmor (usa), Pharmakon (usa), DVNE (uk), Coilguns (swi), GOST (usa), Lamp of Murmuur (usa), Thantifaxath (can), Dödsrit (swe/nl), Morne (usa), Hippotraktor (be), Woe (usa), Five the Hierophant (uk), Great Falls (usa), Kollaps (aus), Lana Del Rabies (usa), Norna (swi/swe), Nyrst (is), Zetra (uk), Ponte del Diavolo (ita), Deathless Void (nl)",
-    "longText": "../public/texts/doornroosje/c2plLm5sL2V2ZW50L3NvdWxjcnVzaGVyLTIwMjQv.html",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
-    "door": "2024-11-14T18:30:00.000",
-    "start": "2024-11-14T19:00:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/solstafir-2/",
-    "title": "Sólstafir + Oranssi Pazuzu",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "+ Hamferðrock, post rock, metal, post metal",
-    "longText": "../public/texts/doornroosje/cm5yb29zamUubmwvZXZlbnQvc29sc3RhZmlyLTIv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "sólstafir": {
-        "s": "721c5u5rm8j0jjq6iqusbk",
-        "l": "s%c3%b3lstafir",
-        "g": [
-          "blackened screamo",
-          "icelandic black metal",
-          "icelandic metal",
-          "icelandic pop",
-          "pagan black metal",
-          "post-metal",
-          "viking black metal",
-          "viking/black metal (early)",
-          "post-metal/rock (later)"
+          "brutal deathcore",
+          "deathcore",
+          "melodic metalcore",
+          "metalcore"
         ]
       },
-      "oranssi pazuzu": {
-        "s": "3xfqre2fssojrodygk4caw",
-        "l": "oranssi%20pazuzu",
+      "sylosis": {
+        "s": "2RiGIRDi4GoJpDbjDnPVJl",
+        "l": "sylosis",
         "g": [
-          "atmospheric black metal",
-          "avant-garde metal",
-          "blackgaze",
-          "cosmic black metal",
-          "drone metal",
-          "finnish black metal",
-          "finnish psychedelic rock",
-          "post-black metal",
-          "post-metal",
-          "sci-fi metal",
-          "psychedelic black metal"
+          "groove metal",
+          "melodic death metal",
+          "melodic metalcore",
+          "melodic thrash",
+          "death metal",
+          "metalcore"
+        ]
+      },
+      "darkest hour": {
+        "s": "4dso1lISV1Atdo3O6qbhqq",
+        "l": "darkest hour",
+        "g": [
+          "melodic metalcore",
+          "metalcore",
+          "melodic death metal",
+          "metalcore"
         ]
       }
     }
   },
   {
-    "door": "2024-12-12T19:30:00.000",
-    "start": "2024-12-12T20:15:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/hang-youth-5/",
-    "title": "Hang Youth",
+    "door": "2024-12-13T19:30:00.000",
+    "start": "2024-12-13T20:30:00.000",
+    "venueEventUrl": "https://www.doornroosje.nl/event/dool-2/",
+    "title": "Dool",
     "location": "doornroosje",
     "price": null,
-    "shortText": "rock, punk",
-    "longText": "../public/texts/doornroosje/bnJvb3NqZS5ubC9ldmVudC9oYW5nLXlvdXRoLTUv.html",
+    "shortText": "rock, metal",
+    "longText": "../public/texts/doornroosje/dy5kb29ybnJvb3NqZS5ubC9ldmVudC9kb29sLTIv.html",
     "soldOut": true,
     "eventGenres": null,
     "artists": {
-      "hang youth": {
-        "s": "33s4eablbmnrple3y6czfr",
-        "l": "hang%20youth",
+      "metal": {
+        "s": null,
+        "l": "metal",
         "g": [
-          "dutch indie",
-          "dutch rock",
-          "lowlands hardcore",
-          "hardcore punk"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-03-01T19:00:00.000",
-    "start": "2025-03-01T20:00:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/dubioza-kolektiv-3/",
-    "title": "Dubioza Kolektiv",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "rock, punk, hip hop, ska, electronic, dub, balkan",
-    "longText": "../public/texts/doornroosje/ZS5ubC9ldmVudC9kdWJpb3phLWtvbGVrdGl2LTMv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "dubioza kolektiv": {
-        "s": "02ifyozic7cpqrk8fbehuy",
-        "l": "dubioza%20kolektiv",
-        "g": [
-          "balkan brass",
-          "balkan punk",
-          "bosnian indie"
+          "death metal"
         ]
       }
     }
