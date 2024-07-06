@@ -41,11 +41,12 @@
     "eventGenres": null,
     "artists": {
       "bodyfarm": {
-        "s": "2ofrvz32vviw3uxvl36a0h",
+        "s": "2OFRvZ32VVIW3UxVl36A0h",
         "l": "bodyfarm",
         "g": [
           "dutch death metal",
-          "grisly death metal"
+          "grisly death metal",
+          "death metal"
         ]
       }
     }
@@ -62,7 +63,7 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {}
   },
   {
     "start": "2024-10-19T19:00:00",
@@ -78,10 +79,9 @@
     "eventGenres": null,
     "artists": {
       "monster magnet": {
-        "s": "4hvwewrcmgj22uurgvet7q",
+        "s": "4hvwEwrCmGj22uURGVET7Q",
         "l": "monster%20magnet",
         "g": [
-          "southern metal",
           "stoner metal",
           "stoner rock"
         ]
@@ -100,7 +100,7 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {}
   },
   {
     "start": "2024-11-07T18:30:00",
@@ -163,7 +163,13 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "pene corrida": {
+        "s": "1hw2ywipnsowbtb8flzcca",
+        "l": "pene%20corrida",
+        "g": []
+      }
+    }
   },
   {
     "start": "2024-12-21T19:00:00",
@@ -177,7 +183,7 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {}
   },
   {
     "start": "2025-03-29T17:00:00",
@@ -191,6 +197,6 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {}
   }
 ]
