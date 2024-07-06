@@ -1,440 +1,130 @@
 [
   {
-    "door": "2024-07-06T19:00:00.000",
-    "start": "2024-07-06T19:30:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/vader-2/",
-    "title": "Vader",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "+ Bio-Cancer + Warsidemetal, death metal, doornroosjepas",
-    "longText": "../public/texts/doornroosje/LmRvb3Jucm9vc2plLm5sL2V2ZW50L3ZhZGVyLTIv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "vader": {
-        "s": "2s5DSt9VBNzAn2TbtDHzFZ",
-        "l": "vader",
-        "g": [
-          "black metal",
-          "brutal death metal",
-          "death metal",
-          "deathgrind",
-          "deathrash",
-          "melodic death metal",
-          "metal",
-          "polish death metal",
-          "polish metal",
-          "polish thrash metal",
-          "speed metal",
-          "technical death metal",
-          "death",
-          "thrash metal"
-        ]
-      },
-      "bio-cancer": {
-        "s": "7N0YKBOylzJvN7PevzJg2G",
-        "l": "bio-cancer",
-        "g": [
-          "crossover thrash",
-          "greek metal",
-          "new wave of thrash metal",
-          "thrash metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2024-07-13T12:00:00",
-    "venueEventUrl": "https://www.doornroosje.nl/event/valkhof-festival-16/",
-    "title": "Valkhof Festival",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "Ploegendienst + Will Butler + Sister Squares+ Ada Oda + Droom Dit + meer",
-    "longText": "../public/texts/doornroosje/Lm5sL2V2ZW50L3ZhbGtob2YtZmVzdGl2YWwtMTYv.html",
+    "door": "2024-08-04T19:30:00",
+    "start": "2024-08-04T20:00:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/soil",
+    "title": "Soil",
+    "location": "effenaar",
+    "price": 24.5,
+    "shortText": "Performing an all Scars set",
+    "longText": "../public/texts/effenaar/Oi8vd3d3LmVmZmVuYWFyLm5sL2FnZW5kYS9zb2ls.html",
+    "image": "../public/event-images/effenaar/Oi8vd3d3LmVmZmVuYWFyLm5sL2FnZW5kYS9zb2ls",
     "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "ploegendienst": {
-        "s": "2aJUvAtem0t0zRKxJsRoea",
-        "l": "ploegendienst",
+      "soil": {
+        "s": "4PoYwGOztIrPpBfRIlMSxP",
+        "l": "soil",
         "g": [
-          "dutch indie rock",
-          "dutch punk"
+          "alternative metal",
+          "industrial metal",
+          "nu metal",
+          "black metal"
         ]
       }
     }
   },
   {
-    "start": "2024-07-14T12:00:00",
-    "venueEventUrl": "https://www.doornroosje.nl/event/valkhof-festival-17/",
-    "title": "Valkhof Festival",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "Kneecap + O. + Sarah Julia + The Indien + SloDe & VoS + meer",
-    "longText": "../public/texts/doornroosje/Lm5sL2V2ZW50L3ZhbGtob2YtZmVzdGl2YWwtMTcv.html",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "start": "2024-07-15T12:00:00",
-    "venueEventUrl": "https://www.doornroosje.nl/event/valkhof-festival-18/",
-    "title": "Valkhof Festival",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "Wodan Boys + Maria Iskariot + Slope + CLAMM + WTF + meer",
-    "longText": "../public/texts/doornroosje/Lm5sL2V2ZW50L3ZhbGtob2YtZmVzdGl2YWwtMTgv.html",
+    "door": "2024-08-08T20:45:00",
+    "start": "2024-08-08T20:30:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/frailbody-throwingbricks",
+    "title": "Frail Body + Throwing Bricks",
+    "location": "effenaar",
+    "price": 16,
+    "shortText": "Screamo, post-rock en invloeden van black-metal.",
+    "longText": "../public/texts/effenaar/Z2VuZGEvZnJhaWxib2R5LXRocm93aW5nYnJpY2tz.html",
+    "image": "../public/event-images/effenaar/Z2VuZGEvZnJhaWxib2R5LXRocm93aW5nYnJpY2tz",
     "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "slope": {
-        "s": "24ExnkYwR4QoLamXGi4sOR",
-        "l": "slope",
+      "frail body": {
+        "s": "087dxTWzkw5RjrjOiJCfBH",
+        "l": "frail body",
         "g": [
-          "german hardcore"
+          "chaotic hardcore",
+          "mathcore",
+          "skramz"
         ]
       },
-      "clamm": {
-        "s": "2QYx4UUKqLe1OUWFkjclqH",
-        "l": "clamm",
+      "throwing bricks": {
+        "s": "05jSnBtEkxDJ7TIR4KVjSr",
+        "l": "throwing bricks",
         "g": [
-          "melbourne punk"
+          "dutch black metal",
+          "hardcore punk (early)",
+          " sludge",
+          "post-metal",
+          "hardcore (later)"
         ]
       }
     }
   },
   {
-    "start": "2024-07-16T12:00:00",
-    "venueEventUrl": "https://www.doornroosje.nl/event/valkhof-festival-19/",
-    "title": "Valkhof Festival",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "Ana Frango Elétrico + Angélica Garcia + ROLROLROL + Planet Rose + meer",
-    "longText": "../public/texts/doornroosje/Lm5sL2V2ZW50L3ZhbGtob2YtZmVzdGl2YWwtMTkv.html",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "start": "2024-07-17T12:00:00",
-    "venueEventUrl": "https://www.doornroosje.nl/event/valkhof-festival-20/",
-    "title": "Valkhof Festival",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "Yunè Pinku + Julia Sabaté + X IT + Off The Grid + meer",
-    "longText": "../public/texts/doornroosje/Lm5sL2V2ZW50L3ZhbGtob2YtZmVzdGl2YWwtMjAv.html",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "start": "2024-07-18T12:00:00",
-    "venueEventUrl": "https://www.doornroosje.nl/event/valkhof-festival-21/",
-    "title": "Valkhof Festival",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "Loverman + Liam Bailey + Joe Unknown + Housepainters + Diskodip + meer",
-    "longText": "../public/texts/doornroosje/Lm5sL2V2ZW50L3ZhbGtob2YtZmVzdGl2YWwtMjEv.html",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "start": "2024-07-19T12:00:00",
-    "venueEventUrl": "https://www.doornroosje.nl/event/valkhof-festival-22/",
-    "title": "Valkhof Festival",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "Gurriers + Meltheads + Talk Show + The Hubschrauber + Planet Rose + meer",
-    "longText": "../public/texts/doornroosje/Lm5sL2V2ZW50L3ZhbGtob2YtZmVzdGl2YWwtMjIv.html",
+    "door": "2024-08-11T19:30:00",
+    "start": "2024-08-11T20:00:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/butcher-babies",
+    "title": "Butcher Babies",
+    "location": "effenaar",
+    "price": 24.5,
+    "shortText": "Groove-metalband met 2 frontvrouwen",
+    "longText": "../public/texts/effenaar/ZW5hYXIubmwvYWdlbmRhL2J1dGNoZXItYmFiaWVz.html",
+    "image": "../public/event-images/effenaar/ZW5hYXIubmwvYWdlbmRhL2J1dGNoZXItYmFiaWVz",
     "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "gurriers": {
-        "s": "0bPAi2zCrxUrPBREWdetZ5",
-        "l": "gurriers",
+      "butcher babies": {
+        "s": "6FcvjJzvxgybo7Ywsj0hRj",
+        "l": "butcher babies",
         "g": [
-          "crank wave",
-          "irish post-punk",
-          "irish shoegaze"
-        ]
-      },
-      "talk": {
-        "s": null,
-        "l": "talk",
-        "g": [
-          "crossover",
-          "hardcore",
-          "thrash metal"
+          "groove metal",
+          "slayer"
         ]
       }
     }
   },
   {
-    "door": "2024-08-10T19:30:00.000",
-    "start": "2024-08-10T20:30:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/author-punisher-ken-mode/",
-    "title": "Author & Punisher",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "+ KEN modemetal, industrial, noise, doornroosjepas",
-    "longText": "../public/texts/doornroosje/dmVudC9hdXRob3ItcHVuaXNoZXIta2VuLW1vZGUv.html",
-    "soldOut": true,
+    "door": "2024-08-28T19:30:00",
+    "start": "2024-08-28T20:00:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/liturgy",
+    "title": "Liturgy",
+    "location": "effenaar",
+    "price": 24.5,
+    "shortText": "Diep-filosofische avant-gardistische metal",
+    "longText": "../public/texts/effenaar/d3d3LmVmZmVuYWFyLm5sL2FnZW5kYS9saXR1cmd5.html",
+    "image": "../public/event-images/effenaar/d3d3LmVmZmVuYWFyLm5sL2FnZW5kYS9saXR1cmd5",
+    "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "author & punisher": {
-        "s": "4QtqJ5KVIhBruJWEhWjnsv",
-        "l": "author & punisher",
+      "liturgy": {
+        "s": "5PIuMlRY9PSLUSFzs6lQu1",
+        "l": "liturgy",
         "g": [
-          "drone metal",
-          "dub metal",
-          "experimental",
-          "laboratorio",
-          "one-person band",
-          "post-doom metal",
-          "post-metal"
+          "experimental black metal",
+          "nyc metal",
+          "technical black metal",
+          "totalism",
+          "usbm",
+          "brutal death metal"
         ]
       }
     }
   },
   {
-    "door": "2024-08-12T19:00:00.000",
-    "start": "2024-08-12T19:30:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/havok/",
-    "title": "Havok + Skeletal Remains + Dust Bolt",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "metal, thrash metal",
-    "longText": "../public/texts/doornroosje/d3cuZG9vcm5yb29zamUubmwvZXZlbnQvaGF2b2sv.html",
-    "soldOut": true,
+    "door": "2024-08-28T20:00:00",
+    "start": "2024-08-28T20:30:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/home-front",
+    "title": "Home Front",
+    "location": "effenaar",
+    "price": 20.5,
+    "shortText": "Voor fans van High Vis, Scowl en Militarie Gun",
+    "longText": "../public/texts/effenaar/LmVmZmVuYWFyLm5sL2FnZW5kYS9ob21lLWZyb250.html",
+    "image": "../public/event-images/effenaar/LmVmZmVuYWFyLm5sL2FnZW5kYS9ob21lLWZyb250",
+    "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "havok": {
-        "s": "2jw4wgixxa20jls9N3Bdpq",
-        "l": "havok",
-        "g": [
-          "crossover thrash",
-          "death metal",
-          "denver metal",
-          "metal",
-          "speed metal",
-          "thrash metal",
-          "death metal"
-        ]
-      },
-      "skeletal remains": {
-        "s": "4Rh3NPxVMADeaSIduAsykN",
-        "l": "skeletal remains",
-        "g": [
-          "brutal death metal",
-          "death metal",
-          "deathgrind",
-          "grisly death metal",
-          "new wave of osdm",
-          "technical death metal",
-          "death metal"
-        ]
-      },
-      "dust bolt": {
-        "s": "4YTVF2l3v9pGQz1QbUfg2q",
-        "l": "dust bolt",
-        "g": [
-          "german metal",
-          "german thrash metal",
-          "new wave of thrash metal",
-          "thrash metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-08-13T19:30:00.000",
-    "start": "2024-08-13T20:30:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/baroness/",
-    "title": "Baroness",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "+ Pupil Slicerrock, metal, doornroosjepas",
-    "longText": "../public/texts/doornroosje/ZG9vcm5yb29zamUubmwvZXZlbnQvYmFyb25lc3Mv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "baroness": {
-        "s": "3KdXhEwbqFHfNfSk7L9E87",
-        "l": "baroness",
-        "g": [
-          "progressive sludge",
-          "sludge metal",
-          "progressive sludge metal, progressive rock"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-08-13T20:00:00.000",
-    "start": "2024-08-13T20:30:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/dopethrone/",
-    "title": "Dopethrone",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "+ Karavanmetal, sludge metal",
-    "longText": "../public/texts/doornroosje/b3Jucm9vc2plLm5sL2V2ZW50L2RvcGV0aHJvbmUv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "dopethrone": {
-        "s": null,
-        "l": "dopethrone",
-        "g": [
-          "doom",
-          "sludge",
-          "stoner metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-08-14T21:00:00.000",
-    "start": "2024-08-14T22:00:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/the-omnific/",
-    "title": "The Omnific",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "metal, progressieve metal",
-    "longText": "../public/texts/doornroosje/cm5yb29zamUubmwvZXZlbnQvdGhlLW9tbmlmaWMv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      },
-      "the omnific": {
-        "s": "5yn8jrJH5Z5PaGFStNUvgR",
-        "l": "the omnific",
-        "g": [
-          "djent",
-          "progressive jazz fusion"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-08-19T20:00:00.000",
-    "start": "2024-08-19T20:30:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/poison-ruin-2/",
-    "title": "Poison Ruïn",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "rock, punk, post punk, proto-metal",
-    "longText": "../public/texts/doornroosje/cm9vc2plLm5sL2V2ZW50L3BvaXNvbi1ydWluLTIv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      },
-      "poison ruïn": {
-        "s": "0WHVA5E3ZEY5mxGkMYqPuB",
-        "l": "poison ruïn",
-        "g": [
-          "american post-punk"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-08-20T20:00:00.000",
-    "start": "2024-08-20T20:30:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/sextile/",
-    "title": "Sextile",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "kraut rock, punk, wave, synth",
-    "longText": "../public/texts/doornroosje/LmRvb3Jucm9vc2plLm5sL2V2ZW50L3NleHRpbGUv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "sextile": {
-        "s": "4ReoJ2faKfdjI0plizlL56",
-        "l": "sextile",
-        "g": [
-          "dark post-punk",
-          "grave wave",
-          "synth punk"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-08-28T19:00:00.000",
-    "start": "2024-08-28T19:30:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/born-of-osiris/",
-    "title": "Born Of Osiris + Distant",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "+ Gallameshmetal, metalcore, deathcore",
-    "longText": "../public/texts/doornroosje/b29zamUubmwvZXZlbnQvYm9ybi1vZi1vc2lyaXMv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "distant": {
-        "s": "7dfpBi0QvO9FmlhBK6XHwJ",
-        "l": "distant",
-        "g": [
-          "deathcore",
-          "downtempo deathcore",
-          "slamming deathcore",
-          "groove metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-08-29T20:00:00.000",
-    "start": "2024-08-29T20:30:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/gnod/",
-    "title": "Gnod",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "+ The Glutsrock, psychedelische rock, noise rock, doornroosjepas",
-    "longText": "../public/texts/doornroosje/d3d3LmRvb3Jucm9vc2plLm5sL2V2ZW50L2dub2Qv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "gnod": {
-        "s": "0M7HBnNJoTfTWouL5O7FtO",
-        "l": "gnod",
-        "g": [
-          "double drumming",
-          "noise rock",
-          "uk noise rock"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-08-29T21:00:00.000",
-    "start": "2024-08-29T22:00:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/snooper/",
-    "title": "Snõõper",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "garage rock, punk, noise, electronic",
-    "longText": "../public/texts/doornroosje/LmRvb3Jucm9vc2plLm5sL2V2ZW50L3Nub29wZXIv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "snõõper": {
-        "s": "197lTCdMFPariBJ2Xd1xNb",
-        "l": "sn%C3%B5%C3%B5per",
+      "home front": {
+        "s": "0CyB1ZUexbBDoyHb15UJrU",
+        "l": "home front",
         "g": [
           "egg punk"
         ]
@@ -442,338 +132,16 @@
     }
   },
   {
-    "door": "2024-08-30T21:00:00.000",
-    "start": "2024-08-30T22:00:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/lodyne/",
-    "title": "Lodyne",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "rock, punk",
-    "longText": "../public/texts/doornroosje/dy5kb29ybnJvb3NqZS5ubC9ldmVudC9sb2R5bmUv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2024-09-12T21:00:00.000",
-    "start": "2024-09-12T22:00:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/antichrist-siegemachine/",
-    "title": "Antichrist Siege Machine",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "+ Ascended Deadmetal, black metal, death metal",
-    "longText": "../public/texts/doornroosje/ZXZlbnQvYW50aWNocmlzdC1zaWVnZW1hY2hpbmUv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "antichrist siege machine": {
-        "s": "0g132bsggkLIMT0pW9aa7s",
-        "l": "antichrist siege machine",
-        "g": [
-          "black death",
-          "virginia metal",
-          "war metal",
-          "black",
-          "death metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-09-15T21:00:00.000",
-    "start": "2024-09-15T22:00:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/lip-critic/",
-    "title": "Lip Critic",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "punk, hip hop, electronic, dance, hardcore",
-    "longText": "../public/texts/doornroosje/b3Jucm9vc2plLm5sL2V2ZW50L2xpcC1jcml0aWMv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "lip critic": {
-        "s": "4ABuKdLlVyzLztIFR8ETX9",
-        "l": "lip%20critic",
-        "g": [
-          "digital hardcore"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-09-21T18:30:00.000",
-    "start": "2024-09-21T19:00:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/cannibal-corpse/",
-    "title": "Cannibal Corpse",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "+ Municipal Waste + Immolation + Schizophreniametal, death metal, thrash metal",
-    "longText": "../public/texts/doornroosje/b3NqZS5ubC9ldmVudC9jYW5uaWJhbC1jb3Jwc2Uv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "cannibal corpse": {
-        "s": "0yLwGBQiBqhXOvmTfH2A7n",
-        "l": "cannibal corpse",
-        "g": [
-          "alternative metal",
-          "brutal death metal",
-          "buffalo ny metal",
-          "death metal",
-          "metal",
-          "death metal"
-        ]
-      },
-      "municipal waste": {
-        "s": "2Ah9OuOj7B57gPD1cbwiaE",
-        "l": "municipal waste",
-        "g": [
-          "crossover thrash",
-          "death metal",
-          "groove metal",
-          "metal",
-          "new wave of thrash metal",
-          "speed metal",
-          "thrash metal",
-          "virginia metal",
-          "virginia punk",
-          "thrash metal",
-          "crossover"
-        ]
-      },
-      "immolation": {
-        "s": "3rt16vhD1OuULlsyxUUWIt",
-        "l": "immolation",
-        "g": [
-          "black metal",
-          "brutal death metal",
-          "death metal",
-          "grindcore",
-          "new york death metal",
-          "technical death metal",
-          "thrash metal",
-          "death metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-10-08T20:00:00.000",
-    "start": "2024-10-08T20:30:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/fat-dog/",
-    "title": "Fat Dog",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "rock, punk, garage",
-    "longText": "../public/texts/doornroosje/LmRvb3Jucm9vc2plLm5sL2V2ZW50L2ZhdC1kb2cv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "fat dog": {
-        "s": "4dljephxbw7qihx4iwmnee",
-        "l": "fat%20dog",
-        "g": [
-          "crank wave",
-          "punk"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-11-05T19:30:00.000",
-    "start": "2024-11-05T20:15:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/bad-nerves/",
-    "title": "Bad Nerves",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "rock, punk, garage",
-    "longText": "../public/texts/doornroosje/b3Jucm9vc2plLm5sL2V2ZW50L2JhZC1uZXJ2ZXMv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2024-11-07T20:00:00.000",
-    "start": "2024-11-07T20:30:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/celeste/",
-    "title": "Celeste",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "metal, post metal, sludge metal, doornroosjepas",
-    "longText": "../public/texts/doornroosje/LmRvb3Jucm9vc2plLm5sL2V2ZW50L2NlbGVzdGUv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "celeste": {
-        "s": "49HlOY4gkHqsYG9GCuhkcc",
-        "l": "celeste",
-        "g": [
-          "british soul",
-          "black",
-          "sludge metal",
-          "post-hardcore"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-11-14T18:30:00.000",
-    "start": "2024-11-14T19:00:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/solstafir-2/",
-    "title": "Sólstafir + Oranssi Pazuzu",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "+ Hamferðrock, post rock, metal, post metal",
-    "longText": "../public/texts/doornroosje/cm5yb29zamUubmwvZXZlbnQvc29sc3RhZmlyLTIv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "sólstafir": {
-        "s": "721C5U5rM8J0jjq6IQuSBK",
-        "l": "sólstafir",
-        "g": [
-          "blackened screamo",
-          "icelandic black metal",
-          "icelandic metal",
-          "icelandic pop",
-          "pagan black metal",
-          "post-metal",
-          "viking black metal",
-          "viking",
-          "black metal (early)",
-          " post-metal",
-          "rock (later)"
-        ]
-      },
-      "oranssi pazuzu": {
-        "s": "3XFQRe2FsSOjrODygK4caW",
-        "l": "oranssi pazuzu",
-        "g": [
-          "atmospheric black metal",
-          "avant-garde metal",
-          "blackgaze",
-          "cosmic black metal",
-          "drone metal",
-          "finnish black metal",
-          "finnish psychedelic rock",
-          "post-black metal",
-          "post-metal",
-          "sci-fi metal",
-          "voidgaze",
-          "psychedelic black metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-11-30T18:30:00.000",
-    "start": "2024-11-30T19:00:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/fit-for-an-autopsy/",
-    "title": "Fit For An Autopsy",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "+ Sylosis + Darkest Hour + Heriotmetal, metalcore, deathcore",
-    "longText": "../public/texts/doornroosje/ZS5ubC9ldmVudC9maXQtZm9yLWFuLWF1dG9wc3kv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "fit for an autopsy": {
-        "s": "0qJpY7K8p7g6sacvaGNt6i",
-        "l": "fit for an autopsy",
-        "g": [
-          "brutal deathcore",
-          "deathcore",
-          "melodic metalcore",
-          "metalcore"
-        ]
-      },
-      "sylosis": {
-        "s": "2RiGIRDi4GoJpDbjDnPVJl",
-        "l": "sylosis",
-        "g": [
-          "groove metal",
-          "melodic death metal",
-          "melodic metalcore",
-          "melodic thrash",
-          "death metal",
-          "metalcore"
-        ]
-      },
-      "darkest hour": {
-        "s": "4dso1lISV1Atdo3O6qbhqq",
-        "l": "darkest hour",
-        "g": [
-          "melodic metalcore",
-          "metalcore",
-          "melodic death metal",
-          "metalcore"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-12-05T21:00:00.000",
-    "start": "2024-12-05T22:00:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/lizzard/",
-    "title": "Lizzard",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "rock, metal, progressive metal",
-    "longText": "../public/texts/doornroosje/LmRvb3Jucm9vc2plLm5sL2V2ZW50L2xpenphcmQv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      },
-      "lizzard": {
-        "s": "3y8vqcADc0jrZGhRDRGs1f",
-        "l": "lizzard",
-        "g": [
-          "deep progressive rock",
-          "stoner",
-          "doom",
-          "sludge metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-12-12T19:30:00.000",
-    "start": "2024-12-12T20:15:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/hang-youth-5/",
-    "title": "Hang Youth",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "rock, punk",
-    "longText": "../public/texts/doornroosje/bnJvb3NqZS5ubC9ldmVudC9oYW5nLXlvdXRoLTUv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "hang youth": {
-        "s": "33s4eablBmnrPlE3y6CZFR",
-        "l": "hang%20youth",
-        "g": [
-          "dutch indie",
-          "lowlands hardcore"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-12-13T19:30:00.000",
-    "start": "2024-12-13T20:30:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/dool-2/",
-    "title": "Dool",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "rock, metal",
-    "longText": "../public/texts/doornroosje/dy5kb29ybnJvb3NqZS5ubC9ldmVudC9kb29sLTIv.html",
-    "soldOut": true,
+    "door": "2024-09-06T19:00:00",
+    "start": "2024-09-06T19:30:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/uit-de-riolen-van-eindhoven-1",
+    "title": "Uit De Riolen Van Eindhoven",
+    "location": "effenaar",
+    "price": 11.5,
+    "shortText": "Metal & hardcore edition",
+    "longText": "../public/texts/effenaar/L3VpdC1kZS1yaW9sZW4tdmFuLWVpbmRob3Zlbi0x.html",
+    "image": "../public/event-images/effenaar/L3VpdC1kZS1yaW9sZW4tdmFuLWVpbmRob3Zlbi0x",
+    "soldOut": false,
     "eventGenres": null,
     "artists": {
       "metal": {
@@ -786,53 +154,788 @@
     }
   },
   {
-    "door": "2025-01-25T19:00:00.000",
-    "start": "2025-01-25T19:30:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/delain-2/",
-    "title": "Delain",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "metal, symfonische metal",
-    "longText": "../public/texts/doornroosje/ZG9vcm5yb29zamUubmwvZXZlbnQvZGVsYWluLTIv.html",
-    "soldOut": true,
+    "door": "2024-09-17T19:30:00",
+    "start": "2024-09-17T20:15:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/haken",
+    "title": "Haken",
+    "location": "effenaar",
+    "price": 38,
+    "shortText": "Invloedrijke progrockband uit Engeland",
+    "longText": "../public/texts/effenaar/Ly93d3cuZWZmZW5hYXIubmwvYWdlbmRhL2hha2Vu.html",
+    "image": "../public/event-images/effenaar/Ly93d3cuZWZmZW5hYXIubmwvYWdlbmRhL2hha2Vu",
+    "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "delain": {
-        "s": "6pIRdCtSE5hLFfIfcTAicI",
-        "l": "delain",
+      "haken": {
+        "s": "2SRIVGDkdqQnrQdaXxDkJt",
+        "l": "haken",
         "g": [
-          "dutch metal",
-          "gothic metal",
-          "gothic symphonic metal",
-          "power metal",
-          "symphonic metal",
-          "symphonic metal",
+          "progressive metal",
+          "progressive metal",
           "rock"
         ]
       }
     }
   },
   {
-    "door": "2025-03-01T19:00:00.000",
-    "start": "2025-03-01T20:00:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/dubioza-kolektiv-3/",
-    "title": "Dubioza Kolektiv",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "rock, punk, hip hop, ska, electronic, dub, balkan",
-    "longText": "../public/texts/doornroosje/ZS5ubC9ldmVudC9kdWJpb3phLWtvbGVrdGl2LTMv.html",
-    "soldOut": true,
+    "door": "2024-09-20T19:30:00",
+    "start": "2024-09-20T20:00:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/nurnberg",
+    "title": "Nürnberg",
+    "location": "effenaar",
+    "price": 14,
+    "shortText": "Post-punk voor fans van Molchat Doma, Joy Division en DIIV | + Docile Bodies + VONDER",
+    "longText": "../public/texts/effenaar/d3cuZWZmZW5hYXIubmwvYWdlbmRhL251cm5iZXJn.html",
+    "image": "../public/event-images/effenaar/d3cuZWZmZW5hYXIubmwvYWdlbmRhL251cm5iZXJn",
+    "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "dubioza kolektiv": {
-        "s": "02IFYoziC7CpQRK8fbehUY",
-        "l": "dubioza%20kolektiv",
+      "nürnberg": {
+        "s": "2IkTGThCeQAPGMru4uXzs4",
+        "l": "nürnberg",
         "g": [
-          "balkan brass",
-          "balkan punk",
-          "bosnian indie"
+          "belarusian indie",
+          "russian post-punk"
         ]
       }
     }
+  },
+  {
+    "door": "2024-09-21T20:00:00",
+    "start": "2024-09-21T20:30:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/agriculture",
+    "title": "Agriculture",
+    "location": "effenaar",
+    "price": 20.5,
+    "shortText": "Black metal voor fans van Deafheaven, Liturgy, Wolves in the Throne Room en Panopticon",
+    "longText": "../public/texts/effenaar/ZWZmZW5hYXIubmwvYWdlbmRhL2FncmljdWx0dXJl.html",
+    "image": "../public/event-images/effenaar/ZWZmZW5hYXIubmwvYWdlbmRhL2FncmljdWx0dXJl",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "agriculture": {
+        "s": "23Skjj6LyKEVkNIUFrLBUY",
+        "l": "agriculture",
+        "g": [
+          "emotional black metal",
+          "post-black metal"
+        ]
+      },
+      "liturgy": {
+        "s": "5PIuMlRY9PSLUSFzs6lQu1",
+        "l": "liturgy",
+        "g": [
+          "experimental black metal",
+          "nyc metal",
+          "technical black metal",
+          "totalism",
+          "usbm",
+          "brutal death metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2024-09-29T19:30:00",
+    "start": "2024-09-29T20:15:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/frog-leap",
+    "title": "Frog Leap",
+    "location": "effenaar",
+    "price": 30,
+    "shortText": "YouTube-sensatie maakt metalcovers van pophits (enige NL show!)",
+    "longText": "../public/texts/effenaar/dy5lZmZlbmFhci5ubC9hZ2VuZGEvZnJvZy1sZWFw.html",
+    "image": "../public/event-images/effenaar/dy5lZmZlbmFhci5ubC9hZ2VuZGEvZnJvZy1sZWFw",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "door": "2024-10-05T15:30:00",
+    "start": "2024-10-05T16:00:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/caya2024",
+    "title": "Come As You Are",
+    "location": "effenaar",
+    "price": 48,
+    "shortText": " o.a. STONE, Buffalo Tom & Personal Trainer  Het beste van drie decennia gitaarmuziek",
+    "longText": "../public/texts/effenaar/d3cuZWZmZW5hYXIubmwvYWdlbmRhL2NheWEyMDI0.html",
+    "image": "../public/event-images/effenaar/d3cuZWZmZW5hYXIubmwvYWdlbmRhL2NheWEyMDI0",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": {
+      "stone": {
+        "s": "22be4uq6banwshpvcdxlce",
+        "l": "stone",
+        "g": [
+          "album rock",
+          "british invasion",
+          "classic rock",
+          "rock"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2024-10-11T19:30:00",
+    "start": "2024-10-11T20:00:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/speedmobile",
+    "title": "Speedmobile",
+    "location": "effenaar",
+    "price": 19.5,
+    "shortText": "Album release show",
+    "longText": "../public/texts/effenaar/ZWZmZW5hYXIubmwvYWdlbmRhL3NwZWVkbW9iaWxl.html",
+    "image": "../public/event-images/effenaar/ZWZmZW5hYXIubmwvYWdlbmRhL3NwZWVkbW9iaWxl",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "door": "2024-10-16T20:00:00",
+    "start": "2024-10-16T20:30:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/wytches",
+    "title": "The Wytches",
+    "location": "effenaar",
+    "price": 16,
+    "shortText": "10th anniversary of Annabel Dream Reader",
+    "longText": "../public/texts/effenaar/d3d3LmVmZmVuYWFyLm5sL2FnZW5kYS93eXRjaGVz.html",
+    "image": "../public/event-images/effenaar/d3d3LmVmZmVuYWFyLm5sL2FnZW5kYS93eXRjaGVz",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "door": "2024-10-22T18:30:00",
+    "start": "2024-10-22T19:15:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/alien-ant-farm-cky",
+    "title": "Alien ant farm + cky",
+    "location": "effenaar",
+    "price": 33.5,
+    "shortText": "Ontwaak je innerlijke nu-metal kid | + The Treatment",
+    "longText": "../public/texts/effenaar/ci5ubC9hZ2VuZGEvYWxpZW4tYW50LWZhcm0tY2t5.html",
+    "image": "../public/event-images/effenaar/ci5ubC9hZ2VuZGEvYWxpZW4tYW50LWZhcm0tY2t5",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "alien ant farm": {
+        "s": "6TZdvF1kFzwnQLgHQynzsO",
+        "l": "alien ant farm",
+        "g": [
+          "alternative metal",
+          "funk metal",
+          "nu metal",
+          "post-grunge"
+        ]
+      },
+      "the treatment": {
+        "s": "7HbPuR5r7inxY7xExMdkUq",
+        "l": "the treatment",
+        "g": [
+          "deep melodic hard rock",
+          "modern hard rock",
+          "nwocr",
+          "sleaze rock"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2024-10-25T19:30:00",
+    "start": "2024-10-25T20:00:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/death-sells",
+    "title": "Death Sells + HOOFS + Rats and Daggers",
+    "location": "effenaar",
+    "price": 13,
+    "shortText": "Mix van noiserock, grunge en punk die je trommelvliezen doen rammelen",
+    "longText": "../public/texts/effenaar/ZWZmZW5hYXIubmwvYWdlbmRhL2RlYXRoLXNlbGxz.html",
+    "image": "../public/event-images/effenaar/ZWZmZW5hYXIubmwvYWdlbmRhL2RlYXRoLXNlbGxz",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "hoofs": {
+        "s": "4QjLwd8IdqEMvKdkoSE5Bp",
+        "l": "hoofs",
+        "g": [
+          "dutch post-punk"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2024-10-30T19:30:00",
+    "start": "2024-10-30T20:00:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/master-boot-record",
+    "title": "Master Boot Record",
+    "location": "effenaar",
+    "price": 22.5,
+    "shortText": "Unieke fusie van heavy metal, elektronische beats en chiptune",
+    "longText": "../public/texts/effenaar/ci5ubC9hZ2VuZGEvbWFzdGVyLWJvb3QtcmVjb3Jk.html",
+    "image": "../public/event-images/effenaar/ci5ubC9hZ2VuZGEvbWFzdGVyLWJvb3QtcmVjb3Jk",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "master boot record": {
+        "s": "77s5NAGQbxu8oLstaqSwHE",
+        "l": "master boot record",
+        "g": [
+          "darksynth",
+          "industrial",
+          "electronic metal, synthwave",
+          "chiptune"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2024-10-31T18:30:00",
+    "start": "2024-10-31T19:00:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/ne-obliviscaris",
+    "title": "Ne Obliviscaris",
+    "location": "effenaar",
+    "price": 27.5,
+    "shortText": "Australische prog-metal pioniers spelen ''Exul'' en ''Citadel'' integraal",
+    "longText": "../public/texts/effenaar/bmFhci5ubC9hZ2VuZGEvbmUtb2JsaXZpc2Nhcmlz.html",
+    "image": "../public/event-images/effenaar/bmFhci5ubC9hZ2VuZGEvbmUtb2JsaXZpc2Nhcmlz",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
+        ]
+      },
+      "ne obliviscaris": {
+        "s": "5kbidtcpyRRMdAQUnI1BG4",
+        "l": "ne obliviscaris",
+        "g": [
+          "australian metal",
+          "avant-garde metal",
+          "melodic death metal",
+          "progressive metal",
+          "extreme progressive metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2024-11-05T19:30:00",
+    "start": "2024-11-05T20:15:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/black-stone-cherry",
+    "title": "Black Stone Cherry",
+    "location": "effenaar",
+    "price": 32.5,
+    "shortText": "+ Ayron Jones | Amerikaanse 'southern rock'",
+    "longText": "../public/texts/effenaar/ci5ubC9hZ2VuZGEvYmxhY2stc3RvbmUtY2hlcnJ5.html",
+    "image": "../public/event-images/effenaar/ci5ubC9hZ2VuZGEvYmxhY2stc3RvbmUtY2hlcnJ5",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "black stone cherry": {
+        "s": "6WMo39FU3nrpSz3qMgRKug",
+        "l": "black stone cherry",
+        "g": [
+          "alternative metal",
+          "modern hard rock",
+          "post-grunge"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2024-11-06T19:30:00",
+    "start": "2024-11-06T20:15:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/dark-tranquillity",
+    "title": "Dark Tranquillity",
+    "location": "effenaar",
+    "price": 32.5,
+    "shortText": "+ Moonspell + Wolfheart + Hiraes",
+    "longText": "../public/texts/effenaar/YXIubmwvYWdlbmRhL2RhcmstdHJhbnF1aWxsaXR5.html",
+    "image": "../public/event-images/effenaar/YXIubmwvYWdlbmRhL2RhcmstdHJhbnF1aWxsaXR5",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "dark tranquillity": {
+        "s": "5EHvXKnNz78jkAVgTQLQ5O",
+        "l": "dark tranquillity",
+        "g": [
+          "death metal",
+          "gothenburg metal",
+          "melodic death metal",
+          "metal",
+          "swedish death metal",
+          "swedish melodeath",
+          "swedish metal",
+          "symphonic metal",
+          "viking metal",
+          "melodic death metal"
+        ]
+      },
+      "moonspell": {
+        "s": "17bYSQ9ZRnreVnJjE5X2x6",
+        "l": "moonspell",
+        "g": [
+          "gothic black metal",
+          "gothic metal",
+          "melodic death metal",
+          "metal",
+          "portuguese black metal",
+          "portuguese metal",
+          "portuguese rock",
+          "power metal",
+          "gothic metal"
+        ]
+      },
+      "wolfheart": {
+        "s": "11EAP8MX0cfrW9lzkK424H",
+        "l": "wolfheart",
+        "g": [
+          "finnish death metal",
+          "finnish melodeath",
+          "finnish metal",
+          "melodic death metal",
+          "melodic death metal"
+        ]
+      },
+      "hiraes": {
+        "s": "1Djkm24RzECe7M6KuxKZzt",
+        "l": "hiraes",
+        "g": [
+          "slayer",
+          "melodic death metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2024-11-07T19:30:00",
+    "start": "2024-11-07T20:15:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/smash-into-pieces",
+    "title": "Smash Into Pieces",
+    "location": "effenaar",
+    "price": 26.5,
+    "shortText": "Cinematische, alternatieve rocksensatie uit Zweden",
+    "longText": "../public/texts/effenaar/YXIubmwvYWdlbmRhL3NtYXNoLWludG8tcGllY2Vz.html",
+    "image": "../public/event-images/effenaar/YXIubmwvYWdlbmRhL3NtYXNoLWludG8tcGllY2Vz",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "smash into pieces": {
+        "s": "2vhrwzjf9h3icunkvfi9tq",
+        "l": "smash%20into%20pieces",
+        "g": [
+          "swedish alternative rock"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2024-11-27T18:00:00",
+    "start": "2024-11-27T19:00:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/feuerschwanz",
+    "title": "Feuerschwanz",
+    "location": "effenaar",
+    "price": 32.5,
+    "shortText": "Een avond vol Duitse metal | + Orden Ogan + Dominum",
+    "longText": "../public/texts/effenaar/ZmZlbmFhci5ubC9hZ2VuZGEvZmV1ZXJzY2h3YW56.html",
+    "image": "../public/event-images/effenaar/ZmZlbmFhci5ubC9hZ2VuZGEvZmV1ZXJzY2h3YW56",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "feuerschwanz": {
+        "s": "2Ct54gNxKnYLnXk9HhviMI",
+        "l": "feuerschwanz",
+        "g": [
+          "medieval rock",
+          "medieval folk (early)",
+          " folk metal",
+          "rock (later)"
+        ]
+      },
+      "orden ogan": {
+        "s": "3t5X2CVDf5mrlIx1SdvWYM",
+        "l": "orden ogan",
+        "g": [
+          "folk metal",
+          "german metal",
+          "german power metal",
+          "power metal",
+          "symphonic metal",
+          "power metal"
+        ]
+      },
+      "dominum": {
+        "s": "4Nm9FxM65RZa6EgFV2z8S9",
+        "l": "dominum",
+        "g": [
+          "heavy",
+          "power metal, hard rock"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2024-11-28T19:30:00",
+    "start": "2024-11-28T20:15:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/vola",
+    "title": "Vola",
+    "location": "effenaar",
+    "price": 24.5,
+    "shortText": "Progressieve rock, elektronica en metal | + Charlotte Wessels",
+    "longText": "../public/texts/effenaar/Oi8vd3d3LmVmZmVuYWFyLm5sL2FnZW5kYS92b2xh.html",
+    "image": "../public/event-images/effenaar/Oi8vd3d3LmVmZmVuYWFyLm5sL2FnZW5kYS92b2xh",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "vola": {
+        "s": "1HQjBwlj8FSHMhVaNQ4tEI",
+        "l": "vola",
+        "g": [
+          "djent",
+          "progressive alternative",
+          "progressive metal"
+        ]
+      },
+      "charlotte wessels": {
+        "s": "6yyPaE45AE346XVgFJgiaI",
+        "l": "charlotte wessels",
+        "g": [
+          "gothic symphonic metal",
+          "hel",
+          "symphonic metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2024-11-28T18:30:00",
+    "start": "2024-11-28T19:00:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/motocultor-festival-tour",
+    "title": "Motocultor Festival Tour",
+    "location": "effenaar",
+    "price": 26,
+    "shortText": " Orphaned Land | nieuwe datum  + Dirty Shirt + Royal Rage + Ring of Gyges + Stråle",
+    "longText": "../public/texts/effenaar/Z2VuZGEvbW90b2N1bHRvci1mZXN0aXZhbC10b3Vy.html",
+    "image": "../public/event-images/effenaar/Z2VuZGEvbW90b2N1bHRvci1mZXN0aXZhbC10b3Vy",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "dirty shirt": {
+        "s": "7lnoKzE5unKzShIzkjlTX7",
+        "l": "dirty shirt",
+        "g": [
+          "balkan folk metal",
+          "romanian metal",
+          "romanian rock"
+        ]
+      },
+      "royal rage": {
+        "s": "3lSGpixf55aJ9VDclm4WWv",
+        "l": "royal rage",
+        "g": [
+          "brazilian thrash metal",
+          "metal paranaense",
+          "thrash metal"
+        ]
+      },
+      "ring of gyges": {
+        "s": "00pF6oMeAiz1GslEYo56SJ",
+        "l": "ring of gyges",
+        "g": [
+          "icelandic metal",
+          "progressive metal",
+          "rock"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2024-11-30T19:30:00",
+    "start": "2024-11-30T20:00:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/tusky",
+    "title": "Tusky",
+    "location": "effenaar",
+    "price": 17,
+    "shortText": "Een ware ode aan de punkcultuur. Dat betekent: de plinten van de muur!",
+    "longText": "../public/texts/effenaar/Ly93d3cuZWZmZW5hYXIubmwvYWdlbmRhL3R1c2t5.html",
+    "image": "../public/event-images/effenaar/Ly93d3cuZWZmZW5hYXIubmwvYWdlbmRhL3R1c2t5",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "tusky": {
+        "s": "6XbZ8G0cFqSgUL4FmtiSPr",
+        "l": "tusky",
+        "g": [
+          "dutch punk",
+          "dutch rock"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2024-12-06T19:30:00",
+    "start": "2024-12-06T20:00:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/bizkit-park",
+    "title": "Bizkit Park",
+    "location": "effenaar",
+    "price": 22,
+    "shortText": "Wervelend eerbetoon aan nu metal",
+    "longText": "../public/texts/effenaar/ZWZmZW5hYXIubmwvYWdlbmRhL2JpemtpdC1wYXJr.html",
+    "image": "../public/event-images/effenaar/ZWZmZW5hYXIubmwvYWdlbmRhL2JpemtpdC1wYXJr",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "door": "2024-12-12T19:00:00",
+    "start": "2024-12-12T19:30:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/eindhoven-metal-meeting-warm-evening",
+    "title": "Eindhoven Metal Meeting Warm-Up Evening",
+    "location": "effenaar",
+    "price": 22.5,
+    "shortText": "Saturnalia Temple + Dead Head + The Omega Swarm + Mouflon",
+    "longText": "../public/texts/effenaar/dmVuLW1ldGFsLW1lZXRpbmctd2FybS1ldmVuaW5n.html",
+    "image": "../public/event-images/effenaar/dmVuLW1ldGFsLW1lZXRpbmctd2FybS1ldmVuaW5n",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "saturnalia temple": {
+        "s": "1ESjDnaPuoFzQ8QQ4TlxTl",
+        "l": "saturnalia temple",
+        "g": [
+          "black sludge",
+          "swedish doom metal",
+          "stoner",
+          "doom metal"
+        ]
+      },
+      "dead head": {
+        "s": "3LehH71IZCno6UsiFR14vr",
+        "l": "dead head",
+        "g": [
+          "dutch death metal",
+          "dutch metal",
+          "thrash metal",
+          "punk",
+          "hard rock"
+        ]
+      },
+      "the omega swarm": {
+        "s": "1dDW3tZyrfcpTBkmtBRPnk",
+        "l": "the omega swarm",
+        "g": [
+          "atmospheric death",
+          "black metal"
+        ]
+      },
+      "mouflon": {
+        "s": "75S0L1sMv9ynU2paKaPu1l",
+        "l": "mouflon",
+        "g": [
+          "dutch death metal",
+          "dutch metal",
+          "doom",
+          "death metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2024-12-13T16:00:00",
+    "start": "2024-12-13T16:00:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/eindhoven-metal-meeting-2024",
+    "title": "Eindhoven Metal Meeting 2024",
+    "location": "effenaar",
+    "price": 125,
+    "shortText": "met o.a. DARK FUNERAL, ANAAL NATHRAKH, ASPHYX, CARPATHIAN FOREST",
+    "longText": "../public/texts/effenaar/YS9laW5kaG92ZW4tbWV0YWwtbWVldGluZy0yMDI0.html",
+    "image": "../public/event-images/effenaar/YS9laW5kaG92ZW4tbWV0YWwtbWVldGluZy0yMDI0",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "dark funeral": {
+        "s": "21ojeH5LNADIGzJKc3hIlE",
+        "l": "dark funeral",
+        "g": [
+          "black metal",
+          "brutal death metal",
+          "metal",
+          "swedish black metal",
+          "swedish metal",
+          "black metal"
+        ]
+      },
+      "anaal nathrakh": {
+        "s": "7vrrJ5YlL3I8XUrh1ktGJV",
+        "l": "anaal nathrakh",
+        "g": [
+          "birmingham metal",
+          "black metal",
+          "british black metal",
+          "british grindcore",
+          "death metal",
+          "deathgrind",
+          "symphonic black metal",
+          "technical black metal",
+          "industrial black metal",
+          "grindcore"
+        ]
+      },
+      "asphyx": {
+        "s": "2eIvR1DzWm5GAufWC2rcGr",
+        "l": "asphyx",
+        "g": [
+          "black metal",
+          "brutal death metal",
+          "death metal",
+          "deathgrind",
+          "dutch death metal",
+          "dutch metal",
+          "metal",
+          "technical death metal",
+          "thrash metal",
+          "death",
+          "doom metal"
+        ]
+      },
+      "carpathian forest": {
+        "s": "0sFntmE9T1tiF6G6O6Lm3H",
+        "l": "carpathian forest",
+        "g": [
+          "black metal",
+          "norwegian black metal",
+          "norwegian metal",
+          "pagan black metal",
+          "symphonic black metal",
+          "black metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2024-12-14T16:00:00",
+    "start": "2024-12-14T16:00:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/eindhoven-metal-meeting-2024-0",
+    "title": "Eindhoven Metal Meeting 2024",
+    "location": "effenaar",
+    "price": 125,
+    "shortText": "met o.a. KATATONIA, THE KOVENANT, AGENT STEEL, SCHAMMASCH, AKHLYS",
+    "longText": "../public/texts/effenaar/ZWluZGhvdmVuLW1ldGFsLW1lZXRpbmctMjAyNC0w.html",
+    "image": "../public/event-images/effenaar/ZWluZGhvdmVuLW1ldGFsLW1lZXRpbmctMjAyNC0w",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "katatonia": {
+        "s": "2CWWgbxApjbyByxBBCvGTm",
+        "l": "katatonia",
+        "g": [
+          "doom metal",
+          "gothic metal",
+          "progressive metal",
+          "swedish doom metal",
+          "swedish metal",
+          "swedish progressive metal",
+          "doom",
+          "death metal (early)",
+          " gothic",
+          "alternative",
+          "progressive rock",
+          "metal (later)"
+        ]
+      },
+      "the kovenant": {
+        "s": "31VNYr7yK0xBD6MfIaucLJ",
+        "l": "the kovenant",
+        "g": [
+          "black metal",
+          "cyber metal",
+          "melodic black metal",
+          "norwegian metal",
+          "sci-fi metal",
+          "symphonic black metal",
+          "electronic",
+          "industrial",
+          "gothic metal",
+          "rock"
+        ]
+      },
+      "agent steel": {
+        "s": "1FQv3rI4iJPitbZiTxBGut",
+        "l": "agent steel",
+        "g": [
+          "melodic thrash",
+          "old school thrash",
+          "us power metal",
+          "power",
+          "speed",
+          "thrash metal"
+        ]
+      },
+      "schammasch": {
+        "s": "7fZssjCP2TtFtrEkZOX1t9",
+        "l": "schammasch",
+        "g": [
+          "avant-garde black metal",
+          "black metal",
+          "swiss black metal",
+          "swiss metal",
+          "voidgaze",
+          "black",
+          "death metal (early)",
+          " avant-garde",
+          "black metal (later)"
+        ]
+      },
+      "akhlys": {
+        "s": "7swiuMho0UMNYbZqcO0dho",
+        "l": "akhlys",
+        "g": [
+          "atmospheric black metal",
+          "autonomous black metal",
+          "black metal",
+          "symphonic black metal",
+          "voidgaze",
+          "dark ambient (early)",
+          " black metal (later)"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2024-12-20T19:30:00",
+    "start": "2024-12-20T20:15:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/ramones-alive-ode-50-years-ramones",
+    "title": "Ramones Alive - Ode To 50 years Ramones",
+    "location": "effenaar",
+    "price": 20,
+    "shortText": "Met leden van Heideroosjes, Peter Pan Speedrock, Iron Jinn en Legion Of The Damned",
+    "longText": "../public/texts/effenaar/bmVzLWFsaXZlLW9kZS01MC15ZWFycy1yYW1vbmVz.html",
+    "image": "../public/event-images/effenaar/bmVzLWFsaXZlLW9kZS01MC15ZWFycy1yYW1vbmVz",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "peter pan speedrock": {
+        "s": "3zkYKQsUkS8nnGDL9ZhHQR",
+        "l": "peter pan speedrock",
+        "g": [
+          "dutch punk",
+          "dutch rock",
+          "punk 'n' roll"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-02-15T19:30:00",
+    "start": "2025-02-15T20:15:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/vnv-nation",
+    "title": "VNV Nation",
+    "location": "effenaar",
+    "price": 37.5,
+    "shortText": "Construct // Destruct - Live Tour 2025 | + Special Guest: Straight Razor",
+    "longText": "../public/texts/effenaar/LmVmZmVuYWFyLm5sL2FnZW5kYS92bnYtbmF0aW9u.html",
+    "image": "../public/event-images/effenaar/LmVmZmVuYWFyLm5sL2FnZW5kYS92bnYtbmF0aW9u",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {}
   }
 ]
