@@ -100,7 +100,7 @@ export const workerConfig = {
   // },
   // patronaat: {
   //   workerCount: 2, workerConcurrent: 1, forceSet: 6, CPUReq: 'high', 
-  },
+  // },
   // tivolivredenburg: {
   //   workerCount: 2, workerConcurrent: 2, forceSet: 6, CPUReq: 'low', 
   // },
