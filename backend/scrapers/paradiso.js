@@ -5,7 +5,9 @@ import longTextSocialsIframes from './longtext/paradiso.js';
 import getImage from './gedeeld/image.js';
 import {
   mapToStartDate,
+  mapToStartTime,
   mapToShortDate,
+  combineStartTimeStartDate,
 } from './gedeeld/datums.js';
 import workTitleAndSlug from './gedeeld/slug.js';
 import terms from '../artist-db/store/terms.js';
@@ -15,9 +17,9 @@ const scraper = new AbstractScraper({
   workerData: { ...workerData },
 
   mainPage: {
-    timeout: 120023,
+    timeout: 180023,
     waitUntil: 'load',
-    url: 'https://www.paradiso.nl/',
+    url: 'https://www.paradiso.nl/nl',
   },
   singlePage: {
     timeout: 120024,
@@ -29,11 +31,11 @@ const scraper = new AbstractScraper({
       artistsIn: ['title'],
     },  
     mainPage: {
-      requiredProperties: ['venueEventUrl', 'title'],
+      requiredProperties: ['venueEventUrl', 'title', 'startDate'],
       asyncCheckFuncs: ['refused', 'allowedEvent', 'forbiddenTerms', 'hasGoodTerms', 'hasAllowedArtist', 'spotifyConfirmation', 'failure'],
     },
     singlePage: {
-      requiredProperties: ['venueEventUrl', 'title', 'price', 'start'],
+      requiredProperties: ['venueEventUrl', 'title', 'start'],
       asyncCheckFuncs: ['success'],
     },
   },
@@ -62,87 +64,100 @@ scraper.mainPage = async function () {
     { workerData },
   );
 
-  await page.waitForSelector('.chakra-container');
+  await this.waitTime(250);
 
-  await this.autoScroll(page);
-  await this.autoScroll(page);
-  await page.evaluate(
-    () =>
-      document.querySelector('.css-16y59pb:last-child .chakra-heading')?.textContent ??
-    'geen titel gevonden',
-    { workerData },
-  );
-  
-  await this.autoScroll(page);
-  await this.autoScroll(page);
-  await this.autoScroll(page);
-  await this.autoScroll(page);
-  await this.autoScroll(page);
-  await this.autoScroll(page);
-  await this.autoScroll(page);
-  await this.autoScroll(page);
-  await page.evaluate(
-    // eslint-disable-next-line no-shadow
-    () =>
-      document.querySelector('.css-16y59pb:last-child .chakra-heading')?.textContent ??
-      'geen titel gevonden',
-    { workerData },
-  );
- 
-  // DIT IS EEN VOLSLAGEN BIZARRE HACK EN IK HEB GEEN IDEE WAAROM DIT ZO MOET
-  const datumRijMap = await page.evaluate(() => {
-    const datumIdMap = {};
-    document.querySelectorAll('.css-16y59pb').forEach((datumRij, index) => {
-      // eslint-disable-next-line no-param-reassign
-      datumRij.id = `${datumRij.className}-${index}`;
-      const datumR = datumRij.textContent.trim().toLowerCase().substring(3, 10).trim() ?? '';
-      datumIdMap[datumRij.id] = datumR;
-    });
-    return datumIdMap;
+  // filter openen
+  await page.evaluate(() => {
+    Array.from(document.querySelectorAll('.chakra-button.css-cys37n')).filter((knop) => knop.textContent.includes('type'))[0].click();
+  });
+  await this.waitTime(250);
+
+  // filter invoeren
+  const aantalGeklikt = await page.evaluate(() => {
+    const teKlikken = Array.from(document.querySelectorAll('.css-ymwss3')).map((knop) => {
+      const t = knop.textContent.trim().toLowerCase();
+      if (t.includes('rock') || t.includes('punk')) {
+        return knop;
+      }
+    }).filter((a) => a);
+    // eslint-disable-next-line no-plusplus
+    for (let i = 0; i < teKlikken.length; i++) {
+      setTimeout(() => {
+        teKlikken[i].click();
+      }, i * 150);
+    }
+    return teKlikken.length;
   });
 
+  this.dirtyTalk(`paradiso klikte filters: ${aantalGeklikt}`);
+
+  // wachten op aanklikken in page.evaluate
+  await this.waitTime(50 + aantalGeklikt * 150);
+
+  // verstuur filter
+  await page.waitForSelector('.chakra-button.css-17dvuub');
+  await page.click('.chakra-button.css-17dvuub');
+
+  await this.waitTime(250);
+
+  await this.autoScroll(page);
+  await this.autoScroll(page);
+  await this.autoScroll(page);
+  await this.autoScroll(page);
+  await this.autoScroll(page);
+
+  // datum in concerten zetten
+  await page.evaluate(() => {
+    document.querySelectorAll('.css-1usmbod').forEach((datumGroep) => {
+      const datum = datumGroep.textContent.toLowerCase().trim().substring(4, 10);
+      const concertenOpDezeDatum = datumGroep.parentNode.querySelectorAll('.css-1agutam');
+      // eslint-disable-next-line consistent-return
+      concertenOpDezeDatum.forEach((concert) => {
+        concert.setAttribute('date-datum', datum);
+      });
+    });    
+  });
+ 
   let rawEvents = await page.evaluate(
-    ({ resBuiten, unavailabiltyTerms, datumRijMap1 }) =>
-      Array.from(document.querySelectorAll('.css-1agutam')).map((rawEvent) => {
+    ({ resBuiten, unavailabiltyTerms }) =>
+      Array.from(document.querySelectorAll('.css-1agutam')).map((eventEl) => {
         // eslint-disable-next-line no-shadow
         const res = {
           ...resBuiten,
           errors: [],
         };
-        res.title = rawEvent.querySelector('.chakra-heading')?.textContent.trim() ?? '';
-        res.shortText = rawEvent.querySelector('.css-1ket9pb')?.textContent.trim() ?? '';
-        
-        const datumRij = rawEvent.parentNode.parentNode;
-        res.datumRijClassNAme = datumRij.className;
-        res.datumRijId = datumRij.id;
-        res.datumRijDate = datumRijMap1[datumRij.id];
-        res.mapToStartDate = datumRijMap1[datumRij.id];
- 
-        // if (!rawEvent.hasAttribute('data-date')) {
-        //   res.XDATUMFAAL = 'hitler';
-        // }
-        // res.mapToStartDate = rawEvent.getAttribute('data-date');
-
-        res.venueEventUrl = rawEvent.href ?? null;
-        res.soldOut = !!rawEvent?.textContent.match(/uitverkocht|sold\s?out/i);
+        res.title = eventEl.querySelector('.chakra-heading')?.textContent.trim() ?? '';
         const uaRex = new RegExp(unavailabiltyTerms.join('|'), 'gi');
-        res.unavailable = !!rawEvent?.textContent.match(uaRex);
+        res.unavailable = !!eventEl?.textContent.match(uaRex);
+        if (res.unavailable) return res;
+
+        res.shortText = eventEl.querySelector('.css-1ket9pb')?.textContent.trim() ?? '';
+
+        const tttt = eventEl.querySelector('.css-1kynn8g').textContent.trim().toLowerCase();
+        const tijdVeldHeeftEchtTijd = /\d\d:\d\d/.test(tttt); // kan ook term hebben... pannekoeken
+        const tijd = tijdVeldHeeftEchtTijd ? tttt : '20:00';
+
+        const datum = eventEl.getAttribute('date-datum');
+
+        res.mapToStartDate = datum;
+        res.mapToStartTime = tijd;
+ 
+        res.venueEventUrl = eventEl.href ?? null;
+        res.soldOut = !!eventEl?.textContent.match(/uitverkocht|sold\s?out/i);
         return res;
       }),
     {
       workerData,
       resBuiten: res, 
       unavailabiltyTerms: terms.unavailability,
-      datumRijMap1: datumRijMap, 
     },
   );
 
   rawEvents = rawEvents
-    .map((event) => {
-      this.dirtyLog(event);
-      return mapToStartDate(event, 'dag-maandNaam', this.months);
-    })
+    .map((event) => mapToStartDate(event, 'dag-maandNaam', this.months))
+    .map(mapToStartTime)
     .map(mapToShortDate)
+    .map(combineStartTimeStartDate)
     .map(this.isMusicEventCorruptedMapper)
     .map((re) => workTitleAndSlug(re, this._s.app.harvest.possiblePrefix));
 
@@ -172,21 +187,7 @@ scraper.singlePage = async function ({ page, event }) {
     errors: [],
   };
 
-  try {
-    await page.waitForSelector('.css-65enbk', {
-      timeout: 3000,
-    });
-  } catch (caughtError) {
-    buitenRes.errors.push({
-      error: caughtError,
-      remarks: `Paradiso wacht op laden single pagina\n${buitenRes.anker}`,
-      errorLevel: 'notice',
-    });
-    buitenRes.corrupt = 'single niet  correcte geladen';
-    return this.singlePageEnd({ pageInfo: buitenRes, stopFunctie, page });
-  }
-
-  await this.waitTime(500);
+  await this.waitTime(50);
 
   const pageInfo = await page.evaluate(
     // eslint-disable-next-line no-shadow
@@ -194,42 +195,6 @@ scraper.singlePage = async function ({ page, event }) {
       const res = { ...buitenRes };
 
       res.startDate = event.startDate;
-
-      const contentBox1 = document.querySelector('.css-1irwsol')?.outerHTML ?? '';
-      const contentBox2 = document.querySelector('.css-gwbug6')?.outerHTML ?? '';
-      if (!contentBox1 && !contentBox2) {
-        res.corrupted = 'geen contentboxes';
-      }
-
-      let startTijd;
-      let deurTijd;
-      let eindTijd;
-      const tijden = document.querySelector('.css-65enbk').textContent.match(/\d\d:\d\d/g);
-      if (tijden.length > 2) {
-        eindTijd = tijden[2];
-      }
-      if (tijden.length > 1) {
-        deurTijd = tijden[1];
-        startTijd = tijden[0];
-      }
-      if (tijden.length === 1) {
-        startTijd = tijden[0];
-      }
-      if (!tijden.length) {
-        res.errors.push({
-          error: new Error(`Geen tijden gevonden ${res.anker}`),
-        });
-      }
-
-      if (startTijd) {
-        res.start = `${res.startDate}T${startTijd}:00`;
-      }
-      if (deurTijd) {
-        res.door = `${res.startDate}T${deurTijd}:00`;
-      }
-      if (eindTijd) {
-        res.end = `${res.startDate}T${eindTijd}:00`;
-      }
 
       return res;
     },
@@ -242,7 +207,7 @@ scraper.singlePage = async function ({ page, event }) {
     workerData,
     event,
     pageInfo,
-    selectors: ['.css-xz41fi source', '.css-xz41fi source:last-of-type'],
+    selectors: ['.img-wrapper picture img'],
     mode: 'image-src',
   });
   pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
@@ -252,7 +217,7 @@ scraper.singlePage = async function ({ page, event }) {
     page,
     event,
     pageInfo,
-    selectors: ['.css-f73q4m', '.price', '.chakra-container'],
+    selectors: ['[href*="https://tickets.paradiso.nl"]', '.css-1yk0d0u', '.css-1623pe7', '.chakra-container'],
   });
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
   pageInfo.price = priceRes.price;
