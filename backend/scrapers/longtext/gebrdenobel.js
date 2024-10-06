@@ -7,16 +7,12 @@ export default async function longTextSocialsIframes(page, event) {
     ({ event }) => {
       const res = {};
 
-      const textSelector = '.contentBlocks .lead, .contentBlocks .text';
+      const textSelector = '.content--fields .column';
       const mediaSelector = [
-        '.contentBlocks .tm_video',
-        ".contentBlocks iframe[src*='spotify']",
+        '.column iframe',
       ].join(', ');
       const removeEmptyHTMLFrom = textSelector;
-      const socialSelector = [
-        ".widget--social .btn[href*='facebook']",
-        ".widget--social .btn[href*='fb.me']",
-      ].join(', ');
+      const socialSelector = [].join(', ');
       const removeSelectors = [
         `${textSelector} [class*='icon-']`,
         `${textSelector} [class*='fa-']`,
@@ -27,10 +23,9 @@ export default async function longTextSocialsIframes(page, event) {
         `${textSelector} meta`,
         `${textSelector} svg`,
         `${textSelector} form`,
-        '.contentBlocks .video',
-        '.contentBlocks iframe',
-        '.contentBlocks img',
-        '.contentBlocks #shop-frame',
+        `${textSelector} iframe`,
+        `#iFrameResizer0`,
+        '#shop-frame',
       ].join(', ');
 
       const attributesToRemove = [
@@ -67,14 +62,17 @@ export default async function longTextSocialsIframes(page, event) {
       res.mediaForHTML = Array.from(document.querySelectorAll(mediaSelector)).map((bron) => {
         bron.className = '';
         // custom gebr de nobel
-        if (bron.hasAttribute('data-video-id')) {
-          return {
-            outer: null,
-            src: null,
-            id: bron.getAttribute('data-video-id'),
-            type: 'youtube',
-          };
-        }
+
+        // DE VIDEO BIJ NOBEL IS EEN EIGEN IFRAME OM YOUTUBES IFRAME HEEN. VALT NIET UIT TE LEZEN.
+
+        // if (bron.hasAttribute('data-video-id')) {
+        //   return {
+        //     outer: null,
+        //     src: null,
+        //     id: bron.getAttribute('data-video-id'),
+        //     type: 'youtube',
+        //   };
+        // }
         if (bron.src.includes('spotify')) {
           return {
             outer: bron.outerHTML,

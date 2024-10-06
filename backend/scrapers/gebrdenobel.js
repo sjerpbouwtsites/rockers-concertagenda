@@ -6,7 +6,6 @@ import AbstractScraper from './gedeeld/abstract-scraper.js';
 import getImage from './gedeeld/image.js';
 import terms from '../artist-db/store/terms.js';
 import {
-  mapToStartDate,
   mapToShortDate,
 } from './gedeeld/datums.js';
 import workTitleAndSlug from './gedeeld/slug.js';
@@ -64,23 +63,7 @@ scraper.mainPage = async function () {
     document.querySelector('#edit-genre-20--3').click();
   });
   await this.waitTime(100);
-
-  // await page.evaluate(() => {
-  //   document.querySelectorAll('.events').forEach((event) => {
-  //     if (!event.classList.contains('hidden')) {
-  //       event.classList.add('zichtbaar-dus');
-  //     }
-  //   });
-  // });
-
-  // await page.evaluate(() => {
-  //   document.querySelectorAll('.events').forEach((eventList) => {
-  //     if (!eventList.querySelector('.event-item')) return;
-  //     const timeV = eventList.querySelector('time').textContent.trim();
-  //     eventList.querySelector('.event-item').setAttribute('data-date', timeV);
-  //   });
-  // });
-
+ 
   let rawEvents = await page.evaluate(
     // eslint-disable-next-line no-shadow
     ({ workerData, unavailabiltyTerms }) =>
@@ -135,49 +118,9 @@ scraper.mainPage = async function () {
 };
 // #endregion                          MAIN PAGE
 
-// scraper.cookiesNodig = async function (page) {
-//   const nodig = await page.evaluate(() => document.querySelector('.consent__show'));
-
-//   if (nodig) {
-//     await page.waitForSelector('.consent__form__submit', {
-//       timeout: 5000,
-//     });
-
-//     await page.evaluate(() => document.querySelector('.consent__form__submit').click());
-
-//     await this.waitTime(3000);
-//     await page.reload();
-
-//     await page.waitForSelector('.event-table tr', {
-//       timeout: 2500,
-//     });
-//   }
-//   return true;
-// };
-
 // #region      SINGLE PAGE
 scraper.singlePage = async function ({ page, event }) {
   const { stopFunctie } = await this.singlePageStart();
-
-  // cookies
-
-  // try {
-  //   await this.cookiesNodig(page, event, stopFunctie);
-  // } catch (cookiesError) {
-  //   return this.singlePageEnd({
-  //     pageInfo: {
-  //       errors: [
-  //         {
-  //           error: cookiesError,
-  //           remarks: `cookies handling issue <a href='${event.venueEventUrl}'>${event.title}</a>`,
-  //         },
-  //       ],
-  //     },
-  //     stopFunctie,
-  //     page,
-  //     event,
-  //   });
-  // } // eind cookies
 
   const pageInfo = await page.evaluate(
     // eslint-disable-next-line no-shadow
