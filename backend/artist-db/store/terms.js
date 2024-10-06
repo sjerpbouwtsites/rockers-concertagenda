@@ -13,6 +13,7 @@ const tempFestivalNamesHACKDontHarvest = [
   "dynamo nachtmis",
   "home grown sessions",
   "calculating infinity 25th anniversary show",
+  "valkhof festival",
 ];
 
 const eventMetaTerms = [
@@ -36,6 +37,7 @@ const eventMetaTerms = [
   "undefined",
   "+ meer",
   "and more",
+  "album",
   "met o.a.",
   "o.a. ",
   "undefined :",
@@ -74,6 +76,8 @@ const forbiddenTerms = [
   "dream pop",
   "dream punk",
   "rap belge",
+  "early hardcore", 
+  "early terror",
   "drill",
   "funk rock",
   "christian alternative rock",
@@ -82,6 +86,7 @@ const forbiddenTerms = [
   "formula 1",
   "experi-metal",
   "conscious hip hop",
+  "acoustic southern rock",
   "east coast hip hop",
   "fan event",
   "filmvertoning",

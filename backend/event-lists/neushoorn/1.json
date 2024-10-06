@@ -1,71 +1,5 @@
 [
   {
-    "start": "2024-07-15T20:00:00",
-    "venueEventUrl": "https://neushoorn.nl/production/dropdead-mukkes/",
-    "title": "Dropdead @ Mukkes",
-    "location": "neushoorn",
-    "price": null,
-    "shortText": "Knal lekker de week in met een dikke pot hardcore | Support-acts: SEEIN'RED + Kronol",
-    "longText": "../public/texts/neushoorn/bmwvcHJvZHVjdGlvbi9kcm9wZGVhZC1tdWtrZXMv.html",
-    "image": "../public/event-images/neushoorn/bmwvcHJvZHVjdGlvbi9kcm9wZGVhZC1tdWtrZXMv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "start": "2024-08-14T19:30:00",
-    "venueEventUrl": "https://neushoorn.nl/production/whitechapel/",
-    "title": "Whitechapel",
-    "location": "neushoorn",
-    "price": 22,
-    "shortText": "More than just deathcore...",
-    "longText": "../public/texts/neushoorn/b3JuLm5sL3Byb2R1Y3Rpb24vd2hpdGVjaGFwZWwv.html",
-    "image": "../public/event-images/neushoorn/b3JuLm5sL3Byb2R1Y3Rpb24vd2hpdGVjaGFwZWwv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "whitechapel": {
-        "s": "5274obTQJjzjyycRyJlfml",
-        "l": "whitechapel",
-        "g": [
-          "deathcore",
-          "melodic metalcore",
-          "metalcore",
-          "nu metal",
-          "tennessee metal",
-          "deathcore"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2024-09-26T19:30:00",
-    "venueEventUrl": "https://neushoorn.nl/production/orphaned-land/",
-    "title": "Orphaned Land",
-    "location": "neushoorn",
-    "price": 24,
-    "shortText": "De pioniers van Oosterse metal",
-    "longText": "../public/texts/neushoorn/bi5ubC9wcm9kdWN0aW9uL29ycGhhbmVkLWxhbmQv.html",
-    "image": "../public/event-images/neushoorn/bi5ubC9wcm9kdWN0aW9uL29ycGhhbmVkLWxhbmQv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "orphaned land": {
-        "s": "7xtmxqambte0nce5lz7t0h",
-        "l": "orphaned%20land",
-        "g": [
-          "christian power metal",
-          "folk metal",
-          "israeli metal",
-          "oriental metal"
-        ]
-      }
-    }
-  },
-  {
     "start": "2024-10-26T14:30:00",
     "venueEventUrl": "https://neushoorn.nl/production/fajtfest-fryslan/",
     "title": "Fajtfest Fryslân",
@@ -92,39 +26,113 @@
     "unavailable": false,
     "eventGenres": null,
     "artists": {
+      "twisted sisters": {
+        "s": "2pmpxmoxfmnbux4ydjz4gq",
+        "l": "twisted%20sisters",
+        "g": []
+      },
       "acindc": {
         "s": null,
         "l": "acindc",
         "g": [
           "hard rock"
         ]
-      },
-      "twisted sisters": {
-        "s": "2pmpxmoxfmnbux4ydjz4gq",
-        "l": "twisted%20sisters",
-        "g": []
       }
     }
   },
   {
-    "start": "2024-12-12T20:00:00",
-    "venueEventUrl": "https://neushoorn.nl/production/tusky/",
-    "title": "Tusky",
+    "start": "2024-12-01T19:00:00",
+    "venueEventUrl": "https://neushoorn.nl/production/nh-cafe-civerous-crematory-stench-deadspeak/",
+    "title": "Civerous + Crematory Stench + Deadspeak",
     "location": "neushoorn",
-    "price": 17,
-    "shortText": "The Trashtastic Tour",
-    "longText": "../public/texts/neushoorn/bmV1c2hvb3JuLm5sL3Byb2R1Y3Rpb24vdHVza3kv.html",
-    "image": "../public/event-images/neushoorn/bmV1c2hvb3JuLm5sL3Byb2R1Y3Rpb24vdHVza3kv",
+    "price": 12,
+    "shortText": "Smerige onheilspellende death metal",
+    "longText": "../public/texts/neushoorn/dXMtY3JlbWF0b3J5LXN0ZW5jaC1kZWFkc3BlYWsv.html",
+    "image": "../public/event-images/neushoorn/dXMtY3JlbWF0b3J5LXN0ZW5jaC1kZWFkc3BlYWsv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "tusky": {
-        "s": "6XbZ8G0cFqSgUL4FmtiSPr",
-        "l": "tusky",
+      "crematory stench": {
+        "s": "2beNfSm9dIS8uUXIEhxrHu",
+        "l": "crematory%20stench",
         "g": [
-          "dutch punk",
-          "dutch rock"
+          "cavernous death metal",
+          "death metal"
+        ]
+      },
+      "deadspeak": {
+        "s": "5U0DUA9QRLtIrKIYfp8qiw",
+        "l": "deadspeak",
+        "g": [
+          "death metal"
+        ]
+      },
+      "civerous": {
+        "s": "02OUZObgphMvZtxecx8bYk",
+        "l": "civerous",
+        "g": [
+          "cavernous death metal",
+          "black",
+          "death",
+          "doom metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2024-12-13T20:00:00",
+    "venueEventUrl": "https://neushoorn.nl/production/texoprint/",
+    "title": "Texoprint",
+    "location": "neushoorn",
+    "price": 5,
+    "shortText": "Nederland’s meest intense noiserock trio",
+    "longText": "../public/texts/neushoorn/aG9vcm4ubmwvcHJvZHVjdGlvbi90ZXhvcHJpbnQv.html",
+    "image": "../public/event-images/neushoorn/aG9vcm4ubmwvcHJvZHVjdGlvbi90ZXhvcHJpbnQv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "texoprint": {
+        "s": "3Crxw3x5GQwDrhY51BNcMi",
+        "l": "texoprint",
+        "g": [
+          "dutch post-punk"
+        ]
+      }
+    }
+  },
+  {
+    "start": "4049-02-01T19:30:00",
+    "venueEventUrl": "https://neushoorn.nl/production/distant-enterprise-earth/",
+    "title": "Distant + Enterprise Earth",
+    "location": "neushoorn",
+    "price": 23,
+    "shortText": "Een nacht van ongekende brutaliteit",
+    "longText": "../public/texts/neushoorn/dGlvbi9kaXN0YW50LWVudGVycHJpc2UtZWFydGgv.html",
+    "image": "../public/event-images/neushoorn/dGlvbi9kaXN0YW50LWVudGVycHJpc2UtZWFydGgv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "distant": {
+        "s": "7dfpBi0QvO9FmlhBK6XHwJ",
+        "l": "distant",
+        "g": [
+          "deathcore",
+          "downtempo deathcore",
+          "slamming deathcore",
+          "groove metal"
+        ]
+      },
+      "enterprise earth": {
+        "s": "1l3cAmALCtGbjWGVtRwhoh",
+        "l": "enterprise%20earth",
+        "g": [
+          "brutal deathcore",
+          "deathcore",
+          "melodic metalcore",
+          "progressive deathcore"
         ]
       }
     }

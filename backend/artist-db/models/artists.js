@@ -214,7 +214,7 @@ export default class Artists {
         if (!hasTitle || !hasSlug) {
           return this.error(Error('geen title of slug om te doorzoeken'));
         } if (!hasEventDate) {
-          return this.error(Error('geen event date'));
+          return this.error(Error(`geen eventdate ${parsedMessage.data.title}`));
         } 
       }
       return this.getRefused(message.data.title, message.data.slug, message.data.eventDate);
@@ -259,7 +259,7 @@ export default class Artists {
           return this.error(Error('geen title of slug om te doorzoeken'));
         }  
         if (!hasEventDate) {
-          return this.error(Error('geen event date'));
+          return this.error(Error(`geen eventdate ${parsedMessage.data.title}`));
         } 
       }
       const d = message.data;
@@ -329,7 +329,7 @@ export default class Artists {
           return this.error(Error('geen settings'));
         }
         if (!hasEventDate) {
-          return this.error(Error('geen event date'));
+          return this.error(Error(`geen eventdate ${parsedMessage.data.title}`));
         } 
         if (!hasURL) {
           return this.error(Error('geen event url'));
@@ -569,7 +569,7 @@ export default class Artists {
    */
   hasForbidden(stringtitleslugshorttext) {
     const rommelig = stringtitleslugshorttext.toLowerCase();
-    const isForbidden = this.terms.forbidden
+    const isForbidden = !!this.terms.forbidden
       .find((forbidden) => rommelig.includes(forbidden));
     this.consoleGroup(`hasForbidden hF1`, {
       toScan: stringtitleslugshorttext,

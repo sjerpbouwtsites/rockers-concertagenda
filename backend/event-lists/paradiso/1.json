@@ -1,212 +1,11 @@
 [
   {
-    "door": "2024-07-10T20:30:00",
-    "start": "2024-07-10T19:00:00",
-    "venueEventUrl": "https://www.paradiso.nl/en/program/patti-smith/1488280",
-    "title": "Patti Smith",
-    "location": "paradiso",
-    "price": 60.5,
-    "shortText": "Punk rock poet with two concerts in Paradiso",
-    "longText": "../public/texts/paradiso/ZW4vcHJvZ3JhbS9wYXR0aS1zbWl0aC8xNDg4Mjgw.html",
-    "image": "../public/event-images/paradiso/ZW4vcHJvZ3JhbS9wYXR0aS1zbWl0aC8xNDg4Mjgw",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "patti smith": {
-        "s": "0vYkHhJ48Bs3jWcvZXvOrP",
-        "l": "patti%20smith",
-        "g": [
-          "art punk",
-          "permanent wave",
-          "protopunk",
-          "singer-songwriter"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-07-16T19:30:00",
-    "start": "2024-07-16T19:00:00",
-    "venueEventUrl": "https://www.paradiso.nl/en/program/press-club-clamm/2071791",
-    "title": "Press club + clamm",
-    "location": "paradiso",
-    "price": 19.7,
-    "shortText": "Punk powerbands from Australia / Tolhuistuin / Tolhuistuin",
-    "longText": "../public/texts/paradiso/b2dyYW0vcHJlc3MtY2x1Yi1jbGFtbS8yMDcxNzkx.html",
-    "image": "../public/event-images/paradiso/b2dyYW0vcHJlc3MtY2x1Yi1jbGFtbS8yMDcxNzkx",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "clamm": {
-        "s": "2QYx4UUKqLe1OUWFkjclqH",
-        "l": "clamm",
-        "g": [
-          "melbourne punk"
-        ]
-      },
-      "press club": {
-        "s": "7x6qYdGPScBRRz5lOPeHnG",
-        "l": "press%20club",
-        "g": [
-          "australian garage punk",
-          "australian indie",
-          "melbourne indie"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-08-04T19:30:00",
-    "start": "2024-08-04T19:00:00",
-    "venueEventUrl": "https://www.paradiso.nl/en/program/sheer-mag/1743591",
-    "title": "Sheer Mag + Lifeguard",
-    "location": "paradiso",
-    "price": 19.7,
-    "shortText": "Sophisticated Philadelphia rock and dynamic Chicago punk / Tolhuistuin",
-    "longText": "../public/texts/paradiso/bC9lbi9wcm9ncmFtL3NoZWVyLW1hZy8xNzQzNTkx.html",
-    "image": "../public/event-images/paradiso/bC9lbi9wcm9ncmFtL3NoZWVyLW1hZy8xNzQzNTkx",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "lifeguard": {
-        "s": "17HkDJlzsK1YoBja2XmY5O",
-        "l": "lifeguard",
-        "g": [
-          "american post-punk"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-08-13T19:30:00",
-    "start": "2024-08-13T19:00:00",
-    "end": "2024-08-13T20:30:00",
-    "venueEventUrl": "https://www.paradiso.nl/en/program/clown-core/2113978",
-    "title": "Clown Core + Dj Driver",
-    "location": "paradiso",
-    "price": 34.3,
-    "shortText": "A circus of jazz, grindcore and avantgarde",
-    "longText": "../public/texts/paradiso/L2VuL3Byb2dyYW0vY2xvd24tY29yZS8yMTEzOTc4.html",
-    "image": "../public/event-images/paradiso/L2VuL3Byb2dyYW0vY2xvd24tY29yZS8yMTEzOTc4",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2024-08-14T19:30:00",
-    "start": "2024-08-14T19:00:00",
-    "venueEventUrl": "https://www.paradiso.nl/en/program/mannequin-pussy/2113843",
-    "title": "Mannequin Pussy",
-    "location": "paradiso",
-    "price": 20.7,
-    "shortText": "Feminist punk rock",
-    "longText": "../public/texts/paradiso/cm9ncmFtL21hbm5lcXVpbi1wdXNzeS8yMTEzODQz.html",
-    "image": "../public/event-images/paradiso/cm9ncmFtL21hbm5lcXVpbi1wdXNzeS8yMTEzODQz",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "mannequin pussy": {
-        "s": "33yje3hgpNfdXpqdJQcrt9",
-        "l": "mannequin%20pussy",
-        "g": [
-          "bubblegrunge",
-          "indie punk",
-          "modern hardcore",
-          "modern power pop",
-          "riot grrrl"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-09-11T22:00:00",
-    "start": "2024-09-11T21:30:00",
-    "venueEventUrl": "https://www.paradiso.nl/en/program/girl-and-girl/2275084",
-    "title": "Girl and Girl",
-    "location": "paradiso",
-    "price": 16,
-    "shortText": "Garage rock group from Gold Coast",
-    "longText": "../public/texts/paradiso/L3Byb2dyYW0vZ2lybC1hbmQtZ2lybC8yMjc1MDg0.html",
-    "image": "../public/event-images/paradiso/L3Byb2dyYW0vZ2lybC1hbmQtZ2lybC8yMjc1MDg0",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2024-09-23T20:30:00",
-    "start": "2024-09-23T19:30:00",
-    "venueEventUrl": "https://www.paradiso.nl/en/program/kid-congo-and-the-pink-monkey-birds/2094928",
-    "title": "Kid Congo and the Pink Monkey Birds",
-    "location": "paradiso",
-    "price": 21.2,
-    "shortText": "American underground band fusing punk, rock, and Mexican music / Toekomstmuziek",
-    "longText": "../public/texts/paradiso/LXRoZS1waW5rLW1vbmtleS1iaXJkcy8yMDk0OTI4.html",
-    "image": "../public/event-images/paradiso/LXRoZS1waW5rLW1vbmtleS1iaXJkcy8yMDk0OTI4",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2024-09-25T19:30:00",
-    "start": "2024-09-25T19:00:00",
-    "end": "2024-09-25T20:30:00",
-    "venueEventUrl": "https://www.paradiso.nl/en/program/the-ex/2281971",
-    "title": "The Ex + The Earwurms",
-    "location": "paradiso",
-    "price": 20.7,
-    "shortText": "Dutch punk band celebrates the 45th anniversary of 'Forward In All Directions'",
-    "longText": "../public/texts/paradiso/by5ubC9lbi9wcm9ncmFtL3RoZS1leC8yMjgxOTcx.html",
-    "image": "../public/event-images/paradiso/by5ubC9lbi9wcm9ncmFtL3RoZS1leC8yMjgxOTcx",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "the ex": {
-        "s": null,
-        "l": "the%20ex",
-        "g": []
-      }
-    }
-  },
-  {
-    "door": "2024-10-02T19:30:00",
-    "start": "2024-10-02T19:00:00",
-    "end": "2024-10-02T21:00:00",
-    "venueEventUrl": "https://www.paradiso.nl/en/program/tramhaus/2036333",
-    "title": "Tramhaus ",
-    "location": "paradiso",
-    "price": 20.2,
-    "shortText": " Texoprint  +  Neighbours Burning Neighbours Hypnotising homegrown post-punk",
-    "longText": "../public/texts/paradiso/bmwvZW4vcHJvZ3JhbS90cmFtaGF1cy8yMDM2MzMz.html",
-    "image": "../public/event-images/paradiso/bmwvZW4vcHJvZ3JhbS90cmFtaGF1cy8yMDM2MzMz",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "neighbours burning neighbours": {
-        "s": "4gqw6nvpgvmhcguneduslh",
-        "l": "neighbours%20burning%20neighbours",
-        "g": [
-          "dutch post-punk"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-10-09T22:00:00",
-    "start": "2024-10-09T21:30:00",
+    "start": "2024-10-09T22:00:00",
     "venueEventUrl": "https://www.paradiso.nl/en/program/equal-idiots/2320081",
     "title": "Equal Idiots",
     "location": "paradiso",
     "price": 14.5,
-    "shortText": "Belgian garage-rock duo",
+    "shortText": "Rescheduled to May 15th",
     "longText": "../public/texts/paradiso/bi9wcm9ncmFtL2VxdWFsLWlkaW90cy8yMzIwMDgx.html",
     "image": "../public/event-images/paradiso/bi9wcm9ncmFtL2VxdWFsLWlkaW90cy8yMzIwMDgx",
     "soldOut": false,
@@ -224,37 +23,25 @@
     }
   },
   {
-    "door": "2024-10-23T22:00:00",
-    "start": "2024-10-23T21:30:00",
-    "venueEventUrl": "https://www.paradiso.nl/en/program/nasty-c/2243915",
-    "title": "Nasty C",
+    "start": "2024-10-31T22:00:00",
+    "venueEventUrl": "https://www.paradiso.nl/en/program/new-age-doom/2360266",
+    "title": "New Age Doom",
     "location": "paradiso",
-    "price": 25.2,
-    "shortText": "South African rapper with international succes",
-    "longText": "../public/texts/paradiso/Lm5sL2VuL3Byb2dyYW0vbmFzdHktYy8yMjQzOTE1.html",
-    "image": "../public/event-images/paradiso/Lm5sL2VuL3Byb2dyYW0vbmFzdHktYy8yMjQzOTE1",
+    "price": 14,
+    "shortText": "Eclectic duo from Canada makes experimental drone metal",
+    "longText": "../public/texts/paradiso/bi9wcm9ncmFtL25ldy1hZ2UtZG9vbS8yMzYwMjY2.html",
+    "image": "../public/event-images/paradiso/bi9wcm9ncmFtL25ldy1hZ2UtZG9vbS8yMzYwMjY2",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": {
-      "nasty": {
-        "s": "7gnx7pgxdwtlobs16b1mfb",
-        "l": "france",
-        "g": [
-          "beatdown",
-          "death/thrash metal"
-        ]
-      }
-    }
+    "artists": {}
   },
   {
-    "door": "2024-11-04T19:30:00",
-    "start": "2024-11-04T19:00:00",
-    "end": "2024-11-04T20:30:00",
+    "start": "2024-11-04T20:00:00",
     "venueEventUrl": "https://www.paradiso.nl/en/program/deadletter/2039097",
     "title": "Deadletter",
     "location": "paradiso",
-    "price": 19.7,
+    "price": null,
     "shortText": "London post-punk sensation / Tolhuistuin",
     "longText": "../public/texts/paradiso/L2VuL3Byb2dyYW0vZGVhZGxldHRlci8yMDM5MDk3.html",
     "image": "../public/event-images/paradiso/L2VuL3Byb2dyYW0vZGVhZGxldHRlci8yMDM5MDk3",
@@ -273,23 +60,30 @@
     }
   },
   {
-    "door": "2024-11-18T20:30:00",
-    "start": "2024-11-18T19:30:00",
-    "venueEventUrl": "https://www.paradiso.nl/en/program/nadine-shah/2281879",
-    "title": "Nadine Shah",
+    "start": "2024-11-07T19:30:00",
+    "venueEventUrl": "https://www.paradiso.nl/en/program/zonneprijs-2/2375712",
+    "title": "Zonneprijs #2 VALENTINO • Rockpool Dramas • Good Boy Barking • Bovenburen",
     "location": "paradiso",
-    "price": 28.7,
-    "shortText": "British rock singer creates harmonious post-punk songs / Zonnehuis",
-    "longText": "../public/texts/paradiso/ZW4vcHJvZ3JhbS9uYWRpbmUtc2hhaC8yMjgxODc5.html",
-    "image": "../public/event-images/paradiso/ZW4vcHJvZ3JhbS9uYWRpbmUtc2hhaC8yMjgxODc5",
+    "price": 5,
+    "shortText": " Most promising local artists perform at Zonnehuis / Zonnehuis",
+    "longText": "../public/texts/paradiso/bi9wcm9ncmFtL3pvbm5lcHJpanMtMi8yMzc1NzEy.html",
+    "image": "../public/event-images/paradiso/bi9wcm9ncmFtL3pvbm5lcHJpanMtMi8yMzc1NzEy",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": {}
+    "artists": {
+      "drama": {
+        "s": "5nwfezx5xgbvcaqtjhsxlr",
+        "l": "drama",
+        "g": [
+          "malaysian pop",
+          "rock kapak"
+        ]
+      }
+    }
   },
   {
-    "door": "2024-11-20T20:30:00",
-    "start": "2024-11-20T19:00:00",
+    "start": "2024-11-20T20:30:00",
     "venueEventUrl": "https://www.paradiso.nl/en/program/metz/1716112",
     "title": "Metz",
     "location": "paradiso",
@@ -316,16 +110,27 @@
     }
   },
   {
-    "door": "2024-12-04T18:30:00",
-    "start": "2024-12-04T18:00:00",
-    "end": "2024-12-04T20:30:00",
+    "start": "2024-11-28T20:00:00",
+    "venueEventUrl": "https://www.paradiso.nl/en/program/joe-the-shitboys/2370615",
+    "title": "Joe & The Shitboys",
+    "location": "paradiso",
+    "price": 14.5,
+    "shortText": "Queer, vegan and shit punk / Toekomstmuziek",
+    "longText": "../public/texts/paradiso/b2dyYW0vam9lLXRoZS1zaGl0Ym95cy8yMzcwNjE1.html",
+    "image": "../public/event-images/paradiso/b2dyYW0vam9lLXRoZS1zaGl0Ym95cy8yMzcwNjE1",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2024-12-04T18:30:00",
     "venueEventUrl": "https://www.paradiso.nl/en/program/alcest/1805631",
     "title": "Alcest + Svalbard + Doodseskader",
     "location": "paradiso",
-    "price": 34.3,
+    "price": null,
     "shortText": "Blackgaze band releasing a new album",
     "longText": "../public/texts/paradiso/by5ubC9lbi9wcm9ncmFtL2FsY2VzdC8xODA1NjMx.html",
-    "image": "../public/event-images/paradiso/by5ubC9lbi9wcm9ncmFtL2FsY2VzdC8xODA1NjMx",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
@@ -341,9 +146,7 @@
     }
   },
   {
-    "door": "2024-12-14T19:30:00",
-    "start": "2024-12-14T19:00:00",
-    "end": "2024-12-14T20:30:00",
+    "start": "2024-12-14T19:30:00",
     "venueEventUrl": "https://www.paradiso.nl/en/program/hang-youth/2259954",
     "title": "Hang Youth",
     "location": "paradiso",
@@ -366,8 +169,7 @@
     }
   },
   {
-    "door": "2025-02-28T20:30:00",
-    "start": "2025-02-28T19:00:00",
+    "start": "2025-02-28T20:30:00",
     "venueEventUrl": "https://www.paradiso.nl/en/program/dubioza-kolektiv/2259538",
     "title": "Dubioza Kolektiv",
     "location": "paradiso",
@@ -386,6 +188,29 @@
           "balkan brass",
           "balkan punk",
           "bosnian indie"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-04-14T20:30:00",
+    "venueEventUrl": "https://www.paradiso.nl/en/program/fat-dog/2365347",
+    "title": "Fat Dog",
+    "location": "paradiso",
+    "price": 23.2,
+    "shortText": "Manic mix of dance, punk, and klezmer from South London",
+    "longText": "../public/texts/paradiso/Lm5sL2VuL3Byb2dyYW0vZmF0LWRvZy8yMzY1MzQ3.html",
+    "image": "../public/event-images/paradiso/Lm5sL2VuL3Byb2dyYW0vZmF0LWRvZy8yMzY1MzQ3",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "fat dog": {
+        "s": "4dljephxbw7qihx4iwmnee",
+        "l": "fat%20dog",
+        "g": [
+          "crank wave",
+          "punk"
         ]
       }
     }

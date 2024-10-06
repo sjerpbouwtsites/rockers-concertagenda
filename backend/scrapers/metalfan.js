@@ -19,8 +19,10 @@ async function metalFanDoURL(page, url, qwm) {
   const skipWithMetalfan = workerNames.concat([
     'metropoolopenair',
     '013tilburg',
+    'stroomhuis',
     '013enomgevingn',
     'slvesborg',
+    "muziekgebouw",
     'cultuurpodiumboerderij',
     'royalparklive',
     'ijssportcentrum',

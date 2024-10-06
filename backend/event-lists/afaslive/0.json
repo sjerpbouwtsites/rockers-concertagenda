@@ -1,57 +1,5 @@
 [
   {
-    "door": "2024-07-08T18:00:00",
-    "start": "2024-07-08T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/zz-top",
-    "title": "Zz top",
-    "location": "afaslive",
-    "price": 85.12,
-    "longText": "../public/texts/afaslive/L3d3dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvenotdG9w.html",
-    "image": "../public/event-images/afaslive/L3d3dy5hZmFzbGl2ZS5ubC9hZ2VuZGEvenotdG9w",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "zz top": {
-        "s": "2AM4ilv6UzW0uMRuqKtDgN",
-        "l": "zz%20top",
-        "g": [
-          "album rock",
-          "blues rock",
-          "classic rock",
-          "hard rock",
-          "rock"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-09-20T20:00:00",
-    "start": "2024-09-20T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/epica",
-    "title": "Epica",
-    "location": "afaslive",
-    "price": 95.2,
-    "longText": "../public/texts/afaslive/Ly93d3cuYWZhc2xpdmUubmwvYWdlbmRhL2VwaWNh.html",
-    "image": "../public/event-images/afaslive/Ly93d3cuYWZhc2xpdmUubmwvYWdlbmRhL2VwaWNh",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "epica": {
-        "s": "5HA5aLY3jJV7eimXWkRBBp",
-        "l": "epica",
-        "g": [
-          "dutch metal",
-          "gothic metal",
-          "gothic symphonic metal",
-          "opera metal",
-          "power metal",
-          "symphonic metal",
-          "symphonic metal"
-        ]
-      }
-    }
-  },
-  {
     "door": "2024-11-18T20:00:00",
     "start": "2024-11-18T20:00:00",
     "venueEventUrl": "https://www.afaslive.nl/agenda/sleep-token",
@@ -73,25 +21,59 @@
     }
   },
   {
-    "door": "2025-02-04T20:00:00",
-    "start": "2025-02-04T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/papa-roach",
-    "title": "Papa Roach",
+    "door": "2025-01-28T20:00:00",
+    "start": "2025-01-28T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/pantera",
+    "title": "Pantera",
     "location": "afaslive",
-    "price": 58.24,
-    "longText": "../public/texts/afaslive/LmFmYXNsaXZlLm5sL2FnZW5kYS9wYXBhLXJvYWNo.html",
-    "image": "../public/event-images/afaslive/LmFmYXNsaXZlLm5sL2FnZW5kYS9wYXBhLXJvYWNo",
+    "price": 100.8,
+    "longText": "../public/texts/afaslive/d3d3LmFmYXNsaXZlLm5sL2FnZW5kYS9wYW50ZXJh.html",
+    "image": "../public/event-images/afaslive/d3d3LmFmYXNsaXZlLm5sL2FnZW5kYS9wYW50ZXJh",
     "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "papa roach": {
-        "s": "4RddZ3iHvSpGV4dvATac9X",
-        "l": "papa%20roach",
+      "pantera": {
+        "s": "14pVkFUHDL207LzLHtSA18",
+        "l": "pantera",
         "g": [
           "alternative metal",
+          "groove metal",
+          "hard rock",
+          "metal",
           "nu metal",
-          "rap metal",
-          "rap rock",
+          "old school thrash",
+          "rock",
+          "texas metal",
+          "glam",
+          "heavy metal (early)",
+          " groove metal (later)"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-02-19T20:00:00",
+    "start": "2025-02-19T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/marilyn-manson",
+    "title": "Marilyn Manson",
+    "location": "afaslive",
+    "price": 72.8,
+    "longText": "../public/texts/afaslive/c2xpdmUubmwvYWdlbmRhL21hcmlseW4tbWFuc29u.html",
+    "image": "../public/event-images/afaslive/c2xpdmUubmwvYWdlbmRhL21hcmlseW4tbWFuc29u",
+    "soldOut": true,
+    "eventGenres": null,
+    "artists": {
+      "marilyn manson": {
+        "s": "2VYQTNDsvvKN9wmU5W7xpj",
+        "l": "marilyn%20manson",
+        "g": [
+          "alternative metal",
+          "hard rock",
+          "industrial",
+          "industrial metal",
+          "industrial rock",
+          "nu metal",
+          "post-grunge",
           "rock"
         ]
       }

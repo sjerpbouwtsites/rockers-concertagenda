@@ -1,14 +1,14 @@
 [
   {
-    "door": "2024-07-12T19:30:00",
-    "start": "2024-07-12T20:30:00",
-    "venueEventUrl": "https://www.podiumvictorie.nl/programma/knives-out!-juli",
-    "title": "Knives Out! ft. Library Card",
+    "door": "2024-10-10T19:00:00",
+    "start": "2024-10-10T19:30:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/victorie-deathcave-10/10/24",
+    "title": "Victorie Deathcave",
     "location": "victorie",
-    "price": 11.5,
-    "shortText": " Marathon en Femme Fugazi (Post)punkavond met moshpitwaardig boeket",
-    "longText": "../public/texts/victorie/Lm5sL3Byb2dyYW1tYS9rbml2ZXMtb3V0IS1qdWxp.html",
-    "image": "../public/event-images/victorie/Lm5sL3Byb2dyYW1tYS9rbml2ZXMtb3V0IS1qdWxp",
+    "price": 17.25,
+    "shortText": "Avondje beukende deathmetal",
+    "longText": "../public/texts/victorie/bWEvdmljdG9yaWUtZGVhdGhjYXZlLTEwLzEwLzI0.html",
+    "image": "../public/event-images/victorie/bWEvdmljdG9yaWUtZGVhdGhjYXZlLTEwLzEwLzI0",
     "soldOut": false,
     "eventGenres": null,
     "artists": {}
@@ -31,6 +31,179 @@
         "l": null,
         "g": [
           "symfonische rock"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2024-10-11T19:30:00",
+    "start": "2024-10-11T20:30:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/knives-out-okt",
+    "title": "Knives Out! Peuk, Carsick, Frontsector",
+    "location": "victorie",
+    "price": 11.5,
+    "shortText": "(Post)punk avond met gloeiend hete acts en ijskoud bier",
+    "longText": "../public/texts/victorie/aWUubmwvcHJvZ3JhbW1hL2tuaXZlcy1vdXQtb2t0.html",
+    "image": "../public/event-images/victorie/aWUubmwvcHJvZ3JhbW1hL2tuaXZlcy1vdXQtb2t0",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "peuk": {
+        "s": "48azekbyysulw0ikjbxpto",
+        "l": "peuk",
+        "g": [
+          "belgian indie rock"
+        ]
+      },
+      "frontsector": {
+        "s": "7nNlKInu91uH7iNwCCuWw3",
+        "l": "frontsector",
+        "g": [
+          "dutch punk"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2024-10-18T19:45:00",
+    "start": "2024-10-18T20:45:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/the-sound-undercover",
+    "title": "The Sound Undercover",
+    "location": "victorie",
+    "price": 19.55,
+    "shortText": "Tribute aan Londense post-punk formatie The Sound",
+    "longText": "../public/texts/victorie/cHJvZ3JhbW1hL3RoZS1zb3VuZC11bmRlcmNvdmVy.html",
+    "image": "../public/event-images/victorie/cHJvZ3JhbW1hL3RoZS1zb3VuZC11bmRlcmNvdmVy",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "undercover": {
+        "s": "5EQMhqNfNmnIIAgwQX1WZ7",
+        "l": "undercover",
+        "g": [
+          "christian punk"
+        ]
+      },
+      "the sound": {
+        "s": "4hzCcF4Leos2sKnz79nwhz",
+        "l": "the%20sound",
+        "g": [
+          "uk post-punk",
+          "technical grindcore",
+          "mathcore"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2024-11-13T19:30:00",
+    "start": "2024-11-13T20:30:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/cosmic-psychos",
+    "title": "Cosmic Psychos",
+    "location": "victorie",
+    "price": 21.3,
+    "shortText": "Australische punklegendes",
+    "longText": "../public/texts/victorie/aWUubmwvcHJvZ3JhbW1hL2Nvc21pYy1wc3ljaG9z.html",
+    "image": "../public/event-images/victorie/aWUubmwvcHJvZ3JhbW1hL2Nvc21pYy1wc3ljaG9z",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "cosmic psychos": {
+        "s": "3orc30EUucavid98kNtMEf",
+        "l": "cosmic%20psychos",
+        "g": [
+          "australian alternative rock",
+          "australian garage punk",
+          "australian psych",
+          "brisbane punk"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2024-12-06T19:00:00",
+    "start": "2024-12-06T19:45:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/peter-pan-speedrock-2024",
+    "title": "Peter Pan Speedrock",
+    "location": "victorie",
+    "price": 34.5,
+    "shortText": "Victorie 15 jaar",
+    "longText": "../public/texts/victorie/cmFtbWEvcGV0ZXItcGFuLXNwZWVkcm9jay0yMDI0.html",
+    "image": "../public/event-images/victorie/cmFtbWEvcGV0ZXItcGFuLXNwZWVkcm9jay0yMDI0",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "peter pan speedrock": {
+        "s": "3zkYKQsUkS8nnGDL9ZhHQR",
+        "l": "peter%20pan%20speedrock",
+        "g": [
+          "dutch punk",
+          "dutch rock",
+          "punk 'n' roll"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-01-24T19:00:00",
+    "start": "2025-01-24T19:45:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/triggerfinger-2025",
+    "title": "Triggerfinger",
+    "location": "victorie",
+    "price": 39.5,
+    "shortText": "Victorie 15 jaar",
+    "longText": "../public/texts/victorie/bC9wcm9ncmFtbWEvdHJpZ2dlcmZpbmdlci0yMDI1.html",
+    "image": "../public/event-images/victorie/bC9wcm9ncmFtbWEvdHJpZ2dlcmZpbmdlci0yMDI1",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "triggerfinger": {
+        "s": "3uhilk54oe4ja06v962ptu",
+        "l": "triggerfinger",
+        "g": [
+          "belgian rock"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-02-27T19:15:00",
+    "start": "2025-02-27T20:45:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/the-bootleg-beatles-2025",
+    "title": "The Bootleg Beatles",
+    "location": "victorie",
+    "price": 34.5,
+    "shortText": "Tribute to the Fab Four",
+    "longText": "../public/texts/victorie/cmFtbWEvdGhlLWJvb3RsZWctYmVhdGxlcy0yMDI1.html",
+    "image": "../public/event-images/victorie/cmFtbWEvdGhlLWJvb3RsZWctYmVhdGxlcy0yMDI1",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "the bootleg beatles": {
+        "s": null,
+        "l": "the%20bootleg%20beatles",
+        "g": []
+      }
+    }
+  },
+  {
+    "door": "2025-04-03T19:15:00",
+    "start": "2025-04-03T19:45:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/anneke-van-giersbergen-2025",
+    "title": "Anneke van Giersbergen",
+    "location": "victorie",
+    "price": 31.65,
+    "shortText": "Veelzijdige rockzangeres",
+    "longText": "../public/texts/victorie/bWEvYW5uZWtlLXZhbi1naWVyc2Jlcmdlbi0yMDI1.html",
+    "image": "../public/event-images/victorie/bWEvYW5uZWtlLXZhbi1naWVyc2Jlcmdlbi0yMDI1",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "anneke van giersbergen": {
+        "s": "6tzqjnkayty8hfqbeddf8v",
+        "l": "anneke%20van%20giersbergen",
+        "g": [
+          "metal"
         ]
       }
     }

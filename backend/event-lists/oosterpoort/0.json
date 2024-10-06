@@ -1,50 +1,33 @@
 [
   {
-    "start": "2024-09-22T20:30:00+02:00",
-    "venueEventUrl": "https://www.spotgroningen.nl/programma/within-temptation-2/",
-    "title": "Within Temptation",
+    "start": "2024-11-13T20:00:00+01:00",
+    "venueEventUrl": "https://www.spotgroningen.nl/programma/solstafir/",
+    "title": "Sólstafir - Nordic Descent Tour",
     "location": "oosterpoort",
-    "price": null,
-    "shortText": "Bleed Out 2024 Tour + support: Green LizardHet grootste rock-exportproduct dat Nederland ooit gekend heeft",
-    "longText": "../public/texts/oosterpoort/cHJvZ3JhbW1hL3dpdGhpbi10ZW1wdGF0aW9uLTIv.html",
-    "image": "../public/event-images/oosterpoort/cHJvZ3JhbW1hL3dpdGhpbi10ZW1wdGF0aW9uLTIv",
-    "soldOut": null,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "within temptation": {
-        "s": "3hE8S8ohRErocpkY7uJW4a",
-        "l": "within%20temptation",
-        "g": [
-          "dutch metal",
-          "gothic metal",
-          "gothic symphonic metal",
-          "symphonic metal",
-          "symphonic metal (early)",
-          " symphonic",
-          "alternative rock (later)"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2024-11-29T20:00:00+01:00",
-    "venueEventUrl": "https://www.spotgroningen.nl/programma/smash-into-pieces/",
-    "title": "Smash Into Pieces",
-    "location": "oosterpoort",
-    "price": 26.1,
-    "shortText": "Zweedse cinematografische rocksensatie",
-    "longText": "../public/texts/oosterpoort/bC9wcm9ncmFtbWEvc21hc2gtaW50by1waWVjZXMv.html",
-    "image": "../public/event-images/oosterpoort/bC9wcm9ncmFtbWEvc21hc2gtaW50by1waWVjZXMv",
+    "price": 33.6,
+    "shortText": " Special guests: Oranssi Pazuzu & Hamferd Sólstafir - Nordic Descent Tour+ Special guests: Oranssi Pazuzu & Hamferd",
+    "longText": "../public/texts/oosterpoort/bmluZ2VuLm5sL3Byb2dyYW1tYS9zb2xzdGFmaXIv.html",
+    "image": "../public/event-images/oosterpoort/bmluZ2VuLm5sL3Byb2dyYW1tYS9zb2xzdGFmaXIv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "smash into pieces": {
-        "s": "2vhrwzjf9h3icunkvfi9tq",
-        "l": "smash%20into%20pieces",
+      "oranssi pazuzu": {
+        "s": "3XFQRe2FsSOjrODygK4caW",
+        "l": "oranssi%20pazuzu",
         "g": [
-          "swedish alternative rock"
+          "atmospheric black metal",
+          "avant-garde metal",
+          "blackgaze",
+          "cosmic black metal",
+          "drone metal",
+          "finnish black metal",
+          "finnish psychedelic rock",
+          "post-black metal",
+          "post-metal",
+          "sci-fi metal",
+          "voidgaze",
+          "psychedelic black metal"
         ]
       }
     }
@@ -52,16 +35,21 @@
   {
     "start": "2024-12-02T20:00:00+01:00",
     "venueEventUrl": "https://www.spotgroningen.nl/programma/ian-paice-feat-purpendicular/",
-    "title": "Ian Paice feat. Purpendicular",
+    "title": "Ian Paice feat. PurpendicularPerforming Classic Deep Purple",
     "location": "oosterpoort",
     "price": 39.6,
-    "shortText": "Performing Classic Deep PurpleLegendarische drummer en oprichter van Deep Purple",
+    "shortText": "  Ian Paice feat. PurpendicularPerforming Classic Deep Purple",
     "longText": "../public/texts/oosterpoort/L2lhbi1wYWljZS1mZWF0LXB1cnBlbmRpY3VsYXIv.html",
     "image": "../public/event-images/oosterpoort/L2lhbi1wYWljZS1mZWF0LXB1cnBlbmRpY3VsYXIv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
+      "purpendicular": {
+        "s": "7dtykvbh2qxkicazbxtrkf",
+        "l": "purpendicular",
+        "g": []
+      },
       "ian paice": {
         "s": "2gndxbhyibxhwvurrlruaq",
         "l": "ian%20paice",
@@ -69,11 +57,6 @@
           "rock drums",
           "heavy metal"
         ]
-      },
-      "purpendicular": {
-        "s": "7dtykvbh2qxkicazbxtrkf",
-        "l": "purpendicular",
-        "g": []
       },
       "feat.": {
         "s": null,
@@ -91,7 +74,7 @@
     "title": "Sloper",
     "location": "oosterpoort",
     "price": 26.1,
-    "shortText": "Band opgezet door bekende drummers met ROCK als stevige basis",
+    "shortText": "Sloper",
     "longText": "../public/texts/oosterpoort/Z3JvbmluZ2VuLm5sL3Byb2dyYW1tYS9zbG9wZXIv.html",
     "image": "../public/event-images/oosterpoort/Z3JvbmluZ2VuLm5sL3Byb2dyYW1tYS9zbG9wZXIv",
     "soldOut": false,
@@ -110,24 +93,86 @@
   {
     "start": "2024-12-14T20:00:00+01:00",
     "venueEventUrl": "https://www.spotgroningen.nl/programma/dool/",
-    "title": "Dool",
+    "title": "DOOL+support: Throwing Bricks",
     "location": "oosterpoort",
     "price": 25.1,
-    "shortText": "Meeslepende mix van progressieve rock, metal en post-rock",
+    "shortText": "DOOL+support: Throwing Bricks",
     "longText": "../public/texts/oosterpoort/b3Rncm9uaW5nZW4ubmwvcHJvZ3JhbW1hL2Rvb2wv.html",
     "image": "../public/event-images/oosterpoort/b3Rncm9uaW5nZW4ubmwvcHJvZ3JhbW1hL2Rvb2wv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": {}
+    "artists": {
+      "throwing bricks": {
+        "s": "05jSnBtEkxDJ7TIR4KVjSr",
+        "l": "throwing%20bricks",
+        "g": [
+          "dutch black metal",
+          "hardcore punk (early)",
+          " sludge",
+          "post-metal",
+          "hardcore (later)"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-01-09T17:00:00+01:00",
+    "venueEventUrl": "https://www.spotgroningen.nl/programma/paganfest-2025/",
+    "title": "Paganfest 2025alestorm / ensiferum / tyr / heidevolk / elvenking",
+    "location": "oosterpoort",
+    "price": 51.6,
+    "shortText": "  Paganfest 2025ALESTORM / ENSIFERUM / TYR / HEIDEVOLK / ELVENKING",
+    "longText": "../public/texts/oosterpoort/bi5ubC9wcm9ncmFtbWEvcGFnYW5mZXN0LTIwMjUv.html",
+    "image": "../public/event-images/oosterpoort/bi5ubC9wcm9ncmFtbWEvcGFnYW5mZXN0LTIwMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "ensiferum": {
+        "s": "0krxcikthz13p8o0v2tksh",
+        "l": "ensiferum",
+        "g": [
+          "finnish melodeath",
+          "finnish metal",
+          "folk metal",
+          "melodic death metal",
+          "metal",
+          "nordic folk metal",
+          "power metal",
+          "symphonic metal",
+          "viking metal"
+        ]
+      },
+      "heidevolk": {
+        "s": "0a2yao4tufejvnn5hvjfxa",
+        "l": "heidevolk",
+        "g": [
+          "dutch metal",
+          "folk metal",
+          "viking metal"
+        ]
+      },
+      "alestorm": {
+        "s": "3opqu68jpzlzvjajj3b2da",
+        "l": "alestorm",
+        "g": [
+          "british power metal",
+          "comic metal",
+          "pirate",
+          "power metal",
+          "scottish metal"
+        ]
+      }
+    }
   },
   {
     "start": "2025-02-01T20:00:00+01:00",
     "venueEventUrl": "https://www.spotgroningen.nl/programma/feuerengel-a-tribute-to-rammstein/",
-    "title": "Feuerengel",
+    "title": "Feuerengela tribute to rammstein",
     "location": "oosterpoort",
     "price": 33.6,
-    "shortText": "A TRIBUTE TO RAMMSTEINRAMMMMMMMSTEIN!!!",
+    "shortText": "FEUERENGELA TRIBUTE TO RAMMSTEIN",
     "longText": "../public/texts/oosterpoort/cmVuZ2VsLWEtdHJpYnV0ZS10by1yYW1tc3RlaW4v.html",
     "image": "../public/event-images/oosterpoort/cmVuZ2VsLWEtdHJpYnV0ZS10by1yYW1tc3RlaW4v",
     "soldOut": false,
@@ -142,6 +187,51 @@
           "tanzmetal",
           "industrial",
           "industrial metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-02-23T20:30:00+01:00",
+    "venueEventUrl": "https://www.spotgroningen.nl/programma/the-bootleg-beatles-3/",
+    "title": "The Bootleg Beatles",
+    "location": "oosterpoort",
+    "price": 33.6,
+    "shortText": "The Bootleg Beatles",
+    "longText": "../public/texts/oosterpoort/b2dyYW1tYS90aGUtYm9vdGxlZy1iZWF0bGVzLTMv.html",
+    "image": "../public/event-images/oosterpoort/b2dyYW1tYS90aGUtYm9vdGxlZy1iZWF0bGVzLTMv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "the bootleg beatles": {
+        "s": null,
+        "l": "the%20bootleg%20beatles",
+        "g": []
+      }
+    }
+  },
+  {
+    "start": "2025-04-28T20:00:00+02:00",
+    "venueEventUrl": "https://www.spotgroningen.nl/programma/pixies-2/",
+    "title": "Pixies",
+    "location": "oosterpoort",
+    "price": 54.6,
+    "shortText": "Pixies",
+    "longText": "../public/texts/oosterpoort/b25pbmdlbi5ubC9wcm9ncmFtbWEvcGl4aWVzLTIv.html",
+    "image": "../public/event-images/oosterpoort/b25pbmdlbi5ubC9wcm9ncmFtbWEvcGl4aWVzLTIv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "pixies": {
+        "s": "6zvul52xwtwzilbzl6bubt",
+        "l": "pixies",
+        "g": [
+          "alternative rock",
+          "boston rock",
+          "permanent wave",
+          "rock"
         ]
       }
     }

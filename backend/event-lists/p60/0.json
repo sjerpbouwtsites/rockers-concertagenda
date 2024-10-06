@@ -1,96 +1,7 @@
 [
   {
-    "door": "2024-08-16T18:00:00Z",
-    "start": "2024-08-16T20:00:00Z",
-    "venueEventUrl": "https://p60.nl/2024/ignite",
-    "title": "Ignite",
-    "location": "p60",
-    "price": 19.502,
-    "shortText": "SUPPORT: CURSELIFTER & SWELL",
-    "longText": "../public/texts/p60/aHR0cHM6Ly9wNjAubmwvMjAyNC9pZ25pdGU=.html",
-    "image": "../public/event-images/p60/aHR0cHM6Ly9wNjAubmwvMjAyNC9pZ25pdGU=",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "ignite": {
-        "s": "48ErVeccMDF5UiHA4TdGWr",
-        "l": "ignite",
-        "g": [
-          "california hardcore",
-          "hardcore",
-          "melodic hardcore",
-          "skate punk",
-          "melodic death metal"
-        ]
-      },
-      "swell": {
-        "s": null,
-        "l": "swell",
-        "g": []
-      },
-      "curselifter": {
-        "s": "6d9ZmTpKF910yIhbTuKwPv",
-        "l": "curselifter",
-        "g": [
-          "metalcore"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-09-04T17:00:00Z",
-    "start": "2024-09-04T19:15:00Z",
-    "venueEventUrl": "https://p60.nl/2024/nile",
-    "title": "Nile",
-    "location": "p60",
-    "price": 22.5023,
-    "shortText": "+ HIDEOUS DIVINTY, INTREPID & PESTIFER",
-    "longText": "../public/texts/p60/aHR0cHM6Ly9wNjAubmwvMjAyNC9uaWxl.html",
-    "image": "../public/event-images/p60/aHR0cHM6Ly9wNjAubmwvMjAyNC9uaWxl",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "nile": {
-        "s": "3v3VSKylQE69ztn5TUVlFE",
-        "l": "nile",
-        "g": [
-          "brutal death metal",
-          "death metal",
-          "metal",
-          "oriental metal",
-          "south carolina metal",
-          "technical death metal",
-          "thrash metal",
-          "brutal",
-          "technical death metal"
-        ]
-      },
-      "hideous": {
-        "s": "4xopu6j3nq37jfiawa4ysh",
-        "l": "hideous",
-        "g": [
-          "brutal death metal",
-          "deathgrind",
-          "italian death metal",
-          "technical brutal death metal",
-          "technical death metal"
-        ]
-      },
-      "pestifer": {
-        "s": "3IgHTrKpzlAiMu5Dx7AooZ",
-        "l": "pestifer",
-        "g": [
-          "belgian death metal",
-          "technical death metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-10-18T18:00:00Z",
-    "start": "2024-10-18T21:00:00Z",
+    "door": "2024-10-18T17:00:00Z",
+    "start": "2024-10-18T19:30:00Z",
     "venueEventUrl": "https://p60.nl/2024/heavy-metal-maniacs-vr",
     "title": "Heavy Metal Maniacs Festival",
     "location": "p60",
@@ -102,21 +13,6 @@
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      },
-      "obstruktor": {
-        "s": "6royebi1pogfkefylnvshp",
-        "l": "netherlands",
-        "g": [
-          "speed/thrash metal",
-          "metal"
-        ]
-      },
       "satan's fall": {
         "s": "2UAI07YLI30I3lZN91lqbO",
         "l": "satan's%20fall",
@@ -125,6 +21,14 @@
           "nwothm",
           "heavy",
           "speed metal"
+        ]
+      },
+      "obstruktor": {
+        "s": "6royebi1pogfkefylnvshp",
+        "l": "netherlands",
+        "g": [
+          "speed/thrash metal",
+          "metal"
         ]
       }
     }
@@ -143,11 +47,12 @@
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "metal": {
-        "s": null,
-        "l": "metal",
+      "fingernails": {
+        "s": "4qNP3aG4wJeDWttXkvIuqb",
+        "l": "fingernails",
         "g": [
-          "death metal"
+          "thrash",
+          "speed metal"
         ]
       },
       "hitten": {
@@ -159,13 +64,37 @@
           "heavy metal",
           "hard rock"
         ]
-      },
-      "fingernails": {
-        "s": "4qNP3aG4wJeDWttXkvIuqb",
-        "l": "fingernails",
+      }
+    }
+  },
+  {
+    "door": "2024-10-24T18:00:00Z",
+    "start": "2024-10-24T21:00:00Z",
+    "venueEventUrl": "https://p60.nl/the-sound-undercover",
+    "title": "The Sound Undercover",
+    "location": "p60",
+    "price": 15.5017,
+    "shortText": "EEN THE SOUND TRIBUTE",
+    "longText": "../public/texts/p60/Oi8vcDYwLm5sL3RoZS1zb3VuZC11bmRlcmNvdmVy.html",
+    "image": "../public/event-images/p60/Oi8vcDYwLm5sL3RoZS1zb3VuZC11bmRlcmNvdmVy",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "undercover": {
+        "s": "5EQMhqNfNmnIIAgwQX1WZ7",
+        "l": "undercover",
         "g": [
-          "thrash",
-          "speed metal"
+          "christian punk"
+        ]
+      },
+      "the sound": {
+        "s": "4hzCcF4Leos2sKnz79nwhz",
+        "l": "the%20sound",
+        "g": [
+          "uk post-punk",
+          "technical grindcore",
+          "mathcore"
         ]
       }
     }

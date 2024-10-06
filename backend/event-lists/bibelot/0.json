@@ -1,72 +1,30 @@
 [
   {
-    "door": "2024-08-30T20:00:00",
-    "start": "2024-08-30T20:00:00",
-    "venueEventUrl": "https://bibelot.net/programma/its-not-a-phase-mom-limp-business/",
-    "title": "It’s Not A Phase, Mom – Limp Business",
+    "door": "2024-10-13T19:30:00",
+    "start": "2024-10-13T20:00:00",
+    "venueEventUrl": "https://bibelot.net/programma/bibelot-x-door-pamphlets-us-libertat/",
+    "title": "Bibelot X DOOR: Pamphlets (US) + Libertat",
     "location": "bibelot",
-    "price": 30,
-    "longText": "../public/texts/bibelot/bm90LWEtcGhhc2UtbW9tLWxpbXAtYnVzaW5lc3Mv.html",
-    "image": "../public/event-images/bibelot/bm90LWEtcGhhc2UtbW9tLWxpbXAtYnVzaW5lc3Mv",
+    "price": 0,
+    "longText": "../public/texts/bibelot/LXgtZG9vci1wYW1waGxldHMtdXMtbGliZXJ0YXQv.html",
+    "image": "../public/event-images/bibelot/LXgtZG9vci1wYW1waGxldHMtdXMtbGliZXJ0YXQv",
     "soldOut": false,
     "eventGenres": [
-      "metal ",
-      "rock "
-    ],
-    "artists": {
-      "it’s not a phase, mom – limp business": {
-        "s": null,
-        "l": "it%E2%80%99s%20not%20a%20phase,%20mom%20%E2%80%93%20limp%20business",
-        "g": [
-          "metal ",
-          "rock "
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-09-06T19:30:00",
-    "start": "2024-09-06T20:00:00",
-    "venueEventUrl": "https://bibelot.net/programma/black-out-the-smiths-by-the-smiths-presumably-joy-division-by-curtis/",
-    "title": "The Smiths by The Smiths Presumably & Joy Division by Curtis (Black-Out 12th Edition)",
-    "location": "bibelot",
-    "price": 2024,
-    "shortText": " undefined",
-    "longText": "../public/texts/bibelot/dW1hYmx5LWpveS1kaXZpc2lvbi1ieS1jdXJ0aXMv.html",
-    "image": "../public/event-images/bibelot/dW1hYmx5LWpveS1kaXZpc2lvbi1ieS1jdXJ0aXMv",
-    "soldOut": false,
-    "eventGenres": [
-      "new wave ",
       "punk "
     ],
     "artists": {
-      "joy division": {
-        "s": null,
-        "l": "joy%20division",
-        "g": []
-      },
-      "the smiths by the smiths presumably & joy division by curtis": {
-        "s": null,
-        "l": "the%20smiths%20by%20the%20smiths%20presumably%20&%20joy%20division%20by%20curtis",
+      "pamphlets": {
+        "s": "76AT4fS82AfuOrK9iaCxkV",
+        "l": "pamphlets",
         "g": [
-          "new wave ",
+          "american post-punk",
           "punk "
         ]
       },
-      "undefined": {
-        "s": "6NMVL5NGYZKTl6AZuxybbV",
-        "l": "undefined",
+      "libertat": {
+        "s": "6o1FFXbX5XmI5TcYzTMqGa",
+        "l": "libertat",
         "g": [
-          "metalcore",
-          "new wave ",
-          "punk "
-        ]
-      },
-      "the smiths by & by curtis": {
-        "s": null,
-        "l": "the smiths by & by curtis",
-        "g": [
-          "new wave ",
           "punk "
         ]
       }
@@ -86,23 +44,9 @@
       "metal "
     ],
     "artists": {
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      },
       "dordrecht metal fest": {
         "s": null,
         "l": "dordrecht%20metal%20fest",
-        "g": [
-          "metal "
-        ]
-      },
-      "dordrecht fest": {
-        "s": null,
-        "l": "dordrecht fest",
         "g": [
           "metal "
         ]
@@ -110,10 +54,10 @@
     }
   },
   {
-    "door": "2024-10-25T20:30:00",
-    "start": "2024-10-25T21:00:00",
+    "door": "2024-10-25T20:00:00",
+    "start": "2024-10-25T20:30:00",
     "venueEventUrl": "https://bibelot.net/programma/speedmobile/",
-    "title": "Speedmobile",
+    "title": "Speedmobile + Dikke Dennis & De Røckers",
     "location": "bibelot",
     "price": 0,
     "longText": "../public/texts/bibelot/bG90Lm5ldC9wcm9ncmFtbWEvc3BlZWRtb2JpbGUv.html",
@@ -131,6 +75,71 @@
           "punk ",
           "rock "
         ]
+      },
+      "de røckers": {
+        "s": "4gnyohyczuql9vf0vbjffq",
+        "l": null,
+        "g": []
+      },
+      "dikke dennis &": {
+        "s": null,
+        "l": "dikke%20dennis%20&",
+        "g": [
+          "punk ",
+          "rock "
+        ]
+      }
+    }
+  },
+  {
+    "door": "2024-11-02T20:30:00",
+    "start": "2024-11-02T21:00:00",
+    "venueEventUrl": "https://bibelot.net/programma/black-sabbitch-us/",
+    "title": "Black Sabbitch (US)",
+    "location": "bibelot",
+    "price": 2024,
+    "longText": "../public/texts/bibelot/dC9wcm9ncmFtbWEvYmxhY2stc2FiYml0Y2gtdXMv.html",
+    "image": "../public/event-images/bibelot/dC9wcm9ncmFtbWEvYmxhY2stc2FiYml0Y2gtdXMv",
+    "soldOut": false,
+    "eventGenres": [
+      "metal "
+    ],
+    "artists": {
+      "black sabbitch": {
+        "s": null,
+        "l": "black%20sabbitch",
+        "g": [
+          "metal "
+        ]
+      }
+    }
+  },
+  {
+    "door": "2024-11-30T19:00:00",
+    "start": "2024-11-30T19:30:00",
+    "venueEventUrl": "https://bibelot.net/programma/temper/",
+    "title": "Temper!",
+    "location": "bibelot",
+    "price": 30,
+    "longText": "../public/texts/bibelot/L2JpYmVsb3QubmV0L3Byb2dyYW1tYS90ZW1wZXIv.html",
+    "image": "../public/event-images/bibelot/L2JpYmVsb3QubmV0L3Byb2dyYW1tYS90ZW1wZXIv",
+    "soldOut": false,
+    "eventGenres": [
+      "garagerock ",
+      "pop ",
+      "punk ",
+      "rock "
+    ],
+    "artists": {
+      "temper!": {
+        "s": null,
+        "l": "temper!",
+        "g": [
+          "garagerock ",
+          "pop ",
+          "punk ",
+          "rock "
+        ]
       }
     }
   },
@@ -140,7 +149,7 @@
     "venueEventUrl": "https://bibelot.net/programma/tusky/",
     "title": "Tusky",
     "location": "bibelot",
-    "price": 13,
+    "price": 0,
     "longText": "../public/texts/bibelot/Ly9iaWJlbG90Lm5ldC9wcm9ncmFtbWEvdHVza3kv.html",
     "image": "../public/event-images/bibelot/Ly9iaWJlbG90Lm5ldC9wcm9ncmFtbWEvdHVza3kv",
     "soldOut": false,
@@ -205,13 +214,6 @@
           "metal ",
           "rock "
         ]
-      },
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
       }
     }
   },
@@ -274,6 +276,32 @@
         "l": "regressive%20hypnosis",
         "g": [
           "metal "
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-02-21T20:00:00",
+    "start": "2025-02-21T20:30:00",
+    "venueEventUrl": "https://bibelot.net/programma/charlotte-wessels/",
+    "title": "Charlotte Wessels",
+    "location": "bibelot",
+    "price": 21,
+    "longText": "../public/texts/bibelot/dC9wcm9ncmFtbWEvY2hhcmxvdHRlLXdlc3NlbHMv.html",
+    "image": "../public/event-images/bibelot/dC9wcm9ncmFtbWEvY2hhcmxvdHRlLXdlc3NlbHMv",
+    "soldOut": false,
+    "eventGenres": [
+      "metal ",
+      "pop "
+    ],
+    "artists": {
+      "charlotte wessels": {
+        "s": "6yyPaE45AE346XVgFJgiaI",
+        "l": "charlotte%20wessels",
+        "g": [
+          "gothic symphonic metal",
+          "hel",
+          "symphonic metal"
         ]
       }
     }
