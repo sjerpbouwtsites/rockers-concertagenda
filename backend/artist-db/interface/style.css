@@ -1,0 +1,47 @@
+body {
+    padding: 40px;
+}
+
+#export-data {
+    position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 30px;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 15px;
+}
+#export-data:hover{
+    background-color: gray
+}
+ 
+#data-print {
+    width: 200px;
+    height: 800px;
+    position: fixed;
+    top: 90px;
+    right: 20px;
+    display: none;
+}
+#data-print.geprint {
+    display: block;
+}
+
+.verwijder-rij-knop {
+    border: 2px solid red;
+    font-size: 13px;
+    background-color: yellow;
+    padding: 4px 10px;
+    display: block;
+    margin-bottom: 2px;
+}
+.verwijder-rij-knop:hover{
+    background-color: gold;
+    border-color: orange;
+}
+
+.maak-rood-gooi-weg td{
+    background-color:red;
+}
