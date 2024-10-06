@@ -2,7 +2,6 @@
 import { workerData } from 'worker_threads';
 import AbstractScraper from './gedeeld/abstract-scraper.js';
 import longTextSocialsIframes from './longtext/doornroosje.js';
-import getImage from './gedeeld/image.js';
 import workTitleAndSlug from './gedeeld/slug.js';
 import { mapToShortDate } from './gedeeld/datums.js';
 
@@ -22,11 +21,11 @@ const scraper = new AbstractScraper({
     harvest: {
       dividers: [`+`],
       dividerRex: "[\\+]",
-      artistsIn: ['title'],
+      artistsIn: ['title', 'shortText'],
     },    
     mainPage: {
       requiredProperties: ['venueEventUrl', 'title'],
-      asyncCheckFuncs: ['refused', 'allowedEvent', 'explicitEventGenres', 'hasAllowedArtist', 'hasGoodTerms', 'forbiddenTerms', 'spotifyConfirmation'],
+      asyncCheckFuncs: ['refused', 'allowedEvent', 'explicitEventGenres', 'forbiddenTerms', 'hasAllowedArtist', 'hasGoodTerms', 'spotifyConfirmation'],
     },
     singlePage: {
       requiredProperties: ['venueEventUrl', 'title', 'start'],
@@ -57,10 +56,8 @@ scraper.mainPage = async function () {
     // eslint-disable-next-line no-shadow
     ({ workerData, months }) =>
       Array.from(document.querySelectorAll('.c-program__item')).map((eventEl) => {
-        const title =
-          eventEl.querySelector('.c-program__title')?.textContent.trim() ??
-          eventEl.querySelector('h1,h2,h3')?.textContent.trim() ??
-          null;
+        const title = eventEl.querySelector('.c-program__title--main')?.textContent.trim() ?? null;
+        
         const res = {
           anker: `<a class='page-info' href='${document.location.href}'>${workerData.family} - main - ${title}</a>`,
           errors: [],
@@ -68,7 +65,7 @@ scraper.mainPage = async function () {
         };
         res.shortText =
           eventEl
-            .querySelector('.c-program__content')
+            .querySelector('.c-program__title--small')
             ?.textContent.trim()
             .replace(res.title, '')
             .replace(/\s{2, 500}/g) ?? '';

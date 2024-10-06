@@ -1,45 +1,5 @@
 [
   {
-    "start": "2024-09-06T19:00:00",
-    "end": "2024-09-06T22:30:00",
-    "venueEventUrl": "https://dehelling.nl/agenda/bring-me-the-horizon-fanparty-ii-06-09-2024/",
-    "title": "Bring Me The Horizon Fanparty II",
-    "location": "dehelling",
-    "price": 10,
-    "shortText": "Vier uur lang alleen maar BMTH hosted by No Barrier",
-    "longText": "../public/texts/dehelling/b3Jpem9uLWZhbnBhcnR5LWlpLTA2LTA5LTIwMjQv.html",
-    "image": "../public/event-images/dehelling/b3Jpem9uLWZhbnBhcnR5LWlpLTA2LTA5LTIwMjQv",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "no barrier": {
-        "s": "2am0pROxk0wcIVgL5rZA3A",
-        "l": "no%20barrier",
-        "g": []
-      }
-    }
-  },
-  {
-    "start": "2024-09-27T22:00:00",
-    "end": "2024-09-27T03:00:00",
-    "venueEventUrl": "https://dehelling.nl/agenda/no-barrier-27-09-2024/",
-    "title": "No barrier",
-    "location": "dehelling",
-    "price": 15.7,
-    "shortText": "NO BARRIER: Punk, Rock & Metalcore",
-    "longText": "../public/texts/dehelling/L2FnZW5kYS9uby1iYXJyaWVyLTI3LTA5LTIwMjQv.html",
-    "image": "../public/event-images/dehelling/L2FnZW5kYS9uby1iYXJyaWVyLTI3LTA5LTIwMjQv",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "no barrier": {
-        "s": "2am0pROxk0wcIVgL5rZA3A",
-        "l": "no%20barrier",
-        "g": []
-      }
-    }
-  },
-  {
     "start": "2024-10-06T19:30:00",
     "end": "2024-10-06T23:00:00",
     "venueEventUrl": "https://dehelling.nl/agenda/bad-breeding-uniform-06-10-2024/",
@@ -65,7 +25,7 @@
         "g": [
           "drone metal",
           "dub metal",
-          "noise",
+          "modern noise rock",
           "noise punk",
           "noise rock",
           "nyc metal",
@@ -75,32 +35,40 @@
     }
   },
   {
-    "start": "2024-10-26T20:00:00",
-    "end": "2024-10-26T02:00:00",
-    "venueEventUrl": "https://dehelling.nl/agenda/a-hella-mean-halloween-26-10-2024/",
-    "title": "A Hella Mean Halloween",
+    "start": "2024-11-01T19:30:00",
+    "end": "2024-11-01T23:00:00",
+    "venueEventUrl": "https://dehelling.nl/agenda/black-sabbitch-01-11-2024/",
+    "title": "Black Sabbitch",
     "location": "dehelling",
-    "price": 20,
-    "shortText": "Punk-verkleedpartijtje met Bony Macaroni, Bowl, Rats and Daggers en POM",
-    "longText": "../public/texts/dehelling/bGxhLW1lYW4taGFsbG93ZWVuLTI2LTEwLTIwMjQv.html",
-    "image": "../public/event-images/dehelling/bGxhLW1lYW4taGFsbG93ZWVuLTI2LTEwLTIwMjQv",
+    "price": 22.2,
+    "shortText": "Een all-female tribute aan de vader-aller-metalbands",
+    "longText": "../public/texts/dehelling/bmRhL2JsYWNrLXNhYmJpdGNoLTAxLTExLTIwMjQv.html",
+    "image": "../public/event-images/dehelling/bmRhL2JsYWNrLXNhYmJpdGNoLTAxLTExLTIwMjQv",
     "soldOut": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "black sabbitch": {
+        "s": null,
+        "l": "black%20sabbitch",
+        "g": [
+          "metal "
+        ]
+      }
+    }
   },
   {
-    "start": "2024-11-06T19:30:00",
-    "end": "2024-11-06T23:00:00",
-    "venueEventUrl": "https://dehelling.nl/agenda/dream-state-06-11-2024/",
-    "title": "Dream State",
+    "start": "2024-11-04T19:30:00",
+    "end": "2024-11-04T23:00:00",
+    "venueEventUrl": "https://dehelling.nl/agenda/self-deception-04-11-2024/",
+    "title": "Self Deception",
     "location": "dehelling",
-    "price": 20.2,
-    "shortText": "Herboren post-hardcoregiganten uit Wales",
-    "longText": "../public/texts/dehelling/YWdlbmRhL2RyZWFtLXN0YXRlLTA2LTExLTIwMjQv.html",
-    "image": "../public/event-images/dehelling/YWdlbmRhL2RyZWFtLXN0YXRlLTA2LTExLTIwMjQv",
+    "price": 17.2,
+    "shortText": "Zweedse veteranen combineren arena-proof refreinen met metal",
+    "longText": "../public/texts/dehelling/bmRhL3NlbGYtZGVjZXB0aW9uLTA0LTExLTIwMjQv.html",
+    "image": "../public/event-images/dehelling/bmRhL3NlbGYtZGVjZXB0aW9uLTA0LTExLTIwMjQv",
     "soldOut": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {}
   },
   {
     "start": "2024-11-24T19:30:00",
@@ -112,9 +80,19 @@
     "shortText": "Duitstalig deathmetalproject vertelt het verhaal van de Eerste Wereldoorlog",
     "longText": "../public/texts/dehelling/ZW5kYS9rYW5vbmVuZmllYmVyLTI0LTExLTIwMjQv.html",
     "image": "../public/event-images/dehelling/ZW5kYS9rYW5vbmVuZmllYmVyLTI0LTExLTIwMjQv",
-    "soldOut": false,
+    "soldOut": true,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "kanonenfieber": {
+        "s": "5VI8SBEX7uSvoHsdI5xNVJ",
+        "l": "kanonenfieber",
+        "g": [
+          "german black metal",
+          "melodic black",
+          "death metal"
+        ]
+      }
+    }
   },
   {
     "start": "2024-12-07T19:00:00",
@@ -130,29 +108,38 @@
     "eventGenres": null,
     "artists": {
       "pene corrida": {
-        "s": "1Hw2YwIpnSOWbtb8FlZcCa",
+        "s": "1hw2ywipnsowbtb8flzcca",
         "l": "pene%20corrida",
         "g": []
       }
     }
   },
   {
-    "start": "2024-12-22T20:00:00",
-    "end": "2024-12-22T01:00:00",
-    "venueEventUrl": "https://dehelling.nl/agenda/no-barrier-christmas-special-22-12-2024/",
-    "title": "No barrier christmas special",
+    "start": "4049-02-09T19:00:00",
+    "end": "4049-02-09T23:00:00",
+    "venueEventUrl": "https://dehelling.nl/agenda/ankor-09-02-2025/",
+    "title": "Ankor",
     "location": "dehelling",
-    "price": 14.7,
-    "shortText": "A very moshing Christmas!",
-    "longText": "../public/texts/dehelling/LWNocmlzdG1hcy1zcGVjaWFsLTIyLTEyLTIwMjQv.html",
-    "image": "../public/event-images/dehelling/LWNocmlzdG1hcy1zcGVjaWFsLTIyLTEyLTIwMjQv",
+    "price": 27.2,
+    "shortText": "Loodzware alt-metal met onweerstaanbare refreinen",
+    "longText": "../public/texts/dehelling/bmcubmwvYWdlbmRhL2Fua29yLTA5LTAyLTIwMjUv.html",
+    "image": "../public/event-images/dehelling/bmcubmwvYWdlbmRhL2Fua29yLTA5LTAyLTIwMjUv",
     "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "no barrier": {
-        "s": "2am0pROxk0wcIVgL5rZA3A",
-        "l": "no%20barrier",
-        "g": []
+      "ankor": {
+        "s": "6wADzvUWqgYWXigndo6Mmj",
+        "l": "ankor",
+        "g": [
+          "metal catala",
+          "pixie",
+          "slayer",
+          "spanish metal",
+          "heavy",
+          "power metal (early)",
+          " alternative metal",
+          "rock (later)"
+        ]
       }
     }
   },
@@ -168,6 +155,39 @@
     "image": "../public/event-images/dehelling/Z2VuZGEvZW5lbXktaW5zaWRlLTIxLTAzLTIwMjUv",
     "soldOut": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "enemy inside": {
+        "s": "4DX0ctdZRMWec9KCiigIXy",
+        "l": "enemy%20inside",
+        "g": [
+          "dark rock",
+          "gothic symphonic metal",
+          "slayer",
+          "thrash metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "4049-04-13T19:30:00",
+    "end": "4049-04-13T23:00:00",
+    "venueEventUrl": "https://dehelling.nl/agenda/anneke-van-giersbergen-13-04-2025/",
+    "title": "Anneke van Giersbergen",
+    "location": "dehelling",
+    "price": 26.2,
+    "shortText": "Dé rockzangeres des vaderlands",
+    "longText": "../public/texts/dehelling/a2UtdmFuLWdpZXJzYmVyZ2VuLTEzLTA0LTIwMjUv.html",
+    "image": "../public/event-images/dehelling/a2UtdmFuLWdpZXJzYmVyZ2VuLTEzLTA0LTIwMjUv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "anneke van giersbergen": {
+        "s": "6tzqjnkayty8hfqbeddf8v",
+        "l": "anneke%20van%20giersbergen",
+        "g": [
+          "metal"
+        ]
+      }
+    }
   }
 ]

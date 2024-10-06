@@ -1,62 +1,58 @@
 [
   {
-    "door": "2024-10-05T13:00:00",
-    "start": "2024-10-05T14:00:00",
-    "end": "2024-10-05T23:50:00",
-    "venueEventUrl": "https://nieuwenor.nl/programma/2024/10/05/rise-or-die",
-    "title": "Rise or die ft. mad­ball ",
+    "door": "2024-10-19T20:00:00",
+    "start": "2024-10-19T20:30:00",
+    "end": "2024-10-19T22:00:00",
+    "venueEventUrl": "https://nieuwenor.nl/programma/2024/10/19/the-sound-undercover",
+    "title": "The Sound Undercover",
     "location": "nieuwenor",
-    "price": 33.5,
-    "shortText": " nasty  +  born from pain  +  mind­war  +  lies!  +  swell  +  more! punk-emo-hardcore\nMet o.a. MAD­BALL, Nasty, Born From Pain, Mind­war, Lies!, Hater, Tem­pers Fray en Cold Grip! More TBA.",
-    "longText": "../public/texts/nieuwenor/b2dyYW1tYS8yMDI0LzEwLzA1L3Jpc2Utb3ItZGll.html",
-    "image": "../public/event-images/nieuwenor/b2dyYW1tYS8yMDI0LzEwLzA1L3Jpc2Utb3ItZGll",
+    "price": 21,
+    "shortText": "new-wave-ebm,tribute-cover\nRepost pre­sents: ​“Adri­an Bor­land 1957−1999” TOUR 2024",
+    "longText": "../public/texts/nieuwenor/MDI0LzEwLzE5L3RoZS1zb3VuZC11bmRlcmNvdmVy.html",
+    "image": "../public/event-images/nieuwenor/MDI0LzEwLzE5L3RoZS1zb3VuZC11bmRlcmNvdmVy",
     "soldOut": null,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "born from pain": {
-        "s": "29BUhhygenDpPj5pat2oOR",
-        "l": "born%20from%20pain",
+      "undercover": {
+        "s": "5EQMhqNfNmnIIAgwQX1WZ7",
+        "l": "undercover",
         "g": [
-          "beatdown",
-          "hardcore",
-          "lowlands hardcore"
+          "christian punk"
         ]
       },
-      "pain": {
-        "s": "0AuW7OCyKfFrsMbtHrYgIV",
-        "l": "pain",
+      "the sound": {
+        "s": "4hzCcF4Leos2sKnz79nwhz",
+        "l": "the%20sound",
         "g": [
-          "gangster rap",
-          "hip hop",
-          "rap rock",
-          "west coast rap"
+          "uk post-punk",
+          "technical grindcore",
+          "mathcore"
         ]
-      },
-      "rise or die": {
-        "s": "07KRFteGKgay4JXHEcSZPY",
-        "l": "rise%20or%20die",
-        "g": []
-      },
-      "swell": {
+      }
+    }
+  },
+  {
+    "door": "2024-10-26T19:30:00",
+    "start": "2024-10-26T20:30:00",
+    "end": "2024-10-26T23:00:00",
+    "venueEventUrl": "https://nieuwenor.nl/programma/2024/10/26/andre-hazes-band-xl-live-afscheidsshow",
+    "title": "And’re Hazes Band — Ik Geloof in Jou",
+    "location": "nieuwenor",
+    "price": 20,
+    "shortText": "tribute-cover\n20 jaar na de dood van André Hazes wordt de And’­re Hazes Band gereanimeerd",
+    "longText": "../public/texts/nieuwenor/emVzLWJhbmQteGwtbGl2ZS1hZnNjaGVpZHNzaG93.html",
+    "image": "../public/event-images/nieuwenor/emVzLWJhbmQteGwtbGl2ZS1hZnNjaGVpZHNzaG93",
+    "soldOut": null,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "band": {
         "s": null,
-        "l": "swell",
-        "g": []
-      },
-      "nasty": {
-        "s": "7GnX7pGXdWtLObs16B1mFB",
-        "l": "France",
+        "l": "band",
         "g": [
-          "beatdown",
-          "death/thrash metal"
-        ]
-      },
-      "lies!": {
-        "s": null,
-        "l": "United Kingdom",
-        "g": [
-          "thrash/groove metal",
-          "hardcore"
+          "heavy",
+          "power metal"
         ]
       }
     }
@@ -75,7 +71,7 @@
     "soldOut": null,
     "unavailable": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {}
   },
   {
     "door": "2024-11-22T19:30:00",
@@ -91,7 +87,78 @@
     "soldOut": null,
     "unavailable": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2024-11-29T19:30:00",
+    "start": "2024-11-29T20:00:00",
+    "end": "2024-11-29T23:00:00",
+    "venueEventUrl": "https://nieuwenor.nl/programma/2024/11/29/new-cool-collective",
+    "title": "New Cool Collective",
+    "location": "nieuwenor",
+    "price": 28.5,
+    "shortText": "funk-soul,jazz\nCham­pi­ons Lea­gue Jazz!",
+    "longText": "../public/texts/nieuwenor/MjAyNC8xMS8yOS9uZXctY29vbC1jb2xsZWN0aXZl.html",
+    "image": "../public/event-images/nieuwenor/MjAyNC8xMS8yOS9uZXctY29vbC1jb2xsZWN0aXZl",
+    "soldOut": null,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "door": "2024-11-30T18:30:00",
+    "start": "2024-11-30T19:00:00",
+    "end": "2024-11-30T22:45:00",
+    "venueEventUrl": "https://nieuwenor.nl/programma/2024/11/30/anvil",
+    "title": "Anvil",
+    "location": "nieuwenor",
+    "price": 28,
+    "shortText": "metal\nPowe­red by Hard in Heerlen",
+    "longText": "../public/texts/nieuwenor/Lm5sL3Byb2dyYW1tYS8yMDI0LzExLzMwL2Fudmls.html",
+    "image": "../public/event-images/nieuwenor/Lm5sL3Byb2dyYW1tYS8yMDI0LzExLzMwL2Fudmls",
+    "soldOut": null,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "anvil": {
+        "s": "0maNhqGx60ucjS4UaAH6cP",
+        "l": "anvil",
+        "g": [
+          "canadian metal",
+          "glam metal",
+          "hard rock",
+          "metal",
+          "speed metal",
+          "thrash metal",
+          "heavy",
+          "power metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2024-12-01T19:00:00",
+    "start": "2024-12-01T19:30:00",
+    "end": "2024-12-01T23:00:00",
+    "venueEventUrl": "https://nieuwenor.nl/programma/2024/12/01/graphic-nature",
+    "title": "Grap­hic Nature",
+    "location": "nieuwenor",
+    "price": 20,
+    "shortText": "metal\nPowe­red by Hard in Heerlen",
+    "longText": "../public/texts/nieuwenor/YW1tYS8yMDI0LzEyLzAxL2dyYXBoaWMtbmF0dXJl.html",
+    "image": "../public/event-images/nieuwenor/YW1tYS8yMDI0LzEyLzAxL2dyYXBoaWMtbmF0dXJl",
+    "soldOut": null,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
   },
   {
     "door": "2025-04-03T20:00:00",
@@ -107,39 +174,6 @@
     "soldOut": null,
     "unavailable": false,
     "eventGenres": null,
-    "artists": {
-      "clanofxymox": {
-        "s": "1wHmR7I0UlF58WFQexCPha",
-        "l": "clan%20of%20xymox",
-        "g": [
-          "dark wave",
-          "dream pop",
-          "ethereal wave",
-          "gothic rock"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-05-24T20:00:00",
-    "start": "2025-05-24T20:30:00",
-    "end": "2025-05-24T23:00:00",
-    "venueEventUrl": "https://nieuwenor.nl/programma/2025/05/24/joy-division-undercover",
-    "title": "Joy Divi­si­on Undercover",
-    "location": "nieuwenor",
-    "price": 23.5,
-    "shortText": "new-wave-ebm,tribute-cover\nClo­ser to Cur­tis Tour 2025",
-    "longText": "../public/texts/nieuwenor/LzA1LzI0L2pveS1kaXZpc2lvbi11bmRlcmNvdmVy.html",
-    "image": "../public/event-images/nieuwenor/LzA1LzI0L2pveS1kaXZpc2lvbi11bmRlcmNvdmVy",
-    "soldOut": null,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "joydivision": {
-        "s": null,
-        "l": "joy%20division",
-        "g": []
-      }
-    }
+    "artists": {}
   }
 ]

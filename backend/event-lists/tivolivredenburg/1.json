@@ -1,58 +1,144 @@
 [
   {
-    "start": "2024-08-20T20:15:00",
-    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/88984943/destroy-boys-20-08-2024",
-    "title": "Destroy Boys",
+    "door": "2024-10-12T18:00:00",
+    "start": "2024-10-12T22:44:00",
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/58040525/kamelot-12-10-2024",
+    "title": "Kamelot",
     "location": "tivolivredenburg",
-    "price": 24.35,
-    "shortText": "San Francisco punk",
-    "longText": "../public/texts/tivolivredenburg/OTg0OTQzL2Rlc3Ryb3ktYm95cy0yMC0wOC0yMDI0.html",
-    "image": "../public/event-images/tivolivredenburg/OTg0OTQzL2Rlc3Ryb3ktYm95cy0yMC0wOC0yMDI0",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
-    "start": "2024-08-24T18:00:00",
-    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/95332552/amon-amarth-24-08-2024",
-    "title": "Amon Amarth",
-    "location": "tivolivredenburg",
-    "price": 46.5,
-    "shortText": "Met supports Insomnium & Kanonenfieber",
-    "longText": "../public/texts/tivolivredenburg/NTMzMjU1Mi9hbW9uLWFtYXJ0aC0yNC0wOC0yMDI0.html",
-    "image": "../public/event-images/tivolivredenburg/NTMzMjU1Mi9hbW9uLWFtYXJ0aC0yNC0wOC0yMDI0",
+    "price": 42.75,
+    "shortText": "Awaken The World Tour II",
+    "longText": "../public/texts/tivolivredenburg/ZGEvNTgwNDA1MjUva2FtZWxvdC0xMi0xMC0yMDI0.html",
+    "image": "../public/event-images/tivolivredenburg/ZGEvNTgwNDA1MjUva2FtZWxvdC0xMi0xMC0yMDI0",
     "soldOut": true,
     "unavailable": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "kamelot": {
+        "s": "7gTbq5nTZGQIUgjEGXQpOS",
+        "l": "kamelot",
+        "g": [
+          "gothic symphonic metal",
+          "melodic metal",
+          "metal",
+          "power metal",
+          "progressive metal",
+          "speed metal",
+          "symphonic metal",
+          "progressive",
+          "melodic power metal"
+        ]
+      }
+    }
   },
   {
-    "start": "2024-09-18T20:00:00",
-    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/40997376/haken-18-09-2024",
-    "title": "Haken",
+    "start": "2024-11-14T20:00:00",
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/86907164/bombers-14-11-2024",
+    "title": "Bömbers",
     "location": "tivolivredenburg",
-    "price": 33.75,
-    "shortText": "featuring Fauna in full and a whole lot more!",
-    "longText": "../public/texts/tivolivredenburg/ZW5kYS80MDk5NzM3Ni9oYWtlbi0xOC0wOS0yMDI0.html",
-    "image": "../public/event-images/tivolivredenburg/ZW5kYS80MDk5NzM3Ni9oYWtlbi0xOC0wOS0yMDI0",
+    "price": 28.85,
+    "shortText": "The Ultimate Motörhead Tribute feat. Abbath",
+    "longText": "../public/texts/tivolivredenburg/ZGEvODY5MDcxNjQvYm9tYmVycy0xNC0xMS0yMDI0.html",
+    "image": "../public/event-images/tivolivredenburg/ZGEvODY5MDcxNjQvYm9tYmVycy0xNC0xMS0yMDI0",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "bömbers": {
+        "s": "64xk4gxdamvno5z8sfi5cn",
+        "l": "b%c3%b6mbers",
+        "g": [
+          "neo-rockabilly",
+          "uk rockabilly"
+        ]
+      }
+    }
   },
   {
-    "start": "2024-09-28T20:00:00",
-    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/93638394/guano-apes-28-09-2024",
-    "title": "Guano Apes",
+    "start": "2024-11-19T19:00:00",
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/49372000/yellowcard-19-11-2024",
+    "title": "Yellowcard",
     "location": "tivolivredenburg",
-    "price": 39.75,
-    "shortText": "Free The Monkey Tour 2024",
-    "longText": "../public/texts/tivolivredenburg/OTM2MzgzOTQvZ3Vhbm8tYXBlcy0yOC0wOS0yMDI0.html",
-    "image": "../public/event-images/tivolivredenburg/OTM2MzgzOTQvZ3Vhbm8tYXBlcy0yOC0wOS0yMDI0",
+    "price": 43.75,
+    "shortText": "Celebrating 20 Years of Ocean Avenue",
+    "longText": "../public/texts/tivolivredenburg/NDkzNzIwMDAveWVsbG93Y2FyZC0xOS0xMS0yMDI0.html",
+    "image": "../public/event-images/tivolivredenburg/NDkzNzIwMDAveWVsbG93Y2FyZC0xOS0xMS0yMDI0",
     "soldOut": true,
     "unavailable": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "yellowcard": {
+        "s": "3zxKH0qp3nBCuPZCZT5Vaf",
+        "l": "yellowcard",
+        "g": [
+          "alternative metal",
+          "pop punk",
+          "post-grunge",
+          "socal pop punk"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2024-11-24T20:15:00",
+    "start": "2024-11-24T22:14:00",
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/63178035/wardruna-24-11-2024",
+    "title": "Wardruna",
+    "location": "tivolivredenburg",
+    "price": 59.5,
+    "shortText": "Hypnotiserende, donkere folk met traditionele instrumenten",
+    "longText": "../public/texts/tivolivredenburg/YS82MzE3ODAzNS93YXJkcnVuYS0yNC0xMS0yMDI0.html",
+    "image": "../public/event-images/tivolivredenburg/YS82MzE3ODAzNS93YXJkcnVuYS0yNC0xMS0yMDI0",
+    "soldOut": true,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "wardruna": {
+        "s": "0nj6wloasaj1pn4vrdtpka",
+        "l": "wardruna",
+        "g": [
+          "nordic folk",
+          "rune folk",
+          "viking folk"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2024-11-28T18:00:00",
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/39470578/while-she-sleeps-28-11-2024",
+    "title": "While She Sleeps",
+    "location": "tivolivredenburg",
+    "price": 31.75,
+    "shortText": "Extra show | + supports: Malevolence, thrown & Resolve",
+    "longText": "../public/texts/tivolivredenburg/Nzgvd2hpbGUtc2hlLXNsZWVwcy0yOC0xMS0yMDI0.html",
+    "image": "../public/event-images/tivolivredenburg/Nzgvd2hpbGUtc2hlLXNsZWVwcy0yOC0xMS0yMDI0",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "while she sleeps": {
+        "s": "38ldiuxb548zghoey2an7a",
+        "l": "while%20she%20sleeps",
+        "g": [
+          "melodic metalcore",
+          "metalcore",
+          "uk metalcore"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2024-11-30T19:30:00",
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/62778406/sim-30-11-2024",
+    "title": "Sim",
+    "location": "tivolivredenburg",
+    "price": 26.35,
+    "shortText": "20th Anniversary Tour | Energieke mix van heavy metal en rock",
+    "longText": "../public/texts/tivolivredenburg/YWdlbmRhLzYyNzc4NDA2L3NpbS0zMC0xMS0yMDI0.html",
+    "image": "../public/event-images/tivolivredenburg/YWdlbmRhLzYyNzc4NDA2L3NpbS0zMC0xMS0yMDI0",
+    "soldOut": true,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
   }
 ]

@@ -26,7 +26,7 @@ export const workerConfig = {
     forceSet: 0,
   },
   
-  baroeg: { workerCount: 3, workerConcurrent: 2, forceSet: 0 },
+  baroeg: { workerCount: 1, workerConcurrent: 2, forceSet: 0 },
   bibelot: { workerCount: 1, workerConcurrent: 1, forceSet: 1 },
 
   cpunt: { workerCount: 1, workerConcurrent: 1, forceSet: 1 },
@@ -49,7 +49,9 @@ export const workerConfig = {
     forceSet: 2,
   },
   dynamo: { workerCount: 2, workerConcurrent: 1, forceSet: 3 },
-  effenaar: { workerCount: 2, workerConcurrent: 2, forceSet: 3 },
+  effenaar: {
+    workerCount: 3, CPUReq: 'high', workerConcurrent: 2, forceSet: 3, 
+  },
   gebouwt: {
     workerCount: 1, workerConcurrent: 1, CPUReq: 'high', forceSet: 3, 
   },  
@@ -59,12 +61,12 @@ export const workerConfig = {
   groeneengel: { workerCount: 1, workerConcurrent: 1, forceSet: 3 },
   iduna: { workerCount: 1, workerConcurrent: 1, forceSet: 4 },
   kavka: {
-    workerCount: 2,
+    workerCount: 1,
     workerConcurrent: 2,
     forceSet: 4,
   },
   melkweg: {
-    workerCount: 4,
+    workerCount: 2,
     CPUReq: 'high',
     workerConcurrent: 1,
     forceSet: 4,
@@ -76,7 +78,7 @@ export const workerConfig = {
   },
   metalfan: { workerCount: 1, CPUReq: 'low', workerConcurrent: 1 },
   metropool: {
-    workerCount: 3,
+    workerCount: 2,
     workerConcurrent: 1,
     CPUReq: 'high',
     forceSet: 4,
@@ -88,16 +90,16 @@ export const workerConfig = {
     workerConcurrent: 1,
     forceSet: 5,
   },
-  oosterpoort: { workerCount: 3, workerConcurrent: 1, forceSet: 5 },
+  oosterpoort: { workerCount: 1, workerConcurrent: 1, forceSet: 5 },
   p60: { workerCount: 1, workerConcurrent: 1, forceSet: 5 },
   paradiso: {
-    workerCount: 4,
+    workerCount: 2,
     workerConcurrent: 2,
     forceSet: 5,
     CPUReq: 'high',
   },
   patronaat: {
-    workerCount: 3, workerConcurrent: 1, forceSet: 6, CPUReq: 'high', 
+    workerCount: 2, workerConcurrent: 1, forceSet: 6, CPUReq: 'high', 
   },
   tivolivredenburg: {
     workerCount: 2, workerConcurrent: 2, forceSet: 6, CPUReq: 'low', 

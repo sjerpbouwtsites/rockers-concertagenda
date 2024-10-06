@@ -24,13 +24,13 @@ const dbsScraper = new AbstractScraper({
   },
   app: {
     harvest: {
-      dividers: [`&`],
-      dividerRex: "[&]", 
-      artistsIn: ['title', 'shortText'],
+      dividers: [`+`],
+      dividerRex: "[+]", 
+      artistsIn: ['title'],
     },
     mainPage: {
       requiredProperties: ['venueEventUrl', 'title', 'start'],
-      asyncCheckFuncs: ['refused', 'allowedEvent'],
+      asyncCheckFuncs: ['refused', 'allowedEvent', 'hasAllowedArtist'],
     },
     singlePage: {
       requiredProperties: ['venueEventUrl', 'title', 'price', 'start'],
@@ -66,6 +66,10 @@ dbsScraper.mainPage = async function () {
           title = title.replace(/\*?(sold\s?out|uitverkocht)\s?\*?\s?/i, '');
         }
         
+        if (title === 'pro- pain') {
+          title = "pro-pain"; // TODO HACK
+        }
+
         const res = {
           anker: `<a class='page-info' href='${document.location.href}'>${workerData.family} - main - ${title}</a>`,
           errors: [],

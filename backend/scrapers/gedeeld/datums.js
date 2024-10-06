@@ -169,7 +169,7 @@ export function mapToStartDate(event, regexMode, months) {
     const maandNaam = dateM[2];
     const maandGetal = months[maandNaam];
     if (huiMaandNr > maandGetal) {
-      jaar += jaar + 1;
+      jaar += 1;
     }
     const dag = dateM[1].padStart(2, '0');
     const maandGetalPadding = maandGetal.padStart(2, '0');

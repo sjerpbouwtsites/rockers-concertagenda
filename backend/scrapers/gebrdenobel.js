@@ -6,7 +6,6 @@ import AbstractScraper from './gedeeld/abstract-scraper.js';
 import getImage from './gedeeld/image.js';
 import terms from '../artist-db/store/terms.js';
 import {
-  mapToStartDate,
   mapToShortDate,
 } from './gedeeld/datums.js';
 import workTitleAndSlug from './gedeeld/slug.js';
@@ -59,66 +58,48 @@ scraper.mainPage = async function () {
   const { stopFunctie, page } = await this.mainPageStart();
 
   await this.waitTime(50);
-  await page.waitForSelector('[data-genre="heavy"]');
+  await page.waitForSelector('#edit-genre-20--3');
   await page.evaluate(() => {
-    document.querySelector('[data-genre="heavy"]').click();
+    document.querySelector('#edit-genre-20--3').click();
   });
   await this.waitTime(100);
-
-  await page.evaluate(() => {
-    document.querySelectorAll('.events').forEach((event) => {
-      if (!event.classList.contains('hidden')) {
-        event.classList.add('zichtbaar-dus');
-      }
-    });
-  });
-
-  await page.evaluate(() => {
-    document.querySelectorAll('.events').forEach((eventList) => {
-      if (!eventList.querySelector('.event-item')) return;
-      const timeV = eventList.querySelector('time').textContent.trim();
-      eventList.querySelector('.event-item').setAttribute('data-date', timeV);
-    });
-  });
-
+ 
   let rawEvents = await page.evaluate(
     // eslint-disable-next-line no-shadow
     ({ workerData, unavailabiltyTerms }) =>
       
-      Array.from(document.querySelectorAll('.zichtbaar-dus .event-item'))
+      Array.from(document.querySelectorAll('.event-teaser'))
         .map((eventEl) => {
-          const title = eventEl.querySelector('.media-heading')?.textContent ?? null;
+          const title = eventEl.querySelector('a.event .content h3')?.textContent ?? null;
           const res = {
             anker: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
             errors: [],
             title,
           };
 
-          res.mapToStartDate = eventEl.getAttribute('data-date');
+          // dit is een verkeerde waarde. De datetime geeft altijd kwart over 6 aan.
+          res.start = eventEl.querySelector('time').getAttribute('datetime');
+          res.startDate = res.start.substring(0, 10);
           
-          res.venueEventUrl = eventEl.querySelector('.jq-modal-trigger')?.getAttribute('data-url') ?? '';
+          res.venueEventUrl = eventEl.querySelector('a.event')?.href ?? '';
 
           const uaRex = new RegExp(unavailabiltyTerms.join('|'), 'gi');
           res.unavailable = !!eventEl.textContent.match(uaRex);
           res.soldOut =
-            !!eventEl.querySelector('.meta-info')?.textContent.match(/uitverkocht|sold\s?out/i) ??
+            !!eventEl.querySelector('.special-label')?.textContent.match(/uitverkocht|sold\s?out/i) ??
             null;
+
+          res.shortText = eventEl.querySelector('h3 ~ p')?.textContent ?? '';
+
           return res;
         }),
     { workerData, unavailabiltyTerms: terms.unavailability },
   ); // page.evaluate
 
   rawEvents = rawEvents
-    .map((event) => mapToStartDate(event, 'dag-maandNaam', this.months))
     .map(mapToShortDate)
     .map(this.isMusicEventCorruptedMapper)
     .map((re) => workTitleAndSlug(re, this._s.app.harvest.possiblePrefix));
-
-  // gebr de nobel cookies moet eerste laaten mislukken
-  // const eersteCookieEvent = { ...rawEvents[0] };
-  // eersteCookieEvent.title = `NEP EVENT VOOR COOKIES`;
-
-  // rawEvents.unshift(eersteCookieEvent);
 
   const eventGen = this.eventGenerator(rawEvents);
   // eslint-disable-next-line no-unused-vars
@@ -137,97 +118,28 @@ scraper.mainPage = async function () {
 };
 // #endregion                          MAIN PAGE
 
-scraper.cookiesNodig = async function (page) {
-  const nodig = await page.evaluate(() => document.querySelector('.consent__show'));
-
-  if (nodig) {
-    await page.waitForSelector('.consent__form__submit', {
-      timeout: 5000,
-    });
-
-    await page.evaluate(() => document.querySelector('.consent__form__submit').click());
-
-    await this.waitTime(3000);
-    await page.reload();
-
-    await page.waitForSelector('.event-table tr', {
-      timeout: 2500,
-    });
-  }
-  return true;
-};
-
 // #region      SINGLE PAGE
 scraper.singlePage = async function ({ page, event }) {
   const { stopFunctie } = await this.singlePageStart();
 
-  // cookies
-
-  try {
-    await this.cookiesNodig(page, event, stopFunctie);
-  } catch (cookiesError) {
-    return this.singlePageEnd({
-      pageInfo: {
-        errors: [
-          {
-            error: cookiesError,
-            remarks: `cookies handling issue <a href='${event.venueEventUrl}'>${event.title}</a>`,
-          },
-        ],
-      },
-      stopFunctie,
-      page,
-      event,
-    });
-  } // eind cookies
-
   const pageInfo = await page.evaluate(
     // eslint-disable-next-line no-shadow
-    ({ months }) => {
+    ({ event }) => {
       const res = {
         anker: `<a class='page-info' href='${document.location.href}'>${document.title}</a>`,
         errors: [],
       };
-      const eventDataRows = Array.from(document.querySelectorAll('.event-table tr'));
-      const dateRow = eventDataRows.find((row) => row.textContent.toLowerCase().includes('datum'));
-      const timeRow = eventDataRows.find(
-        (row) =>
-          row.textContent.toLowerCase().includes('open') ||
-          row.textContent.toLowerCase().includes('aanvang'),
-      );
 
-      if (dateRow) {
-        const startDateMatch = dateRow.textContent.match(/(\d+)\s?(\w+)\s?(\d{4})/);
-        if (Array.isArray(startDateMatch) && startDateMatch.length === 4) {
-          const day = startDateMatch[1].padStart(2, '0');
-          const month = months[startDateMatch[2]];
-          const year = startDateMatch[3];
-          res.startDate = `${year}-${month}-${day}`;
-        }
-
-        if (!timeRow) {
-          res.start = `${res.startDate}T00:00:00`;
-        } else {
-          const timeMatch = timeRow.textContent.match(/\d\d:\d\d/);
-          if (Array.isArray(timeMatch) && timeMatch.length) {
-            res.start = `${res.startDate}T${timeMatch[0]}:00`;
-          } else {
-            res.start = `${res.startDate}T00:00:00`;
-          }
-        }
-      }
-
-      res.shortText = document.querySelector('.hero-cta_left__text p')?.textContent ?? '';
-      if (document.querySelector('#shop-frame')) {
-        document.querySelector('#shop-frame').innerHTML = '';
-        document
-          .querySelector('#shop-frame')
-          .parentNode.removeChild(document.querySelector('#shop-frame'));
+      const startTijdText = document.querySelector('.info--tags')?.textContent ?? '';
+      const startTijdM = startTijdText.match(/\d\d:\d\d/);
+      if (Array.isArray(startTijdM)) {
+        res.start = event.start.replace(/\d\d:\d\d/, startTijdM[0]);
       }
 
       return res;
     },
-    { months: this.months, event },
+    { event },
+    
   );
 
   const imageRes = await getImage({
@@ -236,31 +148,31 @@ scraper.singlePage = async function ({ page, event }) {
     workerData,
     event,
     pageInfo,
-    selectors: ['.hero img'],
+    selectors: ['.event-page figure img'],
     mode: 'image-src',
   });
   pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
   pageInfo.image = imageRes.image;
 
-  await page.evaluate(() => {
-    document.querySelectorAll('.event-table tr').forEach((row) => {
-      if (row.textContent.includes('€')) {
-        row.classList.add('gebrdenobel-price-manual');
-      }
-    });
-  });
+  // await page.evaluate(() => {
+  //   document.querySelectorAll('.event-table tr').forEach((row) => {
+  //     if (row.textContent.includes('€')) {
+  //       row.classList.add('gebrdenobel-price-manual');
+  //     }
+  //   });
+  // });
 
-  await page.evaluate(() => {
-    document.querySelectorAll('.event-table tr').forEach((row) => {
-      if (row.textContent.includes('€')) row.classList.add('rij-heeft-prijs');
-    });
-  });
+  // await page.evaluate(() => {
+  //   document.querySelectorAll('.event-table tr').forEach((row) => {
+  //     if (row.textContent.includes('€')) row.classList.add('rij-heeft-prijs');
+  //   });
+  // });
 
   const priceRes = await this.getPriceFromHTML({
     page,
     event,
     pageInfo,
-    selectors: ['.gebrdenobel-price-manual', '.rij-heeft-prijs', '.event-table'],
+    selectors: ['.tickets'],
   });
   pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
   pageInfo.price = priceRes.price;

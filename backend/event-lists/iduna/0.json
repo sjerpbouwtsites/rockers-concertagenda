@@ -1,168 +1,39 @@
 [
   {
-    "door": "2024-06-30T15:00:00",
-    "start": "2024-06-30T15:30:00",
-    "end": "2024-06-30T19:30:00",
-    "venueEventUrl": "https://iduna.nl/agenda/vader/",
-    "title": "Vader",
-    "location": "iduna",
-    "price": 15,
-    "shortText": null,
-    "longText": "../public/texts/iduna/aHR0cHM6Ly9pZHVuYS5ubC9hZ2VuZGEvdmFkZXIv.html",
-    "image": "../public/event-images/iduna/aHR0cHM6Ly9pZHVuYS5ubC9hZ2VuZGEvdmFkZXIv",
-    "soldOut": false,
-    "unavailable": null,
-    "eventGenres": null,
-    "artists": {
-      "vader": {
-        "s": "2s5DSt9VBNzAn2TbtDHzFZ",
-        "l": "Poland",
-        "g": [
-          "black metal",
-          "brutal death metal",
-          "death metal",
-          "deathgrind",
-          "deathrash",
-          "melodic death metal",
-          "metal",
-          "polish death metal",
-          "polish metal",
-          "polish thrash metal",
-          "speed metal",
-          "technical death metal",
-          "death/thrash metal",
-          "death metal",
-          "thrash metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-07-12T20:00:00",
-    "start": "2024-07-12T20:30:00",
-    "end": "2024-07-12T23:00:00",
-    "venueEventUrl": "https://iduna.nl/agenda/the-varukers/",
-    "title": "The Varukers",
-    "location": "iduna",
-    "price": 20,
-    "shortText": null,
-    "longText": "../public/texts/iduna/L2lkdW5hLm5sL2FnZW5kYS90aGUtdmFydWtlcnMv.html",
-    "image": "../public/event-images/iduna/L2lkdW5hLm5sL2FnZW5kYS90aGUtdmFydWtlcnMv",
-    "soldOut": false,
-    "unavailable": null,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
-    "door": "2024-07-14T15:00:00",
-    "start": "2024-07-14T15:30:00",
-    "end": "2024-07-14T18:15:00",
-    "venueEventUrl": "https://iduna.nl/agenda/slimelord/",
-    "title": "Slimelord •Cryptworm",
-    "location": "iduna",
-    "price": 15,
-    "shortText": null,
-    "longText": "../public/texts/iduna/czovL2lkdW5hLm5sL2FnZW5kYS9zbGltZWxvcmQv.html",
-    "image": "../public/event-images/iduna/czovL2lkdW5hLm5sL2FnZW5kYS9zbGltZWxvcmQv",
-    "soldOut": false,
-    "unavailable": null,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
-    "door": "2024-09-12T18:00:00",
-    "start": "2024-09-12T18:30:00",
-    "end": "2024-09-12T23:00:00",
-    "venueEventUrl": "https://iduna.nl/agenda/nile/",
-    "title": "Nile",
-    "location": "iduna",
-    "price": 18,
-    "shortText": null,
-    "longText": "../public/texts/iduna/aHR0cHM6Ly9pZHVuYS5ubC9hZ2VuZGEvbmlsZS8=.html",
-    "image": "../public/event-images/iduna/aHR0cHM6Ly9pZHVuYS5ubC9hZ2VuZGEvbmlsZS8=",
-    "soldOut": false,
-    "unavailable": null,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
-    "door": "2024-09-14T16:00:00",
-    "start": "2024-09-14T16:30:00",
-    "end": "2024-09-14T23:00:00",
-    "venueEventUrl": "https://iduna.nl/agenda/countdown-to-collapse/",
-    "title": "Countdown toCollapse Punkfest",
-    "location": "iduna",
-    "price": 16,
-    "shortText": null,
-    "longText": "../public/texts/iduna/L2FnZW5kYS9jb3VudGRvd24tdG8tY29sbGFwc2Uv.html",
-    "image": "../public/event-images/iduna/L2FnZW5kYS9jb3VudGRvd24tdG8tY29sbGFwc2Uv",
-    "soldOut": false,
-    "unavailable": null,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
-    "door": "2024-10-05T19:00:00",
-    "start": "2024-10-05T19:30:00",
-    "end": "2024-10-05T23:30:00",
-    "venueEventUrl": "https://iduna.nl/agenda/septicflesh/",
-    "title": "Septicflesh",
-    "location": "iduna",
-    "price": 19,
-    "shortText": null,
-    "longText": "../public/texts/iduna/Ly9pZHVuYS5ubC9hZ2VuZGEvc2VwdGljZmxlc2gv.html",
-    "image": "../public/event-images/iduna/Ly9pZHVuYS5ubC9hZ2VuZGEvc2VwdGljZmxlc2gv",
-    "soldOut": false,
-    "unavailable": null,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
-    "door": "2024-10-11T19:30:00",
-    "start": "2024-10-11T20:00:00",
-    "end": "2024-10-11T23:00:00",
-    "venueEventUrl": "https://iduna.nl/agenda/slope/",
-    "title": "SlopeGrove Street • Lifecrusher ",
-    "location": "iduna",
-    "price": 19,
-    "shortText": null,
-    "longText": "../public/texts/iduna/aHR0cHM6Ly9pZHVuYS5ubC9hZ2VuZGEvc2xvcGUv.html",
-    "image": "../public/event-images/iduna/aHR0cHM6Ly9pZHVuYS5ubC9hZ2VuZGEvc2xvcGUv",
-    "soldOut": false,
-    "unavailable": null,
-    "eventGenres": null,
-    "artists": {
-      "slope": {
-        "s": "35fxvnr5oanOFB1JNB2Ber",
-        "l": "slope",
-        "g": [
-          "dutch rock"
-        ]
-      }
-    }
-  },
-  {
     "door": "2024-10-11T18:30:00",
     "start": "2024-10-11T19:00:00",
     "end": "2024-10-11T23:00:00",
     "venueEventUrl": "https://iduna.nl/agenda/kamelot/",
-    "title": "KamelotCharlotte • Ad Infinitum",
+    "title": "Kamelot • Charlotte • Ad Infinitum",
     "location": "iduna",
     "price": 18,
     "shortText": null,
     "longText": "../public/texts/iduna/dHBzOi8vaWR1bmEubmwvYWdlbmRhL2thbWVsb3Qv.html",
     "image": "../public/event-images/iduna/dHBzOi8vaWR1bmEubmwvYWdlbmRhL2thbWVsb3Qv",
-    "soldOut": false,
+    "soldOut": true,
     "unavailable": null,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "ad infinitum": {
+        "s": "2X3qFQFHkm1sOGo5ppIoSD",
+        "l": "ad%20infinitum",
+        "g": [
+          "gothic symphonic metal",
+          "melodic metal",
+          "slayer",
+          "symphonic metal",
+          "symphonic metal",
+          "rock"
+        ]
+      }
+    }
   },
   {
     "door": "2024-10-17T20:00:00",
     "start": "2024-10-17T20:30:00",
     "end": "2024-10-17T23:00:00",
     "venueEventUrl": "https://iduna.nl/agenda/eleine/",
-    "title": "Eleine",
+    "title": "EleineWe shall remain tour",
     "location": "iduna",
     "price": 20,
     "shortText": null,
@@ -171,7 +42,18 @@
     "soldOut": false,
     "unavailable": null,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "eleine": {
+        "s": "2L2rV1gDa17HwFcFCWBIAx",
+        "l": "eleine",
+        "g": [
+          "gothic symphonic metal",
+          "slayer",
+          "symphonic metal",
+          "symphonic metal"
+        ]
+      }
+    }
   },
   {
     "door": "2024-10-26T14:00:00",
@@ -184,10 +66,10 @@
     "shortText": null,
     "longText": "../public/texts/iduna/aHVuZWtvcGZlc3RpdmFsLWxvbGx5ZnJldHRlcnMv.html",
     "image": "../public/event-images/iduna/aHVuZWtvcGZlc3RpdmFsLWxvbGx5ZnJldHRlcnMv",
-    "soldOut": false,
+    "soldOut": true,
     "unavailable": null,
     "eventGenres": null,
-    "artists": null
+    "artists": {}
   },
   {
     "door": "2024-10-26T20:00:00",
@@ -203,7 +85,7 @@
     "soldOut": true,
     "unavailable": null,
     "eventGenres": null,
-    "artists": null
+    "artists": {}
   },
   {
     "door": "2024-11-09T20:00:00",
@@ -230,6 +112,22 @@
     }
   },
   {
+    "door": "2024-11-15T20:00:00",
+    "start": "2024-11-15T20:30:00",
+    "end": "2024-11-15T23:00:00",
+    "venueEventUrl": "https://iduna.nl/agenda/ramones-50th-3-tributes-havana-affair-rumbones-the-brats/",
+    "title": "Ramones 50th& 3 Tributes",
+    "location": "iduna",
+    "price": 20,
+    "shortText": null,
+    "longText": "../public/texts/iduna/YW5hLWFmZmFpci1ydW1ib25lcy10aGUtYnJhdHMv.html",
+    "image": "../public/event-images/iduna/YW5hLWFmZmFpci1ydW1ib25lcy10aGUtYnJhdHMv",
+    "soldOut": false,
+    "unavailable": null,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
     "door": "2024-12-01T15:00:00",
     "start": "2024-12-01T15:30:00",
     "end": "2024-12-01T18:00:00",
@@ -244,24 +142,118 @@
     "unavailable": null,
     "eventGenres": null,
     "artists": {
-      "pain": {
-        "s": "0AuW7OCyKfFrsMbtHrYgIV",
-        "l": "pain",
-        "g": [
-          "gangster rap",
-          "hip hop",
-          "rap rock",
-          "west coast rap"
-        ]
-      },
       "pro-pain": {
-        "s": "56F64pmwSSCcmS1CxAnPk8",
+        "s": "56f64pmwssccms1cxanpk8",
         "l": "pro-pain",
         "g": [
           "groove metal",
           "old school thrash",
           "thrash metal",
           "southern metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2024-12-06T20:00:00",
+    "start": "2024-12-06T20:30:00",
+    "end": "2024-12-06T23:00:00",
+    "venueEventUrl": "https://iduna.nl/agenda/marco-mendoza-band/",
+    "title": "Marco MendozaBand",
+    "location": "iduna",
+    "price": 20,
+    "shortText": null,
+    "longText": "../public/texts/iduna/Lm5sL2FnZW5kYS9tYXJjby1tZW5kb3phLWJhbmQv.html",
+    "image": "../public/event-images/iduna/Lm5sL2FnZW5kYS9tYXJjby1tZW5kb3phLWJhbmQv",
+    "soldOut": false,
+    "unavailable": null,
+    "eventGenres": null,
+    "artists": {
+      "band": {
+        "s": null,
+        "l": "band",
+        "g": [
+          "heavy",
+          "power metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2024-12-13T20:00:00",
+    "start": "2024-12-13T20:30:00",
+    "end": "2024-12-13T23:00:00",
+    "venueEventUrl": "https://iduna.nl/agenda/neuk/",
+    "title": "Neuk!",
+    "location": "iduna",
+    "price": 20,
+    "shortText": null,
+    "longText": "../public/texts/iduna/aHR0cHM6Ly9pZHVuYS5ubC9hZ2VuZGEvbmV1ay8=.html",
+    "image": "../public/event-images/iduna/aHR0cHM6Ly9pZHVuYS5ubC9hZ2VuZGEvbmV1ay8=",
+    "soldOut": false,
+    "unavailable": null,
+    "eventGenres": null,
+    "artists": {
+      "neuk!": {
+        "s": "61z4arbgymgk3nsxcyazoa",
+        "l": "neuk!",
+        "g": []
+      }
+    }
+  },
+  {
+    "door": "2025-01-18T19:00:00",
+    "start": "2025-01-18T19:30:00",
+    "end": "2025-01-18T23:55:00",
+    "venueEventUrl": "https://iduna.nl/agenda/monsters-of-rock-pantera-iron-maiden-ac-dc-bon-scott/",
+    "title": "A Tribute ToMonsters of Rock",
+    "location": "iduna",
+    "price": 19,
+    "shortText": null,
+    "longText": "../public/texts/iduna/YS1pcm9uLW1haWRlbi1hYy1kYy1ib24tc2NvdHQv.html",
+    "image": "../public/event-images/iduna/YS1pcm9uLW1haWRlbi1hYy1kYy1ib24tc2NvdHQv",
+    "soldOut": false,
+    "unavailable": null,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "door": "2025-02-02T13:00:00",
+    "start": "2025-02-02T13:30:00",
+    "end": "2025-02-02T22:30:00",
+    "venueEventUrl": "https://iduna.nl/agenda/drachten-deathfest/",
+    "title": "DrachtenDeathfest",
+    "location": "iduna",
+    "price": 13,
+    "shortText": null,
+    "longText": "../public/texts/iduna/Lm5sL2FnZW5kYS9kcmFjaHRlbi1kZWF0aGZlc3Qv.html",
+    "image": "../public/event-images/iduna/Lm5sL2FnZW5kYS9kcmFjaHRlbi1kZWF0aGZlc3Qv",
+    "soldOut": false,
+    "unavailable": null,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "door": "2025-04-20T15:00:00",
+    "start": "2025-04-20T15:30:00",
+    "end": "2025-04-20T18:00:00",
+    "venueEventUrl": "https://iduna.nl/agenda/james-leg/",
+    "title": "James Leg",
+    "location": "iduna",
+    "price": 15,
+    "shortText": null,
+    "longText": "../public/texts/iduna/czovL2lkdW5hLm5sL2FnZW5kYS9qYW1lcy1sZWcv.html",
+    "image": "../public/event-images/iduna/czovL2lkdW5hLm5sL2FnZW5kYS9qYW1lcy1sZWcv",
+    "soldOut": false,
+    "unavailable": null,
+    "eventGenres": null,
+    "artists": {
+      "james leg": {
+        "s": "6jNXAv3sQluGbLUdheWe78",
+        "l": "james%20leg",
+        "g": [
+          "garage punk blues",
+          "modern blues rock"
         ]
       }
     }

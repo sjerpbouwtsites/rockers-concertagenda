@@ -1,73 +1,41 @@
 [
   {
-    "start": "2024-07-17T20:00:00",
-    "venueEventUrl": "https://neushoorn.nl/production/nervana/",
-    "title": "Nervana",
+    "start": "2024-10-26T14:30:00",
+    "venueEventUrl": "https://neushoorn.nl/production/fajtfest-fryslan/",
+    "title": "Fajtfest Fryslân",
+    "location": "neushoorn",
+    "price": 15,
+    "shortText": "Bruut gitaargeweld op Fryske editie van iconisch metal/-core festival",
+    "longText": "../public/texts/neushoorn/bC9wcm9kdWN0aW9uL2ZhanRmZXN0LWZyeXNsYW4v.html",
+    "image": "../public/event-images/neushoorn/bC9wcm9kdWN0aW9uL2ZhanRmZXN0LWZyeXNsYW4v",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2024-11-15T20:00:00",
+    "venueEventUrl": "https://neushoorn.nl/production/acindc-twisted-sisters/",
+    "title": "ACinDC + Twisted Sisters",
     "location": "neushoorn",
     "price": 19,
-    "shortText": "The American Nirvana tribute Extra tickets",
-    "longText": "../public/texts/neushoorn/dXNob29ybi5ubC9wcm9kdWN0aW9uL25lcnZhbmEv.html",
-    "image": "../public/event-images/neushoorn/dXNob29ybi5ubC9wcm9kdWN0aW9uL25lcnZhbmEv",
+    "shortText": "pure rock 'n roll op de planken",
+    "longText": "../public/texts/neushoorn/dWN0aW9uL2FjaW5kYy10d2lzdGVkLXNpc3RlcnMv.html",
+    "image": "../public/event-images/neushoorn/dWN0aW9uL2FjaW5kYy10d2lzdGVkLXNpc3RlcnMv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "nervana": {
+      "twisted sisters": {
+        "s": "2pmpxmoxfmnbux4ydjz4gq",
+        "l": "twisted%20sisters",
+        "g": []
+      },
+      "acindc": {
         "s": null,
-        "l": null,
+        "l": "acindc",
         "g": [
-          "grunge"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2024-09-22T19:00:00",
-    "venueEventUrl": "https://neushoorn.nl/production/nh-cafe-father-befouled-bra-fossilization-usa-stoflik-omskot-frl/",
-    "title": "NH Café: Fossilization (BRA) ",
-    "location": "neushoorn",
-    "price": null,
-    "shortText": " Father Befouled (USA)  +  Stoflik Omskot (FRL) Underground death metal meesters",
-    "longText": "../public/texts/neushoorn/emF0aW9uLXVzYS1zdG9mbGlrLW9tc2tvdC1mcmwv.html",
-    "image": "../public/event-images/neushoorn/emF0aW9uLXVzYS1zdG9mbGlrLW9tc2tvdC1mcmwv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
-    "start": "2024-10-05T13:00:00",
-    "venueEventUrl": "https://neushoorn.nl/production/into-the-void/",
-    "title": "Into The Void",
-    "location": "neushoorn",
-    "price": 49,
-    "shortText": "Internationaal stoner-, sludge- en doomfestival",
-    "longText": "../public/texts/neushoorn/bi5ubC9wcm9kdWN0aW9uL2ludG8tdGhlLXZvaWQv.html",
-    "image": "../public/event-images/neushoorn/bi5ubC9wcm9kdWN0aW9uL2ludG8tdGhlLXZvaWQv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
-    "start": "2024-11-03T20:00:00",
-    "venueEventUrl": "https://neushoorn.nl/production/master-boot-record/",
-    "title": "Master boot record",
-    "location": "neushoorn",
-    "price": 18,
-    "shortText": "Zware metal riffs en elektronische beats met de retroklanken van vintage computers en chiptune muziek",
-    "longText": "../public/texts/neushoorn/cHJvZHVjdGlvbi9tYXN0ZXItYm9vdC1yZWNvcmQv.html",
-    "image": "../public/event-images/neushoorn/cHJvZHVjdGlvbi9tYXN0ZXItYm9vdC1yZWNvcmQv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "master boot record": {
-        "s": "77s5NAGQbxu8oLstaqSwHE",
-        "l": "master%20boot%20record",
-        "g": [
-          "darksynth",
-          "metal"
+          "hard rock"
         ]
       }
     }
@@ -75,29 +43,98 @@
   {
     "start": "2024-12-01T19:00:00",
     "venueEventUrl": "https://neushoorn.nl/production/nh-cafe-civerous-crematory-stench-deadspeak/",
-    "title": "NH Café: Civerous ",
+    "title": "Civerous + Crematory Stench + Deadspeak",
     "location": "neushoorn",
     "price": 12,
-    "shortText": " Crematory Stench  +  Deadspeak Smerige onheilspellende death metal",
+    "shortText": "Smerige onheilspellende death metal",
     "longText": "../public/texts/neushoorn/dXMtY3JlbWF0b3J5LXN0ZW5jaC1kZWFkc3BlYWsv.html",
     "image": "../public/event-images/neushoorn/dXMtY3JlbWF0b3J5LXN0ZW5jaC1kZWFkc3BlYWsv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "crematory stench": {
+        "s": "2beNfSm9dIS8uUXIEhxrHu",
+        "l": "crematory%20stench",
+        "g": [
+          "cavernous death metal",
+          "death metal"
+        ]
+      },
+      "deadspeak": {
+        "s": "5U0DUA9QRLtIrKIYfp8qiw",
+        "l": "deadspeak",
+        "g": [
+          "death metal"
+        ]
+      },
+      "civerous": {
+        "s": "02OUZObgphMvZtxecx8bYk",
+        "l": "civerous",
+        "g": [
+          "cavernous death metal",
+          "black",
+          "death",
+          "doom metal"
+        ]
+      }
+    }
   },
   {
-    "start": "4049-01-17T19:30:00",
-    "venueEventUrl": "https://neushoorn.nl/production/ramones-alive-ode-to-50-years-ramones/",
-    "title": "Ramones Alive – Ode to 50 years Ramones",
+    "start": "2024-12-13T20:00:00",
+    "venueEventUrl": "https://neushoorn.nl/production/texoprint/",
+    "title": "Texoprint",
     "location": "neushoorn",
-    "price": 19.5,
-    "shortText": "Veteranen uit de Nederlandse rockscene bundelen de krachten samen",
-    "longText": "../public/texts/neushoorn/YWxpdmUtb2RlLXRvLTUwLXllYXJzLXJhbW9uZXMv.html",
-    "image": "../public/event-images/neushoorn/YWxpdmUtb2RlLXRvLTUwLXllYXJzLXJhbW9uZXMv",
+    "price": 5,
+    "shortText": "Nederland’s meest intense noiserock trio",
+    "longText": "../public/texts/neushoorn/aG9vcm4ubmwvcHJvZHVjdGlvbi90ZXhvcHJpbnQv.html",
+    "image": "../public/event-images/neushoorn/aG9vcm4ubmwvcHJvZHVjdGlvbi90ZXhvcHJpbnQv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "texoprint": {
+        "s": "3Crxw3x5GQwDrhY51BNcMi",
+        "l": "texoprint",
+        "g": [
+          "dutch post-punk"
+        ]
+      }
+    }
+  },
+  {
+    "start": "4049-02-01T19:30:00",
+    "venueEventUrl": "https://neushoorn.nl/production/distant-enterprise-earth/",
+    "title": "Distant + Enterprise Earth",
+    "location": "neushoorn",
+    "price": 23,
+    "shortText": "Een nacht van ongekende brutaliteit",
+    "longText": "../public/texts/neushoorn/dGlvbi9kaXN0YW50LWVudGVycHJpc2UtZWFydGgv.html",
+    "image": "../public/event-images/neushoorn/dGlvbi9kaXN0YW50LWVudGVycHJpc2UtZWFydGgv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "distant": {
+        "s": "7dfpBi0QvO9FmlhBK6XHwJ",
+        "l": "distant",
+        "g": [
+          "deathcore",
+          "downtempo deathcore",
+          "slamming deathcore",
+          "groove metal"
+        ]
+      },
+      "enterprise earth": {
+        "s": "1l3cAmALCtGbjWGVtRwhoh",
+        "l": "enterprise%20earth",
+        "g": [
+          "brutal deathcore",
+          "deathcore",
+          "melodic metalcore",
+          "progressive deathcore"
+        ]
+      }
+    }
   }
 ]

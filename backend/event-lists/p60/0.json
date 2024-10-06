@@ -1,86 +1,7 @@
 [
   {
-    "door": "2024-06-27T18:00:00Z",
-    "start": "2024-06-27T20:30:00Z",
-    "venueEventUrl": "https://p60.nl/2024/radar-jun",
-    "title": "Yellowgreen, Bazes, KASETO & The Kruuk",
-    "location": "p60",
-    "price": 6.508,
-    "shortText": "IN P60'S RADAR XL",
-    "longText": "../public/texts/p60/aHR0cHM6Ly9wNjAubmwvMjAyNC9yYWRhci1qdW4=.html",
-    "image": "../public/event-images/p60/aHR0cHM6Ly9wNjAubmwvMjAyNC9yYWRhci1qdW4=",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "bazes": {
-        "s": null,
-        "l": "bazes",
-        "g": []
-      },
-      "yellowgreen": {
-        "s": null,
-        "l": "yellowgreen",
-        "g": []
-      },
-      "p60's radar": {
-        "s": null,
-        "l": "p60's%20radar",
-        "g": []
-      }
-    }
-  },
-  {
-    "door": "2024-08-16T18:00:00Z",
-    "start": "2024-08-16T20:00:00Z",
-    "venueEventUrl": "https://p60.nl/2024/ignite",
-    "title": "Ignite",
-    "location": "p60",
-    "price": 19.502,
-    "shortText": "SUPPORT: CURSELIFTER & SWELL",
-    "longText": "../public/texts/p60/aHR0cHM6Ly9wNjAubmwvMjAyNC9pZ25pdGU=.html",
-    "image": "../public/event-images/p60/aHR0cHM6Ly9wNjAubmwvMjAyNC9pZ25pdGU=",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "swell": {
-        "s": null,
-        "l": "swell",
-        "g": []
-      }
-    }
-  },
-  {
-    "door": "2024-09-04T17:00:00Z",
-    "start": "2024-09-04T19:15:00Z",
-    "venueEventUrl": "https://p60.nl/2024/nile",
-    "title": "Nile",
-    "location": "p60",
-    "price": 22.5023,
-    "shortText": "+ HIDEOUS DIVINTY, INTREPID & PESTIFER",
-    "longText": "../public/texts/p60/aHR0cHM6Ly9wNjAubmwvMjAyNC9uaWxl.html",
-    "image": "../public/event-images/p60/aHR0cHM6Ly9wNjAubmwvMjAyNC9uaWxl",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "hideous": {
-        "s": "4XOpU6j3NQ37JfIaWA4ySH",
-        "l": "hideous",
-        "g": [
-          "brutal death metal",
-          "deathgrind",
-          "italian death metal",
-          "technical brutal death metal",
-          "technical death metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-10-18T18:00:00Z",
-    "start": "2024-10-18T21:00:00Z",
+    "door": "2024-10-18T17:00:00Z",
+    "start": "2024-10-18T19:30:00Z",
     "venueEventUrl": "https://p60.nl/2024/heavy-metal-maniacs-vr",
     "title": "Heavy Metal Maniacs Festival",
     "location": "p60",
@@ -92,9 +13,26 @@
     "unavailable": false,
     "eventGenres": null,
     "artists": {
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
+        ]
+      },
+      "satan's fall": {
+        "s": "2UAI07YLI30I3lZN91lqbO",
+        "l": "satan's%20fall",
+        "g": [
+          "finnish heavy metal",
+          "nwothm",
+          "heavy",
+          "speed metal"
+        ]
+      },
       "obstruktor": {
-        "s": "6ROyEbI1PoGfKEFyLnvShP",
-        "l": "Netherlands",
+        "s": "6royebi1pogfkefylnvshp",
+        "l": "netherlands",
         "g": [
           "speed/thrash metal",
           "metal"
@@ -115,6 +53,64 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
+        ]
+      },
+      "fingernails": {
+        "s": "4qNP3aG4wJeDWttXkvIuqb",
+        "l": "fingernails",
+        "g": [
+          "thrash",
+          "speed metal"
+        ]
+      },
+      "hitten": {
+        "s": "78LVpk0xhPtf6ptfZjaw5h",
+        "l": "hitten",
+        "g": [
+          "neo-trad metal",
+          "nwothm",
+          "heavy metal",
+          "hard rock"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2024-10-24T18:00:00Z",
+    "start": "2024-10-24T21:00:00Z",
+    "venueEventUrl": "https://p60.nl/the-sound-undercover",
+    "title": "The Sound Undercover",
+    "location": "p60",
+    "price": 15.5017,
+    "shortText": "EEN THE SOUND TRIBUTE",
+    "longText": "../public/texts/p60/Oi8vcDYwLm5sL3RoZS1zb3VuZC11bmRlcmNvdmVy.html",
+    "image": "../public/event-images/p60/Oi8vcDYwLm5sL3RoZS1zb3VuZC11bmRlcmNvdmVy",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "undercover": {
+        "s": "5EQMhqNfNmnIIAgwQX1WZ7",
+        "l": "undercover",
+        "g": [
+          "christian punk"
+        ]
+      },
+      "the sound": {
+        "s": "4hzCcF4Leos2sKnz79nwhz",
+        "l": "the%20sound",
+        "g": [
+          "uk post-punk",
+          "technical grindcore",
+          "mathcore"
+        ]
+      }
+    }
   }
 ]

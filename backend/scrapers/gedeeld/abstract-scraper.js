@@ -15,15 +15,21 @@ import _getPriceFromHTML from './price.js';
 import shell from '../../mods/shell.js';
 import {
   asyncIsAllowedEvent, asyncIsRefused, asyncForbiddenTerms, 
-  asyncSaveAllowedEvent, asyncSaveRefused, asyncHarvestArtists, asyncScanTitleForAllowedArtists, 
+  asyncSaveAllowedEvent, asyncSaveRefused, asyncHarvestArtists, asyncScanEventForAllowedArtists, 
   asyncSpotifyConfirmation, asyncGoodTerms, asyncExplicitEventCategories,
-  asyncMetalEncyclopediaConfirmation, asyncIfNotAllowedRefuse, asyncHasAllowedArtist, asyncSuccess, asyncFailure,
+  asyncMetalEncyclopediaConfirmation, asyncIfNotAllowedRefuse, asyncHasAllowedArtist, 
+  asyncSuccess, asyncFailure,
 } from './artist-db-interface.js';
 import DbInterFaceToScraper from './db-interface-to-scraper.js';
 
 // #endregion                                              IMPORTS
 
+// DEZE FUNCTIES ZIJN BESCHIKBAAR VANUIT ARTIST-DB-INTERFACE MAAR WORDEN NU NOG NIET GEBRUIKT
+// saveAllowedArtist: 'asyncSaveAllowedArtist',
+// saveUnclearArtist: 'asyncSaveUnclearArtist',
+
 export default class AbstractScraper extends ScraperConfig {
+  // #region                              PROPERTIES
   qwm;
 
   browser;
@@ -53,11 +59,12 @@ export default class AbstractScraper extends ScraperConfig {
   skipFurtherChecks = [];
 
   timesScrolled = 0;
+  
+  // #endregion                           PROPERTIES
 
-  // #region                             CONSTRUCTOR & INSTALL
+  // #region                              CONSTR & INSTALL
   constructor(obj) {
     super(obj);
-
     this.install();
   }
 
@@ -80,8 +87,8 @@ export default class AbstractScraper extends ScraperConfig {
     this.asyncSaveRefused = asyncSaveRefused;
     this.asyncSaveRefused.bind(this);
 
-    this.asyncScanTitleForAllowedArtists = asyncScanTitleForAllowedArtists;
-    this.asyncScanTitleForAllowedArtists.bind(this);
+    this.asyncScanEventForAllowedArtists = asyncScanEventForAllowedArtists;
+    this.asyncScanEventForAllowedArtists.bind(this);
 
     this.asyncSpotifyConfirmation = asyncSpotifyConfirmation;
     this.asyncSpotifyConfirmation.bind(this);
@@ -110,7 +117,7 @@ export default class AbstractScraper extends ScraperConfig {
     this.asyncFailure = asyncFailure;
     this.asyncFailure.bind(this);
   }
-  // #endregion                                                CONSTRUCTOR & INSTALL
+  // #endregion                           CONSTR & INSTALL
 
   async getPriceFromHTML({
     page, event, pageInfo, selectors,
@@ -236,6 +243,10 @@ export default class AbstractScraper extends ScraperConfig {
   }
 
   async checkBaseEventAvailable(searching) {
+    if (!shell?.keepBaseEvents) {
+      return false;
+    } 
+    
     const baseEventFiles = fs.readdirSync(fsDirections.baseEventlists);
     const theseBaseEvents = baseEventFiles.filter((filenames) => filenames.includes(searching));
     if (!theseBaseEvents || theseBaseEvents.length < 1) {
@@ -467,6 +478,10 @@ export default class AbstractScraper extends ScraperConfig {
       if (checkResult.isError) {
         // artist-db-interface gooit al de thread dicht
         // maar dat je weet dat success ook error kan zijn.
+        this.dirtyDebug({
+          title: 'rawEventsAsyncCheck checkresult isError',
+          checkResult,
+        });
         this.handleError(new Error('hier zou geen error moeten zijn?'), 'error te veel in raw events async check', 'close-thread');
       }
 
@@ -548,6 +563,10 @@ export default class AbstractScraper extends ScraperConfig {
    * @memberof AbstractScraper
    */
   async processSingleMusicEvent(eventsList = []) {
+    if (debugSettings.vertraagScraper) {
+      await this.waitTime(250);
+    }
+
     // verwerk events 1
     const useableEventsList = eventsList.map((a) => a);
     if (useableEventsList.length === 0) return useableEventsList;
@@ -580,6 +599,7 @@ export default class AbstractScraper extends ScraperConfig {
           `<a href='${singleEvent.venueEventUrl}'>😵 Corrupted ${singleEvent.title}</a> ${singleEvent.corrupted}`,
         ),
       );
+      this.asyncSaveRefused(singleEvent);
       return useableEventsList.length
         ? this.processSingleMusicEvent(useableEventsList)
         : useableEventsList;
@@ -611,6 +631,7 @@ export default class AbstractScraper extends ScraperConfig {
           title: `💀 ${mergedEvent.corrupted}`,
           event: `<a class='single-event-check-notice single-event-check-notice--failure' href='${mergedEvent.venueEventUrl}'>${mergedEvent.title}</a> Corr.`,
         });
+        this.asyncSaveRefused(mergedEvent);
       }
       if (mergedEvent.unavailable) {
         this.dirtyDebug({
@@ -636,12 +657,31 @@ export default class AbstractScraper extends ScraperConfig {
 
     const mergedEventCheckRes = await this.singlePageAsyncCheck(mergedEvent);
     mergedEventCheckRes.event = mergedEvent;
-    
-    if (!this.harvesterWaarschuwinggegeven) {
-      this.handleError(new Error('harvest artist uitgeschakeld'), 'harvester moet nog vernieuwd worden', 'notice');
-      this.harvesterWaarschuwinggegeven = true;
-    } 
-    // await this.asyncHarvestArtists(mergedEvent);
+
+    if ((!mergedEvent?.artists || typeof mergedEvent?.artists !== 'object' || mergedEvent.artists === null)) mergedEvent.artists = {};
+    const harvestedArtists = await this.asyncHarvestArtists(mergedEvent);
+
+    if (debugSettings.debugHarvestIntegratie) {
+      this.dirtyLog({ title:  `harvested artists res voor ${mergedEvent.title}`, harvestedArtists });
+    }
+
+    if (harvestedArtists && harvestedArtists.success) {
+      const harvestedArtistsNames = Object.keys(harvestedArtists.data);
+      const currentEventArtistNames = Object.keys(mergedEvent?.artists ?? {});
+      if (debugSettings.debugHarvestIntegratie) {
+        this.dirtyLog({
+          title: `harvested artists data sp23`, data: harvestedArtists.data, harvestedArtistsNames, currentEventArtistNames, 
+        });
+      }
+      harvestedArtistsNames.forEach((han) => {
+        if (currentEventArtistNames.includes(harvestedArtistsNames)) return;
+        mergedEvent.artists[han] = {
+          s: harvestedArtists.data[han][1],
+          l: han,
+          g: harvestedArtists.data[han][3],
+        };
+      });
+    }
 
     // this.singlePageAsyncCheckDebugger(mergedEventCheckRes);
 
@@ -654,13 +694,13 @@ export default class AbstractScraper extends ScraperConfig {
     } 
     
     if (!mergedEventCheckRes.isFailed) {
-      const artistsRes = await this.asyncScanTitleForAllowedArtists(mergedEvent);
+      const artistsRes = await this.asyncScanEventForAllowedArtists(mergedEvent);
       this.artistScanDebugger(mergedEventCheckRes, artistsRes);
 
       if (artistsRes.isSuccess) {
-        mergedEvent.artists = artistsRes.data;
-      } else {
-        mergedEvent.artists = null;
+        mergedEvent.artists = Object.assign(mergedEvent.artists, artistsRes.data);
+      } else if (artistsRes.isError) {
+        this.handleError(artistsRes.data.error, `artist scan abs scraper single page post check err${mergedEvent.title}`, 'notice', artistsRes);
       }
     } 
     
@@ -669,12 +709,11 @@ export default class AbstractScraper extends ScraperConfig {
     if (mergedEventCheckRes.isSuccess && !mergedEvent.unavailable && !mergedEvent.corrupted) {
       toRegister.artists = mergedEvent.artists;
       this._events.push(toRegister);
-      this.asyncSaveAllowedEvent(mergedEvent);
+      this.asyncSaveAllowedEvent(mergedEvent, mergedEvent);
     } else if (mergedEventCheckRes.isFailed || mergedEvent.corrupted) {
       this.asyncSaveRefused(mergedEvent);
-      this._invalidEvents.push(toRegister);
     } else if (mergedEvent.unavailable) {
-      this._invalidEvents.push(toRegister);
+      this.asyncSaveAllowedEvent(mergedEvent, mergedEvent);
     }
 
     await this.closePageAfterSingle(singleEventPage, useableEventsList.length > 0);
@@ -1108,16 +1147,9 @@ export default class AbstractScraper extends ScraperConfig {
   // step 6
   async saveEvents() {
     const pathToEventList = fsDirections.eventLists;
-    const pathToINVALIDEventList = fsDirections.invalidEventLists;
     const inbetweenFix = workerData.index !== null ? `${workerData.index}` : '0';
     const pathToEventListFile = `${pathToEventList}/${workerData.family}/${inbetweenFix}.json`;
-    const pathToINVALIDEventListFile = `${pathToINVALIDEventList}/${workerData.family}/invalid-${inbetweenFix}.json`;
     fs.writeFile(pathToEventListFile, JSON.stringify(this._events, null, '  '), () => {});
-    fs.writeFile(
-      pathToINVALIDEventListFile,
-      JSON.stringify(this._invalidEvents, null, '  '),
-      () => {},
-    );
     
     return true;    
   }
@@ -1166,11 +1198,12 @@ export default class AbstractScraper extends ScraperConfig {
       saveAllowedEvent: 'asyncSaveAllowedEvent',
       harvestArtists: 'asyncHarvestArtists',
       spotifyConfirmation: 'asyncSpotifyConfirmation', 
-      metalEncyclopediaConfirmation: 'asyncMetalEncyclopediaConfirmation', 
+      getMetalEncyclopediaConfirmation: 'asyncMetalEncyclopediaConfirmation', 
       explicitEventGenres: 'asyncExplicitEventCategories',
       hasAllowedArtist: 'asyncHasAllowedArtist',
       success: 'asyncSuccess',
       failure: 'asyncFailure',
+
       // refused: 'asyncCheckIsRefused',
       // emptySuccess: 'asyncCheckEmptySuccess',
       // emptyFailure: 'asyncCheckEmptyFailure',

@@ -1,29 +1,22 @@
 import DbInterFaceToScraper from './db-interface-to-scraper.js';
 
-// ifNotAllowedRefuse: 'asyncIfNotAllowedRefuse',
-// allowedEvent: 'asyncIsAllowedEvent',
-// refused: 'asyncIsRefused',
-// forbiddenTerms: 'asyncForbiddenTerms',
-// hasGoodTerms: 'asyncGoodTerms',
-// saveAllowedEvent: 'asyncSaveAllowedEvent',
-// harvestArtists: 'asyncHarvestArtists',
-// spotifyConfirmation: 'asyncSpotifyConfirmation', 
-// metalEncyclopediaConfirmation: 'asyncMetalEncyclopediaConfirmation', 
-// explicitEventGenres: 'asyncExplicitEventCategories',
-// hasAllowedArtist: 'asyncHasAllowedArtist',
-// success: 'asyncSuccess',
-// failure: 'asyncFailure',
-
+/**
+ * Klein helper functietje
+ * @param {*} subtype 
+ * @param {*} event 
+ * @param {*} extraData 
+ * @returns 
+ */
 function talkTitleAndSlug(subtype, event, extraData = {}) {
   const s = event.shortDate;
   return {
     type: 'db-request', 
     subtype,
     messageData: {
-      title: event.workTitle.length < 10 
+      title: event.workTitle.length < 7 
         ? event.workTitle + s
         : event.workTitle,
-      slug: event.slug.length < 10 
+      slug: event.slug.length < 7 
         ? event.slug + s 
         : event.slug,
       eventDate: s,
@@ -32,6 +25,29 @@ function talkTitleAndSlug(subtype, event, extraData = {}) {
   };
 }
 
+// #region SCR.NAMEN & DBNAMEN
+// ifNotAllowedRefuse: 'asyncIfNotAllowedRefuse',
+// allowedEvent: 'asyncIsAllowedEvent',
+// refused: 'asyncIsRefused',
+// forbiddenTerms: 'asyncForgetAllowedEventbiddenTerms',
+// hasGoodTerms: 'asyncGoodTerms',
+// harvestArtists: 'asyncHarvestArtists',
+// spotifyConfirmation: 'asyncSpotifyConfirmation', 
+// metalEncyclopediaConfirmation: 'asyncMetalEncyclopediaConfirmation', 
+// explicitEventGenres: 'asyncExplicitEventCategories',
+// hasAllowedArtist: 'asyncHasAllowedArtist',
+
+// saveAllowedEvent: 'asyncSaveAllowedEvent',
+// saveRefusedEvent: 'asyncSaveRefused',
+// saveRefused: 'asyncSaveRefused',
+// saveAllowedArtist: 'asyncSaveAllowedArtist',
+// saveUnclearArtist: 'asyncSaveUnclearArtist',
+
+// success: 'asyncSuccess',
+// failure: 'asyncFailure',
+// #endregion SCR.NAMEN & DBNAMEN
+
+// #region AS. IS ALLOWED EVENT
 export async function asyncIsAllowedEvent(event, olderReasons) {
   this.talkToDB(talkTitleAndSlug('getAllowedEvent', event));
   const dbAnswer = await this.checkDBhasAnswered();
@@ -45,7 +61,9 @@ export async function asyncIsAllowedEvent(event, olderReasons) {
   this.handleError(DBToScraper?.data?.error, DBToScraper.lastReason, 'close-thread');
   return DBToScraper;
 }
+// #endregion AS. IS ALLOWED EVENT
 
+// #region AS. IF NOTALLOW REFUSE
 export async function asyncIfNotAllowedRefuse(event, reasons) {
   const reasonsCopy = Array.isArray(reasons) ? reasons : [];
   
@@ -71,7 +89,9 @@ export async function asyncIfNotAllowedRefuse(event, reasons) {
   }
   return successAnswerObject(event, reasonsCopy, true);
 }
+// #endregion AS. IF NOTALLOW REFUSE
 
+// #region AS. IS REFUSED
 export async function asyncIsRefused(event, olderReasons = []) {
   this.talkToDB(talkTitleAndSlug('getRefused', event));
   const dbAnswer = await this.checkDBhasAnswered();
@@ -84,7 +104,9 @@ export async function asyncIsRefused(event, olderReasons = []) {
   this.handleError(DBToScraper?.data?.error, DBToScraper.lastReason, 'close-thread');
   return DBToScraper;
 }
+// #endregion AS. IS REFUSED
 
+// #region AS. FORBIDDEN TERMS
 export async function asyncForbiddenTerms(event, olderReasons) {
   this.talkToDB({
     type: 'db-request', 
@@ -103,7 +125,9 @@ export async function asyncForbiddenTerms(event, olderReasons) {
   this.handleError(DBToScraper?.data?.error, DBToScraper.lastReason, 'close-thread');
   return DBToScraper;
 }
+// #endregion AS. FORBIDDEN TERMS
 
+// #region AS. SUCCESS
 export async function asyncSuccess(event, olderReasons) {
   this.talkToDB(talkTitleAndSlug('makeSuccess', event, {
     string: event.workTitle + event.slug + (event?.shortText ?? '').toLowerCase(),
@@ -115,7 +139,9 @@ export async function asyncSuccess(event, olderReasons) {
   DBToScraper.setBreak(true);
   return DBToScraper;
 }
+// #endregion AS. SUCCESS
 
+// #region AS. FAILURE
 export async function asyncFailure(event, olderReasons) {
   this.talkToDB(talkTitleAndSlug('makeFailure', event, {
     string: event.workTitle + event.slug + (event?.shortText ?? '').toLowerCase(),
@@ -127,7 +153,9 @@ export async function asyncFailure(event, olderReasons) {
   DBToScraper.setBreak(true);
   return DBToScraper;
 }
+// #endregion AS. FAILURE
 
+// #region AS. GOOD TERMS
 export async function asyncGoodTerms(event, olderReasons) {
   this.talkToDB(talkTitleAndSlug('hasGood', event, {
     string: event.workTitle + event.slug + (event?.shortText ?? '').toLowerCase() + (event?.genres ?? ''),
@@ -145,7 +173,9 @@ export async function asyncGoodTerms(event, olderReasons) {
   this.handleError(DBToScraper?.data?.error, DBToScraper.lastReason, 'close-thread');
   return DBToScraper;
 }
+// #endregion AS. GOOD TERMS
 
+// #region AS. EXPL EVENT CATS
 export async function asyncExplicitEventCategories(event, olderReasons) {
   if (!(event?.eventGenres ?? null) || event?.eventGenres.length < 1) {
     const DBToScraper = new DbInterFaceToScraper({
@@ -173,7 +203,9 @@ export async function asyncExplicitEventCategories(event, olderReasons) {
   this.handleError(DBToScraper?.data?.error, DBToScraper.lastReason, 'close-thread');
   return DBToScraper;
 }
+// #endregion AS. EXPL EV CATS
 
+// #region AS. SPOTIFY CONF
 export async function asyncSpotifyConfirmation(event, olderReasons) {
   this.talkToDB({
     type: 'db-request', 
@@ -193,45 +225,34 @@ export async function asyncSpotifyConfirmation(event, olderReasons) {
   this.handleError(DBToScraper?.data?.error, DBToScraper.lastReason, 'close-thread');
   return DBToScraper;
 }
+// #endregion AS. SPOTIFY CONF
 
-export async function asyncMetalEncyclopediaConfirmation(event, reasons) {
-  const reasonsCopy = Array.isArray(reasons) ? reasons : [];
-  
+// #region AS. METAL ENC CONF
+export async function asyncMetalEncyclopediaConfirmation(event, olderReasons) {
   this.talkToDB({
     type: 'db-request', 
     subtype: 'getMetalEncyclopediaConfirmation',
     messageData: {
       title: event.workTitle,
+      settings: this._s.app.harvest,
     },
   });
-  await this.checkDBhasAnswered();
-  if (this.lastDBAnswer.success === 'error') {
-    this.handleError(this.lastDBAnswer?.data?.error, this.lastDBAnswer.reason, 'close-thread');
-    return errorAnswerObject(event, reasons, this.lastDBAnswer);
-  }
-  reasonsCopy.push(this.lastDBAnswer.reason);
-
-  if (this.lastDBAnswer.success) {
-    this.skipFurtherChecks.push(event.workTitle);
-    this.talkToDB({
-      type: 'db-request',
-      subtype: 'saveAllowedTemp',
-      messageData: {
-        title: event.workTitle,
-        slug: event.slug,
-        eventDate: event.shortDate,
-      },
-    }); 
-    reasonsCopy.push(`🟧 saved in allowed event temp sb1`);
-    return failureAnswerObject(event, reasonsCopy, true);
-  }
-  return successAnswerObject(event, reasonsCopy);
+  const dbAnswer = await this.checkDBhasAnswered();
+  const DBToScraper = new DbInterFaceToScraper(dbAnswer, olderReasons, 'async metal enc confirmation');
+  DBToScraper.setReason();
+  if (DBToScraper.isSuccess || DBToScraper.isFailed) DBToScraper.setBreak(true);
+  if (!DBToScraper.isError) return DBToScraper;
+  
+  this.handleError(DBToScraper?.data?.error, DBToScraper.lastReason, 'close-thread');
+  return DBToScraper;
 }
+// #endregion AS. METAL ENC CONFIRMATION
 
+// #region AS. SAVE REFUSED
 export async function asyncSaveRefused(event) {
   this.talkToDB({
     type: 'db-request',
-    subtype: 'saveRefusedEventTemp',
+    subtype: 'saveRefusedEvent',
     messageData: {
       string: event.workTitle.toLowerCase(),
       slug: event.slug,
@@ -239,44 +260,91 @@ export async function asyncSaveRefused(event) {
     },
   });   
 }
+// #endregion AS. SAVE REFUSED
 
+// #region AS. SAVE ALLOWEDEVENT
 export async function asyncSaveAllowedEvent(event) {
   this.talkToDB({
     type: 'db-request',
-    subtype: 'saveAllowedEventTemp',
+    subtype: 'saveAllowedEvent',
     messageData: {
-      title: event.workTitle.toLowerCase(), // todo ???
+      string: event.workTitle.toLowerCase(), // todo ???
       slug: event.slug,
       eventDate: event.shortDate,
     },
   });
+  const dbAnswer = await this.checkDBhasAnswered();
+  const DBToScraper = new DbInterFaceToScraper(dbAnswer, event.reasons, 'async save allowed event');
+  DBToScraper.setReason();
+  if (!DBToScraper.isError) return DBToScraper;
+  
+  this.handleError(DBToScraper?.data?.error, DBToScraper.lastReason, 'close-thread');
+  return DBToScraper;
 }
+// #endregion AS. SAVE ALLOWED EVENT
 
+// #region AS. SAVE ALLOWED ARTI
+export async function asyncSaveAllowedArtist(event) {
+  this.talkToDB({
+    type: 'db-request',
+    subtype: 'saveAllowedArtist',
+    messageData: {
+      string: event.workTitle.toLowerCase(),
+      slug: event.slug,
+      spotify: event?.spotify ?? null,
+      metalEnc: event?.metalEnc ?? null,
+      eventDate: event.shortDate,
+    },
+  });   
+}
+// #endregion AS. SAVE ALLOWED ARTIST
+
+// #region AS. SAVE UNCLEAR ARTI
+export async function asyncSaveUnclearArtist(event) {
+  this.talkToDB({
+    type: 'db-request',
+    subtype: 'saveUnclearArtist',
+    messageData: {
+      string: event.workTitle.toLowerCase(),
+      slug: event.slug,
+      spotify: event?.spotify ?? null,
+      metalEnc: event?.metalEnc ?? null,
+      eventDate: event.shortDate,
+    },
+  });   
+}
+// #endregion AS. SAVE UNCLEAR ARTIST
+
+// #region AS. HARVEST ARTISTS
 export async function asyncHarvestArtists(event) {
   this.talkToDB({
     type: 'db-request',
     subtype: 'harvestArtists',
     messageData: {
       title: event.workTitle,
+      string: event.workTitle,
       slug: event.slug,
       shortText: event.shortText,
       settings: this._s.app.harvest,
       eventDate: event.shortDate,
       eventGenres: event?.eventGenres ?? [],
+      venueEventUrl: event.venueEventUrl,
     },
   });    
   const dbans = await this.checkDBhasAnswered();
   const DBToScraper = new DbInterFaceToScraper(dbans, [], 'async harvest artists');
   return DBToScraper;
 }
+// #endregion AS. HARVEST ARTISTS
+
 /**
  * Zoek niet alleen maar geeft het ook terug.
  * Niet direct geschikt voor async checkers
  * @param {*} mergedEvent 
  * @returns 
- */
-export async function asyncScanTitleForAllowedArtists(mergedEvent, olderReasons = []) {
-  this.talkToDB(talkTitleAndSlug('scanTitleForAllowedArtistsAsync', mergedEvent, {
+ */// #region AS. SCAN EVENT FOR ALLOWED ARTISTS
+export async function asyncScanEventForAllowedArtists(mergedEvent, olderReasons = []) {
+  this.talkToDB(talkTitleAndSlug('scanEventForAllowedArtistsAsync', mergedEvent, {
     shortText: mergedEvent.shortText,
     settings: this._s.app.harvest,
   }));    
@@ -289,10 +357,12 @@ export async function asyncScanTitleForAllowedArtists(mergedEvent, olderReasons 
   this.handleError(DBToScraper?.data?.error, DBToScraper.lastReason, 'close-thread');
   return DBToScraper;
 }
+// #endregion AS. SCAN EVENT FOR ALLOWED ARTISTS
 
+// #region AS. HAS ALLOWED ARTI
 export async function asyncHasAllowedArtist(event, olderReasons) {
   const getScanDBScraper = 
-    await this.asyncScanTitleForAllowedArtists(event, olderReasons);
+    await this.asyncScanEventForAllowedArtists(event, olderReasons);
 
   if (getScanDBScraper.isSuccess) {
     getScanDBScraper.setBreak(true);
@@ -303,36 +373,9 @@ export async function asyncHasAllowedArtist(event, olderReasons) {
   this.handleError(getScanDBScraper?.data?.error, getScanDBScraper.lastReason, 'close-thread');
   return getScanDBScraper;
 }
+// #endregion AS. HAS ALLOWED ARTI
 
 export default null;
-    
-//   async asyncCheckIsRock(event, reasons) {
-//     const reasonsCopy = Array.isArray(reasons) ? reasons : [];
-//     const isRockRes = await this.isRock(event);
-//     reasonsCopy.push(isRockRes.reason);
-//     if (isRockRes.success) {
-//       this.talkToDB({
-//         type: 'db-request',
-//         subtype: 'saveAllowedTitle',
-//         messageData: {
-//           string: event.title,
-//           reason: reasonsCopy.reverse().join(', '),
-//         },
-//       });    
-//       return {
-//         event,
-//         break: true,
-//         reason: reasonsCopy.reverse().join(','),
-//         success: true,
-//       };
-//     } 
-//     return {
-//       break: false,
-//       success: null,
-//       event,
-//       reasons: reasonsCopy,
-//     };    
-//   },
 
 //   async wikipedia(event, title) {
 //     const workingTitle = title || this.cleanupEventTitle(event.title);
@@ -413,44 +456,5 @@ export default null;
 //       event,
 //       success: false,
 //       reason: 'wiki catch return',
-//     };
-//   }
-
-//   /**
-//    * methode waarmee mainPageAsyncCheck vervangen kan worden.
-//    * kijkt naar 'voornaamste titel', dwz de event.title tot aan een '&'.
-//    *
-//    * @param {*} event
-//    * @memberof AbstractScraper
-//    */
-//   async isRock(event, overloadTitles = null, recursiveTitle = null) {
-//     const workingTitle = recursiveTitle || this.cleanupEventTitle(event.title);
-
-//     const metalEncyclopediaRes = await this.metalEncyclopedia(event, workingTitle);
-//     if (metalEncyclopediaRes.success) {
-//       return metalEncyclopediaRes;
-//     }
-
-//     const wikipediaRes = await this.wikipedia(event, workingTitle);
-//     if (wikipediaRes.success) {
-//       return wikipediaRes;
-//     }
-
-//     if (Array.isArray(overloadTitles)) {
-//       const overloadTitlesCopy = [...overloadTitles];
-//       const thisOverloadTitle = overloadTitlesCopy.shift();
-//       const extraRes = await this.isRock(event, null, thisOverloadTitle);
-//       if (extraRes.success) {
-//         return extraRes;
-//       }
-//       if (overloadTitles.length) {
-//         return this.isRock(event, overloadTitlesCopy);
-//       }
-//     }
-
-//     return {
-//       event,
-//       success: false,
-//       reason: `<a class='single-event-check-reason wikipedia wikipedia--failure metal-encyclopedie metal-encyclopedie--failure' href='${wikipediaRes.url}'>wikipedia</a> + <a href='${metalEncyclopediaRes.url}'>metal encyclopedia</a> 👎`,
 //     };
 //   }

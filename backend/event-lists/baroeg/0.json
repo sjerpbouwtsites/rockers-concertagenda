@@ -1,117 +1,440 @@
 [
   {
-    "start": "2024-07-02T19:00:00",
-    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-maassilo-vader-bio-cancer-warside/",
-    "title": "Baroeg On Tour @Maassilo: Vader ",
+    "start": "2024-10-05T19:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-de-beuk-sear-bliss-rivers-ablaze/",
+    "title": "Baroeg On Tour @De Beuk: Sear Bliss ",
     "location": "baroeg",
-    "price": 26,
-    "shortText": " Bio-Cancer  +  Warside 20e keer dat Vader op een door Baroeg georganiseerd evenement staat.",
-    "longText": "../public/texts/baroeg/c2lsby12YWRlci1iaW8tY2FuY2VyLXdhcnNpZGUv.html",
-    "image": "../public/event-images/baroeg/c2lsby12YWRlci1iaW8tY2FuY2VyLXdhcnNpZGUv",
+    "price": null,
+    "shortText": " Rivers Ablaze Black metal met koperblazers.",
+    "longText": "../public/texts/baroeg/YmV1ay1zZWFyLWJsaXNzLXJpdmVycy1hYmxhemUv.html",
+    "image": "../public/event-images/baroeg/YmV1ay1zZWFyLWJsaXNzLXJpdmVycy1hYmxhemUv",
     "soldOut": false,
     "eventGenres": [
-      "death metal",
-      "thrash metal"
+      "black"
     ],
     "artists": {
-      "vader": {
-        "s": "2s5DSt9VBNzAn2TbtDHzFZ",
-        "l": "Poland",
+      "rivers ablaze": {
+        "s": "0DZSYoZluja08JRF1GN1Wj",
+        "l": "rivers%20ablaze",
         "g": [
+          "progressive black",
+          "death metal",
+          "black"
+        ]
+      },
+      "sear bliss": {
+        "s": "5h1vktUNKEYPDaQUUaOKAA",
+        "l": "sear%20bliss",
+        "g": [
+          "atmospheric black metal",
           "black metal",
-          "brutal death metal",
-          "death metal",
-          "deathgrind",
-          "deathrash",
-          "melodic death metal",
-          "metal",
-          "polish death metal",
-          "polish metal",
-          "polish thrash metal",
-          "speed metal",
-          "technical death metal",
-          "death/thrash metal",
-          "death metal",
-          "thrash metal"
+          "hungarian black metal",
+          "hungarian metal",
+          "slavic metal",
+          "symphonic black metal",
+          "atmospheric black metal",
+          "black"
         ]
       },
-      "bio-cancer": {
-        "s": "7N0YKBOylzJvN7PevzJg2G",
-        "l": "Greece",
+      "metal": {
+        "s": null,
+        "l": "metal",
         "g": [
-          "crossover thrash",
-          "greek metal",
-          "new wave of thrash metal",
-          "thrash metal",
-          "death metal",
-          "thrash metal"
+          "death metal"
         ]
       },
-      "warside": {
-        "s": "0InPsKrw3SLGw9QfpsSsec",
-        "l": "Brazil",
+      "black met koperblazers.": {
+        "s": null,
+        "l": "black met koperblazers.",
         "g": [
-          "heavy metal",
-          "death metal",
-          "thrash metal"
+          "black"
         ]
       }
     }
   },
   {
-    "start": "2024-07-27T19:00:00",
-    "venueEventUrl": "https://baroeg.nl/productie/eendracht-festival-rotown-thrilled-provisional-lui-surreal-the-gatekeepers-m-u-g-cheapo-cheapo/",
-    "title": "Eendracht Festival @Rotown: Thrilled ",
+    "start": "2024-11-01T19:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-soundville-dutch-doom-day-dodentocht/",
+    "title": "Baroeg On Tour @SoundVille: Dutch Doom Day: Dodentocht ",
     "location": "baroeg",
-    "price": 0,
-    "shortText": " Provisional  +  Lui Surreal & The Gatekeepers  +  M.U.G  +  Cheapo Cheapo Dertiende editie van Eendracht Festival.",
-    "longText": "../public/texts/baroeg/dGVrZWVwZXJzLW0tdS1nLWNoZWFwby1jaGVhcG8v.html",
-    "image": "../public/event-images/baroeg/dGVrZWVwZXJzLW0tdS1nLWNoZWFwby1jaGVhcG8v",
+    "price": 14,
+    "shortText": " Pander  +  20HZ Fader Dutch Doom Day met opkomende Doom bands.",
+    "longText": "../public/texts/baroeg/bGxlLWR1dGNoLWRvb20tZGF5LWRvZGVudG9jaHQv.html",
+    "image": "../public/event-images/baroeg/bGxlLWR1dGNoLWRvb20tZGF5LWRvZGVudG9jaHQv",
     "soldOut": false,
     "eventGenres": [
-      "hardcore punk",
-      "indie",
-      "metal",
-      "post-punk",
-      "punk",
-      "shoegaze"
+      "death metal",
+      "doom",
+      "sludge"
     ],
-    "artists": null
+    "artists": {
+      "dodentocht": {
+        "s": "1viPziG5G19z4NCY8gus89",
+        "l": "dodentocht",
+        "g": [
+          "death",
+          "doom",
+          "sludge metal"
+        ]
+      },
+      "band": {
+        "s": null,
+        "l": "band",
+        "g": [
+          "heavy",
+          "power metal"
+        ]
+      },
+      "pander": {
+        "s": "6UMkl3m9CCLHsAr10YLg6o",
+        "l": "pander",
+        "g": [
+          "stoner metal",
+          "death metal",
+          "doom",
+          "sludge"
+        ]
+      },
+      "20hz fader": {
+        "s": "5tzUDC3Nnrjlt7gaTdw0d8",
+        "l": "20hz%20fader",
+        "g": [
+          "death metal",
+          "doom",
+          "sludge"
+        ]
+      },
+      "pander 20hz fader dutch doom day met opkomende doom s.": {
+        "s": null,
+        "l": "pander 20hz fader dutch doom day met opkomende doom s.",
+        "g": [
+          "death metal",
+          "doom",
+          "sludge"
+        ]
+      }
+    }
   },
   {
-    "start": "2024-09-14T12:00:00",
-    "venueEventUrl": "https://baroeg.nl/productie/baroeg-open-air-2024/",
-    "title": "Baroeg Open Air 2024",
+    "start": "2024-11-09T19:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-rotown-popronde-rotterdam-state-power-32elephants-man-as-plague/",
+    "title": "Baroeg On Tour @Rotown: Popronde Rotterdam: State Power ",
     "location": "baroeg",
-    "price": 9.99,
-    "shortText": "Zaterdag 14 september 2024 vindt de vijftiende editie van Baroeg Open Air plaats in het Rotterdamse Zuiderpark.",
-    "longText": "../public/texts/baroeg/cm9kdWN0aWUvYmFyb2VnLW9wZW4tYWlyLTIwMjQv.html",
-    "image": "../public/event-images/baroeg/cm9kdWN0aWUvYmFyb2VnLW9wZW4tYWlyLTIwMjQv",
+    "price": 0,
+    "shortText": " 32elephants  +  Man As Plague Baroeg host dit jaar voor het eerst een podium tijdens Popronde Rotterdam, en wel in Rotown!",
+    "longText": "../public/texts/baroeg/d2VyLTMyZWxlcGhhbnRzLW1hbi1hcy1wbGFndWUv.html",
+    "image": "../public/event-images/baroeg/d2VyLTMyZWxlcGhhbnRzLW1hbi1hcy1wbGFndWUv",
     "soldOut": false,
     "eventGenres": [
       "alternative",
-      "electronic",
-      "metal",
-      "punk"
+      "emo",
+      "hardcore",
+      "metalcore"
     ],
-    "artists": null
+    "artists": {
+      "plague": {
+        "s": "080xip1qfuknbnyeypuh1v",
+        "l": "plague",
+        "g": [
+          "blackened deathcore",
+          "deathcore",
+          "melodic metalcore",
+          "metalcore",
+          "symphonic deathcore"
+        ]
+      },
+      "state power 32s man as": {
+        "s": null,
+        "l": "state power 32s man as",
+        "g": [
+          "alternative",
+          "emo",
+          "hardcore",
+          "metalcore"
+        ]
+      },
+      "32s man as baroeg host dit jaar voor het eerst een podium tijdens popronde rotterdam, en wel in rotown!": {
+        "s": null,
+        "l": "32s man as baroeg host dit jaar voor het eerst een podium tijdens popronde rotterdam, en wel in rotown!",
+        "g": [
+          "alternative",
+          "emo",
+          "hardcore",
+          "metalcore"
+        ]
+      }
+    }
   },
   {
     "start": "2024-11-16T19:00:00",
     "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-grounds-dutch-doom-days-presents-draconian-nailed-to-obscurity-fragment-soul/",
-    "title": "Baroeg On Tour @Grounds Dutch Doom Days presents: Draconian ",
+    "title": "Baroeg On Tour @Grounds: Dutch Doom Days presents: Draconian ",
     "location": "baroeg",
-    "price": 26,
+    "price": null,
     "shortText": " Nailed To Obscurity  +  Fragment Soul Draconian bestaat 30 jaar.",
     "longText": "../public/texts/baroeg/ZWQtdG8tb2JzY3VyaXR5LWZyYWdtZW50LXNvdWwv.html",
     "image": "../public/event-images/baroeg/ZWQtdG8tb2JzY3VyaXR5LWZyYWdtZW50LXNvdWwv",
-    "soldOut": false,
+    "soldOut": true,
     "eventGenres": [
       "doom",
       "gothic metal",
       "metal",
       "progressive"
     ],
-    "artists": null
+    "artists": {
+      "nailed to obscurity": {
+        "s": "3VKWvDnlwWaBI2uzMTjuSJ",
+        "l": "nailed%20to%20obscurity",
+        "g": [
+          "finnish metal",
+          "melodic death metal",
+          "melodic doom",
+          "death metal",
+          "doom",
+          "gothic metal",
+          "metal",
+          "progressive"
+        ]
+      },
+      "fragment soul": {
+        "s": "2VsKiASSkRwzniSx3o6vL4",
+        "l": "fragment%20soul",
+        "g": [
+          "gothic doom",
+          "doom",
+          "gothic metal",
+          "metal",
+          "progressive"
+        ]
+      },
+      "draconian": {
+        "s": "1TX9g1uSl0B0DQIE9lBqmU",
+        "l": "draconian",
+        "g": [
+          "doom metal",
+          "gothic metal",
+          "gothic symphonic metal",
+          "swedish doom metal",
+          "swedish metal",
+          "gothic",
+          "doom",
+          "death metal",
+          "doom",
+          "gothic metal",
+          "metal",
+          "progressive"
+        ]
+      },
+      "bestaat 30 jaar.": {
+        "s": null,
+        "l": "bestaat%2030%20jaar.",
+        "g": [
+          "doom",
+          "gothic metal",
+          "metal",
+          "progressive"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2024-11-30T19:30:00",
+    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-soundville-wavefest-presents-vision-video/",
+    "title": "Baroeg On Tour @SoundVille: Wavefest presents: Vision Video ",
+    "location": "baroeg",
+    "price": null,
+    "shortText": " Lifeless Past  +  Modern Victims Dancenight Creëert een verfrissend en modern geluid binnen het postpunk genre.",
+    "longText": "../public/texts/baroeg/YXZlZmVzdC1wcmVzZW50cy12aXNpb24tdmlkZW8v.html",
+    "image": "../public/event-images/baroeg/YXZlZmVzdC1wcmVzZW50cy12aXNpb24tdmlkZW8v",
+    "soldOut": true,
+    "eventGenres": [
+      "post-punk"
+    ],
+    "artists": {
+      "lifeless past": {
+        "s": "1RlqgEBCNfaHMav4mzI4O7",
+        "l": "lifeless%20past",
+        "g": [
+          "dutch post-punk",
+          "post-punk"
+        ]
+      },
+      "vision video": {
+        "s": null,
+        "l": "vision%20video",
+        "g": [
+          "post-punk"
+        ]
+      },
+      "punk": {
+        "s": null,
+        "l": "punk",
+        "g": [
+          "melodic death metal (early)",
+          " glitch",
+          "dubstep",
+          "electronica (later)"
+        ]
+      },
+      "modern victims dancenight": {
+        "s": null,
+        "l": "modern%20victims%20dancenight",
+        "g": [
+          "post-punk"
+        ]
+      },
+      "modern victims dancenight creëert een verfrissend en modern geluid binnen het post genre.": {
+        "s": null,
+        "l": "modern victims dancenight creëert een verfrissend en modern geluid binnen het post genre.",
+        "g": [
+          "post-punk"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2024-12-13T19:30:00",
+    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-roodkapje-p-o-box-skapiche/",
+    "title": "Baroeg On Tour @ Roodkapje: P.O.BOX ",
+    "location": "baroeg",
+    "price": 16.5,
+    "shortText": " Skapiche?! FFO: Mad Caddies, Big D And The Kids Table, NOFX.",
+    "longText": "../public/texts/baroeg/dXItcm9vZGthcGplLXAtby1ib3gtc2thcGljaGUv.html",
+    "image": "../public/event-images/baroeg/dXItcm9vZGthcGplLXAtby1ib3gtc2thcGljaGUv",
+    "soldOut": false,
+    "eventGenres": [
+      "punk",
+      "ska"
+    ],
+    "artists": {
+      "mad caddies": {
+        "s": "0cmbbo2sr4w0rrgt3rkvs6",
+        "l": "mad%20caddies",
+        "g": [
+          "ska",
+          "ska punk",
+          "skate punk"
+        ]
+      },
+      "p.o.box": {
+        "s": "47xWB3xTF7N8J4K7gjNgQG",
+        "l": "p.o.box",
+        "g": [
+          "punk",
+          "ska"
+        ]
+      },
+      "skapiche?!": {
+        "s": "2f1mPMpaSZ9Zn25wZpK2jV",
+        "l": "skapiche?!",
+        "g": [
+          "punk",
+          "ska"
+        ]
+      },
+      "skapiche?! ffo: , big d and the kids table, nofx.": {
+        "s": null,
+        "l": "skapiche?! ffo: , big d and the kids table, nofx.",
+        "g": [
+          "punk",
+          "ska"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-03-09T15:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-grounds-riffsniffer-presents-planet-of-zeus/",
+    "title": "Baroeg On Tour @Grounds Riffsniffer presents: Planet Of Zeus",
+    "location": "baroeg",
+    "price": 16,
+    "shortText": " Deze band is meer onderweg dan dat ze thuis aan de ouzo zitten.",
+    "longText": "../public/texts/baroeg/aWZmZXItcHJlc2VudHMtcGxhbmV0LW9mLXpldXMv.html",
+    "image": "../public/event-images/baroeg/aWZmZXItcHJlc2VudHMtcGxhbmV0LW9mLXpldXMv",
+    "soldOut": false,
+    "eventGenres": [
+      "stoner"
+    ],
+    "artists": {
+      "planet of zeus": {
+        "s": "1oxVf6OeX1x5R9VxuHZmFG",
+        "l": "planet%20of%20zeus",
+        "g": [
+          "greek metal",
+          "greek psychedelic rock",
+          "greek rock"
+        ]
+      },
+      "band": {
+        "s": null,
+        "l": "band",
+        "g": [
+          "heavy",
+          "power metal"
+        ]
+      },
+      "deze is onderweg dan dat ze thuis aan de ouzo zitten.": {
+        "s": null,
+        "l": "deze is onderweg dan dat ze thuis aan de ouzo zitten.",
+        "g": [
+          "stoner"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-04-20T15:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-musicon-festerfest/",
+    "title": "Baroeg On Tour @Musicon: Festerfest: Obstruktor",
+    "location": "baroeg",
+    "price": null,
+    "shortText": " Anual fest to crush the boundaries between different forms of underground music and to spread the knowledge of its diversity.",
+    "longText": "../public/texts/baroeg/ZWctb24tdG91ci1tdXNpY29uLWZlc3RlcmZlc3Qv.html",
+    "image": "../public/event-images/baroeg/ZWctb24tdG91ci1tdXNpY29uLWZlc3RlcmZlc3Qv",
+    "soldOut": false,
+    "eventGenres": [
+      "thrash metal"
+    ],
+    "artists": {
+      "obstruktor": {
+        "s": "6royebi1pogfkefylnvshp",
+        "l": "netherlands",
+        "g": [
+          "speed/thrash metal",
+          "metal"
+        ]
+      },
+      "anual fest to crush the boundaries between different forms of underground music and to spread the knowledge of its diversity.": {
+        "s": null,
+        "l": "anual%20fest%20to%20crush%20the%20boundaries%20between%20different%20forms%20of%20underground%20music%20and%20to%20spread%20the%20knowledge%20of%20its%20diversity.",
+        "g": [
+          "thrash metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-09-13T12:00:00",
+    "venueEventUrl": "https://baroeg.nl/productie/baroeg-open-air-2025/",
+    "title": "Baroeg Open Air 2025",
+    "location": "baroeg",
+    "price": 12.5,
+    "shortText": "Zaterdag 15 september 2025 vindt de zestiende editie van Baroeg Open Air plaats in het Rotterdamse Zuiderpark.",
+    "longText": "../public/texts/baroeg/cm9kdWN0aWUvYmFyb2VnLW9wZW4tYWlyLTIwMjUv.html",
+    "image": "../public/event-images/baroeg/cm9kdWN0aWUvYmFyb2VnLW9wZW4tYWlyLTIwMjUv",
+    "soldOut": false,
+    "eventGenres": [],
+    "artists": {
+      "baroeg open air": {
+        "s": null,
+        "l": "baroeg%20open%20air",
+        "g": [
+          "alternative",
+          "electronic",
+          "metal",
+          "punk"
+        ]
+      }
+    }
   }
 ]

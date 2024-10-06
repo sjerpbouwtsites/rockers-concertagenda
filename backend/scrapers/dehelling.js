@@ -24,7 +24,7 @@ const dehellingScraper = new AbstractScraper({
     harvest: {
       dividers: [`\\+`],
       dividerRex: "[+]", 
-      artistsIn: ['title', 'shortText'],
+      artistsIn: ['title'],
     },
     mainPage: {
       requiredProperties: ['venueEventUrl', 'title', 'start'],

@@ -54,6 +54,13 @@ scraper.mainPage = async function () {
       const events = Array.from(
         document.querySelectorAll('[data-genre*="metal"], [data-genre*="punk"]'),
       ).map((rawEvent) => {
+        if (rawEvent.querySelector('.card-titel-container')?.textContent.includes('•')) {
+          const spans = rawEvent.querySelectorAll('.card-titel-container span');
+          if (spans.length && spans.length > 1) {
+            spans[1].textContent = ` • ${spans[1].textContent}`;
+          }
+        } // WAT EEN HACK
+        
         const title = rawEvent.querySelector('.card-titel-container')?.textContent ?? '';
         const venueEventUrl = rawEvent.hasAttribute('data-url') ? rawEvent.getAttribute('data-url') : null;
         const res = {
@@ -76,6 +83,8 @@ scraper.mainPage = async function () {
     .map(mapToShortDate)
     .map(this.isMusicEventCorruptedMapper)
     .map((re) => workTitleAndSlug(re, this._s.app.harvest.possiblePrefix));
+
+  this.dirtyDebug(rawEvents.map((e) => e.title));
 
   const eventGen = this.eventGenerator(rawEvents);
   // eslint-disable-next-line no-unused-vars

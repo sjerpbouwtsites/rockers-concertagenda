@@ -51,6 +51,12 @@ const shell = {
   get workers() {
     return this._arguments?.workers || null;
   },
+  /**
+   * of de artist db de refused, allowed, unclear etc moet schrijven.
+   */
+  get artistDBWrite() {
+    return this._arguments?.artistDBWrite === 'true' || null;
+  },
 };
 
 shell._arguments = getShellArguments();

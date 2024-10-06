@@ -1,167 +1,679 @@
 [
   {
-    "start": "2024-08-13T18:00:00",
-    "venueEventUrl": "https://nobel.nl/programma/exodus-13-aug-2024/",
-    "title": "Exodus",
+    "start": "2024-05-29T19:00:01+0200",
+    "venueEventUrl": "https://nobel.nl/agenda/j-bernardt-06-okt-2024",
+    "title": "  J. Bernardt\n",
     "location": "gebrdenobel",
-    "price": 25,
-    "shortText": "Thrash metal titanen uit San Francisco",
-    "longText": "../public/texts/gebrdenobel/L3Byb2dyYW1tYS9leG9kdXMtMTMtYXVnLTIwMjQv.html",
-    "image": "../public/event-images/gebrdenobel/L3Byb2dyYW1tYS9leG9kdXMtMTMtYXVnLTIwMjQv",
+    "price": 20,
+    "shortText": "Soloproject van Balthazar frontman",
+    "longText": "../public/texts/gebrdenobel/L2FnZW5kYS9qLWJlcm5hcmR0LTA2LW9rdC0yMDI0.html",
+    "image": "../public/event-images/gebrdenobel/L2FnZW5kYS9qLWJlcm5hcmR0LTA2LW9rdC0yMDI0",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2024-05-29T19:00:15+0200",
+    "venueEventUrl": "https://nobel.nl/agenda/1984-i-found-cure-11-okt-2024",
+    "title": "  1984 & i found the cure\n",
+    "location": "gebrdenobel",
+    "price": 20,
+    "shortText": "Dubbelaffiche met tributes aan Simple Minds en The Cure",
+    "longText": "../public/texts/gebrdenobel/LzE5ODQtaS1mb3VuZC1jdXJlLTExLW9rdC0yMDI0.html",
+    "image": "../public/event-images/gebrdenobel/LzE5ODQtaS1mb3VuZC1jdXJlLTExLW9rdC0yMDI0",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2024-05-29T19:00:15+0200",
+    "venueEventUrl": "https://nobel.nl/agenda/hef-12-okt-2024",
+    "title": "  hef\n",
+    "location": "gebrdenobel",
+    "price": 22.5,
+    "shortText": "Rauwe, laid back en unieke Nederlandse rap",
+    "longText": "../public/texts/gebrdenobel/b2JlbC5ubC9hZ2VuZGEvaGVmLTEyLW9rdC0yMDI0.html",
+    "image": "../public/event-images/gebrdenobel/b2JlbC5ubC9hZ2VuZGEvaGVmLTEyLW9rdC0yMDI0",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2024-09-20T13:15:02+0200",
+    "venueEventUrl": "https://nobel.nl/agenda/liff-swamp-dogg-gets-his-pool-painted-20-okt-2024",
+    "title": "  LIFF: Swamp Dogg Gets His Pool Painted\n",
+    "location": "gebrdenobel",
+    "price": 12,
+    "shortText": "LIFF-vertoning over legendarisch muzikant Swamp Dogg",
+    "longText": "../public/texts/gebrdenobel/cy1oaXMtcG9vbC1wYWludGVkLTIwLW9rdC0yMDI0.html",
+    "image": "../public/event-images/gebrdenobel/cy1oaXMtcG9vbC1wYWludGVkLTIwLW9rdC0yMDI0",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2024-08-12T19:30:02+0200",
+    "venueEventUrl": "https://nobel.nl/agenda/nobel-sessions-23-okt-2024",
+    "title": "  Nobel Sessions\n",
+    "location": "gebrdenobel",
+    "price": 0,
+    "shortText": "Maandelijkse jamsessie met jazz, funk, spoken word en nog veel meer!",
+    "longText": "../public/texts/gebrdenobel/bmRhL25vYmVsLXNlc3Npb25zLTIzLW9rdC0yMDI0.html",
+    "image": "../public/event-images/gebrdenobel/bmRhL25vYmVsLXNlc3Npb25zLTIzLW9rdC0yMDI0",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2024-05-29T19:00:15+0200",
+    "venueEventUrl": "https://nobel.nl/agenda/another-taste-24-okt-2024",
+    "title": "  Another Taste\n",
+    "location": "gebrdenobel",
+    "price": 17.5,
+    "shortText": "Zevenkoppige Rotterdamse disco-dansmachine",
+    "longText": "../public/texts/gebrdenobel/ZW5kYS9hbm90aGVyLXRhc3RlLTI0LW9rdC0yMDI0.html",
+    "image": "../public/event-images/gebrdenobel/ZW5kYS9hbm90aGVyLXRhc3RlLTI0LW9rdC0yMDI0",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2024-06-26T19:00:01+0200",
+    "venueEventUrl": "https://nobel.nl/agenda/fool-course-meal-25-okt-2024",
+    "title": "  Fool Course Meal\n",
+    "location": "gebrdenobel",
+    "price": 12.9,
+    "shortText": "Een driegangenmaaltijd vol rock, grunge en punk",
+    "longText": "../public/texts/gebrdenobel/YS9mb29sLWNvdXJzZS1tZWFsLTI1LW9rdC0yMDI0.html",
+    "image": "../public/event-images/gebrdenobel/YS9mb29sLWNvdXJzZS1tZWFsLTI1LW9rdC0yMDI0",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2024-05-29T20:00:15+0200",
+    "venueEventUrl": "https://nobel.nl/agenda/mensen-zeggen-dingen-30-okt-2024",
+    "title": "  Mensen Zeggen Dingen\n",
+    "location": "gebrdenobel",
+    "price": 7.9,
+    "shortText": "Mensen Mogen Ook Niks Meer Zeggen. Over cancel culture en Taylor Swift",
+    "longText": "../public/texts/gebrdenobel/bnNlbi16ZWdnZW4tZGluZ2VuLTMwLW9rdC0yMDI0.html",
+    "image": "../public/event-images/gebrdenobel/bnNlbi16ZWdnZW4tZGluZ2VuLTMwLW9rdC0yMDI0",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2024-05-29T19:00:15+0200",
+    "venueEventUrl": "https://nobel.nl/agenda/bouke-elvismatters-band-31-okt-2024",
+    "title": "  Bouke & The ElvisMatters Band\n",
+    "location": "gebrdenobel",
+    "price": 35,
+    "shortText": "'The Tribute'-winnaar brengt ultiem eerbetoon aan Elvis Presley",
+    "longText": "../public/texts/gebrdenobel/LWVsdmlzbWF0dGVycy1iYW5kLTMxLW9rdC0yMDI0.html",
+    "image": "../public/event-images/gebrdenobel/LWVsdmlzbWF0dGVycy1iYW5kLTMxLW9rdC0yMDI0",
     "soldOut": true,
     "unavailable": false,
     "eventGenres": null,
-    "artists": null
-  },
-  {
-    "start": "2024-09-20T19:00:00",
-    "venueEventUrl": "https://nobel.nl/programma/pungent-stench-bodyfarm-20-sep-2024/",
-    "title": "Schirenc plays Pungent Stench + Bodyfarm",
-    "location": "gebrdenobel",
-    "price": 20,
-    "shortText": "'Schirenc' en 'Bodyfarm' spelen Old school Death Metal",
-    "longText": "../public/texts/gebrdenobel/dC1zdGVuY2gtYm9keWZhcm0tMjAtc2VwLTIwMjQv.html",
-    "image": "../public/event-images/gebrdenobel/dC1zdGVuY2gtYm9keWZhcm0tMjAtc2VwLTIwMjQv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
     "artists": {
-      "bodyfarm": {
-        "s": "2OFRvZ32VVIW3UxVl36A0h",
-        "l": "bodyfarm",
+      "band": {
+        "s": null,
+        "l": "band",
         "g": [
-          "dutch death metal",
-          "grisly death metal"
+          "heavy",
+          "power metal"
         ]
       }
     }
   },
   {
-    "start": "2024-09-27T19:00:00",
-    "venueEventUrl": "https://nobel.nl/programma/release-the-river-albumpresentatie-27-sep-2024/",
-    "title": "Release The River - album release",
+    "start": "2024-05-29T19:00:15+0200",
+    "venueEventUrl": "https://nobel.nl/agenda/maxfest-071-02-nov-2024",
+    "title": "  maxfest 071\n",
     "location": "gebrdenobel",
-    "price": 12.5,
-    "shortText": "Duistere grooves, snoeiharde riffs en Nederlandse metal van de bovenste plank",
-    "longText": "../public/texts/gebrdenobel/LWFsYnVtcHJlc2VudGF0aWUtMjctc2VwLTIwMjQv.html",
-    "image": "../public/event-images/gebrdenobel/LWFsYnVtcHJlc2VudGF0aWUtMjctc2VwLTIwMjQv",
+    "price": 17.5,
+    "shortText": "Avond vol rockgeschiedenis en eigen werk",
+    "longText": "../public/texts/gebrdenobel/YWdlbmRhL21heGZlc3QtMDcxLTAyLW5vdi0yMDI0.html",
+    "image": "../public/event-images/gebrdenobel/YWdlbmRhL21heGZlc3QtMDcxLTAyLW5vdi0yMDI0",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {}
   },
   {
-    "start": "2024-10-19T19:00:00",
-    "venueEventUrl": "https://nobel.nl/programma/monster-magnet-19-oct-2024/",
-    "title": "Monster Magnet",
+    "start": "2024-05-29T19:00:15+0200",
+    "venueEventUrl": "https://nobel.nl/agenda/matt-johnson-jamiroquai-06-nov-2024",
+    "title": "  Matt Johnson (Jamiroquai)\n",
     "location": "gebrdenobel",
-    "price": 32.5,
-    "shortText": "Pioneers van de stoner rock vieren 35-jarig jubileum",
-    "longText": "../public/texts/gebrdenobel/bWEvbW9uc3Rlci1tYWduZXQtMTktb2N0LTIwMjQv.html",
-    "image": "../public/event-images/gebrdenobel/bWEvbW9uc3Rlci1tYWduZXQtMTktb2N0LTIwMjQv",
+    "price": 28,
+    "shortText": "Explosieve mix van jazz en funk door Jamiroquai toetsenist",
+    "longText": "../public/texts/gebrdenobel/am9obnNvbi1qYW1pcm9xdWFpLTA2LW5vdi0yMDI0.html",
+    "image": "../public/event-images/gebrdenobel/am9obnNvbi1qYW1pcm9xdWFpLTA2LW5vdi0yMDI0",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": {
-      "monster magnet": {
-        "s": "4hvwEwrCmGj22uURGVET7Q",
-        "l": "monster%20magnet",
-        "g": [
-          "southern metal",
-          "stoner metal",
-          "stoner rock"
-        ]
-      }
-    }
+    "artists": {}
   },
   {
-    "start": "2024-10-24T19:00:00",
-    "venueEventUrl": "https://nobel.nl/programma/headfirst-24-oct-2024/",
-    "title": "Headfirst",
-    "location": "gebrdenobel",
-    "price": 15,
-    "shortText": "Headfirst rockalbum release party",
-    "longText": "../public/texts/gebrdenobel/b2dyYW1tYS9oZWFkZmlyc3QtMjQtb2N0LTIwMjQv.html",
-    "image": "../public/event-images/gebrdenobel/b2dyYW1tYS9oZWFkZmlyc3QtMjQtb2N0LTIwMjQv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
-    "start": "2024-11-07T18:30:00",
-    "venueEventUrl": "https://nobel.nl/programma/alien-ant-farm-cky-7-nov-2024/",
-    "title": "Alien ant farm + cky",
+    "start": "2024-05-29T18:30:15+0200",
+    "venueEventUrl": "https://nobel.nl/agenda/alien-ant-farm-cky-07-nov-2024",
+    "title": "  alien ant farm + cky\n",
     "location": "gebrdenobel",
     "price": 30,
     "shortText": "High-energy rock-'n-roll van twee legendarische zeroes-bands",
-    "longText": "../public/texts/gebrdenobel/YWxpZW4tYW50LWZhcm0tY2t5LTctbm92LTIwMjQv.html",
-    "image": "../public/event-images/gebrdenobel/YWxpZW4tYW50LWZhcm0tY2t5LTctbm92LTIwMjQv",
+    "longText": "../public/texts/gebrdenobel/YWxpZW4tYW50LWZhcm0tY2t5LTA3LW5vdi0yMDI0.html",
+    "image": "../public/event-images/gebrdenobel/YWxpZW4tYW50LWZhcm0tY2t5LTA3LW5vdi0yMDI0",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "alien ant farm": {
+        "s": "6TZdvF1kFzwnQLgHQynzsO",
+        "l": "alien%20ant%20farm",
+        "g": [
+          "alternative metal",
+          "funk metal",
+          "nu metal",
+          "post-grunge"
+        ]
+      }
+    }
   },
   {
-    "start": "2024-11-30T19:00:00",
-    "venueEventUrl": "https://nobel.nl/programma/peter-pan-speedrock-30-nov-2024/",
-    "title": "Peter Pan Speedrock",
+    "start": "2024-05-29T19:00:15+0200",
+    "venueEventUrl": "https://nobel.nl/agenda/la-pegatina-14-nov-2024",
+    "title": "  La Pegatina\n",
+    "location": "gebrdenobel",
+    "price": 24.5,
+    "shortText": "Rumba catalana, ska, punk, cumbia en música mestiza door uitbundige Spaanse feestband",
+    "longText": "../public/texts/gebrdenobel/YWdlbmRhL2xhLXBlZ2F0aW5hLTE0LW5vdi0yMDI0.html",
+    "image": "../public/event-images/gebrdenobel/YWdlbmRhL2xhLXBlZ2F0aW5hLTE0LW5vdi0yMDI0",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2024-06-26T19:00:01+0200",
+    "venueEventUrl": "https://nobel.nl/agenda/going-circles-2-fool-moon-15-nov-2024",
+    "title": "  Going in Circles 2: Fool Moon\n",
+    "location": "gebrdenobel",
+    "price": 12.9,
+    "shortText": "Avond vol progressieve rock & metal van Artemis, Eurydice en Proxima Flare!",
+    "longText": "../public/texts/gebrdenobel/aXJjbGVzLTItZm9vbC1tb29uLTE1LW5vdi0yMDI0.html",
+    "image": "../public/event-images/gebrdenobel/aXJjbGVzLTItZm9vbC1tb29uLTE1LW5vdi0yMDI0",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2024-09-10T14:00:55+0200",
+    "venueEventUrl": "https://nobel.nl/agenda/game-cafe-17-nov-2024-0",
+    "title": "  Game Café\n",
+    "location": "gebrdenobel",
+    "price": 0,
+    "shortText": "Gratis entree, muziek van Are Friends Eclectic?, spellen en speciaalbieren",
+    "longText": "../public/texts/gebrdenobel/YWdlbmRhL2dhbWUtY2FmZS0xNy1ub3YtMjAyNC0w.html",
+    "image": "../public/event-images/gebrdenobel/YWdlbmRhL2dhbWUtY2FmZS0xNy1ub3YtMjAyNC0w",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2024-07-02T19:30:01+0200",
+    "venueEventUrl": "https://nobel.nl/agenda/shai-maestro-trio-20-nov-2024",
+    "title": "  Shai Maestro Trio\n",
+    "location": "gebrdenobel",
+    "price": 27.9,
+    "shortText": "Een van de meest getalenteerde pianisten van zijn generatie",
+    "longText": "../public/texts/gebrdenobel/L3NoYWktbWFlc3Ryby10cmlvLTIwLW5vdi0yMDI0.html",
+    "image": "../public/event-images/gebrdenobel/L3NoYWktbWFlc3Ryby10cmlvLTIwLW5vdi0yMDI0",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2024-05-29T19:00:15+0200",
+    "venueEventUrl": "https://nobel.nl/agenda/wodan-boys-bongloard-23-nov-2024",
+    "title": "  Wodan Boys + Bongloard\n",
+    "location": "gebrdenobel",
+    "price": 17.5,
+    "shortText": "Double bill met rammelende garagerock en gewelddadige gitaren",
+    "longText": "../public/texts/gebrdenobel/ZGFuLWJveXMtYm9uZ2xvYXJkLTIzLW5vdi0yMDI0.html",
+    "image": "../public/event-images/gebrdenobel/ZGFuLWJveXMtYm9uZ2xvYXJkLTIzLW5vdi0yMDI0",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "wodan boys": {
+        "s": "0kmkbibevmq4luqquahdmr",
+        "l": "wodan%20boys",
+        "g": [
+          "dutch rock"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2024-05-29T19:00:15+0200",
+    "venueEventUrl": "https://nobel.nl/agenda/banda-carumba-29-nov-2024",
+    "title": "  Banda ¡Carumba!\n",
+    "location": "gebrdenobel",
+    "price": 12.5,
+    "shortText": "Spaans, Catalaans, Frans en Cubaans? Banda ¡Carumba! laat iedereen swingen!",
+    "longText": "../public/texts/gebrdenobel/ZW5kYS9iYW5kYS1jYXJ1bWJhLTI5LW5vdi0yMDI0.html",
+    "image": "../public/event-images/gebrdenobel/ZW5kYS9iYW5kYS1jYXJ1bWJhLTI5LW5vdi0yMDI0",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "band": {
+        "s": null,
+        "l": "band",
+        "g": [
+          "heavy",
+          "power metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2024-05-29T19:00:15+0200",
+    "venueEventUrl": "https://nobel.nl/agenda/peter-pan-speedrock-30-nov-2024",
+    "title": "  Peter Pan Speedrock\n",
     "location": "gebrdenobel",
     "price": 32.5,
     "shortText": "Vier 10 jaar Nobel met de grondleggers van Speedrock!",
-    "longText": "../public/texts/gebrdenobel/dGVyLXBhbi1zcGVlZHJvY2stMzAtbm92LTIwMjQv.html",
-    "image": "../public/event-images/gebrdenobel/dGVyLXBhbi1zcGVlZHJvY2stMzAtbm92LTIwMjQv",
+    "longText": "../public/texts/gebrdenobel/ZXRlci1wYW4tc3BlZWRyb2NrLTMwLW5vdi0yMDI0.html",
+    "image": "../public/event-images/gebrdenobel/ZXRlci1wYW4tc3BlZWRyb2NrLTMwLW5vdi0yMDI0",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {
+      "peter pan speedrock": {
+        "s": "3zkYKQsUkS8nnGDL9ZhHQR",
+        "l": "peter%20pan%20speedrock",
+        "g": [
+          "dutch punk",
+          "dutch rock",
+          "punk 'n' roll"
+        ]
+      },
+      "speed": {
+        "s": "4wf6GGNBqaU79839E6yjfn",
+        "l": "speed",
+        "g": [
+          "australian hardcore",
+          "heavy",
+          "speed metal"
+        ]
+      }
+    }
   },
   {
-    "start": "2024-12-20T19:00:00",
-    "venueEventUrl": "https://nobel.nl/programma/pene-corrida-20-dec-2024/",
-    "title": "Pene Corrida",
+    "start": "2024-08-14T15:00:01+0200",
+    "venueEventUrl": "https://nobel.nl/agenda/leidse-geluiden-invites-michael-varekamp-01-dec-2024",
+    "title": "  Leidse Geluiden invites: Michael Varekamp\n",
+    "location": "gebrdenobel",
+    "price": 10.4,
+    "shortText": "Multitalent brengt een unieke kijk op de jazzgeschiedenis",
+    "longText": "../public/texts/gebrdenobel/cy1taWNoYWVsLXZhcmVrYW1wLTAxLWRlYy0yMDI0.html",
+    "image": "../public/event-images/gebrdenobel/cy1taWNoYWVsLXZhcmVrYW1wLTAxLWRlYy0yMDI0",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2024-08-28T19:30:02+0200",
+    "venueEventUrl": "https://nobel.nl/agenda/leiden-live-06-dec-2024",
+    "title": "  Leiden Live\n",
+    "location": "gebrdenobel",
+    "price": 17.5,
+    "shortText": "Ontdek de tofste live-acts uit de regio",
+    "longText": "../public/texts/gebrdenobel/YWdlbmRhL2xlaWRlbi1saXZlLTA2LWRlYy0yMDI0.html",
+    "image": "../public/event-images/gebrdenobel/YWdlbmRhL2xlaWRlbi1saXZlLTA2LWRlYy0yMDI0",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2024-05-29T19:00:15+0200",
+    "venueEventUrl": "https://nobel.nl/agenda/sticks-07-dec-2024",
+    "title": "  Sticks\n",
+    "location": "gebrdenobel",
+    "price": 22.5,
+    "shortText": "Exclusieve show van voormalig Opgezwolle-rapper",
+    "longText": "../public/texts/gebrdenobel/bC5ubC9hZ2VuZGEvc3RpY2tzLTA3LWRlYy0yMDI0.html",
+    "image": "../public/event-images/gebrdenobel/bC5ubC9hZ2VuZGEvc3RpY2tzLTA3LWRlYy0yMDI0",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "sticks": {
+        "s": "0DnbOatBnP7UDkeiQACgxd",
+        "l": "sticks",
+        "g": [
+          "dutch hip hop",
+          "groove metal",
+          "hardcore"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2024-05-29T14:00:15+0200",
+    "venueEventUrl": "https://nobel.nl/agenda/bezerkus-bingo-08-dec-2024",
+    "title": "  Bezerkus Bingo\n",
+    "location": "gebrdenobel",
+    "price": 25,
+    "shortText": "De wildste Drag Disco Bingo die je moet meemaken",
+    "longText": "../public/texts/gebrdenobel/bmRhL2JlemVya3VzLWJpbmdvLTA4LWRlYy0yMDI0.html",
+    "image": "../public/event-images/gebrdenobel/bmRhL2JlemVya3VzLWJpbmdvLTA4LWRlYy0yMDI0",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2024-08-27T19:30:54+0200",
+    "venueEventUrl": "https://nobel.nl/agenda/nobel-sessions-11-dec-2024",
+    "title": "  Nobel Sessions\n",
+    "location": "gebrdenobel",
+    "price": 0,
+    "shortText": "Maandelijkse jamsessie met jazz, funk, spoken word en nog veel meer!",
+    "longText": "../public/texts/gebrdenobel/bmRhL25vYmVsLXNlc3Npb25zLTExLWRlYy0yMDI0.html",
+    "image": "../public/event-images/gebrdenobel/bmRhL25vYmVsLXNlc3Npb25zLTExLWRlYy0yMDI0",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2024-09-10T14:00:36+0200",
+    "venueEventUrl": "https://nobel.nl/agenda/game-cafe-15-dec-2024",
+    "title": "  Game Café\n",
+    "location": "gebrdenobel",
+    "price": 0,
+    "shortText": "Gratis entree, muziek van Are Friends Eclectic? spellen en speciaalbieren. Deze editie een kerstspecial!",
+    "longText": "../public/texts/gebrdenobel/bC9hZ2VuZGEvZ2FtZS1jYWZlLTE1LWRlYy0yMDI0.html",
+    "image": "../public/event-images/gebrdenobel/bC9hZ2VuZGEvZ2FtZS1jYWZlLTE1LWRlYy0yMDI0",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2024-06-01T19:00:02+0200",
+    "venueEventUrl": "https://nobel.nl/agenda/joey-belladonna-classic-rock-19-dec-2024",
+    "title": "  Joey Belladonna Classic Rock!\n",
+    "location": "gebrdenobel",
+    "price": 27,
+    "shortText": "Anthrax-frontman en The Clarks spelen de grootste classic rockhits",
+    "longText": "../public/texts/gebrdenobel/ZG9ubmEtY2xhc3NpYy1yb2NrLTE5LWRlYy0yMDI0.html",
+    "image": "../public/event-images/gebrdenobel/ZG9ubmEtY2xhc3NpYy1yb2NrLTE5LWRlYy0yMDI0",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2024-05-29T19:00:15+0200",
+    "venueEventUrl": "https://nobel.nl/agenda/pene-corrida-20-dec-2024",
+    "title": "  Pene Corrida\n",
     "location": "gebrdenobel",
     "price": 17.5,
     "shortText": "Meedogenloze Party-Metal vol popmuziek op steroïden",
-    "longText": "../public/texts/gebrdenobel/YW1tYS9wZW5lLWNvcnJpZGEtMjAtZGVjLTIwMjQv.html",
-    "image": "../public/event-images/gebrdenobel/YW1tYS9wZW5lLWNvcnJpZGEtMjAtZGVjLTIwMjQv",
+    "longText": "../public/texts/gebrdenobel/Z2VuZGEvcGVuZS1jb3JyaWRhLTIwLWRlYy0yMDI0.html",
+    "image": "../public/event-images/gebrdenobel/Z2VuZGEvcGVuZS1jb3JyaWRhLTIwLWRlYy0yMDI0",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
       "pene corrida": {
-        "s": "1Hw2YwIpnSOWbtb8FlZcCa",
+        "s": "1hw2ywipnsowbtb8flzcca",
         "l": "pene%20corrida",
         "g": []
       }
     }
   },
   {
-    "start": "2024-12-21T19:00:00",
-    "venueEventUrl": "https://nobel.nl/programma/dool-21-dec-2024/",
-    "title": "Dool",
+    "start": "2024-05-29T19:00:15+0200",
+    "venueEventUrl": "https://nobel.nl/agenda/dool-21-dec-2024",
+    "title": "  dool\n",
     "location": "gebrdenobel",
     "price": 22.5,
     "shortText": "Dynamische metalband met Raven van Dorst als lead vocalist",
-    "longText": "../public/texts/gebrdenobel/bmwvcHJvZ3JhbW1hL2Rvb2wtMjEtZGVjLTIwMjQv.html",
-    "image": "../public/event-images/gebrdenobel/bmwvcHJvZ3JhbW1hL2Rvb2wtMjEtZGVjLTIwMjQv",
+    "longText": "../public/texts/gebrdenobel/YmVsLm5sL2FnZW5kYS9kb29sLTIxLWRlYy0yMDI0.html",
+    "image": "../public/event-images/gebrdenobel/YmVsLm5sL2FnZW5kYS9kb29sLTIxLWRlYy0yMDI0",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {}
   },
   {
-    "start": "2025-03-29T17:00:00",
-    "venueEventUrl": "https://nobel.nl/programma/interstellar-solar-fest-29-mar-2025/",
-    "title": "Interstellar Solar Fest",
+    "start": "2024-05-29T19:30:15+0200",
+    "venueEventUrl": "https://nobel.nl/agenda/abba-gold-christmas-special-27-dec-2024",
+    "title": "  ABBA Gold Christmas Special\n",
+    "location": "gebrdenobel",
+    "price": 27.5,
+    "shortText": "De grootste hits en kerstsongs van ABBA",
+    "longText": "../public/texts/gebrdenobel/LWNocmlzdG1hcy1zcGVjaWFsLTI3LWRlYy0yMDI0.html",
+    "image": "../public/event-images/gebrdenobel/LWNocmlzdG1hcy1zcGVjaWFsLTI3LWRlYy0yMDI0",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2024-08-28T19:00:02+0200",
+    "venueEventUrl": "https://nobel.nl/agenda/funked-28-dec-2024",
+    "title": "  Funked Up\n",
+    "location": "gebrdenobel",
+    "price": 17.5,
+    "shortText": "Wederom drie zalen vol funky bands & dj's",
+    "longText": "../public/texts/gebrdenobel/bC5ubC9hZ2VuZGEvZnVua2VkLTI4LWRlYy0yMDI0.html",
+    "image": "../public/event-images/gebrdenobel/bC5ubC9hZ2VuZGEvZnVua2VkLTI4LWRlYy0yMDI0",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2024-09-18T19:00:01+0200",
+    "venueEventUrl": "https://nobel.nl/agenda/5th-wave-x-sunday-eight-09-jan-2025",
+    "title": "  5th-Wave x Sunday at Eight\n",
+    "location": "gebrdenobel",
+    "price": 12.9,
+    "shortText": "Parts of Us Release Party",
+    "longText": "../public/texts/gebrdenobel/YXZlLXgtc3VuZGF5LWVpZ2h0LTA5LWphbi0yMDI1.html",
+    "image": "../public/event-images/gebrdenobel/YXZlLXgtc3VuZGF5LWVpZ2h0LTA5LWphbi0yMDI1",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2024-09-23T19:00:55+0200",
+    "venueEventUrl": "https://nobel.nl/agenda/stormchld-ep-release-10-jan-2025",
+    "title": "  StormCh!ld EP release\n",
+    "location": "gebrdenobel",
+    "price": 12.9,
+    "shortText": "Avond vol meeslepende rock van Leidse bodem",
+    "longText": "../public/texts/gebrdenobel/b3JtY2hsZC1lcC1yZWxlYXNlLTEwLWphbi0yMDI1.html",
+    "image": "../public/event-images/gebrdenobel/b3JtY2hsZC1lcC1yZWxlYXNlLTEwLWphbi0yMDI1",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2024-07-17T19:00:01+0200",
+    "venueEventUrl": "https://nobel.nl/agenda/yin-yin-23-jan-2025",
+    "title": "  yīn yīn\n",
+    "location": "gebrdenobel",
+    "price": 20,
+    "shortText": "Psychedelische klanken met Oosterse invloeden",
+    "longText": "../public/texts/gebrdenobel/Lm5sL2FnZW5kYS95aW4teWluLTIzLWphbi0yMDI1.html",
+    "image": "../public/event-images/gebrdenobel/Lm5sL2FnZW5kYS95aW4teWluLTIzLWphbi0yMDI1",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2024-09-12T18:00:00+0200",
+    "venueEventUrl": "https://nobel.nl/agenda/30-jaar-ram-25-jan-2025",
+    "title": "  30 jaar ram\n",
+    "location": "gebrdenobel",
+    "price": 32.9,
+    "shortText": "Trance-icoon viert jubileumshow met 8-uurs set",
+    "longText": "../public/texts/gebrdenobel/YWdlbmRhLzMwLWphYXItcmFtLTI1LWphbi0yMDI1.html",
+    "image": "../public/event-images/gebrdenobel/YWdlbmRhLzMwLWphYXItcmFtLTI1LWphbi0yMDI1",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2024-07-23T16:00:01+0200",
+    "venueEventUrl": "https://nobel.nl/agenda/out-ordinary-01-feb-2025",
+    "title": "  Out Of The Ordinary\n",
+    "location": "gebrdenobel",
+    "price": 29.5,
+    "shortText": "Hét alternatieve festival van Leiden!",
+    "longText": "../public/texts/gebrdenobel/Z2VuZGEvb3V0LW9yZGluYXJ5LTAxLWZlYi0yMDI1.html",
+    "image": "../public/event-images/gebrdenobel/Z2VuZGEvb3V0LW9yZGluYXJ5LTAxLWZlYi0yMDI1",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2024-08-19T19:00:01+0200",
+    "venueEventUrl": "https://nobel.nl/agenda/havoc-mobb-deep-big-noyd-dj-les-06-feb-2025",
+    "title": "  havoc of mobb deep with big noyd ",
+    "location": "gebrdenobel",
+    "price": 33.9,
+    "shortText": " dj l.e.s\n Rauwe beats en legendarische hiphop uit Queens",
+    "longText": "../public/texts/gebrdenobel/ZXAtYmlnLW5veWQtZGotbGVzLTA2LWZlYi0yMDI1.html",
+    "image": "../public/event-images/gebrdenobel/ZXAtYmlnLW5veWQtZGotbGVzLTA2LWZlYi0yMDI1",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2024-05-29T19:00:15+0200",
+    "venueEventUrl": "https://nobel.nl/agenda/doors-concert-07-feb-2025",
+    "title": "  The Doors in Concert\n",
+    "location": "gebrdenobel",
+    "price": 17.5,
+    "shortText": "Een authentiek eerbetoon aan de psychedelische rockband The Doors",
+    "longText": "../public/texts/gebrdenobel/ZW5kYS9kb29ycy1jb25jZXJ0LTA3LWZlYi0yMDI1.html",
+    "image": "../public/event-images/gebrdenobel/ZW5kYS9kb29ycy1jb25jZXJ0LTA3LWZlYi0yMDI1",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2024-05-29T19:00:15+0200",
+    "venueEventUrl": "https://nobel.nl/agenda/cobra-impaler-21-feb-2025",
+    "title": "  Cobra the Impaler\n",
+    "location": "gebrdenobel",
+    "price": 17.5,
+    "shortText": "Metal met mythische diepgang",
+    "longText": "../public/texts/gebrdenobel/ZW5kYS9jb2JyYS1pbXBhbGVyLTIxLWZlYi0yMDI1.html",
+    "image": "../public/event-images/gebrdenobel/ZW5kYS9jb2JyYS1pbXBhbGVyLTIxLWZlYi0yMDI1",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "cobra the impaler": {
+        "s": "3GF4mtTUUptBbUoJNclS4A",
+        "l": "cobra%20the%20impaler",
+        "g": [
+          "progressive metalcore"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2024-05-29T19:00:15+0200",
+    "venueEventUrl": "https://nobel.nl/agenda/nocturne-08-mrt-2025",
+    "title": "  nocturne\n",
+    "location": "gebrdenobel",
+    "price": 29.5,
+    "shortText": "Elektronisch festival vol live-acts",
+    "longText": "../public/texts/gebrdenobel/bmwvYWdlbmRhL25vY3R1cm5lLTA4LW1ydC0yMDI1.html",
+    "image": "../public/event-images/gebrdenobel/bmwvYWdlbmRhL25vY3R1cm5lLTA4LW1ydC0yMDI1",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "nocturne": {
+        "s": "5Lm66OKvD7ylR9SEggVr90",
+        "l": "nocturne",
+        "g": [
+          "atmospheric",
+          "depressive black metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2024-05-29T19:00:15+0200",
+    "venueEventUrl": "https://nobel.nl/agenda/peel-slowly-and-see-22-mrt-2025",
+    "title": "  Peel Slowly And See\n",
+    "location": "gebrdenobel",
+    "price": 0,
+    "shortText": "Het meest avontuurlijke muziekfestival van Leiden!",
+    "longText": "../public/texts/gebrdenobel/ZWVsLXNsb3dseS1hbmQtc2VlLTIyLW1ydC0yMDI1.html",
+    "image": "../public/event-images/gebrdenobel/ZWVsLXNsb3dseS1hbmQtc2VlLTIyLW1ydC0yMDI1",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2024-05-29T17:00:15+0200",
+    "venueEventUrl": "https://nobel.nl/agenda/interstellar-solar-fest-29-mrt-2025",
+    "title": "  Interstellar Solar Fest\n",
     "location": "gebrdenobel",
     "price": 27.5,
     "shortText": "Stoner- en alternatief rockfestival",
-    "longText": "../public/texts/gebrdenobel/dGVsbGFyLXNvbGFyLWZlc3QtMjktbWFyLTIwMjUv.html",
-    "image": "../public/event-images/gebrdenobel/dGVsbGFyLXNvbGFyLWZlc3QtMjktbWFyLTIwMjUv",
+    "longText": "../public/texts/gebrdenobel/c3RlbGxhci1zb2xhci1mZXN0LTI5LW1ydC0yMDI1.html",
+    "image": "../public/event-images/gebrdenobel/c3RlbGxhci1zb2xhci1mZXN0LTI5LW1ydC0yMDI1",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": null
+    "artists": {}
+  },
+  {
+    "start": "2024-07-02T14:30:01+0200",
+    "venueEventUrl": "https://nobel.nl/agenda/naar-dromenland-met-slodde-vos-12-apr-2025",
+    "title": "  Naar dromenland met... SlodDe & VoS\n",
+    "location": "gebrdenobel",
+    "price": 12.5,
+    "shortText": "Muziektheater voor kinderen van 3 t/m 8 jaar",
+    "longText": "../public/texts/gebrdenobel/YW5kLW1ldC1zbG9kZGUtdm9zLTEyLWFwci0yMDI1.html",
+    "image": "../public/event-images/gebrdenobel/YW5kLW1ldC1zbG9kZGUtdm9zLTEyLWFwci0yMDI1",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
   }
 ]

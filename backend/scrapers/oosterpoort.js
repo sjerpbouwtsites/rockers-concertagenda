@@ -75,28 +75,21 @@ scraper.mainPage = async function () {
       Array.from(document.querySelectorAll('.program__list .program__item'))
         .filter((eventEl) => !eventEl.classList.contains('is-hidden'))
         .map((eventEl) => {
-          const eersteDeelKorteTekst = eventEl.querySelector('h1 span')?.textContent ?? '';
-          const h1Tc = eventEl.querySelector('h1')?.textContent ?? '';
-          const title =
-            eersteDeelKorteTekst.length === 0 ? h1Tc : h1Tc.replace(eersteDeelKorteTekst, '') ?? '';
+          const title = eventEl.querySelector('.program__content h2').textContent ?? '';
+          
           const res = {
             anker: `<a class='page-info' href="${document.location.href}">${workerData.family} - main - ${title}</a>`,
             errors: [],
             title,
           };
+          
+          res.shortText = eventEl.querySelector('.program__content h2')?.textContent ?? '';
 
-          try {
-            res.start = eventEl.querySelector('.program__date')?.getAttribute('datetime') ?? null;
-            res.startDate = res.start.split('T')[0];
-          } catch (caughtError) {
-            res.errors.push({
-              error: caughtError,
-              remarks: `date time faal ${title}.`,
-            });
-          }
-          const tweedeDeelKorteTekst =
-            eventEl.querySelector('.program__content p')?.textContent ?? '';
-          res.shortText = `${eersteDeelKorteTekst}<br>${tweedeDeelKorteTekst}`;
+          const ddd = eventEl.querySelector('.program__date').getAttribute('datetime');
+          res.start = ddd;
+          res.startDate = ddd.substring(0, 10);
+          res.startTime = ddd.substring(11, 16);
+
           res.venueEventUrl = eventEl.querySelector('.program__link')?.href ?? null;
           const uaRex = new RegExp(unavailabiltyTerms.join('|'), 'gi');
           res.unavailable = !!eventEl.textContent.match(uaRex);

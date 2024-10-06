@@ -1,102 +1,208 @@
 [
   {
-    "door": "2024-06-27T20:30:00",
-    "start": "2024-06-27T21:00:00",
-    "venueEventUrl": "https://metropool.nl/agenda/norose-ep-release/",
-    "title": "NoRose - EP release",
+    "start": "2024-10-06T19:00:00",
+    "venueEventUrl": "https://metropool.nl/agenda/septicflesh",
+    "title": "Septicflesh",
     "location": "metropool",
-    "price": 10,
-    "shortText": "Support: Jongeman",
-    "longText": "../public/texts/metropool/bC5ubC9hZ2VuZGEvbm9yb3NlLWVwLXJlbGVhc2Uv.html",
-    "image": "../public/event-images/metropool/bC5ubC9hZ2VuZGEvbm9yb3NlLWVwLXJlbGVhc2Uv",
+    "price": 37,
+    "shortText": "Special Guest: Equilibrium",
+    "longText": "../public/texts/metropool/ZXRyb3Bvb2wubmwvYWdlbmRhL3NlcHRpY2ZsZXNo.html",
+    "image": "../public/event-images/metropool/ZXRyb3Bvb2wubmwvYWdlbmRhL3NlcHRpY2ZsZXNo",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "norose": {
-        "s": null,
-        "l": null,
+      "septicflesh": {
+        "s": "5MlEt7qqXqNSReeX76xK6b",
+        "l": "septicflesh",
         "g": [
-          "punk",
-          "opera punk"
+          "death metal",
+          "greek metal",
+          "melodic death metal",
+          "metal",
+          "symphonic black metal",
+          "symphonic death metal",
+          "symphonic metal",
+          "atmospheric",
+          "symphonic death metal"
         ]
       }
     }
   },
   {
-    "door": "2024-10-27T19:00:00",
     "start": "2024-10-27T19:30:00",
-    "venueEventUrl": "https://metropool.nl/agenda/kissin-dynamite-enschede/",
+    "venueEventUrl": "https://metropool.nl/agenda/kissin-dynamite",
     "title": "Kissin' Dynamite",
     "location": "metropool",
-    "price": 30.5,
-    "shortText": "Support: Massive Wagons en Airstrike",
-    "longText": "../public/texts/metropool/ZW5kYS9raXNzaW4tZHluYW1pdGUtZW5zY2hlZGUv.html",
-    "image": "../public/event-images/metropool/ZW5kYS9raXNzaW4tZHluYW1pdGUtZW5zY2hlZGUv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
-    "door": "2024-11-08T19:30:00",
-    "start": "2024-11-08T20:30:00",
-    "venueEventUrl": "https://metropool.nl/agenda/the-iron-maidens/",
-    "title": "The iron maidens",
-    "location": "metropool",
-    "price": 34,
-    "shortText": "",
-    "longText": "../public/texts/metropool/b2wubmwvYWdlbmRhL3RoZS1pcm9uLW1haWRlbnMv.html",
-    "image": "../public/event-images/metropool/b2wubmwvYWdlbmRhL3RoZS1pcm9uLW1haWRlbnMv",
+    "price": 27.5,
+    "shortText": "Een band die nog altijd epische anthems schrijft voor een nieuwe generatie",
+    "longText": "../public/texts/metropool/cG9vbC5ubC9hZ2VuZGEva2lzc2luLWR5bmFtaXRl.html",
+    "image": "../public/event-images/metropool/cG9vbC5ubC9hZ2VuZGEva2lzc2luLWR5bmFtaXRl",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "the iron maidens": {
-        "s": null,
-        "l": null,
+      "kissin' dynamite": {
+        "s": "2wSP2cFfkqg4LKu1pmkTWx",
+        "l": "kissin'%20dynamite",
         "g": [
+          "new wave of glam metal",
+          "nightrun",
+          "heavy metal",
+          "hard rock"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2024-11-08T20:00:00",
+    "venueEventUrl": "https://metropool.nl/agenda/draconian",
+    "title": "Draconian",
+    "location": "metropool",
+    "price": 27.5,
+    "shortText": "30th Anniversary Tour",
+    "longText": "../public/texts/metropool/L21ldHJvcG9vbC5ubC9hZ2VuZGEvZHJhY29uaWFu.html",
+    "image": "../public/event-images/metropool/L21ldHJvcG9vbC5ubC9hZ2VuZGEvZHJhY29uaWFu",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "draconian": {
+        "s": "1TX9g1uSl0B0DQIE9lBqmU",
+        "l": "draconian",
+        "g": [
+          "doom metal",
+          "gothic metal",
+          "gothic symphonic metal",
+          "swedish doom metal",
+          "swedish metal",
+          "gothic",
+          "doom",
+          "death metal",
+          "doom",
+          "gothic metal",
+          "metal",
+          "progressive"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2024-11-28T20:00:00",
+    "venueEventUrl": "https://metropool.nl/agenda/benighted-baest",
+    "title": "Benighted + baest",
+    "location": "metropool",
+    "price": 20,
+    "shortText": "Beast Against Beast European Tour 2024",
+    "longText": "../public/texts/metropool/cG9vbC5ubC9hZ2VuZGEvYmVuaWdodGVkLWJhZXN0.html",
+    "image": "../public/event-images/metropool/cG9vbC5ubC9hZ2VuZGEvYmVuaWdodGVkLWJhZXN0",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "benighted": {
+        "s": "0duwiwapc6uukkcztaaf7j",
+        "l": "benighted",
+        "g": [
+          "brutal death metal",
+          "death metal",
+          "deathgrind",
+          "french death metal",
+          "french metal",
+          "technical death metal",
+          "black metal (early)",
+          "brutal death metal/grindcore (later)"
+        ]
+      },
+      "baest": {
+        "s": "4UtjZRQc6qXhAd1kqyLvqp",
+        "l": "baest",
+        "g": [
+          "danish death metal",
+          "danish metal",
+          "death metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2024-12-04T20:30:00",
+    "venueEventUrl": "https://metropool.nl/agenda/ian-paice-purpendicular",
+    "title": "Ian Paice & Purpendicular",
+    "location": "metropool",
+    "price": 38,
+    "shortText": "De legendarische drummer en oprichter van Deep Purple",
+    "longText": "../public/texts/metropool/YWdlbmRhL2lhbi1wYWljZS1wdXJwZW5kaWN1bGFy.html",
+    "image": "../public/event-images/metropool/YWdlbmRhL2lhbi1wYWljZS1wdXJwZW5kaWN1bGFy",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "purpendicular": {
+        "s": "7dtykvbh2qxkicazbxtrkf",
+        "l": "purpendicular",
+        "g": []
+      },
+      "ian paice": {
+        "s": "2gndxbhyibxhwvurrlruaq",
+        "l": "ian%20paice",
+        "g": [
+          "rock drums",
           "heavy metal"
         ]
       }
     }
   },
   {
-    "door": "2024-11-28T19:30:00",
-    "start": "2024-11-28T20:00:00",
-    "venueEventUrl": "https://metropool.nl/agenda/benighted-plus-baest/",
-    "title": "Benighted + baest",
-    "location": "metropool",
-    "price": 23,
-    "shortText": "Support: Coffin Feeder",
-    "longText": "../public/texts/metropool/bC9hZ2VuZGEvYmVuaWdodGVkLXBsdXMtYmFlc3Qv.html",
-    "image": "../public/event-images/metropool/bC9hZ2VuZGEvYmVuaWdodGVkLXBsdXMtYmFlc3Qv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": null
-  },
-  {
-    "door": "2024-12-13T19:30:00",
     "start": "2024-12-13T20:30:00",
-    "venueEventUrl": "https://metropool.nl/agenda/john-coffey/",
+    "venueEventUrl": "https://metropool.nl/agenda/john-coffey",
     "title": "John Coffey",
     "location": "metropool",
-    "price": 29.5,
-    "shortText": "",
-    "longText": "../public/texts/metropool/dHJvcG9vbC5ubC9hZ2VuZGEvam9obi1jb2ZmZXkv.html",
-    "image": "../public/event-images/metropool/dHJvcG9vbC5ubC9hZ2VuZGEvam9obi1jb2ZmZXkv",
-    "soldOut": false,
+    "price": 26.5,
+    "shortText": "John Coffey is terug met nieuwe songs, nieuwe shows en een nieuw album in de zomer",
+    "longText": "../public/texts/metropool/ZXRyb3Bvb2wubmwvYWdlbmRhL2pvaG4tY29mZmV5.html",
+    "image": "../public/event-images/metropool/ZXRyb3Bvb2wubmwvYWdlbmRhL2pvaG4tY29mZmV5",
+    "soldOut": true,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
       "john coffey": {
-        "s": "4kffVdSOMGP0BOiBXVgeyA",
+        "s": "4kffvdsomgp0boibxvgeya",
         "l": "john%20coffey",
         "g": [
           "dutch indie",
           "dutch rock",
           "hardcore punk"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-03-28T20:30:00",
+    "venueEventUrl": "https://metropool.nl/agenda/anneke-van-giersbergen-band",
+    "title": "Anneke van Giersbergen & Band ",
+    "location": "metropool",
+    "price": 30.5,
+    "shortText": "Een concert met nieuw materiaal en hoogtepunten uit haar omvangrijke oeuvre",
+    "longText": "../public/texts/metropool/ZGEvYW5uZWtlLXZhbi1naWVyc2Jlcmdlbi1iYW5k.html",
+    "image": "../public/event-images/metropool/ZGEvYW5uZWtlLXZhbi1naWVyc2Jlcmdlbi1iYW5k",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "anneke van giersbergen": {
+        "s": "6tzqjnkayty8hfqbeddf8v",
+        "l": "anneke%20van%20giersbergen",
+        "g": [
+          "metal"
+        ]
+      },
+      "band": {
+        "s": null,
+        "l": "band",
+        "g": [
+          "heavy",
+          "power metal"
         ]
       }
     }
