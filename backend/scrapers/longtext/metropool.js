@@ -7,10 +7,10 @@ export default async function longTextSocialsIframes(page, event) {
     ({ event }) => {
       const res = {};
 
-      const textSelector = '.event-title-wrap + div';
-      const mediaSelector = ['.video-container iframe, .spotify iframe'].join(', ');
+      const textSelector = '#EventSummary'
+      const mediaSelector = ['.video-wrapper iframe, .contentblock-Spotify iframe'].join(', ');
       const removeEmptyHTMLFrom = textSelector;
-      const socialSelector = [".button--rsvp[href*='facebook']"].join(', ');
+      const socialSelector = [].join(', ');
       const removeSelectors = [
         `${textSelector} [class*='icon-']`,
         `${textSelector} [class*='fa-']`,
@@ -23,7 +23,7 @@ export default async function longTextSocialsIframes(page, event) {
         `${textSelector} [data-udi]`,
         `${textSelector} form`,
         `${textSelector} img`,
-        `${textSelector} .video-container`,
+        `${textSelector} .contentblock-Video`,
       ].join(', ');
 
       const attributesToRemove = [
