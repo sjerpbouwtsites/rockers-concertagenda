@@ -372,55 +372,15 @@
     }
   },
   {
-    "door": "2025-02-21T19:30:00",
-    "start": "2025-02-21T20:15:00",
-    "venueEventUrl": "https://www.effenaar.nl/agenda/obscura",
-    "title": "Obscura",
+    "door": "2025-02-19T19:30:00",
+    "start": "2025-02-19T20:00:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/vukovi",
+    "title": "Vukovi",
     "location": "effenaar",
-    "price": 26.5,
-    "shortText": "Technische deathmetal van wereldklasse met special guests Rings of Saturn + Gorod",
-    "longText": "../public/texts/effenaar/d3d3LmVmZmVuYWFyLm5sL2FnZW5kYS9vYnNjdXJh.html",
-    "image": "../public/event-images/effenaar/d3d3LmVmZmVuYWFyLm5sL2FnZW5kYS9vYnNjdXJh",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      },
-      "obscura": {
-        "s": "7i82bJxWj1Tggc7pnU1hzt",
-        "l": "obscura",
-        "g": [
-          "brutal death metal",
-          "cosmic death metal",
-          "death metal",
-          "deathgrind",
-          "melodic death metal",
-          "progressive death metal",
-          "progressive technical death metal",
-          "sci-fi metal",
-          "technical death metal",
-          "thrash",
-          "death",
-          "groove metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-03-22T20:30:00",
-    "start": "2025-03-22T21:00:00",
-    "venueEventUrl": "https://www.effenaar.nl/agenda/split-dogs",
-    "title": "Split Dogs",
-    "location": "effenaar",
-    "price": 15,
-    "shortText": "Punk rock 'n roll uit Engeland | + Barbee",
-    "longText": "../public/texts/effenaar/LmVmZmVuYWFyLm5sL2FnZW5kYS9zcGxpdC1kb2dz.html",
-    "image": "../public/event-images/effenaar/LmVmZmVuYWFyLm5sL2FnZW5kYS9zcGxpdC1kb2dz",
+    "price": 25.5,
+    "shortText": "Schotse poppunkers brengen zware rockriffs en aanstekelijke vocalen | + unpeople + Artio",
+    "longText": "../public/texts/effenaar/L3d3dy5lZmZlbmFhci5ubC9hZ2VuZGEvdnVrb3Zp.html",
+    "image": "../public/event-images/effenaar/L3d3dy5lZmZlbmFhci5ubC9hZ2VuZGEvdnVrb3Zp",
     "soldOut": false,
     "eventGenres": null,
     "artists": {
@@ -432,6 +392,54 @@
           " glitch",
           "dubstep",
           "electronica (later)"
+        ]
+      },
+      "artio": {
+        "s": null,
+        "l": "artio",
+        "g": [
+          "atmospheric black metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-03-15T19:30:00",
+    "start": "2025-03-15T20:15:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/lambrini-girls",
+    "title": "Lambrini Girls",
+    "location": "effenaar",
+    "price": 18.5,
+    "shortText": "Riot grrrl trio uit Brighton met rake teksten en scheurende gitaren",
+    "longText": "../public/texts/effenaar/ZW5hYXIubmwvYWdlbmRhL2xhbWJyaW5pLWdpcmxz.html",
+    "image": "../public/event-images/effenaar/ZW5hYXIubmwvYWdlbmRhL2xhbWJyaW5pLWdpcmxz",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "door": "2025-04-18T19:30:00",
+    "start": "2025-04-18T20:30:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/esprit-dair",
+    "title": "Esprit D'Air",
+    "location": "effenaar",
+    "price": 28.5,
+    "shortText": "Prijswinnend J-metal solo project",
+    "longText": "../public/texts/effenaar/ZWZmZW5hYXIubmwvYWdlbmRhL2VzcHJpdC1kYWly.html",
+    "image": "../public/event-images/effenaar/ZWZmZW5hYXIubmwvYWdlbmRhL2VzcHJpdC1kYWly",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "esprit d'air": {
+        "s": "41r42bjr4kazco7t4nvdld",
+        "l": "esprit%20d'air",
+        "g": []
+      },
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
         ]
       }
     }

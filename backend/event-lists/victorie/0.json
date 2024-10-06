@@ -145,6 +145,34 @@
     }
   },
   {
+    "door": "2025-01-04T19:15:00",
+    "start": "2025-01-04T20:45:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/classic-hits-in-concert-2025",
+    "title": "Classic Hits In Concert",
+    "location": "victorie",
+    "price": 28.75,
+    "shortText": "Het beste uit De Lijst Der Lijsten",
+    "longText": "../public/texts/victorie/YS9jbGFzc2ljLWhpdHMtaW4tY29uY2VydC0yMDI1.html",
+    "image": "../public/event-images/victorie/YS9jbGFzc2ljLWhpdHMtaW4tY29uY2VydC0yMDI1",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "door": "2025-01-18T19:00:00",
+    "start": "2025-01-18T20:30:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/new-cool-collective-2025",
+    "title": "New Cool Collective",
+    "location": "victorie",
+    "price": 25.9,
+    "shortText": "Jazzformatie viert dertig jaar op het podium",
+    "longText": "../public/texts/victorie/cmFtbWEvbmV3LWNvb2wtY29sbGVjdGl2ZS0yMDI1.html",
+    "image": "../public/event-images/victorie/cmFtbWEvbmV3LWNvb2wtY29sbGVjdGl2ZS0yMDI1",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
     "door": "2025-01-24T19:00:00",
     "start": "2025-01-24T19:45:00",
     "venueEventUrl": "https://www.podiumvictorie.nl/programma/triggerfinger-2025",
@@ -167,22 +195,70 @@
     }
   },
   {
-    "door": "2025-02-27T19:15:00",
-    "start": "2025-02-27T20:45:00",
-    "venueEventUrl": "https://www.podiumvictorie.nl/programma/the-bootleg-beatles-2025",
-    "title": "The Bootleg Beatles",
+    "door": "2025-02-20T19:15:00",
+    "start": "2025-02-20T19:45:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/berget-lewis-ft.-leif-de-leeuw-band",
+    "title": "Berget Lewis ft. Leif de Leeuw Band",
     "location": "victorie",
-    "price": 34.5,
-    "shortText": "Tribute to the Fab Four",
-    "longText": "../public/texts/victorie/cmFtbWEvdGhlLWJvb3RsZWctYmVhdGxlcy0yMDI1.html",
-    "image": "../public/event-images/victorie/cmFtbWEvdGhlLWJvb3RsZWctYmVhdGxlcy0yMDI1",
+    "price": 33.35,
+    "shortText": "samensmelting van southern rock en soulvolle vocalen",
+    "longText": "../public/texts/victorie/dC1sZXdpcy1mdC4tbGVpZi1kZS1sZWV1dy1iYW5k.html",
+    "image": "../public/event-images/victorie/dC1sZXdpcy1mdC4tbGVpZi1kZS1sZWV1dy1iYW5k",
     "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "the bootleg beatles": {
+      "band": {
         "s": null,
-        "l": "the%20bootleg%20beatles",
-        "g": []
+        "l": "band",
+        "g": [
+          "heavy",
+          "power metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-03-13T19:00:00",
+    "start": "2025-03-13T20:30:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/manfred-manns-earth-band-2025",
+    "title": "Manfred Mann's Earth Band",
+    "location": "victorie",
+    "price": 36.4,
+    "shortText": "progrockband bekend van wereldhit 'Blinded By The Light'",
+    "longText": "../public/texts/victorie/L21hbmZyZWQtbWFubnMtZWFydGgtYmFuZC0yMDI1.html",
+    "image": "../public/event-images/victorie/L21hbmZyZWQtbWFubnMtZWFydGgtYmFuZC0yMDI1",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "band": {
+        "s": null,
+        "l": "band",
+        "g": [
+          "heavy",
+          "power metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-03-29T19:15:00",
+    "start": "2025-03-29T19:45:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/nick-schilder",
+    "title": "Nick Schilder",
+    "location": "victorie",
+    "price": 31.65,
+    "shortText": "Shatterproof Clubtour",
+    "longText": "../public/texts/victorie/cmllLm5sL3Byb2dyYW1tYS9uaWNrLXNjaGlsZGVy.html",
+    "image": "../public/event-images/victorie/cmllLm5sL3Byb2dyYW1tYS9uaWNrLXNjaGlsZGVy",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "child": {
+        "s": null,
+        "l": "child",
+        "g": [
+          "grindcore"
+        ]
       }
     }
   },

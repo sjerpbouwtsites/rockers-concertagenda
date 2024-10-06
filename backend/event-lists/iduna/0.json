@@ -168,7 +168,16 @@
     "soldOut": false,
     "unavailable": null,
     "eventGenres": null,
-    "artists": {}
+    "artists": {
+      "band": {
+        "s": null,
+        "l": "band",
+        "g": [
+          "heavy",
+          "power metal"
+        ]
+      }
+    }
   },
   {
     "door": "2024-12-13T20:00:00",

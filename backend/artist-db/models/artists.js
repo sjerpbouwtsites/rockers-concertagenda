@@ -95,7 +95,7 @@ export default class Artists {
    * of oude jsons voor nieuwe schrijven gekopieerd worden naar bv allowed-events-20230101202020
    * schrijft geen backups zonder storeWritePermission
    */
-  storeSaveBackup = false;
+  storeSaveBackup = true;
 
   /**
    * Creates an instance of Artists.

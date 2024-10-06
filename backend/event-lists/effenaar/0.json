@@ -19,6 +19,15 @@
           "punk ",
           "rock "
         ]
+      },
+      "speed": {
+        "s": "4wf6GGNBqaU79839E6yjfn",
+        "l": "speed",
+        "g": [
+          "australian hardcore",
+          "heavy",
+          "speed metal"
+        ]
       }
     }
   },
@@ -319,51 +328,15 @@
     "artists": {}
   },
   {
-    "door": "2025-03-14T19:30:00",
-    "start": "2025-03-14T20:00:00",
-    "venueEventUrl": "https://www.effenaar.nl/agenda/datsuns",
-    "title": "The Datsuns",
+    "door": "2025-02-21T19:30:00",
+    "start": "2025-02-21T20:15:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/obscura",
+    "title": "Obscura",
     "location": "effenaar",
-    "price": 20,
-    "shortText": "Nieuw-Zeelandse garagerock voor liefhebbers van Jet, The White Stripes en Wolfmother",
-    "longText": "../public/texts/effenaar/d3d3LmVmZmVuYWFyLm5sL2FnZW5kYS9kYXRzdW5z.html",
-    "image": "../public/event-images/effenaar/d3d3LmVmZmVuYWFyLm5sL2FnZW5kYS9kYXRzdW5z",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "wolfmother": {
-        "s": "3yenarbnhytcwmrvd9sby4",
-        "l": "wolfmother",
-        "g": [
-          "alternative rock",
-          "australian psych",
-          "garage rock",
-          "modern blues rock",
-          "modern rock",
-          "rock"
-        ]
-      },
-      "the datsuns": {
-        "s": "2P6KPAphDMASmfHjnxSMmR",
-        "l": "the%20datsuns",
-        "g": [
-          "garage rock",
-          "garage rock revival",
-          "kiwi rock"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-04-05T19:30:00",
-    "start": "2025-04-05T20:00:00",
-    "venueEventUrl": "https://www.effenaar.nl/agenda/eternal-eclipse-deathless-void-oerheks-nubivagant",
-    "title": "Eternal Eclipse: Deathless Void ",
-    "location": "effenaar",
-    "price": 15,
-    "shortText": " Oerheks  +  Nubivagant Underground black metal in Stroomhuis",
-    "longText": "../public/texts/effenaar/dGhsZXNzLXZvaWQtb2VyaGVrcy1udWJpdmFnYW50.html",
-    "image": "../public/event-images/effenaar/dGhsZXNzLXZvaWQtb2VyaGVrcy1udWJpdmFnYW50",
+    "price": 26.5,
+    "shortText": "Technische deathmetal van wereldklasse met special guests Rings of Saturn + Gorod",
+    "longText": "../public/texts/effenaar/d3d3LmVmZmVuYWFyLm5sL2FnZW5kYS9vYnNjdXJh.html",
+    "image": "../public/event-images/effenaar/d3d3LmVmZmVuYWFyLm5sL2FnZW5kYS9vYnNjdXJh",
     "soldOut": false,
     "eventGenres": null,
     "artists": {
@@ -374,28 +347,47 @@
           "death metal"
         ]
       },
-      "deathless void": {
-        "s": "5183rMOS7baeubPO5lAMM7",
-        "l": "deathless%20void",
+      "obscura": {
+        "s": "7i82bJxWj1Tggc7pnU1hzt",
+        "l": "obscura",
         "g": [
-          "dutch black metal",
+          "brutal death metal",
+          "cosmic death metal",
+          "death metal",
+          "deathgrind",
+          "melodic death metal",
+          "progressive death metal",
+          "progressive technical death metal",
+          "sci-fi metal",
+          "technical death metal",
+          "thrash",
           "death",
-          "black metal"
+          "groove metal"
         ]
-      },
-      "oerheks": {
+      }
+    }
+  },
+  {
+    "door": "2025-03-22T20:30:00",
+    "start": "2025-03-22T21:00:00",
+    "venueEventUrl": "https://www.effenaar.nl/agenda/split-dogs",
+    "title": "Split Dogs",
+    "location": "effenaar",
+    "price": 15,
+    "shortText": "Punk rock 'n roll uit Engeland | + Barbee",
+    "longText": "../public/texts/effenaar/LmVmZmVuYWFyLm5sL2FnZW5kYS9zcGxpdC1kb2dz.html",
+    "image": "../public/event-images/effenaar/LmVmZmVuYWFyLm5sL2FnZW5kYS9zcGxpdC1kb2dz",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "punk": {
         "s": null,
-        "l": "oerheks",
+        "l": "punk",
         "g": [
-          "atmospheric black metal"
-        ]
-      },
-      "nubivagant": {
-        "s": "167tMCgP8DtZmWHB5DAP8h",
-        "l": "nubivagant",
-        "g": [
-          "occult black metal",
-          "black metal"
+          "melodic death metal (early)",
+          " glitch",
+          "dubstep",
+          "electronica (later)"
         ]
       }
     }

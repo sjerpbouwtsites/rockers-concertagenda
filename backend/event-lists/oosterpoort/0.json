@@ -33,6 +33,52 @@
     }
   },
   {
+    "start": "2024-11-24T20:30:00+01:00",
+    "venueEventUrl": "https://www.spotgroningen.nl/programma/the-langan-band-en-fara/",
+    "title": "The Langan Band en FARACeolas - Scottish Music Nights",
+    "location": "oosterpoort",
+    "price": 17,
+    "shortText": "  The Langan Band en FARACeolas - Scottish Music Nights",
+    "longText": "../public/texts/oosterpoort/cmFtbWEvdGhlLWxhbmdhbi1iYW5kLWVuLWZhcmEv.html",
+    "image": "../public/event-images/oosterpoort/cmFtbWEvdGhlLWxhbmdhbi1iYW5kLWVuLWZhcmEv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "band": {
+        "s": null,
+        "l": "band",
+        "g": [
+          "heavy",
+          "power metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2024-11-29T20:00:00+01:00",
+    "venueEventUrl": "https://www.spotgroningen.nl/programma/smash-into-pieces/",
+    "title": "Smash Into Pieces",
+    "location": "oosterpoort",
+    "price": 26.1,
+    "shortText": " support: From Fall To Spring Smash Into Pieces+ support: From Fall To Spring",
+    "longText": "../public/texts/oosterpoort/bC9wcm9ncmFtbWEvc21hc2gtaW50by1waWVjZXMv.html",
+    "image": "../public/event-images/oosterpoort/bC9wcm9ncmFtbWEvc21hc2gtaW50by1waWVjZXMv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "allt": {
+        "s": "6YRr0btzGqfQ5K7r23qjEM",
+        "l": "allt",
+        "g": [
+          "progressive metalcore",
+          "swedish metalcore"
+        ]
+      }
+    }
+  },
+  {
     "start": "2024-12-02T20:00:00+01:00",
     "venueEventUrl": "https://www.spotgroningen.nl/programma/ian-paice-feat-purpendicular/",
     "title": "Ian Paice feat. PurpendicularPerforming Classic Deep Purple",
@@ -117,6 +163,33 @@
     }
   },
   {
+    "start": "2024-12-28T20:30:00+01:00",
+    "venueEventUrl": "https://www.spotgroningen.nl/programma/new-cool-collective-4/",
+    "title": "New Cool Collective",
+    "location": "oosterpoort",
+    "price": 23.1,
+    "shortText": "New Cool Collective",
+    "longText": "../public/texts/oosterpoort/b2dyYW1tYS9uZXctY29vbC1jb2xsZWN0aXZlLTQv.html",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2025-01-03T20:30:00+01:00",
+    "venueEventUrl": "https://www.spotgroningen.nl/programma/classic-hits-in-concert-2/",
+    "title": "Classic Hits in Concert",
+    "location": "oosterpoort",
+    "price": 30.1,
+    "shortText": "Classic Hits in Concert",
+    "longText": "../public/texts/oosterpoort/bW1hL2NsYXNzaWMtaGl0cy1pbi1jb25jZXJ0LTIv.html",
+    "image": "../public/event-images/oosterpoort/bW1hL2NsYXNzaWMtaGl0cy1pbi1jb25jZXJ0LTIv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
     "start": "2025-01-09T17:00:00+01:00",
     "venueEventUrl": "https://www.spotgroningen.nl/programma/paganfest-2025/",
     "title": "Paganfest 2025alestorm / ensiferum / tyr / heidevolk / elvenking",
@@ -192,24 +265,40 @@
     }
   },
   {
-    "start": "2025-02-23T20:30:00+01:00",
-    "venueEventUrl": "https://www.spotgroningen.nl/programma/the-bootleg-beatles-3/",
-    "title": "The Bootleg Beatles",
+    "start": "2025-03-30T20:00:00+02:00",
+    "venueEventUrl": "https://www.spotgroningen.nl/programma/nick-schilder/",
+    "title": "Nick SchilderShatterproof Clubtour",
     "location": "oosterpoort",
-    "price": 33.6,
-    "shortText": "The Bootleg Beatles",
-    "longText": "../public/texts/oosterpoort/b2dyYW1tYS90aGUtYm9vdGxlZy1iZWF0bGVzLTMv.html",
-    "image": "../public/event-images/oosterpoort/b2dyYW1tYS90aGUtYm9vdGxlZy1iZWF0bGVzLTMv",
+    "price": 30.1,
+    "shortText": "Nick SchilderShatterproof Clubtour",
+    "longText": "../public/texts/oosterpoort/ZW4ubmwvcHJvZ3JhbW1hL25pY2stc2NoaWxkZXIv.html",
+    "image": "../public/event-images/oosterpoort/ZW4ubmwvcHJvZ3JhbW1hL25pY2stc2NoaWxkZXIv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "the bootleg beatles": {
+      "child": {
         "s": null,
-        "l": "the%20bootleg%20beatles",
-        "g": []
+        "l": "child",
+        "g": [
+          "grindcore"
+        ]
       }
     }
+  },
+  {
+    "start": "2025-04-21T20:30:00+02:00",
+    "venueEventUrl": "https://www.spotgroningen.nl/programma/matteo-myderwyk-2/",
+    "title": "Matteo Myderwyk",
+    "location": "oosterpoort",
+    "price": 18.5,
+    "shortText": "Matteo Myderwyk",
+    "longText": "../public/texts/oosterpoort/bC9wcm9ncmFtbWEvbWF0dGVvLW15ZGVyd3lrLTIv.html",
+    "image": "../public/event-images/oosterpoort/bC9wcm9ncmFtbWEvbWF0dGVvLW15ZGVyd3lrLTIv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
   },
   {
     "start": "2025-04-28T20:00:00+02:00",

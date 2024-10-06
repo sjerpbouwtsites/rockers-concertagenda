@@ -59,6 +59,7 @@ async function metalFanDoURL(page, url, qwm) {
     dinkelsbhlmetoapowerwolf: 'dinkel',
     'dynamo eindhoven': 'dynamo',
     dynamoeindhoven: 'dynamo',
+    dvg: 'dvgclub',
     clissonfrankrijkmetfoofighters: 'hellfest',
     weert: 'bospop',
     surhuizummetoathehaunted: 'surhuzumopenair',
