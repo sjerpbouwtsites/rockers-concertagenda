@@ -1,179 +1,168 @@
 [
-  {
-    "door": "2024-10-19T20:00:00",
-    "start": "2024-10-19T20:30:00",
-    "end": "2024-10-19T22:00:00",
-    "venueEventUrl": "https://nieuwenor.nl/programma/2024/10/19/the-sound-undercover",
-    "title": "The Sound Undercover",
-    "location": "nieuwenor",
-    "price": 21,
-    "shortText": "new-wave-ebm,tribute-cover\nRepost pre­sents: ​“Adri­an Bor­land 1957−1999” TOUR 2024",
-    "longText": "../public/texts/nieuwenor/MDI0LzEwLzE5L3RoZS1zb3VuZC11bmRlcmNvdmVy.html",
-    "image": "../public/event-images/nieuwenor/MDI0LzEwLzE5L3RoZS1zb3VuZC11bmRlcmNvdmVy",
-    "soldOut": null,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "undercover": {
-        "s": "5EQMhqNfNmnIIAgwQX1WZ7",
-        "l": "undercover",
-        "g": [
-          "christian punk"
-        ]
-      },
-      "the sound": {
-        "s": "4hzCcF4Leos2sKnz79nwhz",
-        "l": "the%20sound",
-        "g": [
-          "uk post-punk",
-          "technical grindcore",
-          "mathcore"
-        ]
-      }
+    {
+        "door": "2024-10-19T20:00:00",
+        "start": "2024-10-19T20:30:00",
+        "end": "2024-10-19T22:00:00",
+        "venueEventUrl": "https://nieuwenor.nl/programma/2024/10/19/the-sound-undercover",
+        "title": "The Sound Undercover",
+        "location": "nieuwenor",
+        "price": 21,
+        "shortText": "new-wave-ebm,tribute-cover\nRepost pre­sents: ​“Adri­an Bor­land 1957−1999” TOUR 2024",
+        "longText": "../public/texts/nieuwenor/MDI0LzEwLzE5L3RoZS1zb3VuZC11bmRlcmNvdmVy.html",
+        "image": "../public/event-images/nieuwenor/MDI0LzEwLzE5L3RoZS1zb3VuZC11bmRlcmNvdmVy",
+        "soldOut": null,
+        "unavailable": false,
+        "eventGenres": null,
+        "artists": {
+            "undercover": {
+                "s": "5EQMhqNfNmnIIAgwQX1WZ7",
+                "l": "undercover",
+                "g": ["christian punk"]
+            },
+            "the sound": {
+                "s": "4hzCcF4Leos2sKnz79nwhz",
+                "l": "the%20sound",
+                "g": ["uk post-punk", "technical grindcore", "mathcore"]
+            }
+        }
+    },
+    {
+        "door": "2024-10-26T19:30:00",
+        "start": "2024-10-26T20:30:00",
+        "end": "2024-10-26T23:00:00",
+        "venueEventUrl": "https://nieuwenor.nl/programma/2024/10/26/andre-hazes-band-xl-live-afscheidsshow",
+        "title": "And’re Hazes Band — Ik Geloof in Jou",
+        "location": "nieuwenor",
+        "price": 20,
+        "shortText": "tribute-cover\n20 jaar na de dood van André Hazes wordt de And’­re Hazes Band gereanimeerd",
+        "longText": "../public/texts/nieuwenor/emVzLWJhbmQteGwtbGl2ZS1hZnNjaGVpZHNzaG93.html",
+        "image": "../public/event-images/nieuwenor/emVzLWJhbmQteGwtbGl2ZS1hZnNjaGVpZHNzaG93",
+        "soldOut": null,
+        "unavailable": false,
+        "eventGenres": null,
+        "artists": {
+            "band": {
+                "s": null,
+                "l": "band",
+                "g": ["heavy", "power metal"]
+            }
+        }
+    },
+    {
+        "door": "2024-11-17T20:00:00",
+        "start": "2024-11-17T20:30:00",
+        "end": "2024-11-17T23:00:00",
+        "venueEventUrl": "https://nieuwenor.nl/programma/2024/11/17/rhapsody-of-fire-freedom-call",
+        "title": "Rhap­so­dy Of Fire + Free­dom Call",
+        "location": "nieuwenor",
+        "price": 27.5,
+        "shortText": "metal\nEpi­sche Power Metal!",
+        "longText": "../public/texts/nieuwenor/L3JoYXBzb2R5LW9mLWZpcmUtZnJlZWRvbS1jYWxs.html",
+        "image": "../public/event-images/nieuwenor/L3JoYXBzb2R5LW9mLWZpcmUtZnJlZWRvbS1jYWxs",
+        "soldOut": null,
+        "unavailable": false,
+        "eventGenres": null,
+        "artists": {}
+    },
+    {
+        "door": "2024-11-22T19:30:00",
+        "start": "2024-11-22T20:30:00",
+        "end": "2024-11-22T01:00:00",
+        "venueEventUrl": "https://nieuwenor.nl/programma/2024/11/22/brothers-of-metal",
+        "title": "Bro­thers of Metal",
+        "location": "nieuwenor",
+        "price": 25,
+        "shortText": "metal\nFIM­BUL­WIN­TOUR 2024",
+        "longText": "../public/texts/nieuwenor/YS8yMDI0LzExLzIyL2Jyb3RoZXJzLW9mLW1ldGFs.html",
+        "image": "../public/event-images/nieuwenor/YS8yMDI0LzExLzIyL2Jyb3RoZXJzLW9mLW1ldGFs",
+        "soldOut": null,
+        "unavailable": false,
+        "eventGenres": null,
+        "artists": {
+            "metal": {
+                "s": null,
+                "l": "metal",
+                "g": ["death metal"]
+            }
+        }
+    },
+    {
+        "door": "2024-11-29T19:30:00",
+        "start": "2024-11-29T20:00:00",
+        "end": "2024-11-29T23:00:00",
+        "venueEventUrl": "https://nieuwenor.nl/programma/2024/11/29/new-cool-collective",
+        "title": "New Cool Collective",
+        "location": "nieuwenor",
+        "price": 28.5,
+        "shortText": "funk-soul,jazz\nCham­pi­ons Lea­gue Jazz!",
+        "longText": "../public/texts/nieuwenor/MjAyNC8xMS8yOS9uZXctY29vbC1jb2xsZWN0aXZl.html",
+        "image": "../public/event-images/nieuwenor/MjAyNC8xMS8yOS9uZXctY29vbC1jb2xsZWN0aXZl",
+        "soldOut": null,
+        "unavailable": false,
+        "eventGenres": null,
+        "artists": {}
+    },
+    {
+        "door": "2024-11-30T18:30:00",
+        "start": "2024-11-30T19:00:00",
+        "end": "2024-11-30T22:45:00",
+        "venueEventUrl": "https://nieuwenor.nl/programma/2024/11/30/anvil",
+        "title": "Anvil",
+        "location": "nieuwenor",
+        "price": 28,
+        "shortText": "metal\nPowe­red by Hard in Heerlen",
+        "longText": "../public/texts/nieuwenor/Lm5sL3Byb2dyYW1tYS8yMDI0LzExLzMwL2Fudmls.html",
+        "image": "../public/event-images/nieuwenor/Lm5sL3Byb2dyYW1tYS8yMDI0LzExLzMwL2Fudmls",
+        "soldOut": null,
+        "unavailable": false,
+        "eventGenres": null,
+        "artists": {
+            "anvil": {
+                "s": "0maNhqGx60ucjS4UaAH6cP",
+                "l": "anvil",
+                "g": [
+                    "canadian metal",
+                    "glam metal",
+                    "hard rock",
+                    "metal",
+                    "speed metal",
+                    "thrash metal",
+                    "heavy",
+                    "power metal"
+                ]
+            }
+        }
+    },
+    {
+        "door": "2024-12-01T19:00:00",
+        "start": "2024-12-01T19:30:00",
+        "end": "2024-12-01T23:00:00",
+        "venueEventUrl": "https://nieuwenor.nl/programma/2024/12/01/graphic-nature",
+        "title": "Grap­hic Nature",
+        "location": "nieuwenor",
+        "price": 20,
+        "shortText": "metal\nPowe­red by Hard in Heerlen",
+        "longText": "../public/texts/nieuwenor/YW1tYS8yMDI0LzEyLzAxL2dyYXBoaWMtbmF0dXJl.html",
+        "image": "../public/event-images/nieuwenor/YW1tYS8yMDI0LzEyLzAxL2dyYXBoaWMtbmF0dXJl",
+        "soldOut": null,
+        "unavailable": false,
+        "eventGenres": null,
+        "artists": {}
+    },
+    {
+        "door": "2025-04-03T20:00:00",
+        "start": "2025-04-03T20:30:00",
+        "end": "2025-04-03T01:00:00",
+        "venueEventUrl": "https://nieuwenor.nl/programma/2025/04/03/clan-of-xymox",
+        "title": "Clan Of Xymox",
+        "location": "nieuwenor",
+        "price": 25,
+        "shortText": "new-wave-ebm\nRePost! pre­sen­teert pio­niers van de darkwave",
+        "longText": "../public/texts/nieuwenor/cmFtbWEvMjAyNS8wNC8wMy9jbGFuLW9mLXh5bW94.html",
+        "image": "../public/event-images/nieuwenor/cmFtbWEvMjAyNS8wNC8wMy9jbGFuLW9mLXh5bW94",
+        "soldOut": null,
+        "unavailable": false,
+        "eventGenres": null,
+        "artists": {}
     }
-  },
-  {
-    "door": "2024-10-26T19:30:00",
-    "start": "2024-10-26T20:30:00",
-    "end": "2024-10-26T23:00:00",
-    "venueEventUrl": "https://nieuwenor.nl/programma/2024/10/26/andre-hazes-band-xl-live-afscheidsshow",
-    "title": "And’re Hazes Band — Ik Geloof in Jou",
-    "location": "nieuwenor",
-    "price": 20,
-    "shortText": "tribute-cover\n20 jaar na de dood van André Hazes wordt de And’­re Hazes Band gereanimeerd",
-    "longText": "../public/texts/nieuwenor/emVzLWJhbmQteGwtbGl2ZS1hZnNjaGVpZHNzaG93.html",
-    "image": "../public/event-images/nieuwenor/emVzLWJhbmQteGwtbGl2ZS1hZnNjaGVpZHNzaG93",
-    "soldOut": null,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "band": {
-        "s": null,
-        "l": "band",
-        "g": [
-          "heavy",
-          "power metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-11-17T20:00:00",
-    "start": "2024-11-17T20:30:00",
-    "end": "2024-11-17T23:00:00",
-    "venueEventUrl": "https://nieuwenor.nl/programma/2024/11/17/rhapsody-of-fire-freedom-call",
-    "title": "Rhap­so­dy Of Fire + Free­dom Call",
-    "location": "nieuwenor",
-    "price": 27.5,
-    "shortText": "metal\nEpi­sche Power Metal!",
-    "longText": "../public/texts/nieuwenor/L3JoYXBzb2R5LW9mLWZpcmUtZnJlZWRvbS1jYWxs.html",
-    "image": "../public/event-images/nieuwenor/L3JoYXBzb2R5LW9mLWZpcmUtZnJlZWRvbS1jYWxs",
-    "soldOut": null,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2024-11-22T19:30:00",
-    "start": "2024-11-22T20:30:00",
-    "end": "2024-11-22T01:00:00",
-    "venueEventUrl": "https://nieuwenor.nl/programma/2024/11/22/brothers-of-metal",
-    "title": "Bro­thers of Metal",
-    "location": "nieuwenor",
-    "price": 25,
-    "shortText": "metal\nFIM­BUL­WIN­TOUR 2024",
-    "longText": "../public/texts/nieuwenor/YS8yMDI0LzExLzIyL2Jyb3RoZXJzLW9mLW1ldGFs.html",
-    "image": "../public/event-images/nieuwenor/YS8yMDI0LzExLzIyL2Jyb3RoZXJzLW9mLW1ldGFs",
-    "soldOut": null,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-11-29T19:30:00",
-    "start": "2024-11-29T20:00:00",
-    "end": "2024-11-29T23:00:00",
-    "venueEventUrl": "https://nieuwenor.nl/programma/2024/11/29/new-cool-collective",
-    "title": "New Cool Collective",
-    "location": "nieuwenor",
-    "price": 28.5,
-    "shortText": "funk-soul,jazz\nCham­pi­ons Lea­gue Jazz!",
-    "longText": "../public/texts/nieuwenor/MjAyNC8xMS8yOS9uZXctY29vbC1jb2xsZWN0aXZl.html",
-    "image": "../public/event-images/nieuwenor/MjAyNC8xMS8yOS9uZXctY29vbC1jb2xsZWN0aXZl",
-    "soldOut": null,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2024-11-30T18:30:00",
-    "start": "2024-11-30T19:00:00",
-    "end": "2024-11-30T22:45:00",
-    "venueEventUrl": "https://nieuwenor.nl/programma/2024/11/30/anvil",
-    "title": "Anvil",
-    "location": "nieuwenor",
-    "price": 28,
-    "shortText": "metal\nPowe­red by Hard in Heerlen",
-    "longText": "../public/texts/nieuwenor/Lm5sL3Byb2dyYW1tYS8yMDI0LzExLzMwL2Fudmls.html",
-    "image": "../public/event-images/nieuwenor/Lm5sL3Byb2dyYW1tYS8yMDI0LzExLzMwL2Fudmls",
-    "soldOut": null,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "anvil": {
-        "s": "0maNhqGx60ucjS4UaAH6cP",
-        "l": "anvil",
-        "g": [
-          "canadian metal",
-          "glam metal",
-          "hard rock",
-          "metal",
-          "speed metal",
-          "thrash metal",
-          "heavy",
-          "power metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-12-01T19:00:00",
-    "start": "2024-12-01T19:30:00",
-    "end": "2024-12-01T23:00:00",
-    "venueEventUrl": "https://nieuwenor.nl/programma/2024/12/01/graphic-nature",
-    "title": "Grap­hic Nature",
-    "location": "nieuwenor",
-    "price": 20,
-    "shortText": "metal\nPowe­red by Hard in Heerlen",
-    "longText": "../public/texts/nieuwenor/YW1tYS8yMDI0LzEyLzAxL2dyYXBoaWMtbmF0dXJl.html",
-    "image": "../public/event-images/nieuwenor/YW1tYS8yMDI0LzEyLzAxL2dyYXBoaWMtbmF0dXJl",
-    "soldOut": null,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2025-04-03T20:00:00",
-    "start": "2025-04-03T20:30:00",
-    "end": "2025-04-03T01:00:00",
-    "venueEventUrl": "https://nieuwenor.nl/programma/2025/04/03/clan-of-xymox",
-    "title": "Clan Of Xymox",
-    "location": "nieuwenor",
-    "price": 25,
-    "shortText": "new-wave-ebm\nRePost! pre­sen­teert pio­niers van de darkwave",
-    "longText": "../public/texts/nieuwenor/cmFtbWEvMjAyNS8wNC8wMy9jbGFuLW9mLXh5bW94.html",
-    "image": "../public/event-images/nieuwenor/cmFtbWEvMjAyNS8wNC8wMy9jbGFuLW9mLXh5bW94",
-    "soldOut": null,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  }
 ]

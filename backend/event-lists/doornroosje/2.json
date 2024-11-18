@@ -1,166 +1,136 @@
 [
-  {
-    "start": "2023-10-13T18:00:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/soulcrusher-2024/",
-    "title": "Soulcrusher 2024",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "undefined Met oa: Zeal & Ardor (swi), HEALTH (usa), Blackbraid (usa), Ulcerate (nzl), Inter Arma (usa), Mizmor (usa), Pharmakon (usa), DVNE (uk), Coilguns (swi), GOST (usa), Lamp of Murmuur (usa), Thantifaxath (can), Dödsrit (swe/nl), Morne (usa), Hippotraktor (be), Woe (usa), Five the Hierophant (uk), Great Falls (usa), Kollaps (aus), Lana Del Rabies (usa), Norna (swi/swe), Nyrst (is), Zetra (uk), Ponte del Diavolo (ita), Deathless Void (nl)",
-    "longText": "../public/texts/doornroosje/c2plLm5sL2V2ZW50L3NvdWxjcnVzaGVyLTIwMjQv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "undefined": {
-        "s": "6NMVL5NGYZKTl6AZuxybbV",
-        "l": "undefined",
-        "g": [
-          "metalcore",
-          "new wave ",
-          "punk "
-        ]
-      }
+    {
+        "start": "2023-10-13T18:00:00.000",
+        "venueEventUrl": "https://www.doornroosje.nl/event/soulcrusher-2024/",
+        "title": "Soulcrusher 2024",
+        "location": "doornroosje",
+        "price": null,
+        "shortText": "undefined Met oa: Zeal & Ardor (swi), HEALTH (usa), Blackbraid (usa), Ulcerate (nzl), Inter Arma (usa), Mizmor (usa), Pharmakon (usa), DVNE (uk), Coilguns (swi), GOST (usa), Lamp of Murmuur (usa), Thantifaxath (can), Dödsrit (swe/nl), Morne (usa), Hippotraktor (be), Woe (usa), Five the Hierophant (uk), Great Falls (usa), Kollaps (aus), Lana Del Rabies (usa), Norna (swi/swe), Nyrst (is), Zetra (uk), Ponte del Diavolo (ita), Deathless Void (nl)",
+        "longText": "../public/texts/doornroosje/c2plLm5sL2V2ZW50L3NvdWxjcnVzaGVyLTIwMjQv.html",
+        "soldOut": true,
+        "eventGenres": null,
+        "artists": {
+            "undefined": {
+                "s": "6NMVL5NGYZKTl6AZuxybbV",
+                "l": "undefined",
+                "g": ["metalcore", "new wave ", "punk "]
+            }
+        }
+    },
+    {
+        "door": "2024-11-07T20:00:00.000",
+        "start": "2024-11-07T20:30:00.000",
+        "venueEventUrl": "https://www.doornroosje.nl/event/celeste/",
+        "title": "Celeste",
+        "location": "doornroosje",
+        "price": null,
+        "shortText": "+ Ter Zielemetal, post metal, sludge metal, doornroosjepas",
+        "longText": "../public/texts/doornroosje/LmRvb3Jucm9vc2plLm5sL2V2ZW50L2NlbGVzdGUv.html",
+        "soldOut": true,
+        "eventGenres": null,
+        "artists": {
+            "celeste": {
+                "s": "49HlOY4gkHqsYG9GCuhkcc",
+                "l": "celeste",
+                "g": ["british soul", "black", "sludge metal", "post-hardcore"]
+            },
+            "ter ziele": {
+                "s": "4zaaeasrkr1rdqtcdlui6g",
+                "l": "ter%20ziele",
+                "g": []
+            },
+            "metal": {
+                "s": null,
+                "l": "metal",
+                "g": ["death metal"]
+            }
+        }
+    },
+    {
+        "door": "2024-12-05T21:00:00.000",
+        "start": "2024-12-05T22:00:00.000",
+        "venueEventUrl": "https://www.doornroosje.nl/event/lizzard/",
+        "title": "Lizzard",
+        "location": "doornroosje",
+        "price": null,
+        "shortText": "+ Godsticksrock, metal, progressive metal",
+        "longText": "../public/texts/doornroosje/LmRvb3Jucm9vc2plLm5sL2V2ZW50L2xpenphcmQv.html",
+        "soldOut": true,
+        "eventGenres": null,
+        "artists": {
+            "lizzard": {
+                "s": "3y8vqcADc0jrZGhRDRGs1f",
+                "l": "lizzard",
+                "g": ["deep progressive rock", "stoner", "doom", "sludge metal"]
+            },
+            "rock,": {
+                "s": null,
+                "l": "rock,",
+                "g": ["heavy metal"]
+            },
+            "metal": {
+                "s": null,
+                "l": "metal",
+                "g": ["death metal"]
+            }
+        }
+    },
+    {
+        "door": "2024-12-21T20:00:00.000",
+        "start": "2024-12-21T20:30:00.000",
+        "venueEventUrl": "https://www.doornroosje.nl/event/heidevolk-2/",
+        "title": "Heidevolk",
+        "location": "doornroosje",
+        "price": null,
+        "shortText": "metal, folk metal",
+        "longText": "../public/texts/doornroosje/cm5yb29zamUubmwvZXZlbnQvaGVpZGV2b2xrLTIv.html",
+        "soldOut": true,
+        "eventGenres": null,
+        "artists": {
+            "heidevolk": {
+                "s": "0a2yao4tufejvnn5hvjfxa",
+                "l": "heidevolk",
+                "g": ["dutch metal", "folk metal", "viking metal"]
+            },
+            "metal": {
+                "s": null,
+                "l": "metal",
+                "g": ["death metal"]
+            }
+        }
+    },
+    {
+        "door": "2025-02-08T19:30:00.000",
+        "start": "2025-02-08T20:15:00.000",
+        "venueEventUrl": "https://www.doornroosje.nl/event/high-vis/",
+        "title": "High Vis",
+        "location": "doornroosje",
+        "price": null,
+        "shortText": "+ Narrow Headrock, post punk, hardcore",
+        "longText": "../public/texts/doornroosje/ZG9vcm5yb29zamUubmwvZXZlbnQvaGlnaC12aXMv.html",
+        "soldOut": true,
+        "eventGenres": null,
+        "artists": {
+            "high vis": {
+                "s": "4gmrt82h2vjgjnp67sg5nw",
+                "l": "high%20vis",
+                "g": ["uk post-punk revival"]
+            },
+            "rock,": {
+                "s": null,
+                "l": "rock,",
+                "g": ["heavy metal"]
+            },
+            "punk": {
+                "s": null,
+                "l": "punk",
+                "g": [
+                    "melodic death metal (early)",
+                    " glitch",
+                    "dubstep",
+                    "electronica (later)"
+                ]
+            }
+        }
     }
-  },
-  {
-    "door": "2024-11-07T20:00:00.000",
-    "start": "2024-11-07T20:30:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/celeste/",
-    "title": "Celeste",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "+ Ter Zielemetal, post metal, sludge metal, doornroosjepas",
-    "longText": "../public/texts/doornroosje/LmRvb3Jucm9vc2plLm5sL2V2ZW50L2NlbGVzdGUv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "celeste": {
-        "s": "49HlOY4gkHqsYG9GCuhkcc",
-        "l": "celeste",
-        "g": [
-          "british soul",
-          "black",
-          "sludge metal",
-          "post-hardcore"
-        ]
-      },
-      "ter ziele": {
-        "s": "4zaaeasrkr1rdqtcdlui6g",
-        "l": "ter%20ziele",
-        "g": []
-      },
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-12-05T21:00:00.000",
-    "start": "2024-12-05T22:00:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/lizzard/",
-    "title": "Lizzard",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "+ Godsticksrock, metal, progressive metal",
-    "longText": "../public/texts/doornroosje/LmRvb3Jucm9vc2plLm5sL2V2ZW50L2xpenphcmQv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "lizzard": {
-        "s": "3y8vqcADc0jrZGhRDRGs1f",
-        "l": "lizzard",
-        "g": [
-          "deep progressive rock",
-          "stoner",
-          "doom",
-          "sludge metal"
-        ]
-      },
-      "rock,": {
-        "s": null,
-        "l": "rock,",
-        "g": [
-          "heavy metal"
-        ]
-      },
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-12-21T20:00:00.000",
-    "start": "2024-12-21T20:30:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/heidevolk-2/",
-    "title": "Heidevolk",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "metal, folk metal",
-    "longText": "../public/texts/doornroosje/cm5yb29zamUubmwvZXZlbnQvaGVpZGV2b2xrLTIv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "heidevolk": {
-        "s": "0a2yao4tufejvnn5hvjfxa",
-        "l": "heidevolk",
-        "g": [
-          "dutch metal",
-          "folk metal",
-          "viking metal"
-        ]
-      },
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-02-08T19:30:00.000",
-    "start": "2025-02-08T20:15:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/high-vis/",
-    "title": "High Vis",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "+ Narrow Headrock, post punk, hardcore",
-    "longText": "../public/texts/doornroosje/ZG9vcm5yb29zamUubmwvZXZlbnQvaGlnaC12aXMv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "high vis": {
-        "s": "4gmrt82h2vjgjnp67sg5nw",
-        "l": "high%20vis",
-        "g": [
-          "uk post-punk revival"
-        ]
-      },
-      "rock,": {
-        "s": null,
-        "l": "rock,",
-        "g": [
-          "heavy metal"
-        ]
-      },
-      "punk": {
-        "s": null,
-        "l": "punk",
-        "g": [
-          "melodic death metal (early)",
-          " glitch",
-          "dubstep",
-          "electronica (later)"
-        ]
-      }
-    }
-  }
 ]

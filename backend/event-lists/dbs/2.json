@@ -1,191 +1,151 @@
 [
-  {
-    "start": "2024-10-20T04:00:00",
-    "end": "2024-10-20T09:00:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/killtown-death-fest-w-ossuary-left-cross-druid-lord-killing-addiction/",
-    "title": "Kill-Town Death Fest Cool Down w/ Ossuary ",
-    "location": "dbs",
-    "price": 15,
-    "shortText": " Left Cross  +  Druid Lord  +  Killing Addiction Inborn Scourge Unbound heet deze door het vermaarde Killtown opgezette tournee met maar liefst vier internationale bands die de Vlampijp op hun grondvesten zullen doen schudden.\nEen zondag matinee om je death metal vingers bij af te likken. Vier bands uit de States die na Killtown London de oversteek maken naar de Vlampijpstraat.",
-    "longText": "../public/texts/dbs/LWRydWlkLWxvcmQta2lsbGluZy1hZGRpY3Rpb24v.html",
-    "image": "../public/event-images/dbs/LWRydWlkLWxvcmQta2lsbGluZy1hZGRpY3Rpb24v",
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "left cross": {
-        "s": "1wz5dmEamdDajJMpPTV4zv",
-        "l": "left%20cross",
-        "g": [
-          "voidgrind",
-          "death metal"
-        ]
-      },
-      "druid lord": {
-        "s": "1KkL1c6zKaauOUcmFQia0U",
-        "l": "druid%20lord",
-        "g": [
-          "death doom",
-          "death",
-          "doom metal"
-        ]
-      },
-      "killing addiction": {
-        "s": "1FDD6T9pvR0CbSyy1tBX9K",
-        "l": "killing%20addiction",
-        "g": [
-          "florida death metal",
-          "grim death metal",
-          "death metal"
-        ]
-      }
+    {
+        "start": "2024-10-20T04:00:00",
+        "end": "2024-10-20T09:00:00",
+        "venueEventUrl": "https://www.dbstudio.nl/event/killtown-death-fest-w-ossuary-left-cross-druid-lord-killing-addiction/",
+        "title": "Kill-Town Death Fest Cool Down w/ Ossuary ",
+        "location": "dbs",
+        "price": 15,
+        "shortText": " Left Cross  +  Druid Lord  +  Killing Addiction Inborn Scourge Unbound heet deze door het vermaarde Killtown opgezette tournee met maar liefst vier internationale bands die de Vlampijp op hun grondvesten zullen doen schudden.\nEen zondag matinee om je death metal vingers bij af te likken. Vier bands uit de States die na Killtown London de oversteek maken naar de Vlampijpstraat.",
+        "longText": "../public/texts/dbs/LWRydWlkLWxvcmQta2lsbGluZy1hZGRpY3Rpb24v.html",
+        "image": "../public/event-images/dbs/LWRydWlkLWxvcmQta2lsbGluZy1hZGRpY3Rpb24v",
+        "unavailable": false,
+        "eventGenres": null,
+        "artists": {
+            "left cross": {
+                "s": "1wz5dmEamdDajJMpPTV4zv",
+                "l": "left%20cross",
+                "g": ["voidgrind", "death metal"]
+            },
+            "druid lord": {
+                "s": "1KkL1c6zKaauOUcmFQia0U",
+                "l": "druid%20lord",
+                "g": ["death doom", "death", "doom metal"]
+            },
+            "killing addiction": {
+                "s": "1FDD6T9pvR0CbSyy1tBX9K",
+                "l": "killing%20addiction",
+                "g": ["florida death metal", "grim death metal", "death metal"]
+            }
+        }
+    },
+    {
+        "start": "2024-10-27T04:00:00",
+        "end": "2024-10-27T07:30:00",
+        "venueEventUrl": "https://www.dbstudio.nl/event/el-khat-jemen-support/",
+        "title": "Arab Music Matinee feat. EL KHAT (Jemen) ",
+        "location": "dbs",
+        "price": 15,
+        "shortText": " Serdem Sounds (Kurdistan)  +  DJ MAHERRIE ism Catching Cultures And now for something completely different. We hebben al langere tijd het gevoel dat er wat mist in de Domstad na de ondergang van het Rasa Wereldmuziekpodium. Met deze show van El Khat zetten we onze eerste schreden op het pad van de wereldmuziek en dat doen we met het Jemenitische EL KHAT. Wordt tof. Check het zelf!",
+        "longText": "../public/texts/dbs/bC9ldmVudC9lbC1raGF0LWplbWVuLXN1cHBvcnQv.html",
+        "image": "../public/event-images/dbs/bC9ldmVudC9lbC1raGF0LWplbWVuLXN1cHBvcnQv",
+        "unavailable": false,
+        "eventGenres": null,
+        "artists": {
+            "feat.": {
+                "s": null,
+                "l": "feat.",
+                "g": ["heavy", "power metal"]
+            }
+        }
+    },
+    {
+        "start": "2024-11-26T08:00:00",
+        "end": "2024-11-26T10:30:00",
+        "venueEventUrl": "https://www.dbstudio.nl/event/morta-skuld-us-decrepid-uk-europe-undone-tour-2024/",
+        "title": "Morta skuld (us) ",
+        "location": "dbs",
+        "price": 15,
+        "shortText": " decrepid (uk) – europe undone tour 2024 Verplichte kost voor de ware death metal liefhebber! Death Metal veteranen Morta Skuld uit Milwaukee waren te zien op verschillende edities van Killtown Deathfest en Deathfests in Nederland, Engeland en de rest van de wereld, maar niet eerder waren ze te zien in een clubtour. Vorig jaar vierde de band het 30-jarig jubileum van cult album ‘Dying Remains’ (1993), tijdens deze tour presenteren ze hun laatste album ‘Creation Undone’ (Peaceville Records).",
+        "longText": "../public/texts/dbs/aWQtdWstZXVyb3BlLXVuZG9uZS10b3VyLTIwMjQv.html",
+        "image": "../public/event-images/dbs/aWQtdWstZXVyb3BlLXVuZG9uZS10b3VyLTIwMjQv",
+        "unavailable": false,
+        "eventGenres": null,
+        "artists": {}
+    },
+    {
+        "start": "2024-12-07T07:00:00",
+        "end": "2024-12-07T11:00:00",
+        "venueEventUrl": "https://www.dbstudio.nl/event/big-ass-metal-fest-41-blackmass-met-alkahest-asgrauw-rituals-of-the-dead-hand-release-the-river/",
+        "title": "Big ass metal fest #41 > blackmass met alkahest ",
+        "location": "dbs",
+        "price": 10,
+        "shortText": " asgrauw  +  rituals of the dead hand  +  release the river ",
+        "longText": "../public/texts/dbs/ZS1kZWFkLWhhbmQtcmVsZWFzZS10aGUtcml2ZXIv.html",
+        "image": "../public/event-images/dbs/ZS1kZWFkLWhhbmQtcmVsZWFzZS10aGUtcml2ZXIv",
+        "unavailable": false,
+        "eventGenres": null,
+        "artists": {
+            "asgrauw": {
+                "s": "6y8fpnzkbqsjzwjjoepzne",
+                "l": "asgrauw",
+                "g": ["dutch black metal", "dutch metal"]
+            },
+            "metal": {
+                "s": null,
+                "l": "metal",
+                "g": ["death metal"]
+            },
+            "release the river": {
+                "s": "2UWgVGBDwnb38nW5UJLAjQ",
+                "l": "release%20the%20river",
+                "g": ["melodic black", "death metal", "metalcore"]
+            },
+            "alkahest": {
+                "s": "53vjMkvxWt9UZAXlnwsPrj",
+                "l": "alkahest",
+                "g": ["atmospheric sludge", "doom metal", "post-rock"]
+            },
+            "talk": {
+                "s": null,
+                "l": "talk",
+                "g": ["crossover", "hardcore", "thrash metal"]
+            }
+        }
+    },
+    {
+        "start": "2025-01-04T08:00:00",
+        "end": "2025-01-04T11:30:00",
+        "venueEventUrl": "https://www.dbstudio.nl/event/autarkh-farer-anapoda/",
+        "title": "Autarkh + farer + anapoda",
+        "location": "dbs",
+        "price": 13,
+        "shortText": "Autarkh is een moderne metalband uit Tilburg (NL) die graag de grenzen van muziek opzoekt. De band is opgericht door Michel Nienhuis, bekend van Dodecahedron. Autarkh combineert harde gitaarriffs en verschillende zangstijlen, van diepe grunts tot schreeuwen en harmonieën, met elektronische geluiden, zoals synthesizers en beats die doen denken aan artiesten als Aphex Twin en Autechre. Dit zorgt voor een unieke mix van metal en elektronische muziek. Met snelle drumpartijen, zware bassen en duistere geluidseffecten creëert de band een intense sfeer waarin verschillende emoties samenkomen.\n\n \nDe support komt van het trio Farer, een band met leden die al jaren actief zijn in de heavy scene. Met hun debuutalbum ‘Monad’ uit 2020, opgenomen door John Bart van der Wal van Dool, leverde Farer een ware dronedoompostmetaltrip af, gevuld met oerschreeuwen zonder woorden, huiveringwekkende, schrapende basriffs en pulserende ritmes. Grimmig en compromisloos hard.\n\n \nNiet één, maar twee support acts: het Utrechtse Anapoda brengt progressieve extreme metal met invloeden uit de black, death en melodeath. Dat wordt genieten en flink headbangen!",
+        "longText": "../public/texts/dbs/bC9ldmVudC9hdXRhcmtoLWZhcmVyLWFuYXBvZGEv.html",
+        "image": "../public/event-images/dbs/bC9ldmVudC9hdXRhcmtoLWZhcmVyLWFuYXBvZGEv",
+        "unavailable": false,
+        "eventGenres": null,
+        "artists": {
+            "autarkh": {
+                "s": "1h39mvskrqbzrsf3vfnsp5",
+                "l": "autarkh",
+                "g": ["industrial metal"]
+            },
+            "farer": {
+                "s": "529WaKnDwThqAtgOLNjwMp",
+                "l": "farer",
+                "g": ["atmospheric sludge", "post-metal"]
+            }
+        }
+    },
+    {
+        "start": "2025-03-08T08:00:00",
+        "end": "2025-03-08T11:30:00",
+        "venueEventUrl": "https://www.dbstudio.nl/event/planet-of-zeus/",
+        "title": "Planet of zeus (greece)",
+        "location": "dbs",
+        "price": "0",
+        "shortText": "Planet of Zeus is een heavy rockband uit Athene, actief sinds 2000. Ze zijn bekend om hun rauwe, energieke live-shows en hebben een trouwe fanbase opgebouwd, zowel in Griekenland als daarbuiten. Na vijf Europese tours en optredens op grote festivals waren ze in 2015 de hoofdact tijdens Clutch’s Europese tour.",
+        "longText": "../public/texts/dbs/dHVkaW8ubmwvZXZlbnQvcGxhbmV0LW9mLXpldXMv.html",
+        "image": "../public/event-images/dbs/dHVkaW8ubmwvZXZlbnQvcGxhbmV0LW9mLXpldXMv",
+        "unavailable": false,
+        "eventGenres": null,
+        "artists": {
+            "planet of zeus": {
+                "s": "1oxVf6OeX1x5R9VxuHZmFG",
+                "l": "planet%20of%20zeus",
+                "g": ["greek metal", "greek psychedelic rock", "greek rock"]
+            }
+        }
     }
-  },
-  {
-    "start": "2024-10-27T04:00:00",
-    "end": "2024-10-27T07:30:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/el-khat-jemen-support/",
-    "title": "Arab Music Matinee feat. EL KHAT (Jemen) ",
-    "location": "dbs",
-    "price": 15,
-    "shortText": " Serdem Sounds (Kurdistan)  +  DJ MAHERRIE ism Catching Cultures And now for something completely different. We hebben al langere tijd het gevoel dat er wat mist in de Domstad na de ondergang van het Rasa Wereldmuziekpodium. Met deze show van El Khat zetten we onze eerste schreden op het pad van de wereldmuziek en dat doen we met het Jemenitische EL KHAT. Wordt tof. Check het zelf!",
-    "longText": "../public/texts/dbs/bC9ldmVudC9lbC1raGF0LWplbWVuLXN1cHBvcnQv.html",
-    "image": "../public/event-images/dbs/bC9ldmVudC9lbC1raGF0LWplbWVuLXN1cHBvcnQv",
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "feat.": {
-        "s": null,
-        "l": "feat.",
-        "g": [
-          "heavy",
-          "power metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2024-11-26T08:00:00",
-    "end": "2024-11-26T10:30:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/morta-skuld-us-decrepid-uk-europe-undone-tour-2024/",
-    "title": "Morta skuld (us) ",
-    "location": "dbs",
-    "price": 15,
-    "shortText": " decrepid (uk) – europe undone tour 2024 Verplichte kost voor de ware death metal liefhebber! Death Metal veteranen Morta Skuld uit Milwaukee waren te zien op verschillende edities van Killtown Deathfest en Deathfests in Nederland, Engeland en de rest van de wereld, maar niet eerder waren ze te zien in een clubtour. Vorig jaar vierde de band het 30-jarig jubileum van cult album ‘Dying Remains’ (1993), tijdens deze tour presenteren ze hun laatste album ‘Creation Undone’ (Peaceville Records).",
-    "longText": "../public/texts/dbs/aWQtdWstZXVyb3BlLXVuZG9uZS10b3VyLTIwMjQv.html",
-    "image": "../public/event-images/dbs/aWQtdWstZXVyb3BlLXVuZG9uZS10b3VyLTIwMjQv",
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "start": "2024-12-07T07:00:00",
-    "end": "2024-12-07T11:00:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/big-ass-metal-fest-41-blackmass-met-alkahest-asgrauw-rituals-of-the-dead-hand-release-the-river/",
-    "title": "Big ass metal fest #41 > blackmass met alkahest ",
-    "location": "dbs",
-    "price": 10,
-    "shortText": " asgrauw  +  rituals of the dead hand  +  release the river ",
-    "longText": "../public/texts/dbs/ZS1kZWFkLWhhbmQtcmVsZWFzZS10aGUtcml2ZXIv.html",
-    "image": "../public/event-images/dbs/ZS1kZWFkLWhhbmQtcmVsZWFzZS10aGUtcml2ZXIv",
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "asgrauw": {
-        "s": "6y8fpnzkbqsjzwjjoepzne",
-        "l": "asgrauw",
-        "g": [
-          "dutch black metal",
-          "dutch metal"
-        ]
-      },
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      },
-      "release the river": {
-        "s": "2UWgVGBDwnb38nW5UJLAjQ",
-        "l": "release%20the%20river",
-        "g": [
-          "melodic black",
-          "death metal",
-          "metalcore"
-        ]
-      },
-      "alkahest": {
-        "s": "53vjMkvxWt9UZAXlnwsPrj",
-        "l": "alkahest",
-        "g": [
-          "atmospheric sludge",
-          "doom metal",
-          "post-rock"
-        ]
-      },
-      "talk": {
-        "s": null,
-        "l": "talk",
-        "g": [
-          "crossover",
-          "hardcore",
-          "thrash metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-01-04T08:00:00",
-    "end": "2025-01-04T11:30:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/autarkh-farer-anapoda/",
-    "title": "Autarkh + farer + anapoda",
-    "location": "dbs",
-    "price": 13,
-    "shortText": "Autarkh is een moderne metalband uit Tilburg (NL) die graag de grenzen van muziek opzoekt. De band is opgericht door Michel Nienhuis, bekend van Dodecahedron. Autarkh combineert harde gitaarriffs en verschillende zangstijlen, van diepe grunts tot schreeuwen en harmonieën, met elektronische geluiden, zoals synthesizers en beats die doen denken aan artiesten als Aphex Twin en Autechre. Dit zorgt voor een unieke mix van metal en elektronische muziek. Met snelle drumpartijen, zware bassen en duistere geluidseffecten creëert de band een intense sfeer waarin verschillende emoties samenkomen.\n\n \nDe support komt van het trio Farer, een band met leden die al jaren actief zijn in de heavy scene. Met hun debuutalbum ‘Monad’ uit 2020, opgenomen door John Bart van der Wal van Dool, leverde Farer een ware dronedoompostmetaltrip af, gevuld met oerschreeuwen zonder woorden, huiveringwekkende, schrapende basriffs en pulserende ritmes. Grimmig en compromisloos hard.\n\n \nNiet één, maar twee support acts: het Utrechtse Anapoda brengt progressieve extreme metal met invloeden uit de black, death en melodeath. Dat wordt genieten en flink headbangen!",
-    "longText": "../public/texts/dbs/bC9ldmVudC9hdXRhcmtoLWZhcmVyLWFuYXBvZGEv.html",
-    "image": "../public/event-images/dbs/bC9ldmVudC9hdXRhcmtoLWZhcmVyLWFuYXBvZGEv",
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "autarkh": {
-        "s": "1h39mvskrqbzrsf3vfnsp5",
-        "l": "autarkh",
-        "g": [
-          "industrial metal"
-        ]
-      },
-      "farer": {
-        "s": "529WaKnDwThqAtgOLNjwMp",
-        "l": "farer",
-        "g": [
-          "atmospheric sludge",
-          "post-metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-03-08T08:00:00",
-    "end": "2025-03-08T11:30:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/planet-of-zeus/",
-    "title": "Planet of zeus (greece)",
-    "location": "dbs",
-    "price": "0",
-    "shortText": "Planet of Zeus is een heavy rockband uit Athene, actief sinds 2000. Ze zijn bekend om hun rauwe, energieke live-shows en hebben een trouwe fanbase opgebouwd, zowel in Griekenland als daarbuiten. Na vijf Europese tours en optredens op grote festivals waren ze in 2015 de hoofdact tijdens Clutch’s Europese tour.",
-    "longText": "../public/texts/dbs/dHVkaW8ubmwvZXZlbnQvcGxhbmV0LW9mLXpldXMv.html",
-    "image": "../public/event-images/dbs/dHVkaW8ubmwvZXZlbnQvcGxhbmV0LW9mLXpldXMv",
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "planet of zeus": {
-        "s": "1oxVf6OeX1x5R9VxuHZmFG",
-        "l": "planet%20of%20zeus",
-        "g": [
-          "greek metal",
-          "greek psychedelic rock",
-          "greek rock"
-        ]
-      }
-    }
-  }
 ]

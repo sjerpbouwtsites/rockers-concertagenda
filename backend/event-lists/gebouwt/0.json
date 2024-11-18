@@ -1,292 +1,275 @@
 [
-  {
-    "door": "2024-10-26T21:00:00",
-    "start": "2024-10-26T20:00:00",
-    "venueEventUrl": "https://gebouw-t.nl/evenementen/feuerengel-a-tribute-to-rammstein-2/",
-    "title": "Feuerengel – a tribute to rammstein",
-    "location": "gebouwt",
-    "price": 35.25,
-    "shortText": "a tribute to rammstein",
-    "longText": "../public/texts/gebouwt/bmdlbC1hLXRyaWJ1dGUtdG8tcmFtbXN0ZWluLTIv.html",
-    "image": "../public/event-images/gebouwt/bmdlbC1hLXRyaWJ1dGUtdG8tcmFtbXN0ZWluLTIv",
-    "soldOut": true,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "feuerengel": {
-        "s": null,
-        "l": "feuerengel",
-        "g": [
-          "neue deutsche haerte",
-          "tanzmetal",
-          "industrial",
-          "industrial metal"
-        ]
-      }
+    {
+        "door": "2024-10-26T21:00:00",
+        "start": "2024-10-26T20:00:00",
+        "venueEventUrl": "https://gebouw-t.nl/evenementen/feuerengel-a-tribute-to-rammstein-2/",
+        "title": "Feuerengel – a tribute to rammstein",
+        "location": "gebouwt",
+        "price": 35.25,
+        "shortText": "a tribute to rammstein",
+        "longText": "../public/texts/gebouwt/bmdlbC1hLXRyaWJ1dGUtdG8tcmFtbXN0ZWluLTIv.html",
+        "image": "../public/event-images/gebouwt/bmdlbC1hLXRyaWJ1dGUtdG8tcmFtbXN0ZWluLTIv",
+        "soldOut": true,
+        "unavailable": false,
+        "eventGenres": null,
+        "artists": {
+            "feuerengel": {
+                "s": null,
+                "l": "feuerengel",
+                "g": [
+                    "neue deutsche haerte",
+                    "tanzmetal",
+                    "industrial",
+                    "industrial metal"
+                ]
+            }
+        }
+    },
+    {
+        "door": "2024-10-26T21:00:00",
+        "start": "2024-10-26T20:30:00",
+        "venueEventUrl": "https://gebouw-t.nl/evenementen/niels-geusebroek-sings-coldplay/",
+        "title": "Niels Geusebroek sings Coldplay",
+        "location": "gebouwt",
+        "price": 27.5,
+        "shortText": "Met natuurlijk alle Coldplay hits zoals, Fix You, Clocks en Yellow",
+        "longText": "../public/texts/gebouwt/ZWxzLWdldXNlYnJvZWstc2luZ3MtY29sZHBsYXkv.html",
+        "image": "../public/event-images/gebouwt/ZWxzLWdldXNlYnJvZWstc2luZ3MtY29sZHBsYXkv",
+        "soldOut": false,
+        "unavailable": false,
+        "eventGenres": null,
+        "artists": {}
+    },
+    {
+        "door": "2024-10-26T19:30:00",
+        "start": "2024-10-26T19:00:00",
+        "venueEventUrl": "https://gebouw-t.nl/evenementen/legends-of-rock-tribute-tour-5/",
+        "title": "Legends of Rock Tribute tour",
+        "location": "gebouwt",
+        "price": 22.25,
+        "shortText": "Tributes aan Pearl Jam, Green Day, Foo Fighters en Nirvana",
+        "longText": "../public/texts/gebouwt/ZWdlbmRzLW9mLXJvY2stdHJpYnV0ZS10b3VyLTUv.html",
+        "image": "../public/event-images/gebouwt/ZWdlbmRzLW9mLXJvY2stdHJpYnV0ZS10b3VyLTUv",
+        "soldOut": true,
+        "unavailable": false,
+        "eventGenres": null,
+        "artists": {}
+    },
+    {
+        "door": "2024-10-26T20:30:00",
+        "start": "2024-10-26T20:00:00",
+        "venueEventUrl": "https://gebouw-t.nl/evenementen/sloper-2/",
+        "title": "Sloper",
+        "location": "gebouwt",
+        "price": 25.25,
+        "shortText": "Supergroep met Cesar Zuiderwijk (Golden Earring) en Mario Goossens (Triggerfinger)",
+        "longText": "../public/texts/gebouwt/b3V3LXQubmwvZXZlbmVtZW50ZW4vc2xvcGVyLTIv.html",
+        "image": "../public/event-images/gebouwt/b3V3LXQubmwvZXZlbmVtZW50ZW4vc2xvcGVyLTIv",
+        "soldOut": false,
+        "unavailable": false,
+        "eventGenres": null,
+        "artists": {
+            "slope": {
+                "s": "24ExnkYwR4QoLamXGi4sOR",
+                "l": "slope",
+                "g": ["german hardcore"]
+            }
+        }
+    },
+    {
+        "door": "2024-10-26T20:30:00",
+        "start": "2024-10-26T20:00:00",
+        "venueEventUrl": "https://gebouw-t.nl/evenementen/classic-hits-in-concert/",
+        "title": "Classic Hits In Concert",
+        "location": "gebouwt",
+        "price": 30,
+        "shortText": "Het beste uit De Lijst Der Lijsten",
+        "longText": "../public/texts/gebouwt/ZW50ZW4vY2xhc3NpYy1oaXRzLWluLWNvbmNlcnQv.html",
+        "image": "../public/event-images/gebouwt/ZW50ZW4vY2xhc3NpYy1oaXRzLWluLWNvbmNlcnQv",
+        "soldOut": false,
+        "unavailable": false,
+        "eventGenres": null,
+        "artists": {}
+    },
+    {
+        "door": "2024-10-26T21:00:00",
+        "start": "2024-10-26T20:30:00",
+        "venueEventUrl": "https://gebouw-t.nl/evenementen/crazy-little-things-12/",
+        "title": "Crazy Little Things",
+        "location": "gebouwt",
+        "price": 19.5,
+        "shortText": "De meest authentieke Queen Tribute Band in Nederland",
+        "longText": "../public/texts/gebouwt/bWVudGVuL2NyYXp5LWxpdHRsZS10aGluZ3MtMTIv.html",
+        "image": "../public/event-images/gebouwt/bWVudGVuL2NyYXp5LWxpdHRsZS10aGluZ3MtMTIv",
+        "soldOut": false,
+        "unavailable": false,
+        "eventGenres": null,
+        "artists": {}
+    },
+    {
+        "door": "2024-10-26T21:00:00",
+        "start": "2024-10-26T20:00:00",
+        "venueEventUrl": "https://gebouw-t.nl/evenementen/crazy-little-things-11/",
+        "title": "Crazy Little Things",
+        "location": "gebouwt",
+        "price": 19.5,
+        "shortText": "De meest authentieke Queen Tribute Band in Nederland",
+        "longText": "../public/texts/gebouwt/bWVudGVuL2NyYXp5LWxpdHRsZS10aGluZ3MtMTEv.html",
+        "image": "../public/event-images/gebouwt/bWVudGVuL2NyYXp5LWxpdHRsZS10aGluZ3MtMTEv",
+        "soldOut": true,
+        "unavailable": false,
+        "eventGenres": null,
+        "artists": {}
+    },
+    {
+        "door": "2024-10-26T21:00:00",
+        "start": "2024-10-26T20:30:00",
+        "venueEventUrl": "https://gebouw-t.nl/evenementen/renegade/",
+        "title": "Renegade",
+        "location": "gebouwt",
+        "price": 27.25,
+        "shortText": "From Thin Lizzy, Darren Wharton’s Renegade",
+        "longText": "../public/texts/gebouwt/b3V3LXQubmwvZXZlbmVtZW50ZW4vcmVuZWdhZGUv.html",
+        "image": "../public/event-images/gebouwt/b3V3LXQubmwvZXZlbmVtZW50ZW4vcmVuZWdhZGUv",
+        "soldOut": false,
+        "unavailable": false,
+        "eventGenres": null,
+        "artists": {
+            "renegade": {
+                "s": "3vBaLrnIgG5WCQ3pTeZexc",
+                "l": "renegade",
+                "g": ["jungle", "progressive heavy metal", "hard rock"]
+            }
+        }
+    },
+    {
+        "door": "2024-10-26T21:00:00",
+        "start": "2024-10-26T20:30:00",
+        "venueEventUrl": "https://gebouw-t.nl/evenementen/alkahest-farer-autarkh/",
+        "title": "Autarkh + Farer + Alkahest",
+        "location": "gebouwt",
+        "price": 17.25,
+        "shortText": "Imponerende experimental metal",
+        "longText": "../public/texts/gebouwt/bWVudGVuL2Fsa2FoZXN0LWZhcmVyLWF1dGFya2gv.html",
+        "image": "../public/event-images/gebouwt/bWVudGVuL2Fsa2FoZXN0LWZhcmVyLWF1dGFya2gv",
+        "soldOut": false,
+        "unavailable": false,
+        "eventGenres": null,
+        "artists": {
+            "autarkh": {
+                "s": "1h39mvskrqbzrsf3vfnsp5",
+                "l": "autarkh",
+                "g": ["industrial metal"]
+            },
+            "farer": {
+                "s": "529WaKnDwThqAtgOLNjwMp",
+                "l": "farer",
+                "g": ["atmospheric sludge", "post-metal"]
+            },
+            "alkahest": {
+                "s": "53vjMkvxWt9UZAXlnwsPrj",
+                "l": "alkahest",
+                "g": ["atmospheric sludge", "doom metal", "post-rock"]
+            }
+        }
+    },
+    {
+        "door": "2024-10-26T20:15:00",
+        "start": "2024-10-26T19:30:00",
+        "venueEventUrl": "https://gebouw-t.nl/evenementen/legends-of-rock-tribute-tour-6/",
+        "title": "Legends of Rock Tribute Tour",
+        "location": "gebouwt",
+        "price": 27.25,
+        "shortText": "Tributes aan Metallica, Motörhead en Judas Priest",
+        "longText": "../public/texts/gebouwt/ZWdlbmRzLW9mLXJvY2stdHJpYnV0ZS10b3VyLTYv.html",
+        "image": "../public/event-images/gebouwt/ZWdlbmRzLW9mLXJvY2stdHJpYnV0ZS10b3VyLTYv",
+        "soldOut": false,
+        "unavailable": false,
+        "eventGenres": null,
+        "artists": {}
+    },
+    {
+        "door": "2024-10-26T21:00:00",
+        "start": "2024-10-26T20:30:00",
+        "venueEventUrl": "https://gebouw-t.nl/evenementen/soeterboeks-plan-nine/",
+        "title": "Plan Nine",
+        "location": "gebouwt",
+        "price": 22.25,
+        "shortText": "Long Lost Tour",
+        "longText": "../public/texts/gebouwt/ZW1lbnRlbi9zb2V0ZXJib2Vrcy1wbGFuLW5pbmUv.html",
+        "image": "../public/event-images/gebouwt/ZW1lbnRlbi9zb2V0ZXJib2Vrcy1wbGFuLW5pbmUv",
+        "soldOut": false,
+        "unavailable": false,
+        "eventGenres": null,
+        "artists": {}
+    },
+    {
+        "door": "2024-10-26T21:00:00",
+        "start": "2024-10-26T20:30:00",
+        "venueEventUrl": "https://gebouw-t.nl/evenementen/anneke-van-giersbergen-2/",
+        "title": "Anneke van Giersbergen",
+        "location": "gebouwt",
+        "price": 26.25,
+        "shortText": "Clubtour 2025",
+        "longText": "../public/texts/gebouwt/bnRlbi9hbm5la2UtdmFuLWdpZXJzYmVyZ2VuLTIv.html",
+        "image": "../public/event-images/gebouwt/bnRlbi9hbm5la2UtdmFuLWdpZXJzYmVyZ2VuLTIv",
+        "soldOut": false,
+        "unavailable": false,
+        "eventGenres": null,
+        "artists": {
+            "anneke van giersbergen": {
+                "s": "6tzqjnkayty8hfqbeddf8v",
+                "l": "anneke%20van%20giersbergen",
+                "g": ["metal"]
+            }
+        }
+    },
+    {
+        "door": "2024-10-26T21:00:00",
+        "start": "2024-10-26T20:30:00",
+        "venueEventUrl": "https://gebouw-t.nl/evenementen/the-exploited/",
+        "title": "The Exploited",
+        "location": "gebouwt",
+        "price": 30,
+        "shortText": "Legendarisch stel relschoppers uit Edinburgh",
+        "longText": "../public/texts/gebouwt/Lm5sL2V2ZW5lbWVudGVuL3RoZS1leHBsb2l0ZWQv.html",
+        "image": "../public/event-images/gebouwt/Lm5sL2V2ZW5lbWVudGVuL3RoZS1leHBsb2l0ZWQv",
+        "soldOut": false,
+        "unavailable": false,
+        "eventGenres": null,
+        "artists": {
+            "the exploited": {
+                "s": "6NB4b8lltHCjOhW7vQZkAy",
+                "l": "the%20exploited",
+                "g": [
+                    "hardcore punk",
+                    "punk",
+                    "uk82",
+                    "hardcore punk (early)",
+                    " thrash metal",
+                    "crossover (later)"
+                ]
+            },
+            "the ex": {
+                "s": null,
+                "l": "the%20ex",
+                "g": []
+            }
+        }
+    },
+    {
+        "door": "2024-10-26T21:00:00",
+        "start": "2024-10-26T20:30:00",
+        "venueEventUrl": "https://gebouw-t.nl/evenementen/u2two/",
+        "title": "U2two",
+        "location": "gebouwt",
+        "price": 27,
+        "shortText": "Finalist van SBS6 TV-show “The Tribute – Battle of the bands”",
+        "longText": "../public/texts/gebouwt/Z2Vib3V3LXQubmwvZXZlbmVtZW50ZW4vdTJ0d28v.html",
+        "image": "../public/event-images/gebouwt/Z2Vib3V3LXQubmwvZXZlbmVtZW50ZW4vdTJ0d28v",
+        "soldOut": false,
+        "unavailable": false,
+        "eventGenres": null,
+        "artists": {}
     }
-  },
-  {
-    "door": "2024-10-26T21:00:00",
-    "start": "2024-10-26T20:30:00",
-    "venueEventUrl": "https://gebouw-t.nl/evenementen/niels-geusebroek-sings-coldplay/",
-    "title": "Niels Geusebroek sings Coldplay",
-    "location": "gebouwt",
-    "price": 27.5,
-    "shortText": "Met natuurlijk alle Coldplay hits zoals, Fix You, Clocks en Yellow",
-    "longText": "../public/texts/gebouwt/ZWxzLWdldXNlYnJvZWstc2luZ3MtY29sZHBsYXkv.html",
-    "image": "../public/event-images/gebouwt/ZWxzLWdldXNlYnJvZWstc2luZ3MtY29sZHBsYXkv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2024-10-26T19:30:00",
-    "start": "2024-10-26T19:00:00",
-    "venueEventUrl": "https://gebouw-t.nl/evenementen/legends-of-rock-tribute-tour-5/",
-    "title": "Legends of Rock Tribute tour",
-    "location": "gebouwt",
-    "price": 22.25,
-    "shortText": "Tributes aan Pearl Jam, Green Day, Foo Fighters en Nirvana",
-    "longText": "../public/texts/gebouwt/ZWdlbmRzLW9mLXJvY2stdHJpYnV0ZS10b3VyLTUv.html",
-    "image": "../public/event-images/gebouwt/ZWdlbmRzLW9mLXJvY2stdHJpYnV0ZS10b3VyLTUv",
-    "soldOut": true,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2024-10-26T20:30:00",
-    "start": "2024-10-26T20:00:00",
-    "venueEventUrl": "https://gebouw-t.nl/evenementen/sloper-2/",
-    "title": "Sloper",
-    "location": "gebouwt",
-    "price": 25.25,
-    "shortText": "Supergroep met Cesar Zuiderwijk (Golden Earring) en Mario Goossens (Triggerfinger)",
-    "longText": "../public/texts/gebouwt/b3V3LXQubmwvZXZlbmVtZW50ZW4vc2xvcGVyLTIv.html",
-    "image": "../public/event-images/gebouwt/b3V3LXQubmwvZXZlbmVtZW50ZW4vc2xvcGVyLTIv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "slope": {
-        "s": "24ExnkYwR4QoLamXGi4sOR",
-        "l": "slope",
-        "g": [
-          "german hardcore"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-10-26T20:30:00",
-    "start": "2024-10-26T20:00:00",
-    "venueEventUrl": "https://gebouw-t.nl/evenementen/classic-hits-in-concert/",
-    "title": "Classic Hits In Concert",
-    "location": "gebouwt",
-    "price": 30,
-    "shortText": "Het beste uit De Lijst Der Lijsten",
-    "longText": "../public/texts/gebouwt/ZW50ZW4vY2xhc3NpYy1oaXRzLWluLWNvbmNlcnQv.html",
-    "image": "../public/event-images/gebouwt/ZW50ZW4vY2xhc3NpYy1oaXRzLWluLWNvbmNlcnQv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2024-10-26T21:00:00",
-    "start": "2024-10-26T20:30:00",
-    "venueEventUrl": "https://gebouw-t.nl/evenementen/crazy-little-things-12/",
-    "title": "Crazy Little Things",
-    "location": "gebouwt",
-    "price": 19.5,
-    "shortText": "De meest authentieke Queen Tribute Band in Nederland",
-    "longText": "../public/texts/gebouwt/bWVudGVuL2NyYXp5LWxpdHRsZS10aGluZ3MtMTIv.html",
-    "image": "../public/event-images/gebouwt/bWVudGVuL2NyYXp5LWxpdHRsZS10aGluZ3MtMTIv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2024-10-26T21:00:00",
-    "start": "2024-10-26T20:00:00",
-    "venueEventUrl": "https://gebouw-t.nl/evenementen/crazy-little-things-11/",
-    "title": "Crazy Little Things",
-    "location": "gebouwt",
-    "price": 19.5,
-    "shortText": "De meest authentieke Queen Tribute Band in Nederland",
-    "longText": "../public/texts/gebouwt/bWVudGVuL2NyYXp5LWxpdHRsZS10aGluZ3MtMTEv.html",
-    "image": "../public/event-images/gebouwt/bWVudGVuL2NyYXp5LWxpdHRsZS10aGluZ3MtMTEv",
-    "soldOut": true,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2024-10-26T21:00:00",
-    "start": "2024-10-26T20:30:00",
-    "venueEventUrl": "https://gebouw-t.nl/evenementen/renegade/",
-    "title": "Renegade",
-    "location": "gebouwt",
-    "price": 27.25,
-    "shortText": "From Thin Lizzy, Darren Wharton’s Renegade",
-    "longText": "../public/texts/gebouwt/b3V3LXQubmwvZXZlbmVtZW50ZW4vcmVuZWdhZGUv.html",
-    "image": "../public/event-images/gebouwt/b3V3LXQubmwvZXZlbmVtZW50ZW4vcmVuZWdhZGUv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "renegade": {
-        "s": "3vBaLrnIgG5WCQ3pTeZexc",
-        "l": "renegade",
-        "g": [
-          "jungle",
-          "progressive heavy metal",
-          "hard rock"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-10-26T21:00:00",
-    "start": "2024-10-26T20:30:00",
-    "venueEventUrl": "https://gebouw-t.nl/evenementen/alkahest-farer-autarkh/",
-    "title": "Autarkh + Farer + Alkahest",
-    "location": "gebouwt",
-    "price": 17.25,
-    "shortText": "Imponerende experimental metal",
-    "longText": "../public/texts/gebouwt/bWVudGVuL2Fsa2FoZXN0LWZhcmVyLWF1dGFya2gv.html",
-    "image": "../public/event-images/gebouwt/bWVudGVuL2Fsa2FoZXN0LWZhcmVyLWF1dGFya2gv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "autarkh": {
-        "s": "1h39mvskrqbzrsf3vfnsp5",
-        "l": "autarkh",
-        "g": [
-          "industrial metal"
-        ]
-      },
-      "farer": {
-        "s": "529WaKnDwThqAtgOLNjwMp",
-        "l": "farer",
-        "g": [
-          "atmospheric sludge",
-          "post-metal"
-        ]
-      },
-      "alkahest": {
-        "s": "53vjMkvxWt9UZAXlnwsPrj",
-        "l": "alkahest",
-        "g": [
-          "atmospheric sludge",
-          "doom metal",
-          "post-rock"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-10-26T20:15:00",
-    "start": "2024-10-26T19:30:00",
-    "venueEventUrl": "https://gebouw-t.nl/evenementen/legends-of-rock-tribute-tour-6/",
-    "title": "Legends of Rock Tribute Tour",
-    "location": "gebouwt",
-    "price": 27.25,
-    "shortText": "Tributes aan Metallica, Motörhead en Judas Priest",
-    "longText": "../public/texts/gebouwt/ZWdlbmRzLW9mLXJvY2stdHJpYnV0ZS10b3VyLTYv.html",
-    "image": "../public/event-images/gebouwt/ZWdlbmRzLW9mLXJvY2stdHJpYnV0ZS10b3VyLTYv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2024-10-26T21:00:00",
-    "start": "2024-10-26T20:30:00",
-    "venueEventUrl": "https://gebouw-t.nl/evenementen/soeterboeks-plan-nine/",
-    "title": "Plan Nine",
-    "location": "gebouwt",
-    "price": 22.25,
-    "shortText": "Long Lost Tour",
-    "longText": "../public/texts/gebouwt/ZW1lbnRlbi9zb2V0ZXJib2Vrcy1wbGFuLW5pbmUv.html",
-    "image": "../public/event-images/gebouwt/ZW1lbnRlbi9zb2V0ZXJib2Vrcy1wbGFuLW5pbmUv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2024-10-26T21:00:00",
-    "start": "2024-10-26T20:30:00",
-    "venueEventUrl": "https://gebouw-t.nl/evenementen/anneke-van-giersbergen-2/",
-    "title": "Anneke van Giersbergen",
-    "location": "gebouwt",
-    "price": 26.25,
-    "shortText": "Clubtour 2025",
-    "longText": "../public/texts/gebouwt/bnRlbi9hbm5la2UtdmFuLWdpZXJzYmVyZ2VuLTIv.html",
-    "image": "../public/event-images/gebouwt/bnRlbi9hbm5la2UtdmFuLWdpZXJzYmVyZ2VuLTIv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "anneke van giersbergen": {
-        "s": "6tzqjnkayty8hfqbeddf8v",
-        "l": "anneke%20van%20giersbergen",
-        "g": [
-          "metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-10-26T21:00:00",
-    "start": "2024-10-26T20:30:00",
-    "venueEventUrl": "https://gebouw-t.nl/evenementen/the-exploited/",
-    "title": "The Exploited",
-    "location": "gebouwt",
-    "price": 30,
-    "shortText": "Legendarisch stel relschoppers uit Edinburgh",
-    "longText": "../public/texts/gebouwt/Lm5sL2V2ZW5lbWVudGVuL3RoZS1leHBsb2l0ZWQv.html",
-    "image": "../public/event-images/gebouwt/Lm5sL2V2ZW5lbWVudGVuL3RoZS1leHBsb2l0ZWQv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "the exploited": {
-        "s": "6NB4b8lltHCjOhW7vQZkAy",
-        "l": "the%20exploited",
-        "g": [
-          "hardcore punk",
-          "punk",
-          "uk82",
-          "hardcore punk (early)",
-          " thrash metal",
-          "crossover (later)"
-        ]
-      },
-      "the ex": {
-        "s": null,
-        "l": "the%20ex",
-        "g": []
-      }
-    }
-  },
-  {
-    "door": "2024-10-26T21:00:00",
-    "start": "2024-10-26T20:30:00",
-    "venueEventUrl": "https://gebouw-t.nl/evenementen/u2two/",
-    "title": "U2two",
-    "location": "gebouwt",
-    "price": 27,
-    "shortText": "Finalist van SBS6 TV-show “The Tribute – Battle of the bands”",
-    "longText": "../public/texts/gebouwt/Z2Vib3V3LXQubmwvZXZlbmVtZW50ZW4vdTJ0d28v.html",
-    "image": "../public/event-images/gebouwt/Z2Vib3V3LXQubmwvZXZlbmVtZW50ZW4vdTJ0d28v",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  }
 ]

@@ -1,250 +1,214 @@
 [
-  {
-    "door": "2024-10-08T20:00:00.000",
-    "start": "2024-10-08T20:30:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/fat-dog/",
-    "title": "Fat Dog",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "+ ELLiS·Drock, punk, garage",
-    "longText": "../public/texts/doornroosje/LmRvb3Jucm9vc2plLm5sL2V2ZW50L2ZhdC1kb2cv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "fat dog": {
-        "s": "4dljephxbw7qihx4iwmnee",
-        "l": "fat%20dog",
-        "g": [
-          "crank wave",
-          "punk"
-        ]
-      },
-      "rock,": {
-        "s": null,
-        "l": "rock,",
-        "g": [
-          "heavy metal"
-        ]
-      }
+    {
+        "door": "2024-10-08T20:00:00.000",
+        "start": "2024-10-08T20:30:00.000",
+        "venueEventUrl": "https://www.doornroosje.nl/event/fat-dog/",
+        "title": "Fat Dog",
+        "location": "doornroosje",
+        "price": null,
+        "shortText": "+ ELLiS·Drock, punk, garage",
+        "longText": "../public/texts/doornroosje/LmRvb3Jucm9vc2plLm5sL2V2ZW50L2ZhdC1kb2cv.html",
+        "soldOut": true,
+        "eventGenres": null,
+        "artists": {
+            "fat dog": {
+                "s": "4dljephxbw7qihx4iwmnee",
+                "l": "fat%20dog",
+                "g": ["crank wave", "punk"]
+            },
+            "rock,": {
+                "s": null,
+                "l": "rock,",
+                "g": ["heavy metal"]
+            }
+        }
+    },
+    {
+        "door": "2024-11-04T20:00:00.000",
+        "start": "2024-11-04T20:30:00.000",
+        "venueEventUrl": "https://www.doornroosje.nl/event/wargasm/",
+        "title": "Wargasm",
+        "location": "doornroosje",
+        "price": null,
+        "shortText": "+ Harpyrock, metal, punk",
+        "longText": "../public/texts/doornroosje/LmRvb3Jucm9vc2plLm5sL2V2ZW50L3dhcmdhc20v.html",
+        "soldOut": true,
+        "eventGenres": null,
+        "artists": {
+            "wargasm": {
+                "s": "4hey3o8p8cqhh81winvexe",
+                "l": "wargasm",
+                "g": ["boston metal", "new england metal", "old school thrash"]
+            },
+            "rock,": {
+                "s": null,
+                "l": "rock,",
+                "g": ["heavy metal"]
+            },
+            "metal": {
+                "s": null,
+                "l": "metal",
+                "g": ["death metal"]
+            }
+        }
+    },
+    {
+        "door": "2024-11-14T18:30:00.000",
+        "start": "2024-11-14T19:00:00.000",
+        "venueEventUrl": "https://www.doornroosje.nl/event/solstafir-2/",
+        "title": "Sólstafir + Oranssi Pazuzu",
+        "location": "doornroosje",
+        "price": null,
+        "shortText": "+ Hamferðrock, post rock, metal, post metal, doornroosjepas",
+        "longText": "../public/texts/doornroosje/cm5yb29zamUubmwvZXZlbnQvc29sc3RhZmlyLTIv.html",
+        "soldOut": true,
+        "eventGenres": null,
+        "artists": {
+            "oranssi pazuzu": {
+                "s": "3XFQRe2FsSOjrODygK4caW",
+                "l": "oranssi%20pazuzu",
+                "g": [
+                    "atmospheric black metal",
+                    "avant-garde metal",
+                    "blackgaze",
+                    "cosmic black metal",
+                    "drone metal",
+                    "finnish black metal",
+                    "finnish psychedelic rock",
+                    "post-black metal",
+                    "post-metal",
+                    "sci-fi metal",
+                    "voidgaze",
+                    "psychedelic black metal"
+                ]
+            },
+            "sólstafir": {
+                "s": "721C5U5rM8J0jjq6IQuSBK",
+                "l": "s%C3%B3lstafir",
+                "g": [
+                    "blackened screamo",
+                    "icelandic black metal",
+                    "icelandic metal",
+                    "icelandic pop",
+                    "pagan black metal",
+                    "post-metal",
+                    "viking black metal",
+                    "viking",
+                    "black metal (early)",
+                    " post-metal",
+                    "rock (later)"
+                ]
+            },
+            "rock,": {
+                "s": null,
+                "l": "rock,",
+                "g": ["heavy metal"]
+            },
+            "metal": {
+                "s": null,
+                "l": "metal",
+                "g": ["death metal"]
+            }
+        }
+    },
+    {
+        "door": "2024-12-12T19:30:00.000",
+        "start": "2024-12-12T20:15:00.000",
+        "venueEventUrl": "https://www.doornroosje.nl/event/hang-youth-5/",
+        "title": "Hang Youth",
+        "location": "doornroosje",
+        "price": null,
+        "shortText": "rock, punk",
+        "longText": "../public/texts/doornroosje/bnJvb3NqZS5ubC9ldmVudC9oYW5nLXlvdXRoLTUv.html",
+        "soldOut": true,
+        "eventGenres": null,
+        "artists": {
+            "hang youth": {
+                "s": "33s4eablBmnrPlE3y6CZFR",
+                "l": "hang%20youth",
+                "g": ["dutch indie", "lowlands hardcore"]
+            },
+            "rock,": {
+                "s": null,
+                "l": "rock,",
+                "g": ["heavy metal"]
+            },
+            "punk": {
+                "s": null,
+                "l": "punk",
+                "g": [
+                    "melodic death metal (early)",
+                    " glitch",
+                    "dubstep",
+                    "electronica (later)"
+                ]
+            }
+        }
+    },
+    {
+        "door": "2025-01-25T19:00:00.000",
+        "start": "2025-01-25T19:30:00.000",
+        "venueEventUrl": "https://www.doornroosje.nl/event/delain-2/",
+        "title": "Delain",
+        "location": "doornroosje",
+        "price": null,
+        "shortText": "metal, symfonische metal",
+        "longText": "../public/texts/doornroosje/ZG9vcm5yb29zamUubmwvZXZlbnQvZGVsYWluLTIv.html",
+        "soldOut": true,
+        "eventGenres": null,
+        "artists": {
+            "delain": {
+                "s": "6pIRdCtSE5hLFfIfcTAicI",
+                "l": "delain",
+                "g": [
+                    "dutch metal",
+                    "gothic metal",
+                    "gothic symphonic metal",
+                    "power metal",
+                    "symphonic metal",
+                    "symphonic metal",
+                    "rock"
+                ]
+            },
+            "metal": {
+                "s": null,
+                "l": "metal",
+                "g": ["death metal"]
+            }
+        }
+    },
+    {
+        "door": "2025-02-09T19:00:00.000",
+        "start": "2025-02-09T19:30:00.000",
+        "venueEventUrl": "https://www.doornroosje.nl/event/tesseract-4/",
+        "title": "Tesseract",
+        "location": "doornroosje",
+        "price": null,
+        "shortText": "+ Novelists + The Omnificmetal, djent metal, progressieve metal",
+        "longText": "../public/texts/doornroosje/cm5yb29zamUubmwvZXZlbnQvdGVzc2VyYWN0LTQv.html",
+        "soldOut": true,
+        "eventGenres": null,
+        "artists": {
+            "tesseract": {
+                "s": "23ytwhg1pzx6divwrwvw1r",
+                "l": "tesseract",
+                "g": ["djent", "progressive metal"]
+            },
+            "the omnific": {
+                "s": "5yn8jrJH5Z5PaGFStNUvgR",
+                "l": "the%20omnific",
+                "g": ["djent", "progressive jazz fusion"]
+            },
+            "novelists": {
+                "s": "6o8sdnihczpm1sixvjkiys",
+                "l": "novelists",
+                "g": ["djent", "melodic metalcore", "metalcore"]
+            },
+            "metal": {
+                "s": null,
+                "l": "metal",
+                "g": ["death metal"]
+            }
+        }
     }
-  },
-  {
-    "door": "2024-11-04T20:00:00.000",
-    "start": "2024-11-04T20:30:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/wargasm/",
-    "title": "Wargasm",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "+ Harpyrock, metal, punk",
-    "longText": "../public/texts/doornroosje/LmRvb3Jucm9vc2plLm5sL2V2ZW50L3dhcmdhc20v.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "wargasm": {
-        "s": "4hey3o8p8cqhh81winvexe",
-        "l": "wargasm",
-        "g": [
-          "boston metal",
-          "new england metal",
-          "old school thrash"
-        ]
-      },
-      "rock,": {
-        "s": null,
-        "l": "rock,",
-        "g": [
-          "heavy metal"
-        ]
-      },
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-11-14T18:30:00.000",
-    "start": "2024-11-14T19:00:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/solstafir-2/",
-    "title": "Sólstafir + Oranssi Pazuzu",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "+ Hamferðrock, post rock, metal, post metal, doornroosjepas",
-    "longText": "../public/texts/doornroosje/cm5yb29zamUubmwvZXZlbnQvc29sc3RhZmlyLTIv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "oranssi pazuzu": {
-        "s": "3XFQRe2FsSOjrODygK4caW",
-        "l": "oranssi%20pazuzu",
-        "g": [
-          "atmospheric black metal",
-          "avant-garde metal",
-          "blackgaze",
-          "cosmic black metal",
-          "drone metal",
-          "finnish black metal",
-          "finnish psychedelic rock",
-          "post-black metal",
-          "post-metal",
-          "sci-fi metal",
-          "voidgaze",
-          "psychedelic black metal"
-        ]
-      },
-      "sólstafir": {
-        "s": "721C5U5rM8J0jjq6IQuSBK",
-        "l": "s%C3%B3lstafir",
-        "g": [
-          "blackened screamo",
-          "icelandic black metal",
-          "icelandic metal",
-          "icelandic pop",
-          "pagan black metal",
-          "post-metal",
-          "viking black metal",
-          "viking",
-          "black metal (early)",
-          " post-metal",
-          "rock (later)"
-        ]
-      },
-      "rock,": {
-        "s": null,
-        "l": "rock,",
-        "g": [
-          "heavy metal"
-        ]
-      },
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-12-12T19:30:00.000",
-    "start": "2024-12-12T20:15:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/hang-youth-5/",
-    "title": "Hang Youth",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "rock, punk",
-    "longText": "../public/texts/doornroosje/bnJvb3NqZS5ubC9ldmVudC9oYW5nLXlvdXRoLTUv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "hang youth": {
-        "s": "33s4eablBmnrPlE3y6CZFR",
-        "l": "hang%20youth",
-        "g": [
-          "dutch indie",
-          "lowlands hardcore"
-        ]
-      },
-      "rock,": {
-        "s": null,
-        "l": "rock,",
-        "g": [
-          "heavy metal"
-        ]
-      },
-      "punk": {
-        "s": null,
-        "l": "punk",
-        "g": [
-          "melodic death metal (early)",
-          " glitch",
-          "dubstep",
-          "electronica (later)"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-01-25T19:00:00.000",
-    "start": "2025-01-25T19:30:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/delain-2/",
-    "title": "Delain",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "metal, symfonische metal",
-    "longText": "../public/texts/doornroosje/ZG9vcm5yb29zamUubmwvZXZlbnQvZGVsYWluLTIv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "delain": {
-        "s": "6pIRdCtSE5hLFfIfcTAicI",
-        "l": "delain",
-        "g": [
-          "dutch metal",
-          "gothic metal",
-          "gothic symphonic metal",
-          "power metal",
-          "symphonic metal",
-          "symphonic metal",
-          "rock"
-        ]
-      },
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-02-09T19:00:00.000",
-    "start": "2025-02-09T19:30:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/tesseract-4/",
-    "title": "Tesseract",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "+ Novelists + The Omnificmetal, djent metal, progressieve metal",
-    "longText": "../public/texts/doornroosje/cm5yb29zamUubmwvZXZlbnQvdGVzc2VyYWN0LTQv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "tesseract": {
-        "s": "23ytwhg1pzx6divwrwvw1r",
-        "l": "tesseract",
-        "g": [
-          "djent",
-          "progressive metal"
-        ]
-      },
-      "the omnific": {
-        "s": "5yn8jrJH5Z5PaGFStNUvgR",
-        "l": "the%20omnific",
-        "g": [
-          "djent",
-          "progressive jazz fusion"
-        ]
-      },
-      "novelists": {
-        "s": "6o8sdnihczpm1sixvjkiys",
-        "l": "novelists",
-        "g": [
-          "djent",
-          "melodic metalcore",
-          "metalcore"
-        ]
-      },
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      }
-    }
-  }
 ]

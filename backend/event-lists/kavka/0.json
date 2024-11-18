@@ -1,418 +1,391 @@
 [
-  {
-    "start": "2024-10-13T18:00:00",
-    "venueEventUrl": "https://kavka.be/event/onweer-festival/",
-    "title": "Onweer festival",
-    "location": "kavka",
-    "price": null,
-    "shortText": "Hantrax + Shaka Shams + monokimono + STICE + Stayinbedpropaganda The ONWEER festival is all…",
-    "longText": "../public/texts/kavka/YXZrYS5iZS9ldmVudC9vbndlZXItZmVzdGl2YWwv.html",
-    "image": "../public/event-images/kavka/YXZrYS5iZS9ldmVudC9vbndlZXItZmVzdGl2YWwv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "start": "2024-10-21T19:00:00",
-    "venueEventUrl": "https://kavka.be/event/speed-end-it-lifes-question-whispers-silver/",
-    "title": "Speed ",
-    "location": "kavka",
-    "price": null,
-    "shortText": " end it  +  life’s question  +  whispers  +  silver Sonic Excess presents SPEED is a hardcore band known for their aggressive sound and focus…",
-    "longText": "../public/texts/kavka/aWZlcy1xdWVzdGlvbi13aGlzcGVycy1zaWx2ZXIv.html",
-    "image": "../public/event-images/kavka/aWZlcy1xdWVzdGlvbi13aGlzcGVycy1zaWx2ZXIv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "speed": {
-        "s": "4wf6GGNBqaU79839E6yjfn",
-        "l": "speed",
-        "g": [
-          "australian hardcore",
-          "heavy",
-          "speed metal"
-        ]
-      },
-      "end it": {
-        "s": "5YlX74SFjWauq32aKLwAYn",
-        "l": "end%20it",
-        "g": [
-          "black punk",
-          "modern hardcore",
-          "melodic death",
-          "thrash metal",
-          "metalcore"
-        ]
-      },
-      "whispers": {
-        "s": "303QjOSvDXowltu7AesyeM",
-        "l": "whispers",
-        "g": [
-          "symphonic",
-          "gothic metal"
-        ]
-      },
-      "silver": {
-        "s": "7oeuJSyVZTCkm3BurLz8cG",
-        "l": "silver",
-        "g": [
-          "thrash metal",
-          "crossover",
-          "hardcore"
-        ]
-      }
+    {
+        "start": "2024-10-13T18:00:00",
+        "venueEventUrl": "https://kavka.be/event/onweer-festival/",
+        "title": "Onweer festival",
+        "location": "kavka",
+        "price": null,
+        "shortText": "Hantrax + Shaka Shams + monokimono + STICE + Stayinbedpropaganda The ONWEER festival is all…",
+        "longText": "../public/texts/kavka/YXZrYS5iZS9ldmVudC9vbndlZXItZmVzdGl2YWwv.html",
+        "image": "../public/event-images/kavka/YXZrYS5iZS9ldmVudC9vbndlZXItZmVzdGl2YWwv",
+        "soldOut": false,
+        "unavailable": false,
+        "eventGenres": null,
+        "artists": {}
+    },
+    {
+        "start": "2024-10-21T19:00:00",
+        "venueEventUrl": "https://kavka.be/event/speed-end-it-lifes-question-whispers-silver/",
+        "title": "Speed ",
+        "location": "kavka",
+        "price": null,
+        "shortText": " end it  +  life’s question  +  whispers  +  silver Sonic Excess presents SPEED is a hardcore band known for their aggressive sound and focus…",
+        "longText": "../public/texts/kavka/aWZlcy1xdWVzdGlvbi13aGlzcGVycy1zaWx2ZXIv.html",
+        "image": "../public/event-images/kavka/aWZlcy1xdWVzdGlvbi13aGlzcGVycy1zaWx2ZXIv",
+        "soldOut": false,
+        "unavailable": false,
+        "eventGenres": null,
+        "artists": {
+            "speed": {
+                "s": "4wf6GGNBqaU79839E6yjfn",
+                "l": "speed",
+                "g": ["australian hardcore", "heavy", "speed metal"]
+            },
+            "end it": {
+                "s": "5YlX74SFjWauq32aKLwAYn",
+                "l": "end%20it",
+                "g": [
+                    "black punk",
+                    "modern hardcore",
+                    "melodic death",
+                    "thrash metal",
+                    "metalcore"
+                ]
+            },
+            "whispers": {
+                "s": "303QjOSvDXowltu7AesyeM",
+                "l": "whispers",
+                "g": ["symphonic", "gothic metal"]
+            },
+            "silver": {
+                "s": "7oeuJSyVZTCkm3BurLz8cG",
+                "l": "silver",
+                "g": ["thrash metal", "crossover", "hardcore"]
+            }
+        }
+    },
+    {
+        "start": "2024-10-31T22:00:00",
+        "venueEventUrl": "https://kavka.be/event/emo-night-antwerp-halloween/",
+        "title": "Emo night – halloween",
+        "location": "kavka",
+        "price": null,
+        "shortText": "By now, we all know that we can’t let Halloween pass us by without hosting…",
+        "longText": "../public/texts/kavka/dC9lbW8tbmlnaHQtYW50d2VycC1oYWxsb3dlZW4v.html",
+        "image": "../public/event-images/kavka/dC9lbW8tbmlnaHQtYW50d2VycC1oYWxsb3dlZW4v",
+        "soldOut": false,
+        "unavailable": false,
+        "eventGenres": null,
+        "artists": {}
+    },
+    {
+        "start": "2024-11-09T19:00:00",
+        "venueEventUrl": "https://kavka.be/event/your-highness/",
+        "title": "Your Highness + More",
+        "location": "kavka",
+        "price": null,
+        "shortText": "Your Highness is back with a 4th full length “Under the weight” (Polder Records). To…",
+        "longText": "../public/texts/kavka/L2thdmthLmJlL2V2ZW50L3lvdXItaGlnaG5lc3Mv.html",
+        "image": "../public/event-images/kavka/L2thdmthLmJlL2V2ZW50L3lvdXItaGlnaG5lc3Mv",
+        "soldOut": false,
+        "unavailable": false,
+        "eventGenres": null,
+        "artists": {
+            "your highness": {
+                "s": "6Cbs0xetz57bCUhG7wyCt7",
+                "l": "your%20highness",
+                "g": [
+                    "belgian metal",
+                    "belgian stoner rock",
+                    "sludge",
+                    "stoner metal"
+                ]
+            },
+            "more": {
+                "s": null,
+                "l": "more",
+                "g": ["nwobhm", "heavy metal"]
+            }
+        }
+    },
+    {
+        "start": "2024-11-12T19:00:00",
+        "venueEventUrl": "https://kavka.be/event/dopelord-red-sun-atacama/",
+        "title": "Dopelord + red sun atacama",
+        "location": "kavka",
+        "price": null,
+        "shortText": "Sonic Excess presents Hailing from Poland and relentlessly practicing dark arts and riff worship ever…",
+        "longText": "../public/texts/kavka/dmVudC9kb3BlbG9yZC1yZWQtc3VuLWF0YWNhbWEv.html",
+        "image": "../public/event-images/kavka/dmVudC9kb3BlbG9yZC1yZWQtc3VuLWF0YWNhbWEv",
+        "soldOut": false,
+        "unavailable": false,
+        "eventGenres": null,
+        "artists": {
+            "dopelord": {
+                "s": "1B1b2jSXksHwmmorhmQ8AF",
+                "l": "dopelord",
+                "g": [
+                    "doom metal",
+                    "drone metal",
+                    "psychedelic doom",
+                    "stoner metal",
+                    "stoner",
+                    "doom metal"
+                ]
+            },
+            "red sun atacama": {
+                "s": "0tQIPyHnRVytz1dSECkiFg",
+                "l": "red%20sun%20atacama",
+                "g": ["french stoner rock"]
+            }
+        }
+    },
+    {
+        "start": "2024-11-24T19:00:00",
+        "venueEventUrl": "https://kavka.be/event/gatecreeper-200-stab-wounds-enforcer/",
+        "title": "Gatecreeper + 200 stab wounds + enforced",
+        "location": "kavka",
+        "price": null,
+        "shortText": "Samhain & Death Over Antwerp present Gatecreeper (US) – Dark Superstition tour – With support…",
+        "longText": "../public/texts/kavka/ZXBlci0yMDAtc3RhYi13b3VuZHMtZW5mb3JjZXIv.html",
+        "image": "../public/event-images/kavka/ZXBlci0yMDAtc3RhYi13b3VuZHMtZW5mb3JjZXIv",
+        "soldOut": false,
+        "unavailable": false,
+        "eventGenres": null,
+        "artists": {
+            "200 stab wounds": {
+                "s": "6DH6xC3RoN7L7sGlJ60LKv",
+                "l": "200%20stab%20wounds",
+                "g": ["cavernous death metal", "death metal"]
+            },
+            "gatecreeper": {
+                "s": "0eCB2pwtPnLywA4rxe4i4N",
+                "l": "gatecreeper",
+                "g": [
+                    "death metal",
+                    "deathgrind",
+                    "new wave of osdm",
+                    "sludge metal",
+                    "death metal"
+                ]
+            },
+            "enforced": {
+                "s": "7vZV2UPiXQMVesiAxQmvBp",
+                "l": "enforced",
+                "g": [
+                    "crossover thrash",
+                    "new wave of thrash metal",
+                    "virginia metal",
+                    "thrash",
+                    "heavy metal",
+                    "crossover"
+                ]
+            }
+        }
+    },
+    {
+        "start": "2024-11-26T19:00:00",
+        "venueEventUrl": "https://kavka.be/event/wheel/",
+        "title": "Wheel + molybaron",
+        "location": "kavka",
+        "price": null,
+        "shortText": "WHEEL + MOLYBARON WHEEL Charismatic leaders. These are the dictators, demagogues and false idols who,…",
+        "longText": "../public/texts/kavka/aHR0cHM6Ly9rYXZrYS5iZS9ldmVudC93aGVlbC8=.html",
+        "image": "../public/event-images/kavka/aHR0cHM6Ly9rYXZrYS5iZS9ldmVudC93aGVlbC8=",
+        "soldOut": false,
+        "unavailable": false,
+        "eventGenres": null,
+        "artists": {
+            "wheel": {
+                "s": "4msm1QtpV7zMReePhbEQ6H",
+                "l": "wheel",
+                "g": [
+                    "finnish progressive rock",
+                    "modern progressive rock",
+                    "progressive metal",
+                    "doom metal"
+                ]
+            }
+        }
+    },
+    {
+        "start": "2024-12-01T19:00:00",
+        "venueEventUrl": "https://kavka.be/event/fit-for-an-autopsy-sylosis-darkest-hour-heriot/",
+        "title": "Fit for an autopsy + supports",
+        "location": "kavka",
+        "price": null,
+        "shortText": "Sonic Excess presents FIT FOR AN AUTOPSY SYLOSIS DARKEST HOUR HERIOT Fit For an Autopsy…",
+        "longText": "../public/texts/kavka/eS1zeWxvc2lzLWRhcmtlc3QtaG91ci1oZXJpb3Qv.html",
+        "image": "../public/event-images/kavka/eS1zeWxvc2lzLWRhcmtlc3QtaG91ci1oZXJpb3Qv",
+        "soldOut": false,
+        "unavailable": false,
+        "eventGenres": null,
+        "artists": {
+            "fit for an autopsy": {
+                "s": "0qJpY7K8p7g6sacvaGNt6i",
+                "l": "fit%20for%20an%20autopsy",
+                "g": [
+                    "brutal deathcore",
+                    "deathcore",
+                    "melodic metalcore",
+                    "metalcore"
+                ]
+            }
+        }
+    },
+    {
+        "start": "2024-12-05T19:00:00",
+        "venueEventUrl": "https://kavka.be/event/dayseeker-rain-city-drive-heart-of-gold/",
+        "title": "Dayseeker + rain city drive + heart of gold",
+        "location": "kavka",
+        "price": null,
+        "shortText": "After a run as main support for Pierce The Veil with a stop at Ancienne…",
+        "longText": "../public/texts/kavka/cmFpbi1jaXR5LWRyaXZlLWhlYXJ0LW9mLWdvbGQv.html",
+        "image": "../public/event-images/kavka/cmFpbi1jaXR5LWRyaXZlLWhlYXJ0LW9mLWdvbGQv",
+        "soldOut": false,
+        "unavailable": false,
+        "eventGenres": null,
+        "artists": {
+            "dayseeker": {
+                "s": "5FjQVp1Lb0kltmwIuu5kfj",
+                "l": "dayseeker",
+                "g": ["metalcore"]
+            }
+        }
+    },
+    {
+        "start": "2024-12-06T19:00:00",
+        "venueEventUrl": "https://kavka.be/event/dying-fetus-chelsea-grin-despised-icon-vitriol/",
+        "title": "Dying fetus + supports",
+        "location": "kavka",
+        "price": null,
+        "shortText": "Sonic Excess presents DYING FETUS CHELSEA GRIN DESPISED ICON VITRIOL Dying Fetus is an American…",
+        "longText": "../public/texts/kavka/ZWEtZ3Jpbi1kZXNwaXNlZC1pY29uLXZpdHJpb2wv.html",
+        "image": "../public/event-images/kavka/ZWEtZ3Jpbi1kZXNwaXNlZC1pY29uLXZpdHJpb2wv",
+        "soldOut": false,
+        "unavailable": false,
+        "eventGenres": null,
+        "artists": {
+            "dying fetus": {
+                "s": "2DqzOWVL2ly48IA9bpZdie",
+                "l": "dying%20fetus",
+                "g": [
+                    "brutal death metal",
+                    "death metal",
+                    "deathgrind",
+                    "metal",
+                    "technical death metal",
+                    "thrash metal",
+                    "brutal death metal",
+                    "grindcore"
+                ]
+            }
+        }
+    },
+    {
+        "start": "2024-12-13T19:00:00",
+        "venueEventUrl": "https://kavka.be/event/pene-corrida/",
+        "title": "Pene Corrida",
+        "location": "kavka",
+        "price": null,
+        "shortText": "Stel je eens voor wat er zou gebeuren als we de grootste hits van de…",
+        "longText": "../public/texts/kavka/Ly9rYXZrYS5iZS9ldmVudC9wZW5lLWNvcnJpZGEv.html",
+        "image": "../public/event-images/kavka/Ly9rYXZrYS5iZS9ldmVudC9wZW5lLWNvcnJpZGEv",
+        "soldOut": false,
+        "unavailable": false,
+        "eventGenres": null,
+        "artists": {
+            "pene corrida": {
+                "s": "1hw2ywipnsowbtb8flzcca",
+                "l": "pene%20corrida",
+                "g": []
+            }
+        }
+    },
+    {
+        "start": "2025-02-07T19:00:00",
+        "venueEventUrl": "https://kavka.be/event/zero-936/",
+        "title": "Zero 9:36 + ryan oakes",
+        "location": "kavka",
+        "price": null,
+        "shortText": "Siphoning precise raps through a battlefield of distorted guitars and glitchy hues, Zero 9:36 holds…",
+        "longText": "../public/texts/kavka/dHBzOi8va2F2a2EuYmUvZXZlbnQvemVyby05MzYv.html",
+        "image": "../public/event-images/kavka/dHBzOi8va2F2a2EuYmUvZXZlbnQvemVyby05MzYv",
+        "soldOut": false,
+        "unavailable": false,
+        "eventGenres": null,
+        "artists": {}
+    },
+    {
+        "start": "2025-02-15T19:00:00",
+        "venueEventUrl": "https://kavka.be/event/green-lung-unto-others-satans-satyrs/",
+        "title": "Green lung + unto others",
+        "location": "kavka",
+        "price": null,
+        "shortText": "Sonic Excess presents Green Lung is a British heavy rock band known for their blend…",
+        "longText": "../public/texts/kavka/dW5nLXVudG8tb3RoZXJzLXNhdGFucy1zYXR5cnMv.html",
+        "image": "../public/event-images/kavka/dW5nLXVudG8tb3RoZXJzLXNhdGFucy1zYXR5cnMv",
+        "soldOut": false,
+        "unavailable": false,
+        "eventGenres": null,
+        "artists": {
+            "green lung": {
+                "s": "2MIoyDjdxCUdnV59UqbJGk",
+                "l": "green%20lung",
+                "g": [
+                    "psychedelic doom",
+                    "stoner metal",
+                    "stoner rock",
+                    "uk doom metal",
+                    "uk stoner rock",
+                    "stoner",
+                    "doom metal",
+                    "rock"
+                ]
+            },
+            "unto others": {
+                "s": "1W5khHrkcznsyChxwIBfAI",
+                "l": "unto%20others",
+                "g": ["portland metal", "heavy metal", "gothic rock"]
+            }
+        }
+    },
+    {
+        "start": "2025-02-20T19:00:00",
+        "venueEventUrl": "https://kavka.be/event/vukovi/",
+        "title": "Vukovi",
+        "location": "kavka",
+        "price": null,
+        "shortText": "VUKOVI are hitting the road in 2025 with their MY GOD HAS GOT A GUN…",
+        "longText": "../public/texts/kavka/aHR0cHM6Ly9rYXZrYS5iZS9ldmVudC92dWtvdmkv.html",
+        "image": "../public/event-images/kavka/aHR0cHM6Ly9rYXZrYS5iZS9ldmVudC92dWtvdmkv",
+        "soldOut": false,
+        "unavailable": false,
+        "eventGenres": null,
+        "artists": {}
+    },
+    {
+        "start": "2025-04-06T19:00:00",
+        "venueEventUrl": "https://kavka.be/event/catch-your-breath/",
+        "title": "Catch your breath",
+        "location": "kavka",
+        "price": null,
+        "shortText": "Catch Your Breath is thrilled to announce their ‘The SAVAGES Tour’ in April 2025, featuring…",
+        "longText": "../public/texts/kavka/a2EuYmUvZXZlbnQvY2F0Y2gteW91ci1icmVhdGgv.html",
+        "image": "../public/event-images/kavka/a2EuYmUvZXZlbnQvY2F0Y2gteW91ci1icmVhdGgv",
+        "soldOut": false,
+        "unavailable": false,
+        "eventGenres": null,
+        "artists": {
+            "catch your breath": {
+                "s": "2fqPOGxG12nEERj8YG7p22",
+                "l": "catch%20your%20breath",
+                "g": ["american metalcore"]
+            }
+        }
+    },
+    {
+        "start": "2025-04-15T19:00:00",
+        "venueEventUrl": "https://kavka.be/event/esprit-dair/",
+        "title": "Esprit d’air",
+        "location": "kavka",
+        "price": null,
+        "shortText": "Sluit je aan voor een onvergetelijke avond met Esprit D’Air, de bekroonde Japanse rock- en…",
+        "longText": "../public/texts/kavka/Oi8va2F2a2EuYmUvZXZlbnQvZXNwcml0LWRhaXIv.html",
+        "image": "../public/event-images/kavka/Oi8va2F2a2EuYmUvZXZlbnQvZXNwcml0LWRhaXIv",
+        "soldOut": false,
+        "unavailable": false,
+        "eventGenres": null,
+        "artists": {}
     }
-  },
-  {
-    "start": "2024-10-31T22:00:00",
-    "venueEventUrl": "https://kavka.be/event/emo-night-antwerp-halloween/",
-    "title": "Emo night – halloween",
-    "location": "kavka",
-    "price": null,
-    "shortText": "By now, we all know that we can’t let Halloween pass us by without hosting…",
-    "longText": "../public/texts/kavka/dC9lbW8tbmlnaHQtYW50d2VycC1oYWxsb3dlZW4v.html",
-    "image": "../public/event-images/kavka/dC9lbW8tbmlnaHQtYW50d2VycC1oYWxsb3dlZW4v",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "start": "2024-11-09T19:00:00",
-    "venueEventUrl": "https://kavka.be/event/your-highness/",
-    "title": "Your Highness + More",
-    "location": "kavka",
-    "price": null,
-    "shortText": "Your Highness is back with a 4th full length “Under the weight” (Polder Records). To…",
-    "longText": "../public/texts/kavka/L2thdmthLmJlL2V2ZW50L3lvdXItaGlnaG5lc3Mv.html",
-    "image": "../public/event-images/kavka/L2thdmthLmJlL2V2ZW50L3lvdXItaGlnaG5lc3Mv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "your highness": {
-        "s": "6Cbs0xetz57bCUhG7wyCt7",
-        "l": "your%20highness",
-        "g": [
-          "belgian metal",
-          "belgian stoner rock",
-          "sludge",
-          "stoner metal"
-        ]
-      },
-      "more": {
-        "s": null,
-        "l": "more",
-        "g": [
-          "nwobhm",
-          "heavy metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2024-11-12T19:00:00",
-    "venueEventUrl": "https://kavka.be/event/dopelord-red-sun-atacama/",
-    "title": "Dopelord + red sun atacama",
-    "location": "kavka",
-    "price": null,
-    "shortText": "Sonic Excess presents Hailing from Poland and relentlessly practicing dark arts and riff worship ever…",
-    "longText": "../public/texts/kavka/dmVudC9kb3BlbG9yZC1yZWQtc3VuLWF0YWNhbWEv.html",
-    "image": "../public/event-images/kavka/dmVudC9kb3BlbG9yZC1yZWQtc3VuLWF0YWNhbWEv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "dopelord": {
-        "s": "1B1b2jSXksHwmmorhmQ8AF",
-        "l": "dopelord",
-        "g": [
-          "doom metal",
-          "drone metal",
-          "psychedelic doom",
-          "stoner metal",
-          "stoner",
-          "doom metal"
-        ]
-      },
-      "red sun atacama": {
-        "s": "0tQIPyHnRVytz1dSECkiFg",
-        "l": "red%20sun%20atacama",
-        "g": [
-          "french stoner rock"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2024-11-24T19:00:00",
-    "venueEventUrl": "https://kavka.be/event/gatecreeper-200-stab-wounds-enforcer/",
-    "title": "Gatecreeper + 200 stab wounds + enforced",
-    "location": "kavka",
-    "price": null,
-    "shortText": "Samhain & Death Over Antwerp present Gatecreeper (US) – Dark Superstition tour – With support…",
-    "longText": "../public/texts/kavka/ZXBlci0yMDAtc3RhYi13b3VuZHMtZW5mb3JjZXIv.html",
-    "image": "../public/event-images/kavka/ZXBlci0yMDAtc3RhYi13b3VuZHMtZW5mb3JjZXIv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "200 stab wounds": {
-        "s": "6DH6xC3RoN7L7sGlJ60LKv",
-        "l": "200%20stab%20wounds",
-        "g": [
-          "cavernous death metal",
-          "death metal"
-        ]
-      },
-      "gatecreeper": {
-        "s": "0eCB2pwtPnLywA4rxe4i4N",
-        "l": "gatecreeper",
-        "g": [
-          "death metal",
-          "deathgrind",
-          "new wave of osdm",
-          "sludge metal",
-          "death metal"
-        ]
-      },
-      "enforced": {
-        "s": "7vZV2UPiXQMVesiAxQmvBp",
-        "l": "enforced",
-        "g": [
-          "crossover thrash",
-          "new wave of thrash metal",
-          "virginia metal",
-          "thrash",
-          "heavy metal",
-          "crossover"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2024-11-26T19:00:00",
-    "venueEventUrl": "https://kavka.be/event/wheel/",
-    "title": "Wheel + molybaron",
-    "location": "kavka",
-    "price": null,
-    "shortText": "WHEEL + MOLYBARON WHEEL Charismatic leaders. These are the dictators, demagogues and false idols who,…",
-    "longText": "../public/texts/kavka/aHR0cHM6Ly9rYXZrYS5iZS9ldmVudC93aGVlbC8=.html",
-    "image": "../public/event-images/kavka/aHR0cHM6Ly9rYXZrYS5iZS9ldmVudC93aGVlbC8=",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "wheel": {
-        "s": "4msm1QtpV7zMReePhbEQ6H",
-        "l": "wheel",
-        "g": [
-          "finnish progressive rock",
-          "modern progressive rock",
-          "progressive metal",
-          "doom metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2024-12-01T19:00:00",
-    "venueEventUrl": "https://kavka.be/event/fit-for-an-autopsy-sylosis-darkest-hour-heriot/",
-    "title": "Fit for an autopsy + supports",
-    "location": "kavka",
-    "price": null,
-    "shortText": "Sonic Excess presents FIT FOR AN AUTOPSY SYLOSIS DARKEST HOUR HERIOT Fit For an Autopsy…",
-    "longText": "../public/texts/kavka/eS1zeWxvc2lzLWRhcmtlc3QtaG91ci1oZXJpb3Qv.html",
-    "image": "../public/event-images/kavka/eS1zeWxvc2lzLWRhcmtlc3QtaG91ci1oZXJpb3Qv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "fit for an autopsy": {
-        "s": "0qJpY7K8p7g6sacvaGNt6i",
-        "l": "fit%20for%20an%20autopsy",
-        "g": [
-          "brutal deathcore",
-          "deathcore",
-          "melodic metalcore",
-          "metalcore"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2024-12-05T19:00:00",
-    "venueEventUrl": "https://kavka.be/event/dayseeker-rain-city-drive-heart-of-gold/",
-    "title": "Dayseeker + rain city drive + heart of gold",
-    "location": "kavka",
-    "price": null,
-    "shortText": "After a run as main support for Pierce The Veil with a stop at Ancienne…",
-    "longText": "../public/texts/kavka/cmFpbi1jaXR5LWRyaXZlLWhlYXJ0LW9mLWdvbGQv.html",
-    "image": "../public/event-images/kavka/cmFpbi1jaXR5LWRyaXZlLWhlYXJ0LW9mLWdvbGQv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "dayseeker": {
-        "s": "5FjQVp1Lb0kltmwIuu5kfj",
-        "l": "dayseeker",
-        "g": [
-          "metalcore"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2024-12-06T19:00:00",
-    "venueEventUrl": "https://kavka.be/event/dying-fetus-chelsea-grin-despised-icon-vitriol/",
-    "title": "Dying fetus + supports",
-    "location": "kavka",
-    "price": null,
-    "shortText": "Sonic Excess presents DYING FETUS CHELSEA GRIN DESPISED ICON VITRIOL Dying Fetus is an American…",
-    "longText": "../public/texts/kavka/ZWEtZ3Jpbi1kZXNwaXNlZC1pY29uLXZpdHJpb2wv.html",
-    "image": "../public/event-images/kavka/ZWEtZ3Jpbi1kZXNwaXNlZC1pY29uLXZpdHJpb2wv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "dying fetus": {
-        "s": "2DqzOWVL2ly48IA9bpZdie",
-        "l": "dying%20fetus",
-        "g": [
-          "brutal death metal",
-          "death metal",
-          "deathgrind",
-          "metal",
-          "technical death metal",
-          "thrash metal",
-          "brutal death metal",
-          "grindcore"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2024-12-13T19:00:00",
-    "venueEventUrl": "https://kavka.be/event/pene-corrida/",
-    "title": "Pene Corrida",
-    "location": "kavka",
-    "price": null,
-    "shortText": "Stel je eens voor wat er zou gebeuren als we de grootste hits van de…",
-    "longText": "../public/texts/kavka/Ly9rYXZrYS5iZS9ldmVudC9wZW5lLWNvcnJpZGEv.html",
-    "image": "../public/event-images/kavka/Ly9rYXZrYS5iZS9ldmVudC9wZW5lLWNvcnJpZGEv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "pene corrida": {
-        "s": "1hw2ywipnsowbtb8flzcca",
-        "l": "pene%20corrida",
-        "g": []
-      }
-    }
-  },
-  {
-    "start": "2025-02-07T19:00:00",
-    "venueEventUrl": "https://kavka.be/event/zero-936/",
-    "title": "Zero 9:36 + ryan oakes",
-    "location": "kavka",
-    "price": null,
-    "shortText": "Siphoning precise raps through a battlefield of distorted guitars and glitchy hues, Zero 9:36 holds…",
-    "longText": "../public/texts/kavka/dHBzOi8va2F2a2EuYmUvZXZlbnQvemVyby05MzYv.html",
-    "image": "../public/event-images/kavka/dHBzOi8va2F2a2EuYmUvZXZlbnQvemVyby05MzYv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "start": "2025-02-15T19:00:00",
-    "venueEventUrl": "https://kavka.be/event/green-lung-unto-others-satans-satyrs/",
-    "title": "Green lung + unto others",
-    "location": "kavka",
-    "price": null,
-    "shortText": "Sonic Excess presents Green Lung is a British heavy rock band known for their blend…",
-    "longText": "../public/texts/kavka/dW5nLXVudG8tb3RoZXJzLXNhdGFucy1zYXR5cnMv.html",
-    "image": "../public/event-images/kavka/dW5nLXVudG8tb3RoZXJzLXNhdGFucy1zYXR5cnMv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "green lung": {
-        "s": "2MIoyDjdxCUdnV59UqbJGk",
-        "l": "green%20lung",
-        "g": [
-          "psychedelic doom",
-          "stoner metal",
-          "stoner rock",
-          "uk doom metal",
-          "uk stoner rock",
-          "stoner",
-          "doom metal",
-          "rock"
-        ]
-      },
-      "unto others": {
-        "s": "1W5khHrkcznsyChxwIBfAI",
-        "l": "unto%20others",
-        "g": [
-          "portland metal",
-          "heavy metal",
-          "gothic rock"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-02-20T19:00:00",
-    "venueEventUrl": "https://kavka.be/event/vukovi/",
-    "title": "Vukovi",
-    "location": "kavka",
-    "price": null,
-    "shortText": "VUKOVI are hitting the road in 2025 with their MY GOD HAS GOT A GUN…",
-    "longText": "../public/texts/kavka/aHR0cHM6Ly9rYXZrYS5iZS9ldmVudC92dWtvdmkv.html",
-    "image": "../public/event-images/kavka/aHR0cHM6Ly9rYXZrYS5iZS9ldmVudC92dWtvdmkv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "start": "2025-04-06T19:00:00",
-    "venueEventUrl": "https://kavka.be/event/catch-your-breath/",
-    "title": "Catch your breath",
-    "location": "kavka",
-    "price": null,
-    "shortText": "Catch Your Breath is thrilled to announce their ‘The SAVAGES Tour’ in April 2025, featuring…",
-    "longText": "../public/texts/kavka/a2EuYmUvZXZlbnQvY2F0Y2gteW91ci1icmVhdGgv.html",
-    "image": "../public/event-images/kavka/a2EuYmUvZXZlbnQvY2F0Y2gteW91ci1icmVhdGgv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "catch your breath": {
-        "s": "2fqPOGxG12nEERj8YG7p22",
-        "l": "catch%20your%20breath",
-        "g": [
-          "american metalcore"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-04-15T19:00:00",
-    "venueEventUrl": "https://kavka.be/event/esprit-dair/",
-    "title": "Esprit d’air",
-    "location": "kavka",
-    "price": null,
-    "shortText": "Sluit je aan voor een onvergetelijke avond met Esprit D’Air, de bekroonde Japanse rock- en…",
-    "longText": "../public/texts/kavka/Oi8va2F2a2EuYmUvZXZlbnQvZXNwcml0LWRhaXIv.html",
-    "image": "../public/event-images/kavka/Oi8va2F2a2EuYmUvZXZlbnQvZXNwcml0LWRhaXIv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  }
 ]

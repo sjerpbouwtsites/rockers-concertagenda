@@ -1,323 +1,250 @@
 [
-  {
-    "door": "2024-10-13T19:30:00",
-    "start": "2024-10-13T20:00:00",
-    "venueEventUrl": "https://bibelot.net/programma/bibelot-x-door-pamphlets-us-libertat/",
-    "title": "Bibelot X DOOR: Pamphlets (US) + Libertat",
-    "location": "bibelot",
-    "price": 0,
-    "longText": "../public/texts/bibelot/LXgtZG9vci1wYW1waGxldHMtdXMtbGliZXJ0YXQv.html",
-    "image": "../public/event-images/bibelot/LXgtZG9vci1wYW1waGxldHMtdXMtbGliZXJ0YXQv",
-    "soldOut": false,
-    "eventGenres": [
-      "punk "
-    ],
-    "artists": {
-      "pamphlets": {
-        "s": "76AT4fS82AfuOrK9iaCxkV",
-        "l": "pamphlets",
-        "g": [
-          "american post-punk",
-          "punk "
-        ]
-      },
-      "libertat": {
-        "s": "6o1FFXbX5XmI5TcYzTMqGa",
-        "l": "libertat",
-        "g": [
-          "punk "
-        ]
-      }
+    {
+        "door": "2024-10-13T19:30:00",
+        "start": "2024-10-13T20:00:00",
+        "venueEventUrl": "https://bibelot.net/programma/bibelot-x-door-pamphlets-us-libertat/",
+        "title": "Bibelot X DOOR: Pamphlets (US) + Libertat",
+        "location": "bibelot",
+        "price": 0,
+        "longText": "../public/texts/bibelot/LXgtZG9vci1wYW1waGxldHMtdXMtbGliZXJ0YXQv.html",
+        "image": "../public/event-images/bibelot/LXgtZG9vci1wYW1waGxldHMtdXMtbGliZXJ0YXQv",
+        "soldOut": false,
+        "eventGenres": ["punk "],
+        "artists": {
+            "pamphlets": {
+                "s": "76AT4fS82AfuOrK9iaCxkV",
+                "l": "pamphlets",
+                "g": ["american post-punk", "punk "]
+            },
+            "libertat": {
+                "s": "6o1FFXbX5XmI5TcYzTMqGa",
+                "l": "libertat",
+                "g": ["punk "]
+            }
+        }
+    },
+    {
+        "door": "2024-10-19T20:30:00",
+        "start": "2024-10-19T21:00:00",
+        "venueEventUrl": "https://bibelot.net/programma/dordrecht-metal-fest-2/",
+        "title": "Dordrecht Metal Fest",
+        "location": "bibelot",
+        "price": 19,
+        "longText": "../public/texts/bibelot/Z3JhbW1hL2RvcmRyZWNodC1tZXRhbC1mZXN0LTIv.html",
+        "image": "../public/event-images/bibelot/Z3JhbW1hL2RvcmRyZWNodC1tZXRhbC1mZXN0LTIv",
+        "soldOut": false,
+        "eventGenres": ["metal "],
+        "artists": {
+            "dordrecht metal fest": {
+                "s": null,
+                "l": "dordrecht%20metal%20fest",
+                "g": ["metal "]
+            },
+            "metal": {
+                "s": null,
+                "l": "metal",
+                "g": ["death metal"]
+            }
+        }
+    },
+    {
+        "door": "2024-10-25T20:00:00",
+        "start": "2024-10-25T20:30:00",
+        "venueEventUrl": "https://bibelot.net/programma/speedmobile/",
+        "title": "Speedmobile + Dikke Dennis & De Røckers",
+        "location": "bibelot",
+        "price": 0,
+        "longText": "../public/texts/bibelot/bG90Lm5ldC9wcm9ncmFtbWEvc3BlZWRtb2JpbGUv.html",
+        "image": "../public/event-images/bibelot/bG90Lm5ldC9wcm9ncmFtbWEvc3BlZWRtb2JpbGUv",
+        "soldOut": false,
+        "eventGenres": ["punk ", "rock "],
+        "artists": {
+            "speedmobile": {
+                "s": "15qfmszEuUlcKcPcwt5P05",
+                "l": "speedmobile",
+                "g": ["punk ", "rock "]
+            },
+            "de røckers": {
+                "s": "4gnyohyczuql9vf0vbjffq",
+                "l": null,
+                "g": []
+            },
+            "dikke dennis &": {
+                "s": null,
+                "l": "dikke%20dennis%20&",
+                "g": ["punk ", "rock "]
+            }
+        }
+    },
+    {
+        "door": "2024-11-02T20:30:00",
+        "start": "2024-11-02T21:00:00",
+        "venueEventUrl": "https://bibelot.net/programma/black-sabbitch-us/",
+        "title": "Black Sabbitch (US)",
+        "location": "bibelot",
+        "price": 2024,
+        "longText": "../public/texts/bibelot/dC9wcm9ncmFtbWEvYmxhY2stc2FiYml0Y2gtdXMv.html",
+        "image": "../public/event-images/bibelot/dC9wcm9ncmFtbWEvYmxhY2stc2FiYml0Y2gtdXMv",
+        "soldOut": false,
+        "eventGenres": ["metal "],
+        "artists": {
+            "black sabbitch": {
+                "s": null,
+                "l": "black%20sabbitch",
+                "g": ["metal "]
+            }
+        }
+    },
+    {
+        "door": "2024-11-30T19:00:00",
+        "start": "2024-11-30T19:30:00",
+        "venueEventUrl": "https://bibelot.net/programma/temper/",
+        "title": "Temper!",
+        "location": "bibelot",
+        "price": 30,
+        "longText": "../public/texts/bibelot/L2JpYmVsb3QubmV0L3Byb2dyYW1tYS90ZW1wZXIv.html",
+        "image": "../public/event-images/bibelot/L2JpYmVsb3QubmV0L3Byb2dyYW1tYS90ZW1wZXIv",
+        "soldOut": false,
+        "eventGenres": ["garagerock ", "pop ", "punk ", "rock "],
+        "artists": {
+            "temper!": {
+                "s": null,
+                "l": "temper!",
+                "g": ["garagerock ", "pop ", "punk ", "rock "]
+            }
+        }
+    },
+    {
+        "door": "2024-12-13T20:30:00",
+        "start": "2024-12-13T21:00:00",
+        "venueEventUrl": "https://bibelot.net/programma/tusky/",
+        "title": "Tusky",
+        "location": "bibelot",
+        "price": 0,
+        "longText": "../public/texts/bibelot/Ly9iaWJlbG90Lm5ldC9wcm9ncmFtbWEvdHVza3kv.html",
+        "image": "../public/event-images/bibelot/Ly9iaWJlbG90Lm5ldC9wcm9ncmFtbWEvdHVza3kv",
+        "soldOut": false,
+        "eventGenres": ["punk "],
+        "artists": {
+            "tusky": {
+                "s": "6XbZ8G0cFqSgUL4FmtiSPr",
+                "l": "tusky",
+                "g": ["dutch punk", "dutch rock"]
+            }
+        }
+    },
+    {
+        "door": "2024-12-14T19:00:00",
+        "start": "2024-12-14T19:30:00",
+        "venueEventUrl": "https://bibelot.net/programma/the-luka-state-uk/",
+        "title": "The luka state (uk)",
+        "location": "bibelot",
+        "price": 0,
+        "longText": "../public/texts/bibelot/dC9wcm9ncmFtbWEvdGhlLWx1a2Etc3RhdGUtdWsv.html",
+        "image": "../public/event-images/bibelot/dC9wcm9ncmFtbWEvdGhlLWx1a2Etc3RhdGUtdWsv",
+        "soldOut": false,
+        "eventGenres": ["garagerock ", "rock "],
+        "artists": {
+            "the luka state": {
+                "s": null,
+                "l": "the%20luka%20state",
+                "g": ["garagerock ", "rock "]
+            }
+        }
+    },
+    {
+        "door": "2024-12-27T20:00:00",
+        "start": "2024-12-27T20:45:00",
+        "venueEventUrl": "https://bibelot.net/programma/the-metal-studs/",
+        "title": "The Metal Studs",
+        "location": "bibelot",
+        "price": 0,
+        "longText": "../public/texts/bibelot/bmV0L3Byb2dyYW1tYS90aGUtbWV0YWwtc3R1ZHMv.html",
+        "image": "../public/event-images/bibelot/bmV0L3Byb2dyYW1tYS90aGUtbWV0YWwtc3R1ZHMv",
+        "soldOut": false,
+        "eventGenres": ["metal ", "rock "],
+        "artists": {
+            "the metal studs": {
+                "s": null,
+                "l": "the%20metal%20studs",
+                "g": ["metal ", "rock "]
+            },
+            "metal": {
+                "s": null,
+                "l": "metal",
+                "g": ["death metal"]
+            }
+        }
+    },
+    {
+        "door": "2024-12-28T20:30:00",
+        "start": "2024-12-28T21:00:00",
+        "venueEventUrl": "https://bibelot.net/programma/pestilence-magnacult-release-show/",
+        "title": "Pestilence + MagnaCult (release show)",
+        "location": "bibelot",
+        "price": 28,
+        "longText": "../public/texts/bibelot/aWxlbmNlLW1hZ25hY3VsdC1yZWxlYXNlLXNob3cv.html",
+        "image": "../public/event-images/bibelot/aWxlbmNlLW1hZ25hY3VsdC1yZWxlYXNlLXNob3cv",
+        "soldOut": false,
+        "eventGenres": ["metal "],
+        "artists": {
+            "pestilence": {
+                "s": "6jcfn4plxfuxmhrxpopsan",
+                "l": "pestilence",
+                "g": [
+                    "black metal",
+                    "brutal death metal",
+                    "death metal",
+                    "deathrash",
+                    "dutch death metal",
+                    "dutch metal",
+                    "old school thrash",
+                    "technical death metal"
+                ]
+            },
+            "magnacult": {
+                "s": "4xtRDmUYn7ASxHTWq9x40S",
+                "l": "magnacult",
+                "g": ["death", "groove metal", "metalcore", "metal "]
+            }
+        }
+    },
+    {
+        "door": "2025-01-10T20:30:00",
+        "start": "2025-01-10T21:00:00",
+        "venueEventUrl": "https://bibelot.net/programma/regressive-hypnosis-dream-theater-tribute/",
+        "title": "Regressive Hypnosis (Dream Theater Tribute)",
+        "location": "bibelot",
+        "price": 10,
+        "longText": "../public/texts/bibelot/eXBub3Npcy1kcmVhbS10aGVhdGVyLXRyaWJ1dGUv.html",
+        "image": "../public/event-images/bibelot/eXBub3Npcy1kcmVhbS10aGVhdGVyLXRyaWJ1dGUv",
+        "soldOut": false,
+        "eventGenres": ["metal "],
+        "artists": {
+            "regressive hypnosis": {
+                "s": null,
+                "l": "regressive%20hypnosis",
+                "g": ["metal "]
+            }
+        }
+    },
+    {
+        "door": "2025-02-21T20:00:00",
+        "start": "2025-02-21T20:30:00",
+        "venueEventUrl": "https://bibelot.net/programma/charlotte-wessels/",
+        "title": "Charlotte Wessels",
+        "location": "bibelot",
+        "price": 21,
+        "longText": "../public/texts/bibelot/dC9wcm9ncmFtbWEvY2hhcmxvdHRlLXdlc3NlbHMv.html",
+        "image": "../public/event-images/bibelot/dC9wcm9ncmFtbWEvY2hhcmxvdHRlLXdlc3NlbHMv",
+        "soldOut": false,
+        "eventGenres": ["metal ", "pop "],
+        "artists": {
+            "charlotte wessels": {
+                "s": "6yyPaE45AE346XVgFJgiaI",
+                "l": "charlotte%20wessels",
+                "g": ["gothic symphonic metal", "hel", "symphonic metal"]
+            }
+        }
     }
-  },
-  {
-    "door": "2024-10-19T20:30:00",
-    "start": "2024-10-19T21:00:00",
-    "venueEventUrl": "https://bibelot.net/programma/dordrecht-metal-fest-2/",
-    "title": "Dordrecht Metal Fest",
-    "location": "bibelot",
-    "price": 19,
-    "longText": "../public/texts/bibelot/Z3JhbW1hL2RvcmRyZWNodC1tZXRhbC1mZXN0LTIv.html",
-    "image": "../public/event-images/bibelot/Z3JhbW1hL2RvcmRyZWNodC1tZXRhbC1mZXN0LTIv",
-    "soldOut": false,
-    "eventGenres": [
-      "metal "
-    ],
-    "artists": {
-      "dordrecht metal fest": {
-        "s": null,
-        "l": "dordrecht%20metal%20fest",
-        "g": [
-          "metal "
-        ]
-      },
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-10-25T20:00:00",
-    "start": "2024-10-25T20:30:00",
-    "venueEventUrl": "https://bibelot.net/programma/speedmobile/",
-    "title": "Speedmobile + Dikke Dennis & De Røckers",
-    "location": "bibelot",
-    "price": 0,
-    "longText": "../public/texts/bibelot/bG90Lm5ldC9wcm9ncmFtbWEvc3BlZWRtb2JpbGUv.html",
-    "image": "../public/event-images/bibelot/bG90Lm5ldC9wcm9ncmFtbWEvc3BlZWRtb2JpbGUv",
-    "soldOut": false,
-    "eventGenres": [
-      "punk ",
-      "rock "
-    ],
-    "artists": {
-      "speedmobile": {
-        "s": "15qfmszEuUlcKcPcwt5P05",
-        "l": "speedmobile",
-        "g": [
-          "punk ",
-          "rock "
-        ]
-      },
-      "de røckers": {
-        "s": "4gnyohyczuql9vf0vbjffq",
-        "l": null,
-        "g": []
-      },
-      "dikke dennis &": {
-        "s": null,
-        "l": "dikke%20dennis%20&",
-        "g": [
-          "punk ",
-          "rock "
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-11-02T20:30:00",
-    "start": "2024-11-02T21:00:00",
-    "venueEventUrl": "https://bibelot.net/programma/black-sabbitch-us/",
-    "title": "Black Sabbitch (US)",
-    "location": "bibelot",
-    "price": 2024,
-    "longText": "../public/texts/bibelot/dC9wcm9ncmFtbWEvYmxhY2stc2FiYml0Y2gtdXMv.html",
-    "image": "../public/event-images/bibelot/dC9wcm9ncmFtbWEvYmxhY2stc2FiYml0Y2gtdXMv",
-    "soldOut": false,
-    "eventGenres": [
-      "metal "
-    ],
-    "artists": {
-      "black sabbitch": {
-        "s": null,
-        "l": "black%20sabbitch",
-        "g": [
-          "metal "
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-11-30T19:00:00",
-    "start": "2024-11-30T19:30:00",
-    "venueEventUrl": "https://bibelot.net/programma/temper/",
-    "title": "Temper!",
-    "location": "bibelot",
-    "price": 30,
-    "longText": "../public/texts/bibelot/L2JpYmVsb3QubmV0L3Byb2dyYW1tYS90ZW1wZXIv.html",
-    "image": "../public/event-images/bibelot/L2JpYmVsb3QubmV0L3Byb2dyYW1tYS90ZW1wZXIv",
-    "soldOut": false,
-    "eventGenres": [
-      "garagerock ",
-      "pop ",
-      "punk ",
-      "rock "
-    ],
-    "artists": {
-      "temper!": {
-        "s": null,
-        "l": "temper!",
-        "g": [
-          "garagerock ",
-          "pop ",
-          "punk ",
-          "rock "
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-12-13T20:30:00",
-    "start": "2024-12-13T21:00:00",
-    "venueEventUrl": "https://bibelot.net/programma/tusky/",
-    "title": "Tusky",
-    "location": "bibelot",
-    "price": 0,
-    "longText": "../public/texts/bibelot/Ly9iaWJlbG90Lm5ldC9wcm9ncmFtbWEvdHVza3kv.html",
-    "image": "../public/event-images/bibelot/Ly9iaWJlbG90Lm5ldC9wcm9ncmFtbWEvdHVza3kv",
-    "soldOut": false,
-    "eventGenres": [
-      "punk "
-    ],
-    "artists": {
-      "tusky": {
-        "s": "6XbZ8G0cFqSgUL4FmtiSPr",
-        "l": "tusky",
-        "g": [
-          "dutch punk",
-          "dutch rock"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-12-14T19:00:00",
-    "start": "2024-12-14T19:30:00",
-    "venueEventUrl": "https://bibelot.net/programma/the-luka-state-uk/",
-    "title": "The luka state (uk)",
-    "location": "bibelot",
-    "price": 0,
-    "longText": "../public/texts/bibelot/dC9wcm9ncmFtbWEvdGhlLWx1a2Etc3RhdGUtdWsv.html",
-    "image": "../public/event-images/bibelot/dC9wcm9ncmFtbWEvdGhlLWx1a2Etc3RhdGUtdWsv",
-    "soldOut": false,
-    "eventGenres": [
-      "garagerock ",
-      "rock "
-    ],
-    "artists": {
-      "the luka state": {
-        "s": null,
-        "l": "the%20luka%20state",
-        "g": [
-          "garagerock ",
-          "rock "
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-12-27T20:00:00",
-    "start": "2024-12-27T20:45:00",
-    "venueEventUrl": "https://bibelot.net/programma/the-metal-studs/",
-    "title": "The Metal Studs",
-    "location": "bibelot",
-    "price": 0,
-    "longText": "../public/texts/bibelot/bmV0L3Byb2dyYW1tYS90aGUtbWV0YWwtc3R1ZHMv.html",
-    "image": "../public/event-images/bibelot/bmV0L3Byb2dyYW1tYS90aGUtbWV0YWwtc3R1ZHMv",
-    "soldOut": false,
-    "eventGenres": [
-      "metal ",
-      "rock "
-    ],
-    "artists": {
-      "the metal studs": {
-        "s": null,
-        "l": "the%20metal%20studs",
-        "g": [
-          "metal ",
-          "rock "
-        ]
-      },
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-12-28T20:30:00",
-    "start": "2024-12-28T21:00:00",
-    "venueEventUrl": "https://bibelot.net/programma/pestilence-magnacult-release-show/",
-    "title": "Pestilence + MagnaCult (release show)",
-    "location": "bibelot",
-    "price": 28,
-    "longText": "../public/texts/bibelot/aWxlbmNlLW1hZ25hY3VsdC1yZWxlYXNlLXNob3cv.html",
-    "image": "../public/event-images/bibelot/aWxlbmNlLW1hZ25hY3VsdC1yZWxlYXNlLXNob3cv",
-    "soldOut": false,
-    "eventGenres": [
-      "metal "
-    ],
-    "artists": {
-      "pestilence": {
-        "s": "6jcfn4plxfuxmhrxpopsan",
-        "l": "pestilence",
-        "g": [
-          "black metal",
-          "brutal death metal",
-          "death metal",
-          "deathrash",
-          "dutch death metal",
-          "dutch metal",
-          "old school thrash",
-          "technical death metal"
-        ]
-      },
-      "magnacult": {
-        "s": "4xtRDmUYn7ASxHTWq9x40S",
-        "l": "magnacult",
-        "g": [
-          "death",
-          "groove metal",
-          "metalcore",
-          "metal "
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-01-10T20:30:00",
-    "start": "2025-01-10T21:00:00",
-    "venueEventUrl": "https://bibelot.net/programma/regressive-hypnosis-dream-theater-tribute/",
-    "title": "Regressive Hypnosis (Dream Theater Tribute)",
-    "location": "bibelot",
-    "price": 10,
-    "longText": "../public/texts/bibelot/eXBub3Npcy1kcmVhbS10aGVhdGVyLXRyaWJ1dGUv.html",
-    "image": "../public/event-images/bibelot/eXBub3Npcy1kcmVhbS10aGVhdGVyLXRyaWJ1dGUv",
-    "soldOut": false,
-    "eventGenres": [
-      "metal "
-    ],
-    "artists": {
-      "regressive hypnosis": {
-        "s": null,
-        "l": "regressive%20hypnosis",
-        "g": [
-          "metal "
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-02-21T20:00:00",
-    "start": "2025-02-21T20:30:00",
-    "venueEventUrl": "https://bibelot.net/programma/charlotte-wessels/",
-    "title": "Charlotte Wessels",
-    "location": "bibelot",
-    "price": 21,
-    "longText": "../public/texts/bibelot/dC9wcm9ncmFtbWEvY2hhcmxvdHRlLXdlc3NlbHMv.html",
-    "image": "../public/event-images/bibelot/dC9wcm9ncmFtbWEvY2hhcmxvdHRlLXdlc3NlbHMv",
-    "soldOut": false,
-    "eventGenres": [
-      "metal ",
-      "pop "
-    ],
-    "artists": {
-      "charlotte wessels": {
-        "s": "6yyPaE45AE346XVgFJgiaI",
-        "l": "charlotte%20wessels",
-        "g": [
-          "gothic symphonic metal",
-          "hel",
-          "symphonic metal"
-        ]
-      }
-    }
-  }
 ]

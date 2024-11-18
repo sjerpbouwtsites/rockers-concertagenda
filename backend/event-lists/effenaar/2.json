@@ -1,447 +1,406 @@
 [
-  {
-    "door": "2024-10-22T18:30:00",
-    "start": "2024-10-22T19:15:00",
-    "venueEventUrl": "https://www.effenaar.nl/agenda/alien-ant-farm-cky",
-    "title": "Alien ant farm + cky",
-    "location": "effenaar",
-    "price": 33.5,
-    "shortText": "Ontwaak je innerlijke nu-metal kid | + The Treatment",
-    "longText": "../public/texts/effenaar/ci5ubC9hZ2VuZGEvYWxpZW4tYW50LWZhcm0tY2t5.html",
-    "image": "../public/event-images/effenaar/ci5ubC9hZ2VuZGEvYWxpZW4tYW50LWZhcm0tY2t5",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "alien ant farm": {
-        "s": "6TZdvF1kFzwnQLgHQynzsO",
-        "l": "alien%20ant%20farm",
-        "g": [
-          "alternative metal",
-          "funk metal",
-          "nu metal",
-          "post-grunge"
-        ]
-      },
-      "the treatment": {
-        "s": "7HbPuR5r7inxY7xExMdkUq",
-        "l": "the%20treatment",
-        "g": [
-          "deep melodic hard rock",
-          "modern hard rock",
-          "nwocr",
-          "sleaze rock"
-        ]
-      },
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      }
+    {
+        "door": "2024-10-22T18:30:00",
+        "start": "2024-10-22T19:15:00",
+        "venueEventUrl": "https://www.effenaar.nl/agenda/alien-ant-farm-cky",
+        "title": "Alien ant farm + cky",
+        "location": "effenaar",
+        "price": 33.5,
+        "shortText": "Ontwaak je innerlijke nu-metal kid | + The Treatment",
+        "longText": "../public/texts/effenaar/ci5ubC9hZ2VuZGEvYWxpZW4tYW50LWZhcm0tY2t5.html",
+        "image": "../public/event-images/effenaar/ci5ubC9hZ2VuZGEvYWxpZW4tYW50LWZhcm0tY2t5",
+        "soldOut": false,
+        "eventGenres": null,
+        "artists": {
+            "alien ant farm": {
+                "s": "6TZdvF1kFzwnQLgHQynzsO",
+                "l": "alien%20ant%20farm",
+                "g": [
+                    "alternative metal",
+                    "funk metal",
+                    "nu metal",
+                    "post-grunge"
+                ]
+            },
+            "the treatment": {
+                "s": "7HbPuR5r7inxY7xExMdkUq",
+                "l": "the%20treatment",
+                "g": [
+                    "deep melodic hard rock",
+                    "modern hard rock",
+                    "nwocr",
+                    "sleaze rock"
+                ]
+            },
+            "metal": {
+                "s": null,
+                "l": "metal",
+                "g": ["death metal"]
+            }
+        }
+    },
+    {
+        "door": "2024-10-31T19:30:00",
+        "start": "2024-10-31T20:00:00",
+        "venueEventUrl": "https://www.effenaar.nl/agenda/lionheart",
+        "title": "Lionheart",
+        "location": "effenaar",
+        "price": 33.5,
+        "shortText": "Underplayed exclusieve Halloween show",
+        "longText": "../public/texts/effenaar/dy5lZmZlbmFhci5ubC9hZ2VuZGEvbGlvbmhlYXJ0.html",
+        "image": "../public/event-images/effenaar/dy5lZmZlbmFhci5ubC9hZ2VuZGEvbGlvbmhlYXJ0",
+        "soldOut": false,
+        "eventGenres": null,
+        "artists": {
+            "lionheart": {
+                "s": "6doctx1atvti0d4uaxwlo3",
+                "l": "lionheart",
+                "g": []
+            }
+        }
+    },
+    {
+        "door": "2024-11-06T19:30:00",
+        "start": "2024-11-06T20:15:00",
+        "venueEventUrl": "https://www.effenaar.nl/agenda/dark-tranquillity",
+        "title": "Dark Tranquillity",
+        "location": "effenaar",
+        "price": 32.5,
+        "shortText": "+ Moonspell + Wolfheart + Hiraes",
+        "longText": "../public/texts/effenaar/YXIubmwvYWdlbmRhL2RhcmstdHJhbnF1aWxsaXR5.html",
+        "image": "../public/event-images/effenaar/YXIubmwvYWdlbmRhL2RhcmstdHJhbnF1aWxsaXR5",
+        "soldOut": false,
+        "eventGenres": null,
+        "artists": {
+            "dark tranquillity": {
+                "s": "5EHvXKnNz78jkAVgTQLQ5O",
+                "l": "dark%20tranquillity",
+                "g": [
+                    "death metal",
+                    "gothenburg metal",
+                    "melodic death metal",
+                    "metal",
+                    "swedish death metal",
+                    "swedish melodeath",
+                    "swedish metal",
+                    "symphonic metal",
+                    "viking metal",
+                    "melodic death metal"
+                ]
+            },
+            "wolfheart": {
+                "s": "11EAP8MX0cfrW9lzkK424H",
+                "l": "wolfheart",
+                "g": [
+                    "finnish death metal",
+                    "finnish melodeath",
+                    "finnish metal",
+                    "melodic death metal",
+                    "melodic death metal"
+                ]
+            },
+            "moonspell": {
+                "s": "17bYSQ9ZRnreVnJjE5X2x6",
+                "l": "moonspell",
+                "g": [
+                    "gothic black metal",
+                    "gothic metal",
+                    "melodic death metal",
+                    "metal",
+                    "portuguese black metal",
+                    "portuguese metal",
+                    "portuguese rock",
+                    "power metal",
+                    "gothic metal"
+                ]
+            },
+            "hiraes": {
+                "s": "1Djkm24RzECe7M6KuxKZzt",
+                "l": "hiraes",
+                "g": ["slayer", "melodic death metal"]
+            }
+        }
+    },
+    {
+        "door": "2024-11-22T19:30:00",
+        "start": "2024-11-22T20:00:00",
+        "venueEventUrl": "https://www.effenaar.nl/agenda/butcher",
+        "title": "Bütcher",
+        "location": "effenaar",
+        "price": 17,
+        "shortText": "Album release show | + Violent Sin + Pentacle",
+        "longText": "../public/texts/effenaar/d3d3LmVmZmVuYWFyLm5sL2FnZW5kYS9idXRjaGVy.html",
+        "image": "../public/event-images/effenaar/d3d3LmVmZmVuYWFyLm5sL2FnZW5kYS9idXRjaGVy",
+        "soldOut": false,
+        "eventGenres": null,
+        "artists": {
+            "bütcher": {
+                "s": "5ZJXIEOPiCQpgHh9dWnamd",
+                "l": "b%C3%BCtcher",
+                "g": ["black thrash", "nwothm", "black", "speed metal"]
+            },
+            "violent sin": {
+                "s": "0nWk705I4Qjiu8NKaeQIky",
+                "l": "violent%20sin",
+                "g": ["speed", "black metal"]
+            },
+            "pentacle": {
+                "s": "7uzYBLuZgi8Sh824n2lBtq",
+                "l": "pentacle",
+                "g": ["dutch death metal", "death metal"]
+            }
+        }
+    },
+    {
+        "door": "2024-11-28T18:30:00",
+        "start": "2024-11-28T19:00:00",
+        "venueEventUrl": "https://www.effenaar.nl/agenda/motocultor-festival-tour",
+        "title": "Motocultor Festival Tour",
+        "location": "effenaar",
+        "price": 26,
+        "shortText": " Orphaned Land | nieuwe datum  + Dirty Shirt + Royal Rage + Ring of Gyges + Stråle",
+        "longText": "../public/texts/effenaar/Z2VuZGEvbW90b2N1bHRvci1mZXN0aXZhbC10b3Vy.html",
+        "image": "../public/event-images/effenaar/Z2VuZGEvbW90b2N1bHRvci1mZXN0aXZhbC10b3Vy",
+        "soldOut": false,
+        "eventGenres": null,
+        "artists": {
+            "orphaned land": {
+                "s": "7xtmxqambte0nce5lz7t0h",
+                "l": "orphaned%20land",
+                "g": [
+                    "christian power metal",
+                    "folk metal",
+                    "israeli metal",
+                    "oriental metal"
+                ]
+            },
+            "ring of gyges": {
+                "s": "00pF6oMeAiz1GslEYo56SJ",
+                "l": "ring%20of%20gyges",
+                "g": ["icelandic metal", "progressive metal", "rock"]
+            },
+            "dirty shirt": {
+                "s": "7lnoKzE5unKzShIzkjlTX7",
+                "l": "dirty%20shirt",
+                "g": ["balkan folk metal", "romanian metal", "romanian rock"]
+            },
+            "royal rage": {
+                "s": "3lSGpixf55aJ9VDclm4WWv",
+                "l": "royal%20rage",
+                "g": [
+                    "brazilian thrash metal",
+                    "metal paranaense",
+                    "thrash metal"
+                ]
+            }
+        }
+    },
+    {
+        "door": "2024-12-01T13:00:00",
+        "start": "2024-12-01T13:45:00",
+        "venueEventUrl": "https://www.effenaar.nl/agenda/dying-fetus",
+        "title": "Dying Fetus",
+        "location": "effenaar",
+        "price": 35.5,
+        "shortText": "Matineeshow met Chelsea Grin + Despised Icon + Vitriol",
+        "longText": "../public/texts/effenaar/ZWZmZW5hYXIubmwvYWdlbmRhL2R5aW5nLWZldHVz.html",
+        "image": "../public/event-images/effenaar/ZWZmZW5hYXIubmwvYWdlbmRhL2R5aW5nLWZldHVz",
+        "soldOut": false,
+        "eventGenres": null,
+        "artists": {
+            "dying fetus": {
+                "s": "2DqzOWVL2ly48IA9bpZdie",
+                "l": "dying%20fetus",
+                "g": [
+                    "brutal death metal",
+                    "death metal",
+                    "deathgrind",
+                    "metal",
+                    "technical death metal",
+                    "thrash metal",
+                    "brutal death metal",
+                    "grindcore"
+                ]
+            },
+            "despised icon": {
+                "s": "3MjNMjqBpaQ0P8ebfbZjYn",
+                "l": "despised%20icon",
+                "g": [
+                    "canadian metal",
+                    "deathcore",
+                    "melodic metalcore",
+                    "deathcore"
+                ]
+            },
+            "vitriol": {
+                "s": "7E4LULB8UkUOTEBbpTbLma",
+                "l": "vitriol",
+                "g": [
+                    "brutal death metal",
+                    "deathgrind",
+                    "portland metal",
+                    "technical brutal death metal",
+                    "technical death metal",
+                    "black",
+                    "death metal"
+                ]
+            }
+        }
+    },
+    {
+        "door": "2024-12-12T19:00:00",
+        "start": "2024-12-12T19:30:00",
+        "venueEventUrl": "https://www.effenaar.nl/agenda/eindhoven-metal-meeting-warm-evening",
+        "title": "Eindhoven Metal Meeting Warm-Up Evening",
+        "location": "effenaar",
+        "price": 22.5,
+        "shortText": "Saturnalia Temple + Dead Head + The Omega Swarm + Mouflon",
+        "longText": "../public/texts/effenaar/dmVuLW1ldGFsLW1lZXRpbmctd2FybS1ldmVuaW5n.html",
+        "image": "../public/event-images/effenaar/dmVuLW1ldGFsLW1lZXRpbmctd2FybS1ldmVuaW5n",
+        "soldOut": false,
+        "eventGenres": null,
+        "artists": {
+            "metal": {
+                "s": null,
+                "l": "metal",
+                "g": ["death metal"]
+            },
+            "saturnalia temple": {
+                "s": "1ESjDnaPuoFzQ8QQ4TlxTl",
+                "l": "saturnalia%20temple",
+                "g": [
+                    "black sludge",
+                    "swedish doom metal",
+                    "stoner",
+                    "doom metal"
+                ]
+            },
+            "the omega swarm": {
+                "s": "1dDW3tZyrfcpTBkmtBRPnk",
+                "l": "the%20omega%20swarm",
+                "g": ["atmospheric death", "black metal"]
+            },
+            "dead head": {
+                "s": "3LehH71IZCno6UsiFR14vr",
+                "l": "dead%20head",
+                "g": [
+                    "dutch death metal",
+                    "dutch metal",
+                    "thrash metal",
+                    "punk",
+                    "hard rock"
+                ]
+            },
+            "mouflon": {
+                "s": "75S0L1sMv9ynU2paKaPu1l",
+                "l": "mouflon",
+                "g": ["dutch death metal", "dutch metal", "doom", "death metal"]
+            }
+        }
+    },
+    {
+        "door": "2025-02-09T18:00:00",
+        "start": "2025-02-09T19:00:00",
+        "venueEventUrl": "https://www.effenaar.nl/agenda/queensryche",
+        "title": "Queensrÿche",
+        "location": "effenaar",
+        "price": 39,
+        "shortText": "+ Night Demon",
+        "longText": "../public/texts/effenaar/ZWZmZW5hYXIubmwvYWdlbmRhL3F1ZWVuc3J5Y2hl.html",
+        "image": "../public/event-images/effenaar/ZWZmZW5hYXIubmwvYWdlbmRhL3F1ZWVuc3J5Y2hl",
+        "soldOut": false,
+        "eventGenres": null,
+        "artists": {
+            "night demon": {
+                "s": "5klvf93hyckwpsqssbxy9a",
+                "l": "night%20demon",
+                "g": ["nwothm", "heavy metal"]
+            },
+            "queensrÿche": {
+                "s": "2OgUPVlWYgGBGMefZgGvCO",
+                "l": "queensr%C3%BFche",
+                "g": [
+                    "album rock",
+                    "glam metal",
+                    "hard rock",
+                    "metal",
+                    "progressive metal",
+                    "us power metal",
+                    "progressive heavy",
+                    "power metal (early",
+                    "later)",
+                    " hard rock (mid)"
+                ]
+            }
+        }
+    },
+    {
+        "door": "2025-02-19T19:30:00",
+        "start": "2025-02-19T20:00:00",
+        "venueEventUrl": "https://www.effenaar.nl/agenda/vukovi",
+        "title": "Vukovi",
+        "location": "effenaar",
+        "price": 25.5,
+        "shortText": "Schotse poppunkers brengen zware rockriffs en aanstekelijke vocalen | + unpeople + Artio",
+        "longText": "../public/texts/effenaar/L3d3dy5lZmZlbmFhci5ubC9hZ2VuZGEvdnVrb3Zp.html",
+        "image": "../public/event-images/effenaar/L3d3dy5lZmZlbmFhci5ubC9hZ2VuZGEvdnVrb3Zp",
+        "soldOut": false,
+        "eventGenres": null,
+        "artists": {
+            "punk": {
+                "s": null,
+                "l": "punk",
+                "g": [
+                    "melodic death metal (early)",
+                    " glitch",
+                    "dubstep",
+                    "electronica (later)"
+                ]
+            },
+            "artio": {
+                "s": null,
+                "l": "artio",
+                "g": ["atmospheric black metal"]
+            }
+        }
+    },
+    {
+        "door": "2025-03-15T19:30:00",
+        "start": "2025-03-15T20:15:00",
+        "venueEventUrl": "https://www.effenaar.nl/agenda/lambrini-girls",
+        "title": "Lambrini Girls",
+        "location": "effenaar",
+        "price": 18.5,
+        "shortText": "Riot grrrl trio uit Brighton met rake teksten en scheurende gitaren",
+        "longText": "../public/texts/effenaar/ZW5hYXIubmwvYWdlbmRhL2xhbWJyaW5pLWdpcmxz.html",
+        "image": "../public/event-images/effenaar/ZW5hYXIubmwvYWdlbmRhL2xhbWJyaW5pLWdpcmxz",
+        "soldOut": false,
+        "eventGenres": null,
+        "artists": {}
+    },
+    {
+        "door": "2025-04-18T19:30:00",
+        "start": "2025-04-18T20:30:00",
+        "venueEventUrl": "https://www.effenaar.nl/agenda/esprit-dair",
+        "title": "Esprit D'Air",
+        "location": "effenaar",
+        "price": 28.5,
+        "shortText": "Prijswinnend J-metal solo project",
+        "longText": "../public/texts/effenaar/ZWZmZW5hYXIubmwvYWdlbmRhL2VzcHJpdC1kYWly.html",
+        "image": "../public/event-images/effenaar/ZWZmZW5hYXIubmwvYWdlbmRhL2VzcHJpdC1kYWly",
+        "soldOut": false,
+        "eventGenres": null,
+        "artists": {
+            "esprit d'air": {
+                "s": "41r42bjr4kazco7t4nvdld",
+                "l": "esprit%20d'air",
+                "g": []
+            },
+            "metal": {
+                "s": null,
+                "l": "metal",
+                "g": ["death metal"]
+            }
+        }
     }
-  },
-  {
-    "door": "2024-10-31T19:30:00",
-    "start": "2024-10-31T20:00:00",
-    "venueEventUrl": "https://www.effenaar.nl/agenda/lionheart",
-    "title": "Lionheart",
-    "location": "effenaar",
-    "price": 33.5,
-    "shortText": "Underplayed exclusieve Halloween show",
-    "longText": "../public/texts/effenaar/dy5lZmZlbmFhci5ubC9hZ2VuZGEvbGlvbmhlYXJ0.html",
-    "image": "../public/event-images/effenaar/dy5lZmZlbmFhci5ubC9hZ2VuZGEvbGlvbmhlYXJ0",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "lionheart": {
-        "s": "6doctx1atvti0d4uaxwlo3",
-        "l": "lionheart",
-        "g": []
-      }
-    }
-  },
-  {
-    "door": "2024-11-06T19:30:00",
-    "start": "2024-11-06T20:15:00",
-    "venueEventUrl": "https://www.effenaar.nl/agenda/dark-tranquillity",
-    "title": "Dark Tranquillity",
-    "location": "effenaar",
-    "price": 32.5,
-    "shortText": "+ Moonspell + Wolfheart + Hiraes",
-    "longText": "../public/texts/effenaar/YXIubmwvYWdlbmRhL2RhcmstdHJhbnF1aWxsaXR5.html",
-    "image": "../public/event-images/effenaar/YXIubmwvYWdlbmRhL2RhcmstdHJhbnF1aWxsaXR5",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "dark tranquillity": {
-        "s": "5EHvXKnNz78jkAVgTQLQ5O",
-        "l": "dark%20tranquillity",
-        "g": [
-          "death metal",
-          "gothenburg metal",
-          "melodic death metal",
-          "metal",
-          "swedish death metal",
-          "swedish melodeath",
-          "swedish metal",
-          "symphonic metal",
-          "viking metal",
-          "melodic death metal"
-        ]
-      },
-      "wolfheart": {
-        "s": "11EAP8MX0cfrW9lzkK424H",
-        "l": "wolfheart",
-        "g": [
-          "finnish death metal",
-          "finnish melodeath",
-          "finnish metal",
-          "melodic death metal",
-          "melodic death metal"
-        ]
-      },
-      "moonspell": {
-        "s": "17bYSQ9ZRnreVnJjE5X2x6",
-        "l": "moonspell",
-        "g": [
-          "gothic black metal",
-          "gothic metal",
-          "melodic death metal",
-          "metal",
-          "portuguese black metal",
-          "portuguese metal",
-          "portuguese rock",
-          "power metal",
-          "gothic metal"
-        ]
-      },
-      "hiraes": {
-        "s": "1Djkm24RzECe7M6KuxKZzt",
-        "l": "hiraes",
-        "g": [
-          "slayer",
-          "melodic death metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-11-22T19:30:00",
-    "start": "2024-11-22T20:00:00",
-    "venueEventUrl": "https://www.effenaar.nl/agenda/butcher",
-    "title": "Bütcher",
-    "location": "effenaar",
-    "price": 17,
-    "shortText": "Album release show | + Violent Sin + Pentacle",
-    "longText": "../public/texts/effenaar/d3d3LmVmZmVuYWFyLm5sL2FnZW5kYS9idXRjaGVy.html",
-    "image": "../public/event-images/effenaar/d3d3LmVmZmVuYWFyLm5sL2FnZW5kYS9idXRjaGVy",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "bütcher": {
-        "s": "5ZJXIEOPiCQpgHh9dWnamd",
-        "l": "b%C3%BCtcher",
-        "g": [
-          "black thrash",
-          "nwothm",
-          "black",
-          "speed metal"
-        ]
-      },
-      "violent sin": {
-        "s": "0nWk705I4Qjiu8NKaeQIky",
-        "l": "violent%20sin",
-        "g": [
-          "speed",
-          "black metal"
-        ]
-      },
-      "pentacle": {
-        "s": "7uzYBLuZgi8Sh824n2lBtq",
-        "l": "pentacle",
-        "g": [
-          "dutch death metal",
-          "death metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-11-28T18:30:00",
-    "start": "2024-11-28T19:00:00",
-    "venueEventUrl": "https://www.effenaar.nl/agenda/motocultor-festival-tour",
-    "title": "Motocultor Festival Tour",
-    "location": "effenaar",
-    "price": 26,
-    "shortText": " Orphaned Land | nieuwe datum  + Dirty Shirt + Royal Rage + Ring of Gyges + Stråle",
-    "longText": "../public/texts/effenaar/Z2VuZGEvbW90b2N1bHRvci1mZXN0aXZhbC10b3Vy.html",
-    "image": "../public/event-images/effenaar/Z2VuZGEvbW90b2N1bHRvci1mZXN0aXZhbC10b3Vy",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "orphaned land": {
-        "s": "7xtmxqambte0nce5lz7t0h",
-        "l": "orphaned%20land",
-        "g": [
-          "christian power metal",
-          "folk metal",
-          "israeli metal",
-          "oriental metal"
-        ]
-      },
-      "ring of gyges": {
-        "s": "00pF6oMeAiz1GslEYo56SJ",
-        "l": "ring%20of%20gyges",
-        "g": [
-          "icelandic metal",
-          "progressive metal",
-          "rock"
-        ]
-      },
-      "dirty shirt": {
-        "s": "7lnoKzE5unKzShIzkjlTX7",
-        "l": "dirty%20shirt",
-        "g": [
-          "balkan folk metal",
-          "romanian metal",
-          "romanian rock"
-        ]
-      },
-      "royal rage": {
-        "s": "3lSGpixf55aJ9VDclm4WWv",
-        "l": "royal%20rage",
-        "g": [
-          "brazilian thrash metal",
-          "metal paranaense",
-          "thrash metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-12-01T13:00:00",
-    "start": "2024-12-01T13:45:00",
-    "venueEventUrl": "https://www.effenaar.nl/agenda/dying-fetus",
-    "title": "Dying Fetus",
-    "location": "effenaar",
-    "price": 35.5,
-    "shortText": "Matineeshow met Chelsea Grin + Despised Icon + Vitriol",
-    "longText": "../public/texts/effenaar/ZWZmZW5hYXIubmwvYWdlbmRhL2R5aW5nLWZldHVz.html",
-    "image": "../public/event-images/effenaar/ZWZmZW5hYXIubmwvYWdlbmRhL2R5aW5nLWZldHVz",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "dying fetus": {
-        "s": "2DqzOWVL2ly48IA9bpZdie",
-        "l": "dying%20fetus",
-        "g": [
-          "brutal death metal",
-          "death metal",
-          "deathgrind",
-          "metal",
-          "technical death metal",
-          "thrash metal",
-          "brutal death metal",
-          "grindcore"
-        ]
-      },
-      "despised icon": {
-        "s": "3MjNMjqBpaQ0P8ebfbZjYn",
-        "l": "despised%20icon",
-        "g": [
-          "canadian metal",
-          "deathcore",
-          "melodic metalcore",
-          "deathcore"
-        ]
-      },
-      "vitriol": {
-        "s": "7E4LULB8UkUOTEBbpTbLma",
-        "l": "vitriol",
-        "g": [
-          "brutal death metal",
-          "deathgrind",
-          "portland metal",
-          "technical brutal death metal",
-          "technical death metal",
-          "black",
-          "death metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-12-12T19:00:00",
-    "start": "2024-12-12T19:30:00",
-    "venueEventUrl": "https://www.effenaar.nl/agenda/eindhoven-metal-meeting-warm-evening",
-    "title": "Eindhoven Metal Meeting Warm-Up Evening",
-    "location": "effenaar",
-    "price": 22.5,
-    "shortText": "Saturnalia Temple + Dead Head + The Omega Swarm + Mouflon",
-    "longText": "../public/texts/effenaar/dmVuLW1ldGFsLW1lZXRpbmctd2FybS1ldmVuaW5n.html",
-    "image": "../public/event-images/effenaar/dmVuLW1ldGFsLW1lZXRpbmctd2FybS1ldmVuaW5n",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      },
-      "saturnalia temple": {
-        "s": "1ESjDnaPuoFzQ8QQ4TlxTl",
-        "l": "saturnalia%20temple",
-        "g": [
-          "black sludge",
-          "swedish doom metal",
-          "stoner",
-          "doom metal"
-        ]
-      },
-      "the omega swarm": {
-        "s": "1dDW3tZyrfcpTBkmtBRPnk",
-        "l": "the%20omega%20swarm",
-        "g": [
-          "atmospheric death",
-          "black metal"
-        ]
-      },
-      "dead head": {
-        "s": "3LehH71IZCno6UsiFR14vr",
-        "l": "dead%20head",
-        "g": [
-          "dutch death metal",
-          "dutch metal",
-          "thrash metal",
-          "punk",
-          "hard rock"
-        ]
-      },
-      "mouflon": {
-        "s": "75S0L1sMv9ynU2paKaPu1l",
-        "l": "mouflon",
-        "g": [
-          "dutch death metal",
-          "dutch metal",
-          "doom",
-          "death metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-02-09T18:00:00",
-    "start": "2025-02-09T19:00:00",
-    "venueEventUrl": "https://www.effenaar.nl/agenda/queensryche",
-    "title": "Queensrÿche",
-    "location": "effenaar",
-    "price": 39,
-    "shortText": "+ Night Demon",
-    "longText": "../public/texts/effenaar/ZWZmZW5hYXIubmwvYWdlbmRhL3F1ZWVuc3J5Y2hl.html",
-    "image": "../public/event-images/effenaar/ZWZmZW5hYXIubmwvYWdlbmRhL3F1ZWVuc3J5Y2hl",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "night demon": {
-        "s": "5klvf93hyckwpsqssbxy9a",
-        "l": "night%20demon",
-        "g": [
-          "nwothm",
-          "heavy metal"
-        ]
-      },
-      "queensrÿche": {
-        "s": "2OgUPVlWYgGBGMefZgGvCO",
-        "l": "queensr%C3%BFche",
-        "g": [
-          "album rock",
-          "glam metal",
-          "hard rock",
-          "metal",
-          "progressive metal",
-          "us power metal",
-          "progressive heavy",
-          "power metal (early",
-          "later)",
-          " hard rock (mid)"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-02-19T19:30:00",
-    "start": "2025-02-19T20:00:00",
-    "venueEventUrl": "https://www.effenaar.nl/agenda/vukovi",
-    "title": "Vukovi",
-    "location": "effenaar",
-    "price": 25.5,
-    "shortText": "Schotse poppunkers brengen zware rockriffs en aanstekelijke vocalen | + unpeople + Artio",
-    "longText": "../public/texts/effenaar/L3d3dy5lZmZlbmFhci5ubC9hZ2VuZGEvdnVrb3Zp.html",
-    "image": "../public/event-images/effenaar/L3d3dy5lZmZlbmFhci5ubC9hZ2VuZGEvdnVrb3Zp",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "punk": {
-        "s": null,
-        "l": "punk",
-        "g": [
-          "melodic death metal (early)",
-          " glitch",
-          "dubstep",
-          "electronica (later)"
-        ]
-      },
-      "artio": {
-        "s": null,
-        "l": "artio",
-        "g": [
-          "atmospheric black metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-03-15T19:30:00",
-    "start": "2025-03-15T20:15:00",
-    "venueEventUrl": "https://www.effenaar.nl/agenda/lambrini-girls",
-    "title": "Lambrini Girls",
-    "location": "effenaar",
-    "price": 18.5,
-    "shortText": "Riot grrrl trio uit Brighton met rake teksten en scheurende gitaren",
-    "longText": "../public/texts/effenaar/ZW5hYXIubmwvYWdlbmRhL2xhbWJyaW5pLWdpcmxz.html",
-    "image": "../public/event-images/effenaar/ZW5hYXIubmwvYWdlbmRhL2xhbWJyaW5pLWdpcmxz",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2025-04-18T19:30:00",
-    "start": "2025-04-18T20:30:00",
-    "venueEventUrl": "https://www.effenaar.nl/agenda/esprit-dair",
-    "title": "Esprit D'Air",
-    "location": "effenaar",
-    "price": 28.5,
-    "shortText": "Prijswinnend J-metal solo project",
-    "longText": "../public/texts/effenaar/ZWZmZW5hYXIubmwvYWdlbmRhL2VzcHJpdC1kYWly.html",
-    "image": "../public/event-images/effenaar/ZWZmZW5hYXIubmwvYWdlbmRhL2VzcHJpdC1kYWly",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "esprit d'air": {
-        "s": "41r42bjr4kazco7t4nvdld",
-        "l": "esprit%20d'air",
-        "g": []
-      },
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      }
-    }
-  }
 ]

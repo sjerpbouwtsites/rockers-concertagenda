@@ -1,222 +1,202 @@
 [
-  {
-    "start": "2024-10-09T19:30:00",
-    "venueEventUrl": "https://www.paradiso.nl/en/program/gurriers/2100724",
-    "title": "Gurriers + POM",
-    "location": "paradiso",
-    "price": 16.5,
-    "shortText": "Vicious punk rock from Irish quintet / Toekomstmuziek",
-    "longText": "../public/texts/paradiso/bmwvZW4vcHJvZ3JhbS9ndXJyaWVycy8yMTAwNzI0.html",
-    "image": "../public/event-images/paradiso/bmwvZW4vcHJvZ3JhbS9ndXJyaWVycy8yMTAwNzI0",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "gurriers": {
-        "s": "0bPAi2zCrxUrPBREWdetZ5",
-        "l": "gurriers",
-        "g": [
-          "crank wave",
-          "irish post-punk",
-          "irish shoegaze"
-        ]
-      }
+    {
+        "start": "2024-10-09T19:30:00",
+        "venueEventUrl": "https://www.paradiso.nl/en/program/gurriers/2100724",
+        "title": "Gurriers + POM",
+        "location": "paradiso",
+        "price": 16.5,
+        "shortText": "Vicious punk rock from Irish quintet / Toekomstmuziek",
+        "longText": "../public/texts/paradiso/bmwvZW4vcHJvZ3JhbS9ndXJyaWVycy8yMTAwNzI0.html",
+        "image": "../public/event-images/paradiso/bmwvZW4vcHJvZ3JhbS9ndXJyaWVycy8yMTAwNzI0",
+        "soldOut": false,
+        "unavailable": false,
+        "eventGenres": null,
+        "artists": {
+            "gurriers": {
+                "s": "0bPAi2zCrxUrPBREWdetZ5",
+                "l": "gurriers",
+                "g": ["crank wave", "irish post-punk", "irish shoegaze"]
+            }
+        }
+    },
+    {
+        "start": "2024-10-14T19:15:00",
+        "venueEventUrl": "https://www.paradiso.nl/en/program/call-me-karizma/2051347",
+        "title": "Call Me Karizma + Jady + Stain The Canvas",
+        "location": "paradiso",
+        "price": 23.7,
+        "shortText": "American rapper blends hip-hop, emo and rock / Tolhuistuin",
+        "longText": "../public/texts/paradiso/cm9ncmFtL2NhbGwtbWUta2FyaXptYS8yMDUxMzQ3.html",
+        "image": "../public/event-images/paradiso/cm9ncmFtL2NhbGwtbWUta2FyaXptYS8yMDUxMzQ3",
+        "soldOut": false,
+        "unavailable": false,
+        "eventGenres": null,
+        "artists": {
+            "stain the canvas": {
+                "s": "567L1a4812VuMSRrbCqdo4",
+                "l": "stain%20the%20canvas",
+                "g": ["deep metalcore", "italian metalcore"]
+            },
+            "call me karizma": {
+                "s": "5fenlrinivp0gjotkxvort",
+                "l": "call%20me%20karizma",
+                "g": ["minnesota hip hop"]
+            }
+        }
+    },
+    {
+        "start": "2024-11-03T19:30:00",
+        "venueEventUrl": "https://www.paradiso.nl/en/program/sad-night-dynamite/2308013",
+        "title": "Sad Night Dynamite + Bug Eyed",
+        "location": "paradiso",
+        "price": 21.7,
+        "shortText": "Lo-fi hip-hop meets punk / Tolhuistuin",
+        "longText": "../public/texts/paradiso/cmFtL3NhZC1uaWdodC1keW5hbWl0ZS8yMzA4MDEz.html",
+        "image": "../public/event-images/paradiso/cmFtL3NhZC1uaWdodC1keW5hbWl0ZS8yMzA4MDEz",
+        "soldOut": false,
+        "unavailable": false,
+        "eventGenres": null,
+        "artists": {}
+    },
+    {
+        "start": "2024-11-06T20:30:00",
+        "venueEventUrl": "https://www.paradiso.nl/en/program/bad-nerves/2304705",
+        "title": "Bad Nerves",
+        "location": "paradiso",
+        "price": 23.7,
+        "shortText": "Power pop and garage rock 'n roll / Tolhuistuin",
+        "longText": "../public/texts/paradiso/L2VuL3Byb2dyYW0vYmFkLW5lcnZlcy8yMzA0NzA1.html",
+        "image": "../public/event-images/paradiso/L2VuL3Byb2dyYW0vYmFkLW5lcnZlcy8yMzA0NzA1",
+        "soldOut": false,
+        "unavailable": false,
+        "eventGenres": null,
+        "artists": {}
+    },
+    {
+        "start": "2024-11-19T20:00:00",
+        "venueEventUrl": "https://www.paradiso.nl/en/program/joey-valence-brae/2259737",
+        "title": "Joey Valence & Brae",
+        "location": "paradiso",
+        "price": 56,
+        "shortText": "Alternative punk/rap with influences from the nineties / Tolhuistuin",
+        "longText": "../public/texts/paradiso/Z3JhbS9qb2V5LXZhbGVuY2UtYnJhZS8yMjU5NzM3.html",
+        "image": "../public/event-images/paradiso/Z3JhbS9qb2V5LXZhbGVuY2UtYnJhZS8yMjU5NzM3",
+        "soldOut": true,
+        "unavailable": false,
+        "eventGenres": null,
+        "artists": {}
+    },
+    {
+        "start": "2024-11-21T20:30:00",
+        "venueEventUrl": "https://www.paradiso.nl/en/program/warmduscher/2323276",
+        "title": "Warmduscher",
+        "location": "paradiso",
+        "price": 21.7,
+        "shortText": "Eccentric group with an exhilarating mix of noise, funk, garage punk, and electronics / Tolhuistuin",
+        "longText": "../public/texts/paradiso/ZW4vcHJvZ3JhbS93YXJtZHVzY2hlci8yMzIzMjc2.html",
+        "image": "../public/event-images/paradiso/ZW4vcHJvZ3JhbS93YXJtZHVzY2hlci8yMzIzMjc2",
+        "soldOut": false,
+        "unavailable": false,
+        "eventGenres": null,
+        "artists": {}
+    },
+    {
+        "start": "2024-12-02T19:30:00",
+        "venueEventUrl": "https://www.paradiso.nl/en/program/peuk/2313361",
+        "title": "Peuk",
+        "location": "paradiso",
+        "price": 10.5,
+        "shortText": "Limburg trio makes unpolished grunge",
+        "longText": "../public/texts/paradiso/aXNvLm5sL2VuL3Byb2dyYW0vcGV1ay8yMzEzMzYx.html",
+        "image": "../public/event-images/paradiso/aXNvLm5sL2VuL3Byb2dyYW0vcGV1ay8yMzEzMzYx",
+        "soldOut": false,
+        "unavailable": false,
+        "eventGenres": null,
+        "artists": {
+            "peuk": {
+                "s": "48azekbyysulw0ikjbxpto",
+                "l": "peuk",
+                "g": ["belgian indie rock"]
+            }
+        }
+    },
+    {
+        "start": "2024-12-07T20:30:00",
+        "venueEventUrl": "https://www.paradiso.nl/en/program/sloper/1805627",
+        "title": "Sloper",
+        "location": "paradiso",
+        "price": null,
+        "shortText": "Dutch-Flemish rock band with members of Triggerfinger and Golden Earring / Tolhuistuin",
+        "longText": "../public/texts/paradiso/by5ubC9lbi9wcm9ncmFtL3Nsb3Blci8xODA1NjI3.html",
+        "soldOut": false,
+        "unavailable": false,
+        "eventGenres": null,
+        "artists": {
+            "slope": {
+                "s": "24ExnkYwR4QoLamXGi4sOR",
+                "l": "slope",
+                "g": ["german hardcore"]
+            }
+        }
+    },
+    {
+        "start": "2025-01-15T19:30:00",
+        "venueEventUrl": "https://www.paradiso.nl/en/program/hellmut-lotti-goes-metal/2030712",
+        "title": "Hellmut Lotti Goes Metal",
+        "location": "paradiso",
+        "price": 31.3,
+        "shortText": "World-famous Flemish tenor sings his favorite rock classics",
+        "longText": "../public/texts/paradiso/bGxtdXQtbG90dGktZ29lcy1tZXRhbC8yMDMwNzEy.html",
+        "image": "../public/event-images/paradiso/bGxtdXQtbG90dGktZ29lcy1tZXRhbC8yMDMwNzEy",
+        "soldOut": false,
+        "unavailable": false,
+        "eventGenres": null,
+        "artists": {
+            "metal": {
+                "s": null,
+                "l": "metal",
+                "g": ["death metal"]
+            }
+        }
+    },
+    {
+        "start": "2025-03-24T20:30:00",
+        "venueEventUrl": "https://www.paradiso.nl/en/program/thus-love/2399147",
+        "title": "Thus love",
+        "location": "paradiso",
+        "price": 19.7,
+        "shortText": "Queer post-punk band from Brattleboro / Tolhuistuin",
+        "longText": "../public/texts/paradiso/bC9lbi9wcm9ncmFtL3RodXMtbG92ZS8yMzk5MTQ3.html",
+        "image": "../public/event-images/paradiso/bC9lbi9wcm9ncmFtL3RodXMtbG92ZS8yMzk5MTQ3",
+        "soldOut": false,
+        "unavailable": false,
+        "eventGenres": null,
+        "artists": {
+            "thus love": {
+                "s": "26hW7zYB4V3PGMPBKoBdgl",
+                "l": "thus%20love",
+                "g": ["american post-punk"]
+            }
+        }
+    },
+    {
+        "start": "2025-05-15T22:00:00",
+        "venueEventUrl": "https://www.paradiso.nl/en/program/equal-idiots/2402701",
+        "title": "Equal Idiots",
+        "location": "paradiso",
+        "price": 14.5,
+        "shortText": "Belgian garage-rock duo",
+        "longText": "../public/texts/paradiso/bi9wcm9ncmFtL2VxdWFsLWlkaW90cy8yNDAyNzAx.html",
+        "image": "../public/event-images/paradiso/bi9wcm9ncmFtL2VxdWFsLWlkaW90cy8yNDAyNzAx",
+        "soldOut": false,
+        "unavailable": false,
+        "eventGenres": null,
+        "artists": {
+            "equal idiots": {
+                "s": "4nljEo4gnUFgczxjNt5KOR",
+                "l": "equal%20idiots",
+                "g": ["belgian punk", "belgian rock"]
+            }
+        }
     }
-  },
-  {
-    "start": "2024-10-14T19:15:00",
-    "venueEventUrl": "https://www.paradiso.nl/en/program/call-me-karizma/2051347",
-    "title": "Call Me Karizma + Jady + Stain The Canvas",
-    "location": "paradiso",
-    "price": 23.7,
-    "shortText": "American rapper blends hip-hop, emo and rock / Tolhuistuin",
-    "longText": "../public/texts/paradiso/cm9ncmFtL2NhbGwtbWUta2FyaXptYS8yMDUxMzQ3.html",
-    "image": "../public/event-images/paradiso/cm9ncmFtL2NhbGwtbWUta2FyaXptYS8yMDUxMzQ3",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "stain the canvas": {
-        "s": "567L1a4812VuMSRrbCqdo4",
-        "l": "stain%20the%20canvas",
-        "g": [
-          "deep metalcore",
-          "italian metalcore"
-        ]
-      },
-      "call me karizma": {
-        "s": "5fenlrinivp0gjotkxvort",
-        "l": "call%20me%20karizma",
-        "g": [
-          "minnesota hip hop"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2024-11-03T19:30:00",
-    "venueEventUrl": "https://www.paradiso.nl/en/program/sad-night-dynamite/2308013",
-    "title": "Sad Night Dynamite + Bug Eyed",
-    "location": "paradiso",
-    "price": 21.7,
-    "shortText": "Lo-fi hip-hop meets punk / Tolhuistuin",
-    "longText": "../public/texts/paradiso/cmFtL3NhZC1uaWdodC1keW5hbWl0ZS8yMzA4MDEz.html",
-    "image": "../public/event-images/paradiso/cmFtL3NhZC1uaWdodC1keW5hbWl0ZS8yMzA4MDEz",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "start": "2024-11-06T20:30:00",
-    "venueEventUrl": "https://www.paradiso.nl/en/program/bad-nerves/2304705",
-    "title": "Bad Nerves",
-    "location": "paradiso",
-    "price": 23.7,
-    "shortText": "Power pop and garage rock 'n roll / Tolhuistuin",
-    "longText": "../public/texts/paradiso/L2VuL3Byb2dyYW0vYmFkLW5lcnZlcy8yMzA0NzA1.html",
-    "image": "../public/event-images/paradiso/L2VuL3Byb2dyYW0vYmFkLW5lcnZlcy8yMzA0NzA1",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "start": "2024-11-19T20:00:00",
-    "venueEventUrl": "https://www.paradiso.nl/en/program/joey-valence-brae/2259737",
-    "title": "Joey Valence & Brae",
-    "location": "paradiso",
-    "price": 56,
-    "shortText": "Alternative punk/rap with influences from the nineties / Tolhuistuin",
-    "longText": "../public/texts/paradiso/Z3JhbS9qb2V5LXZhbGVuY2UtYnJhZS8yMjU5NzM3.html",
-    "image": "../public/event-images/paradiso/Z3JhbS9qb2V5LXZhbGVuY2UtYnJhZS8yMjU5NzM3",
-    "soldOut": true,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "start": "2024-11-21T20:30:00",
-    "venueEventUrl": "https://www.paradiso.nl/en/program/warmduscher/2323276",
-    "title": "Warmduscher",
-    "location": "paradiso",
-    "price": 21.7,
-    "shortText": "Eccentric group with an exhilarating mix of noise, funk, garage punk, and electronics / Tolhuistuin",
-    "longText": "../public/texts/paradiso/ZW4vcHJvZ3JhbS93YXJtZHVzY2hlci8yMzIzMjc2.html",
-    "image": "../public/event-images/paradiso/ZW4vcHJvZ3JhbS93YXJtZHVzY2hlci8yMzIzMjc2",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "start": "2024-12-02T19:30:00",
-    "venueEventUrl": "https://www.paradiso.nl/en/program/peuk/2313361",
-    "title": "Peuk",
-    "location": "paradiso",
-    "price": 10.5,
-    "shortText": "Limburg trio makes unpolished grunge",
-    "longText": "../public/texts/paradiso/aXNvLm5sL2VuL3Byb2dyYW0vcGV1ay8yMzEzMzYx.html",
-    "image": "../public/event-images/paradiso/aXNvLm5sL2VuL3Byb2dyYW0vcGV1ay8yMzEzMzYx",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "peuk": {
-        "s": "48azekbyysulw0ikjbxpto",
-        "l": "peuk",
-        "g": [
-          "belgian indie rock"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2024-12-07T20:30:00",
-    "venueEventUrl": "https://www.paradiso.nl/en/program/sloper/1805627",
-    "title": "Sloper",
-    "location": "paradiso",
-    "price": null,
-    "shortText": "Dutch-Flemish rock band with members of Triggerfinger and Golden Earring / Tolhuistuin",
-    "longText": "../public/texts/paradiso/by5ubC9lbi9wcm9ncmFtL3Nsb3Blci8xODA1NjI3.html",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "slope": {
-        "s": "24ExnkYwR4QoLamXGi4sOR",
-        "l": "slope",
-        "g": [
-          "german hardcore"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-01-15T19:30:00",
-    "venueEventUrl": "https://www.paradiso.nl/en/program/hellmut-lotti-goes-metal/2030712",
-    "title": "Hellmut Lotti Goes Metal",
-    "location": "paradiso",
-    "price": 31.3,
-    "shortText": "World-famous Flemish tenor sings his favorite rock classics",
-    "longText": "../public/texts/paradiso/bGxtdXQtbG90dGktZ29lcy1tZXRhbC8yMDMwNzEy.html",
-    "image": "../public/event-images/paradiso/bGxtdXQtbG90dGktZ29lcy1tZXRhbC8yMDMwNzEy",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-03-24T20:30:00",
-    "venueEventUrl": "https://www.paradiso.nl/en/program/thus-love/2399147",
-    "title": "Thus love",
-    "location": "paradiso",
-    "price": 19.7,
-    "shortText": "Queer post-punk band from Brattleboro / Tolhuistuin",
-    "longText": "../public/texts/paradiso/bC9lbi9wcm9ncmFtL3RodXMtbG92ZS8yMzk5MTQ3.html",
-    "image": "../public/event-images/paradiso/bC9lbi9wcm9ncmFtL3RodXMtbG92ZS8yMzk5MTQ3",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "thus love": {
-        "s": "26hW7zYB4V3PGMPBKoBdgl",
-        "l": "thus%20love",
-        "g": [
-          "american post-punk"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-05-15T22:00:00",
-    "venueEventUrl": "https://www.paradiso.nl/en/program/equal-idiots/2402701",
-    "title": "Equal Idiots",
-    "location": "paradiso",
-    "price": 14.5,
-    "shortText": "Belgian garage-rock duo",
-    "longText": "../public/texts/paradiso/bi9wcm9ncmFtL2VxdWFsLWlkaW90cy8yNDAyNzAx.html",
-    "image": "../public/event-images/paradiso/bi9wcm9ncmFtL2VxdWFsLWlkaW90cy8yNDAyNzAx",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "equal idiots": {
-        "s": "4nljEo4gnUFgczxjNt5KOR",
-        "l": "equal%20idiots",
-        "g": [
-          "belgian punk",
-          "belgian rock"
-        ]
-      }
-    }
-  }
 ]

@@ -1,170 +1,152 @@
 [
-  {
-    "start": "2023-10-13T18:00:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/soulcrusher-2024-1/",
-    "title": "Soulcrusher 2024",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "undefined Met oa: Zeal & Ardor (swi), HEALTH (usa), Blackbraid (usa), Ulcerate (nzl), Inter Arma (usa), Mizmor (usa), Pharmakon (usa), DVNE (uk), Coilguns (swi), GOST (usa), Lamp of Murmuur (usa), Thantifaxath (can), Dödsrit (swe/nl), Morne (usa), Hippotraktor (be), Woe (usa), Five the Hierophant (uk), Great Falls (usa), Kollaps (aus), Lana Del Rabies (usa), Norna (swi/swe), Nyrst (is), Zetra (uk), Ponte del Diavolo (ita), Deathless Void (nl)",
-    "longText": "../public/texts/doornroosje/ZS5ubC9ldmVudC9zb3VsY3J1c2hlci0yMDI0LTEv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "undefined": {
-        "s": "6NMVL5NGYZKTl6AZuxybbV",
-        "l": "undefined",
-        "g": [
-          "metalcore",
-          "new wave ",
-          "punk "
-        ]
-      }
+    {
+        "start": "2023-10-13T18:00:00.000",
+        "venueEventUrl": "https://www.doornroosje.nl/event/soulcrusher-2024-1/",
+        "title": "Soulcrusher 2024",
+        "location": "doornroosje",
+        "price": null,
+        "shortText": "undefined Met oa: Zeal & Ardor (swi), HEALTH (usa), Blackbraid (usa), Ulcerate (nzl), Inter Arma (usa), Mizmor (usa), Pharmakon (usa), DVNE (uk), Coilguns (swi), GOST (usa), Lamp of Murmuur (usa), Thantifaxath (can), Dödsrit (swe/nl), Morne (usa), Hippotraktor (be), Woe (usa), Five the Hierophant (uk), Great Falls (usa), Kollaps (aus), Lana Del Rabies (usa), Norna (swi/swe), Nyrst (is), Zetra (uk), Ponte del Diavolo (ita), Deathless Void (nl)",
+        "longText": "../public/texts/doornroosje/ZS5ubC9ldmVudC9zb3VsY3J1c2hlci0yMDI0LTEv.html",
+        "soldOut": true,
+        "eventGenres": null,
+        "artists": {
+            "undefined": {
+                "s": "6NMVL5NGYZKTl6AZuxybbV",
+                "l": "undefined",
+                "g": ["metalcore", "new wave ", "punk "]
+            }
+        }
+    },
+    {
+        "door": "2024-11-05T19:30:00.000",
+        "start": "2024-11-05T20:15:00.000",
+        "venueEventUrl": "https://www.doornroosje.nl/event/bad-nerves/",
+        "title": "Bad Nerves",
+        "location": "doornroosje",
+        "price": null,
+        "shortText": "rock, punk, garage",
+        "longText": "../public/texts/doornroosje/b3Jucm9vc2plLm5sL2V2ZW50L2JhZC1uZXJ2ZXMv.html",
+        "soldOut": true,
+        "eventGenres": null,
+        "artists": {
+            "rock,": {
+                "s": null,
+                "l": "rock,",
+                "g": ["heavy metal"]
+            }
+        }
+    },
+    {
+        "door": "2024-11-30T18:30:00.000",
+        "start": "2024-11-30T19:00:00.000",
+        "venueEventUrl": "https://www.doornroosje.nl/event/fit-for-an-autopsy/",
+        "title": "Fit For An Autopsy",
+        "location": "doornroosje",
+        "price": null,
+        "shortText": "+ Sylosis + Darkest Hour + Heriotmetal, metalcore, deathcore",
+        "longText": "../public/texts/doornroosje/ZS5ubC9ldmVudC9maXQtZm9yLWFuLWF1dG9wc3kv.html",
+        "soldOut": true,
+        "eventGenres": null,
+        "artists": {
+            "fit for an autopsy": {
+                "s": "0qJpY7K8p7g6sacvaGNt6i",
+                "l": "fit%20for%20an%20autopsy",
+                "g": [
+                    "brutal deathcore",
+                    "deathcore",
+                    "melodic metalcore",
+                    "metalcore"
+                ]
+            },
+            "darkest hour": {
+                "s": "4dso1lISV1Atdo3O6qbhqq",
+                "l": "darkest%20hour",
+                "g": [
+                    "melodic metalcore",
+                    "metalcore",
+                    "melodic death metal",
+                    "metalcore"
+                ]
+            },
+            "sylosis": {
+                "s": "2RiGIRDi4GoJpDbjDnPVJl",
+                "l": "sylosis",
+                "g": [
+                    "groove metal",
+                    "melodic death metal",
+                    "melodic metalcore",
+                    "melodic thrash",
+                    "death metal",
+                    "metalcore"
+                ]
+            }
+        }
+    },
+    {
+        "door": "2024-12-13T19:30:00.000",
+        "start": "2024-12-13T20:30:00.000",
+        "venueEventUrl": "https://www.doornroosje.nl/event/dool-2/",
+        "title": "Dool",
+        "location": "doornroosje",
+        "price": null,
+        "shortText": "+ Verwoedrock, metal",
+        "longText": "../public/texts/doornroosje/dy5kb29ybnJvb3NqZS5ubC9ldmVudC9kb29sLTIv.html",
+        "soldOut": true,
+        "eventGenres": null,
+        "artists": {
+            "rock,": {
+                "s": null,
+                "l": "rock,",
+                "g": ["heavy metal"]
+            }
+        }
+    },
+    {
+        "door": "2025-02-06T21:00:00.000",
+        "start": "2025-02-06T22:00:00.000",
+        "venueEventUrl": "https://www.doornroosje.nl/event/cobra-the-impaler/",
+        "title": "Cobra the Impaler",
+        "location": "doornroosje",
+        "price": null,
+        "shortText": "metal",
+        "longText": "../public/texts/doornroosje/amUubmwvZXZlbnQvY29icmEtdGhlLWltcGFsZXIv.html",
+        "soldOut": true,
+        "eventGenres": null,
+        "artists": {
+            "cobra the impaler": {
+                "s": "3GF4mtTUUptBbUoJNclS4A",
+                "l": "cobra%20the%20impaler",
+                "g": ["progressive metalcore"]
+            },
+            "metal": {
+                "s": null,
+                "l": "metal",
+                "g": ["death metal"]
+            }
+        }
+    },
+    {
+        "door": "2025-03-01T19:00:00.000",
+        "start": "2025-03-01T20:00:00.000",
+        "venueEventUrl": "https://www.doornroosje.nl/event/dubioza-kolektiv-3/",
+        "title": "Dubioza Kolektiv",
+        "location": "doornroosje",
+        "price": null,
+        "shortText": "rock, punk, hip hop, ska, electronic, dub, balkan",
+        "longText": "../public/texts/doornroosje/ZS5ubC9ldmVudC9kdWJpb3phLWtvbGVrdGl2LTMv.html",
+        "soldOut": true,
+        "eventGenres": null,
+        "artists": {
+            "dubioza kolektiv": {
+                "s": "02IFYoziC7CpQRK8fbehUY",
+                "l": "dubioza%20kolektiv",
+                "g": ["balkan brass", "balkan punk", "bosnian indie"]
+            },
+            "rock,": {
+                "s": null,
+                "l": "rock,",
+                "g": ["heavy metal"]
+            }
+        }
     }
-  },
-  {
-    "door": "2024-11-05T19:30:00.000",
-    "start": "2024-11-05T20:15:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/bad-nerves/",
-    "title": "Bad Nerves",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "rock, punk, garage",
-    "longText": "../public/texts/doornroosje/b3Jucm9vc2plLm5sL2V2ZW50L2JhZC1uZXJ2ZXMv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "rock,": {
-        "s": null,
-        "l": "rock,",
-        "g": [
-          "heavy metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-11-30T18:30:00.000",
-    "start": "2024-11-30T19:00:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/fit-for-an-autopsy/",
-    "title": "Fit For An Autopsy",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "+ Sylosis + Darkest Hour + Heriotmetal, metalcore, deathcore",
-    "longText": "../public/texts/doornroosje/ZS5ubC9ldmVudC9maXQtZm9yLWFuLWF1dG9wc3kv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "fit for an autopsy": {
-        "s": "0qJpY7K8p7g6sacvaGNt6i",
-        "l": "fit%20for%20an%20autopsy",
-        "g": [
-          "brutal deathcore",
-          "deathcore",
-          "melodic metalcore",
-          "metalcore"
-        ]
-      },
-      "darkest hour": {
-        "s": "4dso1lISV1Atdo3O6qbhqq",
-        "l": "darkest%20hour",
-        "g": [
-          "melodic metalcore",
-          "metalcore",
-          "melodic death metal",
-          "metalcore"
-        ]
-      },
-      "sylosis": {
-        "s": "2RiGIRDi4GoJpDbjDnPVJl",
-        "l": "sylosis",
-        "g": [
-          "groove metal",
-          "melodic death metal",
-          "melodic metalcore",
-          "melodic thrash",
-          "death metal",
-          "metalcore"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-12-13T19:30:00.000",
-    "start": "2024-12-13T20:30:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/dool-2/",
-    "title": "Dool",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "+ Verwoedrock, metal",
-    "longText": "../public/texts/doornroosje/dy5kb29ybnJvb3NqZS5ubC9ldmVudC9kb29sLTIv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "rock,": {
-        "s": null,
-        "l": "rock,",
-        "g": [
-          "heavy metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-02-06T21:00:00.000",
-    "start": "2025-02-06T22:00:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/cobra-the-impaler/",
-    "title": "Cobra the Impaler",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "metal",
-    "longText": "../public/texts/doornroosje/amUubmwvZXZlbnQvY29icmEtdGhlLWltcGFsZXIv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "cobra the impaler": {
-        "s": "3GF4mtTUUptBbUoJNclS4A",
-        "l": "cobra%20the%20impaler",
-        "g": [
-          "progressive metalcore"
-        ]
-      },
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-03-01T19:00:00.000",
-    "start": "2025-03-01T20:00:00.000",
-    "venueEventUrl": "https://www.doornroosje.nl/event/dubioza-kolektiv-3/",
-    "title": "Dubioza Kolektiv",
-    "location": "doornroosje",
-    "price": null,
-    "shortText": "rock, punk, hip hop, ska, electronic, dub, balkan",
-    "longText": "../public/texts/doornroosje/ZS5ubC9ldmVudC9kdWJpb3phLWtvbGVrdGl2LTMv.html",
-    "soldOut": true,
-    "eventGenres": null,
-    "artists": {
-      "dubioza kolektiv": {
-        "s": "02IFYoziC7CpQRK8fbehUY",
-        "l": "dubioza%20kolektiv",
-        "g": [
-          "balkan brass",
-          "balkan punk",
-          "bosnian indie"
-        ]
-      },
-      "rock,": {
-        "s": null,
-        "l": "rock,",
-        "g": [
-          "heavy metal"
-        ]
-      }
-    }
-  }
 ]

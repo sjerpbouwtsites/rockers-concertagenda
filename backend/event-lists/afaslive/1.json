@@ -1,77 +1,73 @@
 [
-  {
-    "door": "2024-11-24T20:00:00",
-    "start": "2024-11-24T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/dream-theater",
-    "title": "Dream Theater",
-    "location": "afaslive",
-    "price": 112,
-    "longText": "../public/texts/afaslive/YXNsaXZlLm5sL2FnZW5kYS9kcmVhbS10aGVhdGVy.html",
-    "image": "../public/event-images/afaslive/YXNsaXZlLm5sL2FnZW5kYS9kcmVhbS10aGVhdGVy",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "dream theater": {
-        "s": "2aaLAng2L2aWD2FClzwiep",
-        "l": "dream%20theater",
-        "g": [
-          "metal",
-          "progressive metal",
-          "progressive metal"
-        ]
-      }
+    {
+        "door": "2024-11-24T20:00:00",
+        "start": "2024-11-24T20:00:00",
+        "venueEventUrl": "https://www.afaslive.nl/agenda/dream-theater",
+        "title": "Dream Theater",
+        "location": "afaslive",
+        "price": 112,
+        "longText": "../public/texts/afaslive/YXNsaXZlLm5sL2FnZW5kYS9kcmVhbS10aGVhdGVy.html",
+        "image": "../public/event-images/afaslive/YXNsaXZlLm5sL2FnZW5kYS9kcmVhbS10aGVhdGVy",
+        "soldOut": false,
+        "eventGenres": null,
+        "artists": {
+            "dream theater": {
+                "s": "2aaLAng2L2aWD2FClzwiep",
+                "l": "dream%20theater",
+                "g": ["metal", "progressive metal", "progressive metal"]
+            }
+        }
+    },
+    {
+        "door": "2025-02-04T20:00:00",
+        "start": "2025-02-04T20:00:00",
+        "venueEventUrl": "https://www.afaslive.nl/agenda/papa-roach",
+        "title": "Papa Roach",
+        "location": "afaslive",
+        "price": 58.24,
+        "longText": "../public/texts/afaslive/LmFmYXNsaXZlLm5sL2FnZW5kYS9wYXBhLXJvYWNo.html",
+        "image": "../public/event-images/afaslive/LmFmYXNsaXZlLm5sL2FnZW5kYS9wYXBhLXJvYWNo",
+        "soldOut": false,
+        "eventGenres": null,
+        "artists": {
+            "papa roach": {
+                "s": "4RddZ3iHvSpGV4dvATac9X",
+                "l": "papa%20roach",
+                "g": [
+                    "alternative metal",
+                    "nu metal",
+                    "rap metal",
+                    "rap rock",
+                    "rock"
+                ]
+            }
+        }
+    },
+    {
+        "door": "2025-02-22T20:00:00",
+        "start": "2025-02-22T20:00:00",
+        "venueEventUrl": "https://www.afaslive.nl/agenda/opeth",
+        "title": "Opeth",
+        "location": "afaslive",
+        "price": 58.24,
+        "longText": "../public/texts/afaslive/Ly93d3cuYWZhc2xpdmUubmwvYWdlbmRhL29wZXRo.html",
+        "image": "../public/event-images/afaslive/Ly93d3cuYWZhc2xpdmUubmwvYWdlbmRhL29wZXRo",
+        "soldOut": false,
+        "eventGenres": null,
+        "artists": {
+            "opeth": {
+                "s": "0ybFZ2Ab08V8hueghSXm6E",
+                "l": "opeth",
+                "g": [
+                    "alternative metal",
+                    "metal",
+                    "progressive death metal",
+                    "progressive metal",
+                    "swedish metal",
+                    "swedish progressive metal",
+                    "progressive death metal, progressive rock"
+                ]
+            }
+        }
     }
-  },
-  {
-    "door": "2025-02-04T20:00:00",
-    "start": "2025-02-04T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/papa-roach",
-    "title": "Papa Roach",
-    "location": "afaslive",
-    "price": 58.24,
-    "longText": "../public/texts/afaslive/LmFmYXNsaXZlLm5sL2FnZW5kYS9wYXBhLXJvYWNo.html",
-    "image": "../public/event-images/afaslive/LmFmYXNsaXZlLm5sL2FnZW5kYS9wYXBhLXJvYWNo",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "papa roach": {
-        "s": "4RddZ3iHvSpGV4dvATac9X",
-        "l": "papa%20roach",
-        "g": [
-          "alternative metal",
-          "nu metal",
-          "rap metal",
-          "rap rock",
-          "rock"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-02-22T20:00:00",
-    "start": "2025-02-22T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/opeth",
-    "title": "Opeth",
-    "location": "afaslive",
-    "price": 58.24,
-    "longText": "../public/texts/afaslive/Ly93d3cuYWZhc2xpdmUubmwvYWdlbmRhL29wZXRo.html",
-    "image": "../public/event-images/afaslive/Ly93d3cuYWZhc2xpdmUubmwvYWdlbmRhL29wZXRo",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "opeth": {
-        "s": "0ybFZ2Ab08V8hueghSXm6E",
-        "l": "opeth",
-        "g": [
-          "alternative metal",
-          "metal",
-          "progressive death metal",
-          "progressive metal",
-          "swedish metal",
-          "swedish progressive metal",
-          "progressive death metal, progressive rock"
-        ]
-      }
-    }
-  }
 ]
