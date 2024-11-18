@@ -22,7 +22,7 @@ function downloadImage(url, filepath, workerData) {
                     console.log(res);
                     reject(
                         new Error(
-                            `Request for ${url} Failed With a Status Code: ${res.statusCode} see <a href='vscode://vscode-remote/wsl+Ubuntu-22.04/home/sjerp/dev/apache/concertagenda/backend/temp/error.log:1:1'>the log</a>`
+                            `Request for ${url} Failed With a Status Code: ${res.statusCode} see <a href='vscode://vscode-remote/wsl+Ubuntu-22.04/home/sjerp/hosted/rockagenda/backend/temp/error.log:1:1'>the log</a>`
                         )
                     );
                 }

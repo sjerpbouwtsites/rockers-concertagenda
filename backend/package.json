@@ -7,13 +7,13 @@
     "type": "module",
     "main": "index.js",
     "scripts": {
-        "backend": "npm run kill-chrome; cd ~/dev/apache/concertagenda/backend; clear; node index.js force=all; clear; echo 'backend gedaan';",
-        "build": "cd ~/dev/apache/concertagenda/; npm run build",
+        "backend": "npm run kill-chrome; cd ~/hosted/rockagenda/backend; clear; node index.js force=all; clear; echo 'backend gedaan';",
+        "build": "cd ~/hosted/rockagenda/; npm run build",
         "eslint-for-formatting": "npm run lint:fix;",
         "kill-chrome": "killall -s 9 chrome; ",
         "lint:fix": "eslint --quiet --fix ./**/*.{js,jsx}",
         "prettier-for-formatting": "prettier --config .prettierrc './**/*.{js,jsx,css}' --write;",
-        "start": "cd ~/dev/apache/concertagenda/; npm run start"
+        "start": "cd ~/hosted/rockagenda/; npm run start"
     },
     "dependencies": {
         "open": "^9.1.0",

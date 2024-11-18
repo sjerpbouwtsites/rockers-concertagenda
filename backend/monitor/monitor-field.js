@@ -235,12 +235,12 @@ export default class MonitorField {
                                 // console.log(errorTextRow);
 
                                 const fileLink = errorTextRow
-                                    .split("concertagenda")[1]
+                                    .split("rockagenda")[1]
                                     .replace(")", "");
                                 const fileNaamIngekort = fileLink
                                     .split("backend")[1]
                                     .substring(1, fileLink.length - 1);
-                                const fileLinkWSL = `vscode://vscode-remote/wsl+Ubuntu-22.04/home/sjerp/dev/apache/concertagenda${fileLink}`;
+                                const fileLinkWSL = `vscode://vscode-remote/wsl+Ubuntu-22.04/home/sjerp/hosted/rockagenda${fileLink}`;
                                 t = t.replace(
                                     volleFileNaam,
                                     `<a class='monitorfield__filelink' href='${fileLinkWSL}'>${fileNaamIngekort}</a>`
@@ -291,10 +291,14 @@ export default class MonitorField {
                             errorsPerWorkerCounter[errorsPerWorkerCounter];
                     }
 
-                    return `<li class='monitorfield__list-item' id='error-ref-${rollRow.messageData?.name}-${currentErrorsForThisWorkerCount}'>
+                    return `<li class='monitorfield__list-item' id='error-ref-${
+                        rollRow.messageData?.name
+                    }-${currentErrorsForThisWorkerCount}'>
         <header class='monitorfield__error-header'>
           <span class='monitorfield__error-workername'>niet standaard error</span>
-          <span class='monitorfield__error-remarks'>${rollRow?.messageData?.remarks}</span>
+          <span class='monitorfield__error-remarks'>${
+              rollRow?.messageData?.remarks
+          }</span>
         </header>
         
         <div class='monitorfield__list-item-right'>${rollRow.toString()}</div>
@@ -308,9 +312,11 @@ export default class MonitorField {
     get expandedUpdatedHTML() {
         const listItems = this.data
             .map((rollRow) => {
-                const titleText = `${rollRow.messageData?.content?.title ?? rollRow.messageData?.title ?? ""}${
-                    rollRow.messageData?.name ?? ""
-                }`;
+                const titleText = `${
+                    rollRow.messageData?.content?.title ??
+                    rollRow.messageData?.title ??
+                    ""
+                }${rollRow.messageData?.name ?? ""}`;
                 delete rollRow.messageData?.content?.title;
                 delete rollRow.messageData?.title;
 
@@ -394,12 +400,16 @@ export default class MonitorField {
                 const sortedFamily = workerFamily.sort(this.compareWorkers);
                 return `
       <tr>
-        <th>${workerFamilyNamesCharsets.join("<br>")}<span class='kutspacer'></span></th>
+        <th>${workerFamilyNamesCharsets.join(
+            "<br>"
+        )}<span class='kutspacer'></span></th>
         ${sortedFamily
             .map((worker) => {
                 let tdClass = "worker-data-cell ";
                 tdClass += `worker-status--${worker.status}`;
-                tdClass += ` worker-errors--${worker.errors.length ? "has-errors" : "none"}`;
+                tdClass += ` worker-errors--${
+                    worker.errors.length ? "has-errors" : "none"
+                }`;
 
                 const errorsHTML = !worker.errors.length
                     ? ""
@@ -411,10 +421,10 @@ export default class MonitorField {
                           errorLevel === "notice"
                               ? "🤦‍♂️"
                               : errorLevel === "close-thread"
-                                ? "🫣"
-                                : errorLevel === "close-app"
-                                  ? "💥"
-                                  : "❓";
+                              ? "🫣"
+                              : errorLevel === "close-app"
+                              ? "💥"
+                              : "❓";
 
                       return `<li class='worker-cell-inner-error-item worker-cell-inner-error-item--${errorLevel}'><a class='error-link error-link--${errorLevel}' href='#error-ref-${worker.name}-${index}'>${emoji}</a></li>`;
                   })
@@ -425,7 +435,9 @@ export default class MonitorField {
                     this.data,
                     `amountOfEvents-${worker.name}`
                 )
-                    ? `<span class='worker-cell-inner worker-cell-inner--done'>${this.data[`amountOfEvents-${worker.name}`]}</span>`
+                    ? `<span class='worker-cell-inner worker-cell-inner--done'>${
+                          this.data[`amountOfEvents-${worker.name}`]
+                      }</span>`
                     : `<span class='worker-cell-inner worker-cell-inner--todo'>${worker.todo}</span>`;
 
                 return `${statusHTML + numberHTML + errorsHTML}</td>`;

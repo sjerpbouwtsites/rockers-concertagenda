@@ -3,9 +3,9 @@ import sharp from "sharp";
 
 function initLocationImagesConversion() {
     const eventImagesDestFolder =
-        "/home/sjerp/dev/apache/concertagenda/public/location-images/";
+        "/home/sjerp/hosted/rockagenda/public/location-images/";
     const eventImagesSourceFolder =
-        "/home/sjerp/dev/apache/concertagenda/src/location-images/";
+        "/home/sjerp/hosted/rockagenda/src/location-images/";
     const files = fs.readdirSync(eventImagesSourceFolder).map((file) => {
         const fileZonder = file.replace(/.jpg|.jpeg|.png|.webp/, "");
         return {
