@@ -37,12 +37,7 @@ export default async function longTextSocialsIframes(page, event) {
                 ".post-content h2 a[href*='spotify']",
                 ".post-content .su-button-center"
             ].join(", ");
-            const socialSelector = [
-                ".post-content .su-button[href*='facebook']",
-                ".post-content .su-button[href*='fb']",
-                ".post-content h2 a[href*='facebook']",
-                ".post-content h2 a[href*='instagram']"
-            ].join(", ");
+            const socialSelector = [".dont-want-it-anymore"].join(", ");
             const attributesToRemove = [
                 "style",
                 "hidden",
@@ -54,7 +49,9 @@ export default async function longTextSocialsIframes(page, event) {
             const attributesToRemoveSecondRound = ["class", "id"];
 
             // eerst onzin attributes wegslopen
-            const socAttrRemSelAdd = `${socialSelector.length ? `, ${socialSelector}` : ""}`;
+            const socAttrRemSelAdd = `${
+                socialSelector.length ? `, ${socialSelector}` : ""
+            }`;
             const mediaAttrRemSelAdd = `${
                 mediaSelector.length
                     ? `, ${mediaSelector} *, ${mediaSelector}`
@@ -81,8 +78,8 @@ export default async function longTextSocialsIframes(page, event) {
                     type: src.includes("spotify")
                         ? "spotify"
                         : src.includes("youtube")
-                          ? "youtube"
-                          : "bandcamp"
+                        ? "youtube"
+                        : "bandcamp"
                 };
             });
 
