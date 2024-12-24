@@ -79,33 +79,39 @@ dehellingScraper.mainPage = async function () {
                         eventEl
                             .querySelector(".c-event-card__title")
                             ?.textContent.trim() ?? "";
+
                     const res = {
                         anker: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
                         errors: [],
                         title
                     };
 
-                    const metaText =
-                        eventEl
+                    res.venueEventUrl = eventEl.querySelector(
+                        ".c-event-card__link"
+                    ).href;
+
+                    res.startDate = res.venueEventUrl
+                        .substring(
+                            res.venueEventUrl.length - 11,
+                            res.venueEventUrl.length - 1
+                        )
+                        .split("-")
+                        .reverse()
+                        .join("-");
+                    const tijdenMatch =
+                        document
                             .querySelector(".c-event-card__meta")
-                            ?.textContent.trim() ?? "";
-                    const dateMatch = metaText.match(/\d\d\/\d\d/);
-                    const dateFound = Array.isArray(dateMatch)
-                        ? dateMatch[0]
-                        : "";
-                    const dateRepl = dateFound.replace("/", " ");
-                    res.mapToStartDate = dateRepl;
-                    const tijden = metaText.match(/\d\d:\d\d/g);
-                    if (tijden.length === 2) {
-                        res.mapToEndTime = tijden[1];
+                            ?.textContent.match(
+                                /(\d{1,2}:\d\d)\s?-\s?(\d{1,2}:\d\d)/
+                            ) ?? [];
+
+                    if (Array.isArray(tijdenMatch)) {
+                        res.mapToStartTime = tijdenMatch[1];
+                        if (tijdenMatch.length === 3) {
+                            res.mapToEndTime = tijdenMatch[2];
+                        }
                     }
-                    res.mapToStartTime = tijden[0];
 
-                    res.soldOut = !!eventEl.querySelector(
-                        ".c-event-card__banner--uitverkocht"
-                    );
-
-                    res.venueEventUrl = eventEl.href;
                     res.shortText =
                         eventEl
                             .querySelector(".c-event-card__subtitle")
@@ -118,7 +124,6 @@ dehellingScraper.mainPage = async function () {
     );
 
     rawEvents = rawEvents
-        .map((re) => mapToStartDate(re, "dag-maandNummer", this.months))
         .map(mapToShortDate)
         .map(mapToStartTime)
         .map(mapToEndTime)

@@ -109,6 +109,8 @@ scraper.mainPage = async function () {
         { workerData, unavailabiltyTerms: terms.unavailability }
     );
 
+    this.dirtyLog(rawEvents);
+
     rawEvents = rawEvents
         .map((re) => mapToStartDate(re, "dag-maandNaam-jaar", this.months))
         .map(mapToShortDate)
