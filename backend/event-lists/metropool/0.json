@@ -1,194 +1,157 @@
 [
-    {
-        "start": "2024-10-06T19:00:00",
-        "venueEventUrl": "https://metropool.nl/agenda/septicflesh",
-        "title": "Septicflesh",
-        "location": "metropool",
-        "price": 37,
-        "shortText": "Special Guest: Equilibrium",
-        "longText": "../public/texts/metropool/ZXRyb3Bvb2wubmwvYWdlbmRhL3NlcHRpY2ZsZXNo.html",
-        "image": "../public/event-images/metropool/ZXRyb3Bvb2wubmwvYWdlbmRhL3NlcHRpY2ZsZXNo",
-        "soldOut": false,
-        "unavailable": false,
-        "eventGenres": null,
-        "artists": {
-            "septicflesh": {
-                "s": "5MlEt7qqXqNSReeX76xK6b",
-                "l": "septicflesh",
-                "g": [
-                    "death metal",
-                    "greek metal",
-                    "melodic death metal",
-                    "metal",
-                    "symphonic black metal",
-                    "symphonic death metal",
-                    "symphonic metal",
-                    "atmospheric",
-                    "symphonic death metal"
-                ]
-            }
-        }
-    },
-    {
-        "start": "2024-10-27T19:30:00",
-        "venueEventUrl": "https://metropool.nl/agenda/kissin-dynamite",
-        "title": "Kissin' Dynamite",
-        "location": "metropool",
-        "price": 27.5,
-        "shortText": "Een band die nog altijd epische anthems schrijft voor een nieuwe generatie",
-        "longText": "../public/texts/metropool/cG9vbC5ubC9hZ2VuZGEva2lzc2luLWR5bmFtaXRl.html",
-        "image": "../public/event-images/metropool/cG9vbC5ubC9hZ2VuZGEva2lzc2luLWR5bmFtaXRl",
-        "soldOut": false,
-        "unavailable": false,
-        "eventGenres": null,
-        "artists": {
-            "kissin' dynamite": {
-                "s": "2wSP2cFfkqg4LKu1pmkTWx",
-                "l": "kissin'%20dynamite",
-                "g": [
-                    "new wave of glam metal",
-                    "nightrun",
-                    "heavy metal",
-                    "hard rock"
-                ]
-            }
-        }
-    },
-    {
-        "start": "2024-11-08T20:00:00",
-        "venueEventUrl": "https://metropool.nl/agenda/draconian",
-        "title": "Draconian",
-        "location": "metropool",
-        "price": 27.5,
-        "shortText": "30th Anniversary Tour",
-        "longText": "../public/texts/metropool/L21ldHJvcG9vbC5ubC9hZ2VuZGEvZHJhY29uaWFu.html",
-        "image": "../public/event-images/metropool/L21ldHJvcG9vbC5ubC9hZ2VuZGEvZHJhY29uaWFu",
-        "soldOut": false,
-        "unavailable": false,
-        "eventGenres": null,
-        "artists": {
-            "draconian": {
-                "s": "1TX9g1uSl0B0DQIE9lBqmU",
-                "l": "draconian",
-                "g": [
-                    "doom metal",
-                    "gothic metal",
-                    "gothic symphonic metal",
-                    "swedish doom metal",
-                    "swedish metal",
-                    "gothic",
-                    "doom",
-                    "death metal",
-                    "doom",
-                    "gothic metal",
-                    "metal",
-                    "progressive"
-                ]
-            }
-        }
-    },
-    {
-        "start": "2024-11-28T20:00:00",
-        "venueEventUrl": "https://metropool.nl/agenda/benighted-baest",
-        "title": "Benighted + baest",
-        "location": "metropool",
-        "price": 20,
-        "shortText": "Beast Against Beast European Tour 2024",
-        "longText": "../public/texts/metropool/cG9vbC5ubC9hZ2VuZGEvYmVuaWdodGVkLWJhZXN0.html",
-        "image": "../public/event-images/metropool/cG9vbC5ubC9hZ2VuZGEvYmVuaWdodGVkLWJhZXN0",
-        "soldOut": false,
-        "unavailable": false,
-        "eventGenres": null,
-        "artists": {
-            "benighted": {
-                "s": "0duwiwapc6uukkcztaaf7j",
-                "l": "benighted",
-                "g": [
-                    "brutal death metal",
-                    "death metal",
-                    "deathgrind",
-                    "french death metal",
-                    "french metal",
-                    "technical death metal",
-                    "black metal (early)",
-                    "brutal death metal/grindcore (later)"
-                ]
-            },
-            "baest": {
-                "s": "4UtjZRQc6qXhAd1kqyLvqp",
-                "l": "baest",
-                "g": ["danish death metal", "danish metal", "death metal"]
-            }
-        }
-    },
-    {
-        "start": "2024-12-04T20:30:00",
-        "venueEventUrl": "https://metropool.nl/agenda/ian-paice-purpendicular",
-        "title": "Ian Paice & Purpendicular",
-        "location": "metropool",
-        "price": 38,
-        "shortText": "De legendarische drummer en oprichter van Deep Purple",
-        "longText": "../public/texts/metropool/YWdlbmRhL2lhbi1wYWljZS1wdXJwZW5kaWN1bGFy.html",
-        "image": "../public/event-images/metropool/YWdlbmRhL2lhbi1wYWljZS1wdXJwZW5kaWN1bGFy",
-        "soldOut": false,
-        "unavailable": false,
-        "eventGenres": null,
-        "artists": {
-            "purpendicular": {
-                "s": "7dtykvbh2qxkicazbxtrkf",
-                "l": "purpendicular",
-                "g": []
-            },
-            "ian paice": {
-                "s": "2gndxbhyibxhwvurrlruaq",
-                "l": "ian%20paice",
-                "g": ["rock drums", "heavy metal"]
-            }
-        }
-    },
-    {
-        "start": "2024-12-13T20:30:00",
-        "venueEventUrl": "https://metropool.nl/agenda/john-coffey",
-        "title": "John Coffey",
-        "location": "metropool",
-        "price": 26.5,
-        "shortText": "John Coffey is terug met nieuwe songs, nieuwe shows en een nieuw album in de zomer",
-        "longText": "../public/texts/metropool/ZXRyb3Bvb2wubmwvYWdlbmRhL2pvaG4tY29mZmV5.html",
-        "image": "../public/event-images/metropool/ZXRyb3Bvb2wubmwvYWdlbmRhL2pvaG4tY29mZmV5",
-        "soldOut": true,
-        "unavailable": false,
-        "eventGenres": null,
-        "artists": {
-            "john coffey": {
-                "s": "4kffvdsomgp0boibxvgeya",
-                "l": "john%20coffey",
-                "g": ["dutch indie", "dutch rock", "hardcore punk"]
-            }
-        }
-    },
-    {
-        "start": "2025-03-28T20:30:00",
-        "venueEventUrl": "https://metropool.nl/agenda/anneke-van-giersbergen-band",
-        "title": "Anneke van Giersbergen & Band ",
-        "location": "metropool",
-        "price": 30.5,
-        "shortText": "Een concert met nieuw materiaal en hoogtepunten uit haar omvangrijke oeuvre",
-        "longText": "../public/texts/metropool/ZGEvYW5uZWtlLXZhbi1naWVyc2Jlcmdlbi1iYW5k.html",
-        "image": "../public/event-images/metropool/ZGEvYW5uZWtlLXZhbi1naWVyc2Jlcmdlbi1iYW5k",
-        "soldOut": false,
-        "unavailable": false,
-        "eventGenres": null,
-        "artists": {
-            "anneke van giersbergen": {
-                "s": "6tzqjnkayty8hfqbeddf8v",
-                "l": "anneke%20van%20giersbergen",
-                "g": ["metal"]
-            },
-            "band": {
-                "s": null,
-                "l": "band",
-                "g": ["heavy", "power metal"]
-            }
-        }
+  {
+    "start": "2025-01-10T19:30:00",
+    "venueEventUrl": "https://metropool.nl/agenda/bloodsin-massive-assault-caedere-deadly-alliance",
+    "title": "Bloodsin ",
+    "location": "metropool",
+    "price": 12,
+    "shortText": " Massive Assault  +  Caedere  +  Deadly Alliance Een avond vol brute energie en keiharde riffs",
+    "longText": "../public/texts/metropool/c3NhdWx0LWNhZWRlcmUtZGVhZGx5LWFsbGlhbmNl.html",
+    "image": "../public/event-images/metropool/c3NhdWx0LWNhZWRlcmUtZGVhZGx5LWFsbGlhbmNl",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "massive assault": {
+        "s": "2csdj66hs0rtrzybi6mtur",
+        "l": "massive%20assault",
+        "g": [
+          "dutch death metal",
+          "dutch metal",
+          "grisly death metal"
+        ]
+      },
+      "bloodsin": {
+        "s": null,
+        "l": "bloodsin",
+        "g": [
+          "death metal"
+        ]
+      },
+      "caedere": {
+        "s": "19InY0VWvPujLCsEeYOxub",
+        "l": "caedere",
+        "g": [
+          "dutch death metal",
+          "death metal"
+        ]
+      },
+      "deadly alliance": {
+        "s": "6PhKl46OGC5fSK21tYUJEu",
+        "l": "deadly%20alliance",
+        "g": [
+          "thrash metal"
+        ]
+      }
     }
+  },
+  {
+    "start": "2025-02-28T19:00:00",
+    "venueEventUrl": "https://metropool.nl/agenda/marduk",
+    "title": "Marduk",
+    "location": "metropool",
+    "price": 30.5,
+    "shortText": "Met als special guests: Doodswens + Irae + Lithost",
+    "longText": "../public/texts/metropool/czovL21ldHJvcG9vbC5ubC9hZ2VuZGEvbWFyZHVr.html",
+    "image": "../public/event-images/metropool/czovL21ldHJvcG9vbC5ubC9hZ2VuZGEvbWFyZHVr",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "marduk": {
+        "s": "2lxB5NTcQXj7GGRR4xAVaH",
+        "l": "marduk",
+        "g": [
+          "black metal",
+          "death metal",
+          "metal",
+          "swedish black metal",
+          "swedish metal",
+          "black metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-03-29T20:30:00",
+    "venueEventUrl": "https://metropool.nl/agenda/cryptosis-album-release",
+    "title": "Cryptosis - Album release",
+    "location": "metropool",
+    "price": 20,
+    "shortText": "Een muzikale tornado waarin black-, death- en thrashmetal samensmelten",
+    "longText": "../public/texts/metropool/YWdlbmRhL2NyeXB0b3Npcy1hbGJ1bS1yZWxlYXNl.html",
+    "image": "../public/event-images/metropool/YWdlbmRhL2NyeXB0b3Npcy1hbGJ1bS1yZWxlYXNl",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2025-05-14T18:30:00",
+    "venueEventUrl": "https://metropool.nl/agenda/decapitated-cryptopsy-warbringer-carnation",
+    "title": "Decapitated ",
+    "location": "metropool",
+    "price": 33,
+    "shortText": " Cryptopsy  +  Warbringer  +  Carnation Internal Bloodshed Over Europe 2025",
+    "longText": "../public/texts/metropool/Y3J5cHRvcHN5LXdhcmJyaW5nZXItY2FybmF0aW9u.html",
+    "image": "../public/event-images/metropool/Y3J5cHRvcHN5LXdhcmJyaW5nZXItY2FybmF0aW9u",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "decapitated": {
+        "s": "17mbhjoaaphuwnrawu9xkc",
+        "l": "decapitated",
+        "g": [
+          "brutal death metal",
+          "death metal",
+          "deathgrind",
+          "groove metal",
+          "metal",
+          "polish death metal",
+          "polish metal",
+          "technical death metal",
+          "technical groove metal",
+          "thrash metal"
+        ]
+      },
+      "warbringer": {
+        "s": "4ukkkgkjnwx8ktuvea66k1",
+        "l": "warbringer",
+        "g": [
+          "metal",
+          "new wave of thrash metal",
+          "speed metal",
+          "thrash metal"
+        ]
+      },
+      "carnation": {
+        "s": "7s6smrbyqvp26jn5ebnu9u",
+        "l": "carnation",
+        "g": [
+          "belgian death metal",
+          "belgian metal",
+          "dutch metal",
+          "voidgrind"
+        ]
+      },
+      "cryptopsy": {
+        "s": "29PgYwTelpNl6370XLqFtN",
+        "l": "cryptopsy",
+        "g": [
+          "black metal",
+          "brutal death metal",
+          "canadian metal",
+          "death metal",
+          "quebec death metal",
+          "technical death metal",
+          "technical deathcore",
+          "technical melodic death metal",
+          "thrash metal",
+          "brutal",
+          "technical death metal"
+        ]
+      }
+    }
+  }
 ]

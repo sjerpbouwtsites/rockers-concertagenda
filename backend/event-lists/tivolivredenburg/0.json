@@ -1,124 +1,143 @@
 [
-    {
-        "start": "2024-10-09T19:00:00",
-        "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/30690353/rotting-christ-borknagar-09-10-2024",
-        "title": "Rotting Christ & Borknagar",
-        "location": "tivolivredenburg",
-        "price": 28.85,
-        "shortText": "Drie Europese blackmetalbands op één avond",
-        "longText": "../public/texts/tivolivredenburg/bmctY2hyaXN0LWJvcmtuYWdhci0wOS0xMC0yMDI0.html",
-        "image": "../public/event-images/tivolivredenburg/bmctY2hyaXN0LWJvcmtuYWdhci0wOS0xMC0yMDI0",
-        "soldOut": true,
-        "unavailable": false,
-        "eventGenres": null,
-        "artists": {}
-    },
-    {
-        "start": "2024-10-24T19:30:00",
-        "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/39573936/ghostkid-24-10-2024",
-        "title": "Ghøstkid",
-        "location": "tivolivredenburg",
-        "price": 25.85,
-        "shortText": "Hollywood Suicide Tour 2024",
-        "longText": "../public/texts/tivolivredenburg/YS8zOTU3MzkzNi9naG9zdGtpZC0yNC0xMC0yMDI0.html",
-        "image": "../public/event-images/tivolivredenburg/YS8zOTU3MzkzNi9naG9zdGtpZC0yNC0xMC0yMDI0",
-        "soldOut": false,
-        "unavailable": false,
-        "eventGenres": null,
-        "artists": {
-            "ghøstkid": {
-                "s": "2ooWmQC4NQUQZ3z00mZQyK",
-                "l": "gh%C3%B8stkid",
-                "g": ["german metalcore"]
-            },
-            "ghost": {
-                "s": "1qp56t7n950o3egmssl81d",
-                "l": "ghost",
-                "g": ["hard rock", "metal"]
-            }
-        }
-    },
-    {
-        "door": "2024-11-18T20:00:00",
-        "start": "2024-11-18T23:00:00",
-        "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/13578690/amyl-and-the-sniffers-18-11-2024",
-        "title": "Amyl and The Sniffers",
-        "location": "tivolivredenburg",
-        "price": 28.85,
-        "shortText": "In your face 70’s-geinspireerde punk",
-        "longText": "../public/texts/tivolivredenburg/eWwtYW5kLXRoZS1zbmlmZmVycy0xOC0xMS0yMDI0.html",
-        "image": "../public/event-images/tivolivredenburg/eWwtYW5kLXRoZS1zbmlmZmVycy0xOC0xMS0yMDI0",
-        "soldOut": true,
-        "unavailable": false,
-        "eventGenres": null,
-        "artists": {
-            "amyl and the sniffers": {
-                "s": "3NqV2DJoAWsjl787bWaHW7",
-                "l": "amyl%20and%20the%20sniffers",
-                "g": ["australian garage punk", "melbourne punk"]
-            }
-        }
-    },
-    {
-        "door": "2024-11-23T20:15:00",
-        "start": "2024-11-23T22:14:00",
-        "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/95716454/wardruna-23-11-2024",
-        "title": "Wardruna",
-        "location": "tivolivredenburg",
-        "price": 59.5,
-        "shortText": "Extra concert • Hypnotiserende, donkere folk met traditionele instrumenten",
-        "longText": "../public/texts/tivolivredenburg/YS85NTcxNjQ1NC93YXJkcnVuYS0yMy0xMS0yMDI0.html",
-        "image": "../public/event-images/tivolivredenburg/YS85NTcxNjQ1NC93YXJkcnVuYS0yMy0xMS0yMDI0",
-        "soldOut": true,
-        "unavailable": false,
-        "eventGenres": null,
-        "artists": {
-            "wardruna": {
-                "s": "0nj6wloasaj1pn4vrdtpka",
-                "l": "wardruna",
-                "g": ["nordic folk", "rune folk", "viking folk"]
-            }
-        }
-    },
-    {
-        "door": "2024-11-24T19:30:00",
-        "start": "2024-11-24T22:30:00",
-        "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/35887781/therapy-24-11-2024",
-        "title": "Therapy?",
-        "location": "tivolivredenburg",
-        "price": 28.85,
-        "shortText": "Troublegum 30th Anniversary tour",
-        "longText": "../public/texts/tivolivredenburg/ZGEvMzU4ODc3ODEvdGhlcmFweS0yNC0xMS0yMDI0.html",
-        "image": "../public/event-images/tivolivredenburg/ZGEvMzU4ODc3ODEvdGhlcmFweS0yNC0xMS0yMDI0",
-        "soldOut": true,
-        "unavailable": false,
-        "eventGenres": null,
-        "artists": {
-            "therapy?": {
-                "s": "3momzrijwdzmynysgtf4ey",
-                "l": "therapy?",
-                "g": ["alternative metal"]
-            }
-        }
-    },
-    {
-        "start": "2024-11-29T18:00:00",
-        "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/82315491/while-she-sleeps-29-11-2024",
-        "title": "While She Sleeps",
-        "location": "tivolivredenburg",
-        "price": 31.75,
-        "shortText": "Met nieuw album Self Hell en supports Malevolence, thrown & Resolve",
-        "longText": "../public/texts/tivolivredenburg/OTEvd2hpbGUtc2hlLXNsZWVwcy0yOS0xMS0yMDI0.html",
-        "image": "../public/event-images/tivolivredenburg/OTEvd2hpbGUtc2hlLXNsZWVwcy0yOS0xMS0yMDI0",
-        "soldOut": true,
-        "unavailable": false,
-        "eventGenres": null,
-        "artists": {
-            "while she sleeps": {
-                "s": "38ldiuxb548zghoey2an7a",
-                "l": "while%20she%20sleeps",
-                "g": ["melodic metalcore", "metalcore", "uk metalcore"]
-            }
-        }
+  {
+    "start": "2025-01-16T19:00:00",
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/76440654/insomnium-16-01-2025",
+    "title": "Insomnium",
+    "location": "tivolivredenburg",
+    "price": 33.75,
+    "shortText": "Integrale uitvoering van Beyond The Shadows Of The Dying Sun",
+    "longText": "../public/texts/tivolivredenburg/Lzc2NDQwNjU0L2luc29tbml1bS0xNi0wMS0yMDI1.html",
+    "image": "../public/event-images/tivolivredenburg/Lzc2NDQwNjU0L2luc29tbml1bS0xNi0wMS0yMDI1",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "insomnium": {
+        "s": "3uiglg971orm5fe6v8lvqs",
+        "l": "insomnium",
+        "g": [
+          "finnish death metal",
+          "finnish melodeath",
+          "finnish metal",
+          "melodic death metal"
+        ]
+      }
     }
+  },
+  {
+    "start": "2025-01-24T20:15:00",
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/10893380/wardruna-releaseparty-24-01-2025",
+    "title": "Wardruna releaseparty",
+    "location": "tivolivredenburg",
+    "price": 10,
+    "shortText": "Exclusieve video première: Live at the Acropolis",
+    "longText": "../public/texts/tivolivredenburg/cmRydW5hLXJlbGVhc2VwYXJ0eS0yNC0wMS0yMDI1.html",
+    "image": "../public/event-images/tivolivredenburg/cmRydW5hLXJlbGVhc2VwYXJ0eS0yNC0wMS0yMDI1",
+    "soldOut": true,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "wardruna": {
+        "s": "0nj6wloasaj1pn4vrdtpka",
+        "l": "wardruna",
+        "g": [
+          "nordic folk",
+          "rune folk",
+          "viking folk"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-02-06T18:45:00",
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/44008748/napalm-death-06-02-2025",
+    "title": "Napalm Death",
+    "location": "tivolivredenburg",
+    "price": 39.75,
+    "shortText": "Grindcore-legende met supports Crowbar, Full of Hell & Brat",
+    "longText": "../public/texts/tivolivredenburg/MDA4NzQ4L25hcGFsbS1kZWF0aC0wNi0wMi0yMDI1.html",
+    "image": "../public/event-images/tivolivredenburg/MDA4NzQ4L25hcGFsbS1kZWF0aC0wNi0wMi0yMDI1",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "napalm death": {
+        "s": "3UqRgrDIQ208yNGiWKRMNt",
+        "l": "napalm%20death",
+        "g": [
+          "birmingham metal",
+          "british death metal",
+          "british grindcore",
+          "death metal",
+          "deathgrind",
+          "grindcore",
+          "groove metal",
+          "metal",
+          "hardcore punk (early)",
+          " grindcore",
+          "death metal (later)"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-02-27T20:30:00",
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/31037569/ploegendienst-27-02-2025",
+    "title": "Ploegendienst",
+    "location": "tivolivredenburg",
+    "price": 22.85,
+    "shortText": "Nederlandstalige hardcorepunk met Ray Fuego",
+    "longText": "../public/texts/tivolivredenburg/Mzc1NjkvcGxvZWdlbmRpZW5zdC0yNy0wMi0yMDI1.html",
+    "image": "../public/event-images/tivolivredenburg/Mzc1NjkvcGxvZWdlbmRpZW5zdC0yNy0wMi0yMDI1",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "ploegendienst": {
+        "s": "2aJUvAtem0t0zRKxJsRoea",
+        "l": "ploegendienst",
+        "g": [
+          "dutch indie rock",
+          "dutch punk"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-03-17T20:00:00",
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/96466065/bilmuri-17-03-2025",
+    "title": "Bilmuri",
+    "location": "tivolivredenburg",
+    "price": 26.35,
+    "shortText": "Rock- en post-hardcoreproject van voormalig Attack Attack!-lid",
+    "longText": "../public/texts/tivolivredenburg/ZGEvOTY0NjYwNjUvYmlsbXVyaS0xNy0wMy0yMDI1.html",
+    "image": "../public/event-images/tivolivredenburg/ZGEvOTY0NjYwNjUvYmlsbXVyaS0xNy0wMy0yMDI1",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2025-03-22T20:15:00",
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/19398653/the-pineapple-thief-22-03-2025",
+    "title": "The Pineapple Thief",
+    "location": "tivolivredenburg",
+    "price": 36.75,
+    "shortText": "Toonaangevende progressieve rockband",
+    "longText": "../public/texts/tivolivredenburg/dGhlLXBpbmVhcHBsZS10aGllZi0yMi0wMy0yMDI1.html",
+    "image": "../public/event-images/tivolivredenburg/dGhlLXBpbmVhcHBsZS10aGllZi0yMi0wMy0yMDI1",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "the pineapple thief": {
+        "s": "4lrBMUSk8PiNnCEZfsmPAk",
+        "l": "the%20pineapple%20thief",
+        "g": [
+          "modern progressive rock",
+          "progressive metal"
+        ]
+      }
+    }
+  }
 ]

@@ -1,197 +1,118 @@
 [
-    {
-        "start": "2024-10-09T22:00:00",
-        "venueEventUrl": "https://www.paradiso.nl/en/program/equal-idiots/2320081",
-        "title": "Equal Idiots",
-        "location": "paradiso",
-        "price": 14.5,
-        "shortText": "Rescheduled to May 15th",
-        "longText": "../public/texts/paradiso/bi9wcm9ncmFtL2VxdWFsLWlkaW90cy8yMzIwMDgx.html",
-        "image": "../public/event-images/paradiso/bi9wcm9ncmFtL2VxdWFsLWlkaW90cy8yMzIwMDgx",
-        "soldOut": false,
-        "unavailable": false,
-        "eventGenres": null,
-        "artists": {
-            "equal idiots": {
-                "s": "4nljEo4gnUFgczxjNt5KOR",
-                "l": "equal%20idiots",
-                "g": ["belgian punk", "belgian rock"]
-            }
-        }
-    },
-    {
-        "start": "2024-10-31T22:00:00",
-        "venueEventUrl": "https://www.paradiso.nl/en/program/new-age-doom/2360266",
-        "title": "New Age Doom",
-        "location": "paradiso",
-        "price": 14,
-        "shortText": "Eclectic duo from Canada makes experimental drone metal",
-        "longText": "../public/texts/paradiso/bi9wcm9ncmFtL25ldy1hZ2UtZG9vbS8yMzYwMjY2.html",
-        "image": "../public/event-images/paradiso/bi9wcm9ncmFtL25ldy1hZ2UtZG9vbS8yMzYwMjY2",
-        "soldOut": false,
-        "unavailable": false,
-        "eventGenres": null,
-        "artists": {}
-    },
-    {
-        "start": "2024-11-04T20:00:00",
-        "venueEventUrl": "https://www.paradiso.nl/en/program/deadletter/2039097",
-        "title": "Deadletter",
-        "location": "paradiso",
-        "price": 56,
-        "shortText": "London post-punk sensation / Tolhuistuin",
-        "longText": "../public/texts/paradiso/L2VuL3Byb2dyYW0vZGVhZGxldHRlci8yMDM5MDk3.html",
-        "image": "../public/event-images/paradiso/L2VuL3Byb2dyYW0vZGVhZGxldHRlci8yMDM5MDk3",
-        "soldOut": false,
-        "unavailable": false,
-        "eventGenres": null,
-        "artists": {
-            "deadletter": {
-                "s": "4mfuq99z2kgmnl9hawffbx",
-                "l": "deadletter",
-                "g": ["crank wave", "uk post-punk revival"]
-            }
-        }
-    },
-    {
-        "start": "2024-11-07T19:30:00",
-        "venueEventUrl": "https://www.paradiso.nl/en/program/zonneprijs-2/2375712",
-        "title": "Zonneprijs #2 VALENTINO • Rockpool Dramas • Good Boy Barking • Bovenburen",
-        "location": "paradiso",
-        "price": 5,
-        "shortText": " Most promising local artists perform at Zonnehuis / Zonnehuis",
-        "longText": "../public/texts/paradiso/bi9wcm9ncmFtL3pvbm5lcHJpanMtMi8yMzc1NzEy.html",
-        "image": "../public/event-images/paradiso/bi9wcm9ncmFtL3pvbm5lcHJpanMtMi8yMzc1NzEy",
-        "soldOut": false,
-        "unavailable": false,
-        "eventGenres": null,
-        "artists": {
-            "drama": {
-                "s": "5nwfezx5xgbvcaqtjhsxlr",
-                "l": "drama",
-                "g": ["malaysian pop", "rock kapak"]
-            }
-        }
-    },
-    {
-        "start": "2024-11-20T20:30:00",
-        "venueEventUrl": "https://www.paradiso.nl/en/program/metz/1716112",
-        "title": "Metz",
-        "location": "paradiso",
-        "price": 23.2,
-        "shortText": "Intense noise rock from Canada",
-        "longText": "../public/texts/paradiso/aXNvLm5sL2VuL3Byb2dyYW0vbWV0ei8xNzE2MTEy.html",
-        "image": "../public/event-images/paradiso/aXNvLm5sL2VuL3Byb2dyYW0vbWV0ei8xNzE2MTEy",
-        "soldOut": false,
-        "unavailable": false,
-        "eventGenres": null,
-        "artists": {
-            "metz": {
-                "s": "18TNVFTJ6WfeicsMRrdJHI",
-                "l": "metz",
-                "g": [
-                    "canadian punk",
-                    "crank wave",
-                    "indie punk",
-                    "noise pop",
-                    "noise rock",
-                    "post-hardcore"
-                ]
-            }
-        }
-    },
-    {
-        "start": "2024-11-28T20:00:00",
-        "venueEventUrl": "https://www.paradiso.nl/en/program/joe-the-shitboys/2370615",
-        "title": "Joe & The Shitboys",
-        "location": "paradiso",
-        "price": 14.5,
-        "shortText": "Queer, vegan and shit punk / Toekomstmuziek",
-        "longText": "../public/texts/paradiso/b2dyYW0vam9lLXRoZS1zaGl0Ym95cy8yMzcwNjE1.html",
-        "image": "../public/event-images/paradiso/b2dyYW0vam9lLXRoZS1zaGl0Ym95cy8yMzcwNjE1",
-        "soldOut": false,
-        "unavailable": false,
-        "eventGenres": null,
-        "artists": {}
-    },
-    {
-        "start": "2024-12-04T18:30:00",
-        "venueEventUrl": "https://www.paradiso.nl/en/program/alcest/1805631",
-        "title": "Alcest + Svalbard + Doodseskader",
-        "location": "paradiso",
-        "price": 34.3,
-        "shortText": "Blackgaze band releasing a new album",
-        "longText": "../public/texts/paradiso/by5ubC9lbi9wcm9ncmFtL2FsY2VzdC8xODA1NjMx.html",
-        "image": "../public/event-images/paradiso/by5ubC9lbi9wcm9ncmFtL2FsY2VzdC8xODA1NjMx",
-        "soldOut": false,
-        "unavailable": false,
-        "eventGenres": null,
-        "artists": {
-            "doodseskader": {
-                "s": "3nfvorn4wvioqrdljbxrok",
-                "l": "belgium",
-                "g": ["sludgecore", "experimental sludge/post-metal"]
-            }
-        }
-    },
-    {
-        "start": "2024-12-14T19:30:00",
-        "venueEventUrl": "https://www.paradiso.nl/en/program/hang-youth/2259954",
-        "title": "Hang Youth",
-        "location": "paradiso",
-        "price": 23.2,
-        "shortText": "Activist punk band from Amsterdam",
-        "longText": "../public/texts/paradiso/L2VuL3Byb2dyYW0vaGFuZy15b3V0aC8yMjU5OTU0.html",
-        "image": "../public/event-images/paradiso/L2VuL3Byb2dyYW0vaGFuZy15b3V0aC8yMjU5OTU0",
-        "soldOut": false,
-        "unavailable": false,
-        "eventGenres": null,
-        "artists": {
-            "hang youth": {
-                "s": "33s4eablBmnrPlE3y6CZFR",
-                "l": "hang%20youth",
-                "g": ["dutch indie", "lowlands hardcore"]
-            }
-        }
-    },
-    {
-        "start": "2025-02-28T20:30:00",
-        "venueEventUrl": "https://www.paradiso.nl/en/program/dubioza-kolektiv/2259538",
-        "title": "Dubioza Kolektiv",
-        "location": "paradiso",
-        "price": 27.2,
-        "shortText": "Highly energetic ska band from Bosnia",
-        "longText": "../public/texts/paradiso/b2dyYW0vZHViaW96YS1rb2xla3Rpdi8yMjU5NTM4.html",
-        "image": "../public/event-images/paradiso/b2dyYW0vZHViaW96YS1rb2xla3Rpdi8yMjU5NTM4",
-        "soldOut": false,
-        "unavailable": false,
-        "eventGenres": null,
-        "artists": {
-            "dubioza kolektiv": {
-                "s": "02IFYoziC7CpQRK8fbehUY",
-                "l": "dubioza%20kolektiv",
-                "g": ["balkan brass", "balkan punk", "bosnian indie"]
-            }
-        }
-    },
-    {
-        "start": "2025-04-14T20:30:00",
-        "venueEventUrl": "https://www.paradiso.nl/en/program/fat-dog/2365347",
-        "title": "Fat Dog",
-        "location": "paradiso",
-        "price": 23.2,
-        "shortText": "Manic mix of dance, punk, and klezmer from South London",
-        "longText": "../public/texts/paradiso/Lm5sL2VuL3Byb2dyYW0vZmF0LWRvZy8yMzY1MzQ3.html",
-        "image": "../public/event-images/paradiso/Lm5sL2VuL3Byb2dyYW0vZmF0LWRvZy8yMzY1MzQ3",
-        "soldOut": false,
-        "unavailable": false,
-        "eventGenres": null,
-        "artists": {
-            "fat dog": {
-                "s": "4dljephxbw7qihx4iwmnee",
-                "l": "fat%20dog",
-                "g": ["crank wave", "punk"]
-            }
-        }
+  {
+    "start": "2025-02-08T20:30:00",
+    "venueEventUrl": "https://www.paradiso.nl/en/program/dubioza-kolektiv/2259538",
+    "title": "Dubioza Kolektiv",
+    "location": "paradiso",
+    "price": 27.2,
+    "shortText": "Highly energetic ska band from Bosnia",
+    "longText": "../public/texts/paradiso/b2dyYW0vZHViaW96YS1rb2xla3Rpdi8yMjU5NTM4.html",
+    "image": "../public/event-images/paradiso/b2dyYW0vZHViaW96YS1rb2xla3Rpdi8yMjU5NTM4",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "dubioza kolektiv": {
+        "s": "02IFYoziC7CpQRK8fbehUY",
+        "l": "dubioza%20kolektiv",
+        "g": [
+          "balkan brass",
+          "balkan punk",
+          "bosnian indie"
+        ]
+      }
     }
+  },
+  {
+    "start": "2025-03-02T19:30:00",
+    "venueEventUrl": "https://www.paradiso.nl/en/program/chalk/2405176",
+    "title": "Chalk",
+    "location": "paradiso",
+    "price": 15,
+    "shortText": "Belfast electronic/noise rock trio",
+    "longText": "../public/texts/paradiso/c28ubmwvZW4vcHJvZ3JhbS9jaGFsay8yNDA1MTc2.html",
+    "image": "../public/event-images/paradiso/c28ubmwvZW4vcHJvZ3JhbS9jaGFsay8yNDA1MTc2",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "chalk": {
+        "s": "3qa9pv6B0dmiBVETLQOCpi",
+        "l": "chalk",
+        "g": [
+          "crank wave",
+          "irish post-punk",
+          "irish punk"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-04-03T18:30:00",
+    "venueEventUrl": "https://www.paradiso.nl/en/program/the-ex-release-show-plus-special-guests/2471490",
+    "title": "The Ex - release show plus special guests",
+    "location": "paradiso",
+    "price": 17,
+    "shortText": "Dutch punk band celebrates their new release",
+    "longText": "../public/texts/paradiso/b3ctcGx1cy1zcGVjaWFsLWd1ZXN0cy8yNDcxNDkw.html",
+    "image": "../public/event-images/paradiso/b3ctcGx1cy1zcGVjaWFsLWd1ZXN0cy8yNDcxNDkw",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "the ex": {
+        "s": null,
+        "l": "the%20ex",
+        "g": []
+      }
+    }
+  },
+  {
+    "start": "2025-04-05T20:30:00",
+    "venueEventUrl": "https://www.paradiso.nl/en/program/gurriers/2438458",
+    "title": "Gurriers",
+    "location": "paradiso",
+    "price": 20.7,
+    "shortText": "Gritty post-punk by promising Irish five-piece / Tolhuistuin",
+    "longText": "../public/texts/paradiso/bmwvZW4vcHJvZ3JhbS9ndXJyaWVycy8yNDM4NDU4.html",
+    "image": "../public/event-images/paradiso/bmwvZW4vcHJvZ3JhbS9ndXJyaWVycy8yNDM4NDU4",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "gurriers": {
+        "s": "0bPAi2zCrxUrPBREWdetZ5",
+        "l": "gurriers",
+        "g": [
+          "crank wave",
+          "irish post-punk",
+          "irish shoegaze"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-05-08T19:30:00",
+    "venueEventUrl": "https://www.paradiso.nl/en/program/osees/2413436",
+    "title": "OSEES + Psychic Graveyard",
+    "location": "paradiso",
+    "price": 27.2,
+    "shortText": "Frantic rock machine",
+    "longText": "../public/texts/paradiso/c28ubmwvZW4vcHJvZ3JhbS9vc2Vlcy8yNDEzNDM2.html",
+    "image": "../public/event-images/paradiso/c28ubmwvZW4vcHJvZ3JhbS9vc2Vlcy8yNDEzNDM2",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "psychic graveyard": {
+        "s": "4i09yoyjd3v14wcaldfn3b",
+        "l": "psychic%20graveyard",
+        "g": [
+          "noise punk",
+          "noise rock",
+          "synth punk"
+        ]
+      }
+    }
+  }
 ]

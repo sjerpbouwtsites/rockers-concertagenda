@@ -1,28 +1,39 @@
 [
-    {
-        "start": "2024-10-23T20:00:00",
-        "venueEventUrl": "https://occii.org/events/time-and-space-with-tristan/",
-        "title": "Film premiere: time and space with tristan (hiroki mano – 80′ – 2024) ",
-        "location": "occii",
-        "price": 10,
-        "shortText": " guests a tribute to the career of Honsinger",
-        "longText": "../public/texts/occii/cy90aW1lLWFuZC1zcGFjZS13aXRoLXRyaXN0YW4v.html",
-        "image": "../public/event-images/occii/cy90aW1lLWFuZC1zcGFjZS13aXRoLXRyaXN0YW4v",
-        "soldOut": false,
-        "unavailable": false,
-        "eventGenres": null,
-        "artists": {
-            "tristan": {
-                "s": "2eomvmvtymtgn45w9mwutv",
-                "l": "tristan",
-                "g": [
-                    "gothic metal",
-                    "gothic symphonic metal",
-                    "norwegian metal",
-                    "power metal",
-                    "symphonic metal"
-                ]
-            }
-        }
+  {
+    "start": "4049-02-13T20:00:00",
+    "venueEventUrl": "https://occii.org/events/sim-dietrichs/",
+    "title": "Occii & sound in motion: dietrichs (us, camille & don dietrich/borbetomagus) ",
+    "location": "occii",
+    "price": 12,
+    "shortText": " jef mertens (be)  +  mascletá (fr)  +  bhajan bhoy (uk/nl) Sound In Motion | Cosmic Explorations | Wall Of Sound",
+    "longText": "../public/texts/occii/Y2NpaS5vcmcvZXZlbnRzL3NpbS1kaWV0cmljaHMv.html",
+    "image": "../public/event-images/occii/Y2NpaS5vcmcvZXZlbnRzL3NpbS1kaWV0cmljaHMv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "4049-04-27T20:00:00",
+    "venueEventUrl": "https://occii.org/events/the-flying-luttenbachers/",
+    "title": "The flying luttenbachers (us) + more tba",
+    "location": "occii",
+    "price": 12,
+    "shortText": "Brutal Prog, Extreme Metal, Harmolodic Skronk",
+    "longText": "../public/texts/occii/ZW50cy90aGUtZmx5aW5nLWx1dHRlbmJhY2hlcnMv.html",
+    "image": "../public/event-images/occii/ZW50cy90aGUtZmx5aW5nLWx1dHRlbmJhY2hlcnMv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "more": {
+        "s": null,
+        "l": "more",
+        "g": [
+          "nwobhm",
+          "heavy metal"
+        ]
+      }
     }
+  }
 ]

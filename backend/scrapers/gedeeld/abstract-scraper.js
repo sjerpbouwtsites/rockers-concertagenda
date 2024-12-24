@@ -287,9 +287,18 @@ export default class AbstractScraper extends ScraperConfig {
             return false;
         }
         WorkerStatus.registerFamilyDoneWithBaseEvents(workerData.family);
-        return JSON.parse(
-            fs.readFileSync(`${fsDirections.baseEventlists}/${thisBaseEvent}`)
-        );
+        try {
+            const baseEventList = fs.readFileSync(
+                `${fsDirections.baseEventlists}/${thisBaseEvent}`
+            );
+            return JSON.parse(baseEventList);
+        } catch (error) {
+            this.handleError(
+                error,
+                `geen base event ${thisBaseEvent} gevonden van ${workerData.family} op locatie ${fsDirections.baseEventlists}/${thisBaseEvent}`
+            );
+            return {};
+        }
     }
 
     async saveBaseEventlist(key, data) {
@@ -728,8 +737,9 @@ export default class AbstractScraper extends ScraperConfig {
         // SINGLE PAGE
         // ASYNC CHECK
 
-        const mergedEventCheckRes =
-            await this.singlePageAsyncCheck(mergedEvent);
+        const mergedEventCheckRes = await this.singlePageAsyncCheck(
+            mergedEvent
+        );
         mergedEventCheckRes.event = mergedEvent;
 
         if (
@@ -789,8 +799,9 @@ export default class AbstractScraper extends ScraperConfig {
         }
 
         if (!mergedEventCheckRes.isFailed) {
-            const artistsRes =
-                await this.asyncScanEventForAllowedArtists(mergedEvent);
+            const artistsRes = await this.asyncScanEventForAllowedArtists(
+                mergedEvent
+            );
             this.artistScanDebugger(mergedEventCheckRes, artistsRes);
 
             if (artistsRes.isSuccess) {

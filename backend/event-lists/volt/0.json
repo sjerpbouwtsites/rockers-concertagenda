@@ -1,53 +1,73 @@
 [
-    {
-        "start": "2024-11-01T20:00:00",
-        "end": "2024-11-01T00:00:00",
-        "venueEventUrl": "https://www.poppodium-volt.nl/activiteit/one-morning-left-fin-unslain?show=289",
-        "title": "One Morning Left (FIN) + The Unslain",
-        "location": "volt",
-        "price": 15,
-        "shortText": "Metal",
-        "longText": "../public/texts/volt/bmluZy1sZWZ0LWZpbi11bnNsYWluP3Nob3c9Mjg5.html",
-        "image": "../public/event-images/volt/bmluZy1sZWZ0LWZpbi11bnNsYWluP3Nob3c9Mjg5",
-        "soldOut": false,
-        "unavailable": false,
-        "eventGenres": null,
-        "artists": {}
-    },
-    {
-        "start": "2024-11-01T20:00:00",
-        "end": "2024-11-01T23:00:00",
-        "venueEventUrl": "https://www.poppodium-volt.nl/activiteit/doodseskader-be-support?show=246",
-        "title": "Doodseskader (BE) + support",
-        "location": "volt",
-        "price": 20,
-        "shortText": "Metal",
-        "longText": "../public/texts/volt/b2RzZXNrYWRlci1iZS1zdXBwb3J0P3Nob3c9MjQ2.html",
-        "image": "../public/event-images/volt/b2RzZXNrYWRlci1iZS1zdXBwb3J0P3Nob3c9MjQ2",
-        "soldOut": false,
-        "unavailable": false,
-        "eventGenres": null,
-        "artists": {
-            "doodseskader": {
-                "s": "3nfvorn4wvioqrdljbxrok",
-                "l": "belgium",
-                "g": ["sludgecore", "experimental sludge/post-metal"]
-            }
-        }
-    },
-    {
-        "start": "2025-02-08T20:00:00",
-        "end": "2025-02-08T00:00:00",
-        "venueEventUrl": "https://www.poppodium-volt.nl/activiteit/siamese-support?show=336",
-        "title": "Siamese + support",
-        "location": "volt",
-        "price": 25,
-        "shortText": "Metal",
-        "longText": "../public/texts/volt/aXRlaXQvc2lhbWVzZS1zdXBwb3J0P3Nob3c9MzM2.html",
-        "image": "../public/event-images/volt/aXRlaXQvc2lhbWVzZS1zdXBwb3J0P3Nob3c9MzM2",
-        "soldOut": false,
-        "unavailable": false,
-        "eventGenres": null,
-        "artists": {}
+  {
+    "start": "2025-02-08T20:00:00",
+    "end": "2025-02-08T00:00:00",
+    "venueEventUrl": "https://www.poppodium-volt.nl/activiteit/siamese-support?show=336",
+    "title": "Siamese + support",
+    "location": "volt",
+    "price": 25,
+    "shortText": "Metal",
+    "longText": "../public/texts/volt/aXRlaXQvc2lhbWVzZS1zdXBwb3J0P3Nob3c9MzM2.html",
+    "image": "../public/event-images/volt/aXRlaXQvc2lhbWVzZS1zdXBwb3J0P3Nob3c9MzM2",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2025-03-30T19:00:00",
+    "end": "2025-03-30T22:30:00",
+    "venueEventUrl": "https://www.poppodium-volt.nl/activiteit/lordi-special-guest?show=367",
+    "title": "Lordi + special guest",
+    "location": "volt",
+    "price": 25,
+    "shortText": "Metal",
+    "longText": "../public/texts/volt/dC9sb3JkaS1zcGVjaWFsLWd1ZXN0P3Nob3c9MzY3.html",
+    "image": "../public/event-images/volt/dC9sb3JkaS1zcGVjaWFsLWd1ZXN0P3Nob3c9MzY3",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2025-04-06T19:00:00",
+    "end": "2025-04-06T23:00:00",
+    "venueEventUrl": "https://www.poppodium-volt.nl/activiteit/benediction-jungle-rot-master?show=368",
+    "title": "Benediction + Jungle Rot + Master",
+    "location": "volt",
+    "price": 30,
+    "shortText": "Metal",
+    "longText": "../public/texts/volt/aW9uLWp1bmdsZS1yb3QtbWFzdGVyP3Nob3c9MzY4.html",
+    "image": "../public/event-images/volt/aW9uLWp1bmdsZS1yb3QtbWFzdGVyP3Nob3c9MzY4",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2025-05-08T20:00:00",
+    "end": "2025-05-08T23:00:00",
+    "venueEventUrl": "https://www.poppodium-volt.nl/activiteit/blackbriar?show=361",
+    "title": "Blackbriar",
+    "location": "volt",
+    "price": 25,
+    "shortText": "Metal",
+    "longText": "../public/texts/volt/YWN0aXZpdGVpdC9ibGFja2JyaWFyP3Nob3c9MzYx.html",
+    "image": "../public/event-images/volt/YWN0aXZpdGVpdC9ibGFja2JyaWFyP3Nob3c9MzYx",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "blackbriar": {
+        "s": "6pxqux3bytsvj7lcvviomi",
+        "l": "blackbriar",
+        "g": [
+          "dutch metal",
+          "gothic symphonic metal",
+          "slayer",
+          "symphonic metal"
+        ]
+      }
     }
+  }
 ]

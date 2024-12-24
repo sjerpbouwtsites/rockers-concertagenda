@@ -1,146 +1,108 @@
 [
-    {
-        "start": "2024-10-18T20:00:00",
-        "venueEventUrl": "https://neushoorn.nl/production/methusalem-death-moth-ferstoarn/",
-        "title": "Methusalem + Death Möth + Ferstoarn",
-        "location": "neushoorn",
-        "price": 5,
-        "shortText": "Een dikke avond vol Friese metal",
-        "longText": "../public/texts/neushoorn/dGh1c2FsZW0tZGVhdGgtbW90aC1mZXJzdG9hcm4v.html",
-        "image": "../public/event-images/neushoorn/dGh1c2FsZW0tZGVhdGgtbW90aC1mZXJzdG9hcm4v",
-        "soldOut": false,
-        "unavailable": false,
-        "eventGenres": null,
-        "artists": {
-            "methusalem": {
-                "s": "2c4uJ0Sv5DD1uLTOtxYxgY",
-                "l": "methusalem",
-                "g": ["heavy metal"]
-            },
-            "death möth": {
-                "s": "3VfPaNbS8syQfiBaWMswrd",
-                "l": "death%20m%C3%B6th",
-                "g": ["death metal"]
-            },
-            "ferstoarn": {
-                "s": null,
-                "l": "ferstoarn",
-                "g": ["melodic doom", "death metal"]
-            }
-        }
-    },
-    {
-        "start": "2024-11-03T20:00:00",
-        "venueEventUrl": "https://neushoorn.nl/production/master-boot-record/",
-        "title": "Master boot record",
-        "location": "neushoorn",
-        "price": 18,
-        "shortText": "Zware metal riffs en elektronische beats met de retroklanken van vintage computers en chiptune muziek",
-        "longText": "../public/texts/neushoorn/cHJvZHVjdGlvbi9tYXN0ZXItYm9vdC1yZWNvcmQv.html",
-        "image": "../public/event-images/neushoorn/cHJvZHVjdGlvbi9tYXN0ZXItYm9vdC1yZWNvcmQv",
-        "soldOut": false,
-        "unavailable": false,
-        "eventGenres": null,
-        "artists": {
-            "master boot record": {
-                "s": "77s5NAGQbxu8oLstaqSwHE",
-                "l": "master%20boot%20record",
-                "g": [
-                    "darksynth",
-                    "industrial",
-                    "electronic metal, synthwave",
-                    "chiptune"
-                ]
-            }
-        }
-    },
-    {
-        "start": "2024-11-24T19:00:00",
-        "venueEventUrl": "https://neushoorn.nl/production/ondfodt-anguish-ornaris-mukkes/",
-        "title": "Ondfødt + Anguish + Ornaris @ Mukkes",
-        "location": "neushoorn",
-        "price": null,
-        "shortText": "Een avond vol zwartgeblakende en blasfemische black metal",
-        "longText": "../public/texts/neushoorn/bmRmb2R0LWFuZ3Vpc2gtb3JuYXJpcy1tdWtrZXMv.html",
-        "image": "../public/event-images/neushoorn/bmRmb2R0LWFuZ3Vpc2gtb3JuYXJpcy1tdWtrZXMv",
-        "soldOut": false,
-        "unavailable": false,
-        "eventGenres": null,
-        "artists": {
-            "ondfødt": {
-                "s": "5uTwxBGntF8CBbnElxZ0OG",
-                "l": "ondf%C3%B8dt",
-                "g": [
-                    "finnish black metal",
-                    "occult black metal",
-                    "black metal"
-                ]
-            },
-            "anguish": {
-                "s": "1oAtPfjSyQWY7rERuiYnpl",
-                "l": "anguish",
-                "g": ["gym hardstyle", "black", "death metal"]
-            }
-        }
-    },
-    {
-        "start": "2024-12-12T20:00:00",
-        "venueEventUrl": "https://neushoorn.nl/production/tusky/",
-        "title": "Tusky",
-        "location": "neushoorn",
-        "price": 17,
-        "shortText": "The Trashtastic Tour",
-        "longText": "../public/texts/neushoorn/bmV1c2hvb3JuLm5sL3Byb2R1Y3Rpb24vdHVza3kv.html",
-        "image": "../public/event-images/neushoorn/bmV1c2hvb3JuLm5sL3Byb2R1Y3Rpb24vdHVza3kv",
-        "soldOut": false,
-        "unavailable": false,
-        "eventGenres": null,
-        "artists": {
-            "tusky": {
-                "s": "6XbZ8G0cFqSgUL4FmtiSPr",
-                "l": "tusky",
-                "g": ["dutch punk", "dutch rock"]
-            }
-        }
-    },
-    {
-        "start": "2024-12-22T19:30:00",
-        "venueEventUrl": "https://neushoorn.nl/production/joey-belladonna-classic-rock-feat-the-clarks/",
-        "title": "Joey Belladonna Classic Rock feat. The Clarks",
-        "location": "neushoorn",
-        "price": 29,
-        "shortText": "Anthrax zanger brengt rockklassiekers samen met NL legends",
-        "longText": "../public/texts/neushoorn/LWNsYXNzaWMtcm9jay1mZWF0LXRoZS1jbGFya3Mv.html",
-        "image": "../public/event-images/neushoorn/LWNsYXNzaWMtcm9jay1mZWF0LXRoZS1jbGFya3Mv",
-        "soldOut": false,
-        "unavailable": false,
-        "eventGenres": null,
-        "artists": {
-            "feat.": {
-                "s": null,
-                "l": "feat.",
-                "g": ["heavy", "power metal"]
-            }
-        }
-    },
-    {
-        "start": "4049-02-21T20:00:00",
-        "venueEventUrl": "https://neushoorn.nl/production/nh-cafe-the-optimist-in-me/",
-        "title": "The Optimist In Me",
-        "location": "neushoorn",
-        "price": 5,
-        "shortText": "Rock jezelf de positiviteit in met The Optimist In Me",
-        "longText": "../public/texts/neushoorn/b24vbmgtY2FmZS10aGUtb3B0aW1pc3QtaW4tbWUv.html",
-        "image": "../public/event-images/neushoorn/b24vbmgtY2FmZS10aGUtb3B0aW1pc3QtaW4tbWUv",
-        "soldOut": false,
-        "unavailable": false,
-        "eventGenres": null,
-        "artists": {
-            "the optimist in me": {
-                "s": "3qmkrrjqjtixsbgjgwwmmu",
-                "l": "the%20optimist%20in%20me",
-                "g": []
-            }
-        }
+  {
+    "start": "4049-01-24T20:00:00",
+    "venueEventUrl": "https://neushoorn.nl/production/hardcore-vrijdag-2/",
+    "title": "Hardcore Vrijdag",
+    "location": "neushoorn",
+    "price": 5,
+    "shortText": "Je tweemaandelijkse dosis hardcore punk op vrijdag",
+    "longText": "../public/texts/neushoorn/cHJvZHVjdGlvbi9oYXJkY29yZS12cmlqZGFnLTIv.html",
+    "image": "../public/event-images/neushoorn/cHJvZHVjdGlvbi9oYXJkY29yZS12cmlqZGFnLTIv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "4049-02-01T19:30:00",
+    "venueEventUrl": "https://neushoorn.nl/production/distant-enterprise-earth/",
+    "title": "Distant + Enterprise Earth",
+    "location": "neushoorn",
+    "price": 23,
+    "shortText": "Een nacht van ongekende brutaliteit",
+    "longText": "../public/texts/neushoorn/dGlvbi9kaXN0YW50LWVudGVycHJpc2UtZWFydGgv.html",
+    "image": "../public/event-images/neushoorn/dGlvbi9kaXN0YW50LWVudGVycHJpc2UtZWFydGgv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "enterprise earth": {
+        "s": "1l3cAmALCtGbjWGVtRwhoh",
+        "l": "enterprise%20earth",
+        "g": [
+          "brutal deathcore",
+          "deathcore",
+          "melodic metalcore",
+          "progressive deathcore"
+        ]
+      },
+      "distant": {
+        "s": "7dfpBi0QvO9FmlhBK6XHwJ",
+        "l": "distant",
+        "g": [
+          "deathcore",
+          "downtempo deathcore",
+          "slamming deathcore",
+          "groove metal"
+        ]
+      }
     }
+  },
+  {
+    "start": "4049-03-01T19:30:00",
+    "venueEventUrl": "https://neushoorn.nl/production/bizkit-park/",
+    "title": "Bizkit Park",
+    "location": "neushoorn",
+    "price": 20,
+    "shortText": "Earth’s mightiest Nu-Metal tribute band",
+    "longText": "../public/texts/neushoorn/b3JuLm5sL3Byb2R1Y3Rpb24vYml6a2l0LXBhcmsv.html",
+    "image": "../public/event-images/neushoorn/b3JuLm5sL3Byb2R1Y3Rpb24vYml6a2l0LXBhcmsv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "4049-04-18T20:00:00",
+    "venueEventUrl": "https://neushoorn.nl/production/3-eyed-kids/",
+    "title": "3 eyed kids",
+    "location": "neushoorn",
+    "price": 10,
+    "shortText": "Een brute mix van metal en hiphop",
+    "longText": "../public/texts/neushoorn/b3JuLm5sL3Byb2R1Y3Rpb24vMy1leWVkLWtpZHMv.html",
+    "image": "../public/event-images/neushoorn/b3JuLm5sL3Byb2R1Y3Rpb24vMy1leWVkLWtpZHMv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "3 eyed kids": {
+        "s": "4cmx6rsoa66tynathlh0in",
+        "l": null,
+        "g": [
+          "metalcore",
+          "progressive"
+        ]
+      }
+    }
+  },
+  {
+    "start": "4049-09-19T20:00:00",
+    "venueEventUrl": "https://neushoorn.nl/production/nh-cafe-the-optimist-in-me/",
+    "title": "The Optimist In Me",
+    "location": "neushoorn",
+    "price": null,
+    "shortText": "Rock jezelf de positiviteit in met The Optimist In Me",
+    "longText": "../public/texts/neushoorn/b24vbmgtY2FmZS10aGUtb3B0aW1pc3QtaW4tbWUv.html",
+    "image": "../public/event-images/neushoorn/b24vbmgtY2FmZS10aGUtb3B0aW1pc3QtaW4tbWUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "the optimist in me": {
+        "s": "3qmkrrjqjtixsbgjgwwmmu",
+        "l": "the%20optimist%20in%20me",
+        "g": []
+      }
+    }
+  }
 ]
