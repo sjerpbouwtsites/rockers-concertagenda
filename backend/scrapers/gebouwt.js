@@ -25,8 +25,8 @@ const scraper = new AbstractScraper({
     },
     app: {
         harvest: {
-            dividers: [`+`, " –"],
-            dividerRex: "[\\+]|(?:s[-–])",
+            dividers: [`+`],
+            dividerRex: "[\\+]|(?:s[-])",
             artistsIn: ["title"]
         },
         mainPage: {
@@ -71,10 +71,10 @@ scraper.mainPage = async function () {
     let rawEvents = await page.evaluate(
         // eslint-disable-next-line no-shadow
         ({ workerData, unavailabiltyTerms }) =>
-            Array.from(document.querySelectorAll(".home-block.event")).map(
+            Array.from(document.querySelectorAll(".event-card ")).map(
                 (eventEl) => {
                     const title =
-                        eventEl.querySelector("header h4")?.textContent ?? "";
+                        eventEl.querySelector(".artist")?.textContent ?? "";
                     const res = {
                         anker: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
                         errors: [],
@@ -83,10 +83,10 @@ scraper.mainPage = async function () {
 
                     res.mapToStartDate =
                         document
-                            .querySelector("time.date")
+                            .querySelector(".date")
                             ?.textContent.trim()
                             .toLowerCase()
-                            .replace("'", " ") ?? "";
+                            .replace("'", "") ?? "";
 
                     res.venueEventUrl = eventEl.href;
                     const uaRex = new RegExp(
@@ -94,13 +94,9 @@ scraper.mainPage = async function () {
                         "gi"
                     );
                     res.unavailable = !!eventEl.textContent.match(uaRex);
-                    res.soldOut =
-                        !!eventEl
-                            .querySelector(".last-tickets-holder")
-                            ?.textContent.match(/uitverkocht|sold\s?out/i) ??
-                        false;
+                    res.soldOut = !!eventEl.querySelector(".status.soldout");
                     res.shortText =
-                        eventEl.querySelector(".subtitle")?.textContent ?? null;
+                        eventEl.querySelector(".info-sub")?.textContent ?? null;
                     return res;
                 }
             ),
@@ -144,18 +140,19 @@ scraper.singlePage = async function ({ page, event }) {
                 errors: []
             };
 
-            res.mapToStartTime =
-                document
-                    .querySelector(".event-info .times .info-line .value")
-                    ?.textContent.trim()
-                    .toLowerCase() ?? "";
-            res.mapToDoorTime =
-                document
-                    .querySelector(
-                        ".event-info .times .info-line + .info-line .value"
-                    )
-                    ?.textContent.trim()
-                    .toLowerCase() ?? "";
+            const lis = Array.from(
+                document.querySelectorAll(".event-info-data li")
+            );
+            const openLi = lis.find((li) => li.textContent.includes("open"));
+            let startLi = lis.find((li) => li.textContent.includes("aanvang"));
+            if (!startLi) {
+                startLi = document.querySelector(".event-info-data");
+            }
+
+            res.mapToStartTime = startLi.textContent.trim().toLowerCase() ?? "";
+            res.mapToDoorTime = openLi
+                ? openLi.textContent.trim().toLowerCase()
+                : null;
 
             return res;
         },
@@ -173,8 +170,8 @@ scraper.singlePage = async function ({ page, event }) {
         workerData,
         event,
         pageInfo,
-        selectors: [".hightlighted-event"],
-        mode: "background-src"
+        selectors: [".image-wrapper img"],
+        mode: "image-src"
     });
     pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
     pageInfo.image = imageRes.image;
@@ -183,15 +180,10 @@ scraper.singlePage = async function ({ page, event }) {
         page,
         event,
         pageInfo,
-        selectors: [".price"]
+        selectors: [".ticket-price"]
     });
-    const isGratis = await page.evaluate(
-        () =>
-            !!document
-                .querySelector(".last-tickets")
-                ?.textContent.match(/gratis/i) ?? null
-    );
-    if (pageInfo.errors.length && isGratis) {
+
+    if (pageInfo.errors.length) {
         pageInfo.price = 0;
     } else {
         pageInfo.errors = pageInfo.errors.concat(priceRes.errors);
