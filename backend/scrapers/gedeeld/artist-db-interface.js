@@ -70,40 +70,6 @@ export async function asyncIsAllowedEvent(event, olderReasons) {
 }
 // #endregion AS. IS ALLOWED EVENT
 
-// #region AS. IF NOTALLOW REFUSE
-export async function asyncIfNotAllowedRefuse(event, reasons) {
-    const reasonsCopy = Array.isArray(reasons) ? reasons : [];
-
-    const isAllowed = await this.asyncIsAllowedEvent(event, reasons);
-    if (this.lastDBAnswer.success === "error") {
-        this.handleError(
-            this.lastDBAnswer?.data?.error,
-            this.lastDBAnswer.reason,
-            "close-thread"
-        );
-        return errorAnswerObject(event, reasons, this.lastDBAnswer);
-    }
-    reasonsCopy.push(this.lastDBAnswer.reason);
-    if (isAllowed.success === false || isAllowed.success === null) {
-        reasonsCopy.push(
-            `🟥 because not present in allowed: ifNotAllowedRefuse sa1`
-        );
-        this.talkToDB({
-            type: "db-request",
-            subtype: "saveRefusedTemp",
-            messageData: {
-                title: event.workTitle,
-                slug: event.slug,
-                eventDate: event.shortDate
-            }
-        });
-        reasonsCopy.push(`🟧 saved in refused temp sa2`);
-        return failureAnswerObject(event, reasonsCopy, true);
-    }
-    return successAnswerObject(event, reasonsCopy, true);
-}
-// #endregion AS. IF NOTALLOW REFUSE
-
 // #region AS. IS REFUSED
 export async function asyncIsRefused(event, olderReasons = []) {
     this.talkToDB(talkTitleAndSlug("getRefused", event));

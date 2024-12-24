@@ -240,7 +240,7 @@ export default class MonitorField {
                                 const fileNaamIngekort = fileLink
                                     .split("backend")[1]
                                     .substring(1, fileLink.length - 1);
-                                const fileLinkWSL = `vscode://vscode-remote/wsl+Ubuntu-22.04/home/sjerp/hosted/rockagenda${fileLink}`;
+                                const fileLinkWSL = `vscode://vscode-remote/wsl+Ubuntu/home/sjerp/hosted/rockagenda${fileLink}`;
                                 t = t.replace(
                                     volleFileNaam,
                                     `<a class='monitorfield__filelink' href='${fileLinkWSL}'>${fileNaamIngekort}</a>`

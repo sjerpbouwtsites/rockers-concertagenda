@@ -95,8 +95,9 @@ function _mapToTime(event, key, required) {
                 match = str.match(/(\d{1,2}):(\d\d)/);
                 const secs = "00";
                 // eslint-disable-next-line no-param-reassign
-                event[timeKey] =
-                    `${match[1].padStart(2, "0")}:${match[2]}:${secs}`;
+                event[timeKey] = `${match[1].padStart(2, "0")}:${
+                    match[2]
+                }:${secs}`;
             }
         } catch (isTimeError) {
             event.errors.push({
@@ -155,7 +156,6 @@ export function mapToStartDate(event, regexMode, months) {
 
     if (regexMode === "dag-maandNaam") {
         const dateM = event.mapToStartDate.match(/(\d{1,2})[\/\s]?(\w+)/);
-
         if (
             !Array.isArray(dateM) ||
             (Array.isArray(dateM) && dateM.length < 3)
@@ -183,6 +183,7 @@ export function mapToStartDate(event, regexMode, months) {
             // eslint-disable-next-line no-param-reassign
             event.startDate = dateStr;
         }
+
         return event;
     }
     if (regexMode === "dag-maandNaam-jaar") {

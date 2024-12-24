@@ -25,7 +25,6 @@ import {
     asyncGoodTerms,
     asyncExplicitEventCategories,
     asyncMetalEncyclopediaConfirmation,
-    asyncIfNotAllowedRefuse,
     asyncHasAllowedArtist,
     asyncSuccess,
     asyncFailure
@@ -112,9 +111,6 @@ export default class AbstractScraper extends ScraperConfig {
         this.asyncMetalEncyclopediaConfirmation =
             asyncMetalEncyclopediaConfirmation;
         this.asyncMetalEncyclopediaConfirmation.bind(this);
-
-        this.asyncIfNotAllowedRefuse = asyncIfNotAllowedRefuse;
-        this.asyncIfNotAllowedRefuse.bind(this);
 
         this.asyncHasAllowedArtist = asyncHasAllowedArtist;
         this.asyncHasAllowedArtist.bind(this);
@@ -1357,7 +1353,6 @@ export default class AbstractScraper extends ScraperConfig {
         }
 
         const funcNamesMap = {
-            ifNotAllowedRefuse: "asyncIfNotAllowedRefuse",
             allowedEvent: "asyncIsAllowedEvent",
             refused: "asyncIsRefused",
             forbiddenTerms: "asyncForbiddenTerms",
