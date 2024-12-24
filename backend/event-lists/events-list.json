@@ -1,782 +1,304 @@
 [
   {
-    "start": "2024-12-27T19:30:00",
-    "venueEventUrl": "https://www.willemeen.nl/programma/back-alley-ritual-2-w-lugubrum-be-botulistum-triste-saison/",
-    "title": "Back alley ritual 2 w/ lugubrum (be) ",
-    "location": "willemeen",
-    "price": null,
-    "shortText": " botulistum  +  triste saison (fr) black metal",
-    "longText": "../public/texts/willemeen/bS1iZS1ib3R1bGlzdHVtLXRyaXN0ZS1zYWlzb24v.html",
-    "soldOut": [
-      "uitverkocht"
-    ],
+    "door": "2025-01-16T18:30:00",
+    "start": "2025-01-16T19:00:00",
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/76440654/insomnium-16-01-2025",
+    "title": "Insomnium",
+    "location": "tivolivredenburg",
+    "price": 33.75,
+    "shortText": "Integrale uitvoering van Beyond The Shadows Of The Dying Sun",
+    "longText": "../public/texts/tivolivredenburg/Lzc2NDQwNjU0L2luc29tbml1bS0xNi0wMS0yMDI1.html",
+    "image": "../public/event-images/tivolivredenburg/Lzc2NDQwNjU0L2luc29tbml1bS0xNi0wMS0yMDI1",
+    "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": {}
+    "artists": {
+      "insomnium": {
+        "s": "3uiglg971orm5fe6v8lvqs",
+        "l": "insomnium",
+        "g": [
+          "finnish death metal",
+          "finnish melodeath",
+          "finnish metal",
+          "melodic death metal"
+        ]
+      }
+    }
   },
   {
-    "start": "2024-12-28T21:00:00",
-    "venueEventUrl": "https://www.willemeen.nl/programma/kutfeest/",
-    "title": "Kutfeest: alles naar de klote!!!",
-    "location": "willemeen",
+    "door": "2025-01-19T18:30:00",
+    "start": "2025-01-19T19:00:00",
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/83816779/stick-to-your-guns-19-01-2025",
+    "title": "Stick To Your Guns",
+    "location": "tivolivredenburg",
+    "price": 28.85,
+    "shortText": "Amerikaanse hardcorepunkband met nieuwe EP",
+    "longText": "../public/texts/tivolivredenburg/L3N0aWNrLXRvLXlvdXItZ3Vucy0xOS0wMS0yMDI1.html",
+    "image": "../public/event-images/tivolivredenburg/L3N0aWNrLXRvLXlvdXItZ3Vucy0xOS0wMS0yMDI1",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "stick to your guns": {
+        "s": "2sqrupqcoipb7uzvkapenj",
+        "l": "stick%20to%20your%20guns",
+        "g": [
+          "melodic metalcore",
+          "metalcore",
+          "modern melodic hardcore"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-01-24T19:30:00",
+    "start": "2025-01-24T20:15:00",
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/10893380/wardruna-releaseparty-24-01-2025",
+    "title": "Wardruna releaseparty",
+    "location": "tivolivredenburg",
     "price": 10,
-    "shortText": "punk festival",
-    "longText": "../public/texts/willemeen/bGxlbWVlbi5ubC9wcm9ncmFtbWEva3V0ZmVlc3Qv.html",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "start": "2025-01-08T19:30:00",
-    "venueEventUrl": "https://www.willemeen.nl/programma/vigljos-ch-support/",
-    "title": "Vígljós (CH) + Sword Breaker + Novelization",
-    "location": "willemeen",
-    "price": 10,
-    "shortText": "ancient beekeeping black metal",
-    "longText": "../public/texts/willemeen/L3Byb2dyYW1tYS92aWdsam9zLWNoLXN1cHBvcnQv.html",
-    "soldOut": false,
+    "shortText": "Exclusieve video première: Live at the Acropolis",
+    "longText": "../public/texts/tivolivredenburg/cmRydW5hLXJlbGVhc2VwYXJ0eS0yNC0wMS0yMDI1.html",
+    "image": "../public/event-images/tivolivredenburg/cmRydW5hLXJlbGVhc2VwYXJ0eS0yNC0wMS0yMDI1",
+    "soldOut": true,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "vígljós": {
-        "s": "42pcJGi9NDMScWTXauDj7u",
-        "l": "v%C3%ADglj%C3%B3s",
+      "wardruna": {
+        "s": "0nj6wloasaj1pn4vrdtpka",
+        "l": "wardruna",
         "g": [
-          "black metal"
+          "nordic folk",
+          "rune folk",
+          "viking folk"
         ]
       }
     }
   },
   {
-    "door": "2025-01-18T19:00:00",
-    "start": "2025-01-18T20:30:00",
-    "venueEventUrl": "https://www.podiumvictorie.nl/programma/new-cool-collective-2025",
-    "title": "New Cool Collective",
-    "location": "victorie",
-    "price": 25.9,
-    "shortText": "Jazzformatie viert dertig jaar op het podium",
-    "longText": "../public/texts/victorie/cmFtbWEvbmV3LWNvb2wtY29sbGVjdGl2ZS0yMDI1.html",
-    "image": "../public/event-images/victorie/cmFtbWEvbmV3LWNvb2wtY29sbGVjdGl2ZS0yMDI1",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2025-01-24T19:00:00",
-    "start": "2025-01-24T19:45:00",
-    "venueEventUrl": "https://www.podiumvictorie.nl/programma/triggerfinger-2025",
-    "title": "Triggerfinger",
-    "location": "victorie",
-    "price": 39.5,
-    "shortText": "Victorie 15 jaar",
-    "longText": "../public/texts/victorie/bC9wcm9ncmFtbWEvdHJpZ2dlcmZpbmdlci0yMDI1.html",
-    "image": "../public/event-images/victorie/bC9wcm9ncmFtbWEvdHJpZ2dlcmZpbmdlci0yMDI1",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "triggerfinger": {
-        "s": "3uhilk54oe4ja06v962ptu",
-        "l": "triggerfinger",
-        "g": [
-          "belgian rock"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-01-25T19:00:00",
-    "venueEventUrl": "https://www.willemeen.nl/programma/von-mollestein-sledeon-estering-existance-scenyte/",
-    "title": "Von Mollestein ",
-    "location": "willemeen",
-    "price": 13.21,
-    "shortText": " Sledeon  +  Festering Existence  +  Scenyte industrial, progressive, metal",
-    "longText": "../public/texts/willemeen/b24tZXN0ZXJpbmctZXhpc3RhbmNlLXNjZW55dGUv.html",
+    "door": "2025-01-26T19:00:00",
+    "start": "2025-01-26T20:00:00",
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/55110861/fleshgod-apocalypse-26-01-2025",
+    "title": "Fleshgod Apocalypse",
+    "location": "tivolivredenburg",
+    "price": 28.85,
+    "shortText": "Symfonische deathmetalband met special guest Ex Deo",
+    "longText": "../public/texts/tivolivredenburg/Zmxlc2hnb2QtYXBvY2FseXBzZS0yNi0wMS0yMDI1.html",
+    "image": "../public/event-images/tivolivredenburg/Zmxlc2hnb2QtYXBvY2FseXBzZS0yNi0wMS0yMDI1",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "von mollestein": {
-        "s": "54K2l8MWmIaWcCwwA3zoW4",
-        "l": "von%20mollestein",
+      "fleshgod apocalypse": {
+        "s": "5ctFffJBdJe8PZL7W7NeML",
+        "l": "fleshgod%20apocalypse",
         "g": [
-          "electronic",
-          "industrial black metal"
-        ]
-      },
-      "sledeon": {
-        "s": "23KNXVB0pGtIiOSCF9sP4f",
-        "l": "sledeon",
-        "g": [
-          "symphonic metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-02-01T23:59:00",
-    "venueEventUrl": "https://www.willemeen.nl/programma/exentric-featuring-premium-uk-lixed-be-fms-uk-and-many-more-tba/",
-    "title": "Exentric featuring premium (uk) ",
-    "location": "willemeen",
-    "price": 9.99,
-    "shortText": " lixed (be)  +  fms (uk) and many more Drum 'n Bass, Dubstep, Techno, Hardcore",
-    "longText": "../public/texts/willemeen/ZC1iZS1mbXMtdWstYW5kLW1hbnktbW9yZS10YmEv.html",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "more": {
-        "s": null,
-        "l": "more",
-        "g": [
-          "nwobhm",
-          "heavy metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-02-01T16:00:00",
-    "venueEventUrl": "https://www.willemeen.nl/programma/psychonaut-4-ge-frostmoon-eclipse-it-atra-vetosus-au-lichtbleck-at-sedna-it/",
-    "title": "Psychonaut 4 (ge) ",
-    "location": "willemeen",
-    "price": 20,
-    "shortText": " atra vetosus (au)  +  lost in desolation (au)  +  lichtblick (at)  +  sedna (it) depressive black metal, avant garde",
-    "longText": "../public/texts/willemeen/c3VzLWF1LWxpY2h0YmxlY2stYXQtc2VkbmEtaXQv.html",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "psychonaut": {
-        "s": "7obihmzfoaykafu5uo65jc",
-        "l": "psychonaut",
-        "g": [
-          "blackgaze",
-          "depressive black metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-02-08T23:59:00",
-    "venueEventUrl": "https://www.willemeen.nl/programma/kwijt-hard-reset/",
-    "title": "Kwijt – hard reset",
-    "location": "willemeen",
-    "price": 10,
-    "shortText": "techno, hardgroove",
-    "longText": "../public/texts/willemeen/bmwvcHJvZ3JhbW1hL2t3aWp0LWhhcmQtcmVzZXQv.html",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "reset": {
-        "s": "7IpVGSueIeprUfcTL6tARx",
-        "l": "reset",
-        "g": [
-          "canadian punk",
-          "quebec punk",
-          "thrash metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-02-08T18:00:00",
-    "venueEventUrl": "https://www.willemeen.nl/programma/swingersfest-2-0-met-dikke-dennis-de-rockers-dmng-bismut-thammuz/",
-    "title": "Swingersfest 2.0 met: Dikke Dennis & de Røckers ",
-    "location": "willemeen",
-    "price": 10,
-    "shortText": " DMNG  +  Bismut  +  Thammuz  +  Røyking speedrock, stoner, heavy psych, rawk",
-    "longText": "../public/texts/willemeen/ZS1yb2NrZXJzLWRtbmctYmlzbXV0LXRoYW1tdXov.html",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "dikke dennis &": {
-        "s": null,
-        "l": "dikke%20dennis%20&",
-        "g": [
-          "punk ",
-          "rock "
-        ]
-      },
-      "de røckers": {
-        "s": "4gnyohyczuql9vf0vbjffq",
-        "l": null,
-        "g": []
-      },
-      "thammuz": {
-        "s": "5XjWtIODAsVMlwEBfmlbOp",
-        "l": "thammuz",
-        "g": [
-          "dutch stoner rock"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-02-08T20:00:00",
-    "end": "2025-02-08T00:00:00",
-    "venueEventUrl": "https://www.poppodium-volt.nl/activiteit/siamese-support?show=336",
-    "title": "Siamese + support",
-    "location": "volt",
-    "price": 25,
-    "shortText": "Metal",
-    "longText": "../public/texts/volt/aXRlaXQvc2lhbWVzZS1zdXBwb3J0P3Nob3c9MzM2.html",
-    "image": "../public/event-images/volt/aXRlaXQvc2lhbWVzZS1zdXBwb3J0P3Nob3c9MzM2",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2025-02-20T19:15:00",
-    "start": "2025-02-20T19:45:00",
-    "venueEventUrl": "https://www.podiumvictorie.nl/programma/berget-lewis-ft.-leif-de-leeuw-band",
-    "title": "Berget Lewis ft. Leif de Leeuw Band",
-    "location": "victorie",
-    "price": 33.35,
-    "shortText": "samensmelting van southern rock en soulvolle vocalen",
-    "longText": "../public/texts/victorie/dC1sZXdpcy1mdC4tbGVpZi1kZS1sZWV1dy1iYW5k.html",
-    "image": "../public/event-images/victorie/dC1sZXdpcy1mdC4tbGVpZi1kZS1sZWV1dy1iYW5k",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "band": {
-        "s": null,
-        "l": "band",
-        "g": [
-          "heavy",
-          "power metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-02-21T20:00:00",
-    "venueEventUrl": "https://www.willemeen.nl/programma/back-alley-ritual-met-hellmilitia-fr-messor-falce/",
-    "title": "Back Alley Ritual met: Hell Militia (FR) ",
-    "location": "willemeen",
-    "price": 15,
-    "shortText": " Messor Falce nihilistic & occult black metal",
-    "longText": "../public/texts/willemeen/dC1oZWxsbWlsaXRpYS1mci1tZXNzb3ItZmFsY2Uv.html",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "hell militia": {
-        "s": "2D6GI5kBDDD2NXpyXn55ae",
-        "l": "hell%20militia",
-        "g": [
-          "french black metal",
-          "black metal"
-        ]
-      },
-      "messor falce": {
-        "s": "7McdIvHMzUfIsVqSY2yQtT",
-        "l": "messor%20falce",
-        "g": [
-          "black metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-02-21T19:45:00",
-    "start": "2025-02-21T20:15:00",
-    "venueEventUrl": "https://www.podiumvictorie.nl/programma/speedmobile-2025",
-    "title": "Speedmobile",
-    "location": "victorie",
-    "price": 21.5,
-    "shortText": "Hardrockformatie met leden van Batmobile en Peter Pan Speedrock",
-    "longText": "../public/texts/victorie/Lm5sL3Byb2dyYW1tYS9zcGVlZG1vYmlsZS0yMDI1.html",
-    "image": "../public/event-images/victorie/Lm5sL3Byb2dyYW1tYS9zcGVlZG1vYmlsZS0yMDI1",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "speedmobile": {
-        "s": "15qfmszEuUlcKcPcwt5P05",
-        "l": "speedmobile",
-        "g": [
-          "punk ",
-          "rock "
-        ]
-      },
-      "speed": {
-        "s": "4wf6GGNBqaU79839E6yjfn",
-        "l": "speed",
-        "g": [
-          "australian hardcore",
-          "heavy",
-          "speed metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-02-22T20:00:00",
-    "venueEventUrl": "https://www.willemeen.nl/programma/outcast-invites-frenchkick-records/",
-    "title": "Outcast invites FrenchKickz Records",
-    "location": "willemeen",
-    "price": 12.5,
-    "shortText": "hardcore gabber",
-    "longText": "../public/texts/willemeen/c3QtaW52aXRlcy1mcmVuY2hraWNrLXJlY29yZHMv.html",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "outcast": {
-        "s": "4ddifkfkmzrazeakcn1gjo",
-        "l": "outcast",
-        "g": [
-          "deep punk rock",
-          "northern irish punk",
-          "uk82"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-03-07T19:00:00",
-    "venueEventUrl": "https://www.willemeen.nl/programma/nytt-land-ru-leaves-eyes-de-ater-cl-more-excl-nl-show/",
-    "title": "Nytt land (ru) ",
-    "location": "willemeen",
-    "price": 23,
-    "shortText": " leaves eyes (de)  +  ater (cl)  +  more excl nl show ",
-    "longText": "../public/texts/willemeen/LWRlLWF0ZXItY2wtbW9yZS1leGNsLW5sLXNob3cv.html",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "more": {
-        "s": null,
-        "l": "more",
-        "g": [
-          "nwobhm",
-          "heavy metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-03-07T19:45:00",
-    "start": "2025-03-07T20:45:00",
-    "venueEventUrl": "https://www.podiumvictorie.nl/programma/bizkit-park",
-    "title": "Bizkit Park",
-    "location": "victorie",
-    "price": 25.9,
-    "shortText": "Ode aan de nu metal",
-    "longText": "../public/texts/victorie/dG9yaWUubmwvcHJvZ3JhbW1hL2JpemtpdC1wYXJr.html",
-    "image": "../public/event-images/victorie/dG9yaWUubmwvcHJvZ3JhbW1hL2JpemtpdC1wYXJr",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2025-03-13T19:00:00",
-    "start": "2025-03-13T20:30:00",
-    "venueEventUrl": "https://www.podiumvictorie.nl/programma/manfred-manns-earth-band-2025",
-    "title": "Manfred Mann's Earth Band",
-    "location": "victorie",
-    "price": 36.4,
-    "shortText": "progrockband bekend van wereldhit 'Blinded By The Light'",
-    "longText": "../public/texts/victorie/L21hbmZyZWQtbWFubnMtZWFydGgtYmFuZC0yMDI1.html",
-    "image": "../public/event-images/victorie/L21hbmZyZWQtbWFubnMtZWFydGgtYmFuZC0yMDI1",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "band": {
-        "s": null,
-        "l": "band",
-        "g": [
-          "heavy",
-          "power metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-03-15T18:30:00",
-    "venueEventUrl": "https://www.willemeen.nl/programma/gothminister-no-stoneman-ch-morphium-sp-dame-tu-alma-ch-excl-nl-show/",
-    "title": "Gothminister (no) ",
-    "location": "willemeen",
-    "price": 23,
-    "shortText": " stoneman (ch)  +  morphium (sp)   +   dame tu alma (ch) excl nl show Gothic, Horror, heavy",
-    "longText": "../public/texts/willemeen/LWRhbWUtdHUtYWxtYS1jaC1leGNsLW5sLXNob3cv.html",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "gothminister": {
-        "s": "2s3xwpuezppvudttv7wefx",
-        "l": "gothminister",
-        "g": [
-          "gothic metal",
-          "industrial metal",
-          "norwegian metal"
-        ]
-      },
-      "stone": {
-        "s": "22be4uq6banwshpvcdxlce",
-        "l": "stone",
-        "g": [
-          "album rock",
-          "british invasion",
-          "classic rock",
-          "rock"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-03-15T23:59:00",
-    "venueEventUrl": "https://www.willemeen.nl/programma/zeerow-x-spoor-12/",
-    "title": "Zeerow x spoor 12",
-    "location": "willemeen",
-    "price": 10,
-    "shortText": "techno",
-    "longText": "../public/texts/willemeen/bC9wcm9ncmFtbWEvemVlcm93LXgtc3Bvb3ItMTIv.html",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "zeerow": {
-        "s": "03xoaxyofepturf5jdbksf",
-        "l": "zeerow",
-        "g": []
-      }
-    }
-  },
-  {
-    "start": "2025-03-22T18:30:00",
-    "venueEventUrl": "https://www.willemeen.nl/programma/congress-be-rancor-meer-tba/",
-    "title": "Congress (BE) ",
-    "location": "willemeen",
-    "price": 20,
-    "shortText": " Rancor  +  Trenchwar  +  Last (BE) H8000 edgemetal, strhateedge, hardcore",
-    "longText": "../public/texts/willemeen/YS9jb25ncmVzcy1iZS1yYW5jb3ItbWVlci10YmEv.html",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "congress": {
-        "s": "5Q7dfEU42dhhQZWEPi9Fde",
-        "l": "congress",
-        "g": [
-          "belgian hardcore",
-          "h8000"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-03-28T19:00:00",
-    "venueEventUrl": "https://www.willemeen.nl/programma/saor-ie-can-bardd-ch-morgarten-ch/",
-    "title": "Saor (ie) + cân bardd (ch) + morgarten (ch)",
-    "location": "willemeen",
-    "price": 27.5,
-    "shortText": "folk, black",
-    "longText": "../public/texts/willemeen/LWllLWNhbi1iYXJkZC1jaC1tb3JnYXJ0ZW4tY2gv.html",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "saor": {
-        "s": "4rHMzJ1RKUMtid1K2QEYbr",
-        "l": "saor",
-        "g": [
-          "atmospheric black metal",
-          "autonomous black metal",
-          "british black metal",
-          "celtic metal",
-          "folk black metal",
-          "folk metal",
-          "forest black metal",
-          "scottish metal",
-          "uk post-metal",
-          "viking metal",
-          "voidgaze",
-          "atmospheric folk",
-          "black metal"
-        ]
-      },
-      "morgarten": {
-        "s": "4xKJfYRasExH6cgMmWlBpd",
-        "l": "morgarten",
-        "g": [
-          "swiss black metal",
-          "swiss metal",
-          "black",
-          "folk metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-03-29T15:00:00",
-    "venueEventUrl": "https://www.willemeen.nl/programma/smyrna-deathfest-stillbirth-soulburn-teethgrinder-the-lucifer-principle-devoured-elysium-1/",
-    "title": "Smyrna Deathfest: Stillbirth ",
-    "location": "willemeen",
-    "price": 25,
-    "shortText": " Soulburn  +  Teethgrinder  +  The Lucifer Principle  +  Devoured Elysium  + 1 deathmetal festival",
-    "longText": "../public/texts/willemeen/LXByaW5jaXBsZS1kZXZvdXJlZC1lbHlzaXVtLTEv.html",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "devoured elysium": {
-        "s": "0StR9GrLWsoDfnVEHvTbez",
-        "l": "devoured%20elysium",
-        "g": [
-          "turkish death metal",
+          "blackened deathcore",
+          "brutal death metal",
           "death metal",
-          "grindcore"
-        ]
-      },
-      "teethgrinder": {
-        "s": "0J9eNWKbu2RTQ5bcQ0eJS6",
-        "l": "teethgrinder",
-        "g": [
-          "grindcore",
-          "powerviolence"
-        ]
-      },
-      "lucifer": {
-        "s": "3oypqq5xqbllc5fh0h7a6q",
-        "l": "lucifer",
-        "g": [
-          "belgian metal"
+          "italian death metal",
+          "opera metal",
+          "symphonic death metal",
+          "symphonic metal",
+          "technical death metal",
+          "symphonic",
+          "technical death metal"
         ]
       }
     }
   },
   {
-    "door": "2025-03-29T19:15:00",
-    "start": "2025-03-29T19:45:00",
-    "venueEventUrl": "https://www.podiumvictorie.nl/programma/nick-schilder",
-    "title": "Nick Schilder",
-    "location": "victorie",
-    "price": 31.65,
-    "shortText": "Shatterproof Clubtour",
-    "longText": "../public/texts/victorie/cmllLm5sL3Byb2dyYW1tYS9uaWNrLXNjaGlsZGVy.html",
-    "image": "../public/event-images/victorie/cmllLm5sL3Byb2dyYW1tYS9uaWNrLXNjaGlsZGVy",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "child": {
-        "s": null,
-        "l": "child",
-        "g": [
-          "grindcore"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-03-30T19:00:00",
-    "end": "2025-03-30T22:30:00",
-    "venueEventUrl": "https://www.poppodium-volt.nl/activiteit/lordi-special-guest?show=367",
-    "title": "Lordi + special guest",
-    "location": "volt",
-    "price": 25,
-    "shortText": "Metal",
-    "longText": "../public/texts/volt/dC9sb3JkaS1zcGVjaWFsLWd1ZXN0P3Nob3c9MzY3.html",
-    "image": "../public/event-images/volt/dC9sb3JkaS1zcGVjaWFsLWd1ZXN0P3Nob3c9MzY3",
+    "door": "2025-02-06T18:15:00",
+    "start": "2025-02-06T18:45:00",
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/44008748/napalm-death-06-02-2025",
+    "title": "Napalm Death",
+    "location": "tivolivredenburg",
+    "price": 39.75,
+    "shortText": "Grindcore-legende met supports Crowbar, Full of Hell & Brat",
+    "longText": "../public/texts/tivolivredenburg/MDA4NzQ4L25hcGFsbS1kZWF0aC0wNi0wMi0yMDI1.html",
+    "image": "../public/event-images/tivolivredenburg/MDA4NzQ4L25hcGFsbS1kZWF0aC0wNi0wMi0yMDI1",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2025-04-03T19:15:00",
-    "start": "2025-04-03T19:45:00",
-    "venueEventUrl": "https://www.podiumvictorie.nl/programma/anneke-van-giersbergen-2025",
-    "title": "Anneke van Giersbergen",
-    "location": "victorie",
-    "price": 31.65,
-    "shortText": "Veelzijdige rockzangeres",
-    "longText": "../public/texts/victorie/bWEvYW5uZWtlLXZhbi1naWVyc2Jlcmdlbi0yMDI1.html",
-    "image": "../public/event-images/victorie/bWEvYW5uZWtlLXZhbi1naWVyc2Jlcmdlbi0yMDI1",
-    "soldOut": false,
-    "eventGenres": null,
     "artists": {
-      "anneke van giersbergen": {
-        "s": "6tzqjnkayty8hfqbeddf8v",
-        "l": "anneke%20van%20giersbergen",
+      "napalm death": {
+        "s": "3UqRgrDIQ208yNGiWKRMNt",
+        "l": "napalm%20death",
         "g": [
-          "metal"
+          "birmingham metal",
+          "british death metal",
+          "british grindcore",
+          "death metal",
+          "deathgrind",
+          "grindcore",
+          "groove metal",
+          "metal",
+          "hardcore punk (early)",
+          " grindcore",
+          "death metal (later)"
         ]
       }
     }
   },
   {
-    "door": "2025-04-04T19:30:00",
-    "start": "2025-04-04T20:00:00",
-    "venueEventUrl": "https://www.podiumvictorie.nl/programma/clan-of-xymox",
-    "title": "Clan of Xymox",
-    "location": "victorie",
-    "price": 23,
-    "shortText": "Dark wave formatie is terug met nieuw album 'Exodus'",
-    "longText": "../public/texts/victorie/cmllLm5sL3Byb2dyYW1tYS9jbGFuLW9mLXh5bW94.html",
-    "image": "../public/event-images/victorie/cmllLm5sL3Byb2dyYW1tYS9jbGFuLW9mLXh5bW94",
+    "door": "2025-02-23T18:30:00",
+    "start": "2025-02-23T19:30:00",
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/73914593/green-lung-unto-others-23-02-2025",
+    "title": "Green Lung & Unto Others",
+    "location": "tivolivredenburg",
+    "price": 26.85,
+    "shortText": "'Heathen Neverlands' co-headline tour",
+    "longText": "../public/texts/tivolivredenburg/ZW4tbHVuZy11bnRvLW90aGVycy0yMy0wMi0yMDI1.html",
+    "image": "../public/event-images/tivolivredenburg/ZW4tbHVuZy11bnRvLW90aGVycy0yMy0wMi0yMDI1",
     "soldOut": false,
+    "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "clan of xymox": {
-        "s": "1whmr7i0ulf58wfqexcpha",
-        "l": "clan%20of%20xymox",
+      "unto others": {
+        "s": "1W5khHrkcznsyChxwIBfAI",
+        "l": "unto%20others",
         "g": [
-          "dark wave",
-          "dream pop",
-          "ethereal wave",
+          "portland metal",
+          "heavy metal",
           "gothic rock"
         ]
+      },
+      "green lung": {
+        "s": "2MIoyDjdxCUdnV59UqbJGk",
+        "l": "green%20lung",
+        "g": [
+          "psychedelic doom",
+          "stoner metal",
+          "stoner rock",
+          "uk doom metal",
+          "uk stoner rock",
+          "stoner",
+          "doom metal",
+          "rock"
+        ]
       }
     }
   },
   {
-    "start": "2025-04-06T19:00:00",
-    "end": "2025-04-06T23:00:00",
-    "venueEventUrl": "https://www.poppodium-volt.nl/activiteit/benediction-jungle-rot-master?show=368",
-    "title": "Benediction + Jungle Rot + Master",
-    "location": "volt",
-    "price": 30,
-    "shortText": "Metal",
-    "longText": "../public/texts/volt/aW9uLWp1bmdsZS1yb3QtbWFzdGVyP3Nob3c9MzY4.html",
-    "image": "../public/event-images/volt/aW9uLWp1bmdsZS1yb3QtbWFzdGVyP3Nob3c9MzY4",
+    "door": "2025-02-27T19:30:00",
+    "start": "2025-02-27T20:30:00",
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/31037569/ploegendienst-27-02-2025",
+    "title": "Ploegendienst",
+    "location": "tivolivredenburg",
+    "price": 22.85,
+    "shortText": "Nederlandstalige hardcorepunk met Ray Fuego",
+    "longText": "../public/texts/tivolivredenburg/Mzc1NjkvcGxvZWdlbmRpZW5zdC0yNy0wMi0yMDI1.html",
+    "image": "../public/event-images/tivolivredenburg/Mzc1NjkvcGxvZWdlbmRpZW5zdC0yNy0wMi0yMDI1",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "ploegendienst": {
+        "s": "2aJUvAtem0t0zRKxJsRoea",
+        "l": "ploegendienst",
+        "g": [
+          "dutch indie rock",
+          "dutch punk"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-03-14T18:30:00",
+    "start": "2025-03-14T19:00:00",
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/82976959/punk-rock-factory-14-03-2025",
+    "title": "Punk Rock Factory",
+    "location": "tivolivredenburg",
+    "price": 25.85,
+    "shortText": "Klassiekers omgetoverd tot energieke punkrock",
+    "longText": "../public/texts/tivolivredenburg/OS9wdW5rLXJvY2stZmFjdG9yeS0xNC0wMy0yMDI1.html",
+    "image": "../public/event-images/tivolivredenburg/OS9wdW5rLXJvY2stZmFjdG9yeS0xNC0wMy0yMDI1",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "punk rock factory": {
+        "s": "1doeW0oJMkO8kEq5g9kFNR",
+        "l": "punk%20rock%20factory",
+        "g": [
+          "punk cover"
+        ]
+      },
+      "punk": {
+        "s": null,
+        "l": "punk",
+        "g": [
+          "melodic death metal (early)",
+          " glitch",
+          "dubstep",
+          "electronica (later)"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-03-17T19:15:00",
+    "start": "2025-03-17T20:00:00",
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/96466065/bilmuri-17-03-2025",
+    "title": "Bilmuri",
+    "location": "tivolivredenburg",
+    "price": 26.35,
+    "shortText": "Rock- en post-hardcoreproject van voormalig Attack Attack!-lid",
+    "longText": "../public/texts/tivolivredenburg/ZGEvOTY0NjYwNjUvYmlsbXVyaS0xNy0wMy0yMDI1.html",
+    "image": "../public/event-images/tivolivredenburg/ZGEvOTY0NjYwNjUvYmlsbXVyaS0xNy0wMy0yMDI1",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {}
   },
   {
-    "start": "2025-04-18T19:00:00",
-    "venueEventUrl": "https://www.willemeen.nl/programma/frozen-crown-it-fellowship-uk-lutharo-ca/",
-    "title": "Frozen crown (it) ",
-    "location": "willemeen",
-    "price": 23,
-    "shortText": " fellowship (uk)  +  lutharo (ca) power metal",
-    "longText": "../public/texts/willemeen/bi1pdC1mZWxsb3dzaGlwLXVrLWx1dGhhcm8tY2Ev.html",
+    "door": "2025-03-19T19:30:00",
+    "start": "2025-03-19T20:00:00",
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/28129019/this-will-destroy-you-19-03-2025",
+    "title": "This Will Destroy You",
+    "location": "tivolivredenburg",
+    "price": 24.2,
+    "shortText": "Filmische postrock | in De Helling",
+    "longText": "../public/texts/tivolivredenburg/aXMtd2lsbC1kZXN0cm95LXlvdS0xOS0wMy0yMDI1.html",
+    "image": "../public/event-images/tivolivredenburg/aXMtd2lsbC1kZXN0cm95LXlvdS0xOS0wMy0yMDI1",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "frozen crown": {
-        "s": "6hbGneO1qRnmz6xflK4n8E",
-        "l": "frozen%20crown",
+      "this will destroy you": {
+        "s": "0mg4lxiw7n4x0wjdc6wyxk",
+        "l": "this%20will%20destroy%20you",
         "g": [
-          "gothic symphonic metal",
-          "italian folk metal",
-          "italian power metal",
-          "melodic metal",
-          "power metal",
-          "slayer",
-          "symphonic metal",
-          "symphonic power metal",
-          "power metal"
+          "ambient post-rock",
+          "american post-rock",
+          "doomgaze",
+          "drone metal",
+          "instrumental post-rock",
+          "post-rock"
         ]
       }
     }
   },
   {
-    "start": "2025-05-08T20:00:00",
-    "end": "2025-05-08T23:00:00",
-    "venueEventUrl": "https://www.poppodium-volt.nl/activiteit/blackbriar?show=361",
-    "title": "Blackbriar",
-    "location": "volt",
-    "price": 25,
-    "shortText": "Metal",
-    "longText": "../public/texts/volt/YWN0aXZpdGVpdC9ibGFja2JyaWFyP3Nob3c9MzYx.html",
-    "image": "../public/event-images/volt/YWN0aXZpdGVpdC9ibGFja2JyaWFyP3Nob3c9MzYx",
+    "door": "2025-03-22T19:15:00",
+    "start": "2025-03-22T20:15:00",
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/19398653/the-pineapple-thief-22-03-2025",
+    "title": "The Pineapple Thief",
+    "location": "tivolivredenburg",
+    "price": 36.75,
+    "shortText": "Toonaangevende progressieve rockband",
+    "longText": "../public/texts/tivolivredenburg/dGhlLXBpbmVhcHBsZS10aGllZi0yMi0wMy0yMDI1.html",
+    "image": "../public/event-images/tivolivredenburg/dGhlLXBpbmVhcHBsZS10aGllZi0yMi0wMy0yMDI1",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "blackbriar": {
-        "s": "6pxqux3bytsvj7lcvviomi",
-        "l": "blackbriar",
+      "the pineapple thief": {
+        "s": "4lrBMUSk8PiNnCEZfsmPAk",
+        "l": "the%20pineapple%20thief",
         "g": [
-          "dutch metal",
-          "gothic symphonic metal",
-          "slayer",
-          "symphonic metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-05-10T19:00:00",
-    "venueEventUrl": "https://www.willemeen.nl/programma/diabolical-echoes-part-7/",
-    "title": "Diabolical Echoes part 7",
-    "location": "willemeen",
-    "price": 8,
-    "shortText": "black metal",
-    "longText": "../public/texts/willemeen/YW1tYS9kaWFib2xpY2FsLWVjaG9lcy1wYXJ0LTcv.html",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "echo": {
-        "s": "0fgykf9avljex0l9wt5b8z",
-        "l": "echo",
-        "g": [
-          "alternative rock",
-          "new romantic",
-          "new wave",
-          "permanent wave"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-05-15T19:00:00",
-    "start": "2025-05-15T19:45:00",
-    "venueEventUrl": "https://www.podiumvictorie.nl/programma/neuk!-69-charger-skroetbalg",
-    "title": "Neuk! - 69 Charger - Skroetbalg",
-    "location": "victorie",
-    "price": 22,
-    "shortText": "Halsbrekende tour",
-    "longText": "../public/texts/victorie/bWEvbmV1ayEtNjktY2hhcmdlci1za3JvZXRiYWxn.html",
-    "image": "../public/event-images/victorie/bWEvbmV1ayEtNjktY2hhcmdlci1za3JvZXRiYWxn",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "69 charger": {
-        "s": "2sibonl0bjr2o5ckfrcepl",
-        "l": "69%20charger",
-        "g": [
-          "metal",
-          "punk"
-        ]
-      },
-      "neuk!": {
-        "s": "61z4arbgymgk3nsxcyazoa",
-        "l": "neuk!",
-        "g": []
-      }
-    }
-  },
-  {
-    "door": "2025-07-10T19:30:00",
-    "start": "2025-07-10T20:15:00",
-    "venueEventUrl": "https://www.podiumvictorie.nl/programma/valient-thorr-10/07/25",
-    "title": "Valient Thorr",
-    "location": "victorie",
-    "price": 23,
-    "shortText": "Legendarische rockhelden uit North Carolina",
-    "longText": "../public/texts/victorie/b2dyYW1tYS92YWxpZW50LXRob3JyLTEwLzA3LzI1.html",
-    "image": "../public/event-images/victorie/b2dyYW1tYS92YWxpZW50LXRob3JyLTEwLzA3LzI1",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "valient thorr": {
-        "s": "6rVaRHgldZoRMvERFyZmAH",
-        "l": "valient%20thorr",
-        "g": [
-          "north carolina metal",
-          "heavy",
-          "southern metal",
-          "rock"
+          "modern progressive rock",
+          "progressive metal"
         ]
       }
     }

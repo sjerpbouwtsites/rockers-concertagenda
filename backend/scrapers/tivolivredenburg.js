@@ -113,8 +113,6 @@ scraper.mainPage = async function () {
         { workerData, unavailabiltyTerms: terms.unavailability }
     );
 
-    this.dirtyLog(rawEvents);
-
     rawEvents = rawEvents
         .map((event) =>
             mapToStartDate(event, "dag-maandNaam-jaar", this.months)
@@ -160,47 +158,24 @@ scraper.singlePage = async function ({ page, event }) {
         await this.waitTime(1500);
     }
 
-    await page.evaluate(() => {
-        Array.from(document.querySelectorAll(".lane--event time")).forEach(
-            (t) => {
-                if (t?.parentNode?.previousElementSibling) {
-                    const tijdTekst =
-                        t.parentNode.previousElementSibling.textContent.toLowerCase();
-                    if (tijdTekst.includes("open"))
-                        t.classList.add("deur-tijd");
-                    if (tijdTekst.includes("aanvang"))
-                        t.classList.add("start-tijd");
-                    if (tijdTekst.includes("eind"))
-                        t.classList.add("eind-tijd");
-                } else if (t.parentNode.classList.contains("event-cta")) {
-                    t.classList.add("datum-tijd");
-                }
-            }
-        );
-    });
-
     let pageInfo = {
         anker: `<a class='page-info' href='${event.venueEventUrl}'>${event.title}</a>`,
         errors: []
     };
 
     pageInfo.startDate = event.startDate;
-    pageInfo.mapToStartTime = await page.evaluate(
-        () => document.querySelector(".start-tijd")?.textContent ?? null
-    );
-    pageInfo.mapToDoorTime = await page.evaluate(
-        () => document.querySelector(".deur-tijd")?.textContent ?? null
-    );
-    pageInfo.mapToEndTime = await page.evaluate(
-        () => document.querySelector(".eind-tijd")?.textContent ?? null
-    );
-    if (!pageInfo.mapToStartTime && pageInfo.mapToDoorTime) {
-        pageInfo.mapToStartTime = pageInfo.mapToDoorTime;
-        pageInfo.mapToDoorTime = null;
-    }
-    if (!pageInfo.mapToStartTime && pageInfo.mapToEndTime) {
-        pageInfo.mapToStartTime = pageInfo.mapToEndTime;
-        pageInfo.mapToEndTime = null;
+
+    const tijden = await page.evaluate(() => {
+        return Array.from(document.querySelectorAll(".lane--event time"))
+            .map((a) => a.parentNode.textContent.trim().toLowerCase())
+            .filter((a) => a.match(/\d\d:\d\d/));
+    });
+    const tijdenL = tijden.length;
+    if (!tijdenL) {
+        pageInfo.mapToStartTime = "20:00";
+    } else {
+        pageInfo.mapToStartTime = tijden[tijdenL - 1];
+        pageInfo.mapToDoorTime = tijden[0];
     }
 
     pageInfo = mapToStartTime(pageInfo);
@@ -208,10 +183,6 @@ scraper.singlePage = async function ({ page, event }) {
     if (pageInfo.mapToDoorTime) {
         pageInfo = mapToDoorTime(pageInfo);
         pageInfo = combineDoorTimeStartDate(pageInfo);
-    }
-    if (pageInfo.mapToEndTime) {
-        pageInfo = mapToEndTime(pageInfo);
-        pageInfo = combineEndTimeStartDate(pageInfo);
     }
 
     const imageRes = await getImage({

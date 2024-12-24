@@ -14,12 +14,12 @@ export const AbstractWorkerConfig = {
 };
 
 export const workerConfig = {
-    // tivolivredenburg: {
-    //     workerCount: 2,
-    //     workerConcurrent: 2,
-    //     forceSet: 6,
-    //     CPUReq: "low"
-    // }
+    tivolivredenburg: {
+        workerCount: 2,
+        workerConcurrent: 2,
+        forceSet: 6,
+        CPUReq: "low"
+    }
     // oosterpoort: { workerCount: 1, workerConcurrent: 1, forceSet: 5 },
     // paradiso: {
     //     workerCount: 2,

@@ -1,5 +1,31 @@
 [
   {
+    "door": "2025-01-19T18:30:00",
+    "start": "2025-01-19T19:00:00",
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/83816779/stick-to-your-guns-19-01-2025",
+    "title": "Stick To Your Guns",
+    "location": "tivolivredenburg",
+    "price": 28.85,
+    "shortText": "Amerikaanse hardcorepunkband met nieuwe EP",
+    "longText": "../public/texts/tivolivredenburg/L3N0aWNrLXRvLXlvdXItZ3Vucy0xOS0wMS0yMDI1.html",
+    "image": "../public/event-images/tivolivredenburg/L3N0aWNrLXRvLXlvdXItZ3Vucy0xOS0wMS0yMDI1",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "stick to your guns": {
+        "s": "2sqrupqcoipb7uzvkapenj",
+        "l": "stick%20to%20your%20guns",
+        "g": [
+          "melodic metalcore",
+          "metalcore",
+          "modern melodic hardcore"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-01-26T19:00:00",
     "start": "2025-01-26T20:00:00",
     "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/55110861/fleshgod-apocalypse-26-01-2025",
     "title": "Fleshgod Apocalypse",
@@ -31,6 +57,7 @@
     }
   },
   {
+    "door": "2025-02-23T18:30:00",
     "start": "2025-02-23T19:30:00",
     "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/73914593/green-lung-unto-others-23-02-2025",
     "title": "Green Lung & Unto Others",
@@ -69,6 +96,7 @@
     }
   },
   {
+    "door": "2025-03-14T18:30:00",
     "start": "2025-03-14T19:00:00",
     "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/82976959/punk-rock-factory-14-03-2025",
     "title": "Punk Rock Factory",
@@ -101,6 +129,7 @@
     }
   },
   {
+    "door": "2025-03-19T19:30:00",
     "start": "2025-03-19T20:00:00",
     "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/28129019/this-will-destroy-you-19-03-2025",
     "title": "This Will Destroy You",
