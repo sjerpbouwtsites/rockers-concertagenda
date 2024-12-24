@@ -7,7 +7,9 @@ export default async function longTextSocialsIframes(page, event) {
         ({ event }) => {
             const res = {};
             const textSelector = "main > article article p";
-            const mediaSelector = [].join(", ");
+            const mediaSelector = ['.swiper-slide a[href*="youtube"]'].join(
+                ", "
+            );
             const removeEmptyHTMLFrom = textSelector;
             const socialSelector = [].join(", ");
             const removeSelectors = [
@@ -42,7 +44,9 @@ export default async function longTextSocialsIframes(page, event) {
             const removeHTMLWithStrings = [];
 
             // eerst onzin attributes wegslopen
-            const socAttrRemSelAdd = `${socialSelector.length ? `, ${socialSelector}` : ""}`;
+            const socAttrRemSelAdd = `${
+                socialSelector.length ? `, ${socialSelector}` : ""
+            }`;
             const mediaAttrRemSelAdd = `${
                 mediaSelector.length
                     ? `, ${mediaSelector} *, ${mediaSelector}`
@@ -62,18 +66,13 @@ export default async function longTextSocialsIframes(page, event) {
                 ? ""
                 : Array.from(document.querySelectorAll(mediaSelector)).map(
                       (bron) => {
-                          bron.className = "";
-
-                          const idm = bron.href.match(/\/embed\/(.*)\?/);
-                          if (Array.isArray(idm)) {
-                              return {
-                                  outer: null,
-                                  src: null,
-                                  id: idm[1],
-                                  type: "youtube"
-                              };
-                          }
-                          return null;
+                          const h = bron.href;
+                          return {
+                              outer: null,
+                              src: h.substring(0, h.indexOf("?")),
+                              id: null,
+                              type: "youtube"
+                          };
                       }
                   );
 
