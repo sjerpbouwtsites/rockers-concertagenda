@@ -79,11 +79,12 @@ scraper.mainPage = async function () {
     let rawEvents = await page.evaluate(
         // eslint-disable-next-line no-shadow
         ({ workerData }) =>
-            Array.from(document.querySelectorAll(".agenda__item__block "))
+            Array.from(document.querySelectorAll(".grid-item article"))
                 .map((agendaBlock) => {
                     const title =
-                        agendaBlock.querySelector(".eventTitle")?.textContent ??
-                        "";
+                        agendaBlock
+                            .querySelector("label")
+                            ?.textContent.trim() ?? "";
                     const res = {
                         anker: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
                         errors: [],
@@ -91,13 +92,10 @@ scraper.mainPage = async function () {
                     };
                     res.venueEventUrl =
                         agendaBlock.querySelector("a")?.href ?? null;
-                    const wegMetSpans =
-                        agendaBlock.querySelectorAll("time span");
-                    wegMetSpans.forEach((span) =>
-                        span.parentNode.removeChild(span)
-                    );
-                    res.mapToStartDate =
-                        agendaBlock.querySelector("time")?.textContent;
+
+                    res.mapToStartDate = agendaBlock
+                        .querySelector("datetime")
+                        ?.textContent.trim();
                     res.soldOut =
                         !!agendaBlock?.innerHTML.match(
                             /uitverkocht|sold\s?out/i
@@ -154,22 +152,13 @@ scraper.singlePage = async function ({ page, event }) {
                 errors: []
             };
 
-            res.mapToStartTime =
-                document
-                    .querySelector(".eventInfo, .timetable")
-                    ?.textContent.replaceAll(/\s/g, " ")
-                    .replace(/\s+/g, " ")
-                    .match(/aanvang:.*\d\d:\d\d/i) ?? null;
-            res.mapToDoorTime =
-                document
-                    .querySelector(".eventInfo, .timetable")
-                    ?.textContent.replaceAll(/\s/g, " ")
-                    .replace(/\s+/g, " ")
-                    .match(/deuren open:.*\d\d:\d\d/i) ?? null;
-
-            res.soldOut = !!(
-                document.querySelector("#tickets .soldout") ?? null
-            );
+            const stM = document
+                .querySelector(".timesTable")
+                .textContent.toLowerCase()
+                .match(/aanvang.*(\d\d:\d\d)/);
+            if (Array.isArray(stM)) {
+                res.mapToStartTime = stM[1];
+            }
 
             document
                 .querySelectorAll("article .wysiwyg p")

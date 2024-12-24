@@ -6,10 +6,9 @@ export default async function longTextSocialsIframes(page, event) {
         () => {
             const res = {};
 
-            const mediaSelector =
-                ".hide-for-large .video iframe, .hide-for-large .spotify iframe";
-            const textSelector = "article .wysiwyg";
-            const removeEmptyHTMLFrom = "article .wysiwyg";
+            const mediaSelector = [".does-not-exist"];
+            const textSelector = [".floated.intro"];
+            const removeEmptyHTMLFrom = [".floated.intro"];
             const removeSelectors = [
                 `${textSelector} [class*='icon-']`,
                 `${textSelector} [class*='fa-']`,
@@ -33,14 +32,15 @@ export default async function longTextSocialsIframes(page, event) {
             ];
             const attributesToRemoveSecondRound = ["class", "id"];
             const removeHTMLWithStrings = ["Tassenbeleid"];
-            res.mediaForHTML = Array.from(
-                document.querySelectorAll(mediaSelector)
-            ).map((bron) => ({
-                outer: bron.outerHTML,
-                src: bron.src,
-                id: null,
-                type: bron.src.includes("spotify") ? "spotify" : "youtube"
-            }));
+            res.mediaForHTML = "";
+            // res.mediaForHTML = Array.from(
+            //     document.querySelectorAll(mediaSelector)
+            // ).map((bron) => ({
+            //     outer: bron.outerHTML,
+            //     src: bron.src,
+            //     id: null,
+            //     type: bron.src.includes("spotify") ? "spotify" : "youtube"
+            // }));
 
             // UNIEK AFASLIVE tweede wysiwig weghalen
             const tweedeWys = document.querySelectorAll(textSelector);
@@ -49,7 +49,9 @@ export default async function longTextSocialsIframes(page, event) {
             }
 
             // eerst onzin attributes wegslopen
-            const socAttrRemSelAdd = `${socialSelector.length ? `, ${socialSelector}` : ""}`;
+            const socAttrRemSelAdd = `${
+                socialSelector.length ? `, ${socialSelector}` : ""
+            }`;
             const mediaAttrRemSelAdd = `${
                 mediaSelector.length
                     ? `, ${mediaSelector} *, ${mediaSelector}`
