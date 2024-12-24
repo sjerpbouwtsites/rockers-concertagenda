@@ -196,7 +196,7 @@ async function getBaseMusicEvents(browser, qwm) {
     await metalFanDoURL(page, "https://www.metalfan.nl/agenda.php", qwm);
     await metalFanDoURL(
         page,
-        "https://www.metalfan.nl/agenda.php?year=2024&sw=",
+        "https://www.metalfan.nl/agenda.php?year=2025&sw=",
         qwm
     );
 }
