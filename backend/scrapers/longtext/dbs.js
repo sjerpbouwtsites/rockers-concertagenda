@@ -37,7 +37,9 @@ export default async function longTextSocialsIframes(page, event) {
             const removeHTMLWithStrings = [];
 
             // eerst onzin attributes wegslopen
-            const socAttrRemSelAdd = `${socialSelector.length ? `, ${socialSelector}` : ""}`;
+            const socAttrRemSelAdd = `${
+                socialSelector.length ? `, ${socialSelector}` : ""
+            }`;
             const mediaAttrRemSelAdd = `${
                 mediaSelector.length
                     ? `, ${mediaSelector} *, ${mediaSelector}`
@@ -64,8 +66,8 @@ export default async function longTextSocialsIframes(page, event) {
                     type: src.includes("spotify")
                         ? "spotify"
                         : src.includes("youtube")
-                          ? "youtube"
-                          : "bandcamp"
+                        ? "youtube"
+                        : "bandcamp"
                 };
             });
 

@@ -317,6 +317,61 @@
     }
   },
   {
+    "door": "2025-03-30T16:00:00",
+    "start": "2025-03-30T16:40:00",
+    "venueEventUrl": "https://bibelot.net/programma/mantras-for-peaceful-death-over-europe/",
+    "title": "Cult of fire (cz) ",
+    "location": "bibelot",
+    "price": 30,
+    "shortText": " the great old ones (fr)  +  caronte (it) undefined",
+    "longText": "../public/texts/bibelot/b3ItcGVhY2VmdWwtZGVhdGgtb3Zlci1ldXJvcGUv.html",
+    "image": "../public/event-images/bibelot/b3ItcGVhY2VmdWwtZGVhdGgtb3Zlci1ldXJvcGUv",
+    "soldOut": false,
+    "eventGenres": [
+      "metal "
+    ],
+    "artists": {
+      "undefined": {
+        "s": "6NMVL5NGYZKTl6AZuxybbV",
+        "l": "undefined",
+        "g": [
+          "metalcore",
+          "new wave ",
+          "punk "
+        ]
+      },
+      "cult of fire": {
+        "s": "1GNzgaXdYGtEP5xOqCsdSq",
+        "l": "cult%20of%20fire",
+        "g": [
+          "atmospheric black metal",
+          "black metal",
+          "czsk black metal",
+          "epic black metal",
+          "voidgaze",
+          "epic black metal",
+          "metal "
+        ]
+      },
+      "the great old ones": {
+        "s": "1U6VZQrgQ4CNXbS6FpP0QC",
+        "l": "the%20great%20old%20ones",
+        "g": [
+          "atmospheric black metal",
+          "avant-garde metal",
+          "blackgaze",
+          "french black metal",
+          "french metal",
+          "lovecraftian metal",
+          "post-black metal",
+          "voidgaze",
+          "post-black metal",
+          "metal "
+        ]
+      }
+    }
+  },
+  {
     "door": "2025-05-17T19:30:00",
     "start": "2025-05-17T20:00:00",
     "venueEventUrl": "https://bibelot.net/programma/wodan-boys/",
@@ -368,7 +423,7 @@
     "venueEventUrl": "https://bibelot.net/programma/its-not-a-phase-mom-sum41-some41-the-offspring-by-the-offspin-uk/",
     "title": "It’s not a phase mom: sum41 (some41) & the offspring (by the offspin) (uk)",
     "location": "bibelot",
-    "price": 0,
+    "price": 30,
     "shortText": " undefined",
     "longText": "../public/texts/bibelot/ZS1vZmZzcHJpbmctYnktdGhlLW9mZnNwaW4tdWsv.html",
     "image": "../public/event-images/bibelot/ZS1vZmZzcHJpbmctYnktdGhlLW9mZnNwaW4tdWsv",

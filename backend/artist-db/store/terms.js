@@ -134,7 +134,8 @@ const forbiddenTerms = [
     "indietronica",
     "baroque pop",
     "chamber pop",
-    "christian music"
+    "christian music",
+    "winterweekend"
 ];
 
 const globalForbiddenGenres = [
