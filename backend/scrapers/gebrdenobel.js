@@ -14,7 +14,7 @@ const scraper = new AbstractScraper({
 
     mainPage: {
         timeout: 31005,
-        url: "https://gebrdenobel.nl/programma/"
+        url: "https://nobel.nl/agenda?genre[20]=20"
     },
     singlePage: {
         timeout: 15004
@@ -29,6 +29,7 @@ const scraper = new AbstractScraper({
             requiredProperties: ["venueEventUrl", "title"],
             asyncCheckFuncs: [
                 "refused",
+                "hasAllowedArtist",
                 "allowedEvent",
                 "forbiddenTerms",
                 "spotifyConfirmation"
@@ -62,13 +63,6 @@ scraper.mainPage = async function () {
     }
 
     const { stopFunctie, page } = await this.mainPageStart();
-
-    await this.waitTime(50);
-    await page.waitForSelector("#edit-genre-20--3");
-    await page.evaluate(() => {
-        document.querySelector("#edit-genre-20--3").click();
-    });
-    await this.waitTime(100);
 
     let rawEvents = await page.evaluate(
         // eslint-disable-next-line no-shadow
@@ -171,20 +165,6 @@ scraper.singlePage = async function ({ page, event }) {
     pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
     pageInfo.image = imageRes.image;
 
-    // await page.evaluate(() => {
-    //   document.querySelectorAll('.event-table tr').forEach((row) => {
-    //     if (row.textContent.includes('€')) {
-    //       row.classList.add('gebrdenobel-price-manual');
-    //     }
-    //   });
-    // });
-
-    // await page.evaluate(() => {
-    //   document.querySelectorAll('.event-table tr').forEach((row) => {
-    //     if (row.textContent.includes('€')) row.classList.add('rij-heeft-prijs');
-    //   });
-    // });
-
     const priceRes = await this.getPriceFromHTML({
         page,
         event,
@@ -199,6 +179,8 @@ scraper.singlePage = async function ({ page, event }) {
     pageInfo.mediaForHTML = mediaForHTML;
     pageInfo.socialsForHTML = socialsForHTML;
     pageInfo.textForHTML = textForHTML;
+
+    this.dirtyLog(pageInfo.mediaForHTML);
 
     return this.singlePageEnd({
         pageInfo,
