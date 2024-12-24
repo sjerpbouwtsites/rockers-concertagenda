@@ -539,6 +539,15 @@ export default class AbstractScraper extends ScraperConfig {
             if (generatedEvent.done) return useableEventsCheckedArray;
 
             const eventToCheck = generatedEvent.value;
+            if (eventToCheck.corrupted) {
+                this.dirtyTalk(
+                    `corrupt: ${eventToCheck.title} ${eventToCheck.corrupted}`
+                );
+                return await this.rawEventsAsyncCheck({
+                    eventGen,
+                    checkedEvents: useableEventsCheckedArray
+                });
+            }
             const checkResult = await this.mainPageAsyncCheck(eventToCheck);
             eventToCheck.mainPageReasons = checkResult.reasons;
             eventToCheck.reasons = checkResult.reasons;
@@ -658,9 +667,7 @@ export default class AbstractScraper extends ScraperConfig {
         // maak pagina
         let singleEventPage;
         if (!this._s.app.singlePage.useCustomScraper) {
-            singleEventPage = await this.createSinglePage(
-                singleEvent.venueEventUrl
-            );
+            singleEventPage = await this.createSinglePage(singleEvent);
             if (!singleEventPage) {
                 singleEvent.corrupted = "niet gelukt page te maken";
                 return useableEventsList.length
@@ -900,21 +907,21 @@ export default class AbstractScraper extends ScraperConfig {
     /**
      *
      *
-     * @param {string} url
-     * @return {page} reeds genavigeerde pagina
+     * @param {event} event obj
+     * @return {page|null} reeds genavigeerde pagina
      * @memberof AbstractScraper
      */
-    async createSinglePage(url) {
+    async createSinglePage(event) {
         try {
             const page = await this.browser.newPage();
             try {
-                await page.goto(url, this.singlePage);
+                await page.goto(event.venueEventUrl, this.singlePage);
             } catch (error) {
                 this.handleError(
                     error,
-                    `Mislukken aanmaken <a class='single-page-failure error-link' href='${url}'>single pagina</a>`,
+                    `Mislukken single <a class='single-page-failure error-link' href='${event.venueEventUrl}'>${event.title}</a>`,
                     "notice",
-                    url
+                    event
                 );
             }
 
@@ -922,7 +929,7 @@ export default class AbstractScraper extends ScraperConfig {
         } catch (error) {
             this.handleError(
                 error,
-                `Mislukken aanmaken <a class='single-page-failure error-link' href='${url}'>single pagina</a> wss duurt te lang`,
+                `Mislukken single pagina <a class='single-page-failure error-link' href='${event.venueEventUrl}'>${event.title}</a> wss duurt te lang`,
                 "notice",
                 null
             );
