@@ -180,14 +180,6 @@
     "soldOut": true,
     "eventGenres": null,
     "artists": {
-      "knives": {
-        "s": "2YoHhPouaTT96k3dUQ8WZK",
-        "l": "knives",
-        "g": [
-          "grindcore",
-          "death 'n' roll"
-        ]
-      },
       "rock,": {
         "s": null,
         "l": "rock,",
@@ -204,6 +196,14 @@
           "dubstep",
           "electronica (later)"
         ]
+      },
+      "knives": {
+        "s": "2YoHhPouaTT96k3dUQ8WZK",
+        "l": "knives",
+        "g": [
+          "grindcore",
+          "death 'n' roll"
+        ]
       }
     }
   },
@@ -219,20 +219,6 @@
     "soldOut": true,
     "eventGenres": null,
     "artists": {
-      "the gathering": {
-        "s": "2kO6zjt4a1OIqxOERhliEX",
-        "l": "the%20gathering",
-        "g": [
-          "atmospheric doom",
-          "dutch metal",
-          "gothic metal",
-          "gothic symphonic metal",
-          "symphonic metal",
-          "death",
-          "doom metal, atmospheric doom metal (early)",
-          " atmospheric rock (later)"
-        ]
-      },
       "rock,": {
         "s": null,
         "l": "rock,",
@@ -245,6 +231,20 @@
         "l": "metal",
         "g": [
           "death metal"
+        ]
+      },
+      "the gathering": {
+        "s": "2kO6zjt4a1OIqxOERhliEX",
+        "l": "the%20gathering",
+        "g": [
+          "atmospheric doom",
+          "dutch metal",
+          "gothic metal",
+          "gothic symphonic metal",
+          "symphonic metal",
+          "death",
+          "doom metal, atmospheric doom metal (early)",
+          " atmospheric rock (later)"
         ]
       }
     }

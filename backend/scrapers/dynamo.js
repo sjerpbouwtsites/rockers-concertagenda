@@ -76,45 +76,43 @@ scraper.mainPage = async function () {
         // eslint-disable-next-line no-shadow
         ({ workerData }) =>
             Array.from(
-                document.querySelectorAll(
-                    'a[href*="https://dynamo-eindhoven.nl"].image-border-element'
+                document.querySelectorAll(".group.image-border-trigger")
+            ).map((baseEvent) => {
+                const title = baseEvent.querySelector("h3")?.textContent ?? "";
+                const res = {
+                    anker: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
+                    errors: [],
+                    title
+                };
+
+                res.venueEventUrl = baseEvent.querySelector("a")?.href ?? "";
+                if (res.venueEventUrl.includes("metalfest")) {
+                    res.corrupted = `is metalfest`;
+                }
+
+                const dM =
+                    baseEvent
+                        .querySelector("a + a")
+                        ?.textContent.match(/(\d\d-\w\w\w-\d\d\d\d)/) ?? "";
+                if (Array.isArray(dM)) {
+                    res.mapToStartDate = dM[0];
+                }
+
+                res.shortText =
+                    baseEvent.querySelector("a + a div:last-child")
+                        ?.textContent ?? "";
+
+                res.soldOut = (
+                    baseEvent.querySelector("a + a")?.textContent ?? ""
                 )
-            )
-                .map((el) => el.parentNode)
-                .map((baseEvent) => {
-                    const title =
-                        baseEvent.querySelector("h3")?.textContent ?? "";
-                    const res = {
-                        anker: `<a class='page-info' href='${document.location.href}'>${workerData.family} main - ${title}</a>`,
-                        errors: [],
-                        title
-                    };
-
-                    res.venueEventUrl =
-                        baseEvent.querySelector("a")?.href ?? "";
-                    if (res.venueEventUrl.includes("metalfest")) {
-                        res.corrupted = `is metalfest`;
-                    }
-
-                    res.mapToStartDate =
-                        baseEvent
-                            .querySelector("a + a")
-                            ?.textContent.replaceAll(/-/g, " ")
-                            .replaceAll(/\s\s/g, " ") ?? "";
-
-                    res.shortText =
-                        baseEvent.querySelector("a + a div:last-child")
-                            ?.textContent ?? "";
-
-                    res.soldOut = (
-                        baseEvent.querySelector("a + a")?.textContent ?? ""
-                    )
-                        .toLowerCase()
-                        .includes("uitverkocht");
-                    return res;
-                }),
+                    .toLowerCase()
+                    .includes("uitverkocht");
+                return res;
+            }),
         { workerData }
     );
+
+    this.dirtyLog(rawEvents);
 
     rawEvents = rawEvents
         .map((event) =>
@@ -171,6 +169,9 @@ scraper.singlePage = async function ({ page, event }) {
                 if (Array.isArray(m)) {
                     res.mapToStartTime = m[1];
                 }
+            } else if (res.mapToDoorTime) {
+                res.mapToStartTime = res.mapToDoorTime;
+                res.mapToDoorTime = null;
             } else {
                 res.corrupt = true;
             }

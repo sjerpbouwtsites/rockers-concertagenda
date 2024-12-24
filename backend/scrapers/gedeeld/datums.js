@@ -188,7 +188,7 @@ export function mapToStartDate(event, regexMode, months) {
     }
     if (regexMode === "dag-maandNaam-jaar") {
         const dateM = event.mapToStartDate.match(
-            /(\d{1,2})[\/\s]?(\w+)[\/\s]?(\d{2,4})/
+            /(\d{1,2})[\/\s-]?(\w+)[\/\s-]?(\d{2,4})/
         );
         if (
             !Array.isArray(dateM) ||

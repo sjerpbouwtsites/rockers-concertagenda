@@ -181,20 +181,6 @@
     "soldOut": true,
     "eventGenres": null,
     "artists": {
-      "rock,": {
-        "s": null,
-        "l": "rock,",
-        "g": [
-          "heavy metal"
-        ]
-      },
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      },
       "the gathering": {
         "s": "2kO6zjt4a1OIqxOERhliEX",
         "l": "the%20gathering",
@@ -207,6 +193,20 @@
           "death",
           "doom metal, atmospheric doom metal (early)",
           " atmospheric rock (later)"
+        ]
+      },
+      "rock,": {
+        "s": null,
+        "l": "rock,",
+        "g": [
+          "heavy metal"
+        ]
+      },
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
         ]
       }
     }
