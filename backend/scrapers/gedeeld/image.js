@@ -94,20 +94,26 @@ export default async function getImage({
         errors: []
     };
 
+    const ogImage = await page.evaluate(() => {
+        return (
+            document.querySelector(`[property="og:image"]`)?.content ?? false
+        );
+    });
+
     try {
         await page.waitForSelector(selectors[0], {
-            timeout: 2500
+            timeout: 1000
         });
     } catch (error) {
         try {
             if (selectors.length > 1) {
                 await page.waitForSelector(selectors[1], {
-                    timeout: 250
+                    timeout: 50
                 });
-            } else {
+            } else if (!ogImage) {
                 res.errors.push({
                     error,
-                    remarks: `geen ${selectors[0]}`
+                    remarks: `geen ${selectors[0]} voor <a href='${event.venueEventUrl}'>${event.title}</a>`
                 });
                 return res;
             }
@@ -117,19 +123,21 @@ export default async function getImage({
                     await page.waitForSelector(selectors[2], {
                         timeout: 250
                     });
-                } else {
+                } else if (!ogImage) {
                     res.errors.push({
                         error: error2,
-                        remarks: `geen ${selectors[0]} of ${selectors[1]}`
+                        remarks: `geen ${selectors[0]} of ${selectors[1]} voor <a href='${event.venueEventUrl}'>${event.title}</a>`
                     });
                     return res;
                 }
             } catch (error3) {
-                res.errors.push({
-                    error: error3,
-                    remarks: `geen ${selectors[0]} of ${selectors[1]} of ${selectors[2]}`
-                });
-                return res;
+                if (!ogImage) {
+                    res.errors.push({
+                        error: error3,
+                        remarks: `geen ${selectors[0]} of ${selectors[1]} of ${selectors[2]} voor <a href='${event.venueEventUrl}'>${event.title}</a>`
+                    });
+                    return res;
+                }
             }
         }
     }
@@ -212,12 +220,8 @@ export default async function getImage({
         }
     }
 
-    if (!image) {
-        // res.errors.push({
-        //   remarks: `image missing ${pi}`,
-        // });
-        _this.dirtyTalk(`Image missing ${pi}`);
-        return res;
+    if (!image && ogImage) {
+        image = ogImage;
     }
 
     const base64String = Buffer.from(
