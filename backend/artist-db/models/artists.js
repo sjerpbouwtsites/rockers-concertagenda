@@ -218,7 +218,7 @@ export default class Artists {
                 if (!hasArtistName || !hasSlug) {
                     return this.error(
                         Error(
-                            `geen artist name of slug. artistName: ${hasArtistName}; slug: ${hasSlug}`
+                            `geen artist name of slug. artistName: ${hasArtistName}; slug: ${hasSlug} | ${message.request}`
                         )
                     );
                 }
@@ -241,7 +241,9 @@ export default class Artists {
                 );
                 if (!hasTitle || !hasSlug) {
                     return this.error(
-                        Error("geen title of slug om te doorzoeken")
+                        Error(
+                            `geen title of slug om te doorzoeken  | ${message.request}`
+                        )
                     );
                 }
             }
@@ -276,12 +278,16 @@ export default class Artists {
                 );
                 if (!hasTitle || !hasSlug) {
                     return this.error(
-                        Error("geen title of slug om te doorzoeken")
+                        Error(
+                            `geen title of slug om te doorzoeken  | ${message.request}`
+                        )
                     );
                 }
                 if (!hasEventDate) {
                     return this.error(
-                        Error(`geen eventdate ${parsedMessage.data.title}`)
+                        Error(
+                            `geen eventdate ${parsedMessage.data.title}  | ${message.request}`
+                        )
                     );
                 }
             }
@@ -299,7 +305,11 @@ export default class Artists {
                     "string"
                 );
                 if (!hasString) {
-                    return this.error(Error("geen string om te doorzoeken"));
+                    return this.error(
+                        Error(
+                            `geen string om te doorzoeken | ${message.request}`
+                        )
+                    );
                 }
             }
             return this.hasForbidden(message.data.string);
@@ -312,7 +322,11 @@ export default class Artists {
                     "string"
                 );
                 if (!hasString) {
-                    return this.error(Error("geen string om te doorzoeken"));
+                    return this.error(
+                        Error(
+                            `geen string om te doorzoeken | ${message.request}`
+                        )
+                    );
                 }
             }
             return this.hasGood(message.data.string);
@@ -325,7 +339,11 @@ export default class Artists {
                     "genres"
                 );
                 if (!hasGenres) {
-                    return this.error(Error("geen genres om te doorzoeken"));
+                    return this.error(
+                        Error(
+                            `geen genres om te doorzoeken | ${message.request}`
+                        )
+                    );
                 }
             }
             return this.checkExplicitEventCategories(message.data.genres);
@@ -347,12 +365,16 @@ export default class Artists {
                 );
                 if (!hasTitle || !hasSlug) {
                     return this.error(
-                        Error("geen title of slug om te doorzoeken")
+                        Error(
+                            `geen title of slug om te doorzoeken | ${message.request}`
+                        )
                     );
                 }
                 if (!hasEventDate) {
                     return this.error(
-                        Error(`geen eventdate ${parsedMessage.data.title}`)
+                        Error(
+                            `geen eventdate ${parsedMessage.data.title} | ${message.request}`
+                        )
                     );
                 }
             }
@@ -367,14 +389,20 @@ export default class Artists {
                     "title"
                 );
                 if (!hasTitle) {
-                    return this.error(Error("geen title om te doorzoeken"));
+                    return this.error(
+                        Error(
+                            `geen title om te doorzoeken | ${message.request}`
+                        )
+                    );
                 }
                 const hasSettings = Object.prototype.hasOwnProperty.call(
                     parsedMessage.data,
                     "settings"
                 );
                 if (!hasSettings) {
-                    return this.error(Error("geen settings meegegeven"));
+                    return this.error(
+                        Error(`geen settings meegegeven | ${message.request}`)
+                    );
                 }
             }
             return this.getMetalEncyclopediaConfirmation(
@@ -401,7 +429,9 @@ export default class Artists {
                 );
                 if (!hasTitle || !hasSlug) {
                     return this.error(
-                        Error("geen title of slug om te doorzoeken")
+                        Error(
+                            `geen title of slug om te doorzoeken | ${message.request}`
+                        )
                     );
                 }
             }
@@ -441,11 +471,15 @@ export default class Artists {
                 );
                 if (!hasTitle || !hasSlug) {
                     return this.error(
-                        Error("geen title of slug om te doorzoeken")
+                        Error(
+                            `geen title of slug om te doorzoeken | ${message.request}`
+                        )
                     );
                 }
                 if (!hasSettings) {
-                    return this.error(Error("geen settings"));
+                    return this.error(
+                        Error(`geen settings | ${message.request}`)
+                    );
                 }
             }
             return this.scanEventForAllowedArtistsAsync(
@@ -480,19 +514,27 @@ export default class Artists {
                 );
                 if (!hasTitle || !hasSlug) {
                     return this.error(
-                        Error("geen title of slug om te doorzoeken")
+                        Error(
+                            `geen title of slug om te doorzoeken | ${message.request}`
+                        )
                     );
                 }
                 if (!hasSettings) {
-                    return this.error(Error("geen settings"));
+                    return this.error(
+                        Error(`geen settings | ${message.request}`)
+                    );
                 }
                 if (!hasEventDate) {
                     return this.error(
-                        Error(`geen eventdate ${parsedMessage.data.title}`)
+                        Error(
+                            `geen eventdate ${parsedMessage.data.title} | ${message.request}`
+                        )
                     );
                 }
                 if (!hasURL) {
-                    return this.error(Error("geen event url"));
+                    return this.error(
+                        Error(`geen event url | ${message.request}`)
+                    );
                 }
             }
             const d = message.data;
@@ -520,7 +562,9 @@ export default class Artists {
                     console.log("message:");
                     console.log(message);
                     return this.error(
-                        Error("geen title of slug om te doorzoeken")
+                        Error(
+                            `geen title of slug om te doorzoeken | ${message.request}`
+                        )
                     );
                 }
             }
@@ -550,13 +594,21 @@ export default class Artists {
                     "eventDate"
                 );
                 if (!hasString) {
-                    return this.error(Error("geen string om op te slaan"));
+                    return this.error(
+                        Error(`geen string om op te slaan | ${message.request}`)
+                    );
                 }
                 if (!hasSlug) {
-                    return this.error(Error("geen slug om op te slaan"));
+                    return this.error(
+                        Error(`geen slug om op te slaan | ${message.request}`)
+                    );
                 }
                 if (!hasEventDate) {
-                    return this.error(Error("geen eventDate om op te slaan"));
+                    return this.error(
+                        Error(
+                            `geen eventDate om op te slaan | ${message.request}`
+                        )
+                    );
                 }
             }
             if (["saveRefusedEvent", "saveRefused"].includes(message.request)) {
@@ -651,7 +703,9 @@ export default class Artists {
         return this.post({
             success: true,
             data: artistData,
-            reason: `${_a ? `artistName ${artistName}` : `slug ${slug}`} found aa2`
+            reason: `${
+                _a ? `artistName ${artistName}` : `slug ${slug}`
+            } found aa2`
         });
     }
     // #endregion
@@ -687,7 +741,9 @@ export default class Artists {
         return this.post({
             success: true,
             data: eventData,
-            reason: `🟩 ${_a ? `eventName ${eventName}` : `slug ${slug}`} allowed event aa4`
+            reason: `🟩 ${
+                _a ? `eventName ${eventName}` : `slug ${slug}`
+            } allowed event aa4`
         });
     }
     // #endregion
@@ -722,8 +778,8 @@ export default class Artists {
                 gevondenRefused: _a
                     ? this.refused[tt]
                     : _b
-                      ? this.refused[ss]
-                      : null
+                    ? this.refused[ss]
+                    : null
             },
             "getRefused",
             "rood"
@@ -734,7 +790,9 @@ export default class Artists {
             return this.post({
                 success: true,
                 data: eventOfArtistData,
-                reason: `🟥 ${_a ? `eventNameOfTitle ${tt}` : `slug ${ss}`} refused aa6`
+                reason: `🟥 ${
+                    _a ? `eventNameOfTitle ${tt}` : `slug ${ss}`
+                } refused aa6`
             });
         }
 
@@ -1451,7 +1509,9 @@ export default class Artists {
             data: workedArtists,
             reason:
                 artistsFound > 0
-                    ? `🟩 ${artistsFound} allowed artists found: ${Object.keys(artists).join(", ")} ac3`
+                    ? `🟩 ${artistsFound} allowed artists found: ${Object.keys(
+                          artists
+                      ).join(", ")} ac3`
                     : `⬜ no artists found ac4`
         });
     }
@@ -1489,7 +1549,9 @@ export default class Artists {
             data: workedArtists,
             reason:
                 artistsFound > 0
-                    ? `🟩 ${artistsFound} refused artists found: ${Object.keys(artists).join(", ")} aqwe3`
+                    ? `🟩 ${artistsFound} refused artists found: ${Object.keys(
+                          artists
+                      ).join(", ")} aqwe3`
                     : `⬜ no artists found aqwe4`
         });
     }
@@ -1781,7 +1843,10 @@ export default class Artists {
     fromArrayToTwoColumnRows(a, i) {
         let b =
             a.length > 20
-                ? `${a.substring(0, 14)}..${a.substring(a.length - 4, a.length)}`
+                ? `${a.substring(0, 14)}..${a.substring(
+                      a.length - 4,
+                      a.length
+                  )}`
                 : a;
         b = b.padEnd(24, " ");
         if (i % 3 === 0 && i > 0) {
@@ -1810,10 +1875,18 @@ export default class Artists {
         this.consoleGroup(
             `artists, allowedEvents, refused, unclear pNRARA1`,
             {
-                artists: `${artistKeys.map(this.fromArrayToTwoColumnRows).join(" ")}\n`,
-                events: `${eventsKeys.map(this.fromArrayToTwoColumnRows).join(" ")}\n`,
-                refused: `${refusedKeys.map(this.fromArrayToTwoColumnRows).join(" ")}\n`,
-                unclearArtists: `${unclearArtistsKeys.map(this.fromArrayToTwoColumnRows).join(" ")}\n`
+                artists: `${artistKeys
+                    .map(this.fromArrayToTwoColumnRows)
+                    .join(" ")}\n`,
+                events: `${eventsKeys
+                    .map(this.fromArrayToTwoColumnRows)
+                    .join(" ")}\n`,
+                refused: `${refusedKeys
+                    .map(this.fromArrayToTwoColumnRows)
+                    .join(" ")}\n`,
+                unclearArtists: `${unclearArtistsKeys
+                    .map(this.fromArrayToTwoColumnRows)
+                    .join(" ")}\n`
             },
             "persistNewRefusedAndRockArtists",
             "fggreen"
@@ -1984,7 +2057,9 @@ export default class Artists {
                         ...toConsole[k]
                     });
                 } else {
-                    const str = `varName: ${k}; val: ${toConsole[k]}; typeof: ${typeof toConsole[k]}`;
+                    const str = `varName: ${k}; val: ${
+                        toConsole[k]
+                    }; typeof: ${typeof toConsole[k]}`;
                     console.log(consoleKleuren.fgyellow, str);
                 }
             }

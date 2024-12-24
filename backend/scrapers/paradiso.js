@@ -130,7 +130,7 @@ scraper.mainPage = async function () {
             const datum = datumGroep.textContent
                 .toLowerCase()
                 .trim()
-                .substring(4, 10);
+                .substring(3, 10);
             const concertenOpDezeDatum =
                 datumGroep.parentNode.querySelectorAll(".css-1agutam");
             // eslint-disable-next-line consistent-return
@@ -208,9 +208,14 @@ scraper.mainPage = async function () {
 
     this.saveBaseEventlist(workerData.family, checkedEvents);
 
-    const thisWorkersEvents = checkedEvents.filter(
-        (eventEl, index) => index % workerData.workerCount === workerData.index
-    );
+    const thisWorkersEvents = checkedEvents.filter((eventEl, index) => {
+        this.dirtyTalk(
+            `${index} % ${workerData.workerCount} ${
+                index % workerData.workerCount
+            } === ${workerData.index}`
+        );
+        return index % workerData.workerCount === workerData.index;
+    });
 
     return this.mainPageEnd({ stopFunctie, rawEvents: thisWorkersEvents });
 };
