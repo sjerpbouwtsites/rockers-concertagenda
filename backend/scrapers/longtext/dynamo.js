@@ -7,17 +7,12 @@ export default async function longTextSocialsIframes(page, event) {
         ({ event }) => {
             const res = {};
 
-            const textSelector = ".article-block.text-block";
+            const textSelector = ".wp-block-dynamo-eindhoven-container";
             const mediaSelector = [
-                ".sidebar iframe, .article-block iframe"
+                ".wp-block-dynamo-eindhoven-container .rll-youtube-player, .wp-block-dynamo-eindhoven-container iframe"
             ].join(", ");
             const removeEmptyHTMLFrom = textSelector;
-            const socialSelector = [
-                ".event-content .fb-event a",
-                ".article-block a[href*='facebook']",
-                ".article-block a[href*='instagram']",
-                ".article-block a[href*='bandcamp']"
-            ].join(", ");
+            const socialSelector = [].join(", ");
             const removeSelectors = [
                 `${textSelector} [class*='icon-']`,
                 `${textSelector} [class*='fa-']`,
@@ -29,10 +24,9 @@ export default async function longTextSocialsIframes(page, event) {
                 `${textSelector} svg`,
                 `${textSelector} form`,
                 ".iframe-wrapper-tijdelijk",
-                ".article-block a[href*='facebook']",
-                ".article-block a[href*='instagram']",
-                ".article-block a[href*='bandcamp']",
-                `${textSelector} img`
+                `${textSelector} img`,
+                `${textSelector} .rll-youtube-player`,
+                `${textSelector} iframe`
             ].join(", ");
 
             const attributesToRemove = [
@@ -52,15 +46,17 @@ export default async function longTextSocialsIframes(page, event) {
             const removeHTMLWithStrings = [];
 
             // custom dynamo
-            document
-                .querySelectorAll(".article-block iframe")
-                .forEach((iframe) =>
-                    iframe.parentNode.classList.add("iframe-wrapper-tijdelijk")
-                );
+            // document
+            //     .querySelectorAll(".article-block iframe")
+            //     .forEach((iframe) =>
+            //         iframe.parentNode.classList.add("iframe-wrapper-tijdelijk")
+            //     );
             // end custom dynamo
 
             // eerst onzin attributes wegslopen
-            const socAttrRemSelAdd = `${socialSelector.length ? `, ${socialSelector}` : ""}`;
+            const socAttrRemSelAdd = `${
+                socialSelector.length ? `, ${socialSelector}` : ""
+            }`;
             const mediaAttrRemSelAdd = `${
                 mediaSelector.length
                     ? `, ${mediaSelector} *, ${mediaSelector}`
@@ -79,17 +75,9 @@ export default async function longTextSocialsIframes(page, event) {
             res.mediaForHTML = Array.from(
                 document.querySelectorAll(mediaSelector)
             ).map((bron) => {
-                if (bron.hasAttribute("data-src-cmplz")) {
-                    bron.src = bron.getAttribute("data-src-cmplz");
-                }
-                const src = bron?.src ? bron.src : "";
-                if (bron.hasAttribute("data-cmplz-target"))
-                    bron.removeAttribute("data-cmplz-target");
-                if (bron.hasAttribute("data-src-cmplz"))
-                    bron.removeAttribute("data-src-cmplz");
-                if (bron.hasAttribute("loading"))
-                    bron.removeAttribute("loading");
-                bron.className = "";
+                const src = bron.className.includes("youtube")
+                    ? bron.getAttribute("data-src")
+                    : bron.src;
                 return {
                     outer: bron.outerHTML,
                     src,
@@ -97,47 +85,13 @@ export default async function longTextSocialsIframes(page, event) {
                     type: src.includes("spotify")
                         ? "spotify"
                         : src.includes("youtube")
-                          ? "youtube"
-                          : "bandcamp"
+                        ? "youtube"
+                        : "bandcamp"
                 };
             });
 
             // socials obj maken voordat HTML verdwijnt
-            res.socialsForHTML = !socialSelector
-                ? ""
-                : Array.from(document.querySelectorAll(socialSelector)).map(
-                      (el) => {
-                          el.querySelectorAll("i, svg, img").forEach((rm) =>
-                              rm.parentNode.removeChild(rm)
-                          );
-                          if (!el.textContent.trim().length) {
-                              if (
-                                  el.href.includes("facebook") ||
-                                  el.href.includes("fb.me")
-                              ) {
-                                  if (el.href.includes("facebook.com/events")) {
-                                      el.textContent = `FB event ${event.title}`;
-                                  } else {
-                                      el.textContent = "Facebook";
-                                  }
-                              } else if (el.href.includes("twitter")) {
-                                  el.textContent = "Tweet";
-                              } else if (el.href.includes("instagram")) {
-                                  el.textContent = "Insta";
-                              } else {
-                                  el.textContent = "Social";
-                              }
-                          }
-                          if (el.textContent.includes("https")) {
-                              el.textContent = el.textContent
-                                  .replace("https://", "")
-                                  .replace("www", "");
-                          }
-                          el.className = "long-html__social-list-link";
-                          el.target = "_blank";
-                          return el.outerHTML;
-                      }
-                  );
+            res.socialsForHTML = "";
 
             // stript HTML tbv text
             removeSelectors.length &&
@@ -149,7 +103,9 @@ export default async function longTextSocialsIframes(page, event) {
 
             // dynamo custom
             const textBlokken = Array.from(
-                document.querySelectorAll(".article-block.text-block")
+                document.querySelectorAll(
+                    `${textSelector} h3, ${textSelector} p`
+                )
             );
             if (textBlokken.length) {
                 const laatsteBlok = textBlokken[textBlokken.length - 1];
