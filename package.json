@@ -4,7 +4,7 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "backend": "killall -s 9 chrome; cd ~/dev/apache/concertagenda/backend; clear; node index.js force=all; clear; echo 'backend gedaan';",
+        "backend": "killall -s 9 chrome; cd ~/hosted/rockagenda/backend; clear; node index.js force=all; clear; echo 'backend gedaan';",
         "build": "react-scripts build",
         "eject": "react-scripts eject",
         "eslint-for-formatting": "npm run lint:fix;",

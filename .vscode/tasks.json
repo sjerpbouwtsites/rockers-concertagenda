@@ -6,7 +6,7 @@
             "script": "backend-rockagenda",
             "problemMatcher": [],
             "label": "backend-rockagenda",
-            "detail": "cd ~/dev/apache/concertagenda/backend; clear; node index.js"
+            "detail": "cd ~/hosted/rockagenda/backend; clear; node index.js"
         }
     ]
 }
