@@ -1,178 +1,5 @@
 [
   {
-    "door": "2024-10-10T19:00:00",
-    "start": "2024-10-10T19:30:00",
-    "venueEventUrl": "https://www.podiumvictorie.nl/programma/victorie-deathcave-10/10/24",
-    "title": "Victorie Deathcave",
-    "location": "victorie",
-    "price": 17.25,
-    "shortText": "Avondje beukende deathmetal",
-    "longText": "../public/texts/victorie/bWEvdmljdG9yaWUtZGVhdGhjYXZlLTEwLzEwLzI0.html",
-    "image": "../public/event-images/victorie/bWEvdmljdG9yaWUtZGVhdGhjYXZlLTEwLzEwLzI0",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2024-10-11T19:00:00",
-    "start": "2024-10-11T20:30:00",
-    "venueEventUrl": "https://www.podiumvictorie.nl/programma/y-en-t-11/10/24",
-    "title": "Y&t",
-    "location": "victorie",
-    "price": 38.1,
-    "shortText": "Legendarische Amerikaanse rockband bestaat 50 jaar",
-    "longText": "../public/texts/victorie/ZS5ubC9wcm9ncmFtbWEveS1lbi10LTExLzEwLzI0.html",
-    "image": "../public/event-images/victorie/ZS5ubC9wcm9ncmFtbWEveS1lbi10LTExLzEwLzI0",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "y&t": {
-        "s": null,
-        "l": null,
-        "g": [
-          "symfonische rock"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-10-11T19:30:00",
-    "start": "2024-10-11T20:30:00",
-    "venueEventUrl": "https://www.podiumvictorie.nl/programma/knives-out-okt",
-    "title": "Knives Out! Peuk, Carsick, Frontsector",
-    "location": "victorie",
-    "price": 11.5,
-    "shortText": "(Post)punk avond met gloeiend hete acts en ijskoud bier",
-    "longText": "../public/texts/victorie/aWUubmwvcHJvZ3JhbW1hL2tuaXZlcy1vdXQtb2t0.html",
-    "image": "../public/event-images/victorie/aWUubmwvcHJvZ3JhbW1hL2tuaXZlcy1vdXQtb2t0",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "peuk": {
-        "s": "48azekbyysulw0ikjbxpto",
-        "l": "peuk",
-        "g": [
-          "belgian indie rock"
-        ]
-      },
-      "frontsector": {
-        "s": "7nNlKInu91uH7iNwCCuWw3",
-        "l": "frontsector",
-        "g": [
-          "dutch punk"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-10-18T19:45:00",
-    "start": "2024-10-18T20:45:00",
-    "venueEventUrl": "https://www.podiumvictorie.nl/programma/the-sound-undercover",
-    "title": "The Sound Undercover",
-    "location": "victorie",
-    "price": 19.55,
-    "shortText": "Tribute aan Londense post-punk formatie The Sound",
-    "longText": "../public/texts/victorie/cHJvZ3JhbW1hL3RoZS1zb3VuZC11bmRlcmNvdmVy.html",
-    "image": "../public/event-images/victorie/cHJvZ3JhbW1hL3RoZS1zb3VuZC11bmRlcmNvdmVy",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "undercover": {
-        "s": "5EQMhqNfNmnIIAgwQX1WZ7",
-        "l": "undercover",
-        "g": [
-          "christian punk"
-        ]
-      },
-      "the sound": {
-        "s": "4hzCcF4Leos2sKnz79nwhz",
-        "l": "the%20sound",
-        "g": [
-          "uk post-punk",
-          "technical grindcore",
-          "mathcore"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-11-13T19:30:00",
-    "start": "2024-11-13T20:30:00",
-    "venueEventUrl": "https://www.podiumvictorie.nl/programma/cosmic-psychos",
-    "title": "Cosmic Psychos",
-    "location": "victorie",
-    "price": 21.3,
-    "shortText": "Australische punklegendes",
-    "longText": "../public/texts/victorie/aWUubmwvcHJvZ3JhbW1hL2Nvc21pYy1wc3ljaG9z.html",
-    "image": "../public/event-images/victorie/aWUubmwvcHJvZ3JhbW1hL2Nvc21pYy1wc3ljaG9z",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "cosmic psychos": {
-        "s": "3orc30EUucavid98kNtMEf",
-        "l": "cosmic%20psychos",
-        "g": [
-          "australian alternative rock",
-          "australian garage punk",
-          "australian psych",
-          "brisbane punk"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-12-06T19:00:00",
-    "start": "2024-12-06T19:45:00",
-    "venueEventUrl": "https://www.podiumvictorie.nl/programma/peter-pan-speedrock-2024",
-    "title": "Peter Pan Speedrock",
-    "location": "victorie",
-    "price": 34.5,
-    "shortText": "Victorie 15 jaar",
-    "longText": "../public/texts/victorie/cmFtbWEvcGV0ZXItcGFuLXNwZWVkcm9jay0yMDI0.html",
-    "image": "../public/event-images/victorie/cmFtbWEvcGV0ZXItcGFuLXNwZWVkcm9jay0yMDI0",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "peter pan speedrock": {
-        "s": "3zkYKQsUkS8nnGDL9ZhHQR",
-        "l": "peter%20pan%20speedrock",
-        "g": [
-          "dutch punk",
-          "dutch rock",
-          "punk 'n' roll"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-01-04T19:15:00",
-    "start": "2025-01-04T20:45:00",
-    "venueEventUrl": "https://www.podiumvictorie.nl/programma/classic-hits-in-concert-2025",
-    "title": "Classic Hits In Concert",
-    "location": "victorie",
-    "price": 28.75,
-    "shortText": "Het beste uit De Lijst Der Lijsten",
-    "longText": "../public/texts/victorie/YS9jbGFzc2ljLWhpdHMtaW4tY29uY2VydC0yMDI1.html",
-    "image": "../public/event-images/victorie/YS9jbGFzc2ljLWhpdHMtaW4tY29uY2VydC0yMDI1",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2025-01-18T19:00:00",
-    "start": "2025-01-18T20:30:00",
-    "venueEventUrl": "https://www.podiumvictorie.nl/programma/new-cool-collective-2025",
-    "title": "New Cool Collective",
-    "location": "victorie",
-    "price": 25.9,
-    "shortText": "Jazzformatie viert dertig jaar op het podium",
-    "longText": "../public/texts/victorie/cmFtbWEvbmV3LWNvb2wtY29sbGVjdGl2ZS0yMDI1.html",
-    "image": "../public/event-images/victorie/cmFtbWEvbmV3LWNvb2wtY29sbGVjdGl2ZS0yMDI1",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
     "door": "2025-01-24T19:00:00",
     "start": "2025-01-24T19:45:00",
     "venueEventUrl": "https://www.podiumvictorie.nl/programma/triggerfinger-2025",
@@ -216,6 +43,52 @@
         ]
       }
     }
+  },
+  {
+    "door": "2025-02-21T19:45:00",
+    "start": "2025-02-21T20:15:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/speedmobile-2025",
+    "title": "Speedmobile",
+    "location": "victorie",
+    "price": 21.5,
+    "shortText": "Hardrockformatie met leden van Batmobile en Peter Pan Speedrock",
+    "longText": "../public/texts/victorie/Lm5sL3Byb2dyYW1tYS9zcGVlZG1vYmlsZS0yMDI1.html",
+    "image": "../public/event-images/victorie/Lm5sL3Byb2dyYW1tYS9zcGVlZG1vYmlsZS0yMDI1",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "speedmobile": {
+        "s": "15qfmszEuUlcKcPcwt5P05",
+        "l": "speedmobile",
+        "g": [
+          "punk ",
+          "rock "
+        ]
+      },
+      "speed": {
+        "s": "4wf6GGNBqaU79839E6yjfn",
+        "l": "speed",
+        "g": [
+          "australian hardcore",
+          "heavy",
+          "speed metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-03-07T19:45:00",
+    "start": "2025-03-07T20:45:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/bizkit-park",
+    "title": "Bizkit Park",
+    "location": "victorie",
+    "price": 25.9,
+    "shortText": "Ode aan de nu metal",
+    "longText": "../public/texts/victorie/dG9yaWUubmwvcHJvZ3JhbW1hL2JpemtpdC1wYXJr.html",
+    "image": "../public/event-images/victorie/dG9yaWUubmwvcHJvZ3JhbW1hL2JpemtpdC1wYXJr",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {}
   },
   {
     "door": "2025-03-13T19:00:00",
@@ -305,6 +178,73 @@
           "dream pop",
           "ethereal wave",
           "gothic rock"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-04-18T19:15:00",
+    "start": "2025-04-18T20:15:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/smells-like-grunge-18/04/25",
+    "title": "Smells Like Grunge",
+    "location": "victorie",
+    "price": 25.88,
+    "shortText": "Een avond vol grunge en 90s rock",
+    "longText": "../public/texts/victorie/bWEvc21lbGxzLWxpa2UtZ3J1bmdlLTE4LzA0LzI1.html",
+    "image": "../public/event-images/victorie/bWEvc21lbGxzLWxpa2UtZ3J1bmdlLTE4LzA0LzI1",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "door": "2025-05-15T19:00:00",
+    "start": "2025-05-15T19:45:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/neuk!-69-charger-skroetbalg",
+    "title": "Neuk! - 69 Charger - Skroetbalg",
+    "location": "victorie",
+    "price": 22,
+    "shortText": "Halsbrekende tour",
+    "longText": "../public/texts/victorie/bWEvbmV1ayEtNjktY2hhcmdlci1za3JvZXRiYWxn.html",
+    "image": "../public/event-images/victorie/bWEvbmV1ayEtNjktY2hhcmdlci1za3JvZXRiYWxn",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "69 charger": {
+        "s": "2sibonl0bjr2o5ckfrcepl",
+        "l": "69%20charger",
+        "g": [
+          "metal",
+          "punk"
+        ]
+      },
+      "neuk!": {
+        "s": "61z4arbgymgk3nsxcyazoa",
+        "l": "neuk!",
+        "g": []
+      }
+    }
+  },
+  {
+    "door": "2025-07-10T19:30:00",
+    "start": "2025-07-10T20:15:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/valient-thorr-10/07/25",
+    "title": "Valient Thorr",
+    "location": "victorie",
+    "price": 23,
+    "shortText": "Legendarische rockhelden uit North Carolina",
+    "longText": "../public/texts/victorie/b2dyYW1tYS92YWxpZW50LXRob3JyLTEwLzA3LzI1.html",
+    "image": "../public/event-images/victorie/b2dyYW1tYS92YWxpZW50LXRob3JyLTEwLzA3LzI1",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "valient thorr": {
+        "s": "6rVaRHgldZoRMvERFyZmAH",
+        "l": "valient%20thorr",
+        "g": [
+          "north carolina metal",
+          "heavy",
+          "southern metal",
+          "rock"
         ]
       }
     }

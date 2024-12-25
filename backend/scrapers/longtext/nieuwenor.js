@@ -2,170 +2,188 @@
 /* eslint-disable indent */
 /* global document */
 export default async function longTextSocialsIframes(page, event) {
-  return page.evaluate(
-    // eslint-disable-next-line no-shadow
-    ({ event }) => {
-      const res = {};
+    return page.evaluate(
+        // eslint-disable-next-line no-shadow
+        ({ event }) => {
+            const res = {};
 
-      const textSelector = '#pageContent';
-      const mediaSelector = [
-        `${textSelector} iframe[src*="spotify"]`,
-        `${textSelector} iframe[src*="youtube"]`,
-      ].join(', ');
-      const removeEmptyHTMLFrom = textSelector;
-      const socialSelector = [
-        ".external-link a[href*='facebook']",
-        ".external-link a[href*='instagram']",
-      ].join(', ');
-      const removeSelectors = [
-        `${textSelector} [class*='icon-']`,
-        `${textSelector} [class*='fa-']`,
-        `${textSelector} .fa`,
-        `${textSelector} script`,
-        `${textSelector} figure`,
-        `${textSelector} noscript`,
-        `${textSelector} style`,
-        `${textSelector} meta`,
-        `${textSelector} iframe`,
-        `${textSelector} svg`,
-        `${textSelector} form`,
-        `${textSelector} #heroSlider`,
-        `${textSelector} section div:first-child`,
-        `${textSelector} img`,
-        '.heeft-cta',
-      ].join(', ');
+            const textSelector = "#pageContent #heroSlider ~ *";
 
-      const attributesToRemove = [
-        'style',
-        'hidden',
-        '_target',
-        'frameborder',
-        'onclick',
-        'aria-hidden',
-        'allow',
-        'allowfullscreen',
-        'data-deferlazy',
-        'width',
-        'height',
-      ];
-      const attributesToRemoveSecondRound = ['class', 'id'];
-      const removeHTMLWithStrings = ['Iets voor jou'];
+            // iets van semantiek hahaha
+            document.querySelectorAll("span").forEach((span) => {
+                const t = span.textContent
+                    .toLowerCase()
+                    .trim()
+                    .replaceAll(/\W/g, "")
+                    .substring(0, 10);
+                if (!t) return;
+                span.classList.add(t);
+            });
 
-      // eerst onzin attributes wegslopen
-      const socAttrRemSelAdd = `${socialSelector.length ? `, ${socialSelector}` : ''}`;
-      const mediaAttrRemSelAdd = `${
-        mediaSelector.length ? `, ${mediaSelector} *, ${mediaSelector}` : ''
-      }`;
-      const textSocEnMedia = `${textSelector} *${socAttrRemSelAdd}${mediaAttrRemSelAdd}`;
-      document.querySelectorAll(textSocEnMedia).forEach((elToStrip) => {
-        attributesToRemove.forEach((attr) => {
-          if (elToStrip.hasAttribute(attr)) {
-            elToStrip.removeAttribute(attr);
-          }
-        });
-      });
+            // weg reclame
+            const reclame =
+                document.querySelector(".iets + .voor + .jou")?.parentNode
+                    .parentNode ?? null;
+            if (reclame) reclame.parentNode.removeChild(reclame);
 
-      // media obj maken voordat HTML verdwijnt
-      res.mediaForHTML = Array.from(document.querySelectorAll(mediaSelector)).map((bron) => {
-        bron.className = '';
+            // alles alleen voor mobiel met foutieve selector ook nog
+            document
+                .querySelectorAll("[class*='sm:hidden']")
+                .forEach((die) => die.parentNode.removeChild(die));
 
-        if (bron?.src && (bron.src.includes('bandcamp') || bron.src.includes('spotify'))) {
-          return {
-            outer: bron.outerHTML,
-            src: bron.src,
-            id: null,
-            type: bron.src.includes('bandcamp') ? 'bandcamp' : 'spotify',
-          };
-        }
-        if (bron?.src && bron.src.includes('youtube')) {
-          return {
-            outer: bron.outerHTML,
-            src: bron.src,
-            id: null,
-            type: 'youtube',
-          };
-        }
+            const mediaSelector = [
+                `${textSelector} iframe[src*="spotify"]`,
+                `${textSelector} iframe[src*="youtube"]`
+            ].join(", ");
+            const removeEmptyHTMLFrom = textSelector;
+            const socialSelector = [
+                ".external-link a[href*='facebook']",
+                ".external-link a[href*='instagram']"
+            ].join(", ");
+            const removeSelectors = [
+                `${textSelector} [class*='icon-']`,
+                `${textSelector} [class*='fa-']`,
+                `${textSelector} .fa`,
+                `${textSelector} script`,
+                `${textSelector} figure`,
+                `${textSelector} noscript`,
+                `${textSelector} style`,
+                `${textSelector} meta`,
+                `${textSelector} iframe`,
+                `${textSelector} svg`,
+                `${textSelector} form`,
+                `${textSelector} section > div:first-child`,
+                `${textSelector} section > div:last-child`,
+                `${textSelector} img`,
+                ".heeft-cta"
+            ].join(", ");
 
-        // terugval???? nog niet bekend met alle opties.
-        return {
-          outer: bron.outerHTML,
-          src: bron.src,
-          id: null,
-          type: bron.src.includes('spotify')
-            ? 'spotify'
-            : bron.src.includes('youtube')
-            ? 'youtube'
-            : 'bandcamp',
-        };
-      });
+            const attributesToRemove = [
+                "style",
+                "hidden",
+                "_target",
+                "frameborder",
+                "onclick",
+                "aria-hidden",
+                "allow",
+                "allowfullscreen",
+                "data-deferlazy",
+                "width",
+                "height"
+            ];
+            const attributesToRemoveSecondRound = ["class", "id"];
+            const removeHTMLWithStrings = ["Iets voor jou"];
 
-      // socials obj maken voordat HTML verdwijnt
-      res.socialsForHTML = !socialSelector.length
-        ? ''
-        : Array.from(document.querySelectorAll(socialSelector)).map((el) => {
-            el.querySelectorAll('i, svg, img').forEach((rm) => rm.parentNode.removeChild(rm));
-            if (!el.textContent.trim().length) {
-              if (el.href.includes('facebook') || el.href.includes('fb.me')) {
-                if (el.href.includes('facebook.com/events')) {
-                  el.textContent = `FB event ${event.title}`;
-                } else {
-                  el.textContent = 'Facebook';
+            // eerst onzin attributes wegslopen
+            const socAttrRemSelAdd = `${
+                socialSelector.length ? `, ${socialSelector}` : ""
+            }`;
+            const mediaAttrRemSelAdd = `${
+                mediaSelector.length
+                    ? `, ${mediaSelector} *, ${mediaSelector}`
+                    : ""
+            }`;
+            const textSocEnMedia = `${textSelector} *${socAttrRemSelAdd}${mediaAttrRemSelAdd}`;
+            document.querySelectorAll(textSocEnMedia).forEach((elToStrip) => {
+                attributesToRemove.forEach((attr) => {
+                    if (elToStrip.hasAttribute(attr)) {
+                        elToStrip.removeAttribute(attr);
+                    }
+                });
+            });
+
+            // media obj maken voordat HTML verdwijnt
+            res.mediaForHTML = Array.from(
+                document.querySelectorAll(mediaSelector)
+            ).map((bron) => {
+                bron.className = "";
+
+                if (
+                    bron?.src &&
+                    (bron.src.includes("bandcamp") ||
+                        bron.src.includes("spotify"))
+                ) {
+                    return {
+                        outer: bron.outerHTML,
+                        src: bron.src,
+                        id: null,
+                        type: bron.src.includes("bandcamp")
+                            ? "bandcamp"
+                            : "spotify"
+                    };
                 }
-              } else if (el.href.includes('twitter')) {
-                el.textContent = 'Tweet';
-              } else if (el.href.includes('instagram')) {
-                el.textContent = 'Insta';
-              } else {
-                el.textContent = 'Social';
-              }
-            }
-            el.className = 'long-html__social-list-link';
-            el.target = '_blank';
-            return el.outerHTML;
-          });
+                if (bron?.src && bron.src.includes("youtube")) {
+                    return {
+                        outer: bron.outerHTML,
+                        src: bron.src,
+                        id: null,
+                        type: "youtube"
+                    };
+                }
 
-      // stript HTML tbv text
-      removeSelectors.length &&
-        document
-          .querySelectorAll(removeSelectors)
-          .forEach((toRemove) => toRemove.parentNode.removeChild(toRemove));
+                // terugval???? nog niet bekend met alle opties.
+                return {
+                    outer: bron.outerHTML,
+                    src: bron.src,
+                    id: null,
+                    type: bron.src.includes("spotify")
+                        ? "spotify"
+                        : bron.src.includes("youtube")
+                        ? "youtube"
+                        : "bandcamp"
+                };
+            });
 
-      // verwijder ongewenste paragrafen over bv restaurants
-      Array.from(
-        document.querySelectorAll(`${textSelector} p, ${textSelector} span, ${textSelector} a`),
-      ).forEach((verwijder) => {
-        const heeftEvilString = !!removeHTMLWithStrings.find((evilString) =>
-          verwijder.textContent.includes(evilString),
-        );
-        if (heeftEvilString) {
-          verwijder.parentNode.removeChild(verwijder);
-        }
-      });
+            // socials obj maken voordat HTML verdwijnt
+            res.socialsForHTML = "";
+            // stript HTML tbv text
+            removeSelectors.length &&
+                document
+                    .querySelectorAll(removeSelectors)
+                    .forEach((toRemove) =>
+                        toRemove.parentNode.removeChild(toRemove)
+                    );
 
-      // // lege HTML eruit cq HTML zonder tekst of getallen
-      // document.querySelectorAll(`${removeEmptyHTMLFrom} > *`)
-      //   .forEach(checkForEmpty => {
-      //     const leegMatch = checkForEmpty.innerHTML.replace('&nbsp;','').match(/[\w\d]/g);
-      //     if (!Array.isArray(leegMatch)){
-      //       checkForEmpty.parentNode.removeChild(checkForEmpty)
-      //     }
-      //   })
+            // verwijder ongewenste paragrafen over bv restaurants
+            Array.from(
+                document.querySelectorAll(
+                    `${textSelector} p, ${textSelector} span, ${textSelector} a`
+                )
+            ).forEach((verwijder) => {
+                const heeftEvilString = !!removeHTMLWithStrings.find(
+                    (evilString) => verwijder.textContent.includes(evilString)
+                );
+                if (heeftEvilString) {
+                    verwijder.parentNode.removeChild(verwijder);
+                }
+            });
 
-      // laatste attributen eruit.
-      document.querySelectorAll(textSocEnMedia).forEach((elToStrip) => {
-        attributesToRemoveSecondRound.forEach((attr) => {
-          if (elToStrip.hasAttribute(attr)) {
-            elToStrip.removeAttribute(attr);
-          }
-        });
-      });
+            // // lege HTML eruit cq HTML zonder tekst of getallen
+            // document.querySelectorAll(`${removeEmptyHTMLFrom} > *`)
+            //   .forEach(checkForEmpty => {
+            //     const leegMatch = checkForEmpty.innerHTML.replace('&nbsp;','').match(/[\w\d]/g);
+            //     if (!Array.isArray(leegMatch)){
+            //       checkForEmpty.parentNode.removeChild(checkForEmpty)
+            //     }
+            //   })
 
-      // tekst.
-      res.textForHTML = Array.from(document.querySelectorAll(textSelector))
-        .map((el) => el.innerHTML)
-        .join('');
-      return res;
-    },
-    { event },
-  );
+            // laatste attributen eruit.
+            document.querySelectorAll(textSocEnMedia).forEach((elToStrip) => {
+                attributesToRemoveSecondRound.forEach((attr) => {
+                    if (elToStrip.hasAttribute(attr)) {
+                        elToStrip.removeAttribute(attr);
+                    }
+                });
+            });
+
+            // tekst.
+            res.textForHTML = Array.from(
+                document.querySelectorAll(textSelector)
+            )
+                .map((el) => el.innerHTML)
+                .join("");
+            return res;
+        },
+        { event }
+    );
 }

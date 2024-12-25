@@ -1,88 +1,88 @@
 export default class DbInterfaceToScraper {
-  event = null;
+    event = null;
 
-  success = null;
+    success = null;
 
-  break = false;
+    break = false;
 
-  reasons = [];
+    reasons = [];
 
-  reason = '';
+    reason = "";
 
-  data = {};
+    data = {};
 
-  id = null;
+    id = null;
 
-  successReversed = false;
+    successReversed = false;
 
-  constructor(dbAnswer, olderReasons = [], id = null) {
-    if (typeof dbAnswer?.success === 'string') {
-      this.success = `${dbAnswer.success}`;
-    } else {
-      this.success = dbAnswer?.success && true;
+    constructor(dbAnswer, olderReasons = [], id = null) {
+        if (typeof dbAnswer?.success === "string") {
+            this.success = `${dbAnswer.success}`;
+        } else {
+            this.success = dbAnswer?.success && true;
+        }
+        if (Array.isArray(olderReasons)) {
+            const rc = [...olderReasons];
+            this.reasons = rc;
+        } else {
+            this.reasons = [];
+        }
+        this.reasons.unshift(`${dbAnswer.reason}`);
+        this.event = { ...dbAnswer.event };
+        if (dbAnswer?.data) {
+            this.data = { ...dbAnswer.data };
+        }
+
+        this.id = id;
     }
-    if (Array.isArray(olderReasons)) {
-      const rc = [...olderReasons];
-      this.reasons = rc;
-    } else {
-      this.reasons = [];
+
+    get isSuccess() {
+        return this.success === true;
     }
-    this.reasons.unshift((`${dbAnswer.reason}`));
-    this.event = { ...dbAnswer.event };
-    if (dbAnswer?.data) {
-      this.data = { ...dbAnswer.data };
+
+    get isFailed() {
+        return this.success === false;
     }
-    
-    this.id = id;
-  }
 
-  get isSuccess() {
-    return this.success === true;
-  }
+    get isError() {
+        return this.success === "error";
+    }
 
-  get isFailed() {
-    return this.success === false;
-  }
+    get isNull() {
+        return this.success === null;
+    }
 
-  get isError() {
-    return this.success === 'error';
-  }
+    get hasReasons() {
+        return this.reasons.length > 0;
+    }
 
-  get isNull() {
-    return this.success === null;
-  }
+    get lastReason() {
+        if (this.reasons.length < 1) return "no reasons";
+        return this.reasons[0];
+    }
 
-  get hasReasons() {
-    return this.reasons.length > 0;
-  }
+    reverseSuccessLogic() {
+        if (this.isError || this.isNull) return this;
+        if (this.isSuccess) {
+            this.success = false;
+        } else if (this.isFailed) this.success = true;
+        this.successReversed = !this.successReversed;
+        return this;
+    }
 
-  get lastReason() {
-    if (this.reasons.length < 1) return 'no reasons';
-    return this.reasons[0];
-  }
+    setBreak(breakA = false) {
+        this.break = breakA;
+        return this;
+    }
 
-  reverseSuccessLogic() {
-    if (this.isError || this.isNull) return this;
-    if (this.isSuccess) {
-      this.success = false;
-    } else if (this.isFailed) this.success = true;
-    this.successReversed = !this.successReversed;
-    return this;
-  }
+    addReason(reason) {
+        this.reasons.unshift(reason);
+        return this;
+    }
 
-  setBreak(breakA = false) {
-    this.break = breakA;
-    return this;
-  }
-
-  addReason(reason) {
-    this.reasons.unshift(reason);
-    return this;
-  }
-
-  setReason() {
-    const r = [...this.reasons.filter((re) => re)];
-    this.reason = r.join(`, `);
-    return this;
-  }
+    setReason() {
+        const r = [...this.reasons.filter((re) => re)];
+        this.reason = r.join(`, `);
+        return this;
+    }
 }

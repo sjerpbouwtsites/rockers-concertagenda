@@ -1,140 +1,163 @@
 [
   {
-    "start": "2024-10-09T19:00:00",
-    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/30690353/rotting-christ-borknagar-09-10-2024",
-    "title": "Rotting Christ & Borknagar",
+    "door": "2025-01-16T18:30:00",
+    "start": "2025-01-16T19:00:00",
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/76440654/insomnium-16-01-2025",
+    "title": "Insomnium",
     "location": "tivolivredenburg",
-    "price": 28.85,
-    "shortText": "Drie Europese blackmetalbands op één avond",
-    "longText": "../public/texts/tivolivredenburg/bmctY2hyaXN0LWJvcmtuYWdhci0wOS0xMC0yMDI0.html",
-    "image": "../public/event-images/tivolivredenburg/bmctY2hyaXN0LWJvcmtuYWdhci0wOS0xMC0yMDI0",
-    "soldOut": true,
+    "price": 33.75,
+    "shortText": "Integrale uitvoering van Beyond The Shadows Of The Dying Sun",
+    "longText": "../public/texts/tivolivredenburg/Lzc2NDQwNjU0L2luc29tbml1bS0xNi0wMS0yMDI1.html",
+    "image": "../public/event-images/tivolivredenburg/Lzc2NDQwNjU0L2luc29tbml1bS0xNi0wMS0yMDI1",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "insomnium": {
+        "s": "3uiglg971orm5fe6v8lvqs",
+        "l": "insomnium",
+        "g": [
+          "finnish death metal",
+          "finnish melodeath",
+          "finnish metal",
+          "melodic death metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-01-24T18:30:00",
+    "start": "2025-01-24T19:30:00",
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/64838372/bernth-charles-berthoud-24-01-2025",
+    "title": "Bernth + Charles Berthoud",
+    "location": "tivolivredenburg",
+    "price": 39.9,
+    "shortText": "Escape The Internet Tour",
+    "longText": "../public/texts/tivolivredenburg/dGgtY2hhcmxlcy1iZXJ0aG91ZC0yNC0wMS0yMDI1.html",
+    "image": "../public/event-images/tivolivredenburg/dGgtY2hhcmxlcy1iZXJ0aG91ZC0yNC0wMS0yMDI1",
+    "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {}
   },
   {
-    "start": "2024-10-24T19:30:00",
-    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/39573936/ghostkid-24-10-2024",
-    "title": "Ghøstkid",
+    "door": "2025-01-26T19:00:00",
+    "start": "2025-01-26T20:00:00",
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/55110861/fleshgod-apocalypse-26-01-2025",
+    "title": "Fleshgod Apocalypse",
     "location": "tivolivredenburg",
-    "price": 25.85,
-    "shortText": "Hollywood Suicide Tour 2024",
-    "longText": "../public/texts/tivolivredenburg/YS8zOTU3MzkzNi9naG9zdGtpZC0yNC0xMC0yMDI0.html",
-    "image": "../public/event-images/tivolivredenburg/YS8zOTU3MzkzNi9naG9zdGtpZC0yNC0xMC0yMDI0",
+    "price": 28.85,
+    "shortText": "Symfonische deathmetalband met special guest Ex Deo",
+    "longText": "../public/texts/tivolivredenburg/Zmxlc2hnb2QtYXBvY2FseXBzZS0yNi0wMS0yMDI1.html",
+    "image": "../public/event-images/tivolivredenburg/Zmxlc2hnb2QtYXBvY2FseXBzZS0yNi0wMS0yMDI1",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "ghøstkid": {
-        "s": "2ooWmQC4NQUQZ3z00mZQyK",
-        "l": "gh%C3%B8stkid",
+      "fleshgod apocalypse": {
+        "s": "5ctFffJBdJe8PZL7W7NeML",
+        "l": "fleshgod%20apocalypse",
         "g": [
-          "german metalcore"
+          "blackened deathcore",
+          "brutal death metal",
+          "death metal",
+          "italian death metal",
+          "opera metal",
+          "symphonic death metal",
+          "symphonic metal",
+          "technical death metal",
+          "symphonic",
+          "technical death metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-02-23T18:30:00",
+    "start": "2025-02-23T19:30:00",
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/73914593/green-lung-unto-others-23-02-2025",
+    "title": "Green Lung & Unto Others",
+    "location": "tivolivredenburg",
+    "price": 26.85,
+    "shortText": "'Heathen Neverlands' co-headline tour",
+    "longText": "../public/texts/tivolivredenburg/ZW4tbHVuZy11bnRvLW90aGVycy0yMy0wMi0yMDI1.html",
+    "image": "../public/event-images/tivolivredenburg/ZW4tbHVuZy11bnRvLW90aGVycy0yMy0wMi0yMDI1",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "unto others": {
+        "s": "1W5khHrkcznsyChxwIBfAI",
+        "l": "unto%20others",
+        "g": [
+          "portland metal",
+          "heavy metal",
+          "gothic rock"
         ]
       },
-      "ghost": {
-        "s": "1qp56t7n950o3egmssl81d",
-        "l": "ghost",
+      "green lung": {
+        "s": "2MIoyDjdxCUdnV59UqbJGk",
+        "l": "green%20lung",
         "g": [
-          "hard rock",
-          "metal"
+          "psychedelic doom",
+          "stoner metal",
+          "stoner rock",
+          "uk doom metal",
+          "uk stoner rock",
+          "stoner",
+          "doom metal",
+          "rock"
         ]
       }
     }
   },
   {
-    "door": "2024-11-18T20:00:00",
-    "start": "2024-11-18T23:00:00",
-    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/13578690/amyl-and-the-sniffers-18-11-2024",
-    "title": "Amyl and The Sniffers",
+    "door": "2025-03-14T18:30:00",
+    "start": "2025-03-14T19:00:00",
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/82976959/punk-rock-factory-14-03-2025",
+    "title": "Punk Rock Factory",
     "location": "tivolivredenburg",
-    "price": 28.85,
-    "shortText": "In your face 70’s-geinspireerde punk",
-    "longText": "../public/texts/tivolivredenburg/eWwtYW5kLXRoZS1zbmlmZmVycy0xOC0xMS0yMDI0.html",
-    "image": "../public/event-images/tivolivredenburg/eWwtYW5kLXRoZS1zbmlmZmVycy0xOC0xMS0yMDI0",
-    "soldOut": true,
+    "price": 25.85,
+    "shortText": "Klassiekers omgetoverd tot energieke punkrock",
+    "longText": "../public/texts/tivolivredenburg/OS9wdW5rLXJvY2stZmFjdG9yeS0xNC0wMy0yMDI1.html",
+    "image": "../public/event-images/tivolivredenburg/OS9wdW5rLXJvY2stZmFjdG9yeS0xNC0wMy0yMDI1",
+    "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "amyl and the sniffers": {
-        "s": "3NqV2DJoAWsjl787bWaHW7",
-        "l": "amyl%20and%20the%20sniffers",
+      "punk rock factory": {
+        "s": "1doeW0oJMkO8kEq5g9kFNR",
+        "l": "punk%20rock%20factory",
         "g": [
-          "australian garage punk",
-          "melbourne punk"
+          "punk cover"
         ]
       }
     }
   },
   {
-    "door": "2024-11-23T20:15:00",
-    "start": "2024-11-23T22:14:00",
-    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/95716454/wardruna-23-11-2024",
-    "title": "Wardruna",
+    "door": "2025-03-19T19:30:00",
+    "start": "2025-03-19T20:00:00",
+    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/28129019/this-will-destroy-you-19-03-2025",
+    "title": "This Will Destroy You",
     "location": "tivolivredenburg",
-    "price": 59.5,
-    "shortText": "Extra concert • Hypnotiserende, donkere folk met traditionele instrumenten",
-    "longText": "../public/texts/tivolivredenburg/YS85NTcxNjQ1NC93YXJkcnVuYS0yMy0xMS0yMDI0.html",
-    "image": "../public/event-images/tivolivredenburg/YS85NTcxNjQ1NC93YXJkcnVuYS0yMy0xMS0yMDI0",
-    "soldOut": true,
+    "price": 24.2,
+    "shortText": "Filmische postrock | in De Helling",
+    "longText": "../public/texts/tivolivredenburg/aXMtd2lsbC1kZXN0cm95LXlvdS0xOS0wMy0yMDI1.html",
+    "image": "../public/event-images/tivolivredenburg/aXMtd2lsbC1kZXN0cm95LXlvdS0xOS0wMy0yMDI1",
+    "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "wardruna": {
-        "s": "0nj6wloasaj1pn4vrdtpka",
-        "l": "wardruna",
+      "this will destroy you": {
+        "s": "0mg4lxiw7n4x0wjdc6wyxk",
+        "l": "this%20will%20destroy%20you",
         "g": [
-          "nordic folk",
-          "rune folk",
-          "viking folk"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2024-11-24T19:30:00",
-    "start": "2024-11-24T22:30:00",
-    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/35887781/therapy-24-11-2024",
-    "title": "Therapy?",
-    "location": "tivolivredenburg",
-    "price": 28.85,
-    "shortText": "Troublegum 30th Anniversary tour",
-    "longText": "../public/texts/tivolivredenburg/ZGEvMzU4ODc3ODEvdGhlcmFweS0yNC0xMS0yMDI0.html",
-    "image": "../public/event-images/tivolivredenburg/ZGEvMzU4ODc3ODEvdGhlcmFweS0yNC0xMS0yMDI0",
-    "soldOut": true,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "therapy?": {
-        "s": "3momzrijwdzmynysgtf4ey",
-        "l": "therapy?",
-        "g": [
-          "alternative metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2024-11-29T18:00:00",
-    "venueEventUrl": "https://www.tivolivredenburg.nl/agenda/82315491/while-she-sleeps-29-11-2024",
-    "title": "While She Sleeps",
-    "location": "tivolivredenburg",
-    "price": 31.75,
-    "shortText": "Met nieuw album Self Hell en supports Malevolence, thrown & Resolve",
-    "longText": "../public/texts/tivolivredenburg/OTEvd2hpbGUtc2hlLXNsZWVwcy0yOS0xMS0yMDI0.html",
-    "image": "../public/event-images/tivolivredenburg/OTEvd2hpbGUtc2hlLXNsZWVwcy0yOS0xMS0yMDI0",
-    "soldOut": true,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "while she sleeps": {
-        "s": "38ldiuxb548zghoey2an7a",
-        "l": "while%20she%20sleeps",
-        "g": [
-          "melodic metalcore",
-          "metalcore",
-          "uk metalcore"
+          "ambient post-rock",
+          "american post-rock",
+          "doomgaze",
+          "drone metal",
+          "instrumental post-rock",
+          "post-rock"
         ]
       }
     }

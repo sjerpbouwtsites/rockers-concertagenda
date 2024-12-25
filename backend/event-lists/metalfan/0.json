@@ -1,834 +1,482 @@
 [
   {
-    "title": "Powerwolf, Hammerfall en Wind Rose",
-    "start": "2024-10-06",
-    "eventLocationName": "lotto arena",
-    "shortText": "Lotto Arena, Antwerpen (België)",
-    "image": "../public/location-images/lottoarena",
-    "location": "lottoarena"
+    "title": "Borft Deathfest",
+    "start": "2025-01-03",
+    "eventLocationName": "de zon",
+    "shortText": "De Zon, Bodegraven.",
+    "image": "../public/location-images/dezon",
+    "location": "dezon"
   },
   {
-    "title": "Arch Enemy, In Flames en Soilwork",
-    "start": "2024-10-13",
-    "eventLocationName": "mainstage",
-    "shortText": "Mainstage, Den Bosch",
-    "image": "../public/location-images/mainstage",
-    "location": "mainstage"
+    "title": "Hedon Zwaar Nieuwjaar",
+    "start": "2025-01-04",
+    "eventLocationName": "hedon",
+    "shortText": "\nMet Bloodbath, Berzerker Legion, Haliphron, Teethgrinder, Keitzer, Insurrection en Hesken",
+    "image": "../public/location-images/hedon",
+    "location": "hedon"
   },
   {
-    "title": "Eleine",
-    "start": "2024-10-15",
-    "eventLocationName": "dvg",
-    "shortText": "DVG, Kortrijk (België)",
-    "image": "../public/location-images/dvg",
-    "location": "dvg"
+    "title": "Autarkh, Alkahest en Farer",
+    "start": "2025-01-09",
+    "eventLocationName": "vera",
+    "shortText": "Vera, Groningen",
+    "image": "../public/location-images/vera",
+    "location": "vera"
   },
   {
-    "title": "Eleine en Ignea",
-    "start": "2024-10-16",
-    "eventLocationName": "astrant",
-    "shortText": "Astrant, Ede",
-    "image": "../public/location-images/astrant",
-    "location": "astrant"
+    "title": "Wolfsonic\nmet onder meer Bildtstar, Asgrauw en Grafjammer",
+    "start": "2025-01-15",
+    "eventLocationName": "metalcafé de witte wolf",
+    "shortText": "Metalcafé De Witte Wolf, Groningen",
+    "image": "../public/location-images/metalcafdewittewolf",
+    "location": "metalcafdewittewolf"
   },
   {
-    "title": "Voyager",
-    "start": "2023-10-18",
+    "title": "Opeth en Grand Magus",
+    "start": "2025-01-17",
+    "eventLocationName": "palladium",
+    "shortText": "Palladium, Keulen",
+    "image": "../public/location-images/palladium",
+    "location": "palladium"
+  },
+  {
+    "title": "Turmion Kätilöt en King Satan",
+    "start": "2025-01-17",
+    "eventLocationName": "hall of fame",
+    "shortText": "Hall Of Fame, Tilburg",
+    "image": "../public/location-images/halloffame",
+    "location": "halloffame"
+  },
+  {
+    "title": "Dilemma",
+    "start": "2025-01-19",
     "eventLocationName": "boerderij",
     "shortText": "Boerderij, Zoetermeer",
     "image": "../public/location-images/boerderij",
     "location": "boerderij"
   },
   {
-    "title": "Threshold",
-    "start": "2023-10-19",
-    "eventLocationName": "cacaofabriek",
-    "shortText": "Cacaofabriek, Helmond",
-    "image": "../public/location-images/cacaofabriek",
-    "location": "cacaofabriek"
-  },
-  {
-    "title": "Batushka, Vltimas en God Dethroned",
-    "start": "2024-10-23",
+    "title": "Delain, Serenity en Kingfisher Sky",
+    "start": "2025-01-24",
     "eventLocationName": "hedon",
     "shortText": "Hedon, Zwolle",
     "image": "../public/location-images/hedon",
     "location": "hedon"
   },
   {
-    "title": "Malignant Tumour en Exorcizphobia",
-    "start": "2023-10-23",
-    "eventLocationName": "willem twee",
-    "shortText": "Willem Twee, Den Bosch",
-    "image": "../public/location-images/willemtwee",
-    "location": "willemtwee"
-  },
-  {
-    "title": "Veil Of Maya, Signs of the Swarm, Varials en To The Grave",
-    "start": "2023-10-24",
-    "eventLocationName": "chinastraat",
-    "shortText": "Chinastraat, Gent",
-    "image": "../public/location-images/chinastraat",
-    "location": "chinastraat"
-  },
-  {
-    "title": "Batushka, Vltimas en God Dethroned",
-    "start": "2024-10-25",
-    "eventLocationName": "dru cultuurfabriek",
-    "shortText": "DRU Cultuurfabriek, Ulft",
-    "image": "../public/location-images/drucultuurfabriek",
-    "location": "drucultuurfabriek"
-  },
-  {
-    "title": "Valley of The Sun, Daever en Ziener",
-    "start": "2023-10-25",
-    "eventLocationName": "willem twee",
-    "shortText": "Willem Twee, Den Bosch",
-    "image": "../public/location-images/willemtwee",
-    "location": "willemtwee"
-  },
-  {
-    "title": "Lazuli",
-    "start": "2023-10-26",
-    "eventLocationName": "boerderij",
-    "shortText": "Boerderij, Zoetermeer",
-    "image": "../public/location-images/boerderij",
-    "location": "boerderij"
-  },
-  {
-    "title": "Oltas en Sordid Empire",
-    "start": "2023-10-26",
-    "eventLocationName": "lazaru's",
-    "shortText": "Lazaru's, Leiden",
-    "image": "../public/location-images/lazarus",
-    "location": "lazarus"
-  },
-  {
-    "title": "Samhain festival",
-    "start": "2023-10-26",
-    "eventLocationName": "muziekgieterij",
-    "shortText": "\nMet Amenra, Cult Of Fire, Uada e.v.a.",
-    "image": "../public/location-images/muziekgieterij",
-    "location": "muziekgieterij"
-  },
-  {
-    "title": "Kamelot, Ad Infinitum, Blackbriar en Frozen Crown",
-    "start": "2024-10-30",
+    "title": "The Halo Effect, Pain en Bloodred Hourglass",
+    "start": "2025-01-26",
     "eventLocationName": "trix",
     "shortText": "Trix, Antwerpen (België)",
     "image": "../public/location-images/trix",
     "location": "trix"
   },
   {
-    "title": "Ne Obliviscaris",
-    "start": "2023-10-30",
-    "eventLocationName": "kantine",
-    "shortText": "Kantine, Köln",
-    "image": "../public/location-images/kantine",
-    "location": "kantine"
+    "title": "Defeated Sanity, To Violently Vomit, Putrid Pile, Iniquitous Savagery, Strangle Wire,",
+    "start": "2025-01-29",
+    "eventLocationName": "hall of fame",
+    "shortText": "Hall Of Fame, Tilburg",
+    "image": "../public/location-images/halloffame",
+    "location": "halloffame"
   },
   {
-    "title": "Mother Of Millions",
-    "start": "2023-10-31",
-    "eventLocationName": "ragnarok",
-    "shortText": "Ragnarok, Bree",
-    "image": "../public/location-images/ragnarok",
-    "location": "ragnarok"
+    "title": "Dutch Metalheads Fest\nmet o,a, Dead Head, Sad Whisperings, Metal Bats (post-Vortex)",
+    "start": "2025-02-01",
+    "eventLocationName": "vera",
+    "shortText": "Vera, Groningen",
+    "image": "../public/location-images/vera",
+    "location": "vera"
   },
   {
-    "title": "Brainstorm festival",
-    "start": "2023-11-01",
-    "eventLocationName": "gigant",
-    "shortText": "\nMet Evergrey, Theocracy e.a.",
-    "image": "../public/location-images/gigant",
-    "location": "gigant"
-  },
-  {
-    "title": "Kissin' Dynamite",
-    "start": "2023-11-01",
+    "title": "Beyond The Black",
+    "start": "2025-02-04",
     "eventLocationName": "trix",
-    "shortText": "Trix, Antwerpen (België)",
+    "shortText": "Trix, Antwerpen",
     "image": "../public/location-images/trix",
     "location": "trix"
   },
   {
-    "title": "Lazarvs en Verwoed",
-    "start": "2023-11-01",
-    "eventLocationName": "slachthuis",
-    "shortText": "Slachthuis, Haarlem",
-    "image": "../public/location-images/slachthuis",
-    "location": "slachthuis"
-  },
-  {
-    "title": "Mother Of Millions",
-    "start": "2023-11-01",
-    "eventLocationName": "de kroepoekfabriek",
-    "shortText": "De Kroepoekfabriek, Vlaardingen",
-    "image": "../public/location-images/dekroepoekfabriek",
-    "location": "dekroepoekfabriek"
-  },
-  {
-    "title": "The New Roses en The Dirty Denims",
-    "start": "2023-11-01",
-    "eventLocationName": "willem twee",
-    "shortText": "Willem Twee, Den Bosch",
-    "image": "../public/location-images/willemtwee",
-    "location": "willemtwee"
-  },
-  {
-    "title": "Mother Of Millions",
-    "start": "2024-11-02",
-    "eventLocationName": "djingel djangel",
-    "shortText": "Djingel Djangel, Antwerpen",
-    "image": "../public/location-images/djingeldjangel",
-    "location": "djingeldjangel"
-  },
-  {
-    "title": "Sepulfest",
-    "start": "2024-11-03",
-    "eventLocationName": "mainstage",
-    "shortText": "\nMet Sepultura, Jinjer, Obituary e.a.",
-    "image": "../public/location-images/mainstage",
-    "location": "mainstage"
-  },
-  {
-    "title": "Guilt Trip, Foreign Hands en Sorcerer",
-    "start": "2024-11-08",
-    "eventLocationName": "hall of fame",
-    "shortText": "Hall Of Fame, Tilburg",
-    "image": "../public/location-images/halloffame",
-    "location": "halloffame"
-  },
-  {
-    "title": "Hell's Balls festival",
-    "start": "2024-11-09",
-    "eventLocationName": "xpo",
-    "shortText": "\nmet Dark Tranquillity, Moonspell, e.a.",
-    "image": "../public/location-images/xpo",
-    "location": "xpo"
-  },
-  {
-    "title": "Sólstafir, Oranssi Pazuzu en Hamferð",
-    "start": "2024-11-15",
-    "eventLocationName": "muziekgieterij",
-    "shortText": "Muziekgieterij, Maastricht",
-    "image": "../public/location-images/muziekgieterij",
-    "location": "muziekgieterij"
-  },
-  {
-    "title": "Fury en Segunda",
-    "start": "2024-11-16",
-    "eventLocationName": "sound dog",
-    "shortText": "Sound Dog, Breda",
-    "image": "../public/location-images/sounddog",
-    "location": "sounddog"
-  },
-  {
-    "title": "Helldorado",
-    "start": "2023-11-16",
-    "eventLocationName": "klokgebouw",
-    "shortText": "Klokgebouw, Eindhoven",
-    "image": "../public/location-images/klokgebouw",
-    "location": "klokgebouw"
-  },
-  {
-    "title": "Lucassen & Soeterboek's Plan Nine",
-    "start": "2023-11-16",
-    "eventLocationName": "'t beest",
-    "shortText": "'t Beest, Goes",
-    "image": "../public/location-images/tbeest",
-    "location": "tbeest"
-  },
-  {
-    "title": "Sólstafir, Oranssi Pazuzu en Hamferð",
-    "start": "2023-11-16",
-    "eventLocationName": "botanique",
-    "shortText": "Botanique, Brussel (België)",
-    "image": "../public/location-images/botanique",
-    "location": "botanique"
-  },
-  {
-    "title": "Sleep Token en Bilmuri",
-    "start": "2024-11-18",
-    "eventLocationName": "vorst nationaal",
-    "shortText": "Vorst Nationaal, Brussel (België)",
-    "image": "../public/location-images/vorstnationaal",
-    "location": "vorstnationaal"
-  },
-  {
-    "title": "VOLA",
-    "start": "2024-11-19",
-    "eventLocationName": "die kantine",
-    "shortText": "Die Kantine, Keulen",
-    "image": "../public/location-images/diekantine",
-    "location": "diekantine"
-  },
-  {
-    "title": "Wardruna",
-    "start": "2023-11-19",
-    "eventLocationName": "cirque royal",
-    "shortText": "Cirque Royal, Brussel (België)",
-    "image": "../public/location-images/cirqueroyal",
-    "location": "cirqueroyal"
-  },
-  {
-    "title": "Dying Fetus, Chelsea Grin, Despised Icon en Vitriol",
-    "start": "2024-11-22",
-    "eventLocationName": "essigfabrik",
-    "shortText": "Essigfabrik, Keulen",
-    "image": "../public/location-images/essigfabrik",
-    "location": "essigfabrik"
-  },
-  {
-    "title": "Revolution Calling",
-    "start": "2023-11-23",
-    "eventLocationName": "klokgebouw",
-    "shortText": "\nmet Biohazard, Agnostic Front, The Exploited, CIV e.v.a.",
-    "image": "../public/location-images/klokgebouw",
-    "location": "klokgebouw"
-  },
-  {
-    "title": "Veil Of Maya, Signs of the Swarm, Varials en To The Grave",
-    "start": "2023-11-23",
-    "eventLocationName": "essigfabrik",
-    "shortText": "Essigfabrik, Keulen",
-    "image": "../public/location-images/essigfabrik",
-    "location": "essigfabrik"
-  },
-  {
-    "title": "Ondfødt, Anguish en Ornaris",
-    "start": "2023-11-24",
-    "eventLocationName": "mukkus",
-    "shortText": "Mukkus, Leeuwarden",
-    "image": "../public/location-images/mukkus",
-    "location": "mukkus"
-  },
-  {
-    "title": "Sirenia en Xandria",
-    "start": "2023-11-27",
-    "eventLocationName": "turock",
-    "shortText": "Turock, Essen",
-    "image": "../public/location-images/turock",
-    "location": "turock"
-  },
-  {
-    "title": "Sirenia en Xandria",
-    "start": "2023-11-28",
-    "eventLocationName": "dvg club",
-    "shortText": "DVG Club, Kortrijk",
-    "image": "../public/location-images/dvgclub",
-    "location": "dvgclub"
-  },
-  {
-    "title": "Herrie Festival",
-    "start": "2023-11-30",
-    "eventLocationName": "hal 25",
-    "shortText": "\nMet Benighted, Baest, Hideous Divinity, Coffin Feeder e.a.",
-    "image": "../public/location-images/hal25",
-    "location": "hal25"
-  },
-  {
-    "title": "Mystic Prophecy, Iron Savior en Mad Max",
-    "start": "2023-11-30",
-    "eventLocationName": "paard",
-    "shortText": "Paard, Den Haag",
-    "image": "../public/location-images/paard",
-    "location": "paard"
-  },
-  {
-    "title": "Alcest",
-    "start": "2024-12-05",
-    "eventLocationName": "ancienne belgique",
-    "shortText": "Ancienne Belgique, Brussel (België)",
-    "image": "../public/location-images/anciennebelgique",
-    "location": "anciennebelgique"
-  },
-  {
-    "title": "Slipknot en Bleed From Within",
-    "start": "2023-12-05",
-    "eventLocationName": "ziggo dome",
-    "shortText": "Ziggo Dome, Amsterdam",
-    "image": "../public/location-images/ziggodome",
-    "location": "ziggodome"
-  },
-  {
-    "title": "Slipknot en Bleed From Within",
-    "start": "2023-12-06",
-    "eventLocationName": "westfalenhalle",
-    "shortText": "Westfalenhalle, Dortmund (Duitsland)",
-    "image": "../public/location-images/westfalenhalle",
-    "location": "westfalenhalle"
-  },
-  {
-    "title": "Within Temptation",
-    "start": "2023-12-06",
-    "eventLocationName": "ziggo dome",
-    "shortText": "Ziggo Dome, Amsterdam",
-    "image": "../public/location-images/ziggodome",
-    "location": "ziggodome"
-  },
-  {
-    "title": "As I Lay Dying, Decapitated, Caliban en Left To Suffer",
-    "start": "2024-12-10",
-    "eventLocationName": "ancienne belgique",
-    "shortText": "Ancienne Belgique, Brussel (België)",
-    "image": "../public/location-images/anciennebelgique",
-    "location": "anciennebelgique"
-  },
-  {
-    "title": "Eihwar",
-    "start": "2023-12-11",
-    "eventLocationName": "hall of fame",
-    "shortText": "Hall Of Fame, Tilburg",
-    "image": "../public/location-images/halloffame",
-    "location": "halloffame"
-  },
-  {
-    "title": "Kreator, Anthrax en Testament",
-    "start": "2024-12-15",
-    "eventLocationName": "mainstage",
-    "shortText": "Mainstage, Den Bosch",
-    "image": "../public/location-images/mainstage",
-    "location": "mainstage"
-  },
-  {
-    "title": "Currents, Miss May I, Resolve, Acres en InVisions",
-    "start": "2024-12-20",
+    "title": "Beyond The Black",
+    "start": "2025-02-05",
     "eventLocationName": "turbinenhalle",
     "shortText": "Turbinenhalle, Oberhausen",
     "image": "../public/location-images/turbinenhalle",
     "location": "turbinenhalle"
   },
   {
-    "title": "Evergrey en Klogr",
-    "start": "2023-12-22",
-    "eventLocationName": "cacaofabriek",
-    "shortText": "Cacaofabriek, Helmond",
-    "image": "../public/location-images/cacaofabriek",
-    "location": "cacaofabriek"
-  },
-  {
-    "title": "Pestilence en MagnaCult",
-    "start": "2024-12-28",
-    "eventLocationName": "bibelot poppodium",
-    "shortText": "Bibelot Poppodium, Dordrecht",
-    "image": "../public/location-images/bibelotpoppodium",
-    "location": "bibelotpoppodium"
-  },
-  {
-    "title": "Powerwolf, Hammerfall en Wind Rose",
-    "start": "2024-10-06",
-    "eventLocationName": "lotto arena",
-    "shortText": "Lotto Arena, Antwerpen (België)",
-    "image": "../public/location-images/lottoarena",
-    "location": "lottoarena"
-  },
-  {
-    "title": "Arch Enemy, In Flames en Soilwork",
-    "start": "2024-10-13",
-    "eventLocationName": "mainstage",
-    "shortText": "Mainstage, Den Bosch",
-    "image": "../public/location-images/mainstage",
-    "location": "mainstage"
-  },
-  {
-    "title": "Eleine",
-    "start": "2024-10-15",
-    "eventLocationName": "dvg",
-    "shortText": "DVG, Kortrijk (België)",
-    "image": "../public/location-images/dvg",
-    "location": "dvg"
-  },
-  {
-    "title": "Eleine en Ignea",
-    "start": "2024-10-16",
-    "eventLocationName": "astrant",
-    "shortText": "Astrant, Ede",
-    "image": "../public/location-images/astrant",
-    "location": "astrant"
-  },
-  {
-    "title": "Voyager",
-    "start": "2024-10-18",
+    "title": "Adrian Vandenberg: My Whitesnake Years",
+    "start": "2025-02-08",
     "eventLocationName": "boerderij",
     "shortText": "Boerderij, Zoetermeer",
     "image": "../public/location-images/boerderij",
     "location": "boerderij"
   },
   {
-    "title": "Threshold",
-    "start": "2024-10-19",
-    "eventLocationName": "cacaofabriek",
-    "shortText": "Cacaofabriek, Helmond",
-    "image": "../public/location-images/cacaofabriek",
-    "location": "cacaofabriek"
+    "title": "Thundermother, Cobra Spell en Vulvarine",
+    "start": "2025-02-09",
+    "eventLocationName": "de casino",
+    "shortText": "De Casino, Sint Niklaas (België)",
+    "image": "../public/location-images/decasino",
+    "location": "decasino"
   },
   {
-    "title": "Batushka, Vltimas en God Dethroned",
-    "start": "2024-10-23",
+    "title": "Unleash The Archers, Striker en Seven Kingdoms",
+    "start": "2025-02-14",
+    "eventLocationName": "live music hall",
+    "shortText": "Live Music Hall, Keulen",
+    "image": "../public/location-images/livemusichall",
+    "location": "livemusichall"
+  },
+  {
+    "title": "Unleash The Archers, Striker en Seven Kingdoms",
+    "start": "2025-02-15",
+    "eventLocationName": "de kreun",
+    "shortText": "De Kreun, Kortrijk (België)",
+    "image": "../public/location-images/dekreun",
+    "location": "dekreun"
+  },
+  {
+    "title": "Winterfylleth, Kvaen, Morgarten, Alvader, Opus Irae en Solarcycles",
+    "start": "2025-02-22",
+    "eventLocationName": "gigant",
+    "shortText": "Gigant, Apeldoorn",
+    "image": "../public/location-images/gigant",
+    "location": "gigant"
+  },
+  {
+    "title": "Opeth en Grand Magus",
+    "start": "2025-02-23",
+    "eventLocationName": "ancienne belgique",
+    "shortText": "Ancienne Belgique, Brussel",
+    "image": "../public/location-images/anciennebelgique",
+    "location": "anciennebelgique"
+  },
+  {
+    "title": "Rivers Of Nihil, Cynic, Beyond Creation en Dååth",
+    "start": "2025-02-28",
+    "eventLocationName": "essigfabrik",
+    "shortText": "Essigfabrik, Keulen",
+    "image": "../public/location-images/essigfabrik",
+    "location": "essigfabrik"
+  },
+  {
+    "title": "The Raven Age en Disconnected",
+    "start": "2025-03-06",
+    "eventLocationName": "hall of fame",
+    "shortText": "Hall Of Fame, Tilburg",
+    "image": "../public/location-images/halloffame",
+    "location": "halloffame"
+  },
+  {
+    "title": "Biohazard en Life Of Agony",
+    "start": "2025-03-07",
+    "eventLocationName": "paard",
+    "shortText": "Paard, Den Haag",
+    "image": "../public/location-images/paard",
+    "location": "paard"
+  },
+  {
+    "title": "Vanden Plas",
+    "start": "2025-03-08",
+    "eventLocationName": "boerderij",
+    "shortText": "Boerderij, Zoetermeer",
+    "image": "../public/location-images/boerderij",
+    "location": "boerderij"
+  },
+  {
+    "title": "Ronnie Romero en Absolva",
+    "start": "2025-03-16",
+    "eventLocationName": "boerderij",
+    "shortText": "Boerderij, Zoetermeer",
+    "image": "../public/location-images/boerderij",
+    "location": "boerderij"
+  },
+  {
+    "title": "Dirkschneider",
+    "start": "2025-03-18",
+    "eventLocationName": "trix",
+    "shortText": "Trix, Antwerpen (België)",
+    "image": "../public/location-images/trix",
+    "location": "trix"
+  },
+  {
+    "title": "Temperance, Ignea en Induction",
+    "start": "2025-03-20",
+    "eventLocationName": "matrix",
+    "shortText": "Matrix, Bochum",
+    "image": "../public/location-images/matrix",
+    "location": "matrix"
+  },
+  {
+    "title": "Temperance, Ignea en Induction",
+    "start": "2025-03-21",
+    "eventLocationName": "dvgclub",
+    "shortText": "DVG, Kortrijk",
+    "image": "../public/location-images/dvgclub",
+    "location": "dvgclub"
+  },
+  {
+    "title": "Anneke van Giersbergen",
+    "start": "2025-03-22",
+    "eventLocationName": "boerderij",
+    "shortText": "Boerderij, Zoetermeer",
+    "image": "../public/location-images/boerderij",
+    "location": "boerderij"
+  },
+  {
+    "title": "Rendezvous Point en Temic",
+    "start": "2025-03-27",
+    "eventLocationName": "muziekgieterij",
+    "shortText": "Muziekgieterij, Maastricht",
+    "image": "../public/location-images/muziekgieterij",
+    "location": "muziekgieterij"
+  },
+  {
+    "title": "Rendezvous Point en Temic",
+    "start": "2025-03-28",
+    "eventLocationName": "boerderij",
+    "shortText": "Boerderij, Zoetermeer",
+    "image": "../public/location-images/boerderij",
+    "location": "boerderij"
+  },
+  {
+    "title": "Michael Schenker Group",
+    "start": "2025-04-09",
+    "eventLocationName": "boerderij",
+    "shortText": "Boerderij, Zoetermeer",
+    "image": "../public/location-images/boerderij",
+    "location": "boerderij"
+  },
+  {
+    "title": "Axel Rudi Pell",
+    "start": "2025-04-12",
+    "eventLocationName": "boerderij",
+    "shortText": "Boerderij, Zoetermeer",
+    "image": "../public/location-images/boerderij",
+    "location": "boerderij"
+  },
+  {
+    "title": "Skroetfest",
+    "start": "2025-04-12",
+    "eventLocationName": "hedon",
+    "shortText": "\nMet Skroetbalg, Peter Pan Speedrock, Neuk! en meer",
+    "image": "../public/location-images/hedon",
+    "location": "hedon"
+  },
+  {
+    "title": "Behemoth, Satyricon en Rotting Christ",
+    "start": "2025-04-15",
+    "eventLocationName": "e-werk",
+    "shortText": "E-Werk, Keulen",
+    "image": "../public/location-images/ewerk",
+    "location": "ewerk"
+  },
+  {
+    "title": "Benediction, Jungle Rot en Master",
+    "start": "2025-04-16",
+    "eventLocationName": "turock",
+    "shortText": "Turock, Essen",
+    "image": "../public/location-images/turock",
+    "location": "turock"
+  },
+  {
+    "title": "Harakiri For The Sky",
+    "start": "2025-04-17",
     "eventLocationName": "hedon",
     "shortText": "Hedon, Zwolle",
     "image": "../public/location-images/hedon",
     "location": "hedon"
   },
   {
-    "title": "Malignant Tumour en Exorcizphobia",
-    "start": "2024-10-23",
-    "eventLocationName": "willem twee",
-    "shortText": "Willem Twee, Den Bosch",
-    "image": "../public/location-images/willemtwee",
-    "location": "willemtwee"
+    "title": "Frozen Crown, Fellowship en Lutharo",
+    "start": "2025-04-19",
+    "eventLocationName": "hell",
+    "shortText": "Hell, Diest",
+    "image": "../public/location-images/hell",
+    "location": "hell"
   },
   {
-    "title": "Veil Of Maya, Signs of the Swarm, Varials en To The Grave",
-    "start": "2024-10-24",
-    "eventLocationName": "chinastraat",
-    "shortText": "Chinastraat, Gent",
-    "image": "../public/location-images/chinastraat",
-    "location": "chinastraat"
+    "title": "Festerfest\nmet o.a. The Wounded, Dystopia en Obstruktor",
+    "start": "2025-04-20",
+    "eventLocationName": "musicon",
+    "shortText": "Musicon, Den Haag",
+    "image": "../public/location-images/musicon",
+    "location": "musicon"
   },
   {
-    "title": "Batushka, Vltimas en God Dethroned",
-    "start": "2024-10-25",
-    "eventLocationName": "dru cultuurfabriek",
-    "shortText": "DRU Cultuurfabriek, Ulft",
-    "image": "../public/location-images/drucultuurfabriek",
-    "location": "drucultuurfabriek"
+    "title": "Frozen Crown, Fellowship en Lutharo",
+    "start": "2025-04-22",
+    "eventLocationName": "rockaplast/matrix",
+    "shortText": "Rockaplast/Matrix, Bochum",
+    "image": "../public/location-images/rockaplastmatrix",
+    "location": "rockaplastmatrix"
   },
   {
-    "title": "Valley of The Sun, Daever en Ziener",
-    "start": "2024-10-25",
-    "eventLocationName": "willem twee",
-    "shortText": "Willem Twee, Den Bosch",
-    "image": "../public/location-images/willemtwee",
-    "location": "willemtwee"
+    "title": "Blackbriar en Solarcycles",
+    "start": "2025-04-24",
+    "eventLocationName": "bolwerk",
+    "shortText": "Bolwerk, Sneek",
+    "image": "../public/location-images/bolwerk",
+    "location": "bolwerk"
   },
   {
-    "title": "Lazuli",
-    "start": "2024-10-26",
-    "eventLocationName": "boerderij",
-    "shortText": "Boerderij, Zoetermeer",
-    "image": "../public/location-images/boerderij",
-    "location": "boerderij"
+    "title": "Imperial Age",
+    "start": "2025-04-25",
+    "eventLocationName": "poppodium boerderij",
+    "shortText": "Poppodium Boerderij",
+    "image": "../public/location-images/poppodiumboerderij",
+    "location": "poppodiumboerderij"
   },
   {
-    "title": "Oltas en Sordid Empire",
-    "start": "2024-10-26",
-    "eventLocationName": "lazaru's",
-    "shortText": "Lazaru's, Leiden",
-    "image": "../public/location-images/lazarus",
-    "location": "lazarus"
-  },
-  {
-    "title": "Samhain festival",
-    "start": "2024-10-26",
-    "eventLocationName": "muziekgieterij",
-    "shortText": "\nMet Amenra, Cult Of Fire, Uada e.v.a.",
-    "image": "../public/location-images/muziekgieterij",
-    "location": "muziekgieterij"
-  },
-  {
-    "title": "Kamelot, Ad Infinitum, Blackbriar en Frozen Crown",
-    "start": "2024-10-30",
-    "eventLocationName": "trix",
-    "shortText": "Trix, Antwerpen (België)",
-    "image": "../public/location-images/trix",
-    "location": "trix"
-  },
-  {
-    "title": "Ne Obliviscaris",
-    "start": "2024-10-30",
-    "eventLocationName": "kantine",
-    "shortText": "Kantine, Köln",
-    "image": "../public/location-images/kantine",
-    "location": "kantine"
-  },
-  {
-    "title": "Mother Of Millions",
-    "start": "2024-10-31",
-    "eventLocationName": "ragnarok",
-    "shortText": "Ragnarok, Bree",
-    "image": "../public/location-images/ragnarok",
-    "location": "ragnarok"
-  },
-  {
-    "title": "Brainstorm festival",
-    "start": "2024-11-01",
+    "title": "Haliphron, My Silent Wake en Oltas",
+    "start": "2025-05-11",
     "eventLocationName": "gigant",
-    "shortText": "\nMet Evergrey, Theocracy e.a.",
+    "shortText": "Gigant, Apeldoorn",
     "image": "../public/location-images/gigant",
     "location": "gigant"
   },
   {
-    "title": "Kissin' Dynamite",
-    "start": "2024-11-01",
-    "eventLocationName": "trix",
-    "shortText": "Trix, Antwerpen (België)",
-    "image": "../public/location-images/trix",
-    "location": "trix"
-  },
-  {
-    "title": "Lazarvs en Verwoed",
-    "start": "2024-11-01",
-    "eventLocationName": "slachthuis",
-    "shortText": "Slachthuis, Haarlem",
-    "image": "../public/location-images/slachthuis",
-    "location": "slachthuis"
-  },
-  {
-    "title": "Mother Of Millions",
-    "start": "2024-11-01",
-    "eventLocationName": "de kroepoekfabriek",
-    "shortText": "De Kroepoekfabriek, Vlaardingen",
-    "image": "../public/location-images/dekroepoekfabriek",
-    "location": "dekroepoekfabriek"
-  },
-  {
-    "title": "The New Roses en The Dirty Denims",
-    "start": "2024-11-01",
-    "eventLocationName": "willem twee",
-    "shortText": "Willem Twee, Den Bosch",
-    "image": "../public/location-images/willemtwee",
-    "location": "willemtwee"
-  },
-  {
-    "title": "Mother Of Millions",
-    "start": "2024-11-02",
-    "eventLocationName": "djingel djangel",
-    "shortText": "Djingel Djangel, Antwerpen",
-    "image": "../public/location-images/djingeldjangel",
-    "location": "djingeldjangel"
-  },
-  {
-    "title": "Sepulfest",
-    "start": "2024-11-03",
-    "eventLocationName": "mainstage",
-    "shortText": "\nMet Sepultura, Jinjer, Obituary e.a.",
-    "image": "../public/location-images/mainstage",
-    "location": "mainstage"
-  },
-  {
-    "title": "Guilt Trip, Foreign Hands en Sorcerer",
-    "start": "2024-11-08",
-    "eventLocationName": "hall of fame",
-    "shortText": "Hall Of Fame, Tilburg",
-    "image": "../public/location-images/halloffame",
-    "location": "halloffame"
-  },
-  {
-    "title": "Hell's Balls festival",
-    "start": "2024-11-09",
-    "eventLocationName": "xpo",
-    "shortText": "\nmet Dark Tranquillity, Moonspell, e.a.",
-    "image": "../public/location-images/xpo",
-    "location": "xpo"
-  },
-  {
-    "title": "Sólstafir, Oranssi Pazuzu en Hamferð",
-    "start": "2024-11-15",
-    "eventLocationName": "muziekgieterij",
-    "shortText": "Muziekgieterij, Maastricht",
-    "image": "../public/location-images/muziekgieterij",
-    "location": "muziekgieterij"
-  },
-  {
-    "title": "Fury en Segunda",
-    "start": "2024-11-16",
-    "eventLocationName": "sound dog",
-    "shortText": "Sound Dog, Breda",
-    "image": "../public/location-images/sounddog",
-    "location": "sounddog"
-  },
-  {
-    "title": "Helldorado",
-    "start": "2024-11-16",
-    "eventLocationName": "klokgebouw",
-    "shortText": "Klokgebouw, Eindhoven",
-    "image": "../public/location-images/klokgebouw",
-    "location": "klokgebouw"
-  },
-  {
-    "title": "Lucassen & Soeterboek's Plan Nine",
-    "start": "2024-11-16",
-    "eventLocationName": "'t beest",
-    "shortText": "'t Beest, Goes",
-    "image": "../public/location-images/tbeest",
-    "location": "tbeest"
-  },
-  {
-    "title": "Sólstafir, Oranssi Pazuzu en Hamferð",
-    "start": "2024-11-16",
-    "eventLocationName": "botanique",
-    "shortText": "Botanique, Brussel (België)",
-    "image": "../public/location-images/botanique",
-    "location": "botanique"
-  },
-  {
-    "title": "Sleep Token en Bilmuri",
-    "start": "2024-11-18",
-    "eventLocationName": "vorst nationaal",
-    "shortText": "Vorst Nationaal, Brussel (België)",
-    "image": "../public/location-images/vorstnationaal",
-    "location": "vorstnationaal"
-  },
-  {
-    "title": "VOLA",
-    "start": "2024-11-19",
-    "eventLocationName": "die kantine",
-    "shortText": "Die Kantine, Keulen",
-    "image": "../public/location-images/diekantine",
-    "location": "diekantine"
-  },
-  {
-    "title": "Wardruna",
-    "start": "2024-11-19",
-    "eventLocationName": "cirque royal",
-    "shortText": "Cirque Royal, Brussel (België)",
-    "image": "../public/location-images/cirqueroyal",
-    "location": "cirqueroyal"
-  },
-  {
-    "title": "Dying Fetus, Chelsea Grin, Despised Icon en Vitriol",
-    "start": "2024-11-22",
-    "eventLocationName": "essigfabrik",
-    "shortText": "Essigfabrik, Keulen",
-    "image": "../public/location-images/essigfabrik",
-    "location": "essigfabrik"
-  },
-  {
-    "title": "Revolution Calling",
-    "start": "2024-11-23",
-    "eventLocationName": "klokgebouw",
-    "shortText": "\nmet Biohazard, Agnostic Front, The Exploited, CIV e.v.a.",
-    "image": "../public/location-images/klokgebouw",
-    "location": "klokgebouw"
-  },
-  {
-    "title": "Veil Of Maya, Signs of the Swarm, Varials en To The Grave",
-    "start": "2024-11-23",
-    "eventLocationName": "essigfabrik",
-    "shortText": "Essigfabrik, Keulen",
-    "image": "../public/location-images/essigfabrik",
-    "location": "essigfabrik"
-  },
-  {
-    "title": "Ondfødt, Anguish en Ornaris",
-    "start": "2024-11-24",
-    "eventLocationName": "mukkus",
-    "shortText": "Mukkus, Leeuwarden",
-    "image": "../public/location-images/mukkus",
-    "location": "mukkus"
-  },
-  {
-    "title": "Sirenia en Xandria",
-    "start": "2024-11-27",
-    "eventLocationName": "turock",
-    "shortText": "Turock, Essen",
-    "image": "../public/location-images/turock",
-    "location": "turock"
-  },
-  {
-    "title": "Sirenia en Xandria",
-    "start": "2024-11-28",
-    "eventLocationName": "dvg club",
-    "shortText": "DVG Club, Kortrijk",
-    "image": "../public/location-images/dvgclub",
-    "location": "dvgclub"
-  },
-  {
-    "title": "Herrie Festival",
-    "start": "2024-11-30",
-    "eventLocationName": "hal 25",
-    "shortText": "\nMet Benighted, Baest, Hideous Divinity, Coffin Feeder e.a.",
-    "image": "../public/location-images/hal25",
-    "location": "hal25"
-  },
-  {
-    "title": "Mystic Prophecy, Iron Savior en Mad Max",
-    "start": "2024-11-30",
-    "eventLocationName": "paard",
-    "shortText": "Paard, Den Haag",
-    "image": "../public/location-images/paard",
-    "location": "paard"
-  },
-  {
-    "title": "Alcest",
-    "start": "2024-12-05",
-    "eventLocationName": "ancienne belgique",
-    "shortText": "Ancienne Belgique, Brussel (België)",
-    "image": "../public/location-images/anciennebelgique",
-    "location": "anciennebelgique"
-  },
-  {
-    "title": "Slipknot en Bleed From Within",
-    "start": "2024-12-05",
+    "title": "Babymetal, Poppy en Bambie Thug",
+    "start": "2025-05-13",
     "eventLocationName": "ziggo dome",
     "shortText": "Ziggo Dome, Amsterdam",
     "image": "../public/location-images/ziggodome",
     "location": "ziggodome"
   },
   {
-    "title": "Slipknot en Bleed From Within",
-    "start": "2024-12-06",
-    "eventLocationName": "westfalenhalle",
-    "shortText": "Westfalenhalle, Dortmund (Duitsland)",
-    "image": "../public/location-images/westfalenhalle",
-    "location": "westfalenhalle"
+    "title": "Elsrock",
+    "start": "2025-05-17",
+    "eventLocationName": "studio 15",
+    "shortText": "Studio 15, Almelo",
+    "image": "../public/location-images/studio15",
+    "location": "studio15"
   },
   {
-    "title": "Within Temptation",
-    "start": "2024-12-06",
-    "eventLocationName": "ziggo dome",
-    "shortText": "Ziggo Dome, Amsterdam",
-    "image": "../public/location-images/ziggodome",
-    "location": "ziggodome"
+    "title": "Blaze Bayley en Pryma",
+    "start": "2025-06-01",
+    "eventLocationName": "musicon",
+    "shortText": "Musicon, Den Haag",
+    "image": "../public/location-images/musicon",
+    "location": "musicon"
   },
   {
-    "title": "As I Lay Dying, Decapitated, Caliban en Left To Suffer",
-    "start": "2024-12-10",
-    "eventLocationName": "ancienne belgique",
-    "shortText": "Ancienne Belgique, Brussel (België)",
-    "image": "../public/location-images/anciennebelgique",
-    "location": "anciennebelgique"
+    "title": "Myles Kennedy",
+    "start": "2025-06-11",
+    "eventLocationName": "hedon",
+    "shortText": "Hedon, Zwolle",
+    "image": "../public/location-images/hedon",
+    "location": "hedon"
   },
   {
-    "title": "Eihwar",
-    "start": "2024-12-11",
-    "eventLocationName": "hall of fame",
-    "shortText": "Hall Of Fame, Tilburg",
-    "image": "../public/location-images/halloffame",
-    "location": "halloffame"
+    "title": "Into The Grave",
+    "start": "2025-06-13",
+    "eventLocationName": "leeuwarden\nmet exodus",
+    "shortText": "\nmet Exodus, W.A.S.P, Gloryhammer, Death Angel, Wind Rose, Rotting Christ e.a.",
+    "image": "../public/location-images/leeuwardenmetexodus",
+    "location": "leeuwardenmetexodus"
   },
   {
-    "title": "Kreator, Anthrax en Testament",
-    "start": "2024-12-15",
-    "eventLocationName": "mainstage",
-    "shortText": "Mainstage, Den Bosch",
-    "image": "../public/location-images/mainstage",
-    "location": "mainstage"
+    "title": "Graspop Metal Meeting",
+    "start": "2025-06-20",
+    "eventLocationName": "dessel",
+    "shortText": "Dessel, BelgiÃ«",
+    "image": "../public/location-images/dessel",
+    "location": "dessel"
   },
   {
-    "title": "Currents, Miss May I, Resolve, Acres en InVisions",
-    "start": "2024-12-20",
-    "eventLocationName": "turbinenhalle",
-    "shortText": "Turbinenhalle, Oberhausen",
-    "image": "../public/location-images/turbinenhalle",
-    "location": "turbinenhalle"
+    "title": "Hellmond Open Air",
+    "start": "2025-07-05",
+    "eventLocationName": "cacaofabriek",
+    "shortText": "\nMet Therapy, Overkill, Vandenberg e.a.",
+    "image": "../public/location-images/cacaofabriek",
+    "location": "cacaofabriek"
   },
   {
-    "title": "Evergrey en Klogr",
-    "start": "2024-12-22",
+    "title": "Pirate Metal Party",
+    "start": "2025-07-06",
     "eventLocationName": "cacaofabriek",
     "shortText": "Cacaofabriek, Helmond",
     "image": "../public/location-images/cacaofabriek",
     "location": "cacaofabriek"
   },
   {
-    "title": "Pestilence en MagnaCult",
-    "start": "2024-12-28",
-    "eventLocationName": "bibelot poppodium",
-    "shortText": "Bibelot Poppodium, Dordrecht",
-    "image": "../public/location-images/bibelotpoppodium",
-    "location": "bibelotpoppodium"
+    "title": "Iron Maiden en Avatar",
+    "start": "2025-07-23",
+    "eventLocationName": "gelredome",
+    "shortText": "Gelredome, Arnhem",
+    "image": "../public/location-images/gelredome",
+    "location": "gelredome"
+  },
+  {
+    "title": "Wacken Open Air",
+    "start": "2025-07-30",
+    "eventLocationName": "wacken (duitsland)\nmet machine head",
+    "shortText": "\nMet Machine Head, Papa Roach, Gojira, Apocalyptica, Within Temptation e.v.a.",
+    "image": "../public/location-images/wackenduitslandmetmachinehead",
+    "location": "wackenduitslandmetmachinehead"
+  },
+  {
+    "title": "Progdreams XI",
+    "start": "2025-08-22",
+    "eventLocationName": "boerderij",
+    "shortText": "Boerderij, Zoetermeer",
+    "image": "../public/location-images/boerderij",
+    "location": "boerderij"
+  },
+  {
+    "title": "Pendragon",
+    "start": "2025-09-10",
+    "eventLocationName": "boerderij",
+    "shortText": "Boerderij, Zoetermeer",
+    "image": "../public/location-images/boerderij",
+    "location": "boerderij"
+  },
+  {
+    "title": "Floor Jansen",
+    "start": "2025-10-10",
+    "eventLocationName": "schouwburg",
+    "shortText": "Schouwburg, Tilburg",
+    "image": "../public/location-images/schouwburg",
+    "location": "schouwburg"
+  },
+  {
+    "title": "Wind Rose, Orden Ogan en Angus McSix",
+    "start": "2025-10-15",
+    "eventLocationName": "trix",
+    "shortText": "Trix, Antwerpen (België)",
+    "image": "../public/location-images/trix",
+    "location": "trix"
+  },
+  {
+    "title": "Arch Enemy, Amorphis, Eluveitie en Gatecreeper",
+    "start": "2025-11-04",
+    "eventLocationName": "ancienne belgique",
+    "shortText": "Ancienne Belgique, Brussel (België)",
+    "image": "../public/location-images/anciennebelgique",
+    "location": "anciennebelgique"
+  },
+  {
+    "title": "Sabaton",
+    "start": "2025-12-01",
+    "eventLocationName": "ziggo dome",
+    "shortText": "Ziggo Dome, Amsterdam",
+    "image": "../public/location-images/ziggodome",
+    "location": "ziggodome"
+  },
+  {
+    "title": "Electric Callboy",
+    "start": "2026-01-17",
+    "eventLocationName": "rtm stage",
+    "shortText": "RTM Stage, Rotterdam",
+    "image": "../public/location-images/rtmstage",
+    "location": "rtmstage"
+  },
+  {
+    "title": "Channel Zero",
+    "start": "2026-12-12",
+    "eventLocationName": "ancienne belgique",
+    "shortText": "Ancienne Belgique, Brussel (BelgiÃ«)",
+    "image": "../public/location-images/anciennebelgique",
+    "location": "anciennebelgique"
   }
 ]

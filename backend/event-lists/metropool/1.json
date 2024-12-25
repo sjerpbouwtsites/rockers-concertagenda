@@ -1,166 +1,128 @@
 [
   {
-    "start": "2024-10-26T15:00:00",
-    "venueEventUrl": "https://metropool.nl/agenda/beerland-festival",
-    "title": "Beerland Festival",
+    "start": "2025-01-11T20:30:00",
+    "venueEventUrl": "https://metropool.nl/agenda/marathon-texoprint",
+    "title": "Marathon + Texoprint",
     "location": "metropool",
-    "price": 39.5,
-    "shortText": "Met o.a. Peter Pan Speedrock, Money & The Man, Roundabouts en Meltheads",
-    "longText": "../public/texts/metropool/b2wubmwvYWdlbmRhL2JlZXJsYW5kLWZlc3RpdmFs.html",
-    "image": "../public/event-images/metropool/b2wubmwvYWdlbmRhL2JlZXJsYW5kLWZlc3RpdmFs",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "start": "2024-11-01T19:45:00",
-    "venueEventUrl": "https://metropool.nl/agenda/the-dead-daisies",
-    "title": "The Dead Daisies",
-    "location": "metropool",
-    "price": 38,
-    "shortText": "In-your-face rock afkomstig van hun nieuwe album Light ‘Em Up",
-    "longText": "../public/texts/metropool/b29sLm5sL2FnZW5kYS90aGUtZGVhZC1kYWlzaWVz.html",
-    "image": "../public/event-images/metropool/b29sLm5sL2FnZW5kYS90aGUtZGVhZC1kYWlzaWVz",
+    "price": 15,
+    "shortText": "Kom alvast in de stemming voor Eurosonic Noorderslag",
+    "longText": "../public/texts/metropool/bC5ubC9hZ2VuZGEvbWFyYXRob24tdGV4b3ByaW50.html",
+    "image": "../public/event-images/metropool/bC5ubC9hZ2VuZGEvbWFyYXRob24tdGV4b3ByaW50",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "the dead daisies": {
-        "s": "6vdapuov4yndhyqlpqrpnh",
-        "l": "the%20dead%20daisies",
+      "texoprint": {
+        "s": "3Crxw3x5GQwDrhY51BNcMi",
+        "l": "texoprint",
         "g": [
-          "modern hard rock",
-          "nwocr"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2024-11-27T20:00:00",
-    "venueEventUrl": "https://metropool.nl/agenda/gorgoroth",
-    "title": "Gorgoroth",
-    "location": "metropool",
-    "price": 27.5,
-    "shortText": "Gorgoroth sleurt je mee naar de krochten van de hel",
-    "longText": "../public/texts/metropool/L21ldHJvcG9vbC5ubC9hZ2VuZGEvZ29yZ29yb3Ro.html",
-    "image": "../public/event-images/metropool/L21ldHJvcG9vbC5ubC9hZ2VuZGEvZ29yZ29yb3Ro",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "gorgoroth": {
-        "s": "1dt7cfrzxm8qpva82jx9y5",
-        "l": "gorgoroth",
-        "g": [
-          "black metal",
-          "metal",
-          "norwegian black metal",
-          "norwegian metal",
-          "tolkien metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2024-11-29T19:30:00",
-    "venueEventUrl": "https://metropool.nl/agenda/mystic-prophecy",
-    "title": "Mystic Prophecy",
-    "location": "metropool",
-    "price": 20,
-    "shortText": "Hellfire Tour 2024",
-    "longText": "../public/texts/metropool/cG9vbC5ubC9hZ2VuZGEvbXlzdGljLXByb3BoZWN5.html",
-    "image": "../public/event-images/metropool/cG9vbC5ubC9hZ2VuZGEvbXlzdGljLXByb3BoZWN5",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "mystic prophecy": {
-        "s": "5kUzPpkPyNpxRYd66c8nYG",
-        "l": "mystic%20prophecy",
-        "g": [
-          "german metal",
-          "german power metal",
-          "power metal",
-          "power",
-          "speed",
-          "thrash metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2024-12-08T19:00:00",
-    "venueEventUrl": "https://metropool.nl/agenda/life-of-agony-seated-show",
-    "title": "Life Of Agony (seated show)",
-    "location": "metropool",
-    "price": 78.5,
-    "shortText": "Up Close & Unplugged",
-    "longText": "../public/texts/metropool/ZW5kYS9saWZlLW9mLWFnb255LXNlYXRlZC1zaG93.html",
-    "image": "../public/event-images/metropool/ZW5kYS9saWZlLW9mLWFnb255LXNlYXRlZC1zaG93",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "life of agony": {
-        "s": "4gyzqpfg5yqzjt2jj0ikel",
-        "l": "life%20of%20agony",
-        "g": []
-      }
-    }
-  },
-  {
-    "start": "2025-03-01T20:30:00",
-    "venueEventUrl": "https://metropool.nl/agenda/the-metal-studs",
-    "title": "The Metal Studs",
-    "location": "metropool",
-    "price": 25,
-    "shortText": "De ultieme classic rock show",
-    "longText": "../public/texts/metropool/cG9vbC5ubC9hZ2VuZGEvdGhlLW1ldGFsLXN0dWRz.html",
-    "image": "../public/event-images/metropool/cG9vbC5ubC9hZ2VuZGEvdGhlLW1ldGFsLXN0dWRz",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "the metal studs": {
-        "s": null,
-        "l": "the%20metal%20studs",
-        "g": [
-          "metal ",
-          "rock "
+          "dutch post-punk"
         ]
       },
-      "metal": {
-        "s": null,
-        "l": "metal",
+      "marathon": {
+        "s": "4AmPhWuKz1UIdx2Mvt4yAw",
+        "l": "marathon",
         "g": [
-          "death metal"
+          "dutch post-punk",
+          "dutch shoegaze"
         ]
       }
     }
   },
   {
-    "start": "2025-05-28T20:30:00",
-    "venueEventUrl": "https://metropool.nl/agenda/arena",
-    "title": "Arena",
+    "start": "2025-03-28T20:30:00",
+    "venueEventUrl": "https://metropool.nl/agenda/anneke-van-giersbergen-band",
+    "title": "Anneke van Giersbergen & Band ",
     "location": "metropool",
-    "price": 33,
-    "shortText": "De rockband viert de dertigste verjaardag van debuutalbum Songs From The Lions Cage",
-    "longText": "../public/texts/metropool/cHM6Ly9tZXRyb3Bvb2wubmwvYWdlbmRhL2FyZW5h.html",
-    "image": "../public/event-images/metropool/cHM6Ly9tZXRyb3Bvb2wubmwvYWdlbmRhL2FyZW5h",
+    "price": 30.5,
+    "shortText": "Een concert met nieuw materiaal en hoogtepunten uit haar omvangrijke oeuvre",
+    "longText": "../public/texts/metropool/ZGEvYW5uZWtlLXZhbi1naWVyc2Jlcmdlbi1iYW5k.html",
+    "image": "../public/event-images/metropool/ZGEvYW5uZWtlLXZhbi1naWVyc2Jlcmdlbi1iYW5k",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "arena": {
-        "s": "5n72qzNEfzCXvNDxKComR7",
-        "l": "arena",
+      "anneke van giersbergen": {
+        "s": "6tzqjnkayty8hfqbeddf8v",
+        "l": "anneke%20van%20giersbergen",
         "g": [
-          "neo-progressive",
-          "progressive metal",
-          "progressive rock",
-          "symphonic rock",
+          "metal"
+        ]
+      },
+      "band": {
+        "s": null,
+        "l": "band",
+        "g": [
+          "heavy",
+          "power metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-05-14T18:30:00",
+    "venueEventUrl": "https://metropool.nl/agenda/decapitated-cryptopsy-warbringer-carnation",
+    "title": "Decapitated ",
+    "location": "metropool",
+    "price": 33,
+    "shortText": " Cryptopsy  +  Warbringer  +  Carnation Internal Bloodshed Over Europe 2025",
+    "longText": "../public/texts/metropool/Y3J5cHRvcHN5LXdhcmJyaW5nZXItY2FybmF0aW9u.html",
+    "image": "../public/event-images/metropool/Y3J5cHRvcHN5LXdhcmJyaW5nZXItY2FybmF0aW9u",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "decapitated": {
+        "s": "17mbhjoaaphuwnrawu9xkc",
+        "l": "decapitated",
+        "g": [
+          "brutal death metal",
+          "death metal",
+          "deathgrind",
+          "groove metal",
+          "metal",
+          "polish death metal",
+          "polish metal",
+          "technical death metal",
+          "technical groove metal",
           "thrash metal"
+        ]
+      },
+      "warbringer": {
+        "s": "4ukkkgkjnwx8ktuvea66k1",
+        "l": "warbringer",
+        "g": [
+          "metal",
+          "new wave of thrash metal",
+          "speed metal",
+          "thrash metal"
+        ]
+      },
+      "carnation": {
+        "s": "7s6smrbyqvp26jn5ebnu9u",
+        "l": "carnation",
+        "g": [
+          "belgian death metal",
+          "belgian metal",
+          "dutch metal",
+          "voidgrind"
+        ]
+      },
+      "cryptopsy": {
+        "s": "29PgYwTelpNl6370XLqFtN",
+        "l": "cryptopsy",
+        "g": [
+          "black metal",
+          "brutal death metal",
+          "canadian metal",
+          "death metal",
+          "quebec death metal",
+          "technical death metal",
+          "technical deathcore",
+          "technical melodic death metal",
+          "thrash metal",
+          "brutal",
+          "technical death metal"
         ]
       }
     }

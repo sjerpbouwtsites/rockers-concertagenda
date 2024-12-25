@@ -1,28 +1,5 @@
 [
   {
-    "door": "2024-12-07T20:00:00",
-    "start": "2024-12-07T20:20:00",
-    "venueEventUrl": "https://www.cpunt.nl/agenda/dope-dod-bizarre",
-    "title": "Dope d.o.d.",
-    "location": "cpunt",
-    "price": 22.5,
-    "shortText": "European Tour 2024",
-    "longText": "../public/texts/cpunt/dW50Lm5sL2FnZW5kYS9kb3BlLWRvZC1iaXphcnJl.html",
-    "image": "../public/event-images/cpunt/dW50Lm5sL2FnZW5kYS9kb3BlLWRvZC1iaXphcnJl",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "dope d.o.d.": {
-        "s": "64uhlfdukt8hx3rctduien",
-        "l": "dope%20d.o.d.",
-        "g": [
-          "dutch hip hop"
-        ]
-      }
-    }
-  },
-  {
     "door": "2025-01-18T19:30:00",
     "start": "2025-01-18T20:30:00",
     "venueEventUrl": "https://www.cpunt.nl/agenda/69-charger-neuk-skroetbalg",
@@ -52,6 +29,34 @@
     }
   },
   {
+    "door": "2025-01-21T19:00:00",
+    "start": "2025-01-21T19:30:00",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/bonfire",
+    "title": "Bonfire",
+    "location": "cpunt",
+    "price": 30,
+    "shortText": "Higher Ground Tour",
+    "longText": "../public/texts/cpunt/Oi8vd3d3LmNwdW50Lm5sL2FnZW5kYS9ib25maXJl.html",
+    "image": "../public/event-images/cpunt/Oi8vd3d3LmNwdW50Lm5sL2FnZW5kYS9ib25maXJl",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "bonfire": {
+        "s": "7gqKcfoY25do9k18uCCgIT",
+        "l": "bonfire",
+        "g": [
+          "german hard rock",
+          "german power metal",
+          "glam metal",
+          "hard rock",
+          "black",
+          "thrash metal"
+        ]
+      }
+    }
+  },
+  {
     "door": "2025-03-01T20:00:00",
     "start": "2025-03-01T21:00:00",
     "venueEventUrl": "https://www.cpunt.nl/agenda/freak-kitchen",
@@ -74,5 +79,65 @@
         ]
       }
     }
+  },
+  {
+    "door": "2025-03-06T20:00:00",
+    "start": "2025-03-06T20:30:00",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/transport-league-komatsu",
+    "title": "Transport League + Komatsu",
+    "location": "cpunt",
+    "price": 14.5,
+    "shortText": "",
+    "longText": "../public/texts/cpunt/Z2VuZGEvdHJhbnNwb3J0LWxlYWd1ZS1rb21hdHN1.html",
+    "image": "../public/event-images/cpunt/Z2VuZGEvdHJhbnNwb3J0LWxlYWd1ZS1rb21hdHN1",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "door": "2025-03-09T19:30:00",
+    "start": "2025-03-09T20:00:00",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/alex-skolnick-trio-clinic",
+    "title": "Alex Skolnick Trio + Clinic",
+    "location": "cpunt",
+    "price": 19.5,
+    "shortText": "Prove You're Not A Robot Tour",
+    "longText": "../public/texts/cpunt/ZW5kYS9hbGV4LXNrb2xuaWNrLXRyaW8tY2xpbmlj.html",
+    "image": "../public/event-images/cpunt/ZW5kYS9hbGV4LXNrb2xuaWNrLXRyaW8tY2xpbmlj",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "door": "2025-03-23T19:30:00",
+    "start": "2025-03-23T20:00:00",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/zu",
+    "title": "Zu",
+    "location": "cpunt",
+    "price": 20,
+    "shortText": "",
+    "longText": "../public/texts/cpunt/aHR0cHM6Ly93d3cuY3B1bnQubmwvYWdlbmRhL3p1.html",
+    "image": "../public/event-images/cpunt/aHR0cHM6Ly93d3cuY3B1bnQubmwvYWdlbmRhL3p1",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "door": "2025-04-19T19:30:00",
+    "start": "2025-04-19T20:00:00",
+    "venueEventUrl": "https://www.cpunt.nl/agenda/reaching-as-we-fall",
+    "title": "Reaching As We Fall",
+    "location": "cpunt",
+    "price": 10,
+    "shortText": "Deeproot & I'll Get By",
+    "longText": "../public/texts/cpunt/Lm5sL2FnZW5kYS9yZWFjaGluZy1hcy13ZS1mYWxs.html",
+    "image": "../public/event-images/cpunt/Lm5sL2FnZW5kYS9yZWFjaGluZy1hcy13ZS1mYWxs",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
   }
 ]
