@@ -1,130 +1,37 @@
 [
   {
-    "door": "2025-02-02T18:00:00",
-    "start": "2025-02-02T18:30:00",
-    "end": "2025-02-02T22:00:00",
-    "venueEventUrl": "https://nieuwenor.nl/programma/2025/02/02/trail-of-lies",
-    "title": "Trail of lies (usa)",
-    "location": "nieuwenor",
-    "price": 21,
-    "shortText": "punk-emo-hardcore\n+ Swell + SPEAR + Life Turns Cold",
-    "longText": "../public/texts/nieuwenor/cmFtbWEvMjAyNS8wMi8wMi90cmFpbC1vZi1saWVz.html",
-    "image": "../public/event-images/nieuwenor/cmFtbWEvMjAyNS8wMi8wMi90cmFpbC1vZi1saWVz",
-    "soldOut": null,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "trail of lies": {
-        "s": "6CfRUJrNjN17MgF4sfKE0Z",
-        "l": "trail%20of%20lies",
-        "g": [
-          "metallic hardcore",
-          "nyhc"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-02-21T20:00:00",
-    "start": "2025-02-21T21:00:00",
-    "end": "2025-02-21T23:30:00",
-    "venueEventUrl": "https://nieuwenor.nl/programma/2025/02/21/pothamus-oefenbunker",
-    "title": "Pot­ha­mus [Oefen­bun­ker]",
-    "location": "nieuwenor",
-    "price": 11,
-    "shortText": "metal\nHyp­no­ti­se­ren­de Sludge-Metal",
-    "longText": "../public/texts/nieuwenor/MDI1LzAyLzIxL3BvdGhhbXVzLW9lZmVuYnVua2Vy.html",
-    "image": "../public/event-images/nieuwenor/MDI1LzAyLzIxL3BvdGhhbXVzLW9lZmVuYnVua2Vy",
-    "soldOut": null,
+    "start": "4049-02-13T20:00:00",
+    "venueEventUrl": "https://occii.org/events/sim-dietrichs/",
+    "title": "Occii & sound in motion: dietrichs (us, camille & don dietrich/borbetomagus) ",
+    "location": "occii",
+    "price": 12,
+    "shortText": " jef mertens (be)  +  mascletá (fr)  +  bhajan bhoy (uk/nl) Sound In Motion | Cosmic Explorations | Wall Of Sound",
+    "longText": "../public/texts/occii/Y2NpaS5vcmcvZXZlbnRzL3NpbS1kaWV0cmljaHMv.html",
+    "image": "../public/event-images/occii/Y2NpaS5vcmcvZXZlbnRzL3NpbS1kaWV0cmljaHMv",
+    "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {}
   },
   {
-    "door": "2025-04-03T20:00:00",
-    "start": "2025-04-03T20:30:00",
-    "end": "2025-04-03T01:00:00",
-    "venueEventUrl": "https://nieuwenor.nl/programma/2025/04/03/clan-of-xymox",
-    "title": "Clan Of Xymox",
-    "location": "nieuwenor",
-    "price": 25,
-    "shortText": "new-wave-ebm\nRePost! pre­sen­teert pio­niers van de darkwave",
-    "longText": "../public/texts/nieuwenor/cmFtbWEvMjAyNS8wNC8wMy9jbGFuLW9mLXh5bW94.html",
-    "image": "../public/event-images/nieuwenor/cmFtbWEvMjAyNS8wNC8wMy9jbGFuLW9mLXh5bW94",
-    "soldOut": null,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2025-04-04T19:30:00",
-    "start": "2025-04-04T20:00:00",
-    "end": "2025-04-04T23:00:00",
-    "venueEventUrl": "https://nieuwenor.nl/programma/2025/04/04/slash-n-roses-bad-medicine",
-    "title": "Slash N’ Roses + Bad Medicine",
-    "location": "nieuwenor",
-    "price": 30,
-    "shortText": "rock-alternative,tribute-cover\nHet hard­rock gevoel van de jaren 80",
-    "longText": "../public/texts/nieuwenor/LzA0L3NsYXNoLW4tcm9zZXMtYmFkLW1lZGljaW5l.html",
-    "image": "../public/event-images/nieuwenor/LzA0L3NsYXNoLW4tcm9zZXMtYmFkLW1lZGljaW5l",
-    "soldOut": null,
+    "start": "4049-04-27T20:00:00",
+    "venueEventUrl": "https://occii.org/events/the-flying-luttenbachers/",
+    "title": "The flying luttenbachers (us) + more tba",
+    "location": "occii",
+    "price": 12,
+    "shortText": "Brutal Prog, Extreme Metal, Harmolodic Skronk",
+    "longText": "../public/texts/occii/ZW50cy90aGUtZmx5aW5nLWx1dHRlbmJhY2hlcnMv.html",
+    "image": "../public/event-images/occii/ZW50cy90aGUtZmx5aW5nLWx1dHRlbmJhY2hlcnMv",
+    "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "slash n’ roses": {
-        "s": null,
-        "l": null,
+      "the flying luttenbachers": {
+        "s": "6tENGBwrGxtkGDCxXBMpNO",
+        "l": "the%20flying%20luttenbachers",
         "g": [
-          "hard rock"
-        ]
-      },
-      "bad medicine": {
-        "s": null,
-        "l": null,
-        "g": [
-          "hard rock",
-          "coverband",
-          "bon jovi"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-05-10T20:00:00",
-    "start": "2025-05-10T20:30:00",
-    "end": "2025-05-10T23:00:00",
-    "venueEventUrl": "https://nieuwenor.nl/programma/2025/05/10/makemake-tw",
-    "title": "Make­ma­ke (tw)",
-    "location": "nieuwenor",
-    "price": 23.5,
-    "shortText": "metal\nTai­wa­nees Fema­le Metal Trio komt naar Heerlen!",
-    "longText": "../public/texts/nieuwenor/b2dyYW1tYS8yMDI1LzA1LzEwL21ha2VtYWtlLXR3.html",
-    "image": "../public/event-images/nieuwenor/b2dyYW1tYS8yMDI1LzA1LzEwL21ha2VtYWtlLXR3",
-    "soldOut": null,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "door": "2025-11-01T19:00:00",
-    "start": "2025-11-01T20:00:00",
-    "end": "2025-11-01T23:00:00",
-    "venueEventUrl": "https://nieuwenor.nl/programma/2025/11/01/acindc",
-    "title": "Acindc",
-    "location": "nieuwenor",
-    "price": 22.5,
-    "shortText": "rock-alternative,tribute-cover\nNa een uit­ver­kocht con­cert, terug in Heerlen",
-    "longText": "../public/texts/nieuwenor/bmwvcHJvZ3JhbW1hLzIwMjUvMTEvMDEvYWNpbmRj.html",
-    "image": "../public/event-images/nieuwenor/bmwvcHJvZ3JhbW1hLzIwMjUvMTEvMDEvYWNpbmRj",
-    "soldOut": null,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "acindc": {
-        "s": null,
-        "l": "acindc",
-        "g": [
-          "hard rock"
+          "brutal prog",
+          "noise rock"
         ]
       }
     }
