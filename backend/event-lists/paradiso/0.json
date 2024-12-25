@@ -11,7 +11,15 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": {}
+    "artists": {
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
+        ]
+      }
+    }
   },
   {
     "start": "2025-02-28T20:30:00",
@@ -97,7 +105,16 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": {}
+    "artists": {
+      "plus": {
+        "s": null,
+        "l": "plus",
+        "g": [
+          "death",
+          "black metal"
+        ]
+      }
+    }
   },
   {
     "start": "2025-04-25T20:30:00",

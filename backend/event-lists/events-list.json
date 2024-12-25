@@ -20,7 +20,7 @@
     "price": null,
     "shortText": " botulistum  +  triste saison (fr) black metal",
     "longText": "../public/texts/willemeen/bS1iZS1ib3R1bGlzdHVtLXRyaXN0ZS1zYWlzb24v.html",
-    "image": "../public/event-images/willemeen/bS1iZS1ib3R1bGlzdHVtLXRyaXN0ZS1zYWlzb24v",
+    "image": "../public/location-images/willemeen",
     "soldOut": [
       "uitverkocht"
     ],
@@ -118,7 +118,7 @@
     "price": 10,
     "shortText": "punk festival",
     "longText": "../public/texts/willemeen/bGxlbWVlbi5ubC9wcm9ncmFtbWEva3V0ZmVlc3Qv.html",
-    "image": "../public/event-images/willemeen/bGxlbWVlbi5ubC9wcm9ncmFtbWEva3V0ZmVlc3Qv",
+    "image": "../public/location-images/willemeen",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
@@ -327,7 +327,16 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": {}
+    "artists": {
+      "band": {
+        "s": null,
+        "l": "band",
+        "g": [
+          "heavy",
+          "power metal"
+        ]
+      }
+    }
   },
   {
     "door": "2024-12-29T22:00:00",
@@ -342,6 +351,53 @@
     "unavailable": false,
     "eventGenres": null,
     "artists": {}
+  },
+  {
+    "door": "2024-12-29T19:30:00",
+    "start": "2024-12-29T20:00:00",
+    "venueEventUrl": "https://www.groene-engel.nl/programma/wild-romance-herman-broods-originele-band/",
+    "title": "Wild Romance – Herman Brood's originele band",
+    "location": "groeneengel",
+    "price": 31,
+    "longText": "../public/texts/groeneengel/LWhlcm1hbi1icm9vZHMtb3JpZ2luZWxlLWJhbmQv.html",
+    "image": "../public/event-images/groeneengel/LWhlcm1hbi1icm9vZHMtb3JpZ2luZWxlLWJhbmQv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "band": {
+        "s": null,
+        "l": "band",
+        "g": [
+          "heavy",
+          "power metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2024-12-29T19:30:00",
+    "start": "2024-12-29T20:00:00",
+    "venueEventUrl": "https://www.groene-engel.nl/programma/berget-lewis-ft-leif-de-leeuw-band-clubtour-2025/",
+    "title": "Berget Lewis ft. Leif de Leeuw Band – Clubtour 2025",
+    "location": "groeneengel",
+    "price": 24,
+    "shortText": " undefined",
+    "longText": "../public/texts/groeneengel/Zi1kZS1sZWV1dy1iYW5kLWNsdWJ0b3VyLTIwMjUv.html",
+    "image": "../public/event-images/groeneengel/Zi1kZS1sZWV1dy1iYW5kLWNsdWJ0b3VyLTIwMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "band": {
+        "s": null,
+        "l": "band",
+        "g": [
+          "heavy",
+          "power metal"
+        ]
+      }
+    }
   },
   {
     "door": "2024-12-29T22:00:00",
@@ -660,29 +716,6 @@
     "artists": {}
   },
   {
-    "start": "2025-01-04T20:00:00+01:00",
-    "venueEventUrl": "https://www.spotgroningen.nl/programma/dewolff-7/",
-    "title": "DeWolff+ support: Heath",
-    "location": "oosterpoort",
-    "price": null,
-    "shortText": "DeWolff+ support: Heath",
-    "longText": "../public/texts/oosterpoort/bmluZ2VuLm5sL3Byb2dyYW1tYS9kZXdvbGZmLTcv.html",
-    "image": "../public/event-images/oosterpoort/bmluZ2VuLm5sL3Byb2dyYW1tYS9kZXdvbGZmLTcv",
-    "soldOut": null,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "heath": {
-        "s": null,
-        "l": "heath",
-        "g": [
-          "black",
-          "thrash metal"
-        ]
-      }
-    }
-  },
-  {
     "title": "Hedon Zwaar Nieuwjaar",
     "start": "2025-01-04",
     "eventLocationName": "hedon",
@@ -698,7 +731,7 @@
     "price": 10,
     "shortText": "ancient beekeeping black metal",
     "longText": "../public/texts/willemeen/L3Byb2dyYW1tYS92aWdsam9zLWNoLXN1cHBvcnQv.html",
-    "image": "../public/event-images/willemeen/L3Byb2dyYW1tYS92aWdsam9zLWNoLXN1cHBvcnQv",
+    "image": "../public/location-images/willemeen",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
@@ -965,6 +998,14 @@
         "g": [
           "dutch post-punk"
         ]
+      },
+      "marathon": {
+        "s": "4AmPhWuKz1UIdx2Mvt4yAw",
+        "l": "marathon",
+        "g": [
+          "dutch post-punk",
+          "dutch shoegaze"
+        ]
       }
     }
   },
@@ -1058,7 +1099,15 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": {}
+    "artists": {
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
+        ]
+      }
+    }
   },
   {
     "title": "Wolfsonic\nmet onder meer Bildtstar, Asgrauw en Grafjammer",
@@ -1476,15 +1525,7 @@
     "image": "../public/event-images/dbs/ZXRhbC1iYXR0bGUtdm9vcnJvbmRlLXV0cmVjaHQv",
     "unavailable": false,
     "eventGenres": null,
-    "artists": {
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      }
-    }
+    "artists": {}
   },
   {
     "start": "2025-01-23T19:00:00",
@@ -1687,7 +1728,7 @@
     "price": 13.21,
     "shortText": " Sledeon  +  Festering Existence  +  Scenyte industrial, progressive, metal",
     "longText": "../public/texts/willemeen/b24tZXN0ZXJpbmctZXhpc3RhbmNlLXNjZW55dGUv.html",
-    "image": "../public/event-images/willemeen/b24tZXN0ZXJpbmctZXhpc3RhbmNlLXNjZW55dGUv",
+    "image": "../public/location-images/willemeen",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
@@ -1798,6 +1839,20 @@
         ]
       }
     }
+  },
+  {
+    "start": "2025-01-25T08:00:00",
+    "end": "2025-01-25T10:30:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/lydia-lunch-marc-hurtado-play-suicide/",
+    "title": "Lydia lunch & marc hurtado play suicide ",
+    "location": "dbs",
+    "price": 10,
+    "shortText": " the dyade Culthelden Lydia Lunch en Marc Hurtado spelen vanavond songs van de legendarische postpunk / electro-punkband Suicide.",
+    "longText": "../public/texts/dbs/bmNoLW1hcmMtaHVydGFkby1wbGF5LXN1aWNpZGUv.html",
+    "image": "../public/event-images/dbs/bmNoLW1hcmMtaHVydGFkby1wbGF5LXN1aWNpZGUv",
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
   },
   {
     "door": "2025-01-26T19:00:00",
@@ -1918,6 +1973,20 @@
     "artists": {}
   },
   {
+    "start": "2025-01-26T04:00:00",
+    "end": "2025-01-26T07:00:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/bee-dee-kay-drives-the-ufozzz-fr/",
+    "title": "Bee dee kay drives the ufozzz (fr) ",
+    "location": "dbs",
+    "price": 13.5,
+    "shortText": " el zombie  +  chiff chaffs (b)  +  robbing banks Ok, let’s do this. Een middag onversneden rock ‘n roll en garagepunk energie met het Franse Bee Dee Kay Drives the UFOzzz, the ZOmbie Garage (El Zombie) & Chiff Chaffs uit Belgie!",
+    "longText": "../public/texts/dbs/LWRlZS1rYXktZHJpdmVzLXRoZS11Zm96enotZnIv.html",
+    "image": "../public/event-images/dbs/LWRlZS1rYXktZHJpdmVzLXRoZS11Zm96enotZnIv",
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
     "start": "2025-01-26T15:00:00",
     "venueEventUrl": "https://baroeg.nl/productie/baroeg-on-tour-soundville-in-the-grip-of-winter-presents-anchillys-facing-the-madness-mancuerda/",
     "title": "Baroeg On Tour @SoundVille: In The Grip Of Winter presents: Anchillys ",
@@ -1978,6 +2047,7 @@
     "location": "afaslive",
     "price": 27,
     "longText": "../public/texts/afaslive/d3d3LmFmYXNsaXZlLm5sL2FnZW5kYS9tYW5vd2Fy.html",
+    "image": "../public/event-images/afaslive/d3d3LmFmYXNsaXZlLm5sL2FnZW5kYS9tYW5vd2Fy",
     "soldOut": false,
     "eventGenres": null,
     "artists": {
@@ -2029,6 +2099,7 @@
     "location": "afaslive",
     "price": 28,
     "longText": "../public/texts/afaslive/d3d3LmFmYXNsaXZlLm5sL2FnZW5kYS9wYW50ZXJh.html",
+    "image": "../public/event-images/afaslive/d3d3LmFmYXNsaXZlLm5sL2FnZW5kYS9wYW50ZXJh",
     "soldOut": false,
     "eventGenres": null,
     "artists": {
@@ -2129,7 +2200,7 @@
     "price": 9.99,
     "shortText": " lixed (be)  +  fms (uk) and many more Drum 'n Bass, Dubstep, Techno, Hardcore",
     "longText": "../public/texts/willemeen/ZC1iZS1mbXMtdWstYW5kLW1hbnktbW9yZS10YmEv.html",
-    "image": "../public/event-images/willemeen/ZC1iZS1mbXMtdWstYW5kLW1hbnktbW9yZS10YmEv",
+    "image": "../public/location-images/willemeen",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
@@ -2143,7 +2214,7 @@
     "price": 20,
     "shortText": " atra vetosus (au)  +  lost in desolation (au)  +  lichtblick (at)  +  sedna (it) depressive black metal, avant garde",
     "longText": "../public/texts/willemeen/c3VzLWF1LWxpY2h0YmxlY2stYXQtc2VkbmEtaXQv.html",
-    "image": "../public/event-images/willemeen/c3VzLWF1LWxpY2h0YmxlY2stYXQtc2VkbmEtaXQv",
+    "image": "../public/location-images/willemeen",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
@@ -2470,6 +2541,7 @@
     "location": "afaslive",
     "price": 2025,
     "longText": "../public/texts/afaslive/LmFmYXNsaXZlLm5sL2FnZW5kYS9wYXBhLXJvYWNo.html",
+    "image": "../public/event-images/afaslive/LmFmYXNsaXZlLm5sL2FnZW5kYS9wYXBhLXJvYWNo",
     "soldOut": true,
     "eventGenres": null,
     "artists": {
@@ -2592,15 +2664,7 @@
     "longText": "../public/texts/doornroosje/d3cuZG9vcm5yb29zamUubmwvZXZlbnQvdm93ZXIv.html",
     "soldOut": true,
     "eventGenres": null,
-    "artists": {
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      }
-    }
+    "artists": {}
   },
   {
     "door": "2025-02-06T18:15:00",
@@ -2774,7 +2838,7 @@
     "price": 10,
     "shortText": "techno, hardgroove",
     "longText": "../public/texts/willemeen/bmwvcHJvZ3JhbW1hL2t3aWp0LWhhcmQtcmVzZXQv.html",
-    "image": "../public/event-images/willemeen/bmwvcHJvZ3JhbW1hL2t3aWp0LWhhcmQtcmVzZXQv",
+    "image": "../public/location-images/willemeen",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
@@ -2798,7 +2862,7 @@
     "price": 10,
     "shortText": " DMNG  +  Bismut  +  Thammuz  +  Røyking speedrock, stoner, heavy psych, rawk",
     "longText": "../public/texts/willemeen/ZS1yb2NrZXJzLWRtbmctYmlzbXV0LXRoYW1tdXov.html",
-    "image": "../public/event-images/willemeen/ZS1yb2NrZXJzLWRtbmctYmlzbXV0LXRoYW1tdXov",
+    "image": "../public/location-images/willemeen",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
@@ -2997,13 +3061,6 @@
           "melodic metalcore",
           "metalcore"
         ]
-      },
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
       }
     }
   },
@@ -3087,6 +3144,7 @@
     "location": "afaslive",
     "price": 11,
     "longText": "../public/texts/afaslive/dWxsZXQtZm9yLW15LXZhbGVudGluZS10cml2aXVt.html",
+    "image": "../public/event-images/afaslive/dWxsZXQtZm9yLW15LXZhbGVudGluZS10cml2aXVt",
     "soldOut": false,
     "eventGenres": null,
     "artists": {
@@ -3595,6 +3653,7 @@
     "location": "afaslive",
     "price": 19,
     "longText": "../public/texts/afaslive/c2xpdmUubmwvYWdlbmRhL21hcmlseW4tbWFuc29u.html",
+    "image": "../public/event-images/afaslive/c2xpdmUubmwvYWdlbmRhL21hcmlseW4tbWFuc29u",
     "soldOut": true,
     "eventGenres": null,
     "artists": {
@@ -3610,6 +3669,29 @@
           "nu metal",
           "post-grunge",
           "rock"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-02-20T19:15:00",
+    "start": "2025-02-20T19:45:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/berget-lewis-ft.-leif-de-leeuw-band",
+    "title": "Berget Lewis ft. Leif de Leeuw Band",
+    "location": "victorie",
+    "price": 33.35,
+    "shortText": "samensmelting van southern rock en soulvolle vocalen",
+    "longText": "../public/texts/victorie/dC1sZXdpcy1mdC4tbGVpZi1kZS1sZWV1dy1iYW5k.html",
+    "image": "../public/event-images/victorie/dC1sZXdpcy1mdC4tbGVpZi1kZS1sZWV1dy1iYW5k",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "band": {
+        "s": null,
+        "l": "band",
+        "g": [
+          "heavy",
+          "power metal"
         ]
       }
     }
@@ -3651,7 +3733,7 @@
     "price": 15,
     "shortText": " Messor Falce nihilistic & occult black metal",
     "longText": "../public/texts/willemeen/dC1oZWxsbWlsaXRpYS1mci1tZXNzb3ItZmFsY2Uv.html",
-    "image": "../public/event-images/willemeen/dC1oZWxsbWlsaXRpYS1mci1tZXNzb3ItZmFsY2Uv",
+    "image": "../public/location-images/willemeen",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
@@ -3719,16 +3801,7 @@
     "soldOut": null,
     "unavailable": false,
     "eventGenres": null,
-    "artists": {
-      "pothamus": {
-        "s": "3oKgJ6083BjtllXxDN3TD5",
-        "l": "pothamus",
-        "g": [
-          "belgian post-rock",
-          "doomgaze"
-        ]
-      }
-    }
+    "artists": {}
   },
   {
     "door": "2025-02-21T19:30:00",
@@ -3773,6 +3846,26 @@
           "technical death metal",
           "death metal"
         ]
+      }
+    }
+  },
+  {
+    "start": "2025-02-21T08:00:00",
+    "end": "2025-02-21T11:00:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/hallo-venray-uncle-arthur/",
+    "title": "Hallo venray + uncle arthur",
+    "location": "dbs",
+    "price": 10,
+    "shortText": "Ja, zeker wel. Verandering van locatie betekent geenszins a change of heart. De liefde roest niet. HV is onze all time favoriete Nederlandse band.",
+    "longText": "../public/texts/dbs/ZW50L2hhbGxvLXZlbnJheS11bmNsZS1hcnRodXIv.html",
+    "image": "../public/event-images/dbs/ZW50L2hhbGxvLXZlbnJheS11bmNsZS1hcnRodXIv",
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "hallo venray": {
+        "s": null,
+        "l": "hallo%20venray",
+        "g": []
       }
     }
   },
@@ -3833,7 +3926,7 @@
     "price": 12.5,
     "shortText": "hardcore gabber",
     "longText": "../public/texts/willemeen/c3QtaW52aXRlcy1mcmVuY2hraWNrLXJlY29yZHMv.html",
-    "image": "../public/event-images/willemeen/c3QtaW52aXRlcy1mcmVuY2hraWNrLXJlY29yZHMv",
+    "image": "../public/location-images/willemeen",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
@@ -3856,31 +3949,6 @@
     "shortText": "Gigant, Apeldoorn",
     "image": "../public/location-images/gigant",
     "location": "gigant"
-  },
-  {
-    "start": "2025-02-22T08:00:00",
-    "end": "2025-02-22T11:00:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/radar-men-from-the-moon-support/",
-    "title": "Radar Men From The Moon + support",
-    "location": "dbs",
-    "price": 10,
-    "shortText": "Radar Men From The Moon (RMFTM) bevindt zich al veertien jaar in een constante staat van ontwikkeling. De band uit Eindhoven met Utrechtse brulboei hanteert een genre-overschrijdende aanpak, variërend van space- en psych rock tot industriële post-punk en techno. Hun muziek is altijd in beweging, zonder vaste omlijning.\nIn 2024 breekt er een nieuw tijdperk aan voor RMFTM. Op 16 augustus verscheen het nieuwe album ‘Vomitorium’ via Fuzz Club Records, een langverwachte opvolger van ‘The Bestial Light’ uit 2020, waarop ze hun creatieve grenzen blijven verleggen. Donkerder en zwaarder dan ooit tevoren, met een geluid dat neigt naar dissonante drone punk, sludge en noise rock.",
-    "longText": "../public/texts/dbs/ZGFyLW1lbi1mcm9tLXRoZS1tb29uLXN1cHBvcnQv.html",
-    "image": "../public/event-images/dbs/ZGFyLW1lbi1mcm9tLXRoZS1tb29uLXN1cHBvcnQv",
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "radar men from the moon": {
-        "s": "610d1hfspkbogwwdebpir0",
-        "l": "radar%20men%20from%20the%20moon",
-        "g": [
-          "dutch stoner rock",
-          "neo-kraut",
-          "psychedelic space rock",
-          "space rock"
-        ]
-      }
-    }
   },
   {
     "start": "2025-02-22T19:00:00",
@@ -3934,6 +4002,7 @@
     "location": "afaslive",
     "price": 22,
     "longText": "../public/texts/afaslive/Ly93d3cuYWZhc2xpdmUubmwvYWdlbmRhL29wZXRo.html",
+    "image": "../public/event-images/afaslive/Ly93d3cuYWZhc2xpdmUubmwvYWdlbmRhL29wZXRo",
     "soldOut": false,
     "eventGenres": null,
     "artists": {
@@ -4132,13 +4201,6 @@
           "swedish black metal",
           "swedish metal",
           "black metal"
-        ]
-      },
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
         ]
       }
     }
@@ -4591,7 +4653,7 @@
     "price": 10,
     "shortText": "Crossover, trap, hardcore Hip hop, metal",
     "longText": "../public/texts/willemeen/bWVlbi5ubC9wcm9ncmFtbWEvMy1leWVkLWtpZHMv.html",
-    "image": "../public/event-images/willemeen/bWVlbi5ubC9wcm9ncmFtbWEvMy1leWVkLWtpZHMv",
+    "image": "../public/location-images/willemeen",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
@@ -5051,21 +5113,12 @@
     "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "manfred mann's earth band": {
-        "s": "2utNxkLhreF1oIfO8kQT3q",
-        "l": "manfred%20mann's%20earth%20band",
+      "band": {
+        "s": null,
+        "l": "band",
         "g": [
-          "album rock",
-          "art rock",
-          "blues rock",
-          "british blues",
-          "classic rock",
-          "folk rock",
-          "hard rock",
-          "mellow gold",
-          "progressive rock",
-          "soft rock",
-          "symphonic rock"
+          "heavy",
+          "power metal"
         ]
       }
     }
@@ -5266,7 +5319,7 @@
     "price": 23,
     "shortText": " stoneman (ch)  +  morphium (sp)   +   dame tu alma (ch) excl nl show Gothic, Horror, heavy",
     "longText": "../public/texts/willemeen/LWRhbWUtdHUtYWxtYS1jaC1leGNsLW5sLXNob3cv.html",
-    "image": "../public/event-images/willemeen/LWRhbWUtdHUtYWxtYS1jaC1leGNsLW5sLXNob3cv",
+    "image": "../public/location-images/willemeen",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
@@ -5290,7 +5343,7 @@
     "price": 10,
     "shortText": "techno",
     "longText": "../public/texts/willemeen/bC9wcm9ncmFtbWEvemVlcm93LXgtc3Bvb3ItMTIv.html",
-    "image": "../public/event-images/willemeen/bC9wcm9ncmFtbWEvemVlcm93LXgtc3Bvb3ItMTIv",
+    "image": "../public/location-images/willemeen",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
@@ -5733,13 +5786,6 @@
         "s": "2am0proxk0wcivgl5rza3a",
         "l": "no%20barrier",
         "g": []
-      },
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
       }
     }
   },
@@ -5751,7 +5797,7 @@
     "price": 20,
     "shortText": " Rancor  +  Trenchwar  +  Last (BE) H8000 edgemetal, strhateedge, hardcore",
     "longText": "../public/texts/willemeen/YS9jb25ncmVzcy1iZS1yYW5jb3ItbWVlci10YmEv.html",
-    "image": "../public/event-images/willemeen/YS9jb25ncmVzcy1iZS1yYW5jb3ItbWVlci10YmEv",
+    "image": "../public/location-images/willemeen",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
@@ -6107,7 +6153,7 @@
     "price": 27.5,
     "shortText": "folk, black",
     "longText": "../public/texts/willemeen/LWllLWNhbi1iYXJkZC1jaC1tb3JnYXJ0ZW4tY2gv.html",
-    "image": "../public/event-images/willemeen/LWllLWNhbi1iYXJkZC1jaC1tb3JnYXJ0ZW4tY2gv",
+    "image": "../public/location-images/willemeen",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
@@ -6223,13 +6269,6 @@
         "l": "life%20of%20agony",
         "g": []
       },
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      },
       "biohazard": {
         "s": "3nhxXtHwC2TookQyqQlFK1",
         "l": "biohazard",
@@ -6243,6 +6282,13 @@
           "rap metal",
           "rap rock",
           "black",
+          "death metal"
+        ]
+      },
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
           "death metal"
         ]
       }
@@ -6271,7 +6317,7 @@
     "price": 25,
     "shortText": " Soulburn  +  Teethgrinder  +  The Lucifer Principle  +  Devoured Elysium  + 1 deathmetal festival",
     "longText": "../public/texts/willemeen/LXByaW5jaXBsZS1kZXZvdXJlZC1lbHlzaXVtLTEv.html",
-    "image": "../public/event-images/willemeen/LXByaW5jaXBsZS1kZXZvdXJlZC1lbHlzaXVtLTEv",
+    "image": "../public/location-images/willemeen",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
@@ -6510,6 +6556,48 @@
     }
   },
   {
+    "start": "2025-03-29T06:30:00",
+    "end": "2025-03-29T11:30:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/garage-trash-w-the-monsters-no-brains-columbian-neckties-de-apeshit-eyesores/",
+    "title": "Garage trash w/ the monsters!! ",
+    "location": "dbs",
+    "price": 10,
+    "shortText": " no brains  +  columbian neckties (de)  +  apeshit  +  eyesores  +  kees de bree experience Oei, deze maar snel even blokken in de agenda want dit is een feestje waar je bij wilt zijn. Te veel garage, RnR, punkbands op 1 affiche is altijd goed.\nDe hogepriesters van de Garage RnR THE MONSTERS onder aanvoering van Voodoo Rhythm honcho en all time hero Reverend Beatman met niet minder dan 5 supports!\nDe jongens en meisje van No Brains uit U. zijn de tienerleeftijd inmiddels wel net voorbij maar hebben aan intensiteit alleen maar gewonnen, mullet garage punk rock!\nApeshit, ook uit U., kwam, zag en overwon in de slipstream van No Brains, en halen hun punk & rock net iets meer uit Britse voorbeelden.\nColumbian Neckties uit Aalborg is de jeugdigheid allang voorbij maar dat kunnen ze hebben. Ze zijn immers nog altijd de oppergoden van de Scandinavische Garage Punk.\nSiked ook voor The Eyesores, jonge gasten uit Harderberg met swag en een enorme bak energie.\nLast & first op deze avond, de oude, niet voor 1 gat te vangen, lo-fi punkers van de Kees de Bree Experience. Utregs Fabrikoat in hart en nieren.",
+    "longText": "../public/texts/dbs/LW5lY2t0aWVzLWRlLWFwZXNoaXQtZXllc29yZXMv.html",
+    "image": "../public/event-images/dbs/LW5lY2t0aWVzLWRlLWFwZXNoaXQtZXllc29yZXMv",
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "the monsters": {
+        "s": "44a6em5na3vnnbqk0d8bud",
+        "l": "the%20monsters",
+        "g": [
+          "bern indie",
+          "garage punk blues",
+          "louisville underground",
+          "trash rock"
+        ]
+      },
+      "no brains": {
+        "s": "5zwy9rbvpvxw49wgpfxv0t",
+        "l": null,
+        "g": [
+          "punk",
+          "street punk"
+        ]
+      },
+      "apeshit": {
+        "s": "60idytqipfbGaZr3u2a0QG",
+        "l": "apeshit",
+        "g": [
+          "dutch post-punk",
+          "brutal death metal",
+          "grindcore"
+        ]
+      }
+    }
+  },
+  {
     "start": "2025-03-30T19:00:00",
     "end": "2025-03-30T22:30:00",
     "venueEventUrl": "https://www.poppodium-volt.nl/activiteit/lordi-special-guest?show=367",
@@ -6522,21 +6610,7 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": {
-      "lordi": {
-        "s": "14SgKNlOCKAI0PfRD1HnWh",
-        "l": "lordi",
-        "g": [
-          "comic metal",
-          "finnish hard rock",
-          "finnish heavy metal",
-          "lapland metal",
-          "power metal",
-          "heavy metal",
-          "hard rock"
-        ]
-      }
-    }
+    "artists": {}
   },
   {
     "start": "2025-03-30T20:00:00+02:00",
@@ -6572,7 +6646,16 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": {}
+    "artists": {
+      "hardcore": {
+        "s": "3N11n3hTyVlcOg77IGefjz",
+        "l": "hardcore",
+        "g": [
+          "death metal",
+          "hardcore"
+        ]
+      }
+    }
   },
   {
     "start": "2025-03-30T19:00:00",
@@ -6624,15 +6707,6 @@
       "metal "
     ],
     "artists": {
-      "undefined": {
-        "s": "6NMVL5NGYZKTl6AZuxybbV",
-        "l": "undefined",
-        "g": [
-          "metalcore",
-          "new wave ",
-          "punk "
-        ]
-      },
       "cult of fire": {
         "s": "1GNzgaXdYGtEP5xOqCsdSq",
         "l": "cult%20of%20fire",
@@ -6643,7 +6717,18 @@
           "epic black metal",
           "voidgaze",
           "epic black metal",
-          "metal "
+          "black",
+          "doom",
+          "post-black"
+        ]
+      },
+      "undefined": {
+        "s": "6NMVL5NGYZKTl6AZuxybbV",
+        "l": "undefined",
+        "g": [
+          "metalcore",
+          "new wave ",
+          "punk "
         ]
       },
       "the great old ones": {
@@ -6659,7 +6744,20 @@
           "post-black metal",
           "voidgaze",
           "post-black metal",
-          "metal "
+          "black",
+          "doom",
+          "post-black"
+        ]
+      },
+      "caronte": {
+        "s": "1EsM1ENlZYKKqv4I3NvwNd",
+        "l": "caronte",
+        "g": [
+          "italian doom metal",
+          "black metal",
+          "black",
+          "doom",
+          "post-black"
         ]
       }
     }
@@ -6690,7 +6788,9 @@
           "epic black metal",
           "voidgaze",
           "epic black metal",
-          "metal "
+          "black",
+          "doom",
+          "post-black"
         ]
       },
       "the great old ones": {
@@ -6706,7 +6806,9 @@
           "post-black metal",
           "voidgaze",
           "post-black metal",
-          "metal "
+          "black",
+          "doom",
+          "post-black"
         ]
       },
       "caronte": {
@@ -6855,16 +6957,7 @@
     "longText": "../public/texts/doornroosje/ZXZlbnQvaXYtYW5kLXRoZS1zdHJhbmdlLWJhbmQv.html",
     "soldOut": true,
     "eventGenres": null,
-    "artists": {
-      "band": {
-        "s": null,
-        "l": "band",
-        "g": [
-          "heavy",
-          "power metal"
-        ]
-      }
-    }
+    "artists": {}
   },
   {
     "door": "2025-04-04T19:30:00",
@@ -7028,13 +7121,6 @@
         "g": [
           "atmospheric black metal"
         ]
-      },
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
       }
     }
   },
@@ -7180,26 +7266,6 @@
     "artists": {}
   },
   {
-    "start": "2025-04-11T08:00:00",
-    "end": "2025-04-11T11:00:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/neuk/",
-    "title": "Neuk!",
-    "location": "dbs",
-    "price": 10,
-    "shortText": "Je kan er maar beter snel bij zijn. De legendarische nederhophardcorebende NEUK! komt ook de nieuwe dB’s aan flarden spelen.",
-    "longText": "../public/texts/dbs/Oi8vd3d3LmRic3R1ZGlvLm5sL2V2ZW50L25ldWsv.html",
-    "image": "../public/event-images/dbs/Oi8vd3d3LmRic3R1ZGlvLm5sL2V2ZW50L25ldWsv",
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "neuk!": {
-        "s": "61z4arbgymgk3nsxcyazoa",
-        "l": "neuk!",
-        "g": []
-      }
-    }
-  },
-  {
     "door": "2025-04-12T22:00:00",
     "start": "2025-04-12T22:00:00",
     "venueEventUrl": "https://patronaat.nl/event/no-barrier-19-04-25/",
@@ -7248,7 +7314,16 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": {}
+    "artists": {
+      "plus": {
+        "s": null,
+        "l": "plus",
+        "g": [
+          "death",
+          "black metal"
+        ]
+      }
+    }
   },
   {
     "door": "2025-04-13T19:00:00",
@@ -7554,6 +7629,14 @@
           "voidgaze",
           "psychedelic black metal"
         ]
+      },
+      "band": {
+        "s": null,
+        "l": "band",
+        "g": [
+          "heavy",
+          "power metal"
+        ]
       }
     }
   },
@@ -7565,7 +7648,7 @@
     "price": 23,
     "shortText": " fellowship (uk)  +  lutharo (ca) power metal",
     "longText": "../public/texts/willemeen/bi1pdC1mZWxsb3dzaGlwLXVrLWx1dGhhcm8tY2Ev.html",
-    "image": "../public/event-images/willemeen/bi1pdC1mZWxsb3dzaGlwLXVrLWx1dGhhcm8tY2Ev",
+    "image": "../public/location-images/willemeen",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
@@ -8220,6 +8303,41 @@
     }
   },
   {
+    "start": "2025-05-01T08:00:00",
+    "end": "2025-05-01T10:30:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/black-curse-concrete-winds/",
+    "title": "Black curse + concrete winds",
+    "location": "dbs",
+    "price": 15,
+    "shortText": "Beware! This one hurts badly!!",
+    "longText": "../public/texts/dbs/bnQvYmxhY2stY3Vyc2UtY29uY3JldGUtd2luZHMv.html",
+    "image": "../public/event-images/dbs/bnQvYmxhY2stY3Vyc2UtY29uY3JldGUtd2luZHMv",
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "black curse": {
+        "s": "67l4rj0u4rzuc1btmw53xu",
+        "l": "black%20curse",
+        "g": [
+          "black death",
+          "denver metal",
+          "dissonant death metal",
+          "voidgaze"
+        ]
+      },
+      "concrete winds": {
+        "s": "3EgVbnn78KGifB0CL39kET",
+        "l": "concrete%20winds",
+        "g": [
+          "black death",
+          "finnish death metal",
+          "death metal",
+          "grindcore"
+        ]
+      }
+    }
+  },
+  {
     "door": "2025-05-02T19:30:00",
     "start": "2025-05-02T20:00:00",
     "venueEventUrl": "https://www.effenaar.nl/agenda/temple-fang-mojo-kitchen-brothers",
@@ -8548,7 +8666,7 @@
     "price": 8,
     "shortText": "black metal",
     "longText": "../public/texts/willemeen/YW1tYS9kaWFib2xpY2FsLWVjaG9lcy1wYXJ0LTcv.html",
-    "image": "../public/event-images/willemeen/YW1tYS9kaWFib2xpY2FsLWVjaG9lcy1wYXJ0LTcv",
+    "image": "../public/location-images/willemeen",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
@@ -9047,6 +9165,7 @@
     "location": "afaslive",
     "price": 22,
     "longText": "../public/texts/afaslive/YXNsaXZlLm5sL2FnZW5kYS9zdGV2ZW4td2lsc29u.html",
+    "image": "../public/event-images/afaslive/YXNsaXZlLm5sL2FnZW5kYS9zdGV2ZW4td2lsc29u",
     "soldOut": false,
     "eventGenres": null,
     "artists": {
@@ -9474,6 +9593,14 @@
         "s": "1mdpsox66qfgkujizvppfv",
         "l": "clitteband",
         "g": []
+      },
+      "band": {
+        "s": null,
+        "l": "band",
+        "g": [
+          "heavy",
+          "power metal"
+        ]
       }
     }
   },
@@ -9513,13 +9640,6 @@
     "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      },
       "w.a.s.p.": {
         "s": "3BVkDHWRvLJEyKdvhLbjsq",
         "l": "w.a.s.p.",
@@ -9615,6 +9735,28 @@
     "shortText": "Dessel, BelgiÃ«",
     "image": "../public/location-images/dessel",
     "location": "dessel"
+  },
+  {
+    "start": "2025-06-23T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/satchvai-band",
+    "title": "Satchvai band\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t nieuw",
+    "location": "afaslive",
+    "price": 23,
+    "shortText": "  undefined",
+    "longText": "../public/texts/afaslive/YXNsaXZlLm5sL2FnZW5kYS9zYXRjaHZhaS1iYW5k.html",
+    "image": "../public/event-images/afaslive/YXNsaXZlLm5sL2FnZW5kYS9zYXRjaHZhaS1iYW5k",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "band": {
+        "s": null,
+        "l": "band",
+        "g": [
+          "heavy",
+          "power metal"
+        ]
+      }
+    }
   },
   {
     "door": "2025-07-02T19:30:00",
@@ -9728,33 +9870,6 @@
     "shortText": "\nMet Machine Head, Papa Roach, Gojira, Apocalyptica, Within Temptation e.v.a.",
     "image": "../public/location-images/wackenduitslandmetmachinehead",
     "location": "wackenduitslandmetmachinehead"
-  },
-  {
-    "start": "2025-07-31T08:00:00",
-    "end": "2025-07-31T10:30:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/voodoo-glow-skulls/",
-    "title": "Voodoo glow skulls",
-    "location": "dbs",
-    "price": 10,
-    "shortText": "Ze zouden al eerder in 2023 komen maar dit keer dan echt, THE VOODOO GLOW SKULLS!",
-    "longText": "../public/texts/dbs/by5ubC9ldmVudC92b29kb28tZ2xvdy1za3VsbHMv.html",
-    "image": "../public/event-images/dbs/by5ubC9ldmVudC92b29kb28tZ2xvdy1za3VsbHMv",
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "voodoo glow skulls": {
-        "s": "0t1X1ygK807hH0upA9lYJw",
-        "l": "voodoo%20glow%20skulls",
-        "g": [
-          "chicano punk",
-          "punk",
-          "ska",
-          "ska mexicano",
-          "ska punk",
-          "skate punk"
-        ]
-      }
-    }
   },
   {
     "door": "2025-08-06T18:45:00+02:00",
@@ -9877,13 +9992,6 @@
     "soldOut": true,
     "eventGenres": null,
     "artists": {
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      },
       "the gathering": {
         "s": "2kO6zjt4a1OIqxOERhliEX",
         "l": "the%20gathering",
@@ -9896,6 +10004,13 @@
           "death",
           "doom metal, atmospheric doom metal (early)",
           " atmospheric rock (later)"
+        ]
+      },
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
         ]
       }
     }
@@ -9959,13 +10074,6 @@
           "death",
           "doom metal, atmospheric doom metal (early)",
           " atmospheric rock (later)"
-        ]
-      },
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
         ]
       }
     }
@@ -10552,13 +10660,6 @@
     "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      },
       "allt": {
         "s": "6YRr0btzGqfQ5K7r23qjEM",
         "l": "allt",
@@ -10691,13 +10792,6 @@
     "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      },
       "triptykon": {
         "s": "37fG1EQuwb6zBHyFYUGfj8",
         "l": "triptykon",

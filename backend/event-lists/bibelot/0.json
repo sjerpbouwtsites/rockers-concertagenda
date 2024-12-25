@@ -199,6 +199,24 @@
       "punk "
     ],
     "artists": {
+      "tigerknife": {
+        "s": "6a8xKomJX3KswQ1WOhNoJy",
+        "l": "tigerknife",
+        "g": [
+          "hardcore (punk) ",
+          "metal ",
+          "punk "
+        ]
+      },
+      "demichron": {
+        "s": "6NMYSnWscxdZZkjttaRgyp",
+        "l": "demichron",
+        "g": [
+          "hardcore (punk) ",
+          "metal ",
+          "punk "
+        ]
+      },
       "celeste": {
         "s": "49HlOY4gkHqsYG9GCuhkcc",
         "l": "celeste",
@@ -223,28 +241,14 @@
           "punk "
         ]
       },
-      "tigerknife": {
-        "s": "6a8xKomJX3KswQ1WOhNoJy",
-        "l": "tigerknife",
+      "ultha": {
+        "s": "2dNNRreuWrVDbNX2srDdag",
+        "l": "ultha",
         "g": [
-          "hardcore (punk) ",
-          "metal ",
-          "punk "
-        ]
-      },
-      "demichron": {
-        "s": "6NMYSnWscxdZZkjttaRgyp",
-        "l": "demichron",
-        "g": [
-          "hardcore (punk) ",
-          "metal ",
-          "punk "
-        ]
-      },
-      "ultha tigerknife": {
-        "s": null,
-        "l": "ultha tigerknife",
-        "g": [
+          "atmospheric black metal",
+          "german black metal",
+          "voidgaze",
+          "black metal",
           "hardcore (punk) ",
           "metal ",
           "punk "
@@ -331,15 +335,6 @@
       "metal "
     ],
     "artists": {
-      "undefined": {
-        "s": "6NMVL5NGYZKTl6AZuxybbV",
-        "l": "undefined",
-        "g": [
-          "metalcore",
-          "new wave ",
-          "punk "
-        ]
-      },
       "cult of fire": {
         "s": "1GNzgaXdYGtEP5xOqCsdSq",
         "l": "cult%20of%20fire",
@@ -350,7 +345,9 @@
           "epic black metal",
           "voidgaze",
           "epic black metal",
-          "metal "
+          "black",
+          "doom",
+          "post-black"
         ]
       },
       "the great old ones": {
@@ -366,7 +363,29 @@
           "post-black metal",
           "voidgaze",
           "post-black metal",
-          "metal "
+          "black",
+          "doom",
+          "post-black"
+        ]
+      },
+      "undefined": {
+        "s": "6NMVL5NGYZKTl6AZuxybbV",
+        "l": "undefined",
+        "g": [
+          "metalcore",
+          "new wave ",
+          "punk "
+        ]
+      },
+      "caronte": {
+        "s": "1EsM1ENlZYKKqv4I3NvwNd",
+        "l": "caronte",
+        "g": [
+          "italian doom metal",
+          "black metal",
+          "black",
+          "doom",
+          "post-black"
         ]
       }
     }
@@ -434,15 +453,6 @@
       "rock "
     ],
     "artists": {
-      "undefined": {
-        "s": "6NMVL5NGYZKTl6AZuxybbV",
-        "l": "undefined",
-        "g": [
-          "metalcore",
-          "new wave ",
-          "punk "
-        ]
-      },
       "sum41": {
         "s": null,
         "l": "sum41",
@@ -450,6 +460,15 @@
           "metal ",
           "punk ",
           "rock "
+        ]
+      },
+      "undefined": {
+        "s": "6NMVL5NGYZKTl6AZuxybbV",
+        "l": "undefined",
+        "g": [
+          "metalcore",
+          "new wave ",
+          "punk "
         ]
       }
     }

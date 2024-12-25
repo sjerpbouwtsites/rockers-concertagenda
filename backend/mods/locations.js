@@ -45,6 +45,7 @@ const locations = {
     bolwerk: new Location({ name: "Bolwerk", city: "Sneek" }),
     chinastraat: new Location({ name: "Chinastraat", city: "Gent" }),
     debosuil: new Location({ name: "De Bosuil", city: "Weert" }),
+    dezon: new Location({ name: "De Zon", city: "Bodegraven" }),
     botanique: new Location({ name: "Botanique", city: "Brussel" }),
     brabanthallen: new Location({ name: "Brabanthallen", city: "Den Bosch" }),
     cacaofabriek: new Location({ name: "Cacaofabriek", city: "Helmond" }),

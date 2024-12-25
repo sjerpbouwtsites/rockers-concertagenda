@@ -88,7 +88,8 @@ export default async function getImage({
     pageInfo,
     selectors,
     mode,
-    workerData
+    workerData,
+    directInput = null
 }) {
     const res = {
         errors: []
@@ -145,7 +146,9 @@ export default async function getImage({
     const pi = pageInfo?.anker ? pageInfo?.anker : event?.pageInfo;
     let image = null;
     const selectorsCopy = [...selectors];
-    if (mode === "image-src") {
+    if (mode === "direct-input") {
+        image = directInput;
+    } else if (mode === "image-src") {
         while (!image && selectorsCopy.length > 0) {
             const selector = selectorsCopy.shift();
             // eslint-disable-next-line no-await-in-loop

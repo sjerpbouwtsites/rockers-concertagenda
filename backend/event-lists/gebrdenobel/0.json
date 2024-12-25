@@ -162,7 +162,24 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": {}
+    "artists": {
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
+        ]
+      },
+      "heads": {
+        "s": null,
+        "l": "heads",
+        "g": [
+          "death",
+          "thrash",
+          "black metal"
+        ]
+      }
+    }
   },
   {
     "start": "2024-06-20T19:00:01+0200",

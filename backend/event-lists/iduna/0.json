@@ -86,6 +86,17 @@
     "unavailable": null,
     "eventGenres": null,
     "artists": {
+      "nanowar of steel": {
+        "s": "7jw9vF1hFRp1k8dDRNRiC5",
+        "l": "nanowar%20of%20steel",
+        "g": [
+          "comic metal",
+          "italian metal",
+          "heavy",
+          "power metal",
+          "hard rock"
+        ]
+      },
       "dynazty": {
         "s": "5deRBvKxJssHVa9n6B7tWV",
         "l": "dynazty",
@@ -96,17 +107,6 @@
           "swedish hard rock",
           "heavy",
           "power metal, hard rock"
-        ]
-      },
-      "nanowar of steel": {
-        "s": "7jw9vF1hFRp1k8dDRNRiC5",
-        "l": "nanowar%20of%20steel",
-        "g": [
-          "comic metal",
-          "italian metal",
-          "heavy",
-          "power metal",
-          "hard rock"
         ]
       }
     }
@@ -126,11 +126,6 @@
     "unavailable": null,
     "eventGenres": null,
     "artists": {
-      "onhou": {
-        "s": null,
-        "l": "onhou",
-        "g": []
-      },
       "pothamus": {
         "s": "3oKgJ6083BjtllXxDN3TD5",
         "l": "pothamus",
@@ -138,6 +133,11 @@
           "belgian post-rock",
           "doomgaze"
         ]
+      },
+      "onhou": {
+        "s": null,
+        "l": "onhou",
+        "g": []
       }
     }
   },

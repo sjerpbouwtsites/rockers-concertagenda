@@ -146,13 +146,6 @@
           "swedish stoner rock"
         ]
       },
-      "gnome": {
-        "s": "6clbqb5cobaxrbi4qvckmo",
-        "l": "gnome",
-        "g": [
-          "belgian stoner rock"
-        ]
-      },
       "high desert queen": {
         "s": "41RTJDSsIKHfYUpSNzztJK",
         "l": "high%20desert%20queen",
@@ -161,6 +154,13 @@
           "psychedelic doom",
           "stoner metal",
           "rock"
+        ]
+      },
+      "gnome": {
+        "s": "6clbqb5cobaxrbi4qvckmo",
+        "l": "gnome",
+        "g": [
+          "belgian stoner rock"
         ]
       }
     }
@@ -192,13 +192,6 @@
     "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      },
       "w.a.s.p.": {
         "s": "3BVkDHWRvLJEyKdvhLbjsq",
         "l": "w.a.s.p.",
@@ -210,6 +203,13 @@
           "thrash metal",
           "heavy metal",
           "hard rock"
+        ]
+      },
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
         ]
       }
     }

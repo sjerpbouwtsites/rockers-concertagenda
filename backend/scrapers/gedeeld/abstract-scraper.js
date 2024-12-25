@@ -298,6 +298,9 @@ export default class AbstractScraper extends ScraperConfig {
     }
 
     async saveBaseEventlist(key, data) {
+        if (!shell?.keepBaseEvents) {
+            return false;
+        }
         WorkerStatus.registerFamilyDoneWithBaseEvents(workerData.family);
         if (!data) {
             this.handleError(

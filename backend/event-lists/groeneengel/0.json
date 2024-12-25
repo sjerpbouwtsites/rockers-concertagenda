@@ -44,6 +44,53 @@
     }
   },
   {
+    "door": "2024-12-29T19:30:00",
+    "start": "2024-12-29T20:00:00",
+    "venueEventUrl": "https://www.groene-engel.nl/programma/berget-lewis-ft-leif-de-leeuw-band-clubtour-2025/",
+    "title": "Berget Lewis ft. Leif de Leeuw Band – Clubtour 2025",
+    "location": "groeneengel",
+    "price": 24,
+    "shortText": " undefined",
+    "longText": "../public/texts/groeneengel/Zi1kZS1sZWV1dy1iYW5kLWNsdWJ0b3VyLTIwMjUv.html",
+    "image": "../public/event-images/groeneengel/Zi1kZS1sZWV1dy1iYW5kLWNsdWJ0b3VyLTIwMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "band": {
+        "s": null,
+        "l": "band",
+        "g": [
+          "heavy",
+          "power metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2024-12-29T19:30:00",
+    "start": "2024-12-29T20:00:00",
+    "venueEventUrl": "https://www.groene-engel.nl/programma/wild-romance-herman-broods-originele-band/",
+    "title": "Wild Romance – Herman Brood's originele band",
+    "location": "groeneengel",
+    "price": 31,
+    "longText": "../public/texts/groeneengel/LWhlcm1hbi1icm9vZHMtb3JpZ2luZWxlLWJhbmQv.html",
+    "image": "../public/event-images/groeneengel/LWhlcm1hbi1icm9vZHMtb3JpZ2luZWxlLWJhbmQv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "band": {
+        "s": null,
+        "l": "band",
+        "g": [
+          "heavy",
+          "power metal"
+        ]
+      }
+    }
+  },
+  {
     "door": "2024-12-29T22:00:00",
     "start": "2024-12-29T22:30:00",
     "venueEventUrl": "https://www.groene-engel.nl/programma/black-smoke-brigade-aftershow-wild-romance/",
@@ -69,7 +116,16 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": {}
+    "artists": {
+      "band": {
+        "s": null,
+        "l": "band",
+        "g": [
+          "heavy",
+          "power metal"
+        ]
+      }
+    }
   },
   {
     "door": "2024-12-29T19:30:00",

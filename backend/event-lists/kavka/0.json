@@ -215,7 +215,16 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": {}
+    "artists": {
+      "hardcore": {
+        "s": "3N11n3hTyVlcOg77IGefjz",
+        "l": "hardcore",
+        "g": [
+          "death metal",
+          "hardcore"
+        ]
+      }
+    }
   },
   {
     "start": "2025-04-06T19:00:00",

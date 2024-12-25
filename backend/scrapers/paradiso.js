@@ -22,7 +22,8 @@ const scraper = new AbstractScraper({
         url: "https://www.paradiso.nl/nl"
     },
     singlePage: {
-        timeout: 120024
+        timeout: 200024,
+        waitUntil: "networkidle0"
     },
     app: {
         harvest: {
@@ -223,7 +224,7 @@ scraper.singlePage = async function ({ page, event }) {
         errors: []
     };
 
-    await this.waitTime(50);
+    await this.waitTime(500);
 
     const pageInfo = await page.evaluate(
         // eslint-disable-next-line no-shadow
@@ -237,15 +238,25 @@ scraper.singlePage = async function ({ page, event }) {
         { buitenRes, event }
     );
 
+    const imageSrc = await page.evaluate(() => {
+        const sourceEl = document.querySelector(
+            "source[srcset*='https://assets.paradiso.nl/images/transforms/event']"
+        );
+        return sourceEl.srcset.split(" ")[0];
+    });
+    this.dirtyTalk(`paradiso image ${imageSrc} ${event.title}`);
+
     const imageRes = await getImage({
         _this: this,
         page,
         workerData,
         event,
         pageInfo,
-        selectors: [".img-wrapper picture img"],
-        mode: "image-src"
+        selectors: [],
+        mode: "direct-input",
+        imageSrc
     });
+
     pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
     pageInfo.image = imageRes.image;
 

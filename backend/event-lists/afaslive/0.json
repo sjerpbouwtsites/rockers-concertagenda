@@ -6,6 +6,7 @@
     "location": "afaslive",
     "price": 27,
     "longText": "../public/texts/afaslive/d3d3LmFmYXNsaXZlLm5sL2FnZW5kYS9tYW5vd2Fy.html",
+    "image": "../public/event-images/afaslive/d3d3LmFmYXNsaXZlLm5sL2FnZW5kYS9tYW5vd2Fy",
     "soldOut": false,
     "eventGenres": null,
     "artists": {
@@ -32,6 +33,7 @@
     "location": "afaslive",
     "price": 11,
     "longText": "../public/texts/afaslive/dWxsZXQtZm9yLW15LXZhbGVudGluZS10cml2aXVt.html",
+    "image": "../public/event-images/afaslive/dWxsZXQtZm9yLW15LXZhbGVudGluZS10cml2aXVt",
     "soldOut": false,
     "eventGenres": null,
     "artists": {
@@ -72,6 +74,7 @@
     "location": "afaslive",
     "price": 22,
     "longText": "../public/texts/afaslive/Ly93d3cuYWZhc2xpdmUubmwvYWdlbmRhL29wZXRo.html",
+    "image": "../public/event-images/afaslive/Ly93d3cuYWZhc2xpdmUubmwvYWdlbmRhL29wZXRo",
     "soldOut": false,
     "eventGenres": null,
     "artists": {
@@ -91,31 +94,22 @@
     }
   },
   {
-    "start": "2025-10-28T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/arch-enemy",
-    "title": "Arch Enemy",
+    "start": "2025-09-29T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/pierce-the-veil",
+    "title": "Pierce The Veil",
     "location": "afaslive",
-    "price": 28,
-    "longText": "../public/texts/afaslive/LmFmYXNsaXZlLm5sL2FnZW5kYS9hcmNoLWVuZW15.html",
-    "image": "../public/event-images/afaslive/LmFmYXNsaXZlLm5sL2FnZW5kYS9hcmNoLWVuZW15",
+    "price": 29,
+    "longText": "../public/texts/afaslive/bGl2ZS5ubC9hZ2VuZGEvcGllcmNlLXRoZS12ZWls.html",
+    "image": "../public/event-images/afaslive/bGl2ZS5ubC9hZ2VuZGEvcGllcmNlLXRoZS12ZWls",
     "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "arch enemy": {
-        "s": "0DCw6lHkzh9t7f8Hb4Z0Sx",
-        "l": "arch%20enemy",
+      "pierce the veil": {
+        "s": "4ijlpqclelzobcbifm8fzv",
+        "l": "pierce%20the%20veil",
         "g": [
-          "alternative metal",
-          "death metal",
-          "melodic death metal",
-          "metal",
-          "power metal",
-          "speed metal",
-          "swedish death metal",
-          "swedish melodeath",
-          "swedish metal",
-          "symphonic metal",
-          "melodic death metal"
+          "pop punk",
+          "screamo"
         ]
       }
     }

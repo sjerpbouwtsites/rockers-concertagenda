@@ -185,17 +185,21 @@ scraper.singlePage = async function ({ page, event }) {
         });
     });
 
-    const imageRes = await getImage({
-        _this: this,
-        page,
-        workerData,
-        event,
-        pageInfo,
-        selectors: [".main-img", ".we_program_text_image"],
-        mode: "image-src"
-    });
-    pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
-    pageInfo.image = imageRes.image;
+    // const imageRes = await getImage({
+    //     _this: this,
+    //     page,
+    //     workerData,
+    //     event,
+    //     pageInfo,
+    //     selectors: [
+    //         ".flickity-viewport img",
+    //         ".main-img",
+    //         ".we_program_text_image"
+    //     ],
+    //     mode: "image-src"
+    // });
+    // pageInfo.errors = pageInfo.errors.concat(imageRes.errors);
+    pageInfo.image = `../public/location-images/willemeen`;
 
     const priceRes = await this.getPriceFromHTML({
         page,

@@ -107,17 +107,26 @@
   {
     "door": "2025-02-20T20:00:00+01:00",
     "start": "2025-02-20T20:00:00+01:00",
-    "venueEventUrl": "https://www.013.nl/programma/86139/love-letter",
-    "title": "Love Letter",
+    "venueEventUrl": "https://www.013.nl/programma/90333/ploegendienst",
+    "title": "Ploegendienst",
     "location": "013",
-    "price": 17.3,
-    "shortText": "",
-    "longText": "../public/texts/013/bmwvcHJvZ3JhbW1hLzg2MTM5L2xvdmUtbGV0dGVy.html",
-    "image": "../public/event-images/013/bmwvcHJvZ3JhbW1hLzg2MTM5L2xvdmUtbGV0dGVy",
+    "price": 19.3,
+    "shortText": "Ploegen Op Rotsen 2025",
+    "longText": "../public/texts/013/L3Byb2dyYW1tYS85MDMzMy9wbG9lZ2VuZGllbnN0.html",
+    "image": "../public/event-images/013/L3Byb2dyYW1tYS85MDMzMy9wbG9lZ2VuZGllbnN0",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": {}
+    "artists": {
+      "ploegendienst": {
+        "s": "2aJUvAtem0t0zRKxJsRoea",
+        "l": "ploegendienst",
+        "g": [
+          "dutch indie rock",
+          "dutch punk"
+        ]
+      }
+    }
   },
   {
     "door": "2025-02-23T18:30:00+01:00",
@@ -309,6 +318,14 @@
           "voidgaze",
           "psychedelic black metal"
         ]
+      },
+      "band": {
+        "s": null,
+        "l": "band",
+        "g": [
+          "heavy",
+          "power metal"
+        ]
       }
     }
   },
@@ -379,6 +396,14 @@
         "s": "1mdpsox66qfgkujizvppfv",
         "l": "clitteband",
         "g": []
+      },
+      "band": {
+        "s": null,
+        "l": "band",
+        "g": [
+          "heavy",
+          "power metal"
+        ]
       }
     }
   },
@@ -396,11 +421,6 @@
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "the chosen": {
-        "s": "5sywd6fu4rdgishox40hma",
-        "l": "the%20chosen",
-        "g": []
-      },
       "dimmu borgir": {
         "s": "6e8ISIsI7UQZPyEorefAhK",
         "l": "dimmu%20borgir",
@@ -418,6 +438,11 @@
           "viking metal",
           "symphonic black metal"
         ]
+      },
+      "the chosen": {
+        "s": "5sywd6fu4rdgishox40hma",
+        "l": "the%20chosen",
+        "g": []
       }
     }
   },

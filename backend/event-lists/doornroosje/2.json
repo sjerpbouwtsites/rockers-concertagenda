@@ -86,13 +86,6 @@
         "l": "life%20of%20agony",
         "g": []
       },
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      },
       "biohazard": {
         "s": "3nhxXtHwC2TookQyqQlFK1",
         "l": "biohazard",
@@ -106,6 +99,21 @@
           "rap metal",
           "rap rock",
           "black",
+          "death metal"
+        ]
+      },
+      "hardcore": {
+        "s": "3N11n3hTyVlcOg77IGefjz",
+        "l": "hardcore",
+        "g": [
+          "death metal",
+          "hardcore"
+        ]
+      },
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
           "death metal"
         ]
       }
@@ -136,13 +144,6 @@
     "soldOut": true,
     "eventGenres": null,
     "artists": {
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      },
       "the gathering": {
         "s": "2kO6zjt4a1OIqxOERhliEX",
         "l": "the%20gathering",
@@ -155,6 +156,13 @@
           "death",
           "doom metal, atmospheric doom metal (early)",
           " atmospheric rock (later)"
+        ]
+      },
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
         ]
       }
     }

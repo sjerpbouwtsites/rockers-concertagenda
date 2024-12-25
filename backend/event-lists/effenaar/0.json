@@ -20,6 +20,14 @@
           "doom metal",
           "rock"
         ]
+      },
+      "band": {
+        "s": null,
+        "l": "band",
+        "g": [
+          "heavy",
+          "power metal"
+        ]
       }
     }
   },
@@ -80,6 +88,13 @@
           "technical death metal",
           "death metal"
         ]
+      },
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
+        ]
       }
     }
   },
@@ -105,6 +120,21 @@
           "doom metal",
           "rock"
         ]
+      },
+      "knives": {
+        "s": "2YoHhPouaTT96k3dUQ8WZK",
+        "l": "knives",
+        "g": [
+          "grindcore",
+          "death 'n' roll"
+        ]
+      },
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
+        ]
       }
     }
   },
@@ -121,23 +151,6 @@
     "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "descendents": {
-        "s": "1FGH4Bh7g9W6V4fUcKZWp5",
-        "l": "descendents",
-        "g": [
-          "hardcore punk",
-          "punk",
-          "skate punk"
-        ]
-      },
-      "circle jerks": {
-        "s": "4ubY8RYfXkcEqgjEMDuLYl",
-        "l": "circle%20jerks",
-        "g": [
-          "hardcore punk",
-          "punk"
-        ]
-      },
       "negative approach": {
         "s": "1DijMV2W1I2CfGLcarzgav",
         "l": "negative%20approach",
@@ -149,6 +162,23 @@
           "hardcore punk",
           "punk",
           "straight edge"
+        ]
+      },
+      "circle jerks": {
+        "s": "4ubY8RYfXkcEqgjEMDuLYl",
+        "l": "circle%20jerks",
+        "g": [
+          "hardcore punk",
+          "punk"
+        ]
+      },
+      "descendents": {
+        "s": "1FGH4Bh7g9W6V4fUcKZWp5",
+        "l": "descendents",
+        "g": [
+          "hardcore punk",
+          "punk",
+          "skate punk"
         ]
       }
     }
@@ -230,6 +260,14 @@
           "stoner",
           "doom metal",
           "rock"
+        ]
+      },
+      "band": {
+        "s": null,
+        "l": "band",
+        "g": [
+          "heavy",
+          "power metal"
         ]
       }
     }

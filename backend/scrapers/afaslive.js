@@ -192,7 +192,7 @@ scraper.singlePage = async function ({ page, event }) {
         workerData,
         event,
         pageInfo,
-        selectors: [".leftCol figure img"],
+        selectors: ["figure img"],
         mode: "image-src"
     });
 

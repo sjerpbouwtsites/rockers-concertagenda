@@ -6,6 +6,7 @@
     "location": "afaslive",
     "price": 2025,
     "longText": "../public/texts/afaslive/LmFmYXNsaXZlLm5sL2FnZW5kYS9wYXBhLXJvYWNo.html",
+    "image": "../public/event-images/afaslive/LmFmYXNsaXZlLm5sL2FnZW5kYS9wYXBhLXJvYWNo",
     "soldOut": true,
     "eventGenres": null,
     "artists": {
@@ -29,6 +30,7 @@
     "location": "afaslive",
     "price": 19,
     "longText": "../public/texts/afaslive/c2xpdmUubmwvYWdlbmRhL21hcmlseW4tbWFuc29u.html",
+    "image": "../public/event-images/afaslive/c2xpdmUubmwvYWdlbmRhL21hcmlseW4tbWFuc29u",
     "soldOut": true,
     "eventGenres": null,
     "artists": {
@@ -49,22 +51,23 @@
     }
   },
   {
-    "start": "2025-09-29T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/pierce-the-veil",
-    "title": "Pierce The Veil",
+    "start": "2025-06-23T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/satchvai-band",
+    "title": "Satchvai band\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t nieuw",
     "location": "afaslive",
-    "price": 29,
-    "longText": "../public/texts/afaslive/bGl2ZS5ubC9hZ2VuZGEvcGllcmNlLXRoZS12ZWls.html",
-    "image": "../public/event-images/afaslive/bGl2ZS5ubC9hZ2VuZGEvcGllcmNlLXRoZS12ZWls",
+    "price": 23,
+    "shortText": "  undefined",
+    "longText": "../public/texts/afaslive/YXNsaXZlLm5sL2FnZW5kYS9zYXRjaHZhaS1iYW5k.html",
+    "image": "../public/event-images/afaslive/YXNsaXZlLm5sL2FnZW5kYS9zYXRjaHZhaS1iYW5k",
     "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "pierce the veil": {
-        "s": "4ijlpqclelzobcbifm8fzv",
-        "l": "pierce%20the%20veil",
+      "band": {
+        "s": null,
+        "l": "band",
         "g": [
-          "pop punk",
-          "screamo"
+          "heavy",
+          "power metal"
         ]
       }
     }
