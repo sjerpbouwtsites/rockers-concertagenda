@@ -224,6 +224,10 @@ export default async function getImage({
         image = ogImage;
     }
 
+    if (!image) {
+        image = `${fsDirections.publicLocationImages}/${event.location}.jpg`;
+    }
+
     const base64String = Buffer.from(
         event.venueEventUrl.substring(
             event.venueEventUrl.length - 30,
