@@ -19,7 +19,7 @@
     "title": "Kublai khan tx",
     "location": "kavka",
     "price": null,
-    "shortText": "Sonic Excess presents Kublai Khan TX is an American metalcore band hailing from Sherman, Texas.…",
+    "shortText": "Kublai Khan TX is an American metalcore band hailing from Sherman, Texas. Formed in 2009,…",
     "longText": "../public/texts/kavka/a2F2a2EuYmUvZXZlbnQva3VibGFpLWtoYW4tdHgv.html",
     "image": "../public/event-images/kavka/a2F2a2EuYmUvZXZlbnQva3VibGFpLWtoYW4tdHgv",
     "soldOut": false,
@@ -57,7 +57,7 @@
     "title": "Green lung + unto others",
     "location": "kavka",
     "price": null,
-    "shortText": "Sonic Excess presents Green Lung is a British heavy rock band known for their blend…",
+    "shortText": "Green Lung is a British heavy rock band known for their blend of doom metal,…",
     "longText": "../public/texts/kavka/dW5nLXVudG8tb3RoZXJzLXNhdGFucy1zYXR5cnMv.html",
     "image": "../public/event-images/kavka/dW5nLXVudG8tb3RoZXJzLXNhdGFucy1zYXR5cnMv",
     "soldOut": false,
@@ -200,7 +200,7 @@
     }
   },
   {
-    "start": "2025-03-30T20:00:00",
+    "start": "2025-03-30T19:00:00",
     "venueEventUrl": "https://kavka.be/event/rendezvous-point-temic/",
     "title": "Rendezvous Point + TEMIC",
     "location": "kavka",
@@ -246,18 +246,7 @@
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": {
-      "punk": {
-        "s": null,
-        "l": "punk",
-        "g": [
-          "melodic death metal (early)",
-          " glitch",
-          "dubstep",
-          "electronica (later)"
-        ]
-      }
-    }
+    "artists": {}
   },
   {
     "start": "2025-04-06T19:00:00",
@@ -296,9 +285,9 @@
     "artists": {}
   },
   {
-    "start": "2025-09-10T18:00:00",
+    "start": "2025-09-10T19:00:00",
     "venueEventUrl": "https://kavka.be/event/bleed-from-within/",
-    "title": "Bleed from Within",
+    "title": "Bleed From Within",
     "location": "kavka",
     "price": null,
     "shortText": "On 10 September 2025, Bleed From Within will take over Zappa in Antwerp for an…",
