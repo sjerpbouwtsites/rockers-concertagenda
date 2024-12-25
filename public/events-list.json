@@ -1,522 +1,294 @@
 [
   {
-    "title": "Pestilence en MagnaCult",
-    "start": "2024-12-28",
-    "eventLocationName": "bibelot",
-    "shortText": "Bibelot Poppodium, Dordrecht",
-    "image": "../public/location-images/bibelot",
-    "location": "bibelot"
-  },
-  {
-    "title": "Borft Deathfest",
-    "start": "2025-01-03",
-    "eventLocationName": "de zon",
-    "shortText": "De Zon, Bodegraven.",
-    "image": "../public/location-images/dezon",
-    "location": "dezon"
-  },
-  {
-    "title": "Hedon Zwaar Nieuwjaar",
-    "start": "2025-01-04",
-    "eventLocationName": "hedon",
-    "shortText": "\nMet Bloodbath, Berzerker Legion, Haliphron, Teethgrinder, Keitzer, Insurrection en Hesken",
-    "image": "../public/location-images/hedon",
-    "location": "hedon"
-  },
-  {
-    "title": "Autarkh, Alkahest en Farer",
-    "start": "2025-01-09",
-    "eventLocationName": "vera",
-    "shortText": "Vera, Groningen",
-    "image": "../public/location-images/vera",
-    "location": "vera"
-  },
-  {
-    "title": "Wolfsonic\nmet onder meer Bildtstar, Asgrauw en Grafjammer",
-    "start": "2025-01-15",
-    "eventLocationName": "metalcafé de witte wolf",
-    "shortText": "Metalcafé De Witte Wolf, Groningen",
-    "image": "../public/location-images/metalcafdewittewolf",
-    "location": "metalcafdewittewolf"
-  },
-  {
-    "title": "Turmion Kätilöt en King Satan",
-    "start": "2025-01-17",
-    "eventLocationName": "hall of fame",
-    "shortText": "Hall Of Fame, Tilburg",
-    "image": "../public/location-images/halloffame",
-    "location": "halloffame"
-  },
-  {
-    "title": "Opeth en Grand Magus",
-    "start": "2025-01-17",
-    "eventLocationName": "palladium",
-    "shortText": "Palladium, Keulen",
-    "image": "../public/location-images/palladium",
-    "location": "palladium"
-  },
-  {
-    "title": "Dilemma",
-    "start": "2025-01-19",
-    "eventLocationName": "boerderij",
-    "shortText": "Boerderij, Zoetermeer",
-    "image": "../public/location-images/boerderij",
-    "location": "boerderij"
-  },
-  {
-    "title": "Delain, Serenity en Kingfisher Sky",
-    "start": "2025-01-24",
-    "eventLocationName": "hedon",
-    "shortText": "Hedon, Zwolle",
-    "image": "../public/location-images/hedon",
-    "location": "hedon"
-  },
-  {
-    "title": "The Halo Effect, Pain en Bloodred Hourglass",
-    "start": "2025-01-26",
-    "eventLocationName": "trix",
-    "shortText": "Trix, Antwerpen (België)",
-    "image": "../public/location-images/trix",
-    "location": "trix"
-  },
-  {
-    "title": "Defeated Sanity, To Violently Vomit, Putrid Pile, Iniquitous Savagery, Strangle Wire,",
-    "start": "2025-01-29",
-    "eventLocationName": "hall of fame",
-    "shortText": "Hall Of Fame, Tilburg",
-    "image": "../public/location-images/halloffame",
-    "location": "halloffame"
-  },
-  {
-    "title": "Dutch Metalheads Fest\nmet o,a, Dead Head, Sad Whisperings, Metal Bats (post-Vortex)",
-    "start": "2025-02-01",
-    "eventLocationName": "vera",
-    "shortText": "Vera, Groningen",
-    "image": "../public/location-images/vera",
-    "location": "vera"
-  },
-  {
-    "title": "Beyond The Black",
-    "start": "2025-02-04",
-    "eventLocationName": "trix",
-    "shortText": "Trix, Antwerpen",
-    "image": "../public/location-images/trix",
-    "location": "trix"
-  },
-  {
-    "title": "Beyond The Black",
-    "start": "2025-02-05",
-    "eventLocationName": "turbinenhalle",
-    "shortText": "Turbinenhalle, Oberhausen",
-    "image": "../public/location-images/turbinenhalle",
-    "location": "turbinenhalle"
-  },
-  {
-    "title": "Adrian Vandenberg: My Whitesnake Years",
-    "start": "2025-02-08",
-    "eventLocationName": "boerderij",
-    "shortText": "Boerderij, Zoetermeer",
-    "image": "../public/location-images/boerderij",
-    "location": "boerderij"
-  },
-  {
-    "title": "Thundermother, Cobra Spell en Vulvarine",
-    "start": "2025-02-09",
-    "eventLocationName": "de casino",
-    "shortText": "De Casino, Sint Niklaas (België)",
-    "image": "../public/location-images/decasino",
-    "location": "decasino"
-  },
-  {
-    "title": "Unleash The Archers, Striker en Seven Kingdoms",
-    "start": "2025-02-14",
-    "eventLocationName": "live music hall",
-    "shortText": "Live Music Hall, Keulen",
-    "image": "../public/location-images/livemusichall",
-    "location": "livemusichall"
-  },
-  {
-    "title": "Unleash The Archers, Striker en Seven Kingdoms",
-    "start": "2025-02-15",
-    "eventLocationName": "de kreun",
-    "shortText": "De Kreun, Kortrijk (België)",
-    "image": "../public/location-images/dekreun",
-    "location": "dekreun"
-  },
-  {
-    "title": "Dordrecht Metal Fest",
-    "start": "2025-02-15",
-    "eventLocationName": "bibelot",
-    "shortText": "Bibelot, Dordrecht",
-    "image": "../public/location-images/bibelot",
-    "location": "bibelot"
-  },
-  {
-    "title": "Sloper",
-    "start": "2025-02-21",
-    "eventLocationName": "bibelot",
-    "shortText": "Bibelot, Dordrecht",
-    "image": "../public/location-images/bibelot",
-    "location": "bibelot"
-  },
-  {
-    "title": "Charlotte Wessels",
-    "start": "2025-02-21",
-    "eventLocationName": "bibelot",
-    "shortText": "Bibelot, Dordrecht",
-    "image": "../public/location-images/bibelot",
-    "location": "bibelot"
-  },
-  {
-    "title": "Winterfylleth, Kvaen, Morgarten, Alvader, Opus Irae en Solarcycles",
-    "start": "2025-02-22",
-    "eventLocationName": "gigant",
-    "shortText": "Gigant, Apeldoorn",
-    "image": "../public/location-images/gigant",
-    "location": "gigant"
-  },
-  {
-    "title": "Opeth en Grand Magus",
-    "start": "2025-02-23",
-    "eventLocationName": "ancienne belgique",
-    "shortText": "Ancienne Belgique, Brussel",
-    "image": "../public/location-images/anciennebelgique",
-    "location": "anciennebelgique"
-  },
-  {
-    "title": "Rivers Of Nihil, Cynic, Beyond Creation en Dååth",
-    "start": "2025-02-28",
-    "eventLocationName": "essigfabrik",
-    "shortText": "Essigfabrik, Keulen",
-    "image": "../public/location-images/essigfabrik",
-    "location": "essigfabrik"
-  },
-  {
-    "title": "Ramkot",
-    "start": "2025-03-01",
-    "eventLocationName": "bibelot",
-    "shortText": "Bibelot, Dordrecht",
-    "image": "../public/location-images/bibelot",
-    "location": "bibelot"
-  },
-  {
-    "title": "The Raven Age en Disconnected",
-    "start": "2025-03-06",
-    "eventLocationName": "hall of fame",
-    "shortText": "Hall Of Fame, Tilburg",
-    "image": "../public/location-images/halloffame",
-    "location": "halloffame"
-  },
-  {
-    "title": "Biohazard en Life Of Agony",
-    "start": "2025-03-07",
-    "eventLocationName": "paard",
-    "shortText": "Paard, Den Haag",
-    "image": "../public/location-images/paard",
-    "location": "paard"
-  },
-  {
-    "title": "Vanden Plas",
-    "start": "2025-03-08",
-    "eventLocationName": "boerderij",
-    "shortText": "Boerderij, Zoetermeer",
-    "image": "../public/location-images/boerderij",
-    "location": "boerderij"
-  },
-  {
-    "title": "Ronnie Romero en Absolva",
-    "start": "2025-03-16",
-    "eventLocationName": "boerderij",
-    "shortText": "Boerderij, Zoetermeer",
-    "image": "../public/location-images/boerderij",
-    "location": "boerderij"
-  },
-  {
-    "title": "Dirkschneider",
-    "start": "2025-03-18",
-    "eventLocationName": "trix",
-    "shortText": "Trix, Antwerpen (België)",
-    "image": "../public/location-images/trix",
-    "location": "trix"
-  },
-  {
-    "title": "Temperance, Ignea en Induction",
-    "start": "2025-03-20",
-    "eventLocationName": "matrix",
-    "shortText": "Matrix, Bochum",
-    "image": "../public/location-images/matrix",
-    "location": "matrix"
-  },
-  {
-    "title": "Temperance, Ignea en Induction",
-    "start": "2025-03-21",
-    "eventLocationName": "dvgclub",
-    "shortText": "DVG, Kortrijk",
-    "image": "../public/location-images/dvgclub",
-    "location": "dvgclub"
-  },
-  {
-    "title": "Anneke van Giersbergen",
-    "start": "2025-03-22",
-    "eventLocationName": "boerderij",
-    "shortText": "Boerderij, Zoetermeer",
-    "image": "../public/location-images/boerderij",
-    "location": "boerderij"
-  },
-  {
-    "title": "Rendezvous Point en Temic",
-    "start": "2025-03-27",
-    "eventLocationName": "muziekgieterij",
-    "shortText": "Muziekgieterij, Maastricht",
-    "image": "../public/location-images/muziekgieterij",
-    "location": "muziekgieterij"
-  },
-  {
-    "title": "Rendezvous Point en Temic",
-    "start": "2025-03-28",
-    "eventLocationName": "boerderij",
-    "shortText": "Boerderij, Zoetermeer",
-    "image": "../public/location-images/boerderij",
-    "location": "boerderij"
-  },
-  {
-    "title": "Michael Schenker Group",
-    "start": "2025-04-09",
-    "eventLocationName": "boerderij",
-    "shortText": "Boerderij, Zoetermeer",
-    "image": "../public/location-images/boerderij",
-    "location": "boerderij"
-  },
-  {
-    "title": "Skroetfest",
-    "start": "2025-04-12",
-    "eventLocationName": "hedon",
-    "shortText": "\nMet Skroetbalg, Peter Pan Speedrock, Neuk! en meer",
-    "image": "../public/location-images/hedon",
-    "location": "hedon"
-  },
-  {
-    "title": "Axel Rudi Pell",
-    "start": "2025-04-12",
-    "eventLocationName": "boerderij",
-    "shortText": "Boerderij, Zoetermeer",
-    "image": "../public/location-images/boerderij",
-    "location": "boerderij"
-  },
-  {
-    "title": "Behemoth, Satyricon en Rotting Christ",
-    "start": "2025-04-15",
-    "eventLocationName": "e-werk",
-    "shortText": "E-Werk, Keulen",
-    "image": "../public/location-images/ewerk",
-    "location": "ewerk"
-  },
-  {
-    "title": "Benediction, Jungle Rot en Master",
-    "start": "2025-04-16",
-    "eventLocationName": "turock",
-    "shortText": "Turock, Essen",
-    "image": "../public/location-images/turock",
-    "location": "turock"
-  },
-  {
-    "title": "Harakiri For The Sky",
-    "start": "2025-04-17",
-    "eventLocationName": "hedon",
-    "shortText": "Hedon, Zwolle",
-    "image": "../public/location-images/hedon",
-    "location": "hedon"
-  },
-  {
-    "title": "Frozen Crown, Fellowship en Lutharo",
-    "start": "2025-04-19",
-    "eventLocationName": "hell",
-    "shortText": "Hell, Diest",
-    "image": "../public/location-images/hell",
-    "location": "hell"
-  },
-  {
-    "title": "Festerfest\nmet o.a. The Wounded, Dystopia en Obstruktor",
-    "start": "2025-04-20",
-    "eventLocationName": "musicon",
-    "shortText": "Musicon, Den Haag",
-    "image": "../public/location-images/musicon",
-    "location": "musicon"
-  },
-  {
-    "title": "Frozen Crown, Fellowship en Lutharo",
-    "start": "2025-04-22",
-    "eventLocationName": "rockaplast/matrix",
-    "shortText": "Rockaplast/Matrix, Bochum",
-    "image": "../public/location-images/rockaplastmatrix",
-    "location": "rockaplastmatrix"
-  },
-  {
-    "title": "Blackbriar en Solarcycles",
-    "start": "2025-04-24",
-    "eventLocationName": "bolwerk",
-    "shortText": "Bolwerk, Sneek",
-    "image": "../public/location-images/bolwerk",
-    "location": "bolwerk"
-  },
-  {
-    "title": "Imperial Age",
-    "start": "2025-04-25",
-    "eventLocationName": "poppodium boerderij",
-    "shortText": "Poppodium Boerderij",
-    "image": "../public/location-images/poppodiumboerderij",
-    "location": "poppodiumboerderij"
-  },
-  {
-    "title": "Haliphron, My Silent Wake en Oltas",
-    "start": "2025-05-11",
-    "eventLocationName": "gigant",
-    "shortText": "Gigant, Apeldoorn",
-    "image": "../public/location-images/gigant",
-    "location": "gigant"
-  },
-  {
-    "title": "Babymetal, Poppy en Bambie Thug",
-    "start": "2025-05-13",
-    "eventLocationName": "ziggo dome",
-    "shortText": "Ziggo Dome, Amsterdam",
-    "image": "../public/location-images/ziggodome",
-    "location": "ziggodome"
-  },
-  {
-    "title": "Elsrock",
-    "start": "2025-05-17",
-    "eventLocationName": "studio 15",
-    "shortText": "Studio 15, Almelo",
-    "image": "../public/location-images/studio15",
-    "location": "studio15"
-  },
-  {
-    "title": "Blaze Bayley en Pryma",
-    "start": "2025-06-01",
-    "eventLocationName": "musicon",
-    "shortText": "Musicon, Den Haag",
-    "image": "../public/location-images/musicon",
-    "location": "musicon"
-  },
-  {
-    "title": "Myles Kennedy",
-    "start": "2025-06-11",
-    "eventLocationName": "hedon",
-    "shortText": "Hedon, Zwolle",
-    "image": "../public/location-images/hedon",
-    "location": "hedon"
-  },
-  {
-    "title": "Into The Grave",
-    "start": "2025-06-13",
-    "eventLocationName": "leeuwarden\nmet exodus",
-    "shortText": "\nmet Exodus, W.A.S.P, Gloryhammer, Death Angel, Wind Rose, Rotting Christ e.a.",
-    "image": "../public/location-images/leeuwardenmetexodus",
-    "location": "leeuwardenmetexodus"
-  },
-  {
-    "title": "Graspop Metal Meeting",
-    "start": "2025-06-20",
-    "eventLocationName": "dessel",
-    "shortText": "Dessel, BelgiÃ«",
-    "image": "../public/location-images/dessel",
-    "location": "dessel"
-  },
-  {
-    "title": "Hellmond Open Air",
-    "start": "2025-07-05",
-    "eventLocationName": "cacaofabriek",
-    "shortText": "\nMet Therapy, Overkill, Vandenberg e.a.",
-    "image": "../public/location-images/cacaofabriek",
-    "location": "cacaofabriek"
-  },
-  {
-    "title": "Pirate Metal Party",
-    "start": "2025-07-06",
-    "eventLocationName": "cacaofabriek",
-    "shortText": "Cacaofabriek, Helmond",
-    "image": "../public/location-images/cacaofabriek",
-    "location": "cacaofabriek"
-  },
-  {
-    "title": "Iron Maiden en Avatar",
-    "start": "2025-07-23",
-    "eventLocationName": "gelredome",
-    "shortText": "Gelredome, Arnhem",
-    "image": "../public/location-images/gelredome",
-    "location": "gelredome"
-  },
-  {
-    "title": "Wacken Open Air",
-    "start": "2025-07-30",
-    "eventLocationName": "wacken (duitsland)\nmet machine head",
-    "shortText": "\nMet Machine Head, Papa Roach, Gojira, Apocalyptica, Within Temptation e.v.a.",
-    "image": "../public/location-images/wackenduitslandmetmachinehead",
-    "location": "wackenduitslandmetmachinehead"
-  },
-  {
-    "title": "Progdreams XI",
-    "start": "2025-08-22",
-    "eventLocationName": "boerderij",
-    "shortText": "Boerderij, Zoetermeer",
-    "image": "../public/location-images/boerderij",
-    "location": "boerderij"
-  },
-  {
-    "title": "Pendragon",
-    "start": "2025-09-10",
-    "eventLocationName": "boerderij",
-    "shortText": "Boerderij, Zoetermeer",
-    "image": "../public/location-images/boerderij",
-    "location": "boerderij"
-  },
-  {
-    "title": "Floor Jansen",
-    "start": "2025-10-10",
-    "eventLocationName": "schouwburg",
-    "shortText": "Schouwburg, Tilburg",
-    "image": "../public/location-images/schouwburg",
-    "location": "schouwburg"
-  },
-  {
-    "title": "Wind Rose, Orden Ogan en Angus McSix",
-    "start": "2025-10-15",
-    "eventLocationName": "trix",
-    "shortText": "Trix, Antwerpen (België)",
-    "image": "../public/location-images/trix",
-    "location": "trix"
-  },
-  {
-    "title": "Arch Enemy, Amorphis, Eluveitie en Gatecreeper",
-    "start": "2025-11-04",
-    "eventLocationName": "ancienne belgique",
-    "shortText": "Ancienne Belgique, Brussel (België)",
-    "image": "../public/location-images/anciennebelgique",
-    "location": "anciennebelgique"
-  },
-  {
-    "title": "Sabaton",
-    "start": "2025-12-01",
-    "eventLocationName": "ziggo dome",
-    "shortText": "Ziggo Dome, Amsterdam",
-    "image": "../public/location-images/ziggodome",
-    "location": "ziggodome"
-  },
-  {
-    "title": "Electric Callboy",
-    "start": "2026-01-17",
-    "eventLocationName": "rtm stage",
-    "shortText": "RTM Stage, Rotterdam",
-    "image": "../public/location-images/rtmstage",
-    "location": "rtmstage"
-  },
-  {
-    "title": "Channel Zero",
-    "start": "2026-12-12",
-    "eventLocationName": "ancienne belgique",
-    "shortText": "Ancienne Belgique, Brussel (BelgiÃ«)",
-    "image": "../public/location-images/anciennebelgique",
-    "location": "anciennebelgique"
+    "start": "4049-01-24T20:00:00",
+    "venueEventUrl": "https://neushoorn.nl/production/hardcore-vrijdag-2/",
+    "title": "Hardcore Vrijdag",
+    "location": "neushoorn",
+    "price": 5,
+    "shortText": "Je tweemaandelijkse dosis hardcore punk op vrijdag",
+    "longText": "../public/texts/neushoorn/cHJvZHVjdGlvbi9oYXJkY29yZS12cmlqZGFnLTIv.html",
+    "image": "../public/event-images/neushoorn/cHJvZHVjdGlvbi9oYXJkY29yZS12cmlqZGFnLTIv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "4049-01-30T19:30:00",
+    "venueEventUrl": "https://neushoorn.nl/production/semblant-rexoria-blame-zeus-another-approach/",
+    "title": "Semblant ",
+    "location": "neushoorn",
+    "price": 15,
+    "shortText": " Rexoria  +  Blame Zeus  +  Another Approach Lunar Manifesto 10 Years Celebration Tour",
+    "longText": "../public/texts/neushoorn/YS1ibGFtZS16ZXVzLWFub3RoZXItYXBwcm9hY2gv.html",
+    "image": "../public/event-images/neushoorn/YS1ibGFtZS16ZXVzLWFub3RoZXItYXBwcm9hY2gv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "semblant": {
+        "s": "6xbrgptxh3evqfhcfkcqio",
+        "l": "semblant",
+        "g": [
+          "finnish melodeath",
+          "metal gotico",
+          "metal paranaense",
+          "slayer",
+          "symphonic metal"
+        ]
+      },
+      "rexoria": {
+        "s": "5omfyexrlgfv6dgrq6zctk",
+        "l": "rexoria",
+        "g": [
+          "melodic metal",
+          "symphonic power metal"
+        ]
+      },
+      "blame zeus": {
+        "s": "0sPGGoMtwWSE0VjukL8TwO",
+        "l": "blame%20zeus",
+        "g": [
+          "portuguese metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "4049-02-01T19:30:00",
+    "venueEventUrl": "https://neushoorn.nl/production/distant-enterprise-earth/",
+    "title": "Distant + Enterprise Earth",
+    "location": "neushoorn",
+    "price": 23,
+    "shortText": "Een nacht van ongekende brutaliteit",
+    "longText": "../public/texts/neushoorn/dGlvbi9kaXN0YW50LWVudGVycHJpc2UtZWFydGgv.html",
+    "image": "../public/event-images/neushoorn/dGlvbi9kaXN0YW50LWVudGVycHJpc2UtZWFydGgv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "enterprise earth": {
+        "s": "1l3cAmALCtGbjWGVtRwhoh",
+        "l": "enterprise%20earth",
+        "g": [
+          "brutal deathcore",
+          "deathcore",
+          "melodic metalcore",
+          "progressive deathcore"
+        ]
+      },
+      "distant": {
+        "s": "7dfpBi0QvO9FmlhBK6XHwJ",
+        "l": "distant",
+        "g": [
+          "deathcore",
+          "downtempo deathcore",
+          "slamming deathcore",
+          "groove metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "4049-02-02T17:00:00",
+    "venueEventUrl": "https://neushoorn.nl/production/nargaroth/",
+    "title": "Nargaroth",
+    "location": "neushoorn",
+    "price": 27,
+    "shortText": "Black metal package om je vingers bij af te likken",
+    "longText": "../public/texts/neushoorn/aG9vcm4ubmwvcHJvZHVjdGlvbi9uYXJnYXJvdGgv.html",
+    "image": "../public/event-images/neushoorn/aG9vcm4ubmwvcHJvZHVjdGlvbi9uYXJnYXJvdGgv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "nargaroth": {
+        "s": "0aIcU4OHpKl7lpcRQp32Eo",
+        "l": "nargaroth",
+        "g": [
+          "autonomous black metal",
+          "black metal",
+          "german black metal",
+          "black metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "4049-03-01T19:30:00",
+    "venueEventUrl": "https://neushoorn.nl/production/bizkit-park/",
+    "title": "Bizkit Park",
+    "location": "neushoorn",
+    "price": 20,
+    "shortText": "Earth’s mightiest Nu-Metal tribute band",
+    "longText": "../public/texts/neushoorn/b3JuLm5sL3Byb2R1Y3Rpb24vYml6a2l0LXBhcmsv.html",
+    "image": "../public/event-images/neushoorn/b3JuLm5sL3Byb2R1Y3Rpb24vYml6a2l0LXBhcmsv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "4049-03-21T19:30:00",
+    "venueEventUrl": "https://neushoorn.nl/production/slash-n-roses-bad-medicine/",
+    "title": "Slash N' Roses + Bad Medicine",
+    "location": "neushoorn",
+    "price": 25,
+    "shortText": "Pas op: je stembanden gaan het zwaar krijgen!",
+    "longText": "../public/texts/neushoorn/b24vc2xhc2gtbi1yb3Nlcy1iYWQtbWVkaWNpbmUv.html",
+    "image": "../public/event-images/neushoorn/b24vc2xhc2gtbi1yb3Nlcy1iYWQtbWVkaWNpbmUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "slash n' roses": {
+        "s": null,
+        "l": null,
+        "g": [
+          "hard rock"
+        ]
+      },
+      "bad medicine": {
+        "s": null,
+        "l": null,
+        "g": [
+          "hard rock",
+          "coverband",
+          "bon jovi"
+        ]
+      }
+    }
+  },
+  {
+    "start": "4049-04-07T19:30:00",
+    "venueEventUrl": "https://neushoorn.nl/production/and-so-i-watch-you-from-afar/",
+    "title": "And So I Watch You From Afar",
+    "location": "neushoorn",
+    "price": 25,
+    "shortText": "Maar je hoort ze van dichtbij!",
+    "longText": "../public/texts/neushoorn/L2FuZC1zby1pLXdhdGNoLXlvdS1mcm9tLWFmYXIv.html",
+    "image": "../public/event-images/neushoorn/L2FuZC1zby1pLXdhdGNoLXlvdS1mcm9tLWFmYXIv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "and so i watch you from afar": {
+        "s": "7qKMNwlACMZOUdMG3acwst",
+        "l": "and%20so%20i%20watch%20you%20from%20afar",
+        "g": [
+          "british post-rock",
+          "instrumental post-rock",
+          "instrumental rock",
+          "math rock",
+          "post-rock"
+        ]
+      }
+    }
+  },
+  {
+    "start": "4049-04-13T19:00:00",
+    "venueEventUrl": "https://neushoorn.nl/production/freeways-can-aardvark-aus-ritvs-ger/",
+    "title": "Freeways (can) + aardvark (aus) + ritvs (ger)",
+    "location": "neushoorn",
+    "price": 13,
+    "shortText": "Dying Victims tripple package",
+    "longText": "../public/texts/neushoorn/eXMtY2FuLWFhcmR2YXJrLWF1cy1yaXR2cy1nZXIv.html",
+    "image": "../public/event-images/neushoorn/eXMtY2FuLWFhcmR2YXJrLWF1cy1yaXR2cy1nZXIv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "freeways": {
+        "s": null,
+        "l": null,
+        "g": [
+          "heavy metal",
+          "hard rock",
+          "70s metal"
+        ]
+      },
+      "aardvark": {
+        "s": null,
+        "l": null,
+        "g": [
+          "heavy metal",
+          "nwobhm"
+        ]
+      },
+      "ritvs": {
+        "s": null,
+        "l": null,
+        "g": [
+          "hard rock",
+          "krautrock",
+          "70s metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "4049-04-18T20:00:00",
+    "venueEventUrl": "https://neushoorn.nl/production/3-eyed-kids/",
+    "title": "3 eyed kids",
+    "location": "neushoorn",
+    "price": 10,
+    "shortText": "Een brute mix van metal en hiphop",
+    "longText": "../public/texts/neushoorn/b3JuLm5sL3Byb2R1Y3Rpb24vMy1leWVkLWtpZHMv.html",
+    "image": "../public/event-images/neushoorn/b3JuLm5sL3Byb2R1Y3Rpb24vMy1leWVkLWtpZHMv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "3 eyed kids": {
+        "s": "4cmx6rsoa66tynathlh0in",
+        "l": null,
+        "g": [
+          "metalcore",
+          "progressive"
+        ]
+      }
+    }
+  },
+  {
+    "start": "4049-05-01T20:00:00",
+    "venueEventUrl": "https://neushoorn.nl/production/wodan-boys/",
+    "title": "Wodan Boys",
+    "location": "neushoorn",
+    "price": 18,
+    "shortText": "Een rauwe liveshow waar de Noorse god Wodan trots op zou zijn",
+    "longText": "../public/texts/neushoorn/b29ybi5ubC9wcm9kdWN0aW9uL3dvZGFuLWJveXMv.html",
+    "image": "../public/event-images/neushoorn/b29ybi5ubC9wcm9kdWN0aW9uL3dvZGFuLWJveXMv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "wodan boys": {
+        "s": "0kmkbibevmq4luqquahdmr",
+        "l": "wodan%20boys",
+        "g": [
+          "dutch rock"
+        ]
+      }
+    }
+  },
+  {
+    "start": "4049-09-19T20:00:00",
+    "venueEventUrl": "https://neushoorn.nl/production/nh-cafe-the-optimist-in-me/",
+    "title": "The Optimist In Me",
+    "location": "neushoorn",
+    "price": null,
+    "shortText": "Rock jezelf de positiviteit in met The Optimist In Me",
+    "longText": "../public/texts/neushoorn/b24vbmgtY2FmZS10aGUtb3B0aW1pc3QtaW4tbWUv.html",
+    "image": "../public/event-images/neushoorn/b24vbmgtY2FmZS10aGUtb3B0aW1pc3QtaW4tbWUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "the optimist in me": {
+        "s": "3qmkrrjqjtixsbgjgwwmmu",
+        "l": "the%20optimist%20in%20me",
+        "g": []
+      }
+    }
   }
 ]

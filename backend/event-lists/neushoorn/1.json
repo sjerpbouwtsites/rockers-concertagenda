@@ -66,27 +66,73 @@
     }
   },
   {
-    "start": "4049-04-07T19:30:00",
-    "venueEventUrl": "https://neushoorn.nl/production/and-so-i-watch-you-from-afar/",
-    "title": "And So I Watch You From Afar",
+    "start": "4049-03-21T19:30:00",
+    "venueEventUrl": "https://neushoorn.nl/production/slash-n-roses-bad-medicine/",
+    "title": "Slash N' Roses + Bad Medicine",
     "location": "neushoorn",
     "price": 25,
-    "shortText": "Maar je hoort ze van dichtbij!",
-    "longText": "../public/texts/neushoorn/L2FuZC1zby1pLXdhdGNoLXlvdS1mcm9tLWFmYXIv.html",
-    "image": "../public/event-images/neushoorn/L2FuZC1zby1pLXdhdGNoLXlvdS1mcm9tLWFmYXIv",
+    "shortText": "Pas op: je stembanden gaan het zwaar krijgen!",
+    "longText": "../public/texts/neushoorn/b24vc2xhc2gtbi1yb3Nlcy1iYWQtbWVkaWNpbmUv.html",
+    "image": "../public/event-images/neushoorn/b24vc2xhc2gtbi1yb3Nlcy1iYWQtbWVkaWNpbmUv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "and so i watch you from afar": {
-        "s": "7qKMNwlACMZOUdMG3acwst",
-        "l": "and%20so%20i%20watch%20you%20from%20afar",
+      "slash n' roses": {
+        "s": null,
+        "l": null,
         "g": [
-          "british post-rock",
-          "instrumental post-rock",
-          "instrumental rock",
-          "math rock",
-          "post-rock"
+          "hard rock"
+        ]
+      },
+      "bad medicine": {
+        "s": null,
+        "l": null,
+        "g": [
+          "hard rock",
+          "coverband",
+          "bon jovi"
+        ]
+      }
+    }
+  },
+  {
+    "start": "4049-04-13T19:00:00",
+    "venueEventUrl": "https://neushoorn.nl/production/freeways-can-aardvark-aus-ritvs-ger/",
+    "title": "Freeways (can) + aardvark (aus) + ritvs (ger)",
+    "location": "neushoorn",
+    "price": 13,
+    "shortText": "Dying Victims tripple package",
+    "longText": "../public/texts/neushoorn/eXMtY2FuLWFhcmR2YXJrLWF1cy1yaXR2cy1nZXIv.html",
+    "image": "../public/event-images/neushoorn/eXMtY2FuLWFhcmR2YXJrLWF1cy1yaXR2cy1nZXIv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "freeways": {
+        "s": null,
+        "l": null,
+        "g": [
+          "heavy metal",
+          "hard rock",
+          "70s metal"
+        ]
+      },
+      "aardvark": {
+        "s": null,
+        "l": null,
+        "g": [
+          "heavy metal",
+          "nwobhm"
+        ]
+      },
+      "ritvs": {
+        "s": null,
+        "l": null,
+        "g": [
+          "hard rock",
+          "krautrock",
+          "70s metal"
         ]
       }
     }
