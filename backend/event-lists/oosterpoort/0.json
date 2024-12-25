@@ -1,17 +1,26 @@
 [
   {
-    "start": "2025-01-03T20:30:00+01:00",
-    "venueEventUrl": "https://www.spotgroningen.nl/programma/classic-hits-in-concert-2/",
-    "title": "Classic Hits in Concert",
+    "start": "2025-01-04T20:00:00+01:00",
+    "venueEventUrl": "https://www.spotgroningen.nl/programma/dewolff-7/",
+    "title": "DeWolff+ support: Heath",
     "location": "oosterpoort",
-    "price": 30.1,
-    "shortText": "Classic Hits in Concert",
-    "longText": "../public/texts/oosterpoort/bW1hL2NsYXNzaWMtaGl0cy1pbi1jb25jZXJ0LTIv.html",
-    "image": "../public/event-images/oosterpoort/bW1hL2NsYXNzaWMtaGl0cy1pbi1jb25jZXJ0LTIv",
-    "soldOut": false,
+    "price": null,
+    "shortText": "DeWolff+ support: Heath",
+    "longText": "../public/texts/oosterpoort/bmluZ2VuLm5sL3Byb2dyYW1tYS9kZXdvbGZmLTcv.html",
+    "image": "../public/event-images/oosterpoort/bmluZ2VuLm5sL3Byb2dyYW1tYS9kZXdvbGZmLTcv",
+    "soldOut": null,
     "unavailable": false,
     "eventGenres": null,
-    "artists": {}
+    "artists": {
+      "heath": {
+        "s": null,
+        "l": "heath",
+        "g": [
+          "black",
+          "thrash metal"
+        ]
+      }
+    }
   },
   {
     "start": "2025-01-09T17:00:00+01:00",

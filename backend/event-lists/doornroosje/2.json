@@ -47,23 +47,6 @@
           "grindcore",
           "death metal"
         ]
-      },
-      "rock,": {
-        "s": null,
-        "l": "rock,",
-        "g": [
-          "heavy metal"
-        ]
-      },
-      "punk": {
-        "s": null,
-        "l": "punk",
-        "g": [
-          "melodic death metal (early)",
-          " glitch",
-          "dubstep",
-          "electronica (later)"
-        ]
       }
     }
   },
@@ -83,23 +66,6 @@
         "s": "0py1x64i2ewlucppunajry",
         "l": "the%20meffs",
         "g": []
-      },
-      "rock,": {
-        "s": null,
-        "l": "rock,",
-        "g": [
-          "heavy metal"
-        ]
-      },
-      "punk": {
-        "s": null,
-        "l": "punk",
-        "g": [
-          "melodic death metal (early)",
-          " glitch",
-          "dubstep",
-          "electronica (later)"
-        ]
       }
     }
   },
@@ -156,18 +122,7 @@
     "longText": "../public/texts/doornroosje/ZW50L21hZ2ljLXRvbS15dXJpLWV0ZW4tYmxvZWQv.html",
     "soldOut": true,
     "eventGenres": null,
-    "artists": {
-      "punk": {
-        "s": null,
-        "l": "punk",
-        "g": [
-          "melodic death metal (early)",
-          " glitch",
-          "dubstep",
-          "electronica (later)"
-        ]
-      }
-    }
+    "artists": {}
   },
   {
     "door": "2025-08-27T19:00:00.000",
@@ -181,6 +136,13 @@
     "soldOut": true,
     "eventGenres": null,
     "artists": {
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
+        ]
+      },
       "the gathering": {
         "s": "2kO6zjt4a1OIqxOERhliEX",
         "l": "the%20gathering",
@@ -193,20 +155,6 @@
           "death",
           "doom metal, atmospheric doom metal (early)",
           " atmospheric rock (later)"
-        ]
-      },
-      "rock,": {
-        "s": null,
-        "l": "rock,",
-        "g": [
-          "heavy metal"
-        ]
-      },
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
         ]
       }
     }

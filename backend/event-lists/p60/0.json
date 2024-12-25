@@ -60,48 +60,6 @@
     }
   },
   {
-    "door": "2025-01-16T19:00:00Z",
-    "start": "2025-01-16T20:30:00Z",
-    "venueEventUrl": "https://p60.nl/2025/radar-jan",
-    "title": "Syncopicity, The Met & Bacon Biscuit",
-    "location": "p60",
-    "price": 6.508,
-    "shortText": "@ P60'S RADAR",
-    "longText": "../public/texts/p60/aHR0cHM6Ly9wNjAubmwvMjAyNS9yYWRhci1qYW4=.html",
-    "image": "../public/event-images/p60/aHR0cHM6Ly9wNjAubmwvMjAyNS9yYWRhci1qYW4=",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "p60's radar": {
-        "s": null,
-        "l": "p60's%20radar",
-        "g": []
-      }
-    }
-  },
-  {
-    "door": "2025-01-17T19:00:00Z",
-    "start": "2025-01-17T20:30:00Z",
-    "venueEventUrl": "https://p60.nl/2025/one-of-these-days",
-    "title": "One Of These Days",
-    "location": "p60",
-    "price": 17.502,
-    "shortText": "A PINK FLOYD TRIBUTE",
-    "longText": "../public/texts/p60/L3A2MC5ubC8yMDI1L29uZS1vZi10aGVzZS1kYXlz.html",
-    "image": "../public/event-images/p60/L3A2MC5ubC8yMDI1L29uZS1vZi10aGVzZS1kYXlz",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "one of these days": {
-        "s": "4n9blhhzxfknf541cde3aw",
-        "l": "one%20of%20these%20days",
-        "g": []
-      }
-    }
-  },
-  {
     "door": "2025-02-27T17:30:00Z",
     "start": "2025-02-27T19:00:00Z",
     "venueEventUrl": "https://p60.nl/2025/marduk",
@@ -125,6 +83,13 @@
           "swedish black metal",
           "swedish metal",
           "black metal"
+        ]
+      },
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
         ]
       }
     }

@@ -1,88 +1,64 @@
 [
   {
-    "start": "2024-12-28T03:00:00",
-    "end": "2024-12-28T08:00:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/winterweekend-zaterdag-met-zware-winterbieren-goedkoop-oefenen-en-dj-jack-r-corsa-en-dj-ascona/",
-    "title": "Winterweekend Zaterdag met zware winterbieren, goedkoop oefenen en DJ Jack R. Corsa en DJ Ascona",
+    "start": "2024-12-28T08:00:00",
+    "end": "2024-12-28T11:00:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/demented-are-go-support-3/",
+    "title": "Demented are go + mindfucks",
+    "location": "dbs",
+    "price": 10,
+    "shortText": "Op de valreep van 2024 kunnen we sneller dan verwacht Psychobilly Kings DEMENTED ARE GO bij ons op de nieuwe locatie aan de Vlampijpstraat verwelkomen.",
+    "longText": "../public/texts/dbs/ZW50L2RlbWVudGVkLWFyZS1nby1zdXBwb3J0LTMv.html",
+    "image": "../public/event-images/dbs/ZW50L2RlbWVudGVkLWFyZS1nby1zdXBwb3J0LTMv",
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "demented are go": {
+        "s": "7fvToIpjDfwtLhAoZdVF5W",
+        "l": "demented%20are%20go",
+        "g": [
+          "deathgrass",
+          "psychobilly",
+          "crossover",
+          "hardcore",
+          "psychobilly",
+          "punk",
+          "thrash"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-01-23T07:00:00",
+    "end": "2025-01-23T11:30:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/metal-battle-voorronde-utrecht/",
+    "title": "Metal battle voorronde utrecht",
+    "location": "dbs",
+    "price": "0",
+    "shortText": "",
+    "longText": "../public/texts/dbs/ZXRhbC1iYXR0bGUtdm9vcnJvbmRlLXV0cmVjaHQv.html",
+    "image": "../public/event-images/dbs/ZXRhbC1iYXR0bGUtdm9vcnJvbmRlLXV0cmVjaHQv",
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-01-26T02:00:00",
+    "end": "2025-01-26T06:00:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/lazy-crazy-sunday-punk-edition-by-junk-shop-discotheque/",
+    "title": "Lazy Crazy Sunday Punk Edition by Junk Shop Discotheque",
     "location": "dbs",
     "price": "0",
     "shortText": " ",
-    "longText": "../public/texts/dbs/LWRqLWphY2stci1jb3JzYS1lbi1kai1hc2NvbmEv.html",
-    "image": "../public/event-images/dbs/LWRqLWphY2stci1jb3JzYS1lbi1kai1hc2NvbmEv",
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "metz": {
-        "s": "18TNVFTJ6WfeicsMRrdJHI",
-        "l": "metz",
-        "g": [
-          "canadian punk",
-          "crank wave",
-          "indie punk",
-          "noise pop",
-          "noise rock",
-          "post-hardcore"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-01-19T04:00:00",
-    "end": "2025-01-19T10:00:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/utreg-punk-fest-1/",
-    "title": "Utreg Punk Fest # 1 met Neuroot ",
-    "location": "dbs",
-    "price": 15,
-    "shortText": " The Covids  +  Apeshit  +  Spurn  +  Chauffeur  +  The Asbest Boys Na 10 succesvolle edities in diverse zalen in Arnhem is er nu ook Utreg Punx Fest #1 in Db’s met een wel zeer afwisselende lokale en nationale line up.\nOp een zondag (19 januari) vanaf 17:00 uur de eerste band en de laatste band klaar om 22:00uur, zodat je -puur theoretisch- maandag weer fris aan de\nstart zou kunnen zijn. ‘Zou kunnen zijn’ want met deze line up wordt dat wel moeilijk. Voor de inwendige mens wordt gezorgd met (vegan) eten vanaf de\nmiddag. We luiden het nieuwe Punk jaar 2025 alvast goed in met een killer affiche waarop niet minder dat 6 bands. Ruim baan voor Neuroot, The Covids, Spurn, Asbest Boys, Apeshit, & Chauffeur!",
-    "longText": "../public/texts/dbs/aW8ubmwvZXZlbnQvdXRyZWctcHVuay1mZXN0LTEv.html",
-    "image": "../public/event-images/dbs/aW8ubmwvZXZlbnQvdXRyZWctcHVuay1mZXN0LTEv",
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "the covids": {
-        "s": "7lkvmrxhwhkhoyzg649wjh",
-        "l": "the%20covids",
-        "g": []
-      },
-      "punk": {
-        "s": null,
-        "l": "punk",
-        "g": [
-          "melodic death metal (early)",
-          " glitch",
-          "dubstep",
-          "electronica (later)"
-        ]
-      },
-      "spurn": {
-        "s": "6EuJStUEQd6XOxDSTiPRw0",
-        "l": "spurn",
-        "g": [
-          "metalcore",
-          "melodic death metal"
-        ]
-      },
-      "apeshit": {
-        "s": "60idytqipfbGaZr3u2a0QG",
-        "l": "apeshit",
-        "g": [
-          "dutch post-punk",
-          "brutal death metal",
-          "grindcore"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-01-25T08:00:00",
-    "end": "2025-01-25T10:30:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/lydia-lunch-marc-hurtado-play-suicide/",
-    "title": "Lydia lunch & marc hurtado play suicide ",
-    "location": "dbs",
-    "price": 10,
-    "shortText": " the dyade Culthelden Lydia Lunch en Marc Hurtado spelen vanavond songs van de legendarische postpunk / electro-punkband Suicide.",
-    "longText": "../public/texts/dbs/bmNoLW1hcmMtaHVydGFkby1wbGF5LXN1aWNpZGUv.html",
-    "image": "../public/event-images/dbs/bmNoLW1hcmMtaHVydGFkby1wbGF5LXN1aWNpZGUv",
+    "longText": "../public/texts/dbs/dGlvbi1ieS1qdW5rLXNob3AtZGlzY290aGVxdWUv.html",
+    "image": "../public/event-images/dbs/dGlvbi1ieS1qdW5rLXNob3AtZGlzY290aGVxdWUv",
     "unavailable": false,
     "eventGenres": null,
     "artists": {}
@@ -124,88 +100,65 @@
     }
   },
   {
-    "start": "2025-02-22T08:00:00",
-    "end": "2025-02-22T11:00:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/radar-men-from-the-moon-support/",
-    "title": "Radar Men From The Moon + support",
-    "location": "dbs",
-    "price": 10,
-    "shortText": "Radar Men From The Moon (RMFTM) bevindt zich al veertien jaar in een constante staat van ontwikkeling. De band uit Eindhoven met Utrechtse brulboei hanteert een genre-overschrijdende aanpak, variërend van space- en psych rock tot industriële post-punk en techno. Hun muziek is altijd in beweging, zonder vaste omlijning.\nIn 2024 breekt er een nieuw tijdperk aan voor RMFTM. Op 16 augustus verscheen het nieuwe album ‘Vomitorium’ via Fuzz Club Records, een langverwachte opvolger van ‘The Bestial Light’ uit 2020, waarop ze hun creatieve grenzen blijven verleggen. Donkerder en zwaarder dan ooit tevoren, met een geluid dat neigt naar dissonante drone punk, sludge en noise rock.",
-    "longText": "../public/texts/dbs/ZGFyLW1lbi1mcm9tLXRoZS1tb29uLXN1cHBvcnQv.html",
-    "image": "../public/event-images/dbs/ZGFyLW1lbi1mcm9tLXRoZS1tb29uLXN1cHBvcnQv",
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "radar men from the moon": {
-        "s": "610d1hfspkbogwwdebpir0",
-        "l": "radar%20men%20from%20the%20moon",
-        "g": [
-          "dutch stoner rock",
-          "neo-kraut",
-          "psychedelic space rock",
-          "space rock"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-05-01T08:00:00",
-    "end": "2025-05-01T10:30:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/black-curse-concrete-winds/",
-    "title": "Black curse + concrete winds",
+    "start": "2025-02-07T08:00:00",
+    "end": "2025-02-07T11:00:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/cobra-the-impaler-arson/",
+    "title": "Cobra the impaler + arson",
     "location": "dbs",
     "price": 15,
-    "shortText": "Beware! This one hurts badly!!",
-    "longText": "../public/texts/dbs/bnQvYmxhY2stY3Vyc2UtY29uY3JldGUtd2luZHMv.html",
-    "image": "../public/event-images/dbs/bnQvYmxhY2stY3Vyc2UtY29uY3JldGUtd2luZHMv",
+    "shortText": "DOUBLE BILL METAL ‘N ROCK EXTRAVAGANZA",
+    "longText": "../public/texts/dbs/ZXZlbnQvY29icmEtdGhlLWltcGFsZXItYXJzb24v.html",
+    "image": "../public/event-images/dbs/ZXZlbnQvY29icmEtdGhlLWltcGFsZXItYXJzb24v",
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "black curse": {
-        "s": "67l4rj0u4rzuc1btmw53xu",
-        "l": "black%20curse",
+      "cobra the impaler": {
+        "s": "3GF4mtTUUptBbUoJNclS4A",
+        "l": "cobra%20the%20impaler",
         "g": [
-          "black death",
-          "denver metal",
-          "dissonant death metal",
-          "voidgaze"
+          "progressive metalcore"
         ]
       },
-      "concrete winds": {
-        "s": "3EgVbnn78KGifB0CL39kET",
-        "l": "concrete%20winds",
+      "arson": {
+        "s": "7jun2nR07meg97xF6mD3BF",
+        "l": "arson",
         "g": [
-          "black death",
-          "finnish death metal",
-          "death metal",
-          "grindcore"
+          "melodic death",
+          "black metal"
         ]
       }
     }
   },
   {
-    "start": "2025-07-31T08:00:00",
-    "end": "2025-07-31T10:30:00",
-    "venueEventUrl": "https://www.dbstudio.nl/event/voodoo-glow-skulls/",
-    "title": "Voodoo glow skulls",
+    "start": "2025-03-26T08:00:00",
+    "end": "2025-03-26T11:30:00",
+    "venueEventUrl": "https://www.dbstudio.nl/event/bong-ra-the-answer-lies-in-the-black-void/",
+    "title": "BONG-RA + The Answer Lies in the Black Void",
     "location": "dbs",
     "price": 10,
-    "shortText": "Ze zouden al eerder in 2023 komen maar dit keer dan echt, THE VOODOO GLOW SKULLS!",
-    "longText": "../public/texts/dbs/by5ubC9ldmVudC92b29kb28tZ2xvdy1za3VsbHMv.html",
-    "image": "../public/event-images/dbs/by5ubC9ldmVudC92b29kb28tZ2xvdy1za3VsbHMv",
+    "shortText": "De legendarische Bong-Ra keert terug naar zijn voormalige hometown Utrecht! Deze muzikale pionier houdt zich sinds het begin van zijn carrière in de 90’s al niet aan de muzikale blauwdrukken en heeft samen met artiesten als Venetian Snares en DJ Scud de basis gelegd voor een genre dat later bekend zou worden als het unieke ‘breakcore’. Zijn meedogenloze mixen van metal, jungle en industrial zorgen voor extreme muziek in haar meest experimentele vorm. Bong-Ra stond eerder al op meerdere internationale festivals van hoog niveau zoals Roadburn, Lowlands, Dour en Glastonbury. Ook deelde hij het podium met muzikale legendes als Aphex Twin, Ministry, Dillinger Escape Plan, Mastodon en The Prodigy. Na een paar jaar afwezigheid, en een hoop muzikale experimenten in doom, electronica en jazz later, keert Bong-Ra terug naar de metalroots van zijn geluid. Nu live vergezeld door twee gitaristen (Attila Kovacs en Botond Fogl), brengt Bong-Ra begin 2025 een nieuw album uit waarop zijn nieuwe mengelmoes van metalbreaks gepresenteerd zal worden.",
+    "longText": "../public/texts/dbs/YW5zd2VyLWxpZXMtaW4tdGhlLWJsYWNrLXZvaWQv.html",
+    "image": "../public/event-images/dbs/YW5zd2VyLWxpZXMtaW4tdGhlLWJsYWNrLXZvaWQv",
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "voodoo glow skulls": {
-        "s": "0t1X1ygK807hH0upA9lYJw",
-        "l": "voodoo%20glow%20skulls",
+      "bong-ra": {
+        "s": "6dD5LzTwdYS3gRvRSCOIVP",
+        "l": "bong-ra",
         "g": [
-          "chicano punk",
-          "punk",
-          "ska",
-          "ska mexicano",
-          "ska punk",
-          "skate punk"
+          "breakcore",
+          "dutch dnb",
+          "breakcore",
+          "electronic (early)",
+          " experimental stoner",
+          "doom metal (later)"
+        ]
+      },
+      "lies in the black void": {
+        "s": null,
+        "l": "lies%20in%20the%20black%20void",
+        "g": [
+          "atmospheric doom metal"
         ]
       }
     }

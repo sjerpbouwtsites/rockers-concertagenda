@@ -81,26 +81,6 @@
         "g": [
           "death metal"
         ]
-      },
-      "punk": {
-        "s": null,
-        "l": "punk",
-        "g": [
-          "melodic death metal (early)",
-          " glitch",
-          "dubstep",
-          "electronica (later)"
-        ]
-      },
-      "stone": {
-        "s": "22be4uq6banwshpvcdxlce",
-        "l": "stone",
-        "g": [
-          "album rock",
-          "british invasion",
-          "classic rock",
-          "rock"
-        ]
       }
     }
   },
@@ -149,12 +129,30 @@
     "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "more": {
-        "s": null,
-        "l": "more",
+      "general surgery": {
+        "s": "7uqRm8hzY1AGigP9Qd6j4U",
+        "l": "general%20surgery",
         "g": [
-          "nwobhm",
-          "heavy metal"
+          "brutal death metal",
+          "deathgrind",
+          "goregrind",
+          "grindcore",
+          "swedish death metal",
+          "swedish grindcore",
+          "death metal",
+          "goregrind"
+        ]
+      },
+      "pulmonary fibrosis": {
+        "s": "10cqdVKP6irGvHQkcy7NG0",
+        "l": "pulmonary%20fibrosis",
+        "g": [
+          "goregrind",
+          "pornogrind",
+          "goregrind",
+          "noisegrind (early)",
+          " brutal death metal",
+          "grindcore (later)"
         ]
       }
     }

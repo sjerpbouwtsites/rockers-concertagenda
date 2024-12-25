@@ -106,95 +106,112 @@
     }
   },
   {
-    "start": "2025-03-15T23:59:00",
-    "venueEventUrl": "https://www.willemeen.nl/programma/zeerow-x-spoor-12/",
-    "title": "Zeerow x spoor 12",
-    "location": "willemeen",
-    "price": 10,
-    "shortText": "techno",
-    "longText": "../public/texts/willemeen/bC9wcm9ncmFtbWEvemVlcm93LXgtc3Bvb3ItMTIv.html",
-    "image": "../public/event-images/willemeen/bC9wcm9ncmFtbWEvemVlcm93LXgtc3Bvb3ItMTIv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "zeerow": {
-        "s": "03xoaxyofepturf5jdbksf",
-        "l": "zeerow",
-        "g": []
-      }
-    }
-  },
-  {
-    "start": "2025-03-28T19:00:00",
-    "venueEventUrl": "https://www.willemeen.nl/programma/saor-ie-can-bardd-ch-morgarten-ch/",
-    "title": "Saor (ie) + cân bardd (ch) + morgarten (ch)",
-    "location": "willemeen",
-    "price": 27.5,
-    "shortText": "folk, black",
-    "longText": "../public/texts/willemeen/LWllLWNhbi1iYXJkZC1jaC1tb3JnYXJ0ZW4tY2gv.html",
-    "image": "../public/event-images/willemeen/LWllLWNhbi1iYXJkZC1jaC1tb3JnYXJ0ZW4tY2gv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "saor": {
-        "s": "4rHMzJ1RKUMtid1K2QEYbr",
-        "l": "saor",
-        "g": [
-          "atmospheric black metal",
-          "autonomous black metal",
-          "british black metal",
-          "celtic metal",
-          "folk black metal",
-          "folk metal",
-          "forest black metal",
-          "scottish metal",
-          "uk post-metal",
-          "viking metal",
-          "voidgaze",
-          "atmospheric folk",
-          "black metal"
-        ]
-      },
-      "morgarten": {
-        "s": "4xKJfYRasExH6cgMmWlBpd",
-        "l": "morgarten",
-        "g": [
-          "swiss black metal",
-          "swiss metal",
-          "black",
-          "folk metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-04-18T19:00:00",
-    "venueEventUrl": "https://www.willemeen.nl/programma/frozen-crown-it-fellowship-uk-lutharo-ca/",
-    "title": "Frozen crown (it) ",
+    "start": "2025-03-15T18:30:00",
+    "venueEventUrl": "https://www.willemeen.nl/programma/gothminister-no-stoneman-ch-morphium-sp-dame-tu-alma-ch-excl-nl-show/",
+    "title": "Gothminister (no) ",
     "location": "willemeen",
     "price": 23,
-    "shortText": " fellowship (uk)  +  lutharo (ca) power metal",
-    "longText": "../public/texts/willemeen/bi1pdC1mZWxsb3dzaGlwLXVrLWx1dGhhcm8tY2Ev.html",
-    "image": "../public/event-images/willemeen/bi1pdC1mZWxsb3dzaGlwLXVrLWx1dGhhcm8tY2Ev",
+    "shortText": " stoneman (ch)  +  morphium (sp)   +   dame tu alma (ch) excl nl show Gothic, Horror, heavy",
+    "longText": "../public/texts/willemeen/LWRhbWUtdHUtYWxtYS1jaC1leGNsLW5sLXNob3cv.html",
+    "image": "../public/event-images/willemeen/LWRhbWUtdHUtYWxtYS1jaC1leGNsLW5sLXNob3cv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "frozen crown": {
-        "s": "6hbGneO1qRnmz6xflK4n8E",
-        "l": "frozen%20crown",
+      "gothminister": {
+        "s": "2s3xwpuezppvudttv7wefx",
+        "l": "gothminister",
         "g": [
-          "gothic symphonic metal",
-          "italian folk metal",
-          "italian power metal",
-          "melodic metal",
-          "power metal",
-          "slayer",
-          "symphonic metal",
-          "symphonic power metal",
-          "power metal"
+          "gothic metal",
+          "industrial metal",
+          "norwegian metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-03-22T18:30:00",
+    "venueEventUrl": "https://www.willemeen.nl/programma/congress-be-rancor-meer-tba/",
+    "title": "Congress (BE) ",
+    "location": "willemeen",
+    "price": 20,
+    "shortText": " Rancor  +  Trenchwar  +  Last (BE) H8000 edgemetal, strhateedge, hardcore",
+    "longText": "../public/texts/willemeen/YS9jb25ncmVzcy1iZS1yYW5jb3ItbWVlci10YmEv.html",
+    "image": "../public/event-images/willemeen/YS9jb25ncmVzcy1iZS1yYW5jb3ItbWVlci10YmEv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "congress": {
+        "s": "5Q7dfEU42dhhQZWEPi9Fde",
+        "l": "congress",
+        "g": [
+          "belgian hardcore",
+          "h8000"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-03-29T15:00:00",
+    "venueEventUrl": "https://www.willemeen.nl/programma/smyrna-deathfest-stillbirth-soulburn-teethgrinder-the-lucifer-principle-devoured-elysium-1/",
+    "title": "Smyrna Deathfest: Stillbirth ",
+    "location": "willemeen",
+    "price": 25,
+    "shortText": " Soulburn  +  Teethgrinder  +  The Lucifer Principle  +  Devoured Elysium  + 1 deathmetal festival",
+    "longText": "../public/texts/willemeen/LXByaW5jaXBsZS1kZXZvdXJlZC1lbHlzaXVtLTEv.html",
+    "image": "../public/event-images/willemeen/LXByaW5jaXBsZS1kZXZvdXJlZC1lbHlzaXVtLTEv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "devoured elysium": {
+        "s": "0StR9GrLWsoDfnVEHvTbez",
+        "l": "devoured%20elysium",
+        "g": [
+          "turkish death metal",
+          "death metal",
+          "grindcore"
+        ]
+      },
+      "teethgrinder": {
+        "s": "0J9eNWKbu2RTQ5bcQ0eJS6",
+        "l": "teethgrinder",
+        "g": [
+          "grindcore",
+          "powerviolence"
+        ]
+      },
+      "lucifer": {
+        "s": "3oypqq5xqbllc5fh0h7a6q",
+        "l": "lucifer",
+        "g": [
+          "belgian metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-05-10T19:00:00",
+    "venueEventUrl": "https://www.willemeen.nl/programma/diabolical-echoes-part-7/",
+    "title": "Diabolical Echoes part 7",
+    "location": "willemeen",
+    "price": 8,
+    "shortText": "black metal",
+    "longText": "../public/texts/willemeen/YW1tYS9kaWFib2xpY2FsLWVjaG9lcy1wYXJ0LTcv.html",
+    "image": "../public/event-images/willemeen/YW1tYS9kaWFib2xpY2FsLWVjaG9lcy1wYXJ0LTcv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "echo": {
+        "s": "0fgykf9avljex0l9wt5b8z",
+        "l": "echo",
+        "g": [
+          "alternative rock",
+          "new romantic",
+          "new wave",
+          "permanent wave"
         ]
       }
     }

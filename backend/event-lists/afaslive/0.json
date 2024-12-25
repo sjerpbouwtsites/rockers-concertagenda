@@ -91,22 +91,31 @@
     }
   },
   {
-    "start": "2025-09-29T20:00:00",
-    "venueEventUrl": "https://www.afaslive.nl/agenda/pierce-the-veil",
-    "title": "Pierce The Veil",
+    "start": "2025-10-28T20:00:00",
+    "venueEventUrl": "https://www.afaslive.nl/agenda/arch-enemy",
+    "title": "Arch Enemy",
     "location": "afaslive",
-    "price": 29,
-    "longText": "../public/texts/afaslive/bGl2ZS5ubC9hZ2VuZGEvcGllcmNlLXRoZS12ZWls.html",
-    "image": "../public/event-images/afaslive/bGl2ZS5ubC9hZ2VuZGEvcGllcmNlLXRoZS12ZWls",
+    "price": 28,
+    "longText": "../public/texts/afaslive/LmFmYXNsaXZlLm5sL2FnZW5kYS9hcmNoLWVuZW15.html",
+    "image": "../public/event-images/afaslive/LmFmYXNsaXZlLm5sL2FnZW5kYS9hcmNoLWVuZW15",
     "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "pierce the veil": {
-        "s": "4ijlpqclelzobcbifm8fzv",
-        "l": "pierce%20the%20veil",
+      "arch enemy": {
+        "s": "0DCw6lHkzh9t7f8Hb4Z0Sx",
+        "l": "arch%20enemy",
         "g": [
-          "pop punk",
-          "screamo"
+          "alternative metal",
+          "death metal",
+          "melodic death metal",
+          "metal",
+          "power metal",
+          "speed metal",
+          "swedish death metal",
+          "swedish melodeath",
+          "swedish metal",
+          "symphonic metal",
+          "melodic death metal"
         ]
       }
     }

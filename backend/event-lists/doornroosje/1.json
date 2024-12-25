@@ -85,23 +85,6 @@
           "dutch indie rock",
           "dutch punk"
         ]
-      },
-      "rock,": {
-        "s": null,
-        "l": "rock,",
-        "g": [
-          "heavy metal"
-        ]
-      },
-      "punk": {
-        "s": null,
-        "l": "punk",
-        "g": [
-          "melodic death metal (early)",
-          " glitch",
-          "dubstep",
-          "electronica (later)"
-        ]
       }
     }
   },
@@ -117,16 +100,6 @@
     "soldOut": true,
     "eventGenres": null,
     "artists": {
-      "punk": {
-        "s": null,
-        "l": "punk",
-        "g": [
-          "melodic death metal (early)",
-          " glitch",
-          "dubstep",
-          "electronica (later)"
-        ]
-      },
       "pure adult": {
         "s": "1Mc4HuGUhs102TZAEVX1Kk",
         "l": "pure%20adult",
@@ -155,16 +128,6 @@
           "heavy",
           "power metal"
         ]
-      },
-      "punk": {
-        "s": null,
-        "l": "punk",
-        "g": [
-          "melodic death metal (early)",
-          " glitch",
-          "dubstep",
-          "electronica (later)"
-        ]
       }
     }
   },
@@ -180,23 +143,6 @@
     "soldOut": true,
     "eventGenres": null,
     "artists": {
-      "rock,": {
-        "s": null,
-        "l": "rock,",
-        "g": [
-          "heavy metal"
-        ]
-      },
-      "punk": {
-        "s": null,
-        "l": "punk",
-        "g": [
-          "melodic death metal (early)",
-          " glitch",
-          "dubstep",
-          "electronica (later)"
-        ]
-      },
       "knives": {
         "s": "2YoHhPouaTT96k3dUQ8WZK",
         "l": "knives",
@@ -219,20 +165,6 @@
     "soldOut": true,
     "eventGenres": null,
     "artists": {
-      "rock,": {
-        "s": null,
-        "l": "rock,",
-        "g": [
-          "heavy metal"
-        ]
-      },
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      },
       "the gathering": {
         "s": "2kO6zjt4a1OIqxOERhliEX",
         "l": "the%20gathering",
@@ -245,6 +177,13 @@
           "death",
           "doom metal, atmospheric doom metal (early)",
           " atmospheric rock (later)"
+        ]
+      },
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
         ]
       }
     }

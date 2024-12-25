@@ -1,175 +1,152 @@
 [
-    {
-        "door": "2024-12-29T19:30:00",
-        "start": "2024-12-29T20:30:00",
-        "venueEventUrl": "https://www.groene-engel.nl/programma/ronnie-james-dio-the-memorial-concert/",
-        "title": "Ronnie James DIO – The Memorial Concert",
-        "location": "groeneengel",
-        "price": 17,
-        "longText": "../public/texts/groeneengel/YW1lcy1kaW8tdGhlLW1lbW9yaWFsLWNvbmNlcnQv.html",
-        "image": "../public/event-images/groeneengel/YW1lcy1kaW8tdGhlLW1lbW9yaWFsLWNvbmNlcnQv",
-        "soldOut": false,
-        "unavailable": false,
-        "eventGenres": null,
-        "artists": {
-            "ronnie james dio": {
-                "s": "4M3c7tg4BzLQ5pIOupZL65",
-                "l": "ronnie%20james%20dio",
-                "g": ["hard rock"]
-            }
-        }
-    },
-    {
-        "door": "2024-12-29T22:00:00",
-        "start": "2024-12-29T22:30:00",
-        "venueEventUrl": "https://www.groene-engel.nl/programma/foxy-venus-aftershow-ronnie-james-dio/",
-        "title": "Foxy Venus – Aftershow Ronnie James DIO",
-        "location": "groeneengel",
-        "price": 17,
-        "longText": "../public/texts/groeneengel/dXMtYWZ0ZXJzaG93LXJvbm5pZS1qYW1lcy1kaW8v.html",
-        "image": "../public/event-images/groeneengel/dXMtYWZ0ZXJzaG93LXJvbm5pZS1qYW1lcy1kaW8v",
-        "soldOut": false,
-        "unavailable": false,
-        "eventGenres": null,
-        "artists": {
-            "ronnie james dio": {
-                "s": "4M3c7tg4BzLQ5pIOupZL65",
-                "l": "ronnie%20james%20dio",
-                "g": ["hard rock"]
-            }
-        }
-    },
-
-    {
-        "door": "2024-12-29T19:30:00",
-        "start": "2024-12-29T20:00:00",
-        "venueEventUrl": "https://www.groene-engel.nl/programma/wild-romance-herman-broods-originele-band/",
-        "title": "Wild Romance – Herman Brood's originele band",
-        "location": "groeneengel",
-        "price": 31,
-        "longText": "../public/texts/groeneengel/LWhlcm1hbi1icm9vZHMtb3JpZ2luZWxlLWJhbmQv.html",
-        "image": "../public/event-images/groeneengel/LWhlcm1hbi1icm9vZHMtb3JpZ2luZWxlLWJhbmQv",
-        "soldOut": false,
-        "unavailable": false,
-        "eventGenres": null,
-        "artists": {
-            "band": {
-                "s": null,
-                "l": "band",
-                "g": ["heavy", "power metal"]
-            }
-        }
-    },
-    {
-        "door": "2024-12-29T22:00:00",
-        "start": "2024-12-29T22:30:00",
-        "venueEventUrl": "https://www.groene-engel.nl/programma/black-smoke-brigade-aftershow-wild-romance/",
-        "title": "Black Smoke Brigade – Aftershow Wild Romance",
-        "location": "groeneengel",
-        "price": 31,
-        "longText": "../public/texts/groeneengel/cmlnYWRlLWFmdGVyc2hvdy13aWxkLXJvbWFuY2Uv.html",
-        "image": "../public/event-images/groeneengel/cmlnYWRlLWFmdGVyc2hvdy13aWxkLXJvbWFuY2Uv",
-        "soldOut": false,
-        "unavailable": false,
-        "eventGenres": null,
-        "artists": {}
-    },
-    {
-        "door": "2024-12-29T19:30:00",
-        "start": "2024-12-29T20:30:00",
-        "venueEventUrl": "https://www.groene-engel.nl/programma/mitch-ryder-band/",
-        "title": "Mitch Ryder & Band",
-        "location": "groeneengel",
-        "price": 20,
-        "longText": "../public/texts/groeneengel/bmwvcHJvZ3JhbW1hL21pdGNoLXJ5ZGVyLWJhbmQv.html",
-        "image": "../public/event-images/groeneengel/bmwvcHJvZ3JhbW1hL21pdGNoLXJ5ZGVyLWJhbmQv",
-        "soldOut": false,
-        "unavailable": false,
-        "eventGenres": null,
-        "artists": {
-            "band": {
-                "s": null,
-                "l": "band",
-                "g": ["heavy", "power metal"]
-            }
-        }
-    },
-    {
-        "door": "2024-12-29T19:30:00",
-        "start": "2024-12-29T20:30:00",
-        "venueEventUrl": "https://www.groene-engel.nl/programma/physical-graffiti-the-ultimate-led-zeppelin-experience/",
-        "title": "Physical Graffiti – The Ultimate Led Zeppelin Experience",
-        "location": "groeneengel",
-        "price": 15,
-        "shortText": " undefined",
-        "longText": "../public/texts/groeneengel/aW1hdGUtbGVkLXplcHBlbGluLWV4cGVyaWVuY2Uv.html",
-        "image": "../public/event-images/groeneengel/aW1hdGUtbGVkLXplcHBlbGluLWV4cGVyaWVuY2Uv",
-        "soldOut": false,
-        "unavailable": false,
-        "eventGenres": null,
-        "artists": {
-            "physical graffiti": {
-                "s": null,
-                "l": "physical%20graffiti",
-                "g": []
-            }
-        }
-    },
-    {
-        "door": "2024-12-29T19:00:00",
-        "start": "2024-12-29T19:35:00",
-        "venueEventUrl": "https://www.groene-engel.nl/programma/rockronde/",
-        "title": "Rockronde",
-        "location": "groeneengel",
-        "price": 19,
-        "longText": "../public/texts/groeneengel/LWVuZ2VsLm5sL3Byb2dyYW1tYS9yb2Nrcm9uZGUv.html",
-        "image": "../public/event-images/groeneengel/LWVuZ2VsLm5sL3Byb2dyYW1tYS9yb2Nrcm9uZGUv",
-        "soldOut": false,
-        "unavailable": false,
-        "eventGenres": null,
-        "artists": {}
-    },
-    {
-        "door": "2024-12-29T19:30:00",
-        "start": "2024-12-29T20:00:00",
-        "venueEventUrl": "https://www.groene-engel.nl/programma/jared-grant-support/",
-        "title": "Jared Grant + support",
-        "location": "groeneengel",
-        "price": 21,
-        "longText": "../public/texts/groeneengel/cHJvZ3JhbW1hL2phcmVkLWdyYW50LXN1cHBvcnQv.html",
-        "image": "../public/event-images/groeneengel/cHJvZ3JhbW1hL2phcmVkLWdyYW50LXN1cHBvcnQv",
-        "soldOut": false,
-        "unavailable": false,
-        "eventGenres": null,
-        "artists": {}
-    },
-    {
-        "door": "2024-12-29T19:30:00",
-        "start": "2024-12-29T20:30:00",
-        "venueEventUrl": "https://www.groene-engel.nl/programma/fleetwood-mac-gold-dust-women-a-tribute-to-stevie-nicks-christine-mcvie/",
-        "title": "Fleetwood Mac: Gold Dust Women A tribute to Stevie Nicks & Christine McVie",
-        "location": "groeneengel",
-        "price": 20,
-        "shortText": " undefined",
-        "longText": "../public/texts/groeneengel/LXN0ZXZpZS1uaWNrcy1jaHJpc3RpbmUtbWN2aWUv.html",
-        "image": "../public/event-images/groeneengel/LXN0ZXZpZS1uaWNrcy1jaHJpc3RpbmUtbWN2aWUv",
-        "soldOut": false,
-        "unavailable": false,
-        "eventGenres": null,
-        "artists": {}
-    },
-    {
-        "door": "2024-12-29T15:00:00",
-        "start": "2024-12-29T15:30:00",
-        "venueEventUrl": "https://www.groene-engel.nl/programma/ambitus-presents-matteo-myderwyck/",
-        "title": "Ambitus presents: Matteo Myderwyk",
-        "location": "groeneengel",
-        "price": 11,
-        "longText": "../public/texts/groeneengel/dHVzLXByZXNlbnRzLW1hdHRlby1teWRlcnd5Y2sv.html",
-        "image": "../public/event-images/groeneengel/dHVzLXByZXNlbnRzLW1hdHRlby1teWRlcnd5Y2sv",
-        "soldOut": false,
-        "unavailable": false,
-        "eventGenres": null,
-        "artists": {}
+  {
+    "door": "2024-12-29T19:30:00",
+    "start": "2024-12-29T20:30:00",
+    "venueEventUrl": "https://www.groene-engel.nl/programma/ronnie-james-dio-the-memorial-concert/",
+    "title": "Ronnie James DIO – The Memorial Concert",
+    "location": "groeneengel",
+    "price": 17,
+    "longText": "../public/texts/groeneengel/YW1lcy1kaW8tdGhlLW1lbW9yaWFsLWNvbmNlcnQv.html",
+    "image": "../public/event-images/groeneengel/YW1lcy1kaW8tdGhlLW1lbW9yaWFsLWNvbmNlcnQv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "ronnie james dio": {
+        "s": "4M3c7tg4BzLQ5pIOupZL65",
+        "l": "ronnie%20james%20dio",
+        "g": [
+          "hard rock"
+        ]
+      }
     }
+  },
+  {
+    "door": "2024-12-29T22:00:00",
+    "start": "2024-12-29T22:30:00",
+    "venueEventUrl": "https://www.groene-engel.nl/programma/foxy-venus-aftershow-ronnie-james-dio/",
+    "title": "Foxy Venus – Aftershow Ronnie James DIO",
+    "location": "groeneengel",
+    "price": 17,
+    "longText": "../public/texts/groeneengel/dXMtYWZ0ZXJzaG93LXJvbm5pZS1qYW1lcy1kaW8v.html",
+    "image": "../public/event-images/groeneengel/dXMtYWZ0ZXJzaG93LXJvbm5pZS1qYW1lcy1kaW8v",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "ronnie james dio": {
+        "s": "4M3c7tg4BzLQ5pIOupZL65",
+        "l": "ronnie%20james%20dio",
+        "g": [
+          "hard rock"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2024-12-29T22:00:00",
+    "start": "2024-12-29T22:30:00",
+    "venueEventUrl": "https://www.groene-engel.nl/programma/black-smoke-brigade-aftershow-wild-romance/",
+    "title": "Black Smoke Brigade – Aftershow Wild Romance",
+    "location": "groeneengel",
+    "price": 31,
+    "longText": "../public/texts/groeneengel/cmlnYWRlLWFmdGVyc2hvdy13aWxkLXJvbWFuY2Uv.html",
+    "image": "../public/event-images/groeneengel/cmlnYWRlLWFmdGVyc2hvdy13aWxkLXJvbWFuY2Uv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "door": "2024-12-29T19:30:00",
+    "start": "2024-12-29T20:30:00",
+    "venueEventUrl": "https://www.groene-engel.nl/programma/mitch-ryder-band/",
+    "title": "Mitch Ryder & Band",
+    "location": "groeneengel",
+    "price": 20,
+    "longText": "../public/texts/groeneengel/bmwvcHJvZ3JhbW1hL21pdGNoLXJ5ZGVyLWJhbmQv.html",
+    "image": "../public/event-images/groeneengel/bmwvcHJvZ3JhbW1hL21pdGNoLXJ5ZGVyLWJhbmQv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "door": "2024-12-29T19:30:00",
+    "start": "2024-12-29T20:30:00",
+    "venueEventUrl": "https://www.groene-engel.nl/programma/physical-graffiti-the-ultimate-led-zeppelin-experience/",
+    "title": "Physical Graffiti – The Ultimate Led Zeppelin Experience",
+    "location": "groeneengel",
+    "price": 15,
+    "shortText": " undefined",
+    "longText": "../public/texts/groeneengel/aW1hdGUtbGVkLXplcHBlbGluLWV4cGVyaWVuY2Uv.html",
+    "image": "../public/event-images/groeneengel/aW1hdGUtbGVkLXplcHBlbGluLWV4cGVyaWVuY2Uv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "physical graffiti": {
+        "s": null,
+        "l": "physical%20graffiti",
+        "g": []
+      }
+    }
+  },
+  {
+    "door": "2024-12-29T19:00:00",
+    "start": "2024-12-29T19:35:00",
+    "venueEventUrl": "https://www.groene-engel.nl/programma/rockronde/",
+    "title": "Rockronde",
+    "location": "groeneengel",
+    "price": 19,
+    "longText": "../public/texts/groeneengel/LWVuZ2VsLm5sL3Byb2dyYW1tYS9yb2Nrcm9uZGUv.html",
+    "image": "../public/event-images/groeneengel/LWVuZ2VsLm5sL3Byb2dyYW1tYS9yb2Nrcm9uZGUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "door": "2024-12-29T19:30:00",
+    "start": "2024-12-29T20:00:00",
+    "venueEventUrl": "https://www.groene-engel.nl/programma/jared-grant-support/",
+    "title": "Jared Grant + support",
+    "location": "groeneengel",
+    "price": 21,
+    "longText": "../public/texts/groeneengel/cHJvZ3JhbW1hL2phcmVkLWdyYW50LXN1cHBvcnQv.html",
+    "image": "../public/event-images/groeneengel/cHJvZ3JhbW1hL2phcmVkLWdyYW50LXN1cHBvcnQv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "door": "2024-12-29T19:30:00",
+    "start": "2024-12-29T20:30:00",
+    "venueEventUrl": "https://www.groene-engel.nl/programma/fleetwood-mac-gold-dust-women-a-tribute-to-stevie-nicks-christine-mcvie/",
+    "title": "Fleetwood Mac: Gold Dust Women A tribute to Stevie Nicks & Christine McVie",
+    "location": "groeneengel",
+    "price": 20,
+    "shortText": " undefined",
+    "longText": "../public/texts/groeneengel/LXN0ZXZpZS1uaWNrcy1jaHJpc3RpbmUtbWN2aWUv.html",
+    "image": "../public/event-images/groeneengel/LXN0ZXZpZS1uaWNrcy1jaHJpc3RpbmUtbWN2aWUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "door": "2024-12-29T15:00:00",
+    "start": "2024-12-29T15:30:00",
+    "venueEventUrl": "https://www.groene-engel.nl/programma/ambitus-presents-matteo-myderwyck/",
+    "title": "Ambitus presents: Matteo Myderwyk",
+    "location": "groeneengel",
+    "price": 11,
+    "longText": "../public/texts/groeneengel/dHVzLXByZXNlbnRzLW1hdHRlby1teWRlcnd5Y2sv.html",
+    "image": "../public/event-images/groeneengel/dHVzLXByZXNlbnRzLW1hdHRlby1teWRlcnd5Y2sv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  }
 ]

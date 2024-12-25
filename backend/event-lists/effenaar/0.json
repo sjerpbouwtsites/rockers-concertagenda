@@ -12,14 +12,6 @@
     "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "band": {
-        "s": null,
-        "l": "band",
-        "g": [
-          "heavy",
-          "power metal"
-        ]
-      },
       "mojo": {
         "s": "1nxfzZDDm0a0msuLz0W4lx",
         "l": "mojo",
@@ -88,13 +80,6 @@
           "technical death metal",
           "death metal"
         ]
-      },
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
       }
     }
   },
@@ -111,25 +96,11 @@
     "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "knives": {
-        "s": "2YoHhPouaTT96k3dUQ8WZK",
-        "l": "knives",
+      "an evening with knives": {
+        "s": "3FAXLvVlUZ34x2nlGr570X",
+        "l": "an%20evening%20with%20knives",
         "g": [
-          "grindcore",
-          "death 'n' roll"
-        ]
-      },
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      },
-      "an evening with": {
-        "s": null,
-        "l": "an%20evening%20with",
-        "g": [
+          "dutch stoner rock",
           "stoner",
           "doom metal",
           "rock"
@@ -157,16 +128,6 @@
           "hardcore punk",
           "punk",
           "skate punk"
-        ]
-      },
-      "punk": {
-        "s": null,
-        "l": "punk",
-        "g": [
-          "melodic death metal (early)",
-          " glitch",
-          "dubstep",
-          "electronica (later)"
         ]
       },
       "circle jerks": {
@@ -269,14 +230,6 @@
           "stoner",
           "doom metal",
           "rock"
-        ]
-      },
-      "band": {
-        "s": null,
-        "l": "band",
-        "g": [
-          "heavy",
-          "power metal"
         ]
       }
     }

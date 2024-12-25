@@ -38,7 +38,42 @@
     "soldOut": null,
     "unavailable": false,
     "eventGenres": null,
-    "artists": {}
+    "artists": {
+      "pothamus": {
+        "s": "3oKgJ6083BjtllXxDN3TD5",
+        "l": "pothamus",
+        "g": [
+          "belgian post-rock",
+          "doomgaze"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-03-29T19:00:00",
+    "start": "2025-03-29T19:00:00",
+    "end": "2025-03-29T22:00:00",
+    "venueEventUrl": "https://nieuwenor.nl/programma/2025/03/29/rhea-be",
+    "title": "Rhea (be)",
+    "location": "nieuwenor",
+    "price": 20,
+    "shortText": "rock-alternative\nSter­ker dan ooit!",
+    "longText": "../public/texts/nieuwenor/bC9wcm9ncmFtbWEvMjAyNS8wMy8yOS9yaGVhLWJl.html",
+    "image": "../public/event-images/nieuwenor/bC9wcm9ncmFtbWEvMjAyNS8wMy8yOS9yaGVhLWJl",
+    "soldOut": null,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "rhea": {
+        "s": "3iTqZTjeziB8WtVJeIUrLD",
+        "l": "rhea",
+        "g": [
+          "belgian rock",
+          "atmospheric death",
+          "doom metal"
+        ]
+      }
+    }
   },
   {
     "door": "2025-04-03T20:00:00",
@@ -104,6 +139,81 @@
     "unavailable": false,
     "eventGenres": null,
     "artists": {}
+  },
+  {
+    "door": "2025-05-23T19:00:00",
+    "start": "2025-05-23T20:00:00",
+    "end": "2025-05-23T23:00:00",
+    "venueEventUrl": "https://nieuwenor.nl/programma/2025/05/23/the-amy-winehouse-band",
+    "title": "The Amy Wine­hou­se Band",
+    "location": "nieuwenor",
+    "price": 32.5,
+    "shortText": "blues,funk-soul,jazz,pop\nEen eer­be­toon aan een van de groot­ste arties­ten ooit!",
+    "longText": "../public/texts/nieuwenor/NS8wNS8yMy90aGUtYW15LXdpbmVob3VzZS1iYW5k.html",
+    "image": "../public/event-images/nieuwenor/NS8wNS8yMy90aGUtYW15LXdpbmVob3VzZS1iYW5k",
+    "soldOut": null,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "band": {
+        "s": null,
+        "l": "band",
+        "g": [
+          "heavy",
+          "power metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-05-28T19:00:00",
+    "start": "2025-05-28T19:30:00",
+    "end": "2025-05-28T22:00:00",
+    "venueEventUrl": "https://nieuwenor.nl/programma/2025/05/28/rick-de-leeuw-band",
+    "title": "Rick de Leeuw & Band",
+    "location": "nieuwenor",
+    "price": 30,
+    "shortText": "pop,rock-alternative\nTour 2025",
+    "longText": "../public/texts/nieuwenor/LzIwMjUvMDUvMjgvcmljay1kZS1sZWV1dy1iYW5k.html",
+    "image": "../public/event-images/nieuwenor/LzIwMjUvMDUvMjgvcmljay1kZS1sZWV1dy1iYW5k",
+    "soldOut": null,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "band": {
+        "s": null,
+        "l": "band",
+        "g": [
+          "heavy",
+          "power metal"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-10-25T19:00:00",
+    "start": "2025-10-25T20:00:00",
+    "end": "2025-10-25T23:00:00",
+    "venueEventUrl": "https://nieuwenor.nl/programma/2025/10/25/andre-hazes-band",
+    "title": "And’­re Hazes Band",
+    "location": "nieuwenor",
+    "price": 25,
+    "shortText": "tribute-cover\ndé groot­ste Neder­lands­ta­li­ge artiest ooit komt weer tot leven",
+    "longText": "../public/texts/nieuwenor/bWEvMjAyNS8xMC8yNS9hbmRyZS1oYXplcy1iYW5k.html",
+    "image": "../public/event-images/nieuwenor/bWEvMjAyNS8xMC8yNS9hbmRyZS1oYXplcy1iYW5k",
+    "soldOut": null,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "band": {
+        "s": null,
+        "l": "band",
+        "g": [
+          "heavy",
+          "power metal"
+        ]
+      }
+    }
   },
   {
     "door": "2025-11-01T19:00:00",
