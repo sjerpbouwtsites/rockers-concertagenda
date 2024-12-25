@@ -137,7 +137,8 @@ const forbiddenTerms = [
     "christian music",
     "winterweekend",
     "folkcafé",
-    "folkcafe"
+    "folkcafe",
+    "jamsessie"
 ];
 
 const globalForbiddenGenres = [

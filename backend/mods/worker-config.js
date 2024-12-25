@@ -71,11 +71,11 @@ export const workerConfig = {
     //     workerConcurrent: 2,
     //     forceSet: 4
     // }
-    // littledevil: {
-    //     workerCount: 1,
-    //     workerConcurrent: 2,
-    //     forceSet: 4
-    // },
+    littledevil: {
+        workerCount: 1,
+        workerConcurrent: 2,
+        forceSet: 4
+    }
     // melkweg: {
     //     workerCount: 2,
     //     CPUReq: "high",
