@@ -91,12 +91,12 @@ export const workerConfig = {
     //metalfan: { workerCount: 1, CPUReq: "low", workerConcurrent: 1 }
     // neushoorn: { workerCount: 2, workerConcurrent: 1, forceSet: 5 }
     // nieuwenor: { workerCount: 1, workerConcurrent: 2, forceSet: 5 }
-    occii: {
-        workerCount: 1,
-        workerConcurrent: 1,
-        forceSet: 5
-    }
-    //oosterpoort: { workerCount: 1, workerConcurrent: 1, forceSet: 5 }
+    // occii: {
+    //     workerCount: 1,
+    //     workerConcurrent: 1,
+    //     forceSet: 5
+    // }
+    oosterpoort: { workerCount: 1, workerConcurrent: 1, forceSet: 5 }
     ///p60: { workerCount: 1, workerConcurrent: 1, forceSet: 5 },
     // patronaat: {
     //     workerCount: 2,

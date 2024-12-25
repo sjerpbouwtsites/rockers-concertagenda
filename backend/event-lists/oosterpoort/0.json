@@ -1,13 +1,13 @@
 [
   {
-    "start": "2024-12-28T20:30:00+01:00",
-    "venueEventUrl": "https://www.spotgroningen.nl/programma/new-cool-collective-4/",
-    "title": "New Cool Collective",
+    "start": "2025-01-03T20:30:00+01:00",
+    "venueEventUrl": "https://www.spotgroningen.nl/programma/classic-hits-in-concert-2/",
+    "title": "Classic Hits in Concert",
     "location": "oosterpoort",
-    "price": 23.1,
-    "shortText": "New Cool Collective",
-    "longText": "../public/texts/oosterpoort/b2dyYW1tYS9uZXctY29vbC1jb2xsZWN0aXZlLTQv.html",
-    "image": "../public/event-images/oosterpoort/b2dyYW1tYS9uZXctY29vbC1jb2xsZWN0aXZlLTQv",
+    "price": 30.1,
+    "shortText": "Classic Hits in Concert",
+    "longText": "../public/texts/oosterpoort/bW1hL2NsYXNzaWMtaGl0cy1pbi1jb25jZXJ0LTIv.html",
+    "image": "../public/event-images/oosterpoort/bW1hL2NsYXNzaWMtaGl0cy1pbi1jb25jZXJ0LTIv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
@@ -172,26 +172,6 @@
     }
   },
   {
-    "start": "2025-06-12T20:00:00+02:00",
-    "venueEventUrl": "https://www.spotgroningen.nl/programma/jack-and-the-weatherman/",
-    "title": "Jack and the WeathermanThe Expanse Tour",
-    "location": "oosterpoort",
-    "price": 19.5,
-    "shortText": "Jack and the WeathermanThe Expanse Tour",
-    "longText": "../public/texts/oosterpoort/cmFtbWEvamFjay1hbmQtdGhlLXdlYXRoZXJtYW4v.html",
-    "image": "../public/event-images/oosterpoort/cmFtbWEvamFjay1hbmQtdGhlLXdlYXRoZXJtYW4v",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "the ex": {
-        "s": null,
-        "l": "the%20ex",
-        "g": []
-      }
-    }
-  },
-  {
     "start": "2025-06-18T20:00:00+02:00",
     "venueEventUrl": "https://www.spotgroningen.nl/programma/the-hu/",
     "title": "The Hu",
@@ -211,33 +191,6 @@
           "mongolian alternative",
           "oriental metal"
         ]
-      }
-    }
-  },
-  {
-    "start": "2025-09-24T20:00:00+02:00",
-    "venueEventUrl": "https://www.spotgroningen.nl/programma/floor-jansen-3/",
-    "title": "Floor JansenStrijdlust - een persoonlijk verhaal",
-    "location": "oosterpoort",
-    "price": null,
-    "shortText": "  Floor JansenStrijdlust - een persoonlijk verhaal",
-    "longText": "../public/texts/oosterpoort/bi5ubC9wcm9ncmFtbWEvZmxvb3ItamFuc2VuLTMv.html",
-    "image": "../public/event-images/oosterpoort/bi5ubC9wcm9ncmFtbWEvZmxvb3ItamFuc2VuLTMv",
-    "soldOut": null,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "floor jansen": {
-        "s": "2zntj9bu9qmjwbbomspqgj",
-        "l": "floor%20jansen",
-        "g": [
-          "hel"
-        ]
-      },
-      "soon": {
-        "s": "4n6fg61lvzxo5aohxadvbq",
-        "l": "soon",
-        "g": []
       }
     }
   }

@@ -1,37 +1,195 @@
 [
   {
-    "start": "4049-02-13T20:00:00",
-    "venueEventUrl": "https://occii.org/events/sim-dietrichs/",
-    "title": "Occii & sound in motion: dietrichs (us, camille & don dietrich/borbetomagus) ",
-    "location": "occii",
-    "price": 12,
-    "shortText": " jef mertens (be)  +  mascletá (fr)  +  bhajan bhoy (uk/nl) Sound In Motion | Cosmic Explorations | Wall Of Sound",
-    "longText": "../public/texts/occii/Y2NpaS5vcmcvZXZlbnRzL3NpbS1kaWV0cmljaHMv.html",
-    "image": "../public/event-images/occii/Y2NpaS5vcmcvZXZlbnRzL3NpbS1kaWV0cmljaHMv",
+    "start": "2025-01-03T20:30:00+01:00",
+    "venueEventUrl": "https://www.spotgroningen.nl/programma/classic-hits-in-concert-2/",
+    "title": "Classic Hits in Concert",
+    "location": "oosterpoort",
+    "price": 30.1,
+    "shortText": "Classic Hits in Concert",
+    "longText": "../public/texts/oosterpoort/bW1hL2NsYXNzaWMtaGl0cy1pbi1jb25jZXJ0LTIv.html",
+    "image": "../public/event-images/oosterpoort/bW1hL2NsYXNzaWMtaGl0cy1pbi1jb25jZXJ0LTIv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {}
   },
   {
-    "start": "4049-04-27T20:00:00",
-    "venueEventUrl": "https://occii.org/events/the-flying-luttenbachers/",
-    "title": "The flying luttenbachers (us) + more tba",
-    "location": "occii",
-    "price": 12,
-    "shortText": "Brutal Prog, Extreme Metal, Harmolodic Skronk",
-    "longText": "../public/texts/occii/ZW50cy90aGUtZmx5aW5nLWx1dHRlbmJhY2hlcnMv.html",
-    "image": "../public/event-images/occii/ZW50cy90aGUtZmx5aW5nLWx1dHRlbmJhY2hlcnMv",
+    "start": "2025-01-09T17:00:00+01:00",
+    "venueEventUrl": "https://www.spotgroningen.nl/programma/paganfest-2025/",
+    "title": "Paganfest 2025alestorm / ensiferum / tyr / heidevolk / elvenking",
+    "location": "oosterpoort",
+    "price": 51.6,
+    "shortText": "  Paganfest 2025ALESTORM / ENSIFERUM / TYR / HEIDEVOLK / ELVENKING",
+    "longText": "../public/texts/oosterpoort/bi5ubC9wcm9ncmFtbWEvcGFnYW5mZXN0LTIwMjUv.html",
+    "image": "../public/event-images/oosterpoort/bi5ubC9wcm9ncmFtbWEvcGFnYW5mZXN0LTIwMjUv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "the flying luttenbachers": {
-        "s": "6tENGBwrGxtkGDCxXBMpNO",
-        "l": "the%20flying%20luttenbachers",
+      "ensiferum": {
+        "s": "0krxcikthz13p8o0v2tksh",
+        "l": "ensiferum",
         "g": [
-          "brutal prog",
-          "noise rock"
+          "finnish melodeath",
+          "finnish metal",
+          "folk metal",
+          "melodic death metal",
+          "metal",
+          "nordic folk metal",
+          "power metal",
+          "symphonic metal",
+          "viking metal"
+        ]
+      },
+      "heidevolk": {
+        "s": "0a2yao4tufejvnn5hvjfxa",
+        "l": "heidevolk",
+        "g": [
+          "dutch metal",
+          "folk metal",
+          "viking metal"
+        ]
+      },
+      "alestorm": {
+        "s": "3opqu68jpzlzvjajj3b2da",
+        "l": "alestorm",
+        "g": [
+          "british power metal",
+          "comic metal",
+          "pirate",
+          "power metal",
+          "scottish metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-02-01T20:00:00+01:00",
+    "venueEventUrl": "https://www.spotgroningen.nl/programma/feuerengel-a-tribute-to-rammstein/",
+    "title": "Feuerengela tribute to rammstein",
+    "location": "oosterpoort",
+    "price": null,
+    "shortText": "FEUERENGELA TRIBUTE TO RAMMSTEIN",
+    "longText": "../public/texts/oosterpoort/cmVuZ2VsLWEtdHJpYnV0ZS10by1yYW1tc3RlaW4v.html",
+    "image": "../public/event-images/oosterpoort/cmVuZ2VsLWEtdHJpYnV0ZS10by1yYW1tc3RlaW4v",
+    "soldOut": null,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "feuerengel": {
+        "s": null,
+        "l": "feuerengel",
+        "g": [
+          "neue deutsche haerte",
+          "tanzmetal",
+          "industrial",
+          "industrial metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-03-30T20:00:00+02:00",
+    "venueEventUrl": "https://www.spotgroningen.nl/programma/nick-schilder/",
+    "title": "Nick SchilderShatterproof Clubtour",
+    "location": "oosterpoort",
+    "price": 30.1,
+    "shortText": "Nick SchilderShatterproof Clubtour",
+    "longText": "../public/texts/oosterpoort/ZW4ubmwvcHJvZ3JhbW1hL25pY2stc2NoaWxkZXIv.html",
+    "image": "../public/event-images/oosterpoort/ZW4ubmwvcHJvZ3JhbW1hL25pY2stc2NoaWxkZXIv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "child": {
+        "s": null,
+        "l": "child",
+        "g": [
+          "grindcore"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-04-21T20:30:00+02:00",
+    "venueEventUrl": "https://www.spotgroningen.nl/programma/matteo-myderwyk-2/",
+    "title": "Matteo Myderwyk",
+    "location": "oosterpoort",
+    "price": 18.5,
+    "shortText": "Matteo Myderwyk",
+    "longText": "../public/texts/oosterpoort/bC9wcm9ncmFtbWEvbWF0dGVvLW15ZGVyd3lrLTIv.html",
+    "image": "../public/event-images/oosterpoort/bC9wcm9ncmFtbWEvbWF0dGVvLW15ZGVyd3lrLTIv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2025-04-28T20:00:00+02:00",
+    "venueEventUrl": "https://www.spotgroningen.nl/programma/pixies-2/",
+    "title": "Pixies",
+    "location": "oosterpoort",
+    "price": null,
+    "shortText": "Pixies",
+    "longText": "../public/texts/oosterpoort/b25pbmdlbi5ubC9wcm9ncmFtbWEvcGl4aWVzLTIv.html",
+    "image": "../public/event-images/oosterpoort/b25pbmdlbi5ubC9wcm9ncmFtbWEvcGl4aWVzLTIv",
+    "soldOut": null,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "pixies": {
+        "s": "6zvul52xwtwzilbzl6bubt",
+        "l": "pixies",
+        "g": [
+          "alternative rock",
+          "boston rock",
+          "permanent wave",
+          "rock"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-05-23T20:00:00+02:00",
+    "venueEventUrl": "https://www.spotgroningen.nl/programma/oriol-mares-talal-fayad-quartet/",
+    "title": "Oriol Marès & Talal Fayad Quartet",
+    "location": "oosterpoort",
+    "price": 17.5,
+    "shortText": "Oriol Marès & Talal Fayad Quartet",
+    "longText": "../public/texts/oosterpoort/aW9sLW1hcmVzLXRhbGFsLWZheWFkLXF1YXJ0ZXQv.html",
+    "image": "../public/event-images/oosterpoort/aW9sLW1hcmVzLXRhbGFsLWZheWFkLXF1YXJ0ZXQv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "ares": {
+        "s": "1ynleumazoba4q3zki0hjz",
+        "l": "ares",
+        "g": [
+          "neo-trad metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-06-18T20:00:00+02:00",
+    "venueEventUrl": "https://www.spotgroningen.nl/programma/the-hu/",
+    "title": "The Hu",
+    "location": "oosterpoort",
+    "price": 39.6,
+    "shortText": "The Hu",
+    "longText": "../public/texts/oosterpoort/Z3JvbmluZ2VuLm5sL3Byb2dyYW1tYS90aGUtaHUv.html",
+    "image": "../public/event-images/oosterpoort/Z3JvbmluZ2VuLm5sL3Byb2dyYW1tYS90aGUtaHUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "the hu": {
+        "s": "0b2B3PwcYzQAhuJacmcYgc",
+        "l": "the%20hu",
+        "g": [
+          "mongolian alternative",
+          "oriental metal"
         ]
       }
     }
