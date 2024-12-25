@@ -102,30 +102,6 @@
     }
   },
   {
-    "door": "2025-02-07T19:00:00Z",
-    "start": "2025-02-07T21:00:00Z",
-    "venueEventUrl": "https://p60.nl/2025/extra-drukwerk",
-    "title": "Drukwerk",
-    "location": "p60",
-    "price": 25.5027,
-    "shortText": "+ AFTER PARTY DOOR DJ APPELMOES | SUPPORT: ROOIE JOS EN DE FOUTE BAND",
-    "longText": "../public/texts/p60/czovL3A2MC5ubC8yMDI1L2V4dHJhLWRydWt3ZXJr.html",
-    "image": "../public/event-images/p60/czovL3A2MC5ubC8yMDI1L2V4dHJhLWRydWt3ZXJr",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "band": {
-        "s": null,
-        "l": "band",
-        "g": [
-          "heavy",
-          "power metal"
-        ]
-      }
-    }
-  },
-  {
     "door": "2025-02-27T17:30:00Z",
     "start": "2025-02-27T19:00:00Z",
     "venueEventUrl": "https://p60.nl/2025/marduk",
@@ -139,13 +115,6 @@
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "metal": {
-        "s": null,
-        "l": "metal",
-        "g": [
-          "death metal"
-        ]
-      },
       "marduk": {
         "s": "2lxB5NTcQXj7GGRR4xAVaH",
         "l": "marduk",
@@ -156,61 +125,6 @@
           "swedish black metal",
           "swedish metal",
           "black metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-02-28T19:00:00Z",
-    "start": "2025-02-28T21:00:00Z",
-    "venueEventUrl": "https://p60.nl/2025/virtuoso",
-    "title": "Virtuoso",
-    "location": "p60",
-    "price": 25.0027,
-    "shortText": "TOP 2000 COVERBAND",
-    "longText": "../public/texts/p60/aHR0cHM6Ly9wNjAubmwvMjAyNS92aXJ0dW9zbw==.html",
-    "image": "../public/event-images/p60/aHR0cHM6Ly9wNjAubmwvMjAyNS92aXJ0dW9zbw==",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "band": {
-        "s": null,
-        "l": "band",
-        "g": [
-          "heavy",
-          "power metal"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-03-14T19:00:00Z",
-    "start": "2025-03-14T21:00:00Z",
-    "venueEventUrl": "https://p60.nl/2025/damahi",
-    "title": "Damahi",
-    "location": "p60",
-    "price": 39.004,
-    "shortText": "JAZZ, ROCK, REGGAE, FLAMENCO, AFRO, LATIN, FUNK, INDIAN MUSIC AND MORE!",
-    "longText": "../public/texts/p60/aHR0cHM6Ly9wNjAubmwvMjAyNS9kYW1haGk=.html",
-    "image": "../public/event-images/p60/aHR0cHM6Ly9wNjAubmwvMjAyNS9kYW1haGk=",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "rock,": {
-        "s": null,
-        "l": "rock,",
-        "g": [
-          "heavy metal"
-        ]
-      },
-      "more": {
-        "s": null,
-        "l": "more",
-        "g": [
-          "nwobhm",
-          "heavy metal"
         ]
       }
     }

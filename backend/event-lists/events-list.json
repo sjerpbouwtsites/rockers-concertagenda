@@ -1,195 +1,130 @@
 [
   {
-    "start": "2025-01-03T20:30:00+01:00",
-    "venueEventUrl": "https://www.spotgroningen.nl/programma/classic-hits-in-concert-2/",
-    "title": "Classic Hits in Concert",
-    "location": "oosterpoort",
-    "price": 30.1,
-    "shortText": "Classic Hits in Concert",
-    "longText": "../public/texts/oosterpoort/bW1hL2NsYXNzaWMtaGl0cy1pbi1jb25jZXJ0LTIv.html",
-    "image": "../public/event-images/oosterpoort/bW1hL2NsYXNzaWMtaGl0cy1pbi1jb25jZXJ0LTIv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "start": "2025-01-09T17:00:00+01:00",
-    "venueEventUrl": "https://www.spotgroningen.nl/programma/paganfest-2025/",
-    "title": "Paganfest 2025alestorm / ensiferum / tyr / heidevolk / elvenking",
-    "location": "oosterpoort",
-    "price": 51.6,
-    "shortText": "  Paganfest 2025ALESTORM / ENSIFERUM / TYR / HEIDEVOLK / ELVENKING",
-    "longText": "../public/texts/oosterpoort/bi5ubC9wcm9ncmFtbWEvcGFnYW5mZXN0LTIwMjUv.html",
-    "image": "../public/event-images/oosterpoort/bi5ubC9wcm9ncmFtbWEvcGFnYW5mZXN0LTIwMjUv",
+    "door": "2024-12-27T18:30:00Z",
+    "start": "2024-12-27T20:00:00Z",
+    "venueEventUrl": "https://p60.nl/27-12-2024/pestilence",
+    "title": "Pestilence",
+    "location": "p60",
+    "price": 19.5021,
+    "shortText": "SUPPORT: MISANTHROPIA",
+    "longText": "../public/texts/p60/Ly9wNjAubmwvMjctMTItMjAyNC9wZXN0aWxlbmNl.html",
+    "image": "../public/event-images/p60/Ly9wNjAubmwvMjctMTItMjAyNC9wZXN0aWxlbmNl",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "ensiferum": {
-        "s": "0krxcikthz13p8o0v2tksh",
-        "l": "ensiferum",
+      "pestilence": {
+        "s": "6jcfn4plxfuxmhrxpopsan",
+        "l": "pestilence",
         "g": [
-          "finnish melodeath",
-          "finnish metal",
-          "folk metal",
-          "melodic death metal",
-          "metal",
-          "nordic folk metal",
-          "power metal",
-          "symphonic metal",
-          "viking metal"
-        ]
-      },
-      "heidevolk": {
-        "s": "0a2yao4tufejvnn5hvjfxa",
-        "l": "heidevolk",
-        "g": [
+          "black metal",
+          "brutal death metal",
+          "death metal",
+          "deathrash",
+          "dutch death metal",
           "dutch metal",
-          "folk metal",
-          "viking metal"
+          "old school thrash",
+          "technical death metal"
         ]
       },
-      "alestorm": {
-        "s": "3opqu68jpzlzvjajj3b2da",
-        "l": "alestorm",
+      "misanthropia": {
+        "s": "4yb8ayltwfuqn8ogg4qjky",
+        "l": "misanthropia",
         "g": [
-          "british power metal",
-          "comic metal",
-          "pirate",
-          "power metal",
-          "scottish metal"
+          "grisly death metal"
         ]
       }
     }
   },
   {
-    "start": "2025-02-01T20:00:00+01:00",
-    "venueEventUrl": "https://www.spotgroningen.nl/programma/feuerengel-a-tribute-to-rammstein/",
-    "title": "Feuerengela tribute to rammstein",
-    "location": "oosterpoort",
-    "price": null,
-    "shortText": "FEUERENGELA TRIBUTE TO RAMMSTEIN",
-    "longText": "../public/texts/oosterpoort/cmVuZ2VsLWEtdHJpYnV0ZS10by1yYW1tc3RlaW4v.html",
-    "image": "../public/event-images/oosterpoort/cmVuZ2VsLWEtdHJpYnV0ZS10by1yYW1tc3RlaW4v",
-    "soldOut": null,
+    "door": "2025-01-10T18:30:00Z",
+    "start": "2025-01-10T20:30:00Z",
+    "venueEventUrl": "https://p60.nl/2025/the-memorial-concert",
+    "title": "Ronnie James Dio",
+    "location": "p60",
+    "price": 23.5026,
+    "shortText": "THE MEMORIAL CONCERT",
+    "longText": "../public/texts/p60/MC5ubC8yMDI1L3RoZS1tZW1vcmlhbC1jb25jZXJ0.html",
+    "image": "../public/event-images/p60/MC5ubC8yMDI1L3RoZS1tZW1vcmlhbC1jb25jZXJ0",
+    "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "feuerengel": {
+      "ronnie james dio": {
+        "s": "4M3c7tg4BzLQ5pIOupZL65",
+        "l": "ronnie%20james%20dio",
+        "g": [
+          "hard rock"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-01-16T19:00:00Z",
+    "start": "2025-01-16T20:30:00Z",
+    "venueEventUrl": "https://p60.nl/2025/radar-jan",
+    "title": "Syncopicity, The Met & Bacon Biscuit",
+    "location": "p60",
+    "price": 6.508,
+    "shortText": "@ P60'S RADAR",
+    "longText": "../public/texts/p60/aHR0cHM6Ly9wNjAubmwvMjAyNS9yYWRhci1qYW4=.html",
+    "image": "../public/event-images/p60/aHR0cHM6Ly9wNjAubmwvMjAyNS9yYWRhci1qYW4=",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "p60's radar": {
         "s": null,
-        "l": "feuerengel",
-        "g": [
-          "neue deutsche haerte",
-          "tanzmetal",
-          "industrial",
-          "industrial metal"
-        ]
+        "l": "p60's%20radar",
+        "g": []
       }
     }
   },
   {
-    "start": "2025-03-30T20:00:00+02:00",
-    "venueEventUrl": "https://www.spotgroningen.nl/programma/nick-schilder/",
-    "title": "Nick SchilderShatterproof Clubtour",
-    "location": "oosterpoort",
-    "price": 30.1,
-    "shortText": "Nick SchilderShatterproof Clubtour",
-    "longText": "../public/texts/oosterpoort/ZW4ubmwvcHJvZ3JhbW1hL25pY2stc2NoaWxkZXIv.html",
-    "image": "../public/event-images/oosterpoort/ZW4ubmwvcHJvZ3JhbW1hL25pY2stc2NoaWxkZXIv",
+    "door": "2025-01-17T19:00:00Z",
+    "start": "2025-01-17T20:30:00Z",
+    "venueEventUrl": "https://p60.nl/2025/one-of-these-days",
+    "title": "One Of These Days",
+    "location": "p60",
+    "price": 17.502,
+    "shortText": "A PINK FLOYD TRIBUTE",
+    "longText": "../public/texts/p60/L3A2MC5ubC8yMDI1L29uZS1vZi10aGVzZS1kYXlz.html",
+    "image": "../public/event-images/p60/L3A2MC5ubC8yMDI1L29uZS1vZi10aGVzZS1kYXlz",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "child": {
-        "s": null,
-        "l": "child",
-        "g": [
-          "grindcore"
-        ]
+      "one of these days": {
+        "s": "4n9blhhzxfknf541cde3aw",
+        "l": "one%20of%20these%20days",
+        "g": []
       }
     }
   },
   {
-    "start": "2025-04-21T20:30:00+02:00",
-    "venueEventUrl": "https://www.spotgroningen.nl/programma/matteo-myderwyk-2/",
-    "title": "Matteo Myderwyk",
-    "location": "oosterpoort",
-    "price": 18.5,
-    "shortText": "Matteo Myderwyk",
-    "longText": "../public/texts/oosterpoort/bC9wcm9ncmFtbWEvbWF0dGVvLW15ZGVyd3lrLTIv.html",
-    "image": "../public/event-images/oosterpoort/bC9wcm9ncmFtbWEvbWF0dGVvLW15ZGVyd3lrLTIv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "start": "2025-04-28T20:00:00+02:00",
-    "venueEventUrl": "https://www.spotgroningen.nl/programma/pixies-2/",
-    "title": "Pixies",
-    "location": "oosterpoort",
-    "price": null,
-    "shortText": "Pixies",
-    "longText": "../public/texts/oosterpoort/b25pbmdlbi5ubC9wcm9ncmFtbWEvcGl4aWVzLTIv.html",
-    "image": "../public/event-images/oosterpoort/b25pbmdlbi5ubC9wcm9ncmFtbWEvcGl4aWVzLTIv",
-    "soldOut": null,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "pixies": {
-        "s": "6zvul52xwtwzilbzl6bubt",
-        "l": "pixies",
-        "g": [
-          "alternative rock",
-          "boston rock",
-          "permanent wave",
-          "rock"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-05-23T20:00:00+02:00",
-    "venueEventUrl": "https://www.spotgroningen.nl/programma/oriol-mares-talal-fayad-quartet/",
-    "title": "Oriol Marès & Talal Fayad Quartet",
-    "location": "oosterpoort",
-    "price": 17.5,
-    "shortText": "Oriol Marès & Talal Fayad Quartet",
-    "longText": "../public/texts/oosterpoort/aW9sLW1hcmVzLXRhbGFsLWZheWFkLXF1YXJ0ZXQv.html",
-    "image": "../public/event-images/oosterpoort/aW9sLW1hcmVzLXRhbGFsLWZheWFkLXF1YXJ0ZXQv",
+    "door": "2025-02-27T17:30:00Z",
+    "start": "2025-02-27T19:00:00Z",
+    "venueEventUrl": "https://p60.nl/2025/marduk",
+    "title": "Marduk",
+    "location": "p60",
+    "price": 25.0027,
+    "shortText": "KEIHARDE BLACK METAL",
+    "longText": "../public/texts/p60/aHR0cHM6Ly9wNjAubmwvMjAyNS9tYXJkdWs=.html",
+    "image": "../public/event-images/p60/aHR0cHM6Ly9wNjAubmwvMjAyNS9tYXJkdWs=",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "ares": {
-        "s": "1ynleumazoba4q3zki0hjz",
-        "l": "ares",
+      "marduk": {
+        "s": "2lxB5NTcQXj7GGRR4xAVaH",
+        "l": "marduk",
         "g": [
-          "neo-trad metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "2025-06-18T20:00:00+02:00",
-    "venueEventUrl": "https://www.spotgroningen.nl/programma/the-hu/",
-    "title": "The Hu",
-    "location": "oosterpoort",
-    "price": 39.6,
-    "shortText": "The Hu",
-    "longText": "../public/texts/oosterpoort/Z3JvbmluZ2VuLm5sL3Byb2dyYW1tYS90aGUtaHUv.html",
-    "image": "../public/event-images/oosterpoort/Z3JvbmluZ2VuLm5sL3Byb2dyYW1tYS90aGUtaHUv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "the hu": {
-        "s": "0b2B3PwcYzQAhuJacmcYgc",
-        "l": "the%20hu",
-        "g": [
-          "mongolian alternative",
-          "oriental metal"
+          "black metal",
+          "death metal",
+          "metal",
+          "swedish black metal",
+          "swedish metal",
+          "black metal"
         ]
       }
     }
