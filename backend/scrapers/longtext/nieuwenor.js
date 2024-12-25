@@ -7,7 +7,30 @@ export default async function longTextSocialsIframes(page, event) {
         ({ event }) => {
             const res = {};
 
-            const textSelector = "#pageContent";
+            const textSelector = "#pageContent #heroSlider ~ *";
+
+            // iets van semantiek hahaha
+            document.querySelectorAll("span").forEach((span) => {
+                const t = span.textContent
+                    .toLowerCase()
+                    .trim()
+                    .replaceAll(/\W/g, "")
+                    .substring(0, 10);
+                if (!t) return;
+                span.classList.add(t);
+            });
+
+            // weg reclame
+            const reclame =
+                document.querySelector(".iets + .voor + .jou")?.parentNode
+                    .parentNode ?? null;
+            if (reclame) reclame.parentNode.removeChild(reclame);
+
+            // alles alleen voor mobiel met foutieve selector ook nog
+            document
+                .querySelectorAll("[class*='sm:hidden']")
+                .forEach((die) => die.parentNode.removeChild(die));
+
             const mediaSelector = [
                 `${textSelector} iframe[src*="spotify"]`,
                 `${textSelector} iframe[src*="youtube"]`
@@ -29,8 +52,8 @@ export default async function longTextSocialsIframes(page, event) {
                 `${textSelector} iframe`,
                 `${textSelector} svg`,
                 `${textSelector} form`,
-                `${textSelector} #heroSlider`,
-                `${textSelector} section div:first-child`,
+                `${textSelector} section > div:first-child`,
+                `${textSelector} section > div:last-child`,
                 `${textSelector} img`,
                 ".heeft-cta"
             ].join(", ");
@@ -52,7 +75,9 @@ export default async function longTextSocialsIframes(page, event) {
             const removeHTMLWithStrings = ["Iets voor jou"];
 
             // eerst onzin attributes wegslopen
-            const socAttrRemSelAdd = `${socialSelector.length ? `, ${socialSelector}` : ""}`;
+            const socAttrRemSelAdd = `${
+                socialSelector.length ? `, ${socialSelector}` : ""
+            }`;
             const mediaAttrRemSelAdd = `${
                 mediaSelector.length
                     ? `, ${mediaSelector} *, ${mediaSelector}`
@@ -104,43 +129,13 @@ export default async function longTextSocialsIframes(page, event) {
                     type: bron.src.includes("spotify")
                         ? "spotify"
                         : bron.src.includes("youtube")
-                          ? "youtube"
-                          : "bandcamp"
+                        ? "youtube"
+                        : "bandcamp"
                 };
             });
 
             // socials obj maken voordat HTML verdwijnt
-            res.socialsForHTML = !socialSelector.length
-                ? ""
-                : Array.from(document.querySelectorAll(socialSelector)).map(
-                      (el) => {
-                          el.querySelectorAll("i, svg, img").forEach((rm) =>
-                              rm.parentNode.removeChild(rm)
-                          );
-                          if (!el.textContent.trim().length) {
-                              if (
-                                  el.href.includes("facebook") ||
-                                  el.href.includes("fb.me")
-                              ) {
-                                  if (el.href.includes("facebook.com/events")) {
-                                      el.textContent = `FB event ${event.title}`;
-                                  } else {
-                                      el.textContent = "Facebook";
-                                  }
-                              } else if (el.href.includes("twitter")) {
-                                  el.textContent = "Tweet";
-                              } else if (el.href.includes("instagram")) {
-                                  el.textContent = "Insta";
-                              } else {
-                                  el.textContent = "Social";
-                              }
-                          }
-                          el.className = "long-html__social-list-link";
-                          el.target = "_blank";
-                          return el.outerHTML;
-                      }
-                  );
-
+            res.socialsForHTML = "";
             // stript HTML tbv text
             removeSelectors.length &&
                 document

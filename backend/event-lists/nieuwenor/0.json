@@ -57,6 +57,39 @@
     "artists": {}
   },
   {
+    "door": "2025-04-04T19:30:00",
+    "start": "2025-04-04T20:00:00",
+    "end": "2025-04-04T23:00:00",
+    "venueEventUrl": "https://nieuwenor.nl/programma/2025/04/04/slash-n-roses-bad-medicine",
+    "title": "Slash N’ Roses + Bad Medicine",
+    "location": "nieuwenor",
+    "price": 30,
+    "shortText": "rock-alternative,tribute-cover\nHet hard­rock gevoel van de jaren 80",
+    "longText": "../public/texts/nieuwenor/LzA0L3NsYXNoLW4tcm9zZXMtYmFkLW1lZGljaW5l.html",
+    "image": "../public/event-images/nieuwenor/LzA0L3NsYXNoLW4tcm9zZXMtYmFkLW1lZGljaW5l",
+    "soldOut": null,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "slash n’ roses": {
+        "s": null,
+        "l": null,
+        "g": [
+          "hard rock"
+        ]
+      },
+      "bad medicine": {
+        "s": null,
+        "l": null,
+        "g": [
+          "hard rock",
+          "coverband",
+          "bon jovi"
+        ]
+      }
+    }
+  },
+  {
     "door": "2025-05-10T20:00:00",
     "start": "2025-05-10T20:30:00",
     "end": "2025-05-10T23:00:00",
@@ -73,26 +106,25 @@
     "artists": {}
   },
   {
-    "door": "2025-10-25T19:00:00",
-    "start": "2025-10-25T20:00:00",
-    "end": "2025-10-25T23:00:00",
-    "venueEventUrl": "https://nieuwenor.nl/programma/2025/10/25/andre-hazes-band",
-    "title": "And’­re Hazes Band",
+    "door": "2025-11-01T19:00:00",
+    "start": "2025-11-01T20:00:00",
+    "end": "2025-11-01T23:00:00",
+    "venueEventUrl": "https://nieuwenor.nl/programma/2025/11/01/acindc",
+    "title": "Acindc",
     "location": "nieuwenor",
-    "price": 25,
-    "shortText": "tribute-cover\ndé groot­ste Neder­lands­ta­li­ge artiest ooit komt weer tot leven",
-    "longText": "../public/texts/nieuwenor/bWEvMjAyNS8xMC8yNS9hbmRyZS1oYXplcy1iYW5k.html",
-    "image": "../public/event-images/nieuwenor/bWEvMjAyNS8xMC8yNS9hbmRyZS1oYXplcy1iYW5k",
+    "price": 22.5,
+    "shortText": "rock-alternative,tribute-cover\nNa een uit­ver­kocht con­cert, terug in Heerlen",
+    "longText": "../public/texts/nieuwenor/bmwvcHJvZ3JhbW1hLzIwMjUvMTEvMDEvYWNpbmRj.html",
+    "image": "../public/event-images/nieuwenor/bmwvcHJvZ3JhbW1hLzIwMjUvMTEvMDEvYWNpbmRj",
     "soldOut": null,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "band": {
+      "acindc": {
         "s": null,
-        "l": "band",
+        "l": "acindc",
         "g": [
-          "heavy",
-          "power metal"
+          "hard rock"
         ]
       }
     }

@@ -856,9 +856,10 @@ export default class Artists {
      */
     hasForbidden(stringtitleslugshorttext) {
         const rommelig = stringtitleslugshorttext.toLowerCase();
-        const isForbidden = !!this.terms.forbidden.find((forbidden) =>
-            rommelig.includes(forbidden)
-        );
+        const gevondenForbidden = this.terms.forbidden.find((forbidden) => {
+            return rommelig.includes(forbidden);
+        });
+        const isForbidden = !!gevondenForbidden;
         this.consoleGroup(
             `hasForbidden hF1`,
             {
@@ -873,7 +874,7 @@ export default class Artists {
             return this.post({
                 success: !!isForbidden,
                 data: isForbidden,
-                reason: `🟥 ${isForbidden} is forbidden term aa7`
+                reason: `🟥 ${gevondenForbidden} is forbidden term aa7`
             });
         }
         return this.post({

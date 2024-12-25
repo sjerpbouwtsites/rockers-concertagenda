@@ -1,147 +1,77 @@
 [
   {
-    "start": "4049-01-24T20:00:00",
-    "venueEventUrl": "https://neushoorn.nl/production/hardcore-vrijdag-2/",
-    "title": "Hardcore Vrijdag",
-    "location": "neushoorn",
-    "price": 5,
-    "shortText": "Je tweemaandelijkse dosis hardcore punk op vrijdag",
-    "longText": "../public/texts/neushoorn/cHJvZHVjdGlvbi9oYXJkY29yZS12cmlqZGFnLTIv.html",
-    "image": "../public/event-images/neushoorn/cHJvZHVjdGlvbi9oYXJkY29yZS12cmlqZGFnLTIv",
-    "soldOut": false,
+    "door": "2025-02-02T18:00:00",
+    "start": "2025-02-02T18:30:00",
+    "end": "2025-02-02T22:00:00",
+    "venueEventUrl": "https://nieuwenor.nl/programma/2025/02/02/trail-of-lies",
+    "title": "Trail of lies (usa)",
+    "location": "nieuwenor",
+    "price": 21,
+    "shortText": "punk-emo-hardcore\n+ Swell + SPEAR + Life Turns Cold",
+    "longText": "../public/texts/nieuwenor/cmFtbWEvMjAyNS8wMi8wMi90cmFpbC1vZi1saWVz.html",
+    "image": "../public/event-images/nieuwenor/cmFtbWEvMjAyNS8wMi8wMi90cmFpbC1vZi1saWVz",
+    "soldOut": null,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "trail of lies": {
+        "s": "6CfRUJrNjN17MgF4sfKE0Z",
+        "l": "trail%20of%20lies",
+        "g": [
+          "metallic hardcore",
+          "nyhc"
+        ]
+      }
+    }
+  },
+  {
+    "door": "2025-02-21T20:00:00",
+    "start": "2025-02-21T21:00:00",
+    "end": "2025-02-21T23:30:00",
+    "venueEventUrl": "https://nieuwenor.nl/programma/2025/02/21/pothamus-oefenbunker",
+    "title": "Pot­ha­mus [Oefen­bun­ker]",
+    "location": "nieuwenor",
+    "price": 11,
+    "shortText": "metal\nHyp­no­ti­se­ren­de Sludge-Metal",
+    "longText": "../public/texts/nieuwenor/MDI1LzAyLzIxL3BvdGhhbXVzLW9lZmVuYnVua2Vy.html",
+    "image": "../public/event-images/nieuwenor/MDI1LzAyLzIxL3BvdGhhbXVzLW9lZmVuYnVua2Vy",
+    "soldOut": null,
     "unavailable": false,
     "eventGenres": null,
     "artists": {}
   },
   {
-    "start": "4049-01-30T19:30:00",
-    "venueEventUrl": "https://neushoorn.nl/production/semblant-rexoria-blame-zeus-another-approach/",
-    "title": "Semblant ",
-    "location": "neushoorn",
-    "price": 15,
-    "shortText": " Rexoria  +  Blame Zeus  +  Another Approach Lunar Manifesto 10 Years Celebration Tour",
-    "longText": "../public/texts/neushoorn/YS1ibGFtZS16ZXVzLWFub3RoZXItYXBwcm9hY2gv.html",
-    "image": "../public/event-images/neushoorn/YS1ibGFtZS16ZXVzLWFub3RoZXItYXBwcm9hY2gv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "semblant": {
-        "s": "6xbrgptxh3evqfhcfkcqio",
-        "l": "semblant",
-        "g": [
-          "finnish melodeath",
-          "metal gotico",
-          "metal paranaense",
-          "slayer",
-          "symphonic metal"
-        ]
-      },
-      "rexoria": {
-        "s": "5omfyexrlgfv6dgrq6zctk",
-        "l": "rexoria",
-        "g": [
-          "melodic metal",
-          "symphonic power metal"
-        ]
-      },
-      "blame zeus": {
-        "s": "0sPGGoMtwWSE0VjukL8TwO",
-        "l": "blame%20zeus",
-        "g": [
-          "portuguese metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "4049-02-01T19:30:00",
-    "venueEventUrl": "https://neushoorn.nl/production/distant-enterprise-earth/",
-    "title": "Distant + Enterprise Earth",
-    "location": "neushoorn",
-    "price": 23,
-    "shortText": "Een nacht van ongekende brutaliteit",
-    "longText": "../public/texts/neushoorn/dGlvbi9kaXN0YW50LWVudGVycHJpc2UtZWFydGgv.html",
-    "image": "../public/event-images/neushoorn/dGlvbi9kaXN0YW50LWVudGVycHJpc2UtZWFydGgv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "enterprise earth": {
-        "s": "1l3cAmALCtGbjWGVtRwhoh",
-        "l": "enterprise%20earth",
-        "g": [
-          "brutal deathcore",
-          "deathcore",
-          "melodic metalcore",
-          "progressive deathcore"
-        ]
-      },
-      "distant": {
-        "s": "7dfpBi0QvO9FmlhBK6XHwJ",
-        "l": "distant",
-        "g": [
-          "deathcore",
-          "downtempo deathcore",
-          "slamming deathcore",
-          "groove metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "4049-02-02T17:00:00",
-    "venueEventUrl": "https://neushoorn.nl/production/nargaroth/",
-    "title": "Nargaroth",
-    "location": "neushoorn",
-    "price": 27,
-    "shortText": "Black metal package om je vingers bij af te likken",
-    "longText": "../public/texts/neushoorn/aG9vcm4ubmwvcHJvZHVjdGlvbi9uYXJnYXJvdGgv.html",
-    "image": "../public/event-images/neushoorn/aG9vcm4ubmwvcHJvZHVjdGlvbi9uYXJnYXJvdGgv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "nargaroth": {
-        "s": "0aIcU4OHpKl7lpcRQp32Eo",
-        "l": "nargaroth",
-        "g": [
-          "autonomous black metal",
-          "black metal",
-          "german black metal",
-          "black metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "4049-03-01T19:30:00",
-    "venueEventUrl": "https://neushoorn.nl/production/bizkit-park/",
-    "title": "Bizkit Park",
-    "location": "neushoorn",
-    "price": 20,
-    "shortText": "Earth’s mightiest Nu-Metal tribute band",
-    "longText": "../public/texts/neushoorn/b3JuLm5sL3Byb2R1Y3Rpb24vYml6a2l0LXBhcmsv.html",
-    "image": "../public/event-images/neushoorn/b3JuLm5sL3Byb2R1Y3Rpb24vYml6a2l0LXBhcmsv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "start": "4049-03-21T19:30:00",
-    "venueEventUrl": "https://neushoorn.nl/production/slash-n-roses-bad-medicine/",
-    "title": "Slash N' Roses + Bad Medicine",
-    "location": "neushoorn",
+    "door": "2025-04-03T20:00:00",
+    "start": "2025-04-03T20:30:00",
+    "end": "2025-04-03T01:00:00",
+    "venueEventUrl": "https://nieuwenor.nl/programma/2025/04/03/clan-of-xymox",
+    "title": "Clan Of Xymox",
+    "location": "nieuwenor",
     "price": 25,
-    "shortText": "Pas op: je stembanden gaan het zwaar krijgen!",
-    "longText": "../public/texts/neushoorn/b24vc2xhc2gtbi1yb3Nlcy1iYWQtbWVkaWNpbmUv.html",
-    "image": "../public/event-images/neushoorn/b24vc2xhc2gtbi1yb3Nlcy1iYWQtbWVkaWNpbmUv",
-    "soldOut": false,
+    "shortText": "new-wave-ebm\nRePost! pre­sen­teert pio­niers van de darkwave",
+    "longText": "../public/texts/nieuwenor/cmFtbWEvMjAyNS8wNC8wMy9jbGFuLW9mLXh5bW94.html",
+    "image": "../public/event-images/nieuwenor/cmFtbWEvMjAyNS8wNC8wMy9jbGFuLW9mLXh5bW94",
+    "soldOut": null,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "door": "2025-04-04T19:30:00",
+    "start": "2025-04-04T20:00:00",
+    "end": "2025-04-04T23:00:00",
+    "venueEventUrl": "https://nieuwenor.nl/programma/2025/04/04/slash-n-roses-bad-medicine",
+    "title": "Slash N’ Roses + Bad Medicine",
+    "location": "nieuwenor",
+    "price": 30,
+    "shortText": "rock-alternative,tribute-cover\nHet hard­rock gevoel van de jaren 80",
+    "longText": "../public/texts/nieuwenor/LzA0L3NsYXNoLW4tcm9zZXMtYmFkLW1lZGljaW5l.html",
+    "image": "../public/event-images/nieuwenor/LzA0L3NsYXNoLW4tcm9zZXMtYmFkLW1lZGljaW5l",
+    "soldOut": null,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "slash n' roses": {
+      "slash n’ roses": {
         "s": null,
         "l": null,
         "g": [
@@ -160,134 +90,42 @@
     }
   },
   {
-    "start": "4049-04-07T19:30:00",
-    "venueEventUrl": "https://neushoorn.nl/production/and-so-i-watch-you-from-afar/",
-    "title": "And So I Watch You From Afar",
-    "location": "neushoorn",
-    "price": 25,
-    "shortText": "Maar je hoort ze van dichtbij!",
-    "longText": "../public/texts/neushoorn/L2FuZC1zby1pLXdhdGNoLXlvdS1mcm9tLWFmYXIv.html",
-    "image": "../public/event-images/neushoorn/L2FuZC1zby1pLXdhdGNoLXlvdS1mcm9tLWFmYXIv",
-    "soldOut": false,
+    "door": "2025-05-10T20:00:00",
+    "start": "2025-05-10T20:30:00",
+    "end": "2025-05-10T23:00:00",
+    "venueEventUrl": "https://nieuwenor.nl/programma/2025/05/10/makemake-tw",
+    "title": "Make­ma­ke (tw)",
+    "location": "nieuwenor",
+    "price": 23.5,
+    "shortText": "metal\nTai­wa­nees Fema­le Metal Trio komt naar Heerlen!",
+    "longText": "../public/texts/nieuwenor/b2dyYW1tYS8yMDI1LzA1LzEwL21ha2VtYWtlLXR3.html",
+    "image": "../public/event-images/nieuwenor/b2dyYW1tYS8yMDI1LzA1LzEwL21ha2VtYWtlLXR3",
+    "soldOut": null,
     "unavailable": false,
     "eventGenres": null,
-    "artists": {
-      "and so i watch you from afar": {
-        "s": "7qKMNwlACMZOUdMG3acwst",
-        "l": "and%20so%20i%20watch%20you%20from%20afar",
-        "g": [
-          "british post-rock",
-          "instrumental post-rock",
-          "instrumental rock",
-          "math rock",
-          "post-rock"
-        ]
-      }
-    }
+    "artists": {}
   },
   {
-    "start": "4049-04-13T19:00:00",
-    "venueEventUrl": "https://neushoorn.nl/production/freeways-can-aardvark-aus-ritvs-ger/",
-    "title": "Freeways (can) + aardvark (aus) + ritvs (ger)",
-    "location": "neushoorn",
-    "price": 13,
-    "shortText": "Dying Victims tripple package",
-    "longText": "../public/texts/neushoorn/eXMtY2FuLWFhcmR2YXJrLWF1cy1yaXR2cy1nZXIv.html",
-    "image": "../public/event-images/neushoorn/eXMtY2FuLWFhcmR2YXJrLWF1cy1yaXR2cy1nZXIv",
-    "soldOut": false,
+    "door": "2025-11-01T19:00:00",
+    "start": "2025-11-01T20:00:00",
+    "end": "2025-11-01T23:00:00",
+    "venueEventUrl": "https://nieuwenor.nl/programma/2025/11/01/acindc",
+    "title": "Acindc",
+    "location": "nieuwenor",
+    "price": 22.5,
+    "shortText": "rock-alternative,tribute-cover\nNa een uit­ver­kocht con­cert, terug in Heerlen",
+    "longText": "../public/texts/nieuwenor/bmwvcHJvZ3JhbW1hLzIwMjUvMTEvMDEvYWNpbmRj.html",
+    "image": "../public/event-images/nieuwenor/bmwvcHJvZ3JhbW1hLzIwMjUvMTEvMDEvYWNpbmRj",
+    "soldOut": null,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "freeways": {
+      "acindc": {
         "s": null,
-        "l": null,
+        "l": "acindc",
         "g": [
-          "heavy metal",
-          "hard rock",
-          "70s metal"
+          "hard rock"
         ]
-      },
-      "aardvark": {
-        "s": null,
-        "l": null,
-        "g": [
-          "heavy metal",
-          "nwobhm"
-        ]
-      },
-      "ritvs": {
-        "s": null,
-        "l": null,
-        "g": [
-          "hard rock",
-          "krautrock",
-          "70s metal"
-        ]
-      }
-    }
-  },
-  {
-    "start": "4049-04-18T20:00:00",
-    "venueEventUrl": "https://neushoorn.nl/production/3-eyed-kids/",
-    "title": "3 eyed kids",
-    "location": "neushoorn",
-    "price": 10,
-    "shortText": "Een brute mix van metal en hiphop",
-    "longText": "../public/texts/neushoorn/b3JuLm5sL3Byb2R1Y3Rpb24vMy1leWVkLWtpZHMv.html",
-    "image": "../public/event-images/neushoorn/b3JuLm5sL3Byb2R1Y3Rpb24vMy1leWVkLWtpZHMv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "3 eyed kids": {
-        "s": "4cmx6rsoa66tynathlh0in",
-        "l": null,
-        "g": [
-          "metalcore",
-          "progressive"
-        ]
-      }
-    }
-  },
-  {
-    "start": "4049-05-01T20:00:00",
-    "venueEventUrl": "https://neushoorn.nl/production/wodan-boys/",
-    "title": "Wodan Boys",
-    "location": "neushoorn",
-    "price": 18,
-    "shortText": "Een rauwe liveshow waar de Noorse god Wodan trots op zou zijn",
-    "longText": "../public/texts/neushoorn/b29ybi5ubC9wcm9kdWN0aW9uL3dvZGFuLWJveXMv.html",
-    "image": "../public/event-images/neushoorn/b29ybi5ubC9wcm9kdWN0aW9uL3dvZGFuLWJveXMv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "wodan boys": {
-        "s": "0kmkbibevmq4luqquahdmr",
-        "l": "wodan%20boys",
-        "g": [
-          "dutch rock"
-        ]
-      }
-    }
-  },
-  {
-    "start": "4049-09-19T20:00:00",
-    "venueEventUrl": "https://neushoorn.nl/production/nh-cafe-the-optimist-in-me/",
-    "title": "The Optimist In Me",
-    "location": "neushoorn",
-    "price": null,
-    "shortText": "Rock jezelf de positiviteit in met The Optimist In Me",
-    "longText": "../public/texts/neushoorn/b24vbmgtY2FmZS10aGUtb3B0aW1pc3QtaW4tbWUv.html",
-    "image": "../public/event-images/neushoorn/b24vbmgtY2FmZS10aGUtb3B0aW1pc3QtaW4tbWUv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {
-      "the optimist in me": {
-        "s": "3qmkrrjqjtixsbgjgwwmmu",
-        "l": "the%20optimist%20in%20me",
-        "g": []
       }
     }
   }
