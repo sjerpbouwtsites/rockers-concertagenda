@@ -19,7 +19,7 @@ const scraper = new AbstractScraper({
     },
     app: {
         harvest: {
-            dividers: [`+`, `•`],
+            dividers: [`+`, `•`, `• •`],
             dividerRex: "[\\+•]",
             artistsIn: ["title", "shortText"]
         },
@@ -114,8 +114,6 @@ scraper.mainPage = async function () {
         .map(this.isMusicEventCorruptedMapper)
         .map((re) => workTitleAndSlug(re, this._s.app.harvest.possiblePrefix));
 
-    this.dirtyDebug(rawEvents.map((e) => e.title));
-
     const eventGen = this.eventGenerator(rawEvents);
     // eslint-disable-next-line no-unused-vars
     const checkedEvents = await this.rawEventsAsyncCheck({
@@ -137,6 +135,13 @@ scraper.mainPage = async function () {
 scraper.singlePage = async function ({ page, event }) {
     const { stopFunctie } = await this.singlePageStart();
 
+    // cookie accept voor iframes
+    await page.evaluate(() => {
+        const b = document.querySelector(".cmplz-btn.cmplz-accept");
+        if (!b) return;
+        b.click();
+    });
+
     const pageInfo = await page.evaluate(
         // eslint-disable-next-line no-shadow
         ({ event }) => {
@@ -146,26 +151,6 @@ scraper.singlePage = async function ({ page, event }) {
             };
 
             res.startDate = event.startDate;
-
-            // const startDateMatch =
-            //   document
-            //     .querySelector('#code_block-154-7')
-            //     ?.textContent.match(/(\d+)\s+(\w+)\s+(\d\d\d\d)/) ?? null;
-            // if (startDateMatch && Array.isArray(startDateMatch) && startDateMatch.length > 3) {
-            //   const dag = startDateMatch[1].padStart(2, '0');
-            //   res.startDate = `${startDateMatch[3]}-${months[startDateMatch[2]]}-${dag}`;
-            // }
-            // if (!res.startDate) {
-            //   res.errors.push({
-            //     error: new Error(`geen startDate`),
-            //     remarks: `geen startdate ${res.anker}`,
-            //     toDebug: {
-            //       event,
-            //       text: document.querySelector('#code_block-154-7')?.textContent ?? 'geen code block met #code_block-154-7',
-            //     },
-            //   });
-            //   return res;
-            // }
 
             const tijdenEl = document.getElementById("code_block-92-7");
             if (!tijdenEl) {
