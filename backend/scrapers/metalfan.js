@@ -17,77 +17,85 @@ async function metalFanDoURL(page, url, qwm) {
 
     const workerNames = Object.keys(workerConfig);
     const skipWithMetalfan = workerNames.concat([
-        "metropoolopenair",
-        "013tilburg",
-        "stroomhuis",
-        "013enomgevingn",
-        "slvesborg",
-        "muziekgebouw",
-        "cultuurpodiumboerderij",
-        "royalparklive",
-        "ijssportcentrum",
-        "afaslive",
-        "doornroosje",
-        "neushoorn",
-        "gebouwt",
-        "melkweg",
         "013",
-        "tivolivredenburg",
-        "effenaar",
-        "groeneengel",
-        "gebrnobel",
-        "patronaat",
-        "p60",
-        "littledevil",
-        "iduna",
-        "metropool",
+        "013enomgevingn",
+        "013tilburg",
+        "afaslive",
+        "cultuurpodiumboerderij",
         "depul",
-        "willemeen",
+        "dehelling",
+        "doornroosje",
+        "effenaar",
+        "gebouwt",
+        "gebrnobel",
+        "groeneengel",
+        "iduna",
+        "ijssportcentrum",
+        "littledevil",
+        "kavka",
+        "melkweg",
+        "metropool",
+        "metropoolopenair",
+        "muziekgebouw",
+        "neushoorn",
         "nieuwenor",
+        "oosterpoort",
+        "p60",
         "paradiso",
-        "oosterpoort"
+        "patronaat",
+        "royalparklive",
+        "slvesborg",
+        "stroomhuis",
+        "tivolivredenburg",
+        "willemeen",
+        "volt"
     ]);
 
     const rename = {
-        "013enomgevingen": "013",
         "013enomgeving": "013",
+        "013enomgevingen": "013",
         "013enomgevingn": "013",
+        "afas live amsterdam": "afaslive",
+        "bibelot poppodium": "bibelot",
         "botanique brussel": "botanique",
-        decacaofabriek: "cacaofabriek",
-        desselbelgimetoaslipknot: "dessel",
-        desselbelgimetoagunsnroses: "dessel",
-        dinkelsbhlmetoapowerwolf: "dinkel",
         "dynamo eindhoven": "dynamo",
-        dynamoeindhoven: "dynamo",
-        dvg: "dvgclub",
-        clissonfrankrijkmetfoofighters: "hellfest",
-        weert: "bospop",
-        surhuizummetoathehaunted: "surhuzumopenair",
-        emmenmethatebreed: "pitfest",
-        kopenhagendenemarkenmetmtleycre: "kopenhagen",
         "kavka antwerpen": "kavka",
         "kavka oudaan": "kavka",
-        kavkaoudaan: "kavka",
         "kavka zappa": "kavka",
+        "oilsjt omploft": "sintannazaal",
+        "de helling": "dehelling",
+        bluecollarhotel: "effenaar",
+        clissonfrankrijkmetfoofighters: "hellfest",
+        decacaofabriek: "cacaofabriek",
+        desselbelgimetoagunsnroses: "dessel",
+        desselbelgimetoaslipknot: "dessel",
+        dinkelsbhlmetoapowerwolf: "dinkel",
+        dvg: "dvgclub",
+        dynamoeindhoven: "dynamo",
+        emmenmethatebreed: "pitfest",
+        evenemententerreinweertnoord: "weertnoord",
         festivalparkstenehei: "graspopmetalmeeting",
-        kavkazappa: "kavka",
-        nobel: "gebrnobel",
-        zappa: "kavka",
+        "poppodium volt": "volt",
+        "poppodium 013": "013",
+        innocent: "metropool",
         kavkaantwerpen: "kavka",
+        kavkaoudaan: "kavka",
+        kavkazappa: "kavka",
+        kopenhagendenemarkenmetmtleycre: "kopenhagen",
         langemunt: "langemunte",
         merleyn: "doornroosje", // onderdeel doornroosje
-        "oilsjt omploft": "sintannazaal",
+        nobel: "gebrnobel",
+        surhuizummetoathehaunted: "surhuzumopenair",
         wackenduitsland: "wacken",
-        wackenduitslandmetscorpions: "wacken",
-        wackenduitslandmetoamegadeth: "wacken",
         wackenduitslandmetoaironmaiden: "wacken",
-        evenemententerreinweertnoord: "weertnoord",
+        wackenduitslandmetoamegadeth: "wacken",
+        wackenduitslandmetscorpions: "wacken",
+        weert: "bospop",
         ysselsteyn: "ijsselstein",
-        innocent: "metropool",
-        bluecollarhotel: "effenaar"
+        zappa: "kavka"
     };
 
-    const jaar = url.includes("2024") ? "2024" : "2023"; // TODO FIX
+    const jaar = url.replaceAll(/\D/g, "");
     const eventData = await page.evaluate(
         // eslint-disable-next-line no-shadow
         ({ months, rename, jaar }) =>
@@ -193,10 +201,19 @@ async function metalFanDoURL(page, url, qwm) {
 
 async function getBaseMusicEvents(browser, qwm) {
     const page = await browser.newPage();
-    await metalFanDoURL(page, "https://www.metalfan.nl/agenda.php", qwm);
+    await metalFanDoURL(
+        page,
+        "https://www.metalfan.nl/agenda.php?year=2024&sw=",
+        qwm
+    );
     await metalFanDoURL(
         page,
         "https://www.metalfan.nl/agenda.php?year=2025&sw=",
+        qwm
+    );
+    await metalFanDoURL(
+        page,
+        "https://www.metalfan.nl/agenda.php?year=2026&sw=",
         qwm
     );
 }

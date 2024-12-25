@@ -2,10 +2,10 @@
   {
     "title": "Pestilence en MagnaCult",
     "start": "2024-12-28",
-    "eventLocationName": "bibelot poppodium",
+    "eventLocationName": "bibelot",
     "shortText": "Bibelot Poppodium, Dordrecht",
-    "image": "../public/location-images/bibelotpoppodium",
-    "location": "bibelotpoppodium"
+    "image": "../public/location-images/bibelot",
+    "location": "bibelot"
   },
   {
     "title": "Borft Deathfest",
@@ -41,7 +41,7 @@
   },
   {
     "title": "Opeth en Grand Magus",
-    "start": "2023-01-17",
+    "start": "2025-01-17",
     "eventLocationName": "palladium",
     "shortText": "Palladium, Keulen",
     "image": "../public/location-images/palladium",
@@ -49,7 +49,7 @@
   },
   {
     "title": "Turmion Kätilöt en King Satan",
-    "start": "2023-01-17",
+    "start": "2025-01-17",
     "eventLocationName": "hall of fame",
     "shortText": "Hall Of Fame, Tilburg",
     "image": "../public/location-images/halloffame",
@@ -65,7 +65,7 @@
   },
   {
     "title": "Delain, Serenity en Kingfisher Sky",
-    "start": "2023-01-24",
+    "start": "2025-01-24",
     "eventLocationName": "hedon",
     "shortText": "Hedon, Zwolle",
     "image": "../public/location-images/hedon",
@@ -120,32 +120,16 @@
     "location": "boerderij"
   },
   {
-    "title": "Siamese,  Chaosbaby en Blackgold",
-    "start": "2023-02-08",
-    "eventLocationName": "volt",
-    "shortText": "Volt, Sittard",
-    "image": "../public/location-images/volt",
-    "location": "volt"
-  },
-  {
     "title": "Thundermother, Cobra Spell en Vulvarine",
-    "start": "2023-02-09",
+    "start": "2025-02-09",
     "eventLocationName": "de casino",
     "shortText": "De Casino, Sint Niklaas (België)",
     "image": "../public/location-images/decasino",
     "location": "decasino"
   },
   {
-    "title": "Bullet For My Valentine en Trivium",
-    "start": "2025-02-11",
-    "eventLocationName": "afas live amsterdam",
-    "shortText": "Afas Live Amsterdam",
-    "image": "../public/location-images/afasliveamsterdam",
-    "location": "afasliveamsterdam"
-  },
-  {
     "title": "Unleash The Archers, Striker en Seven Kingdoms",
-    "start": "2023-02-14",
+    "start": "2025-02-14",
     "eventLocationName": "live music hall",
     "shortText": "Live Music Hall, Keulen",
     "image": "../public/location-images/livemusichall",
@@ -161,7 +145,7 @@
   },
   {
     "title": "Unleash The Archers, Striker en Seven Kingdoms",
-    "start": "2023-02-15",
+    "start": "2025-02-15",
     "eventLocationName": "de kreun",
     "shortText": "De Kreun, Kortrijk (België)",
     "image": "../public/location-images/dekreun",
@@ -169,7 +153,7 @@
   },
   {
     "title": "Charlotte Wessels",
-    "start": "2023-02-21",
+    "start": "2025-02-21",
     "eventLocationName": "bibelot",
     "shortText": "Bibelot, Dordrecht",
     "image": "../public/location-images/bibelot",
@@ -177,7 +161,7 @@
   },
   {
     "title": "Sloper",
-    "start": "2023-02-21",
+    "start": "2025-02-21",
     "eventLocationName": "bibelot",
     "shortText": "Bibelot, Dordrecht",
     "image": "../public/location-images/bibelot",
@@ -185,7 +169,7 @@
   },
   {
     "title": "Winterfylleth, Kvaen, Morgarten, Alvader, Opus Irae en Solarcycles",
-    "start": "2023-02-22",
+    "start": "2025-02-22",
     "eventLocationName": "gigant",
     "shortText": "Gigant, Apeldoorn",
     "image": "../public/location-images/gigant",
@@ -193,7 +177,7 @@
   },
   {
     "title": "Opeth en Grand Magus",
-    "start": "2023-02-23",
+    "start": "2025-02-23",
     "eventLocationName": "ancienne belgique",
     "shortText": "Ancienne Belgique, Brussel",
     "image": "../public/location-images/anciennebelgique",
@@ -214,14 +198,6 @@
     "shortText": "Bibelot, Dordrecht",
     "image": "../public/location-images/bibelot",
     "location": "bibelot"
-  },
-  {
-    "title": "Rivers Of Nihil, Cynic, Beyond Creation en Dååth",
-    "start": "2023-03-01",
-    "eventLocationName": "kavka",
-    "shortText": "Zappa, Antwerpen",
-    "image": "../public/location-images/kavka",
-    "location": "kavka"
   },
   {
     "title": "The Raven Age en Disconnected",
@@ -265,23 +241,15 @@
   },
   {
     "title": "Temperance, Ignea en Induction",
-    "start": "2023-03-20",
+    "start": "2025-03-20",
     "eventLocationName": "matrix",
     "shortText": "Matrix, Bochum",
     "image": "../public/location-images/matrix",
     "location": "matrix"
   },
   {
-    "title": "Enemy Inside",
-    "start": "2025-03-21",
-    "eventLocationName": "de helling",
-    "shortText": "De Helling, Utrecht",
-    "image": "../public/location-images/dehelling",
-    "location": "dehelling"
-  },
-  {
     "title": "Temperance, Ignea en Induction",
-    "start": "2023-03-21",
+    "start": "2025-03-21",
     "eventLocationName": "dvgclub",
     "shortText": "DVG, Kortrijk",
     "image": "../public/location-images/dvgclub",
@@ -305,43 +273,11 @@
   },
   {
     "title": "Rendezvous Point en Temic",
-    "start": "2023-03-28",
+    "start": "2025-03-28",
     "eventLocationName": "boerderij",
     "shortText": "Boerderij, Zoetermeer",
     "image": "../public/location-images/boerderij",
     "location": "boerderij"
-  },
-  {
-    "title": "Lordi",
-    "start": "2025-03-30",
-    "eventLocationName": "volt",
-    "shortText": "Volt, Sittard",
-    "image": "../public/location-images/volt",
-    "location": "volt"
-  },
-  {
-    "title": "Rendezvous Point en Temic",
-    "start": "2023-03-30",
-    "eventLocationName": "kavka",
-    "shortText": "Kavka Zappa, Antwerpen",
-    "image": "../public/location-images/kavka",
-    "location": "kavka"
-  },
-  {
-    "title": "Benediction, Jungle Rot en Master",
-    "start": "2025-04-06",
-    "eventLocationName": "volt",
-    "shortText": "Volt, Sittard",
-    "image": "../public/location-images/volt",
-    "location": "volt"
-  },
-  {
-    "title": "Benediction, Jungle Rot en Master",
-    "start": "2023-04-06",
-    "eventLocationName": "volt",
-    "shortText": "Volt, Sittard",
-    "image": "../public/location-images/volt",
-    "location": "volt"
   },
   {
     "title": "Michael Schenker Group",
@@ -361,7 +297,7 @@
   },
   {
     "title": "Skroetfest",
-    "start": "2023-04-12",
+    "start": "2025-04-12",
     "eventLocationName": "hedon",
     "shortText": "\nMet Skroetbalg, Peter Pan Speedrock, Neuk! en meer",
     "image": "../public/location-images/hedon",
@@ -417,7 +353,7 @@
   },
   {
     "title": "Blackbriar en Solarcycles",
-    "start": "2023-04-24",
+    "start": "2025-04-24",
     "eventLocationName": "bolwerk",
     "shortText": "Bolwerk, Sneek",
     "image": "../public/location-images/bolwerk",
@@ -430,14 +366,6 @@
     "shortText": "Poppodium Boerderij",
     "image": "../public/location-images/poppodiumboerderij",
     "location": "poppodiumboerderij"
-  },
-  {
-    "title": "Blackbriar en Solarcycles",
-    "start": "2025-05-08",
-    "eventLocationName": "poppodium volt",
-    "shortText": "Poppodium Volt, Sittard",
-    "image": "../public/location-images/poppodiumvolt",
-    "location": "poppodiumvolt"
   },
   {
     "title": "Haliphron, My Silent Wake en Oltas",
@@ -473,7 +401,7 @@
   },
   {
     "title": "Myles Kennedy",
-    "start": "2023-06-11",
+    "start": "2025-06-11",
     "eventLocationName": "hedon",
     "shortText": "Hedon, Zwolle",
     "image": "../public/location-images/hedon",
@@ -544,30 +472,6 @@
     "location": "boerderij"
   },
   {
-    "title": "Ayreon",
-    "start": "2025-09-12",
-    "eventLocationName": "poppodium 013",
-    "shortText": "Poppodium 013, Tilburg",
-    "image": "../public/location-images/poppodium013",
-    "location": "poppodium013"
-  },
-  {
-    "title": "Ayreon",
-    "start": "2025-09-13",
-    "eventLocationName": "poppodium 013",
-    "shortText": "Poppodium 013, Tilburg",
-    "image": "../public/location-images/poppodium013",
-    "location": "poppodium013"
-  },
-  {
-    "title": "Ayreon",
-    "start": "2025-09-14",
-    "eventLocationName": "poppodium 013",
-    "shortText": "Poppodium 013, Tilburg",
-    "image": "../public/location-images/poppodium013",
-    "location": "poppodium013"
-  },
-  {
     "title": "Floor Jansen",
     "start": "2025-10-10",
     "eventLocationName": "schouwburg",
@@ -598,5 +502,21 @@
     "shortText": "Ziggo Dome, Amsterdam",
     "image": "../public/location-images/ziggodome",
     "location": "ziggodome"
+  },
+  {
+    "title": "Electric Callboy",
+    "start": "2026-01-17",
+    "eventLocationName": "rtm stage",
+    "shortText": "RTM Stage, Rotterdam",
+    "image": "../public/location-images/rtmstage",
+    "location": "rtmstage"
+  },
+  {
+    "title": "Channel Zero",
+    "start": "2026-12-12",
+    "eventLocationName": "ancienne belgique",
+    "shortText": "Ancienne Belgique, Brussel (BelgiÃ«)",
+    "image": "../public/location-images/anciennebelgique",
+    "location": "anciennebelgique"
   }
 ]
