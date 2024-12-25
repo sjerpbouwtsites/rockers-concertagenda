@@ -196,90 +196,125 @@
     }
   },
   {
-    "start": "2025-05-20T20:00:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/the-jesus-lizard-20-05-2025/",
-    "title": "the Jesus Lizard",
+    "start": "2025-05-23T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/make-them-suffer-23-05-2025/",
+    "title": "Make Them Suffer",
     "location": "melkweg",
-    "price": 34.5,
-    "shortText": "noiserock · grunge · posthardcore",
-    "longText": "../public/texts/melkweg/YS90aGUtamVzdXMtbGl6YXJkLTIwLTA1LTIwMjUv.html",
-    "image": "../public/event-images/melkweg/YS90aGUtamVzdXMtbGl6YXJkLTIwLTA1LTIwMjUv",
+    "price": 28.75,
+    "shortText": "deathcore · metalcore · heavy",
+    "longText": "../public/texts/melkweg/YS9tYWtlLXRoZW0tc3VmZmVyLTIzLTA1LTIwMjUv.html",
+    "image": "../public/event-images/melkweg/YS9tYWtlLXRoZW0tc3VmZmVyLTIzLTA1LTIwMjUv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "the jesus lizard": {
-        "s": "6r26MaDr8bqNALjXgYPXMa",
-        "l": "the%20jesus%20lizard",
+      "make them suffer": {
+        "s": "0FZcPgWI3BsFQl4rOAGSHT",
+        "l": "make%20them%20suffer",
         "g": [
-          "alternative rock",
-          "experimental rock",
-          "grunge",
-          "noise rock",
-          "post-hardcore"
+          "australian metalcore",
+          "blackened deathcore",
+          "brutal deathcore",
+          "deathcore",
+          "melodic deathcore",
+          "melodic metalcore",
+          "metalcore",
+          "symphonic deathcore",
+          "symphonic deathcore (early)",
+          " deathcore",
+          "metalcore (later)"
         ]
       }
     }
   },
   {
-    "start": "2025-05-24T20:00:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/pretty-pissed-24-05-2025/",
-    "title": "Pretty Pissed",
+    "start": "2025-05-28T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/reconstruction-tour-28-05-2025/",
+    "title": "Pennywise / Propagandhi / Comeback Kid / The Iron Roses / Dead Pioneers",
     "location": "melkweg",
-    "price": 44.85,
-    "shortText": "punk · postpunk",
-    "longText": "../public/texts/melkweg/ZW5kYS9wcmV0dHktcGlzc2VkLTI0LTA1LTIwMjUv.html",
-    "image": "../public/event-images/melkweg/ZW5kYS9wcmV0dHktcGlzc2VkLTI0LTA1LTIwMjUv",
-    "soldOut": false,
-    "unavailable": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "start": "2025-10-08T20:00:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/atreyu-08-10-2025/",
-    "title": "Atreyu",
-    "location": "melkweg",
-    "price": 25.3,
-    "shortText": "metalcore · hardcore · screamo",
-    "longText": "../public/texts/melkweg/bC9ubC9hZ2VuZGEvYXRyZXl1LTA4LTEwLTIwMjUv.html",
-    "image": "../public/event-images/melkweg/bC9ubC9hZ2VuZGEvYXRyZXl1LTA4LTEwLTIwMjUv",
+    "price": 51.75,
+    "shortText": " punkrock · hardcore punk Reconstruction Tour 2025",
+    "longText": "../public/texts/melkweg/ZWNvbnN0cnVjdGlvbi10b3VyLTI4LTA1LTIwMjUv.html",
+    "image": "../public/event-images/melkweg/ZWNvbnN0cnVjdGlvbi10b3VyLTI4LTA1LTIwMjUv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "atreyu": {
-        "s": "3lksihbjqohckcqbfezotv",
-        "l": "atreyu",
+      "pennywise": {
+        "s": "6i0kvtovm96t55mbp742ks",
+        "l": "pennywise",
         "g": [
-          "alternative metal",
+          "punk",
+          "skate punk",
+          "socal pop punk"
+        ]
+      },
+      "propagandhi": {
+        "s": "7qpy5KY3DVrezixTl6mziA",
+        "l": "propagandhi",
+        "g": [
+          "canadian indie",
+          "canadian punk",
+          "melodic hardcore",
+          "punk",
+          "ska",
+          "ska punk",
+          "skate punk"
+        ]
+      },
+      "comeback kid": {
+        "s": "67f7GZXNMGRn98lqrtIdrN",
+        "l": "comeback%20kid",
+        "g": [
+          "canadian hardcore",
+          "canadian punk",
+          "hardcore punk",
+          "melodic hardcore",
           "melodic metalcore",
-          "metalcore",
-          "nu metal",
-          "post-grunge",
+          "modern melodic hardcore",
+          "skate punk"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-09-23T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/poison-the-well-23-09-2025/",
+    "title": "Poison The Well",
+    "location": "melkweg",
+    "price": 26.45,
+    "shortText": "metalcore · hardcore · screamo ‘The Opposite Of December…’ 25th-Anniversary Tour",
+    "longText": "../public/texts/melkweg/ZGEvcG9pc29uLXRoZS13ZWxsLTIzLTA5LTIwMjUv.html",
+    "image": "../public/event-images/melkweg/ZGEvcG9pc29uLXRoZS13ZWxsLTIzLTA5LTIwMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "poison the well": {
+        "s": "71t8oi0TjZ9Op6JRrVqaBx",
+        "l": "poison%20the%20well",
+        "g": [
+          "chaotic hardcore",
+          "florida hardcore",
+          "melodic metalcore",
+          "post-hardcore",
           "screamo"
         ]
       }
     }
   },
   {
-    "start": "2025-12-21T20:00:00",
-    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/new-model-army-21-12-2025/",
-    "title": "New Model Army",
+    "start": "2025-10-10T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/the-inspector-cluzo-10-10-2025/",
+    "title": "The Inspector Cluzo",
     "location": "melkweg",
-    "price": 31.05,
-    "shortText": "rock · postpunk",
-    "longText": "../public/texts/melkweg/bmRhL25ldy1tb2RlbC1hcm15LTIxLTEyLTIwMjUv.html",
-    "image": "../public/event-images/melkweg/bmRhL25ldy1tb2RlbC1hcm15LTIxLTEyLTIwMjUv",
+    "price": 20.15,
+    "shortText": "rock · blues · funk LESS IS MORE TOUR",
+    "longText": "../public/texts/melkweg/aGUtaW5zcGVjdG9yLWNsdXpvLTEwLTEwLTIwMjUv.html",
+    "image": "../public/event-images/melkweg/aGUtaW5zcGVjdG9yLWNsdXpvLTEwLTEwLTIwMjUv",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
-    "artists": {
-      "new model army": {
-        "s": "7n1em42fseebd9h2p8ewws",
-        "l": "new%20model%20army",
-        "g": []
-      }
-    }
+    "artists": {}
   }
 ]

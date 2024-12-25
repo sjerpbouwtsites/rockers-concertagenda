@@ -18,6 +18,8 @@ export default async function longTextSocialsIframes(page, event) {
             const removeSelectors = [
                 `${textSelector} [class*='icon-']`,
                 `${textSelector} [class*='fa-']`,
+                `${textSelector} [href*='instagram']`,
+                `${textSelector} [href*='facebook']`,
                 `${textSelector} .fa`,
                 `${textSelector} script`,
                 `${textSelector} noscript`,
@@ -46,7 +48,9 @@ export default async function longTextSocialsIframes(page, event) {
             const removeHTMLWithStrings = [];
 
             // eerst onzin attributes wegslopen
-            const socAttrRemSelAdd = `${socialSelector.length ? `, ${socialSelector}` : ""}`;
+            const socAttrRemSelAdd = `${
+                socialSelector.length ? `, ${socialSelector}` : ""
+            }`;
             const mediaAttrRemSelAdd = `${
                 mediaSelector.length
                     ? `, ${mediaSelector} *, ${mediaSelector}`
@@ -88,43 +92,14 @@ export default async function longTextSocialsIframes(page, event) {
                               type: bron.src.includes("spotify")
                                   ? "spotify"
                                   : bron.src.includes("youtube")
-                                    ? "youtube"
-                                    : "bandcamp"
+                                  ? "youtube"
+                                  : "bandcamp"
                           };
                       }
                   );
 
             // socials obj maken voordat HTML verdwijnt
-            res.socialsForHTML = !socialSelector
-                ? ""
-                : Array.from(document.querySelectorAll(socialSelector)).map(
-                      (el) => {
-                          el.querySelectorAll("i, svg, img").forEach((rm) =>
-                              rm.parentNode.removeChild(rm)
-                          );
-                          if (!el.textContent.trim().length) {
-                              if (
-                                  el.href.includes("facebook") ||
-                                  el.href.includes("fb.me")
-                              ) {
-                                  if (el.href.includes("facebook.com/events")) {
-                                      el.textContent = `FB event ${event.title}`;
-                                  } else {
-                                      el.textContent = "Facebook";
-                                  }
-                              } else if (el.href.includes("twitter")) {
-                                  el.textContent = "Tweet";
-                              } else if (el.href.includes("instagram")) {
-                                  el.textContent = "Insta";
-                              } else {
-                                  el.textContent = "Social";
-                              }
-                          }
-                          el.className = "long-html__social-list-link";
-                          el.target = "_blank";
-                          return el.outerHTML;
-                      }
-                  );
+            res.socialsForHTML = "";
 
             // stript HTML tbv text
             removeSelectors.length &&

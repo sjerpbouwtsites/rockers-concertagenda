@@ -1,212 +1,626 @@
 [
   {
-    "start": "2024-12-25T18:00:00",
-    "venueEventUrl": "https://www.littledevil.nl/calendar/only-the-lonely-2/",
-    "title": "Only The Lonely",
-    "location": "littledevil",
-    "price": 0,
-    "shortText": "tot de kerstkaars is opgebrand - Whisky Xmas actie - DJ Nick",
-    "longText": "../public/texts/littledevil/bmwvY2FsZW5kYXIvb25seS10aGUtbG9uZWx5LTIv.html",
-    "image": "../public/event-images/littledevil/bmwvY2FsZW5kYXIvb25seS10aGUtbG9uZWx5LTIv",
+    "door": "2025-01-22T19:30:00",
+    "start": "2025-01-22T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/slift-22-01-2025/",
+    "title": "Slift",
+    "location": "melkweg",
+    "price": 28.75,
+    "shortText": "psychedelisch · stonerrock · space",
+    "longText": "../public/texts/melkweg/bmwvbmwvYWdlbmRhL3NsaWZ0LTIyLTAxLTIwMjUv.html",
+    "image": "../public/event-images/melkweg/bmwvbmwvYWdlbmRhL3NsaWZ0LTIyLTAxLTIwMjUv",
     "soldOut": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "start": "2024-12-26T19:30:00",
-    "venueEventUrl": "https://www.littledevil.nl/calendar/kots-op-kerst-xvii/",
-    "title": "Kots op Kerst XVII",
-    "location": "littledevil",
-    "price": 0,
-    "shortText": "grindfest - met live o.a. My Minds Mine",
-    "longText": "../public/texts/littledevil/bC9jYWxlbmRhci9rb3RzLW9wLWtlcnN0LXh2aWkv.html",
-    "image": "../public/event-images/littledevil/bC9jYWxlbmRhci9rb3RzLW9wLWtlcnN0LXh2aWkv",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "start": "2024-12-27T21:00:00",
-    "venueEventUrl": "https://www.littledevil.nl/calendar/ggull-richie-dagger/",
-    "title": "Ggu:ll + Richie Dagger",
-    "location": "littledevil",
-    "price": 10,
-    "shortText": "atmospheric blackened doom - dark punk - wave",
-    "longText": "../public/texts/littledevil/L2NhbGVuZGFyL2dndWxsLXJpY2hpZS1kYWdnZXIv.html",
-    "image": "../public/event-images/littledevil/L2NhbGVuZGFyL2dndWxsLXJpY2hpZS1kYWdnZXIv",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "start": "2024-12-28T21:00:00",
-    "venueEventUrl": "https://www.littledevil.nl/calendar/lenny-loves-the-80s-party-2/",
-    "title": "Lenny Loves The 80’s Party",
-    "location": "littledevil",
-    "price": 0,
-    "shortText": "dansen met DJ Theo",
-    "longText": "../public/texts/littledevil/ci9sZW5ueS1sb3Zlcy10aGUtODBzLXBhcnR5LTIv.html",
-    "image": "../public/event-images/littledevil/ci9sZW5ueS1sb3Zlcy10aGUtODBzLXBhcnR5LTIv",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "start": "2024-12-29T15:00:00",
-    "venueEventUrl": "https://www.littledevil.nl/calendar/cocktail-sunday-the-holiday-edition-3/",
-    "title": "Cocktail Sunday: The Holiday Edition",
-    "location": "littledevil",
-    "price": 6,
-    "shortText": "special holiday cocktails",
-    "longText": "../public/texts/littledevil/LXN1bmRheS10aGUtaG9saWRheS1lZGl0aW9uLTMv.html",
-    "image": "../public/event-images/littledevil/LXN1bmRheS10aGUtaG9saWRheS1lZGl0aW9uLTMv",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "start": "2024-12-31T20:00:00",
-    "venueEventUrl": "https://www.littledevil.nl/calendar/oud-nieuw-party/",
-    "title": "Oud & Nieuw Party!",
-    "location": "littledevil",
-    "price": 5,
-    "shortText": "DJ - swingen - oliebollen - champagne - hapjes",
-    "longText": "../public/texts/littledevil/bC5ubC9jYWxlbmRhci9vdWQtbmlldXctcGFydHkv.html",
-    "image": "../public/event-images/littledevil/bC5ubC9jYWxlbmRhci9vdWQtbmlldXctcGFydHkv",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "start": "2025-01-09T18:30:00",
-    "venueEventUrl": "https://www.littledevil.nl/calendar/jamsessie-devils-gathering/",
-    "title": "Jamsessie: Devil’s Gathering",
-    "location": "littledevil",
-    "price": 0,
-    "shortText": "jamsessie - inschrijven verplicht - met Max & Thijs",
-    "longText": "../public/texts/littledevil/YXIvamFtc2Vzc2llLWRldmlscy1nYXRoZXJpbmcv.html",
-    "image": "../public/event-images/littledevil/YXIvamFtc2Vzc2llLWRldmlscy1nYXRoZXJpbmcv",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
-    "start": "2025-01-10T19:00:00",
-    "venueEventUrl": "https://www.littledevil.nl/calendar/burning-sad-iron/",
-    "title": "Burning + Sad Iron",
-    "location": "littledevil",
-    "price": 0,
-    "shortText": "heavy metal - speed metal - split album presentation",
-    "longText": "../public/texts/littledevil/Lm5sL2NhbGVuZGFyL2J1cm5pbmctc2FkLWlyb24v.html",
-    "image": "../public/event-images/littledevil/Lm5sL2NhbGVuZGFyL2J1cm5pbmctc2FkLWlyb24v",
-    "soldOut": false,
+    "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "sad iron": {
-        "s": "7JwCaSdDps9WHepLw8ksid",
-        "l": "sad%20iron",
+      "slift": {
+        "s": "0x9hct7zzloeflsvcdi5so",
+        "l": "slift",
+        "g": [
+          "french garage rock",
+          "french stoner rock",
+          "neo-psychedelic",
+          "rock alternatif francais"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-01-25T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/cattle-decapitation-shadow-of-intent-25-01-2025/",
+    "title": "Cattle Decapitation / Shadow Of Intent",
+    "location": "melkweg",
+    "price": 36.8,
+    "shortText": "melodic · deathmetal · deathcore The Terrasitic Reconquest Tour",
+    "longText": "../public/texts/melkweg/bi1zaGFkb3ctb2YtaW50ZW50LTI1LTAxLTIwMjUv.html",
+    "image": "../public/event-images/melkweg/bi1zaGFkb3ctb2YtaW50ZW50LTI1LTAxLTIwMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "cattle decapitation": {
+        "s": "67zmmta88ddo0gturrzgjn",
+        "l": "cattle%20decapitation",
+        "g": [
+          "american grindcore",
+          "brutal death metal",
+          "death metal",
+          "deathcore",
+          "deathgrind",
+          "goregrind",
+          "grindcore",
+          "technical death metal",
+          "technical grindcore"
+        ]
+      },
+      "shadow of intent": {
+        "s": "76xrrejizyQpKukBIhnf3D",
+        "l": "shadow%20of%20intent",
+        "g": [
+          "deathcore",
+          "melodic deathcore",
+          "melodic metalcore",
+          "slamming deathcore",
+          "symphonic deathcore",
+          "symphonic",
+          "melodic deathcore"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-01-28T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/silent-planet-28-01-2025/",
+    "title": "Silent Planet",
+    "location": "melkweg",
+    "price": 25.9,
+    "shortText": "metalcore · progressieve metal · electronic SUPERBLOOM TOUR 2025",
+    "longText": "../public/texts/melkweg/ZW5kYS9zaWxlbnQtcGxhbmV0LTI4LTAxLTIwMjUv.html",
+    "image": "../public/event-images/melkweg/ZW5kYS9zaWxlbnQtcGxhbmV0LTI4LTAxLTIwMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "silent planet": {
+        "s": "0JGTiwfinlCuANGu4Gq2XU",
+        "l": "silent%20planet",
+        "g": [
+          "christian metalcore",
+          "melodic metalcore",
+          "metalcore",
+          "progressive metalcore"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-02-05T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/zero-936-05-02-2025/",
+    "title": "Zero 9:36",
+    "location": "melkweg",
+    "price": 23,
+    "shortText": "rapcore · alternative rock · rap",
+    "longText": "../public/texts/melkweg/bmwvYWdlbmRhL3plcm8tOTM2LTA1LTAyLTIwMjUv.html",
+    "image": "../public/event-images/melkweg/bmwvYWdlbmRhL3plcm8tOTM2LTA1LTAyLTIwMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2025-02-06T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/destroy-boys-06-02-2025/",
+    "title": "Destroy Boys",
+    "location": "melkweg",
+    "price": 28.75,
+    "shortText": "garagepunk · melodic · riot grrrl",
+    "longText": "../public/texts/melkweg/Z2VuZGEvZGVzdHJveS1ib3lzLTA2LTAyLTIwMjUv.html",
+    "image": "../public/event-images/melkweg/Z2VuZGEvZGVzdHJveS1ib3lzLTA2LTAyLTIwMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2025-02-07T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/no-barrier-07-02-2025/",
+    "title": "No Barrier",
+    "location": "melkweg",
+    "price": 15.5,
+    "shortText": "punk · rock · metalcore Punk, rock & metalcore party met DJ's en liveband",
+    "longText": "../public/texts/melkweg/L2FnZW5kYS9uby1iYXJyaWVyLTA3LTAyLTIwMjUv.html",
+    "image": "../public/event-images/melkweg/L2FnZW5kYS9uby1iYXJyaWVyLTA3LTAyLTIwMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "no barrier": {
+        "s": "2am0proxk0wcivgl5rza3a",
+        "l": "no%20barrier",
+        "g": []
+      }
+    }
+  },
+  {
+    "start": "2025-02-11T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/dune-rats-11-02-2025/",
+    "title": "Dune Rats",
+    "location": "melkweg",
+    "price": 17.25,
+    "shortText": "punk · australisch · garagerock",
+    "longText": "../public/texts/melkweg/bC9hZ2VuZGEvZHVuZS1yYXRzLTExLTAyLTIwMjUv.html",
+    "image": "../public/event-images/melkweg/bC9hZ2VuZGEvZHVuZS1yYXRzLTExLTAyLTIwMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "dune rats": {
+        "s": "0KtaCKmTMIQZsxlOgyNa04",
+        "l": "dune%20rats",
+        "g": [
+          "australian garage punk",
+          "australian indie",
+          "brisbane punk"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-02-16T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/touche-amore-16-02-2025/",
+    "title": "Touché Amoré",
+    "location": "melkweg",
+    "price": 29.9,
+    "shortText": "hardcore · screamo · posthardcore",
+    "longText": "../public/texts/melkweg/Z2VuZGEvdG91Y2hlLWFtb3JlLTE2LTAyLTIwMjUv.html",
+    "image": "../public/event-images/melkweg/Z2VuZGEvdG91Y2hlLWFtb3JlLTE2LTAyLTIwMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "touché amoré": {
+        "s": "16QCJENzcdhwka9bTKYMVB",
+        "l": "touch%C3%A9%20amor%C3%A9",
+        "g": [
+          "alternative emo",
+          "chaotic hardcore",
+          "dreamo",
+          "emo",
+          "melodic hardcore",
+          "modern melodic hardcore",
+          "post-hardcore"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-02-18T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/tremonti-18-02-2025/",
+    "title": "Tremonti",
+    "location": "melkweg",
+    "price": 34.5,
+    "shortText": "hardrock · metal · alternative rock The End Will Show Us How 2025 Tour",
+    "longText": "../public/texts/melkweg/bmwvYWdlbmRhL3RyZW1vbnRpLTE4LTAyLTIwMjUv.html",
+    "image": "../public/event-images/melkweg/bmwvYWdlbmRhL3RyZW1vbnRpLTE4LTAyLTIwMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "tremonti": {
+        "s": "44tQC1PjxXIpEgW0i8uN00",
+        "l": "tremonti",
+        "g": [
+          "alternative metal",
+          "modern hard rock"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-03-03T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/bloodywood-03-03-2025/",
+    "title": "Bloodywood",
+    "location": "melkweg",
+    "price": 26.45,
+    "shortText": "folkmetal · india · metal",
+    "longText": "../public/texts/melkweg/L2FnZW5kYS9ibG9vZHl3b29kLTAzLTAzLTIwMjUv.html",
+    "image": "../public/event-images/melkweg/L2FnZW5kYS9ibG9vZHl3b29kLTAzLTAzLTIwMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "bloodywood": {
+        "s": "4HFpzehKjow2WqU4EJ6Wy9",
+        "l": "bloodywood",
+        "g": [
+          "comic metal",
+          "indian metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-03-05T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/henge-05-03-2025/",
+    "title": "Henge",
+    "location": "melkweg",
+    "price": 17.25,
+    "shortText": "psychedelisch · prog-rock · space",
+    "longText": "../public/texts/melkweg/bmwvbmwvYWdlbmRhL2hlbmdlLTA1LTAzLTIwMjUv.html",
+    "image": "../public/event-images/melkweg/bmwvbmwvYWdlbmRhL2hlbmdlLTA1LTAzLTIwMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "henge": {
+        "s": "5R09pajxQjiwdUH6Fw4yM5",
+        "l": "henge",
         "g": [
           "heavy metal"
         ]
+      }
+    }
+  },
+  {
+    "start": "2025-03-17T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/the-rumjacks-17-03-2025/",
+    "title": "The Rumjacks",
+    "location": "melkweg",
+    "price": 31.05,
+    "shortText": "punk · folk · punkrock St. Patrick's Day in Amsterdam",
+    "longText": "../public/texts/melkweg/Z2VuZGEvdGhlLXJ1bWphY2tzLTE3LTAzLTIwMjUv.html",
+    "image": "../public/event-images/melkweg/Z2VuZGEvdGhlLXJ1bWphY2tzLTE3LTAzLTIwMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "the rumjacks": {
+        "s": "0w2kuumj7dvp8dv4tzoltd",
+        "l": "the%20rumjacks",
+        "g": [
+          "celtic punk"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-03-26T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/1000mods-26-03-2025/",
+    "title": "1000mods",
+    "location": "melkweg",
+    "price": 26.45,
+    "shortText": "stonerrock · metal",
+    "longText": "../public/texts/melkweg/bmwvYWdlbmRhLzEwMDBtb2RzLTI2LTAzLTIwMjUv.html",
+    "image": "../public/event-images/melkweg/bmwvYWdlbmRhLzEwMDBtb2RzLTI2LTAzLTIwMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "1000mods": {
+        "s": "7EgAHTw2PMP7a1tAEtue89",
+        "l": "1000mods",
+        "g": [
+          "greek metal",
+          "greek psychedelic rock",
+          "greek rock",
+          "instrumental stoner rock",
+          "stoner metal",
+          "stoner rock"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-03-29T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/rich-kids-on-lsd-29-03-2025/",
+    "title": "Rich Kids on LSD",
+    "location": "melkweg",
+    "price": 29.9,
+    "shortText": "hardcore punk · punkrock · punk",
+    "longText": "../public/texts/melkweg/YS9yaWNoLWtpZHMtb24tbHNkLTI5LTAzLTIwMjUv.html",
+    "image": "../public/event-images/melkweg/YS9yaWNoLWtpZHMtb24tbHNkLTI5LTAzLTIwMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2025-03-29T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/life-of-agony-biohazard-29-03-2025/",
+    "title": "Biohazard / Life Of Agony",
+    "location": "melkweg",
+    "price": 44.85,
+    "shortText": "metal · hardcore · hardrock",
+    "longText": "../public/texts/melkweg/b2YtYWdvbnktYmlvaGF6YXJkLTI5LTAzLTIwMjUv.html",
+    "image": "../public/event-images/melkweg/b2YtYWdvbnktYmlvaGF6YXJkLTI5LTAzLTIwMjUv",
+    "soldOut": true,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "life of agony": {
+        "s": "4gyzqpfg5yqzjt2jj0ikel",
+        "l": "life%20of%20agony",
+        "g": []
       },
-      "burning": {
-        "s": null,
-        "l": "burning",
+      "biohazard": {
+        "s": "3nhxXtHwC2TookQyqQlFK1",
+        "l": "biohazard",
         "g": [
-          "thrash metal"
+          "alternative metal",
+          "funk metal",
+          "groove metal",
+          "hardcore",
+          "nu metal",
+          "nyhc",
+          "rap metal",
+          "rap rock",
+          "black",
+          "death metal"
         ]
       }
     }
   },
   {
-    "start": "2025-01-17T20:00:00",
-    "venueEventUrl": "https://www.littledevil.nl/calendar/unholy-sabbath-festival-2025-day-1/",
-    "title": "Unholy Sabbath Festival 2025 [day 1]",
-    "location": "littledevil",
-    "price": 15,
-    "shortText": "",
-    "longText": "../public/texts/littledevil/eS1zYWJiYXRoLWZlc3RpdmFsLTIwMjUtZGF5LTEv.html",
-    "image": "../public/event-images/littledevil/eS1zYWJiYXRoLWZlc3RpdmFsLTIwMjUtZGF5LTEv",
+    "start": "2025-04-16T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/shelter-16-04-2025/",
+    "title": "Shelter",
+    "location": "melkweg",
+    "price": 29.9,
+    "shortText": "krishnacore · hardcore punk Mantra 30th Anniversary Tour",
+    "longText": "../public/texts/melkweg/L25sL2FnZW5kYS9zaGVsdGVyLTE2LTA0LTIwMjUv.html",
+    "image": "../public/event-images/melkweg/L25sL2FnZW5kYS9zaGVsdGVyLTE2LTA0LTIwMjUv",
     "soldOut": false,
+    "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "abbath": {
-        "s": "1epgwdbju7jsgvbhlqptpx",
-        "l": "abbath",
+      "shelter": {
+        "s": "4vTTRvwORrfvMOUb3OOUTy",
+        "l": "shelter",
         "g": [
-          "black 'n' roll",
-          "black metal",
-          "death metal",
-          "metal",
-          "norwegian black metal",
-          "symphonic black metal"
+          "hardcore",
+          "krishnacore",
+          "nyhc",
+          "straight edge",
+          "black metal"
         ]
       }
     }
   },
   {
-    "start": "2025-01-18T15:00:00",
-    "venueEventUrl": "https://www.littledevil.nl/calendar/unholy-sabbath-festival-2025-day-2/",
-    "title": "Unholy Sabbath Festival 2025 [day 2]",
-    "location": "littledevil",
-    "price": 25,
-    "shortText": "",
-    "longText": "../public/texts/littledevil/eS1zYWJiYXRoLWZlc3RpdmFsLTIwMjUtZGF5LTIv.html",
-    "image": "../public/event-images/littledevil/eS1zYWJiYXRoLWZlc3RpdmFsLTIwMjUtZGF5LTIv",
+    "start": "2025-05-05T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/swallow-the-sun-05-05-2025/",
+    "title": "Swallow the Sun",
+    "location": "melkweg",
+    "price": 27.6,
+    "shortText": "doom · deathmetal · fins",
+    "longText": "../public/texts/melkweg/ZGEvc3dhbGxvdy10aGUtc3VuLTA1LTA1LTIwMjUv.html",
+    "image": "../public/event-images/melkweg/ZGEvc3dhbGxvdy10aGUtc3VuLTA1LTA1LTIwMjUv",
     "soldOut": false,
+    "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "abbath": {
-        "s": "1epgwdbju7jsgvbhlqptpx",
-        "l": "abbath",
+      "swallow the sun": {
+        "s": "0ulKlNlo0iPx5ZS6VMTHWQ",
+        "l": "swallow%20the%20sun",
         "g": [
-          "black 'n' roll",
-          "black metal",
-          "death metal",
-          "metal",
-          "norwegian black metal",
-          "symphonic black metal"
+          "doom metal",
+          "finnish death metal",
+          "finnish doom metal",
+          "finnish melodeath",
+          "finnish metal",
+          "melodic death metal",
+          "melodic doom",
+          "death metal"
         ]
       }
     }
   },
   {
-    "start": "2025-01-26T16:00:00",
-    "venueEventUrl": "https://www.littledevil.nl/calendar/savage-beat-malad-diamond-dogs/",
-    "title": "Savage Beat + Malad + Diamond Dogs",
-    "location": "littledevil",
-    "price": 10,
-    "shortText": "streetpunk matinee",
-    "longText": "../public/texts/littledevil/YXZhZ2UtYmVhdC1tYWxhZC1kaWFtb25kLWRvZ3Mv.html",
-    "image": "../public/event-images/littledevil/YXZhZ2UtYmVhdC1tYWxhZC1kaWFtb25kLWRvZ3Mv",
+    "start": "2025-05-20T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/the-jesus-lizard-20-05-2025/",
+    "title": "the Jesus Lizard",
+    "location": "melkweg",
+    "price": 34.5,
+    "shortText": "noiserock · grunge · posthardcore",
+    "longText": "../public/texts/melkweg/YS90aGUtamVzdXMtbGl6YXJkLTIwLTA1LTIwMjUv.html",
+    "image": "../public/event-images/melkweg/YS90aGUtamVzdXMtbGl6YXJkLTIwLTA1LTIwMjUv",
     "soldOut": false,
+    "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "malad": {
-        "s": "21fzlwdq72k9w3ozypcxyr",
-        "l": null,
+      "the jesus lizard": {
+        "s": "6r26MaDr8bqNALjXgYPXMa",
+        "l": "the%20jesus%20lizard",
+        "g": [
+          "alternative rock",
+          "experimental rock",
+          "grunge",
+          "noise rock",
+          "post-hardcore"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-05-23T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/make-them-suffer-23-05-2025/",
+    "title": "Make Them Suffer",
+    "location": "melkweg",
+    "price": 28.75,
+    "shortText": "deathcore · metalcore · heavy",
+    "longText": "../public/texts/melkweg/YS9tYWtlLXRoZW0tc3VmZmVyLTIzLTA1LTIwMjUv.html",
+    "image": "../public/event-images/melkweg/YS9tYWtlLXRoZW0tc3VmZmVyLTIzLTA1LTIwMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "make them suffer": {
+        "s": "0FZcPgWI3BsFQl4rOAGSHT",
+        "l": "make%20them%20suffer",
+        "g": [
+          "australian metalcore",
+          "blackened deathcore",
+          "brutal deathcore",
+          "deathcore",
+          "melodic deathcore",
+          "melodic metalcore",
+          "metalcore",
+          "symphonic deathcore",
+          "symphonic deathcore (early)",
+          " deathcore",
+          "metalcore (later)"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-05-24T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/pretty-pissed-24-05-2025/",
+    "title": "Pretty Pissed",
+    "location": "melkweg",
+    "price": 44.85,
+    "shortText": "punk · postpunk",
+    "longText": "../public/texts/melkweg/ZW5kYS9wcmV0dHktcGlzc2VkLTI0LTA1LTIwMjUv.html",
+    "image": "../public/event-images/melkweg/ZW5kYS9wcmV0dHktcGlzc2VkLTI0LTA1LTIwMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2025-05-28T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/reconstruction-tour-28-05-2025/",
+    "title": "Pennywise / Propagandhi / Comeback Kid / The Iron Roses / Dead Pioneers",
+    "location": "melkweg",
+    "price": 51.75,
+    "shortText": " punkrock · hardcore punk Reconstruction Tour 2025",
+    "longText": "../public/texts/melkweg/ZWNvbnN0cnVjdGlvbi10b3VyLTI4LTA1LTIwMjUv.html",
+    "image": "../public/event-images/melkweg/ZWNvbnN0cnVjdGlvbi10b3VyLTI4LTA1LTIwMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "pennywise": {
+        "s": "6i0kvtovm96t55mbp742ks",
+        "l": "pennywise",
         "g": [
           "punk",
-          "street punk"
+          "skate punk",
+          "socal pop punk"
         ]
       },
-      "savage beat": {
-        "s": "5cX4t1wynwEgM2noNwJ4XF",
-        "l": "savage%20beat",
+      "propagandhi": {
+        "s": "7qpy5KY3DVrezixTl6mziA",
+        "l": "propagandhi",
         "g": [
-          "dutch punk",
-          "oi",
-          "skinhead oi"
+          "canadian indie",
+          "canadian punk",
+          "melodic hardcore",
+          "punk",
+          "ska",
+          "ska punk",
+          "skate punk"
         ]
       },
-      "diamond dogs": {
-        "s": "5jUfxXdvl8EdXgz2Qro99L",
-        "l": "diamond%20dogs",
+      "comeback kid": {
+        "s": "67f7GZXNMGRn98lqrtIdrN",
+        "l": "comeback%20kid",
         "g": [
-          "punk 'n' roll",
-          "swedish garage rock",
-          "swedish hard rock"
+          "canadian hardcore",
+          "canadian punk",
+          "hardcore punk",
+          "melodic hardcore",
+          "melodic metalcore",
+          "modern melodic hardcore",
+          "skate punk"
         ]
+      }
+    }
+  },
+  {
+    "start": "2025-09-23T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/poison-the-well-23-09-2025/",
+    "title": "Poison The Well",
+    "location": "melkweg",
+    "price": 26.45,
+    "shortText": "metalcore · hardcore · screamo ‘The Opposite Of December…’ 25th-Anniversary Tour",
+    "longText": "../public/texts/melkweg/ZGEvcG9pc29uLXRoZS13ZWxsLTIzLTA5LTIwMjUv.html",
+    "image": "../public/event-images/melkweg/ZGEvcG9pc29uLXRoZS13ZWxsLTIzLTA5LTIwMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "poison the well": {
+        "s": "71t8oi0TjZ9Op6JRrVqaBx",
+        "l": "poison%20the%20well",
+        "g": [
+          "chaotic hardcore",
+          "florida hardcore",
+          "melodic metalcore",
+          "post-hardcore",
+          "screamo"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-10-08T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/atreyu-08-10-2025/",
+    "title": "Atreyu",
+    "location": "melkweg",
+    "price": 25.3,
+    "shortText": "metalcore · hardcore · screamo",
+    "longText": "../public/texts/melkweg/bC9ubC9hZ2VuZGEvYXRyZXl1LTA4LTEwLTIwMjUv.html",
+    "image": "../public/event-images/melkweg/bC9ubC9hZ2VuZGEvYXRyZXl1LTA4LTEwLTIwMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "atreyu": {
+        "s": "3lksihbjqohckcqbfezotv",
+        "l": "atreyu",
+        "g": [
+          "alternative metal",
+          "melodic metalcore",
+          "metalcore",
+          "nu metal",
+          "post-grunge",
+          "screamo"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-10-10T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/the-inspector-cluzo-10-10-2025/",
+    "title": "The Inspector Cluzo",
+    "location": "melkweg",
+    "price": 20.15,
+    "shortText": "rock · blues · funk LESS IS MORE TOUR",
+    "longText": "../public/texts/melkweg/aGUtaW5zcGVjdG9yLWNsdXpvLTEwLTEwLTIwMjUv.html",
+    "image": "../public/event-images/melkweg/aGUtaW5zcGVjdG9yLWNsdXpvLTEwLTEwLTIwMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2025-12-21T20:00:00",
+    "venueEventUrl": "https://www.melkweg.nl/nl/agenda/new-model-army-21-12-2025/",
+    "title": "New Model Army",
+    "location": "melkweg",
+    "price": 31.05,
+    "shortText": "rock · postpunk",
+    "longText": "../public/texts/melkweg/bmRhL25ldy1tb2RlbC1hcm15LTIxLTEyLTIwMjUv.html",
+    "image": "../public/event-images/melkweg/bmRhL25ldy1tb2RlbC1hcm15LTIxLTEyLTIwMjUv",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "new model army": {
+        "s": "7n1em42fseebd9h2p8ewws",
+        "l": "new%20model%20army",
+        "g": []
       }
     }
   }
