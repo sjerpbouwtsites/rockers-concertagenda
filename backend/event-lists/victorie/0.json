@@ -1,19 +1,5 @@
 [
   {
-    "door": "2025-01-18T19:00:00",
-    "start": "2025-01-18T20:30:00",
-    "venueEventUrl": "https://www.podiumvictorie.nl/programma/new-cool-collective-2025",
-    "title": "New Cool Collective",
-    "location": "victorie",
-    "price": 25.9,
-    "shortText": "Jazzformatie viert dertig jaar op het podium",
-    "longText": "../public/texts/victorie/cmFtbWEvbmV3LWNvb2wtY29sbGVjdGl2ZS0yMDI1.html",
-    "image": "../public/event-images/victorie/cmFtbWEvbmV3LWNvb2wtY29sbGVjdGl2ZS0yMDI1",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {}
-  },
-  {
     "door": "2025-01-24T19:00:00",
     "start": "2025-01-24T19:45:00",
     "venueEventUrl": "https://www.podiumvictorie.nl/programma/triggerfinger-2025",
@@ -31,29 +17,6 @@
         "l": "triggerfinger",
         "g": [
           "belgian rock"
-        ]
-      }
-    }
-  },
-  {
-    "door": "2025-02-20T19:15:00",
-    "start": "2025-02-20T19:45:00",
-    "venueEventUrl": "https://www.podiumvictorie.nl/programma/berget-lewis-ft.-leif-de-leeuw-band",
-    "title": "Berget Lewis ft. Leif de Leeuw Band",
-    "location": "victorie",
-    "price": 33.35,
-    "shortText": "samensmelting van southern rock en soulvolle vocalen",
-    "longText": "../public/texts/victorie/dC1sZXdpcy1mdC4tbGVpZi1kZS1sZWV1dy1iYW5k.html",
-    "image": "../public/event-images/victorie/dC1sZXdpcy1mdC4tbGVpZi1kZS1sZWV1dy1iYW5k",
-    "soldOut": false,
-    "eventGenres": null,
-    "artists": {
-      "band": {
-        "s": null,
-        "l": "band",
-        "g": [
-          "heavy",
-          "power metal"
         ]
       }
     }
@@ -117,12 +80,21 @@
     "soldOut": false,
     "eventGenres": null,
     "artists": {
-      "band": {
-        "s": null,
-        "l": "band",
+      "manfred mann's earth band": {
+        "s": "2utNxkLhreF1oIfO8kQT3q",
+        "l": "manfred%20mann's%20earth%20band",
         "g": [
-          "heavy",
-          "power metal"
+          "album rock",
+          "art rock",
+          "blues rock",
+          "british blues",
+          "classic rock",
+          "folk rock",
+          "hard rock",
+          "mellow gold",
+          "progressive rock",
+          "soft rock",
+          "symphonic rock"
         ]
       }
     }
@@ -195,6 +167,20 @@
         ]
       }
     }
+  },
+  {
+    "door": "2025-04-18T19:15:00",
+    "start": "2025-04-18T20:15:00",
+    "venueEventUrl": "https://www.podiumvictorie.nl/programma/smells-like-grunge-18/04/25",
+    "title": "Smells Like Grunge",
+    "location": "victorie",
+    "price": 25.88,
+    "shortText": "Een avond vol grunge en 90s rock",
+    "longText": "../public/texts/victorie/bWEvc21lbGxzLWxpa2UtZ3J1bmdlLTE4LzA0LzI1.html",
+    "image": "../public/event-images/victorie/bWEvc21lbGxzLWxpa2UtZ3J1bmdlLTE4LzA0LzI1",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {}
   },
   {
     "door": "2025-05-15T19:00:00",

@@ -2,7 +2,7 @@
 /* global document */
 import { workerData } from "worker_threads";
 import AbstractScraper from "./gedeeld/abstract-scraper.js";
-import longTextSocialsIframes from "./longtext/littledevil.js";
+import longTextSocialsIframes from "./longtext/victorie.js";
 import getImage from "./gedeeld/image.js";
 import {
     combineStartTimeStartDate,
