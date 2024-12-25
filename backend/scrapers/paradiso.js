@@ -107,8 +107,6 @@ scraper.mainPage = async function () {
         return teKlikken.length;
     });
 
-    this.dirtyTalk(`paradiso klikte filters: ${aantalGeklikt}`);
-
     // wachten op aanklikken in page.evaluate
     await this.waitTime(50 + aantalGeklikt * 150);
 
@@ -209,11 +207,6 @@ scraper.mainPage = async function () {
     this.saveBaseEventlist(workerData.family, checkedEvents);
 
     const thisWorkersEvents = checkedEvents.filter((eventEl, index) => {
-        this.dirtyTalk(
-            `${index} % ${workerData.workerCount} ${
-                index % workerData.workerCount
-            } === ${workerData.index}`
-        );
         return index % workerData.workerCount === workerData.index;
     });
 
