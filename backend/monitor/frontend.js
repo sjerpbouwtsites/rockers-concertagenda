@@ -183,22 +183,17 @@ function initiateClosingClient() {
         }
     }, 20000);
     setTimeout(() => {
+        if (document.body.hasAttribute("data-dont-close")) {
+            return;
+        }
+
         const divdiv = document.createElement("div");
         divdiv.className = "warning-client-closing";
         divdiv.id = "warning-client-closing";
         divdiv.innerHTML =
-            "De server is klaar. De monitor word afgesloten over 15 seconden. Klik op het scherm om dit scherm te behouden.";
+            "De server is klaar. De monitor word afgesloten over 20 seconden. Klik op het scherm om dit scherm te behouden.";
         document.body.appendChild(divdiv);
-        document.body.addEventListener("click", () => {
-            if (!document.body.hasAttribute("data-dont-close")) {
-                document.body.setAttribute("data-dont-close", true);
-                const diediv = document.getElementById(
-                    "warning-client-closing"
-                );
-                diediv.parentNode.removeChild(diediv);
-            }
-        });
-    }, 5000);
+    }, 50);
 }
 
 function eventToWarning(eventMsg) {
@@ -274,9 +269,22 @@ function eventToClientsLog(eventMsg, fields) {
     }
 }
 
+function zetNietSluitenEventHandler(e) {
+    document
+        .getElementById("sluit-scherm-niet")
+        .addEventListener("click", (e) => {
+            e.preventDefault();
+            e.target.parentNode.removeChild(e.target);
+            if (!document.body.hasAttribute("data-dont-close")) {
+                document.body.setAttribute("data-dont-close", true);
+            }
+        });
+}
+
 function initFrontend() {
     const fields = createFields();
     openClientWebsocket(fields);
+    zetNietSluitenEventHandler();
 }
 
 initFrontend();
