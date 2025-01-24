@@ -122,6 +122,22 @@
         "s": "6l0nxnfykkn3chx6mw1xcj",
         "l": "radeloos///ziedend",
         "g": []
+      },
+      "yantras": {
+        "s": "4JUyZMVdrUBchwH8c2asWY",
+        "l": "yantras",
+        "g": [
+          "sludge metal",
+          "stoner rock"
+        ]
+      },
+      "noctambulist": {
+        "s": "1k7JWDTAwZRGoGg9rCxU2o",
+        "l": "noctambulist",
+        "g": [
+          "black metal",
+          "post-black metal"
+        ]
       }
     }
   },
@@ -147,6 +163,37 @@
     }
   },
   {
+    "start": "2025-02-20T19:00:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/love-letter-heavyhex-dad-magic/",
+    "title": "Love letter + heavyhex + dad magic",
+    "location": "littledevil",
+    "price": 17.3,
+    "shortText": "hardcore - post-hardcore - screamo",
+    "longText": "../public/texts/littledevil/b3ZlLWxldHRlci1oZWF2eWhleC1kYWQtbWFnaWMv.html",
+    "image": "../public/event-images/littledevil/b3ZlLWxldHRlci1oZWF2eWhleC1kYWQtbWFnaWMv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "love letter": {
+        "s": "41DJIv2qEvmvkcOsj7scTA",
+        "l": "love%20letter",
+        "g": [
+          "melodic hardcore"
+        ]
+      },
+      "heavyhex": {
+        "s": "1hszEn4r7xosYrJUjrwU6y",
+        "l": "heavyhex",
+        "g": [
+          "melodic hardcore",
+          "hardcore punk",
+          "hardcore",
+          "post-hardcore"
+        ]
+      }
+    }
+  },
+  {
     "start": "2025-03-01T09:30:00",
     "venueEventUrl": "https://www.littledevil.nl/calendar/woa-metal-battle-voorronde-noord-brabant/",
     "title": "W:O:A: Metal Battle Voorronde Noord-Brabant",
@@ -163,14 +210,6 @@
         "l": "metal",
         "g": [
           "death metal"
-        ]
-      },
-      "meta": {
-        "s": null,
-        "l": "meta",
-        "g": [
-          "groove",
-          "progressive metal"
         ]
       }
     }

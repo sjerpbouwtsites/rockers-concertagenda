@@ -1,57 +1,804 @@
 [
   {
-    "door": "2025-01-25T20:30:00",
-    "start": "2025-01-25T21:00:00",
-    "venueEventUrl": "https://gebouw-t.nl/agenda/t-strijd-2025-rock-heavy/",
-    "title": "T-Strijd 2025 - rock & heavy",
-    "location": "gebouwt",
-    "price": null,
-    "shortText": "Nobody Asked + Two Second Before + The Morning Indefinite",
-    "longText": "../public/texts/gebouwt/ZW5kYS90LXN0cmlqZC0yMDI1LXJvY2staGVhdnkv.html",
-    "image": "../public/event-images/gebouwt/ZW5kYS90LXN0cmlqZC0yMDI1LXJvY2staGVhdnkv",
+    "start": "2025-01-24T21:30:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/sha-la-lees-b-nl/",
+    "title": "Sha-la-lees (b/nl)",
+    "location": "littledevil",
+    "price": 10,
+    "shortText": "protopunk garage rock 'n roll - LP release HEX",
+    "longText": "../public/texts/littledevil/Lm5sL2NhbGVuZGFyL3NoYS1sYS1sZWVzLWItbmwv.html",
+    "image": "../public/event-images/littledevil/Lm5sL2NhbGVuZGFyL3NoYS1sYS1sZWVzLWItbmwv",
     "soldOut": false,
-    "unavailable": false,
     "eventGenres": null,
     "artists": {}
   },
   {
-    "door": "2025-01-25T20:30:00",
-    "start": "2025-01-25T21:00:00",
-    "venueEventUrl": "https://gebouw-t.nl/agenda/renegade/",
-    "title": "From Thin Lizzy, Darren Wharton’s Renegade",
-    "location": "gebouwt",
-    "price": 27.25,
-    "shortText": "Een reis door Thin Lizzy's erfgoed en meer!",
-    "longText": "../public/texts/gebouwt/Ly9nZWJvdXctdC5ubC9hZ2VuZGEvcmVuZWdhZGUv.html",
-    "image": "../public/event-images/gebouwt/Ly9nZWJvdXctdC5ubC9hZ2VuZGEvcmVuZWdhZGUv",
+    "start": "2025-01-26T16:00:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/savage-beat-malad-diamond-dogs/",
+    "title": "Savage Beat + Malad + City Riot",
+    "location": "littledevil",
+    "price": 10,
+    "shortText": "streetpunk matinee",
+    "longText": "../public/texts/littledevil/YXZhZ2UtYmVhdC1tYWxhZC1kaWFtb25kLWRvZ3Mv.html",
+    "image": "../public/event-images/littledevil/YXZhZ2UtYmVhdC1tYWxhZC1kaWFtb25kLWRvZ3Mv",
     "soldOut": false,
-    "unavailable": false,
     "eventGenres": null,
     "artists": {
-      "renegade": {
-        "s": "3vBaLrnIgG5WCQ3pTeZexc",
-        "l": "renegade",
+      "malad": {
+        "s": "21fzlwdq72k9w3ozypcxyr",
+        "l": null,
         "g": [
-          "jungle",
-          "progressive heavy metal",
-          "hard rock"
+          "punk",
+          "street punk"
+        ]
+      },
+      "city riot": {
+        "s": "5A91FYahDG9GH37wuL61rr",
+        "l": "city%20riot",
+        "g": [
+          "hardcore punk"
         ]
       }
     }
   },
   {
-    "door": "2025-01-25T20:30:00",
-    "start": "2025-01-25T21:00:00",
-    "venueEventUrl": "https://gebouw-t.nl/agenda/t-strijd-2025-tribute/",
-    "title": "T-Strijd 2025 - tribute",
-    "location": "gebouwt",
+    "title": "Defeated Sanity, To Violently Vomit, Putrid Pile, Iniquitous Savagery, Strangle Wire,",
+    "start": "2025-01-29",
+    "eventLocationName": "hall of fame",
+    "shortText": "Hall Of Fame, Tilburg",
+    "image": "../public/location-images/halloffame",
+    "location": "halloffame"
+  },
+  {
+    "start": "2025-01-31T19:00:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/remain-untamed-chaos-unleashed-acidbait-fading-echo/",
+    "title": "Remain Untamed ",
+    "location": "littledevil",
+    "price": 5,
+    "shortText": " Hallowed Fire  +  Acidbait  +  Fading Echo EP release party - thrash metal - presented by HB concerts",
+    "longText": "../public/texts/littledevil/bmxlYXNoZWQtYWNpZGJhaXQtZmFkaW5nLWVjaG8v.html",
+    "image": "../public/event-images/littledevil/bmxlYXNoZWQtYWNpZGJhaXQtZmFkaW5nLWVjaG8v",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "echo": {
+        "s": "0fgykf9avljex0l9wt5b8z",
+        "l": "echo",
+        "g": [
+          "alternative rock",
+          "new romantic",
+          "new wave",
+          "permanent wave"
+        ]
+      },
+      "acidbait": {
+        "s": "2yaxHzLBIPiwA9eRqce2hk",
+        "l": "acidbait",
+        "g": [
+          "groove metal"
+        ]
+      },
+      "fading": {
+        "s": null,
+        "l": "fading",
+        "g": [
+          "epic",
+          "melodic death metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-02-01T20:30:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/schirenc-plays-pungent-stench-at/",
+    "title": "Schirenc plays Pungent Stench (AT)",
+    "location": "littledevil",
+    "price": 18.5,
+    "shortText": "death metal",
+    "longText": "../public/texts/littledevil/aXJlbmMtcGxheXMtcHVuZ2VudC1zdGVuY2gtYXQv.html",
+    "image": "../public/event-images/littledevil/aXJlbmMtcGxheXMtcHVuZ2VudC1zdGVuY2gtYXQv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "start": "2025-02-02T14:00:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/paganfest-picknick-free-warmup-show-with-mourning-wood/",
+    "title": "Paganfest Picknick – Free warmup-show with Mourning Wood",
+    "location": "littledevil",
     "price": 0,
-    "shortText": "Olalala + Dookie + De Neefjes",
-    "longText": "../public/texts/gebouwt/L2FnZW5kYS90LXN0cmlqZC0yMDI1LXRyaWJ1dGUv.html",
-    "image": "../public/event-images/gebouwt/L2FnZW5kYS90LXN0cmlqZC0yMDI1LXRyaWJ1dGUv",
+    "shortText": " Paganfest - warmup-show",
+    "longText": "../public/texts/littledevil/YXJtdXAtc2hvdy13aXRoLW1vdXJuaW5nLXdvb2Qv.html",
+    "image": "../public/event-images/littledevil/YXJtdXAtc2hvdy13aXRoLW1vdXJuaW5nLXdvb2Qv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "title": "Beyond The Black",
+    "start": "2025-02-04",
+    "eventLocationName": "trix",
+    "shortText": "Trix, Antwerpen",
+    "image": "../public/location-images/trix",
+    "location": "trix"
+  },
+  {
+    "title": "Beyond The Black",
+    "start": "2025-02-05",
+    "eventLocationName": "turbinenhalle",
+    "shortText": "Turbinenhalle, Oberhausen",
+    "image": "../public/location-images/turbinenhalle",
+    "location": "turbinenhalle"
+  },
+  {
+    "start": "2025-02-07T19:00:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/noctambulist-yantras-radeloos-ziedend/",
+    "title": "Noctambulist + Yantras + Radeloos///Ziedend",
+    "location": "littledevil",
+    "price": 5,
+    "shortText": "release show - post-black metal - post-doom",
+    "longText": "../public/texts/littledevil/bGlzdC15YW50cmFzLXJhZGVsb29zLXppZWRlbmQv.html",
+    "image": "../public/event-images/littledevil/bGlzdC15YW50cmFzLXJhZGVsb29zLXppZWRlbmQv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "radeloos///ziedend": {
+        "s": "6l0nxnfykkn3chx6mw1xcj",
+        "l": "radeloos///ziedend",
+        "g": []
+      },
+      "yantras": {
+        "s": "4JUyZMVdrUBchwH8c2asWY",
+        "l": "yantras",
+        "g": [
+          "sludge metal",
+          "stoner rock"
+        ]
+      },
+      "noctambulist": {
+        "s": "1k7JWDTAwZRGoGg9rCxU2o",
+        "l": "noctambulist",
+        "g": [
+          "black metal",
+          "post-black metal"
+        ]
+      }
+    }
+  },
+  {
+    "title": "Adrian Vandenberg: My Whitesnake Years",
+    "start": "2025-02-08",
+    "eventLocationName": "boerderij",
+    "shortText": "Boerderij, Zoetermeer",
+    "image": "../public/location-images/boerderij",
+    "location": "boerderij"
+  },
+  {
+    "title": "Ankor, Conquer Divide en Future Static",
+    "start": "2025-02-09",
+    "eventLocationName": "dehelling",
+    "shortText": "De Helling, Utrecht",
+    "image": "../public/location-images/dehelling",
+    "location": "dehelling"
+  },
+  {
+    "start": "2025-02-14T20:00:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/cobra-the-impaler/",
+    "title": "Cobra The Impaler",
+    "location": "littledevil",
+    "price": 18.3,
+    "shortText": "heavy metal",
+    "longText": "../public/texts/littledevil/bmwvY2FsZW5kYXIvY29icmEtdGhlLWltcGFsZXIv.html",
+    "image": "../public/event-images/littledevil/bmwvY2FsZW5kYXIvY29icmEtdGhlLWltcGFsZXIv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "cobra the impaler": {
+        "s": "3GF4mtTUUptBbUoJNclS4A",
+        "l": "cobra%20the%20impaler",
+        "g": [
+          "progressive metalcore"
+        ]
+      }
+    }
+  },
+  {
+    "title": "Cobra The Impaler, For I Am King en No Permission",
+    "start": "2025-02-15",
+    "eventLocationName": "grenswerk",
+    "shortText": "Grenswerk, Venlo",
+    "image": "../public/location-images/grenswerk",
+    "location": "grenswerk"
+  },
+  {
+    "start": "2025-02-20T19:00:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/love-letter-heavyhex-dad-magic/",
+    "title": "Love letter + heavyhex + dad magic",
+    "location": "littledevil",
+    "price": 17.3,
+    "shortText": "hardcore - post-hardcore - screamo",
+    "longText": "../public/texts/littledevil/b3ZlLWxldHRlci1oZWF2eWhleC1kYWQtbWFnaWMv.html",
+    "image": "../public/event-images/littledevil/b3ZlLWxldHRlci1oZWF2eWhleC1kYWQtbWFnaWMv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "love letter": {
+        "s": "41DJIv2qEvmvkcOsj7scTA",
+        "l": "love%20letter",
+        "g": [
+          "melodic hardcore"
+        ]
+      },
+      "heavyhex": {
+        "s": "1hszEn4r7xosYrJUjrwU6y",
+        "l": "heavyhex",
+        "g": [
+          "melodic hardcore",
+          "hardcore punk",
+          "hardcore",
+          "post-hardcore"
+        ]
+      }
+    }
+  },
+  {
+    "title": "Kanine, Hurakan en The Hate Project",
+    "start": "2025-02-22",
+    "eventLocationName": "ons dorp",
+    "shortText": "Ons Dorp, Emmer-Compascuum",
+    "image": "../public/location-images/onsdorp",
+    "location": "onsdorp"
+  },
+  {
+    "start": "2025-02-28T19:00:00",
+    "venueEventUrl": "https://metropool.nl/agenda/marduk",
+    "title": "Marduk",
+    "location": "metropool",
+    "price": 30.5,
+    "shortText": "Met als special guests: Doodswens + Irae + Lithost",
+    "longText": "../public/texts/metropool/czovL21ldHJvcG9vbC5ubC9hZ2VuZGEvbWFyZHVr.html",
+    "image": "../public/event-images/metropool/czovL21ldHJvcG9vbC5ubC9hZ2VuZGEvbWFyZHVr",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "marduk": {
+        "s": "2lxB5NTcQXj7GGRR4xAVaH",
+        "l": "marduk",
+        "g": [
+          "black metal",
+          "death metal",
+          "black metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-03-01T09:30:00",
+    "venueEventUrl": "https://www.littledevil.nl/calendar/woa-metal-battle-voorronde-noord-brabant/",
+    "title": "W:O:A: Metal Battle Voorronde Noord-Brabant",
+    "location": "littledevil",
+    "price": 0,
+    "shortText": "W:O:A: Metal Battle",
+    "longText": "../public/texts/littledevil/YXR0bGUtdm9vcnJvbmRlLW5vb3JkLWJyYWJhbnQv.html",
+    "image": "../public/event-images/littledevil/YXR0bGUtdm9vcnJvbmRlLW5vb3JkLWJyYWJhbnQv",
+    "soldOut": false,
+    "eventGenres": null,
+    "artists": {
+      "metal": {
+        "s": null,
+        "l": "metal",
+        "g": [
+          "death metal"
+        ]
+      }
+    }
+  },
+  {
+    "title": "Vanden Plas",
+    "start": "2025-03-08",
+    "eventLocationName": "boerderij",
+    "shortText": "Boerderij, Zoetermeer",
+    "image": "../public/location-images/boerderij",
+    "location": "boerderij"
+  },
+  {
+    "title": "Ronnie Romero en Absolva",
+    "start": "2025-03-16",
+    "eventLocationName": "boerderij",
+    "shortText": "Boerderij, Zoetermeer",
+    "image": "../public/location-images/boerderij",
+    "location": "boerderij"
+  },
+  {
+    "title": "Dirkschneider",
+    "start": "2025-03-18",
+    "eventLocationName": "trix",
+    "shortText": "Trix, Antwerpen (België)",
+    "image": "../public/location-images/trix",
+    "location": "trix"
+  },
+  {
+    "title": "This Will Destroy You en Nordic Giants",
+    "start": "2025-03-19",
+    "eventLocationName": "dehelling",
+    "shortText": "De Helling, Utrecht",
+    "image": "../public/location-images/dehelling",
+    "location": "dehelling"
+  },
+  {
+    "title": "Enemy Inside",
+    "start": "2025-03-21",
+    "eventLocationName": "dehelling",
+    "shortText": "De Helling, Utrecht",
+    "image": "../public/location-images/dehelling",
+    "location": "dehelling"
+  },
+  {
+    "title": "Anneke van Giersbergen",
+    "start": "2025-03-22",
+    "eventLocationName": "boerderij",
+    "shortText": "Boerderij, Zoetermeer",
+    "image": "../public/location-images/boerderij",
+    "location": "boerderij"
+  },
+  {
+    "title": "Anneke van Giersbergen en Ebony Buckle",
+    "start": "2025-03-23",
+    "eventLocationName": "grenswerk",
+    "shortText": "Grenswerk, Venlo",
+    "image": "../public/location-images/grenswerk",
+    "location": "grenswerk"
+  },
+  {
+    "start": "2025-03-28T20:30:00",
+    "venueEventUrl": "https://metropool.nl/agenda/anneke-van-giersbergen-band",
+    "title": "Anneke van Giersbergen & Band ",
+    "location": "metropool",
+    "price": 30.5,
+    "shortText": "Een concert met nieuw materiaal en hoogtepunten uit haar omvangrijke oeuvre",
+    "longText": "../public/texts/metropool/ZGEvYW5uZWtlLXZhbi1naWVyc2Jlcmdlbi1iYW5k.html",
+    "image": "../public/event-images/metropool/ZGEvYW5uZWtlLXZhbi1naWVyc2Jlcmdlbi1iYW5k",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "anneke van giersbergen": {
+        "s": "6tzqjnkayty8hfqbeddf8v",
+        "l": "anneke%20van%20giersbergen",
+        "g": [
+          "metal"
+        ]
+      },
+      "band": {
+        "s": null,
+        "l": "band",
+        "g": [
+          "heavy",
+          "power metal"
+        ]
+      }
+    }
+  },
+  {
+    "start": "2025-03-29T20:30:00",
+    "venueEventUrl": "https://metropool.nl/agenda/cryptosis-album-release",
+    "title": "Cryptosis - Album release",
+    "location": "metropool",
+    "price": 20,
+    "shortText": "Een muzikale tornado waarin black-, death- en thrashmetal samensmelten",
+    "longText": "../public/texts/metropool/YWdlbmRhL2NyeXB0b3Npcy1hbGJ1bS1yZWxlYXNl.html",
+    "image": "../public/event-images/metropool/YWdlbmRhL2NyeXB0b3Npcy1hbGJ1bS1yZWxlYXNl",
     "soldOut": false,
     "unavailable": false,
     "eventGenres": null,
     "artists": {}
+  },
+  {
+    "title": "Michael Schenker Group",
+    "start": "2025-04-09",
+    "eventLocationName": "boerderij",
+    "shortText": "Boerderij, Zoetermeer",
+    "image": "../public/location-images/boerderij",
+    "location": "boerderij"
+  },
+  {
+    "start": "2025-04-11T21:00:00",
+    "venueEventUrl": "https://metropool.nl/agenda/deadly-alliance-ep-release",
+    "title": "Deadly Alliance - EP release",
+    "location": "metropool",
+    "price": 10,
+    "shortText": "De mannen brengen de rauwheid van de thrash-scene terug",
+    "longText": "../public/texts/metropool/bmRhL2RlYWRseS1hbGxpYW5jZS1lcC1yZWxlYXNl.html",
+    "image": "../public/event-images/metropool/bmRhL2RlYWRseS1hbGxpYW5jZS1lcC1yZWxlYXNl",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "title": "Axel Rudi Pell",
+    "start": "2025-04-12",
+    "eventLocationName": "boerderij",
+    "shortText": "Boerderij, Zoetermeer",
+    "image": "../public/location-images/boerderij",
+    "location": "boerderij"
+  },
+  {
+    "title": "Anneke van Giersbergen",
+    "start": "2025-04-13",
+    "eventLocationName": "dehelling",
+    "shortText": "De Helling, Utrecht",
+    "image": "../public/location-images/dehelling",
+    "location": "dehelling"
+  },
+  {
+    "title": "Behemoth, Satyricon en Rotting Christ",
+    "start": "2025-04-15",
+    "eventLocationName": "e-werk",
+    "shortText": "E-Werk, Keulen",
+    "image": "../public/location-images/ewerk",
+    "location": "ewerk"
+  },
+  {
+    "title": "Benediction, Jungle Rot en Master",
+    "start": "2025-04-16",
+    "eventLocationName": "turock",
+    "shortText": "Turock, Essen",
+    "image": "../public/location-images/turock",
+    "location": "turock"
+  },
+  {
+    "title": "Frozen Crown, Fellowship en Lutharo",
+    "start": "2025-04-19",
+    "eventLocationName": "hell",
+    "shortText": "Hell, Diest",
+    "image": "../public/location-images/hell",
+    "location": "hell"
+  },
+  {
+    "title": "Festerfest",
+    "start": "2025-04-20",
+    "eventLocationName": "musicon",
+    "shortText": "\nmet o.a. The Wounded, Dystopia en Obstruktor",
+    "image": "../public/location-images/musicon",
+    "location": "musicon"
+  },
+  {
+    "title": "Spectral Wound en Lamp Of Murmur",
+    "start": "2025-04-21",
+    "eventLocationName": "dehelling",
+    "shortText": "De Helling, Utrecht",
+    "image": "../public/location-images/dehelling",
+    "location": "dehelling"
+  },
+  {
+    "title": "Frozen Crown, Fellowship en Lutharo",
+    "start": "2025-04-22",
+    "eventLocationName": "rockaplast/matrix",
+    "shortText": "Rockaplast/Matrix, Bochum",
+    "image": "../public/location-images/rockaplastmatrix",
+    "location": "rockaplastmatrix"
+  },
+  {
+    "start": "2025-04-23T20:30:00",
+    "venueEventUrl": "https://metropool.nl/agenda/colin-blunstone-the-zombies",
+    "title": "Colin Blunstone (The Zombies)",
+    "location": "metropool",
+    "price": 33,
+    "shortText": "De Britse muzieklegende is bekend van The Zombies en het Alan Parsons Project",
+    "longText": "../public/texts/metropool/ZGEvY29saW4tYmx1bnN0b25lLXRoZS16b21iaWVz.html",
+    "image": "../public/event-images/metropool/ZGEvY29saW4tYmx1bnN0b25lLXRoZS16b21iaWVz",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "stone": {
+        "s": "22be4uq6banwshpvcdxlce",
+        "l": "stone",
+        "g": [
+          "album rock",
+          "british invasion",
+          "classic rock",
+          "rock"
+        ]
+      }
+    }
+  },
+  {
+    "title": "Deville",
+    "start": "2025-05-01",
+    "eventLocationName": "eci cultuurfabriek",
+    "shortText": "ECI Cultuurfabriek, Roermond",
+    "image": "../public/location-images/ecicultuurfabriek",
+    "location": "ecicultuurfabriek"
+  },
+  {
+    "title": "Against Evil en Angelic Forces",
+    "start": "2025-05-04",
+    "eventLocationName": "poppodium emmen",
+    "shortText": "Poppodium Emmen, Emmen",
+    "image": "../public/location-images/poppodiumemmen",
+    "location": "poppodiumemmen"
+  },
+  {
+    "title": "Babymetal, Poppy en Bambie Thug",
+    "start": "2025-05-13",
+    "eventLocationName": "ziggo dome",
+    "shortText": "Ziggo Dome, Amsterdam",
+    "image": "../public/location-images/ziggodome",
+    "location": "ziggodome"
+  },
+  {
+    "start": "2025-05-14T18:30:00",
+    "venueEventUrl": "https://metropool.nl/agenda/decapitated-cryptopsy-warbringer-carnation",
+    "title": "Decapitated ",
+    "location": "metropool",
+    "price": 33,
+    "shortText": " Cryptopsy  +  Warbringer  +  Carnation Internal Bloodshed Over Europe 2025",
+    "longText": "../public/texts/metropool/Y3J5cHRvcHN5LXdhcmJyaW5nZXItY2FybmF0aW9u.html",
+    "image": "../public/event-images/metropool/Y3J5cHRvcHN5LXdhcmJyaW5nZXItY2FybmF0aW9u",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "decapitated": {
+        "s": "17mbhjoaaphuwnrawu9xkc",
+        "l": "decapitated",
+        "g": [
+          "brutal death metal",
+          "death metal",
+          "deathgrind",
+          "groove metal",
+          "metal",
+          "polish death metal",
+          "polish metal",
+          "technical death metal",
+          "technical groove metal",
+          "thrash metal"
+        ]
+      },
+      "warbringer": {
+        "s": "4ukkkgkjnwx8ktuvea66k1",
+        "l": "warbringer",
+        "g": [
+          "metal",
+          "new wave of thrash metal",
+          "speed metal",
+          "thrash metal"
+        ]
+      },
+      "carnation": {
+        "s": "7s6smrbyqvp26jn5ebnu9u",
+        "l": "carnation",
+        "g": [
+          "belgian death metal",
+          "belgian metal",
+          "dutch metal",
+          "voidgrind"
+        ]
+      },
+      "cryptopsy": {
+        "s": "29PgYwTelpNl6370XLqFtN",
+        "l": "cryptopsy",
+        "g": [
+          "death metal",
+          "grindcore",
+          "deathcore",
+          "metal",
+          "brutal",
+          "technical death metal"
+        ]
+      }
+    }
+  },
+  {
+    "title": "Elsrock",
+    "start": "2025-05-17",
+    "eventLocationName": "studio 15",
+    "shortText": "Studio 15, Almelo",
+    "image": "../public/location-images/studio15",
+    "location": "studio15"
+  },
+  {
+    "start": "2025-05-28T20:30:00",
+    "venueEventUrl": "https://metropool.nl/agenda/arena",
+    "title": "Arena",
+    "location": "metropool",
+    "price": 33,
+    "shortText": "De rockband viert de dertigste verjaardag van debuutalbum Songs From The Lions Cage",
+    "longText": "../public/texts/metropool/cHM6Ly9tZXRyb3Bvb2wubmwvYWdlbmRhL2FyZW5h.html",
+    "image": "../public/event-images/metropool/cHM6Ly9tZXRyb3Bvb2wubmwvYWdlbmRhL2FyZW5h",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "arena": {
+        "s": "5n72qzNEfzCXvNDxKComR7",
+        "l": "arena",
+        "g": [
+          "neo-progressive",
+          "progressive metal",
+          "progressive rock",
+          "symphonic rock",
+          "thrash metal"
+        ]
+      }
+    }
+  },
+  {
+    "title": "Blaze Bayley en Pryma",
+    "start": "2025-06-01",
+    "eventLocationName": "musicon",
+    "shortText": "Musicon, Den Haag",
+    "image": "../public/location-images/musicon",
+    "location": "musicon"
+  },
+  {
+    "title": "Into The Grave",
+    "start": "2025-06-13",
+    "eventLocationName": "leeuwarden\nmet exodus",
+    "shortText": "\nmet Exodus, W.A.S.P, Gloryhammer, Death Angel, Wind Rose, Rotting Christ e.a.",
+    "image": "../public/location-images/leeuwardenmetexodus",
+    "location": "leeuwardenmetexodus"
+  },
+  {
+    "title": "Graspop Metal Meeting",
+    "start": "2025-06-20",
+    "eventLocationName": "dessel",
+    "shortText": "Dessel, BelgiÃ«",
+    "image": "../public/location-images/dessel",
+    "location": "dessel"
+  },
+  {
+    "title": "Jera On Air",
+    "start": "2025-06-26",
+    "eventLocationName": "ysselstyn\nmet turnstile",
+    "shortText": "\nMet Turnstile, Sex Pistols, Bullet For My Valentine, Jinjer, Knocked Loose, Nothing More e.v.a.",
+    "image": "../public/location-images/ysselstynmetturnstile",
+    "location": "ysselstynmetturnstile"
+  },
+  {
+    "start": "2025-06-29T20:00:00",
+    "venueEventUrl": "https://metropool.nl/agenda/pussy-riot",
+    "title": "Pussy Riot",
+    "location": "metropool",
+    "price": 29.5,
+    "shortText": "De politieke punkrockers komen met Riot Days naar Hengelo",
+    "longText": "../public/texts/metropool/bWV0cm9wb29sLm5sL2FnZW5kYS9wdXNzeS1yaW90.html",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {}
+  },
+  {
+    "title": "Hellmond Open Air",
+    "start": "2025-07-05",
+    "eventLocationName": "cacaofabriek",
+    "shortText": "\nMet Therapy, Overkill, Vandenberg e.a.",
+    "image": "../public/location-images/cacaofabriek",
+    "location": "cacaofabriek"
+  },
+  {
+    "title": "Pirate Metal Party",
+    "start": "2025-07-06",
+    "eventLocationName": "cacaofabriek",
+    "shortText": "Cacaofabriek, Helmond",
+    "image": "../public/location-images/cacaofabriek",
+    "location": "cacaofabriek"
+  },
+  {
+    "start": "2025-07-11T21:00:00",
+    "venueEventUrl": "https://metropool.nl/agenda/valient-thorr",
+    "title": "Valient Thorr",
+    "location": "metropool",
+    "price": 22.5,
+    "shortText": "De iconische rockers vieren het 21-jarig jubileum van hun debuutalbum",
+    "longText": "../public/texts/metropool/cm9wb29sLm5sL2FnZW5kYS92YWxpZW50LXRob3Jy.html",
+    "image": "../public/event-images/metropool/cm9wb29sLm5sL2FnZW5kYS92YWxpZW50LXRob3Jy",
+    "soldOut": false,
+    "unavailable": false,
+    "eventGenres": null,
+    "artists": {
+      "valient thorr": {
+        "s": "6rVaRHgldZoRMvERFyZmAH",
+        "l": "valient%20thorr",
+        "g": [
+          "sludge metal",
+          "stoner rock",
+          "heavy",
+          "southern metal",
+          "rock"
+        ]
+      }
+    }
+  },
+  {
+    "title": "Iron Maiden en Avatar",
+    "start": "2025-07-23",
+    "eventLocationName": "gelredome",
+    "shortText": "Gelredome, Arnhem",
+    "image": "../public/location-images/gelredome",
+    "location": "gelredome"
+  },
+  {
+    "title": "Wacken Open Air",
+    "start": "2025-07-30",
+    "eventLocationName": "wacken (duitsland)\nmet machine head",
+    "shortText": "\nMet Machine Head, Papa Roach, Gojira, Apocalyptica, Within Temptation e.v.a.",
+    "image": "../public/location-images/wackenduitslandmetmachinehead",
+    "location": "wackenduitslandmetmachinehead"
+  },
+  {
+    "title": "Progdreams XI",
+    "start": "2025-08-22",
+    "eventLocationName": "boerderij",
+    "shortText": "Boerderij, Zoetermeer",
+    "image": "../public/location-images/boerderij",
+    "location": "boerderij"
+  },
+  {
+    "title": "Pendragon",
+    "start": "2025-09-10",
+    "eventLocationName": "boerderij",
+    "shortText": "Boerderij, Zoetermeer",
+    "image": "../public/location-images/boerderij",
+    "location": "boerderij"
+  },
+  {
+    "title": "Floor Jansen",
+    "start": "2025-09-26",
+    "eventLocationName": "de harmonie",
+    "shortText": "De Harmonie, Leeuwarden",
+    "image": "../public/location-images/deharmonie",
+    "location": "deharmonie"
+  },
+  {
+    "title": "Floor Jansen",
+    "start": "2025-10-10",
+    "eventLocationName": "schouwburg",
+    "shortText": "Schouwburg, Tilburg",
+    "image": "../public/location-images/schouwburg",
+    "location": "schouwburg"
+  },
+  {
+    "title": "Wind Rose, Orden Ogan en Angus McSix",
+    "start": "2025-10-15",
+    "eventLocationName": "trix",
+    "shortText": "Trix, Antwerpen (België)",
+    "image": "../public/location-images/trix",
+    "location": "trix"
+  },
+  {
+    "title": "The Rock Circus",
+    "start": "2025-10-17",
+    "eventLocationName": "brabanthallen",
+    "shortText": "\nMet Apocalyptica, Dropkick Murphys, Lord Of The Lost e.v.a.",
+    "image": "../public/location-images/brabanthallen",
+    "location": "brabanthallen"
+  },
+  {
+    "title": "Arch Enemy, Amorphis, Eluveitie en Gatecreeper",
+    "start": "2025-11-04",
+    "eventLocationName": "ancienne belgique",
+    "shortText": "Ancienne Belgique, Brussel (België)",
+    "image": "../public/location-images/anciennebelgique",
+    "location": "anciennebelgique"
+  },
+  {
+    "title": "New Model Army en Amy Montgomery",
+    "start": "2025-11-21",
+    "eventLocationName": "grenswerk",
+    "shortText": "Grenswerk, Venlo",
+    "image": "../public/location-images/grenswerk",
+    "location": "grenswerk"
+  },
+  {
+    "title": "Sabaton",
+    "start": "2025-12-01",
+    "eventLocationName": "ziggo dome",
+    "shortText": "Ziggo Dome, Amsterdam",
+    "image": "../public/location-images/ziggodome",
+    "location": "ziggodome"
   }
 ]
